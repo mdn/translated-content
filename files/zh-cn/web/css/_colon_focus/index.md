@@ -1,41 +1,44 @@
 ---
 title: ':focus'
-slug: 'Web/CSS/:focus'
+slug: Web/CSS/:focus
 tags:
   - CSS
   - Layout
   - Reference
   - Web
   - 伪类
-translation_of: 'Web/CSS/:focus'
+translation_of: Web/CSS/:focus
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>CSS<a href="/zh-CN/CSS/Pseudo-classes">伪类</a> <code>:focus</code>表示获得焦点的元素（如表单输入）。当用户点击或触摸元素或通过键盘的 “tab” 键选择它时会被触发。</p>
+CSS[伪类](/zh-CN/CSS/Pseudo-classes) `:focus`表示获得焦点的元素（如表单输入）。当用户点击或触摸元素或通过键盘的 “tab” 键选择它时会被触发。
 
-<pre class="brush: css">/* Selects any &lt;input&gt; when focused */
+```css
+/* Selects any <input> when focused */
 input:focus {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>提示：</strong>此伪类仅适用于焦点元素本身。如果要选择包含焦点元素的元素，请使用{{cssxref(":focus-within")}} 。</p>
-</div>
+> **备注：** 此伪类仅适用于焦点元素本身。如果要选择包含焦点元素的元素，请使用{{cssxref(":focus-within")}} 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input class="red-input" value="I'll be red when focused."&gt;&lt;br&gt;
-&lt;input class="blue-input" value="I'll be blue when focused."&gt;</pre>
+```html
+<input class="red-input" value="I'll be red when focused."><br>
+<input class="blue-input" value="I'll be blue when focused.">
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.red-input:focus {
+```css
+.red-input:focus {
   background: yellow;
   color: red;
 }
@@ -43,22 +46,21 @@ input:focus {
 .blue-input:focus {
   background: yellow;
   color: blue;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.focus")}}</p>
+{{Compat("css.selectors.focus")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref(":focus-within")}}</li>
-</ul>
+- {{cssxref(":focus-within")}}

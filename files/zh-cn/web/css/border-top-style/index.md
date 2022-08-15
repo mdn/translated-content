@@ -7,19 +7,18 @@ tags:
   - CSS 边框
 translation_of: Web/CSS/border-top-style
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p><strong><code>border-top-style</code></strong> <a href="/en/CSS">CSS</a> 设置元素上边框的 {{cssxref("border")}}.</p>
+**`border-top-style`** [CSS](/en/CSS) 设置元素上边框的 {{cssxref("border")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
+> **备注：** 此规范并未定义不同样式的边框边角处如何连接。
 
+## 语法
 
-<div class="note"><strong>Note:</strong> 此规范并未定义不同样式的边框边角处如何连接。</div>
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+```css
+/* Keyword values */
 border-top-style: none;
 border-top-style: hidden;
 border-top-style: dotted;
@@ -35,40 +34,43 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: unset;
-</pre>
+```
 
-<p>选取以上可用关键字之一作为 {{cssxref("border-style")}} 的 <strong>border-top-style</strong> 属性的值。</p>
+选取以上可用关键字之一作为 {{cssxref("border-style")}} 的 **border-top-style** 属性的值。
 
-<h3 id="形式化语法">形式化语法</h3>
+### 形式化语法
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">/* Define look of the table */
+```css
+/* Define look of the table */
 table {
   border-width: 2px;
   background-color: #52E385;
@@ -87,27 +89,24 @@ tr, td {
 .b7 {border-top-style: groove;}
 .b8 {border-top-style: ridge;}
 .b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}</pre>
+.b10 {border-top-style: outset;}
+```
 
-<h4 id="输出结果">输出结果</h4>
+#### 输出结果
 
-<p>{{ EmbedLiveSample('Examples', 300, 200) }}</p>
+{{ EmbedLiveSample('Examples', 300, 200) }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.border-top-style")}}
 
+## 相关词条
 
-<p>{{Compat("css.properties.border-top-style")}}</p>
-
-<h2 id="See_Also">相关词条</h2>
-
-<ul>
- <li>The other style-related border properties: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-bottom-style") }}, and {{ Cssxref("border-style") }}.</li>
- <li>The other top-border-related properties: {{ Cssxref("border-top") }}, {{ Cssxref("border-top-color") }}, and {{ Cssxref("border-top-width") }}.</li>
-</ul>
+- The other style-related border properties: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-bottom-style") }}, and {{ Cssxref("border-style") }}.
+- The other top-border-related properties: {{ Cssxref("border-top") }}, {{ Cssxref("border-top-color") }}, and {{ Cssxref("border-top-width") }}.

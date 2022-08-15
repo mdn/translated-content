@@ -6,15 +6,16 @@ tags:
   - 参考
 translation_of: Web/CSS/tab-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>CSS 属性<strong> <code>tab-size</code></strong> 用于自定义制表符 (<code>U+0009</code>) 的宽度。</p>
+CSS 属性** `tab-size`** 用于自定义制表符 (`U+0009`) 的宽度。
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; values */
+```css
+/* <integer> values */
 tab-size: 4;
 tab-size: 0;
 
-/* &lt;length&gt; values */
+/* <length> values */
 tab-size: 10px;
 tab-size: 2em;
 
@@ -22,81 +23,81 @@ tab-size: 2em;
 tab-size: inherit;
 tab-size: initial;
 tab-size: unset;
-</pre>
+```
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{CSSxRef("&lt;integer&gt;")}}</dt>
- <dd>制表符对应的空格数。必须为非负值。</dd>
- <dt>{{CSSxRef("&lt;length&gt;")}}</dt>
- <dd>制表符的宽度。必须为非负值。</dd>
-</dl>
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : 制表符对应的空格数。必须为非负值。
+- {{CSSxRef("&lt;length&gt;")}}
+  - : 制表符的宽度。必须为非负值。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{CSSSyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 4; /* 将制表符宽度设为 4 个空格 */
 }
-</pre>
+```
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 0; /* 移除缩进效果 */
 }
-</pre>
+```
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 2; /* 将制表符宽度设为 2 个空格 */
 }
-</pre>
+```
 
-<h3 id="在线演示">在线演示</h3>
+### 在线演示
 
-<p>本示例比较了默认制表符宽度和自定义制表符宽度。注意 {{cssxref("white-space")}} 被设置为 <code>pre</code> 以防止制表符收起。</p>
+本示例比较了默认制表符宽度和自定义制表符宽度。注意 {{cssxref("white-space")}} 被设置为 `pre` 以防止制表符收起。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;no tab&lt;/p&gt;
-&lt;p&gt;&amp;#0009;default tab size of 8 spaces&lt;/p&gt;
-&lt;p class="custom"&gt;&amp;#0009;custom tab  size of 3 spaces&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;3 spaces, equivalent to the custom tab size&lt;/p&gt;
-</pre>
+```html
+<p>no tab</p>
+<p>&#0009;default tab size of 8 spaces</p>
+<p class="custom">&#0009;custom tab  size of 3 spaces</p>
+<p>&nbsp;&nbsp;&nbsp;3 spaces, equivalent to the custom tab size</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   white-space: pre;
 }
 
 .custom {
   -moz-tab-size: 3;
   tab-size: 3;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Live_sample')}}</p>
+{{EmbedLiveSample('Live_sample')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.tab-size")}}
 
+## 参见
 
-<p>{{Compat("css.properties.tab-size")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html"><cite>Controlling size of a tab character (U+0009)</cite></a>，Anne van Kesteren 发送给 CSSWG 的一封电子邮件。</li>
-</ul>
+- [Controlling size of a tab character (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html)，Anne van Kesteren 发送给 CSSWG 的一封电子邮件。

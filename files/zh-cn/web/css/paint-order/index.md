@@ -3,13 +3,14 @@ title: paint-order
 slug: Web/CSS/paint-order
 translation_of: Web/CSS/paint-order
 ---
-<div>{{CSSRef}}{{seecompattable}}</div>
+{{CSSRef}}{{seecompattable}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>  <strong><code>paint-order</code></strong>  属性可以让你控制文本区域和图形绘制的填充和绘制（和 markers）的顺序</p>
+[CSS](/zh-CN/docs/Web/CSS) **`paint-order`** 属性可以让你控制文本区域和图形绘制的填充和绘制（和 markers）的顺序
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css no-line-numbers">/*默认 */
+```css
+/*默认 */
 paint-order: normal;
 
 /* 单一属性 */
@@ -19,43 +20,43 @@ paint-order: markers; /* 先绘制 markers, 然后填充，描边 */
 /* 多属性 */
 paint-order: stroke fill; /* 先描边，然后填充，然后 markers */
 paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
+```
 
-</pre>
+如果没有指定值，默认顺序将是 `fill`, `stroke`, `markers`.
 
-<p>如果没有指定值，默认顺序将是 <code>fill</code>, <code>stroke</code>, <code>markers</code>.</p>
+当只指定一个值的时候，这个值将会被首先渲染，然后剩下的两个值将会以默认顺序渲染，当只指定两个值的时候，这两个值会以指定的顺序渲染，接着渲染剩下的未指定的那个。
 
-<p>当只指定一个值的时候，这个值将会被首先渲染，然后剩下的两个值将会以默认顺序渲染，当只指定两个值的时候，这两个值会以指定的顺序渲染，接着渲染剩下的未指定的那个。</p>
+> **备注：** 在这个属性的值当中，markers 只有当在绘制 SVG 图形时引用了 `marker-*`属性（例如 [`marker-start`](/en-US/docs/Web/SVG/Attribute/marker-start)）和 [`<marker>`](/en-US/docs/Web/SVG/Element/marker) 元素才能进行控制。他们不适用于 HTML 文本，所以，这样的话，你只能决定 `stroke` 和 `fill `的顺序。
 
-<div class="note">
-<p>注意：在这个属性的值当中，markers 只有当在绘制 SVG 图形时引用了 <code>marker-*</code>属性（例如 <code><a href="/en-US/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>）和 <code><a href="/en-US/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code> 元素才能进行控制。他们不适用于 HTML 文本，所以，这样的话，你只能决定  <code>stroke</code> 和 <code>fill </code>的顺序。</p>
-</div>
+### 属性值
 
-<h3 id="属性值">属性值</h3>
+- `normal`
+  - : 用正常的顺序渲染不同的元素
+- `stroke`,
+  `fill`,
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>用正常的顺序渲染不同的元素</dd>
- <dt><code>stroke</code>,<br>
- <code>fill</code>,</dt>
- <dt><code>markers</code></dt>
- <dd>指定一部分或者全部这些属性的渲染顺序</dd>
-</dl>
+  `markers`
 
-<h3 id="正式语法">正式语法</h3>
+  - : 指定一部分或者全部这些属性的渲染顺序
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="使用示例">使用示例</h2>
+## 使用示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Stroke in front&lt;/p&gt;
+```html
+<p>Stroke in front</p>
 
-&lt;p class="stroke-behind"&gt;Stroke behind&lt;/p&gt;</pre>
+<p class="stroke-behind">Stroke behind</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   font-family: sans-serif;
   font-size: 5rem;
   font-weight: bold;
@@ -65,18 +66,19 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
 
 .stroke-behind {
   paint-order: stroke fill;
-}</pre>
+}
+```
 
-<h3 id="效果">效果</h3>
+### 效果
 
-<p>{{EmbedLiveSample('Examples', '100%', 165)}}</p>
+{{EmbedLiveSample('Examples', '100%', 165)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.paint-order")}}</p>
+{{Compat("css.properties.paint-order")}}

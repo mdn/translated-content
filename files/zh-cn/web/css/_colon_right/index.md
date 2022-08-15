@@ -1,49 +1,48 @@
 ---
 title: ':right'
-slug: 'Web/CSS/:right'
-translation_of: 'Web/CSS/:right'
+slug: Web/CSS/:right
+translation_of: Web/CSS/:right
 ---
-<p><strong><code>:right</code></strong> <a href="/zh-CN/docs/Learn/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>必须与<a href="/zh-CN/docs/Web/CSS/At-rule">@规则</a>  {{cssxref("@page")}} 一起配套使用，表示打印文档的所有右页。</p>
+**`:right`** [CSS](/zh-CN/docs/Learn/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)必须与[@规则](/zh-CN/docs/Web/CSS/At-rule) {{cssxref("@page")}} 一起配套使用，表示打印文档的所有右页。
 
-<pre class="brush: css no-line-numbers">/* 当打印时会选择所有文档右页 */
+```css
+/* 当打印时会选择所有文档右页 */
 @page :right {
   margin: 2in 3in;
-}</pre>
+}
+```
 
-<p>这里的“左” 或 “右” 不是固定的，取决与文档的写作方向。如果第一页主要文字方向是从左到右的，那么它就是{{cssxref(":right")}}右页，反之它就是{{cssxref(":left")}}左页。</p>
+这里的“左” 或 “右” 不是固定的，取决与文档的写作方向。如果第一页主要文字方向是从左到右的，那么它就是{{cssxref(":right")}}右页，反之它就是{{cssxref(":left")}}左页。
 
-<div class="blockIndicator note">
-<p>Note: 可通过 <code>bdo</code> 标签  的 <code>dir</code> 属性改变文字方向。</p>
-</div>
+> **备注：** Note: 可通过 `bdo` 标签 的 `dir` 属性改变文字方向。
 
-<div class="note">
-<p><strong>Note:</strong> 此伪类只能用于更改页面的 {{ cssxref("margin") }}, {{cssxref("padding") }}, {{ cssxref("border") }}, and {{cssxref("background") }} 属性。其它属性都将被忽略，只会影响页框，不会影响文档内容。 </p>
-</div>
+> **备注：** 此伪类只能用于更改页面的 {{ cssxref("margin") }}, {{cssxref("padding") }}, {{ cssxref("border") }}, and {{cssxref("background") }} 属性。其它属性都将被忽略，只会影响页框，不会影响文档内容。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">@page:right{
+```
+@page:right{
     margin: * *;
-}</pre>
+}
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: css">@page :right {
+```css
+@page :right {
   margin: 2in 3in;
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.right")}}</p>
+{{Compat("css.selectors.right")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ cssxref("@page") }}</li>
- <li>Other page-related pseudo-classes: {{ cssxref(":first") }}, {{ cssxref(":left") }}</li>
-</ul>
+- {{ cssxref("@page") }}
+- Other page-related pseudo-classes: {{ cssxref(":first") }}, {{ cssxref(":left") }}

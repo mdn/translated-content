@@ -4,188 +4,165 @@ slug: Web/CSS/Reference
 tags:
   - CSS
   - Reference
-  - 'l10n:priority'
+  - l10n:priority
   - 参考
   - 总览
 translation_of: Web/CSS/Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>使用此<strong>CSS 参考</strong>页面以浏览按 <a href="#关键字索引">字母索引</a> 的所有标准 <a href="/zh-CN/docs/CSS">CSS</a> 属性、<a href="/zh-CN/docs/CSS/Pseudo-classes">伪类</a>、<a href="/zh-CN/docs/CSS/Pseudo-elements">伪元素</a>、<a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a>、以及<a href="/zh-CN/docs/CSS/At-rule">@ 规则</a>。你也可以浏览 <a href="#选择器">按类型排列的 CSS 选择器</a> 列表和 <a href="#概念">CSS 关键概念</a> 列表。还有一份简短的 <a href="#DOM-CSS_CSSOM">DOM-CSS / CSSOM 参考</a>。</p>
+使用此**CSS 参考**页面以浏览按 [字母索引](#关键字索引) 的所有标准 [CSS](/zh-CN/docs/CSS) 属性、[伪类](/zh-CN/docs/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)、以及[@ 规则](/zh-CN/docs/CSS/At-rule)。你也可以浏览 [按类型排列的 CSS 选择器](#选择器) 列表和 [CSS 关键概念](#概念) 列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#DOM-CSS_CSSOM)。
 
-<h2 id="基本规则语法">基本规则语法</h2>
+## 基本规则语法
 
-<h3 id="样式规则语法">样式规则语法</h3>
+### 样式规则语法
 
-<pre class="notranslate"><var>style-rule</var> <strong>::=</strong>
-    <var>selectors-list</var> <strong>{</strong>
-      <var>properties-list</var>
-    <strong>}</strong></pre>
+```
+style-rule ::=
+    selectors-list {
+      properties-list
+    }
+```
 
-<pre class="syntaxbox notranslate">... 其中
-</pre>
+```
+... 其中
+```
 
-<pre class="notranslate"><var>selectors-list</var> <strong>::=</strong>
-    <var>selector[</var><strong>:</strong><var>pseudo-class] [</var><strong>::</strong><var>pseudo-element]
-    [</var><strong>,</strong><var> selectors-list]</var>
+```
+selectors-list ::=
+    selector[:pseudo-class] [::pseudo-element]
+    [, selectors-list]
 
-<var>properties-list</var> <strong>::=</strong>
-    <var>[property</var> <strong>:</strong> <var>value] [</var><strong>;</strong> <var>properties-list]</var>
-</pre>
+properties-list ::=
+    [property : value] [; properties-list]
+```
 
-<p>参阅后面的 <a href="#选择器"><em>selector</em></a>、<a href="#pelm"><em>pseudo-element</em></a>、<a href="#pcls"><em>pseudo-class</em></a> 列表。每个指定值的语法取决于为每个指定属性定义的数据类型。</p>
+参阅后面的 [_selector_](#选择器)、[_pseudo-element_](#pelm)、[_pseudo-class_](#pcls) 列表。每个指定值的语法取决于为每个指定属性定义的数据类型。
 
-<h4 id="样式规则示例">样式规则示例</h4>
+#### 样式规则示例
 
-<pre class="brush: css notranslate">strong {
+```css
+strong {
   color: red;
 }
 
-div.menu-bar li:hover &gt; ul {
+div.menu-bar li:hover > ul {
   display: block;
 }
-</pre>
+```
 
-<p>有关 CSS 选择器语法的初学者介绍，请参阅<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors">此教程</a>。注意，规则定义中的任何 <a href="/zh-CN/docs/Web/CSS/syntax">CSS 语法</a>错误都将使整个规则无效。无效的规则将被浏览器忽略。注意 CSS 定义完全是<a href="https://www.w3.org/TR/css-syntax-3/#intro">基于文本</a>(ASCII) 的 , 而 DOM-CSS / CSSOM (规则管理系统) 是<a href="https://www.w3.org/TR/cssom/#introduction">基于对象</a>的。</p>
+有关 CSS 选择器语法的初学者介绍，请参阅[此教程](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/syntax)错误都将使整个规则无效。无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于文本](https://www.w3.org/TR/css-syntax-3/#intro)(ASCII) 的 , 而 DOM-CSS / CSSOM (规则管理系统) 是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
 
-<h3 id="规则语法">@规则语法</h3>
+### @规则语法
 
-<p>由于 @规则间的结构变化很大，请参阅<a href="/zh-CN/docs/Web/CSS/At-rule">@规则</a>以找到你所想要的特定规则语法。</p>
+由于 @规则间的结构变化很大，请参阅[@规则](/zh-CN/docs/Web/CSS/At-rule)以找到你所想要的特定规则语法。
 
-<h2 id="关键字索引">关键字索引</h2>
+## 关键字索引
 
-<div class="note">
-<p><strong>注意</strong>：此索引中的属性名称不包括与 CSS 标准名称不同的 JavaScript 名称。</p>
-</div>
+> **备注：** 此索引中的属性名称不包括与 CSS 标准名称不同的 JavaScript 名称。
 
-<div>{{CSS_Ref}}</div>
+{{CSS_Ref}}
 
-<h2 id="选择器"><a href="/zh-CN/docs/Web/CSS/CSS_Selectors">选择器</a></h2>
+## [选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
 
-<h3 id="基本选择器"><a href="/zh-CN/docs/Web/CSS/CSS_Selectors#Simple_selectors">基本选择器</a></h3>
+### [基本选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#Simple_selectors)
 
-<ul>
- <li><a href="/zh-CN/docs/CSS/Universal_selectors">通配选择器</a> <code>*</code>, <code>ns|*</code>, <code>*|*</code>, <code>|*</code></li>
- <li><a href="/zh-CN/docs/CSS/Type_selectors">元素选择器</a> <code>elementname(元素名称)</code></li>
- <li><a href="/zh-CN/docs/CSS/Class_selectors">类选择器</a> <code>.classname(类名)</code></li>
- <li><a href="/zh-CN/docs/CSS/ID_selectors">ID 选择器</a> <code>#idname(ID 名)</code></li>
- <li><a href="/zh-CN/docs/CSS/Attribute_selectors">属性选择器</a> <code>[属性=值]</code></li>
-</ul>
+- [通配选择器](/zh-CN/docs/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [元素选择器](/zh-CN/docs/CSS/Type_selectors) `elementname(元素名称)`
+- [类选择器](/zh-CN/docs/CSS/Class_selectors) `.classname(类名)`
+- [ID 选择器](/zh-CN/docs/CSS/ID_selectors) `#idname(ID 名)`
+- [属性选择器](/zh-CN/docs/CSS/Attribute_selectors) `[属性=值]`
 
-<h3 id="分组选择器">分组选择器</h3>
+### 分组选择器
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Selector_list">选择器列表</a> <code><var>A</var>, <var>B</var></code></dt>
- <dd>指定同时选择<code><var>A</var></code> 和 <code><var>B</var></code>元素。这是一种选择多个匹配元素的分组方法。</dd>
-</dl>
+- [选择器列表](/zh-CN/docs/Web/CSS/Selector_list) `A, B`
+  - : 指定同时选择`A` 和 `B`元素。这是一种选择多个匹配元素的分组方法。
 
-<h3 id="组合选择器"><a href="/zh-CN/docs/Web/CSS/CSS_Selectors#Combinators">组合选择器</a></h3>
+### [组合选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#Combinators)
 
-<p>组合选择器是在两个或多个简单选择器之间建立关系的选择器，例如“A 是 B 的子代”或“A 与 B 相邻”。</p>
+组合选择器是在两个或多个简单选择器之间建立关系的选择器，例如“A 是 B 的子代”或“A 与 B 相邻”。
 
-<ul>
- <li><a href="/zh-CN/docs/CSS/Adjacent_sibling_selectors">相邻兄弟选择器</a> <code>A + B</code></li>
-</ul>
+- [相邻兄弟选择器](/zh-CN/docs/CSS/Adjacent_sibling_selectors) `A + B`
 
-<p>       指定<code>A</code>和<code>B</code>选择的元素具有相同的父元素，并且<code>B</code>选择的元素在水平方向上紧随<code>A</code>选择的元素。</p>
+指定`A`和`B`选择的元素具有相同的父元素，并且`B`选择的元素在水平方向上紧随`A`选择的元素。
 
-<ul>
- <li><a href="/zh-CN/docs/CSS/General_sibling_selectors">普通兄弟选择器</a> <code>A ~ B</code></li>
-</ul>
+- [普通兄弟选择器](/zh-CN/docs/CSS/General_sibling_selectors) `A ~ B`
 
-<p>        指定由<code>A</code>和<code>B</code>选择的元素共享相同的父元素，并指定<code>A</code>选择的元素在<code>B</code>选择的元素之前（但不一定紧接在<code>B</code>之前）。</p>
+指定由`A`和`B`选择的元素共享相同的父元素，并指定`A`选择的元素在`B`选择的元素之前（但不一定紧接在`B`之前）。
 
-<ul>
- <li><a href="/zh-CN/docs/CSS/Child_selectors">子选择器</a> <code>A &gt; B</code></li>
-</ul>
+- [子选择器](/zh-CN/docs/CSS/Child_selectors) `A > B`
 
-<p>          指定<code>B</code>选择的元素是<code>A</code>选择的元素的直接子元素。</p>
+指定`B`选择的元素是`A`选择的元素的直接子元素。
 
-<ul>
- <li><a href="/zh-CN/docs/CSS/Descendant_selectors">后代选择器</a> <code>A B</code></li>
-</ul>
+- [后代选择器](/zh-CN/docs/CSS/Descendant_selectors) `A B`
 
-<p>          指定<code>B</code>选择的元素是<code>A</code>选择的元素的后代，但不一定是直接子代。</p>
+指定`B`选择的元素是`A`选择的元素的后代，但不一定是直接子代。
 
-<h3 id="伪类"><a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a></h3>
+### [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
 
 {{Page("/zh-CN/docs/Web/CSS/Pseudo-classes", "index")}}
 
-<h3 id="伪元素"><a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a></h3>
+### [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
 
-<li>{{Page("/zh-CN/docs/Web/CSS/Pseudo-elements", "index")}}</li>
+- {{Page("/zh-CN/docs/Web/CSS/Pseudo-elements", "index")}}
 
-<div class="blockIndicator note">
-<p><strong>另见</strong>：一份完整的选择器标准 3 <a href="https://www.w3.org/TR/selectors/#selectors">选择器列表</a>。</p>
-</div>
+> **备注：** 另见：一份完整的选择器标准 3 [选择器列表](https://www.w3.org/TR/selectors/#selectors)。
 
-<h2 id="概念">概念</h2>
+## 概念
 
-<h3 id="语法和语义">语法和语义</h3>
+### 语法和语义
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/Syntax">CSS 语法</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/At-rule">@ 规则</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Cascade">层叠</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Comments">注释</a></li>
- <li><a href="/zh-CN/docs/Glossary/Descriptor_(CSS)">解释器</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/inheritance">继承</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Value_definition_syntax">值定义语法</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Values_and_Units">CSS 单位与取值类型</a></li>
-</ul>
+- [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
+- [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
+- [层叠](/zh-CN/docs/Web/CSS/Cascade)
+- [注释](/zh-CN/docs/Web/CSS/Comments)
+- [解释器](</zh-CN/docs/Glossary/Descriptor_(CSS)>)
+- [继承](/zh-CN/docs/Web/CSS/inheritance)
+- [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+- [优先级](/zh-CN/docs/Web/CSS/Specificity)
+- [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+- [CSS 单位与取值类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
 
-<h3 id="值">值</h3>
+### 值
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/actual_value">实际值</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/computed_value">计算值</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/resolved_value">解析值</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/specified_value">指定值</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/used_value">使用值</a></li>
-</ul>
+- [实际值](/zh-CN/docs/Web/CSS/actual_value)
+- [计算值](/zh-CN/docs/Web/CSS/computed_value)
+- [初始值](/zh-CN/docs/Web/CSS/initial_value)
+- [解析值](/zh-CN/docs/Web/CSS/resolved_value)
+- [指定值](/zh-CN/docs/Web/CSS/specified_value)
+- [使用值](/zh-CN/docs/Web/CSS/used_value)
 
-<h3 id="布局">布局</h3>
+### 布局
 
-<ul>
- <li><a href="/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式化上下文</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/box_model">盒式模型</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/All_About_The_Containing_Block">包含块</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Layout_mode">布局模式</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距合并</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Replaced_element">替换元素</a></li>
- <li><a href="/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">层叠上下文</a></li>
- <li><a href="/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model">视觉格式化模型</a></li>
-</ul>
+- [块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- [盒式模型](/zh-CN/docs/Web/CSS/box_model)
+- [包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)
+- [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+- [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- [层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context)
+- [视觉格式化模型](/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model)
 
-<h2 id="DOM-CSS_CSSOM">DOM-CSS / CSSOM</h2>
+## DOM-CSS / CSSOM
 
-<h3 id="主要对象类型">主要对象类型</h3>
+### 主要对象类型
 
-<ul>
- <li>{{DOMxRef("DocumentOrShadowRoot.styleSheets")}}</li>
- <li><code>{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}</code></li>
- <li><code>cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}</code> （选择器 &amp; 样式）</li>
- <li><code>cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}</code></li>
- <li>{{DOMxRef("HTMLElement.style")}}</li>
- <li><code>HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}</code>（仅样式）</li>
- <li>{{DOMxRef("Element.className")}}</li>
- <li>{{DOMxRef("Element.classList")}}</li>
-</ul>
+- {{DOMxRef("DocumentOrShadowRoot.styleSheets")}}
+- `{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}`
+- `cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}` （选择器 & 样式）
+- `cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}`
+- {{DOMxRef("HTMLElement.style")}}
+- `HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}`（仅样式）
+- {{DOMxRef("Element.className")}}
+- {{DOMxRef("Element.classList")}}
 
-<h3 id="重要方法">重要方法</h3>
+### 重要方法
 
-<ul>
- <li>{{domxref("CSSStyleSheet.insertRule()")}}</li>
- <li>{{domxref("CSSStyleSheet.deleteRule()")}}</li>
-</ul>
+- {{domxref("CSSStyleSheet.insertRule()")}}
+- {{domxref("CSSStyleSheet.deleteRule()")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a> (prefixed with <code>-moz</code>)</li>
- <li><a href="/zh-CN/docs/Web/CSS/Webkit_Extensions">WebKit CSS extensions</a> (mostly prefixed with <code>-webkit</code>)</li>
- <li><a href="/zh-CN/docs/Web/CSS/Microsoft_CSS_extensions">Microsoft CSS extensions</a> (prefixed with <code>-ms</code>)</li>
-</ul>
+- [Mozilla CSS extensions](/zh-CN/docs/Web/CSS/Mozilla_Extensions) (prefixed with `-moz`)
+- [WebKit CSS extensions](/zh-CN/docs/Web/CSS/Webkit_Extensions) (mostly prefixed with `-webkit`)
+- [Microsoft CSS extensions](/zh-CN/docs/Web/CSS/Microsoft_CSS_extensions) (prefixed with `-ms`)

@@ -3,22 +3,21 @@ title: border-top-width
 slug: Web/CSS/border-top-width
 translation_of: Web/CSS/border-top-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>css 属性 <strong><code>border-top-width</code></strong> 是用于设置盒模型的上边框的宽度</p>
+css 属性 **`border-top-width`** 是用于设置盒模型的上边框的宽度
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-width.html")}}
 
+## Syntax
 
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-top-width: thin;
 border-top-width: medium;
 border-top-width: thick;
 
-/* &lt;length&gt; values */
+/* <length> values */
 border-top-width: 10em;
 border-top-width: 3vmax;
 border-top-width: 6px;
@@ -27,59 +26,38 @@ border-top-width: 6px;
 border-top-width: inherit;
 border-top-width: initial;
 border-top-width: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>上边框的宽度属性的有效值要么是一个具体的非负数，要么是一个关键字。如果是关键字，必须是一下几种：
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td style="vertical-align: middle;"><code>thin</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-top-style: solid; border-top-width: thin; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">A thin border</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>medium</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-top-style: solid; border-top-width: medium; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">A medium border</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>thick</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-top-style: solid; border-top-width: thick; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">A thick border</td>
-   </tr>
-  </tbody>
- </table>
+- `<br-width>`
 
- <div class="note">
- <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
- </div>
- </dd>
-</dl>
+  - : 上边框的宽度属性的有效值要么是一个具体的非负数，要么是一个关键字。如果是关键字，必须是一下几种：
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+    | `thin`   |     | A thin border   |
+    | -------- | --- | --------------- |
+    | `medium` |     | A medium border |
+    | `thick`  |     | A thick border  |
+
+    > **备注：** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Element 1&lt;/div&gt;
-&lt;div&gt;Element 2&lt;/div&gt;</pre>
+```html
+<div>Element 1</div>
+<div>Element 2</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 1px solid red;
   margin: 1em 0;
 }
@@ -89,25 +67,24 @@ div:nth-child(1) {
 }
 div:nth-child(2) {
   border-top-width: 2em;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', '100%')}}</p>
+{{EmbedLiveSample('Example', '100%')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The other border-width-related CSS properties: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.</li>
- <li>The other border-top-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.</li>
-</ul>
+- The other border-width-related CSS properties: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.
+- The other border-top-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.

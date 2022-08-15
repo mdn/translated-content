@@ -3,45 +3,41 @@ title: 居中一个元素
 slug: Web/CSS/Layout_cookbook/Center_an_element
 translation_of: Web/CSS/Layout_cookbook/Center_an_element
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>在这份指南中你将了解到把一个盒子居中放置在另一个之中的方法。在伸缩盒子模型 (flexbox) 出现之前，要做到同时垂直与水平居中是很困难的，而现在利用盒子对齐属性 (Box Alignment) 就很直截了当了。</p>
+在这份指南中你将了解到把一个盒子居中放置在另一个之中的方法。在伸缩盒子模型 (flexbox) 出现之前，要做到同时垂直与水平居中是很困难的，而现在利用盒子对齐属性 (Box Alignment) 就很直截了当了。
 
-<p><img alt="an element centered inside a larger box" src="cookbook-center.png"></p>
+![an element centered inside a larger box](cookbook-center.png)
 
-<h2 id="需求">需求</h2>
+## 需求
 
-<p>把一个项目同时垂直与水平居中地放置在一个盒子中</p>
+把一个项目同时垂直与水平居中地放置在一个盒子中
 
-<h2 id="指南">指南</h2>
+## 指南
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-<div class="note">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html">下载这份示例</a></p>
-</div>
+> **备注：** [下载这份示例](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 
-<h2 id="做出选择">做出选择</h2>
+## 做出选择
 
-<p>要将一个盒子居中放置在另一个之中，我们需要让作为容器的盒子变成伸缩容器。再将 {{cssxref("align-items")}} 设置为 center 来实现块方向的轴 (block axis) 上的居中，并把 {{cssxref("justify-content")}} 设置为 center 来实现文字方向的轴 (inline axis) 上的居中。</p>
+要将一个盒子居中放置在另一个之中，我们需要让作为容器的盒子变成伸缩容器。再将 {{cssxref("align-items")}} 设置为 center 来实现块方向的轴 (block axis) 上的居中，并把 {{cssxref("justify-content")}} 设置为 center 来实现文字方向的轴 (inline axis) 上的居中。
 
-<p>将来我们可能不需要将父容器设置为伸缩容器就可以居中元素，因为此处使用的“盒子对齐”属性也被指定为适用于块布局。然而，当前在块布局上对盒子对齐属性的支持仍然是有限的，因此目前使用伸缩盒子来实现居中还是最可靠的方法。</p>
+将来我们可能不需要将父容器设置为伸缩容器就可以居中元素，因为此处使用的“盒子对齐”属性也被指定为适用于块布局。然而，当前在块布局上对盒子对齐属性的支持仍然是有限的，因此目前使用伸缩盒子来实现居中还是最可靠的方法。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>各种布局方法具有不同的浏览器支持。有关所使用属性的基本支持的详细信息，请参见下表</p>
+各种布局方法具有不同的浏览器支持。有关所使用属性的基本支持的详细信息，请参见下表
 
-<h4 id="align-items">align-items</h4>
+#### align-items
 
-<p>{{Compat("css.properties.align-items")}}</p>
+{{Compat("css.properties.align-items")}}
 
-<h4 id="justify-content">justify-content</h4>
+#### justify-content
 
-<p>{{Compat("css.properties.justify-content")}}</p>
+{{Compat("css.properties.justify-content")}}
 
-<h2 id="MDN上相关的资源">MDN 上相关的资源</h2>
+## MDN 上相关的资源
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box Alignment in Flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box alignment guide</a></li>
-</ul>
+- [Box Alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [CSS Box alignment guide](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)

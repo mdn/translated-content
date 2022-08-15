@@ -9,19 +9,18 @@ tags:
   - 参考
 translation_of: Web/CSS/align-self
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/CSS">CSS</a> 属性 <strong><code>align-self</code></strong> 会对齐当前 grid 或 flex 行中的元素，并覆盖已有的 <a href="/zh-CN/docs/Web/CSS/align-items"><code>align-items</code></a> 的值。In Grid, it aligns the item inside the <a href="/zh-CN/docs/Glossary/Grid_Areas">grid area</a>. 在 Flexbox 中，会按照 <a href="/zh-CN/docs/Glossary/Cross_Axis">cross axis</a>（当前 flex 元素排列方向的垂直方向）进行排列。</p>
+[CSS](/zh-CN/docs/CSS) 属性 **`align-self`** 会对齐当前 grid 或 flex 行中的元素，并覆盖已有的 [`align-items`](/zh-CN/docs/Web/CSS/align-items) 的值。In Grid, it aligns the item inside the [grid area](/zh-CN/docs/Glossary/Grid_Areas). 在 Flexbox 中，会按照 [cross axis](/zh-CN/docs/Glossary/Cross_Axis)（当前 flex 元素排列方向的垂直方向）进行排列。
 
-<div>{{EmbedInteractiveExample("pages/css/align-self.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-self.html")}}
 
+align-self 属性不适用于块类型的盒模型和表格单元。如果任何 flexbox 元素的侧轴方向 margin 值设置为 auto，则会忽略 `align-self`。
 
+## 语法
 
-<p>align-self 属性不适用于块类型的盒模型和表格单元。如果任何 flexbox 元素的侧轴方向 margin 值设置为 auto，则会忽略 <code>align-self</code>。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+```css
+/* Keyword values */
 align-self: auto;
 align-self: normal;
 
@@ -48,60 +47,62 @@ align-self: unsafe center;
 /* Global values */
 align-self: inherit;
 align-self: initial;
-align-self: unset;</pre>
+align-self: unset;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>设置为父元素的 {{cssxref("align-items") }} 值。</dd>
- <dt><code>normal</code></dt>
- <dd>效果取决于当前的布局模式：
- <ul>
-  <li>绝对定位布局中，normal 在绝对定位的替代元素上表现为<code>start</code>，在<em>所有其他</em>绝对定位元素上表现为<code>stretch</code>。</li>
-  <li>在绝对定位的静态元素上表现为<code>stretch</code>。</li>
-  <li>flex 布局中表现为 stretch。</li>
-  <li>For grid items, this keyword leads to a behavior similar to the one of <code>stretch</code>, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like <code>start</code>.</li>
-  <li>在块级和表格单元中无效。</li>
- </ul>
- </dd>
- <dt><code>self-start</code></dt>
- <dd>Aligns the items to be flush with the edge of the alignment container corresponding to the item's start side in the cross axis.</dd>
- <dt><code>self-end</code></dt>
- <dd>Aligns the items to be flush with the edge of the alignment container corresponding to the item's end side in the cross axis.</dd>
- <dt><code>flex-start</code></dt>
- <dd>flex 元素会对齐到 cross-axis 的首端。</dd>
- <dt><code>flex-end</code></dt>
- <dd>flex 元素会对齐到 cross-axis 的尾端。</dd>
- <dt><code>center</code></dt>
- <dd>flex 元素会对齐到 cross-axis 的中间，如果该元素的 cross-size 尺寸大于 flex 容器，将在两个方向均等溢出。</dd>
- <dt><code>baseline</code>、<code>first baseline</code>、<code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.<br />
- flex 元素将会基于容器的宽和高，按照自身 margin box 的 cross-size 拉伸。If the combined size of the items along the cross axis is less than the size of the alignment container and the item is <code>auto</code>-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all <code>auto</code>-sized items exactly fills the alignment container along the cross axis.</dd>
- <dt><code>safe</code></dt>
- <dd>If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.</dd>
-</dl>
+- `auto`
+  - : 设置为父元素的 {{cssxref("align-items") }} 值。
+- `normal`
 
-<h3 id="形式化语法">形式化语法</h3>
+  - : 效果取决于当前的布局模式：
+
+    - 绝对定位布局中，normal 在绝对定位的替代元素上表现为`start`，在*所有其他*绝对定位元素上表现为`stretch`。
+    - 在绝对定位的静态元素上表现为`stretch`。
+    - flex 布局中表现为 stretch。
+    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
+    - 在块级和表格单元中无效。
+
+- `self-start`
+  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's start side in the cross axis.
+- `self-end`
+  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's end side in the cross axis.
+- `flex-start`
+  - : flex 元素会对齐到 cross-axis 的首端。
+- `flex-end`
+  - : flex 元素会对齐到 cross-axis 的尾端。
+- `center`
+  - : flex 元素会对齐到 cross-axis 的中间，如果该元素的 cross-size 尺寸大于 flex 容器，将在两个方向均等溢出。
+- `baseline`、`first baseline`、`last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+    flex 元素将会基于容器的宽和高，按照自身 margin box 的 cross-size 拉伸。If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+- `safe`
+  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+- `unsafe`
+  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+
+### 形式化语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;section&gt;
-  &lt;div&gt;Item #1&lt;/div&gt;
-  &lt;div&gt;Item #2&lt;/div&gt;
-  &lt;div&gt;Item #3&lt;/div&gt;
-&lt;/section&gt;</pre>
+```html
+<section>
+  <div>Item #1</div>
+  <div>Item #2</div>
+  <div>Item #3</div>
+</section>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">section {
+```css
+section {
   display: flex;
   align-items: center;
   height: 120px;
@@ -117,26 +118,25 @@ div {
 div:nth-child(3) {
   align-self: flex-end;
   background: pink;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>CSS Flexbox 指南：<em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox 指南：<em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid 指南：<em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>{{cssxref("align-items")}} 属性</li>
-</ul>
+- CSS Flexbox 指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox 指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid 指南：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
+- {{cssxref("align-items")}} 属性

@@ -10,81 +10,78 @@ tags:
 translation_of: Web/CSS/overflow-wrap
 original_slug: Web/CSS/word-wrap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
+[CSS](/en/CSS) 属性 **`overflow-wrap`** 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。
 
-<p>{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}</p>
+> **备注：** 与{{cssxref("word-break")}}相比，`overflow-wrap`仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生中断。
 
-<p><a href="/en/CSS">CSS</a> 属性 <code><strong>overflow</strong></code><strong><code>-wrap</code></strong> 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。</p>
+> **备注：** word-wrap 属性原本属于微软的一个私有属性，在 CSS3 现在的文本规范草案中已经被重名为 {{cssxref("overflow-wrap")}} 。word-wrap 现在被当作 overflow-wrap 的“别名”。稳定的谷歌 Chrome 和 Opera 浏览器版本支持这种新语法。
 
-<div class="blockIndicator note">
-<p>与{{cssxref("word-break")}}相比，<code>overflow-wrap</code>仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生中断。</p>
-</div>
+## 语法
 
-<div class="note"><strong>注：</strong><strong>word-wrap 属性原本属于微软的一个私有属性，在 CSS3 现在的文本规范草案中已经被重名为 {{cssxref("overflow-wrap")}} 。word-wrap 现在被当作 overflow-wrap 的“别名”。稳定的谷歌 Chrome 和 Opera 浏览器版本支持这种新语法。</strong></div>
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="notranslate"><code>/* Keyword values */
+```
+/* Keyword values */
 overflow-wrap: normal;
 overflow-wrap: break-word;
 
 /* Global values */
 overflow-wrap: inherit;
 overflow-wrap: initial;
-overflow-wrap: unset;</code>
+overflow-wrap: unset;
+```
 
-</pre>
+将 `overflow-wrap` 属性指定为从下面的值列表中选择的单个关键字。
 
-<p>将 <code>overflow-wrap</code> 属性指定为从下面的值列表中选择的单个关键字。</p>
+### 值
 
-<h3 id="Values">值</h3>
+- `normal`
+  - : 行只能在正常的单词断点处中断。（例如两个单词之间的空格）。
+- `break-word`
+  - : 表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行。
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>行只能在正常的单词断点处中断。（例如两个单词之间的空格）。</dd>
- <dt><code>break-word</code></dt>
- <dd>表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行。</dd>
-</dl>
-
-<h2 id="形式语法">形式语法</h2>
+## 形式语法
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="比较_overflow-wrap、word-break_和_hyphens">比较 overflow-wrap、word-break 和 hyphens</h3>
+### 比较 overflow-wrap、word-break 和 hyphens
 
-<p>本示例比较分解长单词时，<code>overflow-wrap</code>, <code>word-break</code>,  <code>hyphens</code> 的结果。</p>
+本示例比较分解长单词时，`overflow-wrap`, `word-break`, `hyphens` 的结果。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="notranslate">&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="normal"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;normal&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="ow-anywhere"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;overflow-wrap: anywhere&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="ow-break-word"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;overflow-wrap: break-word&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="word-break"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;word-break&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="hyphens"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;hyphens&lt;/code&gt;, without &lt;code&gt;lang&lt;/code&gt; attribute)&lt;/p&gt;
-&lt;p lang="en"&gt;They say the fishing is excellent at
-  Lake &lt;em class="hyphens"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;hyphens&lt;/code&gt;, English rules)&lt;/p&gt;
-&lt;p class="hyphens" lang="de"&gt;They say the fishing is excellent at
-  Lake &lt;em class="hyphens"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;hyphens&lt;/code&gt;, German rules)&lt;/p&gt;</pre>
+```
+<p>They say the fishing is excellent at
+  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>normal</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: break-word</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>word-break</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>hyphens</code>, without <code>lang</code> attribute)</p>
+<p lang="en">They say the fishing is excellent at
+  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>hyphens</code>, English rules)</p>
+<p class="hyphens" lang="de">They say the fishing is excellent at
+  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>hyphens</code>, German rules)</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="notranslate">p {
+```
+p {
    width: 13em;
    margin: 2px;
    background: gold;
@@ -104,26 +101,25 @@ overflow-wrap: unset;</code>
 
 .hyphens {
    hyphens: auto;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Comparing_overflow-wrap_word-break_and_hyphens', '100%', 260) }}</p>
+{{ EmbedLiveSample('Comparing_overflow-wrap_word-break_and_hyphens', '100%', 260) }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">另参见</h2>
+## 另参见
 
-<ul>
- <li>{{cssxref("word-break")}}</li>
- <li>{{cssxref("hyphens")}}</li>
- <li>{{cssxref("text-overflow")}}</li>
-</ul>
+- {{cssxref("word-break")}}
+- {{cssxref("hyphens")}}
+- {{cssxref("text-overflow")}}

@@ -8,11 +8,12 @@ tags:
   - 参考
 translation_of: Web/CSS/text-decoration-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/CSS">CSS</a> 属性 <strong><code>text-decoration-line</code></strong> 用于设置元素中的文本的修饰类型。当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。</p>
+[CSS](/zh-CN/docs/CSS) 属性 **`text-decoration-line`** 用于设置元素中的文本的修饰类型。当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-decoration-line: none;
 text-decoration-line: underline;
 text-decoration-line: overline;
@@ -25,40 +26,40 @@ text-decoration-line: overline underline line-through;  /* Multiple decoration l
 text-decoration-line: inherit;
 text-decoration-line: initial;
 text-decoration-line: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<p><code>text-decoration-line</code> 属性可以设置为 <code>none</code>, 或者<strong>一个及多个</strong>用空格分隔的下列值。</p>
+`text-decoration-line` 属性可以设置为 `none`, 或者**一个及多个**用空格分隔的下列值。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>表示没有文本修饰效果。</dd>
- <dt><code>underline</code></dt>
- <dd>在文本的下方有一条修饰线。</dd>
- <dt><code>overline</code></dt>
- <dd>在文本的上方有一条修饰线。</dd>
- <dt><code>line-through</code></dt>
- <dd>有一条贯穿文本中间的修饰线。</dd>
- <dt><code>blink {{deprecated_inline}}</code></dt>
- <dd>文本闪烁（文本交替处于显示与隐藏状态）。客户代理都一致没有实现文本闪烁效果。考虑到为了支持使用 <a href="/en-US/docs/Web/CSS/animation">CSS 动画</a>，该值也<strong>不宜使用</strong>。</dd>
-</dl>
+- `none`
+  - : 表示没有文本修饰效果。
+- `underline`
+  - : 在文本的下方有一条修饰线。
+- `overline`
+  - : 在文本的上方有一条修饰线。
+- `line-through`
+  - : 有一条贯穿文本中间的修饰线。
+- `blink {{deprecated_inline}}`
+  - : 文本闪烁（文本交替处于显示与隐藏状态）。客户代理都一致没有实现文本闪烁效果。考虑到为了支持使用 [CSS 动画](/zh-CN/docs/Web/CSS/animation)，该值也**不宜使用**。
 
-<h3 id="格式化语法">格式化语法</h3>
+### 格式化语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<div id="Examples">
-<pre class="brush: html">&lt;p class="wavy"&gt;Here's some text with wavy red underline!&lt;/p&gt;
-&lt;p class="both"&gt;This text has lines both above and below it.&lt;/p&gt;</pre>
+```html
+<p class="wavy">Here's some text with wavy red underline!</p>
+<p class="both">This text has lines both above and below it.</p>
+```
 
-<pre class="brush: css">.wavy {
+```css
+.wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
@@ -66,21 +67,19 @@ text-decoration-line: unset;
 
 .both {
   text-decoration-line: underline overline;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
-</div>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。</li>
-</ul>
+- 当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。

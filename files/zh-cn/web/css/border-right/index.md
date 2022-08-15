@@ -7,59 +7,61 @@ tags:
   - CSS 边框
 translation_of: Web/CSS/border-right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 属性 <strong>border-<code>right</code></strong> 是属性{{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-style") }}, 和{{ Cssxref("border-right-width") }}的三者的缩写。这些属性都是在描述一个元素的右边的边框<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border"><code>border</code></a>。</p>
+CSS 属性 **border-`right`** 是属性{{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-style") }}, 和{{ Cssxref("border-right-width") }}的三者的缩写。这些属性都是在描述一个元素的右边的边框[`border`](/zh-CN/docs/Web/CSS/border)。
 
-<pre class="brush:css no-line-numbers">border-right: 1px;
+```css
+border-right: 1px;
 border-right: 2px dotted;
 border-right: medium dashed green;
-</pre>
+```
 
-<div class="note">
-<p>和 CSS 所有的缩写属性一样，border-<code>right</code> 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......</p>
+> **备注：** 和 CSS 所有的缩写属性一样，border-`right` 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......
+>
+> ```css
+> border-right-style: dotted;
+> border-right: thick green;
+> ```
+>
+> ......实际上应该是下面这个样子......
+>
+> ```css
+>   border-right-style: dotted;
+>   border-right: none thick green;
+> ```
+>
+> ......并且在 border-`right` 之前定义的 {{ Cssxref("border-right-style") }} 的值也会被覆盖。由于{{ Cssxref("border-right-style") }} 的默认值是 none, border-style 的最终结果就是没有边框。
 
-<pre class="brush:css">border-right-style: dotted;
-border-right: thick green;
-</pre>
+{{cssinfo}}
 
-<p>......实际上应该是下面这个样子......</p>
+## Syntax
 
-<pre class="brush:css">  border-right-style: dotted;
-  border-right: none thick green;
-</pre>
+这三种属性值的缩写需要按照顺序定义数值，也可以省略其中的一个或者两个。
 
-<p> ......并且在 border-<code>right</code> 之前定义的 {{ Cssxref("border-right-style") }} 的值也会被覆盖。由于{{ Cssxref("border-right-style") }} 的默认值是 none, border-style 的最终结果就是没有边框。</p>
-</div>
+### Values
 
-<p>{{cssinfo}}</p>
+- `<br-width>`
+  - : 请参阅 {{ Cssxref("border-right-width") }}.
+- `<br-style>`
+  - : 请参阅 {{ Cssxref("border-right-style") }}.
+- `{{cssxref("&lt;color&gt;")}}`
+  - : 请参阅 {{ Cssxref("border-right-color") }}.
 
-<h2 id="Syntax">Syntax</h2>
-
-<p>这三种属性值的缩写需要按照顺序定义数值，也可以省略其中的一个或者两个。</p>
-
-<h3 id="Values">Values</h3>
-
-<dl>
- <dt><code>&lt;br-width&gt; </code></dt>
- <dd>请参阅 {{ Cssxref("border-right-width") }}.</dd>
- <dt><code>&lt;br-style&gt; </code></dt>
- <dd>请参阅 {{ Cssxref("border-right-style") }}.</dd>
- <dt><code>{{cssxref("&lt;color&gt;")}}</code></dt>
- <dd>请参阅 {{ Cssxref("border-right-color") }}.</dd>
-</dl>
-
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   This box has a border on the right side.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-right: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -67,14 +69,14 @@ border-right: thick green;
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.border-right")}}

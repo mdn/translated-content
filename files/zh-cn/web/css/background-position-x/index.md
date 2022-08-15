@@ -7,27 +7,28 @@ tags:
   - CSS Property
 translation_of: Web/CSS/background-position-x
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong><code>background-position-x</code></strong> CSS 属性设置水平方向的位置，与每个背景图片等位置层设置属性 {{cssxref("background-origin")}}相关。更多信息请查看{{cssxref("background-position")}}属性，这个用的比较普遍。</p>
+**`background-position-x`** CSS 属性设置水平方向的位置，与每个背景图片等位置层设置属性 {{cssxref("background-origin")}}相关。更多信息请查看{{cssxref("background-position")}}属性，这个用的比较普遍。
 
-<div class="note"><strong>注意：</strong>这个属性的值会被后面声明的属性覆盖掉，如{{cssxref("background")}}和{{cssxref("background-position")}}等简写的属性。</div>
+> **备注：** 这个属性的值会被后面声明的属性覆盖掉，如{{cssxref("background")}}和{{cssxref("background-position")}}等简写的属性。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 background-position-x: left;
 background-position-x: center;
 background-position-x: right;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 background-position-x: 25%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 background-position-x: 0px;
 background-position-x: 1cm;
 background-position-x: 8em;
@@ -43,41 +44,37 @@ background-position-x: 0px, center;
 background-position-x: inherit;
 background-position-x: initial;
 background-position-x: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>left</code></dt>
- <dd>在位置层上相对于左边的位置。</dd>
- <dt><code>center</code></dt>
- <dd>在位置层上相对于中间点的位置。</dd>
- <dt><code>right</code></dt>
- <dd>在位置层上相对于右边的位置。</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>{{cssxref("&lt;length&gt;")}}值是定义相对于位置层边缘的距离，边缘默认为左边。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>{{cssxref("&lt;percentage&gt;")}}值是定义相对于位置层边缘的距离百分比，边缘默认为左边。</dd>
-</dl>
+- `left`
+  - : 在位置层上相对于左边的位置。
+- `center`
+  - : 在位置层上相对于中间点的位置。
+- `right`
+  - : 在位置层上相对于右边的位置。
+- `<length>`
+  - : {{cssxref("&lt;length&gt;")}}值是定义相对于位置层边缘的距离，边缘默认为左边。
+- `<percentage>`
+  - : {{cssxref("&lt;percentage&gt;")}}值是定义相对于位置层边缘的距离百分比，边缘默认为左边。
 
-<h3 id="正规语法">正规语法</h3>
+### 正规语法
 
 {{csssyntax}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">更多</h2>
+## 更多
 
-<ul>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds">Multiple backgrounds</a></li>
-</ul>
+- {{cssxref("background-position")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- [Multiple backgrounds](/zh-CN/docs/CSS/Multiple_backgrounds)

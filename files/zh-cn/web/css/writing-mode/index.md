@@ -3,15 +3,16 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 translation_of: Web/CSS/writing-mode
 ---
-<p> {{CSSRef}}</p>
+{{CSSRef}}
 
-<p> <strong><code>writing-mode</code></strong> 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。为整个文档设置书时，应在根元素上设置它（对于 HTML 文档应该在 <code>html</code> 元素上设置）</p>
+**`writing-mode`** 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。为整个文档设置书时，应在根元素上设置它（对于 HTML 文档应该在 `html` 元素上设置）
 
-<p>此属性指定块流动方向，即块级容器堆叠的方向，以及行内内容在块级容器中的流动方向。因此，它也确定块级内容的顺序。</p>
+此属性指定块流动方向，即块级容器堆叠的方向，以及行内内容在块级容器中的流动方向。因此，它也确定块级内容的顺序。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* 关键值 */
+```css
+/* 关键值 */
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
@@ -19,95 +20,93 @@ writing-mode: vertical-lr;
 /* 全局值 */
 writing-mode: inherit;
 writing-mode: initial;
-writing-mode: unset;</pre>
+writing-mode: unset;
+```
 
-<p>将 <code>write-mode</code> 属性指定为下面列出的值之一。水平流动方向也受<a href="https://www.w3.org/International/questions/qa-scripts.en">文本的方向</a>影响，从左到右（ltr，类似于英语和大多数其他语言）或从右到左（rtl，类似于希伯来语或阿拉伯语）。</p>
+将 `write-mode` 属性指定为下面列出的值之一。水平流动方向也受[文本的方向](https://www.w3.org/International/questions/qa-scripts.en)影响，从左到右（ltr，类似于英语和大多数其他语言）或从右到左（rtl，类似于希伯来语或阿拉伯语）。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>horizontal-tb</code></dt>
- <dd>对于左对齐（ltr）文本，内容从左到右水平流动。对于右对齐（rtl）文本，内容从右到左水平流动。下一水平行位于上一行下方。</dd>
- <dt><code>vertical-rl</code></dt>
- <dd>对于左对齐（ltr）文本，内容从上到下垂直流动，下一垂直行位于上一行左侧。对于右对齐（rtl）文本，内容从下到上垂直流动，下一垂直行位于上一行右侧。</dd>
- <dt><code>vertical-lr</code></dt>
- <dd>对于左对齐（ltr）文本，内容从上到下垂直流动，下一垂直行位于上一行右侧。对于右对齐（rtl）文本，内容从下到上垂直流动，下一垂直行位于上一行左侧。</dd>
- <dt><code>sideways-rl</code>{{experimental_inline}}</dt>
- <dd>对于左对齐（ltr）文本，内容从下到上垂直流动。对于右对齐（rtl）文本，内容从上到下垂直流动。所有字形（即使是垂直文本中的字形）都朝向右侧。</dd>
-</dl>
+- `horizontal-tb`
+  - : 对于左对齐（ltr）文本，内容从左到右水平流动。对于右对齐（rtl）文本，内容从右到左水平流动。下一水平行位于上一行下方。
+- `vertical-rl`
+  - : 对于左对齐（ltr）文本，内容从上到下垂直流动，下一垂直行位于上一行左侧。对于右对齐（rtl）文本，内容从下到上垂直流动，下一垂直行位于上一行右侧。
+- `vertical-lr`
+  - : 对于左对齐（ltr）文本，内容从上到下垂直流动，下一垂直行位于上一行右侧。对于右对齐（rtl）文本，内容从下到上垂直流动，下一垂直行位于上一行左侧。
+- `sideways-rl`{{experimental_inline}}
+  - : 对于左对齐（ltr）文本，内容从下到上垂直流动。对于右对齐（rtl）文本，内容从上到下垂直流动。所有字形（即使是垂直文本中的字形）都朝向右侧。
+- `sideways-lr`{{experimental_inline}}
+  - : 对于左对齐（ltr）文本，内容从上到下垂直流动。对于右对齐（rtl）文本，内容从下到上垂直流动。所有字形（即使是垂直文本中的字形）都朝向左侧。
+- `lr` {{deprecated_inline}}
+  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `horizontal-tb`。
+- `lr-tb` {{deprecated_inline}}
+  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `horizontal-tb`。
+- `rl` {{deprecated_inline}}
+  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `horizontal-tb`。
+- `tb` {{deprecated_inline}}
+  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `vertical-lr`。
+- `tb-rl` {{deprecated_inline}}
+  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `vertical-rl`。
 
-<dl>
- <dt><code>sideways-lr</code>{{experimental_inline}}</dt>
- <dd>对于左对齐（ltr）文本，内容从上到下垂直流动。对于右对齐（rtl）文本，内容从下到上垂直流动。所有字形（即使是垂直文本中的字形）都朝向左侧。</dd>
- <dt><code>lr</code> {{deprecated_inline}}</dt>
- <dd>除 SVG1 文档外，已弃用。对于 CSS，请改用 <code>horizontal-tb</code>。</dd>
- <dt><code>lr-tb</code> {{deprecated_inline}}</dt>
- <dd>除 SVG1 文档外，已弃用。对于 CSS，请改用 <code>horizontal-tb</code>。</dd>
- <dt><code>rl</code> {{deprecated_inline}}</dt>
- <dd>除 SVG1 文档外，已弃用。对于 CSS，请改用 <code>horizontal-tb</code>。</dd>
- <dt><code>tb</code> {{deprecated_inline}}</dt>
- <dd>除 SVG1 文档外，已弃用。对于 CSS，请改用 <code>vertical-lr</code>。</dd>
- <dt><code>tb-rl</code> {{deprecated_inline}}</dt>
- <dd>除 SVG1 文档外，已弃用。对于 CSS，请改用 <code>vertical-rl</code>。</dd>
-</dl>
-
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>该例子展现了所有 writing-mode 语法，以及不同语言的展示情况。</p>
+该例子展现了所有 writing-mode 语法，以及不同语言的展示情况。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>以下 HTML 只是一个简单的  {{HTMLElement("table")}}，每个单元格展示了不同的 <code>writing-mode</code> 的文本。</p>
+以下 HTML 只是一个简单的 {{HTMLElement("table")}}，每个单元格展示了不同的 `writing-mode` 的文本。
 
-<pre class="brush: html"><code>&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Value&lt;/th&gt;
-    &lt;th&gt;Vertical script&lt;/th&gt;
-    &lt;th&gt;Horizontal script&lt;/th&gt;
-    &lt;th&gt;Mixed script&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;horizontal-tb&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;vertical-lr&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;vertical-rl&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;sideways-lr&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;sideways-rl&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
+```html
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Vertical script</th>
+    <th>Horizontal script</th>
+    <th>Mixed script</th>
+  </tr>
+  <tr>
+    <td>horizontal-tb</td>
+    <td class="example Text1"><span>我家没有电脑。</span></td>
+    <td class="example Text1"><span>Example text</span></td>
+    <td class="example Text1"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-lr</td>
+    <td class="example Text2"><span>我家没有电脑。</span></td>
+    <td class="example Text2"><span>Example text</span></td>
+    <td class="example Text2"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-rl</td>
+    <td class="example Text3"><span>我家没有电脑。</span></td>
+    <td class="example Text3"><span>Example text</span></td>
+    <td class="example Text3"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-lr</td>
+    <td class="example Text4"><span>我家没有电脑。</span></td>
+    <td class="example Text4"><span>Example text</span></td>
+    <td class="example Text4"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-rl</td>
+    <td class="example Text5"><span>我家没有电脑。</span></td>
+    <td class="example Text5"><span>Example text</span></td>
+    <td class="example Text5"><span>1994年に至っては</span></td>
+  </tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>Some preparatory CSS just to make things look a little better:</p>
+Some preparatory CSS just to make things look a little better:
 
-<div class="hidden">
-<pre class="brush: css">table {
+```css hidden
+table {
   border-collapse:collapse;
 }
 td, th {
@@ -119,12 +118,13 @@ th {
 .example {
   height:75px;
   width:75px;
-}</pre>
-</div>
+}
+```
 
-<p>The CSS that adjusts the directionality of the content looks like this:</p>
+The CSS that adjusts the directionality of the content looks like this:
 
-<pre class="brush: css"><code>.example.Text1 span, .example.Text1 {
+```css
+.example.Text1 span, .example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
@@ -152,33 +152,32 @@ th {
   writing-mode: sideways-rl;
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;
-}</code></pre>
+}
+```
 
-<p>{{EmbedLiveSample("示例", 400, 500)}}</p>
+{{EmbedLiveSample("示例", 400, 500)}}
 
-<h3 id="显示效果">显示效果</h3>
+### 显示效果
 
-<p>下图显示了在浏览器对 <code>writing-mode</code> 的支持不完整的情况下输出的外观：</p>
+下图显示了在浏览器对 `writing-mode` 的支持不完整的情况下输出的外观：
 
-<p><img src="screenshot_2020-02-05_21-04-30.png"></p>
+![](screenshot_2020-02-05_21-04-30.png)
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.writing-mode")}}</p>
+{{Compat("css.properties.writing-mode")}}
 
-<h2 id="请参阅">请参阅</h2>
+## 请参阅
 
-<ul>
- <li>SVG <code><a href="/zh-CN/docs/Web/SVG/Attribute/writing-mode">writing-mode</a></code> attribute</li>
- <li>{{Cssxref("direction")}}</li>
- <li>{{Cssxref("unicode-bidi")}}</li>
- <li>{{Cssxref("text-orientation")}}</li>
- <li>{{Cssxref("text-combine-upright")}}</li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Logical_Properties">CSS Logical properties</a></li>
- <li><a href="https://www.w3.org/International/articles/vertical-text/">Styling vertical text (Chinse, Japanese, Korean and Mongolian)</a></li>
- <li>Extensive browsers support test results: <a href="https://w3c.github.io/i18n-tests/results/writing-mode-vertical">https://w3c.github.io/i18n-tests/results/writing-mode-vertical</a></li>
-</ul>
+- SVG [`writing-mode`](/zh-CN/docs/Web/SVG/Attribute/writing-mode) attribute
+- {{Cssxref("direction")}}
+- {{Cssxref("unicode-bidi")}}
+- {{Cssxref("text-orientation")}}
+- {{Cssxref("text-combine-upright")}}
+- [CSS Logical properties](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [Styling vertical text (Chinse, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
+- Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/writing-mode-vertical>

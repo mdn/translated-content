@@ -1,74 +1,68 @@
 ---
 title: ':lang'
-slug: 'Web/CSS/:lang'
-translation_of: 'Web/CSS/:lang'
+slug: Web/CSS/:lang
+translation_of: Web/CSS/:lang
 ---
-<p> </p>
+{{CSSRef}}
 
-<div>{{CSSRef}}</div>
+**`:lang()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素语言来匹配页面元素。
 
-<p><strong><code>:lang()</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>基于元素语言来匹配页面元素。</p>
-
-<pre class="brush: css">/* 选取任意的英文（en) 段落 */
+```css
+/* 选取任意的英文（en) 段落 */
 p:lang(en) {
   quotes: '\201C' '\201D' '\2018' '\2019';
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>注意：</strong> 在 HTML 中，语言是通过{{htmlattrxref("lang")}} 属性，和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 头）. 对于其他文档类型，也可能存在其他用于确定语言的方法。</p>
-</div>
+> **备注：** 在 HTML 中，语言是通过{{htmlattrxref("lang")}} 属性，和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 头）. 对于其他文档类型，也可能存在其他用于确定语言的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
-<pre class="syntaxbox">:lang( &lt;language-code&gt; )</pre>
+```
+:lang( <language-code> )
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>&lt;language-code&gt;</code></dt>
- <dd> {{cssxref("&lt;string&gt;")}} 代表了你想定位的语言。可接受的值为在<a href="/zh-CN/docs/Web/HTML">HTML</a> 规范中指定的值。</dd>
-</dl>
+- `<language-code>`
+  - : {{cssxref("&lt;string&gt;")}} 代表了你想定位的语言。可接受的值为在[HTML](/zh-CN/docs/Web/HTML) 规范中指定的值。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>在这个例子中，:lang() 伪类使用子选择器来匹配引用元素 ({{htmlElement("q")}}) 的父元素。需要注意的是，此处演示的方法并不是唯一的，最好的方法需要依据文档类型来确定。还需要注意的是， {{glossary("Unicode")}} 值用于指定一些特殊字符的引用。</p>
+在这个例子中，:lang() 伪类使用子选择器来匹配引用元素 ({{htmlElement("q")}}) 的父元素。需要注意的是，此处演示的方法并不是唯一的，最好的方法需要依据文档类型来确定。还需要注意的是， {{glossary("Unicode")}} 值用于指定一些特殊字符的引用。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div lang="en"&gt;&lt;q&gt;This English quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-&lt;div lang="fr"&gt;&lt;q&gt;This French quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-&lt;div lang="de"&gt;&lt;q&gt;This German quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-</pre>
+```html
+<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
+<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
+<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:lang(en) &gt; q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) &gt; q { quotes: '« ' ' »'; }
-:lang(de) &gt; q { quotes: '»' '«' '\2039' '\203A'; }
-</pre>
+```css
+:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+:lang(fr) > q { quotes: '« ' ' »'; }
+:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 350)}}</p>
+{{EmbedLiveSample('Example', 350)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.lang")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.lang")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>语言相关伪类: {{ cssxref(":lang") }}, {{ cssxref(":dir") }}</li>
- <li>HTML {{htmlattrxref("lang")}} 属性</li>
- <li><a href="https://tools.ietf.org/html/bcp47">BCP 47 - Tags for Identifying Languages</a></li>
-</ul>
+- 语言相关伪类: {{ cssxref(":lang") }}, {{ cssxref(":dir") }}
+- HTML {{htmlattrxref("lang")}} 属性
+- [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)

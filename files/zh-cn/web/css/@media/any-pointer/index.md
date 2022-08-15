@@ -9,43 +9,40 @@ tags:
   - 媒体特性
 translation_of: Web/CSS/@media/any-pointer
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><strong><code>any-pointer</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">媒体特性</a> 测试用户是否拥有<em>任意</em>定点装置（如鼠标）。以及如果存在定点装置，它的精确度是什么样的。</p>
+**`any-pointer`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 测试用户是否拥有*任意*定点装置（如鼠标）。以及如果存在定点装置，它的精确度是什么样的。
 
-<div class="note">
-<p><strong>注：</strong> 如果你想测试<em>主</em>定点设备的精确度，使用 <code><a href="/en-US/docs/Web/CSS/@media/pointer">pointer</a></code> 。</p>
-</div>
+> **备注：** 如果你想测试*主*定点设备的精确度，使用 [`pointer`](/en-US/docs/Web/CSS/@media/pointer) 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>any-pointer</code> 特性使用下面的关键字。</p>
+`any-pointer` 特性使用下面的关键字。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>没有可用的定点设备。</dd>
- <dt><code>coarse</code></dt>
- <dd>至少有一个输入途径包含一个精度有限的定点装置。</dd>
- <dt><code>fine</code></dt>
- <dd>至少有一个输入途径包含一个精确的定点装置。</dd>
-</dl>
+- `none`
+  - : 没有可用的定点设备。
+- `coarse`
+  - : 至少有一个输入途径包含一个精度有限的定点装置。
+- `fine`
+  - : 至少有一个输入途径包含一个精确的定点装置。
 
-<div class="note">
-<p><strong>注：</strong> 当输入设备拥有不同特性时，可能有多于一个的值被匹配。<code>none</code> 仅当它们都不是定点设备时被匹配。</p>
-</div>
+> **备注：** 当输入设备拥有不同特性时，可能有多于一个的值被匹配。`none` 仅当它们都不是定点设备时被匹配。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个例子为拥有至少一个精确定点装置的用户创建了一个小 checkbox，为拥有至少一个粗略定点装置的用户创建了一个大 checkbox。大 checkbox 的优先级更高，因为它的声明在小 checkbox 的声明后。</p>
+这个例子为拥有至少一个精确定点装置的用户创建了一个小 checkbox，为拥有至少一个粗略定点装置的用户创建了一个大 checkbox。大 checkbox 的优先级更高，因为它的声明在小 checkbox 的声明后。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;input id="test" type="checkbox" /&gt;
-&lt;label for="test"&gt;Look at me!&lt;/label&gt;</pre>
+```html
+<input id="test" type="checkbox" />
+<label for="test">Look at me!</label>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">input[type="checkbox"]:checked {
+```css
+input[type="checkbox"]:checked {
   background: gray;
 }
 
@@ -70,24 +67,20 @@ translation_of: Web/CSS/@media/any-pointer
     border: 2px solid red;
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.at-rules.media.any-pointer")}}
 
+## 更多资料
 
-<p>{{Compat("css.at-rules.media.any-pointer")}}</p>
-
-<h2 id="更多资料">更多资料</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/pointer"><code>pointer</code> media feature</a></li>
-</ul>
+- [`pointer` media feature](/zh-CN/docs/Web/CSS/@media/pointer)

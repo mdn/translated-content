@@ -7,19 +7,18 @@ tags:
   - object-position
 translation_of: Web/CSS/object-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <strong><code>object-position</code></strong> 规定了<a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a>的内容，在这里我们称其为对象（即 <strong><code>object-position</code></strong> 中的 <strong><code>object</code>）</strong>，在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景（{{cssxref("background")}}）。</p>
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`）**，在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景（{{cssxref("background")}}）。
 
-<p>你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在（原文：intrinsic）大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。</p>
+你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在（原文：intrinsic）大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
 
-<div>{{EmbedInteractiveExample("pages/css/object-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-position.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;position&gt; values */
+```css
+/* <position> values */
 object-position: center top;
 object-position: 100px 50px;
 
@@ -27,40 +26,38 @@ object-position: 100px 50px;
 object-position: inherit;
 object-position: initial;
 object-position: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd>使用 1 到 4 个值来定义该元素在它所处的二维平面中的定位。可以使用相对或绝对偏移。</dd>
-</dl>
+- {{cssxref("&lt;position&gt;")}}
+  - : 使用 1 到 4 个值来定义该元素在它所处的二维平面中的定位。可以使用相对或绝对偏移。
 
-<div class="note">
-<p><strong>注意：</strong>这些定位方式允许被替换元素的对象被定位到内容框外部。</p>
-</div>
+> **备注：** 这些定位方式允许被替换元素的对象被定位到内容框外部。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.</p>
+Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.
 
-<p>这里我们看到包含两个 img 元素的 HTML，分别展示了 MDN 的 logo</p>
+这里我们看到包含两个 img 元素的 HTML，分别展示了 MDN 的 logo
 
-<pre class="brush: html">&lt;img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
-&lt;img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
-</pre>
+```html
+<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>CSS 包括&lt;img&gt;元素本身的默认样式，以及两个图像各自的样式。</p>
+CSS 包括\<img>元素本身的默认样式，以及两个图像各自的样式。
 
-<pre class="brush: css">img {
+```css
+img {
   width: 300px;
   height: 250px;
   border: 1px solid black;
@@ -76,28 +73,24 @@ object-position: unset;
 #object-position-2 {
   object-position: 100% 10%;
 }
-</pre>
+```
 
-<p>第一个图像的左边缘距元素框左边缘 10 个像素。第二个图像的右边缘与元素框的右边缘齐平，并位于元素框高度下方 10％处。</p>
+第一个图像的左边缘距元素框左边缘 10 个像素。第二个图像的右边缘与元素框的右边缘齐平，并位于元素框高度下方 10％处。
 
-<h3 id="输出">输出</h3>
+### 输出
 
-<p>{{ EmbedLiveSample('Example', '100%','300px') }}</p>
+{{ EmbedLiveSample('Example', '100%','300px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.object-position")}}
 
+## 参见
 
-<p>{{Compat("css.properties.object-position")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}，{{cssxref("image-orientation")}}，{{cssxref("image-rendering")}}，{{cssxref("image-resolution")}}。</li>
-</ul>
+- 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}，{{cssxref("image-orientation")}}，{{cssxref("image-rendering")}}，{{cssxref("image-resolution")}}。

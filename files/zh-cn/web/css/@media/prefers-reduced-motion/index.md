@@ -3,47 +3,43 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
-<p><a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">媒体查询特性</a> <strong><code>prefers-reduced-motion</code></strong> 用于检测用户的系统是否被开启了动画减弱功能。</p>
+[CSS](/zh-CN/docs/CSS) [媒体查询特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>用户未修改系统动画相关特性。</dd>
- <dt><code><dfn>reduce</dfn></code></dt>
- <dd>这个值意味着用户修改了系统设置，将动画效果最小化，最好所有的不必要的移动都能被移除。</dd>
-</dl>
+- `no-preference`
+  - : 用户未修改系统动画相关特性。
+- `reduce`
+  - : 这个值意味着用户修改了系统设置，将动画效果最小化，最好所有的不必要的移动都能被移除。
 
-<h2 id="用户偏好">用户偏好</h2>
+## 用户偏好
 
-<p>在火狐中，满足以下条件则 <code>reduce</code> 会生效：</p>
+在火狐中，满足以下条件则 `reduce` 会生效：
 
-<ul>
- <li>在  GTK/Gnome 中，可以通过 <em>GNOME Tweaks</em> （在“通用”或“外观”菜单中，取决于具体版本） 的配置，设置 <code>gtk-enable-animations</code> 的值为 <code>false</code>。
+- 在 GTK/Gnome 中，可以通过 _GNOME Tweaks_ （在“通用”或“外观”菜单中，取决于具体版本） 的配置，设置 `gtk-enable-animations` 的值为 `false`。
 
-  <ul>
-   <li>可以在 <a href="https://wiki.archlinux.org/index.php/GTK#Configuration">GTK 3 的配置文件</a>中的 <code>[Settings]</code> 模块下设置 <code>gtk-enable-animations = false</code>。</li>
-  </ul>
- </li>
- <li>在 Windows 10 中：设置 &gt; 轻松获取 &gt; 显示 &gt; 在 Windows 中显示动画。</li>
- <li>在 Windows 7 中：控制面板 &gt; 轻松获取 &gt; ?是计算机更易于查看 &gt; 关闭不必要动画。</li>
- <li>在 MacOS 中：系统偏好 &gt; 辅助使用 &gt; 显示 &gt; 减少运动。</li>
- <li>在 iOS 上：设置 &gt; 通用 &gt; 辅助性 &gt; 减少运动。</li>
- <li>在 Android 9+ 上：设置 &gt; 辅助性 &gt; 移除动画。</li>
-</ul>
+  - 可以在 [GTK 3 的配置文件](https://wiki.archlinux.org/index.php/GTK#Configuration)中的 `[Settings]` 模块下设置 `gtk-enable-animations = false`。
 
-<h2 id="例子">例子</h2>
+- 在 Windows 10 中：设置 > 轻松获取 > 显示 > 在 Windows 中显示动画。
+- 在 Windows 7 中：控制面板 > 轻松获取 > ?是计算机更易于查看 > 关闭不必要动画。
+- 在 MacOS 中：系统偏好 > 辅助使用 > 显示 > 减少运动。
+- 在 iOS 上：设置 > 通用 > 辅助性 > 减少运动。
+- 在 Android 9+ 上：设置 > 辅助性 > 移除动画。
 
-<p>下面的例子将会展示一组令人心烦的动画，不过当你开启了系统的“减少运动”后就能看到动画减弱的效果了。</p>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+下面的例子将会展示一组令人心烦的动画，不过当你开启了系统的“减少运动”后就能看到动画减弱的效果了。
 
-<pre class="brush: html">&lt;div class="animation"&gt;animated box&lt;/div&gt;
-</pre>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<div class="animation">animated box</div>
+```
 
-<pre class="brush: css">.animation {
+### CSS
+
+```css
+.animation {
   animation: vibrate 0.3s linear infinite both;
 }
 
@@ -52,10 +48,10 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
     animation: none;
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: css">.animation {
+```css hidden
+.animation {
   background-color: rebeccapurple;
   color: #fff;
   font: 1.2em Helvetica, arial, sans-serif;
@@ -96,27 +92,22 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
             transform: translate(0);
   }
 }
-</pre>
-</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("例子")}}</p>
+{{EmbedLiveSample("例子")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.at-rules.media.prefers-reduced-motion")}}
 
+## 参考
 
-<p>{{Compat("css.at-rules.media.prefers-reduced-motion")}}</p>
+- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An introduction to the reduced motion media query</a></li>
-</ul>
-
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

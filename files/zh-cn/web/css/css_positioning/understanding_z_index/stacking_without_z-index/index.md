@@ -4,41 +4,32 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 ---
-<p>« <a href="/zh-CN/CSS">CSS</a> « <a href="/zh-CN/CSS/Understanding_z-index">理解 CSS z-index</a></p>
+« [CSS](/zh-CN/CSS) « [理解 CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
-<h3 id="不含z-index的堆叠">不含 z-index 的堆叠</h3>
+### 不含 z-index 的堆叠
 
-<p>当没有元素包含 z-index 属性时，元素按照如下顺序堆叠（从底到顶顺序）：</p>
+当没有元素包含 z-index 属性时，元素按照如下顺序堆叠（从底到顶顺序）：
 
-<ol>
- <li>根元素的背景和边界</li>
- <li>普通流 (无定位) 里的块元素 (没有 position 或者 position:static;) 按 HTML 中的出现顺序堆叠</li>
- <li>定位元素按 HTML 中的出现顺序堆叠</li>
-</ol>
+1.  根元素的背景和边界
+2.  普通流 (无定位) 里的块元素 (没有 position 或者 position:static;) 按 HTML 中的出现顺序堆叠
+3.  定位元素按 HTML 中的出现顺序堆叠
 
-<p>在接下来的例子中，相对和绝对定位的块元素的大小和位置刚好说明上述堆叠规则。</p>
+在接下来的例子中，相对和绝对定位的块元素的大小和位置刚好说明上述堆叠规则。
 
-<div class="note">
-<p><strong>Notes:</strong></p>
+> **备注：**
+>
+> - 在一组由不含有任何 z-index 属性的同类元素，如例子中的定位块元素（DIV #1 至 #4），这些元素按照它们在 HTML 结构中出现的顺序堆叠，而不管它们的定位属性如何。
+> - 普通流中不含有定位属性的标准块元素（DIV #5）始终先于定位元素渲染并出现在定位元素的下层，即便它们在 HTML 结构中出现的位置晚于定位元素也是如此。
 
-<ul>
- <li>在一组由不含有任何 z-index 属性的同类元素，如例子中的定位块元素（DIV #1 至 #4），这些元素按照它们在 HTML 结构中出现的顺序堆叠，而不管它们的定位属性如何。</li>
- <li>
-  <p>普通流中不含有定位属性的标准块元素（DIV #5）始终先于定位元素渲染并出现在定位元素的下层，即便它们在 HTML 结构中出现的位置晚于定位元素也是如此。</p>
- </li>
-</ul>
-</div>
+![understanding_zindex_01.png](/@api/deki/files/910/=understanding_zindex_01.png)
 
-<p><img alt="understanding_zindex_01.png" class="default internal" src="/@api/deki/files/910/=understanding_zindex_01.png"></p>
+### 示例
 
-<p> </p>
-
-<h3 id="Example">示例</h3>
-
-<pre class="brush: html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;style type="text/css"&gt;
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><style type="text/css">
 
 div {
    font: 12px Arial;
@@ -101,60 +92,51 @@ span.bold { font-weight: bold; }
    text-align: center;
 }
 
-&lt;/style&gt;&lt;/head&gt;
+</style></head>
 
-&lt;body&gt;
+<body>
 
-&lt;br /&gt;&lt;br /&gt;
+<br /><br />
 
-&lt;div id="absdiv1"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-&lt;/div&gt;
-
-&lt;div id="reldiv1"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #2&lt;/span&gt;
-   &lt;br /&gt;position: relative;
-&lt;/div&gt;
-
-&lt;div id="reldiv2"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #3&lt;/span&gt;
-   &lt;br /&gt;position: relative;
-&lt;/div&gt;
-
-&lt;div id="absdiv2"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #4&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-&lt;/div&gt;
-
-&lt;div id="normdiv"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #5&lt;/span&gt;
-   &lt;br /&gt;no positioning
-&lt;/div&gt;
-
-&lt;/body&gt;&lt;/html&gt;
-
-</pre>
-
-<h3 id="See_also">See also</h3>
-
-<ul>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_and_float">堆叠与浮动</a> : 浮动元素的处理方式</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Adding_z-index">增加 z-index</a> : 使用 z-index 来改变堆放顺序</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/The_stacking_context">堆叠上下文</a> : 堆叠上下文的注意事项</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1">堆叠上下文示例 1</a> : 在两层元素的第二层上使用 z-index</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2">堆叠上下文示例 2</a> : 在两层元素的所有层上使用 z-index</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3">堆叠上下文示例 3</a> : 在三层元素的第二层上使用 z-index </li>
-</ul>
-
-<p> </p>
-
-<div class="originaldocinfo">
-<h3 id="Original_Document_Information">Original Document Information</h3>
-
-<ul>
- <li>Author(s): Paolo Lombardi</li>
- <li>This article is the english translation of an article I wrote in italian for <a href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under <a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a></li>
- <li>Last Updated Date: July 9th, 2005</li>
-</ul>
+<div id="absdiv1">
+   <br /><span class="bold">DIV #1</span>
+   <br />position: absolute;
 </div>
+
+<div id="reldiv1">
+   <br /><span class="bold">DIV #2</span>
+   <br />position: relative;
+</div>
+
+<div id="reldiv2">
+   <br /><span class="bold">DIV #3</span>
+   <br />position: relative;
+</div>
+
+<div id="absdiv2">
+   <br /><span class="bold">DIV #4</span>
+   <br />position: absolute;
+</div>
+
+<div id="normdiv">
+   <br /><span class="bold">DIV #5</span>
+   <br />no positioning
+</div>
+
+</body></html>
+```
+
+### See also
+
+- [堆叠与浮动](/zh-CN/CSS/Understanding_z-index/Stacking_and_float) : 浮动元素的处理方式
+- [增加 z-index](/zh-CN/CSS/Understanding_z-index/Adding_z-index) : 使用 z-index 来改变堆放顺序
+- [堆叠上下文](/zh-CN/CSS/Understanding_z-index/The_stacking_context) : 堆叠上下文的注意事项
+- [堆叠上下文示例 1](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1) : 在两层元素的第二层上使用 z-index
+- [堆叠上下文示例 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 在两层元素的所有层上使用 z-index
+- [堆叠上下文示例 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 在三层元素的第二层上使用 z-index
+
+### Original Document Information
+
+- Author(s): Paolo Lombardi
+- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- Last Updated Date: July 9th, 2005

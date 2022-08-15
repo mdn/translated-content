@@ -14,90 +14,71 @@ tags:
 translation_of: Web/CSS/gradient/repeating-radial-gradient()
 original_slug: Web/CSS/gradient/repeating-radial-gradient()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 函数<strong><code>repeating-radial-gradient()</code></strong> 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是  {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的{{cssxref("&lt;image&gt;")}}类型。</p>
+CSS 函数**`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的{{cssxref("&lt;image&gt;")}}类型。
 
-<pre class="brush: css no-line-numbers notranslate">/* 一个从容器中心点开始的重复渐变，
+```css
+/* 一个从容器中心点开始的重复渐变，
    从红色开始，渐变到蓝色，再渐变到绿色 */
 repeating-radial-gradient(circle at center, red 0, blue, green 30px);
-</pre>
+```
 
-<p>每次重复时，色标位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的色值应该与第一个色标的色值保持一致；如果不一致的话，会导致非常突兀的渐变效果。</p>
+每次重复时，色标位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的色值应该与第一个色标的色值保持一致；如果不一致的话，会导致非常突兀的渐变效果。
 
-<p>与其他渐变一样，线形重复渐变没有提供<a href="https://developer.mozilla.org/en-US/docs/CSS/image#no_intrinsic">固定的尺寸</a>；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。</p>
+与其他渐变一样，线形重复渐变没有提供[固定的尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。
 
-<div class="note">
-<p><strong>提示：</strong> 因为 <code>&lt;gradient&gt;</code> 属于<code>&lt;image&gt;</code> 数据类型，所以只能在可以使用 <code>&lt;image&gt;</code>的地方使用它们。因此<code>repeating-linear-gradient()</code> 不适用于{{Cssxref("background-color")}} 以及使用{{cssxref("&lt;color&gt;")}} 数据类型的地方。</p>
-</div>
+> **备注：** 因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}} 以及使用{{cssxref("&lt;color&gt;")}} 数据类型的地方。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd><code>position</code>与 {{cssxref("background-position")}} 或者 {{cssxref("transform-origin")}}类似。默认值为 <code>center</code>.</dd>
- <dt>{{cssxref("&lt;angle&gt;")}}</dt>
- <dd>渐变轴的角度。角度顺时针增加，默认值为<code>0deg</code>。</dd>
- <dt>{{cssxref("&lt;shape&gt;")}}</dt>
- <dd>渐变的形状。圆形（渐变的形状是一个半径不变的正圆）或椭圆形（轴对称椭圆）。默认值为椭圆。默认值为椭圆形，即 <code>ellipse</code>。</dd>
- <dt><code>&lt;extent-keyword&gt;</code></dt>
- <dd>关键字用于描述边缘轮廓的具体位置。以下为关键字常量：
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th>Keyword</th>
-    <th>Description</th>
-   </tr>
-   <tr>
-    <td><code>closest-side</code></td>
-    <td>渐变的边缘形状与容器距离渐变中心点最近的一边相切（圆形）或者至少与距离渐变中心点最近的垂直和水平边相切（椭圆）。</td>
-   </tr>
-   <tr>
-    <td><code>closest-corner</code></td>
-    <td>渐变的边缘形状与容器距离渐变中心点最近的一个角相交。</td>
-   </tr>
-   <tr>
-    <td><code>farthest-side</code></td>
-    <td>与 <code>closest-side</code>相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）。</td>
-   </tr>
-   <tr>
-    <td><code>farthest-corner</code></td>
-    <td>渐变的边缘形状与容器距离渐变中心点最远的一个角相交。</td>
-   </tr>
-  </tbody>
- </table>
+- {{cssxref("&lt;position&gt;")}}
+  - : `position`与 {{cssxref("background-position")}} 或者 {{cssxref("transform-origin")}}类似。默认值为 `center`.
+- {{cssxref("&lt;angle&gt;")}}
+  - : 渐变轴的角度。角度顺时针增加，默认值为`0deg`。
+- {{cssxref("&lt;shape&gt;")}}
+  - : 渐变的形状。圆形（渐变的形状是一个半径不变的正圆）或椭圆形（轴对称椭圆）。默认值为椭圆。默认值为椭圆形，即 `ellipse`。
+- `<extent-keyword>`
 
- <div class="note">
- <p><strong>提示：</strong> 早期的草案中还包含其他关键字 (<code>cover</code> and <code>contain</code>) ，分别相当于标准关键字 <code>farthest-corner</code> 和 <code>closest-side</code>,。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。</p>
- </div>
- </dd>
- <dt><code>&lt;color-stop&gt;</code></dt>
- <dd>表示某个确定位置的固定色值，包含一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value"><code>&lt;color&gt;</code></a>值加上可选的位置值（相对虚拟渐变射线的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/percentage"><code>&lt;percentage&gt;</code></a>或者<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/length"><code>&lt;length&gt;</code></a>长度值）。百分比值<code>0%</code>，或者长度值<code>0</code>，表示渐变中心点；百分比值<code>100%</code>表示渐变射线与边缘形状相交的点。 其间的百分比值线性对应渐变射线上的点。</dd>
-</dl>
+  - : 关键字用于描述边缘轮廓的具体位置。以下为关键字常量：
 
-<h3 id="形式语法">形式语法</h3>
+    | Keyword           | Description                                                                                                      |
+    | ----------------- | ---------------------------------------------------------------------------------------------------------------- |
+    | `closest-side`    | 渐变的边缘形状与容器距离渐变中心点最近的一边相切（圆形）或者至少与距离渐变中心点最近的垂直和水平边相切（椭圆）。 |
+    | `closest-corner`  | 渐变的边缘形状与容器距离渐变中心点最近的一个角相交。                                                             |
+    | `farthest-side`   | 与 `closest-side`相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）。                      |
+    | `farthest-corner` | 渐变的边缘形状与容器距离渐变中心点最远的一个角相交。                                                             |
 
-<pre class="syntaxbox notranslate">repeating-radial-gradient(
-       [[ circle  || <a href="/en-US/docs/CSS/length">&lt;length&gt;</a> ]                     [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-        [ ellipse || [<a href="/en-US/docs/CSS/length">&lt;length&gt;</a> | <a href="/en-US/docs/CSS/percentage">&lt;percentage&gt;</a> ]{2}] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-        [[ circle | ellipse ] || &lt;extent-keyword&gt; ] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-                                                     at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>   ,    &lt;color-stop&gt; [ , &lt;color-stop&gt; ]+ )
+    > **备注：** 早期的草案中还包含其他关键字 (`cover` and `contain`) ，分别相当于标准关键字 `farthest-corner` 和 `closest-side`,。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。
+
+- `<color-stop>`
+  - : 表示某个确定位置的固定色值，包含一个[`<color>`](/zh-CN/docs/Web/CSS/color_value)值加上可选的位置值（相对虚拟渐变射线的[`<percentage>`](/zh-CN/docs/Web/CSS/percentage)或者[`<length>`](/zh-CN/docs/Web/CSS/length)长度值）。百分比值`0%`，或者长度值`0`，表示渐变中心点；百分比值`100%`表示渐变射线与边缘形状相交的点。 其间的百分比值线性对应渐变射线上的点。
+
+### 形式语法
+
+```
+repeating-radial-gradient(
+       [[ circle  || <length> ]                     [at <position>]? , |
+        [ ellipse || [<length> | <percentage> ]{2}] [at <position>]? , |
+        [[ circle | ellipse ] || <extent-keyword> ] [at <position>]? , |
+                                                     at <position>   ,    <color-stop> [ , <color-stop> ]+ )
         \---------------------------------------------------------------/\--------------------------------/
                   定义轮廓、尺寸和结束形状的位置                                    色标列表
 
-where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner | farthest-side
-  and<code> &lt;color-stop&gt; = &lt;color&gt; [ &lt;percentage&gt; | &lt;length&gt; ]?</code></pre>
+where <extent-keyword> = closest-corner | closest-side | farthest-corner | farthest-side
+  and <color-stop> = <color> [ <percentage> | <length> ]?
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>径向渐变沿着一条轴线进行渲染。在每个轴线的端点处可以指定一个半径。可以想象为创建了两个“圆”，每个圆的中心位置用点指定，大小由半径值指定。渐变从内圆的圆周向外延伸到外圆的圆周。</p>
+径向渐变沿着一条轴线进行渲染。在每个轴线的端点处可以指定一个半径。可以想象为创建了两个“圆”，每个圆的中心位置用点指定，大小由半径值指定。渐变从内圆的圆周向外延伸到外圆的圆周。
 
-<h3 id="黑白相间的渐变">黑白相间的渐变</h3>
+### 黑白相间的渐变
 
-
-<pre class="brush: css notranslate" class="hidden">div {
+```css
+div {
   display: block;
   width: 50%;
   height: 80px;
@@ -115,16 +96,18 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
   border: 1px solid black;
   height:5.5em;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Black_and_white_gradient', '300px', '120px', '')}}</p>
+{{EmbedLiveSample('Black_and_white_gradient', '300px', '120px', '')}}
 
-<pre class="brush: css notranslate">background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);</pre>
+```css
+background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+```
 
-<h3 id="Farthest-corner渐变">Farthest-corner 渐变</h3>
+### Farthest-corner 渐变
 
-
-<pre class="brush: css notranslate" class="hidden">div {
+```css
+div {
   display: block;
   width: 50%;
   height: 80px;
@@ -143,23 +126,23 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
   border: 1px solid black;
   height:5.5em;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Farthest-corner', '300px', '120px', '')}}</p>
+{{EmbedLiveSample('Farthest-corner', '300px', '120px', '')}}
 
-<pre class="brush: css notranslate">background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);</pre>
+```css
+background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参阅：">参阅：</h2>
+## 参阅：
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_gradients">使用渐变</a></li>
- <li>其他渐变方法：{{cssxref("radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}</li>
-</ul>
+- [使用渐变](/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients)
+- 其他渐变方法：{{cssxref("radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}

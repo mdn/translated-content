@@ -6,25 +6,21 @@ tags:
   - 表格
 translation_of: Web/CSS/CSS_Table
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Table</strong> 是一个定义如何展示表格数据的 CSS 模块。</p>
+**CSS Table** 是一个定义如何展示表格数据的 CSS 模块。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("border-collapse")}}</li>
- <li>{{cssxref("border-spacing")}}</li>
- <li>{{cssxref("caption-side")}}</li>
- <li>{{cssxref("empty-cells")}}</li>
- <li>{{cssxref("table-layout")}}</li>
- <li>{{cssxref("vertical-align")}}</li>
-</ul>
-</div>
+- {{cssxref("border-collapse")}}
+- {{cssxref("border-spacing")}}
+- {{cssxref("caption-side")}}
+- {{cssxref("empty-cells")}}
+- {{cssxref("table-layout")}}
+- {{cssxref("vertical-align")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

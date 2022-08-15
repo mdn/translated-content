@@ -1,59 +1,61 @@
 ---
 title: ':checked'
-slug: 'Web/CSS/:checked'
-translation_of: 'Web/CSS/:checked'
+slug: Web/CSS/:checked
+translation_of: Web/CSS/:checked
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:checked</code></strong> CSS <a href="/zh-CN/docs/CSS/Pseudo-classes">伪类</a>选择器表示任何处于选中状态的<strong>radio</strong>(<code>&lt;input type="radio"&gt;</code>), <strong>checkbox </strong>(<code>&lt;input type="checkbox"&gt;</code>) 或 ("select") 元素中的<strong>option </strong>HTML 元素 ("option")。</p>
+**`:checked`** CSS [伪类](/zh-CN/docs/CSS/Pseudo-classes)选择器表示任何处于选中状态的**radio**(`<input type="radio">`), **checkbox** (`<input type="checkbox">`) 或 ("select") 元素中的**option** HTML 元素 ("option")。
 
-<pre class="brush: css">/* 匹配任意被勾选/选中的 radio(单选按钮),checkbox(复选框),或者 option(select 中的一项) */
+```css
+/* 匹配任意被勾选/选中的 radio(单选按钮),checkbox(复选框),或者 option(select 中的一项) */
 :checked {
   margin-left: 25px;
   border: 1px solid blue;
-} </pre>
+}
+```
 
-<p>用户通过勾选/选中元素或取消勾选/取消选中，来改变该元素的 :checked 状态。</p>
+用户通过勾选/选中元素或取消勾选/取消选中，来改变该元素的 :checked 状态。
 
-<div class="note">
-<p><strong>Note:</strong>因为浏览器经常将<code>&lt;option&gt;</code>视为<a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a>,因此不同的浏览器通过<code>:checked</code>伪类渲染出来的效果也不尽相同。</p>
-</div>
+> **备注：**因为浏览器经常将`<option>`视为[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element),因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="基础示例">基础示例</h3>
+### 基础示例
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;input type="radio" name="my-input" id="yes"&gt;
-  &lt;label for="yes"&gt;Yes&lt;/label&gt;
+```html
+<div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Yes</label>
 
-  &lt;input type="radio" name="my-input" id="no"&gt;
-  &lt;label for="no"&gt;No&lt;/label&gt;
-&lt;/div&gt;
+  <input type="radio" name="my-input" id="no">
+  <label for="no">No</label>
+</div>
 
-&lt;div&gt;
-  &lt;input type="checkbox" name="my-checkbox" id="opt-in"&gt;
-  &lt;label for="opt-in"&gt;Check me!&lt;/label&gt;
-&lt;/div&gt;
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Check me!</label>
+</div>
 
-&lt;select name="my-select" id="fruit"&gt;
-  &lt;option value="opt1"&gt;Apples&lt;/option&gt;
-  &lt;option value="opt2"&gt;Grapes&lt;/option&gt;
-  &lt;option value="opt3"&gt;Pears&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select name="my-select" id="fruit">
+  <option value="opt1">Apples</option>
+  <option value="opt2">Grapes</option>
+  <option value="opt3">Pears</option>
+</select>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div,
+```css
+div,
 select {
   margin: 8px;
 }
@@ -78,41 +80,43 @@ option:checked {
   box-shadow: 0 0 0 3px lime;
   color: red;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example")}}</p>
+{{EmbedLiveSample("Basic_example")}}
 
-<h3 id="借用隐藏的checkbox来切换元素的样式（显示隐藏）">借用隐藏的 checkbox 来切换元素的样式（显示/隐藏）</h3>
+### 借用隐藏的 checkbox 来切换元素的样式（显示/隐藏）
 
-<h3 id="Toggling_elements_with_a_hidden_checkbox">Toggling elements with a hidden checkbox</h3>
+### Toggling elements with a hidden checkbox
 
-<p>这个例子利用了<code>:checked</code>伪类，让用户基于复选框的状态切换内容，而无需使用 JavaScript。</p>
+这个例子利用了`:checked`伪类，让用户基于复选框的状态切换内容，而无需使用 JavaScript。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="checkbox" id="expand-toggle" /&gt;
+```html
+<input type="checkbox" id="expand-toggle" />
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Column #1&lt;/th&gt;&lt;th&gt;Column #2&lt;/th&gt;&lt;th&gt;Column #3&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+  </thead>
+  <tbody>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+  </tbody>
+</table>
 
-&lt;label for="expand-toggle" id="expand-btn"&gt;Toggle hidden rows&lt;/label&gt;
-</pre>
+<label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Hide the toggle checkbox */
+```css
+/* Hide the toggle checkbox */
 #expand-toggle {
   display: none;
 }
@@ -142,22 +146,22 @@ option:checked {
 #expand-toggle:checked ~ #expand-btn {
   background-color: #ccc;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}</p>
+{{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}
 
-<h3 id="Using_hidden_radioboxes_in_order_to_store_some_CSS_boolean_values"><strong>图片相册</strong></h3>
+### 图片相册
 
-<p>同时，可以使用隐藏的 radioboxes 中的:checked 伪类来构建一个<strong>只有在鼠标单击“预览”时，图片才会以全尺寸展示的图片相册，</strong>查看<a href="https://developer.mozilla.org/@api/deki/files/6268/=css-checked-gallery.zip">演示</a>。</p>
+同时，可以使用隐藏的 radioboxes 中的:checked 伪类来构建一个**只有在鼠标单击“预览”时，图片才会以全尺寸展示的图片相册，**查看[演示](https://developer.mozilla.org/@api/deki/files/6268/=css-checked-gallery.zip)。
 
-<div class="note"><strong>注：</strong> 一个类似的效果，基于<a href="/zh-CN/docs/CSS/:hover"><code>:hover</code></a>伪类和没有隐藏的 radioboxes，查看<a href="/@api/deki/files/6247/=css-gallery.zip">这个演示</a>，来自<a href="/zh-CN/docs/CSS/:hover">:hover</a>页面。</div>
+> **备注：** 一个类似的效果，基于[`:hover`](/zh-CN/docs/CSS/:hover)伪类和没有隐藏的 radioboxes，查看[这个演示](/@api/deki/files/6247/=css-gallery.zip)，来自[:hover](/zh-CN/docs/CSS/:hover)页面。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.checked")}}</p>
+{{Compat("css.selectors.checked")}}

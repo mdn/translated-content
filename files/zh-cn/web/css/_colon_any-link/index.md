@@ -1,38 +1,40 @@
 ---
 title: ':any-link'
-slug: 'Web/CSS/:any-link'
+slug: Web/CSS/:any-link
 tags:
   - CSS
   - 实验性
-translation_of: 'Web/CSS/:any-link'
+translation_of: Web/CSS/:any-link
 ---
-<div>{{CSSRef}} {{SeeCompatTable}}</div>
+{{CSSRef}} {{SeeCompatTable}}
 
-<p><strong><code>:any-link</code></strong>  <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 选择器代表一个有链接锚点的元素，而不管它是否被访问过，也就是说，它会匹配每一个有 <code>href</code> 属性的 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("link")}} 元素。因此，它会匹配到所有的 {{cssxref(":link")}} 或 {{cssxref(":visited")}}。</p>
+**`:any-link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 选择器代表一个有链接锚点的元素，而不管它是否被访问过，也就是说，它会匹配每一个有 `href` 属性的 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("link")}} 元素。因此，它会匹配到所有的 {{cssxref(":link")}} 或 {{cssxref(":visited")}}。
 
-<pre class="brush: css no-line-numbers  language-css"><code class="language-css">/* 选中任意匹配 :link 和 :visited 元素*/
-</code><code>:any-link {
+```css
+/* 选中任意匹配 :link 和 :visited 元素*/
+:any-link {
   color: green;
-}</code>
-</pre>
+}
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<div id="example">
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<a href="https://example.com">External link</a><br>
+<a href="#">Internal target link</a><br>
+<a>Placeholder link (won't get styled)</a>
+```
 
-<pre class="brush: html">&lt;a href="https://example.com"&gt;External link&lt;/a&gt;&lt;br&gt;
-&lt;a href="#"&gt;Internal target link&lt;/a&gt;&lt;br&gt;
-&lt;a&gt;Placeholder link (won't get styled)&lt;/a&gt;</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">a:any-link {
+```css
+a:any-link {
   border: 1px solid blue;
   color: orange;
 }
@@ -42,15 +44,14 @@ a:-webkit-any-link {
   border: 1px solid blue;
   color: orange;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("css.selectors.any-link")}}</p>
+{{Compat("css.selectors.any-link")}}

@@ -8,18 +8,19 @@ tags:
   - Reference
 translation_of: Web/CSS/justify-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/CSS">CSS</a> <strong><code>justify-content</code></strong> 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。</p>
+[CSS](/zh-CN/docs/CSS) **`justify-content`** 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。
 
-<pre class="brush: css notranslate"><code>/* Positional alignment */
-justify-content: center;     </code>/* 居中排列 */<code>
+```css
+/* Positional alignment */
+justify-content: center;     /* 居中排列 */
 justify-content: start;      /* Pack items from the start */
 justify-content: end;        /* Pack items from the end */
-justify-content: flex-start; </code>/* 从行首起始位置开始排列 */<code>
-justify-content: flex-end;   </code>/* 从行尾位置开始排列 */<code>
+justify-content: flex-start; /* 从行首起始位置开始排列 */
+justify-content: flex-end;   /* 从行尾位置开始排列 */
 justify-content: left;       /* Pack items from the left */
-justify-content: right;      /* Pack items from the right */</code>
+justify-content: right;      /* Pack items from the right */
 
 /* Baseline alignment */
 justify-content: baseline;
@@ -43,124 +44,113 @@ justify-content: unsafe center;
 /* Global values */
 justify-content: inherit;
 justify-content: initial;
-justify-content: unset;</pre>
+justify-content: unset;
+```
 
-<p>当 length 属性和自动外边距属性（margin: auto）生效之后，对齐已经完成了。也就是说，如果存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 0，那么对齐方式不会生效，就像没有多余空间的情况。 </p>
+当 length 属性和自动外边距属性（margin: auto）生效之后，对齐已经完成了。也就是说，如果存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 0，那么对齐方式不会生效，就像没有多余空间的情况。
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
+可以参考 [使用 CSS 弹性框](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)获取更多信息。
 
+## 语法
 
-<p>可以参考 <a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes"> 使用 CSS 弹性框</a>获取更多信息。</p>
+### 值
 
-<h2 id="语法">语法</h2>
+- `start`
+  - : 从行首开始排列。每行第一个元素与行首对齐，同时所有后续的元素与前一个对齐。
+- `flex-start`
+  - : 从行首开始排列。每行第一个弹性元素与行首对齐，同时所有后续的弹性元素与前一个对齐。
+- `flex-end`
+  - : 从行尾开始排列。每行最后一个弹性元素与行尾对齐，其他元素将与后一个对齐。
+- `center`
+  - : 伸缩元素向每行中点排列。每行第一个元素到行首的距离将与每行最后一个元素到行尾的距离相同。
+- `left`
+  - : 伸缩元素一个挨一个在对齐容器得左边缘，如果属性的轴与内联轴不平行，则`left`的行为类似于`start`。
+- `right`
+  - : 元素以容器右边缘为基准，一个挨着一个对齐，如果属性轴与内联轴不平行，则`right`的行为类似于`end`。
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `space-between`
+  - : 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐。
+- `space-around`
+  - : 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。
+- `space-evenly`
+  - : flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。
+- `stretch`
+  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
+- `safe`
+  - : 与对齐关键字一起使用，如果选定的关键字会导致元素溢出容器造成数据丢失，那么将会使用 `start` 代替它。
+- `unsafe`
+  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 
-<h3 id="值">值</h3>
-
-<dl>
- <dt><code>start</code></dt>
- <dd>从行首开始排列。每行第一个元素与行首对齐，同时所有后续的元素与前一个对齐。</dd>
-</dl>
-
-<dl>
- <dt><code>flex-start</code></dt>
- <dd>从行首开始排列。每行第一个弹性元素与行首对齐，同时所有后续的弹性元素与前一个对齐。</dd>
- <dt><code>flex-end</code></dt>
- <dd>从行尾开始排列。每行最后一个弹性元素与行尾对齐，其他元素将与后一个对齐。</dd>
- <dt><code>center</code></dt>
- <dd>伸缩元素向每行中点排列。每行第一个元素到行首的距离将与每行最后一个元素到行尾的距离相同。</dd>
- <dt><code>left</code></dt>
- <dd>伸缩元素一个挨一个在对齐容器得左边缘，如果属性的轴与内联轴不平行，则<code>left</code>的行为类似于<code>start</code>。</dd>
- <dt><code>right</code></dt>
- <dd>元素以容器右边缘为基准，一个挨着一个对齐，如果属性轴与内联轴不平行，则<code>right</code>的行为类似于<code>end</code>。</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>space-between</code></dt>
- <dd>在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐。</dd>
- <dt><code>space-around</code></dt>
- <dd>在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。</dd>
- <dt><code>space-evenly</code></dt>
- <dd>flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.</dd>
- <dt><code>safe</code></dt>
- <dd>与对齐关键字一起使用，如果选定的关键字会导致元素溢出容器造成数据丢失，那么将会使用 <code>start</code> 代替它。</dd>
- <dt><code>unsafe</code></dt>
- <dd>Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.</dd>
-</dl>
-
-<h3 id="语法格式">语法格式</h3>
+### 语法格式
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="CSS_content">CSS content</h3>
+### CSS content
 
-<pre class="brush: css notranslate">#container {
+```css
+#container {
   display: flex;
   justify-content: space-between; /* Can be changed in the live sample */
 }
 
-#container &gt; div {
+#container > div {
   width: 100px;
   height: 100px;
   background: linear-gradient(-45deg, #788cff, #b4c8ff);
 }
-</pre>
+```
 
-<div class="hidden">
-<h3 id="HTML_content">HTML content</h3>
+```html hidden
+<div id="container">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<select id="justifyContent">
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="center">center</option>
+  <option value="left">left</option>
+  <option value="right">right</option>
+  <option value="baseline">baseline</option>
+  <option value="first baseline">first baseline</option>
+  <option value="last baseline">last baseline</option>
+  <option value="space-between" selected>space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly">space-evenly</option>
+  <option value="stretch">stretch</option>
+</select>
+```
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;select id="justifyContent"&gt;
-  &lt;option value="start"&gt;start&lt;/option&gt;
-  &lt;option value="end"&gt;end&lt;/option&gt;
-  &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-  &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-  &lt;option value="center"&gt;center&lt;/option&gt;
-  &lt;option value="left"&gt;left&lt;/option&gt;
-  &lt;option value="right"&gt;right&lt;/option&gt;
-  &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-  &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-  &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
-  &lt;option value="space-between" selected&gt;space-between&lt;/option&gt;
-  &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-  &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
-  &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-&lt;/select&gt;</pre>
-
-<h3 id="JavaScript_content">JavaScript content</h3>
-
-<pre class="brush: js notranslate">var justifyContent = document.getElementById("justifyContent");
+```js hidden
+var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
   document.getElementById("container").style.justifyContent =
       evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 140)}}</p>
+{{EmbedLiveSample("Example", "100%", 140)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.justify-content")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">使用 CSS 弹性元素</a></li>
-</ul>
+- [使用 CSS 弹性元素](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)

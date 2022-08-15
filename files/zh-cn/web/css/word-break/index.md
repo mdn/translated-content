@@ -6,18 +6,16 @@ tags:
   - CSS 属性
 translation_of: Web/CSS/word-break
 ---
-<div>{{CSSRef}}<br>
- </div>
+{{CSSRef}}
 
-<p> CSS 属性 <code>word-break</code> 指定了怎样在单词内断行。</p>
+CSS 属性 `word-break` 指定了怎样在单词内断行。
 
-<div>{{EmbedInteractiveExample("pages/css/word-break.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-break.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="notranslate">/* Keyword values */
+```
+/* Keyword values */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
@@ -26,60 +24,60 @@ word-break: break-word; /* deprecated */
 /* Global values */
 word-break: inherit;
 word-break: initial;
-word-break: unset;</pre>
+word-break: unset;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>使用默认的断行规则。</dd>
- <dt><code>break-all</code></dt>
- <dd>对于 non-CJK (CJK 指中文/日文/韩文) 文本，可在任意字符间断行。</dd>
- <dt><code>keep-all</code></dt>
- <dd>CJK 文本不断行。Non-CJK 文本表现同 <code>normal</code>。</dd>
- <dt><code>break-word</code> {{Deprecated_Inline}}</dt>
- <dd>他的效果是<code>word-break: normal</code> 和 <code>overflow-wrap: anywhere</code>  的合，不论 {{cssxref("overflow-wrap")}}的值是多少。</dd>
-</dl>
+- `normal`
+  - : 使用默认的断行规则。
+- `break-all`
+  - : 对于 non-CJK (CJK 指中文/日文/韩文) 文本，可在任意字符间断行。
+- `keep-all`
+  - : CJK 文本不断行。Non-CJK 文本表现同 `normal`。
+- `break-word` {{Deprecated_Inline}}
+  - : 他的效果是`word-break: normal` 和 `overflow-wrap: anywhere` 的合，不论 {{cssxref("overflow-wrap")}}的值是多少。
 
-<div class="blockIndicator note">
-<p>注意：与 <code>word-break: break-word</code> 和 <code>overflow-wrap: break-word</code>（详见 {{cssxref("overflow-wrap")}}）对比，<code>word-break: break-word</code> 将在文本可能溢出其容器的确切位置创建一个断点。</p>
-</div>
+> **备注：** 与 `word-break: break-word` 和 `overflow-wrap: break-word`（详见 {{cssxref("overflow-wrap")}}）对比，`word-break: break-word` 将在文本可能溢出其容器的确切位置创建一个断点。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="正式语法">正式语法</h2>
+## 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;1. &lt;code&gt;word-break: normal&lt;/code&gt;&lt;/p&gt;
-&lt;p class="normal narrow"&gt;This is a long and
+```html
+<p>1. <code>word-break: normal</code></p>
+<p class="normal narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;2. &lt;code&gt;word-break: break-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakAll narrow"&gt;This is a long and
+<p>2. <code>word-break: break-all</code></p>
+<p class="breakAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;3. &lt;code&gt;word-break: keep-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="keepAll narrow"&gt;This is a long and
+<p>3. <code>word-break: keep-all</code></p>
+<p class="keepAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;4. &lt;code&gt;word-break: break-word&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakWord narrow"&gt;This is a long and
+<p>4. <code>word-break: break-word</code></p>
+<p class="breakWord narrow">This is a long and
   Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;</pre>
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="notranslate">.narrow {
+```
+.narrow {
   padding: 10px;
   border: 1px solid;
   width: 500px;
@@ -103,22 +101,19 @@ word-break: unset;</pre>
 
 .breakWord {
   word-break: break-word;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Examples', '100%', 600)}}</p>
+{{EmbedLiveSample('Examples', '100%', 600)}}
 
-<h2 id="规范_2">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.word-break")}}
 
+## 相关链接
 
-<p>{{Compat("css.properties.word-break")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{cssxref("overflow-wrap")}}</li>
-</ul>
+- {{cssxref("overflow-wrap")}}

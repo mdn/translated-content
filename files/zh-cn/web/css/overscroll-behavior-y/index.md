@@ -3,15 +3,14 @@ title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
 translation_of: Web/CSS/overscroll-behavior-y
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>overscroll-behavior-y</code></strong> 这个 CSS 属性用来控制当滚动到区域的垂直边界时的浏览器行为。</p>
+**`overscroll-behavior-y`** 这个 CSS 属性用来控制当滚动到区域的垂直边界时的浏览器行为。
 
-<div class="note">
-<p><strong>Note</strong>: 详细的解释请访问 {{cssxref("overscroll-behavior")}}。</p>
-</div>
+> **备注：** 详细的解释请访问 {{cssxref("overscroll-behavior")}}。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overscroll-behavior: auto; /* default */
 overscroll-behavior: contain;
 overscroll-behavior: none;
@@ -20,51 +19,47 @@ overscroll-behavior: none;
 overflow: inherit;
 overflow: initial;
 overflow: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>overscroll-behavior-y</code> 属性可以选用下列值。</p>
+`overscroll-behavior-y` 属性可以选用下列值。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>默认的滚动溢出行为表现的和正常一样。 .</dd>
- <dt><code>contain</code></dt>
- <dd>默认的滚动溢出行为将被内部的元素观察到，(例如：“bounce”效果或者刷新)，但是相邻的区域不会产生连续滚动效果，例如：在下面的元素不会被滚动。</dd>
- <dt><code>none</code></dt>
- <dd>相邻的滚动区域不会有连续滚动效果，并且默认的滚动溢出行为会被阻止。</dd>
-</dl>
+- `auto`
+  - : 默认的滚动溢出行为表现的和正常一样。 .
+- `contain`
+  - : 默认的滚动溢出行为将被内部的元素观察到，(例如：“bounce”效果或者刷新)，但是相邻的区域不会产生连续滚动效果，例如：在下面的元素不会被滚动。
+- `none`
+  - : 相邻的滚动区域不会有连续滚动效果，并且默认的滚动溢出行为会被阻止。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: css">.messages {
+```css
+.messages {
   height: 220px;
   overflow: auto;
   overscroll-behavior-y: contain;
-} </pre>
+}
+```
 
-<p>详细的解释请访问 {{cssxref("overscroll-behavior")}}。</p>
+详细的解释请访问 {{cssxref("overscroll-behavior")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.overscroll-behavior-y")}}
 
+## 参见
 
-<p>{{Compat("css.properties.overscroll-behavior-y")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo">Take control of your scroll: customizing pull-to-refresh and overflow effects</a></li>
-</ul>
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)

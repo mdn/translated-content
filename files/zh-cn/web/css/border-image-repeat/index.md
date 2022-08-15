@@ -8,53 +8,54 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-repeat
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><code>border-image-repeat </code>定义图片如何填充边框。或为单个值，设置所有的边框；或为两个值，分别设置水平与垂直的边框。</p>
+`border-image-repeat `定义图片如何填充边框。或为单个值，设置所有的边框；或为两个值，分别设置水平与垂直的边框。
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("border-image-repeat")}}  </pre>
+```
+Formal syntax: {{csssyntax("border-image-repeat")}}
+```
 
-<pre>border-image-repeat: <em>type</em>                    <em>  /* One-value syntax */</em>       E.g. border-image-value: stretch;
-border-image-repeat: <em>horizontal</em> <em>vertical</em>       <em>/* Two-value syntax */       </em>E.g. border-image-width: round space;
+```
+border-image-repeat: type                      /* One-value syntax */       E.g. border-image-value: stretch;
+border-image-repeat: horizontal vertical       /* Two-value syntax */       E.g. border-image-width: round space;
 
 border-image-repeat: inherit
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><em>type</em></dt>
- <dd><code>stretch</code>, <code>repeat</code>, <code>round</code>, <code>space</code> 选一。属于单个值的情况。</dd>
- <dt><em>horizontal</em></dt>
- <dd><code>stretch</code>, <code>repeat</code>, <code>round</code>, <code>space</code> 选一。属于两个值的情况。</dd>
- <dt><em>vertical</em></dt>
- <dd><code>stretch</code>, <code>repeat</code>, <code>round</code>, <code>space</code> 选一。属于两个值的情况。</dd>
- <dt><code>stretch</code></dt>
- <dd>拉伸图片以填充边框。</dd>
- <dt><code>repeat</code></dt>
- <dd>平铺图片以填充边框。</dd>
- <dt><code>round</code></dt>
- <dd>平铺图像。当不能整数次平铺时，根据情况放大或缩小图像。</dd>
- <dt><code>space</code></dt>
- <dd>平铺图像。当不能整数次平铺时，会用空白间隙填充在图像周围（不会放大或缩小图像）</dd>
- <dt><code>inherit</code></dt>
- <dd>继承父级元素的计算值。</dd>
-</dl>
+- _type_
+  - : `stretch`, `repeat`, `round`, `space` 选一。属于单个值的情况。
+- _horizontal_
+  - : `stretch`, `repeat`, `round`, `space` 选一。属于两个值的情况。
+- _vertical_
+  - : `stretch`, `repeat`, `round`, `space` 选一。属于两个值的情况。
+- `stretch`
+  - : 拉伸图片以填充边框。
+- `repeat`
+  - : 平铺图片以填充边框。
+- `round`
+  - : 平铺图像。当不能整数次平铺时，根据情况放大或缩小图像。
+- `space`
+  - : 平铺图像。当不能整数次平铺时，会用空白间隙填充在图像周围（不会放大或缩小图像）
+- `inherit`
+  - : 继承父级元素的计算值。
 
-<h2 id="Specifications">Examples</h2>
+## Examples
 
-<p>不同的取值，查看 {{cssxref("border-image")}} 的示例。</p>
+不同的取值，查看 {{cssxref("border-image")}} 的示例。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.border-image-repeat")}}

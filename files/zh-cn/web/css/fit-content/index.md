@@ -3,47 +3,47 @@ title: fit-content()
 slug: Web/CSS/fit-content
 translation_of: Web/CSS/fit-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>fit-content()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 函数将给定大小夹紧为可用大小 根据公式 <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</p>
+**`fit-content()`** [CSS](/zh-CN/docs/Web/CSS) 函数将给定大小夹紧为可用大小 根据公式 `min(maximum size, max(minimum size, argument))`.
 
-<pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 fit-content(200px)
 fit-content(5cm)
 fit-content(30vw)
 fit-content(100ch)
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 fit-content(40%)
-</pre>
+```
 
-<p>The function can be used as a track size in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> properties, where the maximum size is defined by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> and the minimum size by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#auto">auto</a></code>, which is calculated similar to <code>auto</code> (i.e., <code><a href="/en-US/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</p>
+The function can be used as a track size in [CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) properties, where the maximum size is defined by [`max-content`](/en-US/docs/Web/CSS/grid-template-columns#max-content) and the minimum size by [`auto`](/en-US/docs/Web/CSS/grid-template-columns#auto), which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 
-<p>The function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.</p>
+The function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>fit-content()</code> function accepts a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code> as an argument.</p>
+The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argument.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>An absolute length.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>A percentage relative to the available space in the given axis.
- In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : An absolute length.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : A percentage relative to the available space in the given axis.
+    In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[3]">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
   grid-gap: 5px;
@@ -54,33 +54,33 @@ fit-content(40%)
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;Item as wide as the content.&lt;/div&gt;
-  &lt;div&gt;
+```html
+<div id="container">
+  <div>Item as wide as the content.</div>
+  <div>
     Item with more text in it. Because the contents of it are
     wider than the maximum width, it is clamped at 300 pixels.
-  &lt;/div&gt;
-  &lt;div&gt;Flexible item&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+  <div>Flexible item</div>
+</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 200)}}</p>
+{{EmbedLiveSample("Example", "100%", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("css.properties.grid-template-columns.fit-content")}}</p>
+{{Compat("css.properties.grid-template-columns.fit-content")}}

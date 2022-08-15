@@ -1,71 +1,67 @@
 ---
 title: '::-moz-range-progress'
-slug: 'Web/CSS/::-moz-range-progress'
+slug: Web/CSS/::-moz-range-progress
 tags:
   - CSS
-  - 'CSS:Mozilla 扩展'
+  - CSS:Mozilla 扩展
   - 伪元素
   - 选择器
   - 非标准化
-translation_of: 'Web/CSS/::-moz-range-progress'
+translation_of: Web/CSS/::-moz-range-progress
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-moz-range-progress</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a> 是一个 <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla 扩展</a>。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 <code>type="range"</code> 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。</p>
+The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="range"` 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
 
-<div class="note">
-<p><strong>注意：</strong> 在 <code>&lt;input type="range"&gt;</code>上应用<code>::-moz-range-progress</code> 不会匹配任何元素，也不会有任何效果。</p>
-</div>
+> **备注：** 在 `<input type="range">`上应用`::-moz-range-progress` 不会匹配任何元素，也不会有任何效果。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="100" step="5" value="50"/&gt;
-</pre>
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">input[type=range]::-moz-range-progress {
+```css
+input[type=range]::-moz-range-progress {
   background-color: green;
   height: 1em;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+{{EmbedLiveSample("Example", 300, 50)}}
 
-<p>使用了这个样式的进度条可能会看起来这样：</p>
+使用了这个样式的进度条可能会看起来这样：
 
-<p><img src="screen_shot_2015-12-04_at_20.14.48.png"></p>
+![](screen_shot_2015-12-04_at_20.14.48.png)
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>无内容</p>
+无内容
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.-moz-range-progress")}}</p>
+{{Compat("css.selectors.-moz-range-progress")}}
 
-<h2 id="相关阅读">相关阅读</h2>
+## 相关阅读
 
-<ul>
- <li>Gecko 用于设置范围输入的其他部分样式的伪元素：
-  <ul>
-   <li>{{cssxref("::-moz-range-thumb")}} 代表在凹槽中滑动的指示器</li>
-   <li>{{cssxref("::-moz-range-track")}} 代表有揪揪滑动的凹槽</li>
-  </ul>
- </li>
- <li>其他浏览器使用的类似伪元素：
-  <ul>
-   <li>{{cssxref("::-ms-fill-upper")}}, Internet Explorer 和 Edge 支持的伪元素</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks：使用 CSS 设置跨浏览器兼容范围输入的样式</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode：样式和脚本滑块</a></li>
-</ul>
+- Gecko 用于设置范围输入的其他部分样式的伪元素：
+
+  - {{cssxref("::-moz-range-thumb")}} 代表在凹槽中滑动的指示器
+  - {{cssxref("::-moz-range-track")}} 代表有揪揪滑动的凹槽
+
+- 其他浏览器使用的类似伪元素：
+
+  - {{cssxref("::-ms-fill-upper")}}, Internet Explorer 和 Edge 支持的伪元素
+
+- [CSS-Tricks：使用 CSS 设置跨浏览器兼容范围输入的样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode：样式和脚本滑块](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

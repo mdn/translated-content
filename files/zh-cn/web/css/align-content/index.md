@@ -7,19 +7,18 @@ tags:
   - 参考
 translation_of: Web/CSS/align-content
 ---
-<div>{{CSSRef("CSS Flexible Boxes")}}</div>
+{{CSSRef("CSS Flexible Boxes")}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> 的 <strong><code>align-content</code></strong> 属性设置了浏览器如何沿着<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout">弹性盒子布局</a>的纵轴和<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">网格布局</a>的主轴在内容项之间和周围分配空间。</p>
+[CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)的主轴在内容项之间和周围分配空间。
 
-<div>{{EmbedInteractiveExample("pages/css/align-content.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-content.html")}}
 
+该属性对单行弹性盒子模型无效。（即：带有 `flex-wrap: nowrap`）。
 
+## 语法
 
-<p>该属性对单行弹性盒子模型无效。（即：带有 <code>flex-wrap: nowrap</code>）。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css">/* 基本位置对齐 */
+```css
+/* 基本位置对齐 */
 /*align-content 不采用左右值 */
 align-content: center;     /* 将项目放置在中点 */
 align-content: start;      /* 最先放置项目 */
@@ -27,8 +26,8 @@ align-content: end;        /* 最后放置项目 */
 align-content: flex-start; /* 从起始点开始放置 flex 元素 */
 align-content: flex-end;   /* 从终止点开始放置 flex 元素 */
 
-<code>/* 默认对齐 */
-</code>align-content<code>: normal</code><code>;</code>
+/* 默认对齐 */
+align-content: normal;
 
 /*基线对齐*/
 align-content: baseline;
@@ -54,56 +53,53 @@ align-content: unsafe center;
 align-content: inherit; /* 继承 */
 align-content: initial;  /* 初始值 */
 align-content: unset; /* 未设置 */
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>start</code></dt>
- <dd>所有行从容器的起始边缘开始填充。</dd>
- <dt><code>end</code></dt>
- <dd>所有行从容器的结束边缘开始填充。</dd>
-</dl>
+- `start`
+  - : 所有行从容器的起始边缘开始填充。
+- `end`
+  - : 所有行从容器的结束边缘开始填充。
+- `flex-start`
+  - : 所有行从垂直轴起点开始填充。第一行的垂直轴起点边和容器的垂直轴起点边对齐。接下来的每一行紧跟前一行。
+- `flex-end`
+  - : 所有行从垂直轴末尾开始填充。最后一行的垂直轴终点和容器的垂直轴终点对齐。同时所有后续行与前一个对齐。
+- `center`
+  - : 所有行朝向容器的中心填充。每行互相紧挨，相对于容器居中对齐。容器的垂直轴起点边和第一行的距离相等于容器的垂直轴终点边和最后一行的距离。
+- `normal`
+  - : 这些项按默认位置填充，就像没有设置对齐内容值一样。
+- `baseline first baseline`
+  `last baseline`
 
-<dl>
- <dt><code>flex-start</code></dt>
- <dd>所有行从垂直轴起点开始填充。第一行的垂直轴起点边和容器的垂直轴起点边对齐。接下来的每一行紧跟前一行。</dd>
- <dt><code>flex-end</code></dt>
- <dd>所有行从垂直轴末尾开始填充。最后一行的垂直轴终点和容器的垂直轴终点对齐。同时所有后续行与前一个对齐。</dd>
- <dt><code>center</code></dt>
- <dd>所有行朝向容器的中心填充。每行互相紧挨，相对于容器居中对齐。容器的垂直轴起点边和第一行的距离相等于容器的垂直轴终点边和最后一行的距离。</dd>
- <dt><code>normal</code></dt>
- <dd>这些项按默认位置填充，就像没有设置对齐内容值一样。</dd>
- <dt></dt>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dt><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/410px-Typography_Line_Terms.svg.png"></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>space-between</code></dt>
- <dd>所有行在容器中平均分布。相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的边对齐。</dd>
- <dt><code>space-around</code></dt>
- <dd>所有行在容器中平均分布，相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的距离是相邻两行间距的一半。</dd>
- <dt><code>space-evenly</code></dt>
- <dd>所有行沿垂直轴均匀分布在对齐容器内。每对相邻的项之间的间距，主开始边和第一项，以及主结束边和最后一项，都是完全相同的。</dd>
- <dt><code>stretch</code></dt>
- <dd>拉伸所有行来填满剩余空间。剩余空间平均地分配给每一行。</dd>
- <dt><code>safe</code></dt>
- <dd>与对齐关键字一起使用。如果所选的关键字意味着项溢出对齐容器（data loss），则将采用备用策略对项进行对齐，就像启动了 <code>start</code> 对齐模式一样。</dd>
- <dt><code>unsafe</code></dt>
- <dd>与对齐关键字一起使用。无论元素和对齐容器的相对大小如何、是否会导致一些元素溢出可见范围（data loss），都使用给定的对齐值。</dd>
-</dl>
+  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/410px-Typography_Line_Terms.svg.png)
 
-<h3 id="标准语法">标准语法</h3>
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+
+- `space-between`
+  - : 所有行在容器中平均分布。相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的边对齐。
+- `space-around`
+  - : 所有行在容器中平均分布，相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的距离是相邻两行间距的一半。
+- `space-evenly`
+  - : 所有行沿垂直轴均匀分布在对齐容器内。每对相邻的项之间的间距，主开始边和第一项，以及主结束边和最后一项，都是完全相同的。
+- `stretch`
+  - : 拉伸所有行来填满剩余空间。剩余空间平均地分配给每一行。
+- `safe`
+  - : 与对齐关键字一起使用。如果所选的关键字意味着项溢出对齐容器（data loss），则将采用备用策略对项进行对齐，就像启动了 `start` 对齐模式一样。
+- `unsafe`
+  - : 与对齐关键字一起使用。无论元素和对齐容器的相对大小如何、是否会导致一些元素溢出可见范围（data loss），都使用给定的对齐值。
+
+### 标准语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[4]">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
@@ -120,7 +116,7 @@ align-content: unset; /* 未设置 */
   grid-template-columns: repeat(auto-fill, 50px);
 }
 
-div &gt; div {
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -167,64 +163,63 @@ select {
 .row {
   margin-top: 10px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;align-content: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="normal"&gt;normal&lt;/option&gt;
-    &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-    &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-    &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-    &lt;option value="center" selected&gt;center&lt;/option&gt;
-    &lt;option value="space-between"&gt;space-between&lt;/option&gt;
-    &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-    &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
+<div class="row">
+  <label for="values">align-content: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="stretch">stretch</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="space-between">space-between</option>
+    <option value="space-around">space-around</option>
+    <option value="space-evenly">space-evenly</option>
 
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
 
-    &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-    &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-    &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
+    <option value="baseline">baseline</option>
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
 
-    &lt;option value="safe center"&gt;safe center&lt;/option&gt;
-    &lt;option value="unsafe center"&gt;unsafe center&lt;/option&gt;
-    &lt;option value="safe right"&gt;safe right&lt;/option&gt;
-    &lt;option value="unsafe right"&gt;unsafe right&lt;/option&gt;
-    &lt;option value="safe end"&gt;safe end&lt;/option&gt;
-    &lt;option value="unsafe end"&gt;unsafe end&lt;/option&gt;
-    &lt;option value="safe flex-end"&gt;safe flex-end&lt;/option&gt;
-    &lt;option value="unsafe flex-end"&gt;unsafe flex-end&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
 
-<div class="hidden">
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -235,36 +230,29 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例", 260, 290)}}</p>
+{{EmbedLiveSample("示例", 260, 290)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-{{Specifications}}
+{{Specifications}}{{cssinfo}}
 
-<div>{{cssinfo}}</div>
+## 浏览器兼容性
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+### 在弹性盒子布局中的兼容性
 
+{{Compat("css.properties.align-content.flex_context")}}
 
+### 在网格布局中的兼容性
 
-<h3 id="在弹性盒子布局中的兼容性">在弹性盒子布局中的兼容性</h3>
+{{Compat("css.properties.align-content.grid_context")}}
 
-<p>{{Compat("css.properties.align-content.flex_context")}}</p>
+## 相关链接
 
-<h3 id="在网格布局中的兼容性">在网格布局中的兼容性</h3>
-
-<p>{{Compat("css.properties.align-content.grid_context")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>弹性盒子布局的基本概念：<em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>对齐弹性容器中的弹性项目：<em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>网格布局中的盒模型对齐：<em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
-</ul>
+- 弹性盒子布局的基本概念：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- 对齐弹性容器中的弹性项目：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- 网格布局中的盒模型对齐：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)

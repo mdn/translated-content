@@ -3,44 +3,41 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 translation_of: Web/CSS/flex-flow
 ---
-<div>{{ CSSRef("CSS Flexible Boxes") }}</div>
+{{ CSSRef("CSS Flexible Boxes") }}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>
-  <a href="/zh-CN/docs/Web/CSS">CSS</a> <strong><code>flex-flow</code></strong> 属性是 flex-direction 和 flex-wrap 的简写。
-</p>
+[CSS](/zh-CN/docs/Web/CSS) **`flex-flow`** 属性是 flex-direction 和 flex-wrap 的简写。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>更多信息参见 <a href="/zh-CN/docs/Web/Guide/CSS/Flexible_boxes">使用 CSS 弹性盒</a></p>
+更多信息参见 [使用 CSS 弹性盒](/zh-CN/docs/Web/Guide/CSS/Flexible_boxes)
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<a href="/zh-CN/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("flex-flow")}}
+[Formal syntax](/zh-CN/docs/CSS/Value_definition_syntax): {{csssyntax("flex-flow")}}
 
-<h3 id="取值"><strong>取值</strong></h3>
+### 取值
 
-<p><code>更多取值信息请查看</code> <a href="/zh-CN/docs/CSS/flex-direction"><code>flex-direction</code></a> 和 <a href="/zh-CN/docs/CSS/flex-wrap"><code>flex-wrap</code></a></p>
+`更多取值信息请查看` [`flex-direction`](/zh-CN/docs/CSS/flex-direction) 和 [`flex-wrap`](/zh-CN/docs/CSS/flex-wrap)
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:css">element {
+```css
+element {
   /* Main-axis is the block direction with reversed main-start and main-end. Flex items are laid out in multiple lines */
   flex-flow: column-reverse wrap;
 }
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.flex-flow")}}
 
-<h2 id="另参见">另参见</h2>
+## 另参见
 
-<ul>
- <li><a href="/zh-CN/docs/CSS/Using_CSS_flexible_boxes">使用 CSS 弹性盒子</a></li>
-</ul>
+- [使用 CSS 弹性盒子](/zh-CN/docs/CSS/Using_CSS_flexible_boxes)

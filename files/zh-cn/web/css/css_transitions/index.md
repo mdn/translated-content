@@ -9,37 +9,29 @@ tags:
   - 概述
 translation_of: Web/CSS/CSS_Transitions
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong>CSS Transitions</strong> 是一个 CSS 模块，定义了如何创建一个平滑地变换 CSS 属性值的方法。它不仅允许创建变换方法，同时也允许通过定时函数来控制变换方法。</p>
+**CSS Transitions** 是一个 CSS 模块，定义了如何创建一个平滑地变换 CSS 属性值的方法。它不仅允许创建变换方法，同时也允许通过定时函数来控制变换方法。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="CSS_属性">CSS 属性</h3>
+### CSS 属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("transition")}}</li>
- <li>{{cssxref("transition-delay")}}</li>
- <li>{{cssxref("transition-duration")}}</li>
- <li>{{cssxref("transition-property")}}</li>
- <li>{{cssxref("transition-timing-function")}}</li>
-</ul>
-</div>
+- {{cssxref("transition")}}
+- {{cssxref("transition-delay")}}
+- {{cssxref("transition-duration")}}
+- {{cssxref("transition-property")}}
+- {{cssxref("transition-timing-function")}}
 
-<h2 id="向导">向导</h2>
+## 向导
 
-<dl>
- <dt><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">使用 CSS 变换</a></dt>
- <dd>本教程将手把手展现如何通过 CSS 创建一个平滑的变换方法，这篇文章描述了每个相关的 CSS 属性是如何互相影响的。</dd>
-</dl>
+- [使用 CSS 变换](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
+  - : 本教程将手把手展现如何通过 CSS 创建一个平滑的变换方法，这篇文章描述了每个相关的 CSS 属性是如何互相影响的。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>关于 CSS 变换，<a href="/en-US/docs/Web/CSS/CSS_Animations">CSS 动画</a> 可以通过独立的属性值的改变来触发动画。</li>
-</ul>
+- 关于 CSS 变换，[CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations) 可以通过独立的属性值的改变来触发动画。

@@ -8,43 +8,38 @@ tags:
   - 指南
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>块的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-top">上外边距 (margin-top)</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-bottom">下外边距 (margin-bottom)</a>有时合并 (折叠) 为单个边距，其大小为单个边距的最大值 (或如果它们相等，则仅为其中一个)，这种行为称为<strong>边距折叠</strong>。</p>
+块的[上外边距 (margin-top)](/zh-CN/docs/Web/CSS/margin-top)和[下外边距 (margin-bottom)](/zh-CN/docs/Web/CSS/margin-bottom)有时合并 (折叠) 为单个边距，其大小为单个边距的最大值 (或如果它们相等，则仅为其中一个)，这种行为称为**边距折叠**。
 
-<div class="blockIndicator note">
-<p>注意有设定<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/float">float</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position#absolute">position=absolute</a>的元素不会产生外边距重叠行为。</p>
-</div>
+> **备注：** 有设定[float](/zh-CN/docs/Web/CSS/float)和[position=absolute](/zh-CN/docs/Web/CSS/position#absolute)的元素不会产生外边距重叠行为。
 
+有三种情况会形成外边距重叠：
 
+- 同一层相邻元素之间
+  - : 相邻的两个元素之间的外边距重叠，除非后一个元素加上[clear-fix 清除浮动](/zh-CN/docs/Web/CSS/clear)。
 
-<p>有三种情况会形成外边距重叠：</p>
-
-<dl>
- <dt>同一层相邻元素之间</dt>
- <dd>相邻的两个元素之间的外边距重叠，除非后一个元素加上<a href="/zh-CN/docs/Web/CSS/clear">clear-fix 清除浮动</a>。</dd>
-</dl>
-
-<pre class="brush: html notranslate">&lt;style&gt;
+```html
+<style>
 p:nth-child(1){
   margin-bottom: 13px;
 }
 p:nth-child(2){
   margin-top: 87px;
 }
-&lt;/style&gt;
+</style>
 
-&lt;p&gt;下边界范围会...&lt;/p&gt;
-&lt;p&gt;...会跟这个元素的上边界范围重叠。&lt;/p&gt;</pre>
+<p>下边界范围会...</p>
+<p>...会跟这个元素的上边界范围重叠。</p>
+```
 
-<p>这个例子如果以为边界会合并的话，理所当然会猜测上下 2 个元素会合并一个 100px 的边界范围，但其实会发生边界折叠，只会挑选最大边界范围留下，所以这个例子的边界范围其实是 87px。</p>
+这个例子如果以为边界会合并的话，理所当然会猜测上下 2 个元素会合并一个 100px 的边界范围，但其实会发生边界折叠，只会挑选最大边界范围留下，所以这个例子的边界范围其实是 87px。
 
-<dl>
- <dt>没有内容将父元素和后代元素分开</dt>
- <dd>    如果没有边框{{cssxref("border")}}，内边距{{cssxref("padding")}}，行内内容，也没有创建<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式上下文</a>或<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear">清除浮动</a>来分开一个块级元素的上边界{{cssxref("margin-top")}} 与其内一个或多个后代块级元素的上边界{{cssxref("margin-top")}}；或没有边框，内边距，行内内容，高度{{cssxref("height")}}，最小高度{{cssxref("min-height")}}或 最大高度{{cssxref("max-height")}} 来分开一个块级元素的下边界{{cssxref("margin-bottom")}}与其内的一个或多个后代后代块元素的下边界{{cssxref("margin-bottom")}}，则就会出现父块元素和其内后代块元素外边界重叠，重叠部分最终会溢出到父级块元素外面。</dd>
-</dl>
+- 没有内容将父元素和后代元素分开
+  - : 如果没有边框{{cssxref("border")}}，内边距{{cssxref("padding")}}，行内内容，也没有创建[块级格式上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)或[清除浮动](/zh-CN/docs/Web/CSS/clear)来分开一个块级元素的上边界{{cssxref("margin-top")}} 与其内一个或多个后代块级元素的上边界{{cssxref("margin-top")}}；或没有边框，内边距，行内内容，高度{{cssxref("height")}}，最小高度{{cssxref("min-height")}}或 最大高度{{cssxref("max-height")}} 来分开一个块级元素的下边界{{cssxref("margin-bottom")}}与其内的一个或多个后代后代块元素的下边界{{cssxref("margin-bottom")}}，则就会出现父块元素和其内后代块元素外边界重叠，重叠部分最终会溢出到父级块元素外面。
 
-<pre class="brush: html notranslate">&lt;style type="text/css"&gt;
+```html
+<style type="text/css">
     section    {
         margin-top: 13px;
         margin-bottom: 87px;
@@ -57,20 +52,20 @@ p:nth-child(2){
     footer {
         margin-bottom: 13px;
     }
-&lt;/style&gt;
+</style>
 
-&lt;section&gt;
-    &lt;header&gt;上边界重叠 87&lt;/header&gt;
-    &lt;main&gt;&lt;/main&gt;
-    &lt;footer&gt;下边界重叠 87 不能再高了&lt;/footer&gt;
-&lt;/section&gt;</pre>
+<section>
+    <header>上边界重叠 87</header>
+    <main></main>
+    <footer>下边界重叠 87 不能再高了</footer>
+</section>
+```
 
-<dl>
- <dt>空的块级元素</dt>
- <dd>当一个块元素上边界{{cssxref("margin-top")}} 直接贴到元素下边界{{cssxref("margin-bottom")}}时也会发生边界折叠。这种情况会发生在一个块元素完全没有设定边框{{cssxref("border")}}、内边距{{cssxref("padding")}}、高度{{cssxref("height")}}、最小高度{{cssxref("min-height")}} 、最大高度{{cssxref("max-height")}} 、内容设定为 inline 或是加上<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear">clear-fix</a>的时候。</dd>
-</dl>
+- 空的块级元素
+  - : 当一个块元素上边界{{cssxref("margin-top")}} 直接贴到元素下边界{{cssxref("margin-bottom")}}时也会发生边界折叠。这种情况会发生在一个块元素完全没有设定边框{{cssxref("border")}}、内边距{{cssxref("padding")}}、高度{{cssxref("height")}}、最小高度{{cssxref("min-height")}} 、最大高度{{cssxref("max-height")}} 、内容设定为 inline 或是加上[clear-fix](/zh-CN/docs/Web/CSS/clear)的时候。
 
-<pre class="brush: html notranslate">&lt;style&gt;
+```html
+<style>
 ​​​​​​p {
   margin: 0;
 }
@@ -78,40 +73,42 @@ div {
   margin-top: 13px;
   margin-bottom: 87px;
 }
-&lt;/style&gt;
+</style>
 
-&lt;p&gt;上边界范围是 87 ...&lt;/p&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;p&gt;... 上边界范围是 87&lt;/p&gt;</pre>
+<p>上边界范围是 87 ...</p>
+<div></div>
+<p>... 上边界范围是 87</p>
+```
 
-<p>一些需要注意的地方：</p>
+一些需要注意的地方：
 
-<ul>
- <li>上述情况的组合会产生更复杂的外边距折叠。</li>
- <li>即使某一外边距为 0，这些规则仍然适用。因此就算父元素的外边距是 0，第一个或最后一个子元素的外边距仍然会“溢出”到父元素的外面。</li>
- <li>如果参与折叠的外边距中包含负值，折叠后的外边距的值为最大的正边距与最小的负边距（即绝对值最大的负边距）的和，；也就是说如果有 -13px 8px 100px 叠在一起，边界范围的技术就是 100px -13px 的 87px。</li>
- <li>如果所有参与折叠的外边距都为负，折叠后的外边距的值为最小的负边距的值。这一规则适用于相邻元素和嵌套元素。</li>
-</ul>
+- 上述情况的组合会产生更复杂的外边距折叠。
+- 即使某一外边距为 0，这些规则仍然适用。因此就算父元素的外边距是 0，第一个或最后一个子元素的外边距仍然会“溢出”到父元素的外面。
+- 如果参与折叠的外边距中包含负值，折叠后的外边距的值为最大的正边距与最小的负边距（即绝对值最大的负边距）的和，；也就是说如果有 -13px 8px 100px 叠在一起，边界范围的技术就是 100px -13px 的 87px。
+- 如果所有参与折叠的外边距都为负，折叠后的外边距的值为最小的负边距的值。这一规则适用于相邻元素和嵌套元素。
 
-<p>以上这些内容都是发生在 Block-Level 的元素，设定 floating 和 absolutely positioned 的元素完全不用担心边界重叠的问题。</p>
+以上这些内容都是发生在 Block-Level 的元素，设定 floating 和 absolutely positioned 的元素完全不用担心边界重叠的问题。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;The bottom margin of this paragraph is collapsed …&lt;/p&gt;
-&lt;p&gt;… with the top margin of this paragraph, yielding a margin of &lt;code&gt;1.2rem&lt;/code&gt; in between.&lt;/p&gt;
+```html
+<p>The bottom margin of this paragraph is collapsed …</p>
+<p>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
 
-&lt;div&gt;This parent element contains two paragraphs!
-  &lt;p&gt;This paragraph has a &lt;code&gt;.4rem&lt;/code&gt; margin between it and the text above.&lt;/p&gt;
-  &lt;p&gt;My bottom margin collapses with my parent, yielding a bottom margin of &lt;code&gt;2rem&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
+<div>This parent element contains two paragraphs!
+  <p>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
+  <p>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+</div>
 
-&lt;p&gt;I am &lt;code&gt;2rem&lt;/code&gt; below the element above.&lt;/p&gt;</pre>
+<p>I am <code>2rem</code> below the element above.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   margin: 2rem 0;
   background: lavender;
 }
@@ -119,43 +116,39 @@ div {
 p {
   margin: .4rem 0 1.2rem 0;
   background: yellow;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例', 'auto', 350)}}</p>
+{{EmbedLiveSample('示例', 'auto', 350)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>CSS 重要概念：
-  <ul>
-    <li><a href="/zh-CN/docs/Web/CSS/Syntax">CSS 语法</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/At-rule">@ 规则</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Comments">注释</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/inheritance">继承</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">盒模型</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Layout_mode">布局模式</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Visual_formatting_model">视觉格式化模型</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距合并</a></li>
-    <li>值
-      <ul>
-        <li><a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/computed_value">计算值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/resolved_value">解析值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/specified_value">指定值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/used_value">应用值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/actual_value">实际值</a></li>
-      </ul>
-    </li>
-    <li><a href="/zh-CN/docs/Web/CSS/Value_definition_syntax">属性值定义语法</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a></li>
-  </ul>
- </li>
-</ul>
+- CSS 重要概念：
+
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 值
+
+    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
+    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

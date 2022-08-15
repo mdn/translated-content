@@ -8,31 +8,27 @@ tags:
 translation_of: Web/CSS/:blank
 original_slug: Web/CSS/:blank空白伪类
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>使用 <code>:blank</code> 选择器被认为尚有一定风险，CSSWG 正在持续改进它。</p>
+> **备注：** 使用 `:blank` 选择器被认为尚有一定风险，CSSWG 正在持续改进它。
+>
+> 详见[ CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967)。
 
-<p>详见<a href="https://github.com/w3c/csswg-drafts/issues/1967"> CSSWG issue #1967</a>。</p>
-</div>
+**`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器选择用户输入为空的输入框，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}})。
 
-<p><strong><code>:blank</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>选择器选择用户输入为空的输入框，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}})。</p>
-
-<h2 id="语法">语法</h2>
+## 语法
 
 {{CSSSyntax}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.blank")}}</p>
+{{Compat("css.selectors.blank")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{CSSxRef(":empty")}}</li>
- <li>{{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} - The previous definition of <code>:blank</code>.</li>
-</ul>
+- {{CSSxRef(":empty")}}
+- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} - The previous definition of `:blank`.

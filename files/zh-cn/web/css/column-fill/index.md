@@ -3,51 +3,52 @@ title: column-fill
 slug: Web/CSS/column-fill
 translation_of: Web/CSS/column-fill
 ---
-<div>{{CSSRef("CSS Multi-columns")}}</div>
+{{CSSRef("CSS Multi-columns")}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>column-fill</code> CSS property controls how contents are partitioned into columns. Contents are either balanced, which means that contents in all columns will have the same height or, when using <code>auto</code>, just take up the room the content needs. </p>
+The `column-fill` CSS property controls how contents are partitioned into columns. Contents are either balanced, which means that contents in all columns will have the same height or, when using `auto`, just take up the room the content needs.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("column-fill")}}
-</pre>
+```
+Formal syntax: {{csssyntax("column-fill")}}
+```
 
-<pre class="brush: css">column-fill: auto;
+```css
+column-fill: auto;
 column-fill: balance;
 
 /* Global values */
 column-fill: inherit;
 column-fill: initial;
 column-fill: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Is a keyword indicating that columns are filled sequentially.</dd>
- <dt><code>balance</code></dt>
- <dd>Is a keyword indicating that content is equally divided between columns.</dd>
-</dl>
+- `auto`
+  - : Is a keyword indicating that columns are filled sequentially.
+- `balance`
+  - : Is a keyword indicating that content is equally divided between columns.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:css; highlight=[4]">.content-box {
+```css
+.content-box {
   column-count: 4;
   column-rule: 1px solid black;
   column-fill: balance;
   height: 200px;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.column-fill")}}

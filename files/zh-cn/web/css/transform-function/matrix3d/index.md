@@ -4,59 +4,84 @@ slug: Web/CSS/transform-function/matrix3d
 translation_of: Web/CSS/transform-function/matrix3d()
 original_slug: Web/CSS/transform-function/matrix3d()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 函数 <strong><code>matrix3d()</code></strong> 以 4x4 齐次矩阵的形式定义一个 3D 转换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。</p>
+[CSS](/zh-CN/docs/Web/CSS) 函数 **`matrix3d()`** 以 4x4 齐次矩阵的形式定义一个 3D 转换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>matrix3d()</code> 函数由 16 个参数指定. 这些参数以列为主的顺序进行描述。</p>
+`matrix3d()` 函数由 16 个参数指定. 这些参数以列为主的顺序进行描述。
 
-<pre class="syntaxbox notranslate">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
+```
+matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var> <var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var></dt>
- <dd>Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.</dd>
- <dt><var>a4</var> <var>b4</var> <var>c4 d4</var></dt>
- <dd>Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.</dd>
-</dl>
+- _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_ _a3_ _b3_ _c3_ _d3_
+  - : Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.
+- _a4_ _b4_ _c4 d4_
+  - : Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.
 
-<div class="note"><strong>Note:</strong> Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for <var>a4</var>, <var>b4</var> and <var>c4</var>.</div>
+> **备注：** Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for _a4_, _b4_ and _c4_.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">This transformation applies to the 3D space and can't be represented on the plane.</td>
-   <td colspan="1" rowspan="2">A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not linear transformations.</td>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr><mtr><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="2">
+        This transformation applies to the 3D space and can't be represented on
+        the plane.
+      </td>
+      <td colspan="1" rowspan="2">
+        A generic 3D
+        <a href="https://en.wikipedia.org/wiki/Affine_transformation"
+          >affine transformation</a
+        >
+        can't be represented using a Cartesian-coordinate matrix, as
+        translations are not linear transformations.
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr
+              ><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr
+              ><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr
+              ><mtr
+                ><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Matrix_translation_and_scale_example">Matrix translation and scale example</h2>
+## Matrix translation and scale example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div class="foo"&gt;
+```html
+<div class="foo">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
 necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">html {
+```css
+html {
   width: 100%;
 }
 body {
@@ -116,24 +141,23 @@ body {
       50,100,0,1.1
     )
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<div>{{EmbedLiveSample('Matrix_translation_and_scale_example', '100%', '400px')}}</div>
+{{EmbedLiveSample('Matrix_translation_and_scale_example', '100%', '400px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms Matrix</a></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

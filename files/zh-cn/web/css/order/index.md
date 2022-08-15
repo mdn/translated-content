@@ -3,23 +3,22 @@ title: order
 slug: Web/CSS/order
 translation_of: Web/CSS/order
 ---
-<div>{{ CSSRef("CSS Flexible Boxes") }}</div>
+{{ CSSRef("CSS Flexible Boxes") }}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><a href="/zh-CN/docs/CSS">CSS</a> <strong><code>order</code></strong> 属性规定了弹性容器中的可伸缩项目在布局时的顺序。元素按照 <code>order</code> 属性的值的增序进行布局。拥有相同 <code>order</code> 属性值的元素按照它们在源代码中出现的顺序进行布局。</p>
+[CSS](/zh-CN/docs/CSS) **`order`** 属性规定了弹性容器中的可伸缩项目在布局时的顺序。元素按照 `order` 属性的值的增序进行布局。拥有相同 `order` 属性值的元素按照它们在源代码中出现的顺序进行布局。
 
-<div class="note">
-<p><strong>注意</strong>: <code>order</code> 仅仅对元素的视觉顺序 (<strong>visual order</strong>) 产生作用，并不会影响元素的逻辑或 tab 顺序。 <code><strong>order</strong></code> 不可以用于非视觉媒体，例如 speech。</p>
-</div>
+> **备注：** `order` 仅仅对元素的视觉顺序 (**visual order**) 产生作用，并不会影响元素的逻辑或 tab 顺序。 **`order`** 不可以用于非视觉媒体，例如 speech。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>参考 <a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">使用 CSS 弹性盒子</a> 获取更多信息。</p>
+参考 [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) 获取更多信息。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush:css">/* Numerical value including negative numbers */
+```css
+/* Numerical value including negative numbers */
 order: 5;
 order: -5;
 
@@ -27,49 +26,49 @@ order: -5;
 order: inherit;
 order: initial;
 order: unset;
-</pre>
+```
 
-<h3 id="Values">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>表示此可伸缩项目所在的次序组。</dd>
-</dl>
+- `<integer>`
+  - : 表示此可伸缩项目所在的次序组。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<p>这里是一个基本的 HTML 代码片段：</p>
+这里是一个基本的 HTML 代码片段：
 
-<pre class="brush:html;">&lt;!DOCTYPE html&gt;
-&lt;header&gt;…&lt;/header&gt;
-&lt;div id='main'&gt;
-   &lt;article&gt;…&lt;/article&gt;
-   &lt;nav&gt;…&lt;/nav&gt;
-   &lt;aside&gt;…&lt;/aside&gt;
-&lt;/div&gt;
-&lt;footer&gt;…&lt;/footer&gt;</pre>
+```html
+<!DOCTYPE html>
+<header>…</header>
+<div id='main'>
+   <article>…</article>
+   <nav>…</nav>
+   <aside>…</aside>
+</div>
+<footer>…</footer>
+```
 
-<p>下面的 CSS 代码会创建一个经典的双 sidebar 围绕一个中央内容块的布局。Flexible Box 布局模块会自动地创建三个具有相同高度的内容块，也会使用所有可用的水平空间。</p>
+下面的 CSS 代码会创建一个经典的双 sidebar 围绕一个中央内容块的布局。Flexible Box 布局模块会自动地创建三个具有相同高度的内容块，也会使用所有可用的水平空间。
 
-<pre class="brush:css;">#main { display: flex; }
-#main &gt; article { flex:1;         order: 2; }
-#main &gt; nav     { width: 200px;   order: 1; }
-#main &gt; aside   { width: 200px;   order: 3; }</pre>
+```css
+#main { display: flex; }
+#main > article { flex:1;         order: 2; }
+#main > nav     { width: 200px;   order: 1; }
+#main > aside   { width: 200px;   order: 3; }
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.order")}}
 
-<h2 id="See_also">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">使用 CSS 弹性盒子</a></li>
-</ul>
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)

@@ -8,11 +8,12 @@ tags:
   - 布局
 translation_of: Web/CSS/text-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>text-align</code> CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。<code>text-align</code> 并不控制块元素自己的对齐，只控制它的行内内容的对齐。</p>
+`text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。
 
-<pre class="brush: css notranslate">/* Keyword values */
+```css
+/* Keyword values */
 text-align: left;
 text-align: right;
 text-align: center;
@@ -29,59 +30,60 @@ text-align: -webkit-center;
 /* Global values */
 text-align: inherit;
 text-align: initial;
-text-align: unset;</pre>
+text-align: unset;
+```
 
-<p></p>
-
-<div class="hidden" id="text-align">
-<pre class="brush: html notranslate">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
+```html hidden
+<div class="grid">
+  <div class="col">
+    <div class="row">
+      <div class="cell">
         left
-        &lt;p class="taLeft"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt;
+        <p class="taLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+      <div class="cell">
         start (ltr)
-        &lt;p class="taStart ltr"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt;
+        <p class="taStart ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+      <div class="cell">
         start (rtl)
-        &lt;p class="taStart rtl"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
+        <p class="taStart rtl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
         right
-        &lt;p class="taRight"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt;
+        <p class="taRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+      <div class="cell">
         end (ltr)
-        &lt;p class="taEnd ltr"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt;
+        <p class="taEnd ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+      <div class="cell">
         end (rtl)
-        &lt;p class="taEnd rtl"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
+        <p class="taEnd rtl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
         center
-        &lt;p class="taCenter"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt;
+        <p class="taCenter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+      <div class="cell">
         justify
-        &lt;p class="taJustify"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt;
+        <p class="taJustify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+      <div class="cell">
         justify-all
-        &lt;p class="taJustifyAll"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+        <p class="taJustifyAll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
-<pre class="brush: css notranslate">html,body {
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -141,166 +143,179 @@ p {
 .taEnd        { text-align: end;         }
 
 .rtl { direction: rtl; }
-.ltr { direction: ltr; }</pre>
-</div>
+.ltr { direction: ltr; }
+```
 
-<p>{{EmbedLiveSample("text-align", "100%", 350)}}</p>
+{{EmbedLiveSample("text-align", "100%", 350)}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>text-align 属性指定为从以下值列表中选择的单个关键字。</p>
+text-align 属性指定为从以下值列表中选择的单个关键字。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>start</code> {{experimental_inline}}</dt>
- <dd>如果内容方向是左至右，则等于<code>left</code>，反之则为<code>right</code>。</dd>
- <dt><code>end</code> {{experimental_inline}}</dt>
- <dd>如果内容方向是左至右，则等于<code>right</code>，反之则为<code>left</code>。</dd>
- <dt><code>left</code></dt>
- <dd>行内内容向左侧边对齐。</dd>
- <dt><code>right</code></dt>
- <dd>行内内容向右侧边对齐。</dd>
- <dt><code>center</code></dt>
- <dd>行内内容居中。</dd>
- <dt><code>&lt;string&gt;</code> {{experimental_inline}}</dt>
- <dd>第一个出现的该（单字符）字符串被用来对齐。跟随的关键字定义对齐的方向。例如，可用于让数字值根据小数点对齐。</dd>
- <dt><code>justify</code></dt>
- <dd>文字向两侧对齐，对最后一行无效。</dd>
- <dt><code>justify-all</code></dt>
- <dd>和 justify 一致，但是强制使最后一行两端对齐。</dd>
- <dt><code>match-parent</code> {{experimental_inline}}</dt>
- <dd>和<code>inherit</code>类似，区别在于<code>start</code>和<code>end</code>的值根据父元素的{{cssxref("direction")}}确定，并被替换为恰当的<code>left</code>或<code>right</code>。</dd>
-</dl>
+- `start` {{experimental_inline}}
+  - : 如果内容方向是左至右，则等于`left`，反之则为`right`。
+- `end` {{experimental_inline}}
+  - : 如果内容方向是左至右，则等于`right`，反之则为`left`。
+- `left`
+  - : 行内内容向左侧边对齐。
+- `right`
+  - : 行内内容向右侧边对齐。
+- `center`
+  - : 行内内容居中。
+- `<string>` {{experimental_inline}}
+  - : 第一个出现的该（单字符）字符串被用来对齐。跟随的关键字定义对齐的方向。例如，可用于让数字值根据小数点对齐。
+- `justify`
+  - : 文字向两侧对齐，对最后一行无效。
+- `justify-all`
+  - : 和 justify 一致，但是强制使最后一行两端对齐。
+- `match-parent` {{experimental_inline}}
+  - : 和`inherit`类似，区别在于`start`和`end`的值根据父元素的{{cssxref("direction")}}确定，并被替换为恰当的`left`或`right`。
 
-<h3 id="指示语法">指示语法</h3>
+### 指示语法
 
 {{csssyntax("text-align")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><a href="/samples/cssref/text-align.html">查看在线演示</a></p>
+[查看在线演示](/samples/cssref/text-align.html)
 
-<h3 id="Live_Examples">Live Examples</h3>
+### Live Examples
 
-<div style="margin-top: 1em; margin-bottom: 1em; border-style: solid; text-align: center;">div { <strong>text-align: center</strong>; border:solid; }
+div { **text-align: center**; border:solid; }
 
-<p>p { background:gold; width:22em; }</p>
-some more inline content...</div>
+p { background:gold; width:22em; }
 
-<div style="margin-top: 1em; margin-bottom: 1em; border-style: solid; text-align: center;">div { <strong>text-align: center</strong>; border:solid; }
+some more inline content...div { **text-align: center**; border:solid; }
 
-<p>p { background:gold; width:22em; <strong>margin: 1em auto</strong>; }</p>
-some more inline content...</div>
+p { background:gold; width:22em; **margin: 1em auto**; }
 
-<div style="">div { <strong>text-align:-moz-center</strong>; text-align:-webkit-center; border:solid; }
+some more inline content...div { **text-align:-moz-center**; text-align:-webkit-center; border:solid; }
 
-<p>p { background:gold; width:22em; }</p>
-some more inline content...</div>
+p { background:gold; width:22em; }
 
-<h3 id="备注">备注</h3>
+some more inline content...
 
-<p>居中一个块元素且不居中它的行内内容的标准兼容的方法是将它的左、右<code style="line-height: 1.5; font-size: 14px; font-style: normal;">margin 设为</code>auto，例如：</p>
+### 备注
 
-<p><code>margin:auto;</code> 或<code>margin:0 auto;</code> 或<code>margin-left:auto; margin-right:auto;</code></p>
+居中一个块元素且不居中它的行内内容的标准兼容的方法是将它的左、右`margin 设为`auto，例如：
 
-<h2 id="示例_2">示例</h2>
+`margin:auto;` 或`margin:0 auto;` 或`margin-left:auto; margin-right:auto;`
 
-<h3 id="Left_alignment">Left alignment</h3>
+## 示例
 
-<h4 id="HTML">HTML</h4>
+### Left alignment
 
-<pre class="brush: html notranslate"><code>&lt;p class="example"&gt;
+#### HTML
+
+```html
+<p class="example">
   Integer elementum massa at nulla placerat varius.
   Suspendisse in libero risus, in interdum massa.
   Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
-&lt;/p&gt;</code></pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate"><code>.example {
+```css
+.example {
   text-align: left;
   border: solid;
-}</code></pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Left_alignment","100%","100%")}}</p>
+{{EmbedLiveSample("Left_alignment","100%","100%")}}
 
-<h3 id="Centered_text">Centered text</h3>
+### Centered text
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate"><code>&lt;p class="example"&gt;
+```html
+<p class="example">
   Integer elementum massa at nulla placerat varius.
   Suspendisse in libero risus, in interdum massa.
   Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
-&lt;/p&gt;</code></pre>
+</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate"><code>.example {
+```css
+.example {
   text-align: center;
   border: solid;
-}</code></pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Centered_text","100%","100%")}}</p>
+{{EmbedLiveSample("Centered_text","100%","100%")}}
 
-<h3 id="Justify">Justify</h3>
+### Justify
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate"><code>&lt;p class="example"&gt;
+```html
+<p class="example">
   Integer elementum massa at nulla placerat varius.
   Suspendisse in libero risus, in interdum massa.
   Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
-&lt;/p&gt;</code></pre>
+</p>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate"><code>.example {
+```css
+.example {
   text-align: justify;
   border: solid;
-}</code></pre>
+}
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Justify","100%","100%")}}</p>
+{{EmbedLiveSample("Justify","100%","100%")}}
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>The standard-compatible way to center a block itself without centering its inline content is setting the left and right {{cssxref("margin")}} to <code>auto</code>, e.g.:</p>
+The standard-compatible way to center a block itself without centering its inline content is setting the left and right {{cssxref("margin")}} to `auto`, e.g.:
 
-<pre class="brush: css notranslate"><code>.something {
+```css
+.something {
   margin: auto;
-}</code></pre>
+}
+```
 
-<pre class="brush: css notranslate"><code>.something {
+```css
+.something {
   margin: 0 auto;
-}</code></pre>
+}
+```
 
-<pre class="brush: css notranslate"><code>.something {
+```css
+.something {
   margin-left: auto;
   margin-right: auto;
-}</code></pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.text-align")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}</li>
-</ul>
+- {{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}

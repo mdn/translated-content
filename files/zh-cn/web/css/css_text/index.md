@@ -8,34 +8,30 @@ tags:
   - 总览
 translation_of: Web/CSS/CSS_Text
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Text</strong> 是一个控制文本渲染方式的 CSS 模块，例如换行、对齐、空格处理、大小写。</p>
+**CSS Text** 是一个控制文本渲染方式的 CSS 模块，例如换行、对齐、空格处理、大小写。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("hanging-punctuation")}}</li>
- <li>{{cssxref("hyphens")}}</li>
- <li>{{cssxref("letter-spacing")}}</li>
- <li>{{cssxref("line-break")}}</li>
- <li>{{cssxref("overflow-wrap")}}</li>
- <li>{{cssxref("tab-size")}}</li>
- <li>{{cssxref("text-align")}}</li>
- <li>{{cssxref("text-align-last")}}</li>
- <li>{{cssxref("text-indent")}}</li>
- <li>{{cssxref("text-justify")}}</li>
- <li>{{cssxref("text-size-adjust")}}</li>
- <li>{{cssxref("text-transform")}}</li>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("word-break")}}</li>
- <li>{{cssxref("word-spacing")}}</li>
-</ul>
-</div>
+- {{cssxref("hanging-punctuation")}}
+- {{cssxref("hyphens")}}
+- {{cssxref("letter-spacing")}}
+- {{cssxref("line-break")}}
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("tab-size")}}
+- {{cssxref("text-align")}}
+- {{cssxref("text-align-last")}}
+- {{cssxref("text-indent")}}
+- {{cssxref("text-justify")}}
+- {{cssxref("text-size-adjust")}}
+- {{cssxref("text-transform")}}
+- {{cssxref("white-space")}}
+- {{cssxref("word-break")}}
+- {{cssxref("word-spacing")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

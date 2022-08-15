@@ -4,64 +4,104 @@ slug: Web/CSS/transform-function/skewX
 translation_of: Web/CSS/transform-function/skewX()
 original_slug: Web/CSS/transform-function/skewX()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>skewX()</code></strong> 函数定义了一个转换，该转换将元素倾斜到二维平面上的水平方向。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。</p>
+**`skewX()`** 函数定义了一个转换，该转换将元素倾斜到二维平面上的水平方向。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
 
-<div>{{EmbedInteractiveExample("pages/css/function-skewX.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-skewX.html")}}
 
+这种转换是一种剪切映射 (横切)，它在水平和垂直方向上将单元内的每个点扭曲一定的角度。每个点的坐标根据指定的角度以及到原点的距离，进行成比例的值调整；因此，一个点离原点越远，其增加的值就越大。
 
+> **备注：** `skewX(a)` 相当于 `skew(a)`。
 
-<p>这种转换是一种剪切映射 (横切)，它在水平和垂直方向上将单元内的每个点扭曲一定的角度。每个点的坐标根据指定的角度以及到原点的距离，进行成比例的值调整；因此，一个点离原点越远，其增加的值就越大。</p>
+## 语法
 
-<div class="note">
-<p><strong>注意：</strong> <code>skewX(a)</code> 相当于 <code><a href="/en-US/docs/Web/CSS/transform-function/skew">skew</a>(a)</code>。</p>
-</div>
+```css
+skewX(a)
+```
 
-<h2 id="语法">语法</h2>
+### 参数值
 
-<pre class="syntaxbox">skewX(a)
-</pre>
-
-<h3 id="参数值">参数值</h3>
-
-<dl>
- <dt><code>a</code></dt>
- <dd><code>a</code> 是一个 {{cssxref("&lt;angle&gt;")}}，表示用于沿横坐标扭曲元素的角度。</dd>
-</dl>
+- `a`
+  - : `a` 是一个 {{cssxref("&lt;angle&gt;")}}，表示用于沿横坐标扭曲元素的角度。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">笛卡儿坐标 ℝ<sup>2</sup></th>
-   <th scope="col">齐次坐标 ℝℙ<sup>2</sup></th>
-   <th scope="col">笛卡儿坐标 ℝ<sup>3</sup></th>
-   <th scope="col">齐次坐标 ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>tan(ay)</mtd></mtr><mtr>0<mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 0 tan(a) 1 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">笛卡儿坐标 ℝ<sup>2</sup></th>
+      <th scope="col">齐次坐标 ℝℙ<sup>2</sup></th>
+      <th scope="col">笛卡儿坐标 ℝ<sup>3</sup></th>
+      <th scope="col">齐次坐标 ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ay)</mtd></mtr
+              ><mtr>0<mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 tan(a) 1 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="skewed"&gt;Skewed&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="skewed">Skewed</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -71,23 +111,21 @@ original_slug: Web/CSS/transform-function/skewX()
   transform: skewX(10deg); /* Equal to skew(10deg) */
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例", 200, 200)}}</p>
+{{EmbedLiveSample("示例", 200, 200)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

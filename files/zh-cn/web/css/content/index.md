@@ -7,25 +7,27 @@ tags:
   - 生成内容
 translation_of: Web/CSS/content
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>CSS 的 <code>content</code> CSS 属性用于在元素的  {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用<code style="font-style: normal; line-height: 1.5;">content</code> 属性插入的内容都是匿名的<em><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a>。</em></p>
+CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用`content` 属性插入的内容都是匿名的*[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)。*
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("content")}}
-</pre>
+```
+Formal syntax: {{csssyntax("content")}}
+```
 
-<pre>content: normal                                /* Keywords that cannot be combined with other values */
+```
+content: normal                                /* Keywords that cannot be combined with other values */
 content: none
 
-content: 'prefix'                              /* &lt;string&gt; value, non-latin characters must be encoded e.g. \00A0 for &amp;nbsp; */
-content: url(http://www.example.com/test.html) /* &lt;uri&gt; value */
-content: chapter_counter                       /* &lt;counter&gt; values */
+content: 'prefix'                              /* <string> value, non-latin characters must be encoded e.g. \00A0 for &nbsp; */
+content: url(http://www.example.com/test.html) /* <uri> value */
+content: chapter_counter                       /* <counter> values */
 content: attr(value string)                    /* attr() value linked to the HTML attribute value */
 content: open-quote                            /* Language- and position-dependant keywords */
 content: close-quote
@@ -35,50 +37,51 @@ content: no-close-quote
 content: open-quote chapter_counter            /* Except for normal and none, several values can be used simultaneously */
 
 content: inherit
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>不会产生伪类元素</dd>
- <dt><code>normal</code></dt>
- <dd> <code>:before</code> 和 <code>:after</code> 伪类元素中会被视为 <code>none</code></dd>
- <dt>&lt;string&gt;</dt>
- <dd>文本内容</dd>
- <dt>&lt;uri&gt;<code> url()</code></dt>
- <dd>URI 值会指定一个外部资源（比如图片）。如果该资源或图片不能显示，它就会被忽略或显示一些占位（比如无图片标志）。</dd>
- <dt>&lt;counter&gt;</dt>
- <dd>计数器可以指定两种不同的函数：<code>counter()</code> 或 <code>counters()</code>。前面一个有两种形式：<code>counter(name) </code>或<code> counter(name,style)</code> 。产生的内容是该伪类元素指定名称的最小范围的计数；格式由 style 指定（默认是'decimal'——十进制数字）。后一个函数同样也有两种形式：<code>counters(name,string)</code> 或 <code>counters(name,string,style)</code> 。The generated text is the value of all counters with the given name in scope at this pseudo-element, from outermost to innermost separated by the specified string. The counters are rendered in the indicated style ('decimal' by default). See the section on automatic counters and numbering for more information. The name must not be 'none', 'inherit' or 'initial'. Such a name causes the declaration to be ignored.</dd>
- <dt><code>attr(X)</code></dt>
- <dd>将元素的 X 属性以字符串形式返回。如果该元素没有 X 属性，则返回一个空字符串。区分大小写的属性返回值依赖文挡的语言设定。</dd>
- <dt><code>open-quote</code> | <code>close-quote</code></dt>
- <dd>这些值会被 {{ cssxref("quotes") }} 中定义的字符串替换。</dd>
- <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
- <dd>不会生产任何内容，但是会改变（增加或降低）引号层级。</dd>
-</dl>
+- `none`
+  - : 不会产生伪类元素
+- `normal`
+  - : `:before` 和 `:after` 伪类元素中会被视为 `none`
+- \<string>
+  - : 文本内容
+- \<uri>` url()`
+  - : URI 值会指定一个外部资源（比如图片）。如果该资源或图片不能显示，它就会被忽略或显示一些占位（比如无图片标志）。
+- \<counter>
+  - : 计数器可以指定两种不同的函数：`counter()` 或 `counters()`。前面一个有两种形式：`counter(name) `或` counter(name,style)` 。产生的内容是该伪类元素指定名称的最小范围的计数；格式由 style 指定（默认是'decimal'——十进制数字）。后一个函数同样也有两种形式：`counters(name,string)` 或 `counters(name,string,style)` 。The generated text is the value of all counters with the given name in scope at this pseudo-element, from outermost to innermost separated by the specified string. The counters are rendered in the indicated style ('decimal' by default). See the section on automatic counters and numbering for more information. The name must not be 'none', 'inherit' or 'initial'. Such a name causes the declaration to be ignored.
+- `attr(X)`
+  - : 将元素的 X 属性以字符串形式返回。如果该元素没有 X 属性，则返回一个空字符串。区分大小写的属性返回值依赖文挡的语言设定。
+- `open-quote` | `close-quote`
+  - : 这些值会被 {{ cssxref("quotes") }} 中定义的字符串替换。
+- `no-open-quote` | `no-close-quote`
+  - : 不会生产任何内容，但是会改变（增加或降低）引号层级。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="代码举例_-_标题和引号">代码举例 - 标题和引号</h3>
+### 代码举例 - 标题和引号
 
-<h4 id="HTML">HTML </h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1&gt;5&lt;/h1&gt;
-&lt;p&gt; We shall start this with a quote from Sir Tim Berners-Lee,
-    &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;
-        I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.&lt;/q&gt;  We must understand that there is nothing fundamentally wrong with building on the contributions of others.
-&lt;/p&gt;
+```html
+<h1>5</h1>
+<p> We shall start this with a quote from Sir Tim Berners-Lee,
+    <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+        I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.</q>  We must understand that there is nothing fundamentally wrong with building on the contributions of others.
+</p>
 
-&lt;h1&gt;6&lt;/h1&gt;
-&lt;p&gt; Here we shall quote the Mozilla Manifesto,
-    &lt;q cite="http://www.mozilla.org/en-US/about/manifesto/"&gt;
-        Individuals must have the ability to shape the Internet and their own experiences on the Internet.&lt;/q&gt; And so, we can infer that contributing to the open web, can protect our own individual experiences on it.
-&lt;/p&gt;</pre>
+<h1>6</h1>
+<p> Here we shall quote the Mozilla Manifesto,
+    <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+        Individuals must have the ability to shape the Internet and their own experiences on the Internet.</q> And so, we can infer that contributing to the open web, can protect our own individual experiences on it.
+</p>
+```
 
-<h4 id="CSS">CSS </h4>
+#### CSS
 
-<pre class="brush: css">q {
+```css
+q {
     color: #00008B;
     font-style: italic;
 }
@@ -86,98 +89,114 @@ content: inherit
 q::before   { content: open-quote }
 q::after    { content: close-quote }
 
-h1::before  { content: "Chapter "; }</pre>
+h1::before  { content: "Chapter "; }
+```
 
-<h4 id="输出">输出</h4>
+#### 输出
 
-<p>{{ EmbedLiveSample('代码举例_-_标题和引号', 460, 100) }}</p>
+{{ EmbedLiveSample('代码举例_-_标题和引号', 460, 100) }}
 
-<h3 id="代码举例_link_前面加一个_icon">代码举例 - link 前面加一个 icon</h3>
+### 代码举例 - link 前面加一个 icon
 
-<h4 id="HTML_2">HTML </h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="http://www.mozilla.org/en-US/"&gt;Home Page&lt;/a&gt;</pre>
+```html
+<a href="http://www.mozilla.org/en-US/">Home Page</a>
+```
 
-<h4 id="CSS_2">CSS </h4>
+#### CSS
 
-<pre class="brush: css">a::before{
+```css
+a::before{
     content: url(http://www.mozilla.org/favicon.ico) " MOZILLA: ";
     font:    x-small Arial,freeSans,sans-serif;
     color:   gray;
-}</pre>
+}
+```
 
-<h4 id="输出_2">输出</h4>
+#### 输出
 
-<p>{{ EmbedLiveSample('代码举例_link_前面加一个_icon', 200, 60) }}</p>
+{{ EmbedLiveSample('代码举例_link_前面加一个_icon', 200, 60) }}
 
-<h3 id="代码举例_-_自定义列表后面加加文字">代码举例 - 自定义列表后面加加文字</h3>
+### 代码举例 - 自定义列表后面加加文字
 
-<h4 id="HTML_3">HTML </h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;ul class="brightIdea"&gt;
-    &lt;li&gt;This is my first idea&lt;/li&gt;
-    &lt;li&gt;and another good idea&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <ul class="brightIdea">
+    <li>This is my first idea</li>
+    <li>and another good idea</li>
+  </ul>
+</div>
+```
 
-<h4 id="CSS_3">CSS </h4>
+#### CSS
 
-<pre class="brush: css">/* first import the icon from a suitable site */
+```css
+/* first import the icon from a suitable site */
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 .brightIdea li::after{
     content: '\1f4a1';
     font-family: 'entypo', sans-serif;
-}</pre>
+}
+```
 
-<h4 id="输出_3">输出</h4>
+#### 输出
 
-<p>{{EmbedLiveSample('代码举例_-_自定义列表后面加加文字', 300, 100)}}</p>
+{{EmbedLiveSample('代码举例_-_自定义列表后面加加文字', 300, 100)}}
 
-<h3 id="Code_sample_-_class_based_example">Code sample - class based example</h3>
+### Code sample - class based example
 
-<h4 id="HTML_Content">HTML Content</h4>
+#### HTML Content
 
-<pre class="brush: html">&lt;h2&gt;Paperback best sellers&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Political thriller&lt;/li&gt;
-    &lt;li class="newEntry"&gt;Halloween Stories&lt;/li&gt;
-    &lt;li&gt;My Biography&lt;/li&gt;
-    &lt;li class="newEntry"&gt;Vampire Romance&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<h2>Paperback best sellers</h2>
+<ol>
+    <li>Political thriller</li>
+    <li class="newEntry">Halloween Stories</li>
+    <li>My Biography</li>
+    <li class="newEntry">Vampire Romance</li>
+</ol>
+```
 
-<h4 id="CSS_Content">CSS Content</h4>
+#### CSS Content
 
-<pre class="brush: css">/* use a class rather that an element selector to give more flexibility.
+```css
+/* use a class rather that an element selector to give more flexibility.
 Simple string example, but don't forget add a leading space in the text string
 for spacing purposes  */
 
 .newEntry::after {
     content: " New!";
     color: red;
-}</pre>
+}
+```
 
-<h4 id="Output">Output</h4>
+#### Output
 
-<p>{{ EmbedLiveSample('Code_sample_-_class_based_example', 300, 200) }}</p>
+{{ EmbedLiveSample('Code_sample_-_class_based_example', 300, 200) }}
 
-<h3 id="Code_sample_-_rich_link_styling">Code sample - rich link styling</h3>
+### Code sample - rich link styling
 
-<h4 id="HTML_Content_2">HTML Content</h4>
+#### HTML Content
 
-<pre class="brush: html">&lt;ul&gt;
-    &lt;li&gt;&lt;a id="moz" href="http://www.mozilla.org/"&gt;
-        Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
-        Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a id="w3c" href="http://www.w3c.org/"&gt;
-        World Wide Web Consortium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+    <li><a id="moz" href="http://www.mozilla.org/">
+        Mozilla Home Page</a></li>
+    <li><a id="mdn" href="https://developer.mozilla.org/">
+        Mozilla Developer Network</a></li>
+    <li><a id="w3c" href="http://www.w3c.org/">
+        World Wide Web Consortium</a></li>
+</ul>
+```
 
-<h4 id="CSS_Content_2">CSS Content</h4>
+#### CSS Content
 
-<pre class="brush: css">a {
+```css
+a {
     text-decoration: none;
     border-bottom: 3px dotted navy;
 }
@@ -201,25 +220,22 @@ a::after {
 li {
     margin: 1em;
 }
+```
 
-</pre>
+#### Output
 
-<h4 id="Output_2">Output</h4>
+{{ EmbedLiveSample('Code_sample_-_rich_link_styling', 340, 200) }}
 
-<p>{{ EmbedLiveSample('Code_sample_-_rich_link_styling', 340, 200) }}</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.content")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{ Cssxref("::after") }}, {{ Cssxref("::before") }}, {{ Cssxref("quotes") }}</li>
-</ul>
+- {{ Cssxref("::after") }}, {{ Cssxref("::before") }}, {{ Cssxref("quotes") }}

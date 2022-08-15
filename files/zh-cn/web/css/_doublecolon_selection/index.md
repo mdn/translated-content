@@ -1,57 +1,58 @@
 ---
 title: '::selection'
-slug: 'Web/CSS/::selection'
+slug: Web/CSS/::selection
 tags:
   - CSS
   - Layout
-translation_of: 'Web/CSS/::selection'
+translation_of: Web/CSS/::selection
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p><strong><code>::selection</code></strong> CSS 伪元素应用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）。</p>
+**`::selection`** CSS 伪元素应用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）。
 
-<pre class="brush: css">::selection {
+```css
+::selection {
   background-color: cyan;
 }
-</pre>
+```
 
-<h2 id="允许属性">允许属性</h2>
+## 允许属性
 
-<p>只有一小部分 CSS 属性可以用于<code>::selection</code> 选择器：</p>
+只有一小部分 CSS 属性可以用于`::selection` 选择器：
 
-<ul>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("background-color")}}</li>
- <li>{{CSSxRef("cursor")}}</li>
- <li>{{CSSxRef("caret-color")}}</li>
- <li>{{CSSxRef("outline")}} and its longhands</li>
- <li>{{CSSxRef("text-decoration")}} and its associated properties</li>
- <li>{{CSSxRef("text-emphasis-color")}}</li>
- <li>{{CSSxRef("text-shadow")}}</li>
-</ul>
+- {{CSSxRef("color")}}
+- {{CSSxRef("background-color")}}
+- {{CSSxRef("cursor")}}
+- {{CSSxRef("caret-color")}}
+- {{CSSxRef("outline")}} and its longhands
+- {{CSSxRef("text-decoration")}} and its associated properties
+- {{CSSxRef("text-emphasis-color")}}
+- {{CSSxRef("text-shadow")}}
 
-<div class="blockIndicator warning">
-<p>要特别注意的是，{{ cssxref("background-image") }} 会如同其他属性一样被忽略。</p>
-</div>
+> **警告：** 要特别注意的是，{{ cssxref("background-image") }} 会如同其他属性一样被忽略。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">/* Legacy Firefox syntax (version 61 and below) */
+```
+/* Legacy Firefox syntax (version 61 and below) */
 ::-moz-selection
 
 {{CSSSyntax}}
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">This text has special styles when you highlight it.
-&lt;p&gt;Also try selecting text in this paragraph.&lt;/p&gt;</pre>
+```html
+This text has special styles when you highlight it.
+<p>Also try selecting text in this paragraph.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">::-moz-selection {
+```css
+::-moz-selection {
   color: gold;
   background-color: red;
 }
@@ -59,9 +60,11 @@ translation_of: 'Web/CSS/::selection'
 p::-moz-selection {
   color: white;
   background-color: blue;
-}</pre>
+}
+```
 
-<pre class="brush: css">/* 选中的文本是红色背景，金黄色的字体 */
+```css
+/* 选中的文本是红色背景，金黄色的字体 */
 ::selection {
   color: gold;
   background-color: red;
@@ -71,20 +74,19 @@ p::-moz-selection {
 p::selection {
   color: white;
   background-color: blue;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例')}}</p>
+{{EmbedLiveSample('示例')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<div class="blockIndicator note">
-<p><code>::selection</code> CSS 伪元素选择器是 CSS 第 3 级选择器的草案，但是在被推荐使用前就被废弃。它现在在第 4 级伪元素选择器草案中。</p>
-</div>
+> **备注：** `::selection` CSS 伪元素选择器是 CSS 第 3 级选择器的草案，但是在被推荐使用前就被废弃。它现在在第 4 级伪元素选择器草案中。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.selection")}}</p>
+{{Compat("css.selectors.selection")}}

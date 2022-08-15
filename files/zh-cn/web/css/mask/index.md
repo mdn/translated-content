@@ -3,11 +3,12 @@ title: mask
 slug: Web/CSS/mask
 translation_of: Web/CSS/mask
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <strong><code>mask</code></strong> 允许使用者通过遮罩或者裁切特定区域的图片的方式来隐藏一个元素的部分或者全部可见区域。</p>
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`mask`** 允许使用者通过遮罩或者裁切特定区域的图片的方式来隐藏一个元素的部分或者全部可见区域。
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 mask: none;
 
 /* Image values */
@@ -26,67 +27,60 @@ mask: url(masks.svg#star) exclude;         /* Element within SVG graphic used as
 mask: inherit;
 mask: initial;
 mask: unset;
-</pre>
+```
 
-<div class="note">
-<p>mask 的简写会将 {{cssxref("mask-border")}} 设为初始值。使用 <code>mask</code> 的简写优于使用其他简写或者各自属性的设置来覆盖。这能保证 <code>mask-border</code> 也会重新设置为新的效果样式。</p>
-</div>
+> **备注：** mask 的简写会将 {{cssxref("mask-border")}} 设为初始值。使用 `mask` 的简写优于使用其他简写或者各自属性的设置来覆盖。这能保证 `mask-border` 也会重新设置为新的效果样式。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;mask-reference&gt;</code></dt>
- <dd>设置遮罩图片的路径。详见 {{cssxref("mask-image")}}。</dd>
- <dt><code>&lt;masking-mode&gt;</code></dt>
- <dd>设置遮罩图片的模式。详见 {{cssxref("mask-mode")}}。</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>设置遮罩图片的位置。详见 {{cssxref("mask-position")}}。</dd>
- <dt><code>&lt;bg-size&gt;</code></dt>
- <dd>设置遮罩的大小。详见 {{cssxref("mask-size")}}。</dd>
- <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>设置遮罩图片的重复性。详见 {{cssxref("mask-repeat")}}。</dd>
- <dt><code>&lt;geometry-box&gt;</code></dt>
- <dd>如果只有一个 &lt;geometry-box&gt; 值被赋予，他将会设置 {{cssxref("mask-origin")}} 和 {{cssxref("mask-clip")}}。如果两个 &lt;geometry-box&gt; 值显示，第一个值代表 {{cssxref("mask-origin")}} 第二个值代表 {{cssxref("mask-clip")}}。</dd>
- <dt><code>&lt;geometry-box&gt; | no-clip</code></dt>
- <dd>设置区域，会被遮罩图片影响。详见 {{cssxref("mask-clip")}}。</dd>
- <dt><code>&lt;compositing-operator&gt;</code></dt>
- <dd>设置遮罩图层的组合操作。详见 {{cssxref("mask-composite")}}。</dd>
-</dl>
+- `<mask-reference>`
+  - : 设置遮罩图片的路径。详见 {{cssxref("mask-image")}}。
+- `<masking-mode>`
+  - : 设置遮罩图片的模式。详见 {{cssxref("mask-mode")}}。
+- `<position>`
+  - : 设置遮罩图片的位置。详见 {{cssxref("mask-position")}}。
+- `<bg-size>`
+  - : 设置遮罩的大小。详见 {{cssxref("mask-size")}}。
+- `<repeat-style>`
+  - : 设置遮罩图片的重复性。详见 {{cssxref("mask-repeat")}}。
+- `<geometry-box>`
+  - : 如果只有一个 \<geometry-box> 值被赋予，他将会设置 {{cssxref("mask-origin")}} 和 {{cssxref("mask-clip")}}。如果两个 \<geometry-box> 值显示，第一个值代表 {{cssxref("mask-origin")}} 第二个值代表 {{cssxref("mask-clip")}}。
+- `<geometry-box> | no-clip`
+  - : 设置区域，会被遮罩图片影响。详见 {{cssxref("mask-clip")}}。
+- `<compositing-operator>`
+  - : 设置遮罩图层的组合操作。详见 {{cssxref("mask-composite")}}。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: css">.target {
+```css
+.target {
   mask: url(#c1) luminance;
 }
 
 .anothertarget {
   mask: url(resources.svg#c1) 50px 30px/10px 10px repeat-x exclude;
 }
-</pre>
+```
 
-
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.mask")}}</p>
+{{Compat("css.properties.mask")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{Cssxref("clip-path")}}, {{Cssxref("filter")}}</li>
- <li><a href="https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/">CSS Shapes, clipping and masking – and how to use them</a></li>
- <li><a href="/en-US/docs/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></li>
- <li><a href="/en-US/docs/SVG">SVG</a></li>
-</ul>
+- {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
+- [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
+- [Applying SVG effects to HTML content](/zh-CN/docs/Applying_SVG_effects_to_HTML_content)
+- [SVG](/zh-CN/docs/SVG)

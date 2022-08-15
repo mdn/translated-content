@@ -10,28 +10,24 @@ tags:
   - Reference
 translation_of: Web/CSS/flex
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>flex</code> <a href="/zh-CN/docs/Web/CSS/Shorthand_properties">CSS 简写属性</a>设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。</p>
+`flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
 
-<div>{{EmbedInteractiveExample("pages/css/flex.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex.html")}}
 
+## 成分属性
 
-<h2 id="成分属性">成分属性</h2>
+此属性是以下 CSS 属性的简写：
 
-<p>此属性是以下 CSS 属性的简写：</p>
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-basis")}}
 
-<ul>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
-</ul>
+## 语法
 
-<div id="flex"></div>
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* 关键字值 */
+```css
+/* 关键字值 */
 flex: auto;
 flex: initial;
 flex: none;
@@ -57,90 +53,80 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: unset;
-</pre>
+```
 
-<p>可以使用一个，两个或三个值来指定 <code>flex</code>属性。</p>
+可以使用一个，两个或三个值来指定 `flex`属性。
 
-<p><strong>单值语法</strong>: 值必须为以下其中之一：</p>
+**单值语法**: 值必须为以下其中之一：
 
-<ul>
- <li>一个无单位<strong>数 ({{cssxref("&lt;number&gt;")}})</strong>: 它会被当作<code>flex:&lt;number&gt; 1 0;</code> <code><a href="/zh-CN/docs/Web/CSS/flex-shrink">&lt;flex-shrink&gt;</a></code>的值被假定为 1，然后<code><a href="/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值被假定为<code>0</code>。</li>
- <li>一个有效的<strong>宽度 ({{cssxref("width")}})</strong>值：它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a>的值。</code></li>
- <li>关键字<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#none">none</a></code>，<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#auto">auto</a></code>或<code>initial</code>.</li>
-</ul>
+- 一个无单位**数 ({{cssxref("&lt;number&gt;")}})**: 它会被当作`flex:<number> 1 0;` [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink)的值被假定为 1，然后[`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值被假定为`0`。
+- 一个有效的**宽度 ({{cssxref("width")}})**值：它会被当作 `<flex-basis>的值。`
+- 关键字[`none`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#none)，[`auto`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#auto)或`initial`.
 
-<p><strong>双值语法</strong>: 第一个值必须为一个无单位数，并且它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow">&lt;flex-grow&gt;</a></code> 的值。第二个值必须为以下之一：</p>
+**双值语法**: 第一个值必须为一个无单位数，并且它会被当作 [`<flex-grow>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow) 的值。第二个值必须为以下之一：
 
-<ul>
- <li>一个无单位数：它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink">&lt;flex-shrink&gt;</a></code> 的值。</li>
- <li>一个有效的宽度值：它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值。</li>
-</ul>
+- 一个无单位数：它会被当作 [`<flex-shrink>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 的值。
+- 一个有效的宽度值：它会被当作 [`<flex-basis>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 的值。
 
-<p><strong>三值语法：</strong></p>
+**三值语法：**
 
-<ul>
- <li>第一个值必须为一个无单位数，并且它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow">&lt;flex-grow&gt;</a></code> 的值。</li>
- <li>第二个值必须为一个无单位数，并且它会被当作  <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink">&lt;flex-shrink&gt;</a></code> 的值。</li>
- <li>第三个值必须为一个有效的宽度值，并且它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值。</li>
-</ul>
+- 第一个值必须为一个无单位数，并且它会被当作 [`<flex-grow>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow) 的值。
+- 第二个值必须为一个无单位数，并且它会被当作 [`<flex-shrink>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 的值。
+- 第三个值必须为一个有效的宽度值，并且它会被当作 [`<flex-basis>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 的值。
 
-<h3 id="Values">取值</h3>
+### 取值
 
-<dl>
- <dt><code>initial</code></dt>
- <dd>元素会根据自身宽高设置尺寸。它会缩短自身以适应 flex 容器，但不会伸长并吸收 flex 容器中的额外自由空间来适应 flex 容器 。相当于将属性设置为"<code>flex: 0 1 auto</code>"。</dd>
-</dl>
+- `initial`
+  - : 元素会根据自身宽高设置尺寸。它会缩短自身以适应 flex 容器，但不会伸长并吸收 flex 容器中的额外自由空间来适应 flex 容器 。相当于将属性设置为"`flex: 0 1 auto`"。
+- `auto`
+  - : 元素会根据自身的宽度与高度来确定尺寸，但是会伸长并吸收 flex 容器中额外的自由空间，也会缩短自身来适应 flex 容器。这相当于将属性设置为 "`flex: 1 1 auto`".
+- `none`
+  - : 元素会根据自身宽高来设置尺寸。它是完全非弹性的：既不会缩短，也不会伸长来适应 flex 容器。相当于将属性设置为"`flex: 0 0 auto`"。
+- `<'flex-grow'>`
+  - : 定义 flex 项目的 {{cssxref("flex-grow")}} 。负值无效。省略时默认值为 1。 (初始值为 `0`)
+- `<'flex-shrink'>`
+  - : 定义 flex 元素的 {{cssxref("flex-shrink")}} 。负值无效。省略时默认值为`1`。 (初始值为 `1`)
+- `<'flex-basis'>`
+  - : 定义 flex 元素的 {{cssxref("flex-basis")}} 属性。若值为`0`，则必须加上单位，以免被视作伸缩性。省略时默认值为 0。(初始值为 auto)
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>元素会根据自身的宽度与高度来确定尺寸，但是会伸长并吸收 flex 容器中额外的自由空间，也会缩短自身来适应 flex 容器。这相当于将属性设置为 "<code>flex: 1 1 auto</code>".</dd>
- <dt><code>none</code></dt>
- <dd>元素会根据自身宽高来设置尺寸。它是完全非弹性的：既不会缩短，也不会伸长来适应 flex 容器。相当于将属性设置为"<code>flex: 0 0 auto</code>"。</dd>
- <dt><code>&lt;'flex-grow'&gt;</code></dt>
- <dd>定义 flex 项目的 {{cssxref("flex-grow")}} 。负值无效。省略时默认值为 1。 (初始值为 <code>0</code>)</dd>
- <dt><code>&lt;'flex-shrink'&gt;</code></dt>
- <dd>定义 flex 元素的 {{cssxref("flex-shrink")}} 。负值无效。省略时默认值为<code>1</code>。 (初始值为 <code>1</code>)</dd>
- <dt><code>&lt;'flex-basis'&gt;</code></dt>
- <dd>定义 flex 元素的 {{cssxref("flex-basis")}} 属性。若值为<code>0</code>，则必须加上单位，以免被视作伸缩性。省略时默认值为 0。(初始值为 auto)</dd>
-</dl>
+### 描述
 
-<h3 id="描述">描述</h3>
+大多数情况下，开发者需要将 `flex` 设置为以下值之一： `auto`，`initial`，`none`，或一个无单位正数。要查看这些值的效果，请尝试调整以下 flex 容器的大小：
 
-<p>大多数情况下，开发者需要将 <code>flex</code> 设置为以下值之一： <code>auto</code>，<code>initial</code>，<code>none</code>，或一个无单位正数。要查看这些值的效果，请尝试调整以下 flex 容器的大小：</p>
+```html hidden
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+</div>
 
-<div id="flex">
-<pre class="hidden brush: html notranslate">&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-&lt;/div&gt;
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item initial">initial</div>
+  <div class="item initial">initial</div>
+</div>
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-&lt;/div&gt;
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item none">none</div>
+</div>
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-&lt;/div&gt;
+<div class="flex-container">
+  <div class="item initial">initial</div>
+  <div class="item none">none</div>
+  <div class="item none">none</div>
+</div>
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-&lt;/div&gt;
+<div class="flex-container">
+  <div class="item four">4</div>
+  <div class="item two">2</div>
+  <div class="item one">1</div>
+</div>
+```
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item four"&gt;4&lt;/div&gt;
-  &lt;div class="item two"&gt;2&lt;/div&gt;
-  &lt;div class="item one"&gt;1&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="hidden brush: css notranslate">* {
+```css hidden
+* {
   box-sizing: border-box;
 }
 
@@ -186,97 +172,89 @@ flex: unset;
 .one {
   flex: 1;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}
 
-<p>默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的{{cssxref("min-width")}} 与 {{cssxref("min-height")}}属性。</p>
-</div>
+默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的{{cssxref("min-width")}} 与 {{cssxref("min-height")}}属性。
 
-<h2 id="正式定义">正式定义</h2>
+## 正式定义
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="正式语法">正式语法</h2>
+## 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="设置_flex_auto">设置 flex: auto</h3>
+### 设置 flex: auto
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div id="flex-container"&gt;
-  &lt;div class="flex-item" id="flex"&gt;Flex box (click to toggle raw box)&lt;/div&gt;
-  &lt;div class="raw-item" id="raw"&gt;Raw box&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flex-container">
+  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
+  <div class="raw-item" id="raw">Raw box</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">#flex-container {
+```css
+#flex-container {
   display: flex;
   flex-direction: row;
 }
 
-#flex-container &gt; .flex-item {
+#flex-container > .flex-item {
   flex: auto;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
   width: 5rem;
 }
+```
 
-</pre>
-
-<div class="hidden">
-<h4 id="JS">JS</h4>
-
-<pre class="brush: js notranslate">var flex = document.getElementById("flex");
+```js hidden
+var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
-</pre>
+```
 
-<h4 id="CSS_2">CSS</h4>
-
-<pre class="brush: css notranslate">#flex-container {
+```css hidden
+#flex-container {
   width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }
 
-#flex-container &gt; div {
+#flex-container > div {
   border: 1px solid #f00;
   padding: 1rem;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
   border: 1px solid #000;
 }
-</pre>
-</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('示例','100%','60')}}</p>
+{{EmbedLiveSample('示例','100%','60')}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.flex")}}
 
+## 参见
 
-<p>{{Compat("css.properties.flex")}}</p>
-
-<h2 id="See_also">参见</h2>
-
-<ul>
- <li>CSS Flexbox 指南: <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox 基本概念</a></em></li>
- <li>CSS Flexbox 指南: <em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">控制 Flex 子元素在主轴上的比例</a></em></li>
-</ul>
+- CSS Flexbox 指南: _[Flexbox 基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox 指南: _[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

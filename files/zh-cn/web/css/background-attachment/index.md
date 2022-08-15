@@ -8,16 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/background-attachment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>background-attachment</code></strong> <a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> 属性决定背景图像的位置是在{{glossary("视口")}}内固定，或者随着包含它的区块滚动。</p>
+**`background-attachment`** [CSS](/zh-CN/docs/CSS) 属性决定背景图像的位置是在{{glossary("视口")}}内固定，或者随着包含它的区块滚动。
 
-<div>{{EmbedInteractiveExample("pages/css/background-attachment.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
+## 语法
 
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush: css no-line-numbers language-css"><code class="language-css">/* 关键 属性值 */
+```css
+/* 关键 属性值 */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
@@ -25,63 +25,68 @@ background-attachment: local;
 /* 全局 属性值 */
 background-attachment: inherit;
 background-attachment: initial;
-background-attachment: unset;</code></pre>
+background-attachment: unset;
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>fixed</code></dt>
- <dd>此关键属性值表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。</dd>
- <dt><code>local</code></dt>
- <dd>此关键属性值表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动，并且背景的绘制区域和定位区域是相对于可滚动的区域而不是包含他们的边框。</dd>
- <dt><code>scroll</code></dt>
- <dd>此关键属性值表示背景相对于元素本身固定，而不是随着它的内容滚动（对元素边框是有效的）。</dd>
-</dl>
+- `fixed`
+  - : 此关键属性值表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。
+- `local`
+  - : 此关键属性值表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动，并且背景的绘制区域和定位区域是相对于可滚动的区域而不是包含他们的边框。
+- `scroll`
+  - : 此关键属性值表示背景相对于元素本身固定，而不是随着它的内容滚动（对元素边框是有效的）。
 
-<h3 id="标准语法">标准语法</h3>
+### 标准语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="简单的例子">简单的例子</h3>
+### 简单的例子
 
-<h4 id="CSS样式表">CSS 样式表</h4>
+#### CSS 样式表
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
   background-attachment: fixed;
 }
-</pre>
+```
 
-<h4 id="HTML源码">HTML 源码</h4>
+#### HTML 源码
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
   get out again.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="效果">效果</h4>
+#### 效果
 
-<p>{{EmbedLiveSample("简单的例子")}}</p>
+{{EmbedLiveSample("简单的例子")}}
 
-<h3 id="多背景图支持">多背景图支持</h3>
+### 多背景图支持
 
-<p>此属性支持多张背景图片。你可以用逗号分隔来为每一张背景图片指定不同的<code>&lt;attachment&gt;属性值。</code>每一张背景图片顺序对应相应的 attachment 属性。</p>
+此属性支持多张背景图片。你可以用逗号分隔来为每一张背景图片指定不同的`<attachment>属性值。`每一张背景图片顺序对应相应的 attachment 属性。
 
-<h4 id="CSS样式表_2">CSS 样式表</h4>
+#### CSS 样式表
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
-}</pre>
+}
+```
 
-<h4 id="HTML源码_2">HTML 源码</h4>
+#### HTML 源码
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -95,26 +100,23 @@ background-attachment: unset;</code></pre>
   time round, she came upon a low curtain she had not noticed before, and
   behind it was a little door about fifteen inches high: she tried the
   little golden key in the lock, and to her great delight it fitted!
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="效果_2">效果</h4>
+#### 效果
 
-<p>{{EmbedLiveSample("多背景图支持")}}</p>
+{{EmbedLiveSample("多背景图支持")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.background-attachment")}}</p>
+{{Compat("css.properties.background-attachment")}}
 
-<div id="compat-mobile"></div>
+## 参见
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Multiple_backgrounds">更多背景图</a></li>
-</ul>
+- [更多背景图](/zh-CN/docs/CSS/Multiple_backgrounds)

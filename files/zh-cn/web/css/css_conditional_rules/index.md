@@ -11,27 +11,23 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Conditional_Rules
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Conditional Rules</strong> is a CSS module that allows to define a set of rules that will only apply based on the capabilities of the processor or the document the style sheet is being applied to.</p>
+**CSS Conditional Rules** is a CSS module that allows to define a set of rules that will only apply based on the capabilities of the processor or the document the style sheet is being applied to.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<div class="index">
-<ul>
- <li>{{cssxref("@document")}}</li>
- <li>{{cssxref("@media")}}</li>
- <li>{{cssxref("@supports")}}</li>
- <li>{{cssxref("@import")}}</li>
-</ul>
-</div>
+- {{cssxref("@document")}}
+- {{cssxref("@media")}}
+- {{cssxref("@supports")}}
+- {{cssxref("@import")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}

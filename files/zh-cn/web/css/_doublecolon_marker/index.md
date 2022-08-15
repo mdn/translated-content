@@ -1,71 +1,67 @@
 ---
 title: '::marker'
-slug: 'Web/CSS/::marker'
-translation_of: 'Web/CSS/::marker'
+slug: Web/CSS/::marker
+translation_of: Web/CSS/::marker
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>::marker</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en/CSS/Pseudo-elements">pseudo-element</a>（CSS 伪元素）选中一个 list item 的 marker box，后者通常含有一个项目符号或者数字。它作用在任何设置了<code><a href="/en-US/docs/Web/CSS/display">display: list-item</a></code>的元素或伪元素上，例如{{HTMLElement("li")}}和{{HTMLElement("summary")}}。</p>
+**`::marker`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/en/CSS/Pseudo-elements)（CSS 伪元素）选中一个 list item 的 marker box，后者通常含有一个项目符号或者数字。它作用在任何设置了[`display: list-item`](/en-US/docs/Web/CSS/display)的元素或伪元素上，例如{{HTMLElement("li")}}和{{HTMLElement("summary")}}。
 
-<pre class="brush: css no-line-numbers notranslate">::marker {
+```css
+::marker {
   color: blue;
   font-size: 1.2em;
-}</pre>
+}
+```
 
-<h2 id="允许的属性值">允许的属性值</h2>
+## 允许的属性值
 
-<p>在将<code>::marker</code>作为选择器的规则中，只能使用某些 CSS 属性：</p>
+在将`::marker`作为选择器的规则中，只能使用某些 CSS 属性：
 
-<ul>
- <li>All <a href="/en-US/docs/Web/CSS/CSS_Fonts">font properties</a>（字体属性）</li>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} properties</li>
- <li>The {{CSSxRef("content")}} property</li>
-</ul>
+- All [font properties](/zh-CN/docs/Web/CSS/CSS_Fonts)（字体属性）
+- {{CSSxRef("color")}}
+- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} properties
+- The {{CSSxRef("content")}} property
 
-<div class="blockIndicator note">
-<p>规范指出，将来可能会支持其他 CSS 属性。</p>
-</div>
+> **备注：** 规范指出，将来可能会支持其他 CSS 属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{CSSSyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;Peaches&lt;/li&gt;
-  &lt;li&gt;Apples&lt;/li&gt;
-  &lt;li&gt;Plums&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Peaches</li>
+  <li>Apples</li>
+  <li>Plums</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">ul li::marker {
+```css
+ul li::marker {
   color: red;
   font-size: 1.5em;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('示例')}}</p>
+{{EmbedLiveSample('示例')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.marker")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.marker")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>默认拥有 marker boxes 的 HTML 元素：{{HTMLElement("ol")}}，{{HTMLElement("li")}}，{{HTMLElement("summary")}}</li>
-</ul>
+- 默认拥有 marker boxes 的 HTML 元素：{{HTMLElement("ol")}}，{{HTMLElement("li")}}，{{HTMLElement("summary")}}

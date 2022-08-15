@@ -7,54 +7,50 @@ tags:
   - Web
 translation_of: Web/CSS/time
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>&lt;time&gt;</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> 表达了以秒（s）或毫秒（ms）为单位的时间的值。于{{cssxref("animation")}}、{{cssxref("transition")}}及相关属性中使用。</p>
+**`<time>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 表达了以秒（s）或毫秒（ms）为单位的时间的值。于{{cssxref("animation")}}、{{cssxref("transition")}}及相关属性中使用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>&lt;time&gt;</code> 数据类型由​​​​​​{{cssxref("&lt;number&gt;")}}后加下方列出的单位之一组成。前方也可选择添加一个<code>+</code> 或 <code>-</code>。单位与数字之间无空格。</p>
+`<time>` 数据类型由 ​​​​​​{{cssxref("&lt;number&gt;")}}后加下方列出的单位之一组成。前方也可选择添加一个`+` 或 `-`。单位与数字之间无空格。
 
-<div class="note">
-<p><strong>注意：</strong>尽管数字 <code>0</code> 不管在何种单位下均相等，但其单位不可去除。换句话说， <code>0</code> 是无效的，并不代表 <code>0s</code> 或 <code>0ms。</code></p>
-</div>
+> **备注：** 尽管数字 `0` 不管在何种单位下均相等，但其单位不可去除。换句话说， `0` 是无效的，并不代表 `0s` 或 `0ms。`
 
-<h3 id="单位">单位</h3>
+### 单位
 
-<dl>
- <dt><strong><code id="s">s</code></strong></dt>
- <dd>以秒为单位的时间。 例： <code>0s</code>, <code>1.5s</code>, <code>-60s</code>。</dd>
- <dt><strong><code id="ms">ms</code></strong></dt>
- <dd>以毫秒为单位的时间。例： <code>0ms</code>, <code>150.25ms</code>, <code>-60000ms</code>。</dd>
-</dl>
+- **`s`**
+  - : 以秒为单位的时间。 例： `0s`, `1.5s`, `-60s`。
+- **`ms`**
+  - : 以毫秒为单位的时间。例： `0ms`, `150.25ms`, `-60000ms`。
 
-<div class="note">
-<p><strong>注意：</strong>秒 <code>s</code> 与毫秒 <code>ms</code> 间的转换为： <code>1s</code> = <code>1000ms</code>。</p>
-</div>
+> **备注：** 秒 `s` 与毫秒 `ms` 间的转换为： `1s` = `1000ms`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="有效时间">有效时间</h3>
+### 有效时间
 
-<pre>12s         正整数
+```
+12s         正整数
 -456ms      负整数
 4.3ms       非整数
 14mS        单位大小写不敏感，虽然不推荐大写
 +0s         0 以及前置 + 号和单位
 -0ms        0 以及前置 - 号和单位
-</pre>
+```
 
-<h3 id="无效时间">无效时间</h3>
+### 无效时间
 
-<pre class="example-bad">0           尽管&lt;length&gt;中允许 0，其在&lt;time&gt;中无效。
-12.0        此为&lt;number&gt;而非&lt;time&gt;。其缺乏单位。
+```plain example-bad
+0           尽管<length>中允许 0，其在<time>中无效。
+12.0        此为<number>而非<time>。其缺乏单位。
 7 ms        数字与单位间不允许有空格。
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.types.time")}}</p>
+{{Compat("css.types.time")}}

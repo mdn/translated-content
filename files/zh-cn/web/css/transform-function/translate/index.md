@@ -9,78 +9,114 @@ tags:
 translation_of: Web/CSS/transform-function/translate()
 original_slug: Web/CSS/transform-function/translate()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>translate()</code></strong> 这个 <a href="/en-US/docs/Web/CSS">CSS</a> 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。</p>
+**`translate()`** 这个 [CSS](/zh-CN/docs/Web/CSS) 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12121/translate.png" style="height: 195px; width: 249px;"></p>
+![](https://mdn.mozillademos.org/files/12121/translate.png)
 
-<p>该变换由二维向量构成。它的坐标定义了元素在每个方向上移动了多少。</p>
+该变换由二维向量构成。它的坐标定义了元素在每个方向上移动了多少。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css notranslate">/* Single &lt;length-percentage&gt; values */
+```css
+/* Single <length-percentage> values */
 transform: translate(200px);
 transform: translate(50%);
 
-/* Double &lt;length-percentage&gt; values */
+/* Double <length-percentage> values */
 transform: translate(100px, 200px);
 transform: translate(100px, 50%);
 transform: translate(30%, 200px);
 transform: translate(30%, 50%);
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>单个 <code>&lt;length-percentage&gt;</code> 作为参数</dt>
- <dd>该值是 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 代表翻译向量的横坐标  (horizontal, x-coordinate) . 而向量的纵坐标 (vertical, y-coordinate) 会被默认为 <code>0</code>. 例如，<code>translate(2)</code> 等价于 <code>translate(2, 0)</code> 。里面还可以填百分比值，百分比值是指 {{cssxref("transform-box")}} 属性定义的参考框的宽度。</dd>
- <dt>参数是两个 <code>&lt;length-percentage&gt;</code> 构成</dt>
- <dd>此值描述两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，分别代表翻译的横坐标  (x-coordinate)  和纵坐标  (y-coordinate)  向量。百分比作为第一个值表示宽度，第二个部分表示由 {{cssxref("transform-box")}} 属性定义的参考框的高度。</dd>
-</dl>
+- 单个 `<length-percentage>` 作为参数
+  - : 该值是 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 代表翻译向量的横坐标 (horizontal, x-coordinate) . 而向量的纵坐标 (vertical, y-coordinate) 会被默认为 `0`. 例如，`translate(2)` 等价于 `translate(2, 0)` 。里面还可以填百分比值，百分比值是指 {{cssxref("transform-box")}} 属性定义的参考框的宽度。
+- 参数是两个 `<length-percentage>` 构成
+  - : 此值描述两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，分别代表翻译的横坐标 (x-coordinate) 和纵坐标 (y-coordinate) 向量。百分比作为第一个值表示宽度，第二个部分表示由 {{cssxref("transform-box")}} 属性定义的参考框的高度。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2">
-    <p>平移不是 ℝ<sup>2</sup> 中的线性变换，因此不能使用矩阵来表示。</p>
-   </td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 0 0 1 tx ty]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <p>平移不是 ℝ<sup>2</sup> 中的线性变换，因此不能使用矩阵来表示。</p>
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 0 1 tx ty]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="形式语法">形式语法</h3>
+### 形式语法
 
-<pre class="syntaxbox notranslate">translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}<a href="/en-US/docs/Web/CSS/Value_definition_syntax#Question_mark_()">?</a>)
-</pre>
+```
+translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}?)
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用单个轴平移">使用单个轴平移</h3>
+### 使用单个轴平移
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -90,23 +126,26 @@ transform: translate(30%, 50%);
   transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Using_a_single-axis_translation", 250, 250)}}</p>
+{{EmbedLiveSample("Using_a_single-axis_translation", 250, 250)}}
 
-<h3 id="y轴和x轴都平移">y 轴和 x 轴都平移</h3>
+### y 轴和 x 轴都平移
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -116,23 +155,21 @@ transform: translate(30%, 50%);
   transform: translate(10px, 10px);
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Combining_y-axis_and_x-axis_translation", 250, 250)}}</p>
+{{EmbedLiveSample("Combining_y-axis_and_x-axis_translation", 250, 250)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

@@ -7,15 +7,14 @@ tags:
   - CSS 网格
 translation_of: Web/CSS/grid-auto-flow
 ---
-<p><strong><code>grid-auto-flow</code></strong> 属性控制着自动布局算法怎样运作，精确指定在网格中被自动布局的元素怎样排列。</p>
+**`grid-auto-flow`** 属性控制着自动布局算法怎样运作，精确指定在网格中被自动布局的元素怎样排列。
 
-<div>{{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 grid-auto-flow: row;
 grid-auto-flow: column;
 grid-auto-flow: dense;
@@ -25,54 +24,54 @@ grid-auto-flow: column dense;
 /* Global values */
 grid-auto-flow: inherit;
 grid-auto-flow: initial;
-grid-auto-flow: unset;</pre>
+grid-auto-flow: unset;
+```
 
-<p>此属性有两种形式：</p>
+此属性有两种形式：
 
-<ul>
- <li>单个关键字：<code>row</code>、<code>column</code>，或 <code>dense</code> 中的一个。</li>
- <li>两个关键字：<code>row dense</code> 或 <code>column dense</code>。</li>
-</ul>
+- 单个关键字：`row`、`column`，或 `dense` 中的一个。
+- 两个关键字：`row dense` 或 `column dense`。
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>row</code></dt>
- <dd>该关键字指定自动布局算法按照通过逐行填充来排列元素，在必要时增加新行。如果既没有指定 <code>row</code> 也没有 <code>column</code>，则默认为 <code>row</code>。</dd>
- <dt><code>column</code></dt>
- <dd>该关键字指定自动布局算法通过逐列填充来排列元素，在必要时增加新列。</dd>
- <dt><code>dense</code></dt>
- <dd>该关键字指定自动布局算法使用一种“稠密”堆积算法，如果后面出现了稍小的元素，则会试图去填充网格中前面留下的空白。这样做会填上稍大元素留下的空白，但同时也可能导致原来出现的次序被打乱。
- <p>如果省略它，使用一种「稀疏」算法，在网格中布局元素时，布局算法只会「向前」移动，永远不会倒回去填补空白。这保证了所有自动布局元素「按照次序」出现，即使可能会留下被后面元素填充的空白。</p>
- </dd>
-</dl>
+- `row`
+  - : 该关键字指定自动布局算法按照通过逐行填充来排列元素，在必要时增加新行。如果既没有指定 `row` 也没有 `column`，则默认为 `row`。
+- `column`
+  - : 该关键字指定自动布局算法通过逐列填充来排列元素，在必要时增加新列。
+- `dense`
 
-<h3 id="正式语法">正式语法</h3>
+  - : 该关键字指定自动布局算法使用一种“稠密”堆积算法，如果后面出现了稍小的元素，则会试图去填充网格中前面留下的空白。这样做会填上稍大元素留下的空白，但同时也可能导致原来出现的次序被打乱。
+
+    如果省略它，使用一种「稀疏」算法，在网格中布局元素时，布局算法只会「向前」移动，永远不会倒回去填补空白。这保证了所有自动布局元素「按照次序」出现，即使可能会留下被后面元素填充的空白。
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-  &lt;div id="item4"&gt;&lt;/div&gt;
-  &lt;div id="item5"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;select id="direction" onchange="changeGridAutoFlow()"&gt;
-  &lt;option value="column"&gt;column&lt;/option&gt;
-  &lt;option value="row"&gt;row&lt;/option&gt;
-&lt;/select&gt;
-&lt;input id="dense" type="checkbox" onchange="changeGridAutoFlow()"&gt;
-&lt;label for="dense"&gt;dense&lt;/label&gt;
-</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
+</div>
+<select id="direction" onchange="changeGridAutoFlow()">
+  <option value="column">column</option>
+  <option value="row">row</option>
+</select>
+<input id="dense" type="checkbox" onchange="changeGridAutoFlow()">
+<label for="dense">dense</label>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[7]">#grid {
+```css
+#grid {
   height: 200px;
   width: 200px;
   display: grid;
@@ -101,9 +100,11 @@ grid-auto-flow: unset;</pre>
 
 #item5 {
   background-color: aqua;
-}</pre>
+}
+```
 
-<pre class="brush: js; hidden">function changeGridAutoFlow() {
+```js hidden
+function changeGridAutoFlow() {
   var grid = document.getElementById("grid");
   var direction = document.getElementById("direction");
   var dense = document.getElementById("dense");
@@ -114,82 +115,71 @@ grid-auto-flow: unset;</pre>
   }
 
   grid.style.gridAutoFlow = gridAutoFlow;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("示例", "200px", "230px")}}</p>
+{{EmbedLiveSample("示例", "200px", "230px")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.grid-auto-flow")}}
 
+## 参见
 
-<p>{{Compat("css.properties.grid-auto-flow")}}</p>
+- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
+- Grid Layout Guide: _[Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
+- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
 
-<h2 id="参见">参见</h2>
+1.  [**CSS**](/zh-CN/docs/Web/CSS)
+2.  [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
+3.  [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+4.  **Guides**
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
-</ul>
+    1.  [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2.  [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3.  [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4.  [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5.  [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6.  [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7.  [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8.  [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9.  [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+    11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+5.  **Properties**
+
+    1.  [grid](/zh-CN/docs/Web/CSS/grid)
+    2.  [grid-area](/zh-CN/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/zh-CN/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
+    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
+    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
+    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
+    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
+    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
+    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
+    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
+    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
+    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
+
+6.  **Glossary**
+
+    1.  [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
+    2.  [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
+    3.  [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
+    4.  [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
+    5.  [Gutters](/zh-CN/docs/Glossary/Gutters)
+    6.  [Grid row](/zh-CN/docs/Glossary/Grid_rows)
+    7.  [Grid column](/zh-CN/docs/Glossary/Grid_column)

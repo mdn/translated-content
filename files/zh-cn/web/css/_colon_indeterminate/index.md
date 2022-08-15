@@ -1,73 +1,75 @@
 ---
 title: ':indeterminate'
-slug: 'Web/CSS/:indeterminate'
-translation_of: 'Web/CSS/:indeterminate'
+slug: Web/CSS/:indeterminate
+translation_of: Web/CSS/:indeterminate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>:indeterminate</code> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 表示状态不确定的表单元素：</p>
+`:indeterminate` [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示状态不确定的表单元素：
 
-<pre><code>/* Selects any &lt;input&gt; whose state is indeterminate */
+```
+/* Selects any <input> whose state is indeterminate */
 input:indeterminate {
   background: lime;
-}</code>
-</pre>
+}
+```
 
-<p>根据上述例子（选择器）选中的元素是：</p>
+根据上述例子（选择器）选中的元素是：
 
-<ul>
- <li><code><a href="/zh-CN/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code> 元素，其 <code>indeterminate</code> 属性被 <a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>设置为 <code>true</code> 。</li>
- <li><code><a href="/zh-CN/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code> 元素，表单中拥有相同 <code>name</code>值的所有单选按钮都未被选中时。</li>
- <li>处于不确定状态的 {{HTMLElement("progress")}} 元素</li>
-</ul>
+- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 元素，其 `indeterminate` 属性被 [JavaScript](/zh-CN/docs/Web/JavaScript)设置为 `true` 。
+- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio) 元素，表单中拥有相同 `name`值的所有单选按钮都未被选中时。
+- 处于不确定状态的 {{HTMLElement("progress")}} 元素
 
-<p> </p>
-
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Checkbox_radio_button">Checkbox &amp; radio button</h3>
+### Checkbox & radio button
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input, span {
+```css
+input, span {
   background: red;
 }
 
 :indeterminate, :indeterminate + label {
   background: lime;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;input type="checkbox" id="checkbox"&gt;
-  &lt;label for="checkbox"&gt;Background should be green&lt;/label&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;input type="radio" id="radio"&gt;
-  &lt;label for="radio"&gt;Background should be green&lt;/label&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox">Background should be green</label>
+</div>
+<div>
+  <input type="radio" id="radio">
+  <label for="radio">Background should be green</label>
+</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var inputs = document.getElementsByTagName("input");
-for(var i = 0; i &lt; inputs.length; i++) {
+```js
+var inputs = document.getElementsByTagName("input");
+for(var i = 0; i < inputs.length; i++) {
   inputs[i].indeterminate = true;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Checkbox_radio_button', '100%', 50)}}</p>
+{{EmbedLiveSample('Checkbox_radio_button', '100%', 50)}}
 
-<h3 id="Progress_bar">Progress bar</h3>
+### Progress bar
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre><code>progress {
+```
+progress {
   margin: 4px;
 }
 
@@ -75,21 +77,23 @@ progress:indeterminate {
   opacity: 0.5;
   background-color: lightgray;
   box-shadow: 0 0 2px 1px red;
-}</code></pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;progress&gt;
-</pre>
+```html
+<progress>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Progress_bar', 'auto', 30)}}</p>
+{{EmbedLiveSample('Progress_bar', 'auto', 30)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.indeterminate")}}</p>
+{{Compat("css.selectors.indeterminate")}}

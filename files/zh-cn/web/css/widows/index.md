@@ -3,11 +3,12 @@ title: widows
 slug: Web/CSS/widows
 translation_of: Web/CSS/widows
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/CSS">CSS</a>属性 <strong><code>widows</code></strong> 可以用来设置一个块级容器在新的<a href="/zh-CN/docs/Web/CSS/Paged_Media">分页</a>，区域或者<a href="/en-US/docs/Web/CSS/CSS_Columns">列</a>的<strong>顶部</strong>需要结合在一起的最小行数。</p>
+[CSS](/zh-CN/docs/CSS)属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/Paged_Media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_Columns)的**顶部**需要结合在一起的最小行数。
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;integer&gt; values */
+```css
+/* <integer> values */
 widows: 2;
 widows: 3;
 
@@ -15,45 +16,43 @@ widows: 3;
 widows: inherit;
 widows: initial;
 widows: unset;
-</pre>
+```
 
-<div class="note">
-<p>在排版中，<em>widow</em> 指的是在新页面顶部单独出现的段落的最后一行。（这一行来自于上一个页面的段落）</p>
-</div>
+> **备注：** 在排版中，_widow_ 指的是在新页面顶部单独出现的段落的最后一行。（这一行来自于上一个页面的段落）
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>在一个片段打断后，新的片段顶部需要结合在一起的最小行数。该值必须为正值。</dd>
-</dl>
+- {{cssxref("&lt;integer&gt;")}}
+  - : 在一个片段打断后，新的片段顶部需要结合在一起的最小行数。该值必须为正值。
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="控制列布局中的_widows">控制列布局中的 widows</h3>
+### 控制列布局中的 widows
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;p&gt;This is the first paragraph containing some text.&lt;/p&gt;
-  &lt;p&gt;This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.&lt;/p&gt;
-  &lt;p&gt;This is the third paragraph. It has a little bit more text than the first one.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p>This is the first paragraph containing some text.</p>
+  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.</p>
+  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[4] notranslate">div {
+```css
+div {
   background-color: #8cffa0;
   columns: 3;
   widows: 2;
@@ -66,27 +65,21 @@ p {
 p:first-child {
   margin-top: 0;
 }
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}</p>
+{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.properties.widows")}}
 
+## 另请参见
 
-<p>{{Compat("css.properties.widows")}}</p>
-</div>
-
-<h2 id="另请参见">另请参见</h2>
-
-<ul>
- <li>{{cssxref("orphans")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Paged_Media">Paged media</a></li>
-</ul>
+- {{cssxref("orphans")}}
+- [Paged media](/zh-CN/docs/Web/CSS/Paged_Media)

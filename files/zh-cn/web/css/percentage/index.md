@@ -7,55 +7,55 @@ tags:
   - CSS 数据类型
 translation_of: Web/CSS/percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en/CSS">CSS</a> 数据类型 <code>&lt;percentage&gt;</code> 表述一个百分比值。许多 <a href="/en/CSS_Reference">CSS 属性</a> 可以取百分比值，经常用以根据父对象来确定大小。百分比值由一个{{cssxref("&lt;number&gt;")}}具体数值后跟着%符号构成。就像其它在 css 里的单位一样，在%和数值之间是不允许有空格的。</p>
+[CSS](/en/CSS) 数据类型 `<percentage>` 表述一个百分比值。许多 [CSS 属性](/en/CSS_Reference) 可以取百分比值，经常用以根据父对象来确定大小。百分比值由一个{{cssxref("&lt;number&gt;")}}具体数值后跟着%符号构成。就像其它在 css 里的单位一样，在%和数值之间是不允许有空格的。
 
-<p>许多长度属性使用百分比，如 {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}。百分比也可以在 {{Cssxref("font-size")}} 看到，其中的文字大小是其父级元素的大小直接相关。</p>
+许多长度属性使用百分比，如 {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}。百分比也可以在 {{Cssxref("font-size")}} 看到，其中的文字大小是其父级元素的大小直接相关。
 
-<div class="note"><strong>注意：</strong>只有计算值是可以继承的。所以，即使一个百分比值用于父属性，一个真正的值，比如具体像素宽度 {{cssxref("&lt;length&gt;")}} 的值，将访问继承的属性，而不是百分比的值。</div>
+> **备注：** 只有计算值是可以继承的。所以，即使一个百分比值用于父属性，一个真正的值，比如具体像素宽度 {{cssxref("&lt;length&gt;")}} 的值，将访问继承的属性，而不是百分比的值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>百分比值由一个{{cssxref("&lt;number&gt;")}}具体数值后跟着<code>%</code>符号构成。在数值前可加上<code>+</code>号或者<code>-</code>号，但对所有属性来说其负值都是无效的。和所有的 CSS 度量值一样，在<code>%</code>符号和数值之间不允许有空格。</p>
+百分比值由一个{{cssxref("&lt;number&gt;")}}具体数值后跟着`%`符号构成。在数值前可加上`+`号或者`-`号，但对所有属性来说其负值都是无效的。和所有的 CSS 度量值一样，在`%`符号和数值之间不允许有空格。
 
-<h2 id="插值动画">插值动画</h2>
+## 插值动画
 
-<p>使用 <code>&lt;percentage&gt;</code> 的值可以插值为动画。在这种情况下，它们被内插为实数或浮点数。插值的速度取决于与动画相关联的 <a href="/zh-CN/docs/Web/CSS/single-transition-timing-function">timing function</a>。</p>
+使用 `<percentage>` 的值可以插值为动画。在这种情况下，它们被内插为实数或浮点数。插值的速度取决于与动画相关联的 [timing function](/zh-CN/docs/Web/CSS/single-transition-timing-function)。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="作为_width_与_margin-left_的值的单位">作为 width 与 margin-left 的值的单位</h3>
+### 作为 width 与 margin-left 的值的单位
 
-<pre class="brush: html">&lt;div style="background-color:#0000FF;"&gt;
-  &lt;div style="width:50%;margin-left:20%;background-color:#00FF00;"&gt;Width: 50%, Left margin: 20%&lt;/div&gt;
-  &lt;div style="width:30%;margin-left:60%;background-color:#FF0000;"&gt;Width: 30%, Left margin: 60%&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div style="background-color:#0000FF;">
+  <div style="width:50%;margin-left:20%;background-color:#00FF00;">Width: 50%, Left margin: 20%</div>
+  <div style="width:30%;margin-left:60%;background-color:#FF0000;">Width: 30%, Left margin: 60%</div>
+</div>
+```
 
-<p>以上 HTML 将输出：</p>
+以上 HTML 将输出：
 
-<p>{{EmbedLiveSample('Width_and_margin-left', '600', 140)}}</p>
+{{EmbedLiveSample('Width_and_margin-left', '600', 140)}}
 
-<h3 id="作为_font-size_的值的单位">作为 font-size 的值的单位</h3>
+### 作为 font-size 的值的单位
 
-<pre class="brush: html">&lt;div style="font-size:18px;"&gt;
+```html
+<div style="font-size:18px;">
   Full size text (18px)
-  &lt;span style="font-size:50%;"&gt;50%&lt;/span&gt;
-  &lt;span style="font-size:200%;"&gt;200%&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+  <span style="font-size:50%;">50%</span>
+  <span style="font-size:200%;">200%</span>
+</div>
+```
 
-<p>以上 HTML 将输出：</p>
+以上 HTML 将输出：
 
-<p>{{EmbedLiveSample('Font-size', 'auto', 160)}}</p>
+{{EmbedLiveSample('Font-size', 'auto', 160)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.types.percentage")}}</p>
+{{Compat("css.types.percentage")}}

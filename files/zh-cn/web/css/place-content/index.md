@@ -3,16 +3,16 @@ title: place-content
 slug: Web/CSS/place-content
 translation_of: Web/CSS/place-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p> <code><strong>place-content</strong></code> 属性是{{CSSxRef("align-content")}} 和 {{CSSxRef("justify-content")}}的简写。使用这两个属性的值可以用于任何的布局情况。</p>
+**`place-content`** 属性是{{CSSxRef("align-content")}} 和 {{CSSxRef("justify-content")}}的简写。使用这两个属性的值可以用于任何的布局情况。
 
-<div>{{EmbedInteractiveExample("pages/css/place-content.html")}}</div>
+{{EmbedInteractiveExample("pages/css/place-content.html")}}
 
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* Positional alignment */
+```css
+/* Positional alignment */
 /* align-content does not take left and right values */
 place-content: center start;
 place-content: start center;
@@ -35,57 +35,54 @@ place-content: stretch space-evenly;
 /* Global values */
 place-content: inherit;
 place-content: initial;
-place-content: unset;</pre>
+place-content: unset;
+```
 
-<p>第一个值为 {{CSSxRef("align-content")}} 属性，第二个值为 {{CSSxRef("justify-content")}} .</p>
+第一个值为 {{CSSxRef("align-content")}} 属性，第二个值为 {{CSSxRef("justify-content")}} .
 
-<div class="warning">
-<p><strong>非常重要</strong>:如果没有设置第二个值，那么第二个的值与第一个相等，此前提是第一个值对两个属性都是有效的。如果设置的这个值对两个属性都无效，那么整个设置的值就是无效的。</p>
-</div>
+> **警告：** 如果没有设置第二个值，那么第二个的值与第一个相等，此前提是第一个值对两个属性都是有效的。如果设置的这个值对两个属性都无效，那么整个设置的值就是无效的。
 
-<h3 id="参考值">参考值</h3>
+### 参考值
 
-<dl>
- <dt><code>start</code></dt>
- <dd>所有的子元素堆叠在父元素上合适的轴线上的起点对齐。</dd>
- <dt><code>end</code></dt>
- <dd>所有的子元素堆叠在父元素上合适的轴线上的终点对齐</dd>
- <dt><code>flex-start</code></dt>
- <dd>所有的子元素堆叠在父元素的主轴或交叉轴上起点对齐，主要取决于 flex-direction 的设置。<br>
- 仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，<code>flex-start将被视为start</code></dd>
- <dt><code>flex-end</code></dt>
- <dd>所有的子元素堆叠在父元素的主轴或交叉轴上终点对齐，主要取决于 flex-direction 的设置。<br>
- 仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，<code>flex-end将被视为end</code></dd>
- <dt><code>center</code></dt>
- <dd>所有的子元素堆叠在父元素的中间对齐</dd>
- <dt><code>left</code></dt>
- <dd>The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>right</code></dt>
- <dd>The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>space-between</code></dt>
- <dd>The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>space-around</code></dt>
- <dd>The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.</dd>
- <dt><code>space-evenly</code></dt>
- <dd>The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items, the main-start edge and the first item, and the main-end edge and the last item, are all exactly the same.</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container</dd>
-</dl>
+- `start`
+  - : 所有的子元素堆叠在父元素上合适的轴线上的起点对齐。
+- `end`
+  - : 所有的子元素堆叠在父元素上合适的轴线上的终点对齐
+- `flex-start`
+  - : 所有的子元素堆叠在父元素的主轴或交叉轴上起点对齐，主要取决于 flex-direction 的设置。
+    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-start将被视为start`
+- `flex-end`
+  - : 所有的子元素堆叠在父元素的主轴或交叉轴上终点对齐，主要取决于 flex-direction 的设置。
+    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-end将被视为end`
+- `center`
+  - : 所有的子元素堆叠在父元素的中间对齐
+- `left`
+  - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+- `right`
+  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+- `space-between`
+  - : The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `space-around`
+  - : The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.
+- `space-evenly`
+  - : The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items, the main-start edge and the first item, and the main-end edge and the last item, are all exactly the same.
+- `stretch`
+  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[7] notranslate">#container {
+```css
+#container {
   display: flex;
   height:240px;
   width: 240px;
@@ -96,7 +93,7 @@ place-content: unset;</pre>
   place-content: flex-end center; /* Can be changed in the live sample */
 }
 
-div &gt; div {
+div > div {
   border: 2px solid #8c8c8c;
   width: 50px;
   background-color: #a0c8ff;
@@ -111,68 +108,70 @@ div &gt; div {
   font-size: 14px;
   height: 50px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
-  &lt;div class="small"&gt;Lorem&lt;/div&gt;
-  &lt;div class="small"&gt;Lorem&lt;br/&gt;ipsum&lt;/div&gt;
-  &lt;div class="large"&gt;Lorem&lt;/div&gt;
-  &lt;div class="large"&gt;Lorem&lt;br/&gt;impsum&lt;/div&gt;
-  &lt;div class="large"&gt;&lt;/div&gt;
-  &lt;div class="large"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="container">
+  <div class="small">Lorem</div>
+  <div class="small">Lorem<br/>ipsum</div>
+  <div class="large">Lorem</div>
+  <div class="large">Lorem<br/>impsum</div>
+  <div class="large"></div>
+  <div class="large"></div>
+</div>
+```
 
-<div class="hidden">
-<pre class="brush:html notranslate">&lt;code&gt;writing-mode:&lt;/code&gt;&lt;select id="writingMode"&gt;
-  &lt;option value="horizontal-tb" selected&gt;horizontal-tb&lt;/option&gt;
-  &lt;option value="vertical-rl"&gt;vertical-rl&lt;/option&gt;
-  &lt;option value="vertical-lr"&gt;vertical-lr&lt;/option&gt;
-  &lt;option value="sideways-rl"&gt;sideways-rl&lt;/option&gt;
-  &lt;option value="sideways-lr"&gt;sideways-lr&lt;/option&gt;
-&lt;/select&gt;&lt;code&gt;;&lt;/code&gt;&lt;br/&gt;
-&lt;code&gt;direction:&lt;/code&gt;&lt;select id="direction"&gt;
-  &lt;option value="ltr" selected&gt;ltr&lt;/option&gt;
-  &lt;option value="rtl"&gt;rtl&lt;/option&gt;
-&lt;/select&gt;&lt;code&gt;;&lt;/code&gt;&lt;br/&gt;
-&lt;code&gt;place-content:&lt;/code&gt;&lt;select id="alignContentAlignment"&gt;
-  &lt;option value="normal"&gt;normal&lt;/option&gt;
-  &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-  &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
-  &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-  &lt;option value="space-between"&gt;space-between&lt;/option&gt;
-  &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-  &lt;option value="space-evenly" selected&gt;space-evenly&lt;/option&gt;
-  &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-  &lt;option value="center"&gt;center&lt;/option&gt;
-  &lt;option value="start"&gt;start&lt;/option&gt;
-  &lt;option value="end"&gt;end&lt;/option&gt;
-  &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-  &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-  &lt;option value="safe"&gt;safe&lt;/option&gt;
-  &lt;option value="unsafe"&gt;unsafe&lt;/option&gt;
-&lt;/select&gt;
-﻿&lt;select id="justifyContentAlignment"&gt;
-  &lt;option value="normal"&gt;normal&lt;/option&gt;
-  &lt;option value="space-between"&gt;space-between&lt;/option&gt;
-  &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-  &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
-  &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-  &lt;option value="center" selected&gt;center&lt;/option&gt;
-  &lt;option value="start"&gt;start&lt;/option&gt;
-  &lt;option value="end"&gt;end&lt;/option&gt;
-  &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-  &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-  &lt;option value="left"&gt;left&lt;/option&gt;
-  &lt;option value="right"&gt;right&lt;/option&gt;
-  &lt;option value="safe"&gt;safe&lt;/option&gt;
-  &lt;option value="unsafe"&gt;unsafe&lt;/option&gt;
-&lt;/select&gt;&lt;code&gt;;&lt;/code&gt;
-</pre>
+```html hidden
+<code>writing-mode:</code><select id="writingMode">
+  <option value="horizontal-tb" selected>horizontal-tb</option>
+  <option value="vertical-rl">vertical-rl</option>
+  <option value="vertical-lr">vertical-lr</option>
+  <option value="sideways-rl">sideways-rl</option>
+  <option value="sideways-lr">sideways-lr</option>
+</select><code>;</code><br/>
+<code>direction:</code><select id="direction">
+  <option value="ltr" selected>ltr</option>
+  <option value="rtl">rtl</option>
+</select><code>;</code><br/>
+<code>place-content:</code><select id="alignContentAlignment">
+  <option value="normal">normal</option>
+  <option value="first baseline">first baseline</option>
+  <option value="last baseline">last baseline</option>
+  <option value="baseline">baseline</option>
+  <option value="space-between">space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly" selected>space-evenly</option>
+  <option value="stretch">stretch</option>
+  <option value="center">center</option>
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="safe">safe</option>
+  <option value="unsafe">unsafe</option>
+</select>
+﻿<select id="justifyContentAlignment">
+  <option value="normal">normal</option>
+  <option value="space-between">space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly">space-evenly</option>
+  <option value="stretch">stretch</option>
+  <option value="center" selected>center</option>
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="left">left</option>
+  <option value="right">right</option>
+  <option value="safe">safe</option>
+  <option value="unsafe">unsafe</option>
+</select><code>;</code>
+```
 
-<pre class="brush: js notranslate">var update = function () {
+```js hidden
+var update = function () {
    document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
 }
 
@@ -190,40 +189,35 @@ var direction = document.getElementById("direction");
 direction.addEventListener("change", function (evt) {
    document.getElementById("container").style.direction = evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "370", "300")}}</p>
+{{EmbedLiveSample("Example", "370", "300")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.place-content")}}
 
+### Support in Flex layout
 
-<div>{{Compat("css.properties.place-content")}}</div>
+{{Compat("css.properties.place-content.flex_context")}}
 
-<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
+### Support in Grid layout
 
-<div>{{Compat("css.properties.place-content.flex_context")}}</div>
+{{Compat("css.properties.place-content.grid_context")}}
 
-<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
+## See also
 
-<div>{{Compat("css.properties.place-content.grid_context")}}</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{CSSxRef("align-content")}} property</li>
- <li>The {{CSSxRef("justify-content")}} property</li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
+- The {{CSSxRef("align-content")}} property
+- The {{CSSxRef("justify-content")}} property

@@ -7,13 +7,14 @@ tags:
   - 背景
 translation_of: Web/CSS/background-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>background-size</code> 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。</p>
+`background-size` 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
 
-<p>{{EmbedInteractiveExample("pages/css/background-size.html")}}</p>
+{{EmbedInteractiveExample("pages/css/background-size.html")}}
 
-<pre class="brush: css">/* 关键字 */
+```css
+/* 关键字 */
 background-size: cover
 background-size: contain
 
@@ -24,7 +25,7 @@ background-size: 12px
 background-size: auto
 
 /* 两个值 */
-/* 第一个值指定图片的宽度，第二个值指定图片的高度<strong> */</strong>
+/* 第一个值指定图片的宽度，第二个值指定图片的高度 */
 background-size: 50% auto
 background-size: 3em 25%
 background-size: auto 6px
@@ -38,24 +39,24 @@ background-size: 6px, auto, contain
 /* 全局属性 */
 background-size: inherit;
 background-size: initial;
-background-size: unset;</pre>
+background-size: unset;
+```
 
-<div id="background-size">
-<pre class="hidden brush: html notranslate">&lt;div id="container"&gt;
+```html hidden
+<div id="container">
 
-  &lt;div class="subcontainer contain"&gt;contain&lt;/div&gt;
-  &lt;div class="subcontainer cover"&gt;cover&lt;/div&gt;
-  &lt;div class="subcontainer width"&gt;120px&lt;/div&gt;
-  &lt;div class="subcontainer width-height"&gt;120px 200px&lt;/div&gt;
-
-
-
-&lt;/div&gt;
+  <div class="subcontainer contain">contain</div>
+  <div class="subcontainer cover">cover</div>
+  <div class="subcontainer width">120px</div>
+  <div class="subcontainer width-height">120px 200px</div>
 
 
-</pre>
 
-<pre class="hidden brush: css notranslate">#container {
+</div>
+```
+
+```css hidden
+#container {
    width: 100%;
    display:flex;
    justify-content: space-around;
@@ -91,104 +92,97 @@ background-size: unset;</pre>
 .width-height {
   background-size: 120px 200px;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("background-size", 1200, 300, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("background-size", 1200, 300, "", "", "example-outcome-frame")}}
 
-<p>注意：没有被背景图片覆盖的背景区域仍然会显示用{{cssxref("background-color")}}属性设置的背景颜色。此外，如果背景图片设置了透明或者半透明属性，衬在背景图片后面的背景色也会显示出来。</p>
+注意：没有被背景图片覆盖的背景区域仍然会显示用{{cssxref("background-color")}}属性设置的背景颜色。此外，如果背景图片设置了透明或者半透明属性，衬在背景图片后面的背景色也会显示出来。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>单张图片的背景大小可以使用以下三种方法中的一种来规定：</p>
+单张图片的背景大小可以使用以下三种方法中的一种来规定：
 
-<ul>
- <li>使用关键词 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#contain">contain</a></code></li>
- <li>使用关键词 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#cover">cover</a></code></li>
- <li>设定宽度和高度值</li>
-</ul>
+- 使用关键词 [`contain`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#contain)
+- 使用关键词 [`cover`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#cover)
+- 设定宽度和高度值
 
-<p>当通过宽度和高度值来设定尺寸时，你可以提供一或者两个数值：</p>
+当通过宽度和高度值来设定尺寸时，你可以提供一或者两个数值：
 
-<ul>
- <li>如果仅有一个数值被给定，这个数值将作为宽度值大小，高度值将被设定为<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#auto">auto</a>。</code></li>
- <li>如果有两个数值被给定，第一个将作为宽度值大小，第二个作为高度值大小。</li>
-</ul>
+- 如果仅有一个数值被给定，这个数值将作为宽度值大小，高度值将被设定为`auto。`
+- 如果有两个数值被给定，第一个将作为宽度值大小，第二个作为高度值大小。
 
-<p><code>每个值可以是<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#length">&lt;length&gt;</a></code>, 是 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#&lt;percentage>">&lt;percentage&gt;</a></code>, 或者 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#auto">auto</a></code>.<br>
- <br>
- 示例：</p>
+`每个值可以是<length>`, 是 [`<percentage>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#<percentage>), 或者 [`auto`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#auto).
 
-<pre class="notranslate"><code>background-size: contain;
+示例：
+
+```
+background-size: contain;
 
 background-size: 50%;
 background-size: 3em;
 
 background-size: auto 1em;
-background-size: 50% 25%;</code></pre>
+background-size: 50% 25%;
+```
 
-<p><br>
- 为了设定超过一张以上的图片尺寸时，需要提供多项数值，它们通过逗号分隔。</p>
+为了设定超过一张以上的图片尺寸时，需要提供多项数值，它们通过逗号分隔。
 
-<pre class="notranslate"><code>background-size: 50% 25%, contain, 3em;</code></pre>
+```
+background-size: 50% 25%, contain, 3em;
+```
 
-<h3 id="属性值">属性值</h3>
+### 属性值
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd><code>{{cssxref("&lt;length&gt;")}}</code> 值，指定背景图片大小，不能为负值。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd><code>{{cssxref("&lt;percentage&gt;")}}</code> 值，指定背景图片相对背景区（background positioning area）的百分比。背景区由{{cssxref("background-origin")}}设置，默认为盒模型的内容区与内边距，也可设置为只有内容区，或者还包括边框。如果{{cssxref("background-attachment","attachment")}} 为<code>fixed</code>，背景区为浏览器可视区（即视口），不包括滚动条。不能为负值。</dd>
- <dt><code>auto</code></dt>
- <dd>以背景图片的比例缩放背景图片。</dd>
- <dt><code>cover</code></dt>
- <dd>缩放背景图片以完全覆盖背景区，可能背景图片部分看不见。和 <code>contain</code> 值相反，<code>cover</code> 值尽可能大的缩放背景图像并保持图像的宽高比例（图像不会被压扁）。该背景图以它的全部宽或者高覆盖所在容器。当容器和背景图大小不同时，背景图的 左/右 或者 上/下 部分会被裁剪。</dd>
- <dt><code>contain</code></dt>
- <dd>缩放背景图片以完全装入背景区，可能背景区部分空白。<code>contain</code> 尽可能的缩放背景并保持图像的宽高比例（图像不会被压缩）。该背景图会填充所在的容器。当背景图和容器的大小的不同时，容器的空白区域（上/下或者左/右）会显示由 background-color 设置的背景颜色。</dd>
-</dl>
+- `<length>`
+  - : `{{cssxref("&lt;length&gt;")}}` 值，指定背景图片大小，不能为负值。
+- `<percentage>`
+  - : `{{cssxref("&lt;percentage&gt;")}}` 值，指定背景图片相对背景区（background positioning area）的百分比。背景区由{{cssxref("background-origin")}}设置，默认为盒模型的内容区与内边距，也可设置为只有内容区，或者还包括边框。如果{{cssxref("background-attachment","attachment")}} 为`fixed`，背景区为浏览器可视区（即视口），不包括滚动条。不能为负值。
+- `auto`
+  - : 以背景图片的比例缩放背景图片。
+- `cover`
+  - : 缩放背景图片以完全覆盖背景区，可能背景图片部分看不见。和 `contain` 值相反，`cover` 值尽可能大的缩放背景图像并保持图像的宽高比例（图像不会被压扁）。该背景图以它的全部宽或者高覆盖所在容器。当容器和背景图大小不同时，背景图的 左/右 或者 上/下 部分会被裁剪。
+- `contain`
+  - : 缩放背景图片以完全装入背景区，可能背景区部分空白。`contain` 尽可能的缩放背景并保持图像的宽高比例（图像不会被压缩）。该背景图会填充所在的容器。当背景图和容器的大小的不同时，容器的空白区域（上/下或者左/右）会显示由 background-color 设置的背景颜色。
 
-<p>位图一定有固有尺寸与固有比例，矢量图可能两者都有，也可能只有一个。渐变视为只有固有尺寸或者只有固有比例的图片。</p>
+位图一定有固有尺寸与固有比例，矢量图可能两者都有，也可能只有一个。渐变视为只有固有尺寸或者只有固有比例的图片。
 
-<div class="note">
-<p>This behavior changed in Gecko 8.0. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.</p>
-</div>
+> **备注：** This behavior changed in Gecko 8.0. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.
 
-<p>由 {{cssxref("-moz-element")}} 生成的背景图片，(which actually match an element) are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion.</p>
+由 {{cssxref("-moz-element")}} 生成的背景图片，(which actually match an element) are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion.
 
-<div class="note"><strong>Note:</strong> This is not the currently-specified behavior, which is that the intrinsic dimensions and proportion should be those of the element in all cases.</div>
+> **备注：** This is not the currently-specified behavior, which is that the intrinsic dimensions and proportion should be those of the element in all cases.
 
-<p>背景图片大小计算：</p>
+背景图片大小计算：
 
-<dl>
- <dt>如果指定了 <code>background-size</code> 的两个值并且不是<code>auto</code>：</dt>
- <dd>背景图片按指定大小渲染。</dd>
- <dt><code>contain</code> 或 <code>cover</code>:</dt>
- <dd>保留固有比例，最大的包含或覆盖背景区。如果图像没有固有比例，则按背景区大小。</dd>
- <dt><code>auto</code> 或 <code>auto auto</code>:</dt>
- <dd>图像如果有两个长度，则按这个尺寸。如果没有固有尺寸与固有比例，则按背景区的大小。如果没有固有尺寸但是有固有比例，效果同 <code>contain</code>。如果有一个长度与比例，则由此长度与比例计算大小。如果有一个长度但是没有比例，则使用此长度与背景区相应的长度。</dd>
- <dt>一个为 <code>auto</code> 另一个不是 auto:</dt>
- <dd>如果图像有固有比例，则指定的长度使用指定值，未指定的长度由指定值与固有比例计算。如果图像没有固有比例，则指定的长度使用指定值，未指定的长度使用图像相应的固有长度，若没有固有长度，则使用背景区相应的长度。</dd>
-</dl>
+- 如果指定了 `background-size` 的两个值并且不是`auto`：
+  - : 背景图片按指定大小渲染。
+- `contain` 或 `cover`:
+  - : 保留固有比例，最大的包含或覆盖背景区。如果图像没有固有比例，则按背景区大小。
+- `auto` 或 `auto auto`:
+  - : 图像如果有两个长度，则按这个尺寸。如果没有固有尺寸与固有比例，则按背景区的大小。如果没有固有尺寸但是有固有比例，效果同 `contain`。如果有一个长度与比例，则由此长度与比例计算大小。如果有一个长度但是没有比例，则使用此长度与背景区相应的长度。
+- 一个为 `auto` 另一个不是 auto:
+  - : 如果图像有固有比例，则指定的长度使用指定值，未指定的长度由指定值与固有比例计算。如果图像没有固有比例，则指定的长度使用指定值，未指定的长度使用图像相应的固有长度，若没有固有长度，则使用背景区相应的长度。
 
-<p>注意，对于没有固有尺寸或固有比例的矢量图不是所有的浏览器都支持。特别注意测试 Firefox 7- 与 Firefox 8+，以确定不同之处能否接受。</p>
+注意，对于没有固有尺寸或固有比例的矢量图不是所有的浏览器都支持。特别注意测试 Firefox 7- 与 Firefox 8+，以确定不同之处能否接受。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
-<p><a href="https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax">如何阅读 CSS 语法。</a></p>
+[如何阅读 CSS 语法。](https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax)
 
 {{csssyntax}}
 
-<h2 id="案例">案例</h2>
+## 案例
 
-<p><a href="http://whereswalden.com/files/mozilla/background-size/page-cover.html"><code>background-size: cover 演示</code></a> 与 <a href="http://whereswalden.com/files/mozilla/background-size/page-contain.html"> <code>background-size: contain 演示</code></a> 在新窗口打开，这样你可以看到当背景区大小变化时 <code>contain</code> 与 <code>cover</code> 是怎样的。 <a href="http://whereswalden.com/files/mozilla/background-size/more-examples.html">系列演示：<code>background-size</code> 及其与<code>background-*属性</code>的关联 </a> 很好的说明了单独使用 <code>background-size</code> 及与其它属性共同使用。</p>
+[`background-size: cover 演示`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) 与 [`background-size: contain 演示`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) 在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与`background-*属性`的关联 ](http://whereswalden.com/files/mozilla/background-size/more-examples.html)很好的说明了单独使用 `background-size` 及与其它属性共同使用。
 
-<h2 id="备注">备注</h2>
+## 备注
 
-<p>如果用渐变作为背景并且对它使用了<code>background-size</code> ，最好不要只用一个 auto，或者只指定一个宽度值 (例如 <code>background-size: 50%</code>)。对这两种情况 Firefox 8 有所改变，并且目前各浏览器表现不一致，不是全部浏览器都完全支持 <a href="http://www.w3.org/TR/css3-background/#the-background-size">CSS3 <code>background-size</code> 规范</a> 与 <a href="http://dev.w3.org/csswg/css3-images/#gradients">CSS3 Image Values gradient 规范</a> 。</p>
+如果用渐变作为背景并且对它使用了`background-size` ，最好不要只用一个 auto，或者只指定一个宽度值 (例如 `background-size: 50%`)。对这两种情况 Firefox 8 有所改变，并且目前各浏览器表现不一致，不是全部浏览器都完全支持 [CSS3 `background-size` 规范](http://www.w3.org/TR/css3-background/#the-background-size) 与 [CSS3 Image Values gradient 规范](http://dev.w3.org/csswg/css3-images/#gradients) 。
 
-<pre class="brush: css notranslate">.bar {
+```css
+.bar {
        width: 50px; height: 100px;
        background-image: gradient(...);
 
@@ -202,37 +196,36 @@ background-size: 50% 25%;</code></pre>
        background-size: 25px 50px;
        background-size: 50% 50%;
 }
-</pre>
+```
 
-<p>特别不推荐对渐变 px 与<code>auto</code>一起用，因为 Firefox 8 之前不能重复渲染，并且对于没有实现 Firefox 8 渲染特性的浏览器，不知道指定了背景的元素的确切大小。</p>
+特别不推荐对渐变 px 与`auto`一起用，因为 Firefox 8 之前不能重复渲染，并且对于没有实现 Firefox 8 渲染特性的浏览器，不知道指定了背景的元素的确切大小。
 
-<h2 id="Browser_compatibility">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.background-size")}}</p>
+{{Compat("css.properties.background-size")}}
 
-<div>
-<h2 id="Polyfills_and_Workarounds">Polyfills and Workarounds</h2>
+## Polyfills and Workarounds
 
-<h3 id="For_Internet_Explorer_prior_IE8">For Internet Explorer prior IE8</h3>
+### For Internet Explorer prior IE8
 
-<p>Though Internet Explorer 8 doesn't support the <code>background-size</code> property, it is possible to emulate some of its functionality using the non-standard <code>-ms-filter</code> property:</p>
+Though Internet Explorer 8 doesn't support the `background-size` property, it is possible to emulate some of its functionality using the non-standard `-ms-filter` property:
 
-<pre class="brush:css notranslate">-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')";</pre>
+```css
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')";
+```
 
-<p>This simulates the value <code>cover</code>.</p>
-</div>
+This simulates the value `cover`.
 
-<div>
-<h3 id="In_Firefox_3.5">In Firefox 3.5</h3>
+### In Firefox 3.5
 
-<p>While this property was added in Firefox 3.6, it is possible to stretch a image fully over the background in Firefox 3.5 by using {{cssxref("-moz-border-image")}}.</p>
-</div>
+While this property was added in Firefox 3.6, it is possible to stretch a image fully over the background in Firefox 3.5 by using {{cssxref("-moz-border-image")}}.
 
-<pre class="brush:css notranslate">.foo {
+```css
+.foo {
   background-image: url(bg-image.png);
 
   -webkit-background-size: 100% 100%;           /* Safari 3.0 */
@@ -242,12 +235,10 @@ background-size: 50% 25%;</code></pre>
 
   -moz-border-image: url(bg-image.png) 0;    /* Gecko 1.9.1 (Firefox 3.5) */
 }
-</pre>
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/CSS/CSS_Reference">CSS Reference</a></li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds">Multiple backgrounds</a></li>
- <li><a href="/en-US/docs/CSS/Scaling_background_images">Scaling background images</a></li>
-</ul>
+- [CSS Reference](/zh-CN/docs/CSS/CSS_Reference)
+- [Multiple backgrounds](/zh-CN/docs/CSS/Multiple_backgrounds)
+- [Scaling background images](/zh-CN/docs/CSS/Scaling_background_images)

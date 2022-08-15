@@ -1,66 +1,67 @@
 ---
 title: ':only-of-type'
-slug: 'Web/CSS/:only-of-type'
+slug: Web/CSS/:only-of-type
 tags:
   - CSS
   - CSS 伪类
   - Web
   - 参考
-translation_of: 'Web/CSS/:only-of-type'
+translation_of: Web/CSS/:only-of-type
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>CSS <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> <code>:only-of-type</code> 代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。</p>
+CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) `:only-of-type` 代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。
 
-<div class="note">
-<p><strong>Note</strong>: 根据原来的定义，被选择的元素必须具有父元素。直到 Selectors Level 4 开始，这个要求就不是必须的了。</p>
-</div>
+> **备注：** 根据原来的定义，被选择的元素必须具有父元素。直到 Selectors Level 4 开始，这个要求就不是必须的了。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval">element:only-of-type { <em>style properties</em> }
-</pre>
+```
+element:only-of-type { style properties }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;main&gt;
-  &lt;div&gt;I am `div` #1.&lt;/div&gt;
-  &lt;p&gt;I am the only `p` among my siblings.&lt;/p&gt;
-  &lt;div&gt;I am `div` #2.&lt;/div&gt;
-  &lt;div&gt;I am `div` #3.
-    &lt;i&gt;I am the only `i` child.&lt;/i&gt;
-    &lt;em&gt;I am `em` #1.&lt;/em&gt;
-    &lt;em&gt;I am `em` #2.&lt;/em&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</code></pre>
+```html
+<main>
+  <div>I am `div` #1.</div>
+  <p>I am the only `p` among my siblings.</p>
+  <div>I am `div` #2.</div>
+  <div>I am `div` #3.
+    <i>I am the only `i` child.</i>
+    <em>I am `em` #1.</em>
+    <em>I am `em` #2.</em>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css"><code>main :only-of-type {
+```css
+main :only-of-type {
   color: red;
-}</code></pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Example','100%',180)}}</p>
+{{EmbedLiveSample('Example','100%',180)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.only-of-type")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{Cssxref(":only-child")}}</li>
- <li>{{Cssxref(":first-of-type")}}</li>
- <li>{{Cssxref(":last-of-type")}}</li>
- <li>{{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":only-child")}}
+- {{Cssxref(":first-of-type")}}
+- {{Cssxref(":last-of-type")}}
+- {{Cssxref(":nth-of-type")}}

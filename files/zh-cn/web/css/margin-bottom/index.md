@@ -7,21 +7,22 @@ tags:
   - 参考
 translation_of: Web/CSS/margin-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><img alt="The effect of the CSS margin-bottom property on the element box" src="https://mdn.mozillademos.org/files/12980/margin-bottom%20explained.svg" style="border: 1px solid; float: left; height: 252px; margin-bottom: 1em; margin-right: 1em; padding-right: 0.5em; width: 368px;"></p>
+![The effect of the CSS margin-bottom property on the element box](https://mdn.mozillademos.org/files/12980/margin-bottom%20explained.svg)
 
-<p>CSS 的<code> margin-bottom 属性用于设置元素的底部外边距，允许设置负数值。一个正数值将让它相对于正常流与邻近块更远，而负数值将使得更近。</code></p>
+CSS 的` margin-bottom 属性用于设置元素的底部外边距，允许设置负数值。一个正数值将让它相对于正常流与邻近块更远，而负数值将使得更近。`
 
-<p>该属性对于<em>不可替代 (non-replaced 元素在规范中有概念，请自行搜索)</em>的行级元素没有效果，比如： {{HTMLElement("tt")}} 或者 {{HTMLElement("span")}}.</p>
+该属性对于*不可替代 (non-replaced 元素在规范中有概念，请自行搜索)*的行级元素没有效果，比如： {{HTMLElement("tt")}} 或者 {{HTMLElement("span")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush:css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-bottom: 10px;        /* 一个绝对的长度值 */
 margin-bottom: 1em;         /* A length relative to the text size */
 margin-bottom: 5%;          /* A margin relative to the nearest block container's width */
@@ -33,38 +34,39 @@ margin-bottom: auto;
 margin-bottom: inherit;
 margin-bottom: initial;
 margin-bottom: unset;
-</pre>
+```
 
-<h3 id="Values">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>定义了一个确定的宽度值，参见 {{cssxref("&lt;length&gt;")}} 以了解更多可能的值。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>{{cssxref("&lt;percentage&gt;")}} 始终与包含该元素的<strong>容器宽度</strong>有关。</dd>
- <dt><code>auto</code></dt>
- <dd>由浏览器自己选择一个合适的值。参见 {{cssxref("margin")}}。</dd>
-</dl>
+- `<length>`
+  - : 定义了一个确定的宽度值，参见 {{cssxref("&lt;length&gt;")}} 以了解更多可能的值。
+- `<percentage>`
+  - : {{cssxref("&lt;percentage&gt;")}} 始终与包含该元素的**容器宽度**有关。
+- `auto`
+  - : 由浏览器自己选择一个合适的值。参见 {{cssxref("margin")}}。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Example">样例</h2>
+## 样例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-&lt;div class="box0"&gt;Box 0&lt;/div&gt;
-&lt;div class="box1"&gt;Box 1&lt;/div&gt;
-&lt;div class="box2"&gt;Box one's negative margin pulls me up&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="container">
+<div class="box0">Box 0</div>
+<div class="box1">Box 1</div>
+<div class="box2">Box one's negative margin pulls me up</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>用于设置 <code>div</code> 的 <code>margin-bottom</code> 和 <code>height</code> 的 CSS 代码</p>
+用于设置 `div` 的 `margin-bottom` 和 `height` 的 CSS 代码
 
-<pre class="brush: css">.box0 {
+```css
+.box0 {
     margin-bottom:1em;
     height:3em;
 }
@@ -77,12 +79,12 @@ margin-bottom: unset;
     border-width:1px 0;
     margin-bottom:2em;
 }
+```
 
-</pre>
+为了使` margin `产生的影响更明显，添加了一些` container `和` div `的样式定义
 
-<p>为了使<code> margin </code>产生的影响更明显，添加了一些<code> container </code>和<code> div </code>的样式定义</p>
-
-<pre class="brush: css">.container {
+```css
+.container {
     background-color:orange;
     width:320px;
     border:1px solid black;
@@ -90,14 +92,15 @@ margin-bottom: unset;
 div {
     width:320px;
     background-color:gold;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example',350,200) }}</p>
+{{ EmbedLiveSample('Example',350,200) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.margin-bottom")}}

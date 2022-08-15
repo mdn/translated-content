@@ -5,21 +5,22 @@ tags:
   - outline-style
 translation_of: Web/CSS/outline-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong><code>outline-style</code></strong> CSS 属性被用于设置一个元素轮廓的样式。</p>
+**`outline-style`** CSS 属性被用于设置一个元素轮廓的样式。
 
-<p>元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出</p>
+元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出
 
-<p>大多时候使用{{cssxref("outline")}}而不是<code> outline-style</code>,<code> outline-width 和</code><code> outline-color</code>会更方便。</p>
+大多时候使用{{cssxref("outline")}}而不是` outline-style`,` outline-width 和`` outline-color`会更方便。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">/* 关键字 值 */
+```css
+/* 关键字 值 */
 outline-style: auto;
 outline-style: none;
 outline-style: dotted;
@@ -35,50 +36,51 @@ outline-style: outset;
 outline-style: inherit;
 outline-style: initial;
 outline-style: unset;
-</pre>
+```
 
-<h2 id="取值">取值</h2>
+## 取值
 
-<p><code>&lt;br-style&gt; </code>可为以下这些值：</p>
+`<br-style> `可为以下这些值：
 
-<dl>
- <dt>none</dt>
- <dd>无轮廓 ({{Cssxref("outline-width")}} 为<code> 0</code>).</dd>
- <dt>dotted</dt>
- <dd>轮廓为一系列点。</dd>
- <dt>dashed</dt>
- <dd>轮廓为一系列短线。</dd>
- <dt>solid</dt>
- <dd>轮廓为实线。</dd>
- <dt>double</dt>
- <dd>轮廓为两根有空隙的线。{{Cssxref("outline-width")}} 为线与空间的总和。</dd>
- <dt>groove</dt>
- <dd>轮廓呈凹下状。</dd>
- <dt>ridge</dt>
- <dd>与<code> groove相反</code>: 轮廓呈凸起状。</dd>
- <dt>inset</dt>
- <dd>轮廓呈嵌入状。</dd>
- <dt>outset</dt>
- <dd>与<code> inset相反</code>: 轮廓呈突出状。</dd>
-</dl>
+- none
+  - : 无轮廓 ({{Cssxref("outline-width")}} 为` 0`).
+- dotted
+  - : 轮廓为一系列点。
+- dashed
+  - : 轮廓为一系列短线。
+- solid
+  - : 轮廓为实线。
+- double
+  - : 轮廓为两根有空隙的线。{{Cssxref("outline-width")}} 为线与空间的总和。
+- groove
+  - : 轮廓呈凹下状。
+- ridge
+  - : 与` groove相反`: 轮廓呈凸起状。
+- inset
+  - : 轮廓呈嵌入状。
+- outset
+  - : 与` inset相反`: 轮廓呈突出状。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Example_1_-_dotted_and_dashed">示例 1  <code>dotted</code> 和 <code>dashed</code></h2>
+## 示例 1 `dotted` 和 `dashed`
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="dotted"&gt;
-    &lt;p class="dashed"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <div class="dotted">
+    <p class="dashed">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.dotted {
+```css
+.dotted {
   outline-style: dotted; /* 于 "outline: dotted"等价 */
 }
 .dashed {
@@ -86,23 +88,27 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}</p>
+{{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}
 
-<h2 id="Example_2_-_solid_and_double">示例 2 - <code>solid</code> 和 <code>double</code></h2>
+## 示例 2 - `solid` 和 `double`
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="solid"&gt;
-    &lt;p class="double"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <div class="solid">
+    <p class="double">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<pre class="brush: css">.solid {
+```css
+.solid {
   outline-style: solid;
 }
 .double {
@@ -110,23 +116,27 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_2_-_solid_and_double') }}</p>
+{{ EmbedLiveSample('Example_2_-_solid_and_double') }}
 
-<h2 id="Example_3_-_groove_and_ridge">示例 3 - <code>groove</code> 和 <code>ridge</code></h2>
+## 示例 3 - `groove` 和 `ridge`
 
-<h3 id="HTML_3">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="groove"&gt;
-    &lt;p class="ridge"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div class="groove">
+    <p class="ridge">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS_3">CSS</h3>
+### CSS
 
-<pre class="brush: css">.groove {
+```css
+.groove {
   outline-style: groove;
 }
 .ridge {
@@ -134,23 +144,27 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}</p>
+{{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}
 
-<h2 id="Example_4_-_inset_and_outset">示例 4 - <code>inset</code> 和 <code>outset</code></h2>
+## 示例 4 - `inset` 和 `outset`
 
-<h3 id="HTML_4">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="inset"&gt;
-    &lt;p class="outset"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div class="inset">
+    <p class="outset">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS_4">CSS</h3>
+### CSS
 
-<pre class="brush: css">.inset {
+```css
+.inset {
   outline-style: inset;
 }
 .outset {
@@ -158,14 +172,15 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_4_-_inset_and_outset') }}</p>
+{{ EmbedLiveSample('Example_4_-_inset_and_outset') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

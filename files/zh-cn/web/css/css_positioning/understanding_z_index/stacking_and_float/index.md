@@ -4,43 +4,40 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_and_float
 ---
-<p>« <a href="/zh-CN/CSS">CSS</a> « <a href="/zh-CN/CSS/Understanding_z-index">理解 CSS 中的 z-index</a></p>
+« [CSS](/zh-CN/CSS) « [理解 CSS 中的 z-index](/zh-CN/CSS/Understanding_z-index)
 
-<h3 id="层叠与浮动">层叠与浮动</h3>
+### 层叠与浮动
 
-<p>对于浮动的块元素来说，层叠顺序变得有些不同。浮动块元素被放置于非定位块元素与定位块元素之间：</p>
+对于浮动的块元素来说，层叠顺序变得有些不同。浮动块元素被放置于非定位块元素与定位块元素之间：
 
-<ol>
- <li>根元素的背景与边框</li>
- <li>位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠</li>
- <li>浮动块元素</li>
- <li>后代中的定位元素按照它们在 HTML 中出现的顺序层叠</li>
-</ol>
+1.  根元素的背景与边框
+2.  位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠
+3.  浮动块元素
+4.  后代中的定位元素按照它们在 HTML 中出现的顺序层叠
 
-<p>实际上，在接下来的例子中你会看到，非定位块元素 (DIV #4) 的背景与边框丝毫不会受到浮动块元素的影响，但内容却恰恰相反。出现这种情况是由于 CSS 的标准浮动行为引起的。</p>
+实际上，在接下来的例子中你会看到，非定位块元素 (DIV #4) 的背景与边框丝毫不会受到浮动块元素的影响，但内容却恰恰相反。出现这种情况是由于 CSS 的标准浮动行为引起的。
 
-<p>这种行为可以通过前一章列表的改进版本来解释：</p>
+这种行为可以通过前一章列表的改进版本来解释：
 
-<ol>
- <li>根元素的背景与边框</li>
- <li>位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠</li>
- <li>浮动块元素</li>
- <li>常规流中的后代行内元素</li>
- <li>后代中的定位元素按照它们在 HTML 中出现的顺序层叠</li>
-</ol>
+1.  根元素的背景与边框
+2.  位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠
+3.  浮动块元素
+4.  常规流中的后代行内元素
+5.  后代中的定位元素按照它们在 HTML 中出现的顺序层叠
 
-<div class="note"><strong>注意：</strong> 在下面的例子中，除了非定位的那个块元素外，所有的块元素都是半透明的，以便来显示层叠顺序。如果减少非定位元素 (DIV #4) 的透明度，会发生很诡异的事情：该元素的背景和边框会出现在浮动块元素上方，但是仍然处于定位元素的下方。我不能确定这是规范的 bug 或是怪异的解析。(设置透明度会隐式的创建一个层叠上下文。)</div>
+> **备注：** 在下面的例子中，除了非定位的那个块元素外，所有的块元素都是半透明的，以便来显示层叠顺序。如果减少非定位元素 (DIV #4) 的透明度，会发生很诡异的事情：该元素的背景和边框会出现在浮动块元素上方，但是仍然处于定位元素的下方。我不能确定这是规范的 bug 或是怪异的解析。(设置透明度会隐式的创建一个层叠上下文。)
 
-<p>{{ EmbedLiveSample('该示例的源码', '563', '255', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_and_float') }}</p>
+{{ EmbedLiveSample('该示例的源码', '563', '255', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_and_float') }}
 
-<h3 id="该示例的源码"><strong>该示例的源码</strong></h3>
+### 该示例的源码
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Stacking and float&lt;/title&gt;
-    &lt;style type="text/css"&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stacking and float</title>
+    <style type="text/css">
 
     div {
         font: 12px Arial;
@@ -99,61 +96,53 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_and_float
         text-align: center;
     }
 
-&lt;/style&gt;
-&lt;/head&gt;
+</style>
+</head>
 
-&lt;body&gt;
-    &lt;br /&gt;&lt;br /&gt;
+<body>
+    <br /><br />
 
-    &lt;div id="absdiv1"&gt;
-        &lt;br /&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
-        &lt;br /&gt;position: absolute;
-    &lt;/div&gt;
+    <div id="absdiv1">
+        <br /><span class="bold">DIV #1</span>
+        <br />position: absolute;
+    </div>
 
-    &lt;div id="flodiv1"&gt;
-        &lt;br /&gt;&lt;span class="bold"&gt;DIV #2&lt;/span&gt;
-        &lt;br /&gt;float: left;
-    &lt;/div&gt;
+    <div id="flodiv1">
+        <br /><span class="bold">DIV #2</span>
+        <br />float: left;
+    </div>
 
-    &lt;div id="flodiv2"&gt;
-        &lt;br /&gt;&lt;span class="bold"&gt;DIV #3&lt;/span&gt;
-        &lt;br /&gt;float: right;
-    &lt;/div&gt;
+    <div id="flodiv2">
+        <br /><span class="bold">DIV #3</span>
+        <br />float: right;
+    </div>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div id="normdiv"&gt;
-        &lt;br /&gt;&lt;span class="bold"&gt;DIV #4&lt;/span&gt;
-        &lt;br /&gt;no positioning
-    &lt;/div&gt;
+    <div id="normdiv">
+        <br /><span class="bold">DIV #4</span>
+        <br />no positioning
+    </div>
 
-    &lt;div id="absdiv2"&gt;
-        &lt;br /&gt;&lt;span class="bold"&gt;DIV #5&lt;/span&gt;
-        &lt;br /&gt;position: absolute;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    <div id="absdiv2">
+        <br /><span class="bold">DIV #5</span>
+        <br />position: absolute;
+    </div>
+</body>
+</html>
+```
 
-<h3 id="相关链接">相关链接</h3>
+### 相关链接
 
-<ul>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index">未使用 z-index 的层叠</a>：默认层叠规则</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Adding_z-index">使用 z-index 的层叠</a>： 使用 z-index 来改变默认层叠顺序</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/The_stacking_context">层叠上下文</a>：关于层叠上下文的注意事项</li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">层叠上下文示例 1</a>：两层嵌套标签的 HTML 中，z-index 作用在内层标签上</li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">层叠上下文示例 2</a>：两层嵌套标签的 HTML 中，z-index 作用在内外层标签上</li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">层叠上下文示例 3</a>：三层嵌套标签的 HTML 中，z-index 作用在中间层标签上</li>
-</ul>
+- [未使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index)：默认层叠规则
+- [使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Adding_z-index)： 使用 z-index 来改变默认层叠顺序
+- [层叠上下文](/zh-CN/CSS/Understanding_z-index/The_stacking_context)：关于层叠上下文的注意事项
+- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1)：两层嵌套标签的 HTML 中，z-index 作用在内层标签上
+- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2)：两层嵌套标签的 HTML 中，z-index 作用在内外层标签上
+- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3)：三层嵌套标签的 HTML 中，z-index 作用在中间层标签上
 
-<div class="originaldocinfo">
-<h3 id="Original_Document_Information">原始文档信息</h3>
+### 原始文档信息
 
-<ul>
- <li>作者：Paolo Lombardi</li>
- <li>该文档的英文原始版本是从我为 <a href="http://www.yappy.it">YappY</a> 写的意大利文章翻译而来的，该文章版权为 <a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a></li>
- <li>上次更新于：2014 年 11 月 3 日</li>
-</ul>
-</div>
-
-<p> </p>
+- 作者：Paolo Lombardi
+- 该文档的英文原始版本是从我为 [YappY](http://www.yappy.it) 写的意大利文章翻译而来的，该文章版权为 [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- 上次更新于：2014 年 11 月 3 日

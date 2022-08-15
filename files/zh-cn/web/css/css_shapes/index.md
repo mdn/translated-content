@@ -7,41 +7,28 @@ tags:
   - CSS3 Shapes & CSS3 Regions
 translation_of: Web/CSS/CSS_Shapes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Shapes</strong>  是一个 CSS 模块，用于定义在 CSS 值中使用的几何形状。</p>
+**CSS Shapes** 是一个 CSS 模块，用于定义在 CSS 值中使用的几何形状。
 
-<div class="note">
-<h3 id="CSS3_Shapes_CSS3_Regions">CSS3 Shapes &amp; CSS3 Regions</h3>
+> **备注：** ### CSS3 Shapes & CSS3 Regions<https://www.w3.org/TR/css-shapes-1/> > <https://www.w3.org/TR/css-regions-1/>
 
-<p><a href="https://www.w3.org/TR/css-shapes-1/">https://www.w3.org/TR/css-shapes-1/</a><br>
- <a href="https://www.w3.org/TR/css-regions-1/">https://www.w3.org/TR/css-regions-1/</a></p>
-</div>
+## Reference
 
-<h2 id="Reference">Reference</h2>
+### Properties
 
-<h3 id="Properties">Properties</h3>
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("shape-margin")}}
+- {{cssxref("shape-outside")}}
 
-<div class="index">
-<ul>
- <li>{{cssxref("shape-image-threshold")}}</li>
- <li>{{cssxref("shape-margin")}}</li>
- <li>{{cssxref("shape-outside")}}</li>
-</ul>
-</div>
+### Data types
 
-<h3 id="Data_types">Data types</h3>
+- {{cssxref("&lt;basic-shape&gt;")}}
 
-<div class="index">
-<ul>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
-</ul>
-</div>
+## Guides
 
-<h2 id="Guides">Guides</h2>
+_None._
 
-<p><em>None.</em></p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}

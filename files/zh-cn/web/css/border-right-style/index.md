@@ -3,19 +3,18 @@ title: border-right-style
 slug: Web/CSS/border-right-style
 translation_of: Web/CSS/border-right-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-right-style</code></strong> 是 border 中的一个 <a href="/en-US/docs/CSS">CSS</a> 子属性，描述的是右边框的样式 {{cssxref("border")}}.</p>
+**`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-right-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-right-style.html")}}
 
+> **备注：** 这个 css 没有定义不同样式的边界之间如何拼接。
 
+## Syntax
 
-<div class="note"><strong>备注：</strong> 这个 css 没有定义不同样式的边界之间如何拼接。</div>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* 可用的值 */
+```css
+/* 可用的值 */
 border-right-style: none;
 border-right-style: hidden;
 border-right-style: dotted;
@@ -31,40 +30,43 @@ border-right-style: outset;
 border-right-style: inherit;
 border-right-style: initial;
 border-right-style: unset;
-</pre>
+```
 
-<p>The <code>border-right-style</code> property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.</p>
+The `border-right-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
 
-<h3 id="语法格式">语法格式</h3>
+### 语法格式
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Define look of the table */
+```css
+/* Define look of the table */
 table {
   border-width: 2px;
   background-color: #52E385;
@@ -83,27 +85,24 @@ tr, td {
 .b7 {border-right-style: groove;}
 .b8 {border-right-style: ridge;}
 .b9 {border-right-style: inset;}
-.b10 {border-right-style: outset;}</pre>
+.b10 {border-right-style: outset;}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.border-right-style")}}
 
+## 参考
 
-<p>{{Compat("css.properties.border-right-style")}}</p>
-
-<h2 id="See_also">参考</h2>
-
-<ul>
- <li>其他样式相关边框属性：{{Cssxref("border-bottom-style")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-style")}}.</li>
- <li>其他 bottom-border-related 属性：{{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, and {{Cssxref("border-right-width")}}.</li>
-</ul>
+- 其他样式相关边框属性：{{Cssxref("border-bottom-style")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-style")}}.
+- 其他 bottom-border-related 属性：{{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, and {{Cssxref("border-right-width")}}.

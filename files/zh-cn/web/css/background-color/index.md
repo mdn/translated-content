@@ -8,17 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/background-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概览">概览</h2>
+## 概览
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>属性中的 <strong>background-color </strong>会设置元素的背景色，属性的值为颜色值或关键字"transparent"二者选其一。</p>
+[CSS](/zh-CN/docs/Web/CSS)属性中的 **background-color** 会设置元素的背景色，属性的值为颜色值或关键字"transparent"二者选其一。
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 background-color: red;
 
 /* Hexadecimal value */
@@ -38,40 +39,41 @@ background-color: transparent;
 background-color: inherit;
 background-color: initial;
 background-color: unset;
-</pre>
+```
 
-<p><code>background-color</code> 属性只能使用 <code>&lt;color&gt;</code> 值。</p>
+`background-color` 属性只能使用 `<color>` 值。
 
-<h3 id="Values">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>一个描述背景统一颜色的 CSS {{cssxref("&lt;color&gt;")}} 值。即使一个或几个的 {{cssxref("background-image")}} 被定义，如果图像是不透明的，通过透明度该颜色也能影响到渲染。在 CSS 中，<code>transparent</code> 是一种颜色。</dd>
-</dl>
+- `<color>`
+  - : 一个描述背景统一颜色的 CSS {{cssxref("&lt;color&gt;")}} 值。即使一个或几个的 {{cssxref("background-image")}} 被定义，如果图像是不透明的，通过透明度该颜色也能影响到渲染。在 CSS 中，`transparent` 是一种颜色。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exampleone"&gt;
+```html
+<div class="exampleone">
  Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="exampletwo"&gt;
+<div class="exampletwo">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplethree"&gt;
+<div class="examplethree">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[2,7,12,17];">.exampleone {
+```css
+.exampleone {
   background-color: teal;
   color: white;
 }
@@ -85,24 +87,20 @@ background-color: unset;
   background-color: #777799;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples","200","150")}}</p>
+{{EmbedLiveSample("Examples","200","150")}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.background-color")}}
 
-<h2 id="查看更多">查看更多</h2>
+## 查看更多
 
-<ul>
- <li>
-  <p><a href="https://developer.mozilla.org/en/CSS/Multiple_backgrounds">Multiple backgrounds</a></p>
- </li>
-</ul>
+- [Multiple backgrounds](https://developer.mozilla.org/en/CSS/Multiple_backgrounds)

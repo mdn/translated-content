@@ -3,42 +3,44 @@ title: column-rule-color
 slug: Web/CSS/column-rule-color
 translation_of: Web/CSS/column-rule-color
 ---
-<div>{{CSSRef("CSS Multi-columns")}}</div>
+{{CSSRef("CSS Multi-columns")}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>CSS 特性 <code>column-rule-color</code> 让你可以设置在多列布局中被画在两列之间的规则（线条）的颜色。</p>
+CSS 特性 `column-rule-color` 让你可以设置在多列布局中被画在两列之间的规则（线条）的颜色。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("column-rule-color")}}
-</pre>
+```
+Formal syntax: {{csssyntax("column-rule-color")}}
+```
 
-<pre>column-rule-color: red;
+```
+column-rule-color: red;
 column-rule-color: rgb(192, 56, 78);
 column-rule-color: transparent;
 column-rule-color: hsla(0, 100%, 50%, 0.6);
 
-column-rule-color: inherit;</pre>
+column-rule-color: inherit;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>&lt;color&gt;</dt>
- <dd>Is a {{cssxref("&lt;color&gt;")}} value representing the color of the rule separating columns.</dd>
-</dl>
+- \<color>
+  - : Is a {{cssxref("&lt;color&gt;")}} value representing the color of the rule separating columns.
 
-<h2 id="Examples">Example</h2>
+## Example
 
-<pre class="brush:css">#header { column-rule-color: blue; }
-</pre>
+```css
+#header { column-rule-color: blue; }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.column-rule-color")}}

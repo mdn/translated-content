@@ -9,59 +9,53 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-direction
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div>{{SeeCompatTable}}</div>
+## 概述
 
-<h2 id="概述">概述</h2>
+`animation-direction` CSS 属性指示动画是否反向播放，它通常在简写属性{{cssxref("animation")}}中设定
 
-<p><code>animation-direction</code> CSS 属性指示动画是否反向播放，它通常在简写属性{{cssxref("animation")}}中设定</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```
+Formal syntax:  {{csssyntax("animation-direction")}}
+```
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>:  {{csssyntax("animation-direction")}}
-</pre>
-
-<pre>animation-direction: normal
+```
+animation-direction: normal
 animation-direction: reverse
 animation-direction: alternate
 animation-direction: alternate-reverse
 animation-direction: normal, reverse
 animation-direction: alternate, reverse, normal
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>每个循环内动画向前循环，换言之，每个动画循环结束，动画重置到起点重新开始，这是默认属性。</dd>
- <dt><code>alternate</code></dt>
- <dd>动画交替反向运行，反向运行时，动画按步后退，同时，带时间功能的函数也反向，比如，<code>ease-in</code> 在反向时成为 <code>ease-out</code>。计数取决于开始时是奇数迭代还是偶数迭代</dd>
- <dt><code>reverse</code></dt>
- <dd>反向运行动画，每周期结束动画由尾到头运行。</dd>
- <dt><code>alternate-reverse</code></dt>
- <dd>反向交替，反向开始交替。动画第一次运行时是反向的，然后下一次是正向，后面依次循环。决定奇数次或偶数次的计数从 1 开始。</dd>
-</dl>
+- `normal`
+  - : 每个循环内动画向前循环，换言之，每个动画循环结束，动画重置到起点重新开始，这是默认属性。
+- `alternate`
+  - : 动画交替反向运行，反向运行时，动画按步后退，同时，带时间功能的函数也反向，比如，`ease-in` 在反向时成为 `ease-out`。计数取决于开始时是奇数迭代还是偶数迭代
+- `reverse`
+  - : 反向运行动画，每周期结束动画由尾到头运行。
+- `alternate-reverse`
+  - : 反向交替，反向开始交替。动画第一次运行时是反向的，然后下一次是正向，后面依次循环。决定奇数次或偶数次的计数从 1 开始。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>See <a href="/en-US/docs/CSS/CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/zh-CN/docs/CSS/CSS_animations) for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.animation-direction")}}
 
+## 更多
 
-<p>{{Compat("css.properties.animation-direction")}}</p>
-
-<h2 id="更多">更多</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations">Using CSS animations</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- {{domxref("AnimationEvent", "AnimationEvent")}}

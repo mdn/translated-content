@@ -11,38 +11,37 @@ tags:
 translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
 ---
-<div>{{seecompattable}}{{CSSRef}} </div>
+{{seecompattable}}{{CSSRef}}[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数 **`:host()`** 选择包含使用这段 CSS 的 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。
 
-<div><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>函数 <strong><code>:host()</code></strong> 选择包含使用这段 CSS 的 <a href="/zh-CN/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。</div>
+最简单的用法是仅将类名放在某些自定义元素实例上，然后将相关的类选择器作为函数参数包含在内。不能将它与后代选择器表达式一起使用，以仅选择特定祖先内部的自定义元素的实例。这是 {{cssxref(":host-context()")}} 的作用。
 
-<p>最简单的用法是仅将类名放在某些自定义元素实例上，然后将相关的类选择器作为函数参数包含在内。不能将它与后代选择器表达式一起使用，以仅选择特定祖先内部的自定义元素的实例。这是 {{cssxref(":host-context()")}} 的作用。</p>
+> **备注：** 在 shadow DOM 之外使用时，这没有任何效果。
 
-<div class="note">
-<p><strong>注意</strong>：在 shadow DOM 之外使用时，这没有任何效果。</p>
-</div>
-
-<pre class="brush: css no-line-numbers">/* 选择阴影根元素，仅当它与选择器参数匹配 */
- <code>:host(.special-custom-element) {
+```css
+/* 选择阴影根元素，仅当它与选择器参数匹配 */
+ :host(.special-custom-element) {
    font-weight: bold;
- }</code></pre>
+ }
+```
 
-<h2 id="句法">句法</h2>
+## 句法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
+以下片段取自我们的[宿主选择器示例](https://github.com/mdn/web-components-examples/tree/master/host-selectors)（[也可以观看在线演示](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
+在这个例子中，有一个简单的自定义元素 `<context-span>` 可以用它包裹文本：
 
-<p>以下片段取自我们的<a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors">宿主选择器示例</a>（<a href="https://mdn.github.io/web-components-examples/host-selectors/">也可以观看在线演示</a>）。</p>
+```html
+<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+```
 
-<p>在这个例子中，有一个简单的自定义元素 <code>&lt;context-span&gt;</code> 可以用它包裹文本：</p>
+在元素的构造函数中，创建`style`和`span`元素，填充`span`自定义元素的内容，并`style`使用一些 CSS 规则填充元素：
 
-<pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
-
-<p>在元素的构造函数中，创建<code>style</code>和<code>span</code>元素，填充<code>span</code>自定义元素的内容，并<code>style</code>使用一些 CSS 规则填充元素：</p>
-
-<pre class="brush: js">let style = document.createElement('style');
+```js
+let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 
@@ -55,22 +54,21 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
                     ':host-context(h1):after { content: " - no links in headers!" }' +
                     ':host-context(article, aside) { color: gray; }' +
                     ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
+                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+```
 
-<p><code>:host(.footer) { color : red; }</code> 规则为文档中所有在其上设置了 <code>footer</code> 类的<code>&lt;context-span&gt;</code> 元素实例（此实例中的影子宿主）设置样式——使用它来为 {{htmlelement("footer")}} 中的元素提供实例一种特殊的颜色。</p>
+`:host(.footer) { color : red; }` 规则为文档中所有在其上设置了 `footer` 类的`<context-span>` 元素实例（此实例中的影子宿主）设置样式——使用它来为 {{htmlelement("footer")}} 中的元素提供实例一种特殊的颜色。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.hostfunction")}}</p>
+{{Compat("css.selectors.hostfunction")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web/Web_Components">Web components</a></li>
- <li>{{cssxref(":host-context", ":host-context()")}}</li>
- <li>{{cssxref(":host")}}</li>
-</ul>
+- [Web components](/zh-CN/docs/Web/Web_Components)
+- {{cssxref(":host-context", ":host-context()")}}
+- {{cssxref(":host")}}

@@ -3,69 +3,69 @@ title: column-span
 slug: Web/CSS/column-span
 translation_of: Web/CSS/column-span
 ---
-<div>{{ CSSRef("CSS Multi-columns") }}</div>
+{{ CSSRef("CSS Multi-columns") }}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><a href="/en-US/docs/CSS">CSS</a> 属性<code>column-span</code> 的值被设置为<code>all</code>时，可以让一个元素跨越所有的列。一个跨越多列的元素被称为<strong>spanning element。</strong></p>
+[CSS](/zh-CN/docs/CSS) 属性`column-span` 的值被设置为`all`时，可以让一个元素跨越所有的列。一个跨越多列的元素被称为**spanning element。**
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("column-span")}}
-</pre>
+```
+Formal syntax: {{csssyntax("column-span")}}
+```
 
-<pre>column-span: none;
+```
+column-span: none;
 column-span: all;
 
 column-span: inherit;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>元素不跨多个列。</dd>
- <dt><code>all</code></dt>
- <dd>元素横跨所有列。元素出现之前，出现在元素之前的正常流中的内容在所有列之间自动平衡。该元素建立一个新的块格式上下文。</dd>
-</dl>
+- `none`
+  - : 元素不跨多个列。
+- `all`
+  - : 元素横跨所有列。元素出现之前，出现在元素之前的正常流中的内容在所有列之间自动平衡。该元素建立一个新的块格式上下文。
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<p>下例中的 h2 元素横跨 article 元素中的各列</p>
+下例中的 h2 元素横跨 article 元素中的各列
 
-<p> </p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
-
-<pre>&lt;article&gt;
-  &lt;h2&gt;My Very Special Columns&lt;/h2&gt;
-  &lt;p&gt;This is a bunch of text split into three columns
+```
+<article>
+  <h2>My Very Special Columns</h2>
+  <p>This is a bunch of text split into three columns
      using the CSS `columns` property. The text
-     is equally distributed over the columns.&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+     is equally distributed over the columns.</p>
+</article>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre>article {
+```
+article {
   columns: 3;
 }
 
 h2 {
   column-span: all;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 'auto', 120)}}</p>
+{{EmbedLiveSample('Example', 'auto', 120)}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.column-span")}}

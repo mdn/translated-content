@@ -3,21 +3,24 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 translation_of: Web/CSS/background-blend-mode
 ---
-<p>{{CSSRef()}}</p>
+{{CSSRef()}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code>background-blend-mode</code> CSS 属性定义该元素的背景图片，以及背景色如何混合。</p>
+`background-blend-mode` CSS 属性定义该元素的背景图片，以及背景色如何混合。
 
-<p>混合模式应该按{{cssxref("background-image")}} CSS 属性同样的顺序定义。如果混合模式数量与背景图像的数量不相等，它会被截取至相等的数量。</p>
+混合模式应该按{{cssxref("background-image")}} CSS 属性同样的顺序定义。如果混合模式数量与背景图像的数量不相等，它会被截取至相等的数量。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="twopartsyntaxbox"><code>Formal syntax:  {{csssyntax("background-blend-mode")}}</code></pre>
+```
+Formal syntax:  {{csssyntax("background-blend-mode")}}
+```
 
-<pre>/* 单值 */
+```
+/* 单值 */
 background-blend-mode: normal;
 
 /* 双值，每个背景一个值 */
@@ -26,61 +29,61 @@ background-blend-mode: darken, luminosity;
 background-blend-mode: initial;
 background-blend-mode: inherit;
 background-blend-mode: unset;
-</pre>
+```
 
-<h3 id="Values">值</h3>
+### 值
 
-<dl>
- <dt>&lt;blend-mode&gt;</dt>
- <dd>一个{{cssxref("&lt;blend-mode&gt;")}}定义混合的模式，可以有多个值，用逗号间隔。</dd>
-</dl>
+- \<blend-mode>
+  - : 一个{{cssxref("&lt;blend-mode&gt;")}}定义混合的模式，可以有多个值，用逗号间隔。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-&lt;select id="select"&gt;
-    &lt;option&gt;normal&lt;/option&gt;
-    &lt;option&gt;multiply&lt;/option&gt;
-    &lt;option selected&gt;screen&lt;/option&gt;
-    &lt;option&gt;overlay&lt;/option&gt;
-    &lt;option&gt;darken&lt;/option&gt;
-    &lt;option&gt;lighten&lt;/option&gt;
-    &lt;option&gt;color-dodge&lt;/option&gt;
-    &lt;option&gt;color-burn&lt;/option&gt;
-    &lt;option&gt;hard-light&lt;/option&gt;
-    &lt;option&gt;soft-light&lt;/option&gt;
-    &lt;option&gt;difference&lt;/option&gt;
-    &lt;option&gt;exclusion&lt;/option&gt;
-    &lt;option&gt;hue&lt;/option&gt;
-    &lt;option&gt;saturation&lt;/option&gt;
-    &lt;option&gt;color&lt;/option&gt;
-    &lt;option&gt;luminosity&lt;/option&gt;
-&lt;/select&gt;</pre>
+\<select id="select">
+\<option>normal\</option>
+\<option>multiply\</option>
+\<option selected>screen\</option>
+\<option>overlay\</option>
+\<option>darken\</option>
+\<option>lighten\</option>
+\<option>color-dodge\</option>
+\<option>color-burn\</option>
+\<option>hard-light\</option>
+\<option>soft-light\</option>
+\<option>difference\</option>
+\<option>exclusion\</option>
+\<option>hue\</option>
+\<option>saturation\</option>
+\<option>color\</option>
+\<option>luminosity\</option>
+\</select>
 
-<pre class="brush: css" class="hidden">#div {
+```css
+#div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: screen;
-}</pre>
+}
+```
 
-<pre class="brush: js" class="hidden">document.getElementById("select").onchange = function(event) {
+```js
+document.getElementById("select").onchange = function(event) {
     document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
-console.log(document.getElementById('div'));</pre>
+console.log(document.getElementById('div'));
+```
 
-<p>{{ EmbedLiveSample('Examples', "330", "330") }}</p>
+{{ EmbedLiveSample('Examples', "330", "330") }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.background-blend-mode")}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("mix-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("mix-blend-mode")}}

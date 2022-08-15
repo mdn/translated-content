@@ -11,30 +11,30 @@ tags:
   - 参考
 translation_of: Web/CSS/grid-auto-rows
 ---
-<p>CSS 属性 <strong><code>grid-auto-rows</code></strong> 用于指定隐式创建的行轨道大小。</p>
+CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 
-<div>{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
 
+如果定位到某行中的网格元素没有使用 {{cssxref("grid-template-rows")}}来指定大小，则会隐式创建{{glossary("grid", "grid")}} 轨道来保存它。这可能在显示定位到超出范围的行，或者由自动放置算法创建额外的行时发生。
 
-<p>如果定位到某行中的网格元素没有使用 {{cssxref("grid-template-rows")}}来指定大小，则会隐式创建{{glossary("grid", "grid")}} 轨道来保存它。这可能在显示定位到超出范围的行，或者由自动放置算法创建额外的行时发生。</p>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 grid-auto-rows: min-content;
 grid-auto-rows: max-content;
 grid-auto-rows: auto;
 
-/* &lt;length&gt; values */
+/* <length> values */
 grid-auto-rows: 100px;
 grid-auto-rows: 20cm;
 grid-auto-rows: 50vmax;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 grid-auto-rows: 10%;
 grid-auto-rows: 33.3%;
 
-/* &lt;flex&gt; values */
+/* <flex> values */
 grid-auto-rows: 0.5fr;
 grid-auto-rows: 3fr;
 
@@ -55,48 +55,52 @@ grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 grid-auto-rows: inherit;
 grid-auto-rows: initial;
 grid-auto-rows: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>一个非负的长度。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>相对于网格窗口块尺寸的非负 {{cssxref("percentage", "&lt;percentage&gt;")}} 值。如果网格容器的块尺寸是不确定的，则百分比值将被视为 <code>auto</code>。</dd>
- <dt><code>&lt;flex&gt;</code></dt>
- <dd>非负的、以 <code>fr</code> 为单位的维度指定轨道的弹性因子。每个 <code>&lt;flex&gt;</code>-尺寸的轨道都按其弹性因子的比例挤占剩余空间的一部分。
- <p>当使用在 <code>minmax()</code> 符号外时，意味着最小值为 <code>auto</code> (例： <code>minmax(auto, &lt;flex&gt;)</code>).</p>
- </dd>
- <dt><code>max-content</code></dt>
- <dd>关键词，指明由网格元素中占用空间最大的那一个来决定轨道的尺寸。</dd>
- <dt><code>min-content</code></dt>
- <dd>关键词，指明由网格元素中占用空间最小的那一个来决定轨道的尺寸。</dd>
- <dt><code>minmax(min, max)</code></dt>
- <dd>函数符号，定义一个不小于<code>min</code>且不大于<code>max</code>的尺寸范围。如果<code>max</code>比<code>min</code>小，则<code>max</code>会被忽略，函数会被录作<code>min</code>处理。作为最大值，<code>&lt;flex&gt;</code> 值设置了轨道的弹性因子。作为最小值，会被当作 0 处理（或者最小内容——当网格容器指定了尺寸为最小内容）。</dd>
- <dt><code>auto</code></dt>
- <dd>关键字，当用来指定最大值时与最大内容一致，当用来指定最小值时，它表示轨道中所有网格元素最小尺寸中的最大值（由{{cssxref("min-width")}}/{{cssxref("min-height")}}指定）。
- <p>注意：<code>auto</code> 轨道尺寸（且仅有 <code>auto</code> 轨道尺寸）可配合{{cssxref("align-content")}} 和{{cssxref("justify-content")}} 属性使用。</p>
- </dd>
-</dl>
+- `<length>`
+  - : 一个非负的长度。
+- `<percentage>`
+  - : 相对于网格窗口块尺寸的非负 {{cssxref("percentage", "&lt;percentage&gt;")}} 值。如果网格容器的块尺寸是不确定的，则百分比值将被视为 `auto`。
+- `<flex>`
 
-<h3 id="形式语法">形式语法</h3>
+  - : 非负的、以 `fr` 为单位的维度指定轨道的弹性因子。每个 `<flex>`-尺寸的轨道都按其弹性因子的比例挤占剩余空间的一部分。
+
+    当使用在 `minmax()` 符号外时，意味着最小值为 `auto` (例： `minmax(auto, <flex>)`).
+
+- `max-content`
+  - : 关键词，指明由网格元素中占用空间最大的那一个来决定轨道的尺寸。
+- `min-content`
+  - : 关键词，指明由网格元素中占用空间最小的那一个来决定轨道的尺寸。
+- `minmax(min, max)`
+  - : 函数符号，定义一个不小于`min`且不大于`max`的尺寸范围。如果`max`比`min`小，则`max`会被忽略，函数会被录作`min`处理。作为最大值，`<flex>` 值设置了轨道的弹性因子。作为最小值，会被当作 0 处理（或者最小内容——当网格容器指定了尺寸为最小内容）。
+- `auto`
+
+  - : 关键字，当用来指定最大值时与最大内容一致，当用来指定最小值时，它表示轨道中所有网格元素最小尺寸中的最大值（由{{cssxref("min-width")}}/{{cssxref("min-height")}}指定）。
+
+    注意：`auto` 轨道尺寸（且仅有 `auto` 轨道尺寸）可配合{{cssxref("align-content")}} 和{{cssxref("justify-content")}} 属性使用。
+
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h3 id="CSS内容">CSS 内容</h3>
+### CSS 内容
 
-<pre class="brush: css; highlight[6]">#grid {
+```css
+#grid {
   width: 200px;
   display: grid;
   grid-template-areas: "a a";
@@ -104,85 +108,73 @@ grid-auto-rows: unset;
   grid-auto-rows: 100px;
 }
 
-#grid &gt; div {
+#grid > div {
   background-color: lime;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Example", "210px", "210px")}}</p>
+{{EmbedLiveSample("Example", "210px", "210px")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.grid-auto-rows")}}
 
+## 相关链接
 
-<p>{{Compat("css.properties.grid-auto-rows")}}</p>
+- 相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
+- 网格布局指南： _[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
+- 视频教程：_[引入网格自动放置和排序](http://gridbyexample.com/video/series-auto-placement-order/)_
 
-<h2 id="相关链接">相关链接</h2>
+1.  [**CSS**](/zh-CN/docs/Web/CSS)
+2.  [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
+3.  [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+4.  **指南**
 
-<ul>
- <li>相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
- <li>网格布局指南： <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">网格布局中的自动定位 - 隐式网格中的行尺寸</a></em></li>
- <li>视频教程：<em><a href="http://gridbyexample.com/video/series-auto-placement-order/">引入网格自动放置和排序</a></em></li>
-</ul>
+    1.  [与其它布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    2.  [线性布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    3.  [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    4.  [使用命名网格行布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    5.  [风格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    6.  [网格布局中的框 (盒子) 对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    7.  [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    8.  [CSS 网格布局和辅助功能](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    9.  [CSS 网格布局与渐进式增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+    10. [使用网格实现通用布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+    11. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 
-<section id="Quick_links">
-<ol>
- <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 参考</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
- <li><a href="#"><strong>指南</strong></a>
-  <ol>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">与其它布局方式的关系</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">线性布局</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">网格模板区域</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">使用命名网格行布局</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">风格布局中的自动定位</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的框 (盒子) 对齐</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和辅助功能</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局与渐进式增强</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现通用布局</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>属性</strong></a>
-  <ol>
-   <li><a href="/zh-CN/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>术语表</strong></a>
-  <ol>
-   <li><a href="/zh-CN/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+5.  **属性**
+
+    1.  [grid](/zh-CN/docs/Web/CSS/grid)
+    2.  [grid-area](/zh-CN/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/zh-CN/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
+    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
+    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
+    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
+    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
+    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
+    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
+    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
+    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
+    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
+
+6.  **术语表**
+
+    1.  [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
+    2.  [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
+    3.  [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
+    4.  [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
+    5.  [Gutters](/zh-CN/docs/Glossary/Gutters)
+    6.  [Grid row](/zh-CN/docs/Glossary/Grid_rows)
+    7.  [Grid column](/zh-CN/docs/Glossary/Grid_column)

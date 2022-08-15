@@ -6,75 +6,67 @@ tags:
   - CSS Positioning
 translation_of: Web/CSS/position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS <strong><code>position</code></strong>属性用于指定一个元素在文档中的定位方式。{{Cssxref("top")}}，{{Cssxref("right")}}，{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性则决定了该元素的最终位置。</p>
+CSS **`position`**属性用于指定一个元素在文档中的定位方式。{{Cssxref("top")}}，{{Cssxref("right")}}，{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性则决定了该元素的最终位置。
 
-<div>{{EmbedInteractiveExample("pages/css/position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/position.html")}}
 
+### 定位类型
 
+- **定位元素（positioned element）**是其[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`, `absolute`, `fixed `或 `sticky` 的一个元素（换句话说，除`static`以外的任何东西）。
+- **相对定位元素**（**relatively positioned element**）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative `的元素。
+- **绝对定位元素（absolutely positioned element）**是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `absolute` 或 `fixed` 的元素。
+- **粘性定位元素**（**stickily positioned element**）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `sticky` 的元素。
 
-<h3 id="定位类型">定位类型</h3>
+大多数情况下，{{Cssxref("height")}}和{{Cssxref("width")}} 被设定为 auto 的绝对定位元素，按其内容大小调整尺寸。但是，被绝对定位的元素可以通过指定{{Cssxref("top")}}和{{Cssxref("bottom")}} ，保留{{Cssxref("height")}}未指定（即`auto`），来填充可用的垂直空间。它们同样可以通过指定{{Cssxref("left")}} 和 {{Cssxref("right")}}并将{{Cssxref("width")}} 指定为`auto`来填充可用的水平空间。
 
-<ul>
- <li><strong>定位元素（positioned element）</strong>是其<a href="/zh-CN/docs/Web/CSS/computed_value">计算后</a>位置属性为 <code>relative</code>, <code>absolute</code>, <code>fixed </code>或 <code style="font-style: normal; line-height: 1.5;">sticky</code> 的一个元素（换句话说，除<code>static</code>以外的任何东西）。</li>
- <li><strong>相对定位元素（</strong><strong>relatively positioned element</strong><strong>）</strong>是<a href="/zh-CN/docs/Web/CSS/computed_value">计算后</a>位置属性为 <code>relative </code>的元素。</li>
- <li><strong>绝对定位元素（absolutely positioned element）</strong>是<a href="/zh-CN/docs/Web/CSS/computed_value">计算后</a>位置属性为 <code style="font-style: normal; line-height: 1.5;">absolute</code> 或 <code style="font-style: normal; line-height: 1.5;">fixed</code> 的元素。</li>
- <li><strong>粘性定位元素</strong><strong>（</strong><strong>stickily positioned element</strong><strong>）</strong>是<a href="/zh-CN/docs/Web/CSS/computed_value">计算后</a>位置属性为 <code>sticky</code> 的元素。</li>
-</ul>
+除了刚刚描述的情况（绝对定位元素填充可用空间）：
 
-<p>大多数情况下，{{Cssxref("height")}}和{{Cssxref("width")}} 被设定为 auto 的绝对定位元素，按其内容大小调整尺寸。但是，被绝对定位的元素可以通过指定{{Cssxref("top")}}和{{Cssxref("bottom")}} ，保留{{Cssxref("height")}}未指定（即<code>auto</code>），来填充可用的垂直空间。它们同样可以通过指定{{Cssxref("left")}} 和 {{Cssxref("right")}}并将{{Cssxref("width")}} 指定为<code>auto</code>来填充可用的水平空间。</p>
+- 如果 `top` 和 `bottom` 都被指定（严格来说，这里指定的值不能为 `auto` ），`top` 优先。
+- 如果指定了 `left` 和 `right` ，当 {{Cssxref("direction")}}设置为 `ltr`（水平书写的中文、英语）时 `left` 优先， 当{{Cssxref("direction")}}设置为 `rtl`（阿拉伯语、希伯来语、波斯语由右向左书写）时 `right` 优先。
 
-<p>除了刚刚描述的情况（绝对定位元素填充可用空间）：</p>
+## 语法
 
-<ul>
- <li>如果 <code>top</code> 和 <code>bottom</code> 都被指定（严格来说，这里指定的值不能为 <code>auto</code> ），<code>top</code> 优先。</li>
- <li>如果指定了 <code>left</code> 和 <code>right</code> ，当 {{Cssxref("direction")}}设置为 <code>ltr</code>（水平书写的中文、英语）时 <code>left</code> 优先， 当{{Cssxref("direction")}}设置为 <code>rtl</code>（阿拉伯语、希伯来语、波斯语由右向左书写）时 <code>right</code> 优先。</li>
-</ul>
+`position` 属性被指定为从下面的值列表中选择的单个关键字。
 
-<h2 id="语法">语法</h2>
+### 取值
 
-<p><code>position</code> 属性被指定为从下面的值列表中选择的单个关键字。</p>
+- `static`
+  - : 该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 `top`, `right`, `bottom`, `left` 和 `z-index `属性无效。
+- `relative`
+  - : 该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 对 table-\*-group, table-row, table-column, table-cell, table-caption 元素无效。
+- `absolute`
+  - : 元素会被移出正常文档流，并不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。
+- `fixed`
+  - : 元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。`fixed` 属性会创建新的层叠上下文。当元素祖先的 `transform`, `perspective` 或 `filter` 属性非 `none` 时，容器由视口改为该祖先。
+- `sticky`
+  - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先（nearest scrolling ancestor）*和 [containing block](/zh-CN/docs/Web/CSS/Containing_Block) (最近块级祖先 nearest block-level ancestor)，包括 table-related 元素，基于`top`, `right`, `bottom`, 和 `left`的值进行偏移。偏移值不会影响任何其他元素的位置。
+    该值总是创建一个新的[层叠上下文（stacking context](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的`overflow` 是 `hidden`, `scroll`, `auto`, 或 `overlay`时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见[Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)）。
 
-<h3 id="取值">取值</h3>
-
-<dl>
- <dt><code>static</code></dt>
- <dd>该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 和 <code>z-index </code>属性无效。</dd>
- <dt><code>relative</code></dt>
- <dd>该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 对 table-*-group, table-row, table-column, table-cell, table-caption 元素无效。</dd>
- <dt><code>absolute</code></dt>
- <dd>元素会被移出正常文档流，并不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</dd>
- <dt><code>fixed</code></dt>
- <dd>元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。<code>fixed</code> 属性会创建新的层叠上下文。当元素祖先的 <code>transform</code>, <code>perspective</code> 或 <code>filter</code> 属性非 <code>none</code> 时，容器由视口改为该祖先。</dd>
-</dl>
-
-<dl>
- <dt><code>sticky</code></dt>
- <dd>元素根据正常文档流进行定位，然后相对它的<em>最近滚动祖先（nearest scrolling ancestor）</em>和 <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> (最近块级祖先 nearest block-level ancestor)，包括 table-related 元素，基于<code>top</code>, <code>right</code>, <code>bottom</code>, 和 <code>left</code>的值进行偏移。偏移值不会影响任何其他元素的位置。<br>
- 该值总是创建一个新的<a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">层叠上下文（stacking context</a>）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的<code>overflow</code> 是 <code>hidden</code>, <code>scroll</code>, <code>auto</code>, 或 <code>overlay</code>时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见<a href="https://github.com/w3c/csswg-drafts/issues/865">Github issue on W3C CSSWG</a>）。</dd>
-</dl>
-
-<h3 id="常见语法">常见语法</h3>
+### 常见语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Relative_positioning">相对定位</h3>
+### 相对定位
 
-<p>相对定位的元素是在文档中的正常位置偏移给定的值，但是不影响其他元素的偏移。下面的例子中，注意未应用定位的其它元素是按照 "Two" 在正常位置的情况下进行布局的。</p>
+相对定位的元素是在文档中的正常位置偏移给定的值，但是不影响其他元素的偏移。下面的例子中，注意未应用定位的其它元素是按照 "Two" 在正常位置的情况下进行布局的。
 
-<p> HTML 内容</p>
+HTML 内容
 
-<pre class="brush: html notranslate">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;div class="box" id="two"&gt;Two&lt;/div&gt;
-&lt;div class="box" id="three"&gt;Three&lt;/div&gt;
-&lt;div class="box" id="four"&gt;Four&lt;/div&gt;</pre>
+```html
+<div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -88,24 +80,27 @@ translation_of: Web/CSS/position
   left: 20px;
   background: blue;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Relative_positioning', '600px', '200px') }}</p>
+{{ EmbedLiveSample('Relative_positioning', '600px', '200px') }}
 
-<h3 id="Absolute_positioning">绝对定位</h3>
+### 绝对定位
 
-<p>相对定位的元素并未脱离文档流，而绝对定位的元素则脱离了文档流。在布置文档流中其它元素时，绝对定位元素不占据空间。绝对定位元素相对于<em>最近的非 <code>static</code> 祖先元素</em>定位。当这样的祖先元素不存在时，则相对于 ICB（inital container block, 初始包含块）。例子不严谨，待修正<s>下面的示例中，"Three" 元素不存在应用了定位的祖先元素，因此该元素相对于紧邻的祖先（iframe 中的 &lt;body&gt; 元素）绝对定位。</s></p>
+相对定位的元素并未脱离文档流，而绝对定位的元素则脱离了文档流。在布置文档流中其它元素时，绝对定位元素不占据空间。绝对定位元素相对于*最近的非 `static` 祖先元素*定位。当这样的祖先元素不存在时，则相对于 ICB（inital container block, 初始包含块）。例子不严谨，待修正~~下面的示例中，"Three" 元素不存在应用了定位的祖先元素，因此该元素相对于紧邻的祖先（iframe 中的 \<body> 元素）绝对定位。~~
 
-<h4 id="HTML_内容">HTML 内容</h4>
+#### HTML 内容
 
-<pre class="brush: html notranslate">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;div class="box" id="two"&gt;Two&lt;/div&gt;
-&lt;div class="box" id="three"&gt;Three&lt;/div&gt;
-&lt;div class="box" id="four"&gt;Four&lt;/div&gt;</pre>
+```html
+<div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
    display: inline-block;
    background: red;
    width: 100px;
@@ -120,18 +115,19 @@ translation_of: Web/CSS/position
    top: 20px;
    left: 20px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Absolute_positioning', '', '', '', 'Web/CSS/position') }}</p>
+{{ EmbedLiveSample('Absolute_positioning', '', '', '', 'Web/CSS/position') }}
 
-<h3 id="Fixed_positioning">固定定位</h3>
+### 固定定位
 
-<p>固定定位与绝对定位相似，但元素的包含块为 viewport 视口。该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素。在下面的示例中，"One" 元素定位在离页面顶部 80px，离页面左侧 20px 的位置。</p>
+固定定位与绝对定位相似，但元素的包含块为 viewport 视口。该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素。在下面的示例中，"One" 元素定位在离页面顶部 80px，离页面左侧 20px 的位置。
 
-<h4 id="HTML_内容_2">HTML 内容</h4>
+#### HTML 内容
 
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;
-  &lt;p&gt;
+```html
+<div class="outer">
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
     Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
@@ -139,8 +135,8 @@ translation_of: Web/CSS/position
     Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
     Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
     Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-  &lt;/p&gt;
-  &lt;p&gt;
+  </p>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
     Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
@@ -148,14 +144,15 @@ translation_of: Web/CSS/position
     Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
     Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
     Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-  &lt;/p&gt;
-  &lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </p>
+  <div class="box" id="one">One</div>
+</div>
+```
 
-<h4 id="CSS_内容">CSS 内容</h4>
+#### CSS 内容
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   background: red;
   width: 100px;
   height: 100px;
@@ -173,61 +170,65 @@ translation_of: Web/CSS/position
   overflow: scroll;
   padding-left: 150px;
 }
-</pre>
+```
 
-<p>当浏览页面顶部时，定位元素处于左上角。在滚动后，它相对于 viewport 视口仍处于同一位置。</p>
+当浏览页面顶部时，定位元素处于左上角。在滚动后，它相对于 viewport 视口仍处于同一位置。
 
-<p>{{ EmbedLiveSample('Fixed_positioning', '', '', '', 'Web/CSS/position') }}</p>
+{{ EmbedLiveSample('Fixed_positioning', '', '', '', 'Web/CSS/position') }}
 
-<h3 id="Sticky_positioning">粘性定位</h3>
+### 粘性定位
 
-<p>粘性定位可以被认为是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。例如：</p>
+粘性定位可以被认为是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。例如：
 
-<pre class="brush: css notranslate">#one { position: sticky; top: 10px; }</pre>
+```css
+#one { position: sticky; top: 10px; }
+```
 
-<p>在 viewport 视口滚动到元素 top 距离小于 10px 之前，元素为相对定位。之后，元素将固定在与顶部距离 10px 的位置，直到 viewport 视口回滚到阈值以下。</p>
+在 viewport 视口滚动到元素 top 距离小于 10px 之前，元素为相对定位。之后，元素将固定在与顶部距离 10px 的位置，直到 viewport 视口回滚到阈值以下。
 
-<p>粘性定位常用于定位字母列表的头部元素。标示 B 部分开始的头部元素在滚动 A 部分时，始终处于 A 的下方。而在开始滚动 B 部分时，B 的头部会固定在屏幕顶部，直到所有 B 的项均完成滚动后，才被 C 的头部替代。</p>
+粘性定位常用于定位字母列表的头部元素。标示 B 部分开始的头部元素在滚动 A 部分时，始终处于 A 的下方。而在开始滚动 B 部分时，B 的头部会固定在屏幕顶部，直到所有 B 的项均完成滚动后，才被 C 的头部替代。
 
-<p>须指定 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}} 或 {{Cssxref("left")}} 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。</p>
+须指定 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}} 或 {{Cssxref("left")}} 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。
 
-<h4 id="HTML_内容_3">HTML 内容</h4>
+#### HTML 内容
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;A&lt;/dt&gt;
-    &lt;dd&gt;Andrew W.K.&lt;/dd&gt;
-    &lt;dd&gt;Apparat&lt;/dd&gt;
-    &lt;dd&gt;Arcade Fire&lt;/dd&gt;
-    &lt;dd&gt;At The Drive-In&lt;/dd&gt;
-    &lt;dd&gt;Aziz Ansari&lt;/dd&gt;
-  &lt;/dl&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;C&lt;/dt&gt;
-    &lt;dd&gt;Chromeo&lt;/dd&gt;
-    &lt;dd&gt;Common&lt;/dd&gt;
-    &lt;dd&gt;Converge&lt;/dd&gt;
-    &lt;dd&gt;Crystal Castles&lt;/dd&gt;
-    &lt;dd&gt;Cursive&lt;/dd&gt;
-  &lt;/dl&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;E&lt;/dt&gt;
-    &lt;dd&gt;Explosions In The Sky&lt;/dd&gt;
-  &lt;/dl&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;T&lt;/dt&gt;
-    &lt;dd&gt;Ted Leo &amp; The Pharmacists&lt;/dd&gt;
-    &lt;dd&gt;T-Pain&lt;/dd&gt;
-    &lt;dd&gt;Thrice&lt;/dd&gt;
-    &lt;dd&gt;TV On The Radio&lt;/dd&gt;
-    &lt;dd&gt;Two Gallants&lt;/dd&gt;
-  &lt;/dl&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <dl>
+    <dt>A</dt>
+    <dd>Andrew W.K.</dd>
+    <dd>Apparat</dd>
+    <dd>Arcade Fire</dd>
+    <dd>At The Drive-In</dd>
+    <dd>Aziz Ansari</dd>
+  </dl>
+  <dl>
+    <dt>C</dt>
+    <dd>Chromeo</dd>
+    <dd>Common</dd>
+    <dd>Converge</dd>
+    <dd>Crystal Castles</dd>
+    <dd>Cursive</dd>
+  </dl>
+  <dl>
+    <dt>E</dt>
+    <dd>Explosions In The Sky</dd>
+  </dl>
+  <dl>
+    <dt>T</dt>
+    <dd>Ted Leo & The Pharmacists</dd>
+    <dd>T-Pain</dd>
+    <dd>Thrice</dd>
+    <dd>TV On The Radio</dd>
+    <dd>Two Gallants</dd>
+  </dl>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -259,16 +260,16 @@ dd {
 dd + dd {
   border-top: 1px solid #CCC
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Sticky_positioning', '', '', '', 'Web/CSS/position') }}</p>
+{{ EmbedLiveSample('Sticky_positioning', '', '', '', 'Web/CSS/position') }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("css.properties.position")}}</p>
+{{Compat("css.properties.position")}}

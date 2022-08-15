@@ -6,17 +6,18 @@ tags:
   - 调整大小
 translation_of: Web/CSS/resize
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p> <strong><code>resize</code></strong> CSS 属性允许你控制一个元素的可调整大小性。</p>
+**`resize`** CSS 属性允许你控制一个元素的可调整大小性。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 resize: none;
 resize: both;
 resize: horizontal;
@@ -28,59 +29,61 @@ resize: inline;
 resize: inherit;
 resize: initial;
 resize: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>元素不能被用户缩放。</dd>
- <dt><code>both</code></dt>
- <dd>允许用户在水平和垂直方向上调整元素的大小。</dd>
- <dt><code>horizontal</code></dt>
- <dd>允许用户在水平方向上调整元素的大小。</dd>
- <dt><code>vertical</code></dt>
- <dd>允许用户在垂直方向上调整元素的大小。</dd>
- <dt><code>block</code> {{experimental_inline}}</dt>
- <dd>Depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value, the element displays a mechanism for allowing the user to resize the element either horizontally or vertically in block direction.</dd>
- <dt><code>inline</code> {{experimental_inline}}</dt>
- <dd>Depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value, the element displays a mechanism for allowing the user to resize the element either horizontally or vertically in inline direction.</dd>
-</dl>
+- `none`
+  - : 元素不能被用户缩放。
+- `both`
+  - : 允许用户在水平和垂直方向上调整元素的大小。
+- `horizontal`
+  - : 允许用户在水平方向上调整元素的大小。
+- `vertical`
+  - : 允许用户在垂直方向上调整元素的大小。
+- `block` {{experimental_inline}}
+  - : Depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value, the element displays a mechanism for allowing the user to resize the element either horizontally or vertically in block direction.
+- `inline` {{experimental_inline}}
+  - : Depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value, the element displays a mechanism for allowing the user to resize the element either horizontally or vertically in inline direction.
 
-<div class="note"><strong>Note:</strong> 如果一个 block 元素的 {{cssxref("overflow")}} 属性被设置成了<code>visible</code>，那么<code>resize</code>属性对该元素无效。</div>
+> **备注：** 如果一个 block 元素的 {{cssxref("overflow")}} 属性被设置成了`visible`，那么`resize`属性对该元素无效。
 
-<h3 id="标准语法">标准语法</h3>
+### 标准语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="Disabling_resizability_of_textareas">Disabling resizability of textareas</h3>
+### Disabling resizability of textareas
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>{{HTMLElement("textarea")}} 元素在{{gecko("2.0")}} (Firefox 4) 中默认是可以进行缩放的。你可以通过下面的 CSS 代码来重写这种行为：</p>
+{{HTMLElement("textarea")}} 元素在{{gecko("2.0")}} (Firefox 4) 中默认是可以进行缩放的。你可以通过下面的 CSS 代码来重写这种行为：
 
-<pre class="brush: css">textarea.example {
+```css
+textarea.example {
   resize: none; /* disables resizability */
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;textarea class="example"&gt;Type some text here.&lt;/textarea&gt;</pre>
+```html
+<textarea class="example">Type some text here.</textarea>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Disabling_resizability_of_textareas","200","100")}}</p>
+{{EmbedLiveSample("Disabling_resizability_of_textareas","200","100")}}
 
-<h3 id="Using_resize_with_arbitrary_elements">Using resize with arbitrary elements</h3>
+### Using resize with arbitrary elements
 
-<p>You can use the resize property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} box contains a resizable paragraph ({{HTMLElement("p")}} element):</p>
+You can use the resize property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} box contains a resizable paragraph ({{HTMLElement("p")}} element):
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.resizable {
+```css
+.resizable {
   resize: both;
   overflow: scroll;
   border: 1px solid black;
@@ -95,32 +98,31 @@ p {
   height: 200px;
   width: 200px;
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="resizable"&gt;
-  &lt;p class="resizable"&gt;
+```html
+<div class="resizable">
+  <p class="resizable">
     This paragraph is resizable, because the CSS resize property is set to 'both' on this
     element.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
+  </p>
+</div>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_resize_with_arbitrary_elements","450","450")}}</p>
+{{EmbedLiveSample("Using_resize_with_arbitrary_elements","450","450")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.resize")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("textarea")}}</li>
-</ul>
+- {{HTMLElement("textarea")}}

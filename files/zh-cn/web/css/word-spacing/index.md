@@ -3,59 +3,61 @@ title: word-spacing
 slug: Web/CSS/word-spacing
 translation_of: Web/CSS/word-spacing
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><code style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-weight: inherit;">属性 </code><code style="font-family: Courier, 'Andale Mono', monospace; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-weight: inherit;">word-spacing</code> 用于声明标签和单词直接的间距行为。</p>
+` 属性 ``word-spacing ` 用于声明标签和单词直接的间距行为。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="language-html" style="margin-top: 0px; margin-bottom: 20px; padding: 1em 0px 1em 30px; border-width: 0px 0px 0px 6px; border-left-style: solid; font-size: 14px; line-height: 19px; color: rgb(77, 78, 83); overflow: auto; font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: normal; position: relative; text-shadow: none; background: 50% 0% rgb(250, 251, 252);"><code class="language-html" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-weight: inherit; font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre; text-shadow: none;">word-spacing: normal;    /* Keyword value */
-word-spacing: 3px;       /* &lt;length&gt; values */
+```html
+word-spacing: normal;    /* Keyword value */
+word-spacing: 3px;       /* <length> values */
 word-spacing: 0.3em;
 
-word-spacing: inherit;</code></pre>
+word-spacing: inherit;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-weight: inherit; font-family: Courier, 'Andale Mono', monospace;">normal</code></dt>
- <dd>正常的单词间距，由当前字体和/或浏览器定义。</dd>
- <dt><code style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-weight: inherit; font-family: Courier, 'Andale Mono', monospace;">&lt;length&gt;</code></dt>
- <dd>通过指定具体的额外间距来增加字体的单词间距。查看 {{cssxref("&lt;length&gt;")}} 了解可用单位。</dd>
- <dt><code style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-weight: inherit; font-family: Courier, 'Andale Mono', monospace;">&lt;percentage&gt;</code></dt>
- <dd>通过指定受影响字符的宽度的百分比的方式来增加的间距。</dd>
-</dl>
+- `normal`
+  - : 正常的单词间距，由当前字体和/或浏览器定义。
+- `<length>`
+  - : 通过指定具体的额外间距来增加字体的单词间距。查看 {{cssxref("&lt;length&gt;")}} 了解可用单位。
+- `<percentage>`
+  - : 通过指定受影响字符的宽度的百分比的方式来增加的间距。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
-<p><a href="https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax">How to read CSS syntax.</a></p>
+[How to read CSS syntax.](https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax)
 
 {{csssyntax("word-spacing")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>以下 CSS 代码：</p>
+以下 CSS 代码：
 
-<pre class="brush: css  language-css" style="margin-top: 0px; margin-bottom: 20px; padding: 1em 0px 1em 30px; border-width: 0px 0px 0px 6px; border-left-style: solid; font-size: 14px; line-height: 19px; color: rgb(77, 78, 83); overflow: auto; font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: normal; position: relative; text-shadow: none; background: 50% 0% rgb(250, 251, 252);"><code class="language-css" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-weight: inherit; font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre; text-shadow: none;">#mozdiv1 {
+```css
+#mozdiv1 {
   word-spacing: 15px;
 }
 
 #mozdiv2 {
   word-spacing: 5em;
-}</code></pre>
+}
+```
 
-<p>会为两个包含如下内容 {{ HTMLElement("div") }} 标签添加如下样式：</p>
+会为两个包含如下内容 {{ HTMLElement("div") }} 标签添加如下样式：
 
-<p><img alt="example.png" class="default internal" src="https://developer.mozilla.org/@api/deki/files/6103/=example.png" style="border: 0px; height: auto !important; margin: 0px; max-width: 100%; padding: 0px;"></p>
+![example.png](https://developer.mozilla.org/@api/deki/files/6103/=example.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}

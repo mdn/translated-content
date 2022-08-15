@@ -8,11 +8,12 @@ tags:
   - 非标准
 translation_of: Web/CSS/-moz-outline-radius
 ---
-<div>{{CSSRef}}{{Non-standard_Header}}</div>
+{{CSSRef}}{{Non-standard_Header}}
 
-<p>在包括 Firefox 在内的 Mozilla 的应用里， <strong><code>-moz-outline-radius</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> 属性可以用作给一个元素 {{cssxref("outline")}} 圆角。</p>
+在包括 Firefox 在内的 Mozilla 的应用里， **`-moz-outline-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性可以用作给一个元素 {{cssxref("outline")}} 圆角。
 
-<pre class="brush:css">/* 一个值 */
+```css
+/* 一个值 */
 -moz-outline-radius: 25px;
 
 /* 两个值 */
@@ -28,68 +29,66 @@ translation_of: Web/CSS/-moz-outline-radius
 -moz-outline-radius: inherit;
 -moz-outline-radius: initial;
 -moz-outline-radius: unset;
-</pre>
+```
 
-<p>这个属性是以下四个属性的简写：{{cssxref("-moz-outline-radius-topleft")}}、 {{cssxref("-moz-outline-radius-topright")}}、 {{cssxref("-moz-outline-radius-bottomright")}} 和 {{cssxref("-moz-outline-radius-bottomleft")}}。</p>
+这个属性是以下四个属性的简写：{{cssxref("-moz-outline-radius-topleft")}}、 {{cssxref("-moz-outline-radius-topright")}}、 {{cssxref("-moz-outline-radius-bottomright")}} 和 {{cssxref("-moz-outline-radius-bottomleft")}}。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<div class="note">省略的 outlines 和 <code>&lt;percentage&gt;</code> 的值与 {{cssxref("border-radius")}}中描述的语法一致。</div>
+> **备注：** 省略的 outlines 和 `<percentage>` 的值与 {{cssxref("border-radius")}}中描述的语法一致。
 
-<p>一个、两个、三个或四个 <code>&lt;outline-radius&gt;</code> 的值，代表着以下数值之一：</p>
+一个、两个、三个或四个 `<outline-radius>` 的值，代表着以下数值之一：
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>可能的值请参考 {{cssxref("&lt;length&gt;")}} 。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>一个 {{cssxref("&lt;percentage&gt;")}}；详情请参考 {{cssxref("border-radius")}} 。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 可能的值请参考 {{cssxref("&lt;length&gt;")}} 。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 一个 {{cssxref("&lt;percentage&gt;")}}；详情请参考 {{cssxref("border-radius")}} 。
 
-<ul>
- <li>如果仅有一个值，这个值应用到全部四个角。</li>
- <li>如果设置了两个值，第一个值应用于左上角个右下角，第二个值应用于右上角和左下角。</li>
- <li>如果设置了三个值，第一个值应用于左上角，第二个值应用于右上角个左下角，第三个值应用于右下角。</li>
- <li>如果设置了四个值，第一个值应用于左上角，第二个值应用于右上角，第三个值应用于右下角，第四个值应用于左下角。</li>
-</ul>
+- 如果仅有一个值，这个值应用到全部四个角。
+- 如果设置了两个值，第一个值应用于左上角个右下角，第二个值应用于右上角和左下角。
+- 如果设置了三个值，第一个值应用于左上角，第二个值应用于右上角个左下角，第三个值应用于右下角。
+- 如果设置了四个值，第一个值应用于左上角，第二个值应用于右上角，第三个值应用于右下角，第四个值应用于左下角。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This element has a rounded outline!&lt;/p&gt;</pre>
+```html
+<p>This element has a rounded outline!</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 5px;
   border: 1px solid black;
   outline: dotted red;
   -moz-outline-radius: 12% 1em 25px;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="备注">备注</h2>
+## 备注
 
-<ul>
- <li>直至 Firefox 50 之前，<code>dotted</code> 或 <code>dashed</code> 圆角被渲染为 solid ，详见 {{bug("382721")}}</li>
- <li>未来的 Gecko/Firefox 版本可能完全弃用这个属性。详见 {{bug("593717")}}.</li>
-</ul>
+- 直至 Firefox 50 之前，`dotted` 或 `dashed` 圆角被渲染为 solid ，详见 {{bug("382721")}}
+- 未来的 Gecko/Firefox 版本可能完全弃用这个属性。详见 {{bug("593717")}}.
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>这个属性没有在任何 CSS 标准中被定义。</p>
+这个属性没有在任何 CSS 标准中被定义。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.-moz-outline-radius")}}</p>
+{{Compat("css.properties.-moz-outline-radius")}}

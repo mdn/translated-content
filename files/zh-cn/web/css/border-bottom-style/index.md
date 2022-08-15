@@ -3,11 +3,12 @@ title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 translation_of: Web/CSS/border-bottom-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-bottom-style</code></strong> <a href="/en/CSS">CSS</a> property sets the line style of an element's bottom {{cssxref("border")}}.</p>
+The **`border-bottom-style`** [CSS](/en/CSS) property sets the line style of an element's bottom {{cssxref("border")}}.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-bottom-style: none;
 border-bottom-style: hidden;
 border-bottom-style: dotted;
@@ -23,48 +24,51 @@ border-bottom-style: outset;
 border-bottom-style: inherit;
 border-bottom-style: initial;
 border-bottom-style: unset;
-</pre>
+```
 
-<div class="note"><strong>Note:</strong> The specification doesn't define how borders of different styles connect in the corners.</div>
+> **备注：** The specification doesn't define how borders of different styles connect in the corners.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>border-bottom-style</code> property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.</p>
+The `border-bottom-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>这是一种可显示 border-bottom-style 所有属性的标签。</p>
+这是一种可显示 border-bottom-style 所有属性的标签。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Define look of the table */
+```css
+/* Define look of the table */
 table {
   border-width: 3px;
   background-color: #52E385;
@@ -83,23 +87,22 @@ tr, td {
 .b7 {border-bottom-style: groove;}
 .b8 {border-bottom-style: ridge;}
 .b9 {border-bottom-style: inset;}
-.b10 {border-bottom-style: outset;}</pre>
+.b10 {border-bottom-style: outset;}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Examples', 300, 200) }}</p>
+{{ EmbedLiveSample('Examples', 300, 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.border-bottom-style")}}
 
-<h2 id="See_Also">See also</h2>
+## See also
 
-<ul>
- <li>The other style-related border properties: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-top-style") }}, and {{ Cssxref("border-style") }}.</li>
- <li>The other bottom-border-related properties: {{ Cssxref("border-bottom") }}, {{ Cssxref("border-bottom-color") }}, and {{ Cssxref("border-bottom-width") }}.</li>
-</ul>
+- The other style-related border properties: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-top-style") }}, and {{ Cssxref("border-style") }}.
+- The other bottom-border-related properties: {{ Cssxref("border-bottom") }}, {{ Cssxref("border-bottom-color") }}, and {{ Cssxref("border-bottom-width") }}.

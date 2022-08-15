@@ -3,17 +3,18 @@ title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 translation_of: Web/CSS/scrollbar-width
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>scrollbar-width</code></strong> 属性允许开发者设置滚动条出现时的厚度</p>
+**`scrollbar-width`** 属性允许开发者设置滚动条出现时的厚度
 
-<p>{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}</p>
+{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 scrollbar-width: auto;
 scrollbar-width: thin;
 scrollbar-width: none;
@@ -22,72 +23,59 @@ scrollbar-width: none;
 scrollbar-width: inherit;
 scrollbar-width: initial;
 scrollbar-width: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><var>&lt;scrollbar-width&gt;</var></dt>
- <dd>将滚动条的宽度定义为数值宽度或者预定义宽度，当被定义为预定义宽度时，则必须为下列值之一：
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>auto</code></td>
-    <td>系统默认的滚动条宽度</td>
-   </tr>
-   <tr>
-    <td><code>thin</code></td>
-    <td>系统提供的瘦滚动条宽度，或者比默认滚动条宽度更窄的宽度</td>
-   </tr>
-   <tr>
-    <td><code>none</code></td>
-    <td>不显示滚动条，但是该元素依然可以滚动</td>
-   </tr>
-  </tbody>
- </table>
+- _\<scrollbar-width>_
 
- <p>注意：scrollbar-width 的长度值有可能从规范中删除，scrollbar-width 属性本身也是如此。 (<a href="https://github.com/w3c/csswg-drafts/issues/1958">Issue 1958</a>)</p>
+  - : 将滚动条的宽度定义为数值宽度或者预定义宽度，当被定义为预定义宽度时，则必须为下列值之一：
 
- <div class="note">
- <p><strong>Note</strong>: User Agents must apply any <code>scrollbar-width</code> value set on the root element to the viewport.</p>
- </div>
- </dd>
-</dl>
+    | `auto` | 系统默认的滚动条宽度                                   |
+    | ------ | ------------------------------------------------------ |
+    | `thin` | 系统提供的瘦滚动条宽度，或者比默认滚动条宽度更窄的宽度 |
+    | `none` | 不显示滚动条，但是该元素依然可以滚动                   |
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+    注意：scrollbar-width 的长度值有可能从规范中删除，scrollbar-width 属性本身也是如此。 ([Issue 1958](https://github.com/w3c/csswg-drafts/issues/1958))
+
+    > **备注：** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
+
+### Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-width: thin;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.&lt;/div&gt;</pre>
+```html
+<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
- <li>{{CSSxRef("::-webkit-scrollbar")}}</li>
-</ul>
+- {{CSSxRef("-ms-overflow-style")}}
+- {{CSSxRef("::-webkit-scrollbar")}}

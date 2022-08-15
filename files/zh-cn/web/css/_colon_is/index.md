@@ -1,6 +1,6 @@
 ---
 title: ':is() (:matches(), :any())'
-slug: 'Web/CSS/:is'
+slug: Web/CSS/:is
 tags:
   - ':is'
   - CSS
@@ -9,21 +9,18 @@ tags:
   - Selectors
   - Web
   - 伪类
-translation_of: 'Web/CSS/:is'
+translation_of: Web/CSS/:is
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 在 <a href="https://github.com/w3c/csswg-drafts/issues/3258">CSSWG issue #3258</a> 讨论后 <code>:match()</code> 改名为 <code>:is()</code>。</p>
-</div>
+> **备注：** 在 [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) 讨论后 `:match()` 改名为 `:is()`。
 
-<p>The <strong><code>:is()</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 函数将选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。</p>
+The **`:is()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 函数将选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
 
-<div>
-<p>注意，许多浏览器通过一个更旧的、带前缀的伪类:any() 来支持这个功能，包括旧版本的 Chrome、Firefox 和 Safari。这与 <code>:is()</code> 的工作方式完全相同，只是它需要厂商前缀，不支持<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors">复杂的选择器</a>。</p>
-</div>
+注意，许多浏览器通过一个更旧的、带前缀的伪类:any() 来支持这个功能，包括旧版本的 Chrome、Firefox 和 Safari。这与 `:is()` 的工作方式完全相同，只是它需要厂商前缀，不支持[复杂的选择器](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors)。
 
-<pre class="brush: css no-line-numbers">/* 选择 header, main, footer 里的任意一个悬浮状态的段落 (p 标签) */
+```css
+/* 选择 header, main, footer 里的任意一个悬浮状态的段落 (p 标签) */
 :is(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
@@ -39,9 +36,9 @@ footer p:hover {
 
 
 /* 向后兼容的版本:-*-any()
-<code> (It is not possible to group selectors into single rule,
-   because presence of invalid selector would invalidate whole rule.)</code>*/
-<code>:-webkit-any(header, main, footer) p:hover {
+ (It is not possible to group selectors into single rule,
+   because presence of invalid selector would invalidate whole rule.)*/
+:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -52,32 +49,36 @@ footer p:hover {
 :matches(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
-}</code></pre>
+}
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{CSSSyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Cross-browser_example">Cross-browser example</h3>
+### Cross-browser example
 
-<pre class="brush: html">&lt;header&gt;
-  &lt;p&gt;This is my header paragraph&lt;/p&gt;
-&lt;/header&gt;
+```html
+<header>
+  <p>This is my header paragraph</p>
+</header>
 
-&lt;main&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;p&gt;This is my first&lt;/p&gt;&lt;p&gt;list item&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;This is my second&lt;/p&gt;&lt;p&gt;list item&lt;/p&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/main&gt;
+<main>
+  <ul>
+    <li><p>This is my first</p><p>list item</p></li>
+    <li><p>This is my second</p><p>list item</p></li>
+  </ul>
+</main>
 
-&lt;footer&gt;
-  &lt;p&gt;This is my footer paragraph&lt;/p&gt;
-&lt;/footer&gt;</pre>
+<footer>
+  <p>This is my footer paragraph</p>
+</footer>
+```
 
-<pre>:-webkit-any(header, main, footer) p:hover {
+```
+:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -95,9 +96,11 @@ footer p:hover {
 :is(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
-}</pre>
+}
+```
 
-<pre class="brush: js">let matchedItems;
+```js
+let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
@@ -113,7 +116,7 @@ try {
   }
 }
 
-for(let i = 0; i &lt; matchedItems.length; i++) {
+for(let i = 0; i < matchedItems.length; i++) {
   applyHandler(matchedItems[i]);
 }
 
@@ -121,15 +124,17 @@ function applyHandler(elem) {
   elem.addEventListener('click', function(e) {
     alert('这是一个包含于' + e.target.parentNode.nodeName + '的段落');
   });
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Cross-browser_example', '100%', '300')}}</p>
+{{EmbedLiveSample('Cross-browser_example', '100%', '300')}}
 
-<h3 id="简化列表选择器">简化列表选择器</h3>
+### 简化列表选择器
 
-<p><code>:is()</code> 伪类可以大大简化 CSS 选择器。例如，下面的 CSS:</p>
+`:is()` 伪类可以大大简化 CSS 选择器。例如，下面的 CSS:
 
-<pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
+```css
+/* 3-deep (or more) unordered lists use a square */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
 ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
 ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
@@ -144,30 +149,35 @@ dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
 dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
   list-style-type: square;
 }
-</pre>
+```
 
-<p>... 可以被替换为：</p>
+... 可以被替换为：
 
-<pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
+```css
+/* 3-deep (or more) unordered lists use a square */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
   list-style-type: square;
-}</pre>
+}
+```
 
-<p>但是，不要像下面那么做: (参见 <a href="#Issues_with_performance_and_specificity">the section on performance</a> 。)</p>
+但是，不要像下面那么做: (参见 [the section on performance](#Issues_with_performance_and_specificity) 。)
 
-<pre class="brush: css">:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
+```css
+:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
   list-style-type: square;
-}</pre>
+}
+```
 
-<h3 id="Notes">Simplifying section selectors</h3>
+### Simplifying section selectors
 
-<p><code>:is</code> 伪类在处理 HTML5 <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document">sections and headings</a>特别有用。 由于 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}},  {{HTMLElement("nav")}} 经常嵌套在一起，没有 <code>:is()</code>的话匹配其他元素将会很棘手。</p>
+`:is` 伪类在处理 HTML5 [sections and headings](/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document)特别有用。 由于 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} 经常嵌套在一起，没有 `:is()`的话匹配其他元素将会很棘手。
 
-<p>例如，在没有 <code>:is()</code>的情况下，在不同深度对所有{{HTMLElement("h1")}} 素进行样式化可能非常复杂：</p>
+例如，在没有 `:is()`的情况下，在不同深度对所有{{HTMLElement("h1")}} 素进行样式化可能非常复杂：
 
-<pre class="brush: css">/* Level 0 */
+```css
+/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -184,11 +194,12 @@ nav section h1, nav article h1, nav aside h1, nav nav h1, {
 }
 /* Level 3 */
 /* ... don't even think about it! */
-</pre>
+```
 
-<p>使用 <code>:is()</code>之后，它变的非常简单：</p>
+使用 `:is()`之后，它变的非常简单：
 
-<pre class="brush: css">/* Level 0 */
+```css
+/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -206,65 +217,65 @@ h1 {
 :is(section, article, aside, nav)
 :is(section, article, aside, nav) h1 {
   font-size: 15px;
-}</pre>
+}
+```
 
-<h3 id="Avoiding_selector_list_invalidation">Avoiding selector list invalidation</h3>
+### Avoiding selector list invalidation
 
-<p>Unlike <a href="/zh-CN/docs/Web/CSS/Selector_list">selector lists</a>, the <code>:is()</code> pseudo-class doesn't get invalidated when one of the selectors passed to it isn't supported by the browser.</p>
+Unlike [selector lists](/zh-CN/docs/Web/CSS/Selector_list), the `:is()` pseudo-class doesn't get invalidated when one of the selectors passed to it isn't supported by the browser.
 
-<pre><code>:is(:valid, :unsupported) {
+```
+:is(:valid, :unsupported) {
   ...
-}</code></pre>
+}
+```
 
-<p>Will still parse correctly and match <code>:valid</code> even in browsers which don't support <code>:unsupported</code>, whereas:</p>
+Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
-<pre><code>:valid, :unsupported {
+```
+:valid, :unsupported {
   ...
-}</code></pre>
+}
+```
 
-<p>Will be ignored in browsers which don't support <code>:unsupported</code> even if they support <code>:valid</code>.</p>
+Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
 
-<h2 id="Notes_2">Notes</h2>
+## Notes
 
-<h3 id="Issues_with_performance_and_specificity">any(): — Issues with performance and specificity</h3>
+### any(): — Issues with performance and specificity
 
-<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> tracks an issue with Gecko where the specificity of <code>:-moz-any()</code> is incorrect. The current (as of Firefox 12) implementation puts <code>:-moz-any()</code> in the category of universal rules, meaning using it as the rightmost selector will be slower than using an ID, class, or tag as the rightmost selector.</p>
+[Bug 561154](https://bugzilla.mozilla.org/show_bug.cgi?id=561154) tracks an issue with Gecko where the specificity of `:-moz-any()` is incorrect. The current (as of Firefox 12) implementation puts `:-moz-any()` in the category of universal rules, meaning using it as the rightmost selector will be slower than using an ID, class, or tag as the rightmost selector.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: css">.a &gt; :-moz-any(.b, .c)
-</pre>
+```css
+.a > :-moz-any(.b, .c)
+```
 
-<p>... is slower than:</p>
+... is slower than:
 
-<pre class="brush: css">.a &gt; .b, .a &gt; .c
-</pre>
+```css
+.a > .b, .a > .c
+```
 
-<p>... and the following is fast:</p>
+... and the following is fast:
 
-<pre class="brush: css">:-moz-any(.a, .d) &gt; .b, :-moz-any(.a, .d) &gt; .c</pre>
+```css
+:-moz-any(.a, .d) > .b, :-moz-any(.a, .d) > .c
+```
 
-<p><code>:is()</code> aims to fix such problems.</p>
+`:is()` aims to fix such problems.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("css.selectors.is")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.is")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like <code>:is()</code>, but with 0 <a href="/zh-CN/docs/Web/CSS/Specificity">specificity</a>.</li>
- <li><a href="/zh-CN/docs/Web/CSS/Selector_list">Selector list</a></li>
-</ul>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/Web_Components">Web components</a></li>
-</ul>
+- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like `:is()`, but with 0 [specificity](/zh-CN/docs/Web/CSS/Specificity).
+- [Selector list](/zh-CN/docs/Web/CSS/Selector_list)
+- [Web components](/zh-CN/docs/Web/Web_Components)

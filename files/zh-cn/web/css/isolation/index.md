@@ -9,50 +9,53 @@ tags:
   - 布局
 translation_of: Web/CSS/isolation
 ---
-<p>{{CSSRef()}}</p>
+{{CSSRef()}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code>isolation</code> CSS 属性定义该元素是否必须创建一个新的层叠上下文（{{glossary("stacking context")}}）。</p>
+`isolation` CSS 属性定义该元素是否必须创建一个新的层叠上下文（{{glossary("stacking context")}}）。
 
-<p>该属性的主要作用是当和{{cssxref("background-blend-mode")}}属性一起使用时，可以只混合一个指定元素栈的背景：它允许使一组元素从它们后面的背景中独立出来，只混合这组元素的背景。</p>
+该属性的主要作用是当和{{cssxref("background-blend-mode")}}属性一起使用时，可以只混合一个指定元素栈的背景：它允许使一组元素从它们后面的背景中独立出来，只混合这组元素的背景。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="twopartsyntaxbox"><code>Formal syntax:  {{csssyntax("isolation")}}</code></pre>
+```
+Formal syntax:  {{csssyntax("isolation")}}
+```
 
-<pre>isolation: auto;
+```
+isolation: auto;
 isolation: isolate;
 
 isolation: initial;
 isolation: inherit;
 isolation: unset;
-</pre>
+```
 
-<h3 id="Values">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>该关键字定义只有在该元素的属性需要的时候才会创建一个新的元素栈环境。</dd>
- <dt><code>isolate</code></dt>
- <dd>该关键字定义一个新的元素栈环境会被创建。</dd>
-</dl>
+- `auto`
+  - : 该关键字定义只有在该元素的属性需要的时候才会创建一个新的元素栈环境。
+- `isolate`
+  - : 该关键字定义一个新的元素栈环境会被创建。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;div id="b" class="a"&gt;
-  &lt;div id="d"&gt;
-    &lt;div class="a c"&gt;auto&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div id="e"&gt;
-    &lt;div class="a c"&gt;isolate&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="b" class="a">
+  <div id="d">
+    <div class="a c">auto</div>
+  </div>
+  <div id="e">
+    <div class="a c">isolate</div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">.a {
+```css
+.a {
   background-color: rgb(0,255,0);
 }
 #b {
@@ -71,21 +74,20 @@ isolation: unset;
 }
 #e {
   isolation: isolate;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('%E7%A4%BA%E4%BE%8B', "230", "230") }}</p>
+{{ EmbedLiveSample('%E7%A4%BA%E4%BE%8B', "230", "230") }}
 
-<h2 id="Examples">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.isolation")}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}

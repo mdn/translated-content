@@ -8,21 +8,18 @@ tags:
   - 参考
 translation_of: Web/CSS/align-items
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
+CSS align-items 属性将所有直接子节点上的 align-self 值设置为一个组。align-self 属性设置项目在其包含块中在交叉轴方向上的对齐方式。
 
+{{EmbedInteractiveExample("pages/css/align-items.html")}}
 
-<p>CSS align-items 属性将所有直接子节点上的 align-self 值设置为一个组。align-self 属性设置项目在其包含块中在交叉轴方向上的对齐方式。</p>
+目前，Flexbox 和 CSS 网格布局支持此属性。在 Flexbox 中，它控制十字轴上项目的对齐方式，在网格布局中，它控制块轴上项目的对齐方式。
 
-<div>{{EmbedInteractiveExample("pages/css/align-items.html")}}</div>
+## 语法
 
-
-
-<p>目前，Flexbox 和 CSS 网格布局支持此属性。在 Flexbox 中，它控制十字轴上项目的对齐方式，在网格布局中，它控制块轴上项目的对齐方式。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css notranslate">/* Basic keywords */
+```css
+/* Basic keywords */
 align-items: normal;
 align-items: stretch;
 
@@ -45,61 +42,58 @@ align-items: unsafe center;
 /* Global values */
 align-items: inherit;
 align-items: initial;
-align-items: unset;</pre>
+align-items: unset;
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>这个关键字的效果取决于我们处在什么布局模式中：
- <ul>
-  <li>在绝对定位的布局中，对于被替代的绝对定位盒子，这个效果和<code>start?</code>的效果的一样；对于其他所有绝对定位的盒子，这个效果和<code>stretch</code>的效果一样。 </li>
-  <li>在绝对定位布局的静态位置上，效果和<code>stretch</code>一样。</li>
-  <li>对于那些弹性项目而言，效果和<code>stretch</code>一样。</li>
-  <li>对于那些网格项目而言，效果和<code>stretch</code>一样，除了有部分比例或者一个固定大小的盒子的效果像<code>start</code>。</li>
-  <li>这个属性不适用于块级盒子和表格。</li>
- </ul>
- </dd>
-</dl>
+- `normal`
 
-<dl>
- <dt><code>flex-start</code></dt>
- <dd>元素向侧轴起点对齐。</dd>
- <dt><code>flex-end</code></dt>
- <dd>元素向侧轴终点对齐。</dd>
- <dt><code>start</code></dt>
- <dd>The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.</dd>
- <dt><code>end</code></dt>
- <dd>The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.</dd>
- <dt><code>center</code></dt>
- <dd>元素在侧轴居中。如果元素在侧轴上的高度高于其容器，那么在两个方向上溢出距离相同。</dd>
- <dt><code>left</code></dt>
- <dd>The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>right</code></dt>
- <dd>The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>self-start</code></dt>
- <dd>The items is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.</dd>
- <dt><code>self-end</code></dt>
- <dd>The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.</dd>
- <dt><code>baseline</code>、<code>first baseline</code>、<code>last baseline</code></dt>
- <dd>所有元素向基线对齐。侧轴起点到元素基线距离最大的元素将会于侧轴起点对齐以确定基线。</dd>
- <dt><code>stretch</code></dt>
- <dd>弹性项包含外边距的交叉轴尺寸被拉升至行高</dd>
- <dt><code>safe</code></dt>
- <dd>Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.</dd>
-</dl>
+  - : 这个关键字的效果取决于我们处在什么布局模式中：
 
-<h3 id="语法格式">语法格式</h3>
+    - 在绝对定位的布局中，对于被替代的绝对定位盒子，这个效果和`start?`的效果的一样；对于其他所有绝对定位的盒子，这个效果和`stretch`的效果一样。
+    - 在绝对定位布局的静态位置上，效果和`stretch`一样。
+    - 对于那些弹性项目而言，效果和`stretch`一样。
+    - 对于那些网格项目而言，效果和`stretch`一样，除了有部分比例或者一个固定大小的盒子的效果像`start`。
+    - 这个属性不适用于块级盒子和表格。
+
+- `flex-start`
+  - : 元素向侧轴起点对齐。
+- `flex-end`
+  - : 元素向侧轴终点对齐。
+- `start`
+  - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
+- `end`
+  - : The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.
+- `center`
+  - : 元素在侧轴居中。如果元素在侧轴上的高度高于其容器，那么在两个方向上溢出距离相同。
+- `left`
+  - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+- `right`
+  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+- `self-start`
+  - : The items is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
+- `self-end`
+  - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
+- `baseline`、`first baseline`、`last baseline`
+  - : 所有元素向基线对齐。侧轴起点到元素基线距离最大的元素将会于侧轴起点对齐以确定基线。
+- `stretch`
+  - : 弹性项包含外边距的交叉轴尺寸被拉升至行高
+- `safe`
+  - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
+- `unsafe`
+  - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
+
+### 语法格式
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[4] notranslate">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   align-items: center; /* Can be changed in the live sample */
@@ -116,7 +110,7 @@ align-items: unset;</pre>
   grid-template-columns: repeat(auto-fill, 50px);
 }
 
-div &gt; div {
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -162,65 +156,65 @@ select {
 
 .row {
   margin-top: 10px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;align-items: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="normal"&gt;normal&lt;/option&gt;
-    &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-    &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-    &lt;option value="center" selected&gt;center&lt;/option&gt;
-    &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-    &lt;option value="stretch"&gt;stretch&lt;/option&gt;
+<div class="row">
+  <label for="values">align-items: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="baseline">baseline</option>
+    <option value="stretch">stretch</option>
 
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="self-start"&gt;self-start&lt;/option&gt;
-    &lt;option value="self-end"&gt;self-end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="self-start">self-start</option>
+    <option value="self-end">self-end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
 
-    &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-    &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
 
-    &lt;option value="safe center"&gt;safe center&lt;/option&gt;
-    &lt;option value="unsafe center"&gt;unsafe center&lt;/option&gt;
-    &lt;option value="safe right"&gt;safe right&lt;/option&gt;
-    &lt;option value="unsafe right"&gt;unsafe right&lt;/option&gt;
-    &lt;option value="safe end"&gt;safe end&lt;/option&gt;
-    &lt;option value="unsafe end"&gt;unsafe end&lt;/option&gt;
-    &lt;option value="safe self-end"&gt;safe self-end&lt;/option&gt;
-    &lt;option value="unsafe self-end"&gt;unsafe self-end&lt;/option&gt;
-    &lt;option value="safe flex-end"&gt;safe flex-end&lt;/option&gt;
-    &lt;option value="unsafe flex-end"&gt;unsafe flex-end&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe self-end">safe self-end</option>
+    <option value="unsafe self-end">unsafe self-end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
 
-<div class="hidden">
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js notranslate">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -231,25 +225,22 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "260px", "290px")}}</p>
+{{EmbedLiveSample("Examples", "260px", "290px")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes">使用 CSS 弹性框</a></li>
-</ul>
+- [使用 CSS 弹性框](/zh-CN/docs/CSS/Using_CSS_flexible_boxes)

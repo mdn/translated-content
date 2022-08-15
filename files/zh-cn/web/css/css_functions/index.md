@@ -10,207 +10,187 @@ tags:
   - var()
 translation_of: Web/CSS/CSS_Functions
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS 功能符号</strong>是一种 <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS 值</a>，可以表示更复杂的数据类型或调用特殊的数据处理或计算。</p>
+**CSS 功能符号**是一种 [CSS 值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)，可以表示更复杂的数据类型或调用特殊的数据处理或计算。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox notranslate">selector {
+```
+selector {
   property: functional-notation( [argument]? [, argument]! );
-}</pre>
+}
+```
 
-<p>The syntax starts with the <strong>name of the functional notation</strong>, followed by a left parenthesis <code>(</code>. Next up are the notation argument(s), and the function is finished off with a closing parenthesis <code>)</code>.</p>
+The syntax starts with the **name of the functional notation**, followed by a left parenthesis `(`. Next up are the notation argument(s), and the function is finished off with a closing parenthesis `)`.
 
-<p>Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.</p>
+Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
-<h2 id="索引">索引</h2>
+## 索引
 
-<p>Functional notation defined by a set of CSS specifications includes the following:</p>
+Functional notation defined by a set of CSS specifications includes the following:
 
-<div class="index">A
+A
 
-<ul>
- <li>{{CSSxRef("abs", "abs()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("acos", "acos()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("font-variant-alternates/annotation()", "annotation()")}} (font)</li>
- <li>{{CSSxRef("asin", "asin()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("atan", "atan()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("atan2", "atan2()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("attr")}}</li>
-</ul>
+- {{CSSxRef("abs", "abs()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("acos", "acos()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("font-variant-alternates/annotation()", "annotation()")}} (font)
+- {{CSSxRef("asin", "asin()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("atan", "atan()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("atan2", "atan2()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("attr")}}
+
 B
 
-<ul>
- <li>{{CSSxRef("filter-function/blur", "blur()")}} (filter)</li>
- <li>{{CSSxRef("filter-function/brightness", "brightness()")}} (filter)</li>
-</ul>
+- {{CSSxRef("filter-function/blur", "blur()")}} (filter)
+- {{CSSxRef("filter-function/brightness", "brightness()")}} (filter)
+
 C
 
-<ul>
- <li>{{CSSxRef("calc")}} (math)</li>
- <li>{{CSSxRef("font-variant-alternates/character-variant()", "character-variant()")}} (font)</li>
- <li>{{CSSxRef("circle", "circle()")}} (shape)</li>
- <li>{{CSSxRef("clamp")}} (math)</li>
- <li>{{CSSxRef("color()")}} (colors) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("conic-gradient")}}</li>
- <li>{{CSSxRef("cos", "cos()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("counter")}}</li>
- <li>{{CSSxRef("counters")}}</li>
- <li>{{CSSxRef("filter-function/contrast", "contrast()")}} (filter)</li>
- <li>{{CSSxRef("cross-fade")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("cubic-bezier", "cubic-bezier()")}}</li>
-</ul>
+- {{CSSxRef("calc")}} (math)
+- {{CSSxRef("font-variant-alternates/character-variant()", "character-variant()")}} (font)
+- {{CSSxRef("circle", "circle()")}} (shape)
+- {{CSSxRef("clamp")}} (math)
+- {{CSSxRef("color()")}} (colors) {{Experimental_Inline}}
+- {{CSSxRef("conic-gradient")}}
+- {{CSSxRef("cos", "cos()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("counter")}}
+- {{CSSxRef("counters")}}
+- {{CSSxRef("filter-function/contrast", "contrast()")}} (filter)
+- {{CSSxRef("cross-fade")}} {{Experimental_Inline}}
+- {{CSSxRef("cubic-bezier", "cubic-bezier()")}}
+
 D
 
-<ul>
- <li>{{CSSxRef("device-cmyk", "device-cmyk()")}} (colors) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}} (filter)</li>
-</ul>
+- {{CSSxRef("device-cmyk", "device-cmyk()")}} (colors) {{Experimental_Inline}}
+- {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}} (filter)
+
 E
 
-<ul>
- <li>{{CSSxRef("element")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("env")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("ellipse", "ellipse()")}} (shape)</li>
- <li>{{CSSxRef("exp", "exp()")}} (math) {{Experimental_Inline}}</li>
-</ul>
+- {{CSSxRef("element")}} {{Experimental_Inline}}
+- {{CSSxRef("env")}} {{Experimental_Inline}}
+- {{CSSxRef("ellipse", "ellipse()")}} (shape)
+- {{CSSxRef("exp", "exp()")}} (math) {{Experimental_Inline}}
+
 F
 
-<ul>
- <li>{{CSSxRef("fit-content", "fit-content()")}}</li>
- <li>{{CSSxRef("format", "format()")}}</li>
-</ul>
+- {{CSSxRef("fit-content", "fit-content()")}}
+- {{CSSxRef("format", "format()")}}
+
 G
 
-<ul>
- <li>{{CSSxRef("filter-function/grayscale", "grayscale()")}} (filter)</li>
-</ul>
+- {{CSSxRef("filter-function/grayscale", "grayscale()")}} (filter)
+
 H
 
-<ul>
- <li>{{CSSxRef("hsl", "hsl()")}} (colors)</li>
- <li>{{CSSxRef("hsla", "hsla()")}} (colors)</li>
- <li>{{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}} (filter)</li>
- <li>{{CSSxRef("hwb", "hwb()")}} (colors) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("hypot", "hypot()")}} (math) {{Experimental_Inline}}</li>
-</ul>
+- {{CSSxRef("hsl", "hsl()")}} (colors)
+- {{CSSxRef("hsla", "hsla()")}} (colors)
+- {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}} (filter)
+- {{CSSxRef("hwb", "hwb()")}} (colors) {{Experimental_Inline}}
+- {{CSSxRef("hypot", "hypot()")}} (math) {{Experimental_Inline}}
+
 I
 
-<ul>
- <li>{{CSSxRef("imagefunction", "image()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("image-set")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("inset()")}} (shape)</li>
- <li>{{CSSxRef("filter-function/invert", "invert()")}} (filter)</li>
-</ul>
+- {{CSSxRef("imagefunction", "image()")}} {{Experimental_Inline}}
+- {{CSSxRef("image-set")}} {{Experimental_Inline}}
+- {{CSSxRef("inset()")}} (shape)
+- {{CSSxRef("filter-function/invert", "invert()")}} (filter)
+
 L
 
-<ul>
- <li>{{CSSxRef("lab", "lab()")}} (colors) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("lch", "lch()")}} (colors) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("leader", "leader()")}}</li>
- <li>{{CSSxRef("linear-gradient")}}</li>
- <li>{{CSSxRef("local", "local()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("log", "log()")}} (math) {{Experimental_Inline}}</li>
-</ul>
+- {{CSSxRef("lab", "lab()")}} (colors) {{Experimental_Inline}}
+- {{CSSxRef("lch", "lch()")}} (colors) {{Experimental_Inline}}
+- {{CSSxRef("leader", "leader()")}}
+- {{CSSxRef("linear-gradient")}}
+- {{CSSxRef("local", "local()")}} {{Experimental_Inline}}
+- {{CSSxRef("log", "log()")}} (math) {{Experimental_Inline}}
+
 M
 
-<ul>
- <li>{{CSSxRef("transform-function/matrix", "matrix()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/matrix3d", "matrix3d()")}} (transform)</li>
- <li>{{CSSxRef("max")}} (math)</li>
- <li>{{CSSxRef("min")}} (math)</li>
- <li>{{CSSxRef("minmax")}} (math)</li>
- <li>{{CSSxRef("mod", "mod()")}} (math) {{Experimental_Inline}}</li>
-</ul>
+- {{CSSxRef("transform-function/matrix", "matrix()")}} (transform)
+- {{CSSxRef("transform-function/matrix3d", "matrix3d()")}} (transform)
+- {{CSSxRef("max")}} (math)
+- {{CSSxRef("min")}} (math)
+- {{CSSxRef("minmax")}} (math)
+- {{CSSxRef("mod", "mod()")}} (math) {{Experimental_Inline}}
+
 O
 
-<ul>
- <li>{{CSSxRef("filter-function/opacity", "opacity()")}} (filter)</li>
- <li>{{CSSxRef("font-variant-alternates/ornaments()", "ornaments()")}} (font)</li>
-</ul>
+- {{CSSxRef("filter-function/opacity", "opacity()")}} (filter)
+- {{CSSxRef("font-variant-alternates/ornaments()", "ornaments()")}} (font)
+
 P
 
-<ul>
- <li>{{CSSxRef("paint")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("path", "path()")}} (shape)</li>
- <li>{{CSSxRef("transform-function/perspective", "perspective()")}} (transform)</li>
- <li>{{CSSxRef("polygon", "polygon()")}} (shape)</li>
- <li>{{CSSxRef("pow", "pow()")}} (math) {{Experimental_Inline}}</li>
-</ul>
+- {{CSSxRef("paint")}} {{Experimental_Inline}}
+- {{CSSxRef("path", "path()")}} (shape)
+- {{CSSxRef("transform-function/perspective", "perspective()")}} (transform)
+- {{CSSxRef("polygon", "polygon()")}} (shape)
+- {{CSSxRef("pow", "pow()")}} (math) {{Experimental_Inline}}
+
 R
 
-<ul>
- <li>{{CSSxRef("radial-gradient")}}</li>
- <li>{{CSSxRef("rem", "rem()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("repeat")}}</li>
- <li>{{CSSxRef("repeating-linear-gradient")}}</li>
- <li>{{CSSxRef("repeating-radial-gradient")}}</li>
- <li>{{CSSxRef("repeating-conic-gradient")}}</li>
- <li>rgb() (colors)</li>
- <li>rgba() (colors)</li>
- <li>{{CSSxRef("transform-function/rotate", "rotate()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotate3d", "rotate3d()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotateX", "rotateX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotateY", "rotateY()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotateZ", "rotateZ()")}} (transform)</li>
- <li>{{CSSxRef("round", "round()")}} (math) {{Experimental_Inline}}</li>
-</ul>
+- {{CSSxRef("radial-gradient")}}
+- {{CSSxRef("rem", "rem()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("repeat")}}
+- {{CSSxRef("repeating-linear-gradient")}}
+- {{CSSxRef("repeating-radial-gradient")}}
+- {{CSSxRef("repeating-conic-gradient")}}
+- rgb() (colors)
+- rgba() (colors)
+- {{CSSxRef("transform-function/rotate", "rotate()")}} (transform)
+- {{CSSxRef("transform-function/rotate3d", "rotate3d()")}} (transform)
+- {{CSSxRef("transform-function/rotateX", "rotateX()")}} (transform)
+- {{CSSxRef("transform-function/rotateY", "rotateY()")}} (transform)
+- {{CSSxRef("transform-function/rotateZ", "rotateZ()")}} (transform)
+- {{CSSxRef("round", "round()")}} (math) {{Experimental_Inline}}
+
 S
 
-<ul>
- <li>{{CSSxRef("filter-function/saturate", "saturate()")}} (filter)</li>
- <li>{{CSSxRef("transform-function/scale", "scale()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scale3d", "scale3d()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scaleX", "scaleX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scaleY", "scaleY()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scaleZ", "scaleZ()")}} (transform)</li>
- <li>{{CSSxRef("filter-function/sepia", "sepia()")}} (filter)</li>
- <li>{{CSSxRef("sign", "sign()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("sin", "sin()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("transform-function/skew", "skew()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/skewX", "skewX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/skewY", "skewY()")}} (transform)</li>
- <li>{{CSSxRef("sqrt", "sqrt()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("steps", "steps()")}}</li>
- <li>{{CSSxRef("font-variant-alternates/styleset()", "styleset()")}} (font)</li>
- <li>{{CSSxRef("font-variant-alternates/stylistic()", "stylistic()")}} (font)</li>
- <li>{{CSSxRef("font-variant-alternates/swash()", "swash()")}} (font)</li>
- <li>{{CSSxRef("symbols", "symbols()")}}</li>
-</ul>
+- {{CSSxRef("filter-function/saturate", "saturate()")}} (filter)
+- {{CSSxRef("transform-function/scale", "scale()")}} (transform)
+- {{CSSxRef("transform-function/scale3d", "scale3d()")}} (transform)
+- {{CSSxRef("transform-function/scaleX", "scaleX()")}} (transform)
+- {{CSSxRef("transform-function/scaleY", "scaleY()")}} (transform)
+- {{CSSxRef("transform-function/scaleZ", "scaleZ()")}} (transform)
+- {{CSSxRef("filter-function/sepia", "sepia()")}} (filter)
+- {{CSSxRef("sign", "sign()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("sin", "sin()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("transform-function/skew", "skew()")}} (transform)
+- {{CSSxRef("transform-function/skewX", "skewX()")}} (transform)
+- {{CSSxRef("transform-function/skewY", "skewY()")}} (transform)
+- {{CSSxRef("sqrt", "sqrt()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("steps", "steps()")}}
+- {{CSSxRef("font-variant-alternates/styleset()", "styleset()")}} (font)
+- {{CSSxRef("font-variant-alternates/stylistic()", "stylistic()")}} (font)
+- {{CSSxRef("font-variant-alternates/swash()", "swash()")}} (font)
+- {{CSSxRef("symbols", "symbols()")}}
+
 T
 
-<ul>
- <li>{{CSSxRef("tan", "tan()")}} (math) {{Experimental_Inline}}</li>
- <li>{{CSSxRef("target-counter", "target-counter()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("target-counters", "target-counters()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("target-text", "target-text()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("toggle", "toggle()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("transform-function/translate", "translate()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translate3d", "translate3d()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translateX", "translateX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translateY", "translateY()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translateZ", "translateZ()")}} (transform)</li>
-</ul>
+- {{CSSxRef("tan", "tan()")}} (math) {{Experimental_Inline}}
+- {{CSSxRef("target-counter", "target-counter()")}} {{Experimental_Inline}}
+- {{CSSxRef("target-counters", "target-counters()")}} {{Experimental_Inline}}
+- {{CSSxRef("target-text", "target-text()")}} {{Experimental_Inline}}
+- {{CSSxRef("toggle", "toggle()")}} {{Experimental_Inline}}
+- {{CSSxRef("transform-function/translate", "translate()")}} (transform)
+- {{CSSxRef("transform-function/translate3d", "translate3d()")}} (transform)
+- {{CSSxRef("transform-function/translateX", "translateX()")}} (transform)
+- {{CSSxRef("transform-function/translateY", "translateY()")}} (transform)
+- {{CSSxRef("transform-function/translateZ", "translateZ()")}} (transform)
+
 U
 
-<ul>
- <li>{{CSSxRef("url()", "url()")}}</li>
-</ul>
+- {{CSSxRef("url()", "url()")}}
+
 V
 
-<ul>
- <li>{{CSSxRef("var")}}</li>
-</ul>
-</div>
+- {{CSSxRef("var")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">Introduction to CSS: Values and Units </a></li>
-</ul>
+- [CSS Values and Units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
+- [Introduction to CSS: Values and Units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)

@@ -8,68 +8,115 @@ tags:
 translation_of: Web/CSS/transform-function/rotate3d()
 original_slug: Web/CSS/transform-function/rotate3d()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>rotate3d()</code></strong> CSS 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。</p>
+**`rotate3d()`** CSS 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。
 
-<div>{{EmbedInteractiveExample("pages/css/rotate3d.html")}}</div>
+{{EmbedInteractiveExample("pages/css/rotate3d.html")}}
 
+在 3D 空间之中，旋转有 3 个自由维度，描述了旋转轴。旋转轴由一组 \[x, y, z] 矢量定义，并且通过变换源点传递（即通过 {{ cssxref("transform-origin") }} CSS 属性定义）。如果这些矢量被赋予非标准值，即 3 个坐标值的平方和不等于 1 时，它将会被内部隐式标准化。非标准矢量，例如空值和 \[0, 0, 0]，将会使旋转不起作用，但是不影响整个 CSS 属性的其他效果（译者注：如 transform 中的多项变换）。
 
+> **备注：** 与平面旋转相反的是，3D 旋转的组合通常是不可交换的；这意味着定义旋转规则的值的顺序是严格控制的。
 
-<p>在 3D 空间之中，旋转有 3 个自由维度，描述了旋转轴。旋转轴由一组 [x, y, z] 矢量定义，并且通过变换源点传递（即通过 {{ cssxref("transform-origin") }} CSS 属性定义）。如果这些矢量被赋予非标准值，即 3 个坐标值的平方和不等于 1 时，它将会被内部隐式标准化。非标准矢量，例如空值和 [0, 0, 0]，将会使旋转不起作用，但是不影响整个 CSS 属性的其他效果（译者注：如 transform 中的多项变换）。</p>
+## 语法
 
-<div class="note">与平面旋转相反的是，3D 旋转的组合通常是不可交换的；这意味着定义旋转规则的值的顺序是严格控制的。</div>
+```
+rotate3d(x, y, z, a)
+```
 
-<h2 id="语法">语法</h2>
+### 值
 
-<pre class="syntaxbox notranslate">rotate3d(<em>x</em>, <em>y</em>, <em>z</em>, <em>a</em>)
-</pre>
-
-<h3 id="值">值</h3>
-
-<dl>
- <dt><em>x</em></dt>
- <dd> {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 X 坐标方向的矢量。</dd>
- <dt><em>y</em></dt>
- <dd>{{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 Y 坐标方向的矢量。</dd>
- <dt><em>z</em></dt>
- <dd>{{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 Z 坐标方向的矢量。</dd>
- <dt><em>a</em></dt>
- <dd> {{ cssxref("&lt;angle&gt;") }} 类型，表示旋转角度。正的角度值表示顺时针旋转，负值表示逆时针旋转。</dd>
-</dl>
+- _x_
+  - : {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 X 坐标方向的矢量。
+- _y_
+  - : {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 Y 坐标方向的矢量。
+- _z_
+  - : {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 Z 坐标方向的矢量。
+- _a_
+  - : {{ cssxref("&lt;angle&gt;") }} 类型，表示旋转角度。正的角度值表示顺时针旋转，负值表示逆时针旋转。
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">在ℝ<sup>2</sup>上的笛卡尔坐标</th>
-   <td rowspan="2">这种变换应用于 3D 空间，不可用于平面空间</td>
-  </tr>
-  <tr>
-   <th scope="col">在ℝℙ<sup>2</sup>上的齐次坐标</th>
-  </tr>
-  <tr>
-   <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
-   <td colspan="1"><a href="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png"><img src="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png?size=webview" style="height: 47px; width: 510px;"></a><math> <mfenced><mtable><mtr><mtd>1<mo>+</mo>(1<mo>-</mo>cos(<mi>a</mi>))(<msup><mi>x</mi><mn>2</mn></msup><mo>-</mo>1)</mtd><mtd><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)+<mi>x</mi><mi>y</mi>(1<mo>-</mo>cos(<mi>a</mi>))</mtd><mtd><mo>-</mo><mi>y</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>x</mi><mi>z</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd></mtr><mtr><mtd><mo>-</mo><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>x</mi><mi>y</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd><mtd>1+(1-cos(a))(y2-1)</mtd><mtd><mi>x</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>y</mi><mi>z</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd><mtr><mtd>ysin(a) + xz(1-cos(a))</mtd><mtd>-xsin(a)+yz(1-cos(a))</mtd><mtd>1+(1-cos(a))(z2-1)</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr> </mtr></mtable></mfenced></math></td>
-  </tr>
-  <tr>
-   <th scope="col">在ℝℙ<sup>3</sup>上的齐次坐标</th>
-   <td colspan="1"><a href="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png"><img src="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png?size=webview" style="height: 61px; width: 522px;"></a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">在ℝ<sup>2</sup>上的笛卡尔坐标</th>
+      <td rowspan="2">这种变换应用于 3D 空间，不可用于平面空间</td>
+    </tr>
+    <tr>
+      <th scope="col">在ℝℙ<sup>2</sup>上的齐次坐标</th>
+    </tr>
+    <tr>
+      <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
+      <td colspan="1">
+        <a href="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png"
+          ><img
+            src="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png?size=webview"
+            style="height: 47px; width: 510px" /></a
+        ><math>
+          <mfenced
+            ><mtable
+              ><mtr
+                ><mtd
+                  >1<mo>+</mo>(1<mo>-</mo>cos(<mi>a</mi>))(<msup
+                    ><mi>x</mi><mn>2</mn></msup
+                  ><mo>-</mo>1)</mtd
+                ><mtd
+                  ><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)+<mi>x</mi
+                  ><mi>y</mi>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
+                ><mtd
+                  ><mo>-</mo><mi>y</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo
+                  ><mi>x</mi><mi>z</mi
+                  ><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
+                ></mtr
+              ><mtr
+                ><mtd
+                  ><mo>-</mo><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo
+                  ><mi>x</mi><mi>y</mi
+                  ><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
+                ><mtd>1+(1-cos(a))(y2-1)</mtd
+                ><mtd
+                  ><mi>x</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>y</mi
+                  ><mi>z</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
+                ><mtr
+                  ><mtd>ysin(a) + xz(1-cos(a))</mtd
+                  ><mtd>-xsin(a)+yz(1-cos(a))</mtd><mtd>1+(1-cos(a))(z2-1)</mtd
+                  ><mtd>t</mtd></mtr
+                ><mtr
+                  ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+                ></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="col">在ℝℙ<sup>3</sup>上的齐次坐标</th>
+      <td colspan="1">
+        <a href="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png"
+          ><img
+            src="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png?size=webview"
+            style="height: 61px; width: 522px"
+        /></a>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="绕Y轴旋转">绕 Y 轴旋转</h3>
+### 绕 Y 轴旋转
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="rotated">Rotated</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   perspective: 800px;
 }
 
@@ -82,22 +129,26 @@ div {
 .rotated {
   transform: rotate3d(0, 1, 0, 60deg);
   background-color: pink;
-}</pre>
+}
+```
 
-<h4 id="效果">效果</h4>
+#### 效果
 
-<p>{{EmbedLiveSample("绕 Y 轴旋转","100%","200")}}</p>
+{{EmbedLiveSample("绕 Y 轴旋转","100%","200")}}
 
-<h3 id="围绕自定义轴旋转">围绕自定义轴旋转</h3>
+### 围绕自定义轴旋转
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="rotated">Rotated</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   perspective: 800px;
 }
 
@@ -110,23 +161,22 @@ div {
 .rotated {
   transform: rotate3d(1, 2, -1, 192deg);
   background-color: pink;
-}</pre>
+}
+```
 
-<h4 id="效果_2">效果</h4>
+#### 效果
 
-<p>{{EmbedLiveSample("围绕自定义轴旋转","100%","200")}}</p>
+{{EmbedLiveSample("围绕自定义轴旋转","100%","200")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

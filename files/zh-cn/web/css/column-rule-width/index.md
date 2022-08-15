@@ -3,20 +3,22 @@ title: column-rule-width
 slug: Web/CSS/column-rule-width
 translation_of: Web/CSS/column-rule-width
 ---
-<p>{{ CSSRef("CSS Multi-columns") }}</p>
+{{ CSSRef("CSS Multi-columns") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>CSS 特性 <code>column-rule-width</code> 让你可以设置在多列布局中被画在两列之间的规则（线条）的宽度。</p>
+CSS 特性 `column-rule-width` 让你可以设置在多列布局中被画在两列之间的规则（线条）的宽度。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="twopartsyntaxbox notranslate"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("column-rule-width")}}
-</pre>
+```
+Formal syntax: {{csssyntax("column-rule-width")}}
+```
 
-<pre class="notranslate">/* Keyword values */
+```
+/* Keyword values */
 column-rule-width: thin;
 column-rule-width: medium;
 column-rule-width: thick;
@@ -25,24 +27,24 @@ column-rule-width: thick;
 column-rule-width: 1px;
 column-rule-width: 2.5em;
 
-column-rule-width: inherit;</pre>
+column-rule-width: inherit;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>&lt;br-width&gt; </dt>
- <dd>Is a {{cssxref("&lt;length&gt;")}} or one of the <code>thin</code>, <code>medium</code> or <code>thick</code> keyword describing the width of the rule separating two columns.</dd>
-</dl>
+- \<br-width>
+  - : Is a {{cssxref("&lt;length&gt;")}} or one of the `thin`, `medium` or `thick` keyword describing the width of the rule separating two columns.
 
-<h2 id="Examples">Example</h2>
+## Example
 
-<pre class="brush: css notranslate">#header {column-rule-width: thick;}
-</pre>
+```css
+#header {column-rule-width: thick;}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.column-rule-width")}}
