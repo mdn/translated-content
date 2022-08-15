@@ -6,54 +6,35 @@ tags:
   - viewBox
 translation_of: Web/SVG/Attribute/viewBox
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p><code>viewBox</code> 속성은 특수한 container element 에 fit 하기 위한 주어진 graphics stretch 의 set 을 명시한다.</p>
+`viewBox` 속성은 특수한 container element 에 fit 하기 위한 주어진 graphics stretch 의 set 을 명시한다.
 
-<p><code>viewBox </code>속성의 값은 whitespace and/or a comma 로 나뉘어진 <code>min-x</code>, <code>min-y</code>, <code>width,</code> <code>height </code>4가지 number list 이다. 이는 주어진 element 에 의해 설정된 viewport 의 bounds 에 맵핑되어야 하는 user space 내의 rectangle 을 명시하며, {{ SVGAttr("preserveAspectRatio") }} 속성과 관계가 있다.</p>
+`viewBox `속성의 값은 whitespace and/or a comma 로 나뉘어진 `min-x`, `min-y`, `width,` `height `4가지 number list 이다. 이는 주어진 element 에 의해 설정된 viewport 의 bounds 에 맵핑되어야 하는 user space 내의 rectangle 을 명시하며, {{ SVGAttr("preserveAspectRatio") }} 속성과 관계가 있다.
 
-<p>음수로 이루어진 width 또는 height 는 허용되지 않으며 zero 값은 element rendering 이 불가하다.</p>
+음수로 이루어진 width 또는 height 는 허용되지 않으며 zero 값은 element rendering 이 불가하다.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><em>See above</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | None                                                                             |
+| ------------------ | -------------------------------------------------------------------------------- |
+| Value              | _See above_                                                                      |
+| Animatable         | Yes                                                                              |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute) |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>아래 element 들은 <code>viewBox</code> 속성을 사용할 수 있다.</p>
+아래 element 들은 `viewBox` 속성을 사용할 수 있다.
 
-<ul>
- <li>{{ SVGElement("svg") }}</li>
- <li>{{ SVGElement("symbol") }}</li>
- <li>{{ SVGElement("image") }}</li>
- <li>{{ SVGElement("marker") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
- <li>{{ SVGElement("view") }}</li>
-</ul>
+- {{ SVGElement("svg") }}
+- {{ SVGElement("symbol") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("marker") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("view") }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/SVG/Tutorial/Positions" title="https://developer.mozilla.org/en/SVG/Tutorial/Positions">SVG Getting Started: Positions</a></li>
-</ul>
+- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions "https://developer.mozilla.org/en/SVG/Tutorial/Positions")
