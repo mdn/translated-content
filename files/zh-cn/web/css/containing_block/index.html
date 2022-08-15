@@ -21,7 +21,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 
 <p>当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：</p>
 
-<ol dir="ltr" start="1">
+<ol>
  <li>内容区</li>
  <li>内边距区</li>
  <li>边框区</li>
@@ -42,16 +42,16 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 
 <p>确定一个元素的包含块的过程完全依赖于这个元素的 {{cssxref("position")}} 属性：</p>
 
-<ol dir="ltr" start="1">
- <li>如果 position 属性为 <code><strong>static</strong></code> 、<strong> </strong><code><strong>relative</strong></code><strong> 或 <code>sticky</code></strong>，包含块可能由它的最近的祖先<strong>块元素</strong>（比如说 inline-block, block 或 list-item 元素）的内容区的边缘组成，也可能会建立格式化上下文 (比如说 a table container, flex container, grid container, 或者是 the block container 自身)。</li>
+<ol>
+ <li>如果 position 属性为 <code><strong>static</strong></code>、<code><strong>relative</strong></code><strong> 或 <code>sticky</code></strong>，包含块可能由它的最近的祖先<strong>块元素</strong>（比如说 inline-block, block 或 list-item 元素）的内容区的边缘组成，也可能会建立格式化上下文 (比如说 a table container, flex container, grid container, 或者是 the block container 自身)。</li>
  <li>如果 position 属性为 <code><strong>absolute</strong></code> ，包含块就是由它的最近的 position 的值不是 <code>static</code> （也就是值为<code>fixed</code>, <code>absolute</code>, <code>relative</code> 或 <code>sticky</code>）的祖先元素的内边距区的边缘组成。</li>
  <li>如果 position 属性是 <strong><code>fixed</code></strong>，在连续媒体的情况下 (continuous media) 包含块是 {{glossary("viewport")}} ,在分页媒体 (paged media) 下的情况下包含块是分页区域 (page area)。</li>
  <li>如果 position 属性是 <code><strong>absolute</strong></code> 或 <code><strong>fixed</strong></code>，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
-  <ol start="1">
-   <li> {{cssxref("transform")}} 或 {{cssxref("perspective")}}<strong> </strong>的值不是 <code>none</code></li>
-   <li> {{cssxref("will-change")}} 的值是 <code>transform</code> 或 <code>perspective</code></li>
-   <li> {{cssxref("filter")}}<strong> </strong>的值不是 <code>none</code> 或 <code>will-change</code> 的值是 <code>filter</code>(只在 Firefox 下生效).</li>
-   <li> {{cssxref("contain")}} 的值是 <code>paint</code> (例如: <code>contain: paint;</code>)</li>
+  <ol>
+   <li>{{cssxref("transform")}} 或 {{cssxref("perspective")}} 的值不是 <code>none</code></li>
+   <li>{{cssxref("will-change")}} 的值是 <code>transform</code> 或 <code>perspective</code></li>
+   <li>{{cssxref("filter")}} 的值不是 <code>none</code> 或 <code>will-change</code> 的值是 <code>filter</code>(只在 Firefox 下生效).</li>
+   <li>{{cssxref("contain")}} 的值是 <code>paint</code> (例如: <code>contain: paint;</code>)</li>
   </ol>
  </li>
 </ol>
@@ -64,8 +64,8 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 
 <p>如上所述，如果某些属性被赋予一个百分值的话，它的计算值是由这个元素的包含块计算而来的。这些属性包括盒模型属性和偏移属性：</p>
 
-<ol dir="ltr" start="1">
- <li>要计算 {{cssxref("height")}} {{cssxref("top")}} 及 {{cssxref("bottom")}} 中的百分值，是通过包含块的 <code>height</code><strong> </strong>的值。如果包含块的 <code>height</code> 值会根据它的内容变化，而且包含块的 <code>position</code> 属性的值被赋予 <code>relative</code> 或 <code>static</code> ，那么，这些值的计算值为 auto。</li>
+<ol>
+ <li>要计算 {{cssxref("height")}} {{cssxref("top")}} 及 {{cssxref("bottom")}} 中的百分值，是通过包含块的 <code>height</code> 的值。如果包含块的 <code>height</code> 值会根据它的内容变化，而且包含块的 <code>position</code> 属性的值被赋予 <code>relative</code> 或 <code>static</code> ，那么，这些值的计算值为 auto。</li>
  <li>要计算 {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} 这些属性由包含块的 <code>width</code> 属性的值来计算它的百分值。</li>
 </ol>
 

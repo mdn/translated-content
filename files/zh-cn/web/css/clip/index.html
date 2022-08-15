@@ -17,8 +17,7 @@ translation_of: Web/CSS/clip
 
 <h2 id="语法">语法</h2>
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">形式语法</a>: {{csssyntax("clip")}}
-</pre>
+<a href="/en-US/docs/CSS/Value_definition_syntax">形式语法</a>: {{csssyntax("clip")}}
 
 <pre>clip: rect(1px, 10em, 3rem, 2ch)
 clip: auto
@@ -30,13 +29,13 @@ clip: inherit</pre>
 <dl>
  <dt><code>&lt;shape&gt;</code></dt>
  <dd>一个矩形 {{cssxref("&lt;shape&gt;")}}
- <pre style="margin: 0;">rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)   /* 标准语法 */
+ <pre class="brush: css">rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)   /* 标准语法 */
 </pre>
  或
 
- <pre style="margin: 0;">rect(&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;)      /* 向后兼容语法 */</pre>
- <code>&lt;top&gt;</code> 和 <code>&lt;bottom&gt;</code> 指定相对于盒子<em>上边框边界 </em>的偏移，<code>&lt;right&gt;</code> 和 <code>&lt;left&gt;</code> 指定了相对于盒子<em>左边框边界 </em>的偏移。</dd>
- <dd><code>&lt;top&gt;</code>、<code>&lt;right&gt;</code>、<code>&lt;bottom&gt;</code> 和 <code>&lt;left&gt;</code> 的值可以是 {{cssxref("&lt;length&gt;")}} 值或 <code>auto</code>。</dd>
+ <pre class="brush: css">rect(&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;)      /* 向后兼容语法 */</pre>
+ <code>&lt;top&gt;</code> 和 <code>&lt;bottom&gt;</code> 指定相对于盒子<em>上边框边界 </em>的偏移，<code>&lt;right&gt;</code> 和 <code>&lt;left&gt;</code> 指定了相对于盒子<em>左边框边界 </em>的偏移。<br>
+ <code>&lt;top&gt;</code>、<code>&lt;right&gt;</code>、<code>&lt;bottom&gt;</code> 和 <code>&lt;left&gt;</code> 的值可以是 {{cssxref("&lt;length&gt;")}} 值或 <code>auto</code>。</dd>
  <dt><code>auto</code></dt>
  <dd>元素不裁剪 (默认值)</dd>
 </dl>

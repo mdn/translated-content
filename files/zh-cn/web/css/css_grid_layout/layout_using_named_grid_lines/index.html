@@ -357,9 +357,10 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 <p>通过前面的三篇文章，我们发现使用网格布局时有非常多不同的方法来定位项目，这乍看起来有些过于复杂了，不过其实你不必把它们都用上。在实践中，我发现使用命名的模块区域是最直截了当的布局方法，它的可视化表示法能让你看到布局的效果，并且也容易在网格上移动项目。</p>
 
+<h3>三列布局</h3>
+
 <p>一个严格的多列布局已经可以工作得很好了，比如本文最后一部分用命名线做的演示，如果你考虑使用 Foundation 或 Bootstrap 这类框架，它们提供的是基于 12 列的网格系统，框架会导入代码然后进行计算以确保所有的列宽加在一起是 100%。如果使用网格布局，那么我们的“框架”只有这些代码就够了：</p>
 
-<div class="three_column">
 <pre class="brush: css">.wrapper {
   display: grid;
   grid-gap: 10px;
@@ -417,12 +418,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 }
 </pre>
 
-<p>{{ EmbedLiveSample('three_column', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('三列布局', '500', '330') }}</p>
 
 <p>再一次，Firefox Grid Highlighter 工具帮助我们看到网格是如何定位项目的。</p>
 
 <p><img alt="The layout with the grid highlighted." src="5_named_lines2.png"></p>
-</div>
 
 <p>这就是我们需要的，不用做任何计算，网格在分配 1fr 的列轨道空间之前会自动把 10 像素的轨道间距删除掉。在你动手创建自己的布局的过程中，语法会变得越来越熟悉，你能找到适于自己的方法和喜欢创建的项目类型。尝试用不同的方法去创建一些通用的布局模式，你会找到最适合自己的工作方式。在下一篇文章中我们会探讨如何用网格定位元素 —— 根本不需要使用定位属性！</p>
 

@@ -56,11 +56,7 @@ align-self: unset;</pre>
  <dt><code>auto</code></dt>
  <dd>设置为父元素的 {{cssxref("align-items") }} 值。</dd>
  <dt><code>normal</code></dt>
-</dl>
-
-<dl>
- <dd>效果取决于当前的布局模式：</dd>
- <dd>
+ <dd>效果取决于当前的布局模式：
  <ul>
   <li>绝对定位布局中，normal 在绝对定位的替代元素上表现为<code>start</code>，在<em>所有其他</em>绝对定位元素上表现为<code>stretch</code>。</li>
   <li>在绝对定位的静态元素上表现为<code>stretch</code>。</li>
@@ -79,12 +75,10 @@ align-self: unset;</pre>
  <dd>flex 元素会对齐到 cross-axis 的尾端。</dd>
  <dt><code>center</code></dt>
  <dd>flex 元素会对齐到 cross-axis 的中间，如果该元素的 cross-size 尺寸大于 flex 容器，将在两个方向均等溢出。</dd>
- <dt><code>baseline</code><br>
- <code>first baseline</code><br>
- <code>last baseline</code></dt>
+ <dt><code>baseline</code>、<code>first baseline</code>、<code>last baseline</code></dt>
  <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dd>flex 元素将会基于容器的宽和高，按照自身 margin box 的 cross-size 拉伸。If the combined size of the items along the cross axis is less than the size of the alignment container and the item is <code>auto</code>-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all <code>auto</code>-sized items exactly fills the alignment container along the cross axis.</dd>
+ The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.<br />
+ flex 元素将会基于容器的宽和高，按照自身 margin box 的 cross-size 拉伸。If the combined size of the items along the cross axis is less than the size of the alignment container and the item is <code>auto</code>-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all <code>auto</code>-sized items exactly fills the alignment container along the cross axis.</dd>
  <dt><code>safe</code></dt>
  <dd>If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
  <dt><code>unsafe</code></dt>

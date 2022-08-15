@@ -49,14 +49,12 @@ repeating-linear-gradient(0deg, blue, green 40%, red);
 
 <dl>
  <dt><code>&lt;side-or-corner&gt;</code></dt>
- <dd>描述渐变线的起始点位置。它包含两个关键词：第一个指出垂直位置 left or right，第二个指出水平位置 top or bottom。关键词的先后顺序无影响，且都是可选的。</dd>
- <dd><br>
+ <dd>描述渐变线的起始点位置。它包含两个关键词：第一个指出垂直位置 left or right，第二个指出水平位置 top or bottom。关键词的先后顺序无影响，且都是可选的。<br>
  to top, to bottom, to left 和 to right 这些值会被转换成角度 0 度、180 度、270 度和 90 度。其余值会被转换为一个以向顶部中央方向为起点顺时针旋转的角度。渐变线的结束点与其起点中心对称。</dd>
  <dt>{{cssxref("&lt;angle&gt;")}}</dt>
  <dd>用角度值指定渐变的方向（或角度）。角度顺时针增加。 </dd>
  <dt><code>&lt;color-stop&gt;</code></dt>
- <dd>由一个{{cssxref("&lt;color&gt;")}}值组成，并且跟随着一个可选的终点位置（可以是一个{{cssxref("&lt;percentage&gt;")}}或者是沿着渐变轴的{{cssxref("&lt;length&gt;")}}）。CSS 渐变的颜色渲染采取了与 SVG 相同的规则。</dd>
- <dd>
+ <dd>由一个{{cssxref("&lt;color&gt;")}}值组成，并且跟随着一个可选的终点位置（可以是一个{{cssxref("&lt;percentage&gt;")}}或者是沿着渐变轴的{{cssxref("&lt;length&gt;")}}）。CSS 渐变的颜色渲染采取了与 SVG 相同的规则。
  <div class="note">
  <p><strong>提示：</strong>渲染颜色中间点的规则<a href="#Gradient_with_multiple_color_stops">CSS 渐变中的色标</a> 与<a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG 渐变</a>一致。</p>
  </div>
