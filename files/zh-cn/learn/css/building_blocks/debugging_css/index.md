@@ -165,10 +165,10 @@ em {
 
 创建一个简化测试用例：
 
-1.  如果您的标记是动态生成的（例如通过 CMS），请生成显示该问题的静态版本。诸如 CodePen 之类的代码共享站点可用于托管简化的测试用例，因为它们可以在线访问，并且您可以轻松地与同事共享它们。您可以先在页面上执行“查看源代码”，然后将 HTML 复制到 CodePen 中，然后获取所有相关的 CSS 和 JavaScript 并将其包括在内。之后，您可以检查问题是否仍然明显。
-2.  如果删除 JavaScript 不能解决问题，请不要调试包含 JavaScript 的部分。如果删除 JavaScript 确实消除了问题，那么请尽可能多地删除与问题无关的 JavaScript，保留导致问题的原因。
-3.  删除所有不会导致此问题的 HTML。删除布局中的组件甚至主要元素。在保留问题可重现的情况下把代码量尽量减少。
-4.  删除掉任何不影响问题的 CSS。
+1. 如果您的标记是动态生成的（例如通过 CMS），请生成显示该问题的静态版本。诸如 CodePen 之类的代码共享站点可用于托管简化的测试用例，因为它们可以在线访问，并且您可以轻松地与同事共享它们。您可以先在页面上执行“查看源代码”，然后将 HTML 复制到 CodePen 中，然后获取所有相关的 CSS 和 JavaScript 并将其包括在内。之后，您可以检查问题是否仍然明显。
+2. 如果删除 JavaScript 不能解决问题，请不要调试包含 JavaScript 的部分。如果删除 JavaScript 确实消除了问题，那么请尽可能多地删除与问题无关的 JavaScript，保留导致问题的原因。
+3. 删除所有不会导致此问题的 HTML。删除布局中的组件甚至主要元素。在保留问题可重现的情况下把代码量尽量减少。
+4. 删除掉任何不影响问题的 CSS。
 
 在执行此操作的过程中，您可能会发现导致问题的原因，或者至少能够通过删除特定的东西来打开和关闭它。当发现一些东西时，应该在代码中添加一些注释。如果您需要帮助，这些注释将向帮助您的人显示您已经做了哪些尝试。这很可能会为您提供足够的信息，以便能够搜索可能存在的问题和解决方法。
 
@@ -182,21 +182,21 @@ em {
 
 ## 模块目录
 
-1.  [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)[](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

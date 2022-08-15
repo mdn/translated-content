@@ -81,7 +81,7 @@ arr.includes('c', -100); // true
 
 ### Utilisation d'`includes()` comme méthode générique
 
-`includes()` est une méhtode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) ou des chaînes de caractères) :
+`includes()` est une méthode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) ou des chaînes de caractères) :
 
 ```js
 function argumentsContientA(){

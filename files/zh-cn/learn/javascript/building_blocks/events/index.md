@@ -198,7 +198,7 @@ function bgChange() {
 btn.addEventListener('click', bgChange);
 ```
 
-> **备注：** 您可以在[Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)上找到这个示例的完整源代码 (也可以[ 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html))。
+> **备注：** 您可以在[Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)上找到这个示例的完整源代码 (也可以 [在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html))。
 
 `在addEventListener()` 函数中，我们具体化了两个参数——我们想要将处理器应用上去的事件名称，和包含我们用来回应事件的函数的代码。注意将这些代码全部放到一个匿名函数中是可行的：
 

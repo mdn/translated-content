@@ -36,9 +36,7 @@ font-style: unset;
  <dt><code>oblique</code></dt>
  <dd>Wählt einen kursiven Schriftschnitt der Eigenschaft oblique (siehe unten). Steht keiner zur Verfügung, wird stattdessen der Wert <code>italic</code> angewendet. Ist auch dies nicht möglich, wird eine Schrägstellung von 14° durch den Browser erzeugt.</dd>
  <dt><code>oblique</code> <code><a href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a></code></dt>
- <dd>Wählt einen kursiven Schriftschnitt der Eigenschaft oblique (siehe unten), dessen Buchstaben genau oder annähernd im Winkel <code>&lt;angle&gt;</code> schräggestellt sind. Üblicherweise werden bei der Suche nach passenden Schriftschnitten für Winkel ab 14° eher größere Werte gewählt, bis 13° eher kleinere (Details siehe <a href="https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm">font matching section</a>).</dd>
- <dd>Steht kein passender Schriftschnitt zur Verfügung, wird die Schrägstellung durch den Computer aus einem normalen Schriftschnitt erzeugt.</dd>
- <dd>Der gültige Winkelbereich erstreckt sich von <code>-90deg</code> bis <code>90deg</code> (einschließlich). Positive Werte bewirken eine Schrägstellung in Richtung Zeilenende, negative in Richtung Zeilenanfang.</dd>
+ <dd>Wählt einen kursiven Schriftschnitt der Eigenschaft oblique (siehe unten), dessen Buchstaben genau oder annähernd im Winkel <code>&lt;angle&gt;</code> schräggestellt sind. Üblicherweise werden bei der Suche nach passenden Schriftschnitten für Winkel ab 14° eher größere Werte gewählt, bis 13° eher kleinere (Details siehe <a href="https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm">font matching section</a>).<br /><br />Steht kein passender Schriftschnitt zur Verfügung, wird die Schrägstellung durch den Computer aus einem normalen Schriftschnitt erzeugt.<br /><br />Der gültige Winkelbereich erstreckt sich von <code>-90deg</code> bis <code>90deg</code> (einschließlich). Positive Werte bewirken eine Schrägstellung in Richtung Zeilenende, negative in Richtung Zeilenanfang.</dd>
 </dl>
 
 <h4 id="italic_gegenüber_oblique">italic gegenüber oblique</h4>
@@ -54,7 +52,7 @@ font-style: unset;
 
 <p>Variable Schriftarten erlauben eine präzise Steuerung der Darstellung von kursivierten Schriftschnitten mit Hilfe des Werts <code>&lt;angle&gt;</code> im Anschluss an <code>oblique</code>.</p>
 
-<p>Bei variablen Schriftarten nach TrueType- oder OpenType-Spezifikation wird die Schrägstellung bei <code>oblique</code> über die Eigenschaft <code>"slnt"</code>  realisiert, sowie <code>italic</code> mit einem Wert von 1 für die Eigenschaft  <code>"ital"</code>(siehe {{cssxref("font-variation-settings")}}).</p>
+<p>Bei variablen Schriftarten nach TrueType- oder OpenType-Spezifikation wird die Schrägstellung bei <code>oblique</code> über die Eigenschaft <code>"slnt"</code>  realisiert, sowie <code>italic</code> mit einem Wert von 1 für die Eigenschaft  <code>"ital"</code>(siehe {{cssxref("font-variation-settings")}}).</p>
 
 <p>Das nachstehende Beispiel benötigt einen Browser, der die Syntax nach CSS Fonts Level 4 versteht, d.h. die Angabe eines Winkels bei <code>font-style: oblique</code>.</p>
 

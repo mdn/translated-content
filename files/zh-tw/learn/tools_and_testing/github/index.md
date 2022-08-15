@@ -45,7 +45,7 @@ tags:
 
 最好還具有一些基本的終端機知識，例如在目錄之間移動，創立文件以及修改系統的` PATH `。
 
-> **備註：** Github 不是唯一網站/工具集讓你使用 Git。 您可以嘗試其它替代方法，例如[ GitLab ](https://about.gitlab.com/)，也可以嘗試設置自己的 Git 伺服器並使用它來取代 GitHub。在本章節中，我們僅停留在 GitHub 使用教學上。
+> **備註：** Github 不是唯一網站/工具集讓你使用 Git。 您可以嘗試其它替代方法，例如 [GitLab](https://about.gitlab.com/)，也可以嘗試設置自己的 Git 伺服器並使用它來取代 GitHub。在本章節中，我們僅停留在 GitHub 使用教學上。
 
 ## 其它指南
 
@@ -62,7 +62,7 @@ tags:
 - [掌握問題（來自 GitHub）](https://guides.github.com/features/issues/)
   - : 問題就像是 GitHub 項目的論壇，人們可以在其中提出問題和報告問題，還可以管理更新（例如，分配人員來解決問題，澄清問題，讓人們知道問題已解決）。本文將提供你有關問題的必備知識。
 
-> **備註：** 你還可以用 Git 跟 GitHub 來完成更多的事情，但我們認為，如果你想要有效地使用 Git，上面的這些知識是至少應該具備的。當你更深入地了解 Git 時，你將會意識到，當你開始使用更加複雜的指令時會更容易出錯。但不要擔心，即使是專業的網路工程師有時都會感到困惑，並通過網路檢索或[Flight rules for Git](https://github.com/k88hudson/git-flight-rules)和[ Dangit, git!](https://dangitgit.com/) 這樣的網站來尋找答案。
+> **備註：** 你還可以用 Git 跟 GitHub 來完成更多的事情，但我們認為，如果你想要有效地使用 Git，上面的這些知識是至少應該具備的。當你更深入地了解 Git 時，你將會意識到，當你開始使用更加複雜的指令時會更容易出錯。但不要擔心，即使是專業的網路工程師有時都會感到困惑，並通過網路檢索或[Flight rules for Git](https://github.com/k88hudson/git-flight-rules)和 [Dangit, git!](https://dangitgit.com/) 這樣的網站來尋找答案。
 
 ## 也可以參考以下
 

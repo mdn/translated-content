@@ -14,15 +14,15 @@ translation_of: Glossary/Key
 - 维基百科上的[柯克霍夫原则](https://zh.wikipedia.org/wiki/柯克霍夫原则)词条
 - [MDN 术语表](/zh-CN/docs/Glossary)
 
-    - {{Glossary("Block cipher mode of operation")}}
-    - {{Glossary("Cipher","密码")}}
-    - {{Glossary("Ciphertext","密文")}}
-    - {{Glossary("Cipher suite", "密码套件")}}
-    - {{Glossary("Cryptanalysis", "密码分析")}}
-    - {{Glossary("Cryptography", "密码学")}}
-    - {{Glossary("Decryption", "解密")}}
-    - {{Glossary("Encryption", "加密")}}
-    - {{Glossary("Key","密钥")}}
-    - {{Glossary("Plaintext","明文")}}
-    - {{Glossary("Public-key cryptography", "非对称密钥算法")}}
-    - {{Glossary("Symmetric-key cryptography", "对称密钥算法")}}
+  - {{Glossary("Block cipher mode of operation")}}
+  - {{Glossary("Cipher","密码")}}
+  - {{Glossary("Ciphertext","密文")}}
+  - {{Glossary("Cipher suite", "密码套件")}}
+  - {{Glossary("Cryptanalysis", "密码分析")}}
+  - {{Glossary("Cryptography", "密码学")}}
+  - {{Glossary("Decryption", "解密")}}
+  - {{Glossary("Encryption", "加密")}}
+  - {{Glossary("Key","密钥")}}
+  - {{Glossary("Plaintext","明文")}}
+  - {{Glossary("Public-key cryptography", "非对称密钥算法")}}
+  - {{Glossary("Symmetric-key cryptography", "对称密钥算法")}}

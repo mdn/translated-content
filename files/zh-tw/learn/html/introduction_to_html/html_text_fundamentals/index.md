@@ -253,10 +253,12 @@ Now let's turn our attention to lists. Lists are everywhere in life — from you
 
 Unordered lists are used to mark up lists of items for which the order of the items doesn't matter — let's take a shopping list as an example.
 
-    milk
-    eggs
-    bread
-    hummus
+```
+milk
+eggs
+bread
+hummus
+```
 
 Every unordered list starts off with a {{htmlelement("ul")}} element — this wraps around all the list items:
 
@@ -412,11 +414,13 @@ textarea.onkeyup = function(){
 
 Ordered lists are lists in which the order of the items _does_ matter — let's take a set of directions as an example:
 
-    Drive to the end of the road
-    Turn right
-    Go straight across the first two roundabouts
-    Turn left at the third roundabout
-    The school is on your right, 300 meters up the road
+```
+Drive to the end of the road
+Turn right
+Go straight across the first two roundabouts
+Turn left at the third roundabout
+The school is on your right, 300 meters up the road
+```
 
 The markup structure is the same as for unordered lists, except that you have to wrap the list items in an {{htmlelement("ol")}} element, rather than `<ul>`:
 

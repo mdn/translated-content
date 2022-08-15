@@ -101,11 +101,11 @@ superHeroes["active"]
 superHeroes["members"][1]["powers"][2]
 ```
 
-1.  首先要有變數名稱 — `superHeroes`。
-2.  要在變數中存取 `members` 屬性，所以用 `["members"]`。
-3.  `members` 包含由物件產生陣列。我們要存取陣列中的第二個物件，所以用 `[1]`。
-4.  在此物件中，我們要存取 `powers` 屬性，所以用 `["powers"]`。
-5.  在 `powers` 屬性中有 1 個陣列具備所選超級英雄的能力。我們要選第三種能力，所以用 `[2]`。
+1. 首先要有變數名稱 — `superHeroes`。
+2. 要在變數中存取 `members` 屬性，所以用 `["members"]`。
+3. `members` 包含由物件產生陣列。我們要存取陣列中的第二個物件，所以用 `[1]`。
+4. 在此物件中，我們要存取 `powers` 屬性，所以用 `["powers"]`。
+5. 在 `powers` 屬性中有 1 個陣列具備所選超級英雄的能力。我們要選第三種能力，所以用 `[2]`。
 
 > **備註：** 我們在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)) 的變數中，示範上述可用的 JSON。你可在自己瀏覽器的 JavaScript 主控台載入此程式碼，並存取變數中的資料。
 
@@ -180,19 +180,19 @@ var section = document.querySelector('section');
 
 若要將 JSON 載入至頁面，就要透過 {{domxref("XMLHttpRequest")}} API (通常稱為 **XHR**)。此是極好用的 JavaScript 物件，可讓網路請求透過 JavaScript (例如圖片、文字、JSON，甚至 HTML 片段) 來檢索伺幅器的資源，這也代表我們不需載入整個頁面，就能更新小部分的內容。如此可讓網頁反應速度更快；聽起來很棒吧？但可惜本文無法再深入講解更多細節。
 
-1.  一開始，我們先針對要在變數中檢索的 JSON 檔案，將其網址儲存起來。把下列程式碼加到你 JavaScript 程式碼的最下方：
+1. 一開始，我們先針對要在變數中檢索的 JSON 檔案，將其網址儲存起來。把下列程式碼加到你 JavaScript 程式碼的最下方：
 
     ```js
     var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     ```
 
-2.  為了建立請求，我們必須透過 `new` 關鍵字，先從 `XMLHttpRequest` 建構子建立新的請求物件實例。把下列加到最後一行：
+2. 為了建立請求，我們必須透過 `new` 關鍵字，先從 `XMLHttpRequest` 建構子建立新的請求物件實例。把下列加到最後一行：
 
     ```js
     var request = new XMLHttpRequest();
     ```
 
-3.  現在用 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 函式開啟新的請求。加入下列程式碼：
+3. 現在用 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 函式開啟新的請求。加入下列程式碼：
 
     ```js
     request.open('GET', requestURL);
@@ -203,14 +203,14 @@ var section = document.querySelector('section');
     - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 就可以。
     - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
 
-4.  接著加入下面 2 行程式碼。我們為 JSON 設定了 [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType)，告知伺服器應回傳 JSON 物件，再以 [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) 函式傳送請求：
+4. 接著加入下面 2 行程式碼。我們為 JSON 設定了 [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType)，告知伺服器應回傳 JSON 物件，再以 [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) 函式傳送請求：
 
     ```js
     request.responseType = 'json';
     request.send();
     ```
 
-5.  最後就是等待由伺服器所回傳的反應，再接著處理。把下列程式碼加入現有程式碼的最下方：
+5. 最後就是等待由伺服器所回傳的反應，再接著處理。把下列程式碼加入現有程式碼的最下方：
 
     ```js
     request.onload = function() {
@@ -285,12 +285,12 @@ function showHeroes(jsonObj) {
 
 接著我們以 [for 迴圈](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
 
-1.  建立數個新的元素：1 組 `<article>`、1 組 `<h2>、3 組` `<p>、1 組` `<ul>。`
-2.  讓 \<h2> 納入目前超級英雄的 `name`。
-3.  接著 3 個段落分別是英雄的 `secretIdentity`、`age、Superpowers`，在列表中帶出相關資訊。
-4.  另以新變數 `superPowers` 儲存 `powers` 屬性 — 其中包含 1 組陣列以列出目前英雄的超能力。
-5.  再用另一個 `for` 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 `<li>` 元素，把超能力放進該元素之中，再透過 `appendChild()` 把 `listItem` 放入 `<ul>` 元素之內 (`myList`)。
-6.  最後就是在 `<article>` (`myArticle`) 之內附加 ` <h2>、``<p>、``<ul> `；再把 `<article>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。
+1. 建立數個新的元素：1 組 `<article>`、1 組 `<h2>、3 組` `<p>、1 組` `<ul>。`
+2. 讓 \<h2> 納入目前超級英雄的 `name`。
+3. 接著 3 個段落分別是英雄的 `secretIdentity`、`age、Superpowers`，在列表中帶出相關資訊。
+4. 另以新變數 `superPowers` 儲存 `powers` 屬性 — 其中包含 1 組陣列以列出目前英雄的超能力。
+5. 再用另一個 `for` 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 `<li>` 元素，把超能力放進該元素之中，再透過 `appendChild()` 把 `listItem` 放入 `<ul>` 元素之內 (`myList`)。
+6. 最後就是在 `<article>` (`myArticle`) 之內附加 ` <h2>、``<p>、``<ul> `；再把 `<article>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。
 
 > **備註：** 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
 

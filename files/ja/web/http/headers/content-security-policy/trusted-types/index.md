@@ -27,7 +27,7 @@ Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicat
 - \<policyName>
   - : 有効なポリシー名は英数字、または "`-#=_/@.%`" のうちのいずれかのみからなります。ポリシー名に星印 (`*`) を使用すると、ユーザーエージェントは任意の一意なポリシー名を許可するようになります（'`allow-duplicates`' はそれをさらに緩和することができます）。
 - `'none'`
-  - : Trusted Type ポリシーを作成しない（_<policyName>_を指定しないのと同じ）。
+  - : Trusted Type ポリシーを作成しない（_\<policyName>_を指定しないのと同じ）。
 - `'allow-duplicates'`
   - : 既に使用されている名前でポリシーを作成することを可能にします。
 

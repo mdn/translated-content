@@ -1,19 +1,6 @@
 ---
 title: SourceBuffer.buffered
 slug: Web/API/SourceBuffer/buffered
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - buffered
-translation_of: Web/API/SourceBuffer/buffered
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

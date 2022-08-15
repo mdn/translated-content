@@ -19,7 +19,7 @@ translation_of: Mozilla/Firefox/Releases/22
 
 ### JavaScript
 
-- [Asm.js ](http://asmjs.org/spec/latest/)optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
+- [Asm.js](http://asmjs.org/spec/latest/) optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
 - 实现了 ES6 中的[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)({{bug(846406)}}).
 - The new [Object.is](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) function has been added ({{bug(839979)}}).
 - [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).
@@ -56,7 +56,7 @@ translation_of: Mozilla/Firefox/Releases/22
 
 - 移除了下面这些方法中的`properties`参数：`nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names. ({{bug('407956')}})
 - The `inIDOMUtils.getCSSPropertyNames()` method has been implemented and will return all supported [CSS property](/en-US/docs/CSS/CSS_Reference) names.
-- See [here ](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)for more changes.
+- See [here](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
 
 ### Firefox Developer Tools
 

@@ -70,9 +70,9 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
 现在来研究 HTML 代码的宽松特性。
 
-1.  首先，下载并保存 [debug-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html)。代码中故意留了一些错误，以便探究（这里的 HTML 标记写成了**糟糕的格式**，与**良好的格式**相反）。
-2.  下一步，在浏览器中打开，可以看到：![一个简单的HTML文档，但其中包含一些常见的HTML错误，比如：未关闭的元素、嵌套混乱的元素、未关闭的属性。](badly-formed-html.png)
-3.  看起来糟透了，我们到源代码中寻找原因（只列出 `body` 部分）：
+1. 首先，下载并保存 [debug-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html)。代码中故意留了一些错误，以便探究（这里的 HTML 标记写成了**糟糕的格式**，与**良好的格式**相反）。
+2. 下一步，在浏览器中打开，可以看到：![一个简单的HTML文档，但其中包含一些常见的HTML错误，比如：未关闭的元素、嵌套混乱的元素、未关闭的属性。](badly-formed-html.png)
+3. 看起来糟透了，我们到源代码中寻找原因（只列出 `body` 部分）：
 
     ```html
     <h1>HTML debugging examples</h1>
@@ -88,16 +88,16 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
     </ul>
     ```
 
-4.  以下是问题清单：
+4. 以下是问题清单：
 
     - {{htmlelement("p","段落（Paragraph）")}} 和 {{htmlelement("li","列表项（list item）")}} 元素没有结束标签。但是由于元素的结束和另一个的开始很容易推断出来，因此上图中并没有太严重的渲染错误。
     - 第一个 {{htmlelement("strong")}} 元素没有结束标签。这就严重了，因为该元素结束的位置难以确定。事实上所有剩余文本都加粗了。
     - 一下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>​​​​`。浏览器很难做出正确解释，理由同上。
     - {{htmlattrxref("href","a")}} 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
-5.  下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
-6.  在 DOM 查看器中可以看到渲染的标记：![Firefox控制台中的HTML检查器，可标亮元素，（图中标亮了“什么使得HTML出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
-7.  通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
+5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
+6. 在 DOM 查看器中可以看到渲染的标记：![Firefox控制台中的HTML检查器，可标亮元素，（图中标亮了“什么使得HTML出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
+7. 通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
 
     - 段落和列表元素加上了关闭标签。
     - 第一个 `<strong>` 没有明确的关闭标签，因此浏览器为之后所有独立块都补全了 `<strong></strong>`。
@@ -132,10 +132,10 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
 不妨用上文的 [debug-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) 尝试一下：
 
-1.  在浏览器中打开 [Markup Validation Service](https://validator.w3.org/) 。
-2.  选择 [Validate by Direct Input](https://validator.w3.org/#validate_by_input) 标签。
-3.  将整个示例文档的代码（而不仅仅是`body`部分）复制粘贴到正中的文本框内。
-4.  _点击_ **Check** _按钮。_
+1. 在浏览器中打开 [Markup Validation Service](https://validator.w3.org/) 。
+2. 选择 [Validate by Direct Input](https://validator.w3.org/#validate_by_input) 标签。
+3. 将整个示例文档的代码（而不仅仅是`body`部分）复制粘贴到正中的文本框内。
+4. _点击_ **Check** _按钮。_
 
 将返回一个包含错误和其它信息的列表。
 
@@ -151,7 +151,9 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 - End of file reached when inside an attribute value. Ignoring tag（在属性值内达到文件末尾。忽略标签）: 这个比较难懂，它说的是在某个地方有一个属性的值格式有误，估计是在文件末尾附近，因为文件的结尾出现在了一个属性值里。事实上浏览器没有渲染超链接已经是一个很明显的线索了。
 - End of file seen and there were open elements（文件结尾有未闭合的元素）：这个略有歧义，但基本上表明了有元素没有正确闭合。行号指向文件最后几行，且错误信息给出了一个这种错误的案例：
 
-      来看一个示例：<a href="https://www.mozilla.org/>Mozilla 主页链接</a> ↩ </ul>↩ </body>↩</html>
+  ```
+  来看一个示例：<a href="https://www.mozilla.org/>Mozilla 主页链接</a> ↩ </ul>↩ </body>↩</html>
+  ```
 
   > **备注：** 属性缺少结束引号会导致元素无法闭合。因为文档所有剩余部分（直到文档某处出现一个引号）都将被解析为属性的内容。
 

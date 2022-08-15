@@ -10,7 +10,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Deine_erste_WebErweiterung
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>In diesem Artikel wird die Erstellung einer Erweiterung (Extension) für Firefox komplett beschrieben. Diese Erweiterung soll einen roten Rand zu jeder Seite, die von "mozilla.org" oder einer Subdomain geladen wurde, hinzufügen.</p>
+<p>In diesem Artikel wird die Erstellung einer Erweiterung (Extension) für Firefox komplett beschrieben. Diese Erweiterung soll einen roten Rand zu jeder Seite, die von "mozilla.org" oder einer Subdomain geladen wurde, hinzufügen.</p>
 
 <p>Der Quellcode für dieses Beispiel ist auf GitHub auffindbar: <a href="https://github.com/mdn/webextensions-examples/tree/master/borderify">https://github.com/mdn/webextensions-examples/tree/master/borderify</a>.</p>
 
@@ -50,11 +50,11 @@ cd borderify</pre>
 
 <ul>
  <li>Die ersten drei <em>Keys</em>: <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/name">name</a></code> und <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/version">version</a></code> sind verpflichtend und beinhalten grundlegende Metadaten für die Erweiterung.</li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/description">description</a></code> ist optional, aber empfehlenswert: diese wird dann im Add-ons Manager angezeigt.</li>
+ <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/description">description</a></code> ist optional, aber empfehlenswert: diese wird dann im Add-ons Manager angezeigt.</li>
  <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> ist optional, aber empfehlenswert: es erlaubt es dir ein Icon für deine Erweiterung festzulegen, welches ebenfalls im Add-ons Manager angezeigt wird.</li>
 </ul>
 
-<p>Der interessanteste <em>Key</em> hier ist  <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, welcher Firefox auffordert, ein Skript in allen Webseiten zu laden, deren URLs einem spezifischen Muster zuzuordnen sind. In diesem Fall fragen wir Firefox nach dem Skript namens "borderify.js", um es in allen HTTP oder HTTPS Seiten von "mozilla.org" oder einer Subdomain zu laden.</p>
+<p>Der interessanteste <em>Key</em> hier ist  <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, welcher Firefox auffordert, ein Skript in allen Webseiten zu laden, deren URLs einem spezifischen Muster zuzuordnen sind. In diesem Fall fragen wir Firefox nach dem Skript namens "borderify.js", um es in allen HTTP oder HTTPS Seiten von "mozilla.org" oder einer Subdomain zu laden.</p>
 
 <ul>
  <li><a href="/en-US/Add-ons/WebExtensions/Content_scripts">Lerne mehr über content scripts.</a></li>
@@ -62,7 +62,7 @@ cd borderify</pre>
 </ul>
 
 <div class="warning">
-<p><a href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">In manchen Situation musst eine ID für deine Erweiterung festlegen</a>. Wenn du eine Add-on ID festlegen musst, schreibe den  <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> key in <code>manifest.json</code> und setze die <code>gecko.id</code>-Eigenschaft:</p>
+<p><a href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">In manchen Situation musst eine ID für deine Erweiterung festlegen</a>. Wenn du eine Add-on ID festlegen musst, schreibe den  <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> key in <code>manifest.json</code> und setze die <code>gecko.id</code>-Eigenschaft:</p>
 
 <pre class="brush: json">"applications": {
   "gecko": {
@@ -75,7 +75,7 @@ cd borderify</pre>
 
 <p>Die Erweiterung sollte ein Icon haben. Dieses wird neben dem Erweiterungseintrag in dem Add-ons manager angezeigt. Unsere manifest.json gibt den Ort des Icons unter "icons/border-48.png" an.</p>
 
-<p>Erstelle das "icons" Verzeichnis direkt in dem "borderify" Verzeichnis. Speichere dort ein Icon namens "border-48.png".  Du kannst dazu das <a href="https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png">von unserem Beispiel benutzen</a>, welches von der Google Material Design Iconsammlung stammt und unter den Richtlinien der <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike</a> Lizenz steht.</p>
+<p>Erstelle das "icons" Verzeichnis direkt in dem "borderify" Verzeichnis. Speichere dort ein Icon namens "border-48.png".  Du kannst dazu das <a href="https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png">von unserem Beispiel benutzen</a>, welches von der Google Material Design Iconsammlung stammt und unter den Richtlinien der <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike</a> Lizenz steht.</p>
 
 <p>Wenn du dich entscheidest ein eigenes Icon zu verwenden, dann sollte dieses 48x48 Pixel groß sein. Du kannst ebenfalls ein 96x96 Pixel großes Icon für hochauflösende Bildschirme, übergeben, welches dann als die <code>96</code> Property des <code>icons</code>-Objekts in der manifest.json festgelegt wird:</p>
 
@@ -97,7 +97,7 @@ cd borderify</pre>
 
 <pre class="brush: js">document.body.style.border = "5px solid red";</pre>
 
-<p>Dieses Skript wird in Seiten geladen, welche mit dem Muster des  <code>content_scripts</code>-Keys in der manifest.json Datei übereinstimmen. Das Skript hat direkten Zugriff auf das Dokument, genauso wie die Skripte, die von der Seite selbst geladen werden.</p>
+<p>Dieses Skript wird in Seiten geladen, welche mit dem Muster des  <code>content_scripts</code>-Keys in der manifest.json Datei übereinstimmen. Das Skript hat direkten Zugriff auf das Dokument, genauso wie die Skripte, die von der Seite selbst geladen werden.</p>
 
 <ul>
  <li><a href="/en-US/Add-ons/WebExtensions/Content_scripts">Lerne mehr über content scripts.</a></li>
@@ -130,7 +130,7 @@ cd borderify</pre>
 <p>{{EmbedYouTube("rxBQl2Z9IBQ")}}</p>
 
 <div class="note">
-<p>Versuche es allerdings nicht auf addons.mozilla.org! Content Scripts werden zurzeit auf dieser Domain geblockt.</p>
+<p>Versuche es allerdings nicht auf addons.mozilla.org! Content Scripts werden zurzeit auf dieser Domain geblockt.</p>
 </div>
 
 <p>Experimentiere nun ein bisschen. Bearbeite das "content script", um die Farbe des Randes zu ändern oder mache etwas anderes mit dem Seiteninhalt. Speichere das "content script", lade die Erweiterungsdateien in about:debugging neu mit Hilfe des "Neu laden"-Knopfs. Du kannst die Änderungen sofort sehen:</p>
@@ -143,7 +143,7 @@ cd borderify</pre>
 
 <h2 id="Verpacken_und_Veröffentlichen">Verpacken und Veröffentlichen</h2>
 
-<p>Damit andere Personen deine Erweiterung benutzen können musst du deine Erweiterung verpacken und zum Signieren an Mozilla senden. Um mehr darüber zu lernen, siehe  <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">"Deine Erweiterung veröffentlichen"</a>.</p>
+<p>Damit andere Personen deine Erweiterung benutzen können musst du deine Erweiterung verpacken und zum Signieren an Mozilla senden. Um mehr darüber zu lernen, siehe  <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">"Deine Erweiterung veröffentlichen"</a>.</p>
 
 <h2 id="Was_nun">Was nun?</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/Element/getBoundingClientRect
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>Die Methode <strong><code>Element.getBoundingClientRect()</code></strong>  gibt die Größe eines Elementes und dessen relative Position zum Viewport zurück.</p>
+<p>Die Methode <strong><code>Element.getBoundingClientRect()</code></strong>  gibt die Größe eines Elementes und dessen relative Position zum Viewport zurück.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -14,23 +14,23 @@ translation_of: Web/API/Element/getBoundingClientRect
 
 <h3 id="Returns" name="Returns">Rückgabe</h3>
 
-<p>Der zurückgegebene Wert ist ein <a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMClientRect" title="nsIDOMClientRect">DOMRect</a> Objekt, welches die Vereinigungsmenge aller von <code><a href="/en-US/docs/DOM/element.getClientRects" title="DOM/element.getClientRects">getClientRects()</a></code> zurückgegebenen Rechtecken eines Elementes darstellt, das heißt, der CSS border-boxes, die mit dem Element verknüpft sind.</p>
+<p>Der zurückgegebene Wert ist ein <a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMClientRect" title="nsIDOMClientRect">DOMRect</a> Objekt, welches die Vereinigungsmenge aller von <code><a href="/en-US/docs/DOM/element.getClientRects" title="DOM/element.getClientRects">getClientRects()</a></code> zurückgegebenen Rechtecken eines Elementes darstellt, das heißt, der CSS border-boxes, die mit dem Element verknüpft sind.</p>
 
-<p>Der Rückgabewert ist das kleinste Rechteck welches das komplette Element beinhaltet. Es enthält die read-only-Eigenschaften <code>left</code>, <code>top</code>, <code>right</code> ,<code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code> und <code>height</code>, welche die border-box in Pixeln beschreibt. Alle Eigenschaften, abgesehen von <code>width</code> und <code>height</code>, sind realtiv zur linken oberen Ecke des Viewports.</p>
+<p>Der Rückgabewert ist das kleinste Rechteck welches das komplette Element beinhaltet. Es enthält die read-only-Eigenschaften <code>left</code>, <code>top</code>, <code>right</code> ,<code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code> und <code>height</code>, welche die border-box in Pixeln beschreibt. Alle Eigenschaften, abgesehen von <code>width</code> und <code>height</code>, sind realtiv zur linken oberen Ecke des Viewports.</p>
 
 <div class="note">
-<p><strong>Merke: </strong>{{Gecko("1.9.1")}} fügt die Eigenschaften Breite und Höhe zu dem <code>DOMRect</code> Objekt hinzu.</p>
+<p><strong>Merke: </strong>{{Gecko("1.9.1")}} fügt die Eigenschaften Breite und Höhe zu dem <code>DOMRect</code> Objekt hinzu.</p>
 </div>
 
-<p>Leere Borderboxen werden vollständig ignoriert. Sind sämtliche Borderboxen eines Elements leer, oder entsprechen die <code>top</code> und <code>left</code> Angaben der Borderbox der ersten CSS-Box (in der Reihenfolge des Inhalts), so wird Null (zero) für <code>top</code> und <code>left</code> zurückgegeben.</p>
+<p>Leere Borderboxen werden vollständig ignoriert. Sind sämtliche Borderboxen eines Elements leer, oder entsprechen die <code>top</code> und <code>left</code> Angaben der Borderbox der ersten CSS-Box (in der Reihenfolge des Inhalts), so wird Null (zero) für <code>top</code> und <code>left</code> zurückgegeben.</p>
 
-<p>Ein Rechteck mit Breiten- und Höhenwerten von Null wird stattdessen zurückgegeben, und wo <code>top</code> und <code>left</code> den top-left Werten der Border-Box der ersten CSS-Box (in Reihenfolge des Inhaltes) entsprechen.</p>
+<p>Ein Rechteck mit Breiten- und Höhenwerten von Null wird stattdessen zurückgegeben, und wo <code>top</code> und <code>left</code> den top-left Werten der Border-Box der ersten CSS-Box (in Reihenfolge des Inhaltes) entsprechen.</p>
 
-<p>Bei der Berechnung des Rechtecks werden sowohl scrollbare Elemente sowie Scrolling an sich (wie viel bereits gescrollt wurde) einbezogen. Das bedeutet, dass die <code>top</code> und <code>left</code> Eigenschaften ihre Werte verändern, sobald sich deren Scrollposition verändert (d.h. ihre Werte sind <code><em>relativ</em> </code>zum <code>Viewport</code> und nicht absolut).</p>
+<p>Bei der Berechnung des Rechtecks werden sowohl scrollbare Elemente sowie Scrolling an sich (wie viel bereits gescrollt wurde) einbezogen. Das bedeutet, dass die <code>top</code> und <code>left</code> Eigenschaften ihre Werte verändern, sobald sich deren Scrollposition verändert (d.h. ihre Werte sind <code><em>relativ</em> </code>zum <code>Viewport</code> und nicht absolut).</p>
 
-<p>Will man die Position des  Rechtecks in Bezug auf die Linke/Obere Ecke des <code>Dokumentes </code>haben, was der <code><em>absoluten</em></code> Position des Rechteckes entspricht, muss man zu den <code>top</code> und <code>left</code> Positionen, die Werte von <code>window.scrollX</code> und<code> window.scrollY</code>, addieren.</p>
+<p>Will man die Position des  Rechtecks in Bezug auf die Linke/Obere Ecke des <code>Dokumentes </code>haben, was der <code><em>absoluten</em></code> Position des Rechteckes entspricht, muss man zu den <code>top</code> und <code>left</code> Positionen, die Werte von <code>window.scrollX</code> und<code> window.scrollY</code>, addieren.</p>
 
-<p>Um Browserkompabilität zu gewährleisten, nutzen Sie <code>window.pageXOffset</code> und <code>window.pageYOffset</code> statt<code> window.scrollY</code> und <code>window.scrollX</code>. Sollten <code style="font-style: normal;">window.pageXOffset</code>, <code style="font-style: normal;">window.pageYOffset</code>, <code style="font-style: normal;">window.</code><span style="font-family: consolas,monaco,andale mono,monospace;">scrollX and</span> <code style="font-style: normal;">window.</code><span style="font-family: consolas,monaco,andale mono,monospace;">scrollY undefined sein, nutzen Sie </span><code style="font-style: normal;">(((t = document.documentElement) || (t = document.body.parentNode)) &amp;&amp; typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft</code> and <code style="font-style: normal;">(((t = document.documentElement) || (t = document.body.parentNode)) &amp;&amp; typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop</code>.</p>
+<p>Um Browserkompabilität zu gewährleisten, nutzen Sie <code>window.pageXOffset</code> und <code>window.pageYOffset</code> statt<code> window.scrollY</code> und <code>window.scrollX</code>. Sollten <code style="font-style: normal;">window.pageXOffset</code>, <code style="font-style: normal;">window.pageYOffset</code>, <code style="font-style: normal;">window.</code><span style="font-family: consolas,monaco,andale mono,monospace;">scrollX and</span> <code style="font-style: normal;">window.</code><span style="font-family: consolas,monaco,andale mono,monospace;">scrollY undefined sein, nutzen Sie </span><code style="font-style: normal;">(((t = document.documentElement) || (t = document.body.parentNode)) &amp;&amp; typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft</code> and <code style="font-style: normal;">(((t = document.documentElement) || (t = document.body.parentNode)) &amp;&amp; typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop</code>.</p>
 
 <h2 id="Example" name="Example">Beispiel</h2>
 
@@ -52,7 +52,7 @@ var rect = obj.getBoundingClientRect();
 
 <p><code>getBoundingClientRect()</code> wurde erstmals im DHTML Objektmodell von MS IE implementiert.</p>
 
-<p>Der Rückgabewert von <code>getBoundingClientRect() </code>ist <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">konstant</a>, es können keine weiteren Eigenschaften hinzugefügt werden.</p>
+<p>Der Rückgabewert von <code>getBoundingClientRect() </code>ist <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">konstant</a>, es können keine weiteren Eigenschaften hinzugefügt werden.</p>
 
 <h2 id="See_also">See also</h2>
 

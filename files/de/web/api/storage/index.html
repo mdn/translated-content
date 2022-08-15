@@ -40,7 +40,7 @@ translation_of: Web/API/Storage
 
 <p>Zuerst wird mit <code>!localStorage.getItem('bgcolor') </code>geprüft, ob das Objekt keinen Datensatz namens <code>bgcolor</code> enthält. Ist der Datensatz <code>bgcolor</code> nicht vorhanden, wird <code>populateStorage()</code> aufgerufen, um Werte aus der Seite auszulesen und mittels {{domxref("Storage.setItem()")}} im <code>Storage</code>-Objekt zu speichern.<br>
  Anschließend folgt der Aufruf der Funktion <code>setStyles()</code>, die alle Daten mittels {{domxref("Storage.getItem()")}} ausliest und die Darstellung der Seite entsprechend ändert.<br>
-  </p>
+  </p>
 
 <pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
@@ -83,73 +83,14 @@ function setStyles() {
   <tr>
    <td>{{SpecName('Web Storage', '#the-storage-interface', 'Storage')}}</td>
    <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>localStorage</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.5</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>sessionStorage</td>
-   <td>5</td>
-   <td>{{CompatUnknown}}</td>
-   <td>2</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>8</td>
-   <td>11</td>
-   <td>3.2[1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Seit iOS 5.1 speichert Safari Mobile in <code>localStorage</code> abgelegte Daten im Cache-Verzeichnis. Dieses wird in unregelmäßigen Abständen vom Betriebssystem teilweise geleert, spätestens jedoch, sobald nur noch wenig Speicherplatz zur Verfügung steht.<br>
  Desweiteren verhindert der private Modus von Safari Mobile jegliche Nutzung von <code>localStorage</code>.</p>

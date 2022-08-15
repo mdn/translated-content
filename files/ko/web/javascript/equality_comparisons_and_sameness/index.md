@@ -130,7 +130,7 @@ console.log(str == obj); // true
 
 ## Same-value equality
 
-등가(same-value) 같음은 최종 사용 사례(use case)를 다룹니다: 두 값이 모든 문맥에서 _기능상 같은지_ 여부를 결정하는. (이 사용 사례는 [리스코프 치환 원칙](https://ko.wikipedia.org/wiki/리스코프_치환_원칙 "Liskov substitution principle")의 실례를 보입니다.) 다음은 불변 속성(property)을 변화시키려 시도할 때 일어나는 한 사례입니다:
+등가(same-value) 같음은 최종 사용 사례(use case)를 다룹니다: 두 값이 모든 문맥에서 _기능상 같은지_ 여부를 결정하는. (이 사용 사례는 [리스코프 치환 원칙](https://ko.wikipedia.org/wiki/리스코프_치환_원칙)의 실례를 보입니다.) 다음은 불변 속성(property)을 변화시키려 시도할 때 일어나는 한 사례입니다:
 
 ```js
 // 불변(immutable) NEGATIVE_ZERO 속성을 Number 생성자에 추가.

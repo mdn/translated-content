@@ -66,18 +66,18 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 在这篇文章中，我们将直接进入自主学习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉[Youtube](https://www.youtube.com/)，但很多人不了解它所提供的一些分享功能。让我们来看看
 Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)在页面中嵌入喜欢的视频。
 
-1.  首先，去 Youtube 找一个喜欢的视频。
-2.  在视频下方，你会看到一个*共享*按钮 - 点击查看共享选项。
-3.  选择“ *嵌入”*选项卡，你将得到一些 `<iframe>` 代码——复制一下。
-4.  粘贴到下面的*输入*框里，看看*输出*结果是什么。
+1. 首先，去 Youtube 找一个喜欢的视频。
+2. 在视频下方，你会看到一个*共享*按钮 - 点击查看共享选项。
+3. 选择“ *嵌入”*选项卡，你将得到一些 `<iframe>` 代码——复制一下。
+4. 粘贴到下面的*输入*框里，看看*输出*结果是什么。
 
 此外，你还可以试试在示例中嵌入 [Google 地图](https://www.google.com/maps/)：
 
-1.  去 Google 地图找一个喜欢的地图。
-2.  点击 UI 左上角的“汉堡菜单”（三条水平线）。
-3.  选择*共享或嵌入地图*选项。
-4.  选择嵌入地图选项，这将给你一些`<iframe>`代码 - 复制一下。
-5.  粘贴到下面的*输入*框，看看*输出*结果是什么。
+1. 去 Google 地图找一个喜欢的地图。
+2. 点击 UI 左上角的“汉堡菜单”（三条水平线）。
+3. 选择*共享或嵌入地图*选项。
+4. 选择嵌入地图选项，这将给你一些`<iframe>`代码 - 复制一下。
+5. 粘贴到下面的*输入*框，看看*输出*结果是什么。
 
 如果你犯了某些错误，你可以点击 _Reset_ 按钮以重置编辑器。如果你确实被卡住了， 按下 _Show solution_ 按钮以借鉴答案。
 
@@ -112,7 +112,7 @@ Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)�
   - : 如果设置为 1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0 删除边框。不推荐这样设置，因为在 [CSS
     中](/zh-CN/docs/Glossary/CSS)可以更好地实现相同的效果。[`border`](/zh-CN/docs/Web/CSS/border)`: none;`
 - [`src`](/zh-CN/docs/Web/HTML/Element/iframe#attr-src)
-  - : 该属性与 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)/[` 元素表示文档中的图像。"><img>`](/zh-CN/docs/Web/HTML/Element/img)一样包含指向要嵌入文档的
+  - : 该属性与 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) / 元素表示文档中的图像。[`<img>`](/zh-CN/docs/Web/HTML/Element/img)一样包含指向要嵌入文档的
     URL 路径。
 - [`width`](/zh-CN/docs/Web/HTML/Element/iframe#attr-width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#attr-height)
   - : 这些属性指定你想要的 iframe 的宽度和高度。
@@ -161,8 +161,8 @@ CC-BY-SA 下许可的](/zh-CN/docs/MDN/About#版权和许可)，这意味着，�
 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 是 [HTTP](/zh-CN/docs/Glossary/HTTP) 的加密版本。你应该尽可能使用 HTTPS
 为你的网站提供服务：
 
-1.  HTTPS 减少了远程内容在传输过程中被篡改的机会，
-2.  HTTPS 防止嵌入式内容访问你的父文档中的内容，反之亦然。
+1. HTTPS 减少了远程内容在传输过程中被篡改的机会，
+2. HTTPS 防止嵌入式内容访问你的父文档中的内容，反之亦然。
 
 使用 HTTPS 需要一个安全证书，这可能是昂贵的（尽管 [Let's Encrypt](https://letsencrypt.org/) 让这件事变得更容易），如果你没有，可以使用 HTTP
 来为你的父文档提供服务。但是，由于 HTTPS 的第二个好处，_无论成本如何，你绝对不能使用 HTTP 嵌入第三方内容_（在最好的情况下，你的用户的 Web 浏览器会给他们一个可怕的警告）。所有有声望的公司，例如

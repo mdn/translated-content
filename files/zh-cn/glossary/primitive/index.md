@@ -21,20 +21,22 @@ translation_of: Glossary/Primitive
 
 ### JavaScript
 
-    // 使用字符串方法不会改变一个字符串
-    var bar = "baz";
-    console.log(bar);               // baz
-    bar.toUpperCase();
-    console.log(bar);               // baz
+```js
+// 使用字符串方法不会改变一个字符串
+var bar = "baz";
+console.log(bar);               // baz
+bar.toUpperCase();
+console.log(bar);               // baz
 
-    // 使用数组方法可以改变一个数组
-    var foo = [];
-    console.log(foo);               // []
-    foo.push("plugh");
-    console.log(foo);               // ["plugh"]
+// 使用数组方法可以改变一个数组
+var foo = [];
+console.log(foo);               // []
+foo.push("plugh");
+console.log(foo);               // ["plugh"]
 
-    // 赋值行为可以给基本类型一个新值，而不是改变它
-    bar = bar.toUpperCase();       // BAZ
+// 赋值行为可以给基本类型一个新值，而不是改变它
+bar = bar.toUpperCase();       // BAZ
+```
 
 基本类型值可以被替换，但不能被改变。
 
@@ -44,26 +46,28 @@ translation_of: Glossary/Primitive
 
 ### JavaScript
 
-    // 基本类型
-    let foo = 5;
+```js
+// 基本类型
+let foo = 5;
 
-    // 定义一个貌似可以改变基本类型值的函数
-    function addTwo(num) {
-       num += 2;
-    }
-    // 和前面的函数一样
-    function addTwo_v2(foo) {
-       foo += 2;
-    }
+// 定义一个貌似可以改变基本类型值的函数
+function addTwo(num) {
+    num += 2;
+}
+// 和前面的函数一样
+function addTwo_v2(foo) {
+    foo += 2;
+}
 
-    // 调用第一个函数，并传入基本类型值作为参数
-    addTwo(foo);
-    // Getting the current Primitive value
-    console.log(foo);   // 5
+// 调用第一个函数，并传入基本类型值作为参数
+addTwo(foo);
+// Getting the current Primitive value
+console.log(foo);   // 5
 
-    // 尝试调用第二个函数...
-    addTwo_v2(foo);
-    console.log(foo);   // 5
+// 尝试调用第二个函数...
+addTwo_v2(foo);
+console.log(foo);   // 5
+```
 
 你是否认为会得到`7`，而不是`5`？如果是，请看看代码是如何运行的：
 
@@ -98,15 +102,15 @@ translation_of: Glossary/Primitive
 - [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
 - 维基百科上的[基本类型](https://zh.wikipedia.org/wiki/Primitive_data_type)
 
-1.  [术语表](/zh-CN/docs/Glossary)
+1. [术语表](/zh-CN/docs/Glossary)
 
-    1.  {{Glossary("JavaScript")}}
-    2.  {{Glossary("string")}}
-    3.  {{Glossary("number")}}
-    4.  {{Glossary("bigint")}}
-    5.  {{Glossary("boolean")}}
-    6.  {{Glossary("null")}}
-    7.  {{Glossary("undefined")}}
-    8.  {{Glossary("symbol")}}
+    1. {{Glossary("JavaScript")}}
+    2. {{Glossary("string")}}
+    3. {{Glossary("number")}}
+    4. {{Glossary("bigint")}}
+    5. {{Glossary("boolean")}}
+    6. {{Glossary("null")}}
+    7. {{Glossary("undefined")}}
+    8. {{Glossary("symbol")}}
 
-2.  [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+2. [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)

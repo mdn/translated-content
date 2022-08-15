@@ -22,13 +22,13 @@ p {
 
 然后再将该 CSS 文件连接至 HTML 文档，否则 CSS 代码不会对 HTML 文档在浏览器里的显示效果有任何影响。（如果你没有完成前几节的实践，请复习 [处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
 
-1.  打开 `index.html` 文件，然后将下面一行粘贴到文档头（也就是 `<head>` 和 `</head>` 标签之间）。
+1. 打开 `index.html` 文件，然后将下面一行粘贴到文档头（也就是 `<head>` 和 `</head>` 标签之间）。
 
     ```html
     <link href="styles/style.css" rel="stylesheet">
     ```
 
-2.  保存 `index.html` 并用浏览器将其打开。应该看到以下页面：
+2. 保存 `index.html` 并用浏览器将其打开。应该看到以下页面：
 
 ![测试页面，文字设置为红色](website-screenshot-styled.png)如果段落文字变红，那么祝贺你，你已经成功地迈出了 CSS 学习的第一步。
 
@@ -95,7 +95,7 @@ p, li, h1 {
 
 在探索了一些 CSS 基础后，我们来把更多规则和信息添加至 `style.css` 中，从而让示例更美观。首先，让字体和文本变得更漂亮。
 
-1.  第一步，找到之前 [Google Font 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。并以 {{htmlelement("link")}} 元素的形式添加进 `index.html` 文档头（ {{HTMLElement("head")}} 和 `</head>` 之间的任意位置）。代码如下：
+1. 第一步，找到之前 [Google Font 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。并以 {{htmlelement("link")}} 元素的形式添加进 `index.html` 文档头（ {{HTMLElement("head")}} 和 `</head>` 之间的任意位置）。代码如下：
 
     ```html
      <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
@@ -103,8 +103,8 @@ p, li, h1 {
 
     以上代码为当前网页下载 Open Sans 字体，从而使自定义 CSS 中可以对 HTML 元素应用这个字体。
 
-2.  接下来，删除 `style.css` 文件中已有的规则。虽然测试是成功的了，但是红字看起来并不太舒服。
-3.  将下列代码添加到相应的位置，用你在 Google Fonts 找到的字体替代 `font-family` 中的占位行。（ `font-family` 意味着你想要你的文本使用的字体。）这条规则首先为整个页面设定了一个全局字体和字号（因为 `<html>` 是整个页面的父元素，而且它所有的子元素都会继承相同的 `font-size` 和 `font-family`）：
+2. 接下来，删除 `style.css` 文件中已有的规则。虽然测试是成功的了，但是红字看起来并不太舒服。
+3. 将下列代码添加到相应的位置，用你在 Google Fonts 找到的字体替代 `font-family` 中的占位行。（ `font-family` 意味着你想要你的文本使用的字体。）这条规则首先为整个页面设定了一个全局字体和字号（因为 `<html>` 是整个页面的父元素，而且它所有的子元素都会继承相同的 `font-size` 和 `font-family`）：
 
     ```css
     html {
@@ -119,7 +119,7 @@ p, li, h1 {
 
     > **备注：** ` /*``*/ ` 不可嵌套，`/*这样的注释是/*不行*/的*/`。CSS 不接受 `//` 注释。
 
-4.  接下来为文档体内的元素（{{htmlelement("h1")}}、{{htmlelement("li")}} 和 {{htmlelement("p")}}）设置字号。将标题居中显示，并为正文设置行高和字间距，从而提高页面的可读性。
+4. 接下来为文档体内的元素（{{htmlelement("h1")}}、{{htmlelement("li")}} 和 {{htmlelement("p")}}）设置字号。将标题居中显示，并为正文设置行高和字间距，从而提高页面的可读性。
 
     ```css
     h1 {

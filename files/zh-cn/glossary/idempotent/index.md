@@ -15,22 +15,28 @@ original_slug: Glossary/幂等
 
 `GET /pageX HTTP/1.1` 幂等的。连续调用多次，客户端接收到的结果都是一样的：
 
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
+```
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+```
 
 `POST /add_row HTTP/1.1` 不是幂等的。如果调用多次，就会增加多行记录：
 
-    POST /add_row HTTP/1.1
-    POST /add_row HTTP/1.1   -> Adds a 2nd row
-    POST /add_row HTTP/1.1   -> Adds a 3rd row
+```
+POST /add_row HTTP/1.1
+POST /add_row HTTP/1.1   -> Adds a 2nd row
+POST /add_row HTTP/1.1   -> Adds a 3rd row
+```
 
 `DELETE /idX/delete HTTP/1.1` 是幂等的，即便是不同请求之间接收到的状态码不一样：
 
-    DELETE /idX/delete HTTP/1.1   -> Returns 200 if idX exists
-    DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
-    DELETE /idX/delete HTTP/1.1   -> Returns 404
+```
+DELETE /idX/delete HTTP/1.1   -> Returns 200 if idX exists
+DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
+DELETE /idX/delete HTTP/1.1   -> Returns 404
+```
 
 ## 了解更多
 

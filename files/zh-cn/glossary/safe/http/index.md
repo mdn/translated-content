@@ -17,15 +17,21 @@ translation_of: Glossary/safe
 
 安全的请求，不会改变服务端的状态（数据）：
 
-    GET /pageX.html HTTP/1.1
+```
+GET /pageX.html HTTP/1.1
+```
 
 非安全的请求方式，可能会引起服务端状态的改变：
 
-    POST /pageX.html HTTP/1.1
+```
+POST /pageX.html HTTP/1.1
+```
 
 一个幂等（idempotent）但是不安全的方法：
 
-    DELETE /idX/delete HTTP/1.1
+```
+DELETE /idX/delete HTTP/1.1
+```
 
 ## 更多
 

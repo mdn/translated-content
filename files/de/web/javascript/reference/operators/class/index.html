@@ -12,19 +12,19 @@ translation_of: Web/JavaScript/Reference/Operators/class
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>Der class-Ausdruck ist eine Methode zur Definition einer Klasse in ECMAScript 2015. Ähnlich wie beim {{jsxref("Operators/function", "function-Ausdruck")}} kann der class-Ausdruck benannt oder unbenannt sein. Ist er benannt, so gilt der Name nur lokal im Klassenkörper. JavaScript-Klassen nutzen prototyp-basierte Vererbung.</p>
+<p>Der class-Ausdruck ist eine Methode zur Definition einer Klasse in ECMAScript 2015. Ähnlich wie beim {{jsxref("Operators/function", "function-Ausdruck")}} kann der class-Ausdruck benannt oder unbenannt sein. Ist er benannt, so gilt der Name nur lokal im Klassenkörper. JavaScript-Klassen nutzen prototyp-basierte Vererbung.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var MyClass = class <em>[className]</em> [extends] {
-  // Klassenkörper
+  // Klassenkörper
 };</pre>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Ein class-Ausdruck hat die gleiche Syntax wie die {{jsxref("Statements/class", "class-Anweisung (Deklaration)")}}. Jedoch kann mit dem class-Ausdruck der Klassenname ("binding identifier") ausgelassen werden, was mit der class-Anweisung nicht möglich ist. Zusätzlich erlaubt ein class-Ausdruck das erneute Deklarieren einer Klasse, ohne dass ein Fehler wie bei der {{jsxref("Statements/class", "class-Deklaration")}} auftritt. Die constructor-Eigenschaft ist optional. Zudem wird der <em>typeof</em>-Operator bei so deklarierten Klassen immer den Typ "function" zurückgeben.</p>
+<p>Ein class-Ausdruck hat die gleiche Syntax wie die {{jsxref("Statements/class", "class-Anweisung (Deklaration)")}}. Jedoch kann mit dem class-Ausdruck der Klassenname ("binding identifier") ausgelassen werden, was mit der class-Anweisung nicht möglich ist. Zusätzlich erlaubt ein class-Ausdruck das erneute Deklarieren einer Klasse, ohne dass ein Fehler wie bei der {{jsxref("Statements/class", "class-Deklaration")}} auftritt. Die constructor-Eigenschaft ist optional. Zudem wird der <em>typeof</em>-Operator bei so deklarierten Klassen immer den Typ "function" zurückgeben.</p>
 
-<p>Genau wie mit class-Anweisungen wird der Körper der Klasse im {{jsxref("Strict_mode", "strict mode")}} ausgeführt.</p>
+<p>Genau wie mit class-Anweisungen wird der Körper der Klasse im {{jsxref("Strict_mode", "strict mode")}} ausgeführt.</p>
 
 <pre class="brush: js">'use strict';
 var Foo = class {}; // constructor-Eigenschaft ist optional
@@ -89,64 +89,14 @@ Foo.name; // "NamedFoo"
   <tr>
    <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funktion</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>grundlegende Unterstützung</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funktion</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>grundlegende Unterstützung</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

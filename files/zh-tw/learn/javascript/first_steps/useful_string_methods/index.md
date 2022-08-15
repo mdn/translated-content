@@ -171,14 +171,15 @@ browserType[browserType.length-1];
 
 ### 尋找字串中的子字串（substring）並提出子字串
 
-1.  Sometim 有時候你會想搜尋是否有一個較小的字串存在於比較大的字串中（_我們通常會說是否有個子字串存在於字串中_）。這可以用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法，當中需要一個參數（ {{glossary("parameter")}} ），也就是你想搜尋的子字串：
-2.  ```js
+1. Sometim 有時候你會想搜尋是否有一個較小的字串存在於比較大的字串中（_我們通常會說是否有個子字串存在於字串中_）。這可以用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法，當中需要一個參數（ {{glossary("parameter")}} ），也就是你想搜尋的子字串：
+
+2. ```js
     browserType.indexOf('zilla');
     ```
 
     結果會傳回 2，因為子字串 "zilla" 在 "mozilla" 中是從位置 2 開始的。（依然要記得電腦計數是從 0 開始）。這個方法可以用篩選字串，舉例來說：我們有一串網址的清單，而我們只想印出那些包含 "mozilla" 的網址。
 
-3.  This can be done in another way, which is possibly even more effective. Try the following:
+3. This can be done in another way, which is possibly even more effective. Try the following:
 
     ```js
     browserType.indexOf('vanilla');
@@ -194,7 +195,7 @@ browserType[browserType.length-1];
     }
     ```
 
-4.  When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
+4. When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
 
     ```js
     browserType.slice(0,3);
@@ -202,7 +203,7 @@ browserType[browserType.length-1];
 
     This returns "moz" — the first parameter is the character position to start extracting at, and the second parameter is the character position after the last one to be extracted. So the slice happens from the first position, up to, but not including, the last position. In this example, since the starting index is 0, the second parameter is equal to the length of the string being returned.
 
-5.  Also, if you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter! Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
+5. Also, if you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter! Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
 
     ```js
     browserType.slice(2);
@@ -246,9 +247,9 @@ Each example comes with a "Reset" button, which you can use to reset the code if
 
 In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the `if( ... )` structure, to test each string and only print it in the list if it is a Christmas message.
 
-1.  First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
-2.  You'll then need to write a conditional test of the form _operand1 operator operand2_. Is the thing on the left equal to the thing on the right? Or in this case, does the method call on the left return the result on the right?
-3.  Hint: In this case it is probably more useful to test whether the method call _isn't_ equal to a certain result.
+1. First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
+2. You'll then need to write a conditional test of the form _operand1 operator operand2_. Is the thing on the left equal to the thing on the right? Or in this case, does the method call on the left return the result on the right?
+3. Hint: In this case it is probably more useful to test whether the method call _isn't_ equal to a certain result.
 
 ```html hidden
 <h2>Live output</h2>
@@ -399,10 +400,10 @@ textarea.onkeyup = function(){
 
 In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:
 
-1.  Convert the whole of the string contained in the `input` variable to lower case and store it in a new variable.
-2.  Grab the first letter of the string in this new variable and store it in another variable.
-3.  Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
-4.  Change the value of the `result` variable to equal to the final result, not the `input`.
+1. Convert the whole of the string contained in the `input` variable to lower case and store it in a new variable.
+2. Grab the first letter of the string in this new variable and store it in another variable.
+3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
+4. Change the value of the `result` variable to equal to the final result, not the `input`.
 
 > **備註：** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
 
@@ -560,11 +561,11 @@ MAN: Manchester Piccadilly
 
 We'd recommend doing it like this:
 
-1.  Extract the three-letter station code and store it in a new variable.
-2.  Find the character index number of the semicolon.
-3.  Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable.
-4.  Concatenate the two new variables and a string literal to make the final string.
-5.  Change the value of the `result` variable to equal to the final string, not the `input`.
+1. Extract the three-letter station code and store it in a new variable.
+2. Find the character index number of the semicolon.
+3. Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable.
+4. Concatenate the two new variables and a string literal to make the final string.
+5. Change the value of the `result` variable to equal to the final string, not the `input`.
 
 ```html hidden
 <h2>Live output</h2>

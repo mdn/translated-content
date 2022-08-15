@@ -7,7 +7,7 @@ translation_of: Web/Manifest
 
 <p>Das Web-App-Manifest liefert Informationen über eine Anwendung (wie Name, Autor, Icon und Beschreibung) in einer JSON-Textdatei. Der Zweck des Manifests ist es, Web-Anwendungen auf dem Homescreen eines Geräts zu installieren, was den Benutzern einen schnelleren Zugriff und eine umfassendere Erfahrung bietet.</p>
 
-<p>Web-App-Manifeste sind Teil einer Sammlung von Web-Technologien namens <a href="/en-US/docs/Web/Apps/Progressive">progressive Web-Anwendungen</a>, welche wiederum auf dem Homescreen eines Geräts installiert werden können, ohne dass der Benutzer sie über einen App Store installieren muss. Außerdem stellen sie auch andere Technologien wie z.B. die Offline-Fähigkeit und Push-Benachrichtigungen zur Verfügung.</p>
+<p>Web-App-Manifeste sind Teil einer Sammlung von Web-Technologien namens <a href="/en-US/docs/Web/Apps/Progressive">progressive Web-Anwendungen</a>, welche wiederum auf dem Homescreen eines Geräts installiert werden können, ohne dass der Benutzer sie über einen App Store installieren muss. Außerdem stellen sie auch andere Technologien wie z.B. die Offline-Fähigkeit und Push-Benachrichtigungen zur Verfügung.</p>
 
 <h2 id="Deploying_a_manifest_with_the_link_tag" name="Deploying_a_manifest_with_the_link_tag">Bereitstellung eines Manifests</h2>
 
@@ -68,7 +68,7 @@ translation_of: Web/Manifest
 <pre class="brush: json notranslate">"background_color": "red"</pre>
 
 <div class="note">
-<p><strong>Hinweis</strong> : Die  <code>background_color</code> Eigenschaft soll nur die Benutzererfahrung verbessern, während eine Webanwendung geladen wird und sollte nicht vom Browser als Hintergrundfarbe verwendet werden, wenn das Stylesheet der Webanwendung verfügbar ist.</p>
+<p><strong>Hinweis</strong> : Die  <code>background_color</code> Eigenschaft soll nur die Benutzererfahrung verbessern, während eine Webanwendung geladen wird und sollte nicht vom Browser als Hintergrundfarbe verwendet werden, wenn das Stylesheet der Webanwendung verfügbar ist.</p>
 </div>
 
 <h3 id="description"><code>description</code></h3>
@@ -79,7 +79,7 @@ translation_of: Web/Manifest
 
 <h3 id="dir"><code>dir</code></h3>
 
-<p>Definiert die primäre Textrichtung für die <code>name</code>, <code>short_name</code> und <code>description</code> Eigenschaften. Zusammen mit der  <code>lang</code> Eigenschaft kann es helfen, die korrekte Darstellung von rechts-nach-links-Sprachen zu liefern.</p>
+<p>Definiert die primäre Textrichtung für die <code>name</code>, <code>short_name</code> und <code>description</code> Eigenschaften. Zusammen mit der  <code>lang</code> Eigenschaft kann es helfen, die korrekte Darstellung von rechts-nach-links-Sprachen zu liefern.</p>
 
 <pre class="brush: json notranslate" dir="rtl">"dir": "rtl",
 "lang": "ar",
@@ -90,7 +90,7 @@ translation_of: Web/Manifest
 <ul>
  <li><code>ltr</code> (links nach rechts)</li>
  <li><code>rtl</code> (rechts nach links)</li>
- <li><code>auto</code> (Weist den Browser an, den Unicode-bidirektionalen Algorithmus zu verwenden, um die Textrichtung zu schätzen.)</li>
+ <li><code>auto</code> (Weist den Browser an, den Unicode-bidirektionalen Algorithmus zu verwenden, um die Textrichtung zu schätzen.)</li>
 </ul>
 
 <div class="note">
@@ -131,7 +131,7 @@ translation_of: Web/Manifest
   </tr>
   <tr>
    <td><code>browser</code></td>
-   <td>Die Anwendung öffnet sich in einem herkömmlichen Browser-Tab oder einem neuen Fenster, je nach Browser und Plattform. Dies ist die Voreinstellung. </td>
+   <td>Die Anwendung öffnet sich in einem herkömmlichen Browser-Tab oder einem neuen Fenster, je nach Browser und Plattform. Dies ist die Voreinstellung. </td>
    <td>(Keiner)</td>
   </tr>
  </tbody>
@@ -143,7 +143,7 @@ translation_of: Web/Manifest
 
 <h3 id="icons"><code>icons</code></h3>
 
-<p>Gibt ein Array von Bildobjekten an, die als Anwendungssymbole in verschiedenen Kontexten dienen können. Zum Beispiel können sie verwendet werden, um die Webanwendung unter einer Liste anderer Anwendungen darzustellen oder die Webanwendung mit einem Task-Switcher und / oder Systemeinstellungen eines <abbr title="Betriebssystem">Betriebssystems</abbr> zu integrieren  .</p>
+<p>Gibt ein Array von Bildobjekten an, die als Anwendungssymbole in verschiedenen Kontexten dienen können. Zum Beispiel können sie verwendet werden, um die Webanwendung unter einer Liste anderer Anwendungen darzustellen oder die Webanwendung mit einem Task-Switcher und / oder Systemeinstellungen eines <abbr title="Betriebssystem">Betriebssystems</abbr> zu integrieren  .</p>
 
 <pre class="brush: json notranslate">"icons": [
   {
@@ -177,7 +177,7 @@ translation_of: Web/Manifest
  <tbody>
   <tr>
    <td><code>sizes</code></td>
-   <td>Ein String mit platzgetrennten Bildmaßen. </td>
+   <td>Ein String mit platzgetrennten Bildmaßen. </td>
   </tr>
   <tr>
    <td><code>src</code></td>
@@ -293,7 +293,7 @@ translation_of: Web/Manifest
 
 <h3 id="theme_color"><code>theme_color</code></h3>
 
-<p>Definiert die Standardthemafarbe für eine Anwendung. Dies beeinflusst manchmal, wie die Anwendung vom Betriebssystem angezeigt wird (z. B. auf Android-Task-Switcher, die Themenfarbe umgibt die Anwendung).  </p>
+<p>Definiert die Standardthemafarbe für eine Anwendung. Dies beeinflusst manchmal, wie die Anwendung vom Betriebssystem angezeigt wird (z. B. auf Android-Task-Switcher, die Themenfarbe umgibt die Anwendung).  </p>
 
 <pre class="brush: json notranslate">"theme_color": "aliceblue"</pre>
 
@@ -303,7 +303,7 @@ translation_of: Web/Manifest
 
 <h2 id="Mime_Typ">Mime Typ</h2>
 
-<p>Manifestationen sollten mit dem <code>application/manifest+json</code>MIME-Typ bedient werden. Allerdings ist es optional, dies zu tun.  </p>
+<p>Manifestationen sollten mit dem <code>application/manifest+json</code>MIME-Typ bedient werden. Allerdings ist es optional, dies zu tun.  </p>
 
 <h2 id="Spezifikation">Spezifikation</h2>
 
@@ -324,100 +324,4 @@ translation_of: Web/Manifest
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android-Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome für Android</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome (39.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>32.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome (39.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>background_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome (46.0)}} <sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome (46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>theme_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome (46.0)}} <sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome (46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>icons</code>, <code>name</code>, <code>short_name</code>, Und <code>theme_color</code>für verwendete <a href="https://support.mozilla.org/t5/Other/How-to-add-a-shortcut-to-a-website-on-Android/ta-p/21992">In der Home - Bildschirm</a> - Funktion.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile (53)}} <sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>display-mode</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile (47)}} <sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] unterstützt nicht <code>lang</code>oder <code>scope</code>.</p>
-
-<p>[2] Die <code>icons</code>, <code>name</code>, <code>short_name</code>und <code>theme_color</code>Felder der <a href="/en-US/docs/Web/Manifest">Web App - Manifest</a> (falls vorhanden) kann nun als Quelle der Homescreen / apps Fenstersymbole sein, apps Fenstertitel, Homescreen Symboltitel und Apps Fensterfarbe (jeweils) für „hinzufügen zum Heimbildschirm "(nur Firefox Mobile, siehe {{Bug (" 1234558 ")}}). Experimentelle Unterstützung für diese Funktion steht hinter der booleschen Flagge <code>manifest.install.enabled</code>in <code>about:config</code>.</p>
-
-<p>[3] Nur die <code>fullscreen</code>und <code>browser</code>Werte <code>display-mode</code>wurden in 47. <code>minimal-ui</code>und <code>standalone</code>wurden in Firefox 57 hinzugefügt.</p>
+{{Compat}}

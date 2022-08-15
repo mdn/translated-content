@@ -14,7 +14,7 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 
 在开始这个模块之前你需要知道什么是服务端网页编程和 web 框架，建议你先阅读 [服务端网页编程](/zh-CN/docs/Learn/Server-side) 模块。强烈推荐了解编程概念和 [JavaScript](/zh-CN/docs/Web/JavaScript) ，但这对理解核心概念不是必需的。
 
-> **备注：** 这个网站有很多有用的资源用来学习 JavaScript 做客户端开发： [JavaScript](/zh-CN/docs/Web/JavaScript), [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide), [JavaScript Basics](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/zh-CN/docs/Learn/JavaScript) (learning). 核心的 JavaScript 语言和概念用 Nodejs 服务端开发是相同的，也是相关的。Node.js 提供[ 额外的 API](https://nodejs.org/dist/latest-v6.x/docs/api/) 用于支持在无浏览器环境中有用的功能，例如，创建 HTTP 服务器并访问文件系统，但不支持 JavaScript API 以使用浏览器和 DOM。
+> **备注：** 这个网站有很多有用的资源用来学习 JavaScript 做客户端开发： [JavaScript](/zh-CN/docs/Web/JavaScript), [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide), [JavaScript Basics](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/zh-CN/docs/Learn/JavaScript) (learning). 核心的 JavaScript 语言和概念用 Nodejs 服务端开发是相同的，也是相关的。Node.js 提供 [额外的 API](https://nodejs.org/dist/latest-v6.x/docs/api/) 用于支持在无浏览器环境中有用的功能，例如，创建 HTTP 服务器并访问文件系统，但不支持 JavaScript API 以使用浏览器和 DOM。
 >
 > 这篇指南将会提供一些 Node.js 和 Express 的信息，并且有很多优秀的网络资源和书籍。一些链接 比如[How do I get started with Node.js](http://stackoverflow.com/a/5511507/894359) (StackOverflow) 和 [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora).
 
@@ -42,7 +42,7 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 ## 另见
 
 - [在 PWS/Cloud Foundry 安装 LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)
-  - : 本文提供了如何在[Pivotal Web Services PaaS ](http://run.pivotal.io)云上安装 LocalLibrary 的实际演示 - 这是 Heroku 的全功能，开源替代品，Heroku 是本教程第 7 部分中使用的 PaaS 云服务，如上所列。如果您正在寻找 Heroku（或其他 PaaS 云服务）的替代方案，或者只是想尝试不同的东西，PWS / Cloud Foundry 绝对值得一试。
+  - : 本文提供了如何在[Pivotal Web Services PaaS](http://run.pivotal.io) 云上安装 LocalLibrary 的实际演示 - 这是 Heroku 的全功能，开源替代品，Heroku 是本教程第 7 部分中使用的 PaaS 云服务，如上所列。如果您正在寻找 Heroku（或其他 PaaS 云服务）的替代方案，或者只是想尝试不同的东西，PWS / Cloud Foundry 绝对值得一试。
 
 ## 其它教程
 

@@ -1,7 +1,6 @@
 ---
 title: BroadcastChannel：message 事件
 slug: Web/API/BroadcastChannel/message_event
-translation_of: Web/API/BroadcastChannel/message_event
 ---
 {{APIRef}}
 

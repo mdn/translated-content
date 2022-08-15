@@ -85,4 +85,3 @@ console.log(e5.toString()); // 'hello'
 ## 参见
 
 - [`core-js`](https://github.com/zloirock/core-js) 中关于 [`Error.prototype.toString` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-error)（修复了多个错误）
-

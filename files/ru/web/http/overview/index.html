@@ -12,11 +12,11 @@ translation_of: Web/HTTP/Overview
 
 <p class="summary"><strong>HTTP</strong> — это {{glossary("protocol","протокол")}}, позволяющий получать различные ресурсы, например HTML-документы. Протокол HTTP лежит в основе обмена данными в Интернете. HTTP является протоколом клиент-серверного взаимодействия, что означает инициирование запросов к серверу самим получателем, обычно веб-браузером (web-browser). Полученный итоговый документ будет (может) состоять из различных поддокументов, являющихся частью итогового документа: например, из отдельно полученного текста, описания структуры документа, изображений, видео-файлов, скриптов и многого другого.</p>
 
-<p><img alt="A Web document is the composition of different resources" src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" style="height: 319px; width: 545px;"></p>
+<p><img alt="A Web document is the composition of different resources" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png" style="height: 319px; width: 545px;"></p>
 
 <p>Клиенты и серверы взаимодействуют, обмениваясь одиночными сообщениями (а не потоком данных). Сообщения, отправленные клиентом, обычно веб-браузером, называются <em>запросами</em>, а сообщения, отправленные сервером, называются <em>ответами</em>.</p>
 
-<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">Хотя HTTP был разработан ещё в начале 1990-х годов, за счёт своей расширяемости в дальнейшем он все время совершенствовался. HTTP является протоколом прикладного уровня, который чаще всего использует возможности другого протокола - {{glossary("TCP")}} (или {{glossary("TLS")}} - защищённый TCP) - для пересылки своих сообщений, однако любой другой надёжный транспортный протокол теоретически может быть использован для доставки таких сообщений. Благодаря своей расширяемости, он используется не только для получения клиентом гипертекстовых документов, изображений и видео, но и для передачи содержимого серверам, например, с помощью HTML-форм. HTTP также может быть использован для получения только частей документа с целью обновления веб-страницы по запросу (например, посредством AJAX запроса).</p>
+<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http-layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">Хотя HTTP был разработан ещё в начале 1990-х годов, за счёт своей расширяемости в дальнейшем он все время совершенствовался. HTTP является протоколом прикладного уровня, который чаще всего использует возможности другого протокола - {{glossary("TCP")}} (или {{glossary("TLS")}} - защищённый TCP) - для пересылки своих сообщений, однако любой другой надёжный транспортный протокол теоретически может быть использован для доставки таких сообщений. Благодаря своей расширяемости, он используется не только для получения клиентом гипертекстовых документов, изображений и видео, но и для передачи содержимого серверам, например, с помощью HTML-форм. HTTP также может быть использован для получения только частей документа с целью обновления веб-страницы по запросу (например, посредством AJAX запроса).</p>
 
 <h2 id="Составляющие_систем_основанных_на_HTTP">Составляющие систем, основанных на HTTP</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/HTTP/Overview
 
 <p>Каждый запрос (англ. <em>request</em>) отправляется серверу, который обрабатывает его и возвращает ответ (англ. <em>response</em>). Между этими запросами и ответами как правило существуют многочисленные посредники, называемые {{glossary("Proxy_server","прокси")}}, которые выполняют различные операции и работают как шлюзы или {{glossary("cache","кэш")}}, например.</p>
 
-<p><img alt="Client server chain" src="https://mdn.mozillademos.org/files/13679/Client-server-chain.png"></p>
+<p><img alt="Client server chain" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/client-server-chain.png"></p>
 
 <p>Обычно между браузером и сервером гораздо больше различных устройств-посредников, которые играют какую-либо роль в обработке запроса: маршрутизаторы, модемы и так далее. Благодаря тому, что Сеть построена на основе системы уровней (слоёв) взаимодействия, эти посредники "спрятаны" на сетевом и транспортном уровнях. В этой системе уровней HTTP занимает самый верхний уровень, который называется "прикладным" (или "уровнем приложений"). Знания об уровнях сети, таких как представительский, сеансовый, транспортный, сетевой, канальный и физический, имеют важное значение для понимания работы сети и диагностики возможных проблем, но не требуются для описания и понимания HTTP.</p>
 
@@ -139,7 +139,7 @@ Content-Type: text/html
 
 <p>Примеры HTTP запросов:</p>
 
-<p><img alt="A basic HTTP request" src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png" style="height: 336px; width: 693px;"></p>
+<p><img alt="A basic HTTP request" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png" style="height: 336px; width: 693px;"></p>
 
 <p>Запросы содержат следующие элементы:</p>
 
@@ -155,7 +155,7 @@ Content-Type: text/html
 
 <p>Примеры ответов:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13691/HTTP_Response.png" style="height: 494px; width: 758px;"></p>
+<p><img alt="" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png" style="height: 494px; width: 758px;"></p>
 
 <p>Ответы содержат следующие элементы:</p>
 

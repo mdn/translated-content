@@ -11,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 <p>{{JSRef}}</p>
 
-<p>Der <code><strong>RegExp</strong> constructor</code> erstellt ein Objekt mit regulären Werten, um diese dann als Muster an einem Text anzuwenden.</p>
+<p>Der <code><strong>RegExp</strong> constructor</code> erstellt ein Objekt mit regulären Werten, um diese dann als Muster an einem Text anzuwenden.</p>
 
-<p>Für eine Einführung über reguläre Ausdrücke, lies das <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Kapitel Regular Expressions im JavaScript Guide</a> (englisch).</p>
+<p>Für eine Einführung über reguläre Ausdrücke, lies das <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Kapitel Regular Expressions im JavaScript Guide</a> (englisch).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -88,7 +88,7 @@ var re = new RegExp("\\w+");
 
     <p>Zu beachten ist, dass das <code>m</code> <em>multiline flag</em> nicht das Punktverhalten verändert. Um ein Musterentsprechung über mehrere Zeilen hinweg zu erreichen, kann die leere negative Zeichenauswahl <code>[^]</code> verwendet werden, sie stimmt mit jedem Zeichen einschließlich Zeilenumbrüchen überein.</p>
 
-    <p><code>/.y/</code> passt z.B. auf "my" und "ay", nicht aber auf "yes"  in "yes make my day".</p>
+    <p><code>/.y/</code> passt z.B. auf "my" und "ay", nicht aber auf "yes"  in "yes make my day".</p>
    </td>
   </tr>
   <tr>
@@ -134,7 +134,7 @@ var re = new RegExp("\\w+");
   <tr>
    <td><code>\S</code></td>
    <td>
-    <p>Stimmt mit einem einzelnen Zeichen überein, das kein Leerraumzeichen ist. (Nicht-Leerraumzeichen).<br>
+    <p>Stimmt mit einem einzelnen Zeichen überein, das kein Leerraumzeichen ist. (Nicht-Leerraumzeichen).<br>
      Äquivalent zu <code>[^\s]</code> und zu <code>[^ \f\n\r\t\v​\u00a0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​ \u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​​\u202f\u205f​ \u3000]</code>.</p>
 
     <p><code>/\S\w*/</code> passt z.B. auf 'foo' in "foo bar."</p>
@@ -332,7 +332,7 @@ var re = new RegExp("\\w+");
    <td><code>*?</code><br>
     <code>+?</code></td>
    <td>
-    <p>Passt wie <code>*</code> und<code>+</code> weiter oben, aber der Ausdruck ist nicht gierig, d.h. er passt auf die kürzestmögliche Übereinstimmung.</p>
+    <p>Passt wie <code>*</code> und<code>+</code> weiter oben, aber der Ausdruck ist nicht gierig, d.h. er passt auf die kürzestmögliche Übereinstimmung.</p>
 
     <p><code>/_.*?_/</code> passt z.B. auf "_foo_" in "_foo_ _bar_" aber nicht auf "_foo_ _bar_" wie der Ausdruck ohne dem <code>?</code> hinterm <code>*</code>.</p>
    </td>
@@ -342,11 +342,11 @@ var re = new RegExp("\\w+");
    <td>
     <p>Stimmt mit dem null- oder einmaligen Vorkommen des voranstehenden Zeichens überein.</p>
 
-    <p><code>/e?le?/</code> passt z.B. auf das  'el' in "angel" und auf das 'le' in "angle."</p>
+    <p><code>/e?le?/</code> passt z.B. auf das  'el' in "angel" und auf das 'le' in "angle."</p>
 
     <p>If used immediately after any of the quantifiers <code>*</code>, <code>+</code>, <code>?</code>, or <code>{}</code>, makes the quantifier non-greedy (matching the minimum number of times), as opposed to the default, which is greedy (matching the maximum number of times).</p>
 
-    <p>Das Fragezeichen wird auch in lookahead assertions verwendet, welche unter <code>(?=)</code>, <code>(?!)</code>, sowie <code>(?:)</code> in dieser Tabelle beschrieben sind.</p>
+    <p>Das Fragezeichen wird auch in lookahead assertions verwendet, welche unter <code>(?=)</code>, <code>(?!)</code>, sowie <code>(?:)</code> in dieser Tabelle beschrieben sind.</p>
    </td>
   </tr>
   <tr>
@@ -434,7 +434,7 @@ var re = new RegExp("\\w+");
 
 <h3 id="Beispiel_Anwendung_regulären_Ausdrucks_zur_Datenformatänderung">Beispiel: Anwendung regulären Ausdrucks zur Datenformatänderung</h3>
 
-<p>Das folgende Script nutzt die <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/replace" title="JavaScript/Reference/Global_Objects/String/replace">replace</a></code> Methode und nutzt die vererbte <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String">String</a> Instanz <code>(re)</code> um als Rückgabewert eine Übereinstimmung des Namens <code>(str) </code>in dem Format <em>erster, letzter </em>und im Format <em>letzter</em>, <em>erster </em>zu finden. In dem zu ersetzenden Text nutzt das Script $1 und $2 um das Ergebnis der übereinstimmenden Treffer in der Klammer als Muster des regulären Ausdrucks.</p>
+<p>Das folgende Script nutzt die <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/replace" title="JavaScript/Reference/Global_Objects/String/replace">replace</a></code> Methode und nutzt die vererbte <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String">String</a> Instanz <code>(re)</code> um als Rückgabewert eine Übereinstimmung des Namens <code>(str) </code>in dem Format <em>erster, letzter </em>und im Format <em>letzter</em>, <em>erster </em>zu finden. In dem zu ersetzenden Text nutzt das Script $1 und $2 um das Ergebnis der übereinstimmenden Treffer in der Klammer als Muster des regulären Ausdrucks.</p>
 
 <pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
@@ -454,7 +454,7 @@ s.match(/yes[^]*day/);
 
 <h3 id="Beispiel_Anwendung_eines_regulären_Ausdrucks_mit_dem_sticky_flag">Beispiel: Anwendung eines regulären Ausdrucks mit dem "sticky" flag</h3>
 
-<p>Dieses Beispiel zeigt, wie man die feste Kennzeichung (<code>sticky flag</code>) an reguläre Ausdrücke nutzt, um Übereinstimmungen von individuelle Treffer von mehrzeigen Eingaben zu erhalten.</p>
+<p>Dieses Beispiel zeigt, wie man die feste Kennzeichung (<code>sticky flag</code>) an reguläre Ausdrücke nutzt, um Übereinstimmungen von individuelle Treffer von mehrzeigen Eingaben zu erhalten.</p>
 
 <pre class="brush: js notranslate">var text = "First line\nSecond line";
 var regex = /(\S+) line\n?/y;
@@ -479,7 +479,7 @@ alert(supports_sticky); // alerts "true"</pre>
 
 <h3 id="Beispiel_Regulärer_Ausdruck_und_Unicode-Zeichen">Beispiel: Regulärer Ausdruck und Unicode-Zeichen</h3>
 
-<p>Wie oben erwähnt treffen Übereinstimmugnen mit <code>\w</code> or <code>\W</code>  nur ASCII basierende Zeichen; als Beispiel: 'a' bis 'z', 'A' bis 'Z', 0 bis 9 und '_'. Um Übereinstimmungen für Zeichensätze anderer Sprachen wie Kyrillisch oder Hebräisch zu erzielen, nutze <code>\uhhhh</code>., während "hhhh" den Unicode-Wert des Zeichensatzes in Hexadezimal angibt. Dieses Beispiel demonstriert wie man Unicode-Zeichen aus einem Wort erhält:</p>
+<p>Wie oben erwähnt treffen Übereinstimmugnen mit <code>\w</code> or <code>\W</code>  nur ASCII basierende Zeichen; als Beispiel: 'a' bis 'z', 'A' bis 'Z', 0 bis 9 und '_'. Um Übereinstimmungen für Zeichensätze anderer Sprachen wie Kyrillisch oder Hebräisch zu erzielen, nutze <code>\uhhhh</code>., während "hhhh" den Unicode-Wert des Zeichensatzes in Hexadezimal angibt. Dieses Beispiel demonstriert wie man Unicode-Zeichen aus einem Wort erhält:</p>
 
 <pre class="brush: js notranslate">var text = "Образец text на русском языке";
 var regex = /[\u0400-\u04FF]+/g;
@@ -494,7 +494,7 @@ print(regex.lastIndex);  // prints "15"
 
 // and so on</pre>
 
-<p>Hier ist eine externe Quelle um alle Unicode Blöcke für verschiedene Scripte zu erhalten: <a href="http://kourge.net/projects/regexp-unicode-block">Regexp-unicode-block</a></p>
+<p>Hier ist eine externe Quelle um alle Unicode Blöcke für verschiedene Scripte zu erhalten: <a href="http://kourge.net/projects/regexp-unicode-block">Regexp-unicode-block</a></p>
 
 <h3 id="Weitere_nennenswerte_Beispiele">Weitere nennenswerte Beispiele</h3>
 
@@ -505,53 +505,7 @@ print(/[^.]+/.exec(url)[0].substr(7)); // prints "xxx"</pre>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 
