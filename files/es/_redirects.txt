@@ -1201,7 +1201,6 @@
 /es/docs/Learn/Server-side/Primeros_pasos/Web_frameworks	/es/docs/Learn/Server-side/First_steps/Web_frameworks
 /es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web	/es/docs/Learn/Server-side/First_steps/Website_security
 /es/docs/Learn/Using_Github_pages	/es/docs/Learn/Common_questions/Using_Github_pages
-/es/docs/Localización	/es/docs/Glossary/Localization
 /es/docs/MDN/About	/es/docs/MDN/Writing_guidelines
 /es/docs/MDN/Comenzando	/es/docs/MDN/Community/Contributing/Getting_started
 /es/docs/MDN/Contribute/Content	/es/docs/conflicting/MDN/Writing_guidelines
