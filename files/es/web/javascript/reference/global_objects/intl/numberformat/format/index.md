@@ -10,9 +10,11 @@ El método **`Intl.NumberFormat.prototype.format()`** formatea un número de acu
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}
 
-## Syntax
+## Sintaxis
 
-    numberFormat.format(number)
+```js
+numberFormat.format(number)
+```
 
 ### Parametros
 

@@ -34,7 +34,9 @@ Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla co
 
 ## Sintaxis
 
-    ::spelling-error
+```css
+::spelling-error
+```
 
 ## Especificaciones
 

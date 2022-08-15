@@ -15,7 +15,9 @@ El método **`has()`** retorna un booleano indicando si el elemento especificado
 
 ## Syntaxis
 
-    mySet.has(value);
+```js
+mySet.has(value);
+```
 
 ### Parametros
 

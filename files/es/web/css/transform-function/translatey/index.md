@@ -93,7 +93,9 @@ transform: translateY(50%);
 
 ### Sintaxis formal
 
-    translateY({{cssxref("&lt;length-percentage&gt;")}})
+```css
+translateY({{cssxref("&lt;length-percentage&gt;")}})
+```
 
 ## Ejemplos
 

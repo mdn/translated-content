@@ -19,7 +19,9 @@ El método **`search()`**ejecuta una búsqueda que encaje entre una expresión r
 
 ## Sintaxis
 
-    str.search(expresionregular)
+```js
+str.search(expresionregular)
+```
 
 ### Parámetros
 

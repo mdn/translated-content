@@ -22,12 +22,14 @@ translation_of: Web/CSS/background-position
 
 ## Sintaxis
 
-    background-position: [ <percentage> | <length> | left | center | right  ]
-                         [ <percentage> | <length> | top  | center | bottom ] ? ;
+```
+background-position: [ <percentage> | <length> | left | center | right  ]
+                      [ <percentage> | <length> | top  | center | bottom ] ? ;
 
-    background-position: [ top | center | bottom ];
+background-position: [ top | center | bottom ];
 
-    background-position: inherit;
+background-position: inherit;
+```
 
 ### Valores
 
@@ -58,30 +60,32 @@ Si solo se especifica un valor, se entenderá que es la posición horizontal con
 
 ## Ejemplos
 
-    .exampleone {
-     background-image: url("logo.png");
-     background-position: top center;
-    }
+```css
+.exampleone {
+  background-image: url("logo.png");
+  background-position: top center;
+}
 
-    .exampletwo {
-     background-image: url("logo.png");
-     background-position: 25% 75%;
-    }
+.exampletwo {
+  background-image: url("logo.png");
+  background-position: 25% 75%;
+}
 
-    .examplethree {
-     background-image: url("logo.png");
-     background-position: 2cm bottom;
-    }
+.examplethree {
+  background-image: url("logo.png");
+  background-position: 2cm bottom;
+}
 
-    .examplefour {
-     background-image: url("logo.png");
-     background-position: center 10%;
-    }
+.examplefour {
+  background-image: url("logo.png");
+  background-position: center 10%;
+}
 
-    .examplefive {
-     background-image: url("logo.png");
-     background-position: 2cm 50%;
-    }
+.examplefive {
+  background-image: url("logo.png");
+  background-position: 2cm 50%;
+}
+```
 
 ## Especificaciones
 

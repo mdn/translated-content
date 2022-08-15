@@ -11,7 +11,7 @@ El método **`Element.attachShadow()`** adjunta un árbol DOM "sombra" al elemen
 
 No se puede adjuntar un DOM "sombra" a cualquier tipo de elemento. Hay algunos que no pueden tenerlo por razones de seguridad (por ejemplo {{htmlelement("a")}}), y algunos más. Los siguientes elementos de la lista **pueden** adjuntar un DOM "sombra":
 
-- Cualquier elemento autónomo con un [nombre válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name "nombre válido")
+- Cualquier elemento autónomo con un [nombre válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
 - {{htmlelement("blockquote")}}
@@ -33,20 +33,28 @@ No se puede adjuntar un DOM "sombra" a cualquier tipo de elemento. Hay algunos q
 
 ## Syntaxis
 
-    var shadowroot = element.attachShadow(shadowRootInit);
+```js
+var shadowroot = element.attachShadow(shadowRootInit);
+```
 
 ### Parámetros
 
 - `shadowRootInit`
 
-  - : Un diccionario `ShadowRootInit` , que puede contener los siguientes campos:_ `mode`
-    _ : Una cadena que especifique el _modo de encapsulación_ para el árbol DOM "sombra". Este puede tener uno de los siguientes valores:\* `open`: Los elementos del árbol son accesibles desde fuera del elemento, por ejemplo usando {{domxref("Element.shadowRoot")}}:
+  - : Un diccionario `ShadowRootInit` , que puede contener los siguientes campos:
+    - `mode`
+      - : Una cadena que especifique el _modo de encapsulación_ para el árbol DOM "sombra". Este puede tener uno de los siguientes valores:
+        - `open`: Los elementos del árbol son accesibles desde fuera del elemento, por ejemplo usando {{domxref("Element.shadowRoot")}}:
 
-                    element.shadowRoot; // Returns a ShadowRoot obj
-            *   `closed`: Deniega el acceso a lo(s) nodo(s) desde fuera mediante JavaScript:
+          ```js
+          element.shadowRoot; // Returns a ShadowRoot obj
+          ```
 
+        - `closed`: Deniega el acceso a lo(s) nodo(s) desde fuera mediante JavaScript:
 
-                    element.shadowRoot; // Returns null
+          ```js
+          element.shadowRoot; // Returns null
+          ```
 
     - `delegatesFocus`
       - : Un booleano que, si se establece a `true`, mitiga problemas de comportamiento relativos a la capacidad de tomar el foco. Cuando se hace click en una parte del DOM "sombra" que no puede tomar el foco, la primera parte del árbol que pueda tomar el foco lo hará, y le dará cualquier estilo disponible mediante CSS con `:focus`.

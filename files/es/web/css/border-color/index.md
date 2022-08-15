@@ -22,7 +22,9 @@ la propiedad `border-color` es un atajo para definir el color de los cuatro bord
 
 ### Sintaxis
 
-    border-color: [ <color> || transparent ]{1,4} | inherit
+```css
+border-color: [ <color> || transparent ]{1,4} | inherit
+```
 
 ### Valores
 
@@ -43,11 +45,13 @@ Con **cuatro** colores, el primero para arriba, el segundo para la derecha, el t
 
 [Ver El Ejemplo Vivo](/samples/cssref/border.html)
 
-    element {
-      border-width: 1px;
-      border-style: solid;
-      border-color: black;
-    }
+```css
+element {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+```
 
 ### Notas
 

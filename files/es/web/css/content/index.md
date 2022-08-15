@@ -27,15 +27,17 @@ En **CSS3**
 
 ### Ejemplos
 
-    p:before
-    {
+```css
+p:before
+{
     content: url("beep.wav")
-    }
+}
 
-    img:before
-    {
+img:before
+{
     content: attr(alt)
-    }
+}
+```
 
 ### Valores
 

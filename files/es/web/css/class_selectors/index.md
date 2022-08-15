@@ -14,11 +14,15 @@ En un documento HTML, los selectores de clase buscan un elemento basado en el co
 
 ## Sintaxis
 
-    .classname { style properties }
+```css
+.classname { style properties }
+```
 
 Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "selector de atributo")}}:
 
-    [class~=classname] { style properties }
+```css
+[class~=classname] { style properties }
+```
 
 ## Ejemplo
 

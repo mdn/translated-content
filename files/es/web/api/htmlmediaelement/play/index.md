@@ -9,7 +9,9 @@ El método `play()` de {{domxref("HTMLMediaElement")}} intenta comenzar la repro
 
 ## Sintaxis
 
-    var promesa = HTMLMediaElement.play();
+```js
+var promesa = HTMLMediaElement.play();
+```
 
 ### Parametros
 

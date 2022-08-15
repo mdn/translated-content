@@ -264,4 +264,4 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 ## Ver también
 
-- [`custom properties`](/es/docs/Web/CSS/--* "The documentation about this has not yet been written; please consider contributing!")
+- [`custom properties`](/es/docs/Web/CSS/--*)

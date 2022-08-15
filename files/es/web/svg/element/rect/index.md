@@ -54,10 +54,10 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 
 ### Atributos globales
 
-- [Conditional processing attributes](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Graphical event attributes](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Conditional processing attributes](/en/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/en/SVG/Attribute#Core) »
+- [Graphical event attributes](/en/SVG/Attribute#GraphicalEvent) »
+- [Presentation attributes](/en/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -74,7 +74,7 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGRectElement`](/en/DOM/SVGRectElement "en/DOM/SVGRectElement").
+Este elemento implementa la interfaz [`SVGRectElement`](/en/DOM/SVGRectElement).
 
 ## Compatibilidad de los Navegadores
 

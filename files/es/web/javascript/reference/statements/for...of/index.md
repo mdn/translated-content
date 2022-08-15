@@ -11,13 +11,15 @@ original_slug: Web/JavaScript/Referencia/Sentencias/for...of
 ---
 {{jsSidebar("Statements")}}
 
-La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada elemento de un [objeto iterable](/es/docs/Web/JavaScript/Guide/iterable), como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/es/docs/Web/API/NodeList "NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll().")), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.
+La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada elemento de un [objeto iterable](/es/docs/Web/JavaScript/Guide/iterable), como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/es/docs/Web/API/NodeList)), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.
 
 ## Sintaxis
 
-    for (variable of iterable) {
-      statement
-    }
+```
+for (variable of iterable) {
+  statement
+}
+```
 
 - `variable`
   - : En cada iteración el elemento (propiedad enumerable) correspondiente es asignado a _variable_.
@@ -143,16 +145,18 @@ for (let paragraph of articleParagraphs) {
 
 En los bucles `for...of`, se puede causar que la iteración termine de un modo brusco usando: `break`, `continue[4]`, `throw` or `return[5]`. En estos casos la iteración se cierra.
 
-    function* foo(){
-      yield 1;
-      yield 2;
-      yield 3;
-    };
+```js
+function* foo(){
+  yield 1;
+  yield 2;
+  yield 3;
+};
 
-    for (let o of foo()) {
-      console.log(o);
-      break; // closes iterator, triggers return
-    }
+for (let o of foo()) {
+  console.log(o);
+  break; // closes iterator, triggers return
+}
+```
 
 ### Iterando generadores
 

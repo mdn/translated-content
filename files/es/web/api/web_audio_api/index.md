@@ -90,7 +90,7 @@ Interfaces para definir efectos que quieras aplicar a tus fuentes de audio.
 - {{domxref("PeriodicWave")}}
   - : Describe una forma de onda periódica que puede ser usada para dar forma a la salida de un {{ domxref("OscillatorNode") }}.
 - {{domxref("IIRFilterNode")}}
-  - : Implementa un filtro de **[respuesta de pulso infinito](https://en.wikipedia.org/wiki/infinite%20impulse%20response "infinite impulse response")** (IIR) general; este tipo de filtro se puede usar para implementar dispositivos de control de tono y ecualizadores gráficos también.
+  - : Implementa un filtro de **[respuesta de pulso infinito](https://en.wikipedia.org/wiki/infinite%20impulse%20response)** (IIR) general; este tipo de filtro se puede usar para implementar dispositivos de control de tono y ecualizadores gráficos también.
 
 ### Definición de destinos de audio
 
@@ -353,7 +353,7 @@ function voiceMute() { // alternar para silenciar y activar el sonido
 - [Bases de la espacialización de audio Web](/es/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
 - [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/es/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext "/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext")
+- [Porting webkitAudioContext code to standards based AudioContext](/es/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
 - [Tonos](https://github.com/bit101/tones): Una sencilla librería para reproducción de tonos/notas específicas usando el API de Audio Web.
 - [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
@@ -367,7 +367,7 @@ function voiceMute() { // alternar para silenciar y activar el sonido
     2. [Usando el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
     3. [Visualizaciones con el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
     4. [Bases de la espacialización de audio Web](/es/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-    5. [Portando código de webkitAudioContext a estándares basados en AudioContext](/es/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext "/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext")
+    5. [Portando código de webkitAudioContext a estándares basados en AudioContext](/es/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
 
 2. **Ejemplos**
 

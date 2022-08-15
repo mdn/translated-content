@@ -32,12 +32,14 @@ El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de 
 
 ### Tiempos válidos
 
-    12s         Entero positivo
-    -456ms      Entero negativo
-    4.3ms       No entero
-    14mS        La unidad no distingue entre mayúsculas y minúsculas, aunque no se recomiendan letras mayúsculas.
-    +0s         Cero con un signo + y una unidad
-    -0ms        Cero con un signo - y una unidad
+```
+12s         Entero positivo
+-456ms      Entero negativo
+4.3ms       No entero
+14mS        La unidad no distingue entre mayúsculas y minúsculas, aunque no se recomiendan letras mayúsculas.
++0s         Cero con un signo + y una unidad
+-0ms        Cero con un signo - y una unidad
+```
 
 ### Tiempos inválidos
 

@@ -9,10 +9,12 @@ The **`host`** property of the {{domxref("URL")}} interface is a {{domxref("USVS
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Sintaxis
 
-    const host = url.host
-    url.host = newHost
+```js
+const host = url.host
+url.host = newHost
+```
 
 ### Value
 

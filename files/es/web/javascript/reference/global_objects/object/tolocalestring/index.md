@@ -12,7 +12,9 @@ El método **`toLocaleString()`** devuelve un string que representa a un objeto.
 
 ## Sintaxis
 
-    objeto.toLocaleString()
+```js
+objeto.toLocaleString()
+```
 
 ### Valor de retorno
 

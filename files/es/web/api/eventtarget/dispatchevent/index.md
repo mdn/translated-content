@@ -13,7 +13,9 @@ Lanza un evento en el sistema de eventos. El evento está sujeto al mismo compor
 
 ### Sintaxis
 
-    bool = element.dispatchEvent(event)
+```js
+bool = element.dispatchEvent(event)
+```
 
 - `element` es el objetivo (`target` en Inglés) del evento.
 - `event` es un objeto de tipo [event](es/DOM/event) que será lanzado.

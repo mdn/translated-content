@@ -14,7 +14,9 @@ El método `readAsText` se usa para leer el contenido de un tipo {{domxref("Blob
 
 ## Sintaxis
 
-    instanceOfFileReader.readAsText(blob[, encoding]);
+```js
+instanceOfFileReader.readAsText(blob[, encoding]);
+```
 
 ### Parametros
 

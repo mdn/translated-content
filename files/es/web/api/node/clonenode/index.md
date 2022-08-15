@@ -15,7 +15,9 @@ El método **`Node.cloneNode()`** devuelve un duplicado del nodo en el que este 
 
 ## Sintaxis
 
-    var dupNode = node.cloneNode(deep);
+```js
+var dupNode = node.cloneNode(deep);
+```
 
 - _node_
   - : El nodo que se desea clonar.

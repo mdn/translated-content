@@ -18,7 +18,9 @@ El operador de división (`/`) produce el cociente de sus operandos donde el ope
 
 ## Sintaxis
 
-    Operador: x / y
+```js
+Operador: x / y
+```
 
 ## Ejemplos
 

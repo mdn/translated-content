@@ -17,7 +17,9 @@ El método **`hasOwnProperty()`** devuelve un booleano indicando si el objeto ti
 
 ## Sintaxis
 
-    obj.hasOwnProperty(prop)
+```js
+obj.hasOwnProperty(prop)
+```
 
 ### Parámetros
 

@@ -10,7 +10,9 @@ El método **`setFullYear()`** fija el año completo para una fecha específica 
 
 ## Sintaxis
 
-    dateObj.setFullYear(valorAño[, valorMes[, valorDia]])
+```js
+dateObj.setFullYear(valorAño[, valorMes[, valorDia]])
+```
 
 ### Parámetros
 

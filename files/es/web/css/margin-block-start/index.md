@@ -5,7 +5,7 @@ translation_of: Web/CSS/margin-block-start
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`margin-block-start`** [CSS](/es/docs/Web/CSS "CSS") property defines the logical block start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
+La propiedad de [CSS](/es/docs/Web/CSS) **`margin-block-start`** [CSS](/es/docs/Web/CSS) property defines the logical block start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
 
 {{EmbedInteractiveExample("pages/css/margin-block-start.html")}}
 

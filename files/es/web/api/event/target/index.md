@@ -13,7 +13,9 @@ La propiedad **`target`** de la interfaz del {{domxref("event.currentTarget")}} 
 
 ## Sintaxis
 
-    const theTarget = algunEvento.target
+```js
+const theTarget = algunEvento.target
+```
 
 ## Ejemplo
 

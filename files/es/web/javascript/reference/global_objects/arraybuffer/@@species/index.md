@@ -15,7 +15,9 @@ La propiedad de acceso **`ArrayBuffer[@@species]`** devuelve el constructor `Arr
 
 ## Sintaxis
 
-    ArrayBuffer[Symbol.species]
+```js
+ArrayBuffer[Symbol.species]
+```
 
 ## Descripción
 

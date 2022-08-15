@@ -65,7 +65,7 @@ function printEntries(arr) {
 // === impreso ===
 ```
 
-Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties "Relationship between length and numerical properties").
+Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties).
 
 {{js_property_attributes(1, 0, 0)}}
 

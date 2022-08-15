@@ -13,7 +13,9 @@ Devuelve el nombre del elemento.
 
 ### Sintaxis
 
-    elementName = element.tagName
+```js
+elementName = element.tagName
+```
 
 - `elementName` es una cadena que contiene el nombre del elemento actual.
 
@@ -25,12 +27,16 @@ En XML (y los lenguajes basados en XML tales como XHTML) el código `tagName` es
 
 Si tenemos la siguiente línea de código:
 
-    <span id="born">Cuando yo nací...</span>
+```html
+<span id="born">Cuando yo nací...</span>
+```
 
 y el siguiente script
 
-    var span = document.getElementById("born");
-    alert(span.tagName);
+```js
+var span = document.getElementById("born");
+alert(span.tagName);
+```
 
 en XHTML (o alguna otra forma de XML) el resultado de la alerta será el contenido de "span". En HTML, el contenido será el de "SPAN".
 

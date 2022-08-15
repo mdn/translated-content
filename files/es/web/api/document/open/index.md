@@ -6,7 +6,7 @@ original_slug: Web/API/Document/abrir
 ---
 {{APIRef("DOM")}}
 
-El método **`Document.open()`** abre un documento para escritura ([writing](/es/docs/Web/API/Document/write "en/DOM/document.write"))
+El método **`Document.open()`** abre un documento para escritura ([writing](/es/docs/Web/API/Document/write))
 
 Esto viene con algunos efectos secundarios. Por ejemplo:
 
@@ -15,7 +15,9 @@ Esto viene con algunos efectos secundarios. Por ejemplo:
 
 ## Sintaxis
 
-    document.open();
+```js
+document.open();
+```
 
 ### Parametros
 
@@ -29,11 +31,13 @@ Una instancia del objeto Document (`Document)`.
 
 El código simple a continuación abre el documento y reemplaza su contenido con un número de diferentes fragmentos HTML antes de cerrarlo nuevamente.
 
-    document.open();
-    document.write("<p>Hola mundo!</p>");
-    document.write("<p>Soy un pez</p>");
-    document.write("<p>El numero es 42</p>");
-    document.close();
+```js
+document.open();
+document.write("<p>Hola mundo!</p>");
+document.write("<p>Soy un pez</p>");
+document.write("<p>El numero es 42</p>");
+document.close();
+```
 
 ## Notas
 
@@ -47,7 +51,7 @@ For years Firefox and Internet Explorer additionally erased all JavaScript varia
 
 Starting with Gecko 1.9, this method is subject to the same same-origin policy as other properties, and does not work if doing so would change the document's origin.
 
-Starting with Gecko 1.9.2, `document.open()` uses the [principal](/docs/Security_check_basics) of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en/wrappedJSObject). See [Security check basics](/en/Security_check_basics "en/Security check basics") for more about principals.
+Starting with Gecko 1.9.2, `document.open()` uses the [principal](/docs/Security_check_basics) of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en/wrappedJSObject). See [Security check basics](/en/Security_check_basics) for more about principals.
 
 ## Three-argument document.open()
 

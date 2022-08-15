@@ -17,7 +17,9 @@ El método **`Object.fromEntries()`** transforma una lista de pares con `[clave-
 
 ## Sintaxis
 
-    Object.fromEntries(iterable);
+```js
+Object.fromEntries(iterable);
+```
 
 ### Parámetros
 

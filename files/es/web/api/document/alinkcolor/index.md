@@ -11,8 +11,10 @@ Devuelve o define el color que tendrán los vínculos activos en el cuerpo (elem
 
 ## Sintaxis
 
-    color = document.alinkColor
-    document.alinkColor =color
+```js
+color = document.alinkColor
+document.alinkColor = color
+```
 
 `color` es un texto que deberá llevar el nombre del color en inglés(e.g., `"blue"`, `"darkblue"`, etc.) o el valor hexadecimal del color (e.g., `#0000FF`)
 

@@ -18,18 +18,20 @@ El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (s
 Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/Sintaxis_definición_de_valor).
 
 - `inset()`
-  - : inset( <shape-arg>{1,4} [round <border-radius>]? )Define un rectángulo incrustado.Cuando se proporcionan los cuatro primeros argumentos, representan la separación superior, derecha, inferior e izquierda del interior de la caja de referencia que define las posiciones de los bordes del rectángulo interior. Estos argumentos siguen la sintaxis de la abreviatura de margen, que permite definir los cuatro valores en uno, dos o cuatro valores.Los argumentos opcionales [`<border-radius>`](/es/docs/Web/CSS/border-radius) definen esquinas redondeadas para el rectángulo incrustado usando la sintaxis de abreviatura de border-radius.Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.
+  - : inset( \<shape-arg>{1,4} [round \<border-radius>]? )Define un rectángulo incrustado.Cuando se proporcionan los cuatro primeros argumentos, representan la separación superior, derecha, inferior e izquierda del interior de la caja de referencia que define las posiciones de los bordes del rectángulo interior. Estos argumentos siguen la sintaxis de la abreviatura de margen, que permite definir los cuatro valores en uno, dos o cuatro valores.Los argumentos opcionales [`<border-radius>`](/es/docs/Web/CSS/border-radius) definen esquinas redondeadas para el rectángulo incrustado usando la sintaxis de abreviatura de border-radius.Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.
 - `polygon()`
-  - : polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )`<fill-rule>` representa la [regla de llenado](/es/docs/Web/SVG/Attribute/fill-rule) usada para determinar el área interior del polígono. Los valores posibles son `nonzero` y `evenodd`. El valor predeterminado es `nonzero`.Cada elemento par de la lista representa _xi_ y _yi_ - las coordenadas del eje x y el eje y en el vértice _i_ del polígono.
+  - : polygon( [\<fill-rule>,]? [\<shape-arg> \<shape-arg>]# )`<fill-rule>` representa la [regla de llenado](/es/docs/Web/SVG/Attribute/fill-rule) usada para determinar el área interior del polígono. Los valores posibles son `nonzero` y `evenodd`. El valor predeterminado es `nonzero`.Cada elemento par de la lista representa _xi_ y _yi_ - las coordenadas del eje x y el eje y en el vértice _i_ del polígono.
 - `circle(`)
-  - : circle( [<shape-radius>]? [at <position>]? )El argumento `<shape-radius>` representa a _r_, el radio del círculo. Los valores negativos son inválidos. Un valor en porcentaje es resuelto de la anchura y altura presentes de la caja de referencia como `sqrt(width^2+height^2)/sqrt(2)`.El argumento {{cssxref("&lt;position&gt;")}} define el centro del círculo. Su valor predeterminado es `center`.
+  - : circle( [\<shape-radius>]? [at \<position>]? )El argumento `<shape-radius>` representa a _r_, el radio del círculo. Los valores negativos son inválidos. Un valor en porcentaje es resuelto de la anchura y altura presentes de la caja de referencia como `sqrt(width^2+height^2)/sqrt(2)`.El argumento {{cssxref("&lt;position&gt;")}} define el centro del círculo. Su valor predeterminado es `center`.
 - `ellipse()`
-  - : ellipse( [<shape-radius>{2}]? [at <position>]? )El argumento `<shape-radius>` representa a rx y ry, los radios del eje x y del eje y de la elipse, en ese orden. Los valores negativos son inválidos. Los valores en porcentaje son resueltos contra la anchura (para rx) y altura (para ry) presentes en la caja de referencia.El argumento {{cssxref("&lt;position&gt;")}} define el centro de la elipse. Su valor predeterminado es `center`.
+  - : ellipse( [\<shape-radius>{2}]? [at \<position>]? )El argumento `<shape-radius>` representa a rx y ry, los radios del eje x y del eje y de la elipse, en ese orden. Los valores negativos son inválidos. Los valores en porcentaje son resueltos contra la anchura (para rx) y altura (para ry) presentes en la caja de referencia.El argumento {{cssxref("&lt;position&gt;")}} define el centro de la elipse. Su valor predeterminado es `center`.
 
 Los argumentos no definidos arriba son definidos de esta forma:
 
-    <shape-arg> = <length> | <percentage>
-    <shape-radius> = <length> | <percentage> | closest-side | farthest-side
+```
+<shape-arg> = <length> | <percentage>
+<shape-radius> = <length> | <percentage> | closest-side | farthest-side
+```
 
 Define un radio para un círculo o elipse. Su valor predeterminado es `closest-side`.
 
@@ -57,7 +59,9 @@ Para interpolar dos figuras, se aplican las reglas a continuación. Los valores 
 
 ## Ejemplos
 
-    TODO
+```
+TODO
+```
 
 ## Especificaciones
 

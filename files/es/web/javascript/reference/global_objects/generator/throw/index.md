@@ -10,7 +10,9 @@ El método **`throw()`** reanuda la ejecución de un generador al lanzar un erro
 
 ## Sintaxis
 
-    gen.throw(excepción)
+```js
+gen.throw(excepción)
+```
 
 ### Parámetros
 

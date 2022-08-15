@@ -15,7 +15,9 @@ Para prevenir que la cadena literal para el prefijo `xsl:` del elemento resultan
 
 ### Sintaxis
 
-    <xsl:namespace-alias stylesheet-prefix=NOMBRE result-prefix=NOMBRE />
+```xml
+<xsl:namespace-alias stylesheet-prefix=NOMBRE result-prefix=NOMBRE />
+```
 
 ### Atributos Requeridos
 

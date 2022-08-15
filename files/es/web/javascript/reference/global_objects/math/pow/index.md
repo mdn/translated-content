@@ -12,7 +12,9 @@ La función **`Math.pow()`** devuelve la `base elevada al` `exponente` , esto es
 
 ## Sintaxis
 
-    Math.pow(base, exponente)
+```js
+Math.pow(base, exponente)
+```
 
 ### Parametros
 

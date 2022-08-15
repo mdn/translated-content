@@ -23,12 +23,14 @@ Dos propiedades CSS Controlan el número (Count) y el ancho (Width) de las colum
 
 `-moz-column-count` indica el número concreto de columnas a crear. Por ejemplo:
 
-    <div style="-moz-column-count:2; -moz-column-gap: 1em;">
-    Cuando leemos un texto las líneas muy largas resultan incómodas, si son
-    demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista
-    de la línea en la que estabas. Por ello, pensando en los usuarios con
-    monitores grandes, los autores deben limitar la anchura del texto dividiéndolo
-    en columnas, más o menos, como hacen los periódicos.</div>
+```html
+<div style="-moz-column-count:2; -moz-column-gap: 1em;">
+Cuando leemos un texto las líneas muy largas resultan incómodas, si son
+demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista
+de la línea en la que estabas. Por ello, pensando en los usuarios con
+monitores grandes, los autores deben limitar la anchura del texto dividiéndolo
+en columnas, más o menos, como hacen los periódicos.</div>
+```
 
 Mostrará el contenido en dos columnas (si usas Firefox 1.5 o superior):
 
@@ -36,12 +38,14 @@ Cuando leemos un texto las líneas muy largas resultan incómodas, si son demasi
 
 `-moz-column-width` fija la anchura mínima de las columnas. Si no se indica un `-moz-column-count`, entonces el navegador creará automáticamente tantas columnas (con la anchura indicada) como sea posible en el espacio disponible.
 
-    <div style="-moz-column-width:20em; -moz-column-gap: 1em;">
-    Cuando leemos un texto las líneas muy largas resultan incómodas, si son
-    demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista
-    de la línea en la que estabas. Por ello, pensando en los usuarios con
-    monitores grandes, los autores deben limitar la anchura del texto dividiéndolo
-    en columnas, más o menos, como hacen los periódicos.</div>
+```html
+<div style="-moz-column-width:20em; -moz-column-gap: 1em;">
+Cuando leemos un texto las líneas muy largas resultan incómodas, si son
+demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista
+de la línea en la que estabas. Por ello, pensando en los usuarios con
+monitores grandes, los autores deben limitar la anchura del texto dividiéndolo
+en columnas, más o menos, como hacen los periódicos.</div>
+```
 
 Se visualizará así:
 
@@ -61,12 +65,14 @@ Sin embargo, en algunas situaciones puede ser útil fijar explícitamente la alt
 
 Por defecto, cada columna está tocando la columna de al lado. Normalmente esto no es lo más apropiado. Se puede utilizar el `padding` de las columnas para corregirlo, pero normalmente lo más fácil será aplicar la propiedad `-moz-column-gap` al bloque con multicolumna:
 
-    <div style="-moz-column-width:20em; -moz-column-gap:2em;">
-    Cuando leemos un texto las líneas muy largas resultan incómodas, si son
-    demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista
-    de la línea en la que estabas. Por ello, pensando en los usuarios con
-    monitores grandes, los autores deben limitar la anchura del texto dividiéndolo
-    en columnas, más o menos, como hacen los periódicos.</div>
+```html
+<div style="-moz-column-width:20em; -moz-column-gap:2em;">
+Cuando leemos un texto las líneas muy largas resultan incómodas, si son
+demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista
+de la línea en la que estabas. Por ello, pensando en los usuarios con
+monitores grandes, los autores deben limitar la anchura del texto dividiéndolo
+en columnas, más o menos, como hacen los periódicos.</div>
+```
 
 Se visualizará así:
 

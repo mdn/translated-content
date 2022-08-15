@@ -9,7 +9,9 @@ El método **`Element.getElementsByTagNameNS()`** devuelve una {{domxref("HTMLCo
 
 ## Sintaxis
 
-    elementos = elemento.getElementsByTagNameNS(espacioNombreURI, nombreLocal)
+```js
+elementos = elemento.getElementsByTagNameNS(espacioNombreURI, nombreLocal)
+```
 
 - `elementos` es una {{domxref("HTMLCollection")}} viva de elementos encontrados en el orden en el que aparecen en el árbol.
 - `elemento` es el elemento desde el cual la búsqueda debería comenzar. Nótese que sólo los descendientes de este elemento están incluídos en la búsqueda, no el nodo en sí.

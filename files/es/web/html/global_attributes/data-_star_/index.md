@@ -28,8 +28,6 @@ Notar que la propiedad {{domxref("HTMLElement.dataset")}} es un {{domxref("Strin
 
 {{Compat("html.global_attributes.data_attributes")}}
 
-##
-
 ## Ver también
 
 - [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .

@@ -30,12 +30,14 @@ El Handshake es el puente desde HTTP a WS. En el Handshake se negocian los detal
 
 A pesar de que estamos creando un servidor, un cliente es quien tiene que comenzar el proceso de Handshake de WebSocket. Entonces tú tienes que saber cómo interpretar la petición del cliente. El cliente enviará una linda petición HTTP estandar que lucirá algo asi (la versión del HTTP debe ser 1.1 o mayor y el método debe ser GET):
 
-    GET /chat HTTP/1.1
-    Host: example.com:8000
-    Upgrade: websocket
-    Connection: Upgrade
-    Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
-    Sec-WebSocket-Version: 13
+```
+GET /chat HTTP/1.1
+Host: example.com:8000
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Sec-WebSocket-Version: 13
+```
 
 El cliente puede solicitar aquí extensiones y/o sub protocolos; vea [Misceláneos](#Miscellaneous) para más detalles. También, cabeceras comunes como `User-Agent`, `Referer`, `Cookie`, or cabeceras de autenticación podrían ser incluidos. Haz lo que quieras con ellos; no pertencen a WebSocket. También puedes ignorarlos. En muchas configuraciones comunes, un proxy inverso ya ha tratado con ellos.
 
@@ -51,10 +53,12 @@ Si alguna cabecera no se entiende o posee un valor incorrecto, el servidor debe 
 
 Después de la petición, el servidor debería enviar una linda respuesta (aunque todavía en formato HTTP) que se verá asi (hay que recordar que la cabecera termina con \r \n y agrega un \r \n extra después del último):
 
-    HTTP/1.1 101 Switching Protocols
-    Upgrade: websocket
-    Connection: Upgrade
-    Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+```
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+```
 
 Adicionalmente, el servidor puede decidir respecto de las solicitudes "extension/subprotocol" en este punto (ver [Miscelláneos](#Miscellaneous) para más detalles). La cabecera `Sec-WebSocket-Accept` es interesante. El servidor debe derivarla a partir de la cabecera `Sec-WebSocket-Key` enviada anteriormente por el cliente. Para lograr esto se deben concatenar la cabecera del cliente `Sec-WebSocket-Key` y el string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (es un "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), calcular el [hash SHA-1](https://en.wikipedia.org/wiki/SHA-1) del resultado y devolver el string codificado en [base64](https://en.wikipedia.org/wiki/Base64) de este hash.
 
@@ -76,24 +80,26 @@ Tanto el cliente como el servidor puede decidir enviar un mensaje en cualquier m
 
 Cada trama de datos (desde el cliente al servidor o viceversa) sigue este mismo formato:
 
-     0                   1                   2                   3
-     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-    +-+-+-+-+-------+-+-------------+-------------------------------+
-    |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-    |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-    |N|V|V|V|       |S|             |   (if payload len==126/127)   |
-    | |1|2|3|       |K|             |                               |
-    +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-    |     Extended payload length continued, if payload len == 127  |
-    + - - - - - - - - - - - - - - - +-------------------------------+
-    |                               |Masking-key, if MASK set to 1  |
-    +-------------------------------+-------------------------------+
-    | Masking-key (continued)       |          Payload Data         |
-    +-------------------------------- - - - - - - - - - - - - - - - +
-    :                     Payload Data continued ...                :
-    + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-    |                     Payload Data continued ...                |
-    +---------------------------------------------------------------+
+```
+0                   1                   2                   3
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-------+-+-------------+-------------------------------+
+|F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+|N|V|V|V|       |S|             |   (if payload len==126/127)   |
+| |1|2|3|       |K|             |                               |
++-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
+|     Extended payload length continued, if payload len == 127  |
++ - - - - - - - - - - - - - - - +-------------------------------+
+|                               |Masking-key, if MASK set to 1  |
++-------------------------------+-------------------------------+
+| Masking-key (continued)       |          Payload Data         |
++-------------------------------- - - - - - - - - - - - - - - - +
+:                     Payload Data continued ...                :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                     Payload Data continued ...                |
++---------------------------------------------------------------+
+```
 
 Los RSV1-3 se pueden ignorar, son para las extensiones.
 
@@ -115,10 +121,12 @@ To read the payload data, you must know when to stop reading. That's why the pay
 
 If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can go ahead and read that number of bytes from the socket. Let's call the data **ENCODED**, and the key **MASK**. To get **DECODED**, loop through the octets (bytes a.k.a. characters for text data) of **ENCODED** and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):
 
-    var DECODED = "";
-    for (var i = 0; i < ENCODED.length; i++) {
-        DECODED[i] = ENCODED[i] ^ MASK[i % 4];
-    }
+```js
+var DECODED = "";
+for (var i = 0; i < ENCODED.length; i++) {
+    DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+}
+```
 
 Now you can figure out what **DECODED** means depending on your application.
 
@@ -128,14 +136,16 @@ The FIN and opcode fields work together to send a message split up into separate
 
 Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame. This means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
-    Client: FIN=1, opcode=0x1, msg="hello"
-    Server: (process complete message immediately) Hi.
-    Client: FIN=0, opcode=0x1, msg="and a"
-    Server: (listening, new message containing text started)
-    Client: FIN=0, opcode=0x0, msg="happy new"
-    Server: (listening, payload concatenated to previous message)
-    Client: FIN=1, opcode=0x0, msg="year!"
-    Server: (process complete message) Happy new year to you too!
+```
+Client: FIN=1, opcode=0x1, msg="hello"
+Server: (process complete message immediately) Hi.
+Client: FIN=0, opcode=0x1, msg="and a"
+Server: (listening, new message containing text started)
+Client: FIN=0, opcode=0x0, msg="happy new"
+Server: (listening, payload concatenated to previous message)
+Client: FIN=1, opcode=0x0, msg="year!"
+Server: (process complete message) Happy new year to you too!
+```
 
 Notice the first frame contains an entire message (has `FIN=1` and `opcode!=0x0`), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (`opcode=0x1`), but the entire message has not arrived yet (`FIN=0`). All remaining parts of that message are sent with continuation frames (`opcode=0x0`), and the final frame of the message is marked by `FIN=1`. [Section 5.4 of the spec](http://tools.ietf.org/html/rfc6455#section-5.4) describes message fragmentation.
 
@@ -175,19 +185,25 @@ Think of a subprotocol as a custom [XML schema](https://en.wikipedia.org/wiki/XM
 
 A client has to ask for a specific subprotocol. To do so, it will send something like this **as part of the original handshake**:
 
-    GET /chat HTTP/1.1
-    ...
-    Sec-WebSocket-Protocol: soap, wamp
+```
+GET /chat HTTP/1.1
+...
+Sec-WebSocket-Protocol: soap, wamp
+```
 
 or, equivalently:
 
-    ...
-    Sec-WebSocket-Protocol: soap
-    Sec-WebSocket-Protocol: wamp
+```
+...
+Sec-WebSocket-Protocol: soap
+Sec-WebSocket-Protocol: wamp
+```
 
 Now the server must pick one of the protocols that the client suggested and it supports. If there are more than one, send the first one the client sent. Imagine our server can use both `soap` and `wamp`. Then, in the response handshake, it'll send:
 
-    Sec-WebSocket-Protocol: soap
+```
+Sec-WebSocket-Protocol: soap
+```
 
 > **Advertencia:** The server can't send more than one `Sec-Websocket-Protocol` header.
 > If the server doesn't want to use any subprotocol, **it shouldn't send any `Sec-WebSocket-Protocol` header**. Sending a blank header is incorrect.

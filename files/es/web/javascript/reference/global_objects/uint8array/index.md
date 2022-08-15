@@ -14,10 +14,12 @@ Los **`Uint8Array`** representan un array de enteros sin signo de 8 bits. El con
 
 ## Sintaxis
 
-    new Uint8Array(tamaño);
-    new Uint8Array(typedArray);
-    new Uint8Array(objeto);
-    new Uint8Array(buffer [, byteOffset [, tamaño]]);
+```js
+new Uint8Array(tamaño);
+new Uint8Array(typedArray);
+new Uint8Array(objeto);
+new Uint8Array(buffer [, byteOffset [, tamaño]]);
+```
 
 Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 

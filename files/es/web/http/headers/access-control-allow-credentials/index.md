@@ -28,7 +28,9 @@ El encabezado `Access-Control-Allow-Credentials` trabaja en conjunción con la p
 
 ## Sintaxis
 
-    Access-Control-Allow-Credentials: true
+```
+Access-Control-Allow-Credentials: true
+```
 
 ## Directivas
 
@@ -39,7 +41,9 @@ El encabezado `Access-Control-Allow-Credentials` trabaja en conjunción con la p
 
 Permitir credenciales:
 
-    Access-Control-Allow-Credentials: true
+```
+Access-Control-Allow-Credentials: true
+```
 
 Utilizando [XHR](/es/docs/Web/API/XMLHttpRequest) con credenciales:
 

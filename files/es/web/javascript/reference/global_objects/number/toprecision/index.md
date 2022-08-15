@@ -12,7 +12,9 @@ El método **`toPrecision()`** devuelve una cadena que representa un objeto {{js
 
 ## Sintaxis
 
-    numObj.toPrecision([precision])
+```js
+numObj.toPrecision([precision])
+```
 
 ### Parámetros
 

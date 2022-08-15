@@ -9,7 +9,9 @@ Returns a nodelist collection with a given {{domxref("element.name","name")}} in
 
 ## Sintaxis
 
-    elements = document.getElementsByName(name)
+```js
+elements = document.getElementsByName(name)
+```
 
 - `elements` es una colección existente de {{domxref("NodeList")}}
 - `name` es el valor del atributo `name` del elemento.

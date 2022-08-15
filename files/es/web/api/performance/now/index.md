@@ -20,7 +20,9 @@ El valor devuelto representa el tiempo transcurrido desde el **tiempo de origen*
 
 ## Sintaxis
 
-    t = performance.now();
+```js
+t = performance.now();
+```
 
 ## Ejemplo
 

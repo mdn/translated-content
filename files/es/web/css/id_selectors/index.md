@@ -21,11 +21,15 @@ En un documento HTML, los **selectores de ID** de CSS buscan un elemento basado 
 
 ## Sintaxis
 
-    #id_value { style properties }
+```css
+#id_value { style properties }
+```
 
 Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "attribute selector")}}:
 
-    [id=id_value] { style properties }
+```css
+[id=id_value] { style properties }
+```
 
 ## Ejemplo
 

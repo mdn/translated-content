@@ -18,7 +18,9 @@ El valor `null` es un literal de Javascript que representa intencionalmente un v
 
 ## Sintaxis
 
-    null
+```js
+null
+```
 
 ## Descripción
 

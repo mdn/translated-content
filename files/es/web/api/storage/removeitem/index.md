@@ -17,7 +17,9 @@ El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave
 
 ## Sintaxis
 
-    storage.removeItem(keyName);
+```js
+storage.removeItem(keyName);
+```
 
 ### Parámetros
 

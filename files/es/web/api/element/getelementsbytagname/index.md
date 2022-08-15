@@ -13,7 +13,9 @@ Devuelve una lista de elementos que tienen un [tag name](es/DOM/element.tagName)
 
 ### Sintaxis
 
-    elements =element.getElementsByTagName(tagName)
+```js
+elements = element.getElementsByTagName(tagName)
+```
 
 - `elements` es un `NodeList` del elemento encontrado en el orden en que aparece en el árbol.
 - `element` es el elemento a partir del cual debe empezar la búsqueda. Recuerda que sólo se buscan los elementos descendentes del elemento dado, sin incluir el propio elemento.
@@ -23,15 +25,17 @@ Devuelve una lista de elementos que tienen un [tag name](es/DOM/element.tagName)
 
 ### Ejemplo
 
-    // comprueba la alineación de las celdas en una tabla.
-    var table = document.getElementById("forecast-table");
-    var cells = table.getElementsByTagName("td");
-    for (var i = 0; i < cells.length; i++) {
-        status = cells[i].getAttribute("status");
-        if ( status == "open") {
-            // grab the data
-        }
+```js
+// comprueba la alineación de las celdas en una tabla.
+var table = document.getElementById("forecast-table");
+var cells = table.getElementsByTagName("td");
+for (var i = 0; i < cells.length; i++) {
+    status = cells[i].getAttribute("status");
+    if ( status == "open") {
+        // grab the data
     }
+}
+```
 
 ### Notas
 

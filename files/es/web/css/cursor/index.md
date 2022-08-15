@@ -20,9 +20,11 @@ La propiedad [CSS:cursor](es/CSS/cursor) especifica el tipo de cursor que se mos
 
 ### Sintaxis
 
-    cursor: <std-cursor-name> | <url> [<x> <y>]? [, <url> [<x> <y>]?]* | CSS:inherit ;
+```
+cursor: <std-cursor-name> | <url> [<x> <y>]? [, <url> [<x> <y>]?]* | CSS:inherit ;
 
-    cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
+cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
+```
 
 ### Values
 
@@ -212,18 +214,22 @@ La propiedad [CSS:cursor](es/CSS/cursor) especifica el tipo de cursor que se mos
 
 [Ver El Ejemplo Vivo](/samples/cssref/cursor.html)
 
-    Inline:
+Inline:
 
-    <span style="cursor: crosshair">Some Text</span>
+```html
+<span style="cursor: crosshair">Some Text</span>
+```
 
-    External:
+External:
 
-    .pointer {
-     cursor: pointer;
-    }
-    .move {
-     cursor: move;
-    }
+```css
+.pointer {
+  cursor: pointer;
+}
+.move {
+  cursor: move;
+}
+```
 
 ### Notes
 

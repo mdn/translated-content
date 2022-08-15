@@ -9,7 +9,9 @@ translation_of: Web/API/Element/setAttributeNS
 
 ## Sintaxis
 
-    elemento.setAttributeNS(namespace,nombre,valor)
+```js
+elemento.setAttributeNS(namespace, nombre, valor)
+```
 
 - `namespace` es un string especificando el namespace del atributo.
 - `name es un string identificando el atributo a ser puesto.`
@@ -17,8 +19,10 @@ translation_of: Web/API/Element/setAttributeNS
 
 ## Ejemplo
 
-    var d = document.getElementById("d1");
-    d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```js
+var d = document.getElementById("d1");
+d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```
 
 ## Notas
 

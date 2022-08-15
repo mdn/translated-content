@@ -7,9 +7,11 @@ translation_of: Web/API/Element/querySelector
 
 El método **`querySelector()`** de la intrefaz {{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.
 
-## Sintáxis
+## Sintaxis
 
-    elemento = elementoBase.querySelector(selectores);
+```js
+elemento = elementoBase.querySelector(selectores);
+```
 
 ### Parametros
 

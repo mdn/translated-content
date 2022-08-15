@@ -9,10 +9,12 @@ TLa propiedad **`HTMLCanvasElement.width`** es un entero positivo que refleja el
 
 Esta es una de de las dos propiedades que controlan el tamaño del canvas, siendo la otra {{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.
 
-## Syntax
+## Sintaxis
 
-    var pxl = canvas.width;
-    canvas.width = pxl;
+```js
+var pxl = canvas.width;
+canvas.width = pxl;
+```
 
 ## Ejemplos
 

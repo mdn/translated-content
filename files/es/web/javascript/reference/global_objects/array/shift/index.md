@@ -10,7 +10,9 @@ El método **`shift()`** elimina el **primer** elemento del array y lo retorna. 
 
 ## Sintaxis
 
-    arr.shift()
+```js
+arr.shift()
+```
 
 ## Descripción
 

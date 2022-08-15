@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declara
 
 ## Mensaje
 
-    Error de Sintaxis: Punto y coma ; faltante antes de la declaración
+```
+Error de Sintaxis: Punto y coma ; faltante antes de la declaración
+```
 
 ## Tipo de Error
 

@@ -10,8 +10,10 @@ La sintaxis **`set`** asocia la propiedad de un objeto a una función que será 
 
 ## Sintaxis
 
-    {set prop(val) { . . . }}
-    {set [expression](val) { . . . }}
+```js
+{set prop(val) { . . . }}
+{set [expression](val) { . . . }}
+```
 
 ### Parámetros
 
@@ -58,7 +60,7 @@ Note que `actual` no está definido y cualquier intento de accederlo devolverá 
 
 ### Eliminando un setter con el operador `delete`
 
-Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Referencia/Operadores/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete") en él:
+Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Referencia/Operadores/delete) en él:
 
 ```js
 delete lenguaje.actual;

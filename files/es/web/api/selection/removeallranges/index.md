@@ -13,7 +13,9 @@ Quita todos los rangos de la selección, dejando las propiedades [anchorNode](es
 
 ### Sintaxis
 
-    sel.removeAllRanges();
+```js
+sel.removeAllRanges();
+```
 
 ### Parámetros
 

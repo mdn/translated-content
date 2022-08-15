@@ -14,7 +14,9 @@ Representa la altura (en pixeles) del viewport
 
 ## Sintaxis
 
-    var alturaDelViewport = window.innerHeight;
+```js
+var alturaDelViewport = window.innerHeight;
+```
 
 ### Valor
 

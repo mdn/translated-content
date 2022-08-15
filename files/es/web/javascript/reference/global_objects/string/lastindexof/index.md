@@ -18,7 +18,9 @@ El método **`lastIndexOf()`**`devuelve`la posicion (indice) en la que se encuen
 
 ## Sintaxis
 
-    cadena.lastIndexOf(valorBusqueda[, indiceDesde])
+```js
+cadena.lastIndexOf(valorBusqueda[, indiceDesde])
+```
 
 ### Parámetros
 

@@ -14,7 +14,9 @@ Esta propiedad indica si la ventana se presenta en modo de pantalla comleta o no
 
 ### Sintaxis
 
-    var isInFullScreen = windowRef.fullScreen;
+```js
+var isInFullScreen = windowRef.fullScreen;
+```
 
 Con privilegios chrome, el valor de esta propiedad se puede cambiar, de otra forma, es de sólo lectura. Ten en cuenta que si intentas cambiar el valor de esta propiedad sin tener privilegios chrome, no cambiará nada y la propiedad simplemente fallará. Esto se hace para evitar que los programas diseñados para Internet Explorer fallen.
 

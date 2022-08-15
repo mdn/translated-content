@@ -26,7 +26,7 @@ La siguiente tabla muestra ejemplos de comparaciones de origenes para la URL `ht
 | `http://store.company.com:81/dir/etc.html`        | Fallo        | Diferente puerto     |
 | `http://news.company.com/dir/other.html`          | Fallo        | Diferente host       |
 
-Ver también [definición de origen para `file:` URLs](/es/docs/Same-origin_policy_for_file:_URIs "Same-origin_policy_for_file:_URIs"), puesto que su comparación es más complicada.
+Ver también [definición de origen para `file:` URLs](/es/docs/Same-origin_policy_for_file:_URIs), puesto que su comparación es más complicada.
 
 ### Orígenes heredados
 
@@ -49,7 +49,9 @@ Estas excepciones no son estándar y no están soportadas en otro navegador pero
 
 Una página puede cambiar su propio origen con algunas limitaciones. Un script puede asignar el valor de {{domxref("document.domain")}} al dominio actual o a un superdominio del dominio actual. Si se asigna a un superdominio del dominio actual, el dominio más corto es usado para las posteriores comprobaciones de origen. Por ejemplo, sea un script en `http://store.company.com/dir/other.html` que ejecuta lo siguiente:
 
-    document.domain = "company.com";
+```js
+document.domain = "company.com";
+```
 
 Tras su ejecución, la página puede pasar la comprobación de origen con `http://company.com/dir/page.html` (asumiendo que `http://company.com/dir/page.html` asigna su `document.domain` a "`company.com`" para indicar que desea hacerlo - ver {{domxref("document.domain")}} para más información). Sin embargo, `company.com` **no** podría asignar `document.domain` a `othercompany.com` ya que no es un superdominio de `company.com`.
 
@@ -61,7 +63,7 @@ El número de puerto es guardado de forma separada por el navegador. Cualquier l
 
 La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:
 
-- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/HTTP/Access_control_CORS#Preflighted_requests "HTTP/Access_control_CORS#Preflighted_requests").
+- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/HTTP/Access_control_CORS#Preflighted_requests).
 - La integración Cross-origin (_embedding)_ normalmente se permite. Los ejemplos se listan debajo.
 - Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la [disponibilidad de un recurso integrado](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 
@@ -71,13 +73,13 @@ Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado
 - CSS con `<link rel="stylesheet" href="...">`. Debido a las [reglas de sintaxis relajadas](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) de CSS, un CSS de origen cruzado requiere de una cabecera `Content-Type` correcta. Las restricciones varían según el navegador: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (bajar hasta CVE-2010-0051) y [Opera](http://www.opera.com/support/kb/view/943/).
 - Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...
 - Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
-- Plug-ins con [`<object>`](/es/docs/HTML/Element/object "HTML/Element/object"), [`<embed>`](/es/docs/HTML/Element/embed "HTML/Element/embed") y [`<applet>`](/es/docs/HTML/Element/applet "HTML/Element/applet").
-- Fuentes con [`@font-face`](/es/docs/CSS/@font-face "CSS/@font-face"). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
-- Cualquiera con [`<frame>`](/es/docs/HTML/Element/frame "HTML/Element/frame") and [`<iframe>`](/es/docs/HTML/Element/iframe "HTML/Element/iframe"). Un sitio puede usar la cabecera [`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options "HTTP/X-Frame-Options") para prevenir este tipo de interacción de orígen cruzado.
+- Plug-ins con [`<object>`](/es/docs/HTML/Element/object), [`<embed>`](/es/docs/HTML/Element/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
+- Fuentes con [`@font-face`](/es/docs/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
+- Cualquiera con [`<frame>`](/es/docs/HTML/Element/frame) and [`<iframe>`](/es/docs/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
 
 ### Cómo permitir el acceso de origen cruzado
 
-Usa [CORS](/es/docs/HTTP/Access_control_CORS "HTTP/Access_control_CORS") para permitir el acceso de origen cruzado.
+Usa [CORS](/es/docs/HTTP/Access_control_CORS) para permitir el acceso de origen cruzado.
 
 ### Cómo bloquear el acceso de origen cruzado
 
@@ -87,7 +89,7 @@ Usa [CORS](/es/docs/HTTP/Access_control_CORS "HTTP/Access_control_CORS") para pe
 
 ## Acceso script API de Origen Cruzado
 
-Las APIs de JavaScript APIs tales como [`iframe.contentWindow`](/es/docs/DOM/HTMLIFrameElement "DOM/HTMLIFrameElement"), {{domxref("window.parent")}}, {{domxref("window.open")}} y {{domxref("window.opener")}} permiten a los documentos referenciarse directamente entre ellos. Cuando dos documentos no tienen el mismo origen, estas referencias proveen un acceso muy limitado a los objetos [`Window`](/es/docs/Web/API/Window) y [`Location`](/es/docs/Web/API/Location), como se describe en las siguientes dos secciones.
+Las APIs de JavaScript APIs tales como [`iframe.contentWindow`](/es/docs/DOM/HTMLIFrameElement), {{domxref("window.parent")}}, {{domxref("window.open")}} y {{domxref("window.opener")}} permiten a los documentos referenciarse directamente entre ellos. Cuando dos documentos no tienen el mismo origen, estas referencias proveen un acceso muy limitado a los objetos [`Window`](/es/docs/Web/API/Window) y [`Location`](/es/docs/Web/API/Location), como se describe en las siguientes dos secciones.
 
 Para una mayor comunicación entre documentos de origenes diferentes, usar {{domxref("window.postMessage")}}.
 
@@ -142,7 +144,7 @@ Las cookies usan una definición separada de orígenes. Una página puede asigna
 
 ## Ver también
 
-- [Política](http://www.w3.org/Security/wiki/Same_Origin_Policy)[Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs "Same-origin policy for file: URIs")
+- [Política](http://www.w3.org/Security/wiki/Same_Origin_Policy)[Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs)
 - [Política Same-Origin en W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
 
 ## Información de Documento Original

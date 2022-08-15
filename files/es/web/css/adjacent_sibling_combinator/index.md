@@ -15,7 +15,9 @@ Se hace referencia a este selector como selector adyacente o selector del próxi
 
 ## Sintaxis
 
-    elemento_anterior + elemento_afectado { estilos }
+```css
+elemento_anterior + elemento_afectado { estilos }
+```
 
 ## Ejemplo
 

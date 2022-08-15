@@ -25,7 +25,9 @@ Cuando un valor de coordenadas está fuera del rango [-1, 1], el elemento crece 
 
 La función scale () se especifica con uno o dos valores, que representan la cantidad de escala que se aplicará en cada dirección.
 
-    scale(sx) scale(sx, sy)
+```css
+scale(sx) scale(sx, sy)
+```
 
 ## Valores
 
@@ -132,22 +134,26 @@ div {
 
 #### HTML
 
-    <div>Normal</div>
-    <div class="scaled">Scaled</div>
+```html
+<div>Normal</div>
+<div class="scaled">Scaled</div>
+```
 
 #### CSS
 
-    div {
-      width: 80px;
-      height: 80px;
-      background-color: skyblue;
-    }
+```css
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
+}
 
-    .scaled {
-      transform: scale(2, 0.5); /* Igual que: scaleX(2) scaleY(0.5) */
-      transform-origin: left;
-      background-color: pink;
-    }
+.scaled {
+  transform: scale(2, 0.5); /* Igual que: scaleX(2) scaleY(0.5) */
+  transform-origin: left;
+  background-color: pink;
+}
+```
 
 #### Resultado
 

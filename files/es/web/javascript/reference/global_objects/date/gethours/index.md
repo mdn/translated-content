@@ -10,7 +10,9 @@ El método **`getHours()`** retorna la hora de la fecha especificada, de acuerdo
 
 ## Sintaxis
 
-    dateObj.getHours()
+```js
+dateObj.getHours()
+```
 
 ### Valor de retorno
 

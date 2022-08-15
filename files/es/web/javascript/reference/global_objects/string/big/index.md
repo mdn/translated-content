@@ -21,7 +21,9 @@ Provoca que una cadena sea mostrada con un tamaño de fuente grade, como si estu
 
 ## Sintaxis
 
-    cadena.big()
+```js
+cadena.big()
+```
 
 ## Descripción
 
@@ -33,17 +35,21 @@ Usa el método `big` para formatear y mostrar una cadena en un documento.
 
 El siguiente ejemplo usa los métodos de `string` para cambiar el tamañó de una cadena:
 
-    var cadenaMundo="¡Hola Mundo!";
+```js
+var cadenaMundo="¡Hola Mundo!";
 
-    console.log(cadenaMundo.small());
-    console.log("<P>" + cadenaMundo.big());
-    console.log("<P>" + cadenaMundo.fontsize(7));
+console.log(cadenaMundo.small());
+console.log("<P>" + cadenaMundo.big());
+console.log("<P>" + cadenaMundo.fontsize(7));
+```
 
 Este ejemplo produce el mismo resultado que el siguiente HTML:
 
-    <small>¡Hola Mundo!</small>
-    <p><big>¡Hola Mundo!</big>
-    <p><fontsize=7>¡Hola Mundo!</fontsize>
+```html
+<small>¡Hola Mundo!</small>
+<p><big>¡Hola Mundo!</big>
+<p><fontsize=7>¡Hola Mundo!</fontsize>
+```
 
 ### Vea También
 

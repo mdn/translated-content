@@ -18,7 +18,9 @@ La propiedad **`Element.prefix`** unicamente de lectura devuelve el namespace pr
 
 ## Síntasix
 
-    string = element.prefix
+```js
+string = element.prefix
+```
 
 ## Ejemplos
 

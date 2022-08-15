@@ -11,7 +11,9 @@ Ejecuta la vibración por hardware en el dispositivo, si existe dicho hardware. 
 
 ## Sintaxis
 
-    window.navigator.vibrate(pattern);
+```js
+window.navigator.vibrate(pattern);
+```
 
 - `pattern` proporciona un patrón de intervalos de vibración y pausas, como se describe a continuación.
 

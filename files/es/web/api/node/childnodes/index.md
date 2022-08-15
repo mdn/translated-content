@@ -15,7 +15,9 @@ La propiedad de solo lectura **`Node.childNodes`** devuelve una colección de hi
 
 ## Sintaxis
 
-    var nodeList = elementNodeReference.childNodes;
+```js
+var nodeList = elementNodeReference.childNodes;
+```
 
 ## Ejemplos
 

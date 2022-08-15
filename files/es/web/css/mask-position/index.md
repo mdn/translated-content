@@ -14,7 +14,7 @@ original_slug: Web/CSS/-webkit-mask-position
 
 ## Sumario
 
-    la propiedad CSS -webkit-mask-position fija la posición inicial de una máscara de imagen.
+La propiedad CSS -webkit-mask-position fija la posición inicial de una máscara de imagen.
 
 {{cssinfo}}
 

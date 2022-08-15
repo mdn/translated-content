@@ -17,7 +17,9 @@ Esta propiedad es de sólo lectura, no tiene valor por defecto
 
 ## Sintaxis
 
-    outWindowHeight = window.outerHeight;
+```js
+outWindowHeight = window.outerHeight;
+```
 
 Al obtener, `outWindowHeight` contiene el alto de la ventana.
 

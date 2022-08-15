@@ -11,7 +11,9 @@ translation_of: Web/API/FileReader/result
 
 ## Sintaxis
 
-    var file = instanceOfFileReader.result
+```js
+var file = instanceOfFileReader.result
+```
 
 ### Valor
 

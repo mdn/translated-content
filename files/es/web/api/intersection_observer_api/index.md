@@ -296,17 +296,19 @@ Cada entrada en la lista de umbrales es un objeto {{domxref("IntersectionObserve
 
 The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.
 
-    intersectionCallback(entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          let elem = entry.target;
+```js
+intersectionCallback(entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      let elem = entry.target;
 
-          if (entry.intersectionRatio >= 0.75) {
-            intersectionCounter++;
-          }
-        }
-      });
+      if (entry.intersectionRatio >= 0.75) {
+        intersectionCounter++;
+      }
     }
+  });
+}
+```
 
 ## Interfaces
 

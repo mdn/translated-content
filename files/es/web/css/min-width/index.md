@@ -33,9 +33,11 @@ min-width: \<longitud> | \<porcentaje> | -moz-max-content | -moz-min-content | -
 
 ### Ejemplos
 
-    table{min-width: 75%;}
+```css
+table{min-width: 75%;}
 
-    form{min-width: 0;}
+form{min-width: 0;}
+```
 
 ### Notas
 

@@ -13,7 +13,9 @@ El elemento `<xsl:apply-imports>` es complejo en su uso, y es utilizado mayorita
 
 ### Sintaxis
 
-    <xsl:apply-imports/>
+```xml
+<xsl:apply-imports/>
+```
 
 ### Atributos requeridos
 

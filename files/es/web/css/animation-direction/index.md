@@ -23,14 +23,16 @@ Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajust
 
 ## Sintaxis
 
-    Gramática formal: [ normal | reverse | alternate | alternate-reverse ] [, [ normal | reverse | alternate | alternate-reverse ] ]*
+```
+Gramática formal: [ normal | reverse | alternate | alternate-reverse ] [, [ normal | reverse | alternate | alternate-reverse ] ]*
 
-    animation-direction: normal
-    animation-direction: reverse
-    animation-direction: alternate
-    animation-direction: alternate-reverse
-    animation-direction: normal, reverse
-    animation-direction: alternate, reverse, normal
+animation-direction: normal
+animation-direction: reverse
+animation-direction: alternate
+animation-direction: alternate-reverse
+animation-direction: normal, reverse
+animation-direction: alternate, reverse, normal
+```
 
 ### Valores
 
@@ -45,7 +47,7 @@ Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajust
 
 ## Ejemplos
 
-Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
+Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
 
 Especificaciones
 

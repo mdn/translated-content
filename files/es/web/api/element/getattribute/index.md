@@ -15,7 +15,9 @@ translation_of: Web/API/Element/getAttribute
 
 ## Sintaxis
 
-    var atributo = element.getAttribute(nombreAtributo);
+```js
+var atributo = element.getAttribute(nombreAtributo);
+```
 
 donde
 

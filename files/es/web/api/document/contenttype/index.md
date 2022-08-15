@@ -7,9 +7,11 @@ translation_of: Web/API/Document/contentType
 
 Devuelve el tipo MIME con el que el documento está siendo renderizado. Puede obtenerlo a partir de los encabezados HTTP (Headers) o de otras fuentes de información MIME, y puede ser afectado por conversiones automáticas inferidas tanto por el navegador como por cualquiera de sus extensiones.
 
-## Sintáxis
+## Sintaxis
 
-    contentType = document.contentType;
+```js
+contentType = document.contentType;
+```
 
 `contentType` es una propiedad de sólo lectura.
 
@@ -19,4 +21,4 @@ Esta propiedad no es afectada por los tags meta.
 
 ## Especificaciones
 
-No estándar, sólo soportada por [Gecko](/en/Gecko "en/Gecko").
+No estándar, sólo soportada por [Gecko](/en/Gecko).

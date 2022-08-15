@@ -17,13 +17,15 @@ translation_of: Web/CSS/initial
 
 Para las propiedades [no heredadas](es/CSS/inheritance#propiedades_heredadas_y_no_heredadas), este valor refuerza el comportamiento por defecto y es necesario sólo para sobrescribir otra regla. Por ejemplo:
 
-     /* definimos un borde verde de un encabezamiento de segundo nivel */
-     h2 { border: medium solid green }
+```css
+/* definimos un borde verde de un encabezamiento de segundo nivel */
+h2 { border: medium solid green }
 
-     /* pero las cabeceras de la barra lateral utilizan el valor inicial de la propiedad color */
-     #sidebar h2 { border-color: initial; }
+/* pero las cabeceras de la barra lateral utilizan el valor inicial de la propiedad color */
+#sidebar h2 { border-color: initial; }
 
-     /* ...en CSS1 se obtiene usando 'border: medium solid' */
+/* ...en CSS1 se obtiene usando 'border: medium solid' */
+```
 
 #### Para propiedades heredadas
 

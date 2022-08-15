@@ -9,7 +9,9 @@ El método **`HTMLTableElement.insertRow()`** inserta una nueva fila en la tabla
 
 ## Sintaxis
 
-    var row = HTMLTableElement.insertRow(optional index = -1);
+```js
+var row = HTMLTableElement.insertRow(optional index = -1);
+```
 
 - [`HTMLTableElement`](/es/docs/DOM/HTMLTableElement) es una referencia a un elemento table HTML.
 - `index` es el índice de fila de la nueva fila.

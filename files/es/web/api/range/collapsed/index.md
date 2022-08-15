@@ -11,14 +11,18 @@ Devuelve un valor booleano verdadero indicando si los puntos de inicio y fin de 
 
 ### Sintaxis
 
-    isCollapsed = range.collapsed;
+```js
+isCollapsed = range.collapsed;
+```
 
 ### Ejemplo
 
-    range = document.createRange();
-    range.setStart(startNode,startOffset);
-    range.setEnd(endNode,endOffset);
-    isCollapsed = range.collapsed;
+```js
+range = document.createRange();
+range.setStart(startNode,startOffset);
+range.setEnd(endNode,endOffset);
+isCollapsed = range.collapsed;
+```
 
 ### Notas
 

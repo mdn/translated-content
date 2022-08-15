@@ -17,8 +17,10 @@ translation_of: Web/API/Element/className
 
 ## Sintaxis
 
-    var cName = elementNodeReference.className;
-    elementNodeReference.className = cName;
+```js
+var cName = elementNodeReference.className;
+elementNodeReference.className = cName;
+```
 
 - _cName_ es una variable de cadena representando la clase o la lista de clases separada por espacios, del elemento en cuestión.
 

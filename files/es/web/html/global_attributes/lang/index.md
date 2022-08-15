@@ -29,8 +29,6 @@ Para la pseudo clase { cssxref(":lang") }} de CSS, dos nombres invalidos de leng
 
 {{Compat("html.global_attributes.lang")}}
 
-##
-
 ## Ver también
 
 - [atributos globales](/es/docs/Web/HTML/Atributos_Globales)

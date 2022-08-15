@@ -11,7 +11,9 @@ Retorna el objeto statusbar, la visibilidad se puede alternar en la ventana.
 
 ## Sintaxis
 
-    objRef = window.statusbar
+```js
+objRef = window.statusbar
+```
 
 ## Ejemplo
 

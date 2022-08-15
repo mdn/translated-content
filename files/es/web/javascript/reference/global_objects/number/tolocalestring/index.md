@@ -14,9 +14,11 @@ El método **`toLocaleString()`** retorna una representacion localizada del núm
 
 {{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
 
-## Syntax
+## Sintaxis
 
-    numObj.toLocaleString([locales [, options]])
+```js
+numObj.toLocaleString([locales [, options]])
+```
 
 ### Parametros
 

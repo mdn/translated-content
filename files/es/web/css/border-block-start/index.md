@@ -5,7 +5,7 @@ translation_of: Web/CSS/border-block-start
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`border-block-start`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque inicial en un solo lugar en la hoja de estilos.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-start`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque inicial en un solo lugar en la hoja de estilos.
 
 {{EmbedInteractiveExample("pages/css/border-block-start.html")}}
 

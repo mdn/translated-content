@@ -7,7 +7,9 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argume
 
 ## Mensaje
 
-    SyntaxError: missing ) after argument list
+```
+SyntaxError: missing ) after argument list
+```
 
 ## Tipo de error
 

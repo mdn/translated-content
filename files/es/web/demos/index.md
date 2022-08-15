@@ -30,7 +30,7 @@ Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y
 - [Canvas3D & Flickr](http://www.xs4all.nl/~peterned/3d/)
 - [Playing with Canvas](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
 - [Using the Canvas Html element5](http://langexplr.blogspot.com/2008/11/using-canvas-html-element.html)
-- [RayCaster](/samples/raycaster/RayCaster.html "https://developer.mozilla.org/editor/fckeditor/core/editor/samples/raycaster/RayCaster.html")
+- [RayCaster](/samples/raycaster/RayCaster.html)
 - [MSX Emulator](http://jsmsxdemo.googlepages.com/jsmsx.html)
 - [processing.js](http://processingjs.org/exhibition/)
 - [Missile fleet](http://glimr.rubyforge.org/cake/missile_fleet.html)

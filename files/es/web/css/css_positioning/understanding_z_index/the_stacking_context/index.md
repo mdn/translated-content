@@ -6,11 +6,11 @@ original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/El_contexto_de_apilam
 ---
 El contexto de apilamiento es la conceptualización tridimensional de los elementos HTML a lo largo de un eje-Z imaginario relativo al usuario que se asume está de cara al viewport o página web. Los elementos HTML ocupan este espacio por orden de prioridad basado en sus atributos.
 
-« [CSS](/es/CSS "CSS") « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index "Understanding CSS z-index")
+« [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
 ## El contexto de apilamiento
 
-En el ejemplo previo, [Agregando z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index "Agregando z-index"), el orden de renderizado de ciertos DIVs es influenciado por sus valores z-index. Esto ocurre debido a que estos DIVs tienen propiedades especiales que causan que formen un contexto de apilamiento.
+En el ejemplo previo, [Agregando z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index), el orden de renderizado de ciertos DIVs es influenciado por sus valores z-index. Esto ocurre debido a que estos DIVs tienen propiedades especiales que causan que formen un contexto de apilamiento.
 
 Un contexto de apilamiento es formado, en cualquier lugar del documento, por cualquier elemento que
 
@@ -193,12 +193,12 @@ h1 {
 
 ### También puedes ver
 
-- [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index "  javichito Apilando sin z-index") : Reglas de apilamiento por defecto
-- [Apilamiento y float](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float "Apilamiento y float") : Cómo son manejados los elementos flotantes
-- [Agregando z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index "Agregando z-index") : Usando z-index para cambiar el apilamiento por defecto
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_1_del_contexto_de_apilamiento "Ejemplo 1 del contexto de apilamiento") : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento "Ejemplo 2 del contexto de apilamiento") : Jerarquía HTML de 2 niveles, z-index en todos los niveles
-- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento "Ejemplo 3 del contexto de apilamiento") : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
+- [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index) : Reglas de apilamiento por defecto
+- [Apilamiento y float](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float) : Cómo son manejados los elementos flotantes
+- [Agregando z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index) : Usando z-index para cambiar el apilamiento por defecto
+- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_1_del_contexto_de_apilamiento) : Jerarquía HTML de 2 niveles, z-index en el último nivel
+- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
+- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
 
 ### Información del documento original
 

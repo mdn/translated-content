@@ -14,7 +14,9 @@ La función `attr()` de [CSS](/es/docs/Web/CSS) se puede usar con cualquier prop
 
 ## Sintaxis
 
-    Sintaxis formal: attr( attribute-name <type-or-unit>? [, <fallback> ]? )
+```css
+Sintaxis formal: attr( attribute-name <type-or-unit>? [, <fallback> ]? )
+```
 
 ### Valores
 

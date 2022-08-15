@@ -26,7 +26,9 @@ La propiedad `visibility` se usa para dos efectos:
 
 ### Sintaxis
 
-    visibility: visible | hidden | collapse | {{ Cssxref("inherit") }}
+```
+visibility: visible | hidden | collapse | {{ Cssxref("inherit") }}
+```
 
 ### Valores
 
@@ -39,9 +41,11 @@ La propiedad `visibility` se usa para dos efectos:
 
 ### Ejemplos
 
-    p        { visibility: hidden; }   /* Los párrafos no serán visibles                       */
-    p.showme { visibility: visible; }  /* excepto los que tengan class = showme (clase= muéstrame)                */
-    tr.col   { visibility: collapse; } /* las filas de la tabla con la clasecol se fusionarán*/
+```css
+p        { visibility: hidden; }   /* Los párrafos no serán visibles                       */
+p.showme { visibility: visible; }  /* excepto los que tengan class = showme (clase= muéstrame)                */
+tr.col   { visibility: collapse; } /* las filas de la tabla con la clasecol se fusionarán*/
+```
 
 ### Notas
 

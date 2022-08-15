@@ -15,7 +15,9 @@ Asigna el valor inicial de un evento de ratón una vez creado (normalmente usand
 
 ### Sintaxis
 
-    event.initMouseEvent(type,canBubble,cancelable,view,detail,screenX,screenY,clientX,clientY,ctrlKey,altKey,shiftKey,metaKey,button,relatedTarget);
+```js
+event.initMouseEvent(type,canBubble,cancelable,view,detail,screenX,screenY,clientX,clientY,ctrlKey,altKey,shiftKey,metaKey,button,relatedTarget);
+```
 
 - `type`
   - : la cadena del [type](es/DOM/event.type). Los tipos posibles para un evento de ratón incluyen: `click`, `mousedown`, `mouseup`, `mouseover`, `mousemove`, `mouseout`.

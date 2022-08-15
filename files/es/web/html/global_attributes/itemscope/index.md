@@ -31,8 +31,6 @@ El siguiente ejemplo especifica que el atributo `itemscope`. El ejemplo especifi
 </div>
 ```
 
-####
-
 #### Esctructura de informacion
 
 La siguiente tabla muestran los datos esctructurados mostrados en el anterior ejemplo.

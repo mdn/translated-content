@@ -20,7 +20,9 @@ La propiedad `border-image` es usada en lugar de la sentencia {{cssxref("border-
 
 ## Sintaxis
 
-    Etiquetado formal: {{csssyntax("border-image")}}
+```css
+Etiquetado formal: {{csssyntax("border-image")}}
+```
 
 ### Valores
 

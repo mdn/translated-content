@@ -19,18 +19,22 @@ El código con privilegios, debe tener cuidado de no leer o escribir esta propie
 
 ### Sintaxis
 
-    varuri =doc.documentURIObject;
+```js
+var uri = doc.documentURIObject;
+```
 
 ### Ejemplo
 
-    // Comprueba que el esquema URI de la pestaña de Firefox es 'http',
-    // asumiendo que este código se ejecuta dentro de browser.xul
-    var uriObj = content.document.documentURIObject;
-    var uriPort = uriObj.port;
+```js
+// Comprueba que el esquema URI de la pestaña de Firefox es 'http',
+// asumiendo que este código se ejecuta dentro de browser.xul
+var uriObj = content.document.documentURIObject;
+var uriPort = uriObj.port;
 
-    if (uriObj.schemeIs('http')) {
-      ...
-    }
+if (uriObj.schemeIs('http')) {
+  ...
+}
+```
 
 ### Especificación
 

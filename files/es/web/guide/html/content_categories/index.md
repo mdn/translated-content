@@ -141,11 +141,15 @@ Si un elemento tiene un modelo de contenido transparente, entonces su contenido 
 
 Por ejemplo, los elementos {{HTMLElement("del")}} y {{HTMLElement("ins")}} son transparentes:
 
-    <p>Sostenemos que estas verdades son <del><em>sagradas e innegablemente</em></del> <ins>evidentes por sí mismas</ins>.</p>
+```html
+<p>Sostenemos que estas verdades son <del><em>sagradas e innegablemente</em></del> <ins>evidentes por sí mismas</ins>.</p>
+```
 
 Si esos elementos fueran eliminados, este fragmento seguiría siendo HTML válido (si no es Español correcto).
 
-    <p>Sostenemos que estas verdades son <del><em>sagradas e innegablemente</em></del> <ins>evidentes por sí mismas</ins>.</p>
+```html
+<p>Sostenemos que estas verdades son <del><em>sagradas e innegablemente</em></del> <ins>evidentes por sí mismas</ins>.</p>
+```
 
 ## Otros modelos de contenido
 

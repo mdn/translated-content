@@ -11,11 +11,15 @@ El atributo `outerHTML` del interfaz DOM {{ domxref("element") }} obtiene el fra
 
 ## Sintaxis
 
-    var content = element.outerHTML;
+```js
+var content = element.outerHTML;
+```
 
 Al retorno, `content` contendrá el fragmento de HTML serializado que describe al elemento `element` y a sus descendientes.
 
-    element.outerHTML = content;
+```js
+element.outerHTML = content;
+```
 
 Reemplaza el elemento por los nodos generados del análisis de la cadena `content` con el padre de `element` como el nodo de contexto para el algoritmo de procesado del fragmento.
 
@@ -53,7 +57,7 @@ console.log(container.firstChild.nodeName); // logs "P"
 
 ## Notas
 
-Si el elemento no tiene elemento padre, esto es, si es el elemento raíz del documento, la asignación de su propiedad `outerHTML` lanzará una [`DOMException`](/en/DOM/DOMException "DOMException") con el código de error `NO_MODIFICATION_ALLOWED_ERR`. Por ejemplo:
+Si el elemento no tiene elemento padre, esto es, si es el elemento raíz del documento, la asignación de su propiedad `outerHTML` lanzará una [`DOMException`](/en/DOM/DOMException) con el código de error `NO_MODIFICATION_ALLOWED_ERR`. Por ejemplo:
 
 ```js
 document.documentElement.outerHTML = "test";  // lanza una DOMException

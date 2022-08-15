@@ -14,7 +14,9 @@ Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento {{ev
 
 ## Sintaxis
 
-    var startHandler = cualquierElemento.ontouchstart;
+```js
+var startHandler = cualquierElemento.ontouchstart;
+```
 
 ### Valor devuelto
 

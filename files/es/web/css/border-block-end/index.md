@@ -11,7 +11,7 @@ translation_of: Web/CSS/border-block-end
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad [CSS](/es/docs/Web/CSS "CSS") **`border-block-end`** es un atajo para establecer los valores de las propiedades individuales del borde final lógico de un bloque en un solo lugar de la hoja de estilos. `border-block-end` puede ser usada para establecer los valores de una o más de las siguientes propiedades: {{Cssxref("border-block-end-width")}}, {{Cssxref("border-block-end-style")}}, {{Cssxref("border-block-end-color")}}. Se asigna a un borde físico, dependiendo del modo de escritura del elemento, su direccionalidad y orientación de texto. Corresponde a las propiedades {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}, dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+La propiedad [CSS](/es/docs/Web/CSS) **`border-block-end`** es un atajo para establecer los valores de las propiedades individuales del borde final lógico de un bloque en un solo lugar de la hoja de estilos. `border-block-end` puede ser usada para establecer los valores de una o más de las siguientes propiedades: {{Cssxref("border-block-end-width")}}, {{Cssxref("border-block-end-style")}}, {{Cssxref("border-block-end-color")}}. Se asigna a un borde físico, dependiendo del modo de escritura del elemento, su direccionalidad y orientación de texto. Corresponde a las propiedades {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}, dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
 ```css
 border-block-end: 1px;

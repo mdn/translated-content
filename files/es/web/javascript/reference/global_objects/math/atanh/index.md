@@ -14,7 +14,9 @@ La función **`Math.atanh()`** nos retorna un arco hiperbólico de un numero, es
 
 ## Sintaxis
 
-    Math.atanh(x)
+```js
+Math.atanh(x)
+```
 
 ### Parametros
 

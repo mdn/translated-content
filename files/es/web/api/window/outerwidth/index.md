@@ -13,7 +13,9 @@ Esta propiedad es de sólo lectura; no tiene valores por default.
 
 ## Sintaxis
 
-    outWindowWidth = window.outerWidth;
+```js
+outWindowWidth = window.outerWidth;
+```
 
 Lo que retorna `outWindowWidth` es el ancho exterior del navegador.
 

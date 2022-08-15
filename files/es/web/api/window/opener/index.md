@@ -11,7 +11,9 @@ Devuelve una referencia de, la ventana que abrió la ventana actuál.
 
 ## Sintaxis
 
-    objRef = window.opener;
+```js
+objRef = window.opener;
+```
 
 ## Ejemplo
 

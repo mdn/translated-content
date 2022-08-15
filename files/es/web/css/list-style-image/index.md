@@ -23,7 +23,9 @@ La imagen de lista (`list-style-image`) define la imagen que será utilizada com
 
 ### Sintaxis
 
-    list-style-image: <uri> | none | inherit
+```css
+list-style-image: <uri> | none | inherit
+```
 
 ### Valores
 

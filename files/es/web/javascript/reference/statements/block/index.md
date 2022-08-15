@@ -17,7 +17,9 @@ Una sentencia block se utiliza para agrupar cero o más sentencias. Este grupo b
 
 ## Sintaxis
 
-    { sentencia_1; sentencia_2; ... sentencia_n; }
+```js
+{ sentencia_1; sentencia_2; ... sentencia_n; }
+```
 
 - `sentencia_1`, `sentencia_2`, `sentencia_n`
   - : Sentencias agrupadas dentro de una sentencia block.
@@ -48,21 +50,25 @@ Este obtiene el resultado 2 ya que la sentencia `var x` dentro del grupo block t
 
 Por el contrario, las variables declaradas con `let` y `const` tienen alcance de bloque.
 
-    let x = 1;
-    {
-      let x = 2;
-    }
-    console.log(x); // logs 1
+```js
+let x = 1;
+{
+  let x = 2;
+}
+console.log(x); // logs 1
+```
 
 El alcance `x = 2` es limitado solamente al bloque en el que está definido.
 
 Lo mismo para `const`:
 
-    const c = 1;
-    {
-      const c = 2;
-    }
-    console.log(c); // logs 1 y no lanza SyntaxError...
+```js
+const c = 1;
+{
+  const c = 2;
+}
+console.log(c); // logs 1 y no lanza SyntaxError...
+```
 
 Tenga en cuenta que la variable `const c = 2 con alcance de bloque,`**_no_ lanza** un `SyntaxError:`El identificador 'c' ya ha sido declarado. Esto es porque **se puede declarar de forma única** dentro del bloque, sin interferir con la otra que tiene un alcance global.
 

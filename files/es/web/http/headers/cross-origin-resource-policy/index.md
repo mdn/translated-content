@@ -19,13 +19,17 @@ La respuesta del encabezado HTTP **`Cross-Origin-Resource-Policy`** transmite un
 
 ## Sintaxis
 
-    Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
+```
+Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
+```
 
 ## Ejemplos
 
 La respuesta de encabezado debajo puede causar que agentes de usuario compatibles desabiliten peticiones cross-origin no-cors:
 
-    Cross-Origin-Resource-Policy: same-origin
+```
+Cross-Origin-Resource-Policy: same-origin
+```
 
 ## Especificaciones
 

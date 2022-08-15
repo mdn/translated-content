@@ -26,7 +26,9 @@ Los navegadores no envían ninguna cabecera `Referer` si:
 
 ## Sintaxis
 
-    Referer: <url>
+```
+Referer: <url>
+```
 
 ## Directivas
 
@@ -35,7 +37,9 @@ Los navegadores no envían ninguna cabecera `Referer` si:
 
 ## Ejemplos
 
-    Referer: https://developer.mozilla.org/es/docs/Web/JavaScript
+```
+Referer: https://developer.mozilla.org/es/docs/Web/JavaScript
+```
 
 ## Especificaciones
 

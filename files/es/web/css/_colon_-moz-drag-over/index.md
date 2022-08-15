@@ -16,7 +16,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-mo
 
 ## Síntaxis
 
-    element:-moz-drag-over { propiedades del estilo }
+```css
+element:-moz-drag-over { propiedades del estilo }
+```
 
 ## Ejemplo
 

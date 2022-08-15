@@ -76,4 +76,4 @@ Sin soporte (notablemente en IE6-8) significa que el script lanzará un error de
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}
 - {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Defining Getters and Setters](/es/JavaScript/Guide/Working_with_Objects#Defining_Getters_and_Setters "en/JavaScript/Guide/Working with Objects#Defining Getters and Setters") in JavaScript Guide
+- [Defining Getters and Setters](/es/JavaScript/Guide/Working_with_Objects#Defining_Getters_and_Setters) in JavaScript Guide

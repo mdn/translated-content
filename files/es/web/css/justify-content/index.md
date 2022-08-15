@@ -7,7 +7,7 @@ translation_of: Web/CSS/justify-content
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`justify-content`** define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.
+La propiedad [CSS](/es/docs/CSS) **`justify-content`** define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.
 
 El alineamiento se produce luego de que las longitudes y márgenes automáticos son aplicados, lo que significa que, si existe al menos un elemento flexible con {{cssxref("flex-grow")}} diferente a 0, no tendrá efecto ya que no habrá espacio disponible.
 
@@ -15,7 +15,7 @@ El alineamiento se produce luego de que las longitudes y márgenes automáticos 
 
 {{cssinfo}}
 
-Véase [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes") para más propiedades e información.
+Véase [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes) para más propiedades e información.
 
 ## Sintaxis
 
@@ -154,4 +154,4 @@ Resultados en:
 
 ## Ver también
 
-- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes")
+- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes)

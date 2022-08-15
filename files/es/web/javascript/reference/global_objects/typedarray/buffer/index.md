@@ -14,7 +14,9 @@ La propiedad de acceso **`buffer`** representa el {{jsxref("ArrayBuffer")}} refe
 
 ## Sintaxis
 
-    typedArray.buffer
+```js
+typedArray.buffer
+```
 
 ## Descripción
 

@@ -26,7 +26,9 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 ## Sintaxis
 
-    Array.of(elemento0[, elemento1[, ...[, elementoN]]])
+```js
+Array.of(elemento0[, elemento1[, ...[, elementoN]]])
+```
 
 ### Parámetros
 

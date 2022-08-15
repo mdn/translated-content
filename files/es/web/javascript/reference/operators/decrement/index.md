@@ -17,7 +17,9 @@ El operador de decremento (--) disminuye (o resta de a uno) su operando y retorn
 
 ## Sintaxis
 
-    Operadores: x-- o --x
+```js
+Operadores: x-- o --x
+```
 
 ## Descripción
 

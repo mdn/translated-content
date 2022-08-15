@@ -13,8 +13,9 @@ Indica si el elemento puede ser cancelado o no.
 
 ### Sintaxis
 
-    bool =
-    event.cancelable;
+```js
+bool = event.cancelable;
+```
 
 `bool` tiene valor `true` o `false`, dependiendo de si el evento puede ser desactivado.
 

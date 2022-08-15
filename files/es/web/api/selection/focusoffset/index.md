@@ -13,7 +13,9 @@ Devuelve el número de caracteres en que el foco de la selección es colocado de
 
 ### Sintaxis
 
-    sel.focusOffset
+```js
+sel.focusOffset
+```
 
 ### Notas
 

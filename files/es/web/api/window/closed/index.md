@@ -17,7 +17,9 @@ Esta propiedad de solo lectura indica si la ventana referenciada está cerrada o
 
 ## Syntax
 
-    isClosed = windowRef.closed;
+```js
+isClosed = windowRef.closed;
+```
 
 - `isClosed`
   - : Booleano. Valores posibles:\* `true`: La ventana ha sido cerrada.

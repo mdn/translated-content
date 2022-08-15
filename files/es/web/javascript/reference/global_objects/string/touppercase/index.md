@@ -17,7 +17,9 @@ El **`toUpperCase()`** método devuelve el valor convertido en mayúsculas de la
 
 ## Sintaxis
 
-    cadena.toUpperCase()
+```js
+cadena.toUpperCase()
+```
 
 ## Descripción
 

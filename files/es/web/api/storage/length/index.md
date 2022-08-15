@@ -9,7 +9,9 @@ La propiedad de sólo lectura `length` de la interfaz {{domxref("Storage")}} dev
 
 ## Sintaxis
 
-    var aLength = storage.length;
+```js
+var aLength = storage.length;
+```
 
 ### Valor devuelto
 

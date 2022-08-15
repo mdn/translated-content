@@ -17,7 +17,9 @@ El método **`indexOf()`**devuelve el índice, dentro del objeto `String` que re
 
 ## Sintaxis
 
-    cadena.indexOf(valorBusqueda[, indiceDesde])
+```js
+cadena.indexOf(valorBusqueda[, indiceDesde])
+```
 
 ### Parámetros
 

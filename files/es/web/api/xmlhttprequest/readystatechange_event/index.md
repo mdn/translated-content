@@ -6,7 +6,7 @@ original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
 {{APIRef}}
 
-Un [`EventHandler`](/es/docs/Web/API/EventHandler "A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:") que es invocado cada vez que cambia el atributo `readyState`. La retrollamada (callback) es invocada desde el hilo (thread) perteneciente a la interfaz de usuario. La propiedad **`XMLHttpRequest.onreadystatechange`** contiene el manejador del evento que es invocado cuando se dispara el evento {{event("readystatechange")}}, lo cual sucede cada vez que cambia el valor de la propiedad {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}}. La retrollamada (callback) es invocada desde el hilo perteneciente a la interfaz de usuario.
+Un [`EventHandler`](/es/docs/Web/API/EventHandler) que es invocado cada vez que cambia el atributo `readyState`. La retrollamada (callback) es invocada desde el hilo (thread) perteneciente a la interfaz de usuario. La propiedad **`XMLHttpRequest.onreadystatechange`** contiene el manejador del evento que es invocado cuando se dispara el evento {{event("readystatechange")}}, lo cual sucede cada vez que cambia el valor de la propiedad {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}}. La retrollamada (callback) es invocada desde el hilo perteneciente a la interfaz de usuario.
 
 > **Advertencia:** **Aviso:** No debería ser usado con peticiones síncronas ni tampoco en código nativo.
 
@@ -14,7 +14,9 @@ El evento `readystatechange` no se disparará cuando una petición `XMLHttpReque
 
 ## Sintaxis
 
-    XMLHttpRequest.onreadystatechange = callback;
+```js
+XMLHttpRequest.onreadystatechange = callback;
+```
 
 ### Valores
 

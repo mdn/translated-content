@@ -13,12 +13,16 @@ del documento.
 
 ### Sintaxis
 
-    nodeList = document.applets
+```js
+nodeList = document.applets
+```
 
 ### Ejemplo
 
-    // ( Cuando sabes que el segundoapplet es el que quieres )
-    my_java_app = document.applets[1];
+```js
+// ( Cuando sabes que el segundoapplet es el que quieres )
+my_java_app = document.applets[1];
+```
 
 ### Especificación
 

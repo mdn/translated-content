@@ -16,9 +16,11 @@ original_slug: Web/CSS/-webkit-print-color-adjust
 
 La propiedad CSS `-webkit-print-color-adjust` es una extensión CSS no estándar que puede ser usada para forzar la impresión de fondos e imágenes en navegadores basado en el motor WebKit.
 
-## Síntaxis
+## Sintaxis
 
-    -webkit-print-color-adjust: economy | exact
+```css
+-webkit-print-color-adjust: economy | exact
+```
 
 ### Valores
 

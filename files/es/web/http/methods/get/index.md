@@ -17,7 +17,9 @@ El método HTTP **`GET` **solicita una representación del recurso especificado.
 
 ## Sintaxis
 
-    GET /index.html
+```
+GET /index.html
+```
 
 ## Especificaciones
 

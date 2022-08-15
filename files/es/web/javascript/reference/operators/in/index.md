@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Referencia/Operadores/in
 
 ## Sintaxis
 
-    prop in object
+```js
+prop in object
+```
 
 ### Parámetros
 

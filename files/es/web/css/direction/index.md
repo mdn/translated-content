@@ -25,7 +25,9 @@ Esta propiedad establece el sentido de base del texto para los elementos de tipo
 
 ### Sintaxis
 
-    direction: [ ltr | rtl | inherit ] ;
+```css
+direction: [ ltr | rtl | inherit ] ;
+```
 
 ### Valores
 
@@ -38,9 +40,11 @@ Para que la propiedad `direction` tenga alg√∫n efecto en elementos de tipo en l√
 
 ### Ejemplos
 
-    blockquote {
-      direction : rtl ;
-    }
+```css
+blockquote {
+  direction : rtl ;
+}
+```
 
 ### Notas
 

@@ -9,7 +9,9 @@ El método **`HTMLCanvasElement.getContext()`** retorna un contexto de dibujo en
 
 ## Sintaxis
 
-    canvas.getContext(contextType, contextAttributes);
+```js
+canvas.getContext(contextType, contextAttributes);
+```
 
 ### Parámetros
 

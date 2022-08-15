@@ -8,9 +8,11 @@ original_slug: Web/API/EventSource/onopen
 
 La propiedad **`onopen`** de la interfaz {{domxref("EventSource")}} es un {{event("Event_handlers", "event handler")}} llamado cuando un evento {{event("open")}} es recibido, esto pasa cuando la conexión fue solo abierta.
 
-## Syntax
+## Sintaxis
 
-    eventSource.onopen = function
+```js
+eventSource.onopen = function
+```
 
 ## Ejemplos
 

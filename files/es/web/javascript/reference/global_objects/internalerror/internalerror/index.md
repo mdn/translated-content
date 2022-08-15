@@ -15,7 +15,9 @@ El constructor **`InternalError()`** crea un error que indica un error que ocurr
 
 ## Sintaxis
 
-    new InternalError([message[, fileName[, lineNumber]]])
+```js
+new InternalError([message[, fileName[, lineNumber]]])
+```
 
 ### Parámetros
 

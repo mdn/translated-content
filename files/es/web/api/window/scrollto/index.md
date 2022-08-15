@@ -11,7 +11,9 @@ Desplaza el visor a un conjunto específico de coodenadas en el documento.
 
 ## Sintaxis
 
-    window.scrollTo(x-coord, y-coord)
+```js
+window.scrollTo(x-coord, y-coord)
+```
 
 ### Parámetros
 

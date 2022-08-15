@@ -14,9 +14,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyS
 
 El método **`Object.getOwnPropertySymbols()`** regresa una colección de todos las propiedades de los simbolos encontrados directamente en un objeto dado.
 
-## Síntaxis
+## Sintaxis
 
-    Object.getOwnPropertySymbols(obj)
+```js
+Object.getOwnPropertySymbols(obj)
+```
 
 ### Parametros
 

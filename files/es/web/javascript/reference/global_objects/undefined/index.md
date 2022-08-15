@@ -16,7 +16,9 @@ La propiedad global **undefined** representa el valor primitivo `{{Glossary("Und
 
 ## Sintaxis
 
-    undefined
+```js
+undefined
+```
 
 ## Descripción
 

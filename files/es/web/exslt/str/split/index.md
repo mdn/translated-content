@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/str/split
 
 ### Sintaxis
 
-    str:split(cadena,patron)
+```xml
+str:split(cadena,patron)
+```
 
 ### Argumentos
 
@@ -28,14 +30,18 @@ Un conjunto de nodos de elementos `token`, donde cada uno contiene un trozo (tok
 
 Por ejemplo:
 
-    str:split('libro, teléfono, ordenador, silla', ', ')
+```xml
+str:split('libro, teléfono, ordenador, silla', ', ')
+```
 
 Devuelve un conjunto de nodos como este:
 
-    <token>libro</token>
-    <token>teléfono</token>
-    <token>ordenador</token>
-    <token>silla</token>
+```xml
+<token>libro</token>
+<token>teléfono</token>
+<token>ordenador</token>
+<token>silla</token>
+```
 
 ### Definido en
 

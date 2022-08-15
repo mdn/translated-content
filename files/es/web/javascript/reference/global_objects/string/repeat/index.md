@@ -15,9 +15,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
 
 El método **`repeat()`** construye y devuelve una nueva cadena que contiene el número especificado de copias de la cadena en la cual fue llamada, concatenados.
 
-## Sintáxis
+## Sintaxis
 
-    str.repeat(count)
+```js
+str.repeat(count)
+```
 
 ### Parámetros
 

@@ -18,7 +18,9 @@ La propiedad únicamente de lectura **`Element.localName`** devuelve la parte lo
 
 ## Sintasix
 
-    name = element.localName
+```js
+name = element.localName
+```
 
 ### Valor de Retorno
 

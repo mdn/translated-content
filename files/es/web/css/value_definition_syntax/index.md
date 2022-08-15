@@ -49,7 +49,9 @@ Los tipos de dato no terminales son de dos tipos::
 
 _Corchetes_ encierran varias entidades, combinadores, y multiplicadores, luego los transforman en un solo componente. Son usados para **agrupar componentes para sobreescribir las reglas de precedencia.**
 
-    bold [ thin && <length> ]
+```
+bold [ thin && <length> ]
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -65,7 +67,9 @@ Pero no con:
 
 Colocar varias palabras clave, literales, o tipos de datos, uno al lado del otro, solo separados por uno o varios espacios se llama _yuxtaponer._ Todos los componentes yuxtapuestos son **obligatorios y deben aparecer en ese orden exacto.**
 
-    bold <length> , thin
+```
+bold <length> , thin
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -84,7 +88,9 @@ Pero no con:
 
 Separar dos o mas componentes por un _doble ampersand_, `&&`, significa que todas esas entidades son **obligatorias pero pueden aparecer en cualquier orden.**
 
-    bold && <length>
+```
+bold && <length>
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -104,7 +110,9 @@ Pero no con:
 
 Separar dos o mas componentes por una _barra doble_, `||`, significa que todas las entidades son opcionales: **al menos una debe estar presente, y pueden aparecer en cualquier orden.** Típicamente ésto es usado para definir los diferentes valores de una [propiedad abreviada](/es/docs/CSS/Shorthand_properties).
 
-    <'border-width'> || <'border-style'> || <'border-color'>
+```
+<'border-width'> || <'border-style'> || <'border-color'>
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -123,7 +131,9 @@ Pero no con:
 
 Separar dos o mas componentes con _una barra simple_, `|`, quiere decir que todas las entidades son opciones exclusivas: **exactamente una de estas opciones debe estar presente.** Esto es tipicamente usado para separar una lista de posibles palabras clave.
 
-    <percentage> | <length> | left | center | right | top | bottom
+```
+<percentage> | <length> | left | center | right | top | bottom
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -153,7 +163,9 @@ Note que los multiplicadores no pueden sumarse y tienen precedencia sobre los co
 
 El _multiplicador asterisco_ indica que la entidad puede aparecer **cero, una o varias veces.**
 
-    bold smaller*
+```
+bold smaller*
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -170,7 +182,9 @@ Pero no:
 
 El _multiplicador suma_ indica que la entidad puede aparecer **una o varias veces.**
 
-    bold smaller+
+```
+bold smaller+
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -187,7 +201,9 @@ Pero no:
 
 El _multiplicador pregunta_ indica que la entidad es opcional y **debe aparecer cero o una vez**
 
-    bold smaller?
+```
+bold smaller?
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -203,7 +219,9 @@ Pero no:
 
 El _multiplicador llaves,_ encierra a dos enteros A y B separados por una coma, indica que la entidad **debe aparecer al menos A veces y como mas B veces**
 
-    bold smaller{1,3}
+```
+bold smaller{1,3}
+```
 
 El ejemplo empareja con los siguientes valores:
 
@@ -221,7 +239,9 @@ Pero no:
 
 El _multiplicador hash_ indica que la entidad puede repetirse **una o mas veces** (como con el multiplicador de suma) pero cada ocurrencia se **separa por una coma** ('`,`').
 
-    bold smaller#
+```
+bold smaller#
+```
 
 El ejemplo empareja con los siguientes valores:
 

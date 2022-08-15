@@ -33,7 +33,7 @@ Ademas de los workers dedicados, hay otro tipo de workers:
 - {{domxref("Worker")}}
   - : Representa el hilo del worker en ejecución, pudiendo pasar mensajes a este.
 - {{domxref("WorkerLocation")}}
-  - : Define la ruta absoluta del script que ejecuta el [`Worker`](/es/docs/Web/API/Worker "The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread.").
+  - : Define la ruta absoluta del script que ejecuta el [`Worker`](/es/docs/Web/API/Worker).
 
 - {{domxref("SharedWorker")}}
   - : Representa un tipo de worker al que se puede acceder desde distintos contextos de navegación, tanto de varias ventanas, iframes, y otros workers.

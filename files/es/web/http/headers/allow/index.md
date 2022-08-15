@@ -13,9 +13,11 @@ Esta cabecera debe ser enviada si el servidor responde con un estado {{HTTPStatu
 | ------------------------------------------------ | ---------------------------------------- |
 | {{Glossary("Forbidden header name")}} | no                                       |
 
-## Sintáxis
+## Sintaxis
 
-    Allow: <http-methods>
+```
+Allow: <http-methods>
+```
 
 ## Directivas
 
@@ -24,7 +26,9 @@ Esta cabecera debe ser enviada si el servidor responde con un estado {{HTTPStatu
 
 ## Ejemplo
 
-    Allow: GET, POST, HEAD
+```
+Allow: GET, POST, HEAD
+```
 
 ## Especificaciones
 

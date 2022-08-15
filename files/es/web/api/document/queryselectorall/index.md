@@ -24,7 +24,9 @@ El método **`querySelectorAll()`** de un {{domxref("Element")}} devuelve una {{
 
 ## Sintaxis
 
-    elementList = parentNode.querySelectorAll(selectors);
+```js
+elementList = parentNode.querySelectorAll(selectors);
+```
 
 ### Parámetros
 
@@ -151,4 +153,4 @@ inner.length; // 0
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} y {{domxref("DocumentFragment.querySelectorAll()")}}
 - {{domxref("ParentNode.querySelector()")}} y {{domxref("ParentNode.querySelectorAll()")}}
-- [Snippets de código para `querySelector()`](/es/docs/Code_snippets/QuerySelector "Code_snippets/QuerySelector")
+- [Snippets de código para `querySelector()`](/es/docs/Code_snippets/QuerySelector)

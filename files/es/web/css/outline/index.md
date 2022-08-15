@@ -31,22 +31,24 @@ Los bordes y los contornos son muy similares. Sin embargo, los contornos difiere
 
 ## Sintaxis
 
-    /* style */
-    outline: solid;
+```css
+/* style */
+outline: solid;
 
-    /* color | style */
-    outline: #f66 dashed;
+/* color | style */
+outline: #f66 dashed;
 
-    /* style | width */
-    outline: inset thick;
+/* style | width */
+outline: inset thick;
 
-    /* color | style | width */
-    outline: green solid 3px;
+/* color | style | width */
+outline: green solid 3px;
 
-    /* Global values */
-    outline: inherit;
-    outline: initial;
-    outline: unset;
+/* Global values */
+outline: inherit;
+outline: initial;
+outline: unset;
+```
 
 ### Valores
 

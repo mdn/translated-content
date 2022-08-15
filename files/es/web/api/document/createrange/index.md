@@ -15,15 +15,19 @@ Retorna un nuevo objeto [`Rango`](https://developer.mozilla.org/es/docs/Web/API/
 
 ### Sintáxis
 
-    range = document.createRange();
+```js
+range = document.createRange();
+```
 
 En este ejemplo, `range` es el nuevo objeto [rango](/es/docs/Web/API/Range) creado.
 
 ### Ejemplo
 
-    var range = document.createRange();
-    range.setStart(startNode, startOffset);
-    range.setEnd(endNode, endOffset);
+```js
+var range = document.createRange();
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
+```
 
 ### Notas
 

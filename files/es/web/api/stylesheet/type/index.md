@@ -11,11 +11,15 @@ type especifica el lenguaje de la hoja de estilo.
 
 ### Sintaxis
 
-    string = stylesheet.type
+```js
+string = stylesheet.type
+```
 
 ### Ejemplo
 
-     ss.type = "text/css";
+```js
+ss.type = "text/css";
+```
 
 ### Especificación
 

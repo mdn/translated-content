@@ -18,8 +18,10 @@ Desplaza el documento el número de pixels proporcionados.
 
 ## Sintaxis
 
-    window.scrollBy(X, Y);
-    window.scrollBy(opciones)
+```js
+window.scrollBy(X, Y);
+window.scrollBy(opciones)
+```
 
 ### Parámetros
 
@@ -38,20 +40,26 @@ Si X o Y son positivos, desplazarán la página hacia la derecha o hacia abajo r
 
 ## Ejemplo
 
-    // Desplazarse la longitud de una página
-    window.scrollBy(0, window.innerHeight);
+```js
+// Desplazarse la longitud de una página
+window.scrollBy(0, window.innerHeight);
+```
 
 Para hacer scroll hacia arriba:
 
-    window.scrollBy(0, -window.innerHeight);
+```js
+window.scrollBy(0, -window.innerHeight);
+```
 
 Utilizando opciones:
 
-    window.scrollBy({
-      top: 100,
-      left: 100,
-      behaviour: 'smooth'
-    })
+```js
+window.scrollBy({
+  top: 100,
+  left: 100,
+  behaviour: 'smooth'
+})
+```
 
 ## Notas
 

@@ -9,7 +9,9 @@ La propiedad **`Nodo.nodeValue`** devuelve o actualiza el valor del nodo actual.
 
 ## Sintaxis
 
-    valor= nodo.nodeValue;
+```js
+valor= nodo.nodeValue;
+```
 
 `valor` es una cadena contenedora del valor del nodo actual, si es que tiene alguno.
 

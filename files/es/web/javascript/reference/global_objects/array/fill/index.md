@@ -19,7 +19,9 @@ El método **`fill()`** cambia todos los elementos en un arreglo por un valor es
 
 ## Sintaxis
 
-    arr.fill(value[, start = 0[, end = this.length]])
+```
+arr.fill(value[, start = 0[, end = this.length]])
+```
 
 ### Parámetros
 

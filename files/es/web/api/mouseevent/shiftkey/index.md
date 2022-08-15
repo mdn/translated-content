@@ -9,7 +9,9 @@ El evento de **`MouseEvent.shiftKey`** es una propiedad de solo lectura que indi
 
 ## Sintaxis
 
-    var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+```js
+var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+```
 
 ### Valor que retorna
 

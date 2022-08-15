@@ -17,9 +17,11 @@ El operador `function` define una función dentro de una expresión.
 
 ## Sintaxis
 
-    function [name]([param1, param2, ..., paramN]) {
-       statements
-    }
+```js
+function [name]([param1, param2, ..., paramN]) {
+   statements
+}
+```
 
 ## Parámetros
 

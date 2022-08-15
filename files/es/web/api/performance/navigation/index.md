@@ -22,7 +22,9 @@ Esta propiedad no está disponible en workers.
 
 ## Sintaxis
 
-    navObject = performance.navigation;
+```js
+navObject = performance.navigation;
+```
 
 ## Especificaciones
 

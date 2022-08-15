@@ -11,7 +11,9 @@ Devuelve la localización de la hoja de estilo.
 
 ### Sintaxis
 
-    uri = stylesheet.href
+```js
+uri = stylesheet.href
+```
 
 ### Parámetros
 
@@ -19,22 +21,26 @@ Devuelve la localización de la hoja de estilo.
 
 ### Ejemplo
 
-     // en una máquina local:
-     <html>
-      <head>
-       <link rel="StyleSheet" href="example.css" type="text/css" />
-       <script>
-        function sref() {
-         alert(document.styleSheets[0].href);
-        }
-       </script>
-      </head>
-      <body>
-       <div class="thunder">Thunder</div>
-       <button onclick="sref()">ss</button>
-      </body>
-     </html>
-    // returns "file:////C:/Windows/Desktop/example.css
+En una máquina local:
+
+```html
+<html>
+<head>
+<link rel="StyleSheet" href="example.css" type="text/css" />
+<script>
+function sref() {
+    alert(document.styleSheets[0].href);
+}
+</script>
+</head>
+<body>
+    <div class="thunder">Thunder</div>
+    <button onclick="sref()">ss</button>
+</body>
+</html>
+```
+
+returns "file:////C:/Windows/Desktop/example.css
 
 ### Notas
 

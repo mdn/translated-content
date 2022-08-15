@@ -15,7 +15,9 @@ El método **`clear()`** remueve todos los elementos de un objeto `Set`.
 
 ## Syntaxis
 
-    mySet.clear();
+```js
+mySet.clear();
+```
 
 ### Valor de retorno
 

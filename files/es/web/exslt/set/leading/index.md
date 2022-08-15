@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/set/leading
 
 ### Sintaxis
 
-    set:leading(conjuntoNodos1,conjuntoNodos2)
+```xml
+set:leading(conjuntoNodos1,conjuntoNodos2)
+```
 
 ### Arguments
 

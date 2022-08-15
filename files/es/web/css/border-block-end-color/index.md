@@ -11,7 +11,7 @@ translation_of: Web/CSS/border-block-end-color
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad [CSS](/es/docs/Web/CSS "CSS") `border-block-end-color` define el color del borde del final lógico de un elemento, que se mapea a un color de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+La propiedad [CSS](/es/docs/Web/CSS) `border-block-end-color` define el color del borde del final lógico de un elemento, que se mapea a un color de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
 ```css
 border-block-end-color: yellow;

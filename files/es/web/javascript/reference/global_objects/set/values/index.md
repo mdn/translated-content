@@ -12,9 +12,11 @@ El metodo **`keys()`** es un alias para este metodo (por similaridad con objetos
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
-## Syntax
+## Sintaxis
 
-    mySet.values();
+```js
+mySet.values();
+```
 
 ### Return value
 

@@ -35,10 +35,12 @@ Para hacer esto de forma que sea compatible con los navegadores que no soportan 
 
 [Ver El Ejemplo Vivo](/samples/cssref/font-size-adjust.html)
 
-    p{
-      font: 12px Verdana, sans-serif;
-      font-size-adjust: 0.58;
-    }
+```css
+p {
+  font: 12px Verdana, sans-serif;
+  font-size-adjust: 0.58;
+}
+```
 
 ## Especificaciones
 

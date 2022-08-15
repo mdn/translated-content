@@ -11,9 +11,11 @@ translation_of: Web/API/Document/height
 
 Devuelve la altura del objeto {{domxref("document")}} . En la mayoría de los casos, esto equivale al elemento {{HTMLElement("body")}} del documento actual.
 
-## Syntax
+## Sintaxis
 
-    height_value = document.height
+```js
+height_value = document.height
+```
 
 ## Example
 
@@ -24,9 +26,11 @@ alert(document.height);
 
 ## Alternatives
 
-    document.body.clientHeight
-    document.documentElement.clientHeight
-    document.documentElement.scrollHeight
+```js
+document.body.clientHeight
+document.documentElement.clientHeight
+document.documentElement.scrollHeight
+```
 
 ## Specification
 

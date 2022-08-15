@@ -15,7 +15,9 @@ La propiedad **`persisted`** de la interfaz {{domxref("StorageManager")}} devuel
 
 ## Sintaxis
 
-    navigator.storage.persisted().then(function(persistent) { ... })
+```js
+navigator.storage.persisted().then(function(persistent) { ... })
+```
 
 ### Parámetros
 

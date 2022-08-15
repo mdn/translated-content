@@ -13,41 +13,47 @@ Sin embargo, para los elementos inline (por ejemplo **span**), que puede ser cor
 
 ## Sintaxis
 
-    left = element.offsetLeft;
+```js
+left = element.offsetLeft;
+```
 
 `left` es un entero que representa la posición de la izquierda del elemento actual con respecto al padre.
 
 ## Ejemplo
 
-    var colorTable = document.getElementById("t1");
-    var tOLeft = colorTable.offsetLeft;
+```js
+var colorTable = document.getElementById("t1");
+var tOLeft = colorTable.offsetLeft;
 
-    if (tOLeft > 5) {
-      // posición izquierda muy larga: hacer algo
-    }
+if (tOLeft > 5) {
+  // posición izquierda muy larga: hacer algo
+}
+```
 
 This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
 
 ![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
 
-    <div style="width: 300px; border-color:blue;
-      border-style:solid; border-width:1;">
-      <span>Short span. </span>
-      <span id="long">Long span that wraps within this div.</span>
-    </div>
+```html
+<div style="width: 300px; border-color:blue;
+  border-style:solid; border-width:1;">
+  <span>Short span. </span>
+  <span id="long">Long span that wraps within this div.</span>
+</div>
 
-    <div id="box" style="position: absolute; border-color: red;
-      border-width: 1; border-style: solid; z-index: 10">
-    </div>
+<div id="box" style="position: absolute; border-color: red;
+  border-width: 1; border-style: solid; z-index: 10">
+</div>
 
-    <script>
-      var box = document.getElementById("box");
-      var long = document.getElementById("long");
-      box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
-      box.style.top = long.offsetTop + document.body.scrollTop + "px";
-      box.style.width = long.offsetWidth + "px";
-      box.style.height = long.offsetHeight + "px";
-    </script>
+<script>
+  var box = document.getElementById("box");
+  var long = document.getElementById("long");
+  box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
+  box.style.top = long.offsetTop + document.body.scrollTop + "px";
+  box.style.width = long.offsetWidth + "px";
+  box.style.height = long.offsetHeight + "px";
+</script>
+```
 
 ## Specification
 

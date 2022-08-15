@@ -28,7 +28,9 @@ El método `fetch()` es controlado por la directiva `connect-src` de la [Políti
 
 ## Sintaxis
 
-    Promise<Response> fetch(input[, init]);
+```js
+Promise<Response> fetch(input[, init]);
+```
 
 ### Parámetros
 

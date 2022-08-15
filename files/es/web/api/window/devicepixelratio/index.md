@@ -11,7 +11,9 @@ No hay retrofunciones o eventos a escuchar cuando este valor cambia (por ejemplo
 
 ## Sintaxis
 
-    value = window.devicePixelRatio;
+```js
+value = window.devicePixelRatio;
+```
 
 ## Especificación
 

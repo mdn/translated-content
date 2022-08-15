@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/regexp/test
 
 ### Sintaxis
 
-    regexp:test(comprobacion,expresionRegular[,opciones])
+```xml
+regexp:test(comprobacion,expresionRegular[,opciones])
+```
 
 ### Argumentos
 

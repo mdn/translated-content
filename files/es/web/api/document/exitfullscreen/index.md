@@ -11,7 +11,9 @@ La excepción es si otro elemento ya estaba en modo de pantalla completa cuando 
 
 ## Sintaxis
 
-    exitPromise = document.exitFullscreen();
+```js
+exitPromise = document.exitFullscreen();
+```
 
 ### Parámetros
 

@@ -10,7 +10,9 @@ El método **`Object.entries()`** devuelve una matriz de pares propios de una pr
 
 ## Sintaxis
 
-    Object.entries(obj)
+```js
+Object.entries(obj)
+```
 
 ### Parámetros
 

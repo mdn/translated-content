@@ -17,7 +17,9 @@ La función CSS **`blur()`** aplica un [desenfoque Gaussiano](https://en.wikiped
 
 ## Sintaxis
 
-    blur(radio)
+```js
+blur(radio)
+```
 
 ### Parámetros
 

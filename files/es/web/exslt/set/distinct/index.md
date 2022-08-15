@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/set/distinct
 
 ### Sintaxis
 
-    set:distinct(conjuntoNodos)
+```xml
+set:distinct(conjuntoNodos)
+```
 
 ### Argumentos
 

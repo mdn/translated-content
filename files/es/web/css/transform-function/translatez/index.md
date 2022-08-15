@@ -19,9 +19,11 @@ En los ejemplos interacticos anteriores, [`perspective: 550px;`](/en-US/docs/Web
 
 > **Nota:** `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
 
-## Syntax
+## Sintaxis
 
-    translateZ(tz)
+```js
+translateZ(tz)
+```
 
 ### Values
 

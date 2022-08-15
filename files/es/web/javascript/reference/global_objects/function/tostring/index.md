@@ -10,7 +10,9 @@ El método **`toString()`** retorna una cadena representando el código fuente d
 
 ## Sintaxis
 
-    function.toString(indentation)
+```js
+function.toString(indentation)
+```
 
 ### Parámetros
 

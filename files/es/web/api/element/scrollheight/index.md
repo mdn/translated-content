@@ -17,7 +17,9 @@ El elemento **Element.scrollHeight** atributo unicamente de lectura es una medid
 
 ## Sintaxis
 
-    var intElemScrollHeight = element.scrollHeight;
+```js
+var intElemScrollHeight = element.scrollHeight;
+```
 
 _intElemScrollHeight_ es una variable que almacena un número entero correspondiente al valor scrollHeight en pixels del elemento. scrollHeight es una propiedad unicamente de lectura.
 
@@ -41,7 +43,9 @@ padding-bottom
 
 La siguiente equivalencia devuelve `true` si un elemento está al final de su desplazamiento, `false` si no es así.
 
-    element.scrollHeight - element.scrollTop === element.clientHeight
+```js
+element.scrollHeight - element.scrollTop === element.clientHeight
+```
 
 ## scrollHeight Demo
 

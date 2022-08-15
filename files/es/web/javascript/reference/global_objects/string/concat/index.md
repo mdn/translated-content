@@ -18,7 +18,9 @@ El método **`concat()`** combina dos o más cadenas de texto y devuelve una cad
 
 ## Sintaxis
 
-    str.concat(str2 [, ...strN])
+```js
+str.concat(str2 [, ...strN])
+```
 
 ### Parámetros
 

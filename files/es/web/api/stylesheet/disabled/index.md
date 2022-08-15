@@ -11,14 +11,18 @@ Esta propiedad indica si es se aplica o no, la hoja de estilo actual.
 
 ### Sintaxis
 
-    bool = stylesheet.disabled
+```js
+bool = stylesheet.disabled
+```
 
 ### Ejemplo
 
-    // si la hoja de estilo está deshabilitada...
-    if (stylesheet.disabled) {
-       // apply style in-line
-    }
+```js
+// si la hoja de estilo está deshabilitada...
+if (stylesheet.disabled) {
+    // apply style in-line
+}
+```
 
 ### Especificación
 

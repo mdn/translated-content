@@ -458,10 +458,12 @@ Los tipos {{JSxRef("Number")}} y {{JSxRef("BigInt")}} se pueden escribir en deci
 
 Aquí tienes algunos ejemplos de literales numéricos:
 
-    0, 117, -345, 123456789123456789n             (decimal, base 10)
-    015, 0001, -0o77, 0o777777777777n             (octal, base 8)
-    0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)
-    0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
+```
+0, 117, -345, 123456789123456789n             (decimal, base 10)
+015, 0001, -0o77, 0o777777777777n             (octal, base 8)
+0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)
+0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
+```
 
 Para obtener más información, consulta {{JSxRef("Gramatica_lexica", "Literales numéricos en la referencia gramatical léxica", "#Literales_numericos")}}.
 
@@ -478,14 +480,18 @@ La parte del exponente es una "`e`" o "`E`" seguida de un número entero, que pu
 
 Específicamente, la sintaxis es:
 
-    [(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+```
+[(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+```
 
 Por ejemplo:
 
-    3.1415926
-    -.123456789
-    -3.1E+12
-    .1e-23
+```
+3.1415926
+-.123456789
+-3.1E+12
+.1e-23
+```
 
 ### Objetos literales
 
@@ -659,7 +665,9 @@ console.log(quote);
 
 El resultado de esto sería:
 
-    El leyó "La cremación de Sam McGee" de R.W. Service.
+```
+El leyó "La cremación de Sam McGee" de R.W. Service.
+```
 
 Para incluir una barra invertida literal dentro de una cadena, debes escapar el caracter de barra invertida. Por ejemplo, para asignar la ruta del archivo `c:\temp` a una cadena, usa lo siguiente:
 

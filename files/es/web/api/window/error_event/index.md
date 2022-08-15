@@ -12,7 +12,9 @@ Note that some/many `error` events do not trigger `window.onerror`, you have to 
 
 ## Sintaxis
 
-    window.onerror = funcRef;
+```js
+window.onerror = funcRef;
+```
 
 ### Parámetros
 

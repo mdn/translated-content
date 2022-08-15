@@ -15,7 +15,9 @@ Devuelve los ajustes de do-not-track del usuario. Esto es `"1"` si el usuario ha
 
 ## Sintaxis
 
-    dnt = navigator.doNotTrack;
+```js
+dnt = navigator.doNotTrack;
+```
 
 El valor refleja el de la cabecera do-not-track, ej. valores de {"1", "0", "unspecified" }. Nota: Antes de Gecko 32, Gecko empleaba los valores { "yes", "no", "unspecified"} ([bug 887703](https://bugzilla.mozilla.org/show_bug.cgi?id=887703)).
 

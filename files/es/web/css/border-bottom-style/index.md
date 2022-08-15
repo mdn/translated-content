@@ -7,7 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-bottom-style
 ---
-<< [Volver](/es/Guía_de_referencia_de_CSS "es/Guía_de_referencia_de_CSS")
+<< [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
 
@@ -22,7 +22,9 @@ translation_of: Web/CSS/border-bottom-style
 
 ### Sintaxis
 
-    border-bottom-style: <border-style> | inherit
+```css
+border-bottom-style: <border-style> | inherit
+```
 
 ### Valores
 
@@ -58,11 +60,13 @@ translation_of: Web/CSS/border-bottom-style
 
 [Ver El Ejemplo Vivo](/samples/cssref/border.html)
 
-    element {
-            border-bottom-size: 1px;
-            border-bottom-style: dotted;
-            border-bottom-color: #000;
-    }
+```css
+element {
+        border-bottom-size: 1px;
+        border-bottom-style: dotted;
+        border-bottom-color: #000;
+}
+```
 
 ### Notas
 

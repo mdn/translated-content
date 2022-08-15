@@ -12,9 +12,11 @@ translation_of: Web/CSS/Pseudo-classes
 
 Una **pseudoclase CSS** es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo, {{ Cssxref(":hover") }} aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
 
-    div:hover {
-      background-color: #F89B4D;
-    }
+```css
+div:hover {
+  background-color: #F89B4D;
+}
+```
 
 Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador ({{ cssxref(":visited") }}, por ejemplo), el estado de su contenido (como {{ cssxref(":checked") }} en algunos elementos de formulario), o la posición del ratón (como {{ cssxref(":hover") }} que permite saber si el ratón está encima de un elemento o no).
 
@@ -22,7 +24,9 @@ Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un
 
 ## Sintaxis
 
-    selector:pseudoclase { propiedad: valor; }
+```css
+selector:pseudoclase { propiedad: valor; }
+```
 
 Al igual que las clases, se pueden concatenar la cantidad de pseudoclases que se deseen en un selector.
 

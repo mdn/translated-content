@@ -11,7 +11,9 @@ La propiedad de sólo lectura **`Element.scrollWidth`** retorna bien la anchura 
 
 ## Sintaxis
 
-    var xScrollWidth = element.scrollWidth;
+```js
+var xScrollWidth = element.scrollWidth;
+```
 
 _xScrollWidth_ es el ancho del contenido de _element_ en pixels.
 

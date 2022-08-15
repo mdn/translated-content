@@ -10,9 +10,11 @@ El método **`toLocaleString()`** devuelve un cadena con la representación al i
 
 {{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 
-## Syntax
+## Sintaxis
 
-    dateObj.toLocaleString([locales[, options]])
+```js
+dateObj.toLocaleString([locales[, options]])
+```
 
 ### Parametros
 

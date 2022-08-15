@@ -13,15 +13,15 @@ original_slug: Web/MathML/Elemento/math
 Además de los siguientes atributos, el elemento `<math>` acepta cualquier atributo del elemento {{ MathMLElement("mstyle") }}.
 
 - class, id, style
-  - : Disponibles para el uso con [hojas de estilo](/es/docs/Web/CSS "es/docs/Web/CSS").
+  - : Disponibles para el uso con [hojas de estilo](/es/docs/Web/CSS).
 - dir
   - : La dirección general de las fórmulas. Sus valores posibles son `ltr` (izquierda a derecha) o bien `rtl` (derecha a izquierda).
 - href
   - : Usado para definir un hipervínculo a un URI (**I**dentificador de **R**ecurso **U**nificado) especificado.
 - mathbackground
-  - : El color de fondo. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#Palabras_clave_de_colores "/es/docs/Web/CSS/color_value").
+  - : El color de fondo. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#Palabras_clave_de_colores).
 - mathcolor
-  - : El color de texto. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#Palabras_clave_de_colores "/es/docs/Web/CSS/color_value").
+  - : El color de texto. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#Palabras_clave_de_colores).
 - display
   - : Este atributo enumerado especifica de qué manera el marcado MathML debería ser renderizado. Puede tomar uno de los siguientes valores:\* `block`, el cual indica que este elemento será incluido fuera del fragmento de texto actual , en forma de bloque individual que puede ser posicionado en cualquier sitio sin cambiar el significado del texto;
     - `inline`, el cual indica que este elemento será incluido en el fragmento de texto actual, y no puede ser sacado del mismo sin cambiar el significado del texto.De no estar presente, toma `inline` por defecto.

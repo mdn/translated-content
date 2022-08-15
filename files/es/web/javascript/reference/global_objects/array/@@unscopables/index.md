@@ -16,7 +16,9 @@ La propiedad de símbolo **`@@unscopable`** contiene nombres de propiedad que no
 
 ## Sintaxis
 
-    arr[Symbol.unscopables]
+```js
+arr[Symbol.unscopables]
+```
 
 ## Descripción
 

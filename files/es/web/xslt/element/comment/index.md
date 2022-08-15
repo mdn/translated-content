@@ -13,9 +13,11 @@ El elemento `<xsl:comment>` escribe un comentario en el documento de salida. Deb
 
 ### Sintaxis
 
-    <xsl:comment>
-     TEMPLATE
-    </xsl:comment>
+```xml
+<xsl:comment>
+ TEMPLATE
+</xsl:comment>
+```
 
 ### Atributos necesarios
 

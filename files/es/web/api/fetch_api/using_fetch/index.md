@@ -28,9 +28,11 @@ La especificación fetch difiere de `JQuery.ajax()` en dos formas principales:
 
 Una petición básica de `fetch` es realmente simple de realizar. Eche un vistazo al siguente código:
 
-    fetch('http://example.com/movies.json')
-      .then(response => response.json())
-      .then(data => console.log(data));
+```js
+fetch('http://example.com/movies.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
 
 Aquí estamos recuperando un archivo JSON a través de red e imprimiendo en la consola. El uso de `fetch()` más simple toma un argumento (la ruta del recurso que quieres obtener) y devuelve un objeto Promise conteniendo la respuesta, un objeto {{domxref("Response")}}.
 
@@ -46,29 +48,31 @@ El método `fetch()` puede aceptar opcionalmente un segundo parámetro, un objet
 
 Vea {{domxref("GlobalFetch.fetch","fetch()")}}, para ver todas las opciones disponibles y más detalles.
 
-    // Ejemplo implementando el metodo POST:
-    async function postData(url = '', data = {}) {
-      // Opciones por defecto estan marcadas con un *
-      const response = await fetch(url, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-          'Content-Type': 'application/json'
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify(data) // body data type must match "Content-Type" header
-      });
-      return response.json(); // parses JSON response into native JavaScript objects
-    }
+```js
+// Ejemplo implementando el metodo POST:
+async function postData(url = '', data = {}) {
+  // Opciones por defecto estan marcadas con un *
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
 
-    postData('https://example.com/answer', { answer: 42 })
-      .then(data => {
-        console.log(data); // JSON data parsed by `data.json()` call
-      });
+postData('https://example.com/answer', { answer: 42 })
+  .then(data => {
+    console.log(data); // JSON data parsed by `data.json()` call
+  });
+```
 
 Tenga en cuenta que `mode: "no-cors"` solo permite un conjunto limitado de encabezados en la solicitud:
 

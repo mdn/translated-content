@@ -21,7 +21,9 @@ Causa que una cadena se muestre con una fuente de ancho fijo, como si estuviesde
 
 ## Sintaxis
 
-    cadena.fixed()
+```js
+cadena.fixed()
+```
 
 ## Descripción
 

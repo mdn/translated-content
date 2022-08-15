@@ -15,7 +15,9 @@ La información larga y detallada debe de ser evitada en las cabeceras Server ya
 
 ## Sintaxis
 
-    Server: <producto>
+```
+Server: <producto>
+```
 
 ## Directivas
 
@@ -24,7 +26,9 @@ La información larga y detallada debe de ser evitada en las cabeceras Server ya
 
 ## Ejemplos
 
-    Server: Apache/2.4.1 (Unix)
+```
+Server: Apache/2.4.1 (Unix)
+```
 
 ## Especificaciones
 

@@ -13,9 +13,11 @@ translation_of: Web/HTTP/Headers/Strict-Transport-Security
 
 ## Sintaxis
 
-    Strict-Transport-Security: max-age=<expire-time>
-    Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
-    Strict-Transport-Security: max-age=<expire-time>; preload
+```
+Strict-Transport-Security: max-age=<expire-time>
+Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
+Strict-Transport-Security: max-age=<expire-time>; preload
+```
 
 ## Directivas
 
@@ -63,7 +65,9 @@ Todos los presentes y futuros subdominios usarán HTTPS durante 1 año.
 
 This blocks access to pages or sub domains that can only be served over HTTP.
 
-    Strict-Transport-Security: max-age=31536000; includeSubDomains
+```
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+```
 
 ## Especificaciones
 

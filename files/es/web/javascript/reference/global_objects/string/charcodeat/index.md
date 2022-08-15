@@ -18,7 +18,9 @@ El **`charCodeAt()`** método devuelve un número indicando el valor Unicode del
 
 ## Sintaxis
 
-    cadena.charCodeAt(indice);
+```js
+cadena.charCodeAt(indice);
+```
 
 ### Parámetros
 
@@ -39,15 +41,21 @@ En JavaScript 1.2 el método `charCodeAt` devuelve un número indicando el valor
 
 El siguiente ejemplo devuelve 65, el valor Unicode para A.
 
-    "ABC".charCodeAt(0) // returns 65
+```js
+"ABC".charCodeAt(0) // returns 65
+```
 
 El siguiente ejemplo devuelve 83.
 
-    "AaSdas".charCodeAt(2) // returns 83
+```js
+"AaSdas".charCodeAt(2) // returns 83
+```
 
 teniendo en cuenta que 2 es la posicion de la letra. Si \`S\` fuera minuscula, el Unicode es diferente
 
-    "Aasdas".charCodeAt(2) // returns 115
+```js
+"Aasdas".charCodeAt(2) // returns 115
+```
 
 ## Vea También
 

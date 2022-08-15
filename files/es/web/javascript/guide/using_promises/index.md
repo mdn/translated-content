@@ -142,9 +142,11 @@ new Promise((resolver, rechazar) => {
 
 Esto devolverá el siguiente texto:
 
-    Inicial
-    Haz aquello
-    Haz esto sin que importe lo que sucedió antes
+```
+Inicial
+Haz aquello
+Haz esto sin que importe lo que sucedió antes
+```
 
 Note que el texto "Haz esto" no es escrito porque el error "Algo falló" causó un rechazo.
 
@@ -210,13 +212,15 @@ Esto hace posible ofrecer el manejo de errores de promesas, y también ayuda a d
 
 **Un caso de especial utilidad**: al escribir código para {{Glossary("Node.js")}}, es común que los módulos que incluyas en tu proyecto no cuenten con un controlador de evento para promesas rechazadas. Estos se registran en la consola en tiempo de ejecución de Node. Puedes capturarlos para analizarlos y manejarlos en tu código - o solo evitar que abarroten tu salida - agregando un controlador para el evento {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}, como se muestra a continuación:
 
-    window.addEventListener("unhandledrejection", event => {
-      /* Podrías comenzar agregando código para examinar
-         la promesa específica analizando event.promise
-         y la razón del rechazo, accediendo a event.reason */
+```js
+window.addEventListener("unhandledrejection", event => {
+  /* Podrías comenzar agregando código para examinar
+      la promesa específica analizando event.promise
+      y la razón del rechazo, accediendo a event.reason */
 
-      event.preventDefault();
-    }, false);
+  event.preventDefault();
+}, false);
+```
 
 Llamando al método {{domxref("Event.preventDefault", "preventDefault()")}} del evento, le dices a Javascript en tiempo de ejecución que no realice su acción predeterminada cuando las promesas rechazadas no cuenten con manejadores. En el caso de Node, esa acción predeterminada usualmente registra el error en la consola.
 
@@ -252,20 +256,26 @@ Básicamente, el constructor de la promesa toma una función ejecutora que nos p
 
 Podemos comenzar operaciones en paralelo y esperar que finalicen todas ellas de la siguiente manera:
 
-    Promise.all([func1(), func2(), func3()])
-    .then(([resultado1, resultado2, resultado3]) => { /* usa resultado1, resultado2 y resultado3 */ });
+```js
+Promise.all([func1(), func2(), func3()])
+.then(([resultado1, resultado2, resultado3]) => { /* usa resultado1, resultado2 y resultado3 */ });
+```
 
 La composición secuencial es posible usando Javascript inteligente:
 
-    [func1, func2, func3].reduce((p, f) => p.then(f), Promise.resolve())
-    .then(result3 => { /* use result3 */ });
+```js
+[func1, func2, func3].reduce((p, f) => p.then(f), Promise.resolve())
+.then(result3 => { /* use result3 */ });
+```
 
 Básicamente, reducimos un conjunto de funciones asíncronas a una cadena de promesas equivalente a: `Promise.resolve().then(func1).then(func2).then(func3);`
 
 Esto se puede convertir en una función de composición reutilizable, que es común en la programación funcional:
 
-    const aplicarAsync = (acc,val) => acc.then(val);
-    const componerAsync = (...funcs) => x => funcs.reduce(aplicarAsync, Promise.resolve(x));
+```js
+const aplicarAsync = (acc,val) => acc.then(val);
+const componerAsync = (...funcs) => x => funcs.reduce(aplicarAsync, Promise.resolve(x));
+```
 
 La función `componerAsync()` aceptará cualquier número de funciones como argumentos, y devolverá una nueva función que acepta un valor inicial que es pasado a través del conducto de composición. Esto es beneficioso porque cualquiera o todas las funciones pueden ser o asíncronas o síncronas y se garantiza que serán ejecutadas en el orden correcto:
 
@@ -308,12 +318,14 @@ Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidam
 
 El anidamiento es una estructura de control para limitar el alcance de las sentencias `catch`. Específicamente, un `catch` anidado sólo captura fallos dentro de su contexto y por debajo, no captura errores que están más arriba en la cadena fuera del alcance del anidamiento. Cuando se usa correctamente, da mayor precisión en la recuperación de errores:
 
-    hacerAlgoCritico()
-    .then(resultado => hacerAlgoOpcional()
-      .then(resultadoOpcional => hacerAlgoSuper(resultadoOpcional))
-      .catch(e => {})) // Ignorar si hacerAlgoOpcional falla.
-    .then(() => masAsuntosCriticos())
-    .catch(e => console.log("Acción crítica fallida: " + e.message));
+```js
+hacerAlgoCritico()
+.then(resultado => hacerAlgoOpcional()
+  .then(resultadoOpcional => hacerAlgoSuper(resultadoOpcional))
+  .catch(e => {})) // Ignorar si hacerAlgoOpcional falla.
+.then(() => masAsuntosCriticos())
+.catch(e => console.log("Acción crítica fallida: " + e.message));
+```
 
 Nota que aquí los pasos opcionales están anidados, por la precaria colocación de lo externo (y) alrededor de ellos.
 
@@ -323,12 +335,14 @@ La declaración interna `catch` solo detecta errores de `hacerAlgoOpcional()` y 
 
 Aquí hay algunos errores comunes que deben tenerse en cuenta al componer cadenas de promesas. Varios de estos errores se manifiestan en el siguiente ejemplo:
 
-    // ¡Mal ejemplo!
-    hacerlAlgo().then(function(resultado) {
-      hacerOtraCosa(resultado) // Olvida devolver una promesa desde el interior de la cadena + anidamiento innecesario
-      .then(nuevoResultado => hacerUnaTerceraCosa(nuevoResultado));
-    }).then(() => hacerUnaCuartaCosa());
-    // Olvida terminar la cadena con un catch!
+```js
+// ¡Mal ejemplo!
+hacerlAlgo().then(function(resultado) {
+  hacerOtraCosa(resultado) // Olvida devolver una promesa desde el interior de la cadena + anidamiento innecesario
+  .then(nuevoResultado => hacerUnaTerceraCosa(nuevoResultado));
+}).then(() => hacerUnaCuartaCosa());
+// Olvida terminar la cadena con un catch!
+```
 
 El primer error es no encadenar las acciones adecuadamente. Esto sucede cuando creamos una promesa y olvidamos devolverla. Como consecuencia, la cadena se rompe, o mejor dicho, tenemos dos cadenas independientes que compiten. Esto significa que `hacerUnaCuartaCosa()` no esperará a que finalicen `hacerOtraCosa()` o `hacerUnaTerceraCosa()`, y se ejecutará paralelamente a ellas. Las cadenas separadas también tienen un manejador de errores separado, lo que provoca errores no detectados.
 
@@ -338,13 +352,15 @@ El tercer error es olvidar cerrar las cadenas con catch.Las cadenas de promesas 
 
 Una buena regla es devolver o terminar siempre las cadenas de promesas, y tan pronto como obtenga una nueva promesa, devolverla de inmediato, para aplanar las cosas:
 
-    hacerAlgo()
-    .then(function(resultado) {
-      return hacerOtraCosa(resultado);
-    })
-    .then(nuevoResultado => hacerUnaTerceraCosa(nuevoResultado))
-    .then(() => hacerUnaCuartaCosa())
-    .catch(error => console.log(error));
+```js
+hacerAlgo()
+.then(function(resultado) {
+  return hacerOtraCosa(resultado);
+})
+.then(nuevoResultado => hacerUnaTerceraCosa(nuevoResultado))
+.then(() => hacerUnaCuartaCosa())
+.catch(error => console.log(error));
+```
 
 Nota que `() => x` es un atajo para `() => { return x; }`.
 

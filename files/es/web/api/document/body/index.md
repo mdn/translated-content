@@ -11,18 +11,21 @@ Devuelve el nodo del `<body>` o el nodo del `<frameset>` del documento.
 
 ### Sintaxis
 
-    objRef = document.body
-    document.body =
-    objRef
+```js
+objRef = document.body
+document.body = objRef
+```
 
 ### Ejemplo
 
-    // en HTML: <body id="oldBodyElement"></body>
-    alert(document.body.id); // "oldBodyElement"
-    var aNewBodyElement = document.createElement("body");
-    aNewBodyElement.id = "newBodyElement";
-    document.body = aNewBodyElement;
-    alert(document.body.id); // "newBodyElement"
+```js
+// en HTML: <body id="oldBodyElement"></body>
+alert(document.body.id); // "oldBodyElement"
+var aNewBodyElement = document.createElement("body");
+aNewBodyElement.id = "newBodyElement";
+document.body = aNewBodyElement;
+alert(document.body.id); // "newBodyElement"
+```
 
 ### Notas
 

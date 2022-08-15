@@ -18,13 +18,17 @@ Indica si el evento determinado _se propaga_ (burbujea) a través del DOM o no. 
 
 ### Sintaxis
 
-    event.bubbles
+```js
+event.bubbles
+```
 
 Retorna un valor Booleano que es `true` si el evento se propaga en el DOM.
 
 ### Ejemplo
 
-    var bool = event.bubbles;
+```js
+var bool = event.bubbles;
+```
 
 `bool` tiene el valor `true` o `false`, dependiendo de si el evento puede ser burbuja o no.
 
@@ -34,12 +38,14 @@ Sólo ciertos eventos pueden ser burbuja. Los eventos que pueden ser burbuja tie
 
 ### Ejemplo
 
-     function goInput(e) {
-      // comprueba si es burbuja y
-      if (!e.bubbles) {
-         // entrega el evento si no lo es
-         passItOn(e);
-      }
-      // está siendo propagado
-      doOutput(e)
+```js
+function goInput(e) {
+    // comprueba si es burbuja y
+    if (!e.bubbles) {
+        // entrega el evento si no lo es
+        passItOn(e);
     }
+    // está siendo propagado
+    doOutput(e)
+}
+```

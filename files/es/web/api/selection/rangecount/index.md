@@ -13,7 +13,9 @@ Devuelve el número de los rangos que hay en la selección.
 
 ### Sintaxis
 
-    sel.rangeCount
+```js
+sel.rangeCount
+```
 
 ### Notas
 

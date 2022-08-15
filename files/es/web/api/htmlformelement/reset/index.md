@@ -17,9 +17,11 @@ El método **`HTMLFormElement.reset()`** restaura los elementos de un formulario
 
 Si un control del formulario (como el botón de restaurar) tiene el nombre o un id de _reset_ enmascarará el método de restauración del formulario. No restaura otros atributos del campo, como el de `disabled`.
 
-## Síntaxis
+## Sintaxis
 
-    HTMLFormElement.reset()
+```js
+HTMLFormElement.reset()
+```
 
 ## Ejemplo
 

@@ -19,7 +19,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toUTCString
 
 ## Sintaxis
 
-    dateObj.toUTCString()
+```js
+dateObj.toUTCString()
+```
 
 ### Valor de retorno
 

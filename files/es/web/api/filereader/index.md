@@ -13,7 +13,9 @@ El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuel
 
 ## Constructor
 
-    FileReader FileReader();
+```
+FileReader FileReader();
+```
 
 Mira el artículo _[Using files from web applications](/es/docs/Using_files_from_web_applications)_ para más detalles y ejemplos.
 
@@ -71,6 +73,6 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 
 ## See also
 
-- [Usando archivos desde aplicaciónes web](/en/Using_files_from_web_applications "en/Using files from web applications")
+- [Usando archivos desde aplicaciónes web](/en/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}

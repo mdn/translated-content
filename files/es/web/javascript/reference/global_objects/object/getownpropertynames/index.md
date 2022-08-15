@@ -12,7 +12,9 @@ El método **`Object.getOwnPropertyNames()`** devuelve un array con todas las pr
 
 ## Sintaxis
 
-    Object.getOwnPropertyNames(obj)
+```js
+Object.getOwnPropertyNames(obj)
+```
 
 ### Parámetros
 
@@ -108,7 +110,7 @@ console.log(nonenum_only);
 
 ## Ver también
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties "Enumerability_and_ownership_of_properties")
+- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable")}}
 - {{jsxref("Object.create")}}

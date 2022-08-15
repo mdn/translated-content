@@ -14,7 +14,9 @@ La función de [CSS](/es/docs/Web/CSS) **`url()`** usa un [filtro SVG](/es/docs/
 
 ## Sintaxis
 
-    url(location)
+```js
+url(location)
+```
 
 ### Parámetros
 

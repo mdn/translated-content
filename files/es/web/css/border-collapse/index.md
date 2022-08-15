@@ -24,7 +24,9 @@ En el modelo de separación, cada celda adyacente tiene su propio borde (la dist
 
 ### Sintaxis
 
-    border-collapse: value
+```css
+border-collapse: value
+```
 
 ### Valores
 
@@ -36,9 +38,11 @@ En el modelo de separación, cada celda adyacente tiene su propio borde (la dist
 
 [Ver El Ejemplo Vivo](/samples/cssref/border-collapse.html)
 
-    <table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">
+```html
+<table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">
 
-    <table border="1" style="border-collapse: separate" bordercolor="#111111" width="500">
+<table border="1" style="border-collapse: separate" bordercolor="#111111" width="500">
+```
 
 ### Notas
 

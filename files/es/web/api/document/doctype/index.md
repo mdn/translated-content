@@ -16,7 +16,9 @@ Devuelve la Declaración de tipo de documento (Document Type Declaration (DTD)),
 
 ## Sintaxis
 
-    doctype = document.doctype;
+```js
+doctype = document.doctype;
+```
 
 - `doctype` es una propiedad de sólo lectura.
 

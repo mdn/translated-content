@@ -10,11 +10,13 @@ translation_of: Web/API/Node/hasChildNodes
 ---
 {{APIRef("DOM")}}
 
-El método **`Node.hasChildNodes()`** devuelve un valor **Boolean** indicando si el {{domxref("Node")}} (nodo) actual tiene [nodos hijos](/es/docs/Web/API/Node/childNodes "DOM/Node.childNodes") o no.
+El método **`Node.hasChildNodes()`** devuelve un valor **Boolean** indicando si el {{domxref("Node")}} (nodo) actual tiene [nodos hijos](/es/docs/Web/API/Node/childNodes) o no.
 
 ## Sintaxis
 
-    resultado = node.hasChildNodes();
+```js
+resultado = node.hasChildNodes();
+```
 
 - `resultado`
   - : almacena el valor devuelto `true` o `false`.

@@ -19,7 +19,9 @@ El método **`includes()`** determina si una matriz incluye un determinado eleme
 
 ## Sintaxis
 
-    arr.includes(searchElement[, fromIndex])
+```js
+arr.includes(searchElement[, fromIndex])
+```
 
 ### Parámetros
 

@@ -9,7 +9,7 @@ translation_of: Web/CSS/overflow
 
 La propiedad CSS `overflow` especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.
 
-Usando la propiedad `overflow` con un valor distinto a `visible`, valor por defecto, creará un nuevo [contexto de formatos de bloques](/es/docs/CSS/block_formatting_context "CSS/block_formatting_context"). Esto es técnicamente necesario debido a que si un elemento flotante interceptara con otros forzaría a reajustar el contenido alrededor de los elementos que se interceden. El reajuste sucedería luego de cada desplazamiento, y llevaría a un desplazamiento demasiado lento.
+Usando la propiedad `overflow` con un valor distinto a `visible`, valor por defecto, creará un nuevo [contexto de formatos de bloques](/es/docs/CSS/block_formatting_context). Esto es técnicamente necesario debido a que si un elemento flotante interceptara con otros forzaría a reajustar el contenido alrededor de los elementos que se interceden. El reajuste sucedería luego de cada desplazamiento, y llevaría a un desplazamiento demasiado lento.
 
 Nótese que, cambiando programáticamente el valor de `scrollTop` al elemento HTML relevante, incluso cuando `overflow` tenga el valor `hidden` un elemento podría necesitar ser desplazado.
 
@@ -17,14 +17,16 @@ Nótese que, cambiando programáticamente el valor de `scrollTop` al elemento HT
 
 ## Sintaxis
 
-    Sintáxis formal: {{csssyntax("overflow")}}
+Sintáxis formal: {{csssyntax("overflow")}}
 
-    overflow: visible
-    overflow: hidden
-    overflow: scroll
-    overflow: auto
+```
+overflow: visible
+overflow: hidden
+overflow: scroll
+overflow: auto
 
-    overflow: inherit
+overflow: inherit
+```
 
 ### Valores
 
@@ -61,17 +63,23 @@ p {
 `visible` (por defecto)
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-    p { overflow: hidden; /* no se dibujan barras */ }
+```css
+p { overflow: hidden; /* no se dibujan barras */ }
+```
 
 `overflow: hidden`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-    p { overflow: scroll; /* se dibujan ambas barras */ }
+```css
+p { overflow: scroll; /* se dibujan ambas barras */ }
+```
 
 `overflow: scroll`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-    p { overflow: auto; /* se dibujan barras según se necesite */ }
+```css
+p { overflow: auto; /* se dibujan barras según se necesite */ }
+```
 
 `overflow: auto`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.

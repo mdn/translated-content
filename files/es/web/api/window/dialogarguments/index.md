@@ -11,4 +11,6 @@ La propiedad `dialogArguments` retorna los parámetros que fueron pasados al mé
 
 ## Sintaxis
 
-    value = window.dialogArguments;
+```js
+value = window.dialogArguments;
+```

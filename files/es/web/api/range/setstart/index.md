@@ -15,7 +15,9 @@ Definiendo el punto de partida abajo (más abajo en el documento) el punto final
 
 ## Sintaxis
 
-    range.setStart(startNode, startOffset);
+```js
+range.setStart(startNode, startOffset);
+```
 
 ### Parámetros
 
@@ -43,8 +45,6 @@ range.setStart(startNode,startOffset);
 ## Compatibilidad del navegador
 
 {{Compat("api.Range.setStart")}}
-
-##
 
 ## Ver también
 

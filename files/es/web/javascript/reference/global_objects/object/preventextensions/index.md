@@ -10,7 +10,9 @@ El método **`Object.preventExtensions()`** previene que nuevas propiedades sean
 
 ## Sintaxis
 
-    Object.preventExtensions(obj)
+```js
+Object.preventExtensions(obj)
+```
 
 ### Parametros
 

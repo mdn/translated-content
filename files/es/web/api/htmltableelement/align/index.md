@@ -9,8 +9,10 @@ La propiedad **`HTMLTableElement.align`** representa la alineación de la tabla.
 
 ## Sintaxis
 
-    HTMLTableElement.align =alignment;
-    varalignment =HTMLTableElement.align;
+```js
+HTMLTableElement.align = alignment;
+var alignment = HTMLTableElement.align;
+```
 
 ### Parámetros
 

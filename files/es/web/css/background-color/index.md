@@ -20,7 +20,9 @@ translation_of: Web/CSS/background-color
 
 ### Sintaxis
 
-    background-color: color | transparent | inherit
+```css
+background-color: color | transparent | inherit
+```
 
 ### Valores
 

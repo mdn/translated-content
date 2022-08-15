@@ -11,7 +11,9 @@ Esto es básicamente un alias para {{domxref("EventTarget.removeEventListener()"
 
 ## Sintaxis
 
-    MediaQueryList.removeListener(func)
+```js
+MediaQueryList.removeListener(func)
+```
 
 ### Parametros
 

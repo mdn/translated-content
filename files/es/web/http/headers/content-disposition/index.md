@@ -15,17 +15,21 @@ translation_of: Web/HTTP/Headers/Content-Disposition
 
 El primer parámetro en el contexto HTTP o es `inline` (valor predeterminado, indicando que puede ser mostrado dentro de una página web, o como la página web) o `attachment` (indicando que será descargado; la mayoría de los navegadores mostrando un diálogo 'Guardar como', prellenado con el valor del parámetro `filename`, en caso de estar presente).
 
-    Content-Disposition: inline
-    Content-Disposition: attachment
-    Content-Disposition: attachment; filename="filename.jpg"
+```
+Content-Disposition: inline
+Content-Disposition: attachment
+Content-Disposition: attachment; filename="filename.jpg"
+```
 
 ### Como encabezado para un cuerpo multipartes
 
 El primer parámetro en el contexto HTTP siempre es `form-data`; parámetros adicionales son insensibles a mayúsculas y tienen argumentos que usan sintaxis de textos entre comillas después del signo de `'='`. Múltiples parámetros se separan por punto y coma (`';'`).
 
-    Content-Disposition: form-data
-    Content-Disposition: form-data; name="fieldName"
-    Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
+```
+Content-Disposition: form-data
+Content-Disposition: form-data; name="fieldName"
+Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
+```
 
 ### Directivas
 
@@ -41,30 +45,34 @@ El primer parámetro en el contexto HTTP siempre es `form-data`; parámetros adi
 
 Una respuesta generando el diálogo 'Guardar como':
 
-    200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Disposition: attachment; filename="genial.html"
-    Content-Length: 22
+```
+200 OK
+Content-Type: text/html; charset=utf-8
+Content-Disposition: attachment; filename="genial.html"
+Content-Length: 22
 
-    <HTML>Guárdame!</HTML>
+<HTML>Guárdame!</HTML>
+```
 
 Este archivo simple de HTML será guardado como una descarga regular en lugar de mostrarse en el navegador. La mayoría de los navegadores propondrá guardarlo como `genial.html` ya que es el nombre (predeterminado).
 
 Un ejemplo de un formulario HTML, publicado usando el formato `multipart/form-data` que hace uso del encabezado `Content-Disposition`:
 
-    POST /test.html HTTP/1.1
-    Host: example.org
-    Content-Type: multipart/form-data;boundary="boundary"
+```
+POST /test.html HTTP/1.1
+Host: example.org
+Content-Type: multipart/form-data;boundary="boundary"
 
-    --boundary
-    Content-Disposition: form-data; name="campo1"
+--boundary
+Content-Disposition: form-data; name="campo1"
 
-    valor1
-    --boundary
-    Content-Disposition: form-data; name="campo2"; filename="ejemplo.txt"
+valor1
+--boundary
+Content-Disposition: form-data; name="campo2"; filename="ejemplo.txt"
 
-    valor2
-    --boundary--
+valor2
+--boundary--
+```
 
 ## Especificaciones
 

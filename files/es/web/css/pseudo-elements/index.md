@@ -17,7 +17,9 @@ Al igual que las {{ Cssxref("Pseudo-classes") }}, los pseudo-elementos se añade
 
 ## Sintaxis
 
-    selector::pseudo-elemento { propiedad: valor; }
+```css
+selector::pseudo-elemento { propiedad: valor; }
+```
 
 ## Lista de pseudoelementos
 

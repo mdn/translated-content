@@ -10,9 +10,11 @@ El método **`Number.isFinite()`** determina si el valor pasado es un número fi
 
 {{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
 
-## Syntax
+## Sintaxis
 
-    Number.isFinite(valor)
+```js
+Number.isFinite(valor)
+```
 
 ### Parameters
 

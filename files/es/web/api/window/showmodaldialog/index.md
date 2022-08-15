@@ -11,7 +11,9 @@ El método **`Window.showModalDialog()`** crea y visualiza una caja de diálogo 
 
 ## Sintaxis
 
-    valRetorno = window.showModalDialog(uri[, argumentos][, opciones]);
+```js
+valRetorno = window.showModalDialog(uri[, argumentos][, opciones]);
+```
 
 donde
 

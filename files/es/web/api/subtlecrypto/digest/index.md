@@ -7,11 +7,13 @@ translation_of: Web/API/SubtleCrypto/digest
 
 El método **`digest()`** de la interfaz {{domxref("SubtleCrypto")}} genera un digest de los datos proveidos. Un {{domxref("digest")}} es un valor corto de longitud fija derivado de alguna entrada de longitud variable. Los digest criptográficos deben mostrar resistencia a colisiones, lo que significa que es difícil encontrar dos entradas diferentes que tengan el mismo valor de digest.
 
-Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completará con el digest.
+Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completará con el digest.
 
 ## Sintaxis
 
-    const digest = crypto.subtle.digest(algorithm, data);
+```js
+const digest = crypto.subtle.digest(algorithm, data);
+```
 
 ### Parámetros
 
@@ -26,7 +28,7 @@ Toma como argumento un identificador para el algoritmo digest a utilizar y los d
 
 ### Valor de retorno
 
-- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer "The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.") conteniendo el digest.
+- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) conteniendo el digest.
 
 ## Algoritmos soportados
 

@@ -15,7 +15,9 @@ La propiedad de sólo lectura **`NonDocumentTypeChildNode.nextElementSibling`** 
 
 ## Sintaxis
 
-    var nextNode = elementNodeReference.nextElementSibling;
+```js
+var nextNode = elementNodeReference.nextElementSibling;
+```
 
 ## Ejemplo
 
@@ -35,9 +37,11 @@ La propiedad de sólo lectura **`NonDocumentTypeChildNode.nextElementSibling`** 
 
 Este ejemplo muestra en la consola lo siguiente cuando se carga:
 
-    Siblings of div-01:
-    DIV
-    SCRIPT
+```
+Siblings of div-01:
+DIV
+SCRIPT
+```
 
 ## Polyfill para Internet Explorer 8
 

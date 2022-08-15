@@ -9,7 +9,9 @@ La propiedad **`Element.attributes`** retorna una colección "viva" cuyos nodos 
 
 ## Sintaxis
 
-    var attr = element.attributes;
+```js
+var attr = element.attributes;
+```
 
 ## Ejemplo
 

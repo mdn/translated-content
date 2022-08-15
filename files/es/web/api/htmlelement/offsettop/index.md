@@ -9,7 +9,9 @@ La propiedad de sólo lectura **`HTMLElement.offsetTop`** retorna la distancia d
 
 ## Sintaxis
 
-    topPos = element.offsetTop;
+```js
+topPos = element.offsetTop;
+```
 
 ### Parámetros
 

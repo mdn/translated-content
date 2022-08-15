@@ -14,7 +14,9 @@ El método **`Node.contains()`** devuelve un valor {{jsxref("Boolean")}} indican
 
 ## Sintaxis
 
-    node.contains( otroNodo )
+```js
+node.contains( otroNodo )
+```
 
 ## Ejemplo
 

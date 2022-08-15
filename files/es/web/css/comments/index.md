@@ -18,7 +18,9 @@ Los comentarios se pueden colocar en cualquier espacio en blanco que se permita 
 
 ## Sintaxis
 
-    /* Comentario */
+```css
+/* Comentario */
+```
 
 ## Examples
 

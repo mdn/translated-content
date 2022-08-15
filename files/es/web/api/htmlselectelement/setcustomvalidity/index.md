@@ -7,9 +7,11 @@ translation_of: Web/API/HTMLSelectElement/setCustomValidity
 
 El metodo **`HTMLSelectElement.setCustomValidity()`** define el mensaje de validación personalizado para el elemento seleccionado con el mensaje especifico. Usa una string vacia para indicar que ese elemento no tiene error de validación customizado.
 
-## Syntax
+## Sintaxis
 
-    selectElt.setCustomValidity(string);
+```js
+selectElt.setCustomValidity(string);
+```
 
 ### Parameters
 

@@ -9,8 +9,10 @@ translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 ---
 ## Mensaje
 
-    SyntaxError: Expected {x} (Edge)
-    SyntaxError: malformed formal parameter (Firefox)
+```
+SyntaxError: Expected {x} (Edge)
+SyntaxError: malformed formal parameter (Firefox)
+```
 
 ## Tipo de error
 

@@ -15,7 +15,9 @@ El método **`persist()`** de la interfaz {{domxref("StorageManager")}} solicita
 
 ## Sintaxis
 
-    navigator.storage.persist().then(function(persistent) { ... })
+```js
+navigator.storage.persist().then(function(persistent) { ... })
+```
 
 ### Parámetros
 

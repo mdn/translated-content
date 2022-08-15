@@ -17,7 +17,9 @@ El **`substring()`** método devuelve un subconjunto de un objeto `String`.
 
 ## Sintaxis
 
-    cadena.substring(indiceA[, indiceB'])
+```js
+cadena.substring(indiceA[, indiceB'])
+```
 
 ### Parámetros
 

@@ -9,7 +9,7 @@ translation_of: Web/CSS/@charset
 
 ## Resumen
 
-La [regla-at](/en/CSS/At-rule "At-rule") **`@charset`** de [CSS](/en/CSS "CSS") especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/en/CSS/Syntax#nested_statements "en/CSS/Syntax#nested_statements"), no puede ser usada dentro de [grupos de reglas-at condicionales](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules"). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
+La [regla-at](/en/CSS/At-rule) **`@charset`** de [CSS](/en/CSS) especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/en/CSS/Syntax#nested_statements), no puede ser usada dentro de [grupos de reglas-at condicionales](/en/CSS/At-rule#Conditional_Group_Rules). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
 
 Esta regla-at es útil cuando se usan caracteres fuera de la codificación ASCII en alguna propiedad CSS, como {{ cssxref("content") }}.
 
@@ -23,8 +23,10 @@ Habiendo diferentes maneras de definir la codificación de caracteres en una hoj
 
 ## Sintaxis
 
-    @charset "UTF-8";
-    @charset 'iso-8859-15';
+```css
+@charset "UTF-8";
+@charset 'iso-8859-15';
+```
 
 donde:
 

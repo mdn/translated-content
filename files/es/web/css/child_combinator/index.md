@@ -14,7 +14,9 @@ El combinador `>` separa a dos selectores y busca solo a los elementos que coind
 
 ## Sintaxis
 
-    selector1 > selector2 { style properties }
+```css
+selector1 > selector2 { style properties }
+```
 
 ## Ejemplo
 

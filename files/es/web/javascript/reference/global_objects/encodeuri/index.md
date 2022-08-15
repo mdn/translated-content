@@ -34,7 +34,7 @@ Se asume que el URI es un URI completo, a fin de no codificar caracteres reserva
 | Caracteres No escape  | Alfabéticos, dígitos decimales, `- _ . ! ~ * ' ( )` |
 | Almohadilla           | `#`                                                 |
 
-Tenga en cuenta que encodeURI por sí sola no puede formar solicitudes correctas HTTP GET y POST, como por XMLHTTPRequests, porque "&", "+", y "=" no están codificados, los cuales son tratados como caracteres especiales en las solicitudes GET y POST. [`encodeURIComponent`](/es/Core_JavaScript_1.5_Reference/Global_Functions/encodeURIComponent "es/Core_JavaScript_1.5_Reference/Global_Functions/encodeURIComponent"), sin embargo, codifica estos caracteres. Lo más probable es que estos comportamientos no sean compatibles en los navegadores Web.
+Tenga en cuenta que encodeURI por sí sola no puede formar solicitudes correctas HTTP GET y POST, como por XMLHTTPRequests, porque "&", "+", y "=" no están codificados, los cuales son tratados como caracteres especiales en las solicitudes GET y POST. [`encodeURIComponent`](/es/Core_JavaScript_1.5_Reference/Global_Functions/encodeURIComponent), sin embargo, codifica estos caracteres. Lo más probable es que estos comportamientos no sean compatibles en los navegadores Web.
 
 ## Ver También
 

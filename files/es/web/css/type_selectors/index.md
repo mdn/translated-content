@@ -19,7 +19,9 @@ a {
 
 ## Sintaxis
 
-    element { style properties }
+```css
+element { style properties }
+```
 
 ## Ejemplo
 

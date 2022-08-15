@@ -14,7 +14,9 @@ Se envía un evento `popstate` a la ventana cada vez que la entrada activa de la
 
 ## Sintaxis
 
-    window.onpopstate = funcRef;
+```js
+window.onpopstate = funcRef;
+```
 
 - `funcRef` es una función manejadora (handler).
 

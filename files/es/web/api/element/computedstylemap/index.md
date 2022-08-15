@@ -19,7 +19,9 @@ El método **`computedStyleMap()`** de la interfaz {{domxref("Element")}} devuel
 
 ## Sintaxis
 
-    var stylePropertyMapReadOnly = Element.computedStyleMap()
+```js
+var stylePropertyMapReadOnly = Element.computedStyleMap()
+```
 
 ### Parámetros
 

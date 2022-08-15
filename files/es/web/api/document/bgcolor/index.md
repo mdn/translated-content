@@ -9,9 +9,10 @@ translation_of: Web/API/Document/bgColor
 
 ### Sintaxis
 
-    color = document.bgColor
-    document.bgColor =
-    color
+```js
+color = document.bgColor
+document.bgColor = color
+```
 
 ### Parámetros
 
@@ -19,8 +20,10 @@ translation_of: Web/API/Document/bgColor
 
 ### Ejemplos
 
-    # document.bgColor = "darkblue";
-    # document.bgColor = "#ff00ff";
+```js
+document.bgColor = "darkblue";
+document.bgColor = "#ff00ff";
+```
 
 ### Notas
 

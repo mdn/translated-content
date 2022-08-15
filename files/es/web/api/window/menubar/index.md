@@ -11,27 +11,31 @@ Retorna el objeto **menubar**, cuya visibilidad puede ser examinada.
 
 ### Sintaxis
 
-    objRef = window.menubar
+```js
+objRef = window.menubar
+```
 
 ### Ejemplo
 
 El siguiente ejemplo HTML completo muestra la forma en que es utilizada la propiedad visible del objeto menubar.
 
-    <html>
-    <head>
-      <title>Various DOM Tests</title>
-      <script>
-        var visible = window.menubar.visible;
-      </script>
-    </head>
-    <body>
-      <p>Various DOM Tests</p>
-    </body>
-    </html>
+```html
+<html>
+<head>
+  <title>Various DOM Tests</title>
+  <script>
+    var visible = window.menubar.visible;
+  </script>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
 ### Ver también:
 
-[window.locationbar](/en/DOM/window.locationbar "en/DOM/window.locationbar"),[window.personalbar](/en/DOM/window.personalbar "en/DOM/window.personalbar"),[window.scrollbars](/en/DOM/window.scrollbars "en/DOM/window.scrollbars"), [window.statusbar](/en/DOM/window.statusbar "en/DOM/window.statusbar"),[window.toolbar](/en/DOM/window.toolbar "en/DOM/window.toolbar")
+[window.locationbar](/en/DOM/window.locationbar),[window.personalbar](/en/DOM/window.personalbar),[window.scrollbars](/en/DOM/window.scrollbars), [window.statusbar](/en/DOM/window.statusbar),[window.toolbar](/en/DOM/window.toolbar)
 
 ### Especificación
 

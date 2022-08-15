@@ -11,7 +11,9 @@ Mueve la actual ventana a consecuencia de una cantidad especificada.
 
 ## Sintaxis
 
-    window.moveBy(deltaX, deltaY)
+```js
+window.moveBy(deltaX, deltaY)
+```
 
 ### Parametros
 

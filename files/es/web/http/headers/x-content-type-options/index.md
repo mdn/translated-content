@@ -24,7 +24,9 @@ Los evaluadores de seguridad del sitio suelen esperar que este encabezado aparez
 
 ## Sintaxis
 
-    X-Content-Type-Options: nosniff
+```
+X-Content-Type-Options: nosniff
+```
 
 ## Directivas
 

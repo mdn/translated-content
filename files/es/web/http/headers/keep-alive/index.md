@@ -20,7 +20,9 @@ El encabezado **`Keep-Alive`** permite al remitente indicar como será la forma 
 
 ## Sintaxis
 
-    Keep-Alive: parámetros
+```
+Keep-Alive: parámetros
+```
 
 ## Directivas
 
@@ -32,16 +34,18 @@ El encabezado **`Keep-Alive`** permite al remitente indicar como será la forma 
 
 Una respuesta que contiene el encabezado `Keep-Alive`:
 
-    HTTP/1.1 200 OK
-    Connection: Keep-Alive
-    Content-Encoding: gzip
-    Content-Type: text/html; charset=utf-8
-    Date: Thu, 11 Aug 2016 15:23:13 GMT
-    Keep-Alive: timeout=5, max=1000
-    Last-Modified: Mon, 25 Jul 2016 04:32:39 GMT
-    Server: Apache
+```
+HTTP/1.1 200 OK
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Date: Thu, 11 Aug 2016 15:23:13 GMT
+Keep-Alive: timeout=5, max=1000
+Last-Modified: Mon, 25 Jul 2016 04:32:39 GMT
+Server: Apache
 
-    (body)
+(body)
+```
 
 ## Especificaciones
 

@@ -18,9 +18,11 @@ Funciona de manera similar a la propiedad {{cssxref("-moz-image-region")}} , que
 
 La síntaxis para el rectánigulo es similar a la de la función [`rect()`](/es/docs/Web/CSS/shape#Syntax) y genera un tipo CSS {{cssxref("&lt;shape&gt;")}} . Los cuatro valores son relativos a la esquina superior izquierda de la imagen.
 
-## Síntaxis
+## Sintaxis
 
-    -moz-image-rect({{cssxref("&lt;uri&gt;")}}, top, right, bottom, left);
+```js
+-moz-image-rect({{cssxref("&lt;uri&gt;")}}, top, right, bottom, left);
+```
 
 ### Valores
 

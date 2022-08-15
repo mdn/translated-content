@@ -21,7 +21,9 @@ La propiedad de sólo-lectura **`origin`** de la interfaz {{domxref("Location")}
 
 ## Sintaxis
 
-    string = object.origin;
+```js
+string = object.origin;
+```
 
 ## Ejemplos
 

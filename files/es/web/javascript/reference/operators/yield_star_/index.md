@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Referencia/Operadores/yield*
 
 ## Sintaxis
 
-     yield* [[expression]];
+```js
+ yield* [[expression]];
+```
 
 - `expression`
   - : La expresión que retorna un objeto iterable

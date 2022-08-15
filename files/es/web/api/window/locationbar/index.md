@@ -9,7 +9,9 @@ Devuelve el objeto `locationbar`, del cual se puede comprobar su visibilidad.
 
 ## Sintaxis
 
-    objRef = window.locationbar
+```js
+objRef = window.locationbar
+```
 
 ## Ejemplo
 

@@ -11,16 +11,22 @@ Devuelve la hoja de estilo que incluye a la que está en curso, si existe.
 
 ### Sintaxis
 
-    objRef = stylesheet.parentStyleSheet
+```js
+objRef = stylesheet.parentStyleSheet
+```
 
 ### Ejemplo
 
-    // encuentra la hoja de estilo de alto nivel
-    if (stylesheet.parentStyleSheet) {
-      sheet = stylesheet.parentStyleSheet;
-    }
-    else
-    { sheet = stylesheet; }
+```js
+// encuentra la hoja de estilo de alto nivel
+if (stylesheet.parentStyleSheet) {
+  sheet = stylesheet.parentStyleSheet;
+}
+else
+{
+  sheet = stylesheet;
+}
+```
 
 ### Notas
 

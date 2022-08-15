@@ -9,9 +9,11 @@ translation_of: Web/API/Element/requestFullScreen
 
 Asynchronously requests that the element be made full-screen.
 
-## Syntax
+## Sintaxis
 
-    element.mozRequestFullScreen();
+```js
+element.mozRequestFullScreen();
+```
 
 ## Notas
 

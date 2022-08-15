@@ -15,7 +15,9 @@ Para los elementos con una posición absoluta (aquellos que tienen la propiedad 
 
 ## Sintaxis
 
-    left: <length> | <percentage> | auto | inherit ;
+```css
+left: <length> | <percentage> | auto | inherit ;
+```
 
 ### Valores
 

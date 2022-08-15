@@ -13,22 +13,24 @@ translation_of: Web/CSS/animation
 
 ## Resumen
 
-La propiedad `animation` de [CSS](/es/CSS "CSS") es una [propiedad abreviada (shorthand property)](/en/CSS/Shorthand_properties "Shorthand properties")para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
+La propiedad `animation` de [CSS](/es/CSS) es una [propiedad abreviada (shorthand property)](/en/CSS/Shorthand_properties)para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
 
-La [lista de propiedades CSS que pueden ser animadas](/es/docs/CSS/Transiciones_de_CSS#Propiedades_que_pueden_ser_animadas "en/CSS/CSS_transitions#Properties_that_can_be_animated")está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/CSS/Transiciones_de_CSS "en/CSS/CSS_transitions").
+La [lista de propiedades CSS que pueden ser animadas](/es/docs/CSS/Transiciones_de_CSS#Propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/CSS/Transiciones_de_CSS).
 
 {{cssinfo}}
 
 ## Sintaxis
 
-    Formal grammar:  [ <'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
-                       <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'> ]
-                     [, [<'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
-                         <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'>] ]*
+```
+Formal grammar:  [ <'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
+                   <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'> ]
+                 [, [<'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
+                     <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'>] ]*
+```
 
 ## Ejemplos
 
-Consulte [CSS animations](/en/CSS/CSS_animations "en/CSS/CSS_animations") para ver los ejemplos.
+Consulte [CSS animations](/en/CSS/CSS_animations) para ver los ejemplos.
 
 ## Sobre Accesibilidad
 
@@ -56,5 +58,5 @@ Para más información (en inglés):
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations "en/CSS/CSS_animations")
+- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

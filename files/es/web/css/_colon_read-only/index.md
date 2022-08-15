@@ -33,7 +33,9 @@ input:read-only {
 
 ## Sintaxis
 
-    :read-only
+```css
+:read-only
+```
 
 ## Ejemplo
 

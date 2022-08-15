@@ -30,7 +30,7 @@ Las cookies se utilizan principalmente con tres propósitos:
 - Rastreo
   - : Guardar y analizar el comportamiento del usuario
 
-Las cookies se usaron una vez para el almacenamiento general del lado del cliente. Si bien esto era legítimo cuando eran la única forma de almacenar datos en el cliente, hoy en día se recomienda preferir las API de almacenamiento modernas. Las cookies se envían con cada solicitud, por lo que pueden empeorar el rendimiento (especialmente para las conexiones de datos móviles). Las APIs modernas para el almacenamiento del cliente son la [Web storage API](/es/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` y `sessionStorage`) e [IndexedDB](/es/docs/Web/API/IndexedDB_API).
+Las cookies se usaron una vez para el almacenamiento general del lado del cliente. Si bien esto era legítimo cuando eran la única forma de almacenar datos en el cliente, hoy en día se recomienda preferir las API de almacenamiento modernas. Las cookies se envían con cada solicitud, por lo que pueden empeorar el rendimiento (especialmente para las conexiones de datos móviles). Las APIs modernas para el almacenamiento del cliente son la [Web storage API](/es/docs/Web/API/Web_Storage_API) (`localStorage` y `sessionStorage`) e [IndexedDB](/es/docs/Web/API/IndexedDB_API).
 
 > **Nota:** > **Advertencia:** > **Nota:** Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](/es/docs/Tools/Storage_Inspector) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
 
@@ -42,7 +42,9 @@ Al recibir una solicitud HTTP, un servidor puede enviar un encabezado {{HTTPHead
 
 El encabezado de respuesta HTTP {{HTTPHeader ("Set-Cookie")}} envía las cookies del servidor al agente de usuario. Una cookie simple se establece así:
 
-    Set-Cookie: <nombre-cookie>=<valor-cookie>
+```
+Set-Cookie: <nombre-cookie>=<valor-cookie>
+```
 
 Este encabezado del servidor le dice al cliente que almacene una cookie.
 
@@ -52,18 +54,22 @@ Este encabezado del servidor le dice al cliente que almacene una cookie.
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
 > - [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
 
-    HTTP/1.0 200 OK
-    Content-type: text/html
-    Set-Cookie: yummy_cookie=choco
-    Set-Cookie: tasty_cookie=strawberry
+```
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: yummy_cookie=choco
+Set-Cookie: tasty_cookie=strawberry
 
-    [page content]
+[page content]
+```
 
 Ahora, con cada nueva solicitud al servidor, el navegador enviará todas las cookies almacenadas previamente al servidor utilizando el encabezado {{HTTPHeader ("Cookie")}}.
 
-    GET /sample_page.html HTTP/1.1
-    Host: www.example.org
-    Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```
+GET /sample_page.html HTTP/1.1
+Host: www.example.org
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```
 
 ### Cookies de sesión
 
@@ -73,7 +79,9 @@ La cookie creada anteriormente es una cookie de sesión: se elimina cuando el cl
 
 En lugar de expirar cuando el cliente se cierra, las _cookies permanentes_ expiran en una fecha específica (`Expires`) o tras un periodo de tiempo específico (`Max-Age`).
 
-    Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
+```
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
+```
 
 > **Nota:** Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
 
@@ -83,7 +91,9 @@ Una cookie segura sólo se envía al servidor con una petición cifrada sobre el
 
 Para prevenir ataques cross-site scripting ({{Glossary("XSS")}}), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
 
-    Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
 
 ### Alcance de las cookies
 
@@ -109,7 +119,9 @@ Las cookies `SameSite` son relativamente nuevas y [soportadas por los principale
 
 Aquí hay un ejemplo:
 
-    Set-Cookie: key=value; SameSite=Strict
+```
+Set-Cookie: key=value; SameSite=Strict
+```
 
 El atributo same-site puede tomar uno de los dos valores (case-insensitive):
 
@@ -157,12 +169,14 @@ El atributo cookie `HttpOnly` puede ayudar a mitigar este ataque evitando el acc
 
 Ahora, si tu tienes una sesión iniciada en tu tu cuenta bancaria y las cookies permanecen siendo válidas (y no hay otra validación mas que esa), se realizará la transferencia desde tu cuenta tan pronto como se cargue el html que contiene la imagen. Para los endpoints que requieren una petición de tipo POST, se puede disparar un evento de tipo envío de formulario (posiblemente en un iframe invisible) cuando la página se carga:
 
-    <form action="https://bank.example.com/withdraw" method="POST">
-      <input type="hidden" name="account" value="bob">
-      <input type="hidden" name="amount" value="1000000">
-      <input type="hidden" name="for" value="mallory">
-    </form>
-    <script>window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }</script>
+```html
+<form action="https://bank.example.com/withdraw" method="POST">
+  <input type="hidden" name="account" value="bob">
+  <input type="hidden" name="amount" value="1000000">
+  <input type="hidden" name="for" value="mallory">
+</form>
+<script>window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }</script>
+```
 
 Se presentan aquí algunas técnicas que se deberían usar para evitar que estas cosas ocurran:
 
@@ -198,7 +212,7 @@ For more, see [this Wikipedia section](https://en.wikipedia.org/wiki/HTTP_cookie
 
 ### Zombie cookies and Evercookies
 
-A more radical approach to cookies are zombie cookies or "Evercookies" which are recreated after their deletion and are intentionally hard to delete forever. They are using the [Web storage API](/es/docs/Web/API/Web_Storage_API "DOM Storage"), Flash Local Shared Objects and other techniques to recreate themselves whenever the cookie's absence is detected.
+A more radical approach to cookies are zombie cookies or "Evercookies" which are recreated after their deletion and are intentionally hard to delete forever. They are using the [Web storage API](/es/docs/Web/API/Web_Storage_API), Flash Local Shared Objects and other techniques to recreate themselves whenever the cookie's absence is detected.
 
 - [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
 - [Zombie cookies on Wikipedia](https://en.wikipedia.org/wiki/Zombie_cookie)

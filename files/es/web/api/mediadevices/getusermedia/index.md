@@ -9,15 +9,19 @@ El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para u
 
 ## Sintaxis
 
-    var gumPromise = MediaDevices.getUserMedia(constraints);
+```js
+var gumPromise = MediaDevices.getUserMedia(constraints);
+```
 
 Generalmente, accederás al objeto singleton {{domxref("MediaDevices")}} usando {{domxref("navigator.mediaDevices")}}, de esta forma:
 
-    navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
-      /* usar el flujo de datos */
-    }).catch(function(err) {
-      /* manejar el error */
-    });
+```js
+navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
+  /* usar el flujo de datos */
+}).catch(function(err) {
+  /* manejar el error */
+});
+```
 
 ### Parámetros
 
@@ -48,17 +52,19 @@ Los rechazos de la promesa devuelta se realizan con un objeto {{domxref ("MediaS
 
 Este ejemplo asigna el objeto {{domxref("MediaStream")}} al elemento apropiado.
 
-    var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+```js
+var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
-    p.then(function(mediaStream) {
-      var video = document.querySelector('video');
-      video.src = window.URL.createObjectURL(mediaStream);
-      video.onloadedmetadata = function(e) {
-        // Do something with the video here.
-      };
-    });
+p.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  video.src = window.URL.createObjectURL(mediaStream);
+  video.onloadedmetadata = function(e) {
+    // Do something with the video here.
+  };
+});
 
-    p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.
+p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.
+```
 
 ### Ancho y alto
 

@@ -15,7 +15,9 @@ El método **`clear()`** es utilizado para suprimir todos los elementos del obje
 
 ## Sintaxis
 
-    wm.clear();
+```js
+wm.clear();
+```
 
 ## Ejemplos
 

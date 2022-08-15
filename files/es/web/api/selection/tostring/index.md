@@ -13,8 +13,9 @@ Devuelve una cadena de caracteres (texto), la cual es representada por el objeto
 
 ### Sintaxis
 
-    string =
-    sel.toString()
+```js
+string = sel.toString()
+```
 
 - `string` es la representación del texto de selección.
 
@@ -28,8 +29,10 @@ Este método devuelve el texto seleccionado.
 
 En [JavaScript](es/JavaScript), este método es llamado automáticamente cuando una función, a la cual es pasado como parámetro el objeto de selección, requiere una cadena de caracteres (texto):
 
-    alert(window.getSelection()) // Lo que se llama.
-    alert(window.getSelection().toString())  // Lo que está siendo efectivamente llamado.
+```js
+alert(window.getSelection()) // Lo que se llama.
+alert(window.getSelection().toString())  // Lo que está siendo efectivamente llamado.
+```
 
 ### Ver también
 

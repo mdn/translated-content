@@ -12,7 +12,9 @@ El método **`toFixed()`** formatea un número usando notación de punto fijo.
 
 ## Sintaxis
 
-    numObj.toFixed([digitos])
+```js
+numObj.toFixed([digitos])
+```
 
 ### Parametros
 

@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/regexp/match
 
 ### Sintaxis
 
-    regexp:match(objetivo,expresionRegular[[,opciones]])
+```xml
+regexp:match(objetivo, expresionRegular[[, opciones]])
+```
 
 ### Argumentos
 
@@ -37,18 +39,22 @@ Un conjunto de nodos de elementos `match`, cada uno de los cuales tiene un valor
 
 Por ejemplo:
 
-    <xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
-                                       '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')">
-       Parte <xsl:value-of select="position()" /> = <xsl:value-of select="." />
-    </xsl:for-each>
+```xml
+<xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
+                                    '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')">
+    Parte <xsl:value-of select="position()" /> = <xsl:value-of select="." />
+</xsl:for-each>
+```
 
 Este código genera el siguiente resultado:
 
-    Parte 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
-    Parte 2 = http
-    Parte 3 = developer.mozilla.org
-    Parte 4 =
-    Parte 5 = /en/docs/Firefox_3_for_developers
+```
+Parte 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
+Parte 2 = http
+Parte 3 = developer.mozilla.org
+Parte 4 =
+Parte 5 = /en/docs/Firefox_3_for_developers
+```
 
 ### Definido en
 

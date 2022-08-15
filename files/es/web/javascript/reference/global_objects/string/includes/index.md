@@ -19,7 +19,9 @@ El método **`includes()`** determina si una cadena de texto puede ser encontrad
 
 ## Sintaxis
 
-    str.includes(searchString[, position])
+```js
+str.includes(searchString[, position])
+```
 
 ### Parametros
 

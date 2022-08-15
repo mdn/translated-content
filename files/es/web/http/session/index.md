@@ -20,7 +20,7 @@ En un protocolo cliente servidor, es siempre el cliente el que establece la cone
 
 En TCP el puerto por defecto, para un servidor HTTP en un computador, es el puerto 80. Se pueden usar otros puertos como el 8000 o el 8080. La URL de la página pedida contiene tanto el nombre del dominio, como el número de puerto, aunque este puede ser omitido, si se trata del puerto 80. Véase la referencia de [Identificación de recursos en la Web](/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) para más detalles.
 
-> **Nota:** El modelo cliente-servidor no permite que el servidor mande datos al cliente sin una petición explicita. Como solución parcial a este problema, los desarrolladores web, usan varias técnicas, como hacer un ping al servidor periódicamente, mediante {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, o usar la HTML [WebSockets API](/en/WebSockets "en/WebSockets") o protocolos similares.
+> **Nota:** El modelo cliente-servidor no permite que el servidor mande datos al cliente sin una petición explicita. Como solución parcial a este problema, los desarrolladores web, usan varias técnicas, como hacer un ping al servidor periódicamente, mediante {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, o usar la HTML [WebSockets API](/en/WebSockets) o protocolos similares.
 
 ## Mandando una petición
 
@@ -36,22 +36,26 @@ Una vez la conexión está establecida, el cliente, puede mandar una petición d
 
 ### Ejemplo de peticiones
 
-Si queremos una página web, como por ejemplo: [http://developer.mozilla.org/](/ "Linkification: http://developer.mozilla.org/"), y además le indicamos al servidor que se preferiría la página en Francés, si fuera posible:
+Si queremos una página web, como por ejemplo: [http://developer.mozilla.org/](/), y además le indicamos al servidor que se preferiría la página en Francés, si fuera posible:
 
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: fr
+```
+GET / HTTP/1.1
+Host: developer.mozilla.org
+Accept-Language: fr
+```
 
 Observe la línea vacía al final, que separa el bloque de datos, del bloque de cabecera. Como no existe el campo `Content-Length` en la cabecera de HTTP, el bloque de datos está vacío, y ahí está el fin de la cabecera, permitiendo al servidor procesar la petición en el momento que recibe la línea vacía.
 
 Otro ejemplo, en el caso del envío de los datos de un formulario, la trama es:
 
-    POST /contact_form.php HTTP/1.1
-    Host: developer.mozilla.org
-    Content-Length: 64
-    Content-Type: application/x-www-form-urlencoded
+```
+POST /contact_form.php HTTP/1.1
+Host: developer.mozilla.org
+Content-Length: 64
+Content-Type: application/x-www-form-urlencoded
 
-    name=Juan%20Garcia&request=Envieme%20uno%20de%20sus%20catalogos
+name=Juan%20Garcia&request=Envieme%20uno%20de%20sus%20catalogos
+```
 
 ### Métodos de peticiones
 
@@ -72,54 +76,60 @@ Después de que el agente de usuario envía su petición, el servidor web lo pro
 
 La respuesta correcta de una página web, es como sigue:
 
-    HTTP/1.1 200 OK
-    Date: Sat, 09 Oct 2010 14:28:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-    ETag: "51142bc1-7449-479b075b2891b"
-    Accept-Ranges: bytes
-    Content-Length: 29769
-    Content-Type: text/html
+```
+HTTP/1.1 200 OK
+Date: Sat, 09 Oct 2010 14:28:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ETag: "51142bc1-7449-479b075b2891b"
+Accept-Ranges: bytes
+Content-Length: 29769
+Content-Type: text/html
 
-    <!DOCTYPE html... (aquí estarían los 29769 bytes de la página web pedida)
+<!DOCTYPE html... (aquí estarían los 29769 bytes de la página web pedida)
+```
 
 La respuesta para la petición de datos que han sido movidos permanentemente, sería:
 
-    HTTP/1.1 301 Moved Permanently
-    Server: Apache/2.2.3 (Red Hat)
-    Content-Type: text/html; charset=iso-8859-1
-    Date: Sat, 09 Oct 2010 14:30:24 GMT
-    Location: https://developer.mozilla.org/ (este es el nuevo enlace a los datos; se espera que el agente de usuario lo pida a continuación)
-    Keep-Alive: timeout=15, max=98
-    Accept-Ranges: bytes
-    Via: Moz-Cache-zlb05
-    Connection: Keep-Alive
-    X-Cache-Info: caching
-    X-Cache-Info: caching
-    Content-Length: 325 (se da una página por defecto para mostrar en el caso de que el agente de usuario no sea capaz de seguir el enlace)
+```
+HTTP/1.1 301 Moved Permanently
+Server: Apache/2.2.3 (Red Hat)
+Content-Type: text/html; charset=iso-8859-1
+Date: Sat, 09 Oct 2010 14:30:24 GMT
+Location: https://developer.mozilla.org/ (este es el nuevo enlace a los datos; se espera que el agente de usuario lo pida a continuación)
+Keep-Alive: timeout=15, max=98
+Accept-Ranges: bytes
+Via: Moz-Cache-zlb05
+Connection: Keep-Alive
+X-Cache-Info: caching
+X-Cache-Info: caching
+Content-Length: 325 (se da una página por defecto para mostrar en el caso de que el agente de usuario no sea capaz de seguir el enlace)
 
-    <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-    <html><head>
-    <title>301 Movido permanentemente</title>
-    </head><body>
-    <h1>Movido de forma permanente</h1>
-    <p>El documento ha sido movido <a href="https://developer.mozilla.org/">aquí</a>.</p>
-    <hr>
-    <address>Apache/2.2.3 (Red Hat) Servidor en: developer.mozilla.org Port 80</address>
-    </body></html>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Movido permanentemente</title>
+</head><body>
+<h1>Movido de forma permanente</h1>
+<p>El documento ha sido movido <a href="https://developer.mozilla.org/">aquí</a>.</p>
+<hr>
+<address>Apache/2.2.3 (Red Hat) Servidor en: developer.mozilla.org Port 80</address>
+</body></html>
+```
 
 Una notificación de que los datos pedidos no existen:
 
-    HTTP/1.1 404 Not Found
-    Date: Sat, 09 Oct 2010 14:33:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 May 2007 14:24:39 GMT
-    ETag: "499fd34e-29ec-42f695ca96761;48fe7523cfcc1"
-    Accept-Ranges: bytes
-    Content-Length: 10732
-    Content-Type: text/html
+```
+HTTP/1.1 404 Not Found
+Date: Sat, 09 Oct 2010 14:33:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 May 2007 14:24:39 GMT
+ETag: "499fd34e-29ec-42f695ca96761;48fe7523cfcc1"
+Accept-Ranges: bytes
+Content-Length: 10732
+Content-Type: text/html
 
-    <!DOCTYPE html... (contiene una página personalizada de ayuda al usuario para que pueda encontrar los datos que busca)
+<!DOCTYPE html... (contiene una página personalizada de ayuda al usuario para que pueda encontrar los datos que busca)
+```
 
 ### Códigos de estado de las respuestas
 

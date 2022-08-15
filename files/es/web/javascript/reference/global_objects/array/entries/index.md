@@ -18,7 +18,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/entries
 
 ## Sintaxis
 
-    arr.entries()
+```js
+arr.entries()
+```
 
 ### Valor de retorno
 

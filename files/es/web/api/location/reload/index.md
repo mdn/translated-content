@@ -17,9 +17,11 @@ El metodo **`location.reload()`** carga de nuevo la URL actual, como lo hace el 
 
 La recarga puede estar bloqueada y arrojar un `SECURITY_ERROR` {{domxref("DOMException")}} . Esto sucede si el {{Glossary("origin")}} de la llamada `location.reload()` difiere del origen de la página que posee el objeto { {domxref("Location")}}. Consulta [Same-origin policy](/es/docs/Web/Security/Same-origin_policy) para mayor información.
 
-## Syntax
+## Sintaxis
 
-    location.reload();
+```js
+location.reload();
+```
 
 ## Ejemplo
 

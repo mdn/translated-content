@@ -26,34 +26,44 @@ Por ejemplo:
 
 Creamos el archivo de audio usando:
 
-    ffmpeg -i my_master_file.webm -vn -acodec libvorbis -ab 128k my_audio.webm
+```bash
+ffmpeg -i my_master_file.webm -vn -acodec libvorbis -ab 128k my_audio.webm
+```
 
 Creamos los archivos de vídeo usando:
 
-    ffmpeg -i my_master_file.webm -vcodec libvpx -vb 250k -keyint_min 150 -g 150 -an my_video-250kbps.webm
-    ffmpeg -i my_master_file.webm -vcodec libvpx -vb 100k -keyint_min 150 -g 150 -an my_video-100kbps.webm
-    ffmpeg -i my_master_file.webm -vcodec libvpx -vb 50k -keyint_min 150 -g 150 -an my_video-50kbps.webm
+```bash
+ffmpeg -i my_master_file.webm -vcodec libvpx -vb 250k -keyint_min 150 -g 150 -an my_video-250kbps.webm
+ffmpeg -i my_master_file.webm -vcodec libvpx -vb 100k -keyint_min 150 -g 150 -an my_video-100kbps.webm
+ffmpeg -i my_master_file.webm -vcodec libvpx -vb 50k -keyint_min 150 -g 150 -an my_video-50kbps.webm
+```
 
 ### 2. Align the clusters to enable switching at cluster boundaries.
 
 For video:
 
-    samplemuxer -i my_video-250kbps.webm -o my_video-250kbps-final.webm
-    etc.
+```bash
+samplemuxer -i my_video-250kbps.webm -o my_video-250kbps-final.webm
+etc.
+```
 
 Although we don't switch audio streams, it's still necessary to run it through samplemuxer to ensure a cues element is added. Note: to be compatible with playing on Chrome, it is suggested to change the track number to something other than the one in the video files, most likely 0.
 
-    samplemuxer -i my_audio.webm -o my_audio-final.webm -output_cues 1 -cues_on_audio_track 1 -max_cluster_duration 2 -audio_track_number
+```bash
+samplemuxer -i my_audio.webm -o my_audio-final.webm -output_cues 1 -cues_on_audio_track 1 -max_cluster_duration 2 -audio_track_number
+```
 
 ### 3. Create the manifest file:
 
-    webm_dash_manifest -o my_video_manifest.mpd \
-      -as id=0,lang=eng \
-      -r id=0,file=my_video-250kbps-final.webm \
-      -r id=1,file=my_video-100kbps-final.webm \
-      -r id=2,file=my_video-50kbps-final.webm \
-      -as id=1,lang=eng \
-      -r id=4,file=my_audio-final.webm
+```bash
+webm_dash_manifest -o my_video_manifest.mpd \
+    -as id=0,lang=eng \
+    -r id=0,file=my_video-250kbps-final.webm \
+    -r id=1,file=my_video-100kbps-final.webm \
+    -r id=2,file=my_video-50kbps-final.webm \
+    -as id=1,lang=eng \
+    -r id=4,file=my_audio-final.webm
+```
 
 Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve .mpd files with mimetype="application/dash+xml", then you're all set.
 

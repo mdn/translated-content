@@ -10,7 +10,9 @@ La propiedad `pointerLockElement` conserva el elemento adquirido, para el evento
 
 ## Sintaxis
 
-    var elemento = document.pointerLockElement;
+```js
+var elemento = document.pointerLockElement;
+```
 
 ### Valor retornado
 

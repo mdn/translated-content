@@ -18,7 +18,9 @@ El método **`endsWith()`** determina si una cadena de texto termina con los car
 
 ## Sintaxis
 
-    str.endsWith(searchString[, position])
+```js
+str.endsWith(searchString[, position])
+```
 
 ### Parámetros
 

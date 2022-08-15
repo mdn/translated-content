@@ -11,14 +11,18 @@ Devuelve el nodo más profundo que contienen los nodos [startContainer](es/DOM/r
 
 ### Sintaxis
 
-    rangeAncestor = range.commonAncestorContainer;
+```js
+rangeAncestor = range.commonAncestorContainer;
+```
 
 ### Ejemplo
 
-    range = document.createRange();
-    range.setStart(startNode,startOffset);
-    range.setEnd(endNode,endOffset);
-    rangeAncestor = range.commonAncestorContainer;
+```js
+range = document.createRange();
+range.setStart(startNode,startOffset);
+range.setEnd(endNode,endOffset);
+rangeAncestor = range.commonAncestorContainer;
+```
 
 ### Notas
 

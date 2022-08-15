@@ -20,7 +20,9 @@ La propiedad **`border-width`** define el ancho del borde.
 
 ### Sintaxis
 
-     border-width: <border-width-value> {1,4} | {{ Cssxref("inherit", "heredado") }}
+```css
+ border-width: <border-width-value> {1,4} | {{ Cssxref("inherit", "heredado") }}
+```
 
 ### Valores
 
@@ -45,13 +47,15 @@ La propiedad **`border-width`** define el ancho del borde.
 
 ### Ejemplos
 
-[V](/samples/cssref/border.html)er el ejemplo en vivo
+[Ver el ejemplo en vivo](/samples/cssref/border.html)
 
-    element {
-        border-width: thin;
-        border-style: solid;
-        border-color: #000;
-    }
+```css
+element {
+    border-width: thin;
+    border-style: solid;
+    border-color: #000;
+}
+```
 
 ### Especificaciones
 

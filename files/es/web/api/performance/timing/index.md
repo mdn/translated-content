@@ -21,7 +21,9 @@ Esta propiedad no está disponible en workers.
 
 ## Sintaxis
 
-    var timingInfo = performance.timing;
+```js
+var timingInfo = performance.timing;
+```
 
 ## Especificaciones
 

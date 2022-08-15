@@ -21,7 +21,9 @@ translation_of: Web/API/Node/isSameNode
 
 ## Sintaxis
 
-    var isSameNode = node.isSameNode(other);
+```js
+var isSameNode = node.isSameNode(other);
+```
 
 - `other` El nodo contra el cual se realiza la comparación.
 

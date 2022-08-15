@@ -14,7 +14,9 @@ El constructor **`Error`** crea un objeto `Error`.
 
 ## Sintaxis
 
-    new Error([message[, fileName[, lineNumber]]])
+```js
+new Error([message[, fileName[, lineNumber]]])
+```
 
 ### Parámetros
 

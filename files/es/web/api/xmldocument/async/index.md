@@ -28,5 +28,5 @@ xmlDoc.load('querydata.xml');
 
 ## Véase también
 
-- [XML in Mozilla](/es/docs/XML_in_Mozilla "XML_in_Mozilla")
+- [XML in Mozilla](/es/docs/XML_in_Mozilla)
 - {{domxref("document.load")}}

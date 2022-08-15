@@ -11,13 +11,17 @@ Devuelve la codificación de caracteres (conjunto de caracteres) usado en el doc
 
 ### Sintaxis
 
-    string = document.characterSet
+```js
+string = document.characterSet
+```
 
 ### Ejemplo
 
-    <button onclick="alert(document.characterSet);"
-    >Mostrar conjunto de caracteres</button>
-    // devuelve el conjunto de caracteres del documento, por ejemplo "ISO-8859-1 o UTF-8"
+```js
+<button onclick="alert(document.characterSet);"
+>Mostrar conjunto de caracteres</button>
+// devuelve el conjunto de caracteres del documento, por ejemplo "ISO-8859-1 o UTF-8"
+```
 
 ### Notas
 

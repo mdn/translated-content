@@ -7,19 +7,21 @@ translation_of: Web/API/EventTarget/addEventListener
 
 ## Resumen
 
-`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget "DOM/EventTarget") puede ser un simple [elemento](/es/docs/DOM/element "DOM/element") en un archivo, el mismo [`documento`](/en-US/docs/DOM/document "DOM/document") , una [`ventana`](/en-US/docs/DOM/window "DOM/window") o un [`XMLHttpRequest`](/en-US/docs/DOM/XMLHttpRequest "XMLHttpRequest").
+`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget) puede ser un simple [elemento](/es/docs/DOM/element) en un archivo, el mismo [`documento`](/en-US/docs/DOM/document) , una [`ventana`](/en-US/docs/DOM/window) o un [`XMLHttpRequest`](/en-US/docs/DOM/XMLHttpRequest).
 
 Para registrar más de un eventListener, puedes llamar `addEventListener()` para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura.
 
 ## Sintaxis
 
-    target.addEventListener(tipo, listener[, useCapture]);
-    target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-standard_inline() }}]); // Gecko/Mozilla only
+```js
+target.addEventListener(tipo, listener[, useCapture]);
+target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-standard_inline() }}]); // Gecko/Mozilla only
+```
 
 - `tipo`
-  - : Una cadena representando el [tipo de evento](/es/docs/DOM/event.type "DOM/Event.type") a escuchar.
+  - : Una cadena representando el [tipo de evento](/es/docs/DOM/event.type) a escuchar.
 - `listener`
-  - : El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz [`EventListener`](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) o solo una [function](/es/docs/JavaScript/Guide/Functions "JavaScript/Guide/Functions") en JavaScript.
+  - : El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz [`EventListener`](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) o solo una [function](/es/docs/JavaScript/Guide/Functions) en JavaScript.
 - `useCapture` {{ optional_inline() }}
   - : Si es `true`, `useCapture` indica que el usuario desea iniciar la captura. Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al `listener` registrado antes de comenzar a ser controlados por algún `EventTarget` que esté por debajo en el arbol DOM del documento.
 
@@ -121,7 +123,7 @@ function load() {
 
 `addEventListener` es la forma de registrar un listener de eventos, como se especifica en W3C DOM. Sus beneficios son los siguientes:
 
-- Permite agregar mas de un listener a un solo evento. Esto es particularmente útil para las librerias [DHTML](/es/docs/DHTML "DHTML") o las [Extensiones de Mozilla](/es/docs/Extensions "Extensions") que deben funcionar bien, incluso si se utilizan otras librerias/extensiones.
+- Permite agregar mas de un listener a un solo evento. Esto es particularmente útil para las librerias [DHTML](/es/docs/DHTML) o las [Extensiones de Mozilla](/es/docs/Extensions) que deben funcionar bien, incluso si se utilizan otras librerias/extensiones.
 - Da un control mas detallado de la fase en la que el listener se activa (capturing vs. bubbling)
 - Funciona en cualquier elemento del DOM, no únicamente con elementos de HTML.
 
@@ -133,7 +135,7 @@ If an `EventListener` is added to an `EventTarget` while it is processing an eve
 
 ### Multiple identical event listeners
 
-If multiple identical `EventListener`s are registered on the same `EventTarget` with the same parameters, the duplicate instances are discarded. They do not cause the `EventListener` to be called twice, and since the duplicates are discarded, they do not need to be removed manually with the [removeEventListener](/es/docs/Web/API/EventTarget/removeEventListener "DOM/element.removeEventListener") method.
+If multiple identical `EventListener`s are registered on the same `EventTarget` with the same parameters, the duplicate instances are discarded. They do not cause the `EventListener` to be called twice, and since the duplicates are discarded, they do not need to be removed manually with the [removeEventListener](/es/docs/Web/API/EventTarget/removeEventListener) method.
 
 ### The value of `this` within the handler
 
@@ -148,7 +150,7 @@ In the example above, the value of `this` within `modifyText()` when called from
 
 The value of `this` within `modifyText()` when called from the onclick event will be a reference to the global (window) object.
 
-> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind "JavaScript/Reference/Global Objects/Function/bind") method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
+> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
 
 This is an example with and without `bind`:
 
@@ -248,7 +250,7 @@ for(i=0 ; i<els.length ; i++){
 }
 ```
 
-In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener "DOM/element.removeEventListener") because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
+In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
 
 ## Browser compatibility
 
@@ -256,8 +258,8 @@ In the first case, a new (anonymous) function is created at each loop turn. In t
 
 ## See Also
 
-- [element.removeEventListener()](/es/docs/DOM/element.removeEventListener "DOM/element.removeEventListener")
-- [Creating and triggering custom events](/es/docs/DOM/Creating_and_triggering_events "DOM/Creating_and_triggering_custom_events")
+- [element.removeEventListener()](/es/docs/DOM/element.removeEventListener)
+- [Creating and triggering custom events](/es/docs/DOM/Creating_and_triggering_events)
 - [More details on the use of `this` in event handlers](http://www.quirksmode.org/js/this.html)
 
 ## Specification

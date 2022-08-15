@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontsize
 
 ## Sintaxis
 
-    str.fontsize(size)
+```js
+str.fontsize(size)
+```
 
 ### Parámetros
 

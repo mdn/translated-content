@@ -12,9 +12,11 @@ La propiedad **`KeyboardEvent.metaKey`** es de solo lectura y regresa un valor {
 
 > **Nota:** En teclados Macintosh es la tecla comando (<kbd>⌘</kbd>). En teclados Windows la tecla es lla tecla window (<kbd>⊞</kbd>).
 
-## Syntax
+## Sintaxis
 
-    var metaKeyPressed = instanceOfKeyboardEvent.metaKey
+```js
+var metaKeyPressed = instanceOfKeyboardEvent.metaKey
+```
 
 ### Valor de retorno
 

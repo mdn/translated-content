@@ -13,7 +13,9 @@ Devuelve el nombre del nodo actual, en forma de cadena.
 
 ### Sintaxis
 
-    varstr =node.nodeName;
+```js
+var str = node.nodeName;
+```
 
 `str` es una variable de cadena en la que se almacena el nombre del elemento actual.
 
@@ -42,14 +44,18 @@ Aquí tenemos el valor devuelto por varios tipos de nodo.
 
 Dado el siguiente código:
 
-    <div id="d1">hola mundo</div>
-    <input type="text" id="t"/>
+```html
+<div id="d1">hola mundo</div>
+<input type="text" id="t"/>
+```
 
 y el siguiente script:
 
-    var div1 = document.getElementById("d1");
-    var text_field = document.getElementById("t");
-    text_field.value = div1.nodeName;
+```js
+var div1 = document.getElementById("d1");
+var text_field = document.getElementById("t");
+text_field.value = div1.nodeName;
+```
 
 En XHTML (o alguna otra forma de XML) el valor de `text_field` será "div". Sin embargo, en HTML, el valor de `text_field` sería "DIV".
 

@@ -20,7 +20,9 @@ Si el hijo(Child) **es una referencia**(hace referencia) hacia un nodo existente
 
 ## Sintaxis
 
-    element.appendChild(aChild);
+```js
+element.appendChild(aChild);
+```
 
 ### Parámetros
 

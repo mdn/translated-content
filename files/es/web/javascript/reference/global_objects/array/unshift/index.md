@@ -18,7 +18,9 @@ El método **`unshift()`** agrega uno o más elementos al inicio del array, y de
 
 ## Sintaxis
 
-    arr.unshift(elemento1[, ...[, elementoN]])
+```js
+arr.unshift(elemento1[, ...[, elementoN]])
+```
 
 ### Parámetros
 

@@ -185,7 +185,7 @@ partial interface MouseEvent {
 
 > **Nota:** The movement attributes are currently prefixed as `.mozMovementX` and `.mozMovementY` in Firefox, and`.webkitMovementX` and `.webkitMovementY` in Chrome.
 
-Two new parameters to mouse events—`movementX` and `movementY`—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of [`MouseEvent`](/en/DOM/MouseEvent "en/DOM/Event/UIEvent/MouseEvent") properties, `screenX` and `screenY`, which are stored in two subsequent `mousemove` events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
+Two new parameters to mouse events—`movementX` and `movementY`—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of [`MouseEvent`](/en/DOM/MouseEvent) properties, `screenX` and `screenY`, which are stored in two subsequent `mousemove` events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
 
 ### Locked state
 
@@ -215,4 +215,4 @@ While iframes work by default, "sandboxed" iframes block Pointer lock. The abili
 
 ## See also
 
-[MouseEvent](/en/DOM/MouseEvent "en/DOM/Event/UIEvent/MouseEvent")
+[MouseEvent](/en/DOM/MouseEvent)

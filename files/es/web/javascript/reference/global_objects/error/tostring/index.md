@@ -14,7 +14,9 @@ El método **`toString()`** devuelve una cadena que representa el objeto {{JSxRe
 
 ## Sintaxis
 
-    e.toString()
+```js
+e.toString()
+```
 
 ### Valor de retorno
 

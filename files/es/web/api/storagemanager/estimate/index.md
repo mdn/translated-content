@@ -21,7 +21,9 @@ El método **`estimate()`** de la interfaz {{domxref("StorageManager")}} solicit
 
 ## Sintaxis
 
-    var estimatePromise = StorageManager.estimate();
+```js
+var estimatePromise = StorageManager.estimate();
+```
 
 ### Parámetros
 

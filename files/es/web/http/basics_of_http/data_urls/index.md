@@ -18,7 +18,9 @@ original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 
 Los datos URIs se componen de cuatro partes a: un prefijo (`data:`), un tipo MIME que indica el tipo de datos, un token `base64` opcional no textual, y los datos en si:
 
-    data:[<mediatype>][;base64],<data>
+```
+data:[<mediatype>][;base64],<data>
+```
 
 El `mediatype` es una cadena de tipo MIME, por ejemplo `'image/jpeg'` para un archivo de imagen JPEG. si se omite, será por defecto `text/plain;charset=US-ASCII`
 
@@ -39,15 +41,19 @@ Algunos ejemplos:
 
 Esto se puede hacer fácilmente desde la línea de comandos usando `uuencode,`una utilidad disponible en sistemas Linux y Mac OS X:
 
-    uuencode -m infile remotename
+```bash
+uuencode -m infile remotename
+```
 
 El parámetro `infile` es el nombre para el archivo que desees decodificar en formato base64, y `remotename` es el nombre remoto para el archivo, que no se utilizará realmente en los datos de las URLs.
 
 La salida será similar a esto:
 
-    xbegin-base64 664 test
-    YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
-    ====
+```
+xbegin-base64 664 test
+YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
+====
+```
 
 El URI de datos utilizará los datos codificados después de la cabezera inicial.
 

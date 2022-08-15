@@ -18,9 +18,11 @@ También puedes definir funciones generadoras usando el constructor {{jsxref("Ge
 
 ## Sintaxis
 
-    function* nombre([param[, param[, ... param]]]) {
-       instrucciones
-    }
+```js
+function* nombre([param[, param[, ... param]]]) {
+    instrucciones
+}
+```
 
 - `nombre`
   - : El nombre de la función.

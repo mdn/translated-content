@@ -14,7 +14,9 @@ Un **empty statement** o sentencia vacía es usada para no proveer una sentencia
 
 ## Sintaxis
 
-    ;
+```xml
+;
+```
 
 ## Descripción
 

@@ -24,16 +24,18 @@ translation_of: Web/EXSLT
 
 Para usar una extensión de EXSLT, necesitas declarar su espacio de nombres como una extensión de espacio de nombres en tu hoja de estilo. Por ejemplo, para utilizar el paquete de expresiones regulares:
 
-    <xsl:stylesheet version="1.0"
-                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                    xmlns:regexp="http://exslt.org/regular-expressions"
-                    extension-element-prefixes="regexp">
+```xml
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:regexp="http://exslt.org/regular-expressions"
+                extension-element-prefixes="regexp">
 
-    <xsl:import href="regexp.xsl" />
+<xsl:import href="regexp.xsl" />
 
-    ...
+...
 
-    </xsl:stylesheet>
+</xsl:stylesheet>
+```
 
 ### Common
 

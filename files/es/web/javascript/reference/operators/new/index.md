@@ -19,7 +19,9 @@ El **operador `new`** permite a los desarrolladores crear una instancia de un ti
 
 ## Sintaxis
 
-    new constructor[([arguments])]
+```
+new constructor[([arguments])]
+```
 
 ### Parámetros
 

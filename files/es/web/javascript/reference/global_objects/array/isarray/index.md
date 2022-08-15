@@ -24,7 +24,9 @@ Array.isArray(undefined);  // false
 
 ## Sintaxis
 
-    Array.isArray(obj)
+```js
+Array.isArray(obj)
+```
 
 ### Parámetros
 

@@ -15,7 +15,9 @@ La versión de plantilla de `set:difference` aplica plantillas a estos nodos en 
 
 ### Sintaxis
 
-    set:difference(conjuntoNodos1,conjuntoNodos2)
+```xml
+set:difference(conjuntoNodos1,conjuntoNodos2)
+```
 
 ### Argumentos
 

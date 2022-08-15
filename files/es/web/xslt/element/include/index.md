@@ -13,7 +13,9 @@ El elemento `<xsl:include>` une el contenido de una hoja de estilo con otra. A d
 
 ### Sintaxis
 
-    <xsl:include href=URI />
+```xml
+<xsl:include href=URI />
+```
 
 ### Atributos requeridos
 

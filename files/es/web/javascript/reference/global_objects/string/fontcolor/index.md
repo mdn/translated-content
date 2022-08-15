@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontcolor
 
 ## Sintaxis
 
-    str.fontcolor(color)
+```js
+str.fontcolor(color)
+```
 
 ### Parametros
 

@@ -9,7 +9,9 @@ Devuelve el elemento {{HTMLElement("head")}} del documento actual. Si hay más d
 
 ## Sintaxis
 
-    var objRef = document.head;
+```js
+var objRef = document.head;
+```
 
 ## Ejemplo
 

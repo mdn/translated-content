@@ -13,13 +13,15 @@ original_slug: Web/JavaScript/Referencia/Operadores/async_function
 
 La palabra clave **`async function`** puede ser utilizada para definir funciones `async` dentro de expresiones.
 
-También se pueden definir funciones asíncronas utilizando un[enunciado de función asíncrona](/es/docs/Web/JavaScript/Reference/Statements/async_function "The async function keyword can be used to define async functions inside expressions.").
+También se pueden definir funciones asíncronas utilizando un[enunciado de función asíncrona](/es/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Sintaxis
 
-    async function [nombre]([param1[, param2[, ..., paramN]]]) {
-       enunciados
-    }
+```js
+async function [nombre]([param1[, param2[, ..., paramN]]]) {
+    enunciados
+}
+```
 
 A partir de ES2015 (ES6), también se pueden emplear [funciones flecha.](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 

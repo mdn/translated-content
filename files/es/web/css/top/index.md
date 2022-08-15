@@ -23,7 +23,7 @@ Para los elementos con una posición relativa (aquellos que tienen la propiedad 
 Cuando se define tanto la propiedad `top`como {{cssxref("bottom")}} para un elemento, y {{cssxref("height")}} no se ha definido, tiene un valor `auto`o 100%, tanto la distancia `top`como {{cssxref("bottom")}} se respetan. Si {{cssxref("height")}} está definida, la aplicación de la propiedad `top`tiene precedencia y {{cssxref("bottom")}} será ignorada.
 
 - {{ Xref_cssinitial() }}: {{ Cssxref("auto") }}
-- Aplicable a: [Posicionar Elementos](/es/CSS/position "es/CSS/position")
+- Aplicable a: [Posicionar Elementos](/es/CSS/position)
 - {{ Xref_cssinherited() }}: no
 - Porcentajes: se refieren a la altura del bloque contenedor.
 - Medio: {{ Xref_cssvisual() }}
@@ -31,64 +31,68 @@ Cuando se define tanto la propiedad `top`como {{cssxref("bottom")}} para un elem
 
 ### Sintaxis
 
-       top: <longitud> | <porcentaje> | auto | inherit
+```css
+   top: <longitud> | <porcentaje> | auto | inherit
+```
 
 ### Ejemplos
 
-     /* se puede también usar unidades px para posicionar body para luego operar con el div */
-     body{
-       width: 100%;
-       height: 100%;
-     }
-     /* ahora podemos operar con unidades de porcentajes (con al 100% respecto de body) */
-     div{
-       position:absolute;
-       left:15%;
-       top:30%;
-       bottom:30%;
-       width:70%;
-       height:40%;
-       text-align:left;
-       border: 3px rgb(0,0,0) solid;
-     }
+```css
+/* se puede también usar unidades px para posicionar body para luego operar con el div */
+body{
+  width: 100%;
+  height: 100%;
+}
+/* ahora podemos operar con unidades de porcentajes (con al 100% respecto de body) */
+div{
+  position:absolute;
+  left:15%;
+  top:30%;
+  bottom:30%;
+  width:70%;
+  height:40%;
+  text-align:left;
+  border: 3px rgb(0,0,0) solid;
+}
+```
 
-     <?xml version="1.0" encoding="utf-8"?>
-     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-     <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-       <head>
-         <meta http-equiv="Content-Type" content="application/xhtml+xml" />
-         <title>Mozzila.org height top left width porcentaje CSS</title>
-         <style type="text/css">
-           /* se puede también usar unidades px para posicionar body para luego operar con el div */
-           body{
-             width: 100%;
-             height: 100%;
-           }
-           /* ahora podemos operar con unidades de porcentajes (con respecto al 100% del body) */
-           div{
-             position:absolute;
-             left:15%;
-             top:30%;
-             bottom:30%;
-             width:70%;
-             height:40%;
-             text-align:left;
-             border: 3px rgb(0,0,0) solid;
-           }
-         </style>
-       </head>
-       <body>
-          <center>
-            <div>
-                 ...Contenido...
-            </div>
-          </center>
+```html
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml" />
+    <title>Mozzila.org height top left width porcentaje CSS</title>
+    <style type="text/css">
+      /* se puede también usar unidades px para posicionar body para luego operar con el div */
+      body{
+        width: 100%;
+        height: 100%;
+      }
+      /* ahora podemos operar con unidades de porcentajes (con respecto al 100% del body) */
+      div{
+        position:absolute;
+        left:15%;
+        top:30%;
+        bottom:30%;
+        width:70%;
+        height:40%;
+        text-align:left;
+        border: 3px rgb(0,0,0) solid;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div>
+            ...Contenido...
+      </div>
+    </center>
 
-       </body>
-     </html>
-
-###
+  </body>
+</html>
+```
 
 ### Especificaciones
 

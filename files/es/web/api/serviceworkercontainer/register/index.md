@@ -13,8 +13,10 @@ Existe una confusión frecuente en torno al significado y uso del alcance. Dado 
 
 ## Sintaxis
 
-    ServiceWorkerContainer.register(scriptURL, options)
-      .then(function(ServiceWorkerRegistration) { ... });
+```js
+ServiceWorkerContainer.register(scriptURL, options)
+  .then(function(ServiceWorkerRegistration) { ... });
+```
 
 ### Parámetros
 

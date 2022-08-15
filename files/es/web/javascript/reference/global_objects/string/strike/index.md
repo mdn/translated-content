@@ -21,7 +21,9 @@ Causa que una cadena se muestre como texto tachado, como si estuviese dentro de 
 
 ## Sintaxis
 
-    cadena.strike()
+```js
+cadena.strike()
+```
 
 ## Descripción
 

@@ -23,7 +23,9 @@ La propiedad `ime-mode` controla el estado del método de entrada del editor par
 
 ### Sintaxis
 
-    ime-mode: <mode>
+```
+ime-mode: <mode>
+```
 
 ### Valores
 
@@ -40,7 +42,9 @@ La propiedad `ime-mode` controla el estado del método de entrada del editor par
 
 ### Ejemplos
 
-    <input type="text" name="name" value="initial value" style="ime-mode: disabled">
+```html
+<input type="text" name="name" value="initial value" style="ime-mode: disabled">
+```
 
 Este ejemplo inhabilita/desactiva el editor de entradas para este campo. Esto podría ser necesario para los campos que entran datos en una base de datos que no soporta el juego de caracteres extendido, por ejemplo.
 
@@ -48,9 +52,11 @@ Este ejemplo inhabilita/desactiva el editor de entradas para este campo. Esto po
 
 A diferencia de Internet Explorer, la implementación de Firefox de `ime-mode` permite aplicar esta propiedad a los campos de edición de clave de usuario (passwords). Sin embargo, no es la mejor experiencia para el usuario y los campos de clave de usuario deberían desactivar el IME. Los usuarios pueden corregir el comportamiento inapropiado de los sitios que no sigan esta recomendación poniendo la siguiente regla CSS en su archivo de reglas CSS:
 
-    input[type=password] {
-     ime-mode: auto !important;
-    }
+```css
+input[type=password] {
+  ime-mode: auto !important;
+}
+```
 
 > > **Nota:** En general, no es apropiado por un sitio público la manipulación el estado del modo de IME. Esta propiedad debería usarse para aplicaciones web o similares.
 

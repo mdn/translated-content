@@ -10,17 +10,19 @@ El método **catch()** retorna una `Promise` y solo se ejecuta en los casos en l
 
 ## Síntaxis
 
-    p.catch(onRejected);
-
-    p.catch(function(reason) {
-       // rejection
-    });
+```js
+p.catch(onRejected);
+p.catch(function(reason) {
+    // rejection
+});
+```
 
 ### Parámetros
 
 - onRejected
-  - : Una {{jsxref("Function")}} llamada cuando la `Promise` es rechazada. Esta función tiene un argumento:_ `reason`
-    _ : La razón del rechazo.La promesa devuelta por `catch()` es rechazada si `onRejected` lanza un error o retorna una `Promise` que a su vez se rechaza, de cualquier otra manera la `Promise` es resuelta.
+  - : Una {{jsxref("Function")}} llamada cuando la `Promise` es rechazada. Esta función tiene un argumento:
+    - `reason`
+      - : La razón del rechazo.La promesa devuelta por `catch()` es rechazada si `onRejected` lanza un error o retorna una `Promise` que a su vez se rechaza, de cualquier otra manera la `Promise` es resuelta.
 
 ### Valor de Retorno (Return)
 

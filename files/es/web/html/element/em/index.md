@@ -28,9 +28,11 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_
 
 ### Ejemplos
 
-     <p>
-         <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
-     </p>
+```html
+<p>
+    <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
+</p>
+```
 
 ### Comentarios
 

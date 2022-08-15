@@ -5,7 +5,7 @@ translation_of: Web/CSS/inline-size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`inline-size`** define el tamaño horizontal o vertical de un bloque de elementos, dependiendo del modo de escritura. Esto corresponde ya sea a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor de {{cssxref("writing-mode")}}.
+La propiedad de [CSS](/es/docs/Web/CSS) **`inline-size`** define el tamaño horizontal o vertical de un bloque de elementos, dependiendo del modo de escritura. Esto corresponde ya sea a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor de {{cssxref("writing-mode")}}.
 
 {{EmbedInteractiveExample("pages/css/inline-size.html")}}
 

@@ -17,15 +17,19 @@ translation_of: Web/CSS/inherit
 
 Para las propiedades [heredadas](es/CSS/inheritance#Propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
 
-      /* hacer las cabeceras de segundo nivel, verdes */
-      h2 { color: green; }
+```css
+/* hacer las cabeceras de segundo nivel, verdes */
+h2 { color: green; }
 
-      /* ...pero deja aquellas cabeceras dentro de de la barra lateral con el valor por defecto (el valor que tenga el elemento padre */
-      #sidebar h2 { color: inherit; }
+/* ...pero deja aquellas cabeceras dentro de de la barra lateral con el valor por defecto (el valor que tenga el elemento padre */
+#sidebar h2 { color: inherit; }
+```
 
 Ten en cuenta que en este ejemplo, el elemento `h2` dentro de sidebar, puede tener un color distinto. Por ejemplo, si alguno de los elementos es un hijo de un elemento div con la siguiente regla:
 
-     div#current { color: blue; }
+```css
+div#current { color: blue; }
+```
 
 el elemento será azul.
 

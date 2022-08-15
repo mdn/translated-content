@@ -29,13 +29,16 @@ El valor devuelto de la función **reductora** se asigna al acumulador, cuyo val
 
 ## Sintaxis
 
-    arr.reduce(callback(acumulador, valorActual[, índice[, array]])[, valorInicial])
+```js
+arr.reduce(callback(acumulador, valorActual[, índice[, array]])[, valorInicial])
+```
 
 ### Parámetros
 
 - `callback`
-  - : Función a ejecutar sobre cada elemento del array (excepto para el primero, si no se proporciona `valorInicial`), que recibe cuatro parámetros:_ `acumulador`
-    _ : El acumulador acumula el valor devuelto por la función callback. Es el valor acumulado devuelto en la última invocación de callback, o el `valorInicial`, si se proveyó. (Ver a continuación).
+  - : Función a ejecutar sobre cada elemento del array (excepto para el primero, si no se proporciona `valorInicial`), que recibe cuatro parámetros:
+    - `acumulador`
+      - : El acumulador acumula el valor devuelto por la función callback. Es el valor acumulado devuelto en la última invocación de callback, o el `valorInicial`, si se proveyó. (Ver a continuación).
     - `valorActual`
       - : El elemento actual que está siendo procesado en el array.
     - `índice` {{optional_inline}}

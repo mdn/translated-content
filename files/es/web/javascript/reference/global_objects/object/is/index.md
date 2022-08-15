@@ -17,9 +17,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 
 El método **`Object.is()`** determina si dos valores [son iguales](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
-## Síntaxis
+## Sintaxis
 
-    Object.is(valor1, valor2);
+```js
+Object.is(valor1, valor2);
+```
 
 ### Parámetros
 
@@ -100,8 +102,6 @@ if (!Object.is) {
 ## Compatibilidad en navegadores
 
 {{Compat("javascript.builtins.Object.is")}}
-
-##
 
 ## Ver también
 

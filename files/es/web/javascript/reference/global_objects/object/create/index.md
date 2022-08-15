@@ -20,7 +20,9 @@ El método **`Object.create()`** crea un objeto nuevo, utilizando un objeto exis
 
 ## Sintaxis
 
-    Object.create(proto[, propertiesObject])
+```js
+Object.create(proto[, propertiesObject])
+```
 
 ### Parámetros
 

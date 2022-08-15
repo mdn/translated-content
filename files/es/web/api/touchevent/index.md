@@ -82,7 +82,7 @@ Sent when a touch point has been disrupted in some way. There are several possib
 
 ## Ejemplo
 
-See the [example on the main Touch events article](/en/DOM/Touch_events#Example "en/DOM/Touch events#Example").
+See the [example on the main Touch events article](/en/DOM/Touch_events#Example).
 
 ## Especificaciones
 

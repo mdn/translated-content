@@ -13,7 +13,9 @@ translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 
 ## Mensaje
 
-    TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
+TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
 
 ## Tipo de Error
 

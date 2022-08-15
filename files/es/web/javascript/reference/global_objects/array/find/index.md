@@ -25,13 +25,16 @@ El método **`find()`** devuelve el **valor** del **primer elemento** del array 
 
 ## Sintaxis
 
-    arr.find(callback(element[, index[, array]])[, thisArg])
+```js
+arr.find(callback(element[, index[, array]])[, thisArg])
+```
 
 ### Parámetros
 
 - `callback`
-  - : Función que se ejecuta sobre cada valor en el array, tomando tres argumentos:_ `element`
-    _ : El elemento actual que se está procesando en el array.
+  - : Función que se ejecuta sobre cada valor en el array, tomando tres argumentos:
+    - `element`
+      - : El elemento actual que se está procesando en el array.
     - `index` {{optional_inline}}
       - : El índice (posición) del elemento actual que se está procesando en el array.
     - `array` {{optional_inline}}

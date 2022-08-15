@@ -9,7 +9,9 @@ El método `stopPropagation()` de la interfaz {{domxref("Event")}} evita la prop
 
 ## Sintaxis
 
-    event.stopPropagation();
+```js
+event.stopPropagation();
+```
 
 ## Ejemplo
 

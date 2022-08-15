@@ -16,7 +16,9 @@ Retorna el número de píxeles que han sido desplazados en el documento mediante
 
 ## Sintaxis
 
-    var y = window.scrollY;
+```js
+var y = window.scrollY;
+```
 
 - y es el número de píxeles que se han desplazado actualmente desde el extremo superior de la página.
 
@@ -37,7 +39,9 @@ Usa esta propiedad para verificar que al documento no se le ha hecho scroll, si 
 
 La propiedad `pageYOffset` es un alias para la propiedad `scrollY`:
 
-    window.pageYOffset == window.scrollY; // Siempre verdadero
+```js
+window.pageYOffset == window.scrollY; // Siempre verdadero
+```
 
 Para compatibilidad entre navegadores, es recomendable usar window\.pageYOffset en vez de window\.scrollY. **Adicionalmente**, tener en cuenta que versiones más viejas de Internet Explorer (<9) no soportan del todo la propiedad y debe ser solucionado usando propiedades no estandarizadas . Un ejemplo totalmente compatible entre navegadores:
 

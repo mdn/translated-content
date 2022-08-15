@@ -13,71 +13,77 @@ Cancela el evento si este es cancelable, sin detener el resto del funcionamiento
 
 ### Sintaxis
 
-    event.preventDefault()
+```js
+event.preventDefault()
+```
 
 ### Ejemplo
 
 Cambiar el estado de una caja de selección es la función por defecto de la acción de hacer clic sobre la caja. Este ejemplo ilustra como hacer que esto no ocurra:
 
-    <html>
-    <head>
-    <title>ejemplo de preventDefault</title>
+```html
+<html>
+<head>
+<title>ejemplo de preventDefault</title>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-    function stopDefAction(evt) {
-      evt.preventDefault();
-    }
-    </script>
-    </head>
+function stopDefAction(evt) {
+  evt.preventDefault();
+}
+</script>
+</head>
 
-    <body>
+<body>
 
-    <p>Por favor, haz clic sobre la caja de selección.</p>
+<p>Por favor, haz clic sobre la caja de selección.</p>
 
-    <form>
-    <input type="checkbox" onclick="stopDefAction(event);"/>
-    <label for="checkbox">Selección</label>
-    </form>
+<form>
+<input type="checkbox" onclick="stopDefAction(event);"/>
+<label for="checkbox">Selección</label>
+</form>
 
-    </body>
-    </html>
+</body>
+</html>
+```
 
 Puedes ver `preventDefault` en acción [aquí](http://developer.mozilla.org/samples/domref/dispatchEvent.html).
 
 El siguiente ejemplo demuestra cómo puede evitarse que un texto invalido entre en un campo de formulario mediante preventDefault().
 
-    <html>
-    <head>
-    <title>preventDefault example</title>
+```html
+<html>
+<head>
+<title>preventDefault example</title>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-    function checkName(evt) {
-    var charCode = evt.charCode;
+function checkName(evt) {
+var charCode = evt.charCode;
 
-      if (charCode != 0) {
-        if (charCode < 97 || charCode > 122) {
-          evt.preventDefault();
-          alert("Por favor usa sólo letras minúsculas." + "\n"
-                + "charCode: " + charCode + "\n"
-          );
-        }
-      }
+  if (charCode != 0) {
+    if (charCode < 97 || charCode > 122) {
+      evt.preventDefault();
+      alert("Por favor usa sólo letras minúsculas." + "\n"
+            + "charCode: " + charCode + "\n"
+      );
     }
+  }
+}
 
-    </script>
-    </head>
+</script>
+</head>
 
-    <body>
+<body>
 
-    <p>Por favor entra tu nombre en letras minúsculas solamente.</p>
-    <form>
-    <input type="text" onkeypress="checkName(event);"/>
-    </form>
+<p>Por favor entra tu nombre en letras minúsculas solamente.</p>
+<form>
+<input type="text" onkeypress="checkName(event);"/>
+</form>
 
-    </body>
-    </html>
+</body>
+</html>
+```
 
 ### Notas
 

@@ -12,9 +12,11 @@ La función **`Math.log2()`** retorna el logaritmo base 2 de un número, esto es
 
 {{EmbedInteractiveExample("pages/js/math-log2.html")}}
 
-## Syntax
+## Sintaxis
 
-    Math.log2(x)
+```js
+Math.log2(x)
+```
 
 ### Parámetros
 

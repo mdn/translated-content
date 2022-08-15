@@ -13,7 +13,9 @@ El método `initEvent` se usa para dar valor inicial a un [evento](es/DOM/event)
 
 ### Sintaxis
 
-    event.initEvent(type,bubbles,cancelable)
+```js
+event.initEvent(type,bubbles,cancelable)
+```
 
 - `type`
   - : El tipo de evento.
@@ -26,9 +28,11 @@ Nota: Un valor binario puede tener sólo valores 1 y 0. En lógica de Boole, cie
 
 ### Ejemplo
 
-    // crea un evento "click" que puede ser recurrente y
-    // NO puede ser cancelado.
-    event.initEvent("click", true, false);
+```js
+// crea un evento "click" que puede ser recurrente y
+// NO puede ser cancelado.
+event.initEvent("click", true, false);
+```
 
 ### Notas
 

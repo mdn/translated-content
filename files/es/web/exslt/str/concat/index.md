@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/str/concat
 
 ### Sintaxis
 
-    str:concat(conjuntoNodos)
+```xml
+str:concat(conjuntoNodos)
+```
 
 ### Argumentos
 

@@ -16,7 +16,9 @@ La función en JavaScrcrip **`Math.log()`** es equivalente a _ln(x)_ en matemati
 
 ## Sintaxis
 
-    Math.log(x)
+```js
+Math.log(x)
+```
 
 ### Parametetros
 

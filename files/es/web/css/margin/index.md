@@ -129,8 +129,6 @@ Sin embargo, en navegadores antiguos como IE8-9, **flexbox** no está disponible
 
 {{Compat("css.properties.margin")}}
 
-##
-
 ## Ver también
 
 - [Entendiendo el colapso de margen](es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing)

@@ -18,7 +18,9 @@ La propiedad de sólo lectura **`History.length`** retorna un entero representan
 
 ## Sintaxis
 
-    const length = history.length
+```js
+const length = history.length
+```
 
 ## Especificaciones
 

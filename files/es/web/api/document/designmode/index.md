@@ -16,8 +16,10 @@ translation_of: Web/API/Document/designMode
 
 ## Sintaxis
 
-    var mode = document.designMode;
-    document.designMode = "on" || "off";
+```js
+var mode = document.designMode;
+document.designMode = "on" || "off";
+```
 
 ## Ejemplo
 

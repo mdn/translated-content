@@ -9,7 +9,9 @@ El **`Document.hidden`** Es una propiedad solo de lectura, retorna un valor Bool
 
 ## Sintaxis
 
-    var boolean = document.hidden
+```js
+var boolean = document.hidden
+```
 
 ## Ejemplo
 

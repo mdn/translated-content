@@ -20,7 +20,9 @@ Usa este método en lugar del método {{jsxref("Date.prototype.getYear()", "getY
 
 ## Sintaxis
 
-    dateObj.getFullYear()
+```js
+dateObj.getFullYear()
+```
 
 ### Valor devuelto
 

@@ -27,7 +27,9 @@ A partir de CSS3, el asterisco se puede usar en combinación con {{cssxref("CSS_
 
 ## Sintaxis
 
-    * { style properties }
+```css
+* { style properties }
+```
 
 El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.warning` son equivalentes.
 

@@ -19,7 +19,9 @@ El método **`substr()`** devuelve los caracteres de una cadena que comienzan en
 
 ## Sintaxis
 
-    cadena.substr(inicio[, longitud])
+```js
+cadena.substr(inicio[, longitud])
+```
 
 ### Parámetros
 
@@ -60,12 +62,14 @@ console.log("(20, 2): "  + cadena.substr(20,2));  // '(20, 2): '
 
 Este script muestra:
 
-    (1,2): bc
-    (-3,2): hi
-    (-3): hij
-    (1): bcdefghij
-    (-20, 2): ab
-    (20, 2):
+```
+(1,2): bc
+(-3,2): hi
+(-3): hij
+(1): bcdefghij
+(-20, 2): ab
+(20, 2):
+```
 
 ## Vea También
 

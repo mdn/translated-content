@@ -17,7 +17,9 @@ El constructor **`URLSearchParams()`** crea y retorna un nuevo objeto {{domxref(
 
 ## Sintaxis
 
-    var URLSearchParams = new URLSearchParams(init);
+```js
+var URLSearchParams = new URLSearchParams(init);
+```
 
 ### Parámetros
 

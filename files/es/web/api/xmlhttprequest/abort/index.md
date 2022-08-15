@@ -19,7 +19,9 @@ El método **XMLHttpRequest.abort()** aborta la petición si ha sido enviada. Cu
 
 ## Sintaxis
 
-    xhrInstance.abort();
+```js
+xhrInstance.abort();
+```
 
 ### Parámetros
 

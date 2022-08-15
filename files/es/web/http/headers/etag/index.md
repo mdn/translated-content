@@ -15,8 +15,10 @@ Si el recurso en una URL dada cambia, un valor Etag debe ser generado. De esta f
 
 ## Sintaxis
 
-    ETag: W/"<valor_etag>"
-    ETag: "<valor_etag>"
+```
+ETag: W/"<valor_etag>"
+ETag: "<valor_etag>"
+```
 
 ## Directivas
 
@@ -27,8 +29,10 @@ Si el recurso en una URL dada cambia, un valor Etag debe ser generado. De esta f
 
 ## Ejemplos
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-    ETag: W/"0815"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+ETag: W/"0815"
+```
 
 ### Evitando las colisiones en el aire
 
@@ -36,11 +40,15 @@ Con la ayuda del `ETag` y los encabezados {{HTTPHeader("If-Match")}} se puede se
 
 Por ejemplo cuando se edita MDN, el contenido wiki actual es etiquetado y puesto en un `Etag` en la respuesta:
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 Cuando se guarda los cambios de una página a una página wiki (datos posteados), la petición {{HTTPMethod("POST")}} contendrá el encabezado que contiene los valores `ETag` para revisar la frescura entre ellas.
 
-    If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 Si las etiquetas no concuerdan, significa que el documento ha sido editado de por sí y se lanza un error {{HTTPStatus("412")}}`Precondition Failed`.
 
@@ -48,7 +56,9 @@ Si las etiquetas no concuerdan, significa que el documento ha sido editado de po
 
 Otro caso típico del uso del encabezado `ETag` es el cacheo de recursos que no han variado. Si un usuario visita una URL dada nuevamente (la que tiene un conjunto `ETag`), y está _viciado_, es decir que es muy viejo para considerarlo usable, el cliente enviará el valor de su `ETag` a través de un campo de encabezado {{HTTPHeader("If-None-Match")}}:
 
-    If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 El servidor compara el `ETag` del cliente (enviado con un `If-None-Match`) con el `ETag` para su versión actual del recurso y si ambos valores concuerdan (esto es, el recurso no ha cambiado), el servidor envió un estado {{HTTPStatus("304")}}`Not Modified`, sin ningún cuerpo, lo cual le dice al cliente que la versión cacheada de la respuesta todavía es buena para usar (_refrescar_).
 

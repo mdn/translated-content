@@ -15,7 +15,9 @@ Termina la ejecución de las sentencias de la iteración actual del bucle actual
 
 ## Sintaxis
 
-    continue [ etiqueta ];
+```js
+continue [ etiqueta ];
+```
 
 - `label`
   - : Identificador asociado con la etiqueta de la sentencia.
@@ -53,22 +55,24 @@ En el siguiente ejemplo, una sentencia etiquetada `checkiandj` contiene una sent
 
 Si `continue` tuviese una etiqueta `checkiandj`, el programa continuaría hasta encima de la sentencia `checkiandj`.
 
-    checkiandj:
-    while (i < 4) {
-       document.write(i + "<br>");
-       i += 1;
+```js
+checkiandj:
+while (i < 4) {
+   document.write(i + "<br>");
+   i += 1;
 
-       checkj:
-       while (j > 4) {
-          document.write(j + "<br>");
-          j -= 1;
-          if ((j % 2) == 0)
-             continue checkj;
-          document.write(j + " is odd.<br>");
-       }
-       document.write("i = " + i + "<br>");
-       document.write("j = " + j + "<br>");
-    }
+   checkj:
+   while (j > 4) {
+      document.write(j + "<br>");
+      j -= 1;
+      if ((j % 2) == 0)
+         continue checkj;
+      document.write(j + " is odd.<br>");
+   }
+   document.write("i = " + i + "<br>");
+   document.write("j = " + j + "<br>");
+}
+```
 
 ## Vea También
 

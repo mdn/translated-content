@@ -16,9 +16,11 @@ El método **`Object.isSealed()`** si el objeto está sellado.
 
 {{EmbedInteractiveExample("pages/js/object-issealed.html")}}
 
-## Syntax
+## Sintaxis
 
-    Object.isSealed(obj)
+```js
+Object.isSealed(obj)
+```
 
 ### Parámetros
 

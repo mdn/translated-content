@@ -102,7 +102,7 @@ Los paréntesis alrededor de cualquier parte del patrón de expresión regular h
 
 ## Usar expresiones regulares en JavaScript
 
-Las expresiones regulares se utilizan con los métodos `RegExp` `test()` y `exec()` y con los métodos de `String`, `match()`, `replace()`, `search()` y `split()`. Estos métodos se explican en detalle en la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference "/es/docs/JavaScript/Reference").
+Las expresiones regulares se utilizan con los métodos `RegExp` `test()` y `exec()` y con los métodos de `String`, `match()`, `replace()`, `search()` y `split()`. Estos métodos se explican en detalle en la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 | Método                                                           | Descripción                                                                                                                                  |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |

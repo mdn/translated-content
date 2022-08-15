@@ -43,9 +43,9 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
   - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
 - {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL. If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:").
+  - : Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL. If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a `ServiceWorkerContainer` in an array. If the method can't return {{domxref("ServiceWorkerRegistration")}} objects, it returns a [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:").
+  - : Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a `ServiceWorkerContainer` in an array. If the method can't return {{domxref("ServiceWorkerRegistration")}} objects, it returns a [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Examples
 

@@ -13,7 +13,9 @@ La cabecera de petición **`Authorization`** contiene las credenciales para aute
 
 ## Sintaxis
 
-    Authorization: <tipo> <credenciales>
+```
+Authorization: <tipo> <credenciales>
+```
 
 ## Directivas
 
@@ -28,7 +30,9 @@ La cabecera de petición **`Authorization`** contiene las credenciales para aute
 
 ## Ejemplos
 
-    Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
 
 Ver también[HTTP authentication](/es/docs/Web/HTTP/Authentication) para ejemplos sobre cómo configurar servidores Apache o nginx para proteger su sitio con contraseña usando la autenticación básica HTTP.
 

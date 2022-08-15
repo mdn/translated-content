@@ -16,7 +16,9 @@ Crea un nuevo evento, que debe ser inicializado llamando a su método `init()`.
 
 ### Sintaxis
 
-    document.createEvent(tipo);
+```js
+document.createEvent(tipo);
+```
 
 - `tipo`
   - : Una string indicando el tipo de evento a crear.
@@ -25,7 +27,9 @@ Este método devuelve un nuevo objeto {{ domxref("Event") }} del DOM del tipo in
 
 ### Ejemplo
 
-    var nuevoEvento = document.createEvent("UIEvents");
+```js
+var nuevoEvento = document.createEvent("UIEvents");
+```
 
 ### Especificación
 

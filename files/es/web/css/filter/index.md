@@ -16,7 +16,7 @@ translation_of: Web/CSS/filter
 
 La propiedad CSS **`filter`** dota de efectos gráficos como el desenfoque o cambio de color en la representación antes de que se muestre el elemento. Los filtros se utilizan comúnmente para ajustar la representación de imágenes, fondos o bordes.
 
-Hay varias funciones Incluidas en el estándar CSS que logran efectos predefinidos. También puede hacer referencia a un filtro especificado en SVG con una URL a un [filtro de un elemento SVG](/es/docs/Web/SVG/Element/filter "/en/SVG/Element/filter").
+Hay varias funciones Incluidas en el estándar CSS que logran efectos predefinidos. También puede hacer referencia a un filtro especificado en SVG con una URL a un [filtro de un elemento SVG](/es/docs/Web/SVG/Element/filter).
 
 > **Nota:** Versiones anteriores (4.0 hasta 9.0) del navegador Internet Explorer de Windows admiten una propiedad ["filter"](<https://msdn.microsoft.com/es-es/library/ms532853(v=vs.85).aspx>) no incluida en el estándar que ha quedado en desuso.
 
@@ -48,11 +48,15 @@ filter: unset;
 
 Con una función, use el siguiente código:
 
-    filter: <filter-function> [<filter-function>]* | none
+```
+filter: <filter-function> [<filter-function>]* | none
+```
 
 Para referenciar a al valor {{SVGElement("filter")}} de un elemento SVG, use el siguiente código:
 
-    filter: url(file.svg#filter-element-id)
+```css
+filter: url(file.svg#filter-element-id)
+```
 
 ### Interpolación
 
@@ -1131,7 +1135,7 @@ table.standard-table td {
 
 ## Véase también
 
-- [Aplicando efectos de SVG a contenido HTML](/es/docs/Applying_SVG_effects_to_HTML_content "En/Applying SVG effects to HTML content")
+- [Aplicando efectos de SVG a contenido HTML](/es/docs/Applying_SVG_effects_to_HTML_content)
 - La propiedad {{ Cssxref("mask") }}
-- [SVG](/es/docs/SVG "En/SVG")
+- [SVG](/es/docs/SVG)
 - [Entendiendo los filtros CSS](http://www.html5rocks.com/en/tutorials/filters/understanding-css/), artículo en inglés de HTML5Rocks!

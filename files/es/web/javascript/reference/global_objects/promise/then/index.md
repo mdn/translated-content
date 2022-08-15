@@ -18,13 +18,15 @@ Nota: Si ambos argumentos son omitidos, o se proveen métodos que no sean funcio
 
 ## Sintaxis
 
-    p.then(alCumplir[, enRechazo]);
+```js
+p.then(alCumplir[, enRechazo]);
 
-    p.then(function(value) {
-       // cumplimiento
-      }, function(reason) {
-      // rechazo
-    });
+p.then(function(value) {
+    // cumplimiento
+  }, function(reason) {
+  // rechazo
+});
+```
 
 ### Parámetros
 
@@ -49,28 +51,30 @@ Un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) en e
 
 Veamos un ejemplo para demostrar la asincronía del método `then`.
 
-    // al usar una promesa revuelta, el bloque 'then' se lanzará automáticamente,
-    // pero sus funciones controladoras se lanzarán asíncronamente,
-    // como demuestran los console.logs
-    var promResuelta = Promise.resolve(33);
+```js
+// al usar una promesa revuelta, el bloque 'then' se lanzará automáticamente,
+// pero sus funciones controladoras se lanzarán asíncronamente,
+// como demuestran los console.logs
+var promResuelta = Promise.resolve(33);
 
-    var thenProm = promResuelta.then(función(valor){
-        console.log("ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: " + valor);
-        return valor;
-    });
-    // imprimimos al momento el valor de thenProm()
+var thenProm = promResuelta.then(función(valor){
+    console.log("ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: " + valor);
+    return valor;
+});
+// imprimimos al momento el valor de thenProm()
+console.log(thenProm);
+
+// usando setTimeout podemos posponer la ejecución de una función al momento en el que el stack quede vacío.
+setTimeout(función(){
     console.log(thenProm);
-
-    // usando setTimeout podemos posponer la ejecución de una función al momento en el que el stack quede vacío.
-    setTimeout(función(){
-        console.log(thenProm);
-    });
+});
 
 
-    // logs, en orden:
-    // Promise {[[EstadoPromise¡]]: "pendiente", [[ValorPromise]]: undefined}
-    // "ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: "33"
-    // Promise {[[EstadoPromise]]: "resuelta", [[ValorPromise]]: 33}
+// logs, en orden:
+// Promise {[[EstadoPromise¡]]: "pendiente", [[ValorPromise]]: undefined}
+// "ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: "33"
+// Promise {[[EstadoPromise]]: "resuelta", [[ValorPromise]]: 33}
+```
 
 ## Descripción
 
@@ -251,25 +255,27 @@ p3.then(funcion(v) {
 });
 ```
 
-### [`window.setImmediate`](/es/docs/Web/API/Window/setImmediate "This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates.") estilo polyfill basado en promesas
+### [`window.setImmediate`](/es/docs/Web/API/Window/setImmediate) estilo polyfill basado en promesas
 
 Usar un método {{jsxref("Function.prototype.bind()")}}`Reflect.apply` ({{jsxref("Reflect.apply()")}}) para crear un (non-cancellable) setImmediate-style function.
 
-    const nextTick = (() => {
-      const noop = () => {}; // literally
-      const nextTickPromise = () => Promise.resolve().then(noop);
+```js
+const nextTick = (() => {
+  const noop = () => {}; // literally
+  const nextTickPromise = () => Promise.resolve().then(noop);
 
-      const rfab = Reflect.apply.bind; // (thisArg, fn, thisArg, [...args])
-      const nextTick = (fn, ...args) => (
-        fn !== undefined
-        ? Promise.resolve(args).then(rfab(null, fn, null))
-        : nextTickPromise(),
-        undefined
-      );
-      nextTick.ntp = nextTickPromise;
+  const rfab = Reflect.apply.bind; // (thisArg, fn, thisArg, [...args])
+  const nextTick = (fn, ...args) => (
+    fn !== undefined
+    ? Promise.resolve(args).then(rfab(null, fn, null))
+    : nextTickPromise(),
+    undefined
+  );
+  nextTick.ntp = nextTickPromise;
 
-      return nextTick;
-    })();
+  return nextTick;
+})();
+```
 
 ## Especificaciones
 

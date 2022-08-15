@@ -17,15 +17,19 @@ El servidor incluye en esta respuesta una cabecera {{HTTPHeader("Upgrade")}} par
 
 ## Estado
 
-    101 Switching Protocols
+```
+101 Switching Protocols
+```
 
 ## Ejemplos
 
 El cambio de protocolos se podría usar con [WebSockets](/es/docs/Web/API/WebSockets_API).
 
-    HTTP/1.1 101 Switching Protocols
-    Upgrade: websocket
-    Connection: Upgrade
+```
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+```
 
 ## Especificaciones
 

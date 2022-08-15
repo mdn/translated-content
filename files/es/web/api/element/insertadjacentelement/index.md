@@ -9,7 +9,9 @@ El método **`insertAdjacentElement()`** inserta un elemento nodo dado en una po
 
 ## Sintaxis
 
-    elementoObjetivo.insertAdjacentElement(posición, elemento);
+```js
+elementoObjetivo.insertAdjacentElement(posición, elemento);
+```
 
 ### Parameters
 
@@ -34,13 +36,15 @@ El elemento insertado o `null`, si la inserción falla.
 
 ### Visualización de los nombres de posición
 
-    <!-- beforebegin -->
-    <p>
-      <!-- afterbegin -->
-      foo
-      <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+```html
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 > **Nota:** Las posiciones `beforebegin` y `afterend` sólo funcionan si el nodo está en un árbol y tiene un padre.
 

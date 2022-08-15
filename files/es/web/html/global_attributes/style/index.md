@@ -28,8 +28,6 @@ El [atributo global](/es/docs/Web/HTML/Atributos_Globales)**style** contiene dec
 
 {{Compat("html.global_attributes.style")}}
 
-##
-
 ## Ver también
 
 - [atributos globales.](/es/docs/Web/HTML/Atributos_Globales)

@@ -11,7 +11,9 @@ Este método devuelve un valor de ID de seguimiento que se puede utilizar para a
 
 ## Sintaxis
 
-    id = navigator.geolocation.watchPosition(success, error, options)
+```js
+id = navigator.geolocation.watchPosition(success, error, options)
+```
 
 ### Parámetros
 

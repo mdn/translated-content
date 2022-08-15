@@ -12,7 +12,9 @@ La función **`Math.sin()`**`devuelve el seno de un número`.
 
 ## Sintaxis
 
-    Math.sin(x)
+```js
+Math.sin(x)
+```
 
 ### Parámetros
 

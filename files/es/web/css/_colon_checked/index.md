@@ -158,7 +158,7 @@ Este ejemplo utiliza la pseudoclase `:checked` para permitir al usuario alternar
 
 Puede usar la pseudoclase `:checked` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el usuario hace clic en una miniatura. Vea [esta demostración](/@api/deki/files/6268/=css-checked-gallery.zip).
 
-> **Nota:** Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/CSS/:hover "CSS/:hover") y sin radioboxes ocultos, vea [esta demostración](/@api/deki/files/6247/=css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/CSS/:hover "CSS/:hover").
+> **Nota:** Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/CSS/:hover) y sin radioboxes ocultos, vea [esta demostración](/@api/deki/files/6247/=css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/CSS/:hover).
 
 ## Especificaciones
 

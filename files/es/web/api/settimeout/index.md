@@ -15,9 +15,11 @@ El método **`setTimeout()`** del mixin {{domxref("WindowOrWorkerGlobalScope")}}
 
 ## Sintaxis
 
-    var idTemporizador = scope.setTimeout(funcion[, retraso, parametro1, parametro2, ...]);
-    var idTimeout = scope.setTimeout(funcion[, retraso]);
-    var idTimeout = scope.setTimeout(codigo[, retraso]);
+```js
+var idTemporizador = scope.setTimeout(funcion[, retraso, parametro1, parametro2, ...]);
+var idTimeout = scope.setTimeout(funcion[, retraso]);
+var idTimeout = scope.setTimeout(codigo[, retraso]);
+```
 
 ### Parámetros
 
@@ -71,7 +73,7 @@ function clearAlert() {
 
 {{ EmbedLiveSample('Example') }}
 
-Vea también [`clearTimeout()` example](/es/docs/DOM/window.clearTimeout#Example "en-US/docs/DOM/window.clearTimeout#Example").
+Vea también [`clearTimeout()` example](/es/docs/DOM/window.clearTimeout#Example).
 
 ## Callback arguments
 
@@ -125,8 +127,8 @@ Si quiere una solución completamente no intrusiva con otros navegadores móvile
   // conditional IE < 9 only fix
   @if (@_jscript_version <= 6)
   (function(f){
-     window.setTimeout =f(window.setTimeout);
-     window.setInterval =f(window.setInterval);
+     window.setTimeout = f(window.setTimeout);
+     window.setInterval = f(window.setInterval);
   })(function(f){return function(c,t){var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}});
   @end
 @*/
@@ -137,8 +139,8 @@ O usar un enfoque más limpio basado en el condicional para IE de HTML:
 ```html
 <!--[if lt IE 9]><script>
 (function(f){
-window.setTimeout =f(window.setTimeout);
-window.setInterval =f(window.setInterval);
+window.setTimeout = f(window.setTimeout);
+window.setInterval = f(window.setInterval);
 })(function(f){return function(c,t){
 var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}
 });
@@ -151,7 +153,7 @@ Otra posibilidad es usar una función anónima para llamar el callback, pero est
 var intervalID = setTimeout(function() { myFunc("uno", "dos", "tres"); }, 1000);
 ```
 
-Sin embargo, otra posibilidad es usar [function's bind](/es/docs/JavaScript/Reference/Global_Objects/Function/bind "/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind"). Ejemplo:
+Sin embargo, otra posibilidad es usar [function's bind](/es/docs/JavaScript/Reference/Global_Objects/Function/bind). Ejemplo:
 
 ```js
 setTimeout(function(arg1){}.bind(undefined, 10));
@@ -159,7 +161,7 @@ setTimeout(function(arg1){}.bind(undefined, 10));
 
 ## El problema "`this`"
 
-Cuando pasa un método a `setTimeout()` (o cualquier otra función , por el estilo), podría ser invocada con el valor de `this` equivocado. Este problema es explicado en detalle en la [referencia de JavaScript](/es/docs/JavaScript/Reference/Operators/this#Method_binding "en-US/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator#Method_binding").
+Cuando pasa un método a `setTimeout()` (o cualquier otra función , por el estilo), podría ser invocada con el valor de `this` equivocado. Este problema es explicado en detalle en la [referencia de JavaScript](/es/docs/JavaScript/Reference/Operators/this#Method_binding).
 
 ### Explicación
 
@@ -223,11 +225,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 No hay soluciones nativas _ad hoc_ a este problema.
 
-> **Nota:** JavaScript 1.8.5 introduce el método [`Function.prototype.bind(`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind "en-US/docs/JavaScript/Reference/Global Objects/Function/bind"), que permite especificar el valor que debería usarse como `this` para todas las llamadas a una función dada. Esto permite evitar fácilmente los problemas en los que no es claro que será, dependiendo del contexto desde el cual la función sea llamada.
+> **Nota:** JavaScript 1.8.5 introduce el método [`Function.prototype.bind(`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar el valor que debería usarse como `this` para todas las llamadas a una función dada. Esto permite evitar fácilmente los problemas en los que no es claro que será, dependiendo del contexto desde el cual la función sea llamada.
 
 ## Notas
 
-Puede cancelar el temporizador usando [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout "en-US/docs/DOM/window.clearTimeout"). Si desea tener una función llamada repetidamente (p.e., cada N milisegundos), considere usar [`window.setInterval()`](/en-US/docs/DOM/window.setInterval "en-US/docs/DOM/window.setInterval").
+Puede cancelar el temporizador usando [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout). Si desea tener una función llamada repetidamente (p.e., cada N milisegundos), considere usar [`window.setInterval()`](/en-US/docs/DOM/window.setInterval).
 
 Es importante notar que la función o fragmento de código no puede ser ejecutado hasta que el hilo que llamó `setTimeout()`haya terminado.
 

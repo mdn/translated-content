@@ -17,7 +17,9 @@ La propiedad de solo lectura **`HTMLElement.offsetParent`** retorna una referenc
 
 ## Sintaxis
 
-    parentObj = element.offsetParent;
+```js
+parentObj = element.offsetParent;
+```
 
 - _parentObj_ es una referencia de objeto al elemento en el cual el elemento actual es offset.
 

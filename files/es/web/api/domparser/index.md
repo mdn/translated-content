@@ -7,13 +7,13 @@ translation_of: Web/API/DOMParser
 
 `DOMParser` puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un [Documento](/es/docs/Web/API/Document) DOM. `DOMParser` está especificado en [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
 
-Tener en cuenta que [XMLHttpRequest](/es/docs/DOM/XMLHttpRequest "DOM/XMLHttpRequest") soporta parsear XML y HTML desde recursos direccionables por URL.
+Tener en cuenta que [XMLHttpRequest](/es/docs/DOM/XMLHttpRequest) soporta parsear XML y HTML desde recursos direccionables por URL.
 
 ## Creando un DOMParser
 
 Para crear un objeto `DOMParser`simplemente usar `new DOMParser()`.
 
-Para más información sobre crear un objeto `DOMParser` en extensiones Firefox, por favor vea la documentación de [`nsIDOMParser`](/es/docs/nsIDOMParser "nsIDOMParser").
+Para más información sobre crear un objeto `DOMParser` en extensiones Firefox, por favor vea la documentación de [`nsIDOMParser`](/es/docs/nsIDOMParser).
 
 ## Parseando XML
 
@@ -120,11 +120,9 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 {{Compat("api.DOMParser")}}
 
-##
-
 ## Ver también
 
-- [Parsing and serializing XML](/es/docs/Parsing_and_serializing_XML "Parsing_and_serializing_XML")
+- [Parsing and serializing XML](/es/docs/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/es/docs/XMLHttpRequest)
-- [XMLSerializer](/es/docs/XMLSerializer "XMLSerializer")
+- [XMLSerializer](/es/docs/XMLSerializer)
 - [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)

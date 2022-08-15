@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/set/trailing
 
 ### Sintaxis
 
-    set:trailing(conjuntoNodos1,conjuntoNodos2)
+```xml
+set:trailing(conjuntoNodos1,conjuntoNodos2)
+```
 
 ### Argumentos
 

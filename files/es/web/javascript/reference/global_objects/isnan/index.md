@@ -12,7 +12,9 @@ La función **`isNaN()`** determina cuando el valor es {{jsxref("NaN")}} o no. T
 
 ## Sintaxis
 
-    isNaN(valor)
+```js
+isNaN(valor)
+```
 
 ### Parámetros
 

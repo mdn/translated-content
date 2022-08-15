@@ -10,7 +10,7 @@ original_slug: Web/XML/Introducción_a_XML
 ---
 XML es un lenguaje de marcado similar a HTML. Significa Extensible Markup Language (Lenguaje de Marcado Extensible) y es una especificación de [W3C](https://www.w3.org/TR/xml/) como lenguaje de marcado de propósito general. Esto significa que, a diferencia de otros lenguajes de marcado, XML no está predefinido, por lo que debes definir tus propias etiquetas. El propósito principal del lenguaje es compartir datos a través de diferentes sistemas, como Internet.
 
-Hay muchos lenguajes basados en XML; Algunos ejemplos son [XHTML](/es/docs/XHTML "en/XHTML"), [MathML](/es/docs/Web/MathML "en/MathML"), [SVG](/es/docs/Web/SVG "en/SVG"), [XUL](/es/docs/Mozilla/Tech/XUL "en/XUL"), [XBL](/es/docs/XBL "en/XBL"), [RSS](/es/docs/Archive/RSS "en/RSS"), y [RDF](/es/docs/RDF "en/RDF"). También puedes crear uno propio.
+Hay muchos lenguajes basados en XML; Algunos ejemplos son [XHTML](/es/docs/XHTML), [MathML](/es/docs/Web/MathML), [SVG](/es/docs/Web/SVG), [XUL](/es/docs/Mozilla/Tech/XUL), [XBL](/es/docs/XBL), [RSS](/es/docs/Archive/RSS), y [RDF](/es/docs/RDF). También puedes crear uno propio.
 
 ## XML "Correcto" (válido y bien formado)
 
@@ -38,7 +38,7 @@ Ahora veamos una versión correcta del mismo documento:
 </message>
 ```
 
-Para ser válido, un documento XML necesita cumplir ciertas reglas de semántica que son generalmente definidas en un esquema XML o en una **[Definición de Tipo de Documento](/es/docs/Glossary/DTD "en/DTD")** (DTD). Un documento que contiene una etiqueta no definida es inválido. Por ejemplo, si nunca definimos la etiqueta `<warning>`, el documento anterior no sería válido.
+Para ser válido, un documento XML necesita cumplir ciertas reglas de semántica que son generalmente definidas en un esquema XML o en una **[Definición de Tipo de Documento](/es/docs/Glossary/DTD)** (DTD). Un documento que contiene una etiqueta no definida es inválido. Por ejemplo, si nunca definimos la etiqueta `<warning>`, el documento anterior no sería válido.
 
 > **Nota:** La mayoría de los navegadores ofrecen un depurador que puede identificar documentos XML mal formados.
 
@@ -54,15 +54,17 @@ Al igual que HTML, XML ofrece métodos (llamados entidades) para referir a algun
 | &quot;  | "        | Comilla doble                  |
 | &apos;  | '        | Apóstrofe (o comilla sencilla) |
 
-Aunque solo hay cinco entidades declaradas, se pueden añadir más usando el [DTD](/es/docs/Glossary/DTD "en/DTD") del documento. Por ejemplo, para crear una nueva entidad `&warning;`, puedes hacer esto:
+Aunque solo hay cinco entidades declaradas, se pueden añadir más usando el [DTD](/es/docs/Glossary/DTD) del documento. Por ejemplo, para crear una nueva entidad `&warning;`, puedes hacer esto:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE body [
-      <!ENTITY warning "Advertencia: Algo malo pasó... porfavor intente de nuevo.">
-    ]>
-    <body>
-      <message> &warning; </message>
-    </body>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+  <!ENTITY warning "Advertencia: Algo malo pasó... porfavor intente de nuevo.">
+]>
+<body>
+  <message> &warning; </message>
+</body>
+```
 
 También puedes usar referencias a caracteres numéricas para especificar caracteres especiales; por ejemplo, \&#xA9; es el símbolo "©".
 
@@ -70,19 +72,23 @@ También puedes usar referencias a caracteres numéricas para especificar caract
 
 XML es generalmente para propósitos descriptivos, pero hay maneras de presentar datos XML. Si no defines una manera específica de renderizar XML, el contenido puro de XML es mostrado en el navegador.
 
-Una forma de estilizar la salida de XML es especificando [CSS](/es/docs/Web/CSS "en/CSS") que aplique al documento usando la instrucción de procesamiento `xml-stylesheet`.
+Una forma de estilizar la salida de XML es especificando [CSS](/es/docs/Web/CSS) que aplique al documento usando la instrucción de procesamiento `xml-stylesheet`.
 
-    <?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```xml
+<?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```
 
-También hay otra manera más poderosa de presentar XML: **Extensible Stylesheet Language Transformations** ([XSLT](/es/docs/Web/XSLT "en/XSLT")) que puede ser usado para transformar XML a otros lenguajes como HTML. Esto hace a XML increíblemente versátil.
+También hay otra manera más poderosa de presentar XML: **Extensible Stylesheet Language Transformations** ([XSLT](/es/docs/Web/XSLT)) que puede ser usado para transformar XML a otros lenguajes como HTML. Esto hace a XML increíblemente versátil.
 
-    <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```xml
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```
 
 ## Recomendaciones
 
 Este artículo es, obviamente, sólo una breve introducción a los que es XML, con unos pocos ejemplos pequeños y referencias para iniciar. Para más detalles acerca de XML, busca en la Web artículos más a fondo.
 
-Aprender el Lenguaje de Marcado de Hipertexto ([HTML](/es/docs/Web/HTML "en/HTML")) te ayudará a entender mejor XML.
+Aprender el Lenguaje de Marcado de Hipertexto ([HTML](/es/docs/Web/HTML)) te ayudará a entender mejor XML.
 
 ## Véase también
 

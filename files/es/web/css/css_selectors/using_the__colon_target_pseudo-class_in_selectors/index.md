@@ -10,7 +10,7 @@ original_slug: Web/CSS/Selectores_CSS/Usando_la_pseudo-clase_:target_en_selector
 ---
 When a URL points at a specific piece of a document, it can be difficult to ascertain. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience. {{CSSRef}}
 
-Como ayuda para identificar el destino de un enlace que apunta a una parte específica de un documento, los [Selectores CSS3](http://www.w3.org/TR/css3-selectors/#target-pseudo) incluyen la [pseudo-clase](/en/CSS/Pseudo-classes "Pseudo-classes") {{ Cssxref(":target") }}.
+Como ayuda para identificar el destino de un enlace que apunta a una parte específica de un documento, los [Selectores CSS3](http://www.w3.org/TR/css3-selectors/#target-pseudo) incluyen la [pseudo-clase](/en/CSS/Pseudo-classes) {{ Cssxref(":target") }}.
 
 ### Seleccionando un objetivo (target)
 
@@ -18,30 +18,38 @@ La pseudo-clase `{{ Cssxref(":target") }}` es usada para estilizar el elemento o
 
 Supongamos que se quiere estilizar cualquier elemento `h2` que sea el objetivo de una URI, pero no queremos que cualquier otro elemento tenga esos mismos estilos. Es así de simple:
 
-    h2:target {font-weight: bold;}
+```css
+h2:target {font-weight: bold;}
+```
 
 También es posible crear estilos específicos para fragmentos particulares del documento. Esto se hace usando el mismo valor del identificador que se encuentra en la URI. Así, para añadir un borde al fragmento `#Example`, escribiremos:
 
-    #Example:target {border: 1px solid black;}
+```css
+#Example:target {border: 1px solid black;}
+```
 
 ### Aplicando estilos a todos los elementos objetivo
 
 Si lo que se intenta es crear un estilo que cubra a todos los elementos objetivo, se puede usar el selector universal:
 
-    :target {color: red;}
+```css
+:target {color: red;}
+```
 
 ### Ejemplo
 
 En el siguiente ejemplo, hay cinco enlaces que apuntan a elementos en el mismo documento. Seleccionar el enlace "First", por ejemplo, causará que `<h1 id="one">` sea el elemento objetivo. Nótese que el documento puede desplazarse a una nueva posición, pues los elementos objetivo están ubicados en la parte superior de la ventana del navegador cuando es posible.
 
-    <h4 id="one">...</h4> <p id="two">...</p>
-    <div id="three">...</div> <a id="four">...</a> <em id="five">...</em>
+```html
+<h4 id="one">...</h4> <p id="two">...</p>
+<div id="three">...</div> <a id="four">...</a> <em id="five">...</em>
 
-    <a href="#one">First</a>
-    <a href="#two">Second</a>
-    <a href="#three">Third</a>
-    <a href="#four">Fourth</a>
-    <a href="#five">Fifth</a>
+<a href="#one">First</a>
+<a href="#two">Second</a>
+<a href="#three">Third</a>
+<a href="#four">Fourth</a>
+<a href="#five">Fifth</a>
+```
 
 ### Conclusión
 
@@ -50,7 +58,7 @@ En los casos en los que un identificador de fragmento apunte a una porción del 
 ### Enlaces relacionados
 
 - [Selectores CSS3 #target-pseudo](http://www.w3.org/TR/css3-selectors/#target-pseudo)
-- [Referencia CSS :target](/es/CSS/:target "En/CSS/:target")
+- [Referencia CSS :target](/es/CSS/:target)
 
 ### Información del Documento Original
 

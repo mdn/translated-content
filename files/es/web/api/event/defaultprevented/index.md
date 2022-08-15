@@ -13,13 +13,17 @@ Retorna un boleano indicando si {{ domxref("event.preventDefault()") }} fue llam
 
 ### Sintaxis
 
-    bool = event.defaultPrevented
+```js
+bool = event.defaultPrevented
+```
 
 ### Ejemplo
 
-     if (e.defaultPrevented) {
-       /* El evento por defecto fue prevenido */
-     }
+```js
+if (e.defaultPrevented) {
+  /* El evento por defecto fue prevenido */
+}
+```
 
 ### Compatibilidad del Navegador
 

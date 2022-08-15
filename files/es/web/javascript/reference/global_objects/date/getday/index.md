@@ -15,7 +15,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getDay
 
 ## Sintaxis
 
-    dateObj.getDay()
+```js
+dateObj.getDay()
+```
 
 ### Parámetros
 

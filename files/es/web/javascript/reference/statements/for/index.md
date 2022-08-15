@@ -15,7 +15,9 @@ Crea un bucle que consiste en tres expresiones opcionales, encerradas en parént
 
 ## Sintaxis
 
-    for ([expresion-inicial]; [condicion]; [expresion-final])sentencia
+```js
+for ([expresion-inicial]; [condicion]; [expresion-final])sentencia
+```
 
 - `expresion-inicial`
   - : Una expresión (incluyendo las expresiones de asignación) o la declaración de variable. Típicamente se utiliza para usarse como variable contador. Esta expresión puede opcionalmente declarar nuevas variables con la palabra clave `var`. Estas variables no son locales del bucle, es decir, están en el mismo alcance en el que está el bucle `for`. El resultado de esta expresión es descartado.
@@ -35,10 +37,12 @@ Crea un bucle que consiste en tres expresiones opcionales, encerradas en parént
 
 La siguiente sentencia `for` comienza mediante la declaración de la variable `i` y se inicializa a `0`. Comprueba que `i` es menor que nueve, realiza las dos sentencias con éxito e incrementa `i` en 1 después de cada pase del bucle.
 
-    for (var i = 0; i < 9; i++) {
-       n += i;
-       mifuncion(n);
-    }
+```js
+for (var i = 0; i < 9; i++) {
+    n += i;
+    mifuncion(n);
+}
+```
 
 ## Vea También
 

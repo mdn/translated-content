@@ -21,7 +21,9 @@ La cantidad de rotación generada por la propiedad `rotate()` se define mediante
 
 ## Síntaxis
 
-    rotate(a)
+```css
+rotate(a)
+```
 
 ## Valores
 

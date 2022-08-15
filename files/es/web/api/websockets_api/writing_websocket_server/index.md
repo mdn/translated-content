@@ -24,7 +24,7 @@ WebSocket se comunica a través de conexiones [TCP (Transmission Control Protoco
 
 Constructor:
 
-```cpp
+```cs
 TcpListener(System.Net.IPAddress localaddr, int port)
 ```
 
@@ -40,7 +40,7 @@ Métodos:
 
 Aquí está como utilizar lo que hemos aprendido:
 
-```cpp
+```cs
 ​using System.Net.Sockets;
 using System.Net;
 using System;
@@ -75,19 +75,21 @@ Propiedades:
 
 Métodos:
 
-```cpp
+```cs
 Write(Byte[] buffer, int offset, int size)
 ```
 
 Escribe bytes desde el _buffer;_ el _offset_ y el _size_ determinan la longitud del mensaje.
 
-    Read(Byte[] buffer, int offset, int size)
+```cs
+Read(Byte[] buffer, int offset, int size)
+```
 
 Lee bytes al _buffer;_ el _offset_ y el _size_ determinan la longitud del mensaje.
 
 Ampliemos nuestro ejemplo anterior.
 
-```cpp
+```cs
 TcpClient client = server.AcceptTcpClient();
 
 Console.WriteLine("Un cliente conectado.");
@@ -110,26 +112,28 @@ Cuando un cliente se conecta al servidor, envía una solicitud GET para actualiz
 
 Este código de ejemplo detecta el GET desde el cliente. Nota que esto bloqueará hasta los 3 primeros bytes del mensaje disponible. Soluciones alternativas deben ser investigadas para ambientes de producción.
 
-    using System.Text;
-    using System.Text.RegularExpressions;
+```cs
+using System.Text;
+using System.Text.RegularExpressions;
 
-    while(client.Available < 3)
-    {
-       // wait for enough bytes to be available
-    }
+while(client.Available < 3)
+{
+    // wait for enough bytes to be available
+}
 
-    Byte[] bytes = new Byte[client.Available];
+Byte[] bytes = new Byte[client.Available];
 
-    stream.Read(bytes, 0, bytes.Length);
+stream.Read(bytes, 0, bytes.Length);
 
-    //translate bytes of request to string
-    String data = Encoding.UTF8.GetString(bytes);
+//translate bytes of request to string
+String data = Encoding.UTF8.GetString(bytes);
 
-    if (Regex.IsMatch(data, "^GET")) {
+if (Regex.IsMatch(data, "^GET")) {
 
-    } else {
+} else {
 
-    }
+}
+```
 
 Esta respuesta es fácil de construir, pero puede ser un poco díficil de entender. La explicación completa del _handshake_ al servidor puede encontrarse en [RFC 6455, section 4.2.2](/es/docs/WebSockets-840092-dup/RFC%206455,%20section%204.2.2). Para nuestros propósitos, solo construiremos una respuesta simple.
 
@@ -140,7 +144,7 @@ Debes:
 3. Calcular el código SHA-1 y Base64
 4. Escribe el valor _Sec-WebSocket-Accept_ en el encabezado como parte de la respuesta HTTP.
 
-```cpp
+```cs
 if (new Regex("^GET").IsMatch(data)) {
     Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + Environment.NewLine
         + "Connection: Upgrade" + Environment.NewLine
@@ -192,7 +196,7 @@ byte decodificado = byte codificado XOR (posición del byte codificado Mod 4) by
 
 Ejemplo en C#:
 
-```cpp
+```cs
 Byte[] decoded = new Byte[3];
 Byte[] encoded = new Byte[3] {112, 16, 109};
 Byte[] key = Byte[4] {61, 84, 35, 6};

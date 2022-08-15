@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/str/tokenize
 
 ### Sintaxis
 
-    str:tokenize(cadena,delimitadores)
+```xml
+str:tokenize(cadena,delimitadores)
+```
 
 ### Argumentos
 
@@ -28,16 +30,20 @@ Un conjunto de nodos de elementos `token`, que contiene cada uno un trozo (token
 
 Por ejemplo:
 
-    str:tokenize('2007-09-14-03T11:40:23', '-T:')
+```xml
+str:tokenize('2007-09-14-03T11:40:23', '-T:')
+```
 
 Devuelve un conjunto de nodos como este:
 
-    <token>2007</token>
-    <token>09</token>
-    <token>14</token>
-    <token>11</token>
-    <token>40</token>
-    <token>23</token>
+```xml
+<token>2007</token>
+<token>09</token>
+<token>14</token>
+<token>11</token>
+<token>40</token>
+<token>23</token>
+```
 
 ### Definido en
 

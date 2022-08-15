@@ -23,7 +23,9 @@ La posición de la lista (`list-style-position`) especifica donde será colocado
 
 ### Sintaxis
 
-    list-style-position: inside | outside | inherit
+```css
+list-style-position: inside | outside | inherit
+```
 
 ### Valores
 

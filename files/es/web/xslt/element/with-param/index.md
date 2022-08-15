@@ -11,11 +11,13 @@ original_slug: Web/XSLT/with-param
 
 El elemento `<xsl:with-param>` establece el valor de un parámetro que se pasará a una plantilla.
 
-### Syntax
+### Sintaxis
 
-    <xsl:with-param name=NOMBRE select=EXPRESIÓN>
-     PLANTILLA
-    </xsl:with-param>
+```xml
+<xsl:with-param name=NOMBRE select=EXPRESIÓN>
+ PLANTILLA
+</xsl:with-param>
+```
 
 ### Atributos requeridos
 

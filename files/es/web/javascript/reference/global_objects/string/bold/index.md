@@ -21,7 +21,9 @@ Provoca que una cadena se muestre en negrita como si estuviera en una etiqueta {
 
 ## Sintaxis
 
-    cadena.bold()
+```js
+cadena.bold()
+```
 
 ## Descripción
 

@@ -10,7 +10,9 @@ La propiedad de sólo-lectura **`isSecureContext`**, de la interface {{domxref("
 
 ## Sintaxis
 
-    var isItSecure = self.isSecureContext; // or just isSecureContext
+```js
+var isItSecure = self.isSecureContext; // or just isSecureContext
+```
 
 ### Valor
 

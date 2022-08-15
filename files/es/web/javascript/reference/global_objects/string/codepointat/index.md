@@ -8,7 +8,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/codePointAt
 
 ## Sintaxis
 
-    str.codePointAt(indice)
+```js
+str.codePointAt(indice)
+```
 
 ### Parámetros
 

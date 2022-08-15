@@ -15,7 +15,9 @@ translation_of: Web/EXSLT/exsl/object-type
 
 ### Sintaxis
 
-    exsl:object-type(objeto)
+```xml
+exsl:object-type(objeto)
+```
 
 ### Argumentos
 

@@ -7,7 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-bottom-color
 ---
-<< [Volver](/es/Guía_de_referencia_de_CSS "es/Guía_de_referencia_de_CSS")
+<< [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
 
@@ -22,7 +22,9 @@ La propiedad `border-bottom-color` define el color del borde inferior de un elem
 
 ### Sintaxis
 
-    border-bottom-color: couleur | transparent | inherit
+```
+border-bottom-color: couleur | transparent | inherit
+```
 
 ### Valores
 
@@ -43,13 +45,15 @@ La propiedad `border-bottom-color` define el color del borde inferior de un elem
 
 [Ver El Ejemplo Vivo](/samples/cssref/border.html)
 
-    element {
-     width: 300px;
-            padding: 15px;
-            border-bottom-size: 1px;
-            border-bottom-style: solid;
-            border-bottom-color: #000;
-    }
+```css
+element {
+  width: 300px;
+  padding: 15px;
+  border-bottom-size: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #000;
+}
+```
 
 ### Notas
 

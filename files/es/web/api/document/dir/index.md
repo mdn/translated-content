@@ -9,8 +9,10 @@ La propiedad **`Document.dir`** es una {{domxref("DOMString")}} que representa l
 
 ## Sintáxis
 
-    dirStr = document.dir;
-    document.dir = dirStr;
+```js
+dirStr = document.dir;
+document.dir = dirStr;
+```
 
 ## Especificaciones
 

@@ -15,7 +15,9 @@ El método **`Element.getClientRects()`** devuelve una colección de objetos {{d
 
 ### Sintaxis
 
-    var rectCollection = object.getClientRects();
+```js
+var rectCollection = object.getClientRects();
+```
 
 ### Devuelve
 
@@ -35,8 +37,10 @@ Es posible que los valores de desplazamiento sean fracciones de pixel.
 
 ### Ejemplo
 
-    var rects = obj.getClientRects();
-    var numLines = rects.length;
+```js
+var rects = obj.getClientRects();
+var numLines = rects.length;
+```
 
 ### Especificación
 

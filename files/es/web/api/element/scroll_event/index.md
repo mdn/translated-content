@@ -10,7 +10,9 @@ Un manejador de eventos para desplazamiento en `element`.
 
 ## Sintaxis
 
-    element.onscroll = functionReference
+```js
+element.onscroll = functionReference
+```
 
 ### Parámetros
 

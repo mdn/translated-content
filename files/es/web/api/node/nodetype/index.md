@@ -7,7 +7,9 @@ translation_of: Web/API/Node/nodeType
 
 ## Sintaxis
 
-    var type = node.nodeType;
+```js
+var type = node.nodeType;
+```
 
 la variable type será un entero positivo con alguno de los siguientes valores:
 

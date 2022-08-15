@@ -5,7 +5,7 @@ translation_of: Web/CSS/flex-shrink
 ---
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`flex-shrink`** especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número `flex-shrink` , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.
+La propiedad [CSS](/es/docs/CSS) **`flex-shrink`** especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número `flex-shrink` , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.
 
 ```css
 flex-shrink: 2;
@@ -94,7 +94,7 @@ html,body {
 
 ## Sintaxis
 
-La propiedad `flex-shrink` se especifica como un único [`<número>`](#<number>).
+La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
 
 ### Valores
 

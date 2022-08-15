@@ -9,7 +9,9 @@ La propiedad **`matches` **de sólo lectura de la interfaz {{domxref ("MediaQuer
 
 ## Sintaxis
 
-    var matches = MediaQueryList.matches;
+```js
+var matches = MediaQueryList.matches;
+```
 
 ### Value
 

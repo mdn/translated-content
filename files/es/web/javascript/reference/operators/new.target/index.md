@@ -15,7 +15,9 @@ La propiedad** `new.target`** te permite detectar si una función o constructor 
 
 ## Sintaxis
 
-    new.target
+```js
+new.target
+```
 
 ## Descripción
 

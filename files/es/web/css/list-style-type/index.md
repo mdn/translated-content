@@ -12,7 +12,7 @@ translation_of: Web/CSS/list-style-type
 
 ### Resumen
 
-El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apariencia del [listado](/es/HTML/Element/li "es/HTML/Element/li").
+El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apariencia del [listado](/es/HTML/Element/li).
 
 - {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("disc", "disco/punto") }}
 - Se aplica a: elementos con 'display: list-item'
@@ -23,7 +23,9 @@ El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apa
 
 ### Sintaxis
 
-     list-style-type:  <std-list-style-name> | {{ Cssxref("none") }} | {{ Cssxref("inherit") }} ;
+```css
+ list-style-type:  <std-list-style-name> | {{ Cssxref("none") }} | {{ Cssxref("inherit") }} ;
+```
 
 ### Valores
 

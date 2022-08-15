@@ -203,4 +203,4 @@ Aunque esto está marcado como una limitación, se puede encontrar muy poco en l
 
 - [IBM article on "Memory leak patterns in JavaScript" (2007) (art. en inglés)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
 - [Kangax article on how to register event handler and avoid memory leaks (2010) (art. en inglés)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
-- [Performance (art. en inglés)](/es/docs/Mozilla/Performance "https://developer.mozilla.org/en-US/docs/Mozilla/Performance")
+- [Performance (art. en inglés)](/es/docs/Mozilla/Performance)

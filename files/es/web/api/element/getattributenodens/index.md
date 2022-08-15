@@ -16,7 +16,9 @@ Dados namespace y nodeName del element, devuelve su `Attr` .
 
 ## Sintaxis
 
-    attributeNode = element.getAttributeNodeNS(namespace,nodeName)
+```js
+attributeNode = element.getAttributeNodeNS(namespace,nodeName)
+```
 
 - `attributeNode` es el nodo para el atributo especificado.
 - `namespace` es la cadena que define el namespace del atributo.

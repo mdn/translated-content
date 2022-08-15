@@ -13,7 +13,9 @@ Devuelve el nodo en el cual empieza la selección.
 
 ### Sintaxis
 
-    sel.anchorNode
+```js
+sel.anchorNode
+```
 
 ### Notas
 

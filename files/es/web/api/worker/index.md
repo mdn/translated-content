@@ -17,11 +17,11 @@ translation_of: Web/API/Worker
 
 The **`Worker`** interface of the [Web Workers API](/es/docs/Web/API/Web_Workers_API) represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the `Worker()` constructor and specifying a script to be run in the worker thread.
 
-Workers may in turn spawn new workers as long as those workers are hosted within the same origin as the parent page (Note: nested workers are [currently not implemented in Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). In addition workers may use [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") for network I/O, with the stipulation that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
+Workers may in turn spawn new workers as long as those workers are hosted within the same origin as the parent page (Note: nested workers are [currently not implemented in Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). In addition workers may use [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) for network I/O, with the stipulation that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
 
-Not [all interfaces and functions are available](/En/DOM/Worker/Functions_available_to_workers "En/DOM/Worker/Functions available to workers") to the script associated with a `Worker`.
+Not [all interfaces and functions are available](/En/DOM/Worker/Functions_available_to_workers) to the script associated with a `Worker`.
 
-In Firefox, if you want to use workers in extensions and would like to have access to [js-ctypes](/en/js-ctypes "en/js-ctypes"), you should use the {{ domxref("ChromeWorker") }} object instead.
+In Firefox, if you want to use workers in extensions and would like to have access to [js-ctypes](/en/js-ctypes), you should use the {{ domxref("ChromeWorker") }} object instead.
 
 ## Properties
 
@@ -78,7 +78,7 @@ Support varies for different types of workers. See each worker type's page for s
 
 ## See also
 
-- [Using web workers](/En/Using_web_workers "en/Using DOM workers")
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers "https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers")
+- [Using web workers](/En/Using_web_workers)
+- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
 - Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/es/docs/Web/API/ServiceWorker_API).
 - Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.

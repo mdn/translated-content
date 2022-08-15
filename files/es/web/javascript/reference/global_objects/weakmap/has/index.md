@@ -18,7 +18,9 @@ El método **`has()`** devuelve un boleano indicando ya sea, si el elemento con 
 
 ## Sintaxis
 
-    wm.has(key);
+```js
+wm.has(key);
+```
 
 ### Parámetros
 

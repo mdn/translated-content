@@ -9,7 +9,9 @@ La propiedad**`supportedContentEncodings`** de solo lectura (read-only) de la in
 
 ## Sintaxis
 
-    var encodings[] = PushManager.supportedContentEncodings
+```js
+var encodings[] = PushManager.supportedContentEncodings
+```
 
 ### Valor
 

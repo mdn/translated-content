@@ -10,9 +10,11 @@ La función deprecada **`unescape()`** calcula un nuevo string en el cual secuen
 
 > **Nota:** Do not use `unescape` to decode URIs, use `decodeURI` instead.
 
-## Syntax
+## Sintaxis
 
-    unescape(str)
+```js
+unescape(str)
+```
 
 ### Parameters
 

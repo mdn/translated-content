@@ -11,8 +11,10 @@ translation_of: Web/API/StyleSheet/media
 
 ### Sintaxis
 
-    medium = stylesheet.media
-    stylesheet.media = medium
+```js
+medium = stylesheet.media
+stylesheet.media = medium
+```
 
 ### Parámetros
 
@@ -20,7 +22,9 @@ translation_of: Web/API/StyleSheet/media
 
 ### Ejemplo
 
-    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+```html
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+```
 
 ### Notas
 

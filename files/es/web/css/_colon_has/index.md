@@ -17,13 +17,17 @@ La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) CSS**`:has()` **representa un
 
 ## Síntaxis
 
-    :has(selector_list) { propiedades de estilo }
+```css
+:has(selector_list) { propiedades de estilo }
+```
 
 ## Ejemplos
 
 El siguiente selector selecciona únicamente los elementos {{HTMLElement("a")}} que contienen {{HTMLElement("img")}} hijo:
 
-    a:has(> img)
+```css
+a:has(> img)
+```
 
 ## Especificaciones
 

@@ -18,7 +18,9 @@ La propiedad de solo lectura **`timeOrigin`** de la inferfaz {{domxref("Performa
 
 ## Sintaxis
 
-    var timeOrigin = performance.timeOrigin
+```js
+var timeOrigin = performance.timeOrigin
+```
 
 ### Valor
 

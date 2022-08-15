@@ -21,13 +21,16 @@ El método **`some()`** comprueba si al menos un elemento del array cumple con l
 
 ## Sintaxis
 
-    arr.some(callback(element[, index[, array]])[, thisArg])
+```js
+arr.some(callback(element[, index[, array]])[, thisArg])
+```
 
 ### Parámetros
 
 - `callback`
-  - : Función que verifica cada elemento, toma tres argumentos:_ `element`
-    _ : El elemento actual siendo procesado en el array.
+  - : Función que verifica cada elemento, toma tres argumentos:
+    - `element`
+      - : El elemento actual siendo procesado en el array.
     - `index` {{Optional_inline}}
       - : El índice del elemento del array que se está procesando.
     - `array` {{Optional_inline}}

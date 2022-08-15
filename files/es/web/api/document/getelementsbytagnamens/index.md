@@ -13,7 +13,9 @@ Devuelve una lista de elementos cuyo nombre pertenece a un determinado 'namespac
 
 ### Sintaxis
 
-    elements = document.getElementsByTagNameNS(namespace,name)
+```js
+elements = document.getElementsByTagNameNS(namespace,name)
+```
 
 - `elements` es una lista del tipo `NodeList` de los elementos encontrados, en el orden en el que aparecen en el árbol.
 - `namespace` es el nombre URI en el que buscamos. (Véase [`element.namespaceURI`](es/DOM/element.namespaceURI)).
@@ -27,76 +29,78 @@ Es importante tener en cuenta que cuando el nodo en el que se invoca `getElement
 
 Para usar el siguiente ejemplo, copia y pega en un documento con la extensión xhtml.
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
+```html
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
-    <title>ejemplo de getElementsByTagNameNS</title>
+<head>
+<title>ejemplo de getElementsByTagNameNS</title>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-    function getAllParaElems()
-    {
-      var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+function getAllParaElems()
+{
+  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-      var num = allParas.length;
+  var num = allParas.length;
 
-      alert("Hay " + num + " &lt;p&gt; elementos en este documento");
-    }
-
-
-    function div1ParaElems()
-    {
-      var div1 = document.getElementById("div1")
-      var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
-
-      var num = div1Paras.length;
-
-      alert("Hay " + num + " &lt;p&gt; elementos en el elemento div1");
-    }
+  alert("Hay " + num + " &lt;p&gt; elementos en este documento");
+}
 
 
-    function div2ParaElems()
-    {
-      var div2 = document.getElementById("div2")
-      var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+function div1ParaElems()
+{
+  var div1 = document.getElementById("div1")
+  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-      var num = div2Paras.length;
+  var num = div1Paras.length;
 
-      alert("Hay " + num + " &lt;p&gt; elementos en el elemento div2");
-    }
+  alert("Hay " + num + " &lt;p&gt; elementos en el elemento div1");
+}
 
-    </script>
-    </head>
 
-    <body style="border: solid green 3px">
-    <p>Algo de texto exterior</p>
-    <p>Algo de texto exterior</p>
+function div2ParaElems()
+{
+  var div2 = document.getElementById("div2")
+  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-      <div id="div1" style="border: solid blue 3px">
-        <p>Algo de texto en div1</p>
-        <p>Algo de texto en div1</p>
-        <p>Algo de texto en div1</p>
+  var num = div2Paras.length;
 
-        <div id="div2" style="border: solid red 3px">
-        <p>Algo de texto en div2</p>
-        <p>Algo de texto en div2</p>
-        </div>
-      </div>
+  alert("Hay " + num + " &lt;p&gt; elementos en el elemento div2");
+}
 
-    <p>Algo de texto exterior</p>
-    <p>Algo de texto exterior</p>
+</script>
+</head>
 
-    <button onclick="getAllParaElems();">
-     muestra todos los elementos p en el documento</button><br />
+<body style="border: solid green 3px">
+<p>Algo de texto exterior</p>
+<p>Algo de texto exterior</p>
 
-    <button onclick="div1ParaElems();">
-     muestra todos los elementos p en el div1</button><br />
+  <div id="div1" style="border: solid blue 3px">
+    <p>Algo de texto en div1</p>
+    <p>Algo de texto en div1</p>
+    <p>Algo de texto en div1</p>
 
-    <button onclick="div2ParaElems();">
-     muestra todos los elementos p en el div2</button>
+    <div id="div2" style="border: solid red 3px">
+    <p>Algo de texto en div2</p>
+    <p>Algo de texto en div2</p>
+    </div>
+  </div>
 
-    </body>
-    </html>
+<p>Algo de texto exterior</p>
+<p>Algo de texto exterior</p>
+
+<button onclick="getAllParaElems();">
+  muestra todos los elementos p en el documento</button><br />
+
+<button onclick="div1ParaElems();">
+  muestra todos los elementos p en el div1</button><br />
+
+<button onclick="div2ParaElems();">
+  muestra todos los elementos p en el div2</button>
+
+</body>
+</html>
+```
 
 ### Especificación
 

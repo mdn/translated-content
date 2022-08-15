@@ -9,7 +9,9 @@ El método **`HTMLMediaElement.pause()`** pausará la reproducción de los medio
 
 ## Sintaxis
 
-    HTMLMediaElement.pause()
+```js
+HTMLMediaElement.pause()
+```
 
 ### Parametros
 

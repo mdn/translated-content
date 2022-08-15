@@ -16,7 +16,9 @@ La función obsoleta **`escape()`** crea una nueva cadena de caracteres en los q
 
 ## Sintaxis
 
-    escape(str)
+```js
+escape(str)
+```
 
 ### Parametros
 

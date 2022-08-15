@@ -18,7 +18,9 @@ original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 
 ## Síntasix
 
-    var lostCaptureHandler = target.onlostpointercpature;
+```js
+var lostCaptureHandler = target.onlostpointercpature;
+```
 
 ### Valor de Retorno
 

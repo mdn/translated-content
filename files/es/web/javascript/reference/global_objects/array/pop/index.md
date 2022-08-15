@@ -18,7 +18,9 @@ El método **`pop()`** elimina el **último** elemento de un array y lo devuelve
 
 ## Sintaxis
 
-    arr.pop()
+```js
+arr.pop()
+```
 
 ### Valor devuelto
 

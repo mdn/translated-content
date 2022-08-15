@@ -7,7 +7,9 @@ translation_of: Web/API/Performance/memory
 
 ## Sintaxis
 
-    timingInfo = performance.memory
+```js
+timingInfo = performance.memory
+```
 
 ## Atributos
 

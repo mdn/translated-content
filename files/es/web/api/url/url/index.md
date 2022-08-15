@@ -13,7 +13,9 @@ Si la URL base dada o la URL resultante no son URL válidas, se lanza un {{domxr
 
 ## Sintaxis
 
-    url = new URL(url, [base])
+```js
+url = new URL(url, [base])
+```
 
 ### Parámetros
 

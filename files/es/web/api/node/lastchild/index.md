@@ -15,7 +15,9 @@ La propiedad de sólo lectura **`Node.lastChild`** devuelve el último hijo del 
 
 ## Sintaxis
 
-    var nodoHijo= nodo.lastChild;
+```js
+var nodoHijo= nodo.lastChild;
+```
 
 ## Ejemplo
 

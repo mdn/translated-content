@@ -26,7 +26,9 @@ Para los elementos con una posición relativa (los que tienen la propiedad `posi
 
 ### Sintaxis
 
-       bottom: <length> | <percentage> | auto | inherit
+```css
+   bottom: <length> | <percentage> | auto | inherit
+```
 
 ### Valores
 
@@ -41,12 +43,14 @@ Para los elementos con una posición relativa (los que tienen la propiedad `posi
 
 ### Ejemplos
 
-    element {
-        position: absolute;
-        bottom: 20px;
-        height: 200px;
-        border: 1px solid #000;
-    }
+```css
+element {
+    position: absolute;
+    bottom: 20px;
+    height: 200px;
+    border: 1px solid #000;
+}
+```
 
 El siguiente ejemplo permite contrastar entre `position:absolute` y `position:fixed`. Cuando el texto ocupa un espacio más alto que la porción visible de la página (la porción visible en la ventana del navegador) los bloques posicionados con `position:absolute` se desplazarán junto con la página, mientras que los bloques posicionados con `position:fixed`, no lo harán.
 

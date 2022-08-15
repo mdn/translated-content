@@ -13,7 +13,9 @@ Elimina del documento el contenido de la selección.
 
 ### Sintaxis
 
-    sel.deleteFromDocument()
+```js
+sel.deleteFromDocument();
+```
 
 ### Parámetros
 

@@ -14,19 +14,23 @@ translation_of: Web/API/Element/removeAttribute
 
 ## Sintaxis
 
-    element.removeAttribute(attrName);
+```js
+element.removeAttribute(attrName);
+```
 
 - `attrName` es una cadena que nombra el atributo a ser eliminado de _element_.
 
 ## Ejemplo
 
-    // <div id="div1" align="left" width="200px">
-    document.getElementById("div1").removeAttribute("align");
-    // ahora: <div id="div1" width="200px">
+```js
+// <div id="div1" align="left" width="200px">
+document.getElementById("div1").removeAttribute("align");
+// ahora: <div id="div1" width="200px">
+```
 
 ## Notas
 
-Debe usarse preferiblemente `removeAttribute` en lugar de establecer el valor del atributo a `null` usando [setAttribute](/en/DOM/element.setAttribute "en/DOM/element.setAttribute").
+Debe usarse preferiblemente `removeAttribute` en lugar de establecer el valor del atributo a `null` usando [setAttribute](/en/DOM/element.setAttribute).
 
 Intentar eliminar un atributo que no existe en el elemento no disparará una excepción.
 

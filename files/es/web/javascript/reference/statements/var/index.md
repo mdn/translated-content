@@ -15,7 +15,9 @@ La sentencia **`var`** declara una variable, opcionalmente inicializándola con 
 
 ## Sintaxis
 
-    var nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDeVariableN [=valorN]]];
+```js
+var nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDeVariableN [=valorN]]];
+```
 
 - `nombreDeVariableN`
   - : Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.

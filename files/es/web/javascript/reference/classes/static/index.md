@@ -10,7 +10,9 @@ La palabra clave **static** define un método estático para una clase.
 
 ## Sintaxis
 
-    static methodName() { ... }
+```js
+static methodName() { ... }
+```
 
 ## Descripción
 
@@ -50,8 +52,6 @@ console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
 ## Compatibilidad de navegadores
 
 {{Compat("javascript.classes.static")}}
-
-##
 
 ## Véase también
 

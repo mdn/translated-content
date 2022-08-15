@@ -145,41 +145,47 @@ The second message contains a data field with the value "some text". The third m
 
 El segundo mensaje contiene un campo de datos con el valor "some text". El tercer mensaje contiene un campo de datos con el valor "another message\nwith two lines". Nota la nueva línea en el valor.
 
-    : this is a test stream
+```
+: this is a test stream
 
-    data: some text
+data: some text
 
-    data: another message
-    data: with two lines
+data: another message
+data: with two lines
+```
 
 #### Eventos nombrados
 
 Este ejemplo envia algunos eventos nombrados. Cada uno tiene un nombre de evento especificado por el campo `event`, y un campo `data` cuyo valor es una cadena JSON apropiada con los datos necesarios para que el cliente actue sobre el evento. El campo `data`, podria, por supuesto, tener cualquier cadena; no tiene que ser un JSON.
 
-    event: userconnect
-    data: {"username": "bobby", "time": "02:33:48"}
+```
+event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
 
-    event: usermessage
-    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
-    event: userdisconnect
-    data: {"username": "bobby", "time": "02:34:23"}
+event: userdisconnect
+data: {"username": "bobby", "time": "02:34:23"}
 
-    event: usermessage
-    data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+event: usermessage
+data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+```
 
 #### Mezclando y emparejando
 
 No tienes que usar solamente mensajes sin nombrar o eventos tipados; puedes mezclarlo juntos en un solo flujo de evento.
 
-    event: userconnect
-    data: {"username": "bobby", "time": "02:33:48"}
+```
+event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
 
-    data: Here's a system message of some kind that will get used
-    data: to accomplish some task.
+data: Here's a system message of some kind that will get used
+data: to accomplish some task.
 
-    event: usermessage
-    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+```
 
 ## Compatibilidad con navegadores
 

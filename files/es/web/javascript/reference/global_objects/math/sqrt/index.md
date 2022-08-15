@@ -10,7 +10,9 @@ La función **`Math.sqrt()`** retorna la raíz cuadrada de un número, que es<ma
 
 ## Sintaxis
 
-    Math.sqrt(x)
+```js
+Math.sqrt(x)
+```
 
 ### Parámetros
 

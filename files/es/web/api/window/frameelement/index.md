@@ -9,7 +9,9 @@ Retorna el elemento (como es {{HTMLElement("iframe")}} ó {{HTMLElement("object"
 
 ## Sintaxes
 
-    frameEl = window.frameElement;
+```js
+frameEl = window.frameElement;
+```
 
 - `frame El` es el elemento dentro del cual está empotrada la ventana. Si la ventana no está incrustada dentro de otro documento, o si el documento en el que está empotrada tiene un origen diferente (como procede de un dominio diferente), este valor será `null`.
 

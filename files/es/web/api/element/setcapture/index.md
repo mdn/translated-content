@@ -15,7 +15,9 @@ Llame a este método durante el manejo de un evento mousedown para redirigir tod
 
 ## Sintasix
 
-    element.setCapture(retargetToElement);
+```js
+element.setCapture(retargetToElement);
+```
 
 - `retargetToElement`
   - : Si es verdadero, todos los eventos se dirigen directamente a este elemento; Si es falso, los eventos también pueden descargar a los descendientes de este elemento.

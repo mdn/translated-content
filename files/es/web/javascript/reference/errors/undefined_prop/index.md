@@ -12,7 +12,9 @@ translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 
 ## Mensaje
 
-    ReferenceError: reference to undefined property "x" (Firefox)
+```
+ReferenceError: reference to undefined property "x" (Firefox)
+```
 
 ## Tipo de error
 

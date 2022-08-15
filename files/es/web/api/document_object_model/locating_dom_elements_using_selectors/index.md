@@ -21,17 +21,21 @@ Esta especificación añade dos nuevos metodos a cualquier objeto implementando 
 
 > **Nota:** El {{domxref("NodeList")}} devuelto por {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} no es dinamico, Es decir que cualquier cambio realizado en el DOM no se vera reflejado en la coleccion. Esto es diferente de otros metodos de querying del dom que si devuelven listados de nodos dinamicos.
 
-Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector").
+Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector).
 
 ## Selectors
 
 El metodo de selectores acepta uno o mas selectores seperados por comas entre cada selector para determinar que elemento o elementos deben ser devueltos. por ejemplo para seleccionar todos los elementos (p) del parrafo en un documento donde la clase CSS sea tanto `warning` or `note`, podes hacer lo siguiente:
 
-    var special = document.querySelectorAll( "p.warning, p.note" );
+```js
+var special = document.querySelectorAll( "p.warning, p.note" );
+```
 
 tambien por usar query para etiquetas id. Por ejemplo:
 
-    var el = document.querySelector( "#main, #basic, #exclamation" );
+```js
+var el = document.querySelector( "#main, #basic, #exclamation" );
+```
 
 luego de ejecutar el codigo de arriba, la variable `el` contiene el primer elemento del documento, su ID puede ser uno de los siguentes `main`, `basic`, or `exclamation`.
 
@@ -44,4 +48,4 @@ Podes usar cualquier selector CSS con los metodos `querySelector()` y `querySele
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
-- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector "en-US/docs/Code_snippets/QuerySelector")
+- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector)

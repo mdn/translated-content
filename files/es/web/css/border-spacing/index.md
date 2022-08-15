@@ -32,10 +32,12 @@ border-spacing: \<length> | \<length> \<length> | inherit
 
 [Ver El Ejemplo Vivo](/samples/cssref/border-spacing.html)
 
-    table#space {
-      border-collapse: separate;
-      border-spacing: 10px 5px;
-    }
+```css
+table#space {
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+}
+```
 
 ### Notas
 

@@ -22,7 +22,9 @@ La propiedad [CSS](/es/docs/Web/CSS) **`background-image`** establece una o más
 
 ## Sintaxis
 
-    background-image: url | none | inherit
+```css
+background-image: url | none | inherit
+```
 
 ## Valores
 

@@ -19,7 +19,9 @@ Si está ejecutando una expresión regular solo para buscar si algo se cumple o 
 
 ## Sintaxis
 
-    regexObj.exec(cadena)
+```js
+regexObj.exec(cadena)
+```
 
 ### Parametros
 
@@ -143,8 +145,10 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 Este script muestra el siguiente texto:
 
-    Se ha encontrado abb. La siguiente coincidencia empieza en el indice 3
-    Se ha encontrado ab. La siguiente coincidencia empieza en el indice 9
+```
+Se ha encontrado abb. La siguiente coincidencia empieza en el indice 3
+Se ha encontrado ab. La siguiente coincidencia empieza en el indice 9
+```
 
 Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("RegExp")}}) dentro de la condición del bucle while o se creará un bucle infinito si hay una coincidencia, por culpa de que la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} va a ser reiniciada por cada iteración del bucle. Además asegurate de que has usado la bandera de busqueda global "g" o se creará un bucle también.
 

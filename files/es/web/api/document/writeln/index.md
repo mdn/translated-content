@@ -11,7 +11,9 @@ Escribe una cadena de texto en el documento, seguida de una nueva línea.
 
 ## Sintaxis
 
-    document.writeln(línea);
+```js
+document.writeln(línea);
+```
 
 ### Parámetros
 
@@ -19,11 +21,13 @@ Escribe una cadena de texto en el documento, seguida de una nueva línea.
 
 ## Ejemplo
 
-    document.writeln("<p>¡Hola mundo!</p>");
+```js
+document.writeln("<p>¡Hola mundo!</p>");
+```
 
 ## Notas
 
-**document.writeln** actúa igual que [document.write](/es/DOM/document.write "en/DOM/document.write") exepto que agrega un carácter de nueva línea (`\n`) al final del texto a escribir.
+**document.writeln** actúa igual que [document.write](/es/DOM/document.write) exepto que agrega un carácter de nueva línea (`\n`) al final del texto a escribir.
 
 > **Nota:** `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") [`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo](/es/docs/Glossary/MIME_type)`application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 

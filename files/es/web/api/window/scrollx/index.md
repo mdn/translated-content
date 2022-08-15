@@ -11,7 +11,9 @@ Retorna el número de pixels que el documento ha sido desplazado horizontalmente
 
 ## Sintaxis
 
-    var x = window.scrollX;
+```js
+var x = window.scrollX;
+```
 
 ### Parámetros
 
@@ -30,7 +32,9 @@ if (window.scrollX > 400) {
 
 La propiedad `pageXOffset` es un alias de la propiedad `scrollX`:
 
-    window.pageXOffset == window.scrollX; // siempre true
+```js
+window.pageXOffset == window.scrollX; // siempre true
+```
 
 Para compatibilidad cruzada entre navegadores, use `window.pageXOffset` en lugar de `window.scrollX`. **Adicionalmente**, versiones más antiguas de Internet Explorer (< 9) no soportan ninguna de las dos propiedades y deben ser sorteadas examinando otras propiedade no estandar. Un ejemplo totalmente compatible:
 
@@ -56,4 +60,4 @@ var y = (window.pageYOffset !== undefined)
 
 ## Ver también
 
-- [window.scrollY](/es/docs/DOM/window.scrollY "window.scrollX | Document Object Model (DOM) | MDN")
+- [window.scrollY](/es/docs/DOM/window.scrollY)

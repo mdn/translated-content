@@ -15,7 +15,9 @@ El método **`valueOf()`** retorna el valor primitivo inserto en un objeto {{jsx
 
 ## Sintaxis
 
-    numObj.valueOf()
+```js
+numObj.valueOf()
+```
 
 ### Valor retornado
 

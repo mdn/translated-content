@@ -7,11 +7,13 @@ translation_of: Web/API/Window/history
 
 La propiedad de solo lectura **`Window.history`** regresa una referencia al objeto {{domxref("History")}}, quien provee una interfaz para manipular el historial de _sesión del navegador_ (páginas visitadas en el tab o marco de la pagina actual cargada).
 
-Ver [Manipulando el historial del navegador](/es/docs/DOM/Manipulando_el_historial_del_navegador "en/DOM/Manipulating the browser history") para ejemplos y detalles. En particular, este articulo explica características seguras de los métodos `pushState()` y `replaceState()` que debe tener en cuenta antes de usarlos.
+Ver [Manipulando el historial del navegador](/es/docs/DOM/Manipulando_el_historial_del_navegador) para ejemplos y detalles. En particular, este articulo explica características seguras de los métodos `pushState()` y `replaceState()` que debe tener en cuenta antes de usarlos.
 
 ## Sintaxis
 
-    var historyObj = window.history;
+```js
+var historyObj = window.history;
+```
 
 ## Ejemplo
 

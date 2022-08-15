@@ -7,7 +7,7 @@ translation_of: Web/CSS/transition-delay
 
 ## Resumen
 
-La propiedad [CSS](/en/CSS "CSS") `transition-delay` especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion ([transition effect](/en/CSS/CSS_transitions "en/CSS/CSS transitions")).
+La propiedad [CSS](/en/CSS) `transition-delay` especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion ([transition effect](/en/CSS/CSS_transitions)).
 
 Un valor de `0s`, o `0ms`, indica que la propiedad comenzará a animar la transición inmediatamente cuando el valor cambie; valores positivos retrasaran el comienzo del efecto de transicion por el numero de segundos correspondiente. Valores negativos causaran que la transicion comience inmediatamente, pero causando que el efecto de la transicion pareciera que empiece por la mitad de la animacion.
 
@@ -19,12 +19,14 @@ You may specify multiple delays; each delay will be applied to the corresponding
 
 ## Syntax
 
-    Formal syntax: {{csssyntax("transition-delay")}}
+Formal syntax: {{csssyntax("transition-delay")}}
 
-    transition-delay: 3s
-    transition-delay: 2s, 4ms
+```css
+transition-delay: 3s
+transition-delay: 2s, 4ms
 
-    transition-delay: initial
+transition-delay: initial
+```
 
 ### Values
 
@@ -313,5 +315,5 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## See also
 
-- [Using CSS transitions](/es/docs/CSS/Using_CSS_transitions "en/CSS/CSS transitions")
+- [Using CSS transitions](/es/docs/CSS/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

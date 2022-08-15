@@ -8,7 +8,9 @@ La propiedad de solo lectura **`ok`** de la interfaz {{domxref("Response")}} con
 
 ## Sintaxis
 
-    var miOK = respuesta.ok;
+```js
+var miOK = respuesta.ok;
+```
 
 ### Valor
 

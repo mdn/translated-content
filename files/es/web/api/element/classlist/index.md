@@ -12,13 +12,15 @@ translation_of: Web/API/Element/classList
 ---
 {{APIRef("DOM")}}
 
-La propiedad de sólo lectura **`Element.classList`** devuelve una colección activa de [`DOMTokenList`](/es/docs/Web/API/DOMTokenList "The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList or HTMLAreaElement.relList. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive.") de los atributos de clase del elemento.
+La propiedad de sólo lectura **`Element.classList`** devuelve una colección activa de [`DOMTokenList`](/es/docs/Web/API/DOMTokenList) de los atributos de clase del elemento.
 
 Usar `classList` es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de {{domxref("element.className")}}.
 
 ## Sintaxis
 
-    var elementClasses = elementNodeReference.classList;
+```js
+var elementClasses = elementNodeReference.classList;
+```
 
 _elementClasses_ es un [DOMTokenList](/es/docs/DOM/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos`add()` y `remove()`.
 

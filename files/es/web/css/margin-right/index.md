@@ -16,13 +16,15 @@ CSS propiedades también se puede cambiar dinámicamente con una JavaScript. Scr
 
 ### Ejemplo
 
-    h1
-    {
+```css
+h1
+{
     margin-right: 10px
-    }
-    h2
-    {
+}
+h2
+{
     margin-right: -20px
-    }
+}
+```
 
-- Fuente: [[\]](http://www.w3schools.com/css/pr_margin-right.asp)
+- [Fuente](http://www.w3schools.com/css/pr_margin-right.asp)

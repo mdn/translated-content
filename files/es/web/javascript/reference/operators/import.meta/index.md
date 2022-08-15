@@ -8,9 +8,11 @@ original_slug: Web/JavaScript/Reference/Statements/import.meta
 
 El objeto** `import.meta`** expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.
 
-## Syntax
+## Sintaxis
 
-    import.meta
+```js
+import.meta
+```
 
 ## Descripción
 

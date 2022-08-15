@@ -11,9 +11,11 @@ La propiedad **{{domxref("RTCPeerConnection")}}** es de solo lectura **`canTrick
 
 This property is only set after having called {{domxref("RTCPeerConnection.setRemoteDescription()")}}. Ideally, your signaling protocol provides a way to detect trickling support, so that you don't need to rely on this property. A WebRTC browser will always support trickle ICE. If trickling isn't supported, or you aren't able to tell, you can check for a falsy value for this property and then wait until the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} changes to `"completed"` before creating and sending the initial offer. That way, the offer contains all of the candidates.
 
-## Syntax
+## Sintaxis
 
-     var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
+```js
+ var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
+```
 
 ### Value
 

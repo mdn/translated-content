@@ -15,7 +15,9 @@ translation_of: Web/API/Document/embeds
 
 ## Sintaxis
 
-    nodeList = document.embeds
+```js
+nodeList = document.embeds
+```
 
 ### Valor
 

@@ -13,7 +13,9 @@ Traslada el foco de la selección al mismo punto que el ancla. El ancla no se mu
 
 ### Sintaxis
 
-    sel.collapseToStart()
+```js
+sel.collapseToStart()
+```
 
 ### Parámetros
 

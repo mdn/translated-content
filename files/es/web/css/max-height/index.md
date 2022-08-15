@@ -22,7 +22,9 @@ La propiedad `max-height` se utiliza para definir la altura máxima de un elemen
 
 ### Sintaxis
 
-    max-height: <length> | <percentage>
+```
+max-height: <length> | <percentage>
+```
 
 ### Valores
 
@@ -32,9 +34,11 @@ La propiedad `max-height` se utiliza para definir la altura máxima de un elemen
 
 ### Ejemplos
 
-    table { max-width: 75%; }
+```css
+table { max-width: 75%; }
 
-    form { max-width: none; }
+form { max-width: none; }
+```
 
 ### Notas
 

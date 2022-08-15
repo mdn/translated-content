@@ -15,7 +15,9 @@ Las cabeceras {{HTTPHeader("Location")}} y `Content-Location` son diferentes. `L
 
 ## Sintaxis
 
-    Content-Location: <url>
+```
+Content-Location: <url>
+```
 
 ## Directivas
 
@@ -26,7 +28,7 @@ Las cabeceras {{HTTPHeader("Location")}} y `Content-Location` son diferentes. `L
 
 ### Solicitando datos de un servidor en distintos formatos
 
-Suponga que la API de un sitio web puede devolver datos en los formatos {{glossary("JSON")}}, {{glossary("XML")}}, o [CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values"). Si la URL de un documento particular se encuentra en `https://example.com/documents/foo`, el sitio web podría retornar distintas URLs en la cabecera `Content-Location` dependiendo de la cabecera {{HTTPHeader("Accept")}} enviada en la petición:
+Suponga que la API de un sitio web puede devolver datos en los formatos {{glossary("JSON")}}, {{glossary("XML")}}, o [CSV](https://en.wikipedia.org/wiki/Comma-separated_values). Si la URL de un documento particular se encuentra en `https://example.com/documents/foo`, el sitio web podría retornar distintas URLs en la cabecera `Content-Location` dependiendo de la cabecera {{HTTPHeader("Accept")}} enviada en la petición:
 
 | Request header                        | Response header                         |
 | ------------------------------------- | --------------------------------------- |
@@ -44,21 +46,25 @@ El servidor podría también considerar otras cabeceras de [negociación de cont
 
 Suponga que está creando una nueva entrada de un blog, a través de la API del sitio web:
 
-    PUT /new/post
-    Host: example.com
-    Content-Type: text/markdown
+```
+PUT /new/post
+Host: example.com
+Content-Type: text/markdown
 
-    # Mi primera entrada de blog!
+# Mi primera entrada de blog!
 
-    Hice esto a través de la API de `example.com`'. Espero que funcione.
+Hice esto a través de la API de `example.com`'. Espero que funcione.
+```
 
 El sitio devuelve un mensaje genérico de éxito confirmando que el post ha sido publicado. El servidor especifica donde se encuentra la nueva entrada utilizando `Content-Location`:
 
-    HTTP/1.1 201 Created
-    Content-Type: text/plain; charset=utf-8
-    Content-Location: /my-first-blog-post
+```
+HTTP/1.1 201 Created
+Content-Type: text/plain; charset=utf-8
+Content-Location: /my-first-blog-post
 
-    ✅ Success!
+✅ Success!
+```
 
 ### Indicating the URL of a transaction's result
 
@@ -84,16 +90,18 @@ Digamos que tiene un formulario [`<form>`](/en-US/docs/Web/HTML/Element/form) pa
 
 Cuando el formulario es enviado, el sitio web genera un recibo o comprobante de la transacción. El servidor podría utilizar la cabecera `Content-Location` para indicar la URL de ese comprobante para un acceso futuro.
 
-    HTTP/1.1 200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Location: /mis-recibos/38
+```
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Location: /mis-recibos/38
 
-    <!doctype html>
-    (Lots of HTML…)
+<!doctype html>
+(Lots of HTML…)
 
-    <p>Ha enviado $38.00 a UsuarioFicticio.</p>
+<p>Ha enviado $38.00 a UsuarioFicticio.</p>
 
-    (Lots more HTML…)
+(Lots more HTML…)
+```
 
 ## Especificaciones
 

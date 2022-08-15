@@ -7,13 +7,15 @@ translation_of: Web/CSS/vertical-align
 
 ## Resumen
 
-La propiedad `vertical-align` de [CSS](/es/docs/CSS "CSS") especifica el alineado vertical de un elemento en línea o una celda de una tabla.
+La propiedad `vertical-align` de [CSS](/es/docs/CSS) especifica el alineado vertical de un elemento en línea o una celda de una tabla.
 
 {{cssinfo}}
 
 ## Sintaxis
 
-    vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>
+```css
+vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>
+```
 
 ### Valores (para elementos en línea)
 
@@ -31,7 +33,7 @@ La mayoría de los valores de alinean verticalmente el elemento de forma relativ
   - : Aligns the bottom of the element with the bottom of the parent element's font.
 - `middle`
   - : Aligns the middle of the element with the middle of lowercase letters in the parent.
-- [`<length>`](/en-US/docs/CSS/length "CSS/length")
+- [`<length>`](/en-US/docs/CSS/length)
   - : Aligns the baseline of the element at the given length above the baseline of its parent.
 - `<percentage>`
   - : Like \<length> values, with the percentage being a percent of the {{ Cssxref("line-height") }} property.For elements that do not have a baseline, the bottom margin edge is used instead.However, two values vertically align the element relative to the entire line rather than relative to its parent:

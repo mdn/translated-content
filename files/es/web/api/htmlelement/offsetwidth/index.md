@@ -9,7 +9,9 @@ La propiedad de solo lectura **`HTMLElement.offsetWidth`** devuelve el ancho del
 
 ## Sintáxis
 
-    var offsetWidth =element.offsetWidth;
+```js
+var offsetWidth = element.offsetWidth;
+```
 
 **`offsetWidth` **es una propiedad de solo lectura.
 

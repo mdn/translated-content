@@ -14,12 +14,16 @@ Selección es la clase de objeto devuelto por [`window.getSelection()`](es/DOM/w
 
 Un objeto de selección representa los [rangos](es/DOM/range) que el usuario ha seleccionado. Suele llevar un sólo rango, accesado como sigue:
 
-    range = sel.getRangeAt(0);
+```js
+range = sel.getRangeAt(0);
+```
 
 Llamar al método [`toString()`](es/DOM/Selection/toString) devuelve el texto contenido en la selección, ej:
 
-    selObj = window.getSelection();
-    window.alert(selObj.toString());
+```js
+selObj = window.getSelection();
+window.alert(selObj.toString());
+```
 
 ### Glosario
 

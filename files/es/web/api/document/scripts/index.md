@@ -7,9 +7,11 @@ translation_of: Web/API/Document/scripts
 
 Devuelve una lista de elementos {{HTMLElement("script")}} ubicados en el documento. El objeto devuelto es una colección {{domxref("HTMLCollection")}}.
 
-## Sintáxis
+## Sintaxis
 
-    var scriptList = document.scripts;
+```js
+var scriptList = document.scripts;
+```
 
 El objeto `scriptList` devuelto es una {{domxref("HTMLCollection")}}. Se puede utilizar como un array corriente para acceder a sus elementos.
 
@@ -28,8 +30,6 @@ if (scripts.length) {
 ## Compatibilidad de navegadores
 
 {{Compat("api.Document.scripts")}}
-
-##
 
 ## Especificaciones
 

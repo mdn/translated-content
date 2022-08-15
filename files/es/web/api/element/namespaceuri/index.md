@@ -17,7 +17,9 @@ La propiedad **`Element.namespaceURI`** unicamente de lectura devuelve la URI na
 
 ## Síntasix
 
-    namespace = element.namespaceURI
+```js
+namespace = element.namespaceURI
+```
 
 ## Ejemplo
 
@@ -36,7 +38,7 @@ Esto no es un valor calculado resultante de una búsqueda de un namespace, basad
 
 En Firefox 3.5 y versiones anteriores, la URI del namespace para elementos HTML en documentos HTML `es nula`. En versiones posteriores, de conformidad con HTML5, es [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) como en XHTML. {{gecko_minversion_inline("1.9.2")}}
 
-Se puede crear un elemento con el `namespaceURI` especificado utilizando el método DOM Level 2 [document.createElementNS](/es/docs/Web/API/Document/createElementNS "Document.createElementNS").
+Se puede crear un elemento con el `namespaceURI` especificado utilizando el método DOM Level 2 [document.createElementNS](/es/docs/Web/API/Document/createElementNS).
 
 El DOM no maneja o hace valer la validación del namespace por si mismo. Depende de la aplicación DOM para hacer cualquier validación necesaria. Date cuenta también que el prefijo del namespace , una vez que se asocia con un particular elemento, no puede ser cambiado.
 

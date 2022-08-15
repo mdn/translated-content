@@ -13,9 +13,9 @@ Devuelve un objeto de rango representando uno de los rangos seleccionados.
 
 ### Sintaxis
 
-    range =
-    sel.getRangeAt(
-    index)
+```js
+range = sel.getRangeAt(index)
+```
 
 ### Parámetros
 
@@ -27,11 +27,13 @@ Devuelve un objeto de rango representando uno de los rangos seleccionados.
 
 ### Ejemplos
 
-    ranges = [];
-    sel = window.getSelection();
-    for(var i = 0; i < sel.rangeCount; i++) {
-     ranges[i] = sel.getRangeAt(i);
-    }
-    /* Cada artículo en el array de rangos ahora es
-     * un objeto rango representando uno de los
-     * rangos en la selección */
+```js
+ranges = [];
+sel = window.getSelection();
+for(var i = 0; i < sel.rangeCount; i++) {
+  ranges[i] = sel.getRangeAt(i);
+}
+/* Cada artículo en el array de rangos ahora es
+  * un objeto rango representando uno de los
+  * rangos en la selección */
+```

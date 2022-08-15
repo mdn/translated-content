@@ -16,7 +16,9 @@ La propiedad de sólo lectura de **`Nodo.parentElement`** devuelve el nodo padre
 
 ## Sintaxis
 
-    elementoPadre = node.parentElement
+```js
+elementoPadre = node.parentElement
+```
 
 El `elementoPadre` es el padre del nodo actual. Esto es siempre un objecto {{domxref("Element")}} DOM, o `null`.
 

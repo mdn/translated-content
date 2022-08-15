@@ -16,7 +16,9 @@ El método **`toDateString()`** devuelve la porción de la fecha de un objeto {{
 
 ## Sintaxis
 
-    dateObj.toDateString()
+```js
+dateObj.toDateString()
+```
 
 ### Valor devuelto
 

@@ -17,7 +17,9 @@ La propiedad `font-family` define una lista de fuentes o familias de fuentes, co
 
 ## Sintaxis
 
-    font-family: <familia o nombre genérico> [, <familia o nombre genérico>]* | inherit
+```css
+font-family: <familia o nombre genérico> [, <familia o nombre genérico>]* | inherit
+```
 
 ### Valores
 
@@ -32,9 +34,11 @@ La propiedad `font-family` define una lista de fuentes o familias de fuentes, co
 
 [Ver El Ejemplo Vivo](/samples/cssref/font-family.html)
 
-    body { font-family: "Gill Sans Extrabold", Helvetica, sans-serif }
+```css
+body { font-family: "Gill Sans Extrabold", Helvetica, sans-serif }
 
-    .receipt { font-family: Courier, "Lucida Console", monospace }
+.receipt { font-family: Courier, "Lucida Console", monospace }
+```
 
 ## Notas
 

@@ -9,8 +9,10 @@ Retorna un objecto similar a un array de los elementos hijos que tengan todos lo
 
 ## Sintaxis
 
-    var elementos = document.getElementsByClassName(nombres); // ó :
-    var elementos = elementoRaiz.getElementsByClassName(nombres);
+```js
+var elementos = document.getElementsByClassName(nombres); // ó :
+var elementos = elementoRaiz.getElementsByClassName(nombres);
+```
 
 - _elementos es una_ {{ domxref("HTMLCollection") }} de los elementos encontrados.
 - _nombres es un string que representa la lista de nombres de clase a buscar; los nombres de clase se separan con un espacio._

@@ -15,7 +15,9 @@ La propiedad de sólo lectura **`Element.clientHeight`** devuelve la altura de u
 
 ## Sintaxis
 
-    var h = element.clientHeight;
+```js
+var h = element.clientHeight;
+```
 
 `h` es un entero que representa el alto de _element_ en píxeles.
 

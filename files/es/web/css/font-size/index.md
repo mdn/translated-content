@@ -41,15 +41,17 @@ Es aconsejable evitar el uso de valores que no sean relativos al tamaño por def
 
 [Ver El Ejemplo Vivo](/samples/cssref/font-size.html)
 
-    /* Ajusta el texto del párrafo a un cuerpo de letra muy grande. */
-    p { font-size: xx-large }
+```css
+/* Ajusta el texto del párrafo a un cuerpo de letra muy grande. */
+p { font-size: xx-large }
 
-    /* Ajusta la cabecera de nivel 1 (h1) a 2,5 veces del tamaño
-     * del texto. */
-    h1 { font-size: 250% }
+/* Ajusta la cabecera de nivel 1 (h1) a 2,5 veces del tamaño
+  * del texto. */
+h1 { font-size: 250% }
 
-    /* Ajusta el texto incluido en span a 16px */
-    span { font-size: 16px; }
+/* Ajusta el texto incluido en span a 16px */
+span { font-size: 16px; }
+```
 
 ## Notas
 

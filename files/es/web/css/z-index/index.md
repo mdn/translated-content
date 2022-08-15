@@ -16,9 +16,11 @@ Para una caja posicionada (es decir, una con cualquier `position` aparte de `sta
 
 {{cssinfo}}
 
-## Syntax
+## Sintaxis
 
-    z-index:  auto | <entero> | inherit
+```js
+z-index:  auto | <entero> | inherit
+```
 
 ### Values
 

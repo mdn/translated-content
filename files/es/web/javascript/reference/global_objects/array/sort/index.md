@@ -17,7 +17,9 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 ## Sintaxis
 
-    arr.sort([compareFunction])
+```js
+arr.sort([compareFunction])
+```
 
 ### Parámetros
 
@@ -89,9 +91,9 @@ numbers.sort(function(a, b) {
   return a - b;
 });
 console.log(numbers);
-```
 
-    // [1, 2, 3, 4, 5]
+// [1, 2, 3, 4, 5]
+```
 
 Los objectos pueden ser ordenados por el valor de una de sus propiedades.
 
@@ -156,8 +158,6 @@ var arr = [ 40, 1, 5, 200 ];
 arr.sort((a,b)=>a-b);  // [ 1, 5, 40, 200 ]
 ```
 
-###
-
 ### Creando, mostrando, y ordenando un array
 
 El siguiente ejemplo abunda en la idea de ordenar con y sin función de comparación. Además, ilustra una manera de mostrar un array una vez creado. El método [join](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join) es usado para convertir el array en una cadena de texto que imprimir. Al no pasarle un argumento que indique el separador, usará la coma por defecto para separar los elementos del array dentro de la cadena.
@@ -174,9 +174,11 @@ console.log('ordenado con función:', arr.sort(comparar));
 
 El ejemplo produce el siguiente resultado. Como muestra la salida, cuando una función de comparación es usada, los números se ordenan correctamente, sean estos valores numéricos o strings numéricos.
 
-    original: 80,9,700,40,1,5,200
-    ordenado sin función: 1,200,40,5,700,80,9
-    ordenado con función: 1,5,9,40,80,200,700
+```
+original: 80,9,700,40,1,5,200
+ordenado sin función: 1,200,40,5,700,80,9
+ordenado con función: 1,5,9,40,80,200,700
+```
 
 ### Ordenando caracteres no ASCII
 

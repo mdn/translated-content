@@ -10,7 +10,9 @@ El método **`getUTCFullYear()`** devuelve el año en la fecha especificada en t
 
 ## Sintaxis
 
-    objectoFecha.getUTCFullYear()
+```js
+objectoFecha.getUTCFullYear()
+```
 
 ### Valor devuelto
 

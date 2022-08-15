@@ -16,7 +16,9 @@ El método **`HTMLInputElement.select()`** selecciona todo el texto en un elemen
 
 ## Sintaxis
 
-    element.select()
+```js
+element.select()
+```
 
 ## Especificación
 

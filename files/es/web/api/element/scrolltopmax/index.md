@@ -17,7 +17,9 @@ La propiedad de solo lectura(read-only) **`Element.scrollTopMax`** retorna un {{
 
 ## Sintaxis
 
-    var pxl = elt.scrollTopMax;
+```js
+var pxl = elt.scrollTopMax;
+```
 
 ## Especificaciones
 

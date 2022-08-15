@@ -24,7 +24,9 @@ Si existe un encabezado {{HTTPHeader("Cache-Control")}} con la directiva "max-ag
 
 ## Sintaxis
 
-    Expires: <http-date>
+```
+Expires: <http-date>
+```
 
 ## Directivas
 
@@ -33,7 +35,9 @@ Si existe un encabezado {{HTTPHeader("Cache-Control")}} con la directiva "max-ag
 
 ## Ejemplo
 
-    Expires: Jue, 21 Oct 2017 07:28:00 GMT
+```
+Expires: Jue, 21 Oct 2017 07:28:00 GMT
+```
 
 ## Especificaciones
 

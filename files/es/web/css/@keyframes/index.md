@@ -39,20 +39,24 @@ En este caso, la propiedad {{cssxref ("top")}} anima con los keyframes de 0%, 30
 
 La especificación define que si un keyframe se define varias veces, pero no todas las propiedades afectadas se especifican en cada keyframe, sólo los valores especificados en el último keyframe se consideran. Por ejemplo:
 
-    @keyframes identifier {
-      0% { top: 0; }
-      50% { top: 30px; left: 20px; }
-      50% { top: 10px; }
-      100% { top: 0; }
-    }
+```css
+@keyframes identifier {
+  0% { top: 0; }
+  50% { top: 30px; left: 20px; }
+  50% { top: 10px; }
+  100% { top: 0; }
+}
+```
 
 En este ejemplo, en el 50% del keyframe, el valor utilizado es `top: 10px` y todos los demás valores en este keyframe se ignoran.{{non-standard_inline}} los keyframes (fotogramas clave) en cascada son compatibles a partir de Firefox 14. Para el ejemplo anterior, esto significa que en el fotograma clave 50%, el valor left: 20px será considerado. Esto no está definido en la especificación todavía, pero se está discutiendo.
 
 ## Sintaxis
 
-    @keyframes <identifier> {
-      [ [ from | to | <percentage> ] [, from | to | <percentage> ]* block ]*
-    }
+```css
+@keyframes <identifier> {
+  [ [ from | to | <percentage> ] [, from | to | <percentage> ]* block ]*
+}
+```
 
 ### Valores
 
@@ -67,7 +71,7 @@ En este ejemplo, en el 50% del keyframe, el valor utilizado es `top: 10px` y tod
 
 ## Ejemplos
 
-Mira los ejemplos del [CSS animations](/en/CSS/CSS_animations "en/CSS/CSS_animations").
+Mira los ejemplos del [CSS animations](/en/CSS/CSS_animations).
 
 ## Especificaciones
 
@@ -81,5 +85,5 @@ Compatibilidad del navegador
 
 ## Vease también
 
-- [Using CSS animations](/es/docs/CSS/Using_CSS_animations "en/CSS/CSS_animations")
+- [Using CSS animations](/es/docs/CSS/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

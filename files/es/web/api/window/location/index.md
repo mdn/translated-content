@@ -15,8 +15,10 @@ La propiedad de sólo lectura `Window.location`retorna un objeto {{domxref("Loca
 
 ## Sintaxis
 
-    var oldLocation = location;
-    location = newLocation;
+```js
+var oldLocation = location;
+location = newLocation;
+```
 
 ## Ejemplos
 
@@ -139,7 +141,7 @@ span.intLink {
 </html>
 ```
 
-> **Nota:** La función showNode es también un ejemplo del uso del ciclo [`for`](/en/JavaScript/Reference/Statements/for "en/JavaScript/Reference/Statements/for") sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
+> **Nota:** La función showNode es también un ejemplo del uso del ciclo [`for`](/en/JavaScript/Reference/Statements/for) sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
 
 …De igual manera pero con un scroll animado:
 

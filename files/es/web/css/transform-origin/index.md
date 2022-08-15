@@ -15,22 +15,24 @@ Los valores no establecidos explícitamente se restablecen a sus valores origina
 
 ## Sintaxis
 
-    Sintaxis Formal: {{csssyntax("transform-origin")}}
+```
+Sintaxis Formal: {{csssyntax("transform-origin")}}
 
-    transform-origin: x-offset                                   /* Sintaxis con valor único */   E.g.  transform-origin: 2px
-    transform-origin: offset-keyword                                                      E.g.  transform-origin: bottom
+transform-origin: x-offset                                   /* Sintaxis con valor único */   E.g.  transform-origin: 2px
+transform-origin: offset-keyword                                                      E.g.  transform-origin: bottom
 
-    transform-origin: x-offset y-offset                          /* Sintaxis con dos valores */   E.g.  transform-origin: 3cm 2px
-    transform-origin: y-offset x-offset-keyword                                           E.g.  transform-origin: 2px left
-    transform-origin: x-offset-keyword y-offset                                           E.g.  transform-origin: left 2px
-    transform-origin: x-offset-keyword y-offset-keyword                                   E.g.  transform-origin: right top
-    transform-origin: y-offset-keyword x-offset-keyword                                   E.g.  transform-origin: top right
+transform-origin: x-offset y-offset                          /* Sintaxis con dos valores */   E.g.  transform-origin: 3cm 2px
+transform-origin: y-offset x-offset-keyword                                           E.g.  transform-origin: 2px left
+transform-origin: x-offset-keyword y-offset                                           E.g.  transform-origin: left 2px
+transform-origin: x-offset-keyword y-offset-keyword                                   E.g.  transform-origin: right top
+transform-origin: y-offset-keyword x-offset-keyword                                   E.g.  transform-origin: top right
 
-    transform-origin: x-offset y-offset z-offset                 /* Sintaxis con tres valores */ E.g.  transform-origin: 2px 30% 10px
-    transform-origin: y-offset x-offset-keyword z-offset                                  E.g.  transform-origin: 2px left 10px
-    transform-origin: x-offset-keyword y-offset z-offset                                  E.g.  transform-origin: left 5px -3px
-    transform-origin: x-offset-keyword y-offset-keyword z-offset                          E.g.  transform-origin: right bottom 2cm
-    transform-origin: y-offset-keyword x-offset-keyword z-offset                          E.g.  transform-origin: bottom right 2cm
+transform-origin: x-offset y-offset z-offset                 /* Sintaxis con tres valores */ E.g.  transform-origin: 2px 30% 10px
+transform-origin: y-offset x-offset-keyword z-offset                                  E.g.  transform-origin: 2px left 10px
+transform-origin: x-offset-keyword y-offset z-offset                                  E.g.  transform-origin: left 5px -3px
+transform-origin: x-offset-keyword y-offset-keyword z-offset                          E.g.  transform-origin: right bottom 2cm
+transform-origin: y-offset-keyword x-offset-keyword z-offset                          E.g.  transform-origin: bottom right 2cm
+```
 
 ### Valores
 
@@ -59,7 +61,7 @@ Las palabras clave son abreviaciones por convención que coinciden con los sigui
 
 ## Ejemplos
 
-Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms "en/CSS/Using CSS transforms") para más ejemplos.
+Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ### Ejemplos en vivo:
 

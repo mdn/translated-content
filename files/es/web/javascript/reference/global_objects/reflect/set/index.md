@@ -9,7 +9,9 @@ El método estático **`Reflect.set()`** funciona igual que asignar una propieda
 
 ## Sintaxis
 
-    Reflect.set(target, propertyKey, value[, receiver])
+```js
+Reflect.set(target, propertyKey, value[, receiver])
+```
 
 ### Parámetros
 

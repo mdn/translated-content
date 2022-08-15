@@ -14,10 +14,10 @@ El elemento de _HTML section_ (`<section>`) representa una sección genérica de
 
 ## Contexto de uso
 
-| Contenido permitido         | [Contenido dinámico](/en/HTML/Content_categories#Flow_content "en/HTML/Content Categories#Flow content")                                                                                                                                                                     |
+| Contenido permitido         | [Contenido dinámico](/en/HTML/Content_categories#Flow_content)                                                                                                                                                                     |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omisión de etiquetas        | Ninguna, tanto la etiqueta de apertura como la de cierre son obligatorias.                                                                                                                                                                                                   |
-| Elementos padres permitidos | Todo elemento que acepte [contenido dinámico](/en/HTML/Content_categories#Flow_content "en/HTML/Content Categories#Flow content"). Nótese que un elemento {{ HTMLElement("section") }} no debe ser descendiente de un elemento {{ HTMLElement("address") }}. |
+| Elementos padres permitidos | Todo elemento que acepte [contenido dinámico](/en/HTML/Content_categories#Flow_content). Nótese que un elemento {{ HTMLElement("section") }} no debe ser descendiente de un elemento {{ HTMLElement("address") }}. |
 | Documento normativo         | [HTML5, sección 4.4.2](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-section-element)                                                                                                                                                        |
 
 ## Atributos
@@ -26,7 +26,7 @@ Este elemento carece de otros atributos fuera de los [atributos globales](/en/HT
 
 ## Interfaz del DOM
 
-Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element "en/DOM/element").
+Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 
 ## Ejemplo 1
 
@@ -75,4 +75,4 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element "en/DOM/ele
 ## Véase también
 
 - Otros elementos relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
-- [Secciones y esquemas de un documento en HTML5](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
+- [Secciones y esquemas de un documento en HTML5](/en/Sections_and_Outlines_of_an_HTML5_document).

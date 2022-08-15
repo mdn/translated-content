@@ -15,7 +15,9 @@ La propiedad de lectura **`ownerDocument`** de la interfaz {{domxref("Node")}} d
 
 ## Sintaxis
 
-    var document = element.ownerDocument;
+```js
+var document = element.ownerDocument;
+```
 
 ### Resultado
 

@@ -24,7 +24,9 @@ Para los elementos con una posición absoluta (aquellos que tienen la propiedad 
 
 ### Sintaxis
 
-    right: <length> | <percentage> | auto | inherit ;
+```css
+right: <length> | <percentage> | auto | inherit ;
+```
 
 ### Valores
 
@@ -35,12 +37,14 @@ Para los elementos con una posición absoluta (aquellos que tienen la propiedad 
 
 ### Ejemplos
 
-    div {
-       position: absolute;
-       right: 20px;
-       height: 200px;
-       border: 1px solid #000;
-    }
+```css
+div {
+    position: absolute;
+    right: 20px;
+    height: 200px;
+    border: 1px solid #000;
+}
+```
 
 ### Notas
 

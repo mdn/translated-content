@@ -21,15 +21,17 @@ Para comunicarse utilizando el protocolo webSocket, necesitarás crear un objeto
 
 El constructor WebSocket requiere de un parámetro obligatorio y otro opcional:
 
-    WebSocket WebSocket(
-      in DOMString url,
-      in optional DOMString protocols
-    );
+```
+WebSocket WebSocket(
+  in DOMString url,
+  in optional DOMString protocols
+);
 
-    WebSocket WebSocket(
-      in DOMString url,
-      in optional DOMString[] protocols
-    );
+WebSocket WebSocket(
+  in DOMString url,
+  in optional DOMString[] protocols
+);
+```
 
 - `url`
   - : La url a la que conectar; esta es la URL a la que el WebSocket responde.
@@ -43,9 +45,9 @@ El constructor puede lanzar excepciones:
 
 ### Errores de conexión
 
-Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket`(de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent") es enviado al objeto `WebSocket`(de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
+Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket`(de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket`(de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
 
-A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4 "RFC 6455 Section 7.4") a través de un [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent").
+A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) a través de un [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent).
 
 ### Ejemplos
 
@@ -69,13 +71,13 @@ En los ejemplos anteriores `ws` sustituye `http`, y de igual manera `wss` sustit
 
 ## Enviando Información al servidor
 
-Una vez la conexión esta abierta, se puede comenzar a enviar datos al servidor. Para hacer esto, simplemente se llama al metodo [`send()`](</en/WebSockets/WebSockets_reference/WebSocket#send()> "en/WebSockets/WebSockets reference/WebSocket#send()") del objeto `WebSocket`, cada vez que se desea enviar un mensaje:
+Una vez la conexión esta abierta, se puede comenzar a enviar datos al servidor. Para hacer esto, simplemente se llama al metodo [`send()`](</en/WebSockets/WebSockets_reference/WebSocket#send()>) del objeto `WebSocket`, cada vez que se desea enviar un mensaje:
 
 ```js
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer "en/JavaScript typed arrays/ArrayBuffer").
+Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer).
 
 > **Nota:** Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
 
@@ -89,7 +91,7 @@ exampleSocket.onopen = function (event) {
 
 ### Usando JSON para transferir Objetos
 
-Una forma de enviar información compleja al servidor es utilizar [JSON](/en/JSON "en/JSON"). Por ejemplo, un programa para chatear puede interactuar con el servidor usando un protocolo que implementa el uso de paquetes de JSON:
+Una forma de enviar información compleja al servidor es utilizar [JSON](/en/JSON). Por ejemplo, un programa para chatear puede interactuar con el servidor usando un protocolo que implementa el uso de paquetes de JSON:
 
 ```js
 // Envia texto a todos los usuarios através del servidor
@@ -168,7 +170,7 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-Se usa [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse "en/JavaScript/Reference/Global Objects/JSON/parse") para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
+Se usa [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
 
 ### Formato de texto de los datos
 
@@ -178,7 +180,7 @@ Antes de Gecko 9.0 {{ geckoRelease("9.0") }}, algunos no-caracteres que siguen s
 
 ## Cerrando la conexión
 
-Cuando se ha terminado de usar la conexión WebSocket, se llama el método [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()> "en/WebSockets/WebSockets reference/WebSocket#close()") del objeto `WebSocket`:
+Cuando se ha terminado de usar la conexión WebSocket, se llama el método [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()>) del objeto `WebSocket`:
 
 ```js
 exampleSocket.close();

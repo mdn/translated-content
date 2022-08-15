@@ -9,7 +9,9 @@ La propiedad de sólo lectura **`node.parentNode`** devuelve el padre del nodo e
 
 ## Sintaxis
 
-    parentNode = node.parentNode
+```js
+parentNode = node.parentNode
+```
 
 parentNode es el padre del nodo actual. El padre de un elemento es un nodo del tipo `Element`, un nodo `Document`, o un nodo `DocumentFragment.`
 

@@ -22,13 +22,16 @@ Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el **va
 
 ## Sintaxis
 
-    arr.findIndex(callback( element[, index[, array]] )[, thisArg])
+```js
+arr.findIndex(callback( element[, index[, array]] )[, thisArg])
+```
 
 ### Parámetros
 
 - `callback`
-  - : Función a ejecutar en cada uno de los valores del array hasta que devuelve `true`, indicando que el elemento que la cumple fue encontrado.Recibe tres argumentos:_ `element`
-    _ : El elemento actual siendo procesado en el array.
+  - : Función a ejecutar en cada uno de los valores del array hasta que devuelve `true`, indicando que el elemento que la cumple fue encontrado.Recibe tres argumentos:
+    - `element`
+      - : El elemento actual siendo procesado en el array.
     - `index` {{optional_inline}}
       - : El índice del elemento actual que está siendo procesado en el array.
     - `array` {{optional_inline}}

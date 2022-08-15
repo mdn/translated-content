@@ -13,7 +13,9 @@ Traslada el ancla hasta el mismo punto del foco. El foco no se mueve. Si el cont
 
 ### Sintaxis
 
-    sel.collapseToEnd()
+```js
+sel.collapseToEnd()
+```
 
 ### Parámetros
 

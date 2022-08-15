@@ -13,7 +13,9 @@ Devuelve una lista de elementos con un nombre determinado. Se busca en todo el d
 
 ### Sintaxis
 
-    elements = document.getElementsByTagName(name)
+```js
+elements = document.getElementsByTagName(name)
+```
 
 - `elements` es una lista 'viva' (`NodeList`) de los elementos encontrados en el orden en que han aparecido en el árbol.
 - `name` es una cadena que representa el nombre de los elementos. La cadena especial "\*" representa a todos los elementos.
@@ -24,76 +26,78 @@ En el siguiente ejemplo, `getElementsByTagName` empieza por el elemento padre y 
 
 Ten en cuenta que cuando el nodo en el que se invoca `getElementsByTagName`, no es el nodo `document`, en realidad se está usando el método [element.getElementsByTagName](es/DOM/element.getElementsByTagName).
 
-    <html>
+```html
+<html>
 
-    <head>
-    <title>ejemplo de getElementsByTagName</title>
+<head>
+<title>ejemplo de getElementsByTagName</title>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-    function getAllParaElems()
-    {
-      var allParas = document.getElementsByTagName("p");
+function getAllParaElems()
+{
+  var allParas = document.getElementsByTagName("p");
 
-      var num = allParas.length;
+  var num = allParas.length;
 
-      alert("Hay " + num + " <p> elementos en este documento");
-    }
-
-
-    function div1ParaElems()
-    {
-      var div1 = document.getElementById("div1")
-      var div1Paras = div1.getElementsByTagName("p");
-
-      var num = div1Paras.length;
-
-      alert("Hay " + num + " <p> elementos en el elemento div1");
-    }
+  alert("Hay " + num + " <p> elementos en este documento");
+}
 
 
-    function div2ParaElems()
-    {
-      var div2 = document.getElementById("div2")
-      var div2Paras = div2.getElementsByTagName("p");
+function div1ParaElems()
+{
+  var div1 = document.getElementById("div1")
+  var div1Paras = div1.getElementsByTagName("p");
 
-      var num = div2Paras.length;
+  var num = div1Paras.length;
 
-      alert("Hay " + num + " <p> elementos en el elemento div2");
-    }
+  alert("Hay " + num + " <p> elementos en el elemento div1");
+}
 
-    </script>
-    </head>
 
-    <body style="border: solid green 3px">
-    <p>Algo de texto</p>
-    <p>Algo de texto</p>
+function div2ParaElems()
+{
+  var div2 = document.getElementById("div2")
+  var div2Paras = div2.getElementsByTagName("p");
 
-      <div id="div1" style="border: solid blue 3px">
-        <p>Algo de texto en div1</p>
-        <p>Algo de texto en div1</p>
-        <p>Algo de texto en div1</p>
+  var num = div2Paras.length;
 
-        <div id="div2" style="border: solid red 3px">
-        <p>Algo de texto en div2</p>
-        <p>Algo de texto en div2</p>
-        </div>
-      </div>
+  alert("Hay " + num + " <p> elementos en el elemento div2");
+}
 
-    <p>Algo de texto</p>
-    <p>Algo de texto</p>
+</script>
+</head>
 
-    <button onclick="getAllParaElems();">
-     muestra todos los elementos p en el documento</button><br />
+<body style="border: solid green 3px">
+<p>Algo de texto</p>
+<p>Algo de texto</p>
 
-    <button onclick="div1ParaElems();">
-     muestra todos los elementos p en div1</button><br />
+  <div id="div1" style="border: solid blue 3px">
+    <p>Algo de texto en div1</p>
+    <p>Algo de texto en div1</p>
+    <p>Algo de texto en div1</p>
 
-    <button onclick="div2ParaElems();">
-     muestra todos los elementos p en div2</button>
+    <div id="div2" style="border: solid red 3px">
+    <p>Algo de texto en div2</p>
+    <p>Algo de texto en div2</p>
+    </div>
+  </div>
 
-    </body>
-    </html>
+<p>Algo de texto</p>
+<p>Algo de texto</p>
+
+<button onclick="getAllParaElems();">
+  muestra todos los elementos p en el documento</button><br />
+
+<button onclick="div1ParaElems();">
+  muestra todos los elementos p en div1</button><br />
+
+<button onclick="div2ParaElems();">
+  muestra todos los elementos p en div2</button>
+
+</body>
+</html>
+```
 
 ### Especificación
 

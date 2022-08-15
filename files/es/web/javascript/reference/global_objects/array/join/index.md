@@ -19,7 +19,9 @@ El método **`join()`** une todos los elementos de una matriz (o un [objeto simi
 
 ## Sintaxis
 
-    arr.join([separator])
+```js
+arr.join([separator])
+```
 
 ### Parámetros
 

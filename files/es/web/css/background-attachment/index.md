@@ -20,7 +20,9 @@ La propiedad CSS **`background-attachment`** determina si la posición de la ima
 
 ### Sintaxis
 
-    background-attachment: scroll | fixed | inherit
+```
+background-attachment: scroll | fixed | inherit
+```
 
 ### Valores
 

@@ -21,7 +21,9 @@ Causa que una cadena se muestra con una fuente pequeña, como si estuviese dentr
 
 ## Sintaxis
 
-    cadena.small()
+```js
+cadena.small()
+```
 
 ## Descripción
 

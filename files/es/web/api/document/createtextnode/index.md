@@ -16,7 +16,9 @@ Crea un nuevo nodo de texto. Este método puede ser usado para escapar caractere
 
 ## Sintaxis
 
-    var text = document.createTextNode(data);
+```js
+var text = document.createTextNode(data);
+```
 
 - _text_ es un nodo Text.
 - _data_ es una cadena de texto [string](/es/docs/Web/JavaScript/Reference/Global_Objects/String) que contiene los datos a poner en el nodo de texto.

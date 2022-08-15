@@ -17,7 +17,9 @@ La función **`Math.hypot()`** retorna la raíz cuadrada de la suma de los cuadr
 
 ## Sintaxis
 
-    Math.hypot(valor1, valor2, ..., valorN)
+```js
+Math.hypot(valor1, valor2, ..., valorN)
+```
 
 ### Parámetros
 

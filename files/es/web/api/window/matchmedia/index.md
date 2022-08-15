@@ -13,11 +13,13 @@ translation_of: Web/API/Window/matchMedia
 ---
 {{APIRef}}
 
-El método **`Window.matchMedia()`** devuelve un nuevo objeto {{domxref("MediaQueryList")}} que representa los analizados de la [media query](/es/docs/CSS/Media_queries "CSS/Media queries") indicada.
+El método **`Window.matchMedia()`** devuelve un nuevo objeto {{domxref("MediaQueryList")}} que representa los analizados de la [media query](/es/docs/CSS/Media_queries) indicada.
 
 ## Sintaxis
 
-    mql = window.matchMedia(mediaQueryString)
+```js
+mql = window.matchMedia(mediaQueryString)
+```
 
 Donde `mediaQueryString` es una cadena de texto que representa la media query de la que devolver un nuevo objeto {{domxref("MediaQueryList")}}.
 
@@ -33,7 +35,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 }
 ```
 
-Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code "CSS/Using media queries from code") para ver ejemplos adicionales.
+Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code) para ver ejemplos adicionales.
 
 ## Especificaciones
 
@@ -47,7 +49,7 @@ Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code "CS
 
 ## Ver también
 
-- [Media queries](/es/docs/CSS/Media_queries "CSS/Media queries")
+- [Media queries](/es/docs/CSS/Media_queries)
 - [Probando media queries](/es/docs/Web/Guide/CSS/probando_media_queries "CSS/Probando media queries
 ")
 - {{domxref("MediaQueryList")}}

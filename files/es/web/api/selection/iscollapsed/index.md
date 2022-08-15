@@ -13,7 +13,9 @@ Devuelve un valor boleano verdadero si los puntos de inicio y fin de la selecci√
 
 ### Sintaxis
 
-    sel.isCollapsed
+```js
+sel.isCollapsed
+```
 
 ### Notas
 

@@ -9,7 +9,9 @@ La propiedad de solo lectura **headers** de la interface {{domxref("Request")}} 
 
 ## Sintax
 
-    var myHeaders = request.headers;
+```js
+var myHeaders = request.headers;
+```
 
 ### Valor
 

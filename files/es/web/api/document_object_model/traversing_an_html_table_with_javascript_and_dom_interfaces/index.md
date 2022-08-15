@@ -73,36 +73,46 @@ Una vez creados los elementos \<table>, \<tbody>, \<tr>, y \<td> así como los n
 
 1. Primero, anexamos cada nodo de texto a su elemento padre \<td> :
 
-        celda.appendChild(textoCelda);
+    ```js
+    celda.appendChild(textoCelda);
+    ```
 
 2. Posteriormente, anexamos cada elemento \<td> a su elemento padre \<tr> :
 
-        hilera.appendChild(celda);
+    ```js
+    hilera.appendChild(celda);
+    ```
 
 3. Posteriomente, anexamos cada elemento \<tr> a su elemento padre \<tbody>:
 
-        tblBody.appendChild(hilera);
+    ```js
+    tblBody.appendChild(hilera);
+    ```
 
 4. Después, anexamos el elemento \<tbody> a su elemento padre \<table>:
 
-        tabla.appendChild(tblBody);
+    ```js
+    tabla.appendChild(tblBody);
+    ```
 
 5. Finalmente, anexamos el elemento \<table> a su elemento padre \<body>:
 
+```
         body.appendChild(tabla);
+```
 
 Recuérda esta técnica. Te será muy útil en la programación bajo el estándar W3C DOM. Primero, creas los elementos de arriba a abajo; posteriormente adicionas los hijos a los padres de abajo a arriba.
 
 A continuación aparece el código HTML generado por el código JavaScript:
 
-    ...
-    <table border="2">
-        <tbody>
-            <tr><td>celda en la hilera 0, columna 0</td><td>celda en la hilera 0, columna 1</td></tr>
-            <tr><td>celda en la hilera 1, columna 0</td><td>celda en la hilera 1, columna 1</td></tr>
-        </tbody>
-    </table>
-    ...
+```html
+<table border="2">
+    <tbody>
+        <tr><td>celda en la hilera 0, columna 0</td><td>celda en la hilera 0, columna 1</td></tr>
+        <tr><td>celda en la hilera 1, columna 0</td><td>celda en la hilera 1, columna 1</td></tr>
+    </tbody>
+</table>
+```
 
 Aquí está el árbol de objetos DOM generado por el código del elemento \<TABLE> :
 
@@ -149,30 +159,40 @@ En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo
 
 1. Primero, obtendremos una lista de todos los elementos body mediante
 
-        myBody = document.getElementsByTagName("body")[0]
+    ```js
+    myBody = document.getElementsByTagName("body")[0]
+    ```
 
     Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `{{mediawiki.external(0)}}`.
 
 2. Luego, obtenemos todos los elementos p que son descendientes del body mediante
 
-        myBodyElements = myBody.getElementsByTagName("p");
+    ```js
+    myBodyElements = myBody.getElementsByTagName("p");
+    ```
 
 3. Finalmente, obtenemos el segundo item de la lista de elementos p mediante
 
-        myP = myBodyElements[1];
+    ```js
+    myP = myBodyElements[1];
+    ```
 
 ![Image:sample2a2.jpg](/@api/deki/files/834/=Sample2a2.jpg)
 
 Una vez que haya obtenido el objeto DOM para un elemento HTML, puede establecer sus propiedades. Por ejemplo, si desea establecer la propiedad estilo de color de fondo, agregue:
 
-    myP.style.background = "rgb(255,0,0)";
-    // setting inline STYLE attribute
+```js
+myP.style.background = "rgb(255,0,0)";
+// setting inline STYLE attribute
+```
 
 ### Creating TextNodes with `document.createTextNode("..")`
 
 Use the document object to invoke the createTextNode method and create your text node. You just need to pass the text content. The return value is an object that represents the text node.
 
-    myTextNode = document.createTextNode("world");
+```js
+myTextNode = document.createTextNode("world");
+```
 
 This means that you have created a node of the type TEXT_NODE (a piece of text) whose text data is "world", and myTextNode is your reference to this node object. To insert this text into your HTML page, you need to make this text node a child of some other node element.
 
@@ -180,7 +200,9 @@ This means that you have created a node of the type TEXT_NODE (a piece of text) 
 
 So, by calling myP.appendChild({{mediawiki.external('node_element')}}), you are making the element a new child of the second \<p> element.
 
-    myP.appendChild(myTextNode);
+```js
+myP.appendChild(myTextNode);
+```
 
 After testing this sample, note that the words hello and world are together: helloworld. So visually, when you see the HTML page it seems like the two text nodes hello and world are a single node, but remember that in the document model, there are two nodes. The second node is a new node of type TEXT_NODE, and it is the second child of the second \<p> tag. The following figure shows the recently created Text Node object inside the document tree.
 
@@ -192,8 +214,10 @@ After testing this sample, note that the words hello and world are together: hel
 
 You can create new HTML elements or any other element you want with createElement. For example, if you want to create a new \<p> element as a child of the \<body> element, you can use the myBody in the previous example and append a new element node. To create a node simply call `document.createElement("tagname")`. For example:
 
-    myNewPTAGnode = document.createElement("p");
-    myBody.appendChild(myNewPTAGnode);
+```js
+myNewPTAGnode = document.createElement("p");
+myBody.appendChild(myNewPTAGnode);
+```
 
 ![Image:sample2c.jpg](/@api/deki/files/836/=Sample2c.jpg)
 
@@ -201,11 +225,15 @@ You can create new HTML elements or any other element you want with createElemen
 
 Nodes can be removed. The following code removes text node `myTextNode` (containing the word "world") from the second `<p>` element, `myP`.
 
-    myP.removeChild(myTextNode);
+```js
+myP.removeChild(myTextNode);
+```
 
 Text node `myTextNode` (containing the word "world") still exists. The following code attaches `myTextNode` to the recently created `<p>` element, `myNewPTAGnode`.
 
-    myNewPTAGnode.appendChild(myTextNode);
+```js
+myNewPTAGnode.appendChild(myTextNode);
+```
 
 The final state for the modified object tree looks like this:
 
@@ -301,7 +329,9 @@ mybody.appendChild(currenttext);
 
 At the end of sample1 there is a call to setAttribute on the mytable object. This call was used to set the border property of the table. To retrieve the value of the attribute, use the getAttribute method:
 
-    mytable.getAttribute("border");
+```js
+mytable.getAttribute("border");
+```
 
 ### Hiding a column by changing style properties
 
@@ -313,7 +343,7 @@ Once you have the object in your JavaScript variable, you can set style properti
 </body>
 <script>
     function start() {
-       var mybody =document.getElementsByTagName("body")[0];
+       var mybody = document.getElementsByTagName("body")[0];
        mytable     = document.createElement("table");
        mytablebody = document.createElement("tbody");
 

@@ -17,14 +17,16 @@ En ediciones anteriores de la especificación ES2015, solían llamarse "plantill
 
 ## Sintaxis
 
-    `texto de cadena de caracteres`
+```js
+`texto de cadena de caracteres`
 
-    `línea 1 de la cadena de caracteres
-     línea 2 de la cadena de caracteres`
+`línea 1 de la cadena de caracteres
+  línea 2 de la cadena de caracteres`
 
-    `texto de cadena de caracteres ${expresión} texto adicional`
+`texto de cadena de caracteres ${expresión} texto adicional`
 
-    etiqueta`texto de cadena de caracteres ${expresión} texto adicional`
+etiqueta`texto de cadena de caracteres ${expresión} texto adicional`
+```
 
 ## Descripción
 

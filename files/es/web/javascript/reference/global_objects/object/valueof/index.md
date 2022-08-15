@@ -10,7 +10,9 @@ El método **`valueOf()`** retorna el valor primitivo del objeto especificado.
 
 ## Sintaxis
 
-    object.valueOf()
+```js
+object.valueOf()
+```
 
 ### Valor de retorno
 

@@ -19,7 +19,9 @@ El método **`Object.assign()`** copia todas las propiedades enumerables de uno 
 
 ## Sintaxis
 
-    Object.assign(objetivo, ...fuentes)
+```js
+Object.assign(objetivo, ...fuentes)
+```
 
 ### Parámetros
 

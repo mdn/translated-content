@@ -13,7 +13,9 @@ Devuelve el número de caracteres en que el ancla de la selección es colocada d
 
 ### Sintaxis
 
-    sel.anchorOffset
+```js
+sel.anchorOffset
+```
 
 ### Notas
 

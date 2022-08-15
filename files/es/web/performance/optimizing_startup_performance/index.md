@@ -14,7 +14,7 @@ Un aspecto que a menudo se pasa por alto en el desarrollo de software de aplicac
 
 Independientemente de la plataforma, siempre es una buena idea comenzar lo **más rápido** posible. Ya que es un problema universal, no nos vamos a enfocar demasiado en esto. En su lugar, vamos a ver un problema más importante al crear aplicaciones web: comenzar de la manera más **asíncrona** posible. Eso significa no ejecutar todo el código inicial en un mismo controlador de eventos en el hilo principal de la aplicación.
 
-En su lugar, es preferible que el código de la aplicación cree un [Web worker](es/docs/Web/Guide/Performance/Usando_web_workers "/en-US/docs/DOM/Using_web_workers") que haga todo lo posible en un hilo de fondo (por ejemplo, para obtener y procesar datos). Luego, todo lo que debe ejecutarse en el hilo principal (como responder a los eventos del usuario o desplegar la interfaz gráfica) debe dividirse en tareas pequeñas para que el ciclo de eventos continúe mientras la aplicación inicia. Esto evitará que la aplicación, el navegador y / o el dispositivo parezcan haber fallado.
+En su lugar, es preferible que el código de la aplicación cree un [Web worker](es/docs/Web/Guide/Performance/Usando_web_workers) que haga todo lo posible en un hilo de fondo (por ejemplo, para obtener y procesar datos). Luego, todo lo que debe ejecutarse en el hilo principal (como responder a los eventos del usuario o desplegar la interfaz gráfica) debe dividirse en tareas pequeñas para que el ciclo de eventos continúe mientras la aplicación inicia. Esto evitará que la aplicación, el navegador y / o el dispositivo parezcan haber fallado.
 
 ¿Por qué es importante ser asíncrono? Aparte de las razones sugeridas anteriormente, considere el impacto de una página o interfaz de usuario que no responde. El usuario no puede cerrar la aplicación si la lanzó por error. Si la aplicación se ejecuta en un navegador, es posible que el usuario obtenga una notificación diciendo "la aplicación no responde". Presentar algún tipo de interfaz, como una barra de progreso, para que el usuario sepa cuánto tiempo más tendrá que esperar mientras se inicia la aplicación es mejor que una interfaz incapaz de responder a las acciones del usuario.
 
@@ -24,7 +24,7 @@ Si está comenzando un proyecto de cero, generalmente es más sencillo escribir 
 
 Por otro lado, migrar una aplicación existente a la Web puede ser una tarea más complicada. Por ejemplo, una aplicación de escritorio no necesita escribirse de forma asíncrona porque generalmente el sistema operativo se encarga de eso, o aplicación que se está ejecutando actualmente es lo único que importa, dependiendo del entorno operativo. La aplicación original puede tener un ciclo principal que puede modificarse para operar de forma asíncrona (intentando ejecutar cada iteración del ciclo principal por separado); el inicio es a menudo un procedimiento monolítico continuo que puede ir actualizando de manera periódica la interfaz gráfica para indicar progreso.
 
-Si bien se puede usar los [Web workers](es/docs/Web/Guide/Performance/Usando_web_workers "/en-US/docs/DOM/Using_web_workers")para ejecutar fragmentos de forma asíncrona códigos [JavaScript](/es/docs/JavaScript) muy grandes y/o lentos, hay una gran advertencia: Web workers no tienen accesso a [WebGL](/es/docs/Web/API/WebGL_API "/en-US/docs/WebGL") o audio, y no pueden enviar mensajes síncronos al hilo principal, por lo que no se puede hacer un proxy de esos APIs al hilo principal. Todo esto significa que, a menos que se pueda extraer fácilmente los trozos de "cálculo puro" del proceso de inicio en Web workers, se va terminar teniendo que ejecutar la mayor parte o la totalidad del código de inicio en el hilo principal.
+Si bien se puede usar los [Web workers](es/docs/Web/Guide/Performance/Usando_web_workers)para ejecutar fragmentos de forma asíncrona códigos [JavaScript](/es/docs/JavaScript) muy grandes y/o lentos, hay una gran advertencia: Web workers no tienen accesso a [WebGL](/es/docs/Web/API/WebGL_API) o audio, y no pueden enviar mensajes síncronos al hilo principal, por lo que no se puede hacer un proxy de esos APIs al hilo principal. Todo esto significa que, a menos que se pueda extraer fácilmente los trozos de "cálculo puro" del proceso de inicio en Web workers, se va terminar teniendo que ejecutar la mayor parte o la totalidad del código de inicio en el hilo principal.
 
 Sin embargo, incluso código como ese puede ser hecho asíncrono, con un poco de trabajo.
 
@@ -69,8 +69,8 @@ Hay otras cosas además de ir asíncrono, que pueden ayudarlo a mejorar el tiemp
 
 ## También Podría Interesarte
 
-- [Apps](/es/docs/Web/Progressive_web_apps "/en-US/docs/Apps")
-- [Games](/es/docs/Games "/en-US/docs/Games")
+- [Apps](/es/docs/Web/Progressive_web_apps)
+- [Games](/es/docs/Games)
 
 ## Información del Documento Original:
 

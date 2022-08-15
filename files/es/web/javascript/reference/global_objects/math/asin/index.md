@@ -12,7 +12,9 @@ La Funcion **`Math.asin()`** retorna El arco seno (en radianes) de un número, e
 
 ## Syntax
 
-    Math.asin(x)
+```
+Math.asin(x)
+```
 
 ### Parametros
 

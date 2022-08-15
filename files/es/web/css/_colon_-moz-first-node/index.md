@@ -18,7 +18,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-mo
 
 ## Síntaxis
 
-    span:-moz-first-node { propiedades del estilo }
+```css
+span:-moz-first-node { propiedades del estilo }
+```
 
 ## Ejemplo
 

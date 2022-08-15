@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/regexp/replace
 
 ### Sintaxis
 
-    regexp:replace(original,expresionRegular,reemplazo[,opciones])
+```xml
+regexp:replace(original,expresionRegular,reemplazo[,opciones])
+```
 
 ### Arguments
 

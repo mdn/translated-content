@@ -14,7 +14,9 @@ El valor de _this_ es ignorado cuando la función es llamada con el operador _ne
 
 ## Sintaxis
 
-    fun.bind(thisArg[, arg1[, arg2[, ...]]])
+```js
+fun.bind(thisArg[, arg1[, arg2[, ...]]])
+```
 
 ### Parametros
 

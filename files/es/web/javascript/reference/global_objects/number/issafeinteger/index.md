@@ -26,7 +26,9 @@ Manejar valores más grandes o más pequeños que \~9 cuatrillones con presició
 
 ## Sintaxis
 
-    Number.isSafeInteger(valorDePrueba)
+```js
+Number.isSafeInteger(valorDePrueba)
+```
 
 ### Parámetros
 

@@ -20,13 +20,15 @@ El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "fun
 
 Este objeto no puede ser instanciado directamente. En su lugar, una instancia del objeto `Generator` puede ser devuelta por una [función generator](/es/docs/Web/JavaScript/Referencia/Sentencias/function*):
 
-     function* gen() {
-       yield 1;
-       yield 2;
-       yield 3;
-     }
+```js
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
 
-     var g = gen(); // "Generator { }"
+var g = gen(); // "Generator { }"
+```
 
 ## Métodos de instanciación
 
@@ -117,8 +119,6 @@ Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores 
 ## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Generator")}}
-
-##
 
 ## Vea también
 

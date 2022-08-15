@@ -15,7 +15,9 @@ translation_of: Web/API/Document/adoptNode
 
 ## Sintaxis
 
-    node = document.adoptNode(externalNode);
+```js
+node = document.adoptNode(externalNode);
+```
 
 - `node`
   - : El nodo adoptado que ahora tiene este documento como su {{domxref("Node.ownerDocument", "ownerDocument")}}. El {{domxref("Node.parentNode", "parentNode")}} del nodo es `null`, esto se debe a que aún no a sido insertado en el árbol del documento. Tenga en cuenta que `node` y `externalNode` son el mismo objeto después de esta llamada.

@@ -20,18 +20,22 @@ En caso de recursividad, es decir, si la función `f` aparece varias veces en la
 
 ### Ejemplo
 
-    function f(n) { g(n-1) }
-    function g(n) {
-      print("antes: " + g.arguments[0]);
-      if(n>0)
-        f(n);
-      print("después: " + g.arguments[0]);
-    }
-    f(2)
+```js
+function f(n) { g(n-1) }
+function g(n) {
+  print("antes: " + g.arguments[0]);
+  if(n>0)
+    f(n);
+  print("después: " + g.arguments[0]);
+}
+f(2)
+```
 
 resultados:
 
-    antes: 1
-    antes: 0
-    después: 0
-    después: 1
+```
+antes: 1
+antes: 0
+después: 0
+después: 1
+```

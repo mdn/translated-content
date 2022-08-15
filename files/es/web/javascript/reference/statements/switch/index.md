@@ -10,21 +10,23 @@ La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScrip
 
 ## Syntaxis
 
-    switch (expresión) {
-      case valor1:
-        //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-        [break;]
-      case valor2:
-        //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-        [break;]
-      ...
-      case valorN:
-        //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
-        [break;]
-      default:
-        //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
-        [break;]
-    }
+```
+switch (expresión) {
+  case valor1:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
+    [break;]
+  case valor2:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+    [break;]
+  ...
+  case valorN:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
+    [break;]
+  default:
+    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+    [break;]
+}
+```
 
 - `expresión`
   - : Es una expresión que es comparada con el valor de cada instancia `case`.
@@ -40,7 +42,7 @@ Si ocurre una coincidencia, el programa ejecuta las declaraciones asociadas corr
 
 El programa primero busca la primer instacia `case` cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando [comparación estricta](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===)` y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de `case` coincidente, el programa busca la cláusula `default` opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia `default` el programa continúa la ejecución en la instrucción siguiente al final del `switch`. Por convención, la instancia `default` es la última cláusula, pero no tiene que ser así.
 
-La declaración [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break "JavaScript/Reference/Statements/break") es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
+La declaración [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
 
 ## Ejemplos
 
@@ -48,28 +50,30 @@ La declaración [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break 
 
 En el siguiente ejemplo, si `expresión` se resuelve a "Platanos", el algoritmo compara el valor con el `case` "Platanos" y ejecuta la declaración asociada. Cuando se encuentra un `break`, el programa sale del condicional `switch` y ejecuta la declaración que lo procede. Si se omite el `break`, el `case` "Cerezas" también es ejecutado.
 
-    switch (expr) {
-      case 'Naranjas':
-        console.log('El kilogramo de naranjas cuesta $0.59.');
-        break;
-      case 'Manzanas':
-        console.log('El kilogramo de manzanas cuesta $0.32.');
-        break;
-      case 'Platanos':
-        console.log('El kilogramo de platanos cuesta $0.48.');
-        break;
-      case 'Cerezas':
-        console.log('El kilogramo de cerezas cuesta $3.00.');
-        break;
-      case 'Mangos':
-      case 'Papayas':
-        console.log('El kilogramo de mangos y papayas cuesta $2.79.');
-        break;
-      default:
-        console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
-    }
+```js
+switch (expr) {
+  case 'Naranjas':
+    console.log('El kilogramo de naranjas cuesta $0.59.');
+    break;
+  case 'Manzanas':
+    console.log('El kilogramo de manzanas cuesta $0.32.');
+    break;
+  case 'Platanos':
+    console.log('El kilogramo de platanos cuesta $0.48.');
+    break;
+  case 'Cerezas':
+    console.log('El kilogramo de cerezas cuesta $3.00.');
+    break;
+  case 'Mangos':
+  case 'Papayas':
+    console.log('El kilogramo de mangos y papayas cuesta $2.79.');
+    break;
+  default:
+    console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
+}
 
-    console.log("¿Hay algo más que te quisiera consultar?");
+console.log("¿Hay algo más que te quisiera consultar?");
+```
 
 ### ¿Qué pasa si olvido un break?
 
@@ -99,17 +103,19 @@ switch (foo) {
 
 Sí, ¡es posible! JavaScript retornará a la instancia `default` en caso de no encontrar una coincidencia:
 
-    var foo = 5;
-    switch (foo) {
-      case 2:
-        console.log(2);
-        break; // al encontrar este 'break' no se continuará con el siguiente 'default:'
-      default:
-        console.log('default')
-        // fall-through
-      case 1:
-        console.log('1');
-    }
+```js
+var foo = 5;
+switch (foo) {
+  case 2:
+    console.log(2);
+    break; // al encontrar este 'break' no se continuará con el siguiente 'default:'
+  default:
+    console.log('default')
+    // fall-through
+  case 1:
+    console.log('1');
+}
+```
 
 Al estar el `case 1:` a continuación de `default`, y al no haber un `break`de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
 

@@ -17,9 +17,11 @@ La propiedad **`WebSocket.onerror`**, del tipo {{event("Event_handlers", "event 
 
 ## Sintaxis
 
-    aWebSocket.onerror = function(event) {
-      console.error("Error en el WebSocket detectado:", event);
-    };
+```js
+aWebSocket.onerror = function(event) {
+  console.error("Error en el WebSocket detectado:", event);
+};
+```
 
 ## Valor
 

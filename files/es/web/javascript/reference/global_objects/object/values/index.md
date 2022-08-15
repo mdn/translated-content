@@ -17,7 +17,9 @@ El método **`Object.values()`** devuelve un array con los valores correspondien
 
 ## Sintaxis
 
-    Object.values(obj)
+```js
+Object.values(obj)
+```
 
 ### Parámetros
 

@@ -26,9 +26,11 @@ La propiedad `min-height` se utiliza para definir la altura mínima de un elemen
 
 ### Examples
 
-    table {min-height: 75%;}
+```css
+table {min-height: 75%;}
 
-    form {min-height: 0;}
+form {min-height: 0;}
+```
 
 ### Notes
 

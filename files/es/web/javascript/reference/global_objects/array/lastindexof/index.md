@@ -21,7 +21,9 @@ El método **`lastIndexOf()`** devuelve el último índice en el que un cierto e
 
 ## Sintaxis
 
-    arr.lastIndexOf(searchElement) arr.lastIndexOf(searchElement, fromIndex)
+```js
+arr.lastIndexOf(searchElement) arr.lastIndexOf(searchElement, fromIndex)
+```
 
 ### Parámetros
 

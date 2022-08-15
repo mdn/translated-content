@@ -13,9 +13,11 @@ El método indicado como callback recibe un único argumento que indica el tiemp
 
 ## Sintaxis
 
-    requestID = window.mozRequestAnimationFrame(callback);   // Firefox
-    window.msRequestAnimationFrame(callback);                // IE 10 PP2+
-    window.webkitRequestAnimationFrame(callback[, element]); // Chrome/Webkit
+```js
+requestID = window.mozRequestAnimationFrame(callback);   // Firefox
+window.msRequestAnimationFrame(callback);                // IE 10 PP2+
+window.webkitRequestAnimationFrame(callback[, element]); // Chrome/Webkit
+```
 
 ### Parámetros
 

@@ -11,10 +11,12 @@ La propiedad **`HTMLCanvasElement.height es un entero positivo que refleja el at
 
 Esta es una de de las dos propiedades que controlan el tamaño del canvas, siendo la otra {{domxref("HTMLCanvasElement.width")}}.
 
-## Syntax
+## Sintaxis
 
-    var pxl = canvas.height;
-    canvas.height = pxl;
+```js
+var pxl = canvas.height;
+canvas.height = pxl;
+```
 
 ## Ejemplos
 

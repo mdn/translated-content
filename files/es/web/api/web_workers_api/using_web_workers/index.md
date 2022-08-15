@@ -6,9 +6,9 @@ original_slug: Web/Guide/Performance/Usando_web_workers
 ---
 Los Web Workers dedicados proveen un medio sencillo para que el contenido web ejecute scripts en hilos en segundo plano. Una vez creado, un worker puede enviar mensajes a la tarea creada mediante envio de mensajes al manejador de eventos especificado por el creador. Sin embargo, **los workers trabajan dentro de un [contexto global](/es/docs/JavaScript/DedicatedWorkerGlobalScope) diferente de la ventana actual** (usar el atajo {{ domxref("window") }} en lugar de {{ domxref("window.self","self") }} con el fin de obtener el scope actual dentro de un {{ domxref("Worker") }} retornaría, de hecho, un error).
 
-El hilo worker puede realizar tareas sin interferir con la interfaz de usuario. Ademas, pueden realizar I/O usando [`XMLHttpRequest`](/en/nsIXMLHttpRequest "En/XMLHttpRequest") (aunque el responseXML y los atributos channel son siempre null).
+El hilo worker puede realizar tareas sin interferir con la interfaz de usuario. Ademas, pueden realizar I/O usando [`XMLHttpRequest`](/en/nsIXMLHttpRequest) (aunque el responseXML y los atributos channel son siempre null).
 
-Para documentacion de referencia acerca de workers busca {{ domxref("Worker") }} ; este articulo complementa ese ofreciendo ejemplos y detalles adicionales. Para una lista de las funciones disponibles sobre workers, visita [Functions and interfaces available to workers](/es/docs/Web/Guide/Needs_categorization/Functions_available_to_workers?redirect=no "En/DOM/Worker/Functions available to workers").
+Para documentacion de referencia acerca de workers busca {{ domxref("Worker") }} ; este articulo complementa ese ofreciendo ejemplos y detalles adicionales. Para una lista de las funciones disponibles sobre workers, visita [Functions and interfaces available to workers](/es/docs/Web/Guide/Needs_categorization/Functions_available_to_workers?redirect=no).
 
 ## Acerca de seguridad de hilos
 
@@ -40,11 +40,11 @@ myWorker.postMessage(""); // start the worker.
 
 La Línea 1 en este ejemplo crea un nuevo worker (_worker thread)_. La Línea 3 configura un manejador de eventos (_listener_) para encargarse de los eventos `message` del worker. Este manejador de eventos se llamará cuando el worker llame a su propia función {{domxref("Worker.postMessage()")}}. Finalmente, la Linea 7 inicia el worker _(worker thread)_.
 
-> **Nota:** : La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript") . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 {{ geckoRelease("10.0") }} y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
+> **Nota:** : La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 {{ geckoRelease("10.0") }} y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
 
 ## Pasando datos
 
-Los datos pasan entre la página principal y los workers son **copiados**, no compartidos. Los objetos se serializan a medida que se entregan al worker, y posteriormente, se deserializan en el otro extremo. La página y el worker **no comparten la misma instancia**, por lo que el resultado final es que un duplicado es creado en cada extremo. La mayoría de los navegadores implementan esta característica como [structured cloning](/en/DOM/The_structured_clone_algorithm "The structured clone algorithm").
+Los datos pasan entre la página principal y los workers son **copiados**, no compartidos. Los objetos se serializan a medida que se entregan al worker, y posteriormente, se deserializan en el otro extremo. La página y el worker **no comparten la misma instancia**, por lo que el resultado final es que un duplicado es creado en cada extremo. La mayoría de los navegadores implementan esta característica como [structured cloning](/en/DOM/The_structured_clone_algorithm).
 
 Antes de continuar, vamos a crear con fines didácticos una función llamada `emulateMessage()` que simulará el comportamiento de un valor el cual es clonado y no compartido durante el paso desde un _worker_ a la página principal o viceversa:
 
@@ -114,7 +114,7 @@ onmessage = function (oEvent) {
 
 > **Nota:** Como siempre, los hilos en segundo plano -incluyendo workers- **no pueden manipular el DOM**. Si acciones tomadas por el hilo en segundo planos resultarían en cambios en el DOM, deberian enviar mensajes a sus creadores para llevarlos a cabo.
 
-The [structured cloning](/es/docs/Web/Guide/DOM/The_structured_clone_algorithm "The structured clone algorithm") algorithm can accept JSON and a few things that JSON can't like circular references.
+The [structured cloning](/es/docs/Web/Guide/DOM/The_structured_clone_algorithm) algorithm can accept JSON and a few things that JSON can't like circular references.
 
 ### Ejemplos pasando datos
 
@@ -377,23 +377,27 @@ The embedded worker is now nested into a new custom `document.worker` property.
 
 Los trabajadores pueden usar tiempos fuera e intervalos de la misma forma que el "hilo principal". Esto puede ser útil, por ejemplo, si quieres tener a tu hilo trabajador corriendo codigo periodicamente en lugar de sin parar.
 
-Ver [`setTimeout()`](/en/DOM/window.setTimeout "En/DOM/Window.setTimeout"), [`clearTimeout()`](/en/DOM/window.clearTimeout "En/DOM/Window.clearTimeout"), [`setInterval()`](/en/DOM/window.setInterval "En/DOM/Window.setInterval"), y [`clearInterval()`](/en/DOM/window.clearInterval "En/DOM/Window.clearInterval")para más detalles. Ver también: [JavaScript Timers](/es/docs/JavaScript/Timers).
+Ver [`setTimeout()`](/en/DOM/window.setTimeout), [`clearTimeout()`](/en/DOM/window.clearTimeout), [`setInterval()`](/en/DOM/window.setInterval), y [`clearInterval()`](/en/DOM/window.clearInterval)para más detalles. Ver también: [JavaScript Timers](/es/docs/JavaScript/Timers).
 
 ## Terminating a worker
 
 If you need to immediately terminate a running worker, you can do so by calling the worker's `terminate()` method:
 
-    myWorker.terminate();
+```js
+myWorker.terminate();
+```
 
 The worker thread is killed immediately without an opportunity to complete its operations or clean up after itself.
 
 Workers may close themselves by calling their own `nsIWorkerScope.close()` method:
 
-    self.close();
+```js
+self.close();
+```
 
 ## Manejo de errores
 
-When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/en/DOM/event.preventDefault "En/DOM/Event.preventDefault")method.
+When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/en/DOM/event.preventDefault)method.
 
 The error event has the following three fields that are of interest:
 
@@ -506,15 +510,15 @@ The worker sets the property `onmessage` to a function which will receive messag
 </html>
 ```
 
-The web page creates a `div` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `div` element, and the `onerror` handler is set to [dump](</en/Debugging_JavaScript#dump()> "https://developer.mozilla.org/editor/fckeditor/core/editor/en/Debugging_JavaScript#dump()") the error message.
+The web page creates a `div` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `div` element, and the `onerror` handler is set to [dump](</en/Debugging_JavaScript#dump()>) the error message.
 
 Finally, a message is sent to the worker to start it.
 
-[Try this example](/samples/workers/fibonacci "https://developer.mozilla.org/samples/workers/fibonacci/") .
+[Try this example](/samples/workers/fibonacci) .
 
 ### Performing web I/O in the background
 
-You can find an example of this in the article [Using workers in extensions](/En/Using_workers_in_extensions "En/Using workers in extensions") .
+You can find an example of this in the article [Using workers in extensions](/En/Using_workers_in_extensions) .
 
 ### Dividing tasks among multiple workers
 
@@ -529,8 +533,8 @@ The Fibonacci example shown previously demonstrates that workers can in fact [sp
 ## See also
 
 - {{ spec("http://dev.w3.org/html5/workers/", "File API Specification: Web Workers", "ED") }}
-- [`Worker`](/en/DOM/Worker "En/DOM/Worker") interface
-- [`SharedWorker`](/en/DOM/SharedWorker "En/DOM/SharedWorker") interface
-- [Functions available to workers](/en/DOM/Worker/Functions_available_to_workers "En/DOM/Worker/Functions available to workers")
+- [`Worker`](/en/DOM/Worker) interface
+- [`SharedWorker`](/en/DOM/SharedWorker) interface
+- [Functions available to workers](/en/DOM/Worker/Functions_available_to_workers)
 - [HTML5Rocks - The Basics of Web Workers](http://www.html5rocks.com/en/tutorials/workers/basics/#toc-enviornment-subworkers)
-- [Chrome has problems when using too many worker](http://code.google.com/p/chromium/issues/detail?id=127990 "Chrome has Problems with many workers")
+- [Chrome has problems when using too many worker](http://code.google.com/p/chromium/issues/detail?id=127990)

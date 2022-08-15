@@ -12,11 +12,13 @@ Esto ayuda a evitar tener código duplicado tanto en el {{jsxref("Promise.then",
 
 ## Sintaxis
 
-    p.finally(alFinalizar);
+```js
+p.finally(alFinalizar);
 
-    p.finally(function() {
-       // finalizada (exitosa o rechazada)
-    });
+p.finally(function() {
+    // finalizada (exitosa o rechazada)
+});
+```
 
 ### Parámetros
 

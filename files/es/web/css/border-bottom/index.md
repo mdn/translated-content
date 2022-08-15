@@ -7,7 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-bottom
 ---
-<< [Volver](/es/Guía_de_referencia_de_CSS "es/Guía_de_referencia_de_CSS")
+<< [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
 
@@ -22,7 +22,9 @@ La propiedad `border-bottom` permite de definir de una vez todas las propiedades
 
 ### Sintaxis
 
-    border-bottom: [ <border-width> || <border-style> || <border-color> ] | inherit
+```css
+border-bottom: [ <border-width> || <border-style> || <border-color> ] | inherit
+```
 
 ### Valores
 
@@ -37,9 +39,11 @@ La propiedad `border-bottom` permite de definir de una vez todas las propiedades
 
 [Ver El Ejemplo Vivo](/samples/cssref/border.html)
 
-    element {
-        border-bottom-width: 1px solid #000;
-    }
+```css
+element {
+    border-bottom-width: 1px solid #000;
+}
+```
 
 ### Notas
 
@@ -51,13 +55,17 @@ Como con todas las propiedades generales, `border-bottom` siempre inicia todos l
 
 Lo que significa que:
 
-      border-bottom-style: dotted;
-      border-bottom: thick green;
+```css
+border-bottom-style: dotted;
+border-bottom: thick green;
+```
 
 es idéntico a:
 
-      border-bottom-style: dotted;
-      border-bottom: none thick green;
+```css
+border-bottom-style: dotted;
+border-bottom: none thick green;
+```
 
 y el valor de {{ Cssxref("border-bottom-style") }} dado antes de `border-bottom` es ignorado.
 

@@ -64,7 +64,9 @@ Perro.prototype.toString = function perroToString() {
 
 Con el código precedente en su lugar, cualquier vez que se use `elDog` en un contexto de una cadena, JavaScript automáticamente llamará a la función `perroToString`, la cuál devuelve la siguiente cadena:
 
-    Perro Gabby es femenino chocolate Laboratorio
+```
+Perro Gabby es femenino chocolate Laboratorio
+```
 
 ## Vea También
 

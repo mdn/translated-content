@@ -10,8 +10,10 @@ La propiedad **rightContext _(No es estándar)_** es una propiedad estática y d
 
 ## Sintaxis
 
-    RegExp.rightContext
-    RegExp["$'"]
+```js
+RegExp.rightContext
+RegExp["$'"]
+```
 
 ## Descripción
 

@@ -10,7 +10,9 @@ La función `contains` determina si la primera cadena del argumento contiene la 
 
 ### Sintaxis
 
-    contains( haystack , needle )
+```xml
+contains( haystack , needle )
+```
 
 ### Argumentos
 

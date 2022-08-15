@@ -14,7 +14,9 @@ translation_of: Web/API/Document/anchors
 
 ## Sintaxis
 
-    nodeList = document.anchors;
+```js
+nodeList = document.anchors;
+```
 
 ### Valor
 
@@ -22,10 +24,12 @@ Una {{domxref("HTMLCollection")}}.
 
 ## Ejemplo
 
-    if ( document.anchors.length >= 5 ) {
-        dump("dump found too many anchors");
-        window.location = "http://www.google.com";
-    }
+```js
+if ( document.anchors.length >= 5 ) {
+    dump("dump found too many anchors");
+    window.location = "http://www.google.com";
+}
+```
 
 Lo siguiente es un ejemplo que puebla una Tabla de Contenido con cada ancla en la página:
 

@@ -9,7 +9,9 @@ La propiedad **`HTMLMediaElement.paused`** es solo de lectura, indica si el elem
 
 ## Sintaxis
 
-    var pausado = audioOVideo.paused
+```js
+var pausado = audioOVideo.paused
+```
 
 ### Valor
 

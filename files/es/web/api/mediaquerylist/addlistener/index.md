@@ -9,7 +9,9 @@ Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}
 
 ## Sintaxis
 
-    MediaQueryList.addListener(func)
+```js
+MediaQueryList.addListener(func)
+```
 
 ### Parametros
 

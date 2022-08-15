@@ -19,7 +19,9 @@ El método **`Array.from()`** crea una nueva instancia de `Array` a partir de un
 
 ## Sintaxis
 
-    Array.from(arrayLike[, mapFn[, thisArg]])
+```js
+Array.from(arrayLike[, mapFn[, thisArg]])
+```
 
 ### Parámetros
 

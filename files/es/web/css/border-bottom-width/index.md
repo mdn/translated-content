@@ -7,7 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-bottom-width
 ---
-<< [Volver](/es/Guía_de_referencia_de_CSS "es/Guía_de_referencia_de_CSS")
+<< [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
 
@@ -22,7 +22,9 @@ translation_of: Web/CSS/border-bottom-width
 
 ### Sintaxis
 
-    border-bottom-width: <border-width> | inherit
+```css
+border-bottom-width: <border-width> | inherit
+```
 
 ### Valores
 
@@ -47,11 +49,13 @@ translation_of: Web/CSS/border-bottom-width
 
 [Ver El Ejemplo Vivo](/samples/cssref/border.html)
 
-    element {
-        border-bottom-width: thin;
-        border-bottom-style: solid;
-        border-bottom-color: #000;
-    }
+```css
+element {
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+}
+```
 
 ### Especificacions
 

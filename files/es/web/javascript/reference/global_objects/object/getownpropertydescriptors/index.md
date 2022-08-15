@@ -14,9 +14,11 @@ El método **`Object.getOwnPropertyDescriptors()`** regresa todos los descriptor
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
 
-## Sintáxis
+## Sintaxis
 
-    Object.getOwnPropertyDescriptors(obj)
+```js
+Object.getOwnPropertyDescriptors(obj)
+```
 
 ### Parámetros
 

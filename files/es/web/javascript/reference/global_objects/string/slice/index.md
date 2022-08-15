@@ -56,16 +56,20 @@ console.log(cadena2);
 
 Esto escribe:
 
-    mañana se nos echa encim
+```
+mañana se nos echa encim
+```
 
 ### Uso de `slice()` con índices negativos
 
 El siguiente ejemplo usa `slice()` con índices negativos.
 
-    var cad = "La mañana se nos echa encima.";
-    cad.slice(-3);     // retorna 'ma.'
-    cad.slice(-3, -1); // retorna 'ma'
-    cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+```js
+var cad = "La mañana se nos echa encima.";
+cad.slice(-3);     // retorna 'ma.'
+cad.slice(-3, -1); // retorna 'ma'
+cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+```
 
 ## Especificaciones
 

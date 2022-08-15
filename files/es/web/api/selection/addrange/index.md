@@ -13,8 +13,9 @@ Añade un objeto de rango a la selección.
 
 ### Sintaxis
 
-    sel.addRange(
-    range)
+```js
+sel.addRange(range)
+```
 
 ### Parámetros
 
@@ -23,12 +24,14 @@ Añade un objeto de rango a la selección.
 
 ### Ejemplos
 
-     /* Seleccionar todos los elementos en NEGRITA en un documento HTML */
-     var strongs = document.getElementsByTagName("strong");
-     var s = window.getSelection();
-     if(s.rangeCount > 0) s.removeAllRanges();
-     for(var i = 0; i < strongs.length; i++) {
-      var range = document.createRange();
-      range.selectNode(strongs[i]);
-      s.addRange(range);
-     }
+```js
+/* Seleccionar todos los elementos en NEGRITA en un documento HTML */
+var strongs = document.getElementsByTagName("strong");
+var s = window.getSelection();
+if(s.rangeCount > 0) s.removeAllRanges();
+for(var i = 0; i < strongs.length; i++) {
+  var range = document.createRange();
+  range.selectNode(strongs[i]);
+  s.addRange(range);
+}
+```

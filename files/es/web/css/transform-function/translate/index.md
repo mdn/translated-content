@@ -22,9 +22,11 @@ Esta transformacion esta compuesta por un vector bidimensional cuyas coordenadas
 
 La function `translate()` esta especificada con uno o dos valores.
 
-    translate(tx)
+```css
+translate(tx)
 
-    translate(tx, ty)
+translate(tx, ty)
+```
 
 ### Valores
 

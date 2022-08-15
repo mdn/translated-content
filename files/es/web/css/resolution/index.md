@@ -33,14 +33,18 @@ Incluso si todas las unidades representan la misma resolución para el valor 0, 
 
 Éstos son algunos de los usos correctos de valores `<resolution>`:
 
-    96dpi                                              Uso correcto: a {{cssxref("&lt;number&gt;")}} (here an {{cssxref("&lt;integer&gt;")}}) followed by the unit.
-    @media print and (min-resolution: 300dpi) { ... }  El uso correcto en el contexto de una media query.
+```
+96dpi                                              Uso correcto: a {{cssxref("&lt;number&gt;")}} (here an {{cssxref("&lt;integer&gt;")}}) followed by the unit.
+@media print and (min-resolution: 300dpi) { ... }  El uso correcto en el contexto de una media query.
+```
 
 Here are some incorrect uses:
 
-    72 dpi                                             Incorecto: no hay espacios entre {{ cssxref("&lt;number&gt;") }} y la unidad.
-    ten dpi                                            Incorecto: sólo deben ser utilizados dígitos.
-    0                                                  Incorecto: la unidad se puede omitir por 0 sólo para valores {{ cssxref("&lt;length&gt;") }}.
+```
+72 dpi                                             Incorecto: no hay espacios entre {{ cssxref("&lt;number&gt;") }} y la unidad.
+ten dpi                                            Incorecto: sólo deben ser utilizados dígitos.
+0                                                  Incorecto: la unidad se puede omitir por 0 sólo para valores {{ cssxref("&lt;length&gt;") }}.
+```
 
 ## Especificación
 

@@ -9,7 +9,9 @@ El constructor **`Response()`** crea un nuevo objeto {{domxref("Response")}}
 
 ## Sintaxis
 
-    var miRespuesta = new Response(cuerpo,opciones);
+```js
+var miRespuesta = new Response(cuerpo,opciones);
+```
 
 ### Parámetros
 

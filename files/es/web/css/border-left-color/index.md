@@ -16,7 +16,9 @@ translation_of: Web/CSS/border-left-color
 
 ### Sintaxis
 
-    border-left-color:color | transparent | inherit
+```css
+border-left-color:color | transparent | inherit
+```
 
 ### Valores
 
@@ -36,25 +38,25 @@ translation_of: Web/CSS/border-left-color
 
 [Ver El Ejemplo Vivo](/samples/cssref/border.html)
 
-    element {
-     width: 300px;
-            padding: 15px;
-            border-bottom-size: 1px;
-            border-bottom-style: solid;
-            border-bottom-color: #000;
-    }
+```css
+element {
+  width: 300px;
+  padding: 15px;
+  border-bottom-size: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #000;
+}
 
+p {
+  border-style: solid;
+  border-left-color: #ff0000
+}
 
-
-    p {
-    border-style: solid;
-    border-left-color: #ff0000
-    }
-
-    p {
-    border-style: solid;
-    border-left-color: rgb(255,0,0)
-    }
+p {
+  border-style: solid;
+  border-left-color: rgb(255,0,0)
+}
+```
 
 ### Notas
 

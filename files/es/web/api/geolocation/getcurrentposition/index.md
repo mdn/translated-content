@@ -11,7 +11,9 @@ El método **`Geolocation.getCurrentPosition()`** se utiliza para obtener la pos
 
 ## Sintaxis
 
-    navigator.geolocation.getCurrentPosition(success, error, options)
+```js
+navigator.geolocation.getCurrentPosition(success, error, options)
+```
 
 ### Parámetros
 

@@ -13,9 +13,11 @@ Traslada el foco de la selección a un punto especificado. El ancla de la selecc
 
 ### Sintaxis
 
-    sel.extend(
-    parentNode,
-    offset)
+```js
+sel.extend(
+parentNode,
+offset)
+```
 
 ### Parámetros
 

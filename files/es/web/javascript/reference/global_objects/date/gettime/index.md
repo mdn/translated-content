@@ -19,7 +19,9 @@ Puede utilizar este método para ayudar a asignar una fecha y hora a otro objeto
 
 ## Sintaxis
 
-    dateObj.getTime()
+```js
+dateObj.getTime()
+```
 
 ### Valor devuelto
 

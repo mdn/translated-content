@@ -17,7 +17,9 @@ La propiedad de solo lectura **`status`** de la interfaz {{domxref("Response")}}
 
 ## Sintaxis
 
-    var myStatus = response.status;
+```js
+var myStatus = response.status;
+```
 
 ### Valor
 

@@ -11,7 +11,9 @@ Cierra la ventana actual, o la ventana en la cual fue llamada.
 
 ## Sintaxis
 
-    window.close();
+```js
+window.close();
+```
 
 ## Descripción
 
@@ -25,31 +27,35 @@ Este método solo se permite ser llamado por ventanas que fueron abiertas por un
 
 Este es un ejemplo que demuestra como utilizar este método para cerrar una ventana que fue abierta por un script llamando {{domxref("window.open()")}}.
 
-    <script type="text/javascript">
-    //Global var to store a reference to the opened window
-    var openedWindow;
+```html
+<script type="text/javascript">
+//Global var to store a reference to the opened window
+var openedWindow;
 
-    function openWindow()
-    {
-      openedWindow = window.open('moreinfo.htm');
-    }
+function openWindow()
+{
+  openedWindow = window.open('moreinfo.htm');
+}
 
-    function closeOpenedWindow()
-    {
-      openedWindow.close();
-    }
-    </script>
+function closeOpenedWindow()
+{
+  openedWindow.close();
+}
+</script>
+```
 
 ### Cerrando la ventana actual
 
 ### Cuando se llama al método del objeto window close() directamente, en vez de llamar a close() en una instancia de la ventana, el navegador cerrará la ventana que está en primer plano, independientemente si el script fue creado en la ventana o no. (Firefox 35.0.1: los scripts no pueden cerrar ventanas que ellos no han abierto)
 
-    <script type="text/javascript">
-    function closeCurrentWindow()
-    {
-      window.close();
-    }
-    </script>
+```html
+<script type="text/javascript">
+function closeCurrentWindow()
+{
+  window.close();
+}
+</script>
+```
 
 ## Especificación
 

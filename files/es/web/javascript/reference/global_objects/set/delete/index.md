@@ -10,7 +10,9 @@ El método **`delete()`** remueve el elemento especificado del objeto `Set`.
 
 ## Syntaxis
 
-    mySet.delete(value);
+```js
+mySet.delete(value);
+```
 
 ### Parametros
 

@@ -16,7 +16,9 @@ Devuelve el máximo entero menor o igual a un número.
 
 ## Sintaxis
 
-    Math.floor(x)
+```js
+Math.floor(x)
+```
 
 ### Parámetros
 

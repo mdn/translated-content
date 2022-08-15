@@ -11,8 +11,10 @@ La propiedad **`port`** de la interfaz {{domxref("URL")}} es un {{domxref("USVSt
 
 ## Sintaxis
 
-    string = object.port;
-    object.port = string;
+```js
+string = object.port;
+object.port = string;
+```
 
 ### Valor
 

@@ -19,7 +19,9 @@ original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 
 ## Síntasix
 
-    var gotCaptureHandler = target.ongotpointercpature;
+```js
+var gotCaptureHandler = target.ongotpointercpature;
+```
 
 ### Valor de Retorno
 

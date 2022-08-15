@@ -13,9 +13,11 @@ translation_of: Web/API/Node/replaceChild
 
 El método **`Node.replaceChild()`** reemplaza un nodo hijo del elemento especificado por otro.
 
-## Sintáxis
+## Sintaxis
 
-    replacedNode = parentNode.replaceChild(newChild, oldChild);
+```js
+replacedNode = parentNode.replaceChild(newChild, oldChild);
+```
 
 - `newChild` es el nuevo nodo con el que reemplazar `oldChild`. Si ya existe en el DOM, será eliminado previamente.
 - `oldChild` es el nodo existente para ser reemplazado.

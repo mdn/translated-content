@@ -17,9 +17,9 @@ IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Deb
 
 ## Acerca de este documento
 
-Este tutorial es una guía sobre el uso de la API asíncrona de IndexedDB. Si no está familiarizado con IndexedDB, por favor consulte primero [Conceptos Básicos Acerca de IndexedDB](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB "en/IndexedDB/Basic Concepts Behind IndexedDB").
+Este tutorial es una guía sobre el uso de la API asíncrona de IndexedDB. Si no está familiarizado con IndexedDB, por favor consulte primero [Conceptos Básicos Acerca de IndexedDB](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB).
 
-Para la documentación de referencia sobre la API de IndexedDB, vea el artículo [IndexedDB](/es/docs/IndexedDB "https://developer.mozilla.org/en/IndexedDB") y sus subpaginas, que documentan los tipos de objetos usados por IndexedDB, así como los métodos síncronos y asíncronos.
+Para la documentación de referencia sobre la API de IndexedDB, vea el artículo [IndexedDB](/es/docs/IndexedDB) y sus subpaginas, que documentan los tipos de objetos usados por IndexedDB, así como los métodos síncronos y asíncronos.
 
 ## Patrones Básicos
 
@@ -147,7 +147,7 @@ Tratar de crear un almacén de objetos con un nombre que ya existe (o tratando d
 
 Si el evento `onupgradeneeded` retorna éxito, entonces se activará el manejador `onsuccess` de la solicitud de base de datos abierta.
 
-Blink / Webkit soportan la versión actual de la especificación, tal como fue liberado en Chrome 23+ y Opera 17+ ; IE10+ también lo soporta. Implementaciones mas viejas o distintas no implementan la versión actual de la especificación, y por lo tanto no son compatibles todavía con el `indexedDB.open (nombre, versión).onupgradeneeded` . Para obtener más información sobre cómo actualizar la versión de la base de datos en Webkit/Blink mas viejos, consulte el artículo de referencia [IDBDatabase](/es/docs/Web/API/IDBDatabase "https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated").
+Blink / Webkit soportan la versión actual de la especificación, tal como fue liberado en Chrome 23+ y Opera 17+ ; IE10+ también lo soporta. Implementaciones mas viejas o distintas no implementan la versión actual de la especificación, y por lo tanto no son compatibles todavía con el `indexedDB.open (nombre, versión).onupgradeneeded` . Para obtener más información sobre cómo actualizar la versión de la base de datos en Webkit/Blink mas viejos, consulte el artículo de referencia [IDBDatabase](/es/docs/Web/API/IDBDatabase).
 
 ### Estructuración de la base de datos
 
@@ -1266,13 +1266,13 @@ input {
 
 ## Next step
 
-If you want to start tinkering with the API, jump in to the [reference documentation](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB") and check out the different methods.
+If you want to start tinkering with the API, jump in to the [reference documentation](/en/IndexedDB) and check out the different methods.
 
 ## See also
 
 Reference
 
-- [IndexedDB API Reference](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB")
+- [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/es/docs/IndexedDB/Using_IndexedDB_in_chrome)
 
@@ -1287,4 +1287,4 @@ Related articles
 
 Firefox
 
-- Mozilla [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1 "https://mxr.mozilla.org/mozilla-central/find?text=&string=dom/indexedDB/.*\\.idl®exp=1")
+- Mozilla [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1)

@@ -13,8 +13,10 @@ Añadirá todos los "hijos" del nodo especificado a la selección. La selección
 
 ### Sintaxis
 
-    sel.selectAllChildren(
-    parentNode)
+```js
+sel.selectAllChildren(
+parentNode)
+```
 
 ### Parámetros
 
@@ -27,6 +29,8 @@ Añadirá todos los "hijos" del nodo especificado a la selección. La selección
 
 ### Ejemplos
 
-    footer = document.getElementById("footer");
-    window.getSelection().selectAllChildren(footer);
-    /* Todo el contendio del pie de página ahora está seleccionado */
+```js
+footer = document.getElementById("footer");
+window.getSelection().selectAllChildren(footer);
+/* Todo el contendio del pie de página ahora está seleccionado */
+```

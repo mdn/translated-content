@@ -11,7 +11,9 @@ El **`Document.registerElement()`** registra un nuevo [elemento personalizado](/
 
 ## Sintaxis
 
-    var constructor = document.registerElement(tag-name, options);
+```js
+var constructor = document.registerElement(tag-name, options);
+```
 
 ### Parámetros
 

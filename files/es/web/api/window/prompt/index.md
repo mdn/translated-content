@@ -12,7 +12,9 @@ El método `Window.prompt()` muestra un diálogo con mensaje opcional, que solic
 
 ## Sintaxis
 
-    result = window.prompt(message, default);
+```js
+result = window.prompt(message, default);
+```
 
 - `result` es una cadena de texto que contiene el valor introducido por el usuario, o `null`.
 - `message` es una cadena de texto que se mostrará al usuario. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.
@@ -48,7 +50,7 @@ The following text is shared between this article, DOM:window\.confirm and DOM:w
 
 Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. var aNumber = Number(window\.prompt("Type a number", ""));
 
-Usuarios de [Mozilla Chrome](/en-US/Chrome "Chrome") (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
+Usuarios de [Mozilla Chrome](/en-US/Chrome) (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
 
 A partir de Chrome {{CompatChrome(46.0)}} este método está bloqueado para los elementos {{htmlelement("iframe")}}, , a menos que su atributo [sandbox](/es/docs/Web/HTML/Elemento/iframe#attr-sandbox) tenga el valor `allow-modal`.
 

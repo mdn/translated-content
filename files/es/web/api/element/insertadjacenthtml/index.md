@@ -19,7 +19,9 @@ EL método **`insertAdjacentHTML()`** de la interfaz {{domxref("Element")}} anal
 
 ## Sintaxis
 
-    element.insertAdjacentHTML(posición, texto);
+```js
+element.insertAdjacentHTML(posición, texto);
+```
 
 ### Parámetros
 
@@ -33,13 +35,15 @@ EL método **`insertAdjacentHTML()`** de la interfaz {{domxref("Element")}} anal
 
 ### Visualizacion de las posiciones
 
-    <!-- beforebegin -->
-    <p>
-      <!-- afterbegin -->
-      foo
-      <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+```html
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 > **Nota:**Las posiciones `beforebegin` y `afterend` funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.
 

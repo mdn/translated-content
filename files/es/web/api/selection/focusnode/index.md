@@ -13,7 +13,9 @@ Devuelve el nudo en el cual acaba la selección.
 
 ### Sintaxis
 
-    sel.focusNode
+```js
+sel.focusNode
+```
 
 ### Notas
 

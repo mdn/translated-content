@@ -11,7 +11,9 @@ De forma similar, el método {{domxref("Document.getElementsByClassName", "Docum
 
 ## Sintaxis
 
-    var elements = element.getElementsByClassName(names);
+```js
+var elements = element.getElementsByClassName(names);
+```
 
 - **elements** es una {{ domxref("HTMLCollection") }} "viva" de los elementos encontrados.
 - **names** es una cadena representando la lista de nombres de clase que deben concordar; los nombres de clase está separados por espacios en blanco.

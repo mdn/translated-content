@@ -20,11 +20,15 @@ Cuando no se especifica un valor para un elemento de una propiedad **inherited p
 
 Un ejemplo característico de una propiedad heredada es la propiedad {{ Cssxref("color") }}. Definida con las siguientes reglas de estilo:
 
-     p { color: green }
+```css
+p { color: green }
+```
 
 y el código HTML siguiente:
 
-     <p>Este párrafo tiene <em>texto enfatizado</em> en su interior.</p>
+```html
+<p>Este párrafo tiene <em>texto enfatizado</em> en su interior.</p>
+```
 
 las palabras "texto enfatizado" aparecerá en verde, ya que el elemento `em` ha heredado el valor de la propiedad {{ Cssxref("color") }} a partir del elemento `p`._No_ recoge el valor inicial de la propiedad (que es el color que es usado por el elemento raíz cuando la página especifica que no hay color).
 
@@ -34,11 +38,15 @@ Si no se especifica un valor para una propiedad no heredada (_non-inherited prop
 
 Un ejemplo característico de una propiedad no heredada es la del {{ Cssxref("border", "borde") }}. Definida con las siguientes reglas de estilo:
 
-     p { border: medium solid }
+```css
+p { border: medium solid }
+```
 
 y la etiqueta HTML:
 
-     <p>Este párrafo tiene <em>texto enfatizado</em> en su interior.</p>
+```html
+<p>Este párrafo tiene <em>texto enfatizado</em> en su interior.</p>
+```
 
 las palabras "texto enfatizado" no tendrán borde (ya que el valor inicial del {{ Cssxref("border-style", "estilo de borde") }} es `none`).
 

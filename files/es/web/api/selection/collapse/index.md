@@ -13,9 +13,11 @@ Pliega la selección a un simple punto. El documento no es modificado. Si el con
 
 ### Sintaxis
 
-    sel.collapse(
-    parentNode,
-    offset);
+```js
+sel.collapse(
+parentNode,
+offset);
+```
 
 ### Parámetros
 
@@ -29,6 +31,8 @@ Pliega la selección a un simple punto. El documento no es modificado. Si el con
 
 ### Ejemplos
 
-    /* Colocar el cursor al principio del cuerpo de un documento HTML. */
-    var body = document.getElementsByTagName("body")[0];
-    window.getSelection().collapse(body,0);
+```js
+/* Colocar el cursor al principio del cuerpo de un documento HTML. */
+var body = document.getElementsByTagName("body")[0];
+window.getSelection().collapse(body,0);
+```

@@ -13,7 +13,9 @@ Este código es una respuesta genérica. Usualmente, esto indica que el servidor
 
 ## Estado
 
-    500 Error Interno del Servidor
+```
+500 Error Interno del Servidor
+```
 
 ## Especificaciones
 

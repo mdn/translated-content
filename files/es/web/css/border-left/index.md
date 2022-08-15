@@ -13,7 +13,9 @@ El `borde_izquierdo` es una propiedad rápida para poner el ancho, estilo y colo
 
 ## Sintaxis
 
-    border-left: [border-width || border-style || border-color | inherit] ;
+```css
+border-left: [border-width || border-style || border-color | inherit] ;
+```
 
 ### Valores
 
@@ -26,11 +28,11 @@ El `borde_izquierdo` es una propiedad rápida para poner el ancho, estilo y colo
 
 ## Ejemplos
 
+```css
 element {
-
-        border-left: 1px solid #000;
-
+  border-left: 1px solid #000;
 }
+```
 
 ## Notas
 

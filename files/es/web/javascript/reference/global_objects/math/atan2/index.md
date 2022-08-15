@@ -12,7 +12,9 @@ La función **`Math.atan2()`** retorna la arcotangente del cociente de los argum
 
 ## Sintaxis
 
-    Math.atan2(y, x)
+```js
+Math.atan2(y, x)
+```
 
 ### Parámetros
 

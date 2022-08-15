@@ -17,7 +17,9 @@ El método **`reverse()`** invierte el orden de los elementos de un array _[in p
 
 ## Sintaxis
 
-    reverse()
+```js
+reverse()
+```
 
 ### Valor devuelto
 
