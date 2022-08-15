@@ -25,7 +25,7 @@ var arr = [element0, element1, ..., elementN];
 
 요소0, 요소1, ..., 요소N은 배열내에 포함된 요소의 값 목록 입니다. 해당 값들이 명시되어 있을 경우, 해당 배열은 주어진 요소들을 포함하도록 초기화 됩니다. 해당 배열의 길이는 주어진 요소들의 갯수가 됩니다.
 
-대괄호 문법은 일명 "배열 문자" 혹은 "배열 초기화"라고 합니다. 대괄호 문법은 다른 배열 생성 표기법 보다 짧고 일반적으로 선호하는 문법입니다. 보다 상세한 내용은 [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals "en-US/docs/JavaScript/Guide/Values, Variables, and Literals#Array Literals")를 참조하세요.
+대괄호 문법은 일명 "배열 문자" 혹은 "배열 초기화"라고 합니다. 대괄호 문법은 다른 배열 생성 표기법 보다 짧고 일반적으로 선호하는 문법입니다. 보다 상세한 내용은 [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals)를 참조하세요.
 
 길이가 0보다 크지만 아무런 요소를 가지고 있지 않은 배열을 생성하기 위한 방법은 아래와 같습니다.
 
@@ -159,7 +159,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 ```
 
-배열이 아무런 요소를 포함하고 있지 않다면 반복문 조건에서 false로 평가됩니다. 배열의 요소가 [DOM](https://developer.mozilla.org/en-US/docs/DOM "en-US/docs/DOM") node들을 포함한다면 보다 효율적인 코드 관용구를 사용할 수 있습니다.
+배열이 아무런 요소를 포함하고 있지 않다면 반복문 조건에서 false로 평가됩니다. 배열의 요소가 [DOM](https://developer.mozilla.org/en-US/docs/DOM) node들을 포함한다면 보다 효율적인 코드 관용구를 사용할 수 있습니다.
 
 ```js
 var divs = document.getElementsByTagName('div');
@@ -443,7 +443,7 @@ Row 3: [3,0] [3,1] [3,2] [3,3]
 
 ### 배열과 정규표현식
 
-문자열내에 정규 표현식에 일치하는 결과가 배열일 경우, 해당 배열은 정규 표현식에 일치하는 문자열들의 정보를 제공해 주는 속성들과 요소들을 반환합니다. {{jsxref ( "Global_Objects / RegExp / exec", "RegExp.exec ()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, 와 {{jsxref("Global_Objects/String/split","String.split()")}}메서드는 결과를 배열로 반환합니다. 정규식과 함께 배열을 어떻게 사용하는지에 대한 정보는 [정규표현식](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions "en-US/docs/JavaScript/Guide/Regular Expressions")을 참조하시면 됩니다.
+문자열내에 정규 표현식에 일치하는 결과가 배열일 경우, 해당 배열은 정규 표현식에 일치하는 문자열들의 정보를 제공해 주는 속성들과 요소들을 반환합니다. {{jsxref ( "Global_Objects / RegExp / exec", "RegExp.exec ()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, 와 {{jsxref("Global_Objects/String/split","String.split()")}}메서드는 결과를 배열로 반환합니다. 정규식과 함께 배열을 어떻게 사용하는지에 대한 정보는 [정규표현식](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)을 참조하시면 됩니다.
 
 ### 배열과 유사한 객체 사용
 

@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Guide/함수
 
 ### 함수 선언
 
-함수 정의(또는 함수 선언)는 다음과 같은 [`함수`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function "function") 키워드로 구성되어 있습니다:
+함수 정의(또는 함수 선언)는 다음과 같은 [`함수`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function) 키워드로 구성되어 있습니다:
 
 - 함수의 이름
 - 괄호 안에서 쉼표로 분리된 함수의 매개변수 목록
@@ -28,7 +28,7 @@ function square(number) {
 }
 ```
 
-함수 `square`은 `number`라는 하나의 매개변수를 가집니다. 이 함수는 인수 (즉, `number`) 자체를 곱하여 반환하는 하나의 문장으로 구성되어 있습니다. [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return "return") 문은 함수에 의해 반환된 값을 지정합니다.
+함수 `square`은 `number`라는 하나의 매개변수를 가집니다. 이 함수는 인수 (즉, `number`) 자체를 곱하여 반환하는 하나의 문장으로 구성되어 있습니다. [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) 문은 함수에 의해 반환된 값을 지정합니다.
 
 ```js
 return number * number;
@@ -113,7 +113,7 @@ if (num == 0){
 
 여기에 기술된 바와 같이 함수를 정의하는것에 더하여 {{jsxref("eval", "eval()")}} 과 같이 런타임에 문자열에서 함수들을 만들기위해 {{jsxref("Function")}} 생성자를 사용할 수 있습니다.
 
-객체내의 한 속성이 함수인 경우 **메서드**라고 합니다. [Working with objects](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects "en-US/docs/JavaScript/Guide/Working with Objects")에서 객체와 방법에 대해 자세히 알아보세요.
+객체내의 한 속성이 함수인 경우 **메서드**라고 합니다. [Working with objects](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects)에서 객체와 방법에 대해 자세히 알아보세요.
 
 ## 함수 호출
 
@@ -145,7 +145,7 @@ square = function (n) {
 }
 ```
 
-함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. `show_props()` 함수([Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties "https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties")에서 정의된)는 인수로 객체를 취하는 함수의 예입니다.
+함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. `show_props()` 함수([Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)에서 정의된)는 인수로 객체를 취하는 함수의 예입니다.
 
 함수는 자신을 호출할 수 있습니다. 예를 들어, 팩토리얼을 재귀적으로 계산하는 함수가 있습니다:
 

@@ -1,7 +1,6 @@
 ---
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
-translation_of: Games/Publishing_games/Game_distribution
 ---
 {{GamesSidebar}}
 
