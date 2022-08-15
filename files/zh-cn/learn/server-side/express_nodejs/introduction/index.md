@@ -54,14 +54,14 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 以下示例将创建一个 web 服务器，它将监听对 URL `http://127.0.0.1:8000/` 所有种类的 HTTP 请求，当接收到一个请求时，脚本将做出响应：返回一个字符串“Hello World”。如果已经安装了 Node，可以按照下面的步骤尝试一下：
 
-1.  打开终端（Windows 中打开命令行工具）
-2.  创建一个空文件夹用来存放项目，比如 `"test-node"`，然后在终端输入以下命令进入这个文件夹：
+1. 打开终端（Windows 中打开命令行工具）
+2. 创建一个空文件夹用来存放项目，比如 `"test-node"`，然后在终端输入以下命令进入这个文件夹：
 
     ```bash
     cd test-node
     ```
 
-3.  用你最喜欢的文本编辑器创建一个名为 `"hello.js"` 的文件，把以下代码粘贴进来。
+3. 用你最喜欢的文本编辑器创建一个名为 `"hello.js"` 的文件，把以下代码粘贴进来。
 
     ```js
     // 调用 HTTP 模块
@@ -81,8 +81,8 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
     console.log('服务器运行于 http://127.0.0.1:8000/');
     ```
 
-4.  将其保存在刚才创建的文件夹。
-5.  返回终端并输入以下命令：
+4. 将其保存在刚才创建的文件夹。
+5. 返回终端并输入以下命令：
 
     ```bash
     $ node "hello.js"

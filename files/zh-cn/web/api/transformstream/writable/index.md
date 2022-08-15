@@ -1,14 +1,6 @@
 ---
 title: TransformStream.writable
 slug: Web/API/TransformStream/writable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TransformStream
-translation_of: Web/api/TransformStream/writable
 ---
 {{APIRef("Streams")}}
 

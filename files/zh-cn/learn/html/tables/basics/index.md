@@ -126,23 +126,23 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 简单来说，使用表格布局而不使用 [CSS 布局技巧](/zh-CN/docs/Learn/CSS/CSS_layout) 是很糟糕的。主要的理由有以下几个：
 
-1.  **表格布局减少了视觉受损的用户的可访问性**: 盲人所使用的[屏幕阅读器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#屏幕阅读器)会解析存在于 HTML 页面上的标签，然后为用户读出其中的内容。因为对于布局来说，表格不是一个正确的工具，使用的标记比使用 CSS 布局技术更复杂，所以屏幕阅读器的输出会让他们的用户感到困惑。
-2.  **表格会产生很多标签**: 正如刚才提到的，表格布局通常会比正确的布局技术涉及更复杂的标签结构，这会导致代码变得更难于编写、维护、调试。
-3.  **表格不能自动响应**: 当你使用正确的布局容器（比如 {{htmlelement("header")}}、{{htmlelement("section")}}、{{htmlelement("article")}} 或是 {{htmlelement("div")}}）时，它们的默认宽度是父元素的 100%；而表格的的默认大小是根据其内容而定的。因此，需要采取额外的措施来获取表格布局样式，以便有效地在各种设备上工作。
+1. **表格布局减少了视觉受损的用户的可访问性**: 盲人所使用的[屏幕阅读器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#屏幕阅读器)会解析存在于 HTML 页面上的标签，然后为用户读出其中的内容。因为对于布局来说，表格不是一个正确的工具，使用的标记比使用 CSS 布局技术更复杂，所以屏幕阅读器的输出会让他们的用户感到困惑。
+2. **表格会产生很多标签**: 正如刚才提到的，表格布局通常会比正确的布局技术涉及更复杂的标签结构，这会导致代码变得更难于编写、维护、调试。
+3. **表格不能自动响应**: 当你使用正确的布局容器（比如 {{htmlelement("header")}}、{{htmlelement("section")}}、{{htmlelement("article")}} 或是 {{htmlelement("div")}}）时，它们的默认宽度是父元素的 100%；而表格的的默认大小是根据其内容而定的。因此，需要采取额外的措施来获取表格布局样式，以便有效地在各种设备上工作。
 
 ## 动手练习：创建你的第一个表格
 
 对于表格的理论知识，我们已经说了很多了，所以，让我们来看一个使用的例子，并建立一个简单的表格。
 
-1.  首先，将 [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件拷贝到你的本地环境上。
-2.  每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Element/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
-3.  在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中 'td' 代表 'table data'）。把下面的内容添加到你的表格标签中：
+1. 首先，将 [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件拷贝到你的本地环境上。
+2. 每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Element/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
+3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中 'td' 代表 'table data'）。把下面的内容添加到你的表格标签中：
 
     ```html
     <td>Hi, I'm your first cell.</td>
     ```
 
-4.  如果我们想要一行四个单元格，我们需要把这组标签拷贝三次，更新你表中的内容，让它看起来是这样的：
+4. 如果我们想要一行四个单元格，我们需要把这组标签拷贝三次，更新你表中的内容，让它看起来是这样的：
 
     ```html
     <td>Hi, I'm your first cell.</td>
@@ -155,7 +155,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中 'tr' 代表 'table row'）。让我们现在来证实一下。
 
-1.  把你已经创建好的 4 个单元格放入 `<tr>` 标签，就像这样：
+1. 把你已经创建好的 4 个单元格放入 `<tr>` 标签，就像这样：
 
     ```html
     <tr>
@@ -166,7 +166,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
     </tr>
     ```
 
-2.  现在你已经实现了一行，可以继续增加至两行、三行。每一行都需要一个额外的 `<tr>` 元素来包装，每个单元格的内容都应该写在 `<td>`中。
+2. 现在你已经实现了一行，可以继续增加至两行、三行。每一行都需要一个额外的 `<tr>` 元素来包装，每个单元格的内容都应该写在 `<td>`中。
 
 ### 结果
 
@@ -258,9 +258,9 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 让我们来改进这个表格。
 
-1.  首先，把 [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件保存到你的本地环境，HTML 文件包含上文你看到的几种狗的数据。
-2.  为了将表格的标题在视觉上和语义上都能被识别为标题，你可以使用 **[`<th>`](/zh-CN/docs/Web/HTML/Element/th)** 元素（其中 'th' 代表 'table header'），用法和 `<td>`是一样的，除了它表示为标题，不是普通的单元格以外。进入你的 HTML 文件，将表格中应该是标题的 `<td>` 元素标记的内容，都改为用 `<th>` 元素标记。
-3.  保存你的 HTML 文件，然后在浏览器中加载，然后你应该会看到，现在的标题更像标题了。
+1. 首先，把 [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件保存到你的本地环境，HTML 文件包含上文你看到的几种狗的数据。
+2. 为了将表格的标题在视觉上和语义上都能被识别为标题，你可以使用 **[`<th>`](/zh-CN/docs/Web/HTML/Element/th)** 元素（其中 'th' 代表 'table header'），用法和 `<td>`是一样的，除了它表示为标题，不是普通的单元格以外。进入你的 HTML 文件，将表格中应该是标题的 `<td>` 元素标记的内容，都改为用 `<th>` 元素标记。
+3. 保存你的 HTML 文件，然后在浏览器中加载，然后你应该会看到，现在的标题更像标题了。
 
 > **备注：** 你可以在 GitHub 中找到完成的版本 [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) ([也可以查看在线示例](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
 
@@ -324,10 +324,10 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 让我们使用 `colspan` 和 `rowspan` 来改进现有的表格。
 
-1.  首先，把 [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件复制到你的本地环境，HTML 文件中包含了你刚才看到的动物示例的数据。
-2.  接着，使用 `colspan` 让 "Animals"、"Hippopotamus" 和 "Crocodile" 占 2 个单元格的宽度。
-3.  最后，使用 `rowspan` 让 "Horse" 和 "Chicken" 占 2 个单元格的高度。
-4.  保存后，用浏览器打开你写的 HTML 文件，看看改进的地方。
+1. 首先，把 [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件复制到你的本地环境，HTML 文件中包含了你刚才看到的动物示例的数据。
+2. 接着，使用 `colspan` 让 "Animals"、"Hippopotamus" 和 "Crocodile" 占 2 个单元格的宽度。
+3. 最后，使用 `rowspan` 让 "Horse" 和 "Chicken" 占 2 个单元格的高度。
+4. 保存后，用浏览器打开你写的 HTML 文件，看看改进的地方。
 
 > **备注：** 你也可以在 GitHub 上找到完成的版本 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
@@ -407,14 +407,14 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 通过下面这些步骤来重构这个表格。
 
-1.  首先，把 [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) 文件复制到你的本地环境。这个 HTML 文件包含你在上文中看到的表格，不过是减去样式信息的。
-2.  在 table 的顶部添加一个 `<colgroup>` 元素，就放在 `<table>` 标签下面，`<colgroup>`可以添加 `<col>` 元素 (继续看下面剩余的步骤)。
-3.  第一列和第二列不需要应用样式。
-4.  为第三列添加一个背景颜色。`style` 属性是 `background-color:#97DB9A;`
-5.  为第四列设置一个独立的宽度，`style` 属性是 `width: 42px;`
-6.  为第五列添加一个背景颜色。`style` 属性是 `background-color: #97DB9A;`
-7.  为第六列添加不同的背景颜色和边框，表示这是一个特殊的日子，表示她正在教一个新的课。 `style` 属性是 `background-color:#DCC48E; border:4px solid #C1437A;`
-8.  最后两天是休息日，所以只需将它们设置为无背景颜色，但需要设置宽度；`style` 属性是 `width: 42px;`
+1. 首先，把 [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) 文件复制到你的本地环境。这个 HTML 文件包含你在上文中看到的表格，不过是减去样式信息的。
+2. 在 table 的顶部添加一个 `<colgroup>` 元素，就放在 `<table>` 标签下面，`<colgroup>`可以添加 `<col>` 元素 (继续看下面剩余的步骤)。
+3. 第一列和第二列不需要应用样式。
+4. 为第三列添加一个背景颜色。`style` 属性是 `background-color:#97DB9A;`
+5. 为第四列设置一个独立的宽度，`style` 属性是 `width: 42px;`
+6. 为第五列添加一个背景颜色。`style` 属性是 `background-color: #97DB9A;`
+7. 为第六列添加不同的背景颜色和边框，表示这是一个特殊的日子，表示她正在教一个新的课。 `style` 属性是 `background-color:#DCC48E; border:4px solid #C1437A;`
+8. 最后两天是休息日，所以只需将它们设置为无背景颜色，但需要设置宽度；`style` 属性是 `width: 42px;`
 
 看看你是否能完成这个示例，如果你遇到了困难，或想要核对你完成的作品，你可以在 GitHub 上找到完成的版本 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ([也可以查看在线示例](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html))。
 

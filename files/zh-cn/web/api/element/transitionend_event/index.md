@@ -1,20 +1,6 @@
 ---
 title: GlobalEventHandlers.ontransitionend
 slug: Web/API/Element/transitionend_event
-tags:
-  - API
-  - CSS Transitions
-  - CSS3 Transitions
-  - Document
-  - Element
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-  - Window
-  - ontransitionend
-translation_of: Web/API/GlobalEventHandlers/ontransitionend
-original_slug: Web/API/GlobalEventHandlers/ontransitionend
 ---
 {{APIRef("CSS3 Transitions")}}
 

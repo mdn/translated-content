@@ -397,7 +397,9 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
 
 > **備註：** The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:
 >
->     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```python
+> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```
 
 Though a little larger, almost everything in this template has been described previously:
 
@@ -420,34 +422,38 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 >
 > 順帶一提，若你不再基於類的 view 或 model 定義順序（order），開發伺服器會將會報錯類似的訊息：
 >
->     [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
->     /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
->       allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
+> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
+> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
+>   allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
 >
 > That happens because the [paginator object](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
 >
 > This tutorial didn't reach **Pagination** (yet, but soon enough), but since you can't use `sort_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
 >
-> 1.  Add a `ordering` inside a `class Meta` declaration on your model.
-> 2.  Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.
-> 3.  Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
+> 1. Add a `ordering` inside a `class Meta` declaration on your model.
+> 2. Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.
+> 3. Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
 >
 > If you decide to go with a `class Meta` for the `Author` model (probably not as flexible as customizing the class-based view, but easy enough), you will end up with something like this:
 >
->     class Author(models.Model):
->         first_name = models.CharField(max_length=100)
->         last_name = models.CharField(max_length=100)
->         date_of_birth = models.DateField(null=True, blank=True)
->         date_of_death = models.DateField('Died', null=True, blank=True)
+> ```python
+> class Author(models.Model):
+>     first_name = models.CharField(max_length=100)
+>     last_name = models.CharField(max_length=100)
+>     date_of_birth = models.DateField(null=True, blank=True)
+>     date_of_death = models.DateField('Died', null=True, blank=True)
 >
->         def get_absolute_url(self):
->             return reverse('author-detail', args=[str(self.id)])
+>     def get_absolute_url(self):
+>         return reverse('author-detail', args=[str(self.id)])
 >
->         def __str__(self):
->             return f'{self.last_name}, {self.first_name}'
+>     def __str__(self):
+>         return f'{self.last_name}, {self.first_name}'
 >
->         class Meta:
->             ordering = ['last_name']
+>     class Meta:
+>         ordering = ['last_name']
+> ```
 >
 > Of course, the field doesn't need to be `last_name`: it could be any other.
 >

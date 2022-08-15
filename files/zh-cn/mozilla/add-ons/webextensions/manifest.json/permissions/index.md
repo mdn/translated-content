@@ -44,7 +44,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 ## 主机权限
 
-主机权限使用 [match patterns ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)指定，扩展在每一个表达式指定的网址上请求额外权限。
+主机权限使用 [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 指定，扩展在每一个表达式指定的网址上请求额外权限。
 
 额外权限包括：
 
@@ -56,12 +56,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 Firefox 浏览器，自 56 以后的版本，扩展都会自动获取其源的主机权限，如以下形式：
 
-    moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
+moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
 
 `60a20a9b-1ad4-af49-9b6c-c64c98c37920` 是扩展内部 ID。编程时可使用 [extension.getURL()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL) 来返回此 URL 路径：
 
-1.       browser.extension.getURL("");
-        // moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```js
+browser.extension.getURL("");
+// moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
 
 ## API 权限
 
@@ -102,8 +106,8 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 在大部分情况下这种权限仅仅允许你访问 API，除了以下情况：
 
-- `tabs`让你可以访问 [`一部分特权API`](/en-US/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`。在 Firefox 中你也需要`tabs `来将 queryInfo 中的 url 参数加入 [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). 剩余的`tabs` API 能在不要求任何权限的情况被使用
-- `webRequestBlocking` 允许你是用“blocking”参数，所以你可以[ 修改或取消 requests](/en-US/Add-ons/WebExtensions/API/WebRequest).
+- `tabs`让你可以访问 [`一部分特权API`](/en-US/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`。在 Firefox 中你也需要`tabs`来将 queryInfo 中的 url 参数加入 [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). 剩余的`tabs` API 能在不要求任何权限的情况被使用
+- `webRequestBlocking` 允许你是用“blocking”参数，所以你可以 [修改或取消 requests](/en-US/Add-ons/WebExtensions/API/WebRequest).
 - `downloads.open` 让你使用 {{WebExtAPIRef("downloads.open()")}} API.
 
 ## 活动标签权限

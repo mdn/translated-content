@@ -35,17 +35,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>Tritt auf, wenn <code>digits</code> zu klein oder groß ist. Werte  <code>digits</code> zwischen 0 und 20 (inklusiv) ist, wird es nicht zu einem {{jsxref("RangeError")}} führen. Manche Implementierungen erlauben es auch kleinere oder größere Wert zu benutzen.</dd>
+ <dd>Tritt auf, wenn <code>digits</code> zu klein oder groß ist. Werte  <code>digits</code> zwischen 0 und 20 (inklusiv) ist, wird es nicht zu einem {{jsxref("RangeError")}} führen. Manche Implementierungen erlauben es auch kleinere oder größere Wert zu benutzen.</dd>
  <dt>{{jsxref("TypeError")}}</dt>
  <dd>Wenn die Methode auf einem Objekt, welches nicht vom Typ {{jsxref("Number")}} ist, aufgerufen wird.</dd>
 </dl>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p><strong><code>toFixed()</code></strong> gibt eine String-Repräsentation von <code>numObj</code> zurück, die keine Exponentialdarstellung benutzt und genau <code>digits</code> viele Nachkommastellen beseitzt. Wenn es nötig ist, wird eine Zahl gerundet oder fehlende Dezimalstellen werden mit Nullen aufgefüllt, um die gewünschten Nachkommastellen zu erreichen. Wenn <code>numObj</code> größer als 10<sup>21</sup> ist, ruft diese Methode {{jsxref("Number.prototype.toString()")}} auf und gibt den string in Exponentialdarstellung zurück.</p>
+<p><strong><code>toFixed()</code></strong> gibt eine String-Repräsentation von <code>numObj</code> zurück, die keine Exponentialdarstellung benutzt und genau <code>digits</code> viele Nachkommastellen beseitzt. Wenn es nötig ist, wird eine Zahl gerundet oder fehlende Dezimalstellen werden mit Nullen aufgefüllt, um die gewünschten Nachkommastellen zu erreichen. Wenn <code>numObj</code> größer als 10<sup>21</sup> ist, ruft diese Methode {{jsxref("Number.prototype.toString()")}} auf und gibt den string in Exponentialdarstellung zurück.</p>
 
 <div class="warning">
-<p>JavaScript Numbers können nicht alle Zahlen präzise darstellen, was zu unerwarteten Ergebnissen führen kann, wie z. B.  <code>0.1 + 0.2 === 0.3</code> <code>false</code> ergibt.</p>
+<p>JavaScript Numbers können nicht alle Zahlen präzise darstellen, was zu unerwarteten Ergebnissen führen kann, wie z. B.  <code>0.1 + 0.2 === 0.3</code> <code>false</code> ergibt.</p>
 </div>
 
 <h2 id="Beispiele">Beispiele</h2>
@@ -83,17 +83,17 @@ numObj.toFixed(6);      // Rückgabe: '12345.678900': Nullen hinzugefügt
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

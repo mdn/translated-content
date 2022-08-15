@@ -1,7 +1,6 @@
 ---
 title: 'Window：deviceorientation 事件'
 slug: Web/API/Window/deviceorientation_event
-translation_of: Web/API/Window/deviceorientation_event
 ---
 {{APIRef}}
 

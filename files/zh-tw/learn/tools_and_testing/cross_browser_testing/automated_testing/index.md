@@ -37,8 +37,8 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 我們同意手動測試前述的一切，真的很累。幸好有很多工具，可以讓我們不用這麼累。有兩個主要方法，可以自動執行我們討論過的測試：
 
-1.  使用如 [Grunt](http://gruntjs.com/) 或 [Gulp](http://gulpjs.com/) 或 [Gulp](http://gulpjs.com/) 或 [npm scripts](https://docs.npmjs.com/misc/scripts) 之類的任務執行器（task runner）來跑測試，並在組建過程中清理你的程式碼。這個方法很適合如清理並最小化程式碼、增加 CSS 前輟或最大化跨瀏覽器的 transpiling nascent JavaScript 功能...之類的任務。
-2.  使用如 [Selenium](http://www.seleniumhq.org/) 之類的瀏覽器自動化系統，在安裝好的瀏覽器跑指定測試並傳回結果，並在瀏覽器出問題的時候警告你。諸如 [Sauce Labs](https://saucelabs.com/) 與 [Browser Stack](https://www.browserstack.com/) 之類的商業跨瀏覽器測試程式都是基於 Selenium，但能讓你用簡單的介面，遠端訪問他們設好的東西，如此一來，就能省下自己架設測試系統的心力。
+1. 使用如 [Grunt](http://gruntjs.com/) 或 [Gulp](http://gulpjs.com/) 或 [Gulp](http://gulpjs.com/) 或 [npm scripts](https://docs.npmjs.com/misc/scripts) 之類的任務執行器（task runner）來跑測試，並在組建過程中清理你的程式碼。這個方法很適合如清理並最小化程式碼、增加 CSS 前輟或最大化跨瀏覽器的 transpiling nascent JavaScript 功能...之類的任務。
+2. 使用如 [Selenium](http://www.seleniumhq.org/) 之類的瀏覽器自動化系統，在安裝好的瀏覽器跑指定測試並傳回結果，並在瀏覽器出問題的時候警告你。諸如 [Sauce Labs](https://saucelabs.com/) 與 [Browser Stack](https://www.browserstack.com/) 之類的商業跨瀏覽器測試程式都是基於 Selenium，但能讓你用簡單的介面，遠端訪問他們設好的東西，如此一來，就能省下自己架設測試系統的心力。
 
 我們會在下一篇文章，專注於如何設定基於 Selenium 的個人測試系統。這篇文章則會專注於如何設定任務執行器，並簡單與系統化地，使用前述的商業系統。
 
@@ -52,16 +52,16 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 今日，此類工具大都基於 {{Glossary("Node.js")}}。所以，你需要從 [nodejs.org](https://nodejs.org/) 安裝它：
 
-1.  從上面的網站下載安裝程式。
-2.  如同安裝其他程式般地安裝它。注意 Node 還會安裝 [Node Package Manager](https://www.npmjs.com/)（npm），它能讓你輕易安裝套件(package)、分享你自己寫的套件、還有在你的專案運行腳本。
-3.  安裝完成後，請輸入以下指令以測試 node 是否已安裝到電腦裡面，它會回傳 Node 與 npm 的版本：
+1. 從上面的網站下載安裝程式。
+2. 如同安裝其他程式般地安裝它。注意 Node 還會安裝 [Node Package Manager](https://www.npmjs.com/)（npm），它能讓你輕易安裝套件(package)、分享你自己寫的套件、還有在你的專案運行腳本。
+3. 安裝完成後，請輸入以下指令以測試 node 是否已安裝到電腦裡面，它會回傳 Node 與 npm 的版本：
 
     ```bash
     node -v
     npm -v
     ```
 
-4.  如果已經安裝過 Node/npm，你應該更新它們到最新版本。要更新 Node 的最可行方法，是從上述網站下載並安裝更新的軟體包。要更新 npm，請在文字介面輸入以下指令：
+4. 如果已經安裝過 Node/npm，你應該更新它們到最新版本。要更新 Node 的最可行方法，是從上述網站下載並安裝更新的軟體包。要更新 npm，請在文字介面輸入以下指令：
 
     ```bash
     npm install npm@latest -g
@@ -73,21 +73,21 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 例如說，先來做個 test 目錄，以便不操心自己搞壞什麼。
 
-1.  選個合適的地方建立目錄。可以在檔案管理員的 UI 完成，或是輸入以下指令：
+1. 選個合適的地方建立目錄。可以在檔案管理員的 UI 完成，或是輸入以下指令：
 
     ```bash
     mkdir node-test
     ```
 
-2.  要把這目錄變成 npm 專案，就要到 test 把此目錄初始化。請輸入：
+2. 要把這目錄變成 npm 專案，就要到 test 把此目錄初始化。請輸入：
 
     ```bash
     cd node-test
     npm init
     ```
 
-3.  第二個指令（`npm init`）會問你幾個問題，以便取得專案所需的資訊。你可以把一切都以預設帶過。
-4.  問完所有問題後，它會問你是否對設定滿意。輸入 `yes` 並按下
+3. 第二個指令（`npm init`）會問你幾個問題，以便取得專案所需的資訊。你可以把一切都以預設帶過。
+4. 問完所有問題後，它會問你是否對設定滿意。輸入 `yes` 並按下
 
     <kbd>Enter</kbd>
 
@@ -115,21 +115,21 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 來看看怎麼用 Gulp 設定一些測試工具的自動化。
 
-1.  要開始的話，得先建立一個 test npm 專案。使用的程式會在下面的章節提到。
-2.  接著，你需要有些簡單的 HTML、CSS、JavaScript 來測試系統：你可以複製我們的 [index.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/index.html)、[main.js](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/main.js)、[style.css](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/style.css) 到專案裡面，一個稱為 `src` 的目錄。現在你可以隨意嘗試測試內容，不過請注意這些工具不會直接在 JS/CSS 裡面運作：你需要外部的檔案。
-3.  首先，你要下這個指令，以全域（意思是說，它能在所有專案使用）的形式安裝 gulp：
+1. 要開始的話，得先建立一個 test npm 專案。使用的程式會在下面的章節提到。
+2. 接著，你需要有些簡單的 HTML、CSS、JavaScript 來測試系統：你可以複製我們的 [index.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/index.html)、[main.js](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/main.js)、[style.css](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/style.css) 到專案裡面，一個稱為 `src` 的目錄。現在你可以隨意嘗試測試內容，不過請注意這些工具不會直接在 JS/CSS 裡面運作：你需要外部的檔案。
+3. 首先，你要下這個指令，以全域（意思是說，它能在所有專案使用）的形式安裝 gulp：
 
     ```bash
     npm install --global gulp-cli
     ```
 
-4.  接著在 npm 專案輸入以下指令，以便專案將 gulp 認定為安裝所須：
+4. 接著在 npm 專案輸入以下指令，以便專案將 gulp 認定為安裝所須：
 
     ```bash
     npm install --save-dev gulp
     ```
 
-5.  在專案裡面建立一個叫 `gulpfile.js` 的檔案。這個檔案能運行所有我們需要做的任務。在檔案裡面加這個指令：
+5. 在專案裡面建立一個叫 `gulpfile.js` 的檔案。這個檔案能運行所有我們需要做的任務。在檔案裡面加這個指令：
 
     ```js
     var gulp = require('gulp');
@@ -141,7 +141,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
     這檔案需要我們之前安裝過的 `gulp` 模組，接著會跑些只顯示訊息的基本任務：它至少讓我們知道 Gulp 可以動。每個 gulp task 的基本格式都一樣——`gulp` 會執行 `task()` 方法，並給出兩個參數——任務的名稱、還有指示如何完成任務的回傳函式。
 
-6.  現在你可以跑 gulp task 了——輸入這個指令吧：
+6. 現在你可以跑 gulp task 了——輸入這個指令吧：
 
     ```bash
     gulp
@@ -169,7 +169,7 @@ gulp.task('default', [ ]);
 
 #### html-tidy
 
-1.  輸入以下指令安裝：
+1. 輸入以下指令安裝：
 
     ```bash
     npm install --save-dev gulp-htmltidy
@@ -177,13 +177,13 @@ gulp.task('default', [ ]);
 
     > **備註：** `--save-dev` 會把此套件加到開發相依設定中。如果去看專案的 `package.json` 檔，你會在 `devDependencies` 屬性看到它被放在裡面。
 
-2.  在 `gulpfile.js` 增加這個相依：
+2. 在 `gulpfile.js` 增加這個相依：
 
     ```js
     var htmltidy = require('gulp-htmltidy');
     ```
 
-3.  在 `gulpfile.js` 的底部加入以下測試：
+3. 在 `gulpfile.js` 的底部加入以下測試：
 
     ```js
     gulp.task('html', function() {
@@ -193,7 +193,7 @@ gulp.task('default', [ ]);
     });
     ```
 
-4.  在 `default` 任務的陣列裡面加入 `'html'` 項目。
+4. 在 `default` 任務的陣列裡面加入 `'html'` 項目。
 
 在這裡我們抓到了 `index.html` 開發檔：`gulp.src()` 讓我們抓取需要完成事情所需的原始檔。
 
@@ -203,21 +203,21 @@ gulp.task('default', [ ]);
 
 #### Autoprefixer 與 css-lint
 
-1.  輸入以下指令安裝：
+1. 輸入以下指令安裝：
 
     ```bash
     npm install --save-dev gulp-autoprefixer
     npm install --save-dev gulp-csslint
     ```
 
-2.  在 `gulpfile.js` 增加這個相依：
+2. 在 `gulpfile.js` 增加這個相依：
 
     ```js
     var autoprefixer = require('gulp-autoprefixer');
     var csslint = require('gulp-csslint');
     ```
 
-3.  在 `gulpfile.js` 的底部加入以下測試：
+3. 在 `gulpfile.js` 的底部加入以下測試：
 
     ```js
     gulp.task('css', function() {
@@ -232,27 +232,27 @@ gulp.task('default', [ ]);
     });
     ```
 
-4.  在 `default` 任務的陣列裡面加入 `'css'` 項目。
+4. 在 `default` 任務的陣列裡面加入 `'css'` 項目。
 
 我們在此選定了 `style.css` 檔案，對它執行了 csslint（它會在終端機上面列出所有 CSS 的錯誤），接著透過運行 autoprefixer 來增加所有為了在舊瀏覽器運行所需要的前輟修飾子。在 pipe chain 的最後面，我們把已經 modified prefixed CSS 輸出到 build 目錄。注意，這只有在 csslint 沒有找到錯誤的時候才能動 ── 試著把 CSS 檔案內的大括弧移掉，看看會發生什麼事！
 
 #### js-hint 與 babel
 
-1.  輸入以下指令安裝：
+1. 輸入以下指令安裝：
 
     ```bash
     npm install --save-dev gulp-babel babel-preset-es2015
     npm install jshint gulp-jshint --save-dev
     ```
 
-2.  在 `gulpfile.js` 增加這個相依：
+2. 在 `gulpfile.js` 增加這個相依：
 
     ```js
     var babel = require('gulp-babel');
     var jshint = require('gulp-jshint');
     ```
 
-3.  在 `gulpfile.js` 的底部加入以下測試：
+3. 在 `gulpfile.js` 的底部加入以下測試：
 
     ```js
     gulp.task('js', function() {
@@ -266,7 +266,7 @@ gulp.task('default', [ ]);
     });
     ```
 
-4.  在 `default` 任務的陣列裡面加入 `'js'` 項目。
+4. 在 `default` 任務的陣列裡面加入 `'js'` 項目。
 
 我們在這裡抓了 `main.js` 檔案，對其運行 `jshint` 並使用 `jshint.reporter` 對終端機輸出結果；我們接著把檔案 pass 到 babel，它將其轉換至舊語法並將結果輸出至 `build` 目錄。我們原本的程式碼包含了 [fat 箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，babel 會將其編寫為舊語法。
 
@@ -317,18 +317,18 @@ You can then step up a gear, using an API to access functionality programmatical
 
 來透過 Sauce Labs Trial 開始熟悉吧。
 
-1.  建立 [Sauce Labs trial 帳號](https://saucelabs.com/signup/trial)。
-2.  登入。通常在驗證電子郵件後，就能自動登入。
+1. 建立 [Sauce Labs trial 帳號](https://saucelabs.com/signup/trial)。
+2. 登入。通常在驗證電子郵件後，就能自動登入。
 
 ### 基本的手動測試
 
 [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/manual) 有很多可用選項。現在，先確認是否位於 _Manual Tests_ tab。
 
-1.  點選 _Start a new manual session_。
-2.  在下個螢幕，輸入想測試的 URL（像是本例中要輸入 <http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>）接著透過不同的按鈕與清單，選擇想測試的瀏覽器／作業系統組合。如你所見，有很多很多的組合！ ![](sauce-manual-session.png)
-3.  When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4.  When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](sauce-test-running.png)
-5.  From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
+1. 點選 _Start a new manual session_。
+2. 在下個螢幕，輸入想測試的 URL（像是本例中要輸入 <http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>）接著透過不同的按鈕與清單，選擇想測試的瀏覽器／作業系統組合。如你所見，有很多很多的組合！ ![](sauce-manual-session.png)
+3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
+4. When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](sauce-test-running.png)
+5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
 
     - Stop the session
     - Give someone else a URL so they can observe the test remotely.
@@ -348,14 +348,14 @@ It has a number of clients available to allow you to make calls to the API using
 
 Let's have a brief look at how we'd access the API using Node.js and [node-saucelabs](https://github.com/danjenkins/node-saucelabs).
 
-1.  First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#設定_node_與_npm). Use a different directory name than before, like `sauce-test` for example.
-2.  使用以下指令安裝 Node Sauce Labs wrapper：
+1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#設定_node_與_npm). Use a different directory name than before, like `sauce-test` for example.
+2. 使用以下指令安裝 Node Sauce Labs wrapper：
 
     ```bash
     npm install saucelabs
     ```
 
-3.  在專案根目錄下建立個稱作 `call-sauce.js` 的新檔案。寫入以下內容：
+3. 在專案根目錄下建立個稱作 `call-sauce.js` 的新檔案。寫入以下內容：
 
     ```js
     var SauceLabs = require('saucelabs');
@@ -388,8 +388,8 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
     });
     ```
 
-4.  You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://saucelabs.com/beta/user-settings) page. Fill these in now.
-5.  Make sure everything is saved, and run your file like so:
+4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://saucelabs.com/beta/user-settings) page. Fill these in now.
+5. Make sure everything is saved, and run your file like so:
 
     ```bash
     node call-sauce

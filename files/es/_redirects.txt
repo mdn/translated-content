@@ -211,7 +211,7 @@
 /es/docs/Core_JavaScript_1.5_Reference/Objects/String/small	/es/docs/Web/JavaScript/Reference/Global_Objects/String/small
 /es/docs/Core_JavaScript_1.5_Reference:Objects:String:small	/es/docs/Web/JavaScript/Reference/Global_Objects/String/small
 /es/docs/Creacion_de_plugins_OpenSearch_para_Firefox	/es/docs/Web/OpenSearch
-/es/docs/DHTML	/es/docs/Glossary/DHTML
+/es/docs/DHTML	/es/docs/Glossary
 /es/docs/DOM/CSS	/es/docs/Web/CSS
 /es/docs/DOM/CssRule	/es/docs/Web/API/CSSRule
 /es/docs/DOM/CssRule.cssText	/es/docs/Web/API/CSSRule/cssText
@@ -472,6 +472,7 @@
 /es/docs/Glossary/Constante	/es/docs/Glossary/Constant
 /es/docs/Glossary/Criptoanálisis	/es/docs/Glossary/Cryptanalysis
 /es/docs/Glossary/Criptografía	/es/docs/Glossary/Cryptography
+/es/docs/Glossary/DHTML	/es/docs/Glossary
 /es/docs/Glossary/Descifrado	/es/docs/Glossary/Decryption
 /es/docs/Glossary/Encriptación	/es/docs/Glossary/Encryption
 /es/docs/Glossary/Entidad	/es/docs/Glossary/Entity

@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 
 <div>{{js_property_attributes(0,0,1)}}</div>
 
-<div> </div>
+<div> </div>
 
 <div class="note">
 <p>Zu beachten ist, dass in nicht standardisierten implementierungen vor ES2015 das <code>configurable</code> Attribute ebenfalls <code>false</code> ist.</p>
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 
 <h3 id="Name_bei_Funktionsanweisungen">Name bei Funktionsanweisungen</h3>
 
-<p>Die <code>name</code> Eigenschaft gibt den Namen einer Funktionsanweisung:</p>
+<p>Die <code>name</code> Eigenschaft gibt den Namen einer Funktionsanweisung:</p>
 
 <pre class="brush: js">function doSomething() {}
 doSomething.name; // logs "doSomething"
@@ -36,7 +36,7 @@ doSomething.name; // logs "doSomething"
 
 <h3 id="Name_bei_Function_Konstruktoren">Name bei <code>Function</code> Konstruktoren</h3>
 
-<p>Funktionen, die mit der Syntax <code>new Function(...)</code> oder nur <code>Function(...)</code> erstellt werden, erstellen {{jsxref("Function")}}  mit dem Namen "anonymous".</p>
+<p>Funktionen, die mit der Syntax <code>new Function(...)</code> oder nur <code>Function(...)</code> erstellt werden, erstellen {{jsxref("Function")}}  mit dem Namen "anonymous".</p>
 
 <pre class="brush: js">(new Function).name; // "anonymous"
 </pre>
@@ -67,10 +67,6 @@ try { object_someMethod } catch(e) { console.log(e); }
 
 <p>Man kann den Namen einer Funktion nicht ändern, weil diese Eigenschaft schreibgeschützt ist:</p>
 
-<div class="hidden">
-<p>Example below contradicts with what is said at the beginning of this section and doesn't work as described.</p>
-</div>
-
 <pre class="brush: js">var object = {
   // anonyme Funktionsdefinition
   someMethod: function() {}
@@ -97,7 +93,7 @@ o.foo.name; // "foo";
 <pre class="brush: js">function foo() {};
 foo.bind({}).name; // "bound foo"</pre>
 
-<h3 class="brush: js" id="Funktionsnamen_für_Getter_und_Setter">Funktionsnamen für Getter und Setter</h3>
+<h3 id="Funktionsnamen_für_Getter_und_Setter">Funktionsnamen für Getter und Setter</h3>
 
 <p>Beim Einsatz von <code><a href="/de/docs/Web/JavaScript/Reference/Functions/get">get</a></code> und <code><a href="/de/docs/Web/JavaScript/Reference/Functions/set">set</a></code> Zugriffseigenschaften wird "get" oder "set" im Funktionsnamen auftauchen.</p>
 
@@ -113,7 +109,7 @@ descriptor.set.name; // "set foo"
 
 <h3 id="Funktionsnamen_in_Klassen">Funktionsnamen in Klassen</h3>
 
-<p>Über <code>obj.constructor.name</code> lässt sich die "Klasse" eines Objekts überprüfen (jedoch sollten die unten stehende Warnung berücksichtigt werden):</p>
+<p>Über <code>obj.constructor.name</code> lässt sich die "Klasse" eines Objekts überprüfen (jedoch sollten die unten stehende Warnung berücksichtigt werden):</p>
 
 <pre class="brush: js">function Foo() {}  // ES2015 Syntax: class Foo {}
 
@@ -146,7 +142,7 @@ Foo.name = function() {};
 console.log(fooInstance.constructor.name); // logs function name()
 </pre>
 
-<p>Man sieht zudem in der Beispiel  der ES5 Syntax für Chrome und Firefox, dass die Definition der statischen <code>Foo.name</code> Methode überschreibbar (<em>writable</em>) wird. Wird nicht angegeben, ist der Standard für solche Definition nur lesend (<em>read-only</em>).</p>
+<p>Man sieht zudem in der Beispiel  der ES5 Syntax für Chrome und Firefox, dass die Definition der statischen <code>Foo.name</code> Methode überschreibbar (<em>writable</em>) wird. Wird nicht angegeben, ist der Standard für solche Definition nur lesend (<em>read-only</em>).</p>
 
 <pre class="brush: js">Foo.name = 'Hello'
 console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
@@ -217,7 +213,7 @@ if (b.constructor.name === 'Foo') {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function-instances-name', 'name')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

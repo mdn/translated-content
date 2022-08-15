@@ -51,8 +51,8 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
 
 ### 在 Node 下建立 Selenium
 
-1.  参考上一个章节[创建 Node 和 npm](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm)，创建一个新的 npm 工程，取一个不同的名字，如`selenium-test`.
-2.  接下来，我们需要安装一个框架来允许我们从 Node 中运行 Selenium。我们选择 selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver), 它的文档更新得很好，维护得也很好。如果你想要其它的选择，[webdriver.io](http://webdriver.io/) 和 [nightwatch.js](http://nightwatchjs.org/)也都不错。要安装 selenium-webdriver，在你的工程目录下运行如下命令：
+1. 参考上一个章节[创建 Node 和 npm](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm)，创建一个新的 npm 工程，取一个不同的名字，如`selenium-test`.
+2. 接下来，我们需要安装一个框架来允许我们从 Node 中运行 Selenium。我们选择 selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver), 它的文档更新得很好，维护得也很好。如果你想要其它的选择，[webdriver.io](http://webdriver.io/) 和 [nightwatch.js](http://nightwatchjs.org/)也都不错。要安装 selenium-webdriver，在你的工程目录下运行如下命令：
 
     ```bash
     npm install selenium-webdriver
@@ -62,16 +62,16 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
 
 接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在[selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) (第一部分的表格) 页面查看如何下载。 显然，有的浏览器是 OS 定制的，我们将使用 Firefox 和 Chrome, 它们在主流的 OS 下都支持。
 
-1.  下载最新版本的 [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) ( Firefox) 和 [ChromeDriver](http://chromedriver.storage.googleapis.com/index.html) 驱动。
-2.  将它们解压到一个简单的目录下，如用户根目录。
-3.  把 `chromedriver` 和 `geckodriver` 驱动的目录添加到你的系统 `PATH` 变量。这应该是从你的硬盘根目录开始的一个绝对路径。举个例子，如果我们使用的是一个 Mac OS X 机器，用户名为 bob, 我们把驱动放到了用户的根目录下，那这个路径就是 `/Users/bob`。
+1. 下载最新版本的 [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) ( Firefox) 和 [ChromeDriver](http://chromedriver.storage.googleapis.com/index.html) 驱动。
+2. 将它们解压到一个简单的目录下，如用户根目录。
+3. 把 `chromedriver` 和 `geckodriver` 驱动的目录添加到你的系统 `PATH` 变量。这应该是从你的硬盘根目录开始的一个绝对路径。举个例子，如果我们使用的是一个 Mac OS X 机器，用户名为 bob, 我们把驱动放到了用户的根目录下，那这个路径就是 `/Users/bob`。
 
 > **备注：** 重申一下，添加到 `PATH` 的路径是到包含驱动的那一级目录，而不是驱动目录自身！这是一个常犯的错误。
 
 在 Mac OS X 或大多数 Linux 系统中设置`PATH` 变量的操作如下：
 
-1.  打开 `.bash_profile` (或 `.bashrc`) 文件 (如果看不到隐藏文件，需要将它们显示出来，查看[ Mac OSX 显示/隐藏文件](http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) 或 [Ubuntu 显示隐藏文件夹](http://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04)）。
-2.  把下面语句粘贴到文件的最后 (就像平常在机器上更新 path):
+1. 打开 `.bash_profile` (或 `.bashrc`) 文件 (如果看不到隐藏文件，需要将它们显示出来，查看 [Mac OSX 显示/隐藏文件](http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) 或 [Ubuntu 显示隐藏文件夹](http://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04)）。
+2. 把下面语句粘贴到文件的最后 (就像平常在机器上更新 path):
 
     ```bash
     #Add WebDriver browser drivers to PATH
@@ -79,21 +79,21 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
     export PATH=$PATH:/Users/bob
     ```
 
-3.  保存并关闭文件，然后重启命令终端以生效 Bash 的配置。
-4.  在命令终端上敲下面命令，查看新的路径是否已经添加到 `PATH` 变量中：
+3. 保存并关闭文件，然后重启命令终端以生效 Bash 的配置。
+4. 在命令终端上敲下面命令，查看新的路径是否已经添加到 `PATH` 变量中：
 
     ```bash
     echo $PATH
     ```
 
-5.  你应该可以在打印出来的信息中找到。
+5. 你应该可以在打印出来的信息中找到。
 
 在 Windows 下设置 `PATH` 变量，参考 [如何添加一个新的文件目录到系统路径？](http://windowsitpro.com/systems-management/how-can-i-add-new-folder-my-system-path)
 
 OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
-1.  在你的工程目录下创建一个新的文件`google_test.js`:
-2.  将下面代码复制到文件中保存：
+1. 在你的工程目录下创建一个新的文件`google_test.js`:
+2. 将下面代码复制到文件中保存：
 
     ```js
     var webdriver = require('selenium-webdriver'),
@@ -127,7 +127,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
     driver.quit();
     ```
 
-3.  在终端上，记住在你的工程目录下，输入如下命令：
+3. 在终端上，记住在你的工程目录下，输入如下命令：
 
     ```bash
     node google_test
@@ -139,8 +139,8 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
 接下来，让我们来试一下同时在多个浏览器上进行测试。这也是你经常碰到的情况！
 
-1.  在你的工程目录下创建另外一个新文件`google_test_multiple.js`.你可以根据实际需要测试的浏览器情况，对我们添加的浏览器进行修改或删除等操作。但确保系统安装了正确的浏览器驱动。关于如何填写`.forBrowser()` 方法中对浏览器描述的字符串，请参考 [Browser enum](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html) .
-2.  将下面代码复制到文件中保存：
+1. 在你的工程目录下创建另外一个新文件`google_test_multiple.js`.你可以根据实际需要测试的浏览器情况，对我们添加的浏览器进行修改或删除等操作。但确保系统安装了正确的浏览器驱动。关于如何填写`.forBrowser()` 方法中对浏览器描述的字符串，请参考 [Browser enum](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html) .
+2. 将下面代码复制到文件中保存：
 
     ```js
     var webdriver = require('selenium-webdriver'),
@@ -182,13 +182,13 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
     }
     ```
 
-3.  在终端上，记住在你的工程目录下，输入如下命令：
+3. 在终端上，记住在你的工程目录下，输入如下命令：
 
     ```bash
     node google_test_multiple
     ```
 
-4.  如果你用的是 Mac 测试 Safari，可能会产生一个错误信息： "Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver." 如果是这样，根据指示重新尝试一遍。
+4. 如果你用的是 Mac 测试 Safari，可能会产生一个错误信息： "Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver." 如果是这样，根据指示重新尝试一遍。
 
 现在，我们像上次一样完成了测试，这一次浏览器的测试代码放到了`searchTest()`函数中。我们对多个浏览器创建了新的浏览器实例，然后将每一个实例传递给函数，这样就可以在 3 个浏览器下执行测试！
 
@@ -394,26 +394,26 @@ driver.quit();
 
 有很多编写最佳测试的实践方法，你可以参考[测试设计考虑](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp)来了解一些背景。总的来说，测试应该遵循如下几点：
 
-1.  使用好的定位策略：当你同 document 交互时，确保你使用的定位器和页面对象是不变的 — 如对元素进行测试，确保这个元素有固定的 ID 或页面位置，这样可以通过 CSS 选择器定位到它，不至于在下一个迭代就发生变化。尽可能让你的测试稳健，而不是有一点改动就会 break。
-2.  写原子测试：一个测试只测一件事，这样有利于跟踪哪一个测试文件执行的是哪种测试。举例来说，前面的`google_test.js` 就只测试了一个简单的用例 — 页面的搜索结果标题是否正确。我们可以给它改一个名字，这样当我们添加更多的测试文件时它的作用会更直观，比如改为 `results_page_title_set_correctly.js` 。
-3.  写独立的测试：每一个测试只需要自己执行，不需要依赖其它的测试。
+1. 使用好的定位策略：当你同 document 交互时，确保你使用的定位器和页面对象是不变的 — 如对元素进行测试，确保这个元素有固定的 ID 或页面位置，这样可以通过 CSS 选择器定位到它，不至于在下一个迭代就发生变化。尽可能让你的测试稳健，而不是有一点改动就会 break。
+2. 写原子测试：一个测试只测一件事，这样有利于跟踪哪一个测试文件执行的是哪种测试。举例来说，前面的`google_test.js` 就只测试了一个简单的用例 — 页面的搜索结果标题是否正确。我们可以给它改一个名字，这样当我们添加更多的测试文件时它的作用会更直观，比如改为 `results_page_title_set_correctly.js` 。
+3. 写独立的测试：每一个测试只需要自己执行，不需要依赖其它的测试。
 
 除此之外，我们还要提一下测试结果/测试报告 — 在前面的例子中，我们只是简单的把测试结果通过 `console.log()` 语句打印出来，这个完全只在 JavaScript 中完成，你可以使用任何你想要的测试运行和报告系统，如[Mocha](https://mochajs.org/)/[Chai](http://chaijs.com/)/或者其它的组合。
 
-1.  举个例子，将 [`mocha_test.js`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/selenium/mocha_test.js) 拷贝到你的工程目录下。把它放到一个叫做 `test`的子文件夹内，这个例子使用了一长串的 promise 来执行测试的所有步骤 — WebDriver 使用这些基于 promise 的方法保证正常工作。
-2.  执行下面的命令在你的工程目录下安装 mocha 测试工具：
+1. 举个例子，将 [`mocha_test.js`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/selenium/mocha_test.js) 拷贝到你的工程目录下。把它放到一个叫做 `test`的子文件夹内，这个例子使用了一长串的 promise 来执行测试的所有步骤 — WebDriver 使用这些基于 promise 的方法保证正常工作。
+2. 执行下面的命令在你的工程目录下安装 mocha 测试工具：
 
     ```bash
     npm install --save-dev mocha
     ```
 
-3.  然后通过下面的命令运行测试（所有你放到 test 目录下的测试）:
+3. 然后通过下面的命令运行测试（所有你放到 test 目录下的测试）:
 
     ```bash
     mocha --no-timeouts
     ```
 
-4.  使用`--no-timeouts` 参数确保测试不会因 Mocha 的 3 秒超时时限而中途失败退出。
+4. 使用`--no-timeouts` 参数确保测试不会因 Mocha 的 3 秒超时时限而中途失败退出。
 
 > **备注：** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) 中包含了一些关于如何设置不同测试/断言工具组合的有用示例。
 
@@ -425,8 +425,8 @@ driver.quit();
 
 在 BrowserStack 进行 Selenium 远程测试很简单，参考下面的代码示例：
 
-1.  在你的工程目录下，新建一个文件`bstack_google_test.js`.
-2.  复制下面内容：
+1. 在你的工程目录下，新建一个文件`bstack_google_test.js`.
+2. 复制下面内容：
 
     ```js
     var webdriver = require('selenium-webdriver'),
@@ -473,8 +473,8 @@ driver.quit();
     driver.quit();
     ```
 
-3.  在 [BrowserStack automation dashboard](https://www.browserstack.com/automate), 获取你的用户名和 Key (查看 _Username 和 Access Keys_)，替换代码中 `YOUR-USER-NAME` 和`YOUR-ACCESS-KEY` 的对应值。(确保它们依然安全).
-4.  执行下面命令：
+3. 在 [BrowserStack automation dashboard](https://www.browserstack.com/automate), 获取你的用户名和 Key (查看 _Username 和 Access Keys_)，替换代码中 `YOUR-USER-NAME` 和`YOUR-ACCESS-KEY` 的对应值。(确保它们依然安全).
+4. 执行下面命令：
 
     ```bash
     node bstack_google_test
@@ -482,7 +482,7 @@ driver.quit();
 
     测试被发送给 BrowserStackces, 测试结果会返回到你的控制台。这体现了包含报告机制的重要性！
 
-5.  现在回到 [BrowserStack automation dashboard](https://www.browserstack.com/automate) 页面，你会看到测试列出来的结果：
+5. 现在回到 [BrowserStack automation dashboard](https://www.browserstack.com/automate) 页面，你会看到测试列出来的结果：
     ![](bstack_automated_results.png)
 
 点击测试链接，会打开一个屏幕播放记录了测试的视频，和在测试过程中相关的 log 详情。
@@ -497,19 +497,19 @@ driver.quit();
 
 让我们来更新一下 `bstack_google_test.js` 示例，看看它们是怎样运作的：
 
-1.  首先，导入 node 需要的模块，用来发送 requests 给 REST API.在代码的顶端添加如下语句：
+1. 首先，导入 node 需要的模块，用来发送 requests 给 REST API.在代码的顶端添加如下语句：
 
     ```js
     var request = require("request");
     ```
 
-2.  现在更新一下 `capabilities` 对象，添加工程名 — 在右大括号前添加下面代码，记得要在上一行末增加一个逗号 (在 BrowserStack 自动化仪表盘上，你可以修改 build 和 project 名称来组织不同窗口下的测试):
+2. 现在更新一下 `capabilities` 对象，添加工程名 — 在右大括号前添加下面代码，记得要在上一行末增加一个逗号 (在 BrowserStack 自动化仪表盘上，你可以修改 build 和 project 名称来组织不同窗口下的测试):
 
     ```js
     'project' : 'Google test 2'
     ```
 
-3.  接下来获取当前会话的 `sessionId` , 就知道往哪儿发送 request ( 后面你会看到，ID 包含在 request 的 URL 中). 将下面代码添加到创建 `driver` 对象 (`var driver ...`) 的代码块下面：
+3. 接下来获取当前会话的 `sessionId` , 就知道往哪儿发送 request ( 后面你会看到，ID 包含在 request 的 URL 中). 将下面代码添加到创建 `driver` 对象 (`var driver ...`) 的代码块下面：
 
     ```js
     var sessionId;
@@ -519,7 +519,7 @@ driver.quit();
     });
     ```
 
-4.  最后，修改下面 `driver.sleep(2000)` ... 的代码，添加 REST API 调用 (同样，使用你的真实用户名和 key 替换 `YOUR-USER-NAME` 和`YOUR-ACCESS-KEY` 的值):
+4. 最后，修改下面 `driver.sleep(2000)` ... 的代码，添加 REST API 调用 (同样，使用你的真实用户名和 key 替换 `YOUR-USER-NAME` 和`YOUR-ACCESS-KEY` 的值):
 
     ```js
     driver.sleep(2000).then(function() {
@@ -545,8 +545,8 @@ driver.quit();
 
 在 Sauce Labs 远程运行 Selenium 测试与在 BrowserStack 一样简单，尽管它们有一些语法的差异。代码示例如下：
 
-1.  在你的工程目录下，新建一个文件 `sauce_google_test.js`.
-2.  复制下面内容：
+1. 在你的工程目录下，新建一个文件 `sauce_google_test.js`.
+2. 复制下面内容：
 
     ```js
     var webdriver = require('selenium-webdriver'),
@@ -590,8 +590,8 @@ driver.quit();
     driver.quit();
     ```
 
-3.  从你的 [Sauce Labs 用户设置](https://saucelabs.com/beta/user-settings), 获取你的用户名和 key. 并替换代码中对于 `YOUR-USER-NAME` 和`YOUR-ACCESS-KEY` 的值 (确保它们依然安全).
-4.  执行如下命令运行测试：
+3. 从你的 [Sauce Labs 用户设置](https://saucelabs.com/beta/user-settings), 获取你的用户名和 key. 并替换代码中对于 `YOUR-USER-NAME` 和`YOUR-ACCESS-KEY` 的值 (确保它们依然安全).
+4. 执行如下命令运行测试：
 
     ```bash
     node sauce_google_test
@@ -599,7 +599,7 @@ driver.quit();
 
     测试会被发送到，并返回相应的测试结果到你的控制台。这体现了包含报告机制的重要性！
 
-5.  现在访问你的 [Sauce Labs 自动化测试仪表盘](https://saucelabs.com/beta/dashboard/tests) 页面，会看到列出的测试; 同样你也可以看到视频、截屏和其他类似的数据。
+5. 现在访问你的 [Sauce Labs 自动化测试仪表盘](https://saucelabs.com/beta/dashboard/tests) 页面，会看到列出的测试; 同样你也可以看到视频、截屏和其他类似的数据。
     ![](sauce_labs_automated_test.png)
 
 > **备注：** Sauce Labs' [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
@@ -612,19 +612,19 @@ driver.quit();
 
 示例如下：
 
-1.  安装 Node Sauce Labs 套件 (如果你之前没有运行过):
+1. 安装 Node Sauce Labs 套件 (如果你之前没有运行过):
 
     ```bash
     npm install saucelabs --save-dev
     ```
 
-2.  Require saucelabs — 在 `sauce_google_test.js` 文件顶端，就在之前的变量声明下面添加如下代码：
+2. Require saucelabs — 在 `sauce_google_test.js` 文件顶端，就在之前的变量声明下面添加如下代码：
 
     ```js
     var SauceLabs = require('saucelabs');
     ```
 
-3.  接着添加如下代码，创建一个新的 SauceLabs 实例：
+3. 接着添加如下代码，创建一个新的 SauceLabs 实例：
 
     ```js
     var saucelabs = new SauceLabs({
@@ -635,7 +635,7 @@ driver.quit();
 
     同样，用真实的用户名和 key 来替换`YOUR-USER-NAME` 和 `YOUR-ACCESS-KEY` 的值 (注意 saucelabs 的 npm 包使用的是 `password`, 而不是`accessKey`). Since you are using these twice now, you may want to create a couple of helper variables to store them in.
 
-4.  在 `driver` 变量定义的下方 (就在 `build()` 行后面), 添加下面代码块 — 获取正确的驱动 `sessionID` 来将数据写入进程 (在后面的代码中操作):
+4. 在 `driver` 变量定义的下方 (就在 `build()` 行后面), 添加下面代码块 — 获取正确的驱动 `sessionID` 来将数据写入进程 (在后面的代码中操作):
 
     ```js
     driver.getSession().then(function (sessionid){
@@ -643,7 +643,7 @@ driver.quit();
     });
     ```
 
-5.  最后，将代码末尾的 replace the `driver.sleep(2000)` ... 替换如下：
+5. 最后，将代码末尾的 replace the `driver.sleep(2000)` ... 替换如下：
 
     ```js
     driver.sleep(2000).then(function() {
@@ -674,9 +674,9 @@ driver.quit();
 
 如果你不想使用 Sauce Labs 或 BrowserStack 之类的服务，你也可以设置自己的远程测试服务器。具体操作如下：
 
-1.  Selenium 的远端服务器要求运行 Java，从[ Java SE 下载页面](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下载适合你平台的最新 JDK 并安装。
-2.  接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html) — 它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本 (比如不要选一个 beta 版本), 从列表中选择以 "selenium-server-standalone"开头的文件。下载完成后，放到一个靠谱的地方，比如 home 目录下。如果你还没有将位置添加到 `PATH`, 现在就需要添加了 (查看 "在 Node 中创建 Selenium"章节).
-3.  在作为服务器的电脑终端上执行如下代码，安装单机版服务器
+1. Selenium 的远端服务器要求运行 Java，从 [Java SE 下载页面](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下载适合你平台的最新 JDK 并安装。
+2. 接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html) — 它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本 (比如不要选一个 beta 版本), 从列表中选择以 "selenium-server-standalone"开头的文件。下载完成后，放到一个靠谱的地方，比如 home 目录下。如果你还没有将位置添加到 `PATH`, 现在就需要添加了 (查看 "在 Node 中创建 Selenium"章节).
+3. 在作为服务器的电脑终端上执行如下代码，安装单机版服务器
 
     ```bash
     java -jar selenium-server-standalone-3.0.0.jar
@@ -684,12 +684,12 @@ driver.quit();
 
     (修改 `.jar` 文件名为你获取的文件名称）
 
-4.  服务会运行在 [`http://localhost:4444/wd/hub`](http://localhost:4444/wd/hub) — 你可以去试试看是什么效果。
+4. 服务会运行在 [`http://localhost:4444/wd/hub`](http://localhost:4444/wd/hub) — 你可以去试试看是什么效果。
 
 现在服务器运行起来了，让我们在 selenium 服务器上来创建一个 demo 测试。
 
-1.  复制 `google_test.js` 文件，改名为 `google_test_remote.js`; 放到工程目录下。
-2.  将第二段代码 ( `var driver = `开头的代码段) 修改如下
+1. 复制 `google_test.js` 文件，改名为 `google_test_remote.js`; 放到工程目录下。
+2. 将第二段代码 ( `var driver =` 开头的代码段) 修改如下
 
     ```js
     var driver = new webdriver.Builder()
@@ -698,7 +698,7 @@ driver.quit();
         .build();
     ```
 
-3.  运行测试，你会看到它如期执行 ; 只不过这次是在服务器端：
+3. 运行测试，你会看到它如期执行 ; 只不过这次是在服务器端：
 
     ```bash
     node google_test_remote.js

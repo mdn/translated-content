@@ -280,7 +280,7 @@ original_slug: Web/JavaScript/Guide/Closures
 
 ## 루프에서 클로저 생성하기: 일반적인 실수
 
-ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let "방해") 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
+ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
 
 ```html
     <p id="help">Helpful notes will appear here</p>

@@ -37,7 +37,7 @@ original_slug: Learn/HTML/Einführung_in_HTML/Document_and_website_structure
 
 <dl>
  <dt>header - Kopfbereich</dt>
- <dd>Normalerweise ist dies ein breiter Streifen ganz oben auf der Website, in dem eine Überschrift zusammen mit einem Logo untergebracht sind. So sieht man jederzeit auf welcher Website man sich befindet, der header bleibt auf allen Unterseiten gleich.</dd>
+ <dd>Normalerweise ist dies ein breiter Streifen ganz oben auf der Website, in dem eine Überschrift zusammen mit einem Logo untergebracht sind. So sieht man jederzeit auf welcher Website man sich befindet, der header bleibt auf allen Unterseiten gleich.</dd>
  <dt>Navigation</dt>
  <dd>In der Navigation werden die Links zu den Unterseiten der Website bereitgestellt, meist in Form von Buttons, einfachen Links oder auch Tabs. Dieser Bereich bleibt genauso wie der header auf allen Seiten der Website gleich. Manchmal wird die Navigation direkt mit in den header eingebaut. Ob ein separates Navigationsmenü sinnvoller ist, ist Ansichtssache.</dd>
  <dt>Hauptinhalt</dt>
@@ -48,7 +48,7 @@ original_slug: Learn/HTML/Einführung_in_HTML/Document_and_website_structure
  <dd>Ein Streifen am Ende der Webseite, welcher oft in kleiner Schrift Informationen zum Impressum, Copyright und Kontaktinformationen bereit stellt. Es sind wichtige Informationen für Interessierte, aber für die meisten Webseitenbenutzer nicht relevant. Manchmal wird hier auch eine Sitemap zur Verfügung gestellt.</dd>
 </dl>
 
-<p>Eine „typische Webseite“ könnte wie folgt strukturiert werden:</p>
+<p>Eine „typische Webseite“ könnte wie folgt strukturiert werden:</p>
 
 <p><img alt="a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer." src="https://mdn.mozillademos.org/files/12417/sample-website.png" style="display: block; margin: 0 auto;"></p>
 
@@ -56,7 +56,7 @@ original_slug: Learn/HTML/Einführung_in_HTML/Document_and_website_structure
 
 <p>Das Beispiel oben ist vielleicht nicht besonders schön, aber sehr gut dafür geeignet, den typischen Aufbau einer Webseite zu erläutern. Es gibt Webseiten mit weiteren Spalten, manche sind um einiges komplexer, aber man kann den grundlegenden Aufbau gut erkennen. Mit dem richtigen CSS darauf angewendet, kann man alle Elemente dazu bringen, sich wie die verschiedenen Bereiche zu verhalten und so auszusehen. Aber wie schon vorher angesprochen, ist es <strong>wichtig den semantischen Zusammenhang zwischen den HTML-Tags zu wahren und das richtige Element für den ihm zugeschriebene Job zu nutzen</strong>.</p>
 
-<p>Dies liegt daran, dass Darstellungen nicht die ganze Geschichte, die dahinter steckt, erzählen. Wir verwenden Farbe und Schriftgröße um Benutzer auf die nützlichsten Teile des Inhalts aufmerksam zu machen, wie das Navigationsmenü und verwandte Links. Aber was ist mit sehbehinderten Menschen, die zum Beispiel keine Konzepte wie „pink“ und „große Schriftart“ sehr nützlich finden?</p>
+<p>Dies liegt daran, dass Darstellungen nicht die ganze Geschichte, die dahinter steckt, erzählen. Wir verwenden Farbe und Schriftgröße um Benutzer auf die nützlichsten Teile des Inhalts aufmerksam zu machen, wie das Navigationsmenü und verwandte Links. Aber was ist mit sehbehinderten Menschen, die zum Beispiel keine Konzepte wie „pink“ und „große Schriftart“ sehr nützlich finden?</p>
 
 <div class="note">
 <p><strong>Hinweis</strong>: Etwa 8% der Menschen weltweit sind farbenblind. Blinde oder fast blinde Menschen machen 4-5% der Menschheit aus. 2012 waren das etwa <a href="https://en.wikipedia.org/wiki/Visual_impairment">285 Millionen Menschen</a>, während die Gesamtpopulation bei 7 Billionen Menschen liegt.</p>
@@ -180,7 +180,7 @@ original_slug: Learn/HTML/Einführung_in_HTML/Document_and_website_structure
 
 <h3 id="Nicht-semantische_Container">Nicht-semantische Container</h3>
 
-<p>Manchmal findet sich kein passendes semantisches Element, um eine Gruppe Elemente oder Inhalte damit einzuhüllen. Manchmal möchte man mit einem Container um bestimmte Elemente herum nur ein Ziel erstellen, das über {{glossary("CSS")}} oder {{glossary("JavaScript")}} angesprochen werden kann. Für solche Fälle gibt es das {{HTMLElement("div")}} und das {{HTMLElement("span")}} Element. Diese sollten möglichst immer ein passendes {{htmlattrxref('class')}} Attribut haben, über welches sie identifiziert und angesprochen werden können.</p>
+<p>Manchmal findet sich kein passendes semantisches Element, um eine Gruppe Elemente oder Inhalte damit einzuhüllen. Manchmal möchte man mit einem Container um bestimmte Elemente herum nur ein Ziel erstellen, das über {{glossary("CSS")}} oder {{glossary("JavaScript")}} angesprochen werden kann. Für solche Fälle gibt es das {{HTMLElement("div")}} und das {{HTMLElement("span")}} Element. Diese sollten möglichst immer ein passendes {{htmlattrxref('class')}} Attribut haben, über welches sie identifiziert und angesprochen werden können.</p>
 
 <p>{{HTMLElement("span")}} ist ein Inline Element ohne eine bestimmte Semantik. Man sollte es nur benutzen, wenn man kein besseres, semantisches Inline-Element finden kann oder wenn man keine hervorgehobene Bedeutung hinzufügen möchte. Zum Beispiel:</p>
 

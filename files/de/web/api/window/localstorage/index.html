@@ -12,7 +12,7 @@ translation_of: Web/API/Window/localStorage
 ---
 <p>{{APIRef()}}</p>
 
-<p>Die <code>localStorage</code>-Eigenschaft erlaubt den Zugriff auf ein lokales {{domxref("Storage")}}-Objekt. <code>localStorage</code> ist mit einer Ausnahme identisch zu <code><a href="/en-US/docs/Web/API/Window.sessionStorage">sessionStorage</a></code>: Im Unterschied zu letzterem besitzen in <code>localStorage</code> gespeicherte Daten kein Verfallsdatum, während sie im <code>sessionStorage</code> mit Ablauf der <code>session</code>, in der Regel beim Schließen des Browsers, gelöscht werden.</p>
+<p>Die <code>localStorage</code>-Eigenschaft erlaubt den Zugriff auf ein lokales {{domxref("Storage")}}-Objekt. <code>localStorage</code> ist mit einer Ausnahme identisch zu <code><a href="/en-US/docs/Web/API/Window.sessionStorage">sessionStorage</a></code>: Im Unterschied zu letzterem besitzen in <code>localStorage</code> gespeicherte Daten kein Verfallsdatum, während sie im <code>sessionStorage</code> mit Ablauf der <code>session</code>, in der Regel beim Schließen des Browsers, gelöscht werden.</p>
 
 <p><code>localStorage</code> und <code>sessionStorage</code> sind nicht nur von der Domain, sondern auch vom Protokoll abhängig, über das die Seite aufgerufen wurde. In http://example.com/ gespeicherte Daten stehen daher unter https://example.com <em>nicht</em> zur Verfügung.</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Window/localStorage
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>Der folgende Ausschnitt greift auf das lokale {{domxref("Storage")}}-Objekt der aktuellen Domain zu und fügt ihm mit {{domxref("Storage.setItem()")}} einen Eintrag hinzu.</p>
+<p>Der folgende Ausschnitt greift auf das lokale {{domxref("Storage")}}-Objekt der aktuellen Domain zu und fügt ihm mit {{domxref("Storage.setItem()")}} einen Eintrag hinzu.</p>
 
 <pre class="brush: js">localStorage.setItem('myCat', 'Tom');</pre>
 
@@ -58,16 +58,14 @@ translation_of: Web/API/Window/localStorage
   <tr>
    <td>{{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}}</td>
    <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+
 
 <p>{{Compat("api.Window.localStorage")}}</p>
 

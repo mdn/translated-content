@@ -3,7 +3,7 @@ title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
 translation_of: Web/API/Document/fullscreenchange_event
 ---
-<p>Das <code>onfullscreenchange</code> Event wird gesendet, wenn der Browser den Vollbildmodus startet oder beendet.</p>
+<p>Das <code>onfullscreenchange</code> Event wird gesendet, wenn der Browser den Vollbildmodus startet oder beendet.</p>
 
 <h2 id="Allgemeine_Information">Allgemeine Information</h2>
 
@@ -62,19 +62,19 @@ translation_of: Web/API/Document/fullscreenchange_event
 document.addEventListener("fullscreenchange", function( event ) {
 
     // Das Event selber hat keine Informationen über darüber, ob sich der Browser
-    // im Vollbildmodus befindet, aber man kann diesen über die Fullscreen API
-    // erhalten
+    // im Vollbildmodus befindet, aber man kann diesen über die Fullscreen API
+    // erhalten
     if ( document.fullscreen ) {
 
         // Das Ziel des Events ist immer das Dokument,
-        // aber man kann das eigentliche Element im Vollbildmodus über die API
-        // abrufen
+        // aber man kann das eigentliche Element im Vollbildmodus über die API
+        // abrufen
         document.fullscreenElement;
     }
 
 });</pre>
 
-<h2 id="Verwandte_Events">Verwandte Events</h2>
+<h2 id="Verwandte_Events">Verwandte Events</h2>
 
 <ul>
  <li><a href="/en-US/docs/Mozilla_event_reference/fullscreenerror"><code>fullscreenerror</code></a></li>

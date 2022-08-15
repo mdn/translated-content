@@ -3,13 +3,13 @@ title: Notification
 slug: Web/API/notification
 translation_of: Web/API/Notification
 ---
-<div>{{APIRef("Web Notifications")}} {{ SeeCompatTable() }}</div>
+<div>{{APIRef("Web Notifications")}} {{ SeeCompatTable() }}</div>
 
 <div>Das Notification interface wird zum konfigurieren und Anzeigen von desktop notifications verwendet.</div>
 
 <h3 id="Permissions" name="Permissions">Permissions</h3>
 
-<p>Wenn Sie notifications in einer offenen web app verwenden, fügen sie die <span style="font-family: consolas,monaco,andale mono,monospace;">desktop-notification permission zu ihrem <a href="/de/docs/Apps/Manifest">manifest</a> file hinzu. </span>Notifications können für jedes permission level, hosted oder darüber verwendet werden.</p>
+<p>Wenn Sie notifications in einer offenen web app verwenden, fügen sie die <span style="font-family: consolas,monaco,andale mono,monospace;">desktop-notification permission zu ihrem <a href="/de/docs/Apps/Manifest">manifest</a> file hinzu. </span>Notifications können für jedes permission level, hosted oder darüber verwendet werden.</p>
 
 <pre class="brush: json"><code><span class="str">"permissions"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
     </span><span class="str">"desktop-notification"</span><span class="pun">:{}</span><span class="pln">
@@ -23,14 +23,14 @@ translation_of: Web/API/Notification
 
 <dl>
  <dt><code>title</code></dt>
- <dd>Titel der innerhalb der Notification angezeigt werden muss.</dd>
+ <dd>Titel der innerhalb der Notification angezeigt werden muss.</dd>
  <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Ein Objekt das optionale Konfigurationsparamter enthält. Es kann die folgenden Einträge enthalten:
+ <dd>Ein Objekt das optionale Konfigurationsparamter enthält. Es kann die folgenden Einträge enthalten:
  <ul>
-  <li><code>dir</code> : Die Ausrichtung des Textes; Verfügbar sind <code>auto</code>, <code>ltr</code>, oder <code>rtl</code>.</li>
-  <li><code>lang</code>:  Spezifiziere die verwendete Sprache. Dieser String muss ein valides <a href="http://tools.ietf.org/html/bcp47">BCP 47 language tag</a> sein.</li>
-  <li><code>body</code>:  Ein String, welcher jeglichen extra Inhalt einer notification beinhaltet.</li>
-  <li><code>tag</code>: Die ID einer gegebene notification, um diese abzurufen, zu löschen, zu ersetzen oder zu löschen. </li>
+  <li><code>dir</code> : Die Ausrichtung des Textes; Verfügbar sind <code>auto</code>, <code>ltr</code>, oder <code>rtl</code>.</li>
+  <li><code>lang</code>:  Spezifiziere die verwendete Sprache. Dieser String muss ein valides <a href="http://tools.ietf.org/html/bcp47">BCP 47 language tag</a> sein.</li>
+  <li><code>body</code>:  Ein String, welcher jeglichen extra Inhalt einer notification beinhaltet.</li>
+  <li><code>tag</code>: Die ID einer gegebene notification, um diese abzurufen, zu löschen, zu ersetzen oder zu löschen. </li>
   <li><code>icon</code>: Die Url für das verwendete Icon in einer notification.</li>
   <li><code>data</code>: Ein Benutzerdefiniertes Datenfeld.</li>
  </ul>
@@ -50,7 +50,7 @@ translation_of: Web/API/Notification
 
 <h3 id="Instance_properties">Instance properties</h3>
 
-<p>Diese Eigenschaften sind nur in Instanzen des Notification-Objekts verfügbar.</p>
+<p>Diese Eigenschaften sind nur in Instanzen des Notification-Objekts verfügbar.</p>
 
 <dl>
  <dt>{{domxref("Notification.title")}} {{readonlyinline}}</dt>
@@ -66,7 +66,7 @@ translation_of: Web/API/Notification
  <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
  <dd>URL des Bildes welches als Icon der Benachrichtgung verwendet wird, wie in den Parametern des Konstruktors spezifiziert wurde</dd>
  <dt>{{domxref("Notification.data")}} {{readonlyinline}}</dt>
- <dd>Returns a structured clone of the notification’s data.</dd>
+ <dd>Returns a structured clone of the notification’s data.</dd>
 </dl>
 
 <h4 id="Event_handlers">Event handlers</h4>
@@ -90,7 +90,7 @@ translation_of: Web/API/Notification
 
 <dl>
  <dt>{{domxref("Notification.requestPermission()")}}</dt>
- <dd>Requests permission from the user to display notifications. This method must be called as the result of a user action (for example, an onclick event), and cannot be used without it.</dd>
+ <dd>Requests permission from the user to display notifications. This method must be called as the result of a user action (for example, an onclick event), and cannot be used without it.</dd>
 </dl>
 
 <h3 id="Instance_methods">Instance methods</h3>
@@ -163,67 +163,7 @@ translation_of: Web/API/Notification
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5 {{ property_prefix("webkit") }} (see notes)<br>
-    22</td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>{{ CompatNo() }}</td>
-   <td>25</td>
-   <td>6 (see notes)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>1.0.1 {{ property_prefix("moz") }} (see notes)<br>
-    1.2</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h3 id="Gecko_notes">Gecko notes</h3>
 

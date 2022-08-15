@@ -50,15 +50,15 @@ console.log(str.endsWith('to be', 19)); // true
 <p>Diese Methode wurde der ECMAScript6-Spezifikation hinzugefügt und könnte noch nicht in allen JavaScript-Implementierungen verfügbar sein. Mithilfe des folgenden Code-Stücks kann die Methode auch bei fehlender Implementierung genutzt werden:</p>
 
 <pre class="brush: js">if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(searchString, position) {
-      var subjectString = this.toString();
-      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position &gt; subjectString.length) {
-        position = subjectString.length;
-      }
-      position -= searchString.length;
-      var lastIndex = subjectString.indexOf(searchString, position);
-      return lastIndex !== -1 &amp;&amp; lastIndex === position;
-  };
+  String.prototype.endsWith = function(searchString, position) {
+      var subjectString = this.toString();
+      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position &gt; subjectString.length) {
+        position = subjectString.length;
+      }
+      position -= searchString.length;
+      var lastIndex = subjectString.indexOf(searchString, position);
+      return lastIndex !== -1 &amp;&amp; lastIndex === position;
+  };
 }
 </pre>
 
@@ -79,64 +79,14 @@ console.log(str.endsWith('to be', 19)); // true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatChrome("41")}}</td>
-   <td>{{CompatGeckoDesktop("17")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatSafari("9")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome("36")}}</td>
-   <td>{{CompatGeckoMobile("17")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

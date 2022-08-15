@@ -1,18 +1,6 @@
 ---
 title: Document.pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
-page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - pip
-translation_of: Web/API/Document/pictureInPictureEnabled
 ---
 {{APIRef("Picture-in-Picture API")}}
 

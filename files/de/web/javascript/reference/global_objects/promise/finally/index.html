@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
 <div>{{JSRef}}</div>
 
-<p>finally () gibt ein {{jsxref ("Promise")}} zurück. Wenn das Promise erfüllt oder abgelehnt wird, wird die angegebene callback-Funktion ausgeführt. Dies stellt eine Möglichkeit für Code bereit, der ausgeführt werden muss, unabhängig davon, ob das Promise erfolgreich erfüllt wurde oder nicht. Auf diese Weise können Sie vermeiden, dass derselbe Code für die beiden Handlern des Promise {{jsxref ("Promise.then", "then ()")}} und {{jsxref ("Promise.catch", "catch ()")}} geschrieben werden muss.</p>
+<p>finally () gibt ein {{jsxref ("Promise")}} zurück. Wenn das Promise erfüllt oder abgelehnt wird, wird die angegebene callback-Funktion ausgeführt. Dies stellt eine Möglichkeit für Code bereit, der ausgeführt werden muss, unabhängig davon, ob das Promise erfolgreich erfüllt wurde oder nicht. Auf diese Weise können Sie vermeiden, dass derselbe Code für die beiden Handlern des Promise {{jsxref ("Promise.then", "then ()")}} und {{jsxref ("Promise.catch", "catch ()")}} geschrieben werden muss.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,7 +37,7 @@ p.finally(function() {
  <li>When creating a function inline, you can pass it once, instead of being forced to either declare it twice, or create a variable for it</li>
  <li>A <code>finally</code> callback will not receive any argument, since there's no reliable means of determining if the promise was fulfilled or rejected. This use case is for precisely when you <em>do not care</em> about the rejection reason, or the fulfillment value, and so there's no need to provide it.</li>
  <li>Unlike <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (which will be resolved with <code>undefined</code>), <code>Promise.resolve(2).finally(() =&gt; {})</code> will be resolved with <code>2</code>.</li>
- <li>Similarly, unlike <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (which will be fulfilled with <code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> will be rejected with <code>3</code>.</li>
+ <li>Similarly, unlike <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (which will be fulfilled with <code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> will be rejected with <code>3</code>.</li>
 </ul>
 
 <div class="note">

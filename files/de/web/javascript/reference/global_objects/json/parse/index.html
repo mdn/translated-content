@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 <div>{{JSRef}}</div>
 
-<p>Die Methode <strong><code>JSON.parse()</code></strong> erzeugt aus einem JSON-formatierten Text ein entsprechendes Javascript-Objekt. Der optionale <strong>reviver</strong>-Parameter kann die Umwandlung im Detail beeinflussen.</p>
+<p>Die Methode <strong><code>JSON.parse()</code></strong> erzeugt aus einem JSON-formatierten Text ein entsprechendes Javascript-Objekt. Der optionale <strong>reviver</strong>-Parameter kann die Umwandlung im Detail beeinflussen.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
 
@@ -53,7 +53,7 @@ JSON.parse('null');            // null
 
 <h3 id="Example:_Using_the_reviver_parameter" name="Example:_Using_the_reviver_parameter">Verwendung des <code>reviver</code>-Parameters</h3>
 
-<p>Wenn <code>reviver</code> spezifiziert ist, wird der vom Parser berechnete Wert vor der Rückgabe Transformiert. Insbesondere der berechnete Wert und alle seine EIgenschaften (beginnend mit dem am tiefsten geschachtelten Eigenschaft bis hin zum originalen Wert selbst) werden separat mit dem <code>reviver</code> Ausgeführt.<span id="result_box" lang="de"><span> Dann wird sie aufgerufen, wobei das Objekt, das die Eigenschaft enthält, als <code>this</code> und der Eigenschaftsname als Zeichenfolge und der Eigenschaftswert als Argumente verarbeitet werden.</span></span> Wenn <code>reviver</code> {{jsxref("undefined")}} zurück gibt (oder keinen Wert zurück gibt, wenn zum Beispiel die Ausführung der Funktion fehlschlägt), wird die Eigenschaft aus dem Ergebnis entfernt. Anderenfalls wird dessen Wert in den Rückgabewert neu definiert.</p>
+<p>Wenn <code>reviver</code> spezifiziert ist, wird der vom Parser berechnete Wert vor der Rückgabe Transformiert. Insbesondere der berechnete Wert und alle seine EIgenschaften (beginnend mit dem am tiefsten geschachtelten Eigenschaft bis hin zum originalen Wert selbst) werden separat mit dem <code>reviver</code> Ausgeführt.<span id="result_box" lang="de"><span> Dann wird sie aufgerufen, wobei das Objekt, das die Eigenschaft enthält, als <code>this</code> und der Eigenschaftsname als Zeichenfolge und der Eigenschaftswert als Argumente verarbeitet werden.</span></span> Wenn <code>reviver</code> {{jsxref("undefined")}} zurück gibt (oder keinen Wert zurück gibt, wenn zum Beispiel die Ausführung der Funktion fehlschlägt), wird die Eigenschaft aus dem Ergebnis entfernt. Anderenfalls wird dessen Wert in den Rückgabewert neu definiert.</p>
 
 <p>Falls <code>reviver</code> nur einige Werte ändert, muss sichergestellt sein, dass die unveränderten Werte auch zurückgegeben werden, ansonsten werden diese Werte aus dem Ergebnis gelöscht.</p>
 
@@ -103,12 +103,12 @@ JSON.parse("{ \"foo\" : 1, }");
   <tr>
    <td>{{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
