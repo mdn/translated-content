@@ -178,6 +178,6 @@ var dv = new Int8Array([1, 2, 3]);
 
 ## Voir aussi
 
-- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés "en/JavaScript typed arrays")
+- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
