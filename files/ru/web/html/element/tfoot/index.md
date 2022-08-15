@@ -11,7 +11,7 @@ _HTML_ элемент подвала таблицы (`<tfoot>`) определя
 
 ## Используемый контекст
 
-| [Content categories](/en/HTML/Content_categories "en/HTML/Content categories") | None.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [Content categories](/en/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержание                                                          | Ноль или более {{ HTMLElement("tr") }} элементов.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Tag omission                                                                   | The start tag is mandatory. The end tag may be omitted if the {{ HTMLElement("tbody") }} element is immediately followed by an, eventually implicitly-defined, {{ HTMLElement("tbody") }}, or if there is no more content in the parent {{ HTMLElement("table") }} element.                                                                                                                                                                                                                                                                                                                                       |
@@ -20,7 +20,7 @@ _HTML_ элемент подвала таблицы (`<tfoot>`) определя
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
 - {{ htmlattrdef("align") }} {{ Deprecated_inline() }} в {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} в {{ HTMLVersionInline("5") }}
   - : Этот атрибут определяет горизонтальное выравнивание содержимого каждой ячейки. Возможные значения:\* left, выравнивание содержимого по левому краю ячейки
@@ -41,7 +41,7 @@ _HTML_ элемент подвала таблицы (`<tfoot>`) определя
     |                                                                                                                                                                                                                                                                  | maroon = "#800000"  |                   | navy = "#000080"   |
     |                                                                                                                                                                                                                                                                  | red = "#FF0000"     |                   | blue = "#0000FF"   |
     |                                                                                                                                                                                                                                                                  | purple = "#800080"  |                   | teal = "#008080"   |
-    |                                                                                                                                                                                                                                                                  | fuchsia = "#FF00FF" |                   | aqua = "#00FFFF"   | > **Примечание:** **Usage note:** Do not use this attribute, as it is non-standard and only implemented some versions of Microsoft Internet Explorer: the {{ HTMLElement("tfoot") }} element should be styled using [CSS](/en/CSS "en/CSS"). To give a similar effect to the **bgcolor** attribute, use the [CSS](/en/CSS "en/CSS") property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements. |
+    |                                                                                                                                                                                                                                                                  | fuchsia = "#FF00FF" |                   | aqua = "#00FFFF"   | > **Примечание:** **Usage note:** Do not use this attribute, as it is non-standard and only implemented some versions of Microsoft Internet Explorer: the {{ HTMLElement("tfoot") }} element should be styled using [CSS](/en/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/en/CSS) property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements. |
 
 <!---->
 
@@ -63,7 +63,7 @@ _HTML_ элемент подвала таблицы (`<tfoot>`) определя
 
 ## DOM интерфейс
 
-Этот элемент реализует интерфейс [`HTMLTableSectionElement`](/en/docs/Web/API/HTMLTableSectionElement "en/DOM/HTMLTableSectionElement").
+Этот элемент реализует интерфейс [`HTMLTableSectionElement`](/en/docs/Web/API/HTMLTableSectionElement).
 
 ## Примеры
 

@@ -77,4 +77,4 @@ form { min-width: 0; }
 ## See also
 
 - {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
-- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}

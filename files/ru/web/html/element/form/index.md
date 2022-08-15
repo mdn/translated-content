@@ -11,15 +11,15 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
 
 ## Контекст Использования
 
-| Категория содержимого  | [Flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content")                                                                                  |
+| Категория содержимого  | [Flow content](/ru/docs/HTML/Content_categories#Flow_content)                                                                                  |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое | [Flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), но не содержащий `<form>` элементов                                             |
+| Разрешённое содержимое | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), но не содержащий `<form>` элементов                                             |
 | Пропуск тега           | Нет. И открывающий и закрывающий тег должны быть.                                                                                                                                     |
 | Нормативный документ   | [HTML5, section 4.10.3](http://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
 
 ## Атрибуты
 
-Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
+Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("accept")}} {{HTMLVersionInline(4)}} {{obsolete_inline}}
   - : Список типов содержимого, разделённых запятой, которые принимает сервер.> **Примечание:** **Примечание об использовании:** Этот атрибут был удалён в HTML5 и его не следует больше использовать. Взамен, используйте {{htmlattrxref("accept", "input")}} атрибут заданного {{HTMLElement("input")}} элемента.
@@ -36,7 +36,7 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
     - `multipart/form-data`: Используйте это значение, если пользуетесь элементом {{HTMLElement("input")}} атрибутом `type` установленным в "file".
     - `text/plain (HTML5)`Это значение может быть переписано атрибутом {{htmlattrxref("formenctype", "button")}} на элементе {{HTMLElement("button")}} или {{HTMLElement("input")}}.
 - {{htmlattrdef("method")}}
-  - : [HTTP](/ru/docs/HTTP "http://www.w3.org/Protocols/rfc2616/rfc2616.html") метод, который браузер использует, для отправки формы. Возможные значения:\* `post`: Соответствует HTTP [POST методу](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; данные из формы включаются в тело формы и посылаются на сервер.
+  - : [HTTP](/ru/docs/HTTP) метод, который браузер использует, для отправки формы. Возможные значения:\* `post`: Соответствует HTTP [POST методу](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; данные из формы включаются в тело формы и посылаются на сервер.
     - `get`: Соответствует [GET методу](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); данные из формы добавляются к URI атрибута `action`, их разделяет '?', и полученный URI посылается на сервер. Используйте этот метод, когда форма содержит только ASCII символы и не имеет побочного эффекта.Это значение может быть переписано атрибутом {{htmlattrxref("formmethod", "button")}} на {{HTMLElement("button")}} или {{HTMLElement("input")}} элементе.
 - {{htmlattrdef("name")}}
   - : Имя формы. В HTML 4 его использование запрещено (`id` следует использовать взамен). Оно должно быть уникальным и не пустым среди всех форм в документе в HTML 5.

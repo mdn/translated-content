@@ -11,7 +11,7 @@ translation_of: Web/CSS/font-size
 
 ## Описание
 
-[CSS](/ru/docs/CSS "CSS") Свойство **`font-size`** определяет размер шрифта. Это свойство также используется для вычисления размера` em`, `ex` и других относительных единиц. Подробнее: {{cssxref("&lt;length&gt;")}}.
+[CSS](/ru/docs/CSS) Свойство **`font-size`** определяет размер шрифта. Это свойство также используется для вычисления размера` em`, `ex` и других относительных единиц. Подробнее: {{cssxref("&lt;length&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/font-size.html")}}
 

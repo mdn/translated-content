@@ -7,11 +7,11 @@ translation_of: Web/CSS/flex
 
 ## Описание
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
+Свойство [CSS](/ru/docs/CSS) **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
 
 {{cssinfo}}
 
-Для более полной информации читайте [Использование flex-контейнеров CSS](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes").
+Для более полной информации читайте [Использование flex-контейнеров CSS](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
 ## Синтаксис
 
@@ -122,4 +122,4 @@ flex.addEventListener("click", function() {
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes "CSS/Using_CSS_flexible_boxes")
+- [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes)

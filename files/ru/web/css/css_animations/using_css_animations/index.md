@@ -391,5 +391,5 @@ function listener(e) {
 ## Смотрите также
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Определение поддержки CSS-анимации](/ru/docs/CSS/CSS_animations/Detecting_CSS_animation_support "en/CSS/CSS animations/Detecting CSS animation support")
+- [Определение поддержки CSS-анимации](/ru/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
 - [Использование CSS-переходов](/ru/docs/Web/Guide/CSS/Using_CSS_transitions)

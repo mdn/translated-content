@@ -11,7 +11,7 @@ translation_of: Web/CSS/animation-fill-mode
 
 ## Описание
 
-[CSS](/en/CSS "CSS") свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
+[CSS](/en/CSS) свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
 
 {{cssinfo}}
 
@@ -112,5 +112,5 @@ animation-fill-mode: both, forwards, none;
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

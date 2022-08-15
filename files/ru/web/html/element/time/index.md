@@ -9,7 +9,7 @@ translation_of: Web/HTML/Element/time
 
 > **Примечание:** **Замечание по применению:** Этот элемент неуместно использовать, когда точная дата не определена, а также при использовании дат ранее введения Григорианского календаря (из-за проблем с работой с такими датами).
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories "HTML/Content_categories") | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
 | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённый контент                                                                        | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                             |
 | Tag omission                                                                               | {{no_tag_omission}}                                                                                                                                                     |
@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/time
 
 ## Атрибуты
 
-Как и все другие элементы HTML, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
+Как и все другие элементы HTML, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("datetime")}}
   - : Этот атрибут специфицирует время и дату и должен быть [допустимой датой с возможным дополнительным указанием времени](https://www.w3.org/TR/html/infrastructure.html#dates-and-times). Если значение элемента не может быть распознано как дата с возможным дополнительным указанием времени, элементу не будет сопоставлен временной срез (timestamp).

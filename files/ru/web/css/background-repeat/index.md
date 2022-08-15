@@ -132,4 +132,4 @@ div {
 
 ## Смотрите также
 
-- [Использование нескольких CSS фонов](/ru/docs/CSS/Using_CSS_multiple_backgrounds "CSS/Using_CSS_multiple_backgrounds")
+- [Использование нескольких CSS фонов](/ru/docs/CSS/Using_CSS_multiple_backgrounds)

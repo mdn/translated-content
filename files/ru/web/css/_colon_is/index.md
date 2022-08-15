@@ -157,7 +157,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 ### Упрощение селекторов разделов
 
-Псевдо-класс `:is()` особенно полезен при работе с [заголовками и разделами](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") HTML5. C тех пор как {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, и {{HTMLElement("nav")}} обычно используют вместе, без `:is()`, стилизовать их, чтобы они соответствовали друг друг, может быть не просто.
+Псевдо-класс `:is()` особенно полезен при работе с [заголовками и разделами](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) HTML5. C тех пор как {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, и {{HTMLElement("nav")}} обычно используют вместе, без `:is()`, стилизовать их, чтобы они соответствовали друг друг, может быть не просто.
 
 К примеру, без `:is()`, стилизовать все {{HTMLElement("h1")}} элементы на разных уровнях может бы очень сложно:
 

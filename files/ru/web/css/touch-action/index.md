@@ -101,4 +101,4 @@ html {
 ## See also
 
 - {{domxref("Pointer_events","Pointer Events")}}
-- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")
+- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)

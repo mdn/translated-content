@@ -7,7 +7,7 @@ translation_of: Web/CSS/background-size
 
 ## Описание
 
-Значение **`background-size`** в [CSS](/ru/docs/CSS "CSS") позволяет задавать размер фонового изображения. Изображение может быть оставлено в исходном размере, растянуто, или подогнано под размеры доступного пространства.
+Значение **`background-size`** в [CSS](/ru/docs/CSS) позволяет задавать размер фонового изображения. Изображение может быть оставлено в исходном размере, растянуто, или подогнано под размеры доступного пространства.
 
 > **Примечание:** **Предупреждение:** Если значение этого свойства не задано в сокращённом свойстве {{cssxref("background")}}, которое применяется к элементу после CSS-свойства `background-size`, то значение этого свойства затем сбрасывается до исходного значения c помощью сокращённого свойства.
 
@@ -121,6 +121,6 @@ background-size: unset;
 
 ## Смотрите также
 
-- [Справочник по CSS](/ru/docs/CSS/CSS_Reference "CSS Reference")
-- [Несколько фонов](/ru/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
-- [Масштабирование фонового изображения](/ru/docs/CSS/Scaling_background_images "CSS/Scaling_background_images")
+- [Справочник по CSS](/ru/docs/CSS/CSS_Reference)
+- [Несколько фонов](/ru/docs/CSS/Multiple_backgrounds)
+- [Масштабирование фонового изображения](/ru/docs/CSS/Scaling_background_images)

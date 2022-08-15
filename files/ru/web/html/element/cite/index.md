@@ -17,16 +17,16 @@ translation_of: Web/HTML/Element/cite
 > - Спецификация W3C утверждает, что ссылка на творческую работу может содержать имя автора, в то время, как WHATWG заявляет, что она не может включать имя человека ни в коем случае.
 > - Используйте атрибут {{htmlattrxref("cite", "blockquote")}} элемента {{HTMLElement("blockquote")}} или элемента {{HTMLElement("q")}} для ссылки на интернет-ресурс источника.
 
-| [Content categories](/ru/docs/HTML/Content_categories "HTML/Content_categories") | [Flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), palpable content. |
+| [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content. |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                                                | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").                                                                                                                         |
+| Permitted content                                                                | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                         |
 | Tag omission                                                                     | {{no_tag_omission}}                                                                                                                                                                                                                  |
-| Permitted parent elements                                                        | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").                                                                                                |
+| Permitted parent elements                                                        | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                |
 | DOM interface                                                                    | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.                                                                 |
 
 ## Атрибуты
 
-Для данного элемента доступны только [глобальные атрибуты](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
+Для данного элемента доступны только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
 ## Пример
 
@@ -38,7 +38,7 @@ More information can be found in <cite>[ISO-0000]</cite>
 
 ## Примечание
 
-To avoid the default italic style from being used for the \<cite> element use the [CSS](/ru/docs/CSS "CSS") {{cssxref("font-style")}} property.
+To avoid the default italic style from being used for the \<cite> element use the [CSS](/ru/docs/CSS) {{cssxref("font-style")}} property.
 
 ## Спецификации
 

@@ -5,11 +5,11 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 ---
 Контекст наложения (stacking context) это концепция трёхмерного расположения HTML-элементов вдоль оси Z по отношению к пользователю, находящемуся перед экраном. HTML-элементы занимают это место по порядку, основанному на атрибутах элемента.
 
-« [CSS](/ru/docs/CSS "CSS") « [Understanding CSS z-index](/ru/docs/CSS/Understanding_z-index "Understanding CSS z-index")
+« [CSS](/ru/docs/CSS) « [Understanding CSS z-index](/ru/docs/CSS/Understanding_z-index)
 
 ## Контекст наложения
 
-В предыдущем примере [Добавляем z-index](/ru/docs/CSS/Understanding_z-index/Adding_z-index "Adding z-index"), порядок отображения определённых DIVs элементов зависел от их z-index значения. Это возникает благодаря тому, что у этих элементов есть специальные свойства, которые заставляют их формировать контекст наполнения ( _stacking context )_.
+В предыдущем примере [Добавляем z-index](/ru/docs/CSS/Understanding_z-index/Adding_z-index), порядок отображения определённых DIVs элементов зависел от их z-index значения. Это возникает благодаря тому, что у этих элементов есть специальные свойства, которые заставляют их формировать контекст наполнения ( _stacking context )_.
 
 Контекст может формироваться в любом месте документа, любым элементом, у которого выполняется одно из следующих условий:
 
@@ -238,9 +238,9 @@ z-index: 3;
 
 ## Смотрите также
 
-- [Stacking without z-index](/ru/docs/CSS/Understanding_z-index/Stacking_without_z-index "CSS/Understanding_z-index/Stacking_without_z-index") : Default stacking rules
-- [Stacking and float](/ru/docs/CSS/Understanding_z-index/Stacking_and_float "CSS/Understanding_z-index/Stacking_and_float") : How floating elements are handled
-- [Adding z-index](/ru/docs/CSS/Understanding_z-index/Adding_z-index "CSS/Understanding_z-index/Adding_z-index") : Using z-index to change default stacking
-- [Stacking context example 1](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_1 "CSS/Understanding_z-index/Stacking_context_example_1") : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_2 "CSS/Understanding_z-index/Stacking_context_example_2") : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_3 "CSS/Understanding_z-index/Stacking_context_example_3") : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/ru/docs/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/ru/docs/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [Adding z-index](/ru/docs/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+- [Stacking context example 1](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level

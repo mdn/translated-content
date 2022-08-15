@@ -123,5 +123,5 @@ div {
 - {{cssxref("background-position-y")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Использование нескольких значений](/ru/docs/Web/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- [Использование нескольких значений](/ru/docs/Web/CSS/Multiple_backgrounds)
 - {{cssxref("transform-origin")}}

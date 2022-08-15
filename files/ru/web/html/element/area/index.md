@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/area
 <!---->
 
 - {{htmlattrdef("hreflang")}} {{HTMLVersionInline("5")}}
-  - : Указывает язык связанного ресурса. Допустимые значения определяются [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt "Tags for Identifying Languages"). Используйте данный атрибут при наличии атрибута **href**.
+  - : Указывает язык связанного ресурса. Допустимые значения определяются [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). Используйте данный атрибут при наличии атрибута **href**.
 
 <!---->
 

@@ -10,7 +10,7 @@ translation_of: Web/CSS/bottom
 ---
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS "CSS") свойство **`bottom`** частично определяет вертикальную позицию позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`bottom`** не применится, если задано `position: static`).
+[CSS](/ru/docs/Web/CSS) свойство **`bottom`** частично определяет вертикальную позицию позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`bottom`** не применится, если задано `position: static`).
 
 {{EmbedInteractiveExample("pages/css/bottom.html")}}
 

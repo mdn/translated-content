@@ -11,7 +11,7 @@ translation_of_original: Web/CSS/margin-new
 ---
 {{CSSRef}}
 
-Свойство **`margin`** [CSS](/ru/CSS "CSS") определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
+Свойство **`margin`** [CSS](/ru/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
 
 ```css
 /* Применяется ко всем четырём сторонам */
@@ -213,5 +213,5 @@ margin: auto;               /* верх и низ: отступ 0 */
 
 ## Смотрите также
 
-- [CSS Box Model](/ru/docs/Web/CSS/box_model "en/CSS/box model")
-- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing "en/CSS/margin collapsing")
+- [CSS Box Model](/ru/docs/Web/CSS/box_model)
+- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)

@@ -130,4 +130,4 @@ max-width: unset;
 ## Смотрите также
 
 - {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}

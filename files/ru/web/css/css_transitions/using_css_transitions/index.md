@@ -956,6 +956,6 @@ p {
 
 ## Смотрите также
 
-- [Нижнее меню](http://techstream.org/Web-Design/Dock-Menu-with-CSS3 "CSS3 Dock Menu using CSS transitions") с использованием CSS переходов
+- [Нижнее меню](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) с использованием CSS переходов
 - Интерфейс {{domxref("TransitionEvent")}} и событие {{event("transitionend")}}.
 - [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

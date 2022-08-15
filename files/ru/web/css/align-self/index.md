@@ -11,7 +11,7 @@ translation_of: Web/CSS/align-self
 
 ## Описание
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`align-self`** выравнивает flex-элементы по текущей flex-линии, переопределяя значение свойства [`align-items`](/en/CSS/align-items "en/CSS/flex-align"). Если у какого-либо flex-элемента **margin** в поперечной оси выставлен в `auto`, то `align-self` игнорируется.
+Свойство [CSS](/ru/docs/CSS) **`align-self`** выравнивает flex-элементы по текущей flex-линии, переопределяя значение свойства [`align-items`](/en/CSS/align-items). Если у какого-либо flex-элемента **margin** в поперечной оси выставлен в `auto`, то `align-self` игнорируется.
 
 {{cssinfo}}
 

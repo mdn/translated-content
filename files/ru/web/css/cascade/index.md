@@ -109,5 +109,5 @@ Note that the declaration defined in the user CSS, though having a greater speci
 
 ## See also
 
-- The very simple [introduction](/ru/docs/CSS/Getting_Started/Cascading_and_inheritance "/en-US/docs/") of cascading in the CSS Tutorial.
+- The very simple [introduction](/ru/docs/CSS/Getting_Started/Cascading_and_inheritance) of cascading in the CSS Tutorial.
 - {{CSS_Key_Concepts()}}
