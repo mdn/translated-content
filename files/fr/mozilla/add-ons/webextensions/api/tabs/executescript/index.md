@@ -78,7 +78,7 @@ Le résultat du script est la dernière instruction évaluée, ce qui est simila
 var foo='my result';foo;
 ```
 
-Ici, le tableau des résultats contiendra la chaîne `"my result"` en tant qu’élément. Les valeurs de résultat doivent être [clonables tructurées](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure). La dernière déclaration peut également être une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), mais cette fonctionnalité n'est pas supportée par la bibliothèque [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript).
+Ici, le tableau des résultats contiendra la chaîne `"my result"` en tant qu’élément. Les valeurs de résultat doivent être [clonables structurées](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure). La dernière déclaration peut également être une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), mais cette fonctionnalité n'est pas supportée par la bibliothèque [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript).
 Si une erreur se produit, la promesse sera rejetée avec un message d’erreur.
 
 ## Exemples

@@ -22,11 +22,11 @@ RangeError: Invalid code point {0} (Chrome)
 
 <h2 id="Was_ist_falsch_gelaufen">Was ist falsch gelaufen?</h2>
 
-<p>Die {{jsxref("String.fromCodePoint()")}} Methode erwartet gültige Codepoint.</p>
+<p>Die {{jsxref("String.fromCodePoint()")}} Methode erwartet gültige Codepoint.</p>
 
-<p>Ein <a href="https://de.wikipedia.org/wiki/Codepoint">Codepoint</a>  ist ein Wert im Unicode Coderaum, der als Integer im Wertebereich zwischen <code>0</code> und <code>0x10FFFF liegt</code>.</p>
+<p>Ein <a href="https://de.wikipedia.org/wiki/Codepoint">Codepoint</a>  ist ein Wert im Unicode Coderaum, der als Integer im Wertebereich zwischen <code>0</code> und <code>0x10FFFF liegt</code>.</p>
 
-<p>Die Verwendung von {{jsxref("NaN")}} , negativen Integern (<code>-1</code>), nicht Integern (<code>3.14</code>) und Werten die größer als <code>0x10FFFF</code> (<code>1114111</code>) sind, werden einen Fehler bei dieser Methode produzieren.</p>
+<p>Die Verwendung von {{jsxref("NaN")}} , negativen Integern (<code>-1</code>), nicht Integern (<code>3.14</code>) und Werten die größer als <code>0x10FFFF</code> (<code>1114111</code>) sind, werden einen Fehler bei dieser Methode produzieren.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 

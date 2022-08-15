@@ -16,10 +16,10 @@ translation_of: Web/JavaScript/Reference/Statements/block
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">[label:] {
-  anweisung_1;
-  anweisung_2;
-  ...
-  anweisung_n;
+  anweisung_1;
+  anweisung_2;
+  ...
+  anweisung_n;
 }
 </pre>
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Statements/block
 
 <h3 id="Variablen_in_Blockgültigkeitsbereichen">Variablen in Blockgültigkeitsbereichen</h3>
 
-<p><strong>Wichtig</strong>: Variablen, die mit {{jsxref("Statements/var", "var")}} deklariert werden, haben keinen Blockgültigkeitsbereich. Sie sind an den Gültigkeitsbereich der umschließenden Funktion oder des Skripts gebunden. Variablen sind folglich auch <span class="dpf_sent" id="dpfsent_4">außerhalb </span>des Blocks verfügbar, in dem sie deklariert wurden. Beispiel:</p>
+<p><strong>Wichtig</strong>: Variablen, die mit {{jsxref("Statements/var", "var")}} deklariert werden, haben keinen Blockgültigkeitsbereich. Sie sind an den Gültigkeitsbereich der umschließenden Funktion oder des Skripts gebunden. Variablen sind folglich auch <span>außerhalb </span>des Blocks verfügbar, in dem sie deklariert wurden. Beispiel:</p>
 
 <pre class="brush: js example-bad">var x = 1;
 {
@@ -54,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Statements/block
 console.log(x); // Ausgabe: 2
 </pre>
 
-<p>Die Ausgabe zeigt <em>2</em>, weil die Anweisungen <code>var x</code> <span class="dpf_sent" id="dpfsent_4">außerhalb </span>des Blocks und innerhalb des Blocks den gleichen Gültigkeitsbereich haben. In anderen Sprachen würde dieser Code <em>1</em> ausgeben.</p>
+<p>Die Ausgabe zeigt <em>2</em>, weil die Anweisungen <code>var x</code> <span>außerhalb </span>des Blocks und innerhalb des Blocks den gleichen Gültigkeitsbereich haben. In anderen Sprachen würde dieser Code <em>1</em> ausgeben.</p>
 
 <p>Um die Gültigkeit auf den Block zu begrenzen, muss {{jsxref("Statements/let", "let")}} eingesetzt werden:</p>
 

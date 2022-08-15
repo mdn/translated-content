@@ -21,10 +21,10 @@ original_slug: Web/JavaScript/Reference/Fehler/Not_defined
 
 <h2 id="Was_ist_falsch_gelaufen">Was ist falsch gelaufen?</h2>
 
-<p>Es gibt eine Referenz auf eine Variable, die nicht existiert. Diese Variable muss deklariert werden; oder man muss sicherstellen, dass sie im Skript zugänglich ist; oder sich im aktuellen {{Glossary("scope")}} befindet.</p>
+<p>Es gibt eine Referenz auf eine Variable, die nicht existiert. Diese Variable muss deklariert werden; oder man muss sicherstellen, dass sie im Skript zugänglich ist; oder sich im aktuellen {{Glossary("scope")}} befindet.</p>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Wenn Sie eine Bibliothek nutzen (wie z.B. jQuery), stellen Sie sicher, dass diese tatsächlich geladen ist, bevor Sie auf dessen Variablen (z. B. "$") zugreifen. Schreiben Sie das {{HTMLElement("script")}} Element, welches die Bibliothek lädt vor den Code, der die Bibliothek verwendet.</p>
+<p><strong>Hinweis:</strong> Wenn Sie eine Bibliothek nutzen (wie z.B. jQuery), stellen Sie sicher, dass diese tatsächlich geladen ist, bevor Sie auf dessen Variablen (z. B. "$") zugreifen. Schreiben Sie das {{HTMLElement("script")}} Element, welches die Bibliothek lädt vor den Code, der die Bibliothek verwendet.</p>
 </div>
 
 <h2 id="Beispiele">Beispiele</h2>
@@ -34,14 +34,14 @@ original_slug: Web/JavaScript/Reference/Fehler/Not_defined
 <pre class="brush: js example-bad">foo.substring(1); // ReferenceError: foo is not defined
 </pre>
 
-<p>Die "foo" Variable ist nirgends deklariert. Die Variable muss ein String sein, damit die Methode {{jsxref("String.prototype.substring()")}} funktioniert.</p>
+<p>Die "foo" Variable ist nirgends deklariert. Die Variable muss ein String sein, damit die Methode {{jsxref("String.prototype.substring()")}} funktioniert.</p>
 
 <pre class="brush: js example-good">var foo = "bar";
 foo.substring(1); // "ar"</pre>
 
 <h3 id="Falscher_Gültigkeitsbereich">Falscher Gültigkeitsbereich</h3>
 
-<p>Eine Variable muss im aktuellem Kontext verfügbar sein. Variablen, die innerhalb einer <a href="/de/docs/Web/JavaScript/Reference/Functions">Funktion</a> definiert sind, können nicht von außerhalb erreicht werden, da diese nur im Gültigkeitsbereich der Funktion existieren.</p>
+<p>Eine Variable muss im aktuellem Kontext verfügbar sein. Variablen, die innerhalb einer <a href="/de/docs/Web/JavaScript/Reference/Functions">Funktion</a> definiert sind, können nicht von außerhalb erreicht werden, da diese nur im Gültigkeitsbereich der Funktion existieren.</p>
 
 <pre class="brush: js example-bad">function numbers() {
   var num1 = 2,
@@ -66,6 +66,6 @@ console.log(numbers()); // 5</pre>
 
 <ul>
  <li>{{Glossary("Scope")}}</li>
- <li><a href="/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Deklarationen">Variablendeklaration im JavaScript Guide</a></li>
- <li><a href="/de/docs/Web/JavaScript/Guide/Funktionen#Scopes_(G%C3%BCltigkeitsbereiche)_von_Funktionen">Methoden Gültigkeitsbereich im JavaScript Guide</a></li>
+ <li><a href="/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Deklarationen">Variablendeklaration im JavaScript Guide</a></li>
+ <li><a href="/de/docs/Web/JavaScript/Guide/Funktionen#Scopes_(G%C3%BCltigkeitsbereiche)_von_Funktionen">Methoden Gültigkeitsbereich im JavaScript Guide</a></li>
 </ul>

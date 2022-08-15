@@ -93,26 +93,26 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 现在我们已经检验了 Google Maps API 示例以及它的运作方式，让我们添加一些更多的功能来展示如何使用 API 的其他特性。
 
-1.  要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。 如果你已经 [克隆了示例存储库](/en-US/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
-2.  接下来，用以下步骤获取你自己的开发者密钥：
+1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。 如果你已经 [克隆了示例存储库](/en-US/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
+2. 接下来，用以下步骤获取你自己的开发者密钥：
 
-    1.  跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
-    2.  如果你还没有新项目，请创建一个新项目。
-    3.  单击“启用 API”按钮。
-    4.  选择*Google Maps JavaScript API*.
-    5.  单击“启用”按钮。
-    6.  单击创建凭据，然后选择 API 密钥。
-    7.  复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
+    1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
+    2. 如果你还没有新项目，请创建一个新项目。
+    3. 单击“启用 API”按钮。
+    4. 选择*Google Maps JavaScript API*.
+    5. 单击“启用”按钮。
+    6. 单击创建凭据，然后选择 API 密钥。
+    7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
 
     > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——[联系我们](/en-US/docs/Learn#Contact_us)。
 
-3.  打开你的 Google Maps 起始文件，找到`INSERT-YOUR-API-KEY-HERE`字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。
+3. 打开你的 Google Maps 起始文件，找到`INSERT-YOUR-API-KEY-HERE`字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。
 
 ### 添加自定义标记
 
 添加一个标记在地图上 (icon) 在某种程度上是很容易的，你只需要创建一个新的标记使用 google.maps.Marker() 构造函数，传递给它一个包含位置显示标记的选择对象 (如 LatLng 对象),和 Map 对象来显示它。
 
-1.  在 `var map ...` 行下面添加下列代码：
+1. 在 `var map ...` 行下面添加下列代码：
 
     ```js
     var marker = new google.maps.Marker({
@@ -123,7 +123,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
     现在如果你刷新你的页面，你会看到地图中间弹出了一个小小的漂亮标记。这很酷，但是这并不是一个定制的标记图标 — 它使用了默认的标记图标。
 
-2.  如果要使用定制化的图标，我们需要在创建标记时通过 URL 来明确说明。首先，在刚才添加的代码块之后添加下面的代码：
+2. 如果要使用定制化的图标，我们需要在创建标记时通过 URL 来明确说明。首先，在刚才添加的代码块之后添加下面的代码：
 
     ```js
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
@@ -131,7 +131,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
     这定义了所有 Google Maps 官方图标存储的 URL（如果你想的话你也可以使用你自己的图标存储位置）。
 
-3.  图标的位置应当在选项对象的`icon` 属性中说明。更新 Constructor 并添加 icon 属性，如下：
+3. 图标的位置应当在选项对象的`icon` 属性中说明。更新 Constructor 并添加 icon 属性，如下：
 
     ```js
     var marker = new google.maps.Marker({
@@ -151,13 +151,13 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 Google 地图的另一个常见用例是在点击其名称或标记时显示有关某个地点的更多信息（弹出式广告在 Google Maps API 中称为信息窗口）。这也很容易实现，所以让我们来看看它。
 
-1.  首先，您需要指定一个包含 HTML 的 JavaScript 字符串，该字符串将定义弹出窗口的内容。这将由 API 注入弹出窗口，并且可以包含您想要的任何内容。在`google.maps.Marker()`构造函数定义下面添加以下行：
+1. 首先，您需要指定一个包含 HTML 的 JavaScript 字符串，该字符串将定义弹出窗口的内容。这将由 API 注入弹出窗口，并且可以包含您想要的任何内容。在`google.maps.Marker()`构造函数定义下面添加以下行：
 
     ```js
     var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
     ```
 
-2.  然后，你需要使用`google.maps.InfoWindow()` 构造器，创建一个新的 info window object。在之前的代码下面，添加以下代码：
+2. 然后，你需要使用`google.maps.InfoWindow()` 构造器，创建一个新的 info window object。在之前的代码下面，添加以下代码：
 
     ```js
     var infowindow = new google.maps.InfoWindow({
@@ -167,7 +167,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
     还有其他可用的属性 (查看 [Info Windows](https://developers.google.com/maps/documentation/javascript/infowindows)), 但是在这里我们只具体说明指向内容源的`content` 属性。
 
-3.  最后，为了在单击标记 (marker) 时显示弹出窗口，我们使用了一个简单的点击事件处理器。在`google.maps.InfoWindow()`构造器代码下面，添加以下代码：
+3. 最后，为了在单击标记 (marker) 时显示弹出窗口，我们使用了一个简单的点击事件处理器。在`google.maps.InfoWindow()`构造器代码下面，添加以下代码：
 
     ```js
     marker.addListener('click', function() {
@@ -177,15 +177,15 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
     在函数中，我们只需调用 infowindow 的 `open()` 函数，该函数将要显示它的地图和希望它显示在旁边的标记作为参数。
 
-4.  现在尝试重新加载示例，然后单击标记！
+4. 现在尝试重新加载示例，然后单击标记！
 
 ### Controlling what map controls are displayed
 
 在原始 `google.maps.Map()`构造函数中，将看到 `disableDefaultUI: true` 。这将禁用您通常在 Google 地图上获得的所有标准 UI 控件。
 
-1.  将其值设置为 `false` （或完全删除此属性），重新加载示例，将看到地图缩放按钮、scale indicator 等等。
-2.  现在撤销上一次更改。
-3.  通过使用指定单个 UI 功能的其他属性，可以更精细地显示或隐藏控件。尝试在 `disableDefaultUI: true` 的下面添加代码（请记住在 `disableDefaultUI: true` 之后输入逗号，否则将收到错误）：
+1. 将其值设置为 `false` （或完全删除此属性），重新加载示例，将看到地图缩放按钮、scale indicator 等等。
+2. 现在撤销上一次更改。
+3. 通过使用指定单个 UI 功能的其他属性，可以更精细地显示或隐藏控件。尝试在 `disableDefaultUI: true` 的下面添加代码（请记住在 `disableDefaultUI: true` 之后输入逗号，否则将收到错误）：
 
     ```js
     zoomControl: true,
@@ -193,7 +193,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
     scaleControl: true,
     ```
 
-4.  现在尝试重新加载示例以查看这些属性的效果。您可以在 [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions)找到更多属性。
+4. 现在尝试重新加载示例以查看这些属性的效果。您可以在 [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions)找到更多属性。
 
 就是现在 - 看看 [Google Maps APIs documentation](https://developers.google.com/maps/documentation/javascript/)，发现更多乐趣！
 
@@ -213,9 +213,9 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 出于安全性和问责制的原因，大多数 API 都要求您使用某种开发人员密钥。要注册 NYTimes API 密钥，您需要访问 <https://developer.nytimes.com/signup>。
 
-1.  申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击“创建 (Create)”)
-2.  从结果页面获取 API。
-3.  现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/en-US/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
+1. 申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击“创建 (Create)”)
+2. 从结果页面获取 API。
+3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/en-US/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
@@ -225,7 +225,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 首先，建立 API 和本地应用的连接。对于这个 API，每次向服务器对应的 URL 发起 get 请求，都需要把 API key 作为 get 请求的参数。
 
-1.  在代码中找到下面这行：
+1. 在代码中找到下面这行：
 
     ```js
     var key = 'INSERT-YOUR-API-KEY-HERE';
@@ -233,13 +233,13 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
     把 `INSERT-YOUR-API-KEY-HERE` 替换为在上一节中获得的 API key.
 
-2.  添加下面这行代码到 JavaScript 代码中。添加到注释 "`// Event listeners to control the functionality`" 的下面。当表单提交时 (按钮按下时) 运行这个函数 `submitSearch()` .
+2. 添加下面这行代码到 JavaScript 代码中。添加到注释 "`// Event listeners to control the functionality`" 的下面。当表单提交时 (按钮按下时) 运行这个函数 `submitSearch()` .
 
     ```js
     searchForm.addEventListener('submit', submitSearch);
     ```
 
-3.  添加 `submitSearch()` 和 `fetchResults()` 函数如下：
+3. 添加 `submitSearch()` 和 `fetchResults()` 函数如下：
 
     ```plain
     function submitSearch(e) {
@@ -384,14 +384,14 @@ function displayResults(json) {
 
 根据这个特性就可以轻松实现一个简单的翻页函数。
 
-1.  下面的代码中，在 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 函数中添加这 2 个新事件，即把 `nextPage()` 和 `previousPage()` 函数链接到相应的按键点击事件上：
+1. 下面的代码中，在 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 函数中添加这 2 个新事件，即把 `nextPage()` 和 `previousPage()` 函数链接到相应的按键点击事件上：
 
     ```js
     nextBtn.addEventListener('click', nextPage);
     previousBtn.addEventListener('click', previousPage);
     ```
 
-2.  在上边代码的基础上，定义这 2 个函数 — 添加下面代码：
+2. 在上边代码的基础上，定义这 2 个函数 — 添加下面代码：
 
     ```js
     function nextPage(e) {

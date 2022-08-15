@@ -44149,15 +44149,6 @@
       "charlie"
     ]
   },
-  "Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-23T22:52:10.546Z",
-    "contributors": [
-      "Kylexii",
-      "sunxiang",
-      "ziyunfei",
-      "lunix01"
-    ]
-  },
   "Web/SVG/SVG_animation_with_SMIL": {
     "modified": "2019-03-23T22:46:05.864Z",
     "contributors": [
@@ -46091,12 +46082,6 @@
       "qianzhangcheng"
     ]
   },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2020-10-07T05:07:53.958Z",
-    "contributors": [
-      "phone-burner"
-    ]
-  },
   "conflicting/Web/CSS": {
     "modified": "2019-03-23T22:29:45.280Z",
     "contributors": [
@@ -46320,13 +46305,6 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/HTML/Element/input/datetime-local": {
-    "modified": "2019-07-13T11:00:17.487Z",
-    "contributors": [
-      "853419196",
-      "wizardforcel"
-    ]
-  },
   "conflicting/Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-24T00:17:27.134Z",
     "contributors": [
@@ -46441,15 +46419,6 @@
       "imnodb",
       "codert",
       "Vincent.Yu"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
-    "modified": "2020-10-15T21:21:06.880Z",
-    "contributors": [
-      "fscholz",
-      "badfl",
-      "teoli",
-      "ziyunfei"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {

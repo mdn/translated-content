@@ -33,8 +33,8 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 讓我們從剛剛的猜數字遊戲開始——在這個版本中，我們將故意引入一些錯誤以便從中學習。前往 Github 下載一份[number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)（或運行線上版 [running live here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)）。
 
-1.  首先，在編輯器與瀏覽器分別開啟你剛下載檔案。
-2.  試著玩遊戲——你會注意到當你按下按鈕「Submit guess」時，它沒有任何反應！
+1. 首先，在編輯器與瀏覽器分別開啟你剛下載檔案。
+2. 試著玩遊戲——你會注意到當你按下按鈕「Submit guess」時，它沒有任何反應！
 
 > **備註：** 你也許是想修復你自己寫的遊戲中的錯誤！這是件好事，但我們還是建議你在學習這篇文章時先使用我們的版本，這樣你才可以學到我們接下來要教的技巧。在這之後再回去修正你自己的遊戲也不遲！
 
@@ -44,8 +44,8 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 在前篇文章中我們讓你在[開發者工具 JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
 
-1.  切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
-2.  這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
+1. 切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
+2. 這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
 
     - 一個紅色的「X」代表這是一個錯誤訊息。
     - 一條錯誤訊息提示你什麼東西出錯了：「TypeError: guessSubmit.addeventListener is not a function（TypeError: guessSubmit.addeventListener 並不是一個函式）」
@@ -53,40 +53,40 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
     - 出錯的 JavaScript 檔案名稱，連結連向開發者工具的除錯器。點下這個連結，你就能看到出錯的那行程式被高亮顯示出來。
     - 在該 JavaScript 檔案中錯誤的行號，還有錯誤發生在該行第幾個字元。在這個例子中，是第 86 行的第 3 個字元。
 
-3.  如果我們在編輯器中檢視第 86 行，我們會看到：
+3. 如果我們在編輯器中檢視第 86 行，我們會看到：
 
     ```js
     guessSubmit.addeventListener('click', checkGuess);
     ```
 
-4.  主控台提示的錯誤訊息寫著「guessSubmit.addeventListener is not a function（guessSubmit.addeventListener 並不是一個函式）」，所以我們大概是哪裡拼錯字了。如果你並不確定一個函式的正確名稱如何拼寫，打開 MDN 確認看看是個不錯的選擇。最佳做法是在你喜歡的搜尋引擎搜尋「mdn*關鍵字*」。為了節省時間，這裡提供你一個捷徑：[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)。
-5.  回來看看這個頁面，我們明顯是把函式名稱給拼錯了！記住，JavaScript 是會區分大小寫的，所以任何些微的拼寫錯誤甚至是大小寫錯誤都會造成錯誤發生。把`addeventListener`改成`addEventListener`問題就解決了。現在將你的程式碼修正吧。
+4. 主控台提示的錯誤訊息寫著「guessSubmit.addeventListener is not a function（guessSubmit.addeventListener 並不是一個函式）」，所以我們大概是哪裡拼錯字了。如果你並不確定一個函式的正確名稱如何拼寫，打開 MDN 確認看看是個不錯的選擇。最佳做法是在你喜歡的搜尋引擎搜尋「mdn*關鍵字*」。為了節省時間，這裡提供你一個捷徑：[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)。
+5. 回來看看這個頁面，我們明顯是把函式名稱給拼錯了！記住，JavaScript 是會區分大小寫的，所以任何些微的拼寫錯誤甚至是大小寫錯誤都會造成錯誤發生。把`addeventListener`改成`addEventListener`問題就解決了。現在將你的程式碼修正吧。
 
 > **備註：** 看看這個[TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)連結來了解更多有關這類錯誤的資訊。
 
 ### 語法錯誤：第二回合
 
-1.  將你的頁面存檔並重整，你現在應該會看到剛剛的錯誤消失了。
-2.  現在試著輸入一個猜測並按下 Submit guess 按鈕，你會發現...另一個錯誤！![](variable-is-null.png)
-3.  這次的錯誤是「TypeError: lowOrHi is null（TypeError: lowOrHi 為 null）」，在第 78 行的位置。
+1. 將你的頁面存檔並重整，你現在應該會看到剛剛的錯誤消失了。
+2. 現在試著輸入一個猜測並按下 Submit guess 按鈕，你會發現...另一個錯誤！![](variable-is-null.png)
+3. 這次的錯誤是「TypeError: lowOrHi is null（TypeError: lowOrHi 為 null）」，在第 78 行的位置。
 
     > **備註：** [`Null`](/zh-TW/docs/Glossary/Null)是一個特別的值，代表著「空」、「什麼都沒有」。`lowOrHi`被宣告為一個變數，但並沒有被賦予任何有意義的值——他既沒有變數型態，也沒有值。
 
     > **備註：** 這個錯誤並沒有在頁面載入完成後就發生，因為這個錯誤發生在一個函式中（在`checkGuess() { ... }`區塊中）。在之後詳細介紹函式的文章中，你會學到在函式中的程式碼與在函式外的程式碼其實是執行在不同範疇中的。在我們的這個情況裡，有錯誤的程式碼在`checkGuess()`在 86 行被執行前都並沒有執行，也因此錯誤並沒有在頁面一載入就發生。
 
-4.  看看第 78 行，你會看到：
+4. 看看第 78 行，你會看到：
 
     ```js
     lowOrHi.textContent = 'Last guess was too high!';
     ```
 
-5.  這行試著將`lowOrHi`的`textContent`屬性設為一個字串。但是這行沒有執行成功，因為`lowOrHi`並沒有存著它應該要存著的值。讓我們來看看為什麼——試試在程式碼中搜尋其他`lowOrHi`有出現的地方。在第 48 行你會看到：
+5. 這行試著將`lowOrHi`的`textContent`屬性設為一個字串。但是這行沒有執行成功，因為`lowOrHi`並沒有存著它應該要存著的值。讓我們來看看為什麼——試試在程式碼中搜尋其他`lowOrHi`有出現的地方。在第 48 行你會看到：
 
     ```js
     var lowOrHi = document.querySelector('lowOrHi');
     ```
 
-6.  這行程式碼試著將一個 HTML 元素的參照存起來。讓我們檢查一下在這行程式碼執行後，變數中的值是否為`null`。在第 49 行加上：
+6. 這行程式碼試著將一個 HTML 元素的參照存起來。讓我們檢查一下在這行程式碼執行後，變數中的值是否為`null`。在第 49 行加上：
 
     ```js
     console.log(lowOrHi);
@@ -94,46 +94,46 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
     > **備註：** [`console.log()`](/en-US/docs/Web/API/console/log)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
 
-7.  存檔並重整，你應該會在主控台中看到`console.log()`輸出的結果。![](console-log-output.png)在這個時間點，`lowOrHi`的值是`null`。所以很明顯的，第 48 行一定出了什麼問題。
-8.  讓我們思考一下發生了什麼問題。第 48 行呼叫了 [`document.querySelector()`](/zh-TW/docs/Web/API/Document/querySelector) 方法來透過 CSS 選擇器取得一個 HTML 元素參照。打開我們的網頁看看我們想要取得的段落元素：
+7. 存檔並重整，你應該會在主控台中看到`console.log()`輸出的結果。![](console-log-output.png)在這個時間點，`lowOrHi`的值是`null`。所以很明顯的，第 48 行一定出了什麼問題。
+8. 讓我們思考一下發生了什麼問題。第 48 行呼叫了 [`document.querySelector()`](/zh-TW/docs/Web/API/Document/querySelector) 方法來透過 CSS 選擇器取得一個 HTML 元素參照。打開我們的網頁看看我們想要取得的段落元素：
 
     ```js
     <p class="lowOrHi"></p>
     ```
 
-9.  所以我們需要的是一個開頭是小數點(.)的 class 選擇器，但傳進第 48 行`querySelector()`方法的選擇器並沒有開頭的小數點。這也許就是問題所在了！試著將第 48 行的`lowOrHi`改成`.lowOrHi`。
+9. 所以我們需要的是一個開頭是小數點(.)的 class 選擇器，但傳進第 48 行`querySelector()`方法的選擇器並沒有開頭的小數點。這也許就是問題所在了！試著將第 48 行的`lowOrHi`改成`.lowOrHi`。
 10. 再次存檔並重整，你的`console.log()`現在應該會輸出我們想要的`<p>`元素了。呼！又修好了另一個錯誤！你現在可以把你的`console.log()`那行移除了，或是你想要留著之後查看——取決於你。
 
 > **備註：** 看看這個[TypeError: "x" is (not) "y"](/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_type) 連結來了解更多有關這類錯誤的資訊。
 
 ### 語法錯誤：第三回合
 
-1.  現在如果你試著再次玩這個遊戲應該會相當順利，直到該讓遊戲結束的時機點才會發生錯誤：無論是猜對還是 10 次用完。
-2.  此時 console 提供錯誤訊息跟一開始一樣：「TypeError: resetButton.addeventListener is not a function!」 然而此次錯誤來自第 94 行。查看第 94 行後，我們可以輕易發現依舊是屬性大小寫問題，一樣把`addeventListener`改成`.addEventListener`就沒問題了。
+1. 現在如果你試著再次玩這個遊戲應該會相當順利，直到該讓遊戲結束的時機點才會發生錯誤：無論是猜對還是 10 次用完。
+2. 此時 console 提供錯誤訊息跟一開始一樣：「TypeError: resetButton.addeventListener is not a function!」 然而此次錯誤來自第 94 行。查看第 94 行後，我們可以輕易發現依舊是屬性大小寫問題，一樣把`addeventListener`改成`.addEventListener`就沒問題了。
 
 ## 邏輯錯誤
 
 到這邊為止遊戲應該可以進行得很順利，然而玩幾次下來無疑地你會發現「隨機」數字總是 0 或 1，這可不是我們想要的！
 
-1.  搜尋位於 44 行的變數`randomNumber`，其內容是設定遊戲一開始的隨機數字：
+1. 搜尋位於 44 行的變數`randomNumber`，其內容是設定遊戲一開始的隨機數字：
 
     ```js
     var randomNumber = Math.floor(Math.random()) + 1;
     ```
 
-2.  另一個開始新回合時產生隨機數字的變數則在 113 行左右：
+2. 另一個開始新回合時產生隨機數字的變數則在 113 行左右：
 
     ```js
     randomNumber = Math.floor(Math.random()) + 1;
     ```
 
-3.  為了測試問題是否出在這兩段程式碼，我們需要再次邀請`console.log()` 好朋友，將之分別放到 44、113 行的程式碼下一行：
+3. 為了測試問題是否出在這兩段程式碼，我們需要再次邀請`console.log()` 好朋友，將之分別放到 44、113 行的程式碼下一行：
 
     ```js
     console.log(randomNumber);
     ```
 
-4.  儲存程式碼並更新頁面，然後再試玩幾次，你會看到`randomNumber` 在 console 中總是等於 1，這就是問題所在。
+4. 儲存程式碼並更新頁面，然後再試玩幾次，你會看到`randomNumber` 在 console 中總是等於 1，這就是問題所在。
 
 ### 修正小錯誤
 

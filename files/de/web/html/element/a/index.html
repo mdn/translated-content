@@ -36,7 +36,7 @@ translation_of: Web/HTML/Element/a
   </tr>
   <tr>
    <th scope="row">Erlaubte ARIA-Rollen</th>
-   <td>{{ARIARole("button")}}, {{ARIARole("checkbox")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("option")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}, {{ARIARole("treeitem")}}</td>
+   <td>{{ARIARole("button")}}, {{ARIARole("checkbox")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("option")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}, {{ARIARole("treeitem")}}</td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>
@@ -47,13 +47,13 @@ translation_of: Web/HTML/Element/a
 
 <h2 id="Attribute">Attribute</h2>
 
-<p><span style="line-height: 21px;">Dieses  Element besitzt die </span><a href="https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute" style="line-height: 21px;" title="HTML/Global attributes">globalen Attribute</a><span style="line-height: 21px;">.</span></p>
+<p><span style="line-height: 21px;">Dieses  Element besitzt die </span><a href="https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute" style="line-height: 21px;" title="HTML/Global attributes">globalen Attribute</a><span style="line-height: 21px;">.</span></p>
 
 <dl>
  <dt>{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Dieses Attribut zeigt, dass der Autor möchte, dass der Hyperlink verwendet wird, um eine Datei herunterzuladen. Also soll der Browser, wenn der Benutzer auf den Link klickt, diesen fragen, wo die Datei lokal gespeichert werden soll. Falls dem Attribut ein Wert zugewiesen ist, wird dieser Wert als Dateiname zum Abspeichern vorgeschlagen (der Benutzer kann diesen Namen natürlich ändern). Es gibt keine Einschränkungen für erlaubte Werte (obgleich <code>/</code> und <code>\</code> in Unterstriche konvertiert werden, um Verwechslungen mit Dateipfaden zu vermeiden). Dennoch sollten Sie beachten, dass die meisten Dateisysteme Einschränkungen bezüglich der unterstützten Interpunktion in Dateinamen haben, sowie die Browser die Dateinamen anpassen könnten.
  <div class="note">
- <p><strong>Hinweis:</strong></p>
+ <strong>Hinweis:</strong>
 
  <ul>
   <li>Dies kann mit <a href="/de/docs/Web/API/URL.createObjectURL" title="/en-US/docs/Web/API/URL.createObjectURL"><code>blob:</code>-URLs</a> und <code>data:</code>-URLs verwendet werden, um es für Benutzer leichter zu machen, Inhalte herunterzuladen, die durch JavaScript generiert wurden (z. B. ein Bild, welches online über eine Zeichen-Anwendung erstellt wurde).</li>
@@ -72,8 +72,6 @@ translation_of: Web/HTML/Element/a
  <dt>{{htmlattrdef("media")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Dieses Attribut legt das Medium fest, zu welchem die verlinkte Seite gehört. Der Wert muss ein <a href="/de/docs/CSS/Media_queries" title="CSS/Media queries">Media Query</a> sein. Das Attribut ist sinnvoll, wenn auf externe Stylesheets verlinkt wird, während dem Browser erlaubt wird, das passende für das Gerät auszuwählen.
  <div class="note">
- <p><strong>Verwendungshinweis:</strong></p>
-
  <ul>
   <li>In HTML 4 ist nur eine einfache durch Leerzeichen getrennte Liste von <a href="/de/docs/CSS/@media" title="https://developer.mozilla.org/en-US/docs/CSS/@media">Media Types und Media Groups</a> definiert worden und als Werte für dieses Attribut erlaubt, z. B. <code>print</code>, <code>screen</code>, <code>aural</code>, <code>braille</code>, … HTML 5 hat dies auf beliebige <a href="/de/docs/CSS/Media_queries" title="CSS/Media queries">Media Queries</a> erweitert, die eine Obermenge der erlaubten Werte von HTML 4 sind.</li>
   <li>Browser, welche die <a href="/de/docs/CSS/Media_queries" title="CSS/Media queries">CSS3 Media Queries</a> nicht unterstützen, werden nicht notwendigerweise den passenden Link erkennen. Vergessen Sie also nicht Fallback-Links auf die beschränkten Werte von HTML 4 zu definieren.</li>
@@ -104,7 +102,7 @@ translation_of: Web/HTML/Element/a
  <dt>{{htmlattrdef("datafld")}} {{Non-standard_inline}}</dt>
  <dd>Dieses Attribut legt den Spaltennamen des Datenquellenobjekts fest, das die Daten zur Verfügung stellt, die mit diesem Element verknüpft sind.
  <div class="note">
- <p><strong><strong>Verwendungshinweis</strong>:</strong> Dieses Attribut ist nicht standardisiert und <strong>s<strong>ollte nicht verwendet werden</strong></strong>. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie <a href="/de/docs/nsIXMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a>, um die Seite dynamisch zu verändern.</p>
+ <p><strong>Hinweis:</strong> Dieses Attribut ist nicht standardisiert und <strong>s<strong>ollte nicht verwendet werden</strong></strong>. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie <a href="/de/docs/nsIXMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a>, um die Seite dynamisch zu verändern.</p>
  </div>
 
  <table class="fullwidth-table">
@@ -132,7 +130,7 @@ translation_of: Web/HTML/Element/a
  <dt>{{htmlattrdef("datasrc")}} {{Non-standard_inline}}</dt>
  <dd>Dieses Attribut zeigt die ID des Datenquellenobjekts an, das die Daten zur Verfügung stellt, die mit diesem Element verknüpft sind.
  <div class="note">
- <p><strong><strong>Verwendungshinweis</strong>:</strong> Dieses Attribut ist nicht standardisiert und <strong>s<strong>ollte nicht verwendet werden</strong></strong>. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie <a href="/de/docs/nsIXMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a>, um die Seite dynamisch zu verändern.</p>
+ <p><strong>Verwendungshinweis:</strong> Dieses Attribut ist nicht standardisiert und <strong>s<strong>ollte nicht verwendet werden</strong></strong>. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie <a href="/de/docs/nsIXMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a>, um die Seite dynamisch zu verändern.</p>
  </div>
 
  <table class="fullwidth-table">
@@ -245,102 +243,24 @@ document.<span style="color: #660066;">body</span>.<span style="color: #660066;"
   <tr>
    <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-a-element', '&lt;a&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-a-element', '&lt;a&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.2', '&lt;a&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>href="#top"</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("10.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{htmlattrxref("download","a")}}</td>
-   <td>14</td>
-   <td>{{CompatGeckoDesktop("20.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>href="#top"</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("10.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{htmlattrxref("download","a")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("20.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Hinweise">Hinweise</h2>
 

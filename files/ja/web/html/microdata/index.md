@@ -58,7 +58,7 @@ Google、Microsoft、Yahoo! のような主要な検索エンジンの管理者�
 
 [itemscope](/ja/docs/Web/HTML/Global_attributes/itemscope) – itemscope は、ブロックに含まれる HTML が特定のアイテムであることを記述するために [itemtype](/ja/docs/Web/HTML/Global_attributes/itemtype) と共に (通常) 動作します。 itemscope はアイテムを作成し、アイテムに関連付けられる itemtype の範囲を定義します。 itemtype は、アイテムとアイテムのプロパティのコンテキストを説明する [schema.org](https://schema.org/) のような) 語彙の妥当なURLとなります。
 
-[itemtype ](/ja/docs/Web/HTML/Global_attributes/itemtype)– データ構造で itemprop の語彙 (アイテムのプロパティ) を定義するために使用される語彙の URL を指定します。[itemscope ](/ja/docs/Web/HTML/Global_attributes/itemscope) は、 itemtype によって設定される語彙がアクティブとなるデータ構造の範囲を設定するために使用されます。
+[itemtype](/ja/docs/Web/HTML/Global_attributes/itemtype) – データ構造で itemprop の語彙 (アイテムのプロパティ) を定義するために使用される語彙の URL を指定します。[itemscope](/ja/docs/Web/HTML/Global_attributes/itemscope) – は、 itemtype によって設定される語彙がアクティブとなるデータ構造の範囲を設定するために使用されます。
 
 ## 例
 

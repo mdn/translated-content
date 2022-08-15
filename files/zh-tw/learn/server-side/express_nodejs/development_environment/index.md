@@ -66,12 +66,12 @@ Node 有許多[版本](https://nodejs.org/en/blog/release/)，更新的版本代
 
 直接使用安裝檔吧！
 
-1.  下載需要的安裝檔：
+1. 下載需要的安裝檔：
 
-    1.  開啟 <https://nodejs.org/en/>
-    2.  對於大部分的使用者來說，直接下載 LTS 版本
+    1. 開啟 <https://nodejs.org/en/>
+    2. 對於大部分的使用者來說，直接下載 LTS 版本
 
-2.  下載完成後雙擊安裝檔，並照著安裝流程繼續。
+2. 下載完成後雙擊安裝檔，並照著安裝流程繼續。
 
 ### Ubuntu 16.04
 
@@ -102,7 +102,7 @@ NPM 應該會隨著 Node 一起安裝，可以用相同的方法進行測試:
 
 接著用稍為令人興奮的方法來測試吧！讓我們創件一個非常基本的『純 Node』伺服器，當你開啟正確的網頁時它會在瀏覽器上顯示"Hello World"
 
-1.  複製以下的文字到名為**hellonode.js**的檔案中，目前我們只用到 Node 而已。
+1. 複製以下的文字到名為**hellonode.js**的檔案中，目前我們只用到 Node 而已。
 
     ```js
     //載入HTTP模組
@@ -124,15 +124,15 @@ NPM 應該會隨著 Node 一起安裝，可以用相同的方法進行測試:
 
     這段程式載入『http』模組，並創建一個伺服器 (`createServer()`，並在 8000 埠上監聽 HTTP requests。 The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this simply returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
 
-2.  > **備註：** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
-3.  Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
+2. > **備註：** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
+3. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
     ```bash
     >node hellonode.js
     Server running at http://127.0.0.1:8000/
     ```
 
-4.  Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World".
+4. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World".
 
 ## Using NPM
 
@@ -148,14 +148,14 @@ The following steps show how you can use NPM to download a package, save it into
 
 > **備註：** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the _Express Application Generator_. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.
 
-1.  First create a directory for your new application and navigate into it:
+1. First create a directory for your new application and navigate into it:
 
     ```bash
     mkdir myapp
     cd myapp
     ```
 
-2.  Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
+2. Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
 
     ```bash
     npm init
@@ -177,7 +177,7 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-3.  Now install the _Express_ library in the **myapp** directory. The package will automatically be saved to the dependencies list in your **package.json** file.
+3. Now install the _Express_ library in the **myapp** directory. The package will automatically be saved to the dependencies list in your **package.json** file.
 
     ```bash
     npm install express
@@ -202,7 +202,7 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-4.  To use the library you call the `require()` function as shown below.
+4. To use the library you call the `require()` function as shown below.
 
     ```plain
     var express = require('express')
@@ -221,14 +221,14 @@ The following steps show how you can use NPM to download a package, save it into
 
     Create a file named **index.js** in the root of the "myapp" application directory and give it the contents shown above.
 
-5.  You can start the server by calling node with the script in your command prompt:
+5. You can start the server by calling node with the script in your command prompt:
 
     ```bash
     >node index.js
     Example app listening on port 8000
     ```
 
-6.  Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World!".
+6. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World!".
 
 ### Development dependencies
 

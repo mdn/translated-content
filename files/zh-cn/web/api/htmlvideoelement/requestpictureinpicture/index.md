@@ -1,19 +1,6 @@
 ---
 title: HTMLVideoElement.requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
-tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Method
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
-browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
 {{ APIRef("HTML DOM") }}
 

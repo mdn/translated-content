@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 <p>JavaScript mag für Entwickler, die in klassenbasierten Sprachen (wie etwa Java oder C++) Erfahrung haben, etwas verwirrend erscheinen. Der Grund dafür ist, dass JavaScript per se keine <code><strong>class</strong></code>-Implementierung bereitstellt (das <code><strong>class</strong></code>-Schlüsselwort wurde erst mit ES2015 eingeführt. Es ist jedoch syntaktischer Zucker, JavaScript bleibt Prototyp-basiert).</p>
 
-<p class="brush: js">Wenn es um Vererbung geht, hat JavaScript nur ein Konstrukt anzubieten: Objekte. Jedes Objekt hat eine interne Verbindung zu einem anderen ("älteren") Objekt, welches als sein <strong>Prototyp</strong> bezeichnet wird. Dieses Prototypobjekt hat selbst einen Prototyp, der wiederum selbst einen Prototyp hat. Dies setzt sich fort, bis ein Objekt erreicht wird, dessen Prototyp <code>null</code> ist. null hat per Definition keinen Prototyp und bildet somit den Abschluß dieser <strong>Prototypenkette</strong>.</p>
+<p class="brush: js">Wenn es um Vererbung geht, hat JavaScript nur ein Konstrukt anzubieten: Objekte. Jedes Objekt hat eine interne Verbindung zu einem anderen ("älteren") Objekt, welches als sein <strong>Prototyp</strong> bezeichnet wird. Dieses Prototypobjekt hat selbst einen Prototyp, der wiederum selbst einen Prototyp hat. Dies setzt sich fort, bis ein Objekt erreicht wird, dessen Prototyp <code>null</code> ist. null hat per Definition keinen Prototyp und bildet somit den Abschluß dieser <strong>Prototypenkette</strong>.</p>
 
 <p class="brush: js">Dies wird oft als eine der Schwächen von JavaScript betrachtet, jedoch ist das Prototypmodell tatsächlich mächtiger als das klassische OO Modell. Es ist zum Beispiel relativ trivial, ein klassisches OO Modell auf einem Prototypmodell zu realisieren.</p>
 
@@ -21,10 +21,10 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 <h3 id="Vererbung_von_Eigenschaften">Vererbung von Eigenschaften</h3>
 
-<p>Objekte in JavaScript sind dynamische "Behälter" von Eigenschaften, welche auch seine "eigenen Eigenschaften" (<strong>own properties</strong>) genannt werden. JavaScript-Objekte haben eine Verknüpfung zu einem Prototypobjekt. Beim Versuch auf eine Objekteigenschaft zuzugreifen, wird die Eigenschaft nicht nur in dem Objekt selbst, sondern auch in seinem Prototyp, dem Prototyp des Prototyps, usw. gesucht. Dies wird so lange fortgesetzt, bis eine Eigenschaft mit entsprechendem Namen gefunden wurde oder das Ende der Prototypenkette erreicht ist.</p>
+<p>Objekte in JavaScript sind dynamische "Behälter" von Eigenschaften, welche auch seine "eigenen Eigenschaften" (<strong>own properties</strong>) genannt werden. JavaScript-Objekte haben eine Verknüpfung zu einem Prototypobjekt. Beim Versuch auf eine Objekteigenschaft zuzugreifen, wird die Eigenschaft nicht nur in dem Objekt selbst, sondern auch in seinem Prototyp, dem Prototyp des Prototyps, usw. gesucht. Dies wird so lange fortgesetzt, bis eine Eigenschaft mit entsprechendem Namen gefunden wurde oder das Ende der Prototypenkette erreicht ist.</p>
 
 <div class="note">
-<p>Gemäß des ECMAScript-Standards, wird die Notation <code>someObject.[[Prototype]]</code> verwendet, um den Prototyp von <code>someObject</code> zu bezeichnen. Das ist äquivalent zu der JavaScript-Eigenschaft <code>__proto__ </code>(jetzt veraltet). Dies sollte nicht mit der <code><em>func</em>.prototype</code> Eigenschaft von Funktionen verwechselt werden, welche stattdessen den <code>[[Prototype]]</code> von allen <em>Instanzen</em> der entsprechenden Funktion spezifiziert. Seit ECMAScript 6 wird auf den <code>[[Prototype]]</code> mit Hilfe der Methoden {{jsxref("Object.getPrototypeOf()")}} und {{jsxref("Object.setPrototypeOf()")}} zugegriffen.</p>
+<p>Gemäß des ECMAScript-Standards, wird die Notation <code>someObject.[[Prototype]]</code> verwendet, um den Prototyp von <code>someObject</code> zu bezeichnen. Das ist äquivalent zu der JavaScript-Eigenschaft <code>__proto__ </code>(jetzt veraltet). Dies sollte nicht mit der <code><em>func</em>.prototype</code> Eigenschaft von Funktionen verwechselt werden, welche stattdessen den <code>[[Prototype]]</code> von allen <em>Instanzen</em> der entsprechenden Funktion spezifiziert. Seit ECMAScript 6 wird auf den <code>[[Prototype]]</code> mit Hilfe der Methoden {{jsxref("Object.getPrototypeOf()")}} und {{jsxref("Object.setPrototypeOf()")}} zugegriffen.</p>
 </div>
 
 <p>Folgendes passiert bei dem Versuch auf eine Eigenschaft zuzugreifen:</p>
@@ -64,9 +64,9 @@ console.log(o.d); // undefined
 
 <h3 id="Vererben_von_Methoden">Vererben von "Methoden"</h3>
 
-<p>JavaScript hat keine "Methoden" wie diese bei Klassen-basierten Sprachen definiert werden. In JavaScript kann jede Funktion als eine normale Eigenschaft zu einem Objekt hinzugefügt werden. Eine vererbte Funktion verhält sich demnach genau wie jede andere Eigenschaft, inklusive "property shadowing" wie oben gezeigt (in diesem Fall ist das eine Art der <em>Überschreibung von Methoden</em>).</p>
+<p>JavaScript hat keine "Methoden" wie diese bei Klassen-basierten Sprachen definiert werden. In JavaScript kann jede Funktion als eine normale Eigenschaft zu einem Objekt hinzugefügt werden. Eine vererbte Funktion verhält sich demnach genau wie jede andere Eigenschaft, inklusive "property shadowing" wie oben gezeigt (in diesem Fall ist das eine Art der <em>Überschreibung von Methoden</em>).</p>
 
-<p>Wenn eine vererbte Funktion ausgeführt wird, zeigt der Wert von <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this" title="this"><code>this</code></a> zum erbenden Objekt und nicht zu dessen Prototyp, in dem diese Funktion eine eigene Eigenschaft (own property) ist.</p>
+<p>Wenn eine vererbte Funktion ausgeführt wird, zeigt der Wert von <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this" title="this"><code>this</code></a> zum erbenden Objekt und nicht zu dessen Prototyp, in dem diese Funktion eine eigene Eigenschaft (own property) ist.</p>
 
 <pre class="brush: js">var o = {
   a: 2,
@@ -88,9 +88,9 @@ console.log(p.m()); // 5
 // 'this.a' referenziert p.a, der Eigenschaft 'a' in p.
 </pre>
 
-<h2 id="Verschiedene_Wege_Objekte_zu_erzeugen_und_die_resultierende_Prototypenkette">Verschiedene Wege, Objekte zu erzeugen und die resultierende Prototypenkette</h2>
+<h2 id="Verschiedene_Wege_Objekte_zu_erzeugen_und_die_resultierende_Prototypenkette">Verschiedene Wege, Objekte zu erzeugen und die resultierende Prototypenkette</h2>
 
-<h3 id="Objekte_mit_Syntax_Konstrukten_erzeugen">Objekte mit Syntax Konstrukten erzeugen</h3>
+<h3 id="Objekte_mit_Syntax_Konstrukten_erzeugen">Objekte mit Syntax Konstrukten erzeugen</h3>
 
 <pre class="brush: js">var o = {a: 1};
 
@@ -119,7 +119,7 @@ function f(){
 
 <h3 id="Mittels_Constructor">Mittels Constructor</h3>
 
-<p>Ein "constructor" ist in JavaScript lediglich eine Funktion, die mit dem <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new" title="new">new Operator</a> aufgerufen wird.</p>
+<p>Ein "constructor" ist in JavaScript lediglich eine Funktion, die mit dem <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new" title="new">new Operator</a> aufgerufen wird.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [];
@@ -137,9 +137,9 @@ var g = new Graph();
 // g.[[Prototype]] ist der Wert von Graph.prototype, wenn new Graph() ausgeführt wird.
 </pre>
 
-<h3 id="Mit_Object.create">Mit <code>Object.create</code></h3>
+<h3 id="Mit_Object.create">Mit <code>Object.create</code></h3>
 
-<p>ECMAScript 5 führte eine neue Methode ein: {{jsxref("Object.create()")}}. Der Aufruf dieser Methode erzeugt ein neues Objekt. Der erste Parameter dieser Methode ist der Prototyp des neu erzeugten Objekts:</p>
+<p>ECMAScript 5 führte eine neue Methode ein: {{jsxref("Object.create()")}}. Der Aufruf dieser Methode erzeugt ein neues Objekt. Der erste Parameter dieser Methode ist der Prototyp des neu erzeugten Objekts:</p>
 
 <pre class="brush: js">var a = {a: 1};
 // a ---&gt; Object.prototype ---&gt; null
@@ -158,30 +158,30 @@ console.log(d.hasOwnProperty);
 </pre>
 
 <div>
-<h3 id="Mit_dem_class_Schlüsselwort">Mit dem <code>class</code> Schlüsselwort</h3>
+<h3 id="Mit_dem_class_Schlüsselwort">Mit dem <code>class</code> Schlüsselwort</h3>
 
-<p>ECMAScript 6 führt einige neue Schlüsselwörter ein, um <a href="/en-US/docs/Web/JavaScript/Reference/Classes">Klassen</a> zu implementieren. Obwohl diese Konstrukte aussehen wie die, die Entwicklern aus Klassen-basierten Sprachen bekannt sind, verhalten sie sich doch anders. JavaScript bleibt Prototyp-basiert. Zu den neuen Schlüsselwörtern gehören {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, und {{jsxref("Operators/super", "super")}}.</p>
+<p>ECMAScript 6 führt einige neue Schlüsselwörter ein, um <a href="/en-US/docs/Web/JavaScript/Reference/Classes">Klassen</a> zu implementieren. Obwohl diese Konstrukte aussehen wie die, die Entwicklern aus Klassen-basierten Sprachen bekannt sind, verhalten sie sich doch anders. JavaScript bleibt Prototyp-basiert. Zu den neuen Schlüsselwörtern gehören {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, und {{jsxref("Operators/super", "super")}}.</p>
 
 <pre class="brush: js">"use strict";
 
 class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
 }
 
 class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
+  constructor(sideLength) {
+    super(sideLength, sideLength);
+  }
   get area() {
-    return this.height * this.width;
-  }
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
-  }
+    return this.height * this.width;
+  }
+  set sideLength(newLength) {
+    this.height = newLength;
+    this.width = newLength;
+  }
 }
 
 var square = new Square(2);
@@ -189,28 +189,28 @@ var square = new Square(2);
 
 <h3 id="Performance">Performance</h3>
 
-<p>Der Zugriff auf Eigenschaften, die sich weit oben in der Prototypenkette befinden, kann negativen Einfluss auf die Performance haben. Dies kann in Performance-kritischen Situationen zu Problemen führen. Hinzu kommt, dass beim Versuch, auf nicht existierende Eigenschaften zuzugreifen, immer die gesamte Prototypenkette durchlaufen wird.</p>
+<p>Der Zugriff auf Eigenschaften, die sich weit oben in der Prototypenkette befinden, kann negativen Einfluss auf die Performance haben. Dies kann in Performance-kritischen Situationen zu Problemen führen. Hinzu kommt, dass beim Versuch, auf nicht existierende Eigenschaften zuzugreifen, immer die gesamte Prototypenkette durchlaufen wird.</p>
 
-<p>Beim Iterieren über die Eigenschaften von Objekten wird über <strong>jede</strong> aufzählbare Eigenschaft iteriert, die auf der Prototypenkette vorkommt.</p>
+<p>Beim Iterieren über die Eigenschaften von Objekten wird über <strong>jede</strong> aufzählbare Eigenschaft iteriert, die auf der Prototypenkette vorkommt.</p>
 
-<p>Um zu prüfen, ob ein Objekt eine Eigenschaft an sich <em>selbst</em> definiert hat (own property) und nicht von der Prototypenkette geerbt hat, muss die Funktion <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> benutzt werden, die alle Objekte vom <code>Object.prototype</code> erben.</p>
+<p>Um zu prüfen, ob ein Objekt eine Eigenschaft an sich <em>selbst</em> definiert hat (own property) und nicht von der Prototypenkette geerbt hat, muss die Funktion <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> benutzt werden, die alle Objekte vom <code>Object.prototype</code> erben.</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> ist das einzige Konstrukt in JavaScript das beim Umgang mit Eigenschaften von Objekten <strong>nicht</strong> die Prototypenkette durchläuft.</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> ist das einzige Konstrukt in JavaScript das beim Umgang mit Eigenschaften von Objekten <strong>nicht</strong> die Prototypenkette durchläuft.</p>
 
-<p>Hinweis: Es reicht <strong>nicht</strong> aus, zu prüfen, ob eine Eigenschaft <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a> ist, um deren Existenz zu pfüfen. Die Eigenschaft könnte durchaus existieren, aber ihr aktueller Wert könnte aktuell explizit auf <code>undefined</code> gesetzt worden sein.</p>
+<p>Hinweis: Es reicht <strong>nicht</strong> aus, zu prüfen, ob eine Eigenschaft <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a> ist, um deren Existenz zu pfüfen. Die Eigenschaft könnte durchaus existieren, aber ihr aktueller Wert könnte aktuell explizit auf <code>undefined</code> gesetzt worden sein.</p>
 </div>
 
 <h3 id="Bad_practice_Erweiterung_von_nativen_Prototypen">Bad practice: Erweiterung von nativen Prototypen</h3>
 
-<p>Ein oft anzutreffendes "Feature" ist es, den <code>Object.prototype</code> oder einen anderen eingebauten Prototypen zu erweitern.</p>
+<p>Ein oft anzutreffendes "Feature" ist es, den <code>Object.prototype</code> oder einen anderen eingebauten Prototypen zu erweitern.</p>
 
-<p>Diese Technik, die als "monkey patching" bezeichnet wird, zerstört die <em>Kapselung</em>. Auch wenn diese Technik in populären Frameworks wie Prototype.js benutzt wird, gibt es dennoch keinen guten Grund dafür, die eingebauten Prototypen mit zuätzlicher, nicht-standard Funktionalität anzureichern.</p>
+<p>Diese Technik, die als "monkey patching" bezeichnet wird, zerstört die <em>Kapselung</em>. Auch wenn diese Technik in populären Frameworks wie Prototype.js benutzt wird, gibt es dennoch keinen guten Grund dafür, die eingebauten Prototypen mit zuätzlicher, nicht-standard Funktionalität anzureichern.</p>
 
-<p>Der <strong>einzige</strong> gute Grund für die Erweiterung von eingebauten Prototypen ist es, Features neuerer JavaScript Engines zurück zu portieren, beipielsweise <code>Array.forEach</code>, etc.</p>
+<p>Der <strong>einzige</strong> gute Grund für die Erweiterung von eingebauten Prototypen ist es, Features neuerer JavaScript Engines zurück zu portieren, beipielsweise <code>Array.forEach</code>, etc.</p>
 
 <h2 id="Example" name="Example">Beispiel</h2>
 
-<p><code>B</code> soll erben von <code>A</code>:</p>
+<p><code>B</code> soll erben von <code>A</code>:</p>
 
 <pre class="brush: js">function A(a){
   this.varA = a;
@@ -258,24 +258,24 @@ b.doSomething();
 <p>Die wichtigsten Stellen hier sind:</p>
 
 <ul>
- <li>Typen werden in <code>.prototype</code> definiert</li>
+ <li>Typen werden in <code>.prototype</code> definiert</li>
  <li><code>Object.create()</code> wird benutzt um zu vererben</li>
 </ul>
 
-<h2 id="prototype_und_Object.getPrototypeOf"><code>prototype</code> und <code>Object.getPrototypeOf</code></h2>
+<h2 id="prototype_und_Object.getPrototypeOf"><code>prototype</code> und <code>Object.getPrototypeOf</code></h2>
 
 <p>JavaScript kann etwas verwirrend sein für Entwickler, die aus der Java- oder C++ Welt kommen, da es komplett dynamisch ist, alles zur Laufzeit passiert und es keine Klassen hat. Alles dreht sich um Instanzen (Objekte). Sogar die "Klassen", die wir simulieren sind nur Funktions-Objekte.</p>
 
-<p>Wahrscheinlich hast Du bereits erkannt, dass unsere <code>function A</code> eine spezielle Eigenschaft namens <code>prototype</code> hat. Diese spezielle Eigenschaft agiert mit dem JavaScript <code>new </code>operator. Die Referenz des Prototypobjektes wird dabei in die interne <code>[[Prototype]]</code> Eigenschaft der neu erzeugten Instanz kopiert. Wenn man beispielsweise <code>var a1 = new A()</code> ausführt, setzt JavaScript (nachdem das Objekt im Speicher erzeugt und ehe function <code>A()</code> - mit <code>this</code> auf das neue Objekt definiert - ausgeführt wurde) <code>a1.[[Prototype]] = A.prototype</code>. Wenn dann auf Eigenschaften der Instanz zugegriffen wird, prüft JavaScript zuerst, ob diese an der Instanz existieren ehe es in <code>[[Prototype]]</code> danach schaut. Das heisst, das alles, was an der <code>prototype</code> Eigenschaft definiert wird, in allen Instanzen verfügbar ist. Die Eigenschaften in <code>prototype</code> könnten sogar später geändert werden und wären somit in allen existierenden Instanzen geändert.</p>
+<p>Wahrscheinlich hast Du bereits erkannt, dass unsere <code>function A</code> eine spezielle Eigenschaft namens <code>prototype</code> hat. Diese spezielle Eigenschaft agiert mit dem JavaScript <code>new </code>operator. Die Referenz des Prototypobjektes wird dabei in die interne <code>[[Prototype]]</code> Eigenschaft der neu erzeugten Instanz kopiert. Wenn man beispielsweise <code>var a1 = new A()</code> ausführt, setzt JavaScript (nachdem das Objekt im Speicher erzeugt und ehe function <code>A()</code> - mit <code>this</code> auf das neue Objekt definiert - ausgeführt wurde) <code>a1.[[Prototype]] = A.prototype</code>. Wenn dann auf Eigenschaften der Instanz zugegriffen wird, prüft JavaScript zuerst, ob diese an der Instanz existieren ehe es in <code>[[Prototype]]</code> danach schaut. Das heisst, das alles, was an der <code>prototype</code> Eigenschaft definiert wird, in allen Instanzen verfügbar ist. Die Eigenschaften in <code>prototype</code> könnten sogar später geändert werden und wären somit in allen existierenden Instanzen geändert.</p>
 
-<p>Wenn man im Beispiel von oben also <code>var a1 = new A(); var a2 = new A();</code> schreibt, dann würde <code>a1.doSomething</code> eigentlich auf <code>Object.getPrototypeOf(a1).doSomething</code> referenzieren, welches identisch ist mit <code>A.prototype.doSomething</code>, das am Anfang definiert wurde. Somit ist: <code>Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething</code>.</p>
+<p>Wenn man im Beispiel von oben also <code>var a1 = new A(); var a2 = new A();</code> schreibt, dann würde <code>a1.doSomething</code> eigentlich auf <code>Object.getPrototypeOf(a1).doSomething</code> referenzieren, welches identisch ist mit <code>A.prototype.doSomething</code>, das am Anfang definiert wurde. Somit ist: <code>Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething</code>.</p>
 
-<p>Kurz gesagt ist <code>prototype</code> für Typen gedacht, während <code>Object.getPrototypeOf()</code> für alle Instanzen das Gleiche ist.</p>
+<p>Kurz gesagt ist <code>prototype</code> für Typen gedacht, während <code>Object.getPrototypeOf()</code> für alle Instanzen das Gleiche ist.</p>
 
-<p><code>[[Prototype]]</code> wird <em>rekursiv</em> durchlaufen, das heisst:<br>
+<p><code>[[Prototype]]</code> wird <em>rekursiv</em> durchlaufen, das heisst:<br>
  <code>a1.doSomething</code>,<br>
  <code>Object.getPrototypeOf(a1).doSomething</code>, <code>Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething</code><br>
- etc., bis es gefunden wurde oder <code>Object.getPrototypeOf</code> null zurück gibt.</p>
+ etc., bis es gefunden wurde oder <code>Object.getPrototypeOf</code> null zurück gibt.</p>
 
 <p>Wenn man also folgendes aufruft:</p>
 
@@ -291,10 +291,10 @@ Foo.call(o);</pre>
 
 <pre class="brush: js">o.someProp;</pre>
 
-<p>wird geprüft, ob <code>o</code> eine Eigenschaft namens <code>someProp</code> hat. Falls nicht, wird nach <code>Object.getPrototypeOf(o).someProp</code> gesucht und wenn dies auch nicht existiert, dann in <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code> und so weiter.</p>
+<p>wird geprüft, ob <code>o</code> eine Eigenschaft namens <code>someProp</code> hat. Falls nicht, wird nach <code>Object.getPrototypeOf(o).someProp</code> gesucht und wenn dies auch nicht existiert, dann in <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code> und so weiter.</p>
 
 <div>
 <h2 id="Zusammenfassung">Zusammenfassung</h2>
 
-<p>Es ist essentiell das Modell der Prototypischen Vererbung zu verstehen ehe man komplexen Code schreibt, der darauf aufbaut. Man sollte sich außerdem über die Länge der Prototypenkette im Klaren sein und diese ggf. stückeln, um Performance-Problemen vorzubeugen. Außerdem sollten die eingebauten Prototypen niemals erweitert werden, außer es dient der Kompatibilitär mit neueren JavaScript-Features.</p>
+<p>Es ist essentiell das Modell der Prototypischen Vererbung zu verstehen ehe man komplexen Code schreibt, der darauf aufbaut. Man sollte sich außerdem über die Länge der Prototypenkette im Klaren sein und diese ggf. stückeln, um Performance-Problemen vorzubeugen. Außerdem sollten die eingebauten Prototypen niemals erweitert werden, außer es dient der Kompatibilitär mit neueren JavaScript-Features.</p>
 </div>

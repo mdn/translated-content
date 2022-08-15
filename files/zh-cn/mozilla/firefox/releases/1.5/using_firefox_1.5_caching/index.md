@@ -39,9 +39,9 @@ translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 
 标准的页面行为是：
 
-1.  用户导航至一个页面
-2.  当页面加载，行内 scripts 执行。
-3.  一旦页面加载完毕， `onload` 事件执行。
+1. 用户导航至一个页面
+2. 当页面加载，行内 scripts 执行。
+3. 一旦页面加载完毕， `onload` 事件执行。
 
 有些页面包含第四步。如果一个页面使用 `unload` 或者 `beforeunload` 处理程序，当从页面导航离开时事件被执行。如果提供了一个`unload` 处理程序，页面将不会被缓存。
 
@@ -90,33 +90,33 @@ translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 <title>Order query Firefox 1.5 Example</title>
 <style type="text/css">
 body, p {
-	font-family: Verdana, sans-serif;
-	font-size: 12px;
-   	}
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+}
 </style>
 <script type="text/javascript">
 function onLoad() {
-	loadOnlyFirst();
-	onPageShow();
+    loadOnlyFirst();
+    onPageShow();
 }
 
 function onPageShow() {
 //calculate current time
-	var currentTime= new Date();
-	var year=currentTime.getFullYear();
-	var month=currentTime.getMonth()+1;
-	var day=currentTime.getDate();
-	var hour=currentTime.getHours();
-	var min=currentTime.getMinutes();
-	var sec=currentTime.getSeconds();
-	var mil=currentTime.getMilliseconds();
-	var displayTime = (month + "/" + day + "/" + year + " " +
-		hour + ":" + min + ":" + sec + ":" + mil);
-	document.getElementById("timefield").value=displayTime;
+    var currentTime= new Date();
+    var year=currentTime.getFullYear();
+    var month=currentTime.getMonth()+1;
+    var day=currentTime.getDate();
+    var hour=currentTime.getHours();
+    var min=currentTime.getMinutes();
+    var sec=currentTime.getSeconds();
+    var mil=currentTime.getMilliseconds();
+    var displayTime = (month + "/" + day + "/" + year + " " +
+        hour + ":" + min + ":" + sec + ":" + mil);
+    document.getElementById("timefield").value=displayTime;
 }
 
 function loadOnlyFirst() {
-	document.zipForm.name.focus();
+    document.zipForm.name.focus();
 }
 </script>
 </head>
@@ -143,24 +143,24 @@ function loadOnlyFirst() {
 ```html
 <script>
 function onLoad() {
-	loadOnlyFirst();
+ loadOnlyFirst();
 
 //calculate current time
-	var currentTime= new Date();
-	var year = currentTime.getFullYear();
-	var month = currentTime.getMonth()+1;
-	var day = currentTime.getDate();
-	var hour=currentTime.getHours();
-	var min=currentTime.getMinutes();
-	var sec=currentTime.getSeconds();
-	var mil=currentTime.getMilliseconds();
-	var displayTime = (month + "/" + day + "/" + year + " " +
-		hour + ":" + min + ":" + sec + ":" + mil);
-	document.getElementById("timefield").value=displayTime;
+    var currentTime= new Date();
+    var year = currentTime.getFullYear();
+    var month = currentTime.getMonth()+1;
+    var day = currentTime.getDate();
+    var hour=currentTime.getHours();
+    var min=currentTime.getMinutes();
+    var sec=currentTime.getSeconds();
+    var mil=currentTime.getMilliseconds();
+    var displayTime = (month + "/" + day + "/" + year + " " +
+        hour + ":" + min + ":" + sec + ":" + mil);
+    document.getElementById("timefield").value=displayTime;
 }
 
 function loadOnlyFirst() {
-	document.zipForm.name.focus();
+    document.zipForm.name.focus();
 }
 </script>
 </head>

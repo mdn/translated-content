@@ -99,13 +99,13 @@ person1.valueOf()
 
 > **備註：** 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) 建構子參考以進一步了解。
 
-1.  你可自行檢查現有的原型屬性。回到我們之前的範例，試著於 JavaScript 主控台中輸入：
+1. 你可自行檢查現有的原型屬性。回到我們之前的範例，試著於 JavaScript 主控台中輸入：
 
     ```js
     Person.prototype
     ```
 
-2.  輸出結果很平淡，畢竟我們並未在自定的建構子原型上定義任何東西。依預設值，建構子的 `prototype` 都是從空白開始。現在可嘗試下列：
+2. 輸出結果很平淡，畢竟我們並未在自定的建構子原型上定義任何東西。依預設值，建構子的 `prototype` 都是從空白開始。現在可嘗試下列：
 
     ```js
     Object.prototype
@@ -127,13 +127,13 @@ var myString = 'This is my string.';
 
 我們先前講過用 [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 函式建立新物件實例的方法。
 
-1.  舉例來說，你可先在前面的 JavaScript 主控台範例中試著輸入：
+1. 舉例來說，你可先在前面的 JavaScript 主控台範例中試著輸入：
 
     ```js
     var person2 = Object.create(person1);
     ```
 
-2.  `create()` 實際上是透過特定的原型物件，來建立新的物件。我們在這裡將 `person1` 作為原型物件，建立了 `person2`。你可於主控台輸入下列以測試之：
+2. `create()` 實際上是透過特定的原型物件，來建立新的物件。我們在這裡將 `person1` 作為原型物件，建立了 `person2`。你可於主控台輸入下列以測試之：
 
     ```js
     person2.__proto__
@@ -145,7 +145,7 @@ var myString = 'This is my string.';
 
 每個物件實例都具備 1 個[`建構子`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)屬性，指向「用以建立實例」的原始建構子函式。
 
-1.  舉例來說，若在主控台中輸入下列指令：
+1. 舉例來說，若在主控台中輸入下列指令：
 
     ```js
     person1.constructor
@@ -156,13 +156,13 @@ var myString = 'This is my string.';
 
     偷吃步的方法，是將圓括弧加到 `constructor` 屬性 (須包含任何必要參數) 末端，以從該建構子建立其他物件實例。畢竟建構子也是函式 (Function)，所以可透過圓括弧將之觸發。你只要納入 `new` 這個關鍵字，即可將此函式作為建構子。
 
-2.  在主控台中輸入：
+2. 在主控台中輸入：
 
     ```js
     var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
     ```
 
-3.  現在可試著存取新物件的功能，例如：
+3. 現在可試著存取新物件的功能，例如：
 
     ```js
     person3.name.first
@@ -188,7 +188,7 @@ person1.constructor.name
 
 先看看建構子的 `prototype` 屬性的修改範例：
 
-1.  回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 範例，先在本機儲存 1 份[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)的副本。在現成的 JavaScript 中加入下列程式碼，即是將新函式新增到建構子的 `prototype` 屬性：
+1. 回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 範例，先在本機儲存 1 份[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)的副本。在現成的 JavaScript 中加入下列程式碼，即是將新函式新增到建構子的 `prototype` 屬性：
 
     ```js
     Person.prototype.farewell = function() {
@@ -196,7 +196,7 @@ person1.constructor.name
     }
     ```
 
-2.  儲存程式碼並在瀏覽器中載入頁面，再輸入下列程式碼：
+2. 儲存程式碼並在瀏覽器中載入頁面，再輸入下列程式碼：
 
     ```js
     person1.farewell();

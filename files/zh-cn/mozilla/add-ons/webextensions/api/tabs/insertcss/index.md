@@ -11,7 +11,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 使用该 API 前你必须拥有目标页面的权限，可以是 [主机权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), 或者使用 [activeTab 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
 
-你只能向符合 [match pattern ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的网页注入 CSS: 其形式必定是 "http", "https", "file", "ftp" 之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging, about:addons, 或者你打开的一个新的空白页。
+你只能向符合 [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 的网页注入 CSS: 其形式必定是 "http", "https", "file", "ftp" 之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging, about:addons, 或者你打开的一个新的空白页。
 
 当再次调用{{WebExtAPIRef("tabs.removeCSS()")}} 时，已经注入的 CSS 可能会被清除。
 

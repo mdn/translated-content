@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/import
 
 <p>Das <strong>import Statement </strong>wird verwendet um Funktionen, Objekte und Primitives zu importieren die von einem externen Modul, einem anderen Script, etc. exportiert wurden.</p>
 
-<p>{{noteStart}}Zur Zeit wird dieses Feature nicht von jedem Browser nativ unterstützt. Viele Transpiler implementieren es, wie beispielsweise der <a href="https://github.com/google/traceur-compiler">Traceur Compiler</a>, <a href="http://babeljs.io/">Babel</a>, <a href="https://github.com/rollup/rollup">Rollup</a> oder <a href="https://webpack.js.org/">Webpack</a>.{{noteEnd}}</p>
+<p>{{noteStart}}Zur Zeit wird dieses Feature nicht von jedem Browser nativ unterstützt. Viele Transpiler implementieren es, wie beispielsweise der <a href="https://github.com/google/traceur-compiler">Traceur Compiler</a>, <a href="http://babeljs.io/">Babel</a>, <a href="https://github.com/rollup/rollup">Rollup</a> oder <a href="https://webpack.js.org/">Webpack</a>.{{noteEnd}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -45,22 +45,22 @@ import "<em>module-name</em>";</pre>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Der Parameter <em><code>name</code></em> ist der Name des Objekts, das die exportierten Member empfängt. Die <em><code>member-</code></em>Parameter legen einzelne Einheiten fest, während der <em><code>name</code></em> Parameter alles importiert. <em><code>name</code></em> kann auch eine Funktion sein, wenn das Modul nur eine Einheit hat. Es folgen ein paar Beispiele für die Syntax:</p>
+<p>Der Parameter <em><code>name</code></em> ist der Name des Objekts, das die exportierten Member empfängt. Die <em><code>member-</code></em>Parameter legen einzelne Einheiten fest, während der <em><code>name</code></em> Parameter alles importiert. <em><code>name</code></em> kann auch eine Funktion sein, wenn das Modul nur eine Einheit hat. Es folgen ein paar Beispiele für die Syntax:</p>
 
-<p>Importieren der gesamten Inhalte des Moduls. Folgendes fügt <code>myModule</code> in den aktuellen Namensraum ein, mit allen exportierten Verbindungen von "my-module" bzw. "my-module.js".</p>
+<p>Importieren der gesamten Inhalte des Moduls. Folgendes fügt <code>myModule</code> in den aktuellen Namensraum ein, mit allen exportierten Verbindungen von "my-module" bzw. "my-module.js".</p>
 
 <pre class="brush: js">import * as <em>myModule</em> from "my-module";
 </pre>
 
-<p>Einfügen einer einzelnen Einheit eines Moduls. Folgendes fügt <code>myMember</code> in den aktuellen Namensraum ein.</p>
+<p>Einfügen einer einzelnen Einheit eines Moduls. Folgendes fügt <code>myMember</code> in den aktuellen Namensraum ein.</p>
 
 <pre class="brush: js">import {myMember} from "my-module";</pre>
 
-<p>Einfügen von mehreren Einheiten eines Moduls. Folgendes fügt <code>foo</code> und <code>bar</code> in den aktuellen Namensraum ein.</p>
+<p>Einfügen von mehreren Einheiten eines Moduls. Folgendes fügt <code>foo</code> und <code>bar</code> in den aktuellen Namensraum ein.</p>
 
 <pre class="brush: js">import {foo, bar} from "my-module";</pre>
 
-<p>Einfügen und Vergeben eines Alias. Folgendes fügt <code>shortName</code> in den aktuellen Namensraum ein.</p>
+<p>Einfügen und Vergeben eines Alias. Folgendes fügt <code>shortName</code> in den aktuellen Namensraum ein.</p>
 
 <pre class="brush: js">import {reallyReallyLongModuleMemberName as shortName} from "my-module";</pre>
 
@@ -68,19 +68,19 @@ import "<em>module-name</em>";</pre>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">import</span> <span class="punctuation token">{</span>reallyReallyLongModuleMemberName <span class="keyword token">as</span> shortName<span class="punctuation token">,</span> anotherLongModuleName <span class="keyword token">as</span> short<span class="punctuation token">}</span> <span class="keyword token">from</span> <span class="string token">"my-module"</span><span class="punctuation token">;</span></code></pre>
 
-<p>Einfügen eines ganzen Moduls, ohne dessen Namensbindungen zu importieren.</p>
+<p>Einfügen eines ganzen Moduls, ohne dessen Namensbindungen zu importieren.</p>
 
 <pre class="brush: js">import 'my-module';</pre>
 
 <h3 id="Defaults_importieren">Defaults importieren</h3>
 
-<p>Ein Standardexport ist möglich (egal, ob es sich um ein Objekt, eine Funktion, eine Klasse oder anderes handelt). Dementsprechend ist es auch möglich einen Standard-<code>import</code> zu benutzen, um diese Standards zu importieren.</p>
+<p>Ein Standardexport ist möglich (egal, ob es sich um ein Objekt, eine Funktion, eine Klasse oder anderes handelt). Dementsprechend ist es auch möglich einen Standard-<code>import</code> zu benutzen, um diese Standards zu importieren.</p>
 
 <p>Die einfachste Version importiert die Standards direkt:</p>
 
 <pre class="brush: js">import myModule from "my-module";</pre>
 
-<p>Man kann diese Syntax auch benutzen, um die oben genannten imports durchzufüren. In diesem Fall müssen die Standards aber wie folgt definiert werden:</p>
+<p>Man kann diese Syntax auch benutzen, um die oben genannten imports durchzufüren. In diesem Fall müssen die Standards aber wie folgt definiert werden:</p>
 
 <pre class="brush: js">import myDefault, * as myModule from "my-module";
 // myModule wird als namespace benutzt</pre>
@@ -93,14 +93,14 @@ import "<em>module-name</em>";</pre>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<p>Importieren einer weiteren Datei um AJAX JSON-Anfragen zu bearbeiten:</p>
+<p>Importieren einer weiteren Datei um AJAX JSON-Anfragen zu bearbeiten:</p>
 
 <pre class="brush: js; highlight: [14]">// --file.js--
 function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
-    callback(this.responseText)
-  };
+    callback(this.responseText)
+  };
   xhr.open("GET", url, true);
   xhr.send();
 }
@@ -132,7 +132,7 @@ getUsefulContents("http://www.example.com", data =&gt; {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-imports', 'Imports')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

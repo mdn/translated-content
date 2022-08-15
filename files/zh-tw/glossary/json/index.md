@@ -22,4 +22,4 @@ JSON 和 XML 很像，能夠儲存傳統 CSV 格式不能儲存的多層級資�
 
 ### 技術資料
 
-- MDN 上的 {{Link("/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON")}} 條目
+- MDN 上的 [JSON](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON) 條目

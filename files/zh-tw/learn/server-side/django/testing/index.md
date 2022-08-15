@@ -112,12 +112,14 @@ Before we go into the detail of "what to test", let's first briefly look at _whe
 
 Django uses the unittest module’s [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery), which will discover tests under the current working directory in any file named with the pattern **test\*.py**. Provided you name the files appropriately, you can use any structure you like. We recommend that you create a module for your test code, and have separate files for models, views, forms, and any other types of code you need to test. For example:
 
-    catalog/
-      /tests/
-        __init__.py
-        test_models.py
-        test_forms.py
-        test_views.py
+```
+catalog/
+    /tests/
+    __init__.py
+    test_models.py
+    test_forms.py
+    test_views.py
+```
 
 Create a file structure as shown above in your _LocalLibrary_ project. The **\_\_init\_\_.py** should be an empty file (this tells Python that the directory is a package). You can create the three test files by copying and renaming the skeleton test file **/catalog/tests.py**.
 
@@ -712,7 +714,7 @@ def renew_book_librarian(request, pk):
     return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
 ```
 
-We'll need to test that the view is only available to users who have the `can_mark_returned `permission, and that users are redirected to an HTTP 404 error page if they attempt to renew a `BookInstance` that does not exist. We should check that the initial value of the form is seeded with a date three weeks in the future, and that if validation succeeds we're redirected to the "all-borrowed books" view. As part of checking the validation-fail tests we'll also check that our form is sending the appropriate error messages.
+We'll need to test that the view is only available to users who have the `can_mark_returned` permission, and that users are redirected to an HTTP 404 error page if they attempt to renew a `BookInstance` that does not exist. We should check that the initial value of the form is seeded with a date three weeks in the future, and that if validation succeeds we're redirected to the "all-borrowed books" view. As part of checking the validation-fail tests we'll also check that our form is sending the appropriate error messages.
 
 Add the first part of the test class (shown below) to the bottom of **/catalog/tests/test_views.py**. This creates two users and two book instances, but only gives one user the permission required to access the view. The code to grant permissions during tests is shown in bold:
 
@@ -827,7 +829,7 @@ The next test (add this to the class too) checks that the view redirects to a li
 >  self.assertRedirects(resp, '/catalog/')
 > ```
 
-Copy the last two functions into the class, as seen below. These again test `POST` requests, but in this case with invalid renewal dates. We use `assertFormError() `to verify that the error messages are as expected.
+Copy the last two functions into the class, as seen below. These again test `POST` requests, but in this case with invalid renewal dates. We use `assertFormError()` to verify that the error messages are as expected.
 
 ```python
     def test_form_invalid_renewal_date_past(self):

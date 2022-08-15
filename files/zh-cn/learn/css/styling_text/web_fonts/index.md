@@ -69,8 +69,8 @@ html {
 
 关于网页字体有两件重要的事情要记住：
 
-1.  浏览器支持不同的字体格式，因此您需要多种字体格式以获得良好的跨浏览器支持。例如，大多数现代浏览器都支持 WOFF / WOFF2(Web Open Font Format versions 1 and 2，Web 开放字体格式版本 1 和 2)，它是最有效的格式，但是旧版本 IE 只支持 EOT (Embedded Open Type，嵌入式开放类型) 的字体，你可能需要包括一个 SVG 版本的字体支持旧版本的 iPhone 和 Android 浏览器。我们将向您展示如何生成所需的代码。
-2.  字体一般都不能自由使用。您必须为他们付费，或者遵循其他许可条件，比如在代码中 (或者在您的站点上) 提供字体创建者。你不应该在没有适当的授权的情况下偷窃字体。
+1. 浏览器支持不同的字体格式，因此您需要多种字体格式以获得良好的跨浏览器支持。例如，大多数现代浏览器都支持 WOFF / WOFF2(Web Open Font Format versions 1 and 2，Web 开放字体格式版本 1 和 2)，它是最有效的格式，但是旧版本 IE 只支持 EOT (Embedded Open Type，嵌入式开放类型) 的字体，你可能需要包括一个 SVG 版本的字体支持旧版本的 iPhone 和 Android 浏览器。我们将向您展示如何生成所需的代码。
+2. 字体一般都不能自由使用。您必须为他们付费，或者遵循其他许可条件，比如在代码中 (或者在您的站点上) 提供字体创建者。你不应该在没有适当的授权的情况下偷窃字体。
 
 > **备注：** Web 字体作为一种技术从 Internet Explorer 4 开始就得到了的支持！
 
@@ -99,11 +99,11 @@ html {
 
 现在您需要生成所需的代码 (以及字体格式)。对于每种字体，遵循以下步骤：
 
-1.  确保您已经满足了任何许可证的要求，如果您打算在一个商业和/或 Web 项目中使用它。
-2.  前往 Fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
-3.  使用上传字体按钮上传你的两个字体文件。
-4.  勾选复选框，“是的，我上传的字体符合网络嵌入的合法条件。
-5.  点击下载你的套件（kit）。
+1. 确保您已经满足了任何许可证的要求，如果您打算在一个商业和/或 Web 项目中使用它。
+2. 前往 Fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
+3. 使用上传字体按钮上传你的两个字体文件。
+4. 勾选复选框，“是的，我上传的字体符合网络嵌入的合法条件。
+5. 点击下载你的套件（kit）。
 
 在生成器完成处理之后，您应该得到一个 ZIP 文件，将它保存在与 HTML 和 CSS 相同的目录中。
 
@@ -117,10 +117,10 @@ html {
 
 要在演示中实现这些字体，请遵循以下步骤：
 
-1.  将解压缩的目录重命名为简易的目录，比如`fonts`
-2.  打开 `stylesheet.css` 文件，把包含在你的网页中的 `@font-face`块复制到你的 `web-font-start.css` 文件—— 你需要把它们放在最上面，在你的 CSS 之前，因为字体需要导入才能在你的网站上使用。
-3.  每个`url()`函数指向一个我们想要导入到我们的 CSS 中的字体文件——我们需要确保文件的路径是正确的，因此，在每个路径的开头添加`fonts/` （必要时进行调整）。
-4.  现在，您可以在字体栈中使用这些字体，就像任何 web 安全或默认的系统字体一样。
+1. 将解压缩的目录重命名为简易的目录，比如`fonts`
+2. 打开 `stylesheet.css` 文件，把包含在你的网页中的 `@font-face`块复制到你的 `web-font-start.css` 文件—— 你需要把它们放在最上面，在你的 CSS 之前，因为字体需要导入才能在你的网站上使用。
+3. 每个`url()`函数指向一个我们想要导入到我们的 CSS 中的字体文件——我们需要确保文件的路径是正确的，因此，在每个路径的开头添加`fonts/` （必要时进行调整）。
+4. 现在，您可以在字体栈中使用这些字体，就像任何 web 安全或默认的系统字体一样。
     例如：
 
     ```css
@@ -139,12 +139,12 @@ html {
 
 大多数这些服务都很容易使用，所以我们不会详细地介绍它们。让我们快速浏览一下 Google Fonts，这样你就能明白它的意思了。再次的，使用`web-font-start.html` 和 `web-font-start.css` a 的副本作为你的开始。
 
-1.  前往 [Google Fonts](https://www.google.com/fonts).
-2.  使用左边的过滤器来显示你想要选择的字体类型，并选择一些你喜欢的字体。
-3.  要选择字体种类，按下按钮旁边的 ⊕ 按钮。
-4.  当您选择好字体种类时，按下页面底部的*\[Number]* 种类选择。
-5.  在生成的屏幕中，首先需要复制所显示的 HTML 代码行，并将其粘贴到 HTML 文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的 CSS 中使用它。
-6.  然后，您需要将 CSS 声明复制到您的 CSS 中，以便将自定义字体应用到您的 HTML。
+1. 前往 [Google Fonts](https://www.google.com/fonts).
+2. 使用左边的过滤器来显示你想要选择的字体类型，并选择一些你喜欢的字体。
+3. 要选择字体种类，按下按钮旁边的 ⊕ 按钮。
+4. 当您选择好字体种类时，按下页面底部的*\[Number]* 种类选择。
+5. 在生成的屏幕中，首先需要复制所显示的 HTML 代码行，并将其粘贴到 HTML 文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的 CSS 中使用它。
+6. 然后，您需要将 CSS 声明复制到您的 CSS 中，以便将自定义字体应用到您的 HTML。
 
 > **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
 

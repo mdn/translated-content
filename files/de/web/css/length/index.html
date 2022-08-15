@@ -20,7 +20,7 @@ translation_of: Web/CSS/length
 <p>Der Wertebereich ist abhängig von der jeweiligen CSS-Eigenschaft, teils sind nur positive Werte sinnvoll und zulässig.<br>
  Oftmals wird auch eine prozentuale Angabe ({{cssxref("&lt;percentage&gt;")}}) akzeptiert, diese gehört jedoch strenggenommen nicht zu den &lt;length&gt;-Werten und wird deshalb an anderer Stelle besprochen.</p>
 
-<p><code>&lt;length&gt;</code> wird von vielen Eigenschaften benutzt, zum Beispiel {{ Cssxref("width") }}, {{ Cssxref("margin") }},  {{ Cssxref("padding") }}, {{ Cssxref("font-size") }}, {{ Cssxref("border-width") }} und {{ Cssxref("text-shadow") }}.</p>
+<p><code>&lt;length&gt;</code> wird von vielen Eigenschaften benutzt, zum Beispiel {{ Cssxref("width") }}, {{ Cssxref("margin") }},  {{ Cssxref("padding") }}, {{ Cssxref("font-size") }}, {{ Cssxref("border-width") }} und {{ Cssxref("text-shadow") }}.</p>
 
 <h2 id="Interpolation">Interpolation</h2>
 
@@ -37,13 +37,13 @@ translation_of: Web/CSS/length
 <dl>
  <dt id="em"><code>em</code></dt>
  <dd><code>1em</code> entspricht der aus {{Cssxref("font-size")}} berechneten Schriftgröße. Wird em zusammen mit {{Cssxref("font-size")}} selbst benutzt, entspricht <code>1em</code> der Schriftgröße des Elternelements.<br>
- em ist, zusammen mit Prozentwerten, das gebräuchlichste Maß, um den Fluss der Seitenelemente unabhängig von der vom Benutzer gewählten Schriftgröße einheitlich zu gewährleisten.</dd>
+ em ist, zusammen mit Prozentwerten, das gebräuchlichste Maß, um den Fluss der Seitenelemente unabhängig von der vom Benutzer gewählten Schriftgröße einheitlich zu gewährleisten.</dd>
  <dt id="rem"><code>rem</code></dt>
  <dd>Wie <code>em</code>, bezieht sich jedoch immer auf die berechnete Schriftgröße des Wurzelelements. {{ gecko_minversion_inline("1.9.2") }}</dd>
  <dt id="ex"><code>ex</code></dt>
  <dd><code>1ex</code> enspricht üblicherweise der Höhe des kleinen x; oftmals ist 1ex ≈ 0,5em<code>.</code></dd>
  <dt id="ch"><code>ch</code></dt>
- <dd><code>1ch</code> enspricht der Breite der Ziffer '0' (Null, Unicode U+0030) {{gecko_minversion_inline("1.9.1") }}</dd>
+ <dd><code>1ch</code> enspricht der Breite der Ziffer '0' (Null, Unicode U+0030) {{gecko_minversion_inline("1.9.1") }}</dd>
  <dt id="ch"><code>cap</code> {{experimental_inline}}</dt>
  <dd>Nominale Höhe der Großbuchstaben.</dd>
  <dt><code>lh</code> {{experimental_inline}}</dt>
@@ -65,10 +65,10 @@ translation_of: Web/CSS/length
  <dd><code>1vh</code> entspricht 1% der Anzeigenhöhe (vh = viewport height).</dd>
  <dt id="vw"><code>vw</code></dt>
  <dd><code>1vw</code> entspricht 1% Anzeigenbreite (vh = viewport width).</dd>
- <dt><code>vi</code> {{experimental_inline}}</dt>
- <dd>Entspricht 1% der Länge der <a href="/de/docs/Web/CSS/CSS_Logical_Properties">Inlineachse</a> des umgebenden Blocks. Die Inlineachse ist die Richtung, in der Text geschrieben wird, also horizontal für deutschen Text.</dd>
- <dt><code>vi</code> {{experimental_inline}}</dt>
- <dd>Entspricht 1% der Länge der <a href="/de/docs/Web/CSS/CSS_Logical_Properties">Blockachse</a> des umgebenden Blocks. Die Blockachse verläuft im Winkel von 90° zur Inlineachse, also vertikal für deutschen Text.</dd>
+ <dt><code>vi</code> {{experimental_inline}}</dt>
+ <dd>Entspricht 1% der Länge der <a href="/de/docs/Web/CSS/CSS_Logical_Properties">Inlineachse</a> des umgebenden Blocks. Die Inlineachse ist die Richtung, in der Text geschrieben wird, also horizontal für deutschen Text.</dd>
+ <dt><code>vi</code> {{experimental_inline}}</dt>
+ <dd>Entspricht 1% der Länge der <a href="/de/docs/Web/CSS/CSS_Logical_Properties">Blockachse</a> des umgebenden Blocks. Die Blockachse verläuft im Winkel von 90° zur Inlineachse, also vertikal für deutschen Text.</dd>
  <dt id="vmin"><code>vmin</code></dt>
  <dd>Der kleinere der Werte <code>vh</code> und <code>vw</code>.</dd>
  <dt id="vmax"><code>vmax</code></dt>
@@ -80,14 +80,14 @@ translation_of: Web/CSS/length
 <p>Absolute Längenmaße stehen für ein physikalisches Maß, sofern die physischen Eigenheiten des Ausgabemediums bekannt sind. Eine der Einheiten wird als Referenz festgelegt, alle anderen werden relativ zu ihr definiert. Die Festlegung hängt vom Ausgabegerät ab, genauer: von dessen Auflösung.</p>
 
 <p>Bei Geräten mit niedriger Auflösung (namentlich herkömmliche Flachbildschirme) ist die Bezugsgröße das sogenannte Referenzpixel. Die Größe des Referenzpixels ist definiert als die wahrgenommene Größe eines Pixels auf einem Bildschirm mit der Auflösung 96dpi in etwa einer Armlänge Abstand. In der Praxis wird jedoch meist das tatsächliche Bildschirmpixel des gerade angeschlossenen Bildschirms als Referenzpixel definiert.<br>
- Ein Referenzpixel entspricht <code>1px</code>, alle anderen Einheiten sind bei niedrig auflösenden Geräten von px abgeleitet.  <code>1in</code> ist in Abhängigkeit von px als <code>96px</code> festgelegt, was wiederum <code>72pt</code> entspricht.</p>
+ Ein Referenzpixel entspricht <code>1px</code>, alle anderen Einheiten sind bei niedrig auflösenden Geräten von px abgeleitet.  <code>1in</code> ist in Abhängigkeit von px als <code>96px</code> festgelegt, was wiederum <code>72pt</code> entspricht.</p>
 
 <p>Aufgrund dieser eher ungenauen Definition können in <code>mm</code>, <code>cm</code> oder <code>in</code> gegebene Längen von jenen abweichen, die tatsächlich als solche gemessen werden würden – in anderen Worten: <code>1cm</code> auf dem Bildschirm ist üblicherweise nur ungefähr gleich einem Zentimeter auf dem Zollstock.</p>
 
 <p>Bei Geräten mit hoher Auflösung hingegen entsprechen die Einheiten <code>mm</code>, <code>cm</code> und <code>in</code> ihren tatsächlichen Maßen, mithin den Einheiten Millimeter, Zentimeter und Zoll (Englisch: Inch). Von ihnen abhängig ist die Einheit <code>px</code>, sie ist definiert als 1/96 eines Zolls.</p>
 
 <div class="blockIndicator note">
-<p><strong>Hinweis:</strong> Viele Benutzer erhöhen die Standardschriftgröße ihres Browsers zur besseren Lesbarkeit. Absolute Schriftgrößen können Probleme mit der Barrierefreiheit verursachen, weil sie nicht von den Benutzereinstellungen der Schriftgröße abhängen. Es wird deshalb empfohlen, relative Schriftgrößen wie <code>em</code> und <code>rem</code> zu benutzen, selbst für allgemeine Schriftgrößendefinitionen auf <code>p</code>- oder <code>body</code>-Ebene.</p>
+<p><strong>Hinweis:</strong> Viele Benutzer erhöhen die Standardschriftgröße ihres Browsers zur besseren Lesbarkeit. Absolute Schriftgrößen können Probleme mit der Barrierefreiheit verursachen, weil sie nicht von den Benutzereinstellungen der Schriftgröße abhängen. Es wird deshalb empfohlen, relative Schriftgrößen wie <code>em</code> und <code>rem</code> zu benutzen, selbst für allgemeine Schriftgrößendefinitionen auf <code>p</code>- oder <code>body</code>-Ebene.</p>
 </div>
 
 <dl>
