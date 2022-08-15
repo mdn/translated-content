@@ -1,7 +1,6 @@
 ---
 title: 使用 Gamepad API 实现控制
 slug: Games/Techniques/Controls_Gamepad_API
-translation_of: Games/Techniques/Controls_Gamepad_API
 ---
 {{GamesSidebar}}
 

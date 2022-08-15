@@ -1,20 +1,6 @@
 ---
 title: Implementing game control mechanisms
 slug: Games/Techniques/Control_mechanisms
-tags:
-  - Controls
-  - Desktop
-  - Gamepad
-  - Games
-  - JavaScript
-  - Laptop
-  - Mobile
-  - NeedsTranslation
-  - TopicStub
-  - keyboard
-  - mouse
-  - touch
-translation_of: Games/Techniques/Control_mechanisms
 ---
 {{GamesSidebar}}
 

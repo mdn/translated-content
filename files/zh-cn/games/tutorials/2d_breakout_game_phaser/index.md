@@ -1,11 +1,6 @@
 ---
 title: 使用 Phaser 开发 2D breakout game
 slug: Games/Tutorials/2D_breakout_game_Phaser
-tags:
-  - Phaser
-  - 教程
-  - 游戏
-translation_of: Games/Tutorials/2D_breakout_game_Phaser
 ---
 {{GamesSidebar}}
 
