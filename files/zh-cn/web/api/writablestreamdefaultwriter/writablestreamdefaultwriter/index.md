@@ -1,15 +1,6 @@
 ---
 title: WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-translation_of: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

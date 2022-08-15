@@ -9,11 +9,13 @@ _控制流_ 是计算机执行一个程序中语句的顺序。
 
 比如，下面的程序被用来校验用户在网页上输入的数据。数据经过校验后会被提交，但当用户没有输入任何数据时 (field==empty)，这个程序会提醒用户去填入数据。为了做到这一点，这个程序使用了 {{Glossary("Conditional", "条件")}} 结构 `if...else`，这样就可以根据数据是否被填充而执行不同的代码。
 
-    if (field==empty) {
-        promptUser();
-    } else {
-        submitForm();
-    }
+```js
+if (field == empty) {
+  promptUser();
+} else {
+  submitForm();
+}
+```
 
 在 {{glossary("JavaScript")}} 或者 {{glossary("PHP")}} 中存在许多控制结构，比如条件语句、循环和函数。还有部分语句可能被设定为当 {{Glossary("Event", "事件")}} 发生的时候才执行。
 

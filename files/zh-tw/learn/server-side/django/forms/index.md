@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Django/Forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-在本教程中，我們將向您展示，如何在 Django 中使用 HTML 表單，特別是編寫表單以創建，更新和刪除模型實例的最簡單方法。作為本演示的一部分，我們將擴展 [LocalLibrary ](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)網站，以便圖書館員，可以使用我們自己的表單（而不是使用管理員應用程序）更新圖書，創建，更新和刪除作者。
+在本教程中，我們將向您展示，如何在 Django 中使用 HTML 表單，特別是編寫表單以創建，更新和刪除模型實例的最簡單方法。作為本演示的一部分，我們將擴展 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，以便圖書館員，可以使用我們自己的表單（而不是使用管理員應用程序）更新圖書，創建，更新和刪除作者。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -82,23 +82,23 @@ Django 的表單處理使用了我們在以前的教程中學到的所有相同�
 
 根據上圖，Django 表單處理的主要功能是：
 
-1.  在用戶第一次請求時顯示默認表單。
+1. 在用戶第一次請求時顯示默認表單。
 
     - 該表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能會預先填充有初始值（例如，如果您正在更改記錄或具有有用的默認初始值）。
     - 由於此表單與任何用戶輸入的數據均不相關（儘管它可能具有初始值），因此在這一點上被稱為未綁定。
 
-2.  從提交請求中接收數據並將其綁定到表單。
+2. 從提交請求中接收數據並將其綁定到表單。
 
     - 將數據綁定到表單意味著當我們需要重新顯示表單時，用戶輸入的數據和任何錯誤均可用。
 
-3.  清理並驗證數據。
+3. 清理並驗證數據。
 
     - 清理數據會對輸入執行清理操作（例如，刪除可能用於向服務器發送惡意內容的無效字符），並將其轉換為一致的 Python 類型。
     - 驗證會檢查該值是否適合該字段（例如，日期範圍正確，時間不要太短或太長等）
 
-4.  如果任何數據無效，則這次重新顯示該表單，其中包含用戶填充的所有值和問題字段的錯誤消息。
-5.  如果所有數據均有效，請執行所需的操作（例如，保存數據，發送和發送電子郵件，返回搜索結果，上傳文件等）
-6.  完成所有操作後，將用戶重定向到另一個頁面。
+4. 如果任何數據無效，則這次重新顯示該表單，其中包含用戶填充的所有值和問題字段的錯誤消息。
+5. 如果所有數據均有效，請執行所需的操作（例如，保存數據，發送和發送電子郵件，返回搜索結果，上傳文件等）
+6. 完成所有操作後，將用戶重定向到另一個頁面。
 
 Django 提供了許多工具和方法來幫助您完成上述任務。 最基本的是 `Form`類，它簡化了表單 HTML 的生成和數據清除/驗證的過程。 在下一節中，我們將使用頁面的實際示例描述表單如何工作，以使圖書館員可以續訂書籍。
 
@@ -148,7 +148,7 @@ The arguments that are common to most fields are listed below (these have sensib
 
 #### Validation
 
-Django provides numerous places where you can validate your data. The easiest way to validate a single field is to override the method `clean_<fieldname>()` for the field you want to check. So for example, we can validate that entered `renewal_date` values are between now and 4 weeks by implementing `clean_renewal_date() `as shown below.
+Django provides numerous places where you can validate your data. The easiest way to validate a single field is to override the method `clean_<fieldname>()` for the field you want to check. So for example, we can validate that entered `renewal_date` values are between now and 4 weeks by implementing `clean_renewal_date()` as shown below.
 
 ```python
 from django import forms
@@ -300,43 +300,45 @@ That's everything needed for the form handling itself, but we still need to rest
 
 The final view is therefore as shown below. Please copy this into the bottom of **locallibrary/catalog/views.py**.
 
-    from django.contrib.auth.decorators import permission_required
+```python
+from django.contrib.auth.decorators import permission_required
 
-    from django.shortcuts import get_object_or_404
-    from django.http import HttpResponseRedirect
-    from django.urls import reverse
-    import datetime
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+import datetime
 
-    from .forms import RenewBookForm
+from .forms import RenewBookForm
 
-    @permission_required('catalog.can_mark_returned')
-    def renew_book_librarian(request, pk):
-        """
-        View function for renewing a specific BookInstance by librarian
-        """
-        book_inst=get_object_or_404(BookInstance, pk = pk)
+@permission_required('catalog.can_mark_returned')
+def renew_book_librarian(request, pk):
+    """
+    View function for renewing a specific BookInstance by librarian
+    """
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-        # If this is a POST request then process the Form data
-        if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-            # Create a form instance and populate it with data from the request (binding):
-            form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-            # Check if the form is valid:
-            if form.is_valid():
-                # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-                book_inst.due_back = form.cleaned_data['renewal_date']
-                book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-                # redirect to a new URL:
-                return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-        # If this is a GET (or any other method) create the default form.
-        else:
-            proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-            form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-        return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
+```
 
 ### The template
 
@@ -380,7 +382,7 @@ All that's left is the `\{{form}}` template variable, which we passed to the tem
 </tr>
 ```
 
-> **備註：** It is perhaps not obvious because we only have one field, but by default every field is defined in its own table row (which is why the variable is inside `table `tags above).​​​​​​ This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
+> **備註：** It is perhaps not obvious because we only have one field, but by default every field is defined in its own table row (which is why the variable is inside `table` tags above).​​​​​​ This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
 
 If you were to enter an invalid date, you'd additionally get a list of the errors rendered in the page (shown in bold below).
 

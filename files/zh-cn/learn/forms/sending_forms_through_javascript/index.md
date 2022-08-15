@@ -418,7 +418,7 @@ window.addEventListener('load', function () {
 
 取决于不同的浏览器，通过 JavaScript 发送数据可能会很简单，也可能会很困难。{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是通用的答案，所以请毫不犹豫的在旧浏览器上通过 polyfill 使用它：
 
-- 此[ gist](https://gist.github.com/3120320) 通过 {{domxref("Using_web_workers","Web Workers")}} polyfill 了 `FormData`。
+- 此 [gist](https://gist.github.com/3120320) 通过 {{domxref("Using_web_workers","Web Workers")}} polyfill 了 `FormData`。
 - [HTML5-formdata](https://github.com/francois2metz/html5-formdata) 试图 polyfill `FormData` 对象，但是它需要 [File API](http://www.w3.org/TR/FileAPI/)
 - 这个 [polyfill](https://github.com/jimmywarting/FormData) 提供了 FormData 所有的大部分新方法（entries, keys, values, 以及对 `for...of` 的支持）
 

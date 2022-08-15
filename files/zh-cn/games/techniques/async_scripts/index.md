@@ -1,7 +1,6 @@
 ---
 title: asm.js 的异步脚本
 slug: Games/Techniques/Async_scripts
-translation_of: Games/Techniques/Async_scripts
 ---
 {{GamesSidebar}}
 

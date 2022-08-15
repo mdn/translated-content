@@ -12,13 +12,11 @@ original_slug: Web/HTML/Globale_Attribute/tabindex
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p><span class="seoSummary">Das  <a href="/en-US/docs/Web/HTML/Global_attributes">Globale Attribut</a> <strong><code>tabindex</code></strong> gibt an, ob sein Element fokussiert werden kann, ob und an welcher Stelle es an der sequentiellen Tastaturnavigation beteiligt ist (normalerweise mit der Tabulatortaste, daher der Name).</span></p>
+<p><span class="seoSummary">Das  <a href="/en-US/docs/Web/HTML/Global_attributes">Globale Attribut</a> <strong><code>tabindex</code></strong> gibt an, ob sein Element fokussiert werden kann, ob und an welcher Stelle es an der sequentiellen Tastaturnavigation beteiligt ist (normalerweise mit der Tabulatortaste, daher der Name).</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}</div>
 
-<p class="hidden">Die Quelle für dieses interaktive Beispiel wird in einem GitHub-Repository gespeichert. Wenn du am interaktiven Beispielprojekt mitarbeiten möchtest, klone bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>und sende uns eine Pull-Anfrage.</p>
-
-<p>Es akzeptiert einen Integer als Wert der zu unterschiedlichen Ergebnissen führt, abhängig von diesen Werten:</p>
+<p>Es akzeptiert einen Integer als Wert der zu unterschiedlichen Ergebnissen führt, abhängig von diesen Werten:</p>
 
 <ul>
  <li>
@@ -26,7 +24,7 @@ original_slug: Web/HTML/Globale_Attribute/tabindex
  </li>
  <li>
   <div class="note">
-  <p>Dies ist hilfreich, wenn Inhalte außerhalb des Bildschirms vorhanden sind, welche zu einem bestimmten Ereignis in Erscheinung treten. Es ist nicht möglich ein Element mit der Tastatur zu fokussieren, das einen negativen <code>tabindex</code> hat. Jedoch ist es möglich, es mittels der <code>focus()</code> <a href="/en-US/docs/Web/API/HTMLElement/focus">Methode</a> aufzurufen.</p>
+  <p>Dies ist hilfreich, wenn Inhalte außerhalb des Bildschirms vorhanden sind, welche zu einem bestimmten Ereignis in Erscheinung treten. Es ist nicht möglich ein Element mit der Tastatur zu fokussieren, das einen negativen <code>tabindex</code> hat. Jedoch ist es möglich, es mittels der <code>focus()</code> <a href="/en-US/docs/Web/API/HTMLElement/focus">Methode</a> aufzurufen.</p>
   </div>
 
 
@@ -41,7 +39,7 @@ original_slug: Web/HTML/Globale_Attribute/tabindex
  </li>
  <li>
   <div class="warning">
-  <p>Die CSS-Positionierung <strong>wirkt sich nicht</strong> auf die Tab-Reihenfolge aus. Es wird sich nur die visuelle Reihenfolge der Elemente ändern. Tab-Reihenfolge entspricht der Quellreihenfolge!<em> </em></p>
+  <p>Die CSS-Positionierung <strong>wirkt sich nicht</strong> auf die Tab-Reihenfolge aus. Es wird sich nur die visuelle Reihenfolge der Elemente ändern. Tab-Reihenfolge entspricht der Quellreihenfolge! </p>
   </div>
 
 
@@ -52,34 +50,34 @@ original_slug: Web/HTML/Globale_Attribute/tabindex
 
 <ul>
  <li>
-  <p>Ein <em>positiver Wert</em> bedeutet, dass das Element in der sequenziellen Tastaturnavigation fokussierbar sein kann, wobei seine Reihenfolge durch den Wert der Zahl definiert wird. <code>tabindex="4"</code> würde also vor <code>tabindex="5"</code>, aber nach <code>tabindex="3"</code> fokussiert werden. Wenn mehrere Elemente den gleichen positiven <code>tabindex</code>-Wert haben, folgt ihre Reihenfolge relativ zu ihrer Position in der Dokumentquelle.</p>
+  <p>Ein <em>positiver Wert</em> bedeutet, dass das Element in der sequenziellen Tastaturnavigation fokussierbar sein kann, wobei seine Reihenfolge durch den Wert der Zahl definiert wird. <code>tabindex="4"</code> würde also vor <code>tabindex="5"</code>, aber nach <code>tabindex="3"</code> fokussiert werden. Wenn mehrere Elemente den gleichen positiven <code>tabindex</code>-Wert haben, folgt ihre Reihenfolge relativ zu ihrer Position in der Dokumentquelle.</p>
 
   <div class="warning">
-  <p>Vermeiden Sie die Verwendung von <code>tabindex</code>-Werten größer als 0. Dies erschwert es Benutzern, die auf assistive Technologie angewiesen sind, durch Seiteninhalte zu Navigieren und sie zu Bedienen.</p>
+  <p>Vermeiden Sie die Verwendung von <code>tabindex</code>-Werten größer als 0. Dies erschwert es Benutzern, die auf assistive Technologie angewiesen sind, durch Seiteninhalte zu Navigieren und sie zu Bedienen.</p>
   </div>
  </li>
 </ul>
 
 <div class="note">
-<p>Es wird nicht empfohlen, den Elementen positive Werte zu geben. Am Ende springt der Fokus zwischen den Elementen und es wird verwirrend, die <code>tabindex</code>-Attributwerte einzelner Elemente zu manipulieren. Empfehlenswert ist, sie in einer geeigneten DOM-Sequenz zu schreiben.</p>
+<p>Es wird nicht empfohlen, den Elementen positive Werte zu geben. Am Ende springt der Fokus zwischen den Elementen und es wird verwirrend, die <code>tabindex</code>-Attributwerte einzelner Elemente zu manipulieren. Empfehlenswert ist, sie in einer geeigneten DOM-Sequenz zu schreiben.</p>
 </div>
 
-<p>Wenn das <code>tabindex</code>-Attribut für ein {{htmlelement ("div")}} festgelegt wird, kann der untergeordnete Inhalt nicht mit den Pfeiltasten gescrollt werden. Außer, der <code>tabindex</code> wurde für den Inhalt festgelegt. <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">Folgendes fiddle hilft beim Verstehen der Scrolleffekte des <code>tabindex</code></a>.</p>
+<p>Wenn das <code>tabindex</code>-Attribut für ein {{htmlelement ("div")}} festgelegt wird, kann der untergeordnete Inhalt nicht mit den Pfeiltasten gescrollt werden. Außer, der <code>tabindex</code> wurde für den Inhalt festgelegt. <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">Folgendes fiddle hilft beim Verstehen der Scrolleffekte des <code>tabindex</code></a>.</p>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Der maximale Wert für <code>tabindex</code> ist 32767. Wenn er nicht spezifiziert ist, wird der Standardwert von 0 angenommen.</p>
+<p><strong>Hinweis:</strong> Der maximale Wert für <code>tabindex</code> ist 32767. Wenn er nicht spezifiziert ist, wird der Standardwert von 0 angenommen.</p>
 </div>
 
 <h2 id="Bedenken_zur_Barrierefreiheit">Bedenken zur Barrierefreiheit</h2>
 
 
 
-<p>Vermeiden Sie die Verwendung des <code>tabindex</code>-Attributs in Verbindung mit <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">nichtinteraktiven Inhalten</a>, um Elemente durch die Tastatureingabe interaktiv fokussierbar zu machen, wie etwa zum Beispiel die Verwendung eines {{HTMLElement ("div")}} Elements, um eine Schaltfläche zu erzeugen, anstelle des {{HTMLElement ("button")}} Elements.</p>
+<p>Vermeiden Sie die Verwendung des <code>tabindex</code>-Attributs in Verbindung mit <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">nichtinteraktiven Inhalten</a>, um Elemente durch die Tastatureingabe interaktiv fokussierbar zu machen, wie etwa zum Beispiel die Verwendung eines {{HTMLElement ("div")}} Elements, um eine Schaltfläche zu erzeugen, anstelle des {{HTMLElement ("button")}} Elements.</p>
 
-<p>Interaktive Komponenten, die mit nichtinteraktiven Elementen erstellt wurden, gelangen nicht in der <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> für Eingabehilfen aufgeführt. Dadurch wird verhindert, dass assistive Technologien zu ihnen navigieren und sie manipulieren können. Der Inhalt sollte semantisch mit interaktiven Elementen ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.) beschrieben werden. Diese Elemente verfügen über integrierte Rollen und Zustände, die den Status der Zugänglichkeit mitteilen, die andernfalls durch <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> verwaltet werden müsste.</p>
+<p>Interaktive Komponenten, die mit nichtinteraktiven Elementen erstellt wurden, gelangen nicht in der <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> für Eingabehilfen aufgeführt. Dadurch wird verhindert, dass assistive Technologien zu ihnen navigieren und sie manipulieren können. Der Inhalt sollte semantisch mit interaktiven Elementen ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.) beschrieben werden. Diese Elemente verfügen über integrierte Rollen und Zustände, die den Status der Zugänglichkeit mitteilen, die andernfalls durch <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> verwaltet werden müsste.</p>
 
 <ul>
- <li><a href="https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/">Verwenden des tabindex Attributs | The Paciello Group</a></li>
+ <li><a href="https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/">Verwenden des tabindex Attributs | The Paciello Group</a></li>
 </ul>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
@@ -123,7 +121,7 @@ original_slug: Web/HTML/Globale_Attribute/tabindex
 <h2 id="Siehe_auch">Siehe auch</h2>
 
 <ul>
- <li>Alle <a href="/en-US/docs/Web/HTML/Global_attributes">globalen Attribute</a></li>
+ <li>Alle <a href="/en-US/docs/Web/HTML/Global_attributes">globalen Attribute</a></li>
  <li>{{domxref("HTMLElement.tabIndex")}} das dieses Attribut widerspiegelt</li>
- <li>Accessibility-Probleme mit tabindex: siehe <a href="http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html">Don’t Use Tabindex Greater than 0</a> von Adrian Roselli</li>
+ <li>Accessibility-Probleme mit tabindex: siehe <a href="http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html">Don’t Use Tabindex Greater than 0</a> von Adrian Roselli</li>
 </ul>

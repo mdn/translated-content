@@ -288,9 +288,9 @@ The zoo keeper is like the global scope — he or she has the keys to access eve
 
 Let's look at a real example to demonstrate scoping.
 
-1.  First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single parameter and outputs it in a paragraph on the page.
-2.  Open the example up in a browser and in your text editor.
-3.  Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
+1. First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single parameter and outputs it in a paragraph on the page.
+2. Open the example up in a browser and in your text editor.
+3. Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
 
     ```js
     output(x);
@@ -298,7 +298,7 @@ Let's look at a real example to demonstrate scoping.
 
     You should see the value of variable `x` output to the screen.
 
-4.  Now try entering the following in your console
+4. Now try entering the following in your console
 
     ```js
     output(y);
@@ -307,7 +307,7 @@ Let's look at a real example to demonstrate scoping.
 
     Both of these should return an error along the lines of "[ReferenceError: y is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
 
-5.  However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
+5. However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
 
     ```js
     function a() {
@@ -330,7 +330,7 @@ Let's look at a real example to demonstrate scoping.
 
     You should see the `y` and `z` values output in the page. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
 
-6.  Now try updating your code like this:
+6. Now try updating your code like this:
 
     ```js
     function a() {
@@ -353,7 +353,7 @@ Let's look at a real example to demonstrate scoping.
 
     Both the `a()` and `b()` call should output the value of x — 1. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
 
-7.  Finally, try updating your code like this:
+7. Finally, try updating your code like this:
 
     ```js
     function a() {

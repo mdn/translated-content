@@ -19,29 +19,35 @@ original_slug: Glossary/Header
 
 一个仅包含一个首部的请求：
 
-    GET /example.http HTTP/1.1
-    Host: example.com
+```
+GET /example.http HTTP/1.1
+Host: example.com
+```
 
 重定向请求中必须包含 ({{HTTPHeader("Location")}}) 首部：
 
-    302 Found
-    Location: /NewPage.html
+```
+302 Found
+Location: /NewPage.html
+```
 
 一些典型的首部：
 
-    304 Not Modified
-    Access-Control-Allow-Origin: *
-    Age: 2318192
-    Cache-Control: public, max-age=315360000
-    Connection: keep-alive
-    Date: Mon, 18 Jul 2016 16:06:00 GMT
-    Server: Apache
-    Vary: Accept-Encoding
-    Via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cloudfront.net (CloudFront)
-    X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
-    X-Backend-Server: developer6.webapp.scl3.mozilla.com
-    X-Cache: Hit from cloudfront
-    X-Cache-Info: cached
+```
+304 Not Modified
+Access-Control-Allow-Origin: *
+Age: 2318192
+Cache-Control: public, max-age=315360000
+Connection: keep-alive
+Date: Mon, 18 Jul 2016 16:06:00 GMT
+Server: Apache
+Vary: Accept-Encoding
+Via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
+X-Backend-Server: developer6.webapp.scl3.mozilla.com
+X-Cache: Hit from cloudfront
+X-Cache-Info: cached
+```
 
 ## 参见
 

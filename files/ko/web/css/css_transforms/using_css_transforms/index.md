@@ -538,4 +538,4 @@ section {
 
 ## 더 보기
 
-- [Using device orientation with 3D Transforms](/ko/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms "Using Deviceorientation In 3D Transforms")
+- [Using device orientation with 3D Transforms](/ko/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms)

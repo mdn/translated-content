@@ -1,7 +1,6 @@
 ---
 title: 讓球碰到牆壁後反彈
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 {{GamesSidebar}}
 

@@ -5,7 +5,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
 {{AddonSidebar}}
 
-使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的**[ ](/en-US/docs/Web/HTML/Element/script)**[\<script>](/en-US/docs/Web/HTML/Element/script) 和 [\<object>](/en-US/docs/Web/HTML/Element/object) 的资源来源，并且禁止了潜在的不安全用法如 [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
+使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的 [\<script>](/en-US/docs/Web/HTML/Element/script) 和 [\<object>](/en-US/docs/Web/HTML/Element/object) 的资源来源，并且禁止了潜在的不安全用法如 [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
 这篇文章简单地解释了 CSP 是什么，默认的策略是什么，这对插件来说意味着什么，以及插件如何改变默认 CSP。
 
@@ -51,7 +51,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 对插件的默认内容安全策略如下：
 
-    "script-src 'self'; object-src 'self';"
+```
+"script-src 'self'; object-src 'self';"
+```
 
 这会被应用在任何没有明确在 manifest.json 中的[`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) 项设置自己的内容安全策略的插件中。它有以下几种效果：
 

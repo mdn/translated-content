@@ -69,7 +69,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 ### 在 LocalLibrary 中使用 Mongoose 和 MongoDb
 
-我们将在本地图书馆示例（以及本主题的其余部分）中使用 [Mongoose ODM ](https://www.npmjs.com/package/mongoose)来访问图书馆数据。Mongoose 作为 [MongoDB](https://www.mongodb.com/what-is-mongodb)（面向文档数据模型的开源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 数据库）的前端。MongoDB 数据库里，“集合”中的“文档” [类似于](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) 关系数据库里“表”中的“行”。
+我们将在本地图书馆示例（以及本主题的其余部分）中使用 [Mongoose ODM](https://www.npmjs.com/package/mongoose) 来访问图书馆数据。Mongoose 作为 [MongoDB](https://www.mongodb.com/what-is-mongodb)（面向文档数据模型的开源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 数据库）的前端。MongoDB 数据库里，“集合”中的“文档” [类似于](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) 关系数据库里“表”中的“行”。
 
 这种 ODM 和数据库的结合方式在 Node 社区中非常流行，一定程度上是因为文档存储和查询系统与 JSON 十分相似，因此 JavaScript 开发人员会非常熟悉。
 
@@ -113,7 +113,7 @@ $ npm install mongoose
 
 安装 Mongoose 会添加所有依赖项，包括 MongoDB 数据库驱动程序，但不会安装 MongoDB 本身。要安装 MongoDB 服务器，可以 [点击下载](https://www.mongodb.com/download-center) 各操作系统的安装程序在本地安装。也可以使用云端 MongoDB 实例。
 
-> **备注：** 本教程选用 mLab 提供的 [沙箱级 ](https://mlab.com/plans/pricing/)云端“数据库即服务”（Database as a Service，DBaaS）。它适用于开发环境，且部署过程与操作系统无关（DBaaS 也适用于生产环境）。
+> **备注：** 本教程选用 mLab 提供的 [沙箱级](https://mlab.com/plans/pricing/) 云端“数据库即服务”（Database as a Service，DBaaS）。它适用于开发环境，且部署过程与操作系统无关（DBaaS 也适用于生产环境）。
 
 ### 连接到 MongoDB
 
@@ -517,38 +517,38 @@ SomeModel.find(callback_function);
 
 登录后将进入 [mLab 主屏幕](https://mlab.com/home)：
 
-1.  单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
-2.  将打开 Cloud Provider（云服务提供商）选择屏幕。
+1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+2. 将打开 Cloud Provider（云服务提供商）选择屏幕。
     ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
 
     - 在 Plan Type（方案类型）部分中，选择 SANDBOX（Free）免费沙箱方案。
     - 从 _Cloud Provider_（云服务提供商）部分选择任意提供商。不同地区适用不同提供商（显示在选定的计划类型下面）。
     - 点击 **Continue（继续）**按钮。
 
-3.  此时将打开 _Select Region_（选择区域）屏幕。
+3. 此时将打开 _Select Region_（选择区域）屏幕。
 
     ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
 
     - 选择离你最近的地区，然后 **Continue**。
 
-4.  将打开 Final Details（最后的细节）屏幕。
+4. 将打开 Final Details（最后的细节）屏幕。
     ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
 
     - 输入新数据库的名称 `local_library`，然后 **Continue**。
 
-5.  将打开 _Order Confirmation_（订单确认）屏幕。
+5. 将打开 _Order Confirmation_（订单确认）屏幕。
     ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
 
     - 点击 **Submit Order（提交订单）**以创建数据库。
 
-6.  将返回到主屏幕。点击刚创建的新数据库可以打开详细信息屏幕。当前数据库还没有任何数据。
+6. 将返回到主屏幕。点击刚创建的新数据库可以打开详细信息屏幕。当前数据库还没有任何数据。
 
     ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
 
     表单显示了访问数据库的 URL（上图的红框）。此时可以创建一个用户，并在 URL 中指定用户名，就可以访问这个 URL 了。
 
-7.  点击 **Users** 选项卡，点击 **Add database user** 按钮。
-8.  输入用户名和密码（两次），然后按 **Create**。不要选择 Make _read-only_。
+7. 点击 **Users** 选项卡，点击 **Add database user** 按钮。
+8. 输入用户名和密码（两次），然后按 **Create**。不要选择 Make _read-only_。
     ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
 
 现在数据库已经创建好了，并且有一个可访问的 URL（带有用户名和密码）：`mongodb://<dbuser>:<dbpassword>@ds019038.mlab.com:19038/local_library`
@@ -732,25 +732,25 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
 为了测试这些模型（并添加一些示例藏书和项目，以便后续使用），我们来运行一个单独的脚本来为每种类型创建一些项目：
 
-1.  下载（或新建）文件 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，保存在 express-locallibrary-tutorial 目录（`package.json` 所在位置） 。
+1. 下载（或新建）文件 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，保存在 express-locallibrary-tutorial 目录（`package.json` 所在位置） 。
 
     > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
     >
     > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”， 请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
-2.  在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
+2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 
     ```bash
     $ npm install async
     ```
 
-3.  在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
+3. 在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
 
     ```bash
     $ node populatedb <mongodb url>​​​​
     ```
 
-4.  该脚本应一路运行至完成，并在终端中记录所创建的项目。
+4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。
 
 > **备注：** 打开 [mLab](https://mlab.com/home) 数据库主页面，现在藏书、作者、种类和藏书副本的集合应该都可以打开了，也可以查看单个文档。
 

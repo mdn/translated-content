@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Functions/Pfeilfunktionen
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p>Der <strong>Ausdruck einer Pfeilfunktion</strong> hat eine kürzere Syntax als ein <a href="/de/docs/Web/JavaScript/Reference/Operators/function">Funktionsausdruck</a> und hat kein eigenes <code><a href="/de/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, <a href="/de/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="/de/docs/Web/JavaScript/Reference/Operators/super">super</a>, oder <a href="/de/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>. Solche Funktionsausdrücke sind am besten für Funktionen, die nicht als Methode genutzt werden, geeignet und können nicht als Konstruktoren verwendet werden.</p>
+<p>Der <strong>Ausdruck einer Pfeilfunktion</strong> hat eine kürzere Syntax als ein <a href="/de/docs/Web/JavaScript/Reference/Operators/function">Funktionsausdruck</a> und hat kein eigenes <code><a href="/de/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, <a href="/de/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="/de/docs/Web/JavaScript/Reference/Operators/super">super</a>, oder <a href="/de/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>. Solche Funktionsausdrücke sind am besten für Funktionen, die nicht als Methode genutzt werden, geeignet und können nicht als Konstruktoren verwendet werden.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</div>
 
@@ -128,7 +128,7 @@ f() === window; // oder das globale Objekt</pre>
 
 <h4 id="Aufruf_durch_call_oder_apply">Aufruf durch call oder apply</h4>
 
-<p>Da <code>this</code><em> </em>in Pfeilfunktionen nicht gebunden ist, können <code>call()</code><em> </em>oder <code>apply()</code> Methoden nur Argumente übergeben; <code>this</code> wird ignoriert:</p>
+<p>Da <code>this</code> in Pfeilfunktionen nicht gebunden ist, können <code>call()</code> oder <code>apply()</code> Methoden nur Argumente übergeben; <code>this</code> wird ignoriert:</p>
 
 <pre class="brush: js">var adder = {
   base : 1,
@@ -341,7 +341,7 @@ setTimeout( _ =&gt; {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

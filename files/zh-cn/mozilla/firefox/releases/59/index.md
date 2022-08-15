@@ -18,7 +18,7 @@ translation_of: Mozilla/Firefox/Releases/59
 - [网络监视器](/en-US/docs/Tools/Network_Monitor) 响应标签现在显示一个 [已渲染网页的预览](/en-US/docs/Tools/Network_Monitor#HTML_preview) — 如果响应是一个 HTML 的话 ({{bug(1353319)}}).
 - 存储探查器显示的 Cookie 信息 (见 [Cookies](/en-US/docs/Tools/Storage_Inspector#Cookies)) 现在包括一列 _“同站”_ 显示每个 cookie 的同站状态 ({{bug(1298370)}})。
 - [标尺](/en-US/docs/Tools/Rulers) 工具 现在包含了一个 readout 来显示当前视角的维度 ({{bug(1402633)}})。
-- 在[响应式设计模式 ](/en-US/docs/Tools/Responsive_Design_Mode), 您现在可以使用光标键设置屏幕尺寸 ({{bug(1421663)}})。详见 [Setting screen size](/en-US/docs/Tools/Responsive_Design_Mode#Setting_screen_size) 。
+- 在[响应式设计模式](/en-US/docs/Tools/Responsive_Design_Mode), 您现在可以使用光标键设置屏幕尺寸 ({{bug(1421663)}})。详见 [Setting screen size](/en-US/docs/Tools/Responsive_Design_Mode#Setting_screen_size) 。
 - The _Raw headers_ display in the [Network Monitor](/en-US/docs/Tools/Network_Monitor) _Headers_ tab now includes the response's status code ({{bug(1419401)}}).
 
 ### HTML

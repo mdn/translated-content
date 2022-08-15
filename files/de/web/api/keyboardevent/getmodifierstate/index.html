@@ -5,13 +5,13 @@ translation_of: Web/API/KeyboardEvent/getModifierState
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>Die Methode <code><strong>KeyboardEvent.getModifierState()</strong></code> gibt den aktuellen Zustand des angegebenen Modifikators zurück: <code>true</code>, wenn der Modifikator aktiv ist (d.h. die Modifikationstasten gedrückt oder gesperrt ist), ansonsten <code>false</code>.</p>
+<p>Die Methode <code><strong>KeyboardEvent.getModifierState()</strong></code> gibt den aktuellen Zustand des angegebenen Modifikators zurück: <code>true</code>, wenn der Modifikator aktiv ist (d.h. die Modifikationstasten gedrückt oder gesperrt ist), ansonsten <code>false</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <code><em>active</em> = <em>event</em>.getModifierState(<em>keyArg</em>);</code></pre>
 
-<h3 id="Rückgabe">Rückgabe </h3>
+<h3 id="Rückgabe">Rückgabe </h3>
 
 <p>Einen {{jsxref("Boolean")}}</p>
 
@@ -19,20 +19,20 @@ translation_of: Web/API/KeyboardEvent/getModifierState
 
 <dl>
  <dt><em><code>keyArg</code></em></dt>
- <dd>Ein Modifikatorschlüsselwert. Der Wert muss einer der {{domxref("KeyboardEvent.key")}} Werte sein, die Modifikatorschlüssel darstellen, oder die Zeichenkette "Accel" {{deprecated_inline}}. Dabei wird zwischen Groß- und Kleinschreibung unterschieden.</dd>
+ <dd>Ein Modifikatorschlüsselwert. Der Wert muss einer der {{domxref("KeyboardEvent.key")}} Werte sein, die Modifikatorschlüssel darstellen, oder die Zeichenkette "Accel" {{deprecated_inline}}. Dabei wird zwischen Groß- und Kleinschreibung unterschieden.</dd>
 </dl>
 
 <h2 id="Modifikationstasten_im_Internet_Explorer">Modifikationstasten im Internet Explorer</h2>
 
-<p>IE9 verwendet <code>"Scroll"</code> für <code>"ScrollLock"</code> und <code>"Win"</code> für <code>"OS"</code>.</p>
+<p>IE9 verwendet <code>"Scroll"</code> für <code>"ScrollLock"</code> und <code>"Win"</code> für <code>"OS"</code>.</p>
 
-<h2 id="Modifikationstasten_in_Gecko">Modifikationstasten in Gecko</h2>
+<h2 id="Modifikationstasten_in_Gecko">Modifikationstasten in Gecko</h2>
 
 <table style="width: 100%;">
  <caption>Wann gibt getModifierState() bei Gecko true zurück?</caption>
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th scope="col">Windows</th>
    <th scope="col">Linux (GTK)</th>
    <th scope="col">Mac</th>
@@ -43,15 +43,15 @@ translation_of: Web/API/KeyboardEvent/getModifierState
  <tbody>
   <tr>
    <th scope="row"><code>"Alt"</code></th>
-   <td>Entweder die <kbd>Alt</kbd> oder <kbd>AltGr</kbd> -Taste gedrückt wird</td>
-   <td><kbd>Alt</kbd> -Taste gedrückt wird</td>
-   <td><kbd>⌥ Option</kbd> -Taste gedrückt wird</td>
-   <td colspan="2" rowspan="1"><kbd>Alt</kbd>  oder  <kbd>option</kbd> -Taste gedrückt wird</td>
+   <td>Entweder die <kbd>Alt</kbd> oder <kbd>AltGr</kbd> -Taste gedrückt wird</td>
+   <td><kbd>Alt</kbd> -Taste gedrückt wird</td>
+   <td><kbd>⌥ Option</kbd> -Taste gedrückt wird</td>
+   <td colspan="2" rowspan="1"><kbd>Alt</kbd>  oder  <kbd>option</kbd> -Taste gedrückt wird</td>
   </tr>
   <tr>
    <th scope="row"><code>"AltGraph"</code></th>
    <td>
-    <p>Sowohl die <kbd>Alt</kbd> als auch die <kbd>Strg</kbd>  werden gedrückt, oder die <kbd>AltGr</kbd> Taste wird gedrückt</p>
+    <p>Sowohl die <kbd>Alt</kbd> als auch die <kbd>Strg</kbd>  werden gedrückt, oder die <kbd>AltGr</kbd> Taste wird gedrückt</p>
    </td>
    <td><kbd>Level 3 Shift</kbd> Taste (or <kbd>Level 5 Shift</kbd> Taste {{gecko_minversion_inline("20.0")}}) wird gedrückt</td>
    <td><kbd>⌥ Option</kbd> Taste wird gedrückt</td>
@@ -59,17 +59,17 @@ translation_of: Web/API/KeyboardEvent/getModifierState
   </tr>
   <tr>
    <th scope="row"><code>"CapsLock"</code></th>
-   <td colspan="3" style="text-align: center;">Während die LED für <kbd>⇪ Caps Lock</kbd> leuchtet</td>
+   <td colspan="3" style="text-align: center;">Während die LED für <kbd>⇪ Caps Lock</kbd> leuchtet</td>
    <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Nicht unterstützt</em></td>
-   <td>Solange <kbd>⇪ Caps Lock</kbd> gesperrt ist {{gecko_minversion_inline("29.0")}}</td>
+   <td>Solange <kbd>⇪ Caps Lock</kbd> gesperrt ist {{gecko_minversion_inline("29.0")}}</td>
   </tr>
   <tr>
    <th scope="row"><code>"Control"</code></th>
-   <td>Entweder die <kbd>Strg</kbd>  oder <kbd>AltGr</kbd> -Taste wird gedrückt</td>
+   <td>Entweder die <kbd>Strg</kbd>  oder <kbd>AltGr</kbd> -Taste wird gedrückt</td>
    <td><kbd>Strg</kbd> Taste wird gedrückt</td>
    <td><kbd>control</kbd> Taste wird gedrückt</td>
    <td><kbd>menu</kbd> Taste wird gedrückt.</td>
-   <td><kbd>Strg</kbd>, <kbd>control</kbd>  oder <kbd>menu</kbd> Taste wird gedrückt.</td>
+   <td><kbd>Strg</kbd>, <kbd>control</kbd>  oder <kbd>menu</kbd> Taste wird gedrückt.</td>
   </tr>
   <tr>
    <th scope="row"><code>"Fn"</code></th>
@@ -89,29 +89,29 @@ translation_of: Web/API/KeyboardEvent/getModifierState
    <th scope="row"><code>"Meta"</code></th>
    <td style="background-color: rgb(204, 204, 204); text-align: center;"><em>Nicht unterstützt</em></td>
    <td style="text-align: center;"><kbd>Meta</kbd> Taste wird gedrückt {{gecko_minversion_inline("17.0")}}</td>
-   <td><kbd>⌘ Command</kbd> Taste wird gedrückt</td>
+   <td><kbd>⌘ Command</kbd> Taste wird gedrückt</td>
    <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Nicht unterstützt</em></td>
-   <td><kbd>⊞ Windows Logo</kbd>  or <kbd>command</kbd> Taste gedrückt wird</td>
+   <td><kbd>⊞ Windows Logo</kbd>  or <kbd>command</kbd> Taste gedrückt wird</td>
   </tr>
   <tr>
    <th scope="row"><code>"NumLock"</code></th>
    <td colspan="2" style="text-align: center;">Während die LED für <kbd>Num Lock</kbd> leuchtet</td>
    <td>Eine Taste auf dem Nummerblock gedrückt wird</td>
    <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Nicht unterstützt</em></td>
-   <td>Solange <kbd>NumLock</kbd> gesperrt ist {{gecko_minversion_inline("29.0")}}</td>
+   <td>Solange <kbd>NumLock</kbd> gesperrt ist {{gecko_minversion_inline("29.0")}}</td>
   </tr>
   <tr>
    <th scope="row"><code>"OS"</code></th>
    <td><kbd>⊞ Windows Logo</kbd> Taste wird gedrückt</td>
-   <td><kbd>Super</kbd> or <kbd>Hyper</kbd> Taste wird gedrückt (normalerweise auf der <kbd>⊞ Windows Logo</kbd> Taste zugeordnet)</td>
+   <td><kbd>Super</kbd> or <kbd>Hyper</kbd> Taste wird gedrückt (normalerweise auf der <kbd>⊞ Windows Logo</kbd> Taste zugeordnet)</td>
    <td colspan="3" rowspan="1" style="background-color: rgb(204, 204, 204); text-align: center;"><em>Nicht unterstützt</em></td>
   </tr>
   <tr>
    <th scope="row"><code>"ScrollLock"</code></th>
    <td>Während die LED für <kbd>ScrollLock</kbd> leuchtet</td>
-   <td>Während die LED für <kbd>ScrollLock</kbd> leuchtet, aber normalerweise wird dies von der Plattform nicht unterstützt </td>
+   <td>Während die LED für <kbd>ScrollLock</kbd> leuchtet, aber normalerweise wird dies von der Plattform nicht unterstützt </td>
    <td colspan="2" style="background-color: rgb(204, 204, 204); text-align: center;"><em>Nicht unterstützt</em></td>
-   <td>Solange <kbd>ScrollLock</kbd> gesperrt {{gecko_minversion_inline("29.0")}}</td>
+   <td>Solange <kbd>ScrollLock</kbd> gesperrt {{gecko_minversion_inline("29.0")}}</td>
   </tr>
   <tr>
    <th scope="row"><code>"Shift"</code></th>
@@ -139,7 +139,7 @@ translation_of: Web/API/KeyboardEvent/getModifierState
 
 <h2 id="Accel_virtueller_Modifikator"><code>"Accel"</code> virtueller Modifikator</h2>
 
-<div class="note"><strong>Notiz</strong><strong>:</strong> Der virtuelle Modifikator <code>"Accel"</code> ist in den aktuellen Entwürfen der DOM3 Events-Spezifikation praktisch <strong>veraltet</strong>.</div>
+<div class="note"><strong>Notiz</strong><strong>:</strong> Der virtuelle Modifikator <code>"Accel"</code> ist in den aktuellen Entwürfen der DOM3 Events-Spezifikation praktisch <strong>veraltet</strong>.</div>
 
 <p><code>getModifierState()</code> also accepts a deprecated virtual modifier named <code>"Accel"</code>. <code>event.getModifierState("Accel")</code> returns <code>true</code> when at least one of {{domxref("KeyboardEvent.ctrlKey")}} or {{domxref("KeyboardEvent.metaKey")}} is <code>true</code>.</p>
 
@@ -213,7 +213,7 @@ if ((event.getModifierState("ScrollLock") ||
 </pre>
 
 <div class="note">
-<p>Obwohl dieses Beispiel <code>.getModifierState()</code> mit <code>"Alt"</code>, <code>"Control"</code>, <code>"Meta"</code> und <code>"Shift"</code> verwendet, ist es vielleicht besser, <code>altKey</code>, <code>ctrlKey</code>, <code>metaKey</code> und <code>shiftKey</code> zu verwenden, da sie kürzer und vielleicht schneller sind.</p>
+<p>Obwohl dieses Beispiel <code>.getModifierState()</code> mit <code>"Alt"</code>, <code>"Control"</code>, <code>"Meta"</code> und <code>"Shift"</code> verwendet, ist es vielleicht besser, <code>altKey</code>, <code>ctrlKey</code>, <code>metaKey</code> und <code>shiftKey</code> zu verwenden, da sie kürzer und vielleicht schneller sind.</p>
 </div>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>

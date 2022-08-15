@@ -1,16 +1,6 @@
 ---
 title: WritableStreamDefaultWriter.desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
-page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - desiredSize
-translation_of: Web/API/WritableStreamDefaultWriter/desiredSize
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

@@ -130,7 +130,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 与普通的页面内脚本不同，Content scripts 可以：
 
 - 执行跨域访问
-- 使用 [WebExtension APIs ](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API)中的一小部分
+- 使用 [WebExtension APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API) 中的一小部分
 - [通过与后台脚本交换信息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts)的方式，间接地使用所有 WebExtension API
 
 内容脚本无法直接访问普通网页中的脚本，但是可以通过 [`window.postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) API 来与之传递信息。

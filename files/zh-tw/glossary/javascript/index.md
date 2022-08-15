@@ -23,7 +23,7 @@ JavaScript 通常用於瀏覽器，使開發者能透過 {{Glossary("DOM")}} 操
 
 ### 學習 JavaScript
 
-- MDN 的 {{Link("/zh-TW/docs/Web/JavaScript/Guide")}}
+- MDN 的 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)
 - [NodeSchool 的 javascripting 工作坊](http://nodeschool.io/#workshoppers)
 - [codecademy.com 的 JavaScript 課程](http://www.codecademy.com/tracks/javascript)
 - [John Resig 的 Learning Advanced JavaScript](http://ejohn.org/apps/learn/)
@@ -31,5 +31,5 @@ JavaScript 通常用於瀏覽器，使開發者能透過 {{Glossary("DOM")}} 操
 ### 技術參考
 
 - [最新的 ECMAScript 標準](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- MDN 的 {{Link("/zh-TW/docs/Web/JavaScript/reference")}}
+- MDN 的 [JavaScript 參考文件](/zh-TW/docs/Web/JavaScript/reference)
 - [_Eloquent JavaScript_ 一書](http://eloquentjavascript.net/)

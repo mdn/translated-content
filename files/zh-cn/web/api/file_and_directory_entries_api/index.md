@@ -1,14 +1,6 @@
 ---
 title: 文件与目录条目 API
 slug: Web/API/File_and_Directory_Entries_API
-tags:
-  - API
-  - File
-  - Files
-  - 参考
-  - 文件
-  - 非标准
-translation_of: Web/API/File_and_Directory_Entries_API
 ---
 {{DefaultAPISidebar("File and Directory Entries API")}}
 

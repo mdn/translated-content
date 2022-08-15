@@ -59,16 +59,16 @@ To turn it on, select _Settings > Accessibility > TalkBack_, and then press the 
 
 When TalkBack is turned on, your Android device's basic controls will be a bit different. For example:
 
-1.  Single-tapping an app will select it, and the device will read out what the app is.
-2.  Swiping left and right will move between apps, or buttons/controls if you are in a control bar. The device will read out each option.
-3.  Double-tapping anywhere will open the app/select the option.
-4.  You can also "explore by touch" — hold your finger down on the screen and drag it around, and your device will read out the different apps/items you move across.
+1. Single-tapping an app will select it, and the device will read out what the app is.
+2. Swiping left and right will move between apps, or buttons/controls if you are in a control bar. The device will read out each option.
+3. Double-tapping anywhere will open the app/select the option.
+4. You can also "explore by touch" — hold your finger down on the screen and drag it around, and your device will read out the different apps/items you move across.
 
 If you want to turn TalkBack off:
 
-1.  Navigate to your _Settings_ app using the above gestures.
-2.  Navigate to _Accessibility > TalkBack_.
-3.  Navigate to the slider switch and activate it to turn it off.
+1. Navigate to your _Settings_ app using the above gestures.
+2. Navigate to _Accessibility > TalkBack_.
+3. Navigate to the slider switch and activate it to turn it off.
 
 **Note:** You can get to your homescreen at any time by swiping up and left in a smooth motion. If you have more than one homescreen, you can move between them by swiping two fingers left and right.
 
@@ -88,10 +88,10 @@ TalkBack allows you to access global and local context menus, wherever you have 
 
 To get to these menus:
 
-1.  Access the global menu by quickly swiping down, and then right.
-2.  Access the local menu by quickly swiping up, and then right.
-3.  Swipe left and right to cycle between the different options.
-4.  Once you've selected the option you want, double-click to choose that option.
+1. Access the global menu by quickly swiping down, and then right.
+2. Access the local menu by quickly swiping up, and then right.
+3. Swipe left and right to cycle between the different options.
+4. Once you've selected the option you want, double-click to choose that option.
 
 For details on all the options available under the global and local context menus, see [Use global and local context menus](https://support.google.com/accessibility/android/answer/6007066).
 
@@ -101,19 +101,19 @@ You can use the local context menu while in a web browser to find options to nav
 
 For example, with TalkBack turned on:
 
-1.  Open your web browser.
-2.  Activate the URL bar.
-3.  Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
+1. Open your web browser.
+2. Activate the URL bar.
+3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
     - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
     - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
     - Once you've finished, find the Enter key and press it.
 
-4.  Swipe left and right to move between different items on the page.
-5.  Swipe up and right with a smooth motion to enter the local content menu.
-6.  Swipe right until you find the "Headings and Landmarks" option.
-7.  Double-tap to select it. Now you'll be able to swipe left and right to move between headings and ARIA landmarks.
-8.  To go back to the default mode, enter the local context menu again by swiping up and right, select "Default", and then double-tap to activate.
+4. Swipe left and right to move between different items on the page.
+5. Swipe up and right with a smooth motion to enter the local content menu.
+6. Swipe right until you find the "Headings and Landmarks" option.
+7. Double-tap to select it. Now you'll be able to swipe left and right to move between headings and ARIA landmarks.
+8. To go back to the default mode, enter the local context menu again by swiping up and right, select "Default", and then double-tap to activate.
 
 **Note:** See [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) for more complete documentation.
 
@@ -125,11 +125,11 @@ To turn it on, go to Your _Settings_ app and select _General > Accessibility > V
 
 Once VoiceOver is enabled, the iOS's basic control gestures will be a bit different:
 
-1.  A single tap will cause the item you tap on to be selected; your device will speak the item you've tapped on.
-2.  You can also navigate the items on the screen by swiping left and right to move between them, or by sliding your finger around on the screen to move between different items (when you find the item you want, you can remove your finger to select it).
-3.  To activate the selected item (e.g., open a selected app), double-tap anywhere on the screen.
-4.  Swipe with three fingers to scroll through a page.
-5.  Tap with two fingers to perform a context-relevant action — for example, taking a photo while in the camera app.
+1. A single tap will cause the item you tap on to be selected; your device will speak the item you've tapped on.
+2. You can also navigate the items on the screen by swiping left and right to move between them, or by sliding your finger around on the screen to move between different items (when you find the item you want, you can remove your finger to select it).
+3. To activate the selected item (e.g., open a selected app), double-tap anywhere on the screen.
+4. Swipe with three fingers to scroll through a page.
+5. Tap with two fingers to perform a context-relevant action — for example, taking a photo while in the camera app.
 
 To turn it off again, navigate back to _Settings > General > Accessibility > VoiceOver_ using the above gestures, and toggle the _VoiceOver_ slider back to off.
 
@@ -141,8 +141,8 @@ To unlock the phone, you need to press the home button (or swipe) as normal. If 
 
 When VoiceOver is turned on, you have a navigation feature called the Rotor available to you, which allows you to quickly choose from a number of common useful options. To use it:
 
-1.  Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
-2.  Once you've found the option you want:
+1. Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
+2. Once you've found the option you want:
 
     - Release your fingers to select it.
     - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
@@ -153,17 +153,17 @@ The options available under the Rotor are context-sensitive — they will differ
 
 Let's have a go at web browsing with VoiceOver:
 
-1.  Open your web browser.
-2.  Activate the URL bar.
-3.  Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
+1. Open your web browser.
+2. Activate the URL bar.
+3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
     - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
     - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
     - Once you've finished, find the Enter key and press it.
 
-4.  Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
-5.  By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
-6.  Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
+4. Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
+5. By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
+6. Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
 
     - _Speaking Rate_: Change the speaking rate.
     - _Containers_: Move between different semantic containers on the page.
@@ -172,7 +172,7 @@ Let's have a go at web browsing with VoiceOver:
     - _Form Controls_: Move between form controls on the page.
     - _Language_: Move between different translations, if they are available.
 
-7.  Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
+7. Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
 
 **Note:** For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
 

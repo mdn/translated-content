@@ -63,11 +63,11 @@ translation_of: Learn/Server-side/Django/Deployment
 
 相对于 PaaS，一些开发人员会选择 IaaS 所提供的更高灵活性，而其他开发人员，则欣赏 PaaS 降低的维护开销，和更轻松地扩展。当您开始使用时，在 PaaS 系统上设置您的网站，要容易得多，因此我们将在本教程中这么做。
 
-> **备注：** 如果您选择一个 Python/Django 友好的托管服务提供商，他们应该提供有关如何使用不同配置的网络服务器，应用服务器，反向代理等设置 Django 网站的说明（如果您选择 PaaS，这就没有关系了）。例如，[Digital Ocean Django 社区文档 ](https://www.digitalocean.com/community/tutorials?q=django)中的各种配置，有许多手把手指南。
+> **备注：** 如果您选择一个 Python/Django 友好的托管服务提供商，他们应该提供有关如何使用不同配置的网络服务器，应用服务器，反向代理等设置 Django 网站的说明（如果您选择 PaaS，这就没有关系了）。例如，[Digital Ocean Django 社区文档](https://www.digitalocean.com/community/tutorials?q=django) 中的各种配置，有许多手把手指南。
 
 ## 选择托管服务提供商
 
-已知有超过 100 个托管服务提供商，积极支持或与 Django 合作（您可以在 [Djangofriendly hosts ](http://djangofriendly.com/hosts/)主机上，找到相当广泛的列表）。这些供应商提供不同类型的环境（IaaS，PaaS），以及不同价格、不同级别的计算和网络资源。
+已知有超过 100 个托管服务提供商，积极支持或与 Django 合作（您可以在 [Djangofriendly hosts](http://djangofriendly.com/hosts/) 主机上，找到相当广泛的列表）。这些供应商提供不同类型的环境（IaaS，PaaS），以及不同价格、不同级别的计算和网络资源。
 
 选择主机时需要考虑的一些事项：
 
@@ -98,15 +98,17 @@ translation_of: Learn/Server-side/Django/Deployment
 - `DEBUG`. 这应该在生产环境中设置为 `False`（`DEBUG = False`）。这将停止显示敏感/机密调试跟踪和变量信息。
 - `SECRET_KEY`. 这是用于 CRSF 保护等的大随机值。重要的是，生产中使用的密钥，不应在源代码管理中、或在生产服务器外部可访问。Django 文档表明，可能最好从环境变量加载，或从仅供服务的文件中读取。
 
-      # Read SECRET_KEY from an environment variable
-      import os
-      SECRET_KEY = os.environ['SECRET_KEY']
+  ```python
+  # Read SECRET_KEY from an environment variable
+  import os
+  SECRET_KEY = os.environ['SECRET_KEY']
 
-      #OR
+  #OR
 
-      #Read secret key from a file
-      with open('/etc/secret_key.txt') as f:
-          SECRET_KEY = f.read().strip()
+  #Read secret key from a file
+  with open('/etc/secret_key.txt') as f:
+      SECRET_KEY = f.read().strip()
+  ```
 
 让我们更改 LocalLibrary 应用程序，以便我们从环境变量中，读取`SECRET_KEY` 和 `DEBUG`变量（如果已定义），否则使用配置文件中的默认值。
 
@@ -139,7 +141,7 @@ python3 manage.py check --deploy
 
 ## 示例：在 Heroku 上安装 LocalLibrary
 
-本节提供了如何在 [Heroku PaaS cloud ](http://heroku.com)云上安装 LocalLibrary 的实际演示。
+本节提供了如何在 [Heroku PaaS cloud](http://heroku.com) 云上安装 LocalLibrary 的实际演示。
 
 ### 为何选择 Heroku？
 
@@ -162,7 +164,7 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
 ### Heroku 是如何工作的？
 
-Heroku 在一个或多个“[Dynos](https://devcenter.heroku.com/articles/dynos)”中，运行 Django 网站，这是一个独立的虚拟化 Unix 容器，提供运行应用程序所需的环境。[Dynos ](https://devcenter.heroku.com/articles/dynos)是完全隔离的，并且有一个短暂的文件系统（一个短暂的文件系统，每次 dyno 重新启动时，都会清理/清空）。Dynos 默认共享的唯一内容，是应用程序配置变量。Heroku 内部使用负载均衡器，将 Web 流量分配给所有“web”dynos。由于他们之间没有任何共享，Heroku 可以通过添加更多 dynos，来水平扩展应用程序（当然，您可能还需要扩展数据库，以接受其他连接）。
+Heroku 在一个或多个“[Dynos](https://devcenter.heroku.com/articles/dynos)”中，运行 Django 网站，这是一个独立的虚拟化 Unix 容器，提供运行应用程序所需的环境。[Dynos](https://devcenter.heroku.com/articles/dynos) 是完全隔离的，并且有一个短暂的文件系统（一个短暂的文件系统，每次 dyno 重新启动时，都会清理/清空）。Dynos 默认共享的唯一内容，是应用程序配置变量。Heroku 内部使用负载均衡器，将 Web 流量分配给所有“web”dynos。由于他们之间没有任何共享，Heroku 可以通过添加更多 dynos，来水平扩展应用程序（当然，您可能还需要扩展数据库，以接受其他连接）。
 
 由于文件系统是暂时的，因此无法直接安装应用程序所需的服务（例如数据库，队列，缓存系统，存储，电子邮件服务等）。取代的是，Heroku Web 应用程序，使用 Heroku 或第三方作为独立“附加组件”提供的支持服务。一旦连接到 Web 应用程序，dynos 就会使用应用程序配置变量中包含的信息，来访问服务。
 
@@ -170,8 +172,8 @@ Heroku 在一个或多个“[Dynos](https://devcenter.heroku.com/articles/dynos)
 
 - **runtime.txt**：要使用的编程语言和版本。
 - **requirements.txt**: Python 组件依赖项，包括 Django。
-- **Procfile**: 启动 Web 应用程序要执行的进程列表。对于 Django，这通常是 Gunicorn Web 应用程序服务器（带有 `.wsgi `脚本）。
-- **wsgi.py**: 在 Heroku 环境中，调用我们的 Django 应用程序的 [WSGI ](http://wsgi.readthedocs.io/en/latest/what.html)配置。
+- **Procfile**: 启动 Web 应用程序要执行的进程列表。对于 Django，这通常是 Gunicorn Web 应用程序服务器（带有 `.wsgi` 脚本）。
+- **wsgi.py**: 在 Heroku 环境中，调用我们的 Django 应用程序的 [WSGI](http://wsgi.readthedocs.io/en/latest/what.html) 配置。
 
 开发人员使用特殊的客户端应用程序/终端与 Heroku 交互，这很像 Unix bash 脚本。这允许您上传存在 git 储存库中的代码，检查正在运行的进程，查看日志，设置配置变量等等！
 
@@ -191,23 +193,23 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 有很多方法可以使用 git，但最简单的方法之一，是首先在 [Github](https://github.com/) 上建立一个帐户，在那里创建储存库，然后将它同步到本地：
 
-1.  访问 <https://github.com/> 并创建一个帐户。
-2.  登录后，点击顶部工具栏中的 + 链接，然后选择新建储存库 **New repository**。
-3.  填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
+1. 访问 <https://github.com/> 并创建一个帐户。
+2. 登录后，点击顶部工具栏中的 + 链接，然后选择新建储存库 **New repository**。
+3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
 
     - 输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。
     - 在 Add .gitignore 选择列表中，选择 **Python**。
     - 在添加许可证选择列表中，选择您想要的许可证。
     - 选中使用自述文件初始化此储存库（**Initialize this repository with a README）**。
 
-4.  点击 **Create repository**.
-5.  点击新仓库页面上的绿色“克隆或下载”（**Clone or download**）按钮。
-6.  从显示的对话框中的文本字段中复制 URL 值（它应该类似于： **https\://github.com/_\<your_git_user_id>_/django_local_library.git**）。
+4. 点击 **Create repository**.
+5. 点击新仓库页面上的绿色“克隆或下载”（**Clone or download**）按钮。
+6. 从显示的对话框中的文本字段中复制 URL 值（它应该类似于： **https\://github.com/_\<your_git_user_id>_/django_local_library.git**）。
 
 现在创建了储存库（“repo”），我们将要在本地计算机上克隆它：
 
-1.  为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
-2.  打开命令提示符/终端，并使用您在上面复制的 URL 克隆储存库：
+1. 为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
+2. 打开命令提示符/终端，并使用您在上面复制的 URL 克隆储存库：
 
     ```bash
     git clone https://github.com/<your_git_user_id>/django_local_library.git
@@ -215,7 +217,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
     这将在当前目录下方创建储存库。
 
-3.  切换目录，到新的仓库。
+3. 切换目录，到新的仓库。
 
     ```bash
     cd django_local_library
@@ -223,8 +225,8 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 最后一步是复制你的应用程序，然后使用 git，将文件添加到你的仓库：
 
-1.  将您的 Django 应用程序，复制到此文件夹（与 **manage.py** 级别相同的、和以下级别的所有文件，而**不是**包含 locallibrary 文件夹的文件）。
-2.  打开 **.gitignore** 文件，将以下几行复制到其底部，然后保存（此文件用于标识默认情况下，不应上传到 git 的文件）。
+1. 将您的 Django 应用程序，复制到此文件夹（与 **manage.py** 级别相同的、和以下级别的所有文件，而**不是**包含 locallibrary 文件夹的文件）。
+2. 打开 **.gitignore** 文件，将以下几行复制到其底部，然后保存（此文件用于标识默认情况下，不应上传到 git 的文件）。
 
     ```
     # Text backup files
@@ -234,36 +236,40 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
     *.sqlite3
     ```
 
-3.  打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
+3. 打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
 
     ```bash
     git add -A
     ```
 
-4.  使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
+4. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
-        > git status
-        On branch master
-        Your branch is up-to-date with 'origin/master'.
-        Changes to be committed:
-          (use "git reset HEAD <file>..." to unstage)
+    ```
+    > git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
 
-                modified:   .gitignore
-                new file:   catalog/__init__.py
-                ...
-                new file:   catalog/migrations/0001_initial.py
-                ...
-                new file:   templates/registration/password_reset_form.html
+            modified:   .gitignore
+            new file:   catalog/__init__.py
+            ...
+            new file:   catalog/migrations/0001_initial.py
+            ...
+            new file:   templates/registration/password_reset_form.html
+    ```
 
-5.  如果您满意，请将文件提交到本地储存库：
+5. 如果您满意，请将文件提交到本地储存库：
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  然后使用以下内容，将本地储存库同步到 Github 网站：
+6. 然后使用以下内容，将本地储存库同步到 Github 网站：
 
-        git push origin master
+    ```bash
+    git push origin master
+    ```
 
 完成此操作后，您应该可以返回创建储存库的 Github 上的页面，刷新页面，并看到您的整个应用程序已经上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新储存库。
 
@@ -281,7 +287,9 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 在 GitHub 储存库的根目录中，创建文件`Procfile`（无扩展名），以声明应用程序的进程类型和入口点。将以下文本复制到其中：
 
-    web: gunicorn locallibrary.wsgi --log-file -
+```
+web: gunicorn locallibrary.wsgi --log-file -
+```
 
 “`web:`”告诉 Heroku，这是一个 web dyno，可以发送 HTTP 流量。在这个 dyno 中启动的进程，是 gunicorn，这是 Heruko 推荐的一种流行的 Web 应用程序服务器。我们使用模块 `locallibrary.wsgi`（使用我们的应用程序框架创建：**/locallibrary/wsgi.py** ）中的配置信息启动 Gunicorn。
 
@@ -303,7 +311,7 @@ pip3 install gunicorn
 
 处理这种情况的 Heroku 机制，是使用[数据库加载项](https://elements.heroku.com/addons#data-stores)，并使用来自加载项设置的环境[配置变量](https://devcenter.heroku.com/articles/config-vars)的信息，来配置 Web 应用程序。有很多数据库选项，但我们将使用 Heroku postgres 数据库的[爱好者等级](https://devcenter.heroku.com/articles/heroku-postgres-plans#plan-tiers)，因为它是免费的，被 Django 所支持，并在使用免费的爱好者 dyno 计划等级时，会自动添加到新的 Heroku 应用程序。
 
-使用名为`DATABASE_URL`的配置变量，将数据库连接信息提供给 Web dyno。Heroku 建议开发人员使用 [dj-database-url ](https://warehouse.python.org/project/dj-database-url/)套件包，以解析`DATABASE_URL`环境变量，并自动将其转换为 Django 所需的配置格式，而不是将此信息硬编码到 Django 中。除了安装 dj-database-url 套件包之外，我们还需要安装[psycopg2](http://initd.org/psycopg/)，因为 Django 需要它与 Postgres 数据库进行交互。
+使用名为`DATABASE_URL`的配置变量，将数据库连接信息提供给 Web dyno。Heroku 建议开发人员使用 [dj-database-url](https://warehouse.python.org/project/dj-database-url/) 套件包，以解析`DATABASE_URL`环境变量，并自动将其转换为 Django 所需的配置格式，而不是将此信息硬编码到 Django 中。除了安装 dj-database-url 套件包之外，我们还需要安装[psycopg2](http://initd.org/psycopg/)，因为 Django 需要它与 Postgres 数据库进行交互。
 
 ##### dj-database-url (Django database configuration from environment variable)
 
@@ -331,7 +339,7 @@ DATABASES['default'].update(db_from_env)
 
 ##### psycopg2 (Python Postgres database support)
 
-Django 需要 psycopg2 来处理 Postgres 数据库，你需要将它添加到[requirements.txt ](#requirements)中，以便 Heroku 在远程服务器上进行设置（如下面的 requirements 部分所述）。
+Django 需要 psycopg2 来处理 Postgres 数据库，你需要将它添加到[requirements.txt](#requirements) 中，以便 Heroku 在远程服务器上进行设置（如下面的 requirements 部分所述）。
 
 Django 默认会在本地使用我们的 SQLite 数据库，因为我们的本地环境中，没有设置`DATABASE_URL`环境变量。如果您想完全切换到 Postgres，并使用我们的 Heroku 免费等级数据库，进行开发和生产，那么您可以这么做。例如，要在基于 Linux 的系统上，本地安装 psycopg2 及其依赖项，您将使用以下 bash / terminal 命令：
 
@@ -340,7 +348,7 @@ sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contr
 pip3 install psycopg2
 ```
 
-有关其他平台的安装说明，请访问 [psycopg2 ](http://initd.org/psycopg/docs/install.html)网站。
+有关其他平台的安装说明，请访问 [psycopg2](http://initd.org/psycopg/docs/install.html) 网站。
 
 但是，您不需要这样做 - 您不需要在本地计算机上激活 PostGreSQL，只要将其作为要求（requirement）提供给 Heroku，请参阅`requirements.txt`（见下文）。
 
@@ -360,7 +368,7 @@ pip3 install psycopg2
 
 ##### settings.py
 
-打开 **/locallibrary/settings.py**，并将以下配置，复制到文件的底部。 `BASE_DIR `应该已经在您的文件中定义了（`STATIC_URL`可能已经在文件创建时已经定义。虽然它不会造成任何伤害，但您也可以删除重复的先前引用）。
+打开 **/locallibrary/settings.py**，并将以下配置，复制到文件的底部。 `BASE_DIR` 应该已经在您的文件中定义了（`STATIC_URL`可能已经在文件创建时已经定义。虽然它不会造成任何伤害，但您也可以删除重复的先前引用）。
 
 ```python
 # Static files (CSS, JavaScript, Images)
@@ -389,7 +397,9 @@ Whitenoise
 
 使用以下命令在本地安装 whitenoise：
 
-    $ pip3 install whitenoise
+```bash
+$ pip3 install whitenoise
+```
 
 ##### settings.py
 

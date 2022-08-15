@@ -9,7 +9,7 @@ translation_of: Web/API/Window/sessionStorage
 ---
 <p>{{APIRef()}}</p>
 
-<p>Die <code>sessionStorage</code>-Eigenschaft erlaubt den Zugriff auf ein nur während der aktuellen Sitzung verfügbares <a class="new" href="https://developer.mozilla.org/de/docs/Web/API/Storage" title="Die Beschreibung hierüber wurde bisher noch nicht geschrieben; bitte erwäge, mitzuwirken!"><code>Storage</code></a>-Objekt. <code>sessionStorage</code> ist mit einer Ausnahme identisch zu {{domxref("Window.localStorage")}}: In <code>localStorage</code> gespeicherte Daten besitzen kein Verfallsdatum, während sie im <code>sessionStorage</code> mit Ablauf der Sitzung gelöscht werden. Eine Sitzung endet erst mit dem Schließen des Browsers, sie übersteht das Neuladen und Wiederherstellen einer Webseite. <strong>Das Öffnen einer Webseite in einem neuen Tab oder Browserfenster erzeugt jedoch eine neue Sitzung;</strong> ein Unterschied zur Funktionsweise von Session-Cookies<strong>.</strong></p>
+<p>Die <code>sessionStorage</code>-Eigenschaft erlaubt den Zugriff auf ein nur während der aktuellen Sitzung verfügbares <a class="new" href="https://developer.mozilla.org/de/docs/Web/API/Storage" title="Die Beschreibung hierüber wurde bisher noch nicht geschrieben; bitte erwäge, mitzuwirken!"><code>Storage</code></a>-Objekt. <code>sessionStorage</code> ist mit einer Ausnahme identisch zu {{domxref("Window.localStorage")}}: In <code>localStorage</code> gespeicherte Daten besitzen kein Verfallsdatum, während sie im <code>sessionStorage</code> mit Ablauf der Sitzung gelöscht werden. Eine Sitzung endet erst mit dem Schließen des Browsers, sie übersteht das Neuladen und Wiederherstellen einer Webseite. <strong>Das Öffnen einer Webseite in einem neuen Tab oder Browserfenster erzeugt jedoch eine neue Sitzung;</strong> ein Unterschied zur Funktionsweise von Session-Cookies<strong>.</strong></p>
 
 <p><code>localStorage</code> und <code>sessionStorage</code> sind nicht nur von der Domain, sondern auch vom Protokoll abhängig, über das die Seite aufgerufen wurde. In http://example.com/ gespeicherte Daten stehen daher unter https://example.com <em>nicht</em> zur Verfügung.</p>
 
@@ -71,7 +71,7 @@ field.addEventListener("change", function() {
   <tr>
    <td>{{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}}</td>
    <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

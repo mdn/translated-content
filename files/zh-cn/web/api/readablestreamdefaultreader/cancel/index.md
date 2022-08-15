@@ -1,14 +1,6 @@
 ---
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - cancel
-translation_of: api/ReadableStreamDefaultReader/cancel
 ---
 {{APIRef("Streams")}}
 
