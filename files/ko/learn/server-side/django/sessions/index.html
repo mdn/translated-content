@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 <h2 id="세션_사용하기">세션 사용하기</h2>
 
-<p><code>session</code> 속성은 <code>request</code> parameter 에서 파생된 view 안에 있습니다. ( view 로 전달되는 H<code>ttpRequest </code>  의 첫번째 함수 ). 이 세션의 속성은 현재의 사용자(정확히는 브라우저) 의 site 에 대한 connection 을 의미합니다. 브라우저의 cookie 안에 정의 되어 있습니다.</p>
+<p><code>session</code> 속성은 <code>request</code> parameter 에서 파생된 view 안에 있습니다. ( view 로 전달되는 <code>HttpRequest</code>  의 첫번째 함수 ). 이 세션의 속성은 현재의 사용자(정확히는 브라우저) 의 site 에 대한 connection 을 의미합니다. 브라우저의 cookie 안에 정의 되어 있습니다.</p>
 
 <p>이 <code>session</code>  속성은 사전 같은 객체인데 여러번 읽고 쓰고 심지어 수정까지 가능합니다.여러분은 다양한 dictionary 연산 - 즉, 모든 데이타 삭제, Key 가 존재하는지 데이타를 통한 looping 기타등등. 무엇보다 표준적인 "dictionary" API 를 통해 값을 가져오거나 저장 할 수 있습니다.</p>
 
