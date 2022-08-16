@@ -1,14 +1,6 @@
 ---
 title: Entity
 slug: Glossary/Entity
-tags:
-  - Entity
-  - Glossary
-  - HTML
-  - HTML 实体
-  - 字符实体
-  - 实体
-translation_of: Glossary/Entity
 ---
 {{glossary("HTML")}} 实体是一段以连字号（`&`）开头、以分号（`;`）结尾的文本（字符串）。实体常常用于显示保留字符（这些字符会被解析为 HTML 代码）和不可见的字符（如“不换行空格”）。你也可以用实体来代替其他难以用标准键盘键入的字符。
 

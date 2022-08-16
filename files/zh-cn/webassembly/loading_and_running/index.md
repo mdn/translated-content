@@ -1,12 +1,6 @@
 ---
 title: 加载和运行 WebAssembly 代码
 slug: WebAssembly/Loading_and_running
-tags:
-  - Fetch
-  - WebAssembly
-  - XMLHttpRequest
-  - 字节码
-translation_of: WebAssembly/Loading_and_running
 ---
 {{WebAssemblySidebar}}
 

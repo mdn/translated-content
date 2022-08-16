@@ -1,10 +1,6 @@
 ---
 title: Response header 响应头
 slug: Glossary/Response_header
-tags:
-  - Response Header
-  - 响应头
-translation_of: Glossary/Response_header
 ---
 **响应头（Response header）** 可以定义为：被用于 http 响应中并且和响应消息主体无关的那一类 {{glossary("header", "HTTP header")}}。像{{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} 和 {{HTTPHeader("Server")}}都属于响应头，他们被用于描述响应。
 

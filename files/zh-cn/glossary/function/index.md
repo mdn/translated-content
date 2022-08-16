@@ -1,11 +1,6 @@
 ---
 title: Function（函数）
 slug: Glossary/Function
-tags:
-  - IIFE
-  - 函数
-  - 术语
-translation_of: Glossary/Function
 ---
 **function**，**函数**，是一个可以被其他代码或其自身调用的代码片段，或者是一个指向该函数的{{Glossary("variable", "变量")}} 。当函数被调用时，{{Glossary("Argument", "参数")}}被作为输入传递给函数，并且函数可以返回输出。在 {{glossary("JavaScript")}} 中，函数也是一个{{glossary("object", "对象")}}。
 
