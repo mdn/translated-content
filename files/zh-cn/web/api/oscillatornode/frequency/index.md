@@ -2,30 +2,29 @@
 title: OscillatorNode.frequency
 slug: Web/API/OscillatorNode/frequency
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("OscillatorNode") }} 的 <code>frequency 属性的接口</code>是 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}，表示振荡的频率，单位 HZ（hertz）</p>
-</div>
+{{ domxref("OscillatorNode") }} 的 `frequency 属性的接口`是 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，表示振荡的频率，单位 HZ（hertz）
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var oscillator = audioCtx.createOscillator();
-oscillator.frequency.value = 440; // value in hertz</pre>
+```js
+var oscillator = audioCtx.createOscillator();
+oscillator.frequency.value = 440; // value in hertz
+```
 
-<div class="note">
-<p><strong>Note</strong>: 虽然返回的 <code>AudioParam</code> 是只读的，但是它表示的值不是。</p>
-</div>
+> **备注：** 虽然返回的 `AudioParam` 是只读的，但是它表示的值不是。
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 的值</p>
+一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 的值
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下列示例使用 {{ domxref("AudioContext") }} 创建了一个 oscillator node. 这是一个用于展示的示例，查看 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> 是相关代码).</p>
+下列示例使用 {{ domxref("AudioContext") }} 创建了一个 oscillator node. 这是一个用于展示的示例，查看 [Violent Theremin demo](http://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) 是相关代码).
 
-<pre class="brush: js; highlight[8]">// create web audio api context
+```js
+// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
@@ -33,18 +32,17 @@ var oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
 oscillator.frequency.value = 440; // value in hertz
-oscillator.start();</pre>
+oscillator.start();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.OscillatorNode.frequency")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

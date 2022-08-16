@@ -2,39 +2,35 @@
 title: DOMImplementation
 slug: Web/API/DOMImplementation
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p><code style="font-style: normal; line-height: 1.5;"><strong>DOMImplementation</strong></code> 接口代表了一个对象，这个对象提供了不依赖于任何 document 的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得</p>
+**`DOMImplementation`** 接口代表了一个对象，这个对象提供了不依赖于任何 document 的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>这个接口没有特定的属性，并且也没有继承到任何属性。</em></p>
+_这个接口没有特定的属性，并且也没有继承到任何属性。_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>没有继承的方法</em></p>
+_没有继承的方法_
 
-<dl>
- <dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
- <dd>创建并返回一个 {{domxref("XMLDocument")}}对象。</dd>
- <dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
- <dd>创建并返回一个 {{domxref("DocumentType")}}对象。</dd>
- <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
- <dd>创建并返回一个 {{domxref("Document")}}对象。</dd>
- <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
- <dd>返回一个是否支持所给定特性的{{domxref("Boolean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了 SVG 相关的查询，它总是返回 <code>true</code>。旧浏览器的行为非常不一致</dd>
-</dl>
+- {{domxref("DOMImplementation.createDocument()")}}
+  - : 创建并返回一个 {{domxref("XMLDocument")}}对象。
+- {{domxref("DOMImplementation.createDocumentType()")}}
+  - : 创建并返回一个 {{domxref("DocumentType")}}对象。
+- {{domxref("DOMImplementation.createHTMLDocument()")}}
+  - : 创建并返回一个 {{domxref("Document")}}对象。
+- {{domxref("DOMImplementation.hasFeature()")}}
+  - : 返回一个是否支持所给定特性的{{domxref("Boolean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了 SVG 相关的查询，它总是返回 `true`。旧浏览器的行为非常不一致
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DOMImplementation")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/zh-CN/docs/DOM/DOM_Reference)

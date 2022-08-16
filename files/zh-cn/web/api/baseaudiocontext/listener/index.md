@@ -2,46 +2,43 @@
 title: AudioContext.listener
 slug: Web/API/BaseAudioContext/listener
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}的<code>listener属性</code>返回一个{{ domxref("AudioListener") }} 对象，可以用来实现 3D 音频空间化。</p>
-</div>
+{{ domxref("AudioContext") }}的`listener属性`返回一个{{ domxref("AudioListener") }} 对象，可以用来实现 3D 音频空间化。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;</pre>
+```js
+var audioCtx = new AudioContext();
+var myListener = audioCtx.listener;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>An {{ domxref("AudioListener") }} object.</p>
+An {{ domxref("AudioListener") }} object.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<div class="note">
-<p><strong>注意</strong>：想要完整的音频空间化例子，可以查看<a href="https://github.com/mdn/panner-node">panner-node</a> DEMO</p>
-</div>
+> **备注：** 想要完整的音频空间化例子，可以查看[panner-node](https://github.com/mdn/panner-node) DEMO
 
-<pre class="brush: js; highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
 ...
 
 var myListener = audioCtx.listener;
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BaseAudioContext.listener")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

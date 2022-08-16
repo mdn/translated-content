@@ -2,33 +2,32 @@
 title: AudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>AudioContext.<code>createChannelMerger()方法，会创建一个</code>ChannelMergerNode，后者可以把多个音频流的通道整合到一个音频流。</p>
-</div>
+AudioContext.`createChannelMerger()方法，会创建一个`ChannelMergerNode，后者可以把多个音频流的通道整合到一个音频流。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var merger = audioCtx.createChannelMerger(2);</pre>
+```js
+var audioCtx = new AudioContext();
+var merger = audioCtx.createChannelMerger(2);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>numberOfInputs</dt>
- <dd>通道输入音频流的数量，输出流将包含这个数量的通道。默认值 6。</dd>
-</dl>
+- numberOfInputs
+  - : 通道输入音频流的数量，输出流将包含这个数量的通道。默认值 6。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("ChannelMergerNode")}}.</p>
+一个 {{domxref("ChannelMergerNode")}}.
 
-<h2 id="（举个）栗（例）子">（举个）栗（例）子</h2>
+## （举个）栗（例）子
 
-<p>下面的例子展示了如何分离立体音轨（就是一段音乐），处理使左右声道不同。使用的时候，需要指定 AudioNode.connect(AudioNode) 方法的第二个和第三个参数，分别用来指定通道链接来源的索引和输出的索引。</p>
+下面的例子展示了如何分离立体音轨（就是一段音乐），处理使左右声道不同。使用的时候，需要指定 AudioNode.connect(AudioNode) 方法的第二个和第三个参数，分别用来指定通道链接来源的索引和输出的索引。
 
-<pre class="brush: js; highlight[7,16,17,24]">var ac = new AudioContext();
+```js
+var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
  var source = ac.createBufferSource();
  source.buffer = data;
@@ -52,18 +51,17 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
  // MediaStream we can use to pipe the Web Audio graph to WebRTC,
  // MediaRecorder, etc.
  merger.connect(dest);
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BaseAudioContext.createChannelMerger")}}
 
-<h2 id="相关页面">相关页面</h2>
+## 相关页面
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

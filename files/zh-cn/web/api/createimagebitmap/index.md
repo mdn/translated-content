@@ -2,49 +2,48 @@
 title: self.createImageBitmap()
 slug: Web/API/createImageBitmap
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p><code><strong>createImageBitmap</strong></code> 方法存在 windows 和 workers 中。它接受各种不同的图像来源，并返回一个{{domxref("Promise")}}, resolve 为{{domxref("ImageBitmap")}}. 可选地参数，图像被剪裁成自（sx，sy）且宽度为 sw，高度为 sh 的像素的矩形。</p>
+**`createImageBitmap`** 方法存在 windows 和 workers 中。它接受各种不同的图像来源，并返回一个{{domxref("Promise")}}, resolve 为{{domxref("ImageBitmap")}}. 可选地参数，图像被剪裁成自（sx，sy）且宽度为 sw，高度为 sh 的像素的矩形。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>createImageBitmap(<em>image</em>[, options]).then(function(response) { ... });
-createImageBitmap(<em>image, sx, sy, sw, sh</em>[, options]).then(function(response) { ... });
-</pre>
+```
+createImageBitmap(image[, options]).then(function(response) { ... });
+createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>image</code></dt>
- <dd>一个图像源，可以是一个 {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, 或 {{domxref("OffscreenCanvas")}} 对象。</dd>
- <dt><code>sx</code></dt>
- <dd>裁剪点 x 坐标。</dd>
- <dt><code>sy</code></dt>
- <dd>裁剪点 y 坐标。</dd>
- <dt><code>sw</code></dt>
- <dd>裁剪宽度，值可为负数。</dd>
- <dt><code>sh</code></dt>
- <dd>裁剪高度，值可为负数。</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>为其设置选项的对象。可用的选项是：
- <ul>
-  <li><code>imageOrientation</code>: 指示图像是按原样呈现还是垂直翻转.  <code>none</code> (默认不翻转) 或 <code>flipY</code>.</li>
-  <li><code>premultiplyAlpha</code>: 指示位图颜色通道由 alpha 通道预乘。选择其一：<code>none</code>, <code>premultiply</code>, 或 <code>default</code> (默认).</li>
-  <li><code>colorSpaceConversion</code>: 指示图像是否使用色彩空间转换进行解码. <code>none</code> 或 <code>default</code> (默认). The value <code>default</code> indicates that implementation-specific behavior is used.</li>
-  <li><code>resizeWidth</code>: 指示新宽度的长整数。</li>
-  <li><code>resizeHeight</code>: 指示新高度的长整数。</li>
-  <li><code>resizeQuality</code>: 指定图像缩放算法。选择其一<code>pixelated</code>, <code>low</code> (默认), <code>medium</code>, 或 <code>high</code>.</li>
- </ul>
- </dd>
-</dl>
+- `image`
+  - : 一个图像源，可以是一个 {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, 或 {{domxref("OffscreenCanvas")}} 对象。
+- `sx`
+  - : 裁剪点 x 坐标。
+- `sy`
+  - : 裁剪点 y 坐标。
+- `sw`
+  - : 裁剪宽度，值可为负数。
+- `sh`
+  - : 裁剪高度，值可为负数。
+- options {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : 为其设置选项的对象。可用的选项是：
 
-<p>返回一个解决 ImageBitmap 的{{domxref("Promise")}} ，当 Promise 成功时 resolves 接收一个包含所得到的矩形的位图数据{{domxref("ImageBitmap")}}。</p>
+    - `imageOrientation`: 指示图像是按原样呈现还是垂直翻转. `none` (默认不翻转) 或 `flipY`.
+    - `premultiplyAlpha`: 指示位图颜色通道由 alpha 通道预乘。选择其一：`none`, `premultiply`, 或 `default` (默认).
+    - `colorSpaceConversion`: 指示图像是否使用色彩空间转换进行解码. `none` 或 `default` (默认). The value `default` indicates that implementation-specific behavior is used.
+    - `resizeWidth`: 指示新宽度的长整数。
+    - `resizeHeight`: 指示新高度的长整数。
+    - `resizeQuality`: 指定图像缩放算法。选择其一`pixelated`, `low` (默认), `medium`, 或 `high`.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<pre class="brush: js  language-js">var canvas = document.getElementById('myCanvas'),
+返回一个解决 ImageBitmap 的{{domxref("Promise")}} ，当 Promise 成功时 resolves 接收一个包含所得到的矩形的位图数据{{domxref("ImageBitmap")}}。
+
+## Example
+
+```js
+var canvas = document.getElementById('myCanvas'),
 ctx = canvas.getContext('2d'),
 image = new Image();
 
@@ -59,19 +58,17 @@ image.onload = function() {
 }
 
 image.src = 'sprites.png';
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.createImageBitmap")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
- <li>{{domxref("ImageData")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.drawImage()")}}
+- {{domxref("ImageData")}}

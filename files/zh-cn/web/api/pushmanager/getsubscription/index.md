@@ -2,29 +2,32 @@
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>{{domxref("PushManager")}} 接口的方法<strong><code>PushManager.getSubscription()</code></strong> 尝试获取已有的推送订阅。</p>
+{{domxref("PushManager")}} 接口的方法**`PushManager.getSubscription()`** 尝试获取已有的推送订阅。
 
-<p>它返回一个 {{jsxref("Promise")}} 用来 resolve 出一个包含现有订阅的详细信息的{{domxref("PushSubscription")}} 对象。如果不存在已有的推送订阅，返回 null。</p>
+它返回一个 {{jsxref("Promise")}} 用来 resolve 出一个包含现有订阅的详细信息的{{domxref("PushSubscription")}} 对象。如果不存在已有的推送订阅，返回 null。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js notranslate" style="font-size: 14px;">​PushManager.getSubscription().then(function(pushSubscription) { ... } );</pre>
+```js
+​PushManager.getSubscription().then(function(pushSubscription) { ... } );
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or <code>null</code>.</p>
+A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or `null`.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>这个代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications">push messaging and notification sample</a>. (没有能直接运行的例子.)</p>
+这个代码片段来自 [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (没有能直接运行的例子.)
 
-<pre class="brush: js notranslate" style="font-size: 14px;">// We need the service worker registration to check for a subscription
+```js
+// We need the service worker registration to check for a subscription
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     // Do we already have a push message subscription?
     serviceWorkerRegistration.pushManager.getSubscription()
@@ -54,12 +57,12 @@ slug: Web/API/PushManager/getSubscription
         window.Demo.debug.log('Error during getSubscription()', err);
       });
   });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

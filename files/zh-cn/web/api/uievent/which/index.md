@@ -2,28 +2,28 @@
 title: KeyboardEvent.which
 slug: Web/API/UIEvent/which
 ---
-<div>{{ APIRef("DOM Events") }} {{Deprecated_header}}</div>
+{{ APIRef("DOM Events") }} {{Deprecated_header}}
 
-<p>{{domxref("KeyboardEvent")}} 接口的 <code><strong>which</strong></code> 只读属性返回所按下键的数字 <code>keyCode </code>或所按下字母数字键的字符代码 (<code>charCode</code>) 。</p>
+{{domxref("KeyboardEvent")}} 接口的 **`which`** 只读属性返回所按下键的数字 `keyCode `或所按下字母数字键的字符代码 (`charCode`) 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var <em>keyResult</em> = <em>event</em>.which;
-</pre>
+```
+var keyResult = event.which;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<ul>
- <li><code>keyResult</code> contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.</li>
-</ul>
+- `keyResult` contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: html notranslate">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;charCode/keyCode/which example&lt;/title&gt;
+```html
+<html>
+<head>
+<title>charCode/keyCode/which example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showKeyPress(evt) {
 alert("onkeypress handler: \n"
@@ -43,32 +43,28 @@ alert("onkeydown handler: \n"
      );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body
+<body
  onkeypress="showKeyPress(event);"
  onkeydown="keyDown(event);"
-&gt;
+>
 
-&lt;p&gt;Please press any key.&lt;/p&gt;
+<p>Please press any key.</p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.KeyboardEvent.which")}}
 
+## See also
 
-<p>{{Compat("api.KeyboardEvent.which")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("KeyboardEvent")}}, the interface this property belongs too.</li>
-</ul>
+- {{domxref("KeyboardEvent")}}, the interface this property belongs too.

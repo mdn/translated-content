@@ -2,109 +2,90 @@
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent()</code></strong> 构造器创建一个 {{domxref("MouseEvent")}}。</p>
+**`MouseEvent()`** 构造器创建一个 {{domxref("MouseEvent")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> <em>event</em> = new MouseEvent(<em>typeArg</em>, <em>mouseEventInit</em>);</pre>
+```
+ event = new MouseEvent(typeArg, mouseEventInit);
+```
 
-<h3 id="形参">形参</h3>
+### 形参
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>{{domxref("DOMString")}} 格式的事件名称。</dd>
- <dt><em>mouseEventInit</em> {{optional_inline}}</dt>
- <dd>初始化 <code>MouseEvent</code> 的字典，有下列属性字段：
+- _typeArg_
+  - : {{domxref("DOMString")}} 格式的事件名称。
+- _mouseEventInit_ {{optional_inline}}
 
- <ul>
-  <li><code>"screenX"</code>，<code>long</code> 型可选，默认为 <code>0</code>，设置鼠标事件发生时相对于用户屏幕的水平坐标位置；该操作并不会改变真实鼠标的位置。</li>
-  <li><code>"screenY"</code>，<code>long</code> 型可选，默认为 <code>0</code>，设置鼠标事件发生时相对于用户屏幕的垂直坐标位置；该操作并不会改变真实鼠标的位置。</li>
-  <li><code>"clientX"</code>，<code>long</code> 型可选，默认为 <code>0</code>，设置鼠标事件时相对于客户端窗口的水平坐标位置；该操作并不会改变真实鼠标的位置。</li>
-  <li><code>"clientY"</code>，<code>long</code> 型可选，默认为 <code>0</code>，设置鼠标事件时相对于客户端窗口的垂直坐标位置；该操作并不会改变真实鼠标的位置。</li>
-  <li><code>"ctrlKey"</code>，{{jsxref("Boolean")}} 型可选，默认为<code>false</code>，标明是否同时按下 <kbd>ctrl</kbd> 键。</li>
-  <li><code>"shiftKey"</code>，{{jsxref("Boolean")}} 型可选，默认为<code>false</code>，标明是否同时按下 <kbd>shift</kbd> 键。</li>
-  <li><code>"altKey"</code>，{{jsxref("Boolean")}} 型可选，默认为 <code>false</code>，标明是否同时按下 <kbd>alt</kbd> 键。</li>
-  <li><code>"metaKey"</code>，{{jsxref("Boolean")}} 型可选，默认为<code>false</code>，标明是否同时按下 <kbd>meta</kbd> 键。</li>
-  <li><code>"button"</code>，<code>short</code> 型可选，默认为 <code>0</code>，描述了当事件发生时，哪个按键被按下或释放：
-   <table class="standard-table">
-    <thead>
-     <tr>
-      <th scope="col">值</th>
-      <th scope="col">含义</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td><code>0</code></td>
-      <td>主按键被按下（通常为左键）或未初始化</td>
-     </tr>
-     <tr>
-      <td><code>1</code></td>
-      <td>辅助按键被按下 (通常为中键)</td>
-     </tr>
-     <tr>
-      <td><code>2</code></td>
-      <td>次按键被按下 (通常为右键)</td>
-     </tr>
-    </tbody>
-   </table>
-  </li>
-  <li><code>"buttons"</code>，无符号 <code>short</code> 型可选，默认为 <code>0</code>，描述了当事件发生时哪些按键被按下：
-   <table class="standard-table">
-    <thead>
-     <tr>
-      <th scope="col">位域值<br>
-       （Bit-field value）</th>
-      <th scope="col">含义</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td><code>0</code></td>
-      <td>无按键被按下</td>
-     </tr>
-     <tr>
-      <td><code>1</code></td>
-      <td>主按键被按下 (通常为左键)</td>
-     </tr>
-     <tr>
-      <td><code>2</code></td>
-      <td>次按键被按下 (通常为右键)</td>
-     </tr>
-     <tr>
-      <td><code>4</code></td>
-      <td>辅助按键被按下 (通常为中键)</td>
-     </tr>
-    </tbody>
-   </table>
-  </li>
-  <li><code>"relatedTarget"</code>，{{domxref("EventTarget")}} 型可选，默认为 <code>null</code>，若事件为 {{event("mouseenter")}} 或 {{event("mouseover")}}，则表示刚离开的元素；若事件为 {{event("mouseout")}} 或 {{event("mouseleave")}}，则表示刚进入的元素。</li>
-  <li><code>"region"</code>，{{domxref("DOMString")}} 型可选，默认为<code>null</code>，标明点击事件影响的区域 DOM 的 id。不影响任何区域的话，请传<code>null</code>值。</li>
- </ul>
+  - : 初始化 `MouseEvent` 的字典，有下列属性字段：
 
- <p>在一些实现中，passing anything other than a number for the screen and client fields will throw a <code>TypeError</code>.</p>
+    - `"screenX"`，`long` 型可选，默认为 `0`，设置鼠标事件发生时相对于用户屏幕的水平坐标位置；该操作并不会改变真实鼠标的位置。
+    - `"screenY"`，`long` 型可选，默认为 `0`，设置鼠标事件发生时相对于用户屏幕的垂直坐标位置；该操作并不会改变真实鼠标的位置。
+    - `"clientX"`，`long` 型可选，默认为 `0`，设置鼠标事件时相对于客户端窗口的水平坐标位置；该操作并不会改变真实鼠标的位置。
+    - `"clientY"`，`long` 型可选，默认为 `0`，设置鼠标事件时相对于客户端窗口的垂直坐标位置；该操作并不会改变真实鼠标的位置。
+    - `"ctrlKey"`，{{jsxref("Boolean")}} 型可选，默认为`false`，标明是否同时按下&#x20;
 
- <div class="note">
- <p>上述 <code>MouseEventInit</code> 字典字段还包括从 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 继承来的字典字段。</p>
- </div>
- </dd>
-</dl>
+      <kbd>ctrl</kbd>
 
-<h2 id="Specifications">规范</h2>
+      &#x20;键。
+
+    - `"shiftKey"`，{{jsxref("Boolean")}} 型可选，默认为`false`，标明是否同时按下&#x20;
+
+      <kbd>shift</kbd>
+
+      &#x20;键。
+
+    - `"altKey"`，{{jsxref("Boolean")}} 型可选，默认为 `false`，标明是否同时按下&#x20;
+
+      <kbd>alt</kbd>
+
+      &#x20;键。
+
+    - `"metaKey"`，{{jsxref("Boolean")}} 型可选，默认为`false`，标明是否同时按下&#x20;
+
+      <kbd>meta</kbd>
+
+      &#x20;键。
+
+    - `"button"`，`short` 型可选，默认为 `0`，描述了当事件发生时，哪个按键被按下或释放：
+
+      | 值  | 含义                                 |
+      | --- | ------------------------------------ |
+      | `0` | 主按键被按下（通常为左键）或未初始化 |
+      | `1` | 辅助按键被按下 (通常为中键)          |
+      | `2` | 次按键被按下 (通常为右键)            |
+
+    - `"buttons"`，无符号 `short` 型可选，默认为 `0`，描述了当事件发生时哪些按键被按下：
+
+      | 位域值 （Bit-field value） | 含义                        |
+      | -------------------------- | --------------------------- |
+      | `0`                        | 无按键被按下                |
+      | `1`                        | 主按键被按下 (通常为左键)   |
+      | `2`                        | 次按键被按下 (通常为右键)   |
+      | `4`                        | 辅助按键被按下 (通常为中键) |
+
+    - `"relatedTarget"`，{{domxref("EventTarget")}} 型可选，默认为 `null`，若事件为 {{event("mouseenter")}} 或 {{event("mouseover")}}，则表示刚离开的元素；若事件为 {{event("mouseout")}} 或 {{event("mouseleave")}}，则表示刚进入的元素。
+    - `"region"`，{{domxref("DOMString")}} 型可选，默认为`null`，标明点击事件影响的区域 DOM 的 id。不影响任何区域的话，请传`null`值。
+
+    在一些实现中，passing anything other than a number for the screen and client fields will throw a `TypeError`.
+
+    > **备注：** 上述 `MouseEventInit` 字典字段还包括从 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 继承来的字典字段。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>You can polyfill the <code>MouseEvent()</code> constructor functionality in Internet Explorer 9 and higher with the following code:</p>
+You can polyfill the `MouseEvent()` constructor functionality in Internet Explorer 9 and higher with the following code:
 
-<pre class="brush: js">(function (window) {
+```js
+(function (window) {
   try {
     new MouseEvent('test');
     return false; // No need to polyfill
@@ -140,10 +121,8 @@ slug: Web/API/MouseEvent/MouseEvent
 
 	window.MouseEvent = MouseEventPolyfill;
 })(window);
-</pre>
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("MouseEvent")}}，对象结构接口。</li>
-</ul>
+- {{domxref("MouseEvent")}}，对象结构接口。

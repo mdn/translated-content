@@ -2,40 +2,33 @@
 title: Element.id
 slug: Web/API/Element/id
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>{{domxref("Element")}} 接口的 <strong><code>id</code></strong> 属性表示元素的标识符，与全局属性 <a href="/en-US/docs/Web/HTML/Global_attributes/id"><strong><code>id</code></strong></a> 对应。</p>
+{{domxref("Element")}} 接口的 **`id`** 属性表示元素的标识符，与全局属性 [**`id`**](/zh-CN/docs/Web/HTML/Global_attributes/id) 对应。
 
-<p>同一文档中，若 <code>id</code> 的值不是空字符串 <code>""</code>，便必须是独特的；也就是说，不同元素的 ID 必须是不同的。</p>
+同一文档中，若 `id` 的值不是空字符串 `""`，便必须是独特的；也就是说，不同元素的 ID 必须是不同的。
 
-<p>这有助于让常用的 {{domxref("document.getElementById", "getElementById")}} 方法通过 <code>id</code> 的值找到对应的单个元素。另外，在 <a href="/zh-CN/docs/Web/CSS">CSS</a> 中，ID 可作为选择器使用，详见：<a href="/en-US/docs/Web/CSS/ID_selectors">ID 选择器</a>。</p>
+这有助于让常用的 {{domxref("document.getElementById", "getElementById")}} 方法通过 `id` 的值找到对应的单个元素。另外，在 [CSS](/zh-CN/docs/Web/CSS) 中，ID 可作为选择器使用，详见：[ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)。
 
-<div class="note">
-<p><strong>注意：</strong>虽然 ID 是区分大小写的，但是不应该同时使用仅大小写有不同的 ID  值。</p>
-</div>
+> **备注：** 虽然 ID 是区分大小写的，但是不应该同时使用仅大小写有不同的 ID 值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>idStr</em> = <em>element</em>.id; // Get the id
-<em>element</em>.id = <em>idStr</em>; // Set the id
-</pre>
+```js
+var idStr = element.id; // Get the id
+element.id = idStr; // Set the id
+```
 
-<ul>
- <li><code>idStr</code>，元素的 ID 属性值。</li>
-</ul>
+- `idStr`，元素的 ID 属性值。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Element.id")}}
 
+## 参见
 
-<p>{{Compat("api.Element.id")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>DOM 全局属性 <a href="/zh-CN/docs/Web/HTML/Global_attributes/id"><strong>id</strong></a>。</li>
-</ul>
+- DOM 全局属性 [**id**](/zh-CN/docs/Web/HTML/Global_attributes/id)。

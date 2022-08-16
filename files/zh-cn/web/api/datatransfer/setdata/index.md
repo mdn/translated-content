@@ -2,44 +2,44 @@
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.setData()</code></strong> 方法用来设置拖放操作的{{domxref("DataTransfer","drag data")}}到指定的数据和类型。</p>
+**`DataTransfer.setData()`** 方法用来设置拖放操作的{{domxref("DataTransfer","drag data")}}到指定的数据和类型。
 
-<p>如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。</p>
+如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。
 
-<p>如果给定类型的数据已经存在，现有数据将被替换为相同的位置。也就是说，替换相同类型的数据时 {{domxref("DataTransfer.types","types")}}列表的顺序不会更改。</p>
+如果给定类型的数据已经存在，现有数据将被替换为相同的位置。也就是说，替换相同类型的数据时 {{domxref("DataTransfer.types","types")}}列表的顺序不会更改。
 
-<p>示例数据类型为："<code>text/plain</code>" 和 "<code>text/uri-list</code>".</p>
+示例数据类型为："`text/plain`" 和 "`text/uri-list`".
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>dataTransfer</var>.setData(format, data);
-</pre>
+```
+void dataTransfer.setData(format, data);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>format</em></dt>
- <dd>一个{{domxref("DOMString")}} 表示要添加到 {{domxref("DataTransfer","drag object")}}的拖动数据的类型。</dd>
- <dt><em>data</em></dt>
- <dd>一个 {{domxref("DOMString")}}表示要添加到 {{domxref("DataTransfer","drag object")}}的数据。</dd>
-</dl>
+- _format_
+  - : 一个{{domxref("DOMString")}} 表示要添加到 {{domxref("DataTransfer","drag object")}}的拖动数据的类型。
+- _data_
+  - : 一个 {{domxref("DOMString")}}表示要添加到 {{domxref("DataTransfer","drag object")}}的数据。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无</p>
+无
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>此示例显示了使用 {{domxref("DataTransfer")}} 对象的 {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}} }和{{domxref("DataTransfer.clearData","clearData()")}} 方法。</p>
+此示例显示了使用 {{domxref("DataTransfer")}} 对象的 {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}} }和{{domxref("DataTransfer.clearData","clearData()")}} 方法。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;DataTransfer.setData()/.getData()/.clearData()&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DataTransfer.setData()/.getData()/.clearData()</title>
+    <style>
         div {
             margin: 0em;
             padding: 2em;
@@ -51,26 +51,26 @@ slug: Web/API/DataTransfer/setData
         #target {
             border: 1px solid black;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;section&gt;
-        &lt;h1&gt;
-            &lt;code&gt;DataTransfer.setData()&lt;/code&gt; &lt;br&gt;
-            &lt;code&gt;DataTransfer.getData()&lt;/code&gt; &lt;br&gt;
-            &lt;code&gt;DataTransfer.clearData()&lt;/code&gt;
-        &lt;/h1&gt;
-        &lt;div&gt;
-            &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
+    </style>
+</head>
+<body>
+    <section>
+        <h1>
+            <code>DataTransfer.setData()</code> <br>
+            <code>DataTransfer.getData()</code> <br>
+            <code>DataTransfer.clearData()</code>
+        </h1>
+        <div>
+            <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
                 Select this element, drag it to the Drop Zone and then release the selection to move the element.
-            &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;
+            </p>
+        </div>
+        <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
             Drop Zone
-        &lt;/div&gt;
-    &lt;/section&gt;
-    &lt;!-- js --&gt;
-    &lt;script&gt;
+        </div>
+    </section>
+    <!-- js -->
+    <script>
         function dragstart_handler(ev) {
             console.log("dragStart");
             // Change the source element's background color to signify drag has started
@@ -95,21 +95,19 @@ slug: Web/API/DataTransfer/setData
             // Clear the drag data cache (for all formats/types)
             ev.dataTransfer.clearData();
         }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    </script>
+</body>
+</html>
+```
 
-
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DataTransfer.setData")}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
+{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}

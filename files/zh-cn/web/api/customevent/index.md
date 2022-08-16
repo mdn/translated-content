@@ -31,8 +31,9 @@ _此接口从父接口继承方法，_ {{domxref("Event")}}：
 
 ## 方法概述
 
-| `void initCustomEvent(in DOMString type, in boolean canBubble, in boolean cancelable, in any detail);` |
-| ------------------------------------------------------------------------------------------------------ |
+```
+void initCustomEvent(in DOMString type, in boolean canBubble, in boolean cancelable, in any detail);
+```
 
 ## 属性
 

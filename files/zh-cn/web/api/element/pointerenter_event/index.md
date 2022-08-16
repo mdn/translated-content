@@ -2,26 +2,24 @@
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/Element/pointerenter_event
 ---
-<div>HTML DOM</div>
+HTML DOMpointerenter 事件的 GlobalEventHandlers（全局事件处理函数）
 
-<div>pointerenter 事件的 GlobalEventHandlers（全局事件处理函数）</div>
+```js
+var enterHandler = targetElement.onpointerenter;
+```
 
-<pre class="brush: js">var <var>enterHandler</var> = <var>targetElement</var>.onpointerenter;
-</pre>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+- `enterHandler`
+  - : `targetElement`的 pointerenter 事件处理函数。
 
-<dl>
- <dt><code>enterHandler</code></dt>
- <dd><code>targetElement</code>的 pointerenter 事件处理函数。</dd>
-</dl>
+## 例子
 
-<h2 id="例子">例子</h2>
+这个例子展示了使用 onpointerenter 来设置元素 pointerenter 事件处理函数的两种方式*。*
 
-<p>这个例子展示了使用 onpointerenter 来设置元素 pointerenter 事件处理函数的两种方式<em>。</em></p>
-
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function enterHandler(ev) {
  // 处理 pointerenter 事件
 }
@@ -29,24 +27,22 @@ function init() {
  var el=document.getElementById("target1");
  el.onpointerenter = enterHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; 点我 ... &lt;/div&gt;
-&lt;div id="target2" onpointerenter="enterHandler(event)"&gt; 点我 ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target1"> 点我 ... </div>
+<div id="target2" onpointerenter="enterHandler(event)"> 点我 ... </div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ event("pointerenter") }}</li>
-</ul>
+- {{ event("pointerenter") }}

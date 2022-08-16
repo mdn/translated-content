@@ -10,11 +10,12 @@ slug: Web/API/FileReaderSync
 
 ## 方法概述
 
-| `ArrayBuffer readAsArrayBuffer(Blob blob);`                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- |
-| `DOMString readAsBinaryString(Blob blob);`                                                                          |
-| ` DOMString``  `[`readAsText`](</zh-cn/DOM/FileReaderSync#readAsText()>)`(Blob blob, optional DOMString encoding);` |
-| `DOMString readAsDataURL(Blob blob);`                                                                               |
+```
+ArrayBuffer readAsArrayBuffer(Blob blob);
+DOMString readAsBinaryString(Blob blob);
+DOMString readAsText(Blob blob, optional DOMString encoding);
+DOMString readAsDataURL(Blob blob);
+```
 
 ## 属性
 

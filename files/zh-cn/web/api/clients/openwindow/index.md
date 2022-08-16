@@ -2,39 +2,40 @@
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("Clients")}}接口的 <strong><code>openWindow()</code></strong> 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， <strong><code>openWindow() </code></strong>将抛出 InvalidAccessError.</p>
+{{domxref("Clients")}}接口的 **`openWindow()`** 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， **`openWindow() `**将抛出 InvalidAccessError.
 
-<p>在 Firefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。</p>
+在 Firefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。
 
-<p>在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 <a href="/en-US/Apps/Progressive/Installable">standalone web app</a> 提供的现有浏览上下文中打开 URL.</p>
+在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 [standalone web app](/en-US/Apps/Progressive/Installable) 提供的现有浏览上下文中打开 URL.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">ServiceWorkerClients.openWindow(url).then(function(WindowClient) {
+```js
+ServiceWorkerClients.openWindow(url).then(function(WindowClient) {
   // do something with your WindowClient
-});</pre>
+});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>url</code></dt>
- <dd>一个 {{domxref("USVString")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.</dd>
-</dl>
+- `url`
+  - : 一个 {{domxref("USVString")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>如果 URL 来自与服务工作者相同的域，则 resolve 为 {{domxref("WindowClient")}} 对象的 Promise，否则 resolve 为 {{Glossary("null", "null value")}}.</p>
+如果 URL 来自与服务工作者相同的域，则 resolve 为 {{domxref("WindowClient")}} 对象的 Promise，否则 resolve 为 {{Glossary("null", "null value")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">// When the user clicks a notification focus the window if it exists or open
+```js
+// When the user clicks a notification focus the window if it exists or open
 // a new one otherwise.
 onotificationclick = function(event) {
   var found = false;
   clients.matchAll().then(function(clientsArr) {
-    for (i = 0; i &lt; clientsArr.length; i++) {
+    for (i = 0; i < clientsArr.length; i++) {
       if (clientsArr[i].url === event.data.url) {
         // We already have a window to use, focus it.
         found = true;
@@ -50,16 +51,12 @@ onotificationclick = function(event) {
     }
   });
 };
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.Clients.openWindow")}}</p>
-</div>
+{{Compat("api.Clients.openWindow")}}

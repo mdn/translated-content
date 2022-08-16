@@ -2,92 +2,41 @@
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLOptionElement</code></strong> 接口表示了 {{HTMLElement("option")}} 元素并继承{{domxref("HTMLElement")}}接口所有的类和方法。</p>
+**`HTMLOptionElement`** 接口表示了 {{HTMLElement("option")}} 元素并继承{{domxref("HTMLElement")}}接口所有的类和方法。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>继承自其父类属性, {{domxref("HTMLElement")}}.</em></p>
+_继承自其父类属性, {{domxref("HTMLElement")}}._
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">名称</th>
-   <th scope="col">类型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>defaultSelected</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>包含了{{htmlattrxref("selected", "option")}} HTML 特性的初始值， 指示默认情况下是否选择该选项。</td>
-  </tr>
-  <tr>
-   <td><code>disabled</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>反映了{{htmlattrxref("disabled", "option")}} HTML 特性 的值 , 这意味着选项（option）是不可选的。如果一个选项是关闭的{{HTMLElement("optgroup")}}元素的子元素，那么它也可被关闭。 </td>
-  </tr>
-  <tr>
-   <td><code>form</code>{{readonlyInline}}</td>
-   <td>{{domxref("HTMLFormElement")}}</td>
-   <td>
-    <p>如果该选项是{{HTMLElement("select")}} 元素的后代，则该属性与相应{{DomXref("HTMLSelectElement")}} 对象的<code>form</code>属性具有相同的值; 否则为<code>null</code>。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>index</code>{{readonlyInline}}</td>
-   <td><code>long</code></td>
-   <td>
-    <p>该选项在其所属的选项列表中的位置，以树形顺序排列。 如果该选项不是选项列表的一部分，例如为 {{HTMLElement("datalist")}} 元素的一部分时，该值为<code>0</code>。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>label</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>
-    <p>反映{{htmlattrxref("label", "option")}} HTML特性的值，该属性为选项提供了一个标签。 如果没有特别设置此属性，读取它返回元素的文本内容。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>selected</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>表示当前该option是否被选择。</td>
-  </tr>
-  <tr>
-   <td><code>text</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>包含元素的文本内容。</td>
-  </tr>
-  <tr>
-   <td><code>value</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>
-    <p>反映{{htmlattrxref("value", "option")}} HTML特性的值（如果存在）；否则反映{{domxref("Node.textContent")}} 特性的值。</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| 名称                            | 类型                                     | 描述                                                                                                                                                                                                   |
+| ------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `defaultSelected`               | {{domxref("Boolean")}}             | 包含了{{htmlattrxref("selected", "option")}} HTML 特性的初始值， 指示默认情况下是否选择该选项。                                                                                          |
+| `disabled`                      | {{domxref("Boolean")}}             | 反映了{{htmlattrxref("disabled", "option")}} HTML 特性 的值 , 这意味着选项（option）是不可选的。如果一个选项是关闭的{{HTMLElement("optgroup")}}元素的子元素，那么它也可被关闭。 |
+| `form`{{readonlyInline}}  | {{domxref("HTMLFormElement")}} | 如果该选项是{{HTMLElement("select")}} 元素的后代，则该属性与相应{{DomXref("HTMLSelectElement")}} 对象的`form`属性具有相同的值; 否则为`null`。                                       |
+| `index`{{readonlyInline}} | `long`                                   | 该选项在其所属的选项列表中的位置，以树形顺序排列。 如果该选项不是选项列表的一部分，例如为 {{HTMLElement("datalist")}} 元素的一部分时，该值为`0`。                                             |
+| `label`                         | {{domxref("DOMString")}}         | 反映{{htmlattrxref("label", "option")}} HTML 特性的值，该属性为选项提供了一个标签。 如果没有特别设置此属性，读取它返回元素的文本内容。                                                    |
+| `selected`                      | {{domxref("Boolean")}}             | 表示当前该 option 是否被选择。                                                                                                                                                                         |
+| `text`                          | {{domxref("DOMString")}}         | 包含元素的文本内容。                                                                                                                                                                                   |
+| `value`                         | {{domxref("DOMString")}}         | 反映{{htmlattrxref("value", "option")}} HTML 特性的值（如果存在）；否则反映{{domxref("Node.textContent")}} 特性的值。                                                            |
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>方法继承自其父类, {{domxref("HTMLElement")}}.</em></p>
+_方法继承自其父类, {{domxref("HTMLElement")}}._
 
-<p>{{domxref("HTMLOptionElement.Option()")}}是一个创建<code>HTMLOptionElement</code>对象的构造函数。 它有四个值：要显示的文本，<code>文本</code>，关联的值，<code>值</code>，defaultSelected的值以及<code>所选</code>的值。 最后三个值是可选的。</p>
+{{domxref("HTMLOptionElement.Option()")}}是一个创建`HTMLOptionElement`对象的构造函数。 它有四个值：要显示的文本，`文本`，关联的值，`值`，defaultSelected 的值以及`所选`的值。 最后三个值是可选的。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLOptionElement")}}</p>
+{{Compat("api.HTMLOptionElement")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>实现此接口的HTML元素 : {{HTMLElement("option")}}。</li>
-</ul>
+- 实现此接口的 HTML 元素 : {{HTMLElement("option")}}。

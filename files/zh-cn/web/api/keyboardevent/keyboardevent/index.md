@@ -2,53 +2,47 @@
 title: 键盘事件 KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>KeyboardEvent()</code></strong> 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。</p>
+**`KeyboardEvent()`** 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> <em>event</em> = new KeyboardEvent(<em>typeArg</em>, <em>KeyboardEventInit</em>);</pre>
+```
+ event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>{{domxref("DOMString")}} 类型，表示事件名称。</dd>
- <dt><em>KeyboardEventInit</em>{{optional_inline}}</dt>
- <dd><code>KeyboardEventInit</code> 字典，有以下几种值：
+- _typeArg_
+  - : {{domxref("DOMString")}} 类型，表示事件名称。
+- _KeyboardEventInit_{{optional_inline}}
 
- <ul>
-  <li><code>"key"</code>, 可选，默认为 <code>""</code>,  {{domxref("DOMString")}} 类型，设置 {{domxref("KeyboardEvent.key")}} 的值。</li>
-  <li><code>"code"</code>, 可选，默认为 <code>""</code>, {{domxref("DOMString")}} 类型，设置{{domxref("KeyboardEvent.code")}} 的值。</li>
-  <li><code>"location"</code>, 可选，默认为 <code>0</code>,  <code>unsigned long</code>类型，设置 {{domxref("KeyboardEvent.location")}} 的值。</li>
-  <li><code>"ctrlKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.ctrlKey")}} 的值。</li>
-  <li><code>"shiftKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置{{domxref("KeyboardEvent.shiftKey")}} 的值。</li>
-  <li><code>"altKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.altKey")}} 的值。</li>
-  <li><code>"metaKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.metaKey")}} 的值。</li>
-  <li><code>"repeat"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.repeat")}} 的值。</li>
-  <li><code>"isComposing"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.isComposing")}} 的值。</li>
-  <li><code>"charCode"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型，设置 {{domxref("KeyboardEvent.charCode")}} (已废弃) 的值。</li>
-  <li><code>"keyCode"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型，设置{{domxref("KeyboardEvent.keyCode")}} (已废弃) 的值。</li>
-  <li><code>"which"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型，设置{{domxref("KeyboardEvent.which")}} (已废弃) 的值。</li>
- </ul>
+  - : `KeyboardEventInit` 字典，有以下几种值：
 
- <div class="note">
- <p><code>KeyboardEventInit</code> 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。</p>
- </div>
- </dd>
-</dl>
+    - `"key"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置 {{domxref("KeyboardEvent.key")}} 的值。
+    - `"code"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置{{domxref("KeyboardEvent.code")}} 的值。
+    - `"location"`, 可选，默认为 `0`, `unsigned long`类型，设置 {{domxref("KeyboardEvent.location")}} 的值。
+    - `"ctrlKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.ctrlKey")}} 的值。
+    - `"shiftKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置{{domxref("KeyboardEvent.shiftKey")}} 的值。
+    - `"altKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.altKey")}} 的值。
+    - `"metaKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.metaKey")}} 的值。
+    - `"repeat"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.repeat")}} 的值。
+    - `"isComposing"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.isComposing")}} 的值。
+    - `"charCode"`, 可选，默认为 `0`, `unsigned long` 类型，设置 {{domxref("KeyboardEvent.charCode")}} (已废弃) 的值。
+    - `"keyCode"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.keyCode")}} (已废弃) 的值。
+    - `"which"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.which")}} (已废弃) 的值。
 
-<h2 id="Specifications">规范</h2>
+    > **备注：** `KeyboardEventInit` 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.KeyboardEvent.KeyboardEvent")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("KeyboardEvent")}} 构造的相关对象的接口</li>
-</ul>
+- {{domxref("KeyboardEvent")}} 构造的相关对象的接口

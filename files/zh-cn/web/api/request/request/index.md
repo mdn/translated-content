@@ -2,67 +2,54 @@
 title: Request()
 slug: Web/API/Request/Request
 ---
-<p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
-<p><code><strong>Request()</strong></code> 构造器创建一个新的{{domxref("Request")}} 对象。</p>
+**`Request()`** 构造器创建一个新的{{domxref("Request")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var myRequest = new Request(input[, init]);</pre>
+```
+var myRequest = new Request(input[, init]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>input</em></dt>
- <dd>定义你想要 fetch 的资源。可以是下面两者之一：
- <ul>
-  <li>一个直接包含你希望 fetch 的资源的 URL 的 {{domxref("USVString")}}。</li>
-  <li>一个 {{domxref("Request")}} 对象。请注意以下行为更新，以在保留安全性的同时使构造函数不太可能引发异常：
-   <ul>
-    <li>如果此对象存在于构造函数调用的另一个起源上，则将除去{{domxref("Request.referrer")}}。</li>
-    <li>如果此对象的导航为 {{domxref("Request.mode")}}，则<code>mode</code>将转换为<code>same-origin</code>。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>一个可选对象，包含希望被包括到请求中的各种自定义选项。可用的选项如下：
- <ul>
-  <li><code>method</code>: 请求的方法，例如：<code>GET</code>, <code>POST。</code></li>
-  <li><code>headers</code>: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{domxref("ByteString")}} 的对象字面量中。</li>
-  <li><code>body</code>: 任何你想加到请求中的 body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}，或{{domxref("ReadableStream")}}对象。注意<code>GET</code> 和 <code>HEAD</code> 请求没有 body。</li>
-  <li><code>mode</code>: 请求的模式，比如 <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, 或 <code>navigate</code>。默认值为 <code>cors</code>。</li>
-  <li><code>credentials</code>: 想要在请求中使用的 credentials：: <code>omit</code>, <code>same-origin</code>, 或 <code>include</code>。默认值应该为<code>omit</code>。但在 Chrome 中，Chrome 47 之前的版本默认值为 <code>same-origin</code> ，自 Chrome 47 起，默认值为<code>include。</code></li>
-  <li><code>cache</code>: 请求中想要使用的 <a href="/en-US/docs/Web/API/Request/cache">cache mode</a> </li>
-  <li><code>redirect</code>: 对重定向处理的模式： <code>follow</code>, <code>error</code>, or <code>manual</code>。在 Chrome 中，Chrome 47 之前的版本默认值为 <code>manual</code> ，自 Chrome 47 起，默认值为<code>follow。</code></li>
-  <li><code>referrer</code>: 一个指定了<code>no-referrer</code>, <code>client</code>, 或一个 URL 的 {{domxref("USVString")}} 。默认值是<code>about:client</code>。</li>
-  <li><code>integrity</code>: 包括请求的 <a href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> 值 (e.g., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</li>
- </ul>
- </dd>
-</dl>
+- _input_
 
-<h2 id="Errors">Errors</h2>
+  - : 定义你想要 fetch 的资源。可以是下面两者之一：
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Type</strong></th>
-   <th scope="col"><strong>Description</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>TypeError</td>
-   <td>自 <a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>后，若 URL 有 credentials，<code>Request()</code> 会抛出 TypeError , 例如 http://user:password@example.com。</td>
-  </tr>
- </tbody>
-</table>
+    - 一个直接包含你希望 fetch 的资源的 URL 的 {{domxref("USVString")}}。
+    - 一个 {{domxref("Request")}} 对象。请注意以下行为更新，以在保留安全性的同时使构造函数不太可能引发异常：
 
-<h2 id="Example">Example</h2>
+      - 如果此对象存在于构造函数调用的另一个起源上，则将除去{{domxref("Request.referrer")}}。
+      - 如果此对象的导航为 {{domxref("Request.mode")}}，则`mode`将转换为`same-origin`。
 
-<p>在我们的获取请求示例 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">Fetch Request example</a>  (see <a href="http://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) 中，我们使用构造函数创建一个新的<code>Request</code>对象，然后使用 {{domxref("GlobalFetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxref("Body.blob")}} 以为其提供正确的 MIME 类型，以便对其进行正确处理，然后为其创建一个 Object URL，并将其显示在 {{htmlelement("img")}} 元素中。</p>
+- _init_ {{optional_inline}}
 
-<pre class="brush: js notranslate">var myImage = document.querySelector('img');
+  - : 一个可选对象，包含希望被包括到请求中的各种自定义选项。可用的选项如下：
+
+    - `method`: 请求的方法，例如：`GET`, `POST。`
+    - `headers`: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{domxref("ByteString")}} 的对象字面量中。
+    - `body`: 任何你想加到请求中的 body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}，或{{domxref("ReadableStream")}}对象。注意`GET` 和 `HEAD` 请求没有 body。
+    - `mode`: 请求的模式，比如 `cors`, `no-cors`, `same-origin`, 或 `navigate`。默认值为 `cors`。
+    - `credentials`: 想要在请求中使用的 credentials：: `omit`, `same-origin`, 或 `include`。默认值应该为`omit`。但在 Chrome 中，Chrome 47 之前的版本默认值为 `same-origin` ，自 Chrome 47 起，默认值为`include。`
+    - `cache`: 请求中想要使用的 [cache mode](/zh-CN/docs/Web/API/Request/cache)
+    - `redirect`: 对重定向处理的模式： `follow`, `error`, or `manual`。在 Chrome 中，Chrome 47 之前的版本默认值为 `manual` ，自 Chrome 47 起，默认值为`follow。`
+    - `referrer`: 一个指定了`no-referrer`, `client`, 或一个 URL 的 {{domxref("USVString")}} 。默认值是`about:client`。
+    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Subresource_Integrity) 值 (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+
+## Errors
+
+| **Type**  | **Description**                                                                                                                                             |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 http\://user:password\@example.com。 |
+
+## Example
+
+在我们的获取请求示例 [Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (see [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用构造函数创建一个新的`Request`对象，然后使用 {{domxref("GlobalFetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxref("Body.blob")}} 以为其提供正确的 MIME 类型，以便对其进行正确处理，然后为其创建一个 Object URL，并将其显示在 {{htmlelement("img")}} 元素中。
+
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -71,11 +58,13 @@ fetch(myRequest).then(function(response) {
 }).then(function(response) {
   var objectURL = URL.createObjectURL(response);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>在<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init">Fetch Request with init example</a> (参见 <a href="http://mdn.github.io/fetch-examples/fetch-request-with-init/">Fetch Request init live</a>) 我们做了同样的事情，只不过我们在调用<code>fetch() 时，还</code>传递进了一个 init 对象：</p>
+在[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (参见 [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
 
-<pre class="brush: js notranslate">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
@@ -89,17 +78,21 @@ var myRequest = new Request('flowers.jpg',myInit);
 
 fetch(myRequest).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p>注意你也可以把 init 对象作为参数传递到<code>fetch</code>调用中来达到同样的效果。如下：</p>
+注意你也可以把 init 对象作为参数传递到`fetch`调用中来达到同样的效果。如下：
 
-<pre class="brush: js notranslate">fetch(myRequest,myInit).then(function(response) {
+```js
+fetch(myRequest,myInit).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p>也可以使用在 init 中使用对象字面量作为 <code>headers</code>。</p>
+也可以使用在 init 中使用对象字面量作为 `headers`。
 
-<pre class="brush: js notranslate">var myInit = { method: 'GET',
+```js
+var myInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },
@@ -107,26 +100,22 @@ fetch(myRequest).then(function(response) {
                cache: 'default' };
 
 var myRequest = new Request('flowers.jpg', myInit);
-</pre>
+```
 
-<p>也可以把 {{domxref("Request")}} 对象再作参数传递进 <code>Request()</code> 构造器来创建一个请求的副本（就像调用{{domxref("Request.clone","clone()")}}一样）。</p>
+也可以把 {{domxref("Request")}} 对象再作参数传递进 `Request()` 构造器来创建一个请求的副本（就像调用{{domxref("Request.clone","clone()")}}一样）。
 
-<div class="note">
-<p><strong>Note</strong>: This last usage is probably only useful in <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>.</p>
-</div>
+> **备注：** This last usage is probably only useful in [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Request.Request")}}</p>
+{{Compat("api.Request.Request")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

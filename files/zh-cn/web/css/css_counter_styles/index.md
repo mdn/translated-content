@@ -19,18 +19,17 @@ translation_of: Web/CSS/CSS_Counter_Styles
 
 ### At-rules
 
-- ## {{cssxref("@counter-style")}}
+- {{cssxref("@counter-style")}}
 
-      :
-      -   {{cssxref("@counter-style/system","system")}}
-      -   {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-      -   {{cssxref("@counter-style/negative", "negative")}}
-      -   {{cssxref("@counter-style/prefix", "prefix")}}
-      -   {{cssxref("@counter-style/suffix", "suffix")}}
-      -   {{cssxref("@counter-style/range", "range")}}
-      -   {{cssxref("@counter-style/pad", "pad")}}
-      -   {{cssxref("@counter-style/speak-as", "speak-as")}}
-      -   {{cssxref("@counter-style/fallback", "fallback")}}
+  - {{cssxref("@counter-style/system","system")}}
+  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
+  - {{cssxref("@counter-style/negative", "negative")}}
+  - {{cssxref("@counter-style/prefix", "prefix")}}
+  - {{cssxref("@counter-style/suffix", "suffix")}}
+  - {{cssxref("@counter-style/range", "range")}}
+  - {{cssxref("@counter-style/pad", "pad")}}
+  - {{cssxref("@counter-style/speak-as", "speak-as")}}
+  - {{cssxref("@counter-style/fallback", "fallback")}}
 
 ## 指南
 

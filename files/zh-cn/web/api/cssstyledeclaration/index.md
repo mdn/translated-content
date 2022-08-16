@@ -2,50 +2,45 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong><code>CSSStyleDeclaration</code></strong> 接口表示一个对象，它是一个 CSS 声明块，CSS 属性键值对的集合。它暴露了样式信息和各种与样式相关的方法和属性。</p>
+**`CSSStyleDeclaration`** 接口表示一个对象，它是一个 CSS 声明块，CSS 属性键值对的集合。它暴露了样式信息和各种与样式相关的方法和属性。
 
-<p><code>CSSStyleDeclaration</code> 对象可被暴露于三种不同的 API 下：</p>
+`CSSStyleDeclaration` 对象可被暴露于三种不同的 API 下：
 
-<ul>
- <li>{{domxref("HTMLElement.style")}}，用于操作单个元素的样式（<code>&lt;elem style="..."&gt;</code>）。</li>
- <li>{{domxref("CSSStyleSheet")}} API，举个例子，<code>document.styleSheets[0].cssRules[0].style</code> 会返回文档中第一个样式表中的第一条 CSS 规则。</li>
- <li>{{domxref("Window.getComputedStyle()")}}，将 <code>CSSStyleDeclaration</code> 对象作为一个<strong>只读</strong>的接口。</li>
-</ul>
+- {{domxref("HTMLElement.style")}}，用于操作单个元素的样式（`<elem style="...">`）。
+- {{domxref("CSSStyleSheet")}} API，举个例子，`document.styleSheets[0].cssRules[0].style` 会返回文档中第一个样式表中的第一条 CSS 规则。
+- {{domxref("Window.getComputedStyle()")}}，将 `CSSStyleDeclaration` 对象作为一个**只读**的接口。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.cssText")}}</dt>
- <dd>当前声明块的文本内容。设置此属性会改变样式。</dd>
- <dt>{{domxref("CSSStyleDeclaration.length")}}</dt>
- <dd>属性的数量。参照下面的 {{domxref("CSSStyleDeclaration.item()", 'item()')}} 方法。</dd>
- <dt>{{domxref("CSSStyleDeclaration.parentRule")}}</dt>
- <dd>包含当前声明块的 {{domxref("CssRule")}}。</dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.cssText")}}
+  - : 当前声明块的文本内容。设置此属性会改变样式。
+- {{domxref("CSSStyleDeclaration.length")}}
+  - : 属性的数量。参照下面的 {{domxref("CSSStyleDeclaration.item()", 'item()')}} 方法。
+- {{domxref("CSSStyleDeclaration.parentRule")}}
+  - : 包含当前声明块的 {{domxref("CssRule")}}。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyPriority()")}}</dt>
- <dd>返回可选的优先级，"important"。</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyValue()")}}</dt>
- <dd>返回给定属性的值。</dd>
- <dt>{{domxref("CSSStyleDeclaration.item()")}}</dt>
- <dd>返回用 index 标记的属性名，当 index 越界时返回空字符串。<br>
- 另一个可选方案：使用 nodeList[<var>i</var>]（在 i 越界时返回 undefined）获取。通常在非 JavaScript Dom 实现方案是很有用。</dd>
- <dt>{{domxref("CSSStyleDeclaration.removeProperty()")}}</dt>
- <dd>从 CSS 声明块中删除属性。</dd>
- <dt>{{domxref("CSSStyleDeclaration.setProperty()")}}</dt>
- <dd>在 CSS 声明块中修改现有属性或设置新属性。</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Deprecated_Inline}}</dt>
- <dd><strong>仅在火狐浏览器中支持 getComputedStyle.</strong> 返回 {{ domxref("CSSPrimitiveValue") }} or <code>null</code> for <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a>.</dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.getPropertyPriority()")}}
+  - : 返回可选的优先级，"important"。
+- {{domxref("CSSStyleDeclaration.getPropertyValue()")}}
+  - : 返回给定属性的值。
+- {{domxref("CSSStyleDeclaration.item()")}}
+  - : 返回用 index 标记的属性名，当 index 越界时返回空字符串。
+    另一个可选方案：使用 nodeList\[_i_]（在 i 越界时返回 undefined）获取。通常在非 JavaScript Dom 实现方案是很有用。
+- {{domxref("CSSStyleDeclaration.removeProperty()")}}
+  - : 从 CSS 声明块中删除属性。
+- {{domxref("CSSStyleDeclaration.setProperty()")}}
+  - : 在 CSS 声明块中修改现有属性或设置新属性。
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Deprecated_Inline}}
+  - : **仅在火狐浏览器中支持 getComputedStyle.** 返回 {{ domxref("CSSPrimitiveValue") }} or `null` for [shorthand properties](/zh-CN/docs/Web/CSS/Shorthand_properties).
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<pre class="brush: js notranslate">var styleObj = document.styleSheets[0].cssRules[0].style;
+```js
+var styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
 for (var i = styleObj.length; i--;) {
@@ -53,20 +48,17 @@ for (var i = styleObj.length; i--;) {
   styleObj.removeProperty(nameString);
 }
 
-console.log(styleObj.cssText);</pre>
+console.log(styleObj.cssText);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CSSStyleDeclaration")}}
 
+## 参见
 
-<p>{{Compat("api.CSSStyleDeclaration")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Properties_Reference">DOM CSS Properties</a></li>
-</ul>
+- [DOM CSS Properties](/zh-CN/docs/Web/CSS/CSS_Properties_Reference)

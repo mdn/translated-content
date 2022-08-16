@@ -2,56 +2,60 @@
 title: DocumentOrShadowRoot.getSelection()
 slug: Web/API/Document/getSelection
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>getSelection()</code></strong> property of the {{DOMxRef("DocumentOrShadowRoot")}} interface returns a {{DOMxRef("Selection")}} object representing the range of text selected by the user, or the current position of the caret.</p>
+The **`getSelection()`** property of the {{DOMxRef("DocumentOrShadowRoot")}} interface returns a {{DOMxRef("Selection")}} object representing the range of text selected by the user, or the current position of the caret.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var selection = documentOrShadowRootInstance.getSelection()</pre>
+```
+var selection = documentOrShadowRootInstance.getSelection()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{DOMxRef("Selection")}} object.</p>
+A {{DOMxRef("Selection")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">function foo() {
+```js
+function foo() {
     var selObj = document.getSelection();
     alert(selObj);
     var selRange = selObj.getRangeAt(0);
     // do stuff with the range
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<h3 id="String_representation_of_the_Selection_object">String representation of the Selection object</h3>
+### String representation of the Selection object
 
-<p>In JavaScript, when an object is passed to a function expecting a string (like {{DOMxRef("Window.alert()")}}), the object's {{JSxRef("Object.toString", "toString()")}} method is called and the returned value is passed to the function. This can make the object appear to be a string when used with other functions when it is really an object with properties and methods.</p>
+In JavaScript, when an object is passed to a function expecting a string (like {{DOMxRef("Window.alert()")}}), the object's {{JSxRef("Object.toString", "toString()")}} method is called and the returned value is passed to the function. This can make the object appear to be a string when used with other functions when it is really an object with properties and methods.
 
-<p>In the above example, <code>selObj.toString()</code> is automatically called when it is passed to {{DOMxRef("Window.alert()")}}. However, attempting to use a JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> property or method such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length">length</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr">substr</a></code> directly on a {{DOMxRef("Selection")}} object results in an error if it does not have that property or method and may return unexpected results if it does. To use a <code>Selection</code> object as a string, call its <code>toString()</code> method directly:</p>
+In the above example, `selObj.toString()` is automatically called when it is passed to {{DOMxRef("Window.alert()")}}. However, attempting to use a JavaScript [String](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) property or method such as [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) or [`substr`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr) directly on a {{DOMxRef("Selection")}} object results in an error if it does not have that property or method and may return unexpected results if it does. To use a `Selection` object as a string, call its `toString()` method directly:
 
-<pre class="brush: js">var selectedText = selObj.toString();</pre>
+```js
+var selectedText = selObj.toString();
+```
 
-<ul>
- <li><code>selObj</code> is a <code>Selection</code> object.</li>
- <li><code>selectedText</code> is a string (Selected text).</li>
-</ul>
+- `selObj` is a `Selection` object.
+- `selectedText` is a string (Selected text).
 
-<h3 id="Related_objects">Related objects</h3>
+### Related objects
 
-<p>HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}}).</p>
+HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}}).
 
-<p>Notice the difference between <em>selection</em> and <em>focus</em>. {{DOMxRef("Document.activeElement")}} returns the focused element.</p>
+Notice the difference between _selection_ and _focus_. {{DOMxRef("Document.activeElement")}} returns the focused element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat}}

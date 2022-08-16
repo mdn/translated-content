@@ -2,114 +2,69 @@
 title: WebGLRenderingContext.isEnabled()
 slug: Web/API/WebGLRenderingContext/isEnabled
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.isEnabled()</code></strong> 是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 方法之一，用来检测给定的 WebGL 功能项在当前上下文是否可用。</p>
+**`WebGLRenderingContext.isEnabled()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 方法之一，用来检测给定的 WebGL 功能项在当前上下文是否可用。
 
-<p>默认的，除了 <code>gl.DITHER</code>，所有的功能项都是未启用的。</p>
+默认的，除了 `gl.DITHER`，所有的功能项都是未启用的。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">void <var>gl</var>.isEnabled(<var>cap</var>);
-</pre>
+```
+void gl.isEnabled(cap);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>cap</code></dt>
- <dd>{{domxref("GLenum")}} 指定待检测的 WebGL 功能项。可能的值有：
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Constant</th>
-    <th scope="col">Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>gl.BLEND</code></td>
-    <td>Blending of the computed fragment color values. See {{domxref("WebGLRenderingContext.blendFunc()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.CULL_FACE</code></td>
-    <td>Culling of polygons. See {{domxref("WebGLRenderingContext.cullFace()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.DEPTH_TEST</code></td>
-    <td>Depth comparisons and updates to the depth buffer. See {{domxref("WebGLRenderingContext.depthFunc()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.DITHER</code></td>
-    <td>Dithering of color components before they get written to the color buffer.</td>
-   </tr>
-   <tr>
-    <td><code>gl.POLYGON_OFFSET_FILL</code></td>
-    <td>Adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.SAMPLE_ALPHA_TO_COVERAGE</code></td>
-    <td>Computation of a temporary coverage value determined by the alpha value.</td>
-   </tr>
-   <tr>
-    <td><code>gl.SAMPLE_COVERAGE</code></td>
-    <td>ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.SCISSOR_TEST</code></td>
-    <td>Scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.STENCIL_TEST</code></td>
-    <td>Stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.</td>
-   </tr>
-  </tbody>
- </table>
- 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 的时候，下列附加的值也是可选用的。
+- `cap`
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Constant</th>
-    <th scope="col">Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>gl.RASTERIZER_DISCARD</code></td>
-    <td>Primitives are discarded immediately before the rasterization stage, but after the optional transform feedback stage. <code>gl.clear()</code> commands are ignored.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+  - : {{domxref("GLenum")}} 指定待检测的 WebGL 功能项。可能的值有：
 
-<h3 id="返回值">返回值</h3>
+    | Constant                      | Description                                                                                                                                       |
+    | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.BLEND`                    | Blending of the computed fragment color values. See {{domxref("WebGLRenderingContext.blendFunc()")}}.                             |
+    | `gl.CULL_FACE`                | Culling of polygons. See {{domxref("WebGLRenderingContext.cullFace()")}}.                                                        |
+    | `gl.DEPTH_TEST`               | Depth comparisons and updates to the depth buffer. See {{domxref("WebGLRenderingContext.depthFunc()")}}.                          |
+    | `gl.DITHER`                   | Dithering of color components before they get written to the color buffer.                                                                        |
+    | `gl.POLYGON_OFFSET_FILL`      | Adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                |
+    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Computation of a temporary coverage value determined by the alpha value.                                                                          |
+    | `gl.SAMPLE_COVERAGE`          | ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.   |
+    | `gl.SCISSOR_TEST`             | Scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}. |
+    | `gl.STENCIL_TEST`             | Stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                      |
 
-<p>{{domxref("GLboolean")}} 指示能力项 <em>cap </em>可用 (<code>true</code>)，不可用 (<code>false</code>)。</p>
+    当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 的时候，下列附加的值也是可选用的。
 
-<h2 id="示例">示例</h2>
+    | Constant                | Description                                                                                                                                              |
+    | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.RASTERIZER_DISCARD` | Primitives are discarded immediately before the rasterization stage, but after the optional transform feedback stage. `gl.clear()` commands are ignored. |
 
-<pre class="brush: js">gl.isEnabled(gl.STENCIL_TEST);
+### 返回值
+
+{{domxref("GLboolean")}} 指示能力项 _cap_ 可用 (`true`)，不可用 (`false`)。
+
+## 示例
+
+```js
+gl.isEnabled(gl.STENCIL_TEST);
 // false
-</pre>
+```
 
-<p>启用或停用给定的能力项，使用 {{domxref("WebGLRenderingContext.enable()")}} 方法和 {{domxref("WebGLRenderingContext.disable()")}} 方法：</p>
+启用或停用给定的能力项，使用 {{domxref("WebGLRenderingContext.enable()")}} 方法和 {{domxref("WebGLRenderingContext.disable()")}} 方法：
 
-<pre class="brush: js">gl.enable(gl.STENCIL_TEST);
+```js
+gl.enable(gl.STENCIL_TEST);
 gl.disable(gl.STENCIL_TEST);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.enable()")}}</li>
- <li>{{domxref("WebGLRenderingContext.disable()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.enable()")}}
+- {{domxref("WebGLRenderingContext.disable()")}}

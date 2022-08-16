@@ -2,25 +2,24 @@
 title: Headers.keys()
 slug: Web/API/Headers/keys
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}**`Headers.keys() `**方法返回一个 headers(Object) 对象所有 key 组成的迭代器，通过迭代器可以遍历 headers 这个对象，返回的迭代器中的元素 key 都是字符串。
 
-<div><code><strong>Headers.keys() </strong></code>方法返回一个 headers(Object) 对象所有 key 组成的迭代器，通过迭代器可以遍历 headers 这个对象，返回的迭代器中的元素 key 都是字符串。</div>
+> **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 也可以使用。
 
-<div class="note">
-<p><strong>注意</strong>: 这个方法在 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 也可以使用。</p>
-</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```
+headers.keys();
+```
 
-<pre class="syntaxbox">headers.keys();</pre>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+返回 `headers` 对象中所有 key 组成的迭代器 {{jsxref("Iteration_protocols","iterator")}}。
 
-<p>返回 <code>headers</code> 对象中所有 key 组成的迭代器 {{jsxref("Iteration_protocols","iterator")}}。</p>
+## 示例
 
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js; highlight:[7]">// 创建一个 Headers 对象
+```js
+// 创建一个 Headers 对象
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
@@ -29,25 +28,21 @@ myHeaders.append('Vary', 'Accept-Language');
 for(var key of myHeaders.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>控制台打印结果：</p>
+控制台打印结果：
 
-<pre>content-type
-vary</pre>
+```
+content-type
+vary
+```
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<div>
-<div class="hidden"></div>
+{{Compat("api.Headers.keys")}}
 
-<p>{{Compat("api.Headers.keys")}}</p>
-</div>
+## 相关链接
 
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

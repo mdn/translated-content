@@ -2,40 +2,37 @@
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p><strong><code>PerformanceEntry</code></strong> 对象代表了 performance 时间列表中的单个 metric 数据。每一个 <em>performance entry 都可以在应用运行过程中通过手动构建 </em><em>{{domxref("PerformanceMark","mark")}}</em> 或者 <em>{{domxref("PerformanceMeasure","measure")}}</em> (例如调用 {{domxref("Performance.mark","mark()")}} 方法) 生成。此外， Performance entries 在资源加载的时候，也会被动生成（例如图片、script、css 等资源加载）</p>
+**`PerformanceEntry`** 对象代表了 performance 时间列表中的单个 metric 数据。每一个 _performance entry 都可以在应用运行过程中通过手动构建_ _{{domxref("PerformanceMark","mark")}}_ 或者 _{{domxref("PerformanceMeasure","measure")}}_ (例如调用 {{domxref("Performance.mark","mark()")}} 方法) 生成。此外， Performance entries 在资源加载的时候，也会被动生成（例如图片、script、css 等资源加载）
 
-<p>Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker")}}. 同时该对象扩展了几个其他对象的属性，包括 {{domxref("PerformanceMark")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceFrameTiming")}}, {{domxref("PerformanceNavigationTiming")}} 以及 {{domxref("PerformanceResourceTiming")}}.</p>
+Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker")}}. 同时该对象扩展了几个其他对象的属性，包括 {{domxref("PerformanceMark")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceFrameTiming")}}, {{domxref("PerformanceNavigationTiming")}} 以及 {{domxref("PerformanceResourceTiming")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PerformanceEntry.name")}} {{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}} 该 performance entry 的名字</dd>
- <dt>{{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}} 代表所上报的 performance metric 的 entryType 类型，例如 "mark". 可以通过 {{domxref("PerformanceEntry.entryType","entryType")}} 查阅完整的 entryType type 类型。</dd>
- <dt>{{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}</dt>
- <dd> {{domxref("DOMHighResTimeStamp")}}  此为 metric 上报时的时间</dd>
- <dt>{{domxref("PerformanceEntry.duration")}} {{readonlyInline}}</dt>
- <dd>{{domxref("DOMHighResTimeStamp")}} 该事件的耗时</dd>
-</dl>
+- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
+  - : {{domxref("DOMString")}} 该 performance entry 的名字
+- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
+  - : {{domxref("DOMString")}} 代表所上报的 performance metric 的 entryType 类型，例如 "mark". 可以通过 {{domxref("PerformanceEntry.entryType","entryType")}} 查阅完整的 entryType type 类型。
+- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
+  - : {{domxref("DOMHighResTimeStamp")}} 此为 metric 上报时的时间
+- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
+  - : {{domxref("DOMHighResTimeStamp")}} 该事件的耗时
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}</dt>
- <dd>返回 <code>PerformanceEntry</code> 对象的 JSON 格式数据</dd>
-</dl>
+- {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
+  - : 返回 `PerformanceEntry` 对象的 JSON 格式数据
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>以下例子检查了当前浏览器所支持的所有 <code>PerformanceEntry</code> 属性，每个属性的检查结果都会通过 console 打印出来</p>
+以下例子检查了当前浏览器所支持的所有 `PerformanceEntry` 属性，每个属性的检查结果都会通过 console 打印出来
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Use getEntries() to get a list of all performance entries
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     console.log("PerformanceEntry[" + i + "]");
     print_PerformanceEntry(p[i]);
   }
@@ -46,7 +43,7 @@ function print_PerformanceEntry(perfEntry) {
     "startTime",
     "duration"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in perfEntry;
     if (supported) {
@@ -57,18 +54,12 @@ function print_PerformanceEntry(perfEntry) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
-
-
-<p>{{Compat("api.PerformanceEntry")}}</p>
-</div>
-</div>
+{{Compat("api.PerformanceEntry")}}

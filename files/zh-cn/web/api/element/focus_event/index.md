@@ -19,7 +19,7 @@ focus 事件在元素获取焦点时触发。这个事件和 [`focusin`](/zh-CN/
 - 默认行为
   - : 无。
 
-> **备注：** 注释：这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})
+> **备注：** 这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})
 
 ## 属性
 

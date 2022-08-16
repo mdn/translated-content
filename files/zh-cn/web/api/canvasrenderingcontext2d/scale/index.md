@@ -2,44 +2,45 @@
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.scale()</code></strong> 是 Canvas 2D API 根据 x 水平方向和 y 垂直方向，为 canvas 单位添加缩放变换的方法。</p>
+**`CanvasRenderingContext2D.scale()`** 是 Canvas 2D API 根据 x 水平方向和 y 垂直方向，为 canvas 单位添加缩放变换的方法。
 
-<p>默认的，在 canvas 中一个单位实际上就是一个像素。例如，如果我们将 0.5 作为缩放因子，最终的单位会变成 0.5 像素，并且形状的尺寸会变成原来的一半。相似的方式，我们将 2.0 作为缩放因子，将会增大单位尺寸变成两个像素。形状的尺寸将会变成原来的两倍。</p>
+默认的，在 canvas 中一个单位实际上就是一个像素。例如，如果我们将 0.5 作为缩放因子，最终的单位会变成 0.5 像素，并且形状的尺寸会变成原来的一半。相似的方式，我们将 2.0 作为缩放因子，将会增大单位尺寸变成两个像素。形状的尺寸将会变成原来的两倍。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">void <var><em>ctx</em>.scale(x, y);</var>
-</pre>
+```
+void ctx.scale(x, y);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>水平方向的缩放因子。A negative value flips pixels across the vertical axis. A value of <code>1</code> results in no horizontal scaling.</dd>
- <dt>y</dt>
- <dd>垂直方向的缩放因子。A negative value flips pixels across the horizontal axis. A value of <code>1</code> results in no vertical scaling.</dd>
-</dl>
+- `x`
+  - : 水平方向的缩放因子。A negative value flips pixels across the vertical axis. A value of `1` results in no horizontal scaling.
+- y
+  - : 垂直方向的缩放因子。A negative value flips pixels across the horizontal axis. A value of `1` results in no vertical scaling.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Scaling_a_shape">使用 <code>scale</code> 方法</h3>
+### 使用 `scale` 方法
 
-<p>这是一段使用 <code>scale</code> 方法的简单的代码片段。</p>
+这是一段使用 `scale` 方法的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The rectangle has a specified width of 8 and a height of 20. The transformation matrix scales it by 9x horizontally and by 3x vertically. Thus, its final size is a width of 72 and a height of 60.</p>
+The rectangle has a specified width of 8 and a height of 20. The transformation matrix scales it by 9x horizontally and by 3x vertically. Thus, its final size is a width of 72 and a height of 60.
 
-<p>Notice that its position on the canvas also changes. Since its specified corner is (10, 10), its rendered corner becomes (90, 30).</p>
+Notice that its position on the canvas also changes. Since its specified corner is (10, 10), its rendered corner becomes (90, 30).
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Scaled rectangle
@@ -52,52 +53,51 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 // Non-scaled rectangle
 ctx.fillStyle = 'gray';
-ctx.fillRect(10, 10, 8, 20);</pre>
+ctx.fillRect(10, 10, 8, 20);
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>The scaled rectangle is red, and the non-scaled rectangle is gray.</p>
+The scaled rectangle is red, and the non-scaled rectangle is gray.
 
-<p>{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}</p>
+{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}
 
-<h3 id="Flipping_things_horizontally_or_vertically">使用 scale 水平或竖直翻转</h3>
+### 使用 scale 水平或竖直翻转
 
-<p>你可以使用 <code>ctx.scale(-1, 1)</code> 水平翻转上下文，使用 <code>ctx.scale(1, -1)</code> 垂直翻转上下文。在这个例子中，"Hello world!" 被水平翻转。</p>
+你可以使用 `ctx.scale(-1, 1)` 水平翻转上下文，使用 `ctx.scale(1, -1)` 垂直翻转上下文。在这个例子中，"Hello world!" 被水平翻转。
 
-<p>Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}} specifies a negative x coordinate. This is to adjust for the negative scaling factor: <code>-280 * -1</code> becomes <code>280</code>, and text is drawn leftwards from that point.</p>
+Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}} specifies a negative x coordinate. This is to adjust for the negative scaling factor: `-280 * -1` becomes `280`, and text is drawn leftwards from that point.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[4] notranslate">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.scale(-1, 1);
 ctx.font = '48px serif';
 ctx.fillText('Hello world!', -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}</p>
+{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CanvasRenderingContext2D.scale")}}
 
+## 参见
 
-<p>{{Compat("api.CanvasRenderingContext2D.scale")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}

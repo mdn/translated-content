@@ -2,49 +2,46 @@
 title: Performance.getEntries()
 slug: Web/API/Performance/getEntries
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p><strong><code>getEntries()</code></strong> 对于给定的 filter，此方法返回 {{domxref("PerformanceEntry")}} 对象数组。数组成员（入口）可以在显式的时间点用 performance <em>marks 或</em><em>measures</em> 来创建 (例如调用{{domxref("Performance.mark","mark()")}} 方法) .</p>
+**`getEntries()`** 对于给定的 filter，此方法返回 {{domxref("PerformanceEntry")}} 对象数组。数组成员（入口）可以在显式的时间点用 performance _marks 或 measures_ 来创建 (例如调用{{domxref("Performance.mark","mark()")}} 方法) .
 
-<p>此方法暴露给{{domxref("Window")}} 和 {{domxref("Worker")}}接口。</p>
+此方法暴露给{{domxref("Window")}} 和 {{domxref("Worker")}}接口。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>取全部：</p>
+取全部：
 
-<pre class="syntaxbox"><em>entries</em> = window.performance.getEntries();
-<em>entries</em> = window.performance.getEntries(<em>PerformanceEntryFilterOptions</em>);
-</pre>
+```
+entries = window.performance.getEntries();
+entries = window.performance.getEntries(PerformanceEntryFilterOptions);
+```
 
-<p>取特定：</p>
+取特定：
 
-<pre class="syntaxbox">entries = performance.getEntries({name: "entry_name", entryType: "mark"});
-</pre>
+```
+entries = performance.getEntries({name: "entry_name", entryType: "mark"});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>PerformanceEntryFilterOptions {{optional_inline}}</dt>
- <dd><code>PerformanceEntryFilterOptions</code> 是一个带有以下键值的字典：
+- PerformanceEntryFilterOptions {{optional_inline}}
 
- <ul>
-  <li><code>"name"</code>,  performance entry. 的名字</li>
-  <li><code>"entryType"</code>, entry 类型。合法的 entry 类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取。</li>
-  <li><code>"initiatorType"</code>, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。</li>
- </ul>
- </dd>
-</dl>
+  - : `PerformanceEntryFilterOptions` 是一个带有以下键值的字典：
 
-<h3 id="Return_Value">返回值</h3>
+    - `"name"`, performance entry. 的名字
+    - `"entryType"`, entry 类型。合法的 entry 类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取。
+    - `"initiatorType"`, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。
 
-<dl>
- <dt>entries</dt>
- <dd>一个由符合 filter 条件的{{domxref("PerformanceEntry")}} 对象构成的数组 . 数组成员按 PerformanceEntry.{{domxref("PerformanceEntry.startTime","startTime")}}时间顺序排列 . 如果没有符合 filter 条件的对象，那么返回空数组。如果不带任何参数，返回全部 entries.</dd>
-</dl>
+### 返回值
 
-<h2 id="Example">Example</h2>
+- entries
+  - : 一个由符合 filter 条件的{{domxref("PerformanceEntry")}} 对象构成的数组 . 数组成员按 PerformanceEntry.{{domxref("PerformanceEntry.startTime","startTime")}}时间顺序排列 . 如果没有符合 filter 条件的对象，那么返回空数组。如果不带任何参数，返回全部 entries.
 
-<pre class="brush: js">function use_PerformanceEntry_methods() {
+## Example
+
+```js
+function use_PerformanceEntry_methods() {
   log("PerformanceEntry tests ...");
 
   if (performance.mark === undefined) {
@@ -64,21 +61,21 @@ slug: Web/API/Performance/getEntries
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Begin[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log ("Mark only entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
@@ -86,7 +83,7 @@ slug: Web/API/Performance/getEntries
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
@@ -96,25 +93,20 @@ slug: Web/API/Performance/getEntries
 //entryType,name,initiatorType  Examples
 var p = performance.getEntries();
 
-var ptyps = p.map((ele) =&gt; {return(ele.entryType)});
+var ptyps = p.map((ele) => {return(ele.entryType)});
 //Array(94) [ "navigation", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", … ]
 
-var pnms = p.map((ele) =&gt; {return(ele.name)});
-//Array(94) [ "document", "https://csdnimg.cn/public/static/css/avatar.css", "https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js", "https://csdnimg.cn/rabbit/exposure-click/main-1.0.5.js", "https://csdnimg.cn/release/phoenix/production/main-e96db8abdf.js", "https://csdnimg.cn/pubfooter/js/tracking-1.0.2.js", "https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js", "https://csdnimg.cn/release/phoenix/production/markdown_views-ea0013b516.css", "https://csdnimg.cn/search/baidu_search-1.1.2.js?v=201802071056&amp;autorun=true&amp;install=true&amp;keyword=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F", "https://csdnimg.cn/release/phoenix/production/main-f869aa95a4.css", … ]
+var pnms = p.map((ele) => {return(ele.name)});
+//Array(94) [ "document", "https://csdnimg.cn/public/static/css/avatar.css", "https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js", "https://csdnimg.cn/rabbit/exposure-click/main-1.0.5.js", "https://csdnimg.cn/release/phoenix/production/main-e96db8abdf.js", "https://csdnimg.cn/pubfooter/js/tracking-1.0.2.js", "https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js", "https://csdnimg.cn/release/phoenix/production/markdown_views-ea0013b516.css", "https://csdnimg.cn/search/baidu_search-1.1.2.js?v=201802071056&autorun=true&install=true&keyword=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F", "https://csdnimg.cn/release/phoenix/production/main-f869aa95a4.css", … ]
 
-var pityps = p.map((ele) =&gt; {return(ele.initiatorType)});
+var pityps = p.map((ele) => {return(ele.initiatorType)});
 //Array(94) [ "navigation", "link", "script", "script", "script", "script", "script", "link", "script", "link", … ]
 
-Specifications</pre>
+Specifications
+```
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<div>
-
-
-<p>{{Compat("api.Performance.getEntries")}}</p>
-</div>
-</div>
+{{Compat("api.Performance.getEntries")}}

@@ -8,7 +8,7 @@ slug: Web/API/Event/stopImmediatePropagation
 
 如果多个事件监听器被附加到相同元素的相同事件类型上，当此事件触发时，它们会按其被添加的顺序被调用。如果在其中一个事件监听器中执行 `stopImmediatePropagation()` ，那么剩下的事件监听器都不会被调用。
 
-> **备注：** 译者注：注意与 `event.stopPropagation()` 之间的区别
+> **备注：** 注意与 `event.stopPropagation()` 之间的区别
 
 ## 语法
 

@@ -2,126 +2,64 @@
 title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的<strong><code>WebGLRenderingContext.enable()</code></strong> 方法，用于对该上下文开启某种特性。</p>
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的**`WebGLRenderingContext.enable()`** 方法，用于对该上下文开启某种特性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.enable(<var>cap</var>);参数</pre>
+```
+void gl.enable(cap);参数
+```
 
-<dl>
- <dt><code>cap</code></dt>
- <dd>让 WebGL 开启某种特性，可能的值：
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Constant</th>
-    <th scope="col">Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>gl.BLEND</code></td>
-    <td>激活片元的颜色融合计算。参见 {{domxref("WebGLRenderingContext.blendFunc()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.CULL_FACE</code></td>
-    <td>激活多边形正反面剔除。参见{{domxref("WebGLRenderingContext.cullFace()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.DEPTH_TEST</code></td>
-    <td>
-     <p>激活深度比较，并且更新深度缓冲区。参见{{domxref("WebGLRenderingContext.depthFunc()")}}.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>gl.DITHER</code></td>
-    <td>
-     <p> </p>
+- `cap`
 
-     <p>激活在写入颜色缓冲区之前，抖动颜色成分。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>gl.POLYGON_OFFSET_FILL</code></td>
-    <td>
-     <p>激活添加多边形片段的深度值偏移。参见{{domxref("WebGLRenderingContext.polygonOffset()")}}.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>gl.SAMPLE_ALPHA_TO_COVERAGE</code></td>
-    <td>
-     <p>激活通过 alpha 值决定的临时覆盖值计算。（抗锯齿）</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>gl.SAMPLE_COVERAGE</code></td>
-    <td>
-     <p>激活使用临时覆盖值，位和运算片段的覆盖值。参见 {{domxref("WebGLRenderingContext.sampleCoverage()")}}.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>gl.SCISSOR_TEST</code></td>
-    <td>
-     <p>激活剪裁测试，即丢弃在剪裁矩形范围外的片段。{{domxref("WebGLRenderingContext.scissor()")}}.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>gl.STENCIL_TEST</code></td>
-    <td>
-     <p>激活模板测试并且更新模板缓冲区。参见{{domxref("WebGLRenderingContext.stencilFunc()")}}.</p>
-    </td>
-   </tr>
-  </tbody>
- </table>
- 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以添加使用下面的值。
+  - : 让 WebGL 开启某种特性，可能的值：
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Constant</th>
-    <th scope="col">Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>gl.RASTERIZER_DISCARD</code></td>
-    <td>
-     <p>图元光栅化阶段之前，但在任意的 transform 反馈之后，就立刻被丢弃。<code>gl.clear() 命令被忽略。</code></p>
-    </td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+    | Constant                      | Description                                                                                                              |
+    | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+    | `gl.BLEND`                    | 激活片元的颜色融合计算。参见 {{domxref("WebGLRenderingContext.blendFunc()")}}.                           |
+    | `gl.CULL_FACE`                | 激活多边形正反面剔除。参见{{domxref("WebGLRenderingContext.cullFace()")}}.                              |
+    | `gl.DEPTH_TEST`               | 激活深度比较，并且更新深度缓冲区。参见{{domxref("WebGLRenderingContext.depthFunc()")}}.                  |
+    | `gl.DITHER`                   | 激活在写入颜色缓冲区之前，抖动颜色成分。                                                                                 |
+    | `gl.POLYGON_OFFSET_FILL`      | 激活添加多边形片段的深度值偏移。参见{{domxref("WebGLRenderingContext.polygonOffset()")}}.                |
+    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | 激活通过 alpha 值决定的临时覆盖值计算。（抗锯齿）                                                                        |
+    | `gl.SAMPLE_COVERAGE`          | 激活使用临时覆盖值，位和运算片段的覆盖值。参见 {{domxref("WebGLRenderingContext.sampleCoverage()")}}. |
+    | `gl.SCISSOR_TEST`             | 激活剪裁测试，即丢弃在剪裁矩形范围外的片段。{{domxref("WebGLRenderingContext.scissor()")}}.                |
+    | `gl.STENCIL_TEST`             | 激活模板测试并且更新模板缓冲区。参见{{domxref("WebGLRenderingContext.stencilFunc()")}}.                |
 
-<h3 id="返回值">返回值</h3>
+    当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以添加使用下面的值。
 
-<p>None.</p>
+    | Constant                | Description                                                                                |
+    | ----------------------- | ------------------------------------------------------------------------------------------ |
+    | `gl.RASTERIZER_DISCARD` | 图元光栅化阶段之前，但在任意的 transform 反馈之后，就立刻被丢弃。`gl.clear() 命令被忽略。` |
 
-<h2 id="样例">样例</h2>
+### 返回值
 
-<pre class="brush: js">gl.enable(gl.DITHER);
-</pre>
+None.
 
-<p>如果要检测可用性，可以使用 {{domxref("WebGLRenderingContext.isEnabled()")}} 方法：</p>
+## 样例
 
-<pre class="brush: js">gl.isEnabled(gl.DITHER);
+```js
+gl.enable(gl.DITHER);
+```
+
+如果要检测可用性，可以使用 {{domxref("WebGLRenderingContext.isEnabled()")}} 方法：
+
+```js
+gl.isEnabled(gl.DITHER);
 // true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.enable")}}</p>
+{{Compat("api.WebGLRenderingContext.enable")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.disable()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isEnabled()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.disable()")}}
+- {{domxref("WebGLRenderingContext.isEnabled()")}}

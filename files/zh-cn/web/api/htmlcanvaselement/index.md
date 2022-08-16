@@ -35,10 +35,10 @@ _从其父项{{domxref("HTMLElement")}}继承方法。_
   - : 创建一个{{domxref("Blob")}} 对象，表示 canvas 中包含的图像； 该文件可以由用户代理决定是否缓存在磁盘上或存储在内存中。
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} {{experimental_inline}}
   - : 将控制权转移到主线程或辅助线程上的 {{domxref("OffscreenCanvas")}}对象。
-- ### 过时的方法
 
-  {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{Deprecated_Inline}}
+### 过时的方法
 
+- {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{Deprecated_Inline}}
   - : 返回代表画布中包含的图像的 {{domxref("File")}} 对象；该文件是基于内存的文件，具有指定的名称。如果未指定类型，则图像类型为 image/png。
 
 ## 事件

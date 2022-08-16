@@ -2,54 +2,52 @@
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>创建一个具有指定的命名空间 URI 和限定名称的元素。</p>
+创建一个具有指定的命名空间 URI 和限定名称的元素。
 
-<p>要创建一个元素而不指定命名空间 URI，请使用  <a href="/zh-CN/docs/Web/API/Document/createElement">createElement</a> 方法。</p>
+要创建一个元素而不指定命名空间 URI，请使用 [createElement](/zh-CN/docs/Web/API/Document/createElement) 方法。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js"><var>let element</var> =
-<var>document</var>.createElementNS(<var>namespaceURI</var>, <var>qualifiedName</var>[, options]);
-</pre>
+```js
+let element =
+document.createElementNS(namespaceURI, qualifiedName[, options]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>namespaceURI</code></dt>
- <dd>指定与元素相关联的<a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">命名空间 URI</a>的字符串。创建的元素的<a href="/zh-CN/docs/Web/API/Node/namespaceURI">namespaceURI</a>属性使用 namespaceURI 的值进行初始化。 参见<a href="/en-US/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's">有效的命名空间 URL</a>。</dd>
- <dt><code>qualifiedName</code></dt>
- <dd>指定要创建的元素的类型的字符串。 创建的元素的<a href="/zh-CN/docs/DOM/element.nodeName">nodeName</a>属性使用 qualifiedName 的值进行初始化。</dd>
- <dt><code>options</code>可选的</dt>
- <dd>一个可选的包含单个属性的 ElementCreationOptions 对象，其值是预先使用 customElements.define() 定义的自定义元素的标签名称。为了向后兼容<a href="https://www.w3.org/TR/custom-elements/">自定义元素规范</a>的早期版本，一些浏览器允许您在此使用字符串替代对象，其中字符串的值是自定义元素的标签名称。有关如何使用此参数的详情，请参阅<a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">原生 HTML 元素</a>。<br>
- 新元素将被赋予一个属性，其值是自定义元素的标签名称。 自定义元素是实验中的功能，目前仅在某些浏览器中可用。</dd>
-</dl>
+- `namespaceURI`
+  - : 指定与元素相关联的[命名空间 URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)的字符串。创建的元素的[namespaceURI](/zh-CN/docs/Web/API/Node/namespaceURI)属性使用 namespaceURI 的值进行初始化。 参见[有效的命名空间 URL](/zh-CN/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's)。
+- `qualifiedName`
+  - : 指定要创建的元素的类型的字符串。 创建的元素的[nodeName](/zh-CN/docs/DOM/element.nodeName)属性使用 qualifiedName 的值进行初始化。
+- `options`可选的
+  - : 一个可选的包含单个属性的 ElementCreationOptions 对象，其值是预先使用 customElements.define() 定义的自定义元素的标签名称。为了向后兼容[自定义元素规范](https://www.w3.org/TR/custom-elements/)的早期版本，一些浏览器允许您在此使用字符串替代对象，其中字符串的值是自定义元素的标签名称。有关如何使用此参数的详情，请参阅[原生 HTML 元素](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml)。
+    新元素将被赋予一个属性，其值是自定义元素的标签名称。 自定义元素是实验中的功能，目前仅在某些浏览器中可用。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>新<a href="/zh-CN/docs/Web/API/Element">元素</a>。</p>
+新[元素](/zh-CN/docs/Web/API/Element)。
 
-<h2 id="Example">有效的命名空间 URI</h2>
+## 有效的命名空间 URI
 
-<ul>
- <li>HTML - 参阅 <code>http://www.w3.org/1999/xhtml</code></li>
- <li>SVG - 参阅 <code>http://www.w3.org/2000/svg</code></li>
- <li>XBL - 参阅 <code>http://www.mozilla.org/xbl</code></li>
- <li>XUL - 参阅 <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code></li>
-</ul>
+- HTML - 参阅 `http://www.w3.org/1999/xhtml`
+- SVG - 参阅 `http://www.w3.org/2000/svg`
+- XBL - 参阅 `http://www.mozilla.org/xbl`
+- XUL - 参阅 `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<p>在<a href="/zh-CN/docs/XHTML">XHTML</a>命名空间中创建一个新的&lt;div&gt;元素并将其添加到 vbox 的结尾处。虽然这不是一个非常有用的<a href="/zh-CN/docs/XUL">XUL</a>文档，它演示了在单个文档中使用来自两个不同命名空间的元素：</p>
+在[XHTML](/zh-CN/docs/XHTML)命名空间中创建一个新的\<div>元素并将其添加到 vbox 的结尾处。虽然这不是一个非常有用的[XUL](/zh-CN/docs/XUL)文档，它演示了在单个文档中使用来自两个不同命名空间的元素：
 
-<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
-&lt;page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+```xml
+<?xml version="1.0"?>
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
       xmlns:html="http://www.w3.org/1999/xhtml"
       title="||Working with elements||"
-      onload="init()"&gt;
+      onload="init()">
 
-&lt;script type="text/javascript"&gt;&lt;![CDATA[
+<script type="text/javascript"><![CDATA[
  var container;
  var newdiv;
  var txtnode;
@@ -62,34 +60,30 @@ slug: Web/API/Document/createElementNS
    container.appendChild(newdiv);
  }
 
-]]&gt;&lt;/script&gt;
+]]></script>
 
- &lt;vbox id='ContainerBox' flex='1'&gt;
-  &lt;html:div&gt;
+ <vbox id='ContainerBox' flex='1'>
+  <html:div>
    此页面上的脚本将添加以下动态内容：
-  &lt;/html:div&gt;
- &lt;/vbox&gt;
+  </html:div>
+ </vbox>
 
-&lt;/page&gt;
-</pre>
+</page>
+```
 
-<div class="note">
-<p>上面给出的示例中使用了在 XHTML 文档中不推荐的内联脚本。这个特定的示例实际上是一个嵌入 XHTML 的 XUL 文档，然而，仍然建议适用。</p>
-</div>
+> **备注：** 上面给出的示例中使用了在 XHTML 文档中不推荐的内联脚本。这个特定的示例实际上是一个嵌入 XHTML 的 XUL 文档，然而，仍然建议适用。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Document.createElementNS")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="createElement">document.createElement</a></li>
- <li><a href="createTextNode">document.createTextNode</a></li>
- <li><a href="../Node/namespaceURI">Node.namespaceURI</a></li>
- <li><a href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML</a></li>
-</ul>
+- [document.createElement](createElement)
+- [document.createTextNode](createTextNode)
+- [Node.namespaceURI](../Node/namespaceURI)
+- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)

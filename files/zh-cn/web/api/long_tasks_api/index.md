@@ -2,49 +2,45 @@
 title: Long Tasks API
 slug: Web/API/Long_Tasks_API
 ---
-<p>{{DefaultAPISidebar("Long Tasks")}}</p>
+{{DefaultAPISidebar("Long Tasks")}}
 
-<h2 id="目的">目的</h2>
+## 目的
 
-<p><em>Long Tasks，</em>这是一个实验性 API，它可以直观地告诉我们哪些任务执行耗费了 50 毫秒或更多时间。50 毫秒这个阈值标准来源于《<a href="https://developers.google.com/web/fundamentals/performance/rail">RAIL Model</a>》中 <a href="https://developers.google.com/web/fundamentals/performance/rail#response">"Response: process events in under 50ms"</a> 章节。</p>
+*Long Tasks，*这是一个实验性 API，它可以直观地告诉我们哪些任务执行耗费了 50 毫秒或更多时间。50 毫秒这个阈值标准来源于《[RAIL Model](https://developers.google.com/web/fundamentals/performance/rail)》中 ["Response: process events in under 50ms"](https://developers.google.com/web/fundamentals/performance/rail#response) 章节。
 
-<p>阻塞主线程达 50 毫秒或以上的任务会导致以下问题：</p>
+阻塞主线程达 50 毫秒或以上的任务会导致以下问题：
 
-<ul>
- <li><a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">{{domxref("可交互时间")}} 延迟</a></li>
- <li>严重不稳定的交互行为 (轻击、单击、滚动、滚轮等) 延迟（<a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">High/variable input latency</a>）</li>
- <li>严重不稳定的事件回调延迟（<a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">High/variable event handling latency</a>）</li>
- <li>紊乱的动画和滚动（<a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">Janky animations and scrolling</a>）</li>
-</ul>
+- [{{domxref("可交互时间")}} 延迟](https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro)
+- 严重不稳定的交互行为 (轻击、单击、滚动、滚轮等) 延迟（[High/variable input latency](https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro)）
+- 严重不稳定的事件回调延迟（[High/variable event handling latency](https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro)）
+- 紊乱的动画和滚动（[Janky animations and scrolling](https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro)）
 
-<h2 id="概念">概念</h2>
+## 概念
 
-<p>长任务（Long task）API 使用的一些关键术语或思想。</p>
+长任务（Long task）API 使用的一些关键术语或思想。
 
+### 长任务（Long task）
 
-<h3 id="长任务（Long_task）">长任务（Long task）</h3>
+任何连续不间断的且主 UI 线程繁忙 50 毫秒及以上的时间区间。比如以下常规场景：
 
-<p>任何连续不间断的且主 UI 线程繁忙 50 毫秒及以上的时间区间。比如以下常规场景：</p>
+- 长耗时的事件回调（long running event handlers）
+- 代价高昂的回流和其他重绘（expensive reflows and other re-renders）
+- 浏览器在超过 50 毫秒的事件循环的相邻循环之间所做的工作（work the browser does between different turns of the event loop that exceeds 50 ms）
 
-<ul>
- <li>长耗时的事件回调（long running event handlers）</li>
- <li>代价高昂的回流和其他重绘（expensive reflows and other re-renders）</li>
- <li>浏览器在超过 50 毫秒的事件循环的相邻循环之间所做的工作（work the browser does between different turns of the event loop that exceeds 50 ms）</li>
-</ul>
+### 浏览上下文的罪魁容器
 
-<h3 id="浏览上下文的罪魁容器">浏览上下文的罪魁容器</h3>
+浏览上下文的罪魁容器，简称“容器”，指任务发生在其中的顶层页面（the top level page）、iframe、嵌入插槽（embed）或对象（object）。
 
-<p>浏览上下文的罪魁容器，简称“容器”，指任务发生在其中的顶层页面（the top level page）、iframe、嵌入插槽（embed）或对象（object）。</p>
+### 清单（Attributions）
 
-<h3 id="清单（Attributions）">清单（Attributions）</h3>
+即执行任务的容器清单。针对没有在顶层页面容器内执行的任务，`containerId`、`containerName`和`containerSrc`字段可以用来提供任务源信息。
 
-<p>即执行任务的容器清单。针对没有在顶层页面容器内执行的任务，<code>containerId</code>、<code>containerName</code>和<code>containerSrc</code>字段可以用来提供任务源信息。</p>
+## 用法
 
-<h2 id="用法">用法</h2>
-
-<pre class="brush: js">var observer = new PerformanceObserver(function(list) {
+```js
+var observer = new PerformanceObserver(function(list) {
     var perfEntries = list.getEntries();
-    for (var i = 0; i &lt; perfEntries.length; i++) {
+    for (var i = 0; i < perfEntries.length; i++) {
         // Process long task notifications:
         // report back for analytics and monitoring
         // ...
@@ -54,28 +50,24 @@ slug: Web/API/Long_Tasks_API
 observer.observe({entryTypes: ["longtask"]});
 // Long script execution after this will result in queueing
 // and receiving "longtask" entries in the observer.
-</pre>
+```
 
-<h2 id="接口">接口</h2>
+## 接口
 
-<dl>
- <dt>{{domxref('PerformanceLongTaskTiming')}}</dt>
- <dd>返回长任务实例。</dd>
- <dt>{{domxref("TaskAttributionTiming")}}</dt>
- <dd>返回长任务中涉及的工作及其关联的框架上下文信息。</dd>
-</dl>
+- {{domxref('PerformanceLongTaskTiming')}}
+  - : 返回长任务实例。
+- {{domxref("TaskAttributionTiming")}}
+  - : 返回长任务中涉及的工作及其关联的框架上下文信息。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关推荐">相关推荐</h2>
+## 相关推荐
 
-<ul>
- <li><a href="https://github.com/w3c/longtasks">GitHub repository</a> 包含文档和代码范例。</li>
- <li><a href="https://calendar.perfplanet.com/2017/tracking-cpu-with-long-tasks-api/">PerfPlanet article</a> on Long Tasks API from 20th December 2017.</li>
-</ul>
+- [GitHub repository](https://github.com/w3c/longtasks) 包含文档和代码范例。
+- [PerfPlanet article](https://calendar.perfplanet.com/2017/tracking-cpu-with-long-tasks-api/) on Long Tasks API from 20th December 2017.

@@ -2,41 +2,43 @@
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>只读属性 <code><strong>Element.lastElementChild</strong></code> 返回对象的最后一个子{{domxref("Element", "元素")}}，如果没有子元素，则返回 <code>null</code>。</p>
+只读属性 **`Element.lastElementChild`** 返回对象的最后一个子{{domxref("Element", "元素")}}，如果没有子元素，则返回 `null`。
 
-<div class="note">
-<p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, <code>lastElementChild</code> moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
-</div>
+> **备注：** This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, `lastElementChild` moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>element</em> = node.lastElementChild; </pre>
+```
+var element = node.lastElementChild;
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: html">&lt;ul id="foo"&gt;
-  &lt;li&gt;First  (1)&lt;/li&gt;
-  &lt;li&gt;Second (2)&lt;/li&gt;
-  &lt;li&gt;Third  (3)&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul id="foo">
+  <li>First  (1)</li>
+  <li>Second (2)</li>
+  <li>Third  (3)</li>
+</ul>
 
-&lt;script&gt;
+<script>
 var foo = document.getElementById('foo');
 // yields: Third  (3)
 console.log(foo.lastElementChild.textContent);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="适用于_IE8、IE9_和_Safari_的_Polyfill">适用于 IE8、IE9 和 Safari 的 Polyfill</h2>
+## 适用于 IE8、IE9 和 Safari 的 Polyfill
 
-<pre class="brush: js">// Overwrites native 'lastElementChild' prototype.
-// Adds Document &amp; DocumentFragment support for IE9 &amp; Safari.
+```js
+// Overwrites native 'lastElementChild' prototype.
+// Adds Document & DocumentFragment support for IE9 & Safari.
 // Returns array instead of HTMLCollection.
 ;(function(constructor) {
-    if (constructor &amp;&amp;
-        constructor.prototype &amp;&amp;
+    if (constructor &&
+        constructor.prototype &&
         constructor.prototype.lastElementChild == null) {
         Object.defineProperty(constructor.prototype, 'lastElementChild', {
             get: function() {
@@ -51,23 +53,17 @@ console.log(foo.lastElementChild.textContent);
         });
     }
 })(window.Node || window.Element);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Element.lastElementChild")}}
 
+## 参见
 
-<p>{{Compat("api.Element.lastElementChild")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>纯接口 {{domxref("Element")}} 和 {{domxref("ChildNode")}}。</li>
- <li>
-  <div class="syntaxbox">实现了此纯接口的对象类型：{{domxref("Document")}}、{{domxref("Element")}}，和 {{domxref("DocumentFragment")}}。</div>
- </li>
-</ul>
+- 纯接口 {{domxref("Element")}} 和 {{domxref("ChildNode")}}。
+- 实现了此纯接口的对象类型：{{domxref("Document")}}、{{domxref("Element")}}，和 {{domxref("DocumentFragment")}}。

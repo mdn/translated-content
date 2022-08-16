@@ -2,42 +2,39 @@
 title: Console.info()
 slug: Web/API/Console/info
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>向 web 控制台输出一个通知信息。仅在 Firefox，web 控制台的日志中的项目旁边会显示一个小的‘I‘图标</p>
+向 web 控制台输出一个通知信息。仅在 Firefox，web 控制台的日志中的项目旁边会显示一个小的‘I‘图标
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.info(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.info(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```
+console.info(obj1 [, obj2, ..., objN]);
+console.info(msg [, subst1, ..., substN]);
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>要输出的 JavaScript 对象列表。对象 obj1,obj2,...列出顺序和输出顺序一致。</dd>
- <dt><code>msg</code></dt>
- <dd>JavaScript 字符串。可包含零个或多个替换字符串。</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>用于替换 msg 内的替换字符串的 JavaScript 对象。可以对输出的格式进行额外的控制。</dd>
-</dl>
+- `obj1` ... `objN`
+  - : 要输出的 JavaScript 对象列表。对象 obj1,obj2,...列出顺序和输出顺序一致。
+- `msg`
+  - : JavaScript 字符串。可包含零个或多个替换字符串。
+- `subst1` ... `substN`
+  - : 用于替换 msg 内的替换字符串的 JavaScript 对象。可以对输出的格式进行额外的控制。
 
-<p>查看更多细节可访问 {{domxref("console")}} 文件内的<a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting t</a><a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">ext to the console</a></p>
+查看更多细节可访问 {{domxref("console")}} 文件内的[Outputting t](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console)[ext to the console](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.console.info")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

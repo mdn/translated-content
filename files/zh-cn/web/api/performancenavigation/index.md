@@ -2,56 +2,50 @@
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><strong><code>PerformanceNavigation</code></strong><code>接口呈现了如何导航到当前文档的信息。</code></p>
+**`PerformanceNavigation`**`接口呈现了如何导航到当前文档的信息。`
 
-<p>这个类型的对象可以被只读属性{{domxref("Performance.navigation")}}调用。</p>
+这个类型的对象可以被只读属性{{domxref("Performance.navigation")}}调用。
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>PerformanceNavigation</code> 接口不继承任何属性。</em></p>
+_`PerformanceNavigation` 接口不继承任何属性。_
 
-<dl>
- <dt>{{domxref("PerformanceNavigation.type")}} {{readonlyInline}}</dt>
- <dd>一个无符号短整型，表示是如何导航到这个页面的。可能的值如下：
- <dl>
-  <dt><code>TYPE_NAVIGATE</code> (0)</dt>
-  <dd>当前页面是通过点击链接，书签和表单提交，或者脚本操作，或者在 url 中直接输入地址，type 值为 0</dd>
-  <dt><code>TYPE_RELOAD</code> (1)</dt>
-  <dd>点击刷新页面按钮或者通过{{domxref("Location.reload()")}}方法显示的页面，type 值为 1</dd>
-  <dt><code>TYPE_BACK_FORWARD</code> (2)</dt>
-  <dd>页面通过历史记录和前进后退访问时。type 值为 2</dd>
-  <dt><code>TYPE_RESERVED</code> (255)</dt>
-  <dd>任何其他方式，type 值为 255</dd>
- </dl>
- </dd>
- <dt>{{domxref("PerformanceNavigation.redirectCount")}} {{readonlyInline}}</dt>
- <dd>无符号短整型，表示在到达这个页面之前重定向了多少次。</dd>
-</dl>
+- {{domxref("PerformanceNavigation.type")}} {{readonlyInline}}
 
-<h2 id="Methods">Methods</h2>
+  - : 一个无符号短整型，表示是如何导航到这个页面的。可能的值如下：
 
-<p><em><em><code>Performance</code> 接口没有继承任何方法</em></em></p>
+    - `TYPE_NAVIGATE` (0)
+      - : 当前页面是通过点击链接，书签和表单提交，或者脚本操作，或者在 url 中直接输入地址，type 值为 0
+    - `TYPE_RELOAD` (1)
+      - : 点击刷新页面按钮或者通过{{domxref("Location.reload()")}}方法显示的页面，type 值为 1
+    - `TYPE_BACK_FORWARD` (2)
+      - : 页面通过历史记录和前进后退访问时。type 值为 2
+    - `TYPE_RESERVED` (255)
+      - : 任何其他方式，type 值为 255
 
-<dl>
- <dt>{{domxref("PerformanceNavigation.toJSON()")}} {{non-standard_inline}}</dt>
- <dd>把<code>PerformanceNavigation</code>转换成 JSON 对象</dd>
-</dl>
+- {{domxref("PerformanceNavigation.redirectCount")}} {{readonlyInline}}
+  - : 无符号短整型，表示在到达这个页面之前重定向了多少次。
 
-<h2 id="规范">规范</h2>
+## Methods
 
-<p>因为 <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing 规范</a>已被弃用，此特性不再有望成为标准。请使用 {{domxref("PerformanceNavigationTiming")}} 接口代替。</p>
+**`Performance` 接口没有继承任何方法**
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+- {{domxref("PerformanceNavigation.toJSON()")}} {{non-standard_inline}}
+  - : 把`PerformanceNavigation`转换成 JSON 对象
+
+## 规范
+
+因为 [Navigation Timing 规范](https://w3c.github.io/navigation-timing/#obsolete)已被弃用，此特性不再有望成为标准。请使用 {{domxref("PerformanceNavigationTiming")}} 接口代替。
+
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Performance")}} that allows access to an object of this type.</li>
- <li>{{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) {{experimental_inline}}</li>
-</ul>
+- The {{domxref("Performance")}} that allows access to an object of this type.
+- {{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) {{experimental_inline}}

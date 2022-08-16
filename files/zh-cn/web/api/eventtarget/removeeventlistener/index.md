@@ -2,87 +2,91 @@
 title: EventTarget.removeEventListener
 slug: Web/API/EventTarget/removeEventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>删除使用 {{domxref("EventTarget.addEventListener()")}} 方法添加的事件。使用事件类型，事件侦听器函数本身，以及可能影响匹配过程的各种可选择的选项的组合来标识要删除的事件侦听器。</p>
+删除使用 {{domxref("EventTarget.addEventListener()")}} 方法添加的事件。使用事件类型，事件侦听器函数本身，以及可能影响匹配过程的各种可选择的选项的组合来标识要删除的事件侦听器。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, options]);
-<em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>]);</pre>
+```
+target.removeEventListener(type, listener[, options]);
+target.removeEventListener(type, listener[, useCapture]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>type</code></dt>
- <dd>一个字符串，表示需要移除的事件类型，如 <code>"click"</code>。</dd>
- <dt><code>listener</code></dt>
- <dd>需要从目标事件移除的 {{ domxref("EventListener") }} 函数。</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>一个指定事件侦听器特征的可选对象。可选项有：</dd>
-</dl>
+- `type`
+  - : 一个字符串，表示需要移除的事件类型，如 `"click"`。
+- `listener`
+  - : 需要从目标事件移除的 {{ domxref("EventListener") }} 函数。
+- `options` {{optional_inline}}
+  - : 一个指定事件侦听器特征的可选对象。可选项有：
 
-<ul>
- <li><code>capture</code>: 一个 {{jsxref("Boolean")}} 表示这个类型的事件将会被派遣到已经注册的侦听器，然后再派遣到 DOM 树中它下面的任何 <code>EventTarget</code>。</li>
- <li>{{non-standard_inline}} <code>mozSystemGroup</code>: 仅可运行于 XBL 或者 Firefox Chrome，它是一个 {{jsxref("Boolean")}}，用于定义是否将侦听器添加到系统组。</li>
-</ul>
+    - `capture`: 一个 {{jsxref("Boolean")}} 表示这个类型的事件将会被派遣到已经注册的侦听器，然后再派遣到 DOM 树中它下面的任何 `EventTarget`。
+    - {{non-standard_inline}} `mozSystemGroup`: 仅可运行于 XBL 或者 Firefox Chrome，它是一个 {{jsxref("Boolean")}}，用于定义是否将侦听器添加到系统组。
 
-<dl>
- <dt><code>useCapture</code> {{ optional_inline }}</dt>
- <dd>指定需要移除的 {{ domxref("EventListener") }} 函数是否为捕获监听器。如果无此参数，默认值为 <code>false</code>。<br>
- 如果同一个监听事件分别为“事件捕获”和“事件冒泡”注册了一次，这两次事件需要分别移除。两者不会互相干扰。移除捕获监听器不会影响非捕获版本的相同监听器，反之亦然。</dd>
-</dl>
+- `useCapture` {{ optional_inline }}
+  - : 指定需要移除的 {{ domxref("EventListener") }} 函数是否为捕获监听器。如果无此参数，默认值为 `false`。
+    如果同一个监听事件分别为“事件捕获”和“事件冒泡”注册了一次，这两次事件需要分别移除。两者不会互相干扰。移除捕获监听器不会影响非捕获版本的相同监听器，反之亦然。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="匹配要删除的事件监听">匹配要删除的事件监听</h3>
+### 匹配要删除的事件监听
 
-<p>需要提供以前调用{{domxref("EventTarget.addEventListener", "addEventListener()")}}所提供的监听事件，这样你或许可以达到移除此监听事件的目的。很明显，你需要提供相同的 <code>type</code> 和 <code>listener</code> 参数给 <code>removeEventListener()</code>, 但是 <code>options</code> 或者 <code>useCapture</code> 参数呢？</p>
+需要提供以前调用{{domxref("EventTarget.addEventListener", "addEventListener()")}}所提供的监听事件，这样你或许可以达到移除此监听事件的目的。很明显，你需要提供相同的 `type` 和 `listener` 参数给 `removeEventListener()`, 但是 `options` 或者 `useCapture` 参数呢？
 
-<p>当使用 <code>addEventListener()</code> 时，如果 <code>options</code>参数不同，那么你可以在相同的<code>type</code> 上多次添加相同的监听，唯一需要 <code>removeEventListener()</code> 检测的是 <code>capture</code>/<code>useCapture</code> 标志。这个标志必须与 <code>removeEventListener()</code> 的对应标志匹配，但是其他的值不需要。</p>
+当使用 `addEventListener()` 时，如果 `options`参数不同，那么你可以在相同的`type` 上多次添加相同的监听，唯一需要 `removeEventListener()` 检测的是 `capture`/`useCapture` 标志。这个标志必须与 `removeEventListener()` 的对应标志匹配，但是其他的值不需要。
 
-<p>举个例子，思考一下下面的 <code>addEventListener()</code>:</p>
+举个例子，思考一下下面的 `addEventListener()`:
 
-<pre class="brush: js">element.addEventListener("mousedown", handleMouseDown, true);</pre>
+```js
+element.addEventListener("mousedown", handleMouseDown, true);
+```
 
-<p>现在思考下下面两个 <code>removeEventListener()</code>:</p>
+现在思考下下面两个 `removeEventListener()`:
 
-<pre class="brush: js">element.removeEventListener("mousedown", handleMouseDown, false);     // 失败
+```js
+element.removeEventListener("mousedown", handleMouseDown, false);     // 失败
 element.removeEventListener("mousedown", handleMouseDown, true);      // 成功
-</pre>
+```
 
-<p>第一个调用失败是因为 <code>useCapture</code> 没有匹配。第二个调用成功，是因为<code>useCapture</code> 匹配相同。</p>
+第一个调用失败是因为 `useCapture` 没有匹配。第二个调用成功，是因为`useCapture` 匹配相同。
 
-<p>现在再思考下这个：</p>
+现在再思考下这个：
 
-<pre class="brush: js">element.addEventListener("mousedown", handleMouseDown, { passive: true });</pre>
+```js
+element.addEventListener("mousedown", handleMouseDown, { passive: true });
+```
 
-<p>这里，我们在<code>options</code> 对象里将 <code>passive</code> 设成 <code>true</code>, 其他<code>options</code>配置都是默认值 <code>false</code>.</p>
+这里，我们在`options` 对象里将 `passive` 设成 `true`, 其他`options`配置都是默认值 `false`.
 
-<p>现在我们看下下面的 <code>removeEventListener()</code> . 当配置 <code>capture</code> 或 <code>useCapture</code> 为 <code>true</code> 时，移除事件失败; 其他所有都是成功的。只有 <code>capture</code> 配置影响 <code>removeEventListener()</code>.</p>
+现在我们看下下面的 `removeEventListener()` . 当配置 `capture` 或 `useCapture` 为 `true` 时，移除事件失败; 其他所有都是成功的。只有 `capture` 配置影响 `removeEventListener()`.
 
-<pre class="brush: js">element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Succeeds
+```js
+element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Succeeds
 element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Succeeds
 element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Fails
 element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Succeeds
 element.removeEventListener("mousedown", handleMouseDown, false);                 // Succeeds
-element.removeEventListener("mousedown", handleMouseDown, true);                  // Fails</pre>
+element.removeEventListener("mousedown", handleMouseDown, true);                  // Fails
+```
 
-<p>值得注意的是，一些浏览器版本在这方面会有些不一致，除非你有特别的理由， 使用与调用 <code>addEventListener()</code> 时配置的参数去调用<code>removeEventListener() 是明智的</code>.</p>
+值得注意的是，一些浏览器版本在这方面会有些不一致，除非你有特别的理由， 使用与调用 `addEventListener()` 时配置的参数去调用`removeEventListener() 是明智的`.
 
-<h2 id="Compatibility">备注</h2>
+## 备注
 
-<p>一个 {{ domxref("EventTarget") }} 上的 {{ domxref("EventListener") }} 被移除之后，如果此事件正在执行，会立即停止。 {{ domxref("EventListener") }} 移除之后不能被触发，但可以重新绑定。</p>
+一个 {{ domxref("EventTarget") }} 上的 {{ domxref("EventListener") }} 被移除之后，如果此事件正在执行，会立即停止。 {{ domxref("EventListener") }} 移除之后不能被触发，但可以重新绑定。
 
-<p>在<code>EventTarget</code>上使用任何未识别当前注册的{{ domxref("EventListener") }} 调用 <code>removeEventListener()</code> 不会起任何作用。</p>
+在`EventTarget`上使用任何未识别当前注册的{{ domxref("EventListener") }} 调用 `removeEventListener()` 不会起任何作用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下例子展示了添加与删除监听事件：</p>
+以下例子展示了添加与删除监听事件：
 
-<pre class="brush: js">var body = document.querySelector('body'),
+```js
+var body = document.querySelector('body'),
     clickTarget = document.getElementById('click-target'),
     mouseOverTarget = document.getElementById('mouse-over-target'),
     toggle = false;
@@ -112,27 +116,28 @@ mouseOverTarget.addEventListener('mouseover', function () {
         false
     );
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.EventTarget.removeEventListener", 3)}}</p>
+{{Compat("api.EventTarget.removeEventListener", 3)}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>一些比较旧的浏览器不支持 <code>addEventListener()</code> 和 <code>removeEventListener()</code> 方法。可以将以下代码复制到脚本的开头来兼容这些旧版本的浏览器。值得注意的是，这个解决方案仍然不适用于 IE 7 及更早的 IE，因为 <code>Element.prototype</code> 属性直至 IE 8 才支持。</p>
+一些比较旧的浏览器不支持 `addEventListener()` 和 `removeEventListener()` 方法。可以将以下代码复制到脚本的开头来兼容这些旧版本的浏览器。值得注意的是，这个解决方案仍然不适用于 IE 7 及更早的 IE，因为 `Element.prototype` 属性直至 IE 8 才支持。
 
-<pre class="brush: js">if (!Element.prototype.addEventListener) {
+```js
+if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
     if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId &lt; oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
         break;
       }
     }
@@ -140,7 +145,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
   Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
         if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
       }
       if (nElIdx === -1) {
@@ -153,7 +158,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
           aElListeners.splice(0);
           this["on" + sEventType] = runListeners;
         }
-        for (var iLstId = 0; iLstId &lt; aElListeners.length; iLstId++) {
+        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
           if (aElListeners[iLstId] === fListener) { return; }
         }
         aElListeners.push(fListener);
@@ -166,30 +171,26 @@ mouseOverTarget.addEventListener('mouseover', function () {
   Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (!oListeners.hasOwnProperty(sEventType)) { return; }
     var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
     }
     if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId &lt; aElListeners.length; iLstId++) {
+    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
       if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
     }
   };
 }
-</pre>
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("EventTarget.addEventListener()")}}.</li>
- <li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.</li>
-</ul>
+- {{domxref("EventTarget.addEventListener()")}}.
+- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.
 
-<h2 id="注意：">注意：</h2>
+## 注意：
 
+document.removeEventListener() 方法用于移除由 document.addEventListener() 方法添加的事件句柄。
 
+**注意：** 如果要移除事件句柄，addEventListener() 的执行函数必须使用外部函数，如（myFunction) 匿名函数，类似 "document.removeEventListener("_event_", function(){ _myScript_ });" 该事件是无法移除的。
 
-<p>document.removeEventListener() 方法用于移除由 document.addEventListener() 方法添加的事件句柄。</p>
-
-<p><strong>注意：</strong> 如果要移除事件句柄，addEventListener() 的执行函数必须使用外部函数，如（myFunction) 匿名函数，类似 "document.removeEventListener("<em>event</em>", function(){ <em>myScript</em> });" 该事件是无法移除的。</p>
-
-<p><strong>提示：</strong> 使用 <em>element</em>.addEventListener() 和 <em>element</em>.removeEventListener() 方法来添加或移除指定元素的事件句柄。</p>
+**提示：** 使用 _element_.addEventListener() 和 _element_.removeEventListener() 方法来添加或移除指定元素的事件句柄。

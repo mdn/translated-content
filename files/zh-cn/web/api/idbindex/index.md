@@ -2,68 +2,65 @@
 title: IDBIndex
 slug: Web/API/IDBIndex
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p><a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a> 中的 IDBIndex 接口提供了异步获取数据库中一个<a href="/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#index">index</a>的功能。index 是一种用于在另一个 object store 中查找记录的 object store，其被称为被引用的 object store。你可以通过使用该接口来取回数据。</p>
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中的 IDBIndex 接口提供了异步获取数据库中一个[index](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#index)的功能。index 是一种用于在另一个 object store 中查找记录的 object store，其被称为被引用的 object store。你可以通过使用该接口来取回数据。
 
-<p>你可以通过记录的键或使用一个 index 取回一个 object store 中的这些记录 (cursors 提供了第三种方式：请见 {{ domxref("IDBCursor") }})。一个 index 可以让你在 object store 的 records 中，通过使用 records 的 properties（属性）来寻找 records。</p>
+你可以通过记录的键或使用一个 index 取回一个 object store 中的这些记录 (cursors 提供了第三种方式：请见 {{ domxref("IDBCursor") }})。一个 index 可以让你在 object store 的 records 中，通过使用 records 的 properties（属性）来寻找 records。
 
-<p>index 是一个持久的键 - 值存储，其中其记录的值部分是被引用 object store 中的 record 的关键部分。在 object store 中新增、更新或是删除 records 时，索引中的 records 将自动填充。索引中的每条记录只能指向其引用的 object  store 中的唯一一条记录，但是多个索引可以引用同一个 object store。当 object store 变更时，所有引用 object store 的索引都会自动更新。</p>
+index 是一个持久的键 - 值存储，其中其记录的值部分是被引用 object store 中的 record 的关键部分。在 object store 中新增、更新或是删除 records 时，索引中的 records 将自动填充。索引中的每条记录只能指向其引用的 object store 中的唯一一条记录，但是多个索引可以引用同一个 object store。当 object store 变更时，所有引用 object store 的索引都会自动更新。
 
-<p>索引中的 records 总是按照 records 的 key 进行排序。然而，不像 object stores，一个给定的 index 可以包含具有相同 key 的多条记录。这些 records 将根据被引用 object store 中的主键进一步排序。</p>
+索引中的 records 总是按照 records 的 key 进行排序。然而，不像 object stores，一个给定的 index 可以包含具有相同 key 的多条记录。这些 records 将根据被引用 object store 中的主键进一步排序。
 
-<p>你可以设置在一个范围内的 key，点击这里查看更多： {{domxref("IDBKeyRange")}}.</p>
+你可以设置在一个范围内的 key，点击这里查看更多： {{domxref("IDBKeyRange")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>Inherits from: <a href="/en/DOM/EventTarget">EventTarget</a></p>
+Inherits from: [EventTarget](/en/DOM/EventTarget)
 
-<dl>
- <dt>{{domxref("IDBIndex.count")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.</dd>
- <dt>{{domxref("IDBIndex.get")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if <code>key</code> is a key range.</dd>
- <dt>{{domxref("IDBIndex.getAll")}} {{ Non-Standard_inline() }}</dt>
- <dd>Instantly retrieves all objects inside an {{domxref("IDBObjectStore")}}, setting them as the <code>result</code> of the request object.</dd>
- <dt>{{domxref("IDBIndex.getKey")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if <code>key</code> is a key range.</dd>
- <dt>{{domxref("IDBIndex.getAllKeys")}} {{ Non-Standard_inline() }}</dt>
- <dd>Instantly retrieves the keys of all objects inside an {{domxref("IDBObjectStore")}}, setting them as the <code><a href="/en/IndexedDB/IDBRequest#attr_result">result</a></code> of the request object.</dd>
- <dt>{{domxref("IDBIndex.openCursor")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="/en/IndexedDB#gloss_cursor">cursor</a> over the specified key range.</dd>
- <dt>{{domxref("IDBIndex.openKeyCursor")}} {{ Non-Standard_inline() }}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.</dd>
-</dl>
+- {{domxref("IDBIndex.count")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.
+- {{domxref("IDBIndex.get")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if `key` is a key range.
+- {{domxref("IDBIndex.getAll")}} {{ Non-Standard_inline() }}
+  - : Instantly retrieves all objects inside an {{domxref("IDBObjectStore")}}, setting them as the `result` of the request object.
+- {{domxref("IDBIndex.getKey")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if `key` is a key range.
+- {{domxref("IDBIndex.getAllKeys")}} {{ Non-Standard_inline() }}
+  - : Instantly retrieves the keys of all objects inside an {{domxref("IDBObjectStore")}}, setting them as the [`result`](/en/IndexedDB/IDBRequest#attr_result) of the request object.
+- {{domxref("IDBIndex.openCursor")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en/IndexedDB#gloss_cursor) over the specified key range.
+- {{domxref("IDBIndex.openKeyCursor")}} {{ Non-Standard_inline() }}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("IDBIndex.name")}} {{readonlyInline}}</dt>
- <dd>index 的名称。</dd>
- <dt>{{domxref("IDBIndex.objectStore")}} {{readonlyInline}}</dt>
- <dd>index 所指向的 object store 的名称。</dd>
- <dt>{{domxref("IDBIndex.keyPath")}} {{readonlyInline}}</dt>
- <dd>此 index 的关键路径。它如果为 null，则 index 不是自动填充的。</dd>
- <dt>{{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}</dt>
- <dd>影响 index 的 key 路径的计算结果生成数组时索引的行为方式。如果为 true，那么对于 key 数组中的每一项，索引中都有一条记录。如果为 false，那么对于数组中的每个 key 都有一条记录。</dd>
- <dt>{{domxref("IDBIndex.unique")}} {{readonlyInline}}</dt>
- <dd>如果为 true，这个 index 不会允许 key 有重复值。 </dd>
-</dl>
+- {{domxref("IDBIndex.name")}} {{readonlyInline}}
+  - : index 的名称。
+- {{domxref("IDBIndex.objectStore")}} {{readonlyInline}}
+  - : index 所指向的 object store 的名称。
+- {{domxref("IDBIndex.keyPath")}} {{readonlyInline}}
+  - : 此 index 的关键路径。它如果为 null，则 index 不是自动填充的。
+- {{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}
+  - : 影响 index 的 key 路径的计算结果生成数组时索引的行为方式。如果为 true，那么对于 key 数组中的每一项，索引中都有一条记录。如果为 false，那么对于数组中的每个 key 都有一条记录。
+- {{domxref("IDBIndex.unique")}} {{readonlyInline}}
+  - : 如果为 true，这个 index 不会允许 key 有重复值。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Opening a transaction then using <code>get()</code> to retrieve an object of known key:</p>
+Opening a transaction then using `get()` to retrieve an object of known key:
 
-<pre class="brush: js; highlight:[18,21] notranslate">// Let us open our database
+```js
+// Let us open our database
 var request = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 request.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 request.onsuccess = function(event) {
-note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+note.innerHTML += '<li>Database initialised.</li>';
 
 // store the result of opening the database in the db variable.
 db = request.result;
@@ -82,27 +79,24 @@ request.onsuccess = function(event) {
   // Do something with the request.result!
   console.log("The deadline time for " + request.result.taskTitle + " is " +
               request.result.hours + ":" + request.result.minutes + ".";
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>Note</strong>: need to work out a way to retrieve a series/range of objects using an index, or just all of them. Is this possible with get, or is this a job for cursor?</p>
-</div>
+> **备注：** need to work out a way to retrieve a series/range of objects using an index, or just all of them. Is this possible with get, or is this a job for cursor?
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.IDBIndex")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>To learn more about various topics, see the following</p>
+To learn more about various topics, see the following
 
-<ul>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Setting transaction modes: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>The reference application for the examples in this reference: <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://chrisdavidmills.github.io/to-do-notifications/">view example live</a>.) Not every snippet appears in this example, but every example uses the same data structure and syntax, and they will make sense in the context of this example.</li>
-</ul>
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Setting transaction modes: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- The reference application for the examples in this reference: [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](http://chrisdavidmills.github.io/to-do-notifications/).) Not every snippet appears in this example, but every example uses the same data structure and syntax, and they will make sense in the context of this example.

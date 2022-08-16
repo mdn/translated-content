@@ -2,80 +2,65 @@
 title: FileList
 slug: Web/API/FileList
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>一个 FileList 对象通常来自于一个 HTML {{HTMLElement("input")}} 元素的 <code>files</code> 属性，你可以通过这个对象访问到用户所选择的文件。该类型的对象还有可能来自用户的拖放操作，查看 <a href="/zh-CN/docs/DragDrop/DataTransfer"><code>DataTransfer</code></a> 对象了解详情。</p>
+一个 FileList 对象通常来自于一个 HTML {{HTMLElement("input")}} 元素的 `files` 属性，你可以通过这个对象访问到用户所选择的文件。该类型的对象还有可能来自用户的拖放操作，查看 [`DataTransfer`](/zh-CN/docs/DragDrop/DataTransfer) 对象了解详情。
 
-<div class="note">
-<p>在 Gecko 1.9.2 之前，通过 <code>input</code> 元素，每次只能选择一个文件，这意味着该 <code>input</code> 元素的 <code>files</code> 属性上的 FileList 对象无论如何都只能包含一个文件。从 Gecko 1.9.2 开始，如果一个 <code>input</code> 元素拥有 <code>multiple</code> 属性，则可以用它来选择多个文件。</p>
-</div>
+> **备注：** 在 Gecko 1.9.2 之前，通过 `input` 元素，每次只能选择一个文件，这意味着该 `input` 元素的 `files` 属性上的 FileList 对象无论如何都只能包含一个文件。从 Gecko 1.9.2 开始，如果一个 `input` 元素拥有 `multiple` 属性，则可以用它来选择多个文件。
 
-<h2 id="使用_FileList">使用 FileList</h2>
+## 使用 FileList
 
-<p>所有 type 属性 (attribute) 为 file 的 <code>&lt;input&gt;</code> 元素都有一个 files 属性 (property),用来存储用户所选择的文件。例如：</p>
+所有 type 属性 (attribute) 为 file 的 `<input>` 元素都有一个 files 属性 (property),用来存储用户所选择的文件。例如：
 
-<pre class="eval">&lt;input id="fileItem" type="file"&gt;
-</pre>
+```
+<input id="fileItem" type="file">
+```
 
-<p>下面的一行代码演示如何获取到一个 FileList 对象中的第一个文件 (<a href="/zh-CN/docs/Web/API/File"><code>File</code></a> 对象):</p>
+下面的一行代码演示如何获取到一个 FileList 对象中的第一个文件 ([`File`](/zh-CN/docs/Web/API/File) 对象):
 
-<pre class="brush: js">var file = document.getElementById('fileItem').files[0];
-</pre>
+```js
+var file = document.getElementById('fileItem').files[0];
+```
 
-<h2 id="方法概述">方法概述</h2>
+## 方法概述
 
-<table>
- <tbody>
-  <tr>
-   <td><code>File <a href="#item ()">item</a>(index);</code></td>
-  </tr>
- </tbody>
-</table>
+```
+File item(index);
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <tbody>
-  <tr>
-   <td class="header">属性名</td>
-   <td class="header">类型</td>
-   <td class="header">描述</td>
-  </tr>
-  <tr>
-   <td><code>length</code></td>
-   <td><code>integer</code></td>
-   <td>一个只读的整数值，用来返回列表中的文件数量。</td>
-  </tr>
- </tbody>
-</table>
+| 属性名   | 类型      | 描述                                         |
+| -------- | --------- | -------------------------------------------- |
+| `length` | `integer` | 一个只读的整数值，用来返回列表中的文件数量。 |
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<h3 id="item()"><code>item()</code></h3>
+### `item()`
 
-<p>根据给定的索引值，返回 FileList 对象中对应的 <code><a href="/zh-CN/docs/Web/API/File">File</a></code> 对象。</p>
+根据给定的索引值，返回 FileList 对象中对应的 [`File`](/zh-CN/docs/Web/API/File) 对象。
 
-<pre class="eval"> File item(
+```
+ File item(
    index
  );
-</pre>
+```
 
-<h6 id="参数">参数</h6>
+###### 参数
 
-<dl>
- <dt><code>index</code></dt>
- <dd>File 对象在 FileList 对象中的索引值，从 0 开始。</dd>
-</dl>
+- `index`
+  - : File 对象在 FileList 对象中的索引值，从 0 开始。
 
-<h6 id="返回值">返回值</h6>
+###### 返回值
 
-<p>所请求的<a href="/zh-CN/docs/Web/API/File"><code>File</code></a>对象。</p>
+所请求的[`File`](/zh-CN/docs/Web/API/File)对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个例子迭代了用户通过一个 <code>input</code> 元素选择的多个文件：</p>
+这个例子迭代了用户通过一个 `input` 元素选择的多个文件：
 
-<pre class="brush:js">// fileInput 是一个 HTML input 元素：&lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput 是一个 HTML input 元素：<input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files 是一个 FileList 对象 (类似于 NodeList 对象)
@@ -83,7 +68,7 @@ var files = fileInput.files;
 var file;
 
 // 遍历所有文件
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
 
     // 取得一个文件
     file = files.item(i);
@@ -92,22 +77,23 @@ for (var i = 0; i &lt; files.length; i++) {
     // 取得文件名
     alert(file.name);
 }
-</pre>
+```
 
-<p>下面是一个更完整的例子。</p>
+下面是一个更完整的例子。
 
-<pre class="brush:html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;!-- multiple 属性允许用户选择多个文件 --&gt;
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<!-- multiple 属性允许用户选择多个文件 -->
 
-&lt;input id="myfiles" multiple type="file"&gt;
+<input id="myfiles" multiple type="file">
 
-&lt;/body&gt;
+</body>
 
-&lt;script&gt;
+<script>
 
 var pullfiles=function(){
     // love the query selector
@@ -117,7 +103,7 @@ var pullfiles=function(){
     var fl = files.length;
     var i = 0;
 
-    while ( i &lt; fl) {
+    while ( i < fl) {
         // localize file var in the loop
         var file = files[i];
         alert(file.name);
@@ -128,24 +114,21 @@ var pullfiles=function(){
 // 设置 change 事件处理函数
 document.querySelector("#myfiles").onchange=pullfiles;
 
-&lt;/script&gt;
+</script>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.FileList")}}
 
+## 参见
 
-<p>{{Compat("api.FileList")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Using_files_from_web_applications">如何在 Web 应用程序中使用文件</a></li>
- <li><code><a href="/zh-CN/docs/DOM/File">File</a></code></li>
- <li><code><a href="/zh-CN/docs/DOM/FileReader">FileReader</a></code></li>
-</ul>
+- [如何在 Web 应用程序中使用文件](/zh-CN/docs/Using_files_from_web_applications)
+- [`File`](/zh-CN/docs/DOM/File)
+- [`FileReader`](/zh-CN/docs/DOM/FileReader)

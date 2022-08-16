@@ -42,10 +42,9 @@ slug: Web/API/DOMRect
 
 _`DOMRect` 从它的父类继承方法，{{domxref("DOMRectReadOnly")}}。_
 
-- ## 静态方法
+## 静态方法
 
-  {{domxref("DOMRectReadOnly.fromRect()")}}
-
+- {{domxref("DOMRectReadOnly.fromRect()")}}
   - : 创建一个具有指定位置和尺寸的新 `DOMRect` 对象。
 
 ## 规范

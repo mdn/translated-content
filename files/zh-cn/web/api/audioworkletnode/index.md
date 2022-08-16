@@ -2,55 +2,50 @@
 title: AudioWorkletNode
 slug: Web/API/AudioWorkletNode
 ---
-<p>{{APIRef("Web Audio API")}} {{SeeCompatTable}}</p>
+{{APIRef("Web Audio API")}} {{SeeCompatTable}}
 
-<p>虽然这个接口可以在 <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a> 之外调用，但是 {{domxref("BaseAudioContext.audioWorklet")}} 属性不行，从而 {{domxref("AudioWorkletProcessor")}} 不能在外部定义。</p>
+虽然这个接口可以在 [secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts) 之外调用，但是 {{domxref("BaseAudioContext.audioWorklet")}} 属性不行，从而 {{domxref("AudioWorkletProcessor")}} 不能在外部定义。
 
-<p><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> 中的  <strong><code>AudioWorkletNode</code></strong>  接口代表了用户定义的{{domxref("AudioNode")}}的基类，该基类可以与其他节点一起连接到音频路由图。其具有关联的{{domxref("AudioWorkletProcessor")}}, 它在 Web Audio 执行实际的音频处理。</p>
+[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 中的 **`AudioWorkletNode`** 接口代表了用户定义的{{domxref("AudioNode")}}的基类，该基类可以与其他节点一起连接到音频路由图。其具有关联的{{domxref("AudioWorkletProcessor")}}, 它在 Web Audio 执行实际的音频处理。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}</dt>
- <dd>为 <code>AudioWorkletNode</code> 创建一个新的实例对象。</dd>
-</dl>
+- {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}
+  - : 为 `AudioWorkletNode` 创建一个新的实例对象。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>也继承父类的属性，{{domxref("AudioNode")}}</em>.</p>
+_也继承父类的属性，{{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("AudioWorkletNode.port")}} {{readonlyinline}}</dt>
- <dd>返回一个 {{domxref("MessagePort")}} 用于节点与其关联的 {{domxref("AudioWorkletProcessor")}} 间的双向通讯。另一端在处理器属性{{domxref("AudioWorkletProcessor.port", "port")}} 下可用。</dd>
- <dt>{{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}</dt>
- <dd>返回一个 {{domxref("AudioParamMap")}} —  {{domxref("AudioParam")}} 对象的集合。它们在创建 <code>AudioWorkletProcessor</code>的过程中被实例化. 如果 <code>AudioWorkletProcessor</code> 有一个静态的 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter，从其返回的 {{domxref("AudioParamDescriptor")}} 数组用于在 <code>AudioWorkletNode</code> 创建 <code>AudioParam</code> 对象。通过这种机制，使得 <code>AudioParam</code> 对象可以从 <code>AudioWorkletNode</code> 中访问。你可以在与其关联的 <code>AudioWorkletProcessor</code> 中使用它的值。</dd>
-</dl>
+- {{domxref("AudioWorkletNode.port")}} {{readonlyinline}}
+  - : 返回一个 {{domxref("MessagePort")}} 用于节点与其关联的 {{domxref("AudioWorkletProcessor")}} 间的双向通讯。另一端在处理器属性{{domxref("AudioWorkletProcessor.port", "port")}} 下可用。
+- {{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}
+  - : 返回一个 {{domxref("AudioParamMap")}} — {{domxref("AudioParam")}} 对象的集合。它们在创建 `AudioWorkletProcessor`的过程中被实例化. 如果 `AudioWorkletProcessor` 有一个静态的 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter，从其返回的 {{domxref("AudioParamDescriptor")}} 数组用于在 `AudioWorkletNode` 创建 `AudioParam` 对象。通过这种机制，使得 `AudioParam` 对象可以从 `AudioWorkletNode` 中访问。你可以在与其关联的 `AudioWorkletProcessor` 中使用它的值。
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("AudioWorkletNode.onprocessorerror")}}</dt>
- <dd>在关联的 {{domxref("AudioWorkletProcessor")}} 对象发生异常时触发。一旦触发，处理器及其节点将在其整个生命周期内处于输出静默状态。</dd>
-</dl>
+- {{domxref("AudioWorkletNode.onprocessorerror")}}
+  - : 在关联的 {{domxref("AudioWorkletProcessor")}} 对象发生异常时触发。一旦触发，处理器及其节点将在其整个生命周期内处于输出静默状态。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>同样继承了其父类的方法，</em><em>{{domxref("AudioNode")}}</em>.</p>
+_同样继承了其父类的方法，{{domxref("AudioNode")}}_.
 
-<p><em>AudioWorkletNode 接口未定义其自己的任何方法。</em></p>
+_AudioWorkletNode 接口未定义其自己的任何方法。_
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在本示例中我们创建了 <code>AudioWorkletNode</code> 对象，它会输出白噪声。</p>
+在本示例中我们创建了 `AudioWorkletNode` 对象，它会输出白噪声。
 
-<p>首先，我们需要定义一个自定义的 {{domxref("AudioWorkletProcessor")}}, 它将输出白噪声并进行注册。注意，这需要在一个单独的文件中完成。</p>
+首先，我们需要定义一个自定义的 {{domxref("AudioWorkletProcessor")}}, 它将输出白噪声并进行注册。注意，这需要在一个单独的文件中完成。
 
-<pre class="brush: js">// white-noise-processor.js
+```js
+// white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
   process (inputs, outputs, parameters) {
     const output = outputs[0]
-    output.forEach(channel =&gt; {
-      for (let i = 0; i &lt; channel.length; i++) {
+    output.forEach(channel => {
+      for (let i = 0; i < channel.length; i++) {
         channel[i] = Math.random() * 2 - 1
       }
     })
@@ -59,31 +54,26 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 }
 
 registerProcessor('white-noise-processor', WhiteNoiseProcessor)
-</pre>
+```
 
-<p>接下来，在脚本主文件中一个 <code>AudioWorkletNode</code> 实例，并传递处理器的名称，然后将该实例连接到一个 audio graph.</p>
+接下来，在脚本主文件中一个 `AudioWorkletNode` 实例，并传递处理器的名称，然后将该实例连接到一个 audio graph.
 
-<pre class="brush: js">const audioContext = new AudioContext()
+```js
+const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('white-noise-processor.js')
 const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
 whiteNoiseNode.connect(audioContext.destination)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.AudioWorkletNode")}}
 
+## See also
 
-<p>{{Compat("api.AudioWorkletNode")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

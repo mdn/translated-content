@@ -2,33 +2,35 @@
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
 ---
-<p>{{APIRef("DOM Events")}} </p>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>Event.cancelBubble</strong></code> 属性是 {{domxref("Event.stopPropagation()")}}的一个曾用名。在从事件处理程序返回之前将其值设置为 true 可阻止事件的传播。</p>
+**`Event.cancelBubble`** 属性是 {{domxref("Event.stopPropagation()")}}的一个曾用名。在从事件处理程序返回之前将其值设置为 true 可阻止事件的传播。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">event.cancelBubble = <em>bool;</em>
-<em>let bool</em> = event.cancelBubble;</pre>
+```
+event.cancelBubble = bool;
+let bool = event.cancelBubble;
+```
 
-<h2 id="用例">用例</h2>
+## 用例
 
-<pre class="brush: js">ele.onclick = function(e) {
+```js
+ele.onclick = function(e) {
   // 在这儿可以做点儿有趣的事情
   e.cancelBubble = true;
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><em>这个属性的规范并未统一。</em> 因为他还有其他标准 W3C 版： <a href="http://www.w3.org/TR/1999/WD-DOM-Level-2-19990304/events.html#attribute-cancelBubble">an old Working Draft of W3C DOM Level 2</a>. 微软版： <a href="https://msdn.microsoft.com/en-us/library/ms533545(v=vs.85).aspx">description of it on MSDN</a>.</p>
+_这个属性的规范并未统一。_ 因为他还有其他标准 W3C 版： [an old Working Draft of W3C DOM Level 2](http://www.w3.org/TR/1999/WD-DOM-Level-2-19990304/events.html#attribute-cancelBubble). 微软版： [description of it on MSDN](<https://msdn.microsoft.com/en-us/library/ms533545(v=vs.85).aspx>).
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.Event.cancelBubble")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("UIEvent.cancelBubble")}}</li>
- <li>translated by cnvoid</li>
-</ul>
+- {{domxref("UIEvent.cancelBubble")}}
+- translated by cnvoid

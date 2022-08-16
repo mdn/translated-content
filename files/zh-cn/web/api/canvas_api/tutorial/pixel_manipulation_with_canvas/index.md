@@ -2,78 +2,84 @@
 title: 像素操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
-<div>
-<p>到目前为止，我们尚未深入了解 Canvas 画布真实像素的原理，事实上，你可以直接通过 ImageData 对象操纵像素数据，直接读取或将数据数组写入该对象中。稍后我们也将深入了解如何控制图像使其平滑（反锯齿）以及如何从 Canvas 画布中保存图像。</p>
-</div>
+到目前为止，我们尚未深入了解 Canvas 画布真实像素的原理，事实上，你可以直接通过 ImageData 对象操纵像素数据，直接读取或将数据数组写入该对象中。稍后我们也将深入了解如何控制图像使其平滑（反锯齿）以及如何从 Canvas 画布中保存图像。
 
-<h2 id="ImageData_对象">ImageData 对象</h2>
+## ImageData 对象
 
-<p>{{domxref("ImageData")}}对象中存储着 canvas 对象真实的像素数据，它包含以下几个只读属性：</p>
+{{domxref("ImageData")}}对象中存储着 canvas 对象真实的像素数据，它包含以下几个只读属性：
 
-<dl>
- <dt><code>width</code></dt>
- <dd>图片宽度，单位是像素</dd>
- <dt><code>height</code></dt>
- <dd>图片高度，单位是像素</dd>
- <dt><code>data</code></dt>
- <dd>{{jsxref("Uint8ClampedArray")}} 类型的一维数组，包含着 RGBA 格式的整型数据，范围在 0 至 255 之间（包括 255）。</dd>
-</dl>
+- `width`
+  - : 图片宽度，单位是像素
+- `height`
+  - : 图片高度，单位是像素
+- `data`
+  - : {{jsxref("Uint8ClampedArray")}} 类型的一维数组，包含着 RGBA 格式的整型数据，范围在 0 至 255 之间（包括 255）。
 
-<p>data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作为查看初始像素数据。每个像素用 4 个 1bytes 值 (按照红，绿，蓝和透明值的顺序; 这就是"RGBA"格式) 来代表。每个颜色值部份用 0 至 255 来代表。每个部份被分配到一个在数组内连续的索引，左上角像素的红色部份在数组的索引 0 位置。像素从左到右被处理，然后往下，遍历整个数组。</p>
+data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作为查看初始像素数据。每个像素用 4 个 1bytes 值 (按照红，绿，蓝和透明值的顺序; 这就是"RGBA"格式) 来代表。每个颜色值部份用 0 至 255 来代表。每个部份被分配到一个在数组内连续的索引，左上角像素的红色部份在数组的索引 0 位置。像素从左到右被处理，然后往下，遍历整个数组。
 
-<p>{{jsxref("Uint8ClampedArray")}} 包含高度 × 宽度 × 4 bytes 数据，索引值从 0 到 (<code style="font-style: normal;">高度</code>×宽度×4)-1</p>
+{{jsxref("Uint8ClampedArray")}} 包含高度 × 宽度 × 4 bytes 数据，索引值从 0 到 (`高度`× 宽度 ×4)-1
 
-<p>例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：</p>
+例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：
 
-<pre class="notranslate">blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];</pre>
+```
+blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+```
 
-<p>根据行、列读取某像素点的 R/G/B/A 值的公式：</p>
+根据行、列读取某像素点的 R/G/B/A 值的公式：
 
-<pre class="notranslate">imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];</pre>
+```
+imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
+```
 
-<p>你可能用会使用 Uint8ClampedArray.length 属性来读取像素数组的大小（以 bytes 为单位）：</p>
+你可能用会使用 Uint8ClampedArray.length 属性来读取像素数组的大小（以 bytes 为单位）：
 
-<pre class="brush: js notranslate">var numBytes = imageData.data.length;
-</pre>
+```js
+var numBytes = imageData.data.length;
+```
 
-<h2 id="创建一个ImageData对象">创建一个<code>ImageData对象</code></h2>
+## 创建一个`ImageData对象`
 
-<p>去创建一个新的，空白的 ImageData<code>对象</code>，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有 2 个版本的 createImageData() 方法。</p>
+去创建一个新的，空白的 ImageData`对象`，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有 2 个版本的 createImageData() 方法。
 
-<pre class="brush: js notranslate">var myImageData = ctx.createImageData(width, height);</pre>
+```js
+var myImageData = ctx.createImageData(width, height);
+```
 
-<p>上面代码创建了一个新的具体特定尺寸的 ImageData<code>对象</code>。所有像素被预设为透明黑。</p>
+上面代码创建了一个新的具体特定尺寸的 ImageData`对象`。所有像素被预设为透明黑。
 
-<p>你也可以创建一个被 anotherImageData<code>对象</code>指定的相同像素的 ImageData<code>对象</code>。这个新的<code>对象</code>像素全部被预设为透明黑。这个并非复制了图片数据。</p>
+你也可以创建一个被 anotherImageData`对象`指定的相同像素的 ImageData`对象`。这个新的`对象`像素全部被预设为透明黑。这个并非复制了图片数据。
 
-<pre class="brush: js notranslate">var myImageData = ctx.createImageData(anotherImageData);</pre>
+```js
+var myImageData = ctx.createImageData(anotherImageData);
+```
 
-<h2 id="得到场景像素数据">得到场景像素数据</h2>
+## 得到场景像素数据
 
-<p>为了获得一个包含画布场景像素数据的 ImageData 对像，你可以用 getImageData() 方法：</p>
+为了获得一个包含画布场景像素数据的 ImageData 对像，你可以用 getImageData() 方法：
 
-<pre class="brush: js notranslate">var myImageData = ctx.getImageData(left, top, width, height);</pre>
+```js
+var myImageData = ctx.getImageData(left, top, width, height);
+```
 
-<p>这个方法会返回一个 ImageData<code>对象</code>，它代表了画布区域的<code>对象</code>数据，此画布的四个角落分别表示为 (left, top), (left + width, top), (left, top + height), 以及 (left + width, top + height) 四个点。这些坐标点被设定为画布坐标空间元素。</p>
+这个方法会返回一个 ImageData`对象`，它代表了画布区域的`对象`数据，此画布的四个角落分别表示为 (left, top), (left + width, top), (left, top + height), 以及 (left + width, top + height) 四个点。这些坐标点被设定为画布坐标空间元素。
 
-<div class="note">
-<p>注：任何在画布以外的元素都会被返回成一个透明黑的 ImageData 对像。</p>
-</div>
+> **备注：** 任何在画布以外的元素都会被返回成一个透明黑的 ImageData 对像。
 
-<p>这个方法也会在文章<a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">用画布操作视频</a>中展示。</p>
+这个方法也会在文章[用画布操作视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)中展示。
 
-<h3 id="A_color_picker"><strong>颜色选择器</strong></h3>
+### 颜色选择器
 
-<p>在这个例子里面，我们会使用<code style="font-style: normal;">getImageData()</code>去展示鼠标光标下的颜色。为此，我们要当前鼠标的位置，记为 layerX 和 layerY，然后我们去查询<code style="font-style: normal;">getImageData()</code>给我们提供的在那个位置的像数数组里面的像素数据。最后我们使用数组数据去设置背景颜色和&lt;div&gt;的文字去展示颜色值。</code></p>
+在这个例子里面，我们会使用`getImageData()`去展示鼠标光标下的颜色。为此，我们要当前鼠标的位置，记为 layerX 和 layerY，然后我们去查询`getImageData()`给我们提供的在那个位置的像数数组里面的像素数据。最后我们使用数组数据去设置背景颜色和\<div>的文字去展示颜色值。
 
-<div class="hidden">
-<pre class="brush: html; notranslate">&lt;canvas id="canvas" width="300" height="227" style="float:left"&gt;&lt;/canvas&gt;
-&lt;div id="color" style="width:200px;height:50px;float:left"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<canvas id="canvas" width="300" height="227" style="float:left"></canvas>
+<div id="color" style="width:200px;height:50px;float:left"></div>
+```
 
-<pre class="brush: js; notranslate">var img = new Image();
+```js hidden
+var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -93,10 +99,10 @@ function pick(event) {
   color.textContent = rgba;
 }
 canvas.addEventListener('mousemove', pick);
-</pre>
-</div>
+```
 
-<pre class="brush: js notranslate">var img = new Image();
+```js
+var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 var canvas = document.getElementById('canvas');
@@ -127,39 +133,43 @@ canvas.addEventListener('mousemove', function(event) {
 });
 canvas.addEventListener('click', function(event) {
     pick(event, selectedColor);
-});</pre>
+});
+```
 
-<p>{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}</p>
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}
 
-<h2 id="在场景中写入像素数据">在场景中写入像素数据</h2>
+## 在场景中写入像素数据
 
-<p>你可以用 putImageData() 方法去对场景进行像素数据的写入。</p>
+你可以用 putImageData() 方法去对场景进行像素数据的写入。
 
-<pre class="brush: js notranslate">ctx.putImageData(myImageData, dx, dy);
-</pre>
+```js
+ctx.putImageData(myImageData, dx, dy);
+```
 
-<p>dx 和 dy 参数表示你希望在场景内左上角绘制的像素数据所得到的设备坐标。</p>
+dx 和 dy 参数表示你希望在场景内左上角绘制的像素数据所得到的设备坐标。
 
-<p>例如，为了在场景内左上角绘制 myImageData 代表的图片，你可以写如下的代码：</p>
+例如，为了在场景内左上角绘制 myImageData 代表的图片，你可以写如下的代码：
 
-<pre class="brush: js notranslate">ctx.putImageData(myImageData, 0, 0);
-</pre>
+```js
+ctx.putImageData(myImageData, 0, 0);
+```
 
-<h3 id="sect1"></h3>
+###
 
-<h3 id="Grayscaling_and_inverting_colors">图片灰度和反相颜色</h3>
+### 图片灰度和反相颜色
 
-<p>在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过 putImageData() 放回到画布中去。invert 函数仅仅是去减掉颜色的最大色值 255.grayscale 函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如 x = 0.299r + 0.587g + 0.114b 这个公式。更多资料请参考维基百科的<a href="http://en.wikipedia.org/wiki/Grayscale">Grayscale</a>。</p>
+在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过 putImageData() 放回到画布中去。invert 函数仅仅是去减掉颜色的最大色值 255.grayscale 函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如 x = 0.299r + 0.587g + 0.114b 这个公式。更多资料请参考维基百科的[Grayscale](http://en.wikipedia.org/wiki/Grayscale)。
 
-<div class="hidden">
-<pre class="brush: html; notranslate">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
-&lt;div&gt;
-  &lt;input id="grayscalebtn" value="Grayscale" type="button"&gt;
-  &lt;input id="invertbtn" value="Invert" type="button"&gt;
-&lt;/div&gt;
-</pre>
+```html hidden
+<canvas id="canvas" width="300" height="227"></canvas>
+<div>
+  <input id="grayscalebtn" value="Grayscale" type="button">
+  <input id="invertbtn" value="Invert" type="button">
+</div>
+```
 
-<pre class="brush: js notranslate">var img = new Image();
+```js hidden
+var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 img.onload = function() {
   draw(this);
@@ -174,7 +184,7 @@ function draw(img) {
   var data = imageData.data;
 
   var invert = function() {
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
       data[i]     = 255 - data[i];     // red
       data[i + 1] = 255 - data[i + 1]; // green
       data[i + 2] = 255 - data[i + 2]; // blue
@@ -183,7 +193,7 @@ function draw(img) {
   };
 
   var grayscale = function() {
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
       var avg = (data[i] + data[i +1] + data[i +2]) / 3;
       data[i]     = avg; // red
       data[i + 1] = avg; // green
@@ -197,12 +207,10 @@ function draw(img) {
   var grayscalebtn = document.getElementById('grayscalebtn');
   grayscalebtn.addEventListener('click', grayscale);
 }
-</pre>
-</div>
+```
 
-
-
-<pre class="brush: js notranslate">var img = new Image();
+```js
+var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 
@@ -221,7 +229,7 @@ var invert = function() {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
         data[i]     = 255 - data[i];     // red
         data[i + 1] = 255 - data[i + 1]; // green
         data[i + 2] = 255 - data[i + 2]; // blue
@@ -233,7 +241,7 @@ var grayscale = function() {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
         var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
         data[i]     = avg; // red
         data[i + 1] = avg; // green
@@ -254,35 +262,40 @@ for (const input of inputs) {
                 return original();
         }
     });
-}</pre>
+}
+```
 
-<p>{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}</p>
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}
 
-<h2 id="缩放和反锯齿">缩放和反锯齿</h2>
+## 缩放和反锯齿
 
-<p>在{{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法，第二个画布和{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性的帮助下，我们可以放大显示我们的图片及看到详情内容。</p>
+在{{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法，第二个画布和{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性的帮助下，我们可以放大显示我们的图片及看到详情内容。
 
-<p>我们得到鼠标的位置并裁剪出距左和上 5 像素，距右和下 5 像素的图片。然后我们将这幅图复制到另一个画布然后将图片调整到我们想要的大小。在缩放画布里，我们将 10×10 像素的对原画布的裁剪调整为 200×200。</p>
+我们得到鼠标的位置并裁剪出距左和上 5 像素，距右和下 5 像素的图片。然后我们将这幅图复制到另一个画布然后将图片调整到我们想要的大小。在缩放画布里，我们将 10×10 像素的对原画布的裁剪调整为 200×200。
 
-<pre class="brush: js notranslate">zoomctx.drawImage(canvas,
+```js
+zoomctx.drawImage(canvas,
                   Math.abs(x - 5), Math.abs(y - 5),
-                  10, 10, 0, 0, 200, 200);</pre>
+                  10, 10, 0, 0, 200, 200);
+```
 
-<p>因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到 imageSmoothingEnabled 属性的效果（不同浏览器需要不同前缀）。</p>
+因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到 imageSmoothingEnabled 属性的效果（不同浏览器需要不同前缀）。
 
-<h6 id="Zoom_example">Zoom example</h6>
+###### Zoom example
 
-<pre class="brush: html; notranslate">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
-&lt;canvas id="zoom" width="300" height="227"&gt;&lt;/canvas&gt;
-&lt;div&gt;
-&lt;label for="smoothbtn"&gt;
-  &lt;input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn"&gt;
+```html
+<canvas id="canvas" width="300" height="227"></canvas>
+<canvas id="zoom" width="300" height="227"></canvas>
+<div>
+<label for="smoothbtn">
+  <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn">
   Enable image smoothing
-&lt;/label&gt;
-&lt;/div&gt;
-</pre>
+</label>
+</div>
+```
 
-<pre class="brush: js notranslate">var img = new Image();
+```js
+var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 img.onload = function() {
   draw(this);
@@ -316,36 +329,31 @@ function draw(img) {
   };
 
   canvas.addEventListener('mousemove', zoom);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Zoom_example', 620, 490) }}</p>
+{{ EmbedLiveSample('Zoom_example', 620, 490) }}
 
-<h2 id="保存图片">保存图片</h2>
+## 保存图片
 
-<p>{{domxref("HTMLCanvasElement")}}  提供一个 toDataURL() 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的<a href="/en-US/docs/Web/HTTP/data_URIs">数据链接</a>。返回的图片分辨率是 96dpi。</p>
+{{domxref("HTMLCanvasElement")}} 提供一个 toDataURL() 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的[数据链接](/zh-CN/docs/Web/HTTP/data_URIs)。返回的图片分辨率是 96dpi。
 
-<dl>
- <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}</dt>
- <dd>默认设定。创建一个 PNG 图片。</dd>
- <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}</dt>
- <dd>创建一个 JPG 图片。你可以有选择地提供从 0 到 1 的品质量，1 表示最好品质，0 基本不被辨析但有比较小的文件大小。</dd>
-</dl>
+- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
+  - : 默认设定。创建一个 PNG 图片。
+- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
+  - : 创建一个 JPG 图片。你可以有选择地提供从 0 到 1 的品质量，1 表示最好品质，0 基本不被辨析但有比较小的文件大小。
 
-<p>当你从画布中生成了一个数据链接，例如，你可以将它用于任何{{HTMLElement("image")}}元素，或者将它放在一个有 download 属性的超链接里用于保存到本地。</p>
+当你从画布中生成了一个数据链接，例如，你可以将它用于任何{{HTMLElement("image")}}元素，或者将它放在一个有 download 属性的超链接里用于保存到本地。
 
-<p>你也可以从画布中创建一个{{domxref("Blob")}}对像。</p>
+你也可以从画布中创建一个{{domxref("Blob")}}对像。
 
-<dl>
- <dt>{{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}</dt>
- <dd>这个创建了一个在画布中的代表图片的 Blob 对像。</dd>
-</dl>
+- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
+  - : 这个创建了一个在画布中的代表图片的 Blob 对像。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a></li>
- <li><a href="https://codepo8.github.io/canvas-images-and-pixels/">Canvas, images and pixels – by Christian Heilmann</a></li>
-</ul>
+- {{domxref("ImageData")}}
+- [Manipulating video using canvas](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [Canvas, images and pixels – by Christian Heilmann](https://codepo8.github.io/canvas-images-and-pixels/)
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}

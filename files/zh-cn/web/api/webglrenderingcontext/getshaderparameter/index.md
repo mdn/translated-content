@@ -2,49 +2,46 @@
 title: WebGLRenderingContext.getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.getShaderParameter()</code></strong> 返回给定的着色器信息</p>
+**`WebGLRenderingContext.getShaderParameter()`** 返回给定的着色器信息
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">any <var>gl</var>.getShaderParameter(<var>shader</var>, <var>pname</var>);
-</pre>
+```
+any gl.getShaderParameter(shader, pname);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>shader</dt>
- <dd>需要获取信息的着色器对象</dd>
- <dt>pname</dt>
- <dd>指定要查询的信息属性名称，值：
- <ul>
-  <li><code>gl.DELETE_STATUS</code>:标示着色器是否被删除，删除（<strong>GL_TRUE</strong>）未删除（<strong>GL_FALSE</strong>）.</li>
-  <li><code>gl.COMPILE_STATUS</code>: 标示着色器是否编译成功，是（<strong>GL_TRUE</strong>）不是（<strong>GL_FALSE</strong>）</li>
-  <li><code>gl.SHADER_TYPE</code>: 标示着色器类型，是顶点着色器 (<code>gl.VERTEX_SHADER</code>) 还是片段着色器 (<code>gl.FRAGMENT_SHADER</code>)</li>
- </ul>
- </dd>
-</dl>
+- shader
+  - : 需要获取信息的着色器对象
+- pname
 
-<h3 id="返回值">返回值</h3>
+  - : 指定要查询的信息属性名称，值：
 
-<p>返回对应着色器属性信息</p>
+    - `gl.DELETE_STATUS`:标示着色器是否被删除，删除（**GL_TRUE**）未删除（**GL_FALSE**）.
+    - `gl.COMPILE_STATUS`: 标示着色器是否编译成功，是（**GL_TRUE**）不是（**GL_FALSE**）
+    - `gl.SHADER_TYPE`: 标示着色器类型，是顶点着色器 (`gl.VERTEX_SHADER`) 还是片段着色器 (`gl.FRAGMENT_SHADER`)
 
-<h2 id="例子">例子</h2>
+### 返回值
 
-<pre class="brush: js">gl.getShaderParameter(shader, gl.SHADER_TYPE);
-</pre>
+返回对应着色器属性信息
 
-<h2 id="规范">规范</h2>
+## 例子
+
+```js
+gl.getShaderParameter(shader, gl.SHADER_TYPE);
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.getShaderParameter")}}</p>
+{{Compat("api.WebGLRenderingContext.getShaderParameter")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}

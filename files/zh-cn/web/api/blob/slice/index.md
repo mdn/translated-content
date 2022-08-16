@@ -6,7 +6,7 @@ slug: Web/API/Blob/slice
 
 **`Blob.slice() `** 方法用于创建一个包含源 {{domxref("Blob")}}的指定字节范围内的数据的新 {{domxref("Blob")}} 对象。
 
-> **备注：** 请注意，在某些浏览器和版本上具有供应商前缀：例如：Firefox 12 及更早版本的 blob.mozSlice() 和 Safari 中的 blob.webkitSlice(). slice() 方法的旧版本，没有供应商前缀，具有不同的语义，并且已过时。
+> **备注：** 在某些浏览器和版本上具有供应商前缀：例如：Firefox 12 及更早版本的 blob.mozSlice() 和 Safari 中的 blob.webkitSlice(). slice() 方法的旧版本，没有供应商前缀，具有不同的语义，并且已过时。
 
 ## 语法
 

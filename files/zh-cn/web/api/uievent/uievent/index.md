@@ -2,44 +2,38 @@
 title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>UIEvent()</code></strong> 作为构造函数，可用于构造一个新的 {{domxref("UIEvent")}} 对象。</p>
+**`UIEvent()`** 作为构造函数，可用于构造一个新的 {{domxref("UIEvent")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>event</em> = new UIEvent(<em>typeArg</em> [, <em>UIEventInit</em>])</pre>
+```
+event = new UIEvent(typeArg [, UIEventInit])
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>typeArg</code></dt>
- <dd>传递的是一个 {{domxref("DOMString")}}类型的字符串，用来命名且重新发布的事件。</dd>
- <dt><code>UIEventInit</code> {{optional_inline}}</dt>
- <dd>是 <code>UIEventInit</code> 集合，它拥有以下属性：
+- `typeArg`
+  - : 传递的是一个 {{domxref("DOMString")}}类型的字符串，用来命名且重新发布的事件。
+- `UIEventInit` {{optional_inline}}
 
- <ul>
-  <li><strong><code>detail</code></strong>: 可选，默认为 long 类型的 0 数值， 用来标记事件的关联值. {{domxref("UIEvent.detail")}} 列出了标准事件的语义。</li>
-  <li><strong><code>view</code></strong>: 可选，默认为 null，类型为 {{domxref("WindowProxy")}}, 用来关联{{domxref("Window")}} 与 event 本身。</li>
-  <li><strong><code>sourceCapabilities</code></strong>: {{non-standard_inline}} 一个 {{domxref("InputDeviceCapabilities")}} 类型的接口实例 (对象)，用来提供物理设备的触摸信息。</li>
- </ul>
+  - : 是 `UIEventInit` 集合，它拥有以下属性：
 
- <div class="note">
- <p><code>UIEventInit</code> 合集依然接受从{{domxref("Event.Event", "EventInit")}} 定义来的合集。</p>
- </div>
- </dd>
-</dl>
+    - **`detail`**: 可选，默认为 long 类型的 0 数值， 用来标记事件的关联值. {{domxref("UIEvent.detail")}} 列出了标准事件的语义。
+    - **`view`**: 可选，默认为 null，类型为 {{domxref("WindowProxy")}}, 用来关联{{domxref("Window")}} 与 event 本身。
+    - **`sourceCapabilities`**: {{non-standard_inline}} 一个 {{domxref("InputDeviceCapabilities")}} 类型的接口实例 (对象)，用来提供物理设备的触摸信息。
 
-<h2 id="Specifications">Specifications</h2>
+    > **备注：** `UIEventInit` 合集依然接受从{{domxref("Event.Event", "EventInit")}} 定义来的合集。
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("UIEvent")}}, the interface of the objects it constructs.</li>
-</ul>
+- {{domxref("UIEvent")}}, the interface of the objects it constructs.

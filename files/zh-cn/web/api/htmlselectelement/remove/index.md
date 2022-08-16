@@ -2,55 +2,53 @@
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><code><strong>HTMLSelectElement.remove()</strong></code> 方法从一个 select 元素中删除指定序数的 option 元素。没有传参时为删除当前元素本身：<a href="/en-US/docs/Web/API/ChildNode/remove">ChildNode.remove()</a>。</p>
+**`HTMLSelectElement.remove()`** 方法从一个 select 元素中删除指定序数的 option 元素。没有传参时为删除当前元素本身：[ChildNode.remove()](/zh-CN/docs/Web/API/ChildNode/remove)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>collection</em>.remove(<em>index</em>);
-</pre>
+```
+collection.remove(index);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><code>index</code><em> </em>是从 option {{ domxref("HTMLOptionElement") }} 集合中要移除元素的序数。如果序数对应的元素不存在，调用这个方法就没有任何效果。</li>
-</ul>
+- `index` 是从 option {{ domxref("HTMLOptionElement") }} 集合中要移除元素的序数。如果序数对应的元素不存在，调用这个方法就没有任何效果。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var sel = document.getElementById("existingList");
+```js
+var sel = document.getElementById("existingList");
 sel.remove(1);
 
 /*
   上面的代码会将下面的 select 元素结构：
 
-  &lt;select id="existingList" name="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-    &lt;option value="3"&gt;Option: Value 3&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList" name="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+    <option value="3">Option: Value 3</option>
+  </select>
 
   变成这样：
 
-  &lt;select id="existingList" name="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="3"&gt;Option: Value 3&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList" name="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="3">Option: Value 3</option>
+  </select>
 */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLSelectElement.remove")}}</p>
+{{Compat("api.HTMLSelectElement.remove")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{ domxref("ChildNode.remove") }}，当没有参数时 {{ domxref("HTMLSelectElement") }} 调用的是这个方法</li>
- <li>{{domxref("HTMLSelectElement") }} 实现了这个方法。</li>
-</ul>
+- {{ domxref("ChildNode.remove") }}，当没有参数时 {{ domxref("HTMLSelectElement") }} 调用的是这个方法
+- {{domxref("HTMLSelectElement") }} 实现了这个方法。

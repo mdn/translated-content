@@ -2,19 +2,22 @@
 title: NodeList.values()
 slug: Web/API/NodeList/values
 ---
-<p>该方法返回一个 iterator 迭代器，可以利用迭代器遍历所有 value。</p>
+该方法返回一个 iterator 迭代器，可以利用迭代器遍历所有 value。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">nodeList.values();</pre>
+```
+nodeList.values();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js; highlight:[13]">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -29,24 +32,21 @@ var list = node.childNodes;
 for(var value of list.values()) {
   console.log(value);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>&lt;p&gt;
+```
+<p>
 #text "hey"
-&lt;span&gt;
-</pre>
+<span>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.NodeList.values")}}
 
+## See also
 
-<p>{{Compat("api.NodeList.values")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

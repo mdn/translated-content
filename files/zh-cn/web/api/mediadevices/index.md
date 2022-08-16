@@ -2,40 +2,37 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><strong><code>MediaDevices</code></strong> 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。</p>
+**`MediaDevices`** 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从父类{{domxref("EventTarget")}}中继承的属性。</em></p>
+_从父类{{domxref("EventTarget")}}中继承的属性。_
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{domxref("MediaDevices.devicechange_event", "devicechange")}}</dt>
- <dd>返回 {{event("devicechange")}} 事件类型的事件处理程序。<br>
- 也可通过 {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} 访问</dd>
-</dl>
+- {{domxref("MediaDevices.devicechange_event", "devicechange")}}
+  - : 返回 {{event("devicechange")}} 事件类型的事件处理程序。
+    也可通过 {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} 访问
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>从其父项继承方法 {{domxref("EventTarget")}}.</em></p>
+_从其父项继承方法 {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{ domxref("MediaDevices.enumerateDevices()") }}</dt>
- <dd>获取有关系统中可用的媒体输入和输出设备的一系列信息。</dd>
- <dt>{{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}</dt>
- <dd>返回一个符合 {{domxref("MediaTrackSupportedConstraints")}} 的对象。该对象指明了 {{domxref("MediaStreamTrack")}} 接口支持的可约束的属性。查看 {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} 去了解更多相关信息。</dd>
- <dt>{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}</dt>
- <dd>提示用户选择显示器或显示器的一部分（例如窗口）以捕获为{{domxref("MediaStream")}} 以便共享或记录。返回解析为 MediaStream 的 Promise。</dd>
- <dt>{{ domxref("MediaDevices.getUserMedia()") }}</dt>
- <dd>在用户通过提示允许的情况下，打开系统上的相机或屏幕共享和/或麦克风，并提供 {{domxref("MediaStream")}} 包含视频轨道和/或音频轨道的输入。</dd>
-</dl>
+- {{ domxref("MediaDevices.enumerateDevices()") }}
+  - : 获取有关系统中可用的媒体输入和输出设备的一系列信息。
+- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
+  - : 返回一个符合 {{domxref("MediaTrackSupportedConstraints")}} 的对象。该对象指明了 {{domxref("MediaStreamTrack")}} 接口支持的可约束的属性。查看 {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} 去了解更多相关信息。
+- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
+  - : 提示用户选择显示器或显示器的一部分（例如窗口）以捕获为{{domxref("MediaStream")}} 以便共享或记录。返回解析为 MediaStream 的 Promise。
+- {{ domxref("MediaDevices.getUserMedia()") }}
+  - : 在用户通过提示允许的情况下，打开系统上的相机或屏幕共享和/或麦克风，并提供 {{domxref("MediaStream")}} 包含视频轨道和/或音频轨道的输入。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js notranslate">'use strict';
+```js
+'use strict';
 
 // Put variables in global scope to make them available to the browser console.
 var video = document.querySelector('video');
@@ -69,29 +66,26 @@ navigator.mediaDevices.getUserMedia(constraints)
 });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '&lt;p&gt;' + msg + '&lt;/p&gt;';
+  errorElement.innerHTML += '<p>' + msg + '</p>';
   if (typeof error !== 'undefined') {
     console.error(error);
   }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MediaDevices")}}
 
+## 参见
 
-<p>{{Compat("api.MediaDevices")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: The API this interface is part of.</li>
- <li><a href="/zh-CN/docs/Web/API/Screen_Capture_API">Screen Capture API</a>: The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.</li>
- <li><a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("Navigator.mediaDevices")}}: Returns a reference to a <code>MediaDevices</code> object that can be used to access devices.</li>
- <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> HTML5 video capture and playback using <code>MediaDevices</code> and the MediaStream Recording API (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">source on GitHub</a>)</li>
- <li><a href="https://github.com/chrisjohndigital/OpenLang">OpenLang</a>: HTML5 video language lab web application using <code>MediaDevices</code> and the MediaStream Recording API for video recording (<a href="https://github.com/chrisjohndigital/OpenLang">source on GitHub</a>)</li>
-</ul>
+- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API): The API this interface is part of.
+- [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
+- {{domxref("Navigator.mediaDevices")}}: Returns a reference to a `MediaDevices` object that can be used to access devices.
+- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 video capture and playback using `MediaDevices` and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using `MediaDevices` and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

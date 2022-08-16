@@ -2,84 +2,76 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}**`HTMLBodyElement `**接口提供了特殊的属性（除了它们继承的常规的{{ domxref("HTMLElement") }}接口）以外，还可以处理 body 元素。
 
-<div><strong><code>HTMLBodyElement </code></strong>接口提供了特殊的属性（除了它们继承的常规的{{ domxref("HTMLElement") }}接口）以外，还可以处理 body 元素。</div>
+{{InheritanceDiagram(600, 120)}}
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+## 属性
 
-<h2 id="属性">属性</h2>
+_从其父项{{domxref("HTMLElement")}} 中继承属性。_
 
-<p><em>从其父项{{domxref("HTMLElement")}} 中继承属性。</em></p>
+- {{domxref("HTMLBodyElement.aLink")}} {{Deprecated_Inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the color of active hyperlinks.
+- {{domxref("HTMLBodyElement.background")}} {{Deprecated_Inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.
+- {{domxref("HTMLBodyElement.bgColor")}} {{Deprecated_Inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the background color for the document.
+- {{domxref("HTMLBodyElement.link")}} {{Deprecated_Inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the color of unvisited links.
+- {{domxref("HTMLBodyElement.text")}} {{Deprecated_Inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the foreground color of text.
+- {{domxref("HTMLBodyElement.vLink")}} {{Deprecated_Inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the color of visited links.
 
-<dl>
- <dt>{{domxref("HTMLBodyElement.aLink")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the color of active hyperlinks.</dd>
- <dt>{{domxref("HTMLBodyElement.background")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.</dd>
- <dt>{{domxref("HTMLBodyElement.bgColor")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the background color for the document.</dd>
- <dt>{{domxref("HTMLBodyElement.link")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the color of unvisited links.</dd>
- <dt>{{domxref("HTMLBodyElement.text")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the foreground color of text.</dd>
- <dt>{{domxref("HTMLBodyElement.vLink")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the color of visited links.</dd>
-</dl>
+## 方法
 
-<h2 id="方法">方法</h2>
+_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
-<p><em>No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}</em>.</p>
+## 事件处理
 
-<h2 id="事件处理">事件处理</h2>
+No specific event handlers; inherits event handlers from its parent, {{domxref("HTMLElement")}}.
 
-<p>No specific event handlers; inherits event handlers from its parent, {{domxref("HTMLElement")}}.</p>
+- {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("afterprint")}} event is raised.
+- {{domxref("window.beforeprint_event", "HTMLBodyElement.onbeforeprint")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeprint")}} event is raised.
+- {{domxref("window.beforeunload_event", "HTMLBodyElement.onbeforeunload")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeunload")}} event is raised.
+- {{domxref("window.hashchange_event", "HTMLBodyElement.onhashchange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("hashchange")}} event is raised.
+- {{domxref("window.languagechange_event", "HTMLBodyElement.onlanguagechange")}} {{experimental_inline}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("languagechange")}} event is raised.
+- {{domxref("window.message_event", "HTMLBodyElement.onmessage")}}
+  - : Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a {{event("message")}} event.
+- {{domxref("window.messageerror_event", "HTMLBodyElement.onmessageerror")}}
+  - : Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a {{event("messageerror")}} event.
+- {{domxref("window.offline_event", "HTMLBodyElement.onoffline")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("offline")}} event is raised.
+- {{domxref("window.online_event", "HTMLBodyElement.ononline")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("online")}} event is raised.
+- {{domxref("window.pagehide_event", "HTMLBodyElement.onpagehide")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pagehide")}} event is raised.
+- {{domxref("window.pageshow_event", "HTMLBodyElement.onpageshow")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pageshow")}} event is raised.
+- {{domxref("window.popstate_event", "HTMLBodyElement.onpopstate")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("popstate")}} event is raised.
+- {{domxref("window.rejectionhandled_event", "HTMLBodyElement.onrejectionhandled")}}
+  - : An {{event("Event_handlers", "event handler")}} representing the code executed when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.
+- {{domxref("window.storage_event", "HTMLBodyElement.onstorage")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("storage")}} event is raised.
+- {{domxref("window.unhandledrejection_event", "HTMLBodyElement.onunhandledrejection")}}
+  - : An {{event("Event_handlers", "event handler")}} representing the code executed when the {{event("unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.
+- {{domxref("window.unload_event", "HTMLBodyElement.onunload")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("unload")}} event is raised.
 
-<dl>
- <dt>{{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("afterprint")}} event is raised.</dd>
- <dt>{{domxref("window.beforeprint_event", "HTMLBodyElement.onbeforeprint")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeprint")}} event is raised.</dd>
- <dt>{{domxref("window.beforeunload_event", "HTMLBodyElement.onbeforeunload")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeunload")}} event is raised.</dd>
- <dt>{{domxref("window.hashchange_event", "HTMLBodyElement.onhashchange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("hashchange")}} event is raised.</dd>
- <dt>{{domxref("window.languagechange_event", "HTMLBodyElement.onlanguagechange")}} {{experimental_inline}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("languagechange")}} event is raised.</dd>
- <dt>{{domxref("window.message_event", "HTMLBodyElement.onmessage")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a {{event("message")}} event.  </dd>
- <dt>{{domxref("window.messageerror_event", "HTMLBodyElement.onmessageerror")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a {{event("messageerror")}} event.</dd>
- <dt>{{domxref("window.offline_event", "HTMLBodyElement.onoffline")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("offline")}} event is raised.</dd>
- <dt>{{domxref("window.online_event", "HTMLBodyElement.ononline")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("online")}} event is raised.</dd>
- <dt>{{domxref("window.pagehide_event", "HTMLBodyElement.onpagehide")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pagehide")}} event is raised.</dd>
- <dt>{{domxref("window.pageshow_event", "HTMLBodyElement.onpageshow")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pageshow")}} event is raised.</dd>
- <dt>{{domxref("window.popstate_event", "HTMLBodyElement.onpopstate")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("popstate")}} event is raised.</dd>
- <dt>{{domxref("window.rejectionhandled_event", "HTMLBodyElement.onrejectionhandled")}}</dt>
- <dd>An {{event("Event_handlers", "event handler")}} representing the code executed when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.</dd>
- <dt>{{domxref("window.storage_event", "HTMLBodyElement.onstorage")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("storage")}} event is raised.</dd>
- <dt>{{domxref("window.unhandledrejection_event", "HTMLBodyElement.onunhandledrejection")}}</dt>
- <dd>An {{event("Event_handlers", "event handler")}} representing the code executed when the {{event("unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.</dd>
- <dt>{{domxref("window.unload_event", "HTMLBodyElement.onunload")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("unload")}} event is raised.</dd>
-</dl>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLBodyElement")}}
 
-<h2 id="参考阅读">参考阅读</h2>
+## 参考阅读
 
-<ul>
- <li>HTML element implementing this interface: {{ HTMLElement("body") }}</li>
-</ul>
+- HTML element implementing this interface: {{ HTMLElement("body") }}

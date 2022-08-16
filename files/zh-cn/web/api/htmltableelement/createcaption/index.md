@@ -2,24 +2,22 @@
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
 ---
-<div>
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>这个 <code><strong>HTMLTableElement.createCaption()</strong></code> 方法返回这个 table 元素的 caption(HTMLTableCaptionElement). 如果这个 table 没有 caption,这个方法创建并返回 caption.</p>
+这个 **`HTMLTableElement.createCaption()`** 方法返回这个 table 元素的 caption(HTMLTableCaptionElement). 如果这个 table 没有 caption,这个方法创建并返回 caption.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">HTMLTableCaptionElement = table.createCaption()</pre>
+```
+HTMLTableCaptionElement = table.createCaption()
+```
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush:js">mycap = mytable.createCaption();</pre>
+```js
+mycap = mytable.createCaption();
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-96920263">createCaption</a></li>
-</ul>
+- [createCaption](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-96920263)

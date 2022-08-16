@@ -2,44 +2,41 @@
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 ---
-<p>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>AnimationEvent()</strong></code> constructor returns a newly created {{domxref("AnimationEvent")}}, representing an event in relation with an animation.</p>
+The **`AnimationEvent()`** constructor returns a newly created {{domxref("AnimationEvent")}}, representing an event in relation with an animation.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>animationEvent</em> = new AnimationEvent(<em>type</em>, {animationName: <em>aPropertyName</em>,
-                                           elapsedTime  : <em>aFloat</em>,
-                                           pseudoElement: <em>aPseudoElementName</em>});
-</pre>
+```
+animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
+                                           elapsedTime  : aFloat,
+                                           pseudoElement: aPseudoElementName});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><em>The <code>AnimationEvent()</code></em><em> constructor also inherits arguments from {{domxref("Event.Event", "Event()")}}.</em></p>
+_The `AnimationEvent()`_ _constructor also inherits arguments from {{domxref("Event.Event", "Event()")}}._
 
-<dl>
- <dt><code>type</code></dt>
- <dd>{{domxref("DOMString")}} 代表 <code>AnimationEvent</code> 类型的名称。大小写敏感，有三个值可选：<code>'animationstart'</code>、<code>'animationend'</code> 和 <code>'animationiteration'</code>。</dd>
- <dt><code>animationName</code> {{optional_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition. It defaults to <code>""</code>.</dd>
- <dt><code>elapsedTime</code> {{optional_inline}}</dt>
- <dd>A <code>float</code> giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an <code>"animationstart"</code> event, <code>elapsedTime</code> is <code>0.0</code> unless there was a negative value for <code><a href="/en-US/docs/Web/CSS/animation-delay">animation-delay</a></code>, in which case the event will be fired with <code>elapsedTime</code> containing  <code>(-1 * </code><em>delay</em><code>)</code>. It defaults to <code>0.0</code>.</dd>
- <dt><code>pseudoElement</code> {{optional_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}}, starting with <code>"::"</code>, containing the name of the <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: <code>""</code><code>.</code> It defaults to <code>""</code>. </dd>
-</dl>
+- `type`
+  - : {{domxref("DOMString")}} 代表 `AnimationEvent` 类型的名称。大小写敏感，有三个值可选：`'animationstart'`、`'animationend'` 和 `'animationiteration'`。
+- `animationName` {{optional_inline}}
+  - : A {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition. It defaults to `""`.
+- `elapsedTime` {{optional_inline}}
+  - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for [`animation-delay`](/en-US/docs/Web/CSS/animation-delay), in which case the event will be fired with `elapsedTime` containing `(-1 * `_delay_`)`. It defaults to `0.0`.
+- `pseudoElement` {{optional_inline}}
+  - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name of the [pseudo-element](/zh-CN/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: ` ""``. ` It defaults to `""`.
 
-<h2 id="标准">标准</h2>
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.AnimationEvent.AnimationEvent")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_animations">Using CSS animations</a></li>
- <li>Animation-related CSS properties and at-rules: <code><a href="/en-US/docs/Web/CSS/animation">animation</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-delay">animation-delay</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-direction">animation-direction</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-duration">animation-duration</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-iteration-count">animation-iteration-count</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-name">animation-name</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-play-state">animation-play-state</a></code>, <code><a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a></code>, <code><a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a></code></li>
- <li>The {{domxref("AnimationEvent")}} interface it belongs to.</li>
-</ul>
+- [Using CSS animations](/zh-CN/docs/CSS/Using_CSS_animations)
+- Animation-related CSS properties and at-rules: [`animation`](/en-US/docs/Web/CSS/animation), [`animation-delay`](/en-US/docs/Web/CSS/animation-delay), [`animation-direction`](/en-US/docs/Web/CSS/animation-direction), [`animation-duration`](/en-US/docs/Web/CSS/animation-duration), [`animation-fill-mode`](/en-US/docs/Web/CSS/animation-fill-mode), [`animation-iteration-count`](/en-US/docs/Web/CSS/animation-iteration-count), [`animation-name`](/en-US/docs/Web/CSS/animation-name), [`animation-play-state`](/en-US/docs/Web/CSS/animation-play-state), [`animation-timing-function`](/en-US/docs/Web/CSS/animation-timing-function), [`@keyframes`](/en-US/docs/Web/CSS/@keyframes)
+- The {{domxref("AnimationEvent")}} interface it belongs to.

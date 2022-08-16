@@ -2,34 +2,36 @@
 title: URL.searchParams
 slug: Web/API/URL/searchParams
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>{{domxref("URL")}} 接口的 <strong><code>searchParams</code></strong> 属性返回一个 {{domxref("URLSearchParams")}} 对象，这个对象包含当前 URL 中解码后的 {{httpmethod("GET")}} 查询参数。</p>
+{{domxref("URL")}} 接口的 **`searchParams`** 属性返回一个 {{domxref("URLSearchParams")}} 对象，这个对象包含当前 URL 中解码后的 {{httpmethod("GET")}} 查询参数。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">const <em>urlSearchParams</em> = <em>url</em>.searchParams</pre>
+```js
+const urlSearchParams = url.searchParams
+```
 
-<h3 id="属性值">属性值</h3>
+### 属性值
 
-<p>一个 {{domxref("URLSearchParams")}} 对象。</p>
+一个 {{domxref("URLSearchParams")}} 对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>如果你的 URL 是 <code>https://example.com/?name=Jonathan%20Smith&amp;age=18</code> ，你可以这样解析 URL，然后得到 <code>name</code> 和 <code>age</code> 的值。</p>
+如果你的 URL 是 `https://example.com/?name=Jonathan%20Smith&age=18` ，你可以这样解析 URL，然后得到 `name` 和 `age` 的值。
 
-<pre class="brush: js notranslate">let params = (new URL(document.location)).searchParams;
+```js
+let params = (new URL(document.location)).searchParams;
 let name = params.get('name'); // is the string "Jonathan Smith".
-let age = parseInt(params.get('age')); // is the number 18</pre>
+let age = parseInt(params.get('age')); // is the number 18
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.URL.searchParams")}}</p>
+{{Compat("api.URL.searchParams")}}

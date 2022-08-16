@@ -43,12 +43,9 @@ flex-basis: unset;
 
 ### 取值
 
-- ## `<'width'>`
-
-      : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
-
+- `<'width'>`
+  - : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
 - `content`
-
   - : 基于 flex 的元素的内容自动调整大小。
 
     > **备注：**由于最初规范中没有包括这个值，在一些早期的浏览器实现的 flex 布局中，content 值无效，可以利用设置 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) 或 [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) 为 auto 达到同样的效果。

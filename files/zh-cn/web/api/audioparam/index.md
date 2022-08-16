@@ -2,90 +2,84 @@
 title: AudioParam
 slug: Web/API/AudioParam
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<p><code>AudioParam</code> 接口代表音频相关的参数， 通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 <code>AudioParam</code> 可以被设置为一个具体的值或者数值的改变 ，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。</p>
-</div>
+`AudioParam` 接口代表音频相关的参数， 通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 `AudioParam` 可以被设置为一个具体的值或者数值的改变 ，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。
 
-<p>下面有两种类型的 <code>AudioParam</code>, <em>a-rate</em> 和 <em>k-rate</em> 参数：</p>
+下面有两种类型的 `AudioParam`, _a-rate_ 和 _k-rate_ 参数：
 
-<ul>
- <li>一个 <em>a-rate</em> <code>AudioParam</code> 获取音频信号的每个<a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels">采样帧</a>的当前音频参数值。</li>
- <li>一个 <em>k-rate</em> <code>AudioParam</code> 对于待处理的整个块使用相同的初始音频参数值，即 128 个采样帧。</li>
-</ul>
+- 一个 _a-rate_ `AudioParam` 获取音频信号的每个[采样帧](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels)的当前音频参数值。
+- 一个 _k-rate_ `AudioParam` 对于待处理的整个块使用相同的初始音频参数值，即 128 个采样帧。
 
-<p>每个 {{domxref("AudioNode")}} 定义了其规格中哪一个参数是 <em>a-rate</em> 或 <em>k-rate</em> 。</p>
+每个 {{domxref("AudioNode")}} 定义了其规格中哪一个参数是 _a-rate_ 或 _k-rate_ 。
 
-<p>每个 <code>AudioParam</code> 有一个事件的列表，初始化时列表为空。该列表定义了什么时候数值怎么改变。当这个列表不是空的时候，使用 <code>AudioParam.value</code> 属性的改变会被忽略 。事件的列表允许我们去有计划地进行必须在非常精确的时间发生的更改，使用任意的基于时间轴的自动化曲线。被使用的时间在{{domxref("AudioContext.currentTime")}} 中被定义。</p>
+每个 `AudioParam` 有一个事件的列表，初始化时列表为空。该列表定义了什么时候数值怎么改变。当这个列表不是空的时候，使用 `AudioParam.value` 属性的改变会被忽略 。事件的列表允许我们去有计划地进行必须在非常精确的时间发生的更改，使用任意的基于时间轴的自动化曲线。被使用的时间在{{domxref("AudioContext.currentTime")}} 中被定义。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><code>AudioParam</code><em> 继承的属性来自于它的父类， </em><code>AudioNode。</code></p>
+`AudioParam` _继承的属性来自于它的父类，_ `AudioNode。`
 
-<dl>
- <dt>{{domxref("AudioParam.defaultValue")}} {{readonlyInline}}</dt>
- <dd>代表被具体的{{domxref("AudioNode")}} 创建的 <code>AudioParam</code> 的属性的初始的音量。</dd>
- <dt>{{domxref("AudioParam.maxValue")}} {{readonlyInline}}</dt>
- <dd>代表参数有效范围的最大可能值。</dd>
- <dt>{{domxref("AudioParam.minValue")}} {{readonlyinline}}</dt>
- <dd>代表参数有效范围的最小可能值。</dd>
- <dt>{{domxref("AudioParam.value")}}</dt>
- <dd>代表参数的浮点数音量值；初始化设定为 <code>AudioParam.defaultValue 的值。虽然它可以被设置，但是任何发生在自动化事件（事件被计划用于 AudioParam ）的修改会被忽略，</code>没有任何例外。</dd>
-</dl>
+- {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
+  - : 代表被具体的{{domxref("AudioNode")}} 创建的 `AudioParam` 的属性的初始的音量。
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+  - : 代表参数有效范围的最大可能值。
+- {{domxref("AudioParam.minValue")}} {{readonlyinline}}
+  - : 代表参数有效范围的最小可能值。
+- {{domxref("AudioParam.value")}}
+  - : 代表参数的浮点数音量值；初始化设定为 `AudioParam.defaultValue 的值。虽然它可以被设置，但是任何发生在自动化事件（事件被计划用于 AudioParam ）的修改会被忽略，`没有任何例外。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>AudioParam<em> 初始化的方法来自它的父类，</em><code>AudioNode</code>.</p>
+AudioParam _初始化的方法来自它的父类，_`AudioNode`.
 
-<dl>
- <dt>{{domxref("AudioParam.setValueAtTime()")}}</dt>
- <dd>在一个确切的时间，即时更改 <code>AudioParam </code>的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 <code>value</code> 参数。</dd>
- <dt>{{domxref("AudioParam.linearRampToValueAtTime()")}}</dt>
- <dd>调整 <code>AudioParam 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。</code></dd>
- <dt>{{domxref("AudioParam.exponentialRampToValueAtTime()")}}</dt>
- <dd>调整 <code>AudioParam 的值，使其逐渐按指数变化。这个改变会从上一个事件指定的事件开始，跟随一个指数“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。</code></dd>
- <dt>{{domxref("AudioParam.setTargetAtTime()")}}</dt>
- <dd>将开始计划改变 <code>AudioParam 的值</code>。这个改变将从 <code>startTime 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 timeConstant 参数定义，</code>time 参数使以秒作为测量单位的时间。</dd>
- <dt>{{domxref("AudioParam.setValueCurveAtTime()")}}</dt>
- <dd>调整 <code>AudioParam</code> 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 <code>startTime</code> 时间开始并具有特定的持续时间（duration）。</dd>
- <dt>{{domxref("AudioParam.cancelScheduledValues()")}}</dt>
- <dd>取消全部在 <code>AudioParam 中</code>的未来计划发生的改变。</dd>
- <dt>{{domxref("AudioParam.cancelAndHoldAtTime()")}}</dt>
- <dd>取消全部计划将来对 <code>AudioParam 的</code>改变，但是保持给定时间的值，直到将来的使用其他方法产生改变。新的值会被赋予到 <code>value</code> 属性中。</dd>
-</dl>
+- {{domxref("AudioParam.setValueAtTime()")}}
+  - : 在一个确切的时间，即时更改 `AudioParam `的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 `value` 参数。
+- {{domxref("AudioParam.linearRampToValueAtTime()")}}
+  - : 调整 `AudioParam 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。`
+- {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
+  - : 调整 `AudioParam 的值，使其逐渐按指数变化。这个改变会从上一个事件指定的事件开始，跟随一个指数“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。`
+- {{domxref("AudioParam.setTargetAtTime()")}}
+  - : 将开始计划改变 `AudioParam 的值`。这个改变将从 `startTime 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 timeConstant 参数定义，`time 参数使以秒作为测量单位的时间。
+- {{domxref("AudioParam.setValueCurveAtTime()")}}
+  - : 调整 `AudioParam` 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 `startTime` 时间开始并具有特定的持续时间（duration）。
+- {{domxref("AudioParam.cancelScheduledValues()")}}
+  - : 取消全部在 `AudioParam 中`的未来计划发生的改变。
+- {{domxref("AudioParam.cancelAndHoldAtTime()")}}
+  - : 取消全部计划将来对 `AudioParam 的`改变，但是保持给定时间的值，直到将来的使用其他方法产生改变。新的值会被赋予到 `value` 属性中。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>首先，一个基础的例子展示了 {{domxref("GainNode")}} 拥有的 <code>gain</code> 一些值合。<code>gain</code> 是一个 a-rate AudioParam 的例子，因为该值可以针对音频的每个样本帧进行不同的设置。</p>
+首先，一个基础的例子展示了 {{domxref("GainNode")}} 拥有的 `gain` 一些值合。`gain` 是一个 a-rate AudioParam 的例子，因为该值可以针对音频的每个样本帧进行不同的设置。
 
-<pre class="brush: js; highlight[5]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0;</pre>
+gainNode.gain.value = 0;
+```
 
-<p>另外，一个例子展示了 {{ domxref("BiquadFilterNode") }} 拥有的一些值。这是一个 k-rate AudioParam 的例子，因为一次为整个音频块设置的值。</p>
+另外，一个例子展示了 {{ domxref("BiquadFilterNode") }} 拥有的一些值。这是一个 k-rate AudioParam 的例子，因为一次为整个音频块设置的值。
 
-<pre class="brush: js; highlight[6,7,8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var biquadFilter = audioCtx.createBiquadFilter();
 
 biquadFilter.type = "lowshelf";
 biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;</pre>
+biquadFilter.gain.value = 25;
+```
 
-<h2 id="标准">标准</h2>
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.AudioParam")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

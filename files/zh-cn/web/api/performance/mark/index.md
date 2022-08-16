@@ -2,46 +2,42 @@
 title: Performance.mark()
 slug: Web/API/Performance/mark
 ---
-<p>{{APIRef("User Timing API")}}</p>
+{{APIRef("User Timing API")}}
 
-<p><strong><code>mark()</code></strong> 方法在浏览器的性能缓冲区中使用给定名称添加一个{{domxref("DOMHighResTimeStamp","timestamp(时间戳)")}} <em>。</em></p>
+**`mark()`** 方法在浏览器的性能缓冲区中使用给定名称添加一个{{domxref("DOMHighResTimeStamp","timestamp(时间戳)")}} _。_
 
-<p><em>应用</em>定义的时间戳可以通过 {{domxref("Performance")}} 接口的一个 <code>getEntries*()</code> 方法 ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} 或者 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}) 检索到。</p>
+*应用*定义的时间戳可以通过 {{domxref("Performance")}} 接口的一个 `getEntries*()` 方法 ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} 或者 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}) 检索到。
 
-<p><code>标记</code> 的 {{domxref("PerformanceEntry","performance entry")}}将具有以下属性值：</p>
+`标记` 的 {{domxref("PerformanceEntry","performance entry")}}将具有以下属性值：
 
-<ul>
- <li>{{domxref("PerformanceEntry.entryType","entryType")}} - 设置为 "<code>mark</code>".</li>
- <li>{{domxref("PerformanceEntry.name","name")}} - 设置为 mark 被创建时给出的 "name"。</li>
- <li>{{domxref("PerformanceEntry.startTime","startTime")}} - 设置为 <code>mark()</code> 方法被调用时的 {{domxref("DOMHighResTimeStamp","timestamp")}} 。</li>
- <li>{{domxref("PerformanceEntry.duration","duration")}} - 设置为 "<code>0</code>" (标记没有持续时间).</li>
-</ul>
+- {{domxref("PerformanceEntry.entryType","entryType")}} - 设置为 "`mark`".
+- {{domxref("PerformanceEntry.name","name")}} - 设置为 mark 被创建时给出的 "name"。
+- {{domxref("PerformanceEntry.startTime","startTime")}} - 设置为 `mark()` 方法被调用时的 {{domxref("DOMHighResTimeStamp","timestamp")}} 。
+- {{domxref("PerformanceEntry.duration","duration")}} - 设置为 "`0`" (标记没有持续时间).
 
-<p>如果这个方法被指定的 <code>name</code> 已经存在于{{domxref("PerformanceTiming")}} 接口，会抛出一个{{jsxref("SyntaxError")}}错误。</p>
+如果这个方法被指定的 `name` 已经存在于{{domxref("PerformanceTiming")}} 接口，会抛出一个{{jsxref("SyntaxError")}}错误。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>performance</em>.mark(name);
-</pre>
+```
+performance.mark(name);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name</dt>
- <dd>一个表示标记名称的{{domxref("DOMString")}}。</dd>
-</dl>
+- name
+  - : 一个表示标记名称的{{domxref("DOMString")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无</p>
+无
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<p>下面的示例演示如何使用 <code>mark()</code> 来创建和检索{{domxref("PerformanceMark")}}条目。</p>
+下面的示例演示如何使用 `mark()` 来创建和检索{{domxref("PerformanceMark")}}条目。
 
-<p> </p>
-
-<pre class="brush: js">// 创建一些标记。
+```js
+// 创建一些标记。
 performance.mark("squirrel");
 performance.mark("squirrel");
 performance.mark("monkey");
@@ -60,12 +56,13 @@ console.log(monkeyEntries.length);
 // 2
 
 // 删除所有标记。
-performance.clearMarks();</pre>
+performance.clearMarks();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.Performance.mark")}}

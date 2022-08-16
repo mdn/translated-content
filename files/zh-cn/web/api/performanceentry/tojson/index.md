@@ -2,31 +2,31 @@
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p><strong><code>toJSON()</code></strong> 方法是一个串行器 ( <em>serializer </em>); 它返回{{domxref("PerformanceEntry","performance entry")}}对象的一个 JSON 表示形式。</p>
+**`toJSON()`** 方法是一个串行器 ( _serializer_ ); 它返回{{domxref("PerformanceEntry","performance entry")}}对象的一个 JSON 表示形式。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">const json = perfEntry.toJSON();
-</pre>
+```
+const json = perfEntry.toJSON();
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<p>无</p>
+无
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
- <dt>json</dt>
- <dd>A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} object.</dd>
-</dl>
+- json
+  - : A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>toJSON()</code> method.</p>
+The following example shows the use of the `toJSON()` method.
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -41,7 +41,7 @@ slug: Web/API/PerformanceEntry/toJSON
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -50,7 +50,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -58,7 +58,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i &lt; methods.length; i++) {
+  for (var i=0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -69,18 +69,12 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
-
-
-<p>{{Compat("api.PerformanceEntry.toJSON")}}</p>
-</div>
-</div>
+{{Compat("api.PerformanceEntry.toJSON")}}

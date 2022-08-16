@@ -2,54 +2,62 @@
 title: Console.countReset()
 slug: Web/API/Console/countReset
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>重置计数器。此函数有一个可选参数 <code>label</code>。</p>
+重置计数器。此函数有一个可选参数 `label`。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>如果提供了参数<code>label</code>，此函数会重置与 label 关联的计数。</p>
+如果提供了参数`label`，此函数会重置与 label 关联的计数。
 
-<p>如果省略了参数<code>label</code>，此函数会重置默认的计数器。</p>
+如果省略了参数`label`，此函数会重置默认的计数器。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.countReset([label]);
-</pre>
+```
+console.countReset([label]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>label</code></dt>
- <dd>一个字符串，若传入此参数 <code>countReset() </code>重置此 label 的 count 为 0。<br>
- 若忽略此参数  <code>countReset()</code> 重置 count() 默认的 default 字段的 count 为 0</dd>
-</dl>
+- `label`
+  - : 一个字符串，若传入此参数 `countReset() `重置此 label 的 count 为 0。
+    若忽略此参数 `countReset()` 重置 count() 默认的 default 字段的 count 为 0
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>若传入 label 参数：</p>
+若传入 label 参数：
 
-<pre> counter-name: 0</pre>
+```
+ counter-name: 0
+```
 
-<p>若不传入 label 参数：</p>
+若不传入 label 参数：
 
-<pre>default: 0</pre>
+```
+default: 0
+```
 
-<h3 id="异常情况">异常情况</h3>
+### 异常情况
 
-<p>若传入一个不存在的 <code>label</code>, <code>countReset</code> 返回下面的警告信息：</p>
+若传入一个不存在的 `label`, `countReset` 返回下面的警告信息：
 
-<pre><code>Counter "counter-name" doesn’t exist.</code></pre>
+```
+Counter "counter-name" doesn’t exist.
+```
 
-<p>若 <code>label</code> 没有被传入 并且 <code>count()</code> 也没有被调用过，<code>countReset</code> 返回下面的警告信息：</p>
+若 `label` 没有被传入 并且 `count()` 也没有被调用过，`countReset` 返回下面的警告信息：
 
-<pre><code>Counter "default" doesn’t exist.</code></pre>
+```
+Counter "default" doesn’t exist.
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面给出示例代码：</p>
+下面给出示例代码：
 
-<pre class="brush: js">var user = "";
+```js
+var user = "";
 
 function greet() {
   console.count();
@@ -62,24 +70,27 @@ user = "alice";
 greet();
 greet();
 console.count();
-console.countReset();</pre>
+console.countReset();
+```
 
-<p>控制台打印输出结果：</p>
+控制台打印输出结果：
 
-<pre class="eval">"default: 1"
+```
+"default: 1"
 "default: 2"
 "default: 3"
 "default: 1"
 "default: 0"
-</pre>
+```
 
-<p>Note that the call to console.counterReset() resets the value of the default counter to zero.</p>
+Note that the call to console.counterReset() resets the value of the default counter to zero.
 
-<p>可以看到 调用 <code>console.counterReset()</code> 重置了<code>default</code> 的计数为 0</p>
+可以看到 调用 `console.counterReset()` 重置了`default` 的计数为 0
 
-<p>如果我们把 <code>user</code> 变量做为 <code>label</code> 传入第一次调用的 <code>count() </code> 把字符串 <code>'alice' </code>作为第二次调用<code>count()</code> 的参数</p>
+如果我们把 `user` 变量做为 `label` 传入第一次调用的 `count() `把字符串 `'alice' `作为第二次调用`count()` 的参数
 
-<pre class="brush: js">var user = "";
+```js
+var user = "";
 
 function greet() {
   console.count(user);
@@ -92,22 +103,25 @@ user = "alice";
 greet();
 greet();
 console.countReset("bob");
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>我们看到的输出如下：</p>
+我们看到的输出如下：
 
-<pre class="eval">"bob: 1"
+```
+"bob: 1"
 "alice: 1"
 "alice: 2"
 "bob: 0"
-"alice: 3"</pre>
+"alice: 3"
+```
 
-<p>调用 countReset("bod") 只是重置了 "bob" 的计数器值  而 "alice" 的计数器值没有改变。</p>
+调用 countReset("bod") 只是重置了 "bob" 的计数器值 而 "alice" 的计数器值没有改变。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}

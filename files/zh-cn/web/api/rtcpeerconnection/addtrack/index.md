@@ -6,7 +6,7 @@ slug: Web/API/RTCPeerConnection/addTrack
 
 {{domxref("RTCPeerConnection")}} 对象的**`addTrack()`**方法将一个新的媒体音轨添加到一组音轨中，这些音轨将被传输给另一个对等点。
 
-> **备注：** 注意：通过触发一个{{event("negotiationneeded")}}事件，向连接添加一个跟踪将触发重新协商。详情请参见{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}}。
+> **备注：** 通过触发一个{{event("negotiationneeded")}}事件，向连接添加一个跟踪将触发重新协商。详情请参见{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}}。
 
 ## 语法
 
@@ -27,7 +27,7 @@ rtpSender = rtcPeerConnection.addTrack(track, stream...);
 
 将用于传输媒体数据的{{domxref("RTCRtpSender")}}对象。
 
-> **备注：** 注意：每个**`RTCRtpSender`**都与{{domxref("RTCRtpReceiver")}}配对，组成{{domxref("RTCRtpTransceiver")}}。关联的接收方处于静默状态 (指示它不能发送数据包)，直到或除非远程对等方向接收方添加一个或多个流。
+> **备注：** 每个 **`RTCRtpSender`** 都与{{domxref("RTCRtpReceiver")}}配对，组成{{domxref("RTCRtpTransceiver")}}。关联的接收方处于静默状态 (指示它不能发送数据包)，直到或除非远程对等方向接收方添加一个或多个流。
 
 ### 异常
 

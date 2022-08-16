@@ -2,77 +2,64 @@
 title: URL()
 slug: Web/API/URL/URL
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p><code><strong>URL()</strong></code> 构造函数返回一个新创建的 {{domxref("URL")}} 对象，表示由一组参数定义的 URL。</p>
+**`URL()`** 构造函数返回一个新创建的 {{domxref("URL")}} 对象，表示由一组参数定义的 URL。
 
-<p>如果给定的基本 URL 或生成的 URL 不是有效的 URL 链接，则会抛出一个{{jsxref("TypeError")}}。</p>
+如果给定的基本 URL 或生成的 URL 不是有效的 URL 链接，则会抛出一个{{jsxref("TypeError")}}。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
-</pre>
+```
+const url = new URL(url [, base])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>url</var></code></dt>
- <dd>是一个表示绝对或相对 URL 的 {{domxref("DOMString")}}。如果<code><var>url</var></code> 是相对 URL，则会将 <code><var>base</var></code> 用作基准 URL。如果 <code><var>url</var></code> 是绝对 URL，则无论参数<code><var>base</var></code>是否存在，都将被忽略。</dd>
- <dt><code><var>base</var></code> {{optional_inline}}</dt>
- <dd>是一个表示基准 URL 的 {{domxref("DOMString")}}，在 <em>url</em> 是相对 URL 时，它才会起效。如果未指定，则默认为 <code>''</code>。</dd>
-</dl>
+- `url`
+  - : 是一个表示绝对或相对 URL 的 {{domxref("DOMString")}}。如果`url` 是相对 URL，则会将 `base` 用作基准 URL。如果 `url` 是绝对 URL，则无论参数`base`是否存在，都将被忽略。
+- `base` {{optional_inline}}
+  - : 是一个表示基准 URL 的 {{domxref("DOMString")}}，在 _url_ 是相对 URL 时，它才会起效。如果未指定，则默认为 `''`。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">异常</th>
-   <th scope="col">解释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("TypeError")}}</td>
-   <td><code><var>url</var></code>（若为绝对 URL）或 <code><var>base</var></code> + <code><var>url</var></code>（若为相对 URL）是一个无效的 URL 链接。</td>
-  </tr>
- </tbody>
-</table>
+| 异常                             | 解释                                                                          |
+| -------------------------------- | ----------------------------------------------------------------------------- |
+| {{jsxref("TypeError")}} | `url`（若为绝对 URL）或 `base` + `url`（若为相对 URL）是一个无效的 URL 链接。 |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js  language-js notranslate">let m = 'https://developer.mozilla.org';
-let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
-let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
+```js
+let m = 'https://developer.mozilla.org';
+let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
+let b = new URL(m);                                     // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
+let d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
+                                                       // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
         new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
-        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
+        new URL('http://www.example.com', );           // => 'http://www.example.com/'
+        new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (see relative URLs)
-</pre>
+        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (see relative URLs)
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口：{{domxref("URL")}}</li>
-</ul>
+- 接口：{{domxref("URL")}}

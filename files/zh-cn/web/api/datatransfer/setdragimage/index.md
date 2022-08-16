@@ -2,54 +2,48 @@
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
+发生拖动时，从拖动目标 ({{event("dragstart")}}事件触发的元素) 生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 **`DataTransfer.setDragImage()`** 方法就能派上用场。
 
+图像通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。该方法的 x 和 y 坐标是图像应该相对于鼠标指针出现的偏移量。
 
-<p>发生拖动时，从拖动目标 ({{event("dragstart")}}事件触发的元素) 生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 <strong><code>DataTransfer.setDragImage()</code></strong> 方法就能派上用场。</p>
+坐标指定鼠标指针相对于图片的偏移量。例如，要使图像居中，请使用图像宽度和高度的一半。
 
-<p>图像通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。该方法的 x 和 y 坐标是图像应该相对于鼠标指针出现的偏移量。</p>
+通常在 {{event("dragstart")}} 事件处理程序中调用此方法。
 
-<p>坐标指定鼠标指针相对于图片的偏移量。例如，要使图像居中，请使用图像宽度和高度的一半。</p>
+## 语法
 
-<p>通常在  {{event("dragstart")}} 事件处理程序中调用此方法。</p>
+```
+void dataTransfer.setDragImage(img, xOffset, yOffset);
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox notranslate">void <em>dataTransfer</em>.setDragImage(img, xOffset, yOffset);
-</pre>
+- _img |_ Element
+  - : 用于拖曳反馈图像的图像 {{domxref("Element")}} 元素。
 
-<h3 id="参数">  参数</h3>
+如果 Element 是一个 img 元素，则将拖动位图设置为该元素的图像（保持大小）；否则，将拖动数位图设置为从给定元素所生成的图片（[当前尚未指定执行此操作的确切机制](https://html.spec.whatwg.org/multipage/dnd.html#the-datatransfer-interface)）
 
-<dl>
- <dt><em>img | </em>Element</dt>
- <dd>用于拖曳反馈图像的图像 {{domxref("Element")}} 元素。</dd>
-</dl>
+- _xOffset_
+  - : 使用 `long` 指示相对于图片的横向偏移量
+- _yOffset_
+  - : 使用 `long` 指示相对于图片的纵向偏移量
 
-<p>如果 Element 是一个 img 元素，则将拖动位图设置为该元素的图像（保持大小）；否则，将拖动数位图设置为从给定元素所生成的图片（<a href="https://html.spec.whatwg.org/multipage/dnd.html#the-datatransfer-interface">当前尚未指定执行此操作的确切机制</a>）</p>
+### 返回值
 
-<dl>
- <dt><em>xOffset</em></dt>
- <dd>使用 <code>long</code> 指示相对于图片的横向偏移量</dd>
- <dt><em>yOffset</em></dt>
- <dd>使用 <code>long</code> 指示相对于图片的纵向偏移量
+无
 
- </dd>
-</dl>
+## 举个例子
 
-<h3 id="Return_Value">返回值</h3>
+这个例子展示如何使用 `setDragImage()` 方法。请注意，此例子引用了命名为 `example.gif` 的图片文件。如果此文件存在，它将被用作拖动图像，如果此文件不存在，浏览器会使用其默认的拖动图像。
 
-<p>无</p>
-
-<h2 id="举个例子">举个例子</h2>
-
-<p> 这个例子展示如何使用 <code>setDragImage()</code> 方法。请注意，此例子引用了命名为 <code>example.gif</code> 的图片文件。如果此文件存在，它将被用作拖动图像，如果此文件不存在，浏览器会使用其默认的拖动图像。</p>
-
-<pre class="brush: js notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Example of DataTransfer.setDragImage()&lt;/title&gt;
-&lt;meta name="viewport" content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>Example of DataTransfer.setDragImage()</title>
+<meta name="viewport" content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -61,8 +55,8 @@ slug: Web/API/DataTransfer/setDragImage
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 function dragstart_handler(ev) {
  console.log("dragStart");
  // 设置拖动的格式和数据。使用事件目标的 id 作为数据
@@ -88,26 +82,26 @@ function drop_handler(ev) {
  var data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Example of &lt;code&gt;DataTransfer.setDragImage()&lt;/code&gt;&lt;/h1&gt;
- &lt;div&gt;
-   &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Example of <code>DataTransfer.setDragImage()</code></h1>
+ <div>
+   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DataTransfer.setDragImage")}}
 
-<h2 id="See_also">参考链接</h2>
+## 参考链接
 
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
+{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}

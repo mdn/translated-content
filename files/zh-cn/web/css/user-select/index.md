@@ -50,17 +50,14 @@ user-select: unset;
 
 - `none`
   - : 元素及其子元素的文本不可选中。请注意这个{{domxref("Selection")}} 对象可以包含这些元素。从 Firefox 21 开始， `none` 表现的像 `-moz-none`，因此可以使用 `-moz-user-select: text` 在子元素上重新启用选择。
-- ## `auto`
+- `auto`
+  - : `auto` 的具体取值取决于一系列条件，具体如下：
 
-      : `auto` 的具体取值取决于一系列条件，具体如下：
-
-
-
-      -   在 `::before` 和 `::after` 伪元素上，采用的属性值是 `none`
-      -   如果元素是可编辑元素，则采用的属性值是 `contain`
-      -   否则，如果此元素的父元素的 `user-select` 采用的属性值为 `all`，则该元素采用的属性值也为 `all`
-      -   否则，如果此元素的父元素的 `user-select` 采用的属性值为 `none`，则该元素采用的属性值也为 `none`
-      -   否则，采用的属性值为 `text`
+    - 在 `::before` 和 `::after` 伪元素上，采用的属性值是 `none`
+    - 如果元素是可编辑元素，则采用的属性值是 `contain`
+    - 否则，如果此元素的父元素的 `user-select` 采用的属性值为 `all`，则该元素采用的属性值也为 `all`
+    - 否则，如果此元素的父元素的 `user-select` 采用的属性值为 `none`，则该元素采用的属性值也为 `none`
+    - 否则，采用的属性值为 `text`
 
 - `text`
   - : 用户可以选择文本。
