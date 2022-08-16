@@ -1,10 +1,6 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-tags:
-  - cookie
-  - 術語表
-translation_of: Glossary/Cookie
 ---
 Cookie 是一個網站通過瀏覽器訪問在訪客電腦裏留下的一小段信息。
 

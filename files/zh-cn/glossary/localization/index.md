@@ -1,7 +1,6 @@
 ---
 title: 本地化
 slug: Glossary/Localization
-translation_of: Glossary/Localization
 original_slug: Localization
 ---
 **Localization** (L10n) is the process of translating software user interfaces from one language to another and adapting it to suit a foreign culture. These resources are for anyone with an interest in the technical aspects involved in localization. They are for developers and all contributors.

@@ -470,7 +470,7 @@ iterable<keyType, valueType>
 
 > **Note:** 繰り返す値の組は、 webidl ファイルではなく、それに付随する散文で定義されます。そのような散文は仕様書にあり、通常、次のように始まります。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)..."_ で始まります。
 >
-> 例えば、{{domxref('FormData')}}の場合、仕様書の中に次のように書かれています。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry "concept-FormData-entry") with the key is the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name "concept-FormData-entry-name") and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value "concept-FormData-entry-value"). "_
+> 例えば、{{domxref('FormData')}}の場合、仕様書の中に次のように書かれています。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key is the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
 
 ### 集合風メソッド
 

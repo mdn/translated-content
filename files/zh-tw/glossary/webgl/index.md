@@ -1,13 +1,6 @@
 ---
 title: WebGL
 slug: Glossary/WebGL
-tags:
-  - 術語表
-  - Advanced
-  - CodingScripting
-  - Glossary
-  - Web Graphics
-  - WebGL
 ---
 **WebGL** (_Web Graphics Library_) 是一個可以畫出，2D 和 3D 圖像的 {{Glossary("JavaScript")}} {{Glossary("API")}}
 

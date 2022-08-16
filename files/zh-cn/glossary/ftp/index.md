@@ -1,7 +1,6 @@
 ---
 title: FTP
 slug: Glossary/FTP
-translation_of: Glossary/FTP
 ---
 **FTP**（File Transfer Protocol，文件传输协议）曾在过去许多年里是在 Internet 上主机（{{glossary("host")}}）之间传输文件的标准协议（{{glossary("protocol")}}）。现在越来越多的组织和主机账户不允许使用 FTP，而是使用诸如 Git 那样的版本控制系统。您仍可以在一些旧的主机系统上看到它，但可以肯定地说，使用 FTP 不再被认为是最好的做法。
 

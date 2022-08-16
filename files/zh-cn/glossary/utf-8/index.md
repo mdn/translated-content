@@ -1,7 +1,6 @@
 ---
 title: UTF-8
 slug: Glossary/UTF-8
-translation_of: Glossary/UTF-8
 ---
 UTF-8 (UCS Transformation Format 8) 是万维网上最常用的{{Glossary("Character encoding", "字符编码")}}。每个字符由 1 到 4 个字节表示。UTF-8 与 {{Glossary("ASCII")}} 向后兼容，可以表示任何标准的 Unicode 字符。
 

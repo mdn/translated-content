@@ -1,7 +1,6 @@
 ---
 title: Routers
 slug: Glossary/routers
-translation_of: Glossary/routers
 ---
 **routers** 是指路由器。在 Web 有兩種意思：
 

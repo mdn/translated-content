@@ -1,11 +1,6 @@
 ---
 title: Navigation directive
 slug: Glossary/Navigation_directive
-tags:
-  - CSP
-  - HTTP
-  - 安全
-translation_of: Glossary/Navigation_directive
 ---
 **{{Glossary("CSP")}} 浏览指令（navigation directives**）出现于 {{HTTPHeader("Content-Security-Policy")}} 首部，支配着用户所能浏览的或者提交表单的资源位置。
 
