@@ -2,44 +2,41 @@
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>表示当前使用的样式表集合的名称</p>
+表示当前使用的样式表集合的名称
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>currentStyleSheetSet</em> = document.selectedStyleSheetSet
+```
+currentStyleSheetSet = document.selectedStyleSheetSet
 
-document.selectedStyleSheet = <em>newStyleSheetSet</em>
+document.selectedStyleSheet = newStyleSheetSet
+```
 
-</pre>
+返回时，currentStyleSheetSet 表示当前使用的样式表集合的名称。 你也可以使用这个属性设置当前样式表集。
 
-<p>返回时，currentStyleSheetSet 表示当前使用的样式表集合的名称。 你也可以使用这个属性设置当前样式表集。</p>
+设置这个属性的值相当于用`currentStyleSheetSet 的值`调用 {{ domxref("document.enableStyleSheetsForSet()") }}，然后将`lastStyleSheetSet` 的值设置为该值。
 
-<p>设置这个属性的值相当于用<code>currentStyleSheetSet 的值</code>调用 {{ domxref("document.enableStyleSheetsForSet()") }}，然后将<code>lastStyleSheetSet</code> 的值设置为该值。</p>
+> **备注：** 这个属性的值是实时的，直接更改样式表中的`disabled`属性将会影响这个属性的值。
 
-<div class="note"><strong>注意：</strong> 这个属性的值是实时的，直接更改样式表中的<code>disabled</code>属性将会影响这个属性的值。</div>
+## 示例
 
-<h2 id="Example">示例</h2>
-
-<pre class="brush: js">console.log("Current style sheet set: " + document.selectedStyleSheetSet);
+```js
+console.log("Current style sheet set: " + document.selectedStyleSheetSet);
 
 document.selectedStyleSheetSet = "Some other style sheet";
-</pre>
+```
 
-<div class="note"><strong>注意：</strong> 这个例子会帮助你理解设置<code>selectedStyleSheetSet</code> 的值和调用{{ domxref("document.enableStyleSheetsForSet()") }}之间行为的差异。</div>
+> **备注：**  这个例子会帮助你理解设置 `selectedStyleSheetSet` 的值和调用{{ domxref("document.enableStyleSheetsForSet()") }}之间行为的差异。
 
-<h2 id="See_also">参看</h2>
+## 参看
 
-<ul>
- <li>{{ domxref("document.lastStyleSheetSet") }}</li>
- <li>{{ domxref("document.preferredStyleSheetSet") }}</li>
- <li>{{ domxref("document.styleSheetSets") }}</li>
- <li>{{ domxref("document.enableStyleSheetsForSet()") }}</li>
-</ul>
+- {{ domxref("document.lastStyleSheetSet") }}
+- {{ domxref("document.preferredStyleSheetSet") }}
+- {{ domxref("document.styleSheetSets") }}
+- {{ domxref("document.enableStyleSheetsForSet()") }}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets">HTML5: Alternate Style Sheets</a></li>
-</ul>
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)

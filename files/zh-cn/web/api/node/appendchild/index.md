@@ -2,70 +2,66 @@
 title: Node.appendChild
 slug: Web/API/Node/appendChild
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.appendChild()</strong></code> 方法将一个节点附加到指定父节点的子节点列表的末尾处。如果将被插入的节点已经存在于当前文档的文档树中，那么 <code>appendChild()</code> 只会将它从原先的位置移动到新的位置（不需要事先移除要移动的节点）。</p>
+**`Node.appendChild()`** 方法将一个节点附加到指定父节点的子节点列表的末尾处。如果将被插入的节点已经存在于当前文档的文档树中，那么 `appendChild()` 只会将它从原先的位置移动到新的位置（不需要事先移除要移动的节点）。
 
-<p>这意味着，一个节点不可能同时出现在文档的不同位置。所以，如果某个节点已经拥有父节点，在被传递给此方法后，它首先会被移除，再被插入到新的位置。若要保留已在文档中的节点，可以先使用  {{domxref("Node.cloneNode()")}} 方法来为它创建一个副本，再将副本附加到目标父节点下。请注意，用 <code>cloneNode</code> 制作的副本不会自动保持同步。</p>
+这意味着，一个节点不可能同时出现在文档的不同位置。所以，如果某个节点已经拥有父节点，在被传递给此方法后，它首先会被移除，再被插入到新的位置。若要保留已在文档中的节点，可以先使用 {{domxref("Node.cloneNode()")}} 方法来为它创建一个副本，再将副本附加到目标父节点下。请注意，用 `cloneNode` 制作的副本不会自动保持同步。
 
-<p>如果给定的子节点是 {{domxref("DocumentFragment")}}，那么 {{domxref("DocumentFragment")}} 的全部内容将转移到指定父节点的子节点列表中。</p>
+如果给定的子节点是 {{domxref("DocumentFragment")}}，那么 {{domxref("DocumentFragment")}} 的全部内容将转移到指定父节点的子节点列表中。
 
-<div class="blockIndicator note">
-<p><strong>有更加新的 API 可供使用！</strong><br>
- {{domxref("ParentNode.append()")}} 方法支持多个参数，接受字符串作为参数，会将字符串转换为文本节点再附加。</p>
-</div>
+> **备注：** **有更加新的 API 可供使用！** > {{domxref("ParentNode.append()")}} 方法支持多个参数，接受字符串作为参数，会将字符串转换为文本节点再附加。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>element</var>.appendChild(<var>aChild</var>)</pre>
+```
+element.appendChild(aChild)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>aChild</var></code></dt>
- <dd>要追加给父节点（通常为一个元素）的节点。</dd>
-</dl>
+- `aChild`
+  - : 要追加给父节点（通常为一个元素）的节点。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回追加后的子节点 （<code><var>aChild</var></code>），除非 <code><var>aChild</var></code> 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。</p>
+返回追加后的子节点 （`aChild`），除非 `aChild` 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。
 
-<h2 id="附注">附注</h2>
+## 附注
 
-<p>如果你需要保留这个子节点在原先位置的显示，则你需要先用{{domxref("Node.cloneNode")}}方法复制出一个节点的副本，然后在插入到新位置。</p>
+如果你需要保留这个子节点在原先位置的显示，则你需要先用{{domxref("Node.cloneNode")}}方法复制出一个节点的副本，然后在插入到新位置。
 
-<p>这个方法只能将某个子节点插入到同一个文档的其他位置，如果你想跨文档插入，你需要先调用{{domxref("document.importNode")}}方法。</p>
+这个方法只能将某个子节点插入到同一个文档的其他位置，如果你想跨文档插入，你需要先调用{{domxref("document.importNode")}}方法。
 
-<h2 id="备注">备注</h2>
+## 备注
 
-<p>由于 <code>appendChild()</code> 返回的是被附加的子元素，所以链式调用可能无法按照你的预期去执行：</p>
+由于 `appendChild()` 返回的是被附加的子元素，所以链式调用可能无法按照你的预期去执行：
 
-<pre class="brush: js">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
+```js
+let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+```
 
-<p>（上述代码）只会将 <code><var>aBlock</var></code> 设置为 <code>&lt;b&gt;&lt;/b&gt;</code> ，这可能不是你所想要的。</p>
+（上述代码）只会将 `aBlock` 设置为 `<b></b>` ，这可能不是你所想要的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js">// 创建一个新的段落元素 &lt;p&gt;，然后添加到 &lt;body&gt; 的最尾部
+```js
+// 创建一个新的段落元素 <p>，然后添加到 <body> 的最尾部
 var p = document.createElement("p");
 document.body.appendChild(p);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Node.appendChild")}}
 
+## 参见
 
-<p>{{Compat("api.Node.appendChild")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("Node.removeChild")}}</li>
- <li>{{domxref("Node.replaceChild")}}</li>
- <li>{{domxref("Node.insertBefore")}}</li>
- <li>{{domxref("Node.hasChildNodes")}}</li>
-</ul>
+- {{domxref("Node.removeChild")}}
+- {{domxref("Node.replaceChild")}}
+- {{domxref("Node.insertBefore")}}
+- {{domxref("Node.hasChildNodes")}}

@@ -2,21 +2,20 @@
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><code><strong>XMLHttpRequest.timeout</strong></code> 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{Glossary('document environment')}} 中的同步 XMLHttpRequests  请求中，否则将会抛出一个 <code>InvalidAccessError</code> 类型的错误。当超时发生， <a href="/zh-CN/docs/Web/Events/timeout">timeout</a> 事件将会被触发。</p>
+**`XMLHttpRequest.timeout`** 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{Glossary('document environment')}} 中的同步 XMLHttpRequests 请求中，否则将会抛出一个 `InvalidAccessError` 类型的错误。当超时发生， [timeout](/zh-CN/docs/Web/Events/timeout) 事件将会被触发。
 
-<div class="note">
-<p><strong>注意</strong>：你不能在拥有的 window 中，给同步请求使用超时。</p>
-</div>
+> **备注：** 你不能在拥有的 window 中，给同步请求使用超时。
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#.E4.BE.8B.E5.AD.90.3A_.E4.BD.BF.E7.94.A8.E8.B6.85.E6.97.B6">在异步请求中使用 timeout</a></p>
+[在异步请求中使用 timeout](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#.E4.BE.8B.E5.AD.90.3A_.E4.BD.BF.E7.94.A8.E8.B6.85.E6.97.B6)
 
-<p>在 IE 中，超时属性可能只能在调用 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/open">open()</a> 方法之后且在调用 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/send">send()</a> 方法之前设置。</p>
+在 IE 中，超时属性可能只能在调用 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法之后且在调用 [send()](/zh-CN/docs/Web/API/XMLHttpRequest/send) 方法之前设置。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre><code>var xhr = new XMLHttpRequest();
+```
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // 超时时间，单位是毫秒
@@ -29,8 +28,9 @@ xhr.ontimeout = function (e) {
   // XMLHttpRequest 超时。在此做某事。
 };
 
-xhr.send(null);</code></pre>
+xhr.send(null);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

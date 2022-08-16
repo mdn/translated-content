@@ -2,219 +2,190 @@
 title: FileReaderSync
 slug: Web/API/FileReaderSync
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p><code>FileReaderSync</code>接口允许以同步的方式读取<code>File</code>或<code>Blob</code>对象中的内容。</p>
+`FileReaderSync`接口允许以同步的方式读取`File`或`Blob`对象中的内容。
 
-<p>该接口只在<a href="/zh-cn/DOM/Worker">workers</a>里<a href="/zh-cn/DOM/Worker/Functions_available_to_workers">可用</a>,因为在主线程里进行同步 I/O 操作可能会阻塞用户界面。</p>
+该接口只在[workers](/zh-cn/DOM/Worker)里[可用](/zh-cn/DOM/Worker/Functions_available_to_workers),因为在主线程里进行同步 I/O 操作可能会阻塞用户界面。
 
-<h2 id="Method_overview">方法概述</h2>
+## 方法概述
 
-<table>
- <tbody>
-  <tr>
-   <td><code>ArrayBuffer <a href="/en/DOM/FileReaderSync#readAsArrayBuffer()">readAsArrayBuffer</a>(Blob blob);</code></td>
-  </tr>
-  <tr>
-   <td><code>DOMString <a href="/zh-cn/DOM/FileReaderSync#readAsBinaryString()">readAsBinaryString</a>(Blob blob);</code></td>
-  </tr>
-  <tr>
-   <td><code>DOMString</code><code> </code><code><a href="/zh-cn/DOM/FileReaderSync#readAsText()">readAsText</a></code><code>(Blob blob, optional DOMString encoding);</code></td>
-  </tr>
-  <tr>
-   <td><code>DOMString <a href="/zh-cn/DOM/FileReaderSync#readAsDataURL()">readAsDataURL</a>(Blob blob);</code></td>
-  </tr>
- </tbody>
-</table>
+| `ArrayBuffer readAsArrayBuffer(Blob blob);`                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- |
+| `DOMString readAsBinaryString(Blob blob);`                                                                          |
+| ` DOMString``  `[`readAsText`](</zh-cn/DOM/FileReaderSync#readAsText()>)`(Blob blob, optional DOMString encoding);` |
+| `DOMString readAsDataURL(Blob blob);`                                                                               |
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该接口没有任何属性。</p>
+该接口没有任何属性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<h3 id="readAsArrayBuffer()">readAsArrayBuffer()</h3>
+### readAsArrayBuffer()
 
-<p>该方法可以读取指定的 <code><a href="Blob">Blob</a></code> 或者 <code><a href="File">File</a></code>对象中的内容。当读取完毕后，返回一个 <code><a href="../JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
+该方法可以读取指定的 [`Blob`](Blob) 或者 [`File`](File)对象中的内容。当读取完毕后，返回一个 [`ArrayBuffer`](../JavaScript_typed_arrays/ArrayBuffer) 对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。
 
-<pre class="eval">ArrayBuffer readAsArrayBuffer(
+```
+ArrayBuffer readAsArrayBuffer(
   in Blob blob
 );
-</pre>
+```
 
-<h4 id="参数">参数</h4>
+#### 参数
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>将要被读取内容的<code><a href="Blob">Blob</a></code> 或 <code><a href="File">File</a></code> 对象。</dd>
-</dl>
+- `blob`
+  - : 将要被读取内容的[`Blob`](Blob) 或 [`File`](File) 对象。
 
-<h4 id="返回值">返回值</h4>
+#### 返回值
 
-<p>一个 <code><a href="../JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 对象，包含了被读取文件的内容。</p>
+一个 [`ArrayBuffer`](../JavaScript_typed_arrays/ArrayBuffer) 对象，包含了被读取文件的内容。
 
-<h4 id="异常">异常</h4>
+#### 异常
 
-<p>该方法可能引发下述异常：</p>
+该方法可能引发下述异常：
 
-<dl>
- <dt><code>NotFoundError</code></dt>
- <dd>当<code><a href="Blob">Blob</a></code>或<code><a href="File">File</a></code>对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。</dd>
- <dt><code>SecurityError</code></dt>
- <dd>当检测到下述几种问题情形时触发该异常：
- <ul style="margin-left: 40px;">
-  <li>资源已被第三方修改；</li>
-  <li>同时在进行多个读取操作；</li>
-  <li>资源的安全级别过高，不允许浏览器进行操作（比如系统文件）。</li>
- </ul>
- </dd>
- <dt><code>NotReadableError</code></dt>
- <dd>当资源由于权限问题不能被读取时触发该异常。比如并发锁。</dd>
- <dt><code>EncodingError</code></dt>
- <dd>当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
-</dl>
+- `NotFoundError`
+  - : 当[`Blob`](Blob)或[`File`](File)对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。
+- `SecurityError`
 
-<h3 id="readAsBinaryString()_deprecated_inline()">readAsBinaryString() {{ deprecated_inline() }}</h3>
+  - : 当检测到下述几种问题情形时触发该异常：
 
-<p>该方法可以读取指定的 <code><a href="Blob">Blob</a></code> 或者 <code><a href="File">File</a></code>对象的内容。当读取完毕后，返回一个<a href="/zh-cn/DOM/DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的二进制数据。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
+    - 资源已被第三方修改；
+    - 同时在进行多个读取操作；
+    - 资源的安全级别过高，不允许浏览器进行操作（比如系统文件）。
 
-<div class="note"><strong>注意</strong> <strong>:</strong>该方法已被废弃，应该使用<code>readAsArrayBuffer()</code>来替代。</div>
+- `NotReadableError`
+  - : 当资源由于权限问题不能被读取时触发该异常。比如并发锁。
+- `EncodingError`
+  - : 当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。
 
-<pre class="eval">String readAsBinaryString(
+### readAsBinaryString() {{ deprecated_inline() }}
+
+该方法可以读取指定的 [`Blob`](Blob) 或者 [`File`](File)对象的内容。当读取完毕后，返回一个[`DOMString`](/zh-cn/DOM/DOMString)对象，里面包含了被读取文件的二进制数据。如果在读取过程中发生了错误，则会抛出相关的异常。
+
+> **备注：** 该方法已被废弃，应该使用`readAsArrayBuffer()`来替代。
+
+```
+String readAsBinaryString(
   in Blob blob
 );
-</pre>
+```
 
-<h4 id="参数_2">参数</h4>
+#### 参数
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>将要被读取内容的<code><a href="Blob">Blob</a></code> 或 <code><a href="File">File</a></code> 对象。</dd>
-</dl>
+- `blob`
+  - : 将要被读取内容的[`Blob`](Blob) 或 [`File`](File) 对象。
 
-<h4 id="返回值_2">返回值</h4>
+#### 返回值
 
-<p><code>一个</code><a href="/zh-cn/DOM/DOMString"><code>DOMString</code></a>对象，包含了从资源中读取的二进制数据。</p>
+`一个`[`DOMString`](/zh-cn/DOM/DOMString)对象，包含了从资源中读取的二进制数据。
 
-<h4 id="异常_2">异常</h4>
+#### 异常
 
-<p>该方法可能引发下述异常：</p>
+该方法可能引发下述异常：
 
-<dl>
- <dt><code>NotFoundError</code></dt>
- <dd>当<code><a href="Blob">Blob</a></code>或<code><a href="File">File</a></code>对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。</dd>
- <dt><code>SecurityError</code></dt>
- <dd>当检测到下述几种问题情形时触发该异常：
- <ul style="margin-left: 40px;">
-  <li>资源已被第三方修改；</li>
-  <li>同时在进行多个读取操作；</li>
-  <li>资源的安全级别过高，不允许浏览器进行操作（比如系统文件）。</li>
- </ul>
- </dd>
- <dt><code>NotReadableError</code></dt>
- <dd>当资源由于权限问题不能被读取时触发该异常（比如并发锁）。</dd>
- <dt><code>EncodingError</code></dt>
- <dd>当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
-</dl>
+- `NotFoundError`
+  - : 当[`Blob`](Blob)或[`File`](File)对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。
+- `SecurityError`
 
-<h3 id="readAsText()">readAsText()</h3>
+  - : 当检测到下述几种问题情形时触发该异常：
 
-<p>该方法可以读取指定的 <code><a href="Blob">Blob</a></code> 或者 <code><a href="File">File</a></code>对象的内容。当读取完毕后，返回一个<a href="/zh-cn/DOM/DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的内容数据。可选参数 <strong><code>encoding</code></strong> 用来表示文件的编码类型，如果省略该参数，则该方法会使用一些算法自动检测文件的编码类型。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
+    - 资源已被第三方修改；
+    - 同时在进行多个读取操作；
+    - 资源的安全级别过高，不允许浏览器进行操作（比如系统文件）。
 
-<pre class="eval">String readAsText(
+- `NotReadableError`
+  - : 当资源由于权限问题不能被读取时触发该异常（比如并发锁）。
+- `EncodingError`
+  - : 当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。
+
+### readAsText()
+
+该方法可以读取指定的 [`Blob`](Blob) 或者 [`File`](File)对象的内容。当读取完毕后，返回一个[`DOMString`](/zh-cn/DOM/DOMString)对象，里面包含了被读取文件的内容数据。可选参数 **`encoding`** 用来表示文件的编码类型，如果省略该参数，则该方法会使用一些算法自动检测文件的编码类型。如果在读取过程中发生了错误，则会抛出相关的异常。
+
+```
+String readAsText(
   in Blob blob,
   in DOMString encoding {{ optional_inline() }}
 );
-</pre>
+```
 
-<h4 id="参数_3">参数</h4>
+#### 参数
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>将要被读取内容的<code><a href="Blob">Blob</a></code> 或 <code><a href="File">File</a></code> 对象。</dd>
- <dt><code>encoding</code></dt>
- <dd>可选参数，表示被读取文件的编码类型，比如<strong>GBK</strong> 或者 <strong>UTF-8。</strong></dd>
-</dl>
+- `blob`
+  - : 将要被读取内容的[`Blob`](Blob) 或 [`File`](File) 对象。
+- `encoding`
+  - : 可选参数，表示被读取文件的编码类型，比如**GBK** 或者 **UTF-8。**
 
-<h4 id="返回值_3">返回值</h4>
+#### 返回值
 
-<p>一个<a href="/zh-cn/DOM/DOMString"><code>DOMString</code></a>对象，包含了被读取文件的内容。</p>
+一个[`DOMString`](/zh-cn/DOM/DOMString)对象，包含了被读取文件的内容。
 
-<h4 id="异常_3">异常</h4>
+#### 异常
 
-<p>该方法可能引发下述异常：</p>
+该方法可能引发下述异常：
 
-<dl>
- <dt><code>NotFoundError</code></dt>
- <dd>当<code><a href="Blob">Blob</a></code>或<code><a href="File">File</a></code>对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。</dd>
- <dt><code>SecurityError</code></dt>
- <dd>当检测到下述几种问题情形时触发该异常：
- <ul style="margin-left: 40px;">
-  <li>资源已被第三方修改；</li>
-  <li>同时在进行多个读取操作；</li>
-  <li>资源的安全级别过高，不允许浏览器进行操作。（比如系统文件）。</li>
- </ul>
- </dd>
- <dt><code>NotReadableError</code></dt>
- <dd>当资源由于权限问题不能被读取时触发该异常（比如并发锁）。</dd>
-</dl>
+- `NotFoundError`
+  - : 当[`Blob`](Blob)或[`File`](File)对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。
+- `SecurityError`
 
-<h3 id="readAsDataURL()">readAsDataURL()</h3>
+  - : 当检测到下述几种问题情形时触发该异常：
 
-<p>该方法可以读取指定的 <code><a href="Blob">Blob</a></code> 或者 <code><a href="File">File</a></code>对象的内容。当读取完毕后，返回一个 Data URL 格式的<a href="/zh-cn/DOM/DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
+    - 资源已被第三方修改；
+    - 同时在进行多个读取操作；
+    - 资源的安全级别过高，不允许浏览器进行操作。（比如系统文件）。
 
-<pre class="eval">String readAsDataURL(
+- `NotReadableError`
+  - : 当资源由于权限问题不能被读取时触发该异常（比如并发锁）。
+
+### readAsDataURL()
+
+该方法可以读取指定的 [`Blob`](Blob) 或者 [`File`](File)对象的内容。当读取完毕后，返回一个 Data URL 格式的[`DOMString`](/zh-cn/DOM/DOMString)对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。
+
+```
+String readAsDataURL(
   in Blob file
 );
-</pre>
+```
 
-<div id="section_5">
-<h4 id="参数_4">参数</h4>
+#### 参数
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>将要被读取内容的<code><a href="Blob">Blob</a></code> 或 <code><a href="File">File</a></code> 对象。</dd>
-</dl>
-</div>
+- `blob`
+  - : 将要被读取内容的[`Blob`](Blob) 或 [`File`](File) 对象。
 
-<div id="section_6">
-<h4 id="返回值_4">返回值</h4>
+#### 返回值
 
-<p><code>一个</code><a href="/zh-cn/DOM/DOMString"><code>DOMString</code></a>对象，data URL 格式，包含了被读取文件的内容。</p>
-</div>
+`一个`[`DOMString`](/zh-cn/DOM/DOMString)对象，data URL 格式，包含了被读取文件的内容。
 
-<h4 id="异常_4">异常</h4>
+#### 异常
 
-<p>该方法可能引发下述异常：</p>
+该方法可能引发下述异常：
 
-<dl>
- <dt><code>NotFoundError</code></dt>
- <dd>当<code><a href="Blob">Blob</a></code>或<code><a href="File">File</a></code>对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。</dd>
- <dt><code>SecurityError</code></dt>
- <dd>当检测到下述几种问题情形时触发该异常：
- <ul style="margin-left: 40px;">
-  <li>资源已被第三方修改；</li>
-  <li>同时在进行多个读取操作；</li>
-  <li>资源的安全级别过高，不允许浏览器进行操作（比如系统文件）。</li>
- </ul>
- </dd>
- <dt><code>NotReadableError</code></dt>
- <dd>当资源由于权限问题不能被读取时触发该异常（比如并发锁）。</dd>
- <dt><code>EncodingError</code></dt>
- <dd>当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
-</dl>
+- `NotFoundError`
+  - : 当[`Blob`](Blob)或[`File`](File)对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。
+- `SecurityError`
 
-<h2 id="Specifications">Specifications</h2>
+  - : 当检测到下述几种问题情形时触发该异常：
+
+    - 资源已被第三方修改；
+    - 同时在进行多个读取操作；
+    - 资源的安全级别过高，不允许浏览器进行操作（比如系统文件）。
+
+- `NotReadableError`
+  - : 当资源由于权限问题不能被读取时触发该异常（比如并发锁）。
+- `EncodingError`
+  - : 当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.FileReaderSync")}}</p>
+{{Compat("api.FileReaderSync")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="https://www.w3.org/TR/FileAPI/#FileReaderSync">File API Specification: FileReaderSync</a></li>
- <li>Related interfaces: {{ domxref("FileReader") }}, {{ domxref("BlobBuilder") }}, {{ domxref("File") }}, {{ domxref("Blob") }}</li>
-</ul>
+- [File API Specification: FileReaderSync](https://www.w3.org/TR/FileAPI/#FileReaderSync)
+- Related interfaces: {{ domxref("FileReader") }}, {{ domxref("BlobBuilder") }}, {{ domxref("File") }}, {{ domxref("Blob") }}

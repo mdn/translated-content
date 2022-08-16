@@ -2,87 +2,54 @@
 title: focus
 slug: Web/API/Element/focus_event
 ---
-<p>focus 事件在元素获取焦点时触发。这个事件和 <a href="/en-US/docs/Mozilla_event_reference/focusin"><code>focusin</code></a> 最大的区别仅仅在于后者会事件冒泡。</p>
+focus 事件在元素获取焦点时触发。这个事件和 [`focusin`](/zh-CN/docs/Mozilla_event_reference/focusin) 最大的区别仅仅在于后者会事件冒泡。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
-<dl>
- <dt>规范</dt>
- <dd><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus">DOM L3</a></dd>
- <dt>接口</dt>
- <dd>{{ domxref("FocusEvent") }}</dd>
- <dt>是否冒泡</dt>
- <dd>否</dd>
- <dt>能否取消默认</dt>
- <dd>否</dd>
- <dt>事件目标</dt>
- <dd>Element</dd>
- <dt>默认行为</dt>
- <dd>无。</dd>
-</dl>
+- 规范
+  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus)
+- 接口
+  - : {{ domxref("FocusEvent") }}
+- 是否冒泡
+  - : 否
+- 能否取消默认
+  - : 否
+- 事件目标
+  - : Element
+- 默认行为
+  - : 无。
 
-<div class="note">注释：这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})</div>
+> **备注：** 注释：这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Event target (DOM element)</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}} (DOM element)</td>
-   <td>null</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                               | Description                                |
+| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
-<h2 id="事件委托">事件委托</h2>
+## 事件委托
 
-<p>此事件有两个可以实现事件委托的方法 : 通过在支持的浏览器上使用 <code>focusin</code> 事件 (除了 Firefox 之外的所有浏览器), 或者通过设置 <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener</code></a> 的参数"useCapture" 值为 true:</p>
+此事件有两个可以实现事件委托的方法 : 通过在支持的浏览器上使用 `focusin` 事件 (除了 Firefox 之外的所有浏览器), 或者通过设置 [`addEventListener`](/zh-CN/docs/DOM/element.addEventListener) 的参数"useCapture" 值为 true:
 
-<p>{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}</p>
+{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}
 
-<p>(Sample code from <a href="/en-US/docs/Web/Events/blur">blur (event)</a>)</p>
+(Sample code from [blur (event)](/zh-CN/docs/Web/Events/blur))
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.focus_event")}}
 
-<h2 id="相关事件">相关事件</h2>
+## 相关事件
 
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
- <li>{{event("focusout")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}
+- {{event("focusout")}}

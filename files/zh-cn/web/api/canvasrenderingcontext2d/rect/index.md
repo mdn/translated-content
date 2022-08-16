@@ -2,63 +2,63 @@
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.rect()</code></strong> 是 Canvas 2D API 创建矩形路径的方法，矩形的起点位置是 <em>(x, y) </em>，尺寸为 <em>width</em> 和 <em>height</em>。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形。</p>
+**`CanvasRenderingContext2D.rect()`** 是 Canvas 2D API 创建矩形路径的方法，矩形的起点位置是 _(x, y)_ ，尺寸为 _width_ 和 _height_。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.rect(x, y, width, height);</var>
-</pre>
+```
+void ctx.rect(x, y, width, height);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>矩形起点的 x 轴坐标。</dd>
- <dt><code>y</code></dt>
- <dd>矩形起点的 y 轴坐标。</dd>
- <dt><code>width</code></dt>
- <dd>矩形的宽度。</dd>
- <dt><code>height</code></dt>
- <dd>矩形的高度。</dd>
-</dl>
+- `x`
+  - : 矩形起点的 x 轴坐标。
+- `y`
+  - : 矩形起点的 y 轴坐标。
+- `width`
+  - : 矩形的宽度。
+- `height`
+  - : 矩形的高度。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_rect_方法">使用 <code>rect</code> 方法</h3>
+### 使用 `rect` 方法
 
-<p>这是一段简单的代码片段，使用 <code>rect </code>方法创建一条路径。 实际上，在 canvas 中绘制矩形路径， 你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或者 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。 参见 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 和{{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法， 只需一步即可绘制。</p>
+这是一段简单的代码片段，使用 `rect `方法创建一条路径。 实际上，在 canvas 中绘制矩形路径， 你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或者 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。 参见 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 和{{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法， 只需一步即可绘制。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[3]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();&lt;/textarea&gt;
-</pre>
+ctx.fill();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -81,25 +81,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.rect")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fill()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- {{domxref("CanvasRenderingContext2D.fill()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

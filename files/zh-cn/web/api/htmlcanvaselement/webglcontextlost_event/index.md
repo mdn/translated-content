@@ -2,67 +2,59 @@
 title: 'HTMLCanvasElement: webglcontextlost event'
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-
-
-<div>
-<p>如果浏览器检测到与 {{domxref("WebGLRenderingContext")}}对象关联的图形缓冲区已丢失，则会触发<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的<code><strong>webglcontextlost</strong></code><strong> </strong>事件。</p>
-</div>
+如果浏览器检测到与 {{domxref("WebGLRenderingContext")}}对象关联的图形缓冲区已丢失，则会触发[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`webglcontextlost`** 事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">冒泡</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">可取消</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">继承</th>
-   <td>{{domxref("WebGLContextEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理程序属性</th>
-   <td>none</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">冒泡</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">可取消</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">继承</th>
+      <td>{{domxref("WebGLContextEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理程序属性</th>
+      <td>none</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在 {{domxref("WEBGL_lose_context")}} 扩展的帮助下，您可以模拟 <code>webglcontextlost</code> 事件：</p>
+在 {{domxref("WEBGL_lose_context")}} 扩展的帮助下，您可以模拟 `webglcontextlost` 事件：
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextlost', (event) =&gt; {
+canvas.addEventListener('webglcontextlost', (event) => {
   console.log(event);
 });
 
-//WEBGL_lose_context 是 webgl 是属于 WebGLAPI 的一个扩展 API，它提供一组方法用来模拟一个 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLRenderingContext">W</a>ebGLRenderingContext</code> 上下文的丢失和恢复。
+//WEBGL_lose_context 是 webgl 是属于 WebGLAPI 的一个扩展 API，它提供一组方法用来模拟一个 WebGLRenderingContext 上下文的丢失和恢复。
 gl.getExtension('WEBGL_lose_context').loseContext();
 
-// "webglcontextlost" event is logged.</pre>
+// "webglcontextlost" event is logged.
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.HTMLCanvasElement.webglcontextlost_event")}}
 
+## 请参阅
 
-<p>{{Compat("api.HTMLCanvasElement.webglcontextlost_event")}}</p>
-</div>
-
-<h2 id="请参阅">请参阅</h2>
-
-<ul>
- <li>{{domxref("WebGLContextEvent")}}</li>
- <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
- <li>{{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}</li>
-</ul>
+- {{domxref("WebGLContextEvent")}}
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- {{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}

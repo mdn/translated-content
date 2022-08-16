@@ -2,65 +2,59 @@
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>根据给定的{{domxref("element.name","name")}} 返回一个在 (X)HTML document 的节点列表集合。</p>
+根据给定的{{domxref("element.name","name")}} 返回一个在 (X)HTML document 的节点列表集合。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>elements</em> = document.getElementsByName(<em>name</em>)
-</pre>
+```
+elements = document.getElementsByName(name)
+```
 
-<ul>
- <li><code>elements</code> 是一个实时更新的 {{domxref("NodeList")}} 集合。当文档中有同一个 name 属性的元素被添加或移除时，这个集合会自动更新。</li>
- <li><code>name</code> 是元素的 <code>name</code> 属性的值。</li>
-</ul>
+- `elements` 是一个实时更新的 {{domxref("NodeList")}} 集合。当文档中有同一个 name 属性的元素被添加或移除时，这个集合会自动更新。
+- `name` 是元素的 `name` 属性的值。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
  ...
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
-&lt;form name="up"&gt;&lt;input type="text"&gt;&lt;/form&gt;
-&lt;div name="down"&gt;&lt;input type="text"&gt;&lt;/div&gt;
+<body>
+<form name="up"><input type="text"></form>
+<div name="down"><input type="text"></div>
 
-&lt;script&gt;
+<script>
 var up_forms = document.getElementsByName("up");
 console.log(up_forms[0].tagName); // returns "FORM"
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</body>
+</html>
+```
 
-<h2 id="Notes">注释</h2>
+## 注释
 
-<p>{{domxref("element.name","name")}} 属性只有在 (X)HTML 文档中可用。</p>
+{{domxref("element.name","name")}} 属性只有在 (X)HTML 文档中可用。
 
-<p>该方法返回一个 live 的 {{domxref("NodeList")}}   集合，这个集合包含 {{domxref("element.name","name")}} 属性为指定值的所有元素，例如{{htmlelement("meta")}} 、{{htmlelement("object")}}，甚至那些不支持 {{domxref("element.name","name")}} 属性但是添加了 {{domxref("element.name","name")}} 自定义属性的元素也包含其中。</p>
+该方法返回一个 live 的 {{domxref("NodeList")}} 集合，这个集合包含 {{domxref("element.name","name")}} 属性为指定值的所有元素，例如{{htmlelement("meta")}} 、{{htmlelement("object")}}，甚至那些不支持 {{domxref("element.name","name")}} 属性但是添加了 {{domxref("element.name","name")}} 自定义属性的元素也包含其中。
 
-<div class="warning">
-<p>getElementsByName  在不同的浏览器其中工作方式不同。在 IE 和 Opera 中， getElementsByName()  方法还会返回那些 {{domxref("element.id","id")}} 为指定值的元素。所以你要小心使用该方法，最好不要为元素的 {{domxref("element.name","name")}} 和 {{domxref("element.id","id")}} 赋予相同的值。 </p>
-</div>
+> **警告：** getElementsByName 在不同的浏览器其中工作方式不同。在 IE 和 Opera 中， getElementsByName() 方法还会返回那些 {{domxref("element.id","id")}} 为指定值的元素。所以你要小心使用该方法，最好不要为元素的 {{domxref("element.name","name")}} 和 {{domxref("element.id","id")}} 赋予相同的值。
 
-<div class="warning">
-<p>IE 和 Edge 都返回一个 {{domxref("HTMLCollection")}}, 而不是{{domxref("NodeList")}} 。</p>
-</div>
+> **警告：** IE 和 Edge 都返回一个 {{domxref("HTMLCollection")}}, 而不是{{domxref("NodeList")}} 。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Document.getElementsByName")}}</p>
+{{Compat("api.Document.getElementsByName")}}
 
-<h2 id="See_also">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{domxref("document.getElementById()")}} 通过 <code>id</code> 返回对元素的引用</li>
- <li>{{domxref("document.querySelector()")}} 通过 CSS 选择器返回对元素的引用，例如 <code>'div.myclass'</code></li>
-</ul>
+- {{domxref("document.getElementById()")}} 通过 `id` 返回对元素的引用
+- {{domxref("document.querySelector()")}} 通过 CSS 选择器返回对元素的引用，例如 `'div.myclass'`

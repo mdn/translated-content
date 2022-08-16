@@ -2,53 +2,53 @@
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textBaseline</code></strong> 是 Canvas 2D API 描述绘制文本时，当前文本基线的属性。</p>
+**`CanvasRenderingContext2D.textBaseline`** 是 Canvas 2D API 描述绘制文本时，当前文本基线的属性。
 
-<blockquote>
-<p>译者注：决定文字垂直方向的对齐方式。</p>
-</blockquote>
+> 译者注：决定文字垂直方向的对齐方式。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em>.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";</var>
-</pre>
+```
+ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```
 
-<h3 id="选项">选项</h3>
+### 选项
 
-<p>有效值：</p>
+有效值：
 
-<dl>
- <dt>top</dt>
- <dd>文本基线在文本块的顶部。</dd>
- <dt>hanging</dt>
- <dd>文本基线是悬挂基线。</dd>
- <dt>middle</dt>
- <dd>文本基线在文本块的中间。</dd>
- <dt>alphabetic</dt>
- <dd>文本基线是标准的字母基线。</dd>
- <dt>ideographic</dt>
- <dd>文字基线是表意字基线；如果字符本身超出了 alphabetic 基线，那么 ideograhpic 基线位置在字符本身的底部。</dd>
- <dt>bottom</dt>
- <dd>文本基线在文本块的底部。与 ideographic 基线的区别在于 ideographic 基线不需要考虑下行字母。</dd>
-</dl>
+- top
+  - : 文本基线在文本块的顶部。
+- hanging
+  - : 文本基线是悬挂基线。
+- middle
+  - : 文本基线在文本块的中间。
+- alphabetic
+  - : 文本基线是标准的字母基线。
+- ideographic
+  - : 文字基线是表意字基线；如果字符本身超出了 alphabetic 基线，那么 ideograhpic 基线位置在字符本身的底部。
+- bottom
+  - : 文本基线在文本块的底部。与 ideographic 基线的区别在于 ideographic 基线不需要考虑下行字母。
 
-<p>默认值是 <code>alphabetic。</code></p>
+默认值是 `alphabetic。`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_textBaseline_property">使用 <code>textBaseline</code> 属性</h3>
+### 使用 `textBaseline` 属性
 
-<p>这是一段简单的代码片段，使用 <code>textBaseline</code> 属性设置不同的文本基线。</p>
+这是一段简单的代码片段，使用 `textBaseline` 属性设置不同的文本基线。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="550" height="500"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas" width="550" height="500"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
@@ -63,16 +63,15 @@ baselines.forEach(function (baseline, index) {
   ctx.lineTo(550, y + 0.5);
   ctx.stroke();
   ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
-});</pre>
+});
+```
 
+```html hidden
+<canvas id="canvas" width="550" height="500"></canvas>
+```
 
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="550" height="500"&gt;&lt;/canvas&gt;</pre>
-
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js hidden
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
@@ -87,23 +86,21 @@ baselines.forEach(function (baseline, index) {
   ctx.lineTo(550, y + 0.5);
   ctx.stroke();
   ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
-});</pre>
-</div>
+});
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 550) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 550) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.textBaseline")}}</p>
+{{Compat("api.CanvasRenderingContext2D.textBaseline")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}.

@@ -2,42 +2,38 @@
 title: document.mozFullScreen
 slug: Web/API/Document/fullscreen
 ---
-<p> </p>
+{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
-<p>{{APIRef("Fullscreen API")}}{{Deprecated_Header}}</p>
+过时的{{domxref("Document")}}接口的 **`fullscreen`** 只读属性报告文档当前是否以全屏模式显示内容。
 
-<p>过时的{{domxref("Document")}}接口的 <strong><code>fullscreen</code></strong> 只读属性报告文档当前是否以全屏模式显示内容。</p>
+虽然这个属性是只读的，但如果修改它，它不会抛出 (即使在严格模式下);setter 是一个非操作，它将被忽略。
 
-<p>虽然这个属性是只读的，但如果修改它，它不会抛出 (即使在严格模式下);setter 是一个非操作，它将被忽略。</p>
+> **备注：** 由于不推荐使用此属性，您可以通过检查{{DOMxRef("document.fullscreenelement")}}是否为 **`null`** 来确定文档上是否启用全屏模式。
 
-<div class="note">
-<p><strong>注意</strong><strong>:</strong> 由于不推荐使用此属性，您可以通过检查{{DOMxRef("document.fullscreenelement")}}是否为<strong><code>null</code></strong>来确定文档上是否启用全屏模式。</p>
-</div>
+### 概述
 
-<p> </p>
+返回一个布尔值，表明当前文档是否处于全屏模式。
 
-<h3 id="Summary">概述</h3>
+### 语法
 
-<p>返回一个布尔值，表明当前文档是否处于全屏模式。</p>
+```
+var isFullScreen = document.mozFullScreen || document.webkitIsFullScreen;
+```
 
-<h3 id="Syntax">语法</h3>
+### 例子
 
-<pre class="eval"><em>var isFullScreen</em> = <em>document</em>.mozFullScreen || document.webkitIsFullScreen;
-</pre>
-
-<h3 id="Example">例子</h3>
-
-<pre class="brush: js">function isDocumentInFullScreenMode() {
+```js
+function isDocumentInFullScreenMode() {
   // 过去由 F11 触发的那种浏览器全屏模式和 HTML5 中内容的全屏模式是不一样的
-  return (document.fullscreenElement &amp;&amp; document.fullscreenElement !== null) ||
-      (!document.mozFullScreen &amp;&amp; !document.webkitIsFullScreen);
+  return (document.fullscreenElement && document.fullscreenElement !== null) ||
+      (!document.mozFullScreen && !document.webkitIsFullScreen);
 }
-</pre>
+```
 
-<h3 id="备注">备注</h3>
+### 备注
 
-<p>查看<a href="/zh-cn/docs/Web/API/Fullscreen_API">使用全屏模式</a>来了解更多相关内容。</p>
+查看[使用全屏模式](/zh-CN/docs/Web/API/Fullscreen_API)来了解更多相关内容。
 
-<h3 id="Specification">浏览器兼容性</h3>
+### 浏览器兼容性
 
 {{Compat("api.Document.fullscreen")}}

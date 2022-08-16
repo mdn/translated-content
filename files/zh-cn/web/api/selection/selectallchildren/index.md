@@ -2,44 +2,37 @@
 title: Selection.selectAllChildren()
 slug: Web/API/Selection/selectAllChildren
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>Selection.selectAllChildren() 把指定元素的所有子元素设为选中区域，并取消之前的选中区域。</p>
+Selection.selectAllChildren() 把指定元素的所有子元素设为选中区域，并取消之前的选中区域。
 
-<h2 id="Syntax">用法</h2>
+## 用法
 
-<pre class="syntaxbox"><em>sel</em>.selectAllChildren(<em>parentNode</em>)
-</pre>
+```
+sel.selectAllChildren(parentNode)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>parentNode</code></em></dt>
- <dd>所有 parentNode 元素的子元素会被设为选中区域，parentNode 本身除外。</dd>
-</dl>
+- _`parentNode`_
+  - : 所有 parentNode 元素的子元素会被设为选中区域，parentNode 本身除外。
 
-<h2 id="Examples">举例</h2>
+## 举例
 
-<pre class="eval">footer = document.getElementById("footer");
+```
+footer = document.getElementById("footer");
 window.getSelection().selectAllChildren(footer);
-/* Everything inside the footer is now selected *</pre>
+/* Everything inside the footer is now selected *
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div id="compat-desktop">
-<p>{{Compat("api.Selection.selectAllChildren")}}</p>
-</div>
+{{Compat("api.Selection.selectAllChildren")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Selection")}}, 此方法所属接口。</li>
-</ul>
+- {{domxref("Selection")}}, 此方法所属接口。

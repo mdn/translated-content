@@ -2,50 +2,51 @@
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.ellipse()</code></strong> 是 Canvas 2D API 添加椭圆路径的方法。椭圆的圆心在（x,y）位置，半径分别是<em>radiusX</em> 和 <em>radiusY</em> ，按照<em>anticlockwise</em>（默认顺时针）指定的方向，从 <em>startAngle </em> 开始绘制，到 <em>endAngle</em> 结束。</p>
+**`CanvasRenderingContext2D.ellipse()`** 是 Canvas 2D API 添加椭圆路径的方法。椭圆的圆心在（x,y）位置，半径分别是*radiusX* 和 _radiusY_ ，按照*anticlockwise*（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">void <var><em>ctx</em>.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);</var>
-</pre>
+```
+void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>椭圆圆心的 x 轴坐标。</dd>
- <dt><code>y</code></dt>
- <dd>椭圆圆心的 y 轴坐标。</dd>
- <dt><code>radius</code>X</dt>
- <dd>椭圆长轴的半径。</dd>
- <dt><code>radius</code>Y</dt>
- <dd>椭圆短轴的半径。</dd>
- <dt><code>rotation</code></dt>
- <dd>椭圆的旋转角度，以弧度表示 (<strong>非角度度数</strong>)。</dd>
- <dt><code>startAngle</code></dt>
- <dd>将要绘制的起始点角度，从 x 轴测量，以弧度表示 (<strong>非角度度数</strong>)。</dd>
- <dt><code>endAngle</code></dt>
- <dd>椭圆将要绘制的结束点角度，以弧度表示 (<strong>非角度度数</strong>)。</dd>
- <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>{{jsxref("Boolean")}} 选项，如果为 <code>true</code>，逆时针方向绘制椭圆（逆时针），反之顺时针方向绘制。</dd>
-</dl>
+- `x`
+  - : 椭圆圆心的 x 轴坐标。
+- `y`
+  - : 椭圆圆心的 y 轴坐标。
+- `radius`X
+  - : 椭圆长轴的半径。
+- `radius`Y
+  - : 椭圆短轴的半径。
+- `rotation`
+  - : 椭圆的旋转角度，以弧度表示 (**非角度度数**)。
+- `startAngle`
+  - : 将要绘制的起始点角度，从 x 轴测量，以弧度表示 (**非角度度数**)。
+- `endAngle`
+  - : 椭圆将要绘制的结束点角度，以弧度表示 (**非角度度数**)。
+- `anticlockwise` {{optional_inline}}
+  - : {{jsxref("Boolean")}} 选项，如果为 `true`，逆时针方向绘制椭圆（逆时针），反之顺时针方向绘制。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_ellipse_method">使用 <code>ellipse</code> 方法</h3>
+### 使用 `ellipse` 方法
 
-<p>这是一段绘制椭圆的简单的代码片段。</p>
+这是一段绘制椭圆的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="notranslate"><code>var canvas = document.getElementById('canvas');
+```
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.setLineDash([]);
 ctx.beginPath();
@@ -54,19 +55,18 @@ ctx.stroke();
 ctx.setLineDash([5]);
 ctx.moveTo(0,200);
 ctx.lineTo(200,0);
-ctx.stroke();</code></pre>
+ctx.stroke();
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化（如果椭圆没有绘制，请在兼容性列表中检查你的浏览器是否支持）：</p>
+修改下面的代码并在线查看 canvas 的变化（如果椭圆没有绘制，请在兼容性列表中检查你的浏览器是否支持）：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.setLineDash([]);
 ctx.beginPath();
 ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜 45°角
@@ -74,10 +74,11 @@ ctx.stroke();
 ctx.setLineDash([5]);
 ctx.moveTo(0,200);
 ctx.lineTo(200,0);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js notranslate">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -100,23 +101,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CanvasRenderingContext2D.ellipse")}}
 
+## 参见
 
-<p>{{Compat("api.CanvasRenderingContext2D.ellipse")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}

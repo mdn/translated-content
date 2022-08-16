@@ -2,42 +2,43 @@
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.quadraticCurveTo()</code></strong> 是 Canvas 2D API 新增二次贝塞尔曲线路径的方法。它需要 2 个点。第一个点是控制点，第二个点是终点。起始点是当前路径最新的点，当创建二次贝赛尔曲线之前，可以使用 <code>moveTo()</code> 方法进行改变。</p>
+**`CanvasRenderingContext2D.quadraticCurveTo()`** 是 Canvas 2D API 新增二次贝塞尔曲线路径的方法。它需要 2 个点。第一个点是控制点，第二个点是终点。起始点是当前路径最新的点，当创建二次贝赛尔曲线之前，可以使用 `moveTo()` 方法进行改变。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.quadraticCurveTo(cpx, cpy, x, y);</var>
-</pre>
+```
+void ctx.quadraticCurveTo(cpx, cpy, x, y);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>cpx</code></dt>
- <dd>控制点的 x 轴坐标。</dd>
- <dt><code>cpy</code></dt>
- <dd>控制点的 y 轴坐标。</dd>
- <dt><code>x</code></dt>
- <dd>终点的 x 轴坐标。</dd>
- <dt><code>y</code></dt>
- <dd>终点的 y 轴坐标。</dd>
-</dl>
+- `cpx`
+  - : 控制点的 x 轴坐标。
+- `cpy`
+  - : 控制点的 y 轴坐标。
+- `x`
+  - : 终点的 x 轴坐标。
+- `y`
+  - : 终点的 y 轴坐标。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="quadraticCurveTo_如何工作"><code>quadraticCurveTo</code> 如何工作</h3>
+### `quadraticCurveTo` 如何工作
 
-<p>这是一段绘制二次贝赛尔曲线的简单的代码片段。控制点是红色，起点和终点是蓝色。</p>
+这是一段绘制二次贝赛尔曲线的简单的代码片段。控制点是红色，起点和终点是蓝色。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Quadratic Bézier curve
@@ -57,19 +58,15 @@ ctx.fill();
 ctx.fillStyle = 'red';
 ctx.beginPath();
 ctx.arc(230, 30, 5, 0, 2 * Math.PI);
-ctx.fill();</pre>
+ctx.fill();
+```
 
-<div class="hidden">
-<h2 id="Using_the_quadraticCurveTo_method">Using_the_quadraticCurveTo_method</h2>
+```html hidden
+<canvas id="canvas"></canvas>
+```
 
-<h3 id="HTML_2">HTML</h3>
-
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
-
-<h3 id="JavaScript_2">JavaScript</h3>
-
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js hidden
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Quadratic Bézier curve
@@ -89,69 +86,66 @@ ctx.fill();
 ctx.fillStyle = 'red';
 ctx.beginPath();
 ctx.arc(230, 30, 5, 0, 2 * Math.PI);
-ctx.fill();</pre>
-</div>
+ctx.fill();
+```
 
-<p>{{ EmbedLiveSample('Using_the_quadraticCurveTo_method', 315, 165) }}</p>
+{{ EmbedLiveSample('Using_the_quadraticCurveTo_method', 315, 165) }}
 
-<h3 id="简单的二次曲线">简单的二次曲线</h3>
+### 简单的二次曲线
 
-<p>此示例使用<code>quadraticCurveTo()</code>绘制了简单的二次 Bézier 曲线。</p>
+此示例使用`quadraticCurveTo()`绘制了简单的二次 Bézier 曲线。
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<p>曲线从<code>moveTo()</code>指定的点开始：(20, 110)。控制点位于 (230, 150)。曲线在 (250, 20) 处结束。</p>
+曲线从`moveTo()`指定的点开始：(20, 110)。控制点位于 (230, 150)。曲线在 (250, 20) 处结束。
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.moveTo(20, 110);
 ctx.quadraticCurveTo(230, 150, 250, 20);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<div class="hidden">
-<h2 id="Trying_the_quadraticCurveTo_parameters">Trying_the_quadraticCurveTo_parameters</h2>
+```html hidden
+<canvas id="canvas"></canvas>
+```
 
-<h3 id="HTML_4">HTML</h3>
-
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
-
-<h3 id="JavaScript_4">JavaScript</h3>
-
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js hidden
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.moveTo(20, 110);
 ctx.quadraticCurveTo(230, 150, 250, 20);
 ctx.stroke();
-</pre>
-</div>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(50,20);
 ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -174,20 +168,17 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Trying_the_quadraticCurveTo_parameters', 700, 360) }}</p>
+{{ EmbedLiveSample('Trying_the_quadraticCurveTo_parameters', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}</p>
+{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}</li>
- <li><a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">WikiPedia article on Bézier curves</a>.</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- [WikiPedia article on Bézier curves](http://en.wikipedia.org/wiki/B%C3%A9zier_curve).

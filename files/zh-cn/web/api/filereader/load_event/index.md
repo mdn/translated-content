@@ -2,59 +2,59 @@
 title: 'FileReader: load event'
 slug: Web/API/FileReader/load_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当文件成功读取时，执行<code>load</code> 事件</p>
+当文件成功读取时，执行`load` 事件
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">是否冒泡</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">是否能中断退出</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">调用接口</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理属性</th>
-   <td>{{domxref("FileReader.onload")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">是否冒泡</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">是否能中断退出</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">调用接口</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理属性</th>
+      <td>{{domxref("FileReader.onload")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;div class="file-select"&gt;
-        &lt;label for="avatar"&gt;Choose a profile picture:&lt;/label&gt;
-        &lt;input type="file"
+    <div class="file-select">
+        <label for="avatar">Choose a profile picture:</label>
+        <input type="file"
                id="avatar" name="avatar"
-               accept="image/png, image/jpeg"&gt;
-    &lt;/div&gt;
+               accept="image/png, image/jpeg">
+    </div>
 
-    &lt;img src="" class="preview" height="200" alt="Image preview..."&gt;
+    <img src="" class="preview" height="200" alt="Image preview...">
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;Event log:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-  &lt;/div&gt;</pre>
+  </div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">img.preview {
+```css hidden
+img.preview {
   margin: 1rem 0;
 }
 
@@ -85,18 +85,19 @@ slug: Web/API/FileReader/load_event
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
 
 .event-log-contents {
   resize: none;
-}</pre>
-</div>
+}
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const fileInput = document.querySelector('input[type="file"]');
+```js
+const fileInput = document.querySelector('input[type="file"]');
 const preview = document.querySelector('img.preview');
 const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
@@ -128,22 +129,20 @@ function handleSelected(e) {
 }
 
 fileInput.addEventListener('change', handleSelected);
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '300px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '300px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.FileReader.load_event")}}</p>
+{{Compat("api.FileReader.load_event")}}
 
-<h2 id="请参阅">请参阅</h2>
+## 请参阅
 
-<ul>
- <li>Related events: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}</li>
-</ul>
+- Related events: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}

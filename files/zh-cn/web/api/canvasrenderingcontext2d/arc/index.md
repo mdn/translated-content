@@ -2,70 +2,70 @@
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.arc()</code></strong> 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 <em>(x, y)</em> 位置，半径为<em> r</em> ，根据<em>anticlockwise</em> （默认为顺时针）指定的方向从 <em>startAngle</em> 开始绘制，到 <em>endAngle</em> 结束。</p>
+**`CanvasRenderingContext2D.arc()`** 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_ ，根据*anticlockwise* （默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.arc(x, y, radius, startAngle, endAngle, anticlockwise);</var>
-</pre>
+```
+void ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>x</code></dt>
- <dd>圆弧中心（圆心）的 x 轴坐标。</dd>
- <dt><code>y</code></dt>
- <dd>圆弧中心（圆心）的 y 轴坐标。</dd>
- <dt><code>radius</code></dt>
- <dd>圆弧的半径。</dd>
- <dt><code>startAngle</code></dt>
- <dd>圆弧的起始点，x 轴方向开始计算，单位以弧度表示。</dd>
- <dt><code>endAngle</code></dt>
- <dd>圆弧的终点， 单位以弧度表示。</dd>
- <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>可选的{{jsxref("Boolean")}}值 ，如果为 <code>true</code>，逆时针绘制圆弧，反之，顺时针绘制。 </dd>
-</dl>
+- `x`
+  - : 圆弧中心（圆心）的 x 轴坐标。
+- `y`
+  - : 圆弧中心（圆心）的 y 轴坐标。
+- `radius`
+  - : 圆弧的半径。
+- `startAngle`
+  - : 圆弧的起始点，x 轴方向开始计算，单位以弧度表示。
+- `endAngle`
+  - : 圆弧的终点， 单位以弧度表示。
+- `anticlockwise` {{optional_inline}}
+  - : 可选的{{jsxref("Boolean")}}值 ，如果为 `true`，逆时针绘制圆弧，反之，顺时针绘制。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_arc_method">使用 <code>arc</code> 方法</h3>
+### 使用 `arc` 方法
 
-<p>这是一段绘制圆的简单的代码片段。</p>
+这是一段绘制圆的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(75, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -88,30 +88,25 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h3 id="Different_shapes_demonstrated">不同的形状演示</h3>
+### 不同的形状演示
 
-<p>在此例中，使用 arc() 尽可能地绘制不同的形状。</p>
+在此例中，使用 arc() 尽可能地绘制不同的形状。
 
-<div class="hidden">
-<h6 id="HTML_2">HTML</h6>
+```html hidden
+<canvas id="canvas" width="150" height="200"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
-</pre>
-
-<h6 id="JavaScript_2">JavaScript</h6>
-</div>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Draw shapes
-for (i=0;i&lt;4;i++){
-  for(j=0;j&lt;3;j++){
+for (i=0;i<4;i++){
+  for(j=0;j<3;j++){
     ctx.beginPath();
     var x          = 25+j*50;               // x coordinate
     var y          = 25+i*50;               // y coordinate
@@ -122,26 +117,25 @@ for (i=0;i&lt;4;i++){
 
     ctx.arc(x,y,radius,startAngle,endAngle, clockwise);
 
-    if (i&gt;1){
+    if (i>1){
       ctx.fill();
     } else {
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}</p>
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.arc")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}

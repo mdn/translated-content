@@ -2,33 +2,34 @@
 title: 使用 WebGL 创建 2D 内容
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
-<p>一旦创建 WebGL 上下文创建成功，你就可以在这个上下文里渲染画图了。而对我们而言最简单的事，莫过于绘制一个没有纹理的 2D 图形了。那就让我们从画出一个正方形开始吧。</p>
+一旦创建 WebGL 上下文创建成功，你就可以在这个上下文里渲染画图了。而对我们而言最简单的事，莫过于绘制一个没有纹理的 2D 图形了。那就让我们从画出一个正方形开始吧。
 
-<h2 id="渲染场景">渲染场景</h2>
+## 渲染场景
 
-<p>在开始前，我们首先需要明确最重要的一点，虽然我们的例子只是画一个二维物体，但我们仍然是在把它画在一个三维空间里。所以，我们依然需要创建着色器，通过它来渲染我们的简单场景并画出我们的物体。往下，我们将展示正方形是怎样一步步被画出来的。</p>
+在开始前，我们首先需要明确最重要的一点，虽然我们的例子只是画一个二维物体，但我们仍然是在把它画在一个三维空间里。所以，我们依然需要创建着色器，通过它来渲染我们的简单场景并画出我们的物体。往下，我们将展示正方形是怎样一步步被画出来的。
 
-<h3 id="着色器">着色器</h3>
+### 着色器
 
-<p><strong>着色器是</strong>使用 <a href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf">OpenGL ES 着色语言</a>(<strong>GLSL</strong>) 编写的程序，它携带着绘制形状的顶点信息以及构造绘制在屏幕上像素的所需数据，换句话说，它负责记录着像素点的位置和颜色。</p>
+**着色器是**使用 [OpenGL ES 着色语言](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)(**GLSL**) 编写的程序，它携带着绘制形状的顶点信息以及构造绘制在屏幕上像素的所需数据，换句话说，它负责记录着像素点的位置和颜色。
 
-<p>绘制 WebGL 时候有两种不同的着色器函数，<strong>顶点着色器和片段着色器。</strong>你需要通过用 GLSL 编写这些着色器，并将代码文本传递给 WebGL ， 使之在 GPU 执行时编译。顺便一提，顶点着色器和片段着色器的集合我们通常称之为<strong>着色器程序。</strong></p>
+绘制 WebGL 时候有两种不同的着色器函数，**顶点着色器和片段着色器。**你需要通过用 GLSL 编写这些着色器，并将代码文本传递给 WebGL ， 使之在 GPU 执行时编译。顺便一提，顶点着色器和片段着色器的集合我们通常称之为**着色器程序。**
 
-<p>下面我们通过在 WebGL 环境绘制一个 2D 图像的例子快速介绍这两种着色器。</p>
+下面我们通过在 WebGL 环境绘制一个 2D 图像的例子快速介绍这两种着色器。
 
-<h4 id="顶点着色器">顶点着色器</h4>
+#### 顶点着色器
 
-<p>每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。 它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的缩放空间 (<strong>clipspace</strong>) 坐标系，其中每个轴的坐标范围从-1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。</p>
+每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。 它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的缩放空间 (**clipspace**) 坐标系，其中每个轴的坐标范围从-1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
 
-<p>顶点着色器需要对顶点坐标进行必要的转换，在每个顶点基础上进行其他调整或计算，然后通过将其保存在由 GLSL 提供的特殊变量（我们称为 gl_Position）中来返回变换后的顶点</p>
+顶点着色器需要对顶点坐标进行必要的转换，在每个顶点基础上进行其他调整或计算，然后通过将其保存在由 GLSL 提供的特殊变量（我们称为 gl_Position）中来返回变换后的顶点
 
-<p>顶点着色器根据需要， 也可以完成其他工作。例如，决定哪个包含 <a href="https://zh.wikipedia.org/wiki/texel_(graphics)">texel</a>面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在<a href="/zh-CN/docs/XUL_%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85">变量（varyings)</a>或<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Data#Attributes">属性 (attributes)</a>属性中，以便与片段着色器共享</p>
+顶点着色器根据需要， 也可以完成其他工作。例如，决定哪个包含 [texel](<https://zh.wikipedia.org/wiki/texel_(graphics)>)面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/XUL_%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
 
-<p>以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，<a href="https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html">在这里您可能可以找到有帮助的文章</a>.。</p>
+以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里您可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).。
 
-<pre class="brush: js notranslate">// Vertex shader program
+```js
+// Vertex shader program
 
   const vsSource = `
     attribute vec4 aVertexPosition;
@@ -39,25 +40,29 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
     void main() {
       gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
     }
-  `;</pre>
+  `;
+```
 
-<p>这个例子中，我们没有计算任何光照效果，因为我们还没有应用到场景，它将后面的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">WebGL 光照</a>章节介绍。同样我们也还没应用任何纹理，这将在<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL 添加纹理</a>章节补充。</p>
+这个例子中，我们没有计算任何光照效果，因为我们还没有应用到场景，它将后面的 [WebGL 光照](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)章节介绍。同样我们也还没应用任何纹理，这将在[WebGL 添加纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)章节补充。
 
-<h4 id="片段着色器">片段着色器</h4>
+#### 片段着色器
 
-<p><strong>片段着色器</strong>在顶点着色器处理完图形的顶点后，会被要绘制的每个图形的每个像素点调用一次。它的职责是确定像素的颜色，通过指定应用到像素的纹理元素（也就是图形纹理中的像素），获取纹理元素的颜色，然后将适当的光照应用于颜色。之后颜色存储在特殊变量 gl_FragColor 中，返回到 WebGL 层。该颜色将最终绘制到屏幕上图形对应像素的对应位置。</p>
+**片段着色器**在顶点着色器处理完图形的顶点后，会被要绘制的每个图形的每个像素点调用一次。它的职责是确定像素的颜色，通过指定应用到像素的纹理元素（也就是图形纹理中的像素），获取纹理元素的颜色，然后将适当的光照应用于颜色。之后颜色存储在特殊变量 gl_FragColor 中，返回到 WebGL 层。该颜色将最终绘制到屏幕上图形对应像素的对应位置。
 
-<pre class="brush: js notranslate">const fsSource = `
+```js
+const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
-  `;</pre>
+  `;
+```
 
-<h3 id="初始化着色器">初始化着色器</h3>
+### 初始化着色器
 
-<p>现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 loadShader（），为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。</p>
+现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 loadShader（），为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。
 
-<pre class="brush: js notranslate">//
+```js
+//
 //  初始化着色器程序，让 WebGL 知道如何绘制我们的数据
 function initShaderProgram(gl, vsSource, fsSource) {
   const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
@@ -103,27 +108,30 @@ function loadShader(gl, type, source) {
 
   return shader;
 }
-</pre>
+```
 
-<p>loadShader 函数将 WebGL 上下文，着色器类型和<code>源码</code>作为参数输入，然后按如下步骤创建和编译着色器：</p>
+loadShader 函数将 WebGL 上下文，着色器类型和`源码`作为参数输入，然后按如下步骤创建和编译着色器：
 
-<p>1. 调用{{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.创建一个新的着色器。</p>
+1\. 调用{{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.创建一个新的着色器。
 
-<p>2. 调用{{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.将源代码发送到着色器。</p>
+2\. 调用{{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.将源代码发送到着色器。
 
-<p>3. 一旦着色器获取到源代码，就使用{{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.进行编译。</p>
+3\. 一旦着色器获取到源代码，就使用{{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.进行编译。
 
-<p>4. 为了检查是否成功编译了着色器，将检查着色器参数 gl.COMPILE_STATUS 状态。通过调用{{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}获得它的值，并指定着色器和我们想要检查的参数的名字（gl.COMPILE_STATUS）。如果返回错误，则着色器无法编译，因此通过{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}从编译器中获取日志信息并 alert，然后删除着色器返回 null，表明加载着色器失败。</p>
+4\. 为了检查是否成功编译了着色器，将检查着色器参数 gl.COMPILE_STATUS 状态。通过调用{{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}获得它的值，并指定着色器和我们想要检查的参数的名字（gl.COMPILE_STATUS）。如果返回错误，则着色器无法编译，因此通过{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}从编译器中获取日志信息并 alert，然后删除着色器返回 null，表明加载着色器失败。
 
-<p>5. 如果着色器被加载并成功编译，则返回编译的着色器。</p>
+5\. 如果着色器被加载并成功编译，则返回编译的着色器。
 
-<p>我们可以像这样调用这段代码</p>
+我们可以像这样调用这段代码
 
-<pre class="brush: js notranslate">  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);</pre>
+```js
+  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+```
 
-<p>在创建着色器程序之后，我们需要查找 WebGL 返回分配的输入位置。在上述情况下，我们有一个属性和两个 uniforms。属性从缓冲区接收值。顶点着色器的每次迭代都从分配给该属性的缓冲区接收下一个值。uniforms 类似于 JavaScript 全局变量。它们在着色器的所有迭代中保持相同的值。由于属性和统一的位置是特定于单个着色器程序的，因此我们将它们存储在一起以使它们易于传递</p>
+在创建着色器程序之后，我们需要查找 WebGL 返回分配的输入位置。在上述情况下，我们有一个属性和两个 uniforms。属性从缓冲区接收值。顶点着色器的每次迭代都从分配给该属性的缓冲区接收下一个值。uniforms 类似于 JavaScript 全局变量。它们在着色器的所有迭代中保持相同的值。由于属性和统一的位置是特定于单个着色器程序的，因此我们将它们存储在一起以使它们易于传递
 
-<pre class="brush: js notranslate">const programInfo = {
+```js
+const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
@@ -132,13 +140,15 @@ function loadShader(gl, type, source) {
       projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
       modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
     },
-  };</pre>
+  };
+```
 
-<h2 id="创建对象">创建对象</h2>
+## 创建对象
 
-<p>在画正方形前，我们需要创建一个缓冲器来存储它的顶点。我们会用到名字为 initBuffers() 的函数。当我们了解到更多 WebGL 的高级概念时，这段代码会将有更多参数，变得更加复杂，并且用来创建更多的三维物体。</p>
+在画正方形前，我们需要创建一个缓冲器来存储它的顶点。我们会用到名字为 initBuffers() 的函数。当我们了解到更多 WebGL 的高级概念时，这段代码会将有更多参数，变得更加复杂，并且用来创建更多的三维物体。
 
-<pre class="brush: js notranslate">function initBuffers(gl) {
+```js
+function initBuffers(gl) {
   const positionBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
@@ -157,21 +167,20 @@ function loadShader(gl, type, source) {
     position: positionBuffer,
   };
 }
-</pre>
+```
 
-<p>这段代码简单给出了绘画场景的本质。首先，它调用 gl 的成员函数 {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} 得到了缓冲对象并存储在顶点缓冲器。然后调用 {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} 函数绑定上下文。</p>
+这段代码简单给出了绘画场景的本质。首先，它调用 gl 的成员函数 {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} 得到了缓冲对象并存储在顶点缓冲器。然后调用 {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} 函数绑定上下文。
 
-<p>当上一步完成，我们创建一个 Javascript 数组去记录每一个正方体的每一个顶点。然后将其转化为 WebGL 浮点型类型的数组，并将其传到 gl 对象的  {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} 方法来建立对象的顶点。</p>
+当上一步完成，我们创建一个 Javascript 数组去记录每一个正方体的每一个顶点。然后将其转化为 WebGL 浮点型类型的数组，并将其传到 gl 对象的 {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} 方法来建立对象的顶点。
 
-<p><strong>绘制场景</strong></p>
+**绘制场景**
 
-<p>当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。</p>
+当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 你可能会得到这样一段错误报告：“ mat4 is not defined”，意思是说你缺少<code>glmatrix</code>库。该库的 js 文件<a href="https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js">gl-matrix.js</a>可以从<a href="https://github.com/mdn/webgl-examples/issues/20">这里</a>获得。</p>
-</div>
+> **备注：** 你可能会得到这样一段错误报告：“ mat4 is not defined”，意思是说你缺少`glmatrix`库。该库的 js 文件[gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js)可以从[这里](https://github.com/mdn/webgl-examples/issues/20)获得。
 
-<pre class="brush: js notranslate">function drawScene(gl, programInfo, buffers) {
+```js
+function drawScene(gl, programInfo, buffers) {
   gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
   gl.clearDepth(1.0);                 // Clear everything
   gl.enable(gl.DEPTH_TEST);           // Enable depth testing
@@ -255,25 +264,23 @@ function loadShader(gl, type, source) {
     gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
   }
 }
-</pre>
+```
 
-<p>第一步，用背景色擦除画布，接着建立摄像机透视矩阵。设置 45 度的视图角度，并且设置一个适合实际图像的宽高比。 指定在摄像机距离 0.1 到 100 单位长度的范围内的物体可见。</p>
+第一步，用背景色擦除画布，接着建立摄像机透视矩阵。设置 45 度的视图角度，并且设置一个适合实际图像的宽高比。 指定在摄像机距离 0.1 到 100 单位长度的范围内的物体可见。
 
-<p>接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。 </p>
+接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-<p>如果你的浏览器支持 WebGL 的话，<a href="/samples/webgl/sample2">可以点击这里看看 DEMO</a>。完整的源代码从<a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">这里</a>获得</p>
+如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](/samples/webgl/sample2)。完整的源代码从[这里](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2)获得
 
-<h2 id="矩阵通用计算">矩阵通用计算</h2>
+## 矩阵通用计算
 
-<p>矩阵计算是一个很复杂的运算。 没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是<a href="http://glmatrix.net/">glMatrix library</a>.</p>
+矩阵计算是一个很复杂的运算。 没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](http://glmatrix.net/).
 
-<h2 id="相关资料">相关资料</h2>
+## 相关资料
 
-<ul>
- <li><a href="http://mathworld.wolfram.com/Matrix.html">Matrices</a>  线上数学百科全书</li>
- <li><a href="http://en.wikipedia.org/wiki/Matrix_(mathematics)">Matrix</a>  维基百科</li>
-</ul>
+- [Matrices](http://mathworld.wolfram.com/Matrix.html) 线上数学百科全书
+- [Matrix](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) 维基百科
 
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

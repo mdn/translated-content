@@ -2,81 +2,79 @@
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.direction</code></strong> 是 Canvas 2D API 用来在绘制文本时，描述当前文本方向的属性。</p>
+**`CanvasRenderingContext2D.direction`** 是 Canvas 2D API 用来在绘制文本时，描述当前文本方向的属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em>.direction = "ltr" || "rtl" || "inherit";</var>
-</pre>
+```
+ctx.direction = "ltr" || "rtl" || "inherit";
+```
 
-<h3 id="选项">选项</h3>
+### 选项
 
-<p>有效值：</p>
+有效值：
 
-<dl>
- <dt>ltr</dt>
- <dd>文本方向从左向右。</dd>
- <dt>rtl</dt>
- <dd>文本方向从右向左。</dd>
- <dt>inherit</dt>
- <dd>根据情况继承 {{HTMLElement("canvas")}} 元素或者 {{domxref("Document")}} 。</dd>
-</dl>
+- ltr
+  - : 文本方向从左向右。
+- rtl
+  - : 文本方向从右向左。
+- inherit
+  - : 根据情况继承 {{HTMLElement("canvas")}} 元素或者 {{domxref("Document")}} 。
 
-<p>默认值是<code>inherit。</code></p>
+默认值是`inherit。`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_direction_property">使用<code>direction</code> 属性</h3>
+### 使用`direction` 属性
 
-<p>这是一段简单的代码片段，对文本设置不同的 direction 数值。</p>
+这是一段简单的代码片段，对文本设置不同的 direction 数值。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.font = '48px serif';
 ctx.fillText('Hi!', 150, 50);
 ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);</pre>
+ctx.fillText('Hi!', 150, 130);
+```
 
+```html hidden
+<canvas id="canvas" width="550" height="500"></canvas>
+```
 
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="550" height="500"&gt;&lt;/canvas&gt;
-</pre>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.font = '48px serif';
 ctx.fillText('Hi!', 150, 50);
 ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);</pre>
-</div>
+ctx.fillText('Hi!', 150, 130);
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 180) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 180) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.direction")}}</p>
+{{Compat("api.CanvasRenderingContext2D.direction")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.

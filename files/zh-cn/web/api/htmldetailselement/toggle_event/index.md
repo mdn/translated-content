@@ -2,66 +2,51 @@
 title: 'HTMLDetailsElement: toggle event'
 slug: Web/API/HTMLDetailsElement/toggle_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>当{{HtmlElement("details")}}元素<code>打开</code>/<code>关闭</code>状态被切换时，切换事件会触发。</p>
+当{{HtmlElement("details")}}元素`打开`/`关闭`状态被切换时，切换事件会触发。
 
-<table>
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th>Default Action</th>
-   <td>Toggles the <code>open</code> state of the {{HtmlElement("details")}} element.</td>
-  </tr>
- </tbody>
-</table>
+| Bubbles                | No                                                                            |
+| ---------------------- | ----------------------------------------------------------------------------- |
+| Cancelable             | No                                                                            |
+| Interface              | {{DOMxRef("Event")}}                                                  |
+| Event handler property | None                                                                          |
+| Default Action         | Toggles the `open` state of the {{HtmlElement("details")}} element. |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>此示例记录打开的章节。 当章节关闭时，它们将从日志中删除。</p>
+此示例记录打开的章节。 当章节关闭时，它们将从日志中删除。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;aside id="log"&gt;
-  &lt;b&gt;Open chapters:&lt;/b&gt;
-  &lt;div data-id="ch1" hidden&gt;I&lt;/div&gt;
-  &lt;div data-id="ch2" hidden&gt;II&lt;/div&gt;
-  &lt;div data-id="ch3" hidden&gt;III&lt;/div&gt;
-&lt;/aside&gt;
-&lt;section id="summaries"&gt;
-  &lt;b&gt;Chapter summaries:&lt;/b&gt;
-  &lt;details id="ch1"&gt;
-    &lt;summary&gt;Chapter I&lt;/summary&gt;
+```html
+<aside id="log">
+  <b>Open chapters:</b>
+  <div data-id="ch1" hidden>I</div>
+  <div data-id="ch2" hidden>II</div>
+  <div data-id="ch3" hidden>III</div>
+</aside>
+<section id="summaries">
+  <b>Chapter summaries:</b>
+  <details id="ch1">
+    <summary>Chapter I</summary>
     Philosophy reproves Boethius for the foolishness of his complaints against Fortune. Her very nature is caprice.
-  &lt;/details&gt;
-  &lt;details id="ch2"&gt;
-    &lt;summary&gt;Chapter II&lt;/summary&gt;
+  </details>
+  <details id="ch2">
+    <summary>Chapter II</summary>
     Philosophy in Fortune's name replies to Boethius' reproaches, and proves that the gifts of Fortune are hers to give and to take away.
-  &lt;/details&gt;
-  &lt;details id="ch3"&gt;
-    &lt;summary&gt;Chapter III&lt;/summary&gt;
+  </details>
+  <details id="ch3">
+    <summary>Chapter III</summary>
     Boethius falls back upon his present sense of misery. Philosophy reminds him of the brilliancy of his former fortunes.
-  &lt;/details&gt;
-&lt;/section&gt;</pre>
+  </details>
+</section>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -73,28 +58,31 @@ slug: Web/API/HTMLDetailsElement/toggle_event
 
 #summaries {
   flex-grow: 1;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function logItem(e) {
+```js
+function logItem(e) {
   const item = document.querySelector(`[data-id=${e.target.id}]`);
   item.toggleAttribute('hidden');
 }
 
 const chapters = document.querySelectorAll('details');
-chapters.forEach((chapter) =&gt; {
+chapters.forEach((chapter) => {
   chapter.addEventListener('toggle', logItem);
-});</pre>
+});
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例", 700, 200)}}</p>
+{{EmbedLiveSample("示例", 700, 200)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,22 +2,22 @@
 title: 高级动画
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
-<div>{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</div>
+{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
-<div>
-<p>在上一章，我们制作了<a href="/zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations">基本动画</a>以及逐步了解了让物件移动的方法。在这一部分，我们将会对运动有更深的了解并学会添加一些符合物理的运动以让我们的动画更加高级。</p>
-</div>
+在上一章，我们制作了[基本动画](/zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations)以及逐步了解了让物件移动的方法。在这一部分，我们将会对运动有更深的了解并学会添加一些符合物理的运动以让我们的动画更加高级。
 
-<h2 id="绘制小球">绘制小球</h2>
+## 绘制小球
 
-<p>我们将会画一个小球用于动画学习，所以首先在画布上画一个球。下面的代码帮助我们建立画布。</p>
+我们将会画一个小球用于动画学习，所以首先在画布上画一个球。下面的代码帮助我们建立画布。
 
-<pre class="brush: html">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="600" height="300"></canvas>
+```
 
-<p>跟平常一样，我们需要先画一个 context（画布场景）。为了画出这个球，我们又会创建一个包含一些相关属性以及 <code>draw()</code> 函数的 <code>ball</code> 对象，来完成绘制。</p>
+跟平常一样，我们需要先画一个 context（画布场景）。为了画出这个球，我们又会创建一个包含一些相关属性以及 `draw()` 函数的 `ball` 对象，来完成绘制。
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var ball = {
@@ -34,15 +34,17 @@ var ball = {
   }
 };
 
-ball.draw();</pre>
+ball.draw();
+```
 
-<p>这里并没有什么特别的。小球实际上是一个简单的圆形，在{{domxref("CanvasRenderingContext2D.arc()", "arc()")}} 函数的帮助下画出。</p>
+这里并没有什么特别的。小球实际上是一个简单的圆形，在{{domxref("CanvasRenderingContext2D.arc()", "arc()")}} 函数的帮助下画出。
 
-<h2 id="添加速率">添加速率</h2>
+## 添加速率
 
-<p>现在我们有了一个小球，正准备添加一些基本动画，正如我们<a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations">上一章</a>所学的。又是这样，{{domxref("window.requestAnimationFrame()")}} 再一次帮助我们控制动画。小球依旧依靠添加速率矢量进行移动。在每一帧里面，我们依旧用{{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} 清理掉之前帧里旧的圆形。</p>
+现在我们有了一个小球，正准备添加一些基本动画，正如我们[上一章](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations)所学的。又是这样，{{domxref("window.requestAnimationFrame()")}} 再一次帮助我们控制动画。小球依旧依靠添加速率矢量进行移动。在每一帧里面，我们依旧用{{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} 清理掉之前帧里旧的圆形。
 
-<pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -79,27 +81,31 @@ canvas.addEventListener('mouseout', function(e){
 });
 
 ball.draw();
-</pre>
+```
 
-<h2 id="边界">边界  </h2>
+## 边界
 
-<p>若没有任何的碰撞检测，我们的小球很快就会超出画布。我们需要检查小球的 x 和 y 位置是否已经超出画布的尺寸以及是否需要将速度矢量反转。为了这么做，我们把下面的检查代码添加进 <code>draw</code> 函数：</p>
+若没有任何的碰撞检测，我们的小球很快就会超出画布。我们需要检查小球的 x 和 y 位置是否已经超出画布的尺寸以及是否需要将速度矢量反转。为了这么做，我们把下面的检查代码添加进 `draw` 函数：
 
-<pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
+```js
+if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
   ball.vy = -ball.vy;
 }
-if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
+if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
   ball.vx = -ball.vx;
-}</pre>
+}
+```
 
-<h3 id="首个预览">首个预览</h3>
+### 首个预览
 
-<p>让我们看看现今它变得如何。移动你的鼠标到画布里开启动画。</p>
+让我们看看现今它变得如何。移动你的鼠标到画布里开启动画。
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -125,12 +131,12 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy &gt; canvas.height ||
-      ball.y + ball.vy &lt; 0) {
+  if (ball.y + ball.vy > canvas.height ||
+      ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx &gt; canvas.width ||
-      ball.x + ball.vx &lt; 0) {
+  if (ball.x + ball.vx > canvas.width ||
+      ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
@@ -145,26 +151,28 @@ canvas.addEventListener('mouseout', function(e) {
   window.cancelAnimationFrame(raf);
 });
 
-ball.draw();</pre>
-</div>
+ball.draw();
+```
 
-<p>{{EmbedLiveSample("首个预览", "610", "310")}}</p>
+{{EmbedLiveSample("首个预览", "610", "310")}}
 
-<h2 id="加速度">加速度</h2>
+## 加速度
 
-<p>为了让动作更真实，你可以像这样处理速度，例如：</p>
+为了让动作更真实，你可以像这样处理速度，例如：
 
-<pre class="brush: js">ball.vy *= .99;
-ball.vy += .25;</pre>
+```js
+ball.vy *= .99;
+ball.vy += .25;
+```
 
-<p>这会逐帧减少垂直方向的速度，所以小球最终将只会在地板上弹跳。</p>
+这会逐帧减少垂直方向的速度，所以小球最终将只会在地板上弹跳。
 
-<div class="hidden">
-<h6 id="Second_demo">Second demo</h6>
+```html hidden
+<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -192,12 +200,12 @@ function draw() {
   ball.vy *= .99;
   ball.vy += .25;
 
-  if (ball.y + ball.vy &gt; canvas.height ||
-      ball.y + ball.vy &lt; 0) {
+  if (ball.y + ball.vy > canvas.height ||
+      ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx &gt; canvas.width ||
-      ball.x + ball.vx &lt; 0) {
+  if (ball.x + ball.vx > canvas.width ||
+      ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
@@ -212,24 +220,26 @@ canvas.addEventListener('mouseout', function(e){
   window.cancelAnimationFrame(raf);
 });
 
-ball.draw();</pre>
-</div>
+ball.draw();
+```
 
-<p>{{EmbedLiveSample("Second_demo", "610", "310")}}</p>
+{{EmbedLiveSample("Second_demo", "610", "310")}}
 
-<h2 id="长尾效果">长尾效果</h2>
+## 长尾效果
 
-<p>现在，我们使用的是 {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} 函数帮我们清除前一帧动画。若用一个半透明的 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} 函数取代之，就可轻松制作长尾效果。</p>
+现在，我们使用的是 {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} 函数帮我们清除前一帧动画。若用一个半透明的 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} 函数取代之，就可轻松制作长尾效果。
 
-<pre class="brush: js">ctx.fillStyle = 'rgba(255,255,255,0.3)';
-ctx.fillRect(0,0,canvas.width,canvas.height);</pre>
+```js
+ctx.fillStyle = 'rgba(255,255,255,0.3)';
+ctx.fillRect(0,0,canvas.width,canvas.height);
+```
 
-<div class="hidden">
-<h6 id="Third_demo">Third demo</h6>
+```html hidden
+<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -258,12 +268,12 @@ function draw() {
   ball.vy *= .99;
   ball.vy += .25;
 
-  if (ball.y + ball.vy &gt; canvas.height ||
-      ball.y + ball.vy &lt; 0) {
+  if (ball.y + ball.vy > canvas.height ||
+      ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx &gt; canvas.width ||
-      ball.x + ball.vx &lt; 0) {
+  if (ball.x + ball.vx > canvas.width ||
+      ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
@@ -278,20 +288,21 @@ canvas.addEventListener('mouseout', function(e){
   window.cancelAnimationFrame(raf);
 });
 
-ball.draw();</pre>
-</div>
+ball.draw();
+```
 
-<p>{{EmbedLiveSample("Third_demo", "610", "310")}}</p>
+{{EmbedLiveSample("Third_demo", "610", "310")}}
 
-<h2 id="添加鼠标控制">添加鼠标控制</h2>
+## 添加鼠标控制
 
-<p>为了更好地控制小球，我们可以用 <code style="font-style: normal;"><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code>事件让它跟随鼠标活动。下面例子中，<a href="/en-US/docs/Web/Events/click">click</a> 事件会释放小球然后让它重新跳起。</p>
+为了更好地控制小球，我们可以用 [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove)事件让它跟随鼠标活动。下面例子中，[click](/zh-CN/docs/Web/Events/click) 事件会释放小球然后让它重新跳起。
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 var running = false;
@@ -323,10 +334,10 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
@@ -355,21 +366,19 @@ canvas.addEventListener('mouseout', function(e){
 });
 
 ball.draw();
-</pre>
+```
 
-<p>用你的鼠标移动小球，点击可以释放。</p>
+用你的鼠标移动小球，点击可以释放。
 
-<p>{{EmbedLiveSample("添加鼠标控制", "610", "310")}}</p>
+{{EmbedLiveSample("添加鼠标控制", "610", "310")}}
 
-<h2 id="Breakout">Breakout</h2>
+## Breakout
 
-<p>本短文仅仅解释了一小部分的创建高级动画的技巧。其实还有更多！试试添加一个球拍，一些砖块，然后将这个例子弄成一个 <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a>（译者注：打砖块游戏）如何？查看我们的<a href="/en-US/docs/Games">游戏开发</a>区去查阅更多相关文章。</p>
+本短文仅仅解释了一小部分的创建高级动画的技巧。其实还有更多！试试添加一个球拍，一些砖块，然后将这个例子弄成一个 [Breakout](http://en.wikipedia.org/wiki/Breakout_%28video_game%29)（译者注：打砖块游戏）如何？查看我们的[游戏开发](/zh-CN/docs/Games)区去查阅更多相关文章。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("window.requestAnimationFrame()")}}</li>
- <li><a href="/en-US/docs/Games/Techniques/Efficient_animation_for_web_games">网页动画高效开发</a></li>
-</ul>
+- {{domxref("window.requestAnimationFrame()")}}
+- [网页动画高效开发](/zh-CN/docs/Games/Techniques/Efficient_animation_for_web_games)
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

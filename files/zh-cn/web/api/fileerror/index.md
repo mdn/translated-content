@@ -2,73 +2,31 @@
 title: FileError
 slug: Web/API/FileError
 ---
-<p>{{APIRef("File System API")}}</p>
+{{APIRef("File System API")}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>用来表示在使用{{ domxref("FileReader") }}接口时发生的错误。</p>
+用来表示在使用{{ domxref("FileReader") }}接口时发生的错误。
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<table>
- <tbody>
-  <tr>
-   <td class="header">属性名</td>
-   <td class="header">类型</td>
-   <td class="header">描述</td>
-  </tr>
-  <tr>
-   <td><code>code</code></td>
-   <td><code>unsigned short</code></td>
-   <td>The <a href="/zh-cn/nsIDOMFileError#Error_codes">error code</a>.</td>
-  </tr>
- </tbody>
-</table>
+| 属性名 | 类型             | 描述                                                  |
+| ------ | ---------------- | ----------------------------------------------------- |
+| `code` | `unsigned short` | The [error code](/zh-cn/nsIDOMFileError#Error_codes). |
 
-<h2 id="Error_codes">Error codes</h2>
+## Error codes
 
-<table>
- <thead>
-  <tr>
-   <td class="header">常量</td>
-   <td class="header">值</td>
-   <td class="header">描述</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>ABORT_ERR</code></td>
-   <td>3</td>
-   <td>文件的操作命令被取消，可能是由于调用了<code>FileReader</code>的<code>abort()方法</code>.</td>
-  </tr>
-  <tr>
-   <td><code>ENCODING_ERR</code></td>
-   <td>5</td>
-   <td>文件数据不能准确的被表示为一个 data URI.</td>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>1</td>
-   <td>找不到文件。</td>
-  </tr>
-  <tr>
-   <td><code>NOT_READABLE_ERR</code></td>
-   <td>4</td>
-   <td>文件无法被读取。</td>
-  </tr>
-  <tr>
-   <td><code>SECURITY_ERR</code></td>
-   <td>2</td>
-   <td>由于安全原因，文件不能被访问。</td>
-  </tr>
- </tbody>
-</table>
+| 常量               | 值  | 描述                                                               |
+| ------------------ | --- | ------------------------------------------------------------------ |
+| `ABORT_ERR`        | 3   | 文件的操作命令被取消，可能是由于调用了`FileReader`的`abort()方法`. |
+| `ENCODING_ERR`     | 5   | 文件数据不能准确的被表示为一个 data URI.                           |
+| `NOT_FOUND_ERR`    | 1   | 找不到文件。                                                       |
+| `NOT_READABLE_ERR` | 4   | 文件无法被读取。                                                   |
+| `SECURITY_ERR`     | 2   | 由于安全原因，文件不能被访问。                                     |
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ domxref("FileReader") }}</li>
- <li>{{ domxref("File") }}</li>
- <li>{{ domxref("Blob") }}</li>
- <li><a href="https://www.w3.org/TR/FileAPI/#FileErrorInterface">Specification: FileAPI FileError</a></li>
-</ul>
+- {{ domxref("FileReader") }}
+- {{ domxref("File") }}
+- {{ domxref("Blob") }}
+- [Specification: FileAPI FileError](https://www.w3.org/TR/FileAPI/#FileErrorInterface)

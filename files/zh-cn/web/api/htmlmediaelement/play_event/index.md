@@ -2,103 +2,106 @@
 title: 'HTMLMediaElement: play event'
 slug: Web/API/HTMLMediaElement/play_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p>当 <code>paused</code> 属性由 <code>true</code> 转换为 <code>false</code> 时触发 <code>play</code> 事件，事件触发原因一般为 <code>play()</code> 方法调用，或者 <code>autoplay</code> 标签设置。</p>
+当 `paused` 属性由 `true` 转换为 `false` 时触发 `play` 事件，事件触发原因一般为 `play()` 方法调用，或者 `autoplay` 标签设置。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Target</th>
-   <td>Element</td>
-  </tr>
-  <tr>
-   <th scope="row">Default Action</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onplay")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Specification</th>
-   <td><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Target</th>
+      <td>Element</td>
+    </tr>
+    <tr>
+      <th scope="row">Default Action</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.onplay")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Specification</th>
+      <td>
+        <a
+          href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
+          >HTML5 media</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>下方的例子监听了 HTMLMediaElement 标签的 <code>play</code> 事件，并且在事件触发后在控制台打印相应的信息。</p>
+下方的例子监听了 HTMLMediaElement 标签的 `play` 事件，并且在事件触发后在控制台打印相应的信息。
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.addEventListener('play', (event) =&gt; {
+video.addEventListener('play', (event) => {
   console.log('The Boolean paused property is now false. Either the ' +
   'play() method was called or the autoplay attribute was toggled.');
-});</pre>
+});
+```
 
-<p>Using the <code>onplay</code> event handler property:</p>
+Using the `onplay` event handler property:
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.onplay = (event) =&gt; {
+video.onplay = (event) => {
   console.log('The Boolean paused property is now false. Either the ' +
   'play() method was called or the autoplay attribute was toggled.');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.HTMLMediaElement.play_event")}}
 
+## Related Events
 
-<p>{{Compat("api.HTMLMediaElement.play_event")}}</p>
+- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
+- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
+- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
+- {{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}
+- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}
+- {{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}
+- {{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}
+- {{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}
+- {{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}
+- {{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}
+- {{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}
+- {{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}
+- {{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}
+- {{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}
+- {{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}
+- {{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}
 
-<h2 id="Related_Events">Related Events</h2>
+## See Also
 
-<ul>
- <li>{{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}</li>
- <li>{{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}</li>
- <li>{{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}</li>
- <li>{{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}</li>
- <li>{{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}</li>
- <li>{{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}</li>
- <li>{{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}</li>
- <li>{{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}</li>
- <li>{{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}</li>
- <li>{{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}</li>
- <li>{{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}</li>
- <li>{{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}</li>
- <li>{{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}</li>
- <li>{{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}</li>
- <li>{{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}</li>
- <li>{{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}</li>
- <li>{{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}</li>
- <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}</li>
-</ul>
-
-<h2 id="See_Also">See Also</h2>
-
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

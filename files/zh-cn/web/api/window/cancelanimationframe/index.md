@@ -2,27 +2,27 @@
 title: window.cancelAnimationFrame
 slug: Web/API/Window/cancelAnimationFrame
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>取消一个先前通过调用{{ domxref("window.requestAnimationFrame()") }}方法添加到计划中的动画帧请求。</p>
+取消一个先前通过调用{{ domxref("window.requestAnimationFrame()") }}方法添加到计划中的动画帧请求。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="eval">window.mozCancelAnimationFrame(<em>requestID</em>);               // Firefox
-</pre>
+```
+window.mozCancelAnimationFrame(requestID);               // Firefox
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>requestID</code></dt>
- <dd>先前调用{{ domxref("window.requestAnimationFrame()") }}方法时返回的 ID.</dd>
-</dl>
+- `requestID`
+  - : 先前调用{{ domxref("window.requestAnimationFrame()") }}方法时返回的 ID.
 
-<h2 id="Notes">示例</h2>
+## 示例
 
-<pre class="deki-transform">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+```
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
@@ -33,26 +33,24 @@ var myReq;
 function step(timestamp) {
   var progress = timestamp - start;
   d.style.left = Math.min(progress/10, 200) + "px";
-  if (progress &lt; 2000) {
+  if (progress < 2000) {
     myReq = requestAnimationFrame(step);
   }
 }
 myReq = requestAnimationFrame(step);
 
 window.cancelAnimationFrame(myReq);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ domxref("window.mozAnimationStartTime") }}</li>
- <li>{{ domxref("window.requestAnimationFrame()") }}</li>
-</ul>
+- {{ domxref("window.mozAnimationStartTime") }}
+- {{ domxref("window.requestAnimationFrame()") }}

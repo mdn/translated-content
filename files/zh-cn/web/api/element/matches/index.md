@@ -2,66 +2,63 @@
 title: Element.matches()
 slug: Web/API/Element/matches
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>如果元素被指定的选择器字符串选择，<strong><code>Element.matches()</code></strong>  方法返回 true; 否则返回 false。</p>
+如果元素被指定的选择器字符串选择，**`Element.matches()`** 方法返回 true; 否则返回 false。
 
-<div class="warning">
-<p>有一些浏览器使用前缀，在非标准名称  matchesSelector () 下实现了这个方法！</p>
-</div>
+> **警告：** 有一些浏览器使用前缀，在非标准名称 matchesSelector () 下实现了这个方法！
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>let result</em> = <em>element.matches(selectorString);</em>
-</pre>
+```
+let result = element.matches(selectorString);
+```
 
-<ul>
- <li><code>result</code> 的值为 <code>true</code> 或 <code>false</code>.</li>
- <li><code>selectorString</code> 是个 css 选择器字符串。</li>
+- `result` 的值为 `true` 或 `false`.
+- `selectorString` 是个 css 选择器字符串。
+
+## 例子
+
+```html
+<ul id="birds">
+  <li>Orange-winged parrot</li>
+  <li class="endangered">Philippine eagle</li>
+  <li>Great white pelican</li>
 </ul>
 
-<h2 id="Example">例子</h2>
-
-<pre class="brush: html"><code>&lt;ul id="birds"&gt;
-  &lt;li&gt;Orange-winged parrot&lt;/li&gt;
-  &lt;li class="endangered"&gt;Philippine eagle&lt;/li&gt;
-  &lt;li&gt;Great white pelican&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var birds = document.getElementsByTagName('li');
 
-  for (var i = 0; i &lt; birds.length; i++) {
+  for (var i = 0; i < birds.length; i++) {
     if (birds[i].matches('.endangered')) {
       console.log('The ' + birds[i].textContent + ' is endangered!');
     }
   }
-&lt;/script&gt;</code></pre>
+</script>
+```
 
-<pre class="brush: js">
-&lt;div id="foo"&gt;This is the element!&lt;/div&gt;
-  &lt;script type="text/javascript"&gt;
+```js
+<div id="foo">This is the element!</div>
+  <script type="text/javascript">
     var el = document.getElementById("foo");
     if (el.mozMatchesSelector("div")) {
       alert("Match!");
     }
-  &lt;/script&gt;
-</pre>
+  </script>
+```
 
-<p>会显示弹出框，因为"div"选择器可以选择到 el 元素。</p>
+会显示弹出框，因为"div"选择器可以选择到 el 元素。
 
-<h2 id="异常">异常</h2>
+## 异常
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>如果给定的 css 选择器无效。在 Gecko 2.0 之前，该方法会返回<code>false,2.0 之后</code>,会直接抛出异常。</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : 如果给定的 css 选择器无效。在 Gecko 2.0 之前，该方法会返回`false,2.0 之后`,会直接抛出异常。
 
-<h2 id="替代方案(Polyfill)">替代方案 (Polyfill)</h2>
+## 替代方案 (Polyfill)
 
-<p>对于不支持 <code style="font-style: normal;">Element.matches()</code> 或<code>Element.matchesSelector()，但支持</code>document.querySelectorAll() 方法的<code>浏览器，存在以下替代方案</code></p>
+对于不支持 `Element.matches()` 或`Element.matchesSelector()，但支持`document.querySelectorAll() 方法的`浏览器，存在以下替代方案`
 
-<pre class="brush: js">
+```js
 if (!Element.prototype.matches) {
     Element.prototype.matches =
         Element.prototype.matchesSelector ||
@@ -72,26 +69,21 @@ if (!Element.prototype.matches) {
         function(s) {
             var matches = (this.document || this.ownerDocument).querySelectorAll(s),
                 i = matches.length;
-            while (--i &gt;= 0 &amp;&amp; matches.item(i) !== this) {}
-            return i &gt; -1;
+            while (--i >= 0 && matches.item(i) !== this) {}
+            return i > -1;
         };
-}</pre>
+}
+```
 
-<blockquote>
-<p>关于 Polyfill 的补充：</p>
+> 关于 Polyfill 的补充：
+>
+> - [Polyfill Wikipedia](http://en.wikipedia.org/wiki/Polyfill)
+> - [What are Polyfills in Javascript ?](http://www.moreonfew.com/what-are-polyfills-in-javascript/)
 
-<ul>
- <li><a href="http://en.wikipedia.org/wiki/Polyfill">Polyfill Wikipedia</a></li>
- <li><a href="http://www.moreonfew.com/what-are-polyfills-in-javascript/">What are Polyfills in Javascript ?</a></li>
-</ul>
-</blockquote>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Element.matches")}}</p>
+{{Compat("api.Element.matches")}}

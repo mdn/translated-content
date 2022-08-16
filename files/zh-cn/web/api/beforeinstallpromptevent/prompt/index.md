@@ -2,27 +2,30 @@
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 ---
-<p>{{APIRef("")}}</p>
+{{APIRef("")}}
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>{{domxref("BeforeInstallPromptEvent")}} 接口的 <strong><code>prompt()</code></strong>方法允许一个开发人员在自己选择的一个时间显示安装提示。</p>
+{{domxref("BeforeInstallPromptEvent")}} 接口的 **`prompt()`**方法允许一个开发人员在自己选择的一个时间显示安装提示。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">BeforeInstallPromptEvent.prompt()</pre>
+```
+BeforeInstallPromptEvent.prompt()
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无</p>
+无
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>一个空的 {{jsxref("Promise")}}.</p>
+一个空的 {{jsxref("Promise")}}.
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<pre>let isTooSoon = true;
+```
+let isTooSoon = true;
 window.addEventListener("beforeinstallprompt", function(e) {
   if (isTooSoon) {
     e.preventDefault(); // Prevents prompt display
@@ -35,14 +38,13 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
   // The event was re-dispatched in response to our request
   // ...
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<article id="wikiArticle">
-<p>This method is not part of a specification.</p>
-</article>
+This method is not part of a specification.
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BeforeInstallPromptEvent.prompt")}}

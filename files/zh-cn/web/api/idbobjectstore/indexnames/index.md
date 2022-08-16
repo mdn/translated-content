@@ -2,31 +2,32 @@
 title: IDBObjectStore.indexNames
 slug: Web/API/IDBObjectStore/indexNames
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-<p>{{domxref("IDBObjectStore")}} 的只读属性 <strong><code>indexNames</code></strong> 返回此对象存储中对象的 <a href="https://developer.mozilla.org/en/IndexedDB#gloss_index">indexes</a> 名称（name）列表。</p>
+{{domxref("IDBObjectStore")}} 的只读属性 **`indexNames`** 返回此对象存储中对象的 [indexes](https://developer.mozilla.org/en/IndexedDB#gloss_index) 名称（name）列表。
 
-<p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>myindexNames</em> = <em>objectStore</em>.indexNames;</pre>
+```
+var myindexNames = objectStore.indexNames;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>一个 {{domxref("DOMStringList")}}.</p>
+一个 {{domxref("DOMStringList")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 <code>add()</code> 向对象存储添加一些数据。创建对象存储后，我们将打印 <code>objectStore.indexNames</code> 到控制台。有关完整的工作示例，请参阅我们的 <a href="https://github.com/mdn/to-do-notifications/">待办事项通知</a>应用程序 ( <a href="http://mdn.github.io/to-do-notifications/">实时查看示例</a> )</p>
+在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 `add()` 向对象存储添加一些数据。创建对象存储后，我们将打印 `objectStore.indexNames` 到控制台。有关完整的工作示例，请参阅我们的 [待办事项通知](https://github.com/mdn/to-do-notifications/)应用程序 ( [实时查看示例](http://mdn.github.io/to-do-notifications/) )
 
-<pre class="brush: js" style="font-size: 14px;">// 让我们来打开我们的数据库
+```js
+// 让我们来打开我们的数据库
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // 将打开数据库的结果存储在 db 变量中
   // 下面经常用到这个
@@ -45,12 +46,12 @@ function addData() {
 
   // 当所有事情都完成时，报告事务完成的成功情况
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction completed.</li>';
   };
 
 
   transaction.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
+  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // 在事务上创建对象存储
@@ -62,30 +63,25 @@ function addData() {
 
   objectStoreRequest.onsuccess = function(event) {
     // 报告我们请求的成功
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+    note.innerHTML += '<li>Request successful.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.IDBObjectStore.indexNames")}}
 
+## 查看其它内容
 
-<p>{{Compat("api.IDBObjectStore.indexNames")}}</p>
-</div>
-
-<h2 id="查看其它内容">查看其它内容</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">使用 IndexedDB</a></li>
- <li>启动事务 : {{domxref("IDBDatabase")}}</li>
- <li>使用事务 : {{domxref("IDBTransaction")}}</li>
- <li>设置键的范围 : {{domxref("IDBKeyRange")}}</li>
- <li>检索和更改数据 : {{domxref("IDBObjectStore")}}</li>
- <li>使用游标 : {{domxref("IDBCursor")}}</li>
- <li>参考示例 : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- 启动事务 : {{domxref("IDBDatabase")}}
+- 使用事务 : {{domxref("IDBTransaction")}}
+- 设置键的范围 : {{domxref("IDBKeyRange")}}
+- 检索和更改数据 : {{domxref("IDBObjectStore")}}
+- 使用游标 : {{domxref("IDBCursor")}}
+- 参考示例 : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

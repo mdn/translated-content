@@ -2,50 +2,45 @@
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>The <strong><code>RTCPeerConnection.setConfiguration()</code></strong> method sets the current configuration of the {{domxref("RTCPeerConnection")}} based on the values included in the specified {{domxref("RTCConfiguration")}} object. This lets you change the ICE servers used by the connection and which transport policies to use.</p>
+The **`RTCPeerConnection.setConfiguration()`** method sets the current configuration of the {{domxref("RTCPeerConnection")}} based on the values included in the specified {{domxref("RTCConfiguration")}} object. This lets you change the ICE servers used by the connection and which transport policies to use.
 
-<p>The most common use case for this method (and even then, probably not a very common use case) is to replace the set of ICE servers to be used. Two potential scenarios in which this might be done:</p>
+The most common use case for this method (and even then, probably not a very common use case) is to replace the set of ICE servers to be used. Two potential scenarios in which this might be done:
 
-<ul>
- <li>The {{domxref("RTCPeerConnection")}} was instantiated without specifying any ICE servers. If, for example, the {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} constructor was called with no parameters, you would have to then call <code>setConfiguration()</code> to add ICE servers before ICE negotiation could begin.</li>
- <li>Renegotiation of the connection is needed, and a different set of ICE servers needs to be used for some reason. Perhaps the user has moved into a new region, so using new regional ICE servers is necessary, for example. In this situation, one might call <code>setConfiguration()</code> to switch to new regional ICE servers, then initiate an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.</li>
-</ul>
+- The {{domxref("RTCPeerConnection")}} was instantiated without specifying any ICE servers. If, for example, the {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} constructor was called with no parameters, you would have to then call `setConfiguration()` to add ICE servers before ICE negotiation could begin.
+- Renegotiation of the connection is needed, and a different set of ICE servers needs to be used for some reason. Perhaps the user has moved into a new region, so using new regional ICE servers is necessary, for example. In this situation, one might call `setConfiguration()` to switch to new regional ICE servers, then initiate an [ICE restart](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart).
 
-<div class="note">
-<p>You cannot change the identity information for a connection once it's already been set.</p>
-</div>
+> **备注：** You cannot change the identity information for a connection once it's already been set.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>RTCPeerConnection</em>.setConfiguration(<em>configuration</em>);</pre>
+```
+RTCPeerConnection.setConfiguration(configuration);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>configuration</code></dt>
- <dd>{{domxref("RTCConfiguration")}}对象提供一些可以设置的选项。这些选项的改动不会附加到原来的设置，相反，新的选项会完全替代旧的选项。</dd>
-</dl>
+- `configuration`
+  - : {{domxref("RTCConfiguration")}}对象提供一些可以设置的选项。这些选项的改动不会附加到原来的设置，相反，新的选项会完全替代旧的选项。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt><code>InvalidAccessError</code></dt>
- <dd>One or more of the URLs specified in <code>configuration.iceServers</code> is a {{Glossary("TURN")}} server, but complete login information is not provided (that is, either the {{domxref("RTCIceServer.username")}} or {{domxref("RTCIceServer.credentials")}} is missing). This prevents successful login to the server.</dd>
- <dt><code>InvalidModificationError</code></dt>
- <dd>The <code>configuration</code> includes changed identity information, but the connection already has identity information specified. This happens if <code>configuration.peerIdentity</code> or <code>configuration.certificates</code> is set and their values differ from the current configuration.</dd>
- <dt><code>InvalidStateError</code></dt>
- <dd>{{domxref("RTCPeerConnection")}} 被关闭。</dd>
- <dt><code>SyntaxError</code></dt>
- <dd><code>configuration.iceServers</code> 列表提供的一个或多个 URL 是无效的</dd>
-</dl>
+- `InvalidAccessError`
+  - : One or more of the URLs specified in `configuration.iceServers` is a {{Glossary("TURN")}} server, but complete login information is not provided (that is, either the {{domxref("RTCIceServer.username")}} or {{domxref("RTCIceServer.credentials")}} is missing). This prevents successful login to the server.
+- `InvalidModificationError`
+  - : The `configuration` includes changed identity information, but the connection already has identity information specified. This happens if `configuration.peerIdentity` or `configuration.certificates` is set and their values differ from the current configuration.
+- `InvalidStateError`
+  - : {{domxref("RTCPeerConnection")}} 被关闭。
+- `SyntaxError`
+  - : `configuration.iceServers` 列表提供的一个或多个 URL 是无效的
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.</p>
+In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.
 
-<pre class="brush: js notranslate">var restartConfig = { iceServers: [{
+```js
+var restartConfig = { iceServers: [{
                           urls: "turn:asia.myturnserver.net",
                           username: "allie@oopcode.com",
                           credential: "topsecretpassword"
@@ -60,26 +55,21 @@ myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
 .then(function() {
   // send the offer to the other peer using the signaling server
 })
-.catch(reportError);</pre>
+.catch(reportError);
+```
 
-<p>First, a new {{domxref("RTCConfiguration")}} is created, <code>restartConfig</code>, specifying the new ICE server and its credentials. This is then passed into <code>setConfiguration()</code>. ICE negotiation is restarted by calling {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}, specifying <code>true</code> as the value of the <code>iceRestart</code> option. From there, we handle the process as usual, by setting the local description to the returned offer and then sending that offer to the other peer.</p>
+First, a new {{domxref("RTCConfiguration")}} is created, `restartConfig`, specifying the new ICE server and its credentials. This is then passed into `setConfiguration()`. ICE negotiation is restarted by calling {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}, specifying `true` as the value of the `iceRestart` option. From there, we handle the process as usual, by setting the local description to the returned offer and then sending that offer to the other peer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.RTCPeerConnection.setConfiguration")}}
 
+## See also
 
-<p>{{Compat("api.RTCPeerConnection.setConfiguration")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("RTCPeerConnection.getConfiguration()")}}</li>
- <li>{{domxref("RTCConfiguration")}}</li>
- <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- {{domxref("RTCPeerConnection.getConfiguration()")}}
+- {{domxref("RTCConfiguration")}}
+- {{domxref("RTCPeerConnection")}}

@@ -2,48 +2,45 @@
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>{{domxref("CustomElementRegistry")}}接口的<code><strong>define()</strong></code>方法定义了一个自定义元素。</p>
+{{domxref("CustomElementRegistry")}}接口的**`define()`**方法定义了一个自定义元素。
 
-<p>你可以创建两种类型的自定义元素：</p>
+你可以创建两种类型的自定义元素：
 
-<ul>
- <li><strong>自主定制元素</strong>：独立元素; 它们不会从内置 HTML 元素继承。</li>
- <li><strong>自定义内置元素</strong>：这些元素继承自 - 并扩展 - 内置 HTML 元素</li>
-</ul>
+- **自主定制元素**：独立元素; 它们不会从内置 HTML 元素继承。
+- **自定义内置元素**：这些元素继承自 - 并扩展 - 内置 HTML 元素
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">customElements.define(<em>name</em>, <em>constructor</em>, <em>options</em>);
-</pre>
+```
+customElements.define(name, constructor, options);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name</dt>
- <dd>自定义元素名。</dd>
- <dt>constructor</dt>
- <dd>自定义元素构造器。</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>控制元素如何定义。目前有一个选项支持：
- <ul>
-  <li><code>extends</code>. 指定继承的已创建的元素。被用于创建自定义元素。</li>
- </ul>
- </dd>
-</dl>
+- name
+  - : 自定义元素名。
+- constructor
+  - : 自定义元素构造器。
+- options {{optional_inline}}
 
-<h3 id="返回值">返回值</h3>
+  - : 控制元素如何定义。目前有一个选项支持：
 
-<p>空</p>
+    - `extends`. 指定继承的已创建的元素。被用于创建自定义元素。
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<h3 id="自主定制元素">自主定制元素</h3>
+空
 
-<p>以下代码取自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a> 示例 (<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">see it live also</a>)。</p>
+## 示例
 
-<pre class="brush: js">// Create a class for the element
+### 自主定制元素
+
+以下代码取自我们的 [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) 示例 ([see it live also](https://mdn.github.io/web-components-examples/popup-info-box-web-component/))。
+
+```js
+// Create a class for the element
 class PopUpInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
@@ -117,21 +114,23 @@ class PopUpInfo extends HTMLElement {
 }
 
 // Define the new element
-customElements.define('popup-info', PopUpInfo);</pre>
+customElements.define('popup-info', PopUpInfo);
+```
 
-<pre><code>&lt;popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
+```html
+<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card."&gt;</code></pre>
+                                    numbers on the back of your card.">
+```
 
-<div class="note">
-<p><strong>注意</strong>：自主自定义元素的构造函数必须扩展{{domxref("HTMLElement")}}。</p>
-</div>
+> **备注：** 自主自定义元素的构造函数必须扩展{{domxref("HTMLElement")}}。
 
-<h3 id="自定义内置元素">自定义内置元素</h3>
+### 自定义内置元素
 
-<p>以下代码取自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 实例 (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">查看实例效果</a>).</p>
+以下代码取自我们的 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) 实例 ([查看实例效果](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -168,15 +167,17 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: html"><code>&lt;p is="word-count"&gt;&lt;/p&gt;</code>
-</pre>
+```html
+<p is="word-count"></p>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.CustomElementRegistry.define")}}</p>
+{{Compat("api.CustomElementRegistry.define")}}

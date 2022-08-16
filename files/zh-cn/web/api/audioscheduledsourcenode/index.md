@@ -2,55 +2,41 @@
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p><code>AudioScheduledSourceNode</code> 接口作为 web 音频 API 的一部分，是几种具有在特定时刻开始与停止能力的音频源节点接口的父接口。更具体地来说，这个接口定义了{{domxref("AudioScheduledSourceNode.start", "start()")}} 和{{domxref("AudioScheduledSourceNode.stop", "stop()")}} 方法，以及{{domxref("AudioScheduledSourceNode.onended", "onended")}}事件</p>
+`AudioScheduledSourceNode` 接口作为 web 音频 API 的一部分，是几种具有在特定时刻开始与停止能力的音频源节点接口的父接口。更具体地来说，这个接口定义了{{domxref("AudioScheduledSourceNode.start", "start()")}} 和{{domxref("AudioScheduledSourceNode.stop", "stop()")}} 方法，以及{{domxref("AudioScheduledSourceNode.onended", "onended")}}事件
 
+> **备注：** 你不能直接创建`AudioScheduledSourceNode`。而是应该使用继承于它的子接口，如{{domxref("AudioBufferSourceNode")}}, {{domxref("OscillatorNode")}}和{{domxref("ConstantSourceNode")}}.
 
+除非另有说明，基于`AudioScheduledSourceNode`节点的输出在没有播放时处于静默状态（这种状态在 start() 之前与 stop() 之后调用）。静默状态总是由一个全 0 值流组成。
 
-<div class="note">
-<p>你不能直接创建<code>AudioScheduledSourceNode</code>。而是应该使用继承于它的子接口，如{{domxref("AudioBufferSourceNode")}}, {{domxref("OscillatorNode")}}和{{domxref("ConstantSourceNode")}}.</p>
-</div>
+## Properties
 
-<p>除非另有说明，基于<code>AudioScheduledSourceNode</code>节点的输出在没有播放时处于静默状态（这种状态在 start() 之前与 stop() 之后调用）。静默状态总是由一个全 0 值流组成。</p>
+_Inherits properties from its parent interface, {{domxref("AudioNode")}}, and adds the following properties:_
 
-<h2 id="Properties">Properties</h2>
+### Event handlers
 
-<p><em>Inherits properties from its parent interface, {{domxref("AudioNode")}}, and adds the following properties:</em></p>
+- {{domxref("AudioScheduledSourceNode.onended", "onended")}}
+  - : A function to be called when the {{event("ended")}} event is fired, indicating that the node has finished playing.
 
-<h3 id="Event_handlers">Event handlers</h3>
+## Methods
 
-<dl>
- <dt>{{domxref("AudioScheduledSourceNode.onended", "onended")}}</dt>
- <dd>A function to be called when the {{event("ended")}} event is fired, indicating that the node has finished playing.</dd>
-</dl>
+_Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:_
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("AudioScheduledSourceNode.start", "start()")}}
+  - : Schedules the node to begin playing the constant sound at the specified time. If no time is specified, the node begins playing immediately.
+- {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
+  - : Schedules the node to stop playing at the specified time. If no time is specified, the node stops playing at once.
 
-<p><em>Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:</em></p>
-
-<dl>
- <dt>{{domxref("AudioScheduledSourceNode.start", "start()")}}</dt>
- <dd>Schedules the node to begin playing the constant sound at the specified time. If no time is specified, the node begins playing immediately.</dd>
- <dt>{{domxref("AudioScheduledSourceNode.stop", "stop()")}}</dt>
- <dd>Schedules the node to stop playing at the specified time. If no time is specified, the node stops playing at once.</dd>
-</dl>
-
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.AudioScheduledSourceNode")}}
 
+## See also
 
-<p>{{Compat("api.AudioScheduledSourceNode")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li>{{domxref("AudioNode")}}</li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioNode")}}

@@ -2,49 +2,50 @@
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><strong><code>Element.scrollLeft</code></strong> 属性可以读取或设置元素滚动条到元素左边的距离。</p>
+**`Element.scrollLeft`** 属性可以读取或设置元素滚动条到元素左边的距离。
 
-<p>注意如果这个元素的内容排列方向（{{cssxref("direction")}}）是<code>rtl</code> (right-to-left) ，那么滚动条会位于最右侧（内容开始处），并且<code>scrollLeft</code>值为 0。此时，当你从右到左拖动滚动条时，scrollLeft 会从 0 变为负数。</p>
+注意如果这个元素的内容排列方向（{{cssxref("direction")}}）是`rtl` (right-to-left) ，那么滚动条会位于最右侧（内容开始处），并且`scrollLeft`值为 0。此时，当你从右到左拖动滚动条时，scrollLeft 会从 0 变为负数。
 
-<div class="blockIndicator warning">
-<p>在使用显示比例缩放的系统上，<code>scrollLeft</code> 可能会是一个小数。</p>
+> **警告：** 在使用显示比例缩放的系统上，`scrollLeft` 可能会是一个小数。
+
+## 语法
+
+```
+//获取滚动条到元素左边的距离
+var sLeft = element.scrollLeft;
+```
+
+`sLeft`是一个整数，代表元素滚动条距离元素左边多少像素。
+
+```
+//设置滚动条滚动了多少像素
+element.scrollLeft = 10;
+```
+
+`scrollLeft` 可以是任意整数，然而：
+
+- 如果元素不能滚动（比如：元素没有溢出），那么`scrollLeft` 的值是 0。
+- 如果给`scrollLeft` 设置的值小于 0，那么`scrollLeft` 的值将变为 0。
+- 如果给`scrollLeft` 设置的值大于元素内容最大宽度，那么`scrollLeft` 的值将被设为元素最大宽度。
+
+## 示例
+
+### HTML
+
+```html
+<div id="container">
+  <div id="content">Click the button to slide right!</div>
 </div>
 
-<h2 id="Syntax_and_values">语法</h2>
+<button id="slide" type="button">Slide right</button>
+```
 
-<pre class="eval">//获取滚动条到元素左边的距离
-var <var>sLeft</var> = <var>element</var>.scrollLeft;
-</pre>
+### CSS
 
-<p><code>sLeft</code>是一个整数，代表元素滚动条距离元素左边多少像素。</p>
-
-<pre class="eval">//设置滚动条滚动了多少像素
-<var>element</var>.scrollLeft = 10;
-</pre>
-
-<p><code>scrollLeft</code> 可以是任意整数，然而：</p>
-
-<ul>
- <li>如果元素不能滚动（比如：元素没有溢出），那么<code>scrollLeft</code> 的值是 0。</li>
- <li>如果给<code>scrollLeft</code> 设置的值小于 0，那么<code>scrollLeft</code> 的值将变为 0。</li>
- <li>如果给<code>scrollLeft</code> 设置的值大于元素内容最大宽度，那么<code>scrollLeft</code> 的值将被设为元素最大宽度。</li>
-</ul>
-
-<h2 id="示例">示例</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div id="content"&gt;Click the button to slide right!&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;button id="slide" type="button"&gt;Slide right&lt;/button&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#container {
+```css
+#container {
   width: 100px;
   height: 100px;
   border: 1px solid #ccc;
@@ -54,32 +55,33 @@ var <var>sLeft</var> = <var>element</var>.scrollLeft;
 #content {
   width: 250px;
   background-color: #ccc;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const button = document.getElementById('slide');
+```js
+const button = document.getElementById('slide');
 
 button.onclick = function () {
   document.getElementById('container').scrollLeft += 20;
-};</pre>
+};
+```
 
-<h3 id="结构">结构</h3>
+### 结构
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.Element.scrollLeft")}}</p>
+{{Compat("api.Element.scrollLeft")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx">MSDN's Measuring Element Dimension and Location</a></li>
- <li>{{domxref("Element.scrollTop")}}</li>
- <li>{{domxref("Element.scrollTo()")}}</li>
-</ul>
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx>)
+- {{domxref("Element.scrollTop")}}
+- {{domxref("Element.scrollTo()")}}

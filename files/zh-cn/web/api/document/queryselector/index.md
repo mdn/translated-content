@@ -2,56 +2,51 @@
 title: document.querySelector()
 slug: Web/API/Document/querySelector
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>文档对象模型{{domxref("Document")}}引用的<code><strong>querySelector()</strong></code>方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回<code>null</code>。</p>
+文档对象模型{{domxref("Document")}}引用的**`querySelector()`**方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回`null`。
 
-<div class="note">
-<p><strong>提示</strong>: 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。</p>
-</div>
+> **备注：** 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js notranslate">element = document.querySelector(selectors);</pre>
+```js
+element = document.querySelector(selectors);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>selectors</code></dt>
- <dd>包含一个或多个要匹配的选择器的 DOM 字符串{{domxref("DOMString")}}。 该字符串必须是有效的 CSS 选择器字符串；如果不是，则引发<code>SYNTAX_ERR</code>异常。请参阅<a href="/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">使用选择器定位 DOM 元素</a>以获取有关选择器以及如何管理它们的更多信息。</dd>
-</dl>
+- `selectors`
+  - : 包含一个或多个要匹配的选择器的 DOM 字符串{{domxref("DOMString")}}。 该字符串必须是有效的 CSS 选择器字符串；如果不是，则引发`SYNTAX_ERR`异常。请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)以获取有关选择器以及如何管理它们的更多信息。
 
-<div class="note">
-<p><strong>提示：</strong>必须使用反斜杠字符转义不属于标准 CSS 语法的字符。 由于 JavaScript 也使用退格转义，因此在使用这些字符编写字符串文字时必须特别小心。 有关详细信息，请参阅<a href="#转义特殊字符">转义特殊字符</a>。</p>
-</div>
+> **备注：** 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。 由于 JavaScript 也使用退格转义，因此在使用这些字符编写字符串文字时必须特别小心。 有关详细信息，请参阅[转义特殊字符](#转义特殊字符)。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。</p>
+表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。
 
-<p>如果您需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。</p>
+如果您需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>指定<code>selectors</code>的语法无效。</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : 指定`selectors`的语法无效。
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>如果选择器是一个 ID，并且这个 ID 在文档中错误地使用了多次，那么返回第一个匹配该 ID 的元素。</p>
+如果选择器是一个 ID，并且这个 ID 在文档中错误地使用了多次，那么返回第一个匹配该 ID 的元素。
 
-<p>CSS 伪类不会返回任何元素，见 <a href="https://www.w3.org/TR/selectors-api/#grammar">Selectors API</a> 中的相关规定。</p>
+CSS 伪类不会返回任何元素，见 [Selectors API](https://www.w3.org/TR/selectors-api/#grammar) 中的相关规定。
 
-<h3 id="转义特殊字符">转义特殊字符</h3>
+### 转义特殊字符
 
-<p>如果要匹配的 ID 或选择器不符合 CSS 语法（比如不恰当地使用了冒号或者空格），你必须用反斜杠将这些字符转义。由于 JavaScript 中，反斜杠是转义字符，所以当你输入一个文本串时，你必须将它转义两次（一次是为 JavaScript 字符串转义，另一次是为 <code>querySelector</code> 转义）：</p>
+如果要匹配的 ID 或选择器不符合 CSS 语法（比如不恰当地使用了冒号或者空格），你必须用反斜杠将这些字符转义。由于 JavaScript 中，反斜杠是转义字符，所以当你输入一个文本串时，你必须将它转义两次（一次是为 JavaScript 字符串转义，另一次是为 `querySelector` 转义）：
 
-<pre class="brush: html notranslate">&lt;div id="foo\bar"&gt;&lt;/div&gt;
-&lt;div id="foo:bar"&gt;&lt;/div&gt;
+```html
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
 
-&lt;script&gt;
+<script>
   console.log('#foo\bar')               // "#fooar"
   document.querySelector('#foo\bar')    // 不匹配任何元素
 
@@ -61,38 +56,40 @@ slug: Web/API/Document/querySelector
 
   document.querySelector('#foo:bar')    // 不匹配任何元素
   document.querySelector('#foo\\:bar')  // 匹配第二个 div
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="查找第一个匹配_class属性的html元素">查找第一个匹配 class 属性的 html 元素</h3>
+### 查找第一个匹配 class 属性的 html 元素
 
-<p>这个例子中，会返回当前文档中第一个类名为 "<code>myclass</code>" 的元素：</p>
+这个例子中，会返回当前文档中第一个类名为 "`myclass`" 的元素：
 
-<pre class="brush: js notranslate">var el = document.querySelector(".myclass");</pre>
+```js
+var el = document.querySelector(".myclass");
+```
 
-<h3 id="一个更复杂的选择器">一个更复杂的选择器</h3>
+### 一个更复杂的选择器
 
-<p><em>选择器也可以非常强大，如以下示例所示</em>.</p>
+_选择器也可以非常强大，如以下示例所示_.
 
-<p>这里，一个 class 属性为"user-panel main"的 div 元素{{HTMLElement("div")}}(<code>&lt;div class="user-panel main"&gt;</code>) 内包含一个 name 属性为"login"的 input 元素{{HTMLElement("input")}} (<code>&lt;input name="login"/&gt;</code>) ，如何选择，如下所示：</p>
+这里，一个 class 属性为"user-panel main"的 div 元素{{HTMLElement("div")}}(`<div class="user-panel main">`) 内包含一个 name 属性为"login"的 input 元素{{HTMLElement("input")}} (`<input name="login"/>`) ，如何选择，如下所示：
 
-<pre class="brush: js notranslate">var el = document.querySelector("div.user-panel.main input[name='login']");</pre>
+```js
+var el = document.querySelector("div.user-panel.main input[name='login']");
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Document.querySelector")}}</p>
+{{Compat("api.Document.querySelector")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></li>
- <li>{{domxref("Element.querySelector()")}}</li>
- <li>{{domxref("Document.querySelectorAll()")}}</li>
- <li>{{domxref("Element.querySelectorAll()")}}</li>
-</ul>
+- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- {{domxref("Element.querySelector()")}}
+- {{domxref("Document.querySelectorAll()")}}
+- {{domxref("Element.querySelectorAll()")}}

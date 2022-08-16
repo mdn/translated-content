@@ -2,29 +2,30 @@
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
 ---
-<p>{{WebRTCSidebar}}</p>
+{{WebRTCSidebar}}
 
-<p>只读属性 <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> 返回一个 {{domxref("RTCSessionDescription")}} 对象，该对象描述了 自上次 {{domxref("RTCPeerConnection")}} 完成协商与连接到远程端后，最近一次成功协商的连接的本地端。原文（describing the local end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer）。也包括自 RTCSessionDescription 所代表的 offer 或 anwser 首次实例化以来，ICE 代理可能已经生成的任何 ICE 候选人的列表。</p>
+只读属性 **`RTCPeerConnection.currentLocalDescription`** 返回一个 {{domxref("RTCSessionDescription")}} 对象，该对象描述了 自上次 {{domxref("RTCPeerConnection")}} 完成协商与连接到远程端后，最近一次成功协商的连接的本地端。原文（describing the local end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer）。也包括自 RTCSessionDescription 所代表的 offer 或 anwser 首次实例化以来，ICE 代理可能已经生成的任何 ICE 候选人的列表。
 
-<p>若想改变 <code>currentLocalDescription</code> ，则调用 {{domxref("RTCPeerConnection.setLocalDescription()")}} 。这将会触发引发该值被设置的一系列事件。 如果希望详细了解策略与机制，查阅 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}。</p>
+若想改变 `currentLocalDescription` ，则调用 {{domxref("RTCPeerConnection.setLocalDescription()")}} 。这将会触发引发该值被设置的一系列事件。 如果希望详细了解策略与机制，查阅 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}。
 
-<div class="note">
-<p>与 {{domxref("RTCPeerConnection.localDescription")}} 不同， 这个值代表了当前连接的本地端的事实当前状态； <code>localDescription</code> 也许指明了一个当前正在切换中的连接的 description。</p>
-</div>
+> **备注：** 与 {{domxref("RTCPeerConnection.localDescription")}} 不同， 这个值代表了当前连接的本地端的事实当前状态； `localDescription` 也许指明了一个当前正在切换中的连接的 description。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentLocalDescription;</pre>
+```
+sessionDescription = RTCPeerConnection.currentLocalDescription;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>连接本地端的当前 description 描述，如果成功设置了一个。否则返回 null。</p>
+连接本地端的当前 description 描述，如果成功设置了一个。否则返回 null。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>本例子查看 <code>currentLocalDescription</code> 并且显示了包含 {{domxref("RTCSessionDescription")}} 对象的 <code>type</code> 与 <code>sdp</code> 字段的 alert。</p>
+本例子查看 `currentLocalDescription` 并且显示了包含 {{domxref("RTCSessionDescription")}} 对象的 `type` 与 `sdp` 字段的 alert。
 
-<pre class="brush: js notranslate">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 …
 var sd = pc.currentLocalDescription;
 if (sd) {
@@ -35,26 +36,20 @@ if (sd) {
 else {
   alert("No local session yet.");
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.RTCPeerConnection.currentLocalDescription")}}
 
+> **备注：** The addition of `currentLocalDescription` and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent. In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.
 
-<p>{{Compat("api.RTCPeerConnection.currentLocalDescription")}}</p>
+## 参阅
 
-<div class="note">
-<p>The addition of <code>currentLocalDescription</code> and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent. In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.</p>
-</div>
-
-<h2 id="参阅">参阅</h2>
-
-<ul>
- <li>{{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}</li>
- <li>{{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

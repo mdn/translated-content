@@ -2,55 +2,52 @@
 title: 'Window: rejectionhandled event'
 slug: Web/API/Window/rejectionhandled_event
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code>当 Promise 被 rejected 且有 rejection 处理器时会在全局触发</code><strong><code>rejectionhandled</code></strong> 事件 (通常是发生在 window 下，但是也可能发生在 Worker 中)。应用于调试一般应用回退。当 Promise 被 rejected 且没有 rejection 处理器处理时会触发<strong>unhandledrejection</strong><code>事件。这两个事件协同工作。</code></p>
+`当 Promise 被 rejected 且有 rejection 处理器时会在全局触发`**`rejectionhandled`** 事件 (通常是发生在 window 下，但是也可能发生在 Worker 中)。应用于调试一般应用回退。当 Promise 被 rejected 且没有 rejection 处理器处理时会触发**unhandledrejection**`事件。这两个事件协同工作。`
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">是否冒泡</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">是否可取消</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>PromiseRejectionEvent</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理器属性</th>
-   <td>onrejectionhandled</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">是否冒泡</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">是否可取消</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>PromiseRejectionEvent</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理器属性</th>
+      <td>onrejectionhandled</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>你可以使用<code>rejectionhandled 事件在控制台打印出被 rejected 的 Promise，以及被 rejected 的原因：</code></p>
+你可以使用`rejectionhandled 事件在控制台打印出被 rejected 的 Promise，以及被 rejected 的原因：`
 
-<pre class="brush: js">window.addEventListener("rejectionhandled", event =&gt; {
+```js
+window.addEventListener("rejectionhandled", event => {
   console.log("Promise rejected; reason: " + event.reason);
 }, false);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Window.rejectionhandled_event")}}
 
+## 参阅
 
-<p>{{Compat("api.Window.rejectionhandled_event")}}</p>
-
-<h2 id="参阅">参阅</h2>
-
-<ul>
- <li>{{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}</li>
- <li>{{domxref("PromiseRejectionEvent")}}</li>
- <li>{{domxref("Promise")}}</li>
- <li>{{Event("unhandledrejection")}}</li>
-</ul>
+- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- {{domxref("PromiseRejectionEvent")}}
+- {{domxref("Promise")}}
+- {{Event("unhandledrejection")}}

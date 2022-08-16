@@ -2,39 +2,36 @@
 title: Event.returnValue
 slug: Web/API/Event/returnValue
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>Event.returnValue</strong></code> 属性表示该事件的默认操作是否已被阻止。默认情况下，它被设置为 <code>true</code>，即允许进行默认操作。将该属性设置为 <code>false</code> 即可阻止默认操作。</p>
+**`Event.returnValue`** 属性表示该事件的默认操作是否已被阻止。默认情况下，它被设置为 `true`，即允许进行默认操作。将该属性设置为 `false` 即可阻止默认操作。
 
-<div class="note">
-<p><strong>注意：</strong> While <code>returnValue</code> has been adopted into the DOM standard, it is present primarily to support existing code. You should use {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical property.</p>
-</div>
+> **备注：** While `returnValue` has been adopted into the DOM standard, it is present primarily to support existing code. You should use {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical property.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>event</var>.returnValue = <var>bool;</var>
+```
+event.returnValue = bool;
 
-var <var>bool</var> = <var>event</var>.returnValue;
-</pre>
+var bool = event.returnValue;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>A {{domxref("Boolean")}} value which is <code>true</code> if the event has not been canceled; otherwise, if the event has been canceled or the default has been prevented, the value is <code>false</code>.</p>
+A {{domxref("Boolean")}} value which is `true` if the event has not been canceled; otherwise, if the event has been canceled or the default has been prevented, the value is `false`.
 
-<p>The value returned by <code>returnValue</code> is the opposite of the value returned by {{domxref("Event.defaultPrevented", "defaultPrevented")}}.</p>
+The value returned by `returnValue` is the opposite of the value returned by {{domxref("Event.defaultPrevented", "defaultPrevented")}}.
 
-<h2 id="使用备注">使用备注</h2>
+## 使用备注
 
-<p><code>returnValue</code> was introduced into the DOM by Internet Explorer 6, and due to that browser's ubiquity became so commonly used that other browsers eventually implemented it as well. It has been adopted into the DOM specification, primarily to ensure that existing web content continues to function going forward.</p>
+`returnValue` was introduced into the DOM by Internet Explorer 6, and due to that browser's ubiquity became so commonly used that other browsers eventually implemented it as well. It has been adopted into the DOM specification, primarily to ensure that existing web content continues to function going forward.
 
-<p>New projects should generally avoid using <code>returnValue</code>, although they may if they choose to do so.</p>
+New projects should generally avoid using `returnValue`, although they may if they choose to do so.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Event.returnValue")}}</p>
+{{Compat("api.Event.returnValue")}}

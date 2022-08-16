@@ -2,135 +2,112 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code>CustomEvent </code>事件是由程序创建的，可以有任意自定义功能的事件。</p>
+`CustomEvent `事件是由程序创建的，可以有任意自定义功能的事件。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<p><strong>{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}  </strong>创建一个自定义事件。</p>
+**{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}** 创建一个自定义事件。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><strong>{{domxref("CustomEvent.detail")}} {{readonlyinline}} 任何时间初始化时传入的数据</strong></p>
+**{{domxref("CustomEvent.detail")}} {{readonlyinline}} 任何时间初始化时传入的数据**
 
-<p><em>此接口从父接口继承属性， </em>{{domxref("Event")}}：</p>
+_此接口从父接口继承属性，_ {{domxref("Event")}}：
 
-<p>{{Page("/zh-CN/docs/Web/API/Event", "Properties")}}</p>
+{{Page("/zh-CN/docs/Web/API/Event", "Properties")}}
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}</dt>
- <dd>
- <p>初始化一个 <code>CustomEvent 对象。如果事件已经被触发，这个方法将不会起任何作用。</code></p>
- </dd>
-</dl>
+- {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
+  - : 初始化一个 `CustomEvent 对象。如果事件已经被触发，这个方法将不会起任何作用。`
 
-<p><em>此接口从父接口继承方法， </em>{{domxref("Event")}}：</p>
+_此接口从父接口继承方法，_ {{domxref("Event")}}：
 
-<p>{{Page("/zh-CN/docs/Web/API/Event", "Methods")}}</p>
+{{Page("/zh-CN/docs/Web/API/Event", "Methods")}}
 
-<h2 id="Method_overview">方法概述</h2>
+## 方法概述
 
-<table>
- <tbody>
-  <tr>
-   <td><code>void <a href="#initCustomEvent()">initCustomEvent</a>(in DOMString type, in boolean canBubble, in boolean cancelable, in any detail);</code></td>
-  </tr>
- </tbody>
-</table>
+| `void initCustomEvent(in DOMString type, in boolean canBubble, in boolean cancelable, in any detail);` |
+| ------------------------------------------------------------------------------------------------------ |
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<table>
- <tbody>
-  <tr>
-   <th>属性</th>
-   <th>类型</th>
-   <th>描述</th>
-  </tr>
-  <tr>
-   <td><code>detail</code></td>
-   <td><code>any</code></td>
-   <td>当事件初始化时传递的数据。</td>
-  </tr>
- </tbody>
-</table>
+| 属性     | 类型  | 描述                       |
+| -------- | ----- | -------------------------- |
+| `detail` | `any` | 当事件初始化时传递的数据。 |
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<h3 id="initCustomEvent()">initCustomEvent()</h3>
+### initCustomEvent()
 
-<p>初始化一个自定义事件的方式和初始化一个标准 DOM 事件的方式非常相似。</p>
+初始化一个自定义事件的方式和初始化一个标准 DOM 事件的方式非常相似。
 
-<pre class="eval">void initCustomEvent(
+```
+void initCustomEvent(
   in DOMString type,
   in boolean canBubble,
   in boolean cancelable,
   in any detail
 );
-</pre>
+```
 
-<h4 id="Parameters">参数</h4>
+#### 参数
 
-<dl>
- <dt><code>type</code></dt>
- <dd>事件的类型名称。</dd>
- <dt><code>canBubble</code></dt>
- <dd>一个布尔值，表明该事件是否会冒泡。</dd>
- <dt><code>cancelable</code></dt>
- <dd>一个布尔值，表明该事件是否可以被取消。</dd>
- <dt><code>detail</code></dt>
- <dd>当事件初始化时传递的数据。</dd>
-</dl>
+- `type`
+  - : 事件的类型名称。
+- `canBubble`
+  - : 一个布尔值，表明该事件是否会冒泡。
+- `cancelable`
+  - : 一个布尔值，表明该事件是否可以被取消。
+- `detail`
+  - : 当事件初始化时传递的数据。
 
-<h2 id="构造函数_2">构造函数</h2>
+## 构造函数
 
-<p><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM4 规范</a> 添加了对 <code>CustomEvent</code> 构造函数的支持。</p>
+[DOM4 规范](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) 添加了对 `CustomEvent` 构造函数的支持。
 
-<pre>CustomEvent(
+```
+CustomEvent(
   DOMString type,
   optional CustomEventInit eventInitDict
 )
-</pre>
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>type</code></dt>
- <dd>事件的类型名称。</dd>
- <dt><code>eventInitDict</code></dt>
- <dd>一个提供事件的配置信息对象。查看<a href="#CustomEventInit">CustomEventInit</a>了解更多详情。</dd>
-</dl>
+- `type`
+  - : 事件的类型名称。
+- `eventInitDict`
+  - : 一个提供事件的配置信息对象。查看[CustomEventInit](#CustomEventInit)了解更多详情。
 
-<h4 id="CustomEventInit">CustomEventInit</h4>
+#### CustomEventInit
 
-<dl>
- <dt><code>bubbles</code></dt>
- <dd>一个布尔值，表明该事件是否会冒泡。</dd>
- <dt><code>cancelable</code></dt>
- <dd>一个布尔值，表明该事件是否可以被取消。</dd>
- <dt><code>detail</code></dt>
- <dd>当事件初始化时传递的数据。</dd>
-</dl>
+- `bubbles`
+  - : 一个布尔值，表明该事件是否会冒泡。
+- `cancelable`
+  - : 一个布尔值，表明该事件是否可以被取消。
+- `detail`
+  - : 当事件初始化时传递的数据。
 
-<h3 id="CustomEvent_example_usage">CustomEvent 用法示例</h3>
+### CustomEvent 用法示例
 
-<pre class="brush: js">// 添加一个适当的事件监听器
+```js
+// 添加一个适当的事件监听器
 obj.addEventListener("cat", function(e) { process(e.detail) })
 
 // 创建并分发事件
 var event = new CustomEvent("cat", {"detail":{"hazcheeseburger":true}})
 obj.dispatchEvent(event)
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CustomEvent")}}</p>
+{{Compat("api.CustomEvent")}}

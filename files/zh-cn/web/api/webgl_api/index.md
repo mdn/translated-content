@@ -2,211 +2,178 @@
 title: WebGL
 slug: Web/API/WebGL_API
 ---
-<div class="boxed translate-rendered">
-<div>{{WebGLSidebar}}</div>
+{{WebGLSidebar}}
 
-<p>WebGL（Web 图形库）是一个 JavaScript API，可在任何兼容的 Web 浏览器中渲染高性能的交互式 3D 和 2D 图形，而无需使用插件。WebGL 通过引入一个与 OpenGL ES 2.0 非常一致的 API 来做到这一点，该 API 可以在 HTML5 {{HTMLElement("canvas")}}元素中使用。 这种一致性使 API 可以利用用户设备提供的硬件图形加速。</p>
+WebGL（Web 图形库）是一个 JavaScript API，可在任何兼容的 Web 浏览器中渲染高性能的交互式 3D 和 2D 图形，而无需使用插件。WebGL 通过引入一个与 OpenGL ES 2.0 非常一致的 API 来做到这一点，该 API 可以在 HTML5 {{HTMLElement("canvas")}}元素中使用。 这种一致性使 API 可以利用用户设备提供的硬件图形加速。
 
-<p>目前支持 WebGL 的浏览器有：<a href="https://developer.mozilla.org/zh-CN/Firefox">Firefox</a> 4+, <a href="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/">Safari </a>5.1+, <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie">Internet Explorer</a> 11+ 和<a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> build 10240+；然而，WebGL 一些特性也需要用户的硬件设备支持。</p>
+目前支持 WebGL 的浏览器有：[Firefox](https://developer.mozilla.org/zh-CN/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari ](http://www.apple.com/safari/)5.1+, [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+ 和[Microsoft Edge](https://www.microsoft.com/en-us/edge) build 10240+；然而，WebGL 一些特性也需要用户的硬件设备支持。
 
-<p><a href="#webgl_2">WebGL 2</a> API 引入了对大部分的 OpenGL ES 3.0 功能集的支持; 它是通过{{domxref("WebGL2RenderingContext")}}界面提供的。</p>
+[WebGL 2](#webgl_2) API 引入了对大部分的 OpenGL ES 3.0 功能集的支持; 它是通过{{domxref("WebGL2RenderingContext")}}界面提供的。
 
-<p> {{HTMLElement("canvas")}} 元素也被 <a href="/zh-CN/docs/Web/API/Canvas_API">Canvas API</a> 用于在网页上进行 2D 图形处理。</p>
+{{HTMLElement("canvas")}} 元素也被 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 用于在网页上进行 2D 图形处理。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="标准接口">标准接口</h3>
+### 标准接口
 
-<div class="index">
-<ul>
- <li>{{domxref("WebGLRenderingContext")}}</li>
- <li>{{domxref("WebGL2RenderingContext")}}</li>
- <li>{{domxref("WebGLActiveInfo")}}</li>
- <li>{{domxref("WebGLBuffer")}}</li>
- <li>{{domxref("WebGLContextEvent")}}</li>
- <li>{{domxref("WebGLFramebuffer")}}</li>
- <li>{{domxref("WebGLProgram")}}</li>
- <li>{{domxref("WebGLQuery")}}</li>
- <li>{{domxref("WebGLRenderbuffer")}}</li>
- <li>{{domxref("WebGLSampler")}}</li>
- <li>{{domxref("WebGLShader")}}</li>
- <li>{{domxref("WebGLShaderPrecisionFormat")}}</li>
- <li>{{domxref("WebGLSync")}}</li>
- <li>{{domxref("WebGLTexture")}}</li>
- <li>{{domxref("WebGLTransformFeedback")}}</li>
- <li>{{domxref("WebGLUniformLocation")}}</li>
- <li>{{domxref("WebGLVertexArrayObject")}}</li>
-</ul>
-</div>
+- {{domxref("WebGLRenderingContext")}}
+- {{domxref("WebGL2RenderingContext")}}
+- {{domxref("WebGLActiveInfo")}}
+- {{domxref("WebGLBuffer")}}
+- {{domxref("WebGLContextEvent")}}
+- {{domxref("WebGLFramebuffer")}}
+- {{domxref("WebGLProgram")}}
+- {{domxref("WebGLQuery")}}
+- {{domxref("WebGLRenderbuffer")}}
+- {{domxref("WebGLSampler")}}
+- {{domxref("WebGLShader")}}
+- {{domxref("WebGLShaderPrecisionFormat")}}
+- {{domxref("WebGLSync")}}
+- {{domxref("WebGLTexture")}}
+- {{domxref("WebGLTransformFeedback")}}
+- {{domxref("WebGLUniformLocation")}}
+- {{domxref("WebGLVertexArrayObject")}}
 
-<h3 id="扩展">扩展</h3>
+### 扩展
 
-<div class="index">
-<ul>
- <li>{{domxref("ANGLE_instanced_arrays")}}</li>
- <li>{{domxref("EXT_blend_minmax")}}</li>
- <li>{{domxref("EXT_color_buffer_float")}}</li>
- <li>{{domxref("EXT_color_buffer_half_float")}}</li>
- <li>{{domxref("EXT_disjoint_timer_query")}}</li>
- <li>{{domxref("EXT_float_blend")}} {{experimental_inline}}</li>
- <li>{{domxref("EXT_frag_depth")}}</li>
- <li>{{domxref("EXT_sRGB")}}</li>
- <li>{{domxref("EXT_shader_texture_lod")}}</li>
- <li>{{domxref("EXT_texture_compression_bptc")}}</li>
- <li>{{domxref("EXT_texture_compression_rgtc")}}</li>
- <li>{{domxref("EXT_texture_filter_anisotropic")}}</li>
- <li>{{domxref("OES_element_index_uint")}}</li>
- <li>{{domxref("OES_fbo_render_mipmap")}}</li>
- <li>{{domxref("OES_standard_derivatives")}}</li>
- <li>{{domxref("OES_texture_float")}}</li>
- <li>{{domxref("OES_texture_float_linear")}}</li>
- <li>{{domxref("OES_texture_half_float")}}</li>
- <li>{{domxref("OES_texture_half_float_linear")}}</li>
- <li>{{domxref("OES_vertex_array_object")}}</li>
- <li>{{domxref("OVR_multiview2")}}</li>
- <li>{{domxref("WEBGL_color_buffer_float")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_astc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_atc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_etc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_etc1")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_pvrtc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_s3tc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_s3tc_srgb")}}</li>
- <li>{{domxref("WEBGL_debug_renderer_info")}}</li>
- <li>{{domxref("WEBGL_debug_shaders")}}</li>
- <li>{{domxref("WEBGL_depth_texture")}}</li>
- <li>{{domxref("WEBGL_draw_buffers")}}</li>
- <li>{{domxref("WEBGL_lose_context")}}</li>
-</ul>
-</div>
+- {{domxref("ANGLE_instanced_arrays")}}
+- {{domxref("EXT_blend_minmax")}}
+- {{domxref("EXT_color_buffer_float")}}
+- {{domxref("EXT_color_buffer_half_float")}}
+- {{domxref("EXT_disjoint_timer_query")}}
+- {{domxref("EXT_float_blend")}} {{experimental_inline}}
+- {{domxref("EXT_frag_depth")}}
+- {{domxref("EXT_sRGB")}}
+- {{domxref("EXT_shader_texture_lod")}}
+- {{domxref("EXT_texture_compression_bptc")}}
+- {{domxref("EXT_texture_compression_rgtc")}}
+- {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("OES_element_index_uint")}}
+- {{domxref("OES_fbo_render_mipmap")}}
+- {{domxref("OES_standard_derivatives")}}
+- {{domxref("OES_texture_float")}}
+- {{domxref("OES_texture_float_linear")}}
+- {{domxref("OES_texture_half_float")}}
+- {{domxref("OES_texture_half_float_linear")}}
+- {{domxref("OES_vertex_array_object")}}
+- {{domxref("OVR_multiview2")}}
+- {{domxref("WEBGL_color_buffer_float")}}
+- {{domxref("WEBGL_compressed_texture_astc")}}
+- {{domxref("WEBGL_compressed_texture_atc")}}
+- {{domxref("WEBGL_compressed_texture_etc")}}
+- {{domxref("WEBGL_compressed_texture_etc1")}}
+- {{domxref("WEBGL_compressed_texture_pvrtc")}}
+- {{domxref("WEBGL_compressed_texture_s3tc")}}
+- {{domxref("WEBGL_compressed_texture_s3tc_srgb")}}
+- {{domxref("WEBGL_debug_renderer_info")}}
+- {{domxref("WEBGL_debug_shaders")}}
+- {{domxref("WEBGL_depth_texture")}}
+- {{domxref("WEBGL_draw_buffers")}}
+- {{domxref("WEBGL_lose_context")}}
 
-<h3 id="事件">事件</h3>
+### 事件
 
-<ul>
- <li>{{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}}</li>
- <li>{{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}}</li>
- <li>{{domxref("HTMLCanvasElement/webglcontextcreationerror_event", "webglcontextcreationerror")}}<br>
- </li>
-</ul>
+- {{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}}
+- {{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}}
+- {{domxref("HTMLCanvasElement/webglcontextcreationerror_event", "webglcontextcreationerror")}}
 
-<h3 id="常量和类型">常量和类型</h3>
+### 常量和类型
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/WebGL_API/Constants">WebGL 常量</a></li>
- <li><a href="/zh-CN/docs/Web/API/WebGL_API/Types">WebGL 类型</a></li>
-</ul>
+- [WebGL 常量](/zh-CN/docs/Web/API/WebGL_API/Constants)
+- [WebGL 类型](/zh-CN/docs/Web/API/WebGL_API/Types)
 
-<h3 id="WebGL_2">WebGL 2</h3>
+### WebGL 2
 
-<p>WebGL 2 是 WebGL 的一个主要更新，它通过{{domxref("WebGL2RenderingContext")}} 接口提供。它基于 OpenGL ES 3.0，新功能包括：</p>
+WebGL 2 是 WebGL 的一个主要更新，它通过{{domxref("WebGL2RenderingContext")}} 接口提供。它基于 OpenGL ES 3.0，新功能包括：
 
-<ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL2RenderingContext/texImage3D">3D textures</a>,</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLSampler">Sampler objects</a>,</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects">Uniform Buffer objects</a>,</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLSync">Sync objects</a>,</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLQuery">Query objects</a>,</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLTransformFeedback">Tranform Feedback objects</a>,</li>
- <li>部分扩展被纳入了 WebGL 2 核心 ： <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLVertexArrayObject">Vertex Array objects</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced">instancing</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL2RenderingContext/drawBuffers">multiple render targets</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EXT_frag_depth">fragment depth</a>.</li>
-</ul>
+- [3D textures](/zh-CN/docs/Web/API/WebGL2RenderingContext/texImage3D),
+- [Sampler objects](/zh-CN/docs/Web/API/WebGLSampler),
+- [Uniform Buffer objects](/zh-CN/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects),
+- [Sync objects](/zh-CN/docs/Web/API/WebGLSync),
+- [Query objects](/zh-CN/docs/Web/API/WebGLQuery),
+- [Tranform Feedback objects](/zh-CN/docs/Web/API/WebGLTransformFeedback),
+- 部分扩展被纳入了 WebGL 2 核心 ： [Vertex Array objects](/zh-CN/docs/Web/API/WebGLVertexArrayObject), [instancing](/zh-CN/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced), [multiple render targets](/zh-CN/docs/Web/API/WebGL2RenderingContext/drawBuffers), [fragment depth](/zh-CN/docs/Web/API/EXT_frag_depth).
 
-<p>另请参见博客文章 <a href="https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/">"WebGL 2 lands in Firefox"</a> 和 <a href="http://webglsamples.org/WebGL2Samples/">webglsamples.org/WebGL2Samples</a> 几个演示。</p>
+另请参见博客文章 ["WebGL 2 lands in Firefox"](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) 和 [webglsamples.org/WebGL2Samples](http://webglsamples.org/WebGL2Samples/) 几个演示。
 
-<h2 id="指南和教程">指南和教程</h2>
+## 指南和教程
 
-<p>下面，您将找到各种指南，以帮助您学习 WebGL 概念和教程，提供分步课程和示例。</p>
+下面，您将找到各种指南，以帮助您学习 WebGL 概念和教程，提供分步课程和示例。
 
-<h3 id="指南">指南 </h3>
+### 指南
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Data">WebGL 中的数据</a></dt>
- <dd>编写 WebGL 代码时使用的变量，缓冲区和其他类型数据的指南。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/WebGL_best_practices">WebGL 最佳实践</a></dt>
- <dd>提示和建议，以帮助您提高 WebGL 内容的质量，性能和可靠性。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Using_Extensions">使用扩展</a></dt>
- <dd>WebGL 扩展的使用指南。</dd>
-</dl>
+- [WebGL 中的数据](/zh-CN/docs/Web/API/WebGL_API/Data)
+  - : 编写 WebGL 代码时使用的变量，缓冲区和其他类型数据的指南。
+- [WebGL 最佳实践](/zh-CN/docs/Web/API/WebGL_API/WebGL_best_practices)
+  - : 提示和建议，以帮助您提高 WebGL 内容的质量，性能和可靠性。
+- [使用扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)
+  - : WebGL 扩展的使用指南。
 
-<h3 id="教程">教程</h3>
+### 教程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Tutorial">WebGL 教程</a></dt>
- <dd>WebGL 核心概念的初学者指南。如果您以前没有 WebGL 的经验，那么这是一个很好的起点。</dd>
-</dl>
+- [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)
+  - : WebGL 核心概念的初学者指南。如果您以前没有 WebGL 的经验，那么这是一个很好的起点。
 
-<h3 id="示例">示例</h3>
+### 示例
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example">一个基础的 WebGL 的 2D 动画示例</a></dt>
- <dd>此示例演示了单色形状的简单动画。检查的主题是适应宽高比差异，从多个着色器集合构建着色器程序的功能，以及 WebGL 绘图的基础知识。</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/By_example">WebGL 示例</a></dt>
- <dd>一系列带有简短说明的实时示例展示了 WebGL 的概念和功能。根据主题和难易程度对示例进行了排序，涵盖了 WebGL 渲染上下文，着色器编程，纹理，几何图形，用户交互等。</dd>
-</dl>
+- [一个基础的 WebGL 的 2D 动画示例](/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example)
+  - : 此示例演示了单色形状的简单动画。检查的主题是适应宽高比差异，从多个着色器集合构建着色器程序的功能，以及 WebGL 绘图的基础知识。
+- [WebGL 示例](/zh-CN/docs/Web/API/WebGL_API/By_example)
+  - : 一系列带有简短说明的实时示例展示了 WebGL 的概念和功能。根据主题和难易程度对示例进行了排序，涵盖了 WebGL 渲染上下文，着色器编程，纹理，几何图形，用户交互等。
 
-<h3 id="高级教程">高级教程</h3>
+### 高级教程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL 模型视图投影</a></dt>
- <dd>详述了常用于显示 3D 物体视图的三种核心矩阵：模型，视图和投影矩阵。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Web 中的矩阵运算</a></dt>
- <dd>讲述 3D 变换矩阵工作原理的指南 —— 这也能在 WebGL 计算和 CSS3 变换中派上用场。</dd>
-</dl>
+- [WebGL 模型视图投影](/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+  - : 详述了常用于显示 3D 物体视图的三种核心矩阵：模型，视图和投影矩阵。
+- [Web 中的矩阵运算](/zh-CN/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
+  - : 讲述 3D 变换矩阵工作原理的指南 —— 这也能在 WebGL 计算和 CSS3 变换中派上用场。
 
-<h2 id="资源">资源</h2>
+## 资源
 
-<ul>
- <li><a href="https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage">Raw WebGL: WebGL 入门</a> Nick Desaulniers 主讲的 WebGL 基础知识。如果你从未接触过底层的图形编程，这是一个开始学习初级图形编程的好地方。</li>
- <li><a href="http://www.khronos.org/webgl/">WebGL 官网</a> Khronos Group 的 WebGL 官方站点。</li>
- <li><a href="http://learningwebgl.com/blog/?page_id=1217">学习 WebGL</a> 一个关于如何使用 WebGL 的教程站点。</li>
- <li><a href="http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/">WebGL 基础</a> 一个关于 WebGL 的基础教程。</li>
- <li><a href="http://webglplayground.net">WebGL 试炼</a> 一个在线创建和分享 WebGL 的工具站点，非常适合快速创建一个原型或者体验一个成品。</li>
- <li><a href="http://www.webglacademy.com">WebGL Academy</a> 通过一个 HTML/JavaScript 编辑器来学习一个基础的 WebGl 基础知识。</li>
- <li><a href="https://webglreport.com/">WebGL Report</a> 一个检测浏览器是否支持 WebGL 的网站。</li>
-</ul>
+- [Raw WebGL: WebGL 入门](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) Nick Desaulniers 主讲的 WebGL 基础知识。如果你从未接触过底层的图形编程，这是一个开始学习初级图形编程的好地方。
+- [WebGL 官网](http://www.khronos.org/webgl/) Khronos Group 的 WebGL 官方站点。
+- [学习 WebGL](http://learningwebgl.com/blog/?page_id=1217) 一个关于如何使用 WebGL 的教程站点。
+- [WebGL 基础](http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/) 一个关于 WebGL 的基础教程。
+- [WebGL 试炼](http://webglplayground.net) 一个在线创建和分享 WebGL 的工具站点，非常适合快速创建一个原型或者体验一个成品。
+- [WebGL Academy](http://www.webglacademy.com) 通过一个 HTML/JavaScript 编辑器来学习一个基础的 WebGl 基础知识。
+- [WebGL Report](https://webglreport.com/) 一个检测浏览器是否支持 WebGL 的网站。
 
-<h3 id="库">库</h3>
+### 库
 
-<ul>
- <li><a href="https://github.com/toji/gl-matrix">glMatrix</a> 创建高性能 WebGL 应用的 JavaScript 矩阵矢量库。</li>
- <li><a href="/zh-CN/docs/">PhiloGL</a> 一个用于数据可视化、创意编程和游戏开发的 WebGL 库。</li>
- <li><a href="http://www.pixijs.com/">Pixi.js</a>是一种快速的开源 2D WebGL 渲染器。</li>
- <li><a href="https://playcanvas.com/">PlayCanvas</a>是一个开源游戏引擎。</li>
- <li><a href="http://sylvester.jcoglan.com/">Sylvester</a>是一个用于处理向量和矩阵的开源库。尚未针对 WebGL 进行优化，但功能极其强大。</li>
- <li><a href="https://threejs.org/">three.js</a>是一个开源的，功能齐全的 3D WebGL 库。</li>
- <li><a href="https://phaser.io/">Phaser</a>是一个适用于 Canvas 和 WebGL 的浏览器游戏的快速，免费和有趣的开源框架。</li>
- <li><a href="https://github.com/redcamel/RedGL2">RedGL</a>  是一个开源 3D WebGL 库。</li>
- <li><a href="https://kitware.github.io/vtk-js/">vtk.js</a>  是一个 JavaScript 库，用于在浏览器中进行科学可视化。</li>
-</ul>
+- [glMatrix](https://github.com/toji/gl-matrix) 创建高性能 WebGL 应用的 JavaScript 矩阵矢量库。
+- [PhiloGL](/zh-CN/docs/) 一个用于数据可视化、创意编程和游戏开发的 WebGL 库。
+- [Pixi.js](http://www.pixijs.com/)是一种快速的开源 2D WebGL 渲染器。
+- [PlayCanvas](https://playcanvas.com/)是一个开源游戏引擎。
+- [Sylvester](http://sylvester.jcoglan.com/)是一个用于处理向量和矩阵的开源库。尚未针对 WebGL 进行优化，但功能极其强大。
+- [three.js](https://threejs.org/)是一个开源的，功能齐全的 3D WebGL 库。
+- [Phaser](https://phaser.io/)是一个适用于 Canvas 和 WebGL 的浏览器游戏的快速，免费和有趣的开源框架。
+- [RedGL](https://github.com/redcamel/RedGL2) 是一个开源 3D WebGL 库。
+- [vtk.js](https://kitware.github.io/vtk-js/) 是一个 JavaScript 库，用于在浏览器中进行科学可视化。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="兼容性说明">兼容性说明</h3>
+### 兼容性说明
 
-<p>不仅是浏览器，GPU 本身也需要支持该特性。比如 S3 纹理压缩 (S3TC) 只在基于图睿的 GPU 的设备上可用。大多数浏览器可以通过 <code>webgl</code> 这一上下文名称来使用 WebGL，但是旧的浏览器需要使用 <code>experimental-webgl</code>。另外，将来的 <a href="/zh-CN/docs/Web/API/WebGL2RenderingContext">WebGL 2</a> 只会向后兼容，其使用的上下文名称为 <code>webgl2</code> 。</p>
+不仅是浏览器，GPU 本身也需要支持该特性。比如 S3 纹理压缩 (S3TC) 只在基于图睿的 GPU 的设备上可用。大多数浏览器可以通过 `webgl` 这一上下文名称来使用 WebGL，但是旧的浏览器需要使用 `experimental-webgl`。另外，将来的 [WebGL 2](/zh-CN/docs/Web/API/WebGL2RenderingContext) 只会向后兼容，其使用的上下文名称为 `webgl2` 。
 
-<h3 id="Gecko备忘">Gecko 备忘</h3>
+### Gecko 备忘
 
-<h4 id="WebGL调试与检测">WebGL 调试与检测</h4>
+#### WebGL 调试与检测
 
-<p>开始使用 Gecko 10.0 {{geckoRelease("10.0")}}, 在测试中，这里有两个参数可以让你来控制 WebGL 性能：</p>
+开始使用 Gecko 10.0 {{geckoRelease("10.0")}}, 在测试中，这里有两个参数可以让你来控制 WebGL 性能：
 
-<dl>
- <dt><code>webgl.min_capability_mode</code></dt>
- <dd>一个以布尔值存储的属性。当它的值为<code>True</code>时，将会启用最小性能模式。当这个模式启用时，WebGL 将会仅提供由其标准指定的最基本的功能集和性能支持。这样可以确保您的 WebGL 代码能够在性能的设备和浏览器上正确运行。它的默认值是<code>False</code>。</dd>
- <dt><code>webgl.disable_extensions</code></dt>
- <dd>一个以布尔值存储的属性。当它的值为<code>True</code>时，会禁用所有的 WebGL 拓展。它的默认值是<code>False</code>。</dd>
-</dl>
+- `webgl.min_capability_mode`
+  - : 一个以布尔值存储的属性。当它的值为`True`时，将会启用最小性能模式。当这个模式启用时，WebGL 将会仅提供由其标准指定的最基本的功能集和性能支持。这样可以确保您的 WebGL 代码能够在性能的设备和浏览器上正确运行。它的默认值是`False`。
+- `webgl.disable_extensions`
+  - : 一个以布尔值存储的属性。当它的值为`True`时，会禁用所有的 WebGL 拓展。它的默认值是`False`。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API">Canvas(画布)</a></li>
- <li><a href="/zh-CN/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#Browser_compatibility">兼容性信息关于 WebGL 的扩展</a></li>
-</ul>
-</div>
+- [Canvas(画布)](/zh-CN/docs/Web/API/Canvas_API)
+- [兼容性信息关于 WebGL 的扩展](/zh-CN/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#Browser_compatibility)

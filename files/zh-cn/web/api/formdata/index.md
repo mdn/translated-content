@@ -2,63 +2,53 @@
 title: FormData
 slug: Web/API/FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><strong><code>FormData</code></strong> 接口提供了一种表示表单数据的键值对 <code>key/value</code> 的构造方式，并且可以轻松的将数据通过{{domxref("XMLHttpRequest.send()")}} 方法发送出去，本接口和此方法都相当简单直接。如果送出时的编码类型被设为 <code>"multipart/form-data"</code>，它会使用和表单一样的格式。</p>
+**`FormData`** 接口提供了一种表示表单数据的键值对 `key/value` 的构造方式，并且可以轻松的将数据通过{{domxref("XMLHttpRequest.send()")}} 方法发送出去，本接口和此方法都相当简单直接。如果送出时的编码类型被设为 `"multipart/form-data"`，它会使用和表单一样的格式。
 
-<p>如果你想构建一个简单的<code>GET</code>请求，并且通过{{HTMLElement("form")}}的形式带有查询参数，可以将它直接传递给{{domxref("URLSearchParams")}}。</p>
+如果你想构建一个简单的`GET`请求，并且通过{{HTMLElement("form")}}的形式带有查询参数，可以将它直接传递给{{domxref("URLSearchParams")}}。
 
-<p>实现了 <code>FormData</code> 接口的对象可以直接在{{jsxref("Statements/for...of", "for...of")}}结构中使用，而不需要调用{{domxref('FormData.entries()', 'entries()')}} : <code>for (var p of myFormData)</code> 的作用和 <code>for (var p of myFormData.entries())</code> 是相同的。</p>
+实现了 `FormData` 接口的对象可以直接在{{jsxref("Statements/for...of", "for...of")}}结构中使用，而不需要调用{{domxref('FormData.entries()', 'entries()')}} : `for (var p of myFormData)` 的作用和 `for (var p of myFormData.entries())` 是相同的。
 
-<div class="note">
-<p><strong>注意</strong>：此特性可用于 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a>。</p>
-</div>
+> **备注：** 此特性可用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("FormData.FormData","FormData()")}}</dt>
- <dd>创建一个新的 <code>FormData</code> 对象。</dd>
-</dl>
+- {{domxref("FormData.FormData","FormData()")}}
+  - : 创建一个新的 `FormData` 对象。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("FormData.append()")}}</dt>
- <dd>向 <code>FormData</code> 中添加新的属性值，<code>FormData</code> 对应的属性值存在也不会覆盖原值，而是新增一个值，如果属性不存在则新增一项属性值。</dd>
- <dt>{{domxref("FormData.delete()")}}</dt>
- <dd>从 FormData 对象里面删除一个键值对。</dd>
- <dt>{{domxref("FormData.entries()")}}</dt>
- <dd>返回一个包含所有键值对的{{jsxref("Iteration_protocols","iterator")}}对象。</dd>
- <dt>{{domxref("FormData.get()")}}</dt>
- <dd><code>返回在 FormData</code> 对象中与给定键关联的第一个值。</dd>
- <dt>{{domxref("FormData.getAll()")}}</dt>
- <dd>返回一个包含 <code>FormData</code> 对象中与给定键关联的所有值的数组。</dd>
- <dt>{{domxref("FormData.has()")}}</dt>
- <dd><code>返回一个布尔值表明 FormData</code> 对象是否包含某些键。</dd>
- <dt>{{domxref("FormData.keys()")}}</dt>
- <dd>返回一个包含所有键的{{jsxref("Iteration_protocols","iterator")}}对象。</dd>
- <dt>{{domxref("FormData.set()")}}</dt>
- <dd>给 <code>FormData</code> 设置属性值，如果<code>FormData</code> 对应的属性值存在则覆盖原值，否则新增一项属性值。</dd>
- <dt>{{domxref("FormData.values()")}}</dt>
- <dd>返回一个包含所有值的{{jsxref("Iteration_protocols","iterator")}}对象。</dd>
-</dl>
+- {{domxref("FormData.append()")}}
+  - : 向 `FormData` 中添加新的属性值，`FormData` 对应的属性值存在也不会覆盖原值，而是新增一个值，如果属性不存在则新增一项属性值。
+- {{domxref("FormData.delete()")}}
+  - : 从 FormData 对象里面删除一个键值对。
+- {{domxref("FormData.entries()")}}
+  - : 返回一个包含所有键值对的{{jsxref("Iteration_protocols","iterator")}}对象。
+- {{domxref("FormData.get()")}}
+  - : `返回在 FormData` 对象中与给定键关联的第一个值。
+- {{domxref("FormData.getAll()")}}
+  - : 返回一个包含 `FormData` 对象中与给定键关联的所有值的数组。
+- {{domxref("FormData.has()")}}
+  - : `返回一个布尔值表明 FormData` 对象是否包含某些键。
+- {{domxref("FormData.keys()")}}
+  - : 返回一个包含所有键的{{jsxref("Iteration_protocols","iterator")}}对象。
+- {{domxref("FormData.set()")}}
+  - : 给 `FormData` 设置属性值，如果`FormData` 对应的属性值存在则覆盖原值，否则新增一项属性值。
+- {{domxref("FormData.values()")}}
+  - : 返回一个包含所有值的{{jsxref("Iteration_protocols","iterator")}}对象。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.FormData")}}
 
+## 参见
 
-<p>{{Compat("api.FormData")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

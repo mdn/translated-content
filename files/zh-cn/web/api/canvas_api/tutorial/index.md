@@ -2,46 +2,40 @@
 title: Canvas 教程
 slug: Web/API/Canvas_API/Tutorial
 ---
-<div>{{CanvasSidebar}}</div>
+{{CanvasSidebar}}
 
-<p><a href="/zh-CN/docs/HTML/Canvas"><img alt="" src="https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg" style="float: right; height: 315px; width: 140px;"></a></p>
+[![](https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg)](/zh-CN/docs/HTML/Canvas)
 
-<div>
-<p><a href="/zh-CN/docs/Web/HTML/Element/canvas"><strong><code>&lt;canvas&gt;</code></strong></a>是一个可以使用脚本 (通常为<a href="/zh-CN/docs/JavaScript">JavaScript</a>) 来绘制图形的 <a href="/zh-CN/docs/HTML">HTML</a> 元素。例如，它可以用于绘制图表、制作图片构图或者制作简单的 (以及<a href="/zh-CN/docs/Web/API/Canvas_API/A_basic_ray-caster">不那么简单的</a>) 动画。右边的图片展示了一些 <code>&lt;canvas&gt;</code> 的实现示例，在这个教程后面我们将看到。</p>
-</div>
+[**`<canvas>`**](/zh-CN/docs/Web/HTML/Element/canvas)是一个可以使用脚本 (通常为[JavaScript](/zh-CN/docs/JavaScript)) 来绘制图形的 [HTML](/zh-CN/docs/HTML) 元素。例如，它可以用于绘制图表、制作图片构图或者制作简单的 (以及[不那么简单的](/zh-CN/docs/Web/API/Canvas_API/A_basic_ray-caster)) 动画。右边的图片展示了一些 `<canvas>` 的实现示例，在这个教程后面我们将看到。
 
-<p>本篇教程从一些基础开始，描述了如何使用&lt;canvas&gt;元素来绘制 2D 图形。教程中提供的例子，会让你明白可以用 canvas 做什么，也会提供一些代码片段来帮助你开始构建自己的内容。</p>
+本篇教程从一些基础开始，描述了如何使用\<canvas>元素来绘制 2D 图形。教程中提供的例子，会让你明白可以用 canvas 做什么，也会提供一些代码片段来帮助你开始构建自己的内容。
 
-<p><code>&lt;canvas&gt;</code> 最早由 Apple 引入 WebKit，用于 Mac OS X 的 Dashboard，随后被各个浏览器实现。如今，所有主流的浏览器都支持它。</p>
+`<canvas>` 最早由 Apple 引入 WebKit，用于 Mac OS X 的 Dashboard，随后被各个浏览器实现。如今，所有主流的浏览器都支持它。
 
-<h2 id="Before_you_start">开始之前</h2>
+## 开始之前
 
-<p>使用 <code>&lt;canvas&gt;</code> 元素不是非常难，但你需要一些基本的<a href="/zh-CN/docs/HTML">HTML</a>和<a href="/zh-CN/docs/JavaScript">JavaScript</a>知识。除一些过时的浏览器不支持<code>&lt;canvas&gt;</code> 元素外，所有的新版本主流浏览器都支持它。Canvas 的默认大小为 300 像素×150 像素（宽×高，像素的单位是 px）。但是，可以使用 HTML 的高度和宽度属性来自定义 Canvas 的尺寸。为了在 Canvas 上绘制图形，我们使用一个 JavaScript 上下文对象，它能动态创建图像（ creates graphics on the fly）。</p>
+使用 `<canvas>` 元素不是非常难，但你需要一些基本的[HTML](/zh-CN/docs/HTML)和[JavaScript](/zh-CN/docs/JavaScript)知识。除一些过时的浏览器不支持`<canvas>` 元素外，所有的新版本主流浏览器都支持它。Canvas 的默认大小为 300 像素 ×150 像素（宽 × 高，像素的单位是 px）。但是，可以使用 HTML 的高度和宽度属性来自定义 Canvas 的尺寸。为了在 Canvas 上绘制图形，我们使用一个 JavaScript 上下文对象，它能动态创建图像（ creates graphics on the fly）。
 
-<h2 id="In_this_tutorial">本教程包含</h2>
+## 本教程包含
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage">基本用法</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">绘制图形</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">使用样式与颜色</a></li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">绘制文本</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images">使用图像</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations">变形</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing">合成和剪辑</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本动画</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations">高级动画</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">像素处理</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">点击区域和无障碍访问</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas">优化 canvas</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Finale">终曲</a></li>
-</ul>
+- [基本用法](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
+- [绘制图形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+- [使用样式与颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- [绘制文本](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- [使用图像](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images)
+- [变形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations)
+- [合成和剪辑](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing)
+- [基本动画](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
+- [高级动画](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
+- [像素处理](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [点击区域和无障碍访问](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
+- [优化 canvas](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
+- [终曲](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Finale)
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas 专题页</a></li>
- <li><a href="http://visitmix.com/labs/ai2canvas/">Adobe Illustrator to Canvas plug-in</a></li>
- <li><a href="http://www.html5canvastutorials.com/">HTML5 Canvas 教程</a></li>
-</ul>
+- [Canvas 专题页](/zh-CN/docs/Web/API/Canvas_API)
+- [Adobe Illustrator to Canvas plug-in](http://visitmix.com/labs/ai2canvas/)
+- [HTML5 Canvas 教程](http://www.html5canvastutorials.com/)
 
-<p>{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}</p>
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

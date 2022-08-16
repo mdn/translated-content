@@ -2,34 +2,35 @@
 title: CanvasRenderingContext2D.shadowBlur
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.shadowBlur</code></strong> 是 Canvas 2D API 描述模糊效果程度的属性； 它既不对应像素值也不受当前转换矩阵的影响。 默认值是 0。</p>
+**`CanvasRenderingContext2D.shadowBlur`** 是 Canvas 2D API 描述模糊效果程度的属性； 它既不对应像素值也不受当前转换矩阵的影响。 默认值是 0。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em>.shadowBlur = level;</var>
-</pre>
+```
+ctx.shadowBlur = level;
+```
 
-<dl>
- <dt><code>level</code></dt>
- <dd>描述模糊效果程度的，float 类型的值。默认值是 0。 负数、 {{jsxref("Infinity")}} 或者 {{jsxref("NaN")}} 都会被忽略。</dd>
-</dl>
+- `level`
+  - : 描述模糊效果程度的，float 类型的值。默认值是 0。 负数、 {{jsxref("Infinity")}} 或者 {{jsxref("NaN")}} 都会被忽略。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_shadowBlur_property">使用 <code>shadowBlur</code> 属性</h3>
+### 使用 `shadowBlur` 属性
 
-<p>这是一段简单的代码片段，使用 <code>shadowblur 属性设置模糊阴影。</code> 注意：只有设置 shadowColor 属性值为不透明，阴影才会被绘制。</p>
+这是一段简单的代码片段，使用 `shadowblur 属性设置模糊阴影。` 注意：只有设置 shadowColor 属性值为不透明，阴影才会被绘制。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.shadowColor = "black";
@@ -37,26 +38,25 @@ ctx.shadowBlur = 10;
 
 ctx.fillStyle = "white";
 ctx.fillRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.shadowColor = "black";
 ctx.shadowBlur = 10;
 ctx.fillStyle = "white";
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -79,21 +79,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.shadowBlur")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.

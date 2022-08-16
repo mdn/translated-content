@@ -2,52 +2,46 @@
 title: MessageEvent.MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>MessageEvent()</strong></code> 构造函数创建一个新的 {{domxref("MessageEvent")}} 对象实例。</p>
+**`MessageEvent()`** 构造函数创建一个新的 {{domxref("MessageEvent")}} 对象实例。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var messageEvent = new MessageEvent(<em>type, init</em>);</pre>
+```js
+var messageEvent = new MessageEvent(type, init);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>type</dt>
- <dd>要创建的 <code>MessageEvent</code> 的类型。这可能是 XXX 中的一个</dd>
- <dt>
- <p><strong><code>init</code> </strong>{{optional_inline}}</p>
- </dt>
- <dd>
- <p>可以包含以下属性的 dictionary 对象：</p>
+- type
+  - : 要创建的 `MessageEvent` 的类型。这可能是 XXX 中的一个
+- **`init` **{{optional_inline}}
 
- <ul>
-  <li><code>data</code>: 您希望包含在 MessageEvent 中的数据。这可以是任何数据类型，如果没有指定，则默认为 null。</li>
-  <li><code>origin</code>: {{domxref("USVString")}} 表示消息发送源。如果没有指定，则默认为空字符串 ("")。</li>
-  <li><code>lastEventId</code>: {{domxref("DOMString")}} 表示事件的唯一 ID。如果没有指定，则默认为空字符串 ("")。</li>
-  <li><code>source</code>: <code>MessageEventSource</code> (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 表示消息发送对象。如果没有设置，则默认为 null。</li>
-  <li><code>ports</code>: {{domxref("MessagePort")}} 对象数组，表示正在通过的消息通道关联的端口 (在适当的情况下，例如在通道消息传递或向共享工作者发送消息时)。如果没有指定，则默认为空数组 ([])。</li>
- </ul>
- </dd>
-</dl>
+  - : 可以包含以下属性的 dictionary 对象：
 
-<h2 id="示例">示例</h2>
+    - `data`: 您希望包含在 MessageEvent 中的数据。这可以是任何数据类型，如果没有指定，则默认为 null。
+    - `origin`: {{domxref("USVString")}} 表示消息发送源。如果没有指定，则默认为空字符串 ("")。
+    - `lastEventId`: {{domxref("DOMString")}} 表示事件的唯一 ID。如果没有指定，则默认为空字符串 ("")。
+    - `source`: `MessageEventSource` (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 表示消息发送对象。如果没有设置，则默认为 null。
+    - `ports`: {{domxref("MessagePort")}} 对象数组，表示正在通过的消息通道关联的端口 (在适当的情况下，例如在通道消息传递或向共享工作者发送消息时)。如果没有指定，则默认为空数组 (\[])。
 
-<pre class="brush: js">var myMessage = new MessageEvent('worker', {
+## 示例
+
+```js
+var myMessage = new MessageEvent('worker', {
   data : 'hello'
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MessageEvent.MessageEvent")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("ExtendableMessageEvent")}} — 类似于此接口，但用于需要为作者提供更多灵活性的接口。</li>
-</ul>
+- {{domxref("ExtendableMessageEvent")}} — 类似于此接口，但用于需要为作者提供更多灵活性的接口。

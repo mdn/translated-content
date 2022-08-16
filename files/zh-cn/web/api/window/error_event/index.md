@@ -2,53 +2,59 @@
 title: 'Window: error event'
 slug: Web/API/Window/error_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当资源加载失败或无法使用时，会在{{domxref("Window")}}对象触发<code>error</code>事件。例如：script 执行时报错。</p>
+当资源加载失败或无法使用时，会在{{domxref("Window")}}对象触发`error`事件。例如：script 执行时报错。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles（支持冒泡）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable（可撤销）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface（接口）</th>
-   <td>{{domxref("Event")}} or {{domxref("UIEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property（事件处理程序属性）</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onerror">onerror</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles（支持冒泡）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable（可撤销）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface（接口）</th>
+      <td>{{domxref("Event")}} or {{domxref("UIEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property（事件处理程序属性）</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onerror"
+            >onerror</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>如果它是由用户界面元素生成的，或者是由事件实例生成的，那么此事件是{{domxref("UIEvent")}}实例。</p>
+如果它是由用户界面元素生成的，或者是由事件实例生成的，那么此事件是{{domxref("UIEvent")}}实例。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="在线示例"><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/blur_event#%E5%9C%A8%E7%BA%BF%E7%A4%BA%E4%BE%8B">在线示例</a></h3>
+### [在线示例](/zh-CN/docs/Web/API/Window/blur_event#%E5%9C%A8%E7%BA%BF%E7%A4%BA%E4%BE%8B)
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="script-error" type="button"&gt;Generate script error&lt;/button&gt;
-  &lt;img class="bad-img" /&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="script-error" type="button">Generate script error</button>
+  <img class="bad-img" />
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -81,41 +87,37 @@ img {
   width: 0;
   height: 0;
 }
-</pre>
-</div>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 
-window.addEventListener('error', (event) =&gt; {
+window.addEventListener('error', (event) => {
     log.textContent = log.textContent + `${event.type}: ${event.message}\n`;
     console.log(event)
 });
 
 const scriptError = document.querySelector('#script-error');
-scriptError.addEventListener('click', () =&gt; {
+scriptError.addEventListener('click', () => {
     const badCode = 'const s;';
     eval(badCode);
 });
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Window.error_event")}}
 
+## 相关事件
 
-<p>{{Compat("api.Window.error_event")}}</p>
-
-<h2 id="相关事件">相关事件</h2>
-
-<ul>
- <li>This event on <code>Element</code> targets: <code><a href="/en-US/docs/Web/API/Element/error_event">error</a></code> event </li>
-</ul>
+- This event on `Element` targets: [`error`](/en-US/docs/Web/API/Element/error_event) event

@@ -2,66 +2,66 @@
 title: Headers.append()
 slug: Web/API/Headers/append
 ---
-<p>{{APIRef("Fetch")}}</p>
+{{APIRef("Fetch")}}
 
-<p>在一个<code>Headers</code>对象内部，{{domxref("Headers")}}接口的<strong><code>append()</code></strong>方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。</p>
+在一个`Headers`对象内部，{{domxref("Headers")}}接口的**`append()`**方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。
 
-<p>{{domxref("Headers.set")}} 和 <code>append()</code> 两者之间的不同之处在于当指定 header 是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而<code>append()</code>会追加到值序列的尾部。</p>
+{{domxref("Headers.set")}} 和 `append()` 两者之间的不同之处在于当指定 header 是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而`append()`会追加到值序列的尾部。
 
-<p>因为安全性原因，一些 headers 仅受用户代理控制。包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
+因为安全性原因，一些 headers 仅受用户代理控制。包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">myHeaders.append(name,value);</pre>
+```js
+myHeaders.append(name,value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>name</em></dt>
- <dd>要追加给 Headers 对象的 HTTP header 名称。</dd>
- <dt><em>value</em></dt>
- <dd>要追加给 Headers 对象的 HTTP header 值。</dd>
-</dl>
+- _name_
+  - : 要追加给 Headers 对象的 HTTP header 名称。
+- _value_
+  - : 要追加给 Headers 对象的 HTTP header 值。
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>Void.</p>
+Void.
 
-<h2 id="例程">例程</h2>
+## 例程
 
-<p>创建一个空的 Headers 对象：</p>
+创建一个空的 Headers 对象：
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>可以通过 append() 方法添加 header:</p>
+可以通过 append() 方法添加 header:
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
-</pre>
+```
 
-<p>如果指定 header 不存在，<code>append()</code>将会添加这个 header 并赋值 . 如果指定 header 已存在并允许有多个值，<code>append()</code>将会把指定值添加到值队列的末尾。</p>
+如果指定 header 不存在，`append()`将会添加这个 header 并赋值 . 如果指定 header 已存在并允许有多个值，`append()`将会把指定值添加到值队列的末尾。
 
-<pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
+```js
+myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]
-</pre>
+```
 
-<p>要使用新值覆盖旧值，请使用{{domxref("Headers.set")}}。</p>
+要使用新值覆盖旧值，请使用{{domxref("Headers.set")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Headers.append")}}</p>
+{{Compat("api.Headers.append")}}
 
-<div id="compat-mobile"> </div>
+## 参见
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

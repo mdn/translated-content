@@ -2,29 +2,30 @@
 title: IDBCursor.key
 slug: Web/API/IDBCursor/key
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p><strong>key</strong>是只读属性，返回在游标中的位置。如果游标在范围之外，这个值会被置为 undefined。游标的 key 可以是任何数据类型。</p>
+**key**是只读属性，返回在游标中的位置。如果游标在范围之外，这个值会被置为 undefined。游标的 key 可以是任何数据类型。
 
-<p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox" style="font-size: 14px;">var <em>key = cursor</em>.key;</pre>
+```
+var key = cursor.key;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>任意类型</p>
+任意类型
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在该示例中，我们创建一个事务，检索一个存储对象，然后使用游标遍历所有存储在 object store 中的记录。遍历的过程中，我们把类似（相簿标题，这是我们的键 key），游标的 key 打印出来。</p>
+在该示例中，我们创建一个事务，检索一个存储对象，然后使用游标遍历所有存储在 object store 中的记录。遍历的过程中，我们把类似（相簿标题，这是我们的键 key），游标的 key 打印出来。
 
-<p>我们可以不根据游标的 key 来选取数据；我们可以抓取所有。还要注意，在循环的每个迭代中，您可以使用 cursor.value.foo 从当前记录下获取数据。完整示例，请看<a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/">view example live</a>.)</p>
+我们可以不根据游标的 key 来选取数据；我们可以抓取所有。还要注意，在循环的每个迭代中，您可以使用 cursor.value.foo 从当前记录下获取数据。完整示例，请看[IDBCursor example](https://github.com/mdn/IDBcursor-example/) ([view example live](http://mdn.github.io/IDBcursor-example/).)
 
-<pre style="font-size: 14px;">function displayData() {
+```
+function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -41,24 +42,23 @@ slug: Web/API/IDBCursor/key
       console.log('Entries all displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.IDBCursor.key")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

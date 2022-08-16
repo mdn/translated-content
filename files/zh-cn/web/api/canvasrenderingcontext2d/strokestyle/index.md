@@ -2,66 +2,66 @@
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeStyle</code></strong> 是 Canvas 2D API 描述画笔（绘制图形）颜色或者样式的属性。默认值是 <code>#000</code> (black)。</p>
+**`CanvasRenderingContext2D.strokeStyle`** 是 Canvas 2D API 描述画笔（绘制图形）颜色或者样式的属性。默认值是 `#000` (black)。
 
-<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
+参见 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中的 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 章节。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em>.strokeStyle = color;
-</var><var><em>ctx</em>.strokeStyle = gradient;
-</var><var><em>ctx</em>.strokeStyle = pattern;</var>
-</pre>
+```
+ctx.strokeStyle = color;
+ctx.strokeStyle = gradient;
+ctx.strokeStyle = pattern;
+```
 
-<h3 id="选项">选项</h3>
+### 选项
 
-<dl>
- <dt><code>color</code></dt>
- <dd>{{domxref("DOMString")}} 字符串，可以转换成 CSS {{cssxref("&lt;color&gt;")}} 值。</dd>
- <dt><code>gradient</code></dt>
- <dd>{{domxref("CanvasGradient")}} 对象（线性渐变或放射性渐变）。</dd>
- <dt><code>pattern</code></dt>
- <dd>{{domxref("CanvasPattern")}} 对象（可重复的图片）。</dd>
-</dl>
+- `color`
+  - : {{domxref("DOMString")}} 字符串，可以转换成 CSS {{cssxref("&lt;color&gt;")}} 值。
+- `gradient`
+  - : {{domxref("CanvasGradient")}} 对象（线性渐变或放射性渐变）。
+- `pattern`
+  - : {{domxref("CanvasPattern")}} 对象（可重复的图片）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_strokeStyle_property">使用 <code>strokeStyle</code> 属性设置不同的颜色</h3>
+### 使用 `strokeStyle` 属性设置不同的颜色
 
-<p>这是一段简单的代码片段，使用 <code>strokeStyle</code> 属性设置不同的颜色。</p>
+这是一段简单的代码片段，使用 `strokeStyle` 属性设置不同的颜色。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.strokeStyle = "blue";
 ctx.strokeRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -84,18 +84,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h3 id="A_strokeStyle_example"><code>strokeStyle</code> 例子</h3>
+### `strokeStyle` 例子
 
-<p>这个例子使用 <code>strokeStyle 属性改变图形轮廓线的颜色。</code>我们使用 {{domxref("CanvasRenderingContext2D.arc", "arc()")}} 绘制圆形来代替正方形。</p>
+这个例子使用 `strokeStyle 属性改变图形轮廓线的颜色。`我们使用 {{domxref("CanvasRenderingContext2D.arc", "arc()")}} 绘制圆形来代替正方形。
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
-for (var i=0;i&lt;6;i++){
-  for (var j=0;j&lt;6;j++){
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
+for (var i=0;i<6;i++){
+  for (var j=0;j<6;j++){
     ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
                       Math.floor(255-42.5*j) + ')';
     ctx.beginPath();
@@ -103,43 +103,37 @@ for (var i=0;i&lt;6;i++){
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<p>结果如下显示：</p>
+结果如下显示：
 
-<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.strokeStyle")}}</p>
+{{Compat("api.CanvasRenderingContext2D.strokeStyle")}}
 
-<div id="compat-mobile"></div>
+### WebKit/Blink-specific 注解
 
-<h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
+- 在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不标准的并且不赞成使用的方法 `ctx.setStrokeColor()` 。
 
-<ul>
- <li>在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不标准的并且不赞成使用的方法  <code>ctx.setStrokeColor()</code> 。
+  ```js
+  setStrokeColor(color, optional alpha);
+  setStrokeColor(grayLevel, optional alpha);
+  setStrokeColor(r, g, b, a);
+  setStrokeColor(c, m, y, k, a);
+  ```
 
-  <pre class="brush: js">setStrokeColor(color, optional alpha);
-setStrokeColor(grayLevel, optional alpha);
-setStrokeColor(r, g, b, a);
-setStrokeColor(c, m, y, k, a);
-</pre>
- </li>
-</ul>
+## 参见
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}

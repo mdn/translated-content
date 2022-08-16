@@ -2,136 +2,149 @@
 title: 在 web 应用程序中使用文件
 slug: Web/API/File_API/Using_files_from_web_applications
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>通过使用在 HTML5 中加入到 DOM 的 File API，使在 web 内容中让用户选择本地文件然后读取这些文件的内容成为可能。用户可以通过 HTML 中的 {{HTMLElement("input/file", '&lt;input type="file"&gt;')}} 元素或者是通过拖拽来选择本地文件。</p>
+通过使用在 HTML5 中加入到 DOM 的 File API，使在 web 内容中让用户选择本地文件然后读取这些文件的内容成为可能。用户可以通过 HTML 中的 {{HTMLElement("input/file", '&lt;input type="file"&gt;')}} 元素或者是通过拖拽来选择本地文件。
 
-<p>如果你想通过扩展或者其它的 chrome 源码浏览器（browser chrome code）使用 DOM File API，是可行的；然而，需要注意有一些附加特性。详细请见 <a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a>。</p>
+如果你想通过扩展或者其它的 chrome 源码浏览器（browser chrome code）使用 DOM File API，是可行的；然而，需要注意有一些附加特性。详细请见 [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)。
 
-<h2 id="访问被选择的文件">访问被选择的文件</h2>
+## 访问被选择的文件
 
-<p>考虑这段 HTML:</p>
+考虑这段 HTML:
 
-<pre class="brush: html notranslate">&lt;input type="file" id="input"&gt;</pre>
+```html
+<input type="file" id="input">
+```
 
-<p>通过 File API，我们可以访问 {{DOMxRef("FileList")}}，它包含了表示用户所选文件的 {{DOMxRef("File")}} 对象</p>
+通过 File API，我们可以访问 {{DOMxRef("FileList")}}，它包含了表示用户所选文件的 {{DOMxRef("File")}} 对象
 
-<p>如果用户只选择了一个文件，那么只需要考虑列表中的第一个文件。</p>
+如果用户只选择了一个文件，那么只需要考虑列表中的第一个文件。
 
-<p>使用传统的 DOM 选择器访问一个被选择的文件：</p>
+使用传统的 DOM 选择器访问一个被选择的文件：
 
-<pre class="brush: js notranslate">const selectedFile = document.getElementById('input').files[0];
-</pre>
+```js
+const selectedFile = document.getElementById('input').files[0];
+```
 
-<h3 id="通过_change_事件访问被选择的文件"><strong>通过 change 事件访问被选择的文件</strong></h3>
+### 通过 change 事件访问被选择的文件
 
-<p>可以（但不是强制的）通过 <code>change</code> 事件访问 {{DOMxRef("FileList")}}：</p>
+可以（但不是强制的）通过 `change` 事件访问 {{DOMxRef("FileList")}}：
 
-<pre class="brush: html notranslate">&lt;input type="file" id="input" onchange="handleFiles(this.files)"&gt;</pre>
+```html
+<input type="file" id="input" onchange="handleFiles(this.files)">
+```
 
-<p>当用户选择一个文件时，<code>handleFiles()</code> 方法会用一个 {{DOMxRef("FileList")}} 对象作为参数被调用，{{DOMxRef("FileList")}} 对象包含表示用户选择的文件的 {{DOMxRef("File")}} 对象。</p>
+当用户选择一个文件时，`handleFiles()` 方法会用一个 {{DOMxRef("FileList")}} 对象作为参数被调用，{{DOMxRef("FileList")}} 对象包含表示用户选择的文件的 {{DOMxRef("File")}} 对象。
 
-<p>如果你想让用户选择多个文件，只需在 <code>input</code> 元素上使用 <code>multiple</code> 属性：</p>
+如果你想让用户选择多个文件，只需在 `input` 元素上使用 `multiple` 属性：
 
-<pre class="brush: html notranslate">&lt;input type="file" id="input" multiple onchange="handleFiles(this.files)"&gt;</pre>
+```html
+<input type="file" id="input" multiple onchange="handleFiles(this.files)">
+```
 
-<p>在这个例子中，对于每个用户选择的文件，传递给 <code>handleFiles()</code>方法的文件列表都包含一个对应的 {{DOMxRef("File")}} 对象。</p>
+在这个例子中，对于每个用户选择的文件，传递给 `handleFiles()`方法的文件列表都包含一个对应的 {{DOMxRef("File")}} 对象。
 
-<h3 id="动态添加change监听器"><strong>动态添加 change 监听器</strong></h3>
+### 动态添加 change 监听器
 
-<p>你需要使用 {{DOMxRef("EventTarget.addEventListener()")}} 去添加 <code>change</code> 事件监听器，像这样：</p>
+你需要使用 {{DOMxRef("EventTarget.addEventListener()")}} 去添加 `change` 事件监听器，像这样：
 
-<pre class="brush: js notranslate">const inputElement = document.getElementById("input");
+```js
+const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles() {
   const fileList = this.files; /* now you can work with the file list */
 }
-</pre>
+```
 
-<p>注意在这个例子里，<code>handleFiles()</code> 方法本身是一个事件处理器，不像之前的例子中，它被事件处理器调用然后传递给它一个参数。</p>
+注意在这个例子里，`handleFiles()` 方法本身是一个事件处理器，不像之前的例子中，它被事件处理器调用然后传递给它一个参数。
 
-<h2 id="获取被选择文件的信息">获取被选择文件的信息</h2>
+## 获取被选择文件的信息
 
-<p>DOM 提供 {{ domxref("FileList") }} 对象列出了用户选择的所有文件，每一个文件被指定为一个 {{ domxref("File") }} 对象。你可以通过检查文件列表 {{ domxref("FileList") }} 的 <code>length</code> 属性来确定用户选择了多少个文件：</p>
+DOM 提供 {{ domxref("FileList") }} 对象列出了用户选择的所有文件，每一个文件被指定为一个 {{ domxref("File") }} 对象。你可以通过检查文件列表 {{ domxref("FileList") }} 的 `length` 属性来确定用户选择了多少个文件：
 
-<pre class="brush: js notranslate">const numFiles = files.length;
-</pre>
+```js
+const numFiles = files.length;
+```
 
-<p>可以像数组一样简单地访问文件列表来检索各个 {{ domxref("File") }} 对象：</p>
+可以像数组一样简单地访问文件列表来检索各个 {{ domxref("File") }} 对象：
 
-<pre class="brush: js notranslate">for (let i = 0, numFiles = files.length; i &lt; numFiles; i++) {
+```js
+for (let i = 0, numFiles = files.length; i < numFiles; i++) {
   const file = files[i];
   // ...
-}</pre>
+}
+```
 
-<p>这个循环遍历了文件列表里的所有文件。</p>
+这个循环遍历了文件列表里的所有文件。
 
-<p> {{ domxref("File") }} 对象提供了三个属性，包含了文件的有用信息。</p>
+{{ domxref("File") }} 对象提供了三个属性，包含了文件的有用信息。
 
-<dl>
- <dt><code>name</code></dt>
- <dd>文件名称，只读字符串。只包含文件名，不包含任何路径信息。</dd>
- <dt><code>size</code></dt>
- <dd>以字节数为单位的文件大小，只读的 64 位整数。</dd>
- <dt><code>type</code></dt>
- <dd>文件的 MIME 类型，只读字符串，当类型不能确定时为 <code>""</code>。</dd>
-</dl>
+- `name`
+  - : 文件名称，只读字符串。只包含文件名，不包含任何路径信息。
+- `size`
+  - : 以字节数为单位的文件大小，只读的 64 位整数。
+- `type`
+  - : 文件的 MIME 类型，只读字符串，当类型不能确定时为 `""`。
 
-<h3 id="示例：显示文件大小">示例：显示文件大小</h3>
+### 示例：显示文件大小
 
-<p>下面的例子展示了 <code>size</code> 属性的一种可能用法：</p>
+下面的例子展示了 `size` 属性的一种可能用法：
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;File(s) size&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>File(s) size</title>
+<script>
 function updateSize() {
   let nBytes = 0,
       oFiles = document.getElementById("uploadInput").files,
       nFiles = oFiles.length;
-  for (let nFileId = 0; nFileId &lt; nFiles; nFileId++) {
+  for (let nFileId = 0; nFileId < nFiles; nFileId++) {
     nBytes += oFiles[nFileId].size;
   }
   let sOutput = nBytes + " bytes";
   // optional code for multiples approximation
   const aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
-  for (nMultiple = 0, nApprox = nBytes / 1024; nApprox &gt; 1; nApprox /= 1024, nMultiple++) {
+  for (nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
     sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
   }
   // end of optional code
   document.getElementById("fileNum").innerHTML = nFiles;
   document.getElementById("fileSize").innerHTML = sOutput;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="updateSize()"&gt;
-  &lt;form name="uploadForm"&gt;
-    &lt;div&gt;
-      &lt;input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple&gt;
-      selected files: &lt;span id="fileNum"&gt;0&lt;/span&gt;;
-      total size: &lt;span id="fileSize"&gt;0&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;&lt;input type="submit" value="Send file"&gt;&lt;/div&gt;
-  &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<body onload="updateSize()">
+  <form name="uploadForm">
+    <div>
+      <input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple>
+      selected files: <span id="fileNum">0</span>;
+      total size: <span id="fileSize">0</span>
+    </div>
+    <div><input type="submit" value="Send file"></div>
+  </form>
+</body>
+</html>
+```
 
-<h2 id="通过_click_方法使用隐藏的_file_input_元素">通过 click() 方法使用隐藏的 file input 元素</h2>
+## 通过 click() 方法使用隐藏的 file input 元素
 
-<p>你可以隐藏公认难看的 file {{ HTMLElement("input") }} 元素并显示你自己的界面来打开文件选择器，然后显示哪个或哪些文件被用户选中了。你可以通过给 input 元素添加 <code>display:none</code> 的样式，再调用 {{HTMLElement("input") }} 元素的 {{domxref("element.click","click()") }} 方法来实现。</p>
+你可以隐藏公认难看的 file {{ HTMLElement("input") }} 元素并显示你自己的界面来打开文件选择器，然后显示哪个或哪些文件被用户选中了。你可以通过给 input 元素添加 `display:none` 的样式，再调用 {{HTMLElement("input") }} 元素的 {{domxref("element.click","click()") }} 方法来实现。
 
-<p>考虑这段 HTML：</p>
+考虑这段 HTML：
 
-<pre class="brush: html notranslate">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
-&lt;button id="fileSelect"&gt;Select some files&lt;/button&gt;
-</pre>
+```html
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<button id="fileSelect">Select some files</button>
+```
 
-<p>处理 <code>click</code> 事件的代码类似于这样：</p>
+处理 `click` 事件的代码类似于这样：
 
-<pre class="brush: js notranslate">const fileSelect = document.getElementById("fileSelect"),
+```js
+const fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
 fileSelect.addEventListener("click", function (e) {
@@ -139,22 +152,25 @@ fileSelect.addEventListener("click", function (e) {
     fileElem.click();
   }
 }, false);
-</pre>
+```
 
-<p>你可以给这个用来打开文件选择器的新按钮添加任何你想要的样式。</p>
+你可以给这个用来打开文件选择器的新按钮添加任何你想要的样式。
 
-<h2 id="使用_label_元素来触发一个隐藏的_file_input_元素">使用 label 元素来触发一个隐藏的 file input 元素</h2>
+## 使用 label 元素来触发一个隐藏的 file input 元素
 
-<p>允许在不使用 JavaScript（click() 方法）来打开文件选择器，可以使用 {{ HTMLElement("label") }} 元素。注意在这种情况下，input 元素不能使用 <code>display: none</code>（或 <code>visibility: hidden</code>）隐藏，否则 label 将无法通过键盘访问。使用 <a href="https://a11yproject.com/posts/how-to-hide-content/">visually-hidden technique</a> 作为替代。</p>
+允许在不使用 JavaScript（click() 方法）来打开文件选择器，可以使用 {{ HTMLElement("label") }} 元素。注意在这种情况下，input 元素不能使用 `display: none`（或 `visibility: hidden`）隐藏，否则 label 将无法通过键盘访问。使用 [visually-hidden technique](https://a11yproject.com/posts/how-to-hide-content/) 作为替代。
 
-<p>考虑这段 HTML：</p>
+考虑这段 HTML：
 
-<pre class="brush: html notranslate">&lt;input type="file" id="fileElem" multiple accept="image/*" class="visually-hidden"&gt;
-&lt;label for="fileElem"&gt;Select some files&lt;/label&gt;</pre>
+```html
+<input type="file" id="fileElem" multiple accept="image/*" class="visually-hidden">
+<label for="fileElem">Select some files</label>
+```
 
-<p>和这段 CSS：</p>
+和这段 CSS：
 
-<pre class="brush: css notranslate">.visually-hidden {
+```css
+.visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -169,30 +185,31 @@ input.visually-hidden:focus + label {
 input.visually-hidden:focus-within + label {
   outline: thin dotted;
 }
-</pre>
+```
 
-<p>这里不需要添加任何 JavaScript 代码来调用<code>fileElem.click()</code>，另外，这时你也可以给 label 元素添加你想要的样式。您需要在其 label 上提供隐藏 input 字段的焦点状态的视觉提示，比如上面用的轮廓，或者背景颜色或边框阴影。（截至编写时为止，Firefox 不显示 <code>&lt;input type="file"&gt;</code> 元素的视觉提示。）</p>
+这里不需要添加任何 JavaScript 代码来调用`fileElem.click()`，另外，这时你也可以给 label 元素添加你想要的样式。您需要在其 label 上提供隐藏 input 字段的焦点状态的视觉提示，比如上面用的轮廓，或者背景颜色或边框阴影。（截至编写时为止，Firefox 不显示 `<input type="file">` 元素的视觉提示。）
 
-<h2 id="使用拖放来选择文件">使用拖放来选择文件</h2>
+## 使用拖放来选择文件
 
-<p>你还可以让用户将文件拖拽到你的网页应用中。</p>
+你还可以让用户将文件拖拽到你的网页应用中。
 
-<p>第一步是创建一个 drop 区域。虽然你网页内容的哪部分接受拖放取决于你的应用设计，但是使一个元素接收 drop 事件是很容易的。</p>
+第一步是创建一个 drop 区域。虽然你网页内容的哪部分接受拖放取决于你的应用设计，但是使一个元素接收 drop 事件是很容易的。
 
-<pre class="brush: js notranslate">let dropbox;
+```js
+let dropbox;
 
 dropbox = document.getElementById("dropbox");
 dropbox.addEventListener("dragenter", dragenter, false);
 dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
+```
 
-</pre>
+在这个例子中，我们将 ID 为`dropbox`的元素变为了我们的 drop 区域。这是通过给元素添加{{event('dragenter')}}, {{event('dragover')}}, 和{{event('drop')}} 事件监听器实现的。
 
-<p>在这个例子中，我们将 ID 为<code>dropbox</code>的元素变为了我们的 drop 区域。这是通过给元素添加{{event('dragenter')}}, {{event('dragover')}}, 和{{event('drop')}} 事件监听器实现的。</p>
+我们其实并不需要对`dragenter` and `dragover` 事件进行处理，所以这些函数都很简单。他们只需要包括禁止事件传播和阻止默认事件：
 
-<p>我们其实并不需要对<code>dragenter</code> and <code>dragover</code> 事件进行处理，所以这些函数都很简单。他们只需要包括禁止事件传播和阻止默认事件：</p>
-
-<pre class="brush: js notranslate">function dragenter(e) {
+```js
+function dragenter(e) {
   e.stopPropagation();
   e.preventDefault();
 }
@@ -201,12 +218,12 @@ function dragover(e) {
   e.stopPropagation();
   e.preventDefault();
 }
+```
 
-</pre>
+真正的奥妙在`drop()`这个函数中：
 
-<p>真正的奥妙在<code>drop()</code>这个函数中：</p>
-
-<pre class="brush: js notranslate">function drop(e) {
+```js
+function drop(e) {
   e.stopPropagation();
   e.preventDefault();
 
@@ -215,16 +232,17 @@ function dragover(e) {
 
   handleFiles(files);
 }
-</pre>
+```
 
-<p>这里，我们从事件中获取到了<code>dataTransfer</code> 这个域，然后从中得到文件列表，再将它们传递给<code>handleFiles()</code>函数。在这之后，处理文件的方法和用<code>input</code>元素或者用拖拽就是一样的了。</p>
+这里，我们从事件中获取到了`dataTransfer` 这个域，然后从中得到文件列表，再将它们传递给`handleFiles()`函数。在这之后，处理文件的方法和用`input`元素或者用拖拽就是一样的了。
 
-<h2 id="例子：显示用户选择的图片的缩略图">例子：显示用户选择的图片的缩略图</h2>
+## 例子：显示用户选择的图片的缩略图
 
-<p>比方说，你正在开发一个炫酷的下一代图片分享网站，并且想使用 HTML5 来展示用户在实际上传之前的图片的缩略图。你可以像我们之前讨论的那样创建自己的 input 元素或者 drop 区域，然后对他们使用一个回调函数，比如下面的<code>handleFiles()</code>。</p>
+比方说，你正在开发一个炫酷的下一代图片分享网站，并且想使用 HTML5 来展示用户在实际上传之前的图片的缩略图。你可以像我们之前讨论的那样创建自己的 input 元素或者 drop 区域，然后对他们使用一个回调函数，比如下面的`handleFiles()`。
 
-<pre class="brush: js notranslate">function handleFiles(files) {
-  for (var i = 0; i &lt; files.length; i++) {
+```js
+function handleFiles(files) {
+  for (var i = 0; i < files.length; i++) {
     var file = files[i];
     var imageType = /^image\//;
 
@@ -242,46 +260,50 @@ function dragover(e) {
     reader.readAsDataURL(file);
   }
 }
-</pre>
+```
 
-<p>这里我们循环处理用户选择的文件，看每个文件的<code>type</code>属性是不是 image（通过正则表达式来匹配 MIME 类型字符串模式"<code>image/*</code>"）。对每个文件而言，如果它是 image，我们就创建一个新的<code>img</code>元素。可以使用 css 来创建一个漂亮的边框或阴影来显示图片的具体大小，在这儿就不具体做了。</p>
+这里我们循环处理用户选择的文件，看每个文件的`type`属性是不是 image（通过正则表达式来匹配 MIME 类型字符串模式"`image/*`"）。对每个文件而言，如果它是 image，我们就创建一个新的`img`元素。可以使用 css 来创建一个漂亮的边框或阴影来显示图片的具体大小，在这儿就不具体做了。
 
-<p>为了在 DOM 树中更容易地找到他们，每个图片元素都被添加了一个名为<code>obj</code>的 CSS 类。我们还给每个图片添加了<code>file</code>属性使它具有 {{ domxref("File") }}；这样做可以让我们拿到稍后需要实际上传的图片。我们在预览页中使用 {{ domxref("Node.appendChild()") }}来添加新的缩略图。</p>
+为了在 DOM 树中更容易地找到他们，每个图片元素都被添加了一个名为`obj`的 CSS 类。我们还给每个图片添加了`file`属性使它具有 {{ domxref("File") }}；这样做可以让我们拿到稍后需要实际上传的图片。我们在预览页中使用 {{ domxref("Node.appendChild()") }}来添加新的缩略图。
 
-<p>接下来，我们创建了{{ domxref("FileReader") }}来处理异步的图片加载并把他赋给<code>img</code>元素。在创建一个新的 <code>FileReader</code>对象后，我们新建了它的<code>onload</code> 函数，然后调用<code>readAsDataURL()</code>函数开始后台读取文件。当整个图片文件的内容都被全部加载完后，它们被转换成了一个被传递到<code>onload</code>回调函数的<code>data:</code>URL。我们再执行常规操作将<code>img</code>元素的<code>src</code>属性设置为刚刚加载完毕的 URL，使得图像可以显示在用户屏幕上的缩略图中。</p>
+接下来，我们创建了{{ domxref("FileReader") }}来处理异步的图片加载并把他赋给`img`元素。在创建一个新的 `FileReader`对象后，我们新建了它的`onload` 函数，然后调用`readAsDataURL()`函数开始后台读取文件。当整个图片文件的内容都被全部加载完后，它们被转换成了一个被传递到`onload`回调函数的`data:`URL。我们再执行常规操作将`img`元素的`src`属性设置为刚刚加载完毕的 URL，使得图像可以显示在用户屏幕上的缩略图中。
 
-<h2 id="使用对象_URL">使用对象 URL</h2>
+## 使用对象 URL
 
-<p>Gecko 2.0 {{ geckoRelease("2.0") }}引入了对 DOM {{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法的支持。这使得你可以创建用于引用任何数据的简单 URL 字符串，也可以引用一个包括用户电脑上的本地文件的 DOM {{ domxref("File") }}对象。</p>
+Gecko 2.0 {{ geckoRelease("2.0") }}引入了对 DOM {{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法的支持。这使得你可以创建用于引用任何数据的简单 URL 字符串，也可以引用一个包括用户电脑上的本地文件的 DOM {{ domxref("File") }}对象。
 
-<p>当你需要在 HTML 中通过 URL 来引用一个{{ domxref("File") }}对象时，你可以创建一个对象 URL，就像这样：</p>
+当你需要在 HTML 中通过 URL 来引用一个{{ domxref("File") }}对象时，你可以创建一个对象 URL，就像这样：
 
-<pre class="brush: js notranslate">var objectURL = window.URL.createObjectURL(fileObj);
-</pre>
+```js
+var objectURL = window.URL.createObjectURL(fileObj);
+```
 
-<p>这个对象 URL 是一个标识{{ domxref("File") }}对象的字符串。每次你调用{{ domxref("window.URL.createObjectURL()") }}，就会产生一个唯一的对象 URL，即使是你对一个已创建了对象 URL 的文件再次创建一个对象 URL。每个创建了的对象 URL 必须要释放。当文档关闭时，它们会自动被释放。如果你的网页要动态使用它们，你需要显式调用 {{ domxref("window.URL.revokeObjectURL()") }}来释放它们：</p>
+这个对象 URL 是一个标识{{ domxref("File") }}对象的字符串。每次你调用{{ domxref("window.URL.createObjectURL()") }}，就会产生一个唯一的对象 URL，即使是你对一个已创建了对象 URL 的文件再次创建一个对象 URL。每个创建了的对象 URL 必须要释放。当文档关闭时，它们会自动被释放。如果你的网页要动态使用它们，你需要显式调用 {{ domxref("window.URL.revokeObjectURL()") }}来释放它们：
 
-<pre class="brush: js notranslate">window.URL.revokeObjectURL(objectURL);
-</pre>
+```js
+window.URL.revokeObjectURL(objectURL);
+```
 
-<h2 id="示例：使用对象_url_来显示图片">示例：使用对象 URL 来显示图片</h2>
+## 示例：使用对象 URL 来显示图片
 
-<p>这个例子使用对象 URL 来显示图片缩略图。另外，示例也会显示文件名和文件大小等其他文件信息。</p>
+这个例子使用对象 URL 来显示图片缩略图。另外，示例也会显示文件名和文件大小等其他文件信息。
 
-<p>显示接口的 HTML 类似于这样：</p>
+显示接口的 HTML 类似于这样：
 
-<pre class="brush: html notranslate">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
-&lt;a href="#" id="fileSelect"&gt;Select some files&lt;/a&gt;
-&lt;div id="fileList"&gt;
-  &lt;p&gt;No files selected!&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<a href="#" id="fileSelect">Select some files</a>
+<div id="fileList">
+  <p>No files selected!</p>
+</div>
+```
 
-<p>这确定我们的文件 {{ HTMLElement("input") }} 元素显示为一个可以调用文件选择器的链接（我们隐藏了文件输入元素来阻止显示用户不友好的界面）。这个在 <a href="#通过_click_方法使用隐藏的_file_input_元素">通过 click() 方法使用隐藏的 file input 元素</a>已经说明了这种调用文件选择器的方法。</p>
+这确定我们的文件 {{ HTMLElement("input") }} 元素显示为一个可以调用文件选择器的链接（我们隐藏了文件输入元素来阻止显示用户不友好的界面）。这个在 [通过 click() 方法使用隐藏的 file input 元素](#通过_click_方法使用隐藏的_file_input_元素)已经说明了这种调用文件选择器的方法。
 
-<p><code>handleFiles()</code> 方法如下：</p>
+`handleFiles()` 方法如下：
 
-<pre class="brush: js notranslate">window.URL = window.URL || window.webkitURL;
+```js
+window.URL = window.URL || window.webkitURL;
 
 var fileSelect = document.getElementById("fileSelect"),
     fileElem = document.getElementById("fileElem"),
@@ -296,12 +318,12 @@ fileSelect.addEventListener("click", function (e) {
 
 function handleFiles(files) {
     if (!files.length) {
-        fileList.innerHTML = "&lt;p&gt;No files selected!&lt;/p&gt;";
+        fileList.innerHTML = "<p>No files selected!</p>";
     } else {
         fileList.innerHTML = "";
         var list = document.createElement("ul");
         fileList.appendChild(list);
-        for (var i = 0; i &lt; files.length; i++) {
+        for (var i = 0; i < files.length; i++) {
             var li = document.createElement("li");
             list.appendChild(li);
             var img = document.createElement("img");
@@ -316,55 +338,54 @@ function handleFiles(files) {
             li.appendChild(info);
         }
     }
-}</pre>
+}
+```
 
-<p>首先，获取 ID 为 <code>fileList</code> 的 {{ HTMLElement("div") }} 。这个区块里我们会插入我们的文件列表，包括缩略图。</p>
+首先，获取 ID 为 `fileList` 的 {{ HTMLElement("div") }} 。这个区块里我们会插入我们的文件列表，包括缩略图。
 
-<p>如果传入 <code>handleFiles()</code> 的 {{ domxref("FileList") }} 对象值为 <code>null</code> 时，我们只要简单将这块的内部 HTML 为显示“No files selected!”。否则，我们就需要像下面这样编写我们的文件列表：</p>
+如果传入 `handleFiles()` 的 {{ domxref("FileList") }} 对象值为 `null` 时，我们只要简单将这块的内部 HTML 为显示“No files selected!”。否则，我们就需要像下面这样编写我们的文件列表：
 
-<ol>
- <li>创建一个无序列表 ({{ HTMLElement("ul") }}) 元素。</li>
- <li>通过调用列表的{{ domxref("Node.appendChild()") }}方法来将新的列表元素插入到 {{ HTMLElement("div") }}块。</li>
- <li>遍历文件集合 {{ domxref("FileList") }}（即<code>files</code>）中的每个 {{ domxref("File") }}：
-  <ol>
-   <li>创建一个新的列表项（{{ HTMLElement("li") }}）元素并插入到列表中。</li>
-   <li>创建一个新的图片（{{ HTMLElement("img") }}）元素。</li>
-   <li>设置图片的源为一个新的指代文件的对象 URL，使用{{ domxref("window.URL.createObjectURL()") }}来创建 blob URL。</li>
-   <li>设置图片的高度为 60 像素。</li>
-   <li>设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用{{ domxref("window.URL.revokeObjectURL()") }}方法并且传递 <code>img.src</code>中的对象 URL 字符串来实现。</li>
-   <li>将新的列表项添加到列表中。</li>
-  </ol>
- </li>
-</ol>
+1.  创建一个无序列表 ({{ HTMLElement("ul") }}) 元素。
+2.  通过调用列表的{{ domxref("Node.appendChild()") }}方法来将新的列表元素插入到 {{ HTMLElement("div") }}块。
+3.  遍历文件集合 {{ domxref("FileList") }}（即`files`）中的每个 {{ domxref("File") }}：
 
-<p>这是上面代码的一个在线示例：</p>
+    1.  创建一个新的列表项（{{ HTMLElement("li") }}）元素并插入到列表中。
+    2.  创建一个新的图片（{{ HTMLElement("img") }}）元素。
+    3.  设置图片的源为一个新的指代文件的对象 URL，使用{{ domxref("window.URL.createObjectURL()") }}来创建 blob URL。
+    4.  设置图片的高度为 60 像素。
+    5.  设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用{{ domxref("window.URL.revokeObjectURL()") }}方法并且传递 `img.src`中的对象 URL 字符串来实现。
+    6.  将新的列表项添加到列表中。
 
-<p>{{EmbedLiveSample('示例：使用对象 URL 来显示图片', '100%', '300px')}}</p>
+这是上面代码的一个在线示例：
 
-<h2 id="例子：上传一个用户选择的文件">例子：上传一个用户选择的文件</h2>
+{{EmbedLiveSample('示例：使用对象 URL 来显示图片', '100%', '300px')}}
 
-<p>另一件您可能想要做的事是让用户将选定的一个或多个文件（例如前一个示例中选择的图像）上传到服务器。这用异步可以很容易地完成。</p>
+## 例子：上传一个用户选择的文件
 
-<h3 id="创建上传任务">创建上传任务</h3>
+另一件您可能想要做的事是让用户将选定的一个或多个文件（例如前一个示例中选择的图像）上传到服务器。这用异步可以很容易地完成。
 
-<p>继续前面示例中构建缩略图的代码，回想一下每个缩略图图像都在 CSS 类<code>obj</code>中，并且<code>file</code>属性中附加了相应的 {{ domxref("File") }} 。这允许我们使用 {{ domxref("Document.querySelectorAll()") }} 选择用户决定上传的所有图像，如下所示：</p>
+### 创建上传任务
 
-<pre class="brush: js notranslate">function sendFiles() {
+继续前面示例中构建缩略图的代码，回想一下每个缩略图图像都在 CSS 类`obj`中，并且`file`属性中附加了相应的 {{ domxref("File") }} 。这允许我们使用 {{ domxref("Document.querySelectorAll()") }} 选择用户决定上传的所有图像，如下所示：
+
+```js
+function sendFiles() {
   var imgs = document.querySelectorAll(".obj");
 
-  for (var i = 0; i &lt; imgs.length; i++) {
+  for (var i = 0; i < imgs.length; i++) {
     new FileUpload(imgs[i], imgs[i].file);
   }
 }
-</pre>
+```
 
-<p>第 2 行获取了文档中所有 CSS 类为<code>obj</code>的元素的 {{ domxref("NodeList") }}，命名为<code>imgs</code>。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的<code>FileUpload</code>实例就很简单了。每个实例都可以处理相应文件的上传。</p>
+第 2 行获取了文档中所有 CSS 类为`obj`的元素的 {{ domxref("NodeList") }}，命名为`imgs`。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的`FileUpload`实例就很简单了。每个实例都可以处理相应文件的上传。
 
-<h3 id="Handling_the_upload_process_for_a_file处理文件的上传过程">Handling the upload process for a file 处理文件的上传过程</h3>
+### Handling the upload process for a file 处理文件的上传过程
 
-<p><code>FileUpload</code>函数接受两个输入：一个 image 元素和一个包含图像数据的文件。</p>
+`FileUpload`函数接受两个输入：一个 image 元素和一个包含图像数据的文件。
 
-<pre class="brush: js notranslate">function FileUpload(img, file) {
+```js
+function FileUpload(img, file) {
   var reader = new FileReader();
   this.ctrl = createThrobber(img);
   var xhr = new XMLHttpRequest();
@@ -390,39 +411,38 @@ function handleFiles(files) {
   };
   reader.readAsBinaryString(file);
 }
-</pre>
+```
 
-<p>上面的<code>FileUpload()</code> 函数创建了一个“加载中”指示器，用于显示进度信息，然后创建了一个 {{ domxref("XMLHttpRequest") }} 来处理上传数据。</p>
+上面的`FileUpload()` 函数创建了一个“加载中”指示器，用于显示进度信息，然后创建了一个 {{ domxref("XMLHttpRequest") }} 来处理上传数据。
 
-<p>实际传输数据前，采取了几道准备步骤：</p>
+实际传输数据前，采取了几道准备步骤：
 
-<ol>
- <li><code>XMLHttpRequest</code>的<code>progress</code>监听器被设为将加载指示器更新为新的百分比信息，这样随着上传进行，指示器会显示最新的信息。</li>
- <li><code>XMLHttpRequest</code>的<code>load</code>事件监听器被设为将加载指示器的进度信息更新为 100%，以保证进度显示确实达到了 100%（以防在上传过程中出现粒度误差）。然后它移除了已经不再需要的加载指示器。这样上传一完成指示器就会消失。</li>
- <li>上传图像文件的请求，是由调用<code>XMLHttpRequest</code>的<code>open()</code>函数发送 POST 请求完成的。</li>
- <li>上传的 MIME 类型是通过调用<code>XMLHttpRequest</code>的<code>overrideMimeType()</code>函数来设置的。这个例子中，我们使用通用 MIME 类型。是否需要设置 MIME 类型取决于你的具体使用情况。</li>
- <li><code>FileReader</code>对象用于将文件转换为二进制字符串。</li>
- <li>最后，当内容被加载时，会调用<code>XMLHttpRequest</code>的<code>send()</code>函数来上传文件内容。</li>
-</ol>
+1.  `XMLHttpRequest`的`progress`监听器被设为将加载指示器更新为新的百分比信息，这样随着上传进行，指示器会显示最新的信息。
+2.  `XMLHttpRequest`的`load`事件监听器被设为将加载指示器的进度信息更新为 100%，以保证进度显示确实达到了 100%（以防在上传过程中出现粒度误差）。然后它移除了已经不再需要的加载指示器。这样上传一完成指示器就会消失。
+3.  上传图像文件的请求，是由调用`XMLHttpRequest`的`open()`函数发送 POST 请求完成的。
+4.  上传的 MIME 类型是通过调用`XMLHttpRequest`的`overrideMimeType()`函数来设置的。这个例子中，我们使用通用 MIME 类型。是否需要设置 MIME 类型取决于你的具体使用情况。
+5.  `FileReader`对象用于将文件转换为二进制字符串。
+6.  最后，当内容被加载时，会调用`XMLHttpRequest`的`send()`函数来上传文件内容。
 
-<div class="note"><strong>提示：</strong>上面例子中使用的非标准的<code>sendAsBinary</code>方法在 Gecko 31 {{ geckoRelease(31) }} 中已废弃。请使用标准的<code>send(Blob data)</code>方法代替。</div>
+> **备注：** 上面例子中使用的非标准的`sendAsBinary`方法在 Gecko 31 {{ geckoRelease(31) }} 中已废弃。请使用标准的`send(Blob data)`方法代替。
 
-<h3 id="异步处理文件上传">异步处理文件上传</h3>
+### 异步处理文件上传
 
-<p>这个例子演示了如何异步上传文件，在服务器端使用了 php、在客户端使用了 JavaScript。</p>
+这个例子演示了如何异步上传文件，在服务器端使用了 php、在客户端使用了 JavaScript。
 
-<pre class="brush: js notranslate">&lt;?php
+```js
+<?php
 if (isset($_FILES['myFile'])) {
     // Example:
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
-?&gt;&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;dnd binary upload&lt;/title&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-    &lt;script type="application/javascript"&gt;
+?><!DOCTYPE html>
+<html>
+<head>
+    <title>dnd binary upload</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="application/javascript">
         function sendFile(file) {
             const uri = "/index.php";
             const xhr = new XMLHttpRequest();
@@ -430,7 +450,7 @@ if (isset($_FILES['myFile'])) {
 
             xhr.open("POST", uri, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
+                if (xhr.readyState == 4 && xhr.status == 200) {
                     alert(xhr.responseText); // handle response.
                 }
             };
@@ -451,55 +471,57 @@ if (isset($_FILES['myFile'])) {
                 event.preventDefault();
 
                 const filesArray = event.dataTransfer.files;
-                for (let i=0; i&lt;filesArray.length; i++) {
+                for (let i=0; i<filesArray.length; i++) {
                     sendFile(filesArray[i]);
                 }
             }
         }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div&gt;
-        &lt;div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;"&gt;Drag &amp; drop your file here...&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+</head>
+<body>
+    <div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+    </div>
+</body>
+</html>
+```
 
-<h2 id="例子：用对象URL显示PDF">例子：用对象 URL 显示 PDF</h2>
+## 例子：用对象 URL 显示 PDF
 
-<p>对象 URL 可以用于 image 之外的其它东西！它可以用于显示嵌入的 PDF 文件或任何其它浏览器能显示的资源。</p>
+对象 URL 可以用于 image 之外的其它东西！它可以用于显示嵌入的 PDF 文件或任何其它浏览器能显示的资源。
 
-<p>在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将<code>pdfjs.disabled</code>设为<code>false</code> {{non-standard_inline()}}.</p>
+在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将`pdfjs.disabled`设为`false` {{non-standard_inline()}}.
 
-<pre class="brush: html notranslate">&lt;iframe id="viewer"&gt;
-</pre>
+```html
+<iframe id="viewer">
+```
 
-<p>这是<code>src</code>属性的改动：</p>
+这是`src`属性的改动：
 
-<pre class="brush: js notranslate">const obj_url = window.URL.createObjectURL(blob);
+```js
+const obj_url = window.URL.createObjectURL(blob);
 const iframe = document.getElementById('viewer');
 iframe.setAttribute('src', obj_url);
 window.URL.revokeObjectURL(obj_url);
-</pre>
+```
 
-<h2 id="例子：将对象URL用于其它文件类型">例子：将对象 URL 用于其它文件类型</h2>
+## 例子：将对象 URL 用于其它文件类型
 
-<p>你可以用同样方式操作其它格式的文件。这是预览上传的视频的方法：</p>
+你可以用同样方式操作其它格式的文件。这是预览上传的视频的方法：
 
-<pre class="brush: js notranslate">const video = document.getElementById('video');
+```js
+const video = document.getElementById('video');
 const obj_url = window.URL.createObjectURL(blob);
 video.src = obj_url;
 video.play()
-window.URL.revokeObjectURL(obj_url);</pre>
+window.URL.revokeObjectURL(obj_url);
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{DOMxRef("File")}}</li>
- <li>{{DOMxRef("FileList")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{DOMxRef("URL")}}</li>
- <li>{{DOMxRef("XMLHttpRequest")}}</li>
- <li><a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
-</ul>
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileList")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL")}}
+- {{DOMxRef("XMLHttpRequest")}}
+- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)

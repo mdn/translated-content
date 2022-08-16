@@ -2,66 +2,65 @@
 title: DocumentOrShadowRoot.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 ---
-<p>{{APIRef("Shadow DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
-<p>{{domxref("DocumentOrShadowRoot")}} 接口的 <strong><code>elementFromPoint()</code></strong> 方法返回给定坐标点下最上层的 {{domxref('element')}} 元素。 </p>
+{{domxref("DocumentOrShadowRoot")}} 接口的 **`elementFromPoint()`** 方法返回给定坐标点下最上层的 {{domxref('element')}} 元素。
 
-<p>If the element at the specified point belongs to another document (for example, an iframe's subdocument), the subdocument's parent element is returned (the iframe itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.</p>
+If the element at the specified point belongs to another document (for example, an iframe's subdocument), the subdocument's parent element is returned (the iframe itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.
 
-<p>如果指定的坐标点在文档的可视范围外，或者两个坐标都是负数，那么结果返回 <code>null</code>。</p>
+如果指定的坐标点在文档的可视范围外，或者两个坐标都是负数，那么结果返回 `null`。
 
-<p>If you need to find the specific position inside the element, use {{domxref("Document.caretPositionFromPoint()")}}.</p>
+If you need to find the specific position inside the element, use {{domxref("Document.caretPositionFromPoint()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var element = document.elementFromPoint(x, y);</pre>
+```
+var element = document.elementFromPoint(x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>x</dt>
- <dd>坐标点的横坐标。</dd>
- <dt>y</dt>
- <dd>坐标点的纵坐标。</dd>
-</dl>
+- x
+  - : 坐标点的横坐标。
+- y
+  - : 坐标点的纵坐标。
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>在给定的坐标点处的顶端 {{domxref("Element")}}（译者注：如果元素层叠的话，返回最上层的元素）。</p>
+在给定的坐标点处的顶端 {{domxref("Element")}}（译者注：如果元素层叠的话，返回最上层的元素）。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html notranslate" id="ExampleCode">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;elementFromPoint example&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>elementFromPoint example</title>
 
-&lt;script&gt;
+<script>
 function changeColor(newColor) {
   elem = document.elementFromPoint(2, 2);
   elem.style.color = newColor;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p id="para1"&gt;Some text here&lt;/p&gt;
-&lt;button onclick="changeColor('blue');"&gt;blue&lt;/button&gt;
-&lt;button onclick="changeColor('red');"&gt;red&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body>
+<p id="para1">Some text here</p>
+<button onclick="changeColor('blue');">blue</button>
+<button onclick="changeColor('red');">red</button>
+</body>
+</html>
+```
 
-<h3 id="Demo">Demo</h3>
+### Demo
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/elementFromPoint') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/elementFromPoint') }}
 
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat}}

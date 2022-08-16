@@ -2,34 +2,34 @@
 title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("AnalyserNode") }} 接口的 <code>fftSize</code> 属性的值是一个无符号长整型的值，表示（信号）样本的窗口大小。当执行<a href="/en-US/docs/">快速傅里叶变换</a>（Fast Fourier Transfor (FFT)）时，这些（信号）样本被用来获取频域数据。</p>
+{{ domxref("AnalyserNode") }} 接口的 `fftSize` 属性的值是一个无符号长整型的值，表示（信号）样本的窗口大小。当执行[快速傅里叶变换](/zh-CN/docs/)（Fast Fourier Transfor (FFT)）时，这些（信号）样本被用来获取频域数据。
 
-<p>fftSize 属性的值必须是从 32 到 32768 范围内的 2 的非零幂; 其默认值为 2048.</p>
+fftSize 属性的值必须是从 32 到 32768 范围内的 2 的非零幂; 其默认值为 2048.
 
-<div class="note">
-<p><strong>注意</strong>: 如果其值不是 2 的幂，或者它在指定范围之外，则抛出异常 INDEX_SIZE_ERR.</p>
-</div>
+> **备注：** 如果其值不是 2 的幂，或者它在指定范围之外，则抛出异常 INDEX_SIZE_ERR.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 analyser.fftSize = 2048;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个无符号长整型。</p>
+一个无符号长整型。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的例子展示了 <a href="/zh-CN/docs/Web/API/AudioContext"><code>AudioContext</code></a> 创建一个 <code>AnalyserNode</code>, 然后用 <a href="/zh-CN/docs/Web/API/Window/requestAnimationFrame"><code>requestAnimationFrame</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱).</p>
+下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱).
 
-<p>更多的例子/信息，查看 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 在 128 行~205 行</a>).</p>
+更多的例子/信息，查看 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 在 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -58,7 +58,7 @@ function draw() {
       var sliceWidth = WIDTH * 1.0 / bufferLength;
       var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i < bufferLength; i++) {
 
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
@@ -76,18 +76,17 @@ function draw() {
       canvasCtx.stroke();
     };
 
-    draw();</pre>
+    draw();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.AnalyserNode.fftSize")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

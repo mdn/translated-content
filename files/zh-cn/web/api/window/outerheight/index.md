@@ -2,32 +2,46 @@
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
 ---
-<div>
- {{APIRef}}</div>
-<h2 id="Summary">概述</h2>
-<p><code>Window.outerHeight</code> 获取整个浏览器窗口的高度（单位：像素），包括侧边栏（如果存在）、窗口镶边（window chrome）和窗口调正边框（window resizing borders/handles）。</p>
-<p>该属性为只读，没有默认值。</p>
-<h2 id="Syntax">语法</h2>
-<pre class="syntaxbox"><var>outWindowHeight</var> = window.outerHeight;
-</pre>
-<p><code>outWindowHeight</code> 为窗口的外层的高度。</p>
-<h2 id="Notes">备注</h2>
-<p>要改变窗口的大小，请查看 {{domxref("window.resizeBy()")}} 和 {{domxref("window.resizeTo()")}}。</p>
-<p>要获取窗口的内层高度，即页面被显示区域的高度，可查看 {{domxref("window.innerHeight")}}。</p>
-<h3 id="Graphical_example">图像示例</h3>
-<p>下面的示意图展示了 <code>outerHeight</code> 和 <code>innerHeight</code> 两者的不同。</p>
-<p><img alt="innerHeight vs outerHeight illustration" src="/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png" style=""></p>
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
-<div>
+{{APIRef}}
+
+## 概述
+
+`Window.outerHeight` 获取整个浏览器窗口的高度（单位：像素），包括侧边栏（如果存在）、窗口镶边（window chrome）和窗口调正边框（window resizing borders/handles）。
+
+该属性为只读，没有默认值。
+
+## 语法
+
+```
+outWindowHeight = window.outerHeight;
+```
+
+`outWindowHeight` 为窗口的外层的高度。
+
+## 备注
+
+要改变窗口的大小，请查看 {{domxref("window.resizeBy()")}} 和 {{domxref("window.resizeTo()")}}。
+
+要获取窗口的内层高度，即页面被显示区域的高度，可查看 {{domxref("window.innerHeight")}}。
+
+### 图像示例
+
+下面的示意图展示了 `outerHeight` 和 `innerHeight` 两者的不同。
+
+![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+
+## 浏览器兼容性
+
 {{Compat("api.Window.outerHeight")}}
 
-<h2 id="Specification">规范</h2>
-<p>DOM Level 0。不属于任何 W3C 技术规范或推荐。</p>
-<h2 id="相关链接">相关链接</h2>
-<ul>
- <li>{{domxref("window.innerHeight")}}</li>
- <li>{{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.outerWidth")}}</li>
- <li>{{domxref("window.resizeBy()")}}</li>
- <li>{{domxref("window.resizeTo()")}}</li>
-</ul>
+## 规范
+
+DOM Level 0。不属于任何 W3C 技术规范或推荐。
+
+## 相关链接
+
+- {{domxref("window.innerHeight")}}
+- {{domxref("window.innerWidth")}}
+- {{domxref("window.outerWidth")}}
+- {{domxref("window.resizeBy()")}}
+- {{domxref("window.resizeTo()")}}

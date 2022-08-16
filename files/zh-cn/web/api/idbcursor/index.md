@@ -2,63 +2,53 @@
 title: IDBCursor
 slug: Web/API/IDBCursor
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p><a href="/en-US/docs/IndexedDB">IndexedDB API</a> 中的 <code>IDBCursor</code> 接口表示一个游标，用于遍历或迭代数据库中的多条记录。</p>
+[IndexedDB API](/zh-CN/docs/IndexedDB) 中的 `IDBCursor` 接口表示一个游标，用于遍历或迭代数据库中的多条记录。
 
-<p>游标有一个源，指示需要遍历哪一个索引或者对象存储区。它在所属区间范围内有一个位置，根据记录健（存储字段）的顺序递增或递减方向移动。游标使应用程序能够异步处理在游标范围内的所有记录。</p>
+游标有一个源，指示需要遍历哪一个索引或者对象存储区。它在所属区间范围内有一个位置，根据记录健（存储字段）的顺序递增或递减方向移动。游标使应用程序能够异步处理在游标范围内的所有记录。
 
-<p>你可以在同一时间拥有无数个游标。你总会获得表示给定游标的同样的 <code>IDBCursor</code> 对象。在基础索引或对象存储上执行操作。</p>
+你可以在同一时间拥有无数个游标。你总会获得表示给定游标的同样的 `IDBCursor` 对象。在基础索引或对象存储上执行操作。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("IDBCursor.advance")}}</dt>
- <dd>设置光标向前移动位置的次数。</dd>
- <dt>{{domxref("IDBCursor.continue")}}</dt>
- <dd>将游标按它的方向移动到下一个位置，到其健与可选健参数匹配的项。</dd>
-</dl>
+- {{domxref("IDBCursor.advance")}}
+  - : 设置光标向前移动位置的次数。
+- {{domxref("IDBCursor.continue")}}
+  - : 将游标按它的方向移动到下一个位置，到其健与可选健参数匹配的项。
+- {{domxref("IDBCursor.delete")}}
+  - : 返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程中，删除游标位置记录，而不改变游标的位置。这个可以用作删除一些特定的记录。
+- {{domxref("IDBCursor.update")}}
+  - : 返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程中，更新对象存储中当前游标位置的值。这个可以用来更新特定的记录。
 
-<dl>
- <dt>{{domxref("IDBCursor.delete")}}</dt>
- <dd>返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程中，删除游标位置记录，而不改变游标的位置。这个可以用作删除一些特定的记录。</dd>
- <dt>{{domxref("IDBCursor.update")}}</dt>
- <dd>返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程中，更新对象存储中当前游标位置的值。这个可以用来更新特定的记录。</dd>
-</dl>
+## 属性
 
-<h2 id="属性">属性</h2>
+- {{domxref("IDBCursor.source")}} {{readonlyInline}}
+  - : 返回一个游标正在迭代的 {{domxref("IDBObjectStore")}} 或者 {{domxref("IDBIndex")}} 。这个方法永远不会返回一个空或者抛出异常，即使游标当前正在被迭代，已迭代超过其结束，再或者其事务没有处于活动状态。
+- {{domxref("IDBCursor.direction")}} {{readonlyInline}}
+  - : 返回光标遍历方向。请查看[ 常数](#const_next) 中可能的值。
+- {{domxref("IDBCursor.key")}} {{readonlyInline}}
+  - : 返回记录中游标位置的有效主键。如果游标在区间之外，将会设置成 `undefined`。游标主键可以是任意的数据类型（data type）。
+- {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
+  - : 返回游标当前有效的主键。如果游标当前正在被迭代或者已经在迭代在区间范围外，将会被设置成 `undefined` 。 游标主键可以是任意的时间类型（data type）。
 
-<dl>
- <dt>{{domxref("IDBCursor.source")}} {{readonlyInline}}</dt>
- <dd>返回一个游标正在迭代的 {{domxref("IDBObjectStore")}}  或者 {{domxref("IDBIndex")}} 。这个方法永远不会返回一个空或者抛出异常，即使游标当前正在被迭代，已迭代超过其结束，再或者其事务没有处于活动状态。</dd>
- <dt>{{domxref("IDBCursor.direction")}} {{readonlyInline}}</dt>
- <dd>返回光标遍历方向。请查看<a href="#const_next"> 常数</a> 中可能的值。</dd>
- <dt>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dt>
- <dd>返回记录中游标位置的有效主键。如果游标在区间之外，将会设置成 <code>undefined</code>。游标主键可以是任意的数据类型（data type）。</dd>
- <dt>{{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}</dt>
- <dd>返回游标当前有效的主键。如果游标当前正在被迭代或者已经在迭代在区间范围外，将会被设置成 <code>undefined</code> 。 游标主键可以是任意的时间类型（data type）。</dd>
-</dl>
+## 常量
 
-<h2 id="Constants">常量</h2>
+{{deprecated_header}}
 
-<div>{{deprecated_header}}</div>
+> **警告：** 这些常量不再被支持。你应该使用字符串常量。({{ bug(891944) }})
 
-<div class="warning">
-<p>这些常量不再被支持。你应该使用字符串常量。({{ bug(891944) }})</p>
-</div>
+- `NEXT `: `"next"` :游标展示所有记录，包括重复的记录。它从主键区间下届开始逐步上升（按键的顺序单调递增）。
+- `NEXTUNIQUE` : `"nextunique"` : 游标展示所有记录，不包括重复的记录。如果同一个主键存在重复的记录，只有第一条迭代记录被取出。它从主键区间的下界开始逐步上升
+- `PREV `: `"prev"` : 游标展示所有记录，包括重复的记录。它从主键区间上界开始逐步往下移动（按主键的顺序单调递减）
+- `PREVUNIQUE `: `"prevunique"` :游标展示所有记录，不包括重复的记录。如果主键存在重复记录，只有第一个迭代记录被取出。它从主键区间上界开始逐步往下移动。
 
-<ul>
- <li><code>NEXT </code>: <code>"next"</code> :游标展示所有记录，包括重复的记录。它从主键区间下届开始逐步上升（按键的顺序单调递增）。</li>
- <li><code>NEXTUNIQUE</code> : <code>"nextunique"</code> : 游标展示所有记录，不包括重复的记录。如果同一个主键存在重复的记录，只有第一条迭代记录被取出。它从主键区间的下界开始逐步上升</li>
- <li><code>PREV </code>: <code>"prev"</code> : 游标展示所有记录，包括重复的记录。它从主键区间上界开始逐步往下移动（按主键的顺序单调递减）</li>
- <li><code>PREVUNIQUE </code>: <code>"prevunique"</code> :游标展示所有记录，不包括重复的记录。如果主键存在重复记录，只有第一个迭代记录被取出。它从主键区间上界开始逐步往下移动。</li>
-</ul>
+## 示例
 
-<h2 id="示例">示例</h2>
+在这个简单的代码片段中，我们创建了一个事务和检索一个对象存储，之后使用一个游标遍历存储对象中所有的记录。游标不是必须使用主键来选则数据库，我们可以把它全部拿出来。同时需要注意在每次循环遍历中，你可以在当前记录下的游标对象中使用 `cursor.value.foo` 抓取数据。对于完整的工作示例，请查看我们的 [IDBCursor example](https://github.com/mdn/IDBcursor-example/) ([在线查看示例](http://mdn.github.io/IDBcursor-example/))。
 
-<p>在这个简单的代码片段中，我们创建了一个事务和检索一个对象存储，之后使用一个游标遍历存储对象中所有的记录。游标不是必须使用主键来选则数据库，我们可以把它全部拿出来。同时需要注意在每次循环遍历中，你可以在当前记录下的游标对象中使用   <code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code> 抓取数据。对于完整的工作示例，请查看我们的 <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/">在线查看示例</a>)。</p>
-
-<pre class="notranslate">function displayData() {
+```
+function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -74,24 +64,23 @@ slug: Web/API/IDBCursor
       console.log('Entries all displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.IDBCursor")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

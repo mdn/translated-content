@@ -2,108 +2,77 @@
 title: WebSocket
 slug: Web/API/WebSocket
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p><code>WebSocket</code> 对象提供了用于创建和管理 <a href="/zh-CN/docs/Web/API/WebSockets_API">WebSocket</a> 连接，以及可以通过该连接发送和接收数据的 API。</p>
+`WebSocket` 对象提供了用于创建和管理 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 连接，以及可以通过该连接发送和接收数据的 API。
 
-<p>使用<code><a href="/en-US/docs/Web/API/WebSocket/WebSocket"> WebSocket()</a></code><a href="/en-US/docs/Web/API/WebSocket/WebSocket"> </a>构造函数来构造一个<code> WebSocket</code> 。</p>
+使用[` WebSocket()`](/en-US/docs/Web/API/WebSocket/WebSocket)[ ](/zh-CN/docs/Web/API/WebSocket/WebSocket)构造函数来构造一个` WebSocket` 。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}</dt>
- <dd>返回一个 <code>WebSocket</code> 对象。</dd>
-</dl>
+- {{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}
+  - : 返回一个 `WebSocket` 对象。
 
-<h2 id="常量">常量</h2>
+## 常量
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><strong>Constant</strong></td>
-   <td><strong>Value</strong></td>
-  </tr>
-  <tr>
-   <td><code>WebSocket.CONNECTING</code></td>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <td><code>WebSocket.OPEN</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td><code>WebSocket.CLOSING</code></td>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <td><code>WebSocket.CLOSED</code></td>
-   <td><code>3</code></td>
-  </tr>
- </tbody>
-</table>
+| **Constant**           | **Value** |
+| ---------------------- | --------- |
+| `WebSocket.CONNECTING` | `0`       |
+| `WebSocket.OPEN`       | `1`       |
+| `WebSocket.CLOSING`    | `2`       |
+| `WebSocket.CLOSED`     | `3`       |
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("WebSocket.binaryType")}}</dt>
- <dd>使用二进制的数据类型连接。</dd>
- <dt>{{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}</dt>
- <dd>未发送至服务器的字节数。</dd>
-</dl>
+- {{domxref("WebSocket.binaryType")}}
+  - : 使用二进制的数据类型连接。
+- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+  - : 未发送至服务器的字节数。
+- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+  - : 服务器选择的扩展。
+- {{domxref("WebSocket.onclose")}}
+  - : 用于指定连接关闭后的回调函数。
+- {{domxref("WebSocket.onerror")}}
+  - : 用于指定连接失败后的回调函数。
+- {{domxref("WebSocket.onmessage")}}
+  - : 用于指定当从服务器接受到信息时的回调函数。
+- {{domxref("WebSocket.onopen")}}
+  - : 用于指定连接成功后的回调函数。
+- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+  - : 服务器选择的下属协议。
+- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+  - : 当前的链接状态。
+- {{domxref("WebSocket.url")}} {{readonlyinline}}
+  - : WebSocket 的绝对路径。
 
-<dl>
- <dt>{{domxref("WebSocket.extensions")}} {{readonlyinline}}</dt>
- <dd>服务器选择的扩展。</dd>
-</dl>
+## 方法
 
-<dl>
- <dt>{{domxref("WebSocket.onclose")}}</dt>
- <dd>用于指定连接关闭后的回调函数。</dd>
- <dt>{{domxref("WebSocket.onerror")}}</dt>
- <dd>用于指定连接失败后的回调函数。</dd>
- <dt>{{domxref("WebSocket.onmessage")}}</dt>
- <dd>用于指定当从服务器接受到信息时的回调函数。</dd>
- <dt>{{domxref("WebSocket.onopen")}}</dt>
- <dd>用于指定连接成功后的回调函数。</dd>
- <dt>{{domxref("WebSocket.protocol")}} {{readonlyinline}}</dt>
- <dd>服务器选择的下属协议。</dd>
- <dt>{{domxref("WebSocket.readyState")}} {{readonlyinline}}</dt>
- <dd>当前的链接状态。</dd>
- <dt>{{domxref("WebSocket.url")}} {{readonlyinline}}</dt>
- <dd>WebSocket 的绝对路径。</dd>
-</dl>
+- {{domxref("WebSocket.close", "WebSocket.close([code[, reason]])")}}
+  - : 关闭当前链接。
+- {{domxref("WebSocket.send", "WebSocket.send(data)")}}
+  - : 对要传输的数据进行排队。
 
-<h2 id="Method_overview">方法</h2>
+## 事件
 
-<dl>
- <dt>{{domxref("WebSocket.close", "WebSocket.close([code[, reason]])")}}</dt>
- <dd>关闭当前链接。</dd>
- <dt>{{domxref("WebSocket.send", "WebSocket.send(data)")}}</dt>
- <dd>对要传输的数据进行排队。</dd>
-</dl>
+使用 `addEventListener()` 或将一个事件监听器赋值给本接口的 `oneventname` 属性，来监听下面的事件。
 
-<h2 id="事件">事件</h2>
+- {{domxref("WebSocket/close_event", "close")}}
+  - : 当一个 `WebSocket` 连接被关闭时触发。
+    也可以通过 {{domxref("WebSocket/onclose", "onclose")}} 属性来设置。
+- {{domxref("WebSocket/error_event", "error")}}
+  - : 当一个 `WebSocket` 连接因错误而关闭时触发，例如无法发送数据时。
+    也可以通过 {{domxref("WebSocket/onerror", "onerror")}} 属性来设置。
+- {{domxref("WebSocket/message_event", "message")}}
+  - : 当通过 `WebSocket` 收到数据时触发。
+    也可以通过 {{domxref("WebSocket/onmessage", "onmessage")}} 属性来设置。
+- {{domxref("WebSocket/open_event", "open")}}
+  - : 当一个 `WebSocket` 连接成功时触发。
+    也可以通过 {{domxref("WebSocket/onopen", "onopen")}} 属性来设置。
 
-<p>使用 <code>addEventListener()</code> 或将一个事件监听器赋值给本接口的 <code>on<em>eventname</em></code> 属性，来监听下面的事件。</p>
+## 示例
 
-<dl>
- <dt>{{domxref("WebSocket/close_event", "close")}}</dt>
- <dd>当一个 <code>WebSocket</code> 连接被关闭时触发。<br>
- 也可以通过 {{domxref("WebSocket/onclose", "onclose")}} 属性来设置。</dd>
- <dt>{{domxref("WebSocket/error_event", "error")}}</dt>
- <dd>当一个 <code>WebSocket</code> 连接因错误而关闭时触发，例如无法发送数据时。<br>
- 也可以通过 {{domxref("WebSocket/onerror", "onerror")}} 属性来设置。</dd>
- <dt>{{domxref("WebSocket/message_event", "message")}}</dt>
- <dd>当通过 <code>WebSocket</code> 收到数据时触发。<br>
- 也可以通过 {{domxref("WebSocket/onmessage", "onmessage")}} 属性来设置。</dd>
- <dt>{{domxref("WebSocket/open_event", "open")}}</dt>
- <dd>当一个 <code>WebSocket</code> 连接成功时触发。<br>
- 也可以通过 {{domxref("WebSocket/onopen", "onopen")}} 属性来设置。</dd>
-</dl>
-
-<h2 id="Attributes">示例</h2>
-
-<pre class="brush: js line-numbers language-js">// Create WebSocket connection.
+```js
+// Create WebSocket connection.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Connection opened
@@ -115,18 +84,16 @@ socket.addEventListener('open', function (event) {
 socket.addEventListener('message', function (event) {
     console.log('Message from server ', event.data);
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
-</ul>
+- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

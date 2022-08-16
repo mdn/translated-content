@@ -2,62 +2,58 @@
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.font</code></strong> 是 Canvas 2D API 描述绘制文字时，当前字体样式的属性。使用和 <a href="/en-US/docs/Web/CSS/font">CSS font</a> 规范相同的字符串值。</p>
+**`CanvasRenderingContext2D.font`** 是 Canvas 2D API 描述绘制文字时，当前字体样式的属性。使用和 [CSS font](/zh-CN/docs/Web/CSS/font) 规范相同的字符串值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em>.font = value;</var>
-</pre>
+```
+ctx.font = value;
+```
 
-<h3 id="选项">选项</h3>
+### 选项
 
-<dl>
- <dt><code>value</code></dt>
- <dd>符合 CSS {{cssxref("font")}} 语法的{{domxref("DOMString")}} 字符串。默认字体是 10px sans-serif。</dd>
-</dl>
+- `value`
+  - : 符合 CSS {{cssxref("font")}} 语法的{{domxref("DOMString")}} 字符串。默认字体是 10px sans-serif。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用自定义字体">使用自定义字体</h3>
+### 使用自定义字体
 
-<p>这个例子使用 <code>font</code> 属性设置了不同的字体大小和字体种类。</p>
+这个例子使用 `font` 属性设置了不同的字体大小和字体种类。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.font = "bold 48px serif";
 ctx.strokeText("Hello world", 50, 100);
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<div class="hidden">
-<h2 id="Playable_code">Playable_code</h2>
-
-<h3 id="HTML_2">HTML</h3>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="编辑" /&gt;
-  &lt;input id="reset" type="button" value="重置" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="编辑" />
+  <input id="reset" type="button" value="重置" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.font = "bold 48px serif";
-ctx.strokeText("Hello world", 50, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeText("Hello world", 50, 100);</textarea>
+```
 
-<h3 id="JavaScript_2">JavaScript</h3>
-
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -80,40 +76,37 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('Playable_code', 700, 360)}}</p>
+{{EmbedLiveSample('Playable_code', 700, 360)}}
 
-<h2 id="sect1"></h2>
+##
 
-<h3 id="使用CSS字体加载API加载字体">使用 CSS 字体加载 API 加载字体</h3>
+### 使用 CSS 字体加载 API 加载字体
 
-<p>借助{{domxref("FontFace")}} API 的帮助，您可以在画布中使用字体之前显式加载字体。</p>
+借助{{domxref("FontFace")}} API 的帮助，您可以在画布中使用字体之前显式加载字体。
 
-<pre>let f = new FontFace('test', 'url(x)');
+```
+let f = new FontFace('test', 'url(x)');
 
 f.load().then(function() {
   // Ready to use the font in a canvas context
-});</pre>
+});
+```
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.font")}}</p>
+{{Compat("api.CanvasRenderingContext2D.font")}}
 
-<h3 id="Gecko-specific_注解">Gecko-specific 注解</h3>
+### Gecko-specific 注解
 
-<ul>
- <li>基于 Gecko 的浏览器，例如 Firefox， 实现了一个非标准的并且不赞成使用的属性 <code>ctx.mozTextStyle</code> 。不要使用此属性。</li>
- <li>在 Gecko 中，当将系统字体设置为 canvas 2D 上下文的{{domxref("CanvasRenderingContext2D.font", "font")}}（例如菜单）的值时，获取用于无法返回期望字体的字体值（不返回任何内容）。这已在 Firefox 57（{{bug(1374885)}}）中发布的 Firefox 的<a href="https://wiki.mozilla.org/Quantum/Stylo">Quantum/Stylo</a>并行 CSS 引擎中修复。</li>
-</ul>
+- 基于 Gecko 的浏览器，例如 Firefox， 实现了一个非标准的并且不赞成使用的属性 `ctx.mozTextStyle` 。不要使用此属性。
+- 在 Gecko 中，当将系统字体设置为 canvas 2D 上下文的{{domxref("CanvasRenderingContext2D.font", "font")}}（例如菜单）的值时，获取用于无法返回期望字体的字体值（不返回任何内容）。这已在 Firefox 57（{{bug(1374885)}}）中发布的 Firefox 的[Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo)并行 CSS 引擎中修复。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}

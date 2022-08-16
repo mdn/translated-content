@@ -2,32 +2,30 @@
 title: Window.mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>在屏幕坐标中获取窗口视口左上角的 X 坐标</p>
+在屏幕坐标中获取窗口视口左上角的 X 坐标
 
-<div class="note"><strong>备注：</strong> 该坐标以 CSS 像素报告显示，而不是硬件像素。 这意味着它可以受缩放级别的影响; 要计算物理屏幕像素的实际数量，需要使用<a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils"> <code>nsIDOMWindowUtils.screenPixelsPerCSSPixel</code></a> 属性。</div>
+> **备注：** 该坐标以 CSS 像素报告显示，而不是硬件像素。 这意味着它可以受缩放级别的影响; 要计算物理屏幕像素的实际数量，需要使用[ `nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/zh-CN/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) 属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>screenX</var> = window.mozInnerScreenX;</pre>
+```
+screenX = window.mozInnerScreenX;
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<ul>
- <li><var>screenX</var> 存储的是<code>window.mozInnerScreenX 的属性值。</code></li>
- <li><code>window.mozInnerScreenX</code> 属性的值是一个浮点数，只读; 它没有默认值。</li>
-</ul>
+- _screenX_ 存储的是`window.mozInnerScreenX 的属性值。`
+- `window.mozInnerScreenX` 属性的值是一个浮点数，只读; 它没有默认值。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何 W3C 规范或标准。</p>
+不属于任何 W3C 规范或标准。
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("window.mozInnerScreenY")}}</li>
- <li><a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils"><code>nsIDOMWindowUtils.screenPixelsPerCSSPixel</code></a></li>
-</ul>
+- {{domxref("window.mozInnerScreenY")}}
+- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/zh-CN/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

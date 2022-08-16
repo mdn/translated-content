@@ -2,30 +2,29 @@
 title: AudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}的<code>createAnalyser()</code>方法能创建一个{{ domxref("AnalyserNode") }}，可以用来获取音频时间和频率数据，以及实现数据可视化。</p>
-</div>
+{{ domxref("AudioContext") }}的`createAnalyser()`方法能创建一个{{ domxref("AnalyserNode") }}，可以用来获取音频时间和频率数据，以及实现数据可视化。
 
-<div class="note">
-<p><strong>注意</strong>：关于该节点的更多信息，请查看{{domxref("AnalyserNode")}}</p>
-</div>
+> **备注：** 关于该节点的更多信息，请查看{{domxref("AnalyserNode")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();</pre>
+```js
+var audioCtx = new AudioContext();
+var analyser = audioCtx.createAnalyser();
+```
 
-<h3 id="Description">返回值</h3>
+### 返回值
 
-<p>{{domxref("AnalyserNode")}}对象</p>
+{{domxref("AnalyserNode")}}对象
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<p>下面的例子展示了 AudioContext 创建分析器节点的基本用法，然后用 requestAnimationFrame() 来反复获取时域数据，并绘制出当前音频输入的“示波器风格”输出。更多完整例子请查看<a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (中<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128–205 行</a>代码)</p>
+下面的例子展示了 AudioContext 创建分析器节点的基本用法，然后用 requestAnimationFrame() 来反复获取时域数据，并绘制出当前音频输入的“示波器风格”输出。更多完整例子请查看[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (中[app.js 的 128–205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)代码)
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -54,7 +53,7 @@ function draw() {
       var sliceWidth = WIDTH * 1.0 / bufferLength;
       var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i < bufferLength; i++) {
 
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
@@ -72,18 +71,17 @@ function draw() {
       canvasCtx.stroke();
     };
 
-    draw();</pre>
+    draw();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BaseAudioContext.createAnalyser")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

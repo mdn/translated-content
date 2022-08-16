@@ -2,31 +2,30 @@
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}{{domxref("ServiceWorkerRegistration")}} 的**`update`**方法尝试更新 service worker。获得 worker 脚本的 URL，逐字节匹配新获取的 worker 和当前的 worker，存在差异的时候安装新的 worker。获取 worker 脚本的更新操作会忽略浏览器缓存的 24 小时前的内容。
 
-<div>{{domxref("ServiceWorkerRegistration")}} 的<code><strong>update</strong></code>方法尝试更新 service worker。获得 worker 脚本的 URL，逐字节匹配新获取的 worker 和当前的 worker，存在差异的时候安装新的 worker。获取 worker 脚本的更新操作会忽略浏览器缓存的 24 小时前的内容。</div>
+> **备注：** 这个特性也应用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
 
-<div class="note">
-<p><strong>注意</strong>: 这个特性也应用于 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```
+ServiceWorkerRegistration.update();
+```
 
-<pre>ServiceWorkerRegistration.update();</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+None.
 
-<p>None.</p>
+### 返回
 
-<h3 id="返回">返回</h3>
+返回 {{domxref("Promise")}} 在 resolve 时对应一个 {{domxref("ServiceWorkerRegistration")}} 对象。
 
-<p>返回 {{domxref("Promise")}} 在 resolve 时对应一个 {{domxref("ServiceWorkerRegistration")}} 对象。</p>
+## 示例
 
-<h2 id="示例">示例</h2>
+下面的示例注册一个 service worker，然后绑定事件到按钮，这样你可以有需要时，明确的更新 server worker：
 
-<p>下面的示例注册一个 service worker，然后绑定事件到按钮，这样你可以有需要时，明确的更新 server worker：</p>
-
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // registration worked
     console.log('Registration succeeded.');
@@ -37,24 +36,21 @@ slug: Web/API/ServiceWorkerRegistration/update
     // registration failed
     console.log('Registration failed with ' + error);
   });
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.ServiceWorkerRegistration.update")}}
 
+## See also
 
-<p>{{Compat("api.ServiceWorkerRegistration.update")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)

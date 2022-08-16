@@ -2,28 +2,26 @@
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/Element/auxclick_event
 ---
-<div>
-<div>{{SeeCompatTable}}{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{SeeCompatTable}}{{ ApiRef("HTML DOM") }}
 
-<div> </div>
+**onauxclick** 属性是一个 {{event("Event_handlers", "event handler")}}，当 {{event("auxclick")}} 事件发生时被调用，例如按下了输入设备上的非主按钮 (e.g. 鼠标中键)。
 
-<p><strong>onauxclick</strong> 属性是一个 {{event("Event_handlers", "event handler")}}，当 {{event("auxclick")}} 事件发生时被调用，例如按下了输入设备上的非主按钮 (e.g. 鼠标中键)。</p>
+实现该属性的一个目标是，提高浏览器与按钮行为之间的兼容性 - 事件行为正在更新，以便 {{Event("click")}} 只触发主按钮点击（例如，鼠标左键）。然后开发人员可以使用 {{Event("auxclick")}} 来为非主按钮点击提供明确的行为。在此之前，{{Event("click")}} 通常会针对所有输入设备按钮点击，浏览器行为有些不一致。
 
-<p>实现该属性的一个目标是，提高浏览器与按钮行为之间的兼容性 - 事件行为正在更新，以便 {{Event("click")}} 只触发主按钮点击（例如，鼠标左键）。然后开发人员可以使用 {{Event("auxclick")}} 来为非主按钮点击提供明确的行为。在此之前，{{Event("click")}} 通常会针对所有输入设备按钮点击，浏览器行为有些不一致。</p>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```
+element.onauxclick = functionRef(e);
+```
 
-<pre class="syntaxbox"><var>element</var>.onauxclick = <var>functionRe<em>f</em></var><em>(e);</em>
-</pre>
+事件处理函数是一个 {{domxref("MouseEvent")}} 对象。只有事件被触发的按钮不同，该事件和普通点击事件的行为是完全相同的。
 
-<p>事件处理函数是一个 {{domxref("MouseEvent")}} 对象。只有事件被触发的按钮不同，该事件和普通点击事件的行为是完全相同的。</p>
+## 示例
 
-<h2 id="Example">示例</h2>
+在这个例子中我们定义了两个事件处理函数：`onclick` 和 `onauxclick`。前者改变按钮背景的颜色，而后者改变按钮前景（文本）的颜色。您可以通过使用多按钮鼠标尝试演示来查看这两种功能 ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html))。
 
-<p>在这个例子中我们定义了两个事件处理函数：<code>onclick</code> 和 <code>onauxclick</code>。前者改变按钮背景的颜色，而后者改变按钮前景（文本）的颜色。您可以通过使用多按钮鼠标尝试演示来查看这两种功能 (<a href="https://mdn.github.io/dom-examples/auxclick/">see it live on GitHub</a>; also <a href="https://github.com/mdn/dom-examples/blob/master/auxclick/index.html">see the source code</a>)。</p>
-
-<pre class="brush: js">var button = document.querySelector('button');
+```js
+var button = document.querySelector('button');
 var html = document.querySelector('html');
 
 function random(number) {
@@ -38,22 +36,21 @@ button.onclick = function() {
 button.onauxclick = function() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   button.style.color = rndCol;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: 如果您使用的是三键鼠标，您会注意到在单击任一非鼠标左键时该 <code>onauxclick</code> 处理程序会运行。</p>
-</div>
+> **备注：** 如果您使用的是三键鼠标，您会注意到在单击任一非鼠标左键时该 `onauxclick` 处理程序会运行。
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>当用户点击一个元素时，将引发该 <code>click</code> 事件。之后的 click 事件将发生在 <code>mousedown</code> 和 <code>mouseup</code> 事件之后。</p>
+当用户点击一个元素时，将引发该 `click` 事件。之后的 click 事件将发生在 `mousedown` 和 `mouseup` 事件之后。
 
-<p>每次只有一个 <code>click</code> 处理程序可以通过此属性分配给一个对象。您可能倾向于使用{{domxref("EventTarget.addEventListener()")}} 方法，因为它更灵活并且是 DOM Events 规范的一部分。</p>
+每次只有一个 `click` 处理程序可以通过此属性分配给一个对象。您可能倾向于使用{{domxref("EventTarget.addEventListener()")}} 方法，因为它更灵活并且是 DOM Events 规范的一部分。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><code>onauxclick</code> 不是任何官方规范的一部分，它被定义在 <a href="https://wicg.github.io/auxclick/">auxclick Draft Community Group Report</a>.</p>
+`onauxclick` 不是任何官方规范的一部分，它被定义在 [auxclick Draft Community Group Report](https://wicg.github.io/auxclick/).
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("api.GlobalEventHandlers.onauxclick")}}

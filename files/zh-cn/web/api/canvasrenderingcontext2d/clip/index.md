@@ -2,48 +2,49 @@
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clip()</code></strong> 是 Canvas 2D API 将当前创建的路径设置为当前剪切路径的方法。</p>
+**`CanvasRenderingContext2D.clip()`** 是 Canvas 2D API 将当前创建的路径设置为当前剪切路径的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.clip();</var>
-void <var><em>ctx</em>.clip(fillRule);</var>
-void <var><em>ctx</em>.clip(path, fillRule);</var>
-</pre>
+```
+void ctx.clip();
+void ctx.clip(fillRule);
+void ctx.clip(path, fillRule);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><img src="canvas_clipping_path.png"></p>
+![](canvas_clipping_path.png)
 
-<dl>
- <dt><code>fillRule</code></dt>
- <dd>这个算法判断一个点是在路径内还是在路径外。<br>
- 允许的值：
- <ul>
-  <li><code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">非零环绕原则</a>，默认的原则。</li>
-  <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">奇偶环绕原则</a>。</li>
- </ul>
- </dd>
- <dt><code>path</code></dt>
- <dd>需要剪切的 {{domxref("Path2D")}} 路径。</dd>
-</dl>
+- `fillRule`
 
-<h2 id="示例">示例</h2>
+  - : 这个算法判断一个点是在路径内还是在路径外。
+    允许的值：
 
-<h3 id="使用_clip_方法">使用 <code>clip</code> 方法</h3>
+    - **`"nonzero`**": [非零环绕原则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的原则。
+    - **`"evenodd"`**: [奇偶环绕原则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
-<p>这是一段简单的代码片段，使用 <code>clip</code> 方法创建剪切区域。</p>
+- `path`
+  - : 需要剪切的 {{domxref("Path2D")}} 路径。
 
-<h4 id="HTML">HTML</h4>
+## 示例
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### 使用 `clip` 方法
 
-<h4 id="JavaScript">JavaScript</h4>
+这是一段简单的代码片段，使用 `clip` 方法创建剪切区域。
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // Create clipping region
@@ -51,25 +52,24 @@ ctx.arc(100, 100, 75, 0, Math.PI*2, false);
 ctx.clip();
 
 ctx.fillRect(0, 0, 100,100);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.arc(100, 100, 75, 0, Math.PI*2, false);
 ctx.clip();
-ctx.fillRect(0, 0, 100,100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(0, 0, 100,100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -92,21 +92,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.clip")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.

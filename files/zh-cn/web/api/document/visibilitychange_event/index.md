@@ -2,99 +2,69 @@
 title: visibilitychange
 slug: Web/API/Document/visibilitychange_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>当其选项卡的内容变得可见或被隐藏时，会在文档上触发 <code>visibilitychange</code> (能见度更改) 事件。</p>
+当其选项卡的内容变得可见或被隐藏时，会在文档上触发 `visibilitychange` (能见度更改) 事件。
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<dl>
- <dt>Interface</dt>
- <dd>{{domxref("event")}}</dd>
- <dt>Bubbles</dt>
- <dd>Yes</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
- <dt>Target</dt>
- <dd>{{domxref("Document")}}</dd>
- <dt>Default Action</dt>
- <dd>None</dd>
-</dl>
+- Interface
+  - : {{domxref("event")}}
+- Bubbles
+  - : Yes
+- Cancelable
+  - : No
+- Target
+  - : {{domxref("Document")}}
+- Default Action
+  - : None
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<p>该事件不包括文档的更新的可见性状态，但是您可以从文档的  {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。</p>
+该事件不包括文档的更新的可见性状态，但是您可以从文档的 {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。
 
-<div class="blockIndicator warning">
-<p>当 visibleStateState 属性的值转换为 <code>hidden </code>时，Safari 不会按预期触发<code>visibilitychange</code>； 因此，在这种情况下，您还需要包含代码以侦听 <code><a href="/zh-CN/docs/Web/API/Window/pagehide_event">pagehide</a></code> 事件。</p>
-</div>
+> **警告：** 当 visibleStateState 属性的值转换为 `hidden `时，Safari 不会按预期触发`visibilitychange`； 因此，在这种情况下，您还需要包含代码以侦听 [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) 事件。
 
-<div class="blockIndicator warning">
-<p>出于兼容性原因，请确保使用  <code>document.addEventListener </code>而不是<code>window.addEventListener</code>来注册回调。 Safari &lt;14.0 仅支持前者。</p>
-</div>
+> **警告：** 出于兼容性原因，请确保使用 `document.addEventListener `而不是`window.addEventListener`来注册回调。 Safari <14.0 仅支持前者。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>本示例在文档可见时开始播放音乐曲目，在文档不再可见时暂停音乐。</p>
+本示例在文档可见时开始播放音乐曲目，在文档不再可见时暂停音乐。
 
-<pre class="brush:js; notranslate">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   console.log( document.visibilityState );
 });
-</pre>
+```
 
-<pre class="notranslate">document.addEventListener("visibilitychange", function() {
+```
+document.addEventListener("visibilitychange", function() {
   if (document.visibilityState === 'visible') {
     backgroundMusic.play();
   } else {
     backgroundMusic.pause();
   }
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/DOM/Using_the_Page_Visibility_API">使用页面可见性 API</a></li>
- <li>{{domxref("Document.visibilityState")}}</li>
-</ul>
+- [使用页面可见性 API](/zh-CN/docs/DOM/Using_the_Page_Visibility_API)
+- {{domxref("Document.visibilityState")}}

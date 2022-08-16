@@ -2,22 +2,24 @@
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ServiceWorkerRegistration")}} 接口的 <strong><code>pushManager</code></strong> 属性返回用于管理推送订阅的 {{domxref("PushManager")}} 接口的引用。包括支持订阅，获取活动订阅和访问推送权限状态。</p>
+{{domxref("ServiceWorkerRegistration")}} 接口的 **`pushManager`** 属性返回用于管理推送订阅的 {{domxref("PushManager")}} 接口的引用。包括支持订阅，获取活动订阅和访问推送权限状态。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox" style="font-size: 14px;">myPushManager = ServiceWorker.pushManager
-</pre>
+```
+myPushManager = ServiceWorker.pushManager
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("PushManager")}} 对象。</p>
+一个 {{domxref("PushManager")}} 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">this.onpush = function(event) {
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
@@ -40,18 +42,17 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ServiceWorkerRegistration.pushManager")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
-</ul>
+- [Push API](/zh-CN/docs/Web/API/Push_API)

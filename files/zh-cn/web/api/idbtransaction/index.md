@@ -2,154 +2,107 @@
 title: IDBTransaction
 slug: Web/API/IDBTransaction
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p><code>IDBTransacation</code>接口由<a href="/en-US/docs/IndexedDB">IndexedDB API</a>提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxref("IDBDatabase")}}发起事务，通过{{domxref("IDBTransaction")}} 来设置事务的模式（例如：是否只读<code>readonly</code>或读写<code>readwrite</code>），以及通过{{domxref("IDBObjectStore")}}来发起一个请求。同时你也可以使用它来中止事务。</p>
-</div>
+`IDBTransacation`接口由[IndexedDB API](/zh-CN/docs/IndexedDB)提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxref("IDBDatabase")}}发起事务，通过{{domxref("IDBTransaction")}} 来设置事务的模式（例如：是否只读`readonly`或读写`readwrite`），以及通过{{domxref("IDBObjectStore")}}来发起一个请求。同时你也可以使用它来中止事务。
 
-<p>Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a <code>readwrite</code> transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further.</p>
+Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further.
 
-<p>If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
+If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
-<p>注意，事务在被创建的时候就已经开始，并非在发起第一个请求（<code>IDBRequest</code>) 的时候。例如下面的例子：</p>
+注意，事务在被创建的时候就已经开始，并非在发起第一个请求（`IDBRequest`) 的时候。例如下面的例子：
 
-<pre class="brush: js" id="comment_text_0">var trans1 = db.transaction("foo", "readwrite");
+```js
+var trans1 = db.transaction("foo", "readwrite");
 var trans2 = db.transaction("foo", "readwrite");
 var objectStore2 = trans2.objectStore("foo")
 var objectStore1 = trans1.objectStore("foo")
 objectStore2.put("2", "key");
 objectStore1.put("1", "key");
-</pre>
+```
 
-<p>在代码执行后，object store 应该包含值 "2", 因为 <code>trans2</code> 应该在 <code>trans1</code> 之后执行。</p>
+在代码执行后，object store 应该包含值 "2", 因为 `trans2` 应该在 `trans1` 之后执行。
 
-<p>Transactions can fail for a fixed number of reasons, all of which (except the user agent crash) will trigger an abort callback:</p>
+Transactions can fail for a fixed number of reasons, all of which (except the user agent crash) will trigger an abort callback:
 
-<ul>
- <li>Abort due to bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. Can be prevented by using preventDefault() on the error event on the request.</li>
- <li>Explicit abort() call from script</li>
- <li>Uncaught exception in request's success/error handler</li>
- <li>I/O error (actual failure to write to disk, e.g. disk detached, or other OS/hardware failure)</li>
- <li>Quota exceeded</li>
- <li>User agent crash</li>
-</ul>
+- Abort due to bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. Can be prevented by using preventDefault() on the error event on the request.
+- Explicit abort() call from script
+- Uncaught exception in request's success/error handler
+- I/O error (actual failure to write to disk, e.g. disk detached, or other OS/hardware failure)
+- Quota exceeded
+- User agent crash
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("IDBTransaction.db")}} {{readonlyInline}}</dt>
- <dd>当前事务所属的数据库连接。</dd>
- <dt>{{domxref("IDBTransaction.error")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is <code>null</code> if the transaction is not finished, is finished and successfully committed, or was aborted with {{domxref("IDBTransaction.abort")}} function.</dd>
- <dt>{{domxref("IDBTransaction.mode")}} {{readonlyInline}}</dt>
- <dd>用于隔离事务作用域内的 object store 中数据访问的模式。下方的常量章节给出了所有可用的值。默认值是 <code><a href="#const_read_only">readonly</a></code>.</dd>
- <dt>{{domxref("IDBTransaction.objectStoreNames")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects.</dd>
-</dl>
+- {{domxref("IDBTransaction.db")}} {{readonlyInline}}
+  - : 当前事务所属的数据库连接。
+- {{domxref("IDBTransaction.error")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with {{domxref("IDBTransaction.abort")}} function.
+- {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
+  - : 用于隔离事务作用域内的 object store 中数据访问的模式。下方的常量章节给出了所有可用的值。默认值是 [`readonly`](#const_read_only).
+- {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyinline}}
+  - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("IDBTransaction.onabort")}} {{readonlyInline}}</dt>
- <dd>The event handler for the <code>abort</code> event, fired when the transaction is aborted. This can happen due to:
- <ul>
-  <li>bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint and there is no error handler on the request to call preventDefault() on the event,</li>
-  <li>an explicit abort() call from script</li>
-  <li>uncaught exception in request's success/error handler,</li>
-  <li>an I/O error (actual failure to write to disk, e.g. disk detached, or other OS/hardware failure), or</li>
-  <li>quota exceeded.</li>
- </ul>
- </dd>
- <dt>{{domxref("IDBTransaction.oncomplete")}} {{readonlyInline}}</dt>
- <dd>The event handler for the <code>complete</code> event, thrown when the transaction completes successfully.</dd>
- <dt>{{domxref("IDBTransaction.onerror")}} {{readonlyInline}}</dt>
- <dd>The event handler for the <code>error</code> event, thrown when the transaction fails to complete.</dd>
-</dl>
+- {{domxref("IDBTransaction.onabort")}} {{readonlyInline}}
 
-<h2 id="方法">方法</h2>
+  - : The event handler for the `abort` event, fired when the transaction is aborted. This can happen due to:
 
-<p>从{{domxref("EventTarget")}}继承</p>
+    - bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint and there is no error handler on the request to call preventDefault() on the event,
+    - an explicit abort() call from script
+    - uncaught exception in request's success/error handler,
+    - an I/O error (actual failure to write to disk, e.g. disk detached, or other OS/hardware failure), or
+    - quota exceeded.
 
-<dl>
- <dt>{{domxref("IDBTransaction.abort")}}</dt>
- <dd>放弃本次连接的 transaction 的所有修改，如果当前的 transaction 处于回滚完毕或完成状态，则会抛出一个错误事件。</dd>
- <dt>{{domxref("IDBTransaction.objectStore")}}</dt>
- <dd>返回表示作为此事务作用域一部分的 object store 的 {{domxref("IDBObjectStore")}} 对象。</dd>
-</dl>
+- {{domxref("IDBTransaction.oncomplete")}} {{readonlyInline}}
+  - : The event handler for the `complete` event, thrown when the transaction completes successfully.
+- {{domxref("IDBTransaction.onerror")}} {{readonlyInline}}
+  - : The event handler for the `error` event, thrown when the transaction fails to complete.
 
-<h2 id="Constants">模式常量</h2>
+## 方法
 
-<div>{{deprecated_header}}</div>
+从{{domxref("EventTarget")}}继承
 
-<div class="warning">
-<p>这些常量将不再可用——它们在 Gecko 25 中被移除。 你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})</p>
-</div>
+- {{domxref("IDBTransaction.abort")}}
+  - : 放弃本次连接的 transaction 的所有修改，如果当前的 transaction 处于回滚完毕或完成状态，则会抛出一个错误事件。
+- {{domxref("IDBTransaction.objectStore")}}
+  - : 返回表示作为此事务作用域一部分的 object store 的 {{domxref("IDBObjectStore")}} 对象。
 
-<p>Transactions 可使用以下三种模式中的一种：</p>
+## 模式常量
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">常量</th>
-   <th scope="col">值</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a name="const_read_only">READ_ONLY</a></code></td>
-   <td>
-    <p>"readonly"</p>
+{{deprecated_header}}
 
-    <p>(0 in Chrome)</p>
-   </td>
-   <td>
-    <p>允许读取数据，不改变。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code><a name="const_read_write">READ_WRITE</a></code></td>
-   <td>
-    <p>"readwrite"</p>
+> **警告：** 这些常量将不再可用——它们在 Gecko 25 中被移除。 你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})
 
-    <p>(1 in Chrome)</p>
-   </td>
-   <td>
-    <div>允许读取和写入现有数据存储，数据被改变。</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code><a name="VERSION_CHANGE">VERSION_CHANGE</a></code></td>
-   <td>
-    <p>"versionchange"</p>
+Transactions 可使用以下三种模式中的一种：
 
-    <p>(2 in Chrome)</p>
-   </td>
-   <td>允许执行任何操作，包括删除和创建对象存储和索引。<br>
-    此模式是用于开始使用<a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a> 的 <code><a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion">setVersion()</a></code>方法更新版本号事务。 这种模式的事务无法与其它事务并发运行。<br>
-    这种模式下的事务被称为“升级事务”。</td>
-  </tr>
- </tbody>
-</table>
+| 常量                 | 值                           | 描述                                                                                                                                                                                                                                                                                  |
+| -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`READ_ONLY`]()      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                                |
+| [`READ_WRITE`]()     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                              |
+| [`VERSION_CHANGE`]() | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。 此模式是用于开始使用[IDBDatabase](/zh-CN/docs/IndexedDB/IDBDatabase) 的 [`setVersion()`](/en-US/docs/IndexedDB/IDBDatabase#setVersion)方法更新版本号事务。 这种模式的事务无法与其它事务并发运行。 这种模式下的事务被称为“升级事务”。 |
 
-<p>即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome <a href="http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/">the change was made in version 21</a>)。你应当防止出现对象不存在的情况：</p>
+即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/))。你应当防止出现对象不存在的情况：
 
-<pre class="brush:js;">var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };</pre>
+```js
+var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
@@ -167,12 +120,12 @@ function addData() {
 
   // report on the success of opening the transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
 
   transaction.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
+  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // create an object store on the transaction
@@ -183,26 +136,25 @@ function addData() {
 
   objectStoreRequest.onsuccess = function(event) {
     // report the success of our new item going into the database
-    note.innerHTML += '&lt;li&gt;New item added to database.&lt;/li&gt;';
+    note.innerHTML += '<li>New item added to database.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.IDBTransaction")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

@@ -2,47 +2,49 @@
 title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.lineJoin</code></strong> 是 Canvas 2D API 用来设置 2 个长度不为 0 的相连部分（线段，圆弧，曲线）如何连接在一起的属性（长度为 0 的变形部分，其指定的末端和控制点在同一位置，会被忽略）。</p>
+**`CanvasRenderingContext2D.lineJoin`** 是 Canvas 2D API 用来设置 2 个长度不为 0 的相连部分（线段，圆弧，曲线）如何连接在一起的属性（长度为 0 的变形部分，其指定的末端和控制点在同一位置，会被忽略）。
 
-<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
+参见 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中的 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 章节。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em>.lineJoin = "bevel";
-<var><em>ctx</em>.lineJoin = "round";
-<var><em>ctx</em>.lineJoin = "miter";</var></var></var></pre>
+```
+ctx.lineJoin = "bevel";
+ctx.lineJoin = "round";
+ctx.lineJoin = "miter";
+```
 
-<h3 id="选项">选项</h3>
+### 选项
 
-<p>此属性有 3 个值： <code>round</code>, <code>bevel</code> and <code>miter</code>。默认值是 <code>miter。注意：如果 2 个相连部分在同一方向，那么 lineJoin 不会产生任何效果</code>，因为在那种情况下不会出现连接区域。</p>
+此属性有 3 个值： `round`, `bevel` and `miter`。默认值是 `miter。注意：如果 2 个相连部分在同一方向，那么 lineJoin 不会产生任何效果`，因为在那种情况下不会出现连接区域。
 
-<p><img src="canvas_linejoin.png"></p>
+![](canvas_linejoin.png)
 
-<dl>
- <dt><code>round</code></dt>
- <dd>通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。圆角的半径是线段的宽度。</dd>
- <dt><code>bevel</code></dt>
- <dd>在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。</dd>
- <dt><code>miter</code></dt>
- <dd>通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。这个设置可以通过 {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}} 属性看到效果。</dd>
-</dl>
+- `round`
+  - : 通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。圆角的半径是线段的宽度。
+- `bevel`
+  - : 在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。
+- `miter`
+  - : 通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。这个设置可以通过 {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}} 属性看到效果。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_lineCap_property">使用 <code>lineJoin</code> 属性</h3>
+### 使用 `lineJoin` 属性
 
-<p>这是一段使用 <code>lineJoin</code> 属性的简单的代码片段。</p>
+这是一段使用 `lineJoin` 属性的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight[5]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 10;
@@ -52,29 +54,28 @@ ctx.moveTo(0,0);
 ctx.lineTo(200, 100);
 ctx.lineTo(300,0);
 ctx.stroke();
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:120px;"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:120px;">
 ctx.lineWidth = 10;
 ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineTo(200, 100);
 ctx.lineTo(300,0);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -97,20 +98,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 380) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 380) }}
 
-<h3 id="A_lineJoin_example"><code>lineJoin</code> 例子</h3>
+### `lineJoin` 例子
 
-<p>下面的例子绘制了 3 条不同的路径，演示 <code>lineJoin</code> 属性 3 种不同的设置。</p>
+下面的例子绘制了 3 条不同的路径，演示 `lineJoin` 属性 3 种不同的设置。
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round','bevel','miter'];
 ctx.lineWidth = 10;
 
-for (var i = 0; i &lt; lineJoin.length; i++) {
+for (var i = 0; i < lineJoin.length; i++) {
   ctx.lineJoin = lineJoin[i];
   ctx.beginPath();
   ctx.moveTo(-5,5+i*40);
@@ -120,26 +121,24 @@ for (var i = 0; i &lt; lineJoin.length; i++) {
   ctx.lineTo(155,5+i*40);
   ctx.stroke();
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.lineJoin")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineWidth")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineWidth")}}

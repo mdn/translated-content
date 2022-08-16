@@ -2,65 +2,31 @@
 title: Plugin
 slug: Web/API/Plugin
 ---
-<div class="warning">
-<p><strong>已废弃</strong><br>
- 该特性已经从 HTML5.2 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。</p>
-</div>
+> **警告：** **已废弃**
+> 该特性已经从 HTML5.2 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
 
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>插件接口提供有关浏览器<a href="/en-US/docs/Mozilla/Add-ons/Plugins">插件</a>的信息 .</p>
+插件接口提供有关浏览器[插件](/zh-CN/docs/Mozilla/Add-ons/Plugins)的信息。
 
-<div class="note">
-<p><strong>注：在最新版本的浏览器中插件对象本身的属性不可枚举。</strong></p>
-</div>
+> **备注：** 在最新版本的浏览器中插件对象本身的属性不可枚举。
 
-<h2 id="Properties">属性</h2>
+## 属性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>名称</th>
-   <th>描述</th>
-   <th>返回值类型</th>
-   <th>兼容性</th>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.description")}}</td>
-   <td>一个人类可读的插件描述。 <strong> 只读。</strong></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>DOM 0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.filename")}}</td>
-   <td>插件文件名。<strong>只读。</strong></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>DOM 0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.name")}}</td>
-   <td>插件名。<strong>只读。</strong></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>DOM 0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.version")}}</td>
-   <td>插件版本号字符串。<strong>只读。</strong></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Gecko browsers only (Firefox 4+)</td>
-  </tr>
- </tbody>
-</table>
+| 名称                                         | 描述                                | 返回值类型                       | 兼容性                           |
+| -------------------------------------------- | ----------------------------------- | -------------------------------- | -------------------------------- |
+| {{domxref("Plugin.description")}} | 一个人类可读的插件描述。 **只读。** | {{domxref("DOMString")}} | DOM 0                            |
+| {{domxref("Plugin.filename")}}     | 插件文件名。**只读。**              | {{domxref("DOMString")}} | DOM 0                            |
+| {{domxref("Plugin.name")}}         | 插件名。**只读。**                  | {{domxref("DOMString")}} | DOM 0                            |
+| {{domxref("Plugin.version")}}     | 插件版本号字符串。**只读。**        | {{domxref("DOMString")}} | Gecko browsers only (Firefox 4+) |
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("Plugin.item")}}</dt>
- <dd>返回支持的 MIME 类型的索引号。</dd>
- <dt>{{domxref("Plugin.namedItem")}}</dt>
- <dd>返回支持的 MIME 类型。</dd>
-</dl>
+- {{domxref("Plugin.item")}}
+  - : 返回支持的 MIME 类型的索引号。
+- {{domxref("Plugin.namedItem")}}
+  - : 返回支持的 MIME 类型。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

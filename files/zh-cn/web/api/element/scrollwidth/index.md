@@ -2,34 +2,30 @@
 title: Element.scrollWidth
 slug: Web/API/element/scrollWidth
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}**`Element.scrollWidth`** 这个只读属性是元素内容宽度的一种度量，包括由于 overflow 溢出而在屏幕上不可见的内容。
 
-<div><strong><code>Element.scrollWidth</code></strong> 这个只读属性是元素内容宽度的一种度量，包括由于 overflow 溢出而在屏幕上不可见的内容。</div>
+`scrollWidth`值等于元素在不使用水平滚动条的情况下适合视口中的所有内容所需的最小宽度。 宽度的测量方式与{{domxref("Element.clientWidth", "clientWidth")}}相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条（如果存在）。 它还可以包括伪元素的宽度，例如{{cssxref("::before")}}或{{cssxref("::after")}}。 如果元素的内容可以适合而不需要水平滚动条，则其`scrollWidth`等于{{domxref("Element.clientWidth", "clientWidth")}}
 
+> **备注：** 1. 这个属性会进行四舍五入并返回整数，如果你需要小数形式的值，使用{{ domxref("element.getBoundingClientRect()") }}_._
+>
+> _2. 在实际测试过程中，谷歌获取的_ **`Element.scrollWidth`** 和 IE，火狐下获取的 **`Element.scrollWidth`** 并不相同
 
+## 语法
 
-<p><code>scrollWidth</code>值等于元素在不使用水平滚动条的情况下适合视口中的所有内容所需的最小宽度。 宽度的测量方式与{{domxref("Element.clientWidth", "clientWidth")}}相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条（如果存在）。 它还可以包括伪元素的宽度，例如{{cssxref("::before")}}或{{cssxref("::after")}}。 如果元素的内容可以适合而不需要水平滚动条，则其<code>scrollWidth</code>等于{{domxref("Element.clientWidth", "clientWidth")}}</p>
+```
+var xScrollWidth = element.scrollWidth;
+```
 
-<div class="note">
-<p>1. 这个属性会进行四舍五入并返回整数，如果你需要小数形式的值，使用{{ domxref("element.getBoundingClientRect()") }}<em>.</em></p>
+xScrollWidth 的值是元素的内容宽度。
 
-<p><em>2. 在实际测试过程中，谷歌获取的 </em><strong><code>Element.scrollWidth</code></strong> 和 IE，火狐下获取的 <strong><code>Element.scrollWidth</code></strong> 并不相同</p>
-</div>
+## 例子
 
-<h2 id="Syntax_and_values">语法</h2>
-
-<pre class="syntaxbox">var <var>xScrollWidth</var> = <var>element</var>.scrollWidth;
-</pre>
-
-<p>xScrollWidth 的值是元素的内容宽度。</p>
-
-<h2 id="Example">例子</h2>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Example&lt;/title&gt;
-    &lt;style&gt;
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <style>
         div {
             overflow: hidden;
             white-space: nowrap;
@@ -43,25 +39,25 @@ slug: Web/API/element/scrollWidth
         button {
             margin-bottom: 2em;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
+    </style>
+</head>
 
-&lt;body&gt;
-    &lt;div id="aDiv"&gt;
+<body>
+    <div id="aDiv">
         FooBar-FooBar-FooBar-FooBar
-    &lt;/div&gt;
-    &lt;button id="aButton"&gt;
+    </div>
+    <button id="aButton">
         Check for overflow
-    &lt;/button&gt;
+    </button>
 
-    &lt;div id="anotherDiv"&gt;
+    <div id="anotherDiv">
         FooBar-FooBar-FooBar-FooBar
-    &lt;/div&gt;
-    &lt;button id="anotherButton"&gt;
+    </div>
+    <button id="anotherButton">
         Check for overflow
-    &lt;/button&gt;
-&lt;/body&gt;
-&lt;script&gt;
+    </button>
+</body>
+<script>
     var buttonOne = document.getElementById('aButton'),
     buttonTwo = document.getElementById('anotherButton'),
     divOne = document.getElementById('aDiv'),
@@ -69,7 +65,7 @@ slug: Web/API/element/scrollWidth
 
     //check to determine if an overflow is happening
     function isOverflowing(element) {
-        return (element.scrollWidth &gt; element.offsetWidth);
+        return (element.scrollWidth > element.offsetWidth);
     }
 
     function alertOverflow(element) {
@@ -87,17 +83,16 @@ slug: Web/API/element/scrollWidth
     buttonTwo.addEventListener('click', function() {
         alertOverflow(divTwo);
     });
-&lt;/script&gt;
-&lt;/html&gt;</code></pre>
+</script>
+</html>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p>The <a href="http://dev.w3.org/csswg/cssom-view/#dom-element-scrollwidth">CSSOM View Module</a> defines <code>scrollWidth</code></p>
+The [CSSOM View Module](http://dev.w3.org/csswg/cssom-view/#dom-element-scrollwidth) defines `scrollWidth`
 
-<h2 id="See_also">相关</h2>
+## 相关
 
-<ul>
- <li>{{domxref("Element.clientWidth")}}</li>
- <li>{{domxref("Element.offsetWidth")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
-</ul>
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.offsetWidth")}}
+- [Determining the dimensions of elements](/zh-CN/docs/Determining_the_dimensions_of_elements)

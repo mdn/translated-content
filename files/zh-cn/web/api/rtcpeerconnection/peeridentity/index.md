@@ -2,29 +2,30 @@
 title: RTCPeerConnection.peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>只读属性 {{domxref("RTCPeerConnection")}}  <code><strong>peerIdentity</strong></code> ，返回{{jsxref("Promise")}} 对象，成功时返回 {{domxref("RTCIdentityAssertion")}} ，该结构 {{domxref("DOMString")}} 标识了远端的 ID。这个身份标识在连接过程中将不会改变（直到连接结束）.</p>
+只读属性 {{domxref("RTCPeerConnection")}} **`peerIdentity`** ，返回{{jsxref("Promise")}} 对象，成功时返回 {{domxref("RTCIdentityAssertion")}} ，该结构 {{domxref("DOMString")}} 标识了远端的 ID。这个身份标识在连接过程中将不会改变（直到连接结束）.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> var <em>identity</em> = <em>rtcPeerConnection</em>.peerIdentity;</pre>
+```
+ var identity = rtcPeerConnection.peerIdentity;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A JavaScript {{jsxref("Promise")}} which resolves to an {{domxref("RTCIdentityAssertion")}} that describes the remote peer's identity.</p>
+A JavaScript {{jsxref("Promise")}} which resolves to an {{domxref("RTCIdentityAssertion")}} that describes the remote peer's identity.
 
-<p>当验证远程的身份 ID 出错时， promise 将返回拒绝。如果目标节点身份不存在，<code>peerIdentity</code> 将被设为 一个 promise 对象，并重启验证过程（一个断言）, 直到成功或者不再想继续。</p>
+当验证远程的身份 ID 出错时， promise 将返回拒绝。如果目标节点身份不存在，`peerIdentity` 将被设为 一个 promise 对象，并重启验证过程（一个断言）, 直到成功或者不再想继续。
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong> {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 返回的 promise 将不会成功返回，除非目标节点身份信息可用。 如不可用，则<code>setRemoteDescription()</code> 将被拒绝。若无目标节点 ID，就不不需要等<code>setRemoteDescription() </code>这个返回验证成功了。</p>
-</div>
+> **备注：** {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 返回的 promise 将不会成功返回，除非目标节点身份信息可用。 如不可用，则`setRemoteDescription()` 将被拒绝。若无目标节点 ID，就不不需要等`setRemoteDescription() `这个返回验证成功了。
 
-<h2 id="举个栗子">举个栗子</h2>
+## 举个栗子
 
-<p>In this example, a function, <code>getIdentityAssertion()</code>, is created which asynchronously waits for the peer's identity to be verified, then returns the identity to the caller. If an error occurs and the promise is rejected, this logs the error to the console and returns <code>null</code> to the caller.</p>
+In this example, a function, `getIdentityAssertion()`, is created which asynchronously waits for the peer's identity to be verified, then returns the identity to the caller. If an error occurs and the promise is rejected, this logs the error to the console and returns `null` to the caller.
 
-<pre>let pc = new RTCPeerConnection();
+```
+let pc = new RTCPeerConnection();
 
 /* ... */
 
@@ -37,18 +38,16 @@ async function getIdentityAssertion(pc) {
     return null;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)

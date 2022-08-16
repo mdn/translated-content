@@ -2,33 +2,30 @@
 title: SVGPathElement.getTotalLength()
 slug: Web/API/SVGGeometryElement/getTotalLength
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p> <code><strong>SVGPathElement.getTotalLength()</strong></code> 该方法返回用户代理对路径总长度(以用户单位为单位)的计算值。</p>
+**`SVGPathElement.getTotalLength()`** 该方法返回用户代理对路径总长度(以用户单位为单位)的计算值。
 
-<div class="note">
-<p>注意:在SVG 2中，该方法被移动到 {{DOMxRef("SVGGeometryElement")}} 接口，由 {{DOMxRef("SVGPathElement")}} 继承。</p>
-</div>
+> **备注：** 在 SVG 2 中，该方法被移动到 {{DOMxRef("SVGGeometryElement")}} 接口，由 {{DOMxRef("SVGPathElement")}} 继承。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">float <var>someElement</var>.getTotalLength();
-</pre>
+```
+float someElement.getTotalLength();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>指示路径总长度(以用户单位为单位)的浮点数。</p>
+指示路径总长度(以用户单位为单位)的浮点数。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.SVGPathElement.getTotalLength")}}</p>
+{{Compat("api.SVGPathElement.getTotalLength")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{DOMxRef("SVGGeometryElement.getTotalLength()")}}</li>
-</ul>
+- {{DOMxRef("SVGGeometryElement.getTotalLength()")}}

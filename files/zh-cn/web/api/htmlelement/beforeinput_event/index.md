@@ -2,79 +2,81 @@
 title: 'HTMLElement: beforeinput event'
 slug: Web/API/HTMLElement/beforeinput_event
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>DOM 事件 <strong><code>beforeinput</code></strong> 在{{HTMLElement("input")}}, {{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 的值即将被修改前触发。这个事件也可以在 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 被设置为 <code>true</code> 的元素和打开 {{domxref("Document.designMode", "designMode")}} 后的任何元素上被触发。</p>
+DOM 事件 **`beforeinput`** 在{{HTMLElement("input")}}, {{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 的值即将被修改前触发。这个事件也可以在 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 被设置为 `true` 的元素和打开 {{domxref("Document.designMode", "designMode")}} 后的任何元素上被触发。
 
-<p>In the case of <code>contenteditable</code> and <code>designMode</code>,  the event target is the <strong>editing host</strong>. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.</p>
+In the case of `contenteditable` and `designMode`, the event target is the **editing host**. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("InputEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th>Sync / Async</th>
-   <td>Sync</td>
-  </tr>
-  <tr>
-   <th>Composed</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Default Action</th>
-   <td>Update the DOM element</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("InputEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>Sync / Async</th>
+      <td>Sync</td>
+    </tr>
+    <tr>
+      <th>Composed</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Default Action</th>
+      <td>Update the DOM element</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个例子会在 {{HtmlElement("input")}} 元素的值即将被新的值更新前记录下当前的值。</p>
+这个例子会在 {{HtmlElement("input")}} 元素的值即将被新的值更新前记录下当前的值。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input placeholder="Enter some text" name="name"/&gt;
-&lt;p id="values"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Enter some text" name="name"/>
+<p id="values"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('values');
 
 input.addEventListener('beforeinput', updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLElement.beforeinput_event")}}</p>
+{{Compat("api.HTMLElement.beforeinput_event")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>相关事件：<code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code></li>
-</ul>
+- 相关事件：[`input`](/en-US/docs/Web/API/HTMLElement/input_event)

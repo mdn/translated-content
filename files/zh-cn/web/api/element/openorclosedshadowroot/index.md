@@ -2,33 +2,30 @@
 title: Element.openOrClosedShadowRoot
 slug: Web/API/Element/openOrClosedShadowRoot
 ---
-<div>{{APIRef("Shadow DOM")}}{{non-standard_header}}
-<div class="note"><strong>Note:</strong> This API is available only to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</div>
-</div>
+{{APIRef("Shadow DOM")}}{{non-standard_header}}
 
-<p><code>Element.openOrCloseShadowRoot</code> 是一个只读属性。represents the shadow root hosted by the element, regardless if its {{DOMxRef("ShadowRoot.mode", "mode")}} is <code>open</code> or <code>closed</code>. Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.</p>
+> **备注：** This API is available only to [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions).
 
-<h2 id="Syntax">Syntax</h2>
+`Element.openOrCloseShadowRoot` 是一个只读属性。represents the shadow root hosted by the element, regardless if its {{DOMxRef("ShadowRoot.mode", "mode")}} is `open` or `closed`. Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.
 
-<pre class="syntaxbox notranslate">var <em>shadowroot =</em><em> element</em>.shadowRoot;
-</pre>
+## Syntax
 
-<h3 id="Value">Value</h3>
+```
+var shadowroot = element.shadowRoot;
+```
 
-<p>A {{DOMxRef("ShadowRoot")}} object instance, regardless if its {{DOMxRef("ShadowRoot.mode", "mode")}} is set to <code>open</code> or <code>closed</code>, or <code>null</code> if no shadow root is present. (See {{DOMxRef("Element.attachShadow()")}} for further details).</p>
+### Value
 
-<h2 id="Specifications">Specifications</h2>
+A {{DOMxRef("ShadowRoot")}} object instance, regardless if its {{DOMxRef("ShadowRoot.mode", "mode")}} is set to `open` or `closed`, or `null` if no shadow root is present. (See {{DOMxRef("Element.attachShadow()")}} for further details).
 
-<p><em>This property is not part of any specification.</em></p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+_This property is not part of any specification._
 
+## Browser compatibility
 
+{{Compat("api.Element.openOrClosedShadowRoot")}}
 
-<p>{{Compat("api.Element.openOrClosedShadowRoot")}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{DOMxRef("Element.shadowRoot")}}</li>
-</ul>
+- {{DOMxRef("Element.shadowRoot")}}

@@ -2,102 +2,102 @@
 title: unload
 slug: Web/API/Window/unload_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>当文档或一个子资源正在被卸载时，触发 <strong>unload</strong>事件。</p>
+当文档或一个子资源正在被卸载时，触发 **unload**事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">可冒泡（Bubbles）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">可取消（Cancelable）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">接口（Interface）</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理程序属性（Event handler property）</th>
-   <td>{{domxref("WindowEventHandlers/onunload", "onunload")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">可冒泡（Bubbles）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">可取消（Cancelable）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">接口（Interface）</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理程序属性（Event handler property）</th>
+      <td>
+        {{domxref("WindowEventHandlers/onunload", "onunload")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>它在下面两个事件后被触发：</p>
+它在下面两个事件后被触发：
 
-<ol>
- <li><a href="/en-US/docs/Mozilla_event_reference/beforeunload">beforeunload</a> (可取消默认行为的事件)</li>
- <li><a href="/en-US/docs/Mozilla_event_reference/pagehide">pagehide</a></li>
-</ol>
+1.  [beforeunload](/zh-CN/docs/Mozilla_event_reference/beforeunload) (可取消默认行为的事件)
+2.  [pagehide](/zh-CN/docs/Mozilla_event_reference/pagehide)
 
-<p>文档处于以下状态：</p>
+文档处于以下状态：
 
-<ul>
- <li>所有资源仍存在 (图片，iframe 等.)</li>
- <li>对于终端用户所有资源均不可见</li>
- <li>界面交互无效 (<code>window.open</code>, <code>alert</code>, <code>confirm</code> 等.)</li>
- <li>错误不会停止卸载文档的过程</li>
-</ul>
+- 所有资源仍存在 (图片，iframe 等.)
+- 对于终端用户所有资源均不可见
+- 界面交互无效 (`window.open`, `alert`, `confirm` 等.)
+- 错误不会停止卸载文档的过程
 
-<p>请注意<code>unload</code>事件也遵循文档树：父 iframe 会在子 iframe 卸载前卸载 (参考下面的例子).</p>
+请注意`unload`事件也遵循文档树：父 iframe 会在子 iframe 卸载前卸载 (参考下面的例子).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Parent Frame&lt;/title&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parent Frame</title>
+    <script>
       window.addEventListener('beforeunload', function(event) {
         console.log('I am the 1st one.');
       });
       window.addEventListener('unload', function(event) {
         console.log('I am the 3rd one.');
       });
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;iframe src="child-frame.html"&gt;&lt;/iframe&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </head>
+  <body>
+    <iframe src="child-frame.html"></iframe>
+  </body>
+</html>
+```
 
-<p>下面是 <code>child-frame.html 的内容</code>:</p>
+下面是 `child-frame.html 的内容`:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Child Frame&lt;/title&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Child Frame</title>
+    <script>
       window.addEventListener('beforeunload', function(event) {
         console.log('I am the 2nd one.');
       });
       window.addEventListener('unload', function(event) {
         console.log('I am the 4th and last one…');
       });
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </script>
+  </head>
+  <body>
       ☻
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  </body>
+</html>
+```
 
-<p>当父 iframe 被卸载，事件将按<code>console.log()</code> 消息描述的顺序触发。</p>
+当父 iframe 被卸载，事件将按`console.log()` 消息描述的顺序触发。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>相关事件： {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}</li>
- <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents">Unloading Documents — unload a document</a></li>
-</ul>
+- 相关事件： {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}
+- [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)

@@ -2,35 +2,33 @@
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong>XMLHttpRequest.responseXML </strong>属性是一个只读值，它返回一个包含请求检索的 HTML 或 XML 的{{domxref("Document")}}，如果请求未成功，尚未发送，或者检索的数据无法正确解析为 XML 或 HTML，则为 null。默认是当作“text / xml” 来解析。当 {{domxref("XMLHttpRequest.responseType", "responseType")}} 设置为 “document” 并且请求已异步执行时，响应将被当作 “text / html” 来解析。<code>responseXML</code> 对于任何其他类型的数据以及 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a> 为 null。</p>
+**XMLHttpRequest.responseXML** 属性是一个只读值，它返回一个包含请求检索的 HTML 或 XML 的{{domxref("Document")}}，如果请求未成功，尚未发送，或者检索的数据无法正确解析为 XML 或 HTML，则为 null。默认是当作“text / xml” 来解析。当 {{domxref("XMLHttpRequest.responseType", "responseType")}} 设置为 “document” 并且请求已异步执行时，响应将被当作 “text / html” 来解析。`responseXML` 对于任何其他类型的数据以及 [`data:` URLs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 为 null。
 
-<div class="note">
-<p><code>responseXML</code> 在这个属性的历史堪称神器，它可以同时在 HTML 和 XML 中工作</p>
-</div>
+> **备注：** `responseXML` 在这个属性的历史堪称神器，它可以同时在 HTML 和 XML 中工作
 
-<p>如果服务器没有明确指出 {{HTTPHeader("Content-Type")}} 头是 <code>"text/xml"</code> 还是 <code>"application/xml"</code>, 你可以使用{{domxref("XMLHttpRequest.overrideMimeType()")}} 强制 <code>XMLHttpRequest</code> 解析为 XML。</p>
+如果服务器没有明确指出 {{HTTPHeader("Content-Type")}} 头是 `"text/xml"` 还是 `"application/xml"`, 你可以使用{{domxref("XMLHttpRequest.overrideMimeType()")}} 强制 `XMLHttpRequest` 解析为 XML。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>data</em> = <em>XMLHttpRequest</em>.responseXML;
-</pre>
+```
+var data = XMLHttpRequest.responseXML;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p> {{domxref("Document")}} 中包含从 {{domxref("XMLHttpRequest")}} 中收到的 HTML 节点或解析后的 XML 节点，也可能是在没有收到任何数据或数据类型错误的情况下返回的 null。</p>
+{{domxref("Document")}} 中包含从 {{domxref("XMLHttpRequest")}} 中收到的 HTML 节点或解析后的 XML 节点，也可能是在没有收到任何数据或数据类型错误的情况下返回的 null。
 
-<h3 id="例外">例外</h3>
+### 例外
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>{{domxref("XMLHttpRequest.responseType", "responseType")}} 既不是 <code>"document"</code> 也不是空字符串 (接收的数据应是 XML 或 HTML)。</dd>
-</dl>
+- `InvalidStateError`
+  - : {{domxref("XMLHttpRequest.responseType", "responseType")}} 既不是 `"document"` 也不是空字符串 (接收的数据应是 XML 或 HTML)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 // 如果已指明，responseType 必须是空字符串或 "document"
@@ -48,20 +46,19 @@ xhr.onload = function () {
   }
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.XMLHttpRequest.responseXML")}}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<ul>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{domxref("XMLHttpRequest.response")}}</li>
- <li>{{domxref("XMLHttpRequest.responseType")}}</li>
-</ul>
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLHttpRequest.response")}}
+- {{domxref("XMLHttpRequest.responseType")}}

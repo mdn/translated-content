@@ -2,86 +2,92 @@
 title: 'Element:  键盘按下事件'
 slug: Web/API/Element/keydown_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>keydown</strong></code>事件触发于键盘按键按下的时候。</p>
+**`keydown`**事件触发于键盘按键按下的时候。
 
-<p>与{{Event("keypress")}} 事件不同的是，所有按键均会触发<code>keydown</code>事件，无论这些按键是否会产生字符值。</p>
+与{{Event("keypress")}} 事件不同的是，所有按键均会触发`keydown`事件，无论这些按键是否会产生字符值。
 
 <table class="properties">
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("KeyboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}}</td>
-  </tr>
- </tbody>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("KeyboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><code>keydown</code> 与 <code><a href="/en-US/docs/Web/API/Element/keyup_event">keyup</a></code> 事件捕获了键盘按键的操作，而 <code>keypress</code> 反映了具体输入某个字符的值。比如，小写"a" 在<code>keydown</code> 和 <code>keyup</code>事件中输出的是大写 A 的 Unicode 编码 65，但是在<code>keypress</code>中输出的就是小写"a"的 Unicode 编码 97。大写 "A"在这些事件中输出的都是 Unicode 编码 65。</p>
+`keydown` 与 [`keyup`](/en-US/docs/Web/API/Element/keyup_event) 事件捕获了键盘按键的操作，而 `keypress` 反映了具体输入某个字符的值。比如，小写"a" 在`keydown` 和 `keyup`事件中输出的是大写 A 的 Unicode 编码 65，但是在`keypress`中输出的就是小写"a"的 Unicode 编码 97。大写 "A"在这些事件中输出的都是 Unicode 编码 65。
 
-<p>键盘事件只能由 <code>&lt;inputs&gt;</code>, <code>&lt;textarea&gt;</code> 以及任何具有  <code>contentEditable</code> 或 <code>tabindex="-1"</code>属性的组件触发。</p>
+键盘事件只能由 `<inputs>`, `<textarea>` 以及任何具有 `contentEditable` 或 `tabindex="-1"`属性的组件触发。
 
-<p>自 Firefox 65 起，  <code>keydown</code> 与 <code><a href="/en-US/docs/Web/API/Element/keyup_event">keyup</a></code> 事件会在 IME（输入法编辑器）复合事件中被触发，目的是为了提升 CJKT（中日韩台地区）用户跨浏览器性能，({{bug(354358)}}). 若要忽略复合事件中所有 <code>keydown</code> 事件，可以按照如下代码修改 (229 是某个在 IME 中触发的键盘事件对应的 <code>keyCode</code>):</p>
+自 Firefox 65 起， `keydown` 与 [`keyup`](/en-US/docs/Web/API/Element/keyup_event) 事件会在 IME（输入法编辑器）复合事件中被触发，目的是为了提升 CJKT（中日韩台地区）用户跨浏览器性能，({{bug(354358)}}). 若要忽略复合事件中所有 `keydown` 事件，可以按照如下代码修改 (229 是某个在 IME 中触发的键盘事件对应的 `keyCode`):
 
-<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
+```js
+eventTarget.addEventListener("keydown", event => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
 });
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="addEventListener_keydown_示例">addEventListener keydown 示例</h3>
+### addEventListener keydown 示例
 
-<p>这个例子展示了当你在{{HtmlElement("input")}}元素中按下一个按键时， {{domxref("KeyboardEvent.code")}} 的取值 </p>
+这个例子展示了当你在{{HtmlElement("input")}}元素中按下一个按键时， {{domxref("KeyboardEvent.code")}} 的取值
 
-<pre class="brush: html">&lt;input placeholder="Click here, then press down a key." size="40"&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Click here, then press down a key." size="40">
+<p id="log"></p>
+```
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('keydown', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("addEventListener_keydown_示例")}}</p>
+{{EmbedLiveSample("addEventListener_keydown_示例")}}
 
-<h3 id="onkeydown_示例">onkeydown 示例</h3>
+### onkeydown 示例
 
-<pre class="brush: js">input.onkeydown = logKey;</pre>
+```js
+input.onkeydown = logKey;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Element.keydown_event")}}</p>
+{{Compat("api.Element.keydown_event")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keypress_event">keypress</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keyup_event">keyup</a></code></li>
- <li><a href="/en-US/docs/Web/API/Document/keydown_event">Document <code>keydown</code> event</a></li>
-</ul>
+- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
+- [`keyup`](/en-US/docs/Web/API/Element/keyup_event)
+- [Document `keydown` event](/zh-CN/docs/Web/API/Document/keydown_event)

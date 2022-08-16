@@ -2,22 +2,24 @@
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p><strong><code>Document.lastStyleSheetSet</code></strong> 返回最后一个启用的样式表集合。当 {{domxref("document.selectedStyleSheetSet")}} 属性发生变化时，这个属性的值就会随之发生变化。</p>
+**`Document.lastStyleSheetSet`** 返回最后一个启用的样式表集合。当 {{domxref("document.selectedStyleSheetSet")}} 属性发生变化时，这个属性的值就会随之发生变化。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var <var>lastStyleSheetSet</var> = <var>document</var>.lastStyleSheetSet
-</pre>
+```
+var lastStyleSheetSet = document.lastStyleSheetSet
+```
 
-<p>返回时，<var>lastStyleSheetSet</var> 指示最近设置的样式表。如果当前样式表集尚未通过设置更改 {{domxref("document.selectedStyleSheetSet")}}, 则返回值为 <code>null</code>。</p>
+返回时，_lastStyleSheetSet_ 指示最近设置的样式表。如果当前样式表集尚未通过设置更改 {{domxref("document.selectedStyleSheetSet")}}, 则返回值为 `null`。
 
-<div class="note"><strong>注意：</strong> 当{{domxref("document.enableStyleSheetsForSet()")}} 被执行时，该值不会该变。</div>
+> **备注：** 当{{domxref("document.enableStyleSheetsForSet()")}} 被执行时，该值不会该变。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js notranslate">let lastSheetSet = document.lastStyleSheetSet;
+```js
+let lastSheetSet = document.lastStyleSheetSet;
 
 if (!lastSheetSet) {
   lastSheetSet = 'Style sheet not yet changed';
@@ -25,17 +27,15 @@ if (!lastSheetSet) {
 else {
   console.log('The last style sheet set is: ' + lastSheetSet);
 }
-</pre>
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Document.lastStyleSheetSet")}}</p>
+{{Compat("api.Document.lastStyleSheetSet")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("document.preferredStyleSheetSet")}}</li>
- <li>{{domxref("document.selectedStyleSheetSet")}}</li>
- <li>{{domxref("document.styleSheetSets")}}</li>
- <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.styleSheetSets")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

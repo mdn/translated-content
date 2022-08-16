@@ -2,45 +2,40 @@
 title: InstallEvent
 slug: Web/API/InstallEvent
 ---
-<div>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</div>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>该参数传递到 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 事件处理程序，<code>InstallEvent</code> 接口表示一个 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上分派的安装操作。作为 {{domxref("ExtendableEvent")}} 的一个子类，它确保在安装期间不调度诸如 {{domxref("FetchEvent")}} 之类的功能事件。</p>
+该参数传递到 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 事件处理程序，`InstallEvent` 接口表示一个 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上分派的安装操作。作为 {{domxref("ExtendableEvent")}} 的一个子类，它确保在安装期间不调度诸如 {{domxref("FetchEvent")}} 之类的功能事件。
 
-<p>该接口继承自 {{domxref("ExtendableEvent")}} 接口。</p>
+该接口继承自 {{domxref("ExtendableEvent")}} 接口。
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("InstallEvent.InstallEvent()")}}</dt>
- <dd>创建一个新的 <code>InstallEvent</code> 对象。</dd>
-</dl>
+- {{domxref("InstallEvent.InstallEvent()")}}
+  - : 创建一个新的 `InstallEvent` 对象。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从它的祖先{{domxref("Event")}}继承属性。</em></p>
+_从它的祖先{{domxref("Event")}}继承属性。_
 
-<dl>
- <dt>{{domxref("InstallEvent.activeWorker")}} {{readonlyInline}}</dt>
- <dd>返回当前处于激活状态，控制页面的{{domxref("ServiceWorker")}}。</dd>
-</dl>
+- {{domxref("InstallEvent.activeWorker")}} {{readonlyInline}}
+  - : 返回当前处于激活状态，控制页面的{{domxref("ServiceWorker")}}。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>从它的父类{{domxref("ExtendableEvent")}}继承方法。</em></p>
+_从它的父类{{domxref("ExtendableEvent")}}继承方法。_
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>该代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (请参阅 <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch running live</a>)。代码在{{domxref("ServiceWorkerGlobalScope.oninstall")}}中调用{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil(any value)")}}，并延迟将{{domxref("ServiceWorkerRegistration.installing")}} worker 视为已安装的，直到传递的 promise 被成功地 resolve。当所有资源已经获取并缓存，或者有任何异常发生时，promise 才会 resolve。</p>
+该代码片段来自 [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (请参阅 [prefetch running live](https://googlechrome.github.io/samples/service-worker/prefetch/))。代码在{{domxref("ServiceWorkerGlobalScope.oninstall")}}中调用{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil(any value)")}}，并延迟将{{domxref("ServiceWorkerRegistration.installing")}} worker 视为已安装的，直到传递的 promise 被成功地 resolve。当所有资源已经获取并缓存，或者有任何异常发生时，promise 才会 resolve。
 
-<p>该代码片段也展示了服务工作线程使用的缓存版本控制的最佳实践。虽然此示例只有一个缓存，但您可以将此方法用于多个缓存。 代码将缓存的速记标识映射到特定的版本化缓存名称。</p>
+该代码片段也展示了服务工作线程使用的缓存版本控制的最佳实践。虽然此示例只有一个缓存，但您可以将此方法用于多个缓存。 代码将缓存的速记标识映射到特定的版本化缓存名称。
 
-<div class="note">
-<p><strong>注意</strong>: service worker 的注册日志记录在 Chrome 浏览器中可以通过访问 chrome://serviceworker-internals 查看。</p>
-</div>
+> **备注：** service worker 的注册日志记录在 Chrome 浏览器中可以通过访问 chrome://serviceworker-internals 查看。
 
-<pre class="brush: js">var CACHE_VERSION = 1;
+```js
+var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
@@ -65,16 +60,15 @@ console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
       console.error('Pre-fetching failed:', error);
     })
   );
-});</pre>
+});
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("NotificationEvent")}}</li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- {{domxref("NotificationEvent")}}
+- {{jsxref("Promise")}}
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

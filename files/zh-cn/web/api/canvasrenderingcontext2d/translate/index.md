@@ -2,42 +2,43 @@
 title: CanvasRenderingContext2D.translate()
 slug: Web/API/CanvasRenderingContext2D/translate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API 的 <strong><code>CanvasRenderingContext2D.translate()</code></strong> 方法对当前网格添加平移变换的方法。</p>
+Canvas 2D API 的 **`CanvasRenderingContext2D.translate()`** 方法对当前网格添加平移变换的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.translate(x, y);</var>
-</pre>
+```
+void ctx.translate(x, y);
+```
 
-<p><code>translate()</code> 方法，将 canvas 按原始 x 点的水平方向、原始的 y 点垂直方向进行<strong>平移变换</strong></p>
+`translate()` 方法，将 canvas 按原始 x 点的水平方向、原始的 y 点垂直方向进行**平移变换**
 
-<p><img src="canvas_grid_translate.png"></p>
+![](canvas_grid_translate.png)
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>水平方向的移动距离。</dd>
- <dt>y</dt>
- <dd>垂直方向的移动距离。</dd>
-</dl>
+- `x`
+  - : 水平方向的移动距离。
+- y
+  - : 垂直方向的移动距离。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_translate_方法">使用 <code>translate</code> 方法</h3>
+### 使用 `translate` 方法
 
-<p>这是一段使用 <code>translate</code> 方法的简单的代码片段。</p>
+这是一段使用 `translate` 方法的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.translate(50, 50);
@@ -45,25 +46,24 @@ ctx.fillRect(0,0,100,100);
 
 // reset current transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.translate(50, 50);
 ctx.fillRect(0,0,100,100);
-ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
-</pre>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -86,21 +86,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.translate")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}

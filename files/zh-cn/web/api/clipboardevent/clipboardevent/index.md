@@ -2,44 +2,39 @@
 title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
 ---
-<p>{{APIRef("Clipboard API")}}{{SeeCompatTable}}</p>
+{{APIRef("Clipboard API")}}{{SeeCompatTable}}
 
-<p><code><strong>ClipboardEvent()</strong></code> 构造函数返回一个新建的 {{domxref("ClipboardEvent")}} 对象，这个对象表示与修改剪切板相关的事件，这些事件包括 {{event("cut")}} 、 {{event("copy")}}  和 {{event("paste")}} 事件。</p>
+**`ClipboardEvent()`** 构造函数返回一个新建的 {{domxref("ClipboardEvent")}} 对象，这个对象表示与修改剪切板相关的事件，这些事件包括 {{event("cut")}} 、 {{event("copy")}} 和 {{event("paste")}} 事件。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>var <em>clipboardEvent</em> = new ClipboardEvent(type[<code>,</code><em><code> options]</code></em>);</pre>
+```
+var clipboardEvent = new ClipboardEvent(type[, options]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><em><code>ClipboardEvent()</code> 构造函数也从 </em> <em>{{domxref("Event.Event", "Event()")}}</em> <em>继承参数。</em></p>
+_`ClipboardEvent()` 构造函数也从_ _{{domxref("Event.Event", "Event()")}}_ _继承参数。_
 
-<dl>
- <dt><em>type</em></dt>
- <dd>一个 {{domxref("DOMString")}} 字符串，描述了 <code>ClipboardEvent</code>  事件类型的名字，大小写敏感，可以是：<code>'copy'</code>、 <code>'cut'</code>或者 <code>'paste'</code>。</dd>
- <dt><em>options</em><strong> {{optional_inline}}</strong></dt>
- <dd>选项如下：
- <ul>
-  <li><code>clipboardData</code>: 一个 {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.</li>
-  <li><code>dataType</code>{{non-standard_inline}}: A {{domxref("DOMString")}} containing the MIME-type of the data contained in the <code>data</code> argument.</li>
-  <li><code>data</code>{{non-standard_inline}}: A {{domxref("DOMString")}} containing the data concerned by the clipboard event.</li>
- </ul>
- </dd>
-</dl>
+- _type_
+  - : 一个 {{domxref("DOMString")}} 字符串，描述了 `ClipboardEvent` 事件类型的名字，大小写敏感，可以是：`'copy'`、 `'cut'`或者 `'paste'`。
+- _options_ **{{optional_inline}}**
 
-<h2 id="规范">规范</h2>
+  - : 选项如下：
+
+    - `clipboardData`: 一个 {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.
+    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the MIME-type of the data contained in the `data` argument.
+    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the data concerned by the clipboard event.
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.ClipboardEvent.ClipboardEvent")}}</p>
+{{Compat("api.ClipboardEvent.ClipboardEvent")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<div id="compat-mobile"></div>
-
-<ul>
- <li>与复制相关的事件：{{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
- <li>所属的 {{domxref("ClipboardEvent")}} 接口。</li>
-</ul>
+- 与复制相关的事件：{{event("copy")}}, {{event("cut")}}, {{event("paste")}}
+- 所属的 {{domxref("ClipboardEvent")}} 接口。

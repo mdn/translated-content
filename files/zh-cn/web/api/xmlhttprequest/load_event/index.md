@@ -2,49 +2,51 @@
 title: 'XMLHttpRequest: load event'
 slug: Web/API/XMLHttpRequest/load_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当一个{{domxref("XMLHttpRequest")}}请求完成的时候会触发<code>load</code> 事件。</p>
+当一个{{domxref("XMLHttpRequest")}}请求完成的时候会触发`load` 事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("XMLHttpRequestEventTarget/onload", "onload")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("XMLHttpRequestEventTarget/onload", "onload")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<h3 id="在线例子">在线例子</h3>
+### 在线例子
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-    &lt;input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" /&gt;
-    &lt;input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" /&gt;
-    &lt;input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" /&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
+    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
+    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+</div>
 
-&lt;textarea readonly class="event-log"&gt;&lt;/textarea&gt;</pre>
+<textarea readonly class="event-log"></textarea>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">.event-log {
+```css hidden
+.event-log {
     width: 25rem;
     height: 4rem;
     border: 1px solid black;
@@ -56,12 +58,12 @@ input {
     width: 11rem;
     margin: .5rem;
 }
-</pre>
-</div>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const xhrButtonSuccess = document.querySelector('.xhr.success');
+```js
+const xhrButtonSuccess = document.querySelector('.xhr.success');
 const xhrButtonError = document.querySelector('.xhr.error');
 const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
@@ -89,33 +91,32 @@ function runXHR(url) {
     return xhr;
 }
 
-xhrButtonSuccess.addEventListener('click', () =&gt; {
+xhrButtonSuccess.addEventListener('click', () => {
     runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
 });
 
-xhrButtonError.addEventListener('click', () =&gt; {
+xhrButtonError.addEventListener('click', () => {
     runXHR('https://somewhere.org/i-dont-exist');
 });
 
-xhrButtonAbort.addEventListener('click', () =&gt; {
+xhrButtonAbort.addEventListener('click', () => {
     runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
-});</pre>
+});
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.XMLHttpRequest.load_event")}}</p>
+{{Compat("api.XMLHttpRequest.load_event")}}
 
-<p><strong>了解更多</strong></p>
+**了解更多**
 
-<ul>
- <li>相关事件: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}</li>
- <li><a href="/Web/API/XMLHttpRequest/Using_XMLHttpRequest#监测进度">监测进度</a></li>
-</ul>
+- 相关事件: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/Web/API/XMLHttpRequest/Using_XMLHttpRequest#监测进度)

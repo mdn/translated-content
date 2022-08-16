@@ -2,31 +2,32 @@
 title: Event.composed
 slug: Web/API/Event/composed
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>{{domxref("Event")}} 接口的只读属性 <strong><code>composed</code></strong> 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。</p>
+{{domxref("Event")}} 接口的只读属性 **`composed`** 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。
 
-<div class="note">
-<p>注意：此属性以前命名为<code>scoped</code>。</p>
-</div>
+> **备注：** 此属性以前命名为`scoped`。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var <em>composed</em> = <em>Event</em>.composed;</pre>
+```js
+var composed = Event.composed;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>如果返回的 {{jsxref("Boolean")}} 值为 <code>true</code>，表明当事件到达 shadow DOM 的根节点（也就是 shadow DOM 中事件开始传播的第一个节点）时，事件可以从 shadow DOM 传递到一般 DOM。当然，事件要具有可传播性，即该事件的 {{domxref("Event.bubbles", "bubbles")}} 属性必须为 <code>true</code>。你也可以通过调用 {{domxref("Event.composedPath", "composedPath()")}} 来查看事件从 shadow DOM 传播到普通 DOM 的路径。</p>
+如果返回的 {{jsxref("Boolean")}} 值为 `true`，表明当事件到达 shadow DOM 的根节点（也就是 shadow DOM 中事件开始传播的第一个节点）时，事件可以从 shadow DOM 传递到一般 DOM。当然，事件要具有可传播性，即该事件的 {{domxref("Event.bubbles", "bubbles")}} 属性必须为 `true`。你也可以通过调用 {{domxref("Event.composedPath", "composedPath()")}} 来查看事件从 shadow DOM 传播到普通 DOM 的路径。
 
-<p>如果属性值为 <code>false</code>，那么事件将不会跨越 shadow DOM 的边界传播。</p>
+如果属性值为 `false`，那么事件将不会跨越 shadow DOM 的边界传播。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在我们的组合组合路径示例（实时查看）中，我们定义了两个不重要的自定义元素 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code>，它们都将获取其 <code>text</code> 属性的内容并将它们作为元素的文本内容插入到元素的 shadow DOM 中。两者之间的唯一区别是它们的阴影根附加了它们的模式分别设置为 open 和 closed。</p>
+在我们的组合组合路径示例（实时查看）中，我们定义了两个不重要的自定义元素 `<open-shadow>` 和 `<closed-shadow>`，它们都将获取其 `text` 属性的内容并将它们作为元素的文本内容插入到元素的 shadow DOM 中。两者之间的唯一区别是它们的阴影根附加了它们的模式分别设置为 open 和 closed。
 
-<p>第一个定义如下所示：</p>
- 
-<pre class="brush: js">customElements.define('open-shadow',
+第一个定义如下所示：
+
+```js
+customElements.define('open-shadow',
   class extends HTMLElement {
     constructor() {
       super();
@@ -38,41 +39,48 @@ slug: Web/API/Event/composed
         .appendChild(pElem);
 
   }
-});</pre>
+});
+```
 
-<p>我们将他们插入我们的页面当中：</p>
+我们将他们插入我们的页面当中：
 
-<pre class="brush: html">&lt;open-shadow text="I have an open shadow root"&gt;&lt;/open-shadow&gt;
-&lt;closed-shadow text="I have a closed shadow root"&gt;&lt;/closed-shadow&gt;</pre>
+```html
+<open-shadow text="I have an open shadow root"></open-shadow>
+<closed-shadow text="I have a closed shadow root"></closed-shadow>
+```
 
- <p>然后在 <code>html</code> 标签上监听 click 事件：</p>
+然后在 `html` 标签上监听 click 事件：
 
-<pre class="brush: js">document.querySelector('html').addEventListener('click',function(e) {
+```js
+document.querySelector('html').addEventListener('click',function(e) {
   console.log(e.composed);
   console.log(e.composedPath());
-});</pre>
+});
+```
 
-<p>当我们点击 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code> 元素时候我们会注意到：</p>
+当我们点击 `<open-shadow>` 和 `<closed-shadow>` 元素时候我们会注意到：
 
-<ol>
-  <li><code>composed</code> 属性返回 <code>true</code> 因为<code>click</code> 事件总是能总是能够跨越<code>Shadow DOM</code>的边界传播。</li>
-  <li>你应该会注意到，两个元素返回<code>composedPath</code>的值不同。</li>
-</ol>
+1.  `composed` 属性返回 `true` 因为`click` 事件总是能总是能够跨越`Shadow DOM`的边界传播。
+2.  你应该会注意到，两个元素返回`composedPath`的值不同。
 
-<p><code>&lt;open-shadow&gt;</code> 元素的组合路径是：</p>
+`<open-shadow>` 元素的组合路径是：
 
-<pre>Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+```
+Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+```
 
-<p>而 <code>&lt;closed-shadow&gt;</code> 元素的组合路径是：</p>
+而 `<closed-shadow>` 元素的组合路径是：
 
-<pre>Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+```
+Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+```
 
-<p>第二种情况下，监听器只会捕获到 <code>&lt;closed-shadow&gt;</code> 元素本身，而不会去继续捕捉该元素中的节点。</p>
+第二种情况下，监听器只会捕获到 `<closed-shadow>` 元素本身，而不会去继续捕捉该元素中的节点。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Event.composed")}}

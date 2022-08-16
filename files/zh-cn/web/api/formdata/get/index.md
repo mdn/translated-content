@@ -2,57 +2,59 @@
 title: FormData.get()
 slug: Web/API/FormData/get
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>{{domxref("FormData")}}的<code><strong>get()</strong>方法用于返回FormData对象中和指定的键关联的第一个值，如果你想要返回和指定键关联的全部值，那么可以使用</code>{{domxref("FormData.getAll()","getAll()")}}方法。</p>
+{{domxref("FormData")}}的`get()方法用于返回FormData对象中和指定的键关联的第一个值，如果你想要返回和指定键关联的全部值，那么可以使用`{{domxref("FormData.getAll()","getAll()")}}方法。
 
-<div class="note">
-<p><strong>注意</strong>: 该方法在<a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>中有效。</p>
-</div>
+> **备注：** 该方法在[Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中有效。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">formData.get(name);</pre>
+```
+formData.get(name);
+```
 
-<h3 id="append()_Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd>将要获取值的键名。</dd>
-</dl>
+- `name`
+  - : 将要获取值的键名。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>包含值的{{domxref("FormDataEntryValue")}}。</p>
+包含值的{{domxref("FormDataEntryValue")}}。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的代码创建一个 FormData 对象：</p>
+下面的代码创建一个 FormData 对象：
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>使用{{domxref("FormData.append")}}方法添加两个数据：</p>
+使用{{domxref("FormData.append")}}方法添加两个数据：
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('username', 'Bob');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('username', 'Bob');
+```
 
-<p><code>接下来使用get()来返回第一个和"username"关联的值</code>:</p>
+`接下来使用get()来返回第一个和"username"关联的值`:
 
-<pre class="brush: js">formData.get('username'); // Returns "Chris"</pre>
+```js
+formData.get('username'); // Returns "Chris"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FormData.get")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

@@ -2,65 +2,40 @@
 title: PositionError
 slug: Web/API/GeolocationPositionError
 ---
-<p>{{APIRef("Geolocation API")}}</p>
+{{APIRef("Geolocation API")}}
 
-<p><strong><code>PositionError</code></strong> 接口表示当定位设备位置时发生错误的原因。</p>
+**`PositionError`** 接口表示当定位设备位置时发生错误的原因。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em><code>PositionError</code> 接口没有继承任何属性。</em></p>
+_`PositionError` 接口没有继承任何属性。_
 
-<dl>
- <dt>{{domxref("PositionError.code")}} {{readonlyInline}}</dt>
- <dd>返回无符号的、简短的错误码。下列值是可能的：
- <table>
-  <tbody>
-   <tr>
-    <th scope="col">值</th>
-    <th scope="col">相关联的常量</th>
-    <th scope="col">描述</th>
-   </tr>
-   <tr>
-    <td><code>1</code></td>
-    <td><code>PERMISSION_DENIED</code></td>
-    <td>地理位置信息的获取失败，因为该页面没有获取地理位置信息的权限。</td>
-   </tr>
-   <tr>
-    <td><code>2</code></td>
-    <td><code>POSITION_UNAVAILABLE</code></td>
-    <td>
-     <p>地理位置获取失败，因为至少有一个内部位置源返回一个内部错误。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>3</code></td>
-    <td><code>TIMEOUT</code></td>
-    <td>
-     <p>获取地理位置超时，通过定义{{domxref("PositionOptions.timeout")}} 来设置获取地理位置的超时时长。</p>
-    </td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("PositionError.message")}} {{readonlyInline}}</dt>
- <dd>返回一个开发者可以理解的 {{domxref("DOMString")}} 来描述错误的详细信息。</dd>
-</dl>
+- {{domxref("PositionError.code")}} {{readonlyInline}}
 
-<h2 id="方法">方法</h2>
+  - : 返回无符号的、简短的错误码。下列值是可能的：
 
-<p><em><em><code>PositionError</code> 接口没有实现也没有<em>继承任何方法。</em></em></em></p>
+    | 值  | 相关联的常量           | 描述                                                                                                          |
+    | --- | ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+    | `1` | `PERMISSION_DENIED`    | 地理位置信息的获取失败，因为该页面没有获取地理位置信息的权限。                                                |
+    | `2` | `POSITION_UNAVAILABLE` | 地理位置获取失败，因为至少有一个内部位置源返回一个内部错误。                                                  |
+    | `3` | `TIMEOUT`              | 获取地理位置超时，通过定义{{domxref("PositionOptions.timeout")}} 来设置获取地理位置的超时时长。 |
 
-<h2 id="标准">标准</h2>
+- {{domxref("PositionError.message")}} {{readonlyInline}}
+  - : 返回一个开发者可以理解的 {{domxref("DOMString")}} 来描述错误的详细信息。
+
+## 方法
+
+**`PositionError` 接口没有实现也没有*继承任何方法。***
+
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.GeolocationPositionError")}}
 
-<h2 id="请参见">请参见</h2>
+## 请参见
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>The {{domxref("Geolocation")}} interface that use it.</li>
-</ul>
+- [Using geolocation](/zh-CN/docs/WebAPI/Using_geolocation)
+- The {{domxref("Geolocation")}} interface that use it.

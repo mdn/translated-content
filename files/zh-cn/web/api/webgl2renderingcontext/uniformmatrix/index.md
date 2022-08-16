@@ -1,18 +1,15 @@
 ---
-title: 'WebGL2RenderingContext.uniformMatrix[234]x[234]fv()'
+title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}[WebGL 2 API ](/zh-CN/docs/Web/API/WebGL_API)的**`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`** 方法向 uniform 变量中传入指定的矩阵值。
 
-<div><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API </a>的<strong><code>WebGL2RenderingContext.uniformMatrix[234]x[234]fv()</code></strong>  方法向 uniform 变量中传入指定的矩阵值。</div>
+> **备注：** 这个方法不用 `2x2`, `3x3`, 和 `4x4` 版本 . 他们通常用`2`, `3`, 和`4`, 分别表示，详见下方语法。
 
-<div class="note">
-<p>这个方法不用 <code>2x2</code>, <code>3x3</code>, 和 <code>4x4</code> 版本 . 他们通常用<code>2</code>, <code>3</code>, 和<code>4</code>, 分别表示，详见下方语法。</p>
-</div>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox">void gl.uniformMatrix2fv(location, transpose, data, optional srcOffset, optional srcLength);
+```
+void gl.uniformMatrix2fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix3x2fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix4x2fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix2x3fv(location, transpose, data, optional srcOffset, optional srcLength);
@@ -21,38 +18,35 @@ void gl.uniformMatrix4x3fv(location, transpose, data, optional srcOffset, option
 void gl.uniformMatrix2x4fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix3x4fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional srcLength);
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>location</dt>
- <dd>一个包含想要修改的 uniform 变量的{{domxref("WebGLUniformLocation")}} 对象</dd>
- <dt>transpose</dt>
- <dd>一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。 在 webgl 中必须为<code>false</code>。</dd>
- <dt>data</dt>
- <dd>一个包含方阵中浮点数的类数组对象 (TypeArray) {{jsxref("Float32Array")}}。</dd>
-</dl>
+- location
+  - : 一个包含想要修改的 uniform 变量的{{domxref("WebGLUniformLocation")}} 对象
+- transpose
+  - : 一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。 在 webgl 中必须为`false`。
+- data
+  - : 一个包含方阵中浮点数的类数组对象 (TypeArray) {{jsxref("Float32Array")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>没有。</p>
+没有。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js"><strong>gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);</strong>
-</pre>
+```js
+gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGL2RenderingContext.uniformMatrix2fv")}}</p>
+{{Compat("api.WebGL2RenderingContext.uniformMatrix2fv")}}
 
-<h2 id="令见">令见</h2>
+## 令见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.uniformMatrix()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniformMatrix()")}}

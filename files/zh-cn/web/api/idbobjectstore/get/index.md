@@ -2,74 +2,51 @@
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-<p>{{domxref("IDBObjectStore")}} 的接口 <strong><code>get()</code></strong>方法 返回 {{domxref("IDBRequest")}} 对象，并在“单独的线程（separate thread）”中返回由指定键选择的“对象储存（object store）” 。这用于从对象储存检索特定记录。</p>
-</div>
+{{domxref("IDBObjectStore")}} 的接口 **`get()`**方法 返回 {{domxref("IDBRequest")}} 对象，并在“单独的线程（separate thread）”中返回由指定键选择的“对象储存（object store）” 。这用于从对象储存检索特定记录。
 
-<p>如果成功找到值，则会创建其值的结构化克隆，并设置为“请求对象（request object）”的 <code><a href="/en/IndexedDB/IDBRequest#attr_result">result</a></code> 。</p>
+如果成功找到值，则会创建其值的结构化克隆，并设置为“请求对象（request object）”的 [`result`](/en/IndexedDB/IDBRequest#attr_result) 。
 
-<div class="note">
- <p><strong>备注：</strong>This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value. To tell these situations apart, call the <code>openCursor()</code> method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.</p>
-</div>
+> **备注：** This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value. To tell these situations apart, call the `openCursor()` method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var <em>request</em> = <em>objectStore</em>.get(<em>key</em>);</pre>
+```
+var request = objectStore.get(key);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>key</dt>
- <dd>标识要检索的记录的键或键范围。</dd>
-</dl>
+- key
+  - : 标识要检索的记录的键或键范围。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>触发与此操作相关的后续事件的 {{domxref("IDBRequest")}} 对象。</p>
+触发与此操作相关的后续事件的 {{domxref("IDBRequest")}} 对象。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>此方法可能会引发以下类型之一的  {{domxref("DOMException")}} :</p>
+此方法可能会引发以下类型之一的 {{domxref("DOMException")}} :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>TransactionInactiveError</td>
-   <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
-  </tr>
-  <tr>
-   <td>DataError</td>
-   <td>
-    <p>The key or key range provided contains an invalid key.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>The {{domxref("IDBObjectStore")}} has been deleted or removed.<br>
-     </td>
-  </tr>
- </tbody>
-</table>
+| Exception                | Description                                                               |
+| ------------------------ | ------------------------------------------------------------------------- |
+| TransactionInactiveError | This {{domxref("IDBObjectStore")}}'s transaction is inactive.  |
+| DataError                | The key or key range provided contains an invalid key.                    |
+| `InvalidStateError`      | The {{domxref("IDBObjectStore")}} has been deleted or removed. |
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在以下的代码段中，我们在数据库上打开一个“读/写 事务（read/write transaction）”，并使用 <code>get()</code> 从“对象储存（ object store ）”中获取一个特定的记录——一个带有“Walk dog”键的示例记录。一旦检索到这个数据对象，你就可以使用普通的 JavaScript 更新它，然后使用 {{domxref("IDBObjectStore.put")}} 操作将其放回数据库。有关完整的工作示例，查看我们的 <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+在以下的代码段中，我们在数据库上打开一个“读/写 事务（read/write transaction）”，并使用 `get()` 从“对象储存（ object store ）”中获取一个特定的记录——一个带有“Walk dog”键的示例记录。一旦检索到这个数据对象，你就可以使用普通的 JavaScript 更新它，然后使用 {{domxref("IDBObjectStore.put")}} 操作将其放回数据库。有关完整的工作示例，查看我们的 [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js notranslate">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -85,11 +62,11 @@ function getData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction completed.</li>';
   };
 
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction not opened due to error: ' + transaction.error + '&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
   };
 
   // create an object store on the transaction
@@ -100,31 +77,28 @@ function getData() {
 
   objectStoreRequest.onsuccess = function(event) {
     // report the success of our request
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+    note.innerHTML += '<li>Request successful.</li>';
 
     var myRecord = objectStoreRequest.result;
   };
 
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

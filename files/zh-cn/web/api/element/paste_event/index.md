@@ -2,52 +2,57 @@
 title: 'Element: paste 事件'
 slug: Web/API/Element/paste_event
 ---
-<p> {{APIRef}}</p>
+{{APIRef}}
 
-<p>当用户在浏览器用户界面发起“粘贴”操作时，会触发<strong><code>paste</code></strong>事件。</p>
+当用户在浏览器用户界面发起“粘贴”操作时，会触发**`paste`**事件。
 
-<pre class="syntaxbox"><strong>冒泡</strong>                 是
+```
+冒泡                 是
 
-<strong>可取消</strong>               是
+可取消               是
 
-<strong>接口</strong>                 {{domxref("ClipboardEvent")}}
+接口                 {{domxref("ClipboardEvent")}}
 
-<strong>事件处理属性</strong>          {{domxref("HTMLElement/onpaste", "onpaste")}}
-</pre>
+事件处理属性          {{domxref("HTMLElement/onpaste", "onpaste")}}
+```
 
-<p>如果光标位于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或者 <code style="font-style: normal; font-size: 1rem; letter-spacing: -0.00278rem;"><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> 属性设置为 <code style="font-style: normal; font-size: 1rem; letter-spacing: -0.00278rem;">true 的元素</code>），则默认操作是将剪贴板的内容插入光标所在位置的文档中。</p>
+如果光标位于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或者 [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) 属性设置为 `true 的元素`），则默认操作是将剪贴板的内容插入光标所在位置的文档中。
 
-<p>事件处理程序可以通过调用事件的 <code>clipboardData</code> 属性上的 {{domxref("DataTransfer/getData", "getData()")}}访问剪贴板内容。</p>
+事件处理程序可以通过调用事件的 `clipboardData` 属性上的 {{domxref("DataTransfer/getData", "getData()")}}访问剪贴板内容。
 
-<p>要覆盖默认行为（例如，插入一些不同的数据或转换剪贴板的内容），事件处理程序必须使用 {{domxref("Event/preventDefault", "event.preventDefault()")}}，取消默认操作，然后手动插入想要的数据。</p>
+要覆盖默认行为（例如，插入一些不同的数据或转换剪贴板的内容），事件处理程序必须使用 {{domxref("Event/preventDefault", "event.preventDefault()")}}，取消默认操作，然后手动插入想要的数据。
 
-<p>可以构造和分派<a href="/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events">合成的</a><code>paste</code>事件，但这不会影响文档内容。</p>
+可以构造和分派[合成的](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events)`paste`事件，但这不会影响文档内容。
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="source" contenteditable="true"&gt;Try copying text from this box...&lt;/div&gt;
-&lt;div class="target" contenteditable="true"&gt;...and pasting it into this one&lt;/div&gt;</pre>
+```html
+<div class="source" contenteditable="true">Try copying text from this box...</div>
+<div class="target" contenteditable="true">...and pasting it into this one</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div.source, div.target {
+```css
+div.source, div.target {
     border: 1px solid gray;
     margin: .5rem;
     padding: .5rem;
     height: 1rem;
     background-color: #e9eef1;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const target = document.querySelector('div.target');
+```js
+const target = document.querySelector('div.target');
 
-target.addEventListener('paste', (event) =&gt; {
+target.addEventListener('paste', (event) => {
     let paste = (event.clipboardData || window.clipboardData).getData('text');
     paste = paste.toUpperCase();
 
@@ -58,24 +63,22 @@ target.addEventListener('paste', (event) =&gt; {
 
     event.preventDefault();
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p> {{EmbedLiveSample('Live_example', '100%', '100px')}}</p>
+{{EmbedLiveSample('Live_example', '100%', '100px')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>Related events: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}</li>
- <li>This event on {{domxref("Document")}} targets: {{domxref("Document/paste_event", "paste")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/paste_event", "paste")}}</li>
-</ul>
+- Related events: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}
+- This event on {{domxref("Document")}} targets: {{domxref("Document/paste_event", "paste")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/paste_event", "paste")}}

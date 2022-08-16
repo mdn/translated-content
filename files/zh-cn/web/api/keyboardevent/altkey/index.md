@@ -2,26 +2,28 @@
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>KeyboardEvent.altKey</code></strong> 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>alt</kbd> 键 (OS X 系统上的 <kbd>Option</kbd> 或 <kbd>⌥</kbd> 键) 是 (<code>true</code>) 否 (<code>false</code>) 被按下。</p>
+**`KeyboardEvent.altKey`** 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>alt</kbd> 键 (OS X 系统上的 <kbd>Option</kbd> 或 <kbd>⌥</kbd> 键) 是 (`true`) 否 (`false`) 被按下。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>altKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.altKey
-</pre>
+```
+var altKeyPressed = instanceOfKeyboardEvent.altKey
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>布尔值</p>
+布尔值
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;altKey example&lt;/title&gt;
+```js
+<html>
+<head>
+<title>altKey example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showChar(e){
   alert(
@@ -31,28 +33,27 @@ function showChar(e){
   );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeypress="showChar(event);"&gt;
-&lt;p&gt;
+<body onkeypress="showChar(event);">
+<p>
 Press any character key,
-with or without holding down the ALT key.&lt;br /&gt;
+with or without holding down the ALT key.<br />
 You can also use the SHIFT key together with the ALT key.
-&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</p>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.KeyboardEvent.altKey")}}
 
-<h2 id="See_also">参考</h2>
+## 参考
 
-<ul>
- <li>{{ domxref("KeyboardEvent") }}</li>
-</ul>
+- {{ domxref("KeyboardEvent") }}

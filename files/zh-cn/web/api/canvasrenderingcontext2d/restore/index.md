@@ -2,30 +2,34 @@
 title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.restore()</code></strong> 是 Canvas 2D API 通过在绘图状态栈中弹出顶端的状态，将 canvas 恢复到最近的保存状态的方法。如果没有保存状态，此方法不做任何改变。</p>
+**`CanvasRenderingContext2D.restore()`** 是 Canvas 2D API 通过在绘图状态栈中弹出顶端的状态，将 canvas 恢复到最近的保存状态的方法。如果没有保存状态，此方法不做任何改变。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.restore();</var></pre>
+```
+void ctx.restore();
+```
 
-<p>更多关于 <a href="/en-US/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state">drawing state</a> 的信息，请看 {{domxref("CanvasRenderingContext2D.save()")}}。</p>
+更多关于 [drawing state](/zh-CN/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state) 的信息，请看 {{domxref("CanvasRenderingContext2D.save()")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_restore_方法">使用 <code>restore</code> 方法</h3>
+### 使用 `restore` 方法
 
-<p>这是一段简单的代码片段，使用 <code>save()</code> 方法保存默认的状态，使用 <code>restore()</code> 进行恢复。所以，稍后你可以使用默认的状态绘制一个矩形。</p>
+这是一段简单的代码片段，使用 `save()` 方法保存默认的状态，使用 `restore()` 进行恢复。所以，稍后你可以使用默认的状态绘制一个矩形。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[9]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.save(); // save the default state
@@ -35,27 +39,26 @@ ctx.fillRect(10, 10, 100, 100);
 
 ctx.restore(); // restore to the default state
 ctx.fillRect(150, 75, 100, 100);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.save();
 ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ctx.restore();
-ctx.fillRect(150, 75, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(150, 75, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -78,22 +81,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.restore")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("CanvasRenderingContext2D.save()")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("CanvasRenderingContext2D.save()")}}

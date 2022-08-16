@@ -2,74 +2,80 @@
 title: 'Worker: messageerror event'
 slug: Web/API/Worker/messageerror_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当 {{domxref('Worker')}} 对象接收到一条无法被反序列化的消息时， <code>messageerror</code> 事件将在该对象上被触发。</p>
+当 {{domxref('Worker')}} 对象接收到一条无法被反序列化的消息时， `messageerror` 事件将在该对象上被触发。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">是否冒泡</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">是否可取消</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">对应事件处理属性</th>
-   <td><code><a href="/en-US/docs/Web/API/Worker/onmessageerror">onmessageerror</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">是否冒泡</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">是否可取消</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">对应事件处理属性</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/Worker/onmessageerror"
+            >onmessageerror</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>创建一个 worker ，使用 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 监听 <code>message</code> 和 <code>messageerror</code> 事件：</p>
+创建一个 worker ，使用 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 监听 `message` 和 `messageerror` 事件：
 
-<pre class="brush: js">// inside main.js
+```js
+// inside main.js
 
 const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener("message", (event) =&gt; {
+worker.addEventListener("message", (event) => {
     console.error(`Received message from worker: ${event}`);
 });
 
-worker.addEventListener("messageerror", (event) =&gt; {
+worker.addEventListener("messageerror", (event) => {
     console.error(`Error receiving message from worker: ${event}`);
-});</pre>
+});
+```
 
-<p>同样，可以使用 <code><a href="/zh-CN/docs/Web/API/Window/messageerror_event">onmessageerror</a></code> 事件处理属性监听事件：</p>
+同样，可以使用 [`onmessageerror`](/zh-CN/docs/Web/API/Window/messageerror_event) 事件处理属性监听事件：
 
-<pre class="brush: js">// inside main.js
+```js
+// inside main.js
 
 const worker = new Worker("static/scripts/worker.js");
 
-worker.onmessage = (event) =&gt; {
+worker.onmessage = (event) => {
     console.error(`Received message from worker: ${event}`);
 };
 
-worker.onmessageerror = (event) =&gt; {
+worker.onmessageerror = (event) => {
     console.error(`Error receiving message from worker: ${event}`);
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Worker.messageerror_event")}}
 
+## 另请参阅
 
-<p>{{Compat("api.Worker.messageerror_event")}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li><code><a href="/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code></li>
- <li>相关事件：<code><a href="/docs/Web/API/Worker/message_event">message</a></code>.</li>
-</ul>
+- [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
+- 相关事件：[`message`](/docs/Web/API/Worker/message_event).

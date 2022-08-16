@@ -2,50 +2,53 @@
 title: CanvasRenderingContext2D.getTransform()
 slug: Web/API/CanvasRenderingContext2D/getTransform
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.getTransform()</code></strong> 方法获取当前被应用到上下文的转换矩阵</p>
+**`CanvasRenderingContext2D.getTransform()`** 方法获取当前被应用到上下文的转换矩阵
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">let <em>storedTransform<strong> = </strong>ctx</em>.getTransform();
-</pre>
+```
+let storedTransform = ctx.getTransform();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("DOMMatrix")}} 对象</p>
+一个 {{domxref("DOMMatrix")}} 对象
 
-<p>转换矩阵被这样描述： <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
+转换矩阵被这样描述： <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 返回的对象不是实时的，所以更新它不会影响当前的转换矩阵，同时更新当前的转换矩阵不会影响已经返回的 <code>DOMMatrix</code>.</p>
-</div>
+> **备注：** 返回的对象不是实时的，所以更新它不会影响当前的转换矩阵，同时更新当前的转换矩阵不会影响已经返回的 `DOMMatrix`.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在以下例子，我们有两个 {{htmlelement("canvas")}} 元素。我们使用  {{domxref("CanvasRenderingContext2D.setTransform()")}} 设置一个转换到第一个画布，并在上面画一个矩形，然后通过 <code>getTransform()</code> 获取矩阵。</p>
+在以下例子，我们有两个 {{htmlelement("canvas")}} 元素。我们使用 {{domxref("CanvasRenderingContext2D.setTransform()")}} 设置一个转换到第一个画布，并在上面画一个矩形，然后通过 `getTransform()` 获取矩阵。
 
-<p>然后我们将获取到的矩阵作为 <code>DOMMatrix</code> 参数传给 <code>setTransform()</code> 设置到第二个画布，并在上面画一个圆。</p>
+然后我们将获取到的矩阵作为 `DOMMatrix` 参数传给 `setTransform()` 设置到第二个画布，并在上面画一个圆。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas width="240"&gt;&lt;/canvas&gt;
-&lt;canvas width="240"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas width="240"></canvas>
+<canvas width="240"></canvas>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">canvas {
+```css
+canvas {
   border: 1px solid black;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">const canvases = document.querySelectorAll('canvas');
+```js
+const canvases = document.querySelectorAll('canvas');
 const ctx1 = canvases[0].getContext('2d');
 const ctx2 = canvases[1].getContext('2d');
 
@@ -58,25 +61,22 @@ console.log(storedTransform);
 ctx2.setTransform(storedTransform);
 ctx2.beginPath();
 ctx2.arc(50, 50, 50, 0, 2 * Math.PI);
-ctx2.fill();</pre>
+ctx2.fill();
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Examples', "100%", 180) }}</p>
+{{ EmbedLiveSample('Examples', "100%", 180) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CanvasRenderingContext2D.getTransform")}}
 
+## 参见
 
-<p>{{Compat("api.CanvasRenderingContext2D.getTransform")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.transform()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.transform()")}}

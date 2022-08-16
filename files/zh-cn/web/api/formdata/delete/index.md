@@ -2,54 +2,52 @@
 title: FormData.delete()
 slug: Web/API/FormData/delete
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>{{domxref("FormData")}} 接口的 <code><strong>delete()</strong></code> 方法会从 <code>FormData</code> 对象中删除指定键，即 key，和它对应的值，即 value。</p>
+{{domxref("FormData")}} 接口的 **`delete()`** 方法会从 `FormData` 对象中删除指定键，即 key，和它对应的值，即 value。
 
-<div class="note">
-<p><strong>Note</strong>: 此方法可用于 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a>。</p>
-</div>
+> **备注：** 此方法可用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">formData.delete(name);</pre>
+```js
+formData.delete(name);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd>要删除的键（Key）的名字。</dd>
-</dl>
+- `name`
+  - : 要删除的键（Key）的名字。
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>空。</p>
+空。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>以下代码将会创建一个空的 <code>FormData</code> 对象，并且从指定的表单中获取键值对：</p>
+以下代码将会创建一个空的 `FormData` 对象，并且从指定的表单中获取键值对：
 
-<pre class="brush: js">var formData = new FormData(myForm);</pre>
+```js
+var formData = new FormData(myForm);
+```
 
-<p>你可以通过 <code>delete()</code> 方法来删除键值对：</p>
+你可以通过 `delete()` 方法来删除键值对：
 
-<pre class="brush: js">formData.delete('username');</pre>
+```js
+formData.delete('username');
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.FormData.delete")}}
 
+## 参见
 
-<p>{{Compat("api.FormData.delete")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

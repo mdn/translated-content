@@ -2,47 +2,40 @@
 title: WaveShaperNode.curve
 slug: Web/API/WaveShaperNode/curve
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("WaveShaperNode") }} 接口的 <code>curve</code> 属性是一个描述要被应用的畸变的{{domxref("Float32Array")}} 数组。</p>
+{{ domxref("WaveShaperNode") }} 接口的 `curve` 属性是一个描述要被应用的畸变的{{domxref("Float32Array")}} 数组。
 
-<p>数组的中间元素被应用于每个信号数值 <code>0</code>， 第一个应用于信号数值 <code>-1</code>，最后一个应用于信号数值 <code>1</code>； 小于 <code>-1</code> 或者大于 <code>1</code> 的数值分别按照 <code>-1</code> 和 <code>1</code> 来处理。</p>
+数组的中间元素被应用于每个信号数值 `0`， 第一个应用于信号数值 `-1`，最后一个应用于信号数值 `1`； 小于 `-1` 或者大于 `1` 的数值分别按照 `-1` 和 `1` 来处理。
 
-<p>如有必要， 使用线性插值计算畸变曲线的中间值。</p>
+如有必要， 使用线性插值计算畸变曲线的中间值。
 
-<div class="note">
-<p><strong>注意</strong>: 数组的值可以是 <code>null</code> : 在这个情况下，不会有畸变被应用到输入的信号上。</p>
-</div>
+> **备注：** 数组的值可以是 `null` : 在这个情况下，不会有畸变被应用到输入的信号上。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var distortion = audioCtx.createWaveShaper();
 distortion.curve = myCurveDataArray; // myCurveDataArray is a Float32Array
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p> 一个 {{domxref("Float32Array")}}.</p>
+一个 {{domxref("Float32Array")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}</p>
+{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.WaveShaperNode.curve")}}
 
+## 参考链接
 
-<p>{{Compat("api.WaveShaperNode.curve")}}</p>
-</div>
-
-<h2 id="参考链接">参考链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -2,38 +2,35 @@
 title: Boilerplate 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}
 
-<div id="boilerplate-1">
+这个例子描述了从现在开始将要隐藏重复的代码片断，以及定义一个 JavaScript 函数复用以简化 WebGL 初始化。
 
-<p>这个例子描述了从现在开始将要隐藏重复的代码片断，以及定义一个 JavaScript 函数复用以简化 WebGL 初始化。</p>
+{{EmbedLiveSample("boilerplate-1-source",660,400)}}
 
-<p>{{EmbedLiveSample("boilerplate-1-source",660,400)}}</p>
+### 用于设置 WebGL 呈现上下文的复用代码
 
-<div id="boilerplate-1-intro">
-<h3 id="用于设置WebGL呈现上下文的复用代码">用于设置 WebGL 呈现上下文的复用代码</h3>
+现在你很习惯看到相同的{{Glossary("HTML")}}, {{Glossary("CSS")}}和{{Glossary("JavaScript")}}重复一遍又一遍。所以我们从现在起要隐藏他们。这将使我们能够专注于代码最有趣的部分相关学习{{Glossary("WebGL")}}。
 
-<p>现在你很习惯看到相同的{{Glossary("HTML")}}, {{Glossary("CSS")}}和{{Glossary("JavaScript")}}重复一遍又一遍。所以我们从现在起要隐藏他们。这将使我们能够专注于代码最有趣的部分相关学习{{Glossary("WebGL")}}。</p>
+特别是，在 HTML 的{{HTMLElement("p")}}元素包含一些描述性的文本页面也可以是错误消息；一个{{HTMLElement("canvas")}} 元素;和一个可选的{{HTMLElement("button")}}。CSS 规则包含`body`, `canvas`, 和`button`。任何额外的冗余的 CSS 和 HTML 将不会显示在页面的具体的例子。
 
-<p>特别是，在 HTML 的{{HTMLElement("p")}}元素包含一些描述性的文本页面也可以是错误消息；一个{{HTMLElement("canvas")}} 元素;和一个可选的{{HTMLElement("button")}}。CSS 规则包含<code>body</code>, <code>canvas</code>, 和<code>button</code>。任何额外的冗余的 CSS 和 HTML 将不会显示在页面的具体的例子。</p>
+在以下示例中，我们将使用一个 JavaScript 函数功能，`getRenderingContext()` ，来初始化{{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}。现在，您应该能够了解什么功能。基本上，它得到了 WebGL 从画布元素，渲染上下文初始化绘图缓冲区，清除它黑色，并返回初始化上下文。在错误的情况下，它会显示一个错误消息，并返回 {{jsxref("null")}}。
 
-<p>在以下示例中，我们将使用一个 JavaScript 函数功能，<code>getRenderingContext()</code> ，来初始化{{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}。现在，您应该能够了解什么功能。基本上，它得到了 WebGL 从画布元素，渲染上下文初始化绘图缓冲区，清除它黑色，并返回初始化上下文。在错误的情况下，它会显示一个错误消息，并返回 {{jsxref("null")}}。</p>
+最后，所有 JavaScript 代码将运行在一个直接的函数，这是一种常见的 JavaScript 技术 (see {{Glossary("Function")}})。函数声明和调用也将被隐藏。
 
-<p>最后，所有 JavaScript 代码将运行在一个直接的函数，这是一种常见的 JavaScript 技术 (see {{Glossary("Function")}})。函数声明和调用也将被隐藏。</p>
-</div>
+### HTML
 
-<div id="boilerplate-1-source">
-<h3 id="HTML">HTML</h3>
+```html
+<p>[ Some descriptive text about the example. ]</p>
+<button>[ Optional button element. ]</button>
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: html">&lt;p&gt;[ Some descriptive text about the example. ]&lt;/p&gt;
-&lt;button&gt;[ Optional button element. ]&lt;/button&gt;
-&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -51,11 +48,12 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function getRenderingContext() {
+```js
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -73,10 +71,8 @@ button {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}

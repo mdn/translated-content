@@ -2,43 +2,44 @@
 title: AudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}接口的<code>decodeAudioData()方法可用于异步解码</code>音频文件中的 {{domxref("ArrayBuffer")}}. <code>ArrayBuffer数据可以通过</code>{{domxref("XMLHttpRequest")}}和{{domxref("FileReader")}}来获取。AudioBuffer 是通过 AudioContext 采样率进行解码的，然后通过回调返回结果。</p>
-</div>
+{{ domxref("AudioContext") }}接口的`decodeAudioData()方法可用于异步解码`音频文件中的 {{domxref("ArrayBuffer")}}. `ArrayBuffer数据可以通过`{{domxref("XMLHttpRequest")}}和{{domxref("FileReader")}}来获取。AudioBuffer 是通过 AudioContext 采样率进行解码的，然后通过回调返回结果。
 
-<p>这是从音频轨道创建用于 web audio API 音频源的首选方法。</p>
+这是从音频轨道创建用于 web audio API 音频源的首选方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>旧版的回调函数语法</p>
+旧版的回调函数语法
 
-<pre class="syntaxbox">audioCtx.decodeAudioData(audioData, function(decodedData) {
+```
+audioCtx.decodeAudioData(audioData, function(decodedData) {
   // use the dec​oded data here
-});</pre>
+});
+```
 
-<p>新版的 promise-based 语法：</p>
+新版的 promise-based 语法：
 
-<pre class="syntaxbox">audioCtx.decodeAudioData(audioData).then(function(decodedData) {
+```
+audioCtx.decodeAudioData(audioData).then(function(decodedData) {
   // use the decoded data here
-});</pre>
+});
+```
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<p>在本章节中，我们将首先学习基于回调的系统，然后采用新的基于 promise-based 的语法</p>
+在本章节中，我们将首先学习基于回调的系统，然后采用新的基于 promise-based 的语法
 
-<h3 id="旧的回调语法">旧的回调语法</h3>
+### 旧的回调语法
 
-<p>在这个事例中， <code>getData()</code> 方法使用 XHR 加载一个音轨，设置请求的 responsetype 为 ArrayBuffer 使它返回一个 arraybuffer 数据，然后存储在 audioData 变量中。然后我们将这个 arraybuffer 数据置于<code>decodeAudioData()方法中使用，当成功解码PCM Data后通过回调返回</code>, 将返回的结果通过{{ domxref("AudioContext.createBufferSource()") }}接口进行处理并获得一个{{ domxref("AudioBufferSourceNode") }}, 将源连接至{{domxref("AudioContext.destination") }}并将它设置为循环的。</p>
+在这个事例中， `getData()` 方法使用 XHR 加载一个音轨，设置请求的 responsetype 为 ArrayBuffer 使它返回一个 arraybuffer 数据，然后存储在 audioData 变量中。然后我们将这个 arraybuffer 数据置于`decodeAudioData()方法中使用，当成功解码PCM Data后通过回调返回`, 将返回的结果通过{{ domxref("AudioContext.createBufferSource()") }}接口进行处理并获得一个{{ domxref("AudioBufferSourceNode") }}, 将源连接至{{domxref("AudioContext.destination") }}并将它设置为循环的。
 
-<p>通过按钮来运行 <code>getData()</code> 来获取音轨并播放它。当使用 <code>stop()</code> 方法后 source 将会被清除。</p>
+通过按钮来运行 `getData()` 来获取音轨并播放它。当使用 `stop()` 方法后 source 将会被清除。
 
-<div class="note">
-<p><strong>Note</strong>: You can <a href="http://mdn.github.io/decode-audio-data/">run the example live</a> (or <a href="https://github.com/mdn/decode-audio-data">view the source</a>.)</p>
-</div>
+> **备注：** You can [run the example live](http://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
 
-<pre class="brush: js">// define variables
+```js
+// define variables
 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
@@ -94,39 +95,38 @@ stop.onclick = function() {
 
 // dump script to pre element
 
-pre.innerHTML = myScript.innerHTML;</pre>
+pre.innerHTML = myScript.innerHTML;
+```
 
-<h3 id="新的promise-based语法">新的 promise-based 语法</h3>
+### 新的 promise-based 语法
 
-<pre class="brush: js">ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
+```js
+ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
  // use the decoded data here
-});</pre>
+});
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt>ArrayBuffer</dt>
- <dd>将会被解码的音频数据，可通过{{domxref("XMLHttpRequest")}}或{{domxref("FileReader")}}来获取。</dd>
- <dt>DecodeSuccessCallback</dt>
- <dd>当成功解码后会被调用的回调函数。该回调函数只有一个 AudioBuffer 类型参数。</dd>
- <dt>DecodeErrorCallback</dt>
- <dd>一个可选的错误回调函数。</dd>
-</dl>
+- ArrayBuffer
+  - : 将会被解码的音频数据，可通过{{domxref("XMLHttpRequest")}}或{{domxref("FileReader")}}来获取。
+- DecodeSuccessCallback
+  - : 当成功解码后会被调用的回调函数。该回调函数只有一个 AudioBuffer 类型参数。
+- DecodeErrorCallback
+  - : 一个可选的错误回调函数。
 
-<h2 id="返回">返回</h2>
+## 返回
 
-<p>一个 {{domxref("Promise") }}对象。</p>
+一个 {{domxref("Promise") }}对象。
 
-<h2 id="标准">标准</h2>
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.BaseAudioContext.decodeAudioData")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

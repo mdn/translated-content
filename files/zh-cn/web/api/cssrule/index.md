@@ -2,154 +2,59 @@
 title: CSSRule
 slug: Web/API/CSSRule
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p><strong><code>CSSRule</code></strong> 接口表示一条 CSS 规则。有几种不同的规则类型，在下面的<a href="#类型常量">类型常量</a>部分中有悉数列出。</p>
+**`CSSRule`** 接口表示一条 CSS 规则。有几种不同的规则类型，在下面的[类型常量](#类型常量)部分中有悉数列出。
 
-<p><code>CSSRule</code> 接口指定了所有类型的规则的公共属性，而特定类型的规则的专有属性则在这些规则各自类型的、更专用的接口中被指定。</p>
+`CSSRule` 接口指定了所有类型的规则的公共属性，而特定类型的规则的专有属性则在这些规则各自类型的、更专用的接口中被指定。
 
-<p>可以通过 {{domxref("CSSStyleSheet")}} 的 <code>cssRules</code> 列表了解更多关于 <code>CSSRule</code> 的介绍。</p>
+可以通过 {{domxref("CSSStyleSheet")}} 的 `cssRules` 列表了解更多关于 `CSSRule` 的介绍。
 
-<h2 id="所有_CSSRule_实例共有的属性">所有 CSSRule 实例共有的属性</h2>
+## 所有 CSSRule 实例共有的属性
 
-<dl>
- <dt>{{domxref("CSSRule.cssText")}}</dt>
- <dd>返回规则的文本表示。例如 <code>"h1,h2 { font-size: 16pt }"</code></dd>
- <dt>{{domxref("CSSRule.parentRule")}} {{readonlyinline}}</dt>
- <dd>返回包含规则，否则返回 <code>null</code>。例如：如果此规则是 {{cssxref("@media")}} 块中的样式规则，则其父规则将是该 {{domxref("CSSMediaRule")}}。</dd>
- <dt>{{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}</dt>
- <dd>返回包含此规则的样式表的 {{domxref("CSSStyleSheet")}} 对象。</dd>
- <dt>{{domxref("CSSRule.type")}} {{readonlyinline}}</dt>
- <dd>规则类型，表示 CSS 规则类型 <a href="#类型常量">类型常量</a> 中的一种类型。</dd>
-</dl>
+- {{domxref("CSSRule.cssText")}}
+  - : 返回规则的文本表示。例如 `"h1,h2 { font-size: 16pt }"`
+- {{domxref("CSSRule.parentRule")}} {{readonlyinline}}
+  - : 返回包含规则，否则返回 `null`。例如：如果此规则是 {{cssxref("@media")}} 块中的样式规则，则其父规则将是该 {{domxref("CSSMediaRule")}}。
+- {{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}
+  - : 返回包含此规则的样式表的 {{domxref("CSSStyleSheet")}} 对象。
+- {{domxref("CSSRule.type")}} {{readonlyinline}}
+  - : 规则类型，表示 CSS 规则类型 [类型常量](#类型常量) 中的一种类型。
 
-<h2 id="常量">常量</h2>
+## 常量
 
-<h3 id="类型常量">类型常量</h3>
+### 类型常量
 
-<p><code>CSSRule 接口通过一系列整型常量来约束 CSSRule 的</code>{{domxref("cssRule/type","type")}}取值范围，同时这些常量也对应规则的具体实现接口。这些常量和接口的对应关系如下：</p>
+`CSSRule 接口通过一系列整型常量来约束 CSSRule 的`{{domxref("cssRule/type","type")}}取值范围，同时这些常量也对应规则的具体实现接口。这些常量和接口的对应关系如下：
 
-<table>
- <tbody>
-  <tr>
-   <th>类型</th>
-   <th>值</th>
-   <th>对应接口</th>
-   <th>备注与示例</th>
-  </tr>
-  <tr>
-   <td><code>CSSRule.STYLE_RULE</code></td>
-   <td style="text-align: center;"><code>1</code></td>
-   <td>{{domxref("CSSStyleRule")}}</td>
-   <td>最常见的一种规则。<br>
-    <code>selector { prop1: val1; prop2: val2; }</code></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.IMPORT_RULE</code></td>
-   <td style="text-align: center;"><code>3</code></td>
-   <td>{{domxref("CSSImportRule")}}</td>
-   <td>一条 {{cssxref("@import")}} 规则。(Until the documentation is completed, see the interface definition in the Mozilla source code: <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9">nsIDOMCSSImportRule</a>.)</td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.MEDIA_RULE</code></td>
-   <td style="text-align: center;"><code>4</code></td>
-   <td>{{domxref("CSSMediaRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.FONT_FACE_RULE</code></td>
-   <td style="text-align: center;"><code>5</code></td>
-   <td>{{domxref("CSSFontFaceRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.PAGE_RULE</code></td>
-   <td style="text-align: center;"><code>6</code></td>
-   <td>{{domxref("CSSPageRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.KEYFRAMES_RULE</code></td>
-   <td style="text-align: center;"><code>7</code></td>
-   <td>{{domxref("CSSKeyframesRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.KEYFRAME_RULE</code></td>
-   <td style="text-align: center;"><code>8</code></td>
-   <td>{{domxref("CSSKeyframeRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><em>Reserved for future use</em></td>
-   <td style="text-align: center;"><code>9</code></td>
-   <td></td>
-   <td>应当会在将来被用于定义颜色配置</td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.NAMESPACE_RULE</code></td>
-   <td style="text-align: center;"><code>10</code></td>
-   <td>{{domxref("CSSNamespaceRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
-   <td style="text-align: center;"><code>11</code></td>
-   <td>{{domxref("CSSCounterStyleRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.SUPPORTS_RULE</code></td>
-   <td style="text-align: center;"><code>12</code></td>
-   <td>{{domxref("CSSSupportsRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.DOCUMENT_RULE</code></td>
-   <td style="text-align: center;"><code>13</code></td>
-   <td>{{domxref("CSSDocumentRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.FONT_FEATURE_VALUES_RULE</code></td>
-   <td style="text-align: center;"><code>14</code></td>
-   <td>{{domxref("CSSFontFeatureValuesRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.VIEWPORT_RULE</code></td>
-   <td style="text-align: center;"><code>15</code></td>
-   <td>{{domxref("CSSViewportRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.REGION_STYLE_RULE</code></td>
-   <td style="text-align: center;"><code>16</code></td>
-   <td>{{domxref("CSSRegionStyleRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.UNKNOWN_RULE</code></td>
-   <td style="text-align: center;"><code>0</code></td>
-   <td>{{domxref("CSSUnknownRule")}} {{Deprecated_Inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.CHARSET_RULE</code></td>
-   <td style="text-align: center;"><code>2</code></td>
-   <td><code>CSSCharsetRule</code> {{Deprecated_Inline}}</td>
-   <td>（已在大多数浏览器中被移除）</td>
-  </tr>
- </tbody>
-</table>
+| 类型                               | 值   | 对应接口                                                                      | 备注与示例                                                                                                                                                                                                                                                  |
+| ---------------------------------- | ---- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CSSRule.STYLE_RULE`               | `1`  | {{domxref("CSSStyleRule")}}                                          | 最常见的一种规则。 `selector { prop1: val1; prop2: val2; }`                                                                                                                                                                                                 |
+| `CSSRule.IMPORT_RULE`              | `3`  | {{domxref("CSSImportRule")}}                                          | 一条 {{cssxref("@import")}} 规则。(Until the documentation is completed, see the interface definition in the Mozilla source code: [nsIDOMCSSImportRule](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9).) |
+| `CSSRule.MEDIA_RULE`               | `4`  | {{domxref("CSSMediaRule")}}                                          |                                                                                                                                                                                                                                                             |
+| `CSSRule.FONT_FACE_RULE`           | `5`  | {{domxref("CSSFontFaceRule")}}                                      |                                                                                                                                                                                                                                                             |
+| `CSSRule.PAGE_RULE`                | `6`  | {{domxref("CSSPageRule")}}                                          |                                                                                                                                                                                                                                                             |
+| `CSSRule.KEYFRAMES_RULE`           | `7`  | {{domxref("CSSKeyframesRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                             |
+| `CSSRule.KEYFRAME_RULE`            | `8`  | {{domxref("CSSKeyframeRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                             |
+| _Reserved for future use_          | `9`  |                                                                               | 应当会在将来被用于定义颜色配置                                                                                                                                                                                                                              |
+| `CSSRule.NAMESPACE_RULE`           | `10` | {{domxref("CSSNamespaceRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                             |
+| `CSSRule.COUNTER_STYLE_RULE`       | `11` | {{domxref("CSSCounterStyleRule")}} {{experimental_inline}} |                                                                                                                                                                                                                                                             |
+| `CSSRule.SUPPORTS_RULE`            | `12` | {{domxref("CSSSupportsRule")}}                                      |                                                                                                                                                                                                                                                             |
+| `CSSRule.DOCUMENT_RULE`            | `13` | {{domxref("CSSDocumentRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                             |
+| `CSSRule.FONT_FEATURE_VALUES_RULE` | `14` | {{domxref("CSSFontFeatureValuesRule")}}                          |                                                                                                                                                                                                                                                             |
+| `CSSRule.VIEWPORT_RULE`            | `15` | {{domxref("CSSViewportRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                             |
+| `CSSRule.REGION_STYLE_RULE`        | `16` | {{domxref("CSSRegionStyleRule")}} {{experimental_inline}} |                                                                                                                                                                                                                                                             |
+| `CSSRule.UNKNOWN_RULE`             | `0`  | {{domxref("CSSUnknownRule")}} {{Deprecated_Inline}}         |                                                                                                                                                                                                                                                             |
+| `CSSRule.CHARSET_RULE`             | `2`  | `CSSCharsetRule` {{Deprecated_Inline}}                                 | （已在大多数浏览器中被移除）                                                                                                                                                                                                                                |
 
-<p>An up-to-date informal list of constants can be found on the <a href="https://wiki.csswg.org/spec/cssom-constants">CSSWG Wiki</a>.</p>
+An up-to-date informal list of constants can be found on the [CSSWG Wiki](https://wiki.csswg.org/spec/cssom-constants).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>使用 <a href="https://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> 语法格式进行描述。</p>
+使用 [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) 语法格式进行描述。
 
-<pre class="notranslate">interface CSSRule {
+```
+interface CSSRule {
     const unsigned short STYLE_RULE = 1;
     const unsigned short CHARSET_RULE = 2;
     const unsigned short IMPORT_RULE = 3;
@@ -169,20 +74,17 @@ slug: Web/API/CSSRule
     attribute DOMString cssText;
     readonly attribute CSSRule? parentRule;
     readonly attribute CSSStyleSheet? parentStyleSheet;
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CSSRule")}}
 
+## 相关
 
-<p>{{Compat("api.CSSRule")}}</p>
-
-<h2 id="相关">相关</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/Guide/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
-</ul>
+- [Using dynamic styling information](/zh-CN/docs/Web/Guide/DOM/Using_dynamic_styling_information)

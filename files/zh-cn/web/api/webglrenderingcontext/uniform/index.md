@@ -1,72 +1,68 @@
 ---
-title: 'WebGLRenderingContext.uniform[1234][fi][v]()'
+title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.uniform[1234][fi][v]()</code></strong> 方法指定了 uniform 变量的值。所有在 ShaderProgram 对象中定义的，且激活的 uniform 变量在 ShaderProgram 执行 link 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 ShaderProgram 对象上发生下一次成功的 link 操作为止。</p>
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.uniform[1234][fi][v]()`** 方法指定了 uniform 变量的值。所有在 ShaderProgram 对象中定义的，且激活的 uniform 变量在 ShaderProgram 执行 link 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 ShaderProgram 对象上发生下一次成功的 link 操作为止。
 
-<div class="note">
-<p>这里描述的许多函数都扩展了 WebGL 2 接口，可在以下地址查看 {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.</p>
-</div>
+> **备注：** 这里描述的许多函数都扩展了 WebGL 2 接口，可在以下地址查看 {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">void <var>gl</var>.uniform1f(<var>location</var>, <var>v0</var>);
-void <var>gl</var>.uniform1fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform1i(<var>location</var>, <var>v0</var>);
-void <var>gl</var>.uniform1iv(<var>location</var>, <var>value</var>);
+```
+void gl.uniform1f(location, v0);
+void gl.uniform1fv(location, value);
+void gl.uniform1i(location, v0);
+void gl.uniform1iv(location, value);
 
-void <var>gl</var>.uniform2f(<var>location</var>, <var>v0</var>, <var>v1</var>);
-void <var>gl</var>.uniform2fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform2i(<var>location</var>, <var>v0</var>, <var>v1</var>);
-void <var>gl</var>.uniform2iv(<var>location</var>, <var>value</var>);
+void gl.uniform2f(location, v0, v1);
+void gl.uniform2fv(location, value);
+void gl.uniform2i(location, v0, v1);
+void gl.uniform2iv(location, value);
 
-void <var>gl</var>.uniform3f(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>);
-void <var>gl</var>.uniform3fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform3i(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>);
-void <var>gl</var>.uniform3iv(<var>location</var>, <var>value</var>);
+void gl.uniform3f(location, v0, v1, v2);
+void gl.uniform3fv(location, value);
+void gl.uniform3i(location, v0, v1, v2);
+void gl.uniform3iv(location, value);
 
-void <var>gl</var>.uniform4f(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
-void <var>gl</var>.uniform4fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform4i(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
-void <var>gl</var>.uniform4iv(<var>location</var>, <var>value</var>);
-</pre>
+void gl.uniform4f(location, v0, v1, v2, v3);
+void gl.uniform4fv(location, value);
+void gl.uniform4i(location, v0, v1, v2, v3);
+void gl.uniform4iv(location, value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>location</dt>
- <dd> {{domxref("WebGLUniformLocation")}} 对象包含了将要修改的 uniform 属性位置。</dd>
- <dt><code>value, v0, v1, v2, v3</code></dt>
- <dd>新的值将被用于 uniform 变量。可能的类型：
- <ul>
-  <li>浮点值 {{jsxref("Number")}}(方法名跟"f").</li>
-  <li>浮点数组 (例如 {{jsxref("Float32Array")}} 或 {{jsxref("Array")}} 的数组) 用于浮点型向量方法 (方法名跟 "fv").</li>
-  <li>整型值 {{jsxref("Number")}}  (方法名跟"i").</li>
-  <li>整型数组{{jsxref("Int32Array")}} 用于整型向量方法 (方法名跟 "iv").</li>
- </ul>
- </dd>
-</dl>
+- location
+  - : {{domxref("WebGLUniformLocation")}} 对象包含了将要修改的 uniform 属性位置。
+- `value, v0, v1, v2, v3`
 
-<h3 id="返回值">返回值</h3>
+  - : 新的值将被用于 uniform 变量。可能的类型：
 
-<p>None.</p>
+    - 浮点值 {{jsxref("Number")}}(方法名跟"f").
+    - 浮点数组 (例如 {{jsxref("Float32Array")}} 或 {{jsxref("Array")}} 的数组) 用于浮点型向量方法 (方法名跟 "fv").
+    - 整型值 {{jsxref("Number")}} (方法名跟"i").
+    - 整型数组{{jsxref("Int32Array")}} 用于整型向量方法 (方法名跟 "iv").
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<pre class="brush: js notranslate">gl.uniform1f(u_alpha, 0.8);</pre>
+None.
 
-<h2 id="规范">规范</h2>
+## 示例
+
+```js
+gl.uniform1f(u_alpha, 0.8);
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.uniform1f")}}</p>
+{{Compat("api.WebGLRenderingContext.uniform1f")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.uniformMatrix()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniformMatrix()")}}

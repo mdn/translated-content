@@ -2,34 +2,31 @@
 title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
-<div id="simple-color-animation">
+这是一个非常基础的{{Glossary("WebGL")}}色彩动画案例，通过定时器来逐秒填充不同的颜色来实现。
 
-<p>这是一个非常基础的{{Glossary("WebGL")}}色彩动画案例，通过定时器来逐秒填充不同的颜色来实现。</p>
+{{EmbedLiveSample("simple-color-animation-source",660,425)}}
 
-<p>{{EmbedLiveSample("simple-color-animation-source",660,425)}}</p>
+### 通过填充实现色彩动画
 
-<div id="simple-color-animation-intro">
-<h3 id="通过填充实现色彩动画">通过填充实现色彩动画</h3>
+本案例使用{{Glossary("WebGL")}}来实现简单的色彩动画和用户交互效果，用户可以通过按按钮来开始/暂停/重新开始动画。
 
-<p>本案例使用{{Glossary("WebGL")}}来实现简单的色彩动画和用户交互效果，用户可以通过按按钮来开始/暂停/重新开始动画。</p>
+我们把 {{Glossary("WebGL")}}函数放在一个定时循环器里 (`setInterval`)。通过监听点击事件来让用户开始/暂停动画。并通过定时器来循环执行绘制指令 (通常是逐帧动画，这次我们设置为逐秒动画)
 
-<p>我们把 {{Glossary("WebGL")}}函数放在一个定时循环器里 (<code>setInterval</code>)。通过监听点击事件来让用户开始/暂停动画。并通过定时器来循环执行绘制指令 (通常是逐帧动画，这次我们设置为逐秒动画) </p>
-</div>
-
-<div id="simple-color-animation-source">
-<pre class="brush: html">&lt;p&gt;一个色彩动画的简单 WebGl 程序&lt;/p&gt;
-&lt;p&gt;点击下面的按钮来开/关动画&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;你的浏览器不支持 Html5 canvas&lt;/canvas&gt;
-&lt;button id="animation-onoff"&gt;
+```html
+<p>一个色彩动画的简单 WebGl 程序</p>
+<p>点击下面的按钮来开/关动画</p>
+<canvas id="canvas-view">你的浏览器不支持 Html5 canvas</canvas>
+<button id="animation-onoff">
   点我来
-&lt;strong&gt;[verb goes here]&lt;/strong&gt;
+<strong>[verb goes here]</strong>
   动画
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -47,9 +44,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js" id="livesample-js">window.addEventListener("load", function setupAnimation (evt) {
+```js
+window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
@@ -107,10 +105,8 @@ button {
     return [Math.random(), Math.random(), Math.random()];
   }
 }, false);
-</pre>
+```
 
-<p>在 <a href="https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation">GitHub</a>.上查看源码</p>
-</div>
-</div>
+在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).上查看源码
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}

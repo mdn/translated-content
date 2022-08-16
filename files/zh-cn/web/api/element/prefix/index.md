@@ -2,43 +2,41 @@
 title: Element.prefix
 slug: Web/API/Element/prefix
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Element.prefix</strong></code> 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回 null。</p>
+**`Element.prefix`** 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回 null。
 
-<div class="note">
-<p>在 DOM4 之前，该 API 是在 {{domxref("Node")}}  interface 中定义的。</p>
-</div>
+> **备注：** 在 DOM4 之前，该 API 是在 {{domxref("Node")}} interface 中定义的。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>string</var> = <var>element</var>.prefix
-</pre>
+```
+string = element.prefix
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following logs "x" to the console.</p>
+The following logs "x" to the console.
 
-<pre class="brush:xml">&lt;x:div onclick="console.log(this.prefix)"/&gt;
-</pre>
+```xml
+<x:div onclick="console.log(this.prefix)"/>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>This will only work when a namespace-aware parser is used, i.e. when a document is served with an XML MIME type. This will not work for HTML documents.</p>
+This will only work when a namespace-aware parser is used, i.e. when a document is served with an XML MIME type. This will not work for HTML documents.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Element.prefix")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Element.namespaceURI")}}</li>
- <li>{{domxref("Element.localName")}}</li>
- <li>{{domxref("Attr.prefix")}}</li>
- <li>{{domxref("Node.prefix")}}</li>
-</ul>
+- {{domxref("Element.namespaceURI")}}
+- {{domxref("Element.localName")}}
+- {{domxref("Attr.prefix")}}
+- {{domxref("Node.prefix")}}

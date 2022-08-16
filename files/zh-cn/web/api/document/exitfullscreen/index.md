@@ -2,44 +2,45 @@
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p><code><strong>Document.exitFullscreen()</strong></code> 方法用于让当前文档退出全屏模式（原文表述不准确，详见备注）。调用这个方法会让文档回退到上一个调用{{domxref("Element.requestFullscreen()")}}方法进入全屏模式之前的状态。</p>
+**`Document.exitFullscreen()`** 方法用于让当前文档退出全屏模式（原文表述不准确，详见备注）。调用这个方法会让文档回退到上一个调用{{domxref("Element.requestFullscreen()")}}方法进入全屏模式之前的状态。
 
-<div class="note"><strong>备注：</strong> 如果一个元素 A 在请求进去全屏模式之前，已经存在其他元素处于全屏状态，当这个元素 A 退出全屏模式之后，之前的元素仍然处于全屏状态。浏览器内部维护了一个全屏元素栈用于实现这个目的。</div>
+> **备注：** 如果一个元素 A 在请求进去全屏模式之前，已经存在其他元素处于全屏状态，当这个元素 A 退出全屏模式之后，之前的元素仍然处于全屏状态。浏览器内部维护了一个全屏元素栈用于实现这个目的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">document.exitFullscreen();
-</pre>
+```
+document.exitFullscreen();
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">// 点击切换全屏模式
+```js
+// 点击切换全屏模式
 document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
   } else {
     document.documentElement.requestFullscreen()
   }
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Document.exitFullscreen")}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/en/DOM/Using_full-screen_mode">Using full-screen mode</a></li>
- <li>{{ domxref("Element.requestFullscreen()") }}</li>
- <li>{{ domxref("Document.exitFullscreen()") }}</li>
- <li>{{ domxref("Document.fullscreen") }}</li>
- <li>{{ domxref("Document.fullscreenElement") }}</li>
- <li>{{ cssxref(":fullscreen") }}</li>
- <li>{{ HTMLAttrXRef("allowfullscreen", "iframe") }}</li>
-</ul>
+- [Using full-screen mode](/en/DOM/Using_full-screen_mode)
+- {{ domxref("Element.requestFullscreen()") }}
+- {{ domxref("Document.exitFullscreen()") }}
+- {{ domxref("Document.fullscreen") }}
+- {{ domxref("Document.fullscreenElement") }}
+- {{ cssxref(":fullscreen") }}
+- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}

@@ -2,41 +2,43 @@
 title: Element.classList
 slug: Web/API/Element/classList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Element.classList</strong></code> 是一个只读属性，返回一个元素的类属性的实时 {{domxref("DOMTokenList")}} 集合。</p>
+**`Element.classList`** 是一个只读属性，返回一个元素的类属性的实时 {{domxref("DOMTokenList")}} 集合。
 
-<p>相比将 {{domxref("element.className")}} 作为以空格分隔的字符串来使用，<code>classList</code> 是一种更方便的访问元素的类列表的方法。</p>
+相比将 {{domxref("element.className")}} 作为以空格分隔的字符串来使用，`classList` 是一种更方便的访问元素的类列表的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">const <var>elementClasses</var> = <var>elementNodeReference</var>.classList;
-</pre>
+```
+const elementClasses = elementNodeReference.classList;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code><em><var>elementClasses</var></em></code> 是一个 {{domxref("DOMTokenList")}} 表示  <code><var>elementNodeReference</var></code> 的类属性 。如果类属性未设置或为空，那么 <code><em>elementClasses.length</em></code> 返回 <code>0</code>。虽然 <code>element.classList</code> 本身是只读的，但是你可以使用 <code><a href="/zh-CN/docs/Web/API/DOMTokenList/add">add()</a></code> 和 <code><a href="/zh-CN/docs/Web/API/DOMTokenList/remove">remove()</a></code> 方法修改它。</p>
+`elementClasses` 是一个 {{domxref("DOMTokenList")}} 表示 `elementNodeReference` 的类属性 。如果类属性未设置或为空，那么 `elementClasses.length` 返回 `0`。虽然 `element.classList` 本身是只读的，但是你可以使用 [`add()`](/zh-CN/docs/Web/API/DOMTokenList/add) 和 [`remove()`](/zh-CN/docs/Web/API/DOMTokenList/remove) 方法修改它。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js notranslate">const div = document.createElement('div');
+```js
+const div = document.createElement('div');
 div.className = 'foo';
 
-// 初始状态：&lt;div class="foo"&gt;&lt;/div&gt;
+// 初始状态：<div class="foo"></div>
 console.log(div.outerHTML);
 
 // 使用 classList API 移除、添加类值
 div.classList.remove("foo");
 div.classList.add("anotherclass");
 
-// &lt;div class="anotherclass"&gt;&lt;/div&gt;
+// <div class="anotherclass"></div>
 console.log(div.outerHTML);
 
 // 如果 visible 类值已存在，则移除它，否则添加它
 div.classList.toggle("visible");
 
 // add/remove visible, depending on test conditional, i less than 10
-div.classList.toggle("visible", i &lt; 10 );
+div.classList.toggle("visible", i < 10 );
 
 console.log(div.classList.contains("foo"));
 
@@ -50,17 +52,17 @@ div.classList.add(...cls);
 div.classList.remove(...cls);
 
 // 将类值 "foo" 替换成 "bar"
-div.classList.replace("foo", "bar");</pre>
+div.classList.replace("foo", "bar");
+```
 
-<div class="note">
-<p>Firefox 26 以下的版本并未实现 <code>add</code>/<code>remove</code>/<code>toggle</code> 方法中的所有参数。参见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
-</div>
+> **备注：** Firefox 26 以下的版本并未实现 `add`/`remove`/`toggle` 方法中的所有参数。参见 <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>由于<code>Element.prototype.className</code>属性在指定事件被更改后会触发该事件，因此旧的<code>onpropertychange</code>事件可用于创建活动的类列表模型。以下针对<code>classList</code>和多令牌列表的聚合列表确保了 IE10-IE11 浏览器的所有标准方法和属性的完全覆盖以及 IE 6-9 向其“疯狂靠近”——这可真是值得吃惊的。看看吧：</p>
+由于`Element.prototype.className`属性在指定事件被更改后会触发该事件，因此旧的`onpropertychange`事件可用于创建活动的类列表模型。以下针对`classList`和多令牌列表的聚合列表确保了 IE10-IE11 浏览器的所有标准方法和属性的完全覆盖以及 IE 6-9 向其“疯狂靠近”——这可真是值得吃惊的。看看吧：
 
-<pre class="brush: js notranslate">// 1. String.prototype.trim polyfill
+```js
+// 1. String.prototype.trim polyfill
 if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s﻿]+|[\s﻿]+$/g, ''); };
 (function(window){"use strict"; // prevent global namespace pollution
 if(!window.DOMException) (DOMException = function(reason){this.message = reason}).prototype = new Error;
@@ -100,7 +102,7 @@ if (typeof DOMTokenList !== "function") (function(window){
     window.DOMTokenList = DOMTokenList;
     function whenPropChanges(){
         var evt = window.event, prop = evt.propertyName;
-        if ( !skipPropChange &amp;&amp; (prop==="className" || (prop==="classList" &amp;&amp; !defineProperty)) ) {
+        if ( !skipPropChange && (prop==="className" || (prop==="classList" && !defineProperty)) ) {
             var target = evt.srcElement, protoObjProto = target[" uCLp"], strval = "" + target[prop];
             var tokens=strval.trim().split(wsRE), resTokenList=target[prop==="classList"?" uCL":"classList"];
             var oldLen = protoObjProto.length;
@@ -108,7 +110,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                 for(var innerI=0; innerI!==cI; ++innerI) if(tokens[innerI]===tokens[cI]) {sub++; continue a;}
                 resTokenList[cI-sub] = tokens[cI];
             }
-            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+            for (var i=cLen-sub; i < oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
             if(prop !== "classList") return;
             skipPropChange = 1, target.classList = resTokenList, target.className = strval;
             skipPropChange = 0, resTokenList.length = tokens.length - sub;
@@ -126,7 +128,7 @@ if (typeof DOMTokenList !== "function") (function(window){
             this[cI-sub] = toks[cI];
         }
         protoObjProto.length = cLen-sub, protoObjProto.value = ele.className, protoObjProto[" uCL"] = ele;
-        if (defineProperty) { defineProperty(ele, "classList", { // IE8 &amp; IE9 allow defineProperty on the DOM
+        if (defineProperty) { defineProperty(ele, "classList", { // IE8 & IE9 allow defineProperty on the DOM
             enumerable:   1, get: function(){return resTokenList},
             configurable: 0, set: function(newVal){
                 skipPropChange = 1, ele.className = protoObjProto.value = (newVal += ""), skipPropChange = 0;
@@ -135,7 +137,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                     for(var innerI=0; innerI!==cI; ++innerI) if(toks[innerI]===toks[cI]) {sub++; continue a;}
                     resTokenList[cI-sub] = toks[cI];
                 }
-                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+                for (var i=cLen-sub; i < oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
             }
         }); defineProperty(ele, " uCLp", { // for accessing the hidden prototype
             enumerable: 0, configurable: 0, writeable: 0, value: protoObj.prototype
@@ -144,7 +146,7 @@ if (typeof DOMTokenList !== "function") (function(window){
         }); } else { ele.classList=resTokenList, ele[" uCL"]=resTokenList, ele[" uCLp"]=protoObj.prototype; }
         ele.attachEvent( "onpropertychange", whenPropChanges );
     }
-    try { // Much faster &amp; cleaner version for IE8 &amp; IE9:
+    try { // Much faster & cleaner version for IE8 & IE9:
         // Should work in IE8 because Element.prototype instanceof Node is true according to the specs
         window.Object.defineProperty(window.Element.prototype, "classList", {
             enumerable: 1,   get: function(val){
@@ -157,8 +159,8 @@ if (typeof DOMTokenList !== "function") (function(window){
         window[" uCL"] = polyfillClassList;
         // the below code ensures polyfillClassList is applied to all current and future elements in the doc.
         document.documentElement.firstChild.appendChild(document.createElement('style')).styleSheet.cssText=(
-            '_*{x-uCLp:expression(!this.hasOwnProperty("classList")&amp;&amp;window[" uCL"](this))}' + //  IE6
-            '[class]{x-uCLp/**/:expression(!this.hasOwnProperty("classList")&amp;&amp;window[" uCL"](this))}' //IE7-8
+            '_*{x-uCLp:expression(!this.hasOwnProperty("classList")&&window[" uCL"](this))}' + //  IE6
+            '[class]{x-uCLp/**/:expression(!this.hasOwnProperty("classList")&&window[" uCL"](this))}' //IE7-8
         );
     }
 })(window);
@@ -168,15 +170,15 @@ if (typeof DOMTokenList !== "function") (function(window){
         function NullCheck(n) {return n===void 0 ? null : n} return NullCheck(this[i]);
     };
     if (!DOMTokenListProto.toggle || testClass.toggle("a",0)!==false) DOMTokenListProto.toggle=function(val){
-        if (arguments.length &gt; 1) return (this[arguments[1] ? "add" : "remove"](val), !!arguments[1]);
+        if (arguments.length > 1) return (this[arguments[1] ? "add" : "remove"](val), !!arguments[1]);
         var oldValue = this.value;
-        return (this.remove(oldValue), oldValue === this.value &amp;&amp; (this.add(val), true) /*|| false*/);
+        return (this.remove(oldValue), oldValue === this.value && (this.add(val), true) /*|| false*/);
     };
     if (!DOMTokenListProto.replace || typeof testClass.replace("a", "b") !== "boolean")
         DOMTokenListProto.replace = function(oldToken, newToken){
             checkIfValidClassListEntry("replace", oldToken), checkIfValidClassListEntry("replace", newToken);
             var oldValue = this.value;
-            return (this.remove(oldToken), this.value !== oldValue &amp;&amp; (this.add(newToken), true));
+            return (this.remove(oldToken), this.value !== oldValue && (this.add(newToken), true));
         };
     if (!DOMTokenListProto.contains) DOMTokenListProto.contains = function(value){
         for (var i=0,Len=this.length; i !== Len; ++i) if (this[i] === value) return true;
@@ -189,76 +191,66 @@ if (typeof DOMTokenList !== "function") (function(window){
     if (!DOMTokenListProto.entries) DOMTokenListProto.entries = function(){
         var nextIndex = 0, that = this;
         return {next: function() {
-            return nextIndex&lt;that.length ? {value: [nextIndex, that[nextIndex]], done: false} : {done: true};
+            return nextIndex<that.length ? {value: [nextIndex, that[nextIndex]], done: false} : {done: true};
         }};
     };
     if (!DOMTokenListProto.values) DOMTokenListProto.values = function(){
         var nextIndex = 0, that = this;
         return {next: function() {
-            return nextIndex&lt;that.length ? {value: that[nextIndex], done: false} : {done: true};
+            return nextIndex<that.length ? {value: that[nextIndex], done: false} : {done: true};
         }};
     };
     if (!DOMTokenListProto.keys) DOMTokenListProto.keys = function(){
         var nextIndex = 0, that = this;
         return {next: function() {
-            return nextIndex&lt;that.length ? {value: nextIndex, done: false} : {done: true};
+            return nextIndex<that.length ? {value: nextIndex, done: false} : {done: true};
         }};
     };
 })(window.DOMTokenList.prototype, window.document.createElement("div").classList);
 })(window);
-</pre>
+```
 
+\---------------------------------
 
+这里有一个关于 classList 的“妙用”，我觉得很有必要给你分享一下：
 
-<p>---------------------------------</p>
+我们都知道，通过 JS 去操控 CSS 确实是一件很麻烦的事情——他可能导致回流和重绘。
 
+一般我们会这样做：
 
+`document.style.background="red";`
 
-<p>这里有一个关于 classList 的“妙用”，我觉得很有必要给你分享一下：</p>
+`document.style.fontSize="24";`
 
-<p>我们都知道，通过 JS 去操控 CSS 确实是一件很麻烦的事情——他可能导致回流和重绘。</p>
+这样的话相当于【元素的样式被改变了两次】！整个 JavaScript 的性能就下来了。必要的时候（对一个元素更改多个样式）我们可以“把他们合在一起”：
 
-<p>一般我们会这样做：</p>
+`document.style.cssText="background:red;font-size:24;";`
 
-<p><code>document.style.background="red";</code></p>
+这一个“列表”形式也可以体现 classList 叫法的来源。
 
-<p><code>document.style.fontSize="24";</code></p>
+——它确实是一个 list 列表的形式：
 
-<p>这样的话相当于【元素的样式被改变了两次】！整个 JavaScript 的性能就下来了。必要的时候（对一个元素更改多个样式）我们可以“把他们合在一起”：</p>
+document.getElementById("myDIV").classList.add("mystyle");
 
-<p><code>document.style.cssText="background:red;font-size:24;";</code></p>
+document.getElementById("myDIV").classList.remove("mystyle"\[,"mystyle2",...]);
 
-<p>这一个“列表”形式也可以体现 classList 叫法的来源。</p>
+document.getElementById("myDIV").classList.item("mystyle");
 
-<p>——它确实是一个 list 列表的形式：</p>
+### 警告
 
-<p>document.getElementById("myDIV").classList.add("mystyle");</p>
+polyfill 的功能有限。它目前无法在 IE6-7 中使用和获取“游离于文档外的”元素 (例如：由`document.createElement`创建的元素，在它们被附加到父节点之前)。
 
-<p>document.getElementById("myDIV").classList.remove("mystyle"[,"mystyle2",...]);</p>
+然而，它应该在 IE9 中运行良好。`classList`的多适应性版本和 W3 规范之间的一个主要差异是：对于 IE6-8，没有办法创建一个不可变的对象 (其属性不能被直接修改的对象)。然而，在 IE9 中，可以通过扩展原型、冻结可见对象和覆盖本地属性方法来实现。虽然这样的动作在 IE6-IE8 中不起作用，即使在 IE9 中，这样做也会使整个网页的性能慢得像蜗牛爬行一样，使得这些修改对于这个聚合函数来说完全不切实际。 需要注意的是，在 IE6-7 中，这个 polyfill 使用 window 对象上的 window\[" uCL"] 属性与 CSS 表达式进行通信，使用 x-uCLp css 属性对所有元素进行通信，使用元素 \[" uCL"] 属性对所有元素进行通信，以允许垃圾收集并提高性能。在所有多填充浏览器 (IE6-9) 中，一个额外的元素 \[" uCLp"] 属性被添加到元素以确保符合标准原型，并且一个 DOMTokenList\[" uCL"] 属性被添加到每个元素 \["classList"] 对象以确保 DOMTokenList 被绑定到它自己的元素。
 
-<p>document.getElementById("myDIV").classList.item("mystyle");</p>
-
-
-
-<h3 id="警告">警告</h3>
-
-<p>polyfill 的功能有限。它目前无法在 IE6-7 中使用和获取“游离于文档外的”元素 (例如：由<code>document.createElement</code>创建的元素，在它们被附加到父节点之前)。</p>
-
-<p>然而，它应该在 IE9 中运行良好。<code>classList</code>的多适应性版本和 W3 规范之间的一个主要差异是：对于 IE6-8，没有办法创建一个不可变的对象 (其属性不能被直接修改的对象)。然而，在 IE9 中，可以通过扩展原型、冻结可见对象和覆盖本地属性方法来实现。虽然这样的动作在 IE6-IE8 中不起作用，即使在 IE9 中，这样做也会使整个网页的性能慢得像蜗牛爬行一样，使得这些修改对于这个聚合函数来说完全不切实际。 需要注意的是，在 IE6-7 中，这个 polyfill 使用 window 对象上的 window[" uCL"] 属性与 CSS 表达式进行通信，使用 x-uCLp css 属性对所有元素进行通信，使用元素 [" uCL"] 属性对所有元素进行通信，以允许垃圾收集并提高性能。在所有多填充浏览器 (IE6-9) 中，一个额外的元素 [" uCLp"] 属性被添加到元素以确保符合标准原型，并且一个 DOMTokenList[" uCL"] 属性被添加到每个元素 ["classList"] 对象以确保 DOMTokenList 被绑定到它自己的元素。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Element.classList")}}
 
+## 参见
 
-<p>{{Compat("api.Element.classList")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("element.className")}}</li>
- <li>{{domxref("DOMTokenList")}}</li>
-</ul>
+- {{domxref("element.className")}}
+- {{domxref("DOMTokenList")}}

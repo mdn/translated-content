@@ -2,77 +2,68 @@
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLLinkElement</code></strong> interface represents reference information for external resources and the relationship of those resources to a document and vice-versa. This object inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLLinkElement`** interface represents reference information for external resources and the relationship of those resources to a document and vice-versa. This object inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}, and {{domxref("LinkStyle")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}, and {{domxref("LinkStyle")}}._
 
-<dl>
- <dt> </dt>
- <dt>{{domxref("HTMLLinkElement.as")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the type of content being loaded by the HTML link.</dd>
- <dt>{{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See <a href="/en-US/docs/HTML/CORS_settings_attributes">CORS settings attributes</a> for details.</dd>
- <dt>{{domxref("HTMLLinkElement.disabled")}}</dt>
- <dd>Is a <code>Boolean</code> which represents whether the link is disabled; currently only used with style sheet links.</dd>
- <dt>{{domxref("HTMLLinkElement.href")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the URI for the target resource.</dd>
- <dt>{{domxref("HTMLLinkElement.hreflang")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the language code for the linked resource.</dd>
- <dt>{{domxref("HTMLLinkElement.media")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing a list of one or more media formats to which the resource applies.</dd>
- <dt>{{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.</dd>
- <dt>{{domxref("HTMLLinkElement.rel")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the forward relationship of the linked resource from the document to the resource.</dd>
- <dt>{{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.</dd>
- <dt>{{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.</dd>
- <dt>{{domxref("LinkStyle.sheet")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("StyleSheet")}} object associated with the given element, or <code>null</code> if there is none.</dd>
- <dt>{{domxref("HTMLLinkElement.type")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the MIME type of the linked resource.</dd>
-</dl>
+- {{domxref("HTMLLinkElement.as")}}
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+  - : Is a {{domxref("DOMString")}} representing the type of content being loaded by the HTML link.
 
-<dl>
- <dt>{{domxref("HTMLLinkElement.charset")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the character encoding for the target resource.</dd>
- <dt>{{domxref("HTMLLinkElement.rev")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
- <div class="note"><strong>Note</strong>: Currently the W3C HTML 5.2 spec states that <code>rev</code> is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.</div>
- </dd>
- <dt>{{domxref("HTMLLinkElement.target")}} {{Deprecated_Inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the name of the target frame to which the resource applies.</dd>
-</dl>
+- {{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See [CORS settings attributes](/zh-CN/docs/HTML/CORS_settings_attributes) for details.
+- {{domxref("HTMLLinkElement.disabled")}}
+  - : Is a `Boolean` which represents whether the link is disabled; currently only used with style sheet links.
+- {{domxref("HTMLLinkElement.href")}}
+  - : Is a {{domxref("DOMString")}} representing the URI for the target resource.
+- {{domxref("HTMLLinkElement.hreflang")}}
+  - : Is a {{domxref("DOMString")}} representing the language code for the linked resource.
+- {{domxref("HTMLLinkElement.media")}}
+  - : Is a {{domxref("DOMString")}} representing a list of one or more media formats to which the resource applies.
+- {{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
+- {{domxref("HTMLLinkElement.rel")}}
+  - : Is a {{domxref("DOMString")}} representing the forward relationship of the linked resource from the document to the resource.
+- {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
+- {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
+- {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
+  - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
+- {{domxref("HTMLLinkElement.type")}}
+  - : Is a {{domxref("DOMString")}} representing the MIME type of the linked resource.
 
-<h2 id="Methods">Methods</h2>
+### Obsolete properties
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}</em><em>, and {{domxref("LinkStyle")}}.</em></p>
+- {{domxref("HTMLLinkElement.charset")}} {{Deprecated_Inline}}
+  - : Is a {{domxref("DOMString")}} representing the character encoding for the target resource.
+- {{domxref("HTMLLinkElement.rev")}} {{Deprecated_Inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
+
+    > **备注：** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
+
+- {{domxref("HTMLLinkElement.target")}} {{Deprecated_Inline}}
+  - : Is a {{domxref("DOMString")}} representing the name of the target frame to which the resource applies.
+
+## Methods
+
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}, and {{domxref("LinkStyle")}}._
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.HTMLLinkElement")}}
 
+## See also
 
-<p>{{Compat("api.HTMLLinkElement")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("link")}}.</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("link")}}.

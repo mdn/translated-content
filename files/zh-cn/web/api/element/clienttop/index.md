@@ -2,38 +2,36 @@
 title: Element.clientTop
 slug: Web/API/Element/clientTop
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>一个元素顶部边框的宽度（以像素表示）。不包括顶部外边距或内边距。<code>clientTop</code> 是只读的。</p>
+一个元素顶部边框的宽度（以像素表示）。不包括顶部外边距或内边距。`clientTop` 是只读的。
 
-<p>基于 <a href="/zh-CN/docs/Web/API/en/Gecko">Gecko</a> 的应用从 Gecko 1.9（<a href="/zh-CN/docs/Web/API/en/Firefox_3">Firefox 3</a> {{ Bug(111207) }}）开始支持 clientTop。该属性在 Firefox 2 或更早的版本中不被支持。</p>
+基于 [Gecko](/zh-CN/docs/Web/API/en/Gecko) 的应用从 Gecko 1.9（[Firefox 3](/zh-CN/docs/Web/API/en/Firefox_3) {{ Bug(111207) }}）开始支持 clientTop。该属性在 Firefox 2 或更早的版本中不被支持。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var top = element.clientTop;</pre>
+```js
+var top = element.clientTop;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-<div id="idDiv" style="margin: 24px 29px; padding-right: 28px; padding-left: 28px; border: 24px solid black; width: 199px; height: 102px; overflow: auto; font-family: Arial, sans-serif; font-size: 13px !important; background-color: white;">
-<p>padding-top</p>
+padding-top
 
-<p>Gentle, individualistic and very loyal, Birman cats fall between Siamese and Persian in character. If you admire cats that are non aggressive, that enjoy being with humans and tend to be on the quiet side, you may well find that Birman cats are just the felines for you.</p>
+Gentle, individualistic and very loyal, Birman cats fall between Siamese and Persian in character. If you admire cats that are non aggressive, that enjoy being with humans and tend to be on the quiet side, you may well find that Birman cats are just the felines for you.
 
-<p>All Birmans have colorpointed features, dark coloration of the face, ears, legs and tail.</p>
+All Birmans have colorpointed features, dark coloration of the face, ears, legs and tail.
 
-<p>Cat image and text coming from <a href="http://www.best-cat-art.com/">www.best-cat-art.com</a></p>
+Cat image and text coming from [www.best-cat-art.com](http://www.best-cat-art.com/)
 
-<p>padding-bottom</p>
-</div>
-<strong>Left</strong><strong>Top</strong><strong>Right</strong><strong>Bottom</strong><em>margin-top</em><em>margin-bottom</em><em>border-top</em><em>border-bottom</em></div>
+padding-bottom
 
-<h2 id="Notes">备注</h2>
+**Left**、**Top**、**Right**、**Bottom**、_margin-top_、*margin-bottom*、*border-top*、_border-bottom_
 
-<p><code>clientTop</code> 首次出现于 MS IE DHTML 对象模型中。</p>
+## 备注
 
-<h2 id="References">相关链接</h2>
+`clientTop` 首次出现于 MS IE DHTML 对象模型中。
 
-<ul>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location</a></li>
-</ul>
+## 相关链接
+
+- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

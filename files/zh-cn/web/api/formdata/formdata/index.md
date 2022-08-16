@@ -2,80 +2,79 @@
 title: FormData()
 slug: Web/API/FormData/FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><code><strong>FormData()</strong></code>构造函数用于创建一个新的{{domxref("FormData")}}对象。</p>
+**`FormData()`** 构造函数用于创建一个新的{{domxref("FormData")}}对象。
 
-<div class="note">
-<p><strong>注意</strong>: 该功能在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 中可用。</p>
-</div>
+> **备注：** 该功能在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js"><code>var formData = new FormData(</code><code>form</code><code>)</code></pre>
+```js
+var formData = new FormData(form)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>form </code>{{optional_inline}}</dt>
- <dd>一个 HTML 上的{{HTMLElement("form")}}表单元素——当指定了，这种方式创建的{{domxref("FormData")}}对象会自动将 form 中的表单值也包含进去，包括文件内容也会被编码之后包含进去。</dd>
-</dl>
+- `form `{{optional_inline}}
+  - : 一个 HTML 上的{{HTMLElement("form")}}表单元素——当指定了，这种方式创建的{{domxref("FormData")}}对象会自动将 form 中的表单值也包含进去，包括文件内容也会被编码之后包含进去。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的代码将创建一个空的 FormData 对象：</p>
+下面的代码将创建一个空的 FormData 对象：
 
-<pre class="brush: js">var formData = new FormData(); // 当前为空</pre>
+```js
+var formData = new FormData(); // 当前为空
+```
 
-<p>你可以使用{{domxref("FormData.append")}}来添加键/值对到表单里面；</p>
+你可以使用{{domxref("FormData.append")}}来添加键/值对到表单里面；
 
-<pre class="brush: js">formData.append('username', 'Chris');
-</pre>
+```js
+formData.append('username', 'Chris');
+```
 
-<p>或者你可以使用可选的<code><em>form参数来创建一个带预置数据的FormData对象</em></code>:</p>
+或者你可以使用可选的`form参数来创建一个带预置数据的FormData对象`:
 
-<pre class="brush: html">&lt;form id="myForm" name="myForm"&gt;
-  &lt;div&gt;
-    &lt;label for="username"&gt;Enter name:&lt;/label&gt;
-    &lt;input type="text" id="username" name="username"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="useracc"&gt;Enter account number:&lt;/label&gt;
-    &lt;input type="text" id="useracc" name="useracc"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="userfile"&gt;Upload file:&lt;/label&gt;
-    &lt;input type="file" id="userfile" name="userfile"&gt;
-  &lt;/div&gt;
-&lt;input type="submit" value="Submit!"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form id="myForm" name="myForm">
+  <div>
+    <label for="username">Enter name:</label>
+    <input type="text" id="username" name="username">
+  </div>
+  <div>
+    <label for="useracc">Enter account number:</label>
+    <input type="text" id="useracc" name="useracc">
+  </div>
+  <div>
+    <label for="userfile">Upload file:</label>
+    <input type="file" id="userfile" name="userfile">
+  </div>
+<input type="submit" value="Submit!">
+</form>
+```
 
-<div class="note">
-<p><strong>注意</strong>: 所有的输入元素都需要有<strong>name</strong>属性，否则无法访问到值。</p>
-</div>
+> **备注：** 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
 
-<pre class="brush: js">var myForm = document.getElementById('myForm');
-formData = new FormData(myForm);</pre>
+```js
+var myForm = document.getElementById('myForm');
+formData = new FormData(myForm);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FormData.FormData")}}
 
-<h2 id="附注">附注</h2>
+## 附注
 
-<p>在 Gecko 7.0 {{geckoRelease("7.0")}}之前，如果你将{{domxref("Blob")}}作为数据添加到 form 对象中，文件名就是空的，这可能导致服务器在 HTTP 头的 Content-Disposition 中设置的文件名为空而引起错误。从 Gecko 7.0 开始，将会使用"blob"作为 Blob 数据的文件名。</p>
+在 Gecko 7.0 {{geckoRelease("7.0")}}之前，如果你将{{domxref("Blob")}}作为数据添加到 form 对象中，文件名就是空的，这可能导致服务器在 HTTP 头的 Content-Disposition 中设置的文件名为空而引起错误。从 Gecko 7.0 开始，将会使用"blob"作为 Blob 数据的文件名。
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
-</div>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

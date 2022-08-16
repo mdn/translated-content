@@ -2,35 +2,29 @@
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
 
-<div id="hello-glsl">
-<div>
-<p>该例子将演示一个绘制固态颜色的矩形的简单着色器程序。</p>
-</div>
+该例子将演示一个绘制固态颜色的矩形的简单着色器程序。
 
-<div class="note">
-<p><strong>注意：</strong>本例子能在大多数现代桌面版浏览器上运行。但或许不能在移动端或者古老的浏览器上运行。如果 canvas 显示一片空白，你可以试着用下一个例子检查一下输出是否绘制的是同样的图形。 但要记住在前往下一个例子之前，要仔细阅读本页并动手写代码。</p>
-</div>
+> **备注：** 本例子能在大多数现代桌面版浏览器上运行。但或许不能在移动端或者古老的浏览器上运行。如果 canvas 显示一片空白，你可以试着用下一个例子检查一下输出是否绘制的是同样的图形。 但要记住在前往下一个例子之前，要仔细阅读本页并动手写代码。
 
-<p>{{EmbedLiveSample("hello-glsl-source",660,425)}}</p>
+{{EmbedLiveSample("hello-glsl-source",660,425)}}
 
-<div id="hello-glsl-intro">
-<h3 id="用GLSL语言写Hello_World_程序">用 GLSL 语言写 Hello World 程序</h3>
+### 用 GLSL 语言写 Hello World 程序
 
-<p>第一个非常简单的着色器程序。</p>
-</div>
+第一个非常简单的着色器程序。
 
-<div id="hello-glsl-source">
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;Hello World! Hello GLSL!&lt;/p&gt;
-</pre>
+```html hidden
+<p>Hello World! Hello GLSL!</p>
+```
 
-<pre class="brush: html">&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -47,32 +41,33 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-vertex" id="vertex-shader"&gt;
+```html
+<script type="x-shader/x-vertex" id="vertex-shader">
 #version 100
 void main() {
   gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
   gl_PointSize = 64.0;
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment" id="fragment-shader"&gt;
+```html
+<script type="x-shader/x-fragment" id="fragment-shader">
 #version 100
 void main() {
   gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<div class="hidden">
-<pre class="brush: js">;(function(){
-</pre>
-</div>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js" id="livesample-js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupWebGL, false);
 var gl,
   program;
@@ -129,10 +124,10 @@ if (buffer)
 if (program)
   gl.deleteProgram(program);
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: js">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -150,16 +145,12 @@ if (program)
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
-</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">})();
-</pre>
-</div>
+```js hidden
+})();
+```
 
-<p>该例子的源代码能在 <a href="https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl">GitHub</a>获得。</p>
-</div>
-</div>
+该例子的源代码能在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl)获得。
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}

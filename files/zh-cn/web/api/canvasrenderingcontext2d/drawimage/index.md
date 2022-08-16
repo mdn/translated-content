@@ -2,120 +2,111 @@
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API 中的 <strong><code>CanvasRenderingContext2D.drawImage()</code></strong> 方法提供了多种方式在 Canvas 上绘制图像。</p>
+Canvas 2D API 中的 **`CanvasRenderingContext2D.drawImage()`** 方法提供了多种方式在 Canvas 上绘制图像。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.drawImage(image, dx, dy);</var>
-void <var><em>ctx</em>.drawImage(image, dx, dy, dWidth, dHeight);</var>
-void <var><em>ctx</em>.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</var>
-</pre>
+```
+void ctx.drawImage(image, dx, dy);
+void ctx.drawImage(image, dx, dy, dWidth, dHeight);
+void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```
 
-<p><img alt="drawImage" src="canvas_drawimage.jpg"></p>
+![drawImage](canvas_drawimage.jpg)
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>image</code></dt>
- <dd>绘制到上下文的元素。允许任何的 canvas 图像源 ({{domxref("CanvasImageSource")}})，例如：{{domxref("CSSImageValue")}}，{{domxref("HTMLImageElement")}}，{{domxref("SVGImageElement")}}，{{domxref("HTMLVideoElement")}}，{{domxref("HTMLCanvasElement")}}，{{domxref("ImageBitmap")}} 或者{{domxref("OffscreenCanvas")}}。</dd>
- <dt><code>sx</code>{{optional_inline}}</dt>
- <dd>需要绘制到目标上下文中的，<code>image</code>的矩形（裁剪）选择框的左上角 X 轴坐标。</dd>
- <dt><code>sy</code>{{optional_inline}}</dt>
- <dd>需要绘制到目标上下文中的，<code>image</code>的矩形（裁剪）选择框的左上角 Y 轴坐标。</dd>
- <dt><code>sWidth</code>{{optional_inline}}</dt>
- <dd>需要绘制到目标上下文中的，<code>image</code>的矩形（裁剪）选择框的宽度。如果不说明，整个矩形（裁剪）从坐标的<code>sx</code>和<code>sy</code>开始，到<code>image</code>的右下角结束。</dd>
- <dt><code>sHeight</code>{{optional_inline}}</dt>
- <dd>需要绘制到目标上下文中的，<code>image</code>的矩形（裁剪）选择框的高度。</dd>
- <dt><code>dx</code></dt>
- <dd><code>image</code>的左上角在目标 canvas 上 X 轴坐标。</dd>
- <dt><code>dy</code></dt>
- <dd><code>image</code>的左上角在目标 canvas 上 Y 轴坐标。</dd>
- <dt><code>dWidth</code>{{optional_inline}}</dt>
- <dd><code>image</code>在目标 canvas 上绘制的宽度。允许对绘制的<code>image</code>进行缩放。如果不说明，在绘制时<code>image</code>宽度不会缩放。</dd>
- <dt><code>dHeight</code>{{optional_inline}}</dt>
- <dd><code>image</code>在目标 canvas 上绘制的高度。 允许对绘制的<code>image</code>进行缩放。如果不说明，在绘制时<code>image</code>高度不会缩放。</dd>
-</dl>
+- `image`
+  - : 绘制到上下文的元素。允许任何的 canvas 图像源 ({{domxref("CanvasImageSource")}})，例如：{{domxref("CSSImageValue")}}，{{domxref("HTMLImageElement")}}，{{domxref("SVGImageElement")}}，{{domxref("HTMLVideoElement")}}，{{domxref("HTMLCanvasElement")}}，{{domxref("ImageBitmap")}} 或者{{domxref("OffscreenCanvas")}}。
+- `sx`{{optional_inline}}
+  - : 需要绘制到目标上下文中的，`image`的矩形（裁剪）选择框的左上角 X 轴坐标。
+- `sy`{{optional_inline}}
+  - : 需要绘制到目标上下文中的，`image`的矩形（裁剪）选择框的左上角 Y 轴坐标。
+- `sWidth`{{optional_inline}}
+  - : 需要绘制到目标上下文中的，`image`的矩形（裁剪）选择框的宽度。如果不说明，整个矩形（裁剪）从坐标的`sx`和`sy`开始，到`image`的右下角结束。
+- `sHeight`{{optional_inline}}
+  - : 需要绘制到目标上下文中的，`image`的矩形（裁剪）选择框的高度。
+- `dx`
+  - : `image`的左上角在目标 canvas 上 X 轴坐标。
+- `dy`
+  - : `image`的左上角在目标 canvas 上 Y 轴坐标。
+- `dWidth`{{optional_inline}}
+  - : `image`在目标 canvas 上绘制的宽度。允许对绘制的`image`进行缩放。如果不说明，在绘制时`image`宽度不会缩放。
+- `dHeight`{{optional_inline}}
+  - : `image`在目标 canvas 上绘制的高度。 允许对绘制的`image`进行缩放。如果不说明，在绘制时`image`高度不会缩放。
 
-<h3 id="抛出异常">抛出异常</h3>
+### 抛出异常
 
-<dl>
- <dt><code>INDEX_SIZE_ERR</code></dt>
- <dd>如果 canvas 或者图像矩形区域的宽度或高度为 0 。</dd>
- <dt><code>INVALID_STATE_ERR</code></dt>
- <dd>图像没有数据。</dd>
- <dt><code>TYPE_MISMATCH_ERR</code></dt>
- <dd>提供的原始元素不支持。</dd>
- <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
- <dd>图像尚未加载。使用<code>.complete === true</code>和<code>.onload</code>确定何时准备就绪。</dd>
-</dl>
+- `INDEX_SIZE_ERR`
+  - : 如果 canvas 或者图像矩形区域的宽度或高度为 0 。
+- `INVALID_STATE_ERR`
+  - : 图像没有数据。
+- `TYPE_MISMATCH_ERR`
+  - : 提供的原始元素不支持。
+- `NS_ERROR_NOT_AVAILABLE`
+  - : 图像尚未加载。使用`.complete === true`和`.onload`确定何时准备就绪。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_drawImage_方法">使用 <code>drawImage</code> 方法</h3>
+### 使用 `drawImage` 方法
 
-<p>这是一段使用 <code>drawImage</code> 方法的简单的代码片段。</p>
+这是一段使用 `drawImage` 方法的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
-       width="300" height="227"&gt;
-&lt;/div&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+       width="300" height="227">
+</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[5]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
-</pre>
+```
 
-<div class="hidden">
-<h2 id="Drawing_an_image_to_the_canvas">Drawing_an_image_to_the_canvas</h2>
-
-<h3 id="HTML_2">HTML</h3>
-
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source"
+```html hidden
+<canvas id="canvas"></canvas>
+  <img id="source"
        src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
-       width="300" height="227"&gt;
-&lt;/div&gt;</pre>
+       width="300" height="227">
+</div>
+```
 
-
-
-<h3 id="JavaScript_2">JavaScript</h3>
-
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js hidden
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
-image.addEventListener('load', e =&gt; {
+image.addEventListener('load', e => {
   ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 });
-</pre>
+```
+
+#### 结果
+
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
 </div>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
+ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
+```
 
-<h4 id="结果">结果</h4>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
-&lt;/div&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);&lt;/textarea&gt;
-</pre>
-
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 var textarea = document.getElementById("code");
@@ -139,59 +130,26 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Drawing_an_image_to_the_canvas', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_an_image_to_the_canvas', 700, 180) }}
 
-<h3 id="理解源元素大小">理解源元素大小</h3>
+### 理解源元素大小
 
-<p><code>drawImage()</code>方法在绘制时使用源元素的 CSS 大小。</p>
+`drawImage()`方法在绘制时使用源元素的 CSS 大小。
 
-<p>例如，如果加载图像并在其构造函数中指定可选的大小参数，则必须使用所创建实例的<code>naturalWidth</code>和<code>naturalHeight</code>属性来正确计算裁剪和缩放区域等内容，而不是<code>element.width</code>和<code>element.height</code>。如果元素是{{htmlelement("video")}} 元素，则<code>videoWidth</code>和<code>videoHeight</code>也是如此，依此类推。</p>
+例如，如果加载图像并在其构造函数中指定可选的大小参数，则必须使用所创建实例的`naturalWidth`和`naturalHeight`属性来正确计算裁剪和缩放区域等内容，而不是`element.width`和`element.height`。如果元素是{{htmlelement("video")}} 元素，则`videoWidth`和`videoHeight`也是如此，依此类推。
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</code></pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js"><code>const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-const image = new Image(60, 45); // Using optional size for image
-image.onload = drawImageActualSize; // Draw when image has loaded
-
-// Load an image of intrinsic size 300x227 in CSS pixels
-image.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
-
-function drawImageActualSize() {
-  // Use the intrinsic size of image in CSS pixels for the canvas element
-  canvas.width = this.naturalWidth;
-  canvas.height = this.naturalHeight;
-
-  // Will draw the image as 300x227, ignoring the custom size of 60x45
-  // given in the constructor
-  ctx.drawImage(this, 0, 0);
-
-  // To use the custom size we'll have to specify the scale parameters
-  // using the element's width and height properties - lets draw one
-  // on top in the corner:
-  ctx.drawImage(this, 0, 0, this.width, this.height);
-}</code>
-</pre>
-
-<div class="hidden">
-<h2 id="Understanding_source_element_size">Understanding_source_element_size</h2>
-
-<h3 id="HTML_4">HTML</h3>
-
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
-
-<h3 id="JavaScript_4">JavaScript</h3>
-
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const image = new Image(60, 45); // Using optional size for image
@@ -214,42 +172,65 @@ function drawImageActualSize() {
   // on top in the corner:
   ctx.drawImage(this, 0, 0, this.width, this.height);
 }
-</pre>
-</div>
+```
 
-<h4 id="结果_2">结果</h4>
+```html hidden
+<canvas id="canvas"></canvas>
+```
 
-<p>{{EmbedLiveSample('Understanding_source_element_size', 700, 260)}}</p>
+```js hidden
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-<h2 id="规范说明">规范说明</h2>
+const image = new Image(60, 45); // Using optional size for image
+image.onload = drawImageActualSize; // Draw when image has loaded
+
+// Load an image of intrinsic size 300x227 in CSS pixels
+image.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+
+function drawImageActualSize() {
+  // Use the intrinsic size of image in CSS pixels for the canvas element
+  canvas.width = this.naturalWidth;
+  canvas.height = this.naturalHeight;
+
+  // Will draw the image as 300x227, ignoring the custom size of 60x45
+  // given in the constructor
+  ctx.drawImage(this, 0, 0);
+
+  // To use the custom size we'll have to specify the scale parameters
+  // using the element's width and height properties - lets draw one
+  // on top in the corner:
+  ctx.drawImage(this, 0, 0, this.width, this.height);
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('Understanding_source_element_size', 700, 260)}}
+
+## 规范说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.drawImage")}}</p>
+{{Compat("api.CanvasRenderingContext2D.drawImage")}}
 
-<h3 id="兼容性注解">兼容性注解</h3>
+### 兼容性注解
 
-<ul>
- <li>在 Gecko 5.0 {{geckoRelease("5.0")}}中，支持通过给 sw 和 sh 赋负值，对图像进行翻转。</li>
- <li>从 {{geckoRelease("5.0")}} 开始，<code>drawImage()</code> 按照规范处理负参数，沿着合适的轴翻转矩形。</li>
- <li>从{{geckoRelease("5.0")}}开始，当 drawImage() 调用 <code>null</code> 或者 <code>undefined</code> 图像时，会抛出 <code>TYPE_MISMATCH_ERR</code> 异常。</li>
- <li>在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是 0，Firefox 会抛出一个异常。按照规范描述，这种情况不会再发生。</li>
- <li>Gecko 9.0 {{ geckoRelease("9.0") }}现在完全支持 CORS 跨域绘制图像，不需要<a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
- <li>Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas，不需要 <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
-</ul>
+- 在 Gecko 5.0 {{geckoRelease("5.0")}}中，支持通过给 sw 和 sh 赋负值，对图像进行翻转。
+- 从 {{geckoRelease("5.0")}} 开始，`drawImage()` 按照规范处理负参数，沿着合适的轴翻转矩形。
+- 从{{geckoRelease("5.0")}}开始，当 drawImage() 调用 `null` 或者 `undefined` 图像时，会抛出 `TYPE_MISMATCH_ERR` 异常。
+- 在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是 0，Firefox 会抛出一个异常。按照规范描述，这种情况不会再发生。
+- Gecko 9.0 {{ geckoRelease("9.0") }}现在完全支持 CORS 跨域绘制图像，不需要[污染的 canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas，不需要 [污染的 canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>当<code>drawImage()</code>需要在{{domxref("HTMLVideoElement")}}工作时，仅当{{domxref("HTMLMediaElement.readyState")}}大于 1 时<code>drawImage()</code>才能正常工作。</li>
- <li>在绘制，裁剪和/或缩放时，<code>drawImage()</code> 将始终使用 CSS 像素中源元素的固有尺寸。</li>
- <li><code>drawImage()</code>将忽略图像中的所有 EXIF 元数据，包括方向。此行为在 iOS 设备上尤其麻烦。您应该自己检测方向并使用<code>rotate()</code>使其正确。</li>
-</ul>
+- 当`drawImage()`需要在{{domxref("HTMLVideoElement")}}工作时，仅当{{domxref("HTMLMediaElement.readyState")}}大于 1 时`drawImage()`才能正常工作。
+- 在绘制，裁剪和/或缩放时，`drawImage()` 将始终使用 CSS 像素中源元素的固有尺寸。
+- `drawImage()`将忽略图像中的所有 EXIF 元数据，包括方向。此行为在 iOS 设备上尤其麻烦。您应该自己检测方向并使用`rotate()`使其正确。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.

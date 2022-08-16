@@ -2,28 +2,28 @@
 title: Window.screenLeft
 slug: Web/API/Window/screenLeft
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>Window.screenLeft</strong></code> 是一个只读属性，它返回浏览器左边框到左边屏幕边缘的 CSS 像素数。</p>
+**`Window.screenLeft`** 是一个只读属性，它返回浏览器左边框到左边屏幕边缘的 CSS 像素数。
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>：<code>screenLeft</code> 只是 {{domxref("Window.screenX")}}  属性的别名，最初只被 IE 浏览器所支持。现在主流的浏览器都已支持该属性。</p>
-</div>
+> **备注：** `screenLeft` 只是 {{domxref("Window.screenX")}} 属性的别名，最初只被 IE 浏览器所支持。现在主流的浏览器都已支持该属性。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>leftWindowPos</em> = window.screenLeft
-</pre>
+```js
+leftWindowPos = window.screenLeft
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回浏览器窗口到屏幕左边缘的 CSS 像素距离数值。</p>
+返回浏览器窗口到屏幕左边缘的 CSS 像素距离数值。
 
-<h2 id="Specifications">例子</h2>
+## 例子
 
-<p>在 <a href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a> 项目中，展示了一个监听浏览器窗口位置变化，动态更新 canvas 的例子。在这个例子中，当你移动浏览器窗口位置，绘制在 canvas 上的圆也会对应移动。我们通过监听 <code>screenLeft</code>/<code>screenTop</code> 的变化，并使用 {{domxref("Window.requestAnimationFrame()")}} 来对 canvas 实时重绘，保证了浏览器窗口移动时，canvas 内部圆的位置也会发生对应的移动。</p>
+在 [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) 项目中，展示了一个监听浏览器窗口位置变化，动态更新 canvas 的例子。在这个例子中，当你移动浏览器窗口位置，绘制在 canvas 上的圆也会对应移动。我们通过监听 `screenLeft`/`screenTop` 的变化，并使用 {{domxref("Window.requestAnimationFrame()")}} 来对 canvas 实时重绘，保证了浏览器窗口移动时，canvas 内部圆的位置也会发生对应的移动。
 
-<pre class="brush: js">initialLeft = window.screenLeft + canvasElem.offsetLeft;
+```js
+initialLeft = window.screenLeft + canvasElem.offsetLeft;
 initialTop = window.screenTop + canvasElem.offsetTop;
 
 function positionElem() {
@@ -45,26 +45,27 @@ function positionElem() {
   window.requestAnimationFrame(positionElem);
 }
 
-window.requestAnimationFrame(positionElem);</pre>
+window.requestAnimationFrame(positionElem);
+```
 
-<p>如果浏览器不支持 <code>screenLeft</code>属性，我们还在代码中使用了一个 polyfill 来保证演示效果。通过设置 {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}} 为对应别名来实现一样的功能。</p>
+如果浏览器不支持 `screenLeft`属性，我们还在代码中使用了一个 polyfill 来保证演示效果。通过设置 {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}} 为对应别名来实现一样的功能。
 
-<pre class="brush: js">if(!window.screenLeft) {
+```js
+if(!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
-}</pre>
+}
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("window.screenTop")}}</li>
- <li>{{domxref("Window.screenX")}}</li>
-</ul>
+- {{domxref("window.screenTop")}}
+- {{domxref("Window.screenX")}}

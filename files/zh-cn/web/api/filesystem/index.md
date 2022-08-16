@@ -2,57 +2,38 @@
 title: FileSystem
 slug: Web/API/FileSystem
 ---
-<div>
 {{APIRef("File System API")}} {{non-standard_header}}
-</div>
 
-<p>在 <a href="/en/DOM/File_API/File_System_API">File System API</a> 中，一个 <a href="/en/DOM/File_API/File_System_API/FileSystem">FileSystem 对象</a>代表着一个文件系统。这个对象是调用 <a href="/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem">requestFileSystem()</a> 成功的一个标志。FileSystem 对象有两个属性。</p>
+在 [File System API](/en/DOM/File_API/File_System_API) 中，一个 [FileSystem 对象](/en/DOM/File_API/File_System_API/FileSystem)代表着一个文件系统。这个对象是调用 [requestFileSystem()](/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem) 成功的一个标志。FileSystem 对象有两个属性。
 
-<h2 id="关于本文档">关于本文档</h2>
+## 关于本文档
 
-<p>本文档的上次更新是 2012 年 3 月 2 日，引用来源是 2011 年 4 月 9 日的草案 <a href="http://www.w3.org/TR/2011/WD-file-system-api-20110419/">W3C Specifications (Working Draft)</a>。<br>
- <a href="http://www.w3.org/TR/file-system-api/">该草案</a>似乎已经被放弃了，任何实现不应该参考这份草案，也不该引用它。</p>
+本文档的上次更新是 2012 年 3 月 2 日，引用来源是 2011 年 4 月 9 日的草案 [W3C Specifications (Working Draft)](http://www.w3.org/TR/2011/WD-file-system-api-20110419/)。
+[该草案](http://www.w3.org/TR/file-system-api/)似乎已经被放弃了，任何实现不应该参考这份草案，也不该引用它。
 
-<h2 id="基本概念">基本概念</h2>
+## 基本概念
 
-<p>你可以通过调用 <code><a href="/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem">window.requestFileSystem()</a></code> 来请求对一个沙盒文件系统的访问权限。调用 <code>requestFileSystem() </code>会创建一个新的沙盒存储空间。成功调用之后会返回一个 <code><a href="/en/DOM/File_API/File_System_API/FileSystem">FileSystem 对象</a></code>。它有两个属性：名称和文件系统的根目录。</p>
+你可以通过调用 [`window.requestFileSystem()`](/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem) 来请求对一个沙盒文件系统的访问权限。调用 `requestFileSystem() `会创建一个新的沙盒存储空间。成功调用之后会返回一个 [`FileSystem 对象`](/en/DOM/File_API/File_System_API/FileSystem)。它有两个属性：名称和文件系统的根目录。
 
-<p><code><a href="/en/DOM/File_API/File_System_API/FileSystem">FileSystem 对象</a></code>是你访问文件系统所必须的，所以你最好为它创建一个引用，然后储存起来。</p>
+[`FileSystem 对象`](/en/DOM/File_API/File_System_API/FileSystem)是你访问文件系统所必须的，所以你最好为它创建一个引用，然后储存起来。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">类型</th>
-   <th scope="col">解释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a name="attr_name"><code>name</code></a></td>
-   <td><code>只读的 DOMString</code></td>
-   <td>文件系统的名称。The name must be unique across the list of exposed file systems.</td>
-  </tr>
-  <tr>
-   <td><a name="attr_root"><code>root</code></a></td>
-   <td><code>只读的目录实体</code></td>
-   <td>文件系统的根目录。</td>
-  </tr>
- </tbody>
-</table>
+| 属性   | 类型               | 解释                                                                             |
+| ------ | ------------------ | -------------------------------------------------------------------------------- |
+| `name` | `只读的 DOMString` | 文件系统的名称。The name must be unique across the list of exposed file systems. |
+| `root` | `只读的目录实体`   | 文件系统的根目录。                                                               |
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FileSystem")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<p>引用：<a href="/en/DOM/File_API/File_System_API">File System API</a></p>
+引用：[File System API](/en/DOM/File_API/File_System_API)
 
-<p>介绍: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+介绍: [Basic Concepts About the File System API](/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

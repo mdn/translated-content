@@ -2,28 +2,33 @@
 title: Range()
 slug: Web/API/Range/Range
 ---
-<p>{{ APIRef("DOM") }}{{seeCompatTable}}</p>
+{{ APIRef("DOM") }}{{seeCompatTable}}
 
-<p>构造函数 <code><strong>Range()</strong></code> 返回一个新创建的 {{domxref("Range")}} 对象，新创建的对象属于全局 {{domxref("Document")}} 对象。</p>
+构造函数 **`Range()`** 返回一个新创建的 {{domxref("Range")}} 对象，新创建的对象属于全局 {{domxref("Document")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>range</em> = new Range()</pre>
+```
+range = new Range()
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在下面的例子中，我们通过构造函数<code>Range()</code>创建了一个新的 range，并且使用{{domxref("Range.setStartBefore()")}} 和{{domxref("Range.setEndAfter()")}} 分别设置了起始位置。然后，通过方法{{domxref("window.getSelection()")}}和{{domxref("Selection.addRange()")}}选中了选区 range。</p>
+在下面的例子中，我们通过构造函数`Range()`创建了一个新的 range，并且使用{{domxref("Range.setStartBefore()")}} 和{{domxref("Range.setEndAfter()")}} 分别设置了起始位置。然后，通过方法{{domxref("window.getSelection()")}}和{{domxref("Selection.addRange()")}}选中了选区 range。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html line-numbers language-html notranslate" dir="rtl"><code class="language-html">&lt;p&gt;First paragraph.&lt;/p&gt;
-&lt;p&gt;Second paragraph.&lt;/p&gt;
-&lt;p&gt;Third paragraph.&lt;/p&gt;
-&lt;p&gt;Fourth paragraph.&lt;/p&gt;</code></pre>
+```html
+<p>First paragraph.</p>
+<p>Second paragraph.</p>
+<p>Third paragraph.</p>
+<p>Fourth paragraph.</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">const paragraphs = document.querySelectorAll('p');
+```js
+const paragraphs = document.querySelectorAll('p');
 
 // 创建 Range 对象
 const range = new Range();
@@ -38,22 +43,21 @@ range.setEndAfter(paragraphs[2]);
 const selection = window.getSelection();
 
 // 添加光标选择的范围
-selection.addRange(range);</code></pre>
+selection.addRange(range);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Range.Range")}}
 
-<h2 id="扩展">扩展</h2>
+## 扩展
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

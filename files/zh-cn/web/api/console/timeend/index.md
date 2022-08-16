@@ -2,42 +2,37 @@
 title: Console.timeEnd()
 slug: Web/API/Console/timeEnd
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>停止一个通过 <code>console.time()</code> 启动的计时器</p>
+停止一个通过 `console.time()` 启动的计时器
 
-<div class="note">
-<p>注意：该方法在使用时不会将输出的时间返回到 js，它只能用于控制台调试。请勿将该方法作为普通计时器或性能数据收集器的一部分。</p>
-</div>
+> **备注：** 该方法在使用时不会将输出的时间返回到 js，它只能用于控制台调试。请勿将该方法作为普通计时器或性能数据收集器的一部分。
 
-<p>有关详细信息和示例，请参阅 <a href="/en-US/docs/Web/API/console#Timers">Timers</a></p>
+有关详细信息和示例，请参阅 [Timers](/zh-CN/docs/Web/API/console#Timers)
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">console.timeEnd(<em>label</em>);
-</pre>
+```js
+console.timeEnd(label);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>label</code></dt>
- <dd>需要停止的计时器名字。一旦停止，计时器所经过的时间会被自动输出到控制台。</dd>
-</dl>
+- `label`
+  - : 需要停止的计时器名字。一旦停止，计时器所经过的时间会被自动输出到控制台。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

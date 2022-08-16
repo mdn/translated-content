@@ -2,82 +2,88 @@
 title: 'Element: keyup event'
 slug: Web/API/Element/keyup_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>keyup</code></strong> 事件在按键被松开时触发。</p>
+**`keyup`** 事件在按键被松开时触发。
 
 <table class="properties">
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <th>冒泡</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th>可取消</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th>接口</th>
-   <td>{{domxref("KeyboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th>事件处理函数属性</th>
-   <td>{{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}</td>
-  </tr>
- </tbody>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <th>冒泡</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th>可取消</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th>接口</th>
+      <td>{{domxref("KeyboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th>事件处理函数属性</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code> 和 <code>keyup</code> 事件提供指出哪个键被按下的代码，而 <code>keypress</code> 指出哪些字符被输入。例如，小写字母 “a” 在 <code>keydown</code> 和 <code>keyup</code> 时会被报告为 65，但在 <code>keypress</code> 时为 97。所有事件均将大写字母 “A” 报告为 65。</p>
+[`keydown`](/en-US/docs/Web/API/Element/keydown_event) 和 `keyup` 事件提供指出哪个键被按下的代码，而 `keypress` 指出哪些字符被输入。例如，小写字母 “a” 在 `keydown` 和 `keyup` 时会被报告为 65，但在 `keypress` 时为 97。所有事件均将大写字母 “A” 报告为 65。
 
-<p>从 Firefox 65 开始，<code>keyup</code> 和 <code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code> 事件在 IME 编辑时也会被触发，以提升 CJKT 用户的跨浏览器兼容性（{{bug(354358)}}）。要忽略 IME 编辑时的所有 <code>keyup</code> 事件，请执行以下操作（229 是一个关于被 IME 加工过的事件的  <code>keyCode</code> 的特殊值 ）：</p>
+从 Firefox 65 开始，`keyup` 和 [`keydown`](/en-US/docs/Web/API/Element/keydown_event) 事件在 IME 编辑时也会被触发，以提升 CJKT 用户的跨浏览器兼容性（{{bug(354358)}}）。要忽略 IME 编辑时的所有 `keyup` 事件，请执行以下操作（229 是一个关于被 IME 加工过的事件的 `keyCode` 的特殊值 ）：
 
-<pre class="brush: js">eventTarget.addEventListener("keyup", event =&gt; {
+```js
+eventTarget.addEventListener("keyup", event => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
 });
-</pre>
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="addEventListener_keyup_例子">addEventListener keyup 例子</h3>
+### addEventListener keyup 例子
 
-<p>在这个例子中，每当你在 {{HtmlElement("input")}} 元素里松开一个键，将会打印 {{domxref("KeyboardEvent.code")}} 的值。</p>
+在这个例子中，每当你在 {{HtmlElement("input")}} 元素里松开一个键，将会打印 {{domxref("KeyboardEvent.code")}} 的值。
 
-<pre class="brush: html">&lt;input placeholder="Click here, then press and release a key." size="40"&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Click here, then press and release a key." size="40">
+<p id="log"></p>
+```
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('keyup', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("addEventListener_keyup_例子")}}</p>
+{{EmbedLiveSample("addEventListener_keyup_例子")}}
 
-<h3 id="等效的_onkeyup">等效的 onkeyup</h3>
+### 等效的 onkeyup
 
-<pre class="brush: js">input.onkeyup = logKey;</pre>
+```js
+input.onkeyup = logKey;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Element.keyup_event")}}</p>
+{{Compat("api.Element.keyup_event")}}
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keypress_event">keypress</a></code></li>
- <li><a href="/en-US/docs/Web/API/Document/keyup_event">Document <code>keyup</code> event</a></li>
-</ul>
+- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`keydown`](/en-US/docs/Web/API/Element/keydown_event)
+- [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
+- [Document `keyup` event](/zh-CN/docs/Web/API/Document/keyup_event)

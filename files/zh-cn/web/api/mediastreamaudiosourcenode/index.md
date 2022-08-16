@@ -2,60 +2,58 @@
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<p><code>MediaStreamAudioSourceNode</code> 接口代表一个音频接口，是<a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (比如一个摄像头或者麦克风) 的一部分。是个表现为音频源的{{domxref("AudioNode")}}。</p>
-</div>
+`MediaStreamAudioSourceNode` 接口代表一个音频接口，是[WebRTC](/zh-CN/docs/WebRTC) {{domxref("MediaStream")}} (比如一个摄像头或者麦克风) 的一部分。是个表现为音频源的{{domxref("AudioNode")}}。
 
-<p><code>MediaElementSourceNode 没有输入，并且只有一个输出。创建之后使用</code> {{domxref("AudioContext.createMediaStreamSource")}}方法。输出通道的数量和{{domxref("AudioMediaStreamTrack")}}的通道数量相同。如果没有有效的媒体流，输出通道就变成一个静音的通道。</p>
+`MediaElementSourceNode 没有输入，并且只有一个输出。创建之后使用` {{domxref("AudioContext.createMediaStreamSource")}}方法。输出通道的数量和{{domxref("AudioMediaStreamTrack")}}的通道数量相同。如果没有有效的媒体流，输出通道就变成一个静音的通道。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td>由{{domxref("AudioMediaStreamTrack")}}定义，传递给 {{domxref("AudioContext.createMediaStreamSource")}} ，并由此创建。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td>
+        由{{domxref("AudioMediaStreamTrack")}}定义，传递给
+        {{domxref("AudioContext.createMediaStreamSource")}}
+        ，并由此创建。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="构造器">构造器</h2>
+## 构造器
 
-<dl>
- <dt>{{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode()")}}</dt>
- <dd>创建一个新的<code>MediaStreamAudioSourceNode</code>实例。</dd>
-</dl>
+- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode()")}}
+  - : 创建一个新的`MediaStreamAudioSourceNode`实例。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从</em><em>{{domxref("AudioNode")}}上继承。</em></p>
+_从 {{domxref("AudioNode")}} 上继承。_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>从</em><em>{{domxref("AudioNode")}}上继承。</em></p>
+_从 {{domxref("AudioNode")}} 上继承。_
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>{{page("/zh-CN/docs/Web/API/AudioContext/createMediaStreamSource","示例")}}</p>
+{{page("/zh-CN/docs/Web/API/AudioContext/createMediaStreamSource","示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MediaStreamAudioSourceNode")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

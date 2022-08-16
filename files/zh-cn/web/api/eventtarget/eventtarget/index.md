@@ -2,25 +2,28 @@
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>EventTarget()</strong></code> 构造方法将会创建一个新的{{domxref("EventTarget")}} 对象实例。</p>
+**`EventTarget()`** 构造方法将会创建一个新的{{domxref("EventTarget")}} 对象实例。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>var <var>myEventTarget</var> = new EventTarget();</pre>
+```
+var myEventTarget = new EventTarget();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("EventTarget")}} 实例。</p>
+一个 {{domxref("EventTarget")}} 实例。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre id="ct-20">class MyEventTarget extends EventTarget {
+```
+class MyEventTarget extends EventTarget {
   constructor(mySecret) {
     super();
     this._secret = mySecret;
@@ -37,18 +40,17 @@ myEventTarget.addEventListener("foo", function(e) {
 
 let event = new CustomEvent("foo", { detail: 7 });
 myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7</pre>
+let newValue = myEventTarget.secret; // == 7
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("EventTarget")}}</li>
-</ul>
+- {{domxref("EventTarget")}}

@@ -2,63 +2,63 @@
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.scrollPathIntoView()</code></strong> 是 Canvas 2D API 将当前或给定的路径滚动到窗口的方法。类似于 {{domxref("Element.scrollIntoView()")}}。</p>
+**`CanvasRenderingContext2D.scrollPathIntoView()`** 是 Canvas 2D API 将当前或给定的路径滚动到窗口的方法。类似于 {{domxref("Element.scrollIntoView()")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.scrollPathIntoView();<var>
-void <var><em>ctx</em>.<var>scrollPathIntoView</var>(path);</var></var></var>
-</pre>
+```
+void ctx.scrollPathIntoView();
+void ctx.scrollPathIntoView(path);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>path</code></dt>
- <dd>使用的{{domxref("Path2D")}} 路径。</dd>
-</dl>
+- `path`
+  - : 使用的{{domxref("Path2D")}} 路径。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_scrollPathIntoView_方法">使用 scrollPathIntoView 方法</h3>
+### 使用 scrollPathIntoView 方法
 
-<p>这是一段使用 <code>scrollPathIntoView</code> 方法的简单的代码片段。</p>
+这是一段使用 `scrollPathIntoView` 方法的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.fillRect(10, 10, 30, 30);
 ctx.scrollPathIntoView();
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;
-&lt;input id="button" type="range" min="1" max="12"&gt;
-&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas">
+<input id="button" type="range" min="1" max="12">
+</canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.rect(10, 10, 30, 30);
-ctx.scrollPathIntoView();&lt;/textarea&gt;
-</pre>
+ctx.scrollPathIntoView();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -81,22 +81,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.scrollPathIntoView")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("Element.scrollIntoView()")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("Element.scrollIntoView()")}}

@@ -2,47 +2,42 @@
 title: PushManager
 slug: Web/API/PushManager
 ---
-<p>{{ApiRef("Push API")}}</p>
+{{ApiRef("Push API")}}
 
-<p><a href="/en-US/docs/Web/API/Push_API">Push API</a> 的<code>PushManager</code>接口提供了从第三方服务器接收消息通知的能力。</p>
+[Push API](/zh-CN/docs/Web/API/Push_API) 的`PushManager`接口提供了从第三方服务器接收消息通知的能力。
 
-<p>可以通过 ServiceWorkerRegistration.pushManager 属性获得</p>
+可以通过 ServiceWorkerRegistration.pushManager 属性获得
 
-<div class="note">
-<p><strong>注意</strong>: 这个属性替代了已被废弃的{{domxref("PushRegistrationManager")}}</p>
-</div>
+> **备注：** 这个属性替代了已被废弃的{{domxref("PushRegistrationManager")}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PushManager.getSubscription()")}}</dt>
- <dd>用于获取已经存在的 push 订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着 push 订阅信息的{{domxref("PushSubscription")}}对象。如果没有已经存在的订阅，则返回<code>null</code>。</dd>
- <dt>{{domxref("PushManager.permissionState()")}}</dt>
- <dd>返回一个{{jsxref("Promise")}}，标识这当前{{domxref("PushManager")}}的权限状态，只能是<code>'granted'，</code><code>'denied'</code> ，<code>'prompt'</code>中的一种。</dd>
- <dt>{{domxref("PushManager.subscribe()")}}</dt>
- <dd>向 push 服务器（即第三方 push server）发起订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着 push 订阅信息的{{domxref("PushSubscription")}}对象。如果当前的 service worke 没有已经存在的订阅，则会创建一个新的 push 订阅。</dd>
-</dl>
+- {{domxref("PushManager.getSubscription()")}}
+  - : 用于获取已经存在的 push 订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着 push 订阅信息的{{domxref("PushSubscription")}}对象。如果没有已经存在的订阅，则返回`null`。
+- {{domxref("PushManager.permissionState()")}}
+  - : 返回一个{{jsxref("Promise")}}，标识这当前{{domxref("PushManager")}}的权限状态，只能是` 'granted'，``'denied' ` ，`'prompt'`中的一种。
+- {{domxref("PushManager.subscribe()")}}
+  - : 向 push 服务器（即第三方 push server）发起订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着 push 订阅信息的{{domxref("PushSubscription")}}对象。如果当前的 service worke 没有已经存在的订阅，则会创建一个新的 push 订阅。
 
-<h3 id="已废弃的方法">已废弃的方法</h3>
+### 已废弃的方法
 
-<dl>
- <dt>{{domxref("PushManager.hasPermission()")}} {{deprecated_inline}}</dt>
- <dd>（已废弃）返回一个{{jsxref("Promise")}}，标识着该 webapp 的<code>PushPermissionStatus</code>状态，该状态只能是<code>'granted'，</code><code>'denied'</code> ，<code>'default'</code>中的一种。目前已经被{{domxref("PushManager.permissionState()")}}取代。</dd>
- <dt>{{domxref("PushManager.register()")}} {{deprecated_inline}}</dt>
- <dd>（已废弃）发起注册 push 订阅。目前已经被{{domxref("PushManager.subscribe()")}}取代。</dd>
- <dt>{{domxref("PushManager.registrations()")}} {{deprecated_inline}}</dt>
- <dd>（已废弃）返回已存在的 push 订阅信息。目前已经被{{domxref("PushManager.getSubscription()")}}取代。</dd>
- <dt>{{domxref("PushManager.unregister()")}} {{deprecated_inline}}</dt>
- <dd>（已废弃）取消注册并删除指定的注册信息。在更新后的 API 中，请使用 {{domxref("PushSubscription.unsubscribe()")}}方法取消注册。</dd>
-</dl>
+- {{domxref("PushManager.hasPermission()")}} {{deprecated_inline}}
+  - : （已废弃）返回一个{{jsxref("Promise")}}，标识着该 webapp 的`PushPermissionStatus`状态，该状态只能是` 'granted'，``'denied' ` ，`'default'`中的一种。目前已经被{{domxref("PushManager.permissionState()")}}取代。
+- {{domxref("PushManager.register()")}} {{deprecated_inline}}
+  - : （已废弃）发起注册 push 订阅。目前已经被{{domxref("PushManager.subscribe()")}}取代。
+- {{domxref("PushManager.registrations()")}} {{deprecated_inline}}
+  - : （已废弃）返回已存在的 push 订阅信息。目前已经被{{domxref("PushManager.getSubscription()")}}取代。
+- {{domxref("PushManager.unregister()")}} {{deprecated_inline}}
+  - : （已废弃）取消注册并删除指定的注册信息。在更新后的 API 中，请使用 {{domxref("PushSubscription.unsubscribe()")}}方法取消注册。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">this.onpush = function(event) {
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // 这里我们可以将数据写入 IndexedDB，发送给其他 window 对象，或者显示一个通知
 }
@@ -59,20 +54,19 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.PushManager")}}</p>
+{{Compat("api.PushManager")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
- <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- [Using the Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)
+- [Push API](/zh-CN/docs/Web/API/Push_API)
+- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)

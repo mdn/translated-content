@@ -2,54 +2,48 @@
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p> <strong><code>HTMLMediaElement.canPlayType()</code></strong> 方法会判断传递的媒体格式参数是否能够被播放。</p>
+**`HTMLMediaElement.canPlayType()`** 方法会判断传递的媒体格式参数是否能够被播放。
 
-<div class="note"><strong>Note:</strong> This feature is not available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</div>
+> **备注：** This feature is not available in [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>str</em> = <em>audioOrVideo</em>.canPlayType(<em>mediaType</em>);
-</pre>
+```
+str = audioOrVideo.canPlayType(mediaType);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>mediaType</dt>
- <dd>{{domxref("DOMString")}}包含了媒体文件的 MIME 类型。</dd>
-</dl>
+- mediaType
+  - : {{domxref("DOMString")}}包含了媒体文件的 MIME 类型。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref('String')}}. 有可能的值为：</p>
+{{jsxref('String')}}. 有可能的值为：
 
-<ul>
- <li><code>'probably'</code>: 这种媒体文件似乎是可播放的。</li>
- <li><code>'maybe'</code>: 不能告诉你这种媒体文件是否能被播放，直到你尝试播放它。</li>
- <li><code>''</code> (empty string): 这种媒体文件不能被播放。</li>
-</ul>
+- `'probably'`: 这种媒体文件似乎是可播放的。
+- `'maybe'`: 不能告诉你这种媒体文件是否能被播放，直到你尝试播放它。
+- `''` (empty string): 这种媒体文件不能被播放。
 
-<div class="note">
-<p><strong>提醒：</strong> 以前 <code>canPlayType('video/webm')</code> 会返回 <code>'probably'。</code>从 Gecko 28 {{geckoRelease(28)}} 开始， 将返回 <code>'maybe'</code>。 ({{bug(884275)}})</p>
-</div>
+> **备注：** 以前 `canPlayType('video/webm')` 会返回 `'probably'。`从 Gecko 28 {{geckoRelease(28)}} 开始， 将返回 `'maybe'`。 ({{bug(884275)}})
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.canPlayType('video/mp4')); // "maybe"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLMediaElement.canPlayType")}}</p>
+{{Compat("api.HTMLMediaElement.canPlayType")}}
 
-<h2 id="See_Also">其他</h2>
+## 其他
 
-<ul>
- <li>接口定义， {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- 接口定义， {{domxref("HTMLMediaElement")}}.

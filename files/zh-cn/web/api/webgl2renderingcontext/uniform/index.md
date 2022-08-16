@@ -1,19 +1,18 @@
 ---
-title: 'WebGL2RenderingContext.uniform[1234][uif][v]()'
+title: WebGL2RenderingContext.uniform[1234][uif][v]()
 slug: Web/API/WebGL2RenderingContext/uniform
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的<strong><code>WebGL2RenderingContext.uniform[1234][uif][v]()</code></strong> 方法提供了 uniform（es）变量的详细值</p>
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGL2RenderingContext.uniform[1234][uif][v]()`** 方法提供了 uniform（es）变量的详细值
 
-<div class="note">
-<p><code>ui</code> <em>意为无符号整数</em>, <code>i</code> <em>意为整数，</em><code>f</code> <em>意为浮点数</em>, 并且 <code>v</code> <em>意为矢量。</em><br>
- 并不是所有的组合都是有效的：<code>u</code> 不能是 <code>f</code>的组合。详见下方语法表格。用 正则表达式概括语法：<code>uniform[1234](u?i|f)v?</code></p>
-</div>
+> **备注：** `ui` _意为无符号整数_, `i` _意为整数，_`f` _意为浮点数_, 并且 `v` _意为矢量。_
+> 并不是所有的组合都是有效的：`u` 不能是 `f`的组合。详见下方语法表格。用 正则表达式概括语法：`uniform[1234](u?i|f)v?`
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void gl.uniform1ui(location, v0);
+```
+void gl.uniform1ui(location, v0);
 void gl.uniform2ui(location, v0, v1);
 void gl.uniform3ui(location, v0, v1, v2);
 void gl.uniform4ui(location, v0, v1, v2, v3);
@@ -29,36 +28,31 @@ void gl.uniform1uiv(location, data, optional srcOffset, optional srcLength);
 void gl.uniform2uiv(location, data, optional srcOffset, optional srcLength);
 void gl.uniform3uiv(location, data, optional srcOffset, optional srcLength);
 void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>location</dt>
- <dd>一个 {{domxref("WebGLUniformLocation")}} 对象包含了本地 uniform 属性的修改。</dd>
- <dt><code>value, v0, v1, v2, v3</code></dt>
- <dd>一个新的值被应用到 uniform 变量当中。合理情况：
- <ul>
-  <li>{{jsxref("Number")}} 如果是无符号整数值 (则用 <code>ui</code>方法),如果是整数值 (则用 <code>i</code>方法), 如果是浮点数 (则用<code>f</code>方法).</li>
-  <li> {{jsxref("Uint32Array")}} 用于无符号整数向量（矢量）方法 (则用<code>uiv</code>方法).</li>
- </ul>
- </dd>
-</dl>
+- location
+  - : 一个 {{domxref("WebGLUniformLocation")}} 对象包含了本地 uniform 属性的修改。
+- `value, v0, v1, v2, v3`
 
-<h3 id="返回值">返回值</h3>
+  - : 一个新的值被应用到 uniform 变量当中。合理情况：
 
-<p>没有返回值</p>
+    - {{jsxref("Number")}} 如果是无符号整数值 (则用 `ui`方法),如果是整数值 (则用 `i`方法), 如果是浮点数 (则用`f`方法).
+    - {{jsxref("Uint32Array")}} 用于无符号整数向量（矢量）方法 (则用`uiv`方法).
 
-<h2 id="规范">规范</h2>
+### 返回值
+
+没有返回值
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGL2RenderingContext.uniform1ui")}}</p>
+{{Compat("api.WebGL2RenderingContext.uniform1ui")}}
 
-<h2 id="详见">详见</h2>
+## 详见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.uniform()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniform()")}}

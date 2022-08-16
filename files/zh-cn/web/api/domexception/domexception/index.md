@@ -2,41 +2,38 @@
 title: DOMException()
 slug: Web/API/DOMException/DOMException
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><strong><code>DOMException()</code></strong> 构造函数返回一个包含指定的信息和名称的 <code>DOMException</code> 对象。</p>
+**`DOMException()`** 构造函数返回一个包含指定的信息和名称的 `DOMException` 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var domException = new DOMException();
+```
+var domException = new DOMException();
 var domException = new DOMException(message);
-var domException = new DOMException(message, name);</pre>
+var domException = new DOMException(message, name);
+```
 
-<dl>
-</dl>
+### 参数
 
-<h3 id="参数">参数</h3>
+- `message` {{optional_inline}}
+  - : 对异常的描述。如果不存在，使用空字符串 `''` .
+- `name` {{optional_inline}}
+  - : 返回一个 {{domxref("DOMString")}} 包含与 [error constant](Web/API/DOMException#Error_constants) 错误相关的字符串常数之一。
+- ### 返回值
 
-<dl>
- <dt><code>message</code> {{optional_inline}}</dt>
- <dd>对异常的描述。如果不存在，使用空字符串 <code>''</code> .</dd>
- <dt><code>name</code> {{optional_inline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}} 包含与 <a href="Web/API/DOMException#Error_constants">error constant</a> 错误相关的字符串常数之一。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
- <dt><strong>{{domxref("DOMException")}}</strong></dt>
- <dd>一个新创建的 {{domxref("DOMException")}} 对象。</dd>
-</dl>
+  **{{domxref("DOMException")}}**
 
-<h2 id="例子">例子</h2>
+  - : 一个新创建的 {{domxref("DOMException")}} 对象。
 
-<p>TBD</p>
+## 例子
 
-<h2 id="规范">规范</h2>
+TBD
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DOMException.DOMException")}}

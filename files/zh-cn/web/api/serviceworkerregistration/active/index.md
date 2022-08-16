@@ -2,39 +2,36 @@
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>active</code></strong> property of the {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose {{domxref("ServiceWorker.state")}} is <code style="font-style: normal;">activating</code> or <code style="font-style: normal;">activated</code>. This property is initially set to <code style="font-style: normal;">null</code>.</p>
+The **`active`** property of the {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose {{domxref("ServiceWorker.state")}} is `activating` or `activated`. This property is initially set to `null`.
 
-<p>An active worker controls a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</p>
+An active worker controls a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
 
-<div class="note">
-<p><strong>Note</strong>: This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **备注：** This feature is available in [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox" style="font-size: 14px;">sw = ServiceWorker.active
-</pre>
+```
+sw = ServiceWorker.active
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ServiceWorker")}} object, if it is currently in an <code>activating</code> or <code>activated</code> state.</p>
+A {{domxref("ServiceWorker")}} object, if it is currently in an `activating` or `activated` state.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.ServiceWorkerRegistration.active")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)

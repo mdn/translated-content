@@ -2,51 +2,51 @@
 title: 'Document: touchcancel event'
 slug: Web/API/Document/touchcancel_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>touchcancel</code>当一个或多个触摸点以特定于实现的方式中断时（例如，创建了太多的触摸点），将触发该事件。</p>
+`touchcancel`当一个或多个触摸点以特定于实现的方式中断时（例如，创建了太多的触摸点），将触发该事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">冒泡</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">可取消</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("TouchEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理程序属性</th>
-   <td>
-    <article>
-    <p>{{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}</p>
-    </article>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">冒泡</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">可取消</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("TouchEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理程序属性</th>
+      <td>
+        <article>
+          <p>
+            {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
+          </p>
+        </article>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这些事件的代码示例可在专用页面上找到：<a href="/en-US/docs/DOM/Touch_events">触摸事件</a>。</p>
+这些事件的代码示例可在专用页面上找到：[触摸事件](/zh-CN/docs/DOM/Touch_events)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Document.touchcancel_event")}}</p>
+{{Compat("api.Document.touchcancel_event")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">触摸事件</a></li>
- <li>{{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}</li>
- <li>目标为 {{domxref("Element")}} 的相同事件：{{domxref("Element/touchcancel_event", "touchcancel")}}</li>
-</ul>
+- [触摸事件](/zh-CN/docs/Web/API/Touch_events)
+- {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
+- 目标为 {{domxref("Element")}} 的相同事件：{{domxref("Element/touchcancel_event", "touchcancel")}}

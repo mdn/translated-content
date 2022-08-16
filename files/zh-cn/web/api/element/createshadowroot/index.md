@@ -2,29 +2,26 @@
 title: Element.createShadowRoot()
 slug: Web/API/Element/createShadowRoot
 ---
-<p>使用<code>Element.createShadowRoot</code> 创建的实例 <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">阴影 DOM</a>。创建 shadow DOM 时，它始终附加到现有元素。创建 shadow DOM 之后，它所附加的元素称为{{glossary("shadow root")}}。</p>
+使用`Element.createShadowRoot` 创建的实例 [阴影 DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM)。创建 shadow DOM 时，它始终附加到现有元素。创建 shadow DOM 之后，它所附加的元素称为{{glossary("shadow root")}}。
 
-<div class="note">
-<p>不推荐使用此方法，而使用{{DOMxRef("Element.attachShadow()","attachShadow()")}}。</p>
-</div>
+> **备注：** 不推荐使用此方法，而使用{{DOMxRef("Element.attachShadow()","attachShadow()")}}。
 
-<h2 id="Syntax">句法</h2>
+## 句法
 
-<pre class="syntaxbox">var <em>shadowroot = </em><em>element</em>.createShadowRoot();
-</pre>
+```
+var shadowroot = element.createShadowRoot();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>没有参数。</p>
+没有参数。
 
-<h3 id="结果值">结果值</h3>
+### 结果值
 
-<p>返回{{DOMxRef("ShadowRoot")}}。</p>
+返回{{DOMxRef("ShadowRoot")}}。
 
-<h2 id="产品规格">产品规格</h2>
+## 产品规格
 
-<p>任何规格都不再定义此功能。</p>
+任何规格都不再定义此功能。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-
+## 浏览器兼容性

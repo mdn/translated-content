@@ -2,66 +2,72 @@
 title: mousemove
 slug: Web/API/Element/mousemove_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当指针设备 ( 通常指鼠标 ) 在元素上移动时，mousemove 事件被触发。</p>
+当指针设备 ( 通常指鼠标 ) 在元素上移动时，mousemove 事件被触发。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">是否冒泡</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">是否可取消</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理</th>
-   <td>{{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">是否冒泡</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">是否可取消</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的例子将使用 {{domxref("Element/mousedown_event", "mousedown")}}, <code>mousemove</code> 以及 {{domxref("Element/mouseup_event", "mouseup")}} 事件，实现一个允许用户在 HTML5 <a href="/zh-CN/docs/Web/API/Canvas_API">canvas</a>绘图的功能。这个例子的功能很简单：线的粗细设置为 1，颜色始终为黑色。</p>
+下面的例子将使用 {{domxref("Element/mousedown_event", "mousedown")}}, `mousemove` 以及 {{domxref("Element/mouseup_event", "mouseup")}} 事件，实现一个允许用户在 HTML5 [canvas](/zh-CN/docs/Web/API/Canvas_API)绘图的功能。这个例子的功能很简单：线的粗细设置为 1，颜色始终为黑色。
 
-<p>当页面加载完成，我们使用变量 <code>myPics</code> 和<code>context</code>分别保存 ID 为<code>myPics</code>的 DOM 元素和接下来需要加工的的 2d 元素。</p>
+当页面加载完成，我们使用变量 `myPics` 和`context`分别保存 ID 为`myPics`的 DOM 元素和接下来需要加工的的 2d 元素。
 
-<p>当<code>mousedown</code>事件被触发时，绘图也开始了。首先，我们将鼠标的<code>x</code>坐标和<code>y</code>坐标分别赋值给变量<code>x</code>和<code>y</code>，然后设置<code>isDrawing</code>为<code>true</code>。</p>
+当`mousedown`事件被触发时，绘图也开始了。首先，我们将鼠标的`x`坐标和`y`坐标分别赋值给变量`x`和`y`，然后设置`isDrawing`为`true`。
 
-<p>当鼠标在页面上移动时，<code>mousemove</code>事件被触发。当<code>isDrawing</code>为 true 时，事件处理程序将会调用<code>drawLine</code>函数，该函数从变量<code>x</code>和<code>y</code>所指的位置开始，到现在鼠标所在的位置，画一条线。</p>
+当鼠标在页面上移动时，`mousemove`事件被触发。当`isDrawing`为 true 时，事件处理程序将会调用`drawLine`函数，该函数从变量`x`和`y`所指的位置开始，到现在鼠标所在的位置，画一条线。
 
-<p>当<code>drawLine()</code>调用结束时，我们需要把坐标赋值到<code>x</code>和<code>y</code>中。</p>
+当`drawLine()`调用结束时，我们需要把坐标赋值到`x`和`y`中。
 
-<p><code>mouseup</code>事件绘制图形的最后一段，并把<code>x</code>和<code>y</code>设置为 0.通过设置 isDra</p>
+`mouseup`事件绘制图形的最后一段，并把`x`和`y`设置为 0.通过设置 isDra
 
-<p><code>mouseup</code>事件绘制图形的最后一段，并把<code>x</code>和<code>y</code>设置为 0.通过设置<code>isDrawing</code>为 false，可以停止绘制。</p>
+`mouseup`事件绘制图形的最后一段，并把`x`和`y`设置为 0.通过设置`isDrawing`为 false，可以停止绘制。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;h1&gt;Drawing with mouse events&lt;/h1&gt;
-&lt;canvas id="myPics" width="560" height="360"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<h1>Drawing with mouse events</h1>
+<canvas id="myPics" width="560" height="360"></canvas>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">canvas {
+```css
+canvas {
   border: 1px solid black;
   width: 560px;
   height: 360px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">// When true, moving the mouse draws on the canvas
+```js
+// When true, moving the mouse draws on the canvas
 let isDrawing = false;
 let x = 0;
 let y = 0;
@@ -73,13 +79,13 @@ const context = myPics.getContext('2d');
 const rect = myPics.getBoundingClientRect();
 
 // Add the event listeners for mousedown, mousemove, and mouseup
-myPics.addEventListener('mousedown', e =&gt; {
+myPics.addEventListener('mousedown', e => {
   x = e.clientX - rect.left;
   y = e.clientY - rect.top;
   isDrawing = true;
 });
 
-myPics.addEventListener('mousemove', e =&gt; {
+myPics.addEventListener('mousemove', e => {
   if (isDrawing === true) {
     drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
     x = e.clientX - rect.left;
@@ -87,7 +93,7 @@ myPics.addEventListener('mousemove', e =&gt; {
   }
 });
 
-window.addEventListener('mouseup', e =&gt; {
+window.addEventListener('mouseup', e => {
   if (isDrawing === true) {
     drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
     x = 0;
@@ -104,33 +110,30 @@ function drawLine(context, x1, y1, x2, y2) {
   context.lineTo(x2, y2);
   context.stroke();
   context.closePath();
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例", 640, 450)}}</p>
+{{EmbedLiveSample("示例", 640, 450)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<div>
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{Event("mousedown")}}</li>
- <li>{{Event("mouseup")}}</li>
- <li>{{Event("click")}}</li>
- <li>{{Event("dblclick")}}</li>
- <li>{{Event("mouseover")}}</li>
- <li>{{Event("mouseout")}}</li>
- <li>{{Event("mouseenter")}}</li>
- <li>{{Event("mouseleave")}}</li>
- <li>{{Event("contextmenu")}}</li>
-</ul>
-</div>
+- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- {{Event("mousedown")}}
+- {{Event("mouseup")}}
+- {{Event("click")}}
+- {{Event("dblclick")}}
+- {{Event("mouseover")}}
+- {{Event("mouseout")}}
+- {{Event("mouseenter")}}
+- {{Event("mouseleave")}}
+- {{Event("contextmenu")}}

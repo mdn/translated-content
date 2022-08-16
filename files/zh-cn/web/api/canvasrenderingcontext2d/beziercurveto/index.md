@@ -2,46 +2,47 @@
 title: CanvasRenderingContext2D.bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.bezierCurveTo()</code></strong> 是 Canvas 2D API 绘制三次贝赛尔曲线路径的方法。该方法需要三个点。 第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 <code>moveTo()</code> 进行修改。</p>
+**`CanvasRenderingContext2D.bezierCurveTo()`** 是 Canvas 2D API 绘制三次贝赛尔曲线路径的方法。该方法需要三个点。 第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 `moveTo()` 进行修改。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);</var>
-</pre>
+```
+void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>cp1x</code></dt>
- <dd>第一个控制点的 x 轴坐标。</dd>
- <dt><code>cp1y</code></dt>
- <dd>第一个控制点的 y 轴坐标。</dd>
- <dt><code>cp2x</code></dt>
- <dd>第二个控制点的 x 轴坐标。</dd>
- <dt><code>cp2y</code></dt>
- <dd>第二个控制点的 y 轴坐标。</dd>
- <dt><code>x</code></dt>
- <dd>结束点的 x 轴坐标。</dd>
- <dt><code>y</code></dt>
- <dd>结束点的 y 轴坐标。</dd>
-</dl>
+- `cp1x`
+  - : 第一个控制点的 x 轴坐标。
+- `cp1y`
+  - : 第一个控制点的 y 轴坐标。
+- `cp2x`
+  - : 第二个控制点的 x 轴坐标。
+- `cp2y`
+  - : 第二个控制点的 y 轴坐标。
+- `x`
+  - : 结束点的 x 轴坐标。
+- `y`
+  - : 结束点的 y 轴坐标。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_bezierCurveTo_方法">使用 <code>bezierCurveTo</code> 方法</h3>
+### 使用 `bezierCurveTo` 方法
 
-<p>这是一段绘制贝赛尔曲线的简单的代码片段。  控制点是红色的， 开始和结束点是蓝色的。</p>
+这是一段绘制贝赛尔曲线的简单的代码片段。 控制点是红色的， 开始和结束点是蓝色的。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
@@ -59,27 +60,29 @@ ctx.fillStyle = 'red';
 // control point one
 ctx.fillRect(230, 30, 10, 10);
 // control point two
-ctx.fillRect(150, 70, 10, 10);</pre>
+ctx.fillRect(150, 70, 10, 10);
+```
 
-<p>{{ EmbedLiveSample('使用_bezierCurveTo_方法', 315, 165) }}</p>
+{{ EmbedLiveSample('使用_bezierCurveTo_方法', 315, 165) }}
 
-<h3 id="尝试_bezierCurveTo_参数">尝试 <code>bezierCurveTo</code> 参数</h3>
+### 尝试 `bezierCurveTo` 参数
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.bezierCurveTo(50, 100, 180, 10, 20, 10);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -102,22 +105,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('尝试_bezierCurveTo_参数', 700, 360) }}</p>
+{{ EmbedLiveSample('尝试_bezierCurveTo_参数', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.bezierCurveTo")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
- <li><a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">维基百科关于贝赛尔曲线</a>。</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- [维基百科关于贝赛尔曲线](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)。

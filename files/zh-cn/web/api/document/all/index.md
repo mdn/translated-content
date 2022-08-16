@@ -2,28 +2,24 @@
 title: document.all
 slug: Web/API/Document/all
 ---
-<div>{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}</div>
+{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
 
-<p>{{domxref("Document")}} 接口上的一个只读属性。返回一个 {{domxref("HTMLAllCollection")}}，包含了页面上的所有元素。</p>
+{{domxref("Document")}} 接口上的一个只读属性。返回一个 {{domxref("HTMLAllCollection")}}，包含了页面上的所有元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>htmlAllCollection</em> = document.all;</pre>
+```
+var htmlAllCollection = document.all;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>返回一个 {{domxref("HTMLAllCollection")}}，包含了页面上的所有元素。</p>
+返回一个 {{domxref("HTMLAllCollection")}}，包含了页面上的所有元素。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<article>
-<p>{{Compat("api.Document.all")}}</p>
-</article>
-
-<article></article>
+{{Compat("api.Document.all")}}

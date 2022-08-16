@@ -2,83 +2,81 @@
 title: CanvasRenderingContext2D.isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code style="font-style: normal;"><strong>CanvasRenderingContext2D</strong></code><strong><code>.isPointInPath()</code></strong>是 Canvas 2D API 用于判断在当前路径中是否包含检测点的方法<strong>。</strong></p>
+**`CanvasRenderingContext2D.isPointInPath()`** 是 Canvas 2D API 用于判断在当前路径中是否包含检测点的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">boolean <var><em>ctx</em>.isPointInPath(x, y);
-boolean <var><em>ctx</em>.isPointInPath(x, y, fillRule);
+```
+boolean ctx.isPointInPath(x, y);
+boolean ctx.isPointInPath(x, y, fillRule);
 
-boolean <var><em>ctx</em>.isPointInPath(path, x, y);
-boolean <var><em>ctx</em>.isPointInPath(path, x, y, fillRule);</var></var></var></var>
-</pre>
+boolean ctx.isPointInPath(path, x, y);
+boolean ctx.isPointInPath(path, x, y, fillRule);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>x</dt>
- <dd>检测点的 X 坐标</dd>
- <dt>y</dt>
- <dd>检测点的 Y 坐标</dd>
- <dt><code>fillRule</code></dt>
- <dd>用来决定点在路径内还是在路径外的算法。<br>
- 允许的值：
- <ul>
-  <li><code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">非零环绕规则 </a>，默认的规则。</li>
-  <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">奇偶环绕原则 </a>。</li>
- </ul>
- </dd>
- <dt><code>path</code></dt>
- <dd>{{domxref("Path2D")}}应用的路径。</dd>
-</dl>
+- x
+  - : 检测点的 X 坐标
+- y
+  - : 检测点的 Y 坐标
+- `fillRule`
 
-<h3 id="返回值">返回值</h3>
+  - : 用来决定点在路径内还是在路径外的算法。
+    允许的值：
 
-<dl>
- <dt>{{jsxref("Boolean")}}</dt>
- <dd>一个 Boolean 值，当检测点包含在当前或指定的路径内，返回 true；否则返回 false。</dd>
-</dl>
+    - **`"nonzero`**": [非零环绕规则 ](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
+    - **`"evenodd"`**: [奇偶环绕原则 ](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
-<h2 id="示例">示例</h2>
+- `path`
+  - : {{domxref("Path2D")}}应用的路径。
 
-<h3 id="使用_isPointInPath_方法">使用 <code>isPointInPath</code> 方法</h3>
+### 返回值
 
-<p>这是一段简单的代码片段，使用 <code>isPointInPath</code> 方法检查某点是否在当前的路径内。</p>
+- {{jsxref("Boolean")}}
+  - : 一个 Boolean 值，当检测点包含在当前或指定的路径内，返回 true；否则返回 false。
 
-<h4 id="HTML">HTML</h4>
+## 示例
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### 使用 `isPointInPath` 方法
 
-<h4 id="JavaScript">JavaScript</h4>
+这是一段简单的代码片段，使用 `isPointInPath` 方法检查某点是否在当前的路径内。
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
 console.log(ctx.isPointInPath(10, 10)); // true
-</pre>
+```
 
-<p>修改下面的代码，在线查看 canvas 的变化并在你的 <a href="/en-US/docs/Tools/Browser_Console">控制台</a> 中观察日志信息：</p>
+修改下面的代码，在线查看 canvas 的变化并在你的 [控制台](/zh-CN/docs/Tools/Browser_Console) 中观察日志信息：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
-console.log(ctx.isPointInPath(10, 10)); // true&lt;/textarea&gt;
-</pre>
+console.log(ctx.isPointInPath(10, 10)); // true</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -101,21 +99,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.isPointInPath")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.

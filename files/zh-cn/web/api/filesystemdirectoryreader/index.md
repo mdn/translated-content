@@ -2,38 +2,30 @@
 title: FileSystemDirectoryReader
 slug: Web/API/FileSystemDirectoryReader
 ---
-<p>{{APIRef("File System API")}}{{Non-standard_header}}</p>
+{{APIRef("File System API")}}{{Non-standard_header}}
 
-<p>The <code>FileSystemDirectoryReader</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> lets you access the {{domxref("FileEntry")}}-based objects (generally {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}) representing each entry in a directory.</p>
+The `FileSystemDirectoryReader` interface of the [File and Directory Entries API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) lets you access the {{domxref("FileEntry")}}-based objects (generally {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}) representing each entry in a directory.
 
-<div class="note">
-<p>Because this is a non-standard API, whose specification is not currently on a standards track, it's important to keep in mind that not all browsers implement it, and those that do may implement only small portions of it. Check the <a href="#browser_compatibility">Browser compatibility</a> section for details.</p>
-</div>
+> **备注：** Because this is a non-standard API, whose specification is not currently on a standards track, it's important to keep in mind that not all browsers implement it, and those that do may implement only small portions of it. Check the [Browser compatibility](#browser_compatibility) section for details.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}</dt>
- <dd>Returns a an array containing some number of the directory's entries. Each item in the array is an object based on {{domxref("FileSystemEntry")}}—typically either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.</dd>
-</dl>
+- {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}
+  - : Returns a an array containing some number of the directory's entries. Each item in the array is an object based on {{domxref("FileSystemEntry")}}—typically either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.FileSystemDirectoryReader")}}
 
+## See also
 
-<p>{{Compat("api.FileSystemDirectoryReader")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
- <li>{{domxref("FileSystemDirectoryEntry")}}</li>
- <li>{{domxref("FileSystem")}}</li>
-</ul>
+- [File and Directory Entries API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryEntry")}}
+- {{domxref("FileSystem")}}

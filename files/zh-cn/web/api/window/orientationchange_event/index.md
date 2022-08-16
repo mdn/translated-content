@@ -2,50 +2,53 @@
 title: orientationchange
 slug: Web/API/Window/orientationchange_event
 ---
-<p><code>orientationchange</code>事件在设备的纵横方向改变时触发。</p>
+`orientationchange`事件在设备的纵横方向改变时触发。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("Window/onorientationchange", "onorientationchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("Window/onorientationchange", "onorientationchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>你可以在{{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 <code>orientationchange</code> 事件：</p>
+你可以在{{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 `orientationchange` 事件：
 
-<pre class="brush:js;">window.addEventListener("orientationchange", function() {
+```js
+window.addEventListener("orientationchange", function() {
   console.log("the orientation of the device is now " + screen.orientation.angle);
 });
-</pre>
+```
 
-<p>或者使用 {{domxref("Window/onorientationchange", "onorientationchange")}} 事件处理程序属性：</p>
+或者使用 {{domxref("Window/onorientationchange", "onorientationchange")}} 事件处理程序属性：
 
-<pre class="brush: js">window.onorientationchange = function() {
+```js
+window.onorientationchange = function() {
   console.log("the orientation of the device is now " + screen.orientation.angle);
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Window.orientationchange_event")}}</p>
+{{Compat("api.Window.orientationchange_event")}}

@@ -2,39 +2,36 @@
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>{{domxref("MutationObserver")}} 的 <code><strong>disconnect()</strong></code> 方法告诉观察者停止观察变动。 可以通过调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法来重用观察者。</p>
+{{domxref("MutationObserver")}} 的 **`disconnect()`** 方法告诉观察者停止观察变动。 可以通过调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法来重用观察者。
 
-<ul>
-</ul>
+## 语法
 
-<h2 id="语法">语法</h2>
+```
+mutationObserver.disconnect()
+```
 
-<pre class="syntaxbox"><em>mutationObserver</em>.disconnect()
-</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+无。
 
-<p>无。</p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+`undefined`。
 
-<p><code>undefined</code>.</p>
+> **备注：** 所有已经检测到但是尚未向观察者报告的变动都会被丢弃。
 
-<div class="note">
-<p><strong>注意：</strong>所有已经检测到但是尚未向观察者报告的变动都会被丢弃。</p>
-</div>
+## 使用说明
 
-<h2 id="使用说明">使用说明</h2>
+如果被观察的元素被从 DOM 中移除，然后被浏览器的垃圾回收机制释放，此 `MutationObserver` 将同样被删除。
 
-<p>如果被观察的元素被从 DOM 中移除，然后被浏览器的垃圾回收机制释放，此 <code>MutationObserver</code> 将同样被删除。</p>
+## 示例
 
-<h2 id="示例">示例</h2>
+下面的示例创建了一个观察者，接着与之断开连接，让它可以重复使用。
 
-<p>下面的示例创建了一个观察者，接着与之断开连接，让它可以重复使用。</p>
-
-<pre class="brush: js">var targetNode = document.querySelector("#someElement");
+```js
+var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
   attributes: true
@@ -45,14 +42,13 @@ observer.observe(targetNode, observerOptions);
 
 /* some time later... */
 
-observer.disconnect();</pre>
+observer.disconnect();
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.MutationObserver.disconnect")}}</p>
+{{Compat("api.MutationObserver.disconnect")}}

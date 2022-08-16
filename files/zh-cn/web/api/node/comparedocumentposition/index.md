@@ -2,97 +2,60 @@
 title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p><code><strong>Node.compareDocumentPosition()</strong></code> 可以比较当前节点与任意文档中的另一个节点的位置关系。</p>
+**`Node.compareDocumentPosition()`** 可以比较当前节点与任意文档中的另一个节点的位置关系。
 
-<p>返回值是一个具有以下值的位掩码：</p>
+返回值是一个具有以下值的位掩码：
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">常量名</th>
-   <th scope="col">十进制值</th>
-   <th scope="col">含义</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOCUMENT_POSITION_DISCONNECTED</code></td>
-   <td>1</td>
-   <td>不在同一文档中</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_PRECEDING</code></td>
-   <td>2</td>
-   <td>otherNode 在 node 之前</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_FOLLOWING</code></td>
-   <td>4</td>
-   <td>otherNode 在 node 之后</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINS</code></td>
-   <td>8</td>
-   <td>otherNode 包含 node</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td>
-   <td>16</td>
-   <td>otherNode 被 node 包含</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td>
-   <td>32</td>
-   <td>待定</td>
-  </tr>
- </tbody>
-</table>
+| 常量名                                      | 十进制值 | 含义                   |
+| ------------------------------------------- | -------- | ---------------------- |
+| `DOCUMENT_POSITION_DISCONNECTED`            | 1        | 不在同一文档中         |
+| `DOCUMENT_POSITION_PRECEDING`               | 2        | otherNode 在 node 之前 |
+| `DOCUMENT_POSITION_FOLLOWING`               | 4        | otherNode 在 node 之后 |
+| `DOCUMENT_POSITION_CONTAINS`                | 8        | otherNode 包含 node    |
+| `DOCUMENT_POSITION_CONTAINED_BY`            | 16       | otherNode 被 node 包含 |
+| `DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` | 32       | 待定                   |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><em>compareMask</em> = node.compareDocumentPosition( otherNode )
-</pre>
+```
+compareMask = node.compareDocumentPosition( otherNode )
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>otherNode</code></dt>
- <dd>用于比较位置的 <code>Node</code> 。</dd>
-</dl>
+- `otherNode`
+  - : 用于比较位置的 `Node` 。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个表示 <code>Node</code> 和 <code>otherNode </code>在 {{domxref("Document")}} 中关系的整数值。在一些场景下，可能设置了不止一位比特值。比如 <code>otherNode</code> 在文档中是靠前的且包含了 <code>Node</code>, 那么<code>DOCUMENT_POSITION_CONTAINS</code> 和 <code>DOCUMENT_POSITION_PRECEDING</code> 位都会设置，所以结果会是 0x0A 即十进制下的 10。</p>
+一个表示 `Node` 和 `otherNode `在 {{domxref("Document")}} 中关系的整数值。在一些场景下，可能设置了不止一位比特值。比如 `otherNode` 在文档中是靠前的且包含了 `Node`, 那么`DOCUMENT_POSITION_CONTAINS` 和 `DOCUMENT_POSITION_PRECEDING` 位都会设置，所以结果会是 0x0A 即十进制下的 10。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush:js">var head = document.getElementsByTagName('head').item(0);
-if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
+```js
+var head = document.getElementsByTagName('head').item(0);
+if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
   console.log("well-formed document");
 } else {
-  console.log("&lt;head&gt; is not before &lt;body&gt;");
+  console.log("<head> is not before <body>");
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>注：</strong> 因为<code>compareDocumentPosition</code>返回的是一个位掩码，所以必须再使用<a href="/zh-CN/docs/JavaScript/Reference/Operators/Bitwise_Operators">按位与运算符</a>才能得到有意义的值。</p>
-</div>
+> **备注：** 因为`compareDocumentPosition`返回的是一个位掩码，所以必须再使用[按位与运算符](/zh-CN/docs/JavaScript/Reference/Operators/Bitwise_Operators)才能得到有意义的值。
 
-<p>注意第一条语句使用了带有参数 0 的 {{domxref("NodeList.item()")}} 方法，它和 getElementsByTagName('head')[0] 是一样的。</p>
+注意第一条语句使用了带有参数 0 的 {{domxref("NodeList.item()")}} 方法，它和 getElementsByTagName('head')\[0] 是一样的。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><code><a href="/zh-CN/docs/DOM/Node.contains">Node.contains</a></code></li>
- <li><a href="http://ejohn.org/blog/comparing-document-position/">John Resig - Comparing Document Position</a></li>
-</ul>
+- [`Node.contains`](/zh-CN/docs/DOM/Node.contains)
+- [John Resig - Comparing Document Position](http://ejohn.org/blog/comparing-document-position/)

@@ -2,36 +2,33 @@
 title: Comment()
 slug: Web/API/Comment/Comment
 ---
-<p>{{ApiRef("DOM")}}{{seeCompatTable}}</p>
+{{ApiRef("DOM")}}{{seeCompatTable}}
 
-<p>构造函数 <code><strong>Comment()</strong></code> 创建一个 {{domxref("Comment")}} 对象并返回，这个对象以可选的 {{domxref("DOMString")}} 参数作为它的文本内容。</p>
+构造函数 **`Comment()`** 创建一个 {{domxref("Comment")}} 对象并返回，这个对象以可选的 {{domxref("DOMString")}} 参数作为它的文本内容。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>comment</em>1 = new Comment(); // Create an empty comment
-<code><em>comment2</em></code> = new Comment("This is a comment");
-</pre>
+```
+comment1 = new Comment(); // Create an empty comment
+comment2 = new Comment("This is a comment");
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js  language-js">var comment = new Comment("Test");</pre>
+```js
+var comment = new Comment("Test");
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Comment.Comment")}}
 
+> **备注：** 对于不支持本构造函数的浏览器， {{domxref("Document.createComment()")}} 或许可以使用。
 
-<p>{{Compat("api.Comment.Comment")}}</p>
+## 相关文档
 
-<div class="note">
-<p><strong>提示：</strong>对于不支持本构造函数的浏览器， {{domxref("Document.createComment()")}} 或许可以使用。</p>
-</div>
-
-<h2 id="相关文档">相关文档</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

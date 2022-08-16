@@ -2,44 +2,44 @@
 title: 'Document: scroll event'
 slug: Web/API/Document/scroll_event
 ---
-<p>文档视图或者一个元素在滚动时，会触发元素的<strong><code>scroll</code></strong>事件。</p>
+文档视图或者一个元素在滚动时，会触发元素的**`scroll`**事件。
 
 <table class="properties">
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
-  </tr>
- </tbody>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>在 iOS UIWebViews 中， 滚动进行时不会触发 <code>scroll</code> 事件；只有当滚动结束后事件才会被触发。参见 <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a>。Safari 和 WKWebViews 则没有这个问题。</p>
-</div>
+> **备注：** 在 iOS UIWebViews 中， 滚动进行时不会触发 `scroll` 事件；只有当滚动结束后事件才会被触发。参见 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari 和 WKWebViews 则没有这个问题。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Scroll_事件节流">Scroll 事件节流</h3>
+### Scroll 事件节流
 
-<p>由于 <code>scroll</code> 事件可被高频触发，事件处理程序不应该执行高性能消耗的操作，如 DOM 操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件节流，如下所述。</p>
+由于 `scroll` 事件可被高频触发，事件处理程序不应该执行高性能消耗的操作，如 DOM 操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件节流，如下所述。
 
-<p>然而需要注意的是，输入事件和动画帧常常以差不多的频率被触发，因此以下优化常常不必要。这个例子使用 <code>requestAnimationFrame</code> 优化 <code>scroll</code> 事件。</p>
+然而需要注意的是，输入事件和动画帧常常以差不多的频率被触发，因此以下优化常常不必要。这个例子使用 `requestAnimationFrame` 优化 `scroll` 事件。
 
-<pre class="brush: js">// 参见: http://www.html5rocks.com/en/tutorials/speed/animations/
+```js
+// 参见: http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let last_known_scroll_position = 0;
 let ticking = false;
@@ -59,20 +59,19 @@ window.addEventListener('scroll', function(e) {
 
     ticking = true;
   }
-});</pre>
+});
+```
 
-<p>在 <code><a href="/en-US/docs/Web/API/Document/defaultView/resize_event">resize</a></code> 事件页面中查看更多类似的例子。</p>
+在 [`resize`](/en-US/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Document.scroll_event")}}</p>
+{{Compat("api.Document.scroll_event")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Element/scroll_event">Element: <code>scroll</code> event</a></li>
-</ul>
+- [Element: `scroll` event](/zh-CN/docs/Web/API/Element/scroll_event)

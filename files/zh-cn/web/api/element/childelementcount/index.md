@@ -2,41 +2,41 @@
 title: Element.childElementCount
 slug: Web/API/Element/childElementCount
 ---
-<p>{{ APIRef("DOM") }} </p>
+{{ APIRef("DOM") }}
 
-<p> <code><strong>Element.childElementCount </strong></code>只读属性返回一个<em><strong>无符号长整型数字</strong></em>，表示给定元素的子元素数。</p>
+**`Element.childElementCount `**只读属性返回一个***无符号长整型数字***，表示给定元素的子元素数。
 
-<div class="note">
-<p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, <code>childElementCount</code> moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
-</div>
+> **备注：** This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, `childElementCount` moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.
 
-<p> </p>
+## 语法
 
-<h2 id="Syntax_and_values">语法</h2>
+```
+var count = node.childElementCount;
+```
 
-<pre>var <var>count</var> = <em>node</em>.childElementCount;</pre>
+```
+var elCount = elementNodeReference.childElementCount;
+```
 
-<pre class="eval">var <em>elCount</em> = elementNodeReference.childElementCount;
-</pre>
+- count
+  - : holds the return value an `unsigned long `(simply an integer) type.
+- node
+  - : is an object representing a `Document`, `DocumentFragment` or `Element`.
 
-<dl>
- <dt>count</dt>
- <dd>holds the return value an <code>unsigned long </code>(simply an integer) type.</dd>
- <dt>node</dt>
- <dd>is an object representing a <code>Document</code>, <code>DocumentFragment</code> or <code>Element</code>.</dd>
-</dl>
+## 例子
 
-<h2 id="例子">例子</h2>
-
-<pre><code>var foo = document.getElementById("foo");
-if (foo.childElementCount &gt; 0) {
+```
+var foo = document.getElementById("foo");
+if (foo.childElementCount > 0) {
     // do something
-}</code></pre>
+}
+```
 
-<p>下例演示了一个元素节点的<code>childElementCount</code>属性以及<code>children</code>属性的用法。</p>
+下例演示了一个元素节点的`childElementCount`属性以及`children`属性的用法。
 
-<pre class="eval">&lt;head&gt;
-    &lt;script type="text/javascript"&gt;
+```
+<head>
+    <script type="text/javascript">
         function GetChildCount () {
             var container = document.getElementById ("container");
 
@@ -64,42 +64,36 @@ if (foo.childElementCount &gt; 0) {
 
             alert ("The number of child elements is " + childCount);
         }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="container" style="width:300px; background-color:#a0d0e0;"&gt;
+    </script>
+</head>
+<body>
+    <div id="container" style="width:300px; background-color:#a0d0e0;">
         Some text inside the container.
-        &lt;input type="text" size="40" value="a child element of the container" /&gt;
-        &lt;div&gt;
-            &lt;div&gt;a descendant element of the container&lt;/div&gt;
-            &lt;div&gt;another descendant element of the container&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;br /&gt;&lt;br /&gt;
-    &lt;button onclick="GetChildCount ();"&gt;Get the number of container's child elements&lt;/button&gt;
-&lt;/body&gt;
-</pre>
+        <input type="text" size="40" value="a child element of the container" />
+        <div>
+            <div>a descendant element of the container</div>
+            <div>another descendant element of the container</div>
+        </div>
+    </div>
+    <br /><br />
+    <button onclick="GetChildCount ();">Get the number of container's child elements</button>
+</body>
+```
 
-<div>执行上面的例子：<a href="http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm">http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm</a></div>
+执行上面的例子：<http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm>
 
-<p> </p>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.childElementCount")}}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/2008/WD-ElementTraversal-20080303/#attribute-childElementCount">childElementCount (W3C)</a></p>
+[childElementCount (W3C)](http://www.w3.org/TR/2008/WD-ElementTraversal-20080303/#attribute-childElementCount)
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-cn/DOM/Element.children"><code>children</code></a></li>
- <li><a href="/zh-cn/DOM/Element.firstElementChild"><code>firstElementChild</code></a></li>
- <li><a href="/zh-cn/DOM/Element.lastElementChild"><code>lastElementChild</code></a></li>
- <li><a href="/zh-cn/DOM/Element.nextElementSibling"><code>nextElementSibling</code></a></li>
- <li><a href="/zh-cn/DOM/element.previousElementSibling"><code>previousElementSibling</code></a></li>
-</ul>
-
-<p> </p>
+- [`children`](/zh-cn/DOM/Element.children)
+- [`firstElementChild`](/zh-cn/DOM/Element.firstElementChild)
+- [`lastElementChild`](/zh-cn/DOM/Element.lastElementChild)
+- [`nextElementSibling`](/zh-cn/DOM/Element.nextElementSibling)
+- [`previousElementSibling`](/zh-cn/DOM/element.previousElementSibling)

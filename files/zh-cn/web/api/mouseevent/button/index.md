@@ -2,52 +2,47 @@
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.button</code></strong>是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。</p>
+**`MouseEvent.button`**是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
 
-<p>这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断{{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} {{event("mousemove")}}这些事件并不可靠。</p>
+这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断{{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} {{event("mousemove")}}这些事件并不可靠。
 
-<p>用户可能会改变鼠标按键的配置，因此当一个事件的<strong><code>MouseEvent.button</code></strong>值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。</p>
+用户可能会改变鼠标按键的配置，因此当一个事件的 **`MouseEvent.button`** 值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。
 
-<div class="note">
-<p><strong>注意：</strong>{{domxref("MouseEvent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和 MouseEvent.button 属性弄混淆了。</p>
-</div>
+> **备注：** {{domxref("MouseEvent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和 MouseEvent.button 属性弄混淆了。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var <em>buttonPressed</em> = <em>instanceOfMouseEvent</em>.button
-</pre>
+```js
+var buttonPressed = instanceOfMouseEvent.button
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个数值，代表按下的鼠标按键：</p>
+一个数值，代表按下的鼠标按键：
 
-<ul>
- <li>
-  <p><code>0</code>：主按键，通常指鼠标左键或默认值（译者注：如 document.getElementById('a').click() 这样触发就会是默认值）</p>
- </li>
- <li><code>1</code>：辅助按键，通常指鼠标滚轮中键</li>
- <li><code>2</code>：次按键，通常指鼠标右键</li>
- <li><code>3</code>：第四个按钮，通常指浏览器后退按钮</li>
- <li>
-  <p><code>4</code>：第五个按钮，通常指浏览器的前进按钮</p>
- </li>
-</ul>
+- `0`：主按键，通常指鼠标左键或默认值（译者注：如 document.getElementById('a').click() 这样触发就会是默认值）
+- `1`：辅助按键，通常指鼠标滚轮中键
+- `2`：次按键，通常指鼠标右键
+- `3`：第四个按钮，通常指浏览器后退按钮
+- `4`：第五个按钮，通常指浏览器的前进按钮
 
-<p>对于配置为左手使用的鼠标，按键操作将正好相反。此种情况下，从右至左读取值。</p>
+对于配置为左手使用的鼠标，按键操作将正好相反。此种情况下，从右至左读取值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;button id="button" oncontextmenu="event.preventDefault();"&gt;Click here with your mouse...&lt;/button&gt;
-&lt;p id="log"&gt;&lt;/p&gt;
-</pre>
+```html
+<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">let button = document.querySelector('#button');
+```js
+let button = document.querySelector('#button');
 let log = document.querySelector('#log');
 button.addEventListener('mouseup', logMouseButton);
 
@@ -67,22 +62,21 @@ function logMouseButton(e) {
         log.textContent = `Unknown button code: ${e.button}`;
     }
   }
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.MouseEvent.button")}}</p>
+{{Compat("api.MouseEvent.button")}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{domxref('"MouseEvent"')}}</li>
-</ul>
+- {{domxref('"MouseEvent"')}}

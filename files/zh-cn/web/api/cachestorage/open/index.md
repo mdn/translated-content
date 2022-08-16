@@ -2,46 +2,42 @@
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>{{domxref("CacheStorage")}} 接口的 <strong><code>open()</code></strong> 方法返回一个 resolve 为匹配 <code>cacheName</code> 的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .</p>
+{{domxref("CacheStorage")}} 接口的 **`open()`** 方法返回一个 resolve 为匹配 `cacheName` 的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .
 
-<div class="note">
-<p><strong>注意</strong>: 如果指定的 {{domxref("Cache")}} 不存在，则使用该 <code>cacheName</code> 创建一个新的 cache，并返回一个 resolve 为该新 {{domxref("Cache")}} 对象的{{jsxref("Promise")}}.</p>
-</div>
+> **备注：** 如果指定的 {{domxref("Cache")}} 不存在，则使用该 `cacheName` 创建一个新的 cache，并返回一个 resolve 为该新 {{domxref("Cache")}} 对象的{{jsxref("Promise")}}.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">// "caches" is a global read-only variable, which is an instance of CacheStorage,
+```js
+// "caches" is a global read-only variable, which is an instance of CacheStorage,
 // For more info, refer to: https://developer.mozilla.org/en-US/docs/Web/API/caches
 
-caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
+caches.open(cacheName).then(function(cache) {
   // Do something with your cache
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>cacheName</dt>
- <dd>要打开的 cache 对象 name.</dd>
-</dl>
+- cacheName
+  - : 要打开的 cache 对象 name.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 resolve 为请求的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .</p>
+一个 resolve 为请求的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>此示例来自于 MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> （请参阅 <a href="https://mdn.github.io/sw-test/">sw-test running live</a>）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：</p>
+此示例来自于 MDN [sw-test example](https://github.com/mdn/sw-test/) （请参阅 [sw-test running live](https://mdn.github.io/sw-test/)）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：
 
-<ol>
- <li>使用 {{domxref("CacheStorage.match","CacheStorage.match()")}} 检查 {{domxref("CacheStorage")}} 中是否存在匹配请求，如果存在，则使用它。</li>
- <li>如果没有，使用  {{domxref("CacheStorage.open","CacheStorage.open()")}} 打开 <code>v1</code> cache，使用 {{domxref("Cache.put","Cache.put()")}}  将默认网络请求放入 cache 中，并使用 <code>return response.clone()</code> 返回默认网络请求的克隆副本。最后一个是必须的，因为 <code>put()</code> 使用响应主体。</li>
- <li>如果此操作失败（例如，因为网络已关闭），则返回备用响应。</li>
-</ol>
+1.  使用 {{domxref("CacheStorage.match","CacheStorage.match()")}} 检查 {{domxref("CacheStorage")}} 中是否存在匹配请求，如果存在，则使用它。
+2.  如果没有，使用 {{domxref("CacheStorage.open","CacheStorage.open()")}} 打开 `v1` cache，使用 {{domxref("Cache.put","Cache.put()")}} 将默认网络请求放入 cache 中，并使用 `return response.clone()` 返回默认网络请求的克隆副本。最后一个是必须的，因为 `put()` 使用响应主体。
+3.  如果此操作失败（例如，因为网络已关闭），则返回备用响应。
 
-<pre class="brush: js">var cachedResponse = caches.match(event.request).catch(function() {
+```js
+var cachedResponse = caches.match(event.request).catch(function() {
   return fetch(event.request);
 }).then(function(response) {
   caches.open('v1').then(function(cache) {
@@ -50,22 +46,19 @@ caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
   return response.clone();
 }).catch(function() {
   return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CacheStorage.open")}}
 
+## See also
 
-<p>{{Compat("api.CacheStorage.open")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

@@ -2,39 +2,37 @@
 title: Range.startOffset
 slug: Web/API/Range/startOffset
 ---
-<p>{{ ApiRef("Range") }}</p>
+{{ ApiRef("Range") }}
 
-<p><code><strong>Range.startOffset</strong></code> 是一个只读属性，用于返回一个表示 <code style="font-style: normal; line-height: 1.5;">Range</code> 在 <code style="font-style: normal; line-height: 1.5;">startContainer</code> 中的起始位置的数字。</p>
+**`Range.startOffset`** 是一个只读属性，用于返回一个表示 `Range` 在 `startContainer` 中的起始位置的数字。
 
-<p>如果 <code>startContainer</code> 是一个文本（{{domxref("Text")}}）、注释（{{domxref("Comment")}}）或者 CDATA 区块（{{domxref("CDATASection")}}）节点，那么返回的偏移量是从 <code style="font-style: normal; line-height: 1.5;">startContainer</code> 开始到 {{domxref("Range")}} 的边界点的字符数量。对于其他的节点类型， <code style="font-style: normal; line-height: 1.5;">startOffset</code> 返回 <code style="font-style: normal; line-height: 1.5;">startContainer</code> 到边界点的子节点数量。</p>
+如果 `startContainer` 是一个文本（{{domxref("Text")}}）、注释（{{domxref("Comment")}}）或者 CDATA 区块（{{domxref("CDATASection")}}）节点，那么返回的偏移量是从 `startContainer` 开始到 {{domxref("Range")}} 的边界点的字符数量。对于其他的节点类型， `startOffset` 返回 `startContainer` 到边界点的子节点数量。
 
-<p>可使用{{domxref("Range.setStart")}} 方法改变 <code style="font-style: normal; line-height: 1.5;">Range</code> 的 <code style="font-style: normal; line-height: 1.5;">startOffset</code> 位置。</p>
+可使用{{domxref("Range.setStart")}} 方法改变 `Range` 的 `startOffset` 位置。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>startRangeOffset</em> = <em>range</em>.startOffset;
-</pre>
+```
+startRangeOffset = range.startOffset;
+```
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 startRangeOffset = range.startOffset;
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Range.startOffset")}}</p>
+{{Compat("api.Range.startOffset")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<div id="compat-mobile"></div>
-
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

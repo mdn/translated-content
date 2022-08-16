@@ -2,59 +2,41 @@
 title: selectionchange
 slug: Web/API/Document/selectionchange_event
 ---
-<div>
-<p><a href="/en-US/docs/Web/API/Selection_API">Selection API</a> 的 <strong><code>selectionchange</code> </strong>事件在文档上的当前文本选择被改变时触发。</p>
-</div>
+[Selection API](/zh-CN/docs/Web/API/Selection_API) 的 **`selectionchange` **事件在文档上的当前文本选择被改变时触发。
 
-<table>
- <tbody>
-  <tr>
-   <td>Bubbles</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Cancelable</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Target objects</td>
-   <td>{{domxref("Document")}}</td>
-  </tr>
-  <tr>
-   <td>Interface</td>
-   <td>{{domxref("Event")}}</td>
-  </tr>
- </tbody>
-</table>
+| Bubbles        | No                               |
+| -------------- | -------------------------------- |
+| Cancelable     | No                               |
+| Target objects | {{domxref("Document")}} |
+| Interface      | {{domxref("Event")}}     |
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js notranslate">//以下两种方法可任选其一
-document.addEventListener("selectionchange", () =&gt; {
+```js
+//以下两种方法可任选其一
+document.addEventListener("selectionchange", () => {
   console.log(document.getSelection());
 });
 
-document.onselectionchange = () =&gt; {
+document.onselectionchange = () => {
   console.log(document.getSelection());
 };
-</pre>
+```
 
-<h2 id="继承">继承</h2>
+## 继承
 
-<p><code>selectionchange</code> 事件实现了 {{domxref("Event")}} 接口，因此在此接口上定义的属性和方法都可使用。</p>
+`selectionchange` 事件实现了 {{domxref("Event")}} 接口，因此在此接口上定义的属性和方法都可使用。
 
-<p>{{InheritanceDiagram('','','', 'Event')}}</p>
+{{InheritanceDiagram('','','', 'Event')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Document.selectionchange_event")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("Document.onselectionchange")}}</li>
-</ul>
+- {{domxref("Document.onselectionchange")}}

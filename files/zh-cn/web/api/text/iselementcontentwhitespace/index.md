@@ -2,26 +2,38 @@
 title: Text.isElementContentWhitespace
 slug: Web/API/Text/isElementContentWhitespace
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>返回一个布尔值,表明该文本节点的内容是否全部是由空白符组成的.</p>
-<div class="warning">
- <strong>警告: </strong>该属性已经在DOM level 4中被废弃, 在一些新版本的浏览器(Gecko 10.0 )中已经被删除.</div>
-<h3 id="Syntax">语法</h3>
-<pre class="eval"><em>b</em> = textnode.isElementContentWhitespace;
-</pre>
-<h3 id="Example">例子</h3>
-<p>下例中 ,我们创建了一个内容为空白符和文字组成的文本节点.该节点的isElementContentWhitespace属性为false.</p>
-<pre class="brush: js">var tn = document.createTextNode("Hello world");
+返回一个布尔值,表明该文本节点的内容是否全部是由空白符组成的.
+
+> **警告：** 该属性已经在 DOM level 4 中被废弃, 在一些新版本的浏览器(Gecko 10.0 )中已经被删除.
+
+### 语法
+
+```js
+b = textnode.isElementContentWhitespace;
+```
+
+### 例子
+
+下例中 ,我们创建了一个内容为空白符和文字组成的文本节点.该节点的 isElementContentWhitespace 属性为 false.
+
+```js
+var tn = document.createTextNode("Hello world");
 tn.isElementContentWhitespace; /* 返回false */
-</pre>
-<p>下例中 ,我们创建了一个内容全部为空白符的文本节点.该节点的isElementContentWhitespace属性为true.</p>
-<pre class="brush: js">var ws = document.createTextNode("  \t \r\n   ")
+```
+
+下例中 ,我们创建了一个内容全部为空白符的文本节点.该节点的 isElementContentWhitespace 属性为 true.
+
+```js
+var ws = document.createTextNode("  \t \r\n   ")
 ws.isElementContentWhitespace; /* 返回true */
-</pre>
-<h3 id="Specification">规范</h3>
-<p><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Text3-isElementContentWhitespace">DOM Level 3 Core: Text.isElementContentWhitespace</a></p>
-<h3 id="相关链接">相关链接</h3>
-<ul>
- <li><a href="/zh-cn/DOM/Text"><code>Text</code></a></li>
-</ul>
+```
+
+### 规范
+
+[DOM Level 3 Core: Text.isElementContentWhitespace](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Text3-isElementContentWhitespace)
+
+### 相关链接
+
+- [`Text`](/zh-cn/DOM/Text)
