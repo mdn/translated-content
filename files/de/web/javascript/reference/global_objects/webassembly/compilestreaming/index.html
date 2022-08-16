@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStrea
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<p>Das folgende Beispiel (siehe unsere <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> Demo auf GitHub, und <a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">siehe das live Beispiel</a>) streamt ein .wasm Modul direkt aus der zugrunde liegenden Quelle und kompiliert es in ein {{jsxref("WebAssembly.Module")}} Objekt. Weil die <code>compileStreaming()</code>  Funktion ein Promise für ein {{domxref("Response")}} Objekt annimmt, kann ihr direkt ein  {{domxref("WindowOrWorkerGlobalScope.fetch()")}} Aufruf durchgereicht werden, woraufhin es die Antwort in diese Funktion abgibt, sobald das Promise sich erfüllt.</p>
+<p>Das folgende Beispiel (siehe unsere <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> Demo auf GitHub, und <a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">siehe das live Beispiel</a>) streamt ein .wasm Modul direkt aus der zugrunde liegenden Quelle und kompiliert es in ein {{jsxref("WebAssembly.Module")}} Objekt. Weil die <code>compileStreaming()</code>  Funktion ein Promise für ein {{domxref("Response")}} Objekt annimmt, kann ihr direkt ein  {{domxref("WindowOrWorkerGlobalScope.fetch()")}} Aufruf durchgereicht werden, woraufhin es die Antwort in diese Funktion abgibt, sobald das Promise sich erfüllt.</p>
 
 <pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 

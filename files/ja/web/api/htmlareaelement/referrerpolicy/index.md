@@ -70,4 +70,3 @@ map.appendChild(elt);
 - {{domxref("HTMLImageElement.referrerPolicy")}},
   {{domxref("HTMLAnchorElement.referrerPolicy")}},
   {{domxref("HTMLIFrameElement.referrerPolicy")}}
-

@@ -1,11 +1,6 @@
 ---
 title: 主機
 slug: Glossary/Host
-tags:
-  - 主機
-  - 網頁
-  - 術語表
-translation_of: Glossary/Host
 ---
 主機是一種連接網際網路（{{glossary("Internet")}}）或本地網路的設備。有些稱作伺服器（{{glossary("server")}}）的主機還會提供額外的服務：像是提供網頁服務、存放文件和郵件。
 

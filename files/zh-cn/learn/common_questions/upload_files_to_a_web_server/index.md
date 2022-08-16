@@ -49,8 +49,8 @@ _目前还没有有效的自主学习方法。 [请考虑贡献](/en-US/docs/MDN
 
 在个新的标签中打开 FireFTP，FireFTP 有两种办法。
 
-1.  **Firefox menu <img alt="" src="https://mdn.mozillademos.org/files/9633/2014-01-10-13-08-08-f52b8c.png" style="height: 16px; width: 16px;"> ➤ <img alt="Developer" src="https://mdn.mozillademos.org/files/9635/Screenshot%20from%202014-11-26%2014:24:56.png" style="height: 24px; vertical-align: middle; width: 27px;"> ➤ FireFTP**
-2.  **Tools** ➤ **Web Develope**r ➤ **FireFTP**
+1. **Firefox menu <img alt="" src="https://mdn.mozillademos.org/files/9633/2014-01-10-13-08-08-f52b8c.png" style="height: 16px; width: 16px;"> ➤ <img alt="Developer" src="https://mdn.mozillademos.org/files/9635/Screenshot%20from%202014-11-26%2014:24:56.png" style="height: 24px; vertical-align: middle; width: 27px;"> ➤ FireFTP**
+2. **Tools** ➤ **Web Develope**r ➤ **FireFTP**
 
 现在你应该可以看到如下界面：
 

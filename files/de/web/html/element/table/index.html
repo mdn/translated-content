@@ -25,7 +25,7 @@ translation_of: Web/HTML/Element/table
   <tr>
    <td>Erlaubter Inhalt</td>
    <td>
-    <div class="content-models">
+    <div>
     <div id="table-mdls">In dieser Reihenfolge:
     <ul>
      <li>ein optionales {{HTMLElement("caption")}}-Element,</li>
@@ -80,11 +80,11 @@ translation_of: Web/HTML/Element/table
   <li><span>right</span>, bedeutet, dass die Tabelle rechts im Dokument angezeigt werden soll.</li>
  </ul>
 
- <div class="note"><strong>Hinweis: </strong>
+ <div class="note"><strong>Hinweis: </strong>
 
  <ul>
   <li><strong>Verwenden Sie dieses Attribut nicht</strong>, da es überholt ist: das {{HTMLElement("table")}}-Element sollte mit <a href="/en-US/docs/CSS" title="CSS">CSS</a> angepasst werden. Um einen ähnlichen Effekt zu erreichen wie mit dem align-Attribut, sollten die <a href="/en-US/docs/CSS" title="CSS">CSS</a>-Eigenschaften "text-align" und "vertical-align" verwendet werden.</li>
-  <li>Vor Firefox 4 unterstützte Firefox, nur im Quirks-Modus, auch die Werte <code>middle</code>, <code>absmiddle</code>, und <code>abscenter</code> als Synonyme von <code>center</code><em>.  </em></li>
+  <li>Vor Firefox 4 unterstützte Firefox, nur im Quirks-Modus, auch die Werte <code>middle</code>, <code>absmiddle</code>, und <code>abscenter</code> als Synonyme von <code>center</code><em>.  </em></li>
  </ul>
  </div>
  </dd>
@@ -96,51 +96,51 @@ translation_of: Web/HTML/Element/table
  <table>
   <tbody>
    <tr>
-    <td style="width: 24px; background-color: black;"> </td>
+    <td style="width: 24px; background-color: black;"> </td>
     <td><span>black</span> = "#000000"</td>
-    <td style="width: 24px; background-color: green;"> </td>
+    <td style="width: 24px; background-color: green;"> </td>
     <td><span>green</span> = "#008000"</td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: silver;"> </td>
+    <td style="width: 24px; background-color: silver;"> </td>
     <td><span>silver</span> = "#C0C0C0"</td>
-    <td style="width: 24px; background-color: lime;"> </td>
+    <td style="width: 24px; background-color: lime;"> </td>
     <td><span>lime</span> = "#00FF00"</td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: gray;"> </td>
+    <td style="width: 24px; background-color: gray;"> </td>
     <td><span>gray</span> = "#808080"</td>
-    <td style="width: 24px; background-color: olive;"> </td>
+    <td style="width: 24px; background-color: olive;"> </td>
     <td><span>olive</span> = "#808000"</td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: white;"> </td>
+    <td style="width: 24px; background-color: white;"> </td>
     <td><span>white</span> = "#FFFFFF"</td>
-    <td style="width: 24px; background-color: yellow;"> </td>
+    <td style="width: 24px; background-color: yellow;"> </td>
     <td><span>yellow</span> = "#FFFF00"</td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: maroon;"> </td>
+    <td style="width: 24px; background-color: maroon;"> </td>
     <td><span>maroon</span> = "#800000"</td>
-    <td style="width: 24px; background-color: navy;"> </td>
+    <td style="width: 24px; background-color: navy;"> </td>
     <td><span>navy</span> = "#000080"</td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: red;"> </td>
+    <td style="width: 24px; background-color: red;"> </td>
     <td><span>red</span> = "#FF0000"</td>
-    <td style="width: 24px; background-color: blue;"> </td>
+    <td style="width: 24px; background-color: blue;"> </td>
     <td><span>blue</span> = "#0000FF"</td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: purple;"> </td>
+    <td style="width: 24px; background-color: purple;"> </td>
     <td><span>purple</span> = "#800080"</td>
-    <td style="width: 24px; background-color: teal;"> </td>
+    <td style="width: 24px; background-color: teal;"> </td>
     <td><span>teal</span> = "#008080"</td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: fuchsia;"> </td>
+    <td style="width: 24px; background-color: fuchsia;"> </td>
     <td><span>fuchsia</span> = "#FF00FF"</td>
-    <td style="width: 24px; background-color: aqua;"> </td>
+    <td style="width: 24px; background-color: aqua;"> </td>
     <td><span>aqua</span> = "#00FFFF"</td>
    </tr>
   </tbody>
@@ -160,14 +160,14 @@ translation_of: Web/HTML/Element/table
 <dl>
  <dt>{{htmlattrdef("cellpadding")}} {{Deprecated_inline}}</dt>
  <dd>This attribute defines the space between the content of a cell and the border, displayed or not, of it. If it is a pixel length, this pixel-sized space will be applied on all four sides; if it is a percentage length, the content will be centered and the total vertical space (top and bottom) will represent this percentage. The same is true for the total horizontal space (left and right).
- <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using <a href="/en-US/docs/CSS" title="CSS">CSS</a>. To give a similar effect than the <span>border</span> attribute, use the <a href="/en-US/docs/CSS" title="CSS">CSS</a> property {{cssxref("border-collapse")}} with the value collapse on the  {{HTMLElement("table")}} element itself, and the property {{cssxref("padding")}} on the {{HTMLElement("td")}}.</div>
+ <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using <a href="/en-US/docs/CSS" title="CSS">CSS</a>. To give a similar effect than the <span>border</span> attribute, use the <a href="/en-US/docs/CSS" title="CSS">CSS</a> property {{cssxref("border-collapse")}} with the value collapse on the  {{HTMLElement("table")}} element itself, and the property {{cssxref("padding")}} on the {{HTMLElement("td")}}.</div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("cellspacing")}} {{Deprecated_inline}}</dt>
  <dd>This attribute defines the size, in percentage or in pixels, of the space between two cells (both horizontally and vertically), between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.
- <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using <a href="/en-US/docs/CSS" title="CSS">CSS</a>. To give a similar effect than the <span>border</span> attribute, use the <a href="/en-US/docs/CSS" title="CSS">CSS</a> property {{cssxref("border-collapse")}} with the value collapse on the  {{HTMLElement("table")}} element itself, and the property {{cssxref("margin")}} on the {{HTMLElement("td")}} element.</div>
+ <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using <a href="/en-US/docs/CSS" title="CSS">CSS</a>. To give a similar effect than the <span>border</span> attribute, use the <a href="/en-US/docs/CSS" title="CSS">CSS</a> property {{cssxref("border-collapse")}} with the value collapse on the  {{HTMLElement("table")}} element itself, and the property {{cssxref("margin")}} on the {{HTMLElement("td")}} element.</div>
  </dd>
 </dl>
 
@@ -177,37 +177,37 @@ translation_of: Web/HTML/Element/table
  <table style="width: 668px;">
   <tbody>
    <tr>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>above</span></td>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>below</span></td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>hsides</span></td>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>vsides</span></td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>lhs</span></td>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>rhs</span></td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>border</span></td>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>box</span></td>
    </tr>
    <tr>
-    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
+    <td style="width: 24px; background-color: rgb(224, 224, 224);"> </td>
     <td><span>void</span></td>
    </tr>
   </tbody>
  </table>
 
- <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using <a href="/en-US/docs/CSS" title="CSS">CSS</a>. To give a similar effect than the <span>frame</span> attribute, use the <a href="/en-US/docs/CSS" title="CSS">CSS</a> properties {{cssxref("border-style")}} and {{cssxref("border-width")}}.</div>
+ <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using <a href="/en-US/docs/CSS" title="CSS">CSS</a>. To give a similar effect than the <span>frame</span> attribute, use the <a href="/en-US/docs/CSS" title="CSS">CSS</a> properties {{cssxref("border-style")}} and {{cssxref("border-width")}}.</div>
  </dd>
 </dl>
 
@@ -383,58 +383,12 @@ border: 1px solid black;
 
 <h2 id="Browser_Kompabilität">Browser Kompabilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1")}}</td>
-   <td>4.0</td>
-   <td>7.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile("1")}}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 
 <ul>
- <li>Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
+ <li>Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
  <li>CSS properties that may be specially useful to style the <span style="font-family: courier new;">&lt;table&gt;</span> element:
   <ul>
    <li>{{cssxref("width")}} to control the width of the table;</li>

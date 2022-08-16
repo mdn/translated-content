@@ -298,7 +298,6 @@ button {
 
 おめでとうございます。初めてのウェブフォームが完成しました。こちらが最終結果のデモです。
 
-
 ```html hidden
 <form action="/my-handling-form-page" method="post">
   <div>

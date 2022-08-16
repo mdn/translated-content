@@ -11,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Operators/super
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<div>Das <strong>super</strong> Schlüsselwort wird verwendet, um Funktionen in einem Vaterobjekt auszuführen.</div>
+<div>Das <strong>super</strong> Schlüsselwort wird verwendet, um Funktionen in einem Vaterobjekt auszuführen.</div>
 
-<div> </div>
+<div> </div>
 
 <div>Die <code>super.prop</code> und <code>super[expr]</code> Ausdrücke sind in allen <a href="/de/docs/Web/JavaScript/Reference/Functions/Method_definitions">Methodendefinitionen</a> von <a href="/de/docs/Web/JavaScript/Reference/Classes">Klassen</a> und <a href="/de/docs/Web/JavaScript/Reference/Operators/Object_initializer">Objekt Literalen</a> verfügbar.</div>
 
@@ -25,13 +25,13 @@ super.functionOnParent([arguments]);
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Wenn ein Konstruktor verwendet wird, muss das <code>super</code> Schlüsselwort verwendet werden, bevor das <code>this</code> Schlüsselwort verwendet werden kann. Mit dem <code>super</code> Schlüsselwort kann man auch Funktionen im Vaterobjekt ausführen.</p>
+<p>Wenn ein Konstruktor verwendet wird, muss das <code>super</code> Schlüsselwort verwendet werden, bevor das <code>this</code> Schlüsselwort verwendet werden kann. Mit dem <code>super</code> Schlüsselwort kann man auch Funktionen im Vaterobjekt ausführen.</p>
 
 <h2 id="Beispiel">Beispiel</h2>
 
 <h3 id="super_in_Klassen_verwenden"><code>super</code> in Klassen verwenden</h3>
 
-<p>Der Codeabschnitt ist vom <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes Beispiel</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">Live Demo</a>). Hier wird <code>super()</code> aufgerufen, um das duplizieren von Teilen des Konstruktors zu vermeiden, was zwischen <code>Rectangle</code> und <code>Square</code> üblich ist.</p>
+<p>Der Codeabschnitt ist vom <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes Beispiel</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">Live Demo</a>). Hier wird <code>super()</code> aufgerufen, um das duplizieren von Teilen des Konstruktors zu vermeiden, was zwischen <code>Rectangle</code> und <code>Square</code> üblich ist.</p>
 
 <pre class="brush: js">class Rectangle {
   constructor(height, width) {
@@ -101,7 +101,7 @@ class Derived extends Base {
 
 new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </pre>
 
-<h3 id="super.prop_kann_keine_schreibgeschützten_Eigenschaften_überschreiben"><code>super.prop</code> kann keine schreibgeschützten Eigenschaften überschreiben</h3>
+<h3 id="super.prop_kann_keine_schreibgeschützten_Eigenschaften_überschreiben"><code>super.prop</code> kann keine schreibgeschützten Eigenschaften überschreiben</h3>
 
 <p>Wenn eine schreibgeschützte Eigenschaft mit z.B. {{jsxref("Object.defineProperty")}}" erzeugt wird, kann der Wert nicht mit <code>super</code> überschrieben werden.</p>
 
@@ -166,7 +166,7 @@ obj2.method2(); // logs "method 1"
   <tr>
    <td>{{SpecName('ESDraft', '#sec-super-keyword', 'super')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -1,16 +1,6 @@
 ---
 title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - scoring
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
 {{GamesSidebar}}
 

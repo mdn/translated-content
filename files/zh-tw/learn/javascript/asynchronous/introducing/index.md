@@ -53,13 +53,13 @@ btn.addEventListener('click', () => {
 
 在這個程式區塊，指令是一行接著一行的執行：
 
-1.  我們先取得已經在 DOM 裡面的 {{htmlelement("button")}} 元素的參考。
-2.  我們加入一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件監聽器，因此當按鈕被點擊時：
+1. 我們先取得已經在 DOM 裡面的 {{htmlelement("button")}} 元素的參考。
+2. 我們加入一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件監聽器，因此當按鈕被點擊時：
 
-    1.  彈出 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 訊息。
-    2.  當關閉警告訊息後，我們新增一個 {{htmlelement("p")}} 元素。
-    3.  給予一段文字內容。
-    4.  最後，我們將文字段落嵌在文件本體（ document body ）上。
+    1. 彈出 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 訊息。
+    2. 當關閉警告訊息後，我們新增一個 {{htmlelement("p")}} 元素。
+    3. 給予一段文字內容。
+    4. 最後，我們將文字段落嵌在文件本體（ document body ）上。
 
 當正在執行每一個操作時，什麼事情都不會發生——渲染暫時停止。我們在[上一篇文章](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing)有提到，這是因為 [Javascript 是跑在一條單執行緒](/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded)。主執行緒在同一時間只能做一件事情，直到目前操作完成為止其他的操作都會暫停。
 

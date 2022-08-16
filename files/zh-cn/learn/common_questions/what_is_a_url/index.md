@@ -59,7 +59,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 ```
 
 - ![Protocol](mdn-url-protocol@x2_update.png)
-  - : `http` 是协议。它表明了浏览器必须使用何种协议。它通常都是 HTTP 协议或是 HTTP 协议的安全版，即 HTTPS。Web 需要它们二者之一，但浏览器也知道如何处理其他协议，比如` mailto:（打开邮件客户端）或者 ``ftp:（处理文件传输），所以当你看到这些协议时，不必惊讶。`
+  - : `http` 是协议。它表明了浏览器必须使用何种协议。它通常都是 HTTP 协议或是 HTTP 协议的安全版，即 HTTPS。Web 需要它们二者之一，但浏览器也知道如何处理其他协议，比如 `mailto:`（打开邮件客户端）或者 `ftp:`（处理文件传输），所以当你看到这些协议时，不必惊讶。
 - ![Domaine Name](https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png)
   - : `www.example.com` 是域名。它表明正在请求哪个 Web 服务器。或者，可以直接使用{{Glossary("IP address")}}, 但是因为它不太方便，所以它不经常在网络上使用。.
 - ![Port](https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png)
@@ -67,7 +67,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 - ![Path to the file](mdn-url-path@x2.png)
   - : `/path/to/myfile.html` 是网络服务器上资源的路径。在 Web 的早期阶段，像这样的路径表示 Web 服务器上的物理文件位置。如今，它主要是由没有任何物理现实的 Web 服务器处理的抽象。
 - ![Parameters](mdn-url-parameters@x2.png)
-  - : `?key1=value1&key2=value2` 是提供给网络服务器的额外参数。这些参数是用 `& `符号分隔的键/值对列表。在返回资源之前，Web 服务器可以使用这些参数来执行额外的操作。每个 Web 服务器都有自己关于参数的规则，唯一可靠的方式来知道特定 Web 服务器是否处理参数是通过询问 Web 服务器所有者。
+  - : `?key1=value1&key2=value2` 是提供给网络服务器的额外参数。这些参数是用 `&` 符号分隔的键/值对列表。在返回资源之前，Web 服务器可以使用这些参数来执行额外的操作。每个 Web 服务器都有自己关于参数的规则，唯一可靠的方式来知道特定 Web 服务器是否处理参数是通过询问 Web 服务器所有者。
 - ![Anchor](mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` 是资源本身的另一部分的锚点。锚点表示资源中的一种“书签”，给浏览器显示位于该“加书签”位置的内容的方向。例如，在 HTML 文档上，浏览器将滚动到定义锚点的位置;在视频或音频文档上，浏览器将尝试转到锚代表的时间。值得注意的是，＃后面的部分（也称为片段标识符）从来没有发送到请求的服务器。
 
@@ -99,6 +99,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 我们来看一些例子来使这个更清楚。
 
 #### 绝对 URL 示例
+
 <table>
   <tbody>
     <tr>

@@ -1,9 +1,6 @@
 ---
 title: 浏览器引擎前缀
 slug: Glossary/Vendor_Prefix
-tags:
-  - 术语
-translation_of: Glossary/Vendor_Prefix
 ---
 浏览器厂商们有时会给实验性的或者非标准的 CSS 属性和 JavaScript API 添加前缀，这样开发者就可以用这些新的特性进行试验，同时（理论上）防止他们的试验代码被依赖，从而在标准化过程中破坏 web 开发者的代码。开发者应该等到浏览器行为标准化之后再使用未加前缀的属性。
 
@@ -22,11 +19,13 @@ translation_of: Glossary/Vendor_Prefix
 
 示例：
 
-    -webkit-transition: all 4s ease;
-    -moz-transition: all 4s ease;
-    -ms-transition: all 4s ease;
-    -o-transition: all 4s ease;
-    transition: all 4s ease;
+```css
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease;
+```
 
 ## API 前缀
 

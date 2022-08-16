@@ -1,7 +1,6 @@
 ---
 title: 伺服器
 slug: Glossary/Server
-translation_of: Glossary/Server
 ---
 硬體而言的伺服器（server）是個能在網路上，提供用戶端服務的共享性電腦（shared computer）。軟體而言的伺服器程式，則是指能給用戶端提供服務的程式。
 

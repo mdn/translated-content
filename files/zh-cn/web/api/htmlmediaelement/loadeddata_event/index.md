@@ -1,7 +1,6 @@
 ---
 title: 'HTMLMediaElement: loadeddata'
 slug: Web/API/HTMLMediaElement/loadeddata_event
-translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

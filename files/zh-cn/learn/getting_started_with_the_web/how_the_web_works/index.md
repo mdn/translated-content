@@ -14,18 +14,18 @@ slug: Learn/Getting_started_with_the_web/How_the_Web_works
 
 连接到互联网的计算机被称作客户端和服务器。下面是一个简单描述它们如何交互的图表：
 
-![](https://mdn.mozillademos.org/files/8973/Client-server.jpg)
+![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
 
 - 客户端是典型的 Web 用户入网设备（比如，你连接了 Wi-Fi 的电脑，或接入移动网络的手机）和设备上可联网的软件（通常使用像 Firefox 和 Chrome 的浏览器）。
 - 服务器是存储网页，站点和应用的计算机。当一个客户端设备想要获取一个网页时，一份网页的拷贝将从服务器上下载到客户端机器上来在用户浏览器上显示。
 
 ## 其他部分
 
-我们讲的客户端和服务器并不能完成全部工作。还有其他必要的部分，我们将在下面讲述。
+上文所述的客户端和服务器并不能完成全部工作。还有其他必要的部分，我们将在下面讲述。
 
 现在，让我们假设 Web 就是一条路。路的一端是客户端，就像你的家。另一端则是服务器，就像你想去的商店。
 
-![](road.jpg)
+![A black-and-white photo of a person crossing a road at a crosswalk](road.jpg)
 
 除了客户端和服务器，我们还需要了解：
 
@@ -58,29 +58,27 @@ slug: Learn/Getting_started_with_the_web/How_the_Web_works
 
 当你在浏览器里输入一个网址时（在我们的例子里就是走向商店的路上时）：
 
-1.  浏览器在域名系统（DNS）服务器上找出存放网页的服务器的实际地址（找出商店的位置）。
-2.  浏览器发送 HTTP 请求信息到服务器来请拷贝一份网页到客户端（你走到商店并下订单）。这条消息，包括其他所有在客户端和服务器之间传递的数据都是通过互联网使用 TCP/IP 协议传输的。
-3.  服务器同意客户端的请求后，会返回一个“200 OK”信息，意味着“你可以查看这个网页，给你～”，然后开始将网页的文件以数据包的形式传输到浏览器（商店给你商品，你将商品带回家）。
-4.  浏览器将数据包聚集成完整的网页然后将网页呈现给你（商品到了你的门口 —— 新东西，好棒！）。
+1. 浏览器在域名系统（DNS）服务器上找出存放网页的服务器的实际地址（找出商店的位置）。
+2. 浏览器发送 HTTP 请求信息到服务器来请拷贝一份网页到客户端（你走到商店并下订单）。这条消息，包括其他所有在客户端和服务器之间传递的数据都是通过互联网使用 TCP/IP 协议传输的。
+3. 服务器同意客户端的请求后，会返回一个“200 OK”信息，意味着“你可以查看这个网页，给你～”，然后开始将网页的文件以数据包的形式传输到浏览器（商店给你商品，你将商品带回家）。
+4. 浏览器将数据包聚集成完整的网页然后将网页呈现给你（商品到了你的门口 —— 新东西，好棒！）。
 
 ## 解析组成文件的顺序
 
-当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 "link" 和 "script" 元素，这些元素分别指向了外部的 [CSS](../../css) 样式表文件和 [JavaScript](../../javascript) 脚本文件。了解这些文件被[浏览器解析](../../../web/performance/how_browsers_work)的顺序是很重要的：
+当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素，这些元素分别指向了外部的 [CSS](/zh-CN/docs/Learn/CSS) 样式表文件和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 脚本文件。了解这些文件被[浏览器解析]((/zh-CN/docs/Web/Performance/How_browsers_workhow_browsers_work#解析)的顺序是很重要的：
 
-- 浏览器首先解析 HTML 文件，并从中识别出所有的 "link" 和 "script" 元素，获取它们指向的外部文件的链接。
+- 浏览器首先解析 HTML 文件，并从中识别出所有的 `<link>` 和 `<script>` 元素，获取它们指向的外部文件的链接。
 - 继续解析 HTML 文件的同时，浏览器根据外部文件的链接向服务器发送请求，获取并解析 CSS 文件和 JavaScript 脚本文件。
-- 接着浏览器会给解析后的 HTML 文件生成一个 [DOM](../../../web/api/document_object_model) 树（在内存中），会给解析后的 CSS 文件生成一个 [CSSOM](../../../glossary/cssom) 树（在内存中），并且会[编译和执行](../../../web/performance/how_browsers_work)解析后的 JavaScript 脚本文件。
+- 接着浏览器会给解析后的 HTML 文件生成一个 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 树（在内存中），会给解析后的 CSS 文件生成一个 [CSSOM](/zh-CN/docs/Glossary/CSSOM) 树（在内存中），并且会[编译和执行](/zh-CN/docs/Web/Performance/How_browsers_work#其他过程)解析后的 JavaScript 脚本文件。
 - 伴随着构建 DOM 树、应用 CSSOM 树的样式、以及执行 JavaScript 脚本文件，浏览器会在屏幕上绘制出网页的界面；用户看到网页界面也就可以跟网页进行交互了。
 
 ## DNS 解析
 
-真正的网址看上去并不像你输入到地址框中的那样美好且容易记忆。它们是一串数字，像 63.245.217.105。
+真正的网址看上去并不像你输入到地址框中的那样美好且容易记忆。它们是一串数字，像 `63.245.217.105`。
 
-这叫做 IP 地址，它代表了一个互联网上独特的位置。然而，它并不容易记忆，不是吗？那就是域名系统（DNS）被发明的原因。它们是将你输入浏览器的地址（像 "mozilla.org"）与实际 IP 地址相匹配的特殊的服务器。
+这叫做 {{Glossary("IP Address", "IP 地址")}}，它代表了一个互联网上独特的位置。然而，它并不容易记忆，不是吗？那就是域名系统（DNS）被发明的原因。它们是将你输入浏览器的地址（像 "mozilla.org"）与实际 IP 地址相匹配的特殊的服务器。
 
-网页可以通过 {{Glossary("IP Address", "IP 地址")}}直接访问。您可以通过在 [IP Checker](https://www.nslookup.io/website-to-ip-lookup/) 等工具中输入域名来查找网站的 IP 地址。
-
-![A domain name is just another form of an IP address](https://mdn.mozillademos.org/files/8405/dns-ip.png)
+网页可以通过 IP 地址直接访问。您可以通过在 [DNS 查询工具](https://www.nslookup.io/website-to-ip-lookup/) 等工具中输入域名来查找网站的 IP 地址。
 
 ## 数据包详解
 
@@ -90,11 +88,22 @@ slug: Learn/Getting_started_with_the_web/How_the_Web_works
 
 - [互联网是如何工作的](/zh-CN/docs/learn/How_the_Internet_works)
 - [HTTP — 一种应用级协议](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: 让我们开始吧！](https://dev.opera.com/articles/http-lets-get-it-on/)
-- [HTTP: 响应代码](https://dev.opera.com/articles/http-response-codes/)
+- [HTTP：让我们开始吧！](https://dev.opera.com/articles/http-lets-get-it-on/)
+- [HTTP：响应代码](https://dev.opera.com/articles/http-response-codes/)
 
 ## 感谢
 
-街景照片 : [Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ), by [Kevin D](https://www.flickr.com/photos/kdigga/).
+由 [Kevin D](https://www.flickr.com/photos/kdigga/) 提供的街景图片 [Street composing](https://www.pinterest.com/pin/400538960580676851/)。
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+
+## 本章目录
+
+- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [发布你的网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [万维网是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -150,36 +150,40 @@ JavaScript 控制台是一个非常有用的工具，用于调试没有按预期
 
 要查看会发生什么，请尝试逐个输入以下代码片段（然后按 Enter 键）:
 
-1.  ```js
-    alert('hello!');
-    ```
-2.  ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var my_image = document.createElement('img');
+```js
+alert('hello!');
+```
 
-    //下面的 url 已经不再可用，这里注释掉，后面补上了一个可以 url
-    //且 myImage 在文章开始给的“初学者示例网址”存在声明冲突，所以改为 my_image
-    //myImage.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
-    my_image.setAttribute('src','https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif');
+```js
+document.querySelector('html').style.backgroundColor = 'purple';
+```
 
-    document.querySelector('h1').appendChild(my_image);
-    ```
+```js
+var my_image = document.createElement('img');
+
+//下面的 url 已经不再可用，这里注释掉，后面补上了一个可以 url
+//且 myImage 在文章开始给的“初学者示例网址”存在声明冲突，所以改为 my_image
+//myImage.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
+my_image.setAttribute('src','https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif');
+
+document.querySelector('h1').appendChild(my_image);
+```
 
 现在尝试输入以下错误的代码版本，看看你得到什么。
 
-1.  ```js
-    alert('hello!);
-    ```
-2.  ```js
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var my_Image = document.createElement('img');
-    myBanana.setAttribute('src','https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif');
-    document.querySelector('h1').appendChild(my_Image);
-    ```
+```js
+alert('hello!);
+```
+
+```js
+document.cheeseSelector('html').style.backgroundColor = 'purple';
+```
+
+```js
+var my_Image = document.createElement('img');
+myBanana.setAttribute('src','https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif');
+document.querySelector('h1').appendChild(my_Image);
+```
 
 您将开始看到浏览器返回的错误类型。通常这些错误是相当神秘的，但是应该很简单的把这些问题解决出来！
 

@@ -1,0 +1,64 @@
+---
+title: <map>
+slug: Web/HTML/Element/map
+tags:
+  - Элемент
+translation_of: Web/HTML/Element/map
+---
+{{HTMLRef}}
+
+**HTML-элемент `<map>` **используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).
+
+{{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
+
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), явный контент.                                                                  |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                    | Любой [прозрачный](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                   |
+| Разрешённые родители                                   | Любые элементы, которые принимают [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                   |
+| Разрешённые ARIA роли                                  | Нет                                                                                                                                                                                                                        |
+| DOM интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                   |
+
+## Атрибуты
+
+Элемент включает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+
+- {{htmlattrdef("name")}}
+  - : Атрибут name даёт карте имя, чтобы на неё можно было ссылаться. Атрибут должен быть определён и иметь не пустое значение без пробелов. Значение атрибута name не должно совпадать с регистром совместимости со значением атрибута name другого элемента карты в том же документе. Если также указан атрибут id, то они оба должны иметь одинаковое значение.
+
+## Пример
+
+```html
+<map name="primary">
+  <area shape="circle" coords="75,75,75" href="left.html">
+  <area shape="circle" coords="275,75,75" href="right.html">
+</map>
+<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+```
+
+## Живой пример
+
+{{ EmbedLiveSample('Пример', '350', '150', '', 'Web/HTML/Element/map') }}
+
+### Ожидаемые выходные данные
+
+Живой пример выше должен выглядеть как нижеследующее изображение (при использовании клавиши на клавиатуре):
+
+_Для ссылки `left.html`:_
+![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+
+_Для ссылки `right.html`:_
+![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+
+## Спецификации
+
+{{Specifications}}
+
+## Поддержка браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{HTMLElement("a")}}
+- {{HTMLElement("area")}}

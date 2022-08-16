@@ -181,9 +181,9 @@ loop();
 
 首先下载 [bouncing-balls-start.zip](https://raw.githubusercontent.com/roy-tian/learning-area/master/javascript/oojs/bouncing-balls/bouncing-balls-start.zip)，其中包含以下三个文件：index.html、style.css 和 main.js。它们分别包含以下内容：
 
-1.  一个非常简单的 HTML 文档，包括一个 `<h1>` 元素、一个{{HTMLElement("canvas")}} 元素来画小球，还有一些元素将 CSS 和 JavaScript 运用到我们的 HTML 中。
-2.  一些非常简单的样式，主要是 `<h1>` 元素的样式和定位，另外还能使画面填充整个页面从而摆脱滚动条和边缘的空白（这样看起来非常简洁）
-3.  一些 JavaScript 用来设置 `<canvas>` 元素，并提供我们要用到的基本函数。
+1. 一个非常简单的 HTML 文档，包括一个 `<h1>` 元素、一个{{HTMLElement("canvas")}} 元素来画小球，还有一些元素将 CSS 和 JavaScript 运用到我们的 HTML 中。
+2. 一些非常简单的样式，主要是 `<h1>` 元素的样式和定位，另外还能使画面填充整个页面从而摆脱滚动条和边缘的空白（这样看起来非常简洁）
+3. 一些 JavaScript 用来设置 `<canvas>` 元素，并提供我们要用到的基本函数。
 
 脚本的第一部分是这样的：
 
@@ -270,15 +270,15 @@ Ball.prototype.draw = function() {
 
 现在你已经可以测试你的对象了。
 
-1.  保存代码，将 HTML 加载到浏览器中。
-2.  打开浏览器中的 JavaScript 控制台，刷新页面，从而画布可以根据可视的区域调整自己的大小。
-3.  通过下面的代码创建一个小球实例。
+1. 保存代码，将 HTML 加载到浏览器中。
+2. 打开浏览器中的 JavaScript 控制台，刷新页面，从而画布可以根据可视的区域调整自己的大小。
+3. 通过下面的代码创建一个小球实例。
 
     ```js
     let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
     ```
 
-4.  你可以调用实例的这些属性。
+4. 你可以调用实例的这些属性。
 
     ```js
     testBall.x
@@ -287,7 +287,7 @@ Ball.prototype.draw = function() {
     testBall.draw()
     ```
 
-5.  当你键入最后一行的时候，你会在你的画布上看到一个小球被画出来了。
+5. 当你键入最后一行的时候，你会在你的画布上看到一个小球被画出来了。
 
 ### 更新小球的数据
 
@@ -335,7 +335,7 @@ Ball.prototype.update = function() {
 
 现在就变得非常有趣了。我们在画布上加上一些小球，并且让他们动起来。
 
-1.  首先我们需要一个地方储存小球，下面的数组会干这件事 —— 现在将它添加到你的代码底部：
+1. 首先我们需要一个地方储存小球，下面的数组会干这件事 —— 现在将它添加到你的代码底部：
 
     ```js
     let balls = [];
@@ -355,8 +355,8 @@ Ball.prototype.update = function() {
       }
     ```
 
-2.  几乎所有的动画效果都会用到一个运动循环，也就是每一帧都自动更新视图。这是大多数游戏或者其他类似项目的基础。
-3.  现在将它添加到你的代码底部：
+2. 几乎所有的动画效果都会用到一个运动循环，也就是每一帧都自动更新视图。这是大多数游戏或者其他类似项目的基础。
+3. 现在将它添加到你的代码底部：
 
     ```js
     function loop() {
@@ -379,7 +379,7 @@ Ball.prototype.update = function() {
     - 遍历数组中的所有小球，并且让每个小球都调用 `draw()` 和 `update()` 函数来将自己画出来，并且再接下来的每一帧都按照其速度进行位置的更新。
     - 使用 `requestAnimationFrame()` 方法再运行一次函数 —— 当一个函数正在运行时传递相同的函数名，从而每隔一小段时间都会运行一次这个函数，这样我们可以得到一个平滑的动画效果。这主要是通过递归完成的 —— 也就是说函数每次运行的时候都会调用自己，从而可以一遍又一遍得运行。
 
-4.  最后但是非常重要的是，加上下面这一行 —— 让动画开始运行的话我们需要调用这个函数。
+4. 最后但是非常重要的是，加上下面这一行 —— 让动画开始运行的话我们需要调用这个函数。
 
     ```js
     loop();
@@ -391,7 +391,7 @@ Ball.prototype.update = function() {
 
 现在会更加有趣，给我们的项目加上碰撞检测，从而小球会知道他们正在撞击其他的球。
 
-1.  首先在 `update()` 方法后添加以下方法（即 `Ball.prototype.update` 的下面）。
+1. 首先在 `update()` 方法后添加以下方法（即 `Ball.prototype.update` 的下面）。
 
     ```js
     Ball.prototype.collisionDetect = function() {
@@ -416,13 +416,13 @@ Ball.prototype.update = function() {
     - 我们使用了一个常见的算法来检测两个小球是否相撞了，两个小球中心的距离是否小于两个小球的半径之和。这些会在 [2D 碰撞检测](/zh-CN/docs/Games/Techniques/2D_collision_detection) 介绍地更加详细。
     - 如果检测到了碰撞，会运行 `if` 语句中的代码。我们会将两个小球的颜色都设置成随机的一种。我们也可以将这步操作变得复杂一点，比如让两个小球弹开，那样需要植入更加复杂的代码。像这样的物理场景，有以下专门的库比如 [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/)，[matter.js](http://brm.io/matter-js/)，[Phaser](http://phaser.io/) 等。
 
-2.  我们也需要在每一帧动画中都调用这个函数，因此在 `balls[i].update()` 加上下面的代码：
+2. 我们也需要在每一帧动画中都调用这个函数，因此在 `balls[i].update()` 加上下面的代码：
 
     ```js
     balls[i].collisionDetect();
     ```
 
-3.  保存文件，刷新浏览器，你就会看到小球在撞击时会变色！
+3. 保存文件，刷新浏览器，你就会看到小球在撞击时会变色！
 
 > **备注：** 如果示例无法顺利执行，可参考我们的 [最终版本](https://github.com/roy-tian/learning-area/tree/master/javascript/oojs/bouncing-balls)，或者 [在线试用](https://roy-tian.github.io/learning-area/javascript/oojs/bouncing-balls/)。
 

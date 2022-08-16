@@ -43,7 +43,7 @@ Math.sign(x)
 
 ## 예제
 
-###  `Math.sign()` 사용하기
+### `Math.sign()` 사용하기
 
 ```js
 Math.sign(3);     //  1

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
 <div>{{JSRef}}</div>
 
-<p>Die <strong>startsWith()-</strong>Methode stellt fest, ob ein String mit den Zeichen eines anderen Strings beginnt, falls dies so ist, wird <code>true</code>, sonst wird <code>false</code> zurückgegeben. </p>
+<p>Die <strong>startsWith()-</strong>Methode stellt fest, ob ein String mit den Zeichen eines anderen Strings beginnt, falls dies so ist, wird <code>true</code>, sonst wird <code>false</code> zurückgegeben. </p>
 
 <pre class="syntaxbox"><code><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
  <dt><code>searchString</code></dt>
  <dd>Die Zeichenfolge, nach der am Anfang des Strings gesucht wird.</dd>
  <dt><code>position</code></dt>
- <dd>Optional. Die Position, an der die Suche nach <code>searchString</code> begonnen werden soll. Der Standardwert ist 0.</dd>
+ <dd>Optional. Die Position, an der die Suche nach <code>searchString</code> begonnen werden soll. Der Standardwert ist 0.</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<h3 id="Benutzung_von_startsWith">Benutzung von <code>startsWith()</code></h3>
+<h3 id="Benutzung_von_startsWith">Benutzung von <code>startsWith()</code></h3>
 
 <pre class="brush: js">//startsWith
 var str = 'Sein oder nicht sein, das ist hier die Frage';
@@ -51,14 +51,14 @@ console.log(str.startsWith('nicht sein', 10)); // true
 <p>Diese Methode ist Bestandteil der ECMAScript-6-Spezifikation. Dennoch kann es vorkommen, dass sie noch nicht in allen Javascript-Implementierungen vorhanden ist. Man kann ihre Funktionsweise allerdings mit folgendem Ausdruck emulieren:</p>
 
 <pre class="brush: js">if (!String.prototype.startsWith) {
-  String.prototype.startsWith = function(searchString, position) {
-    position = position || 0;
-    return this.indexOf(searchString, position) === position;
-  };
+  String.prototype.startsWith = function(searchString, position) {
+    position = position || 0;
+    return this.indexOf(searchString, position) === position;
+  };
 }
 </pre>
 
-<p>Eine robustere und schnellerer (optimierte) Version findet sich <a href="https://github.com/mathiasbynens/String.prototype.startsWith">auf GitHub, geschrieben von Mathias Bynens</a>.</p>
+<p>Eine robustere und schnellerer (optimierte) Version findet sich <a href="https://github.com/mathiasbynens/String.prototype.startsWith">auf GitHub, geschrieben von Mathias Bynens</a>.</p>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 
@@ -77,66 +77,16 @@ console.log(str.startsWith('nicht sein', 10)); // true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<h2 id="CompatibilityTable"><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">{{CompatibilityTable}}</span></h2>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("41")}}</td>
-   <td>{{CompatGeckoDesktop("17")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>28</td>
-   <td>{{CompatSafari("9")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome("36")}}</td>
-   <td>{{CompatGeckoMobile("17")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <p>Zu beachten ist, dass die MSDN Dokumentation für diese Methode (<a href="https://msdn.microsoft.com/de/library/mt146831(v=vs.94).aspx">https://msdn.microsoft.com/en-us/library/mt146831(v=vs.94).aspx</a>) besagt, das es nicht im Internet Explorer unterstützt wird.</p>
 

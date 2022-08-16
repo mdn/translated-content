@@ -30,7 +30,7 @@ tags:
 
 この 2 つのヘッダーを設定すると、 `postMessage()` は `SharedArrayBuffer` オブジェクトを使用しても例外が発生しなくなり、スレッド間での共有メモリーが利用できるようになります。
 
-ネストされた文書と専用ワーカーは、 [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) ヘッダーも同じ値で設定する必要があります。ネストされた文書とサブリソースが同一オリジンであれば、これ以上の変更は必要ありません。ネストされた文書とサブリソースが同じサイト（ただし別オリジン）であった場合は、 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy "HTTP Cross-Origin-Resource-Policy レスポンスヘッダーは、与えられたリソースに対する CORS なしののオリジン間/サイト間リクエストをブラウザーがブロックするという要望を伝えるものです。") ヘッダーに `same-site` を値として設定する必要があります。そして、それらのオリジン間（およびサイト青だ）の対応するものは、 `cross-origin` を値とした同ヘッダーを設定する必要があります。 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy "HTTP Cross-Origin-Resource-Policy レスポンスヘッダーは、与えられたリソースに対する CORS なしののオリジン間/サイト間リクエストをブラウザーがブロックするという要望を伝えるものです。") ヘッダーに `same-origin` 以外の値を設定すると、潜在的にリソースが [Spectre](https://ja.wikipedia.org/wiki/Spectre) などの攻撃にさらされてしまうので注意してください。
+ネストされた文書と専用ワーカーは、 [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) ヘッダーも同じ値で設定する必要があります。ネストされた文書とサブリソースが同一オリジンであれば、これ以上の変更は必要ありません。ネストされた文書とサブリソースが同じサイト（ただし別オリジン）であった場合は、 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーに `same-site` を値として設定する必要があります。そして、それらのオリジン間（およびサイト青だ）の対応するものは、 `cross-origin` を値とした同ヘッダーを設定する必要があります。 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーに `same-origin` 以外の値を設定すると、潜在的にリソースが [Spectre](https://ja.wikipedia.org/wiki/Spectre) などの攻撃にさらされてしまうので注意してください。
 
 [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) ヘッダーは、ポップアップへの参照を保持する能力を制限することに注意してください。2 つの最上位ウィンドウコンテキスト間の直接アクセスは、基本的に同一オリジンであり、同じ 2 つの値を持つ同じ 2 つのヘッダーを運ぶ場合にのみ機能します。
 

@@ -24,14 +24,8 @@ translation_of: Web/API/URL/createObjectURL
 
 <dl>
  <dt><em>blob</em></dt>
-</dl>
-
-<dl>
  <dd>Ist ein {{domxref("File")}}-Objekt oder ein {{domxref("Blob")}}-Objekt, für das eine URL generiert werden soll.</dd>
 </dl>
-
-<ul>
-</ul>
 
 <h2 id="Example" name="Example">Beispiele</h2>
 
@@ -39,7 +33,7 @@ translation_of: Web/API/URL/createObjectURL
 
 <h2 id="Notes" name="Notes">Anmerkungen</h2>
 
-<p>Immer, wenn <code>createObjectURL()</code> aufgerufen wird, wird eine neue Objekt-URL erzeugt, auch wenn schon eine URL für das gleiche Objekt existiert. Jede dieser URLs muss durch einen Aufruf von {{domxref("URL.revokeObjectURL()")}}  wieder freigegeben werden, sofern sie nicht mehr benötigt wird. Wenn das Dokument geschlossen wird, gibt der Browser die URLs automatisch wieder frei. Für eine optimale Performance and Speichernutzung sollten die URLs freigegeben werden, sofern sichergestellt werden kann, dass sie nicht mehr benötigt werden.</p>
+<p>Immer, wenn <code>createObjectURL()</code> aufgerufen wird, wird eine neue Objekt-URL erzeugt, auch wenn schon eine URL für das gleiche Objekt existiert. Jede dieser URLs muss durch einen Aufruf von {{domxref("URL.revokeObjectURL()")}}  wieder freigegeben werden, sofern sie nicht mehr benötigt wird. Wenn das Dokument geschlossen wird, gibt der Browser die URLs automatisch wieder frei. Für eine optimale Performance and Speichernutzung sollten die URLs freigegeben werden, sofern sichergestellt werden kann, dass sie nicht mehr benötigt werden.</p>
 
 <h2 id="Specifications" name="Specifications">Spezifikationen</h2>
 
@@ -60,76 +54,7 @@ translation_of: Web/API/URL/createObjectURL
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>8 mit vorangestelltem <code>webkitURL</code> für <code>URL</code><br>
-    {{CompatChrome(23)}}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>{{CompatIE(10)}}</td>
-   <td>{{CompatOpera(15)}}</td>
-   <td>{{CompatSafari(6)}} mit vorangestelltem <code>webkitURL</code> für <code>URL</code><br>
-    {{CompatSafari(7)}}</td>
-  </tr>
-  <tr>
-   <td>In a {{ domxref("Worker", "Web Worker") }}</td>
-   <td>10 mit vorangestelltem <code>webkitURL</code> für <code>URL</code><br>
-    {{CompatChrome(23)}}</td>
-   <td>{{CompatGeckoDesktop(21)}}</td>
-   <td>{{CompatIE(11)}}</td>
-   <td>{{CompatOpera(15)}}</td>
-   <td>{{CompatSafari(6)}} mit vorangestelltem <code>webkitURL</code> für <code>URL</code><br>
-    {{CompatSafari(7)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table" style="height: 57px; width: 922px;">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome for Android</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>18 mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-   <td>4.0 mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-   <td>{{CompatGeckoMobile(14)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(15)}} mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-   <td>6.0 mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-  </tr>
-  <tr>
-   <td>In einem {{ domxref("Worker", "Web Worker") }}</td>
-   <td>18 mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-   <td>{{CompatVersionUnknown}} mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-   <td>{{CompatGeckoMobile(14)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(15)}} mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-   <td>6.0 mit vorangestelltem <code>webkitURL</code> für <code>URL</code></td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also" name="See_also">Siehe auch</h2>
 

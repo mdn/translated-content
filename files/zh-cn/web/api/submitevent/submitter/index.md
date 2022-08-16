@@ -1,19 +1,6 @@
 ---
 title: SubmitEvent.submitter
 slug: Web/API/SubmitEvent/submitter
-page-type: web-api-instance-property
-tags:
-  - API
-  - Forms
-  - HTML
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - SubmitEvent
-  - submission
-  - submitter
-translation_of: Web/api/SubmitEven/submitter
 ---
 {{APIRef("HTML DOM")}}
 

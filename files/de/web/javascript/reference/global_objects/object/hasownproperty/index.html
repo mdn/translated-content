@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 <div>{{JSRef}}</div>
 
-<p>Die Methode <code><strong>hasOwnProperty() </strong></code>gibt einen boolean Wert zurück abhängig von der Existenz des gegebenen <strong>Attributs</strong> in einem <strong>Objekt.</strong></p>
+<p>Die Methode <code><strong>hasOwnProperty() </strong></code>gibt einen boolean Wert zurück abhängig von der Existenz des gegebenen <strong>Attributs</strong> in einem <strong>Objekt.</strong></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 <dl>
  <dt><code>prop</code></dt>
- <dd>Der Name des Attributs auf dessen Existenz im Objekt geprüft wird</dd>
+ <dd>Der Name des Attributs auf dessen Existenz im Objekt geprüft wird</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Jedes  untergeordnete Objekt / jeder untergeordneter Wert in einem Objekt trägt die hasOwnProperty Methode mit sich. Diese Methode ermöglicht das Nachfragen eines untergeordneten Wertes/Objekts innerhalb eines Objekts. Anders als die {{jsxref("Operators/in", "in")}} Methode ermöglicht die hasOwnProperty Methode keinen Zugriff auf die Kindeskinder eines Objekts.</p>
+<p>Jedes  untergeordnete Objekt / jeder untergeordneter Wert in einem Objekt trägt die hasOwnProperty Methode mit sich. Diese Methode ermöglicht das Nachfragen eines untergeordneten Wertes/Objekts innerhalb eines Objekts. Anders als die {{jsxref("Operators/in", "in")}} Methode ermöglicht die hasOwnProperty Methode keinen Zugriff auf die Kindeskinder eines Objekts.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -50,9 +50,9 @@ changeO();
 o.hasOwnProperty('prop');   // gibt false zurück
 </pre>
 
-<h3 id="Direkter_Nachfolger_vs_Geerbtes_Attribut">Direkter Nachfolger vs Geerbtes Attribut</h3>
+<h3 id="Direkter_Nachfolger_vs_Geerbtes_Attribut">Direkter Nachfolger vs Geerbtes Attribut</h3>
 
-<p>Das folgende Beispiel unterscheidet zwischen direkten Kind-Attributen eines Objekts und den Attributen die durch die prototype - Verarbeitung entstehen.</p>
+<p>Das folgende Beispiel unterscheidet zwischen direkten Kind-Attributen eines Objekts und den Attributen die durch die prototype - Verarbeitung entstehen.</p>
 
 <pre class="brush: js">o = new Object();
 o.prop = 'exists';
@@ -118,79 +118,24 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>iOS WebKit<br>
-    <sup><sub>(Safari/Chrome/Firefox/etc)</sub></sup></th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

@@ -34,13 +34,13 @@ translation_of: Learn/Server-side/Django/skeleton_website
 
 搭建“框架”的过程很直接：
 
-1.  使用 django-admin 工具创建工程的文件夹，基本的文件模板和工程管理脚本（**manage.py**）。
-2.  用**manage.py** 创建一个或多个应用。
+1. 使用 django-admin 工具创建工程的文件夹，基本的文件模板和工程管理脚本（**manage.py**）。
+2. 用**manage.py** 创建一个或多个应用。
 
     > **备注：** 一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。
 
-3.  在工程里注册新的应用。
-4.  为每个应用分配 url。
+3. 在工程里注册新的应用。
+4. 为每个应用分配 url。
 
 为 [locallibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 这个项目创建的网站文件夹和它的工程文件夹都命名为*locallibrary*。我们只创建一个名为*catalog*的应用。最高层的项目文件结构如下所示：
 
@@ -183,27 +183,29 @@ TIME_ZONE = 'Asia/Shanghai'
 
 打开**locallibrary/locallibrary/urls.py** 并注意指导文字解释了一些使用 URL 映射器的方法。
 
-    """locallibrary URL Configuration
+```python
+"""locallibrary URL Configuration
 
-    The `urlpatterns` list routes URLs to views. For more information please see:
-        https://docs.djangoproject.com/en/2.0/topics/http/urls/
-    Examples:
-    Function views
-        1. Add an import:  from my_app import views
-        2. Add a URL to urlpatterns:  path('', views.home, name='home')
-    Class-based views
-        1. Add an import:  from other_app.views import Home
-        2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-    Including another URLconf
-        1. Import the include() function: from django.urls import include, path
-        2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-    """
-    from django.contrib import admin
-    from django.urls import path
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.0/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
 
-    urlpatterns = [
-        path('admin/', admin.site.urls),
-    ]
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+```
 
 URL 映射通过`urlpatterns` 变量管理，它是`path()` 函数的一个 Python 列表结构。 每个`path()`函数要么将 URL 式样 (URL pattern) 关联到特定视图 (_specific view)_，将在模式匹配时显示；要么关联到某个 URL 式样列表的测试代码。 (第二种情况下，URL 式样是目标模型里的“base URL”). `urlpatterns` 列表最开始定义了一个函数，这个函数将所有带有模型 _admin/_ 的 URL 映射到模块`admin.site.urls`。这个函数包含了 Administration 应用自己的 URL 映射定义。
 
@@ -213,61 +215,73 @@ URL 映射通过`urlpatterns` 变量管理，它是`path()` 函数的一个 Pyth
 
 将下面的行添加到文件的底部，以便将新的项添加到 `urlpatterns` 列表中。这个新项目包括一个 `path()` ，它将带有 `catalog/` 的请求转发到模块 `catalog.urls` (使用相对路径 URL **/catalog/urls.py**)。
 
-    # Use include() to add paths from the catalog application
-    from django.conf.urls import include
-    from django.urls import path
+```python
+# Use include() to add paths from the catalog application
+from django.conf.urls import include
+from django.urls import path
 
-    urlpatterns += [
-        path('catalog/', include('catalog.urls')),
-    ]
+urlpatterns += [
+    path('catalog/', include('catalog.urls')),
+]
+```
 
 现在让我们把网站的根 URL(例：`127.0.0.1:8000`) 重定向到该 URL：`127.0.0.1:8000/catalog/`; 这是我们将在这个项目中使用的唯一应用程序，所以我们最好这样做。为了完成这个目标，我们将使用一个特殊的视图函数 (`RedirectView`), 当在 `path()` 函数中指定的 URL 模式匹配时（在这个例子中是根 URL），它将新的相对 URL 作为其第一个参数重定向到（`/catalog/`）。
 
 将以下行再次添加到文件的底部：
 
-    #Add URL maps to redirect the base URL to our application
-    from django.views.generic import RedirectView
-    urlpatterns += [
-        path('', RedirectView.as_view(url='/catalog/')),
-    ]
+```python
+#Add URL maps to redirect the base URL to our application
+from django.views.generic import RedirectView
+urlpatterns += [
+    path('', RedirectView.as_view(url='/catalog/')),
+]
+```
 
 将路径函数的第一个参数留空以表示'/'。如果你将第一个参数写为'/'，Django 会在你启动服务器时给出以下警告：
 
-    System check identified some issues:
+```
+System check identified some issues:
 
-    WARNINGS:
-    ?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
-    Remove this slash as it is unnecessary.
-    If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
+WARNINGS:
+?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
+Remove this slash as it is unnecessary.
+If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
+```
 
 Django 默认不提供 CSS, JavaScript, 和图片等静态文件 。但是当你在开发环境中开发时，这些静态文件也很有用。作为对这个 URL 映射器的最后一项添加，你可以通过添加以下行在开发期间启用静态文件的服务。
 
 把下面的代码加到文件最后：
 
-    # Use static() to add url mapping to serve static files during development (only)
-    from django.conf import settings
-    from django.conf.urls.static import static
+```python
+# Use static() to add url mapping to serve static files during development (only)
+from django.conf import settings
+from django.conf.urls.static import static
 
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+```
 
 > **备注：** 有很多方法扩展`urlpatterns` 列表 (在上面的代码里我们通过 `+=` 运算符来区分新旧代码)。我们同样可以用原先列表的定义：
 >
->     urlpatterns = [
->         path('admin/', admin.site.urls),
->         path('catalog/', include('catalog.urls')),
->         path('', RedirectView.as_view(url='/catalog/', permanent=True)),
->     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+> ```python
+> urlpatterns = [
+>     path('admin/', admin.site.urls),
+>     path('catalog/', include('catalog.urls')),
+>     path('', RedirectView.as_view(url='/catalog/', permanent=True)),
+> ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+> ```
 >
 > 除此以外，我们也可以包含 import 代码行 (`from django.conf.urls import include`) ，这样更容易看出我们添加的代码，通常我们把 import 代码行放在 Python 文件的开头。
 
 最后，在 catalog 文件夹下创建一个名为 **urls.py** 的文件，并添加以下文本以定义导入（空）的 `urlpatterns`。这是我们在编写应用时添加式样的地方。
 
-    from django.urls import path
-    from catalog import views
+```python
+from django.urls import path
+from catalog import views
 
-    urlpatterns = [
+urlpatterns = [
 
-    ]
+]
+```
 
 ## 测试网站框架
 
@@ -315,7 +329,7 @@ python3 manage.py runserver
  Quit the server with CTRL-BREAK.
 ```
 
-一旦服务器运行，你可以用你的浏览器导航到 [`http://127.0.0.1:8000/` ](http://127.0.0.1:8000/)查看。你应该会看到一个错误页面，如下所示。
+一旦服务器运行，你可以用你的浏览器导航到 [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) 查看。你应该会看到一个错误页面，如下所示。
 
 ![Django debug page for a 404 not found error](django_404_debug_page.png)
 

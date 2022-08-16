@@ -9,11 +9,11 @@ translation_of: Web/API/Document/documentElement
 
 <p><strong>Lesbar, nicht schreibbar</strong></p>
 
-<p>Gibt das <a href="/en-US/docs/DOM/element"><code>Element</code></a> zurück, das die Wurzel des <code><a href="/en-US/docs/DOM/document">document</a></code> ist (zum Beispiel, das <code>&lt;html&gt;</code> Element für HTML Dokumente).</p>
+<p>Gibt das <a href="/en-US/docs/DOM/element"><code>Element</code></a> zurück, das die Wurzel des <code><a href="/en-US/docs/DOM/document">document</a></code> ist (zum Beispiel, das <code>&lt;html&gt;</code> Element für HTML Dokumente).</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>element</em> = document.documentElement;
+<pre class="syntaxbox">var <em>element</em> = document.documentElement;
 </pre>
 
 <h2 id="Example" name="Example">Beispiel</h2>
@@ -31,9 +31,9 @@ for (var i = 0; i &lt; firstTier.length; i++) {
 
 <p>Dieses Objekt ist lesbar aber nicht schreibbar. Es ist praktisch um auf die Wurzel eines beliebigen Dokumentes zuzugreifen.</p>
 
-<p>HTML Dokumente enthalten typischerweise ein einziges Tochter-Element<span style="line-height: 1.5;">, </span><code style="font-style: normal; line-height: 1.5;">&lt;html&gt;</code><span style="line-height: 1.5;">, manchmal mit einem DOCTYPE. XML-Doumente enthalten oft mehrere Tochter-Elemente, einen DOCTYPE und </span><a href="/en-US/docs/DOM/ProcessingInstruction" style="line-height: 1.5;">Verarbeitungshinweise</a><span style="line-height: 1.5;">.</span></p>
+<p>HTML Dokumente enthalten typischerweise ein einziges Tochter-Element<span style="line-height: 1.5;">, </span><code style="font-style: normal; line-height: 1.5;">&lt;html&gt;</code><span style="line-height: 1.5;">, manchmal mit einem DOCTYPE. XML-Doumente enthalten oft mehrere Tochter-Elemente, einen DOCTYPE und </span><a href="/en-US/docs/DOM/ProcessingInstruction" style="line-height: 1.5;">Verarbeitungshinweise</a><span style="line-height: 1.5;">.</span></p>
 
-<p>Deswegen sollte <code>document.documentElement</code> statt <code>{{Domxref("document.firstElementChild")}}</code> benutzt werden, um auf das Wurzel-Element zuzugreifen.</p>
+<p>Deswegen sollte <code>document.documentElement</code> statt <code>{{Domxref("document.firstElementChild")}}</code> benutzt werden, um auf das Wurzel-Element zuzugreifen.</p>
 
 <h2 id="Specification" name="Specification">Spezifikation</h2>
 

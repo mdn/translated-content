@@ -1,0 +1,132 @@
+---
+title: Introduction
+slug: Web/JavaScript/Guide/Introduction
+tags:
+  - JavaScript
+  - 가이드
+  - 안내서
+  - 자바스크립트
+translation_of: Web/JavaScript/Guide/Introduction
+original_slug: Web/JavaScript/Guide/소개
+---
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+
+이 장은 JavaScript를 소개하고 그 일부 기초 개념을 다룹니다.
+
+## 무엇을 미리 알고 있어야 하나요?
+
+이 안내서는 당신이 다음의 기본적인 배경지식이 있다고 가정합니다.
+
+- 인터넷과 월드 와이드 웹({{Glossary("WWW")}})에 대한 전반적인 이해.
+- HyperText 마크업 언어({{Glossary("HTML")}})에 대한 괜찮은 실무 지식.
+- 약간의 프로그래밍 경험. 만약 프로그래밍이 처음이라면, [JavaScript](/ko/docs/Web/JavaScript) 메인 페이지에 링크된 tutorial 중 하나를 따라하세요.
+
+## 어디서 JavaScript 정보를 찾을 수 있을까
+
+MDN에 있는 JavaScript 문서는 다음 세가지 파트로 되어있습니다.
+
+- [Learning the Web](/ko/docs/Learn)은 입문자를 위한 정보를 제공하며, 프로그래밍과 인터넷에 대한 기본 개념을 소개합니다.
+- [JavaScript Guide](/ko/docs/Web/JavaScript/Guide) (이 안내서)는 JavaScript 언어와 객체에 대한 개요를 제공합니다.
+- [JavaScript Reference](/ko/docs/Web/JavaScript/Reference) JavaScript에 관련된 자세한 참고 자료를 제공합니다.
+
+JavaScript가 처음이라면, [learning area](/ko/docs/Learn)와 [JavaScript Guide](/ko/docs/Web/JavaScript/Guide)에 있는 문서를 먼저 보세요. 일단 기초를 확실히 파악한 후에는, 각 객체와 문(statement)에 대한 더 자세한 정보를 [JavaScript Reference](/ko/docs/Web/JavaScript/Reference)에서 확인할 수 있습니다.
+
+## JavaScript는 무엇인가?
+
+JavaScript는 크로스-플랫폼, 객체지향 스크립트 언어입니다. 작고 가벼운 언어입니다. 호스트 환경(가령, 웹 브라우저) 내에서, JavaScript는 프로그램 제어를 제공하기 위해 그 환경의 객체에 연결될 수 있습니다. Node.Js와 같은 자바 스크립트의 고급 서버언어로 사용 할 수도 있습니다.이것을 사용하면 단순히 파일을 다운로드하는 것 (예 : 여러 컴퓨터 간의 실시간 공동 작업)보다 웹 사이트에 더 많은 기능을 추가 할 수 있습니다. 호스트 환경 (예 : 웹 브라우저) 내에서 JavaScript는 해당 환경의 객체에 연결되어 프로그래밍 방식으로 제어 할 수 있습니다.
+
+JavaScript는 `Array`, `Date`, `Math`와 같은 객체에 대한 표준 라이브러리와 연산자(operator), 제어 구조, 문과 같은 언어 요소의 코어 집합을 포함합니다. 코어 JavaScript는 거기에 추가 객체를 보충하여 다양한 목적으로 확장될 수 있습니다. 예를 들면:
+
+- *클라이언트 측 JavaScript*는 브라우저와 문서 객체 모델(DOM) 을 제어하는 객체를 제공하여 코어 언어를 확장합니다. 예를 들어, 클라이언트 측 확장은 어플리케이션이 요소(element)를 HTML 폼에 두고, 마우스 클릭, 폼 입력 및 페이지 탐색 같은 사용자 이벤트에 응답하게 해줍니다.
+- *서버 측 JavaScript*는 서버에서 JavaScript 실행에 관련된 객체를 제공하여 코어 언어를 확장합니다. 예를 들어, 서버 측 확장은 어플리케이션이 데이터베이스와 통신하고, 한 번의 호출 정보의 연속성을 어플리케이션의 다른 곳에 제공하거나, 서버에서 파일 조작을 수행할 수 있도록 해줍니다.
+
+이것은 브라우저에서 JavaScript가 웹 페이지 (DOM)의 모양을 바꿀 수 있음을 의미합니다. 또한 서버의 Node.js JavaScript는 브라우저에 작성된 코드의 사용자 정의 요청에 응답 할 수 있습니다.
+
+## JavaScript 와 Java
+
+JavaScript 와 Java는 여러 면에서 비슷하지만 어떤 면에서는 근본적으로 다릅니다. JavaScript 언어는 Java를 닮았지만 Java의 정적 형지정(static typing)과 강한 형 검사(strong type checking)가 없습니다. JavaScript는 대부분의 Java 식 구문, 명명 규칙 및 기본적인 흐름 제어 구조를 따릅니다. 그것이 LiveScript에서 JavaScript로 이름이 바뀐 이유였습니다.
+
+Java의 선언에 의해 생성되는 클래스의 컴파일-타임 시스템과는 달리, JavaScript는 숫자, 불리언, 그리고 문자열 값을 표현하는 적은 수의 자료 형을 기반으로 한 런타임 시스템을 지원합니다. JavaScript 는 더 일반적인 클래스 기반 객체 모델 대신에 프로토타입 기반 객체 모델을 갖습니다. 프로토타입 기반 모델은 동적 상속을 제공합니다. 즉, 상속된 대상은 각각의 객체에 따라 다양할 수 있습니다. JavaScript는 또한 어떤 특정한 선언을 요구하지 않는 함수도 지원합니다. 함수는 객체의 속성이나, 타입이 느슨하게 형지정된 채 실행되는 메소드가 될 수 있습니다.
+
+JavaScript는 Java에 비해 매우 자유로운 형태의 언어입니다. 여러분은 모든 변수, 클래스, 및 메소드를 선언하지 않아도 됩니다. 여러분은 메소드가 public, private, 또는 protected 인지 염려할 필요가 없고 인터페이스를 구현하지 않아도 됩니다. 변수, 매개변수(parameter), 및 함수의 반환 형은 명시적으로 지정되지 않습니다.
+
+Java는 빠른 실행과 형 안전성(type safety)을 위해 설계된 클래스 기반 프로그래밍 언어입니다. 형 안전성은, 예를 들어, 여러분이 Java 정수를 객체의 레퍼런스로 형변환(cast)하거나 Java 바이트코드를 변경하여 private 메모리에 접근할 수 없음을 의미합니다. Java의 클래스 기반 모델은 프로그램이 오로지 클래스와 그 메소드로만 구성된다는 것을 뜻합니다. Java의 클래스 상속과 강한 형지정은 보통 단단하게 결합된 객체 계층구조를 요구합니다. 이러한 요구는 Java 프로그래밍을 JavaScript 프로그래밍보다 더 복잡하게 만듭니다.
+
+반면에, JavaScript는 HyperTalk 과 dBASE 같은 더 작고 동적 형지정이 가능한 언어들의 정신을 계승했습니다. 이러한 스크립팅 언어는 더 쉬운 구문과 특별한 내장(built-in) 기능 및 객체 생성을 위한 최소 요구사항으로 인해 훨씬 더 많은 사람들에게 프로그래밍 도구를 제공합니다.
+
+| JavaScript                                                                                                                        | Java                                                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 객체 지향. 객체의 형 간에 차이 없음. 프로토타입 메커니즘을 통한 상속, 그리고 속성과 메서드는 어떤 객체든 동적으로 추가될 수 있음. | 클래스 기반. 객체는 클래스 계층구조를 통한 모든 상속과 함께 클래스와 인스턴스로 나뉨. 클래스와 인스턴스는 동적으로 추가된 속성이나 메소드를 가질 수 없음. |
+| 변수 자료형이 선언되지 않음(dynamic typing, loosely typed).                                                                       | 변수 자료형은 반드시 선언되어야 함(정적 형지정, static typing).                                                                                           |
+| 하드 디스크에 자동으로 작성 불가.                                                                                                 | 하드 디스크에 자동으로 작성 가능.                                                                                                                         |
+
+JavaScript와 Java의 차이에 대한 더 많은 정보는, [객체 모델의 세부사항](/ko/docs/Web/JavaScript/Guide/객체_모델의_세부사항) 장을 보세요.
+
+## JavaScript 와 ECMAScript 명세
+
+JavaScript는 JavaScript에 기반한 표준화된 국제 프로그래밍 언어를 제공하기 위해[Ecma International](http://www.ecma-international.org/) 에서 표준화 됩니다 — European association for standardizing information and communication systems (ECMA는 이전에 European Computer Manufacturers Association의 두문자어였습니다). ECMAScript라 불리는 이 JavaScript의 표준화 버전은 표준을 지원하는 모든 어플리케이션에서 같은 방식으로 동작합니다. 회사들은 그들의 JavaScript 구현을 개발하기 위해 공개 표준 언어를 사용할 수 있습니다. ECMAScript 표준은 ECMA-262 명세(specification)에서 문서화되었습니다. JavaScript와 ECMAScript 명세 판의 여러 버전에 대한 더 많은 것을 배우려면 [New in JavaScript](/ko/docs/Web/JavaScript/New_in_JavaScript) 을 보세요.
+
+ECMA-262 표준은 또한 IOS-16262로서 [ISO](http://www.iso.ch/) (국제 표준화 기구) 에 의해 승인되었습니다. [Ecma International website](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 그 명세를 찾을 수 있습니다. ECMAScript 명세는 [World Wide Web Consortium (W3C)](http://www.w3.org/) 나 [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org/)에 의해 표준화된 Document Object Model (DOM)을 설명하지 않습니다. DOM은 여러분의 스크립트에 HTML 문서 객체를 드러내는 방법을 정의합니다. JavaScript로 프로그래밍을 할 때 사용되는 여러 기술들에 대한 정보를 얻으 시려면, [JavaScript technologies overview](/ko/docs/Web/JavaScript/JavaScript_technologies_overview) 를 참고하세요.
+
+### JavaScript 문서 vs ECMAScript 명세
+
+ECMAScript 명세는 ECMAScript 구현을 위한 요구사항의 집합입니다; 여러분이 여러분의 ECMAScript 구현이나 엔진(가령 Firefox의 SpiderMonkey, 또는 Chrome의 v8)에서 표준을 따르는 언어의 기능을 구현하길 원할 때 유용합니다.
+
+ECMAScript 문서는 스크립트 프로그래머를 돕기 위함이 아닙니다; 스크립트 작성을 위한 정보는 JavaScript 문서를 사용하세요.
+
+ECMAScript 명세는 JavaScript 프로그래머에게 익숙하지 않을 수 있는 용어와 문법을 사용합니다. 언어의 기술이 ECMAScript 에서 다를 수 있지만, 언어 그 자체는 같습니다. JavaScript는 ECMAScript 명세에 서술된 모든 기능을 지원합니다.
+
+JavaScript 문서는 JavaScript 프로그래머에게 적합한 언어의 측면을 설명합니다.
+
+## JavaScript 시작하기
+
+JavaScript 시작은 쉽습니다: 최신 웹 브라우저만 있으면 됩니다. 이 안내서는 현재 Firefox의 최신 버전에서만 사용 가능한 약간의 JavaScript 기능을 포함하므로, 가장 최신 버전의 Firefox를 사용하기를 권합니다.
+
+JavaScript를 실험하기 유용한 두 도구가 Firefox에 내장되어 있습니다: Web Console과 Scratchpad.
+
+### 웹 콘솔
+
+[웹 콘솔](/ko/docs/Tools/Web_Console)은 현재 로드된 페이지에 대한 정보를 보이고, 또한 여러분이 현재 페이지에서 JavaScript 식을 실행해볼 수 있는 [명령어 입력줄(command line)](/ko/docs/Tools/Web_Console#The_command_line_interpreter)을 제공합니다.
+
+웹 콘솔을 열기 위해서는, Firefox의 "도구" 메뉴 하위에 있는 "개발자" 메뉴의 "웹 콘솔"을 선택(윈도우와 리눅스에서는 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>, 맥에서는 <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd>)합니다. 브라우저 창의 아래에 웹 콘솔이 나타납니다. 콘솔의 바닥을 따라 나온 것이 여러분이 JavaScript를 입력할 수 있는 명령어 입력줄이고, 실행 결과는 바로 위 공간에 표시됩니다:
+
+![](https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png)
+
+이 콘솔은 eval과 완전히 동일하게 동작합니다:마지막 입력된 표현식이 반환되죠. 간단하게 생각해서, 콘솔에 뭔가 입력할 때마다 eval로 감싼 console.log로 둘러싸인 형태라고 보시면 됩니다.
+
+```js
+function greetMe(yourName) { alert('Hello ' + yourName); } console.log(eval('3 + 5'));
+```
+
+### Scratchpad
+
+Web Console은 한 줄 JavaScript를 실행하기에 훌륭합니다. 하지만 비록 여러 줄을 실행할 수 있지만, 아주 불편하고 Web Console을 사용해 여러분의 샘플 코드를 저장할 수도 없습니다. 그러므로 좀 더 복잡한 예제를 위해서는 [Scratchpad](ko/docs/도구들/Scratchpad)가 더 나은 도구입니다.
+
+Scratchpad를 열기 위해, Firefox의 메뉴 "Tools" 의 하위에 있는 "Web Developer" 메뉴의 "Scratchpad" 를 선택합니다(단축키: <kbd>Shift</kbd>+<kbd>F4</kbd>). 이것은 분리된 창에서 열리고 브라우저에서 JavaScript를 작성하고 실행하기 위해 사용할 수 있는 에디터입니다. 여러분은 또한 디스크로부터 스크립트를 부르거나 저장할 수도 있습니다.
+
+![](https://mdn.mozillademos.org/files/13468/scratchpad.png)
+
+### Hello world
+
+JavaScript 작성을 시작하기 위해서, Scratchpad를 열고 첫 JavaScript 코드 "Hello World" 를 작성하세요.
+
+```javascript
+    (function(){
+      "use strict";
+      /* Start of your code */
+      function greetMe(yourName) {
+        alert('Hello ' + yourName);
+      }
+
+      greetMe('World');
+      /* End of your code */
+    })();
+```
+
+패드에서 코드를 선택하고 Ctrl + R 키를 눌러 브라우저에서 펼쳐지는 것을 지켜보십시오! 다음 페이지에서 이 가이드는 JavaScript 구문 및 언어 기능을 소개하므로보다 복잡한 응용 프로그램을 작성할 수 있습니다. 그러나 당분간은 `(function () { "use strict"`를 코드 앞에 추가하고`}}) ();`를 코드마지막에 추가하세요. 아직은 이코드가 뭔지 잘 모르겠지만 나중에 이 코드가 의미하는 것을 배울 것입니다, 지금은 간단히 다음과 같다고 생각하세요.
+
+1. 성능을 크게 개선합니다.
+2. 초보자가 실수하게 만드는 Javascript의 일부 시맨틱을 막습니다.
+3. 콘솔에서 실행되는 코드 스니펫이 서로 상호 작용하지 못하도록합니다 (예 : 한 콘솔 실행에서 생성 된 내용을 다른 콘솔 실행에 사용하는 경우).
+
+{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

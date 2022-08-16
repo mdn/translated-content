@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Guide/Keyed_collections
 
 <p>ECMAScript 2015 führt eine neue Datenstruktur ein, um Werte auf Werte zu abbildet. Ein {{jsxref("Map")}} Objekt ist eine einfache Schlüssel/Werte-Abbildung und man kann über die Element in der Einfügereihenfolge iterieren.</p>
 
-<p>Das folgende Beispiel zeigt einige Basisoperationen mit einer <code>Map</code>.  Für mehr Beispiele und die komplette API siehe zudem die Referenzseite {{jsxref("Map")}}. Man kann eine {{jsxref("Statements/for...of","for...of")}} Schleife benutzen, um ein Array von <code>[key, value]</code> für jede Iteration zurückzugeben.</p>
+<p>Das folgende Beispiel zeigt einige Basisoperationen mit einer <code>Map</code>.  Für mehr Beispiele und die komplette API siehe zudem die Referenzseite {{jsxref("Map")}}. Man kann eine {{jsxref("Statements/for...of","for...of")}} Schleife benutzen, um ein Array von <code>[key, value]</code> für jede Iteration zurückzugeben.</p>
 
 <pre class="brush: js notranslate">var sayings = new Map();
 sayings.set('dog', 'woof');
@@ -33,7 +33,7 @@ sayings.delete('dog');
 sayings.has('dog'); // false
 
 for (var [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+  console.log(key + ' goes ' + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -50,7 +50,7 @@ sayings.size; // 0
  <li>Die Schlüssel eines <code>Object</code> sind {{jsxref("Global_Objects/String","Strings")}}, während bei einer <code>Map</code> jeder Wert möglich ist.</li>
  <li>Man kann die Größe einer <code>Map</code> einfach abfragen, während man bei einem Objekt manuell mitzählen muss.</li>
  <li>Die Iteration einer <code>Map</code> erfolgt in der Reihenfolge des Einfügens ihrer Elemente.</li>
- <li>Ein <code>Object</code> hat einen Prototyp, so dass Standardschlüssel in der <code>Map</code> schon vorhanden sind. (Dies kann mit <code>map = Object.create(null)</code> umgangen werden.)</li>
+ <li>Ein <code>Object</code> hat einen Prototyp, so dass Standardschlüssel in der <code>Map</code> schon vorhanden sind. (Dies kann mit <code>map = Object.create(null)</code> umgangen werden.)</li>
 </ul>
 
 <p>Diese drei Tipps können bei der Entscheidung für eine <code>Map</code> oder ein <code>Object</code> helfen:</p>
@@ -126,7 +126,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 <ul>
  <li>Das Prüfen, ob ein Element in einer Collection schon existiert mit {{jsxref("Array.indexOf")}} ist in Arrays langsamer.</li>
- <li>In <code>Set</code> Objekte lassen sich Elemente löschen. Mit einem Array entsteht an dem  Element Index eine Lücke, bzw. sie wird geschlossen.</li>
+ <li>In <code>Set</code> Objekte lassen sich Elemente löschen. Mit einem Array entsteht an dem  Element Index eine Lücke, bzw. sie wird geschlossen.</li>
  <li>Der Wert {{jsxref("NaN")}} kan in einem Array nicht mit <code>indexOf</code> gefunden werden.</li>
  <li><code>Set</code> Objekte erlauben nur eindeutige Objekte; man muss sich nicht selber um Duplikate kümmern.</li>
 </ul>
@@ -138,7 +138,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 <p>Die Hauptunterschiede zu einem {{jsxref("Set")}} Objekt sind:</p>
 
 <ul>
- <li>Im Gegensatz zu  <code>Sets</code>, ist <code>WeakSets</code> eine <strong>Collection von nur Objekten</strong> und nicht von beliebigen Werten von jedem Typ.</li>
+ <li>Im Gegensatz zu  <code>Sets</code>, ist <code>WeakSets</code> eine <strong>Collection von nur Objekten</strong> und nicht von beliebigen Werten von jedem Typ.</li>
  <li>Das <code>WeakSet</code> ist <em>weak: </em>Referenzen in in der Collection sind <em>weakly</em> gehalten. Was gedeutet, dass wenn es keine weitere Referenz auf eine Objekt in dem <code>WeakSet</code> gibt, der Speicher geleert werden kann. Das bedeutet auch, dass es keine Liste gibt, die die aktuellen Objekte der Collection enthält. <code>WeakSets</code> sind nicht Aufzählbar.</li>
 </ul>
 

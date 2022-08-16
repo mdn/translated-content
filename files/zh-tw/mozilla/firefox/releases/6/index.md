@@ -41,7 +41,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The [`azimuth`](/zh-TW/docs/Web/CSS/azimuth) CSS property is no longer supported, as we have removed what little code we had for the `aural` media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.
 - In the past, the [`:hover`](/zh-TW/docs/Web/CSS/:hover) pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The [`:indeterminate`](/zh-TW/docs/Web/CSS/:indeterminate) pseudo-class can be applied to [`<progress>`](/zh-TW/docs/Web/HTML/Element/progress) elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
-- The `-moz-win-exclude-glass `value has been added to the [`-moz-appearance`](/zh-TW/docs/Web/CSS/-moz-appearance) CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
+- The `-moz-win-exclude-glass` value has been added to the [`-moz-appearance`](/zh-TW/docs/Web/CSS/-moz-appearance) CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
 - [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) changed how the hash (#) symbol is treated in data URIs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
 ### DOM
@@ -106,7 +106,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.
 - WebGL now supports the [`OES_texture_float`](http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt) extension.
 - The new [Scratchpad](/en/Tools/Scratchpad) tool provides a handy place to experiment with JavaScript code.
-- The `console.trace()` method has been added to the [ConsoleAPI ](/en/Tools/Web_Console)(see [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
+- The `console.trace()` method has been added to the [ConsoleAPI](/en/Tools/Web_Console) (see [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
 
 ## Changes for Mozilla and add-on developers
 

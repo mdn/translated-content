@@ -1,15 +1,6 @@
 ---
 title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
 {{GamesSidebar}}
 

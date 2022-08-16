@@ -28,7 +28,7 @@ translation_of: Learn/HTML
 
 當你開始閱讀這主題時，你至少必須對使用電腦有基礎了解，以及會基本的上網 (諸如網頁瀏覽、了解網頁內容)。而你需要建立一個已安裝基本軟體 (詳細軟體請參閱[Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software))的基礎工作環境，並且了解如何建立與管理檔案(詳細請參閱[Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)) — 這些都包含在新手 [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web)的章節裡。
 
-建議你在開始學習 HTML 這個項目之前，可以先 [從網際網路開始 ](/en-US/docs/Learn/Getting_started_with_the_web)瞭解是如何運作的。儘管知道網路的運作不是必要的；大部分的項目都在 [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) 的文章中 [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) 這個章節更詳盡地介紹 模組 (module), albeit。
+建議你在開始學習 HTML 這個項目之前，可以先 [從網際網路開始](/en-US/docs/Learn/Getting_started_with_the_web) 瞭解是如何運作的。儘管知道網路的運作不是必要的；大部分的項目都在 [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) 的文章中 [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) 這個章節更詳盡地介紹 模組 (module), albeit。
 
 ## 模組
 

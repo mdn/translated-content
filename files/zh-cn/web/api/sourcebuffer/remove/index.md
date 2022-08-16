@@ -1,7 +1,6 @@
 ---
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
-translation_of: Web/API/SourceBuffer/remove
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

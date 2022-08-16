@@ -1,13 +1,6 @@
 ---
 title: 區塊 (CSS)
 slug: Glossary/Block/CSS
-tags:
-  - Block
-  - CSS
-  - HTML
-  - display
-  - 術語表
-translation_of: Glossary/Block/CSS
 ---
 在網頁上一個**區塊**是一個{{glossary("HTML")}}元素({{glossary("element")}})它會出現一個新的行，例：在前面的元素之下和後面的元素之前(通常稱爲塊級元素)。擧個例子, {{htmlelement("p")}} 標簽就是一個默認的塊級元素，而 {{htmlelement("a")}} 標簽則是一個内聯元素— 你可以在 HTML 源代碼放一些相鄰的鏈接，他們將會并列渲染在相同的行。
 

@@ -285,9 +285,9 @@ background-position: 10px 20px,  top right;
 
 为了测试你的新知识，尝试使用背景和边框创建以下内容，使用下面的例子作为起点：
 
-1.  给方框一个 5px 的黑色实心边框，圆角为 10px。
-2.  添加一个背景图像 (使用 URL balloons.jpg)，并调整它的大小，使它能够覆盖盒子。
-3.  给\<h2>一个半透明的黑色背景颜色，并使文本为白色。
+1. 给方框一个 5px 的黑色实心边框，圆角为 10px。
+2. 添加一个背景图像 (使用 URL balloons.jpg)，并调整它的大小，使它能够覆盖盒子。
+3. 给\<h2>一个半透明的黑色背景颜色，并使文本为白色。
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 800)}}
 
@@ -303,21 +303,21 @@ background-position: 10px 20px,  top right;
 
 ## 模块目录
 
-1.  [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)[](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

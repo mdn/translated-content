@@ -121,7 +121,7 @@ Express 应用生成器支持多款流行的视图/模板引擎，包括 [EJS](h
 
 > **备注：** 互联网上有许多资源，可帮助你选择合适的视图/模板引擎。
 
-本项目选用[ Pug ](https://pugjs.org/api/getting-started.html)模板引擎（Jade 是它不久前的曾用名），它是最流行的 Express / JavaScript 模板语言之一，且对 Express 生成器 [开箱即用](https://github.com/expressjs/express/wiki#template-engines)。
+本项目选用 [Pug](https://pugjs.org/api/getting-started.html) 模板引擎（Jade 是它不久前的曾用名），它是最流行的 Express / JavaScript 模板语言之一，且对 Express 生成器 [开箱即用](https://github.com/expressjs/express/wiki#template-engines)。
 
 ### 我应该用哪个 CSS 引擎？
 
@@ -151,19 +151,19 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 现在我们已经拥有一个完整的项目骨架。虽然这个网站现在还做不了什么，但运行一下，展示一下工作原理也是值得的。
 
-1.  首先，安装依赖项（`install` 命令将获取项目的 **package.json** 文件中列出的所有依赖项包）。
+1. 首先，安装依赖项（`install` 命令将获取项目的 **package.json** 文件中列出的所有依赖项包）。
 
     ```bash
     $ npm install
     ```
 
-2.  然后运行该应用。
+2. 然后运行该应用。
 
     ```bash
     $ DEBUG=express-locallibrary-tutorial:* npm start
     ```
 
-3.  最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](https://mdn.mozillademos.org/files/16410/success.png)
+3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](https://mdn.mozillademos.org/files/16410/success.png)
 
 一个 Express 应用就配置成功了，它托管于 localhost:3000。
 
@@ -291,7 +291,7 @@ $ DEBUG=express-locallibrary-tutorial:* npm run devstart
 
 ### www 文件
 
-文件 **/bin/www** 是应用入口！它做的第一件事是 `require()` “真实”的应用入口（即项目根目录中的 **app.js** ），**app.js** 会设置并返回 [`express()`](http://expressjs.com/en/api.html)[ ](http://expressjs.com/en/api.html)应用对象。
+文件 **/bin/www** 是应用入口！它做的第一件事是 `require()` “真实”的应用入口（即项目根目录中的 **app.js** ），**app.js** 会设置并返回 [`express()`](http://expressjs.com/en/api.html)应用对象。
 
 ```js
 #!/usr/bin/env node
@@ -445,7 +445,7 @@ block content
 
 ## 挑战自我
 
-在 **/routes/users.js** 中添加一个新路由，在 URL `/users/cool/` 处显示文本 "你好酷"。运行服务器，并在浏览器中访问 [http://localhost:3000/users/cool/ ](http://localhost:3000/users/cool/)，测试一下是否成功。
+在 **/routes/users.js** 中添加一个新路由，在 URL `/users/cool/` 处显示文本 "你好酷"。运行服务器，并在浏览器中访问 [http://localhost:3000/users/cool/](http://localhost:3000/users/cool/)，测试一下是否成功。
 
 ## 小结
 

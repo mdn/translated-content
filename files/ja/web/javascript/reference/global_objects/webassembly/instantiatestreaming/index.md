@@ -25,7 +25,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 ### 引数
 
 - _source_
-  - : [`Response`](/ja/docs/Web/API/Response "Response は Fetch API のインターフェースで、リクエストに対するレスポンスを表します。") オブジェクト、またはそれで解決するプロミスで、コンパイルしてインスタンス化する .wasm モジュールのソースを表します。
+  - : [`Response`](/ja/docs/Web/API/Response) オブジェクト、またはそれで解決するプロミスで、コンパイルしてインスタンス化する .wasm モジュールのソースを表します。
 - _importObject_ {{optional_inline}}
   - : 関数や {{jsxref("WebAssembly.Memory")}} オブジェクトなど、新しく生成される `Instance` にインポートされる値を持つオブジェクト。コンパイルされたモジュールの宣言されたインポートそれぞれに対応するプロパティが存在する必要があります。そうでない場合、[`WebAssembly.LinkError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) が発生します。
 
@@ -45,7 +45,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 
 ### ストリーミングのインスタンス化
 
-次の例 (Github上のデモ [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)を参照してください) では、ソースから .wasm モジュールを直接コンパイルしてインスタンス化しています。プロミスは `ResultObject` で充足されます。`instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response "Response は Fetch API のインターフェースで、リクエストに対するレスポンスを表します。") オブジェクトを渡すプロミスを受け取るので、直接 [`WindowOrWorkerGlobalScope.fetch()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch "WindowOrWorkerGlobalScope ミックスインの fetch() メソッドは、ネットワークからリソースをフェッチするプロセスを開始し、レスポンスが利用可能になると履行される約束を返します。") 呼び出し結果を渡すことができます。
+次の例 (Github上のデモ [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)を参照してください) では、ソースから .wasm モジュールを直接コンパイルしてインスタンス化しています。プロミスは `ResultObject` で充足されます。`instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトを渡すプロミスを受け取るので、直接 [`WindowOrWorkerGlobalScope.fetch()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch) 呼び出し結果を渡すことができます。
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

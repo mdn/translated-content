@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
 <div>{{JSRef}}</div>
 
-<p>Die <code><strong>reduceRight()</strong></code> Methode wendet eine Funktion gegen einen Akkumulator auf jeden Wert des Arrays (von rechts nach links) auf und reduziert es um einen einzelnen Wert.</p>
+<p>Die <code><strong>reduceRight()</strong></code> Methode wendet eine Funktion gegen einen Akkumulator auf jeden Wert des Arrays (von rechts nach links) auf und reduziert es um einen einzelnen Wert.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}</div>
 
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
  <dd>Funktion, welche für jeden Wert im Array aufgerufen wird und vier Argumente hat:
  <dl>
   <dt><code>previousValue</code></dt>
-  <dd>Der zuvor im letzten Aufruf des Rückrufs zurückgegebene Wert, oder <code>initialValue</code>, wenn unterstützt. (siehe unten)</dd>
+  <dd>Der zuvor im letzten Aufruf des Rückrufs zurückgegebene Wert, oder <code>initialValue</code>, wenn unterstützt. (siehe unten)</dd>
   <dt><code>currentValue</code></dt>
   <dd>Das derzeitige zu verarbeitende Element in dem Array.</dd>
   <dt><code>index</code>{{optional_inline}}</dt>
@@ -50,16 +50,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p><code>reduceRight</code> Führt die Rückruffunktion einmal für jedes im Array vorhandene Element aus, ohne Löcher im Array, wobei vier Argumente empfangen werden: der Initialwert (<code>initialValue)</code> (oder Wert des vorherigen <code>callback</code> Aufrufes), der Wert des derzeitigen Elements, der derzeitige Index, und das Array auf welches der Durchlauf stattfindet.</p>
+<p><code>reduceRight</code> Führt die Rückruffunktion einmal für jedes im Array vorhandene Element aus, ohne Löcher im Array, wobei vier Argumente empfangen werden: der Initialwert (<code>initialValue)</code> (oder Wert des vorherigen <code>callback</code> Aufrufes), der Wert des derzeitigen Elements, der derzeitige Index, und das Array auf welches der Durchlauf stattfindet.</p>
 
-<p>Der Aufruf des reduceRight <code>callback</code> würde ungefähr so aussehen:</p>
+<p>Der Aufruf des reduceRight <code>callback</code> würde ungefähr so aussehen:</p>
 
 <pre class="brush: js">array.reduceRight(function(previousValue, currentValue, index, array) {
   // ...
 });
 </pre>
 
-<p>Wenn die Funktion das erste Mal ausgeführt wird, kann der vorherige Wert  (<code>previousValue)</code>  und der derzeitige Wert (<code>currentValue)</code> eines von zwei Werten sein. Wenn ein Initialwert (<code>initialValue)</code> der Callback-Funktion zu <code>reduceRight</code> mitgegeben wird, dann wird der <code>previousValue</code> und <code>der initialValue</code> gleich dem <code>initialValue</code> in dem Array. Wenn kein <code>initialValue</code>  mitgegeben wird, dann ist der <code>previousValue</code> gleich dem Wert in dem Array und <code>currentValue</code> wird gleich zu dem geich dem zweiten bis letzten Wert.</p>
+<p>Wenn die Funktion das erste Mal ausgeführt wird, kann der vorherige Wert  (<code>previousValue)</code>  und der derzeitige Wert (<code>currentValue)</code> eines von zwei Werten sein. Wenn ein Initialwert (<code>initialValue)</code> der Callback-Funktion zu <code>reduceRight</code> mitgegeben wird, dann wird der <code>previousValue</code> und <code>der initialValue</code> gleich dem <code>initialValue</code> in dem Array. Wenn kein <code>initialValue</code>  mitgegeben wird, dann ist der <code>previousValue</code> gleich dem Wert in dem Array und <code>currentValue</code> wird gleich zu dem geich dem zweiten bis letzten Wert.</p>
 
 <p>Wenn das Array leer ist und kein <code>initialValue</code> angegeben ist wird ein {{jsxref("TypeError")}} erzeugt. Wenn das Array nur ein Element hat (die Position ist egal) und kein <code>initialValue</code> angegeben ist oder wenn <code>initialValue</code> angegeben ist und das Array leer ist, wird der einzelne Wert zurückgegeben ohne <code>callback</code> aufzurufen.</p>
 
@@ -309,12 +309,12 @@ if ('function' !== typeof Array.prototype.reduceRight) {
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
