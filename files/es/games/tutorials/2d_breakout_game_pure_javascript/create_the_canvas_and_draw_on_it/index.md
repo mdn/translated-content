@@ -108,6 +108,6 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 ## Pasos siguientes
 
-Hemos preparado la estructura HTML básica y hemos aprendido un poquito a manejar el canvas. Para continuar, en el segundo capítulo averiguaremos cómo mover la bola en nuestro juego ([Mueve la bola](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola)).
+Hemos preparado la estructura HTML básica y hemos aprendido un poquito a manejar el canvas. Para continuar, en el segundo capítulo averiguaremos cómo mover la bola en nuestro juego ([Mueve la bola](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola)).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}

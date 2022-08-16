@@ -359,7 +359,7 @@ Repasemos brevemente cómo usamos las tablas de datos. Una tabla puede ser una h
 
 Pero, ¿y si no puedes hacer esas asociaciones visuales? ¿Cómo podrías leer una tabla como la anterior? Las personas con discapacidad visual a menudo usan un lector de pantalla que les lee la información de las páginas web. Esto no resulta un problema cuando lees un texto sin formato, pero interpretar una tabla puede ser un gran desafío para una persona ciega. Sin embargo, con el marcado adecuado podemos reemplazar las asociaciones visuales por otras asociaciones de tipo programático.
 
-> **Nota:** Hay en torno a 253 millones de personas con discapacidad visual según los[ datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment "datos de la OMS sobre la discapacidad visual").
+> **Nota:** Hay en torno a 253 millones de personas con discapacidad visual según los [datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
 Esta sección del artículo proporciona técnicas adicionales para conferir a las tablas la mayor accesibilidad posible.
 

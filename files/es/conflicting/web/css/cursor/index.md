@@ -7,7 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 ---
-[Gecko](/es/Gecko "es/Gecko") 1.8 ([Firefox 1.5](/es/Firefox_1.5_para_Desarrolladores "es/Firefox_1.5_para_Desarrolladores"), SeaMonkey 1.0) soporta el uso de URLs como valores para la [propiedad cursor](http://www.sidar.org/recur/desdi/traduc/es/css/ui.html#propdef-cursor) (CSS2). Esto nos permite definir la imagen que queremos como puntero del ratón, además podemos usar cualquiera de los formatos gráficos soportados por Gecko.
+[Gecko](/es/Gecko) 1.8 ([Firefox 1.5](/es/Firefox_1.5_para_Desarrolladores), SeaMonkey 1.0) soporta el uso de URLs como valores para la [propiedad cursor](http://www.sidar.org/recur/desdi/traduc/es/css/ui.html#propdef-cursor) (CSS2). Esto nos permite definir la imagen que queremos como puntero del ratón, además podemos usar cualquiera de los formatos gráficos soportados por Gecko.
 
 ### Sintaxis
 

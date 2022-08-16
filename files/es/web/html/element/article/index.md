@@ -30,4 +30,4 @@ Este elemento implementa la interfaz HTMLElement.
 ### Consulta también
 
 - Otros elementos relacionados con secciones: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }}
-- [Sections and outlines of an HTML5 document](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
+- [Sections and outlines of an HTML5 document](/en/Sections_and_Outlines_of_an_HTML5_document).

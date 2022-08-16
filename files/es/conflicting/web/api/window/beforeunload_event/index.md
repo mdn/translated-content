@@ -32,7 +32,7 @@ Cuando este evento devuelve un valor que no sea nulo, se solicita al usuario que
 
 Desde el 25 de mayo de 2011, los estados de la [especificación HTML5](http://www.w3.org/TR/html5-diff/#changes-2011-05-25) que llaman a los métodos {{domxref("window.showModalDialog()")}}, {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} y {{domxref("window.prompt()")}} pueden ser ignorados en este evento.
 
-Se _puede_ y se _debería_ controlar este evento con {{domxref("EventTarget.addEventListener","window.addEventListener()")}} y el [evento `beforeunload`](/es/docs/Mozilla_event_reference/beforeunload "Mozilla_event_reference/unload") (más información en los enlaces).
+Se _puede_ y se _debería_ controlar este evento con {{domxref("EventTarget.addEventListener","window.addEventListener()")}} y el [evento `beforeunload`](/es/docs/Mozilla_event_reference/beforeunload) (más información en los enlaces).
 
 ## Compatibilidad con los navegadores
 

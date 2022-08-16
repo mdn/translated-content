@@ -113,7 +113,7 @@ CSS proporciona cuatro valores de propiedad universales especiales para el contr
 
 > **Nota:** También hay un valor más reciente, {{cssxref ("revert")}}, que todavía admiten pocos navegadores.
 
-> **Nota:** Véase la sección [El origen de las declaraciones CSS](/es/docs/Web/CSS/Cascade#Origin_of_CSS_declarations "Este artículo explica qué es la cascada, el orden de la secuencia en cascada de las declaraciones CSS, y cómo esto afecta al desarrollador web.") en el artículo [Introducción al concepto de cascada en CSS ](/es/docs/Web/CSS/Cascade " Este artículo explica qué es la cascada, el orden de la secuencia en cascada de las declaraciones CSS, y cómo esto afecta al desarrollador web.")para obtener más información sobre cada uno de estos valores y el modo en que funcionan.
+> **Nota:** Véase la sección [El origen de las declaraciones CSS](/es/docs/Web/CSS/Cascade#Origin_of_CSS_declarations) en el artículo [Introducción al concepto de cascada en CSS ](/es/docs/Web/CSS/Cascade)para obtener más información sobre cada uno de estos valores y el modo en que funcionan.
 
 A continuación veremos una lista de enlaces y exploraremos cómo funcionan los valores universales. El ejemplo en vivo de abajo te permite jugar con el CSS y ver lo que sucede cuando se hacen cambios. Jugar con el código es la mejor forma de enfrentarse al HTML y el CSS.
 

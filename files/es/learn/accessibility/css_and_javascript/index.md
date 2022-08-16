@@ -217,7 +217,7 @@ JavaScript también puede romper la accesibilidad, dependiendo de cómo se use.
 
 El JavaScript moderno es un lenguaje poderoso, y podemos hacer mucho con él actualmente, desde contenido simple y actualizaciones de la interfaz de usuario hasta juegos 2D y 3D completos. No existe una regla que diga que todo el contenido debe ser 100% accesible para todas las personas; solo debe hacer lo que pueda y hacer que sus aplicaciones sean lo más accesibles posible.
 
-Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer accesibles; por ejemplo, texto, imágenes, tablas, formularios y botones que activan funciones. Como vimos en nuestro artículo [HTML: Una buena base para la accesibilidad](https://developer.mozilla.org/es/docs/Learn/Accessibility/HTML), las consideraciones clave son:
+Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer accesibles; por ejemplo, texto, imágenes, tablas, formularios y botones que activan funciones. Como vimos en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML), las consideraciones clave son:
 
 - Buena semántica: usar el elemento correcto para el trabajo correcto. Por ejemplo, asegúrate de usar encabezados y párrafos, y elementos {{htmlelement ("button")}} y {{htmlelement ("a")}}
 - Asegurarse de que el contenido esté disponible como texto, ya sea directamente como contenido de texto, buenas etiquetas de texto para los elementos de formulario o alternativas de texto, p.ej. texto alternativo para imágenes.

@@ -72,7 +72,7 @@ Los códigos de ejemplo agregados durante o después del 20 de Agosto de 2010 qu
 
 Si deseas contribuir al wiki, debes hacer que tu documentación esté disponible bajo la licencia de Attribution-ShareAlike (u ocasionalmente una licencia alternativa ya especificada por la página que estás editando), y los ejemplos de código disponibles bajo licencia [Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/) (Dedicada al dominio público). Añadir contenido a este wiki significa que aceptas que tus contribuciones estén disponibles bajo esas licencias.
 
-Algunos contenidos antiguos se pusieron a disposición bajo una licencia distinta de las licencias mencionadas anteriormente. Estos se indican en la parte inferior de cada página a través de un [Bloque de Licencia Alternativo](https://developer.mozilla.org/Archive/Meta_docs/Examples/Alternate_License_Block).
+Algunos contenidos antiguos se pusieron a disposición bajo una licencia distinta de las licencias mencionadas anteriormente. Estos se indican en la parte inferior de cada página a través de un [Bloque de Licencia Alternativo](/Archive/Meta_docs/Examples/Alternate_License_Block).
 
 > **Advertencia:** No se pueden crear nuevas páginas utilizando licencias alternativas.
 
@@ -86,7 +86,7 @@ Los derechos sobre las marcas comerciales, logotipos, marcas al servicio de la F
 
 ### Descarga de contenido
 
-Puede descargar un [espejo tarball completo de MDN](https://developer.mozilla.org/media/developer.mozilla.org.tar.gz). (2.5 GB a partir de 2016-11-30).
+Puede descargar un [espejo tarball completo de MDN](/media/developer.mozilla.org.tar.gz). (2.5 GB a partir de 2016-11-30).
 
 #### Páginas únicas
 

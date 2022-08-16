@@ -42,7 +42,7 @@ Aquí vamos a discutir lo que ocurre con los datos cuando se envía un formulari
 
 ### Sobre la arquitectura cliente / servidor
 
-La web se basa en una arquitectura cliente / servidor muy básica que se puede resumir de la siguiente manera: un cliente (normalmente un navegador Web) envía una petición a un servidor (la mayoría de las veces un servidor web como [Apache](http://httpd.apache.org/ "http://www.apache.org/") , [Nginx](http://nginx.com/ "http://nginx.com/") , [IIS](http://www.iis.net/) , [Tomcat](http://tomcat.apache.org/) , etc.), utilizando el [protocolo HTTP](/es/docs/HTTP "/en-US/docs/HTTP") . El servidor responde a la solicitud utilizando el mismo protocolo.
+La web se basa en una arquitectura cliente / servidor muy básica que se puede resumir de la siguiente manera: un cliente (normalmente un navegador Web) envía una petición a un servidor (la mayoría de las veces un servidor web como [Apache](http://httpd.apache.org/) , [Nginx](http://nginx.com/) , [IIS](http://www.iis.net/) , [Tomcat](http://tomcat.apache.org/) , etc.), utilizando el [protocolo HTTP](/es/docs/HTTP) . El servidor responde a la solicitud utilizando el mismo protocolo.
 
 ![Un esquema básico de la arquitectura cliente Web / servidor](/files/4291/client-server.png)
 
@@ -84,7 +84,7 @@ En este ejemplo, los datos se envían a una dirección URL absoluta - `http://fo
 
 #### El atributo {{htmlattrxref ( "método", "form")}}
 
-Este atributo define cómo se envían los datos. El [protocolo HTTP](/es/docs/HTTP "/en-US/docs/HTTP") proporciona varias formas de realizar una solicitud; Los datos del formulario HTML se pueden transmitir a través de un número de diferentes queridos, los más comunes de los cuales son el método `GET` y el método `POST`.
+Este atributo define cómo se envían los datos. El [protocolo HTTP](/es/docs/HTTP) proporciona varias formas de realizar una solicitud; Los datos del formulario HTML se pueden transmitir a través de un número de diferentes queridos, los más comunes de los cuales son el método `GET` y el método `POST`.
 
 Para entender la diferencia entre estos dos métodos, vamos a dar un paso atrás y examinar cómo funciona HTTP. Cada vez que desee llegar a un recurso en la Web, el navegador envía una petición a una URL. Una petición HTTP consta de dos partes: un encabezado que contiene un conjunto de metadatos mundial sobre las capacidades del navegador, y un cuerpo que puede contener la información necesaria paraque el servidor pueda procesar la petición específica.
 
@@ -229,7 +229,7 @@ Las dos plantillas de referencia en el código anterior son los siguientes:
 Hay muchas otras tecnologías del lado del servidor que puede utilizar para el manejo de formularios, incluyendo [Perl](/es/docs/), [Java](/es/docs/), [.Net](http://www.microsoft.com/net), [Ruby](/es/docs/) , etc. Sólo tiene que elegir el que más le guste. Dicho esto, vale la pena señalar que es muy raro de usar estas tecnologías directamente porque esto puede ser complicado. Es más común el uso de uno de los muchos marcos de trabajo para un manejo más fácil del código, tales como:
 
 - [Symfony](http://symfony.com/) para PHP
-- [Django](/es/docs/Learn/Server-side/Django "https://www.djangoproject.com/") para Python (un poco más pesado que el [frasco](http://flask.pocoo.org/) , pero con más herramientas y opciones).
+- [Django](/es/docs/Learn/Server-side/Django) para Python (un poco más pesado que el [frasco](http://flask.pocoo.org/) , pero con más herramientas y opciones).
 - [Express](/es/docs/Learn/Server-side/Express_Nodejs) de Node.js
 - [Ruby on Rails](http://rubyonrails.org/) Ruby
 - [Grails](http://grails.org/) para Java
@@ -281,7 +281,7 @@ Dependiendo de lo que estés haciendo, hay algunos problemas de seguridad muy co
 
 Cross-Site Scripting (XSS) y Cross-Site Request Falsification (CSRF) son tipos comunes de ataques que se producen cuando se muestran los datos enviados por un usuario y que son devueltos a otro usuario para otro uso.
 
-XSS permite a los atacantes inyectar secuencias de comandos del lado del cliente en páginas Web visitadas por otros usuarios. Una vulnerabilidad de secuencias de comandos entre sitios, puede ser utilizada por los atacantes para eludir los controles de acceso, como la [política del mismo origen](/es/docs/JavaScript/Same_origin_policy_for_JavaScript "/ Es-ES / docs / JavaScript / Same_origin_policy_for_JavaScript") . El efecto de estos ataques pueden ir desde una pequeña molestia a un riesgo de seguridad.
+XSS permite a los atacantes inyectar secuencias de comandos del lado del cliente en páginas Web visitadas por otros usuarios. Una vulnerabilidad de secuencias de comandos entre sitios, puede ser utilizada por los atacantes para eludir los controles de acceso, como la [política del mismo origen](/es/docs/JavaScript/Same_origin_policy_for_JavaScript) . El efecto de estos ataques pueden ir desde una pequeña molestia a un riesgo de seguridad.
 
 Los ataques CSRF son similares a los ataques XSS porque comienzan de la misma manera - mediante la inyección de comandos de cliente en páginas Web - pero su objetivo es diferente. Los atacantes CSRF tratan de escalar privilegios de un usuario de mayores privilegios (por ejemplo, un administrador de sitio) para realizar una acción que no deberían ser capaces de hacer (por ejemplo, el envío de datos a un usuario no fiable).
 
@@ -317,7 +317,7 @@ Debería evitar muchos o la mayoría de estos problemas, si sigue estas tres reg
 
 ## Conclusión
 
-Como se puede ver, el envío de los datos del formulario es fácil, pero asegurar una aplicación puede ser complicado. Sólo recuerde que un desarrollador de aplicaciones para usuario no es el que debe definir el modelo de seguridad de los datos. Sí, como veremos, es posible [realizar la validación de los datos del lado del cliente](/es/docs/HTML/Forms/Data_form_validation "/ es-ES / docs / HTML / Formularios / Data_form_validation") , pero el servidor no puede confiar en esta validación porque no tiene manera de saber realmente lo que sucede en el lado del cliente.
+Como se puede ver, el envío de los datos del formulario es fácil, pero asegurar una aplicación puede ser complicado. Sólo recuerde que un desarrollador de aplicaciones para usuario no es el que debe definir el modelo de seguridad de los datos. Sí, como veremos, es posible [realizar la validación de los datos del lado del cliente](/es/docs/HTML/Forms/Data_form_validation) , pero el servidor no puede confiar en esta validación porque no tiene manera de saber realmente lo que sucede en el lado del cliente.
 
 ## Ver también
 

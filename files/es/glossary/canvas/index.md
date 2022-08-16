@@ -16,11 +16,11 @@ El **elemento canvas** forma parte de [HTML5](https://en.wikipedia.org/wiki/HTML
 
 ### Inicio del temario
 
-- [Tutorial de Canvas en MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial)
+- [Tutorial de Canvas en MDN](/en-US/docs/Web/Guide/HTML/Canvas_tutorial)
 
 ### Información técnica
 
 - The HTML {{HTMLElement("canvas")}} element on MDN
-- [Documentación general de Canvas en MDN](https://developer.mozilla.org/en-US/docs/HTML/Canvas)
+- [Documentación general de Canvas en MDN](/en-US/docs/HTML/Canvas)
 - {{domxref("CanvasRenderingContext2D")}}: API de Canvas2D dibujando
 - [Canvas 2D, especificaciones del API](http://www.w3.org/TR/2dcontext/)

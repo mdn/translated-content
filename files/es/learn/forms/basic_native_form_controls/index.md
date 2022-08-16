@@ -39,14 +39,14 @@ Ya conoces algunos elementos de formulario, incluidos {{HTMLelement ('form')}}, 
 
 Los campos de texto {{htmlelement ("input")}} son los controles de formulario más básicos. Son un modo muy cómodo de permitir al usuario introducir cualquier tipo de datos, y ya hemos visto algunos ejemplos sencillos.
 
-> **Nota:** Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida ](/es/docs/Rich-Text_Editing_in_Mozilla "/en-US/docs/Rich-Text_Editing_in_Mozilla")(negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
+> **Nota:** Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida ](/es/docs/Rich-Text_Editing_in_Mozilla)(negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
 
 Todos los controles de texto básicos comparten algunos comportamientos comunes:
 
 - Se pueden marcar como {{htmlattrxref ("readonly","input")}} (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o {{htmlattrxref ("disabled","input")}} (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
 - Pueden tener un {{htmlattrxref ("placeholder","input")}}; se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
-- Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength "/en-US/docs/HTML/Element/input#attr-maxlength") (el número máximo de caracteres que se pueden poner en la caja de texto).
-- Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck "/en-US/docs/HTML/Element/input#attr-spellcheck") (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
+- Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength) (el número máximo de caracteres que se pueden poner en la caja de texto).
+- Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
 
 > **Nota:** El elemento {{htmlelement ("input")}} es único entre los elementos HTML porque puede tomar muchas formas diferentes según el valor de su atributo. Se utiliza para crear la mayoría de los tipos de controles de formulario, que incluyen campos de texto de una sola línea, controles para la fecha y la hora, controles sin introducción de texto, como casillas de verificación, botones de opción y selectores de color, y botones.
 

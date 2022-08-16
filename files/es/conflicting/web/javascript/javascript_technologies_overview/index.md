@@ -228,9 +228,9 @@ Puede participar o simplemente rastrear el trabajo en las próximas revisiones d
 
 ## Implementaciones
 
-- [SpiderMonkey](/es/docs/SpiderMonkey "SpiderMonkey") - el motor de JavaScript usado en varios productos de Mozilla, incluyendo Firefox;
-- [Rhino](/es/docs/Rhino "Rhino") - El motor de JavaScript escrito en Java;
-- [Tamarin](/es/docs/Tamarin "Tamarin") - La maquina virtual ActionScript (usada en Adobe® Flash® Player);
+- [SpiderMonkey](/es/docs/SpiderMonkey) - el motor de JavaScript usado en varios productos de Mozilla, incluyendo Firefox;
+- [Rhino](/es/docs/Rhino) - El motor de JavaScript escrito en Java;
+- [Tamarin](/es/docs/Tamarin) - La maquina virtual ActionScript (usada en Adobe® Flash® Player);
 - [Otras implementacion ](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines)(Wikipedia).
 
 ## Vea también

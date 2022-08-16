@@ -21,54 +21,54 @@ Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuf
   <tr>
     <td>
 
-- [`data` URIs](https://developer.mozilla.org/en-US/docs/data_URIs)
+- [`data` URIs](/en-US/docs/data_URIs)
   - `Los URIs de` datos, definidos por [RFC 2397](https://tools.ietf.org/html/rfc2397), permiten a los creadores de contenido introducir pequeños ficheros en línea en documentos.
   
 - [Base64](https://es.wikipedia.org/wiki/Base64)
 
   - Artículo en Wikipedia sobre el sistema de codificación Base64.
 
-- [`atob()`](https://developer.mozilla.org/es/docs/Web/API/atob)
+- [`atob()`](/es/docs/Web/API/atob)
 
   - Decodifica una cadena de datos que ha sido codificada utilizando base-64.
 
-- [`btoa()` (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/btoa)
+- [`btoa()` (en-US)](/en-US/docs/Web/API/btoa)
 
   - Crea una cadena ASCII codificada en base 64 a partir de una "cadena" de datos binarios.
 
-- [The "Unicode Problem"](https://developer.mozilla.org/es/docs/glossary/base64#the_.22unicode_problem.22)
+- [The "Unicode Problem"](/es/docs/glossary/base64#the_.22unicode_problem.22)
 
   - En la mayoría de navegadores, llamar a `btoa()` con una cadena Unicode causará una excepción `Character Out Of Range`. Este párrafo muestra algunas soluciones.
 
-- [URIScheme](https://developer.mozilla.org/en-US/docs/URIScheme)
+- [URIScheme](/en-US/docs/URIScheme)
 
   - Lista de esquemas URI soportados por Mozilla.
 
-- [`StringView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
+- [`StringView`](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
 
   - En este artículo está publicada una librería hecha por nosotros con los siguientes objetivos:
 
-    * crear una interfaz al estilo de [C](http://en.wikipedia.org/wiki/C_%28programming_language%29) para cadenas (es decir, arrays de códigos de caracteres — [`ArrayBufferView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) en JavaScript) basada en la interfaz [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript.
+    * crear una interfaz al estilo de [C](http://en.wikipedia.org/wiki/C_%28programming_language%29) para cadenas (es decir, arrays de códigos de caracteres — [`ArrayBufferView`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) en JavaScript) basada en la interfaz [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript.
     * crear una colección de métodos para los que los objetos parecidos a cadenas (de ahora en adelante, `stringView`s) funcionen estrictamente en arrays de números más que en cadenas JavaScript inmutables.
-    * trabajar con otras codificaciones Unicode diferentes de las [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)s UTF-16 por defecto de JavaScript.
+    * trabajar con otras codificaciones Unicode diferentes de las [`DOMString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)s UTF-16 por defecto de JavaScript.
     </td>
     <td>
 
 **Herramientas**
 
-* [Reescribir atob() y btoa() usando TypedArrays y UTF-8](https://developer.mozilla.org/es/docs/glossary/base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
-* [`StringView`, una representación parecida a C de cadenas basadas en arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
+* [Reescribir atob() y btoa() usando TypedArrays y UTF-8](/es/docs/glossary/base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
+* [`StringView`, una representación parecida a C de cadenas basadas en arrays tipados](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
 
 **Temas relacionados**
 
-* [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-* [Vectores o arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
-* [ArrayBufferView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
-* [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-* [`StringView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación parecida a C de cadenas basadas en arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
-* [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-* [`URI`](https://developer.mozilla.org/en-US/docs/Glossary/URI)
-* [`encodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+* [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+* [Vectores o arrays tipados](/en-US/docs/Web/JavaScript/Typed_arrays)
+* [ArrayBufferView](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+* [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+* [`StringView`](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación parecida a C de cadenas basadas en arrays tipados](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
+* [`DOMString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+* [`URI`](/en-US/docs/Glossary/URI)
+* [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
     </td>
   </tr>
 <table>
@@ -324,7 +324,7 @@ alert(myBuffer.byteLength);
 
 > **Nota:** La función `base64DecToArr(sBase64[, nBlocksSize])` devuelve un [`uint8Array`](/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array) de bytes. Si tu objetivo es construir un búfer de datos crudos de 16, 32 o 64 bits, usa el argumento `nBlocksSize`, que es el número de bytes de los que la propiedad `uint8Array.buffer.bytesLength` debe devolver un múltiplo (1 u omitido para ASCII, [cadenas binarias](/en-US/docs/Web/API/DOMString/Binary) o cadenas UTF-8 codificacas, 2 para cadenas UTF-16, 4 para cadenas UTF-32).
 
-Para una librería más completa, véase [`StringView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación parecida a C de cadenas basadas en arrays tipados](/en-US/docs/Web/JavaScript/Typed_arrays/StringView).
+Para una librería más completa, véase [`StringView`](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación parecida a C de cadenas basadas en arrays tipados](/en-US/docs/Web/JavaScript/Typed_arrays/StringView).
 
 ## Véase también
 
@@ -335,7 +335,7 @@ Para una librería más completa, véase [`StringView`](https://developer.mozill
 - [TypedArrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [ArrayBufferView](/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
 - [Uint8Array](/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array)
-- [`StringView` – a C-like representation of strings based on typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
+- [`StringView` – a C-like representation of strings based on typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
 - [DOMString](/en-US/docs/Web/API/DOMString)
 - [`URI`](/en-US/docs/URI)
 - [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)

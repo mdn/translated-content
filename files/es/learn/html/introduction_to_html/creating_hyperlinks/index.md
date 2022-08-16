@@ -86,7 +86,7 @@ Otro atributo que posiblemente quieras agregar a tus enlaces es `title`. El tít
 
 Este código producirá el siguiente resultado (el título se mostrará al pasar el ratón sobre el texto del enlace):
 
-Crea un enlace a [la página de inicio de Mozilla](https://www.mozilla.org/es-ES/ "El mejor lugar para encontrar más información sobre la misión de Mozilla y cómo contribuir").
+Crea un enlace a [la página de inicio de Mozilla](https://www.mozilla.org/es-ES/).
 
 > **Nota:** El título de un enlace solo será visible al pasar el ratón por encima, lo cual significa que los usuarios que naveguen usando los controles de sus teclados, o pantallas táctiles, tendrán dificultades para acceder a la información proporcionada por el título. Si la información del título es verdaderamente importante para el uso de la página, deberemos presentar el título de manera que sea accesible a todos los usuarios, por ejemplo incluyéndola como parte del texto del enlace.
 

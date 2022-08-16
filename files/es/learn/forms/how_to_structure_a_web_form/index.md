@@ -27,7 +27,7 @@ Una vez examinados los conceptos básicos, vamos a ver más en detalle los eleme
   </tbody>
 </table>
 
-La flexibilidad que presentan los formularios los convierte en una de las estructuras más complejas en [HTML](/es/docs/Learn/HTML "/en-US/docs/HTML"), puesto que puedes crear cualquier tipo de formulario básico a partir de los elementos y atributos destinados a esta función. El uso de una estructura correcta al crear un formulario HTML te ayudará a garantizar que el formulario presente las características de usabilidad y [accesibilidad ](/es/docs/Learn/Accessibility)adecuadas.
+La flexibilidad que presentan los formularios los convierte en una de las estructuras más complejas en [HTML](/es/docs/Learn/HTML), puesto que puedes crear cualquier tipo de formulario básico a partir de los elementos y atributos destinados a esta función. El uso de una estructura correcta al crear un formulario HTML te ayudará a garantizar que el formulario presente las características de usabilidad y [accesibilidad ](/es/docs/Learn/Accessibility)adecuadas.
 
 ## El elemento \<form>
 
