@@ -1,9 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-tags:
-  - 搜尋引擎最佳化
-translation_of: Glossary/SEO
 ---
 **搜尋引擎最佳化**（Search Engine Optimization、SEO）是提高網站於搜尋引擎的能見度之過程，又稱搜索排名改進。
 
