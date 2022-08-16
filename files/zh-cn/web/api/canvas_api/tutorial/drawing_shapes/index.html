@@ -246,7 +246,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 <p>这里详细介绍一下 arc 方法，该方法有六个参数：<code>x,y</code>为绘制圆弧所在圆上的圆心坐标。<code>radius</code>为半径。<code>startAngle</code>以及<code>endAngle</code>参数用弧度定义了开始以及结束的弧度。这些都是以 x 轴为基准。参数<code style="font-style: normal; line-height: 1.5;">anticlockwise</code>为一个布尔值。为 true 时，是逆时针方向，否则顺时针方向。</p>
 
 <div class="note">
-<p><strong>注意：<code>arc()</code>函数中表示角的单位是弧度，不是角度。角度与弧度的 js 表达式：</strong></p>
+<p><code>arc()</code> 函数中表示角的单位是弧度，不是角度。角度与弧度的 js 表达式：</p>
 
 <p><strong>弧度=(Math.PI/180)*角度。</strong></p>
 </div>
@@ -542,7 +542,7 @@ new Path2D(d);    // 从 SVG 建立 Path 对象</code></pre>
 </pre>
 </div>
 
-<pre class="brush: js;highlight[6,9] line-numbers  language-js notranslate"><code class="language-js">function draw() {
+<pre class="brush: js; highlight[6,9] line-numbers  language-js notranslate"><code class="language-js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');

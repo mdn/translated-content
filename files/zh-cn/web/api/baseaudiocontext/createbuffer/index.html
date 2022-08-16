@@ -57,7 +57,7 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
 
 <p>现在让我们来看一个更加复杂的示例，我们将创建一个时长 2 秒的音频片段，并用白噪声填充它，之后通过一个 音频片段源节点 ({{ domxref("AudioBufferSourceNode") }}) 播放。代码中的注释应该能充分解释发生了什么。你可以 <a href="http://mdn.github.io/audio-buffer/">在线演示</a> ，或者 <a href="https://github.com/mdn/audio-buffer">查看源代码</a> 。</p>
 
-<pre class="brush: js;highlight[13]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js; highlight[13]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');

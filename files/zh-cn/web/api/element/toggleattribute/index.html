@@ -31,7 +31,7 @@ slug: Web/API/Element/toggleAttribute
  <dd>The specified attribute <code>name</code> contains one or more characters which are not valid in attribute names.</dd>
 </dl>
 
-<h2 id="例子">例子</h2>
+<h2 id="例子">示例</h2>
 
 <p>在下面的例子中，<code>toggleAttribute()</code> 被用于切换 {{HTMLElement("input")}} 的 <code>readonly</code> 属性。</p>
 
@@ -52,14 +52,14 @@ button.addEventListener("click", function(){
 
 <h3 id="结果">结果</h3>
 
-<p>{{ EmbedLiveSample('Example', '300', '50') }}</p>
+<p>{{ EmbedLiveSample('示例', '300', '50') }}</p>
 
 <p>{{DOMAttributeMethods}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<div class="standardNoteBlock">
-<p><strong>译者注</strong>：下面代码中的 <code>void 0</code> 即 <code>undefined</code>。</p>
+<div class="note">
+<p>下面代码中的 <code>void 0</code> 即 <code>undefined</code>。</p>
 </div>
 
 <pre class="brush: js notranslate">if (!Element.prototype.toggleAttribute) {

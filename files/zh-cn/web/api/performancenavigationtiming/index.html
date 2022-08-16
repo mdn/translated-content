@@ -4,10 +4,7 @@ slug: Web/API/PerformanceNavigationTiming
 ---
 <div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
 
-<p><strong><code>PerformanceNavigationTiming </code></strong>提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。 例如，此接口可用于确定加载或卸载文档需要多少时间。</p>
-
-<ul>
-</ul>
+<p><strong><code>PerformanceNavigationTiming</code></strong> 提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。 例如，此接口可用于确定加载或卸载文档需要多少时间。</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -49,18 +46,12 @@ slug: Web/API/PerformanceNavigationTiming
  <dt>{{domxref('PerformanceNavigationTiming.loadEventStart')}} {{readonlyInline}} </dt>
  <dd>一个 {{domxref("DOMHighResTimeStamp")}} 时间值，等于立即触发当前文档的加载事件之前的时间。</dd>
  <dt>{{domxref('PerformanceNavigationTiming.redirectCount')}} {{readonlyInline}} </dt>
- <dd>表示自当前浏览上下文中上次非重定向导航以来的重定向次数的数字。</dd>
- <dd>如果没有重定向，或者重定向是从另一个 origin 发的，并且该 origin 不允许将其计时信息公开给当前来源，则该值为 0。</dd>
-</dl>
-
-<dl>
+ <dd>表示自当前浏览上下文中上次非重定向导航以来的重定向次数的数字。<br>
+ 如果没有重定向，或者重定向是从另一个 origin 发的，并且该 origin 不允许将其计时信息公开给当前来源，则该值为 0。</dd>
  <dt>{{domxref('PerformanceNavigationTiming.requestStart')}} {{readonlyInline}} </dt>
  <dd>返回一个 {{domxref("DOMHighResTimeStamp")}} 时间值，代表 UA 立即开始从服务器，相关应用程序缓存或本地资源请求资源之前的时间。</dd>
  <dt>{{domxref('PerformanceNavigationTiming.responseStart')}} {{readonlyInline}} </dt>
  <dd>一个 {{domxref("DOMHighResTimeStamp")}} 时间值，代表用户代理的 HTTP 解析器从相关应用程序缓存，本地资源或服务器接收到响应的第一个字节后立即的时间。</dd>
-</dl>
-
-<dl>
  <dt>{{domxref('PerformanceNavigationTiming.type')}} {{readonlyInline}} </dt>
  <dd>一个 {{domxref("DOMString","string")}} 表示导航类型，取值为为：“<code>navigate</code>”，“<code>reload</code>”，“<code>back_forward</code>”或“<code>prerender</code>”。</dd>
  <dt>{{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{readonlyInline}} </dt>

@@ -35,7 +35,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 
 <p>然而，我们希望使第三块区域（其中包含你可以回放的记录样例）占用任何空间，而不用担心设备的高度。Flexbox 流动样式可能是这里的答案，但是对于这样一个简单的布局来说有点过头了。相反，问题是通过使第三个容器的高度等于父高度的 100%，再减去另两个的高度和填充来解决的。</p>
 
-<pre class="brush: css;highlight[4]">.sound-clips {
+<pre class="brush: css; highlight[4]">.sound-clips {
   box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
   background-color: rgba(0,0,0,0.1);
   height: calc(100% - 240px - 0.7rem);

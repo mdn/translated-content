@@ -20,14 +20,12 @@ slug: Web/API/Clients/openWindow
 
 <dl>
  <dt><code>url</code></dt>
- <dd>一个 {{domxref("USVString")}} ，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.</dd>
+ <dd>一个 {{domxref("USVString")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<dl>
- <dd>如果 URL 来自与服务工作者相同的域，则 resolve 为 {{domxref("WindowClient")}} 对象的 Promise，否则 resolve 为 {{Glossary("null", "null value")}} .</dd>
-</dl>
+<p>如果 URL 来自与服务工作者相同的域，则 resolve 为 {{domxref("WindowClient")}} 对象的 Promise，否则 resolve 为 {{Glossary("null", "null value")}}.</p>
 
 <h2 id="示例">示例</h2>
 

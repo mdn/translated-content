@@ -14,7 +14,7 @@ slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 
 <p>当一个新的手柄连接到计算机时，焦点页面 (当前页面) 首先接收一个 {{ event("gamepadconnected") }} 事件。 如果在加载页面时已经连接了手柄，则会在用户按下某个按钮或移动坐标方向 (axes) 时触发焦点页面的 {{ event("gamepadconnected") }} 事件。</p>
 
-<div class="geckoVersionNote">
+<div class="note">
 <p>在 Firefox 中，控制器只会暴露给与用户产生交互的可见页面。这有助于防止控制器被用于获取用户的指纹。一旦有一个手柄与页面产生交互，那么其他连接的控制器将自动对页面可见。</p>
 </div>
 

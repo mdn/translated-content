@@ -26,36 +26,35 @@ slug: Web/API/XMLHttpRequest/send
   <li>为 <code>XMLHttpRequestBodyInit</code>, 从 <a href="https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit">per the Fetch spec</a> （规范中）可以是 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或者 {{domxref("USVString")}} 对象。</li>
   <li><code>null</code></li>
  </ul>
- 如果 body 没有指定值，则默认值为 <code>null</code> .</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
-
- <p><code>undefined</code>.</p>
-
- <h3 id="例外">例外</h3>
-
- <table>
-  <thead>
-   <tr>
-    <th scope="col">Exception</th>
-    <th scope="col">Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>InvalidStateError</code></td>
-    <td><code>send()</code> has already been invoked for the request, and/or the request is complete.</td>
-   </tr>
-   <tr>
-    <td><code>NetworkError</code></td>
-    <td>The resource type to be fetched is a Blob, and the method is not <code>GET</code>.</td>
-   </tr>
-  </tbody>
- </table>
- </dt>
+ 如果 body 没有指定值，则默认值为 <code>null</code>。</dd>
 </dl>
 
-<pre class="syntaxbox notranslate">XMLHttpRequest.send();
+<h3 id="返回值">返回值</h3>
+
+<p><code>undefined</code>.</p>
+
+<h3 id="例外">例外</h3>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Exception</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>InvalidStateError</code></td>
+   <td><code>send()</code> has already been invoked for the request, and/or the request is complete.</td>
+  </tr>
+  <tr>
+   <td><code>NetworkError</code></td>
+   <td>The resource type to be fetched is a Blob, and the method is not <code>GET</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<pre class="brush: js notranslate">XMLHttpRequest.send();
 XMLHttpRequest.send(ArrayBuffer <var>data</var>);
 XMLHttpRequest.send(ArrayBufferView <var>data</var>);
 XMLHttpRequest.send(Blob <var>data</var>);

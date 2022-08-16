@@ -41,7 +41,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 
 <p>文本用当前的边框样式被绘制：</p>
 
-<pre class="brush: js;highlight[4] notranslate">function draw() {
+<pre class="brush: js; highlight[4] notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
@@ -89,7 +89,7 @@ baselines, due to glyphs extending far outside the em square." src="http://www.w
 
 <p>编辑下面的代码，看看它们在 canvas 中的变化：</p>
 
-<pre class="brush: js;highlight[2] notranslate">ctx.font = "48px serif";
+<pre class="brush: js; highlight[2] notranslate">ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
 ctx.strokeText("Hello world", 0, 100);
 </pre>
@@ -147,7 +147,7 @@ window.addEventListener("load", drawCanvas);
 
 <p>下面的代码段将展示如何测量文本来获得它的宽度：</p>
 
-<pre class="brush: js;highlight[3] notranslate">function draw() {
+<pre class="brush: js; highlight[3] notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;

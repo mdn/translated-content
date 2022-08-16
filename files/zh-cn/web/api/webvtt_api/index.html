@@ -738,7 +738,7 @@ That's &lt;00:00:21.000&gt;amore
 
 <p>Constructor is the first point for starting the Cue which is defined using the default constructor VTTCue(startTime, endTime, text) where starting time, ending time and text for cue can be adjusted. After that we can set the region for that particular cue to which this cue belongs using cue.region. Vertical, horizontal, line, lineAlign, Position, positionAlign, text, size and Align can be used to alter the cue and its formation, just like we can alter the objects form, shape and visibility in HTML using CSS. But the VTTCue interface is within the WebVTT provides the vast range of adjustment variables which can be used directly to alter the Cue. Following interface can be used to expose WebVTT cues in DOM API:</p>
 
-<pre class="idl def">enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
+<pre>enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
 enum <dfn>DirectionSetting</dfn> { <dfn>""</dfn> /* horizontal */, <dfn>"rl"</dfn>, <dfn>"lr"</dfn> };
 enum <dfn>LineAlignSetting</dfn> { <dfn>"start"</dfn>, <dfn>"center"</dfn>, <dfn>"end"</dfn> };
 enum <dfn>PositionAlignSetting</dfn> { <dfn>"line-left"</dfn>, <dfn>"center"</dfn>, <dfn>"line-right"</dfn>, <dfn>"auto"</dfn> };
@@ -764,7 +764,7 @@ interface <dfn>VTTCue</dfn> : <a href="https://html.spec.whatwg.org/multipage/em
 
 <p>The new keyword can be used for defining a new VTTRegion object which can then be used for containing the multiple cues. There are several properties of VTTRegion which are width, lines, regionAnchorX, RegionAnchorY, viewportAnchorX, viewportAnchorY and scroll that can be used to specify the look and feel of this VTT region. The interface code is given below which can be used to expose the WebVTT regions in DOM API:</p>
 
-<pre class="idl def">enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
+<pre>enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
 [<a href="https://w3c.github.io/webvtt/#dom-vttregion-vttregion">Constructor</a>]
 interface <dfn>VTTRegion</dfn> {
   attribute double <a href="https://w3c.github.io/webvtt/#dom-vttregion-width">width</a>;

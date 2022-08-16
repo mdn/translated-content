@@ -18,8 +18,8 @@ slug: Web/API/Worker/postMessage
  <dt><em>aMessage</em></dt>
  <dd>The object to deliver to the worker; this will be in the data field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</dd>
  <dt><em>transferList</em> {{optional_inline}}</dt>
- <dd>一个可选的{{domxref("Transferable")}}对象的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">数组</a>，用于传递所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），并且只有在它被发送到的 worker 中可用。</dd>
- <dd>可转移对象是如{{domxref("ArrayBuffer")}}，{{domxref("MessagePort")}}或{{domxref("ImageBitmap")}}的实例对象。transferList 数组中不可传入 null。</dd>
+ <dd>一个可选的{{domxref("Transferable")}}对象的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">数组</a>，用于传递所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），并且只有在它被发送到的 worker 中可用。<br>
+ 可转移对象是如{{domxref("ArrayBuffer")}}，{{domxref("MessagePort")}}或{{domxref("ImageBitmap")}}的实例对象。transferList 数组中不可传入 null。</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>

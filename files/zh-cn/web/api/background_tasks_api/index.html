@@ -230,8 +230,6 @@ let statusRefreshScheduled = false;
 </ul>
 
 <div class="hidden">
-<p>The shim to function even if idle callbacks aren't supported. Already discussed above, so it's hidden here to save space in the article.</p>
-
 <pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   let startTime = Date.now();
 
@@ -422,8 +420,6 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 <p>当用户点击“开始”按钮，会触发所有操作，也会导致调用<code>decodeTechnoStuff()</code>函数。</p>
 
 <div class="hidden">
-<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive">getRandomIntInclusive()</a></code> method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.</p>
-
 <pre class="brush: js">function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -471,7 +467,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 <p>下面就是以上代码实际功能结果。试一下，在你的浏览器开发者工具中使用它，并把它融入自己的代码中体验一下。</p>
 
-<p>{{ EmbedLiveSample('Example', 600, 700) }}</p>
+<p>{{ EmbedLiveSample('示例', 600, 700) }}</p>
 
 <h2 id="规范">规范</h2>
 

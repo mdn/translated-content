@@ -59,7 +59,7 @@ slug: Web/API/AudioParam
 
 <p>首先，一个基础的例子展示了 {{domxref("GainNode")}} 拥有的 <code>gain</code> 一些值合。<code>gain</code> 是一个 a-rate AudioParam 的例子，因为该值可以针对音频的每个样本帧进行不同的设置。</p>
 
-<pre class="brush: js;highlight[5]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js; highlight[5]">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var gainNode = audioCtx.createGain();
@@ -67,7 +67,7 @@ gainNode.gain.value = 0;</pre>
 
 <p>另外，一个例子展示了 {{ domxref("BiquadFilterNode") }} 拥有的一些值。这是一个 k-rate AudioParam 的例子，因为一次为整个音频块设置的值。</p>
 
-<pre class="brush: js;highlight[6,7,8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js; highlight[6,7,8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var biquadFilter = audioCtx.createBiquadFilter();

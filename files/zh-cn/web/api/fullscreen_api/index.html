@@ -58,12 +58,9 @@ slug: Web/API/Fullscreen_API
 
 <dl>
  <dt>{{DOMxRef("Document.onfullscreenchange")}}</dt>
- <dd><br>
- {{Event("fullscreenchange")}} 事件的处理程序，当进入全屏或退出全屏时，事件将被发送到{{DOMxRef("Document")}}上。此处理程序仅在整个文档全屏模式更改时有效。</dd>
+ <dd>{{Event("fullscreenchange")}} 事件的处理程序，当进入全屏或退出全屏时，事件将被发送到{{DOMxRef("Document")}}上。此处理程序仅在整个文档全屏模式更改时有效。</dd>
  <dt>{{DOMxRef("Document.onfullscreenerror")}}</dt>
- <dd><br>
- {{Event("fullscreenerror")}} 事件的处理程序，当进入全屏或退出全屏出错时，事件将被发送到 {{DOMxRef("Document")}} 上，仅对整个文档的全屏模式更改出错时候有效。</dd>
- <dt></dt>
+ <dd>{{Event("fullscreenerror")}} 事件的处理程序，当进入全屏或退出全屏出错时，事件将被发送到 {{DOMxRef("Document")}} 上，仅对整个文档的全屏模式更改出错时候有效。</dd>
 </dl>
 
 <h4 id="Element_上的事件处理程序">Element 上的事件处理程序</h4>
@@ -73,12 +70,13 @@ slug: Web/API/Fullscreen_API
  <dd>当全屏事件发生时，该事件会被发送到该元素，表明该元素进入或退出全屏模式</dd>
  <dt>{{DOMxRef("Element.onfullscreenerror")}}</dt>
  <dd>{{Event("fullscreenerror")}} 事件的处理程序，当指定的 {{DOMxRef("Element")}} 改变全屏模式时候出现错误，该事件将被发送到指定的 {{DOMxRef("Element")}} 上。</dd>
- <dt>
- <h3 id="废弃属性">废弃属性</h3>
- </dt>
+</dl>
+
+<h3 id="废弃属性">废弃属性</h3>
+
+<dl>
  <dt>{{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}</dt>
- <dd>一个布尔值，文档内任意一个元素以全屏模式程序时该值为<code>true</code>，否则为 <code>false</code>。</dd>
- <dd>
+ <dd>一个布尔值，文档内任意一个元素以全屏模式程序时该值为<code>true</code>，否则为 <code>false</code>。
  <div class="blockIndicator note">
  <p>Note：请改用 {{DOMxRef("ShadowRoot")}} 或 {{DOMxRef("Document")}} 上的 {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} 属性；如果它不是 null，则它是就是当前在全屏模式下显示的元素。</p>
  </div>

@@ -38,7 +38,7 @@ slug: Web/API/Web_Authentication_API
 
 <p>注册步骤如下：</p>
 
-<ol start="0">
+<ol>
  <li><strong>应用程序请求注册</strong> - 应用程序发出注册请求。这个请求的协议和格式不在 WebAuthn 标准的范围内。</li>
  <li><strong>服务器发送挑战、用户信息和依赖方信息 </strong>- 服务器将挑战、用户信息和依赖方信息发送回应用程序。在这里，协议和格式不在 WebAuthn 标准的范围内。通常，这可以是基于 HTTPS 连接的 <a href="https://developer.mozilla.org/en-US/docs/Glossary/REST">REST</a>（可能会使用 <a href="https://developer.mozilla.org/en-US/docs/User:maybe/webidl_mdn/XMLHttpRequest_API">XMLHttpRequest</a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>）API。不过只要在安全连接中，也可以使用 <a href="https://developer.mozilla.org/en-US/docs/Glossary/SOAP">SOAP</a>、<a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> 或几乎任何其他协议。从服务器接收到的参数将传递给 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/create">create()</a> ，大部分情况下只需很少修改甚至不需要做任何修改。create() 会返回一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>，并返回包含 {{domxref("AuthenticatorAttestationResponse")}} 的 {{domxref("PublicKeyCredential")}}。<strong>需要注意的是挑战必须是随机的 buffer（至少 16 字节），并且必须在服务器上生成以确保安全。</strong></li>
  <li><strong>浏览器向认证器调用 authenticatorMakeCredential()</strong> - 在浏览器内部，浏览器将验证参数并用默认值补全缺少的参数，然后这些参数会变为 {{domxref("AuthenticatorResponse.clientDataJSON")}}。其中最重要的参数之一是 origin，它是 clientData 的一部分，同时服务器将能在稍后验证它。调用 create() 的参数与 clientDataJSON 的 SHA-256 哈希一起传递到身份验证器（只有哈希被发送是因为与认证器的连接可能是低带宽的 NFC 或蓝牙连接，之后认证器只需对哈希签名以确保它不会被篡改）。</li>
@@ -62,7 +62,7 @@ slug: Web/API/Web_Authentication_API
 
 <p><em>图 2 - WebAuthn 验证流程及与各个步骤相关的重要数据。</em></p>
 
-<ol start="0">
+<ol>
  <li><strong>Application Requests Authentication</strong> - The application makes the initial authentication request. The protocol and format of this request is outside of the scope of WebAuthn.</li>
  <li><strong>Server Sends Challenge</strong> - The server sends a challenge JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of WebAuthn. Typically, server communications would be <a href="/en-US/docs/Glossary/REST">REST</a> over https (probably using <a href="/en-US/docs/User:maybe/webidl_mdn/XMLHttpRequest_API">XMLHttpRequest</a> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>), but they could also be <a href="/en-US/docs/Glossary/SOAP">SOAP</a>, <a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the <a href="/en-US/docs/Web/API/CredentialsContainer/get">get()</a> call, typically with little or no modification. <strong>Note that it is absolutely critical that the challenge be a large buffer of random information (e.g. - more than 100 bytes) and it MUST be generated on the server in order to ensure the security of the authentication process.</strong></li>
  <li><strong>Browser Call authenticatorGetCredential()  on Authenticator</strong> - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the create() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).</li>

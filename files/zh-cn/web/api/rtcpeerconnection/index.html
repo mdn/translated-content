@@ -54,11 +54,7 @@ var SRC_OBJECT = 'srcObject' in v ? "srcObject" :
  <dd>只读属性，返回一个 {{domxref("RTCSessionDescription")}} ，它描述了这条连接的本地端的会话控制（用户会话所需的属性以及配置信息）。如果本地的会话控制还没有被设置，它的值就会是 null。</dd>
  <dt>{{domxref("RTCPeerConnection.peerIdentity")}} {{ReadOnlyInline}}</dt>
  <dd>只读属性，返回一个<code>RTCIdentityAssertion，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 null 值。一旦被设置，它不能被一般方法改变。</code></dd>
-</dl>
-
-<p>{{domxref("RTCPeerConnection.pendingLocalDescription")}} {{ReadOnlyInline}}</p>
-
-<dl>
+ <dt>{{domxref("RTCPeerConnection.pendingLocalDescription")}} {{ReadOnlyInline}}</dt>
  <dd>blah</dd>
  <dt>{{domxref("RTCPeerConnection.pendingRemoteDescription")}} {{ReadOnlyInline}}</dt>
  <dd>blah</dd>
@@ -67,9 +63,8 @@ var SRC_OBJECT = 'srcObject' in v ? "srcObject" :
  <dt>{{domxref("RTCPeerConnection.sctp")}} {{ReadOnlyInline}}</dt>
  <dd>blah</dd>
  <dt>{{domxref("RTCPeerConnection.signalingState")}} {{ReadOnlyInline}}</dt>
+ <dd>返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和  RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。</dd>
 </dl>
-
-<p>返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和  RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。</p>
 
 <h3 id="基本用法"><strong>基本用法</strong></h3>
 
@@ -94,9 +89,7 @@ function endCall() {
 
 function error(err) { endCall(); }</pre>
 
-<dl>
- <dt>呼叫初始化</dt>
-</dl>
+<p>呼叫初始化</p>
 
 <p>如果你是呼叫方，你需要初始化一个连接</p>
 
@@ -114,9 +107,7 @@ navigator.getUserMedia({video: true}, function(stream) {
   }, error);
 })</pre>
 
-<dl>
- <dt>呼叫回答</dt>
-</dl>
+<p>呼叫回答</p>
 
 <p>在另一端，你的朋友会从服务器收到 offer 信息。</p>
 
@@ -136,9 +127,7 @@ navigator.getUserMedia({video: true}, function(stream) {
 
 </pre>
 
-<dl>
- <dt>处理应答</dt>
-</dl>
+<p>处理应答</p>
 
 <p>同时在呼叫发起方，你会收到这个应答（前面被呼叫方发出的 answer），你需要将它设置为你的远端连接。</p>
 
@@ -153,8 +142,7 @@ pc.<a href="#createAnswer()">setRemoteDescription</a>(new RTCSessionDescription(
 
 <dl>
  <dt>{{domxref("RTCPeerConnection.iceConnectionState")}} {{ReadOnlyInline}}</dt>
- <dd>返回一个 RTCIceConnectionState 类型的结构体，这个结构体描述了连接的 ICE 连接状态。当这个状态的值改变时，这个对象会触发一个{{event("iceconnectionstatechange")}} 事件。状态可能存在的值如下：</dd>
- <dd>
+ <dd>返回一个 RTCIceConnectionState 类型的结构体，这个结构体描述了连接的 ICE 连接状态。当这个状态的值改变时，这个对象会触发一个{{event("iceconnectionstatechange")}} 事件。状态可能存在的值如下：
  <ul>
   <li>"new": ICE 服务器正在收集地址或正在等待远端的 candidates(这两种情况可能同时存在)。</li>
   <li><code>"checking"</code>: ICE 服务器找到了远端的 candidates（连接候选者）,这些 candidates 至少有一个，同时 ICE 服务器在检测这些 candidates，尽管它可能还没有找到连接。此刻，ICE 服务器可能仍在收集 candidates（连接候选者）。</li>
@@ -324,9 +312,8 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
  <dt>errorCallback（方法调用失败时的回调函数）</dt>
  <dd>一个 {{domxref("RTCPeerConnectionErrorCallback")}} 它会收到一个{{domxref("DOMError")}} 对象作为参数。</dd>
  <dt>[optional] constraints（可选的约束条件）</dt>
+ <dd>一个可选的{{domxref("MediaConstraints")}} 对象。</dd>
 </dl>
-
-<p>      一个可选的{{domxref("MediaConstraints")}} 对象。</p>
 
 <h3 id="updateIce">updateIce()</h3>
 
@@ -336,8 +323,6 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
 
 <h4 id="举例_3">举例</h4>
 
-<pre></pre>
-
 <h3 id="addIceCandidate">addIceCandidate()</h3>
 
 <p>addIceCandidate ({{domxref("RTCIceCandidate")}} candidate, {{domxref("Function")}} successCallback, {{domxref("RTCPeerConnectionErrorCallback")}} failureCallback);</p>
@@ -346,7 +331,7 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
 
 <h4 id="举例_4">举例</h4>
 
-<pre>  pc.addIceCandidate(new RTCIceCandidate(candidate));
+<pre class="brush: js">pc.addIceCandidate(new RTCIceCandidate(candidate));
 </pre>
 
 <h3 id="createDataChannel">createDataChannel</h3>

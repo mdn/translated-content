@@ -20,7 +20,7 @@ slug: Web/API/IDBDatabase/versionchange_event
 
 <p>本例展示了一个创建新对象仓库的 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 代码块；代码中包含用于处理失败操作的 <code style="font-style: normal;">onerror</code> 和 <code style="font-style: normal;">onabort</code> 函数，以及一个 onversionchange 函数用以在数据库结构被改变时通知用户。</p>
 
-<pre class="brush: js;highlight:[28,29,30,31,32]">request.onupgradeneeded = function(event) {
+<pre class="brush: js; highlight:[28,29,30,31,32]">request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {

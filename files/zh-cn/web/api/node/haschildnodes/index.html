@@ -16,7 +16,7 @@ slug: Web/API/Node/hasChildNodes
 
 <p>下面的例子演示了：如果 id 为 foo 的这个元素有子节点，则从 dom 树中删除它的第一个子节点。</p>
 
-<pre class="brush:js;highlight:[3];">var foo = document.getElementById("foo");
+<pre class="brush:js; highlight:[3];">var foo = document.getElementById("foo");
 
 if ( foo.hasChildNodes() ) {
   foo.removeChild( foo.childNodes[0] );

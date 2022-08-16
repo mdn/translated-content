@@ -23,7 +23,7 @@ console.log(audioCtx.currentTime);</pre>
 <p><strong>注意</strong>：想要<em>完整的</em><em>Web Audio 例子的话，</em>可以去<a href="https://github.com/mdn/">MDN Github repo</a>看 DEMO（例如<a href="https://github.com/mdn/panner-node">panner-node</a>）。<em>不妨试试在浏览器控制台输入</em><code style="font-style: italic; line-height: 1.5;">audioCtx.currentTime。</code></p>
 </div>
 
-<pre class="brush: js;highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js; highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 

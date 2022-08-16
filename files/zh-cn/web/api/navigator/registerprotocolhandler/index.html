@@ -22,22 +22,16 @@ slug: Web/API/Navigator/registerProtocolHandler
 <dl>
  <dt><code><var>scheme</var></code></dt>
  <dd>一个包含站点希望处理的协议的字符串。例如，你可以通过传入 <code>"sms"</code> 来注册处理 SMS 文本信息链接。</dd>
-</dl>
-
-<dl>
  <dt><code>url</code></dt>
- <dd>处理器的 URL，string 类型。这个字符串应该包含一个"%s"的占位符，其会被将要受理的文档的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">escaped</a> 链接所替换。这个链接（译者按：指将要受理的文档的 escaped 链接，也就是替换占位符的字符串）可能是一个真实的 URL，或者是一个电话号码，邮件地址之类的。</dd>
- <dd>
+ <dd>处理器的 URL，string 类型。这个字符串应该包含一个"%s"的占位符，其会被将要受理的文档的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">escaped</a> 链接所替换。这个链接（译者按：指将要受理的文档的 escaped 链接，也就是替换占位符的字符串）可能是一个真实的 URL，或者是一个电话号码，邮件地址之类的。
  <div class="note">这个处理器的 URL 必须以 <code>http</code> 或者 <code>https</code> 协议标记作为开头，最好是 <code>https</code> ，以满足一些浏览器出于安全考虑的要求。</div>
  </dd>
  <dt><code>title</code> {{Deprecated_Inline}}</dt>
- <dd>一个用户可理解的处理器标题。标题会展示给用户，例如弹出对话框“允许这个站点处理 [scheme] 链接吗？”或者在浏览器设置中列出注册的处理器时。</dd>
- <dd>
+ <dd>一个用户可理解的处理器标题。标题会展示给用户，例如弹出对话框“允许这个站点处理 [scheme] 链接吗？”或者在浏览器设置中列出注册的处理器时。
  <div class="blockIndicator note">
  <p><strong>Note:</strong> 出于欺骗的考虑，标题已从规范中删除，但当前所有的浏览器仍要求使用该标题。 建议始终设置标题，因为支持更新规范的浏览器很可能会向后兼容，并且仍接受标题（但不使用它）。</p>
  </div>
  </dd>
- <dd></dd>
 </dl>
 
 <h3 id="异常">异常</h3>
@@ -96,7 +90,7 @@ slug: Web/API/Navigator/registerProtocolHandler
                                   "Burger handler");
 </pre>
 
-<p>这将创建一个处理程序，该处理程序允许使用 <code>web+burger: </code>链接将用户发送到您的网站，并将访问的 Burger URL 插入<code>%s</code>占位符。</p>
+<p>这将创建一个处理程序，该处理程序允许使用 <code>web+burger:</code> 链接将用户发送到您的网站，并将访问的 Burger URL 插入<code>%s</code>占位符。</p>
 
 <p>该脚本必须从与处理程序 URL 相同的源运行（因此， <code>https://www.google.com/ </code>上的任何页面），并且处理程序 URL 必须为 <code>http </code>或 <code>https</code>。</p>
 

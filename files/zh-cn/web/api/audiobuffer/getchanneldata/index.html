@@ -8,7 +8,7 @@ slug: Web/API/AudioBuffer/getChannelData
 
 <h2 id="语法">语法</h2>
 
-<pre class="brush: js;highlight[22]">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+<pre class="brush: js; highlight[22]">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
 
 <h3 id="参数">参数</h3>
@@ -29,7 +29,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
 
 <p>在下例中，我们创建一个 2 秒钟的缓冲区，用白噪声填充它，然后通过{{domxref("AudioBufferSourceNode") }}来播放它。评论应该会清楚的解释发生的事情。 你也可以<a href="https://mdn.github.io/webaudio-examples/audio-buffer/">实时运行代码</a>，或者<a href="https://github.com/mdn/webaudio-examples">查看源代码</a>。</p>
 
-<pre class="brush: js;highlight[21]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js; highlight[21]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
