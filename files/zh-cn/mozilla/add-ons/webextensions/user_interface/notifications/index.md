@@ -4,15 +4,15 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
 {{AddonSidebar}}
 
-通知允许你使用底层操作系统提供的通知服务来传达有关你拓展(或者其内容)的信息。
+通知允许你使用底层操作系统提供的通知服务来传达有关你的扩展或其内容的信息。
 
 ![](notify-shadowed.png)
 
-通知可以包含号召性的动作，在你的拓展中，你可以监听通知的点击或者关闭事件。
+通知可以包含对动作的代码的调用，在你的扩展中，你可以监听通知的点击或者关闭事件。
 
 ## 声明通知
 
-通过 {{WebExtAPIRef("notifications")}} API，你能够以编程的方式使用通知功能。在此之前，你需要在拓展的 manifest.json 中声明 `notifications` 权限。
+通过 {{WebExtAPIRef("notifications")}} API，你能够以编程的方式使用通知功能。在此之前，你需要在扩展的 manifest.json 中声明 `notifications` 权限。
 
 ```json
 "permissions": ["notifications"]
@@ -33,13 +33,13 @@ browser.notifications.create({
 
 上述代码会创建一个带有图标、标题和内容的通知。
 
-倘若通知包含号召性动作，你可以通过监听通知的点击事件来处理：
+倘若通知包含对动作的代码的调用，你可以通过监听通知的点击事件来处理：
 
 ```js
 browser.notifications.onClicked.addListener(handleClick);
 ```
 
-如果你尝试处理通知的点击事件，你可能需要定义通知的 `id`，这样一来，你就能够知道具体是哪个通知被用户点击了。
+如果你需要获取被点击的通知的来源，你可能需要定义通知的 `id`，这样一来，你就能够知道具体是哪个通知被用户点击了。
 
 ## 图标
 
