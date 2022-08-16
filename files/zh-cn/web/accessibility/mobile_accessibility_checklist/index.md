@@ -51,7 +51,7 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 状态处理
 
-- 标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如` aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
+- 标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
 
 ## General Guidelines 常规指南
 

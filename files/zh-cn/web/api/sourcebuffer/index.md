@@ -1,8 +1,6 @@
 ---
 title: SourceBuffer
 slug: Web/API/SourceBuffer
-page-type: web-api-interface
-translation_of: Web/API/SourceBuffer
 ---
 {{APIRef("Media Source Extensions")}}
 

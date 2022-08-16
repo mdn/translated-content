@@ -91,7 +91,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 ## 関連情報
 
 - [`Symbol.iterator` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [反復処理プロトコル ](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
 - {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
 - {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}

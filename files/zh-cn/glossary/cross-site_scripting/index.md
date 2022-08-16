@@ -1,13 +1,6 @@
 ---
 title: Cross-site scripting（跨站脚本攻击）
 slug: Glossary/Cross-site_scripting
-tags:
-  - DOM
-  - XSS
-  - 安全
-  - 术语
-  - 跨站脚本攻击
-translation_of: Glossary/Cross-site_scripting
 ---
 跨站脚本攻击（Cross-site scripting，XSS）是一种安全漏洞，攻击者可以利用这种漏洞在网站上注入恶意的客户端代码。若受害者运行这些恶意代码，攻击者就可以突破网站的访问限制并冒充受害者。根据开放式 Web 应用安全项目（OWASP），XSS 在 2017 年被认为 [7 种最常见的 Web 应用程序漏洞之一](<https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)>)。
 
@@ -15,8 +8,8 @@ translation_of: Glossary/Cross-site_scripting
 
 在以下 2 种情况下，容易发生 XSS 攻击：
 
-1.  数据从一个不可靠的链接进入到一个 Web 应用程序。
-2.  没有过滤掉恶意代码的动态内容被发送给 Web 用户。
+1. 数据从一个不可靠的链接进入到一个 Web 应用程序。
+2. 没有过滤掉恶意代码的动态内容被发送给 Web 用户。
 
 恶意内容一般包括 {{glossary("JavaScript")}}，但是，有时候也会包括 HTML，FLASH 或是其他浏览器可执行的代码。XSS 攻击的形式千差万别，但他们通常都会：将 cookies 或其他隐私信息发送给攻击者，将受害者重定向到由攻击者控制的网页，或是经由恶意网站在受害者的机器上进行其他恶意操作。
 

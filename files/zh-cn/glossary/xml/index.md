@@ -1,9 +1,6 @@
 ---
 title: XML
 slug: Glossary/XML
-tags:
-  - 术语
-translation_of: Glossary/XML
 ---
 可扩展标记语言（XML）是由 W3C 指定的一种通用标记语言。信息技术（IT）行业使用许多基于 XML 的语言作为数据描述性语言。
 

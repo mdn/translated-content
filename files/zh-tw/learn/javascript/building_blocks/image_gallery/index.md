@@ -82,24 +82,24 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 
 你要做的是：
 
-1.  Put the section of code below the "Looping through images" comment inside a loop that loops through all 5 images — you just need to loop through five numbers, one representing each image.
-2.  In each loop iteration, replace the `xxx` placeholder value with a string that will equal the path to the image in each case. We are setting the value of the `src` attribute to this value in each case. Bear in mind that in each case, the image is inside the images directory and its name is `pic1.jpg`, `pic2.jpg`, etc.
+1. Put the section of code below the "Looping through images" comment inside a loop that loops through all 5 images — you just need to loop through five numbers, one representing each image.
+2. In each loop iteration, replace the `xxx` placeholder value with a string that will equal the path to the image in each case. We are setting the value of the `src` attribute to this value in each case. Bear in mind that in each case, the image is inside the images directory and its name is `pic1.jpg`, `pic2.jpg`, etc.
 
 ### 在每個縮圖上添加 onclick 事件處理器
 
 In each loop iteration, you need to add an `onclick` handler to the current `newImage` — this should:
 
-1.  在每個 `<img>` 中把`"src"`作為運行`getAttribute()` 函數的參數，取得現在這張圖片的 `src` 屬性的值。但是要怎麼抓到現在這張圖片？如果用`newImage` 是做不到的，當在添加事件處理器前，迴圈已經先完成了；所以你每次都獲得前一個 `<img>`的回傳的 `src` 值。解法是，記住，在每個事件中，事件處理器的目標是 `<img>` ，如何獲得事件物件的資訊呢？
-2.  Run a function, passing it the returned `src` value as a parameter. You can call this function whatever you like.
-3.  This event handler function should set the `src` attribute value of the `displayed-img <img>` to the `src` value passed in as a parameter. We've already provided you with a line that stores a reference to the relevant `<img>` in a variable called `displayedImg`. Note that we want a defined named function here.
+1. 在每個 `<img>` 中把`"src"`作為運行`getAttribute()` 函數的參數，取得現在這張圖片的 `src` 屬性的值。但是要怎麼抓到現在這張圖片？如果用`newImage` 是做不到的，當在添加事件處理器前，迴圈已經先完成了；所以你每次都獲得前一個 `<img>`的回傳的 `src` 值。解法是，記住，在每個事件中，事件處理器的目標是 `<img>` ，如何獲得事件物件的資訊呢？
+2. Run a function, passing it the returned `src` value as a parameter. You can call this function whatever you like.
+3. This event handler function should set the `src` attribute value of the `displayed-img <img>` to the `src` value passed in as a parameter. We've already provided you with a line that stores a reference to the relevant `<img>` in a variable called `displayedImg`. Note that we want a defined named function here.
 
 ### 寫一個讓暗化/亮化按鈕可以運作的處理器
 
 That just leaves our darken/lighten `<button>` — we've already provided a line that stores a reference to the `<button>` in a variable called `btn`. You need to add an `onclick` handler that:
 
-1.  Checks the current class name set on the `<button>` — you can again achieve this by using `getAttribute()`.
-2.  If the class name is `"dark"`, changes the `<button>` class to `"light"` (using [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0.5)"`.
-3.  If the class name not `"dark"`, changes the `<button>` class to `"dark"`, its text content back to "Darken", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0)"`.
+1. Checks the current class name set on the `<button>` — you can again achieve this by using `getAttribute()`.
+2. If the class name is `"dark"`, changes the `<button>` class to `"light"` (using [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0.5)"`.
+3. If the class name not `"dark"`, changes the `<button>` class to `"dark"`, its text content back to "Darken", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0)"`.
 
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 

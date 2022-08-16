@@ -12,15 +12,15 @@ original_slug: Web/API/WebGL_API/Tutorial/Hinzufügen_von_2D_Inhalten_in_einen_W
 
 <h3 id="Hinweis_zur_deutschen_Übersetzung_dieses_Abschnitts">Hinweis zur deutschen Übersetzung dieses Abschnitts</h3>
 
-<p>Die deutsche Übersetzung bezieht sich auf ältere Version des Beispielcodes als der englische Originaltext. Der im deutschen Text beschriebene Code hat einige Probleme:</p>
+<p>Die deutsche Übersetzung bezieht sich auf ältere Version des Beispielcodes als der englische Originaltext. Der im deutschen Text beschriebene Code hat einige Probleme:</p>
 
 <ul>
- <li>Er ist unvollständig (die makePerspective() Funktion fehlt).</li>
- <li>Er verwendet globale Variablen die in der einen Funktion gesetzt, in der anderen wieder gelesen werden. Dies gilt als schlechte Programmierpraxis.</li>
+ <li>Er ist unvollständig (die makePerspective() Funktion fehlt).</li>
+ <li>Er verwendet globale Variablen die in der einen Funktion gesetzt, in der anderen wieder gelesen werden. Dies gilt als schlechte Programmierpraxis.</li>
  <li>Die Shader werden aus dem HTML DOM geladen, anstatt als Strings in JavaScript erzeugt. Diese Design-Entscheidung wird nicht begründet.</li>
 </ul>
 
-<p>Um das Beispiel selber nachzuprogrammieren ist es daher empfehlenswert, <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">auf die englische Version des Tutorials</a> zu wechseln. Vielleicht haben Sie ja auch Lust, <a href="/de/docs/Web/API/WebGL_API/Tutorial/Hinzuf%C3%BCgen_von_2D_Inhalten_in_einen_WebGL-Kontext$edit">diese Version ins Deutsche zu übersetzen</a>?</p>
+<p>Um das Beispiel selber nachzuprogrammieren ist es daher empfehlenswert, <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">auf die englische Version des Tutorials</a> zu wechseln. Vielleicht haben Sie ja auch Lust, <a href="/de/docs/Web/API/WebGL_API/Tutorial/Hinzuf%C3%BCgen_von_2D_Inhalten_in_einen_WebGL-Kontext$edit">diese Version ins Deutsche zu übersetzen</a>?</p>
 
 <h2 id="Beleuchtung_der_Szene">Beleuchtung der Szene</h2>
 
@@ -127,9 +127,9 @@ original_slug: Web/API/WebGL_API/Tutorial/Hinzufügen_von_2D_Inhalten_in_einen_W
 
 <pre class="brush: html">&lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
 
-  void main(void) {
-    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-  }
+  void main(void) {
+    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+  }
 &lt;/script&gt;
 </pre>
 
@@ -138,15 +138,15 @@ original_slug: Web/API/WebGL_API/Tutorial/Hinzufügen_von_2D_Inhalten_in_einen_W
 <p>Der Vertex-Shader definiert die Position und Form von jedem Punkt.</p>
 
 <pre class="brush: html">&lt;script id="shader-vs" type="x-shader/x-vertex"&gt;
-  attribute vec3 aVertexPosition;
+  attribute vec3 aVertexPosition;
 
-  uniform mat4 uMVMatrix;
-  uniform mat4 uPMatrix;
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
 
 
-  void main(void) {
-    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-  }
+  void main(void) {
+    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+  }
 &lt;/script&gt;
 </pre>
 

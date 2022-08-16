@@ -96,15 +96,17 @@ The critical settings that you must check are:
 - `DEBUG`. This should be set as `False` in production (`DEBUG = False`). This stops the sensitive/confidential debug trace and variable information from being displayed.
 - `SECRET_KEY`. This is a large random value used for CSRF protection etc. It is important that the key used in production is not in source control or accessible outside the production server. The Django documents suggest that this might best be loaded from an environment variable or read from a serve-only file.
 
-      # Read SECRET_KEY from an environment variable
-      import os
-      SECRET_KEY = os.environ['SECRET_KEY']
+```python
+# Read SECRET_KEY from an environment variable
+import os
+SECRET_KEY = os.environ['SECRET_KEY']
 
-      #OR
+#OR
 
-      #Read secret key from a file
-      with open('/etc/secret_key.txt') as f:
-          SECRET_KEY = f.read().strip()
+#Read secret key from a file
+with open('/etc/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
+```
 
 Let's change the _LocalLibrary_ application so that we read our `SECRET_KEY` and `DEBUG` variables from environment variables if they are defined, but otherwise use the default values in the configuration file.
 
@@ -189,23 +191,23 @@ Heroku is closely integrated with the **git** source code version control system
 
 There are a lot of ways of to work with git, but one of the easiest is to first set up an account on [Github](https://github.com/), create the repository there, and then sync to it locally:
 
-1.  Visit <https://github.com/> and create an account.
-2.  Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
-3.  Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
+1. Visit <https://github.com/> and create an account.
+2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
+3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
     - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
     - Choose **Python** in the _Add .gitignore_ selection list.
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
 
-4.  Press **Create repository**.
-5.  Click the green "**Clone or download**" button on your new repo page.
-6.  Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+4. Press **Create repository**.
+5. Click the green "**Clone or download**" button on your new repo page.
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
 
 Now the repository ("repo") is created we are going to want to clone it on our local computer:
 
-1.  Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
-2.  Open a command prompt/terminal and clone your repository using the URL you copied above:
+1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
     ```bash
     git clone https://github.com/<your_git_user_id>/django_local_library.git
@@ -213,7 +215,7 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 
     This will create the repository below the current point.
 
-3.  Navigate into the new repo.
+3. Navigate into the new repo.
 
     ```bash
     cd django_local_library.git
@@ -221,45 +223,51 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 
 The final step is to copy in your application and then add the files to your repo using git:
 
-1.  Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
-2.  Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
+1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
+2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
 
-        # Text backup files
-        *.bak
+    ```
+    # Text backup files
+    *.bak
 
-        #Database
-        *.sqlite3
+    #Database
+    *.sqlite3
+    ```
 
-3.  Open a command prompt/terminal and use the `add` command to add all files to git.
+3. Open a command prompt/terminal and use the `add` command to add all files to git.
 
     ```bash
     git add -A
     ```
 
-4.  Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+4. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
-        > git status
-        On branch master
-        Your branch is up-to-date with 'origin/master'.
-        Changes to be committed:
-          (use "git reset HEAD <file>..." to unstage)
+    ```
+    > git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
 
-                modified:   .gitignore
-                new file:   catalog/__init__.py
-                ...
-                new file:   catalog/migrations/0001_initial.py
-                ...
-                new file:   templates/registration/password_reset_form.html
+            modified:   .gitignore
+            new file:   catalog/__init__.py
+            ...
+            new file:   catalog/migrations/0001_initial.py
+            ...
+            new file:   templates/registration/password_reset_form.html
+    ```
 
-5.  When you're satisfied commit the files to your local repository:
+5. When you're satisfied commit the files to your local repository:
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  Then synchronise your local repository to the Github website, using the following:
+6. Then synchronise your local repository to the Github website, using the following:
 
-        git push origin master
+    ```bash
+    git push origin master
+    ```
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
@@ -277,7 +285,9 @@ This section explains the changes you'll need to make to our _LocalLibrary_ appl
 
 Create the file `Procfile` (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:
 
-    web: gunicorn locallibrary.wsgi --log-file -
+```
+web: gunicorn locallibrary.wsgi --log-file -
+```
 
 The "`web:`" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is _gunicorn_, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
 
@@ -305,16 +315,20 @@ The database connection information is supplied to the web dyno using a configur
 
 Install _dj-database-url_ locally so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server:
 
-    $ pip3 install dj-database-url
+```bash
+$ pip3 install dj-database-url
+```
 
 ##### settings.py
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
 
-    # Heroku: Update database configuration from $DATABASE_URL.
-    import dj_database_url
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
+```python
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+```
 
 > **備註：**
 >
@@ -354,14 +368,16 @@ The relevant setting variables are:
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file. The `BASE_DIR` should already have been defined in your file (the `STATIC_URL` may already have been defined within the file when it was created. While it will cause no harm, you might as well delete the duplicate previous reference).
 
-    # Static files (CSS, JavaScript, Images)
-    # https://docs.djangoproject.com/en/2.0/howto/static-files/
+```python
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-    # The absolute path to the directory where collectstatic will collect static files for deployment.
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-    # The URL to use when referring to static files (where they will be served from)
-    STATIC_URL = '/static/'
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
+```
 
 We'll actually do the file serving using a library called [WhiteNoise](https://warehouse.python.org/project/whitenoise/), which we install and configure in the next section.
 
@@ -379,28 +395,34 @@ The steps to set up _WhiteNoise_ to use with the project are:
 
 Install whitenoise locally using the following command:
 
-    $ pip3 install whitenoise
+```bash
+$ pip3 install whitenoise
+```
 
 ##### settings.py
 
 To install _WhiteNoise_ into your Django application, open **/locallibrary/settings.py**, find the `MIDDLEWARE` setting and add the `WhiteNoiseMiddleware` near the top of the list, just below the `SecurityMiddleware`:
 
-    MIDDLEWARE = [
-        'django.middleware.security.SecurityMiddleware',
-        'whitenoise.middleware.WhiteNoiseMiddleware',
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.middleware.common.CommonMiddleware',
-        'django.middleware.csrf.CsrfViewMiddleware',
-        'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.messages.middleware.MessageMiddleware',
-        'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    ]
+```python
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+```
 
 Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of **/locallibrary/settings.py**:
 
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```python
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```
 
 #### Requirements
 
@@ -412,11 +434,13 @@ pip3 freeze > requirements.txt
 
 After installing all the different dependencies above, your **requirements.txt** file should have _at least_ these items listed (though the version numbers may be different). Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
 
-    dj-database-url==0.4.1
-    Django==2.0
-    gunicorn==19.6.0
-    psycopg2==2.6.2
-    whitenoise==3.2.2
+```
+dj-database-url==0.4.1
+Django==2.0
+gunicorn==19.6.0
+psycopg2==2.6.2
+whitenoise==3.2.2
+```
 
 > **備註：** Make sure that a **psycopg2** line like the one above is present! Even iIf you didn't install this locally then you should still add this to the **requirements.txt**.
 
@@ -424,7 +448,9 @@ After installing all the different dependencies above, your **requirements.txt**
 
 The **runtime.txt** file, if defined, tells Heroku which programming language to use. Create the file in the root of the repo and add the following text:
 
-    python-3.6.4
+```
+python-3.6.4
+```
 
 > **備註：** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
 

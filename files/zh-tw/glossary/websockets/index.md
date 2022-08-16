@@ -1,7 +1,6 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
-translation_of: Glossary/WebSockets
 ---
 _WebSocket_ 是允許{{Glossary("Server", "伺服器")}}與用戶端之間發起持續性的 {{Glossary("TCP")}} 連接，以便隨時交換資料的{{Glossary("protocol", "協定")}}。
 

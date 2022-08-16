@@ -24,19 +24,19 @@ translation_of: Web/API/ServiceWorkerContainer
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("ServiceWorker")}} object if its state is <code>activated</code> (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns <code style="font-style: normal;">null</code> if the request is a force refresh (<em>Shift</em> + refresh) or if there is no active worker.</dd>
+ <dd>Returns a {{domxref("ServiceWorker")}} object if its state is <code>activated</code> (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns <code style="font-style: normal;">null</code> if the request is a force refresh (<em>Shift</em> + refresh) or if there is no active worker.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}</dt>
- <dd>Defines whether a service worker is ready to control a page or not. It returns a {{jsxref("Promise")}} that will never reject, which resolves to a {{domxref("ServiceWorkerRegistration")}} with an {{domxref("ServiceWorkerRegistration.active")}} worker.</dd>
+ <dd>Defines whether a service worker is ready to control a page or not. It returns a {{jsxref("Promise")}} that will never reject, which resolves to a {{domxref("ServiceWorkerRegistration")}} with an {{domxref("ServiceWorkerRegistration.active")}} worker.</dd>
 </dl>
 
 <h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.oncontrollerchange")}}</dt>
- <dd>An event handler fired whenever a {{Event("controllerchange")}} event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.</dd>
+ <dd>An event handler fired whenever a {{Event("controllerchange")}} event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.</dd>
  <dt>{{domxref("ServiceWorkerContainer.onerror")}}</dt>
  <dd>An event handler fired whenever an {{Event("error")}} event occurs in the associated service workers.</dd>
  <dt>{{domxref("ServiceWorkerContainer.onmessage")}}</dt>
@@ -46,12 +46,12 @@ translation_of: Web/API/ServiceWorkerContainer
 <h2 id="Methods">Methods</h2>
 
 <dl>
- <dt>{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} </dt>
+ <dt>{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} </dt>
  <dd>Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</dd>
  <dt>{{domxref("ServiceWorkerContainer.getRegistration()")}}</dt>
- <dd>Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided document URL.  If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="text-decoration: underline;" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>. </dd>
+ <dd>Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided document URL.  If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="text-decoration: underline;" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>. </dd>
  <dt>{{domxref("ServiceWorkerContainer.getRegistrations()")}}</dt>
- <dd>Returns all {{domxref("ServiceWorkerRegistration")}}s associated with a <code>ServiceWorkerContainer</code> in an array.  If the method can't return {{domxref("ServiceWorkerRegistration")}}s, it returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="text-decoration: underline;" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>. </dd>
+ <dd>Returns all {{domxref("ServiceWorkerRegistration")}}s associated with a <code>ServiceWorkerContainer</code> in an array.  If the method can't return {{domxref("ServiceWorkerRegistration")}}s, it returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="text-decoration: underline;" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>. </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -95,57 +95,7 @@ translation_of: Web/API/ServiceWorkerContainer
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

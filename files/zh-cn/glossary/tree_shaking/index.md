@@ -1,15 +1,6 @@
 ---
 title: Tree shaking
 slug: Glossary/Tree_shaking
-tags:
-  - JavaScript
-  - Modules
-  - Statement
-  - Web Performance
-  - export
-  - import
-  - tree shaking
-translation_of: Glossary/Tree_shaking
 ---
 **Tree shaking** 是一个通常用于描述移除 JavaScript 上下文中的未引用代码 (dead-code) 行为的术语。
 

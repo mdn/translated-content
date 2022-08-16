@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Functions/Methoden_Definitionen
 ---
 <div>{{JsSidebar("Functions")}}</div>
 
-<p>Beginnend mit ECMAScript 2015 wurde eine kürzere Syntax für Methodendefinitionen in Objekt Initialisierungen eingeführt. Es ist eine Abkürzung für die Zuweisung einer Funktion an einen Methodennamen.</p>
+<p>Beginnend mit ECMAScript 2015 wurde eine kürzere Syntax für Methodendefinitionen in Objekt Initialisierungen eingeführt. Es ist eine Abkürzung für die Zuweisung einer Funktion an einen Methodennamen.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -43,18 +43,18 @@ original_slug: Web/JavaScript/Reference/Functions/Methoden_Definitionen
 
 <pre class="brush: js">var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };</pre>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Die kurze Syntax benutzt benamte Funktionen statt anonymen Funktionen (wie in ...<code>foo: function() {}</code>...). Benamte Funktionen können sich vom Funktionskörper aus aufrufen (für anonyme Funktionen ist das unmöglich, weil sie keinen Bezeichner haben). Für mehr Details, siehe {{jsxref("Operators/function","function","#Beispiele")}}.</p>
+<p><strong>Hinweis:</strong> Die kurze Syntax benutzt benamte Funktionen statt anonymen Funktionen (wie in ...<code>foo: function() {}</code>...). Benamte Funktionen können sich vom Funktionskörper aus aufrufen (für anonyme Funktionen ist das unmöglich, weil sie keinen Bezeichner haben). Für mehr Details, siehe {{jsxref("Operators/function","function","#Beispiele")}}.</p>
 </div>
 
 <h3 id="Kurze_Generatormethoden">Kurze Generatormethoden</h3>
 
 <p><a href="/de/docs/Web/JavaScript/Reference/Statements/function*">Generatormethoden</a> können mit der kurzen Syntax ebenfalls definiert werden. Zu beachten ist, dass der Stern (*) in der kurzen Syntax nur vor dem Namen der Generatoreigenschaft geschrieben werden kann. <code>* g(){}</code> funktioniert, <code>g *(){}</code> funktioniert nicht.</p>
 
-<pre class="brush: js;highlight[12]">// Using a named property (pre-ES2015)
+<pre class="brush: js;">// Using a named property (pre-ES2015)
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -78,7 +78,7 @@ console.log(it.next().value); // 1</pre>
 
 <h3 id="Methodendefinitionen_die_nicht_konstruiert_werden_können">Methodendefinitionen die nicht konstruiert werden können</h3>
 
-<p>Alle Methodendefinitionen die keine Konstruktoren sind werden einen {{jsxref("TypeError")}} erzeugen,  wenn man versucht sie zu instantieren.</p>
+<p>Alle Methodendefinitionen die keine Konstruktoren sind werden einen {{jsxref("TypeError")}} erzeugen,  wenn man versucht sie zu instantieren.</p>
 
 <pre class="brush: js example-bad">var obj = {
   method() {},
@@ -95,7 +95,7 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 <h3 id="Ein_einfacher_Testfall">Ein einfacher Testfall</h3>
 
-<pre class="brush: js;highlight[3]">var obj = {
+<pre class="brush: js;">var obj = {
   a : "foo",
   b(){ return this.a; }
 };
@@ -106,7 +106,7 @@ console.log(obj.b()); // "foo"
 
 <p>Die Kurzschreib-Syntax unterstützt auch berechnete Eigenschaftsnamen.</p>
 
-<pre class="brush: js;highlight[4]">var bar = {
+<pre class="brush: js;">var bar = {
   foo0 : function (){return 0;},
   foo1(){return 1;},
   ["foo" + 2](){return 2;},
@@ -138,85 +138,20 @@ console.log(bar.foo2()); // 2</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Method definition shorthand</td>
-   <td>{{CompatChrome("39")}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("26")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Generator methods are not constructable (ES2016)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("43")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Method definition shorthand</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Generator methods are not constructable (ES2016)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("43")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also" name="See_also">SpiderMonkey spezifische Hinweise</h2>
 
 <ul>
  <li>Vor SpiderMonkey 38 {{geckoRelease(38)}} waren "<code>get</code>" und "<code>set</code>" nicht valide Namen für Generatormethoden. Das wurde in {{bug(1073809)}} behoben.</li>
- <li>Vor SpiderMonkey 41 {{geckoRelease(41)}} mussten geschweifte Klammern für Methoden nicht notwendiger weise benutzt werden. Jetzt sind sie vorausgesetzt, um konform zur ES2015 Spezifikation zu sein. Es wird ein {{jsxref("SyntaxError")}} in dieser und späteren Versionen erzeugt ({{bug(1150855)}}).
+ <li>Vor SpiderMonkey 41 {{geckoRelease(41)}} mussten geschweifte Klammern für Methoden nicht notwendiger weise benutzt werden. Jetzt sind sie vorausgesetzt, um konform zur ES2015 Spezifikation zu sein. Es wird ein {{jsxref("SyntaxError")}} in dieser und späteren Versionen erzeugt ({{bug(1150855)}}).
   <pre class="brush: js example-bad">var o = {x() 12}; // SyntaxError</pre>
  </li>
  <li>Die Restriktion, dass Generatormethoden Konstuktoren sind wurde in SpiderMonkey 41 {{geckoRelease(41)}} implementiert. Dazu siehe auch {{bug(1059908)}} und {{bug(1166950)}}</li>

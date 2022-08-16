@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Klassen/constructor
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p>Die <code>constructor</code> Methode ist eine spezielle Methode für das erzeugen und initialisieren von Objekten, die mit dem Schlüsselwort <code>class </code>erzeugt wurden.</p>
+<p>Die <code>constructor</code> Methode ist eine spezielle Methode für das erzeugen und initialisieren von Objekten, die mit dem Schlüsselwort <code>class </code>erzeugt wurden.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -18,17 +18,17 @@ original_slug: Web/JavaScript/Reference/Klassen/constructor
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>In einer Klasse kann es nur eine Methode mit dem Namen "constructor" geben. Eine {{jsxref("SyntaxError")}} Fehlermeldung wird geworfen, wenn in einer Klasse die <code>constructor</code> Methode mehr als einmal vorhanden ist.</p>
+<p>In einer Klasse kann es nur eine Methode mit dem Namen "constructor" geben. Eine {{jsxref("SyntaxError")}} Fehlermeldung wird geworfen, wenn in einer Klasse die <code>constructor</code> Methode mehr als einmal vorhanden ist.</p>
 
-<p>Die <code>constructor </code>Methode kann mit dem Schlüsselwort <code>super </code>die <code>constructor </code>Methode der Eltern-Klasse aufrufen.</p>
+<p>Die <code>constructor </code>Methode kann mit dem Schlüsselwort <code>super </code>die <code>constructor </code>Methode der Eltern-Klasse aufrufen.</p>
 
-<p>Wenn man keine <code>constructor </code>Methode erzeugt, wird eine Standardkonstruktor verwendet.</p>
+<p>Wenn man keine <code>constructor </code>Methode erzeugt, wird eine Standardkonstruktor verwendet.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<h3 id="Verwendung_der_constructor_Methode">Verwendung der <code>constructor</code> Methode</h3>
+<h3 id="Verwendung_der_constructor_Methode">Verwendung der <code>constructor</code> Methode</h3>
 
-<p>Dieser Quellcode Ausschnitt wurden vom  <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes Beispiel</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live Demo</a>) übernommen.</p>
+<p>Dieser Quellcode Ausschnitt wurden vom  <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes Beispiel</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live Demo</a>) übernommen.</p>
 
 <pre class="brush: js">class Square extends Polygon {
   constructor(length) {
@@ -51,7 +51,7 @@ original_slug: Web/JavaScript/Reference/Klassen/constructor
 
 <h3 id="Standardkonstruktoren">Standardkonstruktoren</h3>
 
-<p>Wenn man keine <code>constructor </code>Methode anlegt, wird eine Standardkonstruktor verwendet. Für Basis Klassen ist der Standard Konstruktor:</p>
+<p>Wenn man keine <code>constructor </code>Methode anlegt, wird eine Standardkonstruktor verwendet. Für Basis Klassen ist der Standard Konstruktor:</p>
 
 <pre class="brush: js">constructor() {}
 </pre>
@@ -79,82 +79,14 @@ original_slug: Web/JavaScript/Reference/Klassen/constructor
   <tr>
    <td>{{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Default constructors</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td>Default constructors</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

@@ -1,11 +1,6 @@
 ---
 title: 线程
 slug: Glossary/Thread
-tags:
-  - Glossary
-  - Thread
-  - asynchronous
-translation_of: Glossary/Thread
 ---
 
 计算机科学中的线程是同时运行多个任务或程序的执行。每个能够执行代码的单元称为**线程**。

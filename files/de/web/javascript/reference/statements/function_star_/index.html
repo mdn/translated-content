@@ -11,14 +11,14 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>Die <code><strong>function*</strong></code>-Deklaration ( Schlüsselwort <code>function</code> gefolgt von einem Stern) definiert eine <em>Generatorfunktion</em>, welche ein  {{jsxref("Global_Objects/Generator","Generator")}}-Objekt zurückgibt.</p>
+<p>Die <code><strong>function*</strong></code>-Deklaration ( Schlüsselwort <code>function</code> gefolgt von einem Stern) definiert eine <em>Generatorfunktion</em>, welche ein  {{jsxref("Global_Objects/Generator","Generator")}}-Objekt zurückgibt.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}</div>
 
 
 
 <div class="noinclude">
-<p>Eine Generatorfunktion kann auch mittels des {{jsxref("GeneratorFunction")}}-Konstruktors definiert werden.</p>
+<p>Eine Generatorfunktion kann auch mittels des {{jsxref("GeneratorFunction")}}-Konstruktors definiert werden.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 
 <p>Generatoren sind Funktionen, die verlassen und später wieder betreten werden können. Ihr Kontext (Variablenbindung) bleibt über die Wiedereintritte hinweg erhalten.</p>
 
-<p>Der Aufruf einer Generatorfunktion führt ihren Körper nicht sofort aus; stattdessen wird ein <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">Iterator</a>-Objekt einer Funktion zurückgegeben. Wenn die <code>next()</code>-Methode des Iterators aufgerufen wird, wird der Körper der Generatorfunktion bis zum ersten {{jsxref("Operators/yield", "yield")}}-Ausdruck ausgeführt, der den vom Iterator zurückzugebenden Wert spezifiziert oder mittels {{jsxref("Operators/yield*", "yield*")}} an eine andere Generatorfunktion weitergibt. Die Methode <code>next()</code> gibt ein Objekt mit einer <code>value</code>-Eigenschaft zurück, die den zurückgegebenen Wert enthält, und eine Eigenschaft <code>done</code>, die anzeigt, ob der Generator seinen letzten Wert zurückgegeben hat (boolescher Wert). Beim Aufrufen der <code>next()</code>-Methode mit einem Argument wird die Generatorfunktion weiter ausgeführt.</p>
+<p>Der Aufruf einer Generatorfunktion führt ihren Körper nicht sofort aus; stattdessen wird ein <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">Iterator</a>-Objekt einer Funktion zurückgegeben. Wenn die <code>next()</code>-Methode des Iterators aufgerufen wird, wird der Körper der Generatorfunktion bis zum ersten {{jsxref("Operators/yield", "yield")}}-Ausdruck ausgeführt, der den vom Iterator zurückzugebenden Wert spezifiziert oder mittels {{jsxref("Operators/yield*", "yield*")}} an eine andere Generatorfunktion weitergibt. Die Methode <code>next()</code> gibt ein Objekt mit einer <code>value</code>-Eigenschaft zurück, die den zurückgegebenen Wert enthält, und eine Eigenschaft <code>done</code>, die anzeigt, ob der Generator seinen letzten Wert zurückgegeben hat (boolescher Wert). Beim Aufrufen der <code>next()</code>-Methode mit einem Argument wird die Generatorfunktion weiter ausgeführt.</p>
 
 <p>Ein <code>return</code>-Statement in einer Generatorfunktion sorgt dafür, dass der Generator fertig ist (Status <code>done</code>). Falls ein Wert zurückgegeben wird, dann wird dieser als <code>value</code> zurückgegeben. Anschließend wird kein weiterer Wert mehr zurückgegeben.</p>
 
@@ -149,12 +149,12 @@ var obj = new f; // throws "TypeError: f ist kein Konstruktor"</pre>
   <tr>
    <td>{{SpecName('ES2016', '#', 'function*')}}</td>
    <td>{{Spec2('ES2016')}}</td>
-   <td>Änderung, dass Generatoren nicht über [[Construct]] trap verfügen und eine Ausnahme bei der Verwendung von <code>new</code> erzeugen.</td>
+   <td>Änderung, dass Generatoren nicht über [[Construct]] trap verfügen und eine Ausnahme bei der Verwendung von <code>new</code> erzeugen.</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#', 'function*')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -191,7 +191,7 @@ var obj = new f; // throws "TypeError: f ist kein Konstruktor"</pre>
  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
  <li>Andere Quellen im Web:
   <ul>
-   <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
+   <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
    <li><a href="http://www.youtube.com/watch?v=qbKWsbJ76-s">Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013</a></li>
    <li><a href="https://www.youtube.com/watch?v=ZrgEZykBHVo&amp;list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&amp;index=1">Hemanth.HM: The New gen of *gen(){}</a></li>
    <li><a href="http://taskjs.org/">Task.js</a></li>

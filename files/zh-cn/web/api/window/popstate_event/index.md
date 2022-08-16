@@ -1,17 +1,6 @@
 ---
 title: WindowEventHandlers.onpopstate
 slug: Web/API/Window/popstate_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - HTML5
-  - NeedsSpecTable
-  - Property
-  - Window
-  - events
-translation_of: Web/API/WindowEventHandlers/onpopstate
-original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
 {{ApiRef}}
 

@@ -1,10 +1,6 @@
 ---
 title: Grid Axis
 slug: Glossary/Grid_Axis
-tags:
-  - CSS
-  - CSS Grids
-translation_of: Glossary/Grid_Axis
 ---
 Grid 布局是一种二维布局方法，能够在行和列中布置内容。因此在任何网格中都有两个轴，横轴（即行轴，内联）和纵轴（即列轴，块）。
 

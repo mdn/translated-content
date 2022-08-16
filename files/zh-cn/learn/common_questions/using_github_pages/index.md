@@ -17,9 +17,9 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 ### 基本 Github 设置
 
-1.  首先，在您的机器上[安装 Git](http://git-scm.com/downloads)。这是 GitHub 工作的底层版本控制系统软件。
-2.  接下来，[注册一个 GitHub 帐户](https://github.com/join)。这很简单易操作。
-3.  注册后，用您的用户名和密码登录[github.com](https://github.com/)。
+1. 首先，在您的机器上[安装 Git](http://git-scm.com/downloads)。这是 GitHub 工作的底层版本控制系统软件。
+2. 接下来，[注册一个 GitHub 帐户](https://github.com/join)。这很简单易操作。
+3. 注册后，用您的用户名和密码登录[github.com](https://github.com/)。
 
 ### 准备上传代码
 
@@ -27,13 +27,13 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 第一步，您需要做的另一件事是将您的代码目录初始化为 Git 存储库。按照下述步骤：
 
-1.  将命令行指向您的 test-site 目录（或者任何一个您能调用的包含有您的网站的目录）。为此，请使用 cd 命令（即“更改目录”）。如果您已经将您的网站放到了位于桌面上的 test-site 目录中，则可以输入以下内容：
+1. 将命令行指向您的 test-site 目录（或者任何一个您能调用的包含有您的网站的目录）。为此，请使用 cd 命令（即“更改目录”）。如果您已经将您的网站放到了位于桌面上的 test-site 目录中，则可以输入以下内容：
 
     ```bash
     cd Desktop/test-site
     ```
 
-2.  当命令行指向您的网站所在目录时，键入以下命令，该命令告诉 git 工具将目录转换为 git 仓库：
+2. 当命令行指向您的网站所在目录时，键入以下命令，该命令告诉 git 工具将目录转换为 git 仓库：
 
     ```bash
     git init
@@ -57,37 +57,37 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 ### 为您的代码创建一个仓库
 
-1.  接下来，您需要为您的文件创建一个新的仓库。单击 GitHub 主页右上角的加号（+），然后选择“ _New Repository_”。
-2.  在此页面的“_Repository name_”框中，为您的代码库起一个名字，例如：_my-repository_。
-3.  还要填写一个描述来说明您的存储库将包含哪些内容。你的屏幕应该是这样的
+1. 接下来，您需要为您的文件创建一个新的仓库。单击 GitHub 主页右上角的加号（+），然后选择“ _New Repository_”。
+2. 在此页面的“_Repository name_”框中，为您的代码库起一个名字，例如：_my-repository_。
+3. 还要填写一个描述来说明您的存储库将包含哪些内容。你的屏幕应该是这样的
     ![](create-new-repo.png)
-4.  单击*Create repository*;您将会看到如下页面：
+4. 单击*Create repository*;您将会看到如下页面：
     ![](github-repo.png)
 
 ### 将您的文件上传到 GitHub
 
-1.  在当前页面上，您可能对本节的这部分感兴趣“**_…or push an existing repository from the command line_**（或者从命令行推送一个现有存储库）”。您应该看到本节中列出的两行代码。复制整个第一行，将其粘贴到命令行中，然后按 Enter 键。命令应该看起来像是这样的：
+1. 在当前页面上，您可能对本节的这部分感兴趣“**_…or push an existing repository from the command line_**（或者从命令行推送一个现有存储库）”。您应该看到本节中列出的两行代码。复制整个第一行，将其粘贴到命令行中，然后按 Enter 键。命令应该看起来像是这样的：
 
     ```bash
     git remote add origin https://github.com/chrisdavidmills/my-repository.git
     ```
 
-2.  接下来，键入以下两个命令，每个命令之后按 Enter。这些指令将会把代码上传到 GitHub，并要求 Git 管理这些文件。
+2. 接下来，键入以下两个命令，每个命令之后按 Enter。这些指令将会把代码上传到 GitHub，并要求 Git 管理这些文件。
 
     ```bash
     git add --all
     git commit -m 'adding my files to my repository'
     ```
 
-3.  最后，将代码推送到 GitHub，通过您正在访问的 GitHub 网页，然后输入我们看到的两个命令中的第二个命令“ **…or push an existing repository from the command line**（或从命令行部分推入现有存储库）部分”：
+3. 最后，将代码推送到 GitHub，通过您正在访问的 GitHub 网页，然后输入我们看到的两个命令中的第二个命令“ **…or push an existing repository from the command line**（或从命令行部分推入现有存储库）部分”：
 
     ```bash
     git push -u origin master
     ```
 
-4.  现在你需要为你的仓库创建一个 gh-pages 分支;刷新当前页面，您将看到一个类似下面的存储库页面。您需要点击**Branch：master**按钮，在文本输入框中输入 gh-pages，然后按蓝色按钮，即创建分支**_Create branch: gh-pages_**。这将创建一个特殊的代码分支，称为 gh-pages，该分支会在特殊位置发布。它的 URL 采用 username.github.io/my-repository-name 的格式，所以在我的例子中，URL 是 https\://chrisdavidmills.github.io/my-repository。显示的页面是 index.html 页面。
+4. 现在你需要为你的仓库创建一个 gh-pages 分支;刷新当前页面，您将看到一个类似下面的存储库页面。您需要点击**Branch：master**按钮，在文本输入框中输入 gh-pages，然后按蓝色按钮，即创建分支**_Create branch: gh-pages_**。这将创建一个特殊的代码分支，称为 gh-pages，该分支会在特殊位置发布。它的 URL 采用 username.github.io/my-repository-name 的格式，所以在我的例子中，URL 是 https\://chrisdavidmills.github.io/my-repository。显示的页面是 index.html 页面。
     ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
-5.  在新的浏览器标签中浏览您的 GitHub Pages 的网址，您将能够在线访问您的网站！通过电子邮件把地址发送给你的朋友，炫耀你的掌握的成果吧。
+5. 在新的浏览器标签中浏览您的 GitHub Pages 的网址，您将能够在线访问您的网站！通过电子邮件把地址发送给你的朋友，炫耀你的掌握的成果吧。
 
 > **备注：** 如果卡住了，[GitHub Pages 主页](https://pages.github.com/)也是非常有帮助的。
 
@@ -95,9 +95,11 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 如果您想对 test-site 进行更多更改并将其上传到 GitHub，那么您只需像以前一样对文件进行更改。然后，您需要输入以下命令（在每个之后按 Enter 键）将这些更改推送到 GitHub：
 
-    git add --all
-    git commit -m 'another commit'
-    git push
+```bash
+git add --all
+git commit -m 'another commit'
+git push
+```
 
 您可以使用更合适的消息替换上一次的提交信息，以描述您刚刚做出的更改。
 

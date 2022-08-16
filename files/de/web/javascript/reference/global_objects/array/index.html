@@ -72,7 +72,7 @@ var pos = fruits.indexOf('Banana');
 // 1
 </pre>
 
-<p><strong>Ein Element mithilfe eines Index aus dem Array löschen</strong></p>
+<p><strong>Ein Element mithilfe eines Index aus dem Array löschen</strong></p>
 
 <pre class="brush: js">var removedItem = fruits.splice(pos, 1); // this is how to remove an item
 
@@ -133,20 +133,20 @@ console.log(arr[1]);              // Ausgabe: 'Das zweite Element'
 console.log(arr[arr.length - 1]); // Ausgabe: 'Das letzte Element'
 </pre>
 
-<p>Array-Elemente sind Objekteigenschaften genau so wie <code>toString</code>. Wenn man jedoch wie folgt auf ein Element eines Arrays versucht zuzugreifen, wird ein Syntaxfehler ausgegeben, da der Name der Eigenschaft ungültig ist:</p>
+<p>Array-Elemente sind Objekteigenschaften genau so wie <code>toString</code>. Wenn man jedoch wie folgt auf ein Element eines Arrays versucht zuzugreifen, wird ein Syntaxfehler ausgegeben, da der Name der Eigenschaft ungültig ist:</p>
 
 <pre class="brush: js">console.log(arr.0); // Syntaxfehler
 </pre>
 
-<p>Es gibt nichts Besonderes an JavaScript-Arrays und den Eigenschaften, die dies verursachen. JavaScript-Eigenschaften, die mit einer Ziffer beginnen, können nicht mit Punktnotation referenziert werden und müssen über Klammernotation aufgerufen werden. Wenn man beispielsweise ein Objekt mit einer Eigenschaft namens <code>'3d'</code> hat, kann es nur in Klammern angegeben werden, z. B.:</p>
+<p>Es gibt nichts Besonderes an JavaScript-Arrays und den Eigenschaften, die dies verursachen. JavaScript-Eigenschaften, die mit einer Ziffer beginnen, können nicht mit Punktnotation referenziert werden und müssen über Klammernotation aufgerufen werden. Wenn man beispielsweise ein Objekt mit einer Eigenschaft namens <code>'3d'</code> hat, kann es nur in Klammern angegeben werden, z. B.:</p>
 
 <pre class="brush: js">var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
 console.log(years.0);   // ein Syntaxfehler
 console.log(years[0]);  // funktioniert
 </pre>
 
-<pre class="brush: js">renderer.3d.setTexture(model, 'character.png');     // ein Syntaxfehler
-renderer['3d'].setTexture(model, 'character.png');  // works funktioniert
+<pre class="brush: js">renderer.3d.setTexture(model, 'character.png');     // ein Syntaxfehler
+renderer['3d'].setTexture(model, 'character.png');  // works funktioniert
 </pre>
 
 <p>Beachten Sie, dass im obigen Beispiel <code>'3d'</code> in Anführungszeichen gesetzt werden musste. Es ist auch möglich, die JavaScript-Array-Indizes in Anführungszeichen zu setzen (z. B. <code>years['2']</code> statt <code>years[2]</code>), obwohl dies nicht erforderlich ist. Die 2 in <code>years[2]</code> wird von der JavaScript-Engine durch eine implizite Konvertierung mittels <code>toString</code> zwingend in eine Zeichenfolge umgewandelt. Aus diesem Grund beziehen sich <code>'2'</code> und <code>'02'</code> auf zwei unterschiedliche Elemente des <code>years</code>-Objekts und das folgende Beispiel würde <code>true</code> ergeben:</p>
@@ -174,7 +174,7 @@ fruits.push('banana', 'apple', 'peach');
 console.log(fruits.length); // 3
 </pre>
 
-<p>Wird einem JavaScript-Array eine Eigenschaft zugewiesen, bei der es sich um einen gültigen Array-Index handelt und dieser Index außerhalb der aktuellen Grenzen des Arrays liegt, aktualisiert die Engine die Eigenschaft {{jsxref("Array.length", "length")}} des Arrays entsprechend:</p>
+<p>Wird einem JavaScript-Array eine Eigenschaft zugewiesen, bei der es sich um einen gültigen Array-Index handelt und dieser Index außerhalb der aktuellen Grenzen des Arrays liegt, aktualisiert die Engine die Eigenschaft {{jsxref("Array.length", "length")}} des Arrays entsprechend:</p>
 
 <pre class="brush: js">fruits[5] = 'mango';
 console.log(fruits[5]); // 'mango'
@@ -296,7 +296,7 @@ var myArray = myRegEx.exec('cdbBdbsbz');</pre>
 <p><strong>Generische Array Methoden sind nicht standardisiert, veraltet und werden in naher Zukunft entfernt. </strong></p>
 </div>
 
-<p>Manchmal möchte man Array-Methoden auf Strings oder andere Array-ähnliche Objekte anwenden (z. B. auf {{jsxref("Functions/arguments", "Argumente", "", 1)}} von Funktionen). Auf diese Weise behandelt man eine Zeichenfolge wie ein Array von Zeichen (oder ein nicht-Array wie ein Array). Um beispielsweise zu prüfen, ob jedes Zeichen in der Variablen <code><em>str</em></code> ein Buchstabe ist, würde man Folgendes schreiben:</p>
+<p>Manchmal möchte man Array-Methoden auf Strings oder andere Array-ähnliche Objekte anwenden (z. B. auf {{jsxref("Functions/arguments", "Argumente", "", 1)}} von Funktionen). Auf diese Weise behandelt man eine Zeichenfolge wie ein Array von Zeichen (oder ein nicht-Array wie ein Array). Um beispielsweise zu prüfen, ob jedes Zeichen in der Variablen <code><em>str</em></code> ein Buchstabe ist, würde man Folgendes schreiben:</p>
 
 <pre class="brush: js">function isLetter(character) {
   return character &gt;= 'a' &amp;&amp; character &lt;= 'z';
@@ -309,7 +309,7 @@ if (Array.prototype.every.call(str, isLetter)) {
 <p>Diese Schreibweise wurde in JavaScript 1.6 von einer kürzeren abgelöst:</p>
 
 <pre class="brush: js">if (Array.every(str, isLetter)) {
-  console.log("The string '" + str + "' contains only letters!");
+  console.log("The string '" + str + "' contains only letters!");
 }
 </pre>
 
@@ -318,7 +318,7 @@ if (Array.prototype.every.call(str, isLetter)) {
 <p>Diese sind <strong>nicht</strong> Teil der ECMAScript-Standards und werden von nicht-Gecko-Browsern nicht unterstützt. Als Standardvariante können Sie Ihr Objekt mit {{jsxref("Array.from()")}} in ein richtiges Array konvertieren. Diese Methode wird in alten Browsern möglicherweise nicht unterstützt:</p>
 
 <pre class="brush: js">if (Array.from(str).every(isLetter)) {
-  console.log("The string '" + str + "' contains only letters!");
+  console.log("The string '" + str + "' contains only letters!");
 }
 </pre>
 
@@ -384,25 +384,25 @@ r,n,b,q,k,b,n,r
 
 <pre class="brush: js">values = [];
 for (var x = 0; x &lt; 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2
- ])
+ values.push([
+  2 ** x,
+  2 * x ** 2
+ ])
 };
 console.table(values)</pre>
 
 <p>Das Resultat ist:</p>
 
-<pre class="eval">0   1   0
-1   2   2
-2   4   8
-3   8   18
-4   16  32
-5   32  50
-6   64  72
-7   128 98
-8   256 128
-9   512 162</pre>
+<pre class="eval">0   1   0
+1   2   2
+2   4   8
+3   8   18
+4   16  32
+5   32  50
+6   64  72
+7   128 98
+8   256 128
+9   512 162</pre>
 
 <p>(Die erste Spalte ist der Index)</p>
 

@@ -21,9 +21,9 @@ Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](
 
 你可以透過下列三種方式將內容腳本讀入頁面：
 
-1.  **在安裝時讀入至符合 URL 模式的頁面：**透過你的 manifest.json 中的 [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 鍵，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/en-US/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。
-2.  **在執行時讀入至符合 URL 模式的頁面：**透過 [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) API，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/en-US/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。
-3.  **在執行時讀入至特定的頁籤：透過** [`tabs.executeScript()`](/en-US/Add-ons/WebExtensions/API/Tabs/executeScript) API，你可以在任何時候將內容腳本讀入特定的頁籤：舉例來說可以在使用者點擊[工具列按鈕](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action)時給予回應。
+1. **在安裝時讀入至符合 URL 模式的頁面：**透過你的 manifest.json 中的 [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 鍵，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/en-US/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。
+2. **在執行時讀入至符合 URL 模式的頁面：**透過 [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) API，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/en-US/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。
+3. **在執行時讀入至特定的頁籤：透過** [`tabs.executeScript()`](/en-US/Add-ons/WebExtensions/API/Tabs/executeScript) API，你可以在任何時候將內容腳本讀入特定的頁籤：舉例來說可以在使用者點擊[工具列按鈕](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action)時給予回應。
 
 每個套件的每個架構裡都只有一個全局作用域，所以一個內容腳本的變數可以直接被其他內容腳本使用，不管那個內容腳本是怎麼被讀入的。
 
@@ -235,7 +235,7 @@ function notify(message) {
 }
 ```
 
-這個範例來自 GitHub 上的 [notify-link-clicks-i18n ](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)，稍微經過修改。
+這個範例來自 GitHub 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)，稍微經過修改。
 
 ### 基於連線的訊息
 
@@ -420,17 +420,21 @@ window.addEventListener("message", function(event) {
 
 在 Chrome 裡，這會產出這樣的結果：
 
-    In content script, window.x: 1
-    In content script, window.y: 2
-    In page script, window.x: undefined
-    In page script, window.y: undefined
+```
+In content script, window.x: 1
+In content script, window.y: 2
+In page script, window.x: undefined
+In page script, window.y: undefined
+```
 
 而在 Firefox 裡會產生這些：
 
-    In content script, window.x: undefined
-    In content script, window.y: 2
-    In page script, window.x: 1
-    In page script, window.y: undefined
+```
+In content script, window.x: undefined
+In content script, window.y: 2
+In page script, window.x: 1
+In page script, window.y: undefined
+```
 
 這些也適用於 [`setTimeout()`](/en-US/docs/Web/API/setTimeout)、[`setInterval()`](/en-US/docs/Web/API/setInterval)、與 [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)。
 

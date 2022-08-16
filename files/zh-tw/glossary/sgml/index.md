@@ -1,13 +1,6 @@
 ---
 title: SGML
 slug: Glossary/SGML
-tags:
-  - CodingScripting
-  - Composing
-  - Glossary
-  - SGML
-  - l10n:priority
-translation_of: Glossary/SGML
 ---
 標準通用標記式語言（Standard Generalized Markup Language 或簡稱  **SGML**）是一套 {{Glossary("ISO")}} 所定義，用來規範宣告式標記語言的標準。
 

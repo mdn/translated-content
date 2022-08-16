@@ -1,7 +1,6 @@
 ---
 title: 首次內容繪製
 slug: Glossary/First_contentful_paint
-translation_of: Glossary/First_contentful_paint
 ---
 **首次內容繪製** (First Contentful Paint, FCP) 是當瀏覽器從文件物件模型 (DOM) 渲染第一塊內容，第一次提供頁面正在載入的回饋給使用者。這個問題是「它發生了嗎？」當首次內容繪製完成時，答案為「是的」。
 

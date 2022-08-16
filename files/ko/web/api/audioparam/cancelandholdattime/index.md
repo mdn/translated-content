@@ -26,7 +26,7 @@ var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)
 ### 매개변수
 
 - cancelTime
-  - : [`AudioContext`](/ko/docs/Web/API/AudioContext "AudioContext는 이벤트의 대상이 될 수 있으므로, AudioContext는 EventTarget 인터페이스를 구현합니다.") 가 처음 생성된 이후 모든 예정된 변화가 취소될 시간 (초 단위로 표현됨) 을 나타내는 double.
+  - : [`AudioContext`](/ko/docs/Web/API/AudioContext) 가 처음 생성된 이후 모든 예정된 변화가 취소될 시간 (초 단위로 표현됨) 을 나타내는 double.
 
 ### 반환 값
 

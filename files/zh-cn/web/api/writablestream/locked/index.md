@@ -1,15 +1,6 @@
 ---
 title: WritableStream.locked
 slug: Web/API/WritableStream/locked
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Streams
-  - WritableStream
-  - locked
-translation_of: Web/API/WritableStream/locked
 ---
 {{APIRef("Streams")}}
 

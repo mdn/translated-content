@@ -1,7 +1,6 @@
 ---
 title: MediaStream.id
 slug: Web/API/MediaStream/id
-translation_of: Web/API/MediaStream/id
 ---
 {{APIRef("WebRTC")}}
 

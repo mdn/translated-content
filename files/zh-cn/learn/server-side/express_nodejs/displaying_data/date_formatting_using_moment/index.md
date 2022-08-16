@@ -19,8 +19,8 @@ npm install moment
 
 ## 创建虚拟属性
 
-1.  打开 **./models/bookinstance.js**.
-2.  在此页面最上方，引用 moment
+1. 打开 **./models/bookinstance.js**.
+2. 在此页面最上方，引用 moment
 
     ```js
     var moment = require('moment');

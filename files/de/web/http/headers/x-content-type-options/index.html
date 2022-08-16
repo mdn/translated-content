@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/X-Content-Type-Options
 
 <p>Bei Sicherheits-Audits wird im Allgemeinen erwartet, dass dieser Header gesetzt ist.</p>
 
-<p class="blockIndicator note">Anmerkung: <code>nosniff</code> gilt nur für "<code>script</code>"- und "<code>style</code>"-Typen. Gleichzeitig wird auch Cross-Origin Read Blocking (CORB) für HTML-, TXT-, JSON- und XML- Dateien (ausgenommen SVG bzw. <code>image/svg+xml</code>) aktiviert. Das Anwenden von <code>nosniff</code> bei Bildern erwies sich als <a href="https://github.com/whatwg/fetch/issues/395">inkompatibel zu bestehenden Webseiten</a>.</p>
+<p class="blockIndicator note">Anmerkung: <code>nosniff</code> gilt nur für "<code>script</code>"- und "<code>style</code>"-Typen. Gleichzeitig wird auch Cross-Origin Read Blocking (CORB) für HTML-, TXT-, JSON- und XML- Dateien (ausgenommen SVG bzw. <code>image/svg+xml</code>) aktiviert. Das Anwenden von <code>nosniff</code> bei Bildern erwies sich als <a href="https://github.com/whatwg/fetch/issues/395">inkompatibel zu bestehenden Webseiten</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -37,7 +37,7 @@ translation_of: Web/HTTP/Headers/X-Content-Type-Options
  <dt><code>nosniff</code></dt>
  <dd>Verhindert eine Anfrage, wenn der angeforderte Typ
  <ul>
-  <li>"<code>style</code>" und der MIME-Typ nicht  "<code>text/css</code>" ist, oder</li>
+  <li>"<code>style</code>" und der MIME-Typ nicht  "<code>text/css</code>" ist, oder</li>
   <li>"<code>script</code>" und der MIME-Typ kein <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">JavaScript-MIME-Typ</a> ist.</li>
  </ul>
 
@@ -47,7 +47,7 @@ translation_of: Web/HTTP/Headers/X-Content-Type-Options
   <li><code>text/html</code></li>
   <li><code>text/plain</code></li>
   <li><code>text/json</code>, <code>application/json</code> und alle anderen MIME-Typen mit JSON-Erweiterung: <code>*/*+json</code></li>
-  <li><code>text/xml</code>, <code>application/xml</code> und alle anderen MIME-Typen mit XML-Erweiterung: <code>*/*+xml</code> (ausgenommen <code>image/svg+xml</code>)</li>
+  <li><code>text/xml</code>, <code>application/xml</code> und alle anderen MIME-Typen mit XML-Erweiterung: <code>*/*+xml</code> (ausgenommen <code>image/svg+xml</code>)</li>
  </ul>
  </dd>
 </dl>

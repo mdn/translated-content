@@ -1,9 +1,6 @@
 ---
 title: Examples
 slug: Games/Examples
-tags:
-  - 游戏
-translation_of: Games/Examples
 ---
 {{GamesSidebar}}
 

@@ -6,7 +6,7 @@ tags:
   - Releases
 translation_of: Mozilla/Firefox/Releases/34
 ---
-<div>{{FirefoxSidebar}}</div><p>Möchtest du helfen Firefox 34 zu dokumentieren? Schaue dir die <a href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=34.0">Liste der Bugs an, über die noch geschrieben werden muss</a>.</p>
+<div>{{FirefoxSidebar}}</div><p>Möchtest du helfen Firefox 34 zu dokumentieren? Schaue dir die <a href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=34.0">Liste der Bugs an, über die noch geschrieben werden muss</a>.</p>
 
 <h2 id="Änderungen_für_Webentwickler">Änderungen für Webentwickler</h2>
 
@@ -29,8 +29,8 @@ translation_of: Mozilla/Firefox/Releases/34
 <ul>
  <li>Unsere experimentelle Implementierung der CSS Schriftarten Level 3 schreitet voran. Neu implementierte Funktionen sind:
   <ul>
-   <li>Der Fallback Algorithmus von {{cssxref("font-variant-position")}}, erstellt synthetische Alternativen für fehlende Glyphen, basierend auf den subscript and superscript metrics supplied by the font ({{bug(1024804)}}).</li>
-   <li>Das <code>layout.css.font-features.enabled</code> wurde entfernt, was beudeutet, dass die folgenden Eigenschaften standartmäßig aktiviert sind :
+   <li>Der Fallback Algorithmus von {{cssxref("font-variant-position")}}, erstellt synthetische Alternativen für fehlende Glyphen, basierend auf den subscript and superscript metrics supplied by the font ({{bug(1024804)}}).</li>
+   <li>Das <code>layout.css.font-features.enabled</code> wurde entfernt, was beudeutet, dass die folgenden Eigenschaften standartmäßig aktiviert sind :
     <ul>
      <li>The CSS Font Level 3 version of {{cssxref("font-variant")}} which is now a shorthand property.</li>
      <li>The longhand properties {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, and {{cssxref("font-variant-alternates")}}.</li>
@@ -40,7 +40,7 @@ translation_of: Mozilla/Firefox/Releases/34
    </li>
   </ul>
  </li>
- <li>To reflect the latest specification changes, the value <code>auto</code> has been renamed in <code>main-size</code> on the {{cssxref("flex-basis")}} property. The shorthand {{cssxref("flex")}} keep an <code>auto</code> value, but it is a synonym of <code>1 1 main-size</code> ({{bug(1032922)}}). The value used for the longhand {{cssxref("flex-basis")}} when omitted in the shorthand is now  <code>0%</code>, and the one for {{cssxref("flex-growth")}} is now <code>1</code>, both different than their initial value.</li>
+ <li>To reflect the latest specification changes, the value <code>auto</code> has been renamed in <code>main-size</code> on the {{cssxref("flex-basis")}} property. The shorthand {{cssxref("flex")}} keep an <code>auto</code> value, but it is a synonym of <code>1 1 main-size</code> ({{bug(1032922)}}). The value used for the longhand {{cssxref("flex-basis")}} when omitted in the shorthand is now  <code>0%</code>, and the one for {{cssxref("flex-growth")}} is now <code>1</code>, both different than their initial value.</li>
  <li>The value <code>auto</code> has been added to {{cssxref("min-width")}} and {{cssxref("min-height")}} with a different behavior than the last time ({{bug(984711)}} and {{bug(1015474)}}).</li>
  <li>An experimental implementation, disabled by default, of the filter functional values of the {{cssxref("filter")}} property have been implemented. It is controlled by the <code>layout.css.filters.enabled</code> pref. ({{bug(948265)}})</li>
 </ul>

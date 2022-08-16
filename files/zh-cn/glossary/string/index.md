@@ -1,7 +1,6 @@
 ---
 title: String
 slug: Glossary/String
-translation_of: Glossary/String
 ---
 在任何计算机编程语言中，字符串都是用于表示文本的{{Glossary("character", "字符")}}序列。
 

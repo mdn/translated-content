@@ -1,16 +1,6 @@
 ---
 title: 让球动起来
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Loop
-  - Tutorial
-  - movement
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 {{GamesSidebar}}{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
@@ -52,7 +42,7 @@ var x = canvas.width/2;
 var y = canvas.height-30;
 ```
 
-接下来更新 `draw()` 函数，在 `arc() `方法中使用 `x` 和 `y` 变量，如下面高亮行所示：
+接下来更新 `draw()` 函数，在 `arc()` 方法中使用 `x` 和 `y` 变量，如下面高亮行所示：
 
 ```js
 function draw() {
