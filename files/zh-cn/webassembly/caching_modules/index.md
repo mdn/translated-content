@@ -1,15 +1,6 @@
 ---
 title: 缓存已编译的 WebAssembly 模块
 slug: WebAssembly/Caching_modules
-tags:
-  - IndexedDB
-  - JavaScript
-  - WebAssembly
-  - wasm
-  - 模块
-  - 缓存
-  - 编译
-translation_of: WebAssembly/Caching_modules
 ---
 {{WebAssemblySidebar}}
 
