@@ -2,57 +2,59 @@
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><code><strong>getAll()</strong></code>方法会返回该 {{domxref("FormData")}} 对象指定 key 的所有值。</p>
+**`getAll()`** 方法会返回该 {{domxref("FormData")}} 对象指定 key 的所有值。
 
-<div class="note">
-<p><strong>注意：</strong> 该方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 中可用。</p>
-</div>
+> **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">formData.getAll(name);</pre>
+```js
+formData.getAll(name);
+```
 
-<h3 id="append()_Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd>一个 {{domxref("USVString")}} 表示要检索的 key 名称。</dd>
-</dl>
+- `name`
+  - : 一个 {{domxref("USVString")}} 表示要检索的 key 名称。
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>一个 {{domxref("FormDataEntryValue")}} 数组。</p>
+一个 {{domxref("FormDataEntryValue")}} 数组。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下列代码会先创建一个空的 <code>FormData</code> 对象：</p>
+下列代码会先创建一个空的 `FormData` 对象：
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>使用 {{domxref("FormData.append")}} 添加两个 <code>username 的值：</code></p>
+使用 {{domxref("FormData.append")}} 添加两个 `username 的值：`
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('username', 'Bob');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('username', 'Bob');
+```
 
-<p>下列 <code>getAll()</code> 方法会返回一个数组，包含了所有 <code>username</code> 的值：</p>
+下列 `getAll()` 方法会返回一个数组，包含了所有 `username` 的值：
 
-<pre class="brush: js">formData.getAll('username'); // Returns ["Chris", "Bob"]</pre>
+```js
+formData.getAll('username'); // Returns ["Chris", "Bob"]
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FormData.getAll")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">使用 FormData 对象</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [使用 XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

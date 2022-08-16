@@ -2,173 +2,82 @@
 title: mouseenter
 slug: Web/API/Element/mouseenter_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当定点设备（通常指鼠标）移动到元素上时就会触发 <code>mouseenter 事件</code></p>
+当定点设备（通常指鼠标）移动到元素上时就会触发 `mouseenter 事件`
 
-<p>类似 {{event('mouseover')}}，它们两者之间的差别是 <code>mouseenter </code>不会<a href="/zh-CN/docs/Web/API/Event/bubbles">冒泡</a>（bubble），也就是说当指针从它的子层物理空间移到它的物理空间上时不会触发</p>
+类似 {{event('mouseover')}}，它们两者之间的差别是 `mouseenter `不会[冒泡](/zh-CN/docs/Web/API/Event/bubbles)（bubble），也就是说当指针从它的子层物理空间移到它的物理空间上时不会触发
 
-<div style="-moz-column-width: 455px; -webkit-column-width: 455px; column-width: 455px; border: solid 1px; padding: 5px; margin-bottom: 10px;">
-<div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="/@api/deki/files/5908/=mouseenter.png"></div>
-(mouseenter 事件) 触发时，会向层次结构的每个元素发送一个 mouseenter 事件。当指针到达文本时，此处将 4 个事件发送到层次结构的四个元素。
+![mouseenter.png](/@api/deki/files/5908/=mouseenter.png)(mouseenter 事件) 触发时，会向层次结构的每个元素发送一个 mouseenter 事件。当指针到达文本时，此处将 4 个事件发送到层次结构的四个元素。![mouseover.png](/@api/deki/files/5909/=mouseover.png)一个单独的 mouseover 事件被发送到 DOM 树的最深层元素，然后它将层次结构向上冒泡，直到它被处理程序取消或到达根目录。
 
-<div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5909/=mouseover.png"></div>
-一个单独的 mouseover 事件被发送到 DOM 树的最深层元素，然后它将层次结构向上冒泡，直到它被处理程序取消或到达根目录。</div>
+对于深层次结构，发送的 *mouseover* 事件数量可能非常大并且会导致严重的性能问题。在这种情况下，最好是监听 *mouseenter* 事件。（可使用 chrome 开发者工具选项卡中的 Performance 进行性能测试）
 
-<p>对于深层次结构，发送的 *mouseover* 事件数量可能非常大并且会导致严重的性能问题。在这种情况下，最好是监听 *mouseenter* 事件。（可使用 chrome 开发者工具选项卡中的 Performance 进行性能测试）</p>
+结合其对称事件，`mouseleave`, mouseenter DOM 事件的行为方式与 CSS {{cssxref(':hover')}} 伪类非常相似。.
 
-<p>结合其对称事件，<code>mouseleave</code>, mouseenter DOM 事件的行为方式与 CSS  {{cssxref(':hover')}} 伪类非常相似。.</p>
+## General info
 
-<h2 id="General_info">General info</h2>
+- Specification
+  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter)
+- Interface
+  - : {{domxref('MouseEvent')}}
+- Synchronicity
+  - : Synchronous
+- Bubbles
+  - : No
+- Cancelable
+  - : No
+- Target
+  - : Element
+- Default Action
+  - : None
 
-<dl>
- <dt>Specification</dt>
- <dd><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter">DOM L3</a></dd>
- <dt>Interface</dt>
- <dd>{{domxref('MouseEvent')}}</dd>
- <dt>Synchronicity</dt>
- <dd>Synchronous</dd>
- <dt>Bubbles</dt>
- <dd>No</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
- <dt>Target</dt>
- <dd>Element</dd>
- <dt>Default Action</dt>
- <dd>None</dd>
-</dl>
+## Properties 属性列表
 
-<h2 id="Properties_属性列表">Properties 属性列表</h2>
+| Property 属性                            | Type 类型                            | Description 描述                                                                                                                                                                                                                                                                                              |
+| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}} | 事件 (event) 目标（DOM 树中最顶层的目标）。                                                                                                                                                                                                                                                                   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}     | 事件 (event) 类型。                                                                                                                                                                                                                                                                                           |
+| `bubbles` {{readonlyInline}}       | Boolean                              | 这个事件是否冒泡                                                                                                                                                                                                                                                                                              |
+| `cancelable` {{readonlyInline}}    | `Boolean`                            | 这个事件可否取消                                                                                                                                                                                                                                                                                              |
+| `view` {{readonlyInline}}          | {{domxref("WindowProxy")}} | {{domxref("document.defaultView")}} (document 的 `window` )                                                                                                                                                                                                                                      |
+| `detail` {{readonlyInline}}        | `long` (`float`)                     | 0.                                                                                                                                                                                                                                                                                                            |
+| `currentTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 事件监听器监听的节点                                                                                                                                                                                                                                                                                          |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 对于 `mouseover`, `mouseout`, `mouseenter` 和 `mouseleave` 事件: the target of the complementary event (the `mouseleave` target in the case of a `mouseenter` event). `null` otherwise.                                                                                                                       |
+| `screenX` {{readonlyInline}}       | long                                 | 鼠标指针相对于屏幕的 X 轴坐标                                                                                                                                                                                                                                                                                 |
+| `screenY` {{readonlyInline}}       | long                                 | 鼠标指针相对于屏幕的 Y 轴坐标                                                                                                                                                                                                                                                                                 |
+| `clientX` {{readonlyInline}}       | long                                 | 鼠标指针相对于 DOM 元素的 X 轴坐标                                                                                                                                                                                                                                                                            |
+| `clientY` {{readonlyInline}}       | long                                 | 鼠标指针相对于 DOM 元素的 Y 轴坐标                                                                                                                                                                                                                                                                            |
+| `button` {{readonlyInline}}        | unsigned short                       | 始终为 0，因为没有按钮会触发这个事件 (mouse movement 事件干的).                                                                                                                                                                                                                                               |
+| `buttons` {{readonlyInline}}       | unsigned short                       | 表明当事件触发时鼠标上按下的键：左键=1，右键=2，中键 (鼠标滚轮) =4，第四个按钮 (通常是 “浏览器返回上一个页面”按钮)=8，第五个按钮 (通常是“浏览器向前导航”按钮)=16. 如果很多按钮同时按下，那就返回这些值的逻辑计算值。比如，当左键和右键同时按下时返回 3 (=1 \| 2). [了解更多](/zh-CN/docs/Web/API/MouseEvent). |
+| `mozPressure` {{readonlyInline}}   | float                                | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                |
+| `ctrlKey` {{readonlyInline}}       | boolean                              | `true` 代表当事件触发时按着 ctrl 键。`false` 反之。                                                                                                                                                                                                                                                           |
+| `shiftKey` {{readonlyInline}}      | boolean                              | `true` 代表当事件触发时按着 shift 键。`false` 反之。                                                                                                                                                                                                                                                          |
+| `altKey` {{readonlyInline}}        | boolean                              | `true` 代表当事件触发时按着 alt 键。`false` 反之。                                                                                                                                                                                                                                                            |
+| `metaKey` {{readonlyInline}}       | boolean                              | `true` 代表当事件触发时按着 meta 键 (???) `false` 反之。                                                                                                                                                                                                                                                      |
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property 属性</th>
-   <th scope="col">Type 类型</th>
-   <th scope="col">Description 描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>事件 (event) 目标（DOM 树中最顶层的目标）。</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件 (event) 类型。</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>Boolean</td>
-   <td>这个事件是否冒泡</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><code>Boolean</code></td>
-   <td>这个事件可否取消</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td>{{domxref("WindowProxy")}}</td>
-   <td>{{domxref("document.defaultView")}} (document 的 <code>window</code> )</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
-  <tr>
-   <td><code>currentTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>事件监听器监听的节点</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件: the target of the complementary event (the <code>mouseleave</code> target in the case of a <code>mouseenter</code> event). <code>null</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>screenX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>鼠标指针相对于屏幕的 X 轴坐标</td>
-  </tr>
-  <tr>
-   <td><code>screenY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>鼠标指针相对于屏幕的 Y 轴坐标</td>
-  </tr>
-  <tr>
-   <td><code>clientX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>鼠标指针相对于 DOM 元素的 X 轴坐标</td>
-  </tr>
-  <tr>
-   <td><code>clientY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>鼠标指针相对于 DOM 元素的 Y 轴坐标</td>
-  </tr>
-  <tr>
-   <td><code>button</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>始终为 0，因为没有按钮会触发这个事件 (mouse movement 事件干的).</td>
-  </tr>
-  <tr>
-   <td><code>buttons</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>表明当事件触发时鼠标上按下的键：左键=1，右键=2，中键 (鼠标滚轮) =4，第四个按钮 (通常是 “浏览器返回上一个页面”按钮)=8，第五个按钮 (通常是“浏览器向前导航”按钮)=16. 如果很多按钮同时按下，那就返回这些值的逻辑计算值。比如，当左键和右键同时按下时返回 3 (=1 | 2). <a href="/en-US/docs/Web/API/MouseEvent">了解更多</a>.</td>
-  </tr>
-  <tr>
-   <td><code>mozPressure</code> {{readonlyInline}}</td>
-   <td>float</td>
-   <td>The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).</td>
-  </tr>
-  <tr>
-   <td><code>ctrlKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 ctrl 键。<code>false</code> 反之。</td>
-  </tr>
-  <tr>
-   <td><code>shiftKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 shift 键。<code>false</code> 反之。</td>
-  </tr>
-  <tr>
-   <td><code>altKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 alt 键。<code>false</code> 反之。</td>
-  </tr>
-  <tr>
-   <td><code>metaKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 meta 键 (???) <code>false</code> 反之。</td>
-  </tr>
- </tbody>
-</table>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+鼠标悬停 ( [`mouseover` ](/zh-CN/docs/Web/Events/mouseover#Example)) 文档中有一个示例说明了 mouseover 和 mouseenter 之间的区别。
 
-<p>鼠标悬停 ( <a href="/en-US/docs/Web/Events/mouseover#Example"><code>mouseover</code> </a>) 文档中有一个示例说明了 mouseover 和 mouseenter 之间的区别。</p>
+以下示例说明如何使用 mouseover 模拟 mouseenter 事件的事件委派原则。
 
-<p>以下示例说明如何使用 mouseover 模拟 mouseenter 事件的事件委派原则。</p>
+```html
+<ul id="test">
+  <li>
+    <ul class="enter-sensitive">
+      <li>item 1-1</li>
+      <li>item 1-2</li>
+    </ul>
+  </li>
+  <li>
+    <ul class="enter-sensitive">
+      <li>item 2-1</li>
+      <li>item 2-2</li>
+    </ul>
+  </li>
+</ul>
 
-<pre class="brush: html">&lt;ul id="test"&gt;
-  &lt;li&gt;
-    &lt;ul class="enter-sensitive"&gt;
-      &lt;li&gt;item 1-1&lt;/li&gt;
-      &lt;li&gt;item 1-2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;ul class="enter-sensitive"&gt;
-      &lt;li&gt;item 2-1&lt;/li&gt;
-      &lt;li&gt;item 2-2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script&gt;
+<script>
   var delegationSelector = ".enter-sensitive";
 
   document.getElementById("test").addEventListener("mouseover", function( event ) {
@@ -177,7 +86,7 @@ slug: Web/API/Element/mouseenter_event
         match;
 
     // search for a parent node matching the delegation selector
-    while ( target &amp;&amp; target != document &amp;&amp; !( match = matches( target, delegationSelector ) ) ) {
+    while ( target && target != document && !( match = matches( target, delegationSelector ) ) ) {
         target = target.parentNode;
     }
 
@@ -185,7 +94,7 @@ slug: Web/API/Element/mouseenter_event
     if ( !match ) { return; }
 
     // loop through the parent of the related target to make sure that it's not a child of the target
-    while ( related &amp;&amp; related != target &amp;&amp; related != document ) {
+    while ( related && related != target && related != document ) {
         related = related.parentNode;
     }
 
@@ -210,27 +119,26 @@ slug: Web/API/Element/mouseenter_event
     // the webkitMatchesSelector is prefixed in most (if not all) browsers
     return elem.webkitMatchesSelector( selector );
   };
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Element.mouseenter_event")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Event("mousedown")}}</li>
- <li>{{Event("mouseup")}}</li>
- <li>{{Event("mousemove")}}</li>
- <li>{{Event("click")}}</li>
- <li>{{Event("dblclick")}}</li>
- <li>{{Event("mouseover")}}</li>
- <li>{{Event("mouseout")}}</li>
- <li>{{Event("mouseenter")}}</li>
- <li>{{Event("mouseleave")}}</li>
- <li>{{Event("contextmenu")}}</li>
-</ul>
+- {{Event("mousedown")}}
+- {{Event("mouseup")}}
+- {{Event("mousemove")}}
+- {{Event("click")}}
+- {{Event("dblclick")}}
+- {{Event("mouseover")}}
+- {{Event("mouseout")}}
+- {{Event("mouseenter")}}
+- {{Event("mouseleave")}}
+- {{Event("contextmenu")}}

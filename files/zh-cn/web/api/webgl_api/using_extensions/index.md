@@ -2,77 +2,74 @@
 title: Using WebGL extensions
 slug: Web/API/WebGL_API/Using_Extensions
 ---
-<div>{{WebGLSidebar}}</div>
+{{WebGLSidebar}}
 
-<p>WebGL，像它的姐妹 API (OpenGL and OpenGL ES)，支持使用扩展（extensions）。一份完整的扩展列表可在 <a href="http://www.khronos.org/registry/webgl/extensions/">khronos webgl extension registry</a>。</p>
+WebGL，像它的姐妹 API (OpenGL and OpenGL ES)，支持使用扩展（extensions）。一份完整的扩展列表可在 [khronos webgl extension registry](http://www.khronos.org/registry/webgl/extensions/)。
 
-<div class="note"><strong>Note:</strong> 不像别的 GL APIs，在 webGL 中 , 扩展只有在明确需要的情况下才会加载。</div>
+> **备注：** 不像别的 GL APIs，在 webGL 中 , 扩展只有在明确需要的情况下才会加载。
 
-<h2 id="规范扩展名，供应商前缀和首选项">规范扩展名，供应商前缀和首选项</h2>
+## 规范扩展名，供应商前缀和首选项
 
-<p>扩展（extensions）在未被官方正式制定为标准前，某些浏览器厂商可能会支持 WebGL 扩展 (but only when they are in draft stage)。这样的话，扩展的名字应该加上相应的厂商前缀 (<code>MOZ_</code>, <code>WEBKIT_</code>, etc.)，否则这个扩展只能在浏览器切换了偏好设置的前提下生效。</p>
+扩展（extensions）在未被官方正式制定为标准前，某些浏览器厂商可能会支持 WebGL 扩展 (but only when they are in draft stage)。这样的话，扩展的名字应该加上相应的厂商前缀 (`MOZ_`, `WEBKIT_`, etc.)，否则这个扩展只能在浏览器切换了偏好设置的前提下生效。
 
-<p>If you wish to work with the bleeding edge of extensions, and want to keep working on upon ratification (assuming, of course, that the extension doesn't change in incompatible ways), that you query the canonical extension name as well as the vendor extension name. For instance:</p>
+If you wish to work with the bleeding edge of extensions, and want to keep working on upon ratification (assuming, of course, that the extension doesn't change in incompatible ways), that you query the canonical extension name as well as the vendor extension name. For instance:
 
-<pre class="brush:js">var ext = (
+```js
+var ext = (
   gl.getExtension('OES_vertex_array_object') ||
   gl.getExtension('MOZ_OES_vertex_array_object') ||
   gl.getExtension('WEBKIT_OES_vertex_array_object')
 );
-</pre>
+```
 
-<p>Note that, vendor prefix have been discouraged more and more and thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.</p>
+Note that, vendor prefix have been discouraged more and more and thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
 
-<p>The feature flags are:</p>
+The feature flags are:
 
-<ul>
- <li><code>webgl.enable-draft-extensions</code> in Firefox</li>
- <li><code>chrome://flags/#enable-webgl-draft-extensions</code> in Chromium based browsers (Chrome, Opera).</li>
-</ul>
+- `webgl.enable-draft-extensions` in Firefox
+- `chrome://flags/#enable-webgl-draft-extensions` in Chromium based browsers (Chrome, Opera).
 
-<h2 id="命名约定">命名约定</h2>
+## 命名约定
 
-<p>WebGL extensions are prefixed with "ANGLE", "OES", "EXT" or "WEBGL". These prefixes reflect origin and intent:</p>
+WebGL extensions are prefixed with "ANGLE", "OES", "EXT" or "WEBGL". These prefixes reflect origin and intent:
 
-<ul>
- <li>ANGLE_: Extensions that are written by the <a href="https://en.wikipedia.org/wiki/ANGLE_%28software%29">ANGLE library</a> authors.</li>
- <li>OES_: Extensions that mirror functionality from OpenGL ES or OpenGL API extensions approved by the respective architecture review boards.</li>
- <li>EXT_: Extensions that mirror other OpenGL ES or OpenGL API extensions.</li>
- <li>WEBGL_: Extensions that are WebGL-specific and intended to be compatible with multiple web browsers. It should also be used for extensions which originated with the OpenGL ES or OpenGL APIs, but whose behavior has been significantly altered.</li>
-</ul>
+- ANGLE\_: Extensions that are written by the [ANGLE library](https://en.wikipedia.org/wiki/ANGLE_%28software%29) authors.
+- OES\_: Extensions that mirror functionality from OpenGL ES or OpenGL API extensions approved by the respective architecture review boards.
+- EXT\_: Extensions that mirror other OpenGL ES or OpenGL API extensions.
+- WEBGL\_: Extensions that are WebGL-specific and intended to be compatible with multiple web browsers. It should also be used for extensions which originated with the OpenGL ES or OpenGL APIs, but whose behavior has been significantly altered.
 
-<h2 id="查询可用的扩展程序">查询可用的扩展程序</h2>
+## 查询可用的扩展程序
 
-<p>The WebGL context supports querying what extensions are available.</p>
+The WebGL context supports querying what extensions are available.
 
-<pre class="brush:js">var available_extensions = gl.getSupportedExtensions();</pre>
+```js
+var available_extensions = gl.getSupportedExtensions();
+```
 
-<p>The {{domxref("WebGLRenderingContext.getSupportedExtensions()")}} method returns an array of strings, one for each supported extension.</p>
+The {{domxref("WebGLRenderingContext.getSupportedExtensions()")}} method returns an array of strings, one for each supported extension.
 
-<h2 id="扩展列表">扩展列表</h2>
+## 扩展列表
 
-<p>The current extensions are:</p>
+The current extensions are:
 
-<p>{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}</p>
+{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}
 
-<h2 id="启用一个扩展">启用一个扩展</h2>
+## 启用一个扩展
 
-<p>Before an extension can be used it has to be enabled using {{domxref("WebGLRenderingContext.getExtension()")}}. For example:</p>
+Before an extension can be used it has to be enabled using {{domxref("WebGLRenderingContext.getExtension()")}}. For example:
 
-<pre class="brush:js">var float_texture_ext = gl.getExtension('OES_texture_float');</pre>
+```js
+var float_texture_ext = gl.getExtension('OES_texture_float');
+```
 
-<p>The return value is <code>null</code> if the extension is not supported, or an extension object otherwise.</p>
+The return value is `null` if the extension is not supported, or an extension object otherwise.
 
-<h2 id="扩展对象">扩展对象</h2>
+## 扩展对象
 
-<p>If an extension defines specific symbols or functions that are not available in the core specification of WebGL, they will be available on the extension object returned by the call to <code>gl.getExtension()</code>.</p>
+If an extension defines specific symbols or functions that are not available in the core specification of WebGL, they will be available on the extension object returned by the call to `gl.getExtension()`.
 
+## 参见
 
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("WebGLRenderingContext.getSupportedExtensions()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li><a href="http://webglreport.com">webglreport.com</a></li>
-</ul>
+- {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- [webglreport.com](http://webglreport.com)

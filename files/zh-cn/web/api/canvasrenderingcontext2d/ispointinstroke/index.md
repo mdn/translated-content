@@ -2,72 +2,70 @@
 title: CanvasRenderingContext2D.isPointInStroke()
 slug: Web/API/CanvasRenderingContext2D/isPointInStroke
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.isPointInStroke()</code></strong>是 Canvas 2D API 用于检测某点是否在路径的描边线上的方法。</p>
+**`CanvasRenderingContext2D.isPointInStroke()`** 是 Canvas 2D API 用于检测某点是否在路径的描边线上的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">boolean <var><em>ctx</em>.isPointInStroke(x, y);
-<var>boolean <var><em>ctx</em>.isPointInStroke(path, x, y);</var></var></var>
-</pre>
+```
+boolean ctx.isPointInStroke(x, y);
+boolean ctx.isPointInStroke(path, x, y);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>x</dt>
- <dd>检测点的 X 坐标。</dd>
- <dt>y</dt>
- <dd>检测点的 Y 坐标。</dd>
- <dt><code>path</code></dt>
- <dd>{{domxref("Path2D")}} 路径。</dd>
-</dl>
+- x
+  - : 检测点的 X 坐标。
+- y
+  - : 检测点的 Y 坐标。
+- `path`
+  - : {{domxref("Path2D")}} 路径。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt>{{jsxref("Boolean")}}</dt>
- <dd>一个布尔值，当这个点在路径的描边线上，则返回 true，否则返回 false。</dd>
-</dl>
+- {{jsxref("Boolean")}}
+  - : 一个布尔值，当这个点在路径的描边线上，则返回 true，否则返回 false。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_ispointInstroke_方法">使用 <code>isPointInStroke</code> 方法</h3>
+### 使用 `isPointInStroke` 方法
 
-<p>这只是一个使用 <strong>isPointInStroke</strong> 方法的简单的代码片段，用于检测一个点是否在路径的描边线上<code style="font-style: normal;">。</code></p>
+这只是一个使用 **isPointInStroke** 方法的简单的代码片段，用于检测一个点是否在路径的描边线上`。`
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
 console.log(ctx.isPointInStroke(10, 10)); // true
-</pre>
+```
 
-<p>修改线面的代码，在线查看 canvas 的变化，并在你的<a href="/en-US/docs/Tools/Browser_Console">控制台</a>查看日至信息：</p>
+修改线面的代码，在线查看 canvas 的变化，并在你的[控制台](/zh-CN/docs/Tools/Browser_Console)查看日至信息：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
-console.log(ctx.isPointInStroke(10, 10)); // true&lt;/textarea&gt;
-</pre>
+console.log(ctx.isPointInStroke(10, 10)); // true</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -90,21 +88,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.isPointInStroke")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.

@@ -2,49 +2,45 @@
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>{{domxref("Element", "元素")}}方法 <code><strong>removeAttribute()</strong></code> 从指定的元素中删除一个属性。</p>
+{{domxref("Element", "元素")}}方法 **`removeAttribute()`** 从指定的元素中删除一个属性。
 
-<h3 id="语法">语法</h3>
+### 语法
 
-<pre class="syntaxbox notranslate"><em>element</em>.removeAttribute(<em>attrName</em>);
-</pre>
+```
+element.removeAttribute(attrName);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>属性名</dt>
- <dd>{{domxref("DOMString")}}指定要从元素中移除的属性的名称。如果指定的属性不存在，则 removeAttribute() 返回，但不会生成错误。</dd>
-</dl>
+- 属性名
+  - : {{domxref("DOMString")}}指定要从元素中移除的属性的名称。如果指定的属性不存在，则 removeAttribute() 返回，但不会生成错误。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>IE 返回 boolean 类型值，其他返回 undefined</p>
+IE 返回 boolean 类型值，其他返回 undefined
 
-<div class="note">
-<p><strong>注意：</strong>因为 <code>removeAttribute()</code> 不会返回任何有效值，你不能使用链式方法（连续使用方法，例如 <code>document.body.removeAttribute("first").removeAttribute("second")…</code>）连续移除多个属性。</p>
-</div>
+> **备注：** 因为 `removeAttribute()` 不会返回任何有效值，你不能使用链式方法（连续使用方法，例如 `document.body.removeAttribute("first").removeAttribute("second")…`）连续移除多个属性。
 
-<h2 id="Notes">使用说明</h2>
+## 使用说明
 
-<p>若要彻底移除一个属性的效果，应当使用  <code>removeAttribute()</code>，而不是使用 {{domxref("Element.setAttribute", "setAttribute()")}} 将属性值设置为  <code>null</code>。对于许多属性，如果仅将其值设为 <code>null</code>，这不会造达成和预期一样的效果。</p>
+若要彻底移除一个属性的效果，应当使用 `removeAttribute()`，而不是使用 {{domxref("Element.setAttribute", "setAttribute()")}} 将属性值设置为 `null`。对于许多属性，如果仅将其值设为 `null`，这不会造达成和预期一样的效果。
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js notranslate">// Given: &lt;div id="div1" align="left" width="200px"&gt;
+```js
+// Given: <div id="div1" align="left" width="200px">
 document.getElementById("div1").removeAttribute("align");
-// Now: &lt;div id="div1" width="200px"&gt;
-</pre>
+// Now: <div id="div1" width="200px">
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9">DOM Level 2 Core: removeAttribute</a> (introduced in <a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute">DOM Level 1 Core</a>)</p>
+[DOM Level 2 Core: removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Element.removeAttribute")}}</p>
+{{Compat("api.Element.removeAttribute")}}

@@ -2,40 +2,40 @@
 title: DOM 中的空白符
 slug: Web/API/Document_Object_Model/Whitespace
 ---
-<h4 id=".E5.95.8F.E9.A1.8C.E8.AA.AA.E6.98.8E">问题说明</h4>
+#### 问题说明
 
-<p><a href="zh_tw/DOM">DOM</a> 中的空白符会让处理节点结构时增加不少麻烦。在 Mozilla 的软件中，原始文件里所有空白符都会在 DOM 中出现（不包括标签内含的空白符）。这样的处理方式有其必要之处，一方面编辑器中可迳行排列文字、二方面 <a href="zh_tw/CSS">CSS</a> 里的 <code>white-space: pre</code> 也才能发挥作用。 如此一来就表示：</p>
+[DOM](zh_tw/DOM) 中的空白符会让处理节点结构时增加不少麻烦。在 Mozilla 的软件中，原始文件里所有空白符都会在 DOM 中出现（不包括标签内含的空白符）。这样的处理方式有其必要之处，一方面编辑器中可迳行排列文字、二方面 [CSS](zh_tw/CSS) 里的 `white-space: pre` 也才能发挥作用。 如此一来就表示：
 
-<ul>
- <li>有些空白符会自成一个文本节点。</li>
- <li>有些空白符会与其他文本节点合成为一个文本节点。</li>
-</ul>
+- 有些空白符会自成一个文本节点。
+- 有些空白符会与其他文本节点合成为一个文本节点。
 
-<p>换句话说，下面这段 HTML 代码对应的 DOM 节点结构会如附图所示，其中“\n”代表换行符：</p>
+换句话说，下面这段 HTML 代码对应的 DOM 节点结构会如附图所示，其中“\n”代表换行符：
 
-<pre class="eval">&lt;!-- My document --&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Header&lt;/h1&gt;
-  &lt;p&gt;
+```
+<!-- My document -->
+<html>
+<head>
+  <title>My Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <p>
     Paragraph
-  &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </p>
+</body>
+</html>
+```
 
-<p><img src="https://mdn.mozillademos.org/files/854/whitespace_tree.png" style="height: 306px; width: 618px;"></p>
+![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
 
-<p>这么一来，要使用 DOM 游走于节点结构间又不想要无用的空白符时，会有点困难。</p>
+这么一来，要使用 DOM 游走于节点结构间又不想要无用的空白符时，会有点困难。
 
-<h4 id=".E5.8A.A9.E4.BD.A0.E4.B8.80.E8.87.82.E4.B9.8B.E5.8A.9B">助你一臂之力</h4>
+#### 助你一臂之力
 
-<p>以下的 JavaScript 代码定义了许多函数，能够让你在处理 DOM 中的空白符时轻松点：</p>
+以下的 JavaScript 代码定义了许多函数，能够让你在处理 DOM 中的空白符时轻松点：
 
-<pre>/**
+```
+/**
  * 以下所谓的“空白符”代表：
  *  "\t" TAB \u0009（制表符）
  *  "\n" LF  \u000A（换行符）
@@ -70,7 +70,7 @@ function is_all_ws( nod )
 function is_ignorable( nod )
 {
   return ( nod.nodeType == 8) || // 注释节点
-         ( (nod.nodeType == 3) &amp;&amp; is_all_ws(nod) ); // 仅含空白符的文字节点
+         ( (nod.nodeType == 3) && is_all_ws(nod) ); // 仅含空白符的文字节点
 }
 
 /**
@@ -162,13 +162,14 @@ function data_of( txt )
     data = data.substring(0, data.length - 1);
   return data;
 }
-</pre>
+```
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<p>下面的代码演示了上面这些工具函数的使用方法。具体操作是，遍历一个子节点全部为元素节点的元素，找到所包含的第一个节点为一个文本内容为 “<code>This is the third paragraph</code>” 的文本节点的那个子元素，并修改该子元素的 class 属性及其第一个文本节点的文字内容。</p>
+下面的代码演示了上面这些工具函数的使用方法。具体操作是，遍历一个子节点全部为元素节点的元素，找到所包含的第一个节点为一个文本内容为 “`This is the third paragraph`” 的文本节点的那个子元素，并修改该子元素的 class 属性及其第一个文本节点的文字内容。
 
-<pre>var cur = first_child(document.getElementById("test"));
+```
+var cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")
@@ -178,16 +179,10 @@ while (cur)
   }
   cur = node_after(cur);
 }
-</pre>
+```
 
-<div class="originaldocinfo">
-<h4 id=".E5.8E.9F.E6.96.87.E8.B3.87.E8.A8.8A">原文资讯</h4>
+#### 原文资讯
 
-<ul>
- <li>作者：<a href="http://dbaron.org">L. David Baron</a></li>
- <li>最后更新：January 1, 2003</li>
- <li>版权资讯：© 1998-2005 by individual mozilla.org contributors; 内容部份以 <a href="http://www.mozilla.org/foundation/licensing/website-content.html">创意公用</a>方式授权。</li>
-</ul>
-</div>
-
-<p> </p>
+- 作者：[L. David Baron](http://dbaron.org)
+- 最后更新：January 1, 2003
+- 版权资讯：© 1998-2005 by individual mozilla.org contributors; 内容部份以 [创意公用](http://www.mozilla.org/foundation/licensing/website-content.html)方式授权。

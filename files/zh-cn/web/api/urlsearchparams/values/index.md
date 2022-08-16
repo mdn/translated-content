@@ -2,47 +2,45 @@
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>URLSearchParams.values() 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}，该遍历器允许遍历对象中包含的所有值。这些值都是{{domxref("USVString")}}对象。</p>
+URLSearchParams.values() 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}，该遍历器允许遍历对象中包含的所有值。这些值都是{{domxref("USVString")}}对象。
 
-<div class="note">
-<p><strong>注意</strong>: 该方法在<a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>中也可使用</p>
-</div>
+> **备注：** 该方法在[Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中也可使用
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">searchParams.values();</pre>
+```
+searchParams.values();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个{{jsxref("Iteration_protocols","iterator")}}.</p>
+返回一个{{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">// 创建一个测试用 URLSearchParams 对象
-var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
+```js
+// 创建一个测试用 URLSearchParams 对象
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // 输出值
 for(var value of searchParams.values()) {
   console.log(value);
-}</pre>
+}
+```
 
-<p>结果如下：</p>
+结果如下：
 
-<pre>value1
-value2</pre>
+```
+value1
+value2
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.URLSearchParams.values")}}
 
+## 另请参考
 
-<p>{{Compat("api.URLSearchParams.values")}}</p>
-</div>
-
-<h2 id="另请参考">另请参考</h2>
-
-<ul>
- <li>其他 URL 相关接口: {{domxref("URL")}}, {{domxref("URLUtils")}}.</li>
-</ul>
+- 其他 URL 相关接口: {{domxref("URL")}}, {{domxref("URLUtils")}}.

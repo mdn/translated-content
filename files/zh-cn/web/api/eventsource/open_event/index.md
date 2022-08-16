@@ -2,34 +2,34 @@
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>{{domxref("EventSource")}}接口的 <code><strong>onopen</strong></code> 属性是一个 {{event("Event_handlers", "event handler")}} ，它在收到{{event("open")}} 事件时被调用，在那时，连接刚被打开。</p>
+{{domxref("EventSource")}}接口的 **`onopen`** 属性是一个 {{event("Event_handlers", "event handler")}} ，它在收到{{event("open")}} 事件时被调用，在那时，连接刚被打开。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">eventSource.onopen = function</pre>
+```
+eventSource.onopen = function
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">evtSource.onopen = function() {
+```js
+evtSource.onopen = function() {
   console.log("Connection to server opened.");
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>注意</strong> ：你可以在 GitHub 上看到一个完整的示例— 请看 <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">使用 php 的 SSE(服务器发送事件)demo。</a></p>
-</div>
+> **备注：** 你可以在 GitHub 上看到一个完整的示例— 请看 [使用 php 的 SSE(服务器发送事件)demo。](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.EventSource.onopen")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

@@ -2,54 +2,48 @@
 title: CharacterData
 slug: Web/API/CharacterData
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>CharacterData</strong></code> 抽象接口（abstract interface）代表 {{domxref("Node")}} 对象包含的字符。这是一个抽象接口，意味着没有 <code>CharacterData</code> 类型的对象。 它是在其他接口中被实现的，如 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("ProcessingInstruction")}} 这些非抽象接口。</p>
+**`CharacterData`** 抽象接口（abstract interface）代表 {{domxref("Node")}} 对象包含的字符。这是一个抽象接口，意味着没有 `CharacterData` 类型的对象。 它是在其他接口中被实现的，如 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("ProcessingInstruction")}} 这些非抽象接口。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从其父级 {{domxref("Node")}} 继承属性，并且实现了 {{domxref("ChildNode")}} 和 {{domxref("NonDocumentTypeChildNode")}} 接口。</em></p>
+_从其父级 {{domxref("Node")}} 继承属性，并且实现了 {{domxref("ChildNode")}} 和 {{domxref("NonDocumentTypeChildNode")}} 接口。_
 
-<dl>
- <dt>{{domxref("CharacterData.data")}}</dt>
- <dd>一个 {{domxref("DOMString")}}，表示该对象中包含的文本数据。</dd>
- <dt>{{domxref("CharacterData.length")}} {{readonlyInline}}</dt>
- <dd>返回一个 <code>unsigned long</code> 的表示 <code>CharacterData.data</code> 包含的字符串的大小。</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}</dt>
- <dd>返回其父节点所在的子节点列表（children list）中紧跟着的元素节点 {{domxref("Element")}}，或者 <code>null</code>。</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}</dt>
- <dd>返回其父节点所在的子节点列表（children list）中前一个元素节点 {{domxref("Element")}}，或者 <code style="font-style: normal;">null</code>。</dd>
-</dl>
+- {{domxref("CharacterData.data")}}
+  - : 一个 {{domxref("DOMString")}}，表示该对象中包含的文本数据。
+- {{domxref("CharacterData.length")}} {{readonlyInline}}
+  - : 返回一个 `unsigned long` 的表示 `CharacterData.data` 包含的字符串的大小。
+- {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
+  - : 返回其父节点所在的子节点列表（children list）中紧跟着的元素节点 {{domxref("Element")}}，或者 `null`。
+- {{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}
+  - : 返回其父节点所在的子节点列表（children list）中前一个元素节点 {{domxref("Element")}}，或者 `null`。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p><em>从其父级 {{domxref("Node")}} 继承方法，并且实现了 {{domxref("ChildNode")}} 和<em>{{domxref("NonDocumentTypeChildNode")}} 接口。</em></em></p>
+_从其父级 {{domxref("Node")}} 继承方法，并且实现了 {{domxref("ChildNode")}} 和_{{domxref("NonDocumentTypeChildNode")}} 接口。
 
-<dl>
- <dt>{{domxref("CharacterData.appendData()")}}</dt>
- <dd>为 <code>CharacterData.data </code>字符串追加指定的 {{domxref("DOMString")}} ；当方法返回时，<code>data</code> 包含的是已合并的 {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.deleteData()")}}</dt>
- <dd>在 <code>CharacterData.data </code>字符串中，从指定位置开始，删除指定数量的字符；当方法返回时，<code>data </code>包含的是缩短了的 {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.insertData()")}}</dt>
- <dd>在 <code>CharacterData.data </code>字符串中，在指定的位置，插入指定的字符；当方法返回时，<code>data</code> 包含的是已修改的 {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>把对象从其父节点的children list中删除。</dd>
- <dt>{{domxref("CharacterData.replaceData()")}}</dt>
- <dd>在 <code>CharacterData.data </code>字符串中，从指定位置开始，把指定数量的字符替换为指定的 {{domxref("DOMString")}}; 当方法返回时, <code>data</code> 包含的是已修改的 {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.substringData()")}}</dt>
- <dd>返回一个包含了从<code> CharacterData.data </code>中的指定位置开始，指定长度的<code> </code>{{domxref("DOMString")}} 。</dd>
-</dl>
+- {{domxref("CharacterData.appendData()")}}
+  - : 为 `CharacterData.data `字符串追加指定的 {{domxref("DOMString")}} ；当方法返回时，`data` 包含的是已合并的 {{domxref("DOMString")}}.
+- {{domxref("CharacterData.deleteData()")}}
+  - : 在 `CharacterData.data `字符串中，从指定位置开始，删除指定数量的字符；当方法返回时，`data `包含的是缩短了的 {{domxref("DOMString")}}.
+- {{domxref("CharacterData.insertData()")}}
+  - : 在 `CharacterData.data `字符串中，在指定的位置，插入指定的字符；当方法返回时，`data` 包含的是已修改的 {{domxref("DOMString")}}.
+- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
+  - : 把对象从其父节点的 children list 中删除。
+- {{domxref("CharacterData.replaceData()")}}
+  - : 在 `CharacterData.data `字符串中，从指定位置开始，把指定数量的字符替换为指定的 {{domxref("DOMString")}}; 当方法返回时, `data` 包含的是已修改的 {{domxref("DOMString")}}.
+- {{domxref("CharacterData.substringData()")}}
+  - : 返回一个包含了从` CharacterData.data `中的指定位置开始，指定长度的` `{{domxref("DOMString")}} 。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CharacterData")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>
-</ul>
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference).

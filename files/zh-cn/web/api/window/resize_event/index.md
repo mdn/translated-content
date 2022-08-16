@@ -2,76 +2,42 @@
 title: resize
 slug: Web/API/Window/resize_event
 ---
-<p>文档视图调整大小时会触发 <strong>resize</strong> 事件。</p>
+文档视图调整大小时会触发 **resize** 事件。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
-<dl style="font-family: Microsoft Yahei;">
- <dt>规范</dt>
- <dd><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize">DOM L3</a>, <a href="http://www.w3.org/TR/cssom-view/#resizing-viewports">CSSOM View</a></dd>
- <dt>接口</dt>
- <dd>UIEvent</dd>
- <dt>是否冒泡</dt>
- <dd>否</dd>
- <dt>是否可取消默认</dt>
- <dd>否</dd>
- <dt>事件目标</dt>
- <dd>defaultView (window)</dd>
- <dt>默认行为</dt>
- <dd>None</dd>
-</dl>
+- 规范
+  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](http://www.w3.org/TR/cssom-view/#resizing-viewports)
+- 接口
+  - : UIEvent
+- 是否冒泡
+  - : 否
+- 是否可取消默认
+  - : 否
+- 事件目标
+  - : defaultView (window)
+- 默认行为
+  - : None
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table" style="font-family: Microsoft Yahei;">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a></td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/WindowProxy"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView"><code>document.defaultView</code></a> (<code>window</code> of the document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                             | Description                                                                                   |
+| ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
+| `type` {{readonlyInline}}       | [`DOMString`](/zh-CN/docs/Web/API/DOMString)     | The type of event.                                                                            |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/zh-CN/docs/Web/API/WindowProxy) | [`document.defaultView`](/zh-CN/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                            |
 
-<h2 id="案例">案例</h2>
+## 案例
 
-<p>由于 resize 事件可以以较高的速率触发，因此事件处理程序不应该执行计算开销很大的操作 (如 DOM 修改)。相反，建议使用<a href="/en-US/docs/DOM/window.requestAnimationFrame">requestAnimationFrame</a>, <a href="/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout</a> or <a href="/en-US/docs/Web/API/CustomEvent">customEvent</a>, 比如：</p>
+由于 resize 事件可以以较高的速率触发，因此事件处理程序不应该执行计算开销很大的操作 (如 DOM 修改)。相反，建议使用[requestAnimationFrame](/zh-CN/docs/DOM/window.requestAnimationFrame), [setTimeout](/zh-CN/docs/Web/API/WindowTimers/setTimeout) or [customEvent](/zh-CN/docs/Web/API/CustomEvent), 比如：
 
-<h3 id="requestAnimationFrame_customEvent">requestAnimationFrame + customEvent</h3>
+### requestAnimationFrame + customEvent
 
-<pre class="brush: js">;(function() {
+```js
+;(function() {
     var throttle = function(type, name, obj) {
         obj = obj || window;
         var running = false;
@@ -94,11 +60,12 @@ slug: Web/API/Window/resize_event
 window.addEventListener("optimizedResize", function() {
     console.log("Resource conscious resize callback!");
 });
-</pre>
+```
 
-<h3 id="requestAnimationFrame">requestAnimationFrame</h3>
+### requestAnimationFrame
 
-<pre class="brush: js">var optimizedResize = (function() {
+```js
+var optimizedResize = (function() {
 
     var callbacks = [],
         running = false;
@@ -152,11 +119,12 @@ window.addEventListener("optimizedResize", function() {
 optimizedResize.add(function() {
     console.log('Resource conscious resize callback!')
 });
-</pre>
+```
 
-<h3 id="setTimeout">setTimeout</h3>
+### setTimeout
 
-<pre class="brush: js">(function() {
+```js
+(function() {
 
   window.addEventListener("resize", resizeThrottler, false);
 
@@ -178,4 +146,5 @@ optimizedResize.add(function() {
     ...
   }
 
-}());</pre>
+}());
+```

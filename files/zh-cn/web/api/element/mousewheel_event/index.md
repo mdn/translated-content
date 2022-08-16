@@ -2,93 +2,87 @@
 title: mousewheel
 slug: Web/API/Element/mousewheel_event
 ---
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p>The <code>mousewheel</code> event is fired asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseWheelEvent") }} interface.</p>
+The `mousewheel` event is fired asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseWheelEvent") }} interface.
 
-<div class="note">
-<p><strong>Do not use this wheel event.</strong></p>
+> **备注：** **Do not use this wheel event.**
+>
+> This interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard _{{event("wheel")}} event._
 
-<p>This interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard <em>{{event("wheel")}} event.</em></p>
-</div>
+- _Interface_: {{ domxref('MouseWheelEvent') }}
+- _Synchronicity_: asynchronous
+- _Bubbles_ :yes (Though, MSDN documents "No")
+- _Target_: {{ domxref("Element") }}, {{ domxref("Document") }}, {{ domxref("Window") }}
+- _Cancelable_: yes (Though, MSDN documents "No")
+- _Default action_: Scroll, moving history, or zooming in/out
 
-<ul style="display: table; padding: 0; border-left: 2px solid; margin-left: 0.5em;">
- <li><dfn>Interface :</dfn>{{ domxref('MouseWheelEvent') }}</li>
- <li><dfn>Synchronicity :</dfn>asynchronous</li>
- <li><dfn>Bubbles :</dfn> yes (Though, MSDN documents "No")</li>
- <li><dfn>Target :</dfn> {{ domxref("Element") }}, {{ domxref("Document") }}, {{ domxref("Window") }}</li>
- <li><dfn>Cancelable :</dfn> yes (Though, MSDN documents "No")</li>
- <li><dfn>Default action :</dfn> Scroll, moving history, or zooming in/out</li>
-</ul>
+## Specification
 
-<h2 id="Specification">Specification</h2>
+The document in MSDN: [onmousewheel event](http://msdn.microsoft.com/en-us/library/ie/ms536951%28v=vs.85%29.aspx)
 
-<p>The document in MSDN: <a href="http://msdn.microsoft.com/en-us/library/ie/ms536951%28v=vs.85%29.aspx">onmousewheel event</a></p>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Element.mousewheel_event")}}
 
-<h2 id="detail_value">detail value</h2>
+## detail value
 
-<p>The <code>detail</code> attribute value is always 0 except Opera (Presto).</p>
+The `detail` attribute value is always 0 except Opera (Presto).
 
-<p>Opera (Presto) sets almost the same value as Firefox (Gecko)'s <code>DOMMouseScroll</code> event's detail value which indicates the scroll amount by line. Negative value indicates to scroll to bottom or right. Positive value indicates to scroll to top or left.</p>
+Opera (Presto) sets almost the same value as Firefox (Gecko)'s `DOMMouseScroll` event's detail value which indicates the scroll amount by line. Negative value indicates to scroll to bottom or right. Positive value indicates to scroll to top or left.
 
-<p>On Mac, the value is computed from accelerated scroll amount.</p>
+On Mac, the value is computed from accelerated scroll amount.
 
-<p>On Linux, <code>2</code> or <code>-2</code> is set per native wheel event.</p>
+On Linux, `2` or `-2` is set per native wheel event.
 
-<h2 id="wheelDelta_wheelDeltaX_and_wheelDeltaY_value">wheelDelta, wheelDeltaX and wheelDeltaY value</h2>
+## wheelDelta, wheelDeltaX and wheelDeltaY value
 
-<p>The <code>wheelDelta</code> attribute value is an abstract value which indicates how far the wheel turned. If the wheel has rotated away from the user, it's positive, otherwise negative. This means that the delta value sign is different from DOM Level 3 Event's <code>wheel</code>. However, the meaning of the amount of these values is not the same between browsers. See following explanation for the detail.</p>
+The `wheelDelta` attribute value is an abstract value which indicates how far the wheel turned. If the wheel has rotated away from the user, it's positive, otherwise negative. This means that the delta value sign is different from DOM Level 3 Event's `wheel`. However, the meaning of the amount of these values is not the same between browsers. See following explanation for the detail.
 
-<p>IE and Opera (Presto) only support <code>wheelDelta</code> attribute and do <strong>not</strong> support horizontal scroll.</p>
+IE and Opera (Presto) only support `wheelDelta` attribute and do **not** support horizontal scroll.
 
-<p>The <code>wheelDeltaX</code> attribute value indicates the <code>wheelDelta</code> attribute value along the horizontal axis. When a user operates the device for scrolling to right, the value is negative. Otherwise, i.e., if it's to left, the value is positive.</p>
+The `wheelDeltaX` attribute value indicates the `wheelDelta` attribute value along the horizontal axis. When a user operates the device for scrolling to right, the value is negative. Otherwise, i.e., if it's to left, the value is positive.
 
-<p>The <code>wheelDeltaY</code> attribute value indicates the <code>wheelDelta</code> attribute value along the vertical axis. The sign of the value is the same as the <code>wheelDelta</code> attribute value.</p>
+The `wheelDeltaY` attribute value indicates the `wheelDelta` attribute value along the vertical axis. The sign of the value is the same as the `wheelDelta` attribute value.
 
-<h3 id="IE">IE</h3>
+### IE
 
-<p>The value is the same as the delta value of <code>WM_MOUSEWHEEL</code> or <code>WM_MOUSEHWHEEL</code>. It means that if the mouse wheel doesn't support high resolution scroll, the value is 120 per notch. The value isn't changed even if the scroll amount of system settings is page scroll.</p>
+The value is the same as the delta value of `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. It means that if the mouse wheel doesn't support high resolution scroll, the value is 120 per notch. The value isn't changed even if the scroll amount of system settings is page scroll.
 
-<h3 id="Chrome">Chrome</h3>
+### Chrome
 
-<p>On Windows, the value is the same as the delta value of <code>WM_MOUSEWHEEL</code> or <code>WM_MOUSEHWHEEL</code>. And also, the value isn't changed even if the scroll amount of system settings is page scroll, i.e., the value is the same as IE on Windows.</p>
+On Windows, the value is the same as the delta value of `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. And also, the value isn't changed even if the scroll amount of system settings is page scroll, i.e., the value is the same as IE on Windows.
 
-<p>On Linux, the value is <code>120</code> or <code>-120</code> per native wheel event. This makes the same behavior as IE and Chrome for Windows.</p>
+On Linux, the value is `120` or `-120` per native wheel event. This makes the same behavior as IE and Chrome for Windows.
 
-<p>On Mac, the value is complicated. The value is changed if the <strong>device</strong> that causes the native wheel event supports continuous scroll.</p>
+On Mac, the value is complicated. The value is changed if the **device** that causes the native wheel event supports continuous scroll.
 
-<p>If the device supports continuous scroll (e.g., trackpad of MacBook or mouse wheel which can be turned smoothly), the value is computed from accelerated scroll amount. In this case, the value is the same as Safari.</p>
+If the device supports continuous scroll (e.g., trackpad of MacBook or mouse wheel which can be turned smoothly), the value is computed from accelerated scroll amount. In this case, the value is the same as Safari.
 
-<p>If the device does <strong>not</strong> support continuous scroll (typically, old mouse wheel which cannot be turned smoothly), the value is computed from non-accelerated scroll amount (120 per notch). In this case, the value is different from Safari.</p>
+If the device does **not** support continuous scroll (typically, old mouse wheel which cannot be turned smoothly), the value is computed from non-accelerated scroll amount (120 per notch). In this case, the value is different from Safari.
 
-<p>This difference makes a serious issue for web application developers. That is, web developers cannot know if <code>mousewheel</code> event is caused by which device.</p>
+This difference makes a serious issue for web application developers. That is, web developers cannot know if `mousewheel` event is caused by which device.
 
-<p>See <code>WebInputEventFactory::mouseWheelEvent</code> of the <a href="http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm">Chromium's source code</a> for the detail.</p>
+See `WebInputEventFactory::mouseWheelEvent` of the [Chromium's source code](http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm) for the detail.
 
-<h3 id="Safari">Safari</h3>
+### Safari
 
-<p>The value is always computed from accelerated scroll amount. This is really different from other browsers except Chrome with continuous scroll supported device.</p>
+The value is always computed from accelerated scroll amount. This is really different from other browsers except Chrome with continuous scroll supported device.
 
-<p>Note: tested with the Windows package, the earliest available version was Safari 3.0 from 2007. It could be that earlier versions (on Mac) support the properties too.</p>
+Note: tested with the Windows package, the earliest available version was Safari 3.0 from 2007. It could be that earlier versions (on Mac) support the properties too.
 
-<h3 id="Opera_(Presto)">Opera (Presto)</h3>
+### Opera (Presto)
 
-<p>The value is always the <code>detail</code> attribute value ✕ <code>40</code>.</p>
+The value is always the `detail` attribute value ✕ `40`.
 
-<p>On Windows, since the <code>detail</code> attribute value is computed from actual scroll amount, the value is different from other browsers except the scroll amount per notch is 3 lines in system settings or a page.</p>
+On Windows, since the `detail` attribute value is computed from actual scroll amount, the value is different from other browsers except the scroll amount per notch is 3 lines in system settings or a page.
 
-<p>On Linux, the value is <code>80</code> or <code>-80</code> per native wheel event. This is different from other browsers.</p>
+On Linux, the value is `80` or `-80` per native wheel event. This is different from other browsers.
 
-<p>On Mac, the <code>detail</code> attribute value is computed from accelerated scroll amout of native event. The value is usually much bigger than Safari's or Chrome's value.</p>
+On Mac, the `detail` attribute value is computed from accelerated scroll amout of native event. The value is usually much bigger than Safari's or Chrome's value.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ domxref("MouseWheelEvent") }}</li>
- <li>Gecko's legacy mouse wheel events: <code>DOMMouseScroll</code>, <code>MozMousePixelScroll</code></li>
- <li>Standardized wheel event: <code>wheel</code></li>
-</ul>
+- {{ domxref("MouseWheelEvent") }}
+- Gecko's legacy mouse wheel events: `DOMMouseScroll`, `MozMousePixelScroll`
+- Standardized wheel event: `wheel`

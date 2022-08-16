@@ -2,42 +2,43 @@
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("DOMTokenList")}}接口的 <code><strong>replace()</strong></code> 方法可以将列表中一个已存在的 token 替换为一个新 token。如果第一个参数 token 在列表中不存在， <code>replace()</code> 立刻返回<code>false</code> ，而不会将新 token 字符串添加到列表中。</p>
+{{domxref("DOMTokenList")}}接口的 **`replace()`** 方法可以将列表中一个已存在的 token 替换为一个新 token。如果第一个参数 token 在列表中不存在， `replace()` 立刻返回`false` ，而不会将新 token 字符串添加到列表中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><var>tokenList</var>.replace(<var>oldToken</var>, <var>newToken</var>);</pre>
+```
+tokenList.replace(oldToken, newToken);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>oldToken</var></code></dt>
- <dd>{{domxref("DOMString")}}类型，想要替换掉的字符串。</dd>
- <dt><code><var>newToken</var></code></dt>
- <dd>{{domxref("DOMString")}}类型，表示要将<code><var>oldToken</var></code>字符串替换成的字符串。</dd>
-</dl>
+- `oldToken`
+  - : {{domxref("DOMString")}}类型，想要替换掉的字符串。
+- `newToken`
+  - : {{domxref("DOMString")}}类型，表示要将`oldToken`字符串替换成的字符串。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>boolean 类型，如果<code><var>oldToken</var></code>被成功替换，返回 <code>true</code> ，否则返回<code>false</code></p>
+boolean 类型，如果`oldToken`被成功替换，返回 `true` ，否则返回`false`
 
-<div class="note">
-<p><strong>Note</strong>: In older browsers, <code>replace()</code> returns void.</p>
-</div>
+> **备注：** In older browsers, `replace()` returns void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>在下面的例子中，我们使用{{domxref("Element.classList")}}方法，将设置在{{htmlelement("span")}} 元素上的 class 列表检索为<code>DOMTokenList</code> 类型。接着我们替换一个字符串，并且将新列表写入到 <code>&lt;span&gt;</code> 的内容{{domxref("Node.textContent")}}中。</p>
+在下面的例子中，我们使用{{domxref("Element.classList")}}方法，将设置在{{htmlelement("span")}} 元素上的 class 列表检索为`DOMTokenList` 类型。接着我们替换一个字符串，并且将新列表写入到 `<span>` 的内容{{domxref("Node.textContent")}}中。
 
-<p>首先，HTML 代码如下：</p>
+首先，HTML 代码如下：
 
-<pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>然后是 JavaScript:</p>
+然后是 JavaScript:
 
-<pre class="brush: js notranslate">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 
 let result = classes.replace("c", "z");
@@ -47,20 +48,17 @@ if (result) {
   span.textContent = classes;
 } else {
   span.textContent = 'token not replaced successfully';
-}</pre>
+}
+```
 
-<p>输出如下：</p>
+输出如下：
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.DOMTokenList.replace")}}</p>
-</div>
+{{Compat("api.DOMTokenList.replace")}}

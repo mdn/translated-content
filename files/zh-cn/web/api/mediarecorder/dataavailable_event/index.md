@@ -2,31 +2,30 @@
 title: MediaRecorder.ondataavailable
 slug: Web/API/MediaRecorder/dataavailable_event
 ---
-<p>{{APIRef("MediaStream Recording")}}</p>
+{{APIRef("MediaStream Recording")}}
 
-<p><strong><code>MediaRecorder.ondataavailable </code></strong>事件处理程序 (part of the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream 记录 API</a>) 处理{{event("dataavailable")}}事件，让您在响应运行代码{{domxref("Blob")}}数据被提供使用。</p>
+**`MediaRecorder.ondataavailable `**事件处理程序 (part of the [MediaStream 记录 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)) 处理{{event("dataavailable")}}事件，让您在响应运行代码{{domxref("Blob")}}数据被提供使用。
 
-<p><code>dataavailable</code>当 MediaRecorder 将媒体数据传递到您的应用程序以供使用时，将触发该事件。数据在包含数据的{{domxref("Blob")}}对象中提供。这在四种情况下发生：</p>
+`dataavailable`当 MediaRecorder 将媒体数据传递到您的应用程序以供使用时，将触发该事件。数据在包含数据的{{domxref("Blob")}}对象中提供。这在四种情况下发生：
 
-<ul>
- <li>媒体流结束时，所有尚未传递到<code>ondataavailable</code>处理程序的媒体数据都将在单个{{domxref("Blob")}}中传递。</li>
- <li>当调用{{domxref("MediaRecorder.stop()")}}时，自记录开始或<code>dataavailable</code>事件最后一次发生以来已捕获的所有媒体数据都将传递到{{domxref("Blob")}}}中；此后，捕获结束。</li>
- <li>调用{{domxref("MediaRecorder.requestData()")}} <code>dataavailable</code>时，将传递自记录开始或事件最后一次发生以来捕获的所有媒体数据；然后<code>Blob</code>创建一个新文件，并将媒体捕获继续到该 blob 中。</li>
- <li>如果将<code>timeslice</code>属性传递到开始媒体捕获的{{domxref("MediaRecorder.start()")}}方法中，<code>dataavailable</code>则每<code>timeslice</code>毫秒触发一次事件。这意味着每个 Blob 都有特定的持续时间（最后一个 Blob 除外，后者可能更短，因为它将是自上次事件以来剩下的所有东西）。因此，如果该方法调用看起来像这样- <code>recorder.start(1000);</code>-的<code>dataavailable</code>事件将媒体捕捉的每一秒发生火灾后，我们的事件处理程序将被称为与媒体数据的 BLOB 每秒即坚持一个第二长。您可以<code>timeslice</code>与{{domxref("MediaRecorder.stop()")}}}和{{domxref("MediaRecorder.requestData()")}}}一起使用，以产生多个相同长度的 Blob，以及其他较短的 Blob。</li>
-</ul>
+- 媒体流结束时，所有尚未传递到`ondataavailable`处理程序的媒体数据都将在单个{{domxref("Blob")}}中传递。
+- 当调用{{domxref("MediaRecorder.stop()")}}时，自记录开始或`dataavailable`事件最后一次发生以来已捕获的所有媒体数据都将传递到{{domxref("Blob")}}}中；此后，捕获结束。
+- 调用{{domxref("MediaRecorder.requestData()")}} `dataavailable`时，将传递自记录开始或事件最后一次发生以来捕获的所有媒体数据；然后`Blob`创建一个新文件，并将媒体捕获继续到该 blob 中。
+- 如果将`timeslice`属性传递到开始媒体捕获的{{domxref("MediaRecorder.start()")}}方法中，`dataavailable`则每`timeslice`毫秒触发一次事件。这意味着每个 Blob 都有特定的持续时间（最后一个 Blob 除外，后者可能更短，因为它将是自上次事件以来剩下的所有东西）。因此，如果该方法调用看起来像这样- `recorder.start(1000);`-的`dataavailable`事件将媒体捕捉的每一秒发生火灾后，我们的事件处理程序将被称为与媒体数据的 BLOB 每秒即坚持一个第二长。您可以`timeslice`与{{domxref("MediaRecorder.stop()")}}}和{{domxref("MediaRecorder.requestData()")}}}一起使用，以产生多个相同长度的 Blob，以及其他较短的 Blob。
 
-<div class="note">
-<p>包含媒体数据的{{domxref("Blob")}}在{{event("dataavailable")}}事件的<code>data</code>属性中可用。</p>
-</div>
+> **备注：** 包含媒体数据的{{domxref("Blob")}}在{{event("dataavailable")}}事件的`data`属性中可用。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="notranslate"><em>MediaRecorder</em>.ondataavailable = function(event) { ... }
-<em>MediaRecorder</em>.addEventListener('dataavailable', function(event) { ... })</pre>
+```
+MediaRecorder.ondataavailable = function(event) { ... }
+MediaRecorder.addEventListener('dataavailable', function(event) { ... })
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<pre id="line1">...
+```
+...
   var chunks = [];
 
   mediaRecorder.onstop = function(e) {
@@ -44,23 +43,20 @@ slug: Web/API/MediaRecorder/dataavailable_event
     chunks.push(e.data);
   }
 
-...</pre>
+...
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MediaRecorder.ondataavailable")}}
 
+## 也可以看看
 
-<p>{{Compat("api.MediaRecorder.ondataavailable")}}</p>
-
-<h2 id="也可以看看">也可以看看</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">使用 MediaStream 录制 API</a></li>
- <li><a href="http://mdn.github.io/web-dictaphone/">Web</a> Dictaphone：<a href="https://twitter.com/chrisdavidmills">Chris Mills 提供的</a> MediaRecorder + getUserMedia + Web Audio API 可视化演示 (<a href="https://github.com/mdn/web-dictaphone/">在 Github 上提供</a>)。</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream 录制演示</a>，作者<a href="https://twitter.com/sw12">Sam Dutton</a>。</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [使用 MediaStream 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)
+- [Web](http://mdn.github.io/web-dictaphone/) Dictaphone：[Chris Mills 提供的](https://twitter.com/chrisdavidmills) MediaRecorder + getUserMedia + Web Audio API 可视化演示 ([在 Github 上提供](https://github.com/mdn/web-dictaphone/))。
+- [simpl.info MediaStream 录制演示](http://simpl.info/mediarecorder/)，作者[Sam Dutton](https://twitter.com/sw12)。
+- {{domxref("Navigator.getUserMedia")}}

@@ -2,47 +2,49 @@
 title: InputEvent.data
 slug: Web/API/InputEvent/data
 ---
-<p>{{SeeCompatTable}}{{APIRef("DOM Events")}}</p>
+{{SeeCompatTable}}{{APIRef("DOM Events")}}
 
-<div class="blockIndicator note">
-<p>请注意，<strong><code>data</code></strong> 属性在使用键盘输入时会返回输入的字符内容，但在粘贴、拖动时可能会返回 <code>null</code>，这取决于浏览器。浏览器也可能把一些数据保存在 {{domxref("InputEvent.dataTransfer")}}，而不是该 <strong><code>data</code></strong> 属性中。</p>
-</div>
+> **备注：** 请注意，**`data`** 属性在使用键盘输入时会返回输入的字符内容，但在粘贴、拖动时可能会返回 `null`，这取决于浏览器。浏览器也可能把一些数据保存在 {{domxref("InputEvent.dataTransfer")}}，而不是该 **`data`** 属性中。
 
-<p>{{domxref("InputEvent")}} 接口中的只读属性 <strong><code>data</code></strong> 返回含有插入字符数据的 {{domxref("DOMString")}}。如果更改未插入文本（例如删除字符时），则其可能为空字符串。</p>
+{{domxref("InputEvent")}} 接口中的只读属性 **`data`** 返回含有插入字符数据的 {{domxref("DOMString")}}。如果更改未插入文本（例如删除字符时），则其可能为空字符串。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>string</em> = <em>inputEvent</em>.data;</pre>
+```
+var string = inputEvent.data;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("DOMString")}}。</p>
+一个 {{domxref("DOMString")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在下面的简单示例中，我们在 <a href="/zh-CN/docs/Web/API/HTMLElement/input_event">input</a> 事件上设置了一个事件监听器，以便在对 {{htmlelement("input")}} 元素的内容进行任何更改时（通过键入或粘贴），通过 <strong><code>InputEvent.data</code></strong> 属性检索添加的文本，并在 <code>&lt;input&gt;</code> 下面的段落中报告。</p>
+在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件上设置了一个事件监听器，以便在对 {{htmlelement("input")}} 元素的内容进行任何更改时（通过键入或粘贴），通过 **`InputEvent.data`** 属性检索添加的文本，并在 `<input>` 下面的段落中报告。
 
-<pre class="brush: html">&lt;p&gt;Some text to copy and paste.&lt;/p&gt;
+```html
+<p>Some text to copy and paste.</p>
 
-&lt;input type="text"&gt;
+<input type="text">
 
-&lt;p class="result"&gt;&lt;/p&gt;</pre>
+<p class="result"></p>
+```
 
-<pre class="brush: js">var editable = document.querySelector('input')
+```js
+var editable = document.querySelector('input')
 var result = document.querySelector('.result');
 
-editable.addEventListener('input', (e) =&gt; {
+editable.addEventListener('input', (e) => {
   result.textContent = "Inputted text: " + e.data;
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.InputEvent.data")}}</p>
-</div>
+{{Compat("api.InputEvent.data")}}

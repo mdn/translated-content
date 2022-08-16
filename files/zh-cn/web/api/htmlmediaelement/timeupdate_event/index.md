@@ -2,103 +2,108 @@
 title: 'HTMLMediaElement: timeupdate'
 slug: Web/API/HTMLMediaElement/timeupdate_event
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>当<code>currentTime</code>更新时会触发<code>timeupdate</code>事件。</p>
+当`currentTime`更新时会触发`timeupdate`事件。
 
-<p>这个事件的触发频率由系统决定，但是会保证每秒触发 4-66 次（前提是每次事件处理不会超过 250ms）。鼓励用户代理根据系统的负载和处理事件的平均成本来改变事件的频率，保证 UI 更新不会影响视频的解码。</p>
+这个事件的触发频率由系统决定，但是会保证每秒触发 4-66 次（前提是每次事件处理不会超过 250ms）。鼓励用户代理根据系统的负载和处理事件的平均成本来改变事件的频率，保证 UI 更新不会影响视频的解码。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Target</th>
-   <td>Element</td>
-  </tr>
-  <tr>
-   <th scope="row">Default Action</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.ontimeupdate")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Specification</th>
-   <td>
-    <p><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Target</th>
+      <td>Element</td>
+    </tr>
+    <tr>
+      <th scope="row">Default Action</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.ontimeupdate")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Specification</th>
+      <td>
+        <p>
+          <a
+            href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
+            >HTML5 media</a
+          >
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>These examples add an event listener for the HTMLMediaElement's <code>timeupdate</code> event, then post a message when that event handler has reacted to the event firing. Remember, the event frequency is dependant on the system load.</p>
+These examples add an event listener for the HTMLMediaElement's `timeupdate` event, then post a message when that event handler has reacted to the event firing. Remember, the event frequency is dependant on the system load.
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.addEventListener('timeupdate', (event) =&gt; {
+video.addEventListener('timeupdate', (event) => {
   console.log('The currentTime attribute has been updated. Again.');
-});</pre>
+});
+```
 
-<p>Using the <code>ontimeupdate</code> event handler property:</p>
+Using the `ontimeupdate` event handler property:
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.ontimeupdate = (event) =&gt; {
+video.ontimeupdate = (event) => {
   console.log('The currentTime attribute has been updated. Again.');
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.HTMLMediaElement.timeupdate_event")}}</p>
+{{Compat("api.HTMLMediaElement.timeupdate_event")}}
 
-<h2 id="相关事件">相关事件</h2>
+## 相关事件
 
-<ul>
- <li>{{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}</li>
- <li>{{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}</li>
- <li>{{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}</li>
- <li>{{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}</li>
- <li>{{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}</li>
- <li>{{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}</li>
- <li>{{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}</li>
- <li>{{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}</li>
- <li>{{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}</li>
- <li>{{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}</li>
- <li>{{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}</li>
- <li>{{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}</li>
- <li>{{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}</li>
- <li>{{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}</li>
- <li>{{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}</li>
- <li>{{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}</li>
- <li>{{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}</li>
- <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}</li>
-</ul>
+- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
+- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
+- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
+- {{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}
+- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}
+- {{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}
+- {{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}
+- {{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}
+- {{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}
+- {{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}
+- {{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}
+- {{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}
+- {{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}
+- {{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}
+- {{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}
+- {{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

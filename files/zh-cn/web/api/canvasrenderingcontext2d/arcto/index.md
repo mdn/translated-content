@@ -2,44 +2,45 @@
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.arcTo()</code></strong> 是 Canvas 2D API 根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)。根据当前描点与给定的控制点 1 连接的直线，和控制点 1 与控制点 2 连接的直线，作为使用指定半径的圆的<strong>切线</strong>，画出两条切线之间的弧线路径。</p>
+**`CanvasRenderingContext2D.arcTo()`** 是 Canvas 2D API 根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)。根据当前描点与给定的控制点 1 连接的直线，和控制点 1 与控制点 2 连接的直线，作为使用指定半径的圆的**切线**，画出两条切线之间的弧线路径。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.arcTo(x1, y1, x2, y2, radius);</var>
-</pre>
+```
+void ctx.arcTo(x1, y1, x2, y2, radius);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>x1</code></dt>
- <dd>第一个控制点的 x 轴坐标。</dd>
- <dt><code>y1</code></dt>
- <dd>第一个控制点的 y 轴坐标。</dd>
- <dt><code>x2</code></dt>
- <dd>第二个控制点的 x 轴坐标。</dd>
- <dt><code>y2</code></dt>
- <dd>第二个控制点的 y 轴坐标。</dd>
- <dt><code>radius</code></dt>
- <dd>圆弧的半径。</dd>
-</dl>
+- `x1`
+  - : 第一个控制点的 x 轴坐标。
+- `y1`
+  - : 第一个控制点的 y 轴坐标。
+- `x2`
+  - : 第二个控制点的 x 轴坐标。
+- `y2`
+  - : 第二个控制点的 y 轴坐标。
+- `radius`
+  - : 圆弧的半径。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Using_the_arc_method">使用 <code>arcTo</code> 方法</h3>
+### 使用 `arcTo` 方法
 
-<p>这是一段绘制圆弧的简单的代码片段。基础点是蓝色的，两个控制点是红色的。</p>
+这是一段绘制圆弧的简单的代码片段。基础点是蓝色的，两个控制点是红色的。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.setLineDash([])
@@ -66,21 +67,21 @@ ctx.stroke();
 ctx.beginPath();
 ctx.arc(120,38,30,0,2*Math.PI);
 ctx.stroke();
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}</p>
+{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}
 
-<h3 id="Trying_the_arcTo_parameters">尝试 <code>arcTo</code> 参数</h3>
+### 尝试 `arcTo` 参数
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" class="playable-canvas" height="200" width="400"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" class="playable-canvas" height="200" width="400"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.setLineDash([])
 ctx.beginPath();
 ctx.moveTo(150, 20);
@@ -104,10 +105,11 @@ ctx.lineTo(50, 20);
 ctx.stroke();
 ctx.beginPath();
 ctx.arc(120,38,30,0,2*Math.PI);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -130,21 +132,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Trying_the_arcTo_parameters', 700, 360) }}</p>
+{{ EmbedLiveSample('Trying_the_arcTo_parameters', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.arcTo")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}

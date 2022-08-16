@@ -2,59 +2,59 @@
 title: 'FileReader: 中止事件 (abort)'
 slug: Web/API/FileReader/abort_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>在中止读取时会触发 <code>abort</code> 事件：例如程序调用{{domxref("FileReader.abort()")}}.</p>
+在中止读取时会触发 `abort` 事件：例如程序调用{{domxref("FileReader.abort()")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">可取消</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理属性</th>
-   <td>{{domxref("FileReader.onabort")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">可取消</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理属性</th>
+      <td>{{domxref("FileReader.onabort")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="实例">实例</h3>
+### 实例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;div class="file-select"&gt;
-        &lt;label for="avatar"&gt;选择你的头像:&lt;/label&gt;
-        &lt;input type="file"
+    <div class="file-select">
+        <label for="avatar">选择你的头像:</label>
+        <input type="file"
                id="avatar" name="avatar"
-               accept="image/png, image/jpeg"&gt;
-    &lt;/div&gt;
+               accept="image/png, image/jpeg">
+    </div>
 
-    &lt;img src="" class="preview" height="200" alt="图像预览..."&gt;
+    <img src="" class="preview" height="200" alt="图像预览...">
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;事件日志:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>事件日志:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-  &lt;/div&gt;</pre>
+  </div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css notranslate">img.preview {
+```css hidden
+img.preview {
   margin: 1rem 0;
 }
 
@@ -85,18 +85,19 @@ slug: Web/API/FileReader/abort_event
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
 
 .event-log-contents {
   resize: none;
-}</pre>
-</div>
+}
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js notranslate">const fileInput = document.querySelector('input[type="file"]');
+```js
+const fileInput = document.querySelector('input[type="file"]');
 const preview = document.querySelector('img.preview');
 const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
@@ -129,22 +130,20 @@ function handleSelected(e) {
 }
 
 fileInput.addEventListener('change', handleSelected);返回返回发的
-</pre>
+```
 
-<h4 id="返回结果">返回结果</h4>
+#### 返回结果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '300px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '300px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.FileReader.abort_event")}}</p>
+{{Compat("api.FileReader.abort_event")}}
 
-<h2 id="另请参见">另请参见</h2>
+## 另请参见
 
-<ul>
- <li>相关事件：{{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.loadend_event", "loadend")}}, {{domxref("FileReader.progress_event", "progress")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.load_event", "load")}}.</li>
-</ul>
+- 相关事件：{{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.loadend_event", "loadend")}}, {{domxref("FileReader.progress_event", "progress")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.load_event", "load")}}.

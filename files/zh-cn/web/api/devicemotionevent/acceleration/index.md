@@ -2,46 +2,43 @@
 title: DeviceMotionEvent.acceleration
 slug: Web/API/DeviceMotionEvent/acceleration
 ---
-<p>{{ ApiRef("Device Orientation Events") }}</p>
+{{ ApiRef("Device Orientation Events") }}
 
-<p>acceleration 属性会返回设备的加速度记录（单位：<a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m / s<sup>2</sup></a>）。</p>
+acceleration 属性会返回设备的加速度记录（单位：[m / s2](https://en.wikipedia.org/wiki/Meter_per_second_squared)）。
 
-<div class="note"><strong>注意：</strong> 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替</div>
+> **备注：** 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var acceleration = <em>instanceOfDeviceMotionEvent</em>.acceleration;
-</pre>
+```
+var acceleration = instanceOfDeviceMotionEvent.acceleration;
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p><code>acceleration</code>是一个包括三轴（x、y、z）加速度信息的对象，每个轴都有自己的属性：</p>
+`acceleration`是一个包括三轴（x、y、z）加速度信息的对象，每个轴都有自己的属性：
 
-<dl>
- <dt><code>x</code></dt>
- <dd>表示 x 轴（西到东）上的加速度</dd>
- <dt><code>y</code></dt>
- <dd>表示 y 轴（南到北）上的加速度</dd>
- <dt><code>z</code></dt>
- <dd>表示 z 轴（下到上）上的加速度</dd>
-</dl>
+- `x`
+  - : 表示 x 轴（西到东）上的加速度
+- `y`
+  - : 表示 y 轴（南到北）上的加速度
+- `z`
+  - : 表示 z 轴（下到上）上的加速度
 
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DeviceMotionEvent.acceleration")}}
 
-<h2 id="推荐浏览">推荐浏览</h2>
+## 推荐浏览
 
-<ul>
- <li>{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li>{{ domxref("window.ondevicemotion") }}</li>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en-US/docs/WebAPI/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
-</ul>
+- {{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}
+- {{ event("devicemotion") }}
+- {{ domxref("window.ondevicemotion") }}
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)

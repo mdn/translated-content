@@ -2,44 +2,37 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p>传递给 {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} 处理程序的参数的<code>NotificationEvent</code>接口，该接口表示通知单击事件，该事件在 {{domxref("ServiceWorkerGlobalScope")}} ，{{domxref("ServiceWorker")}} 。</p>
+传递给 {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} 处理程序的参数的`NotificationEvent`接口，该接口表示通知单击事件，该事件在 {{domxref("ServiceWorkerGlobalScope")}} ，{{domxref("ServiceWorker")}} 。
 
-<p>该接口继承自{{domxref("ExtendableEvent")}}接口。</p>
+该接口继承自{{domxref("ExtendableEvent")}}接口。
 
-<h2 id="建设者">建设者</h2>
+## 建设者
 
-<dl>
- <dt>{{domxref("NotificationEvent.NotificationEvent","NotificationEvent()")}}</dt>
- <dd>创建一个新<code>NotificationEvent</code>对象。</dd>
-</dl>
+- {{domxref("NotificationEvent.NotificationEvent","NotificationEvent()")}}
+  - : 创建一个新`NotificationEvent`对象。
 
-<h2 id="物产">物产</h2>
+## 物产
 
-<p><em>从其祖先{{domxref("Event")}}继承属性</em>。</p>
+_从其祖先{{domxref("Event")}}继承属性_。
 
-<dl>
- <dt>{{domxref("NotificationEvent.notification")}} {{readonlyInline}}</dt>
- <dd>返回一个{{domxref("Notification")}}对象，该对象表示单击以触发事件的通知。</dd>
- <dt>{{domxref("NotificationEvent.action")}} {{readonlyinline}}</dt>
- <dd>返回用户单击的通知按钮的字符串 ID。如果用户在除操作按钮之外的其他位置单击了通知，或者该通知没有按钮，则此值返回一个空字符串。</dd>
-</dl>
+- {{domxref("NotificationEvent.notification")}} {{readonlyInline}}
+  - : 返回一个{{domxref("Notification")}}对象，该对象表示单击以触发事件的通知。
+- {{domxref("NotificationEvent.action")}} {{readonlyinline}}
+  - : 返回用户单击的通知按钮的字符串 ID。如果用户在除操作按钮之外的其他位置单击了通知，或者该通知没有按钮，则此值返回一个空字符串。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>从其父项</em><em>{{domxref("ExtendableEvent")}}</em><em>继承方法</em>。</p>
+_从其父项**{{domxref("ExtendableEvent")}}**继承方法_。
 
-<dl>
- <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
- <dd>
- <p>延长事件的寿命。告诉浏览器工作正在进行中。</p>
- </dd>
-</dl>
+- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
+  - : 延长事件的寿命。告诉浏览器工作正在进行中。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js notranslate">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -48,27 +41,23 @@ slug: Web/API/NotificationEvent
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<div class="note">
-<p><strong>注意</strong>：此接口在<a href="/en-US/docs/Web/API/Notifications_API">Notifications API 中</a>指定，但是可以通过 {{domxref("ServiceWorkerGlobalScope")}}访问。</p>
-</div>
+> **备注：** 此接口在[Notifications API 中](/zh-CN/docs/Web/API/Notifications_API)指定，但是可以通过 {{domxref("ServiceWorkerGlobalScope")}}访问。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.NotificationEvent")}}</p>
-</div>
+{{Compat("api.NotificationEvent")}}

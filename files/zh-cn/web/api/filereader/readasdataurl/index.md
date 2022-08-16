@@ -2,31 +2,34 @@
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p><code>readAsDataURL</code> 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。读取操作完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成已完成<code>DONE</code>，并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含一个<code>data:</code>URL 格式的字符串（base64 编码）以表示所读取文件的内容。</p>
+`readAsDataURL` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。读取操作完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成已完成`DONE`，并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含一个`data:`URL 格式的字符串（base64 编码）以表示所读取文件的内容。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
+```
+instanceOfFileReader.readAsDataURL(blob);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>即将被读取的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。</dd>
-</dl>
+- `blob`
+  - : 即将被读取的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="file" onchange="previewFile()"&gt;&lt;br&gt;
-&lt;img src="" height="200" alt="Image preview..."&gt;</pre>
+```html
+<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview...">
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function previewFile() {
+```js
+function previewFile() {
   var preview = document.querySelector('img');
   var file    = document.querySelector('input[type=file]').files[0];
   var reader  = new FileReader();
@@ -38,22 +41,26 @@ slug: Web/API/FileReader/readAsDataURL
   if (file) {
     reader.readAsDataURL(file);
   }
-}</pre>
+}
+```
 
-<h3 id="演示">演示</h3>
+### 演示
 
-<p>{{EmbedLiveSample("示例", "100%", 240)}}</p>
+{{EmbedLiveSample("示例", "100%", 240)}}
 
-<h2 id="读取多个文件的例子">读取多个文件的例子</h2>
+## 读取多个文件的例子
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input id="browse" type="file" onchange="previewFiles()" multiple&gt;
-&lt;div id="preview"&gt;&lt;/div&gt;</pre>
+```html
+<input id="browse" type="file" onchange="previewFiles()" multiple>
+<div id="preview"></div>
+```
 
-<h3 id="JavaScript_2">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function previewFiles() {
+```js
+function previewFiles() {
 
   var preview = document.querySelector('#preview');
   var files   = document.querySelector('input[type=file]').files;
@@ -82,23 +89,21 @@ slug: Web/API/FileReader/readAsDataURL
   }
 
 }
-</pre>
+```
 
-<div class="note"><strong>注意：</strong> Internet Explorer  10 之前的版本并不支持  <a href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> 。关于图片文件预览的兼容性解决方案，可以查看 <a href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html">crossbrowser possible solution for image preview</a> 或者 <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more powerful example</a> 。</div>
+> **备注：** Internet Explorer 10 之前的版本并不支持 [`FileReader()`](/zh-CN/docs/Web/API/FileReader) 。关于图片文件预览的兼容性解决方案，可以查看 [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) 或者 [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) 。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.FileReader.readAsDataURL")}}</p>
+{{Compat("api.FileReader.readAsDataURL")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
- <li>{{domxref("URL.createObjectURL()")}}</li>
-</ul>
+- {{domxref("FileReader")}}
+- {{domxref("URL.createObjectURL()")}}
 
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}

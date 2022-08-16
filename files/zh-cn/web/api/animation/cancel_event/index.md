@@ -2,45 +2,44 @@
 title: Animation.oncancel
 slug: Web/API/Animation/cancel_event
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> 的 {{domxref("Animation")}} 接口的 <code><strong>oncancel</strong></code> 属性是 {{event("cancel")}} 事件的事件处理程序。</p>
+[Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的 {{domxref("Animation")}} 接口的 **`oncancel`** 属性是 {{event("cancel")}} 事件的事件处理程序。
 
-<p>当动作从其他状态进入 <code>"idle"</code> 播放状态，例如当动画在结束播放后从元素中移除时，<code>cancel</code> 事件可以 {{domxref("Animation.cancel()")}} 被手动触发。 </p>
+当动作从其他状态进入 `"idle"` 播放状态，例如当动画在结束播放后从元素中移除时，`cancel` 事件可以 {{domxref("Animation.cancel()")}} 被手动触发。
 
-<div class="note">
-<p>在新的动画中，创建一个新的初始的空闲动画不会触发 {{event("cancel")}} 事件。</p>
-</div>
+> **备注：** 在新的动画中，创建一个新的初始的空闲动画不会触发 {{event("cancel")}} 事件。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>cancelHandler</em> = <em>Animation</em>.oncancel;
+```
+var cancelHandler = Animation.oncancel;
 
-<em>Animation</em>.oncancel = <em>cancelHandler</em>;</pre>
+Animation.oncancel = cancelHandler;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>当动画被取消时，这个函数将会被执行。默认是 <code>null</code> 。</p>
+当动画被取消时，这个函数将会被执行。默认是 `null` 。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>如果动画被取消，将会从元素中移除它。</p>
+如果动画被取消，将会从元素中移除它。
 
-<pre class="brush: js">animation.oncancel = animation.effect.target.remove();
-</pre>
+```js
+animation.oncancel = animation.effect.target.remove();
+```
 
-<h2 id="标准">标准</h2>
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Animation.cancel_event")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
- <li>{{event("cancel")}} 事件</li>
-</ul>
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- {{event("cancel")}} 事件

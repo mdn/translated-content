@@ -2,33 +2,30 @@
 title: Clearing by clicking
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
 
-<div id="clearing-by-clicking">
+此示例演示了如何通过用户单击时用随机颜色渲染上下文来将用户交互与 WebGL 图形操作结合起来。
 
-<p>此示例演示了如何通过用户单击时用随机颜色渲染上下文来将用户交互与 WebGL 图形操作结合起来。</p>
+{{EmbedLiveSample("clearing-by-clicking-source",660,425)}}
 
-<p>{{EmbedLiveSample("clearing-by-clicking-source",660,425)}}</p>
+### 用随机颜色渲染上下文
 
-<div id="clearing-by-clicking-intro">
-<h3 id="用随机颜色渲染上下文">用随机颜色渲染上下文</h3>
+这个例子提供了一个简单的例子，说明如何结合 {{Glossary("WebGL")}} 和用户交互。每次用户点击画布或按钮时，画布都会使用一种新的随机色。
 
-<p>这个例子提供了一个简单的例子，说明如何结合 {{Glossary("WebGL")}} 和用户交互。每次用户点击画布或按钮时，画布都会使用一种新的随机色。</p>
+注意我们如何在事件处理函数中嵌入 {{Glossary("WebGL")}} 函数调用。
 
-<p>注意我们如何在事件处理函数中嵌入 {{Glossary("WebGL")}} 函数调用。</p>
-</div>
+```html
+<p>A very simple WebGL program that still shows some color and
+    user interaction.</p>
+<p>You can repeatedly click the empty canvas or the button below
+    to change color.</p>
+<canvas id="canvas-view">Your browser does not seem to support
+    HTML5 canvas.</canvas>
+<button id="color-switcher">Press here to switch color</button>
+```
 
-<div id="clearing-by-clicking-source">
-<pre class="brush: html">&lt;p&gt;A very simple WebGL program that still shows some color and
-    user interaction.&lt;/p&gt;
-&lt;p&gt;You can repeatedly click the empty canvas or the button below
-    to change color.&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-&lt;button id="color-switcher"&gt;Press here to switch color&lt;/button&gt;
-</pre>
-
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -46,9 +43,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function setupWebGL (evt) {
+```js
+window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
 
   // Cleaning after ourselves. The event handler removes
@@ -96,10 +94,8 @@ button {
   }
 
 }, false);
-</pre>
+```
 
-<p>这个例子的代码可以在  <a href="https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking">GitHub</a> 上下载。</p>
-</div>
-</div>
+这个例子的代码可以在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking) 上下载。
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}

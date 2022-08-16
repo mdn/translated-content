@@ -2,54 +2,48 @@
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 ---
-<p>{{apiref("Device Orientation Events")}}{{SeeCompatTable}}</p>
+{{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
-<p><code>DeviceMotionEvent</code> 为 web 开发者提供了关于设备的位置和方向的改变速度的信息。</p>
+`DeviceMotionEvent` 为 web 开发者提供了关于设备的位置和方向的改变速度的信息。
 
-<div class="warning">
-<p><strong>警告：</strong>目前，Firefox 和 Chrome 处理坐标的方式不同。 使用时要多加注意。</p>
-</div>
+> **警告：** 目前，Firefox 和 Chrome 处理坐标的方式不同。 使用时要多加注意。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}</dt>
- <dd>创建一个新的 <code>DeviceMotionEvent</code>。</dd>
-</dl>
+- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
+  - : 创建一个新的 `DeviceMotionEvent`。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("DeviceMotionEvent.acceleration")}} {{readonlyinline}}</dt>
- <dd>提供了设备在 X,Y,Z 轴方向上加速度的对象。加速度的单位为 <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s<sup>2</sup></a>。</dd>
- <dt>{{domxref("DeviceMotionEvent.accelerationIncludingGravity")}} {{readonlyinline}}</dt>
- <dd>提供了设备在 X,Y,Z 轴方向上带重力的加速度的对象。加速度的单位为 <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s<sup>2</sup></a></dd>
- <dt>{{domxref("DeviceMotionEvent.rotationRate")}} {{readonlyinline}}</dt>
- <dd>提供了设备在 alpha，beta， gamma 轴方向上旋转的速率的对象。旋转速率的单位为度每秒。</dd>
- <dt>{{domxref("DeviceMotionEvent.interval")}} {{readonlyinline}}</dt>
- <dd>表示从设备获取数据的间隔时间，单位是毫秒。</dd>
-</dl>
+- {{domxref("DeviceMotionEvent.acceleration")}} {{readonlyinline}}
+  - : 提供了设备在 X,Y,Z 轴方向上加速度的对象。加速度的单位为 [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared)。
+- {{domxref("DeviceMotionEvent.accelerationIncludingGravity")}} {{readonlyinline}}
+  - : 提供了设备在 X,Y,Z 轴方向上带重力的加速度的对象。加速度的单位为 [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared)
+- {{domxref("DeviceMotionEvent.rotationRate")}} {{readonlyinline}}
+  - : 提供了设备在 alpha，beta， gamma 轴方向上旋转的速率的对象。旋转速率的单位为度每秒。
+- {{domxref("DeviceMotionEvent.interval")}} {{readonlyinline}}
+  - : 表示从设备获取数据的间隔时间，单位是毫秒。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">window.addEventListener('devicemotion', function(event) {
+```js
+window.addEventListener('devicemotion', function(event) {
   console.log(event.acceleration.x + ' m/s2');
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{Event("deviceorientation")}}</li>
- <li>{{DOMxRef("DeviceOrientationEvent")}}</li>
- <li>{{Event("devicemotion")}}</li>
- <li><a href="/zh-CN/docs/WebAPI/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
-</ul>
+- {{Event("deviceorientation")}}
+- {{DOMxRef("DeviceOrientationEvent")}}
+- {{Event("devicemotion")}}
+- [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)

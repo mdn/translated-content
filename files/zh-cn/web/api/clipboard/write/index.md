@@ -2,42 +2,35 @@
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
 ---
-<p>{{APIRef("Clipboard API")}}</p>
+{{APIRef("Clipboard API")}}
 
-<div> </div>
+{{domxref("Clipboard")}} 的方法 **`write()`** 写入图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能。
 
-<p> </p>
+但是你要提前获取 "[Permissions API](/zh-CN/docs/Web/API/Permissions_API)" 的 `"clipboard-write"` 权限才能将数据写入到剪贴板。
 
-<div> </div>
+> **备注：** 浏览器对这个异步剪贴板的 API 仍然在讨论中。所以在使用它之前请检查 [浏览器兼容性](#浏览器兼容性) 和 {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} 以获得更多的兼容性信息。
 
-<p>{{domxref("Clipboard")}} 的方法 <strong><code>write()</code></strong> 写入图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能。</p>
+## 语法
 
-<p>但是你要提前获取 "<a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>" 的 <code>"clipboard-write"</code> 权限才能将数据写入到剪贴板。</p>
+```
+var promise = navigator.clipboard.write(dataTransfer)
+```
 
-<div class="note">
-<p><strong>注意：</strong> 浏览器对这个异步剪贴板的 API 仍然在讨论中。所以在使用它之前请检查 <a href="#浏览器兼容性">浏览器兼容性</a> 和 {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} 以获得更多的兼容性信息。</p>
-</div>
+### 参数
 
-<h2 id="语法">语法</h2>
+- `dataTransfer`
+  - : {{domxref("DataTransfer")}} 对象包含了要写入剪贴板的数据。
 
-<pre class="syntaxbox">var <em>promise</em> = navigator.clipboard.write(<em>dataTransfer</em>)</pre>
+### 返回值
 
-<h3 id="参数">参数</h3>
+当数据被写入到剪贴板的时候，{{jsxref("Promise")}} resolve 回调被执行。如果剪贴板不能完成剪贴操作，{{jsxref("Promise")}} reject 回调被执行。
 
-<dl>
- <dt><code>dataTransfer</code></dt>
- <dd>{{domxref("DataTransfer")}} 对象包含了要写入剪贴板的数据。</dd>
-</dl>
+## 示例
 
-<h3 id="返回值">返回值</h3>
+这个例子展示了如何将当前剪贴板的内容替换为给定的内容。
 
-<p>当数据被写入到剪贴板的时候，{{jsxref("Promise")}} resolve 回调被执行。如果剪贴板不能完成剪贴操作，{{jsxref("Promise")}}  reject 回调被执行。</p>
-
-<h2 id="示例">示例</h2>
-
-<p>这个例子展示了如何将当前剪贴板的内容替换为给定的内容。</p>
-
-<pre class="brush: js">function setClipboard(text) {
+```js
+function setClipboard(text) {
   let data = new DataTransfer();
 
   data.items.add("text/plain", text);
@@ -47,16 +40,14 @@ slug: Web/API/Clipboard/write
     /* failure */
   });
 }
-</pre>
+```
 
-<p>代码创建了一个 {{domxref("DataTransfer")}} 对象，要替换的内容存储在这里。执行 {{domxref("DataTransferItemList.add()")}} 将数据写入进去，然后执行 <code>write()</code> 方法，指定执行成功或错误的结果。</p>
+代码创建了一个 {{domxref("DataTransfer")}} 对象，要替换的内容存储在这里。执行 {{domxref("DataTransferItemList.add()")}} 将数据写入进去，然后执行 `write()` 方法，指定执行成功或错误的结果。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Clipboard.write")}}</p>
+{{Compat("api.Clipboard.write")}}

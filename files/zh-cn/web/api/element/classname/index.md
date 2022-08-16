@@ -2,47 +2,45 @@
 title: Element.className
 slug: Web/API/Element/className
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><strong>className</strong> 获取或设置指定元素的 class 属性的值。</p>
+**className** 获取或设置指定元素的 class 属性的值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>let cName</var> = <var>elementNodeReference</var>.className;
+```
+let cName = elementNodeReference.className;
 
-<var>elementNodeReference</var>.className = <var>cName</var>;</pre>
+elementNodeReference.className = cName;
+```
 
-<ul>
- <li><var>cName</var>是一个字符串变量，表示当前元素的<code>class</code>属性的值，可以是由空格分隔的多个<code>class</code>属性值。</li>
-</ul>
+- *cName*是一个字符串变量，表示当前元素的`class`属性的值，可以是由空格分隔的多个`class`属性值。
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush: js">let elm = document.getElementById("div1");
+```js
+let elm = document.getElementById("div1");
 
 if (elm.className == "fixed") {
   // 跳过 class 属性为特定值的元素
   goNextElement();
-}</pre>
+}
+```
 
-<h2 id="Notes">注释</h2>
+## 注释
 
-<div class="note">
-<p>使用名称<code>className</code>而不是<code>class</code>作为属性名，是因为"class" 在 JavaScript 中是个保留字。</p>
-</div>
+> **备注：** 使用名称`className`而不是`class`作为属性名，是因为"class" 在 JavaScript 中是个保留字。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("element.classList")}}</li>
-</ul>
+- {{domxref("element.classList")}}

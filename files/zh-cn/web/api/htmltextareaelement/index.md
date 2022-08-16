@@ -2,259 +2,150 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLTextAreaElement</code></strong> 接口提供了特殊的属性和方法，用于控制 {{HTMLElement("textarea")}} 元素的布局和展示。</p>
+**`HTMLTextAreaElement`** 接口提供了特殊的属性和方法，用于控制 {{HTMLElement("textarea")}} 元素的布局和展示。
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <tbody>
-  <tr>
-   <td><code>form </code>{{readonlyInline}}</td>
-   <td><code><em>object</em>:</code> 返回一个父表单元素的引用。如果这个元素没有被包含在一个表单元素中，则这个值是页面中任意一个 {{HTMLElement("form")}} 元素的 {{htmlattrxref("id", "form")}} 属性或者 <code>null</code>。</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><code><em>string</em>:</code> 返回字符串 <code>textarea</code>。</td>
-  </tr>
-  <tr>
-   <td><code>value</code></td>
-   <td><code><em>string</em>:</code> Returns / Sets the raw value contained in the control.</td>
-  </tr>
-  <tr>
-   <td><code>textLength</code> {{readonlyInline}}</td>
-   <td><code><em>long</em>:</code> Returns the codepoint length of the control's <code>value</code>. Same as <code>calling value.length</code></td>
-  </tr>
-  <tr>
-   <td><code>defaultValue</code></td>
-   <td><code><em>string</em>:</code> Returns / Sets the control's default value, which behaves like the {{domxref("Node.textContent")}} property.</td>
-  </tr>
-  <tr>
-   <td><code>placeholder</code></td>
-   <td><code><em>string</em>:</code> 返回/设置元素{{htmlattrxref("placeholder", "textarea")}} 属性, 用于提示用户在组件中应该输入什么。</td>
-  </tr>
-  <tr>
-   <td><code>rows</code></td>
-   <td><code><em>unsigned long</em>:</code> Returns / Sets the element's {{htmlattrxref("rows", "textarea")}} attribute, indicating the number of visible text lines for the control.</td>
-  </tr>
-  <tr>
-   <td><code>cols</code></td>
-   <td><code><em>unsigned long</em>:</code> Returns / Sets the element's {{htmlattrxref("cols", "textarea")}} attribute, indicating the visible width of the text area.</td>
-  </tr>
-  <tr>
-   <td><code>autofocus</code></td>
-   <td><code><em>boolean</em>:</code> Returns / Sets the element's {{htmlattrxref("autofocus", "textarea")}} attribute, indicating that the control should have input focus when the page loads</td>
-  </tr>
-  <tr>
-   <td><code>name</code></td>
-   <td><code><em>string</em>:</code> Returns / Sets the element's {{htmlattrxref("name", "textarea")}} attribute, containing the name of the control.</td>
-  </tr>
-  <tr>
-   <td><code>disabled</code></td>
-   <td><code><em>boolean</em>:</code> Returns / Sets the element's {{htmlattrxref("disabled", "textarea")}} attribute, indicating that the control is not available for interaction.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLTextAreaElement.labels")}}{{ReadOnlyInline}}</td>
-   <td>{{domxref("NodeList")}}: Returns a list of label elements associated with this select element.</td>
-  </tr>
-  <tr>
-   <td><code>maxLength</code></td>
-   <td><code><em>long</em>:</code> Returns / Sets the element's {{htmlattrxref("maxlength", "textarea")}} attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.</td>
-  </tr>
-  <tr>
-   <td><code>minLength</code></td>
-   <td><code><em>long</em>:</code> Returns / Sets the element's {{htmlattrxref("minlength", "textarea")}} attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.</td>
-  </tr>
-  <tr>
-   <td><code>accessKey</code></td>
-   <td><code><em>string</em>:</code> Returns / Sets the element's {{htmlattrxref("accesskey", "textarea")}} attribute.</td>
-  </tr>
-  <tr>
-   <td><code>readOnly</code></td>
-   <td><code><em>boolean</em>:</code> Returns / Sets the element's {{htmlattrxref("readonly", "textarea")}} attribute, indicating that the user cannot modify the value of the control.</td>
-  </tr>
-  <tr>
-   <td><code>required</code></td>
-   <td><code><em>boolean</em>:</code> Returns / Sets the element's {{htmlattrxref("required", "textarea")}} attribute, indicating that the user must specify a value before submitting the form.</td>
-  </tr>
-  <tr>
-   <td><code>tabIndex</code></td>
-   <td><code><em>long</em>:</code> Returns / Sets the position of the element in the tabbing navigation order for the current document.</td>
-  </tr>
-  <tr>
-   <td><code>selectionStart</code></td>
-   <td><code><em>unsigned long</em>:</code> Returns / Sets the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if <code>setSelectionRange()</code> had been called with this as the first argument, and <code>selectionEnd</code> as the second argument.</td>
-  </tr>
-  <tr>
-   <td><code>selectionEnd</code></td>
-   <td><code><em>unsigned long</em>:</code> Returns / Sets the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if <code>setSelectionRange()</code> had been called with this as the second argument, and <code>selectionStart</code> as the first argument.</td>
-  </tr>
-  <tr>
-   <td><code>selectionDirection</code></td>
-   <td><code><em>string</em>:</code> Returns / Sets the direction in which selection occurred. This is <code>"forward"</code> if selection was performed in the start-to-end direction of the current locale, or <code>"backward"</code> for the opposite direction. This can also be <code>"none"</code> if the direction is unknown."</td>
-  </tr>
-  <tr>
-   <td><code>validity</code> {{readonlyInline}}</td>
-   <td><code><em>{{domxref("ValidityState")}} object</em>:</code> Returns the validity states that this element is in.</td>
-  </tr>
-  <tr>
-   <td><code>willValidate</code> {{readonlyInline}}</td>
-   <td>
-    <p><code><em>boolean</em>:</code> Returns whether the element is a candidate for constraint validation. <code>false</code> if any conditions bar it from constraint validation, including its <code>readOnly</code> or <code>disabled</code> property is <code>true</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>validationMessage</code> {{readonlyInline}}</td>
-   <td><code><em>string</em>:</code> Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (<code>willValidate</code> is <code>false</code>), or it satisfies its constraints.</td>
-  </tr>
-  <tr>
-   <td><code>autocomplete</code> {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>autocapitalize</code> {{experimental_inline}}</td>
-   <td><code><em>string</em>:</code> Returns / Sets the element's capitalization behavior for user input. Valid values are: <code>none</code>, <code>off</code>, <code>characters</code>, <code>words</code>, <code>sentences</code>.</td>
-  </tr>
-  <tr>
-   <td><code>inputMode</code> {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>wrap</code></td>
-   <td><code><em>string</em>:</code> Returns / Sets the {{htmlattrxref("wrap", "textarea")}} HTML attribute, indicating how the control wraps text.</td>
-  </tr>
- </tbody>
-</table>
+| `form `{{readonlyInline}}                                                  | `object:` 返回一个父表单元素的引用。如果这个元素没有被包含在一个表单元素中，则这个值是页面中任意一个 {{HTMLElement("form")}} 元素的 {{htmlattrxref("id", "form")}} 属性或者 `null`。                                                                                                                           |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type` {{readonlyInline}}                                                  | `string:` 返回字符串 `textarea`。                                                                                                                                                                                                                                                                                                 |
+| `value`                                                                          | `string:` Returns / Sets the raw value contained in the control.                                                                                                                                                                                                                                                                  |
+| `textLength` {{readonlyInline}}                                            | `long:` Returns the codepoint length of the control's `value`. Same as `calling value.length`                                                                                                                                                                                                                                     |
+| `defaultValue`                                                                   | `string:` Returns / Sets the control's default value, which behaves like the {{domxref("Node.textContent")}} property.                                                                                                                                                                                                   |
+| `placeholder`                                                                    | `string:` 返回/设置元素{{htmlattrxref("placeholder", "textarea")}} 属性, 用于提示用户在组件中应该输入什么。                                                                                                                                                                                                          |
+| `rows`                                                                           | `unsigned long:` Returns / Sets the element's {{htmlattrxref("rows", "textarea")}} attribute, indicating the number of visible text lines for the control.                                                                                                                                                            |
+| `cols`                                                                           | `unsigned long:` Returns / Sets the element's {{htmlattrxref("cols", "textarea")}} attribute, indicating the visible width of the text area.                                                                                                                                                                          |
+| `autofocus`                                                                      | `boolean:` Returns / Sets the element's {{htmlattrxref("autofocus", "textarea")}} attribute, indicating that the control should have input focus when the page loads                                                                                                                                               |
+| `name`                                                                           | `string:` Returns / Sets the element's {{htmlattrxref("name", "textarea")}} attribute, containing the name of the control.                                                                                                                                                                                            |
+| `disabled`                                                                       | `boolean:` Returns / Sets the element's {{htmlattrxref("disabled", "textarea")}} attribute, indicating that the control is not available for interaction.                                                                                                                                                             |
+| {{domxref("HTMLTextAreaElement.labels")}}{{ReadOnlyInline}} | {{domxref("NodeList")}}: Returns a list of label elements associated with this select element.                                                                                                                                                                                                                           |
+| `maxLength`                                                                      | `long:` Returns / Sets the element's {{htmlattrxref("maxlength", "textarea")}} attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.                                                                                                |
+| `minLength`                                                                      | `long:` Returns / Sets the element's {{htmlattrxref("minlength", "textarea")}} attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.                                                                                                |
+| `accessKey`                                                                      | `string:` Returns / Sets the element's {{htmlattrxref("accesskey", "textarea")}} attribute.                                                                                                                                                                                                                        |
+| `readOnly`                                                                       | `boolean:` Returns / Sets the element's {{htmlattrxref("readonly", "textarea")}} attribute, indicating that the user cannot modify the value of the control.                                                                                                                                                          |
+| `required`                                                                       | `boolean:` Returns / Sets the element's {{htmlattrxref("required", "textarea")}} attribute, indicating that the user must specify a value before submitting the form.                                                                                                                                                 |
+| `tabIndex`                                                                       | `long:` Returns / Sets the position of the element in the tabbing navigation order for the current document.                                                                                                                                                                                                                      |
+| `selectionStart`                                                                 | `unsigned long:` Returns / Sets the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument, and `selectionEnd` as the second argument. |
+| `selectionEnd`                                                                   | `unsigned long:` Returns / Sets the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.     |
+| `selectionDirection`                                                             | `string:` Returns / Sets the direction in which selection occurred. This is `"forward"` if selection was performed in the start-to-end direction of the current locale, or `"backward"` for the opposite direction. This can also be `"none"` if the direction is unknown."                                                       |
+| `validity` {{readonlyInline}}                                              | `{{domxref("ValidityState")}} object:` Returns the validity states that this element is in.                                                                                                                                                                                                                               |
+| `willValidate` {{readonlyInline}}                                          | `boolean:` Returns whether the element is a candidate for constraint validation. `false` if any conditions bar it from constraint validation, including its `readOnly` or `disabled` property is `true`.                                                                                                                          |
+| `validationMessage` {{readonlyInline}}                                     | `string:` Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.                                                    |
+| `autocomplete` {{experimental_inline}}                                  |                                                                                                                                                                                                                                                                                                                                   |
+| `autocapitalize` {{experimental_inline}}                                | `string:` Returns / Sets the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.                                                                                                                                                                               |
+| `inputMode` {{experimental_inline}}                                     |                                                                                                                                                                                                                                                                                                                                   |
+| `wrap`                                                                           | `string:` Returns / Sets the {{htmlattrxref("wrap", "textarea")}} HTML attribute, indicating how the control wraps text.                                                                                                                                                                                              |
 
-<p>The two properties <code>tabIndex</code> and <code>accessKey</code> are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on <code>HTMLTextAreaElement</code> in DOM Level 2 HTML and earlier specifications.</p>
+The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<table>
- <tbody>
-  <tr>
-   <td>{{domxref("HTMLElement/blur", "blur()")}}</td>
-   <td>Removes focus from the control; keystrokes will subsequently go nowhere.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement/focus", "focus()")}}</td>
-   <td>Gives focus to the control; keystrokes will subsequently go to this element.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLInputElement/select", "select()")}}</td>
-   <td>Selects the contents of the control.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLInputElement/setRangeText", "setRangeText()")}}</td>
-   <td>Replaces a range of text in the element with new text.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLInputElement/setSelectionRange", "setSelectionRange()")}}</td>
-   <td>Selects a range of text in the element (but does not focus it).</td>
-  </tr>
-  <tr>
-   <td><code>checkValidity()</code></td>
-   <td>Returns <code>false</code> if the button is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires a cancelable <code>invalid</code> event at the control. It returns <code>true</code> if the control is not a candidate for constraint validation, or if it satisfies its constraints.</td>
-  </tr>
-  <tr>
-   <td><code>reportValidity()</code></td>
-   <td>
-    <p>This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable <code>invalid</code> event at the element, and returns <code>false</code>; if there are no problems, it returns <code>true</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>setCustomValidity(DOMstring)</code></td>
-   <td>Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.</td>
-  </tr>
- </tbody>
-</table>
+| {{domxref("HTMLElement/blur", "blur()")}}                                         | Removes focus from the control; keystrokes will subsequently go nowhere.                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{domxref("HTMLElement/focus", "focus()")}}                                         | Gives focus to the control; keystrokes will subsequently go to this element.                                                                                                                                                                                                                                 |
+| {{domxref("HTMLInputElement/select", "select()")}}                             | Selects the contents of the control.                                                                                                                                                                                                                                                                         |
+| {{domxref("HTMLInputElement/setRangeText", "setRangeText()")}}             | Replaces a range of text in the element with new text.                                                                                                                                                                                                                                                       |
+| {{domxref("HTMLInputElement/setSelectionRange", "setSelectionRange()")}} | Selects a range of text in the element (but does not focus it).                                                                                                                                                                                                                                              |
+| `checkValidity()`                                                                                | Returns `false` if the button is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires a cancelable `invalid` event at the control. It returns `true` if the control is not a candidate for constraint validation, or if it satisfies its constraints. |
+| `reportValidity()`                                                                               | This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable `invalid` event at the element, and returns `false`; if there are no problems, it returns `true`.                                                                    |
+| `setCustomValidity(DOMstring)`                                                                   | Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.                                                                                                                                  |
 
-<p>The two methods <code>blur()</code> and <code>focus()</code> are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on <code>HTMLTextAreaElement</code> in DOM Level 2 HTML and earlier specifications.</p>
+The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<p>Listen to these events using <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface:</p>
+Listen to these events using [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> event</a></dt>
- <dd>Fires when the <code>value</code> of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.</dd>
-</dl>
+- [`input` event](/zh-CN/docs/Web/API/HTMLElement/input_event)
+  - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Autogrowing_textarea_example">Autogrowing textarea example</h3>
+### Autogrowing textarea example
 
-<p>Make a textarea autogrow while typing:</p>
+Make a textarea autogrow while typing:
 
-<p>JavaScript function:</p>
+JavaScript function:
 
-<pre class="brush: js">function autoGrow (oField) {
-  if (oField.scrollHeight &gt; oField.clientHeight) {
+```js
+function autoGrow (oField) {
+  if (oField.scrollHeight > oField.clientHeight) {
     oField.style.height = oField.scrollHeight + "px";
   }
-}</pre>
+}
+```
 
-<p>CSS:</p>
+CSS:
 
-<pre class="brush: css">textarea.noscrollbars {
+```css
+textarea.noscrollbars {
   overflow: hidden;
   width: 300px;
   height: 100px;
-}</pre>
+}
+```
 
-<p>HTML:</p>
+HTML:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Your comments&lt;/legend&gt;
-    &lt;p&gt;&lt;textarea class="noscrollbars" onkeyup="autoGrow(this);"&gt;&lt;/textarea&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;input type="submit" value="Send" /&gt;&lt;/p&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <fieldset>
+    <legend>Your comments</legend>
+    <p><textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea></p>
+    <p><input type="submit" value="Send" /></p>
+  </fieldset>
+</form>
+```
 
-<p>{{EmbedLiveSample('Autogrowing_textarea_example', 600, 300)}}</p>
+{{EmbedLiveSample('Autogrowing_textarea_example', 600, 300)}}
 
-<h3 id="Insert_HTML_tags_example">Insert HTML tags example</h3>
+### Insert HTML tags example
 
-<p>Insert some HTML tags or <em>smiles</em> or any custom text in a textarea.<br>
- JavaScript function:</p>
+Insert some HTML tags or _smiles_ or any custom text in a textarea.
+JavaScript function:
 
-<pre class="brush: js">function insertMetachars(sStartTag, sEndTag) {
-  var bDouble = arguments.length &gt; 1, oMsgInput = document.myForm.myTxtArea, nSelStart = oMsgInput.selectionStart, nSelEnd = oMsgInput.selectionEnd, sOldText = oMsgInput.value;
+```js
+function insertMetachars(sStartTag, sEndTag) {
+  var bDouble = arguments.length > 1, oMsgInput = document.myForm.myTxtArea, nSelStart = oMsgInput.selectionStart, nSelEnd = oMsgInput.selectionEnd, sOldText = oMsgInput.value;
   oMsgInput.value = sOldText.substring(0, nSelStart) + (bDouble ? sStartTag + sOldText.substring(nSelStart, nSelEnd) + sEndTag : sStartTag) + sOldText.substring(nSelEnd);
   oMsgInput.setSelectionRange(bDouble || nSelStart === nSelEnd ? nSelStart + sStartTag.length : nSelStart, (bDouble ? nSelEnd : nSelStart) + sStartTag.length);
   oMsgInput.focus();
-}</pre>
+}
+```
 
-<p>CSS to decorate the internal span to behave like a link:</p>
+CSS to decorate the internal span to behave like a link:
 
-<pre class="brush: css">.intLink {
+```css
+.intLink {
   cursor: pointer;
   text-decoration: underline;
   color: #0000ff;
-}</pre>
+}
+```
 
-<p>HTML:</p>
+HTML:
 
-<pre class="brush: html">&lt;form name="myForm"&gt;
-&lt;p&gt;[&amp;nbsp;&lt;span class="intLink" onclick="insertMetachars('&amp;lt;strong&amp;gt;','&amp;lt;\/strong&amp;gt;');"&gt;&lt;strong&gt;Bold&lt;/strong&gt;&lt;/span&gt; | &lt;span class="intLink" onclick="insertMetachars('&amp;lt;em&amp;gt;','&amp;lt;\/em&amp;gt;');"&gt;&lt;em&gt;Italic&lt;/em&gt;&lt;/span&gt; | &lt;span class="intLink" onclick="var newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&amp;lt;a href=\u0022'+newURL+'\u0022&amp;gt;','&amp;lt;\/a&amp;gt;');}else{document.myForm.myTxtArea.focus();}"&gt;URL&lt;/span&gt; | &lt;span class="intLink" onclick="insertMetachars('\n&amp;lt;code&amp;gt;\n','\n&amp;lt;\/code&amp;gt;\n');"&gt;code&lt;/span&gt; | &lt;span class="intLink" onclick="insertMetachars(' :-)');"&gt;smile&lt;/span&gt; | etc. etc.&amp;nbsp;]&lt;/p&gt;
-&lt;p&gt;&lt;textarea name="myTxtArea" rows="10" cols="50"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. &lt;/textarea&gt;&lt;/p&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form name="myForm">
+<p>[&nbsp;<span class="intLink" onclick="insertMetachars('&lt;strong&gt;','&lt;\/strong&gt;');"><strong>Bold</strong></span> | <span class="intLink" onclick="insertMetachars('&lt;em&gt;','&lt;\/em&gt;');"><em>Italic</em></span> | <span class="intLink" onclick="var newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&lt;a href=\u0022'+newURL+'\u0022&gt;','&lt;\/a&gt;');}else{document.myForm.myTxtArea.focus();}">URL</span> | <span class="intLink" onclick="insertMetachars('\n&lt;code&gt;\n','\n&lt;\/code&gt;\n');">code</span> | <span class="intLink" onclick="insertMetachars(' :-)');">smile</span> | etc. etc.&nbsp;]</p>
+<p><textarea name="myTxtArea" rows="10" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. </textarea></p>
+</form>
+```
 
-<p>{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}</p>
+{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
 
-<h3 id="Maximum_length_and_number_of_lines_example">Maximum length and number of lines example</h3>
+### Maximum length and number of lines example
 
-<p>Create a textarea with a maximum number of characters per line and a maximum number of lines:</p>
+Create a textarea with a maximum number of characters per line and a maximum number of lines:
 
-<p>First, create a function that takes the text field and a key event as input and determines if any of the limits have been reached. If the limit has not been reached, it will return the key.</p>
+First, create a function that takes the text field and a key event as input and determines if any of the limits have been reached. If the limit has not been reached, it will return the key.
 
-<pre class="brush: js">function checkRows(oField, oKeyEvent) {
+```js
+function checkRows(oField, oKeyEvent) {
   var nKey = (oKeyEvent || /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }).keyCode,
 
     // put here the maximum number of characters per line:
@@ -265,35 +156,35 @@ slug: Web/API/HTMLTextAreaElement
     nSelS = oField.selectionStart, nSelE = oField.selectionEnd,
     sVal = oField.value, nLen = sVal.length,
 
-    nBackward = nSelS &gt;= nCols ? nSelS - nCols : 0,
+    nBackward = nSelS >= nCols ? nSelS - nCols : 0,
     nDeltaForw = sVal.substring(nBackward, nSelS).search(new RegExp("\\n(?!.{0," + String(nCols - 2) + "}\\n)")) + 1,
     nRowStart = nBackward + nDeltaForw,
     aReturns = (sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)).match(/\n/g),
     nRowEnd = nSelE + nRowStart + nCols - nSelS,
-    sRow = sVal.substring(nRowStart, nSelS) + sVal.substring(nSelE, nRowEnd &gt; nLen ? nLen : nRowEnd),
-    bKeepCols = nKey === 13 || nLen + 1 &lt; nCols || /\n/.test(sRow) || ((nRowStart === 0 || nDeltaForw &gt; 0 || nKey &gt; 0) &amp;&amp; (sRow.length &lt; nCols || (nKey &gt; 0 &amp;&amp; (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
+    sRow = sVal.substring(nRowStart, nSelS) + sVal.substring(nSelE, nRowEnd > nLen ? nLen : nRowEnd),
+    bKeepCols = nKey === 13 || nLen + 1 < nCols || /\n/.test(sRow) || ((nRowStart === 0 || nDeltaForw > 0 || nKey > 0) && (sRow.length < nCols || (nKey > 0 && (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
 
-  return (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) &lt; nRows) &amp;&amp; ((nKey &gt; 32 &amp;&amp; nKey &lt; 41) || bKeepCols);
-}</pre>
+  return (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) < nRows) && ((nKey > 32 && nKey < 41) || bKeepCols);
+}
+```
 
-<p>In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:</p>
+In the HTML we just need to hook our function to the \`onkeypress\` event and specify that our textarea does not accept pasting:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;Textarea with fixed number of characters per line:&lt;br /&gt;
-    &lt;textarea cols="50" rows="10" onkeypress="return checkRows(this, event);"
-              onpaste="return false;"&gt;&lt;/textarea&gt;
-  &lt;/p&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <p>Textarea with fixed number of characters per line:<br />
+    <textarea cols="50" rows="10" onkeypress="return checkRows(this, event);"
+              onpaste="return false;"></textarea>
+  </p>
+</form>
+```
 
-<p>{{EmbedLiveSample('Maximum_length_and_number_of_lines_example', 600, 300)}}</p>
+{{EmbedLiveSample('Maximum_length_and_number_of_lines_example', 600, 300)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.HTMLTextAreaElement")}}</p>
+{{Compat("api.HTMLTextAreaElement")}}

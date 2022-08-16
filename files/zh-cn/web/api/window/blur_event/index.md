@@ -2,61 +2,68 @@
 title: 'Window: blur event'
 slug: Web/API/Window/blur_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当元素失去焦点时，<strong><code>blur</code></strong>事件将触发。</p>
+当元素失去焦点时，**`blur`**事件将触发。
 
-<p>与 <code>blur</code> 相反的是{{domxref("Window/focus_event", "focus")}}。</p>
+与 `blur` 相反的是{{domxref("Window/focus_event", "focus")}}。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles（是否支持冒泡）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable（可撤销）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface（接口）</th>
-   <td>{{DOMxRef("FocusEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property（事件处理程序属性）</th>
-   <td>{{domxref("GlobalEventHandlers/onblur", "onblur")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Sync / Async（同步/异步）</th>
-   <td>Sync</td>
-  </tr>
-  <tr>
-   <th scope="row">Composed</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles（是否支持冒泡）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable（可撤销）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface（接口）</th>
+      <td>{{DOMxRef("FocusEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property（事件处理程序属性）</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onblur", "onblur")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Sync / Async（同步/异步）</th>
+      <td>Sync</td>
+    </tr>
+    <tr>
+      <th scope="row">Composed</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="在线示例">在线示例</h3>
+### 在线示例
 
-<p>此示例当文档失去焦点时，更改其外观。它使用{{domxref("EventTarget.addEventListener()","addEventListener()")}} 去监听{{domxref("Window/focus_event", "focus")}}和 <code>blur</code> 事件。</p>
+此示例当文档失去焦点时，更改其外观。它使用{{domxref("EventTarget.addEventListener()","addEventListener()")}} 去监听{{domxref("Window/focus_event", "focus")}}和 `blur` 事件。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="log"&gt;Click on this document to give it focus.&lt;/p&gt;</pre>
+```html
+<p id="log">Click on this document to give it focus.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.paused {
+```css
+.paused {
   background: #ddd;
   color: #555;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function pause() {
+```js
+function pause() {
   document.body.classList.add('paused');
   log.textContent = 'FOCUS LOST!';
 }
@@ -69,27 +76,24 @@ function play() {
 const log = document.getElementById('log');
 
 window.addEventListener('blur', pause);
-window.addEventListener('focus', play);</pre>
+window.addEventListener('focus', play);
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("在线示例")}}</p>
+{{EmbedLiveSample("在线示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Window.blur_event")}}
 
+{{DOMxRef(" document. activeelement ")}}的值在处理 ({{bug(452307)}}) 时因浏览器而异 ;({{bug(452307)}}):IE10 将其设置为焦点将移动到的元素，而 Firefox 和 Chrome 通常将其设置为文档的 body。
 
-<p>{{Compat("api.Window.blur_event")}}</p>
+## 参见
 
-<p>{{DOMxRef(" document. activeelement ")}}的值在处理 ({{bug(452307)}}) 时因浏览器而异 ;({{bug(452307)}}):IE10 将其设置为焦点将移动到的元素，而 Firefox 和 Chrome 通常将其设置为文档的 body。</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>相关联事件: {{domxref("Window/focus_event", "focus")}}</li>
- <li>Element 目标上的这个事件:{{domxref("Element/blur_event", "blur")}} 事件</li>
-</ul>
+- 相关联事件: {{domxref("Window/focus_event", "focus")}}
+- Element 目标上的这个事件:{{domxref("Element/blur_event", "blur")}} 事件

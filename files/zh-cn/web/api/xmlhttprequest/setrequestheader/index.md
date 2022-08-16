@@ -2,40 +2,37 @@
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong>XMLHttpRequest.setRequestHeader()</strong> 是设置 HTTP 请求头部的方法。此方法必须在 {{domxref("XMLHttpRequest.open", "open()")}} 方法和 {{domxref("XMLHttpRequest.send", "send()")}} 之间调用。如果多次对同一个请求头赋值，只会生成一个合并了多个值的请求头。</p>
+**XMLHttpRequest.setRequestHeader()** 是设置 HTTP 请求头部的方法。此方法必须在 {{domxref("XMLHttpRequest.open", "open()")}} 方法和 {{domxref("XMLHttpRequest.send", "send()")}} 之间调用。如果多次对同一个请求头赋值，只会生成一个合并了多个值的请求头。
 
-<p>如果没有设置 {{HTTPHeader("Accept")}} 属性，则此发送出{{domxref("XMLHttpRequest.send", "send()")}} 的值为此属性的默认值：<code>*/*</code>。</p>
+如果没有设置 {{HTTPHeader("Accept")}} 属性，则此发送出{{domxref("XMLHttpRequest.send", "send()")}} 的值为此属性的默认值：`*/*`。
 
-<p>安全起见，有些请求头的值只能由 user agent 设置：{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
+安全起见，有些请求头的值只能由 user agent 设置：{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。
 
-<div class="note">
-<p>自定义一些 header 属性进行跨域请求时，可能会遇到"<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>"，你可能需要在你的服务端设置 "Access-Control-Allow-Headers"。</p>
-</div>
+> **备注：** 自定义一些 header 属性进行跨域请求时，可能会遇到"**not allowed by Access-Control-Allow-Headers in preflight response**"，你可能需要在你的服务端设置 "Access-Control-Allow-Headers"。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">myReq.setRequestHeader(<var>header</var>, <var>value</var>);
-</pre>
+```
+myReq.setRequestHeader(header, value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>header</code></dt>
- <dd>属性的名称。</dd>
- <dt><code>value</code></dt>
- <dd>属性的值。</dd>
-</dl>
+- `header`
+  - : 属性的名称。
+- `value`
+  - : 属性的值。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<p><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></p>
+[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

@@ -2,84 +2,51 @@
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 ---
-<p>{{ ApiRef("HTML DOM") }}</p>
+{{ ApiRef("HTML DOM") }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>返回一个字符串，代表当前所使用的操作系统类型。</p>
+返回一个字符串，代表当前所使用的操作系统类型。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval"><em>oscpuInfo</em> = window.navigator.oscpu
-</pre>
+```
+oscpuInfo = window.navigator.oscpu
+```
 
-<ul>
- <li><code>oscpuInfo</code> 会有下面几种类型。</li>
-</ul>
+- `oscpuInfo` 会有下面几种类型。
 
-<table class="fullwidth-table">
- <tbody>
-  <tr>
-   <th>操作系统</th>
-   <th><code>oscpuInfo</code> 字符串值</th>
-  </tr>
-  <tr>
-   <td>OS/2</td>
-   <td>OS/2 Warp x (3, 4 或 4.5)</td>
-  </tr>
-  <tr>
-   <td>Windows CE</td>
-   <td>WindowsCE x.y<sup>1</sup></td>
-  </tr>
-  <tr>
-   <td>Windows 64-bit (64-bit build)</td>
-   <td>Windows NT x.y; Win64; x64</td>
-  </tr>
-  <tr>
-   <td>Windows 64-bit (32-bit build)</td>
-   <td>Windows NT x.y; WOW64</td>
-  </tr>
-  <tr>
-   <td>Windows 32-bit</td>
-   <td>Windows NT x.y</td>
-  </tr>
-  <tr>
-   <td>Mac OS X (PPC build)</td>
-   <td>PPC Mac OS X x.y</td>
-  </tr>
-  <tr>
-   <td>Mac OS X (i386/x64 build)</td>
-   <td>Intel Mac OS X x.y</td>
-  </tr>
-  <tr>
-   <td>Linux 64-bit (32-bit build)</td>
-   <td>命令 <code>uname -s</code> 的输出加上 "i686 on x86_64"</td>
-  </tr>
-  <tr>
-   <td>Linux</td>
-   <td>命令 <code>uname -sm</code> 的输出</td>
-  </tr>
- </tbody>
-</table>
+| 操作系统                      | `oscpuInfo` 字符串值                        |
+| ----------------------------- | ------------------------------------------- |
+| OS/2                          | OS/2 Warp x (3, 4 或 4.5)                   |
+| Windows CE                    | WindowsCE x.y1                              |
+| Windows 64-bit (64-bit build) | Windows NT x.y; Win64; x64                  |
+| Windows 64-bit (32-bit build) | Windows NT x.y; WOW64                       |
+| Windows 32-bit                | Windows NT x.y                              |
+| Mac OS X (PPC build)          | PPC Mac OS X x.y                            |
+| Mac OS X (i386/x64 build)     | Intel Mac OS X x.y                          |
+| Linux 64-bit (32-bit build)   | 命令 `uname -s` 的输出加上 "i686 on x86_64" |
+| Linux                         | 命令 `uname -sm` 的输出                     |
 
-<p><sup>1</sup>x.y 表示操作系统的版本号</p>
+1x.y 表示操作系统的版本号
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="brush: js">function osInfo() {
+```js
+function osInfo() {
   alert(window.navigator.oscpu);
 }
 // 可能返回:"Windows NT 6.1",表示 windows 7
-</pre>
+```
 
-<h3 id="Notes">备注</h3>
+### 备注
 
-<p>在普通网页中，如果 about:config 中存在<code>general.oscpu.override</code> 项，则该属性的值会返回 about:config 中 <code>general.oscpu.override</code> 项的值。在特权代码中 (Chrome 上下文或者拥有 "UniversalBrowserRead" 特权的网页中)，返回的还是真实的操作系统类型。(译者注：语句：netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead") 用来激活所在网页的 UniversalBrowserRead 特权。)</p>
+在普通网页中，如果 about:config 中存在`general.oscpu.override` 项，则该属性的值会返回 about:config 中 `general.oscpu.override` 项的值。在特权代码中 (Chrome 上下文或者拥有 "UniversalBrowserRead" 特权的网页中)，返回的还是真实的操作系统类型。(译者注：语句：netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead") 用来激活所在网页的 UniversalBrowserRead 特权。)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

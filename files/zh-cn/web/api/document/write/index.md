@@ -2,80 +2,78 @@
 title: document.write
 slug: Web/API/Document/write
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p><strong><code>Document.write()</code></strong> 方法将一个文本字符串写入一个由 {{domxref("document.open()")}} 打开的文档流（document stream）。</p>
+**`Document.write()`** 方法将一个文本字符串写入一个由 {{domxref("document.open()")}} 打开的文档流（document stream）。
 
-<div class="note">
-<p><strong>注意</strong>: 因为 <code>document.write</code> 需要向文档<strong>流</strong>中写入内容，所以，若在一个已关闭（例如，已完成加载）的文档上调用 <code>document.write</code>，就会自动调用 <code>document.open</code>，<a href="/zh-CN/docs/Web/API/document.open#Notes">这将清空该文档的内容</a>。</p>
-</div>
+> **备注：** 因为 `document.write` 需要向文档**流**中写入内容，所以，若在一个已关闭（例如，已完成加载）的文档上调用 `document.write`，就会自动调用 `document.open`，[这将清空该文档的内容](/zh-CN/docs/Web/API/document.open#Notes)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js"><var>document</var>.write(<var>markup</var>);</pre>
+```js
+document.write(markup);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><var>markup</var></dt>
- <dd><em>一个包含要写入文档的文本的字符串。</em></dd>
-</dl>
+- _markup_
+  - _: 一个包含要写入文档的文本的字符串。_
 
-<h3 id="示例">示例</h3>
+### 示例
 
-<pre class="brush: html">&lt;html&gt;
+```html
+<html>
 
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;&lt;code&gt;document.write()&lt;/code&gt; example&lt;/title&gt;
+<head>
+    <meta charset="UTF-8">
+    <title><code>document.write()</code> example</title>
 
-    <code>&lt;script&gt;
+    <script>
       function newContent() {
         document.open();
-        document.write("&lt;h1&gt;Out with the old - in with the new!&lt;/h1&gt;");
+        document.write("<h1>Out with the old - in with the new!</h1>");
         document.close();
       }
-    &lt;/script&gt;</code>
-&lt;/head&gt;
-&lt;body <code>onload="newContent();"</code>&gt;
-    &lt;p&gt;Some original document content.&lt;/p&gt;
-&lt;/body&gt;
+    </script>
+</head>
+<body onload="newContent();">
+    <p>Some original document content.</p>
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="备注">备注</h2>
+## 备注
 
-<p>向一个已经加载，并且没有调用过 {{domxref("document.open()")}} 的文档写入数据时，会自动调用 <code>document.open</code>。一旦完成了数据写入，建议调用 {{domxref("document.close()")}}，以告诉浏览器当前页面已经加载完毕。写入的数据会被解析到文档结构模型（DOM）里。在上面的例子里，元素 <code>h1</code> 会成为文档中的一个节点。</p>
+向一个已经加载，并且没有调用过 {{domxref("document.open()")}} 的文档写入数据时，会自动调用 `document.open`。一旦完成了数据写入，建议调用 {{domxref("document.close()")}}，以告诉浏览器当前页面已经加载完毕。写入的数据会被解析到文档结构模型（DOM）里。在上面的例子里，元素 `h1` 会成为文档中的一个节点。
 
-<p>如果 <code>document.write()</code> 调用发生在 HTML 里的 <code>&lt;script&gt;</code> 标签中，那么它将不会自动调用 <code>document.open()</code>。详见如下例子：</p>
+如果 `document.write()` 调用发生在 HTML 里的 `<script>` 标签中，那么它将不会自动调用 `document.open()`。详见如下例子：
 
-<pre class="brush: html">&lt;script&gt;
-  document.write("&lt;h1&gt;Main title&lt;/h1&gt;")
-&lt;/script&gt;
-</pre>
+```html
+<script>
+  document.write("<h1>Main title</h1>")
+</script>
+```
 
-<div class="note"><strong>注意：</strong><code>document.write</code> 和 {{domxref("document.writeln")}} <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">在 XHTML 文档中不可用</a>（控制台上会显示 "Operation is not supported"[<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] 的报错信息）。 当打开本地的 .xhtml 格式的文件或任何其他 {{Glossary("MIME type", "MIME 类型")}}为 <code>application/xhtml+xml</code> 的文档时，均会报错。更多信息可查看 <a href="http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>。</div>
+> **备注：** `document.write` 和 {{domxref("document.writeln")}} [在 XHTML 文档中不可用](/zh-CN/docs/Archive/Web/Writing_JavaScript_for_HTML)（控制台上会显示 "Operation is not supported"\[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] 的报错信息）。 当打开本地的 .xhtml 格式的文件或任何其他 {{Glossary("MIME type", "MIME 类型")}}为 `application/xhtml+xml` 的文档时，均会报错。更多信息可查看 [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite)。
 
-<div class="note"><strong>注意：</strong>在有<a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> 或 <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> 属性的 script 中，<code>document.write</code> 会被忽略，控制台会显示 "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" 的报错信息。</div>
+> **备注：** 在有[deferred](/zh-CN/docs/Web/HTML/Element/script#attr-defer) 或 [asynchronous](/zh-CN/docs/Web/HTML/Element/script#attr-async) 属性的 script 中，`document.write` 会被忽略，控制台会显示 "A call to `document.write()` from an asynchronously-loaded external script was ignored" 的报错信息。
 
-<div class="note"><strong>注意：</strong>在 Edge 中，在 {{HTMLElement("iframe")}} 内部调用 <code>document.write</code> 多于一次时会引发错误 SCRIPT70: Permission denied。</div>
+> **备注：** 在 Edge 中，在 {{HTMLElement("iframe")}} 内部调用 `document.write` 多于一次时会引发错误 SCRIPT70: Permission denied。
 
-<div class="note"><strong>注意：</strong>从 Chrome 55 开始，Chrome（可能）不会运行通过 <code>document.write()</code> 注入的<code>&lt;script&gt;</code>，以防止使用 2G 连接的用户找不到 HTTP 缓存。前往<a href="https://developers.google.cn/web/updates/2016/08/removing-document-write">此链接</a>查看这种情况发生需要满足的条件。</div>
+> **备注：** 从 Chrome 55 开始，Chrome（可能）不会运行通过 `document.write()` 注入的`<script>`，以防止使用 2G 连接的用户找不到 HTTP 缓存。前往[此链接](https://developers.google.cn/web/updates/2016/08/removing-document-write)查看这种情况发生需要满足的条件。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">参见</h2>
+## 参见
 
-<ul>
- <li>{{ domxref("element.innerHTML") }}</li>
- <li>{{ domxref("document.createElement()") }}</li>
-</ul>
+- {{ domxref("element.innerHTML") }}
+- {{ domxref("document.createElement()") }}

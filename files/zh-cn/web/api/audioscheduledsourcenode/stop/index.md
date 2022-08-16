@@ -2,73 +2,64 @@
 title: AudioScheduledSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p> {{domxref("AudioScheduledSourceNode")}} 上的<code>stop()</code>方法将声音安排在指定的时间停止播放。如果没有指定时间，声音将立即停止播放。</p>
+{{domxref("AudioScheduledSourceNode")}} 上的`stop()`方法将声音安排在指定的时间停止播放。如果没有指定时间，声音将立即停止播放。
 
-<p>每次在同一个节点上调用 <code>stop()</code> 时，指定的时间将替换任何未发生的计划停止时间。如果节点已经停止，则此方法无效。 </p>
+每次在同一个节点上调用 `stop()` 时，指定的时间将替换任何未发生的计划停止时间。如果节点已经停止，则此方法无效。
 
-<div class="note">
-<p><strong>注意：</strong> 如果计划的停止时间发生在节点计划的开始时间之前，则节点永远不会开始运行。</p>
-</div>
+> **备注：** 如果计划的停止时间发生在节点计划的开始时间之前，则节点永远不会开始运行。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>AudioScheduledSourceNode</em>.stop([<em>when</em>]);
-</pre>
+```
+AudioScheduledSourceNode.stop([when]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>when</code> {{optional_inline}}</dt>
- <dd>声音停止播放的时间，单位为秒。 这个值在 {{domxref("AudioContext")}} 用于其 {{domxref("AudioContext.currentTime", "currentTime")}} 属性的同一时间坐标系统中指定。 省略这个参数，设置为 0 或者负值都会立即停止播放。</dd>
-</dl>
+- `when` {{optional_inline}}
+  - : 声音停止播放的时间，单位为秒。 这个值在 {{domxref("AudioContext")}} 用于其 {{domxref("AudioContext.currentTime", "currentTime")}} 属性的同一时间坐标系统中指定。 省略这个参数，设置为 0 或者负值都会立即停止播放。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>InvalidStateNode</code></dt>
- <dd>节点还没有通过调用{{domxref("AudioScheduledSourceNode.start", "start()")}}方法被播放。</dd>
- <dt><code>RangeError</code></dt>
- <dd>当 <code>when</code> 指定为负值时。</dd>
-</dl>
+- `InvalidStateNode`
+  - : 节点还没有通过调用{{domxref("AudioScheduledSourceNode.start", "start()")}}方法被播放。
+- `RangeError`
+  - : 当 `when` 指定为负值时。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates starting an oscillator node, scheduled to begin playing at once and to stop playing in one second. The stop time is determined by taking the audio context's current time from {{domxref("AudioContext.currentTime")}} and adding 1 second.</p>
+This example demonstrates starting an oscillator node, scheduled to begin playing at once and to stop playing in one second. The stop time is determined by taking the audio context's current time from {{domxref("AudioContext.currentTime")}} and adding 1 second.
 
-<pre class="brush: js">context = new AudioContext();
+```js
+context = new AudioContext();
 osc = context.createOscillator();
 osc.connect(context.destination);
 
 /* Let's play a sine wave for one second. */
 
 osc.start();
-osc.stop(context.currentTime + 1);</pre>
+osc.stop(context.currentTime + 1);
+```
 
-<h2 id="Parameters">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.AudioScheduledSourceNode.stop")}}
 
+## See also
 
-<p>{{Compat("api.AudioScheduledSourceNode.stop")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li>{{domxref("AudioScheduledSourceNode.start", "start()")}}</li>
- <li>{{domxref("AudioScheduledSourceNode")}}</li>
- <li>{{domxref("AudioBufferSourceNode")}}</li>
- <li>{{domxref("ConstantSourceNode")}}</li>
- <li>{{domxref("OscillatorNode")}}</li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioScheduledSourceNode.start", "start()")}}
+- {{domxref("AudioScheduledSourceNode")}}
+- {{domxref("AudioBufferSourceNode")}}
+- {{domxref("ConstantSourceNode")}}
+- {{domxref("OscillatorNode")}}

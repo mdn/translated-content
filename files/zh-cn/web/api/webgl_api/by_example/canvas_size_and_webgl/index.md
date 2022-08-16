@@ -2,34 +2,32 @@
 title: Canvas size and WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
 
-<p>此 WebGL 案例将探究设置（或不设置）Canvas 属性的宽高值在浏览器中显示的影响。</p>
+此 WebGL 案例将探究设置（或不设置）Canvas 属性的宽高值在浏览器中显示的影响。
 
-<div id="canvas-size-and-webgl">
-<p>{{EmbedLiveSample("canvas-size-and-webgl-source",660,180)}}</p>
+{{EmbedLiveSample("canvas-size-and-webgl-source",660,180)}}
 
-<div id="canvas-size-and-webgl-intro">
-<h3 id="canvas属性值大小对WebGL渲染的作用">canvas 属性值大小对 WebGL 渲染的作用</h3>
+### canvas 属性值大小对 WebGL 渲染的作用
 
-<p>使用 {{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}} 我们可以观察到 canvas 属性大小是如何影响 WebGL 绘图展示的。</p>
+使用 {{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}} 我们可以观察到 canvas 属性大小是如何影响 WebGL 绘图展示的。
 
-<p>第一个 canvas 元素通过 css 样式定义了元素的大小，之后通过 javascript 获取该元素的 {{domxref("Element.clientWidth","clientWidth")}} 和{{domxref("Element.clientHeight","clientHeight")}} 值，并分别赋值给元素的  {{domxref("HTMLCanvasElement.width","width")}} 和{{domxref("HTMLCanvasElement.height","height")}}。</p>
+第一个 canvas 元素通过 css 样式定义了元素的大小，之后通过 javascript 获取该元素的 {{domxref("Element.clientWidth","clientWidth")}} 和{{domxref("Element.clientHeight","clientHeight")}} 值，并分别赋值给元素的 {{domxref("HTMLCanvasElement.width","width")}} 和{{domxref("HTMLCanvasElement.height","height")}}。
 
-<p>相反的，第二个 canvas 元素并没有这样做，canvas 内部对象的{{domxref("HTMLCanvasElement.width","width")}} 和 {{domxref("HTMLCanvasElement.height","height")}} 属性值仍然是默认值，这样导致在浏览器中实际画布大小是不同的。</p>
+相反的，第二个 canvas 元素并没有这样做，canvas 内部对象的{{domxref("HTMLCanvasElement.width","width")}} 和 {{domxref("HTMLCanvasElement.height","height")}} 属性值仍然是默认值，这样导致在浏览器中实际画布大小是不同的。
 
-<p>使用 {{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和{{domxref("WebGLRenderingContext.clear()","clear()")}}在 canvas 中绘制矩形的效果是清晰可见的，在第一个 canvas 中，通过指定位置和像素大小，可以得到我们想要的效果，但是在第二个 canvas 中，这个矩形的位置、大小都是错误展示的。</p>
-</div>
+使用 {{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和{{domxref("WebGLRenderingContext.clear()","clear()")}}在 canvas 中绘制矩形的效果是清晰可见的，在第一个 canvas 中，通过指定位置和像素大小，可以得到我们想要的效果，但是在第二个 canvas 中，这个矩形的位置、大小都是错误展示的。
 
-<div id="canvas-size-and-webgl-source">
-<pre class="brush: html">&lt;p&gt;Compare the two canvases.&lt;/p&gt;
-&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html
+<p>Compare the two canvases.</p>
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -41,9 +39,10 @@ canvas {
   border : none;
   background-color : black;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function() {
+```js
+window.addEventListener("load", function() {
   "use strict"
   var firstCanvas = document.getElementsByTagName("canvas")[0],
     secondCanvas = document.getElementsByTagName("canvas")[1];
@@ -66,10 +65,8 @@ canvas {
     gl.clear(gl.COLOR_BUFFER_BIT);
   });
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}

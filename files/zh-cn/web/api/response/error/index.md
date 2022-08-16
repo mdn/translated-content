@@ -2,48 +2,42 @@
 title: Response.error()
 slug: Web/API/Response/error
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Response")}} 接口的<code>error()</code>方法返回一个包含网络错误相关信息的新<code>Response</code>对象</p>
+{{domxref("Response")}} 接口的`error()`方法返回一个包含网络错误相关信息的新`Response`对象
 
-<div class="note">
-<p><strong>Note</strong>: 这主要与 Service Workers 有关； 如果您愿意，可以使用 error 方法返回错误。 错误响应的{{domxref("Response.type","type")}} 被设置为 error。</p>
-</div>
+> **备注：** 这主要与 Service Workers 有关； 如果您愿意，可以使用 error 方法返回错误。 错误响应的{{domxref("Response.type","type")}} 被设置为 error。
 
-<div class="note">
-<p><strong>Note</strong>: 一个“错误”的响应不会真正地暴露给脚本：对 {{domxref("GlobalFetch.fetch","fetch()")}} 的“错误”响应将会返回 promise 的 reject 状态。</p>
-</div>
+> **备注：** 一个“错误”的响应不会真正地暴露给脚本：对 {{domxref("GlobalFetch.fetch","fetch()")}} 的“错误”响应将会返回 promise 的 reject 状态。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>errorResponse</em> = Response.error();</pre>
+```
+var errorResponse = Response.error();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无</p>
+无
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("Response")}} 对象</p>
+一个 {{domxref("Response")}} 对象
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>TBD (does not yet appear to be supported anywhere).</p>
+TBD (does not yet appear to be supported anywhere).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.Response.error")}}
 
+## See also
 
-<p>{{Compat("api.Response.error")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

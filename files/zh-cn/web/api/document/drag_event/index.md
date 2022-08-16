@@ -2,163 +2,75 @@
 title: drag
 slug: Web/API/Document/drag_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当元素或者选择的文本被拖动时触发 <code>drag</code> 事件 (每几百毫秒).</p>
+当元素或者选择的文本被拖动时触发 `drag` 事件 (每几百毫秒).
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td>是否冒泡</td>
-   <td>是</td>
-  </tr>
-  <tr>
-   <td>是否可以取消</td>
-   <td>是</td>
-  </tr>
-  <tr>
-   <td>目标对象</td>
-   <td>{{domxref("Document")}}, {{domxref("Element")}}</td>
-  </tr>
-  <tr>
-   <td>接口</td>
-   <td>{{domxref("DragEvent")}}</td>
-  </tr>
-  <tr>
-   <td>默认行为</td>
-   <td>Continue the drag &amp; drop operation.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>是否冒泡</td>
+      <td>是</td>
+    </tr>
+    <tr>
+      <td>是否可以取消</td>
+      <td>是</td>
+    </tr>
+    <tr>
+      <td>目标对象</td>
+      <td>{{domxref("Document")}}, {{domxref("Element")}}</td>
+    </tr>
+    <tr>
+      <td>接口</td>
+      <td>{{domxref("DragEvent")}}</td>
+    </tr>
+    <tr>
+      <td>默认行为</td>
+      <td>Continue the drag &#x26; drop operation.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a></td>
-   <td>被拖动元素下方的元素</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></td>
-   <td>事件类型</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>事件是否冒泡</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>该事件是否可以被取消</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/WindowProxy"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView"><code>document.defaultView</code></a> (<code>window</code> of the document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
-  <tr>
-   <td><code>dataTransfer</code></td>
-   <td>DataTransfer</td>
-   <td>The data that underlies a drag-and-drop operation, known as the <a href="/en-US/docs/Web/API/DataTransfer">drag data store</a>. Protected mode.</td>
-  </tr>
-  <tr>
-   <td><code>currentTarget</code> {{readonlyInline}}</td>
-   <td>EventTarget</td>
-   <td>The node that had the event listener attached.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>EventTarget</td>
-   <td>For <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> and <code>mouseleave</code> events: the target of the complementary event (the <code>mouseleave</code> target in the case of a <code>mouseenter</code> event). <code>null</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>screenX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The X coordinate of the mouse pointer in global (screen) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>screenY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The Y coordinate of the mouse pointer in global (screen) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>clientX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The X coordinate of the mouse pointer in local (DOM content) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>clientY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The Y coordinate of the mouse pointer in local (DOM content) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>button</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.</td>
-  </tr>
-  <tr>
-   <td><code>buttons</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 | 2). <a href="/en-US/docs/Web/API/MouseEvent">More info</a>.</td>
-  </tr>
-  <tr>
-   <td><code>mozPressure</code> {{readonlyInline}}</td>
-   <td>float</td>
-   <td>The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).</td>
-  </tr>
-  <tr>
-   <td><code>ctrlKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the control key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>shiftKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the shift key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>altKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the alt key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>metaKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the meta key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}        | [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) | 被拖动元素下方的元素                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `type` {{readonlyInline}}          | [`DOMString`](/zh-CN/docs/Web/API/DOMString)     | 事件类型                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `bubbles` {{readonlyInline}}       | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | 事件是否冒泡                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `cancelable` {{readonlyInline}}    | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | 该事件是否可以被取消                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `view` {{readonlyInline}}          | [`WindowProxy`](/zh-CN/docs/Web/API/WindowProxy) | [`document.defaultView`](/zh-CN/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                                                                                                           |
+| `detail` {{readonlyInline}}        | `long` (`float`)                                 | 0.                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `dataTransfer`                           | DataTransfer                                     | The data that underlies a drag-and-drop operation, known as the [drag data store](/zh-CN/docs/Web/API/DataTransfer). Protected mode.                                                                                                                                                                                                                                                                                    |
+| `currentTarget` {{readonlyInline}} | EventTarget                                      | The node that had the event listener attached.                                                                                                                                                                                                                                                                                                                                                                          |
+| `relatedTarget` {{readonlyInline}} | EventTarget                                      | For `mouseover`, `mouseout`, `mouseenter` and `mouseleave` events: the target of the complementary event (the `mouseleave` target in the case of a `mouseenter` event). `null` otherwise.                                                                                                                                                                                                                               |
+| `screenX` {{readonlyInline}}       | long                                             | The X coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
+| `screenY` {{readonlyInline}}       | long                                             | The Y coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
+| `clientX` {{readonlyInline}}       | long                                             | The X coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
+| `clientY` {{readonlyInline}}       | long                                             | The Y coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
+| `button` {{readonlyInline}}        | unsigned short                                   | The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.                                                                                                                                                        |
+| `buttons` {{readonlyInline}}       | unsigned short                                   | The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 \| 2). [More info](/zh-CN/docs/Web/API/MouseEvent). |
+| `mozPressure` {{readonlyInline}}   | float                                            | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                          |
+| `ctrlKey` {{readonlyInline}}       | boolean                                          | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
+| `shiftKey` {{readonlyInline}}      | boolean                                          | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                           |
+| `altKey` {{readonlyInline}}        | boolean                                          | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                             |
+| `metaKey` {{readonlyInline}}       | boolean                                          | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                            |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">&lt;div class="dropzone"&gt;
-  &lt;div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"&gt;
+```js
+<div class="dropzone">
+  <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
     This div is draggable
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="dropzone"&gt;&lt;/div&gt;
-&lt;div class="dropzone"&gt;&lt;/div&gt;
-&lt;div class="dropzone"&gt;&lt;/div&gt;
+  </div>
+</div>
+<div class="dropzone"></div>
+<div class="dropzone"></div>
+<div class="dropzone"></div>
 
-&lt;style&gt;
+<style>
   #draggable {
     width: 200px;
     height: 20px;
@@ -173,9 +85,9 @@ slug: Web/API/Document/drag_event
     margin-bottom: 10px;
     padding: 10px;
   }
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
   var dragged;
 
   /* 拖动目标元素时触发 drag 事件 */
@@ -228,35 +140,31 @@ slug: Web/API/Document/drag_event
       }
 
   }, false);
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.Document.drag_event")}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>其它拖放事件：
-  <ul>
-   <li>{{domxref("Document/dragstart_event", "dragstart")}}</li>
-   <li>{{domxref("Document/dragend_event", "dragend")}}</li>
-   <li>{{domxref("Document/dragover_event", "dragover")}}</li>
-   <li>{{domxref("Document/dragenter_event", "dragenter")}}</li>
-   <li>{{domxref("Document/dragleave_event", "dragleave")}}</li>
-   <li>{{domxref("Document/dragexit_event", "dragexit")}}</li>
-   <li>{{domxref("Document/drop_event", "drop")}}</li>
-  </ul>
- </li>
- <li>其他目标上的拖放事件
-  <ul>
-   <li>{{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} event</li>
-   <li>{{domxref("HTMLElement")}}: {{domxref("HTMLElement/drag_event", "drag")}} event</li>
-   <li>{{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} event</li>
-  </ul>
- </li>
-</ul>
+- 其它拖放事件：
+
+  - {{domxref("Document/dragstart_event", "dragstart")}}
+  - {{domxref("Document/dragend_event", "dragend")}}
+  - {{domxref("Document/dragover_event", "dragover")}}
+  - {{domxref("Document/dragenter_event", "dragenter")}}
+  - {{domxref("Document/dragleave_event", "dragleave")}}
+  - {{domxref("Document/dragexit_event", "dragexit")}}
+  - {{domxref("Document/drop_event", "drop")}}
+
+- 其他目标上的拖放事件
+
+  - {{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} event
+  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/drag_event", "drag")}} event
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} event

@@ -2,19 +2,22 @@
 title: Event.target
 slug: Web/API/Event/target
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>触发事件的对象 (某个 DOM 元素) 的引用。当事件处理程序在事件的冒泡或捕获阶段被调用时，它与{{domxref("event.currentTarget")}}不同。</p>
+触发事件的对象 (某个 DOM 元素) 的引用。当事件处理程序在事件的冒泡或捕获阶段被调用时，它与{{domxref("event.currentTarget")}}不同。
 
-<h2 id="Example">语法</h2>
+## 语法
 
-<pre><code><code>let theTarget = event.target</code></code></pre>
+```
+let theTarget = event.target
+```
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<p><code>event.target </code>属性可以用来实现<strong>事件委托</strong> (<strong>event delegation</strong>)。</p>
+`event.target `属性可以用来实现**事件委托** (**event delegation**)。
 
-<pre class="brush: js">// Make a list
+```js
+// Make a list
 var ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -24,37 +27,34 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(e){
-  // e.target 引用着 &lt;li&gt; 元素
-  // 不像 e.currentTarget 引用着其父级的 &lt;ul&gt; 元素。
+  // e.target 引用着 <li> 元素
+  // 不像 e.currentTarget 引用着其父级的 <ul> 元素。
   e.target.style.visibility = 'hidden';
 }
 
-// 添加监听事件到列表，当每个 &lt;li&gt; 被点击的时候都会触发。
+// 添加监听事件到列表，当每个 <li> 被点击的时候都会触发。
 ul.addEventListener('click', hide, false);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Event.target")}}
 
+在 IE6-8 中，事件模型与标准不同。使用非标准的 [`element.attachEvent()`](http://msdn.microsoft.com/en-us/library/ie/ms536343%28v=vs.85%29.aspx) 方法绑定事件监听器。在该模型中，事件对象有一个 `srcElement` 属性，等价于`target` 属性。
 
-<p>{{Compat("api.Event.target")}}</p>
-
-<p>在 IE6-8 中，事件模型与标准不同。使用非标准的 <a href="http://msdn.microsoft.com/en-us/library/ie/ms536343%28v=vs.85%29.aspx"><code>element.attachEvent()</code></a> 方法绑定事件监听器。在该模型中，事件对象有一个 <code>srcElement</code> 属性，等价于<code>target</code> 属性。</p>
-
-<pre class="brush: js" style="font-size: 14px;">function hide(e) {
+```js
+function hide(e) {
   // 支持 IE6-8
   var target = e.target || e.srcElement;
   target.style.visibility = 'hidden';
 }
-</pre>
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en/DOM/event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
- <li>{{domxref("Event.currentTarget")}}</li>
-</ul>
+- [Comparison of Event Targets](/en/DOM/event/Comparison_of_Event_Targets)
+- {{domxref("Event.currentTarget")}}

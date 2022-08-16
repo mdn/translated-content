@@ -2,96 +2,83 @@
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p><code><strong>SubtleCrypto.encrypt()</strong></code> 方法以算法、密钥、明文为参数返回一个包含加密数据的 {{jsxref("Promise")}} 对象。</p>
+**`SubtleCrypto.encrypt()`** 方法以算法、密钥、明文为参数返回一个包含加密数据的 {{jsxref("Promise")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>result</em> = <em>crypto</em><code>.encrypt(<em>algo</em>, <em>key</em>, <em>cleartext</em>)</code>;
-</pre>
+```
+var result = crypto.encrypt(algo, key, cleartext);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><em><code>algo</code></em> 是一个使用加密函数的对象或者 {{domxref("DOMString")}}，后者是 <code>{"name": algo}</code> 的缩写。支持的值是：
+- _`algo`_ 是一个使用加密函数的对象或者 {{domxref("DOMString")}}，后者是 `{"name": algo}` 的缩写。支持的值是：
 
-  <ul>
-   <li><code>{"name": "AES-CBC", iv}</code> <code><em>iv</em></code> 是具有 16 个随机字节的 {{jsxref("ArrayBuffer")}} 或 {{jsxref("ArrayBufferView")}}  (这些应该由 {{domxref("RandomSource.getRandomValues()")}} 生成)。</li>
-   <li><code>{"name": "AES-CTR", counter, length}</code></li>
-   <li><code>{"name": "AES-GCM", iv, additionalData, tagLength}</code> (<em><code>additionalData</code></em> 和 <code><em>tagLength</em></code> 是可选的)</li>
-   <li><code>{"name": "RSA-OAEP", label}</code> (<code><em>label</em></code> 是可选的)</li>
-  </ul>
- </li>
- <li><code><em>key</em></code> 是一个包含签名密钥的 {{domxref("CryptoKey")}}。</li>
- <li><em><code>cleartext </code></em><code>是一个包含需要加密的明文</code> {{jsxref("ArrayBuffer")}} 或者 {{jsxref("ArrayBufferView")}} 对象。</li>
-</ul>
+  - `{"name": "AES-CBC", iv}` `iv` 是具有 16 个随机字节的 {{jsxref("ArrayBuffer")}} 或 {{jsxref("ArrayBufferView")}} (这些应该由 {{domxref("RandomSource.getRandomValues()")}} 生成)。
+  - `{"name": "AES-CTR", counter, length}`
+  - `{"name": "AES-GCM", iv, additionalData, tagLength}` (_`additionalData`_ 和 `tagLength` 是可选的)
+  - `{"name": "RSA-OAEP", label}` (`label` 是可选的)
 
-<h3 id="返回值">返回值</h3>
+- `key` 是一个包含签名密钥的 {{domxref("CryptoKey")}}。
+- _`cleartext `_`是一个包含需要加密的明文` {{jsxref("ArrayBuffer")}} 或者 {{jsxref("ArrayBufferView")}} 对象。
 
-<ul>
- <li>返回值是一个 {{jsxref("Promise")}} 对象，返回一个由 {{glossary("cleartext")}} 加密生成的 {{glossary("ciphertext")}} 的 {{jsxref("ArrayBuffer")}}。</li>
-</ul>
+### 返回值
 
-<h3 id="异常">异常</h3>
+- 返回值是一个 {{jsxref("Promise")}} 对象，返回一个由 {{glossary("cleartext")}} 加密生成的 {{glossary("ciphertext")}} 的 {{jsxref("ArrayBuffer")}}。
 
-<p>当遇到以下异常时，promise 将会返回一次错误（reject）:</p>
+### 异常
 
-<dl>
- <dt>InvalidAccessError</dt>
- <dd>当针对提供的 key 值执行的操作无效时（例如加密算法或者 key 值无效），将会抛出该错误。</dd>
-</dl>
+当遇到以下异常时，promise 将会返回一次错误（reject）:
 
-<dl>
- <dt>OperationError</dt>
- <dd>发生于由于特定于操作的原因使得操作失败时，例如算法参数的大小无效，或者 AES-GCM 明文长度超过 2³⁹−256 字节。</dd>
-</dl>
+- InvalidAccessError
+  - : 当针对提供的 key 值执行的操作无效时（例如加密算法或者 key 值无效），将会抛出该错误。
+- OperationError
+  - : 发生于由于特定于操作的原因使得操作失败时，例如算法参数的大小无效，或者 AES-GCM 明文长度超过 2³⁹−256 字节。
 
-<h2 id="支持的算法">支持的算法</h2>
+## 支持的算法
 
-<p>Crypto 接口提供了支持 <code>encrypt()</code> 和 <code>decrypt()</code> 操作的四种算法。</p>
+Crypto 接口提供了支持 `encrypt()` 和 `decrypt()` 操作的四种算法。
 
-<p>其中的 RSA-OAEP 算法是一种非对称加密的公钥密码（{{Glossary("public-key cryptography", "public-key cryptosystem")}}）。</p>
+其中的 RSA-OAEP 算法是一种非对称加密的公钥密码（{{Glossary("public-key cryptography", "public-key cryptosystem")}}）。
 
-<p>其它三种算法则都是对称密钥加密（{{Glossary("Symmetric-key cryptography", "symmetric algorithms")}}），并且它们都是基于同一种基础加密，即 AES (Advanced Encryption Standard)。它们不同之处在于分组加密的操作方式（{{Glossary("Block cipher mode of operation", "mode")}}）。Crypto 接口支持以下三种 AES 加密类型：</p>
+其它三种算法则都是对称密钥加密（{{Glossary("Symmetric-key cryptography", "symmetric algorithms")}}），并且它们都是基于同一种基础加密，即 AES (Advanced Encryption Standard)。它们不同之处在于分组加密的操作方式（{{Glossary("Block cipher mode of operation", "mode")}}）。Crypto 接口支持以下三种 AES 加密类型：
 
-<ul>
- <li>CTR (Counter Mode)</li>
- <li>CBC (Cipher Block Chaining)</li>
- <li>GCM (Galois/Counter Mode)</li>
-</ul>
+- CTR (Counter Mode)
+- CBC (Cipher Block Chaining)
+- GCM (Galois/Counter Mode)
 
-<p>这里强烈建议使用<em><strong>认证加密</strong></em>（<em>authenticated encryption</em>），它可以检测密文是否已被攻击者篡改。使用认证也可以避免<em>选择密文攻击</em>（<em>chosen-ciphertext</em> attacks），即攻击者可以请求系统解密任意的消息，然后使用解密结果来倒推出关于密钥的一些信息。虽然 CTR 和 CBC 模式可以添加认证，但是它们默认不提供该操作，并且在手动实现它们的时候，很同意犯一些微小但严重的错误。GCM 不支持内置的认证，由于这个原因，常常推荐使用另外两种  AES 加密算法。</p>
+这里强烈建议使用***认证加密***（_authenticated encryption_），它可以检测密文是否已被攻击者篡改。使用认证也可以避免*选择密文攻击*（_chosen-ciphertext_ attacks），即攻击者可以请求系统解密任意的消息，然后使用解密结果来倒推出关于密钥的一些信息。虽然 CTR 和 CBC 模式可以添加认证，但是它们默认不提供该操作，并且在手动实现它们的时候，很同意犯一些微小但严重的错误。GCM 不支持内置的认证，由于这个原因，常常推荐使用另外两种 AES 加密算法。
 
-<h3 id="RSA-OAEP">RSA-OAEP</h3>
+### RSA-OAEP
 
-<p>关于 RSA-OAEP 公钥加密算法的规范位于 <a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a>。</p>
+关于 RSA-OAEP 公钥加密算法的规范位于 [RFC 3447](https://tools.ietf.org/html/rfc3447)。
 
-<h3 id="AES-CTR">AES-CTR</h3>
+### AES-CTR
 
-<p>使用 Counter 模式的 AES 算法，相关规范位于 <a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a>。</p>
+使用 Counter 模式的 AES 算法，相关规范位于 [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final)。
 
-<h3 id="AES-CBC">AES-CBC</h3>
+### AES-CBC
 
-<p>使用 Cipher Block Chaining 模式的 AES 算法，规范位于<a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a>。</p>
+使用 Cipher Block Chaining 模式的 AES 算法，规范位于[NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final)。
 
-<h3 id="AES-GCM">AES-GCM</h3>
+### AES-GCM
 
-<p>使用 Galois/Counter 模式的 AES 算法，规范位于 <a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST SP800-38D</a>。</p>
+使用 Galois/Counter 模式的 AES 算法，规范位于 [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final)。
 
-<p>这种模式与上面的模式不同之处在于，GCM 是一种 "认证（authenticated）" 模式，意思就是它包含了检测密文是否未被攻击者篡改的功能。</p>
+这种模式与上面的模式不同之处在于，GCM 是一种 "认证（authenticated）" 模式，意思就是它包含了检测密文是否未被攻击者篡改的功能。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 你可以在 GitHub 尝试这个示例（<a href="https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html">try the working examples</a>）。</p>
-</div>
+> **备注：** 你可以在 GitHub 尝试这个示例（[try the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)）。
 
-<h3 id="RSA-OAEP_2">RSA-OAEP</h3>
+### RSA-OAEP
 
-<p>以下代码获取文本框中的内容，编码后进行加密，使用的算法为 RSA-OAEP。可以在 GitHub 查看完整代码：<a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js">See the complete code on GitHub</a>。</p>
+以下代码获取文本框中的内容，编码后进行加密，使用的算法为 RSA-OAEP。可以在 GitHub 查看完整代码：[See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js)。
 
-<pre>function getMessageEncoding() {
+```
+function getMessageEncoding() {
   const messageBox = document.querySelector(".rsa-oaep #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -107,13 +94,15 @@ function encryptMessage(publicKey) {
     publicKey,
     encoded
   );
-}</pre>
+}
+```
 
-<h3 id="AES-CTR_2">AES-CTR</h3>
+### AES-CTR
 
-<p>以下代码同样获取文本框内容，进行编码后使用 AES 的 CTR 模式加密，完整代码：<a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js">See the complete code on GitHub</a>。</p>
+以下代码同样获取文本框内容，进行编码后使用 AES 的 CTR 模式加密，完整代码：[See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js)。
 
-<pre>function getMessageEncoding() {
+```
+function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-ctr #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -134,9 +123,10 @@ function encryptMessage(key) {
     encoded
   );
 }
-</pre>
+```
 
-<pre>let iv = new Uint8array(16);
+```
+let iv = new Uint8array(16);
 let key = new Uint8array(16);
 let data = new Uint8array(12345);
 //crypto functions are wrapped in promises so we have to use await and make sure the function that
@@ -154,13 +144,15 @@ const encrypted_content = await window.crypto.subtle.encrypt(
   );
 
 //Uint8array
-console.log(encrypted_content);</pre>
+console.log(encrypted_content);
+```
 
-<h3 id="AES-CBC_2">AES-CBC</h3>
+### AES-CBC
 
-<p>使用 AES 的 CBC 模式加密，完整代码：<a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js">See the complete code on GitHub</a>。</p>
+使用 AES 的 CBC 模式加密，完整代码：[See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js)。
 
-<pre>function getMessageEncoding() {
+```
+function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-cbc #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -179,13 +171,15 @@ function encryptMessage(key) {
     key,
     encoded
   );
-}</pre>
+}
+```
 
-<h3 id="AES-GCM_2">AES-GCM</h3>
+### AES-GCM
 
-<p>使用 AES 的 GCM 模式加密，完整代码：<a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js">See the complete code on GitHub</a>。</p>
+使用 AES 的 GCM 模式加密，完整代码：[See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js)。
 
-<pre>function getMessageEncoding() {
+```
+function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-gcm #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -204,24 +198,21 @@ function encryptMessage(key) {
     key,
     encoded
   );
-}</pre>
+}
+```
 
-
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.SubtleCrypto.encrypt")}}</p>
+{{Compat("api.SubtleCrypto.encrypt")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("SubtleCrypto.decrypt()")}}.</li>
- <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSAOAEP.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a> specifies CTR mode.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a> specifies CBC mode.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST SP800-38D</a> specifies GCM mode.</li>
-</ul>
+- {{domxref("SubtleCrypto.decrypt()")}}.
+- [RFC 3447](https://tools.ietf.org/html/rfc3447) specifies RSAOAEP.
+- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CTR mode.
+- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
+- [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.

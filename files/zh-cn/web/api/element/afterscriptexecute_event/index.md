@@ -2,51 +2,43 @@
 title: Element：afterscriptexecute 事件
 slug: Web/API/Element/afterscriptexecute_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}{{Non-standard_header}}
 
-<div>{{Non-standard_header}}</div>
+> **警告：** 此事件是早期版本的规范中的一个提案。不要依赖它。
 
-<div class="warning">
-<p>此事件是早期版本的规范中的一个提案。不要依赖它。</p>
-</div>
+**`afterscriptexecute`** 事件在一个脚本执行完毕后触发。
 
-<p><strong><code>afterscriptexecute</code></strong> 事件在一个脚本执行完毕后触发。</p>
-
-<p>这是一个 Gecko（Firefox）特有的私有事件。</p>
+这是一个 Gecko（Firefox）特有的私有事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">是否冒泡</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">是否可取消</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件处理器属性</th>
-   <td>无</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">是否冒泡</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">是否可取消</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理器属性</th>
+      <td>无</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何规范。</p>
+不属于任何规范。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Element.afterscriptexecute_event")}}
 
+## 参见
 
-<p>{{Compat("api.Element.afterscriptexecute_event")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><code><a href="/zh-CN/docs/Web/API/Element/beforescriptexecute_event">beforescriptexecute</a></code> 事件</li>
-</ul>
+- [`beforescriptexecute`](/zh-CN/docs/Web/API/Element/beforescriptexecute_event) 事件

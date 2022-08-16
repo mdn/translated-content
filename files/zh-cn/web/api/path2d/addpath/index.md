@@ -2,31 +2,31 @@
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p><code style="font-style: normal;"><strong>Path2D</strong></code><strong><code>.addPath()</code></strong> 是 Canvas 2D API 根据指定路径变量添加路径的方法。</p>
+**`Path2D.addPath()`** 是 Canvas 2D API 根据指定路径变量添加路径的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>path</em>.addPath(path [, transform]);</var>
-</pre>
+```
+void path.addPath(path [, transform]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>path</code></dt>
- <dd>需要添加的 {{domxref("Path2D")}} 路径。</dd>
- <dt><code>transform</code> {{optional_inline}}</dt>
- <dd>{{domxref("SVGMatrix")}} 作为新增路径的变换矩阵。</dd>
-</dl>
+- `path`
+  - : 需要添加的 {{domxref("Path2D")}} 路径。
+- `transform` {{optional_inline}}
+  - : {{domxref("SVGMatrix")}} 作为新增路径的变换矩阵。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_addPath_方法">使用 <code>addPath</code> 方法</h3>
+### 使用 `addPath` 方法
 
-<p>这是一段使用 <code>addPath</code> 方法的简单的代码片段。</p>
+这是一段使用 `addPath` 方法的简单的代码片段。
 
-<pre class="brush: js; highlight:[19]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // Create a new path with a rect
@@ -48,19 +48,17 @@ p1.addPath(p2, m);
 
 // Finally, fill the first path onto the canvas
 ctx.fill(p1);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化 (查看浏览器兼容性列表，确定你目前的浏览器是否支持这个方法)：</p>
+修改下面的代码并在线查看 canvas 的变化 (查看浏览器兼容性列表，确定你目前的浏览器是否支持这个方法)：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:220px;"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:220px;">
 var p1 = new Path2D();
 p1.rect(0,0,100,100);
 
@@ -73,10 +71,11 @@ m.c = 0; m.d = 1;
 m.e = 300; m.f = 0;
 
 p1.addPath(p2, m);
-ctx.fill(p1);&lt;/textarea&gt;
-</pre>
+ctx.fill(p1);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -99,21 +98,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 500) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Path2D.addPath")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("Path2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("Path2D")}}.

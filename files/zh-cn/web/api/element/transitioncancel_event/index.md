@@ -2,57 +2,54 @@
 title: GlobalEventHandlers.ontransitioncancel
 slug: Web/API/Element/transitioncancel_event
 ---
-<div>{{APIRef("CSS3 Transitions")}}</div>
+{{APIRef("CSS3 Transitions")}}
 
-<p>{{domxref("GlobalEventHandlers")}}混合 的 <code><strong>ontransitioncancel</strong></code>  属性 是处理 {{event("transitioncancel")}} 事件的手柄{{event("Event_handlers", "event handler")}}.</p>
+{{domxref("GlobalEventHandlers")}}混合 的 **`ontransitioncancel`** 属性 是处理 {{event("transitioncancel")}} 事件的手柄{{event("Event_handlers", "event handler")}}.
 
-<div class="blockIndicator note">
-<p>domxref("GlobalEventHandlers") 与 event("Event_handlers", "event handler")： dom 修订版本的事件手柄。</p>
+> **备注：** domxref("GlobalEventHandlers") 与 event("Event_handlers", "event handler")： dom 修订版本的事件手柄。
+>
+> event("transitioncancel")：transitioncancel 事件
 
-<p>event("transitioncancel")：transitioncancel 事件</p>
-</div>
+当 CSS 转换被取消时，transitioncancel 事件被触发。当以下情况时，过渡被取消::
 
-<p>当 CSS 转换被取消时，transitioncancel 事件被触发。当以下情况时，过渡被取消::</p>
+- 应用于目标的{{cssxref("transition-property")}}属性的值被更改
+- {{cssxref("display")}}属性被设置为"none"。
+- 转换在运行到完成之前就停止了，例如通过将鼠标移出悬浮过渡元素。
 
-<ul>
- <li>应用于目标的{{cssxref("transition-property")}}属性的值被更改</li>
- <li>{{cssxref("display")}}属性被设置为"none"。</li>
- <li>转换在运行到完成之前就停止了，例如通过将鼠标移出悬浮过渡元素。</li>
-</ul>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+var transitionCancelHandler = target.ontransitioncancel;
 
-<pre class="syntaxbox">var <em>transitionCancelHandler</em> = <em>target</em>.ontransitioncancel;
+target.ontransitioncancel = {{jsxref("Function")}}
+```
 
-<em>target</em>.ontransitioncancel = <em>{{jsxref("Function")}}</em>
-</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+A {{jsxref("Function")}} to be called when a {{event("transitioncancel")}} event occurs indicating that a CSS transition has been cancelled on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: a {{domxref("TransitionEvent")}} object describing the event which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of {{cssxref("transition-duration")}}.
 
-<p>A {{jsxref("Function")}} to be called when a {{event("transitioncancel")}} event occurs indicating that a CSS transition has been cancelled on the <em><code>target</code></em>, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: a {{domxref("TransitionEvent")}} object describing the event which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of {{cssxref("transition-duration")}}.</p>
+> **备注：** elapsedTime 不包括过渡效果开始之前的时间;这意味着{{cssxref("transition-delay")}}的值不会影响 elapsedTime 的值，elapsedTime 在延迟周期结束和动画开始之前都是 0。
 
-<div class="note">
-<p><strong>Note</strong>: elapsedTime 不包括过渡效果开始之前的时间;这意味着{{cssxref("transition-delay")}}的值不会影响 elapsedTime 的值，elapsedTime 在延迟周期结束和动画开始之前都是 0。</p>
-</div>
+## Example
 
-<h2 id="Example">Example</h2>
+在本例中，我们使用{{event("transitionrun")}}和{{event("transitionend")}}事件来检测转换何时开始和结束，从而导致在转换期间发生文本更新。这也可以用来触发动画或其他效果，以允许连锁反应。
 
-<p>在本例中，我们使用{{event("transitionrun")}}和{{event("transitionend")}}事件来检测转换何时开始和结束，从而导致在转换期间发生文本更新。这也可以用来触发动画或其他效果，以允许连锁反应。</p>
+除此之外，我们也使用 {{event("click")}} 事件使盒子消失 (`display: none;`), 显示如何触发 {{event("transitioncancel")}} 事件。
 
-<p>除此之外，我们也使用 {{event("click")}} 事件使盒子消失 (<code>display: none;</code>), 显示如何触发 {{event("transitioncancel")}} 事件。</p>
+### HTML content
 
-<h3 id="HTML_content">HTML content</h3>
+这只是简单地创建了一个{{HTMLElement("div")}}，我们将在下面用 CSS 样式使其成为一个框，调整大小和改变颜色等。
 
-<p>这只是简单地创建了一个{{HTMLElement("div")}}，我们将在下面用 CSS 样式使其成为一个框，调整大小和改变颜色等。</p>
+```html
+<div class="box"></div>
+```
 
-<pre class="brush: html;">&lt;div class="box"&gt;&lt;/div&gt;
-</pre>
+### CSS content
 
-<h3 id="CSS_content">CSS content</h3>
+下面的 CSS 样式框和应用一个过渡效果，使框的颜色和大小改变，并导致框旋转，而鼠标光标在它上面。
 
-<p>下面的 CSS 样式框和应用一个过渡效果，使框的颜色和大小改变，并导致框旋转，而鼠标光标在它上面。</p>
-
-<pre class="brush: css; highlight:[13,14]">.box {
+```css
+.box {
   margin-left: 70px;
   margin-top: 30px;
   border-style: solid;
@@ -76,13 +73,14 @@ slug: Web/API/Element/transitioncancel_event
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-</pre>
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<p>然后，我们需要建立事件处理程序，以便在转换开始和结束时更改框的文本内容。</p>
+然后，我们需要建立事件处理程序，以便在转换开始和结束时更改框的文本内容。
 
-<pre class="brush: js">let box = document.querySelector(".box");
+```js
+let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
   box.innerHTML = "Zooming...";
 }
@@ -93,41 +91,37 @@ box.ontransitionend = function(event) {
 
 box.onclick = function() {
   box.style.display = 'none';
-  <code class="language-js">timeout = window.setTimeout(appear, 2000);
+  timeout = window.setTimeout(appear, 2000);
   function appear() {
-    </code>box.style.display = 'block';
-<code class="language-js">  }</code>
+    box.style.display = 'block';
+  }
 }
 
 box.ontransitioncancel = function(event) {
-  console.log('transitioncancel fired after ' + event.<code>elapsedTime + ' seconds.'</code>);
+  console.log('transitioncancel fired after ' + event.elapsedTime + ' seconds.');
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>The resulting content looks like this:</p>
+The resulting content looks like this:
 
-<p>{{EmbedLiveSample('Example', 600, 280)}}</p>
+{{EmbedLiveSample('Example', 600, 280)}}
 
-<p>Notice what happens when you hover your mouse cursor over the box, then move it away.</p>
+Notice what happens when you hover your mouse cursor over the box, then move it away.
 
-<p>Also note the log that appears in the JavaScript console when you click the box, or move the cursor away before the transition has run to completion.</p>
+Also note the log that appears in the JavaScript console when you click the box, or move the cursor away before the transition has run to completion.
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{event("transitioncancel")}} event this event handler is triggered by</li>
- <li>{{domxref("TransitionEvent")}}</li>
- <li>The {{event("transitionrun")}} event, which occurs when the transition begins</li>
-</ul>
+- The {{event("transitioncancel")}} event this event handler is triggered by
+- {{domxref("TransitionEvent")}}
+- The {{event("transitionrun")}} event, which occurs when the transition begins

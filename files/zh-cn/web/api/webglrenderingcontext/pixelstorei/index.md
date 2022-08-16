@@ -2,196 +2,77 @@
 title: WebGLRenderingContext.pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.pixelStorei()</code></strong> 是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中用于图像预处理的函数。</p>
+**`WebGLRenderingContext.pixelStorei()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中用于图像预处理的函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.pixelStorei(<var>pname</var>, <var>param</var>);
-</pre>
+```
+void gl.pixelStorei(pname, param);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>pname</dt>
- <dd> {{domxref("Glenum")}} 类型 ，表示处理的方式。关于该参数可选值，请见下面表格。</dd>
- <dt>param</dt>
- <dd> {{domxref("GLint")}}  类型，表示 pname 处理方式的参数。关于该参数可选值，请见下面表格。</dd>
-</dl>
+- pname
+  - : {{domxref("Glenum")}} 类型 ，表示处理的方式。关于该参数可选值，请见下面表格。
+- param
+  - : {{domxref("GLint")}} 类型，表示 pname 处理方式的参数。关于该参数可选值，请见下面表格。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<h2 id="像素存储参数">像素存储参数</h2>
+## 像素存储参数
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">模式名称 (<code>pname</code>)</th>
-   <th scope="col">描述</th>
-   <th scope="col">类型</th>
-   <th scope="col">默认值</th>
-   <th scope="col"> param 的可选值</th>
-   <th scope="col">Specified in</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>gl.PACK_ALIGNMENT</code></td>
-   <td>Packing of pixel data into memory</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>4</td>
-   <td>1, 2, 4, 8</td>
-   <td>OpenGL ES 2.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_ALIGNMENT</code></td>
-   <td>Unpacking of pixel data from memory.</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>4</td>
-   <td>1, 2, 4, 8</td>
-   <td>OpenGL ES 2.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_FLIP_Y_WEBGL</code></td>
-   <td>
-    <p>如果为 true，则把图片上下对称翻转坐标轴 (图片本身不变)。</p>
-   </td>
-   <td>{{domxref("GLboolean")}}</td>
-   <td>false</td>
-   <td>true, false</td>
-   <td>WebGL</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL</code></td>
-   <td>Multiplies the alpha channel into the other color channels</td>
-   <td>{{domxref("GLboolean")}}</td>
-   <td>false</td>
-   <td>true, false</td>
-   <td>WebGL</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_COLORSPACE_CONVERSION_WEBGL</code></td>
-   <td>Default color space conversion or no color space conversion.</td>
-   <td>{{domxref("GLenum")}}</td>
-   <td><code>gl.BROWSER_DEFAULT_WEBGL</code></td>
-   <td><code>gl.BROWSER_DEFAULT_WEBGL</code>, <code>gl.NONE</code></td>
-   <td>WebGL</td>
-  </tr>
- </tbody>
-</table>
+| 模式名称 (`pname`)                      | 描述                                                         | 类型                             | 默认值                     | param 的可选值                        | Specified in  |
+| --------------------------------------- | ------------------------------------------------------------ | -------------------------------- | -------------------------- | ------------------------------------- | ------------- |
+| `gl.PACK_ALIGNMENT`                     | Packing of pixel data into memory                            | {{domxref("GLint")}}     | 4                          | 1, 2, 4, 8                            | OpenGL ES 2.0 |
+| `gl.UNPACK_ALIGNMENT`                   | Unpacking of pixel data from memory.                         | {{domxref("GLint")}}     | 4                          | 1, 2, 4, 8                            | OpenGL ES 2.0 |
+| `gl.UNPACK_FLIP_Y_WEBGL`                | 如果为 true，则把图片上下对称翻转坐标轴 (图片本身不变)。     | {{domxref("GLboolean")}} | false                      | true, false                           | WebGL         |
+| `gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL`     | Multiplies the alpha channel into the other color channels   | {{domxref("GLboolean")}} | false                      | true, false                           | WebGL         |
+| `gl.UNPACK_COLORSPACE_CONVERSION_WEBGL` | Default color space conversion or no color space conversion. | {{domxref("GLenum")}}     | `gl.BROWSER_DEFAULT_WEBGL` | `gl.BROWSER_DEFAULT_WEBGL`, `gl.NONE` | WebGL         |
 
-<p>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:</p>
+When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-   <th scope="col">Type</th>
-   <th scope="col">Default value</th>
-   <th scope="col">Allowed values (for <code>param</code>)</th>
-   <th scope="col">Specified in</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>gl.PACK_ROW_LENGTH</code></td>
-   <td>Number of pixels in a row.</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.PACK_SKIP_PIXELS</code></td>
-   <td>Number of pixel locations skipped before the first pixel is written into memory.</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.PACK_SKIP_ROWS</code></td>
-   <td>Number of rows of pixel locations skipped before the first pixel is written into memory</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_ROW_LENGTH</code></td>
-   <td>Number of pixels in a row.</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_IMAGE_HEIGHT</code></td>
-   <td>Image height used for reading pixel data from memory</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_SKIP_PIXELS</code></td>
-   <td>Number of pixel images skipped before the first pixel is read from memory</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_SKIP_ROWS</code></td>
-   <td>Number of rows of pixel locations skipped before the first pixel is read from memory</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td><code>gl.UNPACK_SKIP_IMAGES</code></td>
-   <td>Number of pixel images skipped before the first pixel is read from memory</td>
-   <td>{{domxref("GLint")}}</td>
-   <td>0</td>
-   <td>0 to <code>Infinity</code></td>
-   <td>OpenGL ES 3.0</td>
-  </tr>
- </tbody>
-</table>
+| Constant                 | Description                                                                             | Type                         | Default value | Allowed values (for `param`) | Specified in  |
+| ------------------------ | --------------------------------------------------------------------------------------- | ---------------------------- | ------------- | ---------------------------- | ------------- |
+| `gl.PACK_ROW_LENGTH`     | Number of pixels in a row.                                                              | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
+| `gl.PACK_SKIP_PIXELS`    | Number of pixel locations skipped before the first pixel is written into memory.        | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
+| `gl.PACK_SKIP_ROWS`      | Number of rows of pixel locations skipped before the first pixel is written into memory | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
+| `gl.UNPACK_ROW_LENGTH`   | Number of pixels in a row.                                                              | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
+| `gl.UNPACK_IMAGE_HEIGHT` | Image height used for reading pixel data from memory                                    | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
+| `gl.UNPACK_SKIP_PIXELS`  | Number of pixel images skipped before the first pixel is read from memory               | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
+| `gl.UNPACK_SKIP_ROWS`    | Number of rows of pixel locations skipped before the first pixel is read from memory    | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
+| `gl.UNPACK_SKIP_IMAGES`  | Number of pixel images skipped before the first pixel is read from memory               | {{domxref("GLint")}} | 0             | 0 to `Infinity`              | OpenGL ES 3.0 |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Setting the pixel storage mode affects the {{domxref("WebGLRenderingContext.readPixels()")}} operations, as well as unpacking of textures with the {{domxref("WebGLRenderingContext.texImage2D()")}} and {{domxref("WebGLRenderingContext.texSubImage2D()")}} methods.<br>
-  </p>
+Setting the pixel storage mode affects the {{domxref("WebGLRenderingContext.readPixels()")}} operations, as well as unpacking of textures with the {{domxref("WebGLRenderingContext.texImage2D()")}} and {{domxref("WebGLRenderingContext.texSubImage2D()")}} methods.
 
-<pre class="brush: js">var tex = gl.createTexture();
+```js
+var tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
 gl.pixelStorei(gl.PACK_ALIGNMENT, 4);
-</pre>
+```
 
-<p>To check the values for packing and unpacking of pixel data, you can query the same pixel storage parameters with {{domxref("WebGLRenderingContext.getParameter()")}}.</p>
+To check the values for packing and unpacking of pixel data, you can query the same pixel storage parameters with {{domxref("WebGLRenderingContext.getParameter()")}}.
 
-<pre class="brush: js">gl.getParameter(gl.PACK_ALIGNMENT);
+```js
+gl.getParameter(gl.PACK_ALIGNMENT);
 gl.getParameter(gl.UNPACK_ALIGNMENT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.pixelStorei")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.pixelStorei")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.readPixels()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.readPixels()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}

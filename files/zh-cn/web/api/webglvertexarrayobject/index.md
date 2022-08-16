@@ -2,43 +2,39 @@
 title: WebGLVertexArrayObject
 slug: Web/API/WebGLVertexArrayObject
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLVertexArrayObject</code></strong>接口是<a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a>的一部分，顶点数组对象 (VAOs) 指向顶点数组数据，并提供不同顶点数据集合的名称。</p>
+**`WebGLVertexArrayObject`**接口是[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API)的一部分，顶点数组对象 (VAOs) 指向顶点数组数据，并提供不同顶点数据集合的名称。
 
-<p>当使用<code>WebGLVertexArrayObject</code>对象时，这些方法会很有用：</p>
+当使用`WebGLVertexArrayObject`对象时，这些方法会很有用：
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.createVertexArray()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.deleteVertexArray()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.isVertexArray()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.bindVertexArray()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.createVertexArray()")}}
+- {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
+- {{domxref("WebGL2RenderingContext.isVertexArray()")}}
+- {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
 
-<div class="note">
-<p><strong>WebGL 1:</strong>  {{domxref("OES_vertex_array_object")}} 扩展允许你在 WebGL 1 上下文环境中使用顶点数组对象。</p>
-</div>
+> **备注：** **WebGL 1:** {{domxref("OES_vertex_array_object")}} 扩展允许你在 WebGL 1 上下文环境中使用顶点数组对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var vao = gl.createVertexArray();
+```js
+var vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // ...
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...</pre>
+// ...
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLVertexArrayObject")}}</p>
+{{Compat("api.WebGLVertexArrayObject")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("OES_vertex_array_object")}}</li>
-</ul>
+- {{domxref("OES_vertex_array_object")}}

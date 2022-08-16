@@ -2,72 +2,70 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p>只读的<code>localStorage</code> 属性允许你访问一个{{domxref("Document")}} 源（origin）的对象 {{domxref("Storage")}}；存储的数据将保存在浏览器会话中。<code>localStorage</code> 类似 {{DOMxRef("Window.sessionStorage", "sessionStorage")}}，但其区别在于：存储在 <code>localStorage</code> 的数据可以长期保留；而当页面会话结束——也就是说，当页面被关闭时，存储在 <code>sessionStorage</code> 的数据会被清除 。</p>
+只读的`localStorage` 属性允许你访问一个{{domxref("Document")}} 源（origin）的对象 {{domxref("Storage")}}；存储的数据将保存在浏览器会话中。`localStorage` 类似 {{DOMxRef("Window.sessionStorage", "sessionStorage")}}，但其区别在于：存储在 `localStorage` 的数据可以长期保留；而当页面会话结束——也就是说，当页面被关闭时，存储在 `sessionStorage` 的数据会被清除 。
 
-<p>应注意，无论数据存储在 <code>localStorage</code> 还是 <code>sessionStorage</code> ，<strong>它们都特定于页面的协议。</strong></p>
+应注意，无论数据存储在 `localStorage` 还是 `sessionStorage` ，**它们都特定于页面的协议。**
 
-<p>另外，<code>localStorage</code> 中的键值对总是以字符串的形式存储。 (需要注意，和 js 对象相比，键值对总是以字符串的形式存储意味着数值类型会自动转化为字符串类型).</p>
+另外，`localStorage` 中的键值对总是以字符串的形式存储。 (需要注意，和 js 对象相比，键值对总是以字符串的形式存储意味着数值类型会自动转化为字符串类型).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">myStorage = localStorage;</pre>
+```js
+myStorage = localStorage;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个可被用于访问当前源（ origin ）的本地存储空间的 {{domxref("Storage")}} 对象。</p>
+一个可被用于访问当前源（ origin ）的本地存储空间的 {{domxref("Storage")}} 对象。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt><code>SecurityError</code></dt>
- <dd>请求违反了一个策略声明，或者源（ origin ）不是 <a href="/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">一个有效的 scheme/host/port tuple</a> （例如如果 origin 使用 <code>file:</code> 或者 <code>data:</code> 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。</dd>
-</dl>
+- `SecurityError`
+  - : 请求违反了一个策略声明，或者源（ origin ）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的代码片段访问了当前域名下的本地 {{domxref("Storage")}} 对象，并通过 {{domxref("Storage.setItem()")}} 增加了一个数据项目。</p>
+下面的代码片段访问了当前域名下的本地 {{domxref("Storage")}} 对象，并通过 {{domxref("Storage.setItem()")}} 增加了一个数据项目。
 
-<pre class="brush: js">localStorage.setItem('myCat', 'Tom');
-</pre>
+```js
+localStorage.setItem('myCat', 'Tom');
+```
 
-<p>该语法用于读取 <code>localStorage</code> 项，如下：</p>
+该语法用于读取 `localStorage` 项，如下：
 
-<pre class="brush: js">let cat = localStorage.getItem('myCat');
-</pre>
+```js
+let cat = localStorage.getItem('myCat');
+```
 
-<p>该语法用于移除 <code>localStorage</code> 项，如下：</p>
+该语法用于移除 `localStorage` 项，如下：
 
-<pre class="brush: js">localStorage.removeItem('myCat');
-</pre>
+```js
+localStorage.removeItem('myCat');
+```
 
-<p>该语法用于移除所有的 <code>localStorage</code> 项，如下：</p>
+该语法用于移除所有的 `localStorage` 项，如下：
 
-<pre class="brush: js">// 移除所有
+```js
+// 移除所有
 localStorage.clear();
-</pre>
+```
 
-<div class="note">
-<p><strong>注意</strong>: 请参考 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> 的完整示例文章。</p>
-</div>
+> **备注：** 请参考 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 的完整示例文章。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Window.localStorage")}}
 
+## 参见
 
-<p>{{Compat("api.Window.localStorage")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web Storage API</a></li>
- <li><a href="/zh-CN/docs/Web/API/Web_Storage_API/Local_storage">Local storage（Window.localStorage）</a></li>
- <li>{{domxref("LocalStorage")}}</li>
- <li>{{domxref("SessionStorage")}}</li>
- <li>{{domxref("Window.sessionStorage")}}</li>
-</ul>
+- [使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Local storage（Window.localStorage）](/zh-CN/docs/Web/API/Web_Storage_API/Local_storage)
+- {{domxref("LocalStorage")}}
+- {{domxref("SessionStorage")}}
+- {{domxref("Window.sessionStorage")}}

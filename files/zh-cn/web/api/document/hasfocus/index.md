@@ -2,33 +2,35 @@
 title: document.hasFocus
 slug: Web/API/Document/hasFocus
 ---
-<p>{{ ApiRef }}</p>
+{{ ApiRef }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p><code><strong>Document.hasFocus()</strong></code> 方法返回一个 {{jsxref("Boolean")}}，表明当前文档或者当前文档内的节点是否获得了焦点。该方法可以用来判断当前文档中的活动元素是否获得了焦点。</p>
+**`Document.hasFocus()`** 方法返回一个 {{jsxref("Boolean")}}，表明当前文档或者当前文档内的节点是否获得了焦点。该方法可以用来判断当前文档中的活动元素是否获得了焦点。
 
-<div class="note">当查看一个文档时，当前文档中获得焦点的元素一定是当前文档的活动元素，但一个文档中的活动元素不一定获得了焦点.。例如， 一个在后台的窗口中的活动元素一定没有获得焦点。</div>
+> **备注：** 当查看一个文档时，当前文档中获得焦点的元素一定是当前文档的活动元素，但一个文档中的活动元素不一定获得了焦点.。例如， 一个在后台的窗口中的活动元素一定没有获得焦点。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval">focused = document.hasFocus();
-</pre>
+```
+focused = document.hasFocus();
+```
 
-<h4 id="返回值">返回值</h4>
+#### 返回值
 
-<p>如果当前文档的活动元素获得了焦点，返回 <code>true</code>，否则返回 false。</p>
+如果当前文档的活动元素获得了焦点，返回 `true`，否则返回 false。
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="brush: js">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style type='text/css'&gt;
+```js
+<!DOCTYPE html>
+<html>
+<head>
+  <style type='text/css'>
     #message { font-weight: bold; }
-  &lt;/style&gt;
+  </style>
 
-&lt;script type='text/javascript'&gt;
+<script type='text/javascript'>
       setInterval("CheckPageFocus()", 200);
 
       function CheckPageFocus() {
@@ -42,20 +44,20 @@ slug: Web/API/Document/hasFocus
       }
 
     function OpenWindow() {
-           window.open ("<a href="/">http://developer.mozilla.org/</a>", "mozdev",
+           window.open ("http://developer.mozilla.org/", "mozdev",
                      "width=640, height=300, left=150, top=260");
     }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
- document.hasFocus 演示&lt;br /&gt;&lt;br /&gt;
-&lt;div id="message"&gt;等待用户操作&lt;/div&gt;&lt;br /&gt;
-&lt;button onclick="OpenWindow()"&gt;打开一个新窗口&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body>
+ document.hasFocus 演示<br /><br />
+<div id="message">等待用户操作</div><br />
+<button onclick="OpenWindow()">打开一个新窗口</button>
+</body>
+</html>
+```
 
-<h3 id="浏览器兼容性">浏览器兼容性</h3>
+### 浏览器兼容性
 
 {{Compat("api.Document.hasFocus")}}

@@ -2,49 +2,45 @@
 title: VideoPlaybackQuality.totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 ---
-<pre><em>videoPlaybackQuality 的</em><strong>totalVideoFrames 属性为一个只读属性，用于表述已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数</strong></pre>
+```
+videoPlaybackQuality 的totalVideoFrames 属性为一个只读属性，用于表述已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数
+```
 
+## Syntax
 
+```
+value = videoPlaybackQuality.totalVideoFrames;
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Value
 
-<pre class="syntaxbox"><em>value</em> = <em>videoPlaybackQuality</em>.totalVideoFrames;</pre>
+video 容器**已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数，本质上讲，这个总数是指没有发生播放异常问题下的数目。**
 
-<h3 id="Value">Value</h3>
+## Example
 
-<p>video 容器<strong>已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数，本质上讲，这个总数是指没有发生播放异常问题下的数目。</strong></p>
+下面的例子想要表述的是通过已经丢弃（丢帧）或者播放异常的帧数总和占 totalVideoFrames 的比例超过 10%，则触发一个例如名为 lostFramesThresholdExceeded 的回调函数以反应我们当前视频资源丢帧已经播放异常的程度，从而帮助业务进行调整
 
-<h2 id="Example">Example</h2>
-
-<p>下面的例子想要表述的是通过已经丢弃（丢帧）或者播放异常的帧数总和占 totalVideoFrames 的比例超过 10%，则触发一个例如名为 lostFramesThresholdExceeded 的回调函数以反应我们当前视频资源丢帧已经播放异常的程度，从而帮助业务进行调整</p>
-
-<pre class="brush: js">var videoElem = document.getElementById("my_vid");
+```js
+var videoElem = document.getElementById("my_vid");
 var quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames &gt; 0.1) {
+if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
   lostFramesThresholdExceeded();
-}</pre>
+}
+```
 
+```
+触发回调函数后，我们可以使用一些算法来尝试切换到需要较少带宽，码率低的，较低分辨率视频，以避免丢帧。
+```
 
-
-<pre dir="ltr" id="tw-target-text">触发回调函数后，我们可以使用一些算法来尝试切换到需要较少带宽，码率低的，较低分辨率视频，以避免丢帧。</pre>
-
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.VideoPlaybackQuality.totalVideoFrames")}}
 
+## See also
 
-<p>{{Compat("api.VideoPlaybackQuality.totalVideoFrames")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for constructing and returning this interface.</li>
-</ul>
+- The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for constructing and returning this interface.

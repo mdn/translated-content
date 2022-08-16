@@ -2,57 +2,55 @@
 title: EffectTiming.easing
 slug: Web/API/KeyframeEffect/KeyframeEffect
 ---
-<div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>这个{{domxref("EffectTiming")}} 词的 <strong><code>easing</code></strong> 属性在 <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> 指定用于缩放时间以产生缓和效果的计时函数，<em>easing</em> 是动画随时间变化的速率。</p>
+这个{{domxref("EffectTiming")}} 词的 **`easing`** 属性在 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 指定用于缩放时间以产生缓和效果的计时函数，_easing_ 是动画随时间变化的速率。
 
-<div class="note">
-<p>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} all accept an object of timing properties including <code>easing</code>. The value of easing corresponds directly to {{domxref("AnimationEffectTimingReadOnly.easing")}} in {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and {{domxref("KeyframeEffect")}}.</p>
-</div>
+> **备注：** {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} all accept an object of timing properties including `easing`. The value of easing corresponds directly to {{domxref("AnimationEffectTimingReadOnly.easing")}} in {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and {{domxref("KeyframeEffect")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <em>timingProperties</em> = {
+```
+var timingProperties = {
   easing: {{cssxref("single-transition-timing-function")}}
 }
 
-<em>timingProperties</em>.easing = {{cssxref("single-transition-timing-function")}}
-</pre>
+timingProperties.easing = {{cssxref("single-transition-timing-function")}}
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string defining the timing function to use for easing transitions during the animation process. Accepts several pre-defined {{domxref("DOMString")}} values, a <code>steps()</code> timing function like <code>steps(5, end)</code>, or a custom <code>cubic-bezier</code> value like <code>cubic-bezier(0.42, 0, 0.58, 1)</code>. Defaults to <code>linear</code>. Available values include:</p>
+A string defining the timing function to use for easing transitions during the animation process. Accepts several pre-defined {{domxref("DOMString")}} values, a `steps()` timing function like `steps(5, end)`, or a custom `cubic-bezier` value like `cubic-bezier(0.42, 0, 0.58, 1)`. Defaults to `linear`. Available values include:
 
-<dl>
- <dt><code>linear</code></dt>
- <dd>A constant rate of change, neither accelerating nor deccelerating. </dd>
- <dt><code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code></dt>
- <dd><img alt="A diagram showing the points of a cubic bezier timing function." src="https://www.w3.org/TR/css-timing-1/cubic-bezier-timing-curve.svg" style="height: 150px; width: 400px;"><br>
- Specifies <a href="https://w3c.github.io/web-animations/#cubic-bzier-timing-function">a cubic Bézier timing function</a>. The four numbers specify points P1 and P2 of the curve as (x1, y1, x2, y2). Both x values must be in the range [0, 1] or the definition is invalid.</dd>
- <dt><code>ease</code></dt>
- <dd>A decelerated rate of change, going from fast to slow. Equivalent to <code>cubic-bezier(0.25, 0.1, 0.25, 1)</code>.</dd>
- <dt><code>ease-in</code></dt>
- <dd>An accelerated rate of change, going from slow to fast. Equivalent to <code>cubic-bezier(0.42, 0, 1, 1)</code>.</dd>
- <dt><code>ease-out</code></dt>
- <dd>变化速率变慢了，从快到慢， 等价于<code>cubic-bezier(0, 0, 0.58, 1)</code>.</dd>
- <dt><code>ease-in-out</code></dt>
- <dd>This rate of change speeds up in the middle. Equivalent to <code>cubic-bezier(0.42, 0, 0.58, 1)</code>.</dd>
- <dt><code>frames(&lt;integer&gt;)</code></dt>
- <dd>Specifies a <a href="https://www.w3.org/TR/css-timing-1/#frames-timing-functions">frames timing function</a>, which breaks the animation down into a number of equal time intervals but also displays the start (0%) and end (100%) states for an equal amount of time to the other intervals. The browser flips to a different static frame when each interval is reached, rather than animating smoothly. See GitHub for a <a href="https://mdn.github.io/css-examples/animation-frames-timing-function/index-waa.html">simple example</a> that illustrates the difference between <code>steps()</code> and <code>frames()</code>.</dd>
- <dt><code>steps(&lt;integer&gt;[, [ start | end ] ]?)</code></dt>
- <dd><img alt="A diagram of the various steps timing functions." src="https://www.w3.org/TR/css-timing-1/step-timing-func-examples.svg" style="height: 238px; width: 500px;"><br>
- Specifies <a href="https://w3c.github.io/web-animations/#step-timing-function">a step timing function</a>, which breaks the animation down into a number of equal time intervals. The browser flips to a different static frame when each interval is reached, rather than animating smoothly. The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0). The second parameter, which is optional, specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value end.</dd>
- <dt><code>step-start</code></dt>
- <dd>Equivalent to <code>steps(1, start)</code></dd>
- <dt><code>step-end</code></dt>
- <dd>Equivalent to <code>steps(1, end)</code>.</dd>
-</dl>
+- `linear`
+  - : A constant rate of change, neither accelerating nor deccelerating.
+- `cubic-bezier(<number>, <number>, <number>, <number>)`
+  - : ![A diagram showing the points of a cubic bezier timing function.](https://www.w3.org/TR/css-timing-1/cubic-bezier-timing-curve.svg)
+    Specifies [a cubic Bézier timing function](https://w3c.github.io/web-animations/#cubic-bzier-timing-function). The four numbers specify points P1 and P2 of the curve as (x1, y1, x2, y2). Both x values must be in the range \[0, 1] or the definition is invalid.
+- `ease`
+  - : A decelerated rate of change, going from fast to slow. Equivalent to `cubic-bezier(0.25, 0.1, 0.25, 1)`.
+- `ease-in`
+  - : An accelerated rate of change, going from slow to fast. Equivalent to `cubic-bezier(0.42, 0, 1, 1)`.
+- `ease-out`
+  - : 变化速率变慢了，从快到慢， 等价于`cubic-bezier(0, 0, 0.58, 1)`.
+- `ease-in-out`
+  - : This rate of change speeds up in the middle. Equivalent to `cubic-bezier(0.42, 0, 0.58, 1)`.
+- `frames(<integer>)`
+  - : Specifies a [frames timing function](https://www.w3.org/TR/css-timing-1/#frames-timing-functions), which breaks the animation down into a number of equal time intervals but also displays the start (0%) and end (100%) states for an equal amount of time to the other intervals. The browser flips to a different static frame when each interval is reached, rather than animating smoothly. See GitHub for a [simple example](https://mdn.github.io/css-examples/animation-frames-timing-function/index-waa.html) that illustrates the difference between `steps()` and `frames()`.
+- `steps(<integer>[, [ start | end ] ]?)`
+  - : ![A diagram of the various steps timing functions.](https://www.w3.org/TR/css-timing-1/step-timing-func-examples.svg)
+    Specifies [a step timing function](https://w3c.github.io/web-animations/#step-timing-function), which breaks the animation down into a number of equal time intervals. The browser flips to a different static frame when each interval is reached, rather than animating smoothly. The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0). The second parameter, which is optional, specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value end.
+- `step-start`
+  - : Equivalent to `steps(1, start)`
+- `step-end`
+  - : Equivalent to `steps(1, end)`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010">Red Queen's Race</a> example, we animate Alice and the Red Queen by passing an easing <code>of steps(7, end)</code> to <code>animate()</code>:</p>
+In the [Red Queen's Race](http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010) example, we animate Alice and the Red Queen by passing an easing `of steps(7, end)` to `animate()`:
 
-<pre class="brush: js notranslate">// Define the key frames
+```js
+// Define the key frames
 var spriteFrames = [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-100%)' }
@@ -69,21 +67,20 @@ spriteFrames, {
   duration: 600,
   playbackRate: 1,
   iterations: Infinity
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("AnimationEffect.updateTiming()")}} all accept an object of timing properties including this one.</li>
- <li>The value of this property corresponds to the one in {{domxref("EffectTiming")}} (which is returned from {{domxref("AnimationEffect.getTiming()")}} and {{domxref("AnimationEffect.getComputedTiming()")}}).</li>
- <li>CSS's <code><a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a></code> and <code><a href="/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</a></code>.</li>
-</ul>
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("AnimationEffect.updateTiming()")}} all accept an object of timing properties including this one.
+- The value of this property corresponds to the one in {{domxref("EffectTiming")}} (which is returned from {{domxref("AnimationEffect.getTiming()")}} and {{domxref("AnimationEffect.getComputedTiming()")}}).
+- CSS's [`animation-timing-function`](/en-US/docs/Web/CSS/animation-timing-function) and [`transition-timing-function`](/en-US/docs/Web/CSS/transition-timing-function).

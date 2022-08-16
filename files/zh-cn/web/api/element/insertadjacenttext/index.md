@@ -2,86 +2,77 @@
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>insertAdjacentText()</code></strong> 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。</p>
+**`insertAdjacentText()`** 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。
 
-<h2 id="Syntax">句法</h2>
+## 句法
 
-<pre><em>element</em>.insertAdjacentText(<em>position</em>, <em>element</em>);</pre>
+```
+element.insertAdjacentText(position, element);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>position</dt>
- <dd>A {{domxref("DOMString")}} representing the position relative to the <code>element</code>; must be one of the following strings:
- <ul>
-  <li><code style="color: red;">'beforebegin'</code>: Before the <code>element</code> itself.</li>
-  <li><code style="color: green;">'afterbegin'</code>: Just inside the <code>element</code>, before its first child.</li>
-  <li><code style="color: blue;">'beforeend'</code>: Just inside the <code>element</code>, after its last child.</li>
-  <li><code style="color: magenta;">'afterend'</code>: After the <code>element</code> itself.</li>
- </ul>
- </dd>
- <dt>element</dt>
- <dd>A {{domxref("DOMString")}} representing the text to be inserted into the tree.</dd>
-</dl>
+- position
 
-<h3 id="返回值">返回值</h3>
+  - : A {{domxref("DOMString")}} representing the position relative to the `element`; must be one of the following strings:
 
-<p>Void.</p>
+    - `'beforebegin'`: Before the `element` itself.
+    - `'afterbegin'`: Just inside the `element`, before its first child.
+    - `'beforeend'`: Just inside the `element`, after its last child.
+    - `'afterend'`: After the `element` itself.
 
-<h3 id="例外">例外</h3>
+- element
+  - : A {{domxref("DOMString")}} representing the text to be inserted into the tree.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Explanation</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>The <code>position</code> specified is not a recognised value.</td>
-  </tr>
- </tbody>
-</table>
+### 返回值
 
-<h3 id="Visualization_of_position_names">Visualization of position names</h3>
+Void.
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+### 例外
+
+| Exception     | Explanation                                         |
+| ------------- | --------------------------------------------------- |
+| `SyntaxError` | The `position` specified is not a recognised value. |
+
+### Visualization of position names
+
+```html
+<!-- beforebegin -->
+<p>
+<!-- afterbegin -->
 foo
-&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+<!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
-<div class="note">注意：只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。</div>
+> **备注：** 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
 
-<h2 id="Example">范例</h2>
+## 范例
 
-<pre class="brush: js">beforeBtn.addEventListener('click', function() {
+```js
+beforeBtn.addEventListener('click', function() {
   para.insertAdjacentText('afterbegin',textInput.value);
 });
 
 afterBtn.addEventListener('click', function() {
   para.insertAdjacentText('beforeend',textInput.value);
-});</pre>
+});
+```
 
-<p>Have a look at our <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> demo on GitHub (see the <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a> too.) Here we have a simple paragraph. You can enter some text into the form element, then press the <em>Insert before</em> and <em>Insert after</em> buttons to insert it before or after the existing paragraph text using <code>insertAdjacentText()</code>. Note that the existing text node is not added to — further text nodes are created containing the new additions.</p>
+Have a look at our [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) demo on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) too.) Here we have a simple paragraph. You can enter some text into the form element, then press the _Insert before_ and _Insert after_ buttons to insert it before or after the existing paragraph text using `insertAdjacentText()`. Note that the existing text node is not added to — further text nodes are created containing the new additions.
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.insertAdjacentText")}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<ul>
- <li>{{domxref("Element.insertAdjacentElement()")}}</li>
- <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
-</ul>
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.insertAdjacentHTML()")}}

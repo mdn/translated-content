@@ -2,27 +2,27 @@
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>用于创建{{domxref("HTMLOptionElement")}}的构造函数。</p>
+用于创建{{domxref("HTMLOptionElement")}}的构造函数。
 
-<h2 id="Syntax">句法</h2>
+## 句法
 
-<pre class="syntaxbox" style="font-size: 14px;"><code>var o</code>ptionElementReference<code> = new Option(text, value, defaultSelected, selected);</code></pre>
+```
+var optionElementReference = new Option(text, value, defaultSelected, selected);
+```
 
-<h3 id="Return_value_and_parameters">参数</h3>
+### 参数
 
-<dl>
- <dt>文字{{optional_inline}}</dt>
- <dd>表示元素内容的{{domxref("DOMString")}}，即显示的文本。如果没有指定，则使用默认值""(空字符串)。</dd>
- <dt>值{{optional_inline}}</dt>
- <dd>表示{{domxref("HTMLOptionElement")}}的值的{{domxref("DOMString")}}，即<code>value</code>等价的{{htmlelement("option")}} 的属性。如果未指定，则将文本的值用作值，例如，将表单提交给服务器时，相关联的{{htmlelement("select")}}元素的值。</dd>
- <dt>defaultSelected {{optional_inline}}</dt>
- <dd>设置{{htmlattrxref("selected", "option")}}属性值的{{domxref("Boolean")}}，也就是说这个{{htmlelement("option")}}是默认值当第一次加载页面时，在{{htmlelement("select")}}元素中选择。如果没有指定，<code>false</code>则使用默认值。请注意，<code>true</code> 如果选项尚未被选中，则该值不会将选项设置为选中状态。 </dd>
- <dt>选中{{optional_inline}}</dt>
- <dd>A {{domxref("Boolean")}}设置选项的选择状态; 默认是<code>false</code>(未选中)。如果省略，即使<code>defaultSelected</code>参数是<code>true</code>，该选项没有被选中。</dd>
-</dl>
+- 文字{{optional_inline}}
+  - : 表示元素内容的{{domxref("DOMString")}}，即显示的文本。如果没有指定，则使用默认值""(空字符串)。
+- 值{{optional_inline}}
+  - : 表示{{domxref("HTMLOptionElement")}}的值的{{domxref("DOMString")}}，即`value`等价的{{htmlelement("option")}} 的属性。如果未指定，则将文本的值用作值，例如，将表单提交给服务器时，相关联的{{htmlelement("select")}}元素的值。
+- defaultSelected {{optional_inline}}
+  - : 设置{{htmlattrxref("selected", "option")}}属性值的{{domxref("Boolean")}}，也就是说这个{{htmlelement("option")}}是默认值当第一次加载页面时，在{{htmlelement("select")}}元素中选择。如果没有指定，`false`则使用默认值。请注意，`true` 如果选项尚未被选中，则该值不会将选项设置为选中状态。
+- 选中{{optional_inline}}
+  - : A {{domxref("Boolean")}}设置选项的选择状态; 默认是`false`(未选中)。如果省略，即使`defaultSelected`参数是`true`，该选项没有被选中。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

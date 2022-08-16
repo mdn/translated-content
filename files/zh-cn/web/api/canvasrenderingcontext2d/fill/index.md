@@ -2,67 +2,67 @@
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fill()</code></strong> 是 Canvas 2D API 根据当前的填充样式，填充当前或已存在的路径的方法。采取非零环绕或者奇偶环绕规则。</p>
+**`CanvasRenderingContext2D.fill()`** 是 Canvas 2D API 根据当前的填充样式，填充当前或已存在的路径的方法。采取非零环绕或者奇偶环绕规则。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fill();</var>
-void <var><em>ctx</em>.fill(fillRule);</var>
-void <var><em>ctx</em>.fill(path, fillRule);</var>
-</pre>
+```
+void ctx.fill();
+void ctx.fill(fillRule);
+void ctx.fill(path, fillRule);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>fillRule</code></dt>
- <dd>一种算法，决定点是在路径内还是在路径外。<br>
- 允许的值：
- <ul>
-  <li><code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">非零环绕规则</a>， 默认的规则。</li>
-  <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">奇偶环绕规则</a>。</li>
- </ul>
- </dd>
- <dt><code>path</code></dt>
- <dd>需要填充的{{domxref("Path2D")}} 路径。</dd>
-</dl>
+- `fillRule`
 
-<h2 id="示例">示例</h2>
+  - : 一种算法，决定点是在路径内还是在路径外。
+    允许的值：
 
-<h3 id="使用_fill_方法">使用 <code>fill</code> 方法</h3>
+    - **`"nonzero`**": [非零环绕规则](http://en.wikipedia.org/wiki/Nonzero-rule)， 默认的规则。
+    - **`"evenodd"`**: [奇偶环绕规则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
-<p>这是一段简单的代码片段，使用 <code>fill</code> 方法填充路径。</p>
+- `path`
+  - : 需要填充的{{domxref("Path2D")}} 路径。
 
-<h4 id="HTML">HTML</h4>
+## 示例
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### 使用 `fill` 方法
 
-<h4 id="JavaScript">JavaScript</h4>
+这是一段简单的代码片段，使用 `fill` 方法填充路径。
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById("canvas");
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 变化：</p>
+修改下面的代码并在线查看 canvas 变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();&lt;/textarea&gt;
-</pre>
+ctx.fill();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -85,21 +85,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.fill")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.

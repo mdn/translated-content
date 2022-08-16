@@ -2,11 +2,11 @@
 title: storage
 slug: Web/API/Window/storage_event
 ---
-<p>当存储区域（localStorage 或 sessionStorage）被修改时，将触发 storage 事件。查看 <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a> 来获取更多信息。</p>
+当存储区域（localStorage 或 sessionStorage）被修改时，将触发 storage 事件。查看 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 来获取更多信息。
 
-<h2 id="常规信息">常规信息</h2>
+## 常规信息
 
-<p>说明：<em><a href="http://www.w3.org/TR/webstorage/#the-storage-event">Web Storage</a></em></p>
+说明：_[Web Storage](http://www.w3.org/TR/webstorage/#the-storage-event)_
 
 <table class="properties">
   <tbody>
@@ -20,7 +20,7 @@ slug: Web/API/Window/storage_event
     </tr>
     <tr>
       <th scope="row">目标</th>
-      <td>DefaultView (<code>&lt;window&gt;</code>)</td>
+      <td>DefaultView (<code>&#x3C;window></code>)</td>
     </tr>
     <tr>
       <th scope="row">默认行为</th>
@@ -29,65 +29,20 @@ slug: Web/API/Window/storage_event
   </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>事件目标 (DOM 树中的最大目标)</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件的类型</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件通常是否会出现冒泡</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件是否可取消</td>
-  </tr>
-  <tr>
-   <td><code>key</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>键更改时</td>
-  </tr>
-  <tr>
-   <td><code>oldValue</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>正在更改键的旧值</td>
-  </tr>
-  <tr>
-   <td><code>newValue</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>正在更改键的新值</td>
-  </tr>
-  <tr>
-   <td><code>url</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>键更改的文档的地址</td>
-  </tr>
-  <tr>
-   <td><code>storageArea</code> {{readonlyInline}}</td>
-   <td>{{domxref("Storage")}}</td>
-   <td>受影响的存储对象</td>
-  </tr>
- </tbody>
-</table>
+| Property                               | Type                                      | Description                   |
+| -------------------------------------- | ----------------------------------------- | ----------------------------- |
+| `target` {{readonlyInline}}      | {{domxref("EventTarget")}}      | 事件目标 (DOM 树中的最大目标) |
+| `type` {{readonlyInline}}        | {{domxref("DOMString")}}          | 事件的类型                    |
+| `bubbles` {{readonlyInline}}     | {{jsxref("Boolean")}}              | 事件通常是否会出现冒泡        |
+| `cancelable` {{readonlyInline}}  | {{jsxref("Boolean")}}              | 事件是否可取消                |
+| `key` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | 键更改时                      |
+| `oldValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | 正在更改键的旧值              |
+| `newValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | 正在更改键的新值              |
+| `url` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | 键更改的文档的地址            |
+| `storageArea` {{readonlyInline}} | {{domxref("Storage")}}              | 受影响的存储对象              |
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

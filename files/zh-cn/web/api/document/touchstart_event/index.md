@@ -2,49 +2,47 @@
 title: 'Document: touchstart 事件'
 slug: Web/API/Document/touchstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当一个或多个触摸点与触控设备表面接触时触发<code>touchstart</code> 事件。</p>
+当一个或多个触摸点与触控设备表面接触时触发`touchstart` 事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("TouchEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("TouchEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这些时间的代码样例可在这个专用页面查看：<a href="/en-US/docs/Web/API/Touch_events">Touch events</a>.</p>
+这些时间的代码样例可在这个专用页面查看：[Touch events](/zh-CN/docs/Web/API/Touch_events).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Document.touchstart_event")}}
 
+## 参见
 
-<p>{{Compat("api.Document.touchstart_event")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
- <li>{{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}</li>
- <li>以 <code><a href="/en-US/docs/Web/API/Element">Element</a></code> 为目标的相同时间：<code><a href="/en-US/docs/Web/API/Element/touchstart_event">touchstart</a></code></li>
-</ul>
+- [Touch events](/zh-CN/docs/Web/API/Touch_events)
+- {{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}
+- 以 [`Element`](/en-US/docs/Web/API/Element) 为目标的相同时间：[`touchstart`](/en-US/docs/Web/API/Element/touchstart_event)

@@ -2,55 +2,54 @@
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createLinearGradient()</code></strong>方法创建一个沿参数坐标指定的直线的渐变。</p>
+**`CanvasRenderingContext2D.createLinearGradient()`**方法创建一个沿参数坐标指定的直线的渐变。
 
-<p><img src="mdn-canvas-lineargradient.png"></p>
+![](mdn-canvas-lineargradient.png)
 
-<p>该方法返回一个线性 {{domxref("CanvasGradient")}}对象。想要应用这个渐变，需要把这个返回值赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或者 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}。</p>
+该方法返回一个线性 {{domxref("CanvasGradient")}}对象。想要应用这个渐变，需要把这个返回值赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或者 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">CanvasGradient <var><em>ctx</em>.createLinearGradient(x0, y0, x1, y1);</var>
-</pre>
+```
+CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```
 
-<p><code>createLinearGradient()</code> 方法需要指定四个参数，分别表示渐变线段的开始和结束点。</p>
+`createLinearGradient()` 方法需要指定四个参数，分别表示渐变线段的开始和结束点。
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x0</code></dt>
- <dd>起点的 x 轴坐标。</dd>
- <dt><code>y0</code></dt>
- <dd>起点的 y 轴坐标。</dd>
- <dt><code>x1</code></dt>
- <dd>终点的 x 轴坐标。</dd>
- <dt><code>y1</code></dt>
- <dd>终点的 y 轴坐标。</dd>
-</dl>
+- `x0`
+  - : 起点的 x 轴坐标。
+- `y0`
+  - : 起点的 y 轴坐标。
+- `x1`
+  - : 终点的 x 轴坐标。
+- `y1`
+  - : 终点的 y 轴坐标。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt>{{domxref("CanvasGradient")}}</dt>
- <dd>一个根据指定线路初始化的线性<code> </code><code>CanvasGradient</code> 对象。</dd>
-</dl>
+- {{domxref("CanvasGradient")}}
+  - : 一个根据指定线路初始化的线性` ``CanvasGradient` 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用线性渐变填充一个矩形">使用线性渐变填充一个矩形</h3>
+### 使用线性渐变填充一个矩形
 
-<p>这个例子使用<code>createLinearGradient()</code> 方法初始化了一个线性渐变。在这个线性渐变中添加了三种色彩。最后，这个渐变被赋值给上下文对应的属性，实现了对矩形的填充。</p>
+这个例子使用`createLinearGradient()` 方法初始化了一个线性渐变。在这个线性渐变中添加了三种色彩。最后，这个渐变被赋值给上下文对应的属性，实现了对矩形的填充。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="notranslate">var canvas = document.getElementById('canvas');
+```
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Create a linear gradient
@@ -65,27 +64,27 @@ gradient.addColorStop(1, 'green');
 
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
-ctx.fillRect(20, 20, 200, 100);</pre>
+ctx.fillRect(20, 20, 200, 100);
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="编辑" /&gt;
-  &lt;input id="reset" type="button" value="重置" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="编辑" />
+  <input id="reset" type="button" value="重置" />
+</div>
+<textarea id="code" class="playable-code">
 var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10,10,200,100);</textarea>
+```
 
-<pre class="brush: js notranslate">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -108,35 +107,23 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Filling_a_rectangle_with_a_linear_gradient', 700, 180) }}</p>
+{{ EmbedLiveSample('Filling_a_rectangle_with_a_linear_gradient', 700, 180) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CanvasRenderingContext2D.createLinearGradient")}}
 
+### Gecko 特性说明
 
-<p>{{Compat("api.CanvasRenderingContext2D.createLinearGradient")}}</p>
+- 自 Gecko 2.0 {{geckoRelease("2.0")}}开始，参数指定了极值会抛出`NOT_SUPPORTED_ERR` 而不再是之前的 `SYNTAX_ERR `异常。
 
+## <br>参见
 
-
-<h3 id="Gecko特性说明">Gecko 特性说明</h3>
-
-<ul>
- <li>自 Gecko 2.0 {{geckoRelease("2.0")}}开始，参数指定了极值会抛出<code>NOT_SUPPORTED_ERR</code>  而不再是之前的 <code>SYNTAX_ERR </code>异常。</li>
-</ul>
-
-<h2 id="参见"><br>
- 参见</h2>
-
-<div id="compat-mobile"></div>
-
-<ul>
- <li>接口定义： {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
-</ul>
+- 接口定义： {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

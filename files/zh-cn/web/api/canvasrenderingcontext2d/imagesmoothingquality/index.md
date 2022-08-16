@@ -2,36 +2,38 @@
 title: CanvasRenderingContext2D.imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p><strong>CanvasRenderingContext2D.imageSmoothingQuality</strong> 是 Canvas 2D API，用于设置图像平滑度的属性。</p>
+**CanvasRenderingContext2D.imageSmoothingQuality** 是 Canvas 2D API，用于设置图像平滑度的属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em>.</var>imageSmoothingQuality<var> = value
-value</var> = ctx.imageSmoothingQuality</pre>
+```
+ctx.imageSmoothingQuality = value
+value = ctx.imageSmoothingQuality
+```
 
-<h3 id="选项">选项</h3>
+### 选项
 
-<dl>
- <dt><code>value</code></dt>
- <dd>"low","medium","high"</dd>
-</dl>
+- `value`
+  - : "low","medium","high"
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_imageSmoothingQuality_属性">使用 imageSmoothingQuality 属性</h3>
+### 使用 imageSmoothingQuality 属性
 
-<p>这是一段简单的代码片段，对缩放的图片使用 <code>imageSmoothingQuality </code>属性。</p>
+这是一段简单的代码片段，对缩放的图片使用 `imageSmoothingQuality `属性。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight[7-10]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var img = new Image();
@@ -43,19 +45,18 @@ img.onload = function() {
  ctx.msImageSmoothingEnabled = false;
  ctx.imageSmoothingEnabled = false;
  ctx.drawImage(img, 0, 0, 400, 200);
-};</pre>
+};
+```
 
-<p>编辑下面代码，在线查看 Canvas 的变化：</p>
+编辑下面代码，在线查看 Canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:140px;"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:140px;">
 var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
 img.onload = function() {
@@ -65,10 +66,11 @@ img.onload = function() {
  ctx.msImageSmoothingEnabled = false;
  ctx.imageSmoothingEnabled = false;
  ctx.drawImage(img, 0, 0, 400, 200);
-};&lt;/textarea&gt;
-</pre>
+};</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -91,22 +93,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 400) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.imageSmoothingQuality")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{cssxref("image-rendering")}}</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- {{cssxref("image-rendering")}}

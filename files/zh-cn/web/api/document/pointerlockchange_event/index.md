@@ -2,57 +2,59 @@
 title: 'Document: pointerlockchange event'
 slug: Web/API/Document/pointerlockchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>pointerlockchange</code> 事件当指针解锁或者被锁定时触发</p>
+`pointerlockchange` 事件当指针解锁或者被锁定时触发
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">冒泡</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">可取消</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Document/onpointerlockchange", "onpointerlockchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">冒泡</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">可取消</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Document/onpointerlockchange", "onpointerlockchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>使用 <code>addEventListener()</code>:</p>
+使用 `addEventListener()`:
 
-<pre class="brush: js notranslate">document.addEventListener('pointerlockchange', (event) =&gt; {
+```js
+document.addEventListener('pointerlockchange', (event) => {
   console.log('Pointer lock changed');
-});</pre>
+});
+```
 
-<p>使用 <code>onpointerlockchange</code> 事件处理程序属性</p>
+使用 `onpointerlockchange` 事件处理程序属性
 
-<pre class="brush: js notranslate">document.onpointerlockchange = (event) =&gt; {
+```js
+document.onpointerlockchange = (event) => {
   console.log('Pointer lock changed');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Document.pointerlockchange_event")}}
 
+## 参考
 
-<p>{{Compat("api.Document.pointerlockchange_event")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="/en-US/docs/API/Pointer_Lock_API">Using Pointer Lock API</a></li>
-</ul>
+- [Using Pointer Lock API](/zh-CN/docs/API/Pointer_Lock_API)

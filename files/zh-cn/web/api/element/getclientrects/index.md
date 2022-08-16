@@ -2,131 +2,140 @@
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p><code><strong>Element.getClientRects()</strong></code> 方法返回一个指向客户端中每一个盒子的边界矩形的矩形集合。</p>
+**`Element.getClientRects()`** 方法返回一个指向客户端中每一个盒子的边界矩形的矩形集合。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>rectCollection</var> = <var>object</var>.getClientRects();</pre>
+```
+var rectCollection = object.getClientRects();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回值是 ClientRect 对象集合，该对象是与该元素相关的 CSS 边框。每个 ClientRect 对象包含一组描述该边框的只读属性——left、top、right 和 bottom，单位为像素，这些属性值是相对于视口的 top-left 的。即使当表格的标题在表格的边框外面，该标题仍会被计算在内。</p>
+返回值是 ClientRect 对象集合，该对象是与该元素相关的 CSS 边框。每个 ClientRect 对象包含一组描述该边框的只读属性——left、top、right 和 bottom，单位为像素，这些属性值是相对于视口的 top-left 的。即使当表格的标题在表格的边框外面，该标题仍会被计算在内。
 
-<p>起初，微软打算让这个方法给文本的每一行都返回一个 TextRectangle，但是，CSSOM 工作草案规定它应该给每个边框返回一个 ClientRect。因此，对于行内元素这两个定义是相同的，但是对于块级元素，Mozilla 只会返回一个矩形。（译者注：对于行内元素，元素内部的每一行都会有一个边框；对于块级元素，如果里面没有其他元素，一整块元素只有一个边框）。</p>
+起初，微软打算让这个方法给文本的每一行都返回一个 TextRectangle，但是，CSSOM 工作草案规定它应该给每个边框返回一个 ClientRect。因此，对于行内元素这两个定义是相同的，但是对于块级元素，Mozilla 只会返回一个矩形。（译者注：对于行内元素，元素内部的每一行都会有一个边框；对于块级元素，如果里面没有其他元素，一整块元素只有一个边框）。
 
-<p>{{ fx_minversion_note(3.5, "FireFox 3.5 给 TextRectangle 对象添加了 width 和 height 属性") }}</p>
+{{ fx_minversion_note(3.5, "FireFox 3.5 给 TextRectangle 对象添加了 width 和 height 属性") }}
 
-<p>当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作。</p>
+当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作。
 
-<p>返回的矩形不包括任何可能超出元素范围的子元素的边界。</p>
+返回的矩形不包括任何可能超出元素范围的子元素的边界。
 
-<p>对于 HTML AREA 元素、自身不做任何渲染的 SVG 元素、display：none 元素和不直接渲染出来的任何元素，都将会返回一个空列表。</p>
+对于 HTML AREA 元素、自身不做任何渲染的 SVG 元素、display：none 元素和不直接渲染出来的任何元素，都将会返回一个空列表。
 
-<p>具有空边框的 CSS 盒子也会返回矩形，此时 left、top、right 和 bottom 坐标仍旧有意义。</p>
+具有空边框的 CSS 盒子也会返回矩形，此时 left、top、right 和 bottom 坐标仍旧有意义。
 
-<p>小数级别的像素偏移是有可能的。</p>
+小数级别的像素偏移是有可能的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>These examples draw client rects in various colors. Note that the JavaScript function that paints the client rects is connected to the markup via the class <code>withClientRectsOverlay</code>.</p>
+These examples draw client rects in various colors. Note that the JavaScript function that paints the client rects is connected to the markup via the class `withClientRectsOverlay`.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>.举例 1：HTML 创建了三段带有 <code>&lt;span&gt;</code> 的段落 <code>&lt;p&gt;</code> 并放入 <code>&lt;div&gt;</code> 中。在第二个段落 <code>&lt;p&gt;</code> 上绘制了客户矩形。在第三个段落 <code>&lt;p&gt;</code> 的 <code>&lt;span&gt;</code> 元素上绘制了客户矩形。</p>
+.举例 1：HTML 创建了三段带有 `<span>` 的段落 `<p>` 并放入 `<div>` 中。在第二个段落 `<p>` 上绘制了客户矩形。在第三个段落 `<p>` 的 `<span>` 元素上绘制了客户矩形。
 
-<pre class="brush: html">&lt;h3&gt;A paragraph with a span inside&lt;/h3&gt;
-&lt;p&gt;Both the span and the paragraph have a border set. The
+```html
+<h3>A paragraph with a span inside</h3>
+<p>Both the span and the paragraph have a border set. The
   client rects are in red. Note that the p has onlyone border
-  box, while the span has multiple border boxes.&lt;/p&gt;
+  box, while the span has multiple border boxes.</p>
 
-&lt;div&gt;
-  &lt;strong&gt;Original&lt;/strong&gt;
-  &lt;p&gt;
-    &lt;span&gt;Paragraph that spans multiple lines&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
+<div>
+  <strong>Original</strong>
+  <p>
+    <span>Paragraph that spans multiple lines</span>
+  </p>
+</div>
 
-&lt;div&gt;
-  &lt;strong&gt;p's rect&lt;/strong&gt;
-  &lt;p class="withClientRectsOverlay"&gt;
-    &lt;span&gt;Paragraph that spans multiple lines&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
+<div>
+  <strong>p's rect</strong>
+  <p class="withClientRectsOverlay">
+    <span>Paragraph that spans multiple lines</span>
+  </p>
+</div>
 
-&lt;div&gt;
-  &lt;strong&gt;span's rect&lt;/strong&gt;
-  &lt;p&gt;
-    &lt;span class="withClientRectsOverlay"&gt;Paragraph that spans multiple lines&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+<div>
+  <strong>span's rect</strong>
+  <p>
+    <span class="withClientRectsOverlay">Paragraph that spans multiple lines</span>
+  </p>
+</div>
+```
 
-<p>Example 2: 举例 2：HTML 创建了 3 个有序列表。在第二个列表的 ol 上绘制了客户矩形，在第三个列表的 li 上绘制了客户矩形。</p>
+Example 2: 举例 2：HTML 创建了 3 个有序列表。在第二个列表的 ol 上绘制了客户矩形，在第三个列表的 li 上绘制了客户矩形。
 
-<pre class="brush: html" style="font-size: 14px;">&lt;h3&gt;A list&lt;/h3&gt;
-&lt;p&gt;Note that the border box doesn't include the number, so neither do the client rects.&lt;/p&gt;
+```html
+<h3>A list</h3>
+<p>Note that the border box doesn't include the number, so neither do the client rects.</p>
 
-&lt;div&gt;
- &lt;strong&gt;Original&lt;/strong&gt;
- &lt;ol&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
- &lt;/ol&gt;
-&lt;/diV&gt;
+<div>
+ <strong>Original</strong>
+ <ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+ </ol>
+</diV>
 
-&lt;div&gt;
- &lt;strong&gt;ol's rect&lt;/strong&gt;
- &lt;ol class="withClientRectsOverlay"&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
- &lt;/ol&gt;
-&lt;/div&gt;
+<div>
+ <strong>ol's rect</strong>
+ <ol class="withClientRectsOverlay">
+  <li>Item 1</li>
+  <li>Item 2</li>
+ </ol>
+</div>
 
-&lt;div&gt;
- &lt;strong&gt;each li's rect&lt;/strong&gt;
- &lt;ol&gt;
-  &lt;li class="withClientRectsOverlay"&gt;Item 1&lt;/li&gt;
-  &lt;li class="withClientRectsOverlay"&gt;Item 2&lt;/li&gt;
- &lt;/ol&gt;
-&lt;/div&gt;</pre>
+<div>
+ <strong>each li's rect</strong>
+ <ol>
+  <li class="withClientRectsOverlay">Item 1</li>
+  <li class="withClientRectsOverlay">Item 2</li>
+ </ol>
+</div>
+```
 
-<p>举例 3：HTML 创建了两个带有标题的表。第二个表上绘制了客户矩形。</p>
+举例 3：HTML 创建了两个带有标题的表。第二个表上绘制了客户矩形。
 
-<pre class="brush: html" style="font-size: 14px;">&lt;h3&gt;A table with a caption&lt;/h3&gt;
-&lt;p&gt;Although the table's border box doesn't include the caption, the client rects do include the caption.&lt;/p&gt;
+```html
+<h3>A table with a caption</h3>
+<p>Although the table's border box doesn't include the caption, the client rects do include the caption.</p>
 
-&lt;div&gt;
- &lt;strong&gt;Original&lt;/strong&gt;
- &lt;table&gt;
-  &lt;caption&gt;caption&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;thead&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;td&gt;tbody&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
- &lt;/table&gt;
-&lt;/div&gt;
+<div>
+ <strong>Original</strong>
+ <table>
+  <caption>caption</caption>
+  <thead>
+    <tr><th>thead</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>tbody</td></tr>
+  </tbody>
+ </table>
+</div>
 
-&lt;div&gt;
- &lt;strong&gt;table's rect&lt;/strong&gt;
- &lt;table class="withClientRectsOverlay"&gt;
-  &lt;caption&gt;caption&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;thead&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;td&gt;tbody&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
- &lt;/table&gt;
-&lt;/div&gt;</pre>
+<div>
+ <strong>table's rect</strong>
+ <table class="withClientRectsOverlay">
+  <caption>caption</caption>
+  <thead>
+    <tr><th>thead</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>tbody</td></tr>
+  </tbody>
+ </table>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>使用 CSS 给第一举例的每个 div 内部的段落和 span、第二个举例的 ol 和 li 周围、第三个举例 的 table/th/td 元素周围绘制了边框。</p>
+使用 CSS 给第一举例的每个 div 内部的段落和 span、第二个举例的 ol 和 li 周围、第三个举例 的 table/th/td 元素周围绘制了边框。
 
-<pre class="brush: css">strong {
+```css
+strong {
   text-align: center;
 }
 div {
@@ -138,13 +147,15 @@ div p, ol, table {
 }
 span, li, th, td {
   border: 1px solid green;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>JavaScript 代码为所有带有“widthClientRectsOverlay”样式的元素绘制了 ClientRects。</p>
+JavaScript 代码为所有带有“widthClientRectsOverlay”样式的元素绘制了 ClientRects。
 
-<pre class="brush: js">function addClientRectsOverlay(elt) {
+```js
+function addClientRectsOverlay(elt) {
     // 为了使边框宽度与矩形宽度一致，这里给每个客户矩形上方绝对定位一个 div。
     // 注意：如果用户改变大小或者缩放，绘图将会重绘。
 
@@ -170,31 +181,28 @@ span, li, th, td {
 (function() {
   /* 将所有具有 "widthClientRectsOverlay" 样式的元素依次传入函数 addClientRectsOverlay(elt) */
   var elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (var i = 0; i &lt; elt.length; i++) {
+  for (var i = 0; i < elt.length; i++) {
     addClientRectsOverlay(elt[i]);
   }
-})();</pre>
+})();
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Element_getClientRects_sample', 680, 650) }}</p>
+{{ EmbedLiveSample('Element_getClientRects_sample', 680, 650) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h3 id="备注">备注</h3>
+### 备注
 
-<p><code>getClientRects()</code> 在 MS IE DHTML 对象模型中首次引入。</p>
+`getClientRects()` 在 MS IE DHTML 对象模型中首次引入。
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
+{{Compat("api.Element.getClientRects")}}
 
+## 参见
 
-<p>{{Compat("api.Element.getClientRects")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("Element.getBoundingClientRect()")}}</li>
-</ul>
+- {{domxref("Element.getBoundingClientRect()")}}

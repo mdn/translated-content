@@ -2,56 +2,48 @@
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>NamedNodeMap</strong></code> 接口表示属性节点 {{domxref("Attr")}} 对象的集合。尽管在 <code>NamedNodeMap</code> 里面的对象可以像数组一样通过索引来访问，但是它和 {{ domxref("NodeList") }} 不一样，对象的顺序没有指定。</p>
+**`NamedNodeMap`** 接口表示属性节点 {{domxref("Attr")}} 对象的集合。尽管在 `NamedNodeMap` 里面的对象可以像数组一样通过索引来访问，但是它和 {{ domxref("NodeList") }} 不一样，对象的顺序没有指定。
 
-<p><code>NamedNodeMap</code> 对象是即时的 (<em>live</em>)，因此，如果它内部包含的对象发生改变的话，该对象会自动更新到最新的状态。</p>
+`NamedNodeMap` 对象是即时的 (_live_)，因此，如果它内部包含的对象发生改变的话，该对象会自动更新到最新的状态。
 
-<div class="note">
-<p>尽管被称为 <code>NamedNodeMap</code>，但这个接口不是用来处理节点对象 ({{domxref("Node")}})，而是用来处理属性节点对象 ({{domxref("Attr")}})，属性节点原来是一种特殊的节点 ({{domxref("Node")}})，仍然在某些实现环境（浏览器）中有效。</p>
-</div>
+> **备注：** 尽管被称为 `NamedNodeMap`，但这个接口不是用来处理节点对象 ({{domxref("Node")}})，而是用来处理属性节点对象 ({{domxref("Attr")}})，属性节点原来是一种特殊的节点 ({{domxref("Node")}})，仍然在某些实现环境（浏览器）中有效。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>该接口没有继承任何属性。</em></p>
+_该接口没有继承任何属性。_
 
-<dl>
- <dt>{{ domxref("NamedNodeMap.length") }} {{ReadOnlyInline}}</dt>
- <dd>返回映射 (map) 中对象的数量。</dd>
-</dl>
+- {{ domxref("NamedNodeMap.length") }} {{ReadOnlyInline}}
+  - : 返回映射 (map) 中对象的数量。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>该接口没有继承任何方法。</em></p>
+_该接口没有继承任何方法。_
 
-<dl>
- <dt>{{domxref("NamedNodeMap.getNamedItem()")}}</dt>
- <dd>返回一个给定名字对应的属性节点（{{ domxref("Attr") }}）。</dd>
- <dt>{{domxref("NamedNodeMap.setNamedItem()")}}</dt>
- <dd>替换或添加一个属性节点（{{ domxref("Attr") }}）到映射（map）中。</dd>
- <dt>{{domxref("NamedNodeMap.removeNamedItem()")}}</dt>
- <dd>移除一个属性节点（{{ domxref("Attr") }}）。</dd>
- <dt>{{domxref("NamedNodeMap.item()")}}</dt>
- <dd>返回指定索引处的属性节点（{{ domxref("Attr") }}），或者，当索引超出或等于属性节点的数量时，返回 <code>null</code>。</dd>
- <dt>{{domxref("NamedNodeMap.getNamedItemNS()")}}</dt>
- <dd>根据给定的命名空间参数和 name 参数返回一个 {{domxref("Attr")}} 对象。</dd>
- <dt>{{domxref("NamedNodeMap.setNamedItemNS()")}}</dt>
- <dd>替换、添加给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。</dd>
- <dt>{{domxref("NamedNodeMap.removeNamedItemNS()")}}</dt>
- <dd>删除给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。</dd>
-</dl>
+- {{domxref("NamedNodeMap.getNamedItem()")}}
+  - : 返回一个给定名字对应的属性节点（{{ domxref("Attr") }}）。
+- {{domxref("NamedNodeMap.setNamedItem()")}}
+  - : 替换或添加一个属性节点（{{ domxref("Attr") }}）到映射（map）中。
+- {{domxref("NamedNodeMap.removeNamedItem()")}}
+  - : 移除一个属性节点（{{ domxref("Attr") }}）。
+- {{domxref("NamedNodeMap.item()")}}
+  - : 返回指定索引处的属性节点（{{ domxref("Attr") }}），或者，当索引超出或等于属性节点的数量时，返回 `null`。
+- {{domxref("NamedNodeMap.getNamedItemNS()")}}
+  - : 根据给定的命名空间参数和 name 参数返回一个 {{domxref("Attr")}} 对象。
+- {{domxref("NamedNodeMap.setNamedItemNS()")}}
+  - : 替换、添加给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。
+- {{domxref("NamedNodeMap.removeNamedItemNS()")}}
+  - : 删除给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.NamedNodeMap")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ domxref("Element.attributes") }}</li>
-</ul>
+- {{ domxref("Element.attributes") }}

@@ -2,77 +2,66 @@
 title: OscillatorNode
 slug: Web/API/OscillatorNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p><strong><code>OscillatorNode</code></strong> 接口表示一个振荡器，它产生一个周期的波形信号（如正弦波）。它是一个 {{domxref("AudioScheduledSourceNode")}} 音频处理模块， 这个模块会生成一个指定频率的波形信号（即一个固定的音调）</p>
+**`OscillatorNode`** 接口表示一个振荡器，它产生一个周期的波形信号（如正弦波）。它是一个 {{domxref("AudioScheduledSourceNode")}} 音频处理模块， 这个模块会生成一个指定频率的波形信号（即一个固定的音调）
 
-<p>一个 <code>OscillatorNode 对象是通过 </code>{{domxref("AudioContext.createOscillator()")}} 方法创建的。它总是有一个输出，但没有输入。它的基础属性（定义见 {{domxref("AudioNode")}} ）默认如下：</p>
+一个 `OscillatorNode 对象是通过 `{{domxref("AudioContext.createOscillator()")}} 方法创建的。它总是有一个输出，但没有输入。它的基础属性（定义见 {{domxref("AudioNode")}} ）默认如下：
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>max</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code> (not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>speakers</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>max</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code> (not used in the default count mode)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>speakers</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}</dt>
- <dd>创建一个 OscillatorNode 对象的示例，为 node<a href="#属性">属性</a>提供可选的一个定义默认值的对象.  如果默认值可接受，你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法。</dd>
-</dl>
+- {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
+  - : 创建一个 OscillatorNode 对象的示例，为 node[属性](#属性)提供可选的一个定义默认值的对象. 如果默认值可接受，你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>继承自父类 </em><em>{{domxref("AudioScheduledSourceNode")}}，并添加下列属性：</em></p>
+_继承自父类_ _{{domxref("AudioScheduledSourceNode")}}，并添加下列属性：_
 
-<dl>
- <dt>{{domxref("OscillatorNode.frequency")}}</dt>
- <dd>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 对象的属性代表了振动的频率（单位为赫兹 hertz） (虽然返回的<code>AudioParam 是只读的，但是它所表示的值是可以修改的</code>)。 默认值是 440 Hz (基本的中 A 音高).</dd>
-</dl>
+- {{domxref("OscillatorNode.frequency")}}
+  - : 一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 对象的属性代表了振动的频率（单位为赫兹 hertz） (虽然返回的`AudioParam 是只读的，但是它所表示的值是可以修改的`)。 默认值是 440 Hz (基本的中 A 音高).
+- {{domxref("OscillatorNode.detune")}}
+  - : 一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 对象的属性代表振动的音高微调（单位是 cent 音分） (虽然返回的`AudioParam 是只读的，但是它所表示的值是可以修改的`).。默认值是 0。
+- {{domxref("OscillatorNode.type")}}
+  - : 一个字符串，决定 `OscillatorNode 播放的声音的周期波形`; 它的值可以是基础值中的一个或者用户使用 {{domxref("PeriodicWave")}}。不同的波形可以产生不同的声调。 基础值有 `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` and `"custom"`. 默认值是`"sine"。`
 
-<dl>
- <dt>{{domxref("OscillatorNode.detune")}}</dt>
- <dd>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 对象的属性代表振动的音高微调（单位是 cent 音分） (虽然返回的<code>AudioParam 是只读的，但是它所表示的值是可以修改的</code>).。默认值是 0。</dd>
-</dl>
+## 方法
 
-<dl>
- <dt>{{domxref("OscillatorNode.type")}}</dt>
- <dd>一个字符串，决定 <code>OscillatorNode 播放的声音的周期波形</code>; 它的值可以是基础值中的一个或者用户使用 {{domxref("PeriodicWave")}}。不同的波形可以产生不同的声调。 基础值有 <code>"sine"</code>, <code>"square"</code>, <code>"sawtooth"</code>, <code>"triangle"</code> and <code>"custom"</code>. 默认值是<code>"sine"。</code></dd>
-</dl>
+_继承自父级，_ _{{domxref("AudioScheduledSourceNode")}}_, 自有方法如下：
 
-<h2 id="方法">方法</h2>
+- {{domxref("OscillatorNode.setPeriodicWave()")}}
+  - : 设置一个 {{domxref("PeriodicWave")}} ,它描述了一个周期的波形常常替代标准波形之一; 调用这个方法来设置用户自定义的波形。它取代了已经废弃了的 {{domxref("OscillatorNode.setWaveTable()")}} 方法。
 
-<p><em>继承自父级， </em><em>{{domxref("AudioScheduledSourceNode")}}</em>, 自有方法如下：</p>
+## 示例
 
-<dl>
- <dt>{{domxref("OscillatorNode.setPeriodicWave()")}}</dt>
- <dd>设置一个 {{domxref("PeriodicWave")}} ,它描述了一个周期的波形常常替代标准波形之一; 调用这个方法来设置用户自定义的波形。它取代了已经废弃了的 {{domxref("OscillatorNode.setWaveTable()")}} 方法。</dd>
-</dl>
+下面示例展示了 {{ domxref("AudioContext") }} 的基本使用 来创建一个 oscillator 节点 并使用它来播放音乐。这是已经在运行的例子，可以看这里 [Violent Theremin demo](http://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) 是相关代码).
 
-<h2 id="示例">示例</h2>
-
-<p>下面示例展示了 {{ domxref("AudioContext") }} 的基本使用 来创建一个 oscillator 节点 并使用它来播放音乐。这是已经在运行的例子，可以看这里 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> 是相关代码).</p>
-
-<pre class="brush: js">// create web audio api context
+```js
+// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
@@ -81,18 +70,17 @@ var oscillator = audioCtx.createOscillator();
 oscillator.type = 'square';
 oscillator.frequency.value = 440; // value in hertz
 oscillator.connect(audioCtx.destination);
-oscillator.start();</pre>
+oscillator.start();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.OscillatorNode")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

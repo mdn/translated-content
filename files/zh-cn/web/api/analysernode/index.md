@@ -2,104 +2,92 @@
 title: AnalyserNode
 slug: Web/API/AnalyserNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p> <strong><code>AnalyserNode</code></strong><strong> </strong>接口表示了一个可以提供实时频域和时域分析信息的节点。它是一个不对音频流作任何改动的 {{domxref("AudioNode")}}，同时允许你获取和处理它生成的数据，从而创建音频可视化。</p>
+**`AnalyserNode`** 接口表示了一个可以提供实时频域和时域分析信息的节点。它是一个不对音频流作任何改动的 {{domxref("AudioNode")}}，同时允许你获取和处理它生成的数据，从而创建音频可视化。
 
-<p><code>AnalyzerNode</code> 只有一个输入和输出，即使未连接到输出它也能正常工作。</p>
+`AnalyzerNode` 只有一个输入和输出，即使未连接到输出它也能正常工作。
 
-<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="https://mdn.mozillademos.org/files/5119/WebAudioFFT.png" style="height: 174px; width: 661px;"></p>
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/5119/WebAudioFFT.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">输入数</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">输出数</th>
-   <td><code>1</code> (但可能是未连接的)</td>
-  </tr>
-  <tr>
-   <th scope="row">通道计数模式</th>
-   <td><code>"explicit"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">通道数</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">通道解释</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">输入数</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">输出数</th>
+      <td><code>1</code> (但可能是未连接的)</td>
+    </tr>
+    <tr>
+      <th scope="row">通道计数模式</th>
+      <td><code>"explicit"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">通道数</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">通道解释</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="继承">继承</h2>
+## 继承
 
-<p>继承自以下父接口：</p>
+继承自以下父接口：
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}</dt>
- <dd>创建一个新的 <code>AnalyserNode</code> 对象实例。</dd>
-</dl>
+- {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}
+  - : 创建一个新的 `AnalyserNode` 对象实例。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>继承属性自 </em><em>{{domxref("AudioNode")}}。</em></p>
+_继承属性自_ _{{domxref("AudioNode")}}。_
 
-<dl>
- <dt> {{domxref("AnalyserNode.fftSize")}}</dt>
- <dd>一个无符号长整形 (unsigned long) 的值，代表了用于计算频域信号时使用的 FFT (<a href="https://zh.wikipedia.org/zh-cn/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2">快速傅里叶变换</a>) 的窗口大小。</dd>
- <dt>{{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}</dt>
- <dd>一个无符号长整形 (unsigned long) 的值，值为 fftSize 的一半。这通常等于将要用于可视化的数据值的数量。</dd>
- <dt>{{domxref("AnalyserNode.minDecibels")}}</dt>
- <dd>是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用<code>getByteFrequencyData()</code>时结果范围的最小值</dd>
- <dt>{{domxref("AnalyserNode.maxDecibels")}}</dt>
- <dt></dt>
- <dd>是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用<code>getByteFrequencyData()</code>时结果范围的最大值</dd>
- <dt>{{domxref("AnalyserNode.smoothingTimeConstant")}}</dt>
- <dd>是一个双精度浮点型 (double) 的值，表示最后一个分析帧的平均常数 — 基本上，它随时间使值之间的过渡更平滑。</dd>
-</dl>
+- {{domxref("AnalyserNode.fftSize")}}
+  - : 一个无符号长整形 (unsigned long) 的值，代表了用于计算频域信号时使用的 FFT ([快速傅里叶变换](https://zh.wikipedia.org/zh-cn/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2)) 的窗口大小。
+- {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
+  - : 一个无符号长整形 (unsigned long) 的值，值为 fftSize 的一半。这通常等于将要用于可视化的数据值的数量。
+- {{domxref("AnalyserNode.minDecibels")}}
+  - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最小值
+- {{domxref("AnalyserNode.maxDecibels")}}
 
-<h2 id="方法">方法</h2>
+  - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最大值
 
-<p><em>继承方法自 </em><em>{{domxref("AudioNode")}}</em>.</p>
+- {{domxref("AnalyserNode.smoothingTimeConstant")}}
+  - : 是一个双精度浮点型 (double) 的值，表示最后一个分析帧的平均常数 — 基本上，它随时间使值之间的过渡更平滑。
 
-<dl>
- <dt>{{domxref("AnalyserNode.getFloatFrequencyData()")}}</dt>
- <dd>将当前频域数据拷贝进{{domxref("Float32Array")}}数组。</dd>
-</dl>
+## 方法
 
-<dl>
- <dt>{{domxref("AnalyserNode.getByteFrequencyData()")}}</dt>
- <dd>将当前频域数据拷贝进{{domxref("Uint8Array")}}数组（无符号字节数组）。</dd>
-</dl>
+_继承方法自_ _{{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("AnalyserNode.getFloatTimeDomainData()")}}</dt>
- <dd>将当前波形，或者时域数据拷贝进{{domxref("Float32Array")}}数组。</dd>
- <dt>{{domxref("AnalyserNode.getByteTimeDomainData()")}}</dt>
- <dd>将当前波形，或者时域数据拷贝进 {{domxref("Uint8Array")}}数组（无符号字节数组）。 </dd>
-</dl>
+- {{domxref("AnalyserNode.getFloatFrequencyData()")}}
+  - : 将当前频域数据拷贝进{{domxref("Float32Array")}}数组。
+- {{domxref("AnalyserNode.getByteFrequencyData()")}}
+  - : 将当前频域数据拷贝进{{domxref("Uint8Array")}}数组（无符号字节数组）。
+- {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
+  - : 将当前波形，或者时域数据拷贝进{{domxref("Float32Array")}}数组。
+- {{domxref("AnalyserNode.getByteTimeDomainData()")}}
+  - : 将当前波形，或者时域数据拷贝进 {{domxref("Uint8Array")}}数组（无符号字节数组）。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<div class="note">
-<p><strong>注意：</strong>查看 <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a> 指南以获得更多关于创建音频可视化效果的信息。</p>
-</div>
+> **备注：** 查看 [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 指南以获得更多关于创建音频可视化效果的信息。
 
-<h3 id="基础用法">基础用法</h3>
+### 基础用法
 
-<p>下面的例子展示了 {{domxref("AudioContext")}} 创建一个 <code>AnalyserNode</code>, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱).</p>
+下面的例子展示了 {{domxref("AudioContext")}} 创建一个 `AnalyserNode`, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱).
 
-<p>更多的例子/信息，查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
+更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
-<pre class="brush: js">var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
 // ...
@@ -132,7 +120,7 @@ function draw() {
   var sliceWidth = canvas.width * 1.0 / bufferLength;
   var x = 0;
 
-  for (var i = 0; i &lt; bufferLength; i++) {
+  for (var i = 0; i < bufferLength; i++) {
 
     var v = dataArray[i] / 128.0;
     var y = v * canvas.height / 2;
@@ -150,20 +138,17 @@ function draw() {
   canvasCtx.stroke();
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.AnalyserNode")}}</p>
-</div>
+{{Compat("api.AnalyserNode")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">Web Audio API 的运用</a></li>
-</ul>
+- [Web Audio API 的运用](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

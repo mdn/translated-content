@@ -2,63 +2,69 @@
 title: 'Window: focus event'
 slug: Web/API/Window/focus_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当元素获得焦点时， <strong><code>focus</code></strong> 事件就会触发。</p>
+当元素获得焦点时， **`focus`** 事件就会触发。
 
-<p>与 <code>focus</code> 相反的事件是 {{domxref("Window/blur_event", "blur")}}</p>
+与 `focus` 相反的事件是 {{domxref("Window/blur_event", "blur")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-  </tr>
-  <tr>
-   <th>Bubbles（支持冒泡）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable（可撤销）</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface（接口）</th>
-   <td>{{DOMxRef("FocusEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property（事件处理程序属性）</th>
-   <td>{{domxref("GlobalEventHandlers/onfocus", "onfocus")}}</td>
-  </tr>
-  <tr>
-   <th>Sync / Async（同步/异步）</th>
-   <td>Sync</td>
-  </tr>
-  <tr>
-   <th>Composed（可组成）</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr></tr>
+    <tr>
+      <th>Bubbles（支持冒泡）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable（可撤销）</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface（接口）</th>
+      <td>{{DOMxRef("FocusEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property（事件处理程序属性）</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
+      </td>
+    </tr>
+    <tr>
+      <th>Sync / Async（同步/异步）</th>
+      <td>Sync</td>
+    </tr>
+    <tr>
+      <th>Composed（可组成）</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="在线示例">在线示例</h3>
+### 在线示例
 
-<p>本示例在失去焦点时更改文档的外观。它使用 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 监听 <code>focus</code> 和 {{domxref("Window/blur_event", "blur")}} 事件。</p>
+本示例在失去焦点时更改文档的外观。它使用 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 监听 `focus` 和 {{domxref("Window/blur_event", "blur")}} 事件。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="log"&gt;Click on this document to give it focus.&lt;/p&gt;</pre>
+```html
+<p id="log">Click on this document to give it focus.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.paused {
+```css
+.paused {
   background: #ddd;
   color: #555;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function pause() {
+```js
+function pause() {
   document.body.classList.add('paused');
   log.textContent = 'FOCUS LOST!';
 }
@@ -71,23 +77,22 @@ function play() {
 const log = document.getElementById('log');
 
 window.addEventListener('blur', pause);
-window.addEventListener('focus', play);</pre>
+window.addEventListener('focus', play);
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Live_example")}}</p>
+{{EmbedLiveSample("Live_example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Window.focus_event")}}</p>
+{{Compat("api.Window.focus_event")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>相关联事件： {{domxref("Window/blur_event", "blur")}}</li>
- <li><code>Element</code> 目标上的这个事件: {{domxref("Element/focus_event", "focus")}} 事件</li>
-</ul>
+- 相关联事件： {{domxref("Window/blur_event", "blur")}}
+- `Element` 目标上的这个事件: {{domxref("Element/focus_event", "focus")}} 事件

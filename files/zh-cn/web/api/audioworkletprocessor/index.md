@@ -2,73 +2,67 @@
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>的 <strong><code>AudioWorkletProcessor</code></strong> 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上。同时，一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上。</p>
+[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)的 **`AudioWorkletProcessor`** 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上。同时，一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<div class="note"><code>AudioWorkletProcessor</code> 及其子类不能通过用户提供的的代码直接实例化。它们只能随着与之相联系{{domxref("AudioWorkletNode")}}s 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此您可以执行自定义的初始化过程——详细信息请参见构造函数页面。</div>
+> **备注：** `AudioWorkletProcessor` 及其子类不能通过用户提供的的代码直接实例化。它们只能随着与之相联系{{domxref("AudioWorkletNode")}}s 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此您可以执行自定义的初始化过程——详细信息请参见构造函数页面。
 
-<dl>
- <dt>{{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}</dt>
- <dd>创建一个 <code>AudioWorkletProcessor</code> 对象的新实例。</dd>
-</dl>
+- {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
+  - : 创建一个 `AudioWorkletProcessor` 对象的新实例。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("AudioWorkletProcessor.port", "port")}} {{readonlyinline}}</dt>
- <dd>返回一个用于在处理程序和其所属的{{domxref("AudioWorkletNode")}}间双向通信的 {{domxref("MessagePort")}} 。 另一端 可通过该节点的{{domxref("AudioWorkletNode.port", "port")}} 属性使用。</dd>
-</dl>
+- {{domxref("AudioWorkletProcessor.port", "port")}} {{readonlyinline}}
+  - : 返回一个用于在处理程序和其所属的{{domxref("AudioWorkletNode")}}间双向通信的 {{domxref("MessagePort")}} 。 另一端 可通过该节点的{{domxref("AudioWorkletNode.port", "port")}} 属性使用。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em><code>AudioWorkletProcessor</code> 接口没有定义任何自己的方法。但是，您必须提供一个 {{domxref("AudioWorkletProcessor.process", "process()")}} 方法，用以处理音频流。</em></p>
+_`AudioWorkletProcessor` 接口没有定义任何自己的方法。但是，您必须提供一个 {{domxref("AudioWorkletProcessor.process", "process()")}} 方法，用以处理音频流。_
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<p><em><code>AudioWorkletProcessor</code> 接口不响应任何事件。</em></p>
+_`AudioWorkletProcessor` 接口不响应任何事件。_
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<h3 id="Deriving_classes">Deriving classes</h3>
+### Deriving classes
 
-<p>要自定义音频处理代码， 你必须从<code>AudioWorkletProcessor</code> 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。您可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。</p>
+要自定义音频处理代码， 你必须从`AudioWorkletProcessor` 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。您可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。
 
-<p>Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a <em>static getter</em> on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the <code>AudioWorkletNode</code>.</p>
+Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
 
-<p>The resulting <code>AudioParam</code>s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as <code><a href="/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime">linearRampToValueAtTime</a></code>. Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.</p>
+The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
 
-<h3 id="处理音频">处理音频</h3>
+### 处理音频
 
-<p>一个创建自定义音频处理算法的步骤的实例：</p>
+一个创建自定义音频处理算法的步骤的实例：
 
-<ol>
- <li>创建一个独立的文件;</li>
- <li>在这个文件中：
-  <ol>
-   <li>Extend the <code>AudioWorkletProcessor</code> class (see <a href="#Deriving_classes">"Deriving classes" section</a>) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;</li>
-   <li>Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;</li>
-  </ol>
- </li>
- <li>Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;</li>
- <li>Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the <code>AudioWorkletNode</code> constructor.</li>
- <li>Connect the node to the other nodes.</li>
-</ol>
+1.  创建一个独立的文件;
+2.  在这个文件中：
 
-<h2 id="例子">例子</h2>
+    1.  Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#Deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
+    2.  Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 
-<p>In the example below we create a custom {{domxref("AudioWorkletNode")}} that outputs white noise.</p>
+3.  Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;
+4.  Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the `AudioWorkletNode` constructor.
+5.  Connect the node to the other nodes.
 
-<p>First, we need to define a custom <code>AudioWorkletProcessor</code>, which will output white noise, and register it. Note that this should be done in a separate file.</p>
+## 例子
 
-<pre class="brush: js notranslate">// white-noise-processor.js
+In the example below we create a custom {{domxref("AudioWorkletNode")}} that outputs white noise.
+
+First, we need to define a custom `AudioWorkletProcessor`, which will output white noise, and register it. Note that this should be done in a separate file.
+
+```js
+// white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
   process (inputs, outputs, parameters) {
     const output = outputs[0]
-    output.forEach(channel =&gt; {
-      for (let i = 0; i &lt; channel.length; i++) {
+    output.forEach(channel => {
+      for (let i = 0; i < channel.length; i++) {
         channel[i] = Math.random() * 2 - 1
       }
     })
@@ -77,31 +71,26 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 }
 
 registerProcessor('white-noise-processor', WhiteNoiseProcessor)
-</pre>
+```
 
-<p>Next, in our main script file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}}, passing it the name of the processor, then connect the node to an audio graph.</p>
+Next, in our main script file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}}, passing it the name of the processor, then connect the node to an audio graph.
 
-<pre class="brush: js notranslate">const audioContext = new AudioContext()
+```js
+const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('white-noise-processor.js')
 const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
 whiteNoiseNode.connect(audioContext.destination)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.AudioWorkletProcessor")}}
 
+## See also
 
-<p>{{Compat("api.AudioWorkletProcessor")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

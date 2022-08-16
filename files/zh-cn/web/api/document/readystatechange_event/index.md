@@ -2,50 +2,50 @@
 title: 'Document: readystatechange 事件'
 slug: Web/API/Document/readystatechange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当文档的 {{domxref("Document.readyState", "readyState")}} 属性发生改变时，会触发 <code>readystatechange</code> 事件。</p>
+当文档的 {{domxref("Document.readyState", "readyState")}} 属性发生改变时，会触发 `readystatechange` 事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">是否冒泡</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">是否可取消</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler 属性</th>
-   <td><code>onreadystatechange</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">是否冒泡</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">是否可取消</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler 属性</th>
+      <td><code>onreadystatechange</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="实时演示">实时演示</h3>
+### 实时演示
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="reload" type="button">Reload</button>
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -72,56 +72,51 @@ label, button {
 #reload {
   height: 2rem;
 }
+```
 
-</pre>
-</div>
+#### JS
 
-<h4 id="JS">JS</h4>
-
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
-reload.addEventListener('click', () =&gt; {
+reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() =&gt; {
+  window.setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) =&gt; {
+window.addEventListener('load', (event) => {
     log.textContent = log.textContent + 'load\n';
 });
 
-document.addEventListener('readystatechange', (event) =&gt; {
+document.addEventListener('readystatechange', (event) => {
     log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) =&gt; {
+document.addEventListener('DOMContentLoaded', (event) => {
     log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('实时演示', '100%', '160px') }}</p>
+{{ EmbedLiveSample('实时演示', '100%', '160px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Document.readystatechange_event")}}
 
+IE 浏览器是一直支持 `readystatechange` 事件的，可作为 [DOMContentLoaded ](</zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)>)事件的替代方法（参见[Browser compatibility](/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_%28event%29#Browser_compatibility)的注释 \[2]）。
 
-<p>{{Compat("api.Document.readystatechange_event")}}</p>
+## 参见
 
-<p>IE 浏览器是一直支持 <code>readystatechange</code> 事件的，可作为 <a href="/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)">DOMContentLoaded </a>事件的替代方法（参见<a href="/en-US/docs/Mozilla_event_reference/DOMContentLoaded_%28event%29#Browser_compatibility">Browser compatibility</a>的注释 [2]）。</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{event("DOMContentLoaded")}}</li>
- <li>{{event("load")}}</li>
- <li>{{event("beforeunload")}}</li>
- <li>{{event("unload")}}</li>
-</ul>
+- {{event("DOMContentLoaded")}}
+- {{event("load")}}
+- {{event("beforeunload")}}
+- {{event("unload")}}

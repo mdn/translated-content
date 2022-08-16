@@ -2,80 +2,79 @@
 title: 滚轮事件
 slug: Web/API/Element/wheel_event
 ---
-<p>当滚动鼠标滚轮或操作其它类似输入设备时会触发<strong>滚轮事件</strong>。滚轮事件替换了已被弃用的非标准{{domxref("mousewheel")}}事件。</p>
+当滚动鼠标滚轮或操作其它类似输入设备时会触发**滚轮事件**。滚轮事件替换了已被弃用的非标准{{domxref("mousewheel")}}事件。
 
-<div class="note"><strong>注意事项：</strong> 请勿想当然依据滚轮方向（即该事件的各 delta 属性值）来推断文档内容的滚动方向，因标准未定义滚轮事件具体会引发什么样的行为，引发的行为实际上是各浏览器自行定义的。即便滚轮事件引发了文档内容的滚动行为，也不表示滚轮方向和文档内容的滚动方向一定相同。因而通过该滚轮事件获知文档内容滚动方向的方法并不可靠。要获取文档内容的滚动方向，可在文档内容滚动事件（{{event("scroll")}}）中监视{{domxref("Element.scrollLeft", "scrollLeft")}}和{{domxref("Element.scrollTop", "scrollTop")}}二值变化情况，即可推断出滚动方向了。</div>
+> **备注：** 请勿想当然依据滚轮方向（即该事件的各 delta 属性值）来推断文档内容的滚动方向，因标准未定义滚轮事件具体会引发什么样的行为，引发的行为实际上是各浏览器自行定义的。即便滚轮事件引发了文档内容的滚动行为，也不表示滚轮方向和文档内容的滚动方向一定相同。因而通过该滚轮事件获知文档内容滚动方向的方法并不可靠。要获取文档内容的滚动方向，可在文档内容滚动事件（{{event("scroll")}}）中监视{{domxref("Element.scrollLeft", "scrollLeft")}}和{{domxref("Element.scrollTop", "scrollTop")}}二值变化情况，即可推断出滚动方向了。
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<dl>
- <dt>接口</dt>
- <dd>{{domxref("WheelEvent")}}</dd>
- <dt>同步性</dt>
- <dd>异步</dd>
- <dt>事件冒泡</dt>
- <dd>是</dd>
- <dt>可取消</dt>
- <dd>是</dd>
- <dt>目标元素</dt>
- <dd>defaultView, Document, Element</dd>
- <dt>默认行为</dt>
- <dd>滚动，历史记录切换，或者放大／缩小。</dd>
-</dl>
+- 接口
+  - : {{domxref("WheelEvent")}}
+- 同步性
+  - : 异步
+- 事件冒泡
+  - : 是
+- 可取消
+  - : 是
+- 目标元素
+  - : defaultView, Document, Element
+- 默认行为
+  - : 滚动，历史记录切换，或者放大／缩小。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>滚轮事件实现了以下事件的属性： {{domxref("WheelEvent")}}, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_滚轮事件实现了以下事件的属性： {{domxref("WheelEvent")}}, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<h3 id="Properties_of_WheelEvent">Properties of <code>WheelEvent</code></h3>
+### Properties of `WheelEvent`
 
-<p>{{page("/zh-CN/docs/Web/API/WheelEvent", "属性")}}</p>
+{{page("/zh-CN/docs/Web/API/WheelEvent", "属性")}}
 
-<h3 id="Properties_of_MouseEvent">Properties of <code>MouseEvent</code></h3>
+### Properties of `MouseEvent`
 
-<p>{{page("/zh-CN/docs/Web/API/MouseEvent", "属性")}}</p>
+{{page("/zh-CN/docs/Web/API/MouseEvent", "属性")}}
 
-<h3 id="Properties_of_UIEvent">Properties of <code>UIEvent</code></h3>
+### Properties of `UIEvent`
 
-<p>{{page("/zh-CN/docs/Web/API/UIEvent", "属性")}}</p>
+{{page("/zh-CN/docs/Web/API/UIEvent", "属性")}}
 
-<h3 id="Properties_of_Event">Properties of <code>Event</code></h3>
+### Properties of `Event`
 
-<p>{{page("/zh-CN/docs/Web/API/Event", "属性")}}</p>
+{{page("/zh-CN/docs/Web/API/Event", "属性")}}
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>滚轮事件实现了以下事件的方法： {{domxref("WheelEvent")}}, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_滚轮事件实现了以下事件的方法： {{domxref("WheelEvent")}}, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<h3 id="Methods_of_WheelEvent">Methods of <code>WheelEvent</code></h3>
+### Methods of `WheelEvent`
 
-<p>{{page("/zh-CN/docs/Web/API/WheelEvent", "方法")}}</p>
+{{page("/zh-CN/docs/Web/API/WheelEvent", "方法")}}
 
-<h3 id="Methods_of_MouseEvent">Methods of <code>MouseEvent</code></h3>
+### Methods of `MouseEvent`
 
-<p>{{page("/zh-CN/docs/Web/API/MouseEvent", "方法")}}</p>
+{{page("/zh-CN/docs/Web/API/MouseEvent", "方法")}}
 
-<h3 id="Methods_of_UIEvent">Methods of <code>UIEvent</code></h3>
+### Methods of `UIEvent`
 
-<p>{{page("/zh-CN/docs/Web/API/UIEvent", "方法")}}</p>
+{{page("/zh-CN/docs/Web/API/UIEvent", "方法")}}
 
-<h3 id="Methods_of_Event">Methods of <code>Event</code></h3>
+### Methods of `Event`
 
-<p>{{page("/zh-CN/docs/Web/API/Event", "方法")}}</p>
+{{page("/zh-CN/docs/Web/API/Event", "方法")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Element.wheel_event")}}</p>
+{{Compat("api.Element.wheel_event")}}
 
-<h3 id="跨浏览器监听滚动事件">跨浏览器监听滚动事件</h3>
+### 跨浏览器监听滚动事件
 
-<p><code>以下脚本创建了一个全局的 addWheelListener</code> 方法，它可以兼容各浏览器监听滚动事件，并且阻止默认行为。</p>
+`以下脚本创建了一个全局的 addWheelListener` 方法，它可以兼容各浏览器监听滚动事件，并且阻止默认行为。
 
-<pre class="brush:js;">// creates a global "addWheelListener" method
+```js
+// creates a global "addWheelListener" method
 // example: addWheelListener( elem, function( e ) { console.log( e.deltaY ); e.preventDefault(); } );
 (function(window,document) {
 
@@ -105,7 +104,7 @@ slug: Web/API/Element/wheel_event
 
     function _addWheelListener( elem, eventName, callback, useCapture ) {
         elem[ _addEventListener ]( prefix + eventName, support == "wheel" ? callback : function( originalEvent ) {
-            !originalEvent &amp;&amp; ( originalEvent = window.event );
+            !originalEvent && ( originalEvent = window.event );
 
             // create a normalized event object
             var event = {
@@ -127,7 +126,7 @@ slug: Web/API/Element/wheel_event
             if ( support == "mousewheel" ) {
                 event.deltaY = - 1/40 * originalEvent.wheelDelta;
                 // Webkit also support wheelDeltaX
-                originalEvent.wheelDeltaX &amp;&amp; ( event.deltaX = - 1/40 * originalEvent.wheelDeltaX );
+                originalEvent.wheelDeltaX && ( event.deltaX = - 1/40 * originalEvent.wheelDeltaX );
             } else {
                 event.deltaY = originalEvent.detail;
             }
@@ -138,115 +137,62 @@ slug: Web/API/Element/wheel_event
         }, useCapture || false );
     }
 
-})(window,document);</pre>
+})(window,document);
+```
 
-<h2 id="Gecko_notes">Gecko notes</h2>
+## Gecko notes
 
-<h3 id="滚轮事件和其它的鼠标滚动事件">滚轮事件和其它的鼠标滚动事件</h3>
+### 滚轮事件和其它的鼠标滚动事件
 
-<p>如果一个用户真实操作触发的滚轮事件没有被处理，这会触发一个 <code>DOMMouseScroll</code> 事件和一个 <code>MozMousePixelScroll</code> 事件以向下兼容。它们的属性值由滚轮事件 delta 值和最近的 ancestor clipped 元素计算出。(i.e., <a href="/en-US/CSS/overflow"><code>overflow</code></a> 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止，将什么都不会发生。</p>
+如果一个用户真实操作触发的滚轮事件没有被处理，这会触发一个 `DOMMouseScroll` 事件和一个 `MozMousePixelScroll` 事件以向下兼容。它们的属性值由滚轮事件 delta 值和最近的 ancestor clipped 元素计算出。(i.e., [`overflow`](/en-US/CSS/overflow) 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止，将什么都不会发生。
 
-<p>以下为事件顺序：</p>
+以下为事件顺序：
 
-<ol>
- <li>滚轮事件处于默认事件组 (web 应用和浏览器插件都可以处理这个组的事件)</li>
- <li>当连续滚轮事件 deltaY 的值累计大于 1 或小于－1 时，<code>竖直方向的 DOMMouseScroll</code> 事件既属于默认事件组也属于系统事件组</li>
- <li>当最近的滚轮事件的 deltaY 值非零时，两个事件组都包含竖直方向的 MozMousePixelScroll 事件</li>
- <li>当连续滚轮事件 deltaX 的值累计大于 1 或小于－1 时，两个事件组都包含水平<code>方向的 DOMMouseScroll</code> 事件</li>
- <li>当最近的滚轮事件的 deltaX 值非零时，两个事件组都包含水平方向的 MozMousePixelScroll 事件</li>
- <li>一个滚轮事件处于系统事件组 (只有浏览器插件可以处理这个组的事件)</li>
-</ol>
+1.  滚轮事件处于默认事件组 (web 应用和浏览器插件都可以处理这个组的事件)
+2.  当连续滚轮事件 deltaY 的值累计大于 1 或小于－1 时，`竖直方向的 DOMMouseScroll` 事件既属于默认事件组也属于系统事件组
+3.  当最近的滚轮事件的 deltaY 值非零时，两个事件组都包含竖直方向的 MozMousePixelScroll 事件
+4.  当连续滚轮事件 deltaX 的值累计大于 1 或小于－1 时，两个事件组都包含水平`方向的 DOMMouseScroll` 事件
+5.  当最近的滚轮事件的 deltaX 值非零时，两个事件组都包含水平方向的 MozMousePixelScroll 事件
+6.  一个滚轮事件处于系统事件组 (只有浏览器插件可以处理这个组的事件)
 
-<table>
- <caption><code>各个事件调用 preventDefault()</code> 会发生什么？</caption>
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row"><code>wheel</code> (default event group)</th>
-   <td><code>preventDefault()</code> called</td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row"><code>DOMMouseScroll</code> (Vertical)</th>
-   <td>Not fired</td>
-   <td><code>preventDefault()</code> called</td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row"><code>MozMousePixelScroll</code> (Vertical)</th>
-   <td>Not fired</td>
-   <td><code>defaultPrevented</code> is true</td>
-   <td><code>preventDefault()</code> called</td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row"><code>DOMMouseScroll</code> (Horizontal)</th>
-   <td>Not fired</td>
-   <td>Not affected</td>
-   <td>Not affected</td>
-   <td><code>preventDefault()</code> called</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row"><code>MozMousePixelScroll</code> (Horizontal)</th>
-   <td>Not fired</td>
-   <td>Not affected</td>
-   <td>Not affected</td>
-   <td><code>defaultPrevented</code> is true</td>
-   <td><code>preventDefault()</code> called</td>
-  </tr>
-  <tr>
-   <th scope="row"><code>wheel</code> (system event group)</th>
-   <td><code>defaultPrevented</code> is true</td>
-   <td><code>defaultPrevented</code> is true</td>
-   <td><code>defaultPrevented</code> is true</td>
-   <td><code>defaultPrevented</code> is true</td>
-   <td><code>defaultPrevented</code> is true</td>
-  </tr>
- </tbody>
-</table>
+| `wheel` (default event group)      | `preventDefault()` called  |                            |                            |                            |                            |
+| ---------------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- |
+| `DOMMouseScroll` (Vertical)        | Not fired                  | `preventDefault()` called  |                            |                            |                            |
+| `MozMousePixelScroll` (Vertical)   | Not fired                  | `defaultPrevented` is true | `preventDefault()` called  |                            |                            |
+| `DOMMouseScroll` (Horizontal)      | Not fired                  | Not affected               | Not affected               | `preventDefault()` called  |                            |
+| `MozMousePixelScroll` (Horizontal) | Not fired                  | Not affected               | Not affected               | `defaultPrevented` is true | `preventDefault()` called  |
+| `wheel` (system event group)       | `defaultPrevented` is true | `defaultPrevented` is true | `defaultPrevented` is true | `defaultPrevented` is true | `defaultPrevented` is true |
 
-<p>如果一个浏览器插件需要知道剩余事件是否被 web 内容所处理，它可以使用第 6 个滚轮事件判断，详细内容请查阅系统事件组 <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService"><code>nsIEventListenerService</code></a> 的文档。</p>
+如果一个浏览器插件需要知道剩余事件是否被 web 内容所处理，它可以使用第 6 个滚轮事件判断，详细内容请查阅系统事件组 [`nsIEventListenerService`](/zh-CN/docs/XPCOM_Interface_Reference/nsIEventListenerService) 的文档。
 
-<p>通过设置用户偏好可以修改 delta 值和默认行为 (<a href="https://wiki.mozilla.org/Gecko:Mouse_Wheel_Scrolling#Preferences_for_customizing_delta_values_and_default_action">details</a>)， 因此开发者不应该期望在处理这个事件后发生特殊的行为。</p>
+通过设置用户偏好可以修改 delta 值和默认行为 ([details](https://wiki.mozilla.org/Gecko:Mouse_Wheel_Scrolling#Preferences_for_customizing_delta_values_and_default_action))， 因此开发者不应该期望在处理这个事件后发生特殊的行为。
 
-<h3 id="delta_值">delta 值</h3>
+### delta 值
 
-<p>delta 值并不代表默认情况下的实际滚动值，如果用户在滚动滚轮时按住其他键，可能会产生其他行为，比如在浏览记录中前进／回退，或者放大／缩小网页内容。 此外，滚动过程中被滚动的元素不一定是目标元素，滚轮事件的目标元素是由事件触发时光标所在位置计算出的。 That event may not only not be the one actually being scrolled，甚至都不可滚动。</p>
+delta 值并不代表默认情况下的实际滚动值，如果用户在滚动滚轮时按住其他键，可能会产生其他行为，比如在浏览记录中前进／回退，或者放大／缩小网页内容。 此外，滚动过程中被滚动的元素不一定是目标元素，滚轮事件的目标元素是由事件触发时光标所在位置计算出的。 That event may not only not be the one actually being scrolled，甚至都不可滚动。
 
-<h3 id="deltaMode_值">deltaMode 值</h3>
+### deltaMode 值
 
-<p>在 Windows 下，以下三个原生事件造成了 DOM 滚轮事件。</p>
+在 Windows 下，以下三个原生事件造成了 DOM 滚轮事件。
 
-<dl>
- <dt>WM_MOUSEWHEEL (竖直方向的滚动事件)</dt>
- <dd><code>deltaMode</code> 值可以是 <code>DOM_DELTA_LINE</code> 或 <code>DOM_DELTA_PAGE。</code>它取决于 Windows 的用户设置 (默认设置为 <code>DOM_DELTA_LINE</code>)。</dd>
- <dt>WM_MOUSEHWHEEL (水平方向的滚动事件)</dt>
- <dd><code>deltaMode</code> 值可以是 <code>DOM_DELTA_LINE</code> 或 <code>DOM_DELTA_PAGE。然而 </code>Windows 的滚轮速度设置界面和鼠标驱动工具都没有提供改为 page scroll 的选项。 所以这个值通常为 <code>DOM_DELTA_LINE</code>.</dd>
- <dt>WM_GESTURE (Only when caused by panning)</dt>
- <dd><code>deltaMode </code>值总是 <code>DOM_DELTA_PIXEL。</code>但请注意大多数笔记本的触摸板都在模拟鼠标滚轮事件而不是调用这个事件， WM_GESTURE 事件通常被平板电脑使用。</dd>
-</dl>
+- WM_MOUSEWHEEL (竖直方向的滚动事件)
+  - : `deltaMode` 值可以是 `DOM_DELTA_LINE` 或 `DOM_DELTA_PAGE。`它取决于 Windows 的用户设置 (默认设置为 `DOM_DELTA_LINE`)。
+- WM_MOUSEHWHEEL (水平方向的滚动事件)
+  - : `deltaMode` 值可以是 `DOM_DELTA_LINE` 或 `DOM_DELTA_PAGE。然而 `Windows 的滚轮速度设置界面和鼠标驱动工具都没有提供改为 page scroll 的选项。 所以这个值通常为 `DOM_DELTA_LINE`.
+- WM_GESTURE (Only when caused by panning)
+  - : `deltaMode `值总是 `DOM_DELTA_PIXEL。`但请注意大多数笔记本的触摸板都在模拟鼠标滚轮事件而不是调用这个事件， WM_GESTURE 事件通常被平板电脑使用。
 
-<p>在 Mac 下 deltaMode 值由设备决定。如果设备支持高分辨率像素级滚动，<code>deltaMode </code>值就是典型的 <code>DOM_DELTA_PIXEL</code>. 然而用户可以通过加前缀<code>"mousewheel.enable_pixel_scrolling"</code>将其改变为 <code>DOM_DELTA_LINE</code> 。如果设备不支持高分辨率滚动，那么 deltaModel 值将一直为 <code>DOM_DELTA_LINE</code>.</p>
+在 Mac 下 deltaMode 值由设备决定。如果设备支持高分辨率像素级滚动，`deltaMode `值就是典型的 `DOM_DELTA_PIXEL`. 然而用户可以通过加前缀`"mousewheel.enable_pixel_scrolling"`将其改变为 `DOM_DELTA_LINE` 。如果设备不支持高分辨率滚动，那么 deltaModel 值将一直为 `DOM_DELTA_LINE`.
 
-<p><code>在其它平台下， deltaMode 值总是 DOM_DELTA_LINE</code>.</p>
+`在其它平台下， deltaMode 值总是 DOM_DELTA_LINE`.
 
-<h3 id="Untrusted_events">Untrusted events</h3>
+### Untrusted events
 
-<p>非用户真实操作触发的滚轮事件不会引发默认行为。</p>
+非用户真实操作触发的滚轮事件不会引发默认行为。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{ domxref("WheelEvent") }}</li>
- <li>Gecko's legacy events: <code>DOMMouseScroll</code> and <code>MozMousePixelScroll</code></li>
- <li>Non-Gecko browsers' legacy event: <code>mousewheel</code></li>
- <li>WebKit bug: <a href="https://bugs.webkit.org/show_bug.cgi?id=94081">https://bugs.webkit.org/show_bug.cgi?id=94081</a></li>
-</ul>
+- {{ domxref("WheelEvent") }}
+- Gecko's legacy events: `DOMMouseScroll` and `MozMousePixelScroll`
+- Non-Gecko browsers' legacy event: `mousewheel`
+- WebKit bug: <https://bugs.webkit.org/show_bug.cgi?id=94081>

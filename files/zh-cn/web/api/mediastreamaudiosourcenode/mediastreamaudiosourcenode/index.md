@@ -2,30 +2,30 @@
 title: MediaStreamAudioSourceNode.MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p><code><strong>MediaStreamAudioSourceNode()</strong></code>构造器创建一个新的 {{domxref("MediaStreamAudioSourceNode")}}对象实例。</p>
+**`MediaStreamAudioSourceNode()`**构造器创建一个新的 {{domxref("MediaStreamAudioSourceNode")}}对象实例。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var myAudioSource = new MediaStreamAudioSourceNode(<em>context</em>, <em>options</em>);</pre>
+```js
+var myAudioSource = new MediaStreamAudioSourceNode(context, options);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>context</em></dt>
- <dd>一个用来使用 node 的音频环境{{domxref("AudioContext")}}。</dd>
- <dt><em>options</em></dt>
- <dd><code>MediaStreamAudioSourceOptions</code>，一个 map 对象，定义<code>MediaStreamAudioSourceNode</code>的属性：
- <ul>
-  <li><code>mediaStream</code>: 需要使用的音频流</li>
- </ul>
- </dd>
-</dl>
+- _context_
+  - : 一个用来使用 node 的音频环境{{domxref("AudioContext")}}。
+- _options_
 
-<h2 id="示例">示例</h2>
+  - : `MediaStreamAudioSourceOptions`，一个 map 对象，定义`MediaStreamAudioSourceNode`的属性：
 
-<pre class="brush: js">// define variables
+    - `mediaStream`: 需要使用的音频流
+
+## 示例
+
+```js
+// define variables
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // getUserMedia block - grab stream 获取音频流
@@ -51,12 +51,13 @@ if (navigator.mediaDevices.getUserMedia) {
       });
 } else {
    console.log('new getUserMedia not supported on your browser!');
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode")}}

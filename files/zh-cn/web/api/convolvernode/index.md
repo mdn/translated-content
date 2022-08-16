@@ -2,70 +2,63 @@
 title: ConvolverNode
 slug: Web/API/ConvolverNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p><code>ConvolverNode</code> 接口是一个对给定 {{domxref("AudioBuffer")}} 上执行线性卷积的 {{domxref("AudioNode")}}，一般用来做音频混响效果。每一个 <code>ConvolverNode</code> 都会有一个输入值和输出值。</p>
+`ConvolverNode` 接口是一个对给定 {{domxref("AudioBuffer")}} 上执行线性卷积的 {{domxref("AudioNode")}}，一般用来做音频混响效果。每一个 `ConvolverNode` 都会有一个输入值和输出值。
 
-<div class="note">
-<p><strong>注意</strong>: 更多线性卷积理论的相关信息，请参阅<a href="https://en.wikipedia.org/wiki/Convolution">Convolution article on Wikipedia</a>.</p>
-</div>
+> **备注：** 更多线性卷积理论的相关信息，请参阅[Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"clamped-max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>1</code>, <code>2</code>, or <code>4</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"clamped-max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>1</code>, <code>2</code>, or <code>4</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}</dt>
- <dd>创建一个新的 <code>ConvolverNode</code> 对象实例。</dd>
-</dl>
+- {{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}
+  - : 创建一个新的 `ConvolverNode` 对象实例。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>继承其父级的属性<em>, {{domxref("AudioNode")}}</em>.</p>
+继承其父级的属性*, {{domxref("AudioNode")}}*.
 
-<dl>
- <dt>{{domxref("ConvolverNode.buffer")}}</dt>
- <dd>一个被 <code>ConvolverNode</code> 用来产生混响效果的单声道、立体声或四声道的音频缓冲器，包含了 (可能是多声道) 脉冲反应 (IR)。</dd>
- <dt>{{domxref("ConvolverNode.normalize")}}</dt>
- <dd>布尔值，在设置缓冲区属性时，可绝定是否对来自 <code>buffer</code> 的脉冲反应按等功率归一化进行缩放。</dd>
-</dl>
+- {{domxref("ConvolverNode.buffer")}}
+  - : 一个被 `ConvolverNode` 用来产生混响效果的单声道、立体声或四声道的音频缓冲器，包含了 (可能是多声道) 脉冲反应 (IR)。
+- {{domxref("ConvolverNode.normalize")}}
+  - : 布尔值，在设置缓冲区属性时，可绝定是否对来自 `buffer` 的脉冲反应按等功率归一化进行缩放。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>没有具体的方法，从其父继承方法，<em>{{domxref("AudioNode")}}</em>.</p>
+没有具体的方法，从其父继承方法，_{{domxref("AudioNode")}}_.
 
-<h2 id="ConvolverNode_例子">ConvolverNode 例子</h2>
+## ConvolverNode 例子
 
-<p>下面的示例展示了 AudioContext 创建卷积节点的基础用法。</p>
+下面的示例展示了 AudioContext 创建卷积节点的基础用法。
 
-<div class="note">
-<p><strong>注意</strong>: 你需要找到一个脉冲反应来完成下面的示例。可查看 <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">此处</a> 的实例。</p>
-</div>
+> **备注：** 你需要找到一个脉冲反应来完成下面的示例。可查看[此处](https://codepen.io/DonKarlssonSan/pen/doVKRE) 的实例。
 
-<pre class="brush: js notranslate">let audioCtx = new window.AudioContext();
+```js
+let audioCtx = new window.AudioContext();
 
 async function createReverb() {
     let convolver = audioCtx.createConvolver();
@@ -82,25 +75,19 @@ async function createReverb() {
 
 let reverb = await createReverb();
 
-// someOtherAudioNode -&gt; reverb -&gt; destination
+// someOtherAudioNode -> reverb -> destination
 someOtherAudioNode.connect(reverb);
 reverb.connect(audioCtx.destination);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.ConvolverNode")}}
 
+## 相关链接
 
-<p>{{Compat("api.ConvolverNode")}}</p>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

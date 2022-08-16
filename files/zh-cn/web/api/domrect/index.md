@@ -2,73 +2,60 @@
 title: DOMRect
 slug: Web/API/DOMRect
 ---
-<p>{{APIRef("Geometry Interfaces")}}</p>
+{{APIRef("Geometry Interfaces")}}
 
-<p>一个 <strong><code>DOMRect</code></strong> 代表一个矩形。</p>
+一个 **`DOMRect`** 代表一个矩形。
 
-<p><code>DOMRect</code> 表示的盒子的类型由返回它的方法或属性指定。例如，WebVR API 的 {{domxref("VREyeParameters.renderRect")}} 指定了头戴式显示器的一只眼睛应该呈现的影像所在的 <a href="/en-US/docs/Web/API/HTMLCanvasElement">canvas</a> 的视口。</p>
+`DOMRect` 表示的盒子的类型由返回它的方法或属性指定。例如，WebVR API 的 {{domxref("VREyeParameters.renderRect")}} 指定了头戴式显示器的一只眼睛应该呈现的影像所在的 [canvas](/zh-CN/docs/Web/API/HTMLCanvasElement) 的视口。
 
-<p>它继承自它的父类，{{domxref("DOMRectReadOnly")}}。</p>
+它继承自它的父类，{{domxref("DOMRectReadOnly")}}。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("DOMRect.DOMRect","DOMRect()")}}</dt>
- <dd>创建一个新的 <code>DOMRect</code> 对象。</dd>
-</dl>
+- {{domxref("DOMRect.DOMRect","DOMRect()")}}
+  - : 创建一个新的 `DOMRect` 对象。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
-</dl>
+`DOMRect` 从其父类 _{{domxref("DOMRectReadOnly")}}_ 继承属性。不同之处在于它们不再是只读的。
 
-<p><code>DOMRect</code> 从其父类 <em>{{domxref("DOMRectReadOnly")}}</em> 继承属性。不同之处在于它们不再是只读的。</p>
+- {{domxref("DOMRectReadOnly.x")}}
+  - : `DOMRect` 原点的 x 坐标。
+- {{domxref("DOMRectReadOnly.y")}}
+  - : `DOMRect` 原点的 y 坐标。
+- {{domxref("DOMRectReadOnly.width")}}
+  - : `DOMRect` 的宽度。
+- {{domxref("DOMRectReadOnly.height")}}
+  - : `DOMRect` 的高度。
+- {{domxref("DOMRectReadOnly.top")}}
+  - : 返回 `DOMRect` 的顶坐标值（与 `y` 具有相同的值，如果 `height` 为负值，则为 `y + height` 的值）。
+- {{domxref("DOMRectReadOnly.right")}}
+  - : 返回 `DOMRect` 的右坐标值（与 `x + width` 具有相同的值，如果`width` 为负值，则为 `x` 的值）。
+- {{domxref("DOMRectReadOnly.bottom")}}
+  - : 返回 `DOMRect` 的底坐标值（与 `y + height` 具有相同的值，如果 `height` 为负值，则为 `y` 的值）。
+- {{domxref("DOMRectReadOnly.left")}}
+  - : 返回 `DOMRect` 的左坐标值（与 `x` 具有相同的值，如果 `width` 为负值，则为 `x + width` 的值）。
 
-<dl>
- <dt>{{domxref("DOMRectReadOnly.x")}}</dt>
- <dd><code>DOMRect</code> 原点的 x 坐标。</dd>
- <dt>{{domxref("DOMRectReadOnly.y")}}</dt>
- <dd><code>DOMRect</code> 原点的 y 坐标。</dd>
- <dt>{{domxref("DOMRectReadOnly.width")}}</dt>
- <dd><code>DOMRect</code> 的宽度。</dd>
- <dt>{{domxref("DOMRectReadOnly.height")}}</dt>
- <dd><code>DOMRect</code> 的高度。</dd>
- <dt>{{domxref("DOMRectReadOnly.top")}}</dt>
- <dd>返回 <code>DOMRect</code> 的顶坐标值（与 <code>y</code> 具有相同的值，如果 <code>height</code> 为负值，则为 <code>y + height</code> 的值）。</dd>
- <dt>{{domxref("DOMRectReadOnly.right")}}</dt>
- <dd>返回 <code>DOMRect</code> 的右坐标值（与 <code>x + width</code> 具有相同的值，如果<code>width</code> 为负值，则为 <code>x</code> 的值）。</dd>
- <dt>{{domxref("DOMRectReadOnly.bottom")}}</dt>
- <dd>返回 <code>DOMRect</code> 的底坐标值（与 <code>y + height</code> 具有相同的值，如果 <code>height</code> 为负值，则为 <code>y</code> 的值）。</dd>
- <dt>{{domxref("DOMRectReadOnly.left")}}</dt>
- <dd>返回 <code>DOMRect</code> 的左坐标值（与 <code>x</code> 具有相同的值，如果 <code>width</code> 为负值，则为 <code>x + width</code> 的值）。</dd>
-</dl>
+## 方法
 
-<h2 id="方法">方法</h2>
+_`DOMRect` 从它的父类继承方法，{{domxref("DOMRectReadOnly")}}。_
 
-<p><em><code>DOMRect</code> 从它的父类继承方法，{{domxref("DOMRectReadOnly")}}。</em></p>
+- ## 静态方法
 
-<dl>
- <dt>
- <h2 id="静态方法">静态方法</h2>
- </dt>
- <dt>{{domxref("DOMRectReadOnly.fromRect()")}}</dt>
- <dd>创建一个具有指定位置和尺寸的新 <code>DOMRect</code> 对象。</dd>
-</dl>
+  {{domxref("DOMRectReadOnly.fromRect()")}}
 
-<h2 id="Specification">规范</h2>
+  - : 创建一个具有指定位置和尺寸的新 `DOMRect` 对象。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DOMRect")}}
 
+## 更多
 
-<p>{{Compat("api.DOMRect")}}</p>
-
-<h2 id="更多">更多</h2>
-
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}

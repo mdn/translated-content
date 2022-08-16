@@ -2,47 +2,42 @@
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 ---
-<p>{{APIRef("DOM")}}{{deprecated_header}}</p>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p><code><strong>CustomEvent.initCustomEvent()</strong></code> 方法初始化了一个 <code>CustomEvent</code> object. 如果该事件已经被分发出去，则不会在初始化过程中重复触发．</p>
+**`CustomEvent.initCustomEvent()`** 方法初始化了一个 `CustomEvent` object. 如果该事件已经被分发出去，则不会在初始化过程中重复触发．
 
-<p>这类对象一定是由 {{ domxref("Document.createEvent()") }} 方法创建的。该方法被分发之前必须通过{{ domxref("EventTarget.dispatchEvent()") }}方法设置．一旦被分发则，则无法被重新设置．</p>
+这类对象一定是由 {{ domxref("Document.createEvent()") }} 方法创建的。该方法被分发之前必须通过{{ domxref("EventTarget.dispatchEvent()") }}方法设置．一旦被分发则，则无法被重新设置．
 
-<div class="note">
-<p><strong>该方法已经作废，不要在新项目中继续使用该方法。</strong></p>
+> **备注：** **该方法已经作废，不要在新项目中继续使用该方法。**
+>
+> Instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on [Creating and triggering events](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events) gives more information about the way to use these.
 
-<p>Instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+event.initCustomEvent(type, canBubble, cancelable, detail);
+```
 
-<pre class="syntaxbox"><em>event</em>.initCustomEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>detail</em>);
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `type`
+  - : 类型{{domxref("DOMString")}}，事件名称。
+- _`canBubble`_
+  - : 类型{{jsxref("Boolean")}}，事件是否沿着 dom 树向上冒泡。
+- `cancelable`
+  - : 类型{{jsxref("Boolean")}}，事件是否可取消。
+- _`detail`_
+  - : 事件初始化时传入的数据。
 
-<dl>
- <dt><code><em>type</em></code></dt>
- <dd>类型{{domxref("DOMString")}}，事件名称。</dd>
- <dt><em><code>canBub</code></em><em><code>ble</code></em></dt>
- <dd>类型{{jsxref("Boolean")}}，事件是否沿着 dom 树向上冒泡。</dd>
- <dt><code><em>cancelable</em></code></dt>
- <dd>类型{{jsxref("Boolean")}}，事件是否可取消。</dd>
- <dt><em><code>deta</code></em><em><code>il</code></em></dt>
- <dd>事件初始化时传入的数据。</dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.CustomEvent.initCustomEvent")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("CustomEvent")}}</li>
- <li>The constructor to use instead of this deprecated method: {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.</li>
-</ul>
+- {{domxref("CustomEvent")}}
+- The constructor to use instead of this deprecated method: {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.

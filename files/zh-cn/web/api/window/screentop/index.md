@@ -2,28 +2,28 @@
 title: Window.screenTop
 slug: Web/API/Window/screenTop
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><code><strong>Window.screenTop</strong></code> 只读属性返回垂直距离，单位是 CSS 像素，从用户浏览器的上边界到屏幕最顶端。</p>
+**`Window.screenTop`** 只读属性返回垂直距离，单位是 CSS 像素，从用户浏览器的上边界到屏幕最顶端。
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: <code>screenTop</code> is an alias of the older {{domxref("Window.screenY")}} property. <code>screenTop</code> was originally supported only in IE but was introduced everywhere due to popularity.</p>
-</div>
+> **备注：** `screenTop` is an alias of the older {{domxref("Window.screenY")}} property. `screenTop` was originally supported only in IE but was introduced everywhere due to popularity.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>topWindowPos</em> = window.screenTop
-</pre>
+```
+topWindowPos = window.screenTop
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A number equal to the number of CSS pixels from the top edge of the browser viewport to the  top edge of the screen.</p>
+A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen.
 
-<h2 id="Specifications">例子</h2>
+## 例子
 
-<p>In our <a href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a> example, you'll see a canvas onto which has been drawn a circle. In this example we are using <code>screenLeft</code>/<code>screenTop</code> plus {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in the same physical position on the screen, even if the window position is moved.</p>
+In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) example, you'll see a canvas onto which has been drawn a circle. In this example we are using `screenLeft`/`screenTop` plus {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in the same physical position on the screen, even if the window position is moved.
 
-<pre class="brush: js">initialLeft = window.screenLeft + canvasElem.offsetLeft;
+```js
+initialLeft = window.screenLeft + canvasElem.offsetLeft;
 initialTop = window.screenTop + canvasElem.offsetTop;
 
 function positionElem() {
@@ -45,26 +45,27 @@ function positionElem() {
   window.requestAnimationFrame(positionElem);
 }
 
-window.requestAnimationFrame(positionElem);</pre>
+window.requestAnimationFrame(positionElem);
+```
 
-<p>Also in the code we include a snippet that detects whether <code>screenLeft</code> is supported, and if not, polyfills in <code>screenLeft</code>/<code>screenTop</code> using {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.</p>
+Also in the code we include a snippet that detects whether `screenLeft` is supported, and if not, polyfills in `screenLeft`/`screenTop` using {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.
 
-<pre class="brush: js">if(!window.screenLeft) {
+```js
+if(!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
-}</pre>
+}
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("window.screenLeft")}}</li>
- <li>{{domxref("Window.screenY")}}</li>
-</ul>
+- {{domxref("window.screenLeft")}}
+- {{domxref("Window.screenY")}}

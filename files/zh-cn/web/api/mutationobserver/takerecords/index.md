@@ -2,35 +2,32 @@
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>{{domxref("MutationObserver")}} 的 <code><strong>takeRecords()</strong></code> 方法返回已检测到但尚未由观察者的回调函数处理的所有匹配 DOM 更改的列表，使变更队列保持为空。 此方法最常见的使用场景是在断开观察者之前立即获取所有未处理的更改记录，以便在停止观察者时可以处理任何未处理的更改。</p>
+{{domxref("MutationObserver")}} 的 **`takeRecords()`** 方法返回已检测到但尚未由观察者的回调函数处理的所有匹配 DOM 更改的列表，使变更队列保持为空。 此方法最常见的使用场景是在断开观察者之前立即获取所有未处理的更改记录，以便在停止观察者时可以处理任何未处理的更改。
 
-<ul>
-</ul>
+## 语法
 
-<h2 id="语法">语法</h2>
+```
+mutationRecords = mutationObserver.takeRecords()
+```
 
-<pre class="syntaxbox"><em>mutationRecords</em> = <em>mutationObserver</em>.takeRecords()
-</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+无。
 
-<p>无。</p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+返回一个{{domxref("MutationRecord")}} 对象列表，每个对象都描述了应用于 DOM 树某部分的一次改动。
 
-<p>返回一个{{domxref("MutationRecord")}} 对象列表，每个对象都描述了应用于 DOM 树某部分的一次改动。</p>
+> **备注：** 调用 `takeRecords()` 后，已发生但未传递给回调的变更队列将保留为空。
 
-<div class="note">
-<p><strong>注意：</strong>调用 <code>takeRecords()</code> 后，已发生但未传递给回调的变更队列将保留为空。</p>
-</div>
+## 示例
 
-<h2 id="示例">示例</h2>
+下面的示例展示了在断开观察者之前如何通过调用 `takeRecords()` 来处理任何未传递的 {{domxref("MutationRecord")}}。
 
-<p>下面的示例展示了在断开观察者之前如何通过调用 <code>takeRecords()</code> 来处理任何未传递的 {{domxref("MutationRecord")}}。</p>
-
-<pre class="brush: js">var targetNode = document.querySelector("#someElement");
+```js
+var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
   attributes: true
@@ -50,16 +47,14 @@ if (mutations) {
 }
 
 observer.disconnect();
-</pre>
+```
 
-<p>代码中第 12-17 行抓取了所有未处理的变更记录，然后调用回调，并将变更记录列表传递给回调，以保证所有变更记录都被处理。这是在调用 {{domxref("MutationObserver.disconnect", "disconnect()")}} 之前完成的，以便停止观察 DOM。 </p>
+代码中第 12-17 行抓取了所有未处理的变更记录，然后调用回调，并将变更记录列表传递给回调，以保证所有变更记录都被处理。这是在调用 {{domxref("MutationObserver.disconnect", "disconnect()")}} 之前完成的，以便停止观察 DOM。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.MutationObserver.takeRecords")}}</p>
+{{Compat("api.MutationObserver.takeRecords")}}

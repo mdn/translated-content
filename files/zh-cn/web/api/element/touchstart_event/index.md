@@ -2,48 +2,46 @@
 title: touchstart
 slug: Web/API/Element/touchstart_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>当一个或多个触摸点与触控设备表面接触时触发<code>touchstart</code> 事件。</p>
+当一个或多个触摸点与触控设备表面接触时触发`touchstart` 事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("TouchEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("TouchEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这些时间的代码样例可在这个专用页面查看：<a href="/en-US/DOM/Touch_events">Touch events</a>.</p>
+这些时间的代码样例可在这个专用页面查看：[Touch events](/en-US/DOM/Touch_events).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Element.touchstart_event")}}
 
+## 参见
 
-<p>{{Compat("api.Element.touchstart_event")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
- <li>以 <code><a href="/en-US/docs/Web/API/Document">Document</a></code> 为目标的相同事件：<code><a href="/en-US/docs/Web/API/Document/touchstart_event">touchstart</a></code></li>
-</ul>
+- [Touch events](/zh-CN/docs/Web/API/Touch_events)
+- 以 [`Document`](/en-US/docs/Web/API/Document) 为目标的相同事件：[`touchstart`](/en-US/docs/Web/API/Document/touchstart_event)

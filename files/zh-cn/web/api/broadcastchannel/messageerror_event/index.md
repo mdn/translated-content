@@ -2,70 +2,75 @@
 title: 'BroadcastChannel: messageerror event'
 slug: Web/API/BroadcastChannel/messageerror_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当频道收到一条无法反序列化的消息时会在 {{domxref('BroadcastChannel')}} 对象上触发 <code>messageerror</code> 事件。</p>
+当频道收到一条无法反序列化的消息时会在 {{domxref('BroadcastChannel')}} 对象上触发 `messageerror` 事件。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror">onmessageerror</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror"
+            >onmessageerror</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码使用 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> 来监听消息和错误：</p>
+以下代码使用 [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) 来监听消息和错误：
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
+```js
+const channel = new BroadcastChannel('example-channel');
 
-channel.addEventListener('message', (event) =&gt; {
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
 });
 
-channel.addEventListener('messageerror', (event) =&gt; {
+channel.addEventListener('messageerror', (event) => {
   console.error(event);
-});</pre>
+});
+```
 
-<p>使用 <code><a href="/en-US/docs/Web/API/BroadcastChannel/onmessage">onmessage</a></code> 和 <code><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror">onmessageerror</a></code> 事件处理程序来实现相同效果：</p>
+使用 [`onmessage`](/en-US/docs/Web/API/BroadcastChannel/onmessage) 和 [`onmessageerror`](/en-US/docs/Web/API/BroadcastChannel/onmessageerror) 事件处理程序来实现相同效果：
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
+```js
+const channel = new BroadcastChannel('example-channel');
 
-channel.onmessage = (event) =&gt; {
+channel.onmessage = (event) => {
   received.textContent = event.data;
 };
 
-channel.onmessageerror = (event) =&gt; {
+channel.onmessageerror = (event) => {
   console.log(event);
 };
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.BroadcastChannel.messageerror_event")}}
 
+## 另见
 
-<p>{{Compat("api.BroadcastChannel.messageerror_event")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>相关事件：<code><a href="/docs/Web/API/BroadcastChannel/message_event">message</a></code></li>
-</ul>
+- 相关事件：[`message`](/docs/Web/API/BroadcastChannel/message_event)

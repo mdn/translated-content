@@ -2,29 +2,25 @@
 title: 检测 WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}</p>
+{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
 
-<div id="detect-webgl">
-<div>
-<p>这个例子演示了如何通过渲染上下文来检测{{Glossary("WebGL")}}，并将结果报告给用户。</p>
-</div>
+这个例子演示了如何通过渲染上下文来检测{{Glossary("WebGL")}}，并将结果报告给用户。
 
-<p>{{EmbedLiveSample("detect-webgl-source",660,150)}}</p>
+{{EmbedLiveSample("detect-webgl-source",660,150)}}
 
-<div id="detect-webgl-intro">
-<h3 id="WebGL特性检测">WebGL 特性检测</h3>
+### WebGL 特性检测
 
-<p>在第一个例子中，我们将检查浏览器是否支持{{Glossary("WebGL")}}。为此，我们将尝试从{{domxref("HTMLCanvasElement","canvas")}}元素获取{{domxref("WebGLRenderingContext","WebGL 渲染的上下文","",1)}} 。{{domxref("WebGLRenderingContext","WebGL 渲染的上下文", "", 1)}}是一个接口，通过它你可以设置和查询绘图器的状态，发送数据到 WebGL，执行绘制命令。</p>
+在第一个例子中，我们将检查浏览器是否支持{{Glossary("WebGL")}}。为此，我们将尝试从{{domxref("HTMLCanvasElement","canvas")}}元素获取{{domxref("WebGLRenderingContext","WebGL 渲染的上下文","",1)}} 。{{domxref("WebGLRenderingContext","WebGL 渲染的上下文", "", 1)}}是一个接口，通过它你可以设置和查询绘图器的状态，发送数据到 WebGL，执行绘制命令。
 
-<p>在单个上下文接口中保存绘图器的状态并不是{{Glossary("WebGL")}}独有的。这在其他绘图技术里也是存在的{{Glossary("API")}},比如{{domxref("CanvasRenderingContext2D","2D 渲染上下文的 canvas", "", 1)}}。然而，您可以调整的属性和变量对于每个{{Glossary("API")}}来说都是不同的。</p>
-</div>
+在单个上下文接口中保存绘图器的状态并不是{{Glossary("WebGL")}}独有的。这在其他绘图技术里也是存在的{{Glossary("API")}},比如{{domxref("CanvasRenderingContext2D","2D 渲染上下文的 canvas", "", 1)}}。然而，您可以调整的属性和变量对于每个{{Glossary("API")}}来说都是不同的。
 
-<div id="detect-webgl-source">
-<pre class="brush: html">&lt;p&gt;[ Here would go the result of WebGL feature detection ]&lt;/p&gt;
-&lt;button&gt;Press here to detect WebGLRenderingContext&lt;/button&gt;
-</pre>
+```html
+<p>[ Here would go the result of WebGL feature detection ]</p>
+<button>Press here to detect WebGLRenderingContext</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 button {
@@ -33,9 +29,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">// Run everything inside window load event handler, to make sure
+```js
+// Run everything inside window load event handler, to make sure
 // DOM is fully loaded and styled before trying to manipulate it.
 window.addEventListener("load", function() {
   var paragraph = document.querySelector("p"),
@@ -51,7 +48,7 @@ window.addEventListener("load", function() {
     var gl = canvas.getContext("webgl")
       || canvas.getContext("experimental-webgl");
     // Report the result.
-    if (gl &amp;&amp; gl instanceof WebGLRenderingContext) {
+    if (gl && gl instanceof WebGLRenderingContext) {
       paragraph.innerHTML =
         "Congratulations! Your browser supports WebGL.";
     } else {
@@ -60,11 +57,8 @@ window.addEventListener("load", function() {
     }
   }
 }, false);
+```
 
-</pre>
+这个例子的源代码可以在[GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl)上获取。
 
-<p>这个例子的源代码可以在<a href="https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl">GitHub</a>上获取。</p>
-</div>
-</div>
-
-<p>{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}</p>
+{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}

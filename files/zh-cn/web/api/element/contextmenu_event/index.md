@@ -2,72 +2,75 @@
 title: 'Element: contextmenu event'
 slug: Web/API/Element/contextmenu_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>contextmenu</code></strong> 事件会在用户尝试打开上下文菜单时被触发。该事件通常在鼠标点击右键或者按下键盘上的菜单键时被触发，如果使用菜单键，该上下文菜单会被展示 到所聚焦元素的左下角，但是如果该元素是一棵 DOM 树的话，上下文菜单便会展示在当前这一行的左下角。</p>
+**`contextmenu`** 事件会在用户尝试打开上下文菜单时被触发。该事件通常在鼠标点击右键或者按下键盘上的菜单键时被触发，如果使用菜单键，该上下文菜单会被展示 到所聚焦元素的左下角，但是如果该元素是一棵 DOM 树的话，上下文菜单便会展示在当前这一行的左下角。
 
-<p>任何没有被禁用的鼠标右击事件 (通过调用事件的 {{domxref("Event.preventDefault", "preventDefault()")}} 方法) 将会使得 <code>contextmenu</code> 事件在目标元素上被触发。</p>
+任何没有被禁用的鼠标右击事件 (通过调用事件的 {{domxref("Event.preventDefault", "preventDefault()")}} 方法) 将会使得 `contextmenu` 事件在目标元素上被触发。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles（冒泡）</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable（可撤销）</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface（接口）</th>
-   <td>{{DOMxRef("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property（事件处理器）</th>
-   <td>{{domxref("GlobalEventHandlers.oncontextmenu", "oncontextmenu")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles（冒泡）</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable（可撤销）</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface（接口）</th>
+      <td>{{DOMxRef("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property（事件处理器）</th>
+      <td>
+        {{domxref("GlobalEventHandlers.oncontextmenu", "oncontextmenu")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在下面的例子中，第一段内容被触发的 <code>contextmenu</code> 事件的默认行为被 <code>preventDefault()</code> 取消了，因此，在第一段右击鼠标时什么也不会发生，但是右键单击第二段内容时，则会出现标准的菜单内容，与平时右击普通页面出现的菜单内容一致。</p>
+在下面的例子中，第一段内容被触发的 `contextmenu` 事件的默认行为被 `preventDefault()` 取消了，因此，在第一段右击鼠标时什么也不会发生，但是右键单击第二段内容时，则会出现标准的菜单内容，与平时右击普通页面出现的菜单内容一致。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="noContextMenu"&gt;这个段落右键菜单已被禁用。&lt;/p&gt;
-&lt;p&gt;但是这个段落没有被禁用。&lt;/p&gt;</pre>
+```html
+<p id="noContextMenu">这个段落右键菜单已被禁用。</p>
+<p>但是这个段落没有被禁用。</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">noContext = document.getElementById('noContextMenu');
+```js
+noContext = document.getElementById('noContextMenu');
 
-noContext.addEventListener('contextmenu', e =&gt; {
+noContext.addEventListener('contextmenu', e => {
   e.preventDefault();
 });
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Element.contextmenu_event")}}</p>
+{{Compat("api.Element.contextmenu_event")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{event("auxclick")}}</li>
- <li>{{event("click")}}</li>
- <li>{{event("dblclick")}}</li>
- <li>{{event("mousedown")}}</li>
- <li>{{event("mouseup")}}</li>
- <li>{{event("pointerdown")}}</li>
- <li>{{event("pointerup")}}</li>
-</ul>
+- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- {{event("auxclick")}}
+- {{event("click")}}
+- {{event("dblclick")}}
+- {{event("mousedown")}}
+- {{event("mouseup")}}
+- {{event("pointerdown")}}
+- {{event("pointerup")}}

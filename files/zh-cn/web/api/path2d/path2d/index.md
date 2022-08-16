@@ -2,36 +2,33 @@
 title: Path2D()
 slug: Web/API/Path2D/Path2D
 ---
-<div>{{APIRef("Canvas API")}}{{seeCompatTable}}</div>
+{{APIRef("Canvas API")}}{{seeCompatTable}}
 
-<p><code><strong>Path2D()</strong></code> 构造函数返回一个新的 <code>Path2D</code> 对象的实例，可以选择另一条路径作为参数（创建一个拷贝），或者选择 <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> 数据构成的字符串。</p>
+**`Path2D()`** 构造函数返回一个新的 `Path2D` 对象的实例，可以选择另一条路径作为参数（创建一个拷贝），或者选择 [SVG path](/zh-CN/docs/Web/SVG/Tutorial/Paths) 数据构成的字符串。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">new Path2D();
-new Path2D(<em>path</em>);
-new Path2D(<em>d</em>);
-</pre>
+```
+new Path2D();
+new Path2D(path);
+new Path2D(d);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>path</code> {{optional_inline}}</dt>
- <dd>当调用另一个 <code style="font-style: normal; line-height: 1.5;">Path2D</code> 对象时，会创建一个 <code style="font-style: normal; line-height: 1.5;">path</code> 变量的拷贝。</dd>
- <dt><code>d</code> {{optional_inline}}</dt>
- <dd>当调用 <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> 数据构成的字符串时，会根据描述创建一个新的路径。</dd>
-</dl>
+- `path` {{optional_inline}}
+  - : 当调用另一个 `Path2D` 对象时，会创建一个 `path` 变量的拷贝。
+- `d` {{optional_inline}}
+  - : 当调用 [SVG path](/zh-CN/docs/Web/SVG/Tutorial/Paths) 数据构成的字符串时，会根据描述创建一个新的路径。
 
-<dl>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+### 创建和拷贝路径
 
-<h3 id="创建和拷贝路径">创建和拷贝路径</h3>
+这是一段简单的代码片段，创建和拷贝 `Path2D` 路径。
 
-<p>这是一段简单的代码片段，创建和拷贝 <code>Path2D</code> 路径。</p>
-
-<pre class="brush: js; highlight:[4,7]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var path1 = new Path2D();
@@ -42,19 +39,17 @@ path2.moveTo(220, 60);
 path2.arc(170, 60, 50, 0, 2 * Math.PI);
 
 ctx.stroke(path2);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height: 150px"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height: 150px">
 var path1 = new Path2D();
 path1.rect(10, 10, 100,100);
 
@@ -62,10 +57,11 @@ var path2 = new Path2D(path1);
 path2.moveTo(220, 60);
 path2.arc(170, 60, 50, 0, 2 * Math.PI);
 
-ctx.stroke(path2);&lt;/textarea&gt;
-</pre>
+ctx.stroke(path2);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -88,38 +84,37 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 420) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 420) }}
 
-<h3 id="使用_SVG_路径">使用 SVG 路径</h3>
+### 使用 SVG 路径
 
-<p>这是一段简单的代码片段，使用 <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path data</a> 创建一个 <code style="font-style: normal; line-height: 1.5;">Path2D</code> 路径。路径将会移动到点 (<code style="font-style: normal; line-height: 1.5;">M10 10</code>) ，然后向右侧水平移动 80 个点 (<code style="font-style: normal; line-height: 1.5;">h 80</code>)，然后向下 80 个点 (<code style="font-style: normal; line-height: 1.5;">v 80</code>)，然后向左 80 个点 (<code style="font-style: normal; line-height: 1.5;">h -80</code>)，最后回到起始点 (<code style="font-style: normal; line-height: 1.5;">z</code>)。</p>
+这是一段简单的代码片段，使用 [SVG path data](/zh-CN/docs/Web/SVG/Tutorial/Paths) 创建一个 `Path2D` 路径。路径将会移动到点 (`M10 10`) ，然后向右侧水平移动 80 个点 (`h 80`)，然后向下 80 个点 (`v 80`)，然后向左 80 个点 (`h -80`)，最后回到起始点 (`z`)。
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ctx.fill(p);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code2">Playable code2</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
-ctx.fill(p);&lt;/textarea&gt;
-</pre>
+ctx.fill(p);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -142,21 +137,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code2', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code2', 700, 360) }}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Path2D.Path2D")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("Path2D")}}, 这个构造函数属于此接口。</li>
-</ul>
+- {{domxref("Path2D")}}, 这个构造函数属于此接口。

@@ -2,48 +2,43 @@
 title: DOMPoint
 slug: Web/API/DOMPoint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>DOMPoint 对象表示坐标系中的 2D 或 3D 点;它包括三维度的坐标值以及可选的透视值。DOMPoint 基于 DOMPointReadOnly，但允许更改其属性值。</p>
+DOMPoint 对象表示坐标系中的 2D 或 3D 点;它包括三维度的坐标值以及可选的透视值。DOMPoint 基于 DOMPointReadOnly，但允许更改其属性值。
 
-<p>通常，正 x 分量表示原点右侧的位置，正 y 分量从原点向下，正 z 分量从屏幕向外延伸 (换言之，朝向用户)。</p>
+通常，正 x 分量表示原点右侧的位置，正 y 分量从原点向下，正 z 分量从屏幕向外延伸 (换言之，朝向用户)。
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DOMPoint.DOMPoint","DOMPoint()")}}</dt>
- <dd>Creates and returns a new <code>DOMPoint</code> object given the values of zero or more of its coordinate components and optionally the <code>w</code> perspective value. You can also use an existing <code>DOMPoint</code> or <code>DOMPointReadOnly</code> or a {{domxref("DOMPointInit")}} dictionary to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.</dd>
-</dl>
+- {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
+  - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or a {{domxref("DOMPointInit")}} dictionary to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>DOMPoint</code> inherits methods from its parent, {{domxref("DOMPointReadOnly")}}.</em></p>
+_`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.fromPoint", "fromPoint()")}}</dt>
- <dd>Creates a new mutable <code>DOMPoint</code> object given an existing point or a {{domxref("DOMPointInit")}} dictionary which provides the values for its properties.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.fromPoint", "fromPoint()")}}
+  - : Creates a new mutable `DOMPoint` object given an existing point or a {{domxref("DOMPointInit")}} dictionary which provides the values for its properties.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>DOMPoint</code> inherits properties from its parent, {{domxref("DOMPointReadOnly")}}.</em></p>
+_`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}</dt>
- <dd>The x coordinate of the <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}</dt>
- <dd>The y coordinate of the <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}</dt>
- <dd>The z coordinate of the <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}</dt>
- <dd>The perspective value of the <code>DOMPoint</code>.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}
+  - : The x coordinate of the `DOMPoint`.
+- {{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}
+  - : The y coordinate of the `DOMPoint`.
+- {{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}
+  - : The z coordinate of the `DOMPoint`.
+- {{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}
+  - : The perspective value of the `DOMPoint`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>, <code>DOMPoint</code> values are used to represent points in the coordinate space that the user's head mounted display exists in. In the following snippet, the position of the VR HMD can be retrieved by first grabbing a reference to the position sensor's current state using {{domxref("PositionSensorVRDevice.getState()")}}, then accessing the resulting {{domxref("VRPositionState")}}'s {{domxref("VRPositionState.position","position")}} property, which returns a <code>DOMPoint</code>. Note below the usage of <code>position.x</code>, <code>position.y</code>, and <code>position.z</code>.</p>
+In the [WebVR API](/zh-CN/docs/Web/API/WebVR_API), `DOMPoint` values are used to represent points in the coordinate space that the user's head mounted display exists in. In the following snippet, the position of the VR HMD can be retrieved by first grabbing a reference to the position sensor's current state using {{domxref("PositionSensorVRDevice.getState()")}}, then accessing the resulting {{domxref("VRPositionState")}}'s {{domxref("VRPositionState.position","position")}} property, which returns a `DOMPoint`. Note below the usage of `position.x`, `position.y`, and `position.z`.
 
-<pre class="brush: js">function setView() {
+```js
+function setView() {
   var posState = gPositionSensor.getState();
 
   if (posState.hasPosition) {
@@ -53,7 +48,7 @@ slug: Web/API/DOMPoint
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
 
-    if (-posState.position.z &gt; 0.01) {
+    if (-posState.position.z > 0.01) {
       zPos = -posState.position.z;
     } else {
       zPos = 0.01;
@@ -62,25 +57,20 @@ slug: Web/API/DOMPoint
 
   /* ... */
 
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: See our <a href="https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html">positionsensorvrdevice demo</a> for the full code.</p>
-</div>
+> **备注：** See our [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) for the full code.
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.DOMPoint")}}
 
+## See also
 
-<p>{{Compat("api.DOMPoint")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("DOMRect")}}</li>
- <li>{{domxref("DOMMatrix")}}</li>
-</ul>
+- {{domxref("DOMRect")}}
+- {{domxref("DOMMatrix")}}

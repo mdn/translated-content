@@ -2,57 +2,39 @@
 title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>WheelEvent.deltaMode</strong></code> 只读属性返回一个 <code>unsigned long</code> 类型的值，声明 delta 的滚动值的单位。可能的值为：</p>
+**`WheelEvent.deltaMode`** 只读属性返回一个 `unsigned long` 类型的值，声明 delta 的滚动值的单位。可能的值为：
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>DOM_DELTA_PIXEL</code></td>
-   <td><code>0x00</code></td>
-   <td>delta 的值为 像素 级别。</td>
-  </tr>
-  <tr>
-   <td><code>DOM_DELTA_LINE</code></td>
-   <td><code>0x01</code></td>
-   <td>delta 的值为 行 级别。</td>
-  </tr>
-  <tr>
-   <td><code>DOM_DELTA_PAGE</code></td>
-   <td><code>0x02</code></td>
-   <td>delta 的值为 页 级别。</td>
-  </tr>
- </tbody>
-</table>
+| Constant          | Value  | Description              |
+| ----------------- | ------ | ------------------------ |
+| `DOM_DELTA_PIXEL` | `0x00` | delta 的值为 像素 级别。 |
+| `DOM_DELTA_LINE`  | `0x01` | delta 的值为 行 级别。   |
+| `DOM_DELTA_PAGE`  | `0x02` | delta 的值为 页 级别。   |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <code><em>unit</em> = <em>event</em>.deltaMode;</code></pre>
+```
+var unit = event.deltaMode;
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+```js
+var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
 
 console.log(syntheticEvent.deltaMode);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{ event("wheel") }}</li>
- <li>{{domxref("WheelEvent")}}</li>
-</ul>
+- {{ event("wheel") }}
+- {{domxref("WheelEvent")}}

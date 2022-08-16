@@ -2,41 +2,39 @@
 title: Animation.playState
 slug: Web/API/Animation/playState
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>作为一个 <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> 的属性，<code><strong>Animation</strong></code><strong><code>.playState </code></strong><code>能够返回并设置一个可枚举值来描述一个动画的回放状态。</code></p>
+作为一个 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的属性，**`Animation.playState`** 能够返回并设置一个可枚举值来描述一个动画的回放状态。
 
-<div class="note">
-<p>这个属性只对 CSS Animations 和 Transitions 可读。</p>
-</div>
+> **备注：** 这个属性只对 CSS Animations 和 Transitions 可读。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var<em> currentPlayState</em> = <em>Animation</em>.playState;
+```
+var currentPlayState = Animation.playState;
 
-<em>Animation</em>.playState = <em>newState</em>;
-</pre>
+Animation.playState = newState;
+```
 
-<h3 id="可能的值">可能的值</h3>
+### 可能的值
 
-<dl>
- <dt><code>idle</code></dt>
- <dd>动画当前的时间是无法解析的，并且队列里没有处于等待执行的任务。</dd>
- <dt><code>pending</code></dt>
- <dd>动画将一直等到某些等待中的任务完成方会执行。</dd>
- <dt><code>running</code></dt>
- <dd>动画处于正在运行状态。</dd>
- <dt><code>paused</code></dt>
- <dd>动画中止，并且{{domxref("Animation.currentTime")}}该项属性不会更新。</dd>
- <dt><code>finished</code></dt>
- <dd>动画已经达到某一临界点，并且{{domxref("Animation.currentTime")}}该项属性不会更新。</dd>
-</dl>
+- `idle`
+  - : 动画当前的时间是无法解析的，并且队列里没有处于等待执行的任务。
+- `pending`
+  - : 动画将一直等到某些等待中的任务完成方会执行。
+- `running`
+  - : 动画处于正在运行状态。
+- `paused`
+  - : 动画中止，并且{{domxref("Animation.currentTime")}}该项属性不会更新。
+- `finished`
+  - : 动画已经达到某一临界点，并且{{domxref("Animation.currentTime")}}该项属性不会更新。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<p>在<a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>这个例子中，玩家们可以凭<a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Alice crying into a pool of tears</a>结束游戏。出于性能原因，游戏里，眼泪只当可见之时才能运动。因此，这些泪滴必须在下面的情况下刚好暂停运动：</p>
+在[Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)这个例子中，玩家们可以凭[Alice crying into a pool of tears](http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010)结束游戏。出于性能原因，游戏里，眼泪只当可见之时才能运动。因此，这些泪滴必须在下面的情况下刚好暂停运动：
 
-<pre class="brush: js">// 创建泪珠动画
+```js
+// 创建泪珠动画
 
 tears.forEach(function(el) {
   el.animate(
@@ -64,20 +62,18 @@ tears.forEach(function(el) {
   el.playState = "paused";
   el.currentTime = 0;
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Animation.playState")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} 获取更多可用来控制网页动画的方法和属性</li>
- <li>{{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}}，这些方法可以设置一个动画的 <code>playState</code></li>
-</ul>
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} 获取更多可用来控制网页动画的方法和属性
+- {{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}}，这些方法可以设置一个动画的 `playState`

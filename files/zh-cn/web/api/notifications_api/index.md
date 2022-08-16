@@ -2,71 +2,62 @@
 title: Notifications API
 slug: Web/API/Notifications_API
 ---
-<p>{{DefaultAPISidebar("Web Notifications")}}</p>
+{{DefaultAPISidebar("Web Notifications")}}
 
-<p><strong>Notifications API</strong> 允许网页控制向最终用户显示系统通知 —这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序，也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。</p>
+**Notifications API** 允许网页控制向最终用户显示系统通知 —这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序，也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。
 
-<h2 id="概念和用法">概念和用法</h2>
+## 概念和用法
 
-<p>在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要授予当前源的权限以显示系统通知，这通常在应用或站点初始化时，使用{{domxref("Notification.requestPermission()")}} 方法来完成。</p>
+在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要授予当前源的权限以显示系统通知，这通常在应用或站点初始化时，使用{{domxref("Notification.requestPermission()")}} 方法来完成。
 
-<p>这将产生一个请求对话框，沿着以下几行：</p>
+这将产生一个请求对话框，沿着以下几行：
 
-<p><br>
- <img alt="" src="https://mdn.mozillademos.org/files/10819/notification-bubble.png" style="display: block; height: 205px; margin: 0 auto; width: 453px;"></p>
+![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
 
-<p>从这里，用户可以选择允许来自此来源的通知，阻止来自此来源的通知，或不选择此点。一旦做出选择，该设置通常将持续用于当前会话。</p>
+从这里，用户可以选择允许来自此来源的通知，阻止来自此来源的通知，或不选择此点。一旦做出选择，该设置通常将持续用于当前会话。
 
-<div class="note">
-<p><strong>注</strong>：从 Firefox 44 开始， 通知（Notifications）和推送（<a href="/en-US/docs/Web/API/Push_API">Push</a>）的权限已合并。如果为通知授予权限，推送也将启用。</p>
-</div>
+> **备注：** 从 Firefox 44 开始， 通知（Notifications）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
 
-<p>接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个方法可以传入两个参数。这必须传递一个标题参数，并可以选择性地传递一个选项对象来指定选项，如文本方向，正文，显示图标，通知声音播放，等等。</p>
+接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个方法可以传入两个参数。这必须传递一个标题参数，并可以选择性地传递一个选项对象来指定选项，如文本方向，正文，显示图标，通知声音播放，等等。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>此外， <strong>Notifications API</strong> 规范对  <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>指定了多个添加，以允许 service workers 发送通知。</p>
+此外， **Notifications API** 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)指定了多个添加，以允许 service workers 发送通知。
 
-<div class="note">
-<p><strong>注</strong>：想了解怎么在你的应用里使用通知接口，请阅读  <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a>。</p>
-</div>
+> **备注：** 想了解怎么在你的应用里使用通知接口，请阅读 [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
-<h2 id="接口（Notifications_interfaces）">接口（Notifications interfaces）</h2>
+## 接口（Notifications interfaces）
 
-<dl>
- <dt>{{domxref("Notification")}}</dt>
- <dd>定义的通知对象</dd>
-</dl>
+- {{domxref("Notification")}}
+  - : 定义的通知对象
 
-<h3 id="附加参数（Service_worker_additions）">附加参数（Service worker additions）</h3>
+### 附加参数（Service worker additions）
 
-<dl>
- <dt>{{domxref("ServiceWorkerRegistration")}}</dt>
- <dd>该对象包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法，用于控制通知的显示。</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope")}}</dt>
- <dd>该对象包含 {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} 事件处理函数，用于通知被点击的时候触发绑定的事件处理函数。</dd>
- <dt>{{domxref("NotificationEvent")}}</dt>
- <dd>该对象是功能明确的事件对象，表示一个通知事件被触发了，继承自{{domxref("ExtendableEvent")}}。</dd>
-</dl>
+- {{domxref("ServiceWorkerRegistration")}}
+  - : 该对象包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法，用于控制通知的显示。
+- {{domxref("ServiceWorkerGlobalScope")}}
+  - : 该对象包含 {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} 事件处理函数，用于通知被点击的时候触发绑定的事件处理函数。
+- {{domxref("NotificationEvent")}}
+  - : 该对象是功能明确的事件对象，表示一个通知事件被触发了，继承自{{domxref("ExtendableEvent")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Notification")}}
 
-<h2 id="Firefox_OS_permissions">Firefox OS permissions</h2>
+## Firefox OS permissions
 
-<p>当你在 Firefox OS app 中使用通知时，请确保在 manifest 文件中添加了<code>desktop-notification</code> 权限 。 Notifications can be used at any permission level, hosted or above:</p>
+当你在 Firefox OS app 中使用通知时，请确保在 manifest 文件中添加了`desktop-notification` 权限 。 Notifications can be used at any permission level, hosted or above:
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "desktop-notification": {}
-}</pre>
+}
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

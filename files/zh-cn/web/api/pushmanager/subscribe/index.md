@@ -2,37 +2,37 @@
 title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>{{domxref("PushManager")}}  的 <code><strong>subscribe() </strong></code>接口订阅了一个推送服务。</p>
+{{domxref("PushManager")}} 的 **`subscribe() `**接口订阅了一个推送服务。
 
-<p>返回一个 {{jsxref("Promise")}} 形式的  {{domxref("PushSubscription")}} 对象，该对象包含了推送订阅详情。如果当前 service worker 没有已存在的订阅，则会创建一个新的推送订阅。</p>
+返回一个 {{jsxref("Promise")}} 形式的 {{domxref("PushSubscription")}} 对象，该对象包含了推送订阅详情。如果当前 service worker 没有已存在的订阅，则会创建一个新的推送订阅。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">​PushManager.subscribe(options).then(function(pushSubscription) { ... } );</pre>
+```
+​PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>options {{optional_inline}}</code></dt>
- <dd><code>一个包含可选配置参数的对象。包含以下属性：</code>
- <ul>
-  <li><code>userVisibleOnly</code>: 布尔值，表示返回的推送订阅将只能被用于对用户可见的消息。</li>
-  <li>applicationServerKey：推送服务器用来向客户端应用发送消息的公钥。该值是应用程序服务器生成的签名密钥对的一部分，可使用在 P-256 曲线上实现的椭圆曲线数字签名（ECDSA）。可以是{{domxref("DOMString")}} 或 {{domxref("ArrayBuffer")}}。</li>
- </ul>
- </dd>
-</dl>
+- `options {{optional_inline}}`
 
-<h3 id="返回值">返回值</h3>
+  - : `一个包含可选配置参数的对象。包含以下属性：`
 
-<p>返回 {{domxref("PushSubscription")}} 对象的 {{jsxref("Promise")}}。</p>
+    - `userVisibleOnly`: 布尔值，表示返回的推送订阅将只能被用于对用户可见的消息。
+    - applicationServerKey：推送服务器用来向客户端应用发送消息的公钥。该值是应用程序服务器生成的签名密钥对的一部分，可使用在 P-256 曲线上实现的椭圆曲线数字签名（ECDSA）。可以是{{domxref("DOMString")}} 或 {{domxref("ArrayBuffer")}}。
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<pre><code>this.onpush = function(event) {
+返回 {{domxref("PushSubscription")}} 对象的 {{jsxref("Promise")}}。
+
+## 示例
+
+```
+this.onpush = function(event) {
   console.log(event.data);
-  // </code>这里可以向 IndexDB 写入数据，向任何打开的窗口发送数据以及显示通知等<code>
+  // 这里可以向 IndexDB 写入数据，向任何打开的窗口发送数据以及显示通知等
 }
 
 navigator.serviceWorker.register('serviceworker.js').then(
@@ -50,18 +50,17 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</code></pre>
+  });
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.PushManager.subscribe")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">使用 Push API</a></li>
-</ul>
+- [使用 Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)

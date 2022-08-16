@@ -2,62 +2,62 @@
 title: CanvasRenderingContext2D.createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.createPattern()</code></strong> 是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}}) 创建模式的方法。它通过 repetition 参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。</p>
+**`CanvasRenderingContext2D.createPattern()`** 是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}}) 创建模式的方法。它通过 repetition 参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">CanvasPattern <var><em>ctx</em>.createPattern(image, repetition);</var>
-</pre>
+```
+CanvasPattern ctx.createPattern(image, repetition);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>image</code></dt>
- <dd>作为重复图像源的 {{domxref("CanvasImageSource")}} 对象。可以是下列之一：
- <ul>
-  <li>{{domxref("HTMLImageElement")}} ({{HTMLElement("img")}}),</li>
-  <li>{{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}),</li>
-  <li>{{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}}),</li>
-  <li>{{domxref("CanvasRenderingContext2D")}},</li>
-  <li>{{domxref("ImageBitmap")}},</li>
-  <li>{{domxref("ImageData")}},</li>
-  <li>{{domxref("Blob")}}.</li>
- </ul>
- </dd>
- <dt><code>repetition</code></dt>
- <dd>{{domxref("DOMString")}}，指定如何重复图像。允许的值有：
- <ul>
-  <li><code>"repeat"</code> (both directions),</li>
-  <li><code>"repeat-x"</code> (horizontal only),</li>
-  <li><code>"repeat-y"</code> (vertical only), </li>
-  <li><code>"no-repeat"</code> (neither).</li>
- </ul>
- 如果为空字符串 (<code>''</code>) 或 {{jsxref("null")}} (但不是 {{jsxref("undefined")}})，repetition 将被当作"repeat"。</dd>
-</dl>
+- `image`
 
-<h3 id="返回值">返回值</h3>
+  - : 作为重复图像源的 {{domxref("CanvasImageSource")}} 对象。可以是下列之一：
 
-<dl>
- <dt>{{domxref("CanvasPattern")}}</dt>
- <dd>描述模式的不透明对象</dd>
-</dl>
+    - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}}),
+    - {{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}),
+    - {{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}}),
+    - {{domxref("CanvasRenderingContext2D")}},
+    - {{domxref("ImageBitmap")}},
+    - {{domxref("ImageData")}},
+    - {{domxref("Blob")}}.
 
-<h2 id="示例">示例</h2>
+- `repetition`
 
-<h3 id="使用createPattern方法">使用<code>createPattern</code>方法</h3>
+  - : {{domxref("DOMString")}}，指定如何重复图像。允许的值有：
 
-<p>这是一段简单的代码片段，使用 createPattern 方法创建一个指定图像和重复的{{domxref("CanvasPattern")}} 对象。创建完成后，可以使用{{domxref("CanvasPattern.setTransform()")}}方法对图案进行变形。如示例所示，你可以把此模式赋值给当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果。</p>
+    - `"repeat"` (both directions),
+    - `"repeat-x"` (horizontal only),
+    - `"repeat-y"` (vertical only),
+    - `"no-repeat"` (neither).
 
-<h4 id="HTML">HTML</h4>
+    如果为空字符串 (`''`) 或 {{jsxref("null")}} (但不是 {{jsxref("undefined")}})，repetition 将被当作"repeat"。
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### 返回值
 
-<h4 id="JavaScript">JavaScript</h4>
+- {{domxref("CanvasPattern")}}
+  - : 描述模式的不透明对象
 
-<pre class="brush: js; highlight:[7]">var canvas = document.getElementById("canvas");
+## 示例
+
+### 使用`createPattern`方法
+
+这是一段简单的代码片段，使用 createPattern 方法创建一个指定图像和重复的{{domxref("CanvasPattern")}} 对象。创建完成后，可以使用{{domxref("CanvasPattern.setTransform()")}}方法对图案进行变形。如示例所示，你可以把此模式赋值给当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果。
+
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var img = new Image();
@@ -67,29 +67,28 @@ img.onload = function() {
   ctx.fillStyle = pattern;
   ctx.fillRect(0,0,400,400);
 };
-</pre>
+```
 
-<p>编辑以下代码并在线查看 canvas 变化：</p>
+编辑以下代码并在线查看 canvas 变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:120px"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:120px">
 var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
   ctx.fillStyle = pattern;
   ctx.fillRect(0,0,400,400);
-};&lt;/textarea&gt;
-</pre>
+};</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -112,22 +111,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 380) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 380) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.createPattern")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasPattern")}}

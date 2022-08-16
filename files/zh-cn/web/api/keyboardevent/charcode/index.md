@@ -2,34 +2,32 @@
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
 ---
-<p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
+{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
-<p>{{domxref("KeyboardEvent.charCode")}} 只读属性，返回 {{ domxref("element.onkeypress", "keypress") }} 事件触发时按下的字符键的字符 Unicode 值。</p>
+{{domxref("KeyboardEvent.charCode")}} 只读属性，返回 {{ domxref("element.onkeypress", "keypress") }} 事件触发时按下的字符键的字符 Unicode 值。
 
-<p>与这些数值代码等价的常量，请参考 {{ domxref("KeyboardEvent", "KeyEvent") }}.</p>
+与这些数值代码等价的常量，请参考 {{ domxref("KeyboardEvent", "KeyEvent") }}.
 
-<div class="note">
-<p><strong>该属性已被废弃，请勿再使用该属性。</strong></p>
+> **备注：** **该属性已被废弃，请勿再使用该属性。**
+>
+> 请使用 {{domxref("KeyboardEvent.key")}} 取代。
 
-<p>请使用 {{domxref("KeyboardEvent.key")}} 取代。</p>
-</div>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```
+var value = event.charCode;
+```
 
-<pre class="syntaxbox"><em>var value</em> = <em>event</em>.charCode;
-</pre>
+- _`value`_ 被按下的字符键的字符 Unicode 值
 
-<ul>
- <li><em><code>value</code></em> 被按下的字符键的字符 Unicode 值</li>
-</ul>
+## 示例
 
-<h2 id="Example">示例</h2>
+```js
+<html>
+<head>
+<title>charCode example</title>
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;charCode example&lt;/title&gt;
-
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showChar(e)
 {
@@ -37,33 +35,33 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
       + "charCode: " + e.charCode);
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeypress="showChar(event);"&gt;
-&lt;p&gt;Press any 'character' type key.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onkeypress="showChar(event);">
+<p>Press any 'character' type key.</p>
+</body>
+</html>
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>在{{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 <code>{{ domxref("event.keyCode", "keyCode") }}</code> 或 <code>{{ domxref("event.charCode", "charCode") }}</code> 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), <code>charCode</code> 被设置为字符的代码值，并区分大小写。（即 <code>charCode</code> 会考虑 <code>Shift</code> 键是否被按下）。 否则，被按下的键的代码被存储在 <code>keyCode</code> 中。</p>
+在{{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 `{{ domxref("event.keyCode", "keyCode") }}` 或 `{{ domxref("event.charCode", "charCode") }}` 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), `charCode` 被设置为字符的代码值，并区分大小写。（即 `charCode` 会考虑 `Shift` 键是否被按下）。 否则，被按下的键的代码被存储在 `keyCode` 中。
 
-<p>如果有一个或多个修饰键被按下，有一些复杂的规则来产生 <code>charCode</code> 的值，细节可参考  <a href="/en/Gecko_Keypress_Event">Gecko Keypress 事件</a> 。</p>
+如果有一个或多个修饰键被按下，有一些复杂的规则来产生 `charCode` 的值，细节可参考 [Gecko Keypress 事件](/en/Gecko_Keypress_Event) 。
 
-<p><code>charCode</code> 用于不会在 {{ domxref("element.onkeydown", "keydown") }} 和 {{ domxref("element.onkeyup", "keyup") }} 事件中被设置。这两种情况下，<code>keyCode</code> 会被设置。</p>
+`charCode` 用于不会在 {{ domxref("element.onkeydown", "keydown") }} 和 {{ domxref("element.onkeyup", "keyup") }} 事件中被设置。这两种情况下，`keyCode` 会被设置。
 
-<p>要获取按键代码而不考虑是 <code>keyCode</code> 还是<code>charCode</code>, 请使用 {{ domxref("event.which", "which") }} 属性。</p>
+要获取按键代码而不考虑是 `keyCode` 还是`charCode`, 请使用 {{ domxref("event.which", "which") }} 属性。
 
-<p>通过输入法输入的字符，不会被设置到注册到通过 <code>keyCode</code> 和 <code>charCode</code>。 Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.</p>
+通过输入法输入的字符，不会被设置到注册到通过 `keyCode` 和 `charCode`。 Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
 
-<p>要查看特定按键的 <code>charCode</code> 值的列表，运行这个示例页面 <a href="/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants</a> ，然后查看 HTML 表格结果。</p>
+要查看特定按键的 `charCode` 值的列表，运行这个示例页面 [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants) ，然后查看 HTML 表格结果。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.KeyboardEvent.charCode")}}

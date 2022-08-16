@@ -2,40 +2,41 @@
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rotate()</code></strong> 是 Canvas 2D API 在变换矩阵中增加旋转的方法。角度变量表示一个顺时针旋转角度并且用弧度表示。</p>
+**`CanvasRenderingContext2D.rotate()`** 是 Canvas 2D API 在变换矩阵中增加旋转的方法。角度变量表示一个顺时针旋转角度并且用弧度表示。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.rotate(angle);</var>
-</pre>
+```
+void ctx.rotate(angle);
+```
 
-<p><img src="canvas_grid_rotate.png"></p>
+![](canvas_grid_rotate.png)
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>angle</code></dt>
- <dd>顺时针旋转的弧度。如果你想通过角度值计算，可以使用公式： <code><em>degree</em> * Math.PI / 180</code> 。</dd>
-</dl>
+- `angle`
+  - : 顺时针旋转的弧度。如果你想通过角度值计算，可以使用公式： `degree * Math.PI / 180` 。
 
-<p>旋转中心点一直是 canvas 的起始点。如果想改变中心点，我们可以通过 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} 方法移动 canvas。</p>
+旋转中心点一直是 canvas 的起始点。如果想改变中心点，我们可以通过 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} 方法移动 canvas。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_rotate_方法">使用 <code>rotate</code> 方法</h3>
+### 使用 `rotate` 方法
 
-<p>这是一段使用 <code>rotate</code> 方法的简单的代码片段。</p>
+这是一段使用 `rotate` 方法的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.rotate(45 * Math.PI / 180);
@@ -43,25 +44,24 @@ ctx.fillRect(70,0,100,30);
 
 // reset current transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
 ctx.fillRect(70,0,100,30);
-ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
-</pre>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -84,21 +84,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.rotate")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}

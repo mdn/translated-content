@@ -2,39 +2,32 @@
 title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<div class="note">
-<p>The <strong><code>Selection.deleteFromDocument()</code></strong> method deletes the actual text being represented by a selection object from the document's DOM.</p>
-</div>
+> **备注：** The **`Selection.deleteFromDocument()`** method deletes the actual text being represented by a selection object from the document's DOM.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>sel</em>.deleteFromDocument()
-</pre>
+```
+sel.deleteFromDocument()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A user selects the (imaginary) text "ve two ea" from "Rabbits have two ears." on a web page. The user then clicks a button that executes the JavaScript snippet <code>window.getSelection().deleteFromDocument()</code>. The document's text becomes "Rabbits hars."</p>
+A user selects the (imaginary) text "ve two ea" from "Rabbits have two ears." on a web page. The user then clicks a button that executes the JavaScript snippet `window.getSelection().deleteFromDocument()`. The document's text becomes "Rabbits hars."
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Selection.deleteFromDocument")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

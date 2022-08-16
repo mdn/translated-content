@@ -2,86 +2,49 @@
 title: cut
 slug: Web/API/Element/cut_event
 ---
-<div class="warning">
-<p>This page needs to be updated to match the currently specified behaviour. In the meantime please refer to the specification: <a href="https://www.w3.org/TR/clipboard-apis/#the-paste-action">https://www.w3.org/TR/clipboard-apis/#the-cut-action</a></p>
-</div>
+> **警告：** This page needs to be updated to match the currently specified behaviour. In the meantime please refer to the specification: [https://www.w3.org/TR/clipboard-apis/#the-cut-action](https://www.w3.org/TR/clipboard-apis/#the-paste-action)
 
-<p><strong><code>cut</code></strong> 事件在将选中内容从文档中删除并将其添加到剪贴板后触发。</p>
+**`cut`** 事件在将选中内容从文档中删除并将其添加到剪贴板后触发。
 
-<p>如果用户尝试对不可编辑内容执行剪切操作，则<code>cut</code>事件仍会触发，但事件对象不包含任何数据。</p>
+如果用户尝试对不可编辑内容执行剪切操作，则`cut`事件仍会触发，但事件对象不包含任何数据。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
-<dl>
- <dt>规范</dt>
- <dd><a href="http://www.w3.org/TR/clipboard-apis/#cut-event">Clipboard</a></dd>
- <dt>接口</dt>
- <dd>{{domxref("ClipboardEvent")}}</dd>
- <dt>是否冒泡</dt>
- <dd>Yes</dd>
- <dt>可取消默认行为</dt>
- <dd>Yes</dd>
- <dt>目标对象</dt>
- <dd>{{domxref("DefaultView")}}, {{domxref("Document")}}, {{domxref("Element")}}</dd>
- <dt>默认行为</dt>
- <dd>None</dd>
-</dl>
+- 规范
+  - [: Clipboard](http://www.w3.org/TR/clipboard-apis/#cut-event)
+- 接口
+  - : {{domxref("ClipboardEvent")}}
+- 是否冒泡
+  - : Yes
+- 可取消默认行为
+  - : Yes
+- 目标对象
+  - : {{domxref("DefaultView")}}, {{domxref("Document")}}, {{domxref("Element")}}
+- 默认行为
+  - : None
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>事件对象（DOM 树的顶层对象）。</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件的类型。</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件是否冒泡。</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件是否可以取消。</td>
-  </tr>
-  <tr>
-   <td>clipboardData {{readonlyInline}}</td>
-   <td>{{domxref("DataTransfer")}}</td>
-   <td>剪贴板的内容。不仅仅是文本，还有文件和图片。</td>
-  </tr>
- </tbody>
-</table>
+| Property                               | Type                                 | Description                                  |
+| -------------------------------------- | ------------------------------------ | -------------------------------------------- |
+| `target` {{readonlyInline}}      | {{domxref("EventTarget")}} | 事件对象（DOM 树的顶层对象）。               |
+| `type` {{readonlyInline}}        | {{domxref("DOMString")}}     | 事件的类型。                                 |
+| `bubbles` {{readonlyInline}}     | {{jsxref("Boolean")}}         | 事件是否冒泡。                               |
+| `cancelable` {{readonlyInline}}  | {{jsxref("Boolean")}}         | 事件是否可以取消。                           |
+| clipboardData {{readonlyInline}} | {{domxref("DataTransfer")}} | 剪贴板的内容。不仅仅是文本，还有文件和图片。 |
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.cut_event")}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{domxref("HTMLElement.oncut")}}</li>
- <li>Related events
-  <ul>
-   <li>{{event("copy")}}</li>
-   <li>{{event("paste")}}</li>
-  </ul>
- </li>
-</ul>
+- {{domxref("HTMLElement.oncut")}}
+- Related events
+
+  - {{event("copy")}}
+  - {{event("paste")}}

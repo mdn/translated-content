@@ -2,29 +2,30 @@
 title: Writing a WebSocket server in Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
-<h2 id="引言">引言</h2>
+## 引言
 
-<p>你可以通过这个例子知道如何用甲骨文的 Java 语言来创建一个 WebSocket 服务。<br>
- <br>
- 虽然其他的服务端语言也能创建 WebSocket 服务，但是通过这个例子你可以看到使用 Java 来做这件事会更简单。</p>
+你可以通过这个例子知道如何用甲骨文的 Java 语言来创建一个 WebSocket 服务。
 
-<p>这个服务符合协议<a href="http://tools.ietf.org/html/rfc6455">RFC 6455</a>， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。</p>
+虽然其他的服务端语言也能创建 WebSocket 服务，但是通过这个例子你可以看到使用 Java 来做这件事会更简单。
 
-<h2 id="第一步">第一步</h2>
+这个服务符合协议[RFC 6455](http://tools.ietf.org/html/rfc6455)， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。
 
-<p>WebSocket 通过<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP（传输控制协议）</a>通信. Java 的<a href="http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html">ServerSocket</a> 类位于 java.net 包中。</p>
+## 第一步
 
-<h3 id="ServerSocket">ServerSocket</h3>
+WebSocket 通过[TCP（传输控制协议）](http://en.wikipedia.org/wiki/Transmission_Control_Protocol)通信. Java 的[ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) 类位于 java.net 包中。
 
-<p>构造器：</p>
+### ServerSocket
 
-<p><code>ServerSocket(int port)</code></p>
+构造器：
 
-<p>实例化 ServerSocket 类时，它将绑定到 port 参数指定的端口号。</p>
+`ServerSocket(int port)`
 
-<p>实现代码片段一：</p>
+实例化 ServerSocket 类时，它将绑定到 port 参数指定的端口号。
 
-<pre><code>import java.io.IOException;
+实现代码片段一：
+
+```java
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
@@ -42,61 +43,63 @@ public class WebSocket {
 		try {
 			System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
 			Socket client = server.accept();
-			System.out.println("A client connected.");</code></pre>
+			System.out.println("A client connected.");
+```
 
-<h3 id="Socket">Socket</h3>
+### Socket
 
-<p>方法：</p>
+方法：
 
-<ul>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a>()</code><br>
-  返回这个 Socket 的输入流 InputStream</li>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a>()</code><br>
-  返回这个 Socket 的输出流 OutputStream</li>
-</ul>
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getInputStream()`
+  返回这个 Socket 的输入流 InputStream
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getOutputStream()`
+  返回这个 Socket 的输出流 OutputStream
 
-<h3 id="OutputStream">OutputStream</h3>
+### OutputStream
 
-<p>方法：</p>
+方法：
 
-<p><code>write(byte[] b, int off, int len)</code></p>
+`write(byte[] b, int off, int len)`
 
-<p>将从数组<code>b</code>中的下标<em><code>off</code></em>开始的<em><code>len</code></em>个字节写入此输出流。</p>
+将从数组`b`中的下标*`off`*开始的*`len`*个字节写入此输出流。
 
-<h3 id="InputStream">InputStream</h3>
+### InputStream
 
-<p>方法：</p>
+方法：
 
-<p><code>int read(byte[] b, int off, int len)</code></p>
+`int read(byte[] b, int off, int len)`
 
-<p>将输入流中最多 <code>len</code> 个字节写入<code>byte[] b</code>，写入起始下标为<code>off</code>。尝试读取多达 <code>len</code> 字节，但可能读取较少数量。以整数形式返回实际读取的字节数。<em> </em></p>
+将输入流中最多 `len` 个字节写入`byte[] b`，写入起始下标为`off`。尝试读取多达 `len` 字节，但可能读取较少数量。以整数形式返回实际读取的字节数。
 
-<p>代码片段二：</p>
+代码片段二：
 
-<pre><code>InputStream in = client.getInputStream();
+```java
+InputStream in = client.getInputStream();
 			OutputStream out = client.getOutputStream();
-			Scanner s = new Scanner(in, "UTF-8");</code></pre>
+			Scanner s = new Scanner(in, "UTF-8");
+```
 
-<h2 id="握手">握手</h2>
+## 握手
 
-<p>当客户端连接到服务器时，它会发送 GET 请求以从简单的 HTTP 请求升级到 WebSocket 的连接。这被称为握手。</p>
+当客户端连接到服务器时，它会发送 GET 请求以从简单的 HTTP 请求升级到 WebSocket 的连接。这被称为握手。
 
-<pre><code>try {
-				String data = s.useDelimiter("\\r\\n\\r\\n").next();
-				Matcher get = Pattern.compile("^GET").matcher(data);</code></pre>
+```java
+try {
+	String data = s.useDelimiter("\\r\\n\\r\\n").next();
+	Matcher get = Pattern.compile("^GET").matcher(data);
+```
 
-<p>创建响应比理解为什么必须以这种方式来创建响应更容易。</p>
+创建响应比理解为什么必须以这种方式来创建响应更容易。
 
-<p>你必须：</p>
+你必须：
 
-<ol>
- <li>获取 Sec-WebSocket-Key 请求标头的值，去除头部和尾部的所有空格</li>
- <li>追加字符串"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"</li>
- <li>使用 SHA-1 计算拿到结果值并进行 Base64 编码</li>
- <li>将其作为 HTTP 响应的一部分写回 Sec-WebSocket-Accept 响应头的值</li>
-</ol>
+1.  获取 Sec-WebSocket-Key 请求标头的值，去除头部和尾部的所有空格
+2.  追加字符串"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+3.  使用 SHA-1 计算拿到结果值并进行 Base64 编码
+4.  将其作为 HTTP 响应的一部分写回 Sec-WebSocket-Accept 响应头的值
 
-<pre><code>if (get.find()) {
+```java
+if (get.find()) {
 					Matcher match = Pattern.compile("Sec-WebSocket-Key: (.*)").matcher(data);
 					match.find();
 					byte[] response = ("HTTP/1.1 101 Switching Protocols\r\n"
@@ -105,81 +108,48 @@ public class WebSocket {
 						+ "Sec-WebSocket-Accept: "
 						+ Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA-1").digest((match.group(1) + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").getBytes("UTF-8")))
 						+ "\r\n\r\n").getBytes("UTF-8");
-					out.write(response, 0, response.length);</code></pre>
+					out.write(response, 0, response.length);
+```
 
-<h2 id="解码消息">解码消息</h2>
+## 解码消息
 
-<p>握手成功后，客户端可以向服务器发送消息，但现在这些已经过编码的消息需要解码。</p>
+握手成功后，客户端可以向服务器发送消息，但现在这些已经过编码的消息需要解码。
 
-<p>如果客户端发送 "abcdef"，我们会拿到这些字节数据：</p>
+如果客户端发送 "abcdef"，我们会拿到这些字节数据：
 
-<table>
- <tbody>
-  <tr>
-   <td>129</td>
-   <td>134</td>
-   <td>167</td>
-   <td>225</td>
-   <td>225</td>
-   <td>210</td>
-   <td>198</td>
-   <td>131</td>
-   <td>130</td>
-   <td>182</td>
-   <td>194</td>
-   <td>135</td>
-  </tr>
- </tbody>
-</table>
+| 129 | 134 | 167 | 225 | 225 | 210 | 198 | 131 | 130 | 182 | 194 | 135 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-<p>- 129:</p>
+\- 129:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">FIN (消息是完整的吗？)</th>
-   <th scope="col">RSV1</th>
-   <th scope="col">RSV2</th>
-   <th scope="col">RSV3</th>
-   <th scope="col">Opcode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-   <td>0x1=0001</td>
-  </tr>
- </tbody>
-</table>
+| FIN (消息是完整的吗？) | RSV1 | RSV2 | RSV3 | Opcode   |
+| ---------------------- | ---- | ---- | ---- | -------- |
+| 1                      | 0    | 0    | 0    | 0x1=0001 |
 
-<p>FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码 0x1 表示这是一个完整的消息。 <a href="http://tools.ietf.org/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
+FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码 0x1 表示这是一个完整的消息。 [Full list of Opcodes](http://tools.ietf.org/html/rfc6455#section-5.2)
 
-<p>- 134:</p>
+\- 134:
 
-<p>如果第二个字节减去 128 在 0 到 125 之间，则这是消息的长度。 如果是 126，则后面的 2 个字节（16 位无符号整数），如果是 127，则后面的 8 个字节（64 位无符号整数，最高有效位必须为 0）是长度。</p>
+如果第二个字节减去 128 在 0 到 125 之间，则这是消息的长度。 如果是 126，则后面的 2 个字节（16 位无符号整数），如果是 127，则后面的 8 个字节（64 位无符号整数，最高有效位必须为 0）是长度。
 
-<div class="note">
-<p>我可以拿 128，因为第一位总是 1。</p>
-</div>
+> **备注：** 我可以拿 128，因为第一位总是 1。
 
-<p>- 167, 225, 225 和 210 是要解码的密钥<code>key</code>的字节。它每次都在变化。</p>
+\- 167, 225, 225 和 210 是要解码的密钥`key`的字节。它每次都在变化。
 
-<p>- 剩余的编码字节是消息数据部分。</p>
+\- 剩余的编码字节是消息数据部分。
 
-<h3 id="解码算法">解码算法</h3>
+### 解码算法
 
-<p><code>decoded[i] = (byte) (encoded[i] ^ key[i &amp; 0x3]);</code></p>
+`decoded[i] = (byte) (encoded[i] ^ key[i & 0x3]);`
 
-<p>Java 例子：</p>
+Java 例子：
 
-<pre><code>byte[] decoded = new byte[6];
+```java
+byte[] decoded = new byte[6];
 					byte[] encoded = new byte[] { (byte) 198, (byte) 131, (byte) 130, (byte) 182, (byte) 194, (byte) 135 };
 					byte[] key = new byte[] { (byte) 167, (byte) 225, (byte) 225, (byte) 210 };
-					for (int i = 0; i &lt; encoded.length; i++) {
-						decoded[i] = (byte) (encoded[i] ^ key[i &amp; 0x3]);
+					for (int i = 0; i < encoded.length; i++) {
+						decoded[i] = (byte) (encoded[i] ^ key[i & 0x3]);
 					}
 				}
 			} finally {
@@ -189,10 +159,9 @@ public class WebSocket {
 			server.close();
 		}
 	}
-}</code></pre>
+}
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/WebSockets/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
-</ul>
+- [Writing WebSocket servers](/zh-CN/docs/WebSockets/Writing_WebSocket_servers)

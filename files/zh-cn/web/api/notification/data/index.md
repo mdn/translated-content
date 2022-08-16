@@ -2,56 +2,59 @@
 title: Notification.data
 slug: Web/API/notification/data
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p><code>data</code> 只读属性是 {{domxref("Notification")}} 的接口，当它作为构造函数的 option 可选项之一时，返回结构化的 Notification 的 data 数据。</p>
+`data` 只读属性是 {{domxref("Notification")}} 的接口，当它作为构造函数的 option 可选项之一时，返回结构化的 Notification 的 data 数据。
 
-<p>当你创建 Notification 时，notification 使用的数据可以使任意类型。</p>
+当你创建 Notification 时，notification 使用的数据可以使任意类型。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>附加语法糖：关于克隆对象的速度研究。</p>
+附加语法糖：关于克隆对象的速度研究。
 
-<p>https://dassur.ma/things/deep-copy/ </p>
+https\://dassur.ma/things/deep-copy/
 
-<p>博客作者认为目前（参考）最快的 object 克隆、复制方式。</p>
+博客作者认为目前（参考）最快的 object 克隆、复制方式。
 
-<pre style="color: #f8f8f2; background-color: #272822;"><code class="language-js">function structuralClone(obj) {
+```js
+function structuralClone(obj) {
   return new Notification('', {data: obj, silent: true}).data;
-}</code></pre>
+}
+```
 
-<h2 id="Syntax">Syntax 表达式</h2>
+## Syntax 表达式
 
-<pre class="eval">var <em>data</em> = Notification.data;
-</pre>
+```
+var data = Notification.data;
+```
 
-<h3 id="Return_Value">Value（返回值）</h3>
+### Value（返回值）
 
-<p>结构化的克隆数据</p>
+结构化的克隆数据
 
-<h2 id="Examples_例子">Examples 例子</h2>
+## Examples 例子
 
-<p>产生一个 notification; 简单的 <code>options</code> 作为构造参数，将会触发以 option 为构造参数的 <code>Notification()</code>。</p>
+产生一个 notification; 简单的 `options` 作为构造参数，将会触发以 option 为构造参数的 `Notification()`。
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   body: 'Do you like my body?',
   data: 'I like peas.'
 }
 
 var n = new Notification('Test notification',options);
 
-n.data // should return 'I like peas.'</pre>
+n.data // should return 'I like peas.'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Notification.data")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -2,94 +2,63 @@
 title: copy
 slug: Web/API/Element/copy_event
 ---
-<p>当用户通过浏览器 UI（例如，使用 <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd>  键盘快捷方式或从菜单中选择“复制”）启动复制操作并响应允许的{{domxref("Document.execCommand","document.execCommand('copy')")}}调用时触发<code>copy</code>事件。</p>
+当用户通过浏览器 UI（例如，使用 <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd> 键盘快捷方式或从菜单中选择“复制”）启动复制操作并响应允许的{{domxref("Document.execCommand","document.execCommand('copy')")}}调用时触发`copy`事件。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
-<dl>
- <dt>Specification</dt>
- <dd><a href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
- <dt>Interface</dt>
- <dd>{{domxref("ClipboardEvent")}}</dd>
- <dt>Bubbles</dt>
- <dd>Yes</dd>
- <dt>Cancelable</dt>
- <dd>Yes</dd>
- <dt>Target</dt>
- <dd>{{domxref("Element")}}：获得焦点的元素（如{{domxref("HTMLElement.contentEditable","contentEditable")}}内容能编辑或者可以选中的元素），或{{HTMLElement("body")}}。</dd>
- <dt>Default Action</dt>
- <dd>见下文。</dd>
-</dl>
+- Specification
+  - [: Clipboard](https://www.w3.org/TR/clipboard-apis/#the-copy-action)
+- Interface
+  - : {{domxref("ClipboardEvent")}}
+- Bubbles
+  - : Yes
+- Cancelable
+  - : Yes
+- Target
+  - : {{domxref("Element")}}：获得焦点的元素（如{{domxref("HTMLElement.contentEditable","contentEditable")}}内容能编辑或者可以选中的元素），或{{HTMLElement("body")}}。
+- Default Action
+  - : 见下文。
 
-<p>调用{{domxref("DataTransfer.setData","setData(format, data)")}}可以修改{{domxref("ClipboardEvent.clipboardData")}}事件的默认行为：</p>
+调用{{domxref("DataTransfer.setData","setData(format, data)")}}可以修改{{domxref("ClipboardEvent.clipboardData")}}事件的默认行为：
 
-<pre class="brush: js">document.addEventListener('copy', function(e){
+```js
+document.addEventListener('copy', function(e){
     e.clipboardData.setData('text/plain', 'Hello, world!');
-    e.clipboardData.setData('text/html', '&lt;b&gt;Hello, world!&lt;/b&gt;');
+    e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
     e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
-});</pre>
+});
+```
 
-<p>不能使用{{domxref("DataTransfer.getData", "clipboardData.getData()")}}在事件处理函数中获取剪切板数据。</p>
+不能使用{{domxref("DataTransfer.getData", "clipboardData.getData()")}}在事件处理函数中获取剪切板数据。
 
-<p>事件的默认行为与事件的来源和事件处理函数相关：</p>
+事件的默认行为与事件的来源和事件处理函数相关：
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> copy 事件没有默认行为，除非：</li>
- <li>如果默认事件没有取消，就复制到选区（如果有选中内容）到剪切板；</li>
- <li>如果取消了默认事件，但是调用了<code>setData()</code>方法：就复制<code>clipboardData</code>的内容到到剪切板；</li>
- <li>如果取消了默认行为，而且没有调用<code>setData()</code>方法，就没有任何行为。</li>
-</ul>
+- [synthetic](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events) copy 事件没有默认行为，除非：
+- 如果默认事件没有取消，就复制到选区（如果有选中内容）到剪切板；
+- 如果取消了默认事件，但是调用了`setData()`方法：就复制`clipboardData`的内容到到剪切板；
+- 如果取消了默认行为，而且没有调用`setData()`方法，就没有任何行为。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.copy_event")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("HTMLElement.oncopy")}}</li>
- <li>Related events
-  <ul>
-   <li>{{event("cut")}}</li>
-   <li>{{event("paste")}}</li>
-  </ul>
- </li>
-</ul>
+- {{domxref("HTMLElement.oncopy")}}
+- Related events
+
+  - {{event("cut")}}
+  - {{event("paste")}}

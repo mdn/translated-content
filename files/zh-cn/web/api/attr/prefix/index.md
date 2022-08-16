@@ -2,45 +2,41 @@
 title: Attr.prefix
 slug: Web/API/Attr/prefix
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Attr.prefix</strong></code> 为只读属性，返回指定标签属性的名字空间前缀，如果没有前缀则返回 <code>null</code>。</p>
+**`Attr.prefix`** 为只读属性，返回指定标签属性的名字空间前缀，如果没有前缀则返回 `null`。
 
-<div class="note">
-<p>在 DOM4 之前此 API 被定义在 {{domxref("Node")}} 接口中。</p>
-</div>
+> **备注：** 在 DOM4 之前此 API 被定义在 {{domxref("Node")}} 接口中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><var>string</var> = <var>attribute</var>.prefix
-</pre>
+```
+string = attribute.prefix
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下例在控制台中输出“x”。</p>
+下例在控制台中输出“x”。
 
-<pre class="brush:xml notranslate">&lt;div x:id="example" onclick="console.log(this.attributes[0].prefix)"/&gt;
-</pre>
+```xml
+<div x:id="example" onclick="console.log(this.attributes[0].prefix)"/>
+```
 
-<h2 id="注意">注意</h2>
+## 注意
 
-<p>该属性仅在使用有名字空间解析功能的解析器时有效，例如一个 MIME 类型为 XML 的文档。在 HTML 文档中无效。</p>
+该属性仅在使用有名字空间解析功能的解析器时有效，例如一个 MIME 类型为 XML 的文档。在 HTML 文档中无效。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Attr.prefix")}}
 
+## 参考
 
-<p>{{Compat("api.Attr.prefix")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Attr.localName")}}</li>
- <li>{{domxref("Element.prefix")}}</li>
- <li>{{domxref("Node.prefix")}}</li>
-</ul>
+- {{domxref("Attr.namespaceURI")}}
+- {{domxref("Attr.localName")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Node.prefix")}}

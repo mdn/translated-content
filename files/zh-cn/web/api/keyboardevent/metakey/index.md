@@ -2,26 +2,26 @@
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>KeyboardEvent.metaKey</code></strong> 为只读属性，返回一个 {{jsxref("Boolean", "布尔值")}}，在事件发生时，用于指示 <kbd>Meta</kbd> 键是按下状态（<code style="font-style: normal;">true</code>），还是释放状态（<code style="font-style: normal;">false</code>）。</p>
+**`KeyboardEvent.metaKey`** 为只读属性，返回一个 {{jsxref("Boolean", "布尔值")}}，在事件发生时，用于指示 <kbd>Meta</kbd> 键是按下状态（`true`），还是释放状态（`false`）。
 
-<div class="note">
-<p>备注：在 MAC 键盘上，表示 Command 键（<kbd>⌘</kbd>），在 Windows 键盘上，表示 Windows 键（<kbd>⊞</kbd>）。</p>
-</div>
+> **备注：** 在 MAC 键盘上，表示 Command 键（<kbd>⌘</kbd>），在 Windows 键盘上，表示 Windows 键（<kbd>⊞</kbd>）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var metaKeyPressed = <em>instanceOfKeyboardEvent</em>.metaKey
-</pre>
+```
+var metaKeyPressed = instanceOfKeyboardEvent.metaKey
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个布尔值</p>
+一个布尔值
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush: js"> function goInput(e) {
+```js
+ function goInput(e) {
  // 检测 metaKey 值
    if (e.metaKey) {
         // 继续处理事件
@@ -30,20 +30,18 @@ slug: Web/API/KeyboardEvent/metaKey
      doOutput(e);
    }
  }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', 400, 36) }}</p>
+{{ EmbedLiveSample('Example', 400, 36) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.KeyboardEvent.metaKey")}}</p>
+{{Compat("api.KeyboardEvent.metaKey")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ domxref("KeyboardEvent") }}</li>
-</ul>
+- {{ domxref("KeyboardEvent") }}

@@ -2,104 +2,83 @@
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 ---
-<p>{{APIRef('Shadow DOM')}}</p>
+{{APIRef('Shadow DOM')}}
 
-<p><strong><code>Element.attachShadow()</code></strong> 方法给指定的元素挂载一个 Shadow DOM，并且返回对 <code><a href="/zh-CN/docs/Web/API/ShadowRoot">ShadowRoot</a></code> 的引用。</p>
+**`Element.attachShadow()`** 方法给指定的元素挂载一个 Shadow DOM，并且返回对 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的引用。
 
-<h2 id="可以被挂载的shadow_DOM元素">可以被挂载的 shadow DOM 元素</h2>
+## 可以被挂载的 shadow DOM 元素
 
-<p>要注意的是，不是每一种类型的元素都可以附加到 shadow root（影子根）下面。出于安全考虑，一些元素不能使用 shadow DOM（例如{{htmlelement("a")}}），以及许多其他的元素。下面是一个<strong>可以</strong>挂载 shadow root 的元素列表：</p>
+要注意的是，不是每一种类型的元素都可以附加到 shadow root（影子根）下面。出于安全考虑，一些元素不能使用 shadow DOM（例如{{htmlelement("a")}}），以及许多其他的元素。下面是一个**可以**挂载 shadow root 的元素列表：
 
-<ul>
- <li>任何带有<a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">有效的名称</a>且可独立存在的（autonomous）自定义元素</li>
- <li>{{htmlelement("article")}}</li>
- <li>{{htmlelement("aside")}}</li>
- <li>{{htmlelement("blockquote")}}</li>
- <li>{{htmlelement("body")}}</li>
- <li>{{htmlelement("div")}}</li>
- <li>{{htmlelement("footer")}}</li>
- <li>{{htmlelement("h1")}}</li>
- <li>{{htmlelement("h2")}}</li>
- <li>{{htmlelement("h3")}}</li>
- <li>{{htmlelement("h4")}}</li>
- <li>{{htmlelement("h5")}}</li>
- <li>{{htmlelement("h6")}}</li>
- <li>{{htmlelement("header")}}</li>
- <li>{{htmlelement("main")}}</li>
- <li>{{htmlelement("nav")}}</li>
- <li>{{htmlelement("p")}}</li>
- <li>{{htmlelement("section")}}</li>
- <li>{{htmlelement("span")}}</li>
-</ul>
+- 任何带有[有效的名称](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)且可独立存在的（autonomous）自定义元素
+- {{htmlelement("article")}}
+- {{htmlelement("aside")}}
+- {{htmlelement("blockquote")}}
+- {{htmlelement("body")}}
+- {{htmlelement("div")}}
+- {{htmlelement("footer")}}
+- {{htmlelement("h1")}}
+- {{htmlelement("h2")}}
+- {{htmlelement("h3")}}
+- {{htmlelement("h4")}}
+- {{htmlelement("h5")}}
+- {{htmlelement("h6")}}
+- {{htmlelement("header")}}
+- {{htmlelement("main")}}
+- {{htmlelement("nav")}}
+- {{htmlelement("p")}}
+- {{htmlelement("section")}}
+- {{htmlelement("span")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>shadowroot</var> = <var>element</var>.attachShadow(<var>shadowRootInit</var>);
-</pre>
+```
+var shadowroot = element.attachShadow(shadowRootInit);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>shadowRootInit</code></dt>
- <dd>一个 <code>ShadowRootInit</code> 字典，包括下列字段：
- <dl>
-  <dt><code>mode 模式</code></dt>
-  <dd>
-  <p>指定 Shadow DOM 树<em>封装模式</em>的字符串，可以是以下值：</p>
+- `shadowRootInit`
 
-  <ul>
-   <li><code>open</code> shadow root 元素可以从 js 外部访问根节点，例如使用 {{domxref("Element.shadowRoot")}}:</li>
-  </ul>
+  - : 一个 `ShadowRootInit` 字典，包括下列字段：
 
-  <pre>element.shadowRoot; // 返回一个 ShadowRoot 对象</pre>
+    - `mode 模式`
 
-  <ul>
-   <li><code>closed</code> 拒绝从 js 外部访问关闭的 shadow root 节点</li>
-  </ul>
+      - : 指定 Shadow DOM 树*封装模式*的字符串，可以是以下值：
 
-  <pre>element.shadowRoot; // 返回 null</pre>
-  </dd>
-  <dt><code>delegatesFocus 焦点委托</code></dt>
-  <dd>一个布尔值，当设置为 <code>true</code> 时，指定减轻自定义元素的聚焦性能问题行为。<br>
-  当 shadow DOM 中不可聚焦的部分被点击时，让第一个可聚焦的部分成为焦点，并且 shadow host（影子主机）将提供所有可用的 <code>:focus</code> 样式。</dd>
- </dl>
- </dd>
-</dl>
+        - `open` shadow root 元素可以从 js 外部访问根节点，例如使用 {{domxref("Element.shadowRoot")}}:
 
-<h3 id="返回值">返回值</h3>
+        ```
+        element.shadowRoot; // 返回一个 ShadowRoot 对象
+        ```
 
-<p>返回一个 {{domxref("ShadowRoot")}} 对象或者 <code>null</code>。</p>
+        - `closed` 拒绝从 js 外部访问关闭的 shadow root 节点
 
-<h3 id="异常">异常</h3>
+        ```
+        element.shadowRoot; // 返回 null
+        ```
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">异常</th>
-   <th scope="col">说明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError<br>
-    无效状态错误</code></td>
-   <td>您添加的元素已经是一个 shadow host（影子主机）.</td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>NotSupportedError<br>
-     不被支持错误</code></p>
-   </td>
-   <td>您应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上).</td>
-  </tr>
- </tbody>
-</table>
+    - `delegatesFocus 焦点委托`
+      - : 一个布尔值，当设置为 `true` 时，指定减轻自定义元素的聚焦性能问题行为。
+        当 shadow DOM 中不可聚焦的部分被点击时，让第一个可聚焦的部分成为焦点，并且 shadow host（影子主机）将提供所有可用的 `:focus` 样式。
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<p>下面的例子取至 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 片段 ( <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">现场看看</a> ). 你可以看到使用 <code>attachShadow()</code> 在代码中间创建一个 shadow root，然后我们可以将自定义元素的内容挂载添加到它上面。</p>
+返回一个 {{domxref("ShadowRoot")}} 对象或者 `null`。
 
-<pre class="brush: js">// 为新元素创建一个类
+### 异常
+
+| 异常                             | 说明                                                                                                 |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `InvalidStateError 无效状态错误` | 您添加的元素已经是一个 shadow host（影子主机）.                                                      |
+| `NotSupportedError 不被支持错误` | 您应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上). |
+
+## 示例
+
+下面的例子取至 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) 片段 ( [现场看看](https://mdn.github.io/web-components-examples/word-count-web-component/) ). 你可以看到使用 `attachShadow()` 在代码中间创建一个 shadow root，然后我们可以将自定义元素的内容挂载添加到它上面。
+
+```js
+// 为新元素创建一个类
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // 在构造器中先调用一下 super
@@ -134,14 +113,13 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // 定义新元素
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Element.attachShadow")}}</p>
+{{Compat("api.Element.attachShadow")}}

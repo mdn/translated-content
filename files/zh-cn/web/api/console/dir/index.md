@@ -2,36 +2,31 @@
 title: console.dir
 slug: Web/API/Console/dir
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>在控制台中显示指定 JavaScript 对象的属性，并通过类似文件树样式的交互列表显示。</p>
+在控制台中显示指定 JavaScript 对象的属性，并通过类似文件树样式的交互列表显示。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p><img alt="console-dir.png" class="default internal" src="/@api/deki/files/6081/=console-dir.png"></p>
+![console-dir.png](/@api/deki/files/6081/=console-dir.png)
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.dir(<em>object</em>);
-</pre>
+```
+console.dir(object);
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>object</code></dt>
- <dd>打印出该对象的所有属性和属性值。</dd>
-</dl>
+- `object`
+  - : 打印出该对象的所有属性和属性值。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.console.dir")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a></li>
-</ul>
-
-<p> </p>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)

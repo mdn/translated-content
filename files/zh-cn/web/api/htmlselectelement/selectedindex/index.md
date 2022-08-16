@@ -2,53 +2,53 @@
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HTMLSelectElement.selectedIndex</strong></code> 是一个长整型数，它反映了被选中的第一个 {{HTMLElement("option")}} 元素的索引值。值为-1时表明没有元素被选中。</p>
+**`HTMLSelectElement.selectedIndex`** 是一个长整型数，它反映了被选中的第一个 {{HTMLElement("option")}} 元素的索引值。值为-1 时表明没有元素被选中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>index</var> = <var>selectElem</var>.selectedIndex;
-<em>selectElem<code>.selectedIndex = </code>index;</em>
-</pre>
+```
+var index = selectElem.selectedIndex;
+selectElem.selectedIndex = index;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="p"&gt;selectedIndex: 0&lt;/p&gt;
+```html
+<p id="p">selectedIndex: 0</p>
 
-&lt;select id="select"&gt;
-  &lt;option selected&gt;Option A&lt;/option&gt;
-  &lt;option&gt;Option B&lt;/option&gt;
-  &lt;option&gt;Option C&lt;/option&gt;
-  &lt;option&gt;Option D&lt;/option&gt;
-  &lt;option&gt;Option E&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select id="select">
+  <option selected>Option A</option>
+  <option>Option B</option>
+  <option>Option C</option>
+  <option>Option D</option>
+  <option>Option E</option>
+</select>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js; highlight[6]">var selectElem = document.getElementById('select')
+```js
+var selectElem = document.getElementById('select')
 var pElem = document.getElementById('p')
 
-// 当有新的&lt;option&gt;元素被选中时
+// 当有新的<option>元素被选中时
 selectElem.addEventListener('change', function() {
   var index = selectElem.selectedIndex;
   // 把index数据添加到p元素中
   pElem.innerHTML = 'selectedIndex: ' + index;
-})</pre>
+})
+```
 
-<p>{{EmbedLiveSample("示例", "200px", "130px")}}</p>
+{{EmbedLiveSample("示例", "200px", "130px")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLSelectElement.selectedIndex")}}</p>
-
-
-
-<div id="compat-mobile"></div>
+{{Compat("api.HTMLSelectElement.selectedIndex")}}

@@ -2,57 +2,35 @@
 title: FileSystemSync
 slug: Web/API/FileSystemSync
 ---
-<div>
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
-</div>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<p>在 <a href="/en/DOM/File_API/File_System_API">文件系统 API</a> 中， <code>FileSystemSync </code>对象表示文件系统。它有两个属性。</p>
+在 [文件系统 API](/en/DOM/File_API/File_System_API) 中， `FileSystemSync `对象表示文件系统。它有两个属性。
 
-<h2 id="关于这个文档">关于这个文档</h2>
+## 关于这个文档
 
-<p>这个文档最后更新与 2012 年 3 月 2 日，并且遵循 <a href="http://www.w3.org/TR/file-system-api/">W3C 规范（工作草案）</a>，起草于 2011 年 4 月 19 日。</p>
+这个文档最后更新与 2012 年 3 月 2 日，并且遵循 [W3C 规范（工作草案）](http://www.w3.org/TR/file-system-api/)，起草于 2011 年 4 月 19 日。
 
-<p>规范目前已废弃，没有得到大量的关注。</p>
+规范目前已废弃，没有得到大量的关注。
 
-<h2 id="基本概念">基本概念</h2>
+## 基本概念
 
-<p><code>FileSystemSync</code> 对象是整个 API 的必经之路，你会大量使用它。所以一旦你获得了引用，将对象缓存在全局变量或类属性中。</p>
+`FileSystemSync` 对象是整个 API 的必经之路，你会大量使用它。所以一旦你获得了引用，将对象缓存在全局变量或类属性中。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a name="attr_name"><code>name</code></a></td>
-   <td>
-    <p><code>只读</code><br>
-     <code>DOMString</code></p>
-   </td>
-   <td>文件系统的名称。名称在开放的文件系统列表中必须是唯一的。</td>
-  </tr>
-  <tr>
-   <td><a name="attr_root"><code>root</code></a></td>
-   <td><code>只读 DirectoryEntry</code></td>
-   <td>文件系统的根目录。</td>
-  </tr>
- </tbody>
-</table>
+| Attribute | Type                  | Description                                              |
+| --------- | --------------------- | -------------------------------------------------------- |
+| `name`    | `只读` `DOMString`    | 文件系统的名称。名称在开放的文件系统列表中必须是唯一的。 |
+| `root`    | `只读 DirectoryEntry` | 文件系统的根目录。                                       |
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FileSystemSync")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<p>规范：<a href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/">File API: Directories and System Specification</a></p>
+规范：[File API: Directories and System Specification](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/)
 
-<p>参考： <a href="/en/DOM/File_API/File_System_API">文件系统 API</a></p>
+参考： [文件系统 API](/en/DOM/File_API/File_System_API)
 
-<p>简介：<a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">文件系统 API 的基本概念</a></p>
+简介：[文件系统 API 的基本概念](/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

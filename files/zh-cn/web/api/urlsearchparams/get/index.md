@@ -2,46 +2,45 @@
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>{{domxref("URLSearchParams")}} 接口的<strong>get()</strong>方法返回第一个与搜索参数对应的值<strong>。</strong></p>
+{{domxref("URLSearchParams")}} 接口的**get()**方法返回第一个与搜索参数对应的值**。**
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">URLSearchParams.get(name)</pre>
+```
+URLSearchParams.get(name)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>键名</dt>
- <dd>将要返回的参数的键名。</dd>
-</dl>
+- 键名
+  - : 将要返回的参数的键名。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{domxref("USVString")}} ；如果没找到，返回 <code><strong>null</strong></code>.</p>
+返回一个 {{domxref("USVString")}} ；如果没找到，返回 **`null`**.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>如果一个页面的 URL 是 <code>https://example.com/?name=Jonathan&amp;age=18</code> ，你可以这样解析参数“name”和“age”:</p>
+如果一个页面的 URL 是 `https://example.com/?name=Jonathan&age=18` ，你可以这样解析参数“name”和“age”:
 
-<pre class="default prettyprint prettyprinted"><code>let params = new URLSearchParams(document.location.search.substring(1));
+```
+let params = new URLSearchParams(document.location.search.substring(1));
 let name = params.get("name"); // is the string "Jonathan"
-let age = parseInt(params.get("age"), 10); // is the number 18</code>
-</pre>
+let age = parseInt(params.get("age"), 10); // is the number 18
+```
 
-<p>查找一个不存在的键名则返回 <code><strong>null</strong></code>:</p>
+查找一个不存在的键名则返回 **`null`**:
 
-<pre><code>let address = params.get("address"); // null</code></pre>
+```
+let address = params.get("address"); // null
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.get")}}</p>
-</div>
+{{Compat("api.URLSearchParams.get")}}

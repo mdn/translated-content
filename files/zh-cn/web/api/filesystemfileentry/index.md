@@ -2,41 +2,36 @@
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
 ---
-<div>{{APIRef("File System API")}}{{Non-standard_header}}</div>
+{{APIRef("File System API")}}{{Non-standard_header}}
 
-<p><a href="/en/DOM/File_API/File_System_API">文件系统 API</a> 的<strong><code> FileSystemFileEntry</code></strong> 接口表示文件系统中的文件。它提供了属性，描述文件的属性，以及 {{domxref("FileSystemFileEntry.file", "file()")}} 方法，它创建了可以用于读取文件的 {{domxref("File")}} 对象。</p>
+[文件系统 API](/en/DOM/File_API/File_System_API) 的**` FileSystemFileEntry`** 接口表示文件系统中的文件。它提供了属性，描述文件的属性，以及 {{domxref("FileSystemFileEntry.file", "file()")}} 方法，它创建了可以用于读取文件的 {{domxref("File")}} 对象。
 
-<div class="note">
-<p>由于这是个非标准 API，它的规范当前并不在标准化过程中。重要的是要记住，并不是所有浏览器都实现了它，并且实现它的浏览器可能仅仅实现一小部分。点击 <a href="#browser_compatibility">Browser compatibility</a> 来查看更多细节。</p>
-</div>
+> **备注：** 由于这是个非标准 API，它的规范当前并不在标准化过程中。重要的是要记住，并不是所有浏览器都实现了它，并且实现它的浏览器可能仅仅实现一小部分。点击 [Browser compatibility](#browser_compatibility) 来查看更多细节。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>从它的父接口 {{domxref("FileSystemEntry")}} 继承属性，但是这个接口没有独特的属性。</p>
+从它的父接口 {{domxref("FileSystemEntry")}} 继承属性，但是这个接口没有独特的属性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("FileSystemFileEntry.file", "file()")}}</dt>
- <dd>创建新的 {{domxref("File")}} 对象，它可以用于读取文件。</dd>
-</dl>
+- {{domxref("FileSystemFileEntry.file", "file()")}}
+  - : 创建新的 {{domxref("File")}} 对象，它可以用于读取文件。
 
-<h3 id="basic_concepts">废弃的方法</h3>
+### 废弃的方法
 
-<dl>
- <dt>{{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} {{Deprecated_Inline}}</dt>
- <dd>创建新的 {{domxref("FileWriter")}} 对象，它允许写入由文件系统条目表示的对象。</dd>
-</dl>
+- {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} {{Deprecated_Inline}}
+  - : 创建新的 {{domxref("FileWriter")}} 对象，它允许写入由文件系统条目表示的对象。
 
-<h2 id="basic_concepts">基本概念</h2>
+## 基本概念
 
-<p>为了向文件写入内容，通过调用 {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} 创建 {{domxref("FileWriter")}} 对象。为了读取文件，通过调用 {{domxref("FileSystemFileEntry.file", "file()")}}，获取表示其内容的 {{domxref("File")}} 对象。</p>
+为了向文件写入内容，通过调用 {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} 创建 {{domxref("FileWriter")}} 对象。为了读取文件，通过调用 {{domxref("FileSystemFileEntry.file", "file()")}}，获取表示其内容的 {{domxref("File")}} 对象。
 
-<h3 id="example">示例</h3>
+### 示例
 
-<p>下面的代码创建了一个空文件，叫做 "<code>log.txt"</code> （如果不存在的话），并使用文本 "Meow" 来填充。在成功的回调中，设置了事件处理器，来处理 {{event("error")}} <code>error</code> 和 {{event("writeend")}} 事件。通过创建 blob，向其追加文本，以及将 blob 传递给  {{domxref("FileWriter.write()")}}，文本数据写入了文件。</p>
+下面的代码创建了一个空文件，叫做 "`log.txt"` （如果不存在的话），并使用文本 "Meow" 来填充。在成功的回调中，设置了事件处理器，来处理 {{event("error")}} `error` 和 {{event("writeend")}} 事件。通过创建 blob，向其追加文本，以及将 blob 传递给 {{domxref("FileWriter.write()")}}，文本数据写入了文件。
 
-<pre class="brush: js">function onInitFs(fs) {
+```js
+function onInitFs(fs) {
   fs.root.getFile('log.txt', {create: true}, function(fileEntry) {
 
     // Create a FileWriter object for our FileSystemFileEntry (log.txt).
@@ -60,21 +55,20 @@ slug: Web/API/FileSystemFileEntry
 
 }
 
-window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);</pre>
+window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>这个 API 没有官方的 W3C 或者 WHATWG 规范。</p>
+这个 API 没有官方的 W3C 或者 WHATWG 规范。
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FileSystemFileEntry")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">文件和驱动器条目 API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">文件系统 API 简介</a></li>
-</ul>
+- [文件和驱动器条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
+- [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)

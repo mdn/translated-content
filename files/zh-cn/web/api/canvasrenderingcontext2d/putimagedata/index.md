@@ -2,60 +2,59 @@
 title: CanvasRenderingContext2D.putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.putImageData()</code></strong> 是 Canvas 2D API 将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图的方法。如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。</p>
+**`CanvasRenderingContext2D.putImageData()`** 是 Canvas 2D API 将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图的方法。如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.putImageData(imagedata, dx, dy);</var>
-void <var><em>ctx</em>.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);</var>
-</pre>
+```
+void ctx.putImageData(imagedata, dx, dy);
+void ctx.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><strong>imageData</strong></p>
+**imageData**
 
-<p>     {{domxref("ImageData")}} ，包含像素值的数组对象。</p>
+{{domxref("ImageData")}} ，包含像素值的数组对象。
 
-<dl>
- <dt><code>dx</code></dt>
- <dd>源图像数据在目标画布中的位置偏移量（x 轴方向的偏移量）。</dd>
- <dt><code>dy</code></dt>
- <dd>源图像数据在目标画布中的位置偏移量（y 轴方向的偏移量）。</dd>
- <dt><code>dirtyX</code> {{optional_inline}}</dt>
- <dd>在源图像数据中，矩形区域左上角的位置。默认是整个图像数据的左上角（x 坐标）。</dd>
- <dt><code>dirtyY</code> {{optional_inline}}</dt>
- <dd>在源图像数据中，矩形区域左上角的位置。默认是整个图像数据的左上角（y 坐标）。</dd>
- <dt><code>dirtyWidth</code> {{optional_inline}}</dt>
- <dd>在源图像数据中，矩形区域的宽度。默认是图像数据的宽度。</dd>
- <dt><code>dirtyHeight</code> {{optional_inline}}</dt>
- <dd>在源图像数据中，矩形区域的高度。默认是图像数据的高度。</dd>
-</dl>
+- `dx`
+  - : 源图像数据在目标画布中的位置偏移量（x 轴方向的偏移量）。
+- `dy`
+  - : 源图像数据在目标画布中的位置偏移量（y 轴方向的偏移量）。
+- `dirtyX` {{optional_inline}}
+  - : 在源图像数据中，矩形区域左上角的位置。默认是整个图像数据的左上角（x 坐标）。
+- `dirtyY` {{optional_inline}}
+  - : 在源图像数据中，矩形区域左上角的位置。默认是整个图像数据的左上角（y 坐标）。
+- `dirtyWidth` {{optional_inline}}
+  - : 在源图像数据中，矩形区域的宽度。默认是图像数据的宽度。
+- `dirtyHeight` {{optional_inline}}
+  - : 在源图像数据中，矩形区域的高度。默认是图像数据的高度。
 
-<h3 id="抛出错误">抛出错误</h3>
+### 抛出错误
 
-<dl>
- <dt><code>NotSupportedError</code></dt>
- <dd>如果任何一个变量被设置成无穷大，则会抛出此错误。</dd>
- <dt><code>InvalidStateError</code></dt>
- <dd>如果过图像数据对象的数据被分离，会抛出此错误。</dd>
-</dl>
+- `NotSupportedError`
+  - : 如果任何一个变量被设置成无穷大，则会抛出此错误。
+- `InvalidStateError`
+  - : 如果过图像数据对象的数据被分离，会抛出此错误。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="理解putImageData">理解<code>putImageData</code></h3>
+### 理解`putImageData`
 
-<p>通过{{domxref("CanvasRenderingContext2D.fillRect()")}}方法实现，更好地理解 putImageData 的执行算法。获取更多信息，参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">使用 Canvas 控制像素</a> 和 {{domxref("ImageData")}} 对象。</p>
+通过{{domxref("CanvasRenderingContext2D.fillRect()")}}方法实现，更好地理解 putImageData 的执行算法。获取更多信息，参见 [使用 Canvas 控制像素](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 function putImageData(ctx, imageData, dx, dy,
@@ -69,8 +68,8 @@ function putImageData(ctx, imageData, dx, dy,
   dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
   var limitBottom = dirtyY + dirtyHeight;
   var limitRight = dirtyX + dirtyWidth;
-  for (var y = dirtyY; y &lt; limitBottom; y++) {
-    for (var x = dirtyX; x &lt; limitRight; x++) {
+  for (var y = dirtyY; y < limitBottom; y++) {
+    for (var x = dirtyX; x < limitRight; x++) {
       var pos = y * width + x;
       ctx.fillStyle = 'rgba(' + data[pos*4+0]
                         + ',' + data[pos*4+1]
@@ -87,25 +86,24 @@ ctx.fillRect(0,0,100,100);
 var imagedata = ctx.getImageData(0,0,100,100);
 // use the putImageData function that illustrates how putImageData works
 putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.fillRect(0,0,100,100);
 var imagedata = ctx.getImageData(0,0,100,100);
-putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);&lt;/textarea&gt;
-</pre>
+putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -140,8 +138,8 @@ function putImageData(ctx, imageData, dx, dy,
   dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
   var limitBottom = dirtyY + dirtyHeight;
   var limitRight = dirtyX + dirtyWidth;
-  for (var y = dirtyY; y &lt; limitBottom; y++) {
-    for (var x = dirtyX; x &lt; limitRight; x++) {
+  for (var y = dirtyY; y < limitBottom; y++) {
+    for (var x = dirtyX; x < limitRight; x++) {
       var pos = y * width + x;
       ctx.fillStyle = 'rgba(' + data[pos*4+0]
                         + ',' + data[pos*4+1]
@@ -151,23 +149,20 @@ function putImageData(ctx, imageData, dx, dy,
     }
   }
 }
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.putImageData")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</a></li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("ImageData")}}
+- [Pixel manipulation with canvas](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

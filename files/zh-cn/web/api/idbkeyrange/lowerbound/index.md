@@ -2,65 +2,46 @@
 title: IDBKeyRange.lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-<p>{{domxref("IDBKeyRange")}} 接口的<strong><code>lowerBound()</code></strong>方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。</p>
-</div>
+{{domxref("IDBKeyRange")}} 接口的**`lowerBound()`**方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox" style="font-size: 14px;">var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>);
-var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em>open</em>);
-</pre>
+```
+var myIDBKeyRange = IDBKeyRange.lowerBound(lower);
+var myIDBKeyRange = IDBKeyRange.lowerBound(lower, open);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>lower </dt>
- <dd>指定新键范围的下限。</dd>
- <dt>open<em> </em>{{optional_inline}}</dt>
- <dd>指示下限是否排除端点值。默认值为 false。</dd>
-</dl>
+- lower
+  - : 指定新键范围的下限。
+- open {{optional_inline}}
+  - : 指示下限是否排除端点值。默认值为 false。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("IDBKeyRange")}}: 新创建的键范围。</p>
+{{domxref("IDBKeyRange")}}: 新创建的键范围。
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>此方法可能引发以下类型的 {{domxref("DOMException")}} :</p>
+此方法可能引发以下类型的 {{domxref("DOMException")}} :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>DataError</td>
-   <td>
-    <p>The value parameter passed was not a valid key.</p>
+| Exception | Description                                     |
+| --------- | ----------------------------------------------- |
+| DataError | The value parameter passed was not a valid key. |
 
-    
-   </td>
-  </tr>
- </tbody>
-</table>
+## Example
 
-<h2 id="Example">Example</h2>
+下面的示例演示如何使用下限键范围。在这里，我们声明`keyRangeValue = IDBKeyRange.lowerBound("F", false);`— 一个包含值“F”及其后所有内容的范围。我们打开一个事务（使用 {{domxref("IDBTransaction")}}）和一个对象存储，并使用 {{domxref("IDBObjectStore.openCursor")}}打开一个游标，声明`keyRangeValue` 为其可选的键范围值。这意味着光标将只检索键值为“F”及其后面的所有记录。如果使用`IDBKeyRange.lowerBound("F", true);`，则该范围将不包括端点“F”，仅包括其后面的值。
 
-<p>下面的示例演示如何使用下限键范围。在这里，我们声明<code>keyRangeValue = IDBKeyRange.lowerBound("F", false);</code>— 一个包含值“F”及其后所有内容的范围。我们打开一个事务（使用 {{domxref("IDBTransaction")}}）和一个对象存储，并使用 {{domxref("IDBObjectStore.openCursor")}}打开一个游标，声明<code>keyRangeValue</code> 为其可选的键范围值。这意味着光标将只检索键值为“F”及其后面的所有记录。如果使用<code>IDBKeyRange.lowerBound("F", true);</code>，则该范围将不包括端点“F”，仅包括其后面的值。</p>
+> **备注：** 要获得一个更完整的示例，使您能够使用键范围进行实验，请查看我们的 [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)（[实时查看该示例](https://mdn.github.io/indexeddb-examples/idbkeyrange/)）。
 
-<div class="note">
-<p><strong>Note</strong>: 要获得一个更完整的示例，使您能够使用键范围进行实验，请查看我们的 <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">IDBKeyRange-example</a>（<a href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">实时查看该示例</a>）。</p>
-</div>
-
-<pre class="brush: js" style="font-size: 14px;">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.lowerBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -70,7 +51,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -78,30 +59,23 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
         console.log('Entries all displayed.');
       }
     };
-  };</pre>
+  };
+```
 
-
-
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

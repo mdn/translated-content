@@ -2,33 +2,32 @@
 title: Window.onmozbeforepaint
 slug: Web/API/Window/onmozbeforepaint
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>{{ non-standard_header() }}</p>
+{{ non-standard_header() }}
 
-<div class="warning"><strong>警告：</strong> 这个非标准时间处理器在某些已发布版本中无法使用，而且已经在 Gecko 11.0 中被移除{{ geckoRelease("11.0") }}。</div>
+> **警告：** 这个非标准时间处理器在某些已发布版本中无法使用，而且已经在 Gecko 11.0 中被移除{{ geckoRelease("11.0") }}。
 
-<h3 id="Summary">摘要</h3>
+### 摘要
 
-<p><code>MozBeforePaints</code> 事件的事件处理器。这样做是为了保持和 {{ domxref("window.mozRequestAnimationFrame()") }}方法一致以期在 JavaScript 代码中提供流畅，同步的动画。</p>
+`MozBeforePaints` 事件的事件处理器。这样做是为了保持和 {{ domxref("window.mozRequestAnimationFrame()") }}方法一致以期在 JavaScript 代码中提供流畅，同步的动画。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval">window.onmozbeforepaint = <em>funcRef</em>;
-</pre>
+```
+window.onmozbeforepaint = funcRef;
+```
 
-<ul>
- <li><code>funcRef</code> 是处理器函数。</li>
-</ul>
+- `funcRef` 是处理器函数。
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<p>请查看{{ domxref("window.mozRequestAnimationFrame()") }}。</p>
+请查看{{ domxref("window.mozRequestAnimationFrame()") }}。
 
-<h3 id="Notes">注意</h3>
+### 注意
 
-<p>这个事件会在浏览器重绘前立即触发，如果事件被一个或多个代码调用响应{{domxref("window.mozRequestAnimationFrame()") }}。事件处理器会接收到一个事件作为输入参数，其 <code>timeStamp</code> 属性为 UTC 起始到现在的毫秒数字，这是当前动画帧的“当前时间”。这个时间对于所有在相同浏览器窗口运行的，包括哪些用了 {{ domxref("window.mozRequestAnimationFrame()") }} 方法，<a href="/en/CSS/CSS_transitions">CSS transitions</a>, 和 SMIL animations 的都是一样的。</p>
+这个事件会在浏览器重绘前立即触发，如果事件被一个或多个代码调用响应{{domxref("window.mozRequestAnimationFrame()") }}。事件处理器会接收到一个事件作为输入参数，其 `timeStamp` 属性为 UTC 起始到现在的毫秒数字，这是当前动画帧的“当前时间”。这个时间对于所有在相同浏览器窗口运行的，包括哪些用了 {{ domxref("window.mozRequestAnimationFrame()") }} 方法，[CSS transitions](/en/CSS/CSS_transitions), 和 SMIL animations 的都是一样的。
 
-<h3 id="Specification">说明</h3>
+### 说明
 
-<p>没有特别的说明。</p>
+没有特别的说明。

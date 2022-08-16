@@ -2,44 +2,41 @@
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API 的{{domxref("CanvasRenderingContext2D")}}接口的<strong><code>setLineDash()</code></strong>方法在填充线时使用虚线模式。它使用一组值来指定描述模式的线和间隙的交替长度。</p>
+Canvas 2D API 的{{domxref("CanvasRenderingContext2D")}}接口的**`setLineDash()`**方法在填充线时使用虚线模式。它使用一组值来指定描述模式的线和间隙的交替长度。
 
-<div class="blockIndicator note">
-<p><strong>提示：</strong>如果要切换回至实线模式，将 dash list 设置为一个空数组即可。</p>
-</div>
+> **备注：** 如果要切换回至实线模式，将 dash list 设置为一个空数组即可。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.setLineDash(segments);</var>
-</pre>
+```
+void ctx.setLineDash(segments);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>segments</code></dt>
- <dd>一个{{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， <code>[5, 15, 25]</code> 会变成 <code>[5, 15, 25, 5, 15, 25]。</code></dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
- <dd>{{jsxref("undefined")}}</dd>
-</dl>
+- `segments`
+  - : 一个{{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， `[5, 15, 25]` 会变成 `[5, 15, 25, 5, 15, 25]。`
+- ### 返回值
+  - : {{jsxref("undefined")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="基本示例">基本示例</h3>
+### 基本示例
 
-<p>这是一段简单的代码片段，使用 <code>setLineDash</code> 方法绘制一条线段。</p>
+这是一段简单的代码片段，使用 `setLineDash` 方法绘制一条线段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Dashed line
@@ -55,27 +52,26 @@ ctx.setLineDash([]);
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.setLineDash([5, 15]);
 ctx.beginPath();
 ctx.moveTo(0,100);
 ctx.lineTo(400, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -98,24 +94,26 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('基本示例', 700, 360) }}</p>
+{{ EmbedLiveSample('基本示例', 700, 360) }}
 
-<h3 id="一些常见的模式">一些常见的模式</h3>
+### 一些常见的模式
 
-<p>此示例说明了各种常见的线划线模式。</p>
+此示例说明了各种常见的线划线模式。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</code></pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>下面创建的<code>drawDashedLine()</code> 函数使得多个虚线的绘制变得简单。它接收模式数组作为其唯一参数。</p>
+下面创建的`drawDashedLine()` 函数使得多个虚线的绘制变得简单。它接收模式数组作为其唯一参数。
 
-<pre class="brush: js">function drawDashedLine(pattern) {
+```js
+function drawDashedLine(pattern) {
   ctx.beginPath();
   ctx.setLineDash(pattern);
   ctx.moveTo(0, y);
@@ -134,24 +132,23 @@ drawDashedLine([10, 10]);
 drawDashedLine([20, 5]);
 drawDashedLine([15, 3, 3, 3]);
 drawDashedLine([20, 3, 3, 3, 3, 3, 3, 3]);
-drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]</pre>
+drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('一些常见的模式', 700, 180) }}</p>
+{{ EmbedLiveSample('一些常见的模式', 700, 180) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.setLineDash")}}</p>
+{{Compat("api.CanvasRenderingContext2D.setLineDash")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
+- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}

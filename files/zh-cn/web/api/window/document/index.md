@@ -2,47 +2,45 @@
 title: window.document
 slug: Web/API/Window/document
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p><strong><code>window.document</code></strong>返回当前窗口内的文档节点（{{domxref("document")}}）</p>
+**`window.document`** 返回当前窗口内的文档节点（{{domxref("document")}}）
 
-<div class="note"><strong>注：</strong> 从 Firefox 3 和 IE7 开始，访问其他页面内的文档节点会受到同源策略的影响。</div>
+> **备注：** 从 Firefox 3 和 IE7 开始，访问其他页面内的文档节点会受到同源策略的影响。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval notranslate"><em>doc</em> = window.document
-</pre>
+```js
+doc = window.document
+```
 
-<h2 id="Parameters">参数</h2>
+## 参数
 
-<ul>
- <li><code>doc</code>是一个指向{{domxref("document")}}对象的引用</li>
-</ul>
+- `doc`是一个指向{{domxref("document")}}对象的引用
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-   &lt;title&gt;Hello, World!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Hello, World!</title>
+</head>
+<body>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
    var doc = window.document;
    alert( doc.title);    // 弹出: Hello, World!
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
+## 浏览器兼容性
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-
-
-<p>{{Compat("api.Window.document")}}</p>
+{{Compat("api.Window.document")}}

@@ -2,126 +2,106 @@
 title: Streams API
 slug: Web/API/Streams_API
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>Streams API 允许 JavaScript 以编程的方式访问通过网络接收的数据流，并根据开发人员的需要处理它们。</p>
+Streams API 允许 JavaScript 以编程的方式访问通过网络接收的数据流，并根据开发人员的需要处理它们。
 
-<h2 id="概念和用法">概念和用法</h2>
+## 概念和用法
 
-<p>流将你希望通过网络接收的资源拆分成小块，然后按位处理它。这正是浏览器在接收用于显示 web 页面的资源时做的事情——视频缓冲区和更多的内容可以逐渐播放，有时候随着内容的加载，你可以看到图像逐渐地显示。</p>
+流将你希望通过网络接收的资源拆分成小块，然后按位处理它。这正是浏览器在接收用于显示 web 页面的资源时做的事情——视频缓冲区和更多的内容可以逐渐播放，有时候随着内容的加载，你可以看到图像逐渐地显示。
 
-<p>但曾经这些对于 JavaScript 是不可用的。以前，如果我们想要处理某种资源（如视频、文本文件等），我们必须下载完整的文件，等待它反序列化成适当的格式，然后在完整地接收到所有的内容后再进行处理。</p>
+但曾经这些对于 JavaScript 是不可用的。以前，如果我们想要处理某种资源（如视频、文本文件等），我们必须下载完整的文件，等待它反序列化成适当的格式，然后在完整地接收到所有的内容后再进行处理。
 
-<p>随着流在 JavaScript 中的使用，一切发生了改变——只要原始数据在客户端可用，你就可以使用 JavaScript 按位处理它，而不再需要缓冲区、字符串或 blob。</p>
+随着流在 JavaScript 中的使用，一切发生了改变——只要原始数据在客户端可用，你就可以使用 JavaScript 按位处理它，而不再需要缓冲区、字符串或 blob。
 
-<p><img src="concept.png"></p>
+![](concept.png)
 
-<p>还有更多的优点——你可以检测流何时开始或结束，将流链接在一起，根据需要处理错误和取消流，并对流的读取速度做出反应。</p>
+还有更多的优点——你可以检测流何时开始或结束，将流链接在一起，根据需要处理错误和取消流，并对流的读取速度做出反应。
 
-<p>流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会暴露为 {{domxref("ReadableStream")}}，之后你就可以使用 {{domxref("ReadableStream.getReader()")}} 建立的 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。</p>
+流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 [fetch request](/zh-CN/docs/Web/API/fetch) 响应 {{domxref("Body")}} 会暴露为 {{domxref("ReadableStream")}}，之后你就可以使用 {{domxref("ReadableStream.getReader()")}} 建立的 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。
 
-<p>更复杂的应用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 创建你自己的流，比如在 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> 中处理数据。</p>
+更复杂的应用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 创建你自己的流，比如在 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 中处理数据。
 
-<p>你还可以使用 {{domxref("WritableStream")}} 将数据写入流中。</p>
+你还可以使用 {{domxref("WritableStream")}} 将数据写入流中。
 
-<div class="note">
-<p><strong>注意：</strong>你可以在这些文章中找到关于流理论的更多细节和实践 — <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a>, <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</a>，以及 <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a>。</p>
-</div>
+> **备注：** 你可以在这些文章中找到关于流理论的更多细节和实践 — [Streams API concepts](/zh-CN/docs/Web/API/Streams_API/Concepts), [Using readable streams](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)，以及 [Using writable streams](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
-<h2 id="Stream_接口">Stream 接口</h2>
+## Stream 接口
 
-<h3 id="Readable_streams">Readable streams</h3>
+### Readable streams
 
-<dl>
- <dt>{{domxref("ReadableStream")}}</dt>
- <dd>表示数据的可读流。用于处理 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 返回的响应，或者开发者自定义的流（例如通过 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造的流）。</dd>
- <dt>{{domxref("ReadableStreamDefaultReader")}}</dt>
- <dd>表示默认阅读器，用于阅读来自网络的数据流（例如 fetch 请求）。</dd>
- <dt>{{domxref("ReadableStreamDefaultController")}}</dt>
- <dd>表示控制器，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。默认的控制器用于处理非字节流。</dd>
-</dl>
+- {{domxref("ReadableStream")}}
+  - : 表示数据的可读流。用于处理 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 返回的响应，或者开发者自定义的流（例如通过 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造的流）。
+- {{domxref("ReadableStreamDefaultReader")}}
+  - : 表示默认阅读器，用于阅读来自网络的数据流（例如 fetch 请求）。
+- {{domxref("ReadableStreamDefaultController")}}
+  - : 表示控制器，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。默认的控制器用于处理非字节流。
 
-<h3 id="Writable_streams">Writable streams</h3>
+### Writable streams
 
-<dl>
- <dt>{{domxref("WritableStream")}}</dt>
- <dd>提供了将流写入目标这个过程的标准抽象表示，称为 sink。内置了背压和队列机制。</dd>
- <dt>{{domxref("WritableStreamDefaultWriter")}}</dt>
- <dd>表示默认写入器，用于将小块的数据写入可写流中。</dd>
- <dt>{{domxref("WritableStreamDefaultController")}}</dt>
- <dd>表示控制器，用于控制 {{domxref("WritableStream")}} 的状态。当创建一个 <code>WritableStream</code> 时，对应的 <code>WritableStreamDefaultController</code> 实例会被提供给底层的 sink 供其操作。</dd>
-</dl>
+- {{domxref("WritableStream")}}
+  - : 提供了将流写入目标这个过程的标准抽象表示，称为 sink。内置了背压和队列机制。
+- {{domxref("WritableStreamDefaultWriter")}}
+  - : 表示默认写入器，用于将小块的数据写入可写流中。
+- {{domxref("WritableStreamDefaultController")}}
+  - : 表示控制器，用于控制 {{domxref("WritableStream")}} 的状态。当创建一个 `WritableStream` 时，对应的 `WritableStreamDefaultController` 实例会被提供给底层的 sink 供其操作。
 
-<h3 id="流相关的_API_及操作">流相关的 API 及操作</h3>
+### 流相关的 API 及操作
 
-<dl>
- <dt>{{domxref("ByteLengthQueuingStrategy")}}</dt>
- <dd>提供建立流时所需的内置字节队列策略。</dd>
- <dt>{{domxref("CountQueuingStrategy")}}</dt>
- <dd>提供建立流时所需的块计数队列策略。</dd>
-</dl>
+- {{domxref("ByteLengthQueuingStrategy")}}
+  - : 提供建立流时所需的内置字节队列策略。
+- {{domxref("CountQueuingStrategy")}}
+  - : 提供建立流时所需的块计数队列策略。
 
-<h3 id="扩展">扩展</h3>
+### 扩展
 
-<dl>
- <dt>{{domxref("Request")}}</dt>
- <dd>当构造一个新的 <code>Request</code> 对象后，你可以给它的 <code>RequestInit</code> 中的 <code>body</code> 属性传入一个 {{domxref("ReadableStream")}}。这个 <code>Request</code> 对象就可以被传入 {{domxref("fetch()")}} 中，开始接收流。</dd>
- <dt>{{domxref("Body")}}</dt>
- <dd>一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的阅读器来处理等。</dd>
-</dl>
+- {{domxref("Request")}}
+  - : 当构造一个新的 `Request` 对象后，你可以给它的 `RequestInit` 中的 `body` 属性传入一个 {{domxref("ReadableStream")}}。这个 `Request` 对象就可以被传入 {{domxref("fetch()")}} 中，开始接收流。
+- {{domxref("Body")}}
+  - : 一个成功的 [fetch request](/zh-CN/docs/Web/API/fetch) 响应 {{domxref("Body")}} 会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的阅读器来处理等。
 
-<h3 id="字节流相关接口">字节流相关接口</h3>
+### 字节流相关接口
 
-<div class="warning">
-<p><strong>重要：</strong>下面的 API 并没有在所有浏览器中都实现，关于规范细节是否处于完成状态可供实现还存在疑问。它们可能随时会改变。</p>
-</div>
+> **警告：** 下面的 API 并没有在所有浏览器中都实现，关于规范细节是否处于完成状态可供实现还存在疑问。它们可能随时会改变。
 
-<dl>
- <dt>{{domxref("ReadableStreamBYOBReader")}}</dt>
- <dd>表示 BYOB（"bring your own buffer"）阅读器，用于阅读开发者提供的流数据（如自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}）。</dd>
- <dt>{{domxref("ReadableByteStreamController")}}</dt>
- <dd>表示控制器，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。字节控制器用于处理字节流。</dd>
- <dt>{{domxref("ReadableStreamBYOBRequest")}}</dt>
- <dd>表示 {{domxref("ReadableByteStreamController")}} 中的 BYOB pull request。</dd>
-</dl>
+- {{domxref("ReadableStreamBYOBReader")}}
+  - : 表示 BYOB（"bring your own buffer"）阅读器，用于阅读开发者提供的流数据（如自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}）。
+- {{domxref("ReadableByteStreamController")}}
+  - : 表示控制器，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。字节控制器用于处理字节流。
+- {{domxref("ReadableStreamBYOBRequest")}}
+  - : 表示 {{domxref("ReadableByteStreamController")}} 中的 BYOB pull request。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We have created a directory of examples to go along with the Streams API documentation — see <a href="https://github.com/mdn/dom-examples/tree/master/streams">mdn/dom-examples/streams</a>. The examples are as follows:</p>
+We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). The examples are as follows:
 
-<ul>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-pump/">Simple stream pump</a>: This example shows how to consume a ReadableStream and pass its data to another.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/grayscale-png/">Grayscale a PNG</a>: This example shows how a ReadableStream of a PNG can be turned into grayscale.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random stream</a>: This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-tee-example/">Simple tee example</a>: This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer</a>: This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/png-transform-stream/">Unpack chunks of a PNG</a>: This example shows how <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeThrough"><code>pipeThrough()</code></a> can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.</li>
-</ul>
+- [Simple stream pump](http://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
+- [Grayscale a PNG](http://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
+- [Simple random stream](http://mdn.github.io/dom-examples/streams/simple-random-stream/): This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.
+- [Simple tee example](http://mdn.github.io/dom-examples/streams/simple-tee-example/): This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.
+- [Simple writer](http://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.
+- [Unpack chunks of a PNG](http://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/zh-CN/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
 
-<p>Examples from other developers:</p>
+Examples from other developers:
 
-<ul>
- <li><a href="https://fetch-progress.anthum.com/">Progress Indicators with Streams, Service Workers, &amp; Fetch</a>.</li>
-</ul>
+- [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="ReadableStream">ReadableStream</h3>
+### ReadableStream
 
-<p>{{Compat("api.ReadableStream")}}</p>
+{{Compat("api.ReadableStream")}}
 
-<h3 id="WritableStream">WritableStream</h3>
+### WritableStream
 
-<p>{{Compat("api.WritableStream")}}</p>
+{{Compat("api.WritableStream")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a></li>
- <li><a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</a></li>
- <li><a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a></li>
-</ul>
+- [Streams API concepts](/zh-CN/docs/Web/API/Streams_API/Concepts)
+- [Using readable streams](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- [Using writable streams](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)

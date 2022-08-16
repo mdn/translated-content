@@ -2,38 +2,36 @@
 title: Notification.requireInteraction
 slug: Web/API/notification/requireInteraction
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>{{domxref("Notification")}} 接口的 <strong><code>requireInteraction</code></strong> 属性是只读属性，它返回一个 {{jsxref("Boolean")}}（布尔值），指示在用户点击或关闭通知前，通知应该保持活动状态，而不是自动关闭。</p>
+{{domxref("Notification")}} 接口的 **`requireInteraction`** 属性是只读属性，它返回一个 {{jsxref("Boolean")}}（布尔值），指示在用户点击或关闭通知前，通知应该保持活动状态，而不是自动关闭。
 
-<div class="note">
-<p><strong>注意</strong>: 此属性可以在创建通知时通过在 {{domxref("Notification.Notification()")}} 构造器的 options 参数接收的对象上设置 <code>requireInteraction</code> 属性为 <code>true</code> 来进行设置</p>
-</div>
+> **备注：** 此属性可以在创建通知时通过在 {{domxref("Notification.Notification()")}} 构造器的 options 参数接收的对象上设置 `requireInteraction` 属性为 `true` 来进行设置
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js notranslate">function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
+```js
+function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
   var options = {
       body: theBody, //通知正文
       requireInteraction: shouldRequireInteraction //在此处设置 requireInteraction
   }
   var n = new Notification(theTitle,options);
-}</pre>
+}
+```
 
-<h3 id="Return_Value">值</h3>
+### 值
 
-<p>{{jsxref("Boolean")}}（布尔值）。</p>
+{{jsxref("Boolean")}}（布尔值）。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
-<p>{{Compat("api.Notification.requireInteraction")}}</p>
+{{Compat("api.Notification.requireInteraction")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">使用 Notifications API</a></li>
-</ul>
+- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

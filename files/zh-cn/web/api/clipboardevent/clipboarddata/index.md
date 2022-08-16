@@ -2,34 +2,30 @@
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
 ---
-<p>{{ apiref("Clipboard API") }} {{SeeCompatTable}}</p>
+{{ apiref("Clipboard API") }} {{SeeCompatTable}}
 
-<p><code><strong>ClipboardEvent.clipboardData</strong></code> 属性保存了一个 {{domxref("DataTransfer")}} 对象，这个对象可用于：</p>
+**`ClipboardEvent.clipboardData`** 属性保存了一个 {{domxref("DataTransfer")}} 对象，这个对象可用于：
 
-<ul>
- <li>描述哪些数据可以由 {{event("cut")}} 和 {{event("copy")}} 事件处理器放入剪切板，通常通过调用 {{domxref("DataTransfer.setData", "setData(format, data)")}} 方法；</li>
- <li>获取由 {{event("paste")}} 事件处理器拷贝进剪切板的数据，通常通过调用 {{domxref("DataTransfer.getData", "getData(format)")}} 方法</li>
-</ul>
+- 描述哪些数据可以由 {{event("cut")}} 和 {{event("copy")}} 事件处理器放入剪切板，通常通过调用 {{domxref("DataTransfer.setData", "setData(format, data)")}} 方法；
+- 获取由 {{event("paste")}} 事件处理器拷贝进剪切板的数据，通常通过调用 {{domxref("DataTransfer.getData", "getData(format)")}} 方法
 
-<p>参见 {{event("cut")}} 、{{event("copy")}} 和 {{event("paste")}} 事件的文档以获取更多信息。</p>
+参见 {{event("cut")}} 、{{event("copy")}} 和 {{event("paste")}} 事件的文档以获取更多信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>data</em> = <em>ClipboardEvent</em>.clipboardData</pre>
+```
+data = ClipboardEvent.clipboardData
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.ClipboardEvent.clipboardData")}}</p>
+{{Compat("api.ClipboardEvent.clipboardData")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<div id="compat-mobile"></div>
-
-<ul>
- <li>与复制相关的事件：{{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
- <li>本对象所属的{{domxref("ClipboardEvent")}}接口。</li>
-</ul>
+- 与复制相关的事件：{{event("copy")}}, {{event("cut")}}, {{event("paste")}}
+- 本对象所属的{{domxref("ClipboardEvent")}}接口。

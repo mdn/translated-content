@@ -2,69 +2,66 @@
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillText()</code></strong> 是 Canvas 2D API 在 <em>(x, y)</em>位置填充文本的方法。如果选项的第四个参数提供了最大宽度，文本会进行缩放以适应最大宽度。</p>
+**`CanvasRenderingContext2D.fillText()`** 是 Canvas 2D API 在 *(x, y)* 位置填充文本的方法。如果选项的第四个参数提供了最大宽度，文本会进行缩放以适应最大宽度。
 
-<p>参见 {{domxref("CanvasRenderingContext2D.strokeText()")}} 方法对文本进行描边。</p>
+参见 {{domxref("CanvasRenderingContext2D.strokeText()")}} 方法对文本进行描边。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">void <var><em>ctx</em>.fillText(text, x, y, [maxWidth]);</var>
-</pre>
+```js
+void ctx.fillText(text, x, y, [maxWidth]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>text</code></dt>
- <dd>使用当前的 {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction","direction")}} 值对文本进行渲染。</dd>
-</dl>
+- `text`
+  - : 使用当前的 {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction","direction")}} 值对文本进行渲染。
+- `x`
+  - : 文本起点的 x 轴坐标。
+- `y`
+  - : 文本起点的 y 轴坐标。
+- `maxWidth` {{optional_inline}}
+  - : 绘制的最大宽度。如果指定了值，并且经过计算字符串的值比最大宽度还要宽，字体为了适应会水平缩放（如果通过水平缩放当前字体，可以进行有效的或者合理可读的处理）或者使用小号的字体。
 
-<dl>
- <dt><code>x</code></dt>
- <dd>文本起点的 x 轴坐标。</dd>
- <dt><code>y</code></dt>
- <dd>文本起点的 y 轴坐标。</dd>
- <dt><code>maxWidth</code> {{optional_inline}}</dt>
- <dd>绘制的最大宽度。如果指定了值，并且经过计算字符串的值比最大宽度还要宽，字体为了适应会水平缩放（如果通过水平缩放当前字体，可以进行有效的或者合理可读的处理）或者使用小号的字体。</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+### 使用 `fillText` 方法
 
-<h3 id="使用_fillText_方法">使用 <code>fillText</code> 方法</h3>
+这是一段使用 `fillText` 方法的简单的代码片段。
 
-<p>这是一段使用 <code>fillText</code> 方法的简单的代码片段。</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js; highlight:[5] notranslate">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.font = "48px serif";
 ctx.fillText("Hello world", 50, 100);
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillText("Hello world", 50, 100);</textarea>
+```
 
-<pre class="brush: js notranslate">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -87,22 +84,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.fillText")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeText()")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeText()")}}

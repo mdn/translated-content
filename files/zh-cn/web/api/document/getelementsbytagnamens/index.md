@@ -2,114 +2,115 @@
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<pre class="syntaxbox"><a href="/en-US/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 note</a>
+```
+Firefox 3.6 note
 
-请参阅 <a href="\">Notes section of element.getElementsByTagNameNS</a> 中的更改，这些更改同时适用于 Firefox 3.6 的 API.</pre>
+请参阅 Notes section of element.getElementsByTagNameNS 中的更改，这些更改同时适用于 Firefox 3.6 的 API.
+```
 
-<p>返回带有指定名称和命名空间的元素集合。整个文件结构都会被搜索，包括根节点。</p>
+返回带有指定名称和命名空间的元素集合。整个文件结构都会被搜索，包括根节点。
 
-<p> </p>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```
+elements = document.getElementsByTagNameNS(namespace, name)
+```
 
-<pre class="eval"><em>elements</em> = document.getElementsByTagNameNS(<em>namespace</em>, <em>name</em>)
-</pre>
+- `elements `是一个在树中按顺序查询到的动态的 HTML 集合 [`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection) (但是看下面的提示)。
+- `namespace `是所要查询的元素的命名空间 URL(参考 [`element.namespaceURI`](/en/DOM/Node.namespaceURI))。
+- `name` 是所要查询的元素的名称。其中特殊字符 "\*" 代表所有元素 (参考 [`element.localName`](/en/DOM/Node.localName))。
 
-<ul>
- <li><code>elements </code>是一个在树中按顺序查询到的动态的 HTML 集合 <a href="/zh-CN/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> (但是看下面的提示)。</li>
- <li><code>namespace </code>是所要查询的元素的命名空间 URL(参考 <code><a href="/en/DOM/Node.namespaceURI">element.namespaceURI</a></code>)。</li>
- <li><code>name</code> 是所要查询的元素的名称。其中特殊字符 "*" 代表所有元素 (参考 <code><a href="/en/DOM/Node.localName">element.localName</a></code>)。</li>
-</ul>
+> **备注：** 在 W3C 文档中，`elements`是一个 `NodeList`，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合`HTMLCollection.` Opera 返回的也是一个 `NodeList`，但通过 `namedItem`方法 ， 使得它类似于一个`HTMLCollection` . 截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 `NodeList`. 详情请参考 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) .
 
-<div class="note"><strong>注意：</strong>在 W3C 文档中，<code>elements</code>是一个 <code>NodeList</code>，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合<code><a href="/zh-CN/docs/Web/API/HTMLCollection">HTMLCollection</a>.</code> Opera 返回的也是一个 <code>NodeList</code>，但通过 <code>namedItem</code>方法 ， 使得它类似于一个<code>HTMLCollection</code> . 截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 <code>NodeList</code>. 详情请参考 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> .</div>
+## 示例
 
-<h2 id="Example">示例</h2>
+在下面的示例中，`getElementsByTagNameNS`方法从一个特定的父元素开始，并从该父元素的 DOM 中自上而下递归式搜索，查找所有与标签名参数匹配的子元素 。
 
-<p>在下面的示例中，<code>getElementsByTagNameNS</code>方法从一个特定的父元素开始，并从该父元素的 DOM 中自上而下递归式搜索，查找所有与标签名参数匹配的子元素 。</p>
+注意当调用`getElementsByTagName`方法获取到的节点不是文档节点时，实际上是调用了[element.getElementsByTagNameNS](/en/DOM/element.getElementsByTagNameNS)方法 。
 
-<p>注意当调用<code>getElementsByTagName</code>方法获取到的节点不是文档节点时，实际上是调用了<a href="/en/DOM/element.getElementsByTagNameNS">element.getElementsByTagNameNS</a>方法 。</p>
+需要使用以下示例，只需复制/粘贴以下代码到用.xhtml 后缀名保存的新文件中即可。
 
-<p>需要使用以下示例，只需复制/粘贴以下代码到用.xhtml 后缀名保存的新文件中即可。</p>
+```html
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<pre class="brush: html">&lt;html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>"&gt;
+<head>
+<title>getElementsByTagNameNS example</title>
 
-&lt;head&gt;
-&lt;title&gt;getElementsByTagNameNS example&lt;/title&gt;
-
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function getAllParaElems()
 {
-  var allParas = document.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
+  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
   var num = allParas.length;
 
-  alert("There are " + num + " &amp;lt;p&amp;gt; elements in this document");
+  alert("There are " + num + " &lt;p&gt; elements in this document");
 }
 
 
 function div1ParaElems()
 {
   var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
+  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
   var num = div1Paras.length;
 
-  alert("There are " + num + " &amp;lt;p&amp;gt; elements in div1 element");
+  alert("There are " + num + " &lt;p&gt; elements in div1 element");
 }
 
 
 function div2ParaElems()
 {
   var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
+  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
   var num = div2Paras.length;
 
-  alert("There are " + num + " &amp;lt;p&amp;gt; elements in div2 element");
+  alert("There are " + num + " &lt;p&gt; elements in div2 element");
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body style="border: solid green 3px"&gt;
-&lt;p&gt;Some outer text&lt;/p&gt;
-&lt;p&gt;Some outer text&lt;/p&gt;
+<body style="border: solid green 3px">
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-  &lt;div id="div1" style="border: solid blue 3px"&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
+  <div id="div1" style="border: solid blue 3px">
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
 
-    &lt;div id="div2" style="border: solid red 3px"&gt;
-    &lt;p&gt;Some div2 text&lt;/p&gt;
-    &lt;p&gt;Some div2 text&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+    <div id="div2" style="border: solid red 3px">
+    <p>Some div2 text</p>
+    <p>Some div2 text</p>
+    </div>
+  </div>
 
-&lt;p&gt;Some outer text&lt;/p&gt;
-&lt;p&gt;Some outer text&lt;/p&gt;
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-&lt;button onclick="getAllParaElems();"&gt;
- show all p elements in document&lt;/button&gt;&lt;br /&gt;
+<button onclick="getAllParaElems();">
+ show all p elements in document</button><br />
 
-&lt;button onclick="div1ParaElems();"&gt;
- show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
+<button onclick="div1ParaElems();">
+ show all p elements in div1 element</button><br />
 
-&lt;button onclick="div2ParaElems();"&gt;
- show all p elements in div2 element&lt;/button&gt;
+<button onclick="div2ParaElems();">
+ show all p elements in div2 element</button>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Potential_Workaround_for_other_browsers_which_do_not_support">针对其他不支持此方法的浏览器的解决方法</h2>
+## 针对其他不支持此方法的浏览器的解决方法
 
-<p>如果所使用的浏览器不支持此方法，可使用另一种方法（例如遍历所有子元素的 DOM，识别所有 @xmlns 实例等等）来查找所有具有本地名称和命名空间的标签，但此方法更快。 (为了兼容 Explorer，在下面的函数中，你可以调用一个 XPath 包，而不仅仅是 XPath (由于 Explorer 支持不同 API 的 XPath ), 例如 <a href="http://www.davidflanagan.com/javascript5/display.php?n=21-10&amp;f=21/10.js">this wrapper class</a>.)</p>
+如果所使用的浏览器不支持此方法，可使用另一种方法（例如遍历所有子元素的 DOM，识别所有 @xmlns 实例等等）来查找所有具有本地名称和命名空间的标签，但此方法更快。 (为了兼容 Explorer，在下面的函数中，你可以调用一个 XPath 包，而不仅仅是 XPath (由于 Explorer 支持不同 API 的 XPath ), 例如 [this wrapper class](http://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js).)
 
-<pre class="brush: js">function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
+```js
+function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
 	if (!doc) {
 		doc = document;
 	}
@@ -120,13 +121,13 @@ function div2ParaElems()
 	var result = doc.evaluate('//*[local-name()="'+elName+'" and namespace-uri() = "'+ns+'"]', context, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 
         var a = [];
-        for(var i = 0; i &lt; result.snapshotLength; i++) {
+        for(var i = 0; i < result.snapshotLength; i++) {
             a[i] = result.snapshotItem(i);
         }
         return a;
 }
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS">DOM Level 2 Core: Document.getElementsByTagNameNS</a></p>
+[DOM Level 2 Core: Document.getElementsByTagNameNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS)

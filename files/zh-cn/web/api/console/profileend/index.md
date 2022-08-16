@@ -2,44 +2,35 @@
 title: Console.profileEnd()
 slug: Web/API/Console/profileEnd
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<div class="warning">
-<p>在 console.profile() 之后立刻调用此 API 可能会导致其无法工作.。为解决此问题，请在 setTimeOut 中至少延迟 5 毫秒后再调用。 请看 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1173588">bug #1173588</a>。</p>
-</div>
+> **警告：** 在 console.profile() 之后立刻调用此 API 可能会导致其无法工作.。为解决此问题，请在 setTimeOut 中至少延迟 5 毫秒后再调用。 请看 [bug #1173588](https://bugzilla.mozilla.org/show_bug.cgi?id=1173588)。
 
-<p>profileEnd 方法会停止记录之前已经由{{domxref("Console.profile()")}}开始记录的性能描述信息</p>
+profileEnd 方法会停止记录之前已经由{{domxref("Console.profile()")}}开始记录的性能描述信息
 
-<p>你可以选择提供一个参数来命名需要记录的描述信息。这使得你在记录多个描述信息的时候可以停止记录特定的描述信息。</p>
+你可以选择提供一个参数来命名需要记录的描述信息。这使得你在记录多个描述信息的时候可以停止记录特定的描述信息。
 
-<ul>
- <li><code>如果 Console.profileEnd()</code> 传了描述信息名字，并且它与正在记录的描述信息的名字相匹配，则此描述信息将会停止。</li>
- <li><code>如果 Console.profileEnd()</code> 传了描述信息名字，并且它与正在记录的描述信息的名字不匹配，则不会进行更改。</li>
- <li><code>如果 Console.profileEnd()</code> 没有传描述信息名字，最近启动记录的描述信息将会停止。</li>
-</ul>
+- `如果 Console.profileEnd()` 传了描述信息名字，并且它与正在记录的描述信息的名字相匹配，则此描述信息将会停止。
+- `如果 Console.profileEnd()` 传了描述信息名字，并且它与正在记录的描述信息的名字不匹配，则不会进行更改。
+- `如果 Console.profileEnd()` 没有传描述信息名字，最近启动记录的描述信息将会停止。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.profileEnd(<em>profileName</em>);
-</pre>
+```
+console.profileEnd(profileName);
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>profileName</code></dt>
- <dd>描述信息的名字。可选。</dd>
-</dl>
+- `profileName`
+  - : 描述信息的名字。可选。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Console.profileEnd")}}
 
+## 参见
 
-<p>{{Compat("api.Console.profileEnd")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("Console.profile()")}}</li>
-</ul>
+- {{domxref("Console.profile()")}}

@@ -2,33 +2,33 @@
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>{{domxref("URL")}}接口的 <strong>toJSON() </strong>方法返回一个{{domxref("USVString")}}，其中包含一个序列化的 URL 版本，尽管在实践中它似乎与{{domxref("URL.toString()")}}有相同的效果。</p>
+{{domxref("URL")}}接口的 **toJSON()** 方法返回一个{{domxref("USVString")}}，其中包含一个序列化的 URL 版本，尽管在实践中它似乎与{{domxref("URL.toString()")}}有相同的效果。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="notranslate">const <em>href</em> = <em>url</em>.toJSON()</pre>
+```
+const href = url.toJSON()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("USVString")}}.</p>
+一个 {{domxref("USVString")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="notranslate">const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-url.toJSON(); // 应该以字符串形式返回 URL</pre>
+```
+const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+url.toJSON(); // 应该以字符串形式返回 URL
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.URL.toJSON")}}</p>
-
-<div id="compat-desktop"></div>
-
-<div id="compat-mobile"></div>
+{{Compat("api.URL.toJSON")}}

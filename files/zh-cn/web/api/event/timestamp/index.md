@@ -2,48 +2,48 @@
 title: event.timeStamp
 slug: Web/API/Event/timeStamp
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<div> </div>
+> **警告：** 在 Gecko 中，该属性的值不是事件发生时正确的事件戳。查看 <https://bugzilla.mozilla.org/show_bug.cgi?id=238041>
 
-<div class="warning"><strong>警告：</strong> 在 Gecko 中，该属性的值不是事件发生时正确的事件戳。查看 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=238041">https://bugzilla.mozilla.org/show_bug.cgi?id=238041</a></div>
+### 概述
 
-<h3 id="Summary">概述</h3>
+返回事件发生时的时间戳。
 
-<p>返回事件发生时的时间戳。</p>
+### 语法
 
-<h3 id="Syntax">语法</h3>
+```
+var number = event.timeStamp;
+```
 
-<pre class="eval" style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: dotted; border-right-style: dotted; border-bottom-style: dotted; border-left-style: dotted; background-clip: initial; background-color: rgb(246, 246, 242); font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace;"><em>var number</em> = event.timeStamp;
-</pre>
+### 例子
 
-<h3 id="Syntax">例子</h3>
+```html
+<html>
+<head>
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
+<title>timeStamp example</title>
 
-&lt;title&gt;timeStamp example&lt;/title&gt;
-
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 function getTime(event) {
   document.getElementById("time").firstChild.nodeValue = event.timeStamp;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeypress="getTime(event)"&gt;
+<body onkeypress="getTime(event)">
 
-&lt;p&gt;按下任意键获取 onkeypress 事件对象的 timestamp 属性值.&lt;/p&gt;
-&lt;p&gt;timeStamp: &lt;span id="time"&gt;-&lt;/span&gt;&lt;/p&gt;
+<p>按下任意键获取 onkeypress 事件对象的 timestamp 属性值.</p>
+<p>timeStamp: <span id="time">-</span></p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h3 id="Notes">备注</h3>
+### 备注
 
-<p>此属性仅适用于事件系统支持该属性的特定事件类型。</p>
+此属性仅适用于事件系统支持该属性的特定事件类型。
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<p><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp">event.timestamp</a></p>
+[event.timestamp](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)

@@ -2,38 +2,29 @@
 title: Window.sidebar
 slug: Web/API/Window/sidebar
 ---
-<div>
- {{APIRef}} {{SeeCompatTable}}</div>
-<p>Returns a sidebar object, which contains several methods for registering add-ons with browser.</p>
-<h2 id="Example">Example</h2>
-<pre class="syntaxbox">window.sidebar.addPanel("Google", "http://www.google.com/", "");
-</pre>
-<p>Note: the third empty parameter is required!</p>
-<h2 id="Notes">Notes</h2>
-<p>The sidebar object returned has the following methods:</p>
-<table class="fullwidth-table">
- <tbody>
-  <tr>
-   <th>Method</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>addPanel(<var>title</var>, <var>contentURL</var>, <var>customizeURL</var>)</code> {{Deprecated_Inline}}</td>
-   <td>Adds a sidebar panel. See <a href="/en-US/docs/Creating_a_Firefox_sidebar">Creating a Firefox sidebar</a> for details on sidebars in Firefox 2 and later.</td>
-  </tr>
-  <tr>
-   <td><code>addPersistentPanel(<var>title</var>, <var>contentURL</var>, <var>customizeURL</var>)</code> {{Deprecated_Inline}}</td>
-   <td>Adds a sidebar panel, which is able to work in the background. This only works in SeaMonkey or Firefox 1.x; Firefox 2 and later will just do <code>addPanel()</code>.</td>
-  </tr>
-  <tr>
-   <td><code>addSearchEngine(<var>engineURL</var>, <var>iconURL</var>, <var>suggestedTitle</var>, <var>suggestedCategory</var>)</code></td>
-   <td>Installs a search engine. See <a href="/en-US/docs/Adding_search_engines_from_web_pages">Adding search engines from web pages</a> for details.</td>
-  </tr>
-  <tr>
-   <td><code>addMicrosummaryGenerator(<var>generatorURL</var>)</code> {{Deprecated_Inline}}</td>
-   <td>Installs a microsummary generator.</td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Specification">Specification</h2>
-<p>Mozilla-specific. Not part of any standard.</p>
+{{APIRef}} {{SeeCompatTable}}
+
+Returns a sidebar object, which contains several methods for registering add-ons with browser.
+
+## Example
+
+```
+window.sidebar.addPanel("Google", "http://www.google.com/", "");
+```
+
+Note: the third empty parameter is required!
+
+## Notes
+
+The sidebar object returned has the following methods:
+
+| Method                                                                             | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `addPanel(title, contentURL, customizeURL)` {{Deprecated_Inline}}           | Adds a sidebar panel. See [Creating a Firefox sidebar](/zh-CN/docs/Creating_a_Firefox_sidebar) for details on sidebars in Firefox 2 and later.             |
+| `addPersistentPanel(title, contentURL, customizeURL)` {{Deprecated_Inline}} | Adds a sidebar panel, which is able to work in the background. This only works in SeaMonkey or Firefox 1.x; Firefox 2 and later will just do `addPanel()`. |
+| `addSearchEngine(engineURL, iconURL, suggestedTitle, suggestedCategory)`           | Installs a search engine. See [Adding search engines from web pages](/zh-CN/docs/Adding_search_engines_from_web_pages) for details.                        |
+| `addMicrosummaryGenerator(generatorURL)` {{Deprecated_Inline}}              | Installs a microsummary generator.                                                                                                                         |
+
+## Specification
+
+Mozilla-specific. Not part of any standard.

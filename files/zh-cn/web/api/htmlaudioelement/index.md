@@ -2,86 +2,78 @@
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLAudioElement</code></strong> 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。</p>
+**`HTMLAudioElement`** 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("HTMLAudioElement.Audio", "Audio()")}}</dt>
- <dd>创建并返回一个新的 <code>HTMLAudioElement</code> 对象，如果提供音频文件 URL，则开始加载音频文件。</dd>
-</dl>
+- {{domxref("HTMLAudioElement.Audio", "Audio()")}}
+  - : 创建并返回一个新的 `HTMLAudioElement` 对象，如果提供音频文件 URL，则开始加载音频文件。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>没有具体的属性；从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承属性。</em></p>
+_没有具体的属性；从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承属性。_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承方法，自身不提供方法。</em></p>
+_从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承方法，自身不提供方法。_
 
-<h3 id="废弃的且仅适用于_Mozilla_的方法">废弃的且仅适用于 Mozilla 的方法</h3>
+### 废弃的且仅适用于 Mozilla 的方法
 
-<p><em>以下方法是未标准化的，请勿使用.</em></p>
+_以下方法是未标准化的，请勿使用._
 
-<dl>
- <dt>{{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
- <dd>Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.</dd>
- <dt>{{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
- <dd>Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.</dd>
- <dt>{{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
- <dd>Writes a batch of audio frames to the stream at the current offset, returning the number of bytes actually written to the stream.</dd>
-</dl>
+- {{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{Deprecated_Inline}}
+  - : Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.
+- {{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{Deprecated_Inline}}
+  - : Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.
+- {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{Deprecated_Inline}}
+  - : Writes a batch of audio frames to the stream at the current offset, returning the number of bytes actually written to the stream.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="基本用法">基本用法</h3>
+### 基本用法
 
-<p>你可以完全使用 JavaScript 的 {{domxref("HTMLAudioElement.Audio", "Audio()")}} 构造函数来创建一个 <code>HTMLAudioElement</code> ：</p>
+你可以完全使用 JavaScript 的 {{domxref("HTMLAudioElement.Audio", "Audio()")}} 构造函数来创建一个 `HTMLAudioElement` ：
 
-<pre class="brush: js notranslate">var audioElement = new Audio('car_horn.wav');
-</pre>
+```js
+var audioElement = new Audio('car_horn.wav');
+```
 
-<p>然后你可以在这个元素上调用 <code>play()</code> 方法</p>
+然后你可以在这个元素上调用 `play()` 方法
 
-<pre class="brush: js notranslate">audioElement.play();</pre>
+```js
+audioElement.play();
+```
 
-<div class="note">
-<p>一个常见的需求是在页面加载后马上去播放音频，现代浏览器的默认自动播放策略会阻止这一行为，参见 <a href="https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/">firefox</a> 和 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">chrome</a> 寻找最佳实践和解决方案。</p>
-</div>
+> **备注：** 一个常见的需求是在页面加载后马上去播放音频，现代浏览器的默认自动播放策略会阻止这一行为，参见 [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) 和 [chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes) 寻找最佳实践和解决方案。
 
-<p>一些经常被使用的属性，包括 {{domxref("HTMLMediaElement.src", "src")}}、{{domxref("HTMLMediaElement.currentTime", "currentTime")}}、{{domxref("HTMLMediaElement.duration", "duration")}}、{{domxref("HTMLMediaElement.paused", "paused")}}、{{domxref("HTMLMediaElement.muted", "muted")}} 和 {{domxref("HTMLMediaElement.volume", "volume")}}。以下这段代码赋值音频文件的播放时长给一个变量：</p>
+一些经常被使用的属性，包括 {{domxref("HTMLMediaElement.src", "src")}}、{{domxref("HTMLMediaElement.currentTime", "currentTime")}}、{{domxref("HTMLMediaElement.duration", "duration")}}、{{domxref("HTMLMediaElement.paused", "paused")}}、{{domxref("HTMLMediaElement.muted", "muted")}} 和 {{domxref("HTMLMediaElement.volume", "volume")}}。以下这段代码赋值音频文件的播放时长给一个变量：
 
-<pre class="brush: js notranslate">var audioElement = new Audio('car_horn.wav');
-audioElement.addEventListener('loadeddata', () =&gt; {
+```js
+var audioElement = new Audio('car_horn.wav');
+audioElement.addEventListener('loadeddata', () => {
   let duration = audioElement.duration;
   // duration 变量现在存放音频的播放时长（单位秒）
-})</pre>
+})
+```
 
-<dl>
-</dl>
+## 事件
 
-<h2 id="事件">事件</h2>
+_从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用_ [`addEventListener()`](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener) _监听事件或者赋值一个事件监听器给这个接口的_ `oneventname` 属性。
 
-<p><em>从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用 </em><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> <em>监听事件或者赋值一个事件监听器给这个接口的 </em><code>on<em>eventname</em></code> 属性。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HTMLAudioElement")}}
 
+## 参见
 
-<p>{{Compat("api.HTMLAudioElement")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/Media">Web media technologies</a></li>
- <li><a href="/zh-CN/docs/Web/Media/HTML_media">Using audio and video in HTML</a></li>
- <li>HTML element implementing this interface: {{HTMLElement("audio")}}.</li>
-</ul>
+- [Web media technologies](/zh-CN/docs/Web/Media)
+- [Using audio and video in HTML](/zh-CN/docs/Web/Media/HTML_media)
+- HTML element implementing this interface: {{HTMLElement("audio")}}.

@@ -2,67 +2,65 @@
 title: event.stopImmediatePropagation
 slug: Web/API/Event/stopImmediatePropagation
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Event")}} 接口的 <code><strong>stopImmediatePropagation()</strong></code> 方法阻止监听同一事件的其他事件监听器被调用。</p>
+{{domxref("Event")}} 接口的 **`stopImmediatePropagation()`** 方法阻止监听同一事件的其他事件监听器被调用。
 
-<p>如果多个事件监听器被附加到相同元素的相同事件类型上，当此事件触发时，它们会按其被添加的顺序被调用。如果在其中一个事件监听器中执行 <code>stopImmediatePropagation()</code> ，那么剩下的事件监听器都不会被调用。</p>
+如果多个事件监听器被附加到相同元素的相同事件类型上，当此事件触发时，它们会按其被添加的顺序被调用。如果在其中一个事件监听器中执行 `stopImmediatePropagation()` ，那么剩下的事件监听器都不会被调用。
 
-<div class="blockIndicator note">
-<p>译者注：注意与 <code>event.stopPropagation()</code> 之间的区别</p>
-</div>
+> **备注：** 译者注：注意与 `event.stopPropagation()` 之间的区别
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><var>event</var>.stopImmediatePropagation();
-</pre>
+```
+event.stopImmediatePropagation();
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="syntaxbox notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;style&gt;
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
             p { height: 30px; width: 150px; background-color: #ccf; }
             div {height: 30px; width: 150px; background-color: #cfc; }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div&gt;
-            &lt;p&gt;paragraph&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;script&gt;
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>paragraph</p>
+        </div>
+        <script>
             const p = document.querySelector('p')
-            p.addEventListener("click", (event) =&gt; {
+            p.addEventListener("click", (event) => {
               alert("我是 p 元素上被绑定的第一个监听函数");
             }, false);
 
-            p.addEventListener("click", (event) =&gt; {
+            p.addEventListener("click", (event) => {
               alert("我是 p 元素上被绑定的第二个监听函数");
               event.stopImmediatePropagation();
               // 执行 stopImmediatePropagation 方法，阻止 click 事件冒泡，并且阻止 p 元素上绑定的其他 click 事件的事件监听函数的执行。
             }, false);
 
-            p.addEventListener("click",(event) =&gt; {
+            p.addEventListener("click",(event) => {
               alert("我是 p 元素上被绑定的第三个监听函数");
               // 该监听函数排在上个函数后面，该函数不会被执行
             }, false);
 
-            document.querySelector("div").addEventListener("click", (event) =&gt; {
+            document.querySelector("div").addEventListener("click", (event) => {
               alert("我是 div 元素，我是 p 元素的上层元素");
               // p 元素的 click 事件没有向上冒泡，该函数不会被执行
             }, false);
-        &lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+        </script>
+    </body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Event.stopImmediatePropagation")}}</p>
+{{Compat("api.Event.stopImmediatePropagation")}}

@@ -2,127 +2,127 @@
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
-<h2 id="Background">背景</h2>
+## 背景
 
-<p>利用非 HTTP 协议，从网页链接到一些别的资源，这种做法是相当普遍的。比如 <code>mailto:</code> 协议：</p>
+利用非 HTTP 协议，从网页链接到一些别的资源，这种做法是相当普遍的。比如 `mailto:` 协议：
 
-<div style="overflow: hidden;">
-<pre class="brush:html">&lt;a href="mailto:webmaster@example.com"&gt;Web Master&lt;/a&gt;</pre>
-</div>
+```html
+<a href="mailto:webmaster@example.com">Web Master</a>
+```
 
-<p>当 Web 页面作者想直接从网页上，为用户提供一个方便的方式发送一个电子邮件，时可以使用 <code>mailto:</code> 链接。激活链接时，浏览器应该启动默认的桌面应用程序来处理电子邮件。你可以认为这是一个<em>基于桌面的</em>协议处理器。</p>
+当 Web 页面作者想直接从网页上，为用户提供一个方便的方式发送一个电子邮件，时可以使用 `mailto:` 链接。激活链接时，浏览器应该启动默认的桌面应用程序来处理电子邮件。你可以认为这是一个*基于桌面的*协议处理器。
 
-<p>基于网络的协议处理程序也允许基于 Web 的应用程序参与这一过程。随着越来越多的类型的应用程序迁移到 Web，这变得越来越重要。事实上，有许多基于 Web 的电子邮件处理的应用程序可以处理一个 mailto 链接。</p>
+基于网络的协议处理程序也允许基于 Web 的应用程序参与这一过程。随着越来越多的类型的应用程序迁移到 Web，这变得越来越重要。事实上，有许多基于 Web 的电子邮件处理的应用程序可以处理一个 mailto 链接。
 
-<h2 id="Registering">注册</h2>
+## 注册
 
-<p>设置一个 Web 应用程序作为一个协议处理器不是一个很麻烦的过程。Web 应用程序可以使用 <a href="/en-US/docs/Web/API/navigator.registerProtocolHandler">registerProtocolHandler()</a> 注册到浏览器上，从而对于一个给定的协议来讲，作为一个潜在的处理程序。例如：</p>
+设置一个 Web 应用程序作为一个协议处理器不是一个很麻烦的过程。Web 应用程序可以使用 [registerProtocolHandler()](/zh-CN/docs/Web/API/navigator.registerProtocolHandler) 注册到浏览器上，从而对于一个给定的协议来讲，作为一个潜在的处理程序。例如：
 
-<pre class="brush: js">navigator.registerProtocolHandler("mailto",
+```js
+navigator.registerProtocolHandler("mailto",
                                   "https://www.example.com/?uri=%s",
                                   "Example Mail");
-</pre>
+```
 
-<p>参数为：</p>
+参数为：
 
-<ul>
- <li>协议名称。</li>
- <li>URL 模板。%s 用来替换链接的 <code>href</code> 属性，之后通过这个 URL 来发起一个 GET 请求。</li>
- <li>一个对用户友好的协议处理器的名字。</li>
-</ul>
+- 协议名称。
+- URL 模板。%s 用来替换链接的 `href` 属性，之后通过这个 URL 来发起一个 GET 请求。
+- 一个对用户友好的协议处理器的名字。
 
-<p>当一个浏览器执行这段代码时，它应该向用户显示一个请求，让用户许可为处理这个协议而注册一个 Web 应用程序的请求。Firefox 在通知栏区域显示一个提示：</p>
+当一个浏览器执行这段代码时，它应该向用户显示一个请求，让用户许可为处理这个协议而注册一个 Web 应用程序的请求。Firefox 在通知栏区域显示一个提示：
 
-<p><img alt="Image:wph-notification.png" src="/@api/deki/files/972/=Wph-notification.png"></p>
+![Image:wph-notification.png](/@api/deki/files/972/=Wph-notification.png)
 
-<div class="note"><strong>Note:</strong> 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，http://example.com/homepage.html 可以为 <code>http://example.com/handle_mailto/%s</code> 注册一个协议处理程序，但 <code>http://example.<em><strong>org</strong></em>/handle_mailto/%s</code> 不可以。</div>
+> **备注：** 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，http\://example.com/homepage.html 可以为 `http://example.com/handle_mailto/%s` 注册一个协议处理程序，但 `http://example.org/handle_mailto/%s` 不可以。
 
-<p>多次注册相同的协议处理程序会弹出不同的通知，表明协议处理器已经注册。因此，发起一个注册协议处理程序的请求，之后检查是否注册是一个很好的方法。比如下面的例子：</p>
+多次注册相同的协议处理程序会弹出不同的通知，表明协议处理器已经注册。因此，发起一个注册协议处理程序的请求，之后检查是否注册是一个很好的方法。比如下面的例子：
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="brush: js">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt;Web Protocol Handler Sample - Register&lt;/title&gt;
-  &lt;script type="text/javascript"&gt;
+```js
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  <title>Web Protocol Handler Sample - Register</title>
+  <script type="text/javascript">
     var url = "http://starkravingfinkle.org/projects/wph/handler.php?value=%s";
     if (!navigator.isProtocolHandlerRegistered("fake", url)) {
       navigator.registerProtocolHandler("fake", url, "Fake Protocol");
     }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Web Protocol Handler Sample&lt;/h1&gt;
-  &lt;p&gt;This web page will install a web protocol handler for the &lt;code&gt;fake:&lt;/code&gt; protocol.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <h1>Web Protocol Handler Sample</h1>
+  <p>This web page will install a web protocol handler for the <code>fake:</code> protocol.</p>
+</body>
+</html>
+```
 
-<h2 id="Activating">激活</h2>
+## 激活
 
-<p>现在，只要用户点击链接，使用注册协议，浏览器将跳转到 Web 应用程序注册时提供的 URL。Firefox 在默认情况下，跳转前会提示用户操作。</p>
+现在，只要用户点击链接，使用注册协议，浏览器将跳转到 Web 应用程序注册时提供的 URL。Firefox 在默认情况下，跳转前会提示用户操作。
 
-<p><img alt="Image:wph-launch.png" src="/@api/deki/files/971/=Wph-launch.png"></p>
+![Image:wph-launch.png](/@api/deki/files/971/=Wph-launch.png)
 
-<h3 id="Example_2">Example</h3>
+### Example
 
-<pre class="brush: html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt;Web Protocol Handler Sample - Test&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Hey have you seen &lt;a href="fake:this%20is%20fake"&gt;this&lt;/a&gt; before?&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  <title>Web Protocol Handler Sample - Test</title>
+</head>
+<body>
+  <p>Hey have you seen <a href="fake:this%20is%20fake">this</a> before?</p>
+</body>
+</html>
+```
 
-<h2 id="Handling">处理</h2>
+## 处理
 
-<p>下一步是处理这个动作。浏览器在激活的链接中提取出 href 属性，之后与注册时提供的 URL 模板进行拼装，之后经由拼装好的 URL 发起一个 HTTP GET 请求。因此下面的例子中，浏览器会基于此 URL 发起一个 GET 请求：</p>
+下一步是处理这个动作。浏览器在激活的链接中提取出 href 属性，之后与注册时提供的 URL 模板进行拼装，之后经由拼装好的 URL 发起一个 HTTP GET 请求。因此下面的例子中，浏览器会基于此 URL 发起一个 GET 请求：
 
-<pre>http://starkravingfinkle.org/projects/wph/handler.php?value=fake:this%20is%20fake</pre>
+```
+http://starkravingfinkle.org/projects/wph/handler.php?value=fake:this%20is%20fake
+```
 
-<p>服务端代码可以提取查询字符串的参数，执行所需的操作。</p>
+服务端代码可以提取查询字符串的参数，执行所需的操作。
 
-<div class="note"><strong>Note:</strong> 服务端代码会接收到 href 的<strong>全部</strong>内容。这意味着服务端代码必须解析出数据中的协议。</div>
+> **备注：** 服务端代码会接收到 href 的**全部**内容。这意味着服务端代码必须解析出数据中的协议。
 
-<h3 id="Example_3">Example</h3>
+### Example
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
 $value = "";
 if ( isset ( $_GET["value"] ) ) {
   $value = $_GET["value"];
 }
-?&gt;
+?>
 
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;title&gt;Web Protocol Handler Sample&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Web Protocol Handler Sample - Handler&lt;/h1&gt;
-  &lt;p&gt;This web page is called when handling a &lt;code&gt;fake:&lt;/code&gt; protocol action. The data sent:&lt;/p&gt;
-  &lt;textarea&gt;
-&lt;?php echo(htmlspecialchars($value, ENT_QUOTES, 'UTF-8')); ?&gt;
-  &lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Web Protocol Handler Sample</title>
+</head>
+<body>
+  <h1>Web Protocol Handler Sample - Handler</h1>
+  <p>This web page is called when handling a <code>fake:</code> protocol action. The data sent:</p>
+  <textarea>
+<?php echo(htmlspecialchars($value, ENT_QUOTES, 'UTF-8')); ?>
+  </textarea>
+</body>
+</html>
+```
 
-<h2 id="References">参考</h2>
+## 参考
 
-<ul>
- <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers">http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers</a></li>
-</ul>
+- <http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/window.navigator.registerContentHandler">window.navigator.registerContentHandler</a></li>
- <li><a href="/en-US/docs/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a> (XUL only)</li>
- <li><a href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev</li>
- <li><a href="https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler">Register a custom protocolHandler</a> at Google Developers.</li>
-</ul>
+- [window.navigator.registerContentHandler](/zh-CN/docs/DOM/window.navigator.registerContentHandler)
+- [nsIProtocolHandler](/zh-CN/docs/XPCOM_Interface_Reference/nsIProtocolHandler) (XUL only)
+- [RegisterProtocolHandler Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
+- [Register a custom protocolHandler](https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler) at Google Developers.

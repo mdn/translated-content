@@ -2,141 +2,47 @@
 title: DOMError
 slug: Web/API/DOMError
 ---
-<p>{{ APIRef("DOM") }}{{deprecated_header}}</p>
+{{ APIRef("DOM") }}{{deprecated_header}}
 
-<p> <strong><code>DOMError</code></strong> 接口描述一个错误对象，该对象包含一个错误的名字。</p>
+**`DOMError`** 接口描述一个错误对象，该对象包含一个错误的名字。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("DOMError.name")}} {{readOnlyInline}}</dt>
- <dd>返回一个代表一个错误类型名称的 {{ domxref("DOMString") }} (见下文).</dd>
- <dt>{{domxref("DOMError.message")}} {{readOnlyInline}}</dt>
- <dd>返回一个代表与给定错误类型名称有关的信息或描述{{ domxref("DOMString") }}</dd>
-</dl>
+- {{domxref("DOMError.name")}} {{readOnlyInline}}
+  - : 返回一个代表一个错误类型名称的 {{ domxref("DOMString") }} (见下文).
+- {{domxref("DOMError.message")}} {{readOnlyInline}}
+  - : 返回一个代表与给定错误类型名称有关的信息或描述{{ domxref("DOMString") }}
 
-<h2 id="Error_类型">Error 类型</h2>
+## Error 类型
 
-<table>
- <tbody>
-  <tr>
-   <td>Type</td>
-   <td>Description</td>
-  </tr>
-  <tr>
-   <td><code>IndexSizeError</code></td>
-   <td>The index is not in the allowed range (e.g. thrown in a {{ domxref("range") }} object).<br>
-    索引不在允许的范围内</td>
-  </tr>
-  <tr>
-   <td><code>HierarchyRequestError</code></td>
-   <td>The node tree hierarchy is not correct.<br>
-    节点树层次结构是不正确的。</td>
-  </tr>
-  <tr>
-   <td><code>WrongDocumentError</code></td>
-   <td>The object is in the wrong {{ domxref("document") }}.<br>
-    对象是错误的</td>
-  </tr>
-  <tr>
-   <td><code>InvalidCharacterError</code></td>
-   <td>The string contains invalid characters.<br>
-    字符串包含无效字符。</td>
-  </tr>
-  <tr>
-   <td><code>NoModificationAllowedError</code></td>
-   <td>The object can not be modified.<br>
-    对象不能被修改。</td>
-  </tr>
-  <tr>
-   <td><code>NotFoundError</code></td>
-   <td>The object can not be found here.<br>
-    对象不能在这里被找到。</td>
-  </tr>
-  <tr>
-   <td><code>NotSupportedError</code></td>
-   <td>The operation is not supported<br>
-    不支持的操作</td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>The object is in an invalid state.<br>
-    对象是一个无效的状态。</td>
-  </tr>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>The string did not match the expected pattern.<br>
-    字符串不匹配预期的模式</td>
-  </tr>
-  <tr>
-   <td><code>InvalidModificationError</code></td>
-   <td>The object can not be modified in this way.<br>
-    对象不能以这种方式被修改</td>
-  </tr>
-  <tr>
-   <td><code>NamespaceError</code></td>
-   <td>The operation is not allowed by Namespaces in XML<br>
-    操作在 XML 命名空间内是不被允许的</td>
-  </tr>
-  <tr>
-   <td><code>InvalidAccessError</code></td>
-   <td>The object does not support the operation or argument.<br>
-    对象不支持这种操作或参数。</td>
-  </tr>
-  <tr>
-   <td><code>TypeMismatchError</code></td>
-   <td>The type of the object does not match the expected type.<br>
-    对象的类型不匹配预期的类型。</td>
-  </tr>
-  <tr>
-   <td><code>SecurityError</code></td>
-   <td>The operation is insecure.<br>
-    此操作是不安全的。</td>
-  </tr>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>A network error occurred.<br>
-    发生网络错误</td>
-  </tr>
-  <tr>
-   <td><code>AbortError</code></td>
-   <td>The operation was aborted.<br>
-    操作被中止</td>
-  </tr>
-  <tr>
-   <td><code>URLMismatchError</code></td>
-   <td>The given URL does not match another URL.<br>
-    给定的 URL 不匹配另一个 URL。</td>
-  </tr>
-  <tr>
-   <td><code>QuotaExceededError</code></td>
-   <td>The quota has been exceeded.<br>
-    已经超过给定配额。</td>
-  </tr>
-  <tr>
-   <td><code>TimeoutError</code></td>
-   <td>The operation timed out.<br>
-    操作超时。</td>
-  </tr>
-  <tr>
-   <td><code>InvalidNodeTypeError</code></td>
-   <td>The node is incorrect or has an incorrect ancestor for this operation.<br>
-    这个操作的 节点或节点祖先 是不正确的</td>
-  </tr>
-  <tr>
-   <td><code>DataCloneError</code></td>
-   <td>The object can not be cloned.<br>
-    对象不能克隆。</td>
-  </tr>
- </tbody>
-</table>
+| Type                         | Description                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `IndexSizeError`             | The index is not in the allowed range (e.g. thrown in a {{ domxref("range") }} object). 索引不在允许的范围内 |
+| `HierarchyRequestError`      | The node tree hierarchy is not correct. 节点树层次结构是不正确的。                                                 |
+| `WrongDocumentError`         | The object is in the wrong {{ domxref("document") }}. 对象是错误的                                          |
+| `InvalidCharacterError`      | The string contains invalid characters. 字符串包含无效字符。                                                       |
+| `NoModificationAllowedError` | The object can not be modified. 对象不能被修改。                                                                   |
+| `NotFoundError`              | The object can not be found here. 对象不能在这里被找到。                                                           |
+| `NotSupportedError`          | The operation is not supported 不支持的操作                                                                        |
+| `InvalidStateError`          | The object is in an invalid state. 对象是一个无效的状态。                                                          |
+| `SyntaxError`                | The string did not match the expected pattern. 字符串不匹配预期的模式                                              |
+| `InvalidModificationError`   | The object can not be modified in this way. 对象不能以这种方式被修改                                               |
+| `NamespaceError`             | The operation is not allowed by Namespaces in XML 操作在 XML 命名空间内是不被允许的                                |
+| `InvalidAccessError`         | The object does not support the operation or argument. 对象不支持这种操作或参数。                                  |
+| `TypeMismatchError`          | The type of the object does not match the expected type. 对象的类型不匹配预期的类型。                              |
+| `SecurityError`              | The operation is insecure. 此操作是不安全的。                                                                      |
+| `NetworkError`               | A network error occurred. 发生网络错误                                                                             |
+| `AbortError`                 | The operation was aborted. 操作被中止                                                                              |
+| `URLMismatchError`           | The given URL does not match another URL. 给定的 URL 不匹配另一个 URL。                                            |
+| `QuotaExceededError`         | The quota has been exceeded. 已经超过给定配额。                                                                    |
+| `TimeoutError`               | The operation timed out. 操作超时。                                                                                |
+| `InvalidNodeTypeError`       | The node is incorrect or has an incorrect ancestor for this operation. 这个操作的 节点或节点祖先 是不正确的        |
+| `DataCloneError`             | The object can not be cloned. 对象不能克隆。                                                                       |
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{ domxref("DOMException") }}</li>
-</ul>
+- {{ domxref("DOMException") }}

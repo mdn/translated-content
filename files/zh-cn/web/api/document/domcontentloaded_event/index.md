@@ -2,62 +2,65 @@
 title: 'Document: DOMContentLoaded 事件'
 slug: Web/API/Document/DOMContentLoaded_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当纯 HTML 被完全加载以及解析时，<strong><code>DOMContentLoaded</code> </strong>事件会被触发，而不必等待样式表，图片或者子框架完成加载。</p>
+当纯 HTML 被完全加载以及解析时，**`DOMContentLoaded` **事件会被触发，而不必等待样式表，图片或者子框架完成加载。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">冒泡阶段</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">可撤销性</th>
-   <td>Yes (尽管它被指定为一个简单事件时是不可撤销的)</td>
-  </tr>
-  <tr>
-   <th scope="row">接口</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件句柄属性</th>
-   <td>None</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">冒泡阶段</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">可撤销性</th>
+      <td>Yes (尽管它被指定为一个简单事件时是不可撤销的)</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">事件句柄属性</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>一个易混用但不同的事件是，<code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>,这个事件仅仅应该在探测到整个页面完全加载完成时被使用。一个常见的错误就是在该使用<code>DOMContentLoaded</code>的地方使用了<code>load</code> 。</p>
+一个易混用但不同的事件是，[`load`](/en-US/docs/Web/API/Window/load_event),这个事件仅仅应该在探测到整个页面完全加载完成时被使用。一个常见的错误就是在该使用`DOMContentLoaded`的地方使用了`load` 。
 
-<p>JavaScript 的同步模式会导致 DOM 解析暂停。如果你想在用户请求页面时，首先尽可能先解析 DOM，此时你可以使用<a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript 异步模式</a>，并且<a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">优化样式表的加载</a>。在通常模式的加载过程中，样式表的加载会与 DOM 解析并行，从而迟缓主要 HTML 文档的加载。</p>
+JavaScript 的同步模式会导致 DOM 解析暂停。如果你想在用户请求页面时，首先尽可能先解析 DOM，此时你可以使用[JavaScript 异步模式](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)，并且[优化样式表的加载](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)。在通常模式的加载过程中，样式表的加载会与 DOM 解析并行，从而迟缓主要 HTML 文档的加载。
 
-<h2 id="例子"><strong>例子</strong></h2>
+## 例子
 
-<h3 id="基本用法">基本用法</h3>
+### 基本用法
 
-<pre class="brush: js">document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```js
+document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed'); // 译者注："DOM 完全加载以及解析"
 });
-</pre>
+```
 
-<h3 id="延迟_DOMContentLoaded"> 延迟 DOMContentLoaded</h3>
+### 延迟 DOMContentLoaded
 
-<pre class="brush: html">&lt;script&gt;
-  document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```html
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
-for( let i = 0; i &lt; 1000000000; i++)
+for( let i = 0; i < 1000000000; i++)
 {} // 这段同步脚本将会延迟 DOM 解析，
    // 所以 DOMContentLoaded 事件将会延迟执行。
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="检查加载是否已经完成">检查加载是否已经完成</h3>
+### 检查加载是否已经完成
 
-<p>在你的脚本有机会运行前，<code>DOMContentLoaded</code>可能就已经被触发。所以你在决定添加一个事件监听器前最好先检查一下。</p>
+在你的脚本有机会运行前，`DOMContentLoaded`可能就已经被触发。所以你在决定添加一个事件监听器前最好先检查一下。
 
-<pre class="brush: js">function doSomething() {
+```js
+function doSomething() {
   console.info('DOM loaded');
 }
 
@@ -66,25 +69,25 @@ if (document.readyState === 'loading') {  // 此时加载尚未完成
 } else {  // 此时`DOMContentLoaded` 已经被触发
   doSomething();
 }
-</pre>
+```
 
-<h3 id="实例">实例</h3>
+### 实例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="reload" type="button">Reload</button>
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -111,53 +114,47 @@ label, button {
 #reload {
   height: 2rem;
 }
+```
 
-</pre>
-</div>
+#### JS
 
-<h4 id="JS">JS</h4>
-
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
-reload.addEventListener('click', () =&gt; {
+reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() =&gt; {
+  window.setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) =&gt; {
+window.addEventListener('load', (event) => {
     log.textContent = log.textContent + 'load\n';
 });
 
-document.addEventListener('readystatechange', (event) =&gt; {
+document.addEventListener('readystatechange', (event) => {
     log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) =&gt; {
+document.addEventListener('DOMContentLoaded', (event) => {
     log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
+```
 
-</pre>
+#### 结果展示
 
-<h4 id="结果展示">结果展示</h4>
+{{ EmbedLiveSample('实例', '100%', '160px') }}
 
-<p>{{ EmbedLiveSample('实例', '100%', '160px') }}</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Document.DOMContentLoaded_event")}}
 
+## 相关链接
 
-<p>{{Compat("api.Document.DOMContentLoaded_event")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>有关事件：<code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>, <code><a href="/en-US/docs/Web/API/Document/readystatechange_event">readystatechange</a></code>, <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code>, <code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Window">Window</a></code> 对象中的此事件：<code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code></li>
-</ul>
+- 有关事件：[`load`](/en-US/docs/Web/API/Window/load_event), [`readystatechange`](/en-US/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event), [`unload`](/en-US/docs/Web/API/Window/unload_event)
+- [`Window`](/en-US/docs/Web/API/Window) 对象中的此事件：[`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event)

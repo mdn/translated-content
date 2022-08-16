@@ -2,37 +2,34 @@
 title: Scissor animation
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
 
-<div id="scissor-animation">
+使用剪切和清除操作实现一些动画的简单 WebGL 的例子。
 
-<p>使用剪切和清除操作实现一些动画的简单 WebGL 的例子。</p>
+{{EmbedLiveSample("scissor-animation-source",660,425)}}
 
-<p>{{EmbedLiveSample("scissor-animation-source",660,425)}}</p>
+### 剪切动画
 
-<div>
-<h3 id="剪切动画">剪切动画</h3>
+本例中，我们使用{{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}}。我们再次建立一个动画循环使用计时器。注意，这次是方块的位置 (剪切区) 更新每一帧 (我们设置帧率大约每 17 毫秒，约 60 fps -帧每秒)
 
-<p>本例中，我们使用{{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}}。我们再次建立一个动画循环使用计时器。注意，这次是方块的位置 (剪切区) 更新每一帧 (我们设置帧率大约每 17 毫秒，约 60 fps -帧每秒)</p>
+相比之下，方块的颜色 (用{{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) 仅创建一个新的方块。这是一个很好的演示{{Glossary("WebGL")}}是一个状态机。对于每一个方块，我们设置它的颜色，然后只更新它的位置每一帧。WebGL 的清晰的颜色状态维持在设定值，直到我们再次改变它创建一个新的方块。
 
-<p>相比之下，方块的颜色 (用{{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) 仅创建一个新的方块。这是一个很好的演示{{Glossary("WebGL")}}是一个状态机。对于每一个方块，我们设置它的颜色，然后只更新它的位置每一帧。WebGL 的清晰的颜色状态维持在设定值，直到我们再次改变它创建一个新的方块。</p>
-</div>
-
-<div id="scissor-animation-source">
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;WebGL animation by clearing the drawing buffer with solid
-color and applying scissor test.&lt;/p&gt;
-&lt;button id="animation-onoff"&gt;
+```html hidden
+<p>WebGL animation by clearing the drawing buffer with solid
+color and applying scissor test.</p>
+<button id="animation-onoff">
   Press here to
-&lt;strong&gt;[verb goes here]&lt;/strong&gt;
-  the animation&lt;/button&gt;
-</pre>
+<strong>[verb goes here]</strong>
+  the animation</button>
+```
 
-<pre class="brush: html">&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -50,15 +47,14 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
-</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">;(function(){
-</pre>
-</div>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js" id="livesample-js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupAnimation, false);
 // Variables to hold the WebGL context, and the color and
 // position of animated squares.
@@ -109,7 +105,7 @@ function drawAnimation () {
   // When the sqaure hits the bottom of the drawing buffer,
   // we override it with new square of different color and
   // velocity.
-  if (position[1] &lt; 0) {
+  if (position[1] < 0) {
     // Horizontal position chosen randomly, and vertical
     // position at the top of the drawing buffer.
     position = [
@@ -126,10 +122,10 @@ function drawAnimation () {
 function getRandomColor() {
   return [Math.random(), Math.random(), Math.random()];
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: js">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -147,16 +143,12 @@ function getRandomColor() {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
-</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">})();
-</pre>
-</div>
+```js hidden
+})();
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}

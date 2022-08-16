@@ -2,84 +2,84 @@
 title: Node.textContent
 slug: Web/API/Node/textContent
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref ("Node")}} 接口的<strong> </strong><code><strong>textContent</strong></code> 属性表示一个节点及其后代的文本内容。</p>
+{{domxref ("Node")}} 接口的 **`textContent`** 属性表示一个节点及其后代的文本内容。
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong> <code>textContent</code> 和 {{domxref("HTMLElement.innerText")}} 容易混淆，但这两个属性在<a href="/zh-CN/docs/Web/API/Node/textContent#与_innerText_的区别">重要方面有不同之处</a> 。</p>
-</div>
+> **备注：** `textContent` 和 {{domxref("HTMLElement.innerText")}} 容易混淆，但这两个属性在[重要方面有不同之处](/zh-CN/docs/Web/API/Node/textContent#与_innerText_的区别) 。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>let <var>text</var> = <var>someNode</var>.textContent;
-<var>someOtherNode</var>.textContent = <var>string</var>;</pre>
+```
+let text = someNode.textContent;
+someOtherNode.textContent = string;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个字符串或 <code>null</code>.</p>
+一个字符串或 `null`.
 
-<h2 id="Notes">描述</h2>
+## 描述
 
-<p><code>textContent</code> 的值取决于具体情况：</p>
+`textContent` 的值取决于具体情况：
 
-<ul>
- <li>如果节点是一个 {{domxref("document")}}，或者一个 <a href="/zh-CN/docs/Glossary/Doctype">DOCTYPE</a> ，则 <code>textContent</code> 返回 <code>null</code>。
+- 如果节点是一个 {{domxref("document")}}，或者一个 [DOCTYPE](/zh-CN/docs/Glossary/Doctype) ，则 `textContent` 返回 `null`。
 
-  <div class="blockIndicator note">
-  <p>如果你要获取整个文档的文本以及 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA data</a> ，可以使用 <code><a href="/zh-CN/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>。</p>
-  </div>
- </li>
- <li>如果节点是个 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA section</a>、注释、<a href="/zh-CN/docs/Web/API/ProcessingInstruction">processing instruction</a> 或者 <a href="/zh-CN/docs/Web/API/Document/createTextNode">text node</a>，<code>textContent</code> 返回节点内部的文本内容，例如 {{domxref("Node.nodeValue")}}。</li>
- <li>对于其他节点类型，<code>textContent</code> 将所有子节点的 <code>textContent</code> 合并后返回，除了注释和 processing instructions。（如果该节点没有子节点的话，返回一个空字符串。）</li>
-</ul>
+  > **备注：** 如果你要获取整个文档的文本以及 [CDATA data](/zh-CN/docs/Web/API/CDATASection) ，可以使用 `document.documentElement.textContent`。
 
-<p>在节点上设置 <code>textContent</code> 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点。</p>
+- 如果节点是个 [CDATA section](/zh-CN/docs/Web/API/CDATASection)、注释、[processing instruction](/zh-CN/docs/Web/API/ProcessingInstruction) 或者 [text node](/zh-CN/docs/Web/API/Document/createTextNode)，`textContent` 返回节点内部的文本内容，例如 {{domxref("Node.nodeValue")}}。
+- 对于其他节点类型，`textContent` 将所有子节点的 `textContent` 合并后返回，除了注释和 processing instructions。（如果该节点没有子节点的话，返回一个空字符串。）
 
-<h3 id="与_innerText_的区别">与 <strong>innerText </strong>的区别</h3>
+在节点上设置 `textContent` 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点。
 
-<p>不要被 <code>Node.textContent</code> 和 {{domxref("HTMLElement.innerText")}} 的区别搞混了。虽然名字看起来很相似，但有重要的不同之处：</p>
+### 与 **innerText** 的区别
 
-<ul>
- <li><code>textContent</code> 会获取<em>所有</em>元素的内容，包括 {{HTMLElement("script")}} 和 {{HTMLElement("style")}} 元素，然而 <code>innerText</code><strong> </strong>只展示给人看的元素。</li>
- <li><code>textContent</code> 会返回节点中的每一个元素。相反，<code>innerText</code> 受 CSS 样式的影响，并且不会返回隐藏元素的文本，
-  <ul>
-   <li>此外，由于 <code>innerText</code> 受 CSS 样式的影响，它会触发回流（ <a href="/zh-CN/docs/Glossary/Reflow">reflow</a> ）去确保是最新的计算样式。（回流在计算上可能会非常昂贵，因此应尽可能避免。）</li>
-  </ul>
- </li>
- <li>与 <code>textContent</code> 不同的是，在 Internet Explorer (小于和等于 11 的版本) 中对 <code>innerText</code> 进行修改， 不仅会移除当前元素的子节点，而且还会<em>永久性地破坏</em>所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
-</ul>
+不要被 `Node.textContent` 和 {{domxref("HTMLElement.innerText")}} 的区别搞混了。虽然名字看起来很相似，但有重要的不同之处：
 
-<h3 id="与_innerHTML_的区别">与 <strong>innerHTML </strong>的区别</h3>
+- `textContent` 会获取*所有*元素的内容，包括 {{HTMLElement("script")}} 和 {{HTMLElement("style")}} 元素，然而 `innerText` 只展示给人看的元素。
+- `textContent` 会返回节点中的每一个元素。相反，`innerText` 受 CSS 样式的影响，并且不会返回隐藏元素的文本，
 
-<p>正如其名称，{{domxref("Element.innerHTML")}} 返回 HTML。通常，为了在元素中检索或写入文本，人们使用 <code>innerHTML</code>。但是，<code>textContent</code> 通常具有更好的性能，因为文本不会被解析为 HTML。</p>
+  - 此外，由于 `innerText` 受 CSS 样式的影响，它会触发回流（ [reflow](/zh-CN/docs/Glossary/Reflow) ）去确保是最新的计算样式。（回流在计算上可能会非常昂贵，因此应尽可能避免。）
 
-<p>此外，使用 <code>textContent</code> 可以防止 <a href="/zh-CN/docs/Glossary/Cross-site_scripting">XSS 攻击</a>。</p>
+- 与 `textContent` 不同的是，在 Internet Explorer (小于和等于 11 的版本) 中对 `innerText` 进行修改， 不仅会移除当前元素的子节点，而且还会*永久性地破坏*所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。
 
-<h2 id="Example">例子</h2>
+### 与 **innerHTML** 的区别
 
-<p>给出这个 HTML 片段：</p>
+正如其名称，{{domxref("Element.innerHTML")}} 返回 HTML。通常，为了在元素中检索或写入文本，人们使用 `innerHTML`。但是，`textContent` 通常具有更好的性能，因为文本不会被解析为 HTML。
 
-<pre class="brush: js">&lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text!&lt;/div&gt;</pre>
+此外，使用 `textContent` 可以防止 [XSS 攻击](/zh-CN/docs/Glossary/Cross-site_scripting)。
 
-<p>你可以使用 <code>textContent</code> 去获取该元素的文本内容：</p>
+## 例子
 
-<pre class="brush: js">let text = document.getElementById('divA').textContent;
-// The text variable is now: 'This is some text!'</pre>
+给出这个 HTML 片段：
 
-<p>或者设置元素的文字内容：</p>
+```js
+<div id="divA">This is <span>some</span> text!</div>
+```
 
-<pre class="brush: js">document.getElementById('divA').textContent = 'This text is different!';
+你可以使用 `textContent` 去获取该元素的文本内容：
+
+```js
+let text = document.getElementById('divA').textContent;
+// The text variable is now: 'This is some text!'
+```
+
+或者设置元素的文字内容：
+
+```js
+document.getElementById('divA').textContent = 'This text is different!';
 // The HTML for divA is now:
-// &lt;div id="divA"&gt;This text is different!&lt;/div&gt;</pre>
+// <div id="divA">This text is different!</div>
+```
 
-<h2 id="IE8_的替代方法">IE8 的替代方法</h2>
+## IE8 的替代方法
 
-<pre class="brush: js">// Source: Eli Grey @ https://eligrey.com/blog/post/textcontent-in-ie8
+```js
+// Source: Eli Grey @ https://eligrey.com/blog/post/textcontent-in-ie8
 if (Object.defineProperty
-  &amp;&amp; Object.getOwnPropertyDescriptor
-  &amp;&amp; Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  &amp;&amp; !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
+  && Object.getOwnPropertyDescriptor
+  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
+  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
   (function() {
     var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
     Object.defineProperty(Element.prototype, "textContent",
@@ -95,20 +95,19 @@ if (Object.defineProperty
      }
    );
   })();
-}</pre>
+}
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("HTMLElement.innerText")}}</li>
- <li>{{domxref("Element.innerHTML")}}</li>
- <li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/">More on differences between <code>innerText</code> and <code>textContent</code></a> (blog post)</li>
-</ul>
+- {{domxref("HTMLElement.innerText")}}
+- {{domxref("Element.innerHTML")}}
+- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post)

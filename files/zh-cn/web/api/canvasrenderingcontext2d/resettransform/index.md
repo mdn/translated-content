@@ -2,29 +2,32 @@
 title: CanvasRenderingContext2D.resetTransform()
 slug: Web/API/CanvasRenderingContext2D/resetTransform
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.resetTransform()</code></strong> 是 Canvas 2D API 使用单位矩阵重新设置当前变形的方法。</p>
+**`CanvasRenderingContext2D.resetTransform()`** 是 Canvas 2D API 使用单位矩阵重新设置当前变形的方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.resetTransform();</var>
-</pre>
+```
+void ctx.resetTransform();
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_resetTransform_方法">使用 <code>resetTransform</code> 方法</h3>
+### 使用 `resetTransform` 方法
 
-<p>这是一段使用 <code>resetTransform</code> 方法的简单的代码片段。</p>
+这是一段使用 `resetTransform` 方法的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[8]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.rotate(45 * Math.PI / 180);
@@ -32,25 +35,24 @@ ctx.fillRect(70,0,100,30);
 
 // reset current transformation matrix to the identity matrix
 ctx.resetTransform();
-</pre>
+```
 
-<p>修改下面的代码并在线查看 canvas 的变化：</p>
+修改下面的代码并在线查看 canvas 的变化：
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
 ctx.fillRect(70,0,100,30);
-ctx.resetTransform();&lt;/textarea&gt;
-</pre>
+ctx.resetTransform();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -73,27 +75,26 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="综合设置">综合设置</h2>
+## 综合设置
 
-<p>你可以使用 {{domxref("CanvasRenderingContext2D.setTransform()")}} 方法重新设置当前变形为单位矩阵，如下：</p>
+你可以使用 {{domxref("CanvasRenderingContext2D.setTransform()")}} 方法重新设置当前变形为单位矩阵，如下：
 
-<pre class="brush: js">ctx.setTransform(1, 0, 0, 1, 0, 0);</pre>
+```js
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+```
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.resetTransform")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}
