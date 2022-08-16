@@ -1,10 +1,6 @@
 ---
 title: Computer Programming
 slug: Glossary/Computer_Programming
-tags:
-  - 術語表
-  - 計算機編程
-translation_of: Glossary/Computer_Programming
 ---
 電腦程式設計是編寫和組織一系列指令的過程。它會以電腦/軟體程式能理解的語言，告訴他們要做什麼事情。這些指令來自不同形式的語言，例如如：C++、Java、JavaScript、HTML、Python、Ruby、和 Rust。
 

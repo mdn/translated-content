@@ -11,9 +11,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 語法
 
-    let gettingItem = browser.storage.<storageType>.get(
-      keys    // null, string, object or array of strings
-    )
+```js
+let gettingItem = browser.storage.<storageType>.get(
+  keys    // null, string, object or array of strings
+)
+```
 
 `<storageType>` 會是以下可覆寫的儲存類型之一：{{WebExtAPIRef("storage.sync")}} 或 {{WebExtAPIRef("storage.local")}}。
 

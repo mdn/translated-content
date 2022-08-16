@@ -129,12 +129,12 @@ router.post('/about', function (req, res) {
 
 路由路徑也可以是字符串模式。字符串模式使用正則表達式語法的子集，來定義將匹配的端點模式。下面列出了子集（請注意，連字符（`-`）和點（`.`）由字符串路徑字面解釋）：
 
-- ? :端點在?號前面的那個字符，必須為 0 個或 1 個。例如。`'/ab?cd'`的路徑路徑將匹配端點`acd `或`abcd`。
+- ? :端點在?號前面的那個字符，必須為 0 個或 1 個。例如。`'/ab?cd'`的路徑路徑將匹配端點`acd` 或`abcd`。
 - \+ :端點在+號前面的那個字符，必須為 1 個或多個。例如，`'/ab+cd'`的路徑路徑將與端點`abcd`，`abbcd`，`abbbcd`等匹配。
 - \* :端點在放置\*字符的地方，可以代換為任意字符串。例如。`'ab\*cd'`的路由路徑，將匹配端點`abcd`, `abXcd`, `abSOMErandomTEXTcd`等。
 - () :將一組字符進行匹配，以執行上面三個操作。例如。`'/ab(cd)?e'`，表示以？號對（cd）進行匹配-它會匹配`abe`和`abcde`。（譯註：即（cd）必須為 0 個或 1 個。若為 0，匹配`abe`。若為 1，匹配`abcde`）
 
-路由路徑也可以是[JavaScript 正則表達式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。例如，下面的路由路徑將與鯰魚`catfish `和角鯊魚`dogfish`相匹配，但不包括鯰魚`catflap`、鯰魚頭`catfishhead`等。請注意，正則表達式的路徑使用正則表達式語法（它不像以前那樣，是帶引號的字符串）。
+路由路徑也可以是[JavaScript 正則表達式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。例如，下面的路由路徑將與鯰魚`catfish` 和角鯊魚`dogfish`相匹配，但不包括鯰魚`catflap`、鯰魚頭`catfishhead`等。請注意，正則表達式的路徑使用正則表達式語法（它不像以前那樣，是帶引號的字符串）。
 
 ```js
 app.get(/.*fish$/, function (req, res) {

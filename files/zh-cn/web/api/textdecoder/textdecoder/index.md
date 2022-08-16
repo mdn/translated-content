@@ -1,15 +1,6 @@
 ---
 title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Encoding
-  - Experimental
-  - Reference
-  - TextDecoder
-translation_of: Web/api/TextDecoder/TextDecoder
 ---
 {{APIRef("Encoding API")}}
 

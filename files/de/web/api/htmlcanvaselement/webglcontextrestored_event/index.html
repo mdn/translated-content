@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLCanvasElement/webglcontextrestored_event
 <div>{{APIRef}}</div>
 
 <div>
-<p>Das <code><strong>webglcontextrestored</strong></code> Event der <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> wird ausgelöst, wenn der User-Agent den Drawing Buffer das  {{domxref("WebGLRenderingContext")}}-Objekts wiederhergestellt hat.</p>
+<p>Das <code><strong>webglcontextrestored</strong></code> Event der <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> wird ausgelöst, wenn der User-Agent den Drawing Buffer das  {{domxref("WebGLRenderingContext")}}-Objekts wiederhergestellt hat.</p>
 
 <p>Wenn der Context wiederhergestellt wurde, sind alle zuvor erzeugten WebGL-Ressourcen wie Texturen und Buffer nicht mehr gültig. Die WebGL-Applikation muss dann neu initalisiert und alle Ressourcen neu erstellt werden.</p>
 </div>
@@ -38,7 +38,7 @@ translation_of: Web/API/HTMLCanvasElement/webglcontextrestored_event
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>Mit der Hilfe der {{domxref("WEBGL_lose_context")}} Extension kann das <code>webglcontextrestored</code> Event simuliert werden:</p>
+<p>Mit der Hilfe der {{domxref("WEBGL_lose_context")}} Extension kann das <code>webglcontextrestored</code> Event simuliert werden:</p>
 
 <pre class="brush: js">var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");
@@ -76,55 +76,7 @@ gl.getExtension('WEBGL_lose_context').restoreContext();
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("9")}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatOpera("12")}}</td>
-   <td>{{CompatSafari("5.1")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>25</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12</td>
-   <td>8.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

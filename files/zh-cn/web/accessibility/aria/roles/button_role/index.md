@@ -10,7 +10,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 ---
 **[button](https://www.w3.org/TR/wai-aria/roles#button)** 角色应该用于可单击的元素， 当用户激活时触发响应。 在其本身，`role="button"` 可以使任何元素 (e.g. {{HTMLElement("p")}}, {{HTMLElement("span")}} or {{HTMLElement("div")}}) 作为一个屏幕阅读器的按钮控件出现。此外，该角色还可以与 `aria-pressed` 属性组合使用，以创建切换按钮。
 
-> **备注：** 在可能的情况下，建议使用原生 HTML 按钮 (`<button>`, `<input type="button" />`, `<input type="submit" />, <input type="reset" /> `and `<input type="image" />`) 而不是按钮角色，因为原生 HTML 按钮得到了较老用户代理和辅助技术的广泛支持。原生 HTML 按钮也支持键盘和焦点需求，不需要额外的定制。
+> **备注：** 在可能的情况下，建议使用原生 HTML 按钮 (`<button>`, `<input type="button" />`, `<input type="submit" />, <input type="reset" />` and `<input type="image" />`) 而不是按钮角色，因为原生 HTML 按钮得到了较老用户代理和辅助技术的广泛支持。原生 HTML 按钮也支持键盘和焦点需求，不需要额外的定制。
 
 ## 键盘 and 聚焦
 

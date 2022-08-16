@@ -1,7 +1,6 @@
 ---
 title: XHR (XMLHttpRequest)
 slug: Glossary/XHR_(XMLHttpRequest)
-translation_of: Glossary/XHR_(XMLHttpRequest)
 ---
 {{domxref("XMLHttpRequest")}} (XHR) 是一种创建 {{Glossary("AJAX")}} 请求的 {{Glossary("JavaScript")}} {{Glossary("API")}} 。它的方法提供了在{{Glossary("browser","浏览器")}}和{{Glossary("server","服务器")}}之间发送请求的能力。
 

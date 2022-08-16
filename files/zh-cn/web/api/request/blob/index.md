@@ -1,15 +1,6 @@
 ---
 title: Request.blob()
 slug: Web/API/Request/blob
-page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Request
-translation_of: Web/API/Request/blob
 ---
 {{APIRef("Fetch")}}
 

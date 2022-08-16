@@ -1,7 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-translation_of: Glossary/Python
 ---
 **Python**是高階通用（general-purpose）程式語言。他使用了多型編程範式（multi-paradigm approach），這意味著他支援了程序化、物件導向、還有一些函式語言程式設計結構體（functional programming constructs）。
 

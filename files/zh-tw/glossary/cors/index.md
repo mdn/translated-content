@@ -1,10 +1,6 @@
 ---
 title: CORS
 slug: Glossary/CORS
-tags:
-  - 安全
-  - 術語表
-translation_of: Glossary/CORS
 ---
 **CORS**（跨來源資源共享）是瀏覽器技術規範，用來傳輸 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)，判斷阻擋或允許不同來源網域的資源存取。
 

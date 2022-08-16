@@ -69,15 +69,15 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 這不是一個容易回答的問題。要難找到一個決定性的資源來陳述何者是支援 WAI-ARIA 的特點以及在何處，因為：
 
-1.  在 WAI-ARIA 規格中有很多特點。
-2.  要考量作業系統、瀏覽器與螢幕報讀器的許多組合。
+1. 在 WAI-ARIA 規格中有很多特點。
+2. 要考量作業系統、瀏覽器與螢幕報讀器的許多組合。
 
 最後一點是關鍵—首先要使用螢幕報讀器，你的作業系統必須執行具有必要的無障礙 API 的瀏覽器去揭露螢幕報讀器必須去完成工作的資訊。大部分主流的作業系統有 1 個或 2 個瀏覽器可供螢幕報讀器使用。Paciello Group 一則最近的文章提供這些數據—請參見 [Rough Guide: browsers, operating systems and screen reader support updated](https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/)。
 
 接著，你必須擔心瀏覽器是否支援 ARIA 特徵並透過其 API 揭露，同時螢幕報讀器是否辨識該資訊並以可用的方式向使用者呈現的問題。
 
-1.  瀏覽器支援一般相當好—在撰文當下， [caniuse.com](http://caniuse.com/#feat=wai-aria)表示全球瀏覽器對 WAI-ARIA 的支援率大約為 88%。
-2.  螢幕報讀器對 ARIA 特徵的支援沒有相當於此水平，但大部分主流的螢幕報讀器是有達到此水平。你可查閱 Powermapper 的 [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/)這篇文章了解支援的水平。
+1. 瀏覽器支援一般相當好—在撰文當下， [caniuse.com](http://caniuse.com/#feat=wai-aria)表示全球瀏覽器對 WAI-ARIA 的支援率大約為 88%。
+2. 螢幕報讀器對 ARIA 特徵的支援沒有相當於此水平，但大部分主流的螢幕報讀器是有達到此水平。你可查閱 Powermapper 的 [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/)這篇文章了解支援的水平。
 
 在本文中，我們未試圖涵蓋每一個 WAI-ARIA 特徵及其確切的支援細節。相反地，我們將涵蓋最關鍵的 WAI-ARIA 特徵讓你知道；如果我們沒有提到任何支援細節，你可認定該特徵得到很好的支援。我們會明確地提到這個例外情況。
 
@@ -87,10 +87,10 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 我們討論了促使 WAI-ARIA 早期建立的一些問題，但基本上 WAI-ARIA 在 4 個主要領域很有用：
 
-1.  **路標/地標**：ARIA 的角色屬性值可作為地標，不是複製 HTML5 元素的語意(如{{htmlelement("nav")}})，就是超越 HTML5 語意而對不同的功能區域提供路標，如搜尋、頁籤群組、頁籤、清單框等。
-2.  **動態內容更新**：螢幕報讀器往往難以報讀不斷改變的內容；當某個內容區域更新時，我們可以使用 aria-live 通知螢幕報讀器的使用者，例如透過 [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)或[DOM APIs](/en-US/docs/Web/API/Document_Object_Model)。
-3.  **增強鍵盤無障礙**：內建的 HTML 元素具有原生的鍵盤無障礙；當其他元素伴隨使用 JavaScript 模擬相似的互動時，鍵盤無障礙操作與螢幕報讀器報讀會遭遇問題。如果這是不可避免的，WAI-ARIA 提供讓其他元素獲得焦點的一種方法(使用 `tabindex`)。
-4.  **非語意控制措施的無障礙**：當一系列巢狀的`<div>`搭配 CSS/JavaScript 用於創建一個複雜的 UI 特徵，或者一個透過 JavaScript 大幅增強/改變的原生控制措施，無障礙會遭遇到困難—如果沒有語意或其他線索，螢幕報讀器使用者將發覺難以理解該特徵的作用。在這種情況下，ARIA 可以幫助提供缺失的部分使用如按鈕、清單框或頁籤群組等角色組合，以及 aria-required 或 aria-posinset 等屬性對功能性提供進一步的線索。
+1. **路標/地標**：ARIA 的角色屬性值可作為地標，不是複製 HTML5 元素的語意(如{{htmlelement("nav")}})，就是超越 HTML5 語意而對不同的功能區域提供路標，如搜尋、頁籤群組、頁籤、清單框等。
+2. **動態內容更新**：螢幕報讀器往往難以報讀不斷改變的內容；當某個內容區域更新時，我們可以使用 aria-live 通知螢幕報讀器的使用者，例如透過 [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)或[DOM APIs](/en-US/docs/Web/API/Document_Object_Model)。
+3. **增強鍵盤無障礙**：內建的 HTML 元素具有原生的鍵盤無障礙；當其他元素伴隨使用 JavaScript 模擬相似的互動時，鍵盤無障礙操作與螢幕報讀器報讀會遭遇問題。如果這是不可避免的，WAI-ARIA 提供讓其他元素獲得焦點的一種方法(使用 `tabindex`)。
+4. **非語意控制措施的無障礙**：當一系列巢狀的`<div>`搭配 CSS/JavaScript 用於創建一個複雜的 UI 特徵，或者一個透過 JavaScript 大幅增強/改變的原生控制措施，無障礙會遭遇到困難—如果沒有語意或其他線索，螢幕報讀器使用者將發覺難以理解該特徵的作用。在這種情況下，ARIA 可以幫助提供缺失的部分使用如按鈕、清單框或頁籤群組等角色組合，以及 aria-required 或 aria-posinset 等屬性對功能性提供進一步的線索。
 
 記住一件事 — **僅在必需時才使用 WAI-ARIA**! 理想情況下，你應該總是使用原生 HTML 特徵提供螢幕報讀器所需要的語意來告訴其使用者接下來將發生甚麼事情。有時候這是不可能的情形，不是因為你受限於控制該程式碼，就是因為你創建一些複雜而無法用簡易的 HTML 元素來開發。在這種情況下，WAI-ARIA 可作為有價值的無障礙增強工作。
 
@@ -220,7 +220,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 這將使螢幕報讀器在內容更新時讀出更新的內容。
 
-> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如[ GitHub](/en-US/docs/Learn/Common_questions/Using_Github_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/en-US/docs/Learn/Common_questions/Using_Github_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 這裡有一項額外的考量—只有文字更新才讀出。如果我們也總是讀出標題，那將很好，以讓使用者記住讀出的內容。為做到這樣，我們可以添加 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 屬性到這個部分，再次更新您的 `<section>` 標籤如下所示：
 
@@ -267,15 +267,15 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 我們可進一步使用我們的 ARIA，並提供更多的驗證協助。如何指出區塊是否需要在第一個位置，以及年齡的範圍應該多少？
 
-1.  在此，複製我們的 [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) 與 [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) 檔案，並將他們儲存在本機目錄。
-2.  在文字編輯器開啟他們並且看一下該程式碼如何運作。
-3.  首先，在開始的 `<form>` 標籤之上增加一個段落，如下所示，並且用星號標記兩個表單的 `<label>`。這是一般我們對有視力的使用者標記必要區塊的方法。
+1. 在此，複製我們的 [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) 與 [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) 檔案，並將他們儲存在本機目錄。
+2. 在文字編輯器開啟他們並且看一下該程式碼如何運作。
+3. 首先，在開始的 `<form>` 標籤之上增加一個段落，如下所示，並且用星號標記兩個表單的 `<label>`。這是一般我們對有視力的使用者標記必要區塊的方法。
 
     ```html
     <p>Fields marked with an asterisk (*) are required.</p>
     ```
 
-4.  這讓視覺有意義，但這對螢幕報讀器使用者不能輕易理解。很幸運地，WAI-ARIA 提供 [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) 屬性以提示螢幕報讀器應告訴使用者需要填寫的表單輸入欄位。更新`<input>` 元素如下：
+4. 這讓視覺有意義，但這對螢幕報讀器使用者不能輕易理解。很幸運地，WAI-ARIA 提供 [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) 屬性以提示螢幕報讀器應告訴使用者需要填寫的表單輸入欄位。更新`<input>` 元素如下：
 
     ```html
     <input type="text" name="name" id="name" aria-required="true">
@@ -283,8 +283,8 @@ var intervalID = window.setInterval(showQuote, 10000);
     <input type="number" name="age" id="age" aria-required="true">
     ```
 
-5.  如果你現在儲存本範例並使用螢幕報讀器測試，你應該聽到這個內容 "Enter your name star, required, edit text"。
-6.  如果我們給予螢幕報讀器使用者與視覺的使用者有關年齡的值應該是甚麼的概念，這樣也將會很有用。這個或許常以提示或在表單輸入區內預設文本的方式呈現。WAI-ARIA 用包含 [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) 與 [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) 屬性來指定最小與最大值，但這些目前未受到很好的支持；比較受支持的特徵是 HTML5 `placeholder` 屬性，它在沒有輸入值的時間將含有的訊息顯示在輸入框，並能由許多螢幕報讀器讀出。更新你的數值輸入如下所示：
+5. 如果你現在儲存本範例並使用螢幕報讀器測試，你應該聽到這個內容 "Enter your name star, required, edit text"。
+6. 如果我們給予螢幕報讀器使用者與視覺的使用者有關年齡的值應該是甚麼的概念，這樣也將會很有用。這個或許常以提示或在表單輸入區內預設文本的方式呈現。WAI-ARIA 用包含 [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) 與 [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) 屬性來指定最小與最大值，但這些目前未受到很好的支持；比較受支持的特徵是 HTML5 `placeholder` 屬性，它在沒有輸入值的時間將含有的訊息顯示在輸入框，並能由許多螢幕報讀器讀出。更新你的數值輸入如下所示：
 
     ```html
     <input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true">

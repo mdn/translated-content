@@ -120,7 +120,6 @@ g.next(2);
 
 {{Specifications}}
 
-
 ## 브라우저 호환성
 
 {{Compat}}

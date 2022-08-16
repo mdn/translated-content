@@ -166,9 +166,9 @@ class YourTestClass(TestCase):
 
 > **备注：** 测试类别还有一个我们还没有使用的`tearDown()`方法。此方法对数据库测试不是特别有用，因为`TestCase`基类会为您处理数据库拆卸。
 
-下面我们有一些测试方法，它们使用 `Assert `函数来测试条件是真，假或相等（`AssertTrue`, `AssertFalse`, `AssertEqual`）。如果条件评估不如预期，则测试将失败，并将错误报告给控制台。
+下面我们有一些测试方法，它们使用 `Assert` 函数来测试条件是真，假或相等（`AssertTrue`, `AssertFalse`, `AssertEqual`）。如果条件评估不如预期，则测试将失败，并将错误报告给控制台。
 
-`AssertTrue`, `AssertFalse`, `AssertEqual `是 **unittest** 提供的标准断言。框架中还有其他标准断言，还有 [Django 特定的断言](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#assertions)，来测试视图是否重定向（`assertRedirects`），或测试是否已使用特定模板（`assertTemplateUsed`）等。
+`AssertTrue`, `AssertFalse`, `AssertEqual` 是 **unittest** 提供的标准断言。框架中还有其他标准断言，还有 [Django 特定的断言](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#assertions)，来测试视图是否重定向（`assertRedirects`），或测试是否已使用特定模板（`assertTemplateUsed`）等。
 
 > **备注：** 您通常**不应**在测试中包含**print()** 函数，如上所示。我们这样做，只是为了让您可以看到在控制台中，调用设置功能的顺序（在下一节中）。
 
@@ -256,7 +256,7 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 
 如上所述，我们应该测试我们设计的任何内容，或由我们编写的代码定义的内容，而不是已经由 Django 或 Python 开发团队测试过的库/代码。
 
-例如，请考虑下面的作者模型` Author`。在这里，我们应该测试所有字段的标签，因为即使我们没有明确指定它们中的大部分，我们也有一个设计，说明这些值应该是什么。如果我们不测试值，那么我们不知道字段标签，是否具有其预期值。同样，虽然我们相信 Django 会创建一个指定长度的字段，但值得为这个长度指定一个测试，以确保它按计划实现。
+例如，请考虑下面的作者模型 `Author`。在这里，我们应该测试所有字段的标签，因为即使我们没有明确指定它们中的大部分，我们也有一个设计，说明这些值应该是什么。如果我们不测试值，那么我们不知道字段标签，是否具有其预期值。同样，虽然我们相信 Django 会创建一个指定长度的字段，但值得为这个长度指定一个测试，以确保它按计划实现。
 
 ```python
 class Author(models.Model):
@@ -326,7 +326,7 @@ self.assertEquals(field_label,'first name')  # Compare the value to the expected
 
 有趣的事情是：
 
-- 我们无法使用 `author.first_name.verbose_name`直接获取 `verbose_name`，因为`author.first_name `是一个字符串（不是我们可以用来访问其属性的`first_name` 对象的句柄）。取而代之的是，我们需要使用作者的 `_meta`属性，来获取字段的实例，并使用它来查询其他信息。
+- 我们无法使用 `author.first_name.verbose_name`直接获取 `verbose_name`，因为`author.first_name` 是一个字符串（不是我们可以用来访问其属性的`first_name` 对象的句柄）。取而代之的是，我们需要使用作者的 `_meta`属性，来获取字段的实例，并使用它来查询其他信息。
 
 - 我们选择使用 `assertEquals(field_label,'first name')` ，而不是`assertTrue(field_label == 'first name')`。这样做的原因是，如果测试失败，前者的输出，会告诉您标签实际上是什么，这使得调试问题变得更容易一些。
 
@@ -825,7 +825,7 @@ class RenewBookInstancesViewTest(TestCase):
 >  self.assertRedirects(resp, '/catalog/')
 > ```
 
-将最后两个函数，复制到类中，如下所示。这些再次测试`POST`请求，但在这种情况下具有无效的续借日期。我们使用`assertFormError() `，来验证错误消息是否符合预期。
+将最后两个函数，复制到类中，如下所示。这些再次测试`POST`请求，但在这种情况下具有无效的续借日期。我们使用`assertFormError()`，来验证错误消息是否符合预期。
 
 ```python
     def test_form_invalid_renewal_date_past(self):

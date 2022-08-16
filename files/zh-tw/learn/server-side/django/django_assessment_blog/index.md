@@ -155,7 +155,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 另外您應該要寫一些基本的測試來驗證:
 
 - 所有的模型欄位都有正確的標示和長度。
-- 所有的模型都有期望的物件名稱(例如` __str__()` 回傳期望的值)。
+- 所有的模型都有期望的物件名稱(例如 `__str__()` 回傳期望的值)。
 - 模型有期望的 URL 給每篇文章與回覆。(例如`get_absolute_url()` 回傳期望的 URL)。
 - BlogListView (所有文章的頁面) 可以從期望的位址進入(例如/blog/blogs)。
 - BlogListView (所有文章的頁面) 可以從期望的位址名稱進入(例如'blogs')。
@@ -216,19 +216,19 @@ The following screenshot provide an example of what the finished program should 
 
 以下說明實作的步驟。
 
-1.  建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/en-US/docs/Learn/Server-side/Django/skeleton_website))。你也許會用'diyblog'作為專案名稱，‘blog'作為 app 的名稱。
-2.  建立部落格文章、評論與其他任何所需物件的模型。當你在思考怎麼設計的時候，請記得：
+1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/en-US/docs/Learn/Server-side/Django/skeleton_website))。你也許會用'diyblog'作為專案名稱，‘blog'作為 app 的名稱。
+2. 建立部落格文章、評論與其他任何所需物件的模型。當你在思考怎麼設計的時候，請記得：
 
     - 每一個評論都只屬於一篇部落格文章，但每一個部落格文章可以有很多筆評論。
     - 部落格文章必須要依照發布時間排序(新至舊)，評論要依照發布排序(舊至新)。
     - 不是每位使用者都是部落客，但是每一位使用者都可以留下評論。
     - 部落客必須有介紹資訊。
 
-3.  跑 migrations 以及創建一個新的超級使用者(superuser)。
-4.  透過 admin 網站新稱一些部落格文章和評論。
-5.  幫部落格文章列表頁與部落客列表頁建立視圖、模板及設定 URL。
-6.  幫部落格文章詳細頁與部落客詳細頁建立視圖、模板及設定 URL。
-7.  建立一個頁面包含可以新增評論的表單(記得只有已登入的使用者可以進入此頁!)
+3. 跑 migrations 以及創建一個新的超級使用者(superuser)。
+4. 透過 admin 網站新稱一些部落格文章和評論。
+5. 幫部落格文章列表頁與部落客列表頁建立視圖、模板及設定 URL。
+6. 幫部落格文章詳細頁與部落客詳細頁建立視圖、模板及設定 URL。
+7. 建立一個頁面包含可以新增評論的表單(記得只有已登入的使用者可以進入此頁!)
 
 ## 提示與小技巧
 
@@ -236,17 +236,17 @@ This project is very similar to the [LocalLibrary](/en-US/docs/Learn/Server-side
 
 Some general hints:
 
-1.  The index page can be implemented as a basic function view and template (just like for the locallibrary).
-2.  The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
-3.  The list of blog posts for a particular author can be created by using a generic list Blog list view and filtering for blog object that match the specified author.
+1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
+2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
+3. The list of blog posts for a particular author can be created by using a generic list Blog list view and filtering for blog object that match the specified author.
 
     - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
     - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
-4.  The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
+4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
 
     - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
-    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the` form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
+    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
       ```python
           def form_valid(self, form):

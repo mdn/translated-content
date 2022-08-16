@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>Die <strong>try...catch</strong>-Anweisung (sinngemäß: testen und verarbeiten) rahmt einen Block von Anweisungen (<em>try statements)</em> ein und legt Reaktionen (<em>catch statementes</em>) fest, die im Fehlerfall ausgeführt werden.</p>
+<p>Die <strong>try...catch</strong>-Anweisung (sinngemäß: testen und verarbeiten) rahmt einen Block von Anweisungen (<em>try statements)</em> ein und legt Reaktionen (<em>catch statementes</em>) fest, die im Fehlerfall ausgeführt werden.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,12 +46,12 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 
 <dl>
  <dt><code>finally_Anweisungen</code></dt>
- <dd>Die Schlussanweisungen werden nach den <code>try</code>-Anweisungen ausgeführt. Die Anweisungen werden immer ausgeführt, auch wenn ein Fehler ausgegeben wurde. </dd>
+ <dd>Die Schlussanweisungen werden nach den <code>try</code>-Anweisungen ausgeführt. Die Anweisungen werden immer ausgeführt, auch wenn ein Fehler ausgegeben wurde. </dd>
 </dl>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Der <em>try</em>-Block besteht aus einer oder mehreren Anweisungen (der Absschnitt steht – auch bei nur einer Zeile – immer in geschweiften Klammern {}), mindestens einem <em>catch</em>- oder einem <em>finally</em>-Abschnitt oder beiden. Es gibt also drei Arten von <em>try</em>-Anweisungen:</p>
+<p>Der <em>try</em>-Block besteht aus einer oder mehreren Anweisungen (der Absschnitt steht – auch bei nur einer Zeile – immer in geschweiften Klammern {}), mindestens einem <em>catch</em>- oder einem <em>finally</em>-Abschnitt oder beiden. Es gibt also drei Arten von <em>try</em>-Anweisungen:</p>
 
 <ol>
  <li><code>try...catch</code></li>
@@ -59,17 +59,17 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
  <li><code>try...catch...finally</code></li>
 </ol>
 
-<p>Der <code>catch</code>-Abschnitt enthält Anweisungen, die ausgeführt werden, wenn im <code>try</code>-Abschnitt ein Fehler auftritt. Bei einer fehlerhaften Anweisung im Block im <code>try</code>-Abschnitt – oder in Funktionen, die von dort aufgerufen werden – geht die Kontrolle sofort an den <code>catch</code>-Abschnitt über. Wird kein Fehler gemeldet wird der <code>catch</code>-Abschnitt nicht ausgeführt.</p>
+<p>Der <code>catch</code>-Abschnitt enthält Anweisungen, die ausgeführt werden, wenn im <code>try</code>-Abschnitt ein Fehler auftritt. Bei einer fehlerhaften Anweisung im Block im <code>try</code>-Abschnitt – oder in Funktionen, die von dort aufgerufen werden – geht die Kontrolle sofort an den <code>catch</code>-Abschnitt über. Wird kein Fehler gemeldet wird der <code>catch</code>-Abschnitt nicht ausgeführt.</p>
 
 <p>Der <code>finally</code>-Abschnitt wird nach dem <code>try</code>- und <code>catch</code>-Abschnitt ausgeführt. Der Abschnitt wird immer ausgeführt, egal ob ein Fehler aufgetreten ist oder nicht.</p>
 
-<p>Mehrere <code>try</code>-Anweisungen können verschachtelt werden. Wenn ein innerer <code>try</code>-Block keinen <code>catch</code>-Abschnitt hat, wird der <code>catch</code>-Abschnitt des nächsthöheren <code>try</code>-Blocks ausgeführt.</p>
+<p>Mehrere <code>try</code>-Anweisungen können verschachtelt werden. Wenn ein innerer <code>try</code>-Block keinen <code>catch</code>-Abschnitt hat, wird der <code>catch</code>-Abschnitt des nächsthöheren <code>try</code>-Blocks ausgeführt.</p>
 
-<p>Mit der try-Anweisungen können auch JavaScript-Fehler bearbeitet werden. Mehr zur Fehlerbearbeitung in JavaScript steht im <a href="/en-US/docs/Web/JavaScript/Guide" title="en/JavaScript/Guide">JavaScript Guide</a>.</p>
+<p>Mit der try-Anweisungen können auch JavaScript-Fehler bearbeitet werden. Mehr zur Fehlerbearbeitung in JavaScript steht im <a href="/en-US/docs/Web/JavaScript/Guide" title="en/JavaScript/Guide">JavaScript Guide</a>.</p>
 
-<h3 id="Unbhängiger_catch-Abschnitt">Unbhängiger <code>catch-Abschnitt</code></h3>
+<h3 id="Unbhängiger_catch-Abschnitt">Unbhängiger <code>catch-Abschnitt</code></h3>
 
-<p>Wenn mit einem einzelnen, ungebundenen <code>catch</code>-Abschnitt gearbeitet wird, dann wird der catch-Block bei jedem Fehler durchlaufen. Wenn der Fehler im folgenden Beispiel-Code auftritt geht die Kontrolle an den <code>catch</code>-Abschnitt über.</p>
+<p>Wenn mit einem einzelnen, ungebundenen <code>catch</code>-Abschnitt gearbeitet wird, dann wird der catch-Block bei jedem Fehler durchlaufen. Wenn der Fehler im folgenden Beispiel-Code auftritt geht die Kontrolle an den <code>catch</code>-Abschnitt über.</p>
 
 <pre class="brush: js">try {
    throw "myException"; // Fehler wird ausgelöst
@@ -80,15 +80,15 @@ catch (e) {
 }
 </pre>
 
-<p>Im <code>catch</code>-Block wird ein Bezeichner festgelegt (e im Beispiel), die den Wert enthält, der durch die <code>throw</code>-Anweisung entstanden ist. Der catch-Block ist besonders, weil er zu Beginn der Ausführung einen Bezeichner anlegt, der für den gesamten Block gilt. Wenn der catch-Block abgearbeitet ist steht der Bezeichner nicht mehr zur Verfügung.</p>
+<p>Im <code>catch</code>-Block wird ein Bezeichner festgelegt (e im Beispiel), die den Wert enthält, der durch die <code>throw</code>-Anweisung entstanden ist. Der catch-Block ist besonders, weil er zu Beginn der Ausführung einen Bezeichner anlegt, der für den gesamten Block gilt. Wenn der catch-Block abgearbeitet ist steht der Bezeichner nicht mehr zur Verfügung.</p>
 
-<h3 id="Abhängige_catch-Abschnitte">Abhängige <code>catch</code>-Abschnitte</h3>
+<h3 id="Abhängige_catch-Abschnitte">Abhängige <code>catch</code>-Abschnitte</h3>
 
 <p>{{non-standard_header}}</p>
 
-<p>Mehrere abhängige catch-Abschnitte können spezifische Fehler bearbeiten. In diesem Fall wird der passende catch-Abschnitt aufgerufen, wenn der zugehörige Fehler aufgetreten ist. Im folgenden Beispiel kann der Code im <code>try</code>-Block drei mögliche Fehler ausgeben: {{jsxref("TypeError")}}, {{jsxref("RangeError")}}, and {{jsxref("EvalError")}} (Typ-Fehler, Bereich-Fehler und Rechenfehler). Wenn ein Fehler auftritt geht die Kontrolle an den zugehörigen <code>catch</code>-Abschnitt. Wenn dem Fehler kein catch-Abschnitt entspricht und ein unabhäniger <code>catch</code>-Abschnitt vorhanden ist, geht die Kontrolle an ihn.</p>
+<p>Mehrere abhängige catch-Abschnitte können spezifische Fehler bearbeiten. In diesem Fall wird der passende catch-Abschnitt aufgerufen, wenn der zugehörige Fehler aufgetreten ist. Im folgenden Beispiel kann der Code im <code>try</code>-Block drei mögliche Fehler ausgeben: {{jsxref("TypeError")}}, {{jsxref("RangeError")}}, and {{jsxref("EvalError")}} (Typ-Fehler, Bereich-Fehler und Rechenfehler). Wenn ein Fehler auftritt geht die Kontrolle an den zugehörigen <code>catch</code>-Abschnitt. Wenn dem Fehler kein catch-Abschnitt entspricht und ein unabhäniger <code>catch</code>-Abschnitt vorhanden ist, geht die Kontrolle an ihn.</p>
 
-<p>Wenn mehrere abhängige catch-Abschnitt mit einem unabhängigen kombiniert werden, muss der unabhängige Abschnitt am Ende stehen: er fängt sonst alle Fehlertypen ab bevor sie die eigenen, abhängigen Abschnitte erreichen.</p>
+<p>Wenn mehrere abhängige catch-Abschnitt mit einem unabhängigen kombiniert werden, muss der unabhängige Abschnitt am Ende stehen: er fängt sonst alle Fehlertypen ab bevor sie die eigenen, abhängigen Abschnitte erreichen.</p>
 
 <p>Zu Erinnerung: diese Funktionalität ist kein Teil der ECMAScript-Spezifikation.</p>
 
@@ -106,7 +106,7 @@ catch (e) {
 }
 </pre>
 
-<p>Das nächste Beispiel zeigt, wie die gleichen "abhängigen <code>catch</code>-Abschnitte" aussehen, wenn einfaches JavaScript benutzt wird, das den ECMAScript-Spezifikationen entspricht (etwas umfangreicher, funktioniert aber genauso).</p>
+<p>Das nächste Beispiel zeigt, wie die gleichen "abhängigen <code>catch</code>-Abschnitte" aussehen, wenn einfaches JavaScript benutzt wird, das den ECMAScript-Spezifikationen entspricht (etwas umfangreicher, funktioniert aber genauso).</p>
 
 <pre class="brush: js">try {
     myroutine(); // erzeugt drei mögliche Fehlertypen
@@ -134,13 +134,13 @@ catch (e) {
 
 <p>Zum Abschluss-Abschnitt (<code>finally</code>) gehören die Anweisungen, die nach dem <code>try</code>- und dem <code>catch</code>-Block ausgeführt werden, noch bevor irgenwelche Anweisugnen nach den <code>try-/catch-/finally</code>-Abschnitten ausgeführt werden. Der finally-Abschnitt wird immer ausgeführt, auch wenn bei der Verarbeitung ein Fehler aufgetreten ist. Er wird auch ausgeführt, wenn kein catch-Abschnitt den Fehler bearbeitet. Der finally-Abschnitt kann dabei helfen, das eigene Script im Fehlerfall anständig zu beenden. Dort können zum Beispiel für ein übergreifendes Aufräumen Ressourcen wieder freigegeben werden, die durch das Script gebunden wurden.</p>
 
-<p>Vielleicht sieht ein Abschnitt, der sich auf Fehler bezieht, aber UNABHÄNGIG vom tatsächlichen Auftreten eines Fehlers immer ausgeführt wird, merkwürdig aus. Aber dieses Konstrukt dient tatsächlich einem Zweck. Wichtig dabei ist nicht, dass der <code>finally</code>-Abschnitt immer aussgeführt wird, sonder das der normale Code nach einem try...catch NICHT ausgeführt wird. Wenn zum Beispiel in einem catch-Abschnitt, der zu einem try-Block gehört, ein Fehler auftritt, dann wird nichts von dem umgebenden Code ausgeführt, gleichgültig ob es ein umgebende try-catch-Blöcke oder normale Anweisungen sind. Die Kontrolle wird stattdessen an den catch-Abschnitt übergeben, der zum umgebenden try-Abschnitt gehört oder – wenn es den nicht gibt – an die interne Fehlerroutine. </p>
+<p>Vielleicht sieht ein Abschnitt, der sich auf Fehler bezieht, aber UNABHÄNGIG vom tatsächlichen Auftreten eines Fehlers immer ausgeführt wird, merkwürdig aus. Aber dieses Konstrukt dient tatsächlich einem Zweck. Wichtig dabei ist nicht, dass der <code>finally</code>-Abschnitt immer aussgeführt wird, sonder das der normale Code nach einem try...catch NICHT ausgeführt wird. Wenn zum Beispiel in einem catch-Abschnitt, der zu einem try-Block gehört, ein Fehler auftritt, dann wird nichts von dem umgebenden Code ausgeführt, gleichgültig ob es ein umgebende try-catch-Blöcke oder normale Anweisungen sind. Die Kontrolle wird stattdessen an den catch-Abschnitt übergeben, der zum umgebenden try-Abschnitt gehört oder – wenn es den nicht gibt – an die interne Fehlerroutine. </p>
 
-<p>Auf diese Weise wird jeder nachfolgende Aufräum-Code im eingeschlossenen Abschnitt oder im normalen Programmablauf übersprungen. Wenn aber zum <code>try</code>-Abschnitt ein finally-Abschnitt gehört, dann kann in diesem Abschnitt aufgeräumt werden, bevor es in einen umgebenden <code>catch</code>-Abschnitt (oder den Fehlergenerator) geht, der dann den zweiten Fehler bearbeitet. </p>
+<p>Auf diese Weise wird jeder nachfolgende Aufräum-Code im eingeschlossenen Abschnitt oder im normalen Programmablauf übersprungen. Wenn aber zum <code>try</code>-Abschnitt ein finally-Abschnitt gehört, dann kann in diesem Abschnitt aufgeräumt werden, bevor es in einen umgebenden <code>catch</code>-Abschnitt (oder den Fehlergenerator) geht, der dann den zweiten Fehler bearbeitet. </p>
 
-<p>Wenn unabhängig vom Erfolg des <code>try...catch-</code>Blocks aufgeräumt werden muss und der finally-Abschnitt nur nach einem Fehler ausgeführt würde, dann müsste der Aufräum-Code doppelt verwendet werden, innerhalb und außerhalb des finally-Abschnitts. Deshalb wird der finally-Block unabhängig von auftretenden Fehlern ausgeführt.</p>
+<p>Wenn unabhängig vom Erfolg des <code>try...catch-</code>Blocks aufgeräumt werden muss und der finally-Abschnitt nur nach einem Fehler ausgeführt würde, dann müsste der Aufräum-Code doppelt verwendet werden, innerhalb und außerhalb des finally-Abschnitts. Deshalb wird der finally-Block unabhängig von auftretenden Fehlern ausgeführt.</p>
 
-<p>Das folgende Beispiel öffnet eine Datei und führt dann Anweisungen aus, die mit der Datei arbeiten (server-seitiges JavaScript lässt den Zugriff auf Dateien zu).  Wenn ein Fehler ausgegeben wird solange die Datei geöffnet ist, dann schließt der <code>finally</code>-Abschnitt diese Datei bevor das Script stoppt. Der Code im Abschnitt wird auch bei <code>Returns</code> aus <code>try</code>- oder <code>catch</code>-Blöcken ausgeführt.</p>
+<p>Das folgende Beispiel öffnet eine Datei und führt dann Anweisungen aus, die mit der Datei arbeiten (server-seitiges JavaScript lässt den Zugriff auf Dateien zu).  Wenn ein Fehler ausgegeben wird solange die Datei geöffnet ist, dann schließt der <code>finally</code>-Abschnitt diese Datei bevor das Script stoppt. Der Code im Abschnitt wird auch bei <code>Returns</code> aus <code>try</code>- oder <code>catch</code>-Blöcken ausgeführt.</p>
 
 <pre class="brush: js">openMyFile()
 try {
@@ -225,7 +225,7 @@ catch (ex) {
 
 <h3 id="Rückgaben_aus_einem_finally-Block">Rückgaben aus einem finally-Block</h3>
 
-<p>Wenn der <code>finally</code>-Abschnitt ein Wert  zurückgibt, wird dieser Wert zum Rückgabewert der gesamten <code>try-catch-finally</code>-Veranstaltung, unabhänig von allen return-Anweisungen in den <code>try</code>- oder <code>catch</code>-Blöcken. Das gilt auch für Fehler im <code>catch</code>-Block:</p>
+<p>Wenn der <code>finally</code>-Abschnitt ein Wert  zurückgibt, wird dieser Wert zum Rückgabewert der gesamten <code>try-catch-finally</code>-Veranstaltung, unabhänig von allen return-Anweisungen in den <code>try</code>- oder <code>catch</code>-Blöcken. Das gilt auch für Fehler im <code>catch</code>-Block:</p>
 
 <pre class="brush: js">try {
   try {
@@ -249,7 +249,7 @@ catch (ex) {
 // "finally"
 </pre>
 
-<p>Der äußere "oops"-Fehler wird nicht ausgelöst wegen des <code>return</code> im finally-Block. Das gleiche gilt für alle Werte, die aus dem <code>catch</code>-Abschnitt zurück gegeben werden.</p>
+<p>Der äußere "oops"-Fehler wird nicht ausgelöst wegen des <code>return</code> im finally-Block. Das gleiche gilt für alle Werte, die aus dem <code>catch</code>-Abschnitt zurück gegeben werden.</p>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 
@@ -268,12 +268,12 @@ catch (ex) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-12.14', 'try statement')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-try-statement', 'try statement')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-try-statement', 'try statement')}}</td>
@@ -287,92 +287,7 @@ catch (ex) {
 
 <h2 id="Browser-Verträglichkeit">Browser-Verträglichkeit</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funktion</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Grundunter-stützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("6")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Abhängige Abschnitte<br>
-    (Non-Standard)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funktion</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>
-    <table class="compat-table">
-     <tbody>
-      <tr>
-       <td>Grundunter-stützung</td>
-       <td> </td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>
-    <table class="compat-table">
-     <tbody>
-      <tr>
-       <td>Abhängige Abschnitte<br>
-        (Non-Standard)</td>
-       <td> </td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

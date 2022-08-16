@@ -58,27 +58,29 @@ Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理�
 
 模型通常在 app 中的 **models.py** 檔案中定義。它們是繼承自 `django.db.models.Model`的子類， 可以包括屬性，方法和描述性資料(metadata)。下面區段為一個名為`MyModelName`的「典型」模型範例碼：
 
-    from django.db import models
+```python
+from django.db import models
 
-    class MyModelName(models.Model):
-        """A typical class defining a model, derived from the Model class."""
+class MyModelName(models.Model):
+    """A typical class defining a model, derived from the Model class."""
 
-        # Fields
-        my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-        ...
+    # Fields
+    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+    ...
 
-        # Metadata
-        class Meta:
-            ordering = ['-my_field_name']
+    # Metadata
+    class Meta:
+        ordering = ['-my_field_name']
 
-        # Methods
-        def get_absolute_url(self):
-             """Returns the url to access a particular instance of MyModelName."""
-             return reverse('model-detail-view', args=[str(self.id)])
+    # Methods
+    def get_absolute_url(self):
+            """Returns the url to access a particular instance of MyModelName."""
+            return reverse('model-detail-view', args=[str(self.id)])
 
-        def __str__(self):
-            """String for representing the MyModelName object (in Admin site etc.)."""
-            return self.field_name
+    def __str__(self):
+        """String for representing the MyModelName object (in Admin site etc.)."""
+        return self.field_name
+```
 
 在下面章節中，我們將更詳細解釋模型的每個功能。
 
@@ -86,7 +88,9 @@ Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理�
 
 模型可以有任意數量的字段、任何類型的字段 — 每個字段都表示我們要存放在我們的一個資料庫中的一欄數據(a column of data)。每筆資料庫記錄（列 row）將由每個字段值之一組成。我們來看看上面看到的例子。
 
-    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+```python
+my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+```
 
 在上面例子中，有個叫 `my_field_name` 的單一字段，其類型為 `models.CharField` — 這意味著這個字段將會包含字母、數字字符串。使用特定的類別分配字段類型，這些類別，決定了用於將數據存放在資料庫中的記錄的類型，以及從 HTML 表單接收到值（即構成有效值）時使用的驗證標準。字段類型還可以獲取參數，進一步指定字段如何存放或如何被使用。在這裡的情況下，我們給了字段兩個參數：
 
@@ -116,7 +120,7 @@ Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理�
 以下列表描述了一些更常用的字段類型。
 
 - [CharField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField) 是用來定義短到中等長度的字段字符串。你必須指定`max_length`要存儲的數據。
-- [TextField ](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField)用於大型任意長度的字符串。你可以`max_length`為該字段指定一個字段，但僅當該字段以表單顯示時才會使用（不會在數據庫級別強制執行）。
+- [TextField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField) 用於大型任意長度的字符串。你可以`max_length`為該字段指定一個字段，但僅當該字段以表單顯示時才會使用（不會在數據庫級別強制執行）。
 - [IntegerField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField) 是一個用於存儲整數（整數）值的字段，用於在表單中驗證輸入的值為整數。
 - [DateField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield) 和[DateTimeField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield) 用於存儲／表示日期和日期／時間信息（分別是`Python.datetime.date` 和 `datetime.datetime` 對象）。這些字段可以另外表明（互斥）參數 `auto_now=Ture` （在每次保存模型時將該字段設置為當前日期），`auto_now_add`（僅設置模型首次創建時的日期）和 `default`（設置默認日期，可以被用戶覆蓋）。
 - [EmailField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield) 用於存儲和驗證電子郵件地址。
@@ -402,8 +406,10 @@ class Author(models.Model):
 
 你的所有模型都建立好了，現在必須再次執行你的資料庫 migrations 指令來將這些修改內容更信到資料庫中。
 
-    python3 manage.py makemigrations
-    python3 manage.py migrate
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## 語言模型(Language model) — 挑戰
 

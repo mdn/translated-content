@@ -15,10 +15,10 @@ translation_of: 'Web/CSS/:visited'
 
 <h2 id="Übersicht">Übersicht</h2>
 
-<p>Die <code>:visited</code> <a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">Pseudoklasse</a> betrifft nur bereits besuchte Links. Die Stile können von weiteren Pseudoklassen überschrieben werden: {{ cssxref(":link") }}, {{ cssxref(":hover") }}, und {{ cssxref(":active") }}. Um nur besuchte Links auszuwählen, ist es deshalb wichtig, die <em>LVHA-Reihenfolge</em> einzuhalten: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+<p>Die <code>:visited</code> <a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">Pseudoklasse</a> betrifft nur bereits besuchte Links. Die Stile können von weiteren Pseudoklassen überschrieben werden: {{ cssxref(":link") }}, {{ cssxref(":hover") }}, und {{ cssxref(":active") }}. Um nur besuchte Links auszuwählen, ist es deshalb wichtig, die <em>LVHA-Reihenfolge</em> einzuhalten: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
 
-<div class="note style-wrap">
-<p><strong>Hinweis: </strong>Aus Datenschutzgründen ist der Einsatzbereich dieser Pseudoklasse auf die folgenden Eigenschaften begränzt: {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("column-rule-color") }}, <code>fill</code> und <code>stroke</code>. Beachte, dass auch der Alphakanal ignoriert wird: die Alphakomponente der nicht besuchten Regel wird stattdessen verwendet (außer, wenn die Deckkraft 0 ist. In diesem Fall wird die gesamte Farbe ignoriert und die Farbe der nicht besuchten Regel verwendet).</p>
+<div class="note">
+<p><strong>Hinweis:</strong> Aus Datenschutzgründen ist der Einsatzbereich dieser Pseudoklasse auf die folgenden Eigenschaften begränzt: {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("column-rule-color") }}, <code>fill</code> und <code>stroke</code>. Beachte, dass auch der Alphakanal ignoriert wird: die Alphakomponente der nicht besuchten Regel wird stattdessen verwendet (außer, wenn die Deckkraft 0 ist. In diesem Fall wird die gesamte Farbe ignoriert und die Farbe der nicht besuchten Regel verwendet).</p>
 
 <p>Da sich die Farbe ändern kann, liefert <code>getComputedStyle</code> immer den Wert von unbesuchten Links zurück.</p>
 
@@ -28,7 +28,7 @@ translation_of: 'Web/CSS/:visited'
 <h2 id="Beispiele">Beispiele</h2>
 
 <pre class="brush: css">a:visited { color: #4b2f89; }
-a:visited { background-color: white } </pre>
+a:visited { background-color: white } </pre>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 

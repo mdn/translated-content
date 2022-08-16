@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 
 
-<p>Die neuen <code>locales</code> und <code>options</code> Argumente ermöglichen es Anwendungen, sprachübliche Formatierungskonventionen zu benutzen und diese anzupassen. In älteren Implementierungen werden die <code>locales</code> und <code>options</code> Argumente ignoriert, und die Formatierung des Strings ist implementierungsabhängig.</p>
+<p>Die neuen <code>locales</code> und <code>options</code> Argumente ermöglichen es Anwendungen, sprachübliche Formatierungskonventionen zu benutzen und diese anzupassen. In älteren Implementierungen werden die <code>locales</code> und <code>options</code> Argumente ignoriert, und die Formatierung des Strings ist implementierungsabhängig.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 <h3 id="Einsatz_von_toLocaleString()">Einsatz von <code>toLocaleString()</code></h3>
 
-<p>Bei der Nutzung ohne Parameter wird der string in der Standardsprache ohne Optionen zurückgegeben:</p>
+<p>Bei der Nutzung ohne Parameter wird der string in der Standardsprache ohne Optionen zurückgegeben:</p>
 
 <pre class="brush: js">var number = 3500;
 
@@ -50,22 +50,22 @@ console.log(number.toLocaleString()); // Ausgabe: "3.500" wenn in Deutscher loca
 
 <h3 id="Unterstützung_für_locales_und_options_Argumente_prüfen">Unterstützung für <code>locales</code> und <code>options</code> Argumente prüfen</h3>
 
-<p>Die <code>locales</code> und <code>options</code> Argumente sind noch nicht in allen Browsern unterstützt. Zur Prüfung der Unterstützung von ES5.1 und neueren Implementierungen wird vorausgesetzt, dass unbekannte Sprachen zu einem {{jsxref("RangeError")}} führen, was folgendermaßen eingesetzt werden kann:</p>
+<p>Die <code>locales</code> und <code>options</code> Argumente sind noch nicht in allen Browsern unterstützt. Zur Prüfung der Unterstützung von ES5.1 und neueren Implementierungen wird vorausgesetzt, dass unbekannte Sprachen zu einem {{jsxref("RangeError")}} führen, was folgendermaßen eingesetzt werden kann:</p>
 
 <pre class="brush: js">function toLocaleStringSupportsLocales() {
-  var number = 0;
-  try {
-    number.toLocaleString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
+  var number = 0;
+  try {
+    number.toLocaleString('i');
+  } catch (e) {
+    return e.name === 'RangeError';
   }
   return false;
 }
 </pre>
 
-<p>Vor ES5.1 mussten die Implementierungen keinen {{jsxref("RangeError")}} erzeugen, wenn <code>toLocaleString</code>  mit Argumenten aufgerufen wurde.</p>
+<p>Vor ES5.1 mussten die Implementierungen keinen {{jsxref("RangeError")}} erzeugen, wenn <code>toLocaleString</code>  mit Argumenten aufgerufen wurde.</p>
 
-<p>Eine Prüfung, die in allen Browser funktioniert, auch in denen, die ECMA-262 vor ES5.1 unterstützen, ist die Prüfung auf Funktionen aus ECMA-402, welche Optionen in <code>Number.prototype.toLocaleString</code> direkt unterstützen:</p>
+<p>Eine Prüfung, die in allen Browser funktioniert, auch in denen, die ECMA-262 vor ES5.1 unterstützen, ist die Prüfung auf Funktionen aus ECMA-402, welche Optionen in <code>Number.prototype.toLocaleString</code> direkt unterstützen:</p>
 
 <pre class="brush: js">function toLocaleStringSupportsOptions() {
   return !!(typeof Intl == 'object' &amp;&amp; Intl &amp;&amp; typeof Intl.NumberFormat == 'function');
@@ -104,13 +104,13 @@ console.log(number.toLocaleString(['ban', 'id']));
 
 <h3 id="Einsatz_von_options">Einsatz von <code>options</code></h3>
 
-<p>Das Ergebnis von <code>toLocaleString</code>  kann durch das <code>options</code> Argument angepasst werden.</p>
+<p>Das Ergebnis von <code>toLocaleString</code>  kann durch das <code>options</code> Argument angepasst werden.</p>
 
 <pre class="brush: js">var number = 123456.789;
 
 // Währungsformat
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // Der Japanische Yen hat keine Unterwährung (z. B. Cent)
 console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
@@ -149,32 +149,32 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES Int 1.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

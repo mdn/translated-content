@@ -150,34 +150,34 @@ inputForm.focus();
 
 배열은 대괄호로 구성되며 쉼표로 구분 된 항목들을 포함합니다.
 
-1.  쇼핑 목록을 배열에 저장하고 싶다면 다음과 같이 하면 됩니다. 콘솔에 다음 행을 입력하십시오.
+1. 쇼핑 목록을 배열에 저장하고 싶다면 다음과 같이 하면 됩니다. 콘솔에 다음 행을 입력하십시오.
 
     ```js
     var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     shopping;
     ```
 
-2.  위의 예제에서, 각 원소는 문자열이지만, 우리는 다양한 데이터 유형을 배열에 저장할 수 있습니다 (문자열, 숫자, 개체, 다른 변수, 심지어 다른 배열). 동일한 형태의 항목만 넣거나 (아래 sequence 처럼) 다양한 형태의 항목을 함께 넣을 수 (아래 random 처럼) 있습니다. 모두 숫자, 문자열 등일 필요는 없습니다. 다음을 입력해보세요.
+2. 위의 예제에서, 각 원소는 문자열이지만, 우리는 다양한 데이터 유형을 배열에 저장할 수 있습니다 (문자열, 숫자, 개체, 다른 변수, 심지어 다른 배열). 동일한 형태의 항목만 넣거나 (아래 sequence 처럼) 다양한 형태의 항목을 함께 넣을 수 (아래 random 처럼) 있습니다. 모두 숫자, 문자열 등일 필요는 없습니다. 다음을 입력해보세요.
 
     ```js
     var sequence = [1, 1, 2, 3, 5, 8, 13];
     var random = ['tree', 795, [0, 1, 2]];
     ```
 
-3.  다음으로 넘어가기 전 여러분 마음대로 배열을 만들어 보세요.
+3. 다음으로 넘어가기 전 여러분 마음대로 배열을 만들어 보세요.
 
-### 배열 항목의 접근과 수정 
+### 배열 항목의 접근과 수정
 
 그런 다음 [문자열의 문자에 접근했던 것](https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
 
-1.  콘솔에 다음을 입력하세요:
+1. 콘솔에 다음을 입력하세요:
 
     ```js
     shopping[0];
     // returns "bread"
     ```
 
-2.  단일 배열 항목에 새 값을 제공하여, 배열의 항목을 수정할 수도 있습니다. 한번 해보세요:
+2. 단일 배열 항목에 새 값을 제공하여, 배열의 항목을 수정할 수도 있습니다. 한번 해보세요:
 
     ```js
     shopping[0] = 'tahini';
@@ -187,13 +187,13 @@ inputForm.focus();
 
     <div class="note"><strong>참고</strong>: 전에도 말했지만, 컴퓨터는 숫자를 셀 때 0부터 시작합니다!</div>
 
-3.  배열 내부의 배열을 다중배열(multidimensional array)이라고 합니다. 대괄호 두개를 함께 연결하여 다른 배열 안에있는 배열 내부의 항목에 접근 할 수 있습니다.예를 들어 `random` 배열 내부의 세 번째 원소에 접근하려면(앞 섹션 참조) 다음과 같이 할 수 있습니다:
+3. 배열 내부의 배열을 다중배열(multidimensional array)이라고 합니다. 대괄호 두개를 함께 연결하여 다른 배열 안에있는 배열 내부의 항목에 접근 할 수 있습니다.예를 들어 `random` 배열 내부의 세 번째 원소에 접근하려면(앞 섹션 참조) 다음과 같이 할 수 있습니다:
 
     ```js
     random[2][2];
     ```
 
-4.  다음 단계로 넘어가기 전에 충분히 배열 예제를 연습해 보세요.
+4. 다음 단계로 넘어가기 전에 충분히 배열 예제를 연습해 보세요.
 
 ### 배열의 갯수 알아내기
 
@@ -215,9 +215,9 @@ for (var i = 0; i < sequence.length; i++) {
 
 다음 문서에서 반복문에 대해서 자세히 다루겠지만, 간단히 말하자면, 이 코드는 다음을 말하고 있습니다.
 
-1.  배열의 원소 번호 0에서 반복을 시작합니다.
-2.  배열의 길이와 같은 원소 번호에서 반복을 멈춥니다. 이것은 어떠한 길이의 배열에서도 작동하지만, 이 경우에서는 원소 번호 7에서 반복을 멈춥니다 (마지막 원소(우리가 반복문이 포함하기를 원하는)는 번호 6이므로, 이것은 좋습니다.)
-3.  각 원소에 대해, `console.log()`로 브라우저 콘솔에 출력합니다.
+1. 배열의 원소 번호 0에서 반복을 시작합니다.
+2. 배열의 길이와 같은 원소 번호에서 반복을 멈춥니다. 이것은 어떠한 길이의 배열에서도 작동하지만, 이 경우에서는 원소 번호 7에서 반복을 멈춥니다 (마지막 원소(우리가 반복문이 포함하기를 원하는)는 번호 6이므로, 이것은 좋습니다.)
+3. 각 원소에 대해, `console.log()`로 브라우저 콘솔에 출력합니다.
 
 ## 유용한 배열 메서드
 
@@ -229,20 +229,20 @@ for (var i = 0; i < sequence.length; i++) {
 
 > **참고:** 사실 엄밀히 따지면 문자열 메서드지만, 배열과 함께 사용하기 때문에 여기에 넣었습니다.
 
-1.  {{jsxref("String.prototype.split()","split()")}} 메서드가 어떻게 작동하는지 살펴봅시다. 우선 콘솔에서 아래와 같은 문자열을 만듭니다:
+1. {{jsxref("String.prototype.split()","split()")}} 메서드가 어떻게 작동하는지 살펴봅시다. 우선 콘솔에서 아래와 같은 문자열을 만듭니다:
 
     ```js
     var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
-2.  콤마로 분리해 봅시다:
+2. 콤마로 분리해 봅시다:
 
     ```js
     var myArray = myData.split(',');
     myArray;
     ```
 
-3.  마지막으로 새로운 배열의 길이를 찾고 이 배열에서 몇 가지 항목을 검색해 봅시다:
+3. 마지막으로 새로운 배열의 길이를 찾고 이 배열에서 몇 가지 항목을 검색해 봅시다:
 
     ```js
     myArray.length;
@@ -251,14 +251,14 @@ for (var i = 0; i < sequence.length; i++) {
     myArray[myArray.length-1]; // the last item in the array
     ```
 
-4.  또한 아래 방법처럼 {{jsxref("Array.prototype.join()","join()")}} 메서드를 사용하여 배열을 다시 문자열로 만들 수 있습니다:
+4. 또한 아래 방법처럼 {{jsxref("Array.prototype.join()","join()")}} 메서드를 사용하여 배열을 다시 문자열로 만들 수 있습니다:
 
     ```js
     var myNewString = myArray.join(',');
     myNewString;
     ```
 
-5.  배열을 문자열로 변환하는 또 다른 방법은 {{jsxref("Array.prototype.toString()","toString()")}} 메서드를 사용하는 것입니다. `toString()` 은 `join()` 과 달리 매개변수가 필요없어서 더 간단하지만, 더 많은 제한이 있습니다. `join()` 을 사용하면 다른 구분자를 지정할 수 있지만, `toString()` 은 항상 콤마를 사용합니다. (콤마 말고 다른 매개변수를 사용하여 4단계를 실행해 보세요.)
+5. 배열을 문자열로 변환하는 또 다른 방법은 {{jsxref("Array.prototype.toString()","toString()")}} 메서드를 사용하는 것입니다. `toString()` 은 `join()` 과 달리 매개변수가 필요없어서 더 간단하지만, 더 많은 제한이 있습니다. `join()` 을 사용하면 다른 구분자를 지정할 수 있지만, `toString()` 은 항상 콤마를 사용합니다. (콤마 말고 다른 매개변수를 사용하여 4단계를 실행해 보세요.)
 
     ```js
     var dogNames = ['Rocket','Flash','Bella','Slugger'];
@@ -275,7 +275,7 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 먼저, 배열의 맨 끝에 원소를 추가하거나 제거하기 위해 각각 {{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} 를 사용할 수 있습니다.
 
-1.  먼저 `push()` 를 사용합니다. — 배열의 끝에 추가할 원소를 반드시 하나 이상 포함해야 한다는 점을 기억하고 아래와 같이 따라해보세요:
+1. 먼저 `push()` 를 사용합니다. — 배열의 끝에 추가할 원소를 반드시 하나 이상 포함해야 한다는 점을 기억하고 아래와 같이 따라해보세요:
 
     ```js
     myArray.push('Cardiff');
@@ -284,7 +284,7 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     myArray;
     ```
 
-2.  메서드 호출이 완료되면 배열의 새 길이가 리턴됩니다. 만약 새 배열의 길이를 변수에 저장하고 싶다면, 다음과 같이 할 수 있습니다:
+2. 메서드 호출이 완료되면 배열의 새 길이가 리턴됩니다. 만약 새 배열의 길이를 변수에 저장하고 싶다면, 다음과 같이 할 수 있습니다:
 
     ```js
     var newLength = myArray.push('Bristol');
@@ -292,13 +292,13 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     newLength;
     ```
 
-3.  배열의 마지막 원소를 제거하는 방법은 `pop()`으로 매우 간단합니다. 아래와 같이 따라해 보세요:
+3. 배열의 마지막 원소를 제거하는 방법은 `pop()`으로 매우 간단합니다. 아래와 같이 따라해 보세요:
 
     ```js
     myArray.pop();
     ```
 
-4.  메서드 호출이 완료되면 제거된 원소가 리턴됩니다. 이 원소를 새 변수에 저장하기 위해서, 다음과 같이 할 수 있습니다:
+4. 메서드 호출이 완료되면 제거된 원소가 리턴됩니다. 이 원소를 새 변수에 저장하기 위해서, 다음과 같이 할 수 있습니다:
 
     ```js
     var removedItem = myArray.pop();
@@ -308,14 +308,14 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} 와{{jsxref("Array.prototype.shift()","shift()")}}는 `push()` 와 `pop()`과 완전히 동일하게 동작합니다. 다만, 배열의 맨 끝이 아닌 제일 처음 부분의 원소를 추가하거나 제거합니다.
 
-1.  먼저 `unshift()` 를 사용해봅시다:
+1. 먼저 `unshift()` 를 사용해봅시다:
 
     ```js
     myArray.unshift('Edinburgh');
     myArray;
     ```
 
-2.  이제 `shift()`를 사용해봅시다!
+2. 이제 `shift()`를 사용해봅시다!
 
     ```js
     var removedItem = myArray.shift();
@@ -327,12 +327,12 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 앞에서 설명했던 예제로 돌아가 봅시다. 상품의 이름과 가격을 청구서에 출력하고, 가격의 합계를 내서 그것을 밑에 출력합니다. 아래의 수정 가능한 예제에, 숫자를 포함하고 있는 주석이 있습니다. 각 줄은 코드에 추가할 장소를 표시하고 있습니다. 그것들은 다음과 같습니다.
 
-1.  아래의 `// number 1` 주석은 몇 개의 문자열인데, 각 문자열은 상품의 이름과 가격을 포함하고 있고 콜론에 의해 분리되어 있습니다. 우리는 당신이 이것을 `products`라는 배열으로 바꾸고 이곳에 이것을 저장하기를 원합니다.
-2.  `// number 2` 주석이 있는 같은 라인에서는 for 반복문이 시작됩니다. 이 라인에서 우리는 현재 `i <= 0`를 가지고 있는데, 이 조건 테스트(conditional test)는 "`i`가 더 이상 0보다 작거나 같지 않을 때 멈추시오"라고 말하고 있고, `i`는 0에서 시작하기 때문에, 이는 [for 반복문](/ko/docs/Learn/JavaScript/First_steps/A_first_splash#Loops)이 즉시 멈추는 것을 유발하는 조건 테스트입니다. 우리는 당신이 이것을 `i`가 `products`배열의 길이(length)보다 더 이상 작지 않을 때 반복을 멈추게 하는 조건 테스트로 바꾸기를 원합니다.
-3.  `// number 3` 주석 바로 아래에서 우리는 당신이 현재 배열의 원소를, 한 개는 단순히 이름을 포함하고 한 개는 단순히 가격을 포함하는 두 개의 원소로 분리하는 한 줄의 코드를 작성하기를 원합니다. 만약 당신이 이것을 어떻게 하는지 확실히 알지 못한다면, [유용한 문자열 메서드(Useful string methods)](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)를 도움을 위해 참고하거나, 더 나은 정보를 원한다면, 이 글의 [문자열과 배열 전환하기](#문자열과_배열_전환하기) 부분을 참고하세요.
-4.  상기 코드 라인의 부분으로써, 당신은 또한 가격을 문자열에서 숫자로 전환하기를 원할 것입니다. 만약 당신이 어떻게 이것을 하는지 기억하지 못한다면, [첫번째 문자열 문서](/ko/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings)를 살펴보세요.
-5.  만들어지고 0의 값이 주어진 `total`이라는 변수가 코드의 위쪽에 있습니다. 이 반복문 안에서 (`// number 4` 아래) 우리는 당신이 현재 상품의 가격을 반복문의 각 반복마다 총액(total)에 합하는 코드 한 줄을 추가해서, 코드의 끝에서 올바른 총액이 청구서에 인쇄되도록 하기를 원합니다. 당신은 이것을 하기 위해 [대입 연산자(assignment operator)](/ko/docs/Learn/JavaScript/First_steps/Math#Assignment_operators)가 필요할지도 모릅니다.
-6.  `itemText` 변수가 "current item name — $current item price"와 같이 만들어지도록, 예를 들자면 각각의 경우에 "Shoes — $23.99" 처럼 만들어지도록 우리는 당신이 `// number 5` 바로 아래의 줄을 변경해서, 각각의 물품에 대한 올바른 정보가 청구서에 출력되도록 하기를 원합니다. 이것은, 당신에게 친숙할지도 모르는, 단지 단순한 문자열 연결(concatenation)입니다.
+1. 아래의 `// number 1` 주석은 몇 개의 문자열인데, 각 문자열은 상품의 이름과 가격을 포함하고 있고 콜론에 의해 분리되어 있습니다. 우리는 당신이 이것을 `products`라는 배열으로 바꾸고 이곳에 이것을 저장하기를 원합니다.
+2. `// number 2` 주석이 있는 같은 라인에서는 for 반복문이 시작됩니다. 이 라인에서 우리는 현재 `i <= 0`를 가지고 있는데, 이 조건 테스트(conditional test)는 "`i`가 더 이상 0보다 작거나 같지 않을 때 멈추시오"라고 말하고 있고, `i`는 0에서 시작하기 때문에, 이는 [for 반복문](/ko/docs/Learn/JavaScript/First_steps/A_first_splash#Loops)이 즉시 멈추는 것을 유발하는 조건 테스트입니다. 우리는 당신이 이것을 `i`가 `products`배열의 길이(length)보다 더 이상 작지 않을 때 반복을 멈추게 하는 조건 테스트로 바꾸기를 원합니다.
+3. `// number 3` 주석 바로 아래에서 우리는 당신이 현재 배열의 원소를, 한 개는 단순히 이름을 포함하고 한 개는 단순히 가격을 포함하는 두 개의 원소로 분리하는 한 줄의 코드를 작성하기를 원합니다. 만약 당신이 이것을 어떻게 하는지 확실히 알지 못한다면, [유용한 문자열 메서드(Useful string methods)](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)를 도움을 위해 참고하거나, 더 나은 정보를 원한다면, 이 글의 [문자열과 배열 전환하기](#문자열과_배열_전환하기) 부분을 참고하세요.
+4. 상기 코드 라인의 부분으로써, 당신은 또한 가격을 문자열에서 숫자로 전환하기를 원할 것입니다. 만약 당신이 어떻게 이것을 하는지 기억하지 못한다면, [첫번째 문자열 문서](/ko/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings)를 살펴보세요.
+5. 만들어지고 0의 값이 주어진 `total`이라는 변수가 코드의 위쪽에 있습니다. 이 반복문 안에서 (`// number 4` 아래) 우리는 당신이 현재 상품의 가격을 반복문의 각 반복마다 총액(total)에 합하는 코드 한 줄을 추가해서, 코드의 끝에서 올바른 총액이 청구서에 인쇄되도록 하기를 원합니다. 당신은 이것을 하기 위해 [대입 연산자(assignment operator)](/ko/docs/Learn/JavaScript/First_steps/Math#Assignment_operators)가 필요할지도 모릅니다.
+6. `itemText` 변수가 "current item name — $current item price"와 같이 만들어지도록, 예를 들자면 각각의 경우에 "Shoes — $23.99" 처럼 만들어지도록 우리는 당신이 `// number 5` 바로 아래의 줄을 변경해서, 각각의 물품에 대한 올바른 정보가 청구서에 출력되도록 하기를 원합니다. 이것은, 당신에게 친숙할지도 모르는, 단지 단순한 문자열 연결(concatenation)입니다.
 
 <div class="hidden"><h6 id="Playable_code">Playable code</h6><pre class="brush: html">&#x3C;h2>Live output&#x3C;/h2>
 
@@ -491,8 +491,8 @@ background-color: #f5f9fa;
 
 앱을 완성하기 위해, 우리는 당신이 다음을 하기를 필요로 합니다.
 
-1.  `// number 1` 주석 밑에 배열의 시작에 검색 입력(input)에 입력된 현재 값을 추가하는 코드를 추가하세요. 이것은 `searchInput.value`를 사용하여 탐색될 수 있습니다.
-2.  `// number 2` 주석 밑에 현재 배열의 끝에 있는 값을 제거하는 코드를 추가하세요.
+1. `// number 1` 주석 밑에 배열의 시작에 검색 입력(input)에 입력된 현재 값을 추가하는 코드를 추가하세요. 이것은 `searchInput.value`를 사용하여 탐색될 수 있습니다.
+2. `// number 2` 주석 밑에 현재 배열의 끝에 있는 값을 제거하는 코드를 추가하세요.
 
 <div class="hidden"><h6 id="Playable_code_2">Playable code 2</h6><pre class="brush: html">&#x3C;h2>Live output&#x3C;/h2>
 &#x3C;div class="output" style="min-height: 150px;">

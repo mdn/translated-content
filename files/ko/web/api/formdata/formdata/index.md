@@ -19,7 +19,7 @@ var formData = new FormData(form)
 
 ### Parameters
 
-- `form `{{optional_inline}}
+- `form` {{optional_inline}}
   - : HTML {{HTMLElement("form")}} 요소 — 지정된 경우 {{domxref("FormData")}} 객체는 form의 현재 key/value 들로 채워집니다. key/value는 submit한 각 요소의 name property와 value를 사용합니다. 또한 파일 입력 내용을 인코딩합니다.
 
 ## Example
@@ -74,6 +74,6 @@ formData = new FormData(myForm);
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

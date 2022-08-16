@@ -1,7 +1,6 @@
 ---
 title: CDN
 slug: Glossary/CDN
-translation_of: Glossary/CDN
 ---
 **CDN** (内容分发网络) 指的是一组分布在各个地区的服务器。这些服务器存储着数据的副本，因此服务器可以根据哪些服务器与用户距离最近，来满足数据的请求。 CDNs 提供快速服务，较少受高流量影响。
 

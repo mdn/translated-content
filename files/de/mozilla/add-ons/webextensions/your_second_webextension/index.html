@@ -16,12 +16,12 @@ original_slug: Mozilla/Add-ons/WebExtensions/Deine_zweite_Erweiterung
  <li><strong>eine <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Browser_action">Browser-Aktion</a> definieren, die zur Firefox-Toolbar hinzugefügt werden wird.</strong><br>
   Für die Schaltfläche benötigen wir:
   <ul>
-   <li>ein Icon namens "beasts-32.png"</li>
-   <li>Ein Popup welches sich öffnet, sobald der Nutzer auf die Schaltfläche klickt. Das Popup wird <a href="https://developer.mozilla.org/de/docs/Glossary/HTML">HTML</a>, <a href="https://developer.mozilla.org/de/docs/Glossary/CSS">CSS</a>, und <a href="https://developer.mozilla.org/de/docs/Glossary/JavaScript">JavaScript</a> beinhalten.</li>
+   <li>ein Icon namens "beasts-32.png"</li>
+   <li>Ein Popup welches sich öffnet, sobald der Nutzer auf die Schaltfläche klickt. Das Popup wird <a href="https://developer.mozilla.org/de/docs/Glossary/HTML">HTML</a>, <a href="https://developer.mozilla.org/de/docs/Glossary/CSS">CSS</a>, und <a href="https://developer.mozilla.org/de/docs/Glossary/JavaScript">JavaScript</a> beinhalten.</li>
   </ul>
  </li>
  <li><strong>ein Icon festlegen</strong>, genannt "beasts-48.png". Dieses wird im Addon-Manager angezeigt werden.</li>
- <li><strong>Ein content-script "beastify.js" schreiben, welches auf Webseiten angezeigt werden wird.</strong><br>
+ <li><strong>Ein content-script "beastify.js" schreiben, welches auf Webseiten angezeigt werden wird.</strong><br>
   Das ist der Code, der letztendlich die Webseite verändert.</li>
  <li><strong>Einige Tier-Bilder einfügen, um die Bilder auf der Webseite zu ersetzen</strong><br>
   Die Bilder werden "web-abrufbare Ressourcen" werden, sodass die Webseite sie abrufen kann.</li>
@@ -31,11 +31,11 @@ original_slug: Mozilla/Add-ons/WebExtensions/Deine_zweite_Erweiterung
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13671/Untitled-1.png" style="display: block; height: 1200px; margin-left: auto; margin-right: auto; width: 860px;"></p>
 
-<p>Es ist eine einfache Erweiterung, aber es zeigt viele der Grundkonzepte der WebExtensions API:</p>
+<p>Es ist eine einfache Erweiterung, aber es zeigt viele der Grundkonzepte der WebExtensions API:</p>
 
 <ul>
  <li>Hinzufügen einer Schaltfläche zur Toolbar</li>
- <li>Erstellen eines Popup-Menüs mit HTML, CSS, und JavaScript</li>
+ <li>Erstellen eines Popup-Menüs mit HTML, CSS, und JavaScript</li>
  <li>Verändern des Webseiteninhalts</li>
  <li>Kommunikation zwischen dem content-script und dem Rest der Erweiterung</li>
  <li>Verpacken von Ressourcen, die später auf der Webseite genutzt werden können.</li>
@@ -88,10 +88,10 @@ cd beastify</pre>
 </pre>
 
 <ul>
- <li>Die ersten drei Eigenschaften <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, und <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code> sind erforderlich und enthalten Basismetadaten.</li>
+ <li>Die ersten drei Eigenschaften <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, und <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code> sind erforderlich und enthalten Basismetadaten.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> und <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> sind optional aber empfohlen, sie erhalten nützliche Informationen.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> ist optional aber empfohlen, hier kannst du ein Icon festlegen, welches im Addon-Manager angezeigt werden wird.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> listet die Berechtigungen auf, die die Erweiterung benötigt. Hier brauchen wir nur die <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab Berechtigung</a>.</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> listet die Berechtigungen auf, die die Erweiterung benötigt. Hier brauchen wir nur die <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab Berechtigung</a>.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> spezifiziert die Schaltfläche. Hier übergeben wir drei Informationen:
   <ul>
    <li><code>default_icon</code> ist notwendig, und gibt das Icon der Schaltfläche an</li>
@@ -99,7 +99,7 @@ cd beastify</pre>
    <li><code>default_popup</code> wird verwendet, wenn ein Popup angezeigt werden soll, sobald der Nutzer auf die Schaltfläche klickt. Das soll so sein, deshalb wird hier die Eigenschaft mit einer HTML-Datei belegt.</li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> listet die Dateien auf, die auf Webseiten verwendet werden solllen. Weil die Erweiterung den Inhalt der Webseite mit den Bilder, die der Erweiterung hinzugefügt wurden, verändern soll, müssen die Bilder hier aufgelistet werden.</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> listet die Dateien auf, die auf Webseiten verwendet werden solllen. Weil die Erweiterung den Inhalt der Webseite mit den Bilder, die der Erweiterung hinzugefügt wurden, verändern soll, müssen die Bilder hier aufgelistet werden.</li>
 </ul>
 
 <p>Beachte, dass alle Pfade relativ zur manifest.json angegeben werden.</p>
@@ -108,7 +108,7 @@ cd beastify</pre>
 
 <p>Die Erweiterung soll ein Icon beinhalten, das neben dem Eintrag der Erweiterung in der Add-ons-Verwaltung angezeigt wird (diese kannst du durch Aufrufen der URL "about:addons" öffnen). In manifest.json haben wir festgelegt, dass wir ein Icon für die Toolbar unter "icons/beasts-48.png" bereitstellen.</p>
 
-<p>Erstelle das "icons"-Verzeichnis and speichere dort das Icon namens "beasts-48.png".  Du kannst das <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png">Icon aus unserem Beispiel</a> verwenden, welches aus dem <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina Icon-Set</a> stammt und gemäß seiner <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">Lizenzbestimmungen</a> genutzt wird.</p>
+<p>Erstelle das "icons"-Verzeichnis and speichere dort das Icon namens "beasts-48.png".  Du kannst das <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png">Icon aus unserem Beispiel</a> verwenden, welches aus dem <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina Icon-Set</a> stammt und gemäß seiner <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">Lizenzbestimmungen</a> genutzt wird.</p>
 
 <p>Wenn du dich entscheidest, ein eigenes Icon zu verwenden, sollte es eine Auflösung von 48x48 Pixeln besitzen. Zusätzlich kannst du ein 96x96 Pixel großes Icon für hochaufgelöste Bildschirme bereitstellen. In diesem Fall wird es unter der Eigenschaft <code>96</code> des <code>icons</code> Objekts in manifest.json aufgeführt:</p>
 
@@ -150,10 +150,10 @@ cd beastify</pre>
   &lt;/head&gt;
 
   &lt;body&gt;
-    &lt;div class="button beast"&gt;Frog&lt;/div&gt;
-    &lt;div class="button beast"&gt;Turtle&lt;/div&gt;
-    &lt;div class="button beast"&gt;Snake&lt;/div&gt;
-    &lt;div class="button clear"&gt;Reset&lt;/div&gt;
+    &lt;div class="button beast"&gt;Frog&lt;/div&gt;
+    &lt;div class="button beast"&gt;Turtle&lt;/div&gt;
+    &lt;div class="button beast"&gt;Snake&lt;/div&gt;
+    &lt;div class="button clear"&gt;Reset&lt;/div&gt;
 
     &lt;script src="choose_beast.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
@@ -303,7 +303,7 @@ browser.runtime.onMessage.addListener(beastify);
 
 <ul>
  <li>removes every element in the <code>document.body</code></li>
- <li>creates an <code>&lt;img&gt;</code> element pointing to the given URL, and inserts it into the DOM</li>
+ <li>creates an <code>&lt;img&gt;</code> element pointing to the given URL, and inserts it into the DOM</li>
  <li>removes the message listener.</li>
 </ul>
 

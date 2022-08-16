@@ -92,10 +92,10 @@ ball.draw();
 <p>Ohne jede gebundene Kollisionsüberprüfung fliegt unser Ball schnell aus dem Canvas. Wir müssen die <code>x</code> - und <code>y</code>position von dem Ball überprüfen und wenn der Ball außerhalb des Canvas ist, die Richtung der Geschwindigkeitsvektoren umkehren.</p>
 
 <pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
-  ball.vy = -ball.vy;
+  ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
-  ball.vx = -ball.vx;
+  ball.vx = -ball.vx;
 }</pre>
 
 <h3 id="Erste_Demo">Erste Demo</h3>
@@ -225,7 +225,7 @@ ball.draw();</pre>
 
 <h2 id="Spureneffekt">Spureneffekt</h2>
 
-<p>Bis jetzt haben wir die {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}  - Methode benutzt, wenn wir Frames clearten. Wenn Sie diese Methode durch {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} ersetzen, können Sie einfach einen Spureneffekt erzeugen.</p>
+<p>Bis jetzt haben wir die {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}  - Methode benutzt, wenn wir Frames clearten. Wenn Sie diese Methode durch {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} ersetzen, können Sie einfach einen Spureneffekt erzeugen.</p>
 
 <pre class="brush: js">ctx.fillStyle = 'rgba(255,255,255,0.3)';
 ctx.fillRect(0,0,canvas.width,canvas.height);</pre>

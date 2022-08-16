@@ -24,9 +24,9 @@ tag `string text ${expression} string text`
 
 <p>Template-Strings sind anstelle von doppelten bzw. einfachen Anführungszeichen in zwei Akzente Gravis <code>`</code> (Französisch: accent grave, Englisch: backtick) eingeschlossen.</p>
 
-<p>Sie können Platzhalter beinhalten, die durch das Dollarsymbol gefolgt von geschweiften Klammern gekennzeichnet sind (<code>${expression}</code>). Auf diese Weise dienen sie als Vorlagen (Englisch: template), die, zentral definiert, während des Programmablaufs an verschiedenen Stellen individuell eingesetzt werden können.</p>
+<p>Sie können Platzhalter beinhalten, die durch das Dollarsymbol gefolgt von geschweiften Klammern gekennzeichnet sind (<code>${expression}</code>). Auf diese Weise dienen sie als Vorlagen (Englisch: template), die, zentral definiert, während des Programmablaufs an verschiedenen Stellen individuell eingesetzt werden können.</p>
 
-<p>Die Ausdrücke in den Platzhaltern sowie der Text selbst können an eine optionale Funktion übergeben werden. Falls vor dem Template-String ein Ausdruck vorhanden ist (hier als <code>tag</code> bezeichnet), wird der Template-String „Tagged Template String“ genannt. In diesem Fall wird der <code>tag</code>-Ausdruck (üblicherweise eine Funktion) mit dem verarbeiteten Template-String aufgerufen, um den Text vor der Ausgabe zu bearbeiten.</p>
+<p>Die Ausdrücke in den Platzhaltern sowie der Text selbst können an eine optionale Funktion übergeben werden. Falls vor dem Template-String ein Ausdruck vorhanden ist (hier als <code>tag</code> bezeichnet), wird der Template-String „Tagged Template String“ genannt. In diesem Fall wird der <code>tag</code>-Ausdruck (üblicherweise eine Funktion) mit dem verarbeiteten Template-String aufgerufen, um den Text vor der Ausgabe zu bearbeiten.</p>
 
 <p>Ein Gravis kann in einen Template-String durch Maskieren mit dem Rückstrich <code>\</code> eingefügt werden:</p>
 
@@ -54,7 +54,7 @@ console.log("string text line 1\n" +
 "string text line 2");
 </pre>
 
-<p>Das gleiche Ergebnis kann mit Template-Strings einfacher und übersichtlicher erreicht werden, indem der Text so, wie er erscheinen soll, über mehrere Zeilen geschrieben wird:</p>
+<p>Das gleiche Ergebnis kann mit Template-Strings einfacher und übersichtlicher erreicht werden, indem der Text so, wie er erscheinen soll, über mehrere Zeilen geschrieben wird:</p>
 
 <pre class="brush: js">console.log(`string text line 1
 string text line 2`);
@@ -73,7 +73,7 @@ console.log("Fifteen is " + (a + b) + " and\nnot " + (2 * a + b) + ".");
 // Fifteen is 15 and
 // not 20.</pre>
 
-<p>Mit Template-Strings können nun die syntaktischen Vorteile genutzt werden um solche Ersetzungen leserlicher zu machen:</p>
+<p>Mit Template-Strings können nun die syntaktischen Vorteile genutzt werden um solche Ersetzungen leserlicher zu machen:</p>
 
 <pre class="brush: js">var a = 5;
 var b = 10;
@@ -94,7 +94,7 @@ not ${2 * a + b}.`);
 <pre class="brush: js">let classes = 'header';
 classes += (isLargeScreen() ?
   '' : item.isCollapsed ?
-    ' icon-expander' : ' icon-collapser');
+    ' icon-expander' : ' icon-collapser');
 </pre>
 
 <p>Eine nicht verschachtelte Vorlage mit ECMAScript 2015:</p>
@@ -105,13 +105,13 @@ classes += (isLargeScreen() ?
 <p>Verschachtelte Vorlage mit ECMAScript 2015:</p>
 
 <pre class="brush: js">const classes = `header ${ isLargeScreen() ? '' :
-  `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;</pre>
+  `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;</pre>
 
 <h3 id="Tagged_Template-Strings">Tagged Template-Strings</h3>
 
-<p>Eine erweiterte Form der Template-Strings sind <em>Tagged</em> Template-Strings. Mit ihnen kann die Ausgabe von Template-Strings mit einer Funktion ändern.</p>
+<p>Eine erweiterte Form der Template-Strings sind <em>Tagged</em> Template-Strings. Mit ihnen kann die Ausgabe von Template-Strings mit einer Funktion ändern.</p>
 
-<p>Das erste Argument enthält ein Array von Strings ("Hello" und "world" in diesem Beispiel). Alle Argumente nach dem ersten sind die Werte der verarbeiteten (manchmal auch <em>cooked </em>genannt, „vorgekocht“) Ausdrücke (hier: "15" und "50").</p>
+<p>Das erste Argument enthält ein Array von Strings ("Hello" und "world" in diesem Beispiel). Alle Argumente nach dem ersten sind die Werte der verarbeiteten (manchmal auch <em>cooked </em>genannt, „vorgekocht“) Ausdrücke (hier: "15" und "50").</p>
 
 <p>Im folgenden Beispiel heißt die Funktion <code>tag</code>, was aber keinen besonderen Grund hat, da sie jeden gewünschten Namen haben kann.</p>
 
@@ -148,22 +148,22 @@ tag`Hello ${ a + b } world ${ a * b}`;
 var t1Closure = template`${0}${1}${0}!`;
 t1Closure('Y', 'A');  // "YAY!"
 </code><code>var t2Closure = template`${0} ${'foo'}!`;
-t2Closure('Hello', {foo: 'World'});  // "Hello World!"</code>
+t2Closure('Hello', {foo: 'World'});  // "Hello World!"</code>
 </pre>
 
 <h3 id="Raw_Strings">Raw Strings</h3>
 
-<p>Die Eigenschaft raw, verfügbar für das erste Argument eines Tagged Template-Strings, erlaubt den Zugriff auf den unverarbeiteten String, also ohne <a href="/de/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings">Escape-Sequenzen</a> auszuwerten.</p>
+<p>Die Eigenschaft raw, verfügbar für das erste Argument eines Tagged Template-Strings, erlaubt den Zugriff auf den unverarbeiteten String, also ohne <a href="/de/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings">Escape-Sequenzen</a> auszuwerten.</p>
 
 <pre class="brush: js"><code class="language-js">function tag(strings, ...values) {
   console.log(strings.raw[0]);
-  // "string text line 1 \\n string text line 2"
+  // "string text line 1 \\n string text line 2"
 }
 
 tag`string text line 1 \n string text line 2`;
 </code></pre>
 
-<p>Zusätzlich exisitert die Methode {{jsxref("String.raw()")}} um unverarbeitete Strings zu erstellen, genauso wie sie die vorgegebene Template-Funktion und String-Verknüpfung erstellen würde.</p>
+<p>Zusätzlich exisitert die Methode {{jsxref("String.raw()")}} um unverarbeitete Strings zu erstellen, genauso wie sie die vorgegebene Template-Funktion und String-Verknüpfung erstellen würde.</p>
 
 <pre class="brush: js"><code class="language-js">String.raw`Hi\n${2+3}!`;
 // "Hi\\n5!"
@@ -198,7 +198,7 @@ console.warn(a); // 30
   <tr>
    <td>{{SpecName('ES6', '#sec-template-literals', 'Template Literals')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>Erste Definition. Definiert in mehreren Abschnitten der Spezifikation: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals">Template Literals</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-tagged-templates">Tagged Templates</a></td>
+   <td>Erste Definition. Definiert in mehreren Abschnitten der Spezifikation: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals">Template Literals</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-tagged-templates">Tagged Templates</a></td>
   </tr>
  </tbody>
 </table>

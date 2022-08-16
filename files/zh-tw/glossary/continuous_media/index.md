@@ -1,10 +1,6 @@
 ---
 title: Continuous Media
 slug: Glossary/Continuous_Media
-tags:
-  - CSS
-  - Media
-translation_of: Glossary/Continuous_Media
 ---
 CSS 可以用在許多不同的地方，印刷媒體便是一種。有些排版用的 CSS 會因為所處環境的不同而有不一樣的效果。
 

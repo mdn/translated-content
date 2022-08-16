@@ -24,8 +24,7 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 
 <dl>
  <dt><code>locales</code></dt>
- <dd>Optional. Ein String mit einem BCP 47 Sprachcode, oder einem Array von Sprachcodes. Für die generelle Form und Interpretation des <code>locales</code> Arguments siehe auf der {{jsxref("Global_Objects/Intl", "Intl Seite", "#Locale_identification_and_negotiation", 1)}}. Die folgenden  Unicode Erweiterungen sind erlaubt:</dd>
- <dd>
+ <dd>Optional. Ein String mit einem BCP 47 Sprachcode, oder einem Array von Sprachcodes. Für die generelle Form und Interpretation des <code>locales</code> Arguments siehe auf der {{jsxref("Global_Objects/Intl", "Intl Seite", "#Locale_identification_and_negotiation", 1)}}. Die folgenden  Unicode Erweiterungen sind erlaubt: <br/><br/>
  <dl>
   <dt><code>nu</code></dt>
   <dd>Zahlensysteme. Mögliche Werte sind: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
@@ -45,9 +44,9 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
   <dt><code>timeZone</code></dt>
   <dd>Die eingesetzte Zeitzone. Der einzige Wert, den alle Implementierungen verstehen ist <code>"UTC"</code>. Der Standardwert ist die Standard-Laufzeitzeitzone. Manche Implementierungen erkennen auch die Namen der <a href="https://www.iana.org/time-zones">IANA Zeitzonendatenbank</a>, wie zum Beispiel <code>"Asia/Shanghai"</code>, <code>"Asia/Kolkata"</code> und <code>"America/New_York"</code>.</dd>
   <dt><code>hour12</code></dt>
-  <dd>Wird eingesetzt, wenn 12-Stunden Zeitangaben eingesetzt werden (im gegensatz zu 24-Stunden Zeitangaben). Mögliche Werte sind <code>true</code> und <code>false</code>. Diese Option überschreibt den  <code>hc</code> Sprachen-Tag und/oder <code>hourCycle</code> wenn beide vorhanden sind.</dd>
+  <dd>Wird eingesetzt, wenn 12-Stunden Zeitangaben eingesetzt werden (im gegensatz zu 24-Stunden Zeitangaben). Mögliche Werte sind <code>true</code> und <code>false</code>. Diese Option überschreibt den  <code>hc</code> Sprachen-Tag und/oder <code>hourCycle</code> wenn beide vorhanden sind.</dd>
   <dt><code>hourCycle</code></dt>
-  <dd>Der eingesetzte Stundenzyklus. Mögliche Werte sind <code>"h11"</code>, <code>"h12"</code>, <code>"h23"</code> oder <code>"h24"</code>. Diese Option überschreibt den  <code>hc</code> Sprachen-Tag, wenn beide präsent sind und die <code>hour12</code> Option hat Vorrang, wenn beide Optionen spezifiziert sind.</dd>
+  <dd>Der eingesetzte Stundenzyklus. Mögliche Werte sind <code>"h11"</code>, <code>"h12"</code>, <code>"h23"</code> oder <code>"h24"</code>. Diese Option überschreibt den  <code>hc</code> Sprachen-Tag, wenn beide präsent sind und die <code>hour12</code> Option hat Vorrang, wenn beide Optionen spezifiziert sind.</dd>
   <dt><code>formatMatcher</code></dt>
   <dd>Der eingesetzte Formaterkennungsalgorithmus. Mögliche Werte sind <code>"basic"</code> und <code>"best fit"</code>. Der Standard ist <code>"best fit"</code>. Siehe folgenden Absatz, um den Einsatz dieses Parameters zu verstehen.</dd>
  </dl>
@@ -64,7 +63,7 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
   <li><code>Stunde, Minute</code></li>
  </ul>
 
- <p>Manche Implementierungen unterstützen weitere Kombinationen der Parameter. Es wird immer auf alle möglichen Kombinationen geprüft, um den besten Treffer zu landen. Zwei Algorithmen sind für die Auswahl der Kombination vorhanden: Ein <a href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">voll spezifizierter <code>"basic"</code> Algorithmus</a> und ein implementierungsabhängiger <code>"best fit"</code> Algorithmus.</p>
+ <p>Manche Implementierungen unterstützen weitere Kombinationen der Parameter. Es wird immer auf alle möglichen Kombinationen geprüft, um den besten Treffer zu landen. Zwei Algorithmen sind für die Auswahl der Kombination vorhanden: Ein <a href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">voll spezifizierter <code>"basic"</code> Algorithmus</a> und ein implementierungsabhängiger <code>"best fit"</code> Algorithmus.</p>
 
  <dl>
   <dt><code>weekday</code></dt>
@@ -225,12 +224,12 @@ console.log(new Intl.DateTimeFormat('en-US', options).format(date));
   <tr>
    <td>{{SpecName('ES Int 2.0', '#sec-12.1', 'Intl.DateTimeFormat')}}</td>
    <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int Draft', '#datetimeformat-objects', 'Intl.DateTimeFormat')}}</td>
    <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

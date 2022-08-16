@@ -154,7 +154,7 @@ for (var i = 1; i &lt;= 5; i++) {
   var item = document.createElement("li");
   item.appendChild(document.createTextNode("Item " + i));
 
-  let j = i;
+  let j = i;
   item.onclick = function (ev) {
     console.log("Item " + j + " is clicked.");
   };
@@ -187,8 +187,8 @@ for (var i = 1; i &lt;= 5; i++) {
 
 <h3 id="Ein_weiteres_Beispiel_zeitweilig_toter_Zonen_mit_lexikalischen_Gültigkeitsbereichen">Ein weiteres Beispiel zeitweilig toter Zonen mit lexikalischen Gültigkeitsbereichen</h3>
 
-<p>Aufgrund seines lexikalischen Gültigkeitsbereiches wird der Bezeichner<strong> "foo"</strong> im untenstehenden Ausdruck <code>(foo + 55)</code> als das foo <u>des if-Blocks</u> interpretiert, <strong>nicht</strong> aber als die <u>verdeckte Variable</u> foo mit dem Wert 33.<br>
- Bei Auswertung des Ausdrucks existiert das foo <u>des if-Blocks</u> bereits im lexikalischen Gültigkeitsbereich, hat seine Initialisierung (welche Teil derselben Anweisung ist) aber noch nicht erreicht (und auch nicht <strong>abgeschlossen</strong>). Folglich ist es noch immer in seiner zeitweilig toten Zone.</p>
+<p>Aufgrund seines lexikalischen Gültigkeitsbereiches wird der Bezeichner<strong> "foo"</strong> im untenstehenden Ausdruck <code>(foo + 55)</code> als das foo des if-Blocks interpretiert, <strong>nicht</strong> aber als die verdeckte Variable foo mit dem Wert 33.<br>
+ Bei Auswertung des Ausdrucks existiert das foo des if-Blocks bereits im lexikalischen Gültigkeitsbereich, hat seine Initialisierung (welche Teil derselben Anweisung ist) aber noch nicht erreicht (und auch nicht <strong>abgeschlossen</strong>). Folglich ist es noch immer in seiner zeitweilig toten Zone.</p>
 
 <pre class="brush: js example-bad line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">test</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
    <span class="keyword token">var</span> foo <span class="operator token">=</span> <span class="number token">33</span><span class="punctuation token">;</span>
@@ -198,7 +198,7 @@ for (var i = 1; i &lt;= 5; i++) {
 <span class="punctuation token">}</span>
 <span class="function token">test</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>Dieses Phänomen kann in einer Situation wie der folgenden verwirren. Die Anweisung <code>let n of n.a</code> gehört bereits zum eigenen Gültigkeitsbereich <u>des Blocks der for-Schleife</u>. Der Bezeichner<strong> "n.a"</strong> wird als Eigenschaft 'a' des Objektes 'n' interpretiert, <u>welches im ersten Teil derselben Anweisung deklariert wird</u> ("let n"). Dieses befindet sich noch immer in seiner zeitweilig toten Zone, da bei Auswertung des Ausdrucks die Deklarationsanweisung als noch nicht erreicht und <strong>abgeschlossen</strong> gilt.</p>
+<p>Dieses Phänomen kann in einer Situation wie der folgenden verwirren. Die Anweisung <code>let n of n.a</code> gehört bereits zum eigenen Gültigkeitsbereich des Blocks der for-Schleife. Der Bezeichner<strong> "n.a"</strong> wird als Eigenschaft 'a' des Objektes 'n' interpretiert, welches im ersten Teil derselben Anweisung deklariert wird ("let n"). Dieses befindet sich noch immer in seiner zeitweilig toten Zone, da bei Auswertung des Ausdrucks die Deklarationsanweisung als noch nicht erreicht und <strong>abgeschlossen</strong> gilt.</p>
 
 <pre class="brush: js example-bad line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">go</span><span class="punctuation token">(</span><span class="parameter token">n</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="comment token">// n here is defined!</span>
@@ -304,135 +304,7 @@ console.log(a); // 5</pre>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(41.0)}}</td>
-   <td>12</td>
-   <td>{{ CompatGeckoDesktop(44) }}</td>
-   <td>11</td>
-   <td>17</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Temporal dead zone</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12</td>
-   <td>{{ CompatGeckoDesktop(35) }}</td>
-   <td>11</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>let</code> expression {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>let</code> block {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Allowed in {{Glossary("sloppy mode")}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(41.0)}}</td>
-   <td>{{ CompatGeckoMobile(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(41.0)}}</td>
-  </tr>
-  <tr>
-   <td>Temporal dead zone</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(35) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>let</code> expression {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>let</code> block {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Allowed in {{Glossary("sloppy mode")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td>{{CompatGeckoDesktop(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Firefox-spezifische_Hinweise">Firefox-spezifische Hinweise</h2>
 
@@ -450,5 +322,5 @@ console.log(a); // 5</pre>
  <li><a href="/de/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
  <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/">ES6 In Depth: <code>let</code> and <code>const</code></a><a href="http://stackoverflow.com/questions/37916940/js-why-let-have-this-name"> (englisch)</a></li>
  <li><a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">Breaking changes in <code>let</code> and <code>const</code> in Firefox 44 </a> <a href="http://stackoverflow.com/questions/37916940/js-why-let-have-this-name"> (englisch)</a></li>
- <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md">You Don't Know JS: Scope &amp; Closures: Chapter 3: Function vs. Block Scope </a> <a href="http://stackoverflow.com/questions/37916940/js-why-let-have-this-name"> (englisch)</a></li>
+ <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md">You Don't Know JS: Scope &amp; Closures: Chapter 3: Function vs. Block Scope </a> <a href="http://stackoverflow.com/questions/37916940/js-why-let-have-this-name"> (englisch)</a></li>
 </ul>

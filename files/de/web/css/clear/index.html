@@ -15,8 +15,6 @@ translation_of: Web/CSS/clear
 
 <div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
 
-<p class="hidden">Die Quelle für dieses interaktive Beispiel ist in einem GitHub-Repository gespeichert. Wenn Sie zum Projekt der interaktiven Beispiele beitragen möchten, klonen Sie bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und senden Sie uns eine Pull-Anfrage.</p>
-
 <p>Wenn sie auf nicht fließende Blöcke angewendet wird, verschiebt sie den Rahmen (<a href="/de/docs/Web/CSS/CSS_Boxmodell/Einführung_in_das_CSS_Boxmodell">border edge</a>) des Elements nach unten, bis sie unter den Rand (<a href="/de/docs/Web/CSS/CSS_Boxmodell/Einführung_in_das_CSS_Boxmodell" title="CSS/box_model">margin edge</a>) aller relevanten fließende Elemente liegt. Der obere Rand (<a href="/en-US/docs/Web/CSS/margin" title="CSS/box_model">margin</a>) des nicht fließenden Blocks kollabiert.</p>
 
 <p>Vertikale Ränder (<code>margins</code>) zwischen zwei fließenden Elementen hingegen kollabieren nicht. Wenn sie auf fließenden Elemente angewendet werden, wird der Rand des unteren Elements unter den Rand aller relevanten fließenden Elementen verschoben. Dies wirkt sich auf die Position späterer fließenden Elementen aus, da spätere fließende Elemente nicht höher positioniert werden können als frühere.</p>
@@ -24,7 +22,7 @@ translation_of: Web/CSS/clear
 <p>Die relevanen fließenden Elemente, deren Fließeigenschaft beendet werden soll, sind die früheren fließenden Elemente mit der selben <a href="/de/docs/Web/Guide/CSS/Block_formatting_context">Blockformatierungskontexts</a> .</p>
 
 <div class="note">
-<p><strong>Hinweis: </strong>Wenn ein Element nur fließenden (<a href="/de/docs/Web/CSS/float">float</a>) Elemente enthält, kollabiert seine Höhe zu null. Wenn Sie möchten, dass es immer in der Lage ist, seine Größe zu ändern, so dass es in seinem Inneren schwebende Elemente enthält, müssen Sie das <code>float</code> für seine Kinder selbst beenden. Dies wird <strong>clearfix</strong> genannt, und eine Weg, besteht darin, ein <code>clear</code> zu einem ersetzten {{cssxref("::after")}} <a href="/de/docs/Web/CSS/Pseudo-elements">Pseudoelement</a> hinzuzufügen.</p>
+<p><strong>Hinweis: </strong>Wenn ein Element nur fließenden (<a href="/de/docs/Web/CSS/float">float</a>) Elemente enthält, kollabiert seine Höhe zu null. Wenn Sie möchten, dass es immer in der Lage ist, seine Größe zu ändern, so dass es in seinem Inneren schwebende Elemente enthält, müssen Sie das <code>float</code> für seine Kinder selbst beenden. Dies wird <strong>clearfix</strong> genannt, und eine Weg, besteht darin, ein <code>clear</code> zu einem ersetzten {{cssxref("::after")}} <a href="/de/docs/Web/CSS/Pseudo-elements">Pseudoelement</a> hinzuzufügen.</p>
 
 <pre class="language-html notranslate">#container:after {
   content: "";
@@ -35,8 +33,6 @@ translation_of: Web/CSS/clear
 </div>
 
 <h2 id="Syntax">Syntax</h2>
-
-<pre class="twopartsyntaxbox notranslate"></pre>
 
 <pre class="brush: css no-line-numbers notranslate">/* Keyword values */
 clear: none;

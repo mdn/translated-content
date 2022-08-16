@@ -46,8 +46,8 @@ translation_of: Learn/CSS/Building_blocks/Images_tasks
 
 如果您希望对自己的工作进行评估，或者遇到困难并希望寻求帮助，请执行以下操作：
 
-1.  将您的工作上传到在线共享编辑器中，例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/).。您可以自己编写代码，也可以使用以上部分中链接到的起点文件。
-2.  在[MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). “学习”类别中写一篇帖子，要求评估帮助。您的帖子应包括：
+1. 将您的工作上传到在线共享编辑器中，例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/).。您可以自己编写代码，也可以使用以上部分中链接到的起点文件。
+2. 在[MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). “学习”类别中写一篇帖子，要求评估帮助。您的帖子应包括：
 
 - 描述性标题，例如“**Assessment wanted for Images skill test 1**”。
 - 您已经尝试过的内容以及您希望我们做什么的详细信息，例如 **如果您陷入困境并需要帮助**，或者**需要评估**。

@@ -17,23 +17,23 @@ original_slug: Learn/HTML/Forms
 
 ## 參考文章列表
 
-1.  [我的第一個 HTML 表單](/zh-TW/docs/HTML/Forms/My_first_HTML_form)
-2.  [如何構建 HTML 表單](/zh-TW/docs/HTML/Forms/How_to_structure_an_HTML_form)
-3.  [本機表單控件](/zh-TW/docs/HTML/Forms/The_native_form_widgets)
-4.  CSS 和 HTML 表單
+1. [我的第一個 HTML 表單](/zh-TW/docs/HTML/Forms/My_first_HTML_form)
+2. [如何構建 HTML 表單](/zh-TW/docs/HTML/Forms/How_to_structure_an_HTML_form)
+3. [本機表單控件](/zh-TW/docs/HTML/Forms/The_native_form_widgets)
+4. CSS 和 HTML 表單
 
-    1.  [造型 HTML 表單](/zh-TW/docs/HTML/Forms/Styling_HTML_forms)
-    2.  [HTML 表單高級造型](/zh-TW/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
-    3.  [表單控件屬性兼容表](/zh-TW/docs/Property_compatibility_table_for_form_widgets)
+    1. [造型 HTML 表單](/zh-TW/docs/HTML/Forms/Styling_HTML_forms)
+    2. [HTML 表單高級造型](/zh-TW/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
+    3. [表單控件屬性兼容表](/zh-TW/docs/Property_compatibility_table_for_form_widgets)
 
-5.  [發送和檢索表單數據](/zh-TW/docs/HTML/Forms/Sending_and_retrieving_form_data)
-6.  [數據表單驗證](/zh-TW/docs/HTML/Forms/Data_form_validation)
-7.  [如何創建自定義表單控件](/zh-TW/docs/HTML/Forms/How_to_build_custom_form_widgets)
-8.  [通過 JavaScript 發送形式](/zh-TW/docs/HTML/Forms/Sending_forms_through_JavaScript)
+5. [發送和檢索表單數據](/zh-TW/docs/HTML/Forms/Sending_and_retrieving_form_data)
+6. [數據表單驗證](/zh-TW/docs/HTML/Forms/Data_form_validation)
+7. [如何創建自定義表單控件](/zh-TW/docs/HTML/Forms/How_to_build_custom_form_widgets)
+8. [通過 JavaScript 發送形式](/zh-TW/docs/HTML/Forms/Sending_forms_through_JavaScript)
 
-    1.  [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+    1. [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 
-9.  [在傳統的瀏覽器的 HTML 表單](/zh-TW/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
+9. [在傳統的瀏覽器的 HTML 表單](/zh-TW/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
 
 ## HTML 文件
 

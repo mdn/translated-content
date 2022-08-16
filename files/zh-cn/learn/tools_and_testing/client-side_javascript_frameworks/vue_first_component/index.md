@@ -7,7 +7,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 
 现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。
 
-> **备注：** 如果你需要根据我们的版本检查您的代码， 你可以在我们的[ todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。 有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/dist/>。
+> **备注：** 如果你需要根据我们的版本检查您的代码， 你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。 有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/dist/>。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,9 +48,9 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 
 让我们创建第一个组件，它将显示一个单一的待办事项。我们将用它来建立我们的待办事项列表。
 
-1.  在你的`moz-todo-vue/src/components`目录下，创建一个`ToDoItem.vue`的新文件。在你的代码编辑器中打开该文件。
-2.  通过在文件顶部添加`<template></template>`来创建组件的模板部分。
-3.  在你的模板部分下面创建一个`<script></script>`部分。在`<script>`标签内，添加一个默认导出对象`export default {}`，这是你的组件对象。
+1. 在你的`moz-todo-vue/src/components`目录下，创建一个`ToDoItem.vue`的新文件。在你的代码编辑器中打开该文件。
+2. 通过在文件顶部添加`<template></template>`来创建组件的模板部分。
+3. 在你的模板部分下面创建一个`<script></script>`部分。在`<script>`标签内，添加一个默认导出对象`export default {}`，这是你的组件对象。
 
 你的文件现在应该是这样的：
 
@@ -63,8 +63,8 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 
 现在我们可以开始为`ToDoItem`添加实际内容了。Vue 模板目前只允许一个根元素--一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个[`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
 
-1.  现在在你的组件模板中添加一个空的`<div>`。
-2.  在那个`<div>`里面，让我们添加一个`checkbox`和一个对应的`label`。给复选框添加一个`id`，并添加一个`for`属性，将复选框映射到标签上，如下图所示。.
+1. 现在在你的组件模板中添加一个空的`<div>`。
+2. 在那个`<div>`里面，让我们添加一个`checkbox`和一个对应的`label`。给复选框添加一个`id`，并添加一个`for`属性，将复选框映射到标签上，如下图所示。.
 
     ```html
     <template>
@@ -79,14 +79,14 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 
 这一切都很顺利，但我们还没有将组件添加到我们的应用程序中，所以没有办法测试它，看看一切是否正常。我们现在就把它添加进去吧。
 
-1.  再次打开`App.vue`文件。
-2.  在`<script>`标签的顶部，添加以下内容来引入`ToDoItem`组件：
+1. 再次打开`App.vue`文件。
+2. 在`<script>`标签的顶部，添加以下内容来引入`ToDoItem`组件：
 
     ```js
     import ToDoItem from './components/ToDoItem.vue';
     ```
 
-3.  在你的组件对象里面，添加 `components` 属性，然后在它里面添加您的 ToDoItem 组件进行注册。
+3. 在你的组件对象里面，添加 `components` 属性，然后在它里面添加您的 ToDoItem 组件进行注册。
 
 你的`<script>`内容现在应该是这样的：
 
@@ -105,8 +105,8 @@ export default {
 
 要在应用程序中实际展示`ToDoItem`组件，你需要在`<template>`模板内添加一个`<to-do-item>/to-do-item>`元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用大写驼色（例如`ToDoList`），而等价的自定义元素总是用连字符小写（例如`<to-do-list>`）。
 
-1.  在`<h1>`下面，创建一个无序列表 (`<ul>`)，其中包含一个列表项 (`<li>`)。
-2.  在列表项 (\<li>) 里面添加`<to-do-item></to-do-item>`.
+1. 在`<h1>`下面，创建一个无序列表 (`<ul>`)，其中包含一个列表项 (`<li>`)。
+2. 在列表项 (\<li>) 里面添加`<to-do-item></to-do-item>`.
 
 你的`App.vue`的`<template>`内容现在应该是这样的：
 
@@ -142,18 +142,18 @@ export default {
 
 针对 ToDoItem 组件，我们将使用对象注册法。
 
-1.  回到 `ToDoItem.vue` 文件。
-2.  在默认导出的 `default {}` 对象中添加一个 `props` 属性，该 props 属性含有一个空对象。
-3.  在这个对象里，添加两个 key 为 `label` 和 `done` 属性。
-4.  `label` 的值应该是一个带有两个属性的对象（或者是 **props**，因为它们被调用在可找到的组件的 context）
+1. 回到 `ToDoItem.vue` 文件。
+2. 在默认导出的 `default {}` 对象中添加一个 `props` 属性，该 props 属性含有一个空对象。
+3. 在这个对象里，添加两个 key 为 `label` 和 `done` 属性。
+4. `label` 的值应该是一个带有两个属性的对象（或者是 **props**，因为它们被调用在可找到的组件的 context）
 
-    1.  第一个 `required` 属性，它的值是 `true`. 这将会告诉 Vue 说，我们希望每个该组件的实例都必须有个 label 字段。如果 `ToDoItem` 组件没有 label 字段的话，Vue 会提示警告。
-    2.  第二是添加一个 `type` 属性。这个属性的值设为 JavaScript 的 `String` 类型。这等于告诉 Vue，我们希望 type 属性的值是 String 类型的。
+    1. 第一个 `required` 属性，它的值是 `true`. 这将会告诉 Vue 说，我们希望每个该组件的实例都必须有个 label 字段。如果 `ToDoItem` 组件没有 label 字段的话，Vue 会提示警告。
+    2. 第二是添加一个 `type` 属性。这个属性的值设为 JavaScript 的 `String` 类型。这等于告诉 Vue，我们希望 type 属性的值是 String 类型的。
 
-5.  现在转向 `done` prop.
+5. 现在转向 `done` prop.
 
-    1.  首先添加一个 `default` 属性，它的值是 `false`。这意味着当没有 `done` prop 被传递给 `ToDoItem` 组件时， `done` prop 的值会是 false（注意 default 属性不是必需的————我们只在非 required props 里才需要 `default` ）
-    2.  接着，添加一个 `type` 属性，值为 `Boolean`。这将告诉 Vue，我们希望这个 prop 的值是 JavaScript 的 Boolean 类型。
+    1. 首先添加一个 `default` 属性，它的值是 `false`。这意味着当没有 `done` prop 被传递给 `ToDoItem` 组件时， `done` prop 的值会是 false（注意 default 属性不是必需的————我们只在非 required props 里才需要 `default` ）
+    2. 接着，添加一个 `type` 属性，值为 `Boolean`。这将告诉 Vue，我们希望这个 prop 的值是 JavaScript 的 Boolean 类型。
 
 你的组件对象现在看起来应该像是这样：
 
@@ -201,7 +201,7 @@ found in
 
 这是因为我们将 `label` prop 标记为 required, 但我们从未给组件这个 prop————我们已经在 template 内定义了希望使用这个 prop 值的位置，但在调用时我们没有把它传递进组件。让我们修复这个问题。
 
-在我们的 `App.vue `文件中，像常规 HTML 属性那样，在 `<to-do-item></to-do-item>` 里添加一个 `label` 属性：
+在我们的 `App.vue` 文件中，像常规 HTML 属性那样，在 `<to-do-item></to-do-item>` 里添加一个 `label` 属性：
 
 ```html
 <to-do-item label="My ToDo Item"></to-do-item>
@@ -348,7 +348,7 @@ export default {
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-## 在本模块中 
+## 在本模块中
 
 - [Introduction to client-side frameworks](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
 - [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
