@@ -13,15 +13,11 @@ slug: Web/API/HTMLAnchorElement/referrerPolicy
 
 <h3 id="属性值">属性值</h3>
 
-<dl>
- <dd>
- <ul>
-  <li><code>"no-referrer"</code> 意味着不要发送 Referer 请求头。</li>
-  <li><code>"origin"</code>  意味着所发送的 Referer 请求头的值为当前页面的源，即 <code>location.origin</code> 的值。</li>
-  <li><code>"unsafe-url"</code> 意味着所发送的 Referrer 请求头的值为当前页面完整的 url（即<code> location.href</code>）去掉尾部的哈希（即 <code>location.hash</code>）之后的值。正如该选项的名字所言（unsafe），此选项是不安全的，它可以将一个 HTTPS 页面的路径信息透露给第三方。</li>
- </ul>
- </dd>
-</dl>
+<ul>
+ <li><code>"no-referrer"</code> 意味着不要发送 Referer 请求头。</li>
+ <li><code>"origin"</code> 意味着所发送的 Referer 请求头的值为当前页面的源，即 <code>location.origin</code> 的值。</li>
+ <li><code>"unsafe-url"</code> 意味着所发送的 Referrer 请求头的值为当前页面完整的 url（即<code> location.href</code>）去掉尾部的哈希（即 <code>location.hash</code>）之后的值。正如该选项的名字所言（unsafe），此选项是不安全的，它可以将一个 HTTPS 页面的路径信息透露给第三方。</li>
+</ul>
 
 <h2 id="示例">示例</h2>
 

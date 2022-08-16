@@ -30,7 +30,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
 
 <dl>
  <dt><code>target</code></dt>
- <dd> {{domxref("GLenum")}} 指定纹理的绑定对象。可能的值：
+ <dd>{{domxref("GLenum")}} 指定纹理的绑定对象。可能的值：
  <ul>
   <li><code>gl.TEXTURE_2D</code>: 二维纹理贴图。</li>
   <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_X</code>:立方体映射纹理的正 X 面。</li>
@@ -44,9 +44,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  <dt><code>level</code></dt>
  <dd> {{domxref("GLint")}} 指定详细级别. 0 级是基本图像等级，n 级是第 n 个金字塔简化级。</dd>
  <dt><code>internalformat</code></dt>
- <dd> {{domxref("GLenum")}} 指定纹理中的颜色组件。</dd>
- <dd>在 WebGL1 和 WebGL2 中可能的值：</dd>
- <dt>
+ <dd> {{domxref("GLenum")}} 指定纹理中的颜色组件。在 WebGL1 和 WebGL2 中可能的值：
  <table>
   <thead>
    <tr>
@@ -107,9 +105,8 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
    </tr>
   </tbody>
  </table>
- </dt>
- <dd>在 WebGL2 中，对带有 <code>ArrayBufferView</code> 或 <code>GLintptr offset</code>的  <code>texImage2D</code> 版本，其它可能的值</dd>
-</dl>
+
+ 在 WebGL2 中，对带有 <code>ArrayBufferView</code> 或 <code>GLintptr offset</code>的  <code>texImage2D</code> 版本，其它可能的值
 
 <table>
  <thead>
@@ -677,10 +674,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </tbody>
 </table>
 
-<dl>
- <dd>
- <p><br>
-   在 WebGL2 中，使用<code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, 或 <code>ImageData</code>作为<code>texImage2D</code> 纹理的版本中，可能的值有：</p>
+ 在 WebGL2 中，使用<code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, 或 <code>ImageData</code>作为<code>texImage2D</code> 纹理的版本中，可能的值有：
 
  <ul>
   <li><code>gl.ALPHA</code>: 抛弃红色、绿色和蓝色组件并读取 alpha 组件。</li>
@@ -802,10 +796,6 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </dd>
  <dt>offset</dt>
  <dd> {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。 用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从<code>WebGLBuffer</code> 范围到<code>PIXEL_UNPACK_BUFFER</code> 目标。(仅在 WebGL 2 中 )</dd>
- <dd>
- <ul>
- </ul>
- </dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>

@@ -12,13 +12,9 @@ slug: Web/API/ServiceWorkerContainer
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
- <dd>当？{{domxref("ServiceWorker")}}对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。 如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。</dd>
-</dl>
-
-<dl>
+ <dd>当 {{domxref("ServiceWorker")}} 对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。 如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。</dd>
  <dt>{{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}</dt>
  <dd>定义了一个 serviceWorker 是否准备好为一个页面服务，将返回一个 {{jsxref("Promise")}}，并且这个 {{jsxref("Promise")}}永远不会 reject，这个 {{jsxref("Promise")}}会在{{domxref("ServiceWorkerRegistration")}} 获取到一个 active 的{{domxref("ServiceWorker")}}的时候被解决。</dd>
- <dd> </dd>
 </dl>
 
 <h3 id="事件">?事件</h3>

@@ -65,7 +65,7 @@ slug: Web/API/IDBDatabase
 
 <p>在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store  ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> 应用 (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js;highlight:[13,24,26,27,28,32] notranslate">
+<pre class="brush: js; highlight:[13,24,26,27,28,32] notranslate">
 // 我们先打开一个数据库
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 

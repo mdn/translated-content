@@ -7,7 +7,7 @@ slug: Web/API/DOMParser
 <p><strong><code>DOMParser</code></strong> 可以将存储在字符串中的 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 源代码解析为一个 DOM {{domxref("Document")}}。</p>
 
 <div class="note">
-<p><strong>注意：</strong>{{domxref("XMLHttpRequest")}} 支持从 URL 可寻址资源解析 XML 和 HTML，在其{{domxref("XMLHttpRequest.response", "response")}} 属性中返回<code>Document</code>。</p>
+<p>{{domxref("XMLHttpRequest")}} 支持从 URL 可寻址资源解析 XML 和 HTML，在其{{domxref("XMLHttpRequest.response", "response")}} 属性中返回<code>Document</code>。</p>
 </div>
 
 <p>你可以使用{{domxref("XMLSerializer")}} 接口执行相反的操作 - 将 DOM 树转换为 XML 或 HTML 源。</p>
@@ -39,9 +39,6 @@ slug: Web/API/DOMParser
  <dd>要解析的 {{domxref("DOMString")}}。它必须包含 {{Glossary("HTML")}}、{{Glossary("xml")}}、{{Glossary("xhtml+xml")}} 或 {{Glossary("svg")}} 文档。</dd>
  <dt><a id="Argument02"></a></dt>
  <dt><code>mimeType</code></dt>
-</dl>
-
-<dl>
  <dd>一个 {{domxref("DOMString")}}。This string determines a class of the the method's return value. The possible values are the following:</dd>
 </dl>
 

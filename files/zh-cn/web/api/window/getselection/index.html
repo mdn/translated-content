@@ -31,7 +31,7 @@ slug: Web/API/Window/getSelection
 
 <p>在上例中，<code>selObj.toString()</code> 会在传递到 {{domxref("window.alert()")}}时自动调用。然而，当你试图在 {{domxref("Selection")}} 对象上使用一个 JavaScript 的{{jsxref("Global_Objects/String", "String")}} 对象上的属性或者方法时（如 {{jsxref("String.prototype.length")}} 或者 {{jsxref("String.prototype.substr()")}}），会导致错误（如果没有相应的属性或方法时）或返回不是期望的结果（如果存在相应的属性或方法）。如果想要将 <code>Selection</code> 对象作为一个字符串使用，请直接调用 <code>toString()</code> 方法：</p>
 
-<pre class="brush:js;gutter:false; notranslate">var selectedText = selObj.toString();</pre>
+<pre class="brush:js">var selectedText = selObj.toString();</pre>
 
 <ul>
  <li><code>selObj</code> 是一个<code>Selection</code> 对象，</li>
@@ -39,9 +39,6 @@ slug: Web/API/Window/getSelection
 </ul>
 
 <h3 id="相关对象">相关对象</h3>
-
-<ul>
-</ul>
 
 <p>你还可以使用 {{domxref("Document.getSelection()")}}，两个方法等价。</p>
 
@@ -61,19 +58,3 @@ slug: Web/API/Window/getSelection
  <li>{{domxref("Range")}}</li>
  <li>{{domxref("Document.getSelection()")}}</li>
 </ul>
-
-<div id="gtx-anchor" style="position: absolute; left: 108px; top: 24px; width: 144.625px; height: 17px;"></div>
-
-<div class="jfk-bubble gtx-bubble" style="left: 58px; top: 27px; opacity: 1;">
-<div class="jfk-bubble-content-id" id="bubble-3">
-<div id="gtx-host" style="max-width: 400px;"></div>
-</div>
-
-<div class="jfk-bubble-closebtn-id jfk-bubble-closebtn"></div>
-
-<div class="jfk-bubble-arrow-id jfk-bubble-arrow jfk-bubble-arrowup" style="left: 52.5px;">
-<div class="jfk-bubble-arrowimplbefore"></div>
-
-<div class="jfk-bubble-arrowimplafter"></div>
-</div>
-</div>

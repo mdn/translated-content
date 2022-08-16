@@ -12,19 +12,18 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 <p>{{domxref("ImageData")}}对象中存储着 canvas 对象真实的像素数据，它包含以下几个只读属性：</p>
 
-<p><strong><code>width</code></strong></p>
-
 <dl>
+ <dt><code>width</code></dt>
  <dd>图片宽度，单位是像素</dd>
  <dt><code>height</code></dt>
  <dd>图片高度，单位是像素</dd>
  <dt><code>data</code></dt>
- <dd>{{jsxref("Uint8ClampedArray")}}类型的一维数组，包含着 RGBA 格式的整型数据，范围在 0 至 255 之间（包括 255）。</dd>
+ <dd>{{jsxref("Uint8ClampedArray")}} 类型的一维数组，包含着 RGBA 格式的整型数据，范围在 0 至 255 之间（包括 255）。</dd>
 </dl>
 
 <p>data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作为查看初始像素数据。每个像素用 4 个 1bytes 值 (按照红，绿，蓝和透明值的顺序; 这就是"RGBA"格式) 来代表。每个颜色值部份用 0 至 255 来代表。每个部份被分配到一个在数组内连续的索引，左上角像素的红色部份在数组的索引 0 位置。像素从左到右被处理，然后往下，遍历整个数组。</p>
 
-<p>{{jsxref("Uint8ClampedArray")}}  包含高度 × 宽度 × 4 bytes 数据，索引值从 0 到 (<code style="font-style: normal;">高度</code>×宽度×4)-1</p>
+<p>{{jsxref("Uint8ClampedArray")}} 包含高度 × 宽度 × 4 bytes 数据，索引值从 0 到 (<code style="font-style: normal;">高度</code>×宽度×4)-1</p>
 
 <p>例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：</p>
 
@@ -328,7 +327,6 @@ function draw(img) {
 <dl>
  <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}</dt>
  <dd>默认设定。创建一个 PNG 图片。</dd>
- <dd>Default setting. Creates a PNG image.</dd>
  <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}</dt>
  <dd>创建一个 JPG 图片。你可以有选择地提供从 0 到 1 的品质量，1 表示最好品质，0 基本不被辨析但有比较小的文件大小。</dd>
 </dl>

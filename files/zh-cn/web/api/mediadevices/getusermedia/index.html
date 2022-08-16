@@ -108,8 +108,7 @@ slug: Web/API/MediaDevices/getUserMedia
  <dt><code>AbortError</code>［中止错误］</dt>
  <dd>尽管用户和操作系统都授予了访问设备硬件的权利，而且未出现可能抛出<code>NotReadableError</code>异常的硬件问题，但仍然有一些问题的出现导致了设备无法被使用。</dd>
  <dt><code>NotAllowedError</code>［拒绝错误］</dt>
- <dd>用户拒绝了当前的浏览器实例的访问请求；或者用户拒绝了当前会话的访问；或者用户在全局范围内拒绝了所有媒体访问请求。</dd>
- <dd>
+ <dd>用户拒绝了当前的浏览器实例的访问请求；或者用户拒绝了当前会话的访问；或者用户在全局范围内拒绝了所有媒体访问请求。
  <div class="note">较旧版本的规范使用了<code>SecurityError</code>，但在新版本当中<code>SecurityError</code>被赋予了新的意义。</div>
  </dd>
  <dt><code>NotFoundError</code>［找不到错误］</dt>
@@ -117,8 +116,7 @@ slug: Web/API/MediaDevices/getUserMedia
  <dt><code>NotReadableError</code>［无法读取错误］</dt>
  <dd>尽管用户已经授权使用相应的设备，操作系统上某个硬件、浏览器或者网页层面发生的错误导致设备无法被访问。</dd>
  <dt><code>OverconstrainedError</code>［无法满足要求错误］</dt>
- <dd>指定的要求无法被设备满足，此异常是一个类型为<code>OverconstrainedError</code>的对象，拥有一个<code>constraint</code>属性，这个属性包含了当前无法被满足的<code>constraint</code>对象，还拥有一个<code>message</code>属性，包含了阅读友好的字符串用来说明情况。</dd>
- <dd>
+ <dd>指定的要求无法被设备满足，此异常是一个类型为<code>OverconstrainedError</code>的对象，拥有一个<code>constraint</code>属性，这个属性包含了当前无法被满足的<code>constraint</code>对象，还拥有一个<code>message</code>属性，包含了阅读友好的字符串用来说明情况。
  <div class="note">因为这个异常甚至可以在用户尚未授权使用当前设备的情况下抛出，所以应当可以当作一个探测设备能力属性的手段［fingerprinting surface］。</div>
  </dd>
  <dt><code>SecurityError</code>［安全错误］</dt>

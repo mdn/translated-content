@@ -15,15 +15,11 @@ slug: Web/API/HTMLImageElement/decoding
 
 <p>使用 {{domxref("DOMString")}} 表示解码方式。可使用以下值：</p>
 
-<dl>
- <dd>
- <ul>
-  <li><strong><code>sync</code></strong>: 同步解码图像，保证与其他内容一起显示。</li>
-  <li><strong><code>async</code></strong>: 异步解码图像，加快显示其他内容。</li>
-  <li><strong><code>auto</code></strong>: 默认模式，表示不偏好解码模式。由浏览器决定哪种方式更适合用户。</li>
- </ul>
- </dd>
-</dl>
+<ul>
+ <li><strong><code>sync</code></strong>: 同步解码图像，保证与其他内容一起显示。</li>
+ <li><strong><code>async</code></strong>: 异步解码图像，加快显示其他内容。</li>
+ <li><strong><code>auto</code></strong>: 默认模式，表示不偏好解码模式。由浏览器决定哪种方式更适合用户。</li>
+</ul>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -31,7 +27,7 @@ slug: Web/API/HTMLImageElement/decoding
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js;highlight:[3]">var img = new Image();
+<pre class="brush: js; highlight:[3]">var img = new Image();
 img.decoding = 'sync';
 img.src = 'img/logo.png';
 </pre>

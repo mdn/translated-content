@@ -36,7 +36,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>在本示例里，我会再度用两层 <code>for</code> 循环来绘制方格阵列，每个方格不同的颜色。结果如右图，但实现所用的代码却没那么绚丽。我用了两个变量 i 和 j 来为每一个方格产生唯一的 RGB 色彩值，其中仅修改红色和绿色通道的值，而保持蓝色通道的值不变。你可以通过修改这些颜色通道的值来产生各种各样的色板。通过增加渐变的频率，你还可以绘制出类似 Photoshop 里面的那样的调色板。</p>
 
-<pre class="brush: js;highlight[5,6] notranslate">function draw() {
+<pre class="brush: js; highlight[5,6] notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i=0;i&lt;6;i++){
     for (var j=0;j&lt;6;j++){
@@ -298,7 +298,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>这里我同样用三条折线来做例子，分别设置不同的 <code>lineJoin</code> 值。最上面一条是 <code>round</code> 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 <code>miter </code>的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 <code>miterLimit</code> 属性的制约。</p>
 
-<pre class="brush: js;highlight[6] notranslate">function draw() {
+<pre class="brush: js; highlight[6] notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
@@ -578,7 +578,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p>在最后的例子中，我创建一个图案然后赋给了 <code>fillStyle</code> 属性。唯一要注意的是，使用 Image 对象的 <code>onload</code> handler 来确保设置图案之前图像已经装载完毕。</p>
 
-<pre class="brush: js;highlight[10] notranslate">function draw() {
+<pre class="brush: js; highlight[10] notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // 创建新 image 对象，用作图案
@@ -599,11 +599,11 @@ var ptrn = ctx.createPattern(img,'repeat');
 <pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <pre class="brush: js notranslate">draw();</pre>
-
-<p>The result looks like this:</p>
 </div>
 
-<p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
+<p>The result looks like this:</p>
+
+<p>{{EmbedLiveSample("createPattern_的例子", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
 
 <h2 id="阴影_Shadows">阴影 Shadows</h2>
 

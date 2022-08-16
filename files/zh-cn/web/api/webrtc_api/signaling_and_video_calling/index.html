@@ -336,9 +336,8 @@ function invite(evt) {
 
 <p>前三个事件处理程序是必需的；你必须处理它们才能使用 WebRTC 执行任何涉及流媒体的操作。其余的并不是严格要求的，但可能有用，我们将对此进行探讨。在这个例子中，还有一些其他的事件我们没有使用。下面是我们将要实现的每个事件处理程序的摘要：</p>
 
-<p><strong>{{domxref("RTCPeerConnection.onicecandidate")}}</strong></p>
-
 <dl>
+ <dt>{{domxref("RTCPeerConnection.onicecandidate")}}</dt>
  <dd>
  <p>当需要你通过信令服务器将一个 ICE 候选发送给另一个对等端时，本地 ICE 层将会调用你的 {{event("icecandidate")}} 事件处理程序。有关更多信息，请参阅<a href="#交换_ice_候选">交换 ICE 候选</a> 以查看此示例的代码。</p>
  </dd>
@@ -476,9 +475,8 @@ function invite(evt) {
 
 <p>这将构建一个包含候选对象的对象，然后使用前面在 <a href="#向信令服务器发送信息">向信令服务器发送信息</a> 中描述的<code>sendToServer()</code> 函数将其发送给另一个对等方。消息属性为：</p>
 
-<p><strong>type</strong></p>
-
 <dl>
+ <dt><code>type</code></dt>
  <dd>消息类型：<code>"new-ice-candidate"</code>.</dd>
  <dt><code>target</code></dt>
  <dd>ICE 候选需要传递到的用户名。这允许信令服务器路由消息。</dd>

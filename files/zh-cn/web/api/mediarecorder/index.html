@@ -10,29 +10,24 @@ slug: Web/API/MediaRecorder
 
 <dl>
  <dt>{{domxref("MediaRecorder.MediaRecorder()")}}</dt>
- <dd>    创建一个新的<code>MediaRecorder</code>对象，对指定的{{domxref("MediaStream")}} 对象进行录制，支持的配置项包括设置容器的 MIME 类型 (例如<code>"video/webm"</code> 或者 <code>"video/mp4"</code>) 和音频及视频的码率或者二者同用一个码率</dd>
- <dd></dd>
+ <dd>创建一个新的<code>MediaRecorder</code>对象，对指定的{{domxref("MediaStream")}} 对象进行录制，支持的配置项包括设置容器的 MIME 类型 (例如<code>"video/webm"</code> 或者 <code>"video/mp4"</code>) 和音频及视频的码率或者二者同用一个码率</dd>
 </dl>
 
 <h2 id="配置项">配置项</h2>
 
 <dl>
  <dt>{{domxref("MediaRecorder.mimeType")}} {{readonlyInline}}</dt>
- <dd>    返回 <code>MediaRecorder</code> 对象创建时选择器选择的录制容器的 MIME type</dd>
+ <dd>返回 <code>MediaRecorder</code> 对象创建时选择器选择的录制容器的 MIME type</dd>
  <dt>{{domxref("MediaRecorder.state")}} {{readonlyInline}}</dt>
- <dd>    返回录制对象<code>MediaRecorder</code>  的当前状态 (闲置中，录制中或者暂停 ) (<code>inactive</code>, <code>recording</code>, or <code>paused</code>.)</dd>
+ <dd>返回录制对象<code>MediaRecorder</code>  的当前状态 (闲置中，录制中或者暂停 ) (<code>inactive</code>, <code>recording</code>, or <code>paused</code>.)</dd>
  <dt>{{domxref("MediaRecorder.stream")}} {{readonlyInline}}</dt>
- <dd>    返回录制器对象 <code>MediaRecorder </code>创建时构造函数传入的 stream 对象</dd>
- <dd></dd>
+ <dd>返回录制器对象 <code>MediaRecorder </code>创建时构造函数传入的 stream 对象</dd>
  <dt>{{domxref("MediaRecorder.ignoreMutedMedia")}}</dt>
- <dd></dd>
- <dd>    用以指定 <code>MediaRecorder</code>是否录制无声的输入源。如果这个属性是 false. 录制器对象<code>MediaRecorder</code>  会录制无声的音频或者黑屏的视频，默认值是 false</dd>
- <dd></dd>
+ <dd>用以指定 <code>MediaRecorder</code>是否录制无声的输入源。如果这个属性是 false. 录制器对象<code>MediaRecorder</code>  会录制无声的音频或者黑屏的视频，默认值是 false</dd>
  <dt>{{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}</dt>
  <dd>返回视频采用的编码比率。它可能和构造函数的设置比率不同.  (if it was provided).</dd>
  <dt>{{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}}</dt>
  <dd>返回音频采用的编码比率，它可能和构造函数中设置的比率不同. (if it was provided).</dd>
- <dd></dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -50,7 +45,6 @@ slug: Web/API/MediaRecorder
  <dd>开始录制媒体，这个方法调用时可以通过给<code>timeslice</code>参数设置一个毫秒值，如果设置这个毫秒值，那么录制的媒体会按照你设置的值进行分割成一个个单独的区块，而不是以默认的方式录制一个非常大的整块内容。</dd>
  <dt>{{domxref("MediaRecorder.stop()")}}</dt>
  <dd>停止录制。同时触发{{event("dataavailable")}}事件，返回一个存储<code>Blob</code>内容的录制数据。之后不再记录</dd>
- <dd></dd>
 </dl>
 
 <h2 id="静态方法">静态方法</h2>
@@ -58,7 +52,6 @@ slug: Web/API/MediaRecorder
 <dl>
  <dt>{{domxref("MediaRecorder.isTypeSupported()")}}</dt>
  <dd>静态方法，判断给定的 MIME 类型是否支持。返回{{domxref("Boolean")}}类型的值。</dd>
- <dt></dt>
 </dl>
 
 <h2 id="事件处理">事件处理</h2>
@@ -86,7 +79,6 @@ slug: Web/API/MediaRecorder
  <dt><code><a href="/zh-CN/docs/Web/API/MediaRecorder/error_event">error</a></code></dt>
  <dd>Fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.<br>
  Also available via the <code><a href="/zh-CN/docs/Web/API/MediaRecorder/onerror">onerror</a></code> property.</dd>
- <dt></dt>
 </dl>
 
 <h2 id="例子">例子</h2>

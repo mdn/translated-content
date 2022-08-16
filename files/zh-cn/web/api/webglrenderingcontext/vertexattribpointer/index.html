@@ -59,11 +59,8 @@ slug: Web/API/WebGLRenderingContext/vertexAttribPointer
  </ul>
  </dd>
  <dt><code>stride</code></dt>
- <dd>A {{domxref("GLsizei")}} specifying the offset in bytes between the beginning of consecutive vertex attributes. Cannot be larger than 255. If stride is 0, the attribute is assumed to be tightly packed, that is, the attributes are not interleaved but each attribute is in a separate block, and the next vertex' attribute follows immediately after the current vertex.</dd>
- <dd>一个 GLsizei，以字节为单位指定连续顶点属性开始之间的偏移量 (即数组中一行长度)。不能大于 255。如果 stride 为 0，则假定该属性是紧密打包的，即不交错属性，每个属性在一个单独的块中，下一个顶点的属性紧跟当前顶点之后。</dd>
- <dt></dt>
+ <dd>一个 {{domxref("GLsizei")}}，以字节为单位指定连续顶点属性开始之间的偏移量 (即数组中一行长度)。不能大于 255。如果 stride 为 0，则假定该属性是紧密打包的，即不交错属性，每个属性在一个单独的块中，下一个顶点的属性紧跟当前顶点之后。</dd>
  <dt><code>offset</code></dt>
- <dd>A {{domxref("GLintptr")}} specifying an offset in bytes of the first component in the vertex attribute array. Must be a multiple of the byte length of <code>type</code>.</dd>
  <dd>{{domxref("GLintptr")}}指定顶点属性数组中第一部分的字节偏移量。必须是类型的字节长度的倍数。</dd>
 </dl>
 
@@ -198,7 +195,7 @@ gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
 
 <p>Then, we specify the memory layout of the array buffer, either by setting the index ourselves:</p>
 
-<pre class="brush: js, highlight:[3, 6, 9]">//Describe the layout of the buffer:
+<pre class="brush: js">//Describe the layout of the buffer:
 //1. position, not normalized
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
@@ -220,7 +217,7 @@ gl.linkProgram(shaderProgram);
 
 <p>Or we can use the index provided by the graphics card instead of setting the index ourselves; this avoids the re-linking of the shader program.</p>
 
-<pre class="brush: js, highlight:[2, 6, 10]">const locPosition = gl.getAttribLocation(shaderProgram, 'position');
+<pre class="brush: js">const locPosition = gl.getAttribLocation(shaderProgram, 'position');
 gl.vertexAttribPointer(locPosition, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(locPosition);
 
