@@ -1,7 +1,6 @@
 ---
 title: ReadableStream.ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
-translation_of: Web/API/ReadableStream/ReadableStream
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

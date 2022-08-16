@@ -103,23 +103,23 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 建立`Todos.svelte`元件——這將包含我們的待辦任務。
 
-1.  建立新資料夾——`src/components`。
+1. 建立新資料夾——`src/components`。
 
     > **備註：** 你可以把元件們放在`src`資料夾當中的任何地方，但放在`components`資料夾是比較常見的做法，也讓你可以更容易地找到元件們。
 
-2.  建立`src/components/Todos.svelte`檔案並包含以下內容：
+2. 建立`src/components/Todos.svelte`檔案並包含以下內容：
 
     ```html
     <h1>Svelte To-Do list</h1>
     ```
 
-3.  改變`public/index.html`中的`title`元素內容為*Svelte To-do list*：
+3. 改變`public/index.html`中的`title`元素內容為*Svelte To-do list*：
 
     ```html
     <title>Svelte To-Do list</title>
     ```
 
-4.  打開`src/App.svelte`並替換為以下內容：
+4. 打開`src/App.svelte`並替換為以下內容：
 
     ```html
     <script>
@@ -129,7 +129,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
     <Todos />
     ```
 
-5.  在開發模式中，當定義屬性沒有存在於元件時，Svelte 將會在瀏覽器主控台警示問題；以此例來看，當我們於`src/main.js`實例化`App`元件時，由於我們已經明確定義出`name`屬性，但並無實際在`App`中使用到。所以主控台現在應該會給你一個警示訊息，如「\<App> was created with unknown prop 'name'」。而為了排除這個問題，從`src/main.js`中移除`name`屬性；看起來應該要像是如下這樣：
+5. 在開發模式中，當定義屬性沒有存在於元件時，Svelte 將會在瀏覽器主控台警示問題；以此例來看，當我們於`src/main.js`實例化`App`元件時，由於我們已經明確定義出`name`屬性，但並無實際在`App`中使用到。所以主控台現在應該會給你一個警示訊息，如「\<App> was created with unknown prop 'name'」。而為了排除這個問題，從`src/main.js`中移除`name`屬性；看起來應該要像是如下這樣：
 
     ```js
     import App from './App.svelte'

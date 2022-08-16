@@ -2,16 +2,6 @@
 title: 建立Canvas並畫出
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - HTML
-  - JavaScript
-  - Tutorial
-translation_of: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 {{GamesSidebar}}
 
@@ -32,8 +22,8 @@ translation_of: >-
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -41,7 +31,7 @@ translation_of: >-
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+  // JavaScript code goes here
 </script>
 
 </body>

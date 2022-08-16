@@ -3,10 +3,10 @@ title: 視覚整形モデル
 slug: Web/CSS/Visual_formatting_model
 tags:
   - CSS
-  - CSS ボックスモデル
-  - ガイド
-  - リファレンス
-  - 視覚整形モデル
+  - CSS Box Model
+  - Guide
+  - Reference
+  - visual formatting model
 translation_of: Web/CSS/Visual_formatting_model
 ---
 {{CSSRef}}
@@ -143,4 +143,10 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ## 関連情報
 
-- {{css_key_concepts}}
+- CSS の主要概念: [CSS の構文](/ja/docs/Web/CSS/Syntax), [アットルール](/ja/docs/Web/CSS/At-rule), [コメント](/ja/docs/Web/CSS/Comments),
+  [詳細度](/ja/docs/Web/CSS/Specificity), [継承](/ja/docs/Web/CSS/inheritance), [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model),
+  [レイアウトモード](/ja/docs/Web/CSS/Layout_mode), [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model),
+  [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing),
+  [初期値](/ja/docs/Web/CSS/initial_value), [計算値](/ja/docs/Web/CSS/computed_value), [解決値](/ja/docs/Web/CSS/resolved_value),
+  [指定値](/ja/docs/Web/CSS/specified_value), [使用値](/ja/docs/Web/CSS/used_value), [実効値](/ja/docs/Web/CSS/actual_value)。
+  [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax), [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties), [置換要素](/ja/docs/Web/CSS/Replaced_element)

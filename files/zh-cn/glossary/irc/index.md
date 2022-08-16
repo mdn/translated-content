@@ -1,7 +1,6 @@
 ---
 title: IRC
 slug: Glossary/IRC
-translation_of: Glossary/IRC
 ---
 **IRC** (_Internet Relay Chat_ **因特网中继聊天**) 是一个基于互联网连接和 IRC 客户端的全球聊天系统，其通过 IRC 服务器收发消息。
 

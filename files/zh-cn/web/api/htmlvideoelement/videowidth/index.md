@@ -1,21 +1,6 @@
 ---
 title: HTMLVideoElement.videoWidth
 slug: Web/API/HTMLVideoElement/videoWidth
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Intrinsic Width
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - size
-  - videoWidth
-  - width
-browser-compat: api.HTMLVideoElement.videoWidth
 ---
 {{APIRef("HTML DOM")}}
 

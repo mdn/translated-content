@@ -1,0 +1,67 @@
+---
+title: <datalist>
+slug: Web/HTML/Element/datalist
+tags:
+  - Element
+  - HTML
+  - HTML формы
+  - HTML5
+  - Reference
+  - Web
+  - Веб
+  - Элемент
+translation_of: Web/HTML/Element/datalist
+---
+**HTML-элемент` <datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.
+
+{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
+
+| [Категория контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                            |
+| Разрешённые родители                                             | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
+| Разрешённые ARIA-роли                                            | Нет                                                                                                                                                                 |
+| DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                        |
+
+## Атрибуты
+
+С данным элементом можно использовать все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+
+## Примеры
+
+```html
+<label for="myBrowser">Choose a browser from this list:</label>
+<input list="browsers" id="myBrowser" name="myBrowser" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+```
+
+### Результат
+
+{{EmbedLiveSample("Примеры")}}
+
+## Спецификации
+
+{{Specifications}}
+
+## Поддержка браузерами
+
+{{Compat}}
+
+## Полифил
+
+Для использованиях в браузерах, которые не поддерживают данную технологию, рекомендуется использовать полифил: [datalist-polyfill](https://github.com/mfranzke/datalist-polyfill).
+
+## Смотрите также
+
+- Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};
+- Элемент {{HTMLElement("option")}}.
+
+{{HTMLRef}}

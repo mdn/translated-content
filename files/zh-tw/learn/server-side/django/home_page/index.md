@@ -78,9 +78,11 @@ translation_of: Learn/Server-side/Django/Home_page
 
 來自 **locallibrary/urls.py**的以下代碼片段包括`catalog.urls` 模塊：
 
-    urlpatterns += [
-        path('catalog/', include('catalog.urls')),
-    ]
+```python
+urlpatterns += [
+    path('catalog/', include('catalog.urls')),
+]
+```
 
 > **備註：** 每當 Django 遇到導入函數 [`django.urls.include()`](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include)時，它都會在指定的結束字符處分割 URL 字符串，並將剩餘的子字符串發送到所包含的*URLconf* 模塊以進行進一步處理。
 
@@ -331,11 +333,11 @@ return render(request, 'index.html', context=context)
 
 這裡有兩個任務可以測試您對模型查詢，視圖和模板的熟悉程度。
 
-1.  LocalLibrary [base template](#The_LocalLibrary_base_template) 已定義`title` 欄。 在 [index template](#The_index_template)中覆蓋此塊並為頁面創建一些新標題。
+1. LocalLibrary [base template](#The_LocalLibrary_base_template) 已定義`title` 欄。 在 [index template](#The_index_template)中覆蓋此塊並為頁面創建一些新標題。
 
     > **備註：** [Extending templates](#Extending_templates) 部分介紹瞭如何創建塊並將其擴展到另一個模板中。
 
-2.  修改 [view](<#View_(function-based)>)以生成包含特定單詞（不區分大小寫）的流派計數和書籍計數，並將其傳遞給`context` （這與我們創建並使用`num_books` 和`num_instances_available`的方式大致相同）。 然後更新 [index template](#The_index_template) 以使用這些變量。
+2. 修改 [view](<#View_(function-based)>)以生成包含特定單詞（不區分大小寫）的流派計數和書籍計數，並將其傳遞給`context` （這與我們創建並使用`num_books` 和`num_instances_available`的方式大致相同）。 然後更新 [index template](#The_index_template) 以使用這些變量。
 
 ## Summary
 

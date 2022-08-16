@@ -268,8 +268,8 @@ This is the second.
 
 To get this displayed along with the HTML media playback, you need to:
 
-1.  Save it as a `.vtt` file in a sensible place.
-2.  Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.
+1. Save it as a `.vtt` file in a sensible place.
+2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.
 
 Here's an example:
 
@@ -297,11 +297,11 @@ If you are unable to source any video or audio, then you can feel free to use ou
 
 We would like you to:
 
-1.  Save your audio and video files in a new directory on your computer.
-2.  Create a new HTML file in the same directory, called `index.html`.
-3.  Add {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements to the page; make them display the default browser controls.
-4.  Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include {{htmlattrxref("type", "source")}} attributes.
-5.  Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
+1. Save your audio and video files in a new directory on your computer.
+2. Create a new HTML file in the same directory, called `index.html`.
+3. Add {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements to the page; make them display the default browser controls.
+4. Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include {{htmlattrxref("type", "source")}} attributes.
+5. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
 
 For an added bonus, you could try researching text tracks, and work out how to add some captions to your video.
 

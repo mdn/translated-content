@@ -15,8 +15,6 @@ translation_of: Web/CSS/z-index
 
 <div>{{EmbedInteractiveExample("pages/css/z-index.html")}}</div>
 
-<p class="hidden">Die Quelle für dieses interaktive Beispiel ist in einem GitHub-Repository gespeichert. Wenn Sie zum Projekt der interaktiven Beispiele beitragen möchten, klonen Sie bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und senden Sie uns eine Pull-Anfrage.</p>
-
 <p>Für einen positionierte Box (d.h. eine mit einer <code>{{cssxref("position")}}</code> anders als <code>static</code>) ist für die Eigenschaft <code>z-index</code> spezifiert:</p>
 
 <p>Für eine positionierte Box (d. h. eine mit einer anderen als der statischen Position) gibt die Eigenschaft <code>z-index</code> an:</p>
@@ -48,7 +46,7 @@ z-index: unset;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>Die Box etabliert keinen neuen lokalen Stapelkontext. Die generierte Box befindet sich im aktuellen Stapelkontext auf gleicher Ebene wie dessen Elternbox. </dd>
+ <dd>Die Box etabliert keinen neuen lokalen Stapelkontext. Die generierte Box befindet sich im aktuellen Stapelkontext auf gleicher Ebene wie dessen Elternbox. </dd>
  <dt><code>&lt;integer&gt;</code></dt>
  <dd>Der {{cssxref("integer")}} legt die Stapelebene des momentanen Stapelkontexts fest. Die Box etabliert zudem einen neuen Stapelkontext, dessen Stapelebene 0 ist. Dadurch werden die z-Indizes von Kinder-Elementen nicht mit z-Indizes außerhalb des Elements verglichen.</dd>
 </dl>

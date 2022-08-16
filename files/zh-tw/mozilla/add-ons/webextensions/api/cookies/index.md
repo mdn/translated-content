@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
 {{AddonSidebar}}讓擴充套件可以取得、設定 cookies 資訊，並監控其變動。
 
-使用此 API 前，必須先在 [manifest.json ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)檔案中加入「cookies」這項 [API 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，也必須以 [host 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)將要存取 Cookies 的網站列入。參見 [Cookie 權限](/en-US/Add-ons/WebExtensions/API/cookies#Permissions)一節。
+使用此 API 前，必須先在 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 檔案中加入「cookies」這項 [API 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，也必須以 [host 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)將要存取 Cookies 的網站列入。參見 [Cookie 權限](/en-US/Add-ons/WebExtensions/API/cookies#Permissions)一節。
 
 ## 型別
 

@@ -32,7 +32,7 @@ translation_of: Learn/Tools_and_testing/GitHub
 
 建议你最好还能够有一些基础的命令行终端的知识，例如：切换目录、新建文件以及修改系统路径（`PATH`）。
 
-> **备注：** Github 并不是使用 Git 的唯一途径。还有很多像 [GitLab ](https://about.gitlab.com/)这样的选择值得你去尝试。你也可以尝试着去构建你自己的 Git 服务器来代替 Github 的功能。在这里我们只是将 Github 作为一种可行的途径进行介绍。
+> **备注：** Github 并不是使用 Git 的唯一途径。还有很多像 [GitLab](https://about.gitlab.com/) 这样的选择值得你去尝试。你也可以尝试着去构建你自己的 Git 服务器来代替 Github 的功能。在这里我们只是将 Github 作为一种可行的途径进行介绍。
 
 ## 带你入门
 
@@ -49,7 +49,7 @@ translation_of: Learn/Tools_and_testing/GitHub
 - [Mastering issues【处理问题】 (来自 GitHub)](https://guides.github.com/features/issues/)
   - : **问题区** (**Issues**) 就像是一个关于你这个 GitHub 项目的论坛，在这里人们可以提问题和报告错误，你可以管理更新（例如给人们分配需要解决的问题、澄清问题以及告知问题已经解决）。这篇文章会让你知道所需要的一些关于问题区的知识。
 
-> **备注：** 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) 和[ Dangit, git!](https://dangitgit.com/) 这样的网站来寻找答案。
+> **备注：** 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) 和 [Dangit, git!](https://dangitgit.com/) 这样的网站来寻找答案。
 
 ## 还可以看看
 

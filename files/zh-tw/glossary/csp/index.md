@@ -1,10 +1,6 @@
 ---
 title: CSP
 slug: Glossary/CSP
-tags:
-  - HTTP
-  - 術語表
-translation_of: Glossary/CSP
 ---
 **CSP** (内容安全策略)是被用於檢測和緩解某些網站相關的攻擊類型如{{Glossary("XSS")}} 和資料注入。
 

@@ -22,7 +22,7 @@ translation_of: Web/API/KeyboardEvent
 
 <dl>
  <dt>{{domxref("KeyboardEvent.getModifierState()")}}</dt>
- <dd>Liefert einen {{jsxref("Boolean")}} Wert welcher angibt ob eine Hilfstaste wie <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, oder <kbd>Meta</kbd> gedrückt war als das Event erzeugt wurde.</dd>
+ <dd>Liefert einen {{jsxref("Boolean")}} Wert welcher angibt ob eine Hilfstaste wie <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, oder <kbd>Meta</kbd> gedrückt war als das Event erzeugt wurde.</dd>
  <dt>{{domxref("KeyboardEvent.initKeyEvent()")}}{{deprecated_inline}}</dt>
  <dd>Initialisiert ein <code>KeyboardEvent</code> Objekt. Dies wurde nur durch Gecko implementiert (andere verwendeten {{domxref("KeyboardEvent.initKeyboardEvent()")}}) und sollte nicht mehr benutzt werden. Der moderne Standardweg ist, den {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} Konstrutor zu verwenden.</dd>
  <dt>{{domxref("KeyboardEvent.initKeyboardEvent()")}}{{deprecated_inline}}</dt>
@@ -49,12 +49,12 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
  <dd>Liefert einen {{domxref("DOMString")}} mit dem Codewert der Taste, welche durch das Event repräsentiert wird.</dd>
  <dt>{{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}</dt>
- <dd>Liefert einen {{jsxref("Boolean")}} Wert der <code>true</code> ist, falls die <kbd>Ctrl</kbd> Taste aktiv war als  das Key-Event erzeugt wurde.</dd>
+ <dd>Liefert einen {{jsxref("Boolean")}} Wert der <code>true</code> ist, falls die <kbd>Ctrl</kbd> Taste aktiv war als  das Key-Event erzeugt wurde.</dd>
  <dt>{{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}</dt>
  <dd>Liefert einen {{jsxref("Boolean")}} Wert der <code>true</code> ist falls das Event nach <code>compositionstart</code> und vor <code>compositionend</code> ausgelöst wird.</dd>
  <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
  <dd>Liefert einen {{domxref("DOMString")}} der den Wert der Taste darstellt die durch das Event repräsentiert wird.</dd>
- <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
+ <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
  <dd>Liefert einen {{jsxref("Number")}} Wert der einen system- und implementationsabhängigen Zahlencode darstellt, der den unmodifizierten Wert der gedrückten Taste repräsentiert.
  <div class="warning"><strong>Warnung:</strong> Dieses Attribut ist veraltet; Sie sollten stattdessen - wenn vorhanden - {{domxref("KeyboardEvent.key")}} verwenden.</div>
  </dd>
@@ -66,7 +66,7 @@ translation_of: Web/API/KeyboardEvent
  <dd>Liefert einen {{domxref("DOMString")}} der das Gebietsschema identifiziert für die das Keyboard konfiguriert ist. Diese Zeichenkette kann leer sein, wenn der Browser oder das Gerät das Gebietsschema des Keyboards nicht kennt.
  <div class="note"><strong>Anmerkung:</strong> Dies beschreibt nicht das Gebietsschema der eingegebenen Daten. Ein Benutzer könnte ein Tastaturlayout nutzen während er Text in einer anderen Sprache eingibt.</div>
  </dd>
- <dt>{{domxref("KeyboardEvent.location")}}<a> {{Readonlyinline}}</a></dt>
+ <dt>{{domxref("KeyboardEvent.location")}} {{Readonlyinline}}</dt>
  <dd>Liefert einen {{jsxref("Number")}} Wert der die Lage der Taste auf der Tastatur oder einem anderen Eingabegerät repräsentiert.</dd>
  <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
  <dd>Liefert einen {{jsxref("Boolean")}} Wert der <code>true</code> ist, falls die <kbd>Meta</kbd> Taste (auf Mac-Tastaturen, die <kbd>⌘ Command</kbd> Taste; auf Windows-Tastaturen, die Windows -Taste (<kbd>⊞</kbd>)) aktiv war, als das Key-Event erzeugt wurde.</dd>
@@ -92,13 +92,13 @@ translation_of: Web/API/KeyboardEvent
 
 <h3 id="Sonderfälle">Sonderfälle</h3>
 
-<p>Einige Taste schalten den Status einer Kontrollleuchte um; dazu gehören Caps Lock, Num Lock, und Scroll Lock. Unter Windows und Linux senden diese Tasten nur <code>keydown</code> and <code>keyup</code> Events.</p>
+<p>Einige Taste schalten den Status einer Kontrollleuchte um; dazu gehören Caps Lock, Num Lock, und Scroll Lock. Unter Windows und Linux senden diese Tasten nur <code>keydown</code> and <code>keyup</code> Events.</p>
 
 <div class="note">
 <p>Unter Linux versendet Firefox 12 und eher das <code>keypress</code> Event auch für diese Tasten.</p>
 </div>
 
-<p>Jedoch sorgen die Einschränkungen des Mac OS X Event-Modells dafür, dass  Caps Lock nur das <code>keydown</code> Event versendet. Num Lock wurde auf einigen älteren Laptop-Modellen (Modelle 2007 und älter) unterstützt, aber seitdem hat Mac OS X  Num Lock nicht mehr untertstützt - nicht einmal auf externen Tastaturen. Auf älteren MacBooks mit einer Num Lock Taste, erzeugt diese Taste überhaupt keine KeyEvents. Gecko unterstützt die Scroll Lock Taste, falls eine externe Tastatur, die eine F14 Taste besitzt, angeschlossen ist. In bestimmten älteren Firefox-Versionen erzeugt diese Taste ein <code>keypress</code> Event; dieses inkonsistente Verhalten war {{bug(602812)}}.</p>
+<p>Jedoch sorgen die Einschränkungen des Mac OS X Event-Modells dafür, dass  Caps Lock nur das <code>keydown</code> Event versendet. Num Lock wurde auf einigen älteren Laptop-Modellen (Modelle 2007 und älter) unterstützt, aber seitdem hat Mac OS X  Num Lock nicht mehr untertstützt - nicht einmal auf externen Tastaturen. Auf älteren MacBooks mit einer Num Lock Taste, erzeugt diese Taste überhaupt keine KeyEvents. Gecko unterstützt die Scroll Lock Taste, falls eine externe Tastatur, die eine F14 Taste besitzt, angeschlossen ist. In bestimmten älteren Firefox-Versionen erzeugt diese Taste ein <code>keypress</code> Event; dieses inkonsistente Verhalten war {{bug(602812)}}.</p>
 
 <h3 id="Behandlung_von_Auto-repeat">Behandlung von Auto-repeat</h3>
 
@@ -163,23 +163,23 @@ document.addEventListener('keydown', (event) =&gt; {
     return;
   }
 
-  if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (i.e. 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
+  if (event.ctrlKey) {
+    // Even though event.key is not 'Control' (i.e. 'a' is pressed),
+    // event.ctrlKey may be true if Ctrl key is pressed at the time.
+    alert(`Combination of ctrlKey + ${keyName}`);
+  } else {
+    alert(`Key pressed ${keyName}`);
+  }
 }, false);
 
 document.addEventListener('keyup', (event) =&gt; {
-  const keyName = event.key;
+  const keyName = event.key;
 
-  // As the user release the Ctrl key, the key is no longer active.
-  // So event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
+  // As the user release the Ctrl key, the key is no longer active.
+  // So event.ctrlKey is false.
+  if (keyName === 'Control') {
+    alert('Control key was released');
+  }
 }, false);
 
 &lt;/script&gt;
@@ -211,237 +211,7 @@ document.addEventListener('keyup', (event) =&gt; {
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("31.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.char</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>9</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.charCode</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.isComposing</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("31.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.keyCode</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.locale</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.location</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("15.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.repeat</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("28.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.which</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.initKeyboardEvent()</code></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatIE("9.0")}}<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("31.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.char</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.charCode</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.isComposing</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("31.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.keyCode</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.locale</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.location</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("15.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.repeat</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("28.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.which</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.initKeyboardEvent()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Die Argumente von <code>initKeyboardEvent()</code> von WebKit and Blink weichen von der Definition in DOM Level 3 Events ab. Die Methode ist: <code>initKeyboardEvent(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in views::AbstractView viewArg, in DOMString keyIdentifierArg, in number locationArg, in boolean ctrlKeyArg, in boolean altKeyArg, in boolean shiftKeyArg, in boolean metaKeyArg, in boolean altGraphKeyArg)</code></p>
 

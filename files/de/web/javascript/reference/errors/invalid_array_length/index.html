@@ -26,11 +26,11 @@ RangeError: Invalid array buffer length (Chrome)
 <p>entweder:</p>
 
 <ul>
- <li>ein {{jsxref("Array")}} oder ein {{jsxref("ArrayBuffer")}} wurde mit einer negativen oder einer Zahl größer gleich 2<sup>32</sup> erzeugt, oder</li>
- <li>die {{jsxref("Array.length")}} Eigenschaft  wurde auf eine negative oder eine Zahl größer gleich 2<sup>32</sup>  gesetzt.</li>
+ <li>ein {{jsxref("Array")}} oder ein {{jsxref("ArrayBuffer")}} wurde mit einer negativen oder einer Zahl größer gleich 2<sup>32</sup> erzeugt, oder</li>
+ <li>die {{jsxref("Array.length")}} Eigenschaft  wurde auf eine negative oder eine Zahl größer gleich 2<sup>32</sup>  gesetzt.</li>
 </ul>
 
-<p>Warum ist die Länge von Array and <code>ArrayBuffer</code> limitiert? Die <code>length</code> Eigenschaft von <code>Array </code>und <code>ArrayBuffer </code>ist mit einem vorzeichenlosen 32-bit Integer definiert, sodass nur Werte von 0 bis 2<sup>32</sup>-1 gültig sind.</p>
+<p>Warum ist die Länge von Array and <code>ArrayBuffer</code> limitiert? Die <code>length</code> Eigenschaft von <code>Array </code>und <code>ArrayBuffer </code>ist mit einem vorzeichenlosen 32-bit Integer definiert, sodass nur Werte von 0 bis 2<sup>32</sup>-1 gültig sind.</p>
 
 <p>Wenn man ein Array mit dem Konstruktor erzeugen möchte, statt mit der Literalnotation, sollte man aufpassem, dass das erste Argument als Länge des Arrays interpretiert wird.</p>
 

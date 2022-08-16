@@ -215,9 +215,7 @@ button.addEventListener('click', async () => {
 - [`Promise()` constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 
-
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
 
 ## 이번 과정
 

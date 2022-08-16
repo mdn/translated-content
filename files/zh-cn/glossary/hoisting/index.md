@@ -1,12 +1,6 @@
 ---
 title: Hoisting（变量提升）
 slug: Glossary/Hoisting
-tags:
-  - JavaScript
-  - hoisting
-  - 术语
-  - 术语表
-translation_of: Glossary/Hoisting
 ---
 变量提升（Hoisting）被认为是，Javascript 中执行上下文（特别是创建和执行阶段）工作方式的一种认识。在 [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html) 之前的 JavaScript 文档中找不到变量提升（Hoisting）这个词。不过，需要注意的是，开始时，这个概念可能比较难理解，甚至恼人。
 

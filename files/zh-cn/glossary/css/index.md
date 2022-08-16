@@ -1,11 +1,6 @@
 ---
 title: CSS
 slug: Glossary/CSS
-tags:
-  - CSS
-  - Glossary
-  - Web
-translation_of: Glossary/CSS
 ---
 **CSS** （Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条 CSS 的样式定义包括属性和属性值，它们共同决定网页的外观。
 

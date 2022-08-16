@@ -1,14 +1,6 @@
 ---
 title: 'HTMLFormElement: submit event'
 slug: Web/API/HTMLFormElement/submit_event
-tags:
-  - 事件
-  - 表单
-  - 参考
-  - 提交
-  - HTML DOM
-  - HTML 表单元素
-translation_of: Web/API/HTMLFormElement/submit_event
 ---
 {{APIRef}}
 

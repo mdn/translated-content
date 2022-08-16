@@ -84,13 +84,13 @@ export default {
 
 我们可以使用`lodash.uniqueid()` ，像我们前一章节那样。
 
-1.  导入 `lodash.uniqueid` 到 `App` 组件。
+1. 导入 `lodash.uniqueid` 到 `App` 组件。
 
     ```js
      import uniqueId from 'lodash.uniqueid';
     ```
 
-2.  添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
+2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
 
     `App.vue` `<script>` 元素内容如下：
 
@@ -116,7 +116,7 @@ export default {
     };
     ```
 
-3.  添加 `v-for` 指令和 `key` 属性到 `<li>` 元素：
+3. 添加 `v-for` 指令和 `key` 属性到 `<li>` 元素：
 
     ```html
     <ul>
@@ -128,8 +128,9 @@ export default {
 
     这样改后，`<cli>`标签中的 js 脚本就可以访问`item`了，这意味着我们可以使用`v-bind`来传递`item`对象的字段给`ToDoItem`组件了。这非常有用，我们想让列表中的待办事项的`label`值展示到它的 label 中，而不是显示一个静态的"My Todo Item"。此外，我们想让它们的 checked 状态反应它们的`done`字段，而不是默认的`done="false"`。
 
-4.  把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"` ：
-5.  ```html
+4. 把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"` ：
+
+    ```html
     <ul>
       <li v-for="item in ToDoItems" :key="item.id">
          <to-do-item :label="item.label" :done="item.done"></to-do-item>
@@ -145,9 +146,9 @@ export default {
 
 添加一个新的 prop `id` 到 `ToDoItem` 组件。
 
-1.  标记它为 required，类型是 `String` 。
-2.  为防止命名冲突，删除掉`data`属性中的`id`字段。
-3.  删除掉 `import uniqueId from 'lodash.uniqueid';` 这行。
+1. 标记它为 required，类型是 `String` 。
+2. 为防止命名冲突，删除掉`data`属性中的`id`字段。
+3. 删除掉 `import uniqueId from 'lodash.uniqueid';` 这行。
 
 `ToDoItem` 中的 `<script>` 如下所示：
 

@@ -15,13 +15,13 @@ translation_of: Web/API/CustomElementRegistry/define
 ---
 <p>{{APIRef("CustomElementRegistry")}}</p>
 
-<p>Die <code><strong>define()</strong></code> Methode der {{domxref("CustomElementRegistry")}} Schnittstelle beschreibt ein neues benutzerdefiniertes Element.</p>
+<p>Die <code><strong>define()</strong></code> Methode der {{domxref("CustomElementRegistry")}} Schnittstelle beschreibt ein neues benutzerdefiniertes Element.</p>
 
 <p>Es gibt zwei Arten von benutzerdefinierten Elementen, die erstellt werden können:</p>
 
 <ul>
- <li><strong>Autonomes benutzerdefiniertes Element:</strong> Eigenständige Elemente; Sie erben nicht von eingebauten HTML-Elementen.</li>
- <li><strong>Angepasstes integriertes Element:</strong> Diese Elemente erben und erweitern eingebaute HTML-Elemente.</li>
+ <li><strong>Autonomes benutzerdefiniertes Element:</strong> Eigenständige Elemente; Sie erben nicht von eingebauten HTML-Elementen.</li>
+ <li><strong>Angepasstes integriertes Element:</strong> Diese Elemente erben und erweitern eingebaute HTML-Elemente.</li>
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,7 +39,7 @@ translation_of: Web/API/CustomElementRegistry/define
  <dt>options {{optional_inline}}</dt>
  <dd>Objekt, das steuert, wie das Element definiert ist. Eine Option wird derzeit unterstützt:
  <ul>
-  <li><code>extends</code>: String des Namens eines integrierten Elements das erweitert werden soll. Wird verwendet um ein <em>angepasstes integriertes Element</em>  zu erzeugen<em>.</em></li>
+  <li><code>extends</code>: String des Namens eines integrierten Elements das erweitert werden soll. Wird verwendet um ein <em>angepasstes integriertes Element</em>  zu erzeugen<em>.</em></li>
  </ul>
  </dd>
 </dl>
@@ -66,7 +66,7 @@ translation_of: Web/API/CustomElementRegistry/define
   </tr>
   <tr>
    <td><code>SyntaxError</code></td>
-   <td>Der angegebene Name ist kein <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">gültiger benutzerdefinierter Elementname</a>.</td>
+   <td>Der angegebene Name ist kein <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">gültiger benutzerdefinierter Elementname</a>.</td>
   </tr>
   <tr>
    <td><code>TypeError</code></td>
@@ -76,14 +76,14 @@ translation_of: Web/API/CustomElementRegistry/define
 </table>
 
 <div class="note">
-<p><strong>Hinweis</strong>: Du wirst oftmals  <code>NotSupportedError</code>s geworfen bekommen, die so erscheinen als würde <code>define()</code> fehlschlagen, aber stattdessen wahrscheinlich ein Problem mit {domxref("Element.attachShadow()")}} sind.</p>
+<p><strong>Hinweis</strong>: Du wirst oftmals  <code>NotSupportedError</code>s geworfen bekommen, die so erscheinen als würde <code>define()</code> fehlschlagen, aber stattdessen wahrscheinlich ein Problem mit {domxref("Element.attachShadow()")}} sind.</p>
 </div>
 
 <h2 id="Beispiele">Beispiele</h2>
 
 <h3 id="Autonomes_benutzerdefiniertes_Element">Autonomes benutzerdefiniertes Element</h3>
 
-<p>Der folgende Code entstammt dem <a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a> Beispiel (<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">siehe Live</a>).</p>
+<p>Der folgende Code entstammt dem <a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a> Beispiel (<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">siehe Live</a>).</p>
 
 <pre class="brush: js">// Create a class for the element
 class PopUpInfo extends HTMLElement {
@@ -167,7 +167,7 @@ customElements.define('popup-info', PopUpInfo);
                                     numbers on the back of your card."&gt;</pre>
 
 <div class="note">
-<p><strong>Hinweis</strong>: Konstruktoren für autonome benutzerdefinierte Elemente müssen {{domxref("HTMLElement")}} extenden.</p>
+<p><strong>Hinweis</strong>: Konstruktoren für autonome benutzerdefinierte Elemente müssen {{domxref("HTMLElement")}} extenden.</p>
 </div>
 
 <h3 id="Benutzerdefiniertes_integriertes_Element">Benutzerdefiniertes integriertes Element</h3>

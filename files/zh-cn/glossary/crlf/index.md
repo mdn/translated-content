@@ -1,7 +1,6 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
-translation_of: Glossary/CRLF
 ---
 回车符（CR）和换行符（LF）是文本文件用于标记换行的控制字符（[control characters](https://en.wikipedia.org/wiki/Control_character)）或字节码（[bytecode](https://en.wikipedia.org/wiki/Bytecode)）。
 

@@ -1,7 +1,6 @@
 ---
 title: 3D 碰撞检测
 slug: Games/Techniques/3D_collision_detection
-translation_of: Games/Techniques/3D_collision_detection
 ---
 {{GamesSidebar}}
 

@@ -1,17 +1,6 @@
 ---
 title: CSS 像素
 slug: Glossary/CSS_pixel
-tags:
-  - CSS
-  - CSS 像素
-  - 像素
-  - 单位
-  - 大小
-  - 宽度
-  - 术语
-  - 长度
-  - 高度
-translation_of: Glossary/CSS_pixel
 ---
 **CSS 像素**——在 {{Glossary("CSS")}} 中以 `px` 为后缀——是一个长度单位，大致相当于一个肉眼可以轻松看到的小点的长宽，否则就是尽可能小的长度。根据定义，一个 CSS 像素应当看起来是在距离观察者一臂之遥且像素密度为 96 DPI 的屏幕中的一个物理像素。
 
