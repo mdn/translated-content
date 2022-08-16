@@ -1,9 +1,6 @@
 ---
 title: Grid Column
 slug: Glossary/Grid_Column
-tags:
-  - CSS Grids
-translation_of: Glossary/Grid_Column
 ---
 **网格列**是[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}，{{cssxref("grid-template")}} 定义。
 

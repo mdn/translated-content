@@ -1,7 +1,6 @@
 ---
 title: 解密
 slug: Glossary/Decryption
-translation_of: Glossary/Decryption
 ---
 在密码学（{{glossary("cryptography")}}）领域，**解密**是指把密文（{{glossary("ciphertext")}}）转换成明文（{{glossary("Plaintext")}}）的过程。
 

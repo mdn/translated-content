@@ -1,13 +1,6 @@
 ---
 title: 基本类型
 slug: Glossary/Primitive
-tags:
-  - Glossary
-  - JavaScript
-  - 基本数据类型
-  - 基本类型
-  - 词汇
-translation_of: Glossary/Primitive
 ---
 **基本类型**（基本数值、基本数据类型）是一种既非{{Glossary("object", "对象")}}也无{{glossary("method","方法")}}的数据。在 {{Glossary("JavaScript")}} 中，共有 7 种基本类型：{{Glossary("string")}}，{{Glossary("number")}}，{{Glossary("bigint")}}，{{Glossary("boolean")}}，{{Glossary("null")}}，{{Glossary("undefined")}}，{{Glossary("symbol")}} ({{Glossary("ECMAScript")}} 2016 新增)。
 

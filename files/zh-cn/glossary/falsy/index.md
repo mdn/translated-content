@@ -1,11 +1,6 @@
 ---
 title: Falsy
 slug: Glossary/Falsy
-tags:
-  - JavaScript
-  - falsy
-  - truthy
-translation_of: Glossary/Falsy
 ---
 **falsy** 值（虚值）是在 {{Glossary("Boolean")}} 上下文中认定为 false 的值。
 

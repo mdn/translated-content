@@ -1,12 +1,6 @@
 ---
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
-tags:
-  - Windows
-  - 微软
-  - 术语
-  - 浏览器
-translation_of: Glossary/Microsoft_Internet_Explorer
 ---
 Internet Explorer (or IE) 是一个由微软为遗留企业用户维护的免费的可视化 {{glossary("浏览器")}} 。{{glossary("Microsoft Edge")}} 是 Windows 现在默认的浏览器。
 

@@ -1,11 +1,6 @@
 ---
 title: Syntax error(语法错误)
 slug: Glossary/Syntax_error
-tags:
-  - CodingScripting
-  - JavaScript
-  - 术语
-translation_of: Glossary/Syntax_error
 ---
 因为使用了未定义或错误的语法（{{Glossary("syntax")}}）而引发的异常（{{Glossary("exception")}}）。语法错误会在编译或者解析源码的过程中被检测出来。
 
