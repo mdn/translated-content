@@ -1,13 +1,6 @@
 ---
 title: REST
 slug: Glossary/REST
-tags:
-  - HTTP
-  - Rest
-  - 初学者
-  - 术语
-  - 架构
-translation_of: Glossary/REST
 ---
 具象状态传输（**REST，**Representational State Transfer) 是一组实现效率、可读性、还有可拓展分散式系统的软件架构设计规范。如果一个系统能坚守这些规范，那么它就是 RESTful。
 

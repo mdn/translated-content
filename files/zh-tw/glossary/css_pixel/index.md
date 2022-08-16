@@ -1,7 +1,6 @@
 ---
 title: CSS 像素
 slug: Glossary/CSS_pixel
-translation_of: Glossary/CSS_pixel
 ---
 **CSS 像素**—在 {{Glossary("CSS")}} 以 `px` 前輟表示—是大致對應單個點長高、肉眼也能輕易見到、否則就盡可能小的長度單位。按照定義，CSS 像素是在肉眼一臂之遙的距離下，像素密度（pixel density）為單個 96 DPI 像素的物理尺寸。
 

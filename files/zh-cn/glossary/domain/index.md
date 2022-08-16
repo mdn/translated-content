@@ -1,9 +1,6 @@
 ---
 title: 域
 slug: Glossary/Domain
-tags:
-  - 域
-translation_of: Glossary/Domain
 ---
 域是互联网中控制其自身资源的"权威"。它的“域名”是一种在{{Glossary("URL")}}中作为这个层次结构的一部分来标记出这种“权威性”的方式 - 通常是最令人难忘的部分，例如品牌名称。
 

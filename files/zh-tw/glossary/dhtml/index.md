@@ -1,7 +1,6 @@
 ---
 title: DHTML
 slug: Glossary/DHTML
-translation_of: Glossary/DHTML
 ---
 **DHTML** 是動態 (*dynamic*) HTML 的縮短形式，且通常用於指那些未使用 flash 或 java 等外掛的交互式網頁後面的程式碼。The term aggregates the combined functionality 允許網頁開法者使用 [HTML](/en-US/docs/HTML)， [CSS](/en-US/docs/CSS)，[Document Object Model](/en-US/docs/DOM)，以及 [JavaScript](/en-US/docs/JavaScript)。
 

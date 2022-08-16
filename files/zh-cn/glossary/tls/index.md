@@ -1,7 +1,6 @@
 ---
 title: TLS
 slug: Glossary/TLS
-translation_of: Glossary/TLS
 ---
 传输层安全性协议 (Transport Layer Security，缩写作 TLS)，它的前身是安全套接层 (Secure Sockets Layer，缩写作 SSL)，是一个被应用程序用来在网络中安全通信的 {{Glossary("protocol")}} （通讯协议），防止电子邮件、网页、消息以及其他协议被篡改或是窃听。
 

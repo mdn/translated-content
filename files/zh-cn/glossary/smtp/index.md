@@ -1,7 +1,6 @@
 ---
 title: SMTP
 slug: Glossary/SMTP
-translation_of: Glossary/SMTP
 ---
 **SMTP**（Simple Mail Transfer Protocol，简单邮件传输协议） 是用于发送的邮件的[协议](/zh-CN/docs/Glossary/Protocol)。类似于[POP3](/zh-CN/docs/Glossary/POP)和[NNTP](/zh-CN/docs/Glossary/NNTP)，它是一个[状态机](/zh-CN/docs/Glossary/State_machine)驱动的协议
 

@@ -1,10 +1,6 @@
 ---
 title: 开发者工具
 slug: Glossary/Developer_Tools
-tags:
-  - 开发者工具
-  - 术语表
-translation_of: Glossary/Developer_Tools
 ---
 开发者工具 (或“开发工具”，或简称“DevTools”) 让开发者能够开发、测试和{{Glossary("调试")}}软件。
 
