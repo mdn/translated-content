@@ -187,7 +187,7 @@ Esta es una captura de panalla de un editor de texto online:
 
 Cuando tu sitio web está listo para visualización pública , tendrás que subir tus páginas web a tu servidor web. Puedes comprar espacio en un servidor de varios proveedores (vea el artículo [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn/How_much_does_it_cost)). Una vez que establezca qué proveedor utilizar, el proveedor le enviará un correo con la información de acceso, usualmente en la forma de una URL SFTP, nombre de usuario, contraseña, y otra información necesaria para conectarte con su servidor. Tenga en cuenta que el protocolo (S)FTP está actualmente algo pasado de moda, mientras otros sistemas de carga de archivos están comenzando a volverse populares como [RSync](https://en.wikipedia.org/wiki/Rsync) y [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 
-> **Nota:**FTP es inherentemente inseguro. Deberías asegurarte de que tu proveedor de alojamiento permite el uso de una conexión segura, por ejemplo SFTP o RSync sobre SSH.
+> **Nota:** FTP es inherentemente inseguro. Deberías asegurarte de que tu proveedor de alojamiento permite el uso de una conexión segura, por ejemplo SFTP o RSync sobre SSH.
 
 Subir archivos a un sitio web es un paso muy importante mientras se crea un sitio web, por lo que sete tema se abarca en detalle en [un artículo aparte](/es/docs/Learn/Upload_files_to_a_web_server). Por ahora, se presenta una lista de clientes (S)FTP gratuitos:
 

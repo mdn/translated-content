@@ -68,30 +68,30 @@ Para hacer esto:
 
 2.  Abre la terminal (windows)/terminal (OS X/Linux). Para chequear que Python está instalado, ingrese el siguiente comando.
 
-```bash
-python -V
-```
+    ```bash
+    python -V
+    ```
 
-> **Nota:** La v del ejemplo en mayuscula (V)
+    > **Nota:** La v del ejemplo en mayuscula (V)
 
 3.  Esto debe retornar un número de versión. Si esto esta bien, navega al directorio que contiene tu ejemplo, usando el comando `cd`.
 
-```bash
-# Incluye el nombre del directorio de entrar en él,
-por ejemplo cd Escritorio
+    ```bash
+    # Incluye el nombre del directorio de entrar en él,
+    por ejemplo cd Escritorio
 
-# Use dos puntos para regresar un nivel de directorio
-si es necesario,por ejemplo cd ../
-```
+    # Use dos puntos para regresar un nivel de directorio
+    si es necesario,por ejemplo cd ../
+    ```
 
 4.  Ingresa el comando para iniciar el servidor en ese directorio:
 
-```bash
-# En Mac y Linux
-python -m SimpleHTTPServer
-#Windows
-python -m http.server
-```
+    ```bash
+    # En Mac y Linux
+    python -m SimpleHTTPServer
+    #Windows
+    python -m http.server
+    ```
 
 5.  Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL `localhost:8000` en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.
 

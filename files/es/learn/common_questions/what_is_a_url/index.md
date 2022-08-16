@@ -74,7 +74,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 - ![Anchor](https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` es un ancla para otra parte del recurso en sí. Un ancla representa una especie de "marcador" dentro del recurso, dando al navegador las instrucciones para mostrar el contenido ubicado en ese lugar "marcado". En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el ancla; en un video o documento de audio, el navegador intentará ir a la hora que representa el ancla. Vale la pena señalar que la parte después del #, también conocido como el identificador de fragmento, nunca se envía al servidor con la solicitud.
 
-{{Note('Existen <a href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">algunas partes extras y reglas extras </a>con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.')}}
+> **Nota:** Existen [algunas partes extras y reglas extras](http://en.wikipedia.org/wiki/Uniform_Resource_Locator") con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.
 
 Puede pensar en una URL como una dirección de correo postal normal: el protocolo representa el servicio postal que desea utilizar, el nombre de dominio es la ciudad o el pueblo y el puerto es como el código postal; la ruta representa el edificio donde se debe entregar su correo; los parámetros representan información adicional como el número de apartamento en el edificio; y, finalmente, el ancla representa a la persona real a la que ha dirigido su correo.
 
@@ -106,12 +106,21 @@ Veamos algunos ejemplos para aclarar esto.
 #### Ejemplos de URL absolutas
 
 - URL Completa (la misma que usamos antes)
-  - : `https://developer.mozilla.org/en-US/docs/Learn`
+  - : &nbsp;
+      ```
+      https://developer.mozilla.org/en-US/docs/Learn
+      ```
 - Protocolo implícito
-  - : `//developer.mozilla.org/en-US/docs/Learn`
+  - : &nbsp;
+      ```
+      //developer.mozilla.org/en-US/docs/Learn
+      ```
       En este caso, el navegador llamará a esa URL con el mismo protocolo que el utilizado para cargar el documento que aloja esa URL.
 - Nombre de dominio implícito
-  - : `/en-US/docs/Learn`
+  - : &nbsp;
+      ```
+      /en-US/docs/Learn
+      ```
       Este es el caso de uso más común para una URL absoluta dentro de un documento HTML. El navegador utilizará el mismo protocolo y el mismo nombre de dominio que el utilizado para cargar el documento que aloja esa URL. **Nota:** no es posible omitir el nombre de dominio sin omitir también el protocolo.
 
 #### Ejemplos de URL relativas
@@ -119,9 +128,17 @@ Veamos algunos ejemplos para aclarar esto.
 Para comprender mejor los siguientes ejemplos, supongamos que las URL se invocan desde el documento ubicado en la siguiente URL: `https://developer.mozilla.org/en-US/docs/Learn`
 
 - Sub-recursos
-  - : `Skills/Infrastructure/Understanding_URLs` Debido a que la URL no se inicia con `/`, el navegador intentará encontrar el documento en un subdirectorio del que contiene el recurso actual. Entonces, en este ejemplo, realmente queremos llegar a esta URL: `https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs`
+  - : &nbsp;
+      ```
+      Skills/Infrastructure/Understanding_URLs
+      ```
+      Debido a que la URL no se inicia con `/`, el navegador intentará encontrar el documento en un subdirectorio del que contiene el recurso actual. Entonces, en este ejemplo, realmente queremos llegar a esta URL: `https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs`
 - Volviendo en el árbol de directorios
-  - : `../CSS/display` En este caso, usamos el `../` convención de escritura, heredada del mundo del sistema de archivos UNIX, para decirle al navegador que queremos subir desde un directorio. Aquí queremos llegar a esta URL:`https://developer.mozilla.org/en-US/docs/Learn/../CSS/display`, que se puede simplificar a: `https://developer.mozilla.org/en-US/docs/CSS/display`
+  - : &nbsp;
+      ```
+      ../CSS/display
+      ```
+      En este caso, usamos el `../` convención de escritura, heredada del mundo del sistema de archivos UNIX, para decirle al navegador que queremos subir desde un directorio. Aquí queremos llegar a esta URL:`https://developer.mozilla.org/en-US/docs/Learn/../CSS/display`, que se puede simplificar a: `https://developer.mozilla.org/en-US/docs/CSS/display`
 
 ### URL semánticas
 

@@ -192,27 +192,35 @@ Esto te dará una ventana como la siguiente:
 
 Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en la consola uno por uno (y luego presiona Intro):
 
-```js
-alert('hello!');
+1. ```js
+    alert('hello!');
+    ```
+    
+2. ```js
+    document.querySelector('html').style.backgroundColor = 'purple';
+    ```
 
-document.querySelector('html').style.backgroundColor = 'purple';
-
-const myWordmark = document.createElement('img');
-myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
-```
+3. ```js
+    const myWordmark = document.createElement('img');
+    myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+    document.querySelector('h1').appendChild(myWordmark);
+    ```
 
 Ahora intenta ingresar las siguientes versiones incorrectas del código y ve lo que obtienes.
 
-```js
-alert('hello!);
+1. ```js
+    alert('hello!);
+    ```
 
-document.cheeseSelector('html').style.backgroundColor = 'purple';
-
-const myWordmark = document.createElement('img');
-myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
-```
+2. ```js
+    document.cheeseSelector('html').style.backgroundColor = 'purple';
+    ```
+  
+3. ```js
+    const myWordmark = document.createElement('img');
+    myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+    document.querySelector('h1').appendChild(myWordmark);
+    ```
 
 Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos errores son bastante crípticos, ¡pero debería ser bastante sencillo resolver estos problemas!
 
