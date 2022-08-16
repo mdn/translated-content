@@ -37,7 +37,7 @@ game.physics.startSystem(Phaser.Physics.ARCADE);
 game.physics.enable(ball, Phaser.Physics.ARCADE);
 ```
 
-次にボールを動かします。次のように、`create() `末尾で body 属性の持つ `velocity` 属性を設定します。
+次にボールを動かします。次のように、`create()` 末尾で body 属性の持つ `velocity` 属性を設定します。
 
 ```js
 ball.body.velocity.set(150, 150);
