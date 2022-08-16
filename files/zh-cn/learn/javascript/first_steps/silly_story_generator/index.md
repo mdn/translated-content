@@ -1,19 +1,6 @@
 ---
 title: 笑话生成器
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - JavaScript
-  - 初学者
-  - 变量
-  - 字符串
-  - 学习
-  - 操作符
-  - 数字
-  - 数组
-  - 测试
-  - 脚本代码
-  - 课程设计
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 

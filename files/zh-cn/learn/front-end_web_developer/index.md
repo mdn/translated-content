@@ -1,15 +1,6 @@
 ---
 title: Web 前端开发者
 slug: Learn/Front-end_web_developer
-tags:
-  - CSS
-  - HTML
-  - Web 标准
-  - 初学者
-  - 前端
-  - 工具
-  - 教程
-translation_of: Learn/Front-end_web_developer
 ---
 
 {{LearnSidebar}}

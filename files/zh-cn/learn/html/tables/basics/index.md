@@ -1,17 +1,6 @@
 ---
 title: HTML 表格 入门
 slug: Learn/HTML/Tables/Basics
-tags:
-  - colgroup
-  - colspan
-  - row
-  - rowspan
-  - 初学者
-  - 单元格
-  - 基础
-  - 学习
-  - 表格
-translation_of: Learn/HTML/Tables/Basics
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 

@@ -1,10 +1,6 @@
 ---
 title: 多媒体与嵌入
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - 图像
-  - 多媒体
-translation_of: Learn/HTML/Multimedia_and_embedding
 ---
 {{LearnSidebar}}
 

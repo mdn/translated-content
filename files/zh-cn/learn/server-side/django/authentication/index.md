@@ -1,7 +1,6 @@
 ---
 title: 'Django 教程 8: 用户授权与许可'
 slug: learn/Server-side/Django/Authentication
-translation_of: Learn/Server-side/Django/Authentication
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 

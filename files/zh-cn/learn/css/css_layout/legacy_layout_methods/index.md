@@ -1,7 +1,6 @@
 ---
 title: 传统的布局方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 original_slug: Learn/CSS/CSS_layout/传统的布局方法
 ---
 {{LearnSidebar}}

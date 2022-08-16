@@ -1,16 +1,6 @@
 ---
 title: web 入门
 slug: Learn/Getting_started_with_the_web
-tags:
-  - 初学者
-  - CSS
-  - 设计
-  - 指南
-  - HTML
-  - Index
-  - 发布
-  - 理论
-translation_of: Learn/Getting_started_with_the_web
 ---
 {{LearnSidebar}}
 

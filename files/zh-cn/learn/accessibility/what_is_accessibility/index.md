@@ -1,21 +1,6 @@
 ---
 title: What is accessibility?
 slug: Learn/Accessibility/What_is_accessibility
-tags:
-  - AT
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - keyboard
-  - 初学者
-  - 可访问性
-  - 可访问性技术
-  - 屏幕阅读器
-  - 工具
-  - 文章
-  - 用户
-translation_of: Learn/Accessibility/What_is_accessibility
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 

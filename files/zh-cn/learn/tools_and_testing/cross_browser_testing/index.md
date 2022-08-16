@@ -1,17 +1,6 @@
 ---
 title: 跨浏览器测试
 slug: Learn/Tools_and_testing/Cross_browser_testing
-tags:
-  - CSS
-  - HTML
-  - JavaScript
-  - 初学者
-  - 工具
-  - 易用性
-  - 测试
-  - 自动化
-  - 跨浏览器
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 ---
 {{LearnSidebar}}
 

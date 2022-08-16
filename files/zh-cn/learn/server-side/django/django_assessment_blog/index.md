@@ -1,7 +1,6 @@
 ---
 title: 评估：DIY Django 微博客
 slug: Learn/Server-side/Django/django_assessment_blog
-translation_of: Learn/Server-side/Django/django_assessment_blog
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
