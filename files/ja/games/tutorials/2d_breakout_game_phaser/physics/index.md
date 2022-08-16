@@ -17,7 +17,7 @@ original_slug: Games/Workflows/2D_breakout_game_Phaser/Physics
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
 
-これは、[Gamedev Phaser チュートリアル](/ja-US/docs/Games/Tutorials/2D_breakout_game_Phaser)の 16 ステップ中、 **5 ステップ目**になります。このレッスンを終えた後のソースコードは [Gamedev-Phaser-Content-Kit/demos/lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html) で見ることができます。
+これは、[Gamedev Phaser チュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)の 16 ステップ中、 **5 ステップ目**になります。このレッスンを終えた後のソースコードは [Gamedev-Phaser-Content-Kit/demos/lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html) で見ることができます。
 
 モノ同士の衝突を正しく処理するためには、物理演算が必要になります。この文書では、 Phaser での実装と、典型的な例を紹介します。
 
