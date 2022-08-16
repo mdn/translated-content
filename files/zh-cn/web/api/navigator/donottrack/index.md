@@ -29,4 +29,4 @@ console.log(navigator.doNotTrack);
 
 ## 参见
 
-- [不跟踪字段指南](/zh-cn/The_Do_Not_Track_Field_Guide)
+- {{httpheader("DNT")}} HTTP 标头
