@@ -47,7 +47,7 @@ slug: Web/API/Cache
 
 该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。 虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。 它将缓存的速记标识符映射到特定的版本化缓存名称。 代码还会删除命名不在 CURRENT_CACHES 中的所有缓存。
 
-> **备注：** **注意：** 在 Chrome 中，请访问 chrome://inspect/#service-workers ，然后单击注册的服务工作线程下面的“inspect”链接，查看 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 脚本正在执行的各种操作的日志记录。
+> **备注：** 在 Chrome 中，请访问 chrome://inspect/#service-workers ，然后单击注册的服务工作线程下面的“inspect”链接，查看 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 脚本正在执行的各种操作的日志记录。
 
 ```js
 var CACHE_VERSION = 1;

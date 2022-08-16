@@ -2,69 +2,52 @@
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>Page transition events fire when a webpage is being loaded or unloaded.</p>
+Page transition events fire when a webpage is being loaded or unloaded.
 
-<p>当网页在加载完成或卸载后会触发页面传输事件（Page transition events）。</p>
+当网页在加载完成或卸载后会触发页面传输事件（Page transition events）。
 
-<h2 id="DOM_Information">DOM Information</h2>
+## DOM Information
 
-<p> </p>
+### Inheritance Hierarchy
 
-<h3 id="Inheritance_Hierarchy">Inheritance Hierarchy</h3>
+EventPageTransitionEvent
 
-<div> Event
-<div>   PageTransitionEvent</div>
-</div>
+## Example
 
-<h2 id="Example">Example</h2>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<!DOCTYPE html>
+<html>
+<body onpageshow="myFunction(event)">
+</body>
+</html>
+```
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body onpageshow="myFunction(event)"&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">function myFunction(event) {
+```js
+function myFunction(event) {
     if (event.persisted) {
         alert("The page was cached by the browser");
     } else {
         alert("The page was NOT cached by the browser");
     }
-}</pre>
+}
+```
 
-<h2 id="Members">Members</h2>
+## Members
 
-<p>The <strong>PageTransitionEvent</strong> object has these types of members:</p>
+The **PageTransitionEvent** object has these types of members:
 
-<ul>
- <li><a href="#">Properties</a></li>
-</ul>
+- Properties
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<p>The <strong>PageTransitionEvent</strong> object has these properties.</p>
+The **PageTransitionEvent** object has these properties.
 
-<table>
- <tbody>
-  <tr>
-   <th>Property</th>
-   <th>Access type</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td>
-    <p><strong>persisted</strong></p>
-   </td>
-   <td>只读</td>
-   <td>
-    <p>标记页面是否从缓存（Backforward Cache）中加载</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Property      | Access type | Description                                   |
+| ------------- | ----------- | --------------------------------------------- |
+| **persisted** | 只读        | 标记页面是否从缓存（Backforward Cache）中加载 |

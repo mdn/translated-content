@@ -2,44 +2,43 @@
 title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}
 
-<p>{{domxref("Clipboard")}} 接口的 <strong><code>writeText()</code></strong> 方法可以写入特定字符串到操作系统的剪切板。</p>
+{{domxref("Clipboard")}} 接口的 **`writeText()`** 方法可以写入特定字符串到操作系统的剪切板。
 
-<div class="note">
-<p><strong>Note:</strong> 规范要求在写入剪贴板之前使用 <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> 获取“剪贴板写入”权限。但是，不同浏览器的具体要求不同，因为这是一个新的 API。有关详细信息，请查看<a href="#浏览器兼容性">浏览器兼容性</a> and {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}}。</p>
-</div>
+> **备注：** 规范要求在写入剪贴板之前使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 获取“剪贴板写入”权限。但是，不同浏览器的具体要求不同，因为这是一个新的 API。有关详细信息，请查看[浏览器兼容性](#浏览器兼容性) and {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>promise</em> = navigator.clipboard.writeText(<em>newClipText</em>)</pre>
+```
+var promise = navigator.clipboard.writeText(newClipText)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>newClipText</code></dt>
- <dd>The {{domxref("DOMString")}} to be written to the clipboard.</dd>
-</dl>
+- `newClipText`
+  - : The {{domxref("DOMString")}} to be written to the clipboard.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{jsxref("Promise")}} ，一旦剪贴板的内容被更新，它就会被解析。如果调用者没有写入剪贴板的权限，则拒绝写入剪切板（reject）</p>
+一个{{jsxref("Promise")}} ，一旦剪贴板的内容被更新，它就会被解析。如果调用者没有写入剪贴板的权限，则拒绝写入剪切板（reject）
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>此示例将剪贴板的内容设置为字符串“&lt;empty clipboard&gt;”。</p>
+此示例将剪贴板的内容设置为字符串“\<empty clipboard>”。
 
-<pre class="brush: js">navigator.clipboard.writeText("&lt;empty clipboard&gt;").then(function() {
+```js
+navigator.clipboard.writeText("<empty clipboard>").then(function() {
   /* clipboard successfully set */
 }, function() {
   /* clipboard write failed */
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Clipboard.writeText")}}</p>
+{{Compat("api.Clipboard.writeText")}}

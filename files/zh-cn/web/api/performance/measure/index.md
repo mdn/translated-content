@@ -2,48 +2,46 @@
 title: Performance.measure()
 slug: Web/API/Performance/measure
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p> <strong><code>measure()</code></strong> 方法在浏览器性能记录缓存中创建了一个名为{{domxref("DOMHighResTimeStamp","时间戳")}}的记录来记录两个特殊标志位（通常称为开始标志和结束标志）。 被命名的{{domxref("DOMHighResTimeStamp","时间戳")}}称为一次测量（measure）。</p>
+**`measure()`** 方法在浏览器性能记录缓存中创建了一个名为{{domxref("DOMHighResTimeStamp","时间戳")}}的记录来记录两个特殊标志位（通常称为开始标志和结束标志）。 被命名的{{domxref("DOMHighResTimeStamp","时间戳")}}称为一次测量（measure）。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p><code>measure</code> 可以被 {{domxref("Performance")}} 接口 <code>getEntries*()</code> 中的方法检查到 ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} 或者 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).</p>
+`measure` 可以被 {{domxref("Performance")}} 接口 `getEntries*()` 中的方法检查到 ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} 或者 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
 
-<p>The <code>measure's</code> {{domxref("PerformanceEntry","performance entry")}} will have the following property values:</p>
+The `measure's` {{domxref("PerformanceEntry","performance entry")}} will have the following property values:
 
-<ul>
- <li>{{domxref("PerformanceEntry.entryType","entryType")}} - set to "<code>measure</code>".</li>
- <li>{{domxref("PerformanceEntry.name","name")}} - set to the "<code>name</code>" given when the measure was created.</li>
- <li>{{domxref("PerformanceEntry.startTime","startTime")}} - set to the start mark {{domxref("DOMHighResTimeStamp","timestamp")}}.</li>
- <li>{{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the end mark timestamp minus the start mark timestamp).</li>
-</ul>
+- {{domxref("PerformanceEntry.entryType","entryType")}} - set to "`measure`".
+- {{domxref("PerformanceEntry.name","name")}} - set to the "`name`" given when the measure was created.
+- {{domxref("PerformanceEntry.startTime","startTime")}} - set to the start mark {{domxref("DOMHighResTimeStamp","timestamp")}}.
+- {{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the end mark timestamp minus the start mark timestamp).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>performance</em>.measure(name, startMark, endMark);
-</pre>
+```
+performance.measure(name, startMark, endMark);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name</dt>
- <dd>一个 {{domxref("DOMString")}}， 代表测量的名字。</dd>
- <dt>startMark {{optional_inline}}</dt>
- <dd>一个 {{domxref("DOMString")}}， 代表测量的开始标志名字。 May also be the name of a {{domxref("PerformanceTiming")}} property.</dd>
- <dt>endMark {{optional_inline}}</dt>
- <dd>一个{{domxref("DOMString")}}， 代表测量的结束标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.</dd>
-</dl>
+- name
+  - : 一个 {{domxref("DOMString")}}， 代表测量的名字。
+- startMark {{optional_inline}}
+  - : 一个 {{domxref("DOMString")}}， 代表测量的开始标志名字。 May also be the name of a {{domxref("PerformanceTiming")}} property.
+- endMark {{optional_inline}}
+  - : 一个{{domxref("DOMString")}}， 代表测量的结束标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无</p>
+无
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>以下例子展示如何在浏览器性能记录缓存中使用 <code>measure()</code>创建一个新的测量记录{{domxref("PerformanceEntry","performance entry")}} 。</p>
+以下例子展示如何在浏览器性能记录缓存中使用 `measure()`创建一个新的测量记录{{domxref("PerformanceEntry","performance entry")}} 。
 
-<pre class="brush: js">// 以一个标志开始。
+```js
+// 以一个标志开始。
 performance.mark("mySetTimeout-start");
 
 // 等待一些时间。
@@ -68,16 +66,12 @@ setTimeout(function() {
   performance.clearMarks();
   performance.clearMeasures();
 }, 1000);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.Performance.measure")}}</p>
-</div>
+{{Compat("api.Performance.measure")}}

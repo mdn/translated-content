@@ -2,21 +2,24 @@
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>NodeList.keys()</strong></code> 方法返回 {{jsxref("Iteration_protocols",'iterator')}} ，此方法允许遍历这个对象中包含的所有的键，即使这个键是 <code>unsigned integer（无符号整数）</code>.</p>
+**`NodeList.keys()`** 方法返回 {{jsxref("Iteration_protocols",'iterator')}} ，此方法允许遍历这个对象中包含的所有的键，即使这个键是 `unsigned integer（无符号整数）`.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">nodeList.keys();</pre>
+```
+nodeList.keys();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回 {{jsxref("Iteration_protocols","iterator")}}.</p>
+返回 {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js; highlight:[13] notranslate">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -31,22 +34,21 @@ var list = node.childNodes;
 for(var key of list.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>结果是：</p>
+结果是：
 
-<pre class="notranslate">0
+```
+0
 1
 2
-</pre>
+```
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.NodeList.keys")}}</p>
+{{Compat("api.NodeList.keys")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

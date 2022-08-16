@@ -2,102 +2,82 @@
 title: DOMParser
 slug: Web/API/DOMParser
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>DOMParser</code></strong> 可以将存储在字符串中的 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 源代码解析为一个 DOM {{domxref("Document")}}。</p>
+**`DOMParser`** 可以将存储在字符串中的 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 源代码解析为一个 DOM {{domxref("Document")}}。
 
-<div class="note">
-<p>{{domxref("XMLHttpRequest")}} 支持从 URL 可寻址资源解析 XML 和 HTML，在其{{domxref("XMLHttpRequest.response", "response")}} 属性中返回<code>Document</code>。</p>
-</div>
+> **备注：** {{domxref("XMLHttpRequest")}} 支持从 URL 可寻址资源解析 XML 和 HTML，在其{{domxref("XMLHttpRequest.response", "response")}} 属性中返回`Document`。
 
-<p>你可以使用{{domxref("XMLSerializer")}} 接口执行相反的操作 - 将 DOM 树转换为 XML 或 HTML 源。</p>
+你可以使用{{domxref("XMLSerializer")}} 接口执行相反的操作 - 将 DOM 树转换为 XML 或 HTML 源。
 
-<p>对于 HTML 文档，您还可以通过设置 {{domxref("Element.innerHTML")}} 和{{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为从 HTML 构建的新 DOM 树。还可以读取这些属性以获取对应于相应 DOM 子树的 HTML 片段。</p>
+对于 HTML 文档，您还可以通过设置 {{domxref("Element.innerHTML")}} 和{{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为从 HTML 构建的新 DOM 树。还可以读取这些属性以获取对应于相应 DOM 子树的 HTML 片段。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">let <em>domparser</em> = new DOMParser()​​;</pre>
+```js
+let domparser = new DOMParser()​​;
+```
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>{{domxref("DOMParser.parseFromString()")}}</p>
+{{domxref("DOMParser.parseFromString()")}}
 
-<h3 id="语法_2">语法</h3>
+### 语法
 
-<pre class="brush: js"><em>let </em><strong>doc</strong><em><strong> </strong>= domparser.</em>parseFromString(<em>string</em>, <em>mimeType</em>)</pre>
+```js
+let doc = domparser.parseFromString(string, mimeType)
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>基于 <strong><code><a href="#Argument02">mimeType</a></code></strong> 参数，返回 {{domxref("Document")}} 或 {{domxref("XMLDocument")}} 或其他文档类型。</p>
+基于 **[`mimeType`](#Argument02)** 参数，返回 {{domxref("Document")}} 或 {{domxref("XMLDocument")}} 或其他文档类型。
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>该方法接收 2 个必要参数：</p>
+该方法接收 2 个必要参数：
 
-<dl>
- <dt><code>string</code></dt>
- <dd>要解析的 {{domxref("DOMString")}}。它必须包含 {{Glossary("HTML")}}、{{Glossary("xml")}}、{{Glossary("xhtml+xml")}} 或 {{Glossary("svg")}} 文档。</dd>
- <dt><a id="Argument02"></a></dt>
- <dt><code>mimeType</code></dt>
- <dd>一个 {{domxref("DOMString")}}。This string determines a class of the the method's return value. The possible values are the following:</dd>
-</dl>
+- `string`
+  - : 要解析的 {{domxref("DOMString")}}。它必须包含 {{Glossary("HTML")}}、{{Glossary("xml")}}、{{Glossary("xhtml+xml")}} 或 {{Glossary("svg")}} 文档。
+- `mimeType`
 
-<table class="standard-table" style="max-width: 50%;">
- <thead>
-  <tr>
-   <th scope="col"><code>mimeType</code></th>
-   <th scope="col">doc.constructor</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>text/html</code></td>
-   <td><code>{{domxref("Document")}}</code></td>
-  </tr>
-  <tr>
-   <td><code>text/xml</code></td>
-   <td><code>{{domxref("XMLDocument")}}</code></td>
-  </tr>
-  <tr>
-   <td><code>application/xml</code></td>
-   <td><code>{{domxref("XMLDocument")}}</code></td>
-  </tr>
-  <tr>
-   <td><code>application/xhtml+xml</code></td>
-   <td><code>{{domxref("XMLDocument")}}</code></td>
-  </tr>
-  <tr>
-   <td><code>image/svg+xml</code></td>
-   <td><code>{{domxref("XMLDocument")}}</code></td>
-  </tr>
- </tbody>
-</table>
+  - : 一个 {{domxref("DOMString")}}。This string determines a class of the the method's return value. The possible values are the following:
 
-<h2 id="解析_XML">解析 XML</h2>
+| `mimeType`              | doc.constructor                        |
+| ----------------------- | -------------------------------------- |
+| `text/html`             | `{{domxref("Document")}}`     |
+| `text/xml`              | `{{domxref("XMLDocument")}}` |
+| `application/xml`       | `{{domxref("XMLDocument")}}` |
+| `application/xhtml+xml` | `{{domxref("XMLDocument")}}` |
+| `image/svg+xml`         | `{{domxref("XMLDocument")}}` |
 
-<p>一旦建立了一个解析对象以后，你就可以使用它的 <code>parseFromString</code> 方法来解析一个 XML 字符串：</p>
+## 解析 XML
 
-<pre class="brush: js">let parser = new DOMParser(),
+一旦建立了一个解析对象以后，你就可以使用它的 `parseFromString` 方法来解析一个 XML 字符串：
+
+```js
+let parser = new DOMParser(),
     doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-</pre>
+```
 
-<h4 id="错误处理">错误处理</h4>
+#### 错误处理
 
-<p>如果解析失败，<code>DOMParser</code> 不会抛出任何异常，而是会返回一个给定的错误文档：</p>
+如果解析失败，`DOMParser` 不会抛出任何异常，而是会返回一个给定的错误文档：
 
-<pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
+```xml
+<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
 (error description)
-&lt;sourcetext&gt;(a snippet of the source XML)&lt;/sourcetext&gt;
-&lt;/parsererror&gt;
-</pre>
+<sourcetext>(a snippet of the source XML)</sourcetext>
+</parsererror>
+```
 
-<p>解析错误会显示在<a href="../../../zh-cn/Error_Console">错误控制台</a>，包括文档的地址和错误的源代码。</p>
+解析错误会显示在[错误控制台](../../../zh-cn/Error_Console)，包括文档的地址和错误的源代码。
 
-<h2 id="解析_SVG_或者_HTML_文档">解析 SVG 或者 HTML 文档</h2>
+## 解析 SVG 或者 HTML 文档
 
-<p><code>DOMParser</code> 也可以用来解析 SVG 文档 {{geckoRelease("10.0")}} 或者 HTML 文档 {{geckoRelease("12.0")}}。根据给定的 MIME 类型不同，<code>parseFromString</code> 方法可能返回三种不同类型的文档。如果 MIME 类型是 <code>text/xml</code>，则返回一个 <code>XMLDocument</code>，如果 MIME 类型是 <code>text/svg+xml</code>，则返回一个 <code>SVGDocument</code>，如果 MIME 类型是 <code>text/html</code>，则返回一个 <code>HTMLDocument</code>。</p>
+`DOMParser` 也可以用来解析 SVG 文档 {{geckoRelease("10.0")}} 或者 HTML 文档 {{geckoRelease("12.0")}}。根据给定的 MIME 类型不同，`parseFromString` 方法可能返回三种不同类型的文档。如果 MIME 类型是 `text/xml`，则返回一个 `XMLDocument`，如果 MIME 类型是 `text/svg+xml`，则返回一个 `SVGDocument`，如果 MIME 类型是 `text/html`，则返回一个 `HTMLDocument`。
 
-<pre class="brush: js">let parser = new DOMParser();
+```js
+let parser = new DOMParser();
 let doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 // 返回一个 Document 对象，但不是 SVGDocument，也不是 HTMLDocument
 
@@ -108,11 +88,12 @@ doc = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
 parser = new DOMParser();
 doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 // 返回一个 HTMLDocument 对象，同时也是一个 Document 对象。
-</pre>
+```
 
-<h2 id="DOMParser_HTML_扩展">DOMParser HTML 扩展</h2>
+## DOMParser HTML 扩展
 
-<pre class="brush: js">/*
+```js
+/*
  * DOMParser HTML extension
  * 2012-09-04
  *
@@ -144,7 +125,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 			var
 			  doc = document.implementation.createHTMLDocument("")
 			;
-	      		if (markup.toLowerCase().indexOf('&lt;!doctype') &gt; -1) {
+	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
         			doc.documentElement.innerHTML = markup;
       			}
       			else {
@@ -155,23 +136,20 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 			return nativeParse.apply(this, arguments);
 		}
 	};
-}(DOMParser));</pre>
+}(DOMParser));
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DOMParser", 3)}}
 
+## 参见
 
-<p>{{Compat("api.DOMParser", 3)}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{domxref("XMLSerializer")}}</li>
- <li>{{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.</li>
-</ul>
+- [Parsing and serializing XML](/zh-CN/docs/Parsing_and_serializing_XML)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLSerializer")}}
+- {{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.

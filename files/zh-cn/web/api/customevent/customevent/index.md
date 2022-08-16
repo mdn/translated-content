@@ -2,45 +2,36 @@
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>CustomEvent()</strong></code> constructor creates a new {{domxref("CustomEvent")}}.</p>
+The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}}.
 
-<p>构造方法 CustomerEvent() 创建一个新的 {{domxref("CustomEvent")}} 对象。</p>
+构造方法 CustomerEvent() 创建一个新的 {{domxref("CustomEvent")}} 对象。
 
-<h2 id="Syntax_语法">Syntax 语法</h2>
+## Syntax 语法
 
-<pre class="syntaxbox"> <em>event</em> = new CustomEvent(<em>typeArg</em>, <em>customEventInit</em>);</pre>
+```
+ event = new CustomEvent(typeArg, customEventInit);
+```
 
-<h3 id="Values_参数">Values 参数</h3>
+### Values 参数
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>一个表示 event 名字的字符串</dd>
- <dt><em>customEventInit</em></dt>
- <dd>Is a <code>CustomEventInit</code> dictionary, having the following fields:  一个字典类型参数，有如下字段
+- _typeArg_
+  - : 一个表示 event 名字的字符串
+- _customEventInit_
 
- <ul>
-  <li><code>"detail"</code>, optional and defaulting to <code>null</code>, of type any, that is a event-dependant value associated with the event.   可选的默认值是 null 的任意类型数据，是一个与 event 相关的值</li>
-  <li>bubbles 一个布尔值，表示该事件能否冒泡。来自 {{domxref("Event.Event", "EventInit")}}。注意：测试 chrome 默认为不冒泡。</li>
-  <li>cancelable 一个布尔值，表示该事件是否可以取消。来自 {{domxref("Event.Event", "EventInit")}}</li>
- </ul>
+  - : Is a `CustomEventInit` dictionary, having the following fields: 一个字典类型参数，有如下字段
 
- <div class="note">
- <p><em>The <code>CustomEventInit</code></em><em> dictionary also accepts fields from the {{domxref("Event.Event", "EventInit")}} dictionary.</em></p>
+    - `"detail"`, optional and defaulting to `null`, of type any, that is a event-dependant value associated with the event. 可选的默认值是 null 的任意类型数据，是一个与 event 相关的值
+    - bubbles 一个布尔值，表示该事件能否冒泡。来自 {{domxref("Event.Event", "EventInit")}}。注意：测试 chrome 默认为不冒泡。
+    - cancelable 一个布尔值，表示该事件是否可以取消。来自 {{domxref("Event.Event", "EventInit")}}
 
- <p>CustomerEventInit 字典参数同样接受来自于 Event 类构造函数的 eventInit 字典参数，如下</p>
+    <div class="note"><p><em>The <code>CustomEventInit</code></em><em> dictionary also accepts fields from the {{domxref("Event.Event", "EventInit")}} dictionary.</em></p><p>CustomerEventInit 字典参数同样接受来自于 Event 类构造函数的 eventInit 字典参数，如下</p><p>bubbles 一个布尔值，表示该事件能否冒泡</p><p>cancelable 一个布尔值，表示该事件是否可以取消</p></div>
 
- <p>bubbles   一个布尔值，表示该事件能否冒泡</p>
+## Example
 
- <p>cancelable  一个布尔值，表示该事件是否可以取消</p>
- </div>
- </dd>
-</dl>
-
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">// add an appropriate event listener
+```js
+// add an appropriate event listener
 obj.addEventListener("cat", function(e) { process(e.detail) });
 
 // create and dispatch the event
@@ -49,23 +40,23 @@ var event = new CustomEvent("cat", {
     hazcheeseburger: true
   }
 });
-obj.dispatchEvent(event);</pre>
+obj.dispatchEvent(event);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## Polyfill
 
-<p>{{Compat}}</p>
+You can polyfill the `CustomEvent()` constructor functionality in Internet Explorer 9 and higher with the following code:
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>You can polyfill the <code>CustomEvent()</code> constructor functionality in Internet Explorer 9 and higher with the following code:</p>
-
-<pre class="brush: js">(function(){
+```js
+(function(){
     try{
         // a : While a window.CustomEvent object exists, it cannot be called as a constructor.
         // b : There is no window.CustomEvent object
@@ -85,10 +76,9 @@ obj.dispatchEvent(event);</pre>
 
         window.CustomEvent = CustomEvent;
     }
-})();</pre>
+})();
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("CustomEvent")}}</li>
-</ul>
+- {{domxref("CustomEvent")}}

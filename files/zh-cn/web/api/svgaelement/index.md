@@ -2,93 +2,109 @@
 title: SVGAElement
 slug: Web/API/SVGAElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<h2 id="SVG_a_DOM_接口">SVG a DOM 接口</h2>
+## SVG a DOM 接口
 
-<p><code>SVGAElement</code>接口提供了对{{ SVGElement("a") }}元素的属性的访问，而且还提供了操作该元素的方法。</p>
+`SVGAElement`接口提供了对{{ SVGElement("a") }}元素的属性的访问，而且还提供了操作该元素的方法。
 
-<h3 id="接口概览">接口概览</h3>
+### 接口概览
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">作用于</th>
-   <td>{{ domxref("SVGElement") }}、 {{ domxref("SVGURIReference") }}、 {{ domxref("SVGTests") }}、 {{ domxref("SVGLangSpace") }}、 {{ domxref("SVGExternalResourcesRequired") }}、 {{ domxref("SVGStylable") }}、 {{ domxref("SVGTransformable") }}</td>
-  </tr>
-  <tr>
-   <th scope="row">方法</th>
-   <td><em>无</em></td>
-  </tr>
-  <tr>
-   <th scope="row">属性</th>
-   <td>
-    <ul>
-     <li>只读属性 {{ domxref("SVGAnimatedString") }} <code>target</code></li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG11/linking.html#InterfaceSVGAElement">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">作用于</th>
+      <td>
+        {{ domxref("SVGElement") }}、
+        {{ domxref("SVGURIReference") }}、
+        {{ domxref("SVGTests") }}、
+        {{ domxref("SVGLangSpace") }}、
+        {{ domxref("SVGExternalResourcesRequired") }}、
+        {{ domxref("SVGStylable") }}、
+        {{ domxref("SVGTransformable") }}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">方法</th>
+      <td><em>无</em></td>
+    </tr>
+    <tr>
+      <th scope="row">属性</th>
+      <td>
+        <ul>
+          <li>
+            只读属性 {{ domxref("SVGAnimatedString") }}
+            <code>target</code>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">规范文档</th>
+      <td>
+        <a href="http://www.w3.org/TR/SVG11/linking.html#InterfaceSVGAElement"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个接口同样会从父级元素 <em>{{domxref("SVGGraphicsElement")}}</em>继承属性，并实现 <em>{{domxref("SVGURIReference")}}</em> 和 <em>{{domxref("HTMLHyperlinkElementUtils")}}</em> 中的功能。</p>
+这个接口同样会从父级元素 *{{domxref("SVGGraphicsElement")}}*继承属性，并实现 _{{domxref("SVGURIReference")}}_ 和 _{{domxref("HTMLHyperlinkElementUtils")}}_ 中的功能。
 
-<p><strong>{{domxref("SVGAElement.download")}} </strong></p>
+**{{domxref("SVGAElement.download")}}**
 
-<p>    参见 {{domxref("HTMLAnchorElement.download")}}</p>
+参见 {{domxref("HTMLAnchorElement.download")}}
 
-<p><strong>{{domxref("SVGAElement.href")}} </strong></p>
+**{{domxref("SVGAElement.href")}}**
 
-<p>    See {{domxref("HTMLAnchorElement.href")}}</p>
+See {{domxref("HTMLAnchorElement.href")}}
 
-<p><strong>{{domxref("SVGAElement.hreflang")}} </strong></p>
+**{{domxref("SVGAElement.hreflang")}}**
 
-<p>    是一个反映 <code>hreflang</code> 属性的字符串（ DOMString ），表示链接资源的语言种类。</p>
+是一个反映 `hreflang` 属性的字符串（ DOMString ），表示链接资源的语言种类。
 
-<p><strong>{{domxref("SVGAElement.ping")}} </strong></p>
+**{{domxref("SVGAElement.ping")}}**
 
-<p>    是一个反映ping值的字符串（ DOMString ），包含以空格分隔开的URL列表，当超链接可以被跟踪时，浏览器会（在后台）发送有PING主体的 {{HTTPMethod("POST")}} 的请求，一般用于追踪。</p>
+是一个反映 ping 值的字符串（ DOMString ），包含以空格分隔开的 URL 列表，当超链接可以被跟踪时，浏览器会（在后台）发送有 PING 主体的 {{HTTPMethod("POST")}} 的请求，一般用于追踪。
 
-<p><strong>{{domxref("SVGAElement.referrerPolicy")}} </strong></p>
+**{{domxref("SVGAElement.referrerPolicy")}}**
 
-<p>    参见 {{domxref("HTMLAnchorElement.referrerPolicy")}}</p>
+参见 {{domxref("HTMLAnchorElement.referrerPolicy")}}
 
-<p><strong>{{domxref("SVGAElement.rel")}} </strong></p>
+**{{domxref("SVGAElement.rel")}}**
 
-<p><strong>    </strong>参见 {{domxref("HTMLAnchorElement.rel")}}</p>
+参见 {{domxref("HTMLAnchorElement.rel")}}
 
-<p><strong>{{domxref("SVGAElement.relList")}} </strong></p>
+**{{domxref("SVGAElement.relList")}}**
 
-<p>    参见{{domxref("HTMLAnchorElement.relList")}}</p>
+参见{{domxref("HTMLAnchorElement.relList")}}
 
-<p><strong>{{domxref("SVGAElement.target")}} {{readonlyInline}} </strong></p>
+**{{domxref("SVGAElement.target")}} {{readonlyInline}}**
 
-<p><strong>  </strong>  它和特定元素的 {{SVGAttr("target")}} 属性相同</p>
+它和特定元素的 {{SVGAttr("target")}} 属性相同
 
-<p><strong>{{domxref("SVGAElement.text")}} </strong></p>
+**{{domxref("SVGAElement.text")}}**
 
-<p>    是一个字符串（ DOMString ），作为 {{domxref("Node.textContent")}} 属性的代名词。</p>
+是一个字符串（ DOMString ），作为 {{domxref("Node.textContent")}} 属性的代名词。
 
-<p><strong>{{domxref("SVGAElement.type")}} </strong></p>
+**{{domxref("SVGAElement.type")}}**
 
-<p>    是一个反映 <code>type</code> 属性的字符串（ DOMString ），表示链接资源的MIME种类。</p>
+是一个反映 `type` 属性的字符串（ DOMString ），表示链接资源的 MIME 种类。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><code>该SVGAElement接口没有提供任何专有的方法。</code></p>
+`该SVGAElement接口没有提供任何专有的方法。`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在下面的这个例子里， {{SVGElement("a")}} 元素的 {{SVGAttr("target")}} 属性值是 <code>_blank</code> ，当链接被点击时，它将记录以通知是否符合条件。</p>
+在下面的这个例子里， {{SVGElement("a")}} 元素的 {{SVGAttr("target")}} 属性值是 `_blank` ，当链接被点击时，它将记录以通知是否符合条件。
 
-<pre class="brush: js"><code class="language-js">var linkRef = document.querySelector("a");
-linkRef.target = "_self"; </code>
+```js
+var linkRef = document.querySelector("a");
+linkRef.target = "_self";
 
 linkRef.onclick = function(){
   if (linkRef.target === "_blank") {
@@ -97,18 +113,17 @@ linkRef.onclick = function(){
   } else {
     console.log("SORRY! not _blank");
   }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.SVGAElement")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("a") }} SVG Element</li>
-</ul>
+- {{ SVGElement("a") }} SVG Element

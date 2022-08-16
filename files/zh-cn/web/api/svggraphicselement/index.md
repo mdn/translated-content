@@ -2,42 +2,36 @@
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p> <strong><code>SVGGraphicsElement </code></strong>接口表示SVG元素，其主要目的是将图形直接渲染到组中。</p>
+**`SVGGraphicsElement `**接口表示 SVG 元素，其主要目的是将图形直接渲染到组中。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<div class="note">
-<p><strong>提示:</strong> 该接口是SVG 2中引入的，它取代了SVG 1.1中的{{domxref("SVGLocatable")}}和{{domxref("SVGTransformable")}}接口。</p>
-</div>
+> **备注：** 该接口是 SVG 2 中引入的，它取代了 SVG 1.1 中的{{domxref("SVGLocatable")}}和{{domxref("SVGTransformable")}}接口。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此接口还从其父接口{{domxref("SVGElement")}}继承属性</p>
+此接口还从其父接口{{domxref("SVGElement")}}继承属性
 
-<dl>
- <dt>{{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}</dt>
- <dd>一个{{domxref("SVGAnimatedTransformList")}}反映给定元素的{{cssxref("transform")}}属性的计算值及其对应的{{SVGAttr("transform")}}}属性。</dd>
-</dl>
+- {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
+  - : 一个{{domxref("SVGAnimatedTransformList")}}反映给定元素的{{cssxref("transform")}}属性的计算值及其对应的{{SVGAttr("transform")}}}属性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>此接口还从其父方法{{domxref("SVGElement")}}继承方法。</p>
+此接口还从其父方法{{domxref("SVGElement")}}继承方法。
 
-<dl>
- <dt>{{domxref("SVGGraphicsElement.getBBox()")}}</dt>
- <dd>返回一个{{domxref("DOMRect")}}，它表示当前元素的计算出的边界框。</dd>
- <dt>{{domxref("SVGGraphicsElement.getCTM()")}}</dt>
- <dd>返回一个{{domxref("DOMMatrix")}}，代表将当前元素的坐标系转换为其SVG视口的坐标系的矩阵。</dd>
- <dt>{{domxref("SVGGraphicsElement.getScreenCTM()")}}</dt>
- <dd>返回一个{{domxref("DOMMatrix")}}代表表示将当前元素的坐标系转换为SVG文档片段的SVG视口的坐标系的矩阵。</dd>
-</dl>
+- {{domxref("SVGGraphicsElement.getBBox()")}}
+  - : 返回一个{{domxref("DOMRect")}}，它表示当前元素的计算出的边界框。
+- {{domxref("SVGGraphicsElement.getCTM()")}}
+  - : 返回一个{{domxref("DOMMatrix")}}，代表将当前元素的坐标系转换为其 SVG 视口的坐标系的矩阵。
+- {{domxref("SVGGraphicsElement.getScreenCTM()")}}
+  - : 返回一个{{domxref("DOMMatrix")}}代表表示将当前元素的坐标系转换为 SVG 文档片段的 SVG 视口的坐标系的矩阵。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.SVGGraphicsElement")}}</p>
+{{Compat("api.SVGGraphicsElement")}}

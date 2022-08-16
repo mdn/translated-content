@@ -19,12 +19,10 @@ original_slug: Web/CSS/transform-function/translate3d()
 translate3d(tx, ty, tz)
 ```
 
-- ## 常量
+## 常量
 
-  _tx_
-
+- _tx_
   - : 是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的横坐标。
-
 - _ty_
   - : 是一个{{cssxref("&lt;length&gt;")}} 代表移动向量的纵坐标。
 - _tz_

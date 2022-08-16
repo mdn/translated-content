@@ -2,31 +2,30 @@
 title: Window.controllers
 slug: Web/API/Window/controllers
 ---
-<div>{{APIRef}}{{non-standard_header}}</div>
+{{APIRef}}{{non-standard_header}}
 
-<p>{{domxref("Window")}} 接口的 <code><strong>controllers</strong></code> 属性返回 chorme 窗口的 XUL 控制器。</p>
+{{domxref("Window")}} 接口的 **`controllers`** 属性返回 chorme 窗口的 XUL 控制器。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><var>controllers</var> = <em>window</em>.controllers
-</pre>
+```
+controllers = window.controllers
+```
 
-<ul>
- <li><code>controllers</code> 是一个类型为 <a href="/en-US/docs/XULControllers"><code>XULControllers</code></a>（<a href="/en-US/docs/XPCOM_Interface_Reference/nsIControllers"><code>nsIControllers</code></a>）的对象。</li>
-</ul>
+- `controllers` 是一个类型为 [`XULControllers`](/zh-CN/docs/XULControllers)（[`nsIControllers`](/zh-CN/docs/XPCOM_Interface_Reference/nsIControllers)）的对象。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>XUL-专有属性，不属于任何规范。</p>
+XUL-专有属性，不属于任何规范。
 
-<div class="note">
-<p>默认情况下，窗口的控制器包含支持全局窗口命令的代码。</p>
-
-<p>chrome 代码可以添加控制器（与 globalOverlay.js 中的 <code>goDoCommand</code> 和 <code>goUpdateCommand</code> 函数配合使用）。</p>
-
-<p>然而，浏览器窗口被关闭时，我们必须手动删除这些添加的控制器，因为浏览器并不会自动完成这些操作。</p>
-
-<p>如果有忘记删除的控制器，则会导致错误：<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=415775">bug 415775</a></p>
-
-<pre>ASSERTION: XPConnect is being called on a scope without a 'Components' property!</pre>
-</div>
+> **备注：** 默认情况下，窗口的控制器包含支持全局窗口命令的代码。
+>
+> chrome 代码可以添加控制器（与 globalOverlay.js 中的 `goDoCommand` 和 `goUpdateCommand` 函数配合使用）。
+>
+> 然而，浏览器窗口被关闭时，我们必须手动删除这些添加的控制器，因为浏览器并不会自动完成这些操作。
+>
+> 如果有忘记删除的控制器，则会导致错误：[bug 415775](https://bugzilla.mozilla.org/show_bug.cgi?id=415775)
+>
+> ```
+> ASSERTION: XPConnect is being called on a scope without a 'Components' property!
+> ```

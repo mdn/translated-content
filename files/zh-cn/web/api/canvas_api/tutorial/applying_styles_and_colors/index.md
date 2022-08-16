@@ -2,70 +2,69 @@
 title: 使用样式和颜色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/cn/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
 
-<div>在<a href="/cn/Canvas_tutorial/Drawing_shapes">绘制图形</a>的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。</div>
+## 色彩 Colors
 
-<h2 id="Colors">色彩 Colors</h2>
+到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：`fillStyle` 和 `strokeStyle。`
 
-<p>到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：<code>fillStyle</code> 和 <code>strokeStyle。</code></p>
+- {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}
+  - : 设置图形的填充颜色。
+- {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}
+  - : 设置图形轮廓的颜色。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
- <dd>设置图形的填充颜色。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}</dt>
- <dd>设置图形轮廓的颜色。</dd>
-</dl>
+`color` 可以是表示 CSS 颜色值的字符串，渐变对象或者图案对象。我们迟些再回头探讨渐变和图案对象。默认情况下，线条和填充颜色都是黑色（CSS 颜色值 `#000000`）。
 
-<p><code>color</code> 可以是表示 CSS 颜色值的字符串，渐变对象或者图案对象。我们迟些再回头探讨渐变和图案对象。默认情况下，线条和填充颜色都是黑色（CSS 颜色值 <code>#000000</code>）。</p>
+> **备注：** 一旦您设置了 `strokeStyle` 或者 `fillStyle` 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 `fillStyle` 或 `strokeStyle` 的值。
 
-<div class="note">
-<p><strong>注意：</strong> 一旦您设置了 <code>strokeStyle</code> 或者 <code>fillStyle</code> 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 <code>fillStyle</code> 或 <code>strokeStyle</code> 的值。</p>
-</div>
+您输入的应该是符合 [CSS3 颜色值标准](https://www.w3.org/TR/css-color-3/) 的有效字符串。下面的例子都表示同一种颜色。
 
-<p>您输入的应该是符合 <a href="https://www.w3.org/TR/css-color-3/">CSS3 颜色值标准</a> 的有效字符串。下面的例子都表示同一种颜色。</p>
-
-<pre class="brush: js notranslate">// 这些 fillStyle 的值均为 '橙色'
+```js
+// 这些 fillStyle 的值均为 '橙色'
 ctx.fillStyle = "orange";
 ctx.fillStyle = "#FFA500";
 ctx.fillStyle = "rgb(255,165,0)";
 ctx.fillStyle = "rgba(255,165,0,1)";
-</pre>
+```
 
-<h3 id="A_fillStyle_example"><code>fillStyle</code> 示例</h3>
+### `fillStyle` 示例
 
-<p>在本示例里，我会再度用两层 <code>for</code> 循环来绘制方格阵列，每个方格不同的颜色。结果如右图，但实现所用的代码却没那么绚丽。我用了两个变量 i 和 j 来为每一个方格产生唯一的 RGB 色彩值，其中仅修改红色和绿色通道的值，而保持蓝色通道的值不变。你可以通过修改这些颜色通道的值来产生各种各样的色板。通过增加渐变的频率，你还可以绘制出类似 Photoshop 里面的那样的调色板。</p>
+在本示例里，我会再度用两层 `for` 循环来绘制方格阵列，每个方格不同的颜色。结果如右图，但实现所用的代码却没那么绚丽。我用了两个变量 i 和 j 来为每一个方格产生唯一的 RGB 色彩值，其中仅修改红色和绿色通道的值，而保持蓝色通道的值不变。你可以通过修改这些颜色通道的值来产生各种各样的色板。通过增加渐变的频率，你还可以绘制出类似 Photoshop 里面的那样的调色板。
 
-<pre class="brush: js; highlight[5,6] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i=0;i&lt;6;i++){
-    for (var j=0;j&lt;6;j++){
+  for (var i=0;i<6;i++){
+    for (var j=0;j<6;j++){
       ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
                        Math.floor(255-42.5*j) + ',0)';
       ctx.fillRect(j*25,i*25,25,25);
     }
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>结果如下：</p>
+结果如下：
 
-<p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
+{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
 
-<h3 id="A_strokeStyle_example"><code>strokeStyle</code> 示例</h3>
+### `strokeStyle` 示例
 
-<p>这个示例与上面的有点类似，但这次用到的是 <code>strokeStyle</code> 属性，画的不是方格，而是用 <code>arc</code> 方法来画圆。</p>
+这个示例与上面的有点类似，但这次用到的是 `strokeStyle` 属性，画的不是方格，而是用 `arc` 方法来画圆。
 
-<pre class="brush: js notranslate">  function draw() {
+```js
+  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i=0;i&lt;6;i++){
-      for (var j=0;j&lt;6;j++){
+    for (var i=0;i<6;i++){
+      for (var j=0;j<6;j++){
         ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
                          Math.floor(255-42.5*j) + ')';
         ctx.beginPath();
@@ -74,43 +73,45 @@ ctx.fillStyle = "rgba(255,165,0,1)";
       }
     }
   }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>结果如下：</p>
+结果如下：
 
-<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
 
-<h2 id="Transparency">透明度 Transparency</h2>
+## 透明度 Transparency
 
-<p>除了可以绘制实色图形，我们还可以用 canvas 来绘制半透明的图形。通过设置 <code>globalAlpha</code> 属性或者使用一个半透明颜色作为轮廓或填充的样式。</p>
+除了可以绘制实色图形，我们还可以用 canvas 来绘制半透明的图形。通过设置 `globalAlpha` 属性或者使用一个半透明颜色作为轮廓或填充的样式。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}</dt>
- <dd>这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0（完全透明）到 1.0（完全不透明），默认是 1.0。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
+  - : 这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0（完全透明）到 1.0（完全不透明），默认是 1.0。
 
-<p><code>globalAlpha</code> 属性在需要绘制大量拥有相同透明度的图形时候相当高效。不过，我认为下面的方法可操作性更强一点。</p>
+`globalAlpha` 属性在需要绘制大量拥有相同透明度的图形时候相当高效。不过，我认为下面的方法可操作性更强一点。
 
-<p>因为 <code>strokeStyle</code> 和 <code>fillStyle</code> 属性接受符合 CSS 3 规范的颜色值，那我们可以用下面的写法来设置具有透明度的颜色。</p>
+因为 `strokeStyle` 和 `fillStyle` 属性接受符合 CSS 3 规范的颜色值，那我们可以用下面的写法来设置具有透明度的颜色。
 
-<pre class="brush: js notranslate">// 指定透明颜色，用于描边和填充样式
+```js
+// 指定透明颜色，用于描边和填充样式
 ctx.strokeStyle = "rgba(255,0,0,0.5)";
 ctx.fillStyle = "rgba(255,0,0,0.5)";
-</pre>
+```
 
-<p><code>rgba() </code>方法与 <code>rgb() </code>方法类似，就多了一个用于设置色彩透明度的参数。它的有效范围是从 0.0（完全透明）到 1.0（完全不透明）。</p>
+`rgba() `方法与 `rgb() `方法类似，就多了一个用于设置色彩透明度的参数。它的有效范围是从 0.0（完全透明）到 1.0（完全不透明）。
 
-<h3 id="A_globalAlpha_example"><code>globalAlpha</code> 示例</h3>
+### `globalAlpha` 示例
 
-<p>在这个例子里，将用四色格作为背景，设置 <code>globalAlpha</code> 为 <code>0.2</code> 后，在上面画一系列半径递增的半透明圆。最终结果是一个径向渐变效果。圆叠加得越更多，原先所画的圆的透明度会越低。通过增加循环次数，画更多的圆，从中心到边缘部分，背景图会呈现逐渐消失的效果。</p>
+在这个例子里，将用四色格作为背景，设置 `globalAlpha` 为 `0.2` 后，在上面画一系列半径递增的半透明圆。最终结果是一个径向渐变效果。圆叠加得越更多，原先所画的圆的透明度会越低。通过增加循环次数，画更多的圆，从中心到边缘部分，背景图会呈现逐渐消失的效果。
 
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   // 画背景
   ctx.fillStyle = '#FD0';
@@ -127,27 +128,30 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.globalAlpha = 0.2;
 
   // 画半透明圆
-  for (var i=0;i&lt;7;i++){
+  for (var i=0;i<7;i++){
       ctx.beginPath();
       ctx.arc(75,75,10+10*i,0,Math.PI*2,true);
       ctx.fill();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
 
-<h3 id="An_example_using_rgba"><code>rgba()</code> 示例</h3>
+### `rgba()` 示例
 
-<p>第二个例子和上面那个类似，不过不是画圆，而是画矩形。这里还可以看出，rgba() 可以分别设置轮廓和填充样式，因而具有更好的可操作性和使用灵活性。</p>
+第二个例子和上面那个类似，不过不是画圆，而是画矩形。这里还可以看出，rgba() 可以分别设置轮廓和填充样式，因而具有更好的可操作性和使用灵活性。
 
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // 画背景
@@ -161,60 +165,58 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.fillRect(0,112.5,150,37.5);
 
   // 画半透明矩形
-  for (var i=0;i&lt;10;i++){
+  for (var i=0;i<10;i++){
     ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j&lt;4;j++){
+    for (var j=0;j<4;j++){
       ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
     }
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("An_example_using_rgba", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}</p>
+{{EmbedLiveSample("An_example_using_rgba", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
 
-<h2 id="Line_styles">线型 Line styles</h2>
+## 线型 Line styles
 
-<p>可以通过一系列属性来设置线的样式。</p>
+可以通过一系列属性来设置线的样式。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth = value")}}</dt>
- <dd>设置线条宽度。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineCap", "lineCap = type")}}</dt>
- <dd>设置线条末端样式。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin = type")}}</dt>
- <dd>设定线条与线条间接合处的样式。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit = value")}}</dt>
- <dd>限制当两条线相交时交接处最大长度；所谓交接处长度（斜接长度）是指线条交接处内角顶点到外角顶点的长度。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth = value")}}
+  - : 设置线条宽度。
+- {{domxref("CanvasRenderingContext2D.lineCap", "lineCap = type")}}
+  - : 设置线条末端样式。
+- {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin = type")}}
+  - : 设定线条与线条间接合处的样式。
+- {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit = value")}}
+  - : 限制当两条线相交时交接处最大长度；所谓交接处长度（斜接长度）是指线条交接处内角顶点到外角顶点的长度。
+- {{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}
+  - : 返回一个包含当前虚线样式，长度为非负偶数的数组。
+- {{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}
+  - : 设置当前虚线样式。
+- {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}
+  - : 设置虚线样式的起始偏移量。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}</dt>
- <dd>返回一个包含当前虚线样式，长度为非负偶数的数组。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}</dt>
- <dd>设置当前虚线样式。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}</dt>
- <dd>设置虚线样式的起始偏移量。</dd>
-</dl>
+通过以下的样例可能会更加容易理解。
 
-<p>通过以下的样例可能会更加容易理解。</p>
+#### `lineWidth` 属性的例子
 
-<h4 id="A_lineWidth_example"><code>lineWidth</code> 属性的例子</h4>
+这个属性设置当前绘线的粗细。属性值必须为正数。默认值是 1.0。
 
-<p>这个属性设置当前绘线的粗细。属性值必须为正数。默认值是 1.0。</p>
+线宽是指给定路径的中心到两边的粗细。换句话说就是在路径的两边各绘制线宽的一半。因为画布的坐标并不和像素直接对应，当需要获得精确的水平或垂直线的时候要特别注意。
 
-<p>线宽是指给定路径的中心到两边的粗细。换句话说就是在路径的两边各绘制线宽的一半。因为画布的坐标并不和像素直接对应，当需要获得精确的水平或垂直线的时候要特别注意。</p>
+在下面的例子中，用递增的宽度绘制了 10 条直线。最左边的线宽 1.0 单位。并且，最左边的以及所有宽度为奇数的线并不能精确呈现，这就是因为路径的定位问题。
 
-<p>在下面的例子中，用递增的宽度绘制了 10 条直线。最左边的线宽 1.0 单位。并且，最左边的以及所有宽度为奇数的线并不能精确呈现，这就是因为路径的定位问题。</p>
-
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &lt; 10; i++){
+  for (var i = 0; i < 10; i++){
     ctx.lineWidth = 1+i;
     ctx.beginPath();
     ctx.moveTo(5+i*14,5);
@@ -222,43 +224,44 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}</p>
+{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
 
-<p>想要获得精确的线条，必须对线条是如何描绘出来的有所理解。见下图，用网格来代表 canvas 的坐标格，每一格对应屏幕上一个像素点。在第一个图中，填充了 (2,1) 至 (5,5) 的矩形，整个区域的边界刚好落在像素边缘上，这样就可以得到的矩形有着清晰的边缘。</p>
+想要获得精确的线条，必须对线条是如何描绘出来的有所理解。见下图，用网格来代表 canvas 的坐标格，每一格对应屏幕上一个像素点。在第一个图中，填充了 (2,1) 至 (5,5) 的矩形，整个区域的边界刚好落在像素边缘上，这样就可以得到的矩形有着清晰的边缘。
 
-<p><img alt="" class="internal" src="/@api/deki/files/601/=Canvas-grid.png"></p>
+![](/@api/deki/files/601/=Canvas-grid.png)
 
-<p>如果你想要绘制一条从 (3,1) 到 (3,5)，宽度是 1.0 的线条，你会得到像第二幅图一样的结果。实际填充区域（深蓝色部分）仅仅延伸至路径两旁各一半像素。而这半个像素又会以近似的方式进行渲染，这意味着那些像素只是部分着色，结果就是以实际笔触颜色一半色调的颜色来填充整个区域（浅蓝和深蓝的部分）。这就是上例中为何宽度为 1.0 的线并不准确的原因。</p>
+如果你想要绘制一条从 (3,1) 到 (3,5)，宽度是 1.0 的线条，你会得到像第二幅图一样的结果。实际填充区域（深蓝色部分）仅仅延伸至路径两旁各一半像素。而这半个像素又会以近似的方式进行渲染，这意味着那些像素只是部分着色，结果就是以实际笔触颜色一半色调的颜色来填充整个区域（浅蓝和深蓝的部分）。这就是上例中为何宽度为 1.0 的线并不准确的原因。
 
-<p>要解决这个问题，你必须对路径施以更加精确的控制。已知粗 1.0 的线条会在路径两边各延伸半像素，那么像第三幅图那样绘制从 (3.5,1) 到 (3.5,5) 的线条，其边缘正好落在像素边界，填充出来就是准确的宽为 1.0 的线条。</p>
+要解决这个问题，你必须对路径施以更加精确的控制。已知粗 1.0 的线条会在路径两边各延伸半像素，那么像第三幅图那样绘制从 (3.5,1) 到 (3.5,5) 的线条，其边缘正好落在像素边界，填充出来就是准确的宽为 1.0 的线条。
 
-<div class="note">
-<p><strong>注意：</strong>在这个竖线的例子中，其 Y 坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的 lineCap 风格，它默认为 butt；您可能希望通过将 lineCap 样式设置为 square 正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。</p>
+> **备注：** 在这个竖线的例子中，其 Y 坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的 lineCap 风格，它默认为 butt；您可能希望通过将 lineCap 样式设置为 square 正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。
+>
+> 还请注意，只有路径的起点和终点受此影响：如果一个路径是通过 closePath() 来封闭的，它是没有起点和终点的；相反的情况下，路径上的所有端点都与上一个点相连，下一段路径使用当前的 lineJoin 设置（默认为 miter），如果相连路径是水平和/或垂直的话，会导致相连路径的外轮廓根据相交点自动延伸，因此渲染出的路径轮廓会覆盖整个像素格。接下来的两个小节将展示这些额外的行样式。
 
-<p>还请注意，只有路径的起点和终点受此影响：如果一个路径是通过 closePath() 来封闭的，它是没有起点和终点的；相反的情况下，路径上的所有端点都与上一个点相连，下一段路径使用当前的 lineJoin 设置（默认为 miter），如果相连路径是水平和/或垂直的话，会导致相连路径的外轮廓根据相交点自动延伸，因此渲染出的路径轮廓会覆盖整个像素格。接下来的两个小节将展示这些额外的行样式。</p>
-</div>
+对于那些宽度为偶数的线条，每一边的像素数都是整数，那么你想要其路径是落在像素点之间 (如那从 (3,1) 到 (3,5)) 而不是在像素点的中间。同样，注意到那个例子的垂直线条，其 Y 坐标刚好落在网格线上，如果不是的话，端点上同样会出现半渲染的像素点。
 
-<p>对于那些宽度为偶数的线条，每一边的像素数都是整数，那么你想要其路径是落在像素点之间 (如那从 (3,1) 到 (3,5)) 而不是在像素点的中间。同样，注意到那个例子的垂直线条，其 Y 坐标刚好落在网格线上，如果不是的话，端点上同样会出现半渲染的像素点。</p>
+虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其它任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。
 
-<p>虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其它任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。</p>
+#### `lineCap` 属性的例子
 
-<h4 id="A_lineCap_example"><code>lineCap</code> 属性的例子</h4>
+![](/@api/deki/files/88/=Canvas_linecap.png)属性 `lineCap` 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：`butt`，`round` 和 `square`。默认是 `butt。`
 
-<p><img alt="" class="internal" src="/@api/deki/files/88/=Canvas_linecap.png" style="float: right;">属性 <code>lineCap</code> 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：<code>butt</code>，<code>round</code> 和 <code>square</code>。默认是 <code>butt。</code></p>
+在这个例子里面，我绘制了三条直线，分别赋予不同的 `lineCap` 值。还有两条辅助线，为了可以看得更清楚它们之间的区别，三条线的起点终点都落在辅助线上。
 
-<p>在这个例子里面，我绘制了三条直线，分别赋予不同的 <code>lineCap</code> 值。还有两条辅助线，为了可以看得更清楚它们之间的区别，三条线的起点终点都落在辅助线上。</p>
+最左边的线用了默认的 `butt` 。可以注意到它是与辅助线齐平的。中间的是 `round` 的效果，端点处加上了半径为一半线宽的半圆。右边的是 `square` 的效果，端点处加上了等宽且高度为一半线宽的方块。
 
-<p>最左边的线用了默认的 <code>butt</code> 。可以注意到它是与辅助线齐平的。中间的是 <code>round</code> 的效果，端点处加上了半径为一半线宽的半圆。右边的是 <code>square</code> 的效果，端点处加上了等宽且高度为一半线宽的方块。</p>
-
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineCap = ['butt','round','square'];
 
@@ -273,7 +276,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
   // 画线条
   ctx.strokeStyle = 'black';
-  for (var i=0;i&lt;lineCap.length;i++){
+  for (var i=0;i<lineCap.length;i++){
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
     ctx.beginPath();
@@ -282,27 +285,30 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
+{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
 
-<h4 id="A_lineJoin_example"><code>lineJoin</code> 属性的例子</h4>
+#### `lineJoin` 属性的例子
 
-<p><img alt="" class="internal" src="/@api/deki/files/89/=Canvas_linejoin.png" style="float: right;"><code>lineJoin</code> 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：<code>round</code>, <code>bevel</code> 和 <code>miter。</code>默认是 <code>miter</code><code>。</code></p>
+![](/@api/deki/files/89/=Canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter。`默认是 ` miter``。 `
 
-<p>这里我同样用三条折线来做例子，分别设置不同的 <code>lineJoin</code> 值。最上面一条是 <code>round</code> 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 <code>miter </code>的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 <code>miterLimit</code> 属性的制约。</p>
+这里我同样用三条折线来做例子，分别设置不同的 `lineJoin` 值。最上面一条是 `round` 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 `miter `的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 `miterLimit` 属性的制约。
 
-<pre class="brush: js; highlight[6] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
-  for (var i = 0; i &lt; lineJoin.length; i++) {
+  for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
     ctx.beginPath();
     ctx.moveTo(-5, 5 + i * 40);
@@ -313,37 +319,38 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
 
-<h4 id="A_demo_of_the_miterLimit_property"><code>miterLimit</code> 属性的演示例子</h4>
+#### `miterLimit` 属性的演示例子
 
-<p>就如上一个例子所见的应用 <code>miter</code> 的效果，线段的外侧边缘会被延伸交汇于一点上。线段之间夹角比较大时，交点不会太远，但随着夹角变小，交点距离会呈指数级增大。</p>
+就如上一个例子所见的应用 `miter` 的效果，线段的外侧边缘会被延伸交汇于一点上。线段之间夹角比较大时，交点不会太远，但随着夹角变小，交点距离会呈指数级增大。
 
-<p><code>miterLimit</code> 属性就是用来设定外延交点与连接点的最大距离，如果交点距离大于此值，连接效果会变成了 bevel。注意，最大斜接长度（即交点距离）是当前坐标系测量线宽与此<code>miterLimit</code>属性值（HTML {{HTMLElement("canvas")}}默认为 10.0）的乘积，所以<code>miterLimit</code>可以单独设置，不受显示比例改变或任何仿射变换的影响：它只影响线条边缘的有效绘制形状。</p>
+`miterLimit` 属性就是用来设定外延交点与连接点的最大距离，如果交点距离大于此值，连接效果会变成了 bevel。注意，最大斜接长度（即交点距离）是当前坐标系测量线宽与此`miterLimit`属性值（HTML {{HTMLElement("canvas")}}默认为 10.0）的乘积，所以`miterLimit`可以单独设置，不受显示比例改变或任何仿射变换的影响：它只影响线条边缘的有效绘制形状。
 
-<p>更准确的说，斜接限定值（<code>miterLimit</code>）是延伸长度（在 HTML Canvas 中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（<code>miterLength</code>）与线宽（<code>lineWidth</code>）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（<em>θ</em> ）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：</p>
+更准确的说，斜接限定值（`miterLimit`）是延伸长度（在 HTML Canvas 中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（`miterLength`）与线宽（`lineWidth`）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（_θ_ ）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：
 
-<ul>
- <li><code>miterLimit</code> = <strong>max</strong> <code>miterLength</code> / <code>lineWidth</code> = 1 / <strong>sin</strong> ( <strong>min</strong> <em>θ</em> / 2 )</li>
- <li>斜接限定值默认为 10.0，这将会去除所有小于大约 11 度的斜接。</li>
- <li>斜接限定值为√2 ≈ 1.4142136（四舍五入）时，将去除所有锐角的斜接，仅保留钝角或直角。</li>
- <li>1.0 是合法的斜接限定值，但这会去除所有斜接。</li>
- <li>小于 1.0 的值不是合法的斜接限定值。</li>
-</ul>
+- `miterLimit` = **max** `miterLength` / `lineWidth` = 1 / **sin** ( **min** _θ_ / 2 )
+- 斜接限定值默认为 10.0，这将会去除所有小于大约 11 度的斜接。
+- 斜接限定值为 √2 ≈ 1.4142136（四舍五入）时，将去除所有锐角的斜接，仅保留钝角或直角。
+- 1.0 是合法的斜接限定值，但这会去除所有斜接。
+- 小于 1.0 的值不是合法的斜接限定值。
 
-<p>在下面的小示例中，您可以动态的设置<code>miterLimit</code>的值并查看它对画布中图形的影响。蓝色线条指出了锯齿图案中每个线条的起点与终点（同时也是不同线段之间的连接点）。</p>
+在下面的小示例中，您可以动态的设置`miterLimit`的值并查看它对画布中图形的影响。蓝色线条指出了锯齿图案中每个线条的起点与终点（同时也是不同线段之间的连接点）。
 
-<p>在此示例中，当您设定<code>miterLimit</code>的值小于 4.2 时，图形可见部分的边角不会延伸相交，而是在蓝色线条边呈现斜边连接效果；当<code>miterLimit</code>的值大于 10.0 时，此例中大部分的边角都会在远离蓝线的位置相交，且从左至右，距离随着夹角的增大而减小；而介于上述值之间的值所呈现的效果，也介于两者之间。</p>
+在此示例中，当您设定`miterLimit`的值小于 4.2 时，图形可见部分的边角不会延伸相交，而是在蓝色线条边呈现斜边连接效果；当`miterLimit`的值大于 10.0 时，此例中大部分的边角都会在远离蓝线的位置相交，且从左至右，距离随着夹角的增大而减小；而介于上述值之间的值所呈现的效果，也介于两者之间。
 
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // 清空画布
@@ -368,106 +375,109 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
   // 绘制线条
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i &lt; 24 ; i++) {
+  for (i = 0; i < 24 ; i++) {
     var dy = i % 2 == 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
   return false;
-}</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;&lt;/td&gt;
-    &lt;td&gt;在输入框中输入&lt;code&gt;miterLimit&lt;/code&gt;的值，并点击重绘按钮查看效果。&lt;br&gt;&lt;br&gt;
-      &lt;form onsubmit="return draw();"&gt;
-        &lt;label&gt;Miter limit&lt;/label&gt;
-        &lt;input type="number" size="3" id="miterLimit"/&gt;
-        &lt;input type="submit" value="重绘"/&gt;
-      &lt;/form&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html hidden
+<table>
+  <tr>
+    <td><canvas id="canvas" width="150" height="150"></canvas></td>
+    <td>在输入框中输入<code>miterLimit</code>的值，并点击重绘按钮查看效果。<br><br>
+      <form onsubmit="return draw();">
+        <label>Miter limit</label>
+        <input type="number" size="3" id="miterLimit"/>
+        <input type="submit" value="重绘"/>
+      </form>
+    </td>
+  </tr>
+</table>
+```
 
-<pre class="brush: js notranslate">document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
-draw();</pre>
-</div>
+```js hidden
+document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+draw();
+```
 
-<p> {{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
 
-<h3 id="Using_line_dashes">使用虚线</h3>
+### 使用虚线
 
-<p>用 <code>setLineDash</code> 方法和 <code>lineDashOffset</code> 属性来制定虚线样式。<code>setLineDash</code> 方法接受一个数组，来指定线段与间隙的交替；<code>lineDashOffset </code>属性设置起始偏移量。</p>
+用 `setLineDash` 方法和 `lineDashOffset` 属性来制定虚线样式。`setLineDash` 方法接受一个数组，来指定线段与间隙的交替；`lineDashOffset `属性设置起始偏移量。
 
-<p>在这个例子中，我们要创建一个蚂蚁线的效果。它往往应用在计算机图形程序选区工具动效中。它可以帮助用户通过动画的边界来区分图像背景选区边框。在本教程的后面部分，你可以学习如何实现这一点和其他<a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本的动画</a>。</p>
+在这个例子中，我们要创建一个蚂蚁线的效果。它往往应用在计算机图形程序选区工具动效中。它可以帮助用户通过动画的边界来区分图像背景选区边框。在本教程的后面部分，你可以学习如何实现这一点和其他[基本的动画](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations)。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="110" height="110"></canvas>
+```
 
-<pre class="brush: js notranslate"><code>var ctx = document.getElementById('canvas').getContext('2d');
-var offset = 0;</code>
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
+var offset = 0;
 
-<code>function draw() {
+function draw() {
   ctx.clearRect(0,0, canvas.width, canvas.height);
   ctx.setLineDash([4, 2]);
   ctx.lineDashOffset = -offset;
   ctx.strokeRect(10,10, 100, 100);
-}</code>
+}
 
-<code>function march() {
+function march() {
   offset++;
-  if (offset &gt; 16) {
+  if (offset > 16) {
     offset = 0;
   }
   draw();
   setTimeout(march, 20);
-}</code>
+}
 
-<code>march();</code>
-</pre>
+march();
+```
 
-<p>{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}</p>
+{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
 
-<h2 id="Gradients">渐变 Gradients</h2>
+## 渐变 Gradients
 
-<p>就好像一般的绘图软件一样，我们可以用线性或者径向的渐变来填充或描边。我们用下面的方法新建一个 <code>canvasGradient</code> 对象，并且赋给图形的 <code>fillStyle</code> 或 <code>strokeStyle</code> 属性。</p>
+就好像一般的绘图软件一样，我们可以用线性或者径向的渐变来填充或描边。我们用下面的方法新建一个 `canvasGradient` 对象，并且赋给图形的 `fillStyle` 或 `strokeStyle` 属性。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}</dt>
- <dd>createLinearGradient 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}</dt>
- <dd>createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}
+  - : createLinearGradient 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。
+- {{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}
+  - : createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。
 
-<pre class="brush: js notranslate">var lineargradient = ctx.createLinearGradient(0,0,150,150);
+```js
+var lineargradient = ctx.createLinearGradient(0,0,150,150);
 var radialgradient = ctx.createRadialGradient(75,75,0,75,75,100);
-</pre>
+```
 
-<p>创建出 <code>canvasGradient</code> 对象后，我们就可以用 <code>addColorStop</code> 方法给它上色了。</p>
+创建出 `canvasGradient` 对象后，我们就可以用 `addColorStop` 方法给它上色了。
 
-<dl>
- <dt>{{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}</dt>
- <dd>addColorStop 方法接受 2 个参数，<code>position</code> 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。<code>color</code> 参数必须是一个有效的 CSS 颜色值（如 #FFF，rgba(0,0,0,1)，等等）。</dd>
-</dl>
+- {{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}
+  - : addColorStop 方法接受 2 个参数，`position` 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。`color` 参数必须是一个有效的 CSS 颜色值（如 #FFF，rgba(0,0,0,1)，等等）。
 
-<p>你可以根据需要添加任意多个色标（color stops）。下面是最简单的线性黑白渐变的例子。</p>
+你可以根据需要添加任意多个色标（color stops）。下面是最简单的线性黑白渐变的例子。
 
-<pre class="brush: js notranslate">var lineargradient = ctx.createLinearGradient(0,0,150,150);
+```js
+var lineargradient = ctx.createLinearGradient(0,0,150,150);
 lineargradient.addColorStop(0,'white');
 lineargradient.addColorStop(1,'black');
-</pre>
+```
 
-<h4 id="A_createLinearGradient_example"><code>createLinearGradient</code> 的例子<img alt="" class="internal" src="/@api/deki/files/87/=Canvas_lineargradient.png" style="float: right;"></h4>
+#### `createLinearGradient` 的例子![](/@api/deki/files/87/=Canvas_lineargradient.png)
 
-<p>本例中，我弄了两种不同的渐变。第一种是背景色渐变，你会发现，我给同一位置设置了两种颜色，你也可以用这来实现突变的效果，就像这里从白色到绿色的突变。一般情况下，色标的定义是无所谓顺序的，但是色标位置重复时，顺序就变得非常重要了。所以，保持色标定义顺序和它理想的顺序一致，结果应该没什么大问题。</p>
+本例中，我弄了两种不同的渐变。第一种是背景色渐变，你会发现，我给同一位置设置了两种颜色，你也可以用这来实现突变的效果，就像这里从白色到绿色的突变。一般情况下，色标的定义是无所谓顺序的，但是色标位置重复时，顺序就变得非常重要了。所以，保持色标定义顺序和它理想的顺序一致，结果应该没什么大问题。
 
-<p>第二种渐变，我并不是从 0.0 位置开始定义色标，因为那并不是那么严格的。在 0.5 处设一黑色色标，渐变会默认认为从起点到色标之间都是黑色。</p>
+第二种渐变，我并不是从 0.0 位置开始定义色标，因为那并不是那么严格的。在 0.5 处设一黑色色标，渐变会默认认为从起点到色标之间都是黑色。
 
-<p>你会发现，<code>strokeStyle</code> 和 <code>fillStyle</code> 属性都可以接受 <code>canvasGradient</code> 对象。</p>
+你会发现，`strokeStyle` 和 `fillStyle` 属性都可以接受 `canvasGradient` 对象。
 
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -490,21 +500,24 @@ lineargradient.addColorStop(1,'black');
   ctx.strokeRect(50,50,50,50);
 
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}</p>
+{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
 
-<h3 id="A_createRadialGradient_example"><code>createRadialGradient</code> 的例子</h3>
+### `createRadialGradient` 的例子
 
-<p>这个例子，我定义了 4 个不同的径向渐变。由于可以控制渐变的起始与结束点，所以我们可以实现一些比（如在 Photoshop 中所见的）经典的径向渐变更为复杂的效果。（经典的径向渐变是只有一个中心点，简单地由中心点向外围的圆形扩张）</p>
+这个例子，我定义了 4 个不同的径向渐变。由于可以控制渐变的起始与结束点，所以我们可以实现一些比（如在 Photoshop 中所见的）经典的径向渐变更为复杂的效果。（经典的径向渐变是只有一个中心点，简单地由中心点向外围的圆形扩张）
 
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // 创建渐变
@@ -538,47 +551,47 @@ lineargradient.addColorStop(1,'black');
   ctx.fillStyle = radgrad;
   ctx.fillRect(0,0,150,150);
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>这里，我让起点稍微偏离终点，这样可以达到一种球状 3D 效果。但最好不要让里圆与外圆部分交叠，那样会产生什么效果就真是不得而知了。</p>
+这里，我让起点稍微偏离终点，这样可以达到一种球状 3D 效果。但最好不要让里圆与外圆部分交叠，那样会产生什么效果就真是不得而知了。
 
-<p>4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，<code>#019F62 = rgba(1,159,98,1)。</code></p>
+4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)。`
 
-<p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
+{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
 
-<h2 id="Patterns">图案样式 Patterns</h2>
+## 图案样式 Patterns
 
-<p>上一节的一个例子里面，我用了循环来实现图案的效果。其实，有一个更加简单的方法：<code>createPattern。</code></p>
+上一节的一个例子里面，我用了循环来实现图案的效果。其实，有一个更加简单的方法：`createPattern。`
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}</dt>
- <dd>该方法接受两个参数。Image 可以是一个 <code>Image</code> 对象的引用，或者另一个 canvas 对象。<code>Type</code> 必须是下面的字符串值之一：<code>repeat</code>，<code>repeat-x</code>，<code>repeat-y</code> 和 <code>no-repeat</code>。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
+  - : 该方法接受两个参数。Image 可以是一个 `Image` 对象的引用，或者另一个 canvas 对象。`Type` 必须是下面的字符串值之一：`repeat`，`repeat-x`，`repeat-y` 和 `no-repeat`。
 
-<div class="note"><strong>注意：</strong> 用 canvas 对象作为 <code>Image</code> 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。</div>
+> **备注：** 用 canvas 对象作为 `Image` 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。
 
-<p>图案的应用跟渐变很类似的，创建出一个 pattern 之后，赋给 <code>fillStyle</code> 或 <code>strokeStyle</code> 属性即可。</p>
+图案的应用跟渐变很类似的，创建出一个 pattern 之后，赋给 `fillStyle` 或 `strokeStyle` 属性即可。
 
-<pre class="brush: js notranslate">var img = new Image();
+```js
+var img = new Image();
 img.src = 'someimage.png';
 var ptrn = ctx.createPattern(img,'repeat');
-</pre>
+```
 
-<div class="note">
-<p><strong>注意：</strong>与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。</p>
-</div>
+> **备注：** 与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。
 
-<h3 id="A_createPattern_example"><code>createPattern</code> 的例子</h3>
+### `createPattern` 的例子
 
-<p>在最后的例子中，我创建一个图案然后赋给了 <code>fillStyle</code> 属性。唯一要注意的是，使用 Image 对象的 <code>onload</code> handler 来确保设置图案之前图像已经装载完毕。</p>
+在最后的例子中，我创建一个图案然后赋给了 `fillStyle` 属性。唯一要注意的是，使用 Image 对象的 `onload` handler 来确保设置图案之前图像已经装载完毕。
 
-<pre class="brush: js; highlight[10] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // 创建新 image 对象，用作图案
@@ -593,38 +606,37 @@ var ptrn = ctx.createPattern(img,'repeat');
 
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>The result looks like this:</p>
+The result looks like this:
 
-<p>{{EmbedLiveSample("createPattern_的例子", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
+{{EmbedLiveSample("createPattern_的例子", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
 
-<h2 id="阴影_Shadows">阴影 Shadows</h2>
+## 阴影 Shadows
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}</dt>
- <dd>
- <p><code>shadowOffsetX</code> 和 <code>shadowOffsetY </code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</p>
- </dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}</dt>
- <dd>shadowOffsetX 和 <code>shadowOffsetY </code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}</dt>
- <dd>shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code>0</code>。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}</dt>
- <dd>shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}
+  - : `shadowOffsetX` 和 `shadowOffsetY `用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 `0`。
+- {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}
+  - : shadowOffsetX 和 `shadowOffsetY `用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 `0`。
+- {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}
+  - : shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 `0`。
+- {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}
+  - : shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。
 
-<h3 id="A_shadowed_text_example">文字阴影的例子</h3>
+### 文字阴影的例子
 
-<p>这个例子绘制了带阴影效果的文字。</p>
+这个例子绘制了带阴影效果的文字。
 
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.shadowOffsetX = 2;
@@ -636,46 +648,49 @@ var ptrn = ctx.createPattern(img,'repeat');
   ctx.fillStyle = "Black";
   ctx.fillText("Sample String", 5, 30);
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="80"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="80"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}</p>
+{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
 
-<p>我们可以通过下一章来了解文字属性和 fillText 方法相关的内容。</p>
+我们可以通过下一章来了解文字属性和 fillText 方法相关的内容。
 
-<h2 id="Canvas_fill_rules">Canvas 填充规则</h2>
+## Canvas 填充规则
 
-<p>当我们用到 <code>fill</code>（或者 {{domxref("CanvasRenderingContext2D.clip", "clip")}}和{{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}} ）你可以选择一个填充规则，该填充规则根据某处在路径的外面或者里面来决定该处是否被填充，这对于自己与自己路径相交或者路径被嵌套的时候是有用的。</p>
+当我们用到 `fill`（或者 {{domxref("CanvasRenderingContext2D.clip", "clip")}}和{{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}} ）你可以选择一个填充规则，该填充规则根据某处在路径的外面或者里面来决定该处是否被填充，这对于自己与自己路径相交或者路径被嵌套的时候是有用的。
 
-<p>两个可能的值：</p>
+两个可能的值：
 
-<ul>
- <li> <code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>, 默认值。</li>
- <li><code><strong> "evenodd"</strong></code>:  <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding rule</a>.</li>
-</ul>
+- **`"nonzero`**": [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), 默认值。
+- **`"evenodd"`**: [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-<p>这个例子，我们用填充规则 <code>evenodd</code></p>
+这个例子，我们用填充规则 `evenodd`
 
-<pre class="brush: js notranslate"><code>function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI*2, true);
   ctx.arc(50, 50, 15, 0, Math.PI*2, true);
   ctx.fill("evenodd");
-}</code>
-</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="100" height="100"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}</p>
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

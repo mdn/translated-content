@@ -2,33 +2,34 @@
 title: IDBDatabase.onversionchange
 slug: Web/API/IDBDatabase/versionchange_event
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p> {{domxref("IDBDatabase")}} 中的 <strong><code>onversionchange</code></strong> 事件处理器能处理版本更新事件，此事件能在任意地方 (很可能在同一台计算机上的另一个窗口/选项卡中) 导致数据库结构更改（{{ domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件 或 {{ domxref("IDBFactory.deleteDatabase")}} 事件）的时候被触发 。</p>
+{{domxref("IDBDatabase")}} 中的 **`onversionchange`** 事件处理器能处理版本更新事件，此事件能在任意地方 (很可能在同一台计算机上的另一个窗口/选项卡中) 导致数据库结构更改（{{ domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件 或 {{ domxref("IDBFactory.deleteDatabase")}} 事件）的时候被触发 。
 
-<div>
-<p><strong><code>onversionchange</code></strong> 与 <code>versionchange</code> 是不相同的事件（但两者是有关联的）。</p>
+**`onversionchange`** 与 `versionchange` 是不相同的事件（但两者是有关联的）。
 
-<p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox" style="font-size: 14px;"><em>IDBDatabase</em>.onversionchange = <em>function</em>(event) { ... }</pre>
+```
+IDBDatabase.onversionchange = function(event) { ... }
+```
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<p>本例展示了一个创建新对象仓库的 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 代码块；代码中包含用于处理失败操作的 <code style="font-style: normal;">onerror</code> 和 <code style="font-style: normal;">onabort</code> 函数，以及一个 onversionchange 函数用以在数据库结构被改变时通知用户。</p>
+本例展示了一个创建新对象仓库的 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 代码块；代码中包含用于处理失败操作的 `onerror` 和 `onabort` 函数，以及一个 onversionchange 函数用以在数据库结构被改变时通知用户。
 
-<pre class="brush: js; highlight:[28,29,30,31,32]">request.onupgradeneeded = function(event) {
+```js
+request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error opening database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error opening database.</li>';
   };
 
   db.onabort = function(event) {
-    note.innerHTML += '&lt;li&gt;Database opening aborted!&lt;/li&gt;';
+    note.innerHTML += '<li>Database opening aborted!</li>';
   };
 
   // 给这个数据库创建对象仓库
@@ -45,30 +46,27 @@ slug: Web/API/IDBDatabase/versionchange_event
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
+  note.innerHTML += '<li>Object store created.</li>';
 
   db.onversionchange = function(event) {
-    note.innerHTML += '&lt;li&gt;a database change has occurred; you should refresh this
+    note.innerHTML += '<li>a database change has occurred; you should refresh this
                        browser window, or close it down and use the other open version of
-                       this application, wherever it exists.&lt;/li&gt;';
+                       this application, wherever it exists.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="更多参考">更多参考</h2>
+## 更多参考
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">使用 IndexedDB</a></li>
- <li>开始了解事务: {{domxref("IDBDatabase")}}</li>
- <li>使用事务: {{domxref("IDBTransaction")}}</li>
- <li>设置键值范围: {{domxref("IDBKeyRange")}}</li>
- <li>检索与修改数据: {{domxref("IDBObjectStore")}}</li>
- <li>使用游标: {{domxref("IDBCursor")}}</li>
- <li>参考用例：<a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
- <li><code><a href="/en-US/docs/Web/API/IDBDatabase/versionchange_event">versionchange</a></code> 事件</li>
-</ul>
+- [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- 开始了解事务: {{domxref("IDBDatabase")}}
+- 使用事务: {{domxref("IDBTransaction")}}
+- 设置键值范围: {{domxref("IDBKeyRange")}}
+- 检索与修改数据: {{domxref("IDBObjectStore")}}
+- 使用游标: {{domxref("IDBCursor")}}
+- 参考用例：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) 事件

@@ -2,46 +2,44 @@
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("NodeList")}}接口的 <strong><code>forEach()</code></strong> 方法按插入顺序为列表中的每个值对调用一次参数中给定的回调。</p>
+{{domxref("NodeList")}}接口的 **`forEach()`** 方法按插入顺序为列表中的每个值对调用一次参数中给定的回调。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>someNodeList</var>.forEach(<var>callback</var>[, <var>thisArg</var>]);
-</pre>
+```
+someNodeList.forEach(callback[, thisArg]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>
- <p>为 <code><var>someNodeList</var></code>的每一个元素执行函数。它接受以下三个参数：</p>
+- `callback`
 
- <dl>
-  <dt><code><var>currentValue</var></code></dt>
-  <dd><code><var>someNodeList</var></code>中的当前元素。</dd>
-  <dt><code><var>currentIndex</var></code> {{Optional_inline}}</dt>
-  <dd><code><var>someNodeList</var></code>中的<code><var>currentValue</var></code>所对应的索引值。</dd>
-  <dt><code><var>listObj</var></code> {{Optional_inline}}</dt>
-  <dd><code><var>someNodeList</var></code> 在 <code>forEach()</code> 方法中所属的 NodeList 对象。</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
- <dd>传递 <code><var>callback</var></code> 的值一般用{{jsxref("this")}}值。</dd>
-</dl>
+  - : 为 `someNodeList`的每一个元素执行函数。它接受以下三个参数：
 
-<h3 id="返回值">返回值</h3>
+    - `currentValue`
+      - : `someNodeList`中的当前元素。
+    - `currentIndex` {{Optional_inline}}
+      - : `someNodeList`中的`currentValue`所对应的索引值。
+    - `listObj` {{Optional_inline}}
+      - : `someNodeList` 在 `forEach()` 方法中所属的 NodeList 对象。
 
-<p>{{jsxref('undefined')}}.</p>
+- `thisArg` {{Optional_inline}}
+  - : 传递 `callback` 的值一般用{{jsxref("this")}}值。
 
-<h2 id="Exceptions">Exceptions</h2>
+### 返回值
 
-<p>None.</p>
+{{jsxref('undefined')}}.
 
-<h2 id="示例">示例</h2>
+## Exceptions
 
-<pre class="brush: js; highlight:[6]">let node = document.createElement("div");
+None.
+
+## 示例
+
+```js
+let node = document.createElement("div");
 let kid1 = document.createElement("p");
 let kid2 = document.createTextNode("hey");
 let kid3 = document.createElement("span");
@@ -57,48 +55,51 @@ list.forEach(
     console.log(currentValue + ', ' + currentIndex + ', ' + this);
   },
   'myThisArg'
-);</pre>
+);
+```
 
-<p>上述代码会产生以下结果：</p>
+上述代码会产生以下结果：
 
-<pre>[object HTMLParagraphElement], 0, myThisArg
+```
+[object HTMLParagraphElement], 0, myThisArg
 [object Text], 1, myThisArg
-[object HTMLSpanElement], 2, myThisArg</pre>
+[object HTMLSpanElement], 2, myThisArg
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>{{Glossary("Polyfill","polyfill")}} 增加了对所有支持<a href="https://caniuse.com/#search=es5">ES5</a>的浏览器的兼容性：</p>
+{{Glossary("Polyfill","polyfill")}} 增加了对所有支持[ES5](https://caniuse.com/#search=es5)的浏览器的兼容性：
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
         thisArg = thisArg || window;
-        for (var i = 0; i &lt; this.length; i++) {
+        for (var i = 0; i < this.length; i++) {
             callback.call(thisArg, this[i], i, this);
         }
     };
-}</pre>
+}
+```
 
-<p>或者</p>
+或者
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
    NodeList.prototype.forEach = Array.prototype.forEach;
-}</pre>
+}
+```
 
-<p>上面的代码是大部分浏览器实现的 <code>NodeList.prototype.forEach()</code>（例如 Chrome）。</p>
+上面的代码是大部分浏览器实现的 `NodeList.prototype.forEach()`（例如 Chrome）。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
+{{Compat("api.NodeList.forEach")}}
 
+## See also
 
-<p>{{Compat("api.NodeList.forEach")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

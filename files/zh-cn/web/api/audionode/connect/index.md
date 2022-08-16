@@ -2,56 +2,52 @@
 title: AudioNode.connect()
 slug: Web/API/AudioNode/connect
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioNode") }} 接口的 <code>connect()</code> 方法使你能将一个节点的输出连接到一个指定目标，这个指定的目标可能是另一个 <code>AudioNode</code>（从而将音频数据引导到下一个指定节点）或一个{{domxref("AudioParam")}}, 以便上一个节点的输出数据随着时间流逝能自动地对下一个参数值进行改变。</p>
-</div>
+{{ domxref("AudioNode") }} 接口的 `connect()` 方法使你能将一个节点的输出连接到一个指定目标，这个指定的目标可能是另一个 `AudioNode`（从而将音频数据引导到下一个指定节点）或一个{{domxref("AudioParam")}}, 以便上一个节点的输出数据随着时间流逝能自动地对下一个参数值进行改变。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>destinationNode</em> = <em>AudioNode</em>.connect(<em>destination</em>, <em>outputIndex</em>, <em>inputIndex</em>);
+```
+var destinationNode = AudioNode.connect(destination, outputIndex, inputIndex);
 
-<em>AudioNode</em>.connect(<em>destination</em>, <em>outputIndex</em>);
-</pre>
+AudioNode.connect(destination, outputIndex);
+```
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<dl>
- <dt><code>destination</code></dt>
- <dd>需要连接的 {{domxref("AudioNode")}} 或 {{domxref("AudioParam")}}.</dd>
- <dt><code>outputIndex</code> {{optional_inline}}</dt>
- <dd>一个索引，用于描述当前  <code>AudioNode</code> 的哪个输出会连接到 destination。索引数字是由输出频道（详见 <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio channels</a>）的数量来确定的。当你只能将给定的输出连接到给定的输入一次（重复的尝试会被忽略）时，可以通过多次调用 <code>connect()</code> 将一个输出连接到多个输入。可以通过这样来实现扇出。这个参数的默认值为 0。</dd>
- <dt><code>inputIndex</code> {{optional_inline}}</dt>
- <dd>一个索引，用于描述当前  <code>AudioNode</code> 会连接到 destination 的哪个输入，它的默认值是 0。索引数字是由输入频道（详见 <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio channels</a>）的数量来确定的。将一个  <code>AudioNode</code> 连接回之前的 <code>AudioNode</code>，以此形成一个圈是可行的。 不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 <code>NotSupportedError</code> 异常。此参数在 destination 是 {{domxref("AudioParam")}}时不可用。</dd>
-</dl>
+- `destination`
+  - : 需要连接的 {{domxref("AudioNode")}} 或 {{domxref("AudioParam")}}.
+- `outputIndex` {{optional_inline}}
+  - : 一个索引，用于描述当前 `AudioNode` 的哪个输出会连接到 destination。索引数字是由输出频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels)）的数量来确定的。当你只能将给定的输出连接到给定的输入一次（重复的尝试会被忽略）时，可以通过多次调用 `connect()` 将一个输出连接到多个输入。可以通过这样来实现扇出。这个参数的默认值为 0。
+- `inputIndex` {{optional_inline}}
+  - : 一个索引，用于描述当前 `AudioNode` 会连接到 destination 的哪个输入，它的默认值是 0。索引数字是由输入频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels)）的数量来确定的。将一个 `AudioNode` 连接回之前的 `AudioNode`，以此形成一个圈是可行的。 不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 `NotSupportedError` 异常。此参数在 destination 是 {{domxref("AudioParam")}}时不可用。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>如果 destination 是一个节点， <code>connect()</code> 返回 destination 所表示的  {{domxref("AudioNode")}} 对象的引用，允许你链式地调用数个 <code>connect()</code> 。某些浏览器关于该接口的旧实现会返回 {{jsxref("undefined")}}。</p>
+如果 destination 是一个节点， `connect()` 返回 destination 所表示的 {{domxref("AudioNode")}} 对象的引用，允许你链式地调用数个 `connect()` 。某些浏览器关于该接口的旧实现会返回 {{jsxref("undefined")}}。
 
-<p>如果 destination 是一个 <code>AudioParam</code>、<code>connect()</code> 返回 <code>undefined</code>。</p>
+如果 destination 是一个 `AudioParam`、`connect()` 返回 `undefined`。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt><code>IndexSizeError</code></dt>
- <dd>这个异常表明 <code>outputIndex</code> 或 <code>inputIndex</code> 与当前输入或输出不符。</dd>
- <dt><code>InvalidAccessError</code></dt>
- <dd>目标节点与原节点不在同一个音频上下文。</dd>
- <dt><code>NotSupportedError</code></dt>
- <dd>该链接会形成一个闭环（音频在这个环里不断重复经过同一个节点）并且这个闭环里没有 {{domxref("DelayNode")}} 来防止产生的波形被卡住，不停地构建相同的音频帧。</dd>
-</dl>
+- `IndexSizeError`
+  - : 这个异常表明 `outputIndex` 或 `inputIndex` 与当前输入或输出不符。
+- `InvalidAccessError`
+  - : 目标节点与原节点不在同一个音频上下文。
+- `NotSupportedError`
+  - : 该链接会形成一个闭环（音频在这个环里不断重复经过同一个节点）并且这个闭环里没有 {{domxref("DelayNode")}} 来防止产生的波形被卡住，不停地构建相同的音频帧。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Connecting_to_an_audio_input">Connecting to an audio input</h3>
+### Connecting to an audio input
 
-<p>The most obvious use of the <code>connect()</code> method is to direct the audio output from one node into the audio input of another node for further processing. For example, you might send the audio from a {{domxref("MediaElementAudioSourceNode")}}—that is, the audio from an HTML5 media element such as {{HTMLElement("audio")}}—through a band pass filter implemented using a {{domxref("BiquadFilterNode")}} to reduce noise before then sending the audio along to the speakers.</p>
+The most obvious use of the `connect()` method is to direct the audio output from one node into the audio input of another node for further processing. For example, you might send the audio from a {{domxref("MediaElementAudioSourceNode")}}—that is, the audio from an HTML5 media element such as {{HTMLElement("audio")}}—through a band pass filter implemented using a {{domxref("BiquadFilterNode")}} to reduce noise before then sending the audio along to the speakers.
 
-<p>This example creates an oscillator, then links it to a gain node, so that the gain node controls the volume of the oscillator node.</p>
+This example creates an oscillator, then links it to a gain node, so that the gain node controls the volume of the oscillator node.
 
-<pre class="brush: js" style="font-size: 14px;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -60,13 +56,14 @@ var gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
-</pre>
+```
 
-<h3 id="AudioParam_example">AudioParam example</h3>
+### AudioParam example
 
-<p>In this example, we will be altering the gain value of a {{domxref("GainNode")}} using an {{domxref("OscillatorNode")}} with a slow frequency value. This technique is know as an <em>LFO</em>-controlled parameter.</p>
+In this example, we will be altering the gain value of a {{domxref("GainNode")}} using an {{domxref("OscillatorNode")}} with a slow frequency value. This technique is know as an _LFO_-controlled parameter.
 
-<pre class="brush: js; highlight[8,9]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -97,30 +94,25 @@ gain.connect(audioCtx.destination);
 oscillator.start();
 
 // start the oscillator that will modify the gain value
-lfo.start();</pre>
+lfo.start();
+```
 
-<h4 id="AudioParam_notes">AudioParam notes</h4>
+#### AudioParam notes
 
-<p>It is possible to connect an <code>AudioNode</code> output to more than one {{ domxref("AudioParam") }}, and more than one AudioNode output to a single {{ domxref("AudioParam") }}, with multiple calls to <code>connect()</code>. <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Fan-in_and_Fan-out">Fan-in and fan-out</a> are therefore supported.</p>
+It is possible to connect an `AudioNode` output to more than one {{ domxref("AudioParam") }}, and more than one AudioNode output to a single {{ domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in and fan-out](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Fan-in_and_Fan-out) are therefore supported.
 
-<p>An {{ domxref("AudioParam") }} will take the rendered audio data from any <code>AudioNode</code> output connected to it and convert it to mono by <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">down-mixing</a> (if it is not already mono). Next, it will mix it together with any other such outputs, and the intrinsic parameter value (the value the {{ domxref("AudioParam") }} would normally have without any audio connections), including any timeline changes scheduled for the parameter.</p>
+An {{ domxref("AudioParam") }} will take the rendered audio data from any `AudioNode` output connected to it and convert it to mono by [down-mixing](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) (if it is not already mono). Next, it will mix it together with any other such outputs, and the intrinsic parameter value (the value the {{ domxref("AudioParam") }} would normally have without any audio connections), including any timeline changes scheduled for the parameter.
 
-<p>Therefore, it is possible to choose the range in which an {{domxref("AudioParam")}} will change by setting the value of the {{domxref("AudioParam")}} to the central frequency, and to use a {{domxref("GainNode")}} between the audio source and the {{domxref("AudioParam")}} to adjust the range of the {{domxref("AudioParam")}} changes.</p>
+Therefore, it is possible to choose the range in which an {{domxref("AudioParam")}} will change by setting the value of the {{domxref("AudioParam")}} to the central frequency, and to use a {{domxref("GainNode")}} between the audio source and the {{domxref("AudioParam")}} to adjust the range of the {{domxref("AudioParam")}} changes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.AudioNode.connect")}}
 
+## See also
 
-<p>{{Compat("api.AudioNode.connect")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

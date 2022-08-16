@@ -2,49 +2,46 @@
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p>IndexedDB API 的 <strong><code>IDBOpenDBRequest</code></strong> 接口提供了访问打开或删除数据库的请求的结果（通过调用 {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}），途径就是使用特殊的事件处理器属性。</p>
-</div>
+IndexedDB API 的 **`IDBOpenDBRequest`** 接口提供了访问打开或删除数据库的请求的结果（通过调用 {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}），途径就是使用特殊的事件处理器属性。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}</em>.</p>
+_Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
 
-<h3 id="Events">Events</h3>
+### Events
 
-<dl>
- <dt>{{domxref("IDBOpenDBRequest.onblocked")}}</dt>
- <dd>The event handler for the blocked event. This event is triggered when the <code>upgradeneeded</code> event should be triggered because of a version change but the database is still in use (i.e. not closed) somewhere, even after the <code>versionchange</code> event was sent.</dd>
- <dt>{{domxref("IDBOpenDBRequest.onupgradeneeded")}}</dt>
- <dd><code>upgradeneeded</code> 事件的事件处理器，会在当一个数据库的版本比已经存在的版本还高的时候触发。</dd>
-</dl>
+- {{domxref("IDBOpenDBRequest.onblocked")}}
+  - : The event handler for the blocked event. This event is triggered when the `upgradeneeded` event should be triggered because of a version change but the database is still in use (i.e. not closed) somewhere, even after the `versionchange` event was sent.
+- {{domxref("IDBOpenDBRequest.onupgradeneeded")}}
+  - : `upgradeneeded` 事件的事件处理器，会在当一个数据库的版本比已经存在的版本还高的时候触发。
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No methods, but inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}.</em></p>
+_No methods, but inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](http://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js; highlight:[16,28,29,31,32,33,34,35,36]">var db;
+```js
+var db;
 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these event handlers act on the database being opened.
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db
   // variable. This is used a lot below
@@ -64,7 +61,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
   var db = this.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Create an objectStore for this database
@@ -78,28 +75,23 @@ DBOpenRequest.onupgradeneeded = function(event) {
   objectStore.createIndex("month", "month", { unique: false });
   objectStore.createIndex("year", "year", { unique: false });
   objectStore.createIndex("notified", "notified", { unique: false });
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.IDBOpenDBRequest")}}
 
+## See also
 
-<p>{{Compat("api.IDBOpenDBRequest")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

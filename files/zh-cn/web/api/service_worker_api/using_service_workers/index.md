@@ -79,7 +79,7 @@ myFunction().then(function(value) {
 
 相比于以上方法，我们可以使用 promise 来实现。(可以看我们的 [Promises test](https://github.com/mdn/promises-test) 示例源码， [look at it running live](https://mdn.github.io/promises-test/).)
 
-> **备注：**service worker 在实际使用中，会使用 caching 和 onfetch 等异步操作，而不是使用老旧的 XMLHttpRequest API。这里的例子使用 XMLHttpRequest API 只是为了让你能将注意力集中于理解 Promise 上。
+> **备注：** service worker 在实际使用中，会使用 caching 和 onfetch 等异步操作，而不是使用老旧的 XMLHttpRequest API。这里的例子使用 XMLHttpRequest API 只是为了让你能将注意力集中于理解 Promise 上。
 
 ```js
 function imgLoad(url) {

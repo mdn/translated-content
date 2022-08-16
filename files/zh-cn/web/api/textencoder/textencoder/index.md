@@ -2,218 +2,83 @@
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 ---
-<p>{{apiref("TextEncoder")}}{{seeCompatTable}}</p>
+{{apiref("TextEncoder")}}{{seeCompatTable}}
 
-<p>The <code><strong>TextEncoder()</strong></code> 构造函数返回一个新创建的{{domxref("TextEncoder")}}对象。</p>
+The **`TextEncoder()`** 构造函数返回一个新创建的{{domxref("TextEncoder")}}对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>encoder</em> = new TextEncoder();
-</pre>
+```
+encoder = new TextEncoder();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li>TextEncoder() 从 Firefox 48 and Chrome 53 开始不再需要参数</li>
-</ul>
+- TextEncoder() 从 Firefox 48 and Chrome 53 开始不再需要参数
 
-<p><strong>Note</strong>: 在Firefox 48和Chrome 53之前，编码类型标签被接受为TextEncoder对象的参数，现在这两个浏览器已经删除了除utf-8之外的任何编码器类型的支持，以符合规范。 传入TextEncoder构造函数的任何类型标签现在都将被忽略，并且将创建一个utf-8 TextEncoder。</p>
+**Note**: 在 Firefox 48 和 Chrome 53 之前，编码类型标签被接受为 TextEncoder 对象的参数，现在这两个浏览器已经删除了除 utf-8 之外的任何编码器类型的支持，以符合规范。 传入 TextEncoder 构造函数的任何类型标签现在都将被忽略，并且将创建一个 utf-8 TextEncoder。
 
-<p>旧的参数:</p>
+旧的参数:
 
-<table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Possible values of <em>utfLabel</em></th>
-    <th scope="col">Encoding</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td>"<code title="">unicode-1-1-utf-8</code>", "<code title="">utf-8</code>", "<code>utf8</code>"</td>
-    <td><code>'utf-8'</code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">866</code>", "<code title="">cp866</code>", "<code title="">csibm866</code>", "<code title="">ibm866</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Code_page_866">'ibm866'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csisolatin2</code>", "<code title="">iso-8859-2</code>", "<code title="">iso-ir-101</code>", "<code title="">iso8859-2</code>", "<code title="">iso88592</code>", "<code title="">iso_8859-2</code>", "<code title="">iso_8859-2:1987</code>", "<code title="">l2</code>", "<code title="">latin2</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-2">'iso-8859-2'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csisolatin3</code>", "<code title="">iso-8859-3</code>", "<code title="">iso-ir-109</code>", "<code title="">iso8859-3</code>", "<code title="">iso88593</code>", "<code title="">iso_8859-3</code>", "<code title="">iso_8859-3:1988</code>", "<code title="">l3</code>", "<code title="">latin3</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-3">'iso-8859-3'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csisolatin4</code>", "<code title="">iso-8859-4</code>", "<code title="">iso-ir-110</code>", "<code title="">iso8859-4</code>", "<code title="">iso88594</code>", "<code title="">iso_8859-4</code>", "<code title="">iso_8859-4:1988</code>", "<code title="">l4</code>", "<code title="">latin4</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-4">'iso-8859-4'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csisolatincyrillic</code>", "<code title="">cyrillic</code>", "<code title="">iso-8859-5</code>", "<code title="">iso-ir-144</code>", "<code title="">iso88595</code>", "<code title="">iso_8859-5</code>", "<code title="">iso_8859-5:1988</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-5">'iso-8859-5'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">arabic</code>", "<code title="">asmo-708</code>", "<code title="">csiso88596e</code>", "<code title="">csiso88596i</code>", "<code title="">csisolatinarabic</code>", "<code title="">ecma-114</code>", "<code title="">iso-8859-6</code>", "<code title="">iso-8859-6-e</code>", "<code title="">iso-8859-6-i</code>", "<code title="">iso-ir-127</code>", "<code title="">iso8859-6</code>", "<code title="">iso88596</code>", "<code title="">iso_8859-6</code>", "<code title="">iso_8859-6:1987</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-6">'iso-8859-6'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csisolatingreek</code>", "<code title="">ecma-118</code>", "<code title="">elot_928</code>", "<code title="">greek</code>", "<code title="">greek8</code>", "<code title="">iso-8859-7</code>", "<code title="">iso-ir-126</code>", "<code title="">iso8859-7</code>", "<code title="">iso88597</code>", "<code title="">iso_8859-7</code>", "<code title="">iso_8859-7:1987</code>", "<code title="">sun_eu_greek</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-7">'iso-8859-7'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csiso88598e</code>", "<code title="">csisolatinhebrew</code>", "<code title="">hebrew</code>", "<code title="">iso-8859-8</code>", "<code title="">iso-8859-8-e</code>", "<code title="">iso-ir-138</code>", "<code title="">iso8859-8</code>", "<code title="">iso88598</code>", "<code title="">iso_8859-8</code>", "<code title="">iso_8859-8:1988</code>", "<code title="">visual</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-8">'iso-8859-8'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csiso88598i</code>", "<code title="">iso-8859-8-i</code>", "<code title="">logical</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO-8859-8-I">'iso-8859-8i'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csisolatin6</code>", "<code title="">iso-8859-10</code>", "<code title="">iso-ir-157</code>", "<code title="">iso8859-10</code>", "<code title="">iso885910</code>", "<code title="">l6</code>", "<code title="">latin6</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-10">'iso-8859-10'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">iso-8859-13</code>", "<code title="">iso8859-13</code>", "<code title="">iso885913</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-13">'iso-8859-13'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">iso-8859-14</code>", "<code title="">iso8859-14</code>", "<code title="">iso885914</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-14">'iso-8859-14'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csisolatin9</code>", "<code title="">iso-8859-15</code>", "<code title="">iso8859-15</code>", "<code title="">iso885915</code>", "<code title="">l9</code>", "<code title="">latin9</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-15">'iso-8859-15'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">iso-8859-16</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-16">'iso-8859-16'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cskoi8r</code>", "<code title="">koi</code>", "<code title="">koi8</code>", "<code title="">koi8-r</code>", "<code title="">koi8_r</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/KOI8-R">'koi8-r'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">koi8-u</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/KOI8-U">'koi8-u'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csmacintosh</code>", "<code title="">mac</code>", "<code title="">macintosh</code>", "<code title="">x-mac-roman</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Mac_OS_Roman">'macintosh'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">dos-874</code>", "<code title="">iso-8859-11</code>", "<code title="">iso8859-11</code>", "<code title="">iso885911</code>", "<code title="">tis-620</code>", "<code title="">windows-874</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-874">'windows-874'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1250</code>", "<code title="">windows-1250</code>", "<code title="">x-cp1250</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1250">'windows-1250'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1251</code>", "<code title="">windows-1251</code>", "<code title="">x-cp1251</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1251">'windows-1251'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">ansi_x3.4-1968</code>", "<code title="">ascii</code>", "<code title="">cp1252</code>", "<code title="">cp819</code>", "<code title="">csisolatin1</code>", "<code title="">ibm819</code>", "<code title="">iso-8859-1</code>", "<code title="">iso-ir-100</code>", "<code title="">iso8859-1</code>", "<code title="">iso88591</code>", "<code title="">iso_8859-1</code>", "<code title="">iso_8859-1:1987</code>", "<code title="">l1</code>", "<code title="">latin1</code>", "<code title="">us-ascii</code>", "<code title="">windows-1252</code>", "<code title="">x-cp1252</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1252">'windows-1252'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1253</code>", "<code title="">windows-1253</code>", "<code title="">x-cp1253</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1253">'windows-1253'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1254</code>", "<code title="">csisolatin5</code>", "<code title="">iso-8859-9</code>", "<code title="">iso-ir-148</code>", "<code title="">iso8859-9</code>", "<code title="">iso88599</code>", "<code title="">iso_8859-9</code>", "<code title="">iso_8859-9:1989</code>", "<code title="">l5</code>", "<code title="">latin5</code>", "<code title="">windows-1254</code>", "<code title="">x-cp1254</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1254">'windows-1254'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1255</code>", "<code title="">windows-1255</code>", "<code title="">x-cp1255</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1255">'windows-1255'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1256</code>", "<code title="">windows-1256</code>", "<code title="">x-cp1256</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1256">'windows-1256'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1257</code>", "<code title="">windows-1257</code>", "<code title="">x-cp1257</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1257">'windows-1257'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cp1258</code>", "<code title="">windows-1258</code>", "<code title="">x-cp1258</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Windows-1258">'windows-1258'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">x-mac-cyrillic</code>", "<code title="">x-mac-ukrainian</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Macintosh_Cyrillic_encoding">'x-mac-cyrillic'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">chinese</code>", "<code title="">csgb2312</code>", "<code title="">csiso58gb231280</code>", "<code title="">gb2312</code>", "<code title="">gb_2312</code>", "<code title="">gb_2312-80</code>", "<code title="">gbk</code>", "<code title="">iso-ir-58</code>", "<code title="">x-gbk</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/GBK">'gbk'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">gb18030</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/GB_18030">'gb18030'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">hz-gb-2312</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/HZ_(character_encoding)">'hz-gb-2312'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">big5</code>", "<code title="">big5-hkscs</code>", "<code title="">cn-big5</code>", "<code title="">csbig5</code>", "<code title="">x-x-big5</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Big5">'big5'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cseucpkdfmtjapanese</code>", "<code title="">euc-jp</code>", "<code title="">x-euc-jp</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-JP">'euc-jp'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csiso2022jp</code>", "<code title="">iso-2022-jp</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-JP">'iso-2022-jp'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csshiftjis</code>", "<code title="">ms_kanji</code>", "<code title="">shift-jis</code>", "<code title="">shift_jis</code>", "<code title="">sjis</code>", "<code title="">windows-31j</code>", "<code title="">x-sjis</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Shift_JIS">'shift-jis'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">cseuckr</code>", "<code title="">csksc56011987</code>", "<code title="">euc-kr</code>", "<code title="">iso-ir-149</code>", "<code title="">korean</code>", "<code title="">ks_c_5601-1987</code>", "<code title="">ks_c_5601-1989</code>", "<code title="">ksc5601</code>", "<code title="">ksc_5601</code>", "<code title="">windows-949</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR">'euc-kr'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">csiso2022kr</code>", "<code title="">iso-2022-kr</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR">'iso-2022-kr'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">utf-16be</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">'utf-16be'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">utf-16</code>", "<code title="">utf-16le</code>"</td>
-    <td><code><a href="https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">'utf-16le'</a></code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">x-user-defined</code>"</td>
-    <td><code>'x-user-defined'</code></td>
-   </tr>
-   <tr>
-    <td>"<code title="">iso-2022-cn</code>", "<code title="">iso-2022-cn-ext</code>"</td>
-    <td><code>'replacement'</code></td>
-   </tr>
-  </tbody>
-</table>
+| Possible values of _utfLabel_                                                                                                                                                                                                                         | Encoding                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| "`unicode-1-1-utf-8`", "`utf-8`", "`utf8`"                                                                                                                                                                                                            | `'utf-8'`                                                                        |
+| "`866`", "`cp866`", "`csibm866`", "`ibm866`"                                                                                                                                                                                                          | [`'ibm866'`](https://zh.wikipedia.org/wiki/Code_page_866)                        |
+| "`csisolatin2`", "`iso-8859-2`", "`iso-ir-101`", "`iso8859-2`", "`iso88592`", "`iso_8859-2`", "`iso_8859-2:1987`", "`l2`", "`latin2`"                                                                                                                 | [`'iso-8859-2'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-2)                   |
+| "`csisolatin3`", "`iso-8859-3`", "`iso-ir-109`", "`iso8859-3`", "`iso88593`", "`iso_8859-3`", "`iso_8859-3:1988`", "`l3`", "`latin3`"                                                                                                                 | [`'iso-8859-3'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-3)                   |
+| "`csisolatin4`", "`iso-8859-4`", "`iso-ir-110`", "`iso8859-4`", "`iso88594`", "`iso_8859-4`", "`iso_8859-4:1988`", "`l4`", "`latin4`"                                                                                                                 | [`'iso-8859-4'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-4)                   |
+| "`csisolatincyrillic`", "`cyrillic`", "`iso-8859-5`", "`iso-ir-144`", "`iso88595`", "`iso_8859-5`", "`iso_8859-5:1988`"                                                                                                                               | [`'iso-8859-5'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-5)                   |
+| "`arabic`", "`asmo-708`", "`csiso88596e`", "`csiso88596i`", "`csisolatinarabic`", "`ecma-114`", "`iso-8859-6`", "`iso-8859-6-e`", "`iso-8859-6-i`", "`iso-ir-127`", "`iso8859-6`", "`iso88596`", "`iso_8859-6`", "`iso_8859-6:1987`"                  | [`'iso-8859-6'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-6)                   |
+| "`csisolatingreek`", "`ecma-118`", "`elot_928`", "`greek`", "`greek8`", "`iso-8859-7`", "`iso-ir-126`", "`iso8859-7`", "`iso88597`", "`iso_8859-7`", "`iso_8859-7:1987`", "`sun_eu_greek`"                                                            | [`'iso-8859-7'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-7)                   |
+| "`csiso88598e`", "`csisolatinhebrew`", "`hebrew`", "`iso-8859-8`", "`iso-8859-8-e`", "`iso-ir-138`", "`iso8859-8`", "`iso88598`", "`iso_8859-8`", "`iso_8859-8:1988`", "`visual`"                                                                     | [`'iso-8859-8'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-8)                   |
+| "`csiso88598i`", "`iso-8859-8-i`", "`logical`"                                                                                                                                                                                                        | [`'iso-8859-8i'`](https://zh.wikipedia.org/wiki/ISO-8859-8-I)                    |
+| "`csisolatin6`", "`iso-8859-10`", "`iso-ir-157`", "`iso8859-10`", "`iso885910`", "`l6`", "`latin6`"                                                                                                                                                   | [`'iso-8859-10'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-10)                 |
+| "`iso-8859-13`", "`iso8859-13`", "`iso885913`"                                                                                                                                                                                                        | [`'iso-8859-13'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-13)                 |
+| "`iso-8859-14`", "`iso8859-14`", "`iso885914`"                                                                                                                                                                                                        | [`'iso-8859-14'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-14)                 |
+| "`csisolatin9`", "`iso-8859-15`", "`iso8859-15`", "`iso885915`", "`l9`", "`latin9`"                                                                                                                                                                   | [`'iso-8859-15'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-15)                 |
+| "`iso-8859-16`"                                                                                                                                                                                                                                       | [`'iso-8859-16'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-16)                 |
+| "`cskoi8r`", "`koi`", "`koi8`", "`koi8-r`", "`koi8_r`"                                                                                                                                                                                                | [`'koi8-r'`](https://zh.wikipedia.org/wiki/KOI8-R)                               |
+| "`koi8-u`"                                                                                                                                                                                                                                            | [`'koi8-u'`](https://zh.wikipedia.org/wiki/KOI8-U)                               |
+| "`csmacintosh`", "`mac`", "`macintosh`", "`x-mac-roman`"                                                                                                                                                                                              | [`'macintosh'`](https://zh.wikipedia.org/wiki/Mac_OS_Roman)                      |
+| "`dos-874`", "`iso-8859-11`", "`iso8859-11`", "`iso885911`", "`tis-620`", "`windows-874`"                                                                                                                                                             | [`'windows-874'`](https://zh.wikipedia.org/wiki/Windows-874)                     |
+| "`cp1250`", "`windows-1250`", "`x-cp1250`"                                                                                                                                                                                                            | [`'windows-1250'`](https://zh.wikipedia.org/wiki/Windows-1250)                   |
+| "`cp1251`", "`windows-1251`", "`x-cp1251`"                                                                                                                                                                                                            | [`'windows-1251'`](https://zh.wikipedia.org/wiki/Windows-1251)                   |
+| "`ansi_x3.4-1968`", "`ascii`", "`cp1252`", "`cp819`", "`csisolatin1`", "`ibm819`", "`iso-8859-1`", "`iso-ir-100`", "`iso8859-1`", "`iso88591`", "`iso_8859-1`", "`iso_8859-1:1987`", "`l1`", "`latin1`", "`us-ascii`", "`windows-1252`", "`x-cp1252`" | [`'windows-1252'`](https://zh.wikipedia.org/wiki/Windows-1252)                   |
+| "`cp1253`", "`windows-1253`", "`x-cp1253`"                                                                                                                                                                                                            | [`'windows-1253'`](https://zh.wikipedia.org/wiki/Windows-1253)                   |
+| "`cp1254`", "`csisolatin5`", "`iso-8859-9`", "`iso-ir-148`", "`iso8859-9`", "`iso88599`", "`iso_8859-9`", "`iso_8859-9:1989`", "`l5`", "`latin5`", "`windows-1254`", "`x-cp1254`"                                                                     | [`'windows-1254'`](https://zh.wikipedia.org/wiki/Windows-1254)                   |
+| "`cp1255`", "`windows-1255`", "`x-cp1255`"                                                                                                                                                                                                            | [`'windows-1255'`](https://zh.wikipedia.org/wiki/Windows-1255)                   |
+| "`cp1256`", "`windows-1256`", "`x-cp1256`"                                                                                                                                                                                                            | [`'windows-1256'`](https://zh.wikipedia.org/wiki/Windows-1256)                   |
+| "`cp1257`", "`windows-1257`", "`x-cp1257`"                                                                                                                                                                                                            | [`'windows-1257'`](https://zh.wikipedia.org/wiki/Windows-1257)                   |
+| "`cp1258`", "`windows-1258`", "`x-cp1258`"                                                                                                                                                                                                            | [`'windows-1258'`](https://zh.wikipedia.org/wiki/Windows-1258)                   |
+| "`x-mac-cyrillic`", "`x-mac-ukrainian`"                                                                                                                                                                                                               | [`'x-mac-cyrillic'`](https://zh.wikipedia.org/wiki/Macintosh_Cyrillic_encoding)  |
+| "`chinese`", "`csgb2312`", "`csiso58gb231280`", "`gb2312`", "`gb_2312`", "`gb_2312-80`", "`gbk`", "`iso-ir-58`", "`x-gbk`"                                                                                                                            | [`'gbk'`](https://zh.wikipedia.org/wiki/GBK)                                     |
+| "`gb18030`"                                                                                                                                                                                                                                           | [`'gb18030'`](https://zh.wikipedia.org/wiki/GB_18030)                            |
+| "`hz-gb-2312`"                                                                                                                                                                                                                                        | [`'hz-gb-2312'`](<https://zh.wikipedia.org/wiki/HZ_(character_encoding)>)        |
+| "`big5`", "`big5-hkscs`", "`cn-big5`", "`csbig5`", "`x-x-big5`"                                                                                                                                                                                       | [`'big5'`](https://zh.wikipedia.org/wiki/Big5)                                   |
+| "`cseucpkdfmtjapanese`", "`euc-jp`", "`x-euc-jp`"                                                                                                                                                                                                     | [`'euc-jp'`](https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-JP)            |
+| "`csiso2022jp`", "`iso-2022-jp`"                                                                                                                                                                                                                      | [`'iso-2022-jp'`](https://zh.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-JP)        |
+| "`csshiftjis`", "`ms_kanji`", "`shift-jis`", "`shift_jis`", "`sjis`", "`windows-31j`", "`x-sjis`"                                                                                                                                                     | [`'shift-jis'`](https://zh.wikipedia.org/wiki/Shift_JIS)                         |
+| "`cseuckr`", "`csksc56011987`", "`euc-kr`", "`iso-ir-149`", "`korean`", "`ks_c_5601-1987`", "`ks_c_5601-1989`", "`ksc5601`", "`ksc_5601`", "`windows-949`"                                                                                            | [`'euc-kr'`](https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR)            |
+| "`csiso2022kr`", "`iso-2022-kr`"                                                                                                                                                                                                                      | [`'iso-2022-kr'`](https://zh.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR)        |
+| "`utf-16be`"                                                                                                                                                                                                                                          | [`'utf-16be'`](https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes) |
+| "`utf-16`", "`utf-16le`"                                                                                                                                                                                                                              | [`'utf-16le'`](https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes) |
+| "`x-user-defined`"                                                                                                                                                                                                                                    | `'x-user-defined'`                                                               |
+| "`iso-2022-cn`", "`iso-2022-cn-ext`"                                                                                                                                                                                                                  | `'replacement'`                                                                  |
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js"><code class="language-js">var textEncoder = new TextEncoder("iso-8859-1");</code></pre>
+```js
+var textEncoder = new TextEncoder("iso-8859-1");
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>The {{domxref("TextEncoder")}} interface it belongs to。</li>
-</ul>
+- The {{domxref("TextEncoder")}} interface it belongs to。

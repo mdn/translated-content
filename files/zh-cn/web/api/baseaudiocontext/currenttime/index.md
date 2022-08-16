@@ -2,46 +2,43 @@
 title: AudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><code>currentTime是</code>{{ domxref("AudioContext") }}的一个 read-only<code>属性，返回</code>double 秒（从 0 开始）表示一个只增不减的硬件时间戳，可以用来控制音频回放，实现可视化时间轴等等。</p>
-</div>
+`currentTime是`{{ domxref("AudioContext") }}的一个 read-only`属性，返回`double 秒（从 0 开始）表示一个只增不减的硬件时间戳，可以用来控制音频回放，实现可视化时间轴等等。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-console.log(audioCtx.currentTime);</pre>
+```js
+var audioCtx = new AudioContext();
+console.log(audioCtx.currentTime);
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A double.</p>
+A double.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<div class="note">
-<p><strong>注意</strong>：想要<em>完整的</em><em>Web Audio 例子的话，</em>可以去<a href="https://github.com/mdn/">MDN Github repo</a>看 DEMO（例如<a href="https://github.com/mdn/panner-node">panner-node</a>）。<em>不妨试试在浏览器控制台输入</em><code style="font-style: italic; line-height: 1.5;">audioCtx.currentTime。</code></p>
-</div>
+> **备注：** 想要*完整的 Web Audio 例子的话*，可以去[MDN Github repo](https://github.com/mdn/)看 DEMO（例如[panner-node](https://github.com/mdn/panner-node)）。_不妨试试在浏览器控制台输入_`audioCtx.currentTime`。
 
-<pre class="brush: js; highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
 ...
 
 console.log(audioCtx.currentTime);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BaseAudioContext.currentTime")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

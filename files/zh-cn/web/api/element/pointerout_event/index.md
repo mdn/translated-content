@@ -2,28 +2,28 @@
 title: GlobalEventHandlers.onpointerout
 slug: Web/API/Element/pointerout_event
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>一个{{domxref("GlobalEventHandlers","global event handler")}} 用于处理 {{event("pointerout")}} 事件。</p>
+一个{{domxref("GlobalEventHandlers","global event handler")}} 用于处理 {{event("pointerout")}} 事件。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>outHandler</var> = <var>targetElement</var>.onpointerout;
-</pre>
+```
+var outHandler = targetElement.onpointerout;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt><code>outHandler</code></dt>
- <dd>元素<code>targetElement</code>的指针输出事件处理程序。</dd>
-</dl>
+- `outHandler`
+  - : 元素`targetElement`的指针输出事件处理程序。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>这个例子展示了两种方式来使用 onpointerout 设置元素的 pointerout 事件处理程序。</p>
+这个例子展示了两种方式来使用 onpointerout 设置元素的 pointerout 事件处理程序。
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function outHandler(ev) {
  // Process the pointerout event
 }
@@ -31,26 +31,22 @@ function init() {
  var el=document.getElementById("target1");
  el.onpointerout = outHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-&lt;div id="target2" onpointerout="outHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target1"> Touch me ... </div>
+<div id="target2" onpointerout="outHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.GlobalEventHandlers.onpointerout")}}
 
+## 相关链接
 
-<p>{{Compat("api.GlobalEventHandlers.onpointerout")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{event("pointerout")}}</li>
-</ul>
+- {{event("pointerout")}}

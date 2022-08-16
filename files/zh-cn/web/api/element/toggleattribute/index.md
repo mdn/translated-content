@@ -2,67 +2,66 @@
 title: Element.toggleAttribute()
 slug: Web/API/Element/toggleAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Element")}} 接口的 <code><strong>toggleAttribute()</strong></code> 方法切换给定元素的某个布尔值属性的状态（如果属性不存在则添加属性，属性存在则移除属性）。</p>
+{{domxref("Element")}} 接口的 **`toggleAttribute()`** 方法切换给定元素的某个布尔值属性的状态（如果属性不存在则添加属性，属性存在则移除属性）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>Element</em>.toggleAttribute(<em>name</em> [, <em>force</em>]);
-</pre>
+```
+Element.toggleAttribute(name [, force]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}} specifying the name of the attribute to be toggled. The attribute name is automatically converted to all lower-case when <code>toggleAttribute()</code> is called on an HTML element in an HTML document.</dd>
- <dt><code>force</code> {{optional_inline}}</dt>
- <dd>A boolean value to determine whether the attribute should be added or removed, no matter whether the attribute is present or not at the moment.</dd>
-</dl>
+- `name`
+  - : A {{domxref("DOMString")}} specifying the name of the attribute to be toggled. The attribute name is automatically converted to all lower-case when `toggleAttribute()` is called on an HTML element in an HTML document.
+- `force` {{optional_inline}}
+  - : A boolean value to determine whether the attribute should be added or removed, no matter whether the attribute is present or not at the moment.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>true</code> if attribute <strong><code>name</code></strong> is eventually present, and <code>false</code> otherwise.</p>
+`true` if attribute **`name`** is eventually present, and `false` otherwise.
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt><code>InvalidCharacterError</code></dt>
- <dd>The specified attribute <code>name</code> contains one or more characters which are not valid in attribute names.</dd>
-</dl>
+- `InvalidCharacterError`
+  - : The specified attribute `name` contains one or more characters which are not valid in attribute names.
 
-<h2 id="例子">示例</h2>
+## 示例
 
-<p>在下面的例子中，<code>toggleAttribute()</code> 被用于切换 {{HTMLElement("input")}} 的 <code>readonly</code> 属性。</p>
+在下面的例子中，`toggleAttribute()` 被用于切换 {{HTMLElement("input")}} 的 `readonly` 属性。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;input value="text"&gt;
-&lt;button&gt;toggleAttribute("readonly")&lt;/button&gt;</pre>
+```html
+<input value="text">
+<button>toggleAttribute("readonly")</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush:js notranslate">var button = document.querySelector("button");
+```js
+var button = document.querySelector("button");
 var input = document.querySelector("input");
 
 button.addEventListener("click", function(){
   input.toggleAttribute("readonly");
 });
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('示例', '300', '50') }}</p>
+{{ EmbedLiveSample('示例', '300', '50') }}
 
-<p>{{DOMAttributeMethods}}</p>
+{{DOMAttributeMethods}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<div class="note">
-<p>下面代码中的 <code>void 0</code> 即 <code>undefined</code>。</p>
-</div>
+> **备注：** 下面代码中的 `void 0` 即 `undefined`。
 
-<pre class="brush: js notranslate">if (!Element.prototype.toggleAttribute) {
+```js
+if (!Element.prototype.toggleAttribute) {
   Element.prototype.toggleAttribute = function(name, force) {
     if(force !== void 0) force = !!force
 
@@ -79,14 +78,12 @@ button.addEventListener("click", function(){
     }
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Element.toggleAttribute")}}</p>
+{{Compat("api.Element.toggleAttribute")}}

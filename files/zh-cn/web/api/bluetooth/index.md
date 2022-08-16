@@ -2,35 +2,35 @@
 title: Bluetooth
 slug: Web/API/Bluetooth
 ---
-<p>{{ apiref("Web Bluetooth API") }} {{Non-standard_header()}}</p>
+{{ apiref("Web Bluetooth API") }} {{Non-standard_header()}}
 
-<p><a href="/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> 的<strong><code>Bluetooth</code></strong><code>接口</code>返回指代{{domxref("BluetoothDevice")}}带有指定选项的对象的{{jsxref("Promise")}}。</p>
+[Web Bluetooth API](/Web/API/Web_Bluetooth_API) 的**`Bluetooth`**`接口`返回指代{{domxref("BluetoothDevice")}}带有指定选项的对象的{{jsxref("Promise")}}。
 
-<h2 id="接口">接口</h2>
+## 接口
 
-<pre class="syntaxbox">interface <dfn>Bluetooth</dfn> {
-  Promise&lt;BluetoothDevice&gt; requestDevice(RequestDeviceOptions <dfn>options</dfn>);
+```
+interface Bluetooth {
+  Promise<BluetoothDevice> requestDevice(RequestDeviceOptions options);
 };
 Bluetooth implements EventTarget;
 Bluetooth implements BluetoothDeviceEventHandlers;
 Bluetooth implements CharacteristicEventHandlers;
-Bluetooth implements ServiceEventHandlers;</pre>
+Bluetooth implements ServiceEventHandlers;
+```
 
-<h2 id="特性">特性</h2>
+## 特性
 
-<p>无</p>
+无
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("Bluetooth.requestDevice()")}}</dt>
- <dd>返回一个包含指定选项的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}。</dd>
-</dl>
+- {{domxref("Bluetooth.requestDevice()")}}
+  - : 返回一个包含指定选项的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}。
 
-<h2 id="详细说明">详细说明</h2>
+## 详细说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Bluetooth")}}

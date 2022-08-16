@@ -2,30 +2,29 @@
 title: OscillatorNode.detune
 slug: Web/API/OscillatorNode/detune
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("OscillatorNode") }} 的 <code>detune 属性的接口</code>是 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} ，代表振荡频率的失谐量（<a href="http://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>）。</p>
-</div>
+{{ domxref("OscillatorNode") }} 的 `detune 属性的接口`是 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} ，代表振荡频率的失谐量（[cents](http://en.wikipedia.org/wiki/Cent_%28music%29)）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var oscillator = audioCtx.createOscillator();
-oscillator.detune.value = 100; // value in cents</pre>
+```js
+var oscillator = audioCtx.createOscillator();
+oscillator.detune.value = 100; // value in cents
+```
 
-<div class="note">
-<p><strong>Note:</strong> 虽然返回的 <code>AudioParam</code> 是只读的，但是它表示的值不是。</p>
-</div>
+> **备注：** 虽然返回的 `AudioParam` 是只读的，但是它表示的值不是。
 
-<h3 id="值"> 值</h3>
+### 值
 
-<p>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 的值</p>
+一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 的值
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的例子使用 {{ domxref("AudioContext") }} 创建了一个 oscillator node。 这是已经在运行的例子，查看 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> 是相关源码)。</p>
+下面的例子使用 {{ domxref("AudioContext") }} 创建了一个 oscillator node。 这是已经在运行的例子，查看 [Violent Theremin demo](http://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) 是相关源码)。
 
-<pre class="brush: js; highlight[9]">// create web audio api context
+```js
+// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
@@ -34,18 +33,17 @@ var oscillator = audioCtx.createOscillator();
 oscillator.type = 'square';
 oscillator.frequency.value = 440; // value in hertz
 oscillator.detune.value = 100; // value in cents
-oscillator.start();</pre>
+oscillator.start();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.OscillatorNode.detune")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

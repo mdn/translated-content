@@ -2,25 +2,26 @@
 title: Headers.values()
 slug: Web/API/Headers/values
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>Headers.values()</strong></code>方法返回一个可迭代数值，通过这个数值可以遍历<code><strong>Headers</strong></code>中键值对的<code><strong>value</strong></code>值。返回的<code><strong>value</strong></code>都是<strong><code>ByteString</code></strong>对象。</p>
+**`Headers.values()`**方法返回一个可迭代数值，通过这个数值可以遍历**`Headers`**中键值对的**`value`**值。返回的**`value`**都是**`ByteString`**对象。
 
-<div class="note">
-<p><strong>注意</strong>: 这个方法可以在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>中使用。</p>
-</div>
+> **备注：** 这个方法可以在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中使用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">headers.values();</pre>
+```js
+headers.values();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个由键值对中<strong><code>value</code></strong>组成的数组。</p>
+返回一个由键值对中**`value`**组成的数组。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js; highlight:[7]">// Create a test Headers object
+```js
+// Create a test Headers object
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
@@ -29,25 +30,21 @@ myHeaders.append('Vary', 'Accept-Language');
 for (var value of myHeaders.values()) {
    console.log(value);
 }
-</pre>
+```
 
-<p>返回值为：</p>
+返回值为：
 
-<pre>text/xml
-Accept-Language</pre>
+```
+text/xml
+Accept-Language
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.Headers.values")}}
 
+## See also
 
-<p>{{Compat("api.Headers.values")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

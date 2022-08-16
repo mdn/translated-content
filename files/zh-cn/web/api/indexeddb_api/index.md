@@ -42,12 +42,11 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。 �
   - : 表示一个打开数据库的请求。
 - {{domxref("IDBDatabase")}}
   - : 表示一个数据库连接。这是在数据库中获取事务的唯一方式。
-- ### 接收和修改数据
 
-  {{domxref("IDBTransaction")}}
+### 接收和修改数据
 
+- {{domxref("IDBTransaction")}}
   - : 表示一个事务。在数据库上创建一个事务，指定作用域（例如要访问的存储对象），并确定所需的访问类型（只读或读写）。
-
 - {{domxref("IDBRequest")}}
   - : 处理数据库请求并提供对结果访问的通用接口。
 - {{domxref("IDBObjectStore")}}
@@ -62,18 +61,20 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。 �
   - : 定义可用于从特定范围内的数据库检索数据的键范围。
 - {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
   - : 定义一个键范围，可用于从特定范围内的数据库中检索数据，并根据为特定索引指定的语言环境的规则进行排序（详见 [createIndex()](/zh-CN/docs/Web/API/IDBObjectStore/createIndex#Parameters) 的参数）。这个接口不再是 2.0 规范的一部分。
-- ### 自定义事件接口此规范使用以下自定义接口触发事件：
 
-  {{domxref("IDBVersionChangeEvent")}}
+### 自定义事件接口
 
+此规范使用以下自定义接口触发事件：
+
+- {{domxref("IDBVersionChangeEvent")}}
   - : 作为 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件的处理程序的结果，`IDBVersionChangeEvent `接口表示数据库的版本已经发生了改变。
 
-- ### 过时的接口规范的早期版本还定义了这些现在已删除的接口。这些文档便于您需要更新以前编写的代码：
+### 过时的接口
 
-  {{domxref("IDBVersionChangeRequest")}} {{Deprecated_Inline}}
+规范的早期版本还定义了这些现在已删除的接口。这些文档便于您需要更新以前编写的代码：
 
+- {{domxref("IDBVersionChangeRequest")}} {{Deprecated_Inline}}
   - : 表示更改数据库版本的请求。改变数据库版本的方法已经改变了（通过调用{{domxref("IDBFactory.open")}} 而非{{domxref("IDBDatabase.setVersion")}}），接口{{domxref("IDBOpenDBRequest")}} 现在拥有{{domxref("IDBVersionChangeRequest")}}。
-
 - {{domxref("IDBDatabaseException")}} {{Deprecated_Inline}}
   - : 表示执行数据库操作时可能遇到的异常情况。
 - {{domxref("IDBTransactionSync")}} {{Deprecated_Inline}}

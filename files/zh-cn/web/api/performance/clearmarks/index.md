@@ -2,32 +2,32 @@
 title: Performance.clearMarks()
 slug: Web/API/Performance/clearMarks
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><strong><code>clearMarks()</code></strong> 这个方法可以从浏览器的 performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。</p>
+**`clearMarks()`** 这个方法可以从浏览器的 performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<pre class="syntaxbox"><em>performance</em>.clearMarks();
-<em>performance</em>.clearMarks(name);
-</pre>
+```
+performance.clearMarks();
+performance.clearMarks(name);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name {{optional_inline}}</dt>
- <dd>{{domxref("DOMString")}} 表示时间戳的名字，如果没有提供这个参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。</dd>
-</dl>
+- name {{optional_inline}}
+  - : {{domxref("DOMString")}} 表示时间戳的名字，如果没有提供这个参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无</p>
+无
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的例子演示<code>clearMarks() 的两种用法。</code></p>
+下面的例子演示`clearMarks() 的两种用法。`
 
-<pre class="brush: js">function clear_mark(name) {
+```js
+function clear_mark(name) {
   if (performance.clearMarks === undefined) {
     console.log("performance.clearMarks Not supported");
     return;
@@ -43,12 +43,12 @@ function clear_all_marks() {
   //从 performance 缓冲区中移除所有标记的 performance entry
   performance.clearMarks();
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Performance.clearMarks")}}

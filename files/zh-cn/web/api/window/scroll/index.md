@@ -2,51 +2,50 @@
 title: Window.scroll()
 slug: Web/API/Window/scroll
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>滚动窗口至文档中的特定位置。</p>
+滚动窗口至文档中的特定位置。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">window.scroll(<em>x-coord</em>, <em>y-coord</em>)
-window.scroll(<em>options</em>)
-</pre>
+```
+window.scroll(x-coord, y-coord)
+window.scroll(options)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<ul>
- <li><code>x-coord</code> 值表示你想要置于左上角的像素点的横坐标。</li>
- <li><code>y-coord</code> 值表示你想要置于左上角的像素点的纵坐标。</li>
-</ul>
+- `x-coord` 值表示你想要置于左上角的像素点的横坐标。
+- `y-coord` 值表示你想要置于左上角的像素点的纵坐标。
 
-<p>- 或者 -</p>
+\- 或者 -
 
-<ul>
- <li><code>options</code> 值是一个 {{domxref("ScrollToOptions")}} 字典</li>
-</ul>
+- `options` 值是一个 {{domxref("ScrollToOptions")}} 字典
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;!-- 把纵轴上第 100 个像素置于窗口顶部 --&gt;
+```html
+<!-- 把纵轴上第 100 个像素置于窗口顶部 -->
 
-&lt;button onClick="scroll(0, 100);"&gt;点击以向下滚动 100 像素&lt;/button&gt;
-</pre>
+<button onClick="scroll(0, 100);">点击以向下滚动 100 像素</button>
+```
 
-<p>使用 <code>options</code>:</p>
+使用 `options`:
 
-<pre class="brush: js">window.scroll({
+```js
+window.scroll({
   top: 100,
   left: 100,
   behavior: 'smooth'
 });
-</pre>
+```
 
-<h2 id="Notes">备注</h2>
+## 备注
 
-<p><a href="/zh-CN/docs/Web/API/Window/scrollTo">window.scrollTo</a> 实际上和该方法是相同的。想要重复地滚动某个距离，请使用 <a href="/zh-CN/docs/Web/API/Window/scrollBy">window.scrollBy</a>. 参见 <a href="/zh-CN/docs/Web/API/Window/scrollByLines">window.scrollByLines</a>, <a href="/zh-CN/docs/Web/API/Window/scrollByPages">window.scrollByPages</a>.</p>
+[window.scrollTo](/zh-CN/docs/Web/API/Window/scrollTo) 实际上和该方法是相同的。想要重复地滚动某个距离，请使用 [window.scrollBy](/zh-CN/docs/Web/API/Window/scrollBy). 参见 [window.scrollByLines](/zh-CN/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/zh-CN/docs/Web/API/Window/scrollByPages).
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}

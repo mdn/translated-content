@@ -2,59 +2,52 @@
 title: 基本的动画
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
-<div>
-<p>由于我们是用 JavaScript 去操控 {{HTMLElement("canvas")}} 对象，这样要实现一些交互动画也是相当容易的。在本章中，我们将看看如何做一些基本的动画。</p>
-</div>
+由于我们是用 JavaScript 去操控 {{HTMLElement("canvas")}} 对象，这样要实现一些交互动画也是相当容易的。在本章中，我们将看看如何做一些基本的动画。
 
-<p>可能最大的限制就是图像一旦绘制出来，它就是一直保持那样了。如果需要移动它，我们不得不对所有东西（包括之前的）进行重绘。重绘是相当费时的，而且性能很依赖于电脑的速度。</p>
+可能最大的限制就是图像一旦绘制出来，它就是一直保持那样了。如果需要移动它，我们不得不对所有东西（包括之前的）进行重绘。重绘是相当费时的，而且性能很依赖于电脑的速度。
 
-<h2 id="Basic_animation_steps">动画的基本步骤</h2>
+## 动画的基本步骤
 
-<p>你可以通过以下的步骤来画出一帧：</p>
+你可以通过以下的步骤来画出一帧：
 
-<ol>
- <li><strong>清空 canvas</strong><br>
-  除非接下来要画的内容会完全充满 canvas（例如背景图），否则你需要清空所有。最简单的做法就是用 <code>clearRect</code> 方法。</li>
- <li><strong>保存 canvas 状态</strong><br>
-  如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。</li>
- <li><strong>绘制动画图形（animated shapes）</strong><br>
-  这一步才是重绘动画帧。</li>
- <li><strong>恢复 canvas 状态</strong><br>
-  如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。</li>
-</ol>
+1.  **清空 canvas**
+    除非接下来要画的内容会完全充满 canvas（例如背景图），否则你需要清空所有。最简单的做法就是用 `clearRect` 方法。
+2.  **保存 canvas 状态**
+    如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。
+3.  **绘制动画图形（animated shapes）**
+    这一步才是重绘动画帧。
+4.  **恢复 canvas 状态**
+    如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。
 
-<h2 id="Controlling_an_animation">操控动画 Controlling an animation</h2>
+## 操控动画 Controlling an animation
 
-<p>在 canvas 上绘制内容是用 canvas 提供的或者自定义的方法，而通常，我们仅仅在脚本执行结束后才能看见结果，比如说，在 for 循环里面做完成动画是不太可能的。</p>
+在 canvas 上绘制内容是用 canvas 提供的或者自定义的方法，而通常，我们仅仅在脚本执行结束后才能看见结果，比如说，在 for 循环里面做完成动画是不太可能的。
 
-<p>因此，为了实现动画，我们需要一些可以定时执行重绘的方法。有两种方法可以实现这样的动画操控。首先可以通过 <code>setInterval</code> 和 <code>setTimeout</code> 方法来控制在设定的时间点上执行重绘。</p>
+因此，为了实现动画，我们需要一些可以定时执行重绘的方法。有两种方法可以实现这样的动画操控。首先可以通过 `setInterval` 和 `setTimeout` 方法来控制在设定的时间点上执行重绘。
 
-<h3 id="有安排的更新画布_Scheduled_updates"><strong>有安排的更新画布 </strong>Scheduled updates</h3>
+### **有安排的更新画布** Scheduled updates
 
-<p>首先，可以用{{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}},和{{domxref("window.requestAnimationFrame()")}}来设定定期执行一个指定函数。</p>
+首先，可以用{{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}},和{{domxref("window.requestAnimationFrame()")}}来设定定期执行一个指定函数。
 
-<dl>
- <dt>{{domxref("WindowTimers.setInterval", "setInterval(function, delay)")}}</dt>
- <dd>当设定好间隔时间后，function 会定期执行。</dd>
- <dt>{{domxref("WindowTimers.setTimeout", "setTimeout(function, delay)")}}</dt>
- <dd>在设定好的时间之后执行函数</dd>
- <dt>{{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}</dt>
- <dd>告诉浏览器你希望执行一个动画，并在重绘之前，请求浏览器执行一个特定的函数来更新动画。</dd>
-</dl>
+- {{domxref("WindowTimers.setInterval", "setInterval(function, delay)")}}
+  - : 当设定好间隔时间后，function 会定期执行。
+- {{domxref("WindowTimers.setTimeout", "setTimeout(function, delay)")}}
+  - : 在设定好的时间之后执行函数
+- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
+  - : 告诉浏览器你希望执行一个动画，并在重绘之前，请求浏览器执行一个特定的函数来更新动画。
 
-<p>如果你并不需要与用户互动，你可以使用 setInterval() 方法，它就可以定期执行指定代码。如果我们需要做一个游戏，我们可以使用键盘或者鼠标事件配合上 setTimeout() 方法来实现。通过设置事件监听，我们可以捕捉用户的交互，并执行相应的动作。</p>
+如果你并不需要与用户互动，你可以使用 setInterval() 方法，它就可以定期执行指定代码。如果我们需要做一个游戏，我们可以使用键盘或者鼠标事件配合上 setTimeout() 方法来实现。通过设置事件监听，我们可以捕捉用户的交互，并执行相应的动作。
 
-<div class="note">
-<p>下面的例子，采用 {{domxref("window.requestAnimationFrame()")}}实现动画效果。这个方法提供了更加平缓并更加有效率的方式来执行动画，当系统准备好了重绘条件的时候，才调用绘制动画帧。一般每秒钟回调函数执行 60 次，也有可能会被降低。想要了解更多关于动画循环的信息，尤其是游戏，可以在<a href="/zh-CN/docs/Games">Game development zone</a> 参考这篇文章 <a href="/zh-CN/docs/Games/Anatomy">Anatomy of a video game</a>。</p>
-</div>
+> **备注：** 下面的例子，采用 {{domxref("window.requestAnimationFrame()")}}实现动画效果。这个方法提供了更加平缓并更加有效率的方式来执行动画，当系统准备好了重绘条件的时候，才调用绘制动画帧。一般每秒钟回调函数执行 60 次，也有可能会被降低。想要了解更多关于动画循环的信息，尤其是游戏，可以在[Game development zone](/zh-CN/docs/Games) 参考这篇文章 [Anatomy of a video game](/zh-CN/docs/Games/Anatomy)。
 
-<h2 id="太阳系的动画">太阳系的动画</h2>
+## 太阳系的动画
 
-<p>这个例子里面，我会做一个小型的太阳系模拟动画。</p>
+这个例子里面，我会做一个小型的太阳系模拟动画。
 
-<pre class="brush: js">var sun = new Image();
+```js
+var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
@@ -101,19 +94,20 @@ function draw() {
 }
 
 init();
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="300" height="300"></canvas>
+```
 
-<p>{{EmbedLiveSample("太阳系的动画", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}</p>
+{{EmbedLiveSample("太阳系的动画", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
 
-<h2 id="动画时钟">动画时钟</h2>
+## 动画时钟
 
-<p>这个例子实现一个动态时钟，可以显示当前时间。</p>
+这个例子实现一个动态时钟，可以显示当前时间。
 
-<pre class="brush: js">function clock(){
+```js
+function clock(){
   var now = new Date();
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
@@ -128,7 +122,7 @@ init();
 
   // Hour marks
   ctx.save();
-  for (var i=0;i&lt;12;i++){
+  for (var i=0;i<12;i++){
     ctx.beginPath();
     ctx.rotate(Math.PI/6);
     ctx.moveTo(100,0);
@@ -140,7 +134,7 @@ init();
   // Minute marks
   ctx.save();
   ctx.lineWidth = 5;
-  for (i=0;i&lt;60;i++){
+  for (i=0;i<60;i++){
     if (i%5!=0) {
       ctx.beginPath();
       ctx.moveTo(117,0);
@@ -154,7 +148,7 @@ init();
   var sec = now.getSeconds();
   var min = now.getMinutes();
   var hr  = now.getHours();
-  hr = hr&gt;=12 ? hr-12 : hr;
+  hr = hr>=12 ? hr-12 : hr;
 
   ctx.fillStyle = "black";
 
@@ -211,19 +205,20 @@ init();
 }
 
 window.requestAnimationFrame(clock);
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<p>{{EmbedLiveSample("动画时钟", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
+{{EmbedLiveSample("动画时钟", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
 
-<h2 id="循环全景照片">循环全景照片</h2>
+## 循环全景照片
 
-<p>在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的<a href="https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg">尤塞米提国家公园的图片</a>，当然你可以随意找一张任何尺寸大于 canvas 的图片。</p>
+在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的[尤塞米提国家公园的图片](https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg)，当然你可以随意找一张任何尺寸大于 canvas 的图片。
 
-<pre class="brush: js">var img = new Image();
+```js
+var img = new Image();
 
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
@@ -249,17 +244,17 @@ img.onload = function() {
     imgW = img.width * scale;
     imgH = img.height * scale;
 
-    if (imgW &gt; CanvasXSize) {
+    if (imgW > CanvasXSize) {
         // image larger than canvas
         x = CanvasXSize - imgW;
     }
-    if (imgW &gt; CanvasXSize) {
+    if (imgW > CanvasXSize) {
         // image width larger than canvas
         clearX = imgW;
     } else {
         clearX = CanvasXSize;
     }
-    if (imgH &gt; CanvasYSize) {
+    if (imgH > CanvasYSize) {
         // image height larger than canvas
         clearY = imgH;
     } else {
@@ -276,30 +271,30 @@ img.onload = function() {
 function draw() {
     ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is &lt;= Canvas Size
-    if (imgW &lt;= CanvasXSize) {
+    // if image is <= Canvas Size
+    if (imgW <= CanvasXSize) {
         // reset, start from beginning
-        if (x &gt; CanvasXSize) {
+        if (x > CanvasXSize) {
             x = -imgW + x;
         }
         // draw additional image1
-        if (x &gt; 0) {
+        if (x > 0) {
             ctx.drawImage(img, -imgW + x, y, imgW, imgH);
         }
         // draw additional image2
-        if (x - imgW &gt; 0) {
+        if (x - imgW > 0) {
             ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
         }
     }
 
-    // image is &gt; Canvas Size
+    // image is > Canvas Size
     else {
         // reset, start from beginning
-        if (x &gt; (CanvasXSize)) {
+        if (x > (CanvasXSize)) {
             x = CanvasXSize - imgW;
         }
         // draw aditional image
-        if (x &gt; (CanvasXSize-imgW)) {
+        if (x > (CanvasXSize-imgW)) {
             ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
         }
     }
@@ -307,28 +302,32 @@ function draw() {
     ctx.drawImage(img, x, y,imgW, imgH);
     // amount to move
     x += dx;
-}</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="800" height="200"></canvas>
+```
 
-<p>下方就是是图片在其中滑动的 {{HTMLElement("canvas")}}。需要注意的是这里定义的 width 和 height 必须与 JavaScript 代码中的变量值<code>CanvasXZSize</code>和<code>CanvasYSize</code>保持一致。 </p>
+下方就是是图片在其中滑动的 {{HTMLElement("canvas")}}。需要注意的是这里定义的 width 和 height 必须与 JavaScript 代码中的变量值`CanvasXZSize`和`CanvasYSize`保持一致。
 
-<pre>&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
+```
+<canvas id="canvas" width="800" height="200"></canvas>
+```
 
-<p>{{EmbedLiveSample("循环全景照片", "830", "230")}}</p>
+{{EmbedLiveSample("循环全景照片", "830", "230")}}
 
-<h2 id="鼠标追踪动画">鼠标追踪动画</h2>
+## 鼠标追踪动画
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-        &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script>
             var cn;
             //= document.getElementById('cw');
             var c;
@@ -345,7 +344,7 @@ function draw() {
             function gc() {
                 var s = "0123456789ABCDEF";
                 var c = "#";
-                for (var i = 0; i &lt; 6; i++) {
+                for (var i = 0; i < 6; i++) {
                     c += s[Math.ceil(Math.random() * 15)]
                 }
                 return c
@@ -355,7 +354,7 @@ function draw() {
                 cn = document.getElementById('cw');
                 c = cn.getContext('2d');
 
-                for (var i = 0; i &lt; 10; i++) {
+                for (var i = 0; i < 10; i++) {
                     var r = 30;
                     var x = Math.random() * (innerWidth - 2 * r) + r;
                     var y = Math.random() * (innerHeight - 2 * r) + r;
@@ -377,7 +376,7 @@ function draw() {
             function resize() {
                 cn.height = innerHeight;
                 cn.width = innerWidth;
-                for (var i = 0; i &lt; 101; i++) {
+                for (var i = 0; i < 101; i++) {
                     var r = 30;
                     var x = Math.random() * (innerWidth - 2 * r) + r;
                     var y = Math.random() * (innerHeight - 2 * r) + r;
@@ -425,8 +424,8 @@ function draw() {
                 });
 
             }
-        &lt;/script&gt;
-        &lt;style&gt;
+        </script>
+        <style>
             #cw {
                 position: fixed;
                 z-index: -1;
@@ -437,60 +436,53 @@ function draw() {
                 padding: 0;
                 background-color: rgba(0,0,0,0.05);
             }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;canvas id="cw"&gt;&lt;/canvas&gt;
+        </style>
+    </head>
+    <body>
+        <canvas id="cw"></canvas>
         qwerewr
 
-    &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </body>
+</html>
+```
 
-<h5 id="OutPut">OutPut</h5>
+##### OutPut
 
-<table>
- <tbody>
-  <tr>
-   <td>
-    <p><a href="https://kunalverma94.github.io/gallery/gags/beyblade.html"><img alt="beyblade" src="https://kunalverma94.github.io/gallery/beyblade.jpg" style="height: 298px; width: 399px;"></a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("鼠标追踪动画", "500", "500")}}
 
-<h2 id="Snake_Game">Snake Game</h2>
+## Snake Game
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-    &lt;title&gt;Nokia 1100:snake..Member berries&lt;/title&gt;
-&lt;/head&gt;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nokia 1100:snake..Member berries</title>
+</head>
 
-&lt;body&gt;
-    &lt;div class="keypress hide"&gt;
-        &lt;div class="up" onclick="emit(38)"&gt;&amp;#8593;&lt;/div&gt;
-        &lt;div class="right" onclick="emit(39)"&gt;&amp;#8594;&lt;/div&gt;
-        &lt;div class="left" onclick="emit(37)"&gt;&amp;#8592;&lt;/div&gt;
-        &lt;div class="down" onclick="emit(40)"&gt;&amp;#8595;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="banner" id="selector"&gt;
-        &lt;div&gt;
-            Time :&lt;span id="time"&gt;0&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div&gt;LousyGames ©&lt;/div&gt;
-        &lt;div&gt;
-            Score :&lt;span id="score"&gt;0&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="touch off" onclick="touch(this)"&gt;touch&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;canvas id="main"&gt;&lt;/canvas&gt;
-&lt;/body&gt;
-&lt;style&gt;
+<body>
+    <div class="keypress hide">
+        <div class="up" onclick="emit(38)">&#8593;</div>
+        <div class="right" onclick="emit(39)">&#8594;</div>
+        <div class="left" onclick="emit(37)">&#8592;</div>
+        <div class="down" onclick="emit(40)">&#8595;</div>
+    </div>
+    <div class="banner" id="selector">
+        <div>
+            Time :<span id="time">0</span>
+        </div>
+        <div>LousyGames ©</div>
+        <div>
+            Score :<span id="score">0</span>
+        </div>
+        <div class="touch off" onclick="touch(this)">touch</div>
+    </div>
+    <canvas id="main"></canvas>
+</body>
+<style>
     body {
         margin: 0;
         overflow: hidden;
@@ -517,7 +509,7 @@ function draw() {
         opacity: 1
     }
 
-    div#selector&gt;div {
+    div#selector>div {
         flex-basis: 30%
     }
 
@@ -531,7 +523,7 @@ function draw() {
         }
     }
 
-    .keypress&gt;div {
+    .keypress>div {
         border: dashed 3px #fff;
         height: 48%;
         width: 48%;
@@ -561,7 +553,7 @@ function draw() {
         user-select: none
     }
 
-    .keypress&gt;div:hover {
+    .keypress>div:hover {
         opacity: 1
     }
 
@@ -576,12 +568,14 @@ function draw() {
     .hide {
         opacity: 0
     }
-&lt;/style&gt;
-&lt;/html&gt;</pre>
+</style>
+</html>
+```
 
-<p>Javascript</p>
+Javascript
 
-<pre class="brush: js">function tmz() {
+```js
+function tmz() {
         var e = new Date(t),
             i = new Date,
             n = Math.abs(i.getMinutes() - e.getMinutes()),
@@ -590,7 +584,7 @@ function draw() {
     }
 
     function coll(t, e) {
-        return t.x &lt; e.x + e.w &amp;&amp; t.x + t.w &gt; e.x &amp;&amp; t.y &lt; e.y + e.h &amp;&amp; t.h + t.y &gt; e.y
+        return t.x < e.x + e.w && t.x + t.w > e.x && t.y < e.y + e.h && t.h + t.y > e.y
     }
 
     function snake() {
@@ -598,52 +592,52 @@ function draw() {
         for (var t = {
             x: w / 2,
             y: h / 2
-        }, e = 0; e &lt; 5; e++) this.sn.push(Object.assign({}, t)), t.x += this.w;
+        }, e = 0; e < 5; e++) this.sn.push(Object.assign({}, t)), t.x += this.w;
         this.draw = function () {
-            var t = d &amp;&amp; d.search("Arrow") &gt; -1,
+            var t = d && d.search("Arrow") > -1,
                 e = -1;
             if (t) {
                 var i = {
                     ...this.sn[0]
                 };
-                if ("ArrowUp" == d &amp;&amp; (i.y -= this.h), "ArrowDown" == d &amp;&amp; (i.y += this.h), "ArrowLeft" == d &amp;&amp; (i.x -= this.w), "ArrowRight" == d &amp;&amp; (i.x += this.w), i.x &gt;= w ? i.x = 0 : i.x &lt; 0 &amp;&amp; (i.x = w - this.w), i.y &gt; h ? i.y = 0 : i.y &lt; 0 &amp;&amp; (i.y = h), e = fa.findIndex(t =&gt; coll({
+                if ("ArrowUp" == d && (i.y -= this.h), "ArrowDown" == d && (i.y += this.h), "ArrowLeft" == d && (i.x -= this.w), "ArrowRight" == d && (i.x += this.w), i.x >= w ? i.x = 0 : i.x < 0 && (i.x = w - this.w), i.y > h ? i.y = 0 : i.y < 0 && (i.y = h), e = fa.findIndex(t => coll({
                     ...this.sn[0],
                     h: this.h,
                     w: this.w
                 }, t)), this.sn.unshift(i), -1 != e) return console.log(e), fa[e].renew(), void (document.getElementById("score").innerText = Number(document.getElementById("score").innerText) + 1);
                 this.sn.pop(), console.log(6)
             }
-            this.sn.forEach((t, e, i) =&gt; {
+            this.sn.forEach((t, e, i) => {
                 if (0 == e || i.length - 1 == e) {
                     var n = c.createLinearGradient(t.x, t.y, t.x + this.w, t.y + this.h);
                     i.length - 1 == e ? (n.addColorStop(0, "black"), n.addColorStop(1, "#8BC34A")) : (n.addColorStop(0, "#8BC34A"), n.addColorStop(1, "white")), c.fillStyle = n
                 } else c.fillStyle = "#8BC34A";
-                c.fillRect(t.x, t.y, this.w, this.h), c.strokeStyle = "#E91E63", c.font = "30px serif", c.strokeStyle = "#9E9E9E", i.length - 1 != e &amp;&amp; 0 != e &amp;&amp; c.strokeRect(t.x, t.y, this.w, this.h), 0 == e &amp;&amp; (c.beginPath(), c.fillStyle = "#F44336", c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill()), c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill(), c.beginPath()
+                c.fillRect(t.x, t.y, this.w, this.h), c.strokeStyle = "#E91E63", c.font = "30px serif", c.strokeStyle = "#9E9E9E", i.length - 1 != e && 0 != e && c.strokeRect(t.x, t.y, this.w, this.h), 0 == e && (c.beginPath(), c.fillStyle = "#F44336", c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill()), c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill(), c.beginPath()
             })
         }
     }
 
     function gc() {
-        for (var t = "0123456789ABCDEF", e = "#", i = 0; i &lt; 6; i++) e += t[Math.ceil(15 * Math.random())];
+        for (var t = "0123456789ABCDEF", e = "#", i = 0; i < 6; i++) e += t[Math.ceil(15 * Math.random())];
         return e
     }
 
     function food() {
         this.x = 0, this.y = 0, this.b = 10, this.w = this.b, this.h = this.b, this.color = gc(), this.renew = function () {
             this.x = Math.floor(Math.random() * (w - 200) + 10), this.y = Math.floor(Math.random() * (h - 200) + 30), this.color = gc()
-        }, this.renew(), this.put = (() =&gt; {
+        }, this.renew(), this.put = (() => {
             c.fillStyle = this.color, c.arc(this.x, this.y, this.b - 5, 0, 2 * Math.PI), c.fill(), c.beginPath(), c.arc(this.x, this.y, this.b - 5, 0, Math.PI), c.strokeStyle = "green", c.lineWidth = 10, c.stroke(), c.beginPath(), c.lineWidth = 1
         })
     }
 
     function init() {
         cc.height = h, cc.width = w, c.fillRect(0, 0, w, innerHeight);
-        for (var t = 0; t &lt; 10; t++) fa.push(new food);
+        for (var t = 0; t < 10; t++) fa.push(new food);
         s = new snake(w / 2, h / 2, 400, 4, 4), anima()
     }
 
     function anima() {
-        c.fillStyle = "rgba(0,0,0,0.11)", c.fillRect(0, 0, cc.width, cc.height), fa.forEach(t =&gt; t.put()), s.draw(), document.getElementById("time").innerText = tmz(), setTimeout(() =&gt; {
+        c.fillStyle = "rgba(0,0,0,0.11)", c.fillRect(0, 0, cc.width, cc.height), fa.forEach(t => t.put()), s.draw(), document.getElementById("time").innerText = tmz(), setTimeout(() => {
             requestAnimationFrame(anima)
         }, fw)
     }
@@ -673,7 +667,7 @@ function draw() {
             get: function () {
                 return this.keyCodeVal
             }
-        }), e.initKeyboardEvent ? e.initKeyboardEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, t) : e.initKeyEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, 0), e.keyCodeVal = t, e.keyCode !== t &amp;&amp; alert("keyCode mismatch " + e.keyCode + "(" + e.which + ")"), document.dispatchEvent(e)
+        }), e.initKeyboardEvent ? e.initKeyboardEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, t) : e.initKeyEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, 0), e.keyCodeVal = t, e.keyCode !== t && alert("keyCode mismatch " + e.keyCode + "(" + e.which + ")"), document.dispatchEvent(e)
     };
     var o, s, h = innerHeight,
         w = innerWidth,
@@ -681,29 +675,34 @@ function draw() {
         fa = [];
     window.onkeydown = function (t) {
         var e = t.key;
-        (e.search("Arrow") &gt; -1 || "1" == e) &amp;&amp; (d = t.key), "i" != e &amp;&amp; "I" != e || (console.log("inc"), fw -= 10), "d" != e &amp;&amp; "D" != e || (console.log("dec"), fw += 10)
+        (e.search("Arrow") > -1 || "1" == e) && (d = t.key), "i" != e && "I" != e || (console.log("inc"), fw -= 10), "d" != e && "D" != e || (console.log("dec"), fw += 10)
     }, init();
-</pre>
+```
 
-<h5 id="Output">Output</h5>
+##### Output
 
 <table>
- <tbody>
-  <tr>
-   <td>
-    <h2 id="sect1"><a href="https://kunalverma94.github.io/pokemon/snake.html"><img alt="Snake game" src="https://kunalverma94.github.io/view/images/snake.jpg" style="height: 400px; width: 600px;"></a></h2>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <h2 id="sect1">
+          <a href="https://kunalverma94.github.io/pokemon/snake.html"
+            ><img
+              alt="Snake game"
+              src="https://kunalverma94.github.io/view/images/snake.jpg"
+              style="height: 400px; width: 600px"
+          /></a>
+        </h2>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Other_examples">其它例子</h2>
+## 其它例子
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/API/Canvas_API/A_basic_ray-caster">A basic ray-caster</a></dt>
- <dd>一个关于如何使用键盘关联控制动画的优秀的案例。</dd>
- <dt><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations">Advanced animations</a></dt>
- <dd>我们将在下一章看到一些先进的动画技术和物理现象。</dd>
-</dl>
+- [A basic ray-caster](/zh-CN/docs/Web/API/Canvas_API/A_basic_ray-caster)
+  - : 一个关于如何使用键盘关联控制动画的优秀的案例。
+- [Advanced animations](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
+  - : 我们将在下一章看到一些先进的动画技术和物理现象。
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}

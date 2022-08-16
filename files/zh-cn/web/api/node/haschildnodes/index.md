@@ -2,50 +2,46 @@
 title: Node.hasChildNodes
 slug: Web/API/Node/hasChildNodes
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h3 id="概述">概述</h3>
+### 概述
 
-<p><strong>hasChildNodes</strong>方法返回一个<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean">布尔值</a>,表明当前<a href="/zh-CN/docs/DOM/Node">节点</a>是否包含有<a href="/zh-CN/docs/DOM/Node.childNodes">子节点</a>.</p>
+**hasChildNodes**方法返回一个[布尔值](/zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean),表明当前[节点](/zh-CN/docs/DOM/Node)是否包含有[子节点](/zh-CN/docs/DOM/Node.childNodes).
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>element.hasChildNodes()</code></pre>
+```
+element.hasChildNodes()
+```
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<p>下面的例子演示了：如果 id 为 foo 的这个元素有子节点，则从 dom 树中删除它的第一个子节点。</p>
+下面的例子演示了：如果 id 为 foo 的这个元素有子节点，则从 dom 树中删除它的第一个子节点。
 
-<pre class="brush:js; highlight:[3];">var foo = document.getElementById("foo");
+```js
+var foo = document.getElementById("foo");
 
 if ( foo.hasChildNodes() ) {
   foo.removeChild( foo.childNodes[0] );
-}</pre>
+}
+```
 
-<div class="note">
-<p>注意：<code>Node.hasChildNodes</code>是个方法，而不是普通属性，使用时必须加括号才能调用。</p>
-</div>
+> **备注：** `Node.hasChildNodes`是个方法，而不是普通属性，使用时必须加括号才能调用。
 
-<h2 id="Specification">总结</h2>
+## 总结
 
-<p>有三种方法可以判断当前节点是否有子节点。</p>
+有三种方法可以判断当前节点是否有子节点。
 
-<ul>
- <li>node.firstChild !== null</li>
- <li>node.childNodes.length &gt; 0</li>
- <li>node.hasChildNodes()</li>
-</ul>
+- node.firstChild !== null
+- node.childNodes.length > 0
+- node.hasChildNodes()
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<ul>
- <li><a href="https://dom.spec.whatwg.org/#dom-node-haschildnodes">WHATWG: hasChildNodes</a></li>
- <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187">hasChildNodes</a></li>
-</ul>
+- [WHATWG: hasChildNodes](https://dom.spec.whatwg.org/#dom-node-haschildnodes)
+- [hasChildNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Node.childNodes")}}</li>
- <li>{{domxref("Node.hasAttributes")}}</li>
-</ul>
+- {{domxref("Node.childNodes")}}
+- {{domxref("Node.hasAttributes")}}

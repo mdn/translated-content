@@ -10,9 +10,10 @@ slug: Web/API/MediaQueryList
 
 ## 方法概述
 
-| `void addListener(MediaQueryListListener listener);`    |
-| ------------------------------------------------------- |
-| `void removeListener(MediaQueryListListener listener);` |
+```
+void addListener(MediaQueryListListener listener);
+void removeListener(MediaQueryListListener listener);
+```
 
 ## 属性
 

@@ -2,43 +2,39 @@
 title: Clients.get()
 slug: Web/API/Clients/get
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("Clients")}} 接口的 <code><strong>get</strong></code><strong><code>()</code></strong> 方法 获取给定 <code>id</code> 匹配的 Service Worker client，并在 {{jsxref("Promise")}} 中返回它。</p>
+{{domxref("Clients")}} 接口的 **`get()`** 方法 获取给定 `id` 匹配的 Service Worker client，并在 {{jsxref("Promise")}} 中返回它。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">self.clients.get(id).then(function(client) {
+```js
+self.clients.get(id).then(function(client) {
   // do something with your returned client
-});</pre>
+});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>id</code></dt>
- <dd>一个 {{domxref("DOMString")}} ，表示您想要获取的 client id.</dd>
-</dl>
+- `id`
+  - : 一个 {{domxref("DOMString")}} ，表示您想要获取的 client id.
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>一个 resolve 为 {{domxref("Client")}} 对象的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+一个 resolve 为 {{domxref("Client")}} 对象的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">self.clients.get(options).then(function(client) {
+```js
+self.clients.get(options).then(function(client) {
   self.clients.openWindow(client.url);
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.Clients.get")}}</p>
-</div>
-
-<p> </p>
+{{Compat("api.Clients.get")}}

@@ -2,33 +2,32 @@
 title: AudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>createChannelSplitter()</code> method of the {{ domxref("AudioContext") }} Interface is used to create a {{domxref("ChannelSplitterNode")}}, which is used to access the individual channels of an audio stream and process them separately.</p>
-</div>
+The `createChannelSplitter()` method of the {{ domxref("AudioContext") }} Interface is used to create a {{domxref("ChannelSplitterNode")}}, which is used to access the individual channels of an audio stream and process them separately.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var splitter = audioCtx.createChannelSplitter(2);</pre>
+```js
+var audioCtx = new AudioContext();
+var splitter = audioCtx.createChannelSplitter(2);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>numberOfOutputs</dt>
- <dd>你期待将输入音频分割成的声道道数目; 当不传入参数时，默认为 6</dd>
-</dl>
+- numberOfOutputs
+  - : 你期待将输入音频分割成的声道道数目; 当不传入参数时，默认为 6
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>一个 {{domxref("ChannelSplitterNode")}}.</p>
+一个 {{domxref("ChannelSplitterNode")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>下面这个简单的例子告诉你怎样分割一个双声道音轨 (或者说一段音乐), 以及对于左右声道不同的处理。要使用它们，你需要用到{{domxref("AudioNode.connect(AudioNode)") }}方法的第二个和第三个参数，他们会指定链接声道源的序号和链接到的声道序号。</p>
+下面这个简单的例子告诉你怎样分割一个双声道音轨 (或者说一段音乐), 以及对于左右声道不同的处理。要使用它们，你需要用到{{domxref("AudioNode.connect(AudioNode)") }}方法的第二个和第三个参数，他们会指定链接声道源的序号和链接到的声道序号。
 
-<pre class="brush: js; highlight[5,12,17]">var ac = new AudioContext();
+```js
+var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
  var source = ac.createBufferSource();
  source.buffer = data;
@@ -52,18 +51,17 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
  // MediaStream we can use to pipe the Web Audio graph to WebRTC,
  // MediaRecorder, etc.
  merger.connect(dest);
-});</pre>
+});
+```
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BaseAudioContext.createChannelSplitter")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

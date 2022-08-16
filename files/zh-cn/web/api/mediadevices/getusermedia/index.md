@@ -2,136 +2,150 @@
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<div>
-<p><code><strong>MediaDevices.getUserMedia()</strong></code> 会提示用户给予使用媒体输入的许可，媒体输入会产生一个{{domxref("MediaStream")}}，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D 转换器等等），也可能是其它轨道类型。</p>
+**`MediaDevices.getUserMedia()`** 会提示用户给予使用媒体输入的许可，媒体输入会产生一个{{domxref("MediaStream")}}，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D 转换器等等），也可能是其它轨道类型。
 
-<p>它返回一个 {{jsxref("Promise")}} 对象，成功后会<code>resolve</code>回调一个 {{domxref("MediaStream")}} 对象。若用户拒绝了使用权限，或者需要的媒体源不可用，<code>promise</code>会<code>reject</code>回调一个  <code>PermissionDeniedError</code> 或者 <code>NotFoundError</code> 。</p>
-</div>
+它返回一个 {{jsxref("Promise")}} 对象，成功后会`resolve`回调一个 {{domxref("MediaStream")}} 对象。若用户拒绝了使用权限，或者需要的媒体源不可用，`promise`会`reject`回调一个 `PermissionDeniedError` 或者 `NotFoundError` 。
 
-<div class="note">
-<p>返回的 promise 对象可能既不会 resolve 也不会 reject，因为用户不是必须选择允许或拒绝。</p>
-</div>
+> **备注：** 返回的 promise 对象可能既不会 resolve 也不会 reject，因为用户不是必须选择允许或拒绝。
 
-<p>通常你可以使用 {{domxref("navigator.mediaDevices")}} 来获取 {{domxref("MediaDevices")}} ，例如：</p>
+通常你可以使用 {{domxref("navigator.mediaDevices")}} 来获取 {{domxref("MediaDevices")}} ，例如：
 
-<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia(constraints)
+```js
+navigator.mediaDevices.getUserMedia(constraints)
 .then(function(stream) {
   /* 使用这个 stream stream */
 })
 .catch(function(err) {
   /* 处理 error */
-});</pre>
+});
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js notranslate">var <em>promise</em> = navigator.mediaDevices.getUserMedia(<em>constraints</em>);</pre>
+```js
+var promise = navigator.mediaDevices.getUserMedia(constraints);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>constraints</code></dt>
- <dd>
- <p>作为一个{{domxref("MediaStreamConstraints")}} 对象，指定了请求的媒体类型和相对应的参数。</p>
+- `constraints`
 
- <p>constraints 参数是一个包含了<code>video</code> 和 <code>audio</code>两个成员的<code>MediaStreamConstraints</code> 对象，用于说明请求的媒体类型。必须至少一个类型或者两个同时可以被指定。如果浏览器无法找到指定的媒体类型或者无法满足相对应的参数要求，那么返回的 Promise 对象就会处于 rejected［失败］状态，<code>NotFoundError</code>作为 rejected［失败］回调的参数。 </p>
+  - : 作为一个{{domxref("MediaStreamConstraints")}} 对象，指定了请求的媒体类型和相对应的参数。
 
- <p>以下同时请求不带任何参数的音频和视频：</p>
+    constraints 参数是一个包含了`video` 和 `audio`两个成员的`MediaStreamConstraints` 对象，用于说明请求的媒体类型。必须至少一个类型或者两个同时可以被指定。如果浏览器无法找到指定的媒体类型或者无法满足相对应的参数要求，那么返回的 Promise 对象就会处于 rejected［失败］状态，`NotFoundError`作为 rejected［失败］回调的参数。
 
- <pre class="brush: js notranslate">{ audio: true, video: true }</pre>
+    以下同时请求不带任何参数的音频和视频：
 
- <p>如果为某种媒体类型设置了 <code>true</code> ，得到的结果的流中就需要有此种类型的轨道。如果其中一个由于某种原因无法获得，<code>getUserMedia()</code> 将会产生一个错误。</p>
+    ```js
+    { audio: true, video: true }
+    ```
 
- <p>当由于隐私保护的原因，无法访问用户的摄像头和麦克风信息时，应用可以使用额外的 constraints 参数请求它所需要或者想要的摄像头和麦克风能力。下面演示了应用想要使用 1280x720 的摄像头分辨率：</p>
+    如果为某种媒体类型设置了 `true` ，得到的结果的流中就需要有此种类型的轨道。如果其中一个由于某种原因无法获得，`getUserMedia()` 将会产生一个错误。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: { width: 1280, height: 720 }
-}</pre>
+    当由于隐私保护的原因，无法访问用户的摄像头和麦克风信息时，应用可以使用额外的 constraints 参数请求它所需要或者想要的摄像头和麦克风能力。下面演示了应用想要使用 1280x720 的摄像头分辨率：
 
- <p>浏览器会试着满足这个请求参数，但是如果无法准确满足此请求中参数要求或者用户选择覆盖了请求中的参数时，有可能返回其它的分辨率。</p>
+    ```js
+    {
+      audio: true,
+      video: { width: 1280, height: 720 }
+    }
+    ```
 
- <p>强制要求获取特定的尺寸时，可以使用关键字<code>min</code>、<code>max</code> 或者 <code>exact</code>（就是 min == max）。以下参数表示要求获取最低为 1280x720 的分辨率。</p>
+    浏览器会试着满足这个请求参数，但是如果无法准确满足此请求中参数要求或者用户选择覆盖了请求中的参数时，有可能返回其它的分辨率。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: {
-    width: { min: 1280 },
-    height: { min: 720 }
-  }
-}</pre>
+    强制要求获取特定的尺寸时，可以使用关键字`min`、`max` 或者 `exact`（就是 min == max）。以下参数表示要求获取最低为 1280x720 的分辨率。
 
- <p>如果摄像头不支持请求的或者更高的分辨率，返回的 Promise 会处于 rejected 状态，<code>NotFoundError 作为</code>rejected 回调的参数，而且用户将不会得到要求授权的提示。</p>
+    ```js
+    {
+      audio: true,
+      video: {
+        width: { min: 1280 },
+        height: { min: 720 }
+      }
+    }
+    ```
 
- <p>造成不同表现的原因是，相对于简单的请求值和<code>ideal</code>关键字而言，关键字<code>min</code>, <code>max</code>, 和 <code>exact</code>有着内在关联的强制性，请看一个更详细的例子：</p>
+    如果摄像头不支持请求的或者更高的分辨率，返回的 Promise 会处于 rejected 状态，`NotFoundError 作为`rejected 回调的参数，而且用户将不会得到要求授权的提示。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: {
-    width: { min: 1024, ideal: 1280, max: 1920 },
-    height: { min: 776, ideal: 720, max: 1080 }
-  }
-}</pre>
+    造成不同表现的原因是，相对于简单的请求值和`ideal`关键字而言，关键字`min`, `max`, 和 `exact`有着内在关联的强制性，请看一个更详细的例子：
 
- <p>当请求包含一个 ideal（应用最理想的）值时，这个值有着更高的权重，意味着浏览器会先尝试找到最接近指定的理想值的设定或者摄像头（如果设备拥有不止一个摄像头）。</p>
+    ```js
+    {
+      audio: true,
+      video: {
+        width: { min: 1024, ideal: 1280, max: 1920 },
+        height: { min: 776, ideal: 720, max: 1080 }
+      }
+    }
+    ```
 
- <p>简单的请求值也可以理解为是应用理想的值，因此我们的第一个指定分辨率的请求也可以写成如下：</p>
+    当请求包含一个 ideal（应用最理想的）值时，这个值有着更高的权重，意味着浏览器会先尝试找到最接近指定的理想值的设定或者摄像头（如果设备拥有不止一个摄像头）。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: {
-    width: { ideal: 1280 },
-    height: { ideal: 720 }
-  }
-}</pre>
+    简单的请求值也可以理解为是应用理想的值，因此我们的第一个指定分辨率的请求也可以写成如下：
 
- <p>并不是所有的 constraints 都是数字。例如，在移动设备上面，如下的例子表示优先使用前置摄像头（如果有的话）：</p>
+    ```js
+    {
+      audio: true,
+      video: {
+        width: { ideal: 1280 },
+        height: { ideal: 720 }
+      }
+    }
+    ```
 
- <pre class="brush: js notranslate">{ audio: true, video: { facingMode: "user" } }</pre>
+    并不是所有的 constraints 都是数字。例如，在移动设备上面，如下的例子表示优先使用前置摄像头（如果有的话）：
 
- <p>强制使用后置摄像头，请用：</p>
+    ```js
+    { audio: true, video: { facingMode: "user" } }
+    ```
 
- <pre class="brush: js notranslate">{ audio: true, video: { facingMode: { exact: "environment" } } }</pre>
- </dd>
-</dl>
+    强制使用后置摄像头，请用：
 
-<h3 id="返回值">返回值</h3>
+    ```js
+    { audio: true, video: { facingMode: { exact: "environment" } } }
+    ```
 
-<p>返回一个 {{jsxref("Promise")}}，这个 Promise 成功后的回调函数带一个 {{domxref("MediaStream")}} 对象作为其参数。</p>
+### 返回值
 
-<h3 id="异常">异常</h3>
+返回一个 {{jsxref("Promise")}}，这个 Promise 成功后的回调函数带一个 {{domxref("MediaStream")}} 对象作为其参数。
 
-<p>返回一个失败状态的 Promise，这个 Promise 失败后的回调函数带一个{{domxref("DOMException")}}对象作为其参数。 可能的异常有：</p>
+### 异常
 
-<dl>
- <dt><code>AbortError</code>［中止错误］</dt>
- <dd>尽管用户和操作系统都授予了访问设备硬件的权利，而且未出现可能抛出<code>NotReadableError</code>异常的硬件问题，但仍然有一些问题的出现导致了设备无法被使用。</dd>
- <dt><code>NotAllowedError</code>［拒绝错误］</dt>
- <dd>用户拒绝了当前的浏览器实例的访问请求；或者用户拒绝了当前会话的访问；或者用户在全局范围内拒绝了所有媒体访问请求。
- <div class="note">较旧版本的规范使用了<code>SecurityError</code>，但在新版本当中<code>SecurityError</code>被赋予了新的意义。</div>
- </dd>
- <dt><code>NotFoundError</code>［找不到错误］</dt>
- <dd>找不到满足请求参数的媒体类型。</dd>
- <dt><code>NotReadableError</code>［无法读取错误］</dt>
- <dd>尽管用户已经授权使用相应的设备，操作系统上某个硬件、浏览器或者网页层面发生的错误导致设备无法被访问。</dd>
- <dt><code>OverconstrainedError</code>［无法满足要求错误］</dt>
- <dd>指定的要求无法被设备满足，此异常是一个类型为<code>OverconstrainedError</code>的对象，拥有一个<code>constraint</code>属性，这个属性包含了当前无法被满足的<code>constraint</code>对象，还拥有一个<code>message</code>属性，包含了阅读友好的字符串用来说明情况。
- <div class="note">因为这个异常甚至可以在用户尚未授权使用当前设备的情况下抛出，所以应当可以当作一个探测设备能力属性的手段［fingerprinting surface］。</div>
- </dd>
- <dt><code>SecurityError</code>［安全错误］</dt>
- <dd>在<code>getUserMedia()</code> 被调用的 {{domxref("Document")}} 上面，使用设备媒体被禁止。这个机制是否开启或者关闭取决于单个用户的偏好设置。</dd>
- <dt><code>TypeError</code>［类型错误］</dt>
- <dd>constraints 对象未设置［空］，或者都被设置为<code>false</code>。</dd>
-</dl>
+返回一个失败状态的 Promise，这个 Promise 失败后的回调函数带一个{{domxref("DOMException")}}对象作为其参数。 可能的异常有：
 
-<h2 id="示例">示例</h2>
+- `AbortError`［中止错误］
+  - : 尽管用户和操作系统都授予了访问设备硬件的权利，而且未出现可能抛出`NotReadableError`异常的硬件问题，但仍然有一些问题的出现导致了设备无法被使用。
+- `NotAllowedError`［拒绝错误］
 
-<h3 id="宽度和高度">宽度和高度</h3>
+  - : 用户拒绝了当前的浏览器实例的访问请求；或者用户拒绝了当前会话的访问；或者用户在全局范围内拒绝了所有媒体访问请求。
 
-<p>这个例子设置了摄像头分辨率，并把结果的 {{domxref("MediaStream")}} 分配给了一个 video 元素。 </p>
+    > **备注：** 较旧版本的规范使用了`SecurityError`，但在新版本当中`SecurityError`被赋予了新的意义。
 
-<pre class="brush: js notranslate">// 想要获取一个最接近 1280x720 的相机分辨率
+- `NotFoundError`［找不到错误］
+  - : 找不到满足请求参数的媒体类型。
+- `NotReadableError`［无法读取错误］
+  - : 尽管用户已经授权使用相应的设备，操作系统上某个硬件、浏览器或者网页层面发生的错误导致设备无法被访问。
+- `OverconstrainedError`［无法满足要求错误］
+
+  - : 指定的要求无法被设备满足，此异常是一个类型为`OverconstrainedError`的对象，拥有一个`constraint`属性，这个属性包含了当前无法被满足的`constraint`对象，还拥有一个`message`属性，包含了阅读友好的字符串用来说明情况。
+
+    > **备注：** 因为这个异常甚至可以在用户尚未授权使用当前设备的情况下抛出，所以应当可以当作一个探测设备能力属性的手段［fingerprinting surface］。
+
+- `SecurityError`［安全错误］
+  - : 在`getUserMedia()` 被调用的 {{domxref("Document")}} 上面，使用设备媒体被禁止。这个机制是否开启或者关闭取决于单个用户的偏好设置。
+- `TypeError`［类型错误］
+  - : constraints 对象未设置［空］，或者都被设置为`false`。
+
+## 示例
+
+### 宽度和高度
+
+这个例子设置了摄像头分辨率，并把结果的 {{domxref("MediaStream")}} 分配给了一个 video 元素。
+
+```js
+// 想要获取一个最接近 1280x720 的相机分辨率
 var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
 navigator.mediaDevices.getUserMedia(constraints)
@@ -142,13 +156,15 @@ navigator.mediaDevices.getUserMedia(constraints)
     video.play();
   };
 })
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // 总是在最后检查错误</pre>
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // 总是在最后检查错误
+```
 
-<h3 id="在旧的浏览器中使用新的API">在旧的浏览器中使用新的 API</h3>
+### 在旧的浏览器中使用新的 API
 
-<p>这是一个使用 <code>navigator.mediaDevices.getUserMedia()</code>的例子，带一个 polyfill 以适应旧的浏览器。 要注意的是这个 polyfill 并不能修正一些约束语法上的遗留差异，这表示约束在某些浏览器上可能不会很好地运行。推荐使用处理了约束的 <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill 来替代。</p>
+这是一个使用 `navigator.mediaDevices.getUserMedia()`的例子，带一个 polyfill 以适应旧的浏览器。 要注意的是这个 polyfill 并不能修正一些约束语法上的遗留差异，这表示约束在某些浏览器上可能不会很好地运行。推荐使用处理了约束的 [adapter.js](https://github.com/webrtc/adapter) polyfill 来替代。
 
-<pre class="brush: js notranslate">// 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
+```js
+// 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
 if (navigator.mediaDevices === undefined) {
   navigator.mediaDevices = {};
 }
@@ -190,54 +206,56 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: true })
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<h3 id="帧率">帧率</h3>
+### 帧率
 
-<p>在某些情况下，比如 WebRTC 上使用受限带宽传输时，低帧率可能更适宜。</p>
+在某些情况下，比如 WebRTC 上使用受限带宽传输时，低帧率可能更适宜。
 
-<pre class="brush: js notranslate">var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
-</pre>
+```js
+var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+```
 
-<h3 id="前置或者后置摄像头">前置或者后置摄像头</h3>
+### 前置或者后置摄像头
 
-<p>在移动设备（电话）上</p>
+在移动设备（电话）上
 
-<pre class="brush: js notranslate">var front = false;
+```js
+var front = false;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
 var constraints = { video: { facingMode: (front? "user" : "environment") } };
-</pre>
+```
 
-<h2 id="权限">权限</h2>
+## 权限
 
-<p>在一个可安装的 app（如<a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox OS app</a>）中使用 <code>getUserMedia()</code> ，你需要在声明文件中指定以下的权限：</p>
+在一个可安装的 app（如[Firefox OS app](/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
 
-<pre class="brush: js notranslate">"permissions": {
+```js
+"permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
   },
   "video-capture": {
     "description": "Required to capture video using getUserMedia()"
   }
-}</pre>
+}
+```
 
-<p>参见 <a href="/en-US/Apps/Developing/App_permissions#audio-capture">permission: audio-capture</a> 和 <a href="/en-US/Apps/Developing/App_permissions#video-capture">permission: video-capture</a> 来获取更多信息。</p>
+参见 [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) 来获取更多信息。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("api.MediaDevices.getUserMedia")}}</div>
+{{Compat("api.MediaDevices.getUserMedia")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>旧的 <a href="/en-US/docs/Web/API/Navigator/getUserMedia">navigator.getUserMedia</a> 遗留 API</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices">navigator.enumerateDevices</a> - 获取用户可用的设备类型和数量</li>
- <li><a href="/en-US/docs/WebRTC">WebRTC</a> - WebRTC API 的介绍页面</li>
- <li><a href="/en-US/docs/WebRTC/MediaStream_API">MediaStream API</a> - 媒体流对象的 API</li>
- <li><a href="/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a> - 一个关于使用 <code>getUserMedia()</code> 拍照而非录视频的教程</li>
-</ul>
+- 旧的 [navigator.getUserMedia](/zh-CN/docs/Web/API/Navigator/getUserMedia) 遗留 API
+- [navigator.enumerateDevices](/zh-CN/docs/Web/API/MediaDevices/enumerateDevices) - 获取用户可用的设备类型和数量
+- [WebRTC](/zh-CN/docs/WebRTC) - WebRTC API 的介绍页面
+- [MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API) - 媒体流对象的 API
+- [Taking webcam photos](/zh-CN/docs/WebRTC/taking_webcam_photos) - 一个关于使用 `getUserMedia()` 拍照而非录视频的教程

@@ -2,47 +2,42 @@
 title: 组合 Compositing
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
-<div>
-<p>在<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">之前的例子</a>里面，我们总是将一个图形画在另一个之上，对于其他更多的情况，仅仅这样是远远不够的。比如，对合成的图形来说，绘制顺序会有限制。不过，我们可以利用 <code>globalCompositeOperation</code> 属性来改变这种状况。此外，<code>clip</code>属性允许我们隐藏不想看到的部分图形。</p>
-</div>
+在[之前的例子](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations)里面，我们总是将一个图形画在另一个之上，对于其他更多的情况，仅仅这样是远远不够的。比如，对合成的图形来说，绘制顺序会有限制。不过，我们可以利用 `globalCompositeOperation` 属性来改变这种状况。此外，`clip`属性允许我们隐藏不想看到的部分图形。
 
-<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+## `globalCompositeOperation`
 
-<p>我们不仅可以在已有图形后面再画新图形，还可以用来遮盖指定区域，清除画布中的某些部分（清除区域不仅限于矩形，像{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}方法做的那样）以及更多其他操作。</p>
+我们不仅可以在已有图形后面再画新图形，还可以用来遮盖指定区域，清除画布中的某些部分（清除区域不仅限于矩形，像{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}方法做的那样）以及更多其他操作。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}</dt>
- <dd>这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识 12 种遮盖方式的字符串。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
+  - : 这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识 12 种遮盖方式的字符串。
 
-<p>查看下面<a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example">Compositing 示例</a>的代码。</p>
+查看下面[Compositing 示例](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example)的代码。
 
-<p>{{EmbedLiveSample("合成示例", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
+{{EmbedLiveSample("合成示例", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
-<h2 id="Clipping_paths">裁切路径</h2>
+## 裁切路径
 
-<p><img src="canvas_clipping_path.png">裁切路径和普通的 canvas 图形差不多，不同的是它的作用是遮罩，用来隐藏不需要的部分。如右图所示。红边五角星就是裁切路径，所有在路径以外的部分都不会在 canvas 上绘制出来。</p>
+![](canvas_clipping_path.png)裁切路径和普通的 canvas 图形差不多，不同的是它的作用是遮罩，用来隐藏不需要的部分。如右图所示。红边五角星就是裁切路径，所有在路径以外的部分都不会在 canvas 上绘制出来。
 
-<p>如果和上面介绍的 <code>globalCompositeOperation</code> 属性作一比较，它可以实现与 <code>source-in</code> 和 <code>source-atop</code>差不多的效果。最重要的区别是裁切路径不会在 canvas 上绘制东西，而且它永远不受新图形的影响。这些特性使得它在特定区域里绘制图形时相当好用。</p>
+如果和上面介绍的 `globalCompositeOperation` 属性作一比较，它可以实现与 `source-in` 和 `source-atop`差不多的效果。最重要的区别是裁切路径不会在 canvas 上绘制东西，而且它永远不受新图形的影响。这些特性使得它在特定区域里绘制图形时相当好用。
 
-<p>在 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">绘制图形</a> 一章中，我只介绍了 <code>stroke</code> 和 <code>fill</code> 方法，这里介绍第三个方法<code>clip</code>。</p>
+在 [绘制图形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) 一章中，我只介绍了 `stroke` 和 `fill` 方法，这里介绍第三个方法`clip`。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.clip", "clip()")}}</dt>
- <dd>将当前正在构建的路径转换为当前的裁剪路径。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
+  - : 将当前正在构建的路径转换为当前的裁剪路径。
 
-<p>我们使用 <code>clip()</code>方法来创建一个新的裁切路径。</p>
+我们使用 `clip()`方法来创建一个新的裁切路径。
 
-<p>默认情况下，canvas 有一个与它自身一样大的裁切路径（也就是没有裁切效果）。</p>
+默认情况下，canvas 有一个与它自身一样大的裁切路径（也就是没有裁切效果）。
 
-<h3 id="A_clip_example"><code>clip</code> 的例子</h3>
+### `clip` 的例子
 
-<p>这个例子，我会用一个圆形的裁切路径来限制随机星星的绘制区域。</p>
+这个例子，我会用一个圆形的裁切路径来限制随机星星的绘制区域。
 
-<pre class="brush: js; highlight[9]">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.fillRect(0,0,150,150);
   ctx.translate(75,75);
@@ -61,7 +56,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
   ctx.fillRect(-75,-75,150,150);
 
   // draw stars
-  for (var j=1;j&lt;50;j++){
+  for (var j=1;j<50;j++){
     ctx.save();
     ctx.fillStyle = '#fff';
     ctx.translate(75-Math.floor(Math.random()*150),
@@ -75,7 +70,7 @@ function drawStar(ctx,r){
   ctx.save();
   ctx.beginPath()
   ctx.moveTo(r,0);
-  for (var i=0;i&lt;9;i++){
+  for (var i=0;i<9;i++){
     ctx.rotate(Math.PI/5);
     if(i%2 == 0) {
       ctx.lineTo((r/0.525731)*0.200811,0);
@@ -87,18 +82,20 @@ function drawStar(ctx,r){
   ctx.fill();
   ctx.restore();
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>首先，我画了一个与 canvas 一样大小的黑色方形作为背景，然后移动原点至中心点。然后用 <code>clip</code> 方法创建一个弧形的裁切路径。裁切路径也属于 canvas 状态的一部分，可以被保存起来。如果我们在创建新裁切路径时想保留原来的裁切路径，我们需要做的就是保存一下 canvas 的状态。</p>
+首先，我画了一个与 canvas 一样大小的黑色方形作为背景，然后移动原点至中心点。然后用 `clip` 方法创建一个弧形的裁切路径。裁切路径也属于 canvas 状态的一部分，可以被保存起来。如果我们在创建新裁切路径时想保留原来的裁切路径，我们需要做的就是保存一下 canvas 的状态。
 
-<p>裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出 50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。</p>
+裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出 50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。
 
-<p>{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}</p>
+{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

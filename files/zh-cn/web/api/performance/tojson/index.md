@@ -2,43 +2,35 @@
 title: Performance.toJSON()
 slug: Web/API/Performance/toJSON
 ---
-<div>{{APIRef("High Resolution Timing")}}</div>
+{{APIRef("High Resolution Timing")}}{{domxref("Performance")}} 的 **`toJSON() 方法是一个标准的串行器：它返回一个由 performance 对象各个属性组成的 JSON`**
 
-<div>{{domxref("Performance")}} 的 <strong><code>toJSON() 方法是一个标准的串行器：它返回一个由 performance 对象各个属性组成的 JSON</code></strong></div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+myPerf = performance.toJSON()
+```
 
-<pre class="syntaxbox">myPerf = performance.toJSON()
-</pre>
+### Arguments
 
-<h3 id="Arguments">Arguments</h3>
+无
 
-<p>无</p>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+- myPerf
+  - : {{domxref("Performance")}} 对象序列化之后转化成的 JSON 对象。
 
-<dl>
- <dt>myPerf</dt>
- <dd>{{domxref("Performance")}} 对象序列化之后转化成的 JSON 对象。</dd>
-</dl>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var js;
+```js
+var js;
 js = window.performance.toJSON();
 console.log("json = " + JSON.stringify(js));
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
-
-
-<p>{{Compat("api.Performance.toJSON")}}</p>
-</div>
-</div>
+{{Compat("api.Performance.toJSON")}}

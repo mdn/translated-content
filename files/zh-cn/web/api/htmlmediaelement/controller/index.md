@@ -2,33 +2,34 @@
 title: HTMLMediaElement.controller
 slug: Web/API/HTMLMediaElement/controller
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>TMLMediaElement.controller</code></strong> 属性表示对应媒体元素的控制器。</p>
+**`TMLMediaElement.controller`** 属性表示对应媒体元素的控制器。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js">...</pre>
+```js
+...
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>属性的值是一个 {{domxref("MediaController")}} 对象，如果没有对应的媒体元素值为<code>null</code>，默认值为<code>null</code>。 </p>
+属性的值是一个 {{domxref("MediaController")}} 对象，如果没有对应的媒体元素值为`null`，默认值为`null`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">...
-</pre>
+```js
+...
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>在 2016 年，整个媒体控制器功能<a href="https://github.com/w3c/html/issues/246">从 HTML 规范中移除</a>。其不再有望成为标准。</p>
+在 2016 年，整个媒体控制器功能[从 HTML 规范中移除](https://github.com/w3c/html/issues/246)。其不再有望成为标准。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">参阅</h2>
+## 参阅
 
-<ul>
- <li>定义它的接口，{{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- 定义它的接口，{{domxref("HTMLMediaElement")}}.

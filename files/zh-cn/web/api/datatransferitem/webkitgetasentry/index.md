@@ -79,7 +79,7 @@ body {
 
 首先，让我们看一下递归`scanFiles()`函数。该函数将[`FileSystemEntry`](/zh-CN/docs/Web/API/FileSystemEntry)表示要扫描和处理的文件系统中的条目（`item`参数）和插入内容列表（`container`参数）的元素作为输入。
 
-> **备注：** 请注意，要读取目录中的所有文件，`readEntries`需要重复调 ​​ 用，直到它返回一个空数组。在基于 Chromium 的浏览器中，以下示例仅返回最多 100 个条目。
+> **备注：** 要读取目录中的所有文件，`readEntries`需要重复调用，直到它返回一个空数组。在基于 Chromium 的浏览器中，以下示例仅返回最多 100 个条目。
 
 ```js
 let dropzone = document.getElementById("dropzone");

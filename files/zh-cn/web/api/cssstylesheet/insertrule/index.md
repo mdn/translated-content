@@ -2,64 +2,58 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 ---
-<div>
-<p>{{ APIRef("CSSOM") }}</p>
-</div>
+{{ APIRef("CSSOM") }}
 
-<p><strong><code>CSSStyleSheet.insertRule()</code> </strong>方法用来给当前样式表插入新的样式规则（<a href="/zh-CN/docs/Web/API/CSSRule">CSS rule</a>），并且包含一些<a href="/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Restrictions">限制</a>。</p>
+**`CSSStyleSheet.insertRule()` **方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Restrictions)。
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>尽管 <code>insertRule()</code> 是 {{domxref("CSSStyleSheet")}} 的一个方法，但它实际插入的地方是 <code>{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules</code> 的内部 {{domxref("CSSRuleList")}}。</p>
-</div>
+> **备注：** 尽管 `insertRule()` 是 {{domxref("CSSStyleSheet")}} 的一个方法，但它实际插入的地方是 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 的内部 {{domxref("CSSRuleList")}}。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>stylesheet</var>.insertRule(<var>rule [</var>, <var>index]</var>)</pre>
+```
+stylesheet.insertRule(rule [, index])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>rule</code></dt>
- <dd>
- <p>一个包含了将要插入的规则的 {{domxref("DOMString")}}。规则字符串必须包含的内容取决于它的类型：</p>
+- `rule`
 
- <ul>
-  <li><strong><a href="/en-US/docs/Web/CSS/Syntax#CSS_statements">rule-sets</a> 类型</strong>（普通带有选择器的规则）<strong>，</strong>需要<a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">选择器</a>和样式声明；</li>
-  <li><strong><a href="/en-US/docs/Web/CSS/At-rule">at-rules</a> 类型</strong>（以 <code>@</code> 开头的规则，如 <code>@import, @media</code> 等）<strong>，</strong>需要 at-identifier 和规则内容。</li>
- </ul>
- </dd>
- <dt><code>index</code> {{optional_inline}}</dt>
- <dd>一个小于或等于 <code>stylesheet.cssRules.length</code> 的正整数，表示新插入的规则在<code>{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules</code> 中的位置。默认值是 <code>0</code>。（在过去的实现中，这个参数是必需的，详情参见<a href="/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Browser_compatibility">浏览器兼容性</a>。)</dd>
-</dl>
+  - : 一个包含了将要插入的规则的 {{domxref("DOMString")}}。规则字符串必须包含的内容取决于它的类型：
 
-<h3 id="返回值">返回值</h3>
+    - **[rule-sets](/zh-CN/docs/Web/CSS/Syntax#CSS_statements) 类型**（普通带有选择器的规则）**，**需要[选择器](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)和样式声明；
+    - **[at-rules](/zh-CN/docs/Web/CSS/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等）**，**需要 at-identifier 和规则内容。
 
-<p>新插入的规则在当前样式表规则列表中的索引。</p>
+- `index` {{optional_inline}}
+  - : 一个小于或等于 `stylesheet.cssRules.length` 的正整数，表示新插入的规则在`{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。默认值是 `0`。（在过去的实现中，这个参数是必需的，详情参见[浏览器兼容性](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Browser_compatibility)。)
 
-<h3 id="限制">限制</h3>
+### 返回值
 
-<p>CSS 中存在一些直观和不是太直观能感受到的限制规则影响着某些样式规则能否被插入。违反这些规则可能会导致一些 DOM 异常（{{domxref("DOMException")}}）。</p>
+新插入的规则在当前样式表规则列表中的索引。
 
-<ul>
- <li>如果 <code>index</code> &gt; <code>{{domxref("CSSRuleList", "", "", "1")}}.length</code>，该方法会中止并返回一个 <code>IndexSizeError</code> 错误；</li>
- <li>如果 <code>rule</code> 由于一些 CSS 约束而不能被插入到 <code>index</code> <code>0</code>，该方法会中止并返回一个 <code>HierarchyRequestError</code> 错误；</li>
- <li>如果 <code>rule</code> 参数中包含超过一条样式规则，该方法会中止并返回一个 <code>SyntaxError</code>；</li>
- <li>如果尝试在一条普通规则后插入一条 {{cssxref("@import")}} 这种类型的规则，该方法会中止并返回一个 <code>HierarchyRequestError</code> 错误；</li>
- <li>如果 <code>rule</code> 是 {{cssxref("@namespace")}} 并且规则列表中有另外的 <code>@import</code> 和/或 <code>@namespace</code> 规则，该方法中止并返回一个 <code>InvalidStateError</code> 错误；</li>
-</ul>
+### 限制
 
-<h2 id="Example">示例</h2>
+CSS 中存在一些直观和不是太直观能感受到的限制规则影响着某些样式规则能否被插入。违反这些规则可能会导致一些 DOM 异常（{{domxref("DOMException")}}）。
 
-<h3 id="在样式表顶部插入新的规则">在样式表顶部插入新的规则</h3>
+- 如果 `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`，该方法会中止并返回一个 `IndexSizeError` 错误；
+- 如果 `rule` 由于一些 CSS 约束而不能被插入到 `index` `0`，该方法会中止并返回一个 `HierarchyRequestError` 错误；
+- 如果 `rule` 参数中包含超过一条样式规则，该方法会中止并返回一个 `SyntaxError`；
+- 如果尝试在一条普通规则后插入一条 {{cssxref("@import")}} 这种类型的规则，该方法会中止并返回一个 `HierarchyRequestError` 错误；
+- 如果 `rule` 是 {{cssxref("@namespace")}} 并且规则列表中有另外的 `@import` 和/或 `@namespace` 规则，该方法中止并返回一个 `InvalidStateError` 错误；
 
-<p>下面的代码片段将在样式表 <code>myStyle</code> 的顶部插入一条新规则：</p>
+## 示例
 
-<pre class="brush: js"> myStyle.insertRule("#blanc { color: white }", 0);
-</pre>
+### 在样式表顶部插入新的规则
 
-<h3 id="Notes">实现一个添加样式表规则的函数</h3>
+下面的代码片段将在样式表 `myStyle` 的顶部插入一条新规则：
 
-<pre class="brush: js">/**
+```js
+ myStyle.insertRule("#blanc { color: white }", 0);
+```
+
+### 实现一个添加样式表规则的函数
+
+```js
+/**
  * 在文档中添加一条样式表规则（这可能是动态改变 class 名的更好的实现方法，
  * 使得 style 样式内容可以保留在真正的样式表中，以便添加额外的元素到 DOM 中）。
  * 注意这里有必要声明一个数组，因为 ECMAScript 不保证对象按预想的顺序遍历，
@@ -83,13 +77,13 @@ function addStylesheetRules (decls) {
        style.appendChild(document.createTextNode(''));
     }
     var s = document.styleSheets[document.styleSheets.length - 1];
-    for (var i=0, dl = decls.length; i &lt; dl; i++) {
+    for (var i=0, dl = decls.length; i < dl; i++) {
         var j = 1, decl = decls[i], selector = decl[0], rulesStr = '';
         if (Object.prototype.toString.call(decl[1][0]) === '[object Array]') {
             decl = decl[1];
             j = 0;
         }
-        for (var rl=decl.length; j &lt; rl; j++) {
+        for (var rl=decl.length; j < rl; j++) {
             var rule = decl[j];
             rulesStr += rule[0] + ':' + rule[1] + (rule[2] ? ' !important' : '') + ';\n';
         }
@@ -101,13 +95,15 @@ function addStylesheetRules (decls) {
             s.addRule(selector, rulesStr, -1);
         }
     }
-}</pre>
+}
+```
 
-<h2 id="Notes">兼容补丁</h2>
+## 兼容补丁
 
-<p>以下补丁将会在 IE 5-8 中纠正提供给 <code>insertRule()</code> 的参数，使其标准化。to standardize them in Internet Explorer 5–8. 它通过一个函数对 <code>insertRule()</code> 进行补充，使得在参数传递给原生的 <code>insertRule()</code> 函数之前将其中的选择器从规则中分离出来。</p>
+以下补丁将会在 IE 5-8 中纠正提供给 `insertRule()` 的参数，使其标准化。to standardize them in Internet Explorer 5–8. 它通过一个函数对 `insertRule()` 进行补充，使得在参数传递给原生的 `insertRule()` 函数之前将其中的选择器从规则中分离出来。
 
-<pre><code>(function(Sheet_proto){
+```
+(function(Sheet_proto){
   var originalInsertRule = Sheet_proto.insertRule;
 
   if (originalInsertRule.length === 2){ // 2 个托管参数: (selector, rules)
@@ -115,13 +111,13 @@ function addStylesheetRules (decls) {
       // 首先，从规则中分离选择器
       a: for (var i=0, Len=selectorAndRule.length, isEscaped=0, newCharCode=0; i !== Len; ++i) {
         newCharCode = selectorAndRule.charCodeAt(i);
-        if (!isEscaped &amp;&amp; (newCharCode === 123)) { // 123 = "{".charCodeAt(0)
+        if (!isEscaped && (newCharCode === 123)) { // 123 = "{".charCodeAt(0)
           // 其次，找到花括号
           var openBracketPos = i, closeBracketPos = -1;
 
           for (; i !== Len; ++i) {
             newCharCode = selectorAndRule.charCodeAt(i);
-            if (!isEscaped &amp;&amp; (newCharCode === 125)) { // 125 = "}".charCodeAt(0)
+            if (!isEscaped && (newCharCode === 125)) { // 125 = "}".charCodeAt(0)
               closeBracketPos = i;
             }
             isEscaped ^= newCharCode===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
@@ -145,29 +141,27 @@ function addStylesheetRules (decls) {
       return originalInsertRule.call(this, selectorAndRule, "", arguments[2]);
     };
   }
-})(CSSStyleSheet.prototype);</code>
-</pre>
+})(CSSStyleSheet.prototype);
+```
 
-<h2 id="Notes">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="sect1"></h2>
+##
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CSSStyleSheet.insertRule")}}</p>
+{{Compat("api.CSSStyleSheet.insertRule")}}
 
-<h3 id="传统浏览器支持">传统浏览器支持</h3>
+### 传统浏览器支持
 
-<p>为了支持 Internet Explorer 8 和更早版本，请使用: <code>addRule(selector, rule [, index]);</code>。例如：<code>addRule('pre', 'font: 14px verdana'); // add rule at end</code></p>
+为了支持 Internet Explorer 8 和更早版本，请使用: `addRule(selector, rule [, index]);`。例如：`addRule('pre', 'font: 14px verdana'); // add rule at end`
 
-<p>另外注意非标准的 <code><a href="http://www.quirksmode.org/dom/w3c_css.html#change">removeRule()</a></code> 和 <code><a href="http://www.quirksmode.org/dom/w3c_css.html#access">.rules</a></code> 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。</p>
+另外注意非标准的 [`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change) 和 [`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access) 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("CSSStyleSheet.deleteRule")}}</li>
- <li><a href="http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority">Cross-Browser CSS-rules ordering (CSS1)</a></li>
- <li><a href="http://www.quirksmode.org/dom/w3c_css.html">Quirksmode - CSS</a></li>
-</ul>
+- {{domxref("CSSStyleSheet.deleteRule")}}
+- [Cross-Browser CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
+- [Quirksmode - CSS](http://www.quirksmode.org/dom/w3c_css.html)

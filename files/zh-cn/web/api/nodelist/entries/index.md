@@ -2,21 +2,24 @@
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>该方法返回一个迭代协议，允许遍历此对象中包含的所有键/值。该值也是一个{{domxref("Node")}} 对象。</p>
+该方法返回一个迭代协议，允许遍历此对象中包含的所有键/值。该值也是一个{{domxref("Node")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">list.entries();</pre>
+```
+list.entries();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{jsxref("Iteration_protocols","iterator")}}.</p>
+返回一个 {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js; highlight:[12]">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -30,23 +33,23 @@ var list = node.childNodes;
 for(var entry of list.entries()) {
   console.log(entry);
 }
-</pre>
+```
 
-<p>结果如下：</p>
+结果如下：
 
-<pre>Array [ 0, &lt;p&gt; ]
+```
+Array [ 0, <p> ]
 Array [ 1, #text "hey" ]
-Array [ 2, &lt;span&gt; ]</pre>
+Array [ 2, <span> ]
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

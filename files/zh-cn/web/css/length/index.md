@@ -36,13 +36,10 @@ translation_of: Web/CSS/length
 
 - [`cap`]() {{experimental_inline}}
   - : 表示元素字体 {{Cssxref("font")}} 的“上限高度”（cap height，大写字母的标称高度（nominal height））。
-- ## [`ch`]()
+- `ch`
+  - : 这一单位代表元素所用字体 {{Cssxref("font")}} 中“0”这一字形的宽度（"0"，Unicode 字符 U+0030），更准确地说，是“0”这一字形的预测尺寸（advance measure）。
 
-      : 这一单位代表元素所用字体 {{Cssxref("font")}} 中“0”这一字形的宽度（"0"，Unicode 字符 U+0030），更准确地说，是“0”这一字形的预测尺寸（advance measure）。
-
-
-
-      如果无法确定“0”字形的大小，则必须假定其宽为 `0.5em`，高为 `1em`。
+    如果无法确定“0”字形的大小，则必须假定其宽为 `0.5em`，高为 `1em`。
 
 - [`em`]()
   - : 相对长度单位，这个单位表示元素的 {{Cssxref("font-size")}} 的计算值。如果用在{{ Cssxref("font-size") }} 属性本身，它则表示元素*继承*的 `font-size` 值。

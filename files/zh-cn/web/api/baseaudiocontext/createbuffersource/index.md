@@ -2,30 +2,29 @@
 title: AudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><code>createBufferSource()</code> 方法用于创建一个新的{{ domxref("AudioBufferSourceNode") }}接口，该接口可以通过{{ domxref("AudioBuffer") }} 对象来播放音频数据。{{ domxref("AudioBuffer") }}对象可以通过{{domxref("AudioContext.createBuffer")}} 来创建或者通过 {{domxref("AudioContext.decodeAudioData")}}成功解码音轨后获取。</p>
-</div>
+`createBufferSource()` 方法用于创建一个新的{{ domxref("AudioBufferSourceNode") }}接口，该接口可以通过{{ domxref("AudioBuffer") }} 对象来播放音频数据。{{ domxref("AudioBuffer") }}对象可以通过{{domxref("AudioContext.createBuffer")}} 来创建或者通过 {{domxref("AudioContext.decodeAudioData")}}成功解码音轨后获取。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var source = audioCtx.createBufferSource();</pre>
+```js
+var audioCtx = new AudioContext();
+var source = audioCtx.createBufferSource();
+```
 
-<h2 id="返回">返回</h2>
+## 返回
 
-<p>一个{{domxref("AudioBufferSourceNode")}}对象。</p>
+一个{{domxref("AudioBufferSourceNode")}}对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{ domxref("AudioBufferSourceNode") }}来播放它. </p>
+在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{ domxref("AudioBufferSourceNode") }}来播放它.
 
-<div class="note">
-<p><strong>Note</strong>: You can also <a href="http://mdn.github.io/audio-buffer/">run the code live</a>, or <a href="https://github.com/mdn/audio-buffer">view the source</a>.</p>
-</div>
+> **备注：** You can also [run the code live](http://mdn.github.io/audio-buffer/), or [view the source](https://github.com/mdn/audio-buffer).
 
-<pre class="brush: js; highlight[31]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -43,10 +42,10 @@ var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 button.onclick = function() {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
    // This gives us the actual ArrayBuffer that contains the data
    var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
+   for (var i = 0; i < frameCount; i++) {
      // Math.random() is in [0; 1.0]
      // audio needs to be in [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -63,18 +62,17 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.BaseAudioContext.createBufferSource")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

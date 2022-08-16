@@ -2,46 +2,46 @@
 title: indexedDB
 slug: Web/API/indexedDB
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p><strong><code>indexedDB</code></strong> 是 <code>WindowOrWorkerGlobalScope</code> 的一个只读属性，它集成了为应用程序提供异步访问索引数据库的功能的机制。.</p>
+**`indexedDB`** 是 `WindowOrWorkerGlobalScope` 的一个只读属性，它集成了为应用程序提供异步访问索引数据库的功能的机制。.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var IDBFactory = self.indexedDB;</pre>
+```
+var IDBFactory = self.indexedDB;
+```
 
-<div class="twocolumns">
-<h2 id="值">值</h2>
-</div>
+## 值
 
-<p>一个 {{domxref("IDBFactory")}} 对象。</p>
+一个 {{domxref("IDBFactory")}} 对象。
 
-<p>示例</p>
+示例
 
-<pre class="brush: js; highlight:[3]">var db;
+```js
+var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open('toDoList');
  DBOpenRequest.onsuccess = function(e) {
    db = DBOpenRequest.result;
  }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.indexedDB")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

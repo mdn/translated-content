@@ -2,77 +2,67 @@
 title: GainNode
 slug: Web/API/GainNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><strong><code>GainNode</code></strong><strong> </strong>接口表示音量的变化。它是一个{{domxref("AudioNode")}}音频处理模块，在输出前使用给定<em>增益</em>应用到输入。一个 <code>GainNode</code><strong> </strong>总是只有一个输入和一个输出，两者拥有同样数量的声道。</p>
+**`GainNode`** 接口表示音量的变化。它是一个{{domxref("AudioNode")}}音频处理模块，在输出前使用给定*增益*应用到输入。一个 **`GainNode`** 总是只有一个输入和一个输出，两者拥有同样数量的声道。
 
-<p>增益是一个无单位的值，会对所有输入声道的音频进行相应的增加。如果进行了修改，则会立即应用新增益，从而在结果音频中产生奇怪的“咔嗒”声。为了防止这种情况发生，请不要直接更改值，而应在{{domxref("AudioParam")}}接口上使用指数插值方法。</p>
-</div>
+增益是一个无单位的值，会对所有输入声道的音频进行相应的增加。如果进行了修改，则会立即应用新增益，从而在结果音频中产生奇怪的“咔嗒”声。为了防止这种情况发生，请不要直接更改值，而应在{{domxref("AudioParam")}}接口上使用指数插值方法。
 
-<p><img alt="The GainNode is increasing the gain of the output." src="webaudiogainnode.png"></p>
+![The GainNode is increasing the gain of the output.](webaudiogainnode.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code> (not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code> (not used in the default count mode)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
+- {{domxref("GainNode.GainNode", "GainNode()")}}
+  - : 创建`GainNode`对象的新实例。不应手动创建增益节点；而应该使用{{domxref("AudioContext.createGain()")}}方法。
 
+## 属性
 
-<dl>
- <dt>{{domxref("GainNode.GainNode", "GainNode()")}}</dt>
- <dd>创建<code>GainNode</code>对象的新实例。不应手动创建增益节点；而应该使用{{domxref("AudioContext.createGain()")}}方法。</dd>
-</dl>
+_从其父类继承属性{{domxref("AudioNode")}}。_
 
-<h2 id="属性">属性</h2>
+- {{domxref("GainNode.gain")}} {{readonlyinline}}
+  - : 是一个[a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate){{domxref("AudioParam")}}表示应用的增益量。必须设置{{domxref("AudioParam.value")}}或者使用`AudioParam`的方法改变增益效果。
 
-<p><em>从其父类继承属性{{domxref("AudioNode")}}。</em></p>
+## 方法
 
-<dl>
- <dt>{{domxref("GainNode.gain")}} {{readonlyinline}}</dt>
- <dd>是一个<a href="/zh-CN/docs/Web/API/AudioParam#a-rate">a-rate</a>{{domxref("AudioParam")}}表示应用的增益量。必须设置{{domxref("AudioParam.value")}}或者使用<code>AudioParam</code>的方法改变增益效果。</dd>
-</dl>
+_无指定方法；所有方法继承自父类{{domxref("AudioNode")}}_.
 
-<h2 id="方法">方法</h2>
+## 示例
 
-<p><em>无指定方法；所有方法继承自父类{{domxref("AudioNode")}}</em>.</p>
+{{page("/zh-CN/docs/Web/API/AudioContext.createGain","Example")}}
 
-<h2 id="示例">示例</h2>
-
-<p>{{page("/zh-CN/docs/Web/API/AudioContext.createGain","Example")}}</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.GainNode")}}</p>
+{{Compat("api.GainNode")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">使用 Web 音频 API</a></li>
-</ul>
+- [使用 Web 音频 API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

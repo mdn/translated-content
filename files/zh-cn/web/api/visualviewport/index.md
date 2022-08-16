@@ -2,73 +2,70 @@
 title: VisualViewport
 slug: Web/API/VisualViewport
 ---
-<p>{{SeeCompatTable}}{{APIRef("Visual Viewport")}}</p>
+{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 
-<p> <a href="/zh-CN/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> 提供了当前页面的视觉视口接口，即 <strong><code>VisualViewport</code></strong> 。对于每个页面容器来说（如 iframe），都存在有一个独立的 window 对象。每个页面容器的 window 对象都有一个独立的 <code>VisualViewport</code> 属性。</p>
+[Visual Viewport API](/zh-CN/docs/Web/API/Visual_Viewport_API) 提供了当前页面的视觉视口接口，即 **`VisualViewport`** 。对于每个页面容器来说（如 iframe），都存在有一个独立的 window 对象。每个页面容器的 window 对象都有一个独立的 `VisualViewport` 属性。
 
-<p>你可以使用 {{domxref("Window.visualViewport")}} 获得对应 window 的视觉视口 API。</p>
+你可以使用 {{domxref("Window.visualViewport")}} 获得对应 window 的视觉视口 API。
 
-<div class="note">
-<p><strong>注意</strong>：与布局视口（layout viewport）不同的是：只有最上层的 window 才有视觉视口（visual viewport）这一概念。因此只有最上层 window 的 <code>VisualViewport</code> 属性才是有效的，其他层的视觉视口属性可看作是布局视口属性的别名。比如，对于一个 {{htmlelement("iframe")}} ，其对应的视觉视口属性 {{domxref("VisualViewport.width")}} 相当于对应的布局视口属性，如 {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.</p>
-</div>
+> **备注：** 与布局视口（layout viewport）不同的是：只有最上层的 window 才有视觉视口（visual viewport）这一概念。因此只有最上层 window 的 `VisualViewport` 属性才是有效的，其他层的视觉视口属性可看作是布局视口属性的别名。比如，对于一个 {{htmlelement("iframe")}} ，其对应的视觉视口属性 {{domxref("VisualViewport.width")}} 相当于对应的布局视口属性，如 {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em><code>VisualViewport</code></em> 从其父元素继承属性 <em>{{domxref("EventTarget")}}</em>。</p>
+_`VisualViewport`_ 从其父元素继承属性 _{{domxref("EventTarget")}}_。
 
-<dl>
- <dt>{{domxref("VisualViewport.offsetLeft")}} {{readonlyinline}}</dt>
- <dd>返回视觉视口的左边框到布局视口的左边框的 CSS 像素距离。</dd>
- <dt>{{domxref("VisualViewport.offsetTop")}} {{readonlyinline}}</dt>
- <dd>返回视觉视口的上边框到布局视口的上边框的 CSS 像素距离。</dd>
- <dt>{{domxref("VisualViewport.pageLeft")}} {{readonlyinline}}</dt>
- <dd>返回相对于初始的 viewport 属性的 X 轴坐标所对应的 CSS 像素数。</dd>
- <dt>{{domxref("VisualViewport.pageTop")}} {{readonlyinline}}</dt>
- <dd>返回相对于初始的 viewport 属性的 Y 轴坐标所对应的 CSS 像素数。</dd>
- <dt>{{domxref("VisualViewport.width")}} {{readonlyinline}}</dt>
- <dd>返回视觉视口的宽度所对应的 CSS 像素数。</dd>
- <dt>{{domxref("VisualViewport.height")}} {{readonlyinline}}</dt>
- <dd>返回视觉视口的高度所对应的 CSS 像素数。</dd>
- <dt>{{domxref("VisualViewport.scale")}} {{readonlyinline}}</dt>
- <dd>返回当前视觉视口所应用的缩放比例。</dd>
-</dl>
+- {{domxref("VisualViewport.offsetLeft")}} {{readonlyinline}}
+  - : 返回视觉视口的左边框到布局视口的左边框的 CSS 像素距离。
+- {{domxref("VisualViewport.offsetTop")}} {{readonlyinline}}
+  - : 返回视觉视口的上边框到布局视口的上边框的 CSS 像素距离。
+- {{domxref("VisualViewport.pageLeft")}} {{readonlyinline}}
+  - : 返回相对于初始的 viewport 属性的 X 轴坐标所对应的 CSS 像素数。
+- {{domxref("VisualViewport.pageTop")}} {{readonlyinline}}
+  - : 返回相对于初始的 viewport 属性的 Y 轴坐标所对应的 CSS 像素数。
+- {{domxref("VisualViewport.width")}} {{readonlyinline}}
+  - : 返回视觉视口的宽度所对应的 CSS 像素数。
+- {{domxref("VisualViewport.height")}} {{readonlyinline}}
+  - : 返回视觉视口的高度所对应的 CSS 像素数。
+- {{domxref("VisualViewport.scale")}} {{readonlyinline}}
+  - : 返回当前视觉视口所应用的缩放比例。
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>通过使用 <code><a href="/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 或者将监听回调函数赋值给对应的 <code>on<em>eventname</em></code> 属性，可以为对应的视口事件添加监听。</p>
+通过使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 或者将监听回调函数赋值给对应的 `oneventname` 属性，可以为对应的视口事件添加监听。
 
-<dl>
- <dt><code><a href="/zh-CN/docs/Web/API/VisualViewport/resize_event">resize</a></code></dt>
- <dd>当视觉视口被改变时触发。<br>
- 也可以为 {{domxref("VisualViewport.onresize")}} 属性赋值来添加监听。</dd>
- <dt><code><a href="/zh-CN/docs/Web/API/VisualViewport/scroll_event">scroll</a></code></dt>
- <dd>当视觉视口滑动时触发。<br>
- 也可以为 {{domxref("VisualViewport.onscroll")}} 属性赋值来添加监听。</dd>
-</dl>
+- [`resize`](/zh-CN/docs/Web/API/VisualViewport/resize_event)
+  - : 当视觉视口被改变时触发。
+    也可以为 {{domxref("VisualViewport.onresize")}} 属性赋值来添加监听。
+- [`scroll`](/zh-CN/docs/Web/API/VisualViewport/scroll_event)
+  - : 当视觉视口滑动时触发。
+    也可以为 {{domxref("VisualViewport.onscroll")}} 属性赋值来添加监听。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="缩放检测并隐藏元素">缩放检测并隐藏元素</h3>
+### 缩放检测并隐藏元素
 
-<p>这个例子取自 <a href="https://github.com/WICG/visual-viewport">Visual Viewport README</a>，展示了如何在用户缩放时隐藏某个盒子（或元素）。这对于增强一个页面在缩放时的用户体验有重要意义。同样，你也可以查看另一个 <a href="https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html">例子</a> 。</p>
+这个例子取自 [Visual Viewport README](https://github.com/WICG/visual-viewport)，展示了如何在用户缩放时隐藏某个盒子（或元素）。这对于增强一个页面在缩放时的用户体验有重要意义。同样，你也可以查看另一个 [例子](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html) 。
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">var bottomBar = document.getElementById('bottombar');
+```js
+var bottomBar = document.getElementById('bottombar');
 var viewport = window.visualViewport;
 
 function resizeHandler() {
-   if (viewport.scale &gt; 1.3)
+   if (viewport.scale > 1.3)
      bottomBar.style.display = "none";
    else
      bottomBar.style.display = "block";
 }
 
-window.visualViewport.addEventListener('resize', resizeHandler);</code></pre>
+window.visualViewport.addEventListener('resize', resizeHandler);
+```
 
-<h3 id="模拟_position_属性：device-fixed">模拟 position 属性：device-fixed</h3>
+### 模拟 position 属性：device-fixed
 
-<p>这个例子同样取自 <a href="https://github.com/WICG/visual-viewport">Visual Viewport README</a> ，展示了如何使用视觉视口 API，从而模拟 <code>position: device-fixed</code> 的 CSS 属性。类似于 <code>position: fixed</code> ，这一属性可将被设置的元素固定在视觉视口特定位置。此外，你也可以查看另一个 <a href="https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html">例子</a> 。</p>
+这个例子同样取自 [Visual Viewport README](https://github.com/WICG/visual-viewport) ，展示了如何使用视觉视口 API，从而模拟 `position: device-fixed` 的 CSS 属性。类似于 `position: fixed` ，这一属性可将被设置的元素固定在视觉视口特定位置。此外，你也可以查看另一个 [例子](https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html) 。
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">var bottomBar = document.getElementById('bottombar');
+```js
+var bottomBar = document.getElementById('bottombar');
 var viewport = window.visualViewport;
 function viewportHandler() {
   var layoutViewport = document.getElementById('layoutViewport');
@@ -88,22 +85,19 @@ function viewportHandler() {
                               'scale(' + 1/viewport.scale + ')'
 }
 window.visualViewport.addEventListener('scroll', viewportHandler);
-window.visualViewport.addEventListener('resize', viewportHandler);</code></pre>
+window.visualViewport.addEventListener('resize', viewportHandler);
+```
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>：应小心使用上述方案，使用这种方式模拟的 <code>position: device-fixed</code> 可能会导致其他元素在滚动页面时出现闪烁。</p>
-</div>
+> **备注：** 应小心使用上述方案，使用这种方式模拟的 `position: device-fixed` 可能会导致其他元素在滚动页面时出现闪烁。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.VisualViewport")}}</p>
+{{Compat("api.VisualViewport")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="https://github.com/bokand/bokand.github.io/blob/master/web_viewports_explainer.md">Web 视口说明</a> — 解释了什么是浏览器视口和视觉视口和布局视口的区别。</li>
-</ul>
+- [Web 视口说明](https://github.com/bokand/bokand.github.io/blob/master/web_viewports_explainer.md) — 解释了什么是浏览器视口和视觉视口和布局视口的区别。

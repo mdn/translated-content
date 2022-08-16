@@ -2,52 +2,59 @@
 title: go()
 slug: Web/API/History/go
 ---
-<p><code>go()</code>方法从会话历史记录中加载特定页面。你可以使用它在历史记录中前后移动，具体取决于<code>delta</code>参数的值。</p>
+`go()`方法从会话历史记录中加载特定页面。你可以使用它在历史记录中前后移动，具体取决于`delta`参数的值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">window.history.go(delta);</pre>
+```js
+window.history.go(delta);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>delta</code> {{optional_inline}}</dt>
- <dd>相对于当前页面你要去往历史页面的位置。负值表示向后移动，正值表示向前移动。因此，例如：<code>history.go(2)</code>向前移动两页，<code>history.go(-2)</code>则向后移动两页。如果未向该函数传参或<code>delta</code>相等于 0，则该函数与调用<code>location.reload()</code>具有相同的效果。
- <div class="blockIndicator note">
- <p>译者注：相等于 0 是采用宽松相等进行比较的。另外，JavaScript 值古怪的隐式转换在这里也是可用的。</p>
- </div>
- </dt>
-</dl>
+- `delta` {{optional_inline}}
 
-<h2 id="示例">示例</h2>
+  - : 相对于当前页面你要去往历史页面的位置。负值表示向后移动，正值表示向前移动。因此，例如：`history.go(2)`向前移动两页，`history.go(-2)`则向后移动两页。如果未向该函数传参或`delta`相等于 0，则该函数与调用`location.reload()`具有相同的效果。
 
-<p>向后移动一页（等价于调用<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/back"><code>back()</code></a>）：</p>
+    > **备注：** 相等于 0 是采用宽松相等进行比较的。另外，JavaScript 值古怪的隐式转换在这里也是可用的。
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">window.history.go(-1)</code></pre>
+## 示例
 
-<p>向前移动一页，就像调用了<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/forward"><code>forward()</code>：</a></p>
+向后移动一页（等价于调用[`back()`](/zh-CN/docs/Web/API/History/back)）：
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">window.history.go(1)</code></pre>
+```js
+window.history.go(-1)
+```
 
-<p>向前移动两页：</p>
+向前移动一页，就像调用了[`forward()`：](/zh-CN/docs/Web/API/History/forward)
 
-<pre class="brush: js">window.history.go(2);</pre>
+```js
+window.history.go(1)
+```
 
-<p>向后移动两页：</p>
+向前移动两页：
 
-<pre class="brush: js">window.history.go(-2);</pre>
+```js
+window.history.go(2);
+```
 
-<p>最后，以下任意一条语句都会重新加载当前页面：</p>
+向后移动两页：
 
-<pre class="brush: js">window.history.go();
-window.history.go(0);</pre>
+```js
+window.history.go(-2);
+```
 
-<h2 id="规范">规范</h2>
+最后，以下任意一条语句都会重新加载当前页面：
+
+```js
+window.history.go();
+window.history.go(0);
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.History.go")}}</p>
+{{Compat("api.History.go")}}

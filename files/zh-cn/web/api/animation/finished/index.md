@@ -2,30 +2,28 @@
 title: Animation.finished
 slug: Web/API/Animation/finished
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>Animation.finished 只读属性允许您返回动画的完成状态。</p>
+Animation.finished 只读属性允许您返回动画的完成状态。
 
-<div class="note">
-<p><strong>Note</strong>: The Promise is replaced with a new (pending) Promise object every time the animation leaves the <code>finished</code> play state.</p>
-</div>
+> **备注：** The Promise is replaced with a new (pending) Promise object every time the animation leaves the `finished` play state.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<div class="syntaxbox">
-<pre class="brush: js">var animationsPromise = animation<em>.finished</em>;
-</pre>
-</div>
+```js
+var animationsPromise = animation.finished;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 Promise 对象。</p>
+一个 Promise 对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>以下代码会等到所有动画都完成，然后再移除它们处于活动状态的元素：</p>
+以下代码会等到所有动画都完成，然后再移除它们处于活动状态的元素：
 
-<pre class="brush: js">Promise.all(
+```js
+Promise.all(
   elem.getAnimations().map(
     function(animation) {
       return animation.finished
@@ -35,20 +33,19 @@ slug: Web/API/Animation/finished
   function() {
     return elem.remove();
   }
-);</pre>
+);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.Animation.finished")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/API/KeyframeEffect">KeyframeEffect Interface</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [KeyframeEffect Interface](/zh-CN/docs/Web/API/KeyframeEffect)
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

@@ -2,41 +2,38 @@
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}接口的 <code>createMediaStreamSource()</code> 方法用于创建一个新的 {{ domxref("MediaStreamAudioSourceNode") }} 对象，需要传入一个媒体流对象 (MediaStream 对象)(可以从 {{ domxref("navigator.getUserMedia") }} 获得 MediaStream 对象实例), 然后来自 MediaStream 的音频就可以被播放和操作。</p>
-</div>
+{{ domxref("AudioContext") }}接口的 `createMediaStreamSource()` 方法用于创建一个新的 {{ domxref("MediaStreamAudioSourceNode") }} 对象，需要传入一个媒体流对象 (MediaStream 对象)(可以从 {{ domxref("navigator.getUserMedia") }} 获得 MediaStream 对象实例), 然后来自 MediaStream 的音频就可以被播放和操作。
 
-<p>更多关于媒体流音频源 (media stream audio source nodes) 的细节，请参考{{ domxref("MediaStreamAudioSourceNode") }} 页面。</p>
+更多关于媒体流音频源 (media stream audio source nodes) 的细节，请参考{{ domxref("MediaStreamAudioSourceNode") }} 页面。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var source = audioCtx.createMediaStreamSource(stream);</pre>
+```js
+var audioCtx = new AudioContext();
+var source = audioCtx.createMediaStreamSource(stream);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>stream</dt>
- <dd>一个{{domxref("MediaStream")}} 对象，把他传入一个音频处理器进行操作</dd>
-</dl>
+- stream
+  - : 一个{{domxref("MediaStream")}} 对象，把他传入一个音频处理器进行操作
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p> {{domxref("MediaStreamAudioSourceNode")}}</p>
+{{domxref("MediaStreamAudioSourceNode")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>本例中，我们从 {{ domxref("navigator.getUserMedia") }}获取媒体 (audio + video) 流，把它传入 {{ htmlelement("video") }}中播放，并把视频调成静音，然后把获取到的 audio 传入 {{ domxref("MediaStreamAudioSourceNode") }}。接下来我们把获取到的 audio 传入{{ domxref("BiquadFilterNode") }} (可以把声音转化为低音)，输出到 {{domxref("AudioDestinationNode") }}.</p>
+本例中，我们从 {{ domxref("navigator.getUserMedia") }}获取媒体 (audio + video) 流，把它传入 {{ htmlelement("video") }}中播放，并把视频调成静音，然后把获取到的 audio 传入 {{ domxref("MediaStreamAudioSourceNode") }}。接下来我们把获取到的 audio 传入{{ domxref("BiquadFilterNode") }} (可以把声音转化为低音)，输出到 {{domxref("AudioDestinationNode") }}.
 
-<p>{{ htmlelement("video") }} 元素下面滑动杆控制低音过滤器过滤的程度，滑动杆的值越大，低音更明显</p>
+{{ htmlelement("video") }} 元素下面滑动杆控制低音过滤器过滤的程度，滑动杆的值越大，低音更明显
 
-<div class="note">
-<p><strong>注意：你可以查看</strong> <a href="https://mdn.github.io/webaudio-examples/stream-source-buffer/">在线演示</a>，或者 <a href="https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer">查看源码</a>。</p>
-</div>
+> **备注：** **注意：你可以查看** [在线演示](https://mdn.github.io/webaudio-examples/stream-source-buffer/)，或者 [查看源码](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer)。
 
-<pre class="brush: js; highlight[23]">var pre = document.querySelector('pre');
+```js
+var pre = document.querySelector('pre');
 var video = document.querySelector('video');
 var myScript = document.querySelector('script');
 var range = document.querySelector('input');
@@ -88,24 +85,19 @@ if (navigator.mediaDevices) {
 
 // dump script to pre element
 
-pre.innerHTML = myScript.innerHTML;</pre>
+pre.innerHTML = myScript.innerHTML;
+```
 
-<div class="note">
-<p><strong>注意</strong>: 调用<code>createMediaStreamSource()</code>, 来自于媒体流的音频回放将被重新传到 AudioContext 的处理器中。所以播放/暂停流仍然是可以通过 media 元素的 API 和自带的控制器控制。</p>
-</div>
+> **备注：** **注意**: 调用`createMediaStreamSource()`, 来自于媒体流的音频回放将被重新传到 AudioContext 的处理器中。所以播放/暂停流仍然是可以通过 media 元素的 API 和自带的控制器控制。
 
-
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.AudioContext.createMediaStreamSource")}}
 
-<h2 id="查看更多">查看更多</h2>
+## 查看更多
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

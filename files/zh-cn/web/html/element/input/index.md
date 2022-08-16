@@ -623,9 +623,10 @@ See the {{htmlelement('datalist')}} element.
   - : 控件的初始值。此属性是可选的，除非 **type** 属性是 `radio` 或 `checkbox`。注意，当重新加载页面时，如果在重新加载之前更改了值，[Gecko 和 IE 将忽略 HTML 源代码中指定的值](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186)。
 - {{ htmlattrdef("width") }}
   - : 如果 **type** 属性的值是 image，这个属性定义了按钮图片的宽度。
-- ### 非标准 `<input>` 属性
 
-  {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
+### 非标准 `<input>` 属性
+
+- {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
   - : This is a non-standard attribute supported by Safari that is used to control whether autocorrection should be enabled when the user is entering/editing the text value of the `<input>`. Possible attribute values are:
 

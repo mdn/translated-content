@@ -18,8 +18,10 @@ void ctx.setLineDash(segments);
 
 - `segments`
   - : 一个{{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， `[5, 15, 25]` 会变成 `[5, 15, 25, 5, 15, 25]。`
-- ### 返回值
-  - : {{jsxref("undefined")}}
+
+### 返回值
+
+{{jsxref("undefined")}}
 
 ## 示例
 

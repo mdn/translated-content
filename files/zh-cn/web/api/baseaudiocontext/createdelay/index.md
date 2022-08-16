@@ -2,44 +2,39 @@
 title: AudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>  <code>createDelay() 是 </code> {{ domxref("AudioContext") }}   的一个方法，作用是将输入音频信号延迟一定时间。（比如可以实现 对着话筒说句话，然后几秒后 这句话从音响里播放出来）</p>
+`createDelay() 是 `{{ domxref("AudioContext") }} 的一个方法，作用是将输入音频信号延迟一定时间。（比如可以实现 对着话筒说句话，然后几秒后 这句话从音响里播放出来）
 
-<p> </p>
-</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```js
+var audioCtx = new AudioContext();
+var synthDelay = audioCtx.createDelay(maxDelayTime);
+```
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var synthDelay = audioCtx.createDelay(<em>maxDelayTime</em>);</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+- _maxDelayTime_
+  - : 设置最大允许延迟的时间，以“秒”为单位
 
-<dl>
- <dt><em>maxDelayTime</em></dt>
- <dd>设置最大允许延迟的时间，以“秒”为单位</dd>
-</dl>
+### 返回
 
-<h3 id="返回">返回</h3>
+A {{domxref("DelayNode")}}. The default {{domxref("DelayNode.delayTime")}} if no parameter is passed to `createDelay()` is 0 seconds.
 
-<p>A {{domxref("DelayNode")}}. The default {{domxref("DelayNode.delayTime")}} if no parameter is passed to <code>createDelay()</code> is 0 seconds.</p>
+以上是原文，大意是返回延时时间，没有设置时默认是 0
 
-<p>以上是原文，大意是返回延时时间，没有设置时默认是 0</p>
+## 示例
 
-<p> </p>
+首先是中文版的简洁的示例，这个例子中话筒里接收到的声音会延迟 3 秒从音响中播放。
 
-<h2 id="示例">示例</h2>
+```
+window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
 
-<p>首先是中文版的简洁的示例，这个例子中话筒里接收到的声音会延迟 3 秒从音响中播放。</p>
-
-<pre>window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
-
-<code>try {//音频相关api
+try {//音频相关api
     var audioContext = new window.AudioContext();
-</code>    var synthDelay = <code>audioContext</code>.createDelay(5.0);
-<code>} catch (e) {
+    var synthDelay = audioContext.createDelay(5.0);
+} catch (e) {
     alert("你浏览器不支持");
 }
 
@@ -86,15 +81,15 @@ if (navigator.getUserMedia) { //标准api
   synthDelay.connect(audioContext.destination);
 
       }
- </code></pre>
 
-<p> </p>
+```
 
-<p> 以下是英文版示例</p>
+以下是英文版示例
 
-<p>We have created a simple example that allows you to play three different samples on a constant loop — see <a href="http://chrisdavidmills.github.io/create-delay/">create-delay</a> (you can also <a href="https://github.com/chrisdavidmills/create-delay">view the source code</a>). If you just press the play buttons, the loops will start immediately; if you slide the sliders up to the right, then press the play buttons, a delay will be introduced, so the looping sounds don't start playing for a short amount of time.</p>
+We have created a simple example that allows you to play three different samples on a constant loop — see [create-delay](http://chrisdavidmills.github.io/create-delay/) (you can also [view the source code](https://github.com/chrisdavidmills/create-delay)). If you just press the play buttons, the loops will start immediately; if you slide the sliders up to the right, then press the play buttons, a delay will be introduced, so the looping sounds don't start playing for a short amount of time.
 
-<pre class="brush: js; highlight[4,15,16,21,22]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var synthDelay = audioCtx.createDelay(5.0);
@@ -127,18 +122,16 @@ rangeSynth.oninput = function() {
 delay1 = rangeSynth.value;
 synthDelay.delayTime.value = delay1;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.BaseAudioContext.createDelay")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

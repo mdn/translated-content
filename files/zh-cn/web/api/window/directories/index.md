@@ -2,30 +2,32 @@
 title: Window.directories
 slug: Web/API/Window/directories
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>用于返回 window 下的 personalbar toolbar 对象， 已经过时，请使用 {{ domxref("window.personalbar") }} 来代替该属性。</p>
+用于返回 window 下的 personalbar toolbar 对象， 已经过时，请使用 {{ domxref("window.personalbar") }} 来代替该属性。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="brush: js">var <var>dirBar</var> = window.directories;
-</pre>
+```js
+var dirBar = window.directories;
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<p><var>dirBar</var> 是 <code>BarProp</code> 类型的对象。</p>
+_dirBar_ 是 `BarProp` 类型的对象。
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre>&lt;script&gt;
+```
+<script>
  function dirs() {
   alert(window.directories);
  }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<p>不属于任何规范。</p>
+不属于任何规范。

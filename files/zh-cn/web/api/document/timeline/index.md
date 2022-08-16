@@ -2,44 +2,38 @@
 title: Document.timeline
 slug: Web/API/Document/timeline
 ---
-<div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>{{domxref("Document")}} 接口的 <code>timeline</code> 只读属性表示当前文档的默认时间轴。 此时间轴是 {{domxref("DocumentTimeline")}} 的一个特殊实例，它会在网页加载时自动创建。</p>
+{{domxref("Document")}} 接口的 `timeline` 只读属性表示当前文档的默认时间轴。 此时间轴是 {{domxref("DocumentTimeline")}} 的一个特殊实例，它会在网页加载时自动创建。
 
-<p>此时间轴对于每个文档（<code>document</code>）来说都是唯一的，并在文档的生命周期中保持不变，包括调用 {{domxref("Document.open()")}}。</p>
+此时间轴对于每个文档（`document`）来说都是唯一的，并在文档的生命周期中保持不变，包括调用 {{domxref("Document.open()")}}。
 
-<p>该时间线的时间值被计算为与全局时钟的固定偏移，使得零时间对应于{{domxref("PerformanceTiming.navigationStart", "navigationStart")}}时刻加上称为原始时间的带符号的 delta 。 在建立导航开始时刻之前，文档时间线是不活动的。</p>
+该时间线的时间值被计算为与全局时钟的固定偏移，使得零时间对应于{{domxref("PerformanceTiming.navigationStart", "navigationStart")}}时刻加上称为原始时间的带符号的 delta 。 在建立导航开始时刻之前，文档时间线是不活动的。
 
-<div class="note">
-<p><strong>注意：</strong>与非活动文档相关联的文档时间轴也被视为是<strong>不活动的</strong>。</p>
-</div>
+> **备注：** 与非活动文档相关联的文档时间轴也被视为是**不活动的**。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<div class="syntaxbox">
-<pre class="brush: js">var pageTimeline = document.timeline;
-var thisMoment = pageTimeline.currentTime;</pre>
-</div>
+```js
+var pageTimeline = document.timeline;
+var thisMoment = pageTimeline.currentTime;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("DocumentTimeline")}} 对象。</p>
+一个 {{domxref("DocumentTimeline")}} 对象。
 
-<h2 id="规则">规则</h2>
+## 规则
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Document.timeline")}}
 
+## 参见
 
-<p>{{Compat("api.Document.timeline")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationTimeline")}}</li>
- <li>{{domxref("AnimationTimeline.currentTime")}}</li>
- <li>{{domxref("DocumentTimeline")}}</li>
-</ul>
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationTimeline")}}
+- {{domxref("AnimationTimeline.currentTime")}}
+- {{domxref("DocumentTimeline")}}

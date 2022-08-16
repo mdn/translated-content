@@ -2,51 +2,48 @@
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("Clients")}} 接口的  <strong><code>matchAll()</code></strong> 方法返回 service worker {{domxref("Client")}} 对象列表的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> . 包含 <code style="font-style: normal;">options</code> 参数以返回域与关联的 service worker 的域相同所有 service worker 的 clients. 如果未包含 options，该方法仅返回由 service worker 控制的 service worker clients.</p>
+{{domxref("Clients")}} 接口的 **`matchAll()`** 方法返回 service worker {{domxref("Client")}} 对象列表的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) . 包含 `options` 参数以返回域与关联的 service worker 的域相同所有 service worker 的 clients. 如果未包含 options，该方法仅返回由 service worker 控制的 service worker clients.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">ServiceWorkerClients.matchAll(options).then(function(clients) {
+```js
+ServiceWorkerClients.matchAll(options).then(function(clients) {
   // do something with your clients list
-});</pre>
+});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>options {{optional_inline}}</code></dt>
- <dd>一个 options 对象，允许您为匹配操作设置选项。可用选项包括：
- <ul>
-  <li><code>includeUncontrolled</code>: {{domxref("Boolean")}} — 如果设置为<code>true</code>, 匹配操作将返回与当前服务工作者共享相同源的所有服务工作者客户端。否则，它仅返回由当前服务工作者控制的服务工作者客户端。默认值为<code>false</code>.</li>
-  <li><code>type</code>: 设置想要匹配的 clients 类型。可用值包括 <code>window</code>, <code>worker</code>, <code>sharedworker</code>, 和 <code>all</code>. 默认是 <code>all</code>.</li>
- </ul>
- </dd>
-</dl>
+- `options {{optional_inline}}`
 
-<h3 id="返回值">返回值</h3>
+  - : 一个 options 对象，允许您为匹配操作设置选项。可用选项包括：
 
-<p>resolve 为一个 {{domxref("Client")}} 对象数组的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> . 在 Chrome 46/Firefox 54 以及更高版本中，该方法以最近关注的顺序返回 clients , 根据规范更正。</p>
+    - `includeUncontrolled`: {{domxref("Boolean")}} — 如果设置为`true`, 匹配操作将返回与当前服务工作者共享相同源的所有服务工作者客户端。否则，它仅返回由当前服务工作者控制的服务工作者客户端。默认值为`false`.
+    - `type`: 设置想要匹配的 clients 类型。可用值包括 `window`, `worker`, `sharedworker`, 和 `all`. 默认是 `all`.
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<pre class="brush: js">clients.matchAll(options).then(function(clientList) {
-  for (var i = 0 ; i &lt; clients.length ; i++) {
+resolve 为一个 {{domxref("Client")}} 对象数组的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) . 在 Chrome 46/Firefox 54 以及更高版本中，该方法以最近关注的顺序返回 clients , 根据规范更正。
+
+## 示例
+
+```js
+clients.matchAll(options).then(function(clientList) {
+  for (var i = 0 ; i < clients.length ; i++) {
     if (clientList[i].url === 'index.html') {
       clients.openWindow(clientList[i]);
       // or do something else involving the matching client
     }
   }
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.Clients.matchAll")}}</p>
-</div>
+{{Compat("api.Clients.matchAll")}}

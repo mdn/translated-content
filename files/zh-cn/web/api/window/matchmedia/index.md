@@ -2,83 +2,82 @@
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>{{domxref("Window")}} 的<code><strong>matchMedia()</strong></code> 方法返回一个新的{{domxref("MediaQueryList")}} 对象，表示指定的<a href="/zh-CN/docs/CSS/Media_queries">媒体查询</a>字符串解析后的结果。返回的<code>MediaQueryList</code> 可被用于判定{{domxref("Document")}}是否匹配媒体查询，或者监控一个<code>document</code> 来判定它匹配了或者停止匹配了此媒体查询。</p>
+{{domxref("Window")}} 的**`matchMedia()`** 方法返回一个新的{{domxref("MediaQueryList")}} 对象，表示指定的[媒体查询](/zh-CN/docs/CSS/Media_queries)字符串解析后的结果。返回的`MediaQueryList` 可被用于判定{{domxref("Document")}}是否匹配媒体查询，或者监控一个`document` 来判定它匹配了或者停止匹配了此媒体查询。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre><em>mqList </em>= window.matchMedia(<em>mediaQueryString</em>)
-</pre>
+```
+mqList = window.matchMedia(mediaQueryString)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>mediaQueryString</code></dt>
- <dd>一个被用于媒体查询解析的字符串。</dd>
-</dl>
+- `mediaQueryString`
+  - : 一个被用于媒体查询解析的字符串。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个用来媒体查询的新的{{domxref("MediaQueryList")}}对象</p>
+一个用来媒体查询的新的{{domxref("MediaQueryList")}}对象
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<p>您可以使用返回的媒体查询来执行即时检查和事件驱动检查，以查看文档是否与媒体查询匹配。</p>
+您可以使用返回的媒体查询来执行即时检查和事件驱动检查，以查看文档是否与媒体查询匹配。
 
-<p>要执行一次瞬时检查以查看文档是否与媒体查询匹配，请查看{{domxref("MediaQueryList.matches", "matches")}}属性的值，当 document 满足媒体查询条件的时候将会返回<code>true</code>。</p>
+要执行一次瞬时检查以查看文档是否与媒体查询匹配，请查看{{domxref("MediaQueryList.matches", "matches")}}属性的值，当 document 满足媒体查询条件的时候将会返回`true`。
 
-<p>如果您需要始终了解 document 是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件 。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。</p>
+如果您需要始终了解 document 是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件 。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。
 
-<h2 id="Example">举例</h2>
+## 举例
 
-<p>此示例运行媒体查询<code>(max-width: 600px)</code>并在{{HTMLElement("span")}};中显示<code>MediaQueryList</code>的<code>matches</code>属性值。如果视口的宽度小于或等于 600 像素，则输出将为 true，而如果窗口的宽度大于此宽度，则将输出 false。</p>
+此示例运行媒体查询`(max-width: 600px)`并在{{HTMLElement("span")}};中显示`MediaQueryList`的`matches`属性值。如果视口的宽度小于或等于 600 像素，则输出将为 true，而如果窗口的宽度大于此宽度，则将输出 false。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre>let mql = window.matchMedia('(max-width: 600px)');
+```
+let mql = window.matchMedia('(max-width: 600px)');
 
 document.querySelector(".mq-value").innerText = mql.matches;
-</pre>
+```
 
-<p>JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("Window.matchMedia", "matchMedia()")}}进行编译，然后设置<code>&lt;span&gt;</code>的{{domxref("HTMLElement.innerText", "innerText")}}为{{domxref("MediaQueryList.media", "matches")}}属性结果的值，以便它表明此 document 在此刻页面加载完成时是否与媒体查询所匹配。</p>
+JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("Window.matchMedia", "matchMedia()")}}进行编译，然后设置`<span>`的{{domxref("HTMLElement.innerText", "innerText")}}为{{domxref("MediaQueryList.media", "matches")}}属性结果的值，以便它表明此 document 在此刻页面加载完成时是否与媒体查询所匹配。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre>&lt;span class="mq-value"&gt;&lt;/span&gt;</pre>
+```
+<span class="mq-value"></span>
+```
 
-<p>一个简单的 <code>&lt;span&gt;</code> 来接收输出。</p>
+一个简单的 `<span>` 来接收输出。
 
-<div class="hidden">
-<pre class="brush: css">.mq-value {
+```css hidden
+.mq-value {
   font: 18px arial, sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;
   border: 1px solid #dde;
 }
-</pre>
-</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%", "60")}}</p>
+{{EmbedLiveSample("Examples", "100%", "60")}}
 
-<p>参考更多的例子来 <a href="/zh-CN/docs/DOM/Using_media_queries_from_code">通过代码使用媒体查询</a> 。</p>
+参考更多的例子来 [通过代码使用媒体查询](/zh-CN/docs/DOM/Using_media_queries_from_code) 。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">请参阅</h2>
+## 请参阅
 
-<ul>
- <li><a href="/zh-CN/docs/CSS/Media_queries">媒体查询</a></li>
- <li><a href="/zh-CN/docs/DOM/Using_media_queries_from_code">通过代码使用媒体查询</a></li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("MediaQueryListListener")}}</li>
-</ul>
+- [媒体查询](/zh-CN/docs/CSS/Media_queries)
+- [通过代码使用媒体查询](/zh-CN/docs/DOM/Using_media_queries_from_code)
+- {{domxref("MediaQueryList")}}
+- {{domxref("MediaQueryListListener")}}

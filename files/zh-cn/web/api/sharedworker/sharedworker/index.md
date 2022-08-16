@@ -2,55 +2,51 @@
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p><code><strong>SharedWorker()</strong></code> 构造函数实例化的 {{domxref("SharedWorker")}} 对象可以执行指定的 URL 的脚本。所执行的脚本必须遵守 <a href="/en-US/docs/Web/Security/Same-origin_policy">同源策略</a>。</p>
+**`SharedWorker()`** 构造函数实例化的 {{domxref("SharedWorker")}} 对象可以执行指定的 URL 的脚本。所执行的脚本必须遵守 [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
 
-<p>如果 URL 的语法无效或者违反了同源策略会抛出 <code>SECURITY_ERR</code> 类型的 {{domxref("DOMException")}} 异常。</p>
+如果 URL 的语法无效或者违反了同源策略会抛出 `SECURITY_ERR` 类型的 {{domxref("DOMException")}} 异常。
 
-<div class="note">
-<p><strong>注意</strong>: 浏览器开发者对于 data URI 是否同源产生分歧。尽管 Gecko 10.0 {{geckoRelease("10.0")}} 及之后版本支持 data URIs，其他浏览器并不能支持 。</p>
-</div>
+> **备注：** 浏览器开发者对于 data URI 是否同源产生分歧。尽管 Gecko 10.0 {{geckoRelease("10.0")}} 及之后版本支持 data URIs，其他浏览器并不能支持 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var myWorker = new SharedWorker(<em>aURL</em>, <em>name</em>);
-var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
+```js
+var myWorker = new SharedWorker(aURL, name);
+var myWorker = new SharedWorker(aURL, options);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>URL 参数</em></dt>
- <dd>一个代表了 worker 将执行的脚本 URL 的 {{domxref("DOMString")}}，它必须遵守同源策略。</dd>
- <dt>name {{optional_inline}}</dt>
- <dd>一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>创建实例时设定的包含了可选属性的对象。可用的属性包括：
- <ul>
-  <li><code>type</code>: 一个制定所创建 worker 类型的 {{domxref("DOMString")}}。可设定的值为 <code>classic</code> 或者 <code>module</code>. 若不指定，默认值为 <code>classic</code>.</li>
-  <li><code>credentials</code>: 一个指定要用于工作程序的凭据类型的  {{domxref("DOMString")}}。 可设定的值为<dfn> <code>omit、</code></dfn><code><dfn>same-origin</dfn></code> 或 <dfn><code>include</code>. </dfn>若不指定，<dfn>或者 type 设定为 <code>classic</code>, </dfn>默认值为<dfn> <code>omit</code> （无需凭据）。</dfn></li>
-  <li><dfn><code>name</code>: </dfn>一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。</li>
- </ul>
- </dd>
-</dl>
+- _URL 参数_
+  - : 一个代表了 worker 将执行的脚本 URL 的 {{domxref("DOMString")}}，它必须遵守同源策略。
+- name {{optional_inline}}
+  - : 一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。
+- _options_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : 创建实例时设定的包含了可选属性的对象。可用的属性包括：
 
-<p>创建的 worker</p>
+    - `type`: 一个制定所创建 worker 类型的 {{domxref("DOMString")}}。可设定的值为 `classic` 或者 `module`. 若不指定，默认值为 `classic`.
+    - `credentials`: 一个指定要用于工作程序的凭据类型的 {{domxref("DOMString")}}。 可设定的值为* `omit、`*`same-origin` 或 *`include`. *若不指定，*或者 type 设定为 `classic`, *默认值为* `omit` （无需凭据）。*
+    - *`name`: *一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<ul>
- <li><code>SecurityError</code> 当文档不能正常启动 workers 时抛出</li>
- <li><code>NetworkError</code> 如果其中一个脚本的 MIME 类型是 text / csv，image / *，video / *或 audio / * 时抛出。类型只应该为 <code>text/javascript</code>。</li>
- <li><code>SyntaxError</code> 当 <em>URL</em> 不能被解析时抛出</li>
-</ul>
+创建的 worker
 
-<h2 id="示例">示例</h2>
+### Exceptions
 
-<p>以下代码段显示了使用 <code>SharedWorker()</code> 构造函数创建 {{domxref("SharedWorker")}} 对象以及对象的后续用法：</p>
+- `SecurityError` 当文档不能正常启动 workers 时抛出
+- `NetworkError` 如果其中一个脚本的 MIME 类型是 text / csv，image / \*，video / \*或 audio / \* 时抛出。类型只应该为 `text/javascript`。
+- `SyntaxError` 当 _URL_ 不能被解析时抛出
 
-<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
+## 示例
+
+以下代码段显示了使用 `SharedWorker()` 构造函数创建 {{domxref("SharedWorker")}} 对象以及对象的后续用法：
+
+```js
+var myWorker = new SharedWorker('worker.js');
 
 myWorker.port.start();
 
@@ -67,22 +63,19 @@ second.onchange = function() {
 myWorker.port.onmessage = function(e) {
   result1.textContent = e.data;
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>看完整示例，请见 <a href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>.)</p>
+看完整示例，请见 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.SharedWorker.SharedWorker")}}
 
+## See also
 
-<p>{{Compat("api.SharedWorker.SharedWorker")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("SharedWorker")}} interface it belongs to.

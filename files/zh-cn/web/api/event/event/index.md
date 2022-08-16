@@ -2,51 +2,48 @@
 title: Event()
 slug: Web/API/Event/Event
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>Event()</strong></code> 构造函数，创建一个新的事件对象 {{domxref("Event")}}。</p>
+**`Event()`** 构造函数，创建一个新的事件对象 {{domxref("Event")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> <em>event</em> = new Event(<em>typeArg</em>, <em>eventInit</em>);</pre>
+```
+ event = new Event(typeArg, eventInit);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>是{{domxref("DOMString")}} 类型，表示所创建事件的名称。</dd>
- <dt><em>eventInit</em>{{optional_inline}}</dt>
- <dd>是 <code>EventInit</code> 类型的字典，接受以下字段：
+- _typeArg_
+  - : 是{{domxref("DOMString")}} 类型，表示所创建事件的名称。
+- _eventInit_{{optional_inline}}
 
- <ul>
-  <li><code>"bubbles"</code>，可选，{{jsxref("Boolean")}}类型，默认值为 <code style="font-style: normal;">false</code>，表示该事件是否冒泡。</li>
-  <li><code>"cancelable"</code>，可选，{{jsxref("Boolean")}}类型，默认值为 <code style="font-style: normal;">false</code>， 表示该事件能否被取消。</li>
-  <li><code>"composed"</code>，可选，{{jsxref("Boolean")}}类型，默认值为 <code style="font-style: normal;">false</code>，指示事件是否会在影子 DOM 根节点之外触发侦听器。</li>
- </ul>
- </dd>
-</dl>
+  - : 是 `EventInit` 类型的字典，接受以下字段：
 
-<h2 id="示例">示例</h2>
+    - `"bubbles"`，可选，{{jsxref("Boolean")}}类型，默认值为 `false`，表示该事件是否冒泡。
+    - `"cancelable"`，可选，{{jsxref("Boolean")}}类型，默认值为 `false`， 表示该事件能否被取消。
+    - `"composed"`，可选，{{jsxref("Boolean")}}类型，默认值为 `false`，指示事件是否会在影子 DOM 根节点之外触发侦听器。
 
-<pre class="brush: js">// 创建一个支持冒泡且不能被取消的 look 事件
+## 示例
+
+```js
+// 创建一个支持冒泡且不能被取消的 look 事件
 
 var ev = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(ev);
 
-<code>// 事件可以在任何元素触发，不仅仅是 document
-myDiv.dispatchEvent(ev);</code>
-</pre>
+// 事件可以在任何元素触发，不仅仅是 document
+myDiv.dispatchEvent(ev);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关阅读">相关阅读</h2>
+## 相关阅读
 
-<ul>
- <li>{{domxref("Event")}}</li>
-</ul>
+- {{domxref("Event")}}

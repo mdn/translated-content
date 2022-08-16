@@ -2,376 +2,351 @@
 title: Element
 slug: Web/API/Element
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element</code></strong> 是一个通用性非常强的基类，所有 {{DOMxRef("Document")}} 对象下的对象都继承自它。这个接口描述了所有相同种类的元素所普遍具有的方法和属性。一些接口继承自 <code>Element</code> 并且增加了一些额外功能的接口描述了具体的行为。例如， {{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口，而 {{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级（hierarchy）的接口中被进一步制定的。</p>
+**`Element`** 是一个通用性非常强的基类，所有 {{DOMxRef("Document")}} 对象下的对象都继承自它。这个接口描述了所有相同种类的元素所普遍具有的方法和属性。一些接口继承自 `Element` 并且增加了一些额外功能的接口描述了具体的行为。例如， {{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口，而 {{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级（hierarchy）的接口中被进一步制定的。
 
-<p>在 Web 平台的领域以外的语言，比如 XUL，通过 <code>XULElement</code> 接口，同样也实现了 <code>Element</code> 接口。</p>
+在 Web 平台的领域以外的语言，比如 XUL，通过 `XULElement` 接口，同样也实现了 `Element` 接口。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">属性</h2>
+## 属性
 
-<p><em>所有属性继承自它的祖先接口 {{DOMxRef("Node")}}，并且扩展了 {{DOMxRef("Node")}} 的父接口 {{DOMxRef("EventTarget")}}，并且从以下部分继承了属性：{{DOMxRef("ParentNode")}}、{{DOMxRef("ChildNode")}}、{{DOMxRef("NonDocumentTypeChildNode")}}，</em>和 {{DOMxRef("Animatable")}}。</p>
+*所有属性继承自它的祖先接口 {{DOMxRef("Node")}}，并且扩展了 {{DOMxRef("Node")}} 的父接口 {{DOMxRef("EventTarget")}}，并且从以下部分继承了属性：{{DOMxRef("ParentNode")}}、{{DOMxRef("ChildNode")}}、{{DOMxRef("NonDocumentTypeChildNode")}}，*和 {{DOMxRef("Animatable")}}。
 
-<dl>
- <dt>{{DOMxRef("Element.attributes")}} {{readOnlyInline}}</dt>
- <dd>返回一个与该元素相关的所有属性集合 {{DOMxRef("NamedNodeMap")}}。</dd>
- <dt>{{DOMxRef("Element.classList")}} {{readOnlyInline}}</dt>
- <dd>返回该元素包含的 class 属性，是一个 {{DOMxRef("DOMTokenList")}}。</dd>
- <dt>{{DOMxRef("Element.className")}}</dt>
- <dd>一个 {{DOMxRef("DOMString")}}，表示这个元素的 class。</dd>
- <dt>{{DOMxRef("Element.clientHeight")}} {{readOnlyInline}}</dt>
- <dd>返回{{jsxref("Number")}} 表示内部相对于外层元素的高度。</dd>
- <dt>{{DOMxRef("Element.clientLeft")}} {{readOnlyInline}}</dt>
- <dd>返回{{jsxref("Number")}}表示该元素距离它左边界的宽度。</dd>
- <dt>{{DOMxRef("Element.clientTop")}} {{readOnlyInline}}</dt>
- <dd>返回 {{jsxref("Number")}} 表示该元素距离它上边界的高度。</dd>
- <dt>{{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}</dt>
- <dd>返回{{jsxref("Number")}} 表示该元素内部的宽度。</dd>
- <dt>{{DOMxRef("Element.computedName")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the label exposed to accessibility.</dd>
- <dt>{{DOMxRef("Element.computedRole")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the ARIA role that has been applied to a particular element.</dd>
- <dt>{{DOMxRef("Element.id")}}</dt>
- <dd>是一个{{DOMxRef("DOMString")}} 表示这个元素的 id。</dd>
- <dt>{{DOMxRef("Element.innerHTML")}}</dt>
- <dd>是一个{{DOMxRef("DOMString")}} 表示这个元素的内容文本。</dd>
- <dt>{{DOMxRef("Element.localName")}} {{readOnlyInline}}</dt>
- <dd>是一个 {{DOMxRef("DOMString")}} 表示这个元素名称本地化的部分。</dd>
- <dt>{{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}</dt>
- <dd>元素对应的 namespace URI ，如果没有则返回 <code>null</code>
- <div class="note">
- <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> namespace in both HTML and XML trees.</p>
- </div>
- </dd>
- <dt>{{DOMxRef("NonDocumentTypeChildNode.nextElementSibling")}} {{readOnlyInline}}</dt>
- <dd>是一个{{DOMxRef("Element")}}, 该元素下一个兄弟节点，如果为 null 表示不存在..</dd>
- <dt>{{DOMxRef("Element.outerHTML")}}</dt>
- <dd>是一个 {{DOMxRef("DOMString")}}，获取该 DOM 元素及其后代的 HTML 文本。在设置它的时候，会从给定的字符串开始解析，替换自身。</dd>
- <dt>{{DOMxRef("Element.prefix")}} {{readOnlyInline}}</dt>
- <dd>A {{DOMxRef("DOMString")}} representing the namespace prefix of the element, or <code>null</code> if no prefix is specified.</dd>
- <dt>{{DOMxRef("NonDocumentTypeChildNode.previousElementSibling")}} {{readOnlyInline}}</dt>
- <dd>是一个 {{DOMxRef("Element")}}, 该元素上一个兄弟节点，如果为 null 表示不存在..</dd>
- <dt>{{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}</dt>
- <dd>返回类型为： {{jsxref("Number")}}，表示元素的滚动视图高度。</dd>
- <dt>{{DOMxRef("Element.scrollLeft")}}</dt>
- <dd>返回类型为：{{jsxref("Number")}}，表示该元素横向滚动条距离最左的位移。</dd>
- <dt>{{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}</dt>
- <dd>返回类型为： {{jsxref("Number")}}，表示该元素横向滚动条可移动的最大值</dd>
- <dt>{{DOMxRef("Element.scrollTop")}}</dt>
- <dd>返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条距离</dd>
- <dt>{{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}</dt>
- <dd>返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条可移动的最大值</dd>
- <dt>{{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}</dt>
- <dd>返回类型为： {{jsxref("Number")}} ，表示元素的滚动视图宽度。</dd>
- <dt>{{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}</dt>
- <dd>Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.</dd>
- <dt>{{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}</dt>
- <dd>Returns the shadow root that is hosted by the element, regardless if its open or closed. <strong>Available only to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
- <dt>{{DOMxRef("Element.slot")}} {{Experimental_Inline}}</dt>
- <dd>Returns the name of the shadow DOM slot the element is inserted in.</dd>
- <dt>{{DOMxRef("Element.tabStop")}} {{Non-standard_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.</dd>
- <dt>{{DOMxRef("Element.tagName")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("String")}} with the name of the tag for the given element.</dd>
- <dt>{{DOMxRef("Element.undoManager")}} {{Experimental_Inline}} {{readOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef("UndoManager")}} associated with the element.</dd>
- <dt>{{DOMxRef("Element.undoScope")}} {{Experimental_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.</dd>
-</dl>
+- {{DOMxRef("Element.attributes")}} {{readOnlyInline}}
+  - : 返回一个与该元素相关的所有属性集合 {{DOMxRef("NamedNodeMap")}}。
+- {{DOMxRef("Element.classList")}} {{readOnlyInline}}
+  - : 返回该元素包含的 class 属性，是一个 {{DOMxRef("DOMTokenList")}}。
+- {{DOMxRef("Element.className")}}
+  - : 一个 {{DOMxRef("DOMString")}}，表示这个元素的 class。
+- {{DOMxRef("Element.clientHeight")}} {{readOnlyInline}}
+  - : 返回{{jsxref("Number")}} 表示内部相对于外层元素的高度。
+- {{DOMxRef("Element.clientLeft")}} {{readOnlyInline}}
+  - : 返回{{jsxref("Number")}}表示该元素距离它左边界的宽度。
+- {{DOMxRef("Element.clientTop")}} {{readOnlyInline}}
+  - : 返回 {{jsxref("Number")}} 表示该元素距离它上边界的高度。
+- {{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}
+  - : 返回{{jsxref("Number")}} 表示该元素内部的宽度。
+- {{DOMxRef("Element.computedName")}} {{readOnlyInline}}
+  - : Returns a {{DOMxRef("DOMString")}} containing the label exposed to accessibility.
+- {{DOMxRef("Element.computedRole")}} {{readOnlyInline}}
+  - : Returns a {{DOMxRef("DOMString")}} containing the ARIA role that has been applied to a particular element.
+- {{DOMxRef("Element.id")}}
+  - : 是一个{{DOMxRef("DOMString")}} 表示这个元素的 id。
+- {{DOMxRef("Element.innerHTML")}}
+  - : 是一个{{DOMxRef("DOMString")}} 表示这个元素的内容文本。
+- {{DOMxRef("Element.localName")}} {{readOnlyInline}}
+  - : 是一个 {{DOMxRef("DOMString")}} 表示这个元素名称本地化的部分。
+- {{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}
 
-<div class="note">
-<p><strong>Note:</strong> DOM Level 3 defined <code>namespaceURI</code>, <code>localName</code> and <code>prefix</code> on the {{DOMxRef("Node")}} interface. In DOM4 they were moved to <code>Element</code>.</p>
+  - : 元素对应的 namespace URI ，如果没有则返回 `null`
 
-<p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
-</div>
+    > **备注：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
 
-<h3 id="Properties_included_from_Slotable">Properties included from Slotable</h3>
+- {{DOMxRef("NonDocumentTypeChildNode.nextElementSibling")}} {{readOnlyInline}}
+  - : 是一个{{DOMxRef("Element")}}, 该元素下一个兄弟节点，如果为 null 表示不存在..
+- {{DOMxRef("Element.outerHTML")}}
+  - : 是一个 {{DOMxRef("DOMString")}}，获取该 DOM 元素及其后代的 HTML 文本。在设置它的时候，会从给定的字符串开始解析，替换自身。
+- {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
+  - : A {{DOMxRef("DOMString")}} representing the namespace prefix of the element, or `null` if no prefix is specified.
+- {{DOMxRef("NonDocumentTypeChildNode.previousElementSibling")}} {{readOnlyInline}}
+  - : 是一个 {{DOMxRef("Element")}}, 该元素上一个兄弟节点，如果为 null 表示不存在..
+- {{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}
+  - : 返回类型为： {{jsxref("Number")}}，表示元素的滚动视图高度。
+- {{DOMxRef("Element.scrollLeft")}}
+  - : 返回类型为：{{jsxref("Number")}}，表示该元素横向滚动条距离最左的位移。
+- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
+  - : 返回类型为： {{jsxref("Number")}}，表示该元素横向滚动条可移动的最大值
+- {{DOMxRef("Element.scrollTop")}}
+  - : 返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条距离
+- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
+  - : 返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条可移动的最大值
+- {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
+  - : 返回类型为： {{jsxref("Number")}} ，表示元素的滚动视图宽度。
+- {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
+  - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
+- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
+  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Available only to [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions).**
+- {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
+  - : Returns the name of the shadow DOM slot the element is inserted in.
+- {{DOMxRef("Element.tabStop")}} {{Non-standard_Inline}}
+  - : Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.
+- {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
+  - : Returns a {{jsxref("String")}} with the name of the tag for the given element.
+- {{DOMxRef("Element.undoManager")}} {{Experimental_Inline}} {{readOnlyInline}}
+  - : Returns the {{DOMxRef("UndoManager")}} associated with the element.
+- {{DOMxRef("Element.undoScope")}} {{Experimental_Inline}}
+  - : Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.
 
-<p><em>The <code>Element</code> interface includes the following property, defined on the {{DOMxRef("Slotable")}} mixin.</em></p>
+> **备注：** DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{DOMxRef("Node")}} interface. In DOM4 they were moved to `Element`.
+>
+> This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
 
-<dl>
- <dt>{{DOMxRef("Slotable.assignedSlot")}}{{readonlyInline}}</dt>
- <dd>Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
-</dl>
+### Properties included from Slotable
 
-<h3 id="Handlers">事件句柄</h3>
+_The `Element` interface includes the following property, defined on the {{DOMxRef("Slotable")}} mixin._
 
-<dl>
- <dt>{{domxref("Element.onfullscreenchange")}}</dt>
- <dd>事件 {{event("fullscreenchange")}} 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。</dd>
- <dt>{{domxref("Element.onfullscreenerror")}}</dt>
- <dd>事件 {{event("fullscreenerror")}} 的回调方法，在进入全屏模式过程中出现错误时触发。</dd>
-</dl>
+- {{DOMxRef("Slotable.assignedSlot")}}{{readonlyInline}}
+  - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
 
-<h2 id="Methods">方法</h2>
+### 事件句柄
 
-<p><em>Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}<em>, and implements those of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}<em>, {{DOMxRef("NonDocumentTypeChildNode")}}, </em></em>and {{DOMxRef("Animatable")}}.</em></p>
+- {{domxref("Element.onfullscreenchange")}}
+  - : 事件 {{event("fullscreenchange")}} 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。
+- {{domxref("Element.onfullscreenerror")}}
+  - : 事件 {{event("fullscreenerror")}} 的回调方法，在进入全屏模式过程中出现错误时触发。
 
-<dl>
- <dt>{{DOMxRef("EventTarget.addEventListener()")}}</dt>
- <dd>Registers an event handler to a specific event type on the element.</dd>
- <dt>{{DOMxRef("Element.attachShadow()")}}</dt>
- <dd>Attatches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.</dd>
- <dt>{{DOMxRef("Element.animate()")}} {{Experimental_Inline}}</dt>
- <dd>A shortcut method to create and run an animation on an element. Returns the created Animation object instance.</dd>
- <dt>{{DOMxRef("Element.closest()")}} {{Experimental_Inline}}</dt>
- <dd>Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.</dd>
- <dt>{{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Creates a <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a> on on the element, turning it into a shadow host. Returns a {{DOMxRef("ShadowRoot")}}.</dd>
- <dt>{{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.</dd>
- <dt>{{DOMxRef("EventTarget.dispatchEvent()")}}</dt>
- <dd>Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates whether no handler canceled the event.</dd>
- <dt>{{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}</dt>
- <dd>Returns an array of Animation objects currently active on the element.</dd>
- <dt>{{DOMxRef("Element.getAttribute()")}}</dt>
- <dd>Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.</dd>
- <dt>{{DOMxRef("Element.getAttributeNames()")}}</dt>
- <dd>Returns an array of attribute names from the current element.</dd>
- <dt>{{DOMxRef("Element.getAttributeNS()")}}</dt>
- <dd>Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.</dd>
- <dt>{{DOMxRef("Element.getAttributeNode()")}} {{Deprecated_Inline}}</dt>
- <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.getAttributeNodeNS()")}} {{Deprecated_Inline}}</dt>
- <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.getBoundingClientRect()")}}</dt>
- <dd>返回元素的大小及其相对于视口的位置。</dd>
- <dt>{{DOMxRef("Element.getClientRects()")}}</dt>
- <dd>Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.</dd>
- <dt>{{DOMxRef("Element.getElementsByClassName()")}}</dt>
- <dd>参数中给出类的列表，返回一个动态的 {{DOMxRef("HTMLCollection")}} ，包含了所有持有这些类的后代元素。</dd>
- <dt>{{DOMxRef("Element.getElementsByTagName()")}}</dt>
- <dd>Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name, from the current element.</dd>
- <dt>{{DOMxRef("Element.getElementsByTagNameNS()")}}</dt>
- <dd>Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.</dd>
- <dt>{{DOMxRef("Element.hasAttribute()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.</dd>
- <dt>{{DOMxRef("Element.hasAttributeNS()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.</dd>
- <dt>{{DOMxRef("Element.hasAttributes()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.</dd>
- <dt>{{DOMxRef("Element.hasPointerCapture()")}}</dt>
- <dd>Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.</dd>
- <dt>{{DOMxRef("Element.insertAdjacentElement()")}}</dt>
- <dd>Inserts a given element node at a given position relative to the element it is invoked upon.</dd>
- <dt>{{DOMxRef("Element.insertAdjacentHTML()")}}</dt>
- <dd>Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.</dd>
- <dt>{{DOMxRef("Element.insertAdjacentText()")}}</dt>
- <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
- <dt>{{DOMxRef("Element.matches()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.</dd>
- <dt>{{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a {{DOMxRef("CSSPseudoElement")}} representing the child pseudo-element matched by the specified pseudo-element selector.</dd>
- <dt>{{DOMxRef("Element.querySelector()")}}</dt>
- <dd>Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.</dd>
- <dt>{{DOMxRef("Element.querySelectorAll()")}}</dt>
- <dd>Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.</dd>
- <dt>{{DOMxRef("Element.releasePointerCapture()")}}</dt>
- <dd>Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.</dd>
- <dt>{{DOMxRef("ChildNode.remove()")}} {{Experimental_Inline}}</dt>
- <dd>Removes the element from the children list of its parent.</dd>
- <dt>{{DOMxRef("Element.removeAttribute()")}}</dt>
- <dd>Removes the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.removeAttributeNS()")}}</dt>
- <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{DOMxRef("Element.removeAttributeNode()")}} {{Deprecated_Inline}}</dt>
- <dd>Removes the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("EventTarget.removeEventListener()")}}</dt>
- <dd>Removes an event listener from the element.</dd>
- <dt>{{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}</dt>
- <dd>Asynchronously asks the browser to make the element full-screen.</dd>
- <dt>{{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}</dt>
- <dd>Allows to asynchronously ask for the pointer to be locked on the given element.</dd>
-</dl>
+## 方法
 
-<dl>
- <dt>{{DOMxRef("Element.scroll()")}}</dt>
- <dd>Scrolls to a particular set of coordinates inside a given element.</dd>
- <dt>{{DOMxRef("Element.scrollBy()")}}</dt>
- <dd>Scrolls an element by the given amount.</dd>
- <dt>{{DOMxRef("Element.scrollIntoView()")}} {{Experimental_Inline}}</dt>
- <dd>Scrolls the page until the element gets into the view.</dd>
- <dt>{{DOMxRef("Element.scrollTo()")}}</dt>
- <dd>Scrolls to a particular set of coordinates inside a given element.</dd>
- <dt>{{DOMxRef("Element.setAttribute()")}}</dt>
- <dd>Sets the value of a named attribute of the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNS()")}}</dt>
- <dd>Sets the value of the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNode()")}} {{Deprecated_Inline}}</dt>
- <dd>Sets the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNodeNS()")}} {{Deprecated_Inline}}</dt>
- <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}</dt>
- <dd>Sets up mouse event capture, redirecting all mouse events to this element.</dd>
- <dt>{{DOMxRef("Element.setPointerCapture()")}}</dt>
- <dd>Designates a specific element as the capture target of future <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a>.</dd>
- <dt>{{DOMxRef("Element.toggleAttribute()")}}</dt>
- <dd>Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.</dd>
-</dl>
+_Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}_, and implements those of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}_, {{DOMxRef("NonDocumentTypeChildNode")}},_ _and {{DOMxRef("Animatable")}}._
 
-<h2 id="事件">事件</h2>
+- {{DOMxRef("EventTarget.addEventListener()")}}
+  - : Registers an event handler to a specific event type on the element.
+- {{DOMxRef("Element.attachShadow()")}}
+  - : Attatches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
+- {{DOMxRef("Element.animate()")}} {{Experimental_Inline}}
+  - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
+- {{DOMxRef("Element.closest()")}} {{Experimental_Inline}}
+  - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
+- {{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Creates a [shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) on on the element, turning it into a shadow host. Returns a {{DOMxRef("ShadowRoot")}}.
+- {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
+  - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
+- {{DOMxRef("EventTarget.dispatchEvent()")}}
+  - : Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates whether no handler canceled the event.
+- {{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}
+  - : Returns an array of Animation objects currently active on the element.
+- {{DOMxRef("Element.getAttribute()")}}
+  - : Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.
+- {{DOMxRef("Element.getAttributeNames()")}}
+  - : Returns an array of attribute names from the current element.
+- {{DOMxRef("Element.getAttributeNS()")}}
+  - : Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.
+- {{DOMxRef("Element.getAttributeNode()")}} {{Deprecated_Inline}}
+  - : Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.
+- {{DOMxRef("Element.getAttributeNodeNS()")}} {{Deprecated_Inline}}
+  - : Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.
+- {{DOMxRef("Element.getBoundingClientRect()")}}
+  - : 返回元素的大小及其相对于视口的位置。
+- {{DOMxRef("Element.getClientRects()")}}
+  - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
+- {{DOMxRef("Element.getElementsByClassName()")}}
+  - : 参数中给出类的列表，返回一个动态的 {{DOMxRef("HTMLCollection")}} ，包含了所有持有这些类的后代元素。
+- {{DOMxRef("Element.getElementsByTagName()")}}
+  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name, from the current element.
+- {{DOMxRef("Element.getElementsByTagNameNS()")}}
+  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.
+- {{DOMxRef("Element.hasAttribute()")}}
+  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.
+- {{DOMxRef("Element.hasAttributeNS()")}}
+  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.
+- {{DOMxRef("Element.hasAttributes()")}}
+  - : Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.
+- {{DOMxRef("Element.hasPointerCapture()")}}
+  - : Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.
+- {{DOMxRef("Element.insertAdjacentElement()")}}
+  - : Inserts a given element node at a given position relative to the element it is invoked upon.
+- {{DOMxRef("Element.insertAdjacentHTML()")}}
+  - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
+- {{DOMxRef("Element.insertAdjacentText()")}}
+  - : Inserts a given text node at a given position relative to the element it is invoked upon.
+- {{DOMxRef("Element.matches()")}} {{Experimental_Inline}}
+  - : Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.
+- {{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}
+  - : Returns a {{DOMxRef("CSSPseudoElement")}} representing the child pseudo-element matched by the specified pseudo-element selector.
+- {{DOMxRef("Element.querySelector()")}}
+  - : Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.
+- {{DOMxRef("Element.querySelectorAll()")}}
+  - : Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.
+- {{DOMxRef("Element.releasePointerCapture()")}}
+  - : Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.
+- {{DOMxRef("ChildNode.remove()")}} {{Experimental_Inline}}
+  - : Removes the element from the children list of its parent.
+- {{DOMxRef("Element.removeAttribute()")}}
+  - : Removes the named attribute from the current node.
+- {{DOMxRef("Element.removeAttributeNS()")}}
+  - : Removes the attribute with the specified name and namespace, from the current node.
+- {{DOMxRef("Element.removeAttributeNode()")}} {{Deprecated_Inline}}
+  - : Removes the node representation of the named attribute from the current node.
+- {{DOMxRef("EventTarget.removeEventListener()")}}
+  - : Removes an event listener from the element.
+- {{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}
+  - : Asynchronously asks the browser to make the element full-screen.
+- {{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}
+  - : Allows to asynchronously ask for the pointer to be locked on the given element.
+- {{DOMxRef("Element.scroll()")}}
+  - : Scrolls to a particular set of coordinates inside a given element.
+- {{DOMxRef("Element.scrollBy()")}}
+  - : Scrolls an element by the given amount.
+- {{DOMxRef("Element.scrollIntoView()")}} {{Experimental_Inline}}
+  - : Scrolls the page until the element gets into the view.
+- {{DOMxRef("Element.scrollTo()")}}
+  - : Scrolls to a particular set of coordinates inside a given element.
+- {{DOMxRef("Element.setAttribute()")}}
+  - : Sets the value of a named attribute of the current node.
+- {{DOMxRef("Element.setAttributeNS()")}}
+  - : Sets the value of the attribute with the specified name and namespace, from the current node.
+- {{DOMxRef("Element.setAttributeNode()")}} {{Deprecated_Inline}}
+  - : Sets the node representation of the named attribute from the current node.
+- {{DOMxRef("Element.setAttributeNodeNS()")}} {{Deprecated_Inline}}
+  - : Sets the node representation of the attribute with the specified name and namespace, from the current node.
+- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}
+  - : Sets up mouse event capture, redirecting all mouse events to this element.
+- {{DOMxRef("Element.setPointerCapture()")}}
+  - : Designates a specific element as the capture target of future [pointer events](/zh-CN/docs/Web/API/Pointer_events).
+- {{DOMxRef("Element.toggleAttribute()")}}
+  - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
 
-<p>Listen to these events using <code>addEventListener()</code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+## 事件
 
-<dl>
- <dt>{{DOMxRef("Element/cancel_event", "cancel")}}</dt>
- <dd>Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/oncancel", "oncancel")}} property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/Element/error_event">error</a></code></dt>
- <dd>Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onerror", "onerror")}} property.</dd>
- <dt>{{DOMxRef("Element/scroll_event", "scroll")}}</dt>
- <dd>Fired when the document view or an element has been scrolled.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.</dd>
- <dt>{{DOMxRef("Element/select_event", "select")}}</dt>
- <dd>Fired when some text has been selected.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.</dd>
- <dt>{{DOMxRef("Element/show_event", "show")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/Mozilla_event_reference/contextmenu">contextmenu</a> event was fired on/bubbled to an element that has a <a href="/en-US/DOM/element.contextmenu">contextmenu</a> attribute. {{deprecated_inline}}<br>
- Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.</dd>
- <dt>{{DOMxRef("Element/wheel_event","wheel")}}</dt>
- <dd>Fired when the user rotates a wheel button on a pointing device (typically a mouse).<br>
- Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.</dd>
-</dl>
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-<h3 id="剪贴板事件">剪贴板事件</h3>
+- {{DOMxRef("Element/cancel_event", "cancel")}}
 
-<dl>
- <dt>{{DOMxRef("Element/copy_event", "copy")}}</dt>
- <dd>Fired when the user initiates a copy action through the browser's user interface.<br>
- Also available via the {{DOMxRef("HTMLElement/oncopy", "oncopy")}} property.</dd>
- <dt>{{DOMxRef("Element/cut_event", "cut")}}</dt>
- <dd>Fired when the user initiates a cut action through the browser's user interface.<br>
- Also available via the {{DOMxRef("HTMLElement/oncut", "oncut")}} property.</dd>
- <dt>{{DOMxRef("Element/paste_event", "paste")}}</dt>
- <dd>Fired when the user initiates a paste action through the browser's user interface.<br>
- Also available via the {{DOMxRef("HTMLElement/onpaste", "onpaste")}} property.</dd>
-</dl>
+  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the&#x20;
 
-<h3 id="Composition_events">Composition events</h3>
+    <kbd>Esc</kbd>
 
-<dl>
- <dt>{{DOMxRef("Element/compositionend_event", "compositionend")}}</dt>
- <dd>Fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.</dd>
- <dt>{{DOMxRef("Element/compositionstart_event", "compositionstart")}}</dt>
- <dd>Fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.</dd>
- <dt>{{DOMxRef("Element/compositionupdate_event", "compositionupdate")}}</dt>
- <dd>Fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.</dd>
-</dl>
+    &#x20;key or clicks a "Close dialog" button which is part of the browser's UI.
+    Also available via the {{DOMxRef("GlobalEventHandlers/oncancel", "oncancel")}} property.
 
-<h3 id="Focus_events">Focus events</h3>
+- [`error`](/en-US/docs/Web/API/Element/error_event)
+  - : Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onerror", "onerror")}} property.
+- {{DOMxRef("Element/scroll_event", "scroll")}}
+  - : Fired when the document view or an element has been scrolled.
+    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
+- {{DOMxRef("Element/select_event", "select")}}
+  - : Fired when some text has been selected.
+    Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
+- {{DOMxRef("Element/show_event", "show")}}
+  - : Fired when a [contextmenu](/zh-CN/docs/Mozilla_event_reference/contextmenu) event was fired on/bubbled to an element that has a [contextmenu](/en-US/DOM/element.contextmenu) attribute. {{deprecated_inline}}
+    Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
+- {{DOMxRef("Element/wheel_event","wheel")}}
+  - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
+    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
 
-<dl>
- <dt>{{DOMxRef("Element/blur_event", "blur")}}</dt>
- <dd>Fired when an element has lost focus.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onblur", "onblur")}} property.</dd>
- <dt>{{DOMxRef("Element/focus_event", "focus")}}</dt>
- <dd>Fired when an element has gained focus.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onfocus", "onfocus")}} property</dd>
- <dt>{{DOMxRef("Element/focusin_event", "focusin")}}</dt>
- <dd>Fired when an element is about to gain focus.</dd>
- <dt>{{DOMxRef("Element/focusout_event", "focusout")}}</dt>
- <dd>Fired when an element is about to lose focus.</dd>
-</dl>
+### 剪贴板事件
 
-<h3 id="Fullscreen_events">Fullscreen events</h3>
+- {{DOMxRef("Element/copy_event", "copy")}}
+  - : Fired when the user initiates a copy action through the browser's user interface.
+    Also available via the {{DOMxRef("HTMLElement/oncopy", "oncopy")}} property.
+- {{DOMxRef("Element/cut_event", "cut")}}
+  - : Fired when the user initiates a cut action through the browser's user interface.
+    Also available via the {{DOMxRef("HTMLElement/oncut", "oncut")}} property.
+- {{DOMxRef("Element/paste_event", "paste")}}
+  - : Fired when the user initiates a paste action through the browser's user interface.
+    Also available via the {{DOMxRef("HTMLElement/onpaste", "onpaste")}} property.
 
-<dl>
- <dt><code>{{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}</code></dt>
- <dd>Sent to an {{DOMxRef("Element")}} when it transitions into or out of <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">full-screen</a> mode.<br>
- Also available via the {{DOMxRef("Element.onfullscreenchange", "onfullscreenchange")}} property.</dd>
- <dt><code>{{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}</code></dt>
- <dd>Sent to an <code>Element</code> if an error occurs while attempting to switch it into or out of <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">full-screen</a> mode.<br>
- Also available via the {{DOMxRef("Element.onfullscreenerror", "onfullscreenerror")}} property.</dd>
-</dl>
+### Composition events
 
-<h3 id="键盘事件">键盘事件</h3>
+- {{DOMxRef("Element/compositionend_event", "compositionend")}}
+  - : Fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.
+- {{DOMxRef("Element/compositionstart_event", "compositionstart")}}
+  - : Fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
+- {{DOMxRef("Element/compositionupdate_event", "compositionupdate")}}
+  - : Fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
 
-<dl>
- <dt><code>{{DOMxRef("Element/keydown_event", "keydown")}}</code></dt>
- <dd>Fired when a key is pressed.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.</dd>
- <dt><code>{{DOMxRef("Element/keypress_event", "keypress")}}</code></dt>
- <dd>Fired when a key that produces a character value is pressed down. {{deprecated_inline}}<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.</dd>
- <dt><code>{{DOMxRef("Element/keyup_event", "keyup")}}</code></dt>
- <dd>Fired when a key is released.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.</dd>
-</dl>
+### Focus events
 
-<h3 id="鼠标事件">鼠标事件</h3>
+- {{DOMxRef("Element/blur_event", "blur")}}
+  - : Fired when an element has lost focus.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onblur", "onblur")}} property.
+- {{DOMxRef("Element/focus_event", "focus")}}
+  - : Fired when an element has gained focus.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onfocus", "onfocus")}} property
+- {{DOMxRef("Element/focusin_event", "focusin")}}
+  - : Fired when an element is about to gain focus.
+- {{DOMxRef("Element/focusout_event", "focusout")}}
+  - : Fired when an element is about to lose focus.
 
-<dl>
- <dt>{{DOMxRef("Element/auxclick_event", "auxclick")}}</dt>
- <dd>Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onauxclick", "onauxclick")}} property.</dd>
- <dt>{{DOMxRef("Element/click_event", "click")}}</dt>
- <dd>Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onclick", "onclick")}} property.</dd>
- <dt>{{DOMxRef("Element/contextmenu_event", "contextmenu")}}</dt>
- <dd>Fired when the user attempts to open a context menu.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/oncontextmenu", "oncontextmenu")}} property.</dd>
- <dt>{{DOMxRef("Element/dblclick_event", "dblclick")}}</dt>
- <dd>Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/ondblclick", "ondblclick")}} property.</dd>
- <dt>{{DOMxRef("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}</dt>
- <dd>Occurs when an element is activated, for instance, through a mouse click or a keypress.</dd>
- <dt>{{DOMxRef("Element/mousedown_event", "mousedown")}}</dt>
- <dd>Fired when a pointing device button is pressed on an element.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onmousedown", "onmousedown")}} property.</dd>
- <dt>{{DOMxRef("Element/mouseenter_event", "mouseenter")}}</dt>
- <dd>Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onmouseenter", "onmouseenter")}} property.</dd>
- <dt>{{DOMxRef("Element/mouseleave_event", "mouseleave")}}</dt>
- <dd>Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onmouseleave", "onmouseleave")}} property.</dd>
- <dt>{{DOMxRef("Element/mousemove_event", "mousemove")}}</dt>
- <dd>Fired when a pointing device (usually a mouse) is moved while over an element.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onmousemove", "onmousemove")}} property.</dd>
- <dt>{{DOMxRef("Element/mouseout_event", "mouseout")}}</dt>
- <dd>Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onmouseout", "onmouseout")}} property.</dd>
- <dt>{{DOMxRef("Element/mouseover_event", "mouseover")}}</dt>
- <dd>Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onmouseover", "onmouseover")}} property.</dd>
- <dt>{{DOMxRef("Element/mouseup_event", "mouseup")}}</dt>
- <dd>Fired when a pointing device button is released on an element.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/onmouseup", "onmouseup")}} property.</dd>
- <dt>{{DOMxRef("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}</dt>
- <dd>Fired each time the amount of pressure changes on the trackpadtouchscreen.</dd>
- <dt>{{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}</dt>
- <dd>Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".</dd>
- <dt>{{DOMxRef("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}</dt>
- <dd>Fired before the {{DOMxRef("Element/mousedown_event", "mousedown")}} event.</dd>
- <dt>{{DOMxRef("Element/webkitmouseforceup_event", "webkitmouseforceup")}}</dt>
- <dd>Fired after the {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".</dd>
-</dl>
+### Fullscreen events
 
-<h3 id="Touch_events">Touch events</h3>
+- `{{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}`
+  - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
+    Also available via the {{DOMxRef("Element.onfullscreenchange", "onfullscreenchange")}} property.
+- `{{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}`
+  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
+    Also available via the {{DOMxRef("Element.onfullscreenerror", "onfullscreenerror")}} property.
 
-<dl>
- <dt>{{DOMxRef("Element/touchcancel_event", "touchcancel")}}</dt>
- <dd>Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}} property.</dd>
- <dt>{{DOMxRef("Element/touchend_event", "touchend")}}</dt>
- <dd>Fired when one or more touch points are removed from the touch surface.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/ontouchend", "ontouchend")}} property</dd>
- <dt>{{DOMxRef("Element/touchmove_event", "touchmove")}}</dt>
- <dd>Fired when one or more touch points are moved along the touch surface.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/ontouchmove", "ontouchmove")}} property</dd>
- <dt>{{DOMxRef("Element/touchstart_event", "touchstart")}}</dt>
- <dd>Fired when one or more touch points are placed on the touch surface.<br>
- Also available via the {{DOMxRef("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property</dd>
-</dl>
+### 键盘事件
 
-<h2 id="规范">规范</h2>
+- `{{DOMxRef("Element/keydown_event", "keydown")}}`
+  - : Fired when a key is pressed.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
+- `{{DOMxRef("Element/keypress_event", "keypress")}}`
+  - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
+    Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
+- `{{DOMxRef("Element/keyup_event", "keyup")}}`
+  - : Fired when a key is released.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
+
+### 鼠标事件
+
+- {{DOMxRef("Element/auxclick_event", "auxclick")}}
+  - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onauxclick", "onauxclick")}} property.
+- {{DOMxRef("Element/click_event", "click")}}
+  - : Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onclick", "onclick")}} property.
+- {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+  - : Fired when the user attempts to open a context menu.
+    Also available via the {{DOMxRef("GlobalEventHandlers/oncontextmenu", "oncontextmenu")}} property.
+- {{DOMxRef("Element/dblclick_event", "dblclick")}}
+  - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
+    Also available via the {{DOMxRef("GlobalEventHandlers/ondblclick", "ondblclick")}} property.
+- {{DOMxRef("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
+  - : Occurs when an element is activated, for instance, through a mouse click or a keypress.
+- {{DOMxRef("Element/mousedown_event", "mousedown")}}
+  - : Fired when a pointing device button is pressed on an element.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onmousedown", "onmousedown")}} property.
+- {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
+  - : Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseenter", "onmouseenter")}} property.
+- {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
+  - : Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseleave", "onmouseleave")}} property.
+- {{DOMxRef("Element/mousemove_event", "mousemove")}}
+  - : Fired when a pointing device (usually a mouse) is moved while over an element.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onmousemove", "onmousemove")}} property.
+- {{DOMxRef("Element/mouseout_event", "mouseout")}}
+  - : Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseout", "onmouseout")}} property.
+- {{DOMxRef("Element/mouseover_event", "mouseover")}}
+  - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseover", "onmouseover")}} property.
+- {{DOMxRef("Element/mouseup_event", "mouseup")}}
+  - : Fired when a pointing device button is released on an element.
+    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseup", "onmouseup")}} property.
+- {{DOMxRef("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
+  - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
+- {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
+  - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
+- {{DOMxRef("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
+  - : Fired before the {{DOMxRef("Element/mousedown_event", "mousedown")}} event.
+- {{DOMxRef("Element/webkitmouseforceup_event", "webkitmouseforceup")}}
+  - : Fired after the {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
+
+### Touch events
+
+- {{DOMxRef("Element/touchcancel_event", "touchcancel")}}
+  - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
+    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}} property.
+- {{DOMxRef("Element/touchend_event", "touchend")}}
+  - : Fired when one or more touch points are removed from the touch surface.
+    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchend", "ontouchend")}} property
+- {{DOMxRef("Element/touchmove_event", "touchmove")}}
+  - : Fired when one or more touch points are moved along the touch surface.
+    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchmove", "ontouchmove")}} property
+- {{DOMxRef("Element/touchstart_event", "touchstart")}}
+  - : Fired when one or more touch points are placed on the touch surface.
+    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Element")}}</p>
+{{Compat("api.Element")}}

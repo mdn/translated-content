@@ -2,38 +2,36 @@
 title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>This constructor is used to create a synthetic {{domxref("DragEvent")}} object.</p>
+This constructor is used to create a synthetic {{domxref("DragEvent")}} object.
 
-<p>Although this interface has a constructor, it is not possible to create a useful {{domxref("DataTransfer")}} object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.</p>
+Although this interface has a constructor, it is not possible to create a useful {{domxref("DataTransfer")}} object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.
 
-<p>该接口继承了 {{domxref("MouseEvent")}} 和 {{domxref("Event")}} 的属性。</p>
+该接口继承了 {{domxref("MouseEvent")}} 和 {{domxref("Event")}} 的属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> <em>event</em> = new DragEvent(<em>type</em>, <em>DragEventInit</em>);</pre>
+```
+ event = new DragEvent(type, DragEventInit);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>type</em></dt>
- <dd>Is a <code>{{domxref("DOMString")}}</code> representing the name of the event (see <a href="/Web/API/DragEvent#Event_types">DragEvent event types</a>).</dd>
- <dt><em>DragEventInit</em>{{optional_inline}}</dt>
- <dd>Is a <code>DragEventInit</code> dictionary, having the following fields:
+- _type_
+  - : Is a `{{domxref("DOMString")}}` representing the name of the event (see [DragEvent event types](/Web/API/DragEvent#Event_types)).
+- _DragEventInit_{{optional_inline}}
 
- <ul>
-  <li><code>"dataTransfer"</code>, optional and defaults to <code>"null"</code>. The type is <code>{{domxref("DataTransfer")}}</code>.</li>
- </ul>
- </dd>
-</dl>
+  - : Is a `DragEventInit` dictionary, having the following fields:
 
-<p>The <code>DragEventInit</code> dictionary inherits from the {{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.</p>
+    - `"dataTransfer"`, optional and defaults to `"null"`. The type is `{{domxref("DataTransfer")}}`.
 
-<h2 id="标准">标准</h2>
+The `DragEventInit` dictionary inherits from the {{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.
+
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DragEvent.DragEvent")}}

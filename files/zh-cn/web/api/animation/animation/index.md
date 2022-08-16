@@ -2,43 +2,40 @@
 title: Animation.Animation()
 slug: Web/API/Animation/Animation
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>Animation 构造函数返回一个新的 Animation 对象实例。</p>
+Animation 构造函数返回一个新的 Animation 对象实例。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<div class="syntaxbox">
-<pre class="brush: js">var animation = new Animation(effect, timeline);</pre>
-</div>
+```js
+var animation = new Animation(effect, timeline);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>effect {{optional_inline}}</dt>
- <dd>将{{domxref("KeyframeEffect")}}对象分配给动画。（在将来，其他类型的效果，如 SequenceEffects 或 GroupEffects 是可能被实现的，但现在，唯一的效果是 KeyframeEffect。）</dd>
- <dt>timeline {{optional_inline}}</dt>
- <dd>指定与动画关联的时间轴。（目前唯一可用的时间轴类型是{{domxref("DocumentTimeline")}}，但在将来我会有与手势或滚动相关联的时间轴。）默认为{{domxref("Document.timeline")}}。 这也可以设置为 null。</dd>
-</dl>
+- effect {{optional_inline}}
+  - : 将{{domxref("KeyframeEffect")}}对象分配给动画。（在将来，其他类型的效果，如 SequenceEffects 或 GroupEffects 是可能被实现的，但现在，唯一的效果是 KeyframeEffect。）
+- timeline {{optional_inline}}
+  - : 指定与动画关联的时间轴。（目前唯一可用的时间轴类型是{{domxref("DocumentTimeline")}}，但在将来我会有与手势或滚动相关联的时间轴。）默认为{{domxref("Document.timeline")}}。 这也可以设置为 null。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在<a href="http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">White Rabbit</a>示例中，Animation 构造函数用于使用文档时间轴为兔子创建关键帧动画：</p>
+在[White Rabbit](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010)示例中，Animation 构造函数用于使用文档时间轴为兔子创建关键帧动画：
 
-<pre class="brush: js">var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
-</pre>
+```js
+var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.Animation.Animation")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

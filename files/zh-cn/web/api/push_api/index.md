@@ -22,7 +22,7 @@ Service worker 会在必要的时候启动并接收接下来的推送消息，�
 
 > **备注：** 从 Gecko 44 开始，当新的通知触发时，每个应用程序允许的推送消息配额不会增加，而另一个仍然可见，持续三秒钟。 这可以处理收到通知突发的情况，而不是所有通知都会产生可见通知。
 
-> **备注：** :早于 52 的 Chrome 版本要求您在[Google Cloud Messaging](https://developers.google.com/cloud-messaging/)上设置项目以发送推送消息，并在发送推送通知时使用关联的项目编号和 API 密钥。 它还需要一个应用程序清单，其中包含一些使用此服务的特殊参数。
+> **备注：** 早于 52 的 Chrome 版本要求您在[Google Cloud Messaging](https://developers.google.com/cloud-messaging/)上设置项目以发送推送消息，并在发送推送通知时使用关联的项目编号和 API 密钥。 它还需要一个应用程序清单，其中包含一些使用此服务的特殊参数。
 
 ## 接口
 

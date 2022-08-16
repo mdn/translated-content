@@ -2,25 +2,26 @@
 title: FormData.entries()
 slug: Web/API/FormData/entries
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>FormData.entries()</strong></code> 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象，此对象可以遍历访问 FormData 中的键值对。其中键值对的 key 是一个 {{domxref("USVString")}} 对象；value 是一个 {{domxref("USVString")}} , 或者 {{domxref("Blob")}}对象。</p>
+The **`FormData.entries()`** 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象，此对象可以遍历访问 FormData 中的键值对。其中键值对的 key 是一个 {{domxref("USVString")}} 对象；value 是一个 {{domxref("USVString")}} , 或者 {{domxref("Blob")}}对象。
 
-<div class="note">
-<p><strong>Note</strong>: 此方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 可用。</p>
-</div>
+> **备注：** 此方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 可用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">formData.entries();</pre>
+```
+formData.entries();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回 {{jsxref("Iteration_protocols","iterator")}}。</p>
+返回 {{jsxref("Iteration_protocols","iterator")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js; highlight:[7]">// Create a test FormData object
+```js
+// Create a test FormData object
 var formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
@@ -29,26 +30,26 @@ formData.append('key2', 'value2');
 for(var pair of formData.entries()) {
    console.log(pair[0]+ ', '+ pair[1]);
 }
-</pre>
+```
 
-<p>执行结果为：</p>
+执行结果为：
 
-<pre>key1, value1
-key2, value2</pre>
+```
+key1, value1
+key2, value2
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.FormData.entries")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

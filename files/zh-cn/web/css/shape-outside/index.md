@@ -48,17 +48,12 @@ shape-outside: unset;
 
     - `margin-box`
       - : 定义一个由外边距的外边缘封闭形成的形状。这个形状的角的半径由相应的{{cssxref("border-radius")}} 和{{cssxref("margin")}} 的值决定。如果 `border-radius / margin` 的比率大于等于 `1` , 那么这个 margin box 的角的弧度就是 `border-radius + margin` ；如果比率小于 `1`，那么这个 margin box 的角的弧度就是 `border-radius + (margin * (1 + (ratio-1)^3))` 。
-    - ## `border-box`
-
-          : 定义一个由边界的外边缘封闭形成的形状。这个形状遵循正常的边界外部圆角的形成规则。
-
-    - ## `padding-box`
-
-          : 定义一个由内边距的外边缘封闭形成的形状。这个形状遵循正常的边界内部圆角的形成规则。
-
-    - ## `content-box`
-
-          : 定义一个由内容区域的外边缘封闭形成的形状（译者：表述的不太好，就是被 padding 包裹的区域，在 chrome 控制台中的盒子模型图中的蓝色区域。）。每一个角的弧度取 `0` 或 `border-radius - border-width - padding` 中的较大值。
+    - `border-box`
+      - : 定义一个由边界的外边缘封闭形成的形状。这个形状遵循正常的边界外部圆角的形成规则。
+    - `padding-box`
+      - : 定义一个由内边距的外边缘封闭形成的形状。这个形状遵循正常的边界内部圆角的形成规则。
+    - `content-box`
+      - : 定义一个由内容区域的外边缘封闭形成的形状（译者：表述的不太好，就是被 padding 包裹的区域，在 chrome 控制台中的盒子模型图中的蓝色区域。）。每一个角的弧度取 `0` 或 `border-radius - border-width - padding` 中的较大值。
 
 - {{cssxref("&lt;basic-shape&gt;")}}
   - : 基于 [`inset()`](</en-US/docs/Web/CSS/basic-shape#inset()>)， [`circle()`](</en-US/docs/Web/CSS/basic-shape#circle()>)， [`ellipse()`](</en-US/docs/Web/CSS/basic-shape#ellipse()>)，或者 [`polygon()`](</en-US/docs/Web/CSS/basic-shape#polygon()>)其中一个创造出来的形状计算出浮动区域。如果同时存在 `<shape-box>` ，那么会为 `<basic-shape>` 方法定义一个参考盒，这个参考盒默认为 `margin-box` 。

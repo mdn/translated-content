@@ -2,25 +2,26 @@
 title: FormData.keys()
 slug: Web/API/FormData/keys
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><code><strong>FormData.keys()</strong></code> 该方法返回一个迭代器（{{jsxref("Iteration_protocols",'iterator')}}），遍历了该 formData  包含的所有 key，这些 key 是 {{domxref("USVString")}} 对象。</p>
+**`FormData.keys()`** 该方法返回一个迭代器（{{jsxref("Iteration_protocols",'iterator')}}），遍历了该 formData 包含的所有 key，这些 key 是 {{domxref("USVString")}} 对象。
 
-<div class="note">
-<p><strong>注意</strong>: 该方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 可用。</p>
-</div>
+> **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 可用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">formData.keys();</pre>
+```js
+formData.keys();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个迭代器（ {{jsxref("Iteration_protocols","iterator")}}）。</p>
+返回一个迭代器（ {{jsxref("Iteration_protocols","iterator")}}）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js; highlight:[7]">// 先创建一个 FormData 对象
+```js
+// 先创建一个 FormData 对象
 var formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
@@ -29,26 +30,26 @@ formData.append('key2', 'value2');
 for (var key of formData.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>结果如下：</p>
+结果如下：
 
-<pre>key1
-key2</pre>
+```
+key1
+key2
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FormData.keys")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

@@ -2,25 +2,26 @@
 title: Headers.entries()
 slug: Web/API/Headers/entries
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p><code><strong>Headers.entries()</strong></code> 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对. </p>
+**`Headers.entries()`** 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对.
 
-<div class="note">
-<p><strong>备注：</strong>这个方法在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a>中是可用的。</p>
-</div>
+> **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中是可用的。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">headers.entries();</pre>
+```js
+headers.entries();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>返回一个 {{jsxref("Iteration_protocols","迭代器")}}.</p>
+返回一个 {{jsxref("Iteration_protocols","迭代器")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js; highlight:[7]">// Create a test Headers object
+```js
+// Create a test Headers object
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
@@ -29,21 +30,21 @@ myHeaders.append('Vary', 'Accept-Language');
 for (var pair of myHeaders.entries()) {
    console.log(pair[0]+ ': '+ pair[1]);
 }
-</pre>
+```
 
-<p>返回结果：</p>
+返回结果：
 
-<pre>content-type: text/xml
-vary: Accept-Language</pre>
+```
+content-type: text/xml
+vary: Accept-Language
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

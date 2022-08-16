@@ -393,13 +393,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - [`fullscreenerror`](/en-US/docs/Web/Events/fullscreenerror)
   - : Fired if an error occurs while attempting to switch into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Document.onfullscreenerror", "onfullscreenerror")}} 属性。
-- ### Keyboard events
 
-  `{{DOMxRef("Document/keydown_event", "keydown")}}`
+### Keyboard events
 
+- `{{DOMxRef("Document/keydown_event", "keydown")}}`
   - : Fired when a key is pressed.
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} 属性。
-
 - `{{DOMxRef("Document/keypress_event", "keypress")}}`
   - : Fired when a key that produces a character value is pressed down. {{Deprecated_Inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} 属性。
@@ -477,13 +476,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Document/touchstart_event", "touchstart")}}
   - : Fired when one or more touch points are placed on the touch surface.
     Also available via the {{domxref("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property
-- ### Transition events
 
-  {{domxref("Document/transitioncancel_event", "transitioncancel")}}
+### Transition events
 
+- {{domxref("Document/transitioncancel_event", "transitioncancel")}}
   - : Fired when a [CSS transition](/zh-CN/docs/CSS/Using_CSS_transitions) is canceled.
     Also available via the {{domxref("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}} 属性。
-
 - {{domxref("Document/transitionend_event", "transitionend")}}
   - : Fired when a [CSS transition](/zh-CN/docs/CSS/Using_CSS_transitions) has completed.
     Also available via the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}} 属性。
