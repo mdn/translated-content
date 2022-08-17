@@ -1,63 +1,54 @@
 ---
-title: MDN Web Docs についてのフィードバックを送る
+title: コミュニティガイドライン
 slug: MDN/Community
+page-type: mdn-community-guide
 tags:
-  - Documentation
-  - Guide
-  - MDN
-  - MDN Meta
-translation_of: MDN/Contribute/Feedback
-original_slug: MDN/Contribute/Feedback
+  - meta
+  - community-guidelines
+  - governance
+translation_of: MDN/Community
+i10n:
+  sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>MDN Web Docs へようこそ! <span class="seoSummary">MDN Web Docs への提案があったり、利用していて問題があったりした場合は、ここが正しい場所です。フィードバックを送ることに興味を持っていただいたことで、 Mozilla コミュニティの一員であることを実感していただけると思います。興味を持ってくださり、ありがとうございます。</span></p>
+👋 MDN Web Docs on GitHub へようこそ! MDN Web Docs は、[HTML](/ja/docs/Web/HTML)、[CSS](/ja/docs/Web/CSS)、[JavaScript](/ja/docs/Web/JavaScript)、[Web API](/ja/docs/Web/API) など、ウェブプラットフォーム技術のオープンソースかつ共同プロジェクトで、その文書を作成しています。また、初期段階の開発者や学生向けに、豊富な[学習リソース](/ja/docs/Learn)を提供しています。
 
-<p><span class="seoSummary">あなたの知見を提供するにはいくつかの選択肢があり、この記事は手助けになるでしょう。</span></p>
+## 協力方法
 
-<h2 id="Update_the_documentation">文書を更新する</h2>
+[//]: # "TODO: ドキュメントを移動させる際には、これらのリンクを忘れずに更新してください。"
 
-<p>まず最初に、文書に問題があった場合は、いつでも気軽に修正することができます。まずは、<a href="https://github.com/mdn/content/#making-contributions">協力を行うための具体的な手順</a>を参照してください。</p>
+- [影響度の高い既知の問題の修正](https://github.com/orgs/mdn/projects/25/views/1)
+- [プルリクエストのレビュー](/ja/docs/MDN/Community/Pull_requests/)
+- [MDN Web Docsで初心者の学習を支援する](/ja/docs/MDN/Community/Learn_forum/)
+- [MDN Web Docs のインタラクティブサンプルへの協力](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
+- [MDN Web Docs の翻訳の協力](/ja/docs/MDN/Community/Contributing/Translated_content)
+- [プラットフォームに関する既知の問題の修正に協力する](https://github.com/mdn/yari/issues)
+- [ブラウザー互換性データを最新の状態に保つためにご協力ください](https://github.com/mdn/browser-compat-data)
 
-<p>ここの文書は <a href="https://github.com/mdn/content/">GitHub に格納されており</a>、ボランティアと有給のスタッフのチームによって監督されています。なので遠慮せずに — 文法が完璧である必要ありません。変更はレビューされ、修正の手助けをします。何も心配いりません。</p>
+## クイックリンク
 
-<p>MDN の文書化への協力について、もっと詳しい情報は、下記をご覧ください。</p>
+- [リポジトリーの概要](contributing/our-repositories/)
+- [ユーザーとチーム](users-teams/)
+- [Git と GitHub に慣れている場合](./contributing/getting-started/general/index.md)
+- [Git と GitHub を始める](./contributing/getting-started/beginners/index.md)
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Getting_started">始めましょう</a>は、始めるためのより詳しい方法</li>
- <li><a href="/ja/docs/MDN/Contribute">MDN への協力</a>は、手伝うことができる特定のタスクのアイディア</li>
-</ul>
+## 行動規範
 
-<h2 id="Join_the_conversation">会話に参加しましょう</h2>
+私たちのプロジェクトや議論に参加し、協力することによって、あなたは [Mozilla コミュニティ参加ガイドライン](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)を読み、同意したものとしますます。
 
-<p>私たちと話しましょう! MDN のコンテンツについて作業する他の人と連絡を取るための、いくつかの方法があります。 (訳注: 基本的に英語でのコミュニケーションとなります。)</p>
+### お問い合わせ
 
-<h3 id="Synchronous_Chat">(同期的な) チャット</h3>
+MDN Web Docs チームやコミュニティと連絡を取るには、 [Matrix チャンネル](https://chat.mozilla.org/#/room/#mdn:mozilla.org)、 [Discourse](https://discourse.mozilla.org/c/mdn/236) のフォーラム、 [GitHub](https://github.com/mdn/mdn-community/discussions) のディスカッションが利用できます。
 
-<p>MDN やそのコンテンツについての会話を <a href="https://wiki.mozilla.org/Matrix">Matrix</a> で行っています。会話に参加していただくことができます。</p>
+- ウェブ開発を学んでいて、コーディングの問題に行き詰まった場合、質問をしたり助けを求めたりできる[アクティブんはフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。
 
-<p><a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">MDN Web Docs</a></p>
+### 一般的なサポートに関する質問
 
-<p>この部屋は、サイトの利用、サイト内のコンテンツの閲覧、サイト内のコンテンツへの協力など、 MDN の一般的な議論を行うための部屋です。記事の内容についての質問やコメント、見たい記事や作成したい記事などについて、文書作成チームと話したいことなどがあれば、ここで話し合ってください。</p>
+私たちは小さなチームで、絶えず変化するウェブのエコシステムの文書化の要求に追いつくために、一所懸命作業しています。残念ながら、私たちは一般的なサポートに関する質問には対応できません。コードを学んでいる間の一般的なヘルプについては、以下のリソースを参照してください。
 
-<h3 id="Asynchronous_Discussions">(非同期の) 議論</h3>
+- [ウェブ開発を学ぶ](https://developer.mozilla.org/docs/Learn)
+- [MDN Web Docs 学習フォーラム](https://discourse.mozilla.org/c/mdn/learn/250)
+- [Stackoverflow](https://stackoverflow.com/questions/)
 
-<p><a href="https://discourse.mozilla-community.org/c/mdn">MDN discussion forum</a> で、長期にわたる議論を行っています。<a href="mailto://mdn@mozilla-community.org">mdn@mozilla-community.org</a> へ電子メールを送信すると、フォーラムに投稿できます。フォーラムに参加する場合は、議論に関する通知を電子メールで送信するかを選択することもできます。</p>
-
-<h2 id="Report_an_issue">問題を報告する</h2>
-
-<h3 id="Documentation_issues">文書の問題</h3>
-
-<p>問題を見つけても、何らかの理由により自分で修正できない場合は、<a href="https://github.com/mdn/content/issues/new/choose" title="文書の内容の問題を報告">問題を報告</a>することができます。翻訳の問題の場合は、<a href="https://github.com/mdn/translated-content/issues/new/choose" title="翻訳の問題を報告">翻訳コンテンツに報告</a>することもできます。このフォームは以下のようなあらゆる文書の問題に使用することができます。</p>
-
-<ul>
- <li>単純な修正</li>
- <li>内容の新しい部分全体に対する要求</li>
- <li>不適切な内容の報告 (スパムや間違った場所での翻訳など)</li>
-</ul>
-
-<p>前述のように、あなた自身で協力していただきたいところですが、この選択肢も同様に利用できます。</p>
-
-<h3 id="Site_issues">サイトの問題</h3>
-
-<p>MDN のウェブサイトの問題に遭遇した場合や、サイトの新機能のアイデアがある場合、 <a href="https://github.com/mdn/yari/issues">MDN 開発チームにチケットを発行</a>することもできます。</p>
+サポートを依頼するリポジトリーで開かれた課題、議論、プルリクエストはすべてここに誘導され、その後クローズしてロックされます。
