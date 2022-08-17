@@ -1,14 +1,6 @@
 ---
 title: <head>
 slug: Web/HTML/Element/head
-tags:
-  - HTML
-  - HTML 文档元数据
-  - Web
-  - head
-  - 元素
-  - 参考
-translation_of: Web/HTML/Element/head
 ---
 ## 概述
 

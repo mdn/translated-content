@@ -1,16 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/Input/file
-tags:
-  - HTML
-  - HTML 表单
-  - 多个文件
-  - 文件
-  - 文件选择器
-  - 目录选择器
-  - 表单输入
-  - 输入类型
-translation_of: Web/HTML/Element/input/file
 ---
 {{HTMLRef}}
 

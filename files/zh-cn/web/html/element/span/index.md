@@ -1,13 +1,6 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - HTML
-  - span
-  - 元素
-  - 流内容
-  - 行内元素
-translation_of: Web/HTML/Element/span
 ---
 {{HTMLRef}}
 

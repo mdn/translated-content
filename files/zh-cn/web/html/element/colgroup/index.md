@@ -1,13 +1,6 @@
 ---
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-  - 表格
-translation_of: Web/HTML/Element/colgroup
 ---
 {{HTMLRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - HTML
-  - 元素
-  - 参考
-  - 网页
-  - 范围
-translation_of: Web/HTML/Element/input/range
 original_slug: Web/HTML/Element/Input/范围
 ---
 {{HTMLRef}}

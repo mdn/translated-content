@@ -1,13 +1,6 @@
 ---
 title: <del>
 slug: Web/HTML/Element/del
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Web
-  - del
-translation_of: Web/HTML/Element/del
 ---
 HTML 的**`<del>`**标签表示一些被从文档中删除的文字内容。比如可以在需要显示修改记录或者源代码差异的情况使用这个标签。{{HTMLElement("ins")}}标签的作用恰恰于此相反：表示文档中添加的内容。
 

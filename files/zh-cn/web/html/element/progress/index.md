@@ -1,7 +1,6 @@
 ---
 title: <progress>：进度指示元素
 slug: Web/HTML/Element/progress
-translation_of: Web/HTML/Element/progress
 ---
 ## 概述
 

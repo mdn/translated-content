@@ -1,12 +1,6 @@
 ---
 title: <dt>
 slug: Web/HTML/Element/dt
-tags:
-  - HTML
-  - HTML 分组内容
-  - 元素
-  - 引用
-translation_of: Web/HTML/Element/dt
 ---
 ## 简介
 

@@ -1,14 +1,6 @@
 ---
 title: <a>
 slug: Web/HTML/Element/a
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 元素
-translation_of: Web/HTML/Element/a
 ---
 {{HTMLRef}}
 

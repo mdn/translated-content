@@ -1,14 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-tags:
-  - Element
-  - HTML 表单
-  - 元素
-  - 参考
-  - 表单
-  - 选择
-translation_of: Web/HTML/Element/option
 ---
 {{HTMLRef}}
 

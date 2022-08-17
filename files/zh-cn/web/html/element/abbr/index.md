@@ -1,14 +1,6 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - abbr
-translation_of: Web/HTML/Element/abbr
 ---
 {{HTMLRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
-translation_of: Web/HTML/Global_attributes/inputmode
 ---
 **`inputmode`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 是一个枚举属性，它提供了用户在编辑元素或其内容时可能输入的数据类型的提示。它可以是以下值：
 

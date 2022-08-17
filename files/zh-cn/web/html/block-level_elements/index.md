@@ -1,12 +1,6 @@
 ---
 title: 块级元素
 slug: Web/HTML/Block-level_elements
-tags:
-  - HTML
-  - Web 开发
-  - 初学者
-  - 指南
-translation_of: Web/HTML/Block-level_elements
 ---
 HTML（超文本标记语言）中元素大多数都是“块级”元素或[行内元素](/zh-CN/docs/Web/HTML/Inline_elements)。块级元素占据其父元素（容器）的整个水平空间，垂直空间等于其内容高度，因此创建了一个“块”。这篇文章帮助解释这个概念。
 

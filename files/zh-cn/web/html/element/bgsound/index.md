@@ -1,7 +1,6 @@
 ---
 title: <bgsound>
 slug: Web/HTML/Element/bgsound
-translation_of: Web/HTML/Element/bgsound
 ---
 {{non-standard_header}}
 

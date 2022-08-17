@@ -1,12 +1,6 @@
 ---
 title: <details>：详细信息展现元素
 slug: Web/HTML/Element/details
-tags:
-  - HTML
-  - HTML5
-  - Web
-  - 元素
-translation_of: Web/HTML/Element/details
 ---
 {{HTMLRef}}
 

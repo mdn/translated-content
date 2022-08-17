@@ -1,13 +1,6 @@
 ---
 title: <dialog>
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - HTML
-  - 元素
-  - 参考
-  - 可交互
-translation_of: Web/HTML/Element/dialog
 ---
 {{HTMLRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: <input type="submit">
 slug: Web/HTML/Element/Input/submit
-tags:
-  - HTML
-  - Input
-  - Input Type
-  - submit
-  - 元素
-  - 按钮
-  - 表单
-  - 表单按钮
-  - 表单输入
-translation_of: Web/HTML/Element/input/submit
 ---
 {{HTMLRef}}
 

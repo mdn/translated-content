@@ -1,7 +1,6 @@
 ---
 title: <track>
 slug: Web/HTML/Element/track
-translation_of: Web/HTML/Element/track
 ---
 **HTML `<track>` 元素** 被当作媒体元素—{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}的子元素来使用。它允许指定时序文本字幕（或者基于时间的数据），例如自动处理字幕。字幕格式有 [WebVTT 格式](/zh-CN/docs/Web/API/Web_Video_Text_Tracks_Format)（`.vtt`格式文件）— Web 视频文本字幕格式，以及指[时序文本标记语言（TTML）](https://w3c.github.io/ttml2/index.html)格式。
 

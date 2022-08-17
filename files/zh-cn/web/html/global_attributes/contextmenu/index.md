@@ -1,12 +1,6 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Global attributes
-  - HTML
-  - 全局属性
-  - 参考
-translation_of: Web/HTML/Global_attributes/contextmenu
 ---
 {{HTMLSidebar("Global_attributes")}}
 

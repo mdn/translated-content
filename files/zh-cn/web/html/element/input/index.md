@@ -1,16 +1,6 @@
 ---
 title: <input>：输入（表单输入）元素
 slug: Web/HTML/Element/Input
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input
 ---
 {{HTMLRef}}
 

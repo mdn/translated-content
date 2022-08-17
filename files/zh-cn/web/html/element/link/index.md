@@ -1,13 +1,6 @@
 ---
 title: <link>：外部资源链接元素
 slug: Web/HTML/Element/link
-tags:
-  - HTML
-  - Web
-  - 元数据
-  - 元素
-  - 参考
-translation_of: Web/HTML/Element/link
 ---
 {{HTMLRef}}
 

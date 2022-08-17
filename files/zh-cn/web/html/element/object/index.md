@@ -1,11 +1,6 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-tags:
-  - Element
-  - HTML
-  - Web
-translation_of: Web/HTML/Element/object
 ---
 ## 概要
 

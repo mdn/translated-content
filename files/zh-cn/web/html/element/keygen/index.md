@@ -1,10 +1,6 @@
 ---
 title: <keygen>
 slug: Web/HTML/Element/keygen
-tags:
-  - Deprecated
-  - HTML forms
-translation_of: Web/HTML/Element/keygen
 ---
 {{deprecated_header}}
 

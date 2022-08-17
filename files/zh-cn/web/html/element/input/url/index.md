@@ -1,7 +1,6 @@
 ---
 title: <input type="url">
 slug: Web/HTML/Element/Input/url
-translation_of: Web/HTML/Element/input/url
 ---
 {{HTMLRef}}
 

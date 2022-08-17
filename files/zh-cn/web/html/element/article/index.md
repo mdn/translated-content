@@ -1,10 +1,6 @@
 ---
 title: <article>
 slug: Web/HTML/Element/article
-tags:
-  - HTML
-  - 元素
-translation_of: Web/HTML/Element/article
 ---
 {{HTMLRef}}
 
