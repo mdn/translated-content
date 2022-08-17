@@ -1,7 +1,6 @@
 ---
 title: Content Editable
 slug: Web/Guide/HTML/Editable_content
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Content_Editable
 ---
 在 HTML 中，任何元素都可以被编辑。通过使用一些 JavaScript 事件处理程序，您可以将您的网页转换为完整且快速的富文本编辑器。本文提供了有关此功能的一些信息。

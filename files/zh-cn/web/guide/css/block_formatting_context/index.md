@@ -1,12 +1,6 @@
 ---
 title: 块格式化上下文
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - BFC
-  - Block Formatting Context
-  - CSS
-  - 块格式化上下文
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
 {{ CSSRef }}
 

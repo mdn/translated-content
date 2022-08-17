@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 slug: Web/Guide/AJAX/Getting_Started
-translation_of: Web/Guide/AJAX/Getting_Started
 ---
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
