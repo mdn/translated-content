@@ -1,14 +1,6 @@
 ---
 title: Web 性能
 slug: Web/Performance
-tags:
-  - API
-  - HTML
-  - JavaScript
-  - Web
-  - 性能
-  - 性能优化
-translation_of: Web/Performance
 ---
 Web 性能是客观的衡量标准，是用户对加载时间和运行时的直观体验。Web 性能指页面加载到可交互和可响应所消耗的时间，以及页面在交互时的流畅度——滚动是否顺滑？按钮能否点击？弹窗能否快速打开，动画是否平滑？Web 性能既包括客观的度量如加载时间，每秒帧数和到页面可交互的时间；也包括用户的对页面内容加载时间的主观感觉。
 
