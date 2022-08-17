@@ -1,7 +1,6 @@
 ---
 title: media
 slug: Web/SVG/Attribute/media
-translation_of: Web/SVG/Attribute/media
 ---
 {{SVGRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: SVG 属性参考
 slug: Web/SVG/Attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - SVG 属性
-  - 矢量图形
-translation_of: Web/SVG/Attribute
 ---
 {{SVGRef}}
 

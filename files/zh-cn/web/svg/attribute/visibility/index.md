@@ -1,11 +1,6 @@
 ---
 title: visibility
 slug: Web/SVG/Attribute/visibility
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/visibility
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

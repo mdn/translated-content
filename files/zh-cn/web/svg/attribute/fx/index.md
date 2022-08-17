@@ -1,13 +1,6 @@
 ---
 title: fx
 slug: Web/SVG/Attribute/fx
-tags:
-  - SVG
-  - SVG 属性
-  - SVG 径向渐变
-  - SVG 渐变
-  - SVG 渐变焦点
-translation_of: Web/SVG/Attribute/fx
 ---
 « [SVG 属性参考主页](/zh-CN/docs/web/SVG/Attribute)
 

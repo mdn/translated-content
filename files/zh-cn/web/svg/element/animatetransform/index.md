@@ -1,12 +1,6 @@
 ---
 title: animateTransform
 slug: Web/SVG/Element/animateTransform
-tags:
-  - SVG
-  - SVG 动画
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/animateTransform
 ---
 {{SVGRef}}
 

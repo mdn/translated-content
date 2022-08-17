@@ -1,7 +1,6 @@
 ---
 title: pathLength
 slug: Web/SVG/Attribute/pathLength
-translation_of: Web/SVG/Attribute/pathLength
 ---
 {{SVGRef}}
 

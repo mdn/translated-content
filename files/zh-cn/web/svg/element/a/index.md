@@ -1,11 +1,6 @@
 ---
 title: a
 slug: Web/SVG/Element/a
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-translation_of: Web/SVG/Element/a
 ---
 {{SVGRef}}
 

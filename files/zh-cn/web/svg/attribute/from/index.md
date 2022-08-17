@@ -1,7 +1,6 @@
 ---
 title: from
 slug: Web/SVG/Attribute/From
-translation_of: Web/SVG/Attribute/From
 ---
 « [SVG 属性参考](/en/SVG/Attribute)
 

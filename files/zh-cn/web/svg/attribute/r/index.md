@@ -1,10 +1,6 @@
 ---
 title: r
 slug: Web/SVG/Attribute/r
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/r
 ---
 {{SVGRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: 入门
 slug: Web/SVG/Tutorial/Getting_Started
-tags:
-  - SVG
-  - SVG 教程
-  - 起步
-translation_of: Web/SVG/Tutorial/Getting_Started
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
