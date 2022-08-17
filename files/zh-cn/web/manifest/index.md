@@ -1,11 +1,6 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-tags:
-  - Manifest
-  - manifest.json
-  - web app manifest
-translation_of: Web/Manifest
 ---
 [Web 应用程序清单](<web app manifest>)在一个 JSON 文本文件中提供有关应用程序的信息（如名称，作者，图标和描述）。manifest 的目的是将 Web 应用程序安装到设备的主屏幕，为用户提供更快的访问和更丰富的体验。
 

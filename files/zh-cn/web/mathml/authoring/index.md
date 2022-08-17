@@ -1,10 +1,6 @@
 ---
 title: 编写 MathML
 slug: Web/MathML/Authoring
-tags:
-  - MathML
-  - 起步
-translation_of: Web/MathML/Authoring
 ---
 {{MathMLRef}}
 
