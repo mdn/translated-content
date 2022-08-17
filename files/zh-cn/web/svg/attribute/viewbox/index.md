@@ -1,11 +1,6 @@
 ---
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
-tags:
-  - SVG
-  - SVG Attribute
-  - viewBox
-translation_of: Web/SVG/Attribute/viewBox
 ---
 « [SVG 属性参考](/en/SVG/Attribute)
 

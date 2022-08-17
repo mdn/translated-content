@@ -1,7 +1,6 @@
 ---
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
-translation_of: Web/SVG/Attribute/filterUnits
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

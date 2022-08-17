@@ -1,10 +1,6 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/stroke-linecap
 ---
 « [SVG 属性 参照主页](/zh-CN/docs/Web/SVG/Attribute)
 

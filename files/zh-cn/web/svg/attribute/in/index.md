@@ -1,7 +1,6 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
-translation_of: Web/SVG/Attribute/in
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

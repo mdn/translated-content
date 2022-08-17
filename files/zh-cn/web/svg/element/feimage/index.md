@@ -1,13 +1,6 @@
 ---
 title: feImage
 slug: Web/SVG/Element/feImage
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/feImage
 ---
 {{SVGRef}}
 

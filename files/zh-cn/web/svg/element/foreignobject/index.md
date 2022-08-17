@@ -1,11 +1,6 @@
 ---
 title: foreignObject
 slug: Web/SVG/Element/foreignObject
-tags:
-  - SVG
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/foreignObject
 ---
 {{SVGRef}}
 

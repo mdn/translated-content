@@ -1,7 +1,6 @@
 ---
 title: string
 slug: Web/SVG/Attribute/string
-translation_of: Web/SVG/Attribute/string
 ---
 {{SVGRef}}{{deprecated_header("SVG 2")}}
 

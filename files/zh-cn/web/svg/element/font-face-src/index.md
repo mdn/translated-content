@@ -1,14 +1,6 @@
 ---
 title: font-face-src
 slug: Web/SVG/Element/font-face-src
-tags:
-  - SVG
-  - SVG 字体
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/font-face-src
 ---
 {{SVGRef}}
 

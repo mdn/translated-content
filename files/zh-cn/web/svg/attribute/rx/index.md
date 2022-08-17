@@ -1,10 +1,6 @@
 ---
 title: rx
 slug: Web/SVG/Attribute/rx
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/rx
 ---
 {{SVGRef}}
 
