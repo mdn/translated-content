@@ -5,7 +5,7 @@ translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 ---
 {{APIRef("CSSOM View")}}
 
-There are several properties you can look at in order to determine the width and height of elements, and it can be tricky to determine which is the right one for your needs. This article is designed to help you make that decision. Note that all these properties are read-only. If you want to set the width and height of an element, use `width `and` ``height;` or, the overriding [`min-width`](/zh-TW/docs/Web/CSS/min-width) and [`max-width`](/zh-TW/docs/Web/CSS/max-width), and [`min-height`](/zh-TW/docs/Web/CSS/min-height) and [`max-height`](/zh-TW/docs/Web/CSS/max-height) properties.
+There are several properties you can look at in order to determine the width and height of elements, and it can be tricky to determine which is the right one for your needs. This article is designed to help you make that decision. Note that all these properties are read-only. If you want to set the width and height of an element, use `width` and `height` or, the overriding [`min-width`](/zh-TW/docs/Web/CSS/min-width) and [`max-width`](/zh-TW/docs/Web/CSS/max-width), and [`min-height`](/zh-TW/docs/Web/CSS/min-height) and [`max-height`](/zh-TW/docs/Web/CSS/max-height) properties.
 
 ## How much room does it use up?
 

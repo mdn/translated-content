@@ -24,6 +24,7 @@ translation_of: Web/API/MediaSource
   - : 回傳一個列舉類型表示目前 `MediaSource` 的狀態：沒有附加到媒體元件 (`closed`)，已經附加且可以接收 {{domxref("SourceBuffer")}} 物件 (`open`)，已經附加但是串流已經經由 {{domxref("MediaSource.endOfStream()")}} 結束 (`ended`)。
 - {{domxref("MediaSource.duration")}}
   - : 取得或設置現在正被表示的媒體的時間長度。
+
 - ### 事件處理函數 (Event handlers)
 
   {{domxref("MediaSource.onsourceclose")}}

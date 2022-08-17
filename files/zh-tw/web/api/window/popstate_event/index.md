@@ -10,7 +10,7 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 
 視窗上 popstate 事件的事件處理器。
 
-在同一文件的當前歷史紀錄變動時，如果其變動介於兩個歷史紀錄間，`popstate` 就會被呼叫。如果當前的歷史紀錄是藉由呼叫 `history.pushState() `建立，或曾被 `history.replaceState() 修改過，popstate `事件的 `state` 屬性，將包含一份歷史紀錄的 state 物件。
+在同一文件的當前歷史紀錄變動時，如果其變動介於兩個歷史紀錄間，`popstate` 就會被呼叫。如果當前的歷史紀錄是藉由呼叫 `history.pushState()`建立，或曾被 `history.replaceState()` 修改過，`popstate` 事件的 `state` 屬性，將包含一份歷史紀錄的 `state` 物件。
 
 請注意：直接呼叫 `history.pushState()` 或 `history.replaceState()` 不會驅動 `popstate` 事件。`popstate` 事件只會被瀏覽器的行為驅動，例如點擊上一頁按鈕（或透過 JavaScript 呼叫 `history.back()`）。且此事件只會在用戶於同文件的兩個歷史紀錄間瀏覽時作動。
 
@@ -41,7 +41,7 @@ history.back(); // 跳出 "location: http://example.com/example.html, state: nul
 history.go(2);  // 跳出 "location: http://example.com/example.html?page=3, state: {"page":3}
 ```
 
-請注意，雖然原始的歷史紀錄（`http://example.com/example.html`）沒有關聯的 state 物件，在我們第二次呼叫 ` hitsory.back() 時仍然會觸發`` ``popstate ` 事件。
+請注意，雖然原始的歷史紀錄（`http://example.com/example.html`）沒有關聯的 `state` 物件，在我們第二次呼叫 ` hitsory.back()` 時仍然會觸發 `popstate` 事件。
 
 ## 標準
 

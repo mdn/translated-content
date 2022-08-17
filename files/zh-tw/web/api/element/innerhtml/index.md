@@ -12,7 +12,7 @@ translation_of: Web/API/Element/innerHTML
 
 [Element](/zh-TW/docs/Glossary/Element) 的「innerHTML」屬性獲取或設置元素中包含的 HTML 或 XML 標記。
 
-> **備註：** 如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（<）或（>），innerHTML 分別地回傳這些字符成為 HTML 的`“&” `，`“<” `和` “>” `。 使用 `Node.textContent` 得到的這些文本節點的內容的原始拷貝件。
+> **備註：** 如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（<）或（>），innerHTML 分別地回傳這些字符成為 HTML 的 `“&”`，`“<”` 和 `“>”`。 使用 `Node.textContent` 得到的這些文本節點的內容的原始拷貝件。
 
 To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
@@ -75,9 +75,9 @@ document.documentElement.innerHTML = "<pre>" +
 
 What exactly happens when you set value of `innerHTML`? Doing so causes the user agent to follow these steps:
 
-1.  The specified value is parsed as HTML or XML (based on the document type), resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.
-2.  If the element whose contents are being replaced is a {{HTMLElement("template")}} element, then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
-3.  For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
+1. The specified value is parsed as HTML or XML (based on the document type), resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.
+2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element, then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
+3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
 
 ### Security considerations
 
