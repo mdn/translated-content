@@ -1,17 +1,6 @@
 ---
 title: 对象初始化
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Literal
-  - Methods
-  - Object
-  - Primary Expression
-  - computed
-  - mutation
-  - properties
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 {{JsSidebar("Operators")}}
 

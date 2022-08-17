@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Prototype
-  - 原型
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 {{JSRef}}
 

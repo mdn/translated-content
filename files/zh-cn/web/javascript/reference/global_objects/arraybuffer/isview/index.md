@@ -1,10 +1,6 @@
 ---
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
-tags:
-  - 类型数组
-  - 缓冲区
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
 {{JSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: 正则表达式
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - JavaScript
-  - RegExp
-  - Regular Expressions
-  - 中级
-  - 参考
-  - 指南
-  - 正则表达式
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 

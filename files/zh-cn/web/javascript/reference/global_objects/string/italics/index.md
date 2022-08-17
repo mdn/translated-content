@@ -1,7 +1,6 @@
 ---
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
-translation_of: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
 {{JSRef}} {{deprecated_header}}
 

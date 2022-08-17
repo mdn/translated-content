@@ -1,11 +1,6 @@
 ---
 title: 严格模式
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - JavaS
-  - Strict Mode
-  - 严格模式
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 {{JsSidebar("More")}}
 

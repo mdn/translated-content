@@ -1,10 +1,6 @@
 ---
 title: void 运算符
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - Unary
-translation_of: Web/JavaScript/Reference/Operators/void
 ---
 {{jsSidebar("Operators")}}
 

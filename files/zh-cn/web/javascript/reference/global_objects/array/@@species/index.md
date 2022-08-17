@@ -1,12 +1,6 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - JavaScript
-  - 原型
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
 {{JSRef}}
 

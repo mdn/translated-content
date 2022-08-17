@@ -1,14 +1,6 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-tags:
-  - JavaScript
-  - String
-  - Unicode
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
 {{JSRef}}
 

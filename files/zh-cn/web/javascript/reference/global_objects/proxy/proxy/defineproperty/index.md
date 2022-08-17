@@ -1,7 +1,6 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/defineProperty
 ---
 {{JSRef}}

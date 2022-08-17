@@ -2,15 +2,6 @@
 title: 原始迭代协议
 slug: >-
   Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
-tags:
-  - ES2015
-  - JavaScript
-  - Legacy Iterator
-  - 传统迭代协议
-  - 废弃属性
-  - 旧式迭代器
-translation_of: >-
-  Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 ---
 {{jsSidebar("More")}}
 

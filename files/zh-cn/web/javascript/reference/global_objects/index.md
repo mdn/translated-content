@@ -1,12 +1,6 @@
 ---
 title: JavaScript 标准内置对象
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Reference
-  - 参考
-  - 总览
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
 {{JSSidebar("Objects")}}
 

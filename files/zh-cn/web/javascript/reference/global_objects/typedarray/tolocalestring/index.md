@@ -1,11 +1,6 @@
 ---
 title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 ---
 {{JSRef}}
 

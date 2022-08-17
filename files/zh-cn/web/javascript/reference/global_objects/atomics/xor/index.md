@@ -1,7 +1,6 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Guide
-  - JavaScript
-  - Promise
-  - 中级
-  - 异步
-  - 指南
-translation_of: Web/JavaScript/Guide/Using_promises
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 

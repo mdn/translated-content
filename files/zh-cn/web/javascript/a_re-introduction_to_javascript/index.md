@@ -1,13 +1,6 @@
 ---
 title: 重新介绍 JavaScript（JS 教程）
 slug: Web/JavaScript/A_re-introduction_to_JavaScript
-tags:
-  - JavaScript
-  - 指南
-  - 教程
-  - 进阶
-  - 高级
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 {{jsSidebar}}
 

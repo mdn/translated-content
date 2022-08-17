@@ -1,7 +1,6 @@
 ---
 title: 乘法 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
-translation_of: Web/JavaScript/Reference/Operators/Multiplication
 ---
 {{jsSidebar("Operators")}}
 

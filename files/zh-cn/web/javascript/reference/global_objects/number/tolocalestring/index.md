@@ -1,13 +1,6 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - JavaScript
-  - 原型
-  - 国际化
-  - 数字
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
 {{JSRef("Global_Objects", "Number")}}
 

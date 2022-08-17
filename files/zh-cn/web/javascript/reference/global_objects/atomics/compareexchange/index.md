@@ -1,12 +1,6 @@
 ---
 title: Atomics.compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
-tags:
-  - Atomics
-  - JavaScript
-  - 共享内存
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 ---
 {{JSRef}} {{SeeCompatTable}}
 

@@ -1,11 +1,6 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-tags:
-  - JavaScript
-  - 属性
-  - 错误
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ---
 {{JSRef}} {{non-standard_header}}
 

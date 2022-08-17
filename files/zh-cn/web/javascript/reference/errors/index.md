@@ -1,13 +1,6 @@
 ---
 title: JavaScript 错误参考
 slug: Web/JavaScript/Reference/Errors
-tags:
-  - Debugging
-  - Errors
-  - JavaScript
-  - 调试
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors
 ---
 {{jsSidebar("Errors")}}
 

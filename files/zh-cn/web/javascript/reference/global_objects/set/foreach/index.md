@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
 {{JSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ---
 {{JSRef("Global_Objects", "RegExp")}}
 

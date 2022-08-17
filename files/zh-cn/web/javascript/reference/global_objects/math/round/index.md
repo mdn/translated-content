@@ -1,10 +1,6 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - Math.round()
-  - 四舍五入
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
 {{JSRef}}
 

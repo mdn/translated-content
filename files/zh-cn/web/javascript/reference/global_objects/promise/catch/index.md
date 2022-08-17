@@ -1,10 +1,6 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - Promise
-  - Promise.prototype.catch()
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 {{JSRef}}
 

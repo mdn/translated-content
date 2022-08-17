@@ -1,13 +1,6 @@
 ---
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-tags:
-  - JavaScript
-  - 参考
-  - 指南
-  - 正则
-  - 正则表达式
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 ---
 {{jsSidebar("JavaScript Guide")}}
 

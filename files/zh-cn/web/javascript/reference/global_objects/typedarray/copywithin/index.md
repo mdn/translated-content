@@ -1,10 +1,6 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-tags:
-  - 类型化数组
-  - 类型数组
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 ---
 {{JSRef}}
 

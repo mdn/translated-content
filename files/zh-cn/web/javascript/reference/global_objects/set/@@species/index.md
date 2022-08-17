@@ -1,11 +1,6 @@
 ---
 title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
-tags:
-  - ECMAScript2015
-  - JavaScript
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
 {{JSRef}}
 

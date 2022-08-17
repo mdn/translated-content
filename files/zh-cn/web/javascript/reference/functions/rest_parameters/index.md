@@ -1,12 +1,6 @@
 ---
 title: 剩余参数
 slug: Web/JavaScript/Reference/Functions/Rest_parameters
-tags:
-  - Functions
-  - JavaScript
-  - Rest
-  - Rest parameters
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 {{jsSidebar("Functions")}}
 

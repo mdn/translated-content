@@ -1,7 +1,6 @@
 ---
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 可迭代协议
-  - 迭代
-  - 迭代器
-  - 迭代器协议
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
 {{jsSidebar("More")}}
 

@@ -1,18 +1,6 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-tags:
-  - ECMAScript 2015
-  - ES 6
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - polyfill
-  - repeat()
-  - 填充
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
 {{JSRef}}
 

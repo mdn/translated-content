@@ -1,15 +1,6 @@
 ---
 title: JavaScript 中的相等性判断
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - JavaScr
-  - 严格相等
-  - 同值相等
-  - 比较
-  - 相等
-  - 零值相等
-  - 非严格相等
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 {{jsSidebar("Intermediate")}}
 

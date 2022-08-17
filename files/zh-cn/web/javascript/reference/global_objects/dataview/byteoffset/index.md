@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 ---
 {{JSRef}}
 

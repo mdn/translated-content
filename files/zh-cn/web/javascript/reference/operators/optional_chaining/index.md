@@ -1,17 +1,6 @@
 ---
 title: 可选链操作符
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - '?.'
-  - JavaScript
-  - Optional chaining (?.)
-  - Reference
-  - 参考
-  - 可选链
-  - 语言特性
-  - 运算符
-  - 链式调用
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 original_slug: Web/JavaScript/Reference/Operators/可选链
 ---
 {{JSSidebar("Operators")}}

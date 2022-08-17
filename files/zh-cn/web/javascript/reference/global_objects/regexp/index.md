@@ -1,13 +1,6 @@
 ---
 title: RegExp(正则表达式)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 {{JSRef}}
 

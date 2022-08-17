@@ -1,9 +1,6 @@
 ---
 title: 加法赋值 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - +=
-translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
 {{jsSidebar("Operators")}}
 

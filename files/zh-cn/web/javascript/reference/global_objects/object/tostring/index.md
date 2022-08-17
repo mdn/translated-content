@@ -1,15 +1,6 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - 原型
-  - 对象
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 {{JSRef}}
 
