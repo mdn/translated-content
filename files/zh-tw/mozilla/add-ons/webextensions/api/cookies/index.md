@@ -1,21 +1,6 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - 介面
-  - 參考文件
-  - 擴充套件
-  - 附加元件
-  - 非標準
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
 {{AddonSidebar}}讓擴充套件可以取得、設定 cookies 資訊，並監控其變動。
 

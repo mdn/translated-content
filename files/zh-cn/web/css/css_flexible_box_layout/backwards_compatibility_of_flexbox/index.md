@@ -1,16 +1,6 @@
 ---
 title: Flexbox 的向下支持
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-tags:
-  - '@supports'
-  - IE
-  - Safari
-  - flexbox
-  - 兼容
-  - 弹性盒子
-  - 旧版本
-  - 浏览器
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 ---
 {{CSSRef}}

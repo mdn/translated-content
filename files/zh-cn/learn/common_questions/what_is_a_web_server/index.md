@@ -1,7 +1,6 @@
 ---
 title: 什么是网络服务器？
 slug: Learn/Common_questions/What_is_a_web_server
-translation_of: Learn/Common_questions/What_is_a_web_server
 ---
 在这篇文章中我们会重温什么是网络服务器，它们如何工作，以及为什么它们很重要。
 

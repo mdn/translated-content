@@ -1,14 +1,6 @@
 ---
 title: 调整列表缩进
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - Guide
-  - NeedsUpdate
-  - Web
-  - 列表
-  - 缩进
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 original_slug: Web/Guide/CSS/Consistent_list_indentation
 ---
 对列表最常见的样式修改之一是改变缩进距离，即列表项向右侧移动的距离。令人沮丧的是，缩进在一个浏览器中的表现常常与其他浏览器中的效果不尽相同。例如，如果声明列表的左边距为 0，在 IE 浏览器中生效，但是在基于 Gecko 引擎的浏览器中却不起作用。本文将帮助你理解这些可能发生的问题，以及如何避免这些问题的产生。

@@ -1,7 +1,6 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/Input/image
-translation_of: Web/HTML/Element/input/image
 ---
 {{HTMLRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-translation_of: Web/CSS/grid
 ---
 **`grid`** 是一个 CSS 简写属性，可以用来设置以下属性：
 显式网格属性 {{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas")}}，

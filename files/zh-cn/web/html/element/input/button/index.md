@@ -1,7 +1,6 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/Input/button
-translation_of: Web/HTML/Element/input/button
 ---
 {{HTMLRef}}
 

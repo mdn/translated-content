@@ -1,7 +1,6 @@
 ---
 title: ':right'
 slug: Web/CSS/:right
-translation_of: Web/CSS/:right
 ---
 **`:right`** [CSS](/zh-CN/docs/Learn/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)必须与[@规则](/zh-CN/docs/Web/CSS/At-rule) {{cssxref("@page")}} 一起配套使用，表示打印文档的所有右页。
 

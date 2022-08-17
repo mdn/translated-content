@@ -1,13 +1,6 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-name
 ---
 {{CSSRef}}`animation-name`属性指定应用的一系列动画，每个名称代表一个由{{cssxref("@keyframes")}}定义的动画序列。
 

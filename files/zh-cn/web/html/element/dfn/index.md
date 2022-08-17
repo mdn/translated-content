@@ -1,7 +1,6 @@
 ---
 title: <dfn>
 slug: Web/HTML/Element/dfn
-translation_of: Web/HTML/Element/dfn
 ---
 ## 摘要
 

@@ -1,12 +1,6 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - CSS 定位
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/clear
 ---
 {{CSSRef}}
 

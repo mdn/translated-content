@@ -1,7 +1,6 @@
 ---
 title: 框架的主要特性
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

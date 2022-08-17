@@ -1,7 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/mask
-translation_of: Web/CSS/mask
 ---
 {{CSSRef}}
 

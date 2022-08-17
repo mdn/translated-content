@@ -1,14 +1,6 @@
 ---
 title: 如何构建 CSS
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - CSS
-  - HTML
-  - 初学者
-  - 注释
-  - 结构
-  - 选择器
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 

@@ -1,7 +1,6 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-translation_of: Web/CSS/transform-function/matrix3d()
 original_slug: Web/CSS/transform-function/matrix3d()
 ---
 {{CSSRef}}

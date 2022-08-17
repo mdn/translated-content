@@ -1,7 +1,6 @@
 ---
 title: 第三方 API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 

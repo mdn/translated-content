@@ -1,9 +1,6 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-tags:
-  - 全局属性 语言标签 lang
-translation_of: Web/HTML/Global_attributes/lang
 ---
 {{HTMLSidebar("Global_attributes")}}
 

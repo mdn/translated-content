@@ -1,14 +1,6 @@
 ---
 title: <h1>–<h6>：HTML 区域标题元素
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Web
-  - 元素
-  - 标题
-translation_of: Web/HTML/Element/Heading_Elements
 ---
 **HTML `<h1>`–`<h6>` 标题 (Heading) 元素**呈现了六个不同的级别的标题，`<h1>` 级别最高，而 `<h6>` 级别最低。
 

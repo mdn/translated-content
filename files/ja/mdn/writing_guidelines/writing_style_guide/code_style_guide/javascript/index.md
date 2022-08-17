@@ -477,6 +477,7 @@ let s = d/t;
 ## 関連情報
 
 私たちの [JavaScript 言語リファレンス](/ja/docs/Web/JavaScript/Reference) のページのトップに、簡潔で意味のある良い JavaScript のスニペットがあります。参照していくつか見つけてください。私たちのインタラクティブな例 (およびその他の例) は、おおむね上記のガイドラインに沿って書かれていますが、ほとんどはガイドラインが新しく書かれる前に書かれたものなので、ところどころ違っている可能性があることを認識しておいてください。
+
 - API の例については、以下のものを見てみてください。
   - [`fetch()` の例](/ja/docs/Web/API/fetch#例)
   - [`fillRect()` の例](/ja/docs/Web/API/CanvasRenderingContext2D/fillRect#例) （Canvas 2D の例は、古いスタイルの `var` をまだ使用していますが、概ね良好です）。

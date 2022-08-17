@@ -1,7 +1,6 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-translation_of: Web/CSS/display-outside
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: 掌握弹性物件的包装
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
-tags:
-  - CSS
-  - 包装
-  - 弹性
-  - 弹性盒子
-  - 折叠物件
-  - 网格
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
 {{CSSRef}}
 

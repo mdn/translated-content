@@ -1,14 +1,6 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - CSS Property
-  - CSS 属性
-  - Reference
-  - 参考
-  - 弹性盒
-translation_of: Web/CSS/flex-shrink
 ---
 {{ CSSRef}}
 

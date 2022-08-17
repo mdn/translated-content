@@ -1,12 +1,6 @@
 ---
 title: CSS Tutorials
 slug: Web/CSS/Tutorials
-tags:
-  - CSS
-  - NeedsTranslation
-  - TopicStub
-  - Tutorials
-translation_of: Web/CSS/Tutorials
 ---
 学习 CSS 可能是一项令人望而生畏的事情。我们编写了很多的 css 教程来帮助你。有些教程完全面向新手，而其他文章展现了一些 css 的复杂特性，适合拥有丰富经验的开发者。
 

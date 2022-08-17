@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 渐变
 slug: Web/CSS/CSS_Images/Using_CSS_gradients
-translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: Web/Guide/CSS/Using_CSS_gradients
 ---
 {{CSSRef}}

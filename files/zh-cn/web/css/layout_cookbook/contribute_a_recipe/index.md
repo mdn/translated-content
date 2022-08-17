@@ -1,7 +1,6 @@
 ---
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
-translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
 ---
 {{CSSRef}}
 

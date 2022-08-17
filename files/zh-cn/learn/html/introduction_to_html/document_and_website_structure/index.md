@@ -1,16 +1,6 @@
 ---
 title: 文档与网站架构
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - HTML
-  - 块
-  - 教程
-  - 新手
-  - 样式
-  - 站点
-  - 脚本编写
-  - 页面
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

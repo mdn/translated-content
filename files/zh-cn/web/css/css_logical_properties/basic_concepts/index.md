@@ -1,7 +1,6 @@
 ---
 title: 逻辑属性的和值的基本概念
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
-translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
 original_slug: Web/CSS/CSS_Logical_Properties/Basic_conceptsjie
 ---
 {{CSSRef}}

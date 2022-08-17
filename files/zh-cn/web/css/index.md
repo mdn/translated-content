@@ -1,14 +1,6 @@
 ---
 title: CSS（层叠样式表）
 slug: Web/CSS
-tags:
-  - CSS
-  - 参考
-  - 层叠样式表
-  - 布局
-  - 样式
-  - 设计
-translation_of: Web/CSS
 ---
 {{CSSRef}}
 

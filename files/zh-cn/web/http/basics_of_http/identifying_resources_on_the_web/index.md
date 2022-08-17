@@ -1,10 +1,6 @@
 ---
 title: 标识互联网上的内容
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - HTTP
-  - URI
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 {{HTTPSidebar}}
 

@@ -72,7 +72,7 @@ Si vous cherchez la documentation sur l'objet {{domxref("Document")}}, l'objet {
 ## D'autres API fréquemment utilisées
 
 - Les fonctions {{domxref("WindowTimers.setTimeout", "setTimeout")}} et {{domxref("WindowTimers.setInterval", "setInterval")}} ont d'abord été spécifiées dans l'interface {{domxref("Window")}} du standard HTML.
-- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html "http://dev.w3.org/2006/webapi/XMLHttpRequest-2/") : une API qui permet d'envoyer des requêtes HTTP asynchrones (voir aussi : [la page MDN sur XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest))
+- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) : une API qui permet d'envoyer des requêtes HTTP asynchrones (voir aussi : [la page MDN sur XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest))
 - [CSS Object Model](http://dev.w3.org/csswg/cssom/) : le CSSOM est utilisé pour abstraire les règles CSS sous forme d'objets. (voir aussi : [la page MDN sur CSSOM](/fr/docs/Web/API/CSS_Object_Model))
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) : une API qui permet d'effectuer des calculs parallèles (voir aussi : [la page MDN sur cette API](/fr/docs/Web/API/Web_Workers_API))
 - [WebSockets](https://html.spec.whatwg.org/multipage//#network) : une API qui permet d'effectuer des communications bi-directionnelles de bas-niveau (voir aussi : [la page MDN sur cette API](/fr/docs/WebSockets))

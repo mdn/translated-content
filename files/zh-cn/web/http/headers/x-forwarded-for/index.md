@@ -1,11 +1,6 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - 请求首部
-  - 转发
-  - 首部
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
 {{HTTPSidebar}}
 

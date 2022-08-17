@@ -1,14 +1,6 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
-tags:
-  - CSS
-  - CSS Shapes
-  - Float Area
-  - Opacity
-  - Reference
-  - shape-image-threshold
-translation_of: Web/CSS/shape-image-threshold
 ---
 {{CSSRef}}
 

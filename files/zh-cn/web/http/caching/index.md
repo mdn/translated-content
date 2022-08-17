@@ -1,18 +1,6 @@
 ---
 title: HTTP 缓存
 slug: Web/HTTP/Caching
-tags:
-  - Cache-Control
-  - ETag
-  - Expires
-  - HTTP
-  - HTTP Cache
-  - Last-Modified
-  - 协商缓存
-  - 强缓存
-  - 指南
-  - 缓存
-translation_of: Web/HTTP/Caching
 original_slug: Web/HTTP/Caching_FAQ
 ---
 {{HTTPSidebar}}

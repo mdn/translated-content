@@ -1,11 +1,6 @@
 ---
 title: Warning
 slug: Web/HTTP/Headers/Warning
-tags:
-  - 警告
-  - 警告码
-  - 通用首部
-translation_of: Web/HTTP/Headers/Warning
 ---
 {{HTTPSidebar}}
 

@@ -1,9 +1,6 @@
 ---
 title: 典型的 HTTP 会话
 slug: Web/HTTP/Session
-tags:
-  - HTTP
-translation_of: Web/HTTP/Session
 ---
 {{HTTPSidebar}}
 

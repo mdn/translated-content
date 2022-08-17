@@ -1,10 +1,6 @@
 ---
 title: 实时传输 Web 音频与视频
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-tags:
-  - 指引
-  - 自适应流
-translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
 实时流技术经常应用在一些现场输出的转播活动，类似体育活动、演唱会和更平常的电视播放及广播节目。这通常称为流媒体，实时流就是将媒体“实时”传输到计算机和设备的过程。这是一个包含多个元素的、非常复杂且较为新生的主题，所以我们会通过这篇文章，向你介绍它并让你知道如何开始。
 

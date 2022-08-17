@@ -1,14 +1,6 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/Input/email
-tags:
-  - HTML
-  - HTML forms
-  - Input Type
-  - 参考
-  - 电子邮件
-  - 表单
-translation_of: Web/HTML/Element/input/email
 ---
 {{HTMLRef}}
 

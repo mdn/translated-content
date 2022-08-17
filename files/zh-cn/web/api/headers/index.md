@@ -42,7 +42,7 @@ slug: Web/API/Headers
 
 > **备注：** 值得注意的是，在 header 已存在或者有多个值的状态下{{domxref("Headers.set()")}} 和 {{domxref("Headers.append()")}}的使用有如下区别，{{domxref("Headers.set()")}} 将会用新的值覆盖已存在的值，但是{{domxref("Headers.append()")}}会将新的值添加到已存在的值的队列末尾。请参相关词条内的示例代码。
 
-> **备注：** :如果您尝试传入名称不是[有效的 HTTP 头名称](https://fetch.spec.whatwg.org/#concept-header-name)的引用，则所有 Headers 方法都将引发 `TypeError` 。 如果头部有一个不变的{{Glossary("Guard")}}，则变异操作将会抛出一个 `TypeError` 。 在其他任何失败的情况下，他们默默地失败。
+> **备注：** 如果您尝试传入名称不是[有效的 HTTP 头名称](https://fetch.spec.whatwg.org/#concept-header-name)的引用，则所有 Headers 方法都将引发 `TypeError` 。 如果头部有一个不变的{{Glossary("Guard")}}，则变异操作将会抛出一个 `TypeError` 。 在其他任何失败的情况下，他们默默地失败。
 
 ### Obsolete methods
 

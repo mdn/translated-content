@@ -1,10 +1,6 @@
 ---
 title: 使用 HTML 解决常见问题
 slug: learn/HTML/Howto
-tags:
-  - HTML
-  - 常见问题
-translation_of: Learn/HTML/Howto
 ---
 {{LearnSidebar}}
 

@@ -1,11 +1,6 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/align-content
 ---
 {{CSSRef("CSS Flexible Boxes")}}
 

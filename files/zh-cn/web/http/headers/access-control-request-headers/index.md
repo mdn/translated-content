@@ -1,9 +1,6 @@
 ---
 title: Access-Control-Request-Headers
 slug: Web/HTTP/Headers/Access-Control-Request-Headers
-tags:
-  - 跨域资源共享
-translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
 {{HTTPSidebar}}
 

@@ -1,10 +1,6 @@
 ---
 title: Web 开发者指南
 slug: Web/Guide
-tags:
-  - Web
-  - 指南
-translation_of: Web/Guide
 ---
 **这些文章提供了如何使用特定 Web 技术和 API 的指南信息。**
 

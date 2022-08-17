@@ -1,11 +1,6 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
-tags:
-  - CSS 文字
-  - 布局
-  - 排版
-translation_of: Web/CSS/text-justify
 ---
 {{CSSRef}}
 

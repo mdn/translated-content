@@ -1,13 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - HTTP method
-  - HTTP 方法
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/PATCH
 ---
 {{HTTPSidebar}}
 

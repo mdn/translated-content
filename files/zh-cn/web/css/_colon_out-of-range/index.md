@@ -1,7 +1,6 @@
 ---
 title: ':out-of-range'
 slug: Web/CSS/:out-of-range
-translation_of: Web/CSS/:out-of-range
 ---
 {{CSSRef}}**`:out-of-range` **[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-min) 和 [`max`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-max) 限定的范围外。
 

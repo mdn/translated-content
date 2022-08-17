@@ -1,15 +1,6 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - CSS 属性
-  - CSS 网格
-  - Reference
-  - 参考
-translation_of: Web/CSS/grid-auto-rows
 ---
 CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 

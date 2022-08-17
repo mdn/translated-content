@@ -1,7 +1,6 @@
 ---
 title: 居中一个元素
 slug: Web/CSS/Layout_cookbook/Center_an_element
-translation_of: Web/CSS/Layout_cookbook/Center_an_element
 ---
 {{CSSRef}}
 

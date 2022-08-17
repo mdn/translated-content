@@ -1,10 +1,6 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-tags:
-  - X-XSS-Protection
-  - 跨站脚本攻击
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
 {{HTTPSidebar}}
 

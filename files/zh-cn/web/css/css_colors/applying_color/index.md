@@ -1,12 +1,6 @@
 ---
 title: 使用 CSS 为 HTML 元素应用颜色
 slug: Web/CSS/CSS_Colors/Applying_color
-tags:
-  - HTML
-  - 入门
-  - 指南
-  - 颜色
-translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 {{HTMLRef}}

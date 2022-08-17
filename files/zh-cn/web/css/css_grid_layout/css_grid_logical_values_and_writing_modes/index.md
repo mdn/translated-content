@@ -1,11 +1,6 @@
 ---
 title: CSS 网格，逻辑值和书写模式
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
-tags:
-  - CSS
-  - CSS 指南
-  - 指南
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
 original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
 ---
 在前面的文章中，我们已经接触了网格布局的一个重要特性：被纳入规范的对不同书写模式的支持。本文我们将探讨在网格和其他现代布局方式下的这个特性的表现，以及学习一些关于书写模式和逻辑属性与物理属性的知识。

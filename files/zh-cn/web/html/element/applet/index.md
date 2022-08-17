@@ -1,12 +1,6 @@
 ---
 title: <applet>
 slug: Web/HTML/Element/applet
-tags:
-  - HTML
-  - 元素
-  - 参考
-  - 网页开发
-translation_of: Web/HTML/Element/applet
 ---
 {{deprecated_header}}
 

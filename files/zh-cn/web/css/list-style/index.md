@@ -1,7 +1,6 @@
 ---
 title: list-style
 slug: Web/CSS/list-style
-translation_of: Web/CSS/list-style
 ---
 {{CSSRef}}**`list-style`** CSS 属性是一个简写对属性集合，包括{{cssxref("list-style-type")}}, {{cssxref("list-style-image")}}, 和 {{cssxref("list-style-position")}}。
 

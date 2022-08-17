@@ -1,15 +1,6 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/Input/search
-tags:
-  - HTML
-  - HTML 表单
-  - 参考
-  - 搜索
-  - 表单
-  - 表单输入
-  - 输入类型
-translation_of: Web/HTML/Element/input/search
 ---
 {{HTMLRef}}
 

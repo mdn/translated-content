@@ -1,7 +1,6 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
-translation_of: Web/CSS/padding-left
 ---
 {{CSSRef}}
 

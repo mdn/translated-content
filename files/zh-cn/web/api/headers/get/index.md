@@ -6,7 +6,7 @@ slug: Web/API/Headers/get
 
 **`get()`** 方法以 {{domxref("ByteString")}} 形式从 Headers 对象中返回指定 header 的全部值。如果 Header 对象中不存在请求的 header，则返回 `null`。
 
-> **备注：**出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。
+> **备注：** 出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。
 
 ## Syntax
 

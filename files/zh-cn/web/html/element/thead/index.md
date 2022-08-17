@@ -1,10 +1,6 @@
 ---
 title: <thead>
 slug: Web/HTML/Element/thead
-tags:
-  - 元素
-  - 表格
-translation_of: Web/HTML/Element/thead
 ---
 **HTML**的**\<thead>**元素定义了一组定义表格的列头的行。
 

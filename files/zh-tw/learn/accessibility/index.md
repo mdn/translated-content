@@ -1,21 +1,6 @@
 ---
 title: 無障礙網頁
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accessibility
-  - Articles
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - NeedsTranslation
-  - TopicStub
-translation_of: Learn/Accessibility
 ---
 {{LearnSidebar}}
 

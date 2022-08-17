@@ -1,9 +1,6 @@
 ---
 title: Microdata
 slug: Web/HTML/Microdata
-tags:
-  - 微数据 搜索 搜索引擎优化
-translation_of: Web/HTML/Microdata
 ---
 ## 概要
 

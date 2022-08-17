@@ -1,12 +1,6 @@
 ---
 title: 伪类
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - CSS 参考
-  - 进阶
-  - 选择器
-translation_of: Web/CSS/Pseudo-classes
 ---
 {{CSSRef}}
 

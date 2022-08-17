@@ -1,12 +1,6 @@
 ---
 title: 网格布局中的盒模型对齐
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS Grid
-  - Guide
-  - Layout
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 如果你熟悉 [flex 布局方式](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)，那么你应该已经学习过如何在 flex 容器中对 flex 项目恰当对齐的方法了。这些对齐属性最初出现在 flex 布局方式中，后来被移到了一个新的被称为“[盒模型对齐 Level 3](https://drafts.csswg.org/css-align/)”的规范中，这个规范详细约定了在不同的布局方式下如何处理对齐问题。
 

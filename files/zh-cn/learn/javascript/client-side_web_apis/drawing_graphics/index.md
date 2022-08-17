@@ -1,17 +1,6 @@
 ---
 title: 绘图
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
-tags:
-  - API
-  - Canvas
-  - CodingScripting
-  - JavaScript
-  - WebGL
-  - 初学者
-  - 图形
-  - 学习
-  - 文章
-translation_of: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 

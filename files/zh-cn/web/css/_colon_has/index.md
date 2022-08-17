@@ -1,12 +1,6 @@
 ---
 title: ':has'
 slug: Web/CSS/:has
-tags:
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selectors
-translation_of: Web/CSS/:has
 ---
 {{CSSRef}}
 

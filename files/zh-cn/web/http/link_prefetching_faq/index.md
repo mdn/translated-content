@@ -1,12 +1,6 @@
 ---
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - HTTP
-  - Link prefetching
-  - Prefetch
-  - 性能
-translation_of: Web/HTTP/Link_prefetching_FAQ
 ---
 ### 什么是链接预取？
 

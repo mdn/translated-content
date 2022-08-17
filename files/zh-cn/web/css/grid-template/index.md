@@ -1,11 +1,6 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
-tags:
-  - CSS
-  - CSS Grid
-  - CSS 网格
-translation_of: Web/CSS/grid-template
 ---
 **`grid-template`**，CSS 属性简写，用以定义网格中{{glossary("grid rows", "行")}}、{{glossary("grid column", "列")}}与{{glossary("grid areas", "分区")}}。
 

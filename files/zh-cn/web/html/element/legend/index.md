@@ -1,14 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - HTML
-  - HTML 表单
-  - 元素
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/legend
 ---
 {{HTMLRef}}
 

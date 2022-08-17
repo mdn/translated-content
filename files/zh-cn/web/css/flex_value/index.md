@@ -1,14 +1,6 @@
 ---
 title: <flex>
 slug: Web/CSS/flex_value
-tags:
-  - CSS
-  - CSS 数据类型
-  - Web
-  - 参考
-  - 布局
-  - 需浏览器兼容
-translation_of: Web/CSS/flex_value
 ---
 {{CSSRef}}
 

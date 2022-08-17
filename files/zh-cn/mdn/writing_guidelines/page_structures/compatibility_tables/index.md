@@ -1,7 +1,6 @@
 ---
 title: 兼容性表格和浏览器兼容性数据仓库（BCD）
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
-translation_of: MDN/Structures/Compatibility_tables
 ---
 {{MDNSidebar}}
 

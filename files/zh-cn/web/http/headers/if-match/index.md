@@ -1,10 +1,6 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-tags:
-  - 条件请求
-  - 首部
-translation_of: Web/HTTP/Headers/If-Match
 ---
 {{HTTPSidebar}}
 

@@ -1,12 +1,6 @@
 ---
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 文本修饰
-  - 参考
-translation_of: Web/CSS/text-decoration-line
 ---
 {{CSSRef}}
 

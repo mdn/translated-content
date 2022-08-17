@@ -1,7 +1,6 @@
 ---
 title: '-webkit-device-pixel-ratio'
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
-translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
 {{ CSSRef() }}
 

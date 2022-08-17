@@ -1,11 +1,6 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 边框
-translation_of: Web/CSS/border-top-style
 ---
 {{ CSSRef}}
 

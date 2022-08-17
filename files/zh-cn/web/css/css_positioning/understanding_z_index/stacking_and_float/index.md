@@ -1,7 +1,6 @@
 ---
 title: 层叠与浮动
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_and_float
 ---
 « [CSS](/zh-CN/CSS) « [理解 CSS 中的 z-index](/zh-CN/CSS/Understanding_z-index)

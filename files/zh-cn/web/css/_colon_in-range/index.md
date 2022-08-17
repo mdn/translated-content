@@ -1,7 +1,6 @@
 ---
 title: ':in-range'
 slug: Web/CSS/:in-range
-translation_of: Web/CSS/:in-range
 ---
 {{CSSRef}}**`in-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 代表一个 {{htmlelement("input")}} 元素，其当前值处于属性{{htmlattrxref("min", "input")}} 和{{htmlattrxref("max","input")}} 限定的范围之内。
 

@@ -1,7 +1,6 @@
 ---
 title: <content>
 slug: Web/HTML/Element/content
-translation_of: Web/HTML/Element/content
 ---
 {{Deprecated_header}}
 

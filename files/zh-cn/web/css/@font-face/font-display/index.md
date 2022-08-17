@@ -1,11 +1,6 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-tags:
-  - CSS
-  - 参考
-  - 字体
-translation_of: Web/CSS/@font-face/font-display
 ---
 {{CSSRef}}
 

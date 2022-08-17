@@ -22,10 +22,10 @@ _`Performance` 接口没有继承任何属性。_
   - : 其是 Chrome 添加的一个非标准扩展，这个属性提供了一个可以获取到基本内存使用情况的对象。**不应该**使用这个非标准的 API。
 - {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
   - : 返回性能测量开始时的时间的高精度时间戳。
-- ### 事件处理程序
 
-  {{domxref("Performance.onresourcetimingbufferfull")}}
+### 事件处理程序
 
+- {{domxref("Performance.onresourcetimingbufferfull")}}
   - : 一个回调的 {{domxref("EventTarget")}}，当触发 {{event("resourcetimingbufferfull")}} 事件的时候会被调用。
 
 ## 方法

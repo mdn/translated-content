@@ -17,7 +17,7 @@ translation_of: Web/CSS/transform
 
 如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
 
-> **警告：** 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型, ](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes)[table-column boxes](/zh-TW/docs/Web/HTML/Element/col) 和 [table-colunm-group boxes](/zh-TW/docs/Web/HTML/Element/colgroup)。
+> **警告：** 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column boxes](/zh-TW/docs/Web/HTML/Element/col) 和 [table-colunm-group boxes](/zh-TW/docs/Web/HTML/Element/colgroup)。
 
 ## 語法
 
@@ -58,7 +58,7 @@ transform: initial;
 transform: unset;
 ```
 
-`transform` 屬性可能被指定為關鍵字值 [`none`](#none) 或著一或多個 [`<transform-function>`](#<transform-function>) 值。
+`transform` 屬性可能被指定為關鍵字值 [`none`](#none) 或著一或多個 [`<transform-function>`](#transform-function) 值。
 
 ### 值
 

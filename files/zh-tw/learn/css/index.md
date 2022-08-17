@@ -1,14 +1,6 @@
 ---
 title: CSS（樣式表）
 slug: Learn/CSS
-tags:
-  - CSS
-  - 入門
-  - 初學者
-  - 撰寫程式
-  - 樣式
-  - 風格
-translation_of: Learn/CSS
 ---
 {{LearnSidebar}}
 

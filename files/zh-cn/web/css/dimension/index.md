@@ -1,10 +1,6 @@
 ---
 title: dimension
 slug: Web/CSS/dimension
-tags:
-  - CSS
-  - CSS 数据类型
-translation_of: Web/CSS/dimension
 ---
 {{CSSRef}}
 

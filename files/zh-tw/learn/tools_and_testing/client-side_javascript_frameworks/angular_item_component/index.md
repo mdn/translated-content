@@ -2,24 +2,6 @@
 title: 建立一個 item 元件
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-tags:
-  - 初學者
-  - 框架
-  - 安裝
-  - 學習
-  - 用戶端
-  - 元件
-  - 事件
-  - 資料
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Components
-  - Events
-  - Data
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

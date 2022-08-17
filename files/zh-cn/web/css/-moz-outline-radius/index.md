@@ -1,12 +1,6 @@
 ---
 title: '-moz-outline-radius'
 slug: Web/CSS/-moz-outline-radius
-tags:
-  - CSS
-  - CSS 属性
-  - CSS：Mozilla 扩展
-  - 非标准
-translation_of: Web/CSS/-moz-outline-radius
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

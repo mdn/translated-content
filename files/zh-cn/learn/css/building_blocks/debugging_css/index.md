@@ -1,7 +1,6 @@
 ---
 title: 调试 CSS
 slug: Learn/CSS/Building_blocks/Debugging_CSS
-translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 

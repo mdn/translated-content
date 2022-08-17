@@ -1,10 +1,6 @@
 ---
 title: 无障碍
 slug: Web/Accessibility
-tags:
-  - Accessibility
-  - Landing
-translation_of: Web/Accessibility
 ---
 在 Web 开发无障碍性意味着使尽可能多的人能够使用 Web 站点，即使这些人的能力是有限的。这里我们提供关于开发易访问的内容的信息。
 

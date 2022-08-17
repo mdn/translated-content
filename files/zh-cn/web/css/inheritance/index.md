@@ -1,10 +1,6 @@
 ---
 title: 继承
 slug: Web/CSS/inheritance
-tags:
-  - CSS
-  - 继承
-translation_of: Web/CSS/inheritance
 ---
 {{cssref}}
 

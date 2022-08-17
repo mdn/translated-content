@@ -1,7 +1,6 @@
 ---
 title: <br>
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 ---
 **HTML \<br> 元素**在文本中生成一个换行（回车）符号。此元素在写诗和地址时很有用，这些地方的换行都非常重要。
 

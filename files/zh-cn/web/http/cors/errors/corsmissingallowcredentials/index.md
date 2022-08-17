@@ -1,7 +1,6 @@
 ---
 title: 故：在 CORS 头 Access-Control-Allow-Credentials 中预期为 true
 slug: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
-translation_of: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 original_slug: Web/HTTP/CORS/Errors/CORS 错误允许凭证
 ---
 ## 理由

@@ -1,10 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/Content-Language
 ---
 **`Content-Language`** 是一个 {{Glossary("entity header")}}（实体消息首部），用来说明访问者希望采用的语言或语言组合，这样的话用户就可以根据自己偏好的语言来定制不同的内容。
 

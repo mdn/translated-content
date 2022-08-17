@@ -1,10 +1,6 @@
 ---
 title: JavaScript 中的类
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - JavaScript
-  - Learn
-translation_of: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 

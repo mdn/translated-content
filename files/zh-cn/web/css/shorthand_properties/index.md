@@ -1,11 +1,6 @@
 ---
 title: CSS 的简写属性
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Web
-translation_of: Web/CSS/Shorthand_properties
 ---
 {{cssref}}
 

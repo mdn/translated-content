@@ -1,13 +1,6 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
-tags:
-  - CSS
-  - CSS 属性
-  - table
-  - 参考
-  - 表格
-translation_of: Web/CSS/caption-side
 ---
 {{CSSRef}}
 

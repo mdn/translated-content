@@ -1,12 +1,6 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-tags:
-  - CSS
-  - CSS 图像
-  - CSS 属性
-  - 图像
-translation_of: Web/CSS/image-rendering
 ---
 {{CSSRef}}
 

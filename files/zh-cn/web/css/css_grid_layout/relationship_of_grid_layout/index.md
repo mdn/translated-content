@@ -1,11 +1,6 @@
 ---
 title: grid layout 和其它布局方法的联系
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-tags:
-  - CSS
-  - CSS 网格
-  - 指南
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 CSS 网格布局作为实现布局的一个完整系统，其设计使之和 css 其它部分能协同合作。在这个指南中，我会向你解释网格布局是如何与你正在使用的其它技巧协同合作的。
 

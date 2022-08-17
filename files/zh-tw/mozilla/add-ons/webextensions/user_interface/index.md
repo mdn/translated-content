@@ -1,10 +1,6 @@
 ---
 title: 用戶介面
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - 擴充套件
-  - 用戶介面
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
 {{AddonSidebar}}
 

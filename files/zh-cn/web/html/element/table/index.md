@@ -1,16 +1,6 @@
 ---
 title: <table>
 slug: Web/HTML/Element/table
-tags:
-  - CSS
-  - HTML
-  - Web
-  - table
-  - 元素
-  - 参考
-  - 表格
-  - 表格数据
-translation_of: Web/HTML/Element/table
 ---
 {{HTMLRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - CSS Containment
-  - CSS 属性
-  - Style
-  - Web
-  - 参考
-  - 布局
-  - 样式
-  - 渲染
-translation_of: Web/CSS/contain
 ---
 {{CSSRef}}
 

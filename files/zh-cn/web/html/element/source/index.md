@@ -1,7 +1,6 @@
 ---
 title: Source
 slug: Web/HTML/Element/source
-translation_of: Web/HTML/Element/source
 ---
 ## 概述
 

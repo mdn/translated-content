@@ -1,14 +1,6 @@
 ---
 title: CSS Layout cookbook
 slug: Web/CSS/Layout_cookbook
-tags:
-  - CSS
-  - Layout
-  - NeedsTranslation
-  - TopicStub
-  - cookbook
-  - recipes
-translation_of: Web/CSS/Layout_cookbook
 ---
 {{CSSRef}}CSS layout cookbook 这本书旨在汇集常见的布局样式，这些布局你可能在自己的网站中会用到。这些布局样式不仅仅可以可以用来开始一个项目，而且提供了具体的使用方法，作为开发人员，你可以做出合适的选择。
 

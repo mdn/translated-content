@@ -1,12 +1,6 @@
 ---
 title: 'CSP: sandbox'
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
-tags:
-  - CSP
-  - XSS 防御
-  - http 头
-  - 安全
-translation_of: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
 {{HTTPSidebar}}
 

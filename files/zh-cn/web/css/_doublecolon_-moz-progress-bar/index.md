@@ -1,11 +1,6 @@
 ---
 title: '::-moz-progress-bar'
 slug: Web/CSS/::-moz-progress-bar
-tags:
-  - CSS
-  - CSS 伪类
-  - 非标准特性
-translation_of: Web/CSS/::-moz-progress-bar
 ---
 {{CSSRef}}{{Non-standard_header}}
 

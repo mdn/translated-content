@@ -1,7 +1,6 @@
 ---
 title: border-right-color
 slug: Web/CSS/border-right-color
-translation_of: Web/CSS/border-right-color
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: '-moz-outline-radius-topleft'
 slug: Web/CSS/-moz-outline-radius-topleft
-translation_of: Web/CSS/-moz-outline-radius-topleft
 ---
 {{Non-standard_header}}{{CSSRef}}
 

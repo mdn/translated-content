@@ -1,7 +1,6 @@
 ---
 title: 'Django Tutorial Part 5: 主页构建'
 slug: Learn/Server-side/Django/Home_page
-translation_of: Learn/Server-side/Django/Home_page
 original_slug: learn/Server-side/Django/主页构建
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}

@@ -1,10 +1,6 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
-tags:
-  - CSS 文字
-  - 布局
-translation_of: Web/CSS/text-align-last
 ---
 {{CSSRef}}
 

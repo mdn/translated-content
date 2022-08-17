@@ -1,20 +1,6 @@
 ---
 title: 解决常见的可访问性问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-tags:
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - 初学者
-  - 可访问性
-  - 学习
-  - 工具
-  - 文章
-  - 测试
-  - 跨浏览器
-  - 键盘
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}

@@ -1,7 +1,6 @@
 ---
 title: 'CSP: require-sri-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
-translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
 {{HTTPSidebar}}
 

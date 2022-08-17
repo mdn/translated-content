@@ -1,7 +1,6 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
-translation_of: Web/CSS/text-underline-position
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: <blockquote>：块级引用元素
 slug: Web/HTML/Element/blockquote
-tags:
-  - Blockquote
-  - 元素
-  - 块级引用
-  - 引用
-translation_of: Web/HTML/Element/blockquote
 ---
 {{HTMLRef}}
 

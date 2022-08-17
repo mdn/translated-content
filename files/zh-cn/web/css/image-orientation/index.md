@@ -1,7 +1,6 @@
 ---
 title: image-orientation
 slug: Web/CSS/image-orientation
-translation_of: Web/CSS/image-orientation
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -1,12 +1,6 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
-tags:
-  - CSS
-  - CSS 函数
-  - CSS 变换
-  - 参考
-translation_of: Web/CSS/transform-function/translate3d()
 original_slug: Web/CSS/transform-function/translate3d()
 ---
 {{CSSRef}}
@@ -19,12 +13,10 @@ original_slug: Web/CSS/transform-function/translate3d()
 translate3d(tx, ty, tz)
 ```
 
-- ## 常量
+## 常量
 
-  _tx_
-
+- _tx_
   - : 是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的横坐标。
-
 - _ty_
   - : 是一个{{cssxref("&lt;length&gt;")}} 代表移动向量的纵坐标。
 - _tz_

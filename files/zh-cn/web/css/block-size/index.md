@@ -1,7 +1,6 @@
 ---
 title: 块级尺寸
 slug: Web/CSS/block-size
-translation_of: Web/CSS/block-size
 ---
 {{CSSRef}}{{SeeCompatTable}}CSS 的 block-size 属性定义了元素区块的水平宽度和垂直高度，也就是{{cssxref("width")}}或{{cssxref("height")}}属性，它们的大小取决于写入模式，即{{cssxref("writing-mode")}}的值。{{EmbedInteractiveExample("pages/css/block-size.html")}}
 

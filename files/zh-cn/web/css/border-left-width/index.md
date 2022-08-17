@@ -1,11 +1,6 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 边框
-translation_of: Web/CSS/border-left-width
 ---
 {{CSSRef}}
 

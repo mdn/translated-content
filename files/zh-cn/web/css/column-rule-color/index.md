@@ -1,7 +1,6 @@
 ---
 title: column-rule-color
 slug: Web/CSS/column-rule-color
-translation_of: Web/CSS/column-rule-color
 ---
 {{CSSRef("CSS Multi-columns")}}
 

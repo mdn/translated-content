@@ -1,13 +1,6 @@
 ---
 title: 常见问题
 slug: Learn/Common_questions
-tags:
-  - 基础知识
-  - 学习
-  - 网络
-  - 网络工程
-  - 脚本语言
-translation_of: Learn/Common_questions
 ---
 学习区域的这一部分旨在为可能出现的常见问题提供答案，这些问题不一定是结构化的核心学习途径的一部分 (例如：[HTML](/zh-CN/docs/learn/HTML) 或 [CSS](/zh-CN/docs/Learn/CSS) 的学习文章。) 这些文章旨在自己工作。
 

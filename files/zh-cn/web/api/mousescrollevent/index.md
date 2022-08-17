@@ -10,8 +10,25 @@ slug: Web/API/MouseScrollEvent
 
 ## 方法概述
 
-| `void initMouseScrollEvent(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in nsIDOMAbstractView viewArg, in long detailArg, in long screenXArg, in long screenYArg, in long clientXArg, in long clientYArg, in boolean ctrlKeyArg, in boolean altKeyArg, in boolean shiftKeyArg, in boolean metaKeyArg, in unsigned short buttonArg, in nsIDOMEventTarget relatedTargetArg, in long axis);` |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+void initMouseScrollEvent(
+  in DOMString typeArg,
+  in boolean canBubbleArg,
+  in boolean cancelableArg,
+  in nsIDOMAbstractView viewArg,
+  in long detailArg,
+  in long screenXArg,
+  in long screenYArg,
+  in long clientXArg,
+  in long clientYArg,
+  in boolean ctrlKeyArg,
+  in boolean altKeyArg,
+  in boolean shiftKeyArg,
+  in boolean metaKeyArg,
+  in unsigned short buttonArg,
+  in nsIDOMEventTarget relatedTargetArg,
+  in long axis);
+```
 
 ## 属性
 

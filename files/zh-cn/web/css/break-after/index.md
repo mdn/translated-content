@@ -1,11 +1,6 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-tags:
-  - CSS
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/break-after
 ---
 {{CSSRef}}
 

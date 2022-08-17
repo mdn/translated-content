@@ -1,11 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS 属性
-  - object-position
-translation_of: Web/CSS/object-position
 ---
 {{CSSRef}}
 

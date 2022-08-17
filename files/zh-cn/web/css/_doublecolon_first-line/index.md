@@ -1,7 +1,6 @@
 ---
 title: '::first-line (:first-line)'
 slug: Web/CSS/::first-line
-translation_of: Web/CSS/::first-line
 ---
 {{ CSSRef() }}
 

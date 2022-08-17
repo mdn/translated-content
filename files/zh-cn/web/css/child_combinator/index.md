@@ -1,10 +1,6 @@
 ---
 title: 子选择器
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Selectors
-translation_of: Web/CSS/Child_combinator
 ---
 {{ CSSRef() }}
 

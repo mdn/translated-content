@@ -1,7 +1,6 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-translation_of: Web/HTTP/Headers/If-Range
 ---
 {{HTTPSidebar}}
 

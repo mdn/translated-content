@@ -1,16 +1,6 @@
 ---
 title: 优先级
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
-  - 参考
-  - 指南
-  - 选择器
-translation_of: Web/CSS/Specificity
 ---
 {{CSSRef}}
 

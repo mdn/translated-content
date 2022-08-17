@@ -1,18 +1,6 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 文本
-  - CSS 颜色
-  - HTML 样式
-  - HTML 颜色
-  - Web
-  - color
-  - 参考
-  - 布局
-translation_of: Web/CSS/color
 ---
 {{CSSRef}}`color`CSS 属性设置[颜色值](/zh-CN/docs/Web/CSS/color_value)的前景色以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)，并设置{{cssxref("currentcolor")}}值。`currentcolor`可以对其他颜色属性用作不直接的值，比如{{cssxref("border-color")}}。{{EmbedInteractiveExample("pages/css/color.html")}}对于在 HTML 中使用颜色的概述，参考[使用 CSS 对 HTML 元素实现颜色](/zh-CN/docs/)。
 

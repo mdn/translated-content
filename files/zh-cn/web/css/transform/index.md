@@ -1,11 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - CSS Property
-  - Transforms
-translation_of: Web/CSS/transform
 ---
 {{CSSRef}}CSS**`transform`**属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS 视觉格式化模型的坐标空间来实现的。{{EmbedInteractiveExample("pages/css/transform.html")}}
 

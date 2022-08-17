@@ -1,7 +1,6 @@
 ---
 title: column-span
 slug: Web/CSS/column-span
-translation_of: Web/CSS/column-span
 ---
 {{ CSSRef("CSS Multi-columns") }}
 

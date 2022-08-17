@@ -1,10 +1,6 @@
 ---
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
-tags:
-  - 响应状态码
-  - 服务器端错误
-translation_of: Web/HTTP/Status/505
 ---
 {{HTTPSidebar}}
 

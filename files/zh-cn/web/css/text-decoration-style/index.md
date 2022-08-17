@@ -1,13 +1,6 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Layout
-  - Reference
-translation_of: Web/CSS/text-decoration-style
 ---
 {{CSSRef}}
 

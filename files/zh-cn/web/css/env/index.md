@@ -1,12 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - env
-  - env()
-  - iPhoneX
-translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
 ---
 {{CSSRef}}**`env()`** [CSS](/zh-CN/docs/Web/CSS) 函数以类似于 {{cssxref("var")}} 函数和 [custom properties](/zh-CN/docs/Web/CSS/--*) 的方式将用户代理定义的环境变量值插入你的 CSS 中。区别在于，环境变量除了由用户代理定义而不是由用户定义外，还被全局作用在文档中，而自定义属性则限定在声明它们的元素中。为了告诉浏览器使用屏幕上所有的可用空间，并以此使用`env()`变量，我们需要添加一个新的视口元值：

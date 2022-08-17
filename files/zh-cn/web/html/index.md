@@ -1,16 +1,6 @@
 ---
 title: HTML（超文本标记语言）
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML5
-  - HTML 教程
-  - HTML 课程
-  - Web
-  - 主页
-  - 参考
-  - 学习
-translation_of: Web/HTML
 ---
 {{HTMLSidebar}}
 

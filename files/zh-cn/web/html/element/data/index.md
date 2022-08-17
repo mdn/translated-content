@@ -1,12 +1,6 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-translation_of: Web/HTML/Element/data
 ---
 {{HTMLRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: Sec-CH-UA-Full-Version-List
 slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
-tags:
-  - Sec-CH-UA-Full-Version-List
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
-translation_of: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 

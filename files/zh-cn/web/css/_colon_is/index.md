@@ -1,15 +1,6 @@
 ---
 title: ':is() (:matches(), :any())'
 slug: Web/CSS/:is
-tags:
-  - ':is'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selectors
-  - Web
-  - 伪类
-translation_of: Web/CSS/:is
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

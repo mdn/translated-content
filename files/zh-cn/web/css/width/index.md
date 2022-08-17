@@ -1,12 +1,6 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - 参考
-  - 大小
-  - 宽度
-translation_of: Web/CSS/width
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-translation_of: Web/CSS/:checked
 ---
 {{CSSRef}}
 

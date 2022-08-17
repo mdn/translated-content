@@ -1,7 +1,6 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
-translation_of: Web/CSS/padding-inline-start
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

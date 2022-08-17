@@ -1,11 +1,6 @@
 ---
 title: 选择 www 或非 www URL 作为域名
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-tags:
-  - Guide
-  - HTTP
-  - URL
-translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
 {{HTTPSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-translation_of: Web/HTML/Global_attributes/itemtype
 ---
 {{HTMLSidebar("Global_attributes")}}
 

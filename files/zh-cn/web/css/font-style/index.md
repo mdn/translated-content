@@ -1,13 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - CSS
-  - CSS 字体
-  - Web
-  - 参考
-  - 字体
-translation_of: Web/CSS/font-style
 ---
 {{CSSRef}}
 

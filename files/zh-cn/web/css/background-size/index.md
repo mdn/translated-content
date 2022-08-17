@@ -1,11 +1,6 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS Background
-  - 背景
-translation_of: Web/CSS/background-size
 ---
 {{CSSRef}}
 

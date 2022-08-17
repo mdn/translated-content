@@ -1,7 +1,6 @@
 ---
 title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Writing_guidelines/Writing_style_guide
 ---
 {{MDNSidebar}}
 

@@ -1,10 +1,6 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-tags:
-  - spellcheck
-  - 拼写检查
-translation_of: Web/HTML/Global_attributes/spellcheck
 ---
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 

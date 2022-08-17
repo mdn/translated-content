@@ -1,7 +1,6 @@
 ---
 title: CSS Writing Modes CSS 写入模式
 slug: Web/CSS/CSS_Writing_Modes
-translation_of: Web/CSS/CSS_Writing_Modes
 ---
 {{CSSRef}}
 

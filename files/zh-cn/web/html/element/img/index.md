@@ -1,17 +1,6 @@
 ---
 title: <img>：图像嵌入元素
 slug: Web/HTML/Element/img
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-  - 图像
-  - 图片
-  - 多媒体
-  - 照片
-  - 相片
-translation_of: Web/HTML/Element/img
 ---
 {{HTMLRef}}
 

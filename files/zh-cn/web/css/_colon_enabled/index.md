@@ -1,14 +1,6 @@
 ---
 title: ':enabled'
 slug: Web/CSS/:enabled
-tags:
-  - CSS
-  - Reference
-  - Web
-  - 伪类
-  - 参考
-  - 布局
-translation_of: Web/CSS/:enabled
 ---
 {{CSSRef}}
 

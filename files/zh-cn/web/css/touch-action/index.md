@@ -1,15 +1,6 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - CSS Touch
-  - CSS 属性
-  - Pointer Events
-  - Reference
-  - touch
-  - touch-action
-translation_of: Web/CSS/touch-action
 ---
 {{ CSSRef }}
 

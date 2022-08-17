@@ -11,9 +11,9 @@ translation_of: Web/CSS/inherit
 
 Le mot-clé **`inherit`** est une valeur qui peut être utilisée pour qu'une propriété prenne [la valeur calculée](/fr/docs/Web/CSS/Valeur_calculée) de la propriété pour l'élément parent. Cette valeur peut être utilisée sur n'importe quelle propriété CSS, y compris sur la propriété raccourcie {{cssxref("all")}}.
 
-Pour [les propriétés héritées](/fr/docs/Web/CSS/Héritage#Propriétés_héritées "en/CSS/inheritance"), cela accentue le comportement par défaut et ce mot-clé n'est nécessaire que pour surcharger une autre règle.
+Pour [les propriétés héritées](/fr/docs/Web/CSS/Héritage#Propriétés_héritées), cela accentue le comportement par défaut et ce mot-clé n'est nécessaire que pour surcharger une autre règle.
 
-Pour [les propriétés non-héritées](/fr/docs/Web/CSS/Héritage#Propriétés_non_héritées "en/CSS/inheritance"), cela permettra d'obtenir le comportement indiqué. Ce comportement a peu d'intérêt dans ces cas et mieux vaudra utiliser {{cssxref("initial")}} ou {{cssxref("unset")}}.
+Pour [les propriétés non-héritées](/fr/docs/Web/CSS/Héritage#Propriétés_non_héritées), cela permettra d'obtenir le comportement indiqué. Ce comportement a peu d'intérêt dans ces cas et mieux vaudra utiliser {{cssxref("initial")}} ou {{cssxref("unset")}}.
 
 L'héritage provient toujours de l'élément parent par rapport à l'arbre du document, même si cet élément n'est pas le bloc englobant.
 
