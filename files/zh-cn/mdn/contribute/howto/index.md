@@ -1,13 +1,6 @@
 ---
 title: MDN 使用指南
 slug: MDN/Contribute/Howto
-tags:
-  - Documentation
-  - Guide
-  - Howto
-  - Landing
-  - MDN Meta
-translation_of: MDN/Contribute/Howto
 ---
 {{MDNSidebar}}
 
