@@ -45,7 +45,6 @@ user-select: unset;
 
 - `none`
   - : 元素及其子元素的文本不可选中。请注意这个{{domxref("Selection")}} 对象可以包含这些元素。从 Firefox 21 开始， `none` 表现的像 `-moz-none`，因此可以使用 `-moz-user-select: text` 在子元素上重新启用选择。
-- ## `auto`
 
 - `auto`
 
