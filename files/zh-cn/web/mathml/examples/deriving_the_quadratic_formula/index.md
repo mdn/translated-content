@@ -1,7 +1,6 @@
 ---
 title: 'MathML: Deriving the Quadratic Formula'
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
-translation_of: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
 {{MathMLRef}}
 

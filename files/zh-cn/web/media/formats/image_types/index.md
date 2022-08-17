@@ -1,16 +1,6 @@
 ---
 title: 图像文件类型与格式指南
 slug: Web/Media/Formats/Image_types
-tags:
-  - 图像
-  - 图片
-  - 多媒体
-  - 指南
-  - 文件
-  - 文件格式
-  - 文件类型
-  - 照片
-translation_of: Web/Media/Formats/Image_types
 ---
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 

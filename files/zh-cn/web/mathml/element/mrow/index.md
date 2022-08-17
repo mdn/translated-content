@@ -1,12 +1,6 @@
 ---
 title: <mrow>
 slug: Web/MathML/Element/mrow
-tags:
-  - MathML
-  - MathML 元素
-  - MathML 参考
-  - MathML 布局
-translation_of: Web/MathML/Element/mrow
 ---
 {{MathMLRef}}
 

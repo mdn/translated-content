@@ -1,7 +1,6 @@
 ---
 title: 网络视频编解码器指南
 slug: Web/Media/Formats/Video_codecs
-translation_of: Web/Media/Formats/Video_codecs
 original_slug: Web/Media/Formats/视频编解码器
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
