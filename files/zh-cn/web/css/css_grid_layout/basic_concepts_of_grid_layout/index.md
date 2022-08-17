@@ -681,34 +681,34 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 在本文章中我们快速对网格布局的概念有了个基本的了解。利用示例代码进行练习，然后[接下来我们正式开始挖掘关于网格布局的各种细节](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)。
 
-1.  [**CSS**](/zh-CN/docs/Web/CSS)
-2.  **[CSS 参考](/zh-CN/docs/Web/CSS/Reference)**
-3.  [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4.  **入门**
+1. [**CSS**](/zh-CN/docs/Web/CSS)
+2. **[CSS 参考](/zh-CN/docs/Web/CSS/Reference)**
+3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+4. **入门**
 
-    1.  [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2.  [与其他布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3.  [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4.  [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5.  [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6.  [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7.  [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8.  [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9.  [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    1. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2. [与其他布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3. [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4. [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5. [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6. [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7. [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8. [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9. [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
     10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
     11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-5.  **属性**
+5. **属性**
 
-    1.  [grid](/zh-CN/docs/Web/CSS/grid)
-    2.  [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3.  [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4.  [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5.  [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6.  [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7.  [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8.  [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9.  [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
+    1. [grid](/zh-CN/docs/Web/CSS/grid)
+    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
+    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
+    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
+    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
+    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
+    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
+    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
+    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
     10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
     11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
     12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
@@ -719,14 +719,14 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
     17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
     18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
 
-6.  **词汇**
+6. **词汇**
 
-    1.  [Grid](/zh-CN/docs/Glossary/Grid)
-    2.  [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    3.  [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    4.  [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    5.  [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    6.  [Gutters](/zh-CN/docs/Glossary/Gutters)
-    7.  [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
-    8.  [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    9.  [Grid column](/zh-CN/docs/Glossary/Grid_column)
+    1. [Grid](/zh-CN/docs/Glossary/Grid)
+    2. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
+    3. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
+    4. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
+    5. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
+    6. [Gutters](/zh-CN/docs/Glossary/Gutters)
+    7. [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
+    8. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
+    9. [Grid column](/zh-CN/docs/Glossary/Grid_column)

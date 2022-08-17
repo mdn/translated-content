@@ -4,7 +4,7 @@ slug: Web/CSS/overflow
 ---
 {{ CSSRef() }}
 
-CSS 属性 **overflow** 定义当一个元素的内容太大而无法适应 [块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context) 时候该做什么。它是 {{cssxref("overflow-x")}} 和{{cssxref("overflow-y")}}的 [简写属性 ](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+CSS 属性 **overflow** 定义当一个元素的内容太大而无法适应 [块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context) 时候该做什么。它是 {{cssxref("overflow-x")}} 和{{cssxref("overflow-y")}}的 [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
@@ -12,7 +12,7 @@ CSS 属性 **overflow** 定义当一个元素的内容太大而无法适应 [块
 
 指定除`visible`(默认值) 以外的值将创建一个新的 [块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context). 这在技术层面上是必须的——如果一个浮动元素和滚动条相交，它会在每个滚动步骤后强行重新包装内容，从而导致慢滚动体验。
 
-为使 `overflow `有效果，块级容器必须有一个指定的高度（`height`或者`max-height`）或者将`white-space`设置为`nowrap`。
+为使 `overflow` 有效果，块级容器必须有一个指定的高度（`height`或者`max-height`）或者将`white-space`设置为`nowrap`。
 
 > **备注：** 设置一个轴为`visible`（默认值），同时设置另一个轴为不同的值，会导致设置`visible`的轴的行为会变成`auto`。
 
@@ -65,11 +65,11 @@ overflow: scroll hidden;
 
 #### Mozilla 扩展
 
-- `-moz-scrollbars-none `{{Deprecated_Inline}}
+- `-moz-scrollbars-none`{{Deprecated_Inline}}
   - : 使用 `overflow:hidden` 代替。
-- `-moz-scrollbars-horizontal `{{ Deprecated_inline() }}
+- `-moz-scrollbars-horizontal` {{ Deprecated_inline() }}
   - : 推荐使用 {{ Cssxref("overflow-x") }} 和 {{ Cssxref("overflow-y") }}。
-- `-moz-scrollbars-vertical `{{ Deprecated_inline() }}
+- `-moz-scrollbars-vertical` {{ Deprecated_inline() }}
   - : 推荐使用 {{ Cssxref("overflow-x") }} 和 {{ Cssxref("overflow-y") }}。
 - \-moz-hidden-unscrollable {{ non-standard_inline() }}
   - : 主要用于内部和主题。禁用 方向键 和 鼠标滚轮 来滚动 XML 跟元素以及\<HTML>和\<body>元素。

@@ -5,7 +5,7 @@ original_slug: Web/CSS/transform-function/rotateZ()
 ---
 {{CSSRef}}
 
-**`rotateZ() `**函数定义了一个转换，它可以让一个元素围绕横 Z 轴旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
+**`rotateZ()`** 函数定义了一个转换，它可以让一个元素围绕横 Z 轴旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-rotateZ.html")}}
 
@@ -17,7 +17,7 @@ original_slug: Web/CSS/transform-function/rotateZ()
 
 ## 语法
 
-**`rotateZ() `**引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
+**`rotateZ()`** 引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
 
 ```
 rotateZ(a)

@@ -472,34 +472,34 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 如果你通过阅读本指南前面的几篇文章已经开始上手了，那么你应该是用基于线的定位方式或用命名区域的方式来创建网格布局的。花费一些时间用网格去创建常见的布局模式，虽然还有很多的术语要学习，不过语法是非常一目了然的。在你练习开发的过程中可能会遭遇到一些问题，并且用我们没有讲过的方法去解决它们。在本指南后面的文章中，我们将着眼于更多规范中的细节 —— 目标是让你能用它创建出更加复杂的布局。
 
-1.  [**CSS**](/zh-CN/docs/Web/CSS)
-2.  [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
-3.  [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4.  **指南**
+1. [**CSS**](/zh-CN/docs/Web/CSS)
+2. [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
+3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+4. **指南**
 
-    1.  [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2.  [与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3.  [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4.  [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5.  [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6.  [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7.  [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8.  [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9.  [CSS 网格布局和可及性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    1. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2. [与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3. [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5. [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6. [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7. [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9. [CSS 网格布局和可及性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
     10. [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
     11. [使用网格实现常见布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-5.  **属性**
+5. **属性**
 
-    1.  [grid](/zh-CN/docs/Web/CSS/grid)
-    2.  [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3.  [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4.  [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5.  [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6.  [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7.  [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8.  [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9.  [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
+    1. [grid](/zh-CN/docs/Web/CSS/grid)
+    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
+    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
+    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
+    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
+    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
+    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
+    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
+    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
     10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
     11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
     12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
@@ -510,14 +510,14 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
     17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
     18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
 
-6.  **词汇**
+6. **词汇**
 
-    1.  [Grid](/zh-CN/docs/Glossary/Grid)
-    2.  [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    3.  [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    4.  [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    5.  [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    6.  [Gutters](/zh-CN/docs/Glossary/Gutters)
-    7.  [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
-    8.  [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    9.  [Grid column](/zh-CN/docs/Glossary/Grid_column)
+    1. [Grid](/zh-CN/docs/Glossary/Grid)
+    2. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
+    3. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
+    4. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
+    5. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
+    6. [Gutters](/zh-CN/docs/Glossary/Gutters)
+    7. [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
+    8. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
+    9. [Grid column](/zh-CN/docs/Glossary/Grid_column)

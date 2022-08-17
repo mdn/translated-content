@@ -9,7 +9,7 @@ original_slug: Web/CSS/transform-function/scaleX()
 
 ![](https://mdn.mozillademos.org/files/12117/scaleX.png)
 
-`scaleX(sx)` 是 `scale(sx, 1)` 或 `scale3d(sx, 1, 1) `的一个速记/缩写。
+`scaleX(sx)` 是 `scale(sx, 1)` 或 `scale3d(sx, 1, 1)` 的一个速记/缩写。
 
 > **备注：** Note:
 >

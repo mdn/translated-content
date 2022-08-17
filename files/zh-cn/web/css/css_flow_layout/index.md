@@ -30,5 +30,5 @@ slug: Web/CSS/CSS_Flow_Layout
 
 - {{Glossary("Block/CSS", "Block (CSS)")}}
 
-1.  [**CSS**](/zh-CN/docs/Web/CSS)
-2.  [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
+1. [**CSS**](/zh-CN/docs/Web/CSS)
+2. [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)

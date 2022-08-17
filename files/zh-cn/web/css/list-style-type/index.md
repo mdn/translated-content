@@ -41,10 +41,10 @@ list-style-type: unset;
 
 list-style-type 的属性值可以是以下任意一项：
 
-- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E) value
-- a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type$edit#symbols()>) value
-- a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E) value
-- the keyword [`none`](/zh-CN/docs/Web/CSS/list-style-type$edit#none).
+- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type#%3Ccustom-ident%3E) value
+- a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type#symbols()>) value
+- a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type#%3Cstring%3E) value
+- the keyword [`none`](/zh-CN/docs/Web/CSS/list-style-type#none).
 
 ### 取值
 
@@ -56,9 +56,6 @@ list-style-type 的属性值可以是以下任意一项：
   - : The specified string will be used as the item's marker.
 - `none`
   - : 不显示列表项的标记。
-
-关键字的取值是下列之一：
-
 - `disc`
   - : 实心圆点 (默认值)
 - `circle`
@@ -70,20 +67,18 @@ list-style-type 的属性值可以是以下任意一项：
 - `cjk-decimal` {{experimental_inline}}
   - : 中日韩十进制数
 - `decimal-leading-zero`
-  - : Decimal numbers. Padded by initial zeros
+  - : Decimal numbers, padded by initial zeros.
 - `lower-roman`
   - : Lowercase roman numerals
 - `upper-roman`
   - : Uppercase roman numerals
 - `lower-greek`
   - : Lowercase classical Greek
-- `lower-alpha`、`lower-latin`
-  - : Lowercase ASCII letters. `lower-latin` is unsupported in IE7 and earlier
-
-    See [Browser compatibility](#browser_compatibility) section.
-
-- `upper-alpha`、`upper-latin`
-  - : Uppercase ASCII letters. `upper-latin` is unsupported in IE7 and earlier
+    - alpha, beta, gamma…
+- `lower-alpha`, `lower-latin`
+  - : Lowercase ASCII letters
+- `upper-alpha`, `upper-latin`
+  - : Uppercase ASCII letters
 - `armenian`
   - : Traditional Armenian numbering
 - `georgian`
@@ -91,11 +86,10 @@ list-style-type 的属性值可以是以下任意一项：
 - `hebrew` {{experimental_inline}}
   - : Traditional Hebrew numbering
 - `ethiopic-numeric` {{experimental_inline}}
-  - : Ethiopic numbering.
 - `hiragana` {{experimental_inline}}
-  - : (Japanese)
+  - : Dictionary-order hiragana lettering.
 - `katakana` {{experimental_inline}}
-  - : (Japanese)
+  - : Dictionary-order katakana lettering
 - `hiragana-iroha` {{experimental_inline}}
   - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
 - `katakana-iroha` {{experimental_inline}}
@@ -103,7 +97,7 @@ list-style-type 的属性值可以是以下任意一项：
 - `japanese-informal` {{experimental_inline}}
   - : Japanese informal numbering
 - `japanese-formal` {{experimental_inline}}
-  - : Japanese formal numbering to be used in legal or financial document.The kanjis are designed so that they can't be modified to look like another correct one
+  - : Japanese formal numbering to be used in legal or financial document. The kanjis are designed so that they can't be modified to look like another correct one
 - `korean-hangul-formal` {{experimental_inline}}
   - : Korean hangul numbering.
 - `korean-hanja-informal` {{experimental_inline}}

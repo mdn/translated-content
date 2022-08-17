@@ -10,9 +10,9 @@ slug: Web/CSS/contain
 
 > **备注：** If applied (with value: `paint`, `strict` or `content`), this property creates:
 >
-> 1.  A new [containing block](/zh-CN/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
-> 2.  A new [stacking context](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
-> 3.  A new [block formatting context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context).
+> 1. A new [containing block](/zh-CN/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
+> 2. A new [stacking context](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+> 3. A new [block formatting context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context).
 
 ## 语法
 
