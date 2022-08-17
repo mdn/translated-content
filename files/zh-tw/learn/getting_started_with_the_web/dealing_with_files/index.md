@@ -1,12 +1,6 @@
 ---
 title: 與各式各樣檔案打交道
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - HTML
-  - 初學者
-  - 指南
-  - 網站
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
