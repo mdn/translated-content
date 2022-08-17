@@ -1,16 +1,6 @@
 ---
 title: <div>：内容划分元素
 slug: Web/HTML/Element/div
-tags:
-  - Element
-  - HTML
-  - Layout
-  - Reference
-  - Web
-  - 元素
-  - 参考
-  - 布局
-translation_of: Web/HTML/Element/div
 ---
 {{HTMLRef}}
 

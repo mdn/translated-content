@@ -1,7 +1,6 @@
 ---
 title: <noembed>
 slug: Web/HTML/Element/noembed
-translation_of: Web/HTML/Element/noembed
 ---
 {{HTMLRef}}{{Non-standard_header}}{{deprecated_header}}
 

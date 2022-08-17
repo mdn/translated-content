@@ -1,24 +1,6 @@
 ---
 title: '<video>: 视频嵌入元素'
 slug: Web/HTML/Element/video
-tags:
-  - 元素
-  - HTML
-  - HTML 视频
-  - HTML 视频播放器
-  - HTML 嵌入内容
-  - HTML5
-  - 媒体
-  - 电影播放
-  - 电影
-  - 多媒体
-  - 播放电影
-  - 播放视频
-  - 引用
-  - 显示视频
-  - 视频
-  - Web
-translation_of: Web/HTML/Element/video
 ---
 {{HTMLRef}}
 

@@ -1,16 +1,6 @@
 ---
 title: <ol>
 slug: Web/HTML/Element/ol
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-  - 元素
-  - 列表
-  - 参考
-translation_of: Web/HTML/Element/ol
 ---
 {{HTMLRef}}
 

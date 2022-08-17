@@ -1,14 +1,6 @@
 ---
 title: <picture>：picture 元素
 slug: Web/HTML/Element/picture
-tags:
-  - HTML
-  - Web
-  - picture
-  - 元素
-  - 图片
-  - 引用
-translation_of: Web/HTML/Element/picture
 ---
 {{HTMLRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: <meta>：文档级元数据元素
 slug: Web/HTML/Element/meta
-tags:
-  - HTML
-  - metadata
-  - 元数据
-  - 元素
-translation_of: Web/HTML/Element/meta
 ---
 {{HTMLRef}}
 

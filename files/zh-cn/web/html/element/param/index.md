@@ -1,7 +1,6 @@
 ---
 title: <param>
 slug: Web/HTML/Element/param
-translation_of: Web/HTML/Element/param
 ---
 ## 概要
 

@@ -1,7 +1,6 @@
 ---
 title: '<bdo>: 双向文本替代元素'
 slug: Web/HTML/Element/bdo
-translation_of: Web/HTML/Element/bdo
 ---
 {{HTMLRef}}
 

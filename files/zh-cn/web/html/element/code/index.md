@@ -1,7 +1,6 @@
 ---
 title: <code>
 slug: Web/HTML/Element/code
-translation_of: Web/HTML/Element/code
 ---
 ## 摘要
 

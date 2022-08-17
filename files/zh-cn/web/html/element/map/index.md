@@ -1,7 +1,6 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-translation_of: Web/HTML/Element/map
 ---
 > **备注：** 这篇文章翻译不完整
 

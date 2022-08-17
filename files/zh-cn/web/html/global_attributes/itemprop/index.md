@@ -1,7 +1,6 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
 {{HTMLSidebar("Global_attributes")}}
 

@@ -1,19 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML 表单
-  - Reference
-  - Web
-  - label
-  - 参考
-  - 标签
-  - 表单
-translation_of: Web/HTML/Element/label
 ---
 {{HTMLRef}}
 

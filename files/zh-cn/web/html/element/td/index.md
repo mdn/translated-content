@@ -1,13 +1,6 @@
 ---
 title: <td>：表格数据单元格元素
 slug: Web/HTML/Element/td
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-  - 表格
-translation_of: Web/HTML/Element/td
 ---
 {{HTMLRef}}
 

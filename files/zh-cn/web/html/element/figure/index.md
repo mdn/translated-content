@@ -1,12 +1,6 @@
 ---
 title: <figure>：可附标题内容元素
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figure
 ---
 {{HTMLRef}}
 

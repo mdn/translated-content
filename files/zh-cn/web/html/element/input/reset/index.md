@@ -1,16 +1,6 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Element/Input/reset
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - reset
-translation_of: Web/HTML/Element/input/reset
 ---
 `{{HTMLElement("input")}}` type 类型为 **`"reset"`** 元素呈现为按钮，且带有默认的 `{{event("click")}}` 事件，用于将表单中的所有输入重置为其初始值。
 

@@ -1,7 +1,6 @@
 ---
 title: <kbd>
 slug: Web/HTML/Element/kbd
-translation_of: Web/HTML/Element/kbd
 ---
 ## 摘要
 

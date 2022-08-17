@@ -1,13 +1,6 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
-tags:
-  - Element
-  - HTML
-  - HTML5
-  - Web
-  - 菜单
-translation_of: Web/HTML/Element/menuitem
 ---
 {{HTMLRef}}{{Deprecated_Header("HTML5.2")}}
 

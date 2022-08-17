@@ -1,13 +1,6 @@
 ---
 title: <audio>
 slug: Web/HTML/Element/audio
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML5
-  - Media
-translation_of: Web/HTML/Element/audio
 ---
 {{HTMLRef}}
 

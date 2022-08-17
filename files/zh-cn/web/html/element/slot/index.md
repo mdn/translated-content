@@ -1,12 +1,6 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-tags:
-  - Web Components
-  - Web 组件
-  - slot
-  - 插槽
-translation_of: Web/HTML/Element/slot
 ---
 {{HTMLRef}}
 

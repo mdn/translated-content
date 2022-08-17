@@ -1,13 +1,6 @@
 ---
 title: <p>
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Web
-  - 参考
-translation_of: Web/HTML/Element/p
 ---
 {{HTMLRef}}
 
