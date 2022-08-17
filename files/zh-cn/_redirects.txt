@@ -647,7 +647,7 @@
 /zh-CN/docs/JS-ref/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/JS-ref/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/JS-ref/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/JS-ref/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/zh-CN/docs/JS-ref/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JS-ref/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JS-ref/Functions_and_function_scope	/zh-CN/docs/Web/JavaScript/Reference/Functions
 /zh-CN/docs/JS-ref/Functions_and_function_scope/arguments	/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments
@@ -835,7 +835,7 @@
 /zh-CN/docs/JavaScript/Reference/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/JavaScript/Reference/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/JavaScript/Reference/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/JavaScript/Reference/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/zh-CN/docs/JavaScript/Reference/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Functions_and_function_scope	/zh-CN/docs/Web/JavaScript/Reference/Functions
 /zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments	/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments
@@ -878,7 +878,7 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/JSON	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /zh-CN/docs/JavaScript/Reference/Global_Objects/JSON/stringify	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
@@ -2355,7 +2355,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/Web/JavaScript/Reference/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/Web/JavaScript/Reference/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/Web/JavaScript/Reference/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/zh-CN/docs/Web/JavaScript/Reference/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope	/zh-CN/docs/Web/JavaScript/Reference/Functions
 /zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/Method_definitions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions
@@ -2372,13 +2372,13 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce()用法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Locale	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh
