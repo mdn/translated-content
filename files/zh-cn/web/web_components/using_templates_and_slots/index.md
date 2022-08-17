@@ -1,13 +1,6 @@
 ---
 title: 使用 templates and slots
 slug: Web/Web_Components/Using_templates_and_slots
-tags:
-  - HTML slot
-  - HTML template
-  - HTML5
-  - Web Components
-  - shadow dom
-translation_of: Web/Web_Components/Using_templates_and_slots
 ---
 {{DefaultAPISidebar("Web Components")}}
 
