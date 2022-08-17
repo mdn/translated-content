@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - '## lastIndex bug???'
-  - JavaScript
-  - Method
-  - Prototype
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
 {{JSRef}}
 

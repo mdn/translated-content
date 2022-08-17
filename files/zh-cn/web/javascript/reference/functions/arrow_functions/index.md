@@ -1,17 +1,6 @@
 ---
 title: 箭头函数
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript 2015
-  - ES6 Arrow Function
-  - Functions
-  - Intermediate
-  - JavaScript
-  - Lambda
-  - Lambda Expression
-  - Reference
-  - ramda
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 {{jsSidebar("Functions")}}
 

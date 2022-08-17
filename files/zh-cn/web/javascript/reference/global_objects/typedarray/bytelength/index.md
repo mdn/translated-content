@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 ---
 {{JSRef}}
 

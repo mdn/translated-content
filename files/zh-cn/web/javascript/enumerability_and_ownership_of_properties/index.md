@@ -1,11 +1,6 @@
 ---
 title: 属性的可枚举性和所有权
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-tags:
-  - JavaScript
-  - 对象
-  - 属性
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
 {{JsSidebar("More")}}
 

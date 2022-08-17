@@ -1,16 +1,6 @@
 ---
 title: 类
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - ECMAScript 2015
-  - Học
-  - JavaScript
-  - 中级
-  - 构造函数
-  - 类
-  - 继承
-  - 高阶类
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 

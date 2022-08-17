@@ -1,16 +1,6 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - arguments
-  - polyfill
-  - 参考
-  - 数组
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 {{JSRef}}
 

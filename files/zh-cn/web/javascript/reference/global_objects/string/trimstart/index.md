@@ -1,15 +1,6 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimLeft
 ---
 {{JSRef}}**`trimStart()` **方法从字符串的开头删除空格。`trimLeft()` 是此方法的别名。{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}

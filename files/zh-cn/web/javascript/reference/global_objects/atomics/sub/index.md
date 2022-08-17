@@ -1,7 +1,6 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
 {{JSRef}}**`Atomics.sub()`** 静态方法在数组中的给定位置减去给定值，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
 

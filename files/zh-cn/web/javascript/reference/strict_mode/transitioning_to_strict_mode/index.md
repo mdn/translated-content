@@ -1,7 +1,6 @@
 ---
 title: 向严格模式过渡
 slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
-translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
 {{jsSidebar("More")}}
 

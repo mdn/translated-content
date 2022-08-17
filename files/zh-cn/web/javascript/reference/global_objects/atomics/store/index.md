@@ -1,7 +1,6 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ---
 {{JSRef}}
 

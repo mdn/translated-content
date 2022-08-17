@@ -1,10 +1,6 @@
 ---
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
-tags:
-  - 语法错误
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 {{jsSidebar("Errors")}}
 

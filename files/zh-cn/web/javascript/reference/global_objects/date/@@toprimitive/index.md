@@ -1,7 +1,6 @@
 ---
 title: Date.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 ---
 {{JSRef}}
 

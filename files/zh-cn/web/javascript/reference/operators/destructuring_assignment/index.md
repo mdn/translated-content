@@ -1,15 +1,6 @@
 ---
 title: 解构赋值
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 对象
-  - 操作符
-  - 数组
-  - 结构
-  - 赋值
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 {{jsSidebar("Operators")}}
 

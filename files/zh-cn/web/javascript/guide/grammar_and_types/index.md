@@ -1,15 +1,6 @@
 ---
 title: 语法和数据类型
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Enhanced Object Literals
-  - JavaScript
-  - 'Null'
-  - Object Literals
-  - Typed Objects
-  - typeof()
-  - 教程
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 

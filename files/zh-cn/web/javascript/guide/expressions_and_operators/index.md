@@ -1,12 +1,6 @@
 ---
 title: 表达式与运算符
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - JavaScript
-  - 入门
-  - 指南
-  - 表达式
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 

@@ -1,13 +1,6 @@
 ---
 title: 函数表达式
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Function
-  - JavaScript
-  - 函数
-  - 基本表达式
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
 {{jsSidebar("Operators")}}
 

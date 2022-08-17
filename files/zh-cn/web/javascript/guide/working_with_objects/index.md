@@ -1,14 +1,6 @@
 ---
 title: 使用对象
 slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - JavaScript
-  - 初学者
-  - 基本语法
-  - 教程
-  - 文档
-  - 比较对象
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 

@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 ---
 {{JSRef}}
 

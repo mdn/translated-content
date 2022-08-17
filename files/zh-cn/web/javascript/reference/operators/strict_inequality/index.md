@@ -1,7 +1,6 @@
 ---
 title: 严格不相等 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
 {{jsSidebar("Operators")}}
 

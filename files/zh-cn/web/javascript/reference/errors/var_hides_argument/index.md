@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: variable "x" redeclares argument'
 slug: Web/JavaScript/Reference/Errors/Var_hides_argument
-translation_of: Web/JavaScript/Reference/Errors/Var_hides_argument
 ---
 {{jsSidebar("Errors")}}
 

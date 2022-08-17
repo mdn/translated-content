@@ -1,14 +1,6 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - set
-  - 原型
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
 {{JSRef}}
 

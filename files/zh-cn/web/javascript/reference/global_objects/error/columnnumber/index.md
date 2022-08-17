@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 ---
 {{JSRef}} {{non-standard_header}}
 

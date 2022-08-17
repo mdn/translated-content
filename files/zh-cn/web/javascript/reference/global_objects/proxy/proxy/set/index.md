@@ -1,13 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Proxy
-  - Proxy 拦截
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
 {{JSRef}}

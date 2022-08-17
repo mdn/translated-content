@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 ---
 {{JSRef}}
 

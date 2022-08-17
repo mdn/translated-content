@@ -1,15 +1,6 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - 对象
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 {{JSRef}}
 

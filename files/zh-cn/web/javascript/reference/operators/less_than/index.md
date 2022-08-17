@@ -1,7 +1,6 @@
 ---
 title: Less than (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
-translation_of: Web/JavaScript/Reference/Operators/Less_than
 ---
 {{jsSidebar("Operators")}}
 

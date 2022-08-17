@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 ---
 {{JSRef}}
 

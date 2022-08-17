@@ -1,9 +1,6 @@
 ---
 title: 流程控制与错误处理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 

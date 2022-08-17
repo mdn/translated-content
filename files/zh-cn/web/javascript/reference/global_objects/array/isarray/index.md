@@ -1,15 +1,6 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - ECMAScript5
-  - JavaScript
-  - 'brush: js'
-  - class=
-  - polyfill
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
 {{JSRef}}
 

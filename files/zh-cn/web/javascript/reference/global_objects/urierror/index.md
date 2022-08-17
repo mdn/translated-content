@@ -1,12 +1,6 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Error
-  - JavaScript
-  - URIError
-  - 对象
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
 {{JSRef}}
 

@@ -1,19 +1,6 @@
 ---
 title: 继承与原型链
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Advanced
-  - Guide
-  - Inheritance
-  - JavaScript
-  - OOP
-  - 指南
-  - 继承
-  - 进阶
-  - 面向对象
-  - 面向对象编程
-  - 高级
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 {{jsSidebar("Advanced")}}
 

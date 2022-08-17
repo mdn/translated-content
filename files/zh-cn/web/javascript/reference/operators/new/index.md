@@ -1,12 +1,6 @@
 ---
 title: new 运算符
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - Left-hand-side expressions
-  - Operator
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/new
 ---
 {{jsSidebar("Operators")}}
 

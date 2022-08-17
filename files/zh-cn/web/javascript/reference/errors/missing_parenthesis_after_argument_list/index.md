@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: missing ) after argument list'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-tags:
-  - JavaScript
-  - 语法错误
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
 {{jsSidebar("Errors")}}
 

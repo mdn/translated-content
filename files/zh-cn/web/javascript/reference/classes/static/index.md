@@ -1,14 +1,6 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Static
-  - 静态方法
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
 {{jsSidebar("Classes")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Atomics.isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 ---
 {{JSRef}} {{SeeCompatTable}}
 

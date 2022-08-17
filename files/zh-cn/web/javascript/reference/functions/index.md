@@ -1,11 +1,6 @@
 ---
 title: 函数
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - Functions
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions
 ---
 {{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-cn/JavaScript/Reference/Global_Objects/Function)对象。
 

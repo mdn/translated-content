@@ -1,12 +1,6 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - 构造函数
-  - 类型数组
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 {{JSRef}}
 

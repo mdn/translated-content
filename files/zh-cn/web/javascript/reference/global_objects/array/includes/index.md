@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - Array
-  - ECMAScript 2016
-  - JavaScript
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 {{JSRef}}
 

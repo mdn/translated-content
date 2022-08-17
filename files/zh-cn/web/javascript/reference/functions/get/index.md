@@ -1,11 +1,6 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 {{jsSidebar("Functions")}}
 

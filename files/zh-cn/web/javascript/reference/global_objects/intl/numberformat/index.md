@@ -1,10 +1,6 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-tags:
-  - Intl
-  - 国际化
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
 {{JSRef}}
 

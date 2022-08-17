@@ -1,10 +1,6 @@
 ---
 title: 介绍
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - JavaScript
-  - 指南
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 {{jsSidebar("JavaScript 指南")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 

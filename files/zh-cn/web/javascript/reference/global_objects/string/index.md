@@ -1,12 +1,6 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - JavaScript
-  - String
-  - 参考
-  - 字符串
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
 {{JSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
-tags:
-  - JavaScript
-  - 类型错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Cant_redefine_property
 ---
 {{jsSidebar("Errors")}}
 
