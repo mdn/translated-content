@@ -40,10 +40,10 @@ Estos selectores permiten seleccionar un elemento solo a partir de la presencia 
 
 | Selector | Ejemplo | Descripción |
 | --- | --- | --- |
-| `[_attr_]` | `a[title]` | Relaciona elementos con un mismo nombre de atributo, _attr_ (el valor que se indica entre corchetes). |
-| `[_attr_=_value_]` | `a[href="https://example.com"]` | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente el mismo, _value_ (la cadena de caracteres que se indica entre corchetes). |
-| `[_attr_~=_value_]` | `p[class~="special"]` | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente _value_, o los elementos con un mismo atributo _attr_ que contiene uno o más valores de los cuales, al menos uno, coincide con _value_. Ten en cuenta que en una lista que incluya más de un valor, los distintos valores se separan con un espacio. |
-| `[_attr_|=_value_]` | `div[lang|="zh"]` | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor puede ser exactamente _value_ o puede comenzar con _value_ seguido inmediatamente por un guion. |
+| `[attr]` | `a[title]` | Relaciona elementos con un mismo nombre de atributo, _attr_ (el valor que se indica entre corchetes). |
+| `[attr=value]` | `a[href="https://example.com"]` | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente el mismo, _value_ (la cadena de caracteres que se indica entre corchetes). |
+| `[attr~=value]` | `p[class~="special"]` | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente _value_, o los elementos con un mismo atributo _attr_ que contiene uno o más valores de los cuales, al menos uno, coincide con _value_.<br><br> Ten en cuenta que en una lista que incluya más de un valor, los distintos valores se separan con un espacio. |
+| `[attr\|=value]` | `div[lang\|="zh"]` | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor puede ser exactamente _value_ o puede comenzar con _value_ seguido inmediatamente por un guion. |
 
 En el ejemplo siguiente puedes observar cómo se utilizan estos selectores.
 

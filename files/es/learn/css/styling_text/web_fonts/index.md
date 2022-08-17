@@ -122,9 +122,9 @@ Para implementar estos tipos de letra en tu ejemplo de demostración, sigue esto
 3.  Cada una de las funciones `url()` apunta a un archivo de tipo de letra que tenemos que importar a nuestro CSS. Necesitamos asegurarnos de que las rutas a los archivos son correctas, así que añade `fonts/` al inicio de cada ruta (ajusta la ruta como sea necesario).
 4.  Ahora puedes usar estos tipos de letra en tu lista de tipos de letra, al igual que cualquier tipo de letra seguro o predeterminado del sistema. Por ejemplo:
 
-```css
-font-family: 'zantrokeregular', serif;
-```
+    ```css
+    font-family: 'zantrokeregular', serif;
+    ```
 
 Con tu ejemplo de demostración, deberías obtener una página con unos agradables tipos de letra. Debido a que los tipos de letra se crean en diferentes tamaños, es posible que tengas que ajustar el tamaño, el espaciado, etc., para conseguir una apariencia más ordenada.
 

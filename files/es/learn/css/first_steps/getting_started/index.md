@@ -252,7 +252,11 @@ En el ejemplo que encontrarás a continuación, puedes jugar con diferentes valo
 
 Hemos eliminado el subrayado del enlace cuando el ratón se pasa por encima, y se puede eliminar de todos los estados de un enlace. Sin embargo, vale la pena recordar que en una página web real deberás asegurarte de que los visitantes sepan reconocer que se trata de un enlace. Que aparezca subrayado puede ser una pista importante para que las personas se den cuenta de que pueden hacer clic en una palabra dentro del párrafo, ya que es a lo que están acostumbrados. Al igual que con todo en CSS, existe la posibilidad de que tus cambios resten accesibilidad al documento. Intentaremos resaltar estas posibles dificultades en los lugares apropiados.
 
-> **Nota:** a menudo verás que se menciona la [accesibilidad](/es/docs/Learn/Accessibility) en estas lecciones y en MDN. Cuando hablamos de accesibilidad nos referimos al requisito de que nuestras páginas web sean comprensibles y usables para todas las personas.Puede que tu visitante acceda a la página desde un ordenador con ratón o trackpad, o un teléfono inteligente con pantalla táctil. O puede que use un lector de pantalla que lea el contenido del documento, así como puede que necesite un tamaño de texto más grande o navegar por la página usando solo el teclado.Un documento HTML simple es, generalmente, accesible para todos. Es importante que el documento no pierda accesibilidad a medida que vayas aplicándole estilo.
+> **Nota:** a menudo verás que se menciona la [accesibilidad](/es/docs/Learn/Accessibility) en estas lecciones y en MDN. Cuando hablamos de accesibilidad nos referimos al requisito de que nuestras páginas web sean comprensibles y usables para todas las personas.
+>
+> Puede que tu visitante acceda a la página desde un ordenador con ratón o trackpad, o un teléfono inteligente con pantalla táctil. O puede que use un lector de pantalla que lea el contenido del documento, así como puede que necesite un tamaño de texto más grande o navegar por la página usando solo el teclado.
+>
+> Un documento HTML simple es, generalmente, accesible para todos. Es importante que el documento no pierda accesibilidad a medida que vayas aplicándole estilo.
 
 ## Combinaciones de selectores y combinadores
 

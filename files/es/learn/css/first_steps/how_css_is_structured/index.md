@@ -306,6 +306,8 @@ Esto se traduce así:
 
 {{EmbedLiveSample('calc_example', '100%', 200)}}
 
+##
+
 Una función consta del nombre de la función y, a continuación, unos paréntesis entre los que se colocan los valores permitidos para esa función. En el caso del ejemplo `calc()` anterior, pedimos que el ancho de esta caja sea del 90% del ancho del bloque que la contiene, menos 30 píxeles. Esto no es algo que podamos calcular con anticipación y simplemente introducir el valor en el CSS, ya que no sabemos cuál será el 90%. Como con todos los valores, la página correspondiente del proyecto MDN tendrá ejemplos de uso para que puedas ver cómo funciona.
 
 Otro ejemplo serían los diversos valores para {{cssxref ("transform")}}, como `rotate()`.

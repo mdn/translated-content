@@ -41,4 +41,4 @@ Este módulo contiene los siguientes artículos, que te guiarán a través de to
 ## Ver también
 
 - [Conocimiento práctico intermedio Web 1: Introducción a CSS (en Inglés)](https://teach.mozilla.org/activities/intermediate-web-lit/)
-  - . Aprende acerca de como agregar estilo a los elementos HTML en una página web, selectores CSS, atributos, y valores.
+  - : Aprende acerca de como agregar estilo a los elementos HTML en una página web, selectores CSS, atributos, y valores.

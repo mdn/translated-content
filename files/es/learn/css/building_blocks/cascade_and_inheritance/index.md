@@ -109,7 +109,7 @@ CSS proporciona cuatro valores de propiedad universales especiales para el contr
 - {{cssxref("initial")}}
   - : Establece que el valor de la propiedad que se aplica a un elemento seleccionado tenga el mismo valor que esté establecido para esa propiedad en la hoja de estilo por defecto del navegador.
 - {{cssxref("unset")}}
-  - .
+  - : Restablece la propiedad a su valor natural, lo que significa que si la propiedad se hereda de forma natural, actúa como `inherit`, y en caso contrario como `initial`.
 
 > **Nota:** También hay un valor más reciente, {{cssxref ("revert")}}, que todavía admiten pocos navegadores.
 

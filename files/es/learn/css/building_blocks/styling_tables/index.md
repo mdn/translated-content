@@ -88,9 +88,9 @@ En esta sección de aprendizaje activo vamos a aplica estilo a nuestra tabla jun
 2.  Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
 3.  Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
 
-```html
-<link href="style.css" rel="stylesheet" type="text/css">
-```
+    ```html
+    <link href="style.css" rel="stylesheet" type="text/css">
+    ```
 
 ### Espaciado y distribución
 
@@ -129,7 +129,7 @@ th, td {
 
 Las partes más importantes que destacamos son:
 
-- En general es una buena idea establecer un valor {{cssxref("table-layout")}} en `fixed` para la tabla porque le proporciona un comportamiento predeterminado predecible. Normalmente se tiende a dar un tamaño de columna según la cantidad de contenido que haya en estas, lo que suele producir resultados extraños. Con `table-layout: fixed`, puedes dar a las columnas un tamaño de acuerdo con el ancho de sus celdas de encabezado y a continuación gestionar los contenidos de la forma que te parezca más adecuada. Por esto hemos seleccionado los cuatro encabezados con el selector `thead th:nth-child(n)` ({{cssxref(":nth-child")}}) (Seleccionar el descendiente enésimo que es un elemento {{htmlelement("th")}} en una secuencia dentro del elemento {{htmlelement("thead")}}) y, dados estos, asignar los porcentajes de anchura. Chris Coyier expone esta técnica con más detalle en [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).
+- En general es una buena idea establecer un valor {{cssxref("table-layout")}} en `fixed` para la tabla porque le proporciona un comportamiento predeterminado predecible. Normalmente se tiende a dar un tamaño de columna según la cantidad de contenido que haya en estas, lo que suele producir resultados extraños. Con `table-layout: fixed`, puedes dar a las columnas un tamaño de acuerdo con el ancho de sus celdas de encabezado y a continuación gestionar los contenidos de la forma que te parezca más adecuada. Por esto hemos seleccionado los cuatro encabezados con el selector `thead th:nth-child(n)` ({{cssxref(":nth-child")}}) (Seleccionar el descendiente enésimo que es un elemento {{htmlelement("th")}} en una secuencia dentro del elemento {{htmlelement("thead")}}) y, dados estos, asignar los porcentajes de anchura. Chris Coyier expone esta técnica con más detalle en [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).<br><br>
 
   Hemos emparejado esto con un {{cssxref("width")}} del 100%, que significa que la tabla llenará cualquier contenedor en la que se ubique, y presentará unas buenas características adaptativas (aunque podría requerir algo más de trabajo para que se vea bien en pantallas de anchuras estrechas).
 

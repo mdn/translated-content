@@ -336,7 +336,7 @@ Si te equivocas, puedes volver a empezar con el botón _Reinicio_. Si te quedas 
 </div>
 ```
 
-```js
+```js hidden
 var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");

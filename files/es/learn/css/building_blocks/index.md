@@ -46,7 +46,7 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
 - [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
   - : En esta lección, veremos algunas de las cosas creativas que puede hacer con fondos y bordes CSS. Al agregar degradados, imágenes de fondo y esquinas redondeadas, los fondos y los bordes son la respuesta a muchas preguntas de estilo en CSS.
 - [Manejo de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-  - . A medida que avance en su estudio y comience a trabajar con el diseño, comprenderá los modos de escritura será muy útil para usted, por lo tanto, los presentaremos en este artículo.
+  - : A medida que avance en su estudio y comience a trabajar con el diseño, comprenderá los modos de escritura será muy útil para usted, por lo tanto, los presentaremos en este artículo.
 - [Contenido desbordante](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
   - : En esta lección veremos otro concepto importante en CSS: desbordamiento. El Overflow (o desbordamiento) es lo que sucede cuando hay demasiado contenido para contenerlo cómodamente dentro de una caja. En esta guía aprenderá qué es y cómo administrarlo.
 - [Valores y unidades de CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units)

@@ -39,11 +39,11 @@ Estos artículos te proporcionarán instrucciones sobre las herramientas y técn
 - [Introducción a la maquetación CSS](/es/docs/Learn/CSS/CSS_layout/Introduction)
   - : En este artículo repasaremos algunas de las características de la maquetación con CSS que ya hemos tratado en módulos previos, como los diferentes valores de {{cssxref("display")}} ; e introduciremos algunos de los conceptos que estudiaremos a lo largo del módulo.
 - [Normal flow](/es/docs/Learn/CSS/CSS_layout/Flujo_normal)
-  - hasta que hacemos algo que cambie eso. Este artículo explica las bases del flujo normal para aprender como cambiarlo.
+  - : Los elementos en las páginas web se presentan de acuerdo con el _flujo normal,_ hasta que hacemos algo que cambie eso. Este artículo explica las bases del flujo normal para aprender como cambiarlo.
 - [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox)
   - : [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications) es una muy reciente tecnología que, soportada ya por numerosos navegadores, está lista para su uso generalizado. Flexbox proporciona las herramientas necesarias para crear rápidamente maquetaciones flexibles y complejas, así como otras funcionalidades que tradicionalmente eran de difícil implementación con CSS. Este artículo explica su funcionamiento básico.
 - [Grids](/es/docs/Learn/CSS/CSS_layout/Grids)
-  - u otras funciones de maquetación. Visualizas tu maquetación como un número fijo de columnas donde vas incluyendo tu contenido. En este artículo exploraremos la idea básica detrás de un sistema de cuadrícula, y terminaremos experimentando con CSS Grid, una incipiente nueva característica que permite diseñar una cuadricula Web con gran facilidad
+  - : Los sistemas de cuadrícula son otra funcionalidad muy utilizada para la maquetación CSS, que tiende a ser implementada mediante _floats_ u otras funciones de maquetación. Visualizas tu maquetación como un número fijo de columnas donde vas incluyendo tu contenido. En este artículo exploraremos la idea básica detrás de un sistema de cuadrícula, y terminaremos experimentando con CSS Grid, una incipiente nueva característica que permite diseñar una cuadricula Web con gran facilidad
 - [Floats](/es/docs/Learn/CSS/CSS_layout/Floats)
   - : Inicialmente utilizado para imágenes flotantes dentro de bloques de texto, la propiedad {{cssxref("float")}} se ha convertido en una de las herramientas más utilizadas para crear maquetaciones de varias columnas en páginas web. Con la venida de Flexbox y Grid se ha regresado a su propósito original, como lo explica este artículo.
 - [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning)
@@ -68,7 +68,7 @@ Los siguientes ejercicios comprobarán tu habilidad para maquetar páginas web c
 - Creando una maquetación de varias columnas flexibles
   - : Este ejercicio comprobará tu habilidad par crear una maquetación multi-columna, con alguna que otra característica interesante.
 - Creando un _widget_ fijo de control
-  - de control con posición fija, que permitirá al usuario acceder a los controles de una aplicación Web, independientemente de dónde se hubiera desplazado en la página.
+  - : Este ejercicio pone a prueba tu entendimiento sobre el posicionamiento, proponiéndote crear un _widget_ de control con posición fija, que permitirá al usuario acceder a los controles de una aplicación Web, independientemente de dónde se hubiera desplazado en la página.
 
 ## Ver también
 

@@ -93,6 +93,8 @@ Si guardas y recargas la página, verás algo parecido a lo que esperarías: la 
 
 Ahora, si guardas y recargas, podrás ver algo parecido a lo siguiente:
 
+##
+
 ```html hidden
 <h1>Ejemplo simple de caja flotante</h1>
 
@@ -143,6 +145,8 @@ Añade una clase `special` al primer párrafo de texto, el que sucede inmediatam
 ```
 
 Para que el efecto sea más fácil de ver, cambia el `margin-right` de tu elemento flotante a `margin`, para obtener espacio alrededor del elemento flotante. Verás que el fondo del párrafo pasa justo por debajo de la caja flotante, como en el ejemplo inferior.
+
+##
 
 ```html hidden
 <h1>Ejemplo simple de caja flotante</h1>
@@ -271,6 +275,8 @@ Además, elimina la clase `.cleared` anterior:
 ```
 
 Verás que, como en el ejemplo en el que hemos puesto un color de fondo al párrafo, el color de fondo pasa por detrás del elemento flotante.
+
+##
 
 ```html hidden
 <h1>Ejemplo simple de caja flotante</h1>

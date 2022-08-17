@@ -130,13 +130,42 @@ CSS define cinco nombres genéricos para los tipos de letra `serif`, `sans-serif
 
 Los cinco nombres se definen de la manera siguiente:
 
-| Nombre       | Definición                                                                                                                                                                                   | Ejemplo               |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| `serif`      | Tipos de letra que tienen _[serifas](https://es.wikipedia.org/wiki/Gracia_\(tipograf%C3%ADa\))_ (pequeños adornos, en general en los extremos de los trazos de los caracteres tipográficos) | Mi gran elefante rojo |
-| `sans-serif` | Tipos de letra que carecen de _serifas_.                                                                                                                                                     | Mi gran elefante rojo |
-| `monospace`  | Tipos de letra en que cada carácter tiene el mismo ancho; se usan con frecuencia en las listas de sentencias de los códigos de programación.                                                 | Mi gran elefante rojo |
-| `cursive`    | Tipos de letra que intentan emular la letra manuscrita, con trazos fluidos y conectados.                                                                                                     | Mi gran elefante rojo |
-| `fantasy`    | Tipos de letra que pensados para ser decorativos.                                                                                                                                            | Mi gran elefante rojo |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Nombre</th>
+   <th scope="col">Definición</th>
+   <th scope="col">Ejemplo</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>serif</code></td>
+   <td>Tipos de letra que tienen <em><a href="https://es.wikipedia.org/wiki/Gracia_(tipograf%C3%ADa)">serifas</a></em> (pequeños adornos, en general en los extremos de los trazos de los caracteres tipográficos)</td>
+   <td><span style="font-family: serif;">Mi gran elefante rojo</span></td>
+  </tr>
+  <tr>
+   <td><code>sans-serif</code></td>
+   <td>Tipos de letra que carecen de <em>serifas</em>.</td>
+   <td><span style="font-family: sans-serif;">Mi gran elefante rojo</span></td>
+  </tr>
+  <tr>
+   <td><code>monospace</code></td>
+   <td>Tipos de letra en que cada carácter tiene el mismo ancho; se usan con frecuencia en las listas de sentencias de los códigos de programación.</td>
+   <td><span style="font-family: monospace;">Mi gran elefante rojo</span></td>
+  </tr>
+  <tr>
+   <td><code>cursive</code></td>
+   <td>Tipos de letra que intentan emular la letra manuscrita, con trazos fluidos y conectados.</td>
+   <td><span style="font-family: cursive;">Mi gran elefante rojo</span></td>
+  </tr>
+  <tr>
+   <td><code>fantasy</code></td>
+   <td>Tipos de letra que pensados para ser decorativos.</td>
+   <td><span style="font-family: fantasy;">Mi gran elefante rojo</span></td>
+  </tr>
+ </tbody>
+</table>
 
 #### Listas de tipos de letra
 
@@ -267,9 +296,9 @@ El CSS proporciona cuatro propiedades comunes para alterar el efecto visual / é
 - {{cssxref("text-decoration")}}: Activa/desactiva decoraciones en los tipos de letra (usarás esto principalmente para desactivar el subrayado por defecto de los enlaces al aplicarles estilo). Los valores disponibles son:
 
   - `none`: Desactiva cualquier decoración de texto que presente.
-  - `underline`: __Subraya el texto.__
+  - `underline`: Subraya el texto.
   - `overline`: Proporciona al texto una línea superpuesta.
-  - `line-through`: Coloca un ~~tachado sobre el texto.~~
+  - `line-through`: Coloca un tachado sobre el texto.
 
   Observa que {{cssxref("text-decoration")}} puede aceptar diversos valores a la vez, de modo que puedes incluir diversas decoraciones simultáneas, por ejemplo `text-decoration: underline overline`. Ten encuenta también que {{cssxref("text-decoration")}} es una propiedad abreviada de {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} y {{cssxref("text-decoration-color")}}. Puedes utilizar combinaciones de los valores de esta propiedad para crear efectos interesantes, por ejemplo `text-decoration: line-through red wavy`.
 

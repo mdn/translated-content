@@ -101,7 +101,7 @@ Numerosos métodos de compaginación se pueden usar de manera similar a este eje
 - **`float`** y **`clear`**
   - : dejan de afectar a la compaginación si los elementos afectados por estas propiedades pasan a ser de tipo flexible o de cuadrícula.
 - display: inline-block;
-  - : se ignora.
+  - : Este método se puede utilizar para crear compaginaciones en columnas; si un elemento tiene establecido un comportamiento `display: inline-block` pero se convierte a elemento con compaginación de tipo flexible o de cuadrícula, el comportamiento `inline-block` se ignora.
 - display: table;
   - : de estos artículos puede utilizarse como opción alternativa. Los elementos que tienen diseños de tabla CSS pierden este comportamiento si se convierten en elementos con comportamiento flexible o de cuadrícula. Es importante destacar que no se crearán las cajas sin nombre que fueron creadas para arreglar la estructura de tabla.
 - Compaginación en columnas

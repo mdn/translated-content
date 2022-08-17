@@ -81,12 +81,10 @@ Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en d
 
 La forma en que se aplican los estilos CSS a los elementos HTML depende también de la jerarquía de los elementos. Es importante recordar que una regla que se aplica a un descendiente reemplaza el estilo del padre, a pesar de la especificidad o la prioridad de las reglas CSS.
 
-```css
+```
 .news { color: black; }
 . corpName {font-weight: bold; color: red;}
-```
 
-```html
 <!-- el texto de la noticia es negro, pero el nombre de la empresa va en rojo y negrita -->
 <div class="news">
    (Reuters) <span class="corpName"> General Electric </span> (GE.NYS) anunció el jueves ...
@@ -99,16 +97,14 @@ En el caso de jerarquías HTML complejas, si parece que se ignora una regla, com
 
 En las hojas de estilo CSS el orden **es** importante. Si defines una regla y luego vuelves a definirla, se usará la última definición.
 
-```css
+```
 #stockTicker { font-weight: bold; }
 .stockSymbol { color: red; }
 /*  otras reglas             */
 /*  otras reglas             */
 /*  otras reglas             */
 .stockSymbol { font-weight: normal; }
-```
 
-```html
 <!-- la mayor parte del texto va en negrita, con excepción de "GE", que va en rojo y no en negrita -->
 <div id="stockTicker">
    NYS: <span class="stockSymbol">GE</span> +1.0 ...
@@ -121,12 +117,10 @@ Para evitar este tipo de errores, intenta definir las reglas solo una vez para u
 
 Está bien usar las propiedades abreviadas para la definición de reglas de estilo, ya que utiliza una sintaxis muy compacta. Usar la abreviatura con sólo algunos atributos es posible y correcto, pero hay que recordar que los atributos no declarados se restablecen a los valores predeterminados automáticamente. Esto significa que una norma anterior para un solo atributo podría ser reemplazada implícitamente.
 
-```css
+```
 #stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
 .stockSymbol { font: 14px Arial; color: red; }
-```
 
-```html
 <div id="stockTicker">
    NYS: <span class="stockSymbol">GE</span> +1.0 ...
 </div>
@@ -145,14 +139,12 @@ En el ejemplo anterior el problema se produjo en las reglas que pertencían a di
 
 El selector `*` se refiere a cualquier elemento y tiene que utilizarse con especial cuidado.
 
-```css
+```
 body * { font-weight: normal; }
 #stockTicker { font: 12px Verdana; }
 .corpName { font-weight: bold; }
 .stockUp { color: red; }
-```
 
-```html
 <div id="section">
    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
 </div>
@@ -164,18 +156,16 @@ En este ejemplo, el selector `body *` aplica la regla a todos los elementos dent
 
 Cuando se aplican múltiples reglas a un determinado elemento, la norma escogida depende de su especificidad de estilo. El estilo en línea (en los atributos HTML `style`) es lo primero, seguido por los selectores id, a continuación, los selectores class y, finalmente, los selectores element-name.
 
-```css
+```
 div { color: black; }
 #orange { color: orange; }
 .green { color: green; }
-```
 
-```html
 <div id="orange" class="green" style="color: red;">This is red</div>
 ```
 
 Las reglas son más complicadas cuando el selector tiene varias partes. Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el [capítulo 6.4.3 de la Especificación CSS 2.1](http://www.w3.org/TR/CSS21/cascade.html#specificity)
 
-#### ¿Qué hacen las propiedades -moz-?
+#### ¿Qué hacen las propiedades -moz-*?
 
 Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions).
