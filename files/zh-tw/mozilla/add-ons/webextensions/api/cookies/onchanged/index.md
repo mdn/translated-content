@@ -1,7 +1,6 @@
 ---
 title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
 {{AddonSidebar()}}
 

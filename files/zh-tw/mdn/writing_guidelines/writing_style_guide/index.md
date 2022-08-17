@@ -1,23 +1,6 @@
 ---
 title: 寫作風格指南
 slug: MDN/Writing_guidelines/Writing_style_guide
-tags:
-  - 文件
-  - 指南
-  - 指導方針
-  - MDN Web 文件
-  - MDN 風格指南
-  - 風格指南
-  - 寫作風格指南
-  - Documentation
-  - Guide
-  - Guidelines
-  - MDN
-  - MDN Meta
-  - MDN Web Docs
-  - MDN style guide
-  - Style guide
-  - Writing style guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
 {{MDNSidebar}}
