@@ -20,7 +20,7 @@ toString()
 
 ## 描述
 
-{{jsxref("Function")}} 对象覆盖了从 {{jsxref("Object")}} 继承来的 {{jsxref("Object.prototype.toString", "toString")}} 方法。对于用户定义的 `Function` 对象，`toString` 方法返回一个字符串，其中包含用于定义函数的源文本段。
+{{jsxref("Function")}} 对象覆盖了从 {{jsxref("Object")}} 继承来的 `toString()` 方法，而没有继承 {{jsxref("Object.prototype.toString", "toString")}}。对于用户定义的 `Function` 对象，`toString` 方法返回一个字符串，其中包含用于定义函数的源文本段。
 
 在 `Function` 需要表示为字符串时，JavaScript 会自动调用函数的 `toString `方法，例如：函数与一个字符串进行拼接。
 
