@@ -1,14 +1,6 @@
 ---
 title: 创建和触发 events
 slug: Web/Events/Creating_and_triggering_events
-tags:
-  - Advanced
-  - DOM
-  - Guide
-  - JavaScript
-  - NeedsContent
-  - events
-translation_of: Web/Events/Creating_and_triggering_events
 ---
 本文演示了如何创建和分派 DOM 事件。这些事件通常称为**合成事件**，而不是浏览器本身触发的事件。
 

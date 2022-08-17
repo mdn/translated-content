@@ -1,16 +1,6 @@
 ---
 title: Web 图形开发
 slug: Web/Guide/Graphics
-tags:
-  - 3D
-  - Canvas
-  - HTML5
-  - SVG
-  - WebGL
-  - WebRTC
-  - 图像
-  - 图形
-translation_of: Web/Guide/Graphics
 ---
 现代网站和应用需要呈现大量图片。 展示静态签 {{HTMLElement("img")}}，也可以采用 CSS 样式中的 {{cssxref("background-image")}} 属性。与此同时，你也能绘制出动态图像，或者是对图像进行巧妙处理。 这些文章可以帮助你了解如何做到这些事情。
 
