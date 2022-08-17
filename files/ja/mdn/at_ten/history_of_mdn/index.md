@@ -1,224 +1,227 @@
 ---
-title: MDN の歴史
+title: MDN のあゆみ
 slug: MDN/At_ten/History_of_MDN
 tags:
   - History
   - MDN Meta
 translation_of: MDN_at_ten/History_of_MDN
 original_slug: MDN_at_ten/History_of_MDN
+i10n:
+  sourceCommit: 356b0655db61fafedd864b54d39e04529b52fff4
 ---
-<div class="summary">
-<p>このトピックでは、MDN プロジェクトへの貢献者たちが、<a href="https://developer.mozilla.org">developer.mozilla.org</a> の過去 10 年間と、来たる 10 年間を見ていきます。異なる Wiki ソフトウェア間の移行やドキュメンテーションコミュニティーがどうやって育ってきたのか、またいくつかのこのサイトの歴史におけるハイライトについて取り上げます。また現在の課題や今年の MDN コミュニティーの取り組みについても語ります。</p>
+このトピックでは、MDN プロジェクトへの貢献者たちが、[developer.mozilla.org](https://developer.mozilla.org) の過去 10 年間と、来たる 10 年間を見ていきます。異なる Wiki ソフトウェア間の移行やドキュメンテーションコミュニティがどうやって育ってきたのか、またいくつかのこのサイトの歴史におけるハイライトについて取り上げます。また現在の課題や今年の MDN コミュニティの取り組みについても語ります。
 
-<div class="chapter-audio">
-<div class="hidden" id="audio">
-<h3 id="HTML_Content">HTML Content</h3>
+<div id="audio"><pre class="brush: html hidden">&#x3C;audio controls="controls">
+  あなたのブラウザーにはオーディオプレイヤーが内蔵されていないようです。音声ファイルはここから取得して再生できます。 https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3
+  &#x3C;source src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3" type="audio/mp3">
+&#x3C;/audio>
+</pre><pre class="brush: css hidden">body{margin-top:8px;}
+</pre></div>
 
-<pre class="brush: html"><audio>
-  あなたのブラウザにはオーディオプレイヤーが内蔵されていないようです。音声ファイルはここから取得して再生できます: https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3</audio>
-</pre>
+{{ EmbedLiveSample('audio', '100%', '70px', '', '', 'no-buttons') }}
 
-<pre class="brush: css"> body{margin-top:8px;}</pre>
-</div>
-{{ EmbedLiveSample('audio', '100%', '60px') }}
+![The Berlin Office](11073502_781006205281080_8135317797319228200_o-600x400.jpg)
 
-<p>これから、記憶や思想を共有し、そして自らの関わったある部分について詳細を語ってくれる人々について紹介します。</p>
-</div>
-</div>
+[2015 Berlin "Hack on MDN"](https://blog.mozilla.org/community/2015/04/17/a-highly-productive-hack-on-mdn-weekend-in-berlin/) でトークを録音しました。
 
-<div class="chapters" id="chapters">
-<article class="chapter chapter-portrait" id="hoosteeno"><a class="chapter-portrait-img" href="https://twitter.com/hoosteeno"><img alt="Justin Crawford" src="https://avatars0.githubusercontent.com/u/94519" style="height: 128px; width: 128px;"> </a>
+## トピック
 
-<h2 id="Justin_Crawford_プロダクトマネージャー_MDN">Justin Crawford <small>プロダクトマネージャー, MDN</small></h2>
+ここでは、議論された内容の概要を、タイムスタンプや補足説明とともに紹介します。
 
-<p>Justin 氏はこのトピックの進行役を務めます。ものを作り出す素材として、コード、言葉、自転車の部品、材木を用います。Twitter アカウントは <a href="https://twitter.com/hoosteeno">@hoosteeno</a>。</p>
-</article>
+### MDN とは？誰のためのサイト？<br>オープンウェブコミュニティのための場所
 
-<article class="chapter chapter-justtext" id="mdn-intro">
-<h2 id="MDNとは？誰のためのサイト？Open_Web_コミュニティーの為の場所">MDNとは？誰のためのサイト？<small>Open Web コミュニティーの為の場所</small></h2>
+_0:00:00 - 0:07:15_
 
-<p>MDN は有益な Web テクノロジーの情報を提供し、オープンな Web コミュニティーで学んだり、共有したり、教えたりすることを助けます。 MDN では、あなたも一緒になってあなた自身のため、また他者のために何かを作りあげることになります。</p>
-Mozilla 開発者のための場所
+MDN は有益なウェブテクノロジーの情報を提供し、オープンなウェブコミュニティで学んだり、共有したり、教えたりすることを助けます。 MDN では、あなたも一緒になってあなた自身のため、また他者のために何かを作りあげることになります。
 
-<p>MDN はまた、Gecko や Firefox をハックする人々、アドオン開発者、Firefox OS 貢献者などのMozilla に携わる技術者のための場所でもあります。</p>
-</article>
+MDN はまた、Gecko や Firefox をハックする人々、アドオン開発者、 Firefox OS 貢献者などの Mozilla に携わる技術者のための場所でもあります。
 
-<article class="chapter chapter-portrait" id="sheppy"><a class="chapter-portrait-img" href="https://twitter.com/sheppy"><img alt="Eric Shepherd" src="https://pbs.twimg.com/profile_images/454358640518914048/WX1xBTs9.jpeg" style="height: 128px; width: 128px;"> </a>
+### MDN の歴史<br>Wiki より前の時代 – Netscape DevEdge
 
-<h2 id="Eric_Sheppy_Shepherd_テクニカルライター_MDN">Eric "Sheppy" Shepherd <small>テクニカルライター, MDN</small></h2>
+_0:07:15 - 0:08:17_
 
-<p>Sheppy 氏は Mozilla の為に 2006 年から執筆を始め、MDC と MDN に結実するまでに長年の歴史（とクレイジーなアイデア）を刻んでいます。Twitter では <a href="https://twitter.com/sheppy">@sheppy</a>。</p>
-</article>
+古くは、いくつかの MDN ドキュメントの基礎を形作ることになった Netscape 社の _DevEdge_ というものがありました。その頃の様子は [archive.org](https://web.archive.org/web/20020819120942/http://devedge.netscape.com/) で見ることができます。
 
-<article class="chapter chapter-justtext" id="mdn-history">
-<h2 id="MDN_の歴史_Wiki_より前の時代_–_Netscape_DevEdge">MDN の歴史 <small>Wiki より前の時代 – Netscape DevEdge</small></h2>
+[![Netscape DevEdge](devedge.png)](https://web.archive.org/web/20020819120942/http://devedge.netscape.com/)
 
-<p>古くは、いくつかの MDN ドキュメントの基礎を形作ることになった Netscape 社の <em>DevEdge</em> というものがありました。その頃の様子は <a href="https://web.archive.org/web/20020819120942/http://devedge.netscape.com/">archive.org</a> で見ることができます。</p>
+2004 年 10 月 12 日、この人気のあった開発者向けのウェブサイトは Netscape の親会社、AOL によって閉じられました。わずか数か月後の 2005 年 2 月、[Mitchell Baker](https://blog.lizardwrangler.com/) は Mozilla が元 Netscape DevEdge リソースベースの新しいドキュメントを投稿したり、修正したり、作成することを許可する AOL との契約とともに [DevEdge を助け出す](https://blog.lizardwrangler.com/2005/02/23/devmo-and-devedge-updates/)ことに成功しました。つまり、1998 年に Mozilla のソースについて起きたことが、ついに Netscape の開発者ドキュメントについても起きたのです。**オープンソースになったということです！**
 
-<p><a href="https://web.archive.org/web/20020819120942/http://devedge.netscape.com/"><img alt="Netscape DevEdge" src="https://mdn.mozillademos.org/files/11581/devedge.png" style="height: 300px; width: 600px;"> </a></p>
+Deb Richardson が Mozilla Foundation に技術編集者として加わり、新しい _DevMo_ プロジェクト ── コミュニティ主体の開発者ドキュメントのプロジェクトをリードしました。
 
-<p>2004 年 10 月 12 日、この人気のあった開発者向けのウェブサイトは Netscape の親会社、AOL によって閉じられました。わずか数か月後の 2005 年 2 月、<a href="https://blog.lizardwrangler.com/">Mitchell Baker</a> は Mozilla が元 Netscape DevEdge リソースベースの新しいドキュメントを投稿したり、修正したり、作成することを許可する AOL との契約とともに <a href="https://blog.lizardwrangler.com/2005/02/23/devmo-and-devedge-updates/">DevEdge を助け出す</a>ことに成功しました。つまり、1998 年に Mozilla のソースについて起きたことが、ついに Netscape の開発者ドキュメントについても起きたのです。<strong>オープンソースになったということです！</strong></p>
+### MediaWiki 最初の Wiki エンジン
 
-<p>Deb Richardson が Mozilla Foundation に技術編集者として加わり、新しい <em>DevMo</em> プロジェクト ── コミュニティ主体の開発者ドキュメントのプロジェクトをリードしました。</p>
-</article>
+_0:08:17 - 0:14:55_
 
-<article class="chapter chapter-justtext" id="mediawiki">
-<h2 id="MediaWiki_最初の_Wiki_エンジン">MediaWiki <small>最初の Wiki エンジン</small></h2>
+MediaWiki を新しいプロジェクトのプラットフォームとして、Mozilla の開発者文書は 2005 年 7 月より誰でも編集できるようになりました。Mozilla の新しい協同的な要素が打ち立てられ、それ以来 "いいもの" を作ることを助ける人や知見を共有する人は誰でも歓迎しています。技術文書を他の言語に翻訳する新しい国際的なコミュニティが成長し始めました。
 
-<p>MediaWiki を新しいプロジェクトのプラットフォームとして、Mozilla の開発者文書は 2005 年 7 月より誰でも編集できるようになりました。Mozilla の新しい協同的な要素が打ち立てられ、それ以来 "いいもの" を作ることを助ける人や知見を共有する人は誰でも歓迎しています。技術文書を他の言語に翻訳する新しい国際的なコミュニティーが成長し始めました。</p>
+[![MDC MediaWiki](mediawiki.png)](https://web.archive.org/web/20051226031957/https://developer.mozilla.org/en/docs/Main_Page)
 
-<p><a href="https://web.archive.org/web/20051226031957/http://developer.mozilla.org/en/docs/Main_Page"><img alt="MDC MediaWiki" src="https://mdn.mozillademos.org/files/11583/mediawiki.png" style="height: 390px; width: 600px;"> </a></p>
-</article>
+### DekiWiki<br>2 つ目の Wiki エンジン
 
-<article class="chapter chapter-portrait" id="fscholz"><a class="chapter-portrait-img" href="https://twitter.com/floscholz"><img alt="Florian Scholz" src="https://avatars1.githubusercontent.com/u/349114" style="height: 128px; width: 128px;"> </a>
+_0:14:55 - 0:26:08_
 
-<h2 id="Florian_Scholz_テクニカルライター_MDN">Florian Scholz <small> テクニカルライター, MDN</small></h2>
+2008 年 8 月、Mozilla Developer Center は技術文書のためのパワフルで新しいコンテンツ管理システム (CMS) であり、Wiki システムでもある [MindTouch DekiWiki](https://sourceforge.net/projects/dekiwiki/) に乗り換えました。この乗り換えはコミュニティ内でとても大きい議論が巻き起こりました。MediaWiki は 2005 年から使われており、その周辺にツールもビルドされてきたからです。
 
-<p>Florian 氏は Mozilla が焦点を当てているオープンな Web 技術のテクニカルライターです。彼は Wiki の小人で、それが花であるかのようにドキュメンテーションをガーデニングします。そして彼はコミュニティーと一緒に、Webについての文書化し、誰からもアクセスできるようにするという目標に向けて作業することが好きです。 Florian 氏はオープンソースへの情熱を持っています。彼はドイツのブレーメンに住んでいます。 <a href="https://twitter.com/floscholz">@floscholz</a> にてツイートしています。</p>
-</article>
+[![MDC DekiWiki](screenshot_2018-07-24_16.06.55.png)](https://web.archive.org/web/20080907231611/https://developer.mozilla.org/en)
 
-<article class="chapter chapter-justtext" id="dekiwiki">
-<h2 id="DekiWiki_2_つ目の_Wiki_エンジン">DekiWiki <small>2 つ目の Wiki エンジン</small></h2>
+### Kuma<br>3 つ目の、そして現行の Wiki エンジン
 
-<p>2008 年 8 月、Mozilla Developer Center は技術文書のためのパワフルで新しいコンテンツ管理システム (CMS) であり、Wiki システムでもある <a href="https://sourceforge.net/projects/dekiwiki/">MindTouch DekiWiki</a> に乗り換えました。この乗り換えはコミュニティー内でとても大きい議論が巻き起こりました。MediaWiki は 2005 年から使われており、その周辺にツールもビルドされてきたからです。</p>
+_0:26:08 - 0:31:50_
+_0:43:52 - 0:51:35_
 
-<p><a href="https://web.archive.org/web/20080907231611/http://developer.mozilla.org/en"><img alt="MDC DekiWiki" src="https://developer-samples.allizom.org/files/6478/dekiwiki.png"> </a></p>
-</article>
+[Kuma ](https://github.com/mdn/kuma) は 2011 年諸島頃に [Kitsune](https://github.com/mozilla/kitsune) からフォークされ、2012 年 8 月 3 日に立ち上がりました。 Django をベースに Mozilla が構築した Wiki プラットフォームで Node.js を使った [KumaScript](/ja/docs/MDN/Tools/KumaScript) マクロシステムも付随してます。
 
-<article class="chapter chapter-portrait" id="aspivak"><a class="chapter-portrait-img" href="https://twitter.com/alispivak"><img alt="Ali Spivak" src="https://pbs.twimg.com/profile_images/111121498/ali_profile1.jpg" style="height: 128px; width: 128px;"> </a>
+コードは GitHub 上にあったので、コミュニティは、 MDN の CMS にも貢献し始めました。今後、"MDN のハック" には文書を書くことと Kuma のコーディングの両方が含まれることになるでしょう。
 
-<h2 id="Ali_Spivak_すてきな_MDN_ネコの飼育者">Ali Spivak <small>すてきな MDN ネコの飼育者</small></h2>
+[![MDN KUMA](kuma.png)](https://web.archive.org/web/20121003233220/https://developer.mozilla.org/en-US/)
 
-<p>Ali Spivak は Mozilla Developer Network のコンテンツとコミュニティを管理し、Web がもっとすてきになるのを手助けする方法を考えます。彼女は自由でオープンな Web を維持することに情熱的であり、そして、2012 年に Mozilla に参加した時にオープンソースに飛び込んで以来、Mozilla での開発者コミュニティーの構築と参加に注力してきました。Twitter では <a href="https://twitter.com/alispivak">@alispivak</a>。</p>
-</article>
+### MDN の再設計<br>新しいデザインと Kuma
 
-<article class="chapter chapter-justtext" id="kuma">
-<h2 id="Kuma_3_つ目の、そして現行の_Wiki_エンジン">Kuma <small>3 つ目の、そして現行の Wiki エンジン</small></h2>
+_0:31:50 - 0:32:22_
+_0:51:35 - 0:58:05_
 
-<p>2011 年初期頃、<a href="https://github.com/mozilla/kitsune">Kitsune</a> から fork され、2012 年 8 月 3 日に立ち上がった <a href="https://github.com/mozilla/kuma">Kuma </a> は Django をベースに Mozilla が構築した Wiki プラットフォームで Node.js を使った <a href="/ja/docs/MDN/Kuma/Introduction_to_KumaScript">KumaScript</a> マクロシステムも付随してます。</p>
+MDN の再設計はビッグプロジェクトでした。 [Sean Martell](https://twitter.com/mart3ll) が新しい MDN の VI (visual identity; 法人以外のロゴのこと) をデザインしました。次には、3000 人の MDNer のベータユーザーグループと共に数か月かけた反復的プロセスでした。新しい見た目は "ワッフルフラグ" (MDN の機能フラグシステム) に隠れています。[David Walsh](https://twitter.com/davidwalshblog/) にも大きく感謝します。彼は全体の再デザインに挑戦して、MDN にふさわしいフロントエンドデザインをもたらしました。
 
-<p>コードは GitHub 上にあるので、コミュニティーは、MDN の CMS にも貢献し始めました。今後、"MDN のハック" には文書を書くことと Kuma のコーディングの両方が含まれることになるでしょう。</p>
+![Waffle flag](waffle-flag.jpg)
 
-<p><a href="https://web.archive.org/web/20121003233220/https://developer.mozilla.org/en-US/"><img alt="MDN KUMA" src="https://mdn.mozillademos.org/files/11585/kuma.png" style="height: 287px; width: 600px;"> </a></p>
-</article>
+### Openウェブ文書の周りのコミュニティ<br>コミュニティが動かす、特定のブラウザーに限らないオープンなウェブのためのドキュメンテーション
 
-<article class="chapter chapter-portrait" id="davidwalsh"><a class="chapter-portrait-img" href="http://twitter.com/davidwalshblog"><img alt="David Walsh" src="https://pbs.twimg.com/profile_images/2587630901/6gk0dqubt5512yk18a6o_400x400.png" style="height: 128px; width: 128px;"> </a>
+_0:32:22 - 0:36:55_
 
-<h2 id="David_Walsh_Web_開発者_MDN">David Walsh <small> Web 開発者, MDN</small></h2>
+2010 年代に、特に[コミュニティメンバーやテクニカルライターがパリに集まった](https://hacks.mozilla.org/2010/10/web-standards-doc-sprint-finis/)時、MDN の目標は 「Firefox のすべてのドキュメントを書こう！」から「ウェブのドキュメントを書こう！」に確実にシフトしました。ドキュメントは整理され、数年かけて再編成され MDN のオープンウェブドキュメントは 特定のブラウザーにとらわれないものになりました。これは、ウェブに関わる開発をするあらゆる人々の手助けとなり、そして私たちのコンテンツの中で、もっとも広く使われるものとなりました。
 
-<p>Mozilla シニア Web 開発者、フロントエンドエンジニア、 MooTools コア開発者、Javascript マニア、CSS の何でも屋、PHP ハッカーで、Web とオープンソースを愛する人。David は Twitter では <a href="https://twitter.com/davidwalshblog">@davidwalshblog</a>。</p>
-</article>
+いつも、いろいろなブラウザーベンダーが MDN を形作る手助けをしてくれています。このブラウザー間のコラボレーションは非常に成功していて、MDN の読者たちに高く評価されています。
 
-<article class="chapter chapter-justtext" id="mdn-redesign">
-<h2 id="MDN_の再設計_新しいデザインと_Kuma">MDN の再設計 <small>新しいデザインと Kuma </small></h2>
+## 翻訳コミュニティ<br>MDN はグローバルな利用者に向けて数々の言語に翻訳されています
 
-<p>MDN の再設計はビッグプロジェクトでした。<a href="https://twitter.com/mart3ll">Sean Martell</a> が新しい MDN の VI (visual identity; 法人以外のロゴのこと) をデザインしました。次には、3000 人の MDNer のベータユーザーグループと共に数か月かけた反復的プロセスでした。新しい見た目は "ワッフルフラグ" (MDN の機能フラグシステム) に隠れています。<a href="https://twitter.com/davidwalshblog/">David Walsh</a> にも大きく感謝します。彼は全体の再デザインに挑戦して、MDN にふさわしいフロントエンドデザインをもたらしました。</p>
-<img alt="Waffle flag" src="https://mdn.mozillademos.org/files/11589/waffle-flag.jpg" style="height: 384px; width: 400px;"></article>
+_0:36:55 - 0:43:52_
 
-<article class="chapter chapter-portrait" id="jswisher"><a class="chapter-portrait-img" href="https://twitter.com/jmswisher"><img alt="Janet Swisher" src="https://pbs.twimg.com/profile_images/3681972492/8ed406f7d19e188e4e8936b6836b2214.jpeg" style="height: 128px; width: 128px;"> </a>
+ローカライゼーションは Mozilla コミュニティの大きなパートです。これはほぼすべてのプロジェクトや製品で当てはまります。Kuma を使っている MDN も翻訳しやすく、私達の [L10n コミュニティ](/ja/docs/MDN/Contribute/Localize)のニーズに適しています。W3C の仕様や他のウェブの機能を記述しているリソースには直接的な目標はありません。そして仕様書を複数の言語で提供するコミュニティを持っています。特に初心者にとって、MDN はウェブの技術を探求する最初のステップであり、すべての人々にとってそうなることが私達の目標です。MDN は広いユーザーを持ち、英語を母語としない人も対象です。これは世界中の人々から高く評価されています。
 
-<h2 id="Janet_Swisher_コミュニティマネージャー_MDN">Janet Swisher <small>コミュニティマネージャー, MDN</small></h2>
+## 学習領域
 
-<p>Janet 氏は Mozilla Developer Network の Mozilla Community Manager です。彼女はMozilla に加わったのは 2010 年、OSS への関与は 2004 年から、技術的なコミュニケーションには 20 世紀から関わっています。Twitter では <a href="https://twitter.com/jmswisher">@jmswisher</a> 。</p>
-</article>
+_0:58:05 - 1:02:46_
 
-<article class="chapter chapter-justtext" id="mdn-open">
-<h2 id="Open_Web_文書の周りのコミュニティー_コミュニティーが動かす、特定のブラウザーに限らないオープンなウェブのためのドキュメンテーション">Open Web 文書の周りのコミュニティー <small>コミュニティーが動かす、特定のブラウザーに限らないオープンなウェブのためのドキュメンテーション</small></h2>
+MDN の [学習領域](/ja/docs/Learn) はウェブの基礎スキルを教える新しい取り組みです。 これまでの 10 年を通して、MDN はたくさんの応用的な記事と貴重な情報をエキスパートの為に提供し続けてきました。このプロジェクトでは初心者に焦点を当てた記事を書き、知識ギャップを埋めることを目標としています。
 
-<p>2010年の時点、特に<a href="https://hacks.mozilla.org/2010/10/web-standards-doc-sprint-finis/">コミュニティメンバーやテクニカルライターがパリに集まった</a>時、MDN の目標は "Firefox のすべてのドキュメントを書こう！" から "Web のドキュメントを書こう！" に確実にシフトしました。ドキュメントは整理され、数年かけて再編成され MDN の Open Web documentation は 特定のブラウザーにとらわれないものになりました。これは、Web に関わる開発をするあらゆる人々の手助けとなり、そして私たちのコンテンツの中で、もっとも広く使われるものとなりました。</p>
+## MDN の未来 20 周年を祝う時 MDN はどうなっているだろうか？
 
-<p>いつも、いろいろなブラウザーベンダーが MDN を形作る手助けをしてくれています。このブラウザー間のコラボレーションは非常に成功していて、MDN の読者たちに高く評価されています。</p>
-</article>
+_1:02:46 - 1:11:39_
 
-<article class="chapter chapter-portrait" id="groovecoder"><a class="chapter-portrait-img" href="https://twitter.com/groovecoder"><img alt="Luke Crouch" src="https://pbs.twimg.com/profile_images/620387561031102464/DC_PRaDa.jpg" style="height: 128px; width: 128px;"> </a>
+MDNに関わる誰もが、ウェブがオープンでアクセシビリティに富んでいることを本当に大切にしています。だからこそ、ローカライゼーションチームやすべての人々が貢献してくれているのです。MDNは、ウェブをあるべき姿に保つためのキープレイヤーであり続けたいと願っています。
 
-<h2 id="Luke_Crouch_Web_開発者_MDN">Luke Crouch <small> Web 開発者, MDN</small></h2>
+この未来を担う一つの大きな部分は、学習のための資源でしょう。次の 10 年を迎え、そこにはもっとたくさんのウェブ開発者がいるでしょう。
 
-<p>Luke Crouch は自家醸造者で、Mozilla の Web 開発者であり、サッカーファンです。彼は 1996 年から Web を開発し続けていて 2004 年から Firefox を使っています。2006 年からオープンソースに貢献し始めて、MDN の最初のスタッフとして 2010 年に Mozilla に入社しました。Luke 氏は <a href="https://twitter.com/groovecoder">@groovecoder</a> で Twitter を利用しています。</p>
-</article>
+私達の仕事のもうひとつの重要な部分は、私達がすでに持っているコンテンツのメンテナンスと情報の更新であり、いつでもウェブ開発者達に適切なコンテンツを提供できるようにすることです。
 
-<article class="chapter chapter-justtext" id="l10n">
-<h2 id="翻訳コミュニティー_MDN_はグローバルな利用者に向けて数々の言語に翻訳されています">翻訳コミュニティー <small> MDN はグローバルな利用者に向けて数々の言語に翻訳されています</small></h2>
+今変わろうとしていること、そして変わるであろうことは、どのように情報の消費がなされるかということです。今日ではみんなが情報を求めてドキュメンテーション (MDN に限らず) を検索し、探しています。将来、MDN ドキュメントは直接コードエディターに、 Firefox Developer Tool に、そして他の多くの開発者ツールやサービスに配信されるかもしれません。
 
-<p>ローカライゼーションは Mozilla コミュニティーの大きなパートです。これはほぼすべてのプロジェクトや製品で当てはまります。Kuma を使っている MDN も翻訳しやすく、私達の <a href="/ja/docs/MDN/Contribute/Localize">L10n コミュニティー</a>のニーズに適しています。W3C の仕様や他のWebの機能を記述しているリソースには直接的な目標はありません。そして仕様書を複数の言語で提供するコミュニティーを持っています。特に初心者にとって、MDN は Web の技術を探求する最初のステップであり、すべての人々にとってそうなることが私達の目標です。MDN は広いユーザーを持ち、英語を母語としない人も対象です。これは世界中の人々から高く評価されています。</p>
-</article>
+## スピーカー
 
-<article class="chapter chapter-portrait"><a class="chapter-portrait-img" href="https://twitter.com//Sphinx_Twitt"><img alt="Julien" src="https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/community/files/2015/05/ensemble.png" style="height: 128px; width: 128px;"> </a>
+この人たちは、思い出や想いを、現れる順に語ってくれています。
 
-<h2 id="Julien_(別名_Sphinx)_フランス語_localization_MDN">Julien (別名 Sphinx) <small> フランス語 localization, MDN</small></h2>
+### Justin Crawford<br>MDN プロダクトマネージャー
 
-<p>Julien 氏は何か月もの間、夜と週末を費やし JavaScript の記事をフランス語に翻訳してきました。彼は開発者ではありませんが、IT の基礎を学んでおり、新しい技術について学びたいと思っています。彼はテレビを見る代わりに MDN に貢献しているのです。</p>
-</article>
+![Justin Crawford](hoosteeno.jpg)
 
-<article class="chapter chapter-portrait" id="teoli"><a class="chapter-portrait-img" href="https://twitter.com/Teoli2003"><img alt="an-Yves Perrier" src="https://pbs.twimg.com/profile_images/604271935099392001/NMrPWLGm.jpg" style="height: 128px; width: 128px;"> </a>
+Justin 氏はこのトピックの進行役を務めます。ものを作り出す素材として、コード、言葉、自転車の部品、材木を用います。Twitter アカウントは [@hoosteeno](https://twitter.com/hoosteeno)。
 
-<h2 id="Jean-Yves_Perrier_テクニカルライター_MDN">Jean-Yves Perrier <small>テクニカルライター, MDN</small></h2>
+### Eric "Sheppy" Shepherd<br>MDN テクニカルライター
 
-<p>Jean-Yves 氏は 2010 年から MDN のテクニカルライターであり、2011 年の終わりに Mozilla に常勤として加わりました。彼はオープンな Web への情熱と 15 年の C++ の知識とを持っています。彼はスイス人ですがイギリスのロンドンに住んでいます。彼の<a href="https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%AB%E3%83%87%E3%82%B7%E3%83%A5%E6%95%B0">エルデシュ数</a>は 5 です。Twitter では <a href="https://twitter.com/Teoli2003">@Teoli2003</a> です。</p>
-</article>
+![Eric Shepherd](a2sheppy.png)
 
-<article class="chapter chapter-justtext" id="mdn-learning">
-<h2 id="Learning_Area">Learning Area</h2>
+Sheppy 氏は Mozilla の為に 2006 年から執筆を始め、MDC と MDN に結実するまでに長年の歴史（とクレイジーなアイデア）を刻んでいます。 Twitter では [@sheppy](https://twitter.com/sheppy)。
 
-<p>MDN の <a href="/ja/Learn">Learning Area</a> はWeb の基礎スキルを教える新しい取り組みです。 これまでの 10 年を通して、MDN はたくさんの応用的な記事と貴重な情報をエキスパートの為に提供し続けてきました。このプロジェクトでは初心者に焦点を当てた記事を書き、知識ギャップを埋めることを目標としています。</p>
-</article>
+### Jérémie Patonnier<br>MDN テクニカルライター
 
-<article class="chapter chapter-portrait" id="jeremie"><a class="chapter-portrait-img" href="https://twitter.com/jeremiepat"><img alt="Jérémie Patonnier" src="https://pbs.twimg.com/profile_images/1731588715/jeremie-patonnier-150.jpg" style="height: 128px; width: 128px;"> </a>
+![Jérémie Patonnier](jeremiepat.jpg)
 
-<h2 id="Jérémie_Patonnier_テクニカルライター_MDN">Jérémie Patonnier <small>テクニカルライター, MDN</small></h2>
+Jérémie 氏は長年 Mozilla Developer Network の貢献者として活動を続け、2000 年からウェブのプロフェッショナルになりました。彼はウェブ標準の擁護者であり、Web 技術のドキュメントを書き続け、すべての人々に届くようにと願っています。Twitter では [@JeremiePat](https://twitter.com/JeremiePat)
 
-<p>Jérémie 氏は長年 Mozilla Developer Network の貢献者として活動を続け、2000 年から Web のプロフェッショナルになりました。彼は Web 標準の擁護者であり、Web技術のドキュメントを書き続け、すべての人々に届くようにと願っています。Twitter では <a href="https://twitter.com/JeremiePat">@JeremiePat</a></p>
-</article>
+### Janet Swisher<br>MDN コミュニティマネージャー
 
-<article class="chapter chapter-justtext" id="mdn-future">
-<h2 id="MDN_の未来_20_周年を祝う時_MDN_はどうなっているだろうか？">MDN の未来 <small>20 周年を祝う時 MDN はどうなっているだろうか？</small></h2>
+![Janet Swisher](jmswisher.jpg)
 
-<p>MDN に参加する人々はオープンな Web やアクセシビリティを気にしていまます。それが私達に数々の localization チームや貢献してくれる全ての人達がいる理由です。</p>
+Janet 氏は Mozilla Developer Network の Mozilla Community Manager です。彼女は Mozilla に加わったのは 2010 年、OSS への関与は 2004 年から、技術的なコミュニケーションには 20 世紀から関わっています。Twitter では [@jmswisher](https://twitter.com/jmswisher) 。
 
-<p>MDN は、私達がそうであるべきだと感じるあり方で Web を維持し続けるための重要なプレーヤーであり続けることを望みます。</p>
+### Stormy Peters
 
-<p>この未来を担う一つの大きな部分は、学習のための資源でしょう。次の 10 年を迎え、そこにはもっとたくさんの Web 開発者がいるでしょう。</p>
+![Stormy Peters](yaacgvya.jpg)
 
-<p>私達の仕事のもうひとつの重要な部分は、私達がすでに持っているコンテンツのメンテナンスと情報の更新であり、いつでも Web 開発者達に適切なコンテンツを提供できるようにすることです。</p>
+Stormy は Twitter では [@storming](https://twitter.com/storming) です。
 
-<p>今変わろうとしていること、そして変わるであろうことは、どのように情報の消費がなされるかということです。今日ではみんなが情報を求めてドキュメンテーション (MDN に限らず) を検索し、探しています。将来、MDN ドキュメントは直接コードエディターに、Firefox Developer Tool に、そして他の多くの開発者ツールやサービスに配信されるかもしれません。</p>
-</article>
+### Ali Spivak<br>すてきな MDN ネコの飼育者
 
-<article class="chapter chapter-justtext" id="mdn-contributors">
-<h2 id="偉大なる貢献者たち_他にも多くの人々がMDNですばらしい働きをしてきました">偉大なる貢献者たち <small>他にも多くの人々がMDNですばらしい働きをしてきました</small></h2>
+![Ali Spivak](iyqi3qpv.jpg)
 
-<div class="twocolumns">
-<ul>
- <li>Les Orchard</li>
- <li>John Karahalis</li>
- <li>David Walsh</li>
- <li>Jannis Leidel</li>
- <li>Stephanie Hobson</li>
- <li>James Bennett</li>
- <li>Isac Lagerblad</li>
- <li>Piotrek Koszuliński</li>
- <li>Craig Cook</li>
- <li>Rob Hudson</li>
- <li>John Whitlock</li>
- <li>...<br>
-  ほか、たくさんの <a href="https://github.com/mozilla/kuma/graphs/contributors">Kuma への貢献者たち</a>。</li>
-</ul>
+Ali Spivak は Mozilla Developer Network のコンテンツとコミュニティを管理し、ウェブがもっとすてきになるのを手助けする方法を考えます。彼女は自由でオープンなウェブを維持することに情熱的であり、そして、2012 年に Mozilla に参加した時にオープンソースに飛び込んで以来、Mozilla での開発者コミュニティの構築と参加に注力してきました。Twitter では [@alispivak](https://twitter.com/alispivak)。
 
-<ul>
- <li>Chris Mills</li>
- <li>Will Bamberg</li>
- <li>David Bruant</li>
- <li>Thierry Régagnon</li>
- <li>etherthank</li>
- <li>Saurabh Nair</li>
- <li>Deb Richardson</li>
- <li>Sebastian Zartner</li>
- <li>Tooru Fujisawa</li>
- <li>Karen Scarfone</li>
- <li>Niklas Barning</li>
- <li>...<br>
-  ほか数百名の Wiki 執筆者たち。</li>
-</ul>
-</div>
-<img alt="The Berlin Office" src="https://mdn.mozillademos.org/files/11591/11073502_781006205281080_8135317797319228200_o-600x400.jpg"></article>
-</div>
+### Jean-Yves Perrier<br>MDN テクニカルライター
+
+![Jean-Yves Perrier](teoli2003.png)
+
+Jean-Yves 氏は 2010 年から MDN のテクニカルライターであり、2011 年の終わりに Mozilla に常勤として加わりました。彼はオープンなウェブへの情熱と 15 年の C++ の知識とを持っています。彼はスイス人ですがイギリスのロンドンに住んでいます。彼の[エルデシュ数](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%AB%E3%83%87%E3%82%B7%E3%83%A5%E6%95%B0)は 5 です。Twitter では [@Teoli2003](https://twitter.com/Teoli2003) です。
+
+### Florian Scholz<br>MDN テクニカルライター
+
+![Florian Scholz](elchi3.jpg)
+
+Florian 氏は Mozilla が焦点を当てているオープンなウェブ技術のテクニカルライターです。彼は Wiki の小人で、それが花であるかのようにドキュメンテーションをガーデニングします。そして彼はコミュニティと一緒に、ウェブについての文書化し、誰からもアクセスできるようにするという目標に向けて作業することが好きです。 Florian 氏はオープンソースへの情熱を持っています。彼はドイツのブレーメンに住んでいます。 [@floscholz](https://twitter.com/floscholz) にてツイートしています。
+
+### David Walsh<br>MDN ウェブ開発者
+
+![David Walsh](darkwing.png)
+
+Mozilla シニアウェブ開発者、フロントエンドエンジニア、 MooTools コア開発者、Javascript マニア、CSS の何でも屋、PHP ハッカーで、ウェブとオープンソースを愛する人。David は Twitter では [@davidwalshblog](https://twitter.com/davidwalshblog)。
+
+### Luke Crouch<br>MDN ウェブ開発者
+
+![Luke Crouch](groovecoder.png)
+
+Luke Crouch は自家醸造者で、Mozilla のウェブ開発者であり、サッカーファンです。彼は 1996 年からウェブを開発し続けていて 2004 年から Firefox を使っています。2006 年からオープンソースに貢献し始めて、MDN の最初のスタッフとして 2010 年に Mozilla に入社しました。Luke 氏は [@groovecoder](https://twitter.com/groovecoder) で Twitter を利用しています。
+
+### Julien (別名 Sphinx)<br>MDN フランス語 ローカライズ
+
+![Julien](ensemble.png)
+
+Julien 氏は何か月もの間、夜と週末を費やし JavaScript の記事をフランス語に翻訳してきました。彼は開発者ではありませんが、IT の基礎を学んでおり、新しい技術について学びたいと思っています。彼はテレビを見る代わりに MDN に貢献しているのです。
+
+### Biraj Karmakar<br>Mozilla リポジトリーメンター
+
+![Biraj Karmakar](birajkarmakar.png)
+
+Biraj はオープンソースの貢献者であり、 FOSS 運動とローカライゼーションに関心を持っています。
+
+## 偉大なる貢献者たち
+
+他にも多くの人々が MDN ですばらしい働きをしてきました。
+
+- Les Orchard
+- John Karahalis
+- David Walsh
+- Jannis Leidel
+- Stephanie Hobson
+- James Bennett
+- Isac Lagerblad
+- Piotrek Koszuliński
+- Craig Cook
+- Rob Hudson
+- John Whitlock
+- ...
+  ほか、たくさんの [Kuma への貢献者たち](https://github.com/mdn/kuma/graphs/contributors)。
+
+<!---->
+
+- Chris Mills
+- Will Bamberg
+- David Bruant
+- Thierry Régagnon
+- ethertank
+- Saurabh Nair
+- Deb Richardson
+- Sebastian Zartner
+- Tooru Fujisawa
+- Karen Scarfone
+- Niklas Barning
+- ...
+  ほか数百名の Wiki 執筆者たち。
