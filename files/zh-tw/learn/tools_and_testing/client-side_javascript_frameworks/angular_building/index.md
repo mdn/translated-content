@@ -1,22 +1,6 @@
 ---
 title: 建構 Angular 應用程式與更多資源
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
-tags:
-  - 初學者
-  - 框架
-  - 安裝
-  - 學習
-  - 用戶端
-  - 建構
-  - 資源
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Building
-  - Resources
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

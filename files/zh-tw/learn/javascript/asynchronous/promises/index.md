@@ -1,18 +1,6 @@
 ---
 title: 優雅的使用 Promises 來處理非同步操作
 slug: Learn/JavaScript/Asynchronous/Promises
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Promises
-  - async
-  - asynchronous
-  - catch
-  - finally
-  - then
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 

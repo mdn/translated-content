@@ -1,12 +1,6 @@
 ---
 title: CSS 一般問題
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - 待審閱技術
-  - 待審閱文字
-  - 所有類別
-translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
 #### 我的 CSS 合乎規格，但繪出的版面有誤

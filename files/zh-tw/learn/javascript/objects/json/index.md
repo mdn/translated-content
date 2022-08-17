@@ -1,9 +1,6 @@
 ---
 title: 使用 JSON 資料
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - JSON
-translation_of: Learn/JavaScript/Objects/JSON
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 

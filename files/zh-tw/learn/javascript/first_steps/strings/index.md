@@ -1,14 +1,6 @@
 ---
 title: 處理文字 - JavaScript中的字串
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - JavaScript
-  - 初學者
-  - 字串
-  - 引號
-  - 文章
-  - 連接字串
-translation_of: Learn/JavaScript/First_steps/Strings
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 

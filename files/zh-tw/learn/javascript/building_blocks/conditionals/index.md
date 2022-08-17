@@ -1,7 +1,6 @@
 ---
 title: 在代碼中做出決定 - 條件
 slug: Learn/JavaScript/Building_blocks/conditionals
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 

@@ -1,18 +1,6 @@
 ---
 title: 影像圖庫
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - JavaScript
-  - 事件
-  - 事件處理器
-  - 優先國際化
-  - 初學者
-  - 學習
-  - 條件式
-  - 編碼腳本
-  - 評量
-  - 迴圈
-translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
