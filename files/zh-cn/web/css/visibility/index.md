@@ -1,9 +1,6 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS_参考
-translation_of: Web/CSS/visibility
 ---
 {{CSSRef()}}
 

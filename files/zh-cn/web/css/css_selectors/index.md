@@ -1,17 +1,6 @@
 ---
 title: CSS 选择器
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - CSS Selector
-  - CSS 优先级
-  - Overview
-  - Reference
-  - Selectors
-  - 参考
-  - 直接子代组合器
-  - 选择器
-translation_of: Web/CSS/CSS_Selectors
 ---
 {{CSSRef("Selectors")}}
 

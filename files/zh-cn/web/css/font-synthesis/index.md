@@ -1,11 +1,6 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - 参考
-  - 字体
-translation_of: Web/CSS/font-synthesis
 ---
 {{CSSRef}}
 

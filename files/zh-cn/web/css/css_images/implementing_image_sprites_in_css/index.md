@@ -1,13 +1,6 @@
 ---
 title: 在 CSS 中实现图像合并
 slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-tags:
-  - CSS
-  - CSS Image
-  - Graphics
-  - Guide
-  - Web
-translation_of: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 original_slug: Web/Guide/CSS/CSS_Image_Sprites
 ---
 {{cssRef}}

@@ -1,12 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 弹性框
-  - Reference
-translation_of: Web/CSS/justify-content
 ---
 {{CSSRef}}
 

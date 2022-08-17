@@ -1,10 +1,6 @@
 ---
 title: CSS Counter Styles
 slug: Web/CSS/CSS_Counter_Styles
-tags:
-  - CSS
-  - CSS 计数
-translation_of: Web/CSS/CSS_Counter_Styles
 ---
 {{cssref}}
 

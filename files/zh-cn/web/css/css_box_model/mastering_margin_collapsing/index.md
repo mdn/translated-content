@@ -1,12 +1,6 @@
 ---
 title: 外边距重叠
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS 盒模型
-  - 参考
-  - 指南
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
 {{CSSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-tags:
-  - CSS
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/margin-bottom
 ---
 {{CSSRef}}
 

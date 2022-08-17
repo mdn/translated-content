@@ -1,11 +1,6 @@
 ---
 title: 视觉格式化模型
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - CSS 盒模型
-  - 参考
-translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
 {{CSSRef}}

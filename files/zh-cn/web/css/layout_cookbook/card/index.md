@@ -1,7 +1,6 @@
 ---
 title: 卡片
 slug: Web/CSS/Layout_cookbook/Card
-translation_of: Web/CSS/Layout_cookbook/Card
 original_slug: Web/CSS/Layout_cookbook/卡片
 ---
 {{CSSRef}}

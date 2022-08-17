@@ -1,7 +1,6 @@
 ---
 title: <angle>
 slug: Web/CSS/angle
-translation_of: Web/CSS/angle
 ---
 {{ CSSRef() }}
 

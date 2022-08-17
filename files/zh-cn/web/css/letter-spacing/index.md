@@ -1,11 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - SVG
-  - 参考文档
-translation_of: Web/CSS/letter-spacing
 ---
 {{CSSRef}}
 

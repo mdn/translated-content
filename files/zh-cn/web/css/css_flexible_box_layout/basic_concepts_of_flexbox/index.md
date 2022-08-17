@@ -1,9 +1,6 @@
 ---
 title: flex 布局的基本概念
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - Flex
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 ---
 {{CSSRef}}
 

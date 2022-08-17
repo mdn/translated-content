@@ -1,7 +1,6 @@
 ---
 title: 利用 CSS 网格布局实现常用布局
 slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
-translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
 ---
 为了完善这组 CSS 网格布局指南，我将介绍几种不同的布局，它们演示了在使用网格布局进行设计时可以使用的一些不同技术。我们将看到一个使用 [grid-template-areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas) 的示例，一个典型的 12 列灵活网格系统，以及一个使用自动布局的产品列表。正如您从这组示例中看到的，使用网格布局通常有不止一种方法来实现您想要的结果。选择对您正在解决的问题和需要实现的设计最有帮助的方法。

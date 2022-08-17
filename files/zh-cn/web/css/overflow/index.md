@@ -1,18 +1,6 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - CSS_参考
-  - Layout
-  - NeedsEditorialReview
-  - NeedsTechnicalReview
-  - NeedsUpdate
-  - overflow
-  - 'overflow: scroll;'
-translation_of: Web/CSS/overflow
 ---
 {{ CSSRef() }}
 

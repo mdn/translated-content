@@ -1,7 +1,6 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-translation_of: Web/CSS/word-spacing
 ---
 {{ CSSRef() }}
 

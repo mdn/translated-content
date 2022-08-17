@@ -1,18 +1,6 @@
 ---
 title: 布局和包含块
 slug: Web/CSS/Containing_block
-tags:
-  - CSS
-  - CSS Position
-  - Containers
-  - Guide
-  - Layout
-  - Position
-  - Style
-  - blocks
-  - containing block
-  - size
-translation_of: Web/CSS/Containing_block
 original_slug: Web/CSS/All_About_The_Containing_Block
 ---
 {{cssref}}

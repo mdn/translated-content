@@ -1,10 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
-  - CSS 属性
-translation_of: Web/CSS/word-break
 ---
 {{CSSRef}}
 

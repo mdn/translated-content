@@ -1,11 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/user-select
 ---
 {{CSSRef}}
 

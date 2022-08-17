@@ -1,7 +1,6 @@
 ---
 title: ':indeterminate'
 slug: Web/CSS/:indeterminate
-translation_of: Web/CSS/:indeterminate
 ---
 {{CSSRef}}
 

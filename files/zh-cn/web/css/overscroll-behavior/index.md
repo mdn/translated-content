@@ -1,7 +1,6 @@
 ---
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
-translation_of: Web/CSS/overscroll-behavior
 ---
 {{CSSRef}}
 

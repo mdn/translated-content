@@ -1,14 +1,6 @@
 ---
 title: 色彩选择工具
 slug: Web/CSS/CSS_Colors/Color_picker_tool
-tags:
-  - CSS
-  - CSS 颜色选择工具
-  - HTML 色彩选择工具
-  - 工具
-  - 颜色
-  - 颜色选择
-translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 ---
 ```html hidden
     <div id="container">

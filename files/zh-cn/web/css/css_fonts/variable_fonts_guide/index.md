@@ -1,13 +1,6 @@
 ---
 title: Variable fonts guide
 slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-tags:
-  - CSS
-  - web 字体
-  - 可变字体
-  - 字体
-  - 文本
-translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 ---
 **可变字体（Variable fonts）**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。你只需通过 CSS 与一行{{cssxref("@font-face")}}引用，即可获取包含在这个单一文件中的各种字体变体。本文将介绍如何在 Web 中使用可变字体。
 

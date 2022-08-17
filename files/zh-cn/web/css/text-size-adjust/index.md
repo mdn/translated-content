@@ -1,11 +1,6 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - CSS
-  - 参考
-  - 移动平台
-translation_of: Web/CSS/text-size-adjust
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -1,10 +1,6 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - Layout
-translation_of: Web/CSS/::selection
 ---
 {{ CSSRef() }}
 

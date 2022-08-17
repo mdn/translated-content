@@ -1,11 +1,6 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
-tags:
-  - CSS
-  - CSS Property
-  - SVG
-translation_of: Web/CSS/pointer-events
 ---
 {{CSSRef}}
 

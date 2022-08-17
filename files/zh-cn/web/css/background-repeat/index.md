@@ -1,10 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS_参考
-  - background-repeat
-translation_of: Web/CSS/background-repeat
 ---
 {{ CSSRef() }}
 

@@ -1,7 +1,6 @@
 ---
 title: 解析值
 slug: Web/CSS/resolved_value
-translation_of: Web/CSS/resolved_value
 ---
 {{cssref}}
 

@@ -1,7 +1,6 @@
 ---
 title: top
 slug: Web/CSS/top
-translation_of: Web/CSS/top
 ---
 {{CSSRef}}
 

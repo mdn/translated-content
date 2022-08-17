@@ -1,7 +1,6 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
-translation_of: Web/CSS/ratio
 ---
 {{CSSRef}}
 

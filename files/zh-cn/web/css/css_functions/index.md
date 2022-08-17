@@ -1,14 +1,6 @@
 ---
 title: CSS Functional Notation
 slug: Web/CSS/CSS_Functions
-tags:
-  - CSS Function
-  - CSS 函数
-  - attr()
-  - calc()
-  - minmax()
-  - var()
-translation_of: Web/CSS/CSS_Functions
 ---
 {{CSSRef}}
 

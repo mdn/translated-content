@@ -1,11 +1,6 @@
 ---
 title: '@keyframes'
 slug: Web/CSS/@keyframes
-tags:
-  - CSS
-  - 动画
-  - 参考
-translation_of: Web/CSS/@keyframes
 ---
 {{CSSRef}}
 

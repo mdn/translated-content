@@ -1,12 +1,6 @@
 ---
 title: 整型
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - CSS 数据类型
-  - Reference
-  - Web
-translation_of: Web/CSS/integer
 ---
 {{CSSRef}}
 

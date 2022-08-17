@@ -1,7 +1,6 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-translation_of: Web/CSS/gradient
 ---
 {{CSSRef}}**`<gradient>`** 是一种{{cssxref("&lt;image&gt;")}}CSS 数据类型的子类型，用于表现两种或多种颜色的过渡转变。**`<gradient>`** [没有内在尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，不具备固有或首选的尺寸，也不具备首选的比率。其实际的大小取决于其填充元素的大小。
 

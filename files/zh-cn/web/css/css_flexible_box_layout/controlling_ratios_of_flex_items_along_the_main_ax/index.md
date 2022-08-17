@@ -2,8 +2,6 @@
 title: 控制 Flex 子元素在主轴上的比例
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
 > **备注：** 译者注：在 html 中若一个元素的 css 设置为 display: flex，则这个元素就是 flex container , 其子元素为 flex item，若是直译过来就是弹性容器和弹性项目。但是译者认为直译过来不好理解，且不便记忆（就像我们常说 TCP 而不会说传输控制协议一样），因此在此文中，译者将不会翻译为 flex container 和 flex item，而是翻译为 flex 容器和 flex 子元素。 同样，在原文中有些单词（如 items, flex-items，container），我会根据情况译为 flex 容器和 flex 子元素。请各位读者理解。
 >

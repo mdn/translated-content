@@ -1,11 +1,6 @@
 ---
 title: 伪元素
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - 伪元素
-  - 选择器
-translation_of: Web/CSS/Pseudo-elements
 ---
 {{ CSSRef() }}
 

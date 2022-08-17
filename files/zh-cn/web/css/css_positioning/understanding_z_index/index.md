@@ -1,10 +1,6 @@
 ---
 title: 理解 CSS 的 z-index 属性
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
-tags:
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 original_slug: Web/Guide/CSS/Understanding_z_index
 ---
 {{cssref}}

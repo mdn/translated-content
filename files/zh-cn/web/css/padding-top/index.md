@@ -1,11 +1,6 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
-tags:
-  - CSS
-  - CSS 内边距
-  - CSS 属性
-translation_of: Web/CSS/padding-top
 ---
 {{CSSRef}}
 

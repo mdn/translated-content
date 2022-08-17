@@ -1,9 +1,6 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-translation_of: Web/CSS/all
 ---
 {{CSSRef}}
 

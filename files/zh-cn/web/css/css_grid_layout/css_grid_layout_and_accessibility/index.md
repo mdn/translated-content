@@ -1,12 +1,6 @@
 ---
 title: CSS 网格布局和可访问性
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
-tags:
-  - CSS
-  - CSS 网格
-  - 可访问性
-  - 指南
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 ---
 我们这些做 web 开发多年的人和比我们更早入行的人，可能都觉得 CSS 网格有一点像曾经用过的“表格布局”。在 web 设计的早期，构建页面布局的方式是使用 HTML 表格，通过把设计分割成表格的单元格来创建布局。这比后来的“CSS 定位”的优势在于，可以利用表格显示能力提供的对齐和全高度的列。最大的负面影响在于它将设计和 HTML 标记绑在一起，经常会造成可访问性的问题。为了将设计摆到表格中，内容被打散了，如果用屏幕阅读器去读它，读出来的内容就是毫无意义的。
 

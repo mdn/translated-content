@@ -1,7 +1,6 @@
 ---
 title: Webkit Extensions
 slug: Web/CSS/WebKit_Extensions
-translation_of: Web/CSS/WebKit_Extensions
 ---
 {{ CSSRef() }}
 

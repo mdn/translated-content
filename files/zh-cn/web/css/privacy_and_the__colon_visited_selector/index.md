@@ -1,13 +1,6 @@
 ---
 title: 隐私与:visited 选择器
 slug: Web/CSS/Privacy_and_the_:visited_selector
-tags:
-  - CSS
-  - 伪类
-  - 安全
-  - 教程
-  - 选择器
-translation_of: Web/CSS/Privacy_and_the_:visited_selector
 ---
 {{cssref}}
 

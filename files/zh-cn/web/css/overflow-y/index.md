@@ -1,9 +1,6 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
-tags:
-  - 元素单一方向溢出
-translation_of: Web/CSS/overflow-y
 ---
 {{CSSRef}}
 

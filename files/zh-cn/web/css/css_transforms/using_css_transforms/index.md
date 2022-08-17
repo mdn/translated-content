@@ -1,12 +1,6 @@
 ---
 title: 使用 CSS 变形
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-tags:
-  - 3D
-  - CSS
-  - 变换
-  - 教程
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
 {{CSSRef}}
 

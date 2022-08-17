@@ -1,10 +1,6 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - CSS
-  - CSS Positioning
-translation_of: Web/CSS/position
 ---
 {{CSSRef}}
 
