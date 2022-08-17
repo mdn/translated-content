@@ -1,11 +1,6 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 边框
-translation_of: Web/CSS/border-right
 ---
 {{CSSRef}}
 

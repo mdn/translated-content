@@ -1,7 +1,6 @@
 ---
 title: '-moz-outline-radius-bottomright'
 slug: Web/CSS/-moz-outline-radius-bottomright
-translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
 {{Non-standard_header}}{{CSSRef}}
 

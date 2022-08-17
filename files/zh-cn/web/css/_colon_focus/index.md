@@ -1,13 +1,6 @@
 ---
 title: ':focus'
 slug: Web/CSS/:focus
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - 伪类
-translation_of: Web/CSS/:focus
 ---
 {{CSSRef}}
 

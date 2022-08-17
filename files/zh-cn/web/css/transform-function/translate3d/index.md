@@ -1,12 +1,6 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
-tags:
-  - CSS
-  - CSS 函数
-  - CSS 变换
-  - 参考
-translation_of: Web/CSS/transform-function/translate3d()
 original_slug: Web/CSS/transform-function/translate3d()
 ---
 {{CSSRef}}

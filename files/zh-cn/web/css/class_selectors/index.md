@@ -1,10 +1,6 @@
 ---
 title: 类选择器
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Selectors
-translation_of: Web/CSS/Class_selectors
 ---
 {{ CSSRef() }}
 

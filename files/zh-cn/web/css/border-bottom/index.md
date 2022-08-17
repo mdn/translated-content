@@ -1,12 +1,6 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-tags:
-  - CSS
-  - CSS 属性
-  - border
-  - 参考
-translation_of: Web/CSS/border-bottom
 ---
 {{CSSRef}}
 

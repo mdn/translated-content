@@ -1,13 +1,6 @@
 ---
 title: '::-moz-range-progress'
 slug: Web/CSS/::-moz-range-progress
-tags:
-  - CSS
-  - CSS:Mozilla 扩展
-  - 伪元素
-  - 选择器
-  - 非标准化
-translation_of: Web/CSS/::-moz-range-progress
 ---
 {{CSSRef}}{{Non-standard_header}}
 

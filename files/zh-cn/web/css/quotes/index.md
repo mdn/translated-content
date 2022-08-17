@@ -1,7 +1,6 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-translation_of: Web/CSS/quotes
 ---
 {{CSSRef}}**`quotes`** [CSS](/en-US/docs/CSS) 属性用于设置引号的样式。{{EmbedInteractiveExample("pages/css/quotes.html")}}
 

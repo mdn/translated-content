@@ -1,12 +1,6 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/align-items
 ---
 {{ CSSRef}}
 

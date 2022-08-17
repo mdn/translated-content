@@ -1,14 +1,6 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - CSS
-  - Web
-  - 参考
-  - 层叠样式表
-  - 布局
-  - 长度
-translation_of: Web/CSS/length
 ---
 {{CSSRef}}
 

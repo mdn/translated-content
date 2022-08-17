@@ -1,12 +1,6 @@
 ---
 title: 对齐弹性容器中的弹性项目
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-tags:
-  - Flex
-  - 对齐
-  - 布局
-  - 弹性盒子
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
 {{CSSRef}}
 

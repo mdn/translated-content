@@ -1,14 +1,6 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 轮廓
-  - 参考
-  - 布局
-  - 轮廓
-translation_of: Web/CSS/outline
 ---
 {{CSSRef}}
 

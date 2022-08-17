@@ -1,11 +1,6 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - Web
-  - 参考
-translation_of: Web/CSS/frequency
 ---
 {{CSSRef}}
 

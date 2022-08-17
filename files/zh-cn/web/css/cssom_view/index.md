@@ -1,13 +1,6 @@
 ---
 title: CSSOM View
 slug: Web/CSS/CSSOM_View
-tags:
-  - CSS
-  - CSSOM View
-  - 参考
-  - 概述
-  - 试验性的
-translation_of: Web/CSS/CSSOM_View
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

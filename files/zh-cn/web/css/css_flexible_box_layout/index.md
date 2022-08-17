@@ -1,17 +1,6 @@
 ---
 title: CSS 弹性盒子布局
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Reference
-  - CSS3 布模式
-  - Overview
-  - TopicStub
-  - 弹性盒子
-  - 弹性盒子模型
-  - 盒子模型
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 {{CSSRef}}
 

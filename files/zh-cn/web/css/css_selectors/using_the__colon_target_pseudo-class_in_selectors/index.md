@@ -1,11 +1,6 @@
 ---
 title: 在选择器中使用 :target 伪类
 slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
-tags:
-  - CSS
-  - CSS_3
-  - Selectors
-translation_of: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 original_slug: Web/Guide/CSS/Using_the_:target_selector
 ---
 {{CSSRef}}

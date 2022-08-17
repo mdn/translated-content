@@ -1,11 +1,6 @@
 ---
 title: ':host'
 slug: Web/CSS/:host
-tags:
-  - ':host'
-  - CSS
-  - DOM
-translation_of: Web/CSS/:host
 ---
 {{ CSSRef }}
 

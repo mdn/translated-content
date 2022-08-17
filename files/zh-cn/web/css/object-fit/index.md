@@ -1,12 +1,6 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - 图像
-  - 图像大小
-  - 图像缩放
-translation_of: Web/CSS/object-fit
 ---
 {{CSSRef}}
 

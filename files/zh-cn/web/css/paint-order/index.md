@@ -1,7 +1,6 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-translation_of: Web/CSS/paint-order
 ---
 {{CSSRef}}{{seecompattable}}
 

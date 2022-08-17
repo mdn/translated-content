@@ -1,15 +1,6 @@
 ---
 title: shape-margin
 slug: Web/CSS/shape-margin
-tags:
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Reference
-  - float
-  - margin
-  - shape-margin
-translation_of: Web/CSS/shape-margin
 ---
 {{CSSRef}}
 

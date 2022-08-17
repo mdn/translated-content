@@ -1,11 +1,6 @@
 ---
 title: ':blank'
 slug: Web/CSS/:blank
-tags:
-  - CSS
-  - CSS 选择器
-  - 伪类
-translation_of: Web/CSS/:blank
 original_slug: Web/CSS/:blank空白伪类
 ---
 {{CSSRef}}{{SeeCompatTable}}

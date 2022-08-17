@@ -1,12 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 弹性盒子
-  - 参考
-translation_of: Web/CSS/flex-basis
 ---
 {{CSSRef}}
 

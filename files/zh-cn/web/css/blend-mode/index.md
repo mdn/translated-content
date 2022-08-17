@@ -1,15 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - CSS
-  - CSS 参考
-  - CSS 合成
-  - CSS 混合模式
-  - 参考
-  - 混合模式
-  - 颜色
-translation_of: Web/CSS/blend-mode
 ---
 {{CSSRef}}
 

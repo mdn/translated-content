@@ -1,7 +1,6 @@
 ---
 title: CSS 属性值定义语法
 slug: Web/CSS/Value_definition_syntax
-translation_of: Web/CSS/Value_definition_syntax
 ---
 {{ CSSRef() }}
 

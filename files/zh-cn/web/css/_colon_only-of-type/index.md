@@ -1,12 +1,6 @@
 ---
 title: ':only-of-type'
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - CSS 伪类
-  - Web
-  - 参考
-translation_of: Web/CSS/:only-of-type
 ---
 {{ CSSRef() }}
 

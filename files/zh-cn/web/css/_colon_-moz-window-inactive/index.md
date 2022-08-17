@@ -1,7 +1,6 @@
 ---
 title: ':-moz-window-inactive'
 slug: Web/CSS/:-moz-window-inactive
-translation_of: Web/CSS/:-moz-window-inactive
 ---
 {{CSSRef}}{{Non-standard_header}}
 

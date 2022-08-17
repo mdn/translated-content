@@ -1,12 +1,6 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-tags:
-  - CSS
-  - CSS Lists
-  - CSS 属性
-  - Reference
-translation_of: Web/CSS/list-style-type
 ---
 {{CSSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - CSS 属性
-  - Generated Content
-  - 生成内容
-translation_of: Web/CSS/content
 ---
 {{ CSSRef() }}
 

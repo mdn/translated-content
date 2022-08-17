@@ -1,11 +1,6 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/scroll-behavior
 ---
 {{ CSSRef }}
 

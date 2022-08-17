@@ -1,13 +1,6 @@
 ---
 title: 指南：媒体对象
 slug: Web/CSS/Layout_cookbook/Media_objects
-tags:
-  - 媒体对象
-  - 布局
-  - 指南
-  - 浮动
-  - 网格
-translation_of: Web/CSS/Layout_cookbook/Media_objects
 original_slug: Web/CSS/Layout_cookbook/媒体对象
 ---
 {{CSSRef}}

@@ -1,13 +1,6 @@
 ---
 title: 层叠上下文
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-tags:
-  - Advanced
-  - CSS
-  - CSS 层叠上下文
-  - z-index
-  - 教程
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 ---
 {{cssref}}

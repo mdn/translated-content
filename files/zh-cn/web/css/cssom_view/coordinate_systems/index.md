@@ -1,7 +1,6 @@
 ---
 title: 坐标系
 slug: Web/CSS/CSSOM_View/Coordinate_systems
-translation_of: Web/CSS/CSSOM_View/Coordinate_systems
 original_slug: Web/CSS/CSSOM_View/坐标系
 ---
 {{cssref}}

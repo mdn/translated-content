@@ -1,10 +1,6 @@
 ---
 title: '@namespace'
 slug: Web/CSS/@namespace
-tags:
-  - '@规则'
-  - CSS
-translation_of: Web/CSS/@namespace
 ---
 {{CSSRef}}
 

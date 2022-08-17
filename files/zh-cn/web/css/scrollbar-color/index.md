@@ -1,7 +1,6 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
-translation_of: Web/CSS/scrollbar-color
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

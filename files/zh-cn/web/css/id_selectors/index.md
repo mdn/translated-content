@@ -1,12 +1,6 @@
 ---
 title: ID 选择器
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - Selectors
-  - 参考
-  - 选择器
-translation_of: Web/CSS/ID_selectors
 ---
 {{CSSRef}}
 

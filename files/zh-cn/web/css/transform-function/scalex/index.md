@@ -1,11 +1,6 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
-tags:
-  - axial symmetry
-  - scaleX()
-  - scaleX(-1)
-translation_of: Web/CSS/transform-function/scaleX()
 original_slug: Web/CSS/transform-function/scaleX()
 ---
 {{CSSRef}}

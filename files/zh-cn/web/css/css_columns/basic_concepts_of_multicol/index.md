@@ -1,7 +1,6 @@
 ---
 title: Basic Concepts of Multicol
 slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
-translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 ---
 {{CSSRef}}
 

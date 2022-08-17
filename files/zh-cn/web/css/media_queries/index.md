@@ -1,13 +1,6 @@
 ---
 title: 媒体查询
 slug: Web/CSS/Media_Queries
-tags:
-  - CSS
-  - 参考
-  - 响应式设计
-  - 媒体查询
-  - 总览
-translation_of: Web/CSS/Media_Queries
 original_slug: Web/CSS/媒体查询
 ---
 {{CSSRef}}

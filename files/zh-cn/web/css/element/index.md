@@ -1,14 +1,6 @@
 ---
 title: element
 slug: Web/CSS/element
-tags:
-  - CSS
-  - CSS Function
-  - Layout
-  - Web
-  - 参考
-  - 布局
-translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
 ---
 {{CSSRef}}{{SeeCompatTable}}

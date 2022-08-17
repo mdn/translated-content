@@ -1,12 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS 文字
-  - 参考
-  - 属性
-  - 布局
-translation_of: Web/CSS/text-align
 ---
 {{CSSRef}}
 

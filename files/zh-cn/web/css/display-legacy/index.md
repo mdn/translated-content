@@ -1,7 +1,6 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
-translation_of: Web/CSS/display-legacy
 ---
 {{CSSRef}}
 

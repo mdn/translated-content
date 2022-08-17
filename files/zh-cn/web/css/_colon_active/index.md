@@ -1,14 +1,6 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Layout
-  - Web
-  - 伪类
-  - 参考
-  - 布局
-translation_of: Web/CSS/:active
 ---
 {{CSSRef}}
 

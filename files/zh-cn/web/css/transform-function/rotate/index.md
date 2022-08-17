@@ -1,11 +1,6 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-tags:
-  - CSS
-  - CSS 函数
-  - CSS 变换
-translation_of: Web/CSS/transform-function/rotate()
 original_slug: Web/CSS/transform-function/rotate()
 ---
 {{CSSRef}}CSS 的**`rotate()`**函数定义了一种将元素围绕一个定点（由{{ Cssxref("transform-origin") }}属性指定）旋转而不变形的转换。指定的角度定义了旋转的量度。若角度为正，则顺时针方向旋转，否则逆时针方向旋转。旋转 180° 也被称为点反射。

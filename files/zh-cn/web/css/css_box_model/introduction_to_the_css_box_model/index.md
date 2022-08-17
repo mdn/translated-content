@@ -1,12 +1,6 @@
 ---
 title: CSS 基础框盒模型介绍
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-tags:
-  - CSS Box Model
-  - 定位
-  - 布局
-  - 指南
-translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 ---
 {{CSSRef}}
 
