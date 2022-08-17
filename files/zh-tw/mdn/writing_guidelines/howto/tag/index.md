@@ -1,7 +1,6 @@
 ---
 title: How to properly tag pages
 slug: MDN/Writing_guidelines/Howto/Tag
-translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
 {{MDNSidebar}}
