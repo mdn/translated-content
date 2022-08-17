@@ -1,7 +1,6 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-translation_of: Web/HTML/Global_attributes/hidden
 ---
 {{HTMLSidebar("Global_attributes")}}
 

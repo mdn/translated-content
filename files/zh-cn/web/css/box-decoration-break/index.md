@@ -1,7 +1,6 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
-translation_of: Web/CSS/box-decoration-break
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: 理解客户端 web 开发工具
 slug: Learn/Tools_and_testing/Understanding_client-side_tools
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools
 ---
 {{LearnSidebar}}
 

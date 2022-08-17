@@ -1,14 +1,6 @@
 ---
 title: <script>
 slug: Web/HTML/Element/script
-tags:
-  - <script>
-  - Element
-  - HTML 脚本
-  - Web
-  - 元素
-  - 网络
-translation_of: Web/HTML/Element/script
 ---
 
 HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌入或者指向 JavaScript 代码。`<script>` 元素也能在其他语言中使用，比如 WebGL 的 GLSL 着色器语言。

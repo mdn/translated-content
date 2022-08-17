@@ -1,7 +1,6 @@
 ---
 title: <tfoot>
 slug: Web/HTML/Element/tfoot
-translation_of: Web/HTML/Element/tfoot
 ---
 **HTML 元素`<tfoot>` **定义了一组表格中各列的汇总行。
 

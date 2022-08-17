@@ -1,7 +1,6 @@
 ---
 title: Firefox 11 技術文件
 slug: Mozilla/Firefox/Releases/11
-translation_of: Mozilla/Firefox/Releases/11
 ---
 {{FirefoxSidebar}}
 

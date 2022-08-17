@@ -1,7 +1,6 @@
 ---
 title: Accept 默认值
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 ---
 {{HTTPSidebar}}

@@ -1,20 +1,6 @@
 ---
 title: CSS 是什麼？
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Introduction to CSS
-  - Learn
-  - Modules
-  - Specifications
-  - Syntax
-  - CSS 入門
-  - 初學者
-  - 單元
-  - 學習
-  - 技術指引
-  - 語法
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 

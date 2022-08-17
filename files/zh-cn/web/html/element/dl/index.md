@@ -1,13 +1,6 @@
 ---
 title: <dl>
 slug: Web/HTML/Element/dl
-tags:
-  - HTML
-  - HTML 分组内容
-  - Web
-  - 元素
-  - 引用
-translation_of: Web/HTML/Element/dl
 ---
 ## 简介
 

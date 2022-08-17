@@ -1,7 +1,6 @@
 ---
 title: Media buffering, seeking, and time ranges
 slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
-translation_of: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
 有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不延迟的播放是有用的 — 音频和视频的缓冲条就是这个的一个好例子。 这篇文章讨论 用 [TimeRanges](/zh-CN/docs/Web/API/TimeRanges)如何创建一个 buffer/seek bar，和 media API 的其他特性。
 

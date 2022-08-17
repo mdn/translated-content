@@ -1,11 +1,6 @@
 ---
 title: Upgrade-Insecure-Requests
 slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
-tags:
-  - 升级机制
-  - 安全性
-  - 首部
-translation_of: Web/HTTP/Headers/Upgrade-Insecure-Requests
 ---
 {{HTTPSidebar}}
 

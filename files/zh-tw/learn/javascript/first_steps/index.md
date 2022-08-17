@@ -1,19 +1,6 @@
 ---
 title: JavaScript 初探
 slug: Learn/JavaScript/First_steps
-tags:
-  - JavaScript
-  - 初學者
-  - 字串
-  - 指引
-  - 撰寫程式
-  - 數值
-  - 數學
-  - 文章
-  - 變數
-  - 運算子
-  - 陣列
-translation_of: Learn/JavaScript/First_steps
 ---
 {{LearnSidebar}}
 

@@ -1,13 +1,6 @@
 ---
 title: <iframe>
 slug: Web/HTML/Element/iframe
-tags:
-  - <iframe>
-  - CORS
-  - Content
-  - HTML5
-  - iframe.contentWindow.document
-translation_of: Web/HTML/Element/iframe
 ---
 {{HTMLRef}}
 

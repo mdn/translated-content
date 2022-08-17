@@ -1,13 +1,6 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - 超文本传输协议
-  - 跨域资源共享
-  - 首部
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 {{HTTPSidebar}}
 

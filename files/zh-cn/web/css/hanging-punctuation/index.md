@@ -1,11 +1,6 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
-tags:
-  - css
-  - css 属性
-  - css 文本
-translation_of: Web/CSS/hanging-punctuation
 ---
 {{cssref}}**`hanging-punctuation`** CSS 属性指定了标点符号应该放在文本句子的开头还是结尾。悬挂标点符号可能被放在线框外。
 

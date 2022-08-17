@@ -1,14 +1,6 @@
 ---
 title: 进行测试的策略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
-tags:
-  - 测试
-  - 测试策略
-  - 用户测试
-  - 自动化测试
-  - 虚拟机 仿真器
-  - 跨浏览器测试
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}

@@ -1,9 +1,6 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - 请求首部
-translation_of: Web/HTTP/Headers/Last-Modified
 ---
 {{HTTPSidebar}}
 

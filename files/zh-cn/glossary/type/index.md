@@ -1,11 +1,6 @@
 ---
 title: 类型
 slug: Glossary/Type
-tags:
-  - JavaScript
-  - 编辑脚本
-  - 词汇表
-translation_of: Glossary/Type
 ---
 **类型** (_或数据类型_) 是决定 {{glossary("value")}} 可以存为哪个类型的特性 —例如在 JavaScript 中一个 {{domxref("Boolean")}} 只能存放 `true`或`false` , 而一个 {{domxref("String")}} 能存放任何字符串 , 一个 {{domxref("Number")}} 存放任何类型的数字 , 等等...
 

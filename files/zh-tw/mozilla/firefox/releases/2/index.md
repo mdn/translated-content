@@ -1,7 +1,6 @@
 ---
 title: Firefox 2 技術文件
 slug: Mozilla/Firefox/Releases/2
-translation_of: Mozilla/Firefox/Releases/2
 ---
 {{FirefoxSidebar}}
 

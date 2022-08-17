@@ -1,12 +1,6 @@
 ---
 title: <canvas>
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - HTML
-  - HTML5
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
 `<canvas>`元素可被用来通过 JavaScript（[Canvas](/zh-CN/docs/Web/API/Canvas_API) API 或 [WebGL](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API) API）绘制图形及图形动画。
 

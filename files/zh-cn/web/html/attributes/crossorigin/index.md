@@ -1,17 +1,6 @@
 ---
 title: CORS settings attributes
 slug: Web/HTML/Attributes/crossorigin
-tags:
-  - Advanced
-  - CORS
-  - HTML5
-  - Security
-  - anonymous
-  - cdn
-  - crossorigin=
-  - img &video
-  - script &link
-translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/CORS_settings_attributes
 ---
 在 HTML5 中，一些 HTML 元素提供了对 [CORS](/zh-CN/docs/HTTP/Access_control_CORS) 的支持， 例如 {{ HTMLElement("audio") }}、{{ HTMLElement("img") }}、{{ HTMLElement("link") }}、{{ HTMLElement("script") }} 和 {{ HTMLElement("video") }} 均有一个跨域属性 (`crossOrigin` property)，它允许你配置元素获取数据的 CORS 请求。

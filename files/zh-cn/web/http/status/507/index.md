@@ -1,11 +1,6 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/507
 ---
 {{HTTPSidebar}}
 

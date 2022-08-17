@@ -1,11 +1,6 @@
 ---
 title: CSS 注释
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - 参考
-  - 注释
-translation_of: Web/CSS/Comments
 ---
 {{CSSRef}}
 

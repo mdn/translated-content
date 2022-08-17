@@ -1,7 +1,6 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
-translation_of: Glossary/Adobe_Flash
 ---
 Flash 是一项过时的技术，由 Adobe 开发。Flash 使得富 Web 应用程序、矢量图形和多媒体成为可能。您需要安装正确的插件以在支持的{{Glossary("Browser","网页浏览器")}}使用 Flash。
 

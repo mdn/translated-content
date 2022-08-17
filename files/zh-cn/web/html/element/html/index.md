@@ -1,12 +1,6 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - HTML
-  - 元素
-  - 根元素
-  - 顶级元素
-translation_of: Web/HTML/Element/html
 ---
 {{HTMLRef}}
 

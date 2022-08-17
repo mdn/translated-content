@@ -1,12 +1,6 @@
 ---
 title: CSS 基本数据类型
 slug: Web/CSS/CSS_Types
-tags:
-  - CSS
-  - CSS Data Type
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Types
 ---
 {{ CssRef }}
 

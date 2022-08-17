@@ -263,5 +263,5 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS "en/CSS/CSS transitions")
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS)
 - {{domxref("TransitionEvent")}}

@@ -1,7 +1,6 @@
 ---
 title: <samp>
 slug: Web/HTML/Element/samp
-translation_of: Web/HTML/Element/samp
 ---
 ## 概述
 

@@ -1,13 +1,6 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - 参考
-  - 头标签
-  - 浏览器
-  - 用户代理
-  - 首部
-translation_of: Web/HTTP/Headers/User-Agent
 ---
 {{HTTPSidebar}}
 

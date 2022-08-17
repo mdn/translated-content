@@ -1,10 +1,6 @@
 ---
 title: <number>
 slug: Web/CSS/number
-tags:
-  - CSS 数据类型
-  - 布局
-translation_of: Web/CSS/number
 ---
 {{CSSRef}}
 

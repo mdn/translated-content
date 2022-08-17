@@ -1,9 +1,6 @@
 ---
 title: DoS attack
 slug: Glossary/DOS_attack
-tags:
-  - DoS 攻击
-translation_of: Glossary/DOS_attack
 ---
 DoS 是一种网络攻击手段，它通过给服务器（ {{glossary("server")}} ）发送大量请求来阻止对资源的合法使用。
 

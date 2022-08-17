@@ -1,13 +1,6 @@
 ---
 title: 使用特性查询
 slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
-tags:
-  - CSS
-  - 指南
-  - 渐进式增强
-  - 特性查询
-  - 状态 CSS
-translation_of: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
 ---
 {{CSSRef}}
 

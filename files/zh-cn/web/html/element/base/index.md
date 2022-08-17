@@ -1,11 +1,6 @@
 ---
 title: <base>：文档根 URL 元素
 slug: Web/HTML/Element/base
-tags:
-  - HTML
-  - 元素
-  - 文档
-translation_of: Web/HTML/Element/base
 ---
 {{HTMLRef}}
 

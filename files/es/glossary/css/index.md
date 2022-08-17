@@ -29,7 +29,7 @@ p {
 
 El término "en cascada" se refiere a las reglas que determinan cómo los selectores son jerarquizados al cambiar la apariencia de una página web. Esta es una característica muy importante, ya que un sitio web complejo puede contener miles de reglas CSS.
 
-## Aprende más
+## **Aprende más**
 
 ### Conocimiento general
 

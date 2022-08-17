@@ -1,15 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML sections
-  - Reference
-  - main
-  - 元素
-translation_of: Web/HTML/Element/main
 ---
 {{HTMLRef}}
 

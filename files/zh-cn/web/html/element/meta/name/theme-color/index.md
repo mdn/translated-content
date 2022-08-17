@@ -1,13 +1,6 @@
 ---
 title: theme-color
 slug: Web/HTML/Element/meta/name/theme-color
-tags:
-  - 属性
-  - HTML
-  - HTML 文档级元数据
-  - 参考
-  - 元数据
-translation_of: Web/HTML/Element/meta/name/theme-color
 ---
 {{HTMLRef}}
 

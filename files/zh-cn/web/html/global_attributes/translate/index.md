@@ -1,11 +1,6 @@
 ---
 title: translate
 slug: Web/HTML/Global_attributes/translate
-tags:
-  - Experimental
-  - HTML
-  - Referece
-translation_of: Web/HTML/Global_attributes/translate
 ---
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: Keyword
 slug: Glossary/Keyword
-translation_of: Glossary/Keyword
 ---
 **关键字**是用以描述内容的词汇或短语。网上的关键字在搜索引擎中用于搜索或者作为识别网站内容的词汇。
 

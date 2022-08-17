@@ -1,10 +1,6 @@
 ---
 title: Mozilla 中的富文本编辑器
 slug: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
-tags:
-  - 富文本
-  - 指南
-translation_of: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 original_slug: Web/Guide/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla
 ---
 Mozilla 1.3 实现了微软 IE 浏览器的 designMode 特性。Mozilla 1.3 的富文本编辑器支持的 designMode 特性能将 HTML 文档转换为富文本编辑器。从 Firefox 3 开始，Mozilla 也支持 IE 的 contentEditable 属性，该属性允许将任意元素设置为可编辑或不可编辑的（后者可阻止在可编辑环境中，对固定元素的改变）。

@@ -1,12 +1,6 @@
 ---
 title: Grid
 slug: Glossary/Grid
-tags:
-  - CSS
-  - CSS Grid
-  - CSS 网格布局
-  - grid
-translation_of: Glossary/Grid
 ---
 通过设置 CSS 属性 `display: grid;` 可以定义一个 CSS 网格。接着可以使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 属性定义网格的列属性 (columns) 和行属性 (rows)。
 

@@ -1,7 +1,6 @@
 ---
 title: <shadow>
 slug: Web/HTML/Element/Shadow
-translation_of: Web/HTML/Element/shadow
 ---
 {{deprecated_header}}
 

@@ -223,7 +223,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ### 많은 값과 Spread
 
-함수 호출에서 spread 문법을 사용할 때, 자바스크립트 엔진의 인수 길이 제한을 초과하지 않도록 주의합니다. 자세한 내용은 [`apply()`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") 를 보세요.
+함수 호출에서 spread 문법을 사용할 때, 자바스크립트 엔진의 인수 길이 제한을 초과하지 않도록 주의합니다. 자세한 내용은 [`apply()`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 를 보세요.
 
 ## 나머지 구문 (매개변수)
 

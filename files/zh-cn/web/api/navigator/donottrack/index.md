@@ -2,35 +2,31 @@
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
 ---
-{{ ApiRef("HTML DOM") }}{{SeeCompatTable}}
+{{ApiRef("HTML DOM")}}{{Deprecated_header}}
 
-### 概述
+**`Navigator.doNotTrack`** 属性返回用户的不跟踪（Do Not Track）设置，表示用户是否请求网站和广告商不进行跟踪。
 
-返回用户的 do-not-track 设置，如果用户不允许网站，内容和广告等进行跟踪，则该值为 yes。
+该属性的值反映了 {{httpheader("DNT")}} HTTP 标头的值，例如：`"1"`、`"0"` 或 `"unspecified"`。
 
-### 语法
+## 值
 
-```plain
-dnt = navigator.doNotTrack;
+一个数字。
+
+## 示例
+
+```js
+console.log(navigator.doNotTrack);
+// 若启用了 DNT，则为 "1"；若允许跟踪，则为 "0"；否则为 "unspecified"
 ```
 
-**`navigator.doNotTrack`** 的值并不是 **HTTP 请求中 do-not-track 请求头的值**。当 do-not-track 请求头发送的值为 "1", `navigator.doNotTrack` 的值为 "yes"。当 do-not-track 请求头发送的值为 unset，`navigator.doNotTrack` 的值为 "unspecified"。当 do-not-track 请求头发送的值为 "0" (Firefox 目前不支持)，`navigator.doNotTrack` 的值为 "no"。
+## 规范
 
-### 例子
+{{Specifications}}
 
-```plain
-dump(window.navigator.doNotTrack);
-// Firefox 中：如果开启了 DNT，输出"yes"；否则输出"unspecified"。
-```
+## 浏览器兼容性
 
-### 规范
+{{Compat}}
 
-[Tracking Preference Expression](http://www.w3.org/TR/tracking-dnt/) (工作草案)
+## 参见
 
-### 相关链接
-
-- [The Do Not Track field guide](/zh-cn/The_Do_Not_Track_Field_Guide)
-
-### 浏览器兼容性
-
-{{Compat("api.Navigator.doNotTrack")}}
+- {{httpheader("DNT")}} HTTP 标头

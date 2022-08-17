@@ -1,12 +1,6 @@
 ---
 title: 關於 MDN
 slug: MDN/Writing_guidelines
-tags:
-  - 指引
-  - 文檔
-  - 版權
-  - 社群
-translation_of: MDN/About
 original_slug: MDN/About
 ---
 {{MDNSidebar}}

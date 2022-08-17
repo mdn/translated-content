@@ -148,4 +148,4 @@ De cette façon, la taille du texte s'adaptera si le lecteur zoome/dézoome.
 
 ## Voir aussi
 
-- [Firefox 4 : CSS3 `calc()` sur Mozilla Hacks](https://hacks.mozilla.org/2010/06/css3-calc/ "Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog")
+- [Firefox 4 : CSS3 `calc()` sur Mozilla Hacks](https://hacks.mozilla.org/2010/06/css3-calc/)

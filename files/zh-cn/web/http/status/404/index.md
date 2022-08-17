@@ -1,9 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - 客户端错误
-translation_of: Web/HTTP/Status/404
 ---
 {{HTTPSidebar}}
 

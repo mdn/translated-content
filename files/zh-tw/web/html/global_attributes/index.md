@@ -7,7 +7,7 @@ translation_of: Web/HTML/Global_attributes
 
 **全域屬性**（Global attributes）是所有 HTML 元素共同的屬性，可以在所有的元素中使用。但在部分的元素上，屬性可能是沒有效果的。
 
-Global attributes may be specified on all [HTML elements](/zh-TW/docs/Web/HTML/Element), _even those not specified in the standard_. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as ` <foo hidden>...<foo>`` ,  `even though `<foo>` is not a valid HTML element.
+Global attributes may be specified on all [HTML elements](/zh-TW/docs/Web/HTML/Element), _even those not specified in the standard_. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as `<foo hidden>...<foo>`, even though `<foo>` is not a valid HTML element.
 
 In addition to the basic HTML global attributes, the following global attributes also exist:
 
@@ -52,8 +52,8 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Used to add properties to an item. Every HTML element may have an itemprop attribute specified, where an itemprop consists of a name and value pair.
 - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref) {{experimental_inline}}
   - : Properties that are not descendants of an element with the `itemscope` attribute can be associated with the item using an **itemref**. Itemref provides a list of element ids (not `itemid`s) with additional properties elsewhere in the document.
-- `itemscope `{{experimental_inline}}
-  - : Itemscope (usually) works along with [itemtype ](/zh-TW/docs/Web/HTML/Global_attributes/itemtype)to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
+- `itemscope`{{experimental_inline}}
+  - : Itemscope (usually) works along with [itemtype](/zh-TW/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
   - : Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. [Itemscope](/zh-TW/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)

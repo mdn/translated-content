@@ -1,19 +1,6 @@
 ---
 title: 跨源资源共享（CORS）
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - Cross-Origin Resource Sharing
-  - Fetch
-  - Fetch API
-  - HTTP
-  - HTTP Access Controls
-  - Same-origin policy
-  - Security
-  - XMLHttpRequest
-  - l10n:priority
-translation_of: Web/HTTP/CORS
 ---
 {{HTTPSidebar}}
 

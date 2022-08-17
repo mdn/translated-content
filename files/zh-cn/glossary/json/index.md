@@ -1,12 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-tags:
-  - JSON
-  - 介绍
-  - 术语
-  - 脚本编写
-translation_of: Glossary/JSON
 ---
 _JavaScript Object Notation_ (**JSON**) 是一种数据交换格式。尽管不是严格意义上的子集，JSON 非常接近 {{Glossary("JavaScript")}} 语法的子集。
 

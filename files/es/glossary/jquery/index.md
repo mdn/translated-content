@@ -29,8 +29,8 @@ window.onload = function() {
 
 ## Descargar jQuery
 
-| **npm**              | bower (solo file)                                           | Google CDN                                                         |
-| -------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
+| **npm** | bower (solo file) | Google CDN |
+| --- | --- | --- |
 | `npm install jquery` | `bower install https://code.jquery.com/jquery-3.2.1.min.js` | `https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js` |
 
 ## Aprende más

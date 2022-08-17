@@ -1,11 +1,6 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - HTML
-  - 元素
-  - 列表
-translation_of: Web/HTML/Element/ul
 ---
 {{HTMLRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: 使用 WebAssembly JavaScript API
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - JavaScript
-  - WebAssembly
-  - wasm
-  - 内存
-  - 实例化
-  - 开发者工具
-  - 编译
-  - 表格
-translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 {{WebAssemblySidebar}}
 

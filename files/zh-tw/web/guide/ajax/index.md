@@ -24,7 +24,7 @@ Ajax 簡介。
 - [Fetch API](/zh-TW/docs/Web/API/Fetch_API)
   - : Fetch API 提供了取得資源（fetching resources）的介面（interface）。這似乎對於曾使用過 {{domxref("XMLHTTPRequest")}} 的人而言並不陌生，然而這個 API 提供一個更強大且彈性的功能集。
 - [Server-sent events](/zh-TW/docs/Server-sent_events)
-  - : 傳統上來說，一個網頁必須送出 request 到伺服器來得到新的資料，也就是說，網頁藉由 server-sent 事件從伺服器請求 (request) 資料，伺服器在任何時候都能送新的資料給網頁，藉由推送訊息到網頁。這些傳入的訊息可以被視為網頁中的 _[事件](/zh-TW/docs/DOM/event)_ + 資料，請參見 [使用 server-sent event ](/zh-TW/docs/Server-sent_events/Using_server-sent_events)。
+  - : 傳統上來說，一個網頁必須送出 request 到伺服器來得到新的資料，也就是說，網頁藉由 server-sent 事件從伺服器請求 (request) 資料，伺服器在任何時候都能送新的資料給網頁，藉由推送訊息到網頁。這些傳入的訊息可以被視為網頁中的 _[事件](/zh-TW/docs/DOM/event)_ + 資料，請參見 [使用 server-sent event](/zh-TW/docs/Server-sent_events/Using_server-sent_events)。
 - [_Pure-Ajax_ navigation example](/zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)
   - : This article provides a working (minimalist) example of a _pure-Ajax_ website composed only of three pages.
 - [Sending and Receiving Binary Data](/zh-TW/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data)

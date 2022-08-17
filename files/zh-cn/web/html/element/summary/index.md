@@ -1,14 +1,6 @@
 ---
 title: <summary>
 slug: Web/HTML/Element/summary
-tags:
-  - <summary>
-  - Element
-  - HTML
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/summary
 ---
 {{HTMLRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: HTTP 请求范围
 slug: Web/HTTP/Range_requests
-tags:
-  - 分块传输
-  - 指南
-  - 断点续传
-  - 范围请求
-translation_of: Web/HTTP/Range_requests
 ---
 {{HTTPSidebar}}
 

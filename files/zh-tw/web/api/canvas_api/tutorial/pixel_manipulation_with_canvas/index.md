@@ -70,7 +70,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ### 調色盤
 
-這個範例使用[getImageData() ](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData)方法去顯示在鼠標下的顏色。
+這個範例使用[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 方法去顯示在鼠標下的顏色。
 
 首先，需要一個正確的滑鼠點`layerX`*​​​​​​​*和 `layerY`。在從[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 提供 pixel 陣列中(array)該點的 pixel 數據(data) 。最後，使用陣列數據(array data)在`<div>`中設置背景色和文字去顯示該色。
 
@@ -106,7 +106,7 @@ canvas.addEventListener('mousemove', pick);
 
 ## 在內容中寫入 pixel 資料
 
-可以使用[putImageData() ](/zh-TW/docs/Web/API/CanvasRenderingContext2D/putImageData)方法將自訂 pixel 數據(data) 放入內容中:
+可以使用[putImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/putImageData) 方法將自訂 pixel 數據(data) 放入內容中:
 
 ```js
 ctx.putImageData(myImageData, dx, dy);

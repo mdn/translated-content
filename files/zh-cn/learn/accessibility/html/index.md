@@ -1,7 +1,6 @@
 ---
 title: 'HTML: 为可访问性提供一个良好的基础'
 slug: Learn/Accessibility/HTML
-translation_of: Learn/Accessibility/HTML
 original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基础
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

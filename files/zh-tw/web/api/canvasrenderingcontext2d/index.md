@@ -316,7 +316,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 ## 相容性註記
 
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, ` rotate(), ``scale(),` `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
 
 ## 參見
 

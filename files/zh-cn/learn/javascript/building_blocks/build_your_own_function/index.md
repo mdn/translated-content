@@ -1,13 +1,6 @@
 ---
 title: 创建您自己的函数
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-tags:
-  - JavaScript
-  - 函数
-  - 初学者
-  - 学习
-  - 教程
-translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 

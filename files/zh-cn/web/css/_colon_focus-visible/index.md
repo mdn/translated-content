@@ -1,13 +1,6 @@
 ---
 title: ':focus-visible'
 slug: Web/CSS/:focus-visible
-tags:
-  - CSS
-  - Reference
-  - Web
-  - 伪类
-  - 布局
-translation_of: Web/CSS/:focus-visible
 ---
 {{CSSRef}}
 

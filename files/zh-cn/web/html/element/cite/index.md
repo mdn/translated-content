@@ -1,13 +1,6 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-tags:
-  - HTML
-  - Reference 参考
-  - Web
-  - 元素
-  - 文本级语义
-translation_of: Web/HTML/Element/cite
 ---
 {{HTMLRef}}
 

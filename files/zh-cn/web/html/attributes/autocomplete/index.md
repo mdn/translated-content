@@ -1,17 +1,6 @@
 ---
 title: The HTML 自动完成属性
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - HTML
-  - 参考
-  - 地址
-  - 密码
-  - 属性
-  - 用户名
-  - 电话号码
-  - 自动完成
-  - 邮件地址
-translation_of: Web/HTML/Attributes/autocomplete
 original_slug: Web/HTML/Attributes/自动完成属性
 ---
 {{HTMLSidebar("Global_attributes")}}

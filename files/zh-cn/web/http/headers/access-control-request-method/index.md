@@ -1,10 +1,6 @@
 ---
 title: Access-Control-Request-Method
 slug: Web/HTTP/Headers/Access-Control-Request-Method
-tags:
-  - 请求首部
-  - 跨域资源共享
-translation_of: Web/HTTP/Headers/Access-Control-Request-Method
 ---
 {{HTTPSidebar}}请求头 **`Access-Control-Request-Method `**出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)。因为预检请求所使用的方法总是 {{HTTPMethod("OPTIONS")}} ，与实际请求所使用的方法不一样，所以这个请求头是必要的。
 

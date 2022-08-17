@@ -1,11 +1,6 @@
 ---
 title: <section>
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - 区块
-translation_of: Web/HTML/Element/section
 ---
 {{HTMLRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: Web 开发介绍
 slug: Web/Guide/Introduction_to_Web_development
-translation_of: Web/Guide/Introduction_to_Web_development
 original_slug: Web_Development/Introduction_to_Web_development
 ---
 不论你是刚开始 Web 开发，还是想学习 Web 开发，这些链接都能帮助你。至少，立刻我们就能在这儿看到很多链接。

@@ -1,7 +1,6 @@
 ---
 title: 视频和音频 API
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
-translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 

@@ -1,15 +1,6 @@
 ---
 title: Column combinator
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - 参考
-  - 合并器
-  - 表格
-  - 试验
-  - 选择器
-  - 需要浏览器的兼容性
-translation_of: Web/CSS/Column_combinator
 ---
 {{CSSRef("Selectors")}}{{SeeCompatTable}}
 

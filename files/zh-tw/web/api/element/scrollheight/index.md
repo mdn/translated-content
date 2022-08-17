@@ -38,7 +38,7 @@ padding-bottom
 
 ### 了解元素是否被滾輪完全滾過
 
-下面的等式代表`如果元素被完全滾過將會`回傳 `true `, 否則回傳 `false`.
+下面的等式代表`如果元素被完全滾過將會`回傳 `true`, 否則回傳 `false`.
 
 ```js
 element.scrollHeight - element.scrollTop === element.clientHeight

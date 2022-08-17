@@ -1,9 +1,6 @@
 ---
 title: HTTP 消息
 slug: Web/HTTP/Messages
-tags:
-  - 指南 HTTP
-translation_of: Web/HTTP/Messages
 ---
 {{HTTPSidebar}}
 

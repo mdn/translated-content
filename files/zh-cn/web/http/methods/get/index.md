@@ -1,11 +1,6 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/GET
 ---
 {{HTTPSidebar}}
 

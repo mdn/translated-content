@@ -1,14 +1,6 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
-tags:
-  - 代理
-  - 请求首部
-  - 负载均衡
-  - 超文本传输协议
-  - 转发
-  - 首部
-translation_of: Web/HTTP/Headers/X-Forwarded-Host
 ---
 {{HTTPSidebar}}
 

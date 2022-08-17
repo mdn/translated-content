@@ -1,12 +1,6 @@
 ---
 title: 原因：CORS 请求不是 HTTP
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
-tags:
-  - CORS
-  - 同源规则
-  - 安全
-  - 错误
-translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 {{HTTPSidebar}}
 

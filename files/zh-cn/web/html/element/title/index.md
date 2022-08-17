@@ -1,17 +1,6 @@
 ---
 title: <title>
 slug: Web/HTML/Element/title
-tags:
-  - HTML
-  - HTML 文档元数据
-  - Web
-  - 元素
-  - 参考
-  - 窗口名称
-  - 窗口标题
-  - 页面名称
-  - 页面标题
-translation_of: Web/HTML/Element/title
 ---
 {{HTMLRef}}
 

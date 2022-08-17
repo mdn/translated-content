@@ -1,9 +1,6 @@
 ---
 title: 图像、媒体和表单元素
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
-tags:
-  - CSS 媒体 替换内容
-translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 

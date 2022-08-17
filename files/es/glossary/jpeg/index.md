@@ -5,8 +5,8 @@ translation_of: Glossary/jpeg
 ---
 **JPEG** (_Joint Photographic Experts Group_) es un método comúnmente utilizado en la compresión con pérdida de información en imágenes digitales.
 
-## Saber más
+## **Saber más**
 
-### Conocimiento general
+### **Conocimiento general**
 
 - {{Interwiki("wikipedia", "JPEG")}} on Wikipedia

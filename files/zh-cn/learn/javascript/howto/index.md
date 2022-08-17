@@ -1,7 +1,6 @@
 ---
 title: 在 JavaSctript 中解决问题
 slug: Learn/JavaScript/Howto
-translation_of: Learn/JavaScript/Howto
 ---
 {{LearnSidebar}}
 

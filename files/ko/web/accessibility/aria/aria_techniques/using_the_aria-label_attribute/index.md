@@ -7,7 +7,7 @@ tags:
   - aria-label
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
-[`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) 속성은 현재 요소에 레이블을 정의하기 위해서 사용합니다. 텍스트 레이블이 화면에 표시되지 않을 때에 사용하세요. 만약에 요소에 레이블을 정의하는 화면에 보이는 텍스트가 있다면 [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "Using the aria-labelledby attribute")을 대신 사용하세요
+[`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) 속성은 현재 요소에 레이블을 정의하기 위해서 사용합니다. 텍스트 레이블이 화면에 표시되지 않을 때에 사용하세요. 만약에 요소에 레이블을 정의하는 화면에 보이는 텍스트가 있다면 [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)을 대신 사용하세요
 
 이 속성은 일반적인 HTML 요소와 함께 사용할 수 있습니다. ARIA `role` 이 적용된 요소에만 한정되지 않습니다.
 
@@ -45,7 +45,7 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attr
 
 ### 관련된 ARIA 기술
 
-- [Using the aria-labelledby attribute](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute")
+- [Using the aria-labelledby attribute](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 
 ### 적합성
 

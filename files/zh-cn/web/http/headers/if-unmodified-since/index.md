@@ -1,11 +1,6 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
-tags:
-  - HTTP
-  - 条件请求
-  - 请求首部
-translation_of: Web/HTTP/Headers/If-Unmodified-Since
 ---
 {{HTTPSidebar}}
 

@@ -1,9 +1,6 @@
 ---
 title: Simple response header
 slug: Glossary/Simple_response_header
-tags:
-  - Simple response header
-translation_of: Glossary/Simple_response_header
 ---
 一个简单的响应头（或 CORS 安全列表的响应头）是一个 [HTTP 头](/zh-CN/docs/Web/HTTP/Headers)，它是以下之一：
 

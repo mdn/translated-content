@@ -1,11 +1,6 @@
 ---
 title: HTTP 基础
 slug: Web/HTTP/Basics_of_HTTP
-tags:
-  - HTTP
-  - 指南
-  - 概览
-translation_of: Web/HTTP/Basics_of_HTTP
 ---
 HTTP 是一个拓展性非常好的协议。它依赖于以下的一些基本概念: 像资源或是 URI 的概念 , 一个简单的消息结构，一个客户端 - 服务器结构的通信流。 在这些基础概念之上， 近年来已经出现了许多拓展，以增加新的 HTTP 方法或首部的方式为 HTTP 协议增加了新的功能和语义。
 

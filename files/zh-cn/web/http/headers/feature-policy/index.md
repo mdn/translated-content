@@ -1,7 +1,6 @@
 ---
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
-translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}**`Feature-Policy`**响应头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。
 

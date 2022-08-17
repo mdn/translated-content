@@ -1,7 +1,6 @@
 ---
 title: 首次輸入延遲
 slug: Glossary/First_input_delay
-translation_of: Glossary/First_input_delay
 ---
 **首次輸入延遲** (First input delay, FID) 測量從使用者第一次與你的網站互動（例如當他們點選連結、按鈕或是使用自訂的 JavaScript 控制），瀏覽器實際上能夠回應此次互動的時間點。它是個在首次使用者於網頁互動以及瀏覽器回應此互動的時間長度 (以毫秒為單位)。捲動與縮放行為都不包含在這個指標。
 

@@ -1,9 +1,6 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
-tags:
-  - AJAX
-translation_of: Glossary/AJAX
 ---
 **AJAX**（Asynchronous {{glossary("JavaScript")}} And {{glossary("XML")}} ）是一种使用 {{glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}} 技术构建更复杂，动态的网页的编程实践。
 

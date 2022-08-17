@@ -1,14 +1,6 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/Input/hidden
-tags:
-  - HTML
-  - Input
-  - 表单
-  - 输入框
-  - 输入框属性
-  - 隐藏表单
-translation_of: Web/HTML/Element/input/hidden
 ---
 {{HTMLRef}}
 

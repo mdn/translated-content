@@ -1,10 +1,6 @@
 ---
 title: <small>
 slug: Web/HTML/Element/small
-tags:
-  - HTML
-  - 元素
-translation_of: Web/HTML/Element/small
 ---
 {{HTMLRef}}
 

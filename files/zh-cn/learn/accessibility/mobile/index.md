@@ -1,17 +1,6 @@
 ---
 title: 移动设备上的无障碍
 slug: learn/Accessibility/Mobile
-tags:
-  - 初学者
-  - 响应式
-  - 学习
-  - 屏幕阅读器
-  - 文章
-  - 无障碍
-  - 移动端
-  - 编程
-  - 触摸
-translation_of: Learn/Accessibility/Mobile
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 

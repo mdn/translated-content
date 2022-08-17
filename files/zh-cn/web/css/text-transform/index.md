@@ -1,11 +1,6 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS3
-  - text-transform
-  - uppercase
-translation_of: Web/CSS/text-transform
 ---
 {{CSSRef}}
 

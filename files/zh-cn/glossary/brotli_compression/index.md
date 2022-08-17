@@ -1,13 +1,6 @@
 ---
 title: Brotli
 slug: Glossary/brotli_compression
-tags:
-  - Brotli
-  - Glossary
-  - Reference
-  - Web Performance
-  - compression
-translation_of: Glossary/brotli_compression
 ---
 **Brotli** 是一种通用的无损压缩算法。
 

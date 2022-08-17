@@ -1,13 +1,6 @@
 ---
 title: MIME 类型
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - HTTP
-  - MIME Types
-  - MIME 类型
-  - Meta
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 {{HTTPSidebar}}
 

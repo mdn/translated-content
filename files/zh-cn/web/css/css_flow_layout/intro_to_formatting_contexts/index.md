@@ -1,10 +1,6 @@
 ---
 title: Introduction to formatting contexts 格式化上下文简介
 slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-tags:
-  - BFC
-  - 格式化上下文
-translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 {{CSSRef}}
 本文介绍格式化上下文的概念，其中有几种类型，包括块格式化上下文 block formatting contexts、内联格式化上下文 inline formatting contexts 和灵活格式化上下文 flex formatting contexts。还介绍了它们的基本行为以及如何利用这些行为。

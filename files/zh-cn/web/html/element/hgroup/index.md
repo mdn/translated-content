@@ -1,15 +1,6 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-tags:
-  - Element
-  - Experimental
-  - HTML
-  - HTML sections
-  - HTML5
-  - Web
-  - 实验性
-translation_of: Web/HTML/Element/hgroup
 ---
 {{HTMLRef}}**HTML `<hgroup>` element**代表文档章节所属的多级别的目录，它将多个\<h1>至\<h6>的子元素组装到一起。{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 

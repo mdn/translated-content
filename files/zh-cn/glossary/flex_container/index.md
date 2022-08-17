@@ -1,12 +1,6 @@
 ---
 title: 伸缩容器
 slug: Glossary/Flex_Container
-tags:
-  - CSS
-  - 伸缩容器
-  - 伸缩盒子
-  - 术语
-translation_of: Glossary/Flex_Container
 ---
 定义一个{{glossary("flexbox")}}（伸缩盒布局），需要在一个父级元素上使用`display`属性的值：`flex`或`inline-flex`。这个父级元素将成为**flex container**（伸缩容器），而它的所有子元素将变成{{glossary("flex item")}}（伸缩项）。
 

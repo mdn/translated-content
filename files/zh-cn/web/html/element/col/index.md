@@ -1,7 +1,6 @@
 ---
 title: <col>
 slug: Web/HTML/Element/col
-translation_of: Web/HTML/Element/col
 ---
 {{HTMLRef}}
 

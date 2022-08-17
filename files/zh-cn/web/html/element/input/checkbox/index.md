@@ -1,7 +1,6 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/Input/checkbox
-translation_of: Web/HTML/Element/input/checkbox
 ---
 HTML input 元素 **`<input type="checkbox">`** 允许你为表单中（或不在表单中）的提交项选择一个单一值。
 

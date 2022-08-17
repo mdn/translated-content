@@ -1,7 +1,6 @@
 ---
 title: 網路如何運作
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 

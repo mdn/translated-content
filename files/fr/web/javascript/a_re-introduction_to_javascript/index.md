@@ -210,7 +210,7 @@ Les opérations booléennes comme `&&` (_et_ logique), `||` (_ou_ logique) et `!
 
 ## Les variables
 
-En JavaScript, on peut déclarer de nouvelles variables grâce à l'un de ces trois mots-clés : [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), ou [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var "/en/JavaScript/Reference/Statements/var").
+En JavaScript, on peut déclarer de nouvelles variables grâce à l'un de ces trois mots-clés : [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), ou [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var).
 
 **`let`** permet de déclarer des variables qui pourront être utilisées dans un bloc. La variable déclarée avec `let` est uniquement disponible dans le bloc qui contient la déclaration.
 

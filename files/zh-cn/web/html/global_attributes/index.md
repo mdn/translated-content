@@ -1,12 +1,6 @@
 ---
 title: 全局属性
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Global_attributes
 ---
 {{HTMLSidebar("Global_attributes")}}
 

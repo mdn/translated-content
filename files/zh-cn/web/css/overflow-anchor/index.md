@@ -1,10 +1,6 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
-tags:
-  - CSS
-  - CSS Scroll Anchoring
-translation_of: Web/CSS/overflow-anchor
 ---
 {{CSSRef}}
 
