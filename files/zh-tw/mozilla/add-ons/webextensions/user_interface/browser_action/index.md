@@ -1,9 +1,6 @@
 ---
 title: 工具列按鈕
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
 {{AddonSidebar}}
 

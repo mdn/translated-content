@@ -1,7 +1,6 @@
 ---
 title: 附加元件
 slug: Mozilla/Add-ons
-translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebar}}
 

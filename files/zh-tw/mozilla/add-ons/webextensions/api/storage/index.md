@@ -1,10 +1,6 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
-tags:
-  - API
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 {{AddonSidebar}}
 

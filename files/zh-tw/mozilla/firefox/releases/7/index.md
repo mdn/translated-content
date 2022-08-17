@@ -1,7 +1,6 @@
 ---
 title: Firefox 7 技術文件
 slug: Mozilla/Firefox/Releases/7
-translation_of: Mozilla/Firefox/Releases/7
 ---
 {{FirefoxSidebar}}
 
