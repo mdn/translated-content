@@ -86,7 +86,7 @@ ul {margin-left: 40px; padding-left: 0;}
 ul {margin-left: 0; padding-left: 0;}
 ```
 
-請注意，這樣的寫法將造成 bullet 被扔在整個列表及其 parent element 之外。當你在 `body 中這樣寫，很顯然的你的`bullet 將不會出現在你的視窗內。
+請注意，這樣的寫法將造成 bullet 被扔在整個列表及其 parent element 之外。當你在 `body` 中這樣寫，很顯然的你的 `bullet` 將不會出現在你的視窗內。
 
 ### 結論
 
