@@ -41,10 +41,10 @@ list-style-type: unset;
 
 list-style-type 的属性值可以是以下任意一项：
 
-- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E) value
-- a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type$edit#symbols()>) value
-- a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E) value
-- the keyword [`none`](/zh-CN/docs/Web/CSS/list-style-type$edit#none).
+- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type#%3Ccustom-ident%3E) value
+- a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type#symbols()>) value
+- a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type#%3Cstring%3E) value
+- the keyword [`none`](/zh-CN/docs/Web/CSS/list-style-type#none).
 
 ### 取值
 
@@ -56,9 +56,7 @@ list-style-type 的属性值可以是以下任意一项：
   - : The specified string will be used as the item's marker.
 - `none`
   - : 不显示列表项的标记。
-
-关键字的取值是下列之一：
-
+    关键字的取值是下列之一：
 - `disc`
   - : 实心圆点 (默认值)
 - `circle`
@@ -67,88 +65,143 @@ list-style-type 的属性值可以是以下任意一项：
   - : 实心方块
 - `decimal`
   - : 十进制阿拉伯数字
+    - 从 1 开始
 - `cjk-decimal` {{experimental_inline}}
   - : 中日韩十进制数
+    - 例如：一，二，三，..., 九八，九九，一〇〇
 - `decimal-leading-zero`
-  - : Decimal numbers. Padded by initial zeros
+  - : Decimal numbers
+    - Padded by initial zeros
+    - E.g. 01, 02, 03, … 98, 99
 - `lower-roman`
   - : Lowercase roman numerals
+    - E.g. i, ii, iii, iv, v…
 - `upper-roman`
   - : Uppercase roman numerals
+    - E.g. I, II, III, IV, V…
 - `lower-greek`
   - : Lowercase classical Greek
-- `lower-alpha`、`lower-latin`
-  - : Lowercase ASCII letters. `lower-latin` is unsupported in IE7 and earlier
-
-    See [Browser compatibility](#browser_compatibility) section.
-
-- `upper-alpha`、`upper-latin`
-  - : Uppercase ASCII letters. `upper-latin` is unsupported in IE7 and earlier
+    - alpha, beta, gamma…
+    - E.g. α, β, γ…
+- `lower-alpha`, `lower-latin`
+  - : Lowercase ASCII letters
+    - E.g. a, b, c, … z
+    - `lower-latin` is unsupported in IE7 and earlier
+    - See [Browser compatibility](#browser_compatibility) section.
+- `upper-alpha`, `upper-latin`
+  - : Uppercase ASCII letters
+    - E.g. A, B, C, … Z
+    - `upper-latin` is unsupported in IE7 and earlier
 - `armenian`
   - : Traditional Armenian numbering
+    - (ayb/ayp, ben/pen, gim/keem…
 - `georgian`
   - : Traditional Georgian numbering
+    - E.g. an, ban, gan, … he, tan, in…
 - `hebrew` {{experimental_inline}}
   - : Traditional Hebrew numbering
 - `ethiopic-numeric` {{experimental_inline}}
-  - : Ethiopic numbering.
+  - : Example
 - `hiragana` {{experimental_inline}}
-  - : (Japanese)
+  - : a, i, u, e, o, ka, ki, …
+    - (Japanese)
 - `katakana` {{experimental_inline}}
-  - : (Japanese)
+  - : A, I, U, E, O, KA, KI, …
+    - (Japanese)
 - `hiragana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : i, ro, ha, ni, ho, he, to, …
+    - [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
 - `katakana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : I, RO, HA, NI, HO, HE, TO, …
+    - [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
 - `japanese-informal` {{experimental_inline}}
   - : Japanese informal numbering
 - `japanese-formal` {{experimental_inline}}
-  - : Japanese formal numbering to be used in legal or financial document.The kanjis are designed so that they can't be modified to look like another correct one
+  - : Japanese formal numbering to be used in legal or financial document.
+    - E.g., 壱萬壱阡壱百壱拾壱
+    - The kanjis are designed so that they can't be modified to look like another correct one
 - `korean-hangul-formal` {{experimental_inline}}
   - : Korean hangul numbering.
+    - E.g., 일만 일천일백일십일
 - `korean-hanja-informal` {{experimental_inline}}
   - : Korean hanja numbering.
+    - E.g., 萬 一千百十一
 - `korean-hanja-formal` {{experimental_inline}}
   - : Formal Korean Han numberging.
+    - E.g. 壹萬 壹仟壹百壹拾壹
 - `simp-chinese-informal` {{experimental_inline}}
   - : Simplified Chinese informal numberging.
+    - E.g. 一万一千一百一十一
 - `cjk-ideographic`{{experimental_inline}}
   - : Identical to `simp-chinese-informal`
+    - E.g. 一万一千一百一十一
 - `simp-chinese-formal` {{experimental_inline}}
   - : Simplified Chinese formal numberging.
+    - E.g. 壹万壹仟壹佰壹拾壹
 - `trad-chinese-informal` {{experimental_inline}}
   - : Traditional Chinese informal numberging.
+    - E.g. 一萬一千一百一十一
 - `trad-chinese-formal` {{experimental_inline}}
   - : Traditional Chinese formal numberging.
+    - E.g. 壹萬壹仟壹佰壹拾壹
 
 ### 非标准扩展
 
 Extended set of values provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.
 
-- `arabic-indic`、`-moz-arabic-indic`
-- `bengali`、`-moz-bengali`
-- `cjk-earthly-branch`、`-moz-cjk-earthly-branch`
-- `cjk-heavenly-stem`、`-moz-cjk-heavenly-stem`
-- `devanagari`、`-moz-devanagari`
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `ethiopic-halehame-ti-er`、`-moz-ethiopic-halehame-ti-er`
-- `ethiopic-halehame-ti-et`、`-moz-ethiopic-halehame-ti-et`
-- `gujarati`、`-moz-gujarati`
-- `gurmukhi`、`-moz-gurmukhi`
-- `hangul`、`-moz-hangul`
-- `hangul-consonant`、`-moz-hangul-consonant`
-- `kannada`、`-moz-kannada`
-- `khmer`、`-moz-khmer`
-- `lao`、`-moz-lao`
-- `malayalam`、`-moz-malayalam`
-- `myanmar`、`-moz-myanmar`
-- `oriya`、`-moz-oriya`
-- `persian`、`-moz-persian`
-- `-moz-tamil`
-- `telugu`、`-moz-telugu`
-- `thai`、`-moz-thai`
-- `urdu`、`-moz-urdu`
+- arabic-indic, \-moz-arabic-indic
+  - : Example
+- bengali, \-moz-bengali
+  - : Example
+- cjk-earthly-branch, \-moz-cjk-earthly-branch
+  - : Example
+- cjk-heavenly-stem, moz-cjk-heavenly-stem
+  - : Example
+- devanagari
+- \-moz-devanagari
+  - : Example
+- \-moz-ethiopic-halehame
+  - : Example
+- \-moz-ethiopic-halehame-am
+  - : Example
+- ethiopic-halehame-ti-er, \-moz-ethiopic-halehame-ti-er
+  - : Example
+- ethiopic-halehame-ti-et, \-moz-ethiopic-halehame-ti-et
+  - : Example
+- gujarati, \-moz-gujarati
+  - : Example
+- gurmukhi, \-moz-gurmukhi
+  - : Example
+- hangul, \-moz-hangul
+  - : Example
+    - Example
+    - Example
+- hangul-consonant, \-moz-hangul-consonant
+  - : Example
+    - Example
+    - Example
+- kannada, \-moz-kannada
+  - : Example
+- khmer, \-moz-khmer
+  - : Example
+- lao, \-moz-lao
+  - : Example
+- malayalam, \-moz-malayalam
+  - : Example
+- myanmar, \-moz-myanmar
+  - : Example
+- oriya, \-moz-oriya
+  - : Example
+- persian, \-moz-persian
+  - : Example
+- \-moz-tamil
+  - : Example
+- telugu, \-moz-telugu
+  - : Example
+- thai, \-moz-thai
+  - : Example
+- urdu, \-moz-urdu
+  - : Example
 
 ### Formal syntax
 

@@ -9,9 +9,9 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 
 当没有元素包含 z-index 属性时，元素按照如下顺序堆叠（从底到顶顺序）：
 
-1.  根元素的背景和边界
-2.  普通流 (无定位) 里的块元素 (没有 position 或者 position:static;) 按 HTML 中的出现顺序堆叠
-3.  定位元素按 HTML 中的出现顺序堆叠
+1. 根元素的背景和边界
+2. 普通流 (无定位) 里的块元素 (没有 position 或者 position:static;) 按 HTML 中的出现顺序堆叠
+3. 定位元素按 HTML 中的出现顺序堆叠
 
 在接下来的例子中，相对和绝对定位的块元素的大小和位置刚好说明上述堆叠规则。
 

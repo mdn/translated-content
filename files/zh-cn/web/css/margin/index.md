@@ -114,7 +114,7 @@ margin: auto;               /* 上边和下边：无外边距 */
 
 ### 水平居中
 
-在现代浏览器中实现水平居中，可以使用 {{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;`。
+在现代浏览器中实现水平居中，可以使用 {{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;`。
 
 不过，在 IE8-9 这样的不支持弹性盒布局的旧式浏览器中，上述代码并不会生效。此时要实现在父元素中居中，可使用 `margin: 0 auto;`。
 

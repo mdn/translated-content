@@ -98,8 +98,8 @@ Internet Explorer 7 和 8 支持非标准的 [`-ms-interpolation-mode` 属性](<
 - 只应用于 `<img>` 等元素带的图片
 - IE 7 上此属性只支持无透明度的图片
 - 不能继承
-- IE 7 默认值：` nearest-neighbor` (低质量)
-- IE 8 默认值：` bicubic` (高质量)
+- IE 7 默认值：`nearest-neighbor` (低质量)
+- IE 8 默认值：`bicubic` (高质量)
 - IE 9 不支持此非标准属性
 
 WebKit 支持一个非标准属性：`-webkit-optimize-contrast`.

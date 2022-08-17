@@ -439,7 +439,7 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
 
 ![The layout has gaps as there is not space to layout a two track item.](11-grid-auto-flow-sparse.png)
 
-我可以通过设置{{cssxref("grid-auto-flow")}}`: dense `在网格容器上设置稠密，从而使网格填充这些空白。但是，在这样做时要小心，因为它会使项目偏离其逻辑源顺序。您应该只在项目没有设置顺序时才这样做——并且要注意源文件后面的选项卡顺序的问题，而不是重新排序的显示。
+我可以通过设置{{cssxref("grid-auto-flow")}}`: dense` 在网格容器上设置稠密，从而使网格填充这些空白。但是，在这样做时要小心，因为它会使项目偏离其逻辑源顺序。您应该只在项目没有设置顺序时才这样做——并且要注意源文件后面的选项卡顺序的问题，而不是重新排序的显示。
 
 ```html hidden
 <ul class="listing">
@@ -535,34 +535,34 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
 - 有关灵感，请参阅 [Layout Labs from Jen Simmons](http://labs.jensimmons.com/), 她一直在创建基于一系列资源的布局。
 - 有关其他常见布局模式，请参见 [Grid by Example](http://gridbyexample.com), 这里有许多网格布局的小例子，也有一些较大的 UI 模式和完整的页面布局。
 
-1.  [**CSS**](/zh-CN/docs/Web/CSS)
-2.  [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
-3.  [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4.  **Guides**
+1. [**CSS**](/zh-CN/docs/Web/CSS)
+2. [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
+3. [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+4. **Guides**
 
-    1.  [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2.  [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3.  [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4.  [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5.  [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6.  [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7.  [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8.  [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9.  [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    1. [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2. [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3. [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4. [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5. [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6. [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7. [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8. [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9. [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
     10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
     11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-5.  **Properties**
+5. **Properties**
 
-    1.  [grid](/zh-CN/docs/Web/CSS/grid)
-    2.  [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3.  [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4.  [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5.  [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6.  [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7.  [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8.  [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9.  [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
+    1. [grid](/zh-CN/docs/Web/CSS/grid)
+    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
+    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
+    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
+    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
+    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
+    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
+    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
+    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
     10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
     11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
     12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
@@ -573,14 +573,14 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
     17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
     18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
 
-6.  **Glossary**
+6. **Glossary**
 
-    1.  [Grid](/zh-CN/docs/Glossary/Grid)
-    2.  [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    3.  [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    4.  [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    5.  [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    6.  [Gutters](/zh-CN/docs/Glossary/Gutters)
-    7.  [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
-    8.  [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    9.  [Grid column](/zh-CN/docs/Glossary/Grid_column)
+    1. [Grid](/zh-CN/docs/Glossary/Grid)
+    2. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
+    3. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
+    4. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
+    5. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
+    6. [Gutters](/zh-CN/docs/Glossary/Gutters)
+    7. [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
+    8. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
+    9. [Grid column](/zh-CN/docs/Glossary/Grid_column)

@@ -4,7 +4,7 @@ slug: Web/CSS/right
 ---
 {{CSSRef}}
 
-**`right`**[样式](https://developer.mozilla.org/zh-CN/docs/Web/CSS)属性定义了定位元素的右外边距边界与其包含块右边界之间的偏移，非定位元素设置此属性无效。
+**`right`**[样式](/zh-CN/docs/Web/CSS)属性定义了定位元素的右外边距边界与其包含块右边界之间的偏移，非定位元素设置此属性无效。
 
 ```css
 /* <length> values */

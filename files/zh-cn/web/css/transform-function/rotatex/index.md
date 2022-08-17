@@ -5,7 +5,7 @@ original_slug: Web/CSS/transform-function/rotateX()
 ---
 {{CSSRef}}
 
-**`rotateX() `**函数定义了一个转换，它可以让一个元素围绕横坐标 (水平轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
+**`rotateX()`** 函数定义了一个转换，它可以让一个元素围绕横坐标 (水平轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-rotateX.html")}}
 
@@ -17,7 +17,7 @@ original_slug: Web/CSS/transform-function/rotateX()
 
 ## 语法
 
-**`rotateX() `**引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
+**`rotateX()`** 引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
 
 ```
 rotateX(a)

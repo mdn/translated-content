@@ -279,16 +279,25 @@ The following keywords were defined in earlier versions of the CSS Color Module.
 
 ### Mozilla Color Preference Extensions
 
-- \-moz-activehyperlinktext
-  - : User's preference for text color of active links. Should be used with the default document background color.
-- \-moz-default-background-color
-  - : User's preference for the document background color.
-- \-moz-default-color
-  - : User's preference for the text color.
-- \-moz-hyperlinktext
-  - : User's preference for the text color of unvisited links. Should be used with the default document background color.
-- \-moz-visitedhyperlinktext
-  - : User's preference for the text color of visited links. Should be used with the default document background color.
+- ## \-moz-activehyperlinktext
+
+      : User's preference for text color of active links. Should be used with the default document background color.
+
+- ## \-moz-default-background-color
+
+      : User's preference for the document background color.
+
+- ## \-moz-default-color
+
+      : User's preference for the text color.
+
+- ## \-moz-hyperlinktext
+
+      : User's preference for the text color of unvisited links. Should be used with the default document background color.
+
+- ## \-moz-visitedhyperlinktext
+
+      : User's preference for the text color of visited links. Should be used with the default document background color.
 
 ## 插值
 

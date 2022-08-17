@@ -99,8 +99,8 @@ background-size: unset;
 
 单张图片的背景大小可以使用以下三种方法中的一种来规定：
 
-- 使用关键词 [`contain`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#contain)
-- 使用关键词 [`cover`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#cover)
+- 使用关键词 [`contain`](/zh-CN/docs/Web/CSS/background-size#contain)
+- 使用关键词 [`cover`](/zh-CN/docs/Web/CSS/background-size#cover)
 - 设定宽度和高度值
 
 当通过宽度和高度值来设定尺寸时，你可以提供一或者两个数值：
@@ -108,7 +108,7 @@ background-size: unset;
 - 如果仅有一个数值被给定，这个数值将作为宽度值大小，高度值将被设定为`auto。`
 - 如果有两个数值被给定，第一个将作为宽度值大小，第二个作为高度值大小。
 
-`每个值可以是<length>`, 是 [`<percentage>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#<percentage>), 或者 [`auto`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#auto).
+`每个值可以是<length>`, 是 [`<percentage>`](/zh-CN/docs/Web/CSS/background-size#percentage), 或者 [`auto`](/zh-CN/docs/Web/CSS/background-size#auto).
 
 示例：
 
@@ -170,7 +170,7 @@ background-size: 50% 25%, contain, 3em;
 
 ## 案例
 
-[`background-size: cover 演示`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) 与 [`background-size: contain 演示`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) 在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与`background-*属性`的关联 ](http://whereswalden.com/files/mozilla/background-size/more-examples.html)很好的说明了单独使用 `background-size` 及与其它属性共同使用。
+[`background-size: cover 演示`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) 与 [`background-size: contain 演示`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) 在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与`background-*属性`的关联](http://whereswalden.com/files/mozilla/background-size/more-examples.html) 很好的说明了单独使用 `background-size` 及与其它属性共同使用。
 
 ## 备注
 

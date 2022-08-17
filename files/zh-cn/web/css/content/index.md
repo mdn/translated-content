@@ -42,10 +42,10 @@ content: inherit
   - : `:before` 和 `:after` 伪类元素中会被视为 `none`
 - \<string>
   - : 文本内容
-- \<uri>` url()`
+- \<uri> `url()`
   - : URI 值会指定一个外部资源（比如图片）。如果该资源或图片不能显示，它就会被忽略或显示一些占位（比如无图片标志）。
 - \<counter>
-  - : 计数器可以指定两种不同的函数：`counter()` 或 `counters()`。前面一个有两种形式：`counter(name) `或` counter(name,style)` 。产生的内容是该伪类元素指定名称的最小范围的计数；格式由 style 指定（默认是'decimal'——十进制数字）。后一个函数同样也有两种形式：`counters(name,string)` 或 `counters(name,string,style)` 。The generated text is the value of all counters with the given name in scope at this pseudo-element, from outermost to innermost separated by the specified string. The counters are rendered in the indicated style ('decimal' by default). See the section on automatic counters and numbering for more information. The name must not be 'none', 'inherit' or 'initial'. Such a name causes the declaration to be ignored.
+  - : 计数器可以指定两种不同的函数：`counter()` 或 `counters()`。前面一个有两种形式：`counter(name)`或`counter(name,style)` 。产生的内容是该伪类元素指定名称的最小范围的计数；格式由 style 指定（默认是'decimal'——十进制数字）。后一个函数同样也有两种形式：`counters(name,string)` 或 `counters(name,string,style)` 。The generated text is the value of all counters with the given name in scope at this pseudo-element, from outermost to innermost separated by the specified string. The counters are rendered in the indicated style ('decimal' by default). See the section on automatic counters and numbering for more information. The name must not be 'none', 'inherit' or 'initial'. Such a name causes the declaration to be ignored.
 - `attr(X)`
   - : 将元素的 X 属性以字符串形式返回。如果该元素没有 X 属性，则返回一个空字符串。区分大小写的属性返回值依赖文挡的语言设定。
 - `open-quote` | `close-quote`
@@ -228,8 +228,6 @@ li {
 ## 浏览器兼容性
 
 {{Compat("css.properties.content")}}
-
-##
 
 ## 参考
 

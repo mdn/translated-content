@@ -37,7 +37,7 @@ slug: >-
 
 为了计算出有多少可用空间能布局于 flex 子元素，浏览器必须知道这个 item 有多大才能开始。它是如何解决没有应用于绝对单位的宽度和高度的 flex 子元素？
 
-在 [`min-content`](/en-US/docs/Web/CSS/width#min-content) 和[`max-content`](/en-US/docs/Web/CSS/width#max-content) 的 CSS 中有一个概念— 这些关键字定义在[ CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), 并且可以用一个 [length ](/zh-CN/docs/Web/CSS/length)单位代替。
+在 [`min-content`](/en-US/docs/Web/CSS/width#min-content) 和 [`max-content`](/en-US/docs/Web/CSS/width#max-content) 的 CSS 中有一个概念— 这些关键字定义在 [CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), 并且可以用一个 [length](/zh-CN/docs/Web/CSS/length)单位代替。
 
 例如下面的例子，我有两段包含一个文本字符串的段落。第一段设置了`min-content`的宽度。在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行，变得尽可能小且没有溢出。此之后就是那个字符串的 min-content 大小。本质上讲，字符串中最长的单词决定了大小。
 
@@ -173,17 +173,17 @@ slug: >-
 
 ### 什么设置 flex item 的基本大小？
 
-1.  `flex-basis`设置为`auto`吗，这个 flex 子元素设置了宽度吗？如果设置了，flex 子元素的大小将会基于设置的宽度。
-2.  `flex-basis` 设为 `auto` 还是`content` (在支持的浏览器中)? 如果是`auto`, flex 子元素的大小为原始大小。
-3.  `flex-basis`是不为`0`的长度单位吗？如果是这样那这就是 flex 子元素的大小。
-4.  `flex-basis` 设为 `0`呢？如果是这样，则 flex 子元素的大小不在空间分配计算的考虑之内。
+1. `flex-basis` 设置为`auto`吗，这个 flex 子元素设置了宽度吗？如果设置了，flex 子元素的大小将会基于设置的宽度。
+2. `flex-basis` 设为 `auto` 还是`content` (在支持的浏览器中)? 如果是`auto`, flex 子元素的大小为原始大小。
+3. `flex-basis` 是不为`0`的长度单位吗？如果是这样那这就是 flex 子元素的大小。
+4. `flex-basis` 设为 `0`呢？如果是这样，则 flex 子元素的大小不在空间分配计算的考虑之内。
 
 ### 我们有可用空间吗？
 
 flex 子元素没有 positive free space 就不会增长，没有 negative free space 就不会缩小。
 
-1.  如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否小于 flex 容器的总宽度（或高度）？如果是这样，那么你有 positive free space，并且`flex-grow`会发挥作用。
-2.  如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否大于 flex 容器的总宽度（或高度）？如果是这样，那么你有 negative free space，并且`flex-shrink`会发挥作用。
+1. 如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否小于 flex 容器的总宽度（或高度）？如果是这样，那么你有 positive free space，并且 `flex-grow` 会发挥作用。
+2. 如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否大于 flex 容器的总宽度（或高度）？如果是这样，那么你有 negative free space，并且 `flex-shrink` 会发挥作用。
 
 ### 分配空间的其他方式
 
