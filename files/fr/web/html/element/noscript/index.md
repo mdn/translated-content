@@ -30,7 +30,7 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ### Résultat avec JavaScript activé
 
-Elle est où ?
+Elle est où, la poulette&nbsp;?
 
 ### Résultat avec JavaScript désactivé
 
