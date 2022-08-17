@@ -1,14 +1,6 @@
 ---
 title: 实践对象构造
 slug: Learn/JavaScript/Objects/Object_building_practice
-tags:
-  - JavaScript
-  - 初学者
-  - 学习
-  - 对象
-  - 指南
-  - 画布
-translation_of: Learn/JavaScript/Objects/Object_building_practice
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 

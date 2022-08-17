@@ -1,7 +1,6 @@
 ---
 title: 多媒体的可访问性 (Accessible multimedia)
 slug: Learn/Accessibility/Multimedia
-translation_of: Learn/Accessibility/Multimedia
 original_slug: learn/Accessibility/多媒体
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}

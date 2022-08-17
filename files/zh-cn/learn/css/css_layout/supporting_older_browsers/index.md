@@ -1,7 +1,6 @@
 ---
 title: 支持旧浏览器
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
 {{LearnSidebar}}
 

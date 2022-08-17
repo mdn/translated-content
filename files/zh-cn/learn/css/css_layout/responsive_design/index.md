@@ -1,7 +1,6 @@
 ---
 title: 响应式设计
 slug: Learn/CSS/CSS_layout/Responsive_Design
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
 ---
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 

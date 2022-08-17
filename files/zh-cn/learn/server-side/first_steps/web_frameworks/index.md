@@ -1,16 +1,6 @@
 ---
 title: 服务端 web 框架
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - web 框架
-  - 介绍
-  - 初学者
-  - 学习
-  - 指导
-  - 服务器
-  - 服务器端编程
-  - 编码
-translation_of: Learn/Server-side/First_steps/Web_frameworks
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 

@@ -1,7 +1,6 @@
 ---
 title: CSS 构建
 slug: Learn/CSS/Building_blocks
-translation_of: Learn/CSS/Building_blocks
 ---
 {{LearnSidebar}}
 

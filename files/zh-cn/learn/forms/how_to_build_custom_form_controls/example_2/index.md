@@ -1,10 +1,6 @@
 ---
 title: Example 2
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
-tags:
-  - HTML
-  - 表单
-translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_2
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_2
 ---
 这是解释 [如何构建自定义表单小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)的第二个示例。

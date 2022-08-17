@@ -1,18 +1,6 @@
 ---
 title: Web API 简介
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
-tags:
-  - API
-  - CodingScripting
-  - WebAPI
-  - 初学者
-  - 学习
-  - 客户机端
-  - 对象
-  - 文章
-  - 浏览器
-  - 第三方
-translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_Web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_Web_API")}}
 
