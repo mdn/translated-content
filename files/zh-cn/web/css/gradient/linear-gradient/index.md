@@ -2,7 +2,6 @@
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 original_slug: Web/CSS/gradient/linear-gradient()
-browser-compat: css.types.image.gradient.linear-gradient
 ---
 {{CSSRef}}
 
