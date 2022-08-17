@@ -69,9 +69,9 @@ document.documentElement.innerHTML = "<pre>" +
 
 当给 `innerHTML` 设置一个值的时候到底发生了什么？用户代理按照以下步骤：
 
-1.  给定的值被解析为 HTML 或者 XML（取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。
-2.  如果元素内容被替换成 {{HTMLElement("template")}} 元素，`<template>` 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤 1 中创建的新的 `DocumentFragment`。
-3.  对于其他所有元素，元素的内容都被替换为新的 `DocumentFragment`节点。
+1. 给定的值被解析为 HTML 或者 XML（取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。
+2. 如果元素内容被替换成 {{HTMLElement("template")}} 元素，`<template>` 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤 1 中创建的新的 `DocumentFragment`。
+3. 对于其他所有元素，元素的内容都被替换为新的 `DocumentFragment` 节点。
 
 ### 安全问题
 
@@ -99,7 +99,7 @@ el.innerHTML = name; // shows the alert
 
 基于这个原因，当插入纯文本时，建议不要使用 `innerHTML` 。取而代之的是使用 {{domxref("Node.textContent")}} ，它不会把给定的内容解析为 HTML，它仅仅是将原始文本插入给定的位置。
 
-> **警告：** 如果你的项目将要经过各种形式的安全检查的话，使用 `innerHTML` 可能导致代码被拒绝。例如，如果你在[浏览器扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)中[使用](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation)[ `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) 并将扩展提交到 [addons.mozilla.org](https://addons.mozilla.org/) 的话，它将会在自动审核过程中被拒绝。
+> **警告：** 如果你的项目将要经过各种形式的安全检查的话，使用 `innerHTML` 可能导致代码被拒绝。例如，如果你在[浏览器扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)中[使用 `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) 并将扩展提交到 [addons.mozilla.org](https://addons.mozilla.org/) 的话，它将会在自动审核过程中被拒绝。
 
 ## 示例
 

@@ -18,9 +18,9 @@ slug: Web/API/KeyboardEvent/key
 
 `KeyboardEvent` 事件以一个预设的次序触发，理解这一点对于理解特定 `KeyboardEvent` 的 `key` 属性值大有帮助。对于一个给定的按键操作，`KeyboardEvent` 将假定 {{domxref("Event.preventDefault")}} 未调用并按下面次序触发：
 
-1.  首先触发 {{event("keydown")}} 事件。如果按键长按且生成一个字符，则事件将以一个与平台实现方式相关的时间间隔持续发出，同时将只读属性 {{domxref("KeyboardEvent.repeat")}} 设定为 `true`。
-2.  如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其它某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{event("beforeinput")}}、{{event("input")}}事件。注意某些实现中若支持 {{event("keypress")}} 事件则可能将其触发。当按键长按时重复触发。
-3.  当按键松开时触发 {{event("keyup")}} 事件。操作结束。
+1. 首先触发 {{event("keydown")}} 事件。如果按键长按且生成一个字符，则事件将以一个与平台实现方式相关的时间间隔持续发出，同时将只读属性 {{domxref("KeyboardEvent.repeat")}} 设定为 `true`。
+2. 如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其它某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{event("beforeinput")}}、{{event("input")}}事件。注意某些实现中若支持 {{event("keypress")}} 事件则可能将其触发。当按键长按时重复触发。
+3. 当按键松开时触发 {{event("keyup")}} 事件。操作结束。
 
 在次序 1、3 中，`KeyboardEvent.key` 属性按照事先定义的规则设定为恰当的值。
 
@@ -30,8 +30,8 @@ slug: Web/API/KeyboardEvent/key
 
 请检测以下两个测试用例：
 
-1.  按下并长按 `shift` 键，然后按下 `key 2` 并松开。下一步，松开 `shift` 键。
-2.  按下并长按 `shift` 键，然后按下并长按 `key 2`。然后松开 shift 键，最后松开 `key 2`。
+1. 按下并长按 `shift` 键，然后按下 `key 2` 并松开。下一步，松开 `shift` 键。
+2. 按下并长按 `shift` 键，然后按下并长按 `key 2`。然后松开 shift 键，最后松开 `key 2`。
 
 ### HTML
 

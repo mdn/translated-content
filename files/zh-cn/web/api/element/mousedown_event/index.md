@@ -4,7 +4,7 @@ slug: Web/API/Element/mousedown_event
 ---
 {{APIRef}}
 
-`mousedown `事件在指针设备按钮按下时触发。
+`mousedown` 事件在指针设备按钮按下时触发。
 
 ## 常规信息
 

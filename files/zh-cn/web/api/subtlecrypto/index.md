@@ -38,7 +38,7 @@ slug: Web/API/SubtleCrypto
 
 #### 导入和导出密钥
 
-要在应用程序外部使密钥可用，您需要导出密钥，`exportKey() `可以为你提供该功能。你可以选择多种导出格式。
+要在应用程序外部使密钥可用，您需要导出密钥，`exportKey()` 可以为你提供该功能。你可以选择多种导出格式。
 
 [`importKey()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey)与 `exportKey()` 刚好相反。你可以从其他系统导入密钥，并且支持像 [PKCS #8](https://tools.ietf.org/html/rfc5208) 和 [JSON Web Key](https://tools.ietf.org/html/rfc7517) 这样可以帮助你执行此操作的标准格式。`exportKey()` 函数以非标准格式导出密钥。
 

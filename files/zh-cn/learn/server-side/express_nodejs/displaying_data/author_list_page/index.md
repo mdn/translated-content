@@ -63,7 +63,7 @@ block content
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-## 种类列表页面—自我挑战！[Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
+## 种类列表页面—自我挑战！
 
 在这个部分，你应该实作你自己的种类列表页面。该页面应显示数据库中所有种类的列表，每个种类都链接到其关联的详细信息页面。预期结果的屏幕截图如下所示。
 

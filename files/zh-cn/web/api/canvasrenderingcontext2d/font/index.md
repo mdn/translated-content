@@ -80,8 +80,6 @@ window.addEventListener("load", drawCanvas);
 
 {{EmbedLiveSample('Playable_code', 700, 360)}}
 
-##
-
 ### 使用 CSS 字体加载 API 加载字体
 
 借助{{domxref("FontFace")}} API 的帮助，您可以在画布中使用字体之前显式加载字体。

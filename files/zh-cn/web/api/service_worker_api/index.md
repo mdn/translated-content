@@ -26,9 +26,9 @@ Service worker 运行在 worker 上下文，因此它不能访问 DOM。相对�
 
 此时，你的服务工作者 (service worker) 将遵守以下生命周期：
 
-1.  下载
-2.  安装
-3.  激活
+1. 下载
+2. 安装
+3. 激活
 
 用户首次访问 service worker 控制的网站或页面时，service worker 会立刻被下载。
 

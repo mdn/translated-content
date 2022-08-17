@@ -4,7 +4,7 @@ slug: Web/API/File_and_Directory_Entries_API/Firefox_support
 ---
 {{DefaultAPISidebar("File System API")}} {{Non-standard_header}}
 
-创建原始文件系统 API 是为了让浏览器实现对访问用户存储设备上沙箱虚拟文件系统的支持。标准化规范的工作早在 2012 年就被放弃了，但到那时，谷歌 Chrome 包含了自己的 API 实现。随着时间的推移，许多流行的站点和 Web 应用程序开始使用它，通常不提供任何退回到标准 API 的方法，甚至在使用之前也没有检查 API 是否可用。相反，Mozilla 选择实现其他 api，这些 api 可以用来解决许多相同的问题，比如[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API);查看博客文章，[为什么 Firefox 中没有文件系统 API ](https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/)?更多的见解。
+创建原始文件系统 API 是为了让浏览器实现对访问用户存储设备上沙箱虚拟文件系统的支持。标准化规范的工作早在 2012 年就被放弃了，但到那时，谷歌 Chrome 包含了自己的 API 实现。随着时间的推移，许多流行的站点和 Web 应用程序开始使用它，通常不提供任何退回到标准 API 的方法，甚至在使用之前也没有检查 API 是否可用。相反，Mozilla 选择实现其他 api，这些 api 可以用来解决许多相同的问题，比如[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API);查看博客文章，[为什么 Firefox 中没有文件系统 API](https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/)?更多的见解。
 
 这导致许多流行的网站无法在 Chrome 以外的浏览器上正常运行。因此，我们尝试创建一个规范，提供可以达成共识的谷歌 API 的特性。结果是[文件和目录 API 条目](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)。Chrome 提供的这个 API 子集还没有完全指定;但是，出于 web 兼容性的原因，决定在 Firefox 中实现 API 的一个子集;这是在 Firefox 50 中引入的。
 

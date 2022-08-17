@@ -30,7 +30,7 @@ compareMask = node.compareDocumentPosition( otherNode )
 
 ### 返回值
 
-一个表示 `Node` 和 `otherNode `在 {{domxref("Document")}} 中关系的整数值。在一些场景下，可能设置了不止一位比特值。比如 `otherNode` 在文档中是靠前的且包含了 `Node`, 那么`DOCUMENT_POSITION_CONTAINS` 和 `DOCUMENT_POSITION_PRECEDING` 位都会设置，所以结果会是 0x0A 即十进制下的 10。
+一个表示 `Node` 和 `otherNode` 在 {{domxref("Document")}} 中关系的整数值。在一些场景下，可能设置了不止一位比特值。比如 `otherNode` 在文档中是靠前的且包含了 `Node`, 那么`DOCUMENT_POSITION_CONTAINS` 和 `DOCUMENT_POSITION_PRECEDING` 位都会设置，所以结果会是 0x0A 即十进制下的 10。
 
 ## 例子
 
