@@ -34,7 +34,9 @@ Elle est où, la poulette&nbsp;?
 
 ### Résultat avec JavaScript désactivé
 
-Elle est où, [la poulette](https://www.mozilla.org/) ?
+[Lien externe](https://www.mozilla.org/)
+
+Elle est où, la poulette&nbsp;?
 
 ## Résumé technique
 
