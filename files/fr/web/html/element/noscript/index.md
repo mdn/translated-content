@@ -21,7 +21,11 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 ### HTML
 
 ```html
-<p>Elle est où<noscript>, <a href="http://www.mozilla.com/">la poulette</a></noscript> ?</p>
+<noscript>
+  <!-- élément d'ancre qui mène à un fichier externe  -->
+  <a href="https://www.mozilla.org/">Lien externe</a>
+</noscript>
+<p>Elle est où, la poulette ?</p>
 ```
 
 ### Résultat avec JavaScript activé
