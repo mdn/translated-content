@@ -46023,13 +46023,6 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
-    "modified": "2020-10-15T21:51:59.093Z",
-    "contributors": [
-      "fscholz",
-      "Grizzly-Eric"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/DataView": {
     "modified": "2020-10-15T21:38:02.121Z",
     "contributors": [
@@ -46050,13 +46043,6 @@
       "Cattla",
       "teoli",
       "AlexChao"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
-    "modified": "2020-10-15T22:00:19.218Z",
-    "contributors": [
-      "fscholz",
-      "haipeng.liang"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error": {
@@ -46082,13 +46068,6 @@
       "teoli",
       "ziyunfei",
       "Oatn"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
-    "modified": "2019-03-23T23:36:01.366Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction": {
