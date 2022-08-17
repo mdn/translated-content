@@ -4,12 +4,10 @@ slug: Web/API/Element/mousedown_event
 ---
 {{APIRef}}
 
-`mousedown `事件在指针设备按钮按下时触发。
+`mousedown` 事件在指针设备按钮按下时触发。
 
 ## 常规信息
 
-- 规范
-  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
 - 接口
   - : {{domxref("MouseEvent")}}
 - 是否冒泡

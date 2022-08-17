@@ -4,9 +4,9 @@ slug: Web/API/MediaRecorder/dataavailable_event
 ---
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.ondataavailable `**事件处理程序 (part of the [MediaStream 记录 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)) 处理{{event("dataavailable")}}事件，让您在响应运行代码{{domxref("Blob")}}数据被提供使用。
+**`MediaRecorder.ondataavailable`** 事件处理程序 (part of the [MediaStream 记录 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)) 处理{{event("dataavailable")}}事件，让您在响应运行代码{{domxref("Blob")}}数据被提供使用。
 
-`dataavailable`当 MediaRecorder 将媒体数据传递到您的应用程序以供使用时，将触发该事件。数据在包含数据的{{domxref("Blob")}}对象中提供。这在四种情况下发生：
+`dataavailable` 当 MediaRecorder 将媒体数据传递到您的应用程序以供使用时，将触发该事件。数据在包含数据的{{domxref("Blob")}}对象中提供。这在四种情况下发生：
 
 - 媒体流结束时，所有尚未传递到`ondataavailable`处理程序的媒体数据都将在单个{{domxref("Blob")}}中传递。
 - 当调用{{domxref("MediaRecorder.stop()")}}时，自记录开始或`dataavailable`事件最后一次发生以来已捕获的所有媒体数据都将传递到{{domxref("Blob")}}}中；此后，捕获结束。

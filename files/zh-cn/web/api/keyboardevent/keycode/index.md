@@ -49,13 +49,13 @@ IE 只将本机虚拟密钥代码值公开为 keyboardvent.keycode。
 Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果输入字符可以用 US 键盘布局输入，则使用 US 键盘布局上的 keycode 值。
 从 gecko 15 geckore lease（“15.0”）开始，gecko 从一个可由键输入的 ASCII 字符（即使具有移位修饰符或支持 ASCII 的键盘布局）决定键码值。有关详细信息，请参见以下规则：
 
-1.  如果系统是 Windows，并且按下键的本机键代码指示键是 A-Z 或 0-9，请使用 keycode。
-2.  如果系统是 Mac，并且按下键的本机键码指示键为 0-9，则使用 keycode。
-3.  如果按下键输入一个 ASCII 字母或数字，没有修改键，请使用 keycode。
-4.  如果按下键输入带 SHIFT 键的 ASCII 字母或数字，请使用 keycode。
-5.  如果按下键输入另一个没有修改键的 ASCII 字符，请使用 keycode。
-6.  如果按下键输入另一个带 SHIFT 键的 ASCII 字符，请使用 keycode。
-7.  否则，即按下键输入一个 Unicode 字符：
+1. 如果系统是 Windows，并且按下键的本机键代码指示键是 A-Z 或 0-9，请使用 keycode。
+2. 如果系统是 Mac，并且按下键的本机键码指示键为 0-9，则使用 keycode。
+3. 如果按下键输入一个 ASCII 字母或数字，没有修改键，请使用 keycode。
+4. 如果按下键输入带 SHIFT 键的 ASCII 字母或数字，请使用 keycode。
+5. 如果按下键输入另一个没有修改键的 ASCII 字符，请使用 keycode。
+6. 如果按下键输入另一个带 SHIFT 键的 ASCII 字符，请使用 keycode。
+7. 否则，即按下键输入一个 Unicode 字符：
 
 - 如果键盘布局是支持 ASCII 的键盘布局（即，可以输入 ASCII 字母），则使用 0 或者根据下面的附加规则计算。
 - 否则，即键盘布局不支持 ASCII，使用环境中安装的具有最高优先级的支持 ASCII 的键盘布局：
@@ -67,19 +67,19 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 
 > **警告：** 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190` （`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持时间上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
 
-1.  如果运行 macOS 或者 Linux:
+1. 如果运行 macOS 或者 Linux:
 
-    1.  如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
+    1. 如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
 
-        1.  如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode。`
-        2.  如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
-        3.  否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
+        1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode。`
+        2. 如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
+        3. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 
-    2.  否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
+    2. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 
-2.  如果运行 Windows：
+2. 如果运行 Windows：
 
-    1.  当美国键盘布局激活时，使用映射到 Windows 的相同虚拟键代码的按键产生的 ASCII 字符的`keyCode`值。
+    1. 当美国键盘布局激活时，使用映射到 Windows 的相同虚拟键代码的按键产生的 ASCII 字符的`keyCode`值。
 
 由标准位置的可打印键引起的每个浏览器的 keydown 事件的 keycode 值
 

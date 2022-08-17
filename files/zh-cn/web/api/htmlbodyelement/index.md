@@ -2,13 +2,15 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 ---
-{{APIRef("HTML DOM")}}**`HTMLBodyElement `**接口提供了特殊的属性（除了它们继承的常规的{{ domxref("HTMLElement") }}接口）以外，还可以处理 body 元素。
+{{APIRef("HTML DOM")}}
+
+**`HTMLBodyElement`** 接口提供了特殊的属性（除了它们继承的常规的{{ domxref("HTMLElement") }}接口）以外，还可以处理 body 元素。
 
 {{InheritanceDiagram(600, 120)}}
 
 ## 属性
 
-_从其父项{{domxref("HTMLElement")}} 中继承属性。_
+_从其父项 {{domxref("HTMLElement")}} 中继承属性。_
 
 - {{domxref("HTMLBodyElement.aLink")}} {{Deprecated_Inline}}
   - : Is a {{ domxref("DOMString") }} that represents the color of active hyperlinks.

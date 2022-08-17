@@ -6,7 +6,7 @@ slug: Web/API/Element/mouseenter_event
 
 当定点设备（通常指鼠标）移动到元素上时就会触发 `mouseenter 事件`
 
-类似 {{event('mouseover')}}，它们两者之间的差别是 `mouseenter `不会[冒泡](/zh-CN/docs/Web/API/Event/bubbles)（bubble），也就是说当指针从它的子层物理空间移到它的物理空间上时不会触发
+类似 {{event('mouseover')}}，它们两者之间的差别是 `mouseenter` 不会[冒泡](/zh-CN/docs/Web/API/Event/bubbles)（bubble），也就是说当指针从它的子层物理空间移到它的物理空间上时不会触发
 
 ![mouseenter.png](/@api/deki/files/5908/=mouseenter.png)(mouseenter 事件) 触发时，会向层次结构的每个元素发送一个 mouseenter 事件。当指针到达文本时，此处将 4 个事件发送到层次结构的四个元素。![mouseover.png](/@api/deki/files/5909/=mouseover.png)一个单独的 mouseover 事件被发送到 DOM 树的最深层元素，然后它将层次结构向上冒泡，直到它被处理程序取消或到达根目录。
 
@@ -57,7 +57,7 @@ slug: Web/API/Element/mouseenter_event
 
 ## Examples
 
-鼠标悬停 ( [`mouseover` ](/zh-CN/docs/Web/Events/mouseover#Example)) 文档中有一个示例说明了 mouseover 和 mouseenter 之间的区别。
+鼠标悬停 ( [`mouseover`](/zh-CN/docs/Web/Events/mouseover#Example)) 文档中有一个示例说明了 mouseover 和 mouseenter 之间的区别。
 
 以下示例说明如何使用 mouseover 模拟 mouseenter 事件的事件委派原则。
 

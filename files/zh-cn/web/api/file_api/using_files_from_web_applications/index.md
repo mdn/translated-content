@@ -345,16 +345,16 @@ function handleFiles(files) {
 
 如果传入 `handleFiles()` 的 {{ domxref("FileList") }} 对象值为 `null` 时，我们只要简单将这块的内部 HTML 为显示“No files selected!”。否则，我们就需要像下面这样编写我们的文件列表：
 
-1.  创建一个无序列表 ({{ HTMLElement("ul") }}) 元素。
-2.  通过调用列表的{{ domxref("Node.appendChild()") }}方法来将新的列表元素插入到 {{ HTMLElement("div") }}块。
-3.  遍历文件集合 {{ domxref("FileList") }}（即`files`）中的每个 {{ domxref("File") }}：
+1. 创建一个无序列表 ({{ HTMLElement("ul") }}) 元素。
+2. 通过调用列表的{{ domxref("Node.appendChild()") }}方法来将新的列表元素插入到 {{ HTMLElement("div") }}块。
+3. 遍历文件集合 {{ domxref("FileList") }}（即`files`）中的每个 {{ domxref("File") }}：
 
-    1.  创建一个新的列表项（{{ HTMLElement("li") }}）元素并插入到列表中。
-    2.  创建一个新的图片（{{ HTMLElement("img") }}）元素。
-    3.  设置图片的源为一个新的指代文件的对象 URL，使用{{ domxref("window.URL.createObjectURL()") }}来创建 blob URL。
-    4.  设置图片的高度为 60 像素。
-    5.  设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用{{ domxref("window.URL.revokeObjectURL()") }}方法并且传递 `img.src`中的对象 URL 字符串来实现。
-    6.  将新的列表项添加到列表中。
+    1. 创建一个新的列表项（{{ HTMLElement("li") }}）元素并插入到列表中。
+    2. 创建一个新的图片（{{ HTMLElement("img") }}）元素。
+    3. 设置图片的源为一个新的指代文件的对象 URL，使用{{ domxref("window.URL.createObjectURL()") }}来创建 blob URL。
+    4. 设置图片的高度为 60 像素。
+    5. 设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用{{ domxref("window.URL.revokeObjectURL()") }}方法并且传递 `img.src`中的对象 URL 字符串来实现。
+    6. 将新的列表项添加到列表中。
 
 这是上面代码的一个在线示例：
 
@@ -417,12 +417,12 @@ function FileUpload(img, file) {
 
 实际传输数据前，采取了几道准备步骤：
 
-1.  `XMLHttpRequest`的`progress`监听器被设为将加载指示器更新为新的百分比信息，这样随着上传进行，指示器会显示最新的信息。
-2.  `XMLHttpRequest`的`load`事件监听器被设为将加载指示器的进度信息更新为 100%，以保证进度显示确实达到了 100%（以防在上传过程中出现粒度误差）。然后它移除了已经不再需要的加载指示器。这样上传一完成指示器就会消失。
-3.  上传图像文件的请求，是由调用`XMLHttpRequest`的`open()`函数发送 POST 请求完成的。
-4.  上传的 MIME 类型是通过调用`XMLHttpRequest`的`overrideMimeType()`函数来设置的。这个例子中，我们使用通用 MIME 类型。是否需要设置 MIME 类型取决于你的具体使用情况。
-5.  `FileReader`对象用于将文件转换为二进制字符串。
-6.  最后，当内容被加载时，会调用`XMLHttpRequest`的`send()`函数来上传文件内容。
+1. `XMLHttpRequest`的`progress`监听器被设为将加载指示器更新为新的百分比信息，这样随着上传进行，指示器会显示最新的信息。
+2. `XMLHttpRequest`的`load`事件监听器被设为将加载指示器的进度信息更新为 100%，以保证进度显示确实达到了 100%（以防在上传过程中出现粒度误差）。然后它移除了已经不再需要的加载指示器。这样上传一完成指示器就会消失。
+3. 上传图像文件的请求，是由调用`XMLHttpRequest`的`open()`函数发送 POST 请求完成的。
+4. 上传的 MIME 类型是通过调用`XMLHttpRequest`的`overrideMimeType()`函数来设置的。这个例子中，我们使用通用 MIME 类型。是否需要设置 MIME 类型取决于你的具体使用情况。
+5. `FileReader`对象用于将文件转换为二进制字符串。
+6. 最后，当内容被加载时，会调用`XMLHttpRequest`的`send()`函数来上传文件内容。
 
 > **备注：** 上面例子中使用的非标准的`sendAsBinary`方法在 Gecko 31 {{ geckoRelease(31) }} 中已废弃。请使用标准的`send(Blob data)`方法代替。
 

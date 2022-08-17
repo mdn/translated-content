@@ -148,8 +148,6 @@ function addStylesheetRules (decls) {
 
 {{Specifications}}
 
-##
-
 ## 浏览器兼容性
 
 {{Compat("api.CSSStyleSheet.insertRule")}}

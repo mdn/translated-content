@@ -67,7 +67,7 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。 �
 此规范使用以下自定义接口触发事件：
 
 - {{domxref("IDBVersionChangeEvent")}}
-  - : 作为 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件的处理程序的结果，`IDBVersionChangeEvent `接口表示数据库的版本已经发生了改变。
+  - : 作为 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件的处理程序的结果，`IDBVersionChangeEvent` 接口表示数据库的版本已经发生了改变。
 
 ### 过时的接口
 

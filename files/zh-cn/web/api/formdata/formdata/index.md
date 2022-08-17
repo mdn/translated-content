@@ -16,7 +16,7 @@ var formData = new FormData(form)
 
 ### 参数
 
-- `form `{{optional_inline}}
+- `form` {{optional_inline}}
   - : 一个 HTML 上的{{HTMLElement("form")}}表单元素——当指定了，这种方式创建的{{domxref("FormData")}}对象会自动将 form 中的表单值也包含进去，包括文件内容也会被编码之后包含进去。
 
 ## 例子

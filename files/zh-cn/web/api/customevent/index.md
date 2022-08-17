@@ -4,7 +4,7 @@ slug: Web/API/CustomEvent
 ---
 {{APIRef("DOM")}}
 
-`CustomEvent `事件是由程序创建的，可以有任意自定义功能的事件。
+`CustomEvent` 事件是由程序创建的，可以有任意自定义功能的事件。
 
 {{AvailableInWorkers}}
 
