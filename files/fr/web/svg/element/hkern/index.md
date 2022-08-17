@@ -34,7 +34,7 @@ La distance horizontale entre deux glyphes peut être ajustée minutieusement av
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHKernElement "en/DOM/SVGHKernElement").
+Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHKernElement).
 
 ## Voir également
 
