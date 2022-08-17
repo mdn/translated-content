@@ -153,7 +153,7 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
   - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
 - {{ domxref("Element.insertAdjacentText") }} {{experimental_inline}}
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
-- {{ domxref("Element.matches()") }}` `{{experimental_inline}}
+- {{ domxref("Element.matches()") }} {{experimental_inline}}
   - : Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.
 - {{ domxref("Element.querySelector()") }}
   - : Returns the first {{ domxref("Node") }} which matches the specified selector string relative to the element.

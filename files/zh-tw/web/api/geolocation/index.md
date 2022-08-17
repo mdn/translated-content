@@ -32,7 +32,7 @@ _`Geolocation` 介面沒有繼承也沒有時做任何方法_。
 - {{domxref("Geolocation.watchPosition()")}}
   - : 返回一個長整數，註冊一個回呼函數。這個方法是用來註冊一個處理的函式，當使用者的裝置位置更新時，這個函式所傳入的回呼函式(callback function) 就會自動被呼叫。
 - {{domxref("Geolocation.clearWatch()")}}
-  - : 移除指定註冊的` watchPosition()`。
+  - : 移除指定註冊的 `watchPosition()`。
 
 ## 規格
 

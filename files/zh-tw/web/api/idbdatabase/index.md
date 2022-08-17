@@ -42,7 +42,7 @@ Inherits from: [EventTarget](/zh-TW/docs/DOM/EventTarget)
 - {{domxref("IDBDatabase.onerror")}}
   - : Fires when access to the database fails.
 - {{domxref("IDBDatabase.onversionchange")}}
-  - : Fires when a database structure change ({{domxref("IDBOpenDBRequest.onupgradeneeded")}} event or` `{{domxref("IDBFactory.deleteDatabase")}} was requested elsewhere (most probably in another window/tab on the same computer). This is different from the version change transaction (see {{domxref("IDBVersionChangeEvent")}}), but it is related.
+  - : Fires when a database structure change ({{domxref("IDBOpenDBRequest.onupgradeneeded")}} event or {{domxref("IDBFactory.deleteDatabase")}} was requested elsewhere (most probably in another window/tab on the same computer). This is different from the version change transaction (see {{domxref("IDBVersionChangeEvent")}}), but it is related.
 
 ## 範例
 
