@@ -1,10 +1,6 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - header
-translation_of: Web/HTTP/Headers/ETag
 ---
 {{HTTPSidebar}}
 

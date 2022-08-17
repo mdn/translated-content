@@ -1,13 +1,6 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
-translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
 {{HTTPSidebar}}
 

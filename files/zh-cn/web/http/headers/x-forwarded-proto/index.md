@@ -1,11 +1,6 @@
 ---
 title: X-Forwarded-Proto
 slug: Web/HTTP/Headers/X-Forwarded-Proto
-tags:
-  - HTTP 首部
-  - 请求首部
-  - 非标准化
-translation_of: Web/HTTP/Headers/X-Forwarded-Proto
 ---
 {{HTTPSidebar}}
 

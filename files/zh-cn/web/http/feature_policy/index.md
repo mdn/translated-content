@@ -1,7 +1,6 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Feature_Policy
-translation_of: Web/HTTP/Feature_Policy
 original_slug: Web/HTTP/策略特征
 ---
 {{SeeCompatTable}}{{HTTPSidebar}}

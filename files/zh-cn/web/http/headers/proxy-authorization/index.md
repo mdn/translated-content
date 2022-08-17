@@ -1,11 +1,6 @@
 ---
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
-tags:
-  - 请求首部
-  - 身份验证
-  - 首部
-translation_of: Web/HTTP/Headers/Proxy-Authorization
 ---
 {{HTTPSidebar}}
 

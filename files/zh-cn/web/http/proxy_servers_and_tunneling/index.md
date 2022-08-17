@@ -1,16 +1,6 @@
 ---
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
-tags:
-  - HTTP
-  - HTTP Tunneling
-  - NeedsTranslation
-  - Proxies
-  - Proxy
-  - TopicStub
-  - 代理
-  - 隧道
-translation_of: Web/HTTP/Proxy_servers_and_tunneling
 ---
 {{HTTPSidebar}}
 

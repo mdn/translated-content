@@ -1,15 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - Content-Type
-  - HTTP
-  - POST
-  - application/x-www-form-urlencoded
-  - enctype=
-  - form
-  - multipart/form-data
-translation_of: Web/HTTP/Headers/Content-Type
 ---
 {{HTTPSidebar}}
 

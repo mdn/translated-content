@@ -1,11 +1,6 @@
 ---
 title: Proxy-Authenticate
 slug: Web/HTTP/Headers/Proxy-Authenticate
-tags:
-  - 代理
-  - 响应首部
-  - 首部
-translation_of: Web/HTTP/Headers/Proxy-Authenticate
 ---
 {{HTTPSidebar}}
 

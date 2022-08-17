@@ -1,7 +1,6 @@
 ---
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
-translation_of: Web/HTTP/Headers/Accept-CH
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 

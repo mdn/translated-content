@@ -1,10 +1,6 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - 弱比较算法
-  - 条件请求
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
 {{HTTPSidebar}}
 

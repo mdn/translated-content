@@ -1,12 +1,6 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
-tags:
-  - Error
-  - HTTP
-  - 参考
-  - 状态码
-translation_of: Web/HTTP/Status/412
 ---
 {{HTTPSidebar}}
 

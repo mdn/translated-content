@@ -1,12 +1,6 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-tags:
-  - 不追踪
-  - 定制化内容
-  - 请求首部
-  - 隐私
-translation_of: Web/HTTP/Headers/DNT
 ---
 {{HTTPSidebar}}
 

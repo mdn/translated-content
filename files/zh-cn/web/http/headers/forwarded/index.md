@@ -1,13 +1,6 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP 头部
-  - 参考
-  - 头部
-  - 请求头部
-translation_of: Web/HTTP/Headers/Forwarded
 ---
 {{HTTPSidebar}}
 

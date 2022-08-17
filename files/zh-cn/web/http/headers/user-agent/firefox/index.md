@@ -1,7 +1,6 @@
 ---
 title: Firefox 用户代理字符串 (user agent string) 参考
 slug: Web/HTTP/Headers/User-Agent/Firefox
-translation_of: Web/HTTP/Headers/User-Agent/Firefox
 ---
 {{HTTPSidebar}}
 

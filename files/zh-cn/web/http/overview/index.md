@@ -1,12 +1,6 @@
 ---
 title: HTTP 概述
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Web 机制
-  - 概览
-translation_of: Web/HTTP/Overview
 ---
 {{HTTPSidebar}}
 
