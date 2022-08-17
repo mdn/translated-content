@@ -1,7 +1,6 @@
 ---
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
-translation_of: Web/HTTP/Headers/Large-Allocation
 ---
 {{HTTPSidebar}}
 

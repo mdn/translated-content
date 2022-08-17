@@ -1,12 +1,6 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-tags:
-  - 客户端错误
-  - 状态码
-  - 身份验证
-  - 身份验证凭证
-translation_of: Web/HTTP/Status/401
 ---
 {{HTTPSidebar}}
 

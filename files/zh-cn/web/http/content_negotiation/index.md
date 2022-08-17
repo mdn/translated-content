@@ -1,9 +1,6 @@
 ---
 title: 内容协商
 slug: Web/HTTP/Content_negotiation
-tags:
-  - 内容协商
-translation_of: Web/HTTP/Content_negotiation
 ---
 {{HTTPSidebar}}
 

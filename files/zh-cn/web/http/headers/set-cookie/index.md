@@ -1,7 +1,6 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
 {{HTTPSidebar}}
 

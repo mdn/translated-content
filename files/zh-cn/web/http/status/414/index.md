@@ -1,10 +1,6 @@
 ---
 title: 414 URI Too Long
 slug: Web/HTTP/Status/414
-tags:
-  - 响应状态码
-  - 客户端错误
-translation_of: Web/HTTP/Status/414
 ---
 {{HTTPSidebar}}
 

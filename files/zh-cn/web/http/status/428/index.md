@@ -1,11 +1,6 @@
 ---
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
-tags:
-  - HTTP
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/428
 ---
 {{HTTPSidebar}}
 

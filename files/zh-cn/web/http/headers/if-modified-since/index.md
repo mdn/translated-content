@@ -1,10 +1,6 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-tags:
-  - 条件请求
-  - 请求头
-translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
 {{HTTPSidebar}}
 

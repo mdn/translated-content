@@ -1,10 +1,6 @@
 ---
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
-tags:
-  - 状态码
-  - 重置
-translation_of: Web/HTTP/Status/205
 ---
 {{HTTPSidebar}}
 

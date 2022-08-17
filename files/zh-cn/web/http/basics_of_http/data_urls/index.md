@@ -1,13 +1,6 @@
 ---
 title: Data URLs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-tags:
-  - Base64
-  - HTTP
-  - URL
-  - 教程
-  - 进阶
-translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 {{HTTPSidebar}}

@@ -1,13 +1,6 @@
 ---
 title: 'Reason: CORS request did not succeed'
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-tags:
-  - CORS
-  - HTTP
-  - 原因
-  - 安全
-  - 错误
-translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 {{HTTPSidebar}}
 

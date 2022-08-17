@@ -1,7 +1,6 @@
 ---
 title: 'Feature-Policy: autoplay'
 slug: Web/HTTP/Headers/Feature-Policy/autoplay
-translation_of: Web/HTTP/Headers/Feature-Policy/autoplay
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

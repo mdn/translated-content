@@ -1,11 +1,6 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
-tags:
-  - 响应状态码
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/503
 ---
 {{HTTPSidebar}}
 

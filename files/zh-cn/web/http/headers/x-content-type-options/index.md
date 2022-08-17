@@ -1,12 +1,6 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
-tags:
-  - MIME 嗅探
-  - 响应首部
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
 {{HTTPSidebar}}
 

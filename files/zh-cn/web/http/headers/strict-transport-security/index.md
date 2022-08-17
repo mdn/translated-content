@@ -1,13 +1,6 @@
 ---
 title: HTTP Strict Transport Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - Security
-  - header
-translation_of: Web/HTTP/Headers/Strict-Transport-Security
 original_slug: Web/HTTP/HTTP_Strict_Transport_Security
 ---
 **`HTTP Strict Transport Security`**（通常简称为{{Glossary("HSTS")}}）是一个安全功能，它告诉浏览器只能通过 HTTPS 访问当前资源，而不是[HTTP](/en/HTTP)。

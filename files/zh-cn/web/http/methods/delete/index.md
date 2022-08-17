@@ -1,12 +1,6 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-tags:
-  - HTTP
-  - HTTP 方法
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/DELETE
 ---
 {{HTTPSidebar}}
 

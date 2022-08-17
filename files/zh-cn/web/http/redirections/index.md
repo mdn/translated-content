@@ -1,10 +1,6 @@
 ---
 title: HTTP 的重定向
 slug: Web/HTTP/Redirections
-tags:
-  - 指南
-  - 重定向
-translation_of: Web/HTTP/Redirections
 ---
 {{HTTPSidebar}}
 

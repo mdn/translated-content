@@ -1,10 +1,6 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
-tags:
-  - 响应状态码
-  - 服务器端错误
-translation_of: Web/HTTP/Status/504
 ---
 {{HTTPSidebar}}
 

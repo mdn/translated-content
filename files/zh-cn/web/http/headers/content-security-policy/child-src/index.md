@@ -1,7 +1,6 @@
 ---
 title: 'CSP: child-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/child-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/child-src
 ---
 {{HTTPSidebar}}
 

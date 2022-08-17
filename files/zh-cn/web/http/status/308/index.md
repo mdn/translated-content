@@ -1,10 +1,6 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
-tags:
-  - 响应状态码
-  - 重定向
-translation_of: Web/HTTP/Status/308
 ---
 {{HTTPSidebar}}
 
