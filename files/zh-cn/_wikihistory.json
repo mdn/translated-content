@@ -45318,15 +45318,6 @@
       "khalid32"
     ]
   },
-  "conflicting/Web/API/Navigator/getBattery": {
-    "modified": "2020-10-15T21:21:32.906Z",
-    "contributors": [
-      "jingkaimori",
-      "teoli",
-      "AshfaqHossain",
-      "ziyunfei"
-    ]
-  },
   "conflicting/Web/API/Node": {
     "modified": "2019-03-24T00:17:51.751Z",
     "contributors": [
@@ -45350,25 +45341,12 @@
       "AlexChao"
     ]
   },
-  "conflicting/Web/API/Pointer_events": {
-    "modified": "2019-08-24T04:59:47.192Z",
-    "contributors": [
-      "ouxuwen",
-      "meteorlxy"
-    ]
-  },
   "conflicting/Web/API/Push_API": {
     "modified": "2019-03-23T22:26:22.995Z",
     "contributors": [
       "vankai",
       "xgqfrms-GitHub",
       "hibernake"
-    ]
-  },
-  "conflicting/Web/API/StorageManager/estimate": {
-    "modified": "2019-03-18T21:31:04.064Z",
-    "contributors": [
-      "hhxxhg"
     ]
   },
   "conflicting/Web/API/URL": {
@@ -45428,56 +45406,6 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/API/Window/afterprint_event": {
-    "modified": "2019-09-27T06:08:53.846Z",
-    "contributors": [
-      "cwc",
-      "shockw4ver"
-    ]
-  },
-  "conflicting/Web/API/Window/beforeunload_event": {
-    "modified": "2019-05-09T03:05:32.709Z",
-    "contributors": [
-      "johnlin0207",
-      "Etoile984816138",
-      "1Cr18Ni9",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "WenbingZheng"
-    ]
-  },
-  "conflicting/Web/API/Window/blur_event": {
-    "modified": "2019-03-24T00:16:18.088Z",
-    "contributors": [
-      "teoli",
-      "Hasilt",
-      "ziyunfei",
-      "Bingdian3721"
-    ]
-  },
-  "conflicting/Web/API/Window/error_event": {
-    "modified": "2020-04-01T12:26:07.930Z",
-    "contributors": [
-      "liangbus",
-      "zhangchen",
-      "coolguy",
-      "xgqfrms-GitHub",
-      "KingMario"
-    ]
-  },
-  "conflicting/Web/API/Window/hashchange_event": {
-    "modified": "2020-10-15T21:06:52.013Z",
-    "contributors": [
-      "Arnie97",
-      "xgqfrms-GitHub",
-      "Ende93",
-      "vuji",
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
   "conflicting/Web/API/Window/load_event": {
     "modified": "2019-03-23T23:15:22.431Z",
     "contributors": [
@@ -45503,28 +45431,6 @@
     "modified": "2020-10-15T22:06:41.722Z",
     "contributors": [
       "Bayes"
-    ]
-  },
-  "conflicting/Web/API/Window/offline_event": {
-    "modified": "2019-03-23T22:24:33.524Z",
-    "contributors": [
-      "caoruiy"
-    ]
-  },
-  "conflicting/Web/API/Window/resize_event": {
-    "modified": "2019-03-24T00:16:24.262Z",
-    "contributors": [
-      "btooom",
-      "ziyunfei",
-      "teoli",
-      "khalid32",
-      "TigerSoldier"
-    ]
-  },
-  "conflicting/Web/API/Window/scroll": {
-    "modified": "2020-10-15T22:21:27.337Z",
-    "contributors": [
-      "AlexChao"
     ]
   },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
