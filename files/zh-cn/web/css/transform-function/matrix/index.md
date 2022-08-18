@@ -1,7 +1,6 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
 original_slug: Web/CSS/transform-function/matrix()
 ---
 CSS 函数 `matrix()` 指定了一个由指定的 6 个值组成的 2D 变换矩阵。这种矩阵的常量值是隐含的，而不是由参数传递的；其他的参数是以列优先的顺序描述的。

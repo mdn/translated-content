@@ -1,16 +1,6 @@
 ---
 title: 学习 HTML：指南与教程
 slug: Learn/HTML
-tags:
-  - HTML
-  - HTML5
-  - 主题
-  - 入门指导
-  - 基础
-  - 学习
-  - 新手
-  - 简介
-translation_of: Learn/HTML
 ---
 {{LearnSidebar}}
 

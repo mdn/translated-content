@@ -1,7 +1,6 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-translation_of: Web/HTML/Element/s
 ---
 {{HTMLRef}}
 
@@ -40,7 +39,7 @@ translation_of: Web/HTML/Element/s
 
 这个元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
 
-> **备注：** 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement `接口。
+> **备注：** 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement` 接口。
 
 ## 示例
 

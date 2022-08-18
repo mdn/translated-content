@@ -1,7 +1,6 @@
 ---
 title: display
 slug: Web/SVG/Attribute/display
-translation_of: Web/SVG/Attribute/display
 ---
 {{SVGRef}}
 

@@ -1,16 +1,6 @@
 ---
 title: 循环吧代码
 slug: Learn/JavaScript/Building_blocks/Looping_code
-tags:
-  - JavaScript
-  - break
-  - continue
-  - for
-  - while
-  - 初学者
-  - 学习
-  - 循环
-translation_of: Learn/JavaScript/Building_blocks/Looping_code
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 

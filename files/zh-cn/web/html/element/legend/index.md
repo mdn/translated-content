@@ -1,14 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - HTML
-  - HTML 表单
-  - 元素
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/legend
 ---
 {{HTMLRef}}
 
@@ -24,7 +16,7 @@ translation_of: Web/HTML/Element/legend
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">语句内容（Phrasing content</a>）。</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">语句内容（Phrasing content</a>）。</td>
   </tr>
   <tr>
    <th scope="row">标签忽略</th>

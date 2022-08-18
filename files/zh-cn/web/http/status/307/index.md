@@ -1,13 +1,6 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-tags:
-  - HTTP
-  - 参考
-  - 响应状态码
-  - 状态码
-  - 重定向
-translation_of: Web/HTTP/Status/307
 ---
 {{HTTPSidebar}}
 

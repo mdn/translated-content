@@ -1,13 +1,6 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-tags:
-  - Atomics
-  - JavaScript
-  - Shared Memory
-  - 共享内存
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
 {{JSRef}}
 

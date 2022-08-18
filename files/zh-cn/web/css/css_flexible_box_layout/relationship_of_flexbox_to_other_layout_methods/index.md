@@ -2,12 +2,6 @@
 title: 弹性盒子与其他布局方法的联系
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-tags:
-  - CSS
-  - box alignment
-  - flexbox
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系
 ---
 {{CSSRef}}

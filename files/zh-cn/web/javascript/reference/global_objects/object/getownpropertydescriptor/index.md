@@ -1,12 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - JavaScript
-  - Object
-  - 对象
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: 撰写指南
 slug: MDN/Writing_guidelines
-translation_of: MDN/Writing_guidelines
 ---
 {{MDNSidebar}}
 

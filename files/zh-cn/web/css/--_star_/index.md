@@ -1,11 +1,6 @@
 ---
 title: 自定义属性 (--*)：CSS 变量
 slug: Web/CSS/--*
-tags:
-  - CSS
-  - CSS 变量
-  - CSS 参考
-translation_of: Web/CSS/--*
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: Firefox 9 技術文件
 slug: Mozilla/Firefox/Releases/9
-translation_of: Mozilla/Firefox/Releases/9
 ---
 {{FirefoxSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: 处理常见的 JavaScript 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 

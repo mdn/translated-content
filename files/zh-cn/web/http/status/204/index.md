@@ -1,13 +1,6 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-tags:
-  - '204'
-  - HTTP
-  - HTTP Status Code
-  - 响应状态码
-  - 成功响应
-translation_of: Web/HTTP/Status/204
 ---
 {{HTTPSidebar}}
 

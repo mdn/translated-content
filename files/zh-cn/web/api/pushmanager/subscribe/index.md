@@ -4,7 +4,7 @@ slug: Web/API/PushManager/subscribe
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-{{domxref("PushManager")}} 的 **`subscribe() `**接口订阅了一个推送服务。
+{{domxref("PushManager")}} 的 **`subscribe()`** 接口订阅了一个推送服务。
 
 返回一个 {{jsxref("Promise")}} 形式的 {{domxref("PushSubscription")}} 对象，该对象包含了推送订阅详情。如果当前 service worker 没有已存在的订阅，则会创建一个新的推送订阅。
 

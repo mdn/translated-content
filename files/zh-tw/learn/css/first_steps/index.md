@@ -1,14 +1,6 @@
 ---
 title: CSS 入門
 slug: Learn/CSS/First_steps
-tags:
-  - CSS
-  - 入門
-  - 單元
-  - 學習
-  - 新手
-  - 新手教學
-translation_of: Learn/CSS/First_steps
 ---
 {{LearnSidebar}}
 

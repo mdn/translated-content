@@ -1,10 +1,6 @@
 ---
 title: 运用你的新知识
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - CSS
-  - 新手
-translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

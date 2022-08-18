@@ -21,10 +21,10 @@ Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing")
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques "en/SVG/Attribute#GraphicalEvent")
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation "en/SVG/Attribute#Presentation")
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -32,7 +32,7 @@ Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGSwitchElement`](/fr/docs/DOM/SVGSwitchElement "en/DOM/SVGSwitchElement").
+Cet élément implémente l'interface [`SVGSwitchElement`](/fr/docs/DOM/SVGSwitchElement).
 
 ## Exemple
 

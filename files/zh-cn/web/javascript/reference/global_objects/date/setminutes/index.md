@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
 {{JSRef("Global_Objects", "Date")}}
 

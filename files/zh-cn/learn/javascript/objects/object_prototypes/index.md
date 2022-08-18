@@ -1,12 +1,6 @@
 ---
 title: 对象原型
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - JavaScript
-  - 初学者
-  - 原型
-  - 对象
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 

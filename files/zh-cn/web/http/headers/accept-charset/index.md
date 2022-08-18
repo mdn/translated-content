@@ -1,14 +1,6 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-tags:
-  - HTTP
-  - HTTP Header
-  - POST
-  - Request header
-  - 内容协商
-  - 请求头
-translation_of: Web/HTTP/Headers/Accept-Charset
 ---
 {{HTTPSidebar}}
 

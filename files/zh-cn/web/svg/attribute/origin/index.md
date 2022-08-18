@@ -1,7 +1,6 @@
 ---
 title: origin
 slug: Web/SVG/Attribute/origin
-translation_of: Web/SVG/Attribute/origin
 ---
 {{SVGRef}}
 

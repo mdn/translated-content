@@ -1,12 +1,6 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/left
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: ':blank'
 slug: Web/CSS/:-moz-only-whitespace
-translation_of: Web/CSS/:-moz-only-whitespace
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

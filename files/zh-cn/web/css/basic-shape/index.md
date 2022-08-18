@@ -1,9 +1,10 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-translation_of: Web/CSS/basic-shape
 ---
-{{CSSRef}}**`<basic-shape>`**是一种表现基础图形的 CSS 数据类型，作用于{{cssxref("clip-path")}} 与 {{cssxref("shape-outside")}} 属性中。
+{{CSSRef}}
+
+**`<basic-shape>`** 是一种表现基础图形的 CSS 数据类型，作用于{{cssxref("clip-path")}} 与 {{cssxref("shape-outside")}} 属性中。
 
 {{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
 

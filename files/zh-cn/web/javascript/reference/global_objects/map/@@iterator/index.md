@@ -1,17 +1,7 @@
 ---
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-browser-compat: javascript.builtins.Map.@@iterator
 ---
 {{JSRef}}
 

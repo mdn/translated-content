@@ -1,12 +1,6 @@
 ---
 title: 标准元数据名称
 slug: Web/HTML/Element/meta/name
-tags:
-  - HTML
-  - 元数据
-  - 参考
-  - 属性
-translation_of: Web/HTML/Element/meta/name
 ---
 {{HTMLRef}}
 

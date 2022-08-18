@@ -42,7 +42,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 
 与 {{HTMLElement("img")}} 元素不同，{{HTMLElement("canvas")}} 元素**需要**结束标签 (`</canvas>`)。如果结束标签不存在，则文档的其余部分会被认为是替代内容，将不会显示出来。
 
-如果不需要替代内容，一个简单的 `<canvas id="foo" ...></canvas> `在所有支持 canvas 的浏览器中都是完全兼容的。
+如果不需要替代内容，一个简单的 `<canvas id="foo" ...></canvas>` 在所有支持 canvas 的浏览器中都是完全兼容的。
 
 ## 渲染上下文（The rendering context）
 

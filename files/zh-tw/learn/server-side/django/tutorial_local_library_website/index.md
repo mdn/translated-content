@@ -1,10 +1,6 @@
 ---
 title: 'Django 教學 1: 本地圖書館網站'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-tags:
-  - django
-  - 初學者
-translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 

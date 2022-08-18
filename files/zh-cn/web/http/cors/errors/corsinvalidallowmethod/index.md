@@ -1,7 +1,6 @@
 ---
 title: "Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/CORS/Errors/CORSInvalidAllowMethod
-translation_of: Web/HTTP/CORS/Errors/CORSInvalidAllowMethod
 ---
 {{HTTPSidebar}}
 

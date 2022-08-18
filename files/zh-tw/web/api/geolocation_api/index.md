@@ -20,7 +20,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-> **備註：** 在 Firefox 24 之後的版本，即使停用此 API，`navigator `中的「`geolocation」也同樣回傳` `true。此問題已根據規格而於` [Firefox 25](/zh-TW/docs/Mozilla/Firefox/Releases/25/Site_Compatibility) 中修正 ([bug 884921](https://bugzilla.mozilla.org/show_bug.cgi?id=884921))。
+> **備註：** 在 Firefox 24 之後的版本，即使停用此 API，`navigator` 中的「`geolocation`」也同樣回傳 `true`。此問題已根據規格而於` [Firefox 25](/zh-TW/docs/Mozilla/Firefox/Releases/25/Site_Compatibility) 中修正 ([bug 884921](https://bugzilla.mozilla.org/show_bug.cgi?id=884921))。
 
 ### 取得目前位置
 
@@ -35,11 +35,11 @@ navigator.geolocation.getCurrentPosition(function(position) {
 });
 ```
 
-一旦取得定位位置之後，上列範例隨即將執行 `do_something() `函式。
+一旦取得定位位置之後，上列範例隨即將執行 `do_something()` 函式。
 
 ### 觀看目前位置
 
-如果定位資料改變 (可能是裝置移動，或取得更精確的地理位置資訊)，則可設定 1 組回呼函式，使其隨著更新過的定位資訊而呼叫之。而這個動作可透過 `watchPosition() 函式`完成。[`watchPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.watchPosition) 所具備的輸入參數與 `getCurrentPosition() `相同。回呼函式將呼叫數次，讓瀏覽器可於使用者移動期間更新位置，或可根據目前所使用的不同定位技術，提供更精確的定位資訊。若一直未回傳有效結果，則錯誤回呼 (Error Callback) 函式僅將呼叫 1 次。另請注意，錯誤回呼函式僅限於 `getCurrentPosition()，因此為選填`。
+如果定位資料改變 (可能是裝置移動，或取得更精確的地理位置資訊)，則可設定 1 組回呼函式，使其隨著更新過的定位資訊而呼叫之。而這個動作可透過 `watchPosition() 函式`完成。[`watchPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.watchPosition) 所具備的輸入參數與 `getCurrentPosition()`相同。回呼函式將呼叫數次，讓瀏覽器可於使用者移動期間更新位置，或可根據目前所使用的不同定位技術，提供更精確的定位資訊。若一直未回傳有效結果，則錯誤回呼 (Error Callback) 函式僅將呼叫 1 次。另請注意，錯誤回呼函式僅限於 `getCurrentPosition()，因此為選填`。
 
 > **備註：** 不需啟動 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition) 呼叫，亦可使用 [`watchPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.watchPosition)。
 
@@ -50,7 +50,7 @@ var watchID = navigator.geolocation.watchPosition(function(position) {
 );
 ```
 
-`watchPosition()` 函式將回傳 1 組 ID 編號，專用以識別必要的定位監看員 (Watcher)。而此數值若搭配 `clearWatch() `函式，即可停止觀看使用者的位置。
+`watchPosition()` 函式將回傳 1 組 ID 編號，專用以識別必要的定位監看員 (Watcher)。而此數值若搭配 `clearWatch()` 函式，即可停止觀看使用者的位置。
 
 ```plain
 navigator.geolocation.clearWatch(watchID);

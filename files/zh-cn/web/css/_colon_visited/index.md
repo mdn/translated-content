@@ -1,11 +1,6 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - 伪类
-  - 布局
-translation_of: Web/CSS/:visited
 ---
 {{CSSRef}}
 

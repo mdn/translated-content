@@ -1,13 +1,6 @@
 ---
 title: 開始入門 MDN
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - Beginner
-  - Getting Started
-  - Guide
-  - MDN Meta
-  - 入門
-translation_of: MDN/Contribute/Getting_started
 original_slug: MDN/Contribute/Getting_started
 ---
 {{MDNSidebar}}

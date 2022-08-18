@@ -1,12 +1,6 @@
 ---
 title: 废弃和过时的特性
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - JavaScript
-  - 废弃
-  - 指南
-  - 过时
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
 {{JsSidebar("More")}}
 

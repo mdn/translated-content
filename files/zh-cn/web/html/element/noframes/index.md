@@ -1,7 +1,6 @@
 ---
 title: <noframes>
 slug: Web/HTML/Element/noframes
-translation_of: Web/HTML/Element/noframes
 ---
 ## 概述
 

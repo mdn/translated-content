@@ -1,11 +1,6 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - 响应头
-  - 缓存
-  - 首部
-translation_of: Web/HTTP/Headers/Age
 ---
 {{HTTPSidebar}}
 

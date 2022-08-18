@@ -1,12 +1,6 @@
 ---
 title: ':not()'
 slug: Web/CSS/:not
-tags:
-  - CSS
-  - Web
-  - 伪类
-  - 参考
-translation_of: Web/CSS/:not
 ---
 {{CSSRef}}
 

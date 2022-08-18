@@ -1,12 +1,6 @@
 ---
 title: polygon
 slug: Web/SVG/Element/polygon
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/polygon
 ---
 {{SVGRef}}
 

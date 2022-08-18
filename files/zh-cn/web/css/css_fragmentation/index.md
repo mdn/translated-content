@@ -1,11 +1,6 @@
 ---
 title: CSS 分片
 slug: Web/CSS/CSS_Fragmentation
-tags:
-  - CSS
-  - CSS 分片
-  - 参考
-translation_of: Web/CSS/CSS_Fragmentation
 original_slug: Web/CSS/CSS_分片
 ---
 {{cssref}}

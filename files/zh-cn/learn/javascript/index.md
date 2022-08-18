@@ -1,11 +1,6 @@
 ---
 title: JavaScript
 slug: learn/JavaScript
-tags:
-  - JavaScript
-  - 初学者
-  - 编写脚本
-translation_of: Learn/JavaScript
 ---
 {{LearnSidebar}}
 

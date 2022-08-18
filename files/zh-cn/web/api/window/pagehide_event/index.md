@@ -29,7 +29,7 @@ slug: Web/API/Window/pagehide_event
 
 ## 例子
 
-在此示例中，建立了一个事件处理程序以监视 `pagehide `(页面隐藏) 事件，并在持久保存页面以进行可能的重用时执行特殊处理。
+在此示例中，建立了一个事件处理程序以监视 `pagehide` (页面隐藏) 事件，并在持久保存页面以进行可能的重用时执行特殊处理。
 
 ```js
 window.addEventListener("pagehide", event => {

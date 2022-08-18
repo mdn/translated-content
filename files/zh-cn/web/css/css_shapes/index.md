@@ -1,11 +1,6 @@
 ---
 title: CSS Shapes
 slug: Web/CSS/CSS_Shapes
-tags:
-  - CSS Regions
-  - CSS Shapes
-  - CSS3 Shapes & CSS3 Regions
-translation_of: Web/CSS/CSS_Shapes
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: String.prototype.trimRight()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 ---
 {{JSRef}}

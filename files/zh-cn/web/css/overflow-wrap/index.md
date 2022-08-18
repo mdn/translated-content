@@ -1,13 +1,6 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS Text Module Level 3
-  - CSS3
-  - W3C
-  - overflow-wrap
-  - word-wrap
-translation_of: Web/CSS/overflow-wrap
 original_slug: Web/CSS/word-wrap
 ---
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Firefox 8 技術文件
 slug: Mozilla/Firefox/Releases/8
-translation_of: Mozilla/Firefox/Releases/8
 ---
 {{FirefoxSidebar}}
 

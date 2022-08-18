@@ -67,6 +67,7 @@ interface FileHandle
     }
     }
     ```
+
 - name
   - : 檔案名稱。
 - type
@@ -114,8 +115,8 @@ interface LockedFile
 - readAsArrayBuffer(size)
   - : 針對既有` size `的 [ArrayBuffer](/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer)，回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
 - readAsText(size [, encoding])
-  - : 針對既有 `size` 的字串，以既定的` encoding` 回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。[FileReader](/en-US/docs/DOM/FileReader) API 中的對等函式，也以相同方式運作。
-  
+  - : 針對既有 `size` 的字串，以既定的 `encoding` 回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。[FileReader](/en-US/docs/DOM/FileReader) API 中的對等函式，也以相同方式運作。
+
     ```js
     var lockedFile = myFile.open();
     var request = lockedFile.readAsText(3);
@@ -124,9 +125,10 @@ interface LockedFile
       // 3 characters have been read.
     }
     ```
+
 - write(value)
   - : 針對成功/失敗的寫入作業，回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。寫入作業將從 `location` 開始，另根據寫入位元組的數目，移動位置。
-  
+
     ```js
     var lockedFile = myFile.open("readwrite");
     var request = lockedFile.write("foo");
@@ -134,6 +136,7 @@ interface LockedFile
       // The string "foo" has been written.
     }
     ```
+
 - append(value)
   - : 針對成功/失敗的附加 (Append) 作業，回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。不論 `location` 為何，該數值均附加於檔案末端。在附加資料完畢後，`location` 隨即設定為 `null`。
 - truncate([size])
@@ -149,7 +152,7 @@ interface LockedFile
 
 ### FileRequest 介面
 
-此類型的物件，均是由 LockedFile 介面的所有非同步作業所回傳。此介面繼承了 [DOMRequest](/zh-TW/docs/DOM/DOMRequest) 並類似 [IDBRequest](/zh-TW/docs/IndexedDB/IDBRequest)，同時還擁有 ` onprogress ``事件。在成功之後，則可透過` ` result ``屬性而取得必要檔案作業的結果。`
+此類型的物件，均是由 LockedFile 介面的所有非同步作業所回傳。此介面繼承了 [DOMRequest](/zh-TW/docs/DOM/DOMRequest) 並類似 [IDBRequest](/zh-TW/docs/IndexedDB/IDBRequest)，同時還擁有 `onprogress` 事件。在成功之後，則可透過 `result` 屬性而取得必要檔案作業的結果。
 
 ```plain
 interface FileRequest : DOMRequest

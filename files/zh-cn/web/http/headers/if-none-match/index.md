@@ -1,10 +1,6 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - 弱比较算法
-  - 条件请求
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
 {{HTTPSidebar}}
 
@@ -64,5 +60,5 @@ If-None-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`

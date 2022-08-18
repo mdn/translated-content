@@ -1,11 +1,6 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-tags:
-  - 响应首部
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/Location
 ---
 {{HTTPSidebar}}
 

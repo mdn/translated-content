@@ -1,7 +1,6 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
-translation_of: Web/CSS/border-top-width
 ---
 {{CSSRef}}
 

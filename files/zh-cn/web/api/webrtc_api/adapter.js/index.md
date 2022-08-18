@@ -22,11 +22,11 @@ WebRTC adapter 现在支持火狐、谷歌、和 Edge 浏览器
 
 要使用 adapter.js，你需要在使用 WebRTC APIs 的每个页面都引入 adapter.js ：
 
-1.  从 GitHub 上下载一个最新[adapter.js](https://github.com/webrtc/adapter/tree/master/release)的副本。
-2.  在你的网站文件目录里添加这个文件（比如在放在 scripts 目录下）。
-3.  在你的项目里包含这个文件：\<script src="adapter.js">\</script>
-4.  写代码，按照 WebRTC APIs 规范去写，知道你的代码应该在所有浏览器上工作。
-5.  注意，即使有一个像这样优秀的 adapter 并不意味着你不需要在不同的浏览器上测试代码（以及在同一个浏览器中的不同版本）。
+1. 从 GitHub 上下载一个最新[adapter.js](https://github.com/webrtc/adapter/tree/master/release)的副本。
+2. 在你的网站文件目录里添加这个文件（比如在放在 scripts 目录下）。
+3. 在你的项目里包含这个文件：\<script src="adapter.js">\</script>
+4. 写代码，按照 WebRTC APIs 规范去写，知道你的代码应该在所有浏览器上工作。
+5. 注意，即使有一个像这样优秀的 adapter 并不意味着你不需要在不同的浏览器上测试代码（以及在同一个浏览器中的不同版本）。
 
 ## 相关链接
 

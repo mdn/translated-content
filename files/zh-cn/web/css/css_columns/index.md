@@ -1,14 +1,6 @@
 ---
 title: CSS 多列布局
 slug: Web/CSS/CSS_Columns
-tags:
-  - CSS
-  - CSS 参考
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-  - 概述
-translation_of: Web/CSS/CSS_Columns
 ---
 {{CSSRef("CSS3 Multicol")}}
 

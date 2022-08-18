@@ -37,7 +37,7 @@ IndexedDB 提供不同 APIs 用於同步與非同步的存取作業。同步 API
 以下 API 在早期規範中有定義，但現已移除。這邊列出僅供參考:
 
 - [IDBVersionChangeRequest](/zh-TW/docs/IndexedDB/IDBVersionChangeRequest) 代表「更改資料庫版本」的請求。更改資料庫版本的方法已有不同 (呼叫 [IDBFactory.open()](/zh-TW/docs/IndexedDB/IDBFactory#open) 而不需同時呼叫 [IDBDatabase.setVersion()](/zh-TW/docs/IndexedDB/IDBDatabase#setVersion%28%29))；而且[IDBOpenDBRequest](/zh-TW/docs/IndexedDB/IDBOpenDBRequest)已經整合了從 IDBVersionChangeRequest 中所移除之功能。
-- [IDBDatabaseException ](/zh-TW/docs/IndexedDB/IDBDatabaseException){{Deprecated_Inline}} 在執行資料庫作業時，代表可能遭遇的例外狀況。
+- [IDBDatabaseException](/zh-TW/docs/IndexedDB/IDBDatabaseException) {{Deprecated_Inline}} 在執行資料庫作業時，代表可能遭遇的例外狀況。
 
 除了非同步 API，也有應用在[WebWorkers](/zh-TW/docs/DOM/Using_web_workers)內的同步 API，但請注意目前還沒有瀏覽器支援同步 API。這裡也提供 [API 的同步版本](/zh-TW/docs/IndexedDB/Syncronous_API)。
 

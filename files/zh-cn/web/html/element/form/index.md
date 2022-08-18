@@ -1,15 +1,6 @@
 ---
 title: form
 slug: Web/HTML/Element/form
-tags:
-  - Forms
-  - HTML
-  - HTML 表单
-  - Web
-  - 元素
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/form
 ---
 {{HTMLRef}}
 

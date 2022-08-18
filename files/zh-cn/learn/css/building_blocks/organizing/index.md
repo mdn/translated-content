@@ -1,7 +1,6 @@
 ---
 title: 组织 CSS
 slug: Learn/CSS/Building_blocks/Organizing
-translation_of: Learn/CSS/Building_blocks/Organizing
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 

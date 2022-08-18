@@ -1,11 +1,6 @@
 ---
 title: <pre>
 slug: Web/HTML/Element/pre
-tags:
-  - HTML
-  - HTML 分组内容
-  - 元素
-translation_of: Web/HTML/Element/pre
 ---
 {{HTMLRef}}
 

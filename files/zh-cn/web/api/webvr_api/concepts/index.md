@@ -6,8 +6,6 @@ This article discusses some of the concepts and theory behind virtual reality (V
 
 这篇文章探讨了一些关于虚拟现实（VR）的概念及其背后的理论基础。如果你是一个进入这个领域的新手，在你深入学习相关代码知识前，非常有必要对于以下的话题做一定的了解。**【K】**
 
-##
-
 ## The history of VR 关于 VR 的历史**【K】**
 
 Virtual reality is nothing new — the concept goes way further back than the Oculus Rift Kickstarter campaign of 2012. People have been experimenting with it for decades.
@@ -100,7 +98,7 @@ The output information falls into four categories:
 
 **通过 HMD 输出的信息包含一下四种类别：【K】**
 
-1.  Position — The position of the HMD along three axes in a 3D coordinate space. x is to the left and right, y is up and down, and z is towards and away from the position sensor. In WebVR:
+1. Position — The position of the HMD along three axes in a 3D coordinate space. x is to the left and right, y is up and down, and z is towards and away from the position sensor. In WebVR:
 
     **位置--HMD 设备的位置基于一个 3D 坐标空间中的三个轴--X 代表左右移动，Y 代表上下移动，Z 代表朝向和远离位置传感设备。在 WEBVR 中：**
 
@@ -108,7 +106,7 @@ The output information falls into four categories:
     - y position is represented by {{domxref("VRPositionState.position")}}.y.
     - z position is represented by {{domxref("VRPositionState.position")}}.z.
 
-2.  Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR:
+2. Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR:
 
     **方位--HMD 设备的协同是绕着一个 3D 坐标空间中的三个轴。PITCH 负责协同 X 轴，YAW 负责协同 Y 轴，还有 ROLL 入则系统 Z 轴。在 WEBVR 中：**
 
@@ -116,7 +114,7 @@ The output information falls into four categories:
     - Yaw is represented by {{domxref("VRPositionState.orientation")}}.y.
     - Roll is represented by {{domxref("VRPositionState.orientation")}}.z.
 
-3.  Velocity — There are two types of velocity to consider in VR:
+3. Velocity — There are two types of velocity to consider in VR:
 
     **速度 -- 在 VR 中有两种需要被考虑的速度：**
 
@@ -125,7 +123,7 @@ The output information falls into four categories:
     - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)
     - **角速度 -- 就是 HMD 设备绕着三种轴向之一旋转的速度。这类的信息可以被接收通过{{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)**
 
-4.  Acceleration — There are two types of acceleration to consider in VR:
+4. Acceleration — There are two types of acceleration to consider in VR:
     **加速度 -- 在 VR 中有两种需要被考虑的加速度：**
 
     - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPositionState.linearAcceleration")}} (x, y, and z.)

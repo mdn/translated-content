@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/texImage2D
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API ](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.texImage2D()`** 方法指定了二维纹理图像。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texImage2D()`** 方法指定了二维纹理图像。
 
 ## 语法
 

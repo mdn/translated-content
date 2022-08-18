@@ -1,15 +1,6 @@
 ---
 title: 學習該如何開發 Web
 slug: Learn
-tags:
-  - Beginner
-  - Index
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Learn
 ---
 {{LearnSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
 {{JSRef("Global_Objects", "Date")}}
 

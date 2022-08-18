@@ -1,13 +1,6 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - Cookies
-  - HTTP
-  - 请求
-  - 超文本传输协议
-  - 标头
-translation_of: Web/HTTP/Headers/Cookie
 ---
 {{HTTPSidebar}}
 

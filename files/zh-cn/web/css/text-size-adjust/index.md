@@ -1,11 +1,6 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - CSS
-  - 参考
-  - 移动平台
-translation_of: Web/CSS/text-size-adjust
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -40,7 +35,7 @@ text-size-adjust: unset;
 
 ## 语法
 
-`text-size-adjust` 属性的值为 [`none`](#none), [`auto`](#auto)，或 [`<percentage>`](#<percentage>)
+`text-size-adjust` 属性的值为 [`none`](#none), [`auto`](#auto)，或 [`<percentage>`](#percentage)
 
 ### 属性值
 

@@ -1,11 +1,6 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-tags:
-  - CSS
-  - CSS 定位
-  - CSS 属性
-translation_of: Web/CSS/z-index
 ---
 {{CSSRef}}
 
@@ -36,7 +31,7 @@ z-index: initial;
 z-index: unset;
 ```
 
-`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index$edit#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index$edit#integer)。
+`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index#integer)。
 
 ### 取值
 

@@ -1,12 +1,6 @@
 ---
 title: 什么是域名？
 slug: Learn/Common_questions/What_is_a_domain_name
-tags:
-  - 初学者
-  - 域名
-  - 网络
-  - 网络基础架构
-translation_of: Learn/Common_questions/What_is_a_domain_name
 ---
 本文中我们讨论了域名是什么，域名是如何被构建的，以及如何获得一个域名。
 

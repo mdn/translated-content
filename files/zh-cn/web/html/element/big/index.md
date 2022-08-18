@@ -1,7 +1,6 @@
 ---
 title: <big>
 slug: Web/HTML/Element/big
-translation_of: Web/HTML/Element/big
 ---
 {{deprecated_header}}
 

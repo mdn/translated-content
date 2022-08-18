@@ -2,7 +2,9 @@
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
 ---
-{{APIRef("WebGL")}}`ANGLE_instanced_arrays是`属于 [WebGL API ](/zh-CN/docs/Web/API/WebGL_API)`的一个扩展 API，`它允许多次绘制相同的对象或相似对象组，前提是它们共享相同的顶点数据、基本图形的个数和类型。WebGL 的扩展都能使用{{domxref("WebGLRenderingContext.getExtension()")}} 这个方法。更多详细信息，请参考 [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)_（WebGL 使用教程）里的_[Using Extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) _（使用扩展）_。
+{{APIRef("WebGL")}}
+
+`ANGLE_instanced_arrays`是属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一个扩展 API，它允许多次绘制相同的对象或相似对象组，前提是它们共享相同的顶点数据、基本图形的个数和类型。WebGL 的扩展都能使用{{domxref("WebGLRenderingContext.getExtension()")}} 这个方法。更多详细信息，请参考 [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)_（WebGL 使用教程）里的_[Using Extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) _（使用扩展）_。
 
 > **备注：** 这个扩展仅仅能使用在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 上下文中。在 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}，默认情况下这个扩展的在 WebGL2 的上下文中起作用，它的常量以及方法使用过程中没有“ANGEL”后缀。
 >

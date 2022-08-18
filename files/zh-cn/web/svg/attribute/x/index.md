@@ -1,11 +1,6 @@
 ---
 title: x
 slug: Web/SVG/Attribute/x
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/x
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

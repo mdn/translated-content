@@ -1,7 +1,6 @@
 ---
 title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
 {{JSRef}}
 

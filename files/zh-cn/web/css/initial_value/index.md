@@ -1,10 +1,6 @@
 ---
 title: 初始值
 slug: Web/CSS/initial_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/initial_value
 ---
 {{cssref}}
 

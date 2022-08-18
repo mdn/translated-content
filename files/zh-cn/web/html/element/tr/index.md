@@ -1,7 +1,6 @@
 ---
 title: <tr>
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
 ---
 **HTML `<tr>` 元素**定义表格中的行。 同一行可同时出现{{HTMLElement("td")}} 和{{HTMLElement("th")}} 元素。
 
@@ -46,7 +45,7 @@ translation_of: Web/HTML/Element/tr
     - `right`, 内容在单元格中右对齐
     - `justify`, 增加文本内容之间的空白以伸展这行文本，使得该单元格中的多行文本具有相同的长度。
     - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} attributes {{unimplemented_inline("2212")}}If this attribute is not set, the parent node's value is inherited.
-    
+
     > **备注：** Do not use this attribute as it is obsolete (not supported) in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
@@ -74,7 +73,7 @@ translation_of: Web/HTML/Element/tr
     - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
     - `middle`, which will center the text in the cell;
     - and `top`, which will put the text as close to the top of the cell as it is possible.
-    
+
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.
 
 ## Examples

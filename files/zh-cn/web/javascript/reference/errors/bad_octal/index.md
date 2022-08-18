@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: "x" is not a legal ECMA-262 octal constant'
 slug: Web/JavaScript/Reference/Errors/Bad_octal
-tags:
-  - Errors
-  - JavaScript
-  - SyntaxError
-  - 严格模式
-translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 ---
 {{jsSidebar("Errors")}}
 

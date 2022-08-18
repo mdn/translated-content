@@ -1,13 +1,6 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-tags:
-  - JavaScript
-  - Math
-  - 参考
-  - 数学
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
 {{JSRef}}
 

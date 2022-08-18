@@ -1,15 +1,6 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
 {{JSRef()}}
 

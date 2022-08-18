@@ -1,12 +1,6 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
-tags:
-  - CSS Background
-  - CSS Property
-  - CSS_参考
-  - Reference
-translation_of: Web/CSS/background-attachment
 ---
 {{CSSRef}}
 

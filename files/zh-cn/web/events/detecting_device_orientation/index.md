@@ -1,15 +1,6 @@
 ---
 title: 检测设备方向
 slug: Web/Events/Detecting_device_orientation
-tags:
-  - API
-  - Device Orientation
-  - Intermediate
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
-translation_of: Web/Events/Detecting_device_orientation
 ---
 {{SeeCompatTable}}
 

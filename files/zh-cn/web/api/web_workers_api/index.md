@@ -21,7 +21,7 @@ worker 可以另外生成新的 worker，这些 worker 与它们父页面的宿�
 - Shared Workers 可被不同的窗体的多个脚本运行，例如 IFrames 等，只要这些 workers 处于同一主域。共享 worker 比专用 worker 稍微复杂一点 — 脚本必须通过活动端口进行通讯。详情请见{{domxref("SharedWorker")}}。
 - [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 一般作为 web 应用程序、浏览器和网络（如果可用）之间的代理服务。他们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动，更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
 - Chrome Workers 是一种仅适用于 firefox 的 worker。如果您正在开发附加组件，希望在扩展程序中使用 worker 且可以访问 [js-ctypes](https://developer.mozilla.org/en/js-ctypes)，那么可以使用 Chrome Workers。详情请见{{domxref("ChromeWorker")}}
-- 音频[ Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers)可以在网络 worker 上下文中直接完成脚本化音频处理。
+- 音频 [Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers)可以在网络 worker 上下文中直接完成脚本化音频处理。
 
 > **备注：** 根据网络 worker 规范， worker 错误事件不应该冒泡（参见{{bug(1188141)}}）。该规范已在 Firefox 42 中实现。
 

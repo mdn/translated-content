@@ -1,12 +1,6 @@
 ---
 title: 元编程
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 

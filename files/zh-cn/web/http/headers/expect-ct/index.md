@@ -1,11 +1,6 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
-tags:
-  - HTTP
-  - 响应头
-  - 证书透明度
-translation_of: Web/HTTP/Headers/Expect-CT
 ---
 {{HTTPSidebar}}
 

@@ -1,12 +1,6 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-tags:
-  - API
-  - CSS
-  - Houdini
-  - Web
-translation_of: Web/Houdini
 original_slug: Web/Houdini
 ---
 Houdini 是一组底层 API，它们公开了 CSS 引擎的各个部分，从而使开发人员能够通过加入浏览器渲染引擎的样式和布局过程来扩展 CSS。 Houdini 是一组 API，它们使开发人员可以直接访问[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model) （CSSOM），使开发人员可以编写浏览器可以解析为 CSS 的代码，从而创建新的 CSS 功能，而无需等待它们在浏览器中本地实现。
@@ -31,7 +25,7 @@ Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且�
 
 ```css
 li {
-	background-image: paint(myComponent, stroke, 10px);
+    background-image: paint(myComponent, stroke, 10px);
     --hilights: blue;
     --lowlights: green;
 }

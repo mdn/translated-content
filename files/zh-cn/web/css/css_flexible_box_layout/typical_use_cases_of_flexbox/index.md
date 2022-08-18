@@ -1,7 +1,6 @@
 ---
 title: Flexbox 典型用例
 slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 ---
 {{CSSRef}}

@@ -1,11 +1,6 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-tags:
-  - Int8Array
-  - 构造器
-  - 特定类型数组
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 ---
 {{JSRef}}
 

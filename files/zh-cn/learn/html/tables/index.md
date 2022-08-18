@@ -1,17 +1,6 @@
 ---
 title: HTML 表格
 slug: Learn/HTML/Tables
-tags:
-  - HTML
-  - Landing
-  - Module
-  - NeedsTranslation
-  - TopicStub
-  - 初学者
-  - 指引
-  - 文章
-  - 表格
-translation_of: Learn/HTML/Tables
 ---
 {{LearnSidebar}}
 

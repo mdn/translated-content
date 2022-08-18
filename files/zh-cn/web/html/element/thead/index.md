@@ -1,10 +1,6 @@
 ---
 title: <thead>
 slug: Web/HTML/Element/thead
-tags:
-  - 元素
-  - 表格
-translation_of: Web/HTML/Element/thead
 ---
 **HTML**的**\<thead>**元素定义了一组定义表格的列头的行。
 
@@ -84,7 +80,7 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
 
 ## 示例
 
-See {{ HTMLElement("table") }} for examples on` <thead>`.
+See {{ HTMLElement("table") }} for examples on `<thead>`.
 
 ## 规范
 

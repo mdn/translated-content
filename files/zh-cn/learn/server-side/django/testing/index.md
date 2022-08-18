@@ -1,7 +1,6 @@
 ---
 title: 'Django 教程 10: 测试 Django 网页应用'
 slug: Learn/Server-side/Django/Testing
-translation_of: Learn/Server-side/Django/Testing
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 

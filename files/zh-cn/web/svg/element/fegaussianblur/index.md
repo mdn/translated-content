@@ -1,12 +1,6 @@
 ---
 title: feGaussianBlur
 slug: Web/SVG/Element/feGaussianBlur
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/feGaussianBlur
 ---
 {{SVGRef}}
 

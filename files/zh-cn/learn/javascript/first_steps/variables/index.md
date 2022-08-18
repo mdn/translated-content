@@ -1,13 +1,6 @@
 ---
 title: 如何存储你需要的信息 — 变量
 slug: Learn/JavaScript/First_steps/Variables
-tags:
-  - 初始化
-  - 变量
-  - 声明
-  - 字符串
-  - 数组
-translation_of: Learn/JavaScript/First_steps/Variables
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 

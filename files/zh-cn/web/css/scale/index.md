@@ -1,10 +1,6 @@
 ---
 title: scale
 slug: Web/CSS/scale
-tags:
-  - CSS
-  - transform
-translation_of: Web/CSS/scale
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: marker-end
 slug: Web/SVG/Attribute/marker-end
-translation_of: Web/SVG/Attribute/marker-end
 ---
 {{SVGRef}}
 

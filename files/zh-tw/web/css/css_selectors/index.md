@@ -41,7 +41,7 @@ translation_of: Web/CSS/CSS_Selectors
 
 - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_combinator)（[Descendant combinator](/zh-TW/docs/Web/CSS/Descendant_combinator)）
 
-  - : ``(空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:**`div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元素內部的所有 [`<span>`](/en-US/docs/Web/HTML/Element/span) 元素。
+  - : " " (空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:** `div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元素內部的所有 [`<span>`](/en-US/docs/Web/HTML/Element/span) 元素。
 
 - [子代選擇器](/zh-TW/docs/Web/CSS/Child_combinator)（[Child combinator](/zh-TW/docs/Web/CSS/Child_combinator)）
   - : `>` 用以選擇某個元素後代的元素。

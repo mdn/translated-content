@@ -163,23 +163,23 @@ removeAllChildren(document.body);
 
 ```js
 function eachNode(rootNode, callback){
-	if(!callback){
-		var nodes = [];
-		eachNode(rootNode, function(node){
-			nodes.push(node);
-		});
-		return nodes;
-	}
+  if(!callback){
+    var nodes = [];
+    eachNode(rootNode, function(node){
+      nodes.push(node);
+    });
+    return nodes;
+  }
 
-	if(false === callback(rootNode))
-		return false;
+  if(false === callback(rootNode))
+    return false;
 
-	if(rootNode.hasChildNodes()){
-		var nodes = rootNode.childNodes;
-		for(var i = 0, l = nodes.length; i < l; ++i)
-			if(false === eachNode(nodes[i], callback))
-				return;
-	}
+  if(rootNode.hasChildNodes()){
+    var nodes = rootNode.childNodes;
+    for(var i = 0, l = nodes.length; i < l; ++i)
+      if(false === eachNode(nodes[i], callback))
+        return;
+  }
 }
 ```
 
@@ -210,18 +210,18 @@ eachNode(rootNode, callback);
 
 ```html
 <div id="box">
-	<span>Foo</span>
-	<span>Bar</span>
-	<span>Baz</span>
+  <span>Foo</span>
+  <span>Bar</span>
+  <span>Baz</span>
 </div>
 ```
 
 ```js
 var box = document.getElementById("box");
 eachNode(box, function(node){
-	if(null != node.textContent){
-		console.log(node.textContent);
-	}
+  if(null != node.textContent){
+    console.log(node.textContent);
+  }
 });
 ```
 
@@ -239,31 +239,31 @@ eachNode(box, function(node){
 
 ```js
 function grep(parentNode, pattern){
-	var matches = [];
-	var endScan = false;
+  var matches = [];
+  var endScan = false;
 
-	eachNode(parentNode, function(node){
-		if(endScan)
-			return false;
+  eachNode(parentNode, function(node){
+    if(endScan)
+      return false;
 
-		// Ignore anything which isn't a text node
-		if(node.nodeType !== Node.TEXT_NODE)
-			return;
+    // Ignore anything which isn't a text node
+    if(node.nodeType !== Node.TEXT_NODE)
+      return;
 
-		if("string" === typeof pattern){
-			if(-1 !== node.textContent.indexOf(pattern))
-				matches.push(node);
-		}
-		else if(pattern.test(node.textContent)){
-			if(!pattern.global){
-				endScan = true;
-				matches = node;
-			}
-			else matches.push(node);
-		}
-	});
+    if("string" === typeof pattern){
+      if(-1 !== node.textContent.indexOf(pattern))
+        matches.push(node);
+    }
+    else if(pattern.test(node.textContent)){
+      if(!pattern.global){
+        endScan = true;
+        matches = node;
+      }
+      else matches.push(node);
+    }
+  });
 
-	return matches;
+  return matches;
 }
 ```
 

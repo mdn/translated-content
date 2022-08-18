@@ -1,10 +1,6 @@
 ---
 title: resize
 slug: Web/CSS/resize
-tags:
-  - resize
-  - 调整大小
-translation_of: Web/CSS/resize
 ---
 {{CSSRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: JavaScript building blocks
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - JavaScript
-  - TopicStub
-  - 事件
-  - 入門者
-  - 函式
-  - 指南
-  - 模組
-  - 評量
-  - 迴圈
-translation_of: Learn/JavaScript/Building_blocks
 ---
 {{LearnSidebar}}
 

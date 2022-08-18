@@ -1,9 +1,6 @@
 ---
 title: HTTP Headers
 slug: Web/HTTP/Headers
-tags:
-  - HTTP Headers
-translation_of: Web/HTTP/Headers
 ---
 {{ HTTPSidebar }}
 

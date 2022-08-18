@@ -1,11 +1,6 @@
 ---
 title: 'CSP: default-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-tags:
-  - 内容安全策略
-  - 安全
-  - 超文本传输协议
-translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 {{HTTPSidebar}}
 

@@ -1,10 +1,6 @@
 ---
 title: clip
 slug: Web/SVG/Attribute/clip
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/clip
 ---
 {{SVGRef}}{{deprecated_header}}
 

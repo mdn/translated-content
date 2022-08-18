@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-tags:
-  - JavaScript
-  - 原型
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
 {{JSRef}}
 

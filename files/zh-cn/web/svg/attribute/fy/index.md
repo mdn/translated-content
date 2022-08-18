@@ -1,12 +1,6 @@
 ---
 title: fy
 slug: Web/SVG/Attribute/fy
-tags:
-  - SVG 属性
-  - SVG 径向渐变
-  - SVG 径向渐变焦点
-  - SVG 渐变属性
-translation_of: Web/SVG/Attribute/fy
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

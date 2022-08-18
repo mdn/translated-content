@@ -31,8 +31,8 @@ slug: Web/API/Window/unload_event
 
 它在下面两个事件后被触发：
 
-1.  [beforeunload](/zh-CN/docs/Mozilla_event_reference/beforeunload) (可取消默认行为的事件)
-2.  [pagehide](/zh-CN/docs/Mozilla_event_reference/pagehide)
+1. [beforeunload](/zh-CN/docs/Mozilla_event_reference/beforeunload) (可取消默认行为的事件)
+2. [pagehide](/zh-CN/docs/Mozilla_event_reference/pagehide)
 
 文档处于以下状态：
 

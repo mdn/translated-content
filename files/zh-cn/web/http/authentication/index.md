@@ -1,11 +1,6 @@
 ---
 title: HTTP 身份验证
 slug: Web/HTTP/Authentication
-tags:
-  - 指南
-  - 访问控制
-  - 身份验证
-translation_of: Web/HTTP/Authentication
 ---
 {{HTTPSidebar}}
 

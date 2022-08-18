@@ -1,15 +1,6 @@
 ---
 title: Express 教程：本地图书馆网站
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Express
-  - Node
-  - nodejs
-  - web 框架
-  - 初学者
-  - 后端框架
-  - 学习教程
-translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 

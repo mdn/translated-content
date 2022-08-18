@@ -1,7 +1,6 @@
 ---
 title: 实现特性检测
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 

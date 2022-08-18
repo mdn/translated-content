@@ -1,7 +1,6 @@
 ---
 title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
 {{JSRef}}
 

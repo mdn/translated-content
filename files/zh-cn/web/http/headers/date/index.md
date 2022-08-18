@@ -1,16 +1,10 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - 日期
-  - 格林尼治标准时间
-  - 通用首部
-  - 首部
-translation_of: Web/HTTP/Headers/Date
 ---
 {{HTTPSidebar}}
 
-**`Date `**是一个通用首部，其中包含了报文创建的日期和时间。
+**`Date`** 是一个通用首部，其中包含了报文创建的日期和时间。
 
 | Header type                                      | {{Glossary("General header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

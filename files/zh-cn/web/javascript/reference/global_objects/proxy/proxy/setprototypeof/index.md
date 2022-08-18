@@ -1,7 +1,6 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf
 ---
 {{JSRef}}

@@ -1,14 +1,6 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
-tags:
-  - CSS 属性
-  - CSS 边框
-  - Layout
-  - 互联网
-  - 参考
-  - 需要移动浏览器兼容
-translation_of: Web/CSS/border-top-right-radius
 ---
 {{ CSSRef("CSS Borders") }}
 

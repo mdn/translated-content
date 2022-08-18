@@ -1,7 +1,6 @@
 ---
 title: overflow-x
 slug: Web/CSS/overflow-x
-translation_of: Web/CSS/overflow-x
 ---
 {{ CSSRef() }}
 

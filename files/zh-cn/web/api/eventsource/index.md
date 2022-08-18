@@ -26,7 +26,7 @@ _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 - {{domxref("EventSource.onopen")}}
   - : 是一个 {{event("Event_handlers", "event handler")}}，当收到一个 {{event(" open ")}} 事件，即连接刚打开时被调用。
 - {{domxref("EventSource.readyState")}} {{readonlyinline}}
-  - : 一个 ` unsigned ``short ` 值，代表连接状态。可能值是 `CONNECTING` (`0`), `OPEN` (`1`), 或者 `CLOSED` (`2`)。
+  - : 一个 `unsigned short` 值，代表连接状态。可能值是 `CONNECTING` (`0`), `OPEN` (`1`), 或者 `CLOSED` (`2`)。
 - {{domxref("EventSource.url")}} {{readonlyinline}}
   - : 一个{{domxref("DOMString")}}，代表事件源的 URL。
 

@@ -1,7 +1,6 @@
 ---
 title: 何为可访问性？
 slug: Learn/Common_questions/What_is_accessibility
-translation_of: Learn/Common_questions/What_is_accessibility
 ---
 本文介绍了 Web 可访问性背后的一些基本概念。
 

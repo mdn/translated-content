@@ -1,10 +1,6 @@
 ---
 title: ':any-link'
 slug: Web/CSS/:any-link
-tags:
-  - CSS
-  - 实验性
-translation_of: Web/CSS/:any-link
 ---
 {{CSSRef}} {{SeeCompatTable}}
 

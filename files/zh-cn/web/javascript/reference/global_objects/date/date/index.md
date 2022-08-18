@@ -1,7 +1,6 @@
 ---
 title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/Date
 ---
 {{JSRef}}
 

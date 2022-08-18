@@ -1,7 +1,6 @@
 ---
 title: 使用 moment 做日期格式化
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
 我们模型的日期预设呈现很难看：_Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_。在本节中，我们将展示如何更新上一节中的 書本實例 BookInstance 列表页面，以更友好的格式显示`due_date`字段：December 6th, 2016。
 

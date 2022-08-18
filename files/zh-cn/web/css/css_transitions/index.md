@@ -1,13 +1,6 @@
 ---
 title: CSS 变换
 slug: Web/CSS/CSS_Transitions
-tags:
-  - CSS
-  - CSS 变换
-  - 参考
-  - 实验功能
-  - 概述
-translation_of: Web/CSS/CSS_Transitions
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

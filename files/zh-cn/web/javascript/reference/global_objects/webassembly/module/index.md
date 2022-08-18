@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
 {{JSRef}}**`WebAssembly.Module`** 对象包含已经由浏览器编译的无状态 WebAssembly 代码，可以高效地[与 Workers 共享](https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage)、[缓存在 IndexedDB 中](https://developer.mozilla.org/en-US/docs/WebAssembly/Caching_modules)，和多次实例化。`WebAssembly.Module()` 构造函数可以用来同步编译给定的 WebAssembly 二进制代码。不过，获取 `Module` 对象的主要方法是通过异步编译函数，如 {{jsxref("WebAssembly.compile()")}}，或者是[通过 IndexedDB 读取 Module 对象](/en-US/docs/WebAssembly/Caching_modules).
 

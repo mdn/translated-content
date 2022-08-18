@@ -65,8 +65,6 @@ function backwards() {
 
 {{Compat("api.IDBCursor.direction")}}
 
-##
-
 ## 参考资料
 
 - [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)

@@ -22,7 +22,7 @@ var result = crypto.encrypt(algo, key, cleartext);
   - `{"name": "RSA-OAEP", label}` (`label` 是可选的)
 
 - `key` 是一个包含签名密钥的 {{domxref("CryptoKey")}}。
-- _`cleartext `_`是一个包含需要加密的明文` {{jsxref("ArrayBuffer")}} 或者 {{jsxref("ArrayBufferView")}} 对象。
+- _`cleartext`_ 是一个包含需要加密的明文 {{jsxref("ArrayBuffer")}} 或者 {{jsxref("ArrayBufferView")}} 对象。
 
 ### 返回值
 

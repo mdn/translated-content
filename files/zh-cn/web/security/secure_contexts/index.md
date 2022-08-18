@@ -1,7 +1,6 @@
 ---
 title: Secure contexts
 slug: Web/Security/Secure_Contexts
-translation_of: Web/Security/Secure_Contexts
 ---
 **安全上下文**是 `Window` 与 `Worker` 中的概念满足了最低标准的身份验证和机密性。许多 Web APIs 的访问仅能在安全上下文中. 安全上下文的主要目标是防止 [MITM attackers](https://zh.wikipedia.org/wiki/man-in-the-middle_attack) 强大的 APIs 被坏人利用。
 

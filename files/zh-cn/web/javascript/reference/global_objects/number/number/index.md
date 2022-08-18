@@ -1,7 +1,6 @@
 ---
 title: Number() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/Number
 ---
 {{JSRef}}
 

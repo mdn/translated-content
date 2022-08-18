@@ -10,7 +10,7 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 
 关键帧格式有两种不同的方式：
 
-1.  一个由多个关键帧的属性和值组成的对象所构成的`数组`。这是{{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}}方法返回的规范格式。
+1. 一个由多个关键帧的属性和值组成的对象所构成的`数组`。这是{{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}}方法返回的规范格式。
 
     ```js
     element.animate([
@@ -49,7 +49,7 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 
     在这个例子中，指定的 easing 仅适用于指定它的关键帧到下一帧之间。 但是在`options`中指定的 `easing` 值都将应用在一个动画的整个持续时间里。
 
-2.  一个包含 key-value 键值的`对象`需要包含动画的属性和要循环变化的值`数组`。
+2. 一个包含 key-value 键值的`对象`需要包含动画的属性和要循环变化的值`数组`。
 
     ```js
     element.animate({

@@ -1,11 +1,6 @@
 ---
 title: fr
 slug: Web/SVG/Attribute/fr
-tags:
-  - SVG 属性
-  - SVG 径向渐变
-  - SVG 径向渐变焦点
-translation_of: Web/SVG/Attribute/fr
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

@@ -27,7 +27,7 @@ if (node.parentNode) {
 
 ## 备注
 
-对于下面的[节点类型](/zh-cn/DOM/Node.nodeType): `Attr`, `Document`, `DocumentFragment`, `Entity`, `Notation`,其`parentNode`属性返回`null`.
+对于下面的[节点类型](/zh-CN/DOM/Node.nodeType): `Attr`, `Document`, `DocumentFragment`, `Entity`, `Notation`,其`parentNode`属性返回`null`.
 
 如果当前节点刚刚被建立，还没有被插入到 DOM 树中，则该节点的` parentNode 属性也返回``null. `
 

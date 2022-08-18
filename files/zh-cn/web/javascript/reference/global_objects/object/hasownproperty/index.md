@@ -1,16 +1,6 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - 原型
-  - 对象
-  - 属性
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 {{JSRef}}
 

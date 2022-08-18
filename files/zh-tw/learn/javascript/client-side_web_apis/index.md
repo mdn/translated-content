@@ -1,7 +1,6 @@
 ---
 title: 客戶端 web APIs
 slug: Learn/JavaScript/Client-side_web_APIs
-translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
 {{LearnSidebar}}
 

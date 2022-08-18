@@ -1,12 +1,6 @@
 ---
 title: 初识 MDN
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - MDN 元数据
-  - MDN 入门
-  - 入门
-  - 初学者
-translation_of: MDN/Contribute/Getting_started
 original_slug: MDN/Contribute/Getting_started
 ---
 {{MDNSidebar}}

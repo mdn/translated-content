@@ -1,11 +1,6 @@
 ---
 title: width
 slug: Web/SVG/Attribute/width
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/width
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

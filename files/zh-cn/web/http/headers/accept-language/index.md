@@ -1,12 +1,6 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - HTTP
-  - 参考
-  - 语言
-  - 请求头
-translation_of: Web/HTTP/Headers/Accept-Language
 ---
 {{HTTPSidebar}}
 

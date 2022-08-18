@@ -1,7 +1,6 @@
 ---
 title: border-bottom-right-radius
 slug: Web/CSS/border-bottom-right-radius
-translation_of: Web/CSS/border-bottom-right-radius
 ---
 {{CSSRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: stop
 slug: Web/SVG/Element/stop
-tags:
-  - SVG
-  - SVG 渐变
-  - 元素
-  - 参考
-  - 需要示例
-translation_of: Web/SVG/Element/stop
 ---
 {{SVGRef}}
 

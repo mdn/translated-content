@@ -70,7 +70,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 最适合 HTML5 的平台是基于 web 的商店。为它们[准备一款游戏](http://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515)很容易，因为这样的操作几乎不需要修改游戏本身——通常在包含所有资源的压缩包中添加包含必要信息的清单文件就足够了。
 
-- [Firefox OS](/pl/docs/Mozilla/Firefox_OS) 是 HTML5 游戏的完美硬件平台，因为系统本身是用 JavaScript 编写的，而且是开源的。您可以快速访问控制硬件的核心应用程序，[Firefox Marketplace](https://marketplace.firefox.com/) 是推广你的游戏的好地方，你也可以更进一步，允许人们直接从网络上安装你的游戏。
+- [Firefox OS](/zh-CN/docs/Mozilla/Firefox_OS) 是 HTML5 游戏的完美硬件平台，因为系统本身是用 JavaScript 编写的，而且是开源的。您可以快速访问控制硬件的核心应用程序，[Firefox Marketplace](https://marketplace.firefox.com/) 是推广你的游戏的好地方，你也可以更进一步，允许人们直接从网络上安装你的游戏。
 - [The Chrome Web Store](https://chrome.google.com/webstore/) 也是一个吸引人的选择——同样，准备好一个清单文件，压缩你的游戏并填写在线提交表单就足够了。
 - [Tizen](http://www.tizenstore.com/) 还高度重视支持用 JavaScript 编写的应用程序。他们的商店是另一个可用的选择。
 

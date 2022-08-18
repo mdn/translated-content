@@ -1,11 +1,6 @@
 ---
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
-tags:
-  - SVG
-  - SVG 属性
-  - keyTimes
-translation_of: Web/SVG/Attribute/keyTimes
 ---
 « [SVG](/zh-CN/docs/Web/SVG/Attribute) 属性参考主页
 

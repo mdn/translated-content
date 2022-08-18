@@ -1,14 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS 弹性盒
-  - 布局
-  - 网络
-  - recipe:CSS 属性
-browser-compat: css.properties.flex-grow
-translation_of: Web/CSS/flex-grow
 ---
 {{CSSRef}}
 

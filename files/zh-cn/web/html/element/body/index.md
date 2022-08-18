@@ -1,13 +1,6 @@
 ---
 title: <body>：文档主体元素
 slug: Web/HTML/Element/body
-tags:
-  - HTML
-  - 元素
-  - 分段
-  - 参考
-  - 段落根元素
-translation_of: Web/HTML/Element/body
 ---
 {{HTMLRef}}
 

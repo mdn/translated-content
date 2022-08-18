@@ -44,13 +44,13 @@ slug: Web/API/WebRTC_API/Session_lifetime
 
 为了开启一个 WebRTC 会话，以下事件需要依次发生：
 
-1.  每个 Peer 创建一个 RTCPeerConnection 对象，用来表示其 WebRTC 会话端。
-2.  每个 Peer 建立一个 icecandidate 事件的响应程序，用来在监测到该事件时将这些 candidates 通过信令通道发送给另一个 Peer。
-3.  每个 Peer 建立一个 track 事件的响应程序，这个事件会在远程 Peer 添加一个 track 到其 stream 上时被触发。这个响应程序应将 tracks 和其消受者联系起来，例如{{HTMLElement("video")}}元素。
-4.  呼叫者创建并与接收者共享一个唯一的标识符或某种令牌，使得它们之间的呼叫可以由信令服务器上的代码来识别。此标识符的确切内容和形式取决于您。
-5.  每个 Peer 连接到一个约定的信令服务器，如 WebSocket 服务器，他们都知道如何与之交换消息。
-6.  每个 Peer 告知信令服务器他们想加入同一 WebRTC 会话（由步骤 4 中建立的令牌标识）。
-7.  _描述，候选地址等 -- 之后会有更多_
+1. 每个 Peer 创建一个 RTCPeerConnection 对象，用来表示其 WebRTC 会话端。
+2. 每个 Peer 建立一个 icecandidate 事件的响应程序，用来在监测到该事件时将这些 candidates 通过信令通道发送给另一个 Peer。
+3. 每个 Peer 建立一个 track 事件的响应程序，这个事件会在远程 Peer 添加一个 track 到其 stream 上时被触发。这个响应程序应将 tracks 和其消受者联系起来，例如{{HTMLElement("video")}}元素。
+4. 呼叫者创建并与接收者共享一个唯一的标识符或某种令牌，使得它们之间的呼叫可以由信令服务器上的代码来识别。此标识符的确切内容和形式取决于您。
+5. 每个 Peer 连接到一个约定的信令服务器，如 WebSocket 服务器，他们都知道如何与之交换消息。
+6. 每个 Peer 告知信令服务器他们想加入同一 WebRTC 会话（由步骤 4 中建立的令牌标识）。
+7. _描述，候选地址等 -- 之后会有更多_
 
 ## ICE 重连
 

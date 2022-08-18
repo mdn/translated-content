@@ -1,7 +1,6 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 ---
 {{JSRef}}
 
