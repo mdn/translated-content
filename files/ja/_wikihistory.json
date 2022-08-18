@@ -46035,51 +46035,6 @@
       "hamasaki"
     ]
   },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-09-30T15:30:23.873Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "5ara5treamer",
-      "hamasaki"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures/Live_samples": {
-    "modified": "2019-03-18T21:27:39.805Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/What_we_write": {
-    "modified": "2020-09-30T15:30:25.562Z",
-    "contributors": [
-      "chrisdavidmills",
-      "silverskyvicto"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Writing_style_guide": {
-    "modified": "2020-09-30T15:30:25.053Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "jswisher",
-      "silverskyvicto",
-      "wbamberg",
-      "horichiyo",
-      "SphinxKnight",
-      "Uemmra3",
-      "dai",
-      "5ara5treamer"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
-    "modified": "2020-09-30T15:30:24.568Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dvincent"
-    ]
-  },
   "conflicting/Web/API/AudioTrackList/addtrack_event": {
     "modified": "2020-10-15T22:19:07.769Z",
     "contributors": [

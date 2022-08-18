@@ -2694,7 +2694,7 @@
 /ja/docs/MDN/Community/Doc_sprints	/ja/docs/orphaned/MDN/Community/Doc_sprints
 /ja/docs/MDN/Community/Whats_happening	/ja/docs/orphaned/MDN/Community/Whats_happening
 /ja/docs/MDN/Community/Working_in_community	/ja/docs/orphaned/MDN/Community/Working_in_community
-/ja/docs/MDN/Contribute/Content	/ja/docs/conflicting/MDN/Writing_guidelines
+/ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Content/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Content/Does_this_belong_on_MDN	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Contribute/Content/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
@@ -2705,7 +2705,7 @@
 /ja/docs/MDN/Contribute/GitHub_beginners	/ja/docs/conflicting/MDN/Community/Contributing/Getting_started
 /ja/docs/MDN/Contribute/GitHub_best_practices	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/GitHub_cheatsheet	/ja/docs/conflicting/MDN/Community/Issues
-/ja/docs/MDN/Contribute/Guidelines	/ja/docs/conflicting/MDN/Writing_guidelines
+/ja/docs/MDN/Contribute/Guidelines	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Guidelines/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /ja/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
@@ -2718,7 +2718,7 @@
 /ja/docs/MDN/Contribute/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Contribute/Help_beginners	/ja/docs/MDN/Community/Learn_forum
 /ja/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
+/ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ja/docs/MDN/Contribute/Howto/Document_a_CSS_property	/ja/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
 /ja/docs/MDN/Contribute/Howto/Document_an_HTTP_header	/ja/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header
@@ -2764,7 +2764,7 @@
 /ja/docs/MDN/Contribute/Where_is_everything	/ja/docs/MDN/Community/Contributing/Our_repositories
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
-/ja/docs/MDN/Guidelines	/ja/docs/conflicting/MDN/Writing_guidelines
+/ja/docs/MDN/Guidelines	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /ja/docs/MDN/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 /ja/docs/MDN/Guidelines/Code_guidelines/General	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
