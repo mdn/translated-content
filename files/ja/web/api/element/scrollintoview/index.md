@@ -15,83 +15,64 @@ tags:
   - メソッド
 translation_of: Web/API/Element/scrollIntoView
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}{{domxref("Element")}} インターフェイスの **`scrollIntoView()`** メソッドは、 `scrollIntoView()` が呼び出された要素がユーザーに見えるところまで、要素の親コンテナーをスクロールします。
 
-<div><span class="seoSummary">{{domxref("Element")}} インターフェイスの <code><strong>scrollIntoView()</strong></code> メソッドは、 <code>scrollIntoView()</code> が呼び出された要素がユーザーに見えるところまで、要素の親コンテナーをスクロールします。</span></div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+element.scrollIntoView();
+element.scrollIntoView(alignToTop); // 論理型の引数
+element.scrollIntoView(scrollIntoViewOptions); // オブジェクト型の引数
+```
 
-<pre class="syntaxbox">element.scrollIntoView();
-element.scrollIntoView(<var>alignToTop</var>); // 論理型の引数
-element.scrollIntoView(<var>scrollIntoViewOptions</var>); // オブジェクト型の引数
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `alignToTop` {{optional_inline}}
 
-<dl>
- <dt><code><var>alignToTop</var></code> {{optional_inline}}</dt>
- <dd>{{jsxref("Boolean")}} 値です。
- <ul>
-  <li><code>true</code> の場合、要素の上端がスクロール可能な祖先の表示範囲の上端に来るようにスクロールします。 <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code> に相当します。これが既定値です。</li>
-  <li><code>false</code> の場合、要素の下端がスクロール可能祖先の表示範囲の下端に来るようにスクロールします。 <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code> に相当します。</li>
- </ul>
- </dd>
- <dt><code><var>scrollIntoViewOptions</var></code> {{optional_inline}} {{experimental_inline}}</dt>
- <dd>以下のプロパティを持つオブジェクトです。</dd>
- <dd>
- <dl>
-  <dt><code>behavior</code> {{optional_inline}}</dt>
-  <dd>推移のアニメーションを定義します。<br>
-  <code>auto</code> または <code>smooth</code> のどちらかです。既定値は <code>auto</code> です。</dd>
-  <dt><code>block</code> {{optional_inline}}</dt>
-  <dd>垂直方向の配置を定義します。<br>
-  <code>start</code>, <code>center</code>, <code>end</code>, <code>nearest</code> の何れかです。既定値は <code>start</code> です。</dd>
-  <dt><code>inline</code> {{optional_inline}}</dt>
-  <dd>水平方法の配置を定義します。<br>
-  <code>start</code>, <code>center</code>, <code>end</code>, <code>nearest</code> の何れかです。既定値は <code>nearest</code> です。</dd>
- </dl>
- </dd>
-</dl>
+  - : {{jsxref("Boolean")}} 値です。
 
-<h2 id="Example" name="Example">例</h2>
+    - `true` の場合、要素の上端がスクロール可能な祖先の表示範囲の上端に来るようにスクロールします。 `scrollIntoViewOptions: {block: "start", inline: "nearest"}` に相当します。これが既定値です。
+    - `false` の場合、要素の下端がスクロール可能祖先の表示範囲の下端に来るようにスクロールします。 `scrollIntoViewOptions: {block: "end", inline: "nearest"}` に相当します。
 
-<pre class="brush: js">var element = document.getElementById("box");
+- `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
+
+  - : 以下のプロパティを持つオブジェクトです。
+
+    - `behavior` {{optional_inline}}
+      - : 推移のアニメーションを定義します。
+        `auto` または `smooth` のどちらかです。既定値は `auto` です。
+    - `block` {{optional_inline}}
+      - : 垂直方向の配置を定義します。
+        `start`, `center`, `end`, `nearest` の何れかです。既定値は `start` です。
+    - `inline` {{optional_inline}}
+      - : 水平方法の配置を定義します。
+        `start`, `center`, `end`, `nearest` の何れかです。既定値は `nearest` です。
+
+## 例
+
+```js
+var element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
 element.scrollIntoView({block: "end"});
 element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-</pre>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p>他の要素のレイアウトによっては、要素の上部または下部まで完全にスクロールされない場合があります。</p>
+他の要素のレイアウトによっては、要素の上部または下部まで完全にスクロールされない場合があります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.scrollIntoView")}}</p>
+{{Compat("api.Element.scrollIntoView")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}</li>
-</ul>
+- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}

@@ -11,62 +11,49 @@ tags:
   - メソッド
 translation_of: Web/API/Element/scrollBy
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><strong><code>scrollBy()</code></strong> は {{domxref("Element")}} インターフェイスのメソッドで、指定された量だけ要素をスクロールします。</p>
+**`scrollBy()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された量だけ要素をスクロールします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">element.scrollBy(<var>x-coord</var>, <var>y-coord</var>);
-element.scrollBy(<var>options</var>)
-</pre>
+```
+element.scrollBy(x-coord, y-coord);
+element.scrollBy(options)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code><var>x-coord</var></code> は、スクロールしたい水平ピクセル数です。</li>
- <li><code><var>y-coord</var></code> は、スクロールしたい垂直ピクセル数です。</li>
-</ul>
+- `x-coord` は、スクロールしたい水平ピクセル数です。
+- `y-coord` は、スクロールしたい垂直ピクセル数です。
 
-<p>- または -</p>
+\- または -
 
-<ul>
- <li><code><var>options</var></code> は {{domxref("ScrollToOptions")}} 辞書です。</li>
-</ul>
+- `options` は {{domxref("ScrollToOptions")}} 辞書です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js notranslate">// 要素をスクロール
+```js
+// 要素をスクロール
 element.scrollBy(300, 300);
-</pre>
+```
 
-<p><code>options</code> を使用する場合:</p>
+`options` を使用する場合:
 
-<pre class="brush: js notranslate">element.scrollBy({
+```js
+element.scrollBy({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-element-scrollby-options-options', 'element.scrollBy()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                             | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{ SpecName('CSSOM View', '#dom-element-scrollby-options-options', 'element.scrollBy()') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.scrollBy")}}</p>
+{{Compat("api.Element.scrollBy")}}

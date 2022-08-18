@@ -7,39 +7,39 @@ tags:
   - 翻訳中
 translation_of: Web/API/Element/removeAttributeNode
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Summary" name="Summary">Summary</h3>
+### Summary
 
-<p><code>removeAttributeNode</code> removes the specified attribute from the current element.</p>
+`removeAttributeNode` removes the specified attribute from the current element.
 
-<h3 id="Syntax" name="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval"><em>removedAttr</em> =<em>element</em>.removeAttributeNode(<em>attributeNode</em>)
-</pre>
+```
+removedAttr =element.removeAttributeNode(attributeNode)
+```
 
-<ul>
- <li><code>attributeNode</code> is the <code>Attr</code> node that needs to be removed.</li>
- <li><code>removedAttr</code> is the removed <code>Attr</code> node.</li>
-</ul>
+- `attributeNode` is the `Attr` node that needs to be removed.
+- `removedAttr` is the removed `Attr` node.
 
-<h3 id="Example" name="Example">Example</h3>
+### Example
 
-<pre>// &lt;div id="top" align="center" /&gt;
+```
+// <div id="top" align="center" />
 var d = document.getElementById("top");
 var d_align = d.getAttributeNode("align");
 d.removeAttributeNode(d_align);
 // align has a default value, center,
 // so the removed attribute is immediately
-// replaced: &lt;div id="top" align="center" /&gt;
-</pre>
+// replaced: <div id="top" align="center" />
+```
 
-<h3 id="Notes" name="Notes">Notes</h3>
+### Notes
 
-<p>If the removed Attribute has a default value it is immediately replaced. The replacing attribute has the same namespace URI and local name, as well as the original prefix, when applicable.</p>
+If the removed Attribute has a default value it is immediately replaced. The replacing attribute has the same namespace URI and local name, as well as the original prefix, when applicable.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h3 id="Specification" name="Specification">Specification</h3>
+### Specification
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198">DOM Level 2 Core: removeAttributeNode</a> (introduced in <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode">DOM Level 1 Core</a>)</p>
+[DOM Level 2 Core: removeAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode))
