@@ -42,7 +42,7 @@
 /zh-TW/docs/Core_JavaScript_1.5_教學/區塊語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling
 /zh-TW/docs/Core_JavaScript_1.5_教學/字面表達	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_d57082c2207b466127d8dc34a980addf
 /zh-TW/docs/Core_JavaScript_1.5_教學/常數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_e5a53691c318855e3342ad91feb78f2e
-/zh-TW/docs/Core_JavaScript_1.5_教學/建立新的物件	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件
+/zh-TW/docs/Core_JavaScript_1.5_教學/建立新的物件	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 /zh-TW/docs/Core_JavaScript_1.5_教學/建立新的物件/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/Core_JavaScript_1.5_教學/循環語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_a2d11ceeaeb3cb8c43292be7771f9b23
 /zh-TW/docs/Core_JavaScript_1.5_教學/循環語法/break_語法	/zh-TW/docs/Web/JavaScript/Reference/Statements/break
@@ -199,7 +199,7 @@
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/區塊語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/字面表達	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_d57082c2207b466127d8dc34a980addf
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/常數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_e5a53691c318855e3342ad91feb78f2e
-/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/建立新的物件	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件
+/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/建立新的物件	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/建立新的物件/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/循環語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_a2d11ceeaeb3cb8c43292be7771f9b23
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/循環語法/break_語法	/zh-TW/docs/Web/JavaScript/Reference/Statements/break
@@ -296,7 +296,7 @@
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/區塊語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/字面表達	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_d57082c2207b466127d8dc34a980addf
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/常數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_e5a53691c318855e3342ad91feb78f2e
-/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件
+/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_a2d11ceeaeb3cb8c43292be7771f9b23
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/break_語法	/zh-TW/docs/Web/JavaScript/Reference/Statements/break
@@ -745,7 +745,7 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/區塊語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/字面表達	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_d57082c2207b466127d8dc34a980addf
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/常數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_e5a53691c318855e3342ad91feb78f2e
-/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件
+/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_a2d11ceeaeb3cb8c43292be7771f9b23
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/break_語法	/zh-TW/docs/Web/JavaScript/Reference/Statements/break
