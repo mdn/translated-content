@@ -22280,16 +22280,6 @@
       "Potappo"
     ]
   },
-  "Web/API/Window/controllers": {
-    "modified": "2019-03-23T23:49:47.118Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:27:12.990Z",
     "contributors": [
@@ -22344,15 +22334,6 @@
     "contributors": [
       "teoli",
       "ethertank"
-    ]
-  },
-  "Web/API/Window/directories": {
-    "modified": "2019-03-23T23:49:48.661Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ethertank",
-      "Potappo"
     ]
   },
   "Web/API/Window/document": {
