@@ -157,7 +157,7 @@ if (request.status === 200) {
 
 ### 例子：在 `Worker` 中使用 HTTP 同步请求
 
-在 [`Worker`](/zh-cn/DOM/Worker) 中使用 `XMLHttpRequest` 时，同步请求比异步请求更适合。
+在 [`Worker`](/zh-CN/DOM/Worker) 中使用 `XMLHttpRequest` 时，同步请求比异步请求更适合。
 
 **`example.html`** (主页):
 
@@ -180,13 +180,13 @@ if (request.status === 200) {
 </html>
 ```
 
-**`myFile.txt`** ( [`XMLHttpRequest`](/zh-cn/DOM/XMLHttpRequest)对象同步请求的文件):
+**`myFile.txt`** ( [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest)对象同步请求的文件):
 
 ```
 Hello World!!
 ```
 
-**`myTask.js`** (包含了[`Worker`](/zh-cn/DOM/Worker)代码):
+**`myTask.js`** (包含了[`Worker`](/zh-CN/DOM/Worker)代码):
 
 ```js
 self.onmessage = function (oEvent) {
@@ -201,7 +201,7 @@ self.onmessage = function (oEvent) {
 
 > **备注：** 由于使用了`Worker`，所以该请求实际上也是异步的。
 
-可以使用类似的方法，让脚本在后台与服务器交互，预加载某些内容。查看[使用 Web workers](/zh-cn/DOM/Using_web_workers)了解更多详情。
+可以使用类似的方法，让脚本在后台与服务器交互，预加载某些内容。查看[使用 Web workers](/zh-CN/DOM/Using_web_workers)了解更多详情。
 
 ### 将同步 XHR 用例调整到 Beacon API
 

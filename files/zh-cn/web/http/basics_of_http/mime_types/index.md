@@ -131,7 +131,7 @@ _Multipart_ 类型表示细分领域的文件类型的种类，经常对应不�
 
 ### 音频与视频类型
 
-HTML 并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("video")}}元素所支持的文件类型，所以在 web 上使用的只有相对较小的一组类型。[ ](/zh-CN/docs/Web/HTML/Supported_media_formats)文章 [Media formats supported by the HTML audio and video elements](/zh-CN/docs/Web/HTML/Supported_media_formats) 解释了可以被使用的解码器或视频文件格式。
+HTML 并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("video")}}元素所支持的文件类型，所以在 web 上使用的只有相对较小的一组类型。文章 [Media formats supported by the HTML audio and video elements](/zh-CN/docs/Web/HTML/Supported_media_formats) 解释了可以被使用的解码器或视频文件格式。
 
 在 web 环境最常用的视频文件的格式，是以下这些这些文件类型：
 

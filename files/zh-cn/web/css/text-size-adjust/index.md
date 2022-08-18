@@ -35,7 +35,7 @@ text-size-adjust: unset;
 
 ## 语法
 
-`text-size-adjust` 属性的值为 [`none`](#none), [`auto`](#auto)，或 [`<percentage>`](#<percentage>)
+`text-size-adjust` 属性的值为 [`none`](#none), [`auto`](#auto)，或 [`<percentage>`](#percentage)
 
 ### 属性值
 

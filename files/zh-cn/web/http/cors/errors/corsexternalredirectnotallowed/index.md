@@ -20,6 +20,6 @@ slug: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
 
 ## 参见
 
-- [HTTP 访问控制（CORS）错误](/zh-cn/docs/Web/HTTP/CORS/Errors)
+- [HTTP 访问控制（CORS）错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
 - [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)

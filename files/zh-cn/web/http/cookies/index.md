@@ -170,7 +170,7 @@ console.log(document.cookie);
 缓解涉及 Cookie 的攻击的方法：
 
 - 使用 `HttpOnly` 属性可防止通过 JavaScript 访问 cookie 值。
-- 用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 `SameSite` 属性设置为`Strict` 或 `Lax`。（请参见上方的 [SameSite Cookie](/zh-CN/docs/Web/HTTP/Cookies$edit#)。）在[支持 SameSite 的浏览器](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility)中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie，因此，这种请求实际上不会向应用服务器进行身份验证。
+- 用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 `SameSite` 属性设置为`Strict` 或 `Lax`。（请参见上方的 [SameSite Cookie](/zh-CN/docs/Web/HTTP/Cookies)。）在[支持 SameSite 的浏览器](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility)中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie，因此，这种请求实际上不会向应用服务器进行身份验证。
 
 ### 会话劫持和 XSS
 

@@ -23,7 +23,7 @@ HTTP 是一个拓展性非常好的协议。它依赖于以下的一些基本概
 - 分离资源的标识和位置：the Alt-Svc HTTP header
   - : 大多数情况下 web 资源的标识和位置是共享的，可通过使用`{{HTTPHeader("Alt-Svc")}}` 头部来改变。
 - [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
-  - : 从 HTTP/1.0 开始，HTTP 协议允许传输不同类型的内容。本文解释了如何通过使用`{{HTTPHeader("Content-Type")}} `首部和 MIME 标准实现这一过程的。
+  - : 从 HTTP/1.0 开始，HTTP 协议允许传输不同类型的内容。本文解释了如何通过使用 `{{HTTPHeader("Content-Type")}}` 首部和 MIME 标准实现这一过程的。
 - [在 www 和非 www URI 间选择](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
   - : 在是否使用 www 前缀的域名这一问题上， 本文解释了不同选择的影响，并给出了具体的实施方法。
 - **[HTTP 会话流程](/zh-CN/docs/Web/HTTP/Flow_of_an_HTTP_session)**

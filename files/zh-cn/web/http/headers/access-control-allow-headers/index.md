@@ -6,7 +6,7 @@ slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 
 响应首部 **`Access-Control-Allow-Headers`** 用于 {{glossary("preflight request")}}（预检请求）中，列出了将会在正式请求的 {{HTTPHeader("Access-Control-Request-Headers")}} 字段中出现的首部信息。
 
-简单首部，如 {{glossary("simple header", "simple headers")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Type")}}（只限于解析后的值为 ` application/x-www-form-urlencoded、`` multipart/form-data  `或 `text/plain 三种 MIME 类型（不包括参数）），它们始终是被支持的，不需要在这个首部特意列出。`
+简单首部，如 {{glossary("simple header", "simple headers")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Type")}}（只限于解析后的值为 `application/x-www-form-urlencoded`、`multipart/form-data` 或 `text/plain` 三种 MIME 类型（不包括参数）），它们始终是被支持的，不需要在这个首部特意列出。
 
 如果请求中含有 {{HTTPHeader("Access-Control-Request-Headers")}} 字段，那么这个首部是必要的。
 

@@ -4,7 +4,7 @@ slug: Web/API/UIEvent/which
 ---
 {{ APIRef("DOM Events") }} {{Deprecated_header}}
 
-{{domxref("KeyboardEvent")}} 接口的 **`which`** 只读属性返回所按下键的数字 `keyCode `或所按下字母数字键的字符代码 (`charCode`) 。
+{{domxref("KeyboardEvent")}} 接口的 **`which`** 只读属性返回所按下键的数字 `keyCode` 或所按下字母数字键的字符代码 (`charCode`) 。
 
 ## 语法
 

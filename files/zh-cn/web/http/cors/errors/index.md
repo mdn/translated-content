@@ -10,8 +10,8 @@ slug: Web/HTTP/CORS/Errors
 
 要了解 CORS 配置的基本问题，您需要找出哪个请求有问题以及原因。步骤如下：
 
-1.  打开有问题的网站并打开开发者工具（[Developer Tools](/zh-CN/docs/Tools)）。
-2.  尝试重现失败的事务并检查控制台（ [console](/zh-CN/docs/Tools/Web_Console)）是否看到 CORS 违规错误消息。它可能看起来像这样：
+1. 打开有问题的网站并打开开发者工具（[Developer Tools](/zh-CN/docs/Tools)）。
+2. 尝试重现失败的事务并检查控制台（ [console](/zh-CN/docs/Tools/Web_Console)）是否看到 CORS 违规错误消息。它可能看起来像这样：
 
 ![Firefox console showing CORS error](cors-error2.png)
 

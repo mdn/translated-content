@@ -29,13 +29,13 @@ slug: Web/HTML/Element/fieldset
 
 你可以以任意方式自行设置 `<fieldset>` 和 `<legend>` 的样式以配合你的页面设计。
 
-> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid ](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
+> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
 
 ## 示例
 
 ### 简单的 fieldset
 
-这个例子展示了一个非常简单的 `<fieldset>`，其中有一个 `<legend> `和一个简单的控件。
+这个例子展示了一个非常简单的 `<fieldset>`，其中有一个 `<legend>`和一个简单的控件。
 
 ```html
 <form action="#">

@@ -10,7 +10,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 
 ## 第一步
 
-WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener ](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx)类。 它位于 _System.Net.Sockets_ 的命名空间。
+WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) 类。 它位于 _System.Net.Sockets_ 的命名空间。
 
 > **备注：** 最好使用 `using` 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。
 
@@ -126,10 +126,10 @@ if (Regex.IsMatch(data, "^GET")) {
 
 你必须：
 
-1.  获取请求头中"Sec-WebSocket-Key"字段的值，这个字段值不能有任何的前导和后继空格字符
-2.  将它与"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"(一个 RFC 6455 中规定的特殊的 GUID ) 拼接起来
-3.  计算新的值的 SHA-1 和 Base64 哈希值
-4.  将哈希值写回到一个 HTTP 响应头，作为"Sec-WebSocket-Accept"字段的值
+1. 获取请求头中"Sec-WebSocket-Key"字段的值，这个字段值不能有任何的前导和后继空格字符
+2. 将它与"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"(一个 RFC 6455 中规定的特殊的 GUID ) 拼接起来
+3. 计算新的值的 SHA-1 和 Base64 哈希值
+4. 将哈希值写回到一个 HTTP 响应头，作为"Sec-WebSocket-Accept"字段的值
 
 ```cpp
 

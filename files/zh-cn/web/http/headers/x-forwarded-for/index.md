@@ -10,7 +10,7 @@ slug: Web/HTTP/Headers/X-Forwarded-For
 
 HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化版本。
 
-`X-Forwarded-For `也是一个电子邮件相关协议中用到的首部，用来表示一封电子邮件是从其他账户转发过来的。
+`X-Forwarded-For` 也是一个电子邮件相关协议中用到的首部，用来表示一封电子邮件是从其他账户转发过来的。
 
 | Header type                                      | {{Glossary("Request header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Feature-Policy
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}**`Feature-Policy`**响应头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。
 
-更多的信息，请查看[Feature Policy](/docs/Web/HTTP/Feature_Policy)
+更多的信息，请查看[Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
 
 | Header type                                      | {{Glossary("Response header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -44,7 +44,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/camera', 'camera')}}
   - : 控制是否允许当前文档使用视频输入设备。当这种规则被启用时，{{domxref("MediaDevices.getUserMedia()")}}返回的 the {{jsxref("Promise")}}会拒绝并抛出错误`NotAllowedError。`
 - {{httpheader('Feature-Policy/document-domain','document-domain')}}
-  - : 控制是否允许当前文档设置{{domxref("document.domain")}}。当这种规则被启用时，尝试设置{{domxref("document.domain")}}会失败并抛出`SecurityError `{{domxref("DOMException")}}异常。
+  - : 控制是否允许当前文档设置{{domxref("document.domain")}}。当这种规则被启用时，尝试设置{{domxref("document.domain")}}会失败并抛出 `SecurityError` {{domxref("DOMException")}}异常。
 - {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
   - : 控制是否允许当前文档使用[Encrypted Media Extensions](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) API (EME)。当这种规则被启用时，{{domxref("Navigator.requestMediaKeySystemAccess()")}}返回的{{domxref("Promise")}}会拒绝并抛出`DOMException`异常。
 - {{httpheader('Feature-Policy/fullscreen','fullscreen')}}

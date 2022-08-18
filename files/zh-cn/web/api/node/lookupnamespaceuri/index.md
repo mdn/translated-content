@@ -11,4 +11,4 @@ slug: Web/API/Node/lookupNamespaceURI
 ### 相关链接
 
 - [http://www.w3.org/TR/DOM-Level-3-Cor...upNamespaceURI](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespaceURI)
-- [Code snippets: lookupNamespaceURI](/zh-cn/Code_snippets/LookupNamespaceURI)
+- [Code snippets: lookupNamespaceURI](/zh-CN/Code_snippets/LookupNamespaceURI)

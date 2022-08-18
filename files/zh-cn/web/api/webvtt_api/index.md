@@ -784,8 +784,8 @@ The methods used in WebVTT are those which are used to alter the cue or region a
 
 There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as ‘.vtt’ file. Steps are given below:
 
-1.  Open a notepad.
-2.  The first line of WebVTT is standardized similar in the way some other languages require you to put headers as the file starts to indicate the file type. One the very first line you have to write.
+1. Open a notepad.
+2. The first line of WebVTT is standardized similar in the way some other languages require you to put headers as the file starts to indicate the file type. One the very first line you have to write.
 
 ```
 WEBVTT
@@ -797,8 +797,8 @@ WEBVTT
 00:01.000 --> 00:05.000
 ```
 
-1.  On the next line you can write the caption for this cue which will run from 1st second to the 5th second, inclusive.
-2.  Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+1. On the next line you can write the caption for this cue which will run from 1st second to the 5th second, inclusive.
+2. Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
 
 ## CSS pseudo-classes
 

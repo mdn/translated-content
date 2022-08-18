@@ -14,7 +14,7 @@ slug: Web/API/NodeList/item
 nodeItem = nodeList.item(index)
 ```
 
-- `nodeList`是一个`NodeList`对象。通常是由某个 DOM 属性或方法返回的，比如[childNodes](/zh-cn/DOM/Node.childNodes).
+- `nodeList`是一个`NodeList`对象。通常是由某个 DOM 属性或方法返回的，比如[childNodes](/zh-CN/DOM/Node.childNodes).
 - `index` 是给定的索引。从 0 开始。
 - `nodeItem` 是根据索引`index` 由 `item` 方法从 `nodeList` 中获取到的节点。
 
@@ -35,7 +35,7 @@ var firstTable = tables.item(1); // 或者简写为 tables[1]，返回一个文�
 
 如果索引越界，该方法不会抛出异常，只会返回 `null`。
 
-`item()` 不是 DOM [元素](/zh-cn/DOM/element)或者 DOM 节点的方法，而是 NodeList 对象的方法。
+`item()` 不是 DOM [元素](/zh-CN/DOM/element)或者 DOM 节点的方法，而是 NodeList 对象的方法。
 
 ### 规范
 

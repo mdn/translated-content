@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
 {{HTTPSidebar}}
 
-请求头 **`Access-Control-Request-Headers `**出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪些请求头。
+请求头 **`Access-Control-Request-Headers`** 出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪些请求头。
 
 | 报头类型                                         | {{Glossary("Request header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -19,7 +19,7 @@ Access-Control-Request-Headers: <header-name>, <header-name>, ...
 ## 指令
 
 - \<header-name>
-  - : 在实际请求中将要包含的一系列 [HTTP ](/zh-CN/docs/Web/HTTP/Headers)头，以逗号分隔。
+  - : 在实际请求中将要包含的一系列 [HTTP](/zh-CN/docs/Web/HTTP/Headers) 头，以逗号分隔。
 
 ## 示例
 

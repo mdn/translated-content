@@ -69,5 +69,5 @@ self.postMessage('I\'m alive!');
 
 ## 另请参阅
 
-- 相关事件：[`messageerror`](/docs/Web/API/Worker/messageerror_event).
+- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/Worker/messageerror_event).
 - [`DedicatedWorkerGlobalScope.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage).
