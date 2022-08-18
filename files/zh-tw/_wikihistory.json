@@ -7294,10 +7294,11 @@
     ]
   },
   "Web/JavaScript/Reference/Operators/this": {
-    "modified": "2019-03-24T00:01:06.045Z",
+    "modified": "2020-10-15T21:48:46.137Z",
     "contributors": [
-      "teoli",
-      "happysadman"
+      "iigmir",
+      "Rocker",
+      "chloewlin"
     ]
   },
   "Web/JavaScript/Reference/Operators/typeof": {
