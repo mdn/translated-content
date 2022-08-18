@@ -13,114 +13,81 @@ tags:
   - web font
 translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-<div>{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}</div>
+この評価では、コミュニティスクールのホームページ用にテキストを装飾することで、このモジュール全体でカバーしてきたすべてのテキスト装飾テクニックについての理解をテストします。 途中で楽しい時間があるかもしれません。
 
-<p class="summary"><span class="seoSummary">この評価では、コミュニティスクールのホームページ用にテキストを装飾することで、このモジュール全体でカバーしてきたすべてのテキスト装飾テクニックについての理解をテストします。 途中で楽しい時間があるかもしれません。</span></p>
+| 前提知識: | この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。 |
+| --------- | ------------------------------------------------------------------------ |
+| 学習目標: | CSS テキスト装飾テクニックの理解をテストすること。                       |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習目標:</th>
-   <td>CSS テキスト装飾テクニックの理解をテストすること。</td>
-  </tr>
- </tbody>
-</table>
+## 出発点
 
-<h2 id="Starting_point" name="Starting_point">出発点</h2>
+この評価を開始するには、次のことが必要です。
 
-<p>この評価を開始するには、次のことが必要です。</p>
+- 練習用の [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) ファイルと [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) ファイルと、提供されている[外部リンクアイコン](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png)を入手してください。
+- ローカルコンピュータにそれらのコピーを作成します。
 
-<ul>
- <li>練習用の <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html">HTML</a> ファイルと <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css">CSS</a> ファイルと、提供されている<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png">外部リンクアイコン</a>を入手してください。</li>
- <li>ローカルコンピュータにそれらのコピーを作成します。</li>
-</ul>
+> **Note:** **注**: あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、[この URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
-<div class="note">
-<p><strong>注</strong>: あるいは、<a class="external external-icon" href="https://jsbin.com/">JSBin</a> や <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、<a href="http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png">この URL</a> を使用して背景画像を指定することができます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の <code>&lt;style&gt;</code> 要素に自由に配置してください。</p>
-</div>
+## プロジェクトの概要
 
-<h2 id="Project_brief" name="Project_brief">プロジェクトの概要</h2>
+架空のコミュニティカレッジのホームページ用の生の HTML と、ページを 2 列のレイアウトに装飾し、その他の基本的な装飾をする CSS が提供されています。 CSS ファイルの最後にあるコメントの下に CSS の追加部分を書いて、あなたが行った部分に簡単に印を付けることができるようにします。 一部のセレクタがくどくても心配しないで、この場合は見逃してください。
 
-<p>架空のコミュニティカレッジのホームページ用の生の HTML と、ページを2列のレイアウトに装飾し、その他の基本的な装飾をする CSS が提供されています。 CSS ファイルの最後にあるコメントの下に CSS の追加部分を書いて、あなたが行った部分に簡単に印を付けることができるようにします。 一部のセレクタがくどくても心配しないで、この場合は見逃してください。</p>
+フォント
 
-<p>フォント</p>
+- まずはじめに、いくつかの自由に使えるフォントをダウンロードしてください。 これはカレッジですから、フォントはかなり真面目で、形式的で、信頼できる感じをページに与えるために選ばれるべきです — 一般的なテキスト本文のためのサイト全体の serif フォントに、見出しのための sans-serif または slab serif を組み合わせるといいかもしれません。
+- 適切なサービスを使用して、これら 2 つのフォント用の bulletproof `@font-face` コードを生成してください。
+- 本文フォントをページ全体に適用し、見出しフォントを見出しに適用します。
 
-<ul>
- <li>まずはじめに、いくつかの自由に使えるフォントをダウンロードしてください。 これはカレッジですから、フォントはかなり真面目で、形式的で、信頼できる感じをページに与えるために選ばれるべきです — 一般的なテキスト本文のためのサイト全体の serif フォントに、見出しのための sans-serif または slab serif を組み合わせるといいかもしれません。</li>
- <li>適切なサービスを使用して、これら2つのフォント用の bulletproof <code>@font-face</code> コードを生成してください。</li>
- <li>本文フォントをページ全体に適用し、見出しフォントを見出しに適用します。</li>
-</ul>
+一般的なテキスト装飾
 
-<p>一般的なテキスト装飾</p>
+- サイト全体の `font-size `を `10px` にします。
+- 見出しや他の要素タイプには、適切な相対単位を使用して定義された適切な `font-size` を与えます。
+- 本文に適切な `line-height` を与えます。
+- トップレベルの見出しをページの中央に配置します。
+- 見出しをあまりにも押しつぶしすぎないようにし、文字が少し呼吸できるようにするために、見出しに少し `letter-spacing` を与えます。
+- 必要に応じて、本文に `letter-spacing` と `word-spacing` を与えます。
+- `<section>` の各見出しの後の最初の段落に、`20px` で、少し `text-indent` を与えます。
 
-<ul>
- <li>サイト全体の <code>font-size </code>を <code>10px</code> にします。</li>
- <li>見出しや他の要素タイプには、適切な相対単位を使用して定義された適切な <code>font-size</code> を与えます。</li>
- <li>本文に適切な <code>line-height</code> を与えます。</li>
- <li>トップレベルの見出しをページの中央に配置します。</li>
- <li>見出しをあまりにも押しつぶしすぎないようにし、文字が少し呼吸できるようにするために、見出しに少し <code>letter-spacing</code> を与えます。</li>
- <li>必要に応じて、本文に <code>letter-spacing</code> と <code>word-spacing</code> を与えます。</li>
- <li><code>&lt;section&gt;</code> の各見出しの後の最初の段落に、<code>20px</code> で、少し <code>text-indent</code> を与えます。</li>
-</ul>
+リンク
 
-<p>リンク</p>
+- ページの上部と下部にある水平バーの色に合わせて、リンクに訪問、フォーカス、ホバーの状態を設定します。
+- デフォルトでリンクに下線が引かれますが、ホバーするかフォーカスを合わせると下線が消えるようにします。
+- ページ上のすべてのリンクからデフォルトのフォーカスアウトラインを取り除きます。
+- 目立つようにアクティブな状態に著しく異なるスタイルを与えますが、それでも全体的なページデザインに収まるようにします。
+- 外部リンクの隣に外部リンクアイコンが挿入されるようにします。
 
-<ul>
- <li>ページの上部と下部にある水平バーの色に合わせて、リンクに訪問、フォーカス、ホバーの状態を設定します。</li>
- <li>デフォルトでリンクに下線が引かれますが、ホバーするかフォーカスを合わせると下線が消えるようにします。</li>
- <li>ページ上のすべてのリンクからデフォルトのフォーカスアウトラインを取り除きます。</li>
- <li>目立つようにアクティブな状態に著しく異なるスタイルを与えますが、それでも全体的なページデザインに収まるようにします。</li>
- <li>外部リンクの隣に外部リンクアイコンが挿入されるようにします。</li>
-</ul>
+リスト
 
-<p>リスト</p>
+- リストとリスト項目の間隔が、ページ全体のスタイルとうまく一致するようにしてください。 各リスト項目は段落行と同じ `line-height` を持ち、各リストの上下の段落の間隔は同じです。
+- リスト項目に、ページのデザインにふさわしい素敵な行頭記号を付けてください。 カスタムの行頭記号画像を選択するか、それ以外のものを選択するかは、あなた次第です。
 
-<ul>
- <li>リストとリスト項目の間隔が、ページ全体のスタイルとうまく一致するようにしてください。 各リスト項目は段落行と同じ <code>line-height</code> を持ち、各リストの上下の段落の間隔は同じです。</li>
- <li>リスト項目に、ページのデザインにふさわしい素敵な行頭記号を付けてください。 カスタムの行頭記号画像を選択するか、それ以外のものを選択するかは、あなた次第です。</li>
-</ul>
+ナビゲーションメニュー
 
-<p>ナビゲーションメニュー</p>
+- ページのルックアンドフィールが適切になるようにナビゲーションメニューを装飾します。
 
-<ul>
- <li>ページのルックアンドフィールが適切になるようにナビゲーションメニューを装飾します。</li>
-</ul>
+## ヒントとコツ
 
-<h2 id="Hints_and_tips" name="Hints_and_tips">ヒントとコツ</h2>
+- この演習では、HTML を編集する必要はまったくありません。
+- ナビゲーションメニューを必ずしもボタンのように見せる必要はありませんが、ページの横に愚かに見えないように少し高くする必要があります。 また、これを垂直ナビゲーションメニューにする必要があることも忘れないでください。
 
-<ul>
- <li>この演習では、HTML を編集する必要はまったくありません。</li>
- <li>ナビゲーションメニューを必ずしもボタンのように見せる必要はありませんが、ページの横に愚かに見えないように少し高くする必要があります。 また、これを垂直ナビゲーションメニューにする必要があることも忘れないでください。</li>
-</ul>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+次のスクリーンショットは、完成したデザインの外観の例です。
 
-<p>次のスクリーンショットは、完成したデザインの外観の例です。</p>
+![](https://mdn.mozillademos.org/files/12994/example2.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12994/example2.png" style="display: block; height: 1106px; margin: 0px auto; width: 1533px;"></p>
+## 評価
 
-<h2 id="Assessment" name="Assessment">評価</h2>
+組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/typesetting-a-community-school-home-page-assessment/24683)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
 
-<p>組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、<a href="https://discourse.mozilla.org/t/typesetting-a-community-school-home-page-assessment/24683">この演習についてのディスカッションスレッド</a>や <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> の <a href="irc://irc.mozilla.org/mdn">#mdn</a> IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！</p>
+{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-<p>{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}</p>
+## このモジュール内の文書
 
-<p> </p>
-
-<h2 id="In_this_module" name="In_this_module">このモジュール内の文書</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">基本的なテキストとフォントの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_lists">リストの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_links">リンクの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Web_fonts">ウェブフォント</a></li>
- <li><a href="/ja/Learn/CSS/Styling_text/Typesetting_a_homepage">コミュニティスクールのホームページの組版</a></li>
-</ul>
-
-<p> </p>
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
+- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
+- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
+- [コミュニティスクールのホームページの組版](/ja/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -10,123 +10,109 @@ tags:
   - overflow
 translation_of: Learn/CSS/Building_blocks/Overflowing_content
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
-<p><font><font>このレッスンでは、CSS のもう1つの重要な概念である </font></font><strong><font><font>オーバーフロー（</font></font></strong><strong><font><font>overflow）</font></font></strong><font><font>を見ていきます</font><font>。</font><font>オーバーフローは、ボックス内にコンテンツが収まりきらないときに発生します。</font><font>このガイドでは、その詳細とそれらについてどのように対処するかを学びます。</font></font></p>
+このレッスンでは、CSS のもう 1 つの重要な概念である **オーバーフロー（\*\***overflow）\*\*を見ていきます。オーバーフローは、ボックス内にコンテンツが収まりきらないときに発生します。このガイドでは、その詳細とそれらについてどのように対処するかを学びます。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>オーバーフローとその管理方法を理解する。</td>
-  </tr>
- </tbody>
-</table>
+| 前提条件: | 基本的なコンピューターリテラシー、[基本的なソフトウェアがインストールされている](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)こと、[ファイルの扱い](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)）および CSS に関するアイデア（[CSS の第一歩](/ja/docs/Learn/CSS/First_steps)）に関する基本的な知識を得ている。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | オーバーフローとその管理方法を理解する。                                                                                                                                                                                                                                                                                                                                                                               |
 
-<h2 id="What_is_overflow" name="What_is_overflow">オーバーフロー (overflow) とは？</h2>
+## オーバーフロー (overflow) とは？
 
-<p><font><font>CSS のすべてがボックスであり、 </font></font>{{cssxref("width")}} <font><font>と </font></font>{{cssxref("height")}}<font><font>（または </font></font>{{cssxref("inline-size")}} や<font><font> </font></font>{{cssxref("block-size")}}<font><font>) の値を与えることにより、これらのボックスのサイズを制御できることを見てきました。</font><font>オーバーフローはボックス内のコンテンツが多すぎる場合に発生し、快適に収まらないという状態です。</font><font>CSS はこのオーバーフローを管理するためのさまざまなツールを提供しますが、早めに理解しておくと役立つ概念でもあります。</font><font>CSS を書いていると、とりわけ CSS によるレイアウトを深く理解していくにつれ、オーバーフローによく出くわします。</font></font></p>
+CSS のすべてがボックスであり、 {{cssxref("width")}} と {{cssxref("height")}}（または {{cssxref("inline-size")}} や {{cssxref("block-size")}}) の値を与えることにより、これらのボックスのサイズを制御できることを見てきました。オーバーフローはボックス内のコンテンツが多すぎる場合に発生し、快適に収まらないという状態です。CSS はこのオーバーフローを管理するためのさまざまなツールを提供しますが、早めに理解しておくと役立つ概念でもあります。CSS を書いていると、とりわけ CSS によるレイアウトを深く理解していくにつれ、オーバーフローによく出くわします。
 
-<h2 id="CSS_tries_to_avoid_data_loss" name="CSS_tries_to_avoid_data_loss">CSS のデータ損失の回避</h2>
+## CSS のデータ損失の回避
 
-<p>オーバーフローが発生した場合の CSS の既定の動作を示す2つの例を見てみましょう。</p>
+オーバーフローが発生した場合の CSS の既定の動作を示す 2 つの例を見てみましょう。
 
-<p>1つめの例です。まずブロックに <code>height</code> でボックスの高さを制限します。そしてそのスペースよりも多くのコンテンツを追加します。コンテンツはボックスからはみ出し、下の段落にかぶさってしまいます。</p>
+1 つめの例です。まずブロックに `height` でボックスの高さを制限します。そしてそのスペースよりも多くのコンテンツを追加します。コンテンツはボックスからはみ出し、下の段落にかぶさってしまいます。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/overflow/block-overflow.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/overflow/block-overflow.html", '100%', 600)}}
 
-<p>2つめに、インラインとして制限されているボックス内の単語の例です。ボックスは単語が収まらないほど小さいため、ボックスからはみ出てしまいます。</p>
+2 つめに、インラインとして制限されているボックス内の単語の例です。ボックスは単語が収まらないほど小さいため、ボックスからはみ出てしまいます。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/overflow/inline-overflow.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/overflow/inline-overflow.html", '100%', 500)}}
 
-<p><font>CSS のこの既定のアプローチは、コンテンツをかなり乱雑にオーバーフローさせているように感じられるかもしれません。</font><font>追加のコンテンツを非表示にしたり、ボックスを大きくさせたりしないのはなぜなのでしょう。</font></p>
+CSS のこの既定のアプローチは、コンテンツをかなり乱雑にオーバーフローさせているように感じられるかもしれません。追加のコンテンツを非表示にしたり、ボックスを大きくさせたりしないのはなぜなのでしょう。
 
-<p>CSS は可能な限りコンテンツを隠しません。これをやってしまうと、通常は問題となりうるデータ損失が発生するためです。CSS はこのようにコンテンツが消えることを懸念します。コンテンツが消失したことに気付かない可能性があるのは問題だからです。見ている人は消えたことに気付かないかもしれません。フォーム上の送信ボタンが消えてしまい、フォームが完了できない場合それは大きな問題です。代わりに CSS は目に見える方法でオーバーフローしようとします。あなたもしくは訪問者がコンテンツが重なっているという状況に気づき、修正が必要であることを知ることができます。</p>
+CSS は可能な限りコンテンツを隠しません。これをやってしまうと、通常は問題となりうるデータ損失が発生するためです。CSS はこのようにコンテンツが消えることを懸念します。コンテンツが消失したことに気付かない可能性があるのは問題だからです。見ている人は消えたことに気付かないかもしれません。フォーム上の送信ボタンが消えてしまい、フォームが完了できない場合それは大きな問題です。代わりに CSS は目に見える方法でオーバーフローしようとします。あなたもしくは訪問者がコンテンツが重なっているという状況に気づき、修正が必要であることを知ることができます。
 
-<p>ボックスを <code>width</code> または <code>height</code> で制御している場合、CSS は<font>オーバーフローの可能性が管理されていると想定します。</font>一般にボックスにテキストがある場合、ブロックのサイズを制御することは問題になりがちです。例えば、想定していたよりも多くのテキストになってしまったか、フォントサイズを大きくした場合などです。 </p>
+ボックスを `width` または `height` で制御している場合、CSS はオーバーフローの可能性が管理されていると想定します。一般にボックスにテキストがある場合、ブロックのサイズを制御することは問題になりがちです。例えば、想定していたよりも多くのテキストになってしまったか、フォントサイズを大きくした場合などです。
 
-<p><font>次のいくつかのレッスンでは、オーバーフローを起こしにくいサイジング方法を見ていきます。</font><font>固定サイズが必要な場合は、オーバーフローの動作を制御することもできます。</font><font>読み進めましょう。</font></p>
+次のいくつかのレッスンでは、オーバーフローを起こしにくいサイジング方法を見ていきます。固定サイズが必要な場合は、オーバーフローの動作を制御することもできます。読み進めましょう。
 
-<h2 id="The_overflow_property" name="The_overflow_property">overflow プロパティ</h2>
+## overflow プロパティ
 
-<p>{{cssxref("overflow")}} プロパティは要素のオーバーフローを制御し、ブラウザにどのように動作させるかを伝えます。既定値は <code>visible</code> のため、オーバーフロー時にコンテンツは表示されます。</p>
+{{cssxref("overflow")}} プロパティは要素のオーバーフローを制御し、ブラウザにどのように動作させるかを伝えます。既定値は `visible` のため、オーバーフロー時にコンテンツは表示されます。
 
-<p>オーバーフロー時にコンテンツをトリミングしたい場合、<code>overflow: hidden</code> をボックスに指定します。これは文字通り、はみ出たものを見えなくします。これにより内容が隠れてしまうことが起こりうるため、コンテンツが非表示になっても問題にならない場合にのみに限定した方がいいでしょう。</p>
+オーバーフロー時にコンテンツをトリミングしたい場合、`overflow: hidden` をボックスに指定します。これは文字通り、はみ出たものを見えなくします。これにより内容が隠れてしまうことが起こりうるため、コンテンツが非表示になっても問題にならない場合にのみに限定した方がいいでしょう。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 600)}}
 
-<p>コンテンツのオーバーフロー時にスクロールバーを表示したいこともあるでしょう。 <code>overflow: scroll</code> を指定すればコンテンツがオーバーフローしない場合でも、ブラウザーはスクロールバーを表示します。コンテンツに応じてスクロールバーが表示されたり消えたりするのを防ぐため、これが必要な場合があります。</p>
+コンテンツのオーバーフロー時にスクロールバーを表示したいこともあるでしょう。 `overflow: scroll` を指定すればコンテンツがオーバーフローしない場合でも、ブラウザーはスクロールバーを表示します。コンテンツに応じてスクロールバーが表示されたり消えたりするのを防ぐため、これが必要な場合があります。
 
-<p><strong><font><font>下のボックスからコンテンツの一部を削除すると、スクロールするものがなくてもスクロールバー（または少なくともトラック部品）が残っていることがわかります。</font></font></strong></p>
+**下のボックスからコンテンツの一部を削除すると、スクロールするものがなくてもスクロールバー（または少なくともトラック部品）が残っていることがわかります。**
 
-<p>{{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 600)}}
 
-<p>上記の例では <code>y</code> 軸のスクロールバーだけがあればいいのですが、横スクロールバーも表示されてしまいます。{{cssxref("overflow-y")}} プロパティを使えば、<code>y</code> 軸のみのスクロールバーを指定できます。</p>
+上記の例では `y` 軸のスクロールバーだけがあればいいのですが、横スクロールバーも表示されてしまいます。{{cssxref("overflow-y")}} プロパティを使えば、`y` 軸のみのスクロールバーを指定できます。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
 
-<p>{{cssxref("overflow-x")}} を使用して、x 軸のみのスクロールバーを表示できますが、文字が見切れてしまうことの回避策としては推奨されません。小さなボックスで長い文字列を処理する場合は、{{cssxref("word-break")}} や {{cssxref("overflow-wrap")}} を検討してください。<a href="/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS によるサイズ設定</a> で説明した方法のいくつかは、さまざまな量のコンテンツに適切に対応するボックスを作成するのに役立つ場合があります。</p>
+{{cssxref("overflow-x")}} を使用して、x 軸のみのスクロールバーを表示できますが、文字が見切れてしまうことの回避策としては推奨されません。小さなボックスで長い文字列を処理する場合は、{{cssxref("word-break")}} や {{cssxref("overflow-wrap")}} を検討してください。[CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) で説明した方法のいくつかは、さまざまな量のコンテンツに適切に対応するボックスを作成するのに役立つ場合があります。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
 
-<p><code>scroll</code> にしておけばコンテンツが少ないとしても、それとは関係なくスクロールバーは常に表示されます。</p>
+`scroll` にしておけばコンテンツが少ないとしても、それとは関係なくスクロールバーは常に表示されます。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: <code>overflow</code> プロパティでは  x と y の2つの値を渡すことができることに注意してください。2つのキーワードが指定されている場合、ひとつめは <code>overflow-x</code>、2つめは <code>overflow-y</code> として適用されます。それ以外の場合は <code>overflow-x</code> と <code>overflow-y</code> の両方に同じ値が設定されます。例えば、<code>overflow: scroll hidden</code> とした場合は、<code>overflow-x</code> は <code>scroll</code>、<code>overflow-y</code> は <code>hidden</code> となります。</p>
-</div>
+> **Note:** **注**: `overflow` プロパティでは x と y の 2 つの値を渡すことができることに注意してください。2 つのキーワードが指定されている場合、ひとつめは `overflow-x`、2 つめは `overflow-y` として適用されます。それ以外の場合は `overflow-x` と `overflow-y` の両方に同じ値が設定されます。例えば、`overflow: scroll hidden` とした場合は、`overflow-x` は `scroll`、`overflow-y` は `hidden` となります。
 
-<p>コンテンツがボックスに収まらない場合にのみ、スクロールバーを表示する場合は <code>overflow: auto</code> を使用します。<font>この場合、スクロールバーを表示するかどうかはブラウザーによります。</font><font>通常、デスクトップブラウザはコンテンツがオーバーフローする場合にのみそうします。</font></p>
+コンテンツがボックスに収まらない場合にのみ、スクロールバーを表示する場合は `overflow: auto` を使用します。この場合、スクロールバーを表示するかどうかはブラウザーによります。通常、デスクトップブラウザはコンテンツがオーバーフローする場合にのみそうします。
 
-<p><strong>以下の例では、ボックスに収まるまでコンテンツを削除していくとスクロールバーが消えます。</strong></p>
+**以下の例では、ボックスに収まるまでコンテンツを削除していくとスクロールバーが消えます。**
 
-<p>{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 600)}}
 
-<h2 id="Overflow_establishes_a_Block_Formatting_Context" name="Overflow_establishes_a_Block_Formatting_Context">オーバーフローとブロック整形コンテキスト</h2>
+## オーバーフローとブロック整形コンテキスト
 
-<p>CSS には <strong>ブロック整形コンテキスト</strong> (BFC = Block Formatting Context) の概念があります。<font>これは今のところあまり気にする必要はありませんが、</font><code>scroll</code> や <code>auto</code> などのオーバーフローの設定で BFC が作成されることを知っておくと便利です。結果として <code>overflow</code> の値を変更したボックスのコンテンツは、独自のミニレイアウトになります。コンテナの外側の物は中に突っ込むことができず、ボックスから周囲のレイアウトに突き出すこともできません。これによってボックスにはすべてのコンテンツが含まれており、かつ、ページ上の他のアイテムと重ならないという、一貫したスクロール体験を生み出します。</p>
+CSS には **ブロック整形コンテキスト** (BFC = Block Formatting Context) の概念があります。これは今のところあまり気にする必要はありませんが、`scroll` や `auto` などのオーバーフローの設定で BFC が作成されることを知っておくと便利です。結果として `overflow` の値を変更したボックスのコンテンツは、独自のミニレイアウトになります。コンテナの外側の物は中に突っ込むことができず、ボックスから周囲のレイアウトに突き出すこともできません。これによってボックスにはすべてのコンテンツが含まれており、かつ、ページ上の他のアイテムと重ならないという、一貫したスクロール体験を生み出します。
 
-<h2 id="Unwanted_overflow_in_web_design" name="Unwanted_overflow_in_web_design">オーバーフローの望ましくないウェブデザイン</h2>
+## オーバーフローの望ましくないウェブデザイン
 
-<p>モダンなレイアウト手法（<a href="/ja/docs/Learn/CSS/CSS_layout">CSS レイアウト</a> モジュールで説明）では、オーバーフローを管理します。これらの方法は、ウェブページ上にどれだけのコンテンツが存在するかについての仮定や依存関係なしに大きく機能します。</p>
+モダンなレイアウト手法（[CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout) モジュールで説明）では、オーバーフローを管理します。これらの方法は、ウェブページ上にどれだけのコンテンツが存在するかについての仮定や依存関係なしに大きく機能します。
 
-<p>しかし過去には開発者は多くの場合、固定された高さを使用して、実際には互いに関係のないボックスの底を揃えようとしました。<font>それは脆く、レガシーなアプリケーションでは、コンテンツが他のコンテンツに重なってしまっているのを見かけることがあります。</font><font>それによってオーバーフローが起きていることがわかります。</font><font>理想としては、ボックスサイズの固定に依存しないようにレイアウトを調整します。</font></p>
+しかし過去には開発者は多くの場合、固定された高さを使用して、実際には互いに関係のないボックスの底を揃えようとしました。それは脆く、レガシーなアプリケーションでは、コンテンツが他のコンテンツに重なってしまっているのを見かけることがあります。それによってオーバーフローが起きていることがわかります。理想としては、ボックスサイズの固定に依存しないようにレイアウトを調整します。
 
-<p>サイトを開発するときは、常にオーバーフローの問題に留意する必要があります。大量のコンテンツと少量のコンテンツを含むデザインをテストし、テキストのフォントサイズを大きくし、CSS が堅牢に対処できていると確認する必要があります。オーバーフローの値を変更してコンテンツを非表示にしたりスクロールバーを追加したりするのは、特別な場合（例えばスクロールが本当に必要な場合など）にのみ使うべきです。</p>
+サイトを開発するときは、常にオーバーフローの問題に留意する必要があります。大量のコンテンツと少量のコンテンツを含むデザインをテストし、テキストのフォントサイズを大きくし、CSS が堅牢に対処できていると確認する必要があります。オーバーフローの値を変更してコンテンツを非表示にしたりスクロールバーを追加したりするのは、特別な場合（例えばスクロールが本当に必要な場合など）にのみ使うべきです。
 
-<h2 id="あなたのスキルをテストしてみてください!">あなたのスキルをテストしてみてください!</h2>
+## あなたのスキルをテストしてみてください!
 
-<p>このレッスンで吸収すべきことはたくさんあります！ あなたは最も重要な情報を覚えていますか？ あなたの理解度を確認するには、<a href="/ja/docs/Learn/CSS/Building_blocks/Overflow_Tasks">Test your skills: overflow</a> を参照してください。</p>
+このレッスンで吸収すべきことはたくさんあります！ あなたは最も重要な情報を覚えていますか？ あなたの理解度を確認するには、[Test your skills: overflow](/ja/docs/Learn/CSS/Building_blocks/Overflow_Tasks) を参照してください。
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p><font>この短いレッスンではオーバーフローの概念を紹介しました。CSS はオーバーフローしたコンテンツが見えなくなることによる、データ損失の回避を試みることを理解しました。潜在的なオーバーフローを管理できること、また、問題のあるオーバーフローを引き起こしてしまわないかを確認する必要があることもわかりました。</font></p>
+この短いレッスンではオーバーフローの概念を紹介しました。CSS はオーバーフローしたコンテンツが見えなくなることによる、データ損失の回避を試みることを理解しました。潜在的なオーバーフローを管理できること、また、問題のあるオーバーフローを引き起こしてしまわないかを確認する必要があることもわかりました。
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}</p>
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<ol>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">CSS セレクター</a>
-  <ul>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">要素・クラス・ID によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">属性によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">擬似クラスおよび疑似要素によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators">結合子</a></li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">ボックスモデル</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">背景と枠線</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">テキスト方向の操作</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Overflowing_content">要素のはみ出し（オーバーフロー）</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Values_and_units">CSS の値と単位</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS によるサイズ設定</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements">画像・メディア・フォーム要素</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Styling_tables">表のスタイリング</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS">CSS のデバッグ</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Organizing">CSS の整理</a></li>
-</ol>
+1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+
+    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
+11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

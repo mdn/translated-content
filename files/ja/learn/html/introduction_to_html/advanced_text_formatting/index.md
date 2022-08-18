@@ -14,98 +14,85 @@ tags:
   - semantic
 translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}</div>
+テキストの書式設定のための HTML には他にも多くの要素がありますが、これは [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます。（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマーキングについて学習します。
 
-<p class="summary">テキストの書式設定のための HTML には他にも多くの要素がありますが、これは <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML テキストの基礎</a> には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます。（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマーキングについて学習します。</p>
+| 前提条件: | [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)に載っている、基本的な HTML に精通していること。[HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)に載っている、HTML テキストフォーマット。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | 高度な意味付け機能をマークアップするための、あまり知られていない HTML 要素を学ぶ。                                                                                                                                                                   |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTML入門</a>に載っている、基本的なHTMLに精通していること。<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML テキストの基礎</a>に載っている、HTMLテキストフォーマット。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>高度な意味付け機能をマークアップするための、あまり知られていないHTML要素を学ぶ。</td>
-  </tr>
- </tbody>
-</table>
+## 説明リスト
 
-<h2 id="Description_lists" name="Description_lists">説明リスト</h2>
+HTML テキストの基礎では、HTML で [基本的なリストをマークアップする](/ja/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists)方法を見てきました、しかしたまに出てくる第 3 のリスト — **説明リスト** — については触れていませんでした。このリストの目的は、項目とそれに関連する説明を一緒にマークアップすることで、用語の定義や、質問と回答などに使います。用語の定義の例を見てみましょう:
 
-<p>HTML テキストの基礎では、HTMLで <a href="/ja/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">基本的なリストをマークアップする</a>方法を見てきました、しかしたまに出てくる第3のリスト — <strong>説明リスト</strong> — については触れていませんでした。このリストの目的は、項目とそれに関連する説明を一緒にマークアップすることで、用語の定義や、質問と回答などに使います。用語の定義の例を見てみましょう:</p>
-
-<pre class="notranslate">soliloquy
+```
+soliloquy
 In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
 monologue
 In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
 aside
-In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information</pre>
+In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information
+```
 
-<p>説明リストは他の種類のリストと違うラッパーを使います — {{htmlelement("dl")}} です; それぞれの用語が {{htmlelement("dt")}} (description term; 説明用語) 要素で囲まれて、それぞれの説明は {{htmlelement("dd")}} (description definition; 説明定義) 要素で囲まれます。例のマークアップを完了しましょう:</p>
+説明リストは他の種類のリストと違うラッパーを使います — {{htmlelement("dl")}} です; それぞれの用語が {{htmlelement("dt")}} (description term; 説明用語) 要素で囲まれて、それぞれの説明は {{htmlelement("dd")}} (description definition; 説明定義) 要素で囲まれます。例のマークアップを完了しましょう:
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;dt&gt;独白( soliloquy )&lt;/dt&gt;
-  &lt;dd&gt;ドラマでは、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を(他の登場人物ではなく)観客に対して表現します。&lt;/dd&gt;
-  &lt;dt&gt;独白( monologue)&lt;/dt&gt;
-  &lt;dd&gt;ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋ります。&lt;/dd&gt;
-  &lt;dt&gt;ひそひそ話&lt;/dt&gt;
-  &lt;dd&gt;ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。&lt;/dd&gt;
-&lt;/dl&gt;</pre>
-
-<p>ブラウザーデフォルトのスタイルでは、説明を用語からいくらかインデントします。MDN のスタイルはこの慣習にほぼ従いますが、用語を太字にします。</p>
-
+```html
 <dl>
- <dt>独白 (soliloquy)</dt>
- <dd>ドラマでは、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を(他の登場人物ではなく)観客に対して表現します。</dd>
- <dt>独白 (monologue)</dt>
- <dd>ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋ります。</dd>
- <dt>ひそひそ話</dt>
- <dd>ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。</dd>
+  <dt>独白( soliloquy )</dt>
+  <dd>ドラマでは、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を(他の登場人物ではなく)観客に対して表現します。</dd>
+  <dt>独白( monologue)</dt>
+  <dd>ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋ります。</dd>
+  <dt>ひそひそ話</dt>
+  <dd>ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。</dd>
 </dl>
+```
 
-<p>注意として、単独の用語に複数の説明をつけるのも許されます、例えば:</p>
+ブラウザーデフォルトのスタイルでは、説明を用語からいくらかインデントします。MDN のスタイルはこの慣習にほぼ従いますが、用語を太字にします。
 
-<dl>
- <dt>余談</dt>
- <dd>ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。</dd>
- <dd>文章では、現在のトピックに関連するが、主な流れには直接くっつけずに脇に置かれるコンテンツの節 (しばしば脇の囲みの中に置かれる)。</dd>
-</dl>
+- 独白 (soliloquy)
+  - : ドラマでは、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を(他の登場人物ではなく)観客に対して表現します。
+- 独白 (monologue)
+  - : ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋ります。
+- ひそひそ話
+  - : ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。
 
-<h3 id="Active_learning_Marking_up_a_set_of_definitions" name="Active_learning_Marking_up_a_set_of_definitions">アクティブ学習: 定義をマークアップする</h3>
+注意として、単独の用語に複数の説明をつけるのも許されます、例えば:
 
-<p>では実際に説明リストを使ってみましょう。ここでは以下の入力フィールドの生テキストをマークアップし、説明リストとして表示されるようにします。あなたがお好きな用語と説明を使って試してみることもできます。</p>
+<dl><dt>余談</dt><dd>ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。</dd><dd>文章では、現在のトピックに関連するが、主な流れには直接くっつけずに脇に置かれるコンテンツの節 (しばしば脇の囲みの中に置かれる)。</dd></dl>
 
-<p>もし何かミスをしても、リセットボタンでいつでも元に戻すことができます。詰まってしまったら「Show solution」ボタンを押して解答を見ましょう。</p>
+### アクティブ学習: 定義をマークアップする
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+では実際に説明リストを使ってみましょう。ここでは以下の入力フィールドの生テキストをマークアップし、説明リストとして表示されるようにします。あなたがお好きな用語と説明を使って試してみることもできます。
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+もし何かミスをしても、リセットボタンでいつでも元に戻すことができます。詰まってしまったら「Show solution」ボタンを押して解答を見ましょう。
 
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
+```html hidden
+<h2>Live output</h2>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+<div class="output" style="min-height: 50px;">
+</div>
 
-&lt;textarea id="code" class="input" style="min-height: 100px; width: 95%"&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Bacon
 The glue that binds the world together.
 Eggs
 The glue that binds the cake together.
 Coffee
 The drink that gets the world running in the morning.
-A light brown color.&lt;/textarea&gt;
+A light brown color.</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -123,9 +110,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -155,7 +144,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;dl&gt;\n &lt;dt&gt;Bacon&lt;/dt&gt;\n &lt;dd&gt;The glue that binds the world together.&lt;/dd&gt;\n &lt;dt&gt;Eggs&lt;/dt&gt;\n &lt;dd&gt;The glue that binds the cake together.&lt;/dd&gt;\n &lt;dt&gt;Coffee&lt;/dt&gt;\n &lt;dd&gt;The drink that gets the world running in the morning.&lt;/dd&gt;\n &lt;dd&gt;A light brown color.&lt;/dd&gt;\n&lt;/dl&gt;';
+var htmlSolution = '<dl>\n <dt>Bacon</dt>\n <dd>The glue that binds the world together.</dd>\n <dt>Eggs</dt>\n <dd>The glue that binds the cake together.</dd>\n <dt>Coffee</dt>\n <dd>The drink that gets the world running in the morning.</dd>\n <dd>A light brown color.</dd>\n</dl>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -201,109 +190,109 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 350, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 350, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Quotations" name="Quotations">引用</h2>
+## 引用
 
-<p>HTML には引用をマークアップするための機能もあります。どちらの要素を使用するかは、ブロックとインラインのどちらの引用をマークアップするかによって異なります。</p>
+HTML には引用をマークアップするための機能もあります。どちらの要素を使用するかは、ブロックとインラインのどちらの引用をマークアップするかによって異なります。
 
-<h3 id="Blockquotes" name="Blockquotes">ブロッククォート</h3>
+### ブロッククォート
 
-<p>ブロックレベルのコンテンツのセクション (段落、複数段落、リストなど) が他の場所から引用されている場合は、それを表すために {{htmlelement("blockquote")}} 要素で囲む必要があります。{{htmlattrxref("cite","blockquote")}} 属性内に引用のソースを指す URL を含めます。たとえば、次のマークアップは MDN の <code>&lt;blockquote&gt;</code> 要素ページから取得されます。</p>
+ブロックレベルのコンテンツのセクション (段落、複数段落、リストなど) が他の場所から引用されている場合は、それを表すために {{htmlelement("blockquote")}} 要素で囲む必要があります。{{htmlattrxref("cite","blockquote")}} 属性内に引用のソースを指す URL を含めます。たとえば、次のマークアップは MDN の `<blockquote>` 要素ページから取得されます。
 
-<pre class="brush: html notranslate">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;</pre>
+```html
+<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+```
 
-<p>これをブロッククォートにするには、次のようにします。</p>
+これをブロッククォートにするには、次のようにします。
 
-<pre class="brush: html notranslate">&lt;blockquote cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote"&gt;
-  &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-  Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
-&lt;/blockquote&gt;</pre>
+```html
+<blockquote cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+```
 
-<p>ブラウザのデフォルトのスタイル設定では、これがインデントされた段落として、それが引用であることを示すインジケータとして表示されます。MDN はこれを行いますが、さらにいくつかのスタイルを追加します。</p>
+ブラウザのデフォルトのスタイル設定では、これがインデントされた段落として、それが引用であることを示すインジケータとして表示されます。MDN はこれを行いますが、さらにいくつかのスタイルを追加します。
+
+> **HTML `<blockquote>` \*\***要素\*\* (または _HTML Block Quotation 要素_) は、囲まれたテキストが拡張引用符であることを示します。
+
+### インラインクォート
+
+インラインの引用は、{{htmlelement("q")}} 要素を使用することを除いて、まったく同じ方法で機能します。例えば、以下のマークアップには MDN の `<q>` ページからの引用が含まれています。
+
+```html
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q></p>
+```
+
+ブラウザーのデフォルトのスタイル設定では、これは引用符で囲まれた通常のテキストとしてレンダリングされ、次のようになります。
+
+quote 要素 — `<q>` — は "段落区切りを必要としない短い引用のためのもの" です。
+
+### 引用元
+
+{{htmlattrxref("cite","blockquote")}} 属性の内容は役に立ちそうに見えますが、残念ながらブラウザ、スクリーンリーダーなどはこれについてあまり機能しません。 JavaScript または CSS を使用して独自のソリューションを作成しない限り、ブラウザに引用元の内容を表示させる方法はありません。引用元のソースをページ上で利用可能にしたい場合は、それをマークアップするためのより良い方法は、{{htmlelement("cite")}} 要素を quote 要素の隣 (または内側) に置くことです。これはまさに引用したリソースのタイトル — 例えば本の名前 — を含むことを意味しますが、とにかく、 `<cite>` 内のテキストを何らかの方法で引用ソースにリンクできない理由はありません。
+
+```html
+<p>According to the <a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+<cite>MDN blockquote page</cite></a>:
+</p>
 
 <blockquote cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
-<p><strong>HTML <code>&lt;blockquote&gt;</code> </strong><strong>要素</strong> (または <em>HTML Block Quotation 要素</em>) は、囲まれたテキストが拡張引用符であることを示します。</p>
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
 
-<h3 id="Inline_quotations" name="Inline_quotations">インラインクォート</h3>
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
+<cite>MDN q page</cite></a>.</p>
+```
 
-<p>インラインの引用は、{{htmlelement("q")}} 要素を使用することを除いて、まったく同じ方法で機能します。例えば、以下のマークアップには MDN の <code>&lt;q&gt;</code> ページからの引用が含まれています。</p>
+引用は、デフォルトではイタリック体で表示されています。あなたは [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html) の例で動作しているこのコードを見ることができます。
 
-<pre class="brush: html notranslate">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q"&gt;intended
-for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</pre>
+### アクティブラーニング: 誰がそう言ったの？
 
-<div title="Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:">ブラウザーのデフォルトのスタイル設定では、これは引用符で囲まれた通常のテキストとしてレンダリングされ、次のようになります。</div>
+もう一つのアクティブラーニングの時間です！ この例では、あなたにお願いします。
 
-<div title="Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:"></div>
+1.  中央の段落を `cite` 属性を含むブロッククォートにします。
+2.  3 番目の段落の一部を、`cite` 属性を含むインライン引用に変換します。
+3.  各リンクに `<cite>` 要素を含めます。
 
-<p>quote 要素 — <code>&lt;q&gt;</code> — は "段落区切りを必要としない短い引用のためのもの" です。</p>
+必要な引用元は以下のとおりです。
 
-<h3 id="Citations" name="Citations">引用元</h3>
+- Confucius の引用については http\://www\.brainyquote.com/quotes/authors/c/confucius.html
+- http\://www\.affirmationsforpositivethinking.com/index.htm「The Need To Eliminate Negative Self Talk」用
 
-<p>{{htmlattrxref("cite","blockquote")}} 属性の内容は役に立ちそうに見えますが、残念ながらブラウザ、スクリーンリーダーなどはこれについてあまり機能しません。 JavaScript または CSS を使用して独自のソリューションを作成しない限り、ブラウザに引用元の内容を表示させる方法はありません。引用元のソースをページ上で利用可能にしたい場合は、それをマークアップするためのより良い方法は、{{htmlelement("cite")}} 要素を quote 要素の隣 (または内側) に置くことです。これはまさに引用したリソースのタイトル — 例えば本の名前 — を含むことを意味しますが、とにかく、 <code>&lt;cite&gt;</code> <span class="tlid-translation translation" lang="ja"><span title="">内のテキストを何らかの方法で引用ソースにリンクできない理由はありません。</span></span></p>
+間違えた場合は、リセットボタンを使用していつでもリセットできます。本当に動けなくなったら、_Show solution_ ボタンを押して答えを見てください。
 
-<pre class="brush: html notranslate">&lt;p&gt;According to the &lt;a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote"&gt;
-&lt;cite&gt;MDN blockquote page&lt;/cite&gt;&lt;/a&gt;:
-&lt;/p&gt;
+```html hidden
+<h2>Live output</h2>
 
-&lt;blockquote cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote"&gt;
-  &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-  Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
-&lt;/blockquote&gt;
+<div class="output" style="min-height: 50px;">
+</div>
 
-&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q"&gt;intended
-for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q"&gt;
-&lt;cite&gt;MDN q page&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;</pre>
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<p>引用は、デフォルトではイタリック体で表示されています。あなたは <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html">quotations.html</a> の例で動作しているこのコードを見ることができます。</p>
+<textarea id="code" class="input" style="min-height: 150px; width: 95%">
+<p>Hello and welcome to my motivation page. As Confucius once said:</p>
+<p>It does not matter how slowly you go as long as you do not stop.</p>
+<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)</p>
+</textarea>
 
-<h3 id="Active_learning_Who_said_that" name="Active_learning_Who_said_that">アクティブラーニング: 誰がそう言ったの？</h3>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<p>もう一つのアクティブラーニングの時間です！ この例では、あなたにお願いします。</p>
-
-<ol>
- <li>中央の段落を <code>cite</code> 属性を含むブロッククォートにします。</li>
- <li>3番目の段落の一部を、<code>cite</code> 属性を含むインライン引用に変換します。</li>
- <li>各リンクに <code>&lt;cite&gt;</code> 要素を含めます。</li>
-</ol>
-
-<p>必要な引用元は以下のとおりです。</p>
-
-<ul>
- <li>Confucius の引用については http://www.brainyquote.com/quotes/authors/c/confucius.html</li>
- <li>http://www.affirmationsforpositivethinking.com/index.htm「The Need To Eliminate Negative Self Talk」用</li>
-</ul>
-
-<p>間違えた場合は、リセットボタンを使用していつでもリセットできます。本当に動けなくなったら、<em>Show solution</em> ボタンを押して答えを見てください。</p>
-
-<div class="hidden">
-<h6 id="Playable_code_2" name="Playable_code_2">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="input" style="min-height: 150px; width: 95%"&gt;
-&lt;p&gt;Hello and welcome to my motivation page. As Confucius once said:&lt;/p&gt;
-&lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;
-&lt;p&gt;I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)&lt;/p&gt;
-&lt;/textarea&gt;
-
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -321,9 +310,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -353,7 +344,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;p&gt;Hello and welcome to my motivation page. As &lt;a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;&lt;cite&gt;Confucius&lt;/cite&gt;&lt;/a&gt; once said:&lt;/p&gt;\n\n&lt;blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;\n &lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;I also love the concept of positive thinking, and &lt;q cite="http://www.affirmationsforpositivethinking.com/index.htm"&gt;The Need To Eliminate Negative Self Talk&lt;/q&gt; (as mentioned in &lt;a href="http://www.affirmationsforpositivethinking.com/index.htm"&gt;&lt;cite&gt;Affirmations for Positive Thinking&lt;/cite&gt;&lt;/a&gt;.)&lt;/p&gt;';
+var htmlSolution = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -399,54 +390,54 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 450, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code_2', 700, 450, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Abbreviations" name="Abbreviations">略語</h2>
+## 略語
 
-<p>Web を見回すときに見かけるもう1つのかなり一般的な要素は {{htmlelement("abbr")}} です — これは略語や頭字語を囲み、その用語の完全な展開 (これは{{htmlattrxref("title")}} <span class="tlid-translation translation" lang="ja"><span title="">属性内に含まれる</span></span>) を提供するために使用されます。例をいくつか見てみましょう。</p>
+Web を見回すときに見かけるもう 1 つのかなり一般的な要素は {{htmlelement("abbr")}} です — これは略語や頭字語を囲み、その用語の完全な展開 (これは{{htmlattrxref("title")}} 属性内に含まれる) を提供するために使用されます。例をいくつか見てみましょう。
 
-<pre class="notranslate">&lt;p&gt;We use &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; to structure our web documents.&lt;/p&gt;
-
-&lt;p&gt;I think &lt;abbr title="Reverend"&gt;Rev.&lt;/abbr&gt; Green did it in the kitchen with the chainsaw.&lt;/p&gt;</pre>
-
-<p>これらは次のようなものに見えます (用語が上に置かれると展開はツールチップに表示されます)。</p>
-
+```
 <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
 
 <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+```
 
-<div class="note">
-<p><strong>注</strong>: 別の要素だと、{{htmlelement("acronym")}} があります。これは基本的に <code>&lt;abbr&gt;</code> と同じことを行い、特に省略語ではなく頭字語を対象としていました。しかしこれは廃止され、ブラウザでは <code>&lt;abbr&gt;</code> ほどにはサポートされていませんでしたし、同じような機能を備えているため、両方を使用するのは無意味です。 代わりに <code>&lt;abbr&gt;</code> を使用してください。</p>
+これらは次のようなものに見えます (用語が上に置かれると展開はツールチップに表示されます)。
+
+We use HTML to structure our web documents.
+
+I think Rev. Green did it in the kitchen with the chainsaw.
+
+> **Note:** **注**: 別の要素だと、{{htmlelement("acronym")}} があります。これは基本的に `<abbr>` と同じことを行い、特に省略語ではなく頭字語を対象としていました。しかしこれは廃止され、ブラウザでは `<abbr>` ほどにはサポートされていませんでしたし、同じような機能を備えているため、両方を使用するのは無意味です。 代わりに `<abbr>` を使用してください。
+
+### アクティブラーニング: 略語をマークアップする
+
+このシンプルなアクティブラーニング課題では、単に略語をマークアップしてください。以下のサンプルを使用するか、またはあなた自身のものと交換することができます。
+
+```html hidden
+<h2>Live output</h2>
+
+<div class="output" style="min-height: 50px;">
 </div>
 
-<h3 id="Active_learning_marking_up_an_abbreviation" name="Active_learning_marking_up_an_abbreviation">アクティブラーニング: 略語をマークアップする</h3>
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<p>このシンプルなアクティブラーニング課題では、単に略語をマークアップしてください。以下のサンプルを使用するか、またはあなた自身のものと交換することができます。</p>
+<textarea id="code" class="input" style="min-height: 50px; width: 95%">
+<p>NASA sure does some exciting work.</p>
+</textarea>
 
-<div class="hidden">
-<h6 id="Playable_code_3" name="Playable_code_3">Playable code</h6>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="input" style="min-height: 50px; width: 95%"&gt;
-&lt;p&gt;NASA sure does some exciting work.&lt;/p&gt;
-&lt;/textarea&gt;
-
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -464,9 +455,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -496,7 +489,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;p&gt;&lt;abbr title="National Aeronautics and Space Administration"&gt;NASA&lt;/abbr&gt; sure does some exciting work.&lt;/p&gt;';
+var htmlSolution = '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -542,133 +535,139 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code_3', 700, 300, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code_3', 700, 300, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Marking_up_contact_details" name="Marking_up_contact_details">詳細な連絡先をマークアップする</h2>
+## 詳細な連絡先をマークアップする
 
-<p>HTML には連絡先の詳細をマークアップするための要素 — {{htmlelement("address")}} があります。これは単に連絡先の詳細を囲むだけです。例えば：</p>
+HTML には連絡先の詳細をマークアップするための要素 — {{htmlelement("address")}} があります。これは単に連絡先の詳細を囲むだけです。例えば：
 
-<pre class="brush: html notranslate">&lt;address&gt;
-  &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
-&lt;/address&gt;</pre>
+```html
+<address>
+  <p>Chris Mills, Manchester, The Grim North, UK</p>
+</address>
+```
 
-<p>ただし {{htmlelement("address")}} 要素は、HTML 文書を作成した人の連絡先の詳細をマークアップするためのものであり、住所ではありません。マークアップが書かれている文書を書いたのがクリスならば、上記は大丈夫でしょう。このようなものでも大丈夫でしょう：</p>
+ただし {{htmlelement("address")}} 要素は、HTML 文書を作成した人の連絡先の詳細をマークアップするためのものであり、住所ではありません。マークアップが書かれている文書を書いたのがクリスならば、上記は大丈夫でしょう。このようなものでも大丈夫でしょう：
 
-<pre class="brush: html notranslate">&lt;address&gt;
-  &lt;p&gt;Page written by &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
-&lt;/address&gt;</pre>
+```html
+<address>
+  <p>Page written by <a href="../authors/chris-mills/">Chris Mills</a>.</p>
+</address>
+```
 
-<h2 id="Superscript_and_subscript" name="Superscript_and_subscript">上付きと下付き</h2>
+## 上付きと下付き
 
-<p>日付、化学式、数式などの項目をマークアップするときには、上付き文字と下付き文字を使用する必要がある場合があります。{{htmlelement("sup")}} と {{htmlelement("sub")}} 要素がこの仕事を処理します。例えば：</p>
+日付、化学式、数式などの項目をマークアップするときには、上付き文字と下付き文字を使用する必要がある場合があります。{{htmlelement("sup")}} と {{htmlelement("sub")}} 要素がこの仕事を処理します。例えば：
 
-<pre class="brush: html notranslate">&lt;p&gt;My birthday is on the 25&lt;sup&gt;th&lt;/sup&gt; of May 2001.&lt;/p&gt;
-&lt;p&gt;Caffeine's chemical formula is C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
-&lt;p&gt;If x&lt;sup&gt;2&lt;/sup&gt; is 9, x must equal 3 or -3.&lt;/p&gt;</pre>
-
-<p>このコードの出力は次のようになります。</p>
-
+```html
 <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
-
 <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-
 <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+```
 
-<h2 id="Representing_computer_code" name="Representing_computer_code">コンピューターコードを表現する</h2>
+このコードの出力は次のようになります。
 
-<p>HTML を使用してコンピュータコードをマークアップするために利用可能な要素がいくつかあります。</p>
+My birthday is on the 25th of May 2001.
 
-<ul>
- <li>{{htmlelement("code")}}: コンピュータコードの一般的な部分をマークアップします。</li>
- <li>{{htmlelement("pre")}}: 空白 (通常はコードブロック) を保持するために — テキスト内でインデントまたは余分な空白を使用すると、ブラウザはそれを無視し、レンダリングされたページには表示されません。ただし、テキストを <code>&lt;pre&gt;&lt;/pre&gt;</code> タグで囲むと、空白はテキストエディタでの表示と同じようにレンダリングされます。</li>
- <li>{{htmlelement("var")}}: 特に変数名をマークアップするためのものです。</li>
- <li>{{htmlelement("kbd")}}: コンピューターに入力されたキーボード (およびその他の種類の) 入力をマークアップするためのものです。</li>
- <li>{{htmlelement("samp")}}: コンピュータプログラムの出力をマークアップします。</li>
-</ul>
+Caffeine's chemical formula is C8H10N4O2.
 
-<p>いくつか例を見てみましょう。これら (<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a> サンプルファイルのコピーを入手してください) を試してみるべきです：</p>
+If x2 is 9, x must equal 3 or -3.
 
-<pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
+## コンピューターコードを表現する
+
+HTML を使用してコンピュータコードをマークアップするために利用可能な要素がいくつかあります。
+
+- {{htmlelement("code")}}: コンピュータコードの一般的な部分をマークアップします。
+- {{htmlelement("pre")}}: 空白 (通常はコードブロック) を保持するために — テキスト内でインデントまたは余分な空白を使用すると、ブラウザはそれを無視し、レンダリングされたページには表示されません。ただし、テキストを `<pre></pre>` タグで囲むと、空白はテキストエディタでの表示と同じようにレンダリングされます。
+- {{htmlelement("var")}}: 特に変数名をマークアップするためのものです。
+- {{htmlelement("kbd")}}: コンピューターに入力されたキーボード (およびその他の種類の) 入力をマークアップするためのものです。
+- {{htmlelement("samp")}}: コンピュータプログラムの出力をマークアップします。
+
+いくつか例を見てみましょう。これら ([other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html) サンプルファイルのコピーを入手してください) を試してみるべきです：
+
+```html
+<pre><code>var para = document.querySelector('p');
 
 para.onclick = function() {
   alert('Owww, stop poking me!');
-}&lt;/code&gt;&lt;/pre&gt;
+}</code></pre>
 
-&lt;p&gt;You shouldn't use presentational elements like &lt;code&gt;&amp;lt;font&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;center&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
 
-&lt;p&gt;In the above JavaScript example, &lt;var&gt;para&lt;/var&gt; represents a paragraph element.&lt;/p&gt;
+<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
 
 
-&lt;p&gt;Select all the text with &lt;kbd&gt;Ctrl&lt;/kbd&gt;/&lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;A&lt;/kbd&gt;.&lt;/p&gt;
+<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
 
-&lt;pre&gt;$ &lt;kbd&gt;ping mozilla.org&lt;/kbd&gt;
-&lt;samp&gt;PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms&lt;/samp&gt;&lt;/pre&gt;</pre>
+<pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+```
 
-<p>上記のコードは次のようになります。</p>
+上記のコードは次のようになります。
 
-<p>{{EmbedLiveSample('Representing_computer_code','100%',300, "", "", "hide-codepen-jsfiddle") }}</p>
+{{EmbedLiveSample('Representing_computer_code','100%',300, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Marking_up_times_and_dates" name="Marking_up_times_and_dates">日付と時刻をマークアップする</h2>
+## 日付と時刻をマークアップする
 
-<p>HTML には、時間と日付を機械可読形式でマークアップするための {{htmlelement("time")}} 要素もあります。例えば：</p>
+HTML には、時間と日付を機械可読形式でマークアップするための {{htmlelement("time")}} 要素もあります。例えば：
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20<span class="pl-pds">"</span></span>&gt;20 January 2016&lt;/<span class="pl-ent">time</span>&gt;</pre>
+```html
+<time datetime="2016-01-20">20 January 2016</time>
+```
 
-<p>これはなぜ便利でしょうか？ 人間が日付を書き留める方法はたくさんあります。上記の日付は次のように書くことができます。</p>
+これはなぜ便利でしょうか？ 人間が日付を書き留める方法はたくさんあります。上記の日付は次のように書くことができます。
 
-<ul>
- <li>20 January 2016</li>
- <li>20th January 2016</li>
- <li>Jan 20 2016</li>
- <li>20/01/16</li>
- <li>01/20/16</li>
- <li>The 20th of next month</li>
- <li><span lang="fr">20e Janvier 2016</span></li>
- <li><span lang="ja">2016年1月20日</span></li>
- <li>等々</li>
-</ul>
+- 20 January 2016
+- 20th January 2016
+- Jan 20 2016
+- 20/01/16
+- 01/20/16
+- The 20th of next month
+- 20e Janvier 2016
+- 2016 年 1 月 20 日
+- 等々
 
-<p>しかしこれらの異なる形式はコンピュータでは容易には認識できません。ページ内のすべてのイベントの日付を自動的に取得してカレンダーに挿入する場合はどうなりますか。{{htmlelement("time")}} 要素を使用すると、この目的のために、明確で機械可読な日時を付けることができます。</p>
+しかしこれらの異なる形式はコンピュータでは容易には認識できません。ページ内のすべてのイベントの日付を自動的に取得してカレンダーに挿入する場合はどうなりますか。{{htmlelement("time")}} 要素を使用すると、この目的のために、明確で機械可読な日時を付けることができます。
 
-<p>上記の基本的な例は単純な機械可読な日付を提供するだけですが、可能な他の多くのオプションがあります。例えば：</p>
+上記の基本的な例は単純な機械可読な日付を提供するだけですが、可能な他の多くのオプションがあります。例えば：
 
-<pre class="brush: html notranslate">&lt;!-- Standard simple date --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20<span class="pl-pds">"</span></span>&gt;20 January 2016&lt;/<span class="pl-ent">time</span>&gt;
-&lt;!-- Just year and month --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01<span class="pl-pds">"</span></span>&gt;January 2016&lt;/<span class="pl-ent">time</span>&gt;
-&lt;!-- Just month and day --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>01-20<span class="pl-pds">"</span></span>&gt;20 January&lt;/<span class="pl-ent">time</span>&gt;
-&lt;!-- Just time, hours and minutes --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>19:30<span class="pl-pds">"</span></span>&gt;19:30&lt;/<span class="pl-ent">time</span>&gt;
-&lt;!-- You can do seconds and milliseconds too! --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span></span>19:30:01.856<span class="pl-s"><span class="pl-pds">"</span></span>&gt;19:30:01.856&lt;/<span class="pl-ent">time</span>&gt;
-&lt;!-- Date and time --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20T19:30<span class="pl-pds">"</span></span>&gt;7.30pm, 20 January 2016&lt;/<span class="pl-ent">time</span>&gt;
-&lt;!-- Date and time with timezone offset--&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20T19:30<span class="pl-pds">+01:00"</span></span>&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/<span class="pl-ent">time</span>&gt;
-&lt;!-- Calling out a specific week number--&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-W04<span class="pl-pds">"</span></span>&gt;The fourth week of 2016&lt;/<span class="pl-ent">time</span>&gt;</pre>
+```html
+<!-- Standard simple date -->
+<time datetime="2016-01-20">20 January 2016</time>
+<!-- Just year and month -->
+<time datetime="2016-01">January 2016</time>
+<!-- Just month and day -->
+<time datetime="01-20">20 January</time>
+<!-- Just time, hours and minutes -->
+<time datetime="19:30">19:30</time>
+<!-- You can do seconds and milliseconds too! -->
+<time datetime="19:30:01.856">19:30:01.856</time>
+<!-- Date and time -->
+<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+<!-- Date and time with timezone offset-->
+<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<!-- Calling out a specific week number-->
+<time datetime="2016-W04">The fourth week of 2016</time>
+```
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p>これで HTML テキストのセマンティクスに関する学習が終わりました。このコースで見たことが HTML テキスト要素の完全なリストではないことに注意してください — <span class="tlid-translation translation" lang="ja"><span title="">私たちは必要不可欠なもの、そしてあなたがどこかで見るであろう、あるいは少なくとも面白いと思うかもしれないより一般的なものの一部をカバーしたいと思いました。もっと多くの HTML 要素を見つけるために、<a href="/ja/docs/Web/HTML/Element">HTML 要素のリファレンス</a> (<a href="/ja/docs/Web/HTML/Element#Inline_text_semantics">インラインテキストセマンティクスセクション</a>は始めるのに素晴らしい場所でしょう) を参照することができます。</span><span title="">次回の記事では、HTML 文書のさまざまな部分を構造化するために使用する HTML 要素について説明します。</span></span></p>
+これで HTML テキストのセマンティクスに関する学習が終わりました。このコースで見たことが HTML テキスト要素の完全なリストではないことに注意してください — 私たちは必要不可欠なもの、そしてあなたがどこかで見るであろう、あるいは少なくとも面白いと思うかもしれないより一般的なものの一部をカバーしたいと思いました。もっと多くの HTML 要素を見つけるために、[HTML 要素のリファレンス](/ja/docs/Web/HTML/Element) ([インラインテキストセマンティクスセクション](/ja/docs/Web/HTML/Element#Inline_text_semantics)は始めるのに素晴らしい場所でしょう) を参照することができます。次回の記事では、HTML 文書のさまざまな部分を構造化するために使用する HTML 要素について説明します。
 
-<p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}</p>
+{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<ul>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTMLを始めよう</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What’s in the head? Metadata in HTML</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Marking up a letter</a></li>
- <li><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structuring a page of content</a></li>
-</ul>
+- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

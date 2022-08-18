@@ -12,142 +12,128 @@ tags:
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/Forms/Styling_HTML_forms
 ---
-<p>{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}</p>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-<p class="summary">前の記事ではウェブフォームを構築するのに必要な HTML のすべてを見てきました。この記事ではフォームコントロールにスタイル設定する <a href="/ja/docs/CSS" title="/ja/docs/CSS">CSS</a> の使い方に進みます。これは歴史的に難しかったです — フォームコントロールは大きく変わり CSS を使ったフォームのカスタマイズは簡単になりました— しかし古いブラウザーが引退してモダンブラウザーが多くの機能を与えるため、より簡単になりました。</p>
+前の記事ではウェブフォームを構築するのに必要な HTML のすべてを見てきました。この記事ではフォームコントロールにスタイル設定する [CSS](/ja/docs/CSS) の使い方に進みます。これは歴史的に難しかったです — フォームコントロールは大きく変わり CSS を使ったフォームのカスタマイズは簡単になりました— しかし古いブラウザーが引退してモダンブラウザーが多くの機能を与えるため、より簡単になりました。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>
-    <p>基本的なコンピューターリテラシーと、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> と <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> の基本的な理解。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>フォームのスタイル設定の問題を理解し、役立つスタイル付けのテクニックを学ぶこと。</td>
-  </tr>
- </tbody>
-</table>
+| 前提条件: | 基本的なコンピューターリテラシーと、[HTML](/ja/docs/Learn/HTML/Introduction_to_HTML) と [CSS](/ja/docs/Learn/CSS/First_steps) の基本的な理解。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | フォームのスタイル設定の問題を理解し、役立つスタイル付けのテクニックを学ぶこと。                                                               |
 
-<h2 id="Why_is_it_so_hard_to_style_form_widgets_with_CSS" name="Why_is_it_so_hard_to_style_form_widgets_with_CSS">なぜ CSS によるフォームウィジェットへのスタイル設定は困難であるか?</h2>
+## なぜ CSS によるフォームウィジェットへのスタイル設定は困難であるか?
 
-<p>1995年頃に <a href="http://www.ietf.org/rfc/rfc1866.txt" rel="extrenal">HTML 2 仕様</a>へフォームコントロールが追加されました。CSS は 1996年までリリースされず、その後も少しのブラウザーによって十分サポートされませんでした。ブラウザーはフォームコントロールの管理や表示について下層の OS に頼ることを選択しました。</p>
+1995 年頃に [HTML 2 仕様](http://www.ietf.org/rfc/rfc1866.txt)へフォームコントロールが追加されました。CSS は 1996 年までリリースされず、その後も少しのブラウザーによって十分サポートされませんでした。ブラウザーはフォームコントロールの管理や表示について下層の OS に頼ることを選択しました。
 
-<p>CSS が HTML のスタイル設定できるようになってからも、ユーザーは各プラットフォームの視覚的な外見に慣れていましたので、ブラウザーベンダーはフォームコントロールをスタイル付け可能にすることに乗り気ではありませんでした。しかしこれは変わりました。ウェブサイトのオーナーはこれまでよりも、サイト全体に適するスタイルを欲しており、ウェブプラットフォームはこれを実現可能にしました。</p>
+CSS が HTML のスタイル設定できるようになってからも、ユーザーは各プラットフォームの視覚的な外見に慣れていましたので、ブラウザーベンダーはフォームコントロールをスタイル付け可能にすることに乗り気ではありませんでした。しかしこれは変わりました。ウェブサイトのオーナーはこれまでよりも、サイト全体に適するスタイルを欲しており、ウェブプラットフォームはこれを実現可能にしました。
 
-<p>いくつかのフォームウィジェットでは、コントロールをスタイル設定できるように作成し直すのは難しいですが、ユーザービリティを破綻させないよう気をつける必要はあるものの、CSS を使って多くのフォーム機能をスタイル設定できます。</p>
+いくつかのフォームウィジェットでは、コントロールをスタイル設定できるように作成し直すのは難しいですが、ユーザービリティを破綻させないよう気をつける必要はあるものの、CSS を使って多くのフォーム機能をスタイル設定できます。
 
-<h3 id="Not_all_widgets_are_created_equal_when_CSS_is_involved" name="Not_all_widgets_are_created_equal_when_CSS_is_involved">CSS を伴ってもすべてのウィジェットが同等に作成されるわけではありません</h3>
+### CSS を伴ってもすべてのウィジェットが同等に作成されるわけではありません
 
-<p>いまだに、フォームで CSS を使用する際に困ることが存在します。この問題は、3 つのカテゴリーに分けられます。</p>
+いまだに、フォームで CSS を使用する際に困ることが存在します。この問題は、3 つのカテゴリーに分けられます。
 
-<h4 id="The_good" name="The_good">良好</h4>
+#### 良好
 
-<p>いくつかの要素はプラットフォーム間の問題があるとしても、ほとんど問題なくスタイルを設定できます。これらは以下の構造的な要素が含まれます:</p>
+いくつかの要素はプラットフォーム間の問題があるとしても、ほとんど問題なくスタイルを設定できます。これらは以下の構造的な要素が含まれます:
 
-<ol>
- <li>{{HTMLElement("form")}}</li>
- <li>{{HTMLElement("fieldset")}} と {{HTMLElement("legend")}}</li>
- <li>単一行のテキスト {{HTMLElement("input")}} (例 text, url, email...のタイプ) <code><a href="/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code>を除く</li>
- <li>複数行の {{HTMLElement("textarea")}}</li>
- <li>ボタン ({{HTMLElement("input")}} と {{HTMLElement("button")}}の両方)</li>
- <li>{{HTMLElement("label")}}</li>
- <li>{{HTMLElement("output")}}</li>
-</ol>
+1.  {{HTMLElement("form")}}
+2.  {{HTMLElement("fieldset")}} と {{HTMLElement("legend")}}
+3.  単一行のテキスト {{HTMLElement("input")}} (例 text, url, email...のタイプ) [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)を除く
+4.  複数行の {{HTMLElement("textarea")}}
+5.  ボタン ({{HTMLElement("input")}} と {{HTMLElement("button")}}の両方)
+6.  {{HTMLElement("label")}}
+7.  {{HTMLElement("output")}}
 
-<h4 id="The_bad" name="The_bad">不良</h4>
+#### 不良
 
-<p>一部の要素はほとんどスタイル設定ができず、時に CSS3 の高度な知識やトリックが必要になるかもしれません。</p>
+一部の要素はほとんどスタイル設定ができず、時に CSS3 の高度な知識やトリックが必要になるかもしれません。
 
-<ol>
- <li>チェックボックスとラジオボタン</li>
- <li><code><a href="/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
-</ol>
+1.  チェックボックスとラジオボタン
+2.  [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
 
-<p>これら特殊なケースをどのように扱うかについては、<a href="/ja/docs/Advanced_styling_for_HTML_forms" title="Advanced_styling_for_HTML_forms">HTML フォームへの高度なスタイル設定</a>の記事で見ていきます。</p>
+これら特殊なケースをどのように扱うかについては、[HTML フォームへの高度なスタイル設定](/ja/docs/Advanced_styling_for_HTML_forms "Advanced_styling_for_HTML_forms")の記事で見ていきます。
 
-<h4 id="The_ugly" name="The_ugly">劣悪</h4>
+#### 劣悪
 
-<p>一部の要素は、CSS でスタイルを設定できません。たとえば次のもの:</p>
+一部の要素は、CSS でスタイルを設定できません。たとえば次のもの:
 
-<ul>
- <li><code><a href="/ja/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code></li>
- <li><code><a href="/ja/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>のような日付関連コントロール</li>
- <li><code><a href="/ja/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code></li>
- <li><code><a href="/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code></li>
- <li>ドロップダウンウィジェットの作成に含まれる要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}}を含む。</li>
- <li>{{HTMLElement("progress")}} と {{HTMLElement("meter")}}</li>
-</ul>
+- [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)のような日付関連コントロール
+- [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
+- [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)
+- ドロップダウンウィジェットの作成に含まれる要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}}を含む。
+- {{HTMLElement("progress")}} と {{HTMLElement("meter")}}
 
-<p>これらの要素をスタイル設定するのに関して何ができるかについては、<a href="/ja/docs/Advanced_styling_for_HTML_forms" title="Advanced_styling_for_HTML_forms">HTML フォームへの高度なスタイル設定</a>の記事で見ていきます。</p>
+これらの要素をスタイル設定するのに関して何ができるかについては、[HTML フォームへの高度なスタイル設定](/ja/docs/Advanced_styling_for_HTML_forms "Advanced_styling_for_HTML_forms")の記事で見ていきます。
 
-<p>これらすべてのウィジェットの主な問題は、ウィジェットの構造がとても複雑であるという事実と、(コントロールの width や margin の変更といった)基本的なスタイル設定を超えると、現在の CSS では(例えばカレンダー日付ピッカーや、選択肢のリストを表示する&lt;select&gt;のボタンのような)ウィジェットの細かい部分すべてにスタイルを設定できるほどの表現力がないことによります。</p>
+これらすべてのウィジェットの主な問題は、ウィジェットの構造がとても複雑であるという事実と、(コントロールの width や margin の変更といった)基本的なスタイル設定を超えると、現在の CSS では(例えばカレンダー日付ピッカーや、選択肢のリストを表示する\<select>のボタンのような)ウィジェットの細かい部分すべてにスタイルを設定できるほどの表現力がないことによります。
 
-<p>これらのウィジェットを完全にカスタマイズしたい場合は、HTML, CSS, JavaScript を使って独自のものを作成する必要があります。それはこのコアフォームの記事の範囲を超えますが、高度な記事の<a href="/ja/docs/HTML/Forms/How_to_build_custom_form_widgets" title="HTML/Forms/How_to_build_custom_form_widgets">カスタムウィジェットの作成方法</a>の記事で説明します。</p>
+これらのウィジェットを完全にカスタマイズしたい場合は、HTML, CSS, JavaScript を使って独自のものを作成する必要があります。それはこのコアフォームの記事の範囲を超えますが、高度な記事の[カスタムウィジェットの作成方法](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets "HTML/Forms/How_to_build_custom_form_widgets")の記事で説明します。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 疑似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。</p>
-</div>
+> **Note:** **注**: フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 疑似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
 
-<h2 id="The_good_2" name="The_good_2">良好</h2>
+## 良好
 
-<p>CSS での<a href="/ja/docs/HTML/Forms/Styling_HTML_forms#The_good" title="HTML/Forms/Styling_HTML_forms#The_good">スタイル設定が容易な要素</a>は、振る舞いが他の HTML 要素とほとんど同じであるため、問題に直面することはないでしょう。ただし、ブラウザー間でユーザーエージェントのスタイルシートが若干矛盾するかもしれませんので、より簡単にスタイルを設定できるようにするためのトリックがあります。</p>
+CSS での[スタイル設定が容易な要素](/ja/docs/HTML/Forms/Styling_HTML_forms#The_good "HTML/Forms/Styling_HTML_forms#The_good")は、振る舞いが他の HTML 要素とほとんど同じであるため、問題に直面することはないでしょう。ただし、ブラウザー間でユーザーエージェントのスタイルシートが若干矛盾するかもしれませんので、より簡単にスタイルを設定できるようにするためのトリックがあります。
 
-<p>上記で述べた基本的な CSS ツールと同じく、いくつかのセレクターが与えられます — UI 疑似クラス — これにより現在の UI の状態に基づくスタイル設定ができます。これは次の記事である、<a href="/ja/docs/Learn/Forms/UI_pseudo-classes">UI 疑似クラス</a>で扱います。</p>
+上記で述べた基本的な CSS ツールと同じく、いくつかのセレクターが与えられます — UI 疑似クラス — これにより現在の UI の状態に基づくスタイル設定ができます。これは次の記事である、[UI 疑似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)で扱います。
 
-<p>この記事の最後で基本的なフォームコントロールのスタイル設定と配置について理解できる実例を詳しく見ていきます。しかしその前に、知っておくと良いフォームスタイル設定の特定の面をいくつか述べておきます。</p>
+この記事の最後で基本的なフォームコントロールのスタイル設定と配置について理解できる実例を詳しく見ていきます。しかしその前に、知っておくと良いフォームスタイル設定の特定の面をいくつか述べておきます。
 
-<h3 id="Fonts_and_text" name="Fonts_and_text">フォントとテキスト</h3>
+### フォントとテキスト
 
-<p>CSS のフォントやテキストの機能は、任意のウィジェットで容易に使用できます (また、フォームウィジェットで {{cssxref("@font-face")}} も使用できます)。ただし、ブラウザーの動作にしばしば矛盾があります。デフォルトで、一部のブラウザーは親から {{cssxref("font-family")}} や {{cssxref("font-size")}} を継承しません。代わりに多くのブラウザーでは、システムのデフォルトの体裁を使用します。フォームの体裁を他のコンテンツと一致させるには、以下のルールをスタイルシートに追加するとよいでしょう:</p>
+CSS のフォントやテキストの機能は、任意のウィジェットで容易に使用できます (また、フォームウィジェットで {{cssxref("@font-face")}} も使用できます)。ただし、ブラウザーの動作にしばしば矛盾があります。デフォルトで、一部のブラウザーは親から {{cssxref("font-family")}} や {{cssxref("font-size")}} を継承しません。代わりに多くのブラウザーでは、システムのデフォルトの体裁を使用します。フォームの体裁を他のコンテンツと一致させるには、以下のルールをスタイルシートに追加するとよいでしょう:
 
-<pre class="brush: css notranslate">button, input, select, textarea {
+```css
+button, input, select, textarea {
   font-family : inherit;
   font-size   : 100%;
-}</pre>
+}
+```
 
-<p>{{cssxref('inherit')}} のプロパティ値で、プロパティ値は計算された親要素のプロパティ値に一致するようになります。つまり親の値を継承します。</p>
+{{cssxref('inherit')}} のプロパティ値で、プロパティ値は計算された親要素のプロパティ値に一致するようになります。つまり親の値を継承します。
 
-<p>以下のスクリーンショットで違いを示します。左側は Mac OS X の Chrome における<code>&lt;input type="text"&gt;</code>, <code>&lt;input type="date"&gt;</code>, {{htmlelement('select')}}, {{htmlelement('textarea')}}, <code>&lt;input type="submit"&gt;</code>, <code>&lt;button&gt;</code> 要素の既定のレンダリングで、プラットフォームのデフォルトフォントスタイルを使用しています。右側は同じ要素ですが、フォントを調和させるスタイルルールを適用したものです。</p>
+以下のスクリーンショットで違いを示します。左側は Mac OS X の Chrome における`<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, `<button>` 要素の既定のレンダリングで、プラットフォームのデフォルトフォントスタイルを使用しています。右側は同じ要素ですが、フォントを調和させるスタイルルールを適用したものです。
 
-<p><img alt="Form controls with default and inherited font families. 既定では, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph." src="https://mdn.mozillademos.org/files/16903/forms_fontfamily.png" style="height: 260px; width: 483px;"></p>
+![Form controls with default and inherited font families. 既定では, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph.](https://mdn.mozillademos.org/files/16903/forms_fontfamily.png)
 
-<p>既定はいろいろと変わります。継承により、フォントは親のフォントファミリーに変更されます — ここでは親コンテナのデフォルトの serif フォントです。ほぼすべてそうですが、例外として Chrome では<code>&lt;input type="submit"&gt;</code> は親段落を継承しません。むしろ、{{cssxref('font-family#Values', 'font-family: system-ui')}}を使います。これは同等な入力タイプの中で <code>&lt;button&gt;</code> 要素を使う理由です!</p>
+既定はいろいろと変わります。継承により、フォントは親のフォントファミリーに変更されます — ここでは親コンテナのデフォルトの serif フォントです。ほぼすべてそうですが、例外として Chrome では`<input type="submit">` は親段落を継承しません。むしろ、{{cssxref('font-family#Values', 'font-family: system-ui')}}を使います。これは同等な入力タイプの中で `<button>` 要素を使う理由です!
 
-<p>フォームはシステムのデフォルトスタイルを使用するか、コンテンツに合うよう設計されたカスタムスタイルを使用するかについては多くの議論があります。これを決めるのは、設計者としてサイトやウェブアプリケーションを作成するあなた次第です。</p>
+フォームはシステムのデフォルトスタイルを使用するか、コンテンツに合うよう設計されたカスタムスタイルを使用するかについては多くの議論があります。これを決めるのは、設計者としてサイトやウェブアプリケーションを作成するあなた次第です。
 
-<h3 id="Box_model" name="Box_model">ボックスモデル</h3>
+### ボックスモデル
 
-<p>すべてのテキストフィールドは、CSS のボックスモデルに関する全プロパティ ({{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("margin")}}、および {{cssxref("border")}}) を完全にサポートしています。ただし前述のとおり、ブラウザーがウィジェットを表示する際はシステムのデフォルトスタイルに依存します。コンテンツに対してそれらをどのように混ぜ合わせるかを決めるのは、あなた次第です。ウィジェットでネイティブのルックアンドフィールを維持したいのでしたら、ウィジェットのサイズを調和させたい場合に若干の問題に直面するでしょう。</p>
+すべてのテキストフィールドは、CSS のボックスモデルに関する全プロパティ ({{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("margin")}}、および {{cssxref("border")}}) を完全にサポートしています。ただし前述のとおり、ブラウザーがウィジェットを表示する際はシステムのデフォルトスタイルに依存します。コンテンツに対してそれらをどのように混ぜ合わせるかを決めるのは、あなた次第です。ウィジェットでネイティブのルックアンドフィールを維持したいのでしたら、ウィジェットのサイズを調和させたい場合に若干の問題に直面するでしょう。
 
-<p><strong>これは各ウィジェットがボーダー、パディング、マージンについて独自のルールを持っているためです。</strong>このためさまざまなウィジェットを同じサイズにしたい場合に、{{cssxref("box-sizing")}} プロパティを使用しなければなりません:</p>
+**これは各ウィジェットがボーダー、パディング、マージンについて独自のルールを持っているためです。**このためさまざまなウィジェットを同じサイズにしたい場合に、{{cssxref("box-sizing")}} プロパティを使用しなければなりません:
 
-<pre class="brush: css notranslate">input, textarea, select, button {
+```css
+input, textarea, select, button {
   width : 150px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}</pre>
+}
+```
 
-<p>下のスクリーンショットで、左の列は&lt;input type="radio"&gt;, &lt;input type="checkbox"&gt;, &lt;input type="range"&gt;, &lt;input type="text"&gt;, &lt;input type="date"&gt; input, {{htmlelement('select')}}, {{htmlelement('textarea')}},&lt;input type="submit"&gt;, {{htmlelement('button')}} の既定の描画、右の列は同じ要素に上のルールを使用して作成したものです。各種のウィジェットのプラットフォームのデフォルトルールと比較して、すべての要素が同じ領域を占めるようにすることが可能な点に注目してください。</p>
+下のスクリーンショットで、左の列は\<input type="radio">, \<input type="checkbox">, \<input type="range">, \<input type="text">, \<input type="date"> input, {{htmlelement('select')}}, {{htmlelement('textarea')}},\<input type="submit">, {{htmlelement('button')}} の既定の描画、右の列は同じ要素に上のルールを使用して作成したものです。各種のウィジェットのプラットフォームのデフォルトルールと比較して、すべての要素が同じ領域を占めるようにすることが可能な点に注目してください。
 
-<p><img alt="box model properties effect most input types." src="https://mdn.mozillademos.org/files/16904/boxmodel_formcontrols1.png" style="height: 365px; width: 359px;"></p>
+![box model properties effect most input types.](https://mdn.mozillademos.org/files/16904/boxmodel_formcontrols1.png)
 
-<p>スクリーンショットで明白でないことはラジオボタンとチェックボックスコントロールが同じであるが、水平位置が {{cssxref('width')}} プロパティで与えられる 150px の中心にあることです。他のブラウザーではウィジェットを中心揃えにしませんが、割り当てられたスペースに付着させます。</p>
+スクリーンショットで明白でないことはラジオボタンとチェックボックスコントロールが同じであるが、水平位置が {{cssxref('width')}} プロパティで与えられる 150px の中心にあることです。他のブラウザーではウィジェットを中心揃えにしませんが、割り当てられたスペースに付着させます。
 
-<h3 id="legend" name="legend">legend 配置</h3>
+### legend 配置
 
-<p>{{HTMLElement("legend")}} 要素はポジショニングを除いて、スタイル設定の問題はありません。既定では、それは親 {{HTMLElement("fieldset")}} の上ボーダーの前面に、左上の隅の近くに配置されます。これを他の場所、例えば fieldset内のどこかや、左下の隅に配置するには、配置に頼る必要があります。</p>
+{{HTMLElement("legend")}} 要素はポジショニングを除いて、スタイル設定の問題はありません。既定では、それは親 {{HTMLElement("fieldset")}} の上ボーダーの前面に、左上の隅の近くに配置されます。これを他の場所、例えば fieldset 内のどこかや、左下の隅に配置するには、配置に頼る必要があります。
 
-<p>下記の例を見てください:</p>
+下記の例を見てください:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}
 
-<p>この方法で legend を配置するには、次の CSS を使います(簡単のため他の宣言は削除しています):</p>
+この方法で legend を配置するには、次の CSS を使います(簡単のため他の宣言は削除しています):
 
-<pre class="brush: css notranslate">fieldset {
+```css
+fieldset {
   position: relative;
 }
 
@@ -155,79 +141,77 @@ legend {
   position: absolute;
   bottom: 0;
   right: 0;
-}</pre>
+}
+```
 
-<p><code>&lt;fieldset&gt;</code> も配置される必要があり、<code>&lt;legend&gt;</code> がそれに合わせて位置が決まるように (そうでなければ <code>&lt;legend&gt;</code> は <code>&lt;body&gt;</code>に合わせて位置決めされます)</p>
+`<fieldset>` も配置される必要があり、`<legend>` がそれに合わせて位置が決まるように (そうでなければ `<legend>` は `<body>`に合わせて位置決めされます)
 
-<p>{{HTMLElement("legend")}} 要素はアクセシビリティのためとても重要です — これはアシスト技術により fieldset 内の各フォーム要素のラベルとして話されます — が、上のようなテクニックの使用は良いです。legend コンテンツは同じ方法で話されます; 単に見た目の位置が変更されます。</p>
+{{HTMLElement("legend")}} 要素はアクセシビリティのためとても重要です — これはアシスト技術により fieldset 内の各フォーム要素のラベルとして話されます — が、上のようなテクニックの使用は良いです。legend コンテンツは同じ方法で話されます; 単に見た目の位置が変更されます。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: <code>&lt;legend&gt;</code>の位置決めに役立つ{{cssxref("transform")}}プロパティも使用できますが、例えばa <code>transform: translateY();</code>を使って配置するとき、移動はするものの <code>&lt;fieldset&gt;</code> の枠に劣悪なギャップができて、除去が困難です。</p>
-</div>
+> **Note:** **注**: `<legend>`の位置決めに役立つ{{cssxref("transform")}}プロパティも使用できますが、例えば a `transform: translateY();`を使って配置するとき、移動はするものの `<fieldset>` の枠に劣悪なギャップができて、除去が困難です。
 
-<h2 id="A_specific_styling_example" name="A_specific_styling_example">特定のスタイル設定の例</h2>
+## 特定のスタイル設定の例
 
-<p>HTML フォームにスタイルを設定する方法の具体例を見ていきましょう。以下のような "はがき" 風の連絡フォームを作成します。<a href="https://mdn.github.io/learning-area/html/forms/postcard-example/">完成バージョンはこちら</a>。</p>
+HTML フォームにスタイルを設定する方法の具体例を見ていきましょう。以下のような "はがき" 風の連絡フォームを作成します。[完成バージョンはこちら](https://mdn.github.io/learning-area/html/forms/postcard-example/)。
 
-<p>この例に従うには、<a href="https://github.com/mdn/learning-area/blob/master/html/forms/postcard-example/postcard-start.html">postcard-start.html ファイル</a>をコピーして、次のやり方に従ってください。</p>
+この例に従うには、[postcard-start.html ファイル](https://github.com/mdn/learning-area/blob/master/html/forms/postcard-example/postcard-start.html)をコピーして、次のやり方に従ってください。
 
-<h3 id="The_HTML" name="The_HTML">HTML</h3>
+### HTML
 
-<p>HTML は、<a href="/ja/docs/HTML/Forms/My_first_HTML_form" title="HTML/Forms/My_first_HTML_form">ガイドの最初の記事</a>で使用したものより少しだけ複雑です。いくつか ID やタイトルを追加しています。</p>
+HTML は、[ガイドの最初の記事](/ja/docs/HTML/Forms/My_first_HTML_form "HTML/Forms/My_first_HTML_form")で使用したものより少しだけ複雑です。いくつか ID やタイトルを追加しています。
 
-<pre class="brush: html notranslate">&lt;form&gt;
- &lt;h1&gt;to: Mozilla&lt;/h1&gt;
+```html
+<form>
+ <h1>to: Mozilla</h1>
 
-  &lt;div id="from"&gt;
-    &lt;label for="name"&gt;from:&lt;/label&gt;
-    &lt;input type="text" id="name" name="user_name"&gt;
-  &lt;/div&gt;
+  <div id="from">
+    <label for="name">from:</label>
+    <input type="text" id="name" name="user_name">
+  </div>
 
-  &lt;div id="reply"&gt;
-    &lt;label for="mail"&gt;reply:&lt;/label&gt;
-    &lt;input type="email" id="mail" name="user_email"&gt;
-  &lt;/div&gt;
+  <div id="reply">
+    <label for="mail">reply:</label>
+    <input type="email" id="mail" name="user_email">
+  </div>
 
-  &lt;div id="message"&gt;
-    &lt;label for="msg"&gt;Your message:&lt;/label&gt;
-    &lt;textarea id="msg" name="user_message"&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
+  <div id="message">
+    <label for="msg">Your message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
 
-  &lt;div class="button"&gt;
-    &lt;button type="submit"&gt;Send your message&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <div class="button">
+    <button type="submit">Send your message</button>
+  </div>
+</form>
+```
 
-<p>上記のコードを HTML の body に追加します。</p>
+上記のコードを HTML の body に追加します。
 
-<h3 id="Organizing_your_assets" name="Organizing_your_assets">アセットを揃える</h3>
+### アセットを揃える
 
-<p>ここからがおもしろいところです! コードを書き始める前に、ここでは 3 つの追加要素が必要です:</p>
+ここからがおもしろいところです! コードを書き始める前に、ここでは 3 つの追加要素が必要です:
 
-<ol>
- <li>はがきの<a href="/files/4151/background.jpg" title="The postcard background">背景</a> — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。</li>
- <li>タイプライター風フォント: <a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external">fontsquirrel.com の "Secret Typewriter" </a>  — TTF ファイルを上記と同じディレクトリーにダウンロードします。</li>
- <li>手書き風フォント: <a href="http://www.fontsquirrel.com/fonts/Journal" rel="external">fontsquirrel.com の "Journal" </a> — TTF ファイルを上記と同じディレクトリーにダウンロードします。</li>
-</ol>
+1.  はがきの[背景](/files/4151/background.jpg "The postcard background") — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。
+2.  タイプライター風フォント: [fontsquirrel.com の "Secret Typewriter" ](http://www.fontsquirrel.com/fonts/Secret-Typewriter)— TTF ファイルを上記と同じディレクトリーにダウンロードします。
+3.  手書き風フォント: [fontsquirrel.com の "Journal" ](http://www.fontsquirrel.com/fonts/Journal)— TTF ファイルを上記と同じディレクトリーにダウンロードします。
 
-<p>始める前にフォントの処理が必要です:</p>
+始める前にフォントの処理が必要です:
 
-<ol>
- <li>fontsquirrel <a href="https://www.fontsquirrel.com/tools/webfont-generator">Webfont Generator</a> に移動します。</li>
- <li>フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。</li>
- <li>zip ファイルを展開します。</li>
- <li>展開した中身には 2 つの <code>.woff</code> ファイルと 2 つの <code>.woff2</code> ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は <a href="/ja/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a> の記事を見てください。</li>
-</ol>
+1.  fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) に移動します。
+2.  フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。
+3.  zip ファイルを展開します。
+4.  展開した中身には 2 つの `.woff` ファイルと 2 つの `.woff2` ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は [Web fonts](/ja/docs/Learn/CSS/Styling_text/Web_fonts) の記事を見てください。
 
-<h3 id="The_CSS" name="The_CSS">CSS</h3>
+### CSS
 
-<p>ここから例の CSS を見ていきましょう。{{htmlelement("style")}} 要素の中にすべてのコードブロックを一つ一つ追加します。</p>
+ここから例の CSS を見ていきましょう。{{htmlelement("style")}} 要素の中にすべてのコードブロックを一つ一つ追加します。
 
-<h4 id="Overall_layout" name="Overall_layout">全体レイアウト</h4>
+#### 全体レイアウト
 
-<p>まず、{{cssxref("@font-face")}} ルールと、すべての{{HTMLElement("body")}} と {{HTMLElement("form")}} 要素に設定するスタイルを定義して準備します。fontsquirrel 出力が上記で述べたものと異なる場合、<code>stylesheet.css</code> ファイル内にダウンロード済みの webfont キットの中から正しい <code>@font-face</code> ブロックを見つけることができます(下記の <code>@font-face</code> ブロックをそれで置換し、パスをフォントファイルのものに更新する必要があります):</p>
+まず、{{cssxref("@font-face")}} ルールと、すべての{{HTMLElement("body")}} と {{HTMLElement("form")}} 要素に設定するスタイルを定義して準備します。fontsquirrel 出力が上記で述べたものと異なる場合、`stylesheet.css` ファイル内にダウンロード済みの webfont キットの中から正しい `@font-face` ブロックを見つけることができます(下記の `@font-face` ブロックをそれで置換し、パスをフォントファイルのものに更新する必要があります):
 
-<pre class="brush: css notranslate">@font-face {
+```css
+@font-face {
     font-family: 'handwriting';
     src: url('fonts/journal-webfont.woff2') format('woff2'),
          url('fonts/journal-webfont.woff') format('woff');
@@ -264,11 +248,13 @@ form {
   grid-gap : 20px;
   grid-template-columns : repeat(2, 1fr);
   grid-template-rows    : 10em 1em 1em 1em;
-}</pre>
+}
+```
 
-<p>注意として、フォームをレイアウトするのに <a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> と <a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> を使っています。これで、タイトルやフォーム要素といった各要素を配置できます:</p>
+注意として、フォームをレイアウトするのに [CSS Grid](/ja/docs/Web/CSS/CSS_Grid_Layout) と [Flexbox](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます:
 
-<pre class="brush: css notranslate">h1 {
+```css
+h1 {
   font : 1em "typewriter", monospace;
   align-self : end;
 }
@@ -279,41 +265,49 @@ form {
 
 #from, #reply {
    display: flex;
-}</pre>
+}
+```
 
-<h4 id="Labels_and_controls" name="Labels_and_controls">ラベルとコントロール</h4>
+#### ラベルとコントロール
 
-<p>そして、フォーム要素自体に対するスタイル設定を始めます。まずは、{{HTMLElement("label")}} に適切なフォントを割り当てましょう。</p>
+そして、フォーム要素自体に対するスタイル設定を始めます。まずは、{{HTMLElement("label")}} に適切なフォントを割り当てましょう。
 
-<pre class="brush: css notranslate">label {
+```css
+label {
   font : .8em "typewriter", sans-serif;
-}</pre>
+}
+```
 
-<p>テキストフィールドには、共通のルールがいくつか必要です。{{cssxref("border")}} や {{cssxref("background")}} の削除と {{cssxref("padding")}} や {{cssxref("margin")}} の再定義を行います。</p>
+テキストフィールドには、共通のルールがいくつか必要です。{{cssxref("border")}} や {{cssxref("background")}} の削除と {{cssxref("padding")}} や {{cssxref("margin")}} の再定義を行います。
 
-<pre class="brush: css notranslate">input, textarea {
+```css
+input, textarea {
   font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
   border  : none;
   padding : 0 10px;
   margin  : 0;
   width   : 80%;
   background : none;
-}</pre>
+}
+```
 
-<p>これらフィールドのひとつがフォーカスを得たときに、ライトグレー色で透過する背景で強調します。一部のブラウザーで付加されるデフォルトのフォーカス強調を取り除くため、{{cssxref("outline")}} プロパティを追加することが重要ですので注意してください。</p>
+これらフィールドのひとつがフォーカスを得たときに、ライトグレー色で透過する背景で強調します。一部のブラウザーで付加されるデフォルトのフォーカス強調を取り除くため、{{cssxref("outline")}} プロパティを追加することが重要ですので注意してください。
 
-<pre class="brush: css notranslate">input:focus, textarea:focus {
+```css
+input:focus, textarea:focus {
   background   : rgba(0,0,0,.1);
   border-radius: 5px;
-}</pre>
+}
+```
 
-<p>テキストフィールドのスタイル設定が完了して、次は単一行および複数行のテキストフィールドの表示が同じになるよう調整しなければなりません。これは、一般的にこれらのデフォルト表示が同じでないためです。</p>
+テキストフィールドのスタイル設定が完了して、次は単一行および複数行のテキストフィールドの表示が同じになるよう調整しなければなりません。これは、一般的にこれらのデフォルト表示が同じでないためです。
 
-<h4 id="Tweaking_the_textareas" name="Tweaking_the_textareas">textareaの微調整</h4>
+#### textarea の微調整
 
-<p>{{HTMLElement("textarea")}} 要素はデフォルトでブロック要素としてレンダリングされるようにします。ここで重要なことは、{{cssxref("resize")}} プロパティと {{cssxref("overflow")}} プロパティの 2 つです。ここでは固定サイズでデザインしているため、ユーザーが複数行のテキストフィールドをリサイズできないように <code>resize</code> プロパティを使用します。{{cssxref("overflow")}} プロパティは、ブラウザー間でのフィールドの一貫性を向上させるために使用します。これのデフォルト値が <code>auto</code> であるブラウザーと <code>scroll</code> であるブラウザーが存在します。この例では、すべてのブラウザーが <code>auto</code> になるようにするのがよいでしょう。</p>
+{{HTMLElement("textarea")}} 要素はデフォルトでブロック要素としてレンダリングされるようにします。ここで重要なことは、{{cssxref("resize")}} プロパティと {{cssxref("overflow")}} プロパティの 2 つです。ここでは固定サイズでデザインしているため、ユーザーが複数行のテキストフィールドをリサイズできないように `resize` プロパティを使用します。{{cssxref("overflow")}} プロパティは、ブラウザー間でのフィールドの一貫性を向上させるために使用します。これのデフォルト値が `auto` であるブラウザーと `scroll` であるブラウザーが存在します。この例では、すべてのブラウザーが `auto` になるようにするのがよいでしょう。
 
-<pre class="brush: css notranslate">textarea {
+```css
+textarea {
   display : block;
 
   padding : 10px;
@@ -325,13 +319,15 @@ form {
 
   /* resize  : none; */
   overflow: auto;
-}</pre>
+}
+```
 
-<h4 id="Styling_the_submit_button" name="Styling_the_submit_button">送信ボタンにスタイル設定する</h4>
+#### 送信ボタンにスタイル設定する
 
-<p>{{HTMLElement("button")}} 要素は、CSS によってより便利になります。<a href="/ja/docs/CSS/Pseudo-elements" title="CSS/Pseudo-elements">疑似要素</a>を含めて、行いたいことが何でもできます!</p>
+{{HTMLElement("button")}} 要素は、CSS によってより便利になります。[疑似要素](/ja/docs/CSS/Pseudo-elements "CSS/Pseudo-elements")を含めて、行いたいことが何でもできます!
 
-<pre class="brush: css notranslate">button {
+```css
+button {
   padding      : 5px;
   font         : bold .6em sans-serif;
   border       : 2px solid #333;
@@ -342,7 +338,7 @@ form {
 }
 
 button:after {
-  content      : " &gt;&gt;&gt;";
+  content      : " >>>";
 }
 
 button:hover,
@@ -350,51 +346,46 @@ button:focus {
   outline     : none;
   background  : #000;
   color       : #FFF;
-}</pre>
+}
+```
 
-<h3 id="The_final_result" name="The_final_result">最終結果</h3>
+### 最終結果
 
-<p>これでよし! フォームは次のようになるでしょう:</p>
+これでよし! フォームは次のようになるでしょう:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17063/updated-form-screenshot.jpg" style="border-style: solid; border-width: 1px; height: 497px; width: 740px;"></p>
+![](https://mdn.mozillademos.org/files/17063/updated-form-screenshot.jpg)
 
-<div class="note">
-<p><strong>注</strong>: 例が期待どおり動かず、われわれのバージョンを確認したい場合、GitHub にあります — <a href="https://mdn.github.io/learning-area/html/forms/postcard-example/">ライブ版</a>を見てください (<a href="https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example">ソースコード</a>も見てください)。</p>
-</div>
+> **Note:** **注**: 例が期待どおり動かず、われわれのバージョンを確認したい場合、GitHub にあります — [ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください ([ソースコード](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)も見てください)。
 
-<h2 id="スキルを試しましょう！​"><strong>スキルを試しましょう！​</strong></h2>
+## スキルを試しましょう！​
 
-<p>この記事の終わりまで到達しました。しかし、肝要な点を思い起こせるでしょうか？次に進む前に、テストによって知識の定着を試すことができます——<a href="/ja/docs/Learn/Forms/Test_your_skills:_Styling_basics">スキルテスト：スタイリングの基本</a>をご覧ください。</p>
+この記事の終わりまで到達しました。しかし、肝要な点を思い起こせるでしょうか？次に進む前に、テストによって知識の定着を試すことができます——[スキルテスト：スタイリングの基本](/ja/docs/Learn/Forms/Test_your_skills:_Styling_basics)をご覧ください。
 
-<h2 id="Conclusion" name="Conclusion">まとめ</h2>
+## まとめ
 
-<p>ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。<a href="/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms" title="Advanced_styling_for_HTML_forms">次の記事では</a>、"不良" や "劣悪" カテゴリに入っているウィジェットの扱い方を見ていきます。</p>
+ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。[次の記事では](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms "Advanced_styling_for_HTML_forms")、"不良" や "劣悪" カテゴリに入っているウィジェットの扱い方を見ていきます。
 
-<p>{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}</p>
+{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<h2 id="In_this_module" name="In_this_module"><a class="button section-edit only-icon" href="/ja/docs/Learn/HTML/Forms/Other_form_controls$edit#In_this_module" rel="nofollow, noindex"><span>E</span></a></h2>
+## <a class="button section-edit only-icon" href="/ja/docs/Learn/HTML/Forms/Other_form_controls$edit#In_this_module" rel="nofollow, noindex"><span>E</span></a>
 
-<ul>
- <li><a href="/ja/docs/Learn/Forms/Your_first_form">初めてのフォーム</a></li>
- <li><a href="/ja/docs/Learn/Forms/How_to_structure_a_web_form">フォームの構築方法</a></li>
- <li><a href="/ja/docs/Learn/Forms/Basic_native_form_controls">ネイティブフォームウィジェット</a></li>
- <li><a href="/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
- <li><a href="/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
- <li><a href="/ja/docs/Learn/Forms/Styling_web_forms">フォームへのスタイル設定</a></li>
- <li><a href="/ja/docs/Learn/Forms/Advanced_form_styling">フォームへの高度なスタイル設定</a></li>
- <li><a href="/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
- <li><a href="/ja/docs/Learn/Forms/Form_validation">フォームデータの検証</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
-</ul>
+- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
+- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
+- [ネイティブフォームウィジェット](/ja/docs/Learn/Forms/Basic_native_form_controls)
+- [The HTML5 input types](/ja/docs/Learn/Forms/HTML5_input_types)
+- [Other form controls](/ja/docs/Learn/Forms/Other_form_controls)
+- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
+- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [UI pseudo-classes](/ja/docs/Learn/Forms/UI_pseudo-classes)
+- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの送信](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
 
-<h3 class="highlight-spanned" id="Advanced_Topics" name="Advanced_Topics"><span class="highlight-span">上級トピック</span></h3>
+### 上級トピック
 
-<h3 class="highlight-spanned" id="Advanced_Topics" name="Advanced_Topics"><a class="local-anchor" href="/ja/docs/Learn/HTML/Forms/Other_form_controls#Advanced_Topics"><span>セクション</span></a></h3>
+### [セクション](/ja/docs/Learn/HTML/Forms/Other_form_controls#Advanced_Topics)
 
-<ul>
- <li><a href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
- <li><a href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
- <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
-</ul>
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

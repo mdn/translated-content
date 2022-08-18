@@ -3,83 +3,82 @@ title: 著者リストページとジャンルリストページのチャレン�
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
-<p>The author list page needs to display a list of all authors in the database, with each author name linked to its associated author detail page. The date of birth and date of death should be listed after the name on the same line.</p>
+The author list page needs to display a list of all authors in the database, with each author name linked to its associated author detail page. The date of birth and date of death should be listed after the name on the same line.
 
-<h2 class="highlight-spanned" id="Controller"><span class="highlight-span">Controller</span></h2>
+## Controller
 
-<p>The author list controller function needs to get a list of all <code>Author</code> instances, and then pass these to the template for rendering.</p>
+The author list controller function needs to get a list of all `Author` instances, and then pass these to the template for rendering.
 
-<p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_list()</code> controller method near the top of the file and replace it with the following code (the changed code is shown in bold).</p>
+Open **/controllers/authorController.js**. Find the exported `author_list()` controller method near the top of the file and replace it with the following code (the changed code is shown in bold).
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all Authors.</span>
-exports<span class="punctuation token">.</span>author_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+```js
+// Display list of all Authors.
+exports.author_list = function(req, res, next) {
 
-  Author<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">sort</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="punctuation token">[</span><span class="string token">'family_name'</span><span class="punctuation token">,</span> <span class="string token">'ascending'</span><span class="punctuation token">]</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_authors<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-      <span class="comment token">//Successful, so render</span>
-      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'author_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Author List'</span><span class="punctuation token">,</span> author_list<span class="punctuation token">:</span> list_authors <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  Author.find()
+    .sort([['family_name', 'ascending']])
+    .exec(function (err, list_authors) {
+      if (err) { return next(err); }
+      //Successful, so render
+      res.render('author_list', { title: 'Author List', author_list: list_authors });
+    });
 
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+};
+```
 
-<p>The method uses the model's <code>find()</code>, <code>sort()</code> and <code>exec()</code> functions to return all <code>Author</code> objects sorted by <code>family_name</code> in alphabetic order. The callback passed to the <code>exec()</code> method is called with any errors (or <code>null</code>) as the first parameter, or a list of all authors on success. If there is an error it calls the next middleware function with the error value, and if not it renders the <strong>author_list</strong>(.pug) template, passing the page <code>title</code> and the list of authors (<code>author_list</code>).</p>
+The method uses the model's `find()`, `sort()` and `exec()` functions to return all `Author` objects sorted by `family_name` in alphabetic order. The callback passed to the `exec()` method is called with any errors (or `null`) as the first parameter, or a list of all authors on success. If there is an error it calls the next middleware function with the error value, and if not it renders the **author_list**(.pug) template, passing the page `title` and the list of authors (`author_list`).
 
-<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
+## View
 
-<p>Create <strong>/views/author_list.pug</strong> and replace its content with the text below.</p>
+Create **/views/author_list.pug** and replace its content with the text below.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+```js
+extends layout
 
 block content
-  h1<span class="operator token">=</span> title
+  h1= title
 
   ul
-    each author <span class="keyword token">in</span> author_list
+    each author in author_list
       li
-        <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>author<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>author<span class="punctuation token">.</span>name<span class="punctuation token">}</span>
-        <span class="operator token">|</span>  <span class="punctuation token">(</span>#<span class="punctuation token">{</span>author<span class="punctuation token">.</span>date_of_birth<span class="punctuation token">}</span> <span class="operator token">-</span> #<span class="punctuation token">{</span>author<span class="punctuation token">.</span>date_of_death<span class="punctuation token">}</span><span class="punctuation token">)</span>
+        a(href=author.url) #{author.name}
+        |  (#{author.date_of_birth} - #{author.date_of_death})
 
-    <span class="keyword token">else</span>
-      li There are no authors<span class="punctuation token">.</span></code></pre>
+    else
+      li There are no authors.
+```
 
-<p>The view follows exactly the same pattern as our other templates.</p>
+The view follows exactly the same pattern as our other templates.
 
-<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
+## What does it look like?
 
-<p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors </em>link. If everything is set up correctly, the page should look something like the following screenshot.</p>
+Run the application and open your browser to <http://localhost:3000/>. Then select the _All authors_ link. If everything is set up correctly, the page should look something like the following screenshot.
 
-<p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
+![Author List Page - Express Local Library site](https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png)
 
-<div class="note">
-<p><strong>Note:</strong> The appearance of the author <em>lifespan </em>dates is ugly! You can improve this using the <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model). This time, however, there are missing dates, and references to nonexistent properties are ignored unless strict mode is in effect. <code>moment()</code> returns the current time, and you don't want missing dates to be formatted as if they were today. One way to deal with this is to define the body of the function that returns a formatted date so it returns a blank string unless the date actually exists. For example:</p>
+> **Note:** The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model). This time, however, there are missing dates, and references to nonexistent properties are ignored unless strict mode is in effect. `moment()` returns the current time, and you don't want missing dates to be formatted as if they were today. One way to deal with this is to define the body of the function that returns a formatted date so it returns a blank string unless the date actually exists. For example:
+>
+> `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-<p><code>return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';</code></p>
-</div>
+## Genre list page—challenge!<a class="button section-edit only-icon" href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex"><span>Edit</span></a>
 
-<h2 id="Genre_list_page—challenge!Edit">Genre list page—challenge!<a class="button section-edit only-icon" href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex"><span>Edit</span></a></h2>
+In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.
 
-<p>In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.</p>
+![Genre List - Express Local Library site](https://mdn.mozillademos.org/files/14460/LocalLibary_Express_Genre_List.png)
 
-<p><img alt="Genre List - Express Local Library site" src="https://mdn.mozillademos.org/files/14460/LocalLibary_Express_Genre_List.png" style="border-style: solid; border-width: 1px; display: block; height: 346px; margin: 0px auto; width: 600px;"></p>
+The genre list controller function needs to get a list of all `Genre` instances, and then pass these to the template for rendering.
 
-<p>The genre list controller function needs to get a list of all <code>Genre</code> instances, and then pass these to the template for rendering.</p>
+1.  You will need to edit `genre_list()` in **/controllers/genreController.js**.
+2.  The implementation is almost exactly the same as the `author_list()` controller.
 
-<ol>
- <li>You will need to edit <code>genre_list()</code> in <strong>/controllers/genreController.js</strong>. </li>
- <li>The implementation is almost exactly the same as the <code>author_list()</code> controller.
-  <ul>
-   <li>Sort the results by name, in ascending order.</li>
-  </ul>
- </li>
- <li>The template to be rendered should be named <strong>genre_list.pug</strong>.</li>
- <li>The template to be rendered should be passed the variables <code>title</code> ('Genre List') and <code>genre_list</code> (the list of genres returned from your <code>Genre.find()</code> callback.</li>
- <li>The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).</li>
-</ol>
+    - Sort the results by name, in ascending order.
 
-<h2 id="Next_steps">Next steps</h2>
+3.  The template to be rendered should be named **genre_list.pug**.
+4.  The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback.
+5.  The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).
 
-<p>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</p>
+## Next steps
 
-<p>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">Genre detail page</a>.</p>
+Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+
+Proceed to the next subarticle of part 5: [Genre detail page](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).

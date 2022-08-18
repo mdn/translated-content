@@ -15,358 +15,285 @@ tags:
   - virtual machine
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
+この記事では「(クロス)ブラウザーテストとは何？」「最もよくある問題は何？」「問題をテスト、特定、修正する主な手法は何？」といった質問に答えることで、(クロス)ブラウザーテストの概観を与えることから始めます。
 
-<p class="summary">この記事では「(クロス)ブラウザーテストとは何？」「最もよくある問題は何？」「問題をテスト、特定、修正する主な手法は何？」といった質問に答えることで、(クロス)ブラウザーテストの概観を与えることから始めます。</p>
+| 前提条件: | [HTML](/ja/docs/Learn/HTML), [CSS](/ja/docs/Learn/CSS), [JavaScript](/ja/docs/Learn/JavaScript) 言語に通じていること; 高レベルの[クロスブラウザーテストの原理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の理解。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | クロスブラウザーテストに含まれる高レベルのコンセプトの理解。                                                                                                                                                                                |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td><a href="/ja/docs/Learn/HTML">HTML</a>, <a href="/ja/docs/Learn/CSS">CSS</a>, <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語に通じていること; 高レベルの<a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">クロスブラウザーテストの原理</a>の理解。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>クロスブラウザーテストに含まれる高レベルのコンセプトの理解。</td>
-  </tr>
- </tbody>
-</table>
+## 全部がテスト済み？
 
-<h2 id="Gotta_test_em_all" name="Gotta_test_'em_all">全部がテスト済み？</h2>
+クロスブラウザーテストを実行するとき、ブラウザーのリストを作成する必要があります。ユーザーがあなたのサイトを見る可能性のあるすべてのブラウザーとデバイスの組み合わせをテストする方法はありません — 単に多スすぎるし、新しいものが常に出てきます。
 
-<p>クロスブラウザーテストを実行するとき、ブラウザーのリストを作成する必要があります。ユーザーがあなたのサイトを見る可能性のあるすべてのブラウザーとデバイスの組み合わせをテストする方法はありません — 単に多スすぎるし、新しいものが常に出てきます。</p>
+その代わりに、最も重要なターゲットブラウザー/デバイスを明確にし、それに対して最大限のサポートを広げていくよう守備的にコーディングします。
 
-<p>その代わりに、最も重要なターゲットブラウザー/デバイスを明確にし、それに対して最大限のサポートを広げていくよう守備的にコーディングします。</p>
+守備的にコーディングするとは、ブラウザーで機能やスタイルが動作しない場合に、フォールバックを作るようにすることで、サイトが多少面白みが薄れても受容できるユーザー体験までダウングレードできる — 例えば見た目のすばらしさが失われても、核となる情報にアクセスできることです。
 
-<p>守備的にコーディングするとは、ブラウザーで機能やスタイルが動作しない場合に、フォールバックを作るようにすることで、サイトが多少面白みが薄れても受容できるユーザー体験までダウングレードできる — 例えば見た目のすばらしさが失われても、核となる情報にアクセスできることです。</p>
+このねらいは、テスト時に参照できるブラウザー/デバイスの図を作ることです。できるだけ簡単にすることも、できるだけ複雑にすることも、お好みに合わせてできます — 例えば、よくある手法はサポートレベルを次のように複数のグレードに分けることです:
 
-<p>このねらいは、テスト時に参照できるブラウザー/デバイスの図を作ることです。できるだけ簡単にすることも、できるだけ複雑にすることも、お好みに合わせてできます — 例えば、よくある手法はサポートレベルを次のように複数のグレードに分けることです:</p>
+1.  A グレード: よくある/モダンなブラウザー — 能力のあると知られている。徹底的にテストしてフルサポートを提供する。
+2.  B グレード: 古い/機能が多くないブラウザー — 能力がないと知られている。基本的な体験をテスト/提供するが、主要な情報やサービスにはするアクセスできるようにする。
+3.  C グレード: まれな/未知のブラウザー — テストしないが、アクセスを想定する。フルサイトを提供し、少なくとも守備的なコーディングによるフォールバックは動作するようにする。
 
-<ol>
- <li>A グレード: よくある/モダンなブラウザー — 能力のあると知られている。徹底的にテストしてフルサポートを提供する。</li>
- <li>B グレード: 古い/機能が多くないブラウザー — 能力がないと知られている。基本的な体験をテスト/提供するが、主要な情報やサービスにはするアクセスできるようにする。</li>
- <li>C グレード: まれな/未知のブラウザー — テストしないが、アクセスを想定する。フルサイトを提供し、少なくとも守備的なコーディングによるフォールバックは動作するようにする。</li>
-</ol>
+下記のセクションを通じて、このフォーマットでサポート図を作ります。
 
-<p>下記のセクションを通じて、このフォーマットでサポート図を作ります。</p>
+> **Note:** **注**: Yahoo は最初にこの手法を、[Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) アプローチとして広めました。
 
-<div class="note">
-<p><strong>注</strong>: Yahoo は最初にこの手法を、<a href="https://github.com/yui/yui3/wiki/Graded-Browser-Support">Graded browser Support</a> アプローチとして広めました。</p>
-</div>
+### 経験則
 
-<h3 id="Educated_guesses" name="Educated_guesses">経験則</h3>
+これを "仮定"や"感情"と呼ぶかもしれません。これは正確な科学的手法ではありませんが、もウェブ産業の経験のある人にとっては、テストすべきブラウザーについてよくわかるでしょう。サポート図のよい基本となりえます。
 
-<p>これを "仮定"や"感情"と呼ぶかもしれません。これは正確な科学的手法ではありませんが、もウェブ産業の経験のある人にとっては、テストすべきブラウザーについてよくわかるでしょう。サポート図のよい基本となりえます。</p>
+例えば、西ヨーロッパや北アメリカに住んでいる場合、多くが Windows と Mac のデスクトップ/ノート PC を使っていて、主なブラウザーは Chrome, Firefox, Safari, IE, Edge です。このブラウザーは定期的な更新があるため、おそらく最初の 3 つの最新版だけをテストしたいでしょう。Edge と IE では、いくつかの最新バージョンをテストしたくなるでしょう; これらはすべて A グレード区分にすべきでしょう.
 
-<p>例えば、西ヨーロッパや北アメリカに住んでいる場合、多くが Windows と Mac のデスクトップ/ノートPCを使っていて、主なブラウザーはChrome, Firefox, Safari, IE, Edge です。このブラウザーは定期的な更新があるため、おそらく最初の3つの最新版だけをテストしたいでしょう。Edge と IE では、いくつかの最新バージョンをテストしたくなるでしょう; これらはすべて A グレード区分にすべきでしょう.</p>
+> **Note:** **注**: You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
 
-<div class="note">
-<p><strong>注</strong>: You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See <a href="#virtual_machines">Virtual machines</a> later on.</p>
-</div>
+多くの人が iOS と Android を使っているので、iOS Safari の最新版、古い Android 内蔵ブラウザーの最新版いくつか、iOS と Android 用の Chrome と Firefox もテストしたくなるでしょう。これらをスマフォとタブレットの両方でテストし、レスポンシブデザインの動作が問題ないのを確認するのが理想でしょう。
 
-<p>多くの人が iOS と Android を使っているので、iOS Safari の最新版、古い Android 内蔵ブラウザーの最新版いくつか、iOS と Android 用の Chrome と Firefox もテストしたくなるでしょう。これらをスマフォとタブレットの両方でテストし、レスポンシブデザインの動作が問題ないのを確認するのが理想でしょう。</p>
+それなりの数の人がまだ IE 9 を使っていることも知っているかもしれません。これは古くて能力もないので、B グレード区分に区分しましょう。
 
-<p>それなりの数の人がまだ IE 9 を使っていることも知っているかもしれません。これは古くて能力もないので、B グレード区分に区分しましょう。</p>
+ここまでで以下のサポート図ができました:
 
-<p>ここまでで以下のサポート図ができました:</p>
+1.  A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge と IE (それぞれ最新の 2 バージョン)、iPhone/iPad 用の iOS Safari、スマフォ/タブレット用の Android 内蔵ブラウザー (最新 2 バージョン)、スマフォ/タブレット用の Chrome と Firefox(最新 2 バージョン)。
+2.  B グレード: Windows 用 IE 9
+3.  C グレード: n/a
 
-<ol>
- <li>A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge と IE (それぞれ最新の2バージョン)、iPhone/iPad 用の iOS Safari、スマフォ/タブレット用の Android 内蔵ブラウザー (最新2バージョン)、スマフォ/タブレット用の Chrome と Firefox(最新2バージョン)。</li>
- <li>B グレード: Windows 用 IE 9</li>
- <li>C グレード: n/a</li>
-</ol>
+どこか別の場所に住んでいる場合や、どこか別の場所向けの (例 ある国やロケール)サイトを制作している場合、テストする主なブラウザーはたぶん別のものでしょう。
 
-<p>どこか別の場所に住んでいる場合や、どこか別の場所向けの (例 ある国やロケール)サイトを制作している場合、テストする主なブラウザーはたぶん別のものでしょう。</p>
+> **Note:** **注**: "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
 
-<div class="note">
-<p><strong>注</strong>: "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.</p>
-</div>
+### ブラウザーサポートステータス
 
-<h3 id="Browser_support_stats" name="Browser_support_stats">ブラウザーサポートステータス</h3>
+ブラウザーテスト選択で求められる、便利な対策は、ブラウザーサポートステータスです。こんなステータスを提供するサイトはたくさんあります。例えば、:
 
-<p>ブラウザーテスト選択で求められる、便利な対策は、ブラウザーサポートステータスです。こんなステータスを提供するサイトはたくさんあります。例えば、:</p>
+- [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0)
+- [Statcounter](http://gs.statcounter.com/)
 
-<ul>
- <li><a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a></li>
- <li><a href="http://gs.statcounter.com/">Statcounter</a></li>
-</ul>
+これらはいずれも北米中心で、正確でないですが、幅広いトレンドの理解を得られます。
 
-<p>これらはいずれも北米中心で、正確でないですが、幅広いトレンドの理解を得られます。</p>
+例えば、[Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0)を見てみましょう。Opera が少しだが、使用される数が見えるので、C グレードとしてサポート図に追加するべきでしょう。
 
-<p>例えば、<a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a>を見てみましょう。Opera が少しだが、使用される数が見えるので、Cグレードとしてサポート図に追加するべきでしょう。</p>
+IE8 もある程度ありますが、古くてもはや利用できません Opera Mini もいくらかありますが、複雑な JavaScript 実行など (詳しくは [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) を見てください)が利用できません。これはグレード B に追加すべきでしょう。
 
-<p>IE8 もある程度ありますが、古くてもはや利用できませんOpera Mini もいくらかありますが、複雑な JavaScript 実行など (詳しくは <a href="https://dev.opera.com/articles/opera-mini-and-javascript/">Opera Mini and JavaScript</a> を見てください)が利用できません。これはグレード B に追加すべきでしょう。</p>
+### アクセス解析を使う
 
-<h3 id="Using_analytics" name="Using_analytics">アクセス解析を使う</h3>
+A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://www.google.com/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
 
-<p>A much more accurate source of data, if you can get it, comes from an analytics app like <a href="https://www.google.com/analytics/">Google Analytics</a>. This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.</p>
+But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.
 
-<p>But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.</p>
+You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](http://www.openwebanalytics.com) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
 
-<p>You may also consider using open source and privacy focussed analytics platforms like <a href="http://www.openwebanalytics.com">Open Web Analytics</a> and <a href="https://matomo.org">Matomo</a>. They expect you to self-host the analytics platform. </p>
+#### Setting up Google analytics
 
-<h4 id="Setting_up_Google_analytics" name="Setting_up_Google_analytics">Setting up Google analytics</h4>
+1.  First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://www.google.com/analytics/).
+2.  Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
+3.  Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
+4.  Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
+5.  The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
+6.  Upload the changes to the development server, or wherever else you need your code.
 
-<ol>
- <li>First of all, you'll need a Google account. Use this account to sign into <a href="https://www.google.com/analytics/">Google Analytics</a>.</li>
- <li>Choose the <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> (web) option, and click the <em>Sign Up</em> button.</li>
- <li>Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.</li>
- <li>Once you've finished filling in everything, press the <em>Get Tracking ID</em> button, then accept the terms of service that appear.</li>
- <li>The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the <em>Website tracking</em> code block and paste it into all the different pages you want to track using Google Analytics on your site. You could below your closing <code>&lt;/body&gt;</code> tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.</li>
- <li>Upload the changes to the development server, or wherever else you need your code.</li>
-</ol>
+That's it! Your site should now be ready to start reporting analytics data.
 
-<p>That's it! Your site should now be ready to start reporting analytics data.</p>
+#### Studying analytics data
 
-<h4 id="Studying_analytics_data" name="Studying_analytics_data">Studying analytics data</h4>
+Now you should be able to go back to the [Analytics Web](https://analytics.google.com/analytics/web) homepage, and start looking at the data you've collected about your site (you need to leave a little bit of time for some data to actually be collected, of course.)
 
-<p>Now you should be able to go back to the <a href="https://analytics.google.com/analytics/web">Analytics Web</a> homepage, and start looking at the data you've collected about your site (you need to leave a little bit of time for some data to actually be collected, of course.)</p>
+既定では, you should see the reporting tab, like so:
 
-<p>既定では, you should see the reporting tab, like so:</p>
+![](https://mdn.mozillademos.org/files/14081/analytics-reporting.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14081/analytics-reporting.png" style="border-style: solid; border-width: 1px; display: block; height: 386px; margin: 0px auto; width: 700px;"></p>
+There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all. [Getting started with Analytics](https://support.google.com/analytics/answer/1008015) provides some useful guidance on reporting (and more) for beginners.
 
-<p>There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all. <a href="https://support.google.com/analytics/answer/1008015">Getting started with Analytics</a> provides some useful guidance on reporting (and more) for beginners.</p>
+You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. 例えば、you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left hand menu.
 
-<p>You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. 例えば、you can find out what browsers and operating systems your users are using by selecting <em>Audience &gt; Technology &gt; Browser &amp; OS</em> from the left hand menu.</p>
+> **Note:** **注**: When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
-<div class="note">
-<p><strong>注</strong>: When using Google analytics, you need to beware of misleading bias, e.g. "We  have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.</p>
-</div>
+### その他の考慮
 
-<h3 id="Other_considerations" name="Other_considerations">その他の考慮</h3>
+There are other considerations that you should probably include as well. You should definitely include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article)
 
-<p>There are other considerations that you should probably include as well. You should definitely include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article)</p>
+Plus you might have other considerations. If you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones 例えば、you might want to make mobile IE support a priority.
 
-<p>Plus you might have other considerations. If you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones 例えば、you might want to make mobile IE support a priority.</p>
+### 最終的なサポート図
 
-<h3 id="Final_support_chart" name="Final_support_chart">最終的なサポート図</h3>
+So, our final support chart will end up looking like so:
 
-<p>So, our final support chart will end up looking like so:</p>
+1.  A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
+2.  B grade: IE 8 and 9 for Windows, Opera Mini.
+3.  C grade: Opera, other niche modern browsers.
 
-<ol>
- <li>A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.</li>
- <li>B grade: IE 8 and 9 for Windows, Opera Mini.</li>
- <li>C grade: Opera, other niche modern browsers.</li>
-</ol>
+## これから何をテストしていくのか？
 
-<h2 id="What_are_you_going_to_test" name="What_are_you_going_to_test">これから何をテストしていくのか？</h2>
+When you've got a new addition to your codebase that needs testing, before you start testing you should write out a list of testing requirements that need to pass to be accepted. These requirements can be visual or functional — both combine to make a usable web site feature.
 
-<p>When you've got a new addition to your codebase that needs testing, before you start testing you should write out a list of testing requirements that need to pass to be accepted. These requirements can be visual or functional — both combine to make a usable web site feature.</p>
+Consider the following example (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), and also the [example running live](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
 
-<p>Consider the following example (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">source code</a>, and also the <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">example running live</a>):</p>
+![](https://mdn.mozillademos.org/files/14083/sliding-box-demo.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14083/sliding-box-demo.png" style="border-style: solid; border-width: 1px; display: block; height: 455px; margin: 0px auto; width: 700px;"></p>
+Test criteria for this feature could written like so:
 
-<p>Test criteria for this feature could written like so:</p>
+A and B grade:
 
-<p>A and B grade:</p>
+- Button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
+- Toggling the button should make the information box appear/disappear.
+- The text should be readable.
+- Visually impaired users using screenreaders should be able to access the text.
 
-<ul>
- <li>Button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.</li>
- <li>Toggling the button should make the information box appear/disappear.</li>
- <li>The text should be readable.</li>
- <li>Visually impaired users using screenreaders should be able to access the text.</li>
-</ul>
+A grade:
 
-<p>A grade:</p>
+- The information box should animate smoothly as it appears/disappears.
+- The gradient and text shadow should appear to enhance the look of the box.
 
-<ul>
- <li>The information box should animate smoothly as it appears/disappears.</li>
- <li>The gradient and text shadow should appear to enhance the look of the box.</li>
-</ul>
+You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).
 
-<p>You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).</p>
+You might also notice that the button isn't usable using only the keyboard — this also needs to be remedied. Maybe we could use some JavaScript to implement a keyboard control for the toggle, or use some other method entirely?
 
-<p>You might also notice that the button isn't usable using only the keyboard — this also needs to be remedied. Maybe we could use some JavaScript to implement a keyboard control for the toggle, or use some other method entirely?</p>
+These test criteria are useful, because:
 
-<p>These test criteria are useful, because:</p>
+- They give you a set of steps to follow when you are performing tests.
+- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see [User testing](#user_testing), below.
+- They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see Using an automation tool to automate browser testing, later in the series).
 
-<ul>
- <li>They give you a set of steps to follow when you are performing tests.</li>
- <li>They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see <a href="#user_testing">User testing</a>, below.</li>
- <li>They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see Using an automation tool to automate browser testing, later in the series).</li>
-</ul>
+## Putting together a testing lab
 
-<h2 id="Putting_together_a_testing_lab" name="Putting_together_a_testing_lab">Putting together a testing lab</h2>
+One option for carrying out browser tests is to do the testing yourself. To do this, you will probably use a combination of actual physical devices, and emulated environments (using either an emulator or a virtual machine).
 
-<p>One option for carrying out browser tests is to do the testing yourself. To do this, you will probably use a combination of actual physical devices, and emulated environments (using either an emulator or a virtual machine).</p>
+### 物理デバイス
 
-<h3 id="Physical_devices" name="Physical_devices">物理デバイス</h3>
+It is generally better to have a real device running the browser you want to test — this provides the greatest accuracy in terms of behaviour and overall user experience. You'll probably want something like the following, for a reasonable low level device lab:
 
-<p>It is generally better to have a real device running the browser you want to test — this provides the greatest accuracy in terms of behaviour and overall user experience. You'll probably want something like the following, for a reasonable low level device lab:</p>
+- A Mac, with the browsers installed that you need to test — this can include Firefox, Chrome, Opera, and Safari.
+- A Windows PC, with the browsers installed that you need to test — this can include Edge (or IE), Chrome, Firefox, and Opera.
+- A higher spec Android phone and tablet with browser installed that you need to test — this can include Chrome, Firefox, and Opera Mini for Android, as well as the original Android stock browser.
+- A higher spec iOS phone and tablet with the browsers installed that you need to test — this can include iOS Safari, and Chrome, Firefox, and Opera Mini for iOS.
 
-<ul>
- <li>A Mac, with the browsers installed that you need to test — this can include Firefox, Chrome, Opera, and Safari.</li>
- <li>A Windows PC, with the browsers installed that you need to test — this can include Edge (or IE), Chrome, Firefox, and Opera.</li>
- <li>A higher spec Android phone and tablet with browser installed that you need to test — this can include Chrome, Firefox, and Opera Mini for Android, as well as the original Android stock browser.</li>
- <li>A higher spec iOS phone and tablet with the browsers installed that you need to test — this can include iOS Safari, and Chrome, Firefox, and Opera Mini for iOS.</li>
-</ul>
+The following are also good options, if you can get them:
 
-<p>The following are also good options, if you can get them:</p>
+- A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users comonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see [WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) for help with this.
+- A couple of lower spec mobile devices, so you can test performance of features like animations on lower powered processors.
 
-<ul>
- <li>A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users comonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see <a href="https://help.ubuntu.com/community/WindowsDualBoot">WindowsDualBoot</a> for help with this.</li>
- <li>A couple of lower spec mobile devices, so you can test performance of features like animations on lower powered processors.</li>
-</ul>
+Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.
 
-<p>Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.</p>
+Some larger companies have device labs that stock a very large selection of different devices, enabling developers to hunt down bugs on very specific browser/device combinations. Smaller companies and individuals are generally not able to afford such a sophisticated lab, so tend to make do with smaller labs, emulators, virtual machines, and commercial testing apps.
 
-<p>Some larger companies have device labs that stock a very large selection of different devices, enabling developers to hunt down bugs on very specific browser/device combinations. Smaller companies and individuals are generally not able to afford such a sophisticated lab, so tend to make do with smaller labs, emulators, virtual machines, and commercial testing apps.</p>
+We will cover each of the other options below.
 
-<p>We will cover each of the other options below.</p>
+> **Note:** **注**: Some efforts have been made to create publically accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
 
-<div class="note">
-<p><strong>注</strong>: Some efforts have been made to create publically accessible device labs — see <a href="https://opendevicelab.com/">Open Device Labs</a>.</p>
-</div>
+> **Note:** **注**: We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
 
-<div class="note">
-<p><strong>注</strong>: We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.</p>
-</div>
+### エミュレーター
 
-<h3 id="Emulators" name="Emulators">エミュレーター</h3>
+Emulators are basically programs that run inside your computer and emulate a device or particular device conditions of some kind, allowing you to do some of your testing more conveniently than having to find a particular combination of hardware/software to test.
 
-<p>Emulators are basically programs that run inside your computer and emulate a device or particular device conditions of some kind, allowing you to do some of your testing more conveniently than having to find a particular combination of hardware/software to test.</p>
+An emulator might be as simple as testing a device condition. 例えば、if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's [Responsive Design Mode](/ja/docs/Tools/Responsive_Design_Mode). Safari has a similar mode too, which can be enabled by going to _Safari > Preferences_, and checking _Show Develop menu_, then choosing _Develop > Enter Responsive Design Mode_. Chrome also has something similar: Device mode (see [Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
 
-<p>An emulator might be as simple as testing a device condition. 例えば、if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's <a href="/ja/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>. Safari has a similar mode too, which can be enabled by going to <em>Safari &gt; Preferences</em>, and checking <em>Show Develop menu</em>, then choosing <em>Develop &gt; Enter Responsive Design Mode</em>. Chrome also has something similar: Device mode (see <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/">Simulate Mobile Devices with Device Mode</a>). </p>
+More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
 
-<p>More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:</p>
+- The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html). If you want something a bit more lightweight, [LeapDroid](http://leapdroid.com/) is a good option for Windows, and [Andy](http://www.andyroid.net/) is a reasonable option that runs on both Windows and Mac.
+- Apple provides an app called [Simulator](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html) that runs on top of the [XCode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
 
-<ul>
- <li>The official <a href="https://developer.android.com/studio/">Android Studio IDE</a> for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust <a href="https://developer.android.com/studio/run/emulator.html">emulator</a>. If you want something a bit more lightweight, <a href="http://leapdroid.com/">LeapDroid</a> is a good option for Windows, and <a href="http://www.andyroid.net/">Andy</a> is a reasonable option that runs on both Windows and Mac.</li>
- <li>Apple provides an app called <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html">Simulator</a> that runs on top of the <a href="https://developer.apple.com/xcode/">XCode</a> development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.</li>
-</ul>
+You can often find simulators for other mobile device environments too, 例えば、:
 
-<p>You can often find simulators for other mobile device environments too, 例えば、:</p>
+- [Blackberry](https://developer.blackberry.com/develop/simulator/) (emulator available for Windows, Mac OSX and Linux).
+- You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
+- There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
-<ul>
- <li><a href="https://developer.blackberry.com/develop/simulator/">Blackberry</a> (emulator available for Windows, Mac OSX and Linux).</li>
- <li>You can emulate <a href="https://dev.opera.com/articles/installing-opera-mini-on-your-computer/">Opera Mini</a> on its own if you want to test it.</li>
- <li>There are emulators available for Windows Mobile OSes: see <a href="https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx">Windows Phone Emulator for Windows Phone 8</a> and <a href="https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator">Test with the Microsoft Emulator for Windows 10 Mobile</a> (these only run on Windows).</li>
-</ul>
+> **Note:** **注**: Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
 
-<div class="note">
-<p><strong>注</strong>: Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.</p>
-</div>
+### 仮想マシン
 
-<h3 id="Virtual_machines" name="Virtual_machines">仮想マシン</h3>
+Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as [Parallels](www.parallels.com/), [VMWare](http://www.vmware.com/), and [Virtual Box](https://www.virtualbox.org/wiki/Downloads); we personally like the latter, because it is free.
 
-<p>Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as <a href="www.parallels.com/">Parallels</a>, <a href="http://www.vmware.com/">VMWare</a>, and <a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box</a>; we personally like the latter, because it is free.</p>
+> **Note:** **注**: You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
 
-<div class="note">
-<p><strong>注</strong>: You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a <strong>dynamically allocated</strong> hard drive that grows and shrinks as the need arises.</p>
-</div>
+To use a Virtual Box, you need to:
 
-<p>To use a Virtual Box, you need to:</p>
+1.  Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
+2.  [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
+3.  Open the app; you'll be presented with a view like the following: ![](https://mdn.mozillademos.org/files/14089/virtualbox.png)
+4.  To create a new virtual machine, press the _New_ button in the top left hand corner.
+5.  Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
 
-<ol>
- <li>Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.</li>
- <li><a href="https://www.virtualbox.org/wiki/Downloads">Download the appropriate installer</a> for your operating system and install it.</li>
- <li>Open the app; you'll be presented with a view like the following: <img alt="" src="https://mdn.mozillademos.org/files/14089/virtualbox.png" style="display: block; height: 512px; margin: 0px auto; width: 700px;"></li>
- <li>To create a new virtual machine, press the <em>New</em> button in the top left hand corner.</li>
- <li>Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
-  <ol>
-   <li>Provide a name for the new virtual machine</li>
-   <li>Choose with operating system and version you are installing on it</li>
-   <li>Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)</li>
-   <li>Create a virtual hard disk (choose the default options across the three dialog boxes containing <em>Create a virtual hard disk now</em>, <em>VDI (virtual disk image)</em>, and <em>Dynamically allocated</em>).</li>
-   <li>Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).</li>
-  </ol>
- </li>
-</ol>
+    1.  Provide a name for the new virtual machine
+    2.  Choose with operating system and version you are installing on it
+    3.  Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
+    4.  Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
+    5.  Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
 
-<p>Now the new virtual box should appear in the left hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.</p>
+Now the new virtual box should appear in the left hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14085/virtualbox-installer.png" style="display: block; margin: 0 auto;"></p>
+![](https://mdn.mozillademos.org/files/14085/virtualbox-installer.png)
 
-<div class="warning">
-<p><strong>Important</strong>: You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.</p>
-</div>
+> **Warning:** **Important**: You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
 
-<p>After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.</p>
+After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14087/virtualbox-running.png" style="display: block; margin: 0 auto;"></p>
+![](https://mdn.mozillademos.org/files/14087/virtualbox-running.png)
 
-<p>You need to treat this virtual operating system installation just like you would any real installation — 例えば、as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.</p>
+You need to treat this virtual operating system installation just like you would any real installation — 例えば、as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.
 
-<p>Having multiple virtual machines is very useful, particularly for Windows IE/Edge testing — on Windows, you are not able to have multiple versions of the default browser installed side by side, so you might want to build up a library of virtual machines to handle different tests as required, e.g.:</p>
+Having multiple virtual machines is very useful, particularly for Windows IE/Edge testing — on Windows, you are not able to have multiple versions of the default browser installed side by side, so you might want to build up a library of virtual machines to handle different tests as required, e.g.:
 
-<ul>
- <li>Windows 10 with Edge 14</li>
- <li>Windows 10 with Edge 13</li>
- <li>Windows 8.1 with IE11</li>
- <li>Windows 8 with IE10</li>
- <li>Windows 7 with IE9</li>
- <li>Windows XP with IE8</li>
- <li>Windows XP with IE7</li>
- <li>Windows XP with IE6</li>
-</ul>
+- Windows 10 with Edge 14
+- Windows 10 with Edge 13
+- Windows 8.1 with IE11
+- Windows 8 with IE10
+- Windows 7 with IE9
+- Windows XP with IE8
+- Windows XP with IE7
+- Windows XP with IE6
 
-<div class="note">
-<p><strong>注</strong>: Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running, if it is a licensed product.</p>
-</div>
+> **Note:** **注**: Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running, if it is a licensed product.
 
-<h3 id="Automation_and_commercial_apps" name="Automation_and_commercial_apps">自動化と商用アプリ</h3>
+### 自動化と商用アプリ
 
-<p>As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system (<a href="http://www.seleniumhq.org/">Selenium</a> being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.</p>
+As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system ([Selenium](http://www.seleniumhq.org/) being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.
 
-<p>There are also commercial tools available such as <a href="https://saucelabs.com/">Sauce Labs</a> and <a href="https://www.browserstack.com/">Browser Stack</a> that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.</p>
+There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
-<p>We will look at how to use such tools later on in the module.</p>
+We will look at how to use such tools later on in the module.
 
-<h2 id="User_testing" name="User_testing">ユーザーテスト</h2>
+## ユーザーテスト
 
-<p>Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.</p>
+Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.
 
-<p>Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the <a href="#what_are_you_going_to_test">What are you going to test</a> section above — it is easy to turn the test criteria detailed there into steps to follow. 例えば、the following would work for a sighted user:</p>
+Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the [What are you going to test](#what_are_you_going_to_test) section above — it is easy to turn the test criteria detailed there into steps to follow. 例えば、the following would work for a sighted user:
 
-<ul>
- <li>Click the question mark button using the mouse on your desktop computer a few times. Refresh the browser window.</li>
- <li>Select and activate the question mark button using the keyboard on your desktop computer a few times.</li>
- <li>Tap the question mark button a few times on your touch screen device.</li>
- <li>Toggling the button should make the information box appear/disappear. Does it do this, in each of the above three cases?</li>
- <li>Is the text readable?</li>
- <li>Does the information box animate smoothly as it appears/disappears?</li>
-</ul>
+- Click the question mark button using the mouse on your desktop computer a few times. Refresh the browser window.
+- Select and activate the question mark button using the keyboard on your desktop computer a few times.
+- Tap the question mark button a few times on your touch screen device.
+- Toggling the button should make the information box appear/disappear. Does it do this, in each of the above three cases?
+- Is the text readable?
+- Does the information box animate smoothly as it appears/disappears?
 
-<p>When running tests, it can also be a good idea to:</p>
+When running tests, it can also be a good idea to:
 
-<ul>
- <li>Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles">Use the Profile Manager to create and remove Firefox profiles</a> and <a href="https://support.google.com/chrome/answer/2364824">Share Chrome with others or add personas</a>, 例えば、).</li>
- <li>Use browser's private mode functionality when running tests, where available (e.g. <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">Private Browsing</a> in Firefox, <a href="https://support.google.com/chrome/answer/95464">Incognito Mode</a> in Chrome) so things like cookies and temp files are not saved.</li>
-</ul>
+- Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), 例えば、).
+- Use browser's private mode functionality when running tests, where available (e.g. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
 
-<p>These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.</p>
+These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
 
-<div class="note">
-<p><strong>注</strong>: Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.</p>
-</div>
+> **Note:** **注**: Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
 
-<div class="note">
-<p><strong>注</strong>: Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is <a href="https://github.com/jsocol/django-waffle">Django Waffle Flags</a>.</p>
-</div>
+> **Note:** **注**: Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jsocol/django-waffle).
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p>この記事を読んで、ターゲット顧客/ブラウザーの表を特定して、その表に載っているクロスブラウザーテストを効率的に実行することが良くわかったでしょう。</p>
+この記事を読んで、ターゲット顧客/ブラウザーの表を特定して、その表に載っているクロスブラウザーテストを効率的に実行することが良くわかったでしょう。
 
-<p>次には HTML と CSSから始めて、テストで見つけにくいコードの問題に注目していきましょう。</p>
+次には HTML と CSS から始めて、テストで見つけにくいコードの問題に注目していきましょう。
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
+## このモジュール内
 
-
-<h2 id="In_this_module" name="In_this_module">このモジュール内</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
-</ul>
+- [Introduction to cross browser testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
+- [Strategies for carrying out testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
+- [Handling common HTML and CSS problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
+- [Handling common JavaScript problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
+- [Handling common accessibility problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
+- [Implementing feature detection](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+- [Introduction to automated testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
+- [Setting up your own test automation environment](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

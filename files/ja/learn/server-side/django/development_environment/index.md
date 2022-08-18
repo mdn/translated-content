@@ -8,368 +8,348 @@ tags:
   - サーバーサイドプログラミング
 translation_of: Learn/Server-side/Django/development_environment
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}</div>
+Django がどういうものか知ったので、Windows、Linux（Ubuntu）、および macOS で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Django アプリケーションの開発を始められます。
 
-<p class="summary">Djangoがどういうものか知ったので、Windows、Linux（Ubuntu）、およびmacOSでDjango開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Djangoアプリケーションの開発を始められます。</p>
+| 前提条件: | ターミナル/コマンドラインを開く方法を知っていること。開発用コンピュータのオペレーティングシステムにソフトウェアパッケージをインストールする方法を知っていること。 |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | あなたのコンピュータで Django(2.0)の開発環境を動かします。                                                                                                        |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>ターミナル/コマンドラインを開く方法を知っていること。開発用コンピュータのオペレーティングシステムにソフトウェアパッケージをインストールする方法を知っていること。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>あなたのコンピュータでDjango(2.0)の開発環境を動かします。</td>
-  </tr>
- </tbody>
-</table>
+## Django 開発環境の概要
 
-<h2 id="Django開発環境の概要">Django開発環境の概要</h2>
+Django は自分のコンピュータをセットアップするのはとても簡単で、Web アプリケーションの開発を開始できます。このセクションでは、開発環境の内容を説明し、セットアップおよび構成オプションの一部の概要を示します。また、Ubuntu、macOS X、Windows に Django 開発環境をインストールする際の推奨される方法と、そのテスト方法について説明します。
 
-<p>Djangoは自分のコンピュータをセットアップするのはとても簡単で、Webアプリケーションの開発を開始できます。このセクションでは、開発環境の内容を説明し、セットアップおよび構成オプションの一部の概要を示します。また、Ubuntu、macOS X、WindowsにDjango開発環境をインストールする際の推奨される方法と、そのテスト方法について説明します。</p>
+### Django 開発環境とは何ですか？
 
-<h3 id="Django開発環境とは何ですか？">Django開発環境とは何ですか？</h3>
+開発環境は Django をローカルコンピュータにインストールしたものです。Django アプリを開発し、運用環境にデプロイする前にテストできます。
 
-<p>開発環境はDjangoをローカルコンピュータにインストールしたものです。Djangoアプリを開発し、運用環境にデプロイする前にテストできます。</p>
+Django 自体が提供する主なツールは、Django プロジェクトを作成して作業するための Python スクリプトと、ローカルの（つまり、外部の Web サーバーではなく）Django Web アプリケーションをあなたのコンピュータ上のウェブブラウザでテストするための簡単な開発用 Web サーバーです。
 
-<p>Django自体が提供する主なツールは、Djangoプロジェクトを作成して作業するためのPythonスクリプトと、ローカルの（つまり、外部のWebサーバーではなく）Django Webアプリケーションをあなたのコンピュータ上のウェブブラウザでテストするための簡単な開発用Webサーバーです。</p>
+開発環境の一部を構成する他の周辺ツールがありますが、ここではカバーしません。これには、コードを編集するための[テキストエディタ](/jadocs/Learn/Common_questions/Available_text_editors)や IDE、コードの異なるバージョンを安全に管理するための[Git](https://git-scm.com/)のようなソース管理ツールなどがあります。すでにテキストエディタがインストールされていると仮定しています。
 
-<p>開発環境の一部を構成する他の周辺ツールがありますが、ここではカバーしません。これには、コードを編集するための<a href="/jadocs/Learn/Common_questions/Available_text_editors">テキストエディタ</a>やIDE、コードの異なるバージョンを安全に管理するための<a href="https://git-scm.com/">Git</a>のようなソース管理ツールなどがあります。すでにテキストエディタがインストールされていると仮定しています。</p>
+### Django の構成オプションとは?
 
-<h3 id="Djangoの構成オプションとは">Djangoの構成オプションとは?</h3>
+Django は、インストール場所と設定の方法に関して非常に柔軟性があります。Django は次のようなことが可能です:
 
-<p>Djangoは、インストール場所と設定の方法に関して非常に柔軟性があります。Djangoは次のようなことが可能です:</p>
+- 異なるオペレーティングシステムへのインストール
+- ソースコード、Python パッケージインデックス（PyPi）、および多くの場合ホストコンピュータのパッケージマネージャアプリケーションからのインストール
+- いくつかのデータベースのうち 1 つを使用するように構成したり、個別にインストールして構成する必要がある場合もあります。
+- メインシステムの Python 環境または分離した Python 仮想環境で実行します。
 
-<ul>
- <li>異なるオペレーティングシステムへのインストール</li>
- <li>ソースコード、Pythonパッケージインデックス（PyPi）、および多くの場合ホストコンピュータのパッケージマネージャアプリケーションからのインストール</li>
- <li>いくつかのデータベースのうち1つを使用するように構成したり、個別にインストールして構成する必要がある場合もあります。</li>
- <li>メインシステムのPython環境または分離したPython仮想環境で実行します。</li>
-</ul>
+これらのオプションは、それぞれわずかに異なる構成とセットアップを必要とします。以下のサブセクションでは、いくつかの選択肢について説明します。この記事の残りの部分では、いくつかオペレーティングシステムに Django をセットアップする方法を説明します。このモジュールの残りの部分は、セットアップが済んでいる想定です。
 
-<p>これらのオプションは、それぞれわずかに異なる構成とセットアップを必要とします。以下のサブセクションでは、いくつかの選択肢について説明します。この記事の残りの部分では、いくつかオペレーティングシステムにDjangoをセットアップする方法を説明します。このモジュールの残りの部分は、セットアップが済んでいる想定です。</p>
+> **Note:** **ノート**: その他のインストールオプションについては、Django の公式ドキュメントでカバーされています。[下記で適切なドキュメントにリンクしています。](#furtherreading)
 
-<div class="note">
-<p><strong>ノート</strong>: その他のインストールオプションについては、Djangoの公式ドキュメントでカバーされています。<a href="#furtherreading">下記で適切なドキュメントにリンクしています。</a></p>
-</div>
+#### どのオペレーティングシステムがサポートされていますか？
 
-<h4 id="どのオペレーティングシステムがサポートされていますか？">どのオペレーティングシステムがサポートされていますか？</h4>
+Django の Web アプリケーションは、Python 3 プログラミング言語を実行できるほとんどすべてのマシン（Windows、MacOS X、Linux / Unix、Solaris など）で実行できます。ほとんどのコンピュータで開発中に Django を実行できるパフォーマンスが必要です。
 
-<p>DjangoのWebアプリケーションは、Python 3プログラミング言語を実行できるほとんどすべてのマシン（Windows、MacOS X、Linux / Unix、Solarisなど）で実行できます。ほとんどのコンピュータで開発中にDjangoを実行できるパフォーマンスが必要です。</p>
+この記事では、Windows、macOS X、および Linux/Unix について説明します。
 
-<p>この記事では、Windows、macOS X、およびLinux/Unixについて説明します。</p>
+#### どのバージョンの Python を使うべきですか？
 
-<h4 id="どのバージョンのPythonを使うべきですか？">どのバージョンのPythonを使うべきですか？</h4>
+最新のバージョンを使用することをお勧めします - 執筆時点では Python 3.6 です。
 
-<p>最新のバージョンを使用することをお勧めします - 執筆時点ではPython 3.6です。</p>
+必要であれば Python 3.4 以上を使用できます（Python 3.4 のサポートは将来のリリースでは廃止される予定です）。
 
-<p>必要であればPython 3.4以上を使用できます（Python 3.4のサポートは将来のリリースでは廃止される予定です）。</p>
+> **Note:** **ノート**: Python 2.7 は Django 2.0 では使用できません（Django 1.11.x 系は Python 2.7 をサポートする最後のバージョンです）。
 
-<div class="note">
-<p><strong>ノート</strong>: Python 2.7はDjango 2.0では使用できません（Django 1.11.x系はPython 2.7をサポートする最後のバージョンです）。</p>
-</div>
+#### どこで Django をダウンロードできますか？
 
-<h4 id="どこでDjangoをダウンロードできますか？">どこでDjangoをダウンロードできますか？</h4>
+Django をダウンロードする場所は 3 つあります:
 
-<p>Djangoをダウンロードする場所は3つあります:</p>
+- pip を使用して Python パッケージリポジトリ（PyPi）から。 これは、Django の最新の安定版を入手するための最良の方法です。
+- コンピュータのパッケージマネージャのバージョンを使用します。 オペレーティングシステムにバンドルされている Django のディストリビューションは、使い慣れたインストールメカニズムを提供します。 ただし、パッケージ化されたバージョンはかなり古く、システムの Python 環境にのみインストールできます（これはあなたが望むものではないかもしれません）。
+- ソースからインストールします。 Django の開発版を入手してソースからインストールできます。 これは初心者にはお勧めできませんが、Django 自身に貢献する準備ができたら必要です。
 
-<ul>
- <li>pipを使用してPythonパッケージリポジトリ（PyPi）から。 これは、Djangoの最新の安定版を入手するための最良の方法です。</li>
- <li>コンピュータのパッケージマネージャのバージョンを使用します。 オペレーティングシステムにバンドルされているDjangoのディストリビューションは、使い慣れたインストールメカニズムを提供します。 ただし、パッケージ化されたバージョンはかなり古く、システムのPython環境にのみインストールできます（これはあなたが望むものではないかもしれません）。</li>
- <li>ソースからインストールします。 Djangoの開発版を入手してソースからインストールできます。 これは初心者にはお勧めできませんが、Django自身に貢献する準備ができたら必要です。</li>
-</ul>
+この記事では PyPi から Django をインストールし、最新の安定版を入手する方法を説明します。
 
-<p>この記事ではPyPiからDjangoをインストールし、最新の安定版を入手する方法を説明します。</p>
+#### どのデータベースですか？
 
-<h4 id="どのデータベースですか？">どのデータベースですか？</h4>
+Django は 4 つの主要なデータベース（PostgreSQL、MySQL、Oracle、SQLite）をサポートしています。また、他の一般的な SQL データベースや NOSQL データベースにさまざまなレベルのサポートを提供するコミュニティライブラリもあります。 Django は Object-Relational Mapper（ORM）を使用して多くのデータベースの違いを抽象化していますが、[回避する方が良い潜在的な問題](https://docs.djangoproject.com/en/2.0/ref/databases/)がまだあります。
 
-<p>Djangoは4つの主要なデータベース（PostgreSQL、MySQL、Oracle、SQLite）をサポートしています。また、他の一般的なSQLデータベースやNOSQLデータベースにさまざまなレベルのサポートを提供するコミュニティライブラリもあります。 DjangoはObject-Relational Mapper（ORM）を使用して多くのデータベースの違いを抽象化していますが、<a href="https://docs.djangoproject.com/en/2.0/ref/databases/">回避する方が良い潜在的な問題</a>がまだあります。</p>
+この記事（とこのモジュールのほとんど）では、データをファイルに保存する SQLite データベースを使用します。 SQLite は軽量データベースとしての使用を目的としており、高度な並行性はサポートできません。 ただし、主に読み取り専用のアプリケーションには最適です。
 
-<p>この記事（とこのモジュールのほとんど）では、データをファイルに保存するSQLiteデータベースを使用します。 SQLiteは軽量データベースとしての使用を目的としており、高度な並行性はサポートできません。 ただし、主に読み取り専用のアプリケーションには最適です。</p>
+> **Note:** **ノート**: Django は、標準ツール（django-admin）を使用して Web サイトプロジェクトを開始するときに、デフォルトで SQLite を使用するように設定されています。 これは、追加の設定やセットアップが不要なため、入門には最適な選択です。
 
-<div class="note">
-<p><strong>ノート</strong>: Djangoは、標準ツール（django-admin）を使用してWebサイトプロジェクトを開始するときに、デフォルトでSQLiteを使用するように設定されています。 これは、追加の設定やセットアップが不要なため、入門には最適な選択です。</p>
-</div>
+#### システム全体または Python の仮想環境にインストールするには？
 
-<h4 id="システム全体またはPythonの仮想環境にインストールするには？">システム全体またはPythonの仮想環境にインストールするには？</h4>
+Python3 をインストールすると、すべての Python3 コードで共有される単一のグローバル環境が得られます。 環境に好きな Python パッケージをインストールすることはできますが、一度に 1 つのパッケージしかインストールできません。
 
-<p>Python3をインストールすると、すべてのPython3コードで共有される単一のグローバル環境が得られます。 環境に好きなPythonパッケージをインストールすることはできますが、一度に1つのパッケージしかインストールできません。</p>
+> **Note:** **ノート**: グローバル環境にインストールされた Python アプリケーションは、お互いに衝突する可能性があります（例えば、同じパッケージの異なるバージョンに依存する場合）。
 
-<div class="note">
-<p><strong>ノート</strong>: グローバル環境にインストールされたPythonアプリケーションは、お互いに衝突する可能性があります（例えば、同じパッケージの異なるバージョンに依存する場合）。 </p>
-</div>
+Django をデフォルト/グローバル環境にインストールすると、コンピュータ上で Django の 1 つのバージョンのみを対象にできます。 古いバージョンに依存している Web サイトを維持しながら、新しい Web サイト（Django の最新バージョンを使用）を作成したい場合、これは問題になる可能性があります。
 
-<p>Djangoをデフォルト/グローバル環境にインストールすると、コンピュータ上でDjangoの1つのバージョンのみを対象にできます。 古いバージョンに依存しているWebサイトを維持しながら、新しいWebサイト（Djangoの最新バージョンを使用）を作成したい場合、これは問題になる可能性があります。</p>
+その結果、経験豊富な Python/Django 開発者は通常、独立した Python 仮想環境内で Python アプリケーションを実行します。これにより、1 台のコンピュータ上で複数の異なる Django 環境を使用することができます。Django の開発チームは、Python の仮想環境を使用することをお勧めしています。
 
-<p>その結果、経験豊富なPython/Django開発者は通常、独立したPython仮想環境内でPythonアプリケーションを実行します。これにより、1台のコンピュータ上で複数の異なるDjango環境を使用することができます。Djangoの開発チームは、Pythonの仮想環境を使用することをお勧めしています。</p>
+このモジュールは以下に示す方法で、仮想環境に Django をインストールすることを前提としています。
 
-<p>このモジュールは以下に示す方法で、仮想環境にDjangoをインストールすることを前提としています。</p>
+## Python 3 のインストール
 
-<h2 id="Python_3のインストール">Python 3のインストール</h2>
+Django を使用するには、オペレーティングシステムに Python をインストールする必要があります。Python 3 を使用している場合は、Django とその他の Python アプリケーションで使用される Python パッケージ/ライブラリの管理（インストール、更新、削除）に使用する [Python Package Index](https://pypi.python.org/pypi)ツール『pip3』も必要です。
 
-<p>Djangoを使用するには、オペレーティングシステムにPythonをインストールする必要があります。Python 3を使用している場合は、Djangoとその他のPythonアプリケーションで使用されるPythonパッケージ/ライブラリの管理（インストール、更新、削除）に使用する <a href="https://pypi.python.org/pypi">Python Package Index</a>ツール『pip3』も必要です。</p>
+このセクションでは、Ubuntu Linux 16.04、macOS X、および Windows 10 の Python のバージョンを確認し、必要に応じて新しいバージョンをインストールする方法を簡単に説明します。
 
-<p>このセクションでは、Ubuntu Linux 16.04、macOS X、およびWindows 10のPythonのバージョンを確認し、必要に応じて新しいバージョンをインストールする方法を簡単に説明します。</p>
+> **Note:** **ノート**: 使用しているプラットフォームによっては、オペレーティングシステム独自のパッケージマネージャやその他のメカニズムを使って Python/pip をインストールできます。ほとんどのプラットフォームでは、 <https://www.python.org/downloads/> から必要なインストールファイルをダウンロードし、適切なプラットフォーム固有の方法を使用してインストールできます。
 
-<div class="note">
-<p><strong>ノート</strong>: 使用しているプラットフォームによっては、オペレーティングシステム独自のパッケージマネージャやその他のメカニズムを使ってPython/pipをインストールできます。ほとんどのプラットフォームでは、 <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> から必要なインストールファイルをダウンロードし、適切なプラットフォーム固有の方法を使用してインストールできます。</p>
-</div>
+### Ubuntu 16.04
 
-<h3 id="Ubuntu_16.04">Ubuntu 16.04</h3>
+Ubuntu Linux 16.04 LTS にはデフォルトで Python 3.5.2 が含まれています。 これを確認するには、bash 端末で次のコマンドを実行します:
 
-<p>Ubuntu Linux 16.04 LTSにはデフォルトでPython 3.5.2が含まれています。 これを確認するには、bash端末で次のコマンドを実行します:</p>
+```bash
+python3 -V
+ Python 3.5.2
+```
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- Python 3.5.2</span></pre>
+しかし、Python 3（Django を含む）用のパッケージをインストールするために必要な Python Package Index ツールは、デフォルトでは利用できません。 次のコマンドを使用して bash 端末に pip3 をインストールできます:
 
-<p>しかし、Python 3（Djangoを含む）用のパッケージをインストールするために必要なPython Package Indexツールは、デフォルトでは利用できません。 次のコマンドを使用してbash端末にpip3をインストールできます:</p>
+```bash
+sudo apt-get install python3-pip
+```
 
-<pre class="brush: bash">sudo apt-get install python3-pip
-</pre>
+### macOS X
 
-<h3 id="macOS_X">macOS X</h3>
+macOS X "El Capitan"やその他の最近のバージョンには Python 3 は含まれていません。これは bash 端末で次のコマンドを実行することで確認できます:
 
-<p>macOS X "El Capitan"やその他の最近のバージョンにはPython 3は含まれていません。これはbash端末で次のコマンドを実行することで確認できます:</p>
+```bash
+python3 -V
+ -bash: python3: command not found
+```
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- </span>-bash: python3: command not found</pre>
+[python.org](https://www.python.org/)の Python 3（pip3 ツールと一緒に）を簡単にインストールできます:
 
-<p><a href="https://www.python.org/">python.org</a>のPython 3（pip3ツールと一緒に）を簡単にインストールできます:</p>
+1.  必要なインストーラをダウンロードします:
 
-<ol>
- <li>必要なインストーラをダウンロードします:
-  <ol>
-   <li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> を開きます</li>
-   <li><strong>Download Python 3.6.4</strong> ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。</li>
-  </ol>
- </li>
- <li>Finderを使用してファイルを探し、パッケージファイルをダブルクリックします。インストールの後、プロンプトが表示されます。</li>
-</ol>
+    1.  <https://www.python.org/downloads/> を開きます
+    2.  **Download Python 3.6.4** ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。
 
-<p>以下に示すように、Python 3を確認することで、正常にインストールされたことを確認できます:</p>
+2.  Finder を使用してファイルを探し、パッケージファイルをダブルクリックします。インストールの後、プロンプトが表示されます。
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- Python 3.6.4</span>
-</pre>
+以下に示すように、Python 3 を確認することで、正常にインストールされたことを確認できます:
 
-<p>同様にpip3がインストールされていることを確認するには、利用可能なパッケージを一覧表示します:</p>
+```bash
+python3 -V
+ Python 3.6.4
+```
 
-<pre class="brush: bash">pip3 list</pre>
+同様に pip3 がインストールされていることを確認するには、利用可能なパッケージを一覧表示します:
 
-<h3 id="Windows_10">Windows 10</h3>
+```bash
+pip3 list
+```
 
-<p>WindowsにはデフォルトでPythonは含まれていませんが、<a href="https://www.python.org/">python.org</a>からpip3ツールと一緒に簡単にインストールできます:</p>
+### Windows 10
 
-<ol>
- <li>必要なインストーラをダウンロードします:
-  <ol>
-   <li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> を開きます</li>
-   <li><strong>Download Python 3.6.4</strong> ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。</li>
-  </ol>
- </li>
- <li>ダウンロードしたファイルをダブルクリックし、インストールのプロンプトに従ってPythonをインストールします。</li>
-</ol>
+Windows にはデフォルトで Python は含まれていませんが、[python.org](https://www.python.org/)から pip3 ツールと一緒に簡単にインストールできます:
 
-<p>Python 3がインストールされたことを確認するには、コマンドプロンプトに次のテキストを入力します:</p>
+1.  必要なインストーラをダウンロードします:
 
-<pre class="brush: bash"><span style="line-height: 1.5;">py -3 -V
- Python 3.6.4</span>
-</pre>
+    1.  <https://www.python.org/downloads/> を開きます
+    2.  **Download Python 3.6.4** ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。
 
-<p>Windowsインストーラには、デフォルトでpip3（Pythonパッケージマネージャ）が組み込まれています。次に示すようにインストールされたパッケージを一覧表示できます:</p>
+2.  ダウンロードしたファイルをダブルクリックし、インストールのプロンプトに従って Python をインストールします。
 
-<pre class="brush: bash"><span style="line-height: 1.5;">pip3 list</span>
-</pre>
+Python 3 がインストールされたことを確認するには、コマンドプロンプトに次のテキストを入力します:
 
-<div class="note">
-<p><strong>ノート</strong>: インストーラは、上記のコマンドが動作するために必要なものすべてをセットアップする必要があります。Pythonが見つからないというメッセージが表示された場合は、システムパスに追加する必要があります。</p>
-</div>
+```bash
+py -3 -V
+ Python 3.6.4
+```
 
-<h2 id="Python仮想環境内でのDjangoの使用">Python仮想環境内でのDjangoの使用</h2>
+Windows インストーラには、デフォルトで pip3（Python パッケージマネージャ）が組み込まれています。次に示すようにインストールされたパッケージを一覧表示できます:
 
-<p>仮想環境を作成するために使用するライブラリは、 <a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a> （LinuxとmacOS X）と<a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a>（Windows）です。これらはどちらも<a href="/ja/docs/Python/Virtualenv">virtualenv</a>ツールを使用します。ラッパーツールは、すべてのプラットフォーム上のインターフェイスを管理するための一貫したインターフェイスを作成します。</p>
+```bash
+pip3 list
+```
 
-<h3 id="仮想環境ソフトウェアのインストール">仮想環境ソフトウェアのインストール</h3>
+> **Note:** **ノート**: インストーラは、上記のコマンドが動作するために必要なものすべてをセットアップする必要があります。Python が見つからないというメッセージが表示された場合は、システムパスに追加する必要があります。
 
-<h4 id="Ubuntu仮想環境のセットアップ">Ubuntu仮想環境のセットアップ</h4>
+## Python 仮想環境内での Django の使用
 
-<p>Pythonとpipをインストールした後、virtualenvwrapper（virtualenvを含む）をインストールできます。公式インストールガイドは<a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">こちら</a>、または下記の手順に従ってください。</p>
+仮想環境を作成するために使用するライブラリは、 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) （Linux と macOS X）と[virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)（Windows）です。これらはどちらも[virtualenv](/ja/docs/Python/Virtualenv)ツールを使用します。ラッパーツールは、すべてのプラットフォーム上のインターフェイスを管理するための一貫したインターフェイスを作成します。
 
-<p>pip3を使用してツールをインストールします:</p>
+### 仮想環境ソフトウェアのインストール
 
-<pre><code>sudo pip3 install virtualenvwrapper</code></pre>
+#### Ubuntu 仮想環境のセットアップ
 
-<p>次に、シェルのスタートアップファイルの最後に次の行を追加します（これはホームディレクトリ内の <strong>.bashrc</strong> という名前の隠しファイルです）。これらは、仮想環境の存在場所、開発プロジェクトディレクトリの場所、およびこのパッケージと共にインストールされるスクリプトの場所を設定します:</p>
+Python と pip をインストールした後、virtualenvwrapper（virtualenv を含む）をインストールできます。公式インストールガイドは[こちら](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)、または下記の手順に従ってください。
 
-<pre><code>export WORKON_HOME=$HOME/.virtualenvs
+pip3 を使用してツールをインストールします:
+
+```
+sudo pip3 install virtualenvwrapper
+```
+
+次に、シェルのスタートアップファイルの最後に次の行を追加します（これはホームディレクトリ内の **.bashrc** という名前の隠しファイルです）。これらは、仮想環境の存在場所、開発プロジェクトディレクトリの場所、およびこのパッケージと共にインストールされるスクリプトの場所を設定します:
+
+```
+export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh</code></pre>
+source /usr/local/bin/virtualenvwrapper.sh
+```
 
-<div class="note">
-<p><strong>ノート</strong>: <code>VIRTUALENVWRAPPER_PYTHON</code>および<code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code>変数は、Python3の通常のインストール場所を指し、<code>source /usr/local/bin/virtualenvwrapper.sh</code>は<code>virtualenvwrapper.sh</code> スクリプトの通常の場所を指します。テスト時にvirtualenvが動作しない場合は、Pythonとスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。<br>
- <br>
- あなたのシステムでの正しい場所は、<code>which virtualenvwrapper.sh</code>と<code>which python3</code>というコマンドを使って見つけることができます。</p>
-</div>
+> **Note:** **ノート**: `VIRTUALENVWRAPPER_PYTHON`および`VIRTUALENVWRAPPER_VIRTUALENV_ARGS`変数は、Python3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh`は`virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+>
+> あなたのシステムでの正しい場所は、`which virtualenvwrapper.sh`と`which python3`というコマンドを使って見つけることができます。
 
-<p>次に、ターミナルで次のコマンドを実行してスタートアップファイルをリロードします:</p>
+次に、ターミナルで次のコマンドを実行してスタートアップファイルをリロードします:
 
-<pre><code>source ~/.bashrc</code></pre>
+```
+source ~/.bashrc
+```
 
-<p>この時点で、以下に示すように一連のスクリプトが実行されているはずです:</p>
+この時点で、以下に示すように一連のスクリプトが実行されているはずです:
 
-<pre><code>virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
+```
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details</code>
-</pre>
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
+```
 
-<p>これで、<code>mkvirtualenv</code>コマンドを使用して新しい仮想環境を作成できます。</p>
+これで、`mkvirtualenv`コマンドを使用して新しい仮想環境を作成できます。
 
-<h4 id="macOS_X仮想環境のセットアップ">macOS X仮想環境のセットアップ</h4>
+#### macOS X 仮想環境のセットアップ
 
-<p>macOS Xでのvirtualenvwrapperのセットアップは、Ubuntuの場合とほぼ同じです（<a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">オフィシャルインストールガイド</a>またはそれ以下の指示に従います）。</p>
+macOS X での virtualenvwrapper のセットアップは、Ubuntu の場合とほぼ同じです（[オフィシャルインストールガイド](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)またはそれ以下の指示に従います）。
 
-<p>次に示すようにpipを使用してvirtualenvwrapper（およびvirtualenvをバンドル）をインストールします。</p>
+次に示すように pip を使用して virtualenvwrapper（および virtualenv をバンドル）をインストールします。
 
-<pre><code>sudo pip3 install virtualenvwrapper</code></pre>
+```
+sudo pip3 install virtualenvwrapper
+```
 
-<p>次に、シェルスタートアップファイルの最後に次の行を追加します。</p>
+次に、シェルスタートアップファイルの最後に次の行を追加します。
 
-<pre><code>export WORKON_HOME=$HOME/.virtualenvs
+```
+export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh</code>
-</pre>
+source /usr/local/bin/virtualenvwrapper.sh
+```
 
-<div class="note">
-<p><strong>ノート</strong>: <code>VIRTUALENVWRAPPER_PYTHON</code>変数はPython3の通常のインストール場所を指し、<code>source /usr/local/bin/virtualenvwrapper.sh</code>は<code>virtualenvwrapper.sh</code>スクリプトの通常の場所を指しています。テスト時にvirtualenvが動作しない場合は、Pythonとスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。</p>
+> **Note:** **ノート**: `VIRTUALENVWRAPPER_PYTHON`変数は Python3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh`は`virtualenvwrapper.sh`スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+>
+> たとえば、macOS での 1 つのインストールテストでは、スタートアップファイルに次の行が必要になりました:
+>
+> ```
+> export WORKON_HOME=$HOME/.virtualenvs
+> export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+> export PROJECT_HOME=$HOME/Devel
+> source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh
+> ```
+>
+> あなたのシステムでの正しい場所は、`which virtualenvwrapper.sh`と`which python3`というコマンドを使って見つけることができます。
 
-<p> </p>
+これらは Ubuntu の場合と同じ行ですが、スタートアップファイルはホームディレクトリ内で **.bash_profile** という別の名前の隠しファイルです。
 
-<p>たとえば、macOSでの1つのインストールテストでは、スタートアップファイルに次の行が必要になりました:</p>
+> **Note:** **ノート**: 編集する**.bash-profile**が Finder で見つからない場合は、ターミナルで nano を使用して開くこともできます。
+>
+> コマンドは次のようになります:
+>
+> ```
+> cd ~  # Navigate to my home directory
+> ls -la #List the content of the directory. YOu should see .bash_profile
+> nano .bash_profile # Open the file in the nano text editor, within the terminal
+> # Scroll to the end of the file, and copy in the lines above
+> # Use Ctrl+X to exit nano, Choose Y to save the file.
+> ```
 
-<pre><code>export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3
-export PROJECT_HOME=$HOME/Devel
-source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh</code></pre>
+ターミナルで次の呼び出しを行うことによって、スタートアップファイルをリロードします:
 
-<p> </p>
+```bash
+source ~/.bash_profile
+```
 
-<p>あなたのシステムでの正しい場所は、<code>which virtualenvwrapper.sh</code>と<code>which python3</code>というコマンドを使って見つけることができます。</p>
-</div>
+この時点で、たくさんのスクリプトが実行されているのを見ることができます（Ubuntu のインストールと同じスクリプト）。`mkvirtualenv`コマンドを使用して新しい仮想環境を作成できるようになりました。
 
-<p><br>
- これらはUbuntuの場合と同じ行ですが、スタートアップファイルはホームディレクトリ内で <strong>.bash_profile</strong> という別の名前の隠しファイルです。</p>
+#### Windows 10 仮想環境のセットアップ
 
-<div class="note">
-<p><strong>ノート</strong>: 編集する<strong>.bash-profile</strong>がFinderで見つからない場合は、ターミナルでnanoを使用して開くこともできます。</p>
+[virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)のインストールは、仮想環境情報を保存する場所（デフォルト値があります）を設定する必要がないため、virtualenvwrapper を設定するより簡単です。コマンドプロンプトで次のコマンドを実行するだけです:
 
-<p>コマンドは次のようになります:</p>
+```
+pip3 install virtualenvwrapper-win
+```
 
-<pre><code>cd ~  # Navigate to my home directory
-ls -la #List the content of the directory. YOu should see .bash_profile
-nano .bash_profile # Open the file in the nano text editor, within the terminal
-# Scroll to the end of the file, and copy in the lines above
-# Use Ctrl+X to exit nano, Choose Y to save the file.</code>
-</pre>
+これで、`mkvirtualenv`コマンドで新しい仮想環境を作成できます。
 
-<p> </p>
-</div>
+### 仮想環境の作成
 
-<p>ターミナルで次の呼び出しを行うことによって、スタートアップファイルをリロードします:</p>
+virtualenvwrapper または virtualenvwrapper-win をインストールすると、仮想環境での作業はすべてのプラットフォームでほとんど同様になります。
 
-<pre class="brush: bash"><code>source ~/.bash_profile</code></pre>
+`mkvirtualenv` コマンドを使用して新しい仮想環境を作成できます。このコマンドが実行されると、セットアップされる環境が表示されます（表示されるのはプラットフォーム固有のものです）。コマンドが完了すると、新しい仮想環境がアクティブになります。これは、プロンプトの開始が環境の名前（下に示すように）になるので、確認できます。
 
-<p>この時点で、たくさんのスクリプトが実行されているのを見ることができます（Ubuntuのインストールと同じスクリプト）。<code>mkvirtualenv</code>コマンドを使用して新しい仮想環境を作成できるようになりました。</p>
-
-<h4 id="Windows_10仮想環境のセットアップ">Windows 10仮想環境のセットアップ</h4>
-
-<p><a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a>のインストールは、仮想環境情報を保存する場所（デフォルト値があります）を設定する必要がないため、virtualenvwrapperを設定するより簡単です。コマンドプロンプトで次のコマンドを実行するだけです:</p>
-
-<pre><code>pip3 install virtualenvwrapper-win</code></pre>
-
-<p>これで、<code>mkvirtualenv</code>コマンドで新しい仮想環境を作成できます。</p>
-
-<h3 id="仮想環境の作成">仮想環境の作成</h3>
-
-<p>virtualenvwrapperまたはvirtualenvwrapper-winをインストールすると、仮想環境での作業はすべてのプラットフォームでほとんど同様になります。</p>
-
-<p><code>mkvirtualenv</code> コマンドを使用して新しい仮想環境を作成できます。このコマンドが実行されると、セットアップされる環境が表示されます（表示されるのはプラットフォーム固有のものです）。コマンドが完了すると、新しい仮想環境がアクティブになります。これは、プロンプトの開始が環境の名前（下に示すように）になるので、確認できます。</p>
-
-<pre><code>$ mkvirtualenv my_django_environment
+```
+$ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-(my_django_environment) ubuntu@ubuntu:~$</code>
-</pre>
+(my_django_environment) ubuntu@ubuntu:~$
+```
 
-<p>これで、Djangoをインストールして開発を開始できる仮想環境の中に入りました。</p>
+これで、Django をインストールして開発を開始できる仮想環境の中に入りました。
 
-<div class="note">
-<p><strong>ノート</strong>: これ以降、この記事（と実際にはモジュール）では、上でセットアップしたようなPython仮想環境内でコマンドが実行されると仮定してください。</p>
-</div>
+> **Note:** **ノート**: これ以降、この記事（と実際にはモジュール）では、上でセットアップしたような Python 仮想環境内でコマンドが実行されると仮定してください。
 
-<h3 id="仮想環境の使用">仮想環境の使用</h3>
+### 仮想環境の使用
 
-<p>他にも知っておくべき便利なコマンドがいくつかあります（ツールのドキュメントには多くのものがありますが、これらはいつも使用するコマンドです）:</p>
+他にも知っておくべき便利なコマンドがいくつかあります（ツールのドキュメントには多くのものがありますが、これらはいつも使用するコマンドです）:
 
-<ul>
- <li><code>deactivate</code> — 現在のPython仮想環境を終了します</li>
- <li><code>workon</code> — 利用可能な仮想環境を一覧表示します</li>
- <li><code>workon name_of_environment</code> — 指定したPython仮想環境を有効にします</li>
- <li><code>rmvirtualenv name_of_environment</code> — 指定された環境を削除します</li>
-</ul>
+- `deactivate` — 現在の Python 仮想環境を終了します
+- `workon` — 利用可能な仮想環境を一覧表示します
+- `workon name_of_environment` — 指定した Python 仮想環境を有効にします
+- `rmvirtualenv name_of_environment` — 指定された環境を削除します
 
-<h2 id="Djangoのインストール">Djangoのインストール</h2>
+## Django のインストール
 
-<p>仮想環境を作成し、<code>workon</code>でその環境に入ってから、pip3を使用してDjangoをインストールできます。</p>
+仮想環境を作成し、`workon`でその環境に入ってから、pip3 を使用して Django をインストールできます。
 
-<pre class="brush: bash">pip3 install django
-</pre>
+```bash
+pip3 install django
+```
 
-<p>Djangoがインストールされていることをテストするには、次のコマンドを実行します（PythonがDjangoモジュールを見つけることができます）:</p>
+Django がインストールされていることをテストするには、次のコマンドを実行します（Python が Django モジュールを見つけることができます）:
 
-<pre class="brush: bash"># Linux/macOS X
+```bash
+# Linux/macOS X
 python3 -m django --version
  2.0
 
 # Windows
 py -3 -m django --version
  2.0
-</pre>
+```
 
-<div class="note">
-<p><strong>ノート</strong>: Windowsでは<code>py -3</code>コマンドをプレフィックスにしてPython 3スクリプトを起動し、Linux/macOS Xでは <code>python3</code>を実行します。</p>
-</div>
+> **Note:** **ノート**: Windows では`py -3`コマンドをプレフィックスにして Python 3 スクリプトを起動し、Linux/macOS X では `python3`を実行します。
 
-<div class="warning">
-<p><strong>重要</strong>: このモジュールの残りの部分は、 Python 3 (<code>python3</code>) を呼び出すためにLinuxコマンドを使用します。Windowsで作業している場合は、単にこの接頭辞を<code>py -3</code>に置き換えてください。</p>
-</div>
+> **Warning:** **重要**: このモジュールの残りの部分は、 Python 3 (`python3`) を呼び出すために Linux コマンドを使用します。Windows で作業している場合は、単にこの接頭辞を`py -3`に置き換えてください。
 
-<h2 id="インストールのテスト">インストールのテスト</h2>
+## インストールのテスト
 
-<p>上記のテストはうまくいきますが、それほど楽しいことではありません。より面白いテストは、スケルトンプロジェクトを作成し、それが動作することを確認することです。これを行うには、コマンドプロンプト/ターミナルでDjangoアプリケーションを保存する場所に移動します。テストサイト用のフォルダを作成し、そのサイトに移動します。</p>
+上記のテストはうまくいきますが、それほど楽しいことではありません。より面白いテストは、スケルトンプロジェクトを作成し、それが動作することを確認することです。これを行うには、コマンドプロンプト/ターミナルで Django アプリケーションを保存する場所に移動します。テストサイト用のフォルダを作成し、そのサイトに移動します。
 
-<pre class="brush: bash">mkdir django_test
+```bash
+mkdir django_test
 cd django_test
-</pre>
+```
 
-<p>次に示すように、<strong>django-admin</strong>ツールを使用して、 "mytestsite"という新しいスケルトンサイトを作成します。サイトを作成したら、<strong>manage.py</strong>というプロジェクト管理用のメインスクリプトがあるフォルダに移動します。</p>
+次に示すように、**django-admin**ツールを使用して、 "mytestsite"という新しいスケルトンサイトを作成します。サイトを作成したら、**manage.py**というプロジェクト管理用のメインスクリプトがあるフォルダに移動します。
 
-<pre class="brush: bash">django-admin startproject mytestsite
-cd mytestsite</pre>
+```bash
+django-admin startproject mytestsite
+cd mytestsite
+```
 
-<p>次に示すように<strong>manage.py</strong>と<code>runserver</code>コマンドを使用して、このフォルダ内から開発用Webサーバーを実行できます。</p>
+次に示すように**manage.py**と`runserver`コマンドを使用して、このフォルダ内から開発用 Web サーバーを実行できます。
 
-<pre class="brush: bash">$ python3 manage.py runserver
+```bash
+$ python3 manage.py runserver
 Performing system checks...
 
 System check identified no issues (0 silenced).
@@ -381,53 +361,42 @@ December 29, 2017 - 03:03:47
 Django version 2.0, using settings 'mytestsite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
-</pre>
+```
 
-<div class="note">
-<p><strong>ノート</strong>: 上記のコマンドは、Linux/macOS Xコマンドを示しています。この時点では、 "14 unapplied migration(s)" という警告は無視できます！</p>
-</div>
+> **Note:** **ノート**: 上記のコマンドは、Linux/macOS X コマンドを示しています。この時点では、 "14 unapplied migration(s)" という警告は無視できます！
 
-<p>サーバーが稼働したら、ローカルWebブラウザで <code>http://127.0.0.1:8000/</code> というURLに移動して、サイトを表示できます。次のようなサイトが表示されます:</p>
+サーバーが稼働したら、ローカル Web ブラウザで `http://127.0.0.1:8000/` という URL に移動して、サイトを表示できます。次のようなサイトが表示されます:
 
-<p><img alt="Django Skeleton App Homepage" src="https://mdn.mozillademos.org/files/15728/Django_Skeleton_Website_Homepage.png"></p>
+![Django Skeleton App Homepage](https://mdn.mozillademos.org/files/15728/Django_Skeleton_Website_Homepage.png)
 
-<ul>
-</ul>
+## 要約
 
-<h2 id="要約">要約</h2>
+Django 開発環境をあなたのコンピュータ上で稼働できるようになりました。
 
-<p>Django開発環境をあなたのコンピュータ上で稼働できるようになりました。</p>
+テストのセクションでは、`django-admin startproject`を使用して新しい Django Web サイトを作成する方法と、開発用 Web サーバー（`python3 manage.py runserver`）を使用してブラウザで実行する方法についても簡単に説明しました。次の記事では、このプロセスを拡張して、シンプルで完全な Web アプリケーションを構築します。
 
-<p>テストのセクションでは、<code>django-admin startproject</code>を使用して新しいDjango Webサイトを作成する方法と、開発用Webサーバー（<code>python3 manage.py runserver</code>）を使用してブラウザで実行する方法についても簡単に説明しました。次の記事では、このプロセスを拡張して、シンプルで完全なWebアプリケーションを構築します。</p>
+## 参考文献
 
-<h2 id="参考文献"><a id="furtherreading" name="furtherreading">参考文献</a></h2>
+- [Quick Install Guide](https://docs.djangoproject.com/en/2.0/intro/install/) （Django ドキュメント）
+- [How to install Django — Complete guide](https://docs.djangoproject.com/en/2.0/topics/install/) （Django ドキュメント） - Django を削除する方法ついての情報が含まれています
+- [How to install Django on Windows](https://docs.djangoproject.com/en/2.0/howto/windows/) （Django ドキュメント）
 
-<ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/intro/install/">Quick Install Guide</a> （Djangoドキュメント）</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/topics/install/">How to install Django — Complete guide</a> （Djangoドキュメント） - Djangoを削除する方法ついての情報が含まれています</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/howto/windows/">How to install Django on Windows</a> （Djangoドキュメント）</li>
-</ul>
+{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
-<p>{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}</p>
+## このモジュール内
 
-<h2 id="このモジュール内">このモジュール内</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/Server-side/Django/Introduction">Django の紹介</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/development_environment">Django 開発環境の設定</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django チュートリアル: 地域図書館ウェブサイト</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/skeleton_website">Django チュートリアル Part 2: ウェブサイトの骨組み作成</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Models">Django チュートリアル Part 3: モデルの使用</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Admin_site">Django チュートリアル Part 4: Django 管理サイト</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Home_page">Django チュートリアル Part 5: ホームページの作成</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Generic_views">Django チュートリアル Part 6: 汎用の一覧表示と詳細表示</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Sessions">Django チュートリアル Part 7: セッションフレームワーク</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Authentication">Django チュートリアル Part 8: ユーザー認証と権限</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Forms">Django チュートリアル Part 9: フォームの操作</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Testing">Django チュートリアル Part 10: Django ウェブアプリケーションのテスト</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/Deployment">Django チュートリアル Part 11: Django を本番環境にデプロイする</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/web_application_security">Django ウェブアプリケーションセキュリティ</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django ミニブログ</a></li>
-</ul>
-
-<p> </p>
+- [Django の紹介](/ja/docs/Learn/Server-side/Django/Introduction)
+- [Django 開発環境の設定](/ja/docs/Learn/Server-side/Django/development_environment)
+- [Django チュートリアル: 地域図書館ウェブサイト](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django チュートリアル Part 2: ウェブサイトの骨組み作成](/ja/docs/Learn/Server-side/Django/skeleton_website)
+- [Django チュートリアル Part 3: モデルの使用](/ja/docs/Learn/Server-side/Django/Models)
+- [Django チュートリアル Part 4: Django 管理サイト](/ja/docs/Learn/Server-side/Django/Admin_site)
+- [Django チュートリアル Part 5: ホームページの作成](/ja/docs/Learn/Server-side/Django/Home_page)
+- [Django チュートリアル Part 6: 汎用の一覧表示と詳細表示](/ja/docs/Learn/Server-side/Django/Generic_views)
+- [Django チュートリアル Part 7: セッションフレームワーク](/ja/docs/Learn/Server-side/Django/Sessions)
+- [Django チュートリアル Part 8: ユーザー認証と権限](/ja/docs/Learn/Server-side/Django/Authentication)
+- [Django チュートリアル Part 9: フォームの操作](/ja/docs/Learn/Server-side/Django/Forms)
+- [Django チュートリアル Part 10: Django ウェブアプリケーションのテスト](/ja/docs/Learn/Server-side/Django/Testing)
+- [Django チュートリアル Part 11: Django を本番環境にデプロイする](/ja/docs/Learn/Server-side/Django/Deployment)
+- [Django ウェブアプリケーションセキュリティ](/ja/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django ミニブログ](/ja/docs/Learn/Server-side/Django/django_assessment_blog)

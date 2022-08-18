@@ -12,222 +12,182 @@ tags:
   - id
 translation_of: Learn/CSS/Building_blocks/Selectors
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
-<p class="summary">{{Glossary("CSS")}}では、ウェブページ上の {{glossary("HTML")}} 要素にスタイルを設定するためにセレクターが使用されます。CSS セレクターにはさまざまな種類があり、きめ細かにスタイルを設定する要素を選択できます。この記事とそのサブ記事では、さまざまなタイプについて、どのように機能するかを詳しく見ていきます。</p>
+{{Glossary("CSS")}}では、ウェブページ上の {{glossary("HTML")}} 要素にスタイルを設定するためにセレクターが使用されます。CSS セレクターにはさまざまな種類があり、きめ細かにスタイルを設定する要素を選択できます。この記事とそのサブ記事では、さまざまなタイプについて、どのように機能するかを詳しく見ていきます。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>) および CSS に関するアイデア (<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>) に関する基本的な知識を得ている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>CSS セレクターがどのように機能するかを学ぶ。</td>
-  </tr>
- </tbody>
-</table>
+| 前提条件: | 基本的なコンピューターリテラシー、[基本的なソフトウェアがインストールされている](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)こと、[ファイルの扱い](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、HTML の基本 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)) および CSS に関するアイデア ([CSS の第一歩](/ja/docs/Learn/CSS/First_steps)) に関する基本的な知識を得ている。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | CSS セレクターがどのように機能するかを学ぶ。                                                                                                                                                                                                                                                                                                                                                                           |
 
-<h2 id="What_is_a_selector" name="What_is_a_selector">セレクターとは</h2>
+## セレクターとは
 
-<p>実はもうこれまでにセレクターを見たことがあるはずです。CSS セレクターは、CSS のもっとも基本的なルールとなるものです。要素やその他を選択して CSS プロパティ値を適用する HTML 要素をブラウザーに伝えるものです。セレクターによって選択される要素は、選択対象 <em>(subject of the selector</em>) と呼ばれます。</p>
+実はもうこれまでにセレクターを見たことがあるはずです。CSS セレクターは、CSS のもっとも基本的なルールとなるものです。要素やその他を選択して CSS プロパティ値を適用する HTML 要素をブラウザーに伝えるものです。セレクターによって選択される要素は、選択対象 _(subject of the selector_) と呼ばれます。
 
-<p><img alt="Some code with the h1 highlighted." src="https://mdn.mozillademos.org/files/16550/selector.png" style="border: 1px solid #cccccc; height: 218px; width: 471px;"></p>
+![Some code with the h1 highlighted.](https://mdn.mozillademos.org/files/16550/selector.png)
 
-<p>これまでの記事で <code>h1</code> 要素や <code>.special</code> クラスなどのいくつかのセレクターを見てきました。それらはドキュメント内の対象をさまざまな方法で指定できるということも学びました。</p>
+これまでの記事で `h1` 要素や `.special` クラスなどのいくつかのセレクターを見てきました。それらはドキュメント内の対象をさまざまな方法で指定できるということも学びました。
 
-<p>"CSS セレクター仕様" (<em>CSS Selectors specification</em>) で、CSS のセレクターは定義されています。CSS の他の部分と同様に、それらが機能するにはブラウザーでのサポートが必要です。よく使うセレクターは確定仕様である <a href="https://www.w3.org/TR/selectors-3/">Level 3 Selectors specification</a> で定義されているため、ブラウザーサポートも期待できます。</p>
+"CSS セレクター仕様" (_CSS Selectors specification_) で、CSS のセレクターは定義されています。CSS の他の部分と同様に、それらが機能するにはブラウザーでのサポートが必要です。よく使うセレクターは確定仕様である [Level 3 Selectors specification](https://www.w3.org/TR/selectors-3/) で定義されているため、ブラウザーサポートも期待できます。
 
-<h2 id="Selector_lists" name="Selector_lists">セレクター一覧</h2>
+## セレクター一覧
 
-<p>同じ CSS を使用するものが複数ある場合は、セレクターリストでまとめてルールを適用することができます。たとえば、<code>h1</code> と <code>.special</code> クラスが同じ CSS だとして、2 つの個別のルールとして記述できます。</p>
+同じ CSS を使用するものが複数ある場合は、セレクターリストでまとめてルールを適用することができます。たとえば、`h1` と `.special` クラスが同じ CSS だとして、2 つの個別のルールとして記述できます。
 
-<pre class="brush: css"><code>h1 {
+```css
+h1 {
   color: blue;
 }
 
 .special {
   color: blue;
-} </code></pre>
+}
+```
 
-<p>カンマ区切りでセレクターリストにもできます。</p>
+カンマ区切りでセレクターリストにもできます。
 
-<pre class="brush: css"><code>h1, .special {
+```css
+h1, .special {
   color: blue;
-} </code></pre>
+}
+```
 
-<p>カンマの前後に空白を入れることもできますし、改行したほうがセレクターを見つけやすくなり読みやすいかもしれません。</p>
+カンマの前後に空白を入れることもできますし、改行したほうがセレクターを見つけやすくなり読みやすいかもしれません。
 
-<pre class="brush: css"><code>h1,
+```css
+h1,
 .special {
   color: blue;
-} </code></pre>
+}
+```
 
-<p>以下のライブサンプルを使って、同じ宣言を持つ 2 つのセレクターを結合してみてください。作業の前後で見た目が同じになるように留意してください。</p>
+以下のライブサンプルを使って、同じ宣言を持つ 2 つのセレクターを結合してみてください。作業の前後で見た目が同じになるように留意してください。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}} </p>
+{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}}
 
-<p>この方法でセレクターをグループ化していると、無効なセレクターがある場合はルール全体が無視されます。</p>
+この方法でセレクターをグループ化していると、無効なセレクターがある場合はルール全体が無視されます。
 
-<p>以下の例では無効なセレクターは無視され、<code>h1</code> だけがスタイル適用されます。</p>
+以下の例では無効なセレクターは無視され、`h1` だけがスタイル適用されます。
 
-<pre class="brush: css"><code>h1 {
+```css
+h1 {
   color: blue;
 }
 
 ..special {
   color: blue;
-} </code></pre>
+}
+```
 
-<p><br>
- ただし結合した場合は、<code>h1</code> もクラスも無効なものとしてスタイルされません。</p>
+ただし結合した場合は、`h1` もクラスも無効なものとしてスタイルされません。
 
-<pre class="brush: css"><code>h1, ..special {
+```css
+h1, ..special {
   color: blue;
-} </code></pre>
+}
+```
 
-<h2 id="Types_of_selectors" name="Types_of_selectors">セレクターの種類</h2>
+## セレクターの種類
 
-<p>セレクターにはいくつかの異なるグループがあり、どれが必要かを知ることは有用です。ここのサブ記事ではさまざまなセレクターグループを詳しく見ていきます。</p>
+セレクターにはいくつかの異なるグループがあり、どれが必要かを知ることは有用です。ここのサブ記事ではさまざまなセレクターグループを詳しく見ていきます。
 
-<h3 id="Type_class_and_ID_selectors" name="Type_class_and_ID_selectors">要素・クラス・ID によるセレクター</h3>
+### 要素・クラス・ID によるセレクター
 
-<p>このグループには <code>&lt;h1&gt;</code> のような HTML 要素を対象とするセレクターを含みます。</p>
+このグループには `<h1>` のような HTML 要素を対象とするセレクターを含みます。
 
-<pre class="brush: css">h1 { }</pre>
+```css
+h1 { }
+```
 
-<p>同様にクラスを対象としたセレクターも含みます。</p>
+同様にクラスを対象としたセレクターも含みます。
 
-<pre class="brush: css">.box { }</pre>
+```css
+.box { }
+```
 
-<p>あとは ID です。</p>
+あとは ID です。
 
-<pre class="brush: css">#unique { }</pre>
+```css
+#unique { }
+```
 
-<h3 id="Attribute_selectors" name="Attribute_selectors">属性によるセレクター</h3>
+### 属性によるセレクター
 
-<p>このセレクターグループは要素の属性によるさまざまな選択方法を提供します。</p>
+このセレクターグループは要素の属性によるさまざまな選択方法を提供します。
 
-<pre class="brush: css">a[title] { }</pre>
+```css
+a[title] { }
+```
 
-<p>特定の値を持つ属性で選択することもできます。</p>
+特定の値を持つ属性で選択することもできます。
 
-<pre class="brush: css">a[href="https://example.com"] { }</pre>
+```css
+a[href="https://example.com"] { }
+```
 
-<h3 id="Pseudo-classes_and_pseudo-elements" name="Pseudo-classes_and_pseudo-elements">擬似クラスおよび疑似要素によるセレクター</h3>
+### 擬似クラスおよび疑似要素によるセレクター
 
-<p>このセレクターグループは、要素の特定の状態をスタイルする疑似クラスを含みます。たとえば、<code>:hover</code> 擬似クラスはマウスポインターがホバーしているときにのみ要素を選択します。</p>
+このセレクターグループは、要素の特定の状態をスタイルする疑似クラスを含みます。たとえば、`:hover` 擬似クラスはマウスポインターがホバーしているときにのみ要素を選択します。
 
-<pre class="brush: css">a:hover { }</pre>
+```css
+a:hover { }
+```
 
-<p>また要素自体ではなく要素の特定の部分を選択する擬似要素もあります。たとえば、<code>::first-line</code> は要素 (以下では <code>&lt;p&gt;</code>) 内の最初の行をまるで <code>&lt;span&gt;</code> でラップしてスタイルしたかのように動作します。</p>
+また要素自体ではなく要素の特定の部分を選択する擬似要素もあります。たとえば、`::first-line` は要素 (以下では `<p>`) 内の最初の行をまるで `<span>` でラップしてスタイルしたかのように動作します。
 
-<pre class="brush: css">p::first-line { }</pre>
+```css
+p::first-line { }
+```
 
-<h3 id="Combinators" name="Combinators">結合子</h3>
+### 結合子
 
-<p>最後のセレクターグループは、セレクターを組み合わせて文書内のターゲット要素を選びます。たとえば、以下では子コンビネータ (<code>&gt;</code>) によって <code>&lt;article&gt;</code> 要素の直接の子である段落を選択します。</p>
+最後のセレクターグループは、セレクターを組み合わせて文書内のターゲット要素を選びます。たとえば、以下では子コンビネータ (`>`) によって `<article>` 要素の直接の子である段落を選択します。
 
-<pre class="brush: css">article &gt; p { }</pre>
+```css
+article > p { }
+```
 
-<h2 id="Next_steps" name="Next_steps">次のステップ</h2>
+## 次のステップ
 
-<p>この記事や MDN にあるさまざまなセレクターについては、下の方にある表を参照してください。または、<a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">要素・クラス・ID によるセレクター</a>から見ていくこともできます。</p>
+この記事や MDN にあるさまざまなセレクターについては、下の方にある表を参照してください。または、[要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)から見ていくこともできます。
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}</p>
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
-<h2 id="Reference_table_of_selectors" name="Reference_table_of_selectors">セレクターのリファレンス表</h2>
+## セレクターのリファレンス表
 
-<p>以下の表で使用可能な各セレクターの概要と、それぞれの使い方を示すガイド内ページへのリンクを紹介します。そこには各セレクターのブラウザーサポートを確認できる MDN ページへのリンクもあります。セレクターを検索したり一般的に CSS を体験するときに、ここに戻ってきて参照することができます。</p>
+以下の表で使用可能な各セレクターの概要と、それぞれの使い方を示すガイド内ページへのリンクを紹介します。そこには各セレクターのブラウザーサポートを確認できる MDN ページへのリンクもあります。セレクターを検索したり一般的に CSS を体験するときに、ここに戻ってきて参照することができます。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">セレクター</th>
-   <th scope="col">例</th>
-   <th scope="col">CSS チュートリアル</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Type_selectors">要素セレクター</a></td>
-   <td><code>h1 {  }</code></td>
-   <td><a href="/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Type_selectors">要素セレクター</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Universal_selectors">全称セレクター</a></td>
-   <td><code>* {  }</code></td>
-   <td><a href="/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#The_universal_selector">全称セレクター</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Class_selectors">クラスセレクター</a></td>
-   <td><code>.box {  }</code></td>
-   <td><a href="/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Class_selectors">クラスセレクター</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/ID_selectors">ID セレクター</a></td>
-   <td><code>#unique { }</code></td>
-   <td><a href="/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#ID_Selectors">ID セレクター</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a></td>
-   <td><code>a[title] {  }</code></td>
-   <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Attribute_selectors">属性によるセレクター</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラスセレクター</a></td>
-   <td><code>p:first-child { }</code></td>
-   <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-class">疑似クラス</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Pseudo-elements">疑似要素セレクター</a></td>
-   <td><code>p::first-line { }</code></td>
-   <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-element">疑似要素</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Descendant_combinator">子孫結合子</a></td>
-   <td><code>article p</code></td>
-   <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Descendant_Selector">子孫結合子</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Child_combinator">子結合子</a></td>
-   <td><code>article &gt; p</code></td>
-   <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Child_combinator">子結合子</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/Adjacent_sibling_combinator">隣接兄弟結合子</a></td>
-   <td><code>h1 + p</code></td>
-   <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Adjacent_sibling">隣接兄弟</a></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Web/CSS/General_sibling_combinator">一般兄弟結合子</a></td>
-   <td><code>h1 ~ p</code></td>
-   <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#General_sibling">一般兄弟</a></td>
-  </tr>
- </tbody>
-</table>
+| セレクター                                                     | 例                  | CSS チュートリアル                                                                                                            |
+| -------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| [要素セレクター](/ja/docs/Web/CSS/Type_selectors)              | `h1 { }`            | [要素セレクター](/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Type_selectors)            |
+| [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)         | `* { }`             | [全称セレクター](/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#The_universal_selector)    |
+| [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)           | `.box { }`          | [クラスセレクター](/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Class_selectors)         |
+| [ID セレクター](/ja/docs/Web/CSS/ID_selectors)                 | `#unique { }`       | [ID セレクター](/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#ID_Selectors)               |
+| [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)         | `a[title] { }`      | [属性によるセレクター](/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Attribute_selectors)                             |
+| [擬似クラスセレクター](/ja/docs/Web/CSS/Pseudo-classes)        | `p:first-child { }` | [疑似クラス](/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-class) |
+| [疑似要素セレクター](/ja/docs/Web/CSS/Pseudo-elements)         | `p::first-line { }` | [疑似要素](/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-element) |
+| [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)           | `article p`         | [子孫結合子](/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Descendant_Selector)                           |
+| [子結合子](/ja/docs/Web/CSS/Child_combinator)                  | `article > p`       | [子結合子](/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Child_combinator)                                |
+| [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [隣接兄弟](/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Adjacent_sibling)                                |
+| [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator)  | `h1 ~ p`            | [一般兄弟](/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#General_sibling)                                 |
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<ol>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">CSS セレクター</a>
-  <ul>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">要素・クラス・ID によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">属性によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">擬似クラスおよび疑似要素によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators">結合子</a></li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">ボックスモデル</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">背景と枠線</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">テキスト方向の操作</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Overflowing_content">要素のはみ出し (オーバーフロー)</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Values_and_units">CSS の値と単位</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS によるサイズ設定</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements">画像・メディア・フォーム要素</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Styling_tables">表のスタイリング</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS">CSS のデバッグ</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Organizing">CSS の整理</a></li>
-</ol>
+1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+
+    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6.  [要素のはみ出し (オーバーフロー)](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
+11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

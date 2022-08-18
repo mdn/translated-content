@@ -12,252 +12,264 @@ tags:
   - state
 translation_of: Learn/CSS/First_steps/Getting_started
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}</div>
+この記事では、かんたんな HTML コードに CSS を適用させ、その過程でこの言語についての実用的なことを学びます。
 
-<p class="summary">この記事では、かんたんな HTML コードに CSS を適用させ、その過程でこの言語についての実用的なことを学びます。</p>
+| 前提条件: | 基本的なコンピューターリテラシー、[ソフトウェアのインストール](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、[ファイルの働き方](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)についての基本的な知識、HTML の基本 ([HTML 序論](/ja/docs/Learn/HTML/Introduction_to_HTML)を学んでいること。) |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | CSS 文書と HTML ファイルのリンクのさせかたを理解し、簡単なテキストをスタイリングできるようになる。                                                                                                                                                                                                                           |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">ソフトウェアのインストール</a>、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの働き方</a>についての基本的な知識、HTML の基本 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML序論</a>を学んでいること。)</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>CSS 文書と HTML ファイルのリンクのさせかたを理解し、簡単なテキストをスタイリングできるようになる。</td>
-  </tr>
- </tbody>
-</table>
+## HTML からはじめよう
 
-<h2 id="Starting_with_some_HTML" name="Starting_with_some_HTML">HTML からはじめよう</h2>
+HTML 文書から始めましょう。あなたのコンピューターのフォルダーに `index.html` として以下のコードを保存してください。
 
-<p>HTML 文書から始めましょう。あなたのコンピューターのフォルダーに <code>index.html</code> として以下のコードを保存してください。</p>
+```html
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>CSS 入門</title>
+</head>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;CSS 入門&lt;/title&gt;
-&lt;/head&gt;
+<body>
 
-&lt;body&gt;
+    <h1>見出し１です</h1>
 
-    &lt;h1&gt;見出し１です&lt;/h1&gt;
+    <p>これは第一段落の文です。この文には <span>span 要素</span>
+と<a href="http://example.com">リンク</a>が含まれます。</p>
 
-    &lt;p&gt;これは第一段落の文です。この文には &lt;span&gt;span 要素&lt;/span&gt;
-と&lt;a href="http://example.com"&gt;リンク&lt;/a&gt;が含まれます。&lt;/p&gt;
+    <p>これは第二段落の文です。この文には <em>em 要素</em>が含まれます。</p>
 
-    &lt;p&gt;これは第二段落の文です。この文には &lt;em&gt;em 要素&lt;/em&gt;が含まれます。&lt;/p&gt;
+    <ul>
+        <li>一つ目の項目</li>
+        <li>二つ目の項目</li>
+        <li><em>三つ目</em>の項目</li>
+    </ul>
 
-    &lt;ul&gt;
-        &lt;li&gt;一つ目の項目&lt;/li&gt;
-        &lt;li&gt;二つ目の項目&lt;/li&gt;
-        &lt;li&gt;&lt;em&gt;三つ目&lt;/em&gt;の項目&lt;/li&gt;
-    &lt;/ul&gt;
+</body>
 
-&lt;/body&gt;
+</html>
+```
 
-&lt;/html&gt;
-</pre>
+> **Note:** **注**: もし簡単にファイルの作れないデバイスや環境でこの記事を読んでいても心配しないでください。このページにあるコードを書くためにライブコードエディターが用意されています。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: もし簡単にファイルの作れないデバイスや環境でこの記事を読んでいても心配しないでください。このページにあるコードを書くためにライブコードエディターが用意されています。</p>
-</div>
+## CSS を加える
 
-<h2 id="Adding_CSS_to_our_document" name="Adding_CSS_to_our_document">CSS を加える</h2>
+まず必要なのは、使いたい CSS ルールを HTML 文書に適用させることです。これには一般的に３つの方法がありますが、いまは最も一般的で便利な方法— CSS を {{htmlelement("head")}} 要素の中にリンクする方法を見てみましょう。
 
-<p>まず必要なのは、使いたい CSS ルールを HTML 文書に適用させることです。これには一般的に３つの方法がありますが、いまは最も一般的で便利な方法— CSS を {{htmlelement("head")}} 要素の中にリンクする方法を見てみましょう。</p>
+HTML ドキュメントとおなじフォルダーにファイルをつくり、`styles.css` として保存してください。拡張子 `.css` となっているのが CSS ファイルです。
 
-<p>HTML ドキュメントとおなじフォルダーにファイルをつくり、<code>styles.css</code> として保存してください。拡張子 <code>.css</code> となっているのが CSS ファイルです。</p>
+`styles.css` を `index.html` にリンクさせるには、HTML 文書にある {{htmlelement("head")}} 要素の中につぎのコードを追記してください:
 
-<p><code>styles.css</code> を <code>index.html</code> にリンクさせるには、HTML 文書にある {{htmlelement("head")}} 要素の中につぎのコードを追記してください:</p>
+```html
+<link rel="stylesheet" href="styles.css">
+```
 
-<pre class="brush: html notranslate">&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
+{{htmlelement("link")}} 要素はブラウザーに、スタイルシートがあること、`rel` 属性を使うこと、`href` 属性の値でスタイルシートのある場所を伝えます。`styles.css` に以下のルールを記述すれば、CSS が働くかテストできます。使っているコードエディターでつぎのコードを CSS ファイルに追記してください:
 
-<p>{{htmlelement("link")}} 要素はブラウザーに、スタイルシートがあること、<code>rel</code> 属性を使うこと、<code>href</code> 属性の値でスタイルシートのある場所を伝えます。<code>styles.css</code> に以下のルールを記述すれば、CSS が働くかテストできます。使っているコードエディターでつぎのコードを CSS ファイルに追記してください:</p>
-
-<pre class="brush: css notranslate">h1 {
+```css
+h1 {
   color: red;
-}</pre>
+}
+```
 
-<p>HTML ファイルと CSS ファイルを保存し、ブラウザーでこのページを再読み込みしてみましょう。文書の先頭にある見出し 1 が赤くなるはずです。もしそうなったら、おめでとうございます。CSS の HTML への適用に成功しました！ もしそうならなかったら、すべてを正しく入力しているか慎重に確認してください。</p>
+HTML ファイルと CSS ファイルを保存し、ブラウザーでこのページを再読み込みしてみましょう。文書の先頭にある見出し 1 が赤くなるはずです。もしそうなったら、おめでとうございます。CSS の HTML への適用に成功しました！ もしそうならなかったら、すべてを正しく入力しているか慎重に確認してください。
 
-<p>あなたのコンピューターに保存した <code>styles.css</code> を使い続けても良いですし、このチュートリアルの下の方にあるインタラクティブエディターを使い続けることもできます。もし最初のパネルにある CSS が 上にある HTML 文書とリンクされているなら、インタラクティブエディターは動作します。</p>
+あなたのコンピューターに保存した `styles.css` を使い続けても良いですし、このチュートリアルの下の方にあるインタラクティブエディターを使い続けることもできます。もし最初のパネルにある CSS が 上にある HTML 文書とリンクされているなら、インタラクティブエディターは動作します。
 
-<h2 id="Styling_HTML_elements" name="Styling_HTML_elements">HTML 要素をスタイリングする</h2>
+## HTML 要素をスタイリングする
 
-<p>見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。<em><strong>要素セレクタ</strong>（</em>HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして <code>p</code> を使うことができます。すべての段落を緑色にするために次を使います:</p>
+見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。\_**要素セレクタ**（\_HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして `p` を使うことができます。すべての段落を緑色にするために次を使います:
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   color: green;
-}</pre>
+}
+```
 
-<p>セレクタをカンマで区切ることによって、同時に複数のセレクタへ焦点をあてることができます。もしすべての段落とリストすべてを緑にしたければ、CSS のルールセットは次のようになります:</p>
+セレクタをカンマで区切ることによって、同時に複数のセレクタへ焦点をあてることができます。もしすべての段落とリストすべてを緑にしたければ、CSS のルールセットは次のようになります:
 
-<pre class="brush: css notranslate">p, li {
+```css
+p, li {
     color: green;
-}</pre>
+}
+```
 
-<p>下にあるインタラクティブエディターのコードボックスを編集するか、コンピューターに保存された CSS ファイルを編集してこのルールセットを試してみてください。</p>
+下にあるインタラクティブエディターのコードボックスを編集するか、コンピューターに保存された CSS ファイルを編集してこのルールセットを試してみてください。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}}
 
-<h2 id="Changing_the_default_behavior_of_elements" name="Changing_the_default_behavior_of_elements">要素の基本的なふるまいを変える</h2>
+## 要素の基本的なふるまいを変える
 
-<p>よくマークアップされた HTML 文書をみると、かんたんな例でさえ、基本的なスタイリングを加えることでブラウザーが HTML を読みやすくしているかがわかります。見出しは大きく太線になっているし、リストは箇条書きになっています。これはブラウザーがすべてのページにデフォルトで適用されるスタイルシートを含んでいるために起きます。それらがなければ、すべてのテキストがまとまって一緒に実行され、すべてを一からスタイリングしなければなりません。最新のブラウザーはすべて、ほぼ同じ方法をもちいて、デフォルトで HTML コンテンツを表示します。</p>
+よくマークアップされた HTML 文書をみると、かんたんな例でさえ、基本的なスタイリングを加えることでブラウザーが HTML を読みやすくしているかがわかります。見出しは大きく太線になっているし、リストは箇条書きになっています。これはブラウザーがすべてのページにデフォルトで適用されるスタイルシートを含んでいるために起きます。それらがなければ、すべてのテキストがまとまって一緒に実行され、すべてを一からスタイリングしなければなりません。最新のブラウザーはすべて、ほぼ同じ方法をもちいて、デフォルトで HTML コンテンツを表示します。
 
-<p>ブラウザーが選んだのとは別のスタイリングにしたい事もあるでしょう。これには単純に変更したい HTML 要素をえらび、CSS ルールを変更したい外観に変えるだけで可能です。よい例が <code>&lt;ul&gt;</code> 要素、つまり順番なしリストです。箇条書きの点がついていますが、もしこれが要らないと思ったら次のようにして削除することができます:</p>
+ブラウザーが選んだのとは別のスタイリングにしたい事もあるでしょう。これには単純に変更したい HTML 要素をえらび、CSS ルールを変更したい外観に変えるだけで可能です。よい例が `<ul>` 要素、つまり順番なしリストです。箇条書きの点がついていますが、もしこれが要らないと思ったら次のようにして削除することができます:
 
-<pre class="brush: css notranslate">li {
+```css
+li {
   list-style-type: none;
-}</pre>
+}
+```
 
-<p>これをあなたの CSS に加えて試してみてください。</p>
+これをあなたの CSS に加えて試してみてください。
 
-<p><code>list-style-type</code> プロパティはどんな値がサポートされているか MDN上で調べるのに適したプロパティです。<code><a href="/ja/docs/Web/CSS/list-style-type">list-style-type</a></code> のページをみるとページの上部に違うプロパティ値を試せる対話型の例があります。そしてページの下部には使えるプロパティ値が詳細に説明されています。</p>
+`list-style-type` プロパティはどんな値がサポートされているか MDN 上で調べるのに適したプロパティです。[`list-style-type`](/ja/docs/Web/CSS/list-style-type) のページをみるとページの上部に違うプロパティ値を試せる対話型の例があります。そしてページの下部には使えるプロパティ値が詳細に説明されています。
 
-<p>このページをみると、どのようなものに変えられるか見つけられます。プロパティ値 <code>square</code>  に変えてみてください。</p>
+このページをみると、どのようなものに変えられるか見つけられます。プロパティ値 `square` に変えてみてください。
 
-<h2 id="Adding_a_class" name="Adding_a_class">クラスを加える</h2>
+## クラスを加える
 
-<p>これまで、HTML 要素名をもとにしたスタイリングをしてきました。これは、文書内にあるその要素すべてをおなじ見ばえにしたいときには有効です。しかしそんな場合はほとんどないので、ほかを変えずに一部の要素だけを選ぶ方法を知っておく必要があります。もっとも一般的なのが、HTML 要素にクラスを追加し、それに焦点をあてる方法です。</p>
+これまで、HTML 要素名をもとにしたスタイリングをしてきました。これは、文書内にあるその要素すべてをおなじ見ばえにしたいときには有効です。しかしそんな場合はほとんどないので、ほかを変えずに一部の要素だけを選ぶ方法を知っておく必要があります。もっとも一般的なのが、HTML 要素にクラスを追加し、それに焦点をあてる方法です。
 
-<p>HTML 文書の 2番目のリストアイテムへ、こんな風に <a href="/ja/docs/Web/HTML/Global_attributes/class">class 属性</a>を加えてください:</p>
+HTML 文書の 2 番目のリストアイテムへ、こんな風に [class 属性](/ja/docs/Web/HTML/Global_attributes/class)を加えてください:
 
-<pre class="brush: html; highlight[3] notranslate">&lt;ul&gt;
-  &lt;li&gt;Item one&lt;/li&gt;
-  &lt;li class="special"&gt;二つ目の項目&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;三つ目&lt;/em&gt;の項目&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Item one</li>
+  <li class="special">二つ目の項目</li>
+  <li><em>三つ目</em>の項目</li>
+</ul>
+```
 
-<p>ピリオドから始まるセレクタを作ることで、<code>special</code> クラス に焦点を当てることができます。以下を CSS に加えてください:</p>
+ピリオドから始まるセレクタを作ることで、`special` クラス に焦点を当てることができます。以下を CSS に加えてください:
 
-<pre class="brush: css notranslate">.special {
+```css
+.special {
   color: orange;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>保存してからブラウザーを更新し結果を見てみましょう。</p>
+保存してからブラウザーを更新し結果を見てみましょう。
 
-<p>ページ上でおなじ見た目にしたいリストアイテムに対して <code>special</code> クラスを適用できます。たとえば、段落内にある<code>&lt;span&gt;</code> 要素にも同じく、オレンジの太字にしたいかもしれません。これにも <code>class</code> 属性の値として <code>special</code> を加えてみてください。上書き保存後にページを再読み込みして結果を確認してみましょう。</p>
+ページ上でおなじ見た目にしたいリストアイテムに対して `special` クラスを適用できます。たとえば、段落内にある`<span>` 要素にも同じく、オレンジの太字にしたいかもしれません。これにも `class` 属性の値として `special` を加えてみてください。上書き保存後にページを再読み込みして結果を確認してみましょう。
 
-<p>HTML 要素セレクタに続けてクラスセレクタが記述されているのを時々見るかもしれません:</p>
+HTML 要素セレクタに続けてクラスセレクタが記述されているのを時々見るかもしれません:
 
-<pre class="brush: css notranslate">li.special {
+```css
+li.special {
   color: orange;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>この構文は、「<code>special</code> クラスをもっている <code>li</code> 要素へ焦点をあてろ」という意味です。もしそうなっていたらもう、<code>&lt;span&gt;</code> 要素やほかに <code>special</code> クラスにした要素には適用できません。セレクタのリストに次を付け加える必要があります:</p>
+この構文は、「`special` クラスをもっている `li` 要素へ焦点をあてろ」という意味です。もしそうなっていたらもう、`<span>` 要素やほかに `special` クラスにした要素には適用できません。セレクタのリストに次を付け加える必要があります:
 
-<pre class="brush: css notranslate">li.special,
+```css
+li.special,
 span.special {
   color: orange;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>いくつかのクラスがたくさんの要素に適用され、スタイリングが必要になる度に CSS を編集し続けることを望まないかもしれません。したがって、ある要素だけに特別なルールを作成し、他の要素に適用されないようにする場合を除き、要素をバイパスしてクラスを参照することが最善の場合があります。</p>
+いくつかのクラスがたくさんの要素に適用され、スタイリングが必要になる度に CSS を編集し続けることを望まないかもしれません。したがって、ある要素だけに特別なルールを作成し、他の要素に適用されないようにする場合を除き、要素をバイパスしてクラスを参照することが最善の場合があります。
 
-<h2 id="Styling_things_based_on_their_location_in_a_document" name="Styling_things_based_on_their_location_in_a_document">文書内の場所に基づいてスタイリングする</h2>
+## 文書内の場所に基づいてスタイリングする
 
-<p>文書のどこにあるかで見栄えを変えたい時があります。それを助けるセレクタはいくつかありますが、いまは 2種類だけ見てみましょう。HTML 文書には 2 つの <code>&lt;em&gt;</code> 要素があります — ひとつは段落の中に、もうひとつはリストアイテムの中に、です。<code>&lt;li&gt;</code> 要素の中にある <code>&lt;em&gt;</code> だけを選びたいとき、<strong>ディセンダント・コンビネーター</strong> と呼ばれるセレクタを使うことができます。これは２つの異なるセレクタのあいだにスペースを設けることで設置できます。</p>
+文書のどこにあるかで見栄えを変えたい時があります。それを助けるセレクタはいくつかありますが、いまは 2 種類だけ見てみましょう。HTML 文書には 2 つの `<em>` 要素があります — ひとつは段落の中に、もうひとつはリストアイテムの中に、です。`<li>` 要素の中にある `<em>` だけを選びたいとき、**ディセンダント・コンビネーター** と呼ばれるセレクタを使うことができます。これは２つの異なるセレクタのあいだにスペースを設けることで設置できます。
 
-<p>CSS につぎのルールセットを追加してください。</p>
+CSS につぎのルールセットを追加してください。
 
-<pre class="brush: css notranslate">li em {
+```css
+li em {
   color: rebeccapurple;
-}</pre>
+}
+```
 
-<p>このセレクタは <code>&lt;li&gt;</code> 要素の中にある <code>&lt;em&gt;</code> 要素を選択します。よって HTML 文書の中で、3番目のリストアイテム内にある <code>&lt;em&gt;</code> 要素はパープルに変わっていますが、段落内にある <code>&lt;em&gt;</code> 要素は変更されていません。</p>
+このセレクタは `<li>` 要素の中にある `<em>` 要素を選択します。よって HTML 文書の中で、3 番目のリストアイテム内にある `<em>` 要素はパープルに変わっていますが、段落内にある `<em>` 要素は変更されていません。
 
-<p>HTML ドキュメント内で、見出しの直後に来る段落を見出しとおなじ階層レベルにしたいと思うことがあるかもしれません。このときはセレクタ同士の間に <code>+</code>  を入れます（<strong>adjacent sibling combinator</strong>：アジェイセント・シブリング・コンビネーター）。</p>
+HTML ドキュメント内で、見出しの直後に来る段落を見出しとおなじ階層レベルにしたいと思うことがあるかもしれません。このときはセレクタ同士の間に `+` を入れます（**adjacent sibling combinator**：アジェイセント・シブリング・コンビネーター）。
 
-<p>いま扱っている CSS につぎのルールセットを追加してみてください:</p>
+いま扱っている CSS につぎのルールセットを追加してみてください:
 
-<pre class="brush: css notranslate">h1 + p {
+```css
+h1 + p {
   font-size: 200%;
-}</pre>
+}
+```
 
-<p>下のライブ例では、上に挙げた２つのルールセットが含まれています。ここに、段落内にある <code>span</code> 要素を赤くするルールセットを追加してください。正しくできれば第一段落の <code>span</code> 要素は赤くなり、最初のリストアイテムは色が変わらないはずです。</p>
+下のライブ例では、上に挙げた２つのルールセットが含まれています。ここに、段落内にある `span` 要素を赤くするルールセットを追加してください。正しくできれば第一段落の `span` 要素は赤くなり、最初のリストアイテムは色が変わらないはずです。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: ごらんの通り、CSS には要素に焦点をあてるための方法がいくつかあります。ここに挙げたのと、もっとたくさんのセレクタをこのコースの後にある<a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">セレクタ</a>の記事で見ていきます。</p>
-</div>
+> **Note:** **注**: ごらんの通り、CSS には要素に焦点をあてるための方法がいくつかあります。ここに挙げたのと、もっとたくさんのセレクタをこのコースの後にある[セレクタ](/ja/docs/Learn/CSS/Building_blocks/Selectors)の記事で見ていきます。
 
-<h2 id="Styling_things_based_on_state" name="Styling_things_based_on_state">状態に基づいてスタイリングする</h2>
+## 状態に基づいてスタイリングする
 
-<p>最後にこのチュートリアルで取り上げるのは、状態に基づいてスタイルを設定する方法です。かんたんな例はリンクのスタイリングです。リンクをスタイリングするとき、<code><a href="/ja/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> (anchor) 要素に焦点をあてる必要があります。リンクされたページを開いていなかったり、開いた後だったり、マウスの矢印を置いたり（ホバー）、キーボードで選択したり、クリックしたりといったように状態が変わります。こうしたさまざまな状態を CSS で選ぶことができます。— 以下だと、リンクされたページを開く前はピンクに、開いた後は緑になります。</p>
+最後にこのチュートリアルで取り上げるのは、状態に基づいてスタイルを設定する方法です。かんたんな例はリンクのスタイリングです。リンクをスタイリングするとき、[`<a>`](/ja/docs/Web/HTML/Element/a) (anchor) 要素に焦点をあてる必要があります。リンクされたページを開いていなかったり、開いた後だったり、マウスの矢印を置いたり（ホバー）、キーボードで選択したり、クリックしたりといったように状態が変わります。こうしたさまざまな状態を CSS で選ぶことができます。— 以下だと、リンクされたページを開く前はピンクに、開いた後は緑になります。
 
-<pre class="brush: css notranslate">a:link {
+```css
+a:link {
   color: pink;
 }
 
 a:visited {
   color: green;
-}</pre>
+}
+```
 
-<p>ユーザーがリンクの上にマウスの矢印を持っていく（ホバー）とリンクの見た目を変えるようにできます。たとえばつぎのルールセットだと、リンクの下線が消えます:</p>
+ユーザーがリンクの上にマウスの矢印を持っていく（ホバー）とリンクの見た目を変えるようにできます。たとえばつぎのルールセットだと、リンクの下線が消えます:
 
-<pre class="brush: css notranslate">a:hover {
+```css
+a:hover {
   text-decoration: none;
-}</pre>
+}
+```
 
-<p>下のライブ例では、プロパティ値をいろいろ変えることでさまざまなリンクの状態を試せます。すでに加えられているルールセットをみると、ピンクがとても明るくて読みづらいことがわかります。もっといい色に変えてみましょう。太字に変えられますか？</p>
+下のライブ例では、プロパティ値をいろいろ変えることでさまざまなリンクの状態を試せます。すでに加えられているルールセットをみると、ピンクがとても明るくて読みづらいことがわかります。もっといい色に変えてみましょう。太字に変えられますか？
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}}
 
-<p>リンクをホバーすると下線が消えるようにしていますが、どんな状態でも下線が消えているようにできます。ただし実際のサイトでは、ページを見ている人に、リンクはリンクであることを知らせるのを忘れないようにしてください。下線を残すのは、ユーザーが慣れているように、テキスト内にリンクがあることを伝える重要な手掛かりになります。CSS にふくまれるあらゆるものには、変更によって文章を使いづらくするおそれがあることを強調しておきます。</p>
+リンクをホバーすると下線が消えるようにしていますが、どんな状態でも下線が消えているようにできます。ただし実際のサイトでは、ページを見ている人に、リンクはリンクであることを知らせるのを忘れないようにしてください。下線を残すのは、ユーザーが慣れているように、テキスト内にリンクがあることを伝える重要な手掛かりになります。CSS にふくまれるあらゆるものには、変更によって文章を使いづらくするおそれがあることを強調しておきます。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: MDN の記事で、<a href="/ja/docs/Learn/Accessibility">アクセシビリティ</a> についての注意をたびたび目にするでしょう。これについて語る時は、ウェブページがどんな人にも理解でき、使えるものである必要性に言及しています。</p>
+> **Note:** **注**: MDN の記事で、[アクセシビリティ](/ja/docs/Learn/Accessibility) についての注意をたびたび目にするでしょう。これについて語る時は、ウェブページがどんな人にも理解でき、使えるものである必要性に言及しています。
+>
+> 訪問者はマウス付きコンピューター やタッチスクリーン付き電話で見ているかもしれません。あるいはスクリーンリーダーで文章を読んでいることや、大きな文字をつかう必要があることや、キーボードだけを使っていることもあるでしょう。
+>
+> プレーンな HTML ドキュメントは一般的にあらゆる人に対してアクセシブルですので、スタイリングするときはアクセシビリティを下げないようにするのが大切です。
 
-<p>訪問者はマウス付きコンピューター やタッチスクリーン付き電話で見ているかもしれません。あるいはスクリーンリーダーで文章を読んでいることや、大きな文字をつかう必要があることや、キーボードだけを使っていることもあるでしょう。</p>
+## セレクタとコンビネーターを組み合わせる
 
-<p>プレーンな HTML ドキュメントは一般的にあらゆる人に対してアクセシブルですので、スタイリングするときはアクセシビリティを下げないようにするのが大切です。</p>
-</div>
+複数のセレクタとコンビネーターを組み合わせることができます:
 
-<h2 id="Combining_selectors_and_combinators" name="Combining_selectors_and_combinators">セレクタとコンビネーターを組み合わせる</h2>
-
-<p>複数のセレクタとコンビネーターを組み合わせることができます:</p>
-
-<pre class="brush: css notranslate">/* &lt;article&gt; 要素の内側にある &lt;p&gt; 要素の &lt;span&gt; 要素に焦点を当てるとき  */
+```css
+/* <article> 要素の内側にある <p> 要素の <span> 要素に焦点を当てるとき  */
 article p span { ... }
 
-/* &lt;h1&gt; 要素の直後に来る &lt;ul&gt; 要素の、そのまた直後に来る &lt;p&gt; 要素に焦点を当てるとき */
-h1 + ul + p { ... }</pre>
+/* <h1> 要素の直後に来る <ul> 要素の、そのまた直後に来る <p> 要素に焦点を当てるとき */
+h1 + ul + p { ... }
+```
 
-<p>複数の形のセレクタも組み合わせられます。以下のコードを CSS に追加してみてください:</p>
+複数の形のセレクタも組み合わせられます。以下のコードを CSS に追加してみてください:
 
-<pre class="brush: css notranslate">body h1 + p .special {
+```css
+body h1 + p .special {
   color: yellow;
   background-color: black;
   padding: 5px;
-}</pre>
+}
+```
 
-<p>これは <code>&lt;body&gt;</code> 要素の中にある <code>&lt;h1&gt;</code> 要素の直後に来た <code>&lt;p&gt;</code> 要素の中にある <code>special</code> クラスの要素をスタイリングします。</p>
+これは `<body>` 要素の中にある `<h1>` 要素の直後に来た `<p>` 要素の中にある `special` クラスの要素をスタイリングします。
 
-<p>HTML のうち、スタイルが適用されるのは <code>&lt;span class="special"&gt;</code> のみです。</p>
+HTML のうち、スタイルが適用されるのは `<span class="special">` のみです。
 
-<p>現時点では複雑に思えても心配しなくて大丈夫です。CSS を書いていくうちにすぐに理解できるようになります。</p>
+現時点では複雑に思えても心配しなくて大丈夫です。CSS を書いていくうちにすぐに理解できるようになります。
 
-<h2 id="Wrapping_up" name="Wrapping_up">まとめ</h2>
+## まとめ
 
-<p>このチュートリアルでは、CSS によるドキュメントのスタイル設定の仕方をいくつか見てきました。残りのレッスンでさらに深堀りしていきます。あたなはもうすでに、テキストのスタイリングや要素のさまざまな指定の仕方、さらには MDN ドキュメント内でのプロパティと値の調べ方といったことも理解したはずです。</p>
+このチュートリアルでは、CSS によるドキュメントのスタイル設定の仕方をいくつか見てきました。残りのレッスンでさらに深堀りしていきます。あたなはもうすでに、テキストのスタイリングや要素のさまざまな指定の仕方、さらには MDN ドキュメント内でのプロパティと値の調べ方といったことも理解したはずです。
 
-<p>次のレッスンでは、CSS の構造を見ていきます。</p>
+次のレッスンでは、CSS の構造を見ていきます。
 
-<p>{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}</p>
+{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュールの記事</h2>
+## このモジュールの記事
 
-<ol>
- <li><a href="/ja/docs/Learn/CSS/First_steps/What_is_CSS">CSS とは何か？</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/Getting_started">CSS 入門</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured">CSS の全体像</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/How_CSS_works">CSS はどう働くか？</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge">新しい知識を使う</a></li>
-</ol>
+1.  [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2.  [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3.  [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4.  [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5.  [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

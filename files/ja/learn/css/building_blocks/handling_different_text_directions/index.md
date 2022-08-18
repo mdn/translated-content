@@ -9,145 +9,131 @@ tags:
   - writing modes
 translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
-<p>CSSの学習でこれまでに遭遇したプロパティと値の多くは、画面の物理的な大きさに関係しています。たとえば、ボックスの上下左右にborderを作成します。これらの物理的大きさは、水平に表示されるコンテンツに非常にきちんとマッピングされ、デフォルトでは、ウェブは右から左への言語（アラビア語など）よりも左から右への言語（英語やフランス語など）をサポートする傾向があります。</p>
+CSS の学習でこれまでに遭遇したプロパティと値の多くは、画面の物理的な大きさに関係しています。たとえば、ボックスの上下左右に border を作成します。これらの物理的大きさは、水平に表示されるコンテンツに非常にきちんとマッピングされ、デフォルトでは、ウェブは右から左への言語（アラビア語など）よりも左から右への言語（英語やフランス語など）をサポートする傾向があります。
 
-<p>しかし近年、CSSは、右から左へのコンテンツや上から下へのコンテンツ（日本語など）を含むコンテンツのさまざまな方向性をより適切にサポートするために進化しました。これらのさまざまな方向性は<strong>書き込みモード</strong>と呼ばれます。学習を進めてレイアウトの操作を開始すると、書き込みモードを理解することが非常に役立ちます。そのため、これらのモードを紹介します。</p>
+しかし近年、CSS は、右から左へのコンテンツや上から下へのコンテンツ（日本語など）を含むコンテンツのさまざまな方向性をより適切にサポートするために進化しました。これらのさまざまな方向性は**書き込みモード**と呼ばれます。学習を進めてレイアウトの操作を開始すると、書き込みモードを理解することが非常に役立ちます。そのため、これらのモードを紹介します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>最新の CSS の "writing modes" の重要性を理解する。</td>
-  </tr>
- </tbody>
-</table>
+| 前提条件: | 基本的なコンピューターリテラシー、[基本的なソフトウェアがインストールされている](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)こと、[ファイルの扱い](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)）および CSS に関するアイデア（[CSS の第一歩](/ja/docs/Learn/CSS/First_steps)）に関する基本的な知識を得ている。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | 最新の CSS の "writing modes" の重要性を理解する。                                                                                                                                                                                                                                                                                                                                                                     |
 
-<h2 id="What_are_writing_modes" name="What_are_writing_modes">書き込みモードとは？</h2>
+## 書き込みモードとは？
 
-<p>CSSの書き込みモードは、テキストが水平方向または垂直方向のどちらで実行されているかを示します。{{cssxref("writing-mode")}} プロパティにより、ある書き込みモードから別の書き込みモードに切り替えることができます。これを行うために縦書きモードを使用する言語で作業する必要はありません。また、創造的な目的のためにレイアウトの一部の書き込みモードを変更することもできます。<br>
- <br>
- 次の例では、<code>writing-mode: vertical-rl</code>を使用して見出しを表示しています。これで、テキストが垂直方向に実行されます。縦書きテキストはグラフィックデザインでは一般的であり、Webデザインにより興味深い外観を追加する方法になります。</p>
+CSS の書き込みモードは、テキストが水平方向または垂直方向のどちらで実行されているかを示します。{{cssxref("writing-mode")}} プロパティにより、ある書き込みモードから別の書き込みモードに切り替えることができます。これを行うために縦書きモードを使用する言語で作業する必要はありません。また、創造的な目的のためにレイアウトの一部の書き込みモードを変更することもできます。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}</p>
+次の例では、`writing-mode: vertical-rl`を使用して見出しを表示しています。これで、テキストが垂直方向に実行されます。縦書きテキストはグラフィックデザインでは一般的であり、Web デザインにより興味深い外観を追加する方法になります。
 
-<p><code><a href="/ja/docs/Web/CSS/writing-mode">writing-mode</a></code> プロパティの3つの可能な値は次のとおりです:</p>
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-<ul>
- <li><code>horizontal-tb</code>: 上から下へのブロックの流れの方向。文は水平に実行されます。</li>
- <li><code>vertical-rl</code>: 右から左へのブロックの流れの方向。文は垂直に実行されます。</li>
- <li><code>vertical-lr</code>: 左から右へのブロックの流れの方向。文は垂直に実行されます。</li>
-</ul>
+[`writing-mode`](/ja/docs/Web/CSS/writing-mode) プロパティの 3 つの可能な値は次のとおりです:
 
-<p>したがって、<code>writing-mode</code>プロパティは、実際には、ページにブロックレベルの要素が表示される方向（上から下、右から左、または左から右）を設定します。これにより、文章内のテキストの流れが決まります。</p>
+- `horizontal-tb`: 上から下へのブロックの流れの方向。文は水平に実行されます。
+- `vertical-rl`: 右から左へのブロックの流れの方向。文は垂直に実行されます。
+- `vertical-lr`: 左から右へのブロックの流れの方向。文は垂直に実行されます。
 
-<h2 id="Writing_modes_and_block_and_inline_layout" name="Writing_modes_and_block_and_inline_layout">"writing modes" と ブロックレイアウトとインラインレイアウト</h2>
+したがって、`writing-mode`プロパティは、実際には、ページにブロックレベルの要素が表示される方向（上から下、右から左、または左から右）を設定します。これにより、文章内のテキストの流れが決まります。
 
-<p><a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">ブロックとインラインのレイアウト</a>、およびいくつかの要素がブロック要素として表示され、他の要素がインライン要素として表示されるという事実についてはすでに説明しました。上で説明したように、ブロックとインラインは、物理的な画面ではなく、ドキュメントの書き込みモードに関連付けられています。英語などのテキストを水平方向に表示する書き込みモードを使用している場合、ブロックはページの上から下にのみ表示されます。</p>
+## "writing modes" と ブロックレイアウトとインラインレイアウト
 
-<p>例を見れば、これはより明確になります。この次の例では、見出しと段落を含む2つのボックスがあります。 1つ目は、<code>writing-mode: horizo​​ntal-tb</code>を使用します。これは、水平にページの上部から下部に向かって書き込まれる書き込みモードです。 2番目は<code>writing-mode: vertical-rl</code>を使用します;これは、垂直に右から左に書き込まれる書き込みモードです。</p>
+[ブロックとインラインのレイアウト](/ja/docs/Learn/CSS/Building_blocks/The_box_model)、およびいくつかの要素がブロック要素として表示され、他の要素がインライン要素として表示されるという事実についてはすでに説明しました。上で説明したように、ブロックとインラインは、物理的な画面ではなく、ドキュメントの書き込みモードに関連付けられています。英語などのテキストを水平方向に表示する書き込みモードを使用している場合、ブロックはページの上から下にのみ表示されます。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}</p>
+例を見れば、これはより明確になります。この次の例では、見出しと段落を含む 2 つのボックスがあります。 1 つ目は、`writing-mode: horizo​​ntal-tb`を使用します。これは、水平にページの上部から下部に向かって書き込まれる書き込みモードです。 2 番目は`writing-mode: vertical-rl`を使用します;これは、垂直に右から左に書き込まれる書き込みモードです。
 
-<p>書き込みモードを切り替えると、ブロックの方向とインラインの方向が変更されます。 <code>horizontal-tb</code>書き込みモードでは、ブロックの方向は上から下に向かっています。 <code>vertical-rl</code>書き込みモードでは、ブロックの方向は右から左に水平に実行されます。したがって、<strong>block dimension</strong> は常に、使用中の書き込みモードでページにブロックが表示される方向です。 <strong>inline dimension</strong>は、常に文が流れる方向です。</p>
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}
 
-<p>この図は、横書きモードでの2つのdimensionsを示しています。<img alt="Showing the block and inline axis for a horizontal writing mode." src="https://mdn.mozillademos.org/files/16574/horizontal-tb.png" style="height: 353px; width: 634px;"></p>
+書き込みモードを切り替えると、ブロックの方向とインラインの方向が変更されます。 `horizontal-tb`書き込みモードでは、ブロックの方向は上から下に向かっています。 `vertical-rl`書き込みモードでは、ブロックの方向は右から左に水平に実行されます。したがって、**block dimension** は常に、使用中の書き込みモードでページにブロックが表示される方向です。 **inline dimension**は、常に文が流れる方向です。
 
-<p>この図は、縦書きモードの2つのdimensionsを示しています。</p>
+この図は、横書きモードでの 2 つの dimensions を示しています。![Showing the block and inline axis for a horizontal writing mode.](https://mdn.mozillademos.org/files/16574/horizontal-tb.png)
 
-<p><img alt="Showing the block and inline axis for a vertical writing mode." src="https://mdn.mozillademos.org/files/16575/vertical.png" style="height: 472px; width: 406px;"></p>
+この図は、縦書きモードの 2 つの dimensions を示しています。
 
-<p>CSSレイアウト、特に新しいレイアウトメソッドを検討し始めると、このブロックとインラインの考え方が非常に重要になります。後で再検討します。</p>
+![Showing the block and inline axis for a vertical writing mode.](https://mdn.mozillademos.org/files/16575/vertical.png)
 
-<h3 id="Direction" name="Direction">方向</h3>
+CSS レイアウト、特に新しいレイアウトメソッドを検討し始めると、このブロックとインラインの考え方が非常に重要になります。後で再検討します。
 
-<p>書き込みモードに加えて、テキストの方向もあります。上記のように、アラビア語などの一部の言語は水平に書かれていますが、右から左に書かれています。これは、創造的な意味で使用する可能性のあるものではありません。単に右側に何かを並べたい場合は、他の方法もありますが、CSSの性質の一部としてこれを理解することが重要です。 Webは、左から右に表示される言語専用ではありません！<br>
- <br>
- 書き込みモードとテキストの方向が変更される可能性があるため、新しいCSSレイアウトメソッドは、左右、上下を参照しません。代わりに、インラインとブロックのこのアイデアとともに、開始と終了について話します。心配する必要はありませんが、レイアウトを見始めるときにはこれらのアイデアに留意してください。 CSSを理解する上で非常に役立ちます。</p>
+### 方向
 
-<h2 id="Logical_properties_and_values" name="Logical_properties_and_values">論理プロパティと値</h2>
+書き込みモードに加えて、テキストの方向もあります。上記のように、アラビア語などの一部の言語は水平に書かれていますが、右から左に書かれています。これは、創造的な意味で使用する可能性のあるものではありません。単に右側に何かを並べたい場合は、他の方法もありますが、CSS の性質の一部としてこれを理解することが重要です。 Web は、左から右に表示される言語専用ではありません！
 
-<p>ただし、学習のこの時点で書き込みモードと方向を記述することについて説明する理由は、私たちはすでに、画面の物理的な大きさに関連付けられた多くのプロパティを見ており、横書きモードのときに最も意味があるという事実のためです</p>
+書き込みモードとテキストの方向が変更される可能性があるため、新しい CSS レイアウトメソッドは、左右、上下を参照しません。代わりに、インラインとブロックのこのアイデアとともに、開始と終了について話します。心配する必要はありませんが、レイアウトを見始めるときにはこれらのアイデアに留意してください。 CSS を理解する上で非常に役立ちます。
 
-<p>2つのボックスをもう一度見てみましょう。1つは <code>horizontal-tb</code> の書き込みモード、もう1つは <code>vertical-rl</code>です。これらの両方のボックスに {{cssxref("width")}} を指定しました。ボックスが縦書きモードでも width があるため、テキストがオーバーフローすることがわかります。</p>
+## 論理プロパティと値
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}</p>
+ただし、学習のこの時点で書き込みモードと方向を記述することについて説明する理由は、私たちはすでに、画面の物理的な大きさに関連付けられた多くのプロパティを見ており、横書きモードのときに最も意味があるという事実のためです
 
-<p>このシナリオで本当に必要なのは、書き込みモードに合わせて基本的にheightとwidthを入れ替えることです。縦書きモードのときは、横書きモードの場合と同じように、ボックスをブロックのディメンションで拡大したいです。<br>
- <br>
- これを簡単にするために、CSSは最近マッピングされたプロパティのセットを開発しました。これらは本質的に、物理的なプロパティ（<code>width</code> や <code>height</code> など）を<strong>論理的な</strong>、または<strong>フローに関連する</strong>バージョンに置き換えます。<br>
- <br>
- 横書きモードで<code>width</code>にマップされるプロパティは{{cssxref("inline-size")}} と呼ばれます。これはインラインディメンションのサイズを参照します。<code>height</code>のプロパティの名前は{{cssxref("block-size")}} で、ブロックディメンションのサイズです。<code>width</code>を<code>inline-size</code>に置き換えた以下の例で、これがどのように機能するかを見ることができます。</p>
+2 つのボックスをもう一度見てみましょう。1 つは `horizontal-tb` の書き込みモード、もう 1 つは `vertical-rl`です。これらの両方のボックスに {{cssxref("width")}} を指定しました。ボックスが縦書きモードでも width があるため、テキストがオーバーフローすることがわかります。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}
 
-<h3 id="Logical_margin_border_and_padding_properties" name="Logical_margin_border_and_padding_properties">論理マージン、ボーダー、パディングのプロパティ</h3>
+このシナリオで本当に必要なのは、書き込みモードに合わせて基本的に height と width を入れ替えることです。縦書きモードのときは、横書きモードの場合と同じように、ボックスをブロックのディメンションで拡大したいです。
 
-<p>最後の2つのレッスンでは、CSSのボックスモデルとCSSのボーダーについて学びました。マージン、ボーダー、およびパディングのプロパティには{{cssxref("margin-top")}}, {{cssxref("padding-left")}}, および {{cssxref("border-bottom")}} があります。widthとheightのマッピングと同じ方法で、これらのプロパティのマッピングがあります。<br>
- <br>
- <code>margin-top</code>プロパティは{{cssxref("margin-block-start")}}にマップされます—これは常にブロックディメンションの先頭のマージンを参照します。<br>
- <br>
-  {{cssxref("padding-left")}}プロパティは、インライン方向の開始に適用されるパディングである{{cssxref("padding-inline-start")}}にマップされます。これは、その書き込みモードで文章が始まる場所です。 {{cssxref("border-bottom")}} プロパティは、{{cssxref("border-block-end")}}にマップされます。これは、ブロックディメンションの最後のボーダーです。<br>
- <br>
- 以下の物理的特性と論理的特性の比較を見ることができます。<br>
- <br>
- <strong><code>.box</code>の<code>writing-mode</code>プロパティを<code>vertical-rl</code>に切り替えてボックスの書き込みモードを変更すると、物理プロパティが物理方向にどのように関連付けられているかがわかりますが、論理プロパティは書き込みモードで切り替わります。<br>
- <br>
- また、 {{htmlelement("h2")}} には黒い <code>border-bottom</code>があることがわかります。両方のライティングモードで、下の境界線が常にテキストの下に来るようにする方法を見つけられますか？</strong></p>
+これを簡単にするために、CSS は最近マッピングされたプロパティのセットを開発しました。これらは本質的に、物理的なプロパティ（`width` や `height` など）を**論理的な**、または**フローに関連する**バージョンに置き換えます。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}</p>
+横書きモードで`width`にマップされるプロパティは{{cssxref("inline-size")}} と呼ばれます。これはインラインディメンションのサイズを参照します。`height`のプロパティの名前は{{cssxref("block-size")}} で、ブロックディメンションのサイズです。`width`を`inline-size`に置き換えた以下の例で、これがどのように機能するかを見ることができます。
 
-<p>個々のボーダーロングハンドをすべて考慮すると、膨大な数のプロパティがあり、<a href="/ja/docs/Web/CSS/CSS_Logical_Properties">論理プロパティと値</a>のMDNページですべてのマッピングプロパティを確認できます。</p>
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}
 
-<h3 id="Logical_values" name="Logical_values">論理値</h3>
+### 論理マージン、ボーダー、パディングのプロパティ
 
-<p>これまで、論理プロパティ名について見てきました。また、<code>top</code>, <code>right</code>, <code>bottom</code>, および <code>left</code>の物理値をとるプロパティもあります。これらの値には、論理値（<code>block-start</code>, <code>inline-end</code>, <code>block-end</code>, および <code>inline-start</code>）へのマッピングもあります。<br>
- <br>
- たとえば、画像を左にフロートさせて、画像の周りにテキストを折り返すことができます。以下の例に示すように、<code>left</code>を<code>inline-start</code>に置き換えることができます。<br>
- <br>
- <strong>この例の書き込みモードを<code>vertical-rl</code>に変更して、画像がどうなるかを確認します。 <code>inline-start</code>を<code>inline-end</code>に変更して、フロートを変更します。</strong></p>
+最後の 2 つのレッスンでは、CSS のボックスモデルと CSS のボーダーについて学びました。マージン、ボーダー、およびパディングのプロパティには{{cssxref("margin-top")}}, {{cssxref("padding-left")}}, および {{cssxref("border-bottom")}} があります。width と height のマッピングと同じ方法で、これらのプロパティのマッピングがあります。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1200)}}</p>
+`margin-top`プロパティは{{cssxref("margin-block-start")}}にマップされます—これは常にブロックディメンションの先頭のマージンを参照します。
 
-<p>ここでは、書き込みモードが何であってもマージンが正しい場所にあることを保証するために、論理マージン値も使用しています。</p>
+{{cssxref("padding-left")}}プロパティは、インライン方向の開始に適用されるパディングである{{cssxref("padding-inline-start")}}にマップされます。これは、その書き込みモードで文章が始まる場所です。 {{cssxref("border-bottom")}} プロパティは、{{cssxref("border-block-end")}}にマップされます。これは、ブロックディメンションの最後のボーダーです。
 
-<h3 id="Should_you_use_physical_or_logical_properties" name="Should_you_use_physical_or_logical_properties">物理的または論理的なプロパティを使うべきか？</h3>
+以下の物理的特性と論理的特性の比較を見ることができます。
 
-<p>論理的なプロパティと値は、物理的に同等のものよりも新しいため、ブラウザにはごく最近実装されました。 MDNの任意のプロパティページをチェックして、ブラウザーサポートがどの程度前にサポートしているかを確認できます。複数の書き込みモードを使用していない場合は、現時点では物理バージョンを使用することをお勧めします。ただし、フレックスボックスやグリッドなどのレイアウトメソッドの処理を開始すると、多くの人が理にかなっているため、最終的にはほとんどの場合、人々は論理バージョンに移行することを期待しています。</p>
+\*\*`.box`の`writing-mode`プロパティを`vertical-rl`に切り替えてボックスの書き込みモードを変更すると、物理プロパティが物理方向にどのように関連付けられているかがわかりますが、論理プロパティは書き込みモードで切り替わります。
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+また、 {{htmlelement("h2")}} には黒い `border-bottom`があることがわかります。両方のライティングモードで、下の境界線が常にテキストの下に来るようにする方法を見つけられますか？\*\*
 
-<p>このレッスンで説明する概念は、CSSでますます重要になっています。ブロックとインラインの方向、および書き込みモードの変更に伴うテキストフローの変化を理解することは、今後非常に役立ちます。水平モード以外の書き込みモードを使用しない場合でも、CSSを理解するのに役立ちます。<br>
- <br>
- 次のモジュールでは、CSSのオーバーフローについて詳しく見ていきます。</p>
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}</p>
+個々のボーダーロングハンドをすべて考慮すると、膨大な数のプロパティがあり、[論理プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)の MDN ページですべてのマッピングプロパティを確認できます。
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+### 論理値
 
-<ol>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">CSS セレクター</a>
-  <ul>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">要素・クラス・ID によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">属性によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">擬似クラスおよび疑似要素によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators">結合子</a></li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">ボックスモデル</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">背景と枠線</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">テキスト方向の操作</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Overflowing_content">要素のはみ出し（オーバーフロー）</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Values_and_units">CSS の値と単位</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS によるサイズ設定</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements">画像・メディア・フォーム要素</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Styling_tables">表のスタイリング</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS">CSS のデバッグ</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Organizing">CSS の整理</a></li>
-</ol>
+これまで、論理プロパティ名について見てきました。また、`top`, `right`, `bottom`, および `left`の物理値をとるプロパティもあります。これらの値には、論理値（`block-start`, `inline-end`, `block-end`, および `inline-start`）へのマッピングもあります。
+
+たとえば、画像を左にフロートさせて、画像の周りにテキストを折り返すことができます。以下の例に示すように、`left`を`inline-start`に置き換えることができます。
+
+**この例の書き込みモードを`vertical-rl`に変更して、画像がどうなるかを確認します。 `inline-start`を`inline-end`に変更して、フロートを変更します。**
+
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1200)}}
+
+ここでは、書き込みモードが何であってもマージンが正しい場所にあることを保証するために、論理マージン値も使用しています。
+
+### 物理的または論理的なプロパティを使うべきか？
+
+論理的なプロパティと値は、物理的に同等のものよりも新しいため、ブラウザにはごく最近実装されました。 MDN の任意のプロパティページをチェックして、ブラウザーサポートがどの程度前にサポートしているかを確認できます。複数の書き込みモードを使用していない場合は、現時点では物理バージョンを使用することをお勧めします。ただし、フレックスボックスやグリッドなどのレイアウトメソッドの処理を開始すると、多くの人が理にかなっているため、最終的にはほとんどの場合、人々は論理バージョンに移行することを期待しています。
+
+## まとめ
+
+このレッスンで説明する概念は、CSS でますます重要になっています。ブロックとインラインの方向、および書き込みモードの変更に伴うテキストフローの変化を理解することは、今後非常に役立ちます。水平モード以外の書き込みモードを使用しない場合でも、CSS を理解するのに役立ちます。
+
+次のモジュールでは、CSS のオーバーフローについて詳しく見ていきます。
+
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+
+## このモジュール
+
+1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+
+    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
+11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

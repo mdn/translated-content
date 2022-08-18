@@ -11,196 +11,180 @@ tags:
   - source
 translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
-<p>CSS を書くとき、期待どおりに動作していないように見える問題が発生する場合があります。セレクターは合っているはずなのに何も起こらなかったり、ボックスのサイズが期待したどおりにならなかったりなどです。この記事では CSS の問題をデバッグする方法について案内し、何が起こっているかを調べるのに各モダンブラウザーのデベロッパーツールはどう役立つかを示します。</p>
+CSS を書くとき、期待どおりに動作していないように見える問題が発生する場合があります。セレクターは合っているはずなのに何も起こらなかったり、ボックスのサイズが期待したどおりにならなかったりなどです。この記事では CSS の問題をデバッグする方法について案内し、何が起こっているかを調べるのに各モダンブラウザーのデベロッパーツールはどう役立つかを示します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>ブラウザーの開発ツールの基本と、 CSS の簡単な検査と編集の方法を学ぶ。</td>
-  </tr>
- </tbody>
-</table>
+| 前提条件: | 基本的なコンピューターリテラシー、[基本的なソフトウェアがインストールされている](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)こと、[ファイルの扱い](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)）および CSS に関するアイデア（[CSS の第一歩](/ja/docs/Learn/CSS/First_steps)）に関する基本的な知識を得ている。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | ブラウザーの開発ツールの基本と、 CSS の簡単な検査と編集の方法を学ぶ。                                                                                                                                                                                                                                                                                                                                                  |
 
-<h2 id="How_to_access_browser_DevTools" name="How_to_access_browser_DevTools">ブラウザーの開発ツールの使い方</h2>
+## ブラウザーの開発ツールの使い方
 
-<p>「<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザー開発者ツールとは」</a>という記事は、さまざまなブラウザーやプラットフォームでツールにアクセスする方法を説明する最新のガイドです。ほとんどの場合、特定のブラウザで開発することを選択し、そのブラウザに含まれるツールに最も慣れ親しむことになるかもしれませんが、他のブラウザでのアクセス方法を知っておく価値はあります。これは、複数のブラウザ間で異なるレンダリングが表示されている場合に役立ちます。</p>
+「[ブラウザー開発者ツールとは」](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)という記事は、さまざまなブラウザーやプラットフォームでツールにアクセスする方法を説明する最新のガイドです。ほとんどの場合、特定のブラウザで開発することを選択し、そのブラウザに含まれるツールに最も慣れ親しむことになるかもしれませんが、他のブラウザでのアクセス方法を知っておく価値はあります。これは、複数のブラウザ間で異なるレンダリングが表示されている場合に役立ちます。
 
-<p>また、DevToolsを作成するときに、ブラウザーがさまざまな領域に焦点を合わせていることもわかります。例えば、Firefoxには、CSSレイアウトを視覚的に操作するための優れたツールがいくつかあり、<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">グリッドレイアウト</a>、<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">フレックスボックス</a>、および<a href="/ja/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">シェイプ</a>を検査および編集できます。ただし、ページ上の要素に適用されているプロパティや値を検査したり、エディタから変更を加えたりするためのツールなど、基本的なツールはすべての異なるブラウザに共通しています。</p>
+また、DevTools を作成するときに、ブラウザーがさまざまな領域に焦点を合わせていることもわかります。例えば、Firefox には、CSS レイアウトを視覚的に操作するための優れたツールがいくつかあり、[グリッドレイアウト](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)、[フレックスボックス](/ja/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)、および[シェイプ](/ja/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)を検査および編集できます。ただし、ページ上の要素に適用されているプロパティや値を検査したり、エディタから変更を加えたりするためのツールなど、基本的なツールはすべての異なるブラウザに共通しています。
 
-<p>このレッスンでは、CSSを操作するためのFirefox DevToolsの便利な機能をいくつか見ていきます。そのために<a href="https://mdn.github.io/css-examples/learn/inspecting/inspecting.html">、サンプルファイル</a>を使用します。続けたい場合は、新しいタブでこれを読み込み、上のリンク先の記事で説明したようにDevToolsを開きます。</p>
+このレッスンでは、CSS を操作するための Firefox DevTools の便利な機能をいくつか見ていきます。そのために[、サンプルファイル](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html)を使用します。続けたい場合は、新しいタブでこれを読み込み、上のリンク先の記事で説明したように DevTools を開きます。
 
-<h2 id="The_DOM_versus_view_source" name="The_DOM_versus_view_source">DOM とソース表示の違い</h2>
+## DOM とソース表示の違い
 
-<p>DevTools を初めて使用する人が困るのは、Web ページの<a href="/ja/docs/Tools/View_source">ソースを表示</a>したとき、またはサーバーに配置した HTML ファイルを見たときに表示されるものと、DevTools の <a href="/ja/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML ペイン</a>に表示されるものが異なることです。「ソースの表示」で表示されるものとほぼ同じように見えますが、いくつかの違いがあります。</p>
+DevTools を初めて使用する人が困るのは、Web ページの[ソースを表示](/ja/docs/Tools/View_source)したとき、またはサーバーに配置した HTML ファイルを見たときに表示されるものと、DevTools の [HTML ペイン](/ja/docs/Tools/Page_Inspector/UI_Tour#HTML_pane)に表示されるものが異なることです。「ソースの表示」で表示されるものとほぼ同じように見えますが、いくつかの違いがあります。
 
-<p>レンダリングされた DOM では、ブラウザはあなたのために書き方の悪い HTML を修正しているかもしれません。例えば <code>&lt;h2&gt;</code> を開いて <code>&lt;h3&gt;</code> で閉じるといったように、要素を誤って閉じてしまった場合、ブラウザはあなたが何をしようとしていたのかを理解し、DOM の HTML は開いていた <code>&lt;h2&gt;</code> を正しく <code>&lt;h2&gt;</code> で閉じるようになります。ブラウザはすべての HTML を正規化し、DOM は JavaScript によって行われた変更も表示します。</p>
+レンダリングされた DOM では、ブラウザはあなたのために書き方の悪い HTML を修正しているかもしれません。例えば `<h2>` を開いて `<h3>` で閉じるといったように、要素を誤って閉じてしまった場合、ブラウザはあなたが何をしようとしていたのかを理解し、DOM の HTML は開いていた `<h2>` を正しく `<h2>` で閉じるようになります。ブラウザはすべての HTML を正規化し、DOM は JavaScript によって行われた変更も表示します。
 
-<p>これと比較して、ソースの表示は、サーバーに保存されている HTML ソース コードにすぎません。DevTools の <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML ツリー</a>には、ブラウザが任意の時点でレンダリングしている内容が正確に表示されるため、実際に何が起こっているのかを知ることができます。</p>
+これと比較して、ソースの表示は、サーバーに保存されている HTML ソース コードにすぎません。DevTools の [HTML ツリー](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree)には、ブラウザが任意の時点でレンダリングしている内容が正確に表示されるため、実際に何が起こっているのかを知ることができます。
 
-<h2 id="Inspecting_the_applied_CSS" name="Inspecting_the_applied_CSS">適用された CSS の調査</h2>
+## 適用された CSS の調査
 
-<p>ページ上の要素を選択するには、右クリックまたは Ctrl キーを押しながらクリックして [検査] を選択するか、または DevTools ディスプレイの左側にある HTML ツリーから選択します。<code>box1</code> のクラスを持つ要素を選択してみてください。これは、ページ上の最初の要素で、周囲に枠線で囲まれたボックスが描かれています。</p>
+ページ上の要素を選択するには、右クリックまたは Ctrl キーを押しながらクリックして \[検査] を選択するか、または DevTools ディスプレイの左側にある HTML ツリーから選択します。`box1` のクラスを持つ要素を選択してみてください。これは、ページ上の最初の要素で、周囲に枠線で囲まれたボックスが描かれています。
 
-<p><img alt="DevToolsを開いたこのチュートリアルのサンプルページ。" src="https://mdn.mozillademos.org/files/16606/inspecting1.png" style="border-style: solid; border-width: 1px; height: 1527px; width: 2278px;"></p>
+![DevToolsを開いたこのチュートリアルのサンプルページ。](https://mdn.mozillademos.org/files/16606/inspecting1.png)
 
-<p>HTMLの右側にある<a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Rules_view">ルールビュー</a>を見ると、その要素に適用されているCSSのプロパティと値を見ることができるはずです。box1 クラスに直接適用されているルールと、box の先祖から継承されている CSS、この場合は &lt;body&gt; に適用されている CSS が表示されています。これは、予想していなかったCSSが適用されている場合に便利です。おそらくそれは親要素から継承されているもので、この要素のコンテキストでそれを上書きするルールを追加する必要があるでしょう。</p>
+HTML の右側にある[ルールビュー](/ja/docs/Tools/Page_Inspector/UI_Tour#Rules_view)を見ると、その要素に適用されている CSS のプロパティと値を見ることができるはずです。box1 クラスに直接適用されているルールと、box の先祖から継承されている CSS、この場合は \<body> に適用されている CSS が表示されています。これは、予想していなかった CSS が適用されている場合に便利です。おそらくそれは親要素から継承されているもので、この要素のコンテキストでそれを上書きするルールを追加する必要があるでしょう。
 
-<p>また、速記プロパティを展開する機能も便利です。この例では、<code>margin</code> の短縮形を使用しています。</p>
+また、速記プロパティを展開する機能も便利です。この例では、`margin` の短縮形を使用しています。
 
-<p><strong>小さな矢印をクリックしてビューを展開すると、さまざまなロングハンドプロパティとその値が表示されます。</strong></p>
+**小さな矢印をクリックしてビューを展開すると、さまざまなロングハンドプロパティとその値が表示されます。**
 
-<p><strong>パネルがアクティブになっているときは、ルールビューの値のオンオフを切り替えることができます。マウスをかざすとチェックボックスが表示されます。<code>border-radius</code> などのルールのチェックボックスのチェックを外すと、CSS は適用されなくなります。</strong></p>
+**パネルがアクティブになっているときは、ルールビューの値のオンオフを切り替えることができます。マウスをかざすとチェックボックスが表示されます。`border-radius` などのルールのチェックボックスのチェックを外すと、CSS は適用されなくなります。**
 
-<p>これを使って A / B 比較を行い、ルールを適用した方が良く見えるかどうかを判断したり、デバッグの手助けをしたりすることができます。例えば、レイアウトがおかしくなり、どのプロパティが問題の原因になっているのかを調べたい場合などです。</p>
+これを使って A / B 比較を行い、ルールを適用した方が良く見えるかどうかを判断したり、デバッグの手助けをしたりすることができます。例えば、レイアウトがおかしくなり、どのプロパティが問題の原因になっているのかを調べたい場合などです。
 
-<h2 id="Editing_values" name="Editing_values">値の変更</h2>
+## 値の変更
 
-<p>プロパティのオン/オフに加えて、それらの値を編集できます。おそらく、別の色の方が見栄えが良いかどうかを確認したい、または何かのサイズを微調整したいですか。 DevToolsを使用すると、スタイルシートを編集してページを再ロードする時間を大幅に節約できます。</p>
+プロパティのオン/オフに加えて、それらの値を編集できます。おそらく、別の色の方が見栄えが良いかどうかを確認したい、または何かのサイズを微調整したいですか。 DevTools を使用すると、スタイルシートを編集してページを再ロードする時間を大幅に節約できます。
 
-<p><strong><code>box1</code> を選択した状態で、境界線に適用された色を示すスウォッチ (小さな色付きの円) をクリックします。カラーピッカーが開き、いくつかの異なる色を試すことができます。同様の方法で、ボーダーの幅やスタイルを変更することができます。</strong></p>
+**`box1` を選択した状態で、境界線に適用された色を示すスウォッチ (小さな色付きの円) をクリックします。カラーピッカーが開き、いくつかの異なる色を試すことができます。同様の方法で、ボーダーの幅やスタイルを変更することができます。**
 
-<p><img alt="カラーピッカーを開いたDevToolsスタイルパネル。" src="https://mdn.mozillademos.org/files/16607/inspecting2-color-picker.png" style="border-style: solid; border-width: 1px; height: 1173px; width: 2275px;"></p>
+![カラーピッカーを開いたDevToolsスタイルパネル。](https://mdn.mozillademos.org/files/16607/inspecting2-color-picker.png)
 
-<h2 id="Adding_a_new_property" name="Adding_a_new_property">新しいプロパティの追加</h2>
+## 新しいプロパティの追加
 
-<p>DevToolsを使ってプロパティを追加することができます。おそらく、<code>&lt;body&gt;</code> 要素のフォント サイズを継承せず、ボックスに独自のサイズを設定したいことに気がついたのではないでしょうか？これは、CSS ファイルに追加する前に DevTools で試すことができます。</p>
+DevTools を使ってプロパティを追加することができます。おそらく、`<body>` 要素のフォント サイズを継承せず、ボックスに独自のサイズを設定したいことに気がついたのではないでしょうか？これは、CSS ファイルに追加する前に DevTools で試すことができます。
 
-<p><strong>ルールの閉じ中括弧をクリックすると、ルールへの新しい宣言の入力が開始され、その時点で新しいプロパティの入力を開始することができます。<code>font-size</code> を選択したら、試したい値を入力します。また、[+] ボタンをクリックして同じセレクタで追加ルールを追加し、そこに新しいルールを追加することもできます。</strong></p>
+**ルールの閉じ中括弧をクリックすると、ルールへの新しい宣言の入力が開始され、その時点で新しいプロパティの入力を開始することができます。`font-size` を選択したら、試したい値を入力します。また、\[+] ボタンをクリックして同じセレクタで追加ルールを追加し、そこに新しいルールを追加することもできます。**
 
-<p><img alt="DevToolsパネル、新しいプロパティをルールに追加し、フォントのオートコンプリートを開く" src="https://mdn.mozillademos.org/files/16608/inspecting3-font-size.png" style="border-style: solid; border-width: 1px; height: 956px; width: 2275px;"></p>
+![DevToolsパネル、新しいプロパティをルールに追加し、フォントのオートコンプリートを開く](https://mdn.mozillademos.org/files/16608/inspecting3-font-size.png)
 
-<div class="blockIndicator note">
-<p><strong>注</strong>：ルールビューには他にも便利な機能があります。<strong>たとえば</strong>、無効な値の宣言には<strong>取り消し線が引か</strong>れています。詳しくは<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">、CSSの確認と編集を</a>ご覧ください。</p>
-</div>
+> **Note:** **注**：ルールビューには他にも便利な機能があります。**たとえば**、無効な値の宣言には**取り消し線が引か**れています。詳しくは[、CSS の確認と編集を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)ご覧ください。
 
-<h2 id="Understanding_the_box_model" name="Understanding_the_box_model">ボックスモデルについて</h2>
+## ボックスモデルについて
 
-<p>前のレッスンでは<a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">、ボックスモデル</a>について説明しまし<a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">た</a>。また、指定したサイズに基づいて要素のサイズの計算方法を変更する代替のボックスモデルと、パディングおよび境界線があることを説明しました。DevToolsは、要素のサイズの計算方法を理解するのに役立ちます。</p>
+前のレッスンでは[、ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)について説明しまし[た](/ja/docs/Learn/CSS/Building_blocks/The_box_model)。また、指定したサイズに基づいて要素のサイズの計算方法を変更する代替のボックスモデルと、パディングおよび境界線があることを説明しました。DevTools は、要素のサイズの計算方法を理解するのに役立ちます。
 
-<p><a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Layout_view">レイアウトビュー</a>では、選択した要素上のボックス・モデルのダイアグラムと、要素のレイアウト方法を変更するプロパティと値の説明が表示されます。これには、要素で明示的に使用していないが初期値が設定されているプロパティの説明も含まれます。</p>
+[レイアウトビュー](/ja/docs/Tools/Page_Inspector/UI_Tour#Layout_view)では、選択した要素上のボックス・モデルのダイアグラムと、要素のレイアウト方法を変更するプロパティと値の説明が表示されます。これには、要素で明示的に使用していないが初期値が設定されているプロパティの説明も含まれます。
 
-<p>このパネルでは、詳細なプロパティの 1 つに <code>box-sizing</code> プロパティがあり、これは要素が使用するボックスモデルを制御します。</p>
+このパネルでは、詳細なプロパティの 1 つに `box-sizing` プロパティがあり、これは要素が使用するボックスモデルを制御します。
 
-<p><code>box1</code> と <code>box2</code> のクラスを持つ 2 つのボックスを比較してみましょう。どちらも同じ幅 (400px) が適用されていますが、<code>box1</code> の方が視覚的には広くなっています。レイアウトパネルを見ると、<code>content-box</code> を使用していることがわかります。これは、要素に与えたサイズを受け取り、パディングとボーダーの幅を追加する値です。</p>
+`box1` と `box2` のクラスを持つ 2 つのボックスを比較してみましょう。どちらも同じ幅 (400px) が適用されていますが、`box1` の方が視覚的には広くなっています。レイアウトパネルを見ると、`content-box` を使用していることがわかります。これは、要素に与えたサイズを受け取り、パディングとボーダーの幅を追加する値です。
 
-<p><code>box2</code> のクラスを持つ要素は <code>border-box</code> を使用しているので、ここでは要素に与えたサイズからパディングとボーダーが差し引かれています。つまり、ページ上でボックスが占めるスペースは、あなたが指定したサイズ（この例では <code>width: 400px</code>）と同じになります。</p>
+`box2` のクラスを持つ要素は `border-box` を使用しているので、ここでは要素に与えたサイズからパディングとボーダーが差し引かれています。つまり、ページ上でボックスが占めるスペースは、あなたが指定したサイズ（この例では `width: 400px`）と同じになります。
 
-<p><img alt="DevToolsのレイアウトセクション" src="https://mdn.mozillademos.org/files/16609/inspecting4-box-model.png" style="border-style: solid; border-width: 1px; height: 1532px; width: 2275px;"></p>
+![DevToolsのレイアウトセクション](https://mdn.mozillademos.org/files/16609/inspecting4-box-model.png)
 
-<div class="blockIndicator note">
-<p><strong>注</strong>：詳細については<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">、ボックスモデルの調査と検査を</a>ご覧ください。</p>
-</div>
+> **Note:** **注**：詳細については[、ボックスモデルの調査と検査を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)ご覧ください。
 
-<h2 id="Solving_specificity_issues" name="Solving_specificity_issues">詳細度に関する問題の解決</h2>
+## 詳細度に関する問題の解決
 
-<p>開発中に、特に既存のサイトのCSSを編集する必要があるときに、いくつかのCSSを適用させるのに苦労することがあります。何をしても要素がCSSを適用してくれないのです。このような場合、一般的には、より具体的なセレクタが変更を上書きしていることが考えられますが、ここではDevToolsを使用することで解決することができます。</p>
+開発中に、特に既存のサイトの CSS を編集する必要があるときに、いくつかの CSS を適用させるのに苦労することがあります。何をしても要素が CSS を適用してくれないのです。このような場合、一般的には、より具体的なセレクタが変更を上書きしていることが考えられますが、ここでは DevTools を使用することで解決することができます。
 
-<p>この例のファイルでは、<code>&lt;em&gt;</code> 要素に包まれた2つの単語があります。1つはオレンジ色で、もう1つはホットピンク色で表示されています。CSSでは、以下のようにしています。</p>
+この例のファイルでは、`<em>` 要素に包まれた 2 つの単語があります。1 つはオレンジ色で、もう 1 つはホットピンク色で表示されています。CSS では、以下のようにしています。
 
-<pre class="brush: css notranslate">em {
+```css
+em {
   color: hotpink;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>しかし、スタイルシートの上には <code>.special</code> セレクタ―を持つルールがあります。</p>
+しかし、スタイルシートの上には `.special` セレクタ―を持つルールがあります。
 
-<pre class="brush: css notranslate">.special {
+```css
+.special {
   color: orange;
-}</pre>
+}
+```
 
-<p><a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a>のレッスンで特異性について説明したことを思い出していただけると思いますが、クラス セレクタは要素セレクタよりも特異性が高いため、この値が適用されます。特に情報が巨大なスタイルシートのどこかに埋もれている場合は、DevToolsを使用することで、このような問題を見つけることができます。</p>
+[カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)のレッスンで特異性について説明したことを思い出していただけると思いますが、クラス セレクタは要素セレクタよりも特異性が高いため、この値が適用されます。特に情報が巨大なスタイルシートのどこかに埋もれている場合は、DevTools を使用することで、このような問題を見つけることができます。
 
-<p><code>.special</code> のクラスを持つ <code>&lt;em&gt;</code> を検査すると、DevToolsがオレンジ色が適用されていることを示し、また、emに適用されている <code>color</code> プロパティが取り消されていることを示しています。これで、クラスが要素セレクタをオーバーライドしていることがわかります。</p>
+`.special` のクラスを持つ `<em>` を検査すると、DevTools がオレンジ色が適用されていることを示し、また、em に適用されている `color` プロパティが取り消されていることを示しています。これで、クラスが要素セレクタをオーバーライドしていることがわかります。
 
-<p><img alt="emを選択し、DevToolsを見て、何が色を上書きしているかを確認します。" src="https://mdn.mozillademos.org/files/16610/inspecting5-specificity.png" style="border-style: solid; border-width: 1px; height: 1161px; width: 2275px;"></p>
+![emを選択し、DevToolsを見て、何が色を上書きしているかを確認します。](https://mdn.mozillademos.org/files/16610/inspecting5-specificity.png)
 
-<h2 id="Find_out_more_about_the_Firefox_DevTools" name="Find_out_more_about_the_Firefox_DevTools">Firefoxの開発ツールについて</h2>
+## Firefox の開発ツールについて
 
-<p>MDNには、Firefox DevToolsに関する多くの情報があります。<a href="/ja/docs/Tools">DevTools</a>のメイン<a href="/ja/docs/Tools">セクションを</a>ご覧ください<a href="/ja/docs/Tools/Page_Inspector#How_to">。</a>このレッスンで簡単に説明した内容の詳細については、<a href="/ja/docs/Tools/Page_Inspector#How_to">ハウツーガイドを</a>ご覧ください。</p>
+MDN には、Firefox DevTools に関する多くの情報があります。[DevTools](/ja/docs/Tools)のメイン[セクションを](/ja/docs/Tools)ご覧ください[。](/ja/docs/Tools/Page_Inspector#How_to)このレッスンで簡単に説明した内容の詳細については、[ハウツーガイドを](/ja/docs/Tools/Page_Inspector#How_to)ご覧ください。
 
-<h2 id="Debugging_problems_in_CSS" name="Debugging_problems_in_CSS">CSS 不具合のデバッグ</h2>
+## CSS 不具合のデバッグ
 
-<p>CSSの問題を解決する場合、DevToolsは非常に役立ちます。CSSが期待どおりに動作しない状況に陥った場合、どのように解決すればよいでしょうか。次の手順が役立ちます。</p>
+CSS の問題を解決する場合、DevTools は非常に役立ちます。CSS が期待どおりに動作しない状況に陥った場合、どのように解決すればよいでしょうか。次の手順が役立ちます。
 
-<h3 id="Take_a_step_back_from_the_problem" name="Take_a_step_back_from_the_problem">問題から一歩離れてみる</h3>
+### 問題から一歩離れてみる
 
-<p>コーディングの問題はどんなものでもイライラすることがありますが、特に CSS の問題は、解決策を見つけるのに役立つようなエラーメッセージをオンラインで検索しても出てこないことが多いので、イライラします。イライラしてきたら、しばらく問題から離れてみましょう。散歩に行ったり、飲み物を飲んだり、同僚とおしゃべりしたり、しばらく他のことに取り組んでみましょう。問題を考えるのをやめれば、魔法のように解決策が現れることもありますし、そうでなくても、スッキリした気分の時に取り組むと、ずっと楽になります。</p>
+コーディングの問題はどんなものでもイライラすることがありますが、特に CSS の問題は、解決策を見つけるのに役立つようなエラーメッセージをオンラインで検索しても出てこないことが多いので、イライラします。イライラしてきたら、しばらく問題から離れてみましょう。散歩に行ったり、飲み物を飲んだり、同僚とおしゃべりしたり、しばらく他のことに取り組んでみましょう。問題を考えるのをやめれば、魔法のように解決策が現れることもありますし、そうでなくても、スッキリした気分の時に取り組むと、ずっと楽になります。
 
-<h3 id="Do_you_have_valid_HTML_and_CSS" name="Do_you_have_valid_HTML_and_CSS">HTML と CSS が正しく記述されていますか？</h3>
+### HTML と CSS が正しく記述されていますか？
 
-<p>ブラウザーはCSSとHTMLが正しく記述されていることを期待しますが、ブラウザーは非常に寛容であり、マークアップまたはスタイルシートにエラーがある場合でも、最善を尽くしてWebページを表示します。コードに誤りがある場合、ブラウザはあなたが何を意味するのかを推測する必要があり、それはあなたが考えていたものとは異なる決定をするかもしれません。さらに、2つの異なるブラウザーが2つの異なる方法で問題に対処する場合があります。したがって、適切な最初のステップは、HTMLおよびCSSをバリデーターで実行し、エラーを見つけて修正することです。</p>
+ブラウザーは CSS と HTML が正しく記述されていることを期待しますが、ブラウザーは非常に寛容であり、マークアップまたはスタイルシートにエラーがある場合でも、最善を尽くして Web ページを表示します。コードに誤りがある場合、ブラウザはあなたが何を意味するのかを推測する必要があり、それはあなたが考えていたものとは異なる決定をするかもしれません。さらに、2 つの異なるブラウザーが 2 つの異なる方法で問題に対処する場合があります。したがって、適切な最初のステップは、HTML および CSS をバリデーターで実行し、エラーを見つけて修正することです。
 
-<ul>
- <li><a href="https://jigsaw.w3.org/css-validator/">CSSバリデーター</a></li>
- <li><a href="https://validator.w3.org/">HTMLバリデーター</a></li>
-</ul>
+- [CSS バリデーター](https://jigsaw.w3.org/css-validator/)
+- [HTML バリデーター](https://validator.w3.org/)
 
-<h3 id="Is_the_property_and_value_supported_by_the_browser_you_are_testing_in" name="Is_the_property_and_value_supported_by_the_browser_you_are_testing_in">プロパティと値は対象ブラウザーでサポートされていますか？</h3>
+### プロパティと値は対象ブラウザーでサポートされていますか？
 
-<p>ブラウザは、理解できないCSSを単に無視します。使用しているプロパティまたは値が、テストしているブラウザーでサポートされていない場合、何も壊れませんが、そのCSSは適用されません。DevToolsは一般的に、サポートされていないプロパティと値を何らかの方法で強調表示します。下のスクリーンショットでは、ブラウザは {{cssxref("grid-template-columns")}} のサブグリッド値をサポートしていません。</p>
+ブラウザは、理解できない CSS を単に無視します。使用しているプロパティまたは値が、テストしているブラウザーでサポートされていない場合、何も壊れませんが、その CSS は適用されません。DevTools は一般的に、サポートされていないプロパティと値を何らかの方法で強調表示します。下のスクリーンショットでは、ブラウザは {{cssxref("grid-template-columns")}} のサブグリッド値をサポートしていません。
 
-<p><img alt="grid-template-columns：サブグリッド値がサポートされていないため、サブグリッドに線を引いたブラウザDevToolsの画像。" src="https://mdn.mozillademos.org/files/16641/no-support.png" style="height: 397px; width: 1649px;"></p>
+![grid-template-columns：サブグリッド値がサポートされていないため、サブグリッドに線を引いたブラウザDevToolsの画像。](https://mdn.mozillademos.org/files/16641/no-support.png)
 
-<p>また、MDNの各プロパティページの下部にあるブラウザの互換性の表を見ることもできます。これらの表は、そのプロパティのブラウザのサポート状況を示しており、そのプロパティの一部の使用法がサポートされていて、他の使用法がサポートされていない場合は分類されていることが多いです。以下の表は {{cssxref("shape-outside")}} プロパティの互換性データを示しています。</p>
+また、MDN の各プロパティページの下部にあるブラウザの互換性の表を見ることもできます。これらの表は、そのプロパティのブラウザのサポート状況を示しており、そのプロパティの一部の使用法がサポートされていて、他の使用法がサポートされていない場合は分類されていることが多いです。以下の表は {{cssxref("shape-outside")}} プロパティの互換性データを示しています。
 
-<p>{{compat("css.shape-outside")}}</p>
+{{compat("css.shape-outside")}}
 
-<h3 id="Is_something_else_overriding_your_CSS" name="Is_something_else_overriding_your_CSS">どこかで CSS が上書きされていませんか？</h3>
+### どこかで CSS が上書きされていませんか？
 
-<p>ここで、特異性について学んだ情報が非常に役に立つでしょう。自分が行おうとしていることをより具体的にオーバーライドしているものがある場合、何が何だかわからないという非常にイライラするゲームに突入してしまうことがあります。しかし、上記のように、DevTools を使用すると、どのような CSS が適用されているかが表示されるので、新しいセレクタをオーバーライドするのに十分なほど具体的なものにする方法を見つけることができます。</p>
+ここで、特異性について学んだ情報が非常に役に立つでしょう。自分が行おうとしていることをより具体的にオーバーライドしているものがある場合、何が何だかわからないという非常にイライラするゲームに突入してしまうことがあります。しかし、上記のように、DevTools を使用すると、どのような CSS が適用されているかが表示されるので、新しいセレクタをオーバーライドするのに十分なほど具体的なものにする方法を見つけることができます。
 
-<h3 id="Make_a_reduced_test_case_of_the_problem" name="Make_a_reduced_test_case_of_the_problem">問題の縮小テストケースを作成する</h3>
+### 問題の縮小テストケースを作成する
 
-<p>上記の手順で問題が解決されない場合は、もう少し調査する必要があります。この時点での最善の方法は、縮小テストケースとして知られているものを作成することです。問題を減らす」ことができるということは、非常に有用なスキルです。自分のコードや同僚のコードの問題を見つけるのに役立ちますし、バグを報告したり、より効果的に助けを求めたりすることができるようになります。</p>
+上記の手順で問題が解決されない場合は、もう少し調査する必要があります。この時点での最善の方法は、縮小テストケースとして知られているものを作成することです。問題を減らす」ことができるということは、非常に有用なスキルです。自分のコードや同僚のコードの問題を見つけるのに役立ちますし、バグを報告したり、より効果的に助けを求めたりすることができるようになります。
 
-<p>縮小テストケースとは、関連のない周囲のコンテンツやスタイリングを削除して、可能な限りシンプルな方法で問題を示すコード例のことです。これは、問題のあるコードをレイアウトから取り出して、そのコードや機能だけを示す小さな例を作ることを意味することが多いでしょう。</p>
+縮小テストケースとは、関連のない周囲のコンテンツやスタイリングを削除して、可能な限りシンプルな方法で問題を示すコード例のことです。これは、問題のあるコードをレイアウトから取り出して、そのコードや機能だけを示す小さな例を作ることを意味することが多いでしょう。
 
-<p>縮小されたテストケースを作成するには：</p>
+縮小されたテストケースを作成するには：
 
-<ol>
- <li>マークアップが動的に生成される場合—例えば、CMSを介して—問題を示す出力の静的バージョンを作成します。<a href="https://codepen.io/">CodePen</a>などのコード共有サイトは、オンラインでアクセスでき、同僚と簡単に共有できるため、テストケースを減らすのに役立ちます。まず、ページで[ソースの表示]を実行し、HTMLをCodePenにコピーしてから、関連するCSSとJavaScriptを取得して、それも含めます。その後、問題がまだ明らかかどうかを確認できます。</li>
- <li>JavaScriptを削除しても問題が解決しない場合は、JavaScriptを含めないでください。JavaScriptを削除<em>し</em>ても問題が解決しない場合は、できるだけ多くのJavaScriptを削除して、問題の原因はすべて残してください。</li>
- <li>問題の原因となっていないHTMLを削除します。コンポーネントまたはレイアウトの主要な要素を削除します。繰り返しになりますが、まだ問題を示している最小限のコードになるようにしてください。</li>
- <li>問題に影響を与えないCSSをすべて削除します。</li>
-</ol>
+1.  マークアップが動的に生成される場合—例えば、CMS を介して—問題を示す出力の静的バージョンを作成します。[CodePen](https://codepen.io/)などのコード共有サイトは、オンラインでアクセスでき、同僚と簡単に共有できるため、テストケースを減らすのに役立ちます。まず、ページで\[ソースの表示]を実行し、HTML を CodePen にコピーしてから、関連する CSS と JavaScript を取得して、それも含めます。その後、問題がまだ明らかかどうかを確認できます。
+2.  JavaScript を削除しても問題が解決しない場合は、JavaScript を含めないでください。JavaScript を削除*し*ても問題が解決しない場合は、できるだけ多くの JavaScript を削除して、問題の原因はすべて残してください。
+3.  問題の原因となっていない HTML を削除します。コンポーネントまたはレイアウトの主要な要素を削除します。繰り返しになりますが、まだ問題を示している最小限のコードになるようにしてください。
+4.  問題に影響を与えない CSS をすべて削除します。
 
-<p>その過程で、何が問題を引き起こしているのかを発見したり、特定の何かを取り除くことで、 <span>少なくとも問題のオン/オフを切り替えることができ</span>るようになるかもしれません。あなたが物事を発見したときに、あなたのコードにいくつかのコメントを追加する価値はあります。助けを求める必要がある場合は、それがあなたがすでに試したものを助けてくれる人に伝えてくれます。<span>これにより、考えられる問題や回避策を検索するのに十分な情報が得られる場合があります。</span></p>
+その過程で、何が問題を引き起こしているのかを発見したり、特定の何かを取り除くことで、 少なくとも問題のオン/オフを切り替えることができるようになるかもしれません。あなたが物事を発見したときに、あなたのコードにいくつかのコメントを追加する価値はあります。助けを求める必要がある場合は、それがあなたがすでに試したものを助けてくれる人に伝えてくれます。これにより、考えられる問題や回避策を検索するのに十分な情報が得られる場合があります。
 
-<p>問題を解決するのにまだ苦労している場合は、テストケースを減らすことで、フォーラムに投稿したり、同僚に見せたりして、助けを求めることができます。助けを求める前に、問題を軽減し、どこで問題が発生しているかを正確に特定する作業を行ったことを示すことができれば、助けを得る可能性が高くなります。経験豊富な開発者であれば、問題を迅速に発見して正しい方向に導くことができるかもしれませんが、そうでない場合でも、テストケースを縮小したことで、開発者はすばやく確認することができ、少なくとも何らかの助けを提供できるようになるでしょう。</p>
+問題を解決するのにまだ苦労している場合は、テストケースを減らすことで、フォーラムに投稿したり、同僚に見せたりして、助けを求めることができます。助けを求める前に、問題を軽減し、どこで問題が発生しているかを正確に特定する作業を行ったことを示すことができれば、助けを得る可能性が高くなります。経験豊富な開発者であれば、問題を迅速に発見して正しい方向に導くことができるかもしれませんが、そうでない場合でも、テストケースを縮小したことで、開発者はすばやく確認することができ、少なくとも何らかの助けを提供できるようになるでしょう。
 
-<p>問題が実際にブラウザーのバグである場合、テストケースの縮小を使用して、関連するブラウザーベンダーにバグレポートを提出することもできます（例：Mozillaの<a href="https://bugzilla.mozilla.org">bugzillaサイト</a>）。</p>
+問題が実際にブラウザーのバグである場合、テストケースの縮小を使用して、関連するブラウザーベンダーにバグレポートを提出することもできます（例：Mozilla の[bugzilla サイト](https://bugzilla.mozilla.org)）。
 
-<p>CSS を使いこなせるようになると、問題を発見するのが早くなることに気づくでしょう。しかし、最も経験豊富な人でも、「一体何が起こっているのか」と疑問に思うことがあります。体系的なアプローチをとり、テストケースを減らし、他の人に問題を説明すると、通常、修正が見つかります。</p>
+CSS を使いこなせるようになると、問題を発見するのが早くなることに気づくでしょう。しかし、最も経験豊富な人でも、「一体何が起こっているのか」と疑問に思うことがあります。体系的なアプローチをとり、テストケースを減らし、他の人に問題を説明すると、通常、修正が見つかります。
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}</p>
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<ol>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">CSS セレクター</a>
-  <ul>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">要素・クラス・ID によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">属性によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">擬似クラスおよび疑似要素によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators">共役</a></li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">ボックスモデル</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">背景と枠線</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">テキスト方向の操作</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Overflowing_content">要素のはみ出し（オーバーフロー）</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Values_and_units">CSS の値と単位</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS によるサイズ設定</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements">画像・メディア・フォーム要素</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Styling_tables">表のスタイリング</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS">CSS のデバッグ</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Organizing">CSS の整理</a></li>
-</ol>
+1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+
+    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [共役](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
+11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)
