@@ -10,22 +10,24 @@ tags:
   - 標準外
 translation_of: Web/API/Document/documentURIObject
 ---
-<div>{{ApiRef("DOM")}}{{Non-standard_header}}</div>
+{{ApiRef("DOM")}}{{Non-standard_header}}
 
-<p><span class="seoSummary"><code><strong>Document.documentURIObject</strong></code> プロパティは読み取り専用で、 <a href="/ja/docs/Web/API/document">document</a> の URI を表す <code>nsIURI</code> オブジェクトを返します。</span></p>
+**`Document.documentURIObject`** プロパティは読み取り専用で、 [document](/ja/docs/Web/API/document) の URI を表す `nsIURI` オブジェクトを返します。
 
-<p>このプロパティは、拡張機能のコードなどの (UniversalXPConnect) 特権を持つスクリプトでのみ機能します。ウェブコンテンツではこのプロパティは特別な意味を持たず、他のカスタムプロパティと同様に扱うことしかできません。</p>
+このプロパティは、拡張機能のコードなどの (UniversalXPConnect) 特権を持つスクリプトでのみ機能します。ウェブコンテンツではこのプロパティは特別な意味を持たず、他のカスタムプロパティと同様に扱うことしかできません。
 
-<p>特権コードでは、(<code><a href="/ja/XPCNativeWrapper">XPCNativeWrapper</a></code> の <code>wrappedJSObject</code> などの) ラップされていないコンテンツオブジェクトに対してこのプロパティを取得または設定しないように注意しなければなりません。詳しくは {{Bug(324464)}} のコメントを参照して下さい。</p>
+特権コードでは、([`XPCNativeWrapper`](/ja/XPCNativeWrapper) の `wrappedJSObject` などの) ラップされていないコンテンツオブジェクトに対してこのプロパティを取得または設定しないように注意しなければなりません。詳しくは {{Bug(324464)}} のコメントを参照して下さい。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>uri</var> = <var>document</var>.documentURIObject;
-</pre>
+```
+var uri = document.documentURIObject;
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">// Firefox の現在のタブの URI スキームが "http" かどうか調べる
+```js
+// Firefox の現在のタブの URI スキームが "http" かどうか調べる
 // このコードは browser.xul のコンテキストで実行されるものとする
 var uriObj = content.document.documentURIObject;
 var uriPort = uriObj.port;
@@ -33,12 +35,12 @@ var uriPort = uriObj.port;
 if (uriObj.schemeIs('http')) {
   ...
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>どの仕様にも属しません。</p>
+どの仕様にも属しません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.documentURIObject")}}</p>
+{{Compat("api.Document.documentURIObject")}}

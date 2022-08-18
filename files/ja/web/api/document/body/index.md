@@ -10,18 +10,21 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/body
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Document.body</code></strong> プロパティは、その文書の {{HTMLElement("body")}} または {{HTMLElement("frameset")}} ノードを表し、そのような要素がなければ <code>null</code> になります。</p>
+**`Document.body`** プロパティは、その文書の {{HTMLElement("body")}} または {{HTMLElement("frameset")}} ノードを表し、そのような要素がなければ `null` になります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">const <var>objRef</var> = document.body
-document.body = <var>objRef</var></pre>
+```
+const objRef = document.body
+document.body = objRef
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js notranslate">// Given this HTML: &lt;body id="oldBodyElement"&gt;&lt;/body&gt;
+```js
+// Given this HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 
 const aNewBodyElement = document.createElement("body");
@@ -29,49 +32,26 @@ const aNewBodyElement = document.createElement("body");
 aNewBodyElement.id = "newBodyElement";
 document.body = aNewBodyElement;
 alert(document.body.id); // "newBodyElement"
-</pre>
+```
 
-<h2 id="Notes" name="Notes">注</h2>
+## 注
 
-<p><code>document.body</code> は文書の内容を持つ要素です。 <code>&lt;body&gt;</code> の内容を持つ文書では <code>&lt;body&gt;</code> 要素を返し、フレームセット文書では、これは最も外側の <code>&lt;frameset&gt;</code> 要素を返します。</p>
+`document.body` は文書の内容を持つ要素です。 `<body>` の内容を持つ文書では `<body>` 要素を返し、フレームセット文書では、これは最も外側の `<frameset>` 要素を返します。
 
-<p><code>body</code> プロパティは設定が可能ですが、文書に新しい <code>body</code> を設定すると、既存の <code>&lt;body&gt;</code> 要素の子ノードは全て削除されます。</p>
+`body` プロパティは設定が可能ですが、文書に新しい `body` を設定すると、既存の `<body>` 要素の子ノードは全て削除されます。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="spectable standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','dom.html#dom-document-body','Document.body')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1','dom.html#dom-document-body','Document.body')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','dom.html#dom-document-body','Document.body')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                             | 備考 |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG','dom.html#dom-document-body','Document.body')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5.1','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5.1')}}     |      |
+| {{SpecName('HTML5 W3C','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("api.Document.body")}}</div>
+{{Compat("api.Document.body")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.head")}}</li>
-</ul>
+- {{domxref("document.head")}}

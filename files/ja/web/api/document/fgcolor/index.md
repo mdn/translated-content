@@ -12,36 +12,36 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/fgColor
 ---
-<div>{{ApiRef}}{{Deprecated_header}}</div>
+{{ApiRef}}{{Deprecated_header}}
 
-<p><strong><code>fgColor</code></strong> は、現在の文書の前景色またはテキストの色を取得または設定します。</p>
+**`fgColor`** は、現在の文書の前景色またはテキストの色を取得または設定します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>color</var> = <var>document</var>.fgColor;
-<var>document</var>.fgColor = <var>color;</var>
-</pre>
+```
+var color = document.fgColor;
+document.fgColor = color;
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>color</code> は文字列で、色を表すキーワード ("red" など) または16進数の値 (<code>"#000000"</code> など) です。</li>
-</ul>
+- `color` は文字列で、色を表すキーワード ("red" など) または 16 進数の値 (`"#000000"` など) です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js">document.fgColor = "white";
+```js
+document.fgColor = "white";
 document.bgColor = "darkblue";
-</pre>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p>Mozilla Firefox ではこのプロパティの既定値は黒 (16進数で <code>#000000</code>) です。</p>
+Mozilla Firefox ではこのプロパティの既定値は黒 (16 進数で `#000000`) です。
 
-<p><code>document.fgColor</code> は <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML で非推奨</a>となっています。推奨される代替手段は CSS プロパティの {{Cssxref("color")}} (たとえば <code>document.body.style.color = "red"</code>) です。</p>
+`document.fgColor` は [DOM Level 2 HTML で非推奨](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)となっています。推奨される代替手段は CSS プロパティの {{Cssxref("color")}} (たとえば `document.body.style.color = "red"`) です。
 
-<p>他の代替手段として <code>document.body.text</code> がありますが、上記の CSS による代替手段が設置されたため <a href="http://www.w3.org/TR/html401/struct/global.html#adef-text">HTML 4.01 で非推奨</a>となっています。</p>
+他の代替手段として `document.body.text` がありますが、上記の CSS による代替手段が設置されたため [HTML 4.01 で非推奨](http://www.w3.org/TR/html401/struct/global.html#adef-text)となっています。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.fgColor")}}</p>
+{{Compat("api.Document.fgColor")}}

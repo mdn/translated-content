@@ -7,31 +7,28 @@ tags:
   - Method
   - Reference
   - メソッド
-browser-compat: api.Document.createEvent
 translation_of: Web/API/Document/createEvent
+browser-compat: api.Document.createEvent
 ---
-<div class="notecard warning">
-  <h4>警告</h4>
-<p><code>createEvent</code> とともに使用される多くのメソッド (<code>initCustomEvent</code> など) は非推奨です。代わりに <a href="/ja/docs/Web/API/CustomEvent">イベントのコンストラクター</a> を使用してください。</p>
-</div>
+> **Warning:** `createEvent` とともに使用される多くのメソッド (`initCustomEvent` など) は非推奨です。代わりに [イベントのコンストラクター](/ja/docs/Web/API/CustomEvent) を使用してください。
 
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>指定された型の <a href="/ja/docs/Web/API/Event">イベント</a> を作成します。返されるオブジェクトは最初に初期化する必要があり、その後で {{domxref("EventTarget.dispatchEvent")}} へ渡すことができます。</p>
+指定された型の [イベント](/ja/docs/Web/API/Event) を作成します。返されるオブジェクトは最初に初期化する必要があり、その後で {{domxref("EventTarget.dispatchEvent")}} へ渡すことができます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">var <var>event</var> = <var>document</var>.createEvent(<var>type</var>);
-</pre>
+```js
+var event = document.createEvent(type);
+```
 
-<ul>
- <li><code><var>event</var></code> は作成された <a href="/ja/docs/Web/API/Event">イベント</a> オブジェクトです。</li>
- <li><code><var>type</var></code> は作成するイベント型を表す文字列です。取り得るイベント型は <code>"UIEvents"</code>, <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, <code>"HTMLEvents"</code> のいずれかです。詳しくは<a href="#notes">注</a>の項目を参照してください。</li>
-</ul>
+- `event` は作成された [イベント](/ja/docs/Web/API/Event) オブジェクトです。
+- `type` は作成するイベント型を表す文字列です。取り得るイベント型は `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"`, `"HTMLEvents"` のいずれかです。詳しくは[注](#notes)の項目を参照してください。
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush: js">// イベントを作成します。
+```js
+// イベントを作成します。
 var event = document.createEvent('Event');
 
 // イベントの名前を 'build' に定義します。
@@ -44,49 +41,28 @@ elem.addEventListener('build', function (e) {
 
 // ターゲットは任意の Element やほかの EventTarget にすることができます。
 elem.dispatchEvent(event);
-</pre>
+```
 
-<h2 id="Notes">注</h2>
+## 注
 
-<p><code>createEvent()</code> に渡すのに適したイベント型を表す文字列は <a href="https://dom.spec.whatwg.org/#dom-document-createevent">DOM 標準で定義されています。ステップ 2 の表をご覧ください</a>。現在はほとんどのイベントオブジェクトにコンストラクターがあり、それらはイベントオブジェクトのインスタンスを生成するために推奨される、現代的な方法であることに注意してください。</p>
+`createEvent()` に渡すのに適したイベント型を表す文字列は [DOM 標準で定義されています。ステップ 2 の表をご覧ください](https://dom.spec.whatwg.org/#dom-document-createevent)。現在はほとんどのイベントオブジェクトにコンストラクターがあり、それらはイベントオブジェクトのインスタンスを生成するために推奨される、現代的な方法であることに注意してください。
 
-<p>Gecko は非標準のイベントオブジェクトの別名をサポートしています。詳細は以下の表を参照してください。</p>
+Gecko は非標準のイベントオブジェクトの別名をサポートしています。詳細は以下の表を参照してください。
 
-<table class="fullwidth-table">
-  <tbody>
-    <tr>
-      <th>イベントモジュール</th>
-      <th>標準イベントオブジェクト</th>
-      <th>Gecko が対応する別名</th>
-    </tr>
-    <tr>
-      <td>テキストイベントモジュール</td>
-      <td><code>TextEvent</code></td>
-      <td><code>TextEvents</code></td>
-    </tr>
-    <tr>
-      <td>キーボードイベントモジュール</td>
-      <td><code>KeyboardEvent</code></td>
-      <td><code>KeyEvents</code></td>
-    </tr>
-    <tr>
-      <td>基本イベントモジュール</td>
-      <td><code>Event</code></td>
-      <td><code>Events</code></td>
-    </tr>
-  </tbody>
-</table>
+| イベントモジュール           | 標準イベントオブジェクト | Gecko が対応する別名 |
+| ---------------------------- | ------------------------ | -------------------- |
+| テキストイベントモジュール   | `TextEvent`              | `TextEvents`         |
+| キーボードイベントモジュール | `KeyboardEvent`          | `KeyEvents`          |
+| 基本イベントモジュール       | `Event`                  | `Events`             |
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/Events/Creating_and_triggering_events">イベントの作成と発行</a></li>
-</ul>
+- [イベントの作成と発行](/ja/docs/Web/Events/Creating_and_triggering_events)

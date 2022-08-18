@@ -17,71 +17,57 @@ tags:
   - 全画面
 translation_of: Web/API/Document/exitFullscreen
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p><span class="seoSummary">{{domxref("Document")}} の <code><strong>exitFullscreen()</strong></code> メソッドは、この文書で現在全画面モードで表示されている要素が全画面モードを向け、画面を以前の状態に戻すことを要求します。</span>これはふつう、以前の {{domxref("Element.requestFullscreen()")}} の呼び出しの効果を取り消します。</p>
+{{domxref("Document")}} の **`exitFullscreen()`** メソッドは、この文書で現在全画面モードで表示されている要素が全画面モードを向け、画面を以前の状態に戻すことを要求します。これはふつう、以前の {{domxref("Element.requestFullscreen()")}} の呼び出しの効果を取り消します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>exitPromise</em> = <em>document</em>.exitFullscreen();
-</pre>
+```
+exitPromise = document.exitFullscreen();
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>{{Glossary("user agent", "ユーザーエージェント")}}が全画面モードから完全に抜けたら解決される {{jsxref("Promise")}} です。全画面モードから抜けようとしてエラーが発生したら、 Promise の <code>catch()</code> ハンドラーが呼び出されます。</p>
+{{Glossary("user agent", "ユーザーエージェント")}}が全画面モードから完全に抜けたら解決される {{jsxref("Promise")}} です。全画面モードから抜けようとしてエラーが発生したら、 Promise の `catch()` ハンドラーが呼び出されます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例ではマウスボタンで中をクリックするたびに、現在の文書が全画面表示になったり戻ったりします。</p>
+この例ではマウスボタンで中をクリックするたびに、現在の文書が全画面表示になったり戻ったりします。
 
-<pre>document.onclick = function (event) {
+```
+document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
-      .then(() =&gt; console.log("Document Exited form Full screen mode"))
-      .catch((err) =&gt; console.error(err))
+      .then(() => console.log("Document Exited form Full screen mode"))
+      .catch((err) => console.error(err))
   } else {
     document.documentElement.requestFullscreen()
   }
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>注:</strong> もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullScreen", "例")}}をご覧ください。</p>
-</div>
+> **Note:** **注:** もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullScreen", "例")}}をご覧ください。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}} | {{Spec2("Fullscreen")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.exitFullscreen")}}</p>
+{{Compat("api.Document.exitFullscreen")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Fullscreen_API">全画面 API</a></li>
- <li><a href="/ja/docs/Web/API/Fullscreen_API/Guide">全画面 API のガイド</a></li>
- <li>{{ domxref("Element.requestFullscreen()") }}</li>
- <li>{{ domxref("Document.fullscreenElement") }}</li>
- <li>{{ cssxref(":fullscreen") }} および {{cssxref("::backdrop")}}</li>
- <li>{{HTMLElement("iframe")}} の {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 属性</li>
-</ul>
+- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
+- [全画面 API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+- {{ domxref("Element.requestFullscreen()") }}
+- {{ domxref("Document.fullscreenElement") }}
+- {{ cssxref(":fullscreen") }} および {{cssxref("::backdrop")}}
+- {{HTMLElement("iframe")}} の {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 属性

@@ -13,50 +13,36 @@ tags:
 translation_of: Web/API/DocumentOrShadowRoot/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
-<div>{{SeeCompatTable}}{{APIRef("Shadow DOM")}}</div>
+{{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
-<p><span class="seoSummary">{{domxref("DocumentOrShadowRoot")}} インターフェイスの <strong><code>styleSheets</code></strong> 読み取り専用プロパティは、 {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。ドキュメントに明示的にリンクまたは埋め込まれたスタイルシートの場合。</span></p>
+{{domxref("DocumentOrShadowRoot")}} インターフェイスの **`styleSheets`** 読み取り専用プロパティは、 {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。ドキュメントに明示的にリンクまたは埋め込まれたスタイルシートの場合。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js notranslate">function getStyleSheet(unique_title) {
-  for (var i=0; i&lt;document.styleSheets.length; i++) {
+```js
+function getStyleSheet(unique_title) {
+  for (var i=0; i<document.styleSheets.length; i++) {
     var sheet = document.styleSheets[i];
     if (sheet.title == unique_title) {
       return sheet;
     }
   }
 }
-</pre>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>返されるリストは次の順序で並べられます:</p>
+返されるリストは次の順序で並べられます:
 
-<ul>
- <li>{{htmlelement("link")}} ヘッダから取得したスタイルシートが最初に配置され、ヘッダ順に並べ替えられます。</li>
- <li>DOM から取得したスタイルシートは、<a href="https://dom.spec.whatwg.org/#concept-tree-order">ツリー順</a>にソートされた後に配置されます。</li>
-</ul>
+- {{htmlelement("link")}} ヘッダから取得したスタイルシートが最初に配置され、ヘッダ順に並べ替えられます。
+- DOM から取得したスタイルシートは、[ツリー順](https://dom.spec.whatwg.org/#concept-tree-order)にソートされた後に配置されます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                             | ステータス                       | 備考     |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}} | {{Spec2('Shadow DOM')}} | 初回定義 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-
-
-<p>{{Compat("api.DocumentOrShadowRoot.styleSheets")}}</p>
+{{Compat("api.DocumentOrShadowRoot.styleSheets")}}

@@ -1,5 +1,5 @@
 ---
-title: 'Document:touchend イベント'
+title: Document:touchend イベント
 slug: Web/API/Document/touchend_event
 tags:
   - API
@@ -16,42 +16,42 @@ tags:
   - イベント
 translation_of: Web/API/Document/touchend_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><code>touchend</code> イベントは、タッチ平面から1つ以上のタッチポイントが取り除かれた場合に発生します。</span></p>
+`touchend` イベントは、タッチ平面から 1 つ以上のタッチポイントが取り除かれた場合に発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>はい</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>はい</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("TouchEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>はい</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル可能</th>
+      <td>はい</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("TouchEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>これらのイベントのコード例は、指定のページ「<a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>」で利用できます。</p>
+これらのイベントのコード例は、指定のページ「[タッチイベント](/ja/docs/Web/API/Touch_events)」で利用できます。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.touchend_event")}}</p>
+{{Compat("api.Document.touchend_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}}</li>
- <li>{{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/touchend_event", "touchend")}}</li>
-</ul>
+- {{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}}
+- {{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/touchend_event", "touchend")}}

@@ -12,78 +12,71 @@ tags:
   - イベント
 translation_of: Web/API/Document/pointerenter_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>pointerenter</code> イベントは、ポインティングデバイスが要素またはその子孫のヒットテスト領域に入ったときに発生します。ホバーに対応していない機器では {{domxref("Document/pointerdown_event", "pointerdown")}} イベントの結果として移動した場合も含みます ({{domxref("Document/pointerdown_event", "pointerdown")}} を参照)。</p>
+`pointerenter` イベントは、ポインティングデバイスが要素またはその子孫のヒットテスト領域に入ったときに発生します。ホバーに対応していない機器では {{domxref("Document/pointerdown_event", "pointerdown")}} イベントの結果として移動した場合も含みます ({{domxref("Document/pointerdown_event", "pointerdown")}} を参照)。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onpointerenter", "onpointerenter")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル可能</th>
+      <td>いいえ</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onpointerenter", "onpointerenter")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p><code>addEventListener()</code> の使用例:</p>
+`addEventListener()` の使用例:
 
-<pre class="brush: js">document.addEventListener('pointerenter', (event) =&gt; {
+```js
+document.addEventListener('pointerenter', (event) => {
   console.log('Pointer entered element');
-});</pre>
+});
+```
 
-<p><code>onpointerenter</code> イベントハンドラープロパティの使用例:</p>
+`onpointerenter` イベントハンドラープロパティの使用例:
 
-<pre class="brush: js">document.onpointerenter = (event) =&gt; {
+```js
+document.onpointerenter = (event) => {
   console.log('Pointer entered element');
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-pointerenter-event')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | 状態                                 |
+| ---------------------------------------------------------------------------- | ------------------------------------ |
+| {{SpecName('Pointer Events', '#the-pointerenter-event')}} | {{Spec2('Pointer Events')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.pointerenter_event")}}</p>
+{{Compat("api.Document.pointerenter_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Document/gotpointercapture_event", "gotpointercapture")}}</li>
- <li>{{domxref("Document/lostpointercapture_event", "lostpointercapture")}}</li>
- <li>{{domxref("Document/pointerover_event", "pointerover")}}</li>
- <li>{{domxref("Document/pointerdown_event", "pointerdown")}}</li>
- <li>{{domxref("Document/pointermove_event", "pointermove")}}</li>
- <li>{{domxref("Document/pointerup_event", "pointerup")}}</li>
- <li>{{domxref("Document/pointercancel_event", "pointercancel")}}</li>
- <li>{{domxref("Document/pointerout_event", "pointerout")}}</li>
- <li>{{domxref("Document/pointerleave_event", "pointerleave")}}</li>
- <li>{{domxref("GlobalEventHandlers/onpointerenter", "onpointerenter")}} イベントハンドラープロパティ</li>
- <li><code>HTMLElement</code> を対象としたこのイベント: {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} イベント</li>
-</ul>
+- {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Document/pointerover_event", "pointerover")}}
+- {{domxref("Document/pointerdown_event", "pointerdown")}}
+- {{domxref("Document/pointermove_event", "pointermove")}}
+- {{domxref("Document/pointerup_event", "pointerup")}}
+- {{domxref("Document/pointercancel_event", "pointercancel")}}
+- {{domxref("Document/pointerout_event", "pointerout")}}
+- {{domxref("Document/pointerleave_event", "pointerleave")}}
+- {{domxref("GlobalEventHandlers/onpointerenter", "onpointerenter")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} イベント

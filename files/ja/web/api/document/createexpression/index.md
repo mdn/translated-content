@@ -11,35 +11,32 @@ tags:
   - メソッド
 translation_of: Web/API/Document/createExpression
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>このメソッドは、 (繰り返して) 評価を行うために使用することができる {{DOMxRef("XPathExpression")}} をコンパイルします。</p>
+このメソッドは、 (繰り返して) 評価を行うために使用することができる {{DOMxRef("XPathExpression")}} をコンパイルします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>xpathExpr</var> = <var>document</var>.createExpression(<var>xpathText</var>, <var>namespaceURLMapper</var>);
-</pre>
+```
+xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><var>xpathText</var> は文字列で、コンパイルする XPath 式です。</li>
- <li><var>namespaceURLMapper</var> は、名前空間接頭辞を名前空間 URL に対応付ける関数 (または必要がなければ null) です。</li>
-</ul>
+- _xpathText_ は文字列で、コンパイルする XPath 式です。
+- _namespaceURLMapper_ は、名前空間接頭辞を名前空間 URL に対応付ける関数 (または必要がなければ null) です。
 
-<p>{{Fx_MinVersion_Note(3, "Firefox 3 より前では、対象として XPath を実行する文書以外の文書に対してこのメソッドを呼び出すことができました。 Firefox 3 では、同じ文書に対して呼び出す必要があります。")}}</p>
+{{Fx_MinVersion_Note(3, "Firefox 3 より前では、対象として XPath を実行する文書以外の文書に対してこのメソッドを呼び出すことができました。 Firefox 3 では、同じ文書に対して呼び出す必要があります。")}}
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>{{DOMxRef("XPathExpression")}}</p>
+{{DOMxRef("XPathExpression")}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.createExpression")}}</p>
+{{Compat("api.Document.createExpression")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{DOMxRef("Document.evaluate()")}}</li>
- <li>{{DOMxRef("XPathExpression")}}</li>
-</ul>
+- {{DOMxRef("Document.evaluate()")}}
+- {{DOMxRef("XPathExpression")}}
