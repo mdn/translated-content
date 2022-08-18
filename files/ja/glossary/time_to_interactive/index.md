@@ -8,18 +8,16 @@ tags:
   - リファレンス
 translation_of: Glossary/Time_to_interactive
 ---
-<p class="seoSummary"><strong>対話時間 (TTI)</strong> は、最後の<a href="/ja/docs/Web/API/Long_Tasks_API">ロングタスク</a>が終了し、その後5秒間のネットワークとメインスレッドの非アクティブ状態が続いた時点として定義される、標準化されていない Web パフォーマンスの「進行状況」メトリクスです。</p>
+**対話時間 (TTI)** は、最後の[ロングタスク](/ja/docs/Web/API/Long_Tasks_API)が終了し、その後 5 秒間のネットワークとメインスレッドの非アクティブ状態が続いた時点として定義される、標準化されていない Web パフォーマンスの「進行状況」メトリクスです。
 
-<p>2018年に Web Incubator Community Group によって提案された TTI は、ページまたはアプリケーションに有用なコンテンツが含まれ、メインスレッドがアイドル状態になり、イベントハンドラの登録など、ユーザの操作に自由にレスポンスできるようになるメトリクスを提供します。</p>
+2018 年に Web Incubator Community Group によって提案された TTI は、ページまたはアプリケーションに有用なコンテンツが含まれ、メインスレッドがアイドル状態になり、イベントハンドラの登録など、ユーザの操作に自由にレスポンスできるようになるメトリクスを提供します。
 
-<h4 id="警告">警告:</h4>
+#### 警告:
 
-<p>TTIは、{{domxref("Long Tasks API")}} からの情報を利用して導出されます。一部のパフォーマンス監視ツールで利用可能ですが、TTI は執筆時点で公式の Web 仕様の一部ではありません。</p>
+TTI は、{{domxref("Long Tasks API")}} からの情報を利用して導出されます。一部のパフォーマンス監視ツールで利用可能ですが、TTI は執筆時点で公式の Web 仕様の一部ではありません。
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>Web Incubator Community Group からの <a href="https://github.com/WICG/time-to-interactive">TTI の定義</a></li>
- <li><a href="https://building.calibreapp.com/time-to-interactive-focusing-on-the-human-centric-metrics-22eb7e64dd23">Time to Interactive — focusing on human-centric metrics</a> by Radimir Bitsov</li>
- <li><a href="https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti">Tracking TTI</a></li>
-</ul>
+- Web Incubator Community Group からの [TTI の定義](https://github.com/WICG/time-to-interactive)
+- [Time to Interactive — focusing on human-centric metrics](https://building.calibreapp.com/time-to-interactive-focusing-on-the-human-centric-metrics-22eb7e64dd23) by Radimir Bitsov
+- [Tracking TTI](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti)

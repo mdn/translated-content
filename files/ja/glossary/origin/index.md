@@ -9,73 +9,31 @@ tags:
   - 用語集
 translation_of: Glossary/Origin
 ---
-<p>ウェブコンテンツの<ruby><strong>オリジン</strong><rp> (</rp><rt>Origin</rt><rp>) </rp></ruby>は、ウェブコンテンツにアクセスするために使われる {{Glossary("URL")}} の<em>スキーム</em> (プロトコル)、 <em>ホスト</em> (ドメイン)、 <em>ポート</em> によって定義されます。スキーム、ホスト、ポートがすべて一致した場合のみ、二つのオブジェクトは同じオリジンであると言えます。</p>
+ウェブコンテンツの**オリジン** (Origin) は、ウェブコンテンツにアクセスするために使われる {{Glossary("URL")}} の*スキーム* (プロトコル)、 _ホスト_ (ドメイン)、 _ポート_ によって定義されます。スキーム、ホスト、ポートがすべて一致した場合のみ、二つのオブジェクトは同じオリジンであると言えます。
 
-<p>操作によっては同じオリジンのコンテンツに限定されており、この制約は {{Glossary("CORS")}} を使用して緩和することができます。</p>
+操作によっては同じオリジンのコンテンツに限定されており、この制約は {{Glossary("CORS")}} を使用して緩和することができます。
 
-<h2 id="Examples_of_same_origin" name="Examples_of_same_origin">同一オリジンの例</h2>
+## 同一オリジンの例
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com/app1/index.html</code><br>
-    <code>http://example.com/app2/index.html</code></td>
-   <td style="width: 50%;">スキーム (<code>http</code>) およびホスト (<code>example.com</code>) が同じなので同一オリジン</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://Example.com:80</code><br>
-    <code>http://example.com</code></td>
-   <td style="width: 50%;">サーバーは既定で80番ポートで HTTP コンテンツを配信するため、同一オリジン</td>
-  </tr>
- </tbody>
-</table>
+| `http://example.com/app1/index.html` `http://example.com/app2/index.html` | スキーム (`http`) およびホスト (`example.com`) が同じなので同一オリジン    |
+| ------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `http://Example.com:80` `http://example.com`                              | サーバーは既定で 80 番ポートで HTTP コンテンツを配信するため、同一オリジン |
 
-<h2 id="Examples_of_different_origin" name="Examples_of_different_origin">異なるオリジンの例</h2>
+## 異なるオリジンの例
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com/app1</code><br>
-    <code>https://example.com/app2</code></td>
-   <td>スキームが異なる</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com</code><br>
-    <code>http://www.example.com</code><br>
-    <code>http://myapp.example.com</code></td>
-   <td style="width: 50%;">ホストが異なる</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com</code><br>
-    <code>http://example.com:8080</code></td>
-   <td style="width: 50%;">ポートが異なる</td>
-  </tr>
- </tbody>
-</table>
+| `http://example.com/app1` `https://example.com/app2`                     | スキームが異なる |
+| ------------------------------------------------------------------------ | ---------------- |
+| `http://example.com` `http://www.example.com` `http://myapp.example.com` | ホストが異なる   |
+| `http://example.com` `http://example.com:8080`                           | ポートが異なる   |
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#origin', 'origin')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', '#origin', 'origin')}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="Learn_more" name="Learn_more">理解を深める</h2>
+## 理解を深める
 
-<p>詳しくは<a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a>をご覧ください。</p>
+詳しくは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)をご覧ください。
 
-<div>{{QuickLinksWithSubpages("/ja/docs/Glossary")}}</div>
+{{QuickLinksWithSubpages("/ja/docs/Glossary")}}

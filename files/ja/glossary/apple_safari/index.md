@@ -7,21 +7,17 @@ tags:
   - WebMechanics
 translation_of: Glossary/Apple_Safari
 ---
-<p><a href="http://www.apple.com/safari/">Safari</a> は{{Glossary("Browser","ウェブブラウザー")}}であり、Apple が開発し、 macOS と iOS の両方に組み込まれています。これは、オープンソースの <a href="https://webkit.org/">WebKit</a> エンジンに基づいています。</p>
+[Safari](http://www.apple.com/safari/) は{{Glossary("Browser","ウェブブラウザー")}}であり、Apple が開発し、 macOS と iOS の両方に組み込まれています。これは、オープンソースの [WebKit](https://webkit.org/) エンジンに基づいています。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<h3 id="General_knowledge" name="General_knowledge">基礎知識</h3>
+### 基礎知識
 
-<ul>
- <li>ウィキペディア上の記事「{{Interwiki("wikipedia", "Safari (web browser)", "Safari")}}」</li>
- <li><a href="https://www.apple.com/safari/" rel="external">apple.com の Safari</a></li>
-</ul>
+- ウィキペディア上の記事「{{Interwiki("wikipedia", "Safari (web browser)", "Safari")}}」
+- [apple.com の Safari](https://www.apple.com/safari/)
 
-<h3 id="Technical_information" name="Technical_information">技術情報</h3>
+### 技術情報
 
-<ul>
- <li><a href="https://webkit.org/">The WebKit project</a></li>
- <li><a href="https://nightly.webkit.org/" rel="external">WebKit nightly build</a></li>
- <li><a href="https://bugs.webkit.org/" rel="external">Reporting a bug for Safari</a></li>
-</ul>
+- [The WebKit project](https://webkit.org/)
+- [WebKit nightly build](https://nightly.webkit.org/)
+- [Reporting a bug for Safari](https://bugs.webkit.org/)

@@ -7,10 +7,8 @@ tags:
   - Web Performance
 translation_of: Glossary/first_meaningful_paint
 ---
-<p><strong>First Meaningful Paint</strong> (FMP) は、スクロールせずに見える最大のレイアウト変更が行われ、ウェブフォントが読み込まれた後のペイントです。 "お役に立ちましたか?" 最初に意味のあるペイントが完了すると "はい" になります。</p>
+**First Meaningful Paint** (FMP) は、スクロールせずに見える最大のレイアウト変更が行われ、ウェブフォントが読み込まれた後のペイントです。 "お役に立ちましたか?" 最初に意味のあるペイントが完了すると "はい" になります。
 
-<h2 id="関連項目">関連項目:</h2>
+## 関連項目:
 
-<ul>
- <li><a href="/ja/docs/Glossary/First_contentful_paint">First contentful paint</a></li>
-</ul>
+- [First contentful paint](/ja/docs/Glossary/First_contentful_paint)

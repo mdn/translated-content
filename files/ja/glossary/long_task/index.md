@@ -8,10 +8,8 @@ tags:
   - Web Performance
 translation_of: Glossary/Long_task
 ---
-<p><span class="seoSummary"><strong>long task</strong>  とは、完了するまでに50ミリ秒以上かかるタスクです。</span>  <a href="/ja/docs/Glossary/Main_thread">main UI thread</a> が50ミリ秒以上ビジーである中断のない期間です。一般的な例では、長時間実行されるイベントハンドラ、高価な<a href="/ja/docs/Glossary/Reflow">リフロー</a>、その他の再レンダリングが含まれ、50ミリ秒を超えるイベントループの異なるターン間でブラウザーが実行する作業が含まれます。</p>
+**long task** とは、完了するまでに 50 ミリ秒以上かかるタスクです。 [main UI thread](/ja/docs/Glossary/Main_thread) が 50 ミリ秒以上ビジーである中断のない期間です。一般的な例では、長時間実行されるイベントハンドラ、高価な[リフロー](/ja/docs/Glossary/Reflow)、その他の再レンダリングが含まれ、50 ミリ秒を超えるイベントループの異なるターン間でブラウザーが実行する作業が含まれます。
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Long_Tasks_API">Long task API</a></li>
-</ul>
+- [Long task API](/ja/docs/Web/API/Long_Tasks_API)

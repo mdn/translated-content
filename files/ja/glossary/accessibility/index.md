@@ -8,28 +8,22 @@ tags:
   - 用語集
 translation_of: Glossary/Accessibility
 ---
-<p><em>Web アクセシビリティ</em> (略語: <strong>A11Y</strong>、Accessibility の A から Y までの間に 11 文字が挟まれているため、このように略す) は、身体的および技術的な制約によらず、Web サイトを使いやすく保つためのベストプラクティスです。Web アクセシビリティは、{{Glossary("W3C")}} の {{Glossary("WAI","Web Accessibility Initiative")}} (略称: WAI) によって、標準化と議論がされています。</p>
+_Web アクセシビリティ_ (略語: **A11Y**、Accessibility の A から Y までの間に 11 文字が挟まれているため、このように略す) は、身体的および技術的な制約によらず、Web サイトを使いやすく保つためのベストプラクティスです。Web アクセシビリティは、{{Glossary("W3C")}} の {{Glossary("WAI","Web Accessibility Initiative")}} (略称: WAI) によって、標準化と議論がされています。
 
-<h2 id="Learn_more" name="Learn_more">関連項目</h2>
+## 関連項目
 
-<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
+### 一般知識
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility">MDN上 の アクセシビリティについてのリソース</a></li>
- <li>Wikipedia 上の {{Interwiki("wikipedia", "アクセシビリティ")}}</li>
-</ul>
+- [MDN 上 の アクセシビリティについてのリソース](/ja/docs/Web/Accessibility)
+- Wikipedia 上の {{Interwiki("wikipedia", "アクセシビリティ")}}
 
-<h3 id="Learn_web_accessibility" name="Learn_web_accessibility">Web アクセシビリティについて学ぶ</h3>
+### Web アクセシビリティについて学ぶ
 
-<ul>
- <li><a href="/ja/docs/Learn/Accessibility">MDN でアクセシビリティについて学ぶ</a></li>
- <li><a href="http://webaim.org/" rel="external">Web Accessibility In Mind</a></li>
-</ul>
+- [MDN でアクセシビリティについて学ぶ](/ja/docs/Learn/Accessibility)
+- [Web Accessibility In Mind](http://webaim.org/)
 
-<h3 id="Technical_reference" name="Technical_reference">技術文書</h3>
+### 技術文書
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/ARIA">MDN 上の ARIA についてのドキュメント</a></li>
- <li><a href="http://www.w3.org/WAI/" rel="external">Web Accessibility Initiative ホームページ</a></li>
- <li><a href="http://www.w3.org/TR/wai-aria/" rel="external">WAI-ARIA 勧告</a></li>
-</ul>
+- [MDN 上の ARIA についてのドキュメント](/ja/docs/Web/Accessibility/ARIA)
+- [Web Accessibility Initiative ホームページ](http://www.w3.org/WAI/)
+- [WAI-ARIA 勧告](http://www.w3.org/TR/wai-aria/)

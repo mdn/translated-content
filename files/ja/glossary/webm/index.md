@@ -8,12 +8,10 @@ tags:
   - WebM
 translation_of: Glossary/webm
 ---
-<p><strong>WebM</strong> はロイヤリティフリーでオープンな動画フォーマットです。Mozilla Firefox でも標準でサポートされています。</p>
+**WebM** はロイヤリティフリーでオープンな動画フォーマットです。Mozilla Firefox でも標準でサポートされています。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<h3 id="General_knowledge" name="General_knowledge">基礎知識</h3>
+### 基礎知識
 
-<ul>
- <li>ウィキペディアの「{{Interwiki("wikipedia", "WebM")}}」の記事</li>
-</ul>
+- ウィキペディアの「{{Interwiki("wikipedia", "WebM")}}」の記事

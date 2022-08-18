@@ -11,14 +11,12 @@ tags:
 translation_of: Glossary/Slug
 original_slug: Glossary/スラグ
 ---
-<p><span class="seoSummary">スラグは、通常はURLの最後にあるWebアドレスの固有の識別部分です。<br>
- MDNのコンテキストでは、"&lt;locale&gt; / docs /" に続くURLの部分です。</span></p>
+スラグは、通常は URL の最後にある Web アドレスの固有の識別部分です。
+MDN のコンテキストでは、"\<locale> / docs /" に続く URL の部分です。
 
-<p>親文書の下に新しい文書が作成されたときの最終的な構成要素でもあります。<br>
- たとえば、このページのスラグは <code>Glossary/スラグ</code> です。</p>
+親文書の下に新しい文書が作成されたときの最終的な構成要素でもあります。
+たとえば、このページのスラグは `Glossary/スラグ` です。
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Writing_style_guide#タイトルとスラグの決め方">タイトルとスラグの決め方</a></li>
-</ul>
+- [タイトルとスラグの決め方](/ja/docs/MDN/Contribute/Guidelines/Writing_style_guide#タイトルとスラグの決め方)

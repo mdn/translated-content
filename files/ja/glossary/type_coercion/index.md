@@ -9,35 +9,31 @@ tags:
   - 用語集
 translation_of: Glossary/Type_coercion
 ---
-<p><ruby>型強制<rp> (</rp><rt>Type coercion</rt><rp>) </rp></ruby>は、あるデータ型から他のデータ型への値の自動的または暗黙の変換です (文字列から数値など)。<em>{{Glossary("Type conversion", "型変換")}}</em>と<em>型強制</em>はよく似ており、どちらもある型から他の型へ値を変換しますが、一つ重要な違いがあります。<em>型強制</em>は暗黙的であるのに対し、<em>型変換</em>は暗黙的<em>または</em>明示的のどちらかです。</p>
+型強制 (Type coercion) は、あるデータ型から他のデータ型への値の自動的または暗黙の変換です (文字列から数値など)。*{{Glossary("Type conversion", "型変換")}}*と*型強制*はよく似ており、どちらもある型から他の型へ値を変換しますが、一つ重要な違いがあります。*型強制*は暗黙的であるのに対し、*型変換*は暗黙的*または*明示的のどちらかです。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">const value1 = '5';
+```js
+const value1 = '5';
 const value2 = 9;
 let sum = value1 + value2;
 
-console.log(sum);</pre>
+console.log(sum);
+```
 
-<p>上記の例では、 JavaScript は <code>9</code> を数値から文字列に<em>型強制</em>し、両者を結合するので、結果は文字列の <code>59</code> になります。 JavaScript は文字列と数値の何れかを選択する必要があり、文字列を使用するよう決定します。</p>
+上記の例では、 JavaScript は `9` を数値から文字列に*型強制*し、両者を結合するので、結果は文字列の `59` になります。 JavaScript は文字列と数値の何れかを選択する必要があり、文字列を使用するよう決定します。
 
-<p>コンパイラーは <code>5</code> を数値に強制して、合計値である <code>14</code> を返すこともできましたが、そうしませんでした。この結果を返すには、 {{jsxref("Global_Objects/Number", "Number()")}} メソッドを用いて明示的に <code>5</code> を数値に変換することができます。</p>
+コンパイラーは `5` を数値に強制して、合計値である `14` を返すこともできましたが、そうしませんでした。この結果を返すには、 {{jsxref("Global_Objects/Number", "Number()")}} メソッドを用いて明示的に `5` を数値に変換することができます。
 
-<pre class="brush: js">sum = Number(value1) + value2;</pre>
+```js
+sum = Number(value1) + value2;
+```
 
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Glossary">用語集</a>
+1.  [用語集](/ja/docs/Glossary)
 
-  <ol>
-   <li>{{Glossary("Type", "型")}}</li>
-   <li>{{Glossary("Type conversion", "型変換")}}</li>
-  </ol>
- </li>
- <li>Wikipedia の記事
-  <ol>
-   <li>{{Interwiki("wikipedia", "型変換")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+    1.  {{Glossary("Type", "型")}}
+    2.  {{Glossary("Type conversion", "型変換")}}
+
+2.  Wikipedia の記事
+
+    1.  {{Interwiki("wikipedia", "型変換")}}

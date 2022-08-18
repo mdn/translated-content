@@ -8,25 +8,18 @@ tags:
   - 用語集
 translation_of: Glossary/Wrapper
 ---
-<p>JavaScript のようなプログラミング言語において、<ruby>ラッパー<rp> (</rp><rt>wrapper</rt><rp>) </rp></ruby>は 1 つ以上の他の関数を呼び出すための関数であり、時には純粋に利便性のために、時にはプロセス中でまったく異なるタスクに合わせるために使用されます。</p>
+JavaScript のようなプログラミング言語において、ラッパー (wrapper) は 1 つ以上の他の関数を呼び出すための関数であり、時には純粋に利便性のために、時にはプロセス中でまったく異なるタスクに合わせるために使用されます。
 
-<p>例えば、AWS の SDK ライブラリはラッパーの例になります。</p>
+例えば、AWS の SDK ライブラリはラッパーの例になります。
 
-<h2 id="Learn_more" name="Learn_more">理解を深める</h2>
+## 理解を深める
 
-<h3 id="General_Knowledge" name="General_Knowledge">一般知識</h3>
+### 一般知識
 
-<p>Wikipedia の {{Interwiki("wikipedia", "Wrapper function")}}</p>
+Wikipedia の {{Interwiki("wikipedia", "Wrapper function")}}
 
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a>
+1.  [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-  <ol>
-   <li>{{Glossary("API")}}</li>
-   <li>{{Glossary("Class")}}</li>
-   <li>{{Glossary("Function")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+    1.  {{Glossary("API")}}
+    2.  {{Glossary("Class")}}
+    3.  {{Glossary("Function")}}
