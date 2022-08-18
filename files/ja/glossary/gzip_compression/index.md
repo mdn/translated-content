@@ -1,20 +1,17 @@
 ---
-title: GZip compression (Gzip 圧縮)
+title: gzip compression (gzip 圧縮)
 slug: Glossary/GZip_compression
 tags:
   - Glossary
   - compression
   - gzip
-  - 用語集
 translation_of: Glossary/GZip_compression
+l10n:
+  sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---
-GZip はファイルの圧縮および展開に使われるファイル形式です。これは DEFLATE アルゴリズムに基づいており、ファイルをより小さくすることができ、より高速なネットワーク転送を可能にします。GZip はウェブサーバーや最近のブラウザーで広く対応しており、サーバーは送信前に自動的にファイルを圧縮し、ブラウザーは受信時に展開することができます。
+gzip はファイルの圧縮および展開に使われるファイル形式です。これは Deflate アルゴリズムに基づいており、ファイルをより小さくすることができ、より高速なネットワーク転送を可能にします。gzip はウェブサーバーや最近のブラウザーが広く対応しており、サーバーは送信前に自動的にファイルを圧縮し、ブラウザーは受信時に展開することができます。
 
-## 理解を深める
+## 関連情報
 
-- [ページ速度のために gzip 圧縮を有効にする方法](https://varvy.com/pagespeed/enable-compression.html) (英語)
-- ウィキペディアの「[Gzip](https://ja.wikipedia.org/wiki/Gzip)」の記事
-
-<!---->
-
-- <details><summary><a href="/ja/docs/Glossary">MDN 用語集</a></summary>{{ListSubpages("/ja/docs/Glossary/")}}</details>
+- [The gzip home page](https://www.gzip.org/) (英語)
+- [ウィキペディアの gzip](https://ja.wikipedia.org/wiki/Gzip)
