@@ -1,7 +1,6 @@
 ---
 title: '::slotted()'
 slug: Web/CSS/::slotted
-translation_of: Web/CSS/::slotted
 ---
 {{ CSSRef }}
 

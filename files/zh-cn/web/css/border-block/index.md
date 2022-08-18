@@ -1,7 +1,6 @@
 ---
 title: border-block
 slug: Web/CSS/border-block
-translation_of: Web/CSS/border-block
 ---
 {{CSSRef}}
 

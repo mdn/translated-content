@@ -64,13 +64,13 @@ console.log(o.d); // undefined
 // 속성이 발견되지 않았기 때문에 undefined를 반환한다.
 ```
 
-객체의 속성에 값을 지정하면 "자기만의 속성"이 생긴다. 단, [getter or a setter](/en/JavaScript/Guide/Obsolete_Pages/Creating_New_Objects/Defining_Getters_and_Setters "Defining Getters and Setters")가 적용되는 속성이 상속되는 경우 예외적인 규칙이 적용된다.
+객체의 속성에 값을 지정하면 "자기만의 속성"이 생긴다. 단, [getter or a setter](/en/JavaScript/Guide/Obsolete_Pages/Creating_New_Objects/Defining_Getters_and_Setters)가 적용되는 속성이 상속되는 경우 예외적인 규칙이 적용된다.
 
 ### 메소드 상속
 
 자바스크립트에 "메소드"라는건 없다. 하지만 자바스크립트는 객체의 속성으로 함수를 지정할 수 있고 속성 값을 사용하듯 쓸 수 있다. 속성 값으로 지정한 함수의 상속 역시 위에서 본 속성의 상속과 동일하다. (단 위에서 언급한 "속성의 가려짐" 대신 "_메소드 오버라이딩, method overriding_" 라는 용어를 사용한다)
 
-상속된 함수가 실행 될 때, [`this`](/en/JavaScript/Reference/Operators/this "this") 라는 변수는 상속된 오브젝트를 가르킨다. 그 함수가 프로토타입의 속성으로 지정되었다고 해도 말이다.
+상속된 함수가 실행 될 때, [`this`](/en/JavaScript/Reference/Operators/this) 라는 변수는 상속된 오브젝트를 가르킨다. 그 함수가 프로토타입의 속성으로 지정되었다고 해도 말이다.
 
 ```js
 var o = {
@@ -256,7 +256,7 @@ function f(){
 
 ### 생성자를 이용
 
-자바스크립트에서 생성자는 단지 [new 연산자](/en/JavaScript/Reference/Operators/new "new")를 사용해 함수를 호출하면 된다.
+자바스크립트에서 생성자는 단지 [new 연산자](/en/JavaScript/Reference/Operators/new)를 사용해 함수를 호출하면 된다.
 
 ```js
 function Graph() {
@@ -277,7 +277,7 @@ var g = new Graph();
 
 ### Object.create 이용
 
-ECMAScript 5는 새로운 방법을 도입했다. [Object.create](/en/JavaScript/Reference/Global_Objects/Object/create "create")라는 메소드를 호출하여 새로운 객체를 만들 수 있다. 생성된 객체의 프로토타입은 이 메소드의 첫 번째 인수로 지정된다.
+ECMAScript 5는 새로운 방법을 도입했다. [Object.create](/en/JavaScript/Reference/Global_Objects/Object/create)라는 메소드를 호출하여 새로운 객체를 만들 수 있다. 생성된 객체의 프로토타입은 이 메소드의 첫 번째 인수로 지정된다.
 
 ```js
 var a = {a: 1};

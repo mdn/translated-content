@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 ---
 {{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}
 

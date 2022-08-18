@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.RuntimeError()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
 {{JSRef}}
 

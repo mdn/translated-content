@@ -1,11 +1,6 @@
 ---
 title: WAI-ARIA basics
 slug: learn/Accessibility/WAI-ARIA_basics
-tags:
-  - WAI-ARIA
-  - Web 无障碍
-  - 无障碍
-translation_of: Learn/Accessibility/WAI-ARIA_basics
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 

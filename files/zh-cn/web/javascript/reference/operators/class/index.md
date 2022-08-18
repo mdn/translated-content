@@ -1,11 +1,6 @@
 ---
 title: 类表达式
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - Class
-  - Classes
-  - ES6
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
 {{jsSidebar("Operators")}}
 

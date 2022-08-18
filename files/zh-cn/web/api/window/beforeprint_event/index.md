@@ -56,4 +56,4 @@ window.onbeforeprint = (event) => {
 
 ## 相关事件
 
-- [afterprint](https://developer.mozilla.org/zh-CN/docs/Web/Events/afterprint)
+- [afterprint](/zh-CN/docs/Web/Events/afterprint)

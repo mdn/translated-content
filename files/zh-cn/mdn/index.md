@@ -1,10 +1,6 @@
 ---
 title: MDN 项目
 slug: MDN
-tags:
-  - 着陆页
-  - MDN 元数据
-translation_of: MDN
 ---
 {{MDNSidebar}}
 

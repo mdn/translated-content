@@ -1,14 +1,6 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Method
-  - tanh
-  - 双曲正切
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
 {{JSRef}}
 

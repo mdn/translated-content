@@ -1,13 +1,6 @@
 ---
 title: circle
 slug: Web/SVG/Element/circle
-tags:
-  - SVG
-  - SVG 图形
-  - http://svgjs.com
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/circle
 ---
 {{SVGRef}}
 

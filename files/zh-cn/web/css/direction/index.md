@@ -1,7 +1,6 @@
 ---
 title: direction
 slug: Web/CSS/direction
-translation_of: Web/CSS/direction
 ---
 CSS 属性 **`direction`** 用来设置文本、表列水平溢出的方向。 `rtl` 表示从右到左 (类似希伯来语或阿拉伯语)， `ltr` 表示从左到右 (类似英语等大部分语言).{{EmbedInteractiveExample("pages/css/direction.html")}}
 

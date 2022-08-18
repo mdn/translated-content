@@ -1,15 +1,6 @@
 ---
 title: 导出的 WebAssembly 函数
 slug: WebAssembly/Exported_functions
-tags:
-  - JavaScript
-  - WebAssembly
-  - wasm
-  - 导出
-  - 导出的 wasm 函数
-  - 导出的函数
-  - 指南
-translation_of: WebAssembly/Exported_functions
 ---
 {{WebAssemblySidebar}}
 

@@ -15,7 +15,7 @@ translation_of: Web/API/Element/classList
 var elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ is a {{domxref("DOMTokenList")}} representing the class attribute of _elementNodeReference_. If the class attribute was not set or is empty _elementClasses.length_ returns 0. `element.classList` itself is read-only, although you can modify it using the` add()` and `remove()` methods.
+_elementClasses_ is a {{domxref("DOMTokenList")}} representing the class attribute of _elementNodeReference_. If the class attribute was not set or is empty _elementClasses.length_ returns 0. `element.classList` itself is read-only, although you can modify it using the `add()` and `remove()` methods.
 
 ## 方法
 

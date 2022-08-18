@@ -1,13 +1,6 @@
 ---
 title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
-tags:
-  - JavaScript
-  - 函数
-  - 基本表达式
-  - 实验性内容
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Reference/Operators/async允许声明一个函数为一个包含异步操作的函数
 ---
 {{jsSidebar("Operators")}}

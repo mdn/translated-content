@@ -1,13 +1,6 @@
 ---
 title: 为“弹球”示例添加新功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - JavaScript
-  - 初学者
-  - 对象
-  - 测验
-  - 面向对象
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

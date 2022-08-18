@@ -48,7 +48,7 @@ This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attrib
 - {{htmlattrdef("method")}}
   - : The [HTTP](/zh-TW/docs/Web/HTTP) method to submit the form with. Possible values: `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/zh-TW/docs/Web/API/Body).
     - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/zh-TW/docs/Glossary/Idempotent).
-    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog on submission.This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image"> `](/en-US/docs/Web/HTML/Element/input/image)elements.
+    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog on submission.This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 - {{htmlattrdef("name")}} {{deprecated_inline}}
   - : The name of the form. Deprecated as of HTML 4 (use `id` instead). It must be unique among the forms in a document and not an empty string as of HTML5.
 - {{htmlattrdef("novalidate")}}

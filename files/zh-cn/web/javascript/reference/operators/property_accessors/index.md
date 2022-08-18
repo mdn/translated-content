@@ -1,11 +1,6 @@
 ---
 title: 属性访问器
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Operator
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
 {{jsSidebar("Operators")}}
 

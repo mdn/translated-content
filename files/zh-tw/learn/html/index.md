@@ -1,19 +1,6 @@
 ---
 title: 學習 HTML ：指南與教學
 slug: Learn/HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Intro
-  - Learn
-  - NeedsTranslation
-  - Topic
-  - TopicStub
-  - 初心者
-  - 指南
-  - 超文本標記語言
-translation_of: Learn/HTML
 ---
 {{LearnSidebar}}
 

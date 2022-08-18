@@ -1,16 +1,6 @@
 ---
 title: 使用 CSS 添加文档内容
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Graphics
-  - Guide
-  - NeedsUpdate
-  - Web
-translation_of: Learn/CSS/Howto/Generated_content
 ---
 {{LearnSidebar}}
 

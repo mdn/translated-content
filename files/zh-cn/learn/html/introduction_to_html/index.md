@@ -1,12 +1,6 @@
 ---
 title: HTML 介绍
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - HTML 介绍
-  - 文本
-  - 结构
-  - 链接
-translation_of: Learn/HTML/Introduction_to_HTML
 ---
 {{LearnSidebar}}
 

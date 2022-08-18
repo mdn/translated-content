@@ -1,10 +1,6 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-tags:
-  - Global attributes
-  - HTML
-translation_of: Web/HTML/Global_attributes/data-*
 ---
 {{HTMLSidebar("Global_attributes")}}
 
@@ -22,7 +18,7 @@ translation_of: Web/HTML/Global_attributes/data-*
 
 ### 用法
 
-通过添加 **data-\*** 属性，即使是普通的 HTML 元素也能变成相当复杂且强大的编程对象。例如，在游戏里的太空船 "[sprite](https://en.wikipedia.org/wiki/Sprite_%28computer_graphics%29)" 可以是一个带有一个 [class](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/class) 属性和几个 data-\* 属性的简单 {{HTMLElement("img")}} 元素：
+通过添加 **data-\*** 属性，即使是普通的 HTML 元素也能变成相当复杂且强大的编程对象。例如，在游戏里的太空船 "[sprite](https://en.wikipedia.org/wiki/Sprite_%28computer_graphics%29)" 可以是一个带有一个 [class](/zh-CN/docs/Web/HTML/Global_attributes/class) 属性和几个 data-\* 属性的简单 {{HTMLElement("img")}} 元素：
 
 ```plain
 <img class="spaceship cruiserX3" src="shipX3.png"

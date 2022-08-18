@@ -1,7 +1,6 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
 {{JSRef("Global_Objects", "Math")}}
 

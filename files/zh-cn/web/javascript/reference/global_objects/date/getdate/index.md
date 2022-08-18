@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
 {{JSRef("Global_Objects", "Date")}}
 

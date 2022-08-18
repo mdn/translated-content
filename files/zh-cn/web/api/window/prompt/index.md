@@ -38,7 +38,7 @@ var sign = window.prompt('你觉得很幸运吗？','是的'); // 打开显示�
 
 一个 prompt 对话框，包含一个单行文本框，一个“取消”按钮，一个“确定”按钮，在对话框关闭时，返回用户输入到文本框内的值 (可能为空)。
 
-prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在 content 上下文，Firefox 4 以上版本使用非模态的对话框)。Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM [nsIPromptService](/zh-cn/XPCOM_Interface_Reference/nsIPromptService) 来替代 window\.prompt。
+prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在 content 上下文，Firefox 4 以上版本使用非模态的对话框)。Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM [nsIPromptService](/zh-CN/XPCOM_Interface_Reference/nsIPromptService) 来替代 window\.prompt。
 
 ## 规范
 
@@ -50,4 +50,4 @@ prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用
 
 ### 参见
 
-[alert](/zh-cn/DOM/window.alert), [confirm](/zh-cn/DOM/window.confirm)
+[alert](/zh-CN/DOM/window.alert), [confirm](/zh-CN/DOM/window.confirm)

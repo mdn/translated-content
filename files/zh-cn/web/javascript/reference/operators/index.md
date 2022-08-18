@@ -1,11 +1,6 @@
 ---
 title: 表达式和运算符
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Operators
-  - 概览
-translation_of: Web/JavaScript/Reference/Operators
 ---
 {{jsSidebar("Operators")}}
 该章节说明了 JavaScript 语言所有的运算符，表达式和关键字。

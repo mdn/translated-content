@@ -41,14 +41,14 @@ L'élément **`<animateTransform>`** permet d'animer un élement en appliquant u
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Attributs de base](/fr/docs/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Attributs de l'évènement d'animation](/fr/docs/SVG/Attribute#AnimationEvent "en/SVG/Attribute#AnimationEvent") »
-- [Attributs Xlink](/fr/docs/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
-- [Attributs de ciblage d'animation](/fr/docs/SVG/Attribute#AnimationAttributeTarget "en/SVG/Attribute#AnimationAttributeTarget") »
-- [Attributs de chronométrage d'animation](/fr/docs/SVG/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
-- [Attributs de valeur d'animation](/fr/docs/SVG/Attribute#AnimationValue "en/SVG/Attribute#AnimationValue") »
-- [Attributs d'ajout d'animations](/fr/docs/SVG/Attribute#AnimationAddition "en/SVG/Attribute#AnimationAddition")&nbsp;»
+- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing) »
+- [Attributs de base](/fr/docs/SVG/Attribute#Core) »
+- [Attributs de l'évènement d'animation](/fr/docs/SVG/Attribute#AnimationEvent) »
+- [Attributs Xlink](/fr/docs/SVG/Attribute#XLink) »
+- [Attributs de ciblage d'animation](/fr/docs/SVG/Attribute#AnimationAttributeTarget) »
+- [Attributs de chronométrage d'animation](/fr/docs/SVG/Attribute#AnimationTiming) »
+- [Attributs de valeur d'animation](/fr/docs/SVG/Attribute#AnimationValue) »
+- [Attributs d'ajout d'animations](/fr/docs/SVG/Attribute#AnimationAddition)&nbsp;»
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Attributs spécifiques
@@ -60,7 +60,7 @@ L'élément **`<animateTransform>`** permet d'animer un élement en appliquant u
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/DOM/SVGAnimateTransformElement "en/DOM/SVGAnimateTransformElement").
+Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/DOM/SVGAnimateTransformElement).
 
 ## Spécifications
 

@@ -1,7 +1,6 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
-translation_of: Web/CSS/transform-box
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -1,14 +1,6 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-tags:
-  - ECMAScript6
-  - JavaScript
-  - 原型
-  - 参考
-  - 方法
-  - 生成器
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
 {{JSRef}}
 

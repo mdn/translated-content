@@ -1,7 +1,6 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-translation_of: Glossary/JavaScript
 ---
 JavaScript（JS）是個程式語言。通常用於用戶端（client-side）的動態網頁腳本，不過也常藉由 [Node.js](http://nodejs.org/) 之類的軟體包，使用到{{Glossary("Server","伺服器")}}端（Server-side）。
 

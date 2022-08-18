@@ -1,10 +1,6 @@
 ---
 title: 開發者工具
 slug: Glossary/Developer_Tools
-tags:
-  - 術語表
-  - 開發者工具
-translation_of: Glossary/Developer_Tools
 ---
 開發者工具 (或"開發工具"或簡稱 "DevTools")是程式准許開發者執行創建、測試和{{Glossary("debug")}}的軟體。
 

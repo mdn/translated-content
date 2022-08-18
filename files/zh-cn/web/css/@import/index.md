@@ -1,10 +1,6 @@
 ---
 title: '@import'
 slug: Web/CSS/@import
-tags:
-  - '@import'
-  - CSS
-translation_of: Web/CSS/@import
 ---
 {{CSSRef}}
 

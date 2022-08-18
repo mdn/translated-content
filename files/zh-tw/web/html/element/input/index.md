@@ -149,7 +149,7 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 > **備註：** This includes the [global HTML attributes](/zh-TW/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("type")}}
-  - : The type of control to render. See [Form \<input> types](#form_<input>_types) for the individual types, with links to more information about each.
+  - : The type of control to render. See [Form \<input> types](#form_input_types) for the individual types, with links to more information about each.
 - {{htmlattrdef("accept")}}
   - : If the value of the **type** attribute is `file`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers: A file extension starting with the STOP character (U+002E). (e.g. .jpg, .png, .doc).
     - A valid MIME type with no extensions.
@@ -164,7 +164,7 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 
     - `on`: The browser is allowed to automatically complete the value based on values that the user has entered during previous uses, however `on` does not provide any further information about what kind of data the user might be expected to enter.
     - `name`: Full name.
-    - `honorific-prefix: `Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").
+    - `honorific-prefix`: Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").
     - `given-name`: First name.
     - `additional-name`: Middle name.
     - `family-name`: Last name.
@@ -251,11 +251,11 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 - {{htmlattrdef("max")}}
   - : The maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** attribute) value.
 - {{htmlattrdef("maxlength")}}
-  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior (i.e. the user can enter an unlimited number of characters). The constraint is evaluated only when the value of the attribute has been changed.
+  - : If the value of the **type** attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior (i.e. the user can enter an unlimited number of characters). The constraint is evaluated only when the value of the attribute has been changed.
 - {{htmlattrdef("min")}}
   - : The minimum (numeric or date-time) value for this item, which must not be greater than its maximum (**max** attribute) value.
 - {{htmlattrdef("minlength")}}
-  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter. For other control types, it is ignored.
+  - : If the value of the **type** attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter. For other control types, it is ignored.
 - {{htmlattrdef("multiple")}}
   - : This Boolean attribute indicates whether the user can enter more than one value. This attribute applies when the **type** attribute is set to `email` or `file`, otherwise it is ignored.
 - {{htmlattrdef("name")}}
@@ -319,7 +319,7 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 
 ## Examples
 
-You can find multiple examples of `<input>` element usage on the pages covering each individual type — see [Form \<input> types](#form_<input>_types), and also see the [Live example](#live_example) at the top of the article.
+You can find multiple examples of `<input>` element usage on the pages covering each individual type — see [Form \<input> types](#form_input_types), and also see the [Live example](#live_example) at the top of the article.
 
 ## Specifications
 
@@ -333,15 +333,15 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 
 ### File inputs
 
-1.  Starting in {{Gecko("2.0")}}, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
-2.  You cannot set the value of a file picker from a script — doing something like the following has no effect:
+1. Starting in {{Gecko("2.0")}}, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
+2. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
     ```js
     var e = getElementById("someFileInputElement");
     e.value = "foo";
     ```
 
-3.  When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+3. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ### Error messages
 

@@ -1,7 +1,6 @@
 ---
 title: CSS 的图形（Shape）概览
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
-translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
 {{CSSRef}}
 

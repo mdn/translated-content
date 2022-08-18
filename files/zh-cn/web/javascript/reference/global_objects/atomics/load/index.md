@@ -1,7 +1,6 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 ---
 {{JSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: g
 slug: Web/SVG/Element/g
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/g
 ---
 {{SVGRef}}
 

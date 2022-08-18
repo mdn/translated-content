@@ -1,15 +1,6 @@
 ---
 title: 使用 aria-hidden 属性
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags:
-  - HTML
-  - Rôle
-  - 代码脚本
-  - 可访问性
-  - 可访问的富网络应用
-  - 客户端
-  - 警告
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 ---
 本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。

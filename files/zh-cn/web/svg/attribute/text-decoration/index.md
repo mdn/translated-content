@@ -1,7 +1,6 @@
 ---
 title: text-decoration
 slug: Web/SVG/Attribute/text-decoration
-translation_of: Web/SVG/Attribute/text-decoration
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

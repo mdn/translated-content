@@ -1,10 +1,6 @@
 ---
 title: MDN 的本地化
 slug: MDN/Community/Contributing/Translated_content
-tags:
-  - Localization
-  - MDN Meta
-  - l10n
 original_slug: MDN/Contribute/Localize
 ---
 {{MDNSidebar}}

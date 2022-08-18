@@ -1,16 +1,6 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Editing
-  - Global attributes
-  - HTML
-  - Reference
-  - Text Editing
-  - contenteditable
-  - text entry
-  - text input
-translation_of: Web/HTML/Global_attributes/contenteditable
 ---
 {{HTMLSidebar("Global_attributes")}}
 

@@ -1,7 +1,6 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
-translation_of: Web/CSS/box-orient
 ---
 {{CSSRef}}{{Non-standard_header}}
 

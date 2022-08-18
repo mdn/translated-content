@@ -22,7 +22,7 @@ new MutationObserver(
 #### 參數
 
 - `callback`
-  - : 這個函式會在 DOM 有變化時被呼叫，observer 會用兩個參數來呼叫它，第一個是 `MutationRecord `物件陣列，而第二個參數則是觀察者目標本身。
+  - : 這個函式會在 DOM 有變化時被呼叫，observer 會用兩個參數來呼叫它，第一個是 `MutationRecord` 物件陣列，而第二個參數則是觀察者目標本身。
 
 ## Instance methods
 

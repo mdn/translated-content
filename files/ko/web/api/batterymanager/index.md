@@ -54,4 +54,4 @@ translation_of: Web/API/BatteryManager
 ## 참고
 
 - {{ domxref("window.navigator.battery","navigator.battery") }}
-- [Battery Status API](/ko/docs/WebAPI/Battery_Status "/ko/docs/WebAPI/Battery_Status")
+- [Battery Status API](/ko/docs/WebAPI/Battery_Status)

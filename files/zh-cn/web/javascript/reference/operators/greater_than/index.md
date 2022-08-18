@@ -1,7 +1,6 @@
 ---
 title: 大于运算符 (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
-translation_of: Web/JavaScript/Reference/Operators/Greater_than
 ---
 {{jsSidebar("Operators")}}
 

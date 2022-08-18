@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 ---
 {{JSRef}}
 

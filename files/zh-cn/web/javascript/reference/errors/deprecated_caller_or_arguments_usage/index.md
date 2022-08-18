@@ -1,13 +1,6 @@
 ---
 title: 'ReferenceError: deprecated caller or arguments usage'
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-tags:
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - 严格模式
-  - 警告
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
 {{jsSidebar("Errors")}}
 

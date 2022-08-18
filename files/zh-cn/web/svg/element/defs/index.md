@@ -1,11 +1,6 @@
 ---
 title: defs
 slug: Web/SVG/Element/defs
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-translation_of: Web/SVG/Element/defs
 ---
 {{SVGRef}}
 

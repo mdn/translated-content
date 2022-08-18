@@ -48,9 +48,9 @@ ul, li {margin-left: 0; padding-left: 0;}
 
 為了避免這種慘劇發生，瀏覽器有三種不同的實作方式來避免：
 
-1.  幫每一個 `<li>` element 設定 left margin
-2.  幫 `<ul>` element 設定 left margin
-3.  幫 `<ul>` element 設定一些 left padding
+1. 幫每一個 `<li>` element 設定 left margin
+2. 幫 `<ul>` element 設定 left margin
+3. 幫 `<ul>` element 設定一些 left padding
 
 事後檢視，沒有瀏覽器採用第一種作法。Windows and Macintosh 上的 Internet Explorer 和 Opera 採用第二種作法。Gecko 相關的瀏覽器則使用第三種設計。
 
@@ -86,7 +86,7 @@ ul {margin-left: 40px; padding-left: 0;}
 ul {margin-left: 0; padding-left: 0;}
 ```
 
-請注意，這樣的寫法將造成 bullet 被扔在整個列表及其 parent element 之外。當你在 `body 中這樣寫，很顯然的你的 `bullet 將不會出現在你的視窗內。
+請注意，這樣的寫法將造成 bullet 被扔在整個列表及其 parent element 之外。當你在 `body` 中這樣寫，很顯然的你的 `bullet` 將不會出現在你的視窗內。
 
 ### 結論
 

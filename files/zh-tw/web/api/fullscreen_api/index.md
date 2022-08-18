@@ -128,7 +128,7 @@ function toggleFullScreen() {
 }
 ```
 
-This starts by looking at the value of the `fullscreenElement` attribute on the {{ domxref("document") }} (checking it prefixed with both `moz`,` ms`,` `and `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling either {{ domxref("element.mozRequestFullScreen()") }} `msRequestFullscreen()`or `webkitRequestFullscreen()`, depending on which is available.
+This starts by looking at the value of the `fullscreenElement` attribute on the {{ domxref("document") }} (checking it prefixed with both `moz`, `ms`, and `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling either {{ domxref("element.mozRequestFullScreen()") }} `msRequestFullscreen()`or `webkitRequestFullscreen()`, depending on which is available.
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{ domxref("document.mozCancelFullScreen()") }}, `msExitFullscreen` or `webkitExitFullscreen()`, again depending on which browser is in use.
 

@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
 {{JSRef("Global_Objects", "Date")}}
 

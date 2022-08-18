@@ -1,37 +1,47 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
-**`toString()`** 返回一个字符串，表示指定的数组及其元素。
+**`toString()`** 方法返回一个字符串，表示指定的数组及其元素。
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html")}}
+{{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}
 
 ## 语法
 
 ```js
-arr.toString()
+toString()
 ```
 
 ### 返回值
 
-一个表示指定的数组及其元素的字符串。
+一个表示数组所有元素的字符串。
 
 ## 描述
 
-{{jsxref("Array")}}对象覆盖了{{jsxref("Object")}}的 `toString` 方法。对于数组对象，`toString` 方法连接数组并返回一个字符串，其中包含用逗号分隔的每个数组元素。
+{{jsxref("Array")}} 对象覆盖了 {{jsxref("Object")}} 的 `toString` 方法。对于数组对象，`toString` 方法在内部调用 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法拼接数组中的元素并返回一个字符串，其中包含用逗号分隔的每个数组元素。如果 `join` 方法不可用，或者它不是一个函数，将使用 [`Object.prototype.toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 代替，返回 `[object Array]`。
 
-当一个数组被作为文本值或者进行字符串连接操作时，将会自动调用其 `toString` 方法。
+```js
+const arr = [];
+arr.join = 1; // re-assign `join` with a non-function
+console.log(arr.toString()); // Logs [object Array]
 
-### ECMAScript 5 semantics
+console.log(Array.prototype.toString.call({ join: () => 1 }));  // Logs 1
+```
 
-从 JavaScript 1.8.5 (Firefox 4) 开始，和 ECMAScript 第 5 版语义（semantics）一致，`toString()` 方法是通用的，可被用于任何对象。将调用{{jsxref("Object.prototype.toString()")}}，并返回结果值。
+当一个数组被作为文本值或者进行字符串拼接操作时，将会自动调用其 `toString` 方法。
+
+## 示例
+
+### 使用 toString
+
+```js
+const array1 = [1, 2, 'a', '1a'];
+
+console.log(array1.toString());
+// expected output: "1,2,a,1a"
+```
 
 ## 规范
 
@@ -41,7 +51,6 @@ arr.toString()
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Object.prototype.toSource()")}}

@@ -1,10 +1,6 @@
 ---
 title: MDN 專案
 slug: MDN
-tags:
-  - Documentation
-  - MDN
-translation_of: MDN
 ---
 {{MDNSidebar}}
 

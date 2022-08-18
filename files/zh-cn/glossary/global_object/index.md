@@ -1,7 +1,6 @@
 ---
 title: 全局对象
 slug: Glossary/Global_object
-translation_of: Glossary/Global_object
 ---
 一个全局对象是一个永远存在于 {{glossary("global scope")}} 的 {{glossary("object")}}.
 

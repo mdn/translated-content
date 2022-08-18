@@ -1,7 +1,6 @@
 ---
 title: 'Express 教程 5: 呈现图书馆数据'
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

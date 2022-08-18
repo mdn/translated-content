@@ -1,11 +1,6 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
-tags:
-  - SVG
-  - SVG 元素
-  - 参考
-translation_of: Web/SVG/Attribute/d
 ---
 « [SVG 属性参考主页](/zh-CN/docs/Web/SVG/Attribute)
 

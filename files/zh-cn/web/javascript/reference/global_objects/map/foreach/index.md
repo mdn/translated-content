@@ -1,16 +1,7 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/forEach
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-browser-compat: javascript.builtins.Map.forEach
 ---
 {{JSRef}}
 

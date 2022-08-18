@@ -1,14 +1,6 @@
 ---
 title: vkern
 slug: Web/SVG/Element/vkern
-tags:
-  - SVG
-  - SVG 字体
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/vkern
 ---
 {{SVGRef}}{{deprecated_header}}
 

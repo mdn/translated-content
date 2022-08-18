@@ -1,12 +1,6 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
 « [SVG](/en/SVG/Attribute)属性参考主页
 

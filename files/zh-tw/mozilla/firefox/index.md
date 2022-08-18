@@ -1,12 +1,6 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Mozilla
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Firefox
 ---
 {{FirefoxSidebar}}
 

@@ -1,11 +1,6 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/stroke
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

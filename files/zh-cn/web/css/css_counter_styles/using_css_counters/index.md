@@ -1,13 +1,6 @@
 ---
 title: 使用 CSS 计数器
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - CSS
-  - CSS List
-  - Web
-  - counter
-  - 教程
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 {{CSSRef}}
 

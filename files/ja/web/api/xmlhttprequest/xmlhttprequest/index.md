@@ -50,7 +50,7 @@ const request = new XMLHttpRequest(paramsDictionary);
   - : 設定できるフラグが2つあります。
 
     - `mozAnon`
-      - : 論理型: このフラグを `true` に設定すると、ブラウザーがリソースを読み込むときに{{Glossary("origin", "オリジン")}}と[ユーザー資格情報](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "XMLHttpRequest 仕様書の「ユーザー資格情報」の定義")を示しません。重要なことは、つまり明示的に setRequestHeader を使用して追加しない限り、{{Glossary("Cookie", "クッキー")}}が送信されないということです。
+      - : 論理型: このフラグを `true` に設定すると、ブラウザーがリソースを読み込むときに{{Glossary("origin", "オリジン")}}と[ユーザー資格情報](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials)を示しません。重要なことは、つまり明示的に setRequestHeader を使用して追加しない限り、{{Glossary("Cookie", "クッキー")}}が送信されないということです。
 
 ## 仕様書
 

@@ -17,9 +17,9 @@ Web Notifications API 可將通知傳送至頁面以外的系統層級並顯示�
 
 透過 [`Notification.permission`](/zh-TW/docs/Web/API/Notification.permission) 唯讀屬性，要傳送通知的 Apps 將檢查目前的授權狀態。此屬性共有 3 組參數：
 
-- `default：`使用者尚未給予任何權限 (因此不會顯示任何通知)
+- `default`：使用者尚未給予任何權限 (因此不會顯示任何通知)
 - `granted`：使用者允許接收到 Apps 的通知
-- ` denied`` ：使用者拒絕接收  `Apps 的通知
+- `denied`：使用者拒絕接收 Apps 的通知
 
 > **備註：** Chrome 與 Safari 尚未建構 `permission` 屬性。
 
@@ -54,7 +54,7 @@ permissions: {
 
 ## 建立通知
 
-透過 [`Notification`](/zh-TW/docs/Web/API/Notification) 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 [`icon`](/zh-TW/docs/Web/API/Notification.icon) 或文字 [`body`](/zh-TW/docs/Web/API/Notification.body)` 等`數個選項，可強化通知的內容。
+透過 [`Notification`](/zh-TW/docs/Web/API/Notification) 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 [`icon`](/zh-TW/docs/Web/API/Notification.icon) 或文字 [`body`](/zh-TW/docs/Web/API/Notification.body) 等數個選項，可強化通知的內容。
 
 在建立實體 (Instantiated) 之後，就會儘快顯示通知。若要追蹤通知的目前狀態，必須在 [`Notification`](/zh-TW/docs/Web/API/Notification) 的實體階層觸發 4 個事件：
 

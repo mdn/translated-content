@@ -1,12 +1,6 @@
 ---
 title: syntax
 slug: Web/CSS/@property/syntax
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

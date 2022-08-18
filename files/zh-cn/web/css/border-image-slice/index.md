@@ -1,14 +1,6 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/border-image-slice
 ---
 {{CSSRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: 可选链操作符
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - '?.'
-  - JavaScript
-  - Optional chaining (?.)
-  - Reference
-  - 参考
-  - 可选链
-  - 语言特性
-  - 运算符
-  - 链式调用
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 original_slug: Web/JavaScript/Reference/Operators/可选链
 ---
 {{JSSidebar("Operators")}}
@@ -68,7 +57,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 let result = someInterface.customMethod?.();
 ```
 
-> **备注：** 如果存在一个属性名且不是函数，使用 `?.` 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (` x.y`` is not a function`).
+> **备注：** 如果存在一个属性名且不是函数，使用 `?.` 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (`x.y is not a function`).
 
 > **备注：** 如果 `someInterface` 自身是 `null` 或者 `undefined` ，异常 {{JSxRef("TypeError")}} 仍会被抛出 `someInterface is null` 如果你希望允许 `someInterface` 也为 `null` 或者 `undefined` ，那么你需要像这样写 `someInterface?.customMethod?.()`
 

@@ -1,7 +1,6 @@
 ---
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ---
 {{JSRef}}
 

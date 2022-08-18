@@ -1,7 +1,6 @@
 ---
 title: User interface
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
 {{AddonSidebar}}
 
@@ -161,7 +160,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
           >通知</a
         >
       </td>

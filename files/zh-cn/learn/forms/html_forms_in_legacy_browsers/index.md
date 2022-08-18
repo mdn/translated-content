@@ -1,7 +1,6 @@
 ---
 title: 旧式浏览器中的 HTML 表单
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
 original_slug: Learn/HTML/Forms/HTML_forms_in_legacy_browsers
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms")}}

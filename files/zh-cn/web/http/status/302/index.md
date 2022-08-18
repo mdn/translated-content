@@ -1,11 +1,6 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - HTTP
-  - 状态码
-  - 重定向
-translation_of: Web/HTTP/Status/302
 ---
 {{HTTPSidebar}}
 

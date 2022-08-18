@@ -1,7 +1,6 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
-translation_of: Web/CSS/aspect-ratio
 ---
 {{CSSRef}}
 

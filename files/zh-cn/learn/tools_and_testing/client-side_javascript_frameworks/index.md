@@ -1,13 +1,6 @@
 ---
 title: 理解客户端 JavaScript 框架
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-tags:
-  - JavaScript
-  - 初学者
-  - 前段框架
-  - 学习
-  - 客户端
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 {{LearnSidebar}}
 

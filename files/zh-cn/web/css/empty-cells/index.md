@@ -1,11 +1,6 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 表格
-translation_of: Web/CSS/empty-cells
 ---
 {{CSSRef}}
 

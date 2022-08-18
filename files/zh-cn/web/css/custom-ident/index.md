@@ -1,10 +1,6 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
-tags:
-  - CSS
-  - CSS 数据类型
-translation_of: Web/CSS/custom-ident
 ---
 {{CSSRef}}
 

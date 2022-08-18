@@ -1,13 +1,6 @@
 ---
 title: feDisplacementMap
 slug: Web/SVG/Element/feDisplacementMap
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/feDisplacementMap
 ---
 {{SVGRef}}
 

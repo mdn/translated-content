@@ -1,7 +1,6 @@
 ---
 title: '-moz-outline-radius-topright'
 slug: Web/CSS/-moz-outline-radius-topright
-translation_of: Web/CSS/-moz-outline-radius-topright
 ---
 {{Non-standard_header}}{{CSSRef}}
 

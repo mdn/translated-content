@@ -1,12 +1,6 @@
 ---
 title: 编译 Rust 为 WebAssembly
 slug: WebAssembly/Rust_to_wasm
-tags:
-  - WebAssembly
-  - rust
-  - wasm
-  - 编译
-translation_of: WebAssembly/Rust_to_wasm
 ---
 {{WebAssemblySidebar}}
 

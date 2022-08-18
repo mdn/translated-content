@@ -1,7 +1,6 @@
 ---
 title: 如何添加或更新浏览器兼容性数据
 slug: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
-translation_of: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 original_slug: MDN/Contribute/Howto/如何添加或更新浏览器兼容性数据
 ---
 {{MDNSidebar}}

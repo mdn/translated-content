@@ -1,7 +1,6 @@
 ---
 title: justify-items
 slug: Web/CSS/justify-items
-translation_of: Web/CSS/justify-items
 ---
 {{CSSRef}}
 
