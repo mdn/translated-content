@@ -93,7 +93,7 @@ WebGL 2 est une mise à jour majeure de WebGL, qui est fournie à travers l'inte
 - les [objets Sampler](/fr-FR/docs/Web/API/WebGLSampler),
 - les [objets de tampon Uniform](/fr-FR/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects),
 - les [objets Sync](/fr-FR/docs/Web/API/WebGLSync),
-- les [objets Query](/en-US/docs/Web/API/WebGLQuery),
+- les [objets Query](/fr/docs/Web/API/WebGLQuery),
 - les [objets Tranform Feedback](/fr-FR/docs/Web/API/WebGLTransformFeedback),
 - des extensions promues, qui sont maintenant essentielles pour WebGL 2 : les [objets Vertex Array](/fr-FR/docs/Web/API/WebGLVertexArrayObject), l'[instanciation](/fr-FR/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced), les [cibles de rendu multiples](/fr-FR/docs/Web/API/WebGL2RenderingContext/drawBuffers), la [profondeur de fragment](/fr-FR/docs/Web/API/EXT_frag_depth).
 

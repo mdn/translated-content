@@ -1,20 +1,6 @@
 ---
 title: 创建 JavaScript 代码块
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - JavaScript
-  - 事件
-  - 优先级
-  - 函数
-  - 循环
-  - 教程
-  - 文章
-  - 新手
-  - 条件
-  - 模块
-  - 编码
-  - 评估
-translation_of: Learn/JavaScript/Building_blocks
 ---
 {{LearnSidebar}}
 

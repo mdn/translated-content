@@ -21,21 +21,12 @@ JavaScript est principalement utilisé dans le navigateur, permettant aux dével
 
 Récemment, JavaScript est revenu du côté serveur grâce au succès de la plateforme [Node.js](http://nodejs.org/), l'environnement d’exécution multi-plateforme le plus populaire en dehors du navigateur. Node.js permet d'utiliser JavaScript comme langage de script pour automatiser des tâches sur un PC et de mettre en place des serveurs {{Glossary("HTTP")}} et {{Glossary("WebSockets")}} pleinement fonctionnels.
 
-## En savoir plus
-
-### Culture générale
+## Voir aussi
 
 - [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) sur Wikipédia
-
-### Apprentissage
-
-- Le {{Link("/fr-FR/docs/Web/JavaScript/Guide")}} sur MDN
-- [The "javascripting" workshop](http://nodeschool.io/#workshoppers) sur NodeSchool
-- Les [cours JavaScript](http://www.codecademy.com/tracks/javascript) sur codecademy.com
-- [John Resig's Learning Advanced JavaScript](http://ejohn.org/apps/learn/)
-
-### Références techniques
-
-- [Le dernier standard ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- La {{Link("/fr-FR/docs/Web/JavaScript/reference")}} sur MDN
-- Livre : [_JavaScript Éloquent_](http://fr.eloquentjavascript.net/)
+- Le [guide JavaScript](/fr/docs/Web/JavaScript/Guide) sur MDN
+- [L'atelier JavaScript («&nbsp;<i lang="en">javascripting</i>&nbsp;») sur NodeSchool](https://nodeschool.io/fr-fr/)
+- [Le cours JavaScript sur Codecademy (en anglais)](https://www.codecademy.com/catalog/language/javascript)
+- [Le dernier standard ECMAScript (en anglais)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- La [référence JavaScript](/fr/docs/Web/JavaScript/Reference) sur MDN
+- Le livre [_JavaScript Éloquent_](https://fr.eloquentjavascript.net/)

@@ -75,7 +75,7 @@ _L'interface `Location` n'hérite d'aucune propriété, mais implémente celles 
 - {{domxref("Location.pathname")}}
   - : Une {{domxref("DOMString")}} contenant un `'/'` initial suivi du chemin de l'URL.
 - {{domxref("Location.search")}}
-  - : Une {{domxref("DOMString")}} contenant un `'?'` suivi des paramètres de l'URL. Les navigateurs moderne fournissent [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#Example) et [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#Example) pour faciliter l'analyse des paramètres de la chaîne de requête (querystring).
+  - : Une {{domxref("DOMString")}} contenant un `'?'` suivi des paramètres de l'URL. Les navigateurs moderne fournissent [URLSearchParams](/fr/docs/Web/API/URLSearchParams/get#Example) et [URL.searchParams](/fr/docs/Web/API/URL/searchParams#Example) pour faciliter l'analyse des paramètres de la chaîne de requête (querystring).
 - {{domxref("Location.hash")}}
   - : Une {{domxref("DOMString")}} contenant un `'#'` suivi de _l'identifiant de fragment_ de l'URL.
 - {{domxref("Location.username")}} {{deprecated_inline}}

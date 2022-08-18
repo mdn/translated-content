@@ -1,16 +1,6 @@
 ---
 title: 游戏开发环境
 slug: Games
-tags:
-  - Apps
-  - Game Development
-  - Gamedev
-  - Games
-  - HTML5 Games
-  - JavaScript Games
-  - TopicStub
-  - Web
-translation_of: Games
 ---
 {{GamesSidebar}}
 

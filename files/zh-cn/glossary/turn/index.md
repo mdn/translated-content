@@ -1,13 +1,6 @@
 ---
 title: TURN
 slug: Glossary/TURN
-tags:
-  - TURN
-  - WebRTC
-  - 基础知识
-  - 术语
-  - 网络运作
-translation_of: Glossary/TURN
 ---
 **TURN** (NAT 的中继穿越) 是一个能够让位于{{glossary("NAT", "Network Address Translator")}}(NAT) 或者防火墙之后的主机接受和发送数据的{{Glossary('protocol')}}(协议)。
 

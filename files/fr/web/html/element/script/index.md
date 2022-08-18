@@ -63,7 +63,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut indique le type de script. La valeur de cet attribut peut appartenir à l'une de ces catégories :
 
-    - **Correspondant à un type MIME JavaScript ou absent :** Cela indique que le script est en JavaScript. La spécification HTML5 conseille aux auteurs d'omettre cet attribut plutôt que de fournir un type MIME redondant. Pour les navigateurs plus anciens, cela indiquait le langage de script du code embarqué. Les types MIME correspondant à JavaScript sont [énumérés dans la spécification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types).
+    - **Correspondant à un type MIME JavaScript ou absent :** Cela indique que le script est en JavaScript. La spécification HTML5 conseille aux auteurs d'omettre cet attribut plutôt que de fournir un type MIME redondant. Pour les navigateurs plus anciens, cela indiquait le langage de script du code embarqué. Les types MIME correspondant à JavaScript sont [énumérés dans la spécification](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types).
     - **`module` :** Le code sera traité comme un module JavaScript. Le traitement du script n'est pas affecté par les attributs `charset` et `defer`. Pour plus d'informations sur l'utilisation des modules, voir le guide sur [les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
     - **Toute autre valeur :** Le contenu embarqué est considéré comm un bloc de donnée et ne sera pas traité par le navigateur. Les développeurs doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript afin d'indiquer de tels blocs de donnée. Dans ce cas, l'attribut `src` sera ignoré.
 

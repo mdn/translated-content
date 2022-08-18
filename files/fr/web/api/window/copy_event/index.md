@@ -37,7 +37,7 @@ L'événement **`copy`** se déclenche lorsque l'utilisateur lance une action de
   </tbody>
 </table>
 
-La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de copie. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le [Element: copy event](/en-US/docs/Web/API/Element/copy_event).
+La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de copie. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le [Element: copy event](/fr/docs/Web/API/Element/copy_event).
 
 ## Exemples
 

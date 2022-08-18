@@ -8,7 +8,7 @@ browser-compat: api.IDBObjectStore.get
 
 La méthode **`get()`**, rattachée à l'interface [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore), renvoie un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) et, dans un <i lang="en">thread</i> séparé, renvoie le magasin d'objets sélectionné avec la clé indiqué. Cette méthode est conçue pour récupérer des enregistrements spécifiques d'un magasin d'objets.
 
-Si une valeur est trouvée, un clone structuré est créé et placé comme valeur de l'attribut [`result`](/en-US/docs/Web/API/IDBRequest#attr_result) de l'objet qui représente la requête.
+Si une valeur est trouvée, un clone structuré est créé et placé comme valeur de l'attribut [`result`](/fr/docs/Web/API/IDBRequest#attr_result) de l'objet qui représente la requête.
 
 > **Note :** Cette méthode produira le même résultat si l'enregistrement n'existe pas dans la base de données ou s'il a une valeur indéfinie. Pour distinguer ces deux cas, on appellera la méthode avec la même clé&nbsp;: elle fournira un curseur si l'enregistrement existe et aucun curseur sinon.
 

@@ -1,7 +1,6 @@
 ---
 title: 你的第一個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 {{AddonSidebar}}
 
@@ -101,11 +100,13 @@ document.body.style.border = "5px solid red";
 
 首先，仔細檢查這些檔案是否在正確的位置：
 
-    borderify/
-        icons/
-            border-48.png
-        borderify.js
-        manifest.json
+```
+borderify/
+    icons/
+        border-48.png
+    borderify.js
+    manifest.json
+```
 
 ### 安裝
 

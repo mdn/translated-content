@@ -43,7 +43,7 @@ _Hérite des méthodes de son parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLTableRowElement.deleteCell()")}}
   - : Supprime la cellule à la position donnée dans la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `0`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`.
 - {{domxref("HTMLTableRowElement.insertCell()")}}
-  - : Insère une nouvelle cellule juste avant la position donnée dans la ligne. Si la position donnée n'est pas donnée ou est `-1`, elle ajoute la cellule à la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `-1`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`. Renvoie une référence à un [HTMLTableCellElement \[en-US\]](/en-US/docs/Web/API/HTMLTableCellElement).
+  - : Insère une nouvelle cellule juste avant la position donnée dans la ligne. Si la position donnée n'est pas donnée ou est `-1`, elle ajoute la cellule à la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `-1`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`. Renvoie une référence à un [HTMLTableCellElement \[en-US\]](/fr/docs/Web/API/HTMLTableCellElement).
 
 ## Spécifications
 

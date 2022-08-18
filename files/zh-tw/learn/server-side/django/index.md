@@ -1,7 +1,6 @@
 ---
 title: Django 網站框架 (Python)
 slug: Learn/Server-side/Django
-translation_of: Learn/Server-side/Django
 ---
 {{LearnSidebar}}
 

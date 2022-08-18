@@ -132,9 +132,9 @@ void main() {
 次に、 [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial) を作成します。
 
 ```js
-var shaderMaterial = new THREE.ShaderMaterial( {
-  vertexShader: document.getElementById( 'vertexShader' ).textContent,
-  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById('vertexShader').textContent,
+  fragmentShader: document.getElementById('fragmentShader').textContent
 });
 ```
 
@@ -190,9 +190,9 @@ Three.js は、このマテリアルが与えられたメッシュにアタッ�
 
     var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-    var shaderMaterial = new THREE.ShaderMaterial( {
-        vertexShader: document.getElementById( 'vertexShader' ).textContent,
-        fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+    var shaderMaterial = new THREE.ShaderMaterial({
+        vertexShader: document.getElementById('vertexShader').textContent,
+        fragmentShader: document.getElementById('fragmentShader').textContent
     });
 
     var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
@@ -217,7 +217,7 @@ canvas { width: 100%; height: 100%; }
 
 {{ EmbedLiveSample('Final_code', '100%', '400') }}
 
-<h2 id="Conclusion" name="Conclusion">結び</h2>
+## まとめ
 
 この記事では、シェーダーの基本について説明しました。 私たちの例ではあまり多くのことをしていませんが、シェーダーでできるクールなことがもっとたくさんあります。 [ShaderToy](http://shadertoy.com/) で本当にクールなものをチェックして、インスピレーションを得て、それらのソースから学んでください。
 

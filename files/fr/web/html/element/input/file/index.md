@@ -296,7 +296,7 @@ input.addEventListener('change', updateImageDisplay);
 
 À chaque fois que la fonction `updateImageDisplay()` est appelée :
 
-- On lance une boucle [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) afin de vider le contenu qui pourrait être dans l'élément `<div>` servant à la prévisualisation.
+- On lance une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while) afin de vider le contenu qui pourrait être dans l'élément `<div>` servant à la prévisualisation.
 - On récupère l'objet {{domxref("FileList")}} qui contient les informations sur les fichiers sélectionnés et on le stocke dans une variable intitulée `curFiles`.
 - On vérifie si aucun fichier n'a été sélectionné (ce qui se traduit par vérifier si `curFiles.length` vaut 0). Si c'est le cas, on place un message dans le `<div>` de prévisualisation pour indiquer qu'aucun fichier n'a été sélectionné.
 - Si des fichiers ont été sélectionnés, on les parcourt afin d'afficher des informations sur ces fichiers dans l'élément `<div>`. Quelques notes :

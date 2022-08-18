@@ -1,10 +1,6 @@
 ---
 title: HTTP/2
 slug: Glossary/HTTP_2
-tags:
-  - HTTP
-  - HTTP2
-translation_of: Glossary/HTTP_2
 ---
 **HTTP/2** 是 [HTTP 网络协议](/zh-CN/docs/Web/HTTP/Basics_of_HTTP)的一个重要版本。 HTTP / 2 的主要目标是通过启用完整的请求和响应多路复用来减少 {{glossary("延迟")}}，通过有效压缩 HTTP 标头字段来最小化协议开销，并增加对请求优先级和服务器推送的支持。
 

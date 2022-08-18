@@ -20893,13 +20893,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-01-16T21:44:15.383Z",
-    "contributors": [
-      "Waxaal",
-      "julianosilvaa"
-    ]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2020-05-08T11:21:39.179Z",
     "contributors": [
@@ -40672,6 +40665,13 @@
     "contributors": [
       "chrisdavidmills",
       "tristantheb"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-01-16T21:44:15.383Z",
+    "contributors": [
+      "Waxaal",
+      "julianosilvaa"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

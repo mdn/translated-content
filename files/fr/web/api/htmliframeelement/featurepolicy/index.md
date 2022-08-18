@@ -22,7 +22,7 @@ var policy = HTMLIFrameElement.featurePolicy
 
 ### Valeur
 
-Un objet [`FeaturePolicy`](/en-US/docs/Web/API/FeaturePolicy) pouvant être utilisé pour consulter les paramètres Feature Policy appliqués au cadre.
+Un objet [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy) pouvant être utilisé pour consulter les paramètres Feature Policy appliqués au cadre.
 
 ## Spécification
 

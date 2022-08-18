@@ -1,7 +1,6 @@
 ---
 title: 多媒体的可访问性 (Accessible multimedia)
 slug: Learn/Accessibility/Multimedia
-translation_of: Learn/Accessibility/Multimedia
 original_slug: learn/Accessibility/多媒体
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
@@ -171,7 +170,7 @@ stopBtn.onclick = function() {
 };
 ```
 
-在 {{domxref("HTMLMediaElement")}}s 上没有可用的 `stop() `函数，因此我们改为`pause()`它，同时将当前时间设置为 0。
+在 {{domxref("HTMLMediaElement")}}s 上没有可用的 `stop()` 函数，因此我们改为`pause()`它，同时将当前时间设置为 0。
 
 接下来，我们的快退和快进按钮–– 将以下块添加到代码的底部：
 

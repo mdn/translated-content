@@ -1,15 +1,6 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
-tags:
-- API
-- HTMLImageElement
-- Intrinsic Height
-- Reference
-- Property
-- Vertical
-- naturalHeight
-- size
 ---
 {{APIRef("HTML DOM")}}
 

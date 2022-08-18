@@ -1,7 +1,6 @@
 ---
 title: Regular expression
 slug: Glossary/Regular_expression
-translation_of: Glossary/Regular_expression
 ---
 **正则表达式**（*Regular expressions*或 _regex_）是决定了在搜索中使用何种字符串序列的规则。
 

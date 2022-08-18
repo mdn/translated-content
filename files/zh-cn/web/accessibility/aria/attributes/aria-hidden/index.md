@@ -1,15 +1,6 @@
 ---
 title: 使用 aria-hidden 属性
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags:
-  - HTML
-  - Rôle
-  - 代码脚本
-  - 可访问性
-  - 可访问的富网络应用
-  - 客户端
-  - 警告
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 ---
 本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。
@@ -28,7 +19,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 
 > **警告：** WAI-ARIA Authoring Practices 1.1 提示 `aria-hidden="false"` 在现阶段 [各个浏览器中表现不同](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden).
 
-### 比较 `aria-hidden="true"`， ` role="presentation" 和 ``role="none"`
+### 比较 `aria-hidden="true"`， `role="presentation"` 和 `role="none"`
 
 表面上，`aria-hidden="true"`，`role="presentation"`，和`role="none"` 很相似，因为这三者都有以下特性：
 

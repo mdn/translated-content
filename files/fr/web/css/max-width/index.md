@@ -119,4 +119,4 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 - {{cssxref("min-height")}}
 - {{cssxref("max-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte "en/CSS/box_model")
+- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)

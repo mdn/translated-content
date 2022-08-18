@@ -37,9 +37,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 - {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
   - : `DateTimeFormat` 객체를 초기화할 때 할당된 로케일 및 서식 옵션의 계산 값을 나타내는 객체를 반환합니다.
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
-  - : 두 개의 [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)를 받은 후, 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 반환합니다.
+  - : 두 개의 [Dates](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)를 받은 후, 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 반환합니다.
 - {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
-  - : 두 개의 [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)를 받은 후, 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 생성합니다. 문자열의 각 부분을 분해하여 토큰 객체로 만들고 {{jsxref("Array")}}로 반환합니다.
+  - : 두 개의 [Dates](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)를 받은 후, 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 생성합니다. 문자열의 각 부분을 분해하여 토큰 객체로 만들고 {{jsxref("Array")}}로 반환합니다.
 
 ## 예제
 

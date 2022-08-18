@@ -1,16 +1,6 @@
 ---
 title: ByteLengthQueuingStrategy.size()
 slug: Web/API/ByteLengthQueuingStrategy/size
-page-type: web-api-instance-method
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - size
-translation_of: Web/API/ByteLengthQueuingStrategy/size
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

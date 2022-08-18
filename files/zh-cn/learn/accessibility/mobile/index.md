@@ -1,17 +1,6 @@
 ---
 title: 移动设备上的无障碍
 slug: learn/Accessibility/Mobile
-tags:
-  - 初学者
-  - 响应式
-  - 学习
-  - 屏幕阅读器
-  - 文章
-  - 无障碍
-  - 移动端
-  - 编程
-  - 触摸
-translation_of: Learn/Accessibility/Mobile
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
@@ -174,7 +163,7 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
     1. _说话速率：改变说话速率_
     2. _容器：在页面不同予以的容器间切换_
     3. _标题：在页面上的标题之间切换_
-    4.  _链接：在页面上的链接之间切换_
+    4. _链接：在页面上的链接之间切换_
     5. _表单控件：在页面上的表单控件之间切换_
     6. 语言：在不同的翻译之间切换，如果可用的话
 
@@ -215,7 +204,7 @@ div.ontouchstart = function(e) {
 panel.ontouchend = stopMove;
 ```
 
-我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - [multi-control-box-drag.html ](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html)([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html))
+我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html))
 
 **注意**: 你可以看到一个功能完善的例子，展示如何在实现[游戏控制机制](/en-US/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
 
@@ -239,7 +228,9 @@ panel.ontouchend = stopMove;
 
 我们可以利用[viewport](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)来禁止用户缩放，在你的[\<head>](/en-US/docs/Web/HTML/Element/head)中加入下列代码即可：
 
-    <meta name="viewport" content="user-scalable=no">
+```html
+<meta name="viewport" content="user-scalable=no">
+```
 
 如果可能的话，你绝对不应该这么做 - 很多人都会依靠缩放来看你网站的内容，所以不使用缩放这个功能是一个很糟糕的主意。在某些情况下缩放会破坏 UI；这种情况下，你觉得你绝对需要缩放，你可以提供一些别的近似的方法。例如增加一个控制文字大小的控件，通过这种方式就不会破坏 UI 了。
 

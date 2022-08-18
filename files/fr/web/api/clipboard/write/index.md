@@ -7,9 +7,9 @@ translation_of: Web/API/Clipboard/write
 
 La methode **`write()`** de {{domxref("Clipboard")}} écrie des données arbitraire, comme des images, vers le presse-papier. Elle peut être utilisé pour implémenter une fonctionalité de copier coller.
 
-Avant de pouvoir écrire dans le presse-papier, vous devez utiliser [Permissions API](/en-US/docs/Web/API/Permissions_API) pour avoir l'autorisation `"clipboard-write"`.
+Avant de pouvoir écrire dans le presse-papier, vous devez utiliser [Permissions API](/fr/docs/Web/API/Permissions_API) pour avoir l'autorisation `"clipboard-write"`.
 
-> **Note :** Les API Presse-papiers (<i lang="en">clipboard</i>) asynchrones sont toujours en cours d'implémentation. Consultez le [tableau de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/clipboard#disponibilité_du_presse-papiers) sur la page [`Clipboard`](https://developer.mozilla.org/fr/docs/Web/API/clipboard) pour plus d'informations.
+> **Note :** Les API Presse-papiers (<i lang="en">clipboard</i>) asynchrones sont toujours en cours d'implémentation. Consultez le [tableau de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/clipboard#disponibilité_du_presse-papiers) sur la page [`Clipboard`](/fr/docs/Web/API/clipboard) pour plus d'informations.
 
 ## Syntaxe
 

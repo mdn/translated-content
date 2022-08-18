@@ -35,4 +35,4 @@ range.detach();
 
 ## Voir aussi
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
+- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)

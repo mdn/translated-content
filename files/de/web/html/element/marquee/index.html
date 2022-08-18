@@ -14,19 +14,19 @@ translation_of: Web/HTML/Element/marquee
 
 <div>{{obsolete_header}}</div>
 
-<p>Das HTML Element &lt;marquee&gt; wird dazu benutzt um ein scrollendes Textfeld einzufügen. Sie können mithilfe der Attribute kontrollieren, was passiert, wenn der Text das Ende des Textfeldes erreicht. </p>
+<p>Das HTML Element &lt;marquee&gt; wird dazu benutzt um ein scrollendes Textfeld einzufügen. Sie können mithilfe der Attribute kontrollieren, was passiert, wenn der Text das Ende des Textfeldes erreicht. </p>
 
 <div class="warning">
-<p>Das <code>&lt;marquee&gt;</code> Element ist <strong>veraltet</strong> und muss bzw. soll nicht mehr verwendet werden. Obwohl manche Browser es immernoch unterstützen, ist es nicht erforderlich. Es wird davon abgeraten, dieses Tag zu benutzen, da es das schlimmste ist, was Sie ihren Besuchern antun können.</p>
+<p>Das <code>&lt;marquee&gt;</code> Element ist <strong>veraltet</strong> und muss bzw. soll nicht mehr verwendet werden. Obwohl manche Browser es immernoch unterstützen, ist es nicht erforderlich. Es wird davon abgeraten, dieses Tag zu benutzen, da es das schlimmste ist, was Sie ihren Besuchern antun können.</p>
 </div>
 
 <h2 id="Attribute">Attribute</h2>
 
 <dl>
  <dt>{{htmlattrdef("behavior")}}</dt>
- <dd>Bestimmt, wie sich der Text innerhalb des marquee-tags bewegt. Mögliche Optionen send "scroll", "slide" und "alternate". Der Standardwert ist "scroll" und wird automatisch benutzt, falls kein Wert definiert wird.</dd>
+ <dd>Bestimmt, wie sich der Text innerhalb des marquee-tags bewegt. Mögliche Optionen send "scroll", "slide" und "alternate". Der Standardwert ist "scroll" und wird automatisch benutzt, falls kein Wert definiert wird.</dd>
  <dt>{{htmlattrdef("bgcolor")}}</dt>
- <dd>Bestimmt die Hintergrundfarbe mittels einer der Standardfarben, dem RGB- bzw. dem Hexadezimalwert.</dd>
+ <dd>Bestimmt die Hintergrundfarbe mittels einer der Standardfarben, dem RGB- bzw. dem Hexadezimalwert.</dd>
  <dt>{{htmlattrdef("direction")}}</dt>
  <dd>Legt die Bewegungsrichtung innerhalb des marquee-tags fest. Mögliche Optionen sind "left", "right", "up" und "down". Der Standardwert ist "left" und wird automatisch benutzt, falls kein Wert definiert wird.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
@@ -36,9 +36,9 @@ translation_of: Web/HTML/Element/marquee
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>Definiert, wie oft die Aktion (scroll, slide, alternate) ausgeführt wird. Der Standardwert ist -1, was bedeutet, dass der Inhalt des Marquee-tags in Dauerschleife dargestellt wird.</dd>
  <dt>{{htmlattrdef("scrollamount")}}</dt>
- <dd>Definiert den Wert eines Intervalls in Pixel. Der Standardwert beträgt 6.</dd>
+ <dd>Definiert den Wert eines Intervalls in Pixel. Der Standardwert beträgt 6.</dd>
  <dt>{{htmlattrdef("scrolldelay")}}</dt>
- <dd>Definiert den Intervall zwischen jeder Bewegung in Millisekunden. Der Standardwert ist 85. <strong>Merke:</strong>  Jeder Wert, der kleiner als 60 ist, wird ignoriert und der Wert 60 wird stattdessen verwendet, außer "truespeed" ist definiert.</dd>
+ <dd>Definiert den Intervall zwischen jeder Bewegung in Millisekunden. Der Standardwert ist 85. <strong>Merke:</strong>  Jeder Wert, der kleiner als 60 ist, wird ignoriert und der Wert 60 wird stattdessen verwendet, außer "truespeed" ist definiert.</dd>
  <dt>{{htmlattrdef("truespeed")}}</dt>
  <dd>Standardmäßig werden scrolldelays, die kleiner als 60 sind ignoriert. Wenn "truespeed" verwendet wird, ist dies jedoch nicht der Fall.</dd>
  <dt>{{htmlattrdef("vspace")}}</dt>
@@ -96,7 +96,7 @@ translation_of: Web/HTML/Element/marquee
    <td>{{SpecName('HTML WHATWG', 'obsolete.html#the-marquee-element-2', '&lt;marquee&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td>
-    <p>Wird veraltet zugunsten von CSS dargestellt, jedoch muss die erwartete "behavior" für die umgekehrte Kompatibilität festgelegt werden.</p>
+    <p>Wird veraltet zugunsten von CSS dargestellt, jedoch muss die erwartete "behavior" für die umgekehrte Kompatibilität festgelegt werden.</p>
    </td>
   </tr>
   <tr>
@@ -109,108 +109,4 @@ translation_of: Web/HTML/Element/marquee
 
 <h2 id="Browser_Kompatibiltät">Browser Kompatibiltät</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>2.0</td>
-   <td>7.2</td>
-   <td>1.2</td>
-  </tr>
-  <tr>
-   <td><code>truespeed</code> attribute</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>4.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>hspace/vspace</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>loop</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>truespeed</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>hspace/vspace</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>loop</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}

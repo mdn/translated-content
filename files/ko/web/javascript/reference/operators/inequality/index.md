@@ -38,7 +38,7 @@ x != y
 3 != "3"; // false
 ```
 
-이를 방지하고 다른 유형이 다른 것으로 간주되게 하려면 [엄격한 불일치 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)를 사용해야 합니다.
+이를 방지하고 다른 유형이 다른 것으로 간주되게 하려면 [엄격한 불일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality)를 사용해야 합니다.
 
 ```js
 3 !== "3"; // true
@@ -95,8 +95,8 @@ object2 != object2 // false
 ## 관련 문서
 
 - [Equality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+  operator](/ko/docs/Web/JavaScript/Reference/Operators/Equality)
 - [Strict
-  equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+  equality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)
 - [Strict
-  inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+  inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

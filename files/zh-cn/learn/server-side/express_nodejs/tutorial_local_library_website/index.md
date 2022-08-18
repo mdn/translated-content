@@ -1,15 +1,6 @@
 ---
 title: Express 教程：本地图书馆网站
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Express
-  - Node
-  - nodejs
-  - web 框架
-  - 初学者
-  - 后端框架
-  - 学习教程
-translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
@@ -71,7 +62,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 如果实在进行不下去，可以参考 [Github](https://github.com/mdn/express-locallibrary-tutorial) 上的完整版本。
 
-> **备注：** 本教程中的代码，已在特定版本（项目的[ package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 所列版本）的 node、Express 及其它模组的环境下通过测试。
+> **备注：** 本教程中的代码，已在特定版本（项目的 [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 所列版本）的 node、Express 及其它模组的环境下通过测试。
 
 ## 总结
 

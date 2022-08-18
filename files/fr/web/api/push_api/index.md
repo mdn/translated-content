@@ -24,7 +24,7 @@ L' **API Push**  donne aux applications web la possibilité de recevoir des mess
 > - [Feuille de prévention contre les Cross-Site Request Forgery (CSRF)](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [Prévention conte les attaques CSRF et XSRF](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)
 
-Pour qu'une application web puisse recevoir des messages Push, elle doit avoir un [service worker](/en-US/docs/Web/API/ServiceWorker_API) actif. Quand le service worker est actif, on peut souscrire aux notifications Push en utilisant {{domxref("PushManager.subscribe()")}}.
+Pour qu'une application web puisse recevoir des messages Push, elle doit avoir un [service worker](/fr/docs/Web/API/ServiceWorker_API) actif. Quand le service worker est actif, on peut souscrire aux notifications Push en utilisant {{domxref("PushManager.subscribe()")}}.
 
 L'élément {{domxref("PushSubscription")}} qui en résulte inclut toutes les informations dont l'application a besoin pour transmettre un message Push: un point de terminaison et la clé de chiffrement nécessaire à l'envoi des données.
 
@@ -41,7 +41,7 @@ Activer un service worker pour délivrer un message Push peut accroître l'utili
 ## Interfaces
 
 - {{domxref("PushEvent")}}
-  - : Représente une action push envoyée à l'élément de [portée global](/en-US/docs/Web/API/ServiceWorkerGlobalScope) (global scope) d'un {{domxref("ServiceWorker")}}. Elle contient les informations envoyées depuis l'application à un {{domxref("PushSubscription")}}.
+  - : Représente une action push envoyée à l'élément de [portée global](/fr/docs/Web/API/ServiceWorkerGlobalScope) (global scope) d'un {{domxref("ServiceWorker")}}. Elle contient les informations envoyées depuis l'application à un {{domxref("PushSubscription")}}.
 - {{domxref("PushManager")}}
   - : Fournit un moyen de recevoir des notifications de serveurs tiers ainsi que de demander les URL pour les notifications Push. Cette interface remplace les fonctionnalités obsolètes de l'interface {{domxref("PushRegistrationManager")}}.
 - {{domxref("PushMessageData")}}
@@ -78,7 +78,7 @@ Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_W
 
 ## Voir aussi
 
-- [Using the Push API \[EN\]](/en-US/docs/Web/API/Push_API/Using_the_Push_API)
+- [Using the Push API \[EN\]](/fr/docs/Web/API/Push_API/Using_the_Push_API)
 - [Démo API Push](https://github.com/chrisdavidmills/push-api-demo), sur Github
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [API Service Worker](/fr/docs/Web/API/Service_Worker_API)

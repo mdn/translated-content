@@ -1,7 +1,6 @@
 ---
 title: 'HTMLMediaElement: playing'
 slug: Web/API/HTMLMediaElement/playing_event
-translation_of: Web/API/HTMLMediaElement/playing_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

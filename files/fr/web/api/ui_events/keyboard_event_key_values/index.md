@@ -2737,7 +2737,7 @@ These media keys are used specifically for controlling audio.
   </thead>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
+\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/fr/docs/Mozilla/B2G_OS).
 
 ## TV control keys
 

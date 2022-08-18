@@ -1,7 +1,6 @@
 ---
 title: 書本實例清單頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
 接下來，我們將實作圖書館中所有書本實例 (`BookInstance`) 的列表頁面。這個頁面需要包含與每個 `BookInstance` (鏈接到其詳細信息頁面) 關聯的書本 `Book` 標題，以及 `BookInstance`模型中的其他信息，包含每個副本的狀態，印記和唯一 ID。唯一 ID 的文字，應該鏈接到 `BookInstance` 詳細信息頁面。
 
@@ -57,7 +56,7 @@ block content
       li There are no book copies in this library.
 ```
 
-這個視圖與其他視圖非常相似。它擴展了佈局，替換內容區塊，顯示從控制器傳入的標題 `title`，並遍歷 `bookinstance_list` 中的所有書籍副本。對於每個副本，我們都會顯示它的狀態（用顏色編碼），如果書本不可用，則顯示其預期返回日期。這裡引入了一個新功能 — 我們可以在標籤之後使用點符號表示法，來指定一個類別。因此，`span.text-success `將被編譯為 <`span class="text-success"`> (也可以用 Pug 編寫為 `span(class="text-success"`)。
+這個視圖與其他視圖非常相似。它擴展了佈局，替換內容區塊，顯示從控制器傳入的標題 `title`，並遍歷 `bookinstance_list` 中的所有書籍副本。對於每個副本，我們都會顯示它的狀態（用顏色編碼），如果書本不可用，則顯示其預期返回日期。這裡引入了一個新功能 — 我們可以在標籤之後使用點符號表示法，來指定一個類別。因此，`span.text-success` 將被編譯為 <`span class="text-success"`> (也可以用 Pug 編寫為 `span(class="text-success"`)。
 
 ## 它看起來像是?
 

@@ -1,11 +1,6 @@
 ---
 title: 防火墻
 slug: Glossary/firewall
-tags:
-  - 安全性
-  - 術語表
-  - 防火墻
-translation_of: Glossary/firewall
 ---
 **防火墻**是一個過濾網路流量的系統。它也可以根據一些特定的規則，讓它穿透或阻止它。例如，它可以阻止特定端口的傳入鏈接或者是傳出鏈接到特定的 IP 地址。
 

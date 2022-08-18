@@ -1,12 +1,6 @@
 ---
 title: URL
 slug: Glossary/URL
-tags:
-  - URL
-  - l10n:priority
-  - 術語表
-  - 鏈接
-translation_of: Glossary/URL
 ---
 **統一資源定位器** (**URL**) 是一個在互聯網上查找指定資源(例如網頁，圖片或視頻)位置的文本字符串。
 

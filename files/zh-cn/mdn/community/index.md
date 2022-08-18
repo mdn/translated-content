@@ -1,11 +1,6 @@
 ---
 title: 向 MDN Web Docs 发送反馈
 slug: MDN/Community
-tags:
-  - Documentation
-  - Guide
-  - MDN
-  - MDN Meta
 original_slug: MDN/Contribute/Feedback
 ---
 {{MDNSidebar}}

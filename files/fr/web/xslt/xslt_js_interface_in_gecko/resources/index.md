@@ -16,7 +16,7 @@ original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Ressources
 
 - [XSLT dans Gecko](/fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/fr/XSLT_dans_Gecko)
 - [Utilisation de l'interface JavaScript de Mozilla pour les transformations XSL](/fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/fr/Utilisation_de_l'interface_JavaScript_de_Mozilla_pour_les_transformations_XSL)
-- [Page du projet XSLT sur Mozilla.org (en)](/en-US/docs/Web/XSLT), qui contient une section concernant les problèmes fréquemment rencontrés.
+- [Page du projet XSLT sur Mozilla.org (en)](/fr/docs/Web/XSLT), qui contient une section concernant les problèmes fréquemment rencontrés.
 - [MSDN documentation on IE/XSLT bindings (en)](https://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk30/htm/xmconusingthexslprocessor.asp)
 
 {{Previous("L\'interface XSLT/JavaScript dans Gecko:Liste des interfaces")}}

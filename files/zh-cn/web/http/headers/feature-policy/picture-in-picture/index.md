@@ -1,14 +1,6 @@
 ---
 title: 'Feature-Policy: picture-in-picture'
 slug: Web/HTTP/Headers/Feature-Policy/picture-in-picture
-tags:
-  - Directive
-  - Feature-Policy
-  - HTTP
-  - Picture in picture
-  - Reference
-  - Experimental
-translation_of: Web/HTTP/Headers/Feature-Policy/picture-in-picture
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

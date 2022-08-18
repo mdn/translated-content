@@ -13,7 +13,7 @@ translation_of: Web/API/Navigator/cookieEnabled
 var cookieEnabled = navigator.cookieEnabled;
 ```
 
-- `cookieEnabled` est un [Boolean](/en-US/docs/Glossary/Boolean): `true` ou `false`.
+- `cookieEnabled` est un [Boolean](/fr/docs/Glossary/Boolean): `true` ou `false`.
 
 ## Example
 

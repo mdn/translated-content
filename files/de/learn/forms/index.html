@@ -13,27 +13,24 @@ original_slug: Learn/HTML/Forms
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">Dieser Abschnitt bietet eine Reihe von Artikeln, die Dir helfen werden, HTML-Formulare zu meistern. HTML-Formulare sind sehr mächtige Werkzeuge, um mit Nutzern zu interagieren — am häufigsten werden sie benutzt, um Daten von Nutzern zu erheben oder um ihnen zu erlauben, eine Benutzerschnittstelle zu bedienen. Auch ist klar, dass wegen historischen und technischen Gründen es nicht immer offensichtlich ist, wie man diese volkommen effektiv nutzt. In dieser Anleitung werden wir alle Aspekte der HTML-Formulare abdecken, einschließlich das Auszeichnen ihrer HTML-Struktur, das Styling von Formelementen, das Validieren von Formulardaten und das Senden von Daten an den Server.</p>
+<p class="summary">Dieser Abschnitt bietet eine Reihe von Artikeln, die Dir helfen werden, HTML-Formulare zu meistern. HTML-Formulare sind sehr mächtige Werkzeuge, um mit Nutzern zu interagieren — am häufigsten werden sie benutzt, um Daten von Nutzern zu erheben oder um ihnen zu erlauben, eine Benutzerschnittstelle zu bedienen. Auch ist klar, dass wegen historischen und technischen Gründen es nicht immer offensichtlich ist, wie man diese volkommen effektiv nutzt. In dieser Anleitung werden wir alle Aspekte der HTML-Formulare abdecken, einschließlich das Auszeichnen ihrer HTML-Struktur, das Styling von Formelementen, das Validieren von Formulardaten und das Senden von Daten an den Server.</p>
 
 <h2 id="Voraussetzungen">Voraussetzungen</h2>
 
-<p>Vor dem Beginnen dieses Abschnitts, solltest du dich zumindest durch unsere <a href="https://developer.mozilla.org/de/docs/Learn/HTML/Einf%C3%BChrung_in_HTML">Einführung in HTML</a> durchgearbeitet haben. Zu diesem Zeitpunkt solltest die Grundleitfäden einfach zu verstehen finden und dazu fähig sein ,Gebrauch von unserer <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">Nativen-Formular-Komponenten-Anleitung</a> zu machen.</p>
+<p>Vor dem Beginnen dieses Abschnitts, solltest du dich zumindest durch unsere <a href="https://developer.mozilla.org/de/docs/Learn/HTML/Einf%C3%BChrung_in_HTML">Einführung in HTML</a> durchgearbeitet haben. Zu diesem Zeitpunkt solltest die Grundleitfäden einfach zu verstehen finden und dazu fähig sein ,Gebrauch von unserer <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">Nativen-Formular-Komponenten-Anleitung</a> zu machen.</p>
 
 <p>Das Meistern von Formularen benötigt allerdings mehr als nur HTML-Kenntnisse — Du wirst auch einige spezielle Techniken zum Stylen von Formular-Komponenten lernen müssen. Daneben ist ein wenig Scripting-Wissen erforderliche, um Dinge wie Validierung und das erstellen eigener Formular-Komponenten zu erledigen. Daher würden wir empfehlen, dass du diese Seite zunächst verlässt, um ein wenig <a href="/en-US/docs/Learn/CSS">CSS</a> und <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> zu erlernen und danndie anderen Abschnitte durchliest.</p>
 
 <p>Der obenstehende Text ist ein guter Indikator, warum wir Web-Formulare in ein eigenständiges Modul gepackt haben anstatt Teile davon in die HTML, CSS, und JavaScript Themengebiete zu legen — Formularelemente sind komplexer als die meisten anderen HTML-Elemente und benötigen dazu eine enge Verbindung von CSS- und JavaScript-Techniken, um das meiste aus ihnen herauszuholen.</p>
 
 <div class="note">
-<p><strong>Notiz</strong>: Wenn du auf einem Computer/Tablet/anderem Gerät arbeitest, wo du nicht die Möglichkeit hast, eigene Dateien zu erstellen, kannst du (die meisten) Code-Beispiele in einem Online-Coding-Programm, wie <a href="http://jsbin.com/">JSBin</a> oder <a href="https://glitch.com/">Glitch</a> nutzen.</p>
+<p><strong>Notiz</strong>: Wenn du auf einem Computer/Tablet/anderem Gerät arbeitest, wo du nicht die Möglichkeit hast, eigene Dateien zu erstellen, kannst du (die meisten) Code-Beispiele in einem Online-Coding-Programm, wie <a href="http://jsbin.com/">JSBin</a> oder <a href="https://glitch.com/">Glitch</a> nutzen.</p>
 </div>
 
 <h2 id="Grundlagen">Grundlagen</h2>
 
 <dl>
  <dt><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form" style="">Dein erstes HTML-Formular</a></dt>
-</dl>
-
-<dl>
  <dd>Der erste Artikel in unserer Reihe bietet Dir deine erste Erfarung, ein HTML-Formular zu erstellen, was das einfache Designen eines Formulars, Einbinden mit den richtigen HTML-Element, dezentes Styling mit CSS und Weitergabe der Daten zu einem Server mit einschließt.</dd>
  <dt><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">Wie man ein HTML-Formular strukturiert</a></dt>
  <dd>Nach dem Abhandeln der Grundlagen, können wir jetzt mehr detalliert in die Elemente, die Struktur bieten, hereingucken und die Bedeutung verschiedener Teile des Formulars verstehen.</dd>
@@ -67,7 +64,7 @@ original_slug: Learn/HTML/Forms
  <dt><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Clientseitige Formulardaten-Validation</a></dt>
  <dd>Das Senden von Daten ist noch nicht genug - wir müssen auch prüfen, ob die Daten, die der Nutzer eingegeben hat, im korrektem Format sind, um sie erfolgreich verarbeiten zu können und diese unserer Anwendung nicht zerstören. Wir möchten dem Nutzer beim Ausfüllen der Daten helfen, und ihn nicht frustrieren, wenn er versucht unsere Anwendung zu nutzen. Formular-Validation hilft uns, diiese Ziele zu erreichen - Dieser Artikel erklärt Dir alles, was du wissen musst.</dd>
  <dt><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Das Senden von Daten</a></dt>
- <dd>Dieser Artikel zeigt, was passiert, wenn ein Benutzer ein Formular abschickt — wohin gehen die Daten und wie werden diese genutzt, wenn diese dort angekommen sind? Wir gucken ebenfalls auf ein paar Sicherheitsbedenken, die mit dem Senden von Daten verbunden sind.</dd>
+ <dd>Dieser Artikel zeigt, was passiert, wenn ein Benutzer ein Formular abschickt — wohin gehen die Daten und wie werden diese genutzt, wenn diese dort angekommen sind? Wir gucken ebenfalls auf ein paar Sicherheitsbedenken, die mit dem Senden von Daten verbunden sind.</dd>
 </dl>
 
 <h2 id="Weiterführende_Anleitungen">Weiterführende Anleitungen</h2>
@@ -76,7 +73,7 @@ original_slug: Learn/HTML/Forms
 
 <dl>
  <dt><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">Wie man eigene Formular-Komponenten baut</a></dt>
- <dd>Du wirst über ein paar Fälle stoßen, wo die nativen Formuar-Komponenten nicht das bieten, was Du brauchst, wie zum Beispiel aus Styling-Gründen oder Funktionalität. In diesen Fällen musst Du eventuell Deine eigenen Formular-Komponenten aus purem HTML bauen. Dieser Artikel erklärt, wie Du dies tun kannst und welchen Überlegungen Du Dir im Klaren sein musst - mit einem praktischen Fall-Beispiel.</dd>
+ <dd>Du wirst über ein paar Fälle stoßen, wo die nativen Formuar-Komponenten nicht das bieten, was Du brauchst, wie zum Beispiel aus Styling-Gründen oder Funktionalität. In diesen Fällen musst Du eventuell Deine eigenen Formular-Komponenten aus purem HTML bauen. Dieser Artikel erklärt, wie Du dies tun kannst und welchen Überlegungen Du Dir im Klaren sein musst - mit einem praktischen Fall-Beispiel.</dd>
  <dt><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Senden von Formularen mit JavaScript</a></dt>
  <dd>Dieser Artikel betrachtet Möglichkeiten, wie ein Formular genutzt werden kann, um eine HTTP-Anfrage zu erstellen und diese mit JavaScript versandt werden kann statt dem üblichen Formularversand. Es schaut auch auf die Gründe, warum Du dies machen wolltest und die Folgen davon. (Siehe auch Using FormData objects.)</dd>
  <dt><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML-Formulare in veralteten Browsern</a></dt>

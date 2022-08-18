@@ -1,14 +1,6 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-tags:
-  - CSS
-  - CSS Masking
-  - CSS 属性
-  - Web
-  - 引用
-  - recipe:css-property
-translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}
 

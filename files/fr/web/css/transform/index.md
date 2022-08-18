@@ -16,7 +16,7 @@ La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la
 
 Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont ` position``: fixed; ` ou `position: absolute;`.
 
-> **Attention :** Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](https://developer.mozilla.org/fr/docs/Web/CSS/Mod%C3%A8le_de_mise_en_forme_visuelle#Les_%C3%A9l%C3%A9ments_en_ligne_et_les_bo%C3%AEtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
+> **Attention :** Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Mod%C3%A8le_de_mise_en_forme_visuelle#Les_%C3%A9l%C3%A9ments_en_ligne_et_les_bo%C3%AEtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
 
 ## Syntaxe
 
@@ -111,7 +111,7 @@ Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessi
 
 Pour en savoir plus :
 
-- [MDN : Comprendre WCAG - Explications pour les lignes directrives 2.3](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN : Comprendre WCAG - Explications pour les lignes directrives 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Comprendre les critères de succès 2.3.3 - W3C - Comprendre WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Spécifications

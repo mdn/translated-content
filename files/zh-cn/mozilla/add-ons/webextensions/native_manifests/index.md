@@ -1,7 +1,6 @@
 ---
 title: 原生应用清单
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
-translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
 {{AddonSidebar}}
 
@@ -43,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
   </tbody>
 </table>
 
-对于所有的原生应用清单，你需要做一些工作以便于浏览器可以找到它们。这些规则在 [清单路径](#清单路径)[ ](#Manifest_location)章节。
+对于所有的原生应用清单，你需要做一些工作以便于浏览器可以找到它们。这些规则在 [清单路径](#清单路径) 章节。
 
 ## 原生应用通信清单
 

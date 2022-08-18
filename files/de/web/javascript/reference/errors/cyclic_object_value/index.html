@@ -42,7 +42,7 @@ TypeError: Circular reference in value argument not supported (Microsoft Edge)
 
 <p>Um zyklische Referenzen zu serialisieren, kann man eine Bibliotheken benutzen (z. B. <a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> von Douglas Crockford) oder eine eigene Lösung implementieren, welche zyklische Referenzen findet und mit serialisierbaren Werten ersetzt (oder diese entfernt).</p>
 
-<p>Das folgende Codebeispiel zeigt, wie man eine zyklische Referenz mit dem Einsatz des  <code>replacer</code> Parameters von {{jsxref("JSON.stringify()")}} findet und filtert (das bedeutet, es gehen Daten verloren):</p>
+<p>Das folgende Codebeispiel zeigt, wie man eine zyklische Referenz mit dem Einsatz des  <code>replacer</code> Parameters von {{jsxref("JSON.stringify()")}} findet und filtert (das bedeutet, es gehen Daten verloren):</p>
 
 <pre class="brush: js">const getCircularReplacer = () =&gt; {
   const seen = new WeakSet;

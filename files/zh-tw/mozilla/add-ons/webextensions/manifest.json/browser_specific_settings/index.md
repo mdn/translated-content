@@ -1,9 +1,6 @@
 ---
 title: applications
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
 {{AddonSidebar}}
 

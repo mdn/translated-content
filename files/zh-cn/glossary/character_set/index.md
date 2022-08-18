@@ -1,7 +1,6 @@
 ---
 title: Character set
 slug: Glossary/character_set
-translation_of: Glossary/character_set
 ---
 **字符集**是一种让计算机知道如何识别 {{Glossary("Character")}} 的编码系统，这些字符包括字母、数字、标点符号和空白字符。
 

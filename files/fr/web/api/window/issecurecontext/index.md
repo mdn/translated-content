@@ -11,7 +11,7 @@ translation_of: Web/API/Window/isSecureContext
 ---
 {{APIRef}}{{SeeCompatTable}}
 
-La propriété en lecteur seule **`window.isSecureContext`** indique si un contexte est capable d'utiliser des fonctionnalités qui nécessitent des [contextes sécurisés](/en-US/docs/Web/Security/Secure_Contexts).
+La propriété en lecteur seule **`window.isSecureContext`** indique si un contexte est capable d'utiliser des fonctionnalités qui nécessitent des [contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts).
 
 ## Syntaxe
 
@@ -46,4 +46,4 @@ if (window.isSecureContext) {
 
 ## Voir également
 
-- [Contextes sécurisés](/en-US/docs/Web/Security/Secure_Contexts)
+- [Contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts)

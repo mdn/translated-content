@@ -29,7 +29,7 @@ Quelques notes sur les appels de macro&nbsp;:
 - Les paramètres sont séparés par des virgules.
 - S'il n'y a pas de paramètres, vous pouvez laisser les parenthèses ou les enlever&nbsp;; `\{{macroname()}}` et `\{{macroname}}` sont équivalents.
 - Les paramètres numériques peuvent être entre guillemets, ou non (cependant, si vous avez un numéro de version avec plusieurs décimales, il doit être entre guillemets).
-- Si vous obtenez des erreurs, consultez votre code attentivement. Si vous ne pouvez toujours pas à comprendre ce qui se passe, voir [Dépannage des erreurs KumaScript](/en-US/docs/MDN/Tools/KumaScript/Troubleshooting).
+- Si vous obtenez des erreurs, consultez votre code attentivement. Si vous ne pouvez toujours pas à comprendre ce qui se passe, voir [Dépannage des erreurs KumaScript](/fr/docs/MDN/Tools/KumaScript/Troubleshooting).
 
 Les macros sont mises en cache&nbsp;; pour tout ensemble de valeurs d'entrée (les paramètres et les valeurs environnementales telles que l'URL pour laquelle la macro a été exécutée), les résultats sont stockés et réutilisés. Cela signifie que la macro uniquement exécutée de nouveau lorsque les paramètres en entrée changent.
 

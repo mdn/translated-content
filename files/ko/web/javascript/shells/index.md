@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/쉘
 ---
 {{JsSidebar}}
 
-여러분은 JavaScript 쉘을 통해 웹페이지 새로고침하지 않고 빠르게 [JavaScript](/en-US/docs/Web/JavaScript) 의 코드를 테스트해볼 수 있습니다. 코드를 개발하고 디버깅하는데 매우 유용한 도구입니다.
+여러분은 JavaScript 쉘을 통해 웹페이지 새로고침하지 않고 빠르게 [JavaScript](/ko/docs/Web/JavaScript) 의 코드를 테스트해볼 수 있습니다. 코드를 개발하고 디버깅하는데 매우 유용한 도구입니다.
 
 ## 독립적으로 사용할 수 있는 JavaScript 쉘
 
@@ -25,7 +25,7 @@ original_slug: Web/JavaScript/쉘
 
 - Firefox는 [Scratchpad](/ko/docs/Tools/Scratchpad)라 불리는 자바스크립트 내장 콘솔을 가지고있습니다.(version6 이후)
 - [JavaScript Shell](/ko/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (`js`) - JavaScript를 위한 command line인터프리터입니다.
-- [XPConnect](/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect)인 [xpcshell](/en-US/docs/Mozilla/XPConnect/xpcshell) - Mozilla개발자는 위한 유용한 쉘 입니다. (가끔 필요할거에요.)
+- [XPConnect](/ko/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect)인 [xpcshell](/ko/docs/Mozilla/XPConnect/xpcshell) - Mozilla개발자는 위한 유용한 쉘 입니다. (가끔 필요할거에요.)
 - [Babel REPL](http://babeljs.io/repl) - 최신 자바스크립트를 시험해 볼 수 있는 브라우저 기반 [REPL](https://en.wikipedia.org/wiki/REPL)입니다.
 - [ES6Console.com](http://es6console.com/) - 브라우저에서 ECMAScript 2015 코드를 테스트 해보기위한 open-source JavaScript 콘솔 입니다.
 - [jsconsole.com](http://jsconsole.com/) -- 웹에서 빠른속도록 JavaScript 코드를 테스트 해 볼 수 있는 open-source JavaScript 콘솔 입니다.

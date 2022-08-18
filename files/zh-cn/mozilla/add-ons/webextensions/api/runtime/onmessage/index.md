@@ -1,7 +1,6 @@
 ---
 title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
 {{AddonSidebar()}}利用此事件来监听来自你的扩展其他部分的消息。例如，使用：
 

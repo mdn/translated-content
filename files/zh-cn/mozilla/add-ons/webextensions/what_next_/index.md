@@ -1,7 +1,6 @@
 ---
 title: What next?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 ---
 {{AddonSidebar}}
 
@@ -11,7 +10,7 @@ You will now be ready to start turning your idea for a browser extension into re
 
 你不需要任何特殊的开发或构建环境工具来创建浏览器扩展：只需要一个简单的文本编辑器就可以创建出很好的浏览器扩展。当然，你可能一直在做 web 开发有一套你想去配置的开发工具和环境。如果是这样，你需要意识到一些事情。
 
-如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到[ AMO ](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_$translate?tolocale=zh-CN#The_review_process)审查。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审阅者无法使用商业或基于 Web 的工具。
+如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到 [AMO](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_$translate?tolocale=zh-CN#The_review_process) 审查。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审阅者无法使用商业或基于 Web 的工具。
 
 [学习更多关于构建工具](/en-US/Add-ons/Source_Code_Submission#About_build_tools)
 
@@ -25,9 +24,9 @@ Third-party libraries are a great way to add complex features or functionality t
 
 Browser extensions need to be signed to install into the release or beta versions of Firefox. Signing takes place in addons.mozilla.org (AMO) and is subject to the terms and conditions of the Firefox Add-on Distribution Agreement. The goal of the agreement is to ensure Firefox users get access to well supported, quality add-ons that enhance the Firefox experience.
 
-[Read the agreement](/Add-ons/AMO/Policy/Agreement)
+[Read the agreement](https://extensionworkshop.com/documentation/publish/firefox-add-on-distribution-agreement/)
 
-[Learn more about signing](/en-US/Add-ons/WebExtensions/Distribution)
+[Learn more about signing](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
 
 ## The review process
 

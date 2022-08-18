@@ -50,4 +50,4 @@ Cet élément implémente l'interface {{domxref("SVGFEFuncGElement")}}.
 - {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncR")}}
 - {{SVGElement("feFuncB")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres "en/SVG/Tutorial/Filter_effects")
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

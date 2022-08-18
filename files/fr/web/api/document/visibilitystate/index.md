@@ -15,7 +15,7 @@ La propriété en lecture seule **`Document.visibilityState`** renvoie la visibi
 
 - **`'visible'`** : le contenu de la page peut être au-moins partiellement visible. Dans la pratique, cela signifie que la page est l'onglet de premier plan d'une fenêtre non réduite.
 - **`'hidden`'** (_caché_) : le contenu de la page n'est pas visible pour l'utilisateur. Dans la pratique , cela signifie que le document est soit dans un onglet d'arrière-plan ou une partie d'une fenêtre réduite, soit que le verrouillage de l'écran du système d'exploitation est actif.
-- **`'prerender'`** (_prérendu_) : le contenu de la page est prérendu et n'est pas visible par l'utilisateur (considéré caché aux fins de [`document.hidden`](/en-US/docs/Web/API/Document/hidden)). Le document peut démarrer dans cet état mais ne changera jamais à partir d'une autre valeur. Note : le support du navigateur est facultatif.
+- **`'prerender'`** (_prérendu_) : le contenu de la page est prérendu et n'est pas visible par l'utilisateur (considéré caché aux fins de [`document.hidden`](/fr/docs/Web/API/Document/hidden)). Le document peut démarrer dans cet état mais ne changera jamais à partir d'une autre valeur. Note : le support du navigateur est facultatif.
 - **`'unloaded`'** (_déchargé_) : la page est en train d'être déchargée de la mémoire. Remarque : le support du navigateur est facultatif.
 
 Lorsque la valeur de cette propriété change, l'évènement {{event('visibilitychange')}} est envoyé au {{domxref("Document")}}.
