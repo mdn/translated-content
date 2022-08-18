@@ -49,11 +49,11 @@ La estructura completa es llamada **regla predeterminada** (pero a menudo «regl
 - Selector
   - : El elemento HTML en el que comienza la regla. Esta selecciona el(los) elemento(s) a dar estilo (en este caso, los elementos {{htmlelement("p")}} ). Para dar estilo a un elemento diferente, solo cambia el selector.
 - Declaración
-  - del elemento quieres dar estilo.
+  - : Una sola regla como `color: red;` especifica a cuál de las **propiedades** del elemento quieres dar estilo.
 - Propiedades
-  - es una propiedad del elemento {{htmlelement("p")}} ). En CSS, seleccionas qué propiedad quieres afectar en tu regla.
+  - : Maneras en las cuales puedes dar estilo a un elemento HTML. (En este caso, `color` es una propiedad del elemento {{htmlelement("p")}} ). En CSS, seleccionas qué propiedad quieres afectar en tu regla.
 - Valor de la propiedad
-  - ).
+  - : A la derecha de la propiedad, después de los dos puntos (:), tienes el **valor de la propiedad**, para elegir una de las muchas posibles apariencias para una propiedad determinada (hay muchos valores para `color` además de `red`).
 
 Nota las otras partes importantes de la sintaxis:
 
@@ -87,11 +87,11 @@ Existen muchos tipos diferentes de selectores. Antes, solo viste los **selectore
 
 | Nombre del selector                                                      | Qué selecciona                                                                                                             | Ejemplo                                                                       |
 | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Selector de elemento (llamado algunas veces selector de etiqueta o tipo) | Todos los elementos HTML del tipo especificado.                                                                            | `p` Selecciona `<p>`                                                          |
-| Selector de identificación (ID)                                          | El elemento en la página con el ID especificado (en una página HTML dada, solo se permite un único elemento por ID).       | `#mi-id` Selecciona `<p id="mi-id">` y `<a id="mi-id">`                       |
-| Selector de clase                                                        | Los elementos en la página con la clase especificada (una clase puede aparecer varias veces en una página).                | `.mi-clase` Selecciona `<p class="mi-clase">` y `<a class="mi-clase">`        |
-| Selector de atributo                                                     | Los elementos en una página con el atributo especificado.                                                                  | `img[src]` Selecciona `<img src="mimagen.png">` pero no `<img>`               |
-| Selector de pseudoclase                                                  | Los elementos especificados, pero solo cuando esté en el estado especificado, por ejemplo cuando el puntero esté sobre él. | `a:hover` Selecciona `<a>`, pero solo cuando el puntero esté sobre el enlace. |
+| Selector de elemento (llamado algunas veces selector de etiqueta o tipo) | Todos los elementos HTML del tipo especificado.                                                                            | `p`<br> Selecciona `<p>`                                                          |
+| Selector de identificación (ID)                                          | El elemento en la página con el ID especificado (en una página HTML dada, solo se permite un único elemento por ID).       | `#mi-id`<br> Selecciona `<p id="mi-id">` y `<a id="mi-id">`                       |
+| Selector de clase                                                        | Los elementos en la página con la clase especificada (una clase puede aparecer varias veces en una página).                | `.mi-clase`<br> Selecciona `<p class="mi-clase">` y `<a class="mi-clase">`        |
+| Selector de atributo                                                     | Los elementos en una página con el atributo especificado.                                                                  | `img[src]`<br> Selecciona `<img src="mimagen.png">` pero no `<img>`               |
+| Selector de pseudoclase                                                  | Los elementos especificados, pero solo cuando esté en el estado especificado, por ejemplo cuando el puntero esté sobre él. | `a:hover`<br> Selecciona `<a>`, pero solo cuando el puntero esté sobre el enlace. |
 
 Existen muchos más selectores para explorar, y podrás encontrar una lista más detallada en la [guía de Selectores](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS).
 

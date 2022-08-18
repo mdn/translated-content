@@ -164,9 +164,9 @@ Aunque este procedimiento pueda parecer un poco aterrador al principio no te pre
 Si deseas hacer más cambios a tu sitio y enviarlos a GitHub, luego de modificar los archivos, debes ingresar los siguientes comandos (presionando <kbd>Intro</kbd> después de cada uno) para enviar esos cambios a GitHub:
 
 ```bash
-git add --all Intro
-git commit -m 'otro commit' Intro
-git push Intro
+git add --all
+git commit -m 'otro commit'
+git push
 ```
 
 Puedes reemplazar el texto _otro commit_ con un mensaje más descriptivo respecto a los cambios que hiciste.

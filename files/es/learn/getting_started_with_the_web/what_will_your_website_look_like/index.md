@@ -39,7 +39,9 @@ A continuación, toma papel y lápiz y dibuja aproximadamente cómo deseas que s
 
 ![Bosquejo](https://mdn.mozillademos.org/files/9239/website-drawing-scan.png)
 
-> **Nota:** Incluso en sitios web reales y complejos, los equipos de diseño suelen comenzar con bocetos en papel y luego crean maquetas digitales utilizando un editor de gráficos o tecnologías web.Los equipos web suelen incluir tanto un diseñador gráfico como un diseñador de {{Glossary("UX", "experiencia de usuario")}} (UX). Los diseñadores gráficos ensamblan las imágenes del sitio web. Los diseñadores de experiencia de usuario tienen un papel algo más abstracto al abordar cómo los usuarios experimentarán e interactuarán con el sitio web.
+> **Nota:** Incluso en sitios web reales y complejos, los equipos de diseño suelen comenzar con bocetos en papel y luego crean maquetas digitales utilizando un editor de gráficos o tecnologías web.
+>
+> Los equipos web suelen incluir tanto un diseñador gráfico como un diseñador de {{Glossary("UX", "experiencia de usuario")}} (UX). Los diseñadores gráficos ensamblan las imágenes del sitio web. Los diseñadores de experiencia de usuario tienen un papel algo más abstracto al abordar cómo los usuarios experimentarán e interactuarán con el sitio web.
 
 ## Elige tus activos
 
@@ -74,7 +76,7 @@ Para elegir un tipo de letra:
 
 1.  Ve a [Google Fonts](http://www.google.com/fonts) y desplázate hacia abajo en la lista hasta que encuentres una que te guste. También puedes utilizar los controles de la derecha para filtrar aún más los resultados.
 2.  Haz clic en el icono "más" (Agregar a) junto al tipo de letra que desees.
-3.  Haz clic en el botón _"Familia seleccionada"_ en el panel en la parte inferior de la página ("\*" depende de cuántos tipos de letra hayas seleccionado).
+3.  Haz clic en el botón _"*Familia seleccionada"_ en el panel en la parte inferior de la página ("\*" depende de cuántos tipos de letra hayas seleccionado).
 4.  En el cuadro emergente, puedes ver y copiar las líneas de código que Google te brinda en tu editor de texto para guardarlas para más adelante.
 
 ![Archivos de tipo de letra](https://mdn.mozillademos.org/files/13871/font1.png)

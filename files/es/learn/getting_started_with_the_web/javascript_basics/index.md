@@ -56,7 +56,9 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
 
 5.  Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](https://mdn.mozillademos.org/files/9543/hello-world.png)
 
-> **Nota:** la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
+> **Nota:** la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
+> 
+> Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
 
 ### ¿Qué ha ocurrido?
 
@@ -297,13 +299,13 @@ La expresión dentro de `if (... )` es el criterio — este usa al operador de i
 
 Las {{Glossary("Function", "funciones")}} son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices. Ya has visto algunas funciones más arriba, por ejemplo:
 
-```js
-let nombreDeLaVariable = document.querySelector('h1');
-```
+1. ```js
+    let nombreDeLaVariable = document.querySelector('h1');
+    ```
 
-```js
-alert('¡Hola!');
-```
+2. ```js
+    alert('¡Hola!');
+    ```
 
 Estas funciones `document.querySelector` y `alert` están integradas en el navegador para poder utilizarlas en cualquier momento.
 

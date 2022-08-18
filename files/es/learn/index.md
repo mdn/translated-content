@@ -26,11 +26,11 @@ El contenido del área de aprendizaje se amplía con regularidad. Se han comenza
 
 Si tienes preguntas sobre temas que te gustaría que se abordaran o te parece que faltan, envía un mensaje en el [Foro de discusión](https://discourse.mozilla.org/c/mdn), de la comunidad Mozilla (sitio en inglés).
 
-### ¿Quieres convertirte en un desarrollador de interfaz de usuario web?
-
-Hemos elaborado un curso que incluye toda la información esencial que necesitas para alcanzar tu objetivo.
-
-[Empieza aquí](/docs/Learn/Front-end_web_developer)
+> ### ¿Quieres convertirte en un desarrollador de interfaz de usuario web?
+>
+> Hemos elaborado un curso que incluye toda la información esencial que necesitas para alcanzar tu objetivo.
+>
+> [Empieza aquí](/docs/Learn/Front-end_web_developer)
 
 ## Dónde empezar
 
@@ -109,7 +109,7 @@ Si estás interesado en ayudar a desarrollar/mejorar el contenido, consulta {{we
 - [Aprende JavaScript](https://learnjavascript.online/)
   - : Un excelente recurso para los aspirantes a desarrolladores web — aprende JavaScript en un entorno interactivo, con lecciones breves y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratuitas y el curso completo está disponible por un pequeño pago único.
 - [Web desmitificada](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - .
+  - : Una gran serie de videos que explican los fundamentos de la web, dirigida a principiantes absolutos en el desarrollo web. Creada por [Jérémie Patonnier](https://twitter.com/JeremiePat).
 - [Codecademy](https://www.codecademy.com/)
   - : Un gran sitio interactivo para aprender lenguajes de programación desde cero.
 - [BitDegree](https://www.bitdegree.org/learn/)

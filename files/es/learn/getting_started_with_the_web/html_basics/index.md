@@ -190,7 +190,7 @@ Podrías hacer lo siguiente:
 <p>trabajando juntos... </p>
 ```
 
-Intenta agregar una lista ordenada o desordenada en tu página de ejemplo**.**
+Intenta agregar una lista ordenada o desordenada en tu página de ejemplo.
 
 ## Vínculos
 
