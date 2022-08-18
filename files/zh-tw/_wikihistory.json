@@ -5137,6 +5137,13 @@
       "Shiyou"
     ]
   },
+  "Web/Events/Event_handlers": {
+    "modified": "2020-05-13T00:05:39.122Z",
+    "contributors": [
+      "ginszme",
+      "jackblackevo"
+    ]
+  },
   "Web/Guide": {
     "modified": "2019-03-23T23:29:55.855Z",
     "contributors": [
@@ -8295,13 +8302,6 @@
     "contributors": [
       "jackblackevo",
       "gportioli"
-    ]
-  },
-  "orphaned/Web/Guide/Events/Event_handlers": {
-    "modified": "2020-05-13T00:05:39.122Z",
-    "contributors": [
-      "ginszme",
-      "jackblackevo"
     ]
   },
   "orphaned/Web/Guide/HTML/HTML5": {
