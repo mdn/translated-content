@@ -76,7 +76,6 @@
 /zh-TW/docs/Core_JavaScript_1.5_教學/正規表達式的運用/正則表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/Core_JavaScript_1.5_教學/正規表達式的運用/正規表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/Core_JavaScript_1.5_教學/物件和屬性	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Working_with_Objects
-/zh-TW/docs/Core_JavaScript_1.5_教學/物件的操作語法	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法
 /zh-TW/docs/Core_JavaScript_1.5_教學/繼承	/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/Core_JavaScript_1.5_教學/職員的例子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子
 /zh-TW/docs/Core_JavaScript_1.5_教學/職員的例子/更靈活的建構子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_b021bd32308e4c421518cdd7104ac7bc
@@ -233,7 +232,6 @@
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/正規表達式的運用/正則表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/正規表達式的運用/正規表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/物件和屬性	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Working_with_Objects
-/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/物件的操作語法	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/繼承	/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/職員的例子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/職員的例子/更靈活的建構子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_b021bd32308e4c421518cdd7104ac7bc
@@ -330,7 +328,6 @@
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/正則表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/正規表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件和屬性	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Working_with_Objects
-/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/繼承	/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/更靈活的建構子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_b021bd32308e4c421518cdd7104ac7bc
@@ -779,7 +776,6 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/正則表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/正規表達式的範例	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件和屬性	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Working_with_Objects
-/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/繼承	/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/更靈活的建構子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_b021bd32308e4c421518cdd7104ac7bc
