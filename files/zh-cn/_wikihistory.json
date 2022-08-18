@@ -45399,13 +45399,6 @@
       "Carrie zhxj"
     ]
   },
-  "conflicting/Web/API/Window": {
-    "modified": "2019-01-16T17:02:20.467Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:25:01.381Z",
     "contributors": [
