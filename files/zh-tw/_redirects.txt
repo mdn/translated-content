@@ -675,7 +675,7 @@
 /zh-TW/docs/Web/Guide/HTML/Forms	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form
 /zh-TW/docs/Web/Guide/HTML/HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5
-/zh-TW/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/zh-TW/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/Learn/HTML
 /zh-TW/docs/Web/Guide/Performance/Using_web_workers	/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers
 /zh-TW/docs/Web/Guide/圖像	/zh-TW/docs/Web/Guide/Graphics
 /zh-TW/docs/Web/HTML/Applying_color	/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color
@@ -685,7 +685,7 @@
 /zh-TW/docs/Web/HTML/Element/導航欄	/zh-TW/docs/Web/HTML/Element/nav
 /zh-TW/docs/Web/HTML/Forms_in_HTML	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/HTML/HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5
-/zh-TW/docs/Web/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/zh-TW/docs/Web/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/Learn/HTML
 /zh-TW/docs/Web/HTML/HTML5_表單	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web/HTML/Supported_media_formats	/zh-TW/docs/conflicting/Web/Media/Formats
