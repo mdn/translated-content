@@ -656,7 +656,7 @@
 /zh-TW/docs/Web/Guide/DOM	/zh-TW/docs/conflicting/Web/API/Document_Object_Model
 /zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode	/zh-TW/docs/Web/API/Fullscreen_API
-/zh-TW/docs/Web/Guide/Events	/zh-TW/docs/orphaned/Web/Guide/Events
+/zh-TW/docs/Web/Guide/Events	/zh-TW/docs/Web/Events
 /zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events	/zh-TW/docs/Web/Events/Creating_and_triggering_events
 /zh-TW/docs/Web/Guide/Events/Event_handlers	/zh-TW/docs/Web/Events/Event_handlers
 /zh-TW/docs/Web/Guide/HTML	/zh-TW/docs/Learn/HTML
