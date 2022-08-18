@@ -16,34 +16,36 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onpointerdown
 original_slug: Web/API/GlobalEventHandlers/onpointerdown
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>ontransitioncancel</code></strong> は {{domxref("GlobalEventHandlers")}} のイベントハンドラーで、ポインティングデバイスが最初に押されたときに発生する {{event("pointerdown")}} イベントのイベントハンドラーを指定するために使用します。このイベントは {{domxref("Window")}}, {{domxref("Document")}}, {{domxref("Element")}} の各オブジェクトに送信されることがあります。</p>
+**`ontransitioncancel`** は {{domxref("GlobalEventHandlers")}} のイベントハンドラーで、ポインティングデバイスが最初に押されたときに発生する {{event("pointerdown")}} イベントのイベントハンドラーを指定するために使用します。このイベントは {{domxref("Window")}}, {{domxref("Document")}}, {{domxref("Element")}} の各オブジェクトに送信されることがあります。
 
-<p>これは、マウスまたはマウスと互換性のあるデバイスでユーザーが操作したために生成された場合の {{event("mousedown")}} イベントと機能的に同等です。 <code>pointerdown</code> イベントが {{domxref("Event.preventDefault", "preventDefault()")}} の呼び出しによってキャンセルされなかった場合、ほとんどのユーザーエージェントは <code>mousedown</code> イベントを発生させるので、ポインターイベントを使用していないサイトでも機能します。</p>
+これは、マウスまたはマウスと互換性のあるデバイスでユーザーが操作したために生成された場合の {{event("mousedown")}} イベントと機能的に同等です。 `pointerdown` イベントが {{domxref("Event.preventDefault", "preventDefault()")}} の呼び出しによってキャンセルされなかった場合、ほとんどのユーザーエージェントは `mousedown` イベントを発生させるので、ポインターイベントを使用していないサイトでも機能します。
 
-<p>{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、 <code>pointerdown</code> イベントのリスナーを追加することもできます。</p>
+{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、 `pointerdown` イベントのリスナーを追加することもできます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>target</var>.onpointerdown = <var>downHandler</var>;
+```
+target.onpointerdown = downHandler;
 
-var <var>downHandler</var> = <var>target</var>.onpointerdown;
-</pre>
+var downHandler = target.onpointerdown;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>関数 ({{jsxref("Function")}}) で、 <code>pointerdown</code> イベントが<code><var>target</var></code> で指定された {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}} に送られた場合に処理するためのものです。これは入力として <code>pointerdown</code> イベントを記述する {{domxref("PointerEvent")}} を受け取ります。</p>
+関数 ({{jsxref("Function")}}) で、 `pointerdown` イベントが`target` で指定された {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}} に送られた場合に処理するためのものです。これは入力として `pointerdown` イベントを記述する {{domxref("PointerEvent")}} を受け取ります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例では、<code>onpointerdown</code> を使用して <code>pointerdown</code> イベントを監視し、それに基づいて行動する方法を示します。 もちろん、<code>addEventListener()</code> を使うこともできます。</p>
+この例では、`onpointerdown` を使用して `pointerdown` イベントを監視し、それに基づいて行動する方法を示します。 もちろん、`addEventListener()` を使うこともできます。
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>まず、<code>pointerdown</code> イベントを処理する JavaScript コードを見てみましょう。</p>
+まず、`pointerdown` イベントを処理する JavaScript コードを見てみましょう。
 
-<pre class="brush: js notranslate">var targetBox = document.getElementById("target");
+```js
+var targetBox = document.getElementById("target");
 
 targetBox.onpointerdown = handleDown;
 
@@ -65,47 +67,48 @@ function handleDown(evt) {
       break;
   }
 
-  targetBox.innerHTML = "&lt;strong&gt;Thanks for " + action + " me!&lt;/strong&gt;";
+  targetBox.innerHTML = "<strong>Thanks for " + action + " me!</strong>";
   evt.preventDefault();
-}</pre>
+}
+```
 
-<p>これは単に <code>pointerdown</code> イベントのイベントハンドラとして関数 <code>handleDown()</code> を確立するために <code>onpointerdown</code> を使います。</p>
+これは単に `pointerdown` イベントのイベントハンドラとして関数 `handleDown()` を確立するために `onpointerdown` を使います。
 
-<p><code>handleDown()</code> 関数は、今度は {{domxref("PointerEvent.pointerType", "pointerType")}} の値を調べて使用されているポインティングデバイスの種類を判断し、その情報を使用して文字列をカスタマイズしてターゲットボックスの内容を置き換えます。</p>
+`handleDown()` 関数は、今度は {{domxref("PointerEvent.pointerType", "pointerType")}} の値を調べて使用されているポインティングデバイスの種類を判断し、その情報を使用して文字列をカスタマイズしてターゲットボックスの内容を置き換えます。
 
-<p>それから、イベントの {{domxref("Event.preventDefault", "preventDefault()")}} メソッドを呼び出して、<code>mousedown</code> イベントがトリガーされないようにします。 そうしないで、ポインターイベントのサポートが欠けている場合に備えて、それらのイベント用のハンドラを持っていると、イベントが2回処理される可能性があります。</p>
+それから、イベントの {{domxref("Event.preventDefault", "preventDefault()")}} メソッドを呼び出して、`mousedown` イベントがトリガーされないようにします。 そうしないで、ポインターイベントのサポートが欠けている場合に備えて、それらのイベント用のハンドラを持っていると、イベントが 2 回処理される可能性があります。
 
-<p>{{event("pointerup")}} イベント用のハンドラーもあります。</p>
+{{event("pointerup")}} イベント用のハンドラーもあります。
 
-<pre class="brush: js notranslate">targetBox.onpointerup = handleUp;
+```js
+targetBox.onpointerup = handleUp;
 
 function handleUp(evt) {
   targetBox.innerHTML = "Tap me, click me, or touch me!";
   evt.preventDefault();
-}</pre>
+}
+```
 
-<p>このコードの役割は、ユーザーによる要素の操作が終了した後 (例えば、マウスボタンを放したとき、またはスタイラスや指を画面から離したときなど) に、元のテキストをターゲットボックスに復元することです。</p>
+このコードの役割は、ユーザーによる要素の操作が終了した後 (例えば、マウスボタンを放したとき、またはスタイラスや指を画面から離したときなど) に、元のテキストをターゲットボックスに復元することです。
 
-<p>さらに、<code>mouseup</code> イベントが不必要にトリガーされないようにするために、イベントの {{domxref("Event.preventDefault", "preventDefault()")}} メソッドを呼び出します。</p>
+さらに、`mouseup` イベントが不必要にトリガーされないようにするために、イベントの {{domxref("Event.preventDefault", "preventDefault()")}} メソッドを呼び出します。
 
-<details><summary>
-<h4 id="HTML">HTML</h4>
-</summary>
+#### HTML
 
-<p>HTML は次のように非常に単純です。</p>
+HTML は次のように非常に単純です。
 
-<pre class="brush: html notranslate">&lt;div id="target"&gt;
+```html
+<div id="target">
   Tap me, click me, or touch me!
-&lt;/div&gt;</pre>
-</details>
+</div>
+```
 
-<details><summary>
-<h4 id="CSS" name="CSS">CSS</h4>
-</summary>
+#### CSS
 
-<p>CSS は単にターゲットの外観を設定するだけで、その機能にはまったく影響しません。</p>
+CSS は単にターゲットの外観を設定するだけで、その機能にはまったく影響しません。
 
-<pre class="brush: css notranslate">#target {
+```css
+#target {
   width: 400px;
   height: 30px;
   text-align: center;
@@ -118,49 +121,30 @@ function handleUp(evt) {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}</pre>
-</details>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>結果の出力は次の通りです。 ボックスをタップ、クリック、タッチして、何が起こるかを確認してください。 最大の効果を得るには、さまざまなポインタタイプで試してください。</p>
+結果の出力は次の通りです。 ボックスをタップ、クリック、タッチして、何が起こるかを確認してください。 最大の効果を得るには、さまざまなポインタタイプで試してください。
 
-<p>{{EmbedLiveSample("Example", 450, 50)}}</p>
+{{EmbedLiveSample("Example", 450, 50)}}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerdown', 'onpointerdown')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>不安定版</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerdown', 'onpointerdown')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                                     | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
+| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerdown', 'onpointerdown')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
+| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerdown', 'onpointerdown')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.GlobalEventHandlers.onpointerdown")}}</p>
+{{Compat("api.GlobalEventHandlers.onpointerdown")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Pointer_events">ポインターイベント</a></li>
- <li><a href="/ja/docs/Web/API/Pointer_events/Using_Pointer_Events">ポインターイベントの使用</a></li>
- <li><a href="/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems">座標系</a></li>
- <li><code><a href="/ja/docs/Web/API/Document/pointerdown_event">Document: pointerdown</a></code> イベント</li>
- <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerdown_event">HTMLElement: pointerdown</a></code> イベント</li>
-</ul>
+- [ポインターイベント](/ja/docs/Web/API/Pointer_events)
+- [ポインターイベントの使用](/ja/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)
+- [`Document: pointerdown`](/ja/docs/Web/API/Document/pointerdown_event) イベント
+- [`HTMLElement: pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event) イベント

@@ -12,61 +12,50 @@ tags:
   - touchmove
 translation_of: Web/API/Element/touchmove_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><span class="seoSummary"><code>touchmove</code> イベントは、タッチ面上で1つ以上のタッチ点が移動したときに発生します。</span></p>
+`touchmove` イベントは、タッチ面上で 1 つ以上のタッチ点が移動したときに発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("TouchEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("TouchEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>これらのイベントのコード例は、専用のページ「<a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>」にあります。</p>
+これらのイベントのコード例は、専用のページ「[タッチイベント](/ja/docs/Web/API/Touch_events)」にあります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Touch Events', '#event-touchmove')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           | 状態                             |
+| ---------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('Touch Events', '#event-touchmove')}} | {{Spec2('Touch Events')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.touchmove_event")}}</p>
+{{Compat("api.Element.touchmove_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Touch_events">タッチイベント</a></li>
- <li>{{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}} と {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}</li>
- <li>{{domxref("Document")}} をターゲットとしたこのイベント: {{domxref("Document/touchmove_event", "touchmove")}}</li>
-</ul>
+- [タッチイベント](/ja/docs/Web/API/Touch_events)
+- {{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}
+- {{domxref("Element/mousemove_event", "mousemove")}} と {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
+- {{domxref("Document")}} をターゲットとしたこのイベント: {{domxref("Document/touchmove_event", "touchmove")}}

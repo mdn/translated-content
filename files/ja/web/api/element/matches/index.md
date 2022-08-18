@@ -11,56 +11,57 @@ tags:
   - webkitMatchesSelector
 translation_of: Web/API/Element/matches
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>matches()</code></strong> メソッドは、その要素 ({{domxref("Element")}}) が指定された <code><var>selectorString</var></code> によって選択されるかをチェックします。言い換えれば、要素「が」セレクターであることをチェックします。</p>
+**`matches()`** メソッドは、その要素 ({{domxref("Element")}}) が指定された `selectorString` によって選択されるかをチェックします。言い換えれば、要素「が」セレクターであることをチェックします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>result</var> = <var>element</var>.matches(<var>selectorString</var>);
-</pre>
+```
+var result = element.matches(selectorString);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p><code><var>selectorString</var></code> は、テストするためのセレクターを表す文字列です。</p>
+`selectorString` は、テストするためのセレクターを表す文字列です。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code><var>result</var></code> は {{domxref("Boolean")}} です。</p>
+`result` は {{domxref("Boolean")}} です。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>指定されたセレクター文字列が無効である場合。</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : 指定されたセレクター文字列が無効である場合。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html notranslate">&lt;ul id="birds"&gt;
-  &lt;li&gt;Orange-winged parrot&lt;/li&gt;
-  &lt;li class="endangered"&gt;Philippine eagle&lt;/li&gt;
-  &lt;li&gt;Great white pelican&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul id="birds">
+  <li>Orange-winged parrot</li>
+  <li class="endangered">Philippine eagle</li>
+  <li>Great white pelican</li>
+</ul>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var birds = document.getElementsByTagName('li');
 
-  for (var i = 0; i &lt; birds.length; i++) {
+  for (var i = 0; i < birds.length; i++) {
     if (birds[i].matches('.endangered')) {
       console.log('The ' + birds[i].textContent + ' is endangered!');
     }
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>要素が実際に値 <code>endangered</code> 持つ <code>class</code> 属性を持つので、これは、コンソールのログに "The Philippine eagle is endangered!" と表示されます。</p>
+要素が実際に値 `endangered` 持つ `class` 属性を持つので、これは、コンソールのログに "The Philippine eagle is endangered!" と表示されます。
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p><code>Element.matches()</code> や <code>Element.matchesSelector()</code> には対応していないが、 <code>document.querySelectorAll()</code> には対応しているブラウザーには、ポリフィルが存在します。</p>
+`Element.matches()` や `Element.matchesSelector()` には対応していないが、 `document.querySelectorAll()` には対応しているブラウザーには、ポリフィルが存在します。
 
-<pre class="brush: js notranslate">if (!Element.prototype.matches) {
+```js
+if (!Element.prototype.matches) {
   Element.prototype.matches =
       Element.prototype.matchesSelector ||
       Element.prototype.mozMatchesSelector ||
@@ -70,49 +71,32 @@ translation_of: Web/API/Element/matches
       function(s) {
         var matches = (this.document || this.ownerDocument).querySelectorAll(s),
             i = matches.length;
-        while (--i &gt;= 0 &amp;&amp; matches.item(i) !== this) {}
-        return i &gt; -1;
+        while (--i >= 0 && matches.item(i) !== this) {}
+        return i > -1;
       };
-}</pre>
+}
+```
 
-<p>しかし、古いブラウザーに対応することの実用性を考えると、実用的なケース (言い換えると IE9 以降の対応) ではほとんどの場合 (全部ではない)、次のもので十分です。</p>
+しかし、古いブラウザーに対応することの実用性を考えると、実用的なケース (言い換えると IE9 以降の対応) ではほとんどの場合 (全部ではない)、次のもので十分です。
 
-<pre class="brush: js notranslate">if (!Element.prototype.matches) {
+```js
+if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector ||
                               Element.prototype.webkitMatchesSelector;
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}} | {{Spec2('DOM WHATWG')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.removeAttribute")}}</p>
+{{Compat("api.Element.removeAttribute")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>
-  <div class="syntaxbox"><a href="/ja/docs/Web/Guide/CSS/Getting_started/Selectors">セレクターの構文</a></div>
- </li>
- <li>
-  <div class="syntaxbox">セレクターを使用するその他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.closest()")}}</div>
- </li>
-</ul>
+- [セレクターの構文](/ja/docs/Web/Guide/CSS/Getting_started/Selectors)
+- セレクターを使用するその他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.closest()")}}

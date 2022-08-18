@@ -11,29 +11,30 @@ tags:
   - hasPointerCapture
 translation_of: Web/API/Element/hasPointerCapture
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">{{domxref("Element")}} インターフェイスの <strong><code>hasPointerCapture()</code></strong> メソッドは、それを呼び出した要素が、与えられたポインタ ID によって識別されるポインタに対するポインタキャプチャを持つかどうかを示します。</span></p>
+{{domxref("Element")}} インターフェイスの **`hasPointerCapture()`** メソッドは、それを呼び出した要素が、与えられたポインタ ID によって識別されるポインタに対するポインタキャプチャを持つかどうかを示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>targetElement</em>.hasPointerCapture(<em>pointerId</em>);</pre>
+```
+targetElement.hasPointerCapture(pointerId);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>pointerId</code></dt>
- <dd>{{domxref("PointerEvent")}} オブジェクトの {{domxref("PointerEvent.pointerId", "pointerId")}}。</dd>
-</dl>
+- `pointerId`
+  - : {{domxref("PointerEvent")}} オブジェクトの {{domxref("PointerEvent.pointerId", "pointerId")}}。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref("Boolean")}} の値 — 要素がポインタキャプチャを持っている場合は <code>true</code>、持っていない場合は <code>false</code> です。</p>
+{{jsxref("Boolean")}} の値 — 要素がポインタキャプチャを持っている場合は `true`、持っていない場合は `false` です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     function downHandler(ev) {
       const el = document.getElementById("target");
       // 要素 'target' はそれ以上のイベントを受信/キャプチャします
@@ -54,40 +55,25 @@ translation_of: Web/API/Element/hasPointerCapture
       const el = document.getElementById("target");
       el.onpointerdown = downHandler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt;この要素をポインタでタッチします。&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target">この要素をポインタでタッチします。</div>
+  </body>
+</html>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-element-haspointercapture', 'hasPointerCapture()')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                 | 状態                                     | コメント |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName('Pointer Events 2','#dom-element-haspointercapture', 'hasPointerCapture()')}} | {{Spec2('Pointer Events 2')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.Element.hasPointerCapture")}}
 
+## 関連情報
 
-<p>{{Compat("api.Element.hasPointerCapture")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{ domxref("Element.setPointerCapture()")}}</li>
- <li>{{ domxref("Element.releasePointerCapture()")}}</li>
- <li>{{ domxref("Pointer_events","Pointer Events") }}</li>
-</ul>
+- {{ domxref("Element.setPointerCapture()")}}
+- {{ domxref("Element.releasePointerCapture()")}}
+- {{ domxref("Pointer_events","Pointer Events") }}
