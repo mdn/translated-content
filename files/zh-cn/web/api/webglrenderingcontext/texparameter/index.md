@@ -135,9 +135,9 @@ void gl.texParameteri(GLenum target, GLenum pname, GLint param);
 
 ### 返回值
 
-`INVALID_ENUM `target 不是合法的值。
+`INVALID_ENUM` target 不是合法的值。
 
-`INVALID_OPRATION `当前目标上没有绑定纹理对象。
+`INVALID_OPRATION` 当前目标上没有绑定纹理对象。
 
 ## 示例
 

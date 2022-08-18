@@ -44,7 +44,7 @@ console.log(child_nodes.length); // 但此时的输出是“3”
 
 ## 例子
 
-可以使用 [for](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环遍历一个` NodeList` 对象中的所有的节点：
+可以使用 [for](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环遍历一个 `NodeList` 对象中的所有的节点：
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {

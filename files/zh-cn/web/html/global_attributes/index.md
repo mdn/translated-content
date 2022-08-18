@@ -11,7 +11,7 @@ slug: Web/HTML/Global_attributes
 除了基本的 HTML 全局属性之外，还存在以下全局属性：
 
 - {{htmlattrdef("xml:lang")}} 和 {{htmlattrdef("xml:base")}} ——两者都是从 XHTML 规范继承，但为了兼容性而被保留的。
-- 多重[`aria-*`](https://developer.mozilla.org/zh-CN/docs/Web/Accessibility/ARIA)属性，用于改善可访问性。
+- 多重[`aria-*`](/zh-CN/docs/Web/Accessibility/ARIA) 属性，用于改善可访问性。
 - [事件处理程序](/zh-CN/docs/Web/Guide/Events/Event_handlers) 属性：**`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
 
 ## 全局属性列表
@@ -77,7 +77,7 @@ slug: Web/HTML/Global_attributes
 - [{{htmlattrdef("itemtype")}}](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)
   - : 指定将用于在数据结构中定义`itemprops`（项属性）的词汇表的 URL。 [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes/itemscope)用于设置数据结构中按`itemtype`设置的词汇表的生效范围。
 - [{{htmlattrdef("lang")}}](/zh-CN/docs/Web/HTML/Global_attributes/lang)
-  - : 帮助定义元素的语言：不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个“语言标记”(由用连字符分隔的“语言子标记”组成)，格式在 [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) 中定义。**[xml:lang](/zh-CN/docs/Web/HTML/Global_attributes$edit#attr-xml:lang) **优先于它。
+  - : 帮助定义元素的语言：不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个“语言标记”(由用连字符分隔的“语言子标记”组成)，格式在 [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) 中定义。**[xml:lang](/zh-CN/docs/Web/HTML/Global_attributes#attr-xml:lang) **优先于它。
 - [{{HTMLAttrDef("part")}}](/zh-CN/docs/Web/HTML/Global_attributes/part) {{Experimental_Inline}}
   - : 元素的部件名称的空格分隔列表。Part 名称允许 CSS 通过{{CSSxRef("::part()")}} 伪元素选择和设置阴影关联树中的特定元素。
 - [{{htmlattrdef("slot")}}](/zh-CN/docs/Web/HTML/Global_attributes/slot)

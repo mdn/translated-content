@@ -43,7 +43,7 @@ slug: Web/HTML/Element/Input/radio
 
 A {{domxref("DOMString")}} 表示单选按钮的值。它永远不会在客户端看到，但是在服务器上，这就是使用单选按钮 `name` 提交的数据的 `value`。查看以下示例：
 
-### 定义一个单选按钮组[节](/zh-CN/docs/Web/HTML/Element/Input/radio$edit#Defining_a_radio_group)
+### 定义一个单选按钮组[节](/zh-CN/docs/Web/HTML/Element/Input/radio#Defining_a_radio_group)
 
 一个单选按钮组由具有相同 {{htmlattrxref("name", "input")}}属性的单选按钮组成。 一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。
 

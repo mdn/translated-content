@@ -27,8 +27,6 @@ slug: Web/HTML/Global_attributes/itemscope
 </div>
 ```
 
-####
-
 #### 结构化数据
 
 下表展示了上面例子当中的结构化数据。
@@ -236,7 +234,7 @@ Directions: <br>
   </tbody>
 </table>
 
-> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[ Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
+> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
 
 ## 规范
 

@@ -78,4 +78,4 @@ worker.onmessageerror = (event) => {
 ## 另请参阅
 
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- 相关事件：[`message`](/docs/Web/API/Worker/message_event).
+- 相关事件：[`message`](/zh-CN/docs/Web/API/Worker/message_event).

@@ -75,7 +75,7 @@ Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 
 是的，预取的请求包含一个 HTTP `Referer:` header，指示从中提取预取提示的文档。
 
-这可能会影响许多站点上常用的引荐来源跟踪。 因此，链接预取可能不适用于所有内容。 但是，可以通过指定`Cache-control: must-revalidate `HTTP response header，指示 Mozilla 在用户遵循 href 到预提取文档时验证预提取文档。 此标头可启用缓存，但在从浏览器的缓存中提供文档之前，需要`If-Modified-Since`或`If-None-Match`验证请求。
+这可能会影响许多站点上常用的引荐来源跟踪。 因此，链接预取可能不适用于所有内容。 但是，可以通过指定 `Cache-control: must-revalidate` HTTP response header，指示 Mozilla 在用户遵循 href 到预提取文档时验证预提取文档。 此标头可启用缓存，但在从浏览器的缓存中提供文档之前，需要 `If-Modified-Since` 或 `If-None-Match` 验证请求。
 
 ### 作为服务器管理员，我可以区分预取请求和普通请求吗？
 

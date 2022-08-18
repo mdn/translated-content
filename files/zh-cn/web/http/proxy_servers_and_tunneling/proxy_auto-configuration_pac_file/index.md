@@ -111,7 +111,7 @@ application/x-ns-proxy-autoconfig
 
 - 基于 URL 或主机名的判断函数
 
-  - [`shExpMatch()`](<#shExpMatch(str, shexp)>)
+  - [`shExpMatch()`](#shExpMatchstr_shexp)
 
 - 基于时间的判断函数
 
@@ -125,9 +125,9 @@ application/x-ns-proxy-autoconfig
 
 - 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
 
-  - `ProxyConfig.bindings `{{Deprecated_Inline}}
+  - `ProxyConfig.bindings` {{Deprecated_Inline}}
 
-> **备注：** pactester ( [pacparser ](https://github.com/pacparser/pacparser)的一部分) 可以用来检测语法是否符合要求，使用方法如下：
+> **备注：** pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
 > - PAC 文件保存为 `proxy.pac`
 > - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。`
@@ -389,11 +389,12 @@ weekdayRange(wd1, wd2, [gmt])
 
 - wd1 和 wd2
   - : One of the ordered weekday strings:
-- ```plain
+
+  ```plain
   "SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"
   ```
 
-  gmt
+- gmt
 
   - : 可以指定为字符串 "`GMT`"，或留白不指定。
 

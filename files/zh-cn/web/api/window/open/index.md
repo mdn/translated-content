@@ -22,13 +22,13 @@ let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeature
 ## 参数与返回值
 
 - `WindowObjectReference`
-  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null 。如果`父子窗口满足“[同源策略](/cn/JavaScript%E7%9A%84%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5)”，你可以通过这个引用访问新窗口的属性或方法。
+  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null 。如果`父子窗口满足“[同源策略](/zh-CN/JavaScript%E7%9A%84%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5)”，你可以通过这个引用访问新窗口的属性或方法。
 - `strUrl`
   - : 新窗口需要载入的 url 地址。*strUrl*可以是 web 上的 html 页面也可以是图片文件或者其他任何浏览器支持的文件格式。
 - `strWindowName`
   - : 新窗口的名称。该字符串可以用来作为超链接 {{HTMLElement("a")}} 或表单 {{HTMLElement("form")}} 元素的目标属性值。字符串中不能含有空白字符。注意：_strWindowName_ 并不是新窗口的标题。
 - `strWindowFeatures`
-  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。 字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](<#Position and size features>)。
+  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。 字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](#Position_and_size_features>)。
 
 ## 说明
 
@@ -85,8 +85,6 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 ![Firefox Chrome Toolbars Illustration](https://developer.mozilla.org/@api/deki/files/210/=FirefoxChromeToolbarsDescription7a.gif)
 
 ## 位置尺寸特征
-
-###
 
 [Note on position and dimension error correction](#Note_on_position_and_dimension_error_correction)
 

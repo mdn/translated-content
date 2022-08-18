@@ -6,7 +6,7 @@ slug: Web/Events/Creating_and_triggering_events
 
 ## 创建自定义事件
 
-Events 可以使用 [`Event`](/zh/docs/Web/API/Event) 构造函数创建如下：
+Events 可以使用 [`Event`](/zh-CN/docs/Web/API/Event) 构造函数创建如下：
 
 ```js
 var event = new Event('build');
