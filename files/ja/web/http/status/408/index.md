@@ -9,40 +9,29 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/408
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HyperText Transfer Protocol (HTTP) <code><strong>408 Request Timeout</strong></code> レスポンスステータスコードはサーバーがこの未使用のコネクションをシャットダウンすることを意味します。 <em>クライアントからの以前のリクエストがなくても</em>、一部のサーバーによってアイドル状態のコネクションで送信されます。</p>
+HyperText Transfer Protocol (HTTP) **`408 Request Timeout`** レスポンスステータスコードはサーバーがこの未使用のコネクションをシャットダウンすることを意味します。 _クライアントからの以前のリクエストがなくても_、一部のサーバーによってアイドル状態のコネクションで送信されます。
 
-<p><code>408</code> はサーバーがコネクションを待機し続けるのではなく、閉じることを決定することを意味しているため、サーバーはレスポンスで "close" {{HTTPHeader("Connection")}} ヘッダーフィールドを送信する必要があります。</p>
+`408` はサーバーがコネクションを待機し続けるのではなく、閉じることを決定することを意味しているため、サーバーはレスポンスで "close" {{HTTPHeader("Connection")}} ヘッダーフィールドを送信する必要があります。
 
-<p>このレスポンスは HTTP 事前接続メカニズム使用してサーフィンを高速化するために、Chrome や、Firefox 27+、IE9 などの、いくつかのブラウザでよく利用されます。</p>
+このレスポンスは HTTP 事前接続メカニズム使用してサーフィンを高速化するために、Chrome や、Firefox 27+、IE9 などの、いくつかのブラウザでよく利用されます。
 
-<div class="note">
-<p><strong>メモ: </strong>このメッセージを送信せずに接続をシャットダウンするサーバーもあります。</p>
-</div>
+> **Note:** **メモ:** このメッセージを送信せずに接続をシャットダウンするサーバーもあります。
 
-<h2 id="ステータス">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">408 Request Timeout</pre>
+```
+408 Request Timeout
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">タイトル</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "408 Request Timeout" , "6.5.7")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           | タイトル                                                      |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li>{{HTTPHeader("Connection")}}</li>
- <li>{{HTTPHeader("X-DNS-Prefetch-Control")}}</li>
-</ul>
+- {{HTTPHeader("Connection")}}
+- {{HTTPHeader("X-DNS-Prefetch-Control")}}

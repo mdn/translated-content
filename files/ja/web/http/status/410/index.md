@@ -9,45 +9,32 @@ tags:
   - ステータスコード
 translation_of: Web/HTTP/Status/410
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HyperText Transfer Protocol (HTTP) の <code><strong>410 Gone</strong></code> クライエントエラーレスポンスコードは、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。</p>
+HyperText Transfer Protocol (HTTP) の **`410 Gone`** クライエントエラーレスポンスコードは、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
 
-<p>この状態が一時的なものか永久なのか分からない場合は、代わりに {{HTTPStatus(404)}} ステータスコードを使用してください。</p>
+この状態が一時的なものか永久なのか分からない場合は、代わりに {{HTTPStatus(404)}} ステータスコードを使用してください。
 
-<div class="note">
-<p><strong>メモ:</strong> 410 レスポンスは既定でキャッシュ可能です。</p>
-</div>
+> **Note:** **メモ:** 410 レスポンスは既定でキャッシュ可能です。
 
-<h2 id="Status" name="Status">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">410 Gone</pre>
+```
+410 Gone
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "410 Gone" , "6.5.9")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                           | 題名                                                          |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "410 Gone" , "6.5.9")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>以下に示す情報は、 MDN の GitHub から取得したものです。 (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.410")}}</p>
+{{Compat("http.status.410")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPStatus(404)}}</li>
-</ul>
+- {{HTTPStatus(404)}}

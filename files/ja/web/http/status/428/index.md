@@ -9,37 +9,28 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/428
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>428 Precondition Required</strong></code> レスポンスステータスコードは、サーバーがリクエストを<a href="/ja/docs/Web/HTTP/Conditional_requests">条件付き</a>にする必要があることを示します。</p>
+HTTP **`428 Precondition Required`** レスポンスステータスコードは、サーバーがリクエストを[条件付き](/ja/docs/Web/HTTP/Conditional_requests)にする必要があることを示します。
 
-<p>通常、これは {{HTTPHeader("If-Match")}} のような必須の前提条件ヘッダーが<strong>ない</strong>ことを意味します。</p>
+通常、これは {{HTTPHeader("If-Match")}} のような必須の前提条件ヘッダーが**ない**ことを意味します。
 
-<p>前提条件ヘッダーがサーバー側の状態と<strong>一致しない</strong>場合、レスポンスは {{HTTPStatus(412)}} <code>Precondition Failed</code> である必要があります。</p>
+前提条件ヘッダーがサーバー側の状態と**一致しない**場合、レスポンスは {{HTTPStatus(412)}} `Precondition Failed` である必要があります。
 
-<h2 id="ステータス">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">428 Precondition Required</pre>
+```
+428 Precondition Required
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">タイトル</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6585", "428 Precondition Required" , "3")}}</td>
-   <td>Additional HTTP Status Codes</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                               | タイトル                     |
+| -------------------------------------------------------------------- | ---------------------------- |
+| {{RFC("6585", "428 Precondition Required" , "3")}} | Additional HTTP Status Codes |
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/Conditional_requests">HTTP conditional requests</a></li>
- <li>{{HTTPHeader("If-Match")}}</li>
- <li>{{HTTPStatus(412)}}</li>
-</ul>
+- [HTTP conditional requests](/ja/docs/Web/HTTP/Conditional_requests)
+- {{HTTPHeader("If-Match")}}
+- {{HTTPStatus(412)}}

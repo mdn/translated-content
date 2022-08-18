@@ -13,62 +13,56 @@ tags:
   - 同一オリジン
 translation_of: Web/HTTP/CORS/Errors
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary"><ruby><a href="/ja/docs/Web/HTTP/CORS">オリジン間リソース共有</a><rp> (</rp><rt>Cross-Origin Resource Sharing</rt><rp>) </rp></ruby> ({{Glossary("CORS")}}) は、サーバーが<a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a>を緩和することができる標準です。</span>例えば、サイトが埋め込み可能なサービスを提供する場合、このような制約を緩和する必要があるかもしれません。このような CORS の構成の設定は必ずしも簡単ではなく、いくらか冒険的です。これらのページでは、よくある CORS のエラーメッセージと解決方法を調査します。</p>
+[オリジン間リソース共有](/ja/docs/Web/HTTP/CORS) (Cross-Origin Resource Sharing) ({{Glossary("CORS")}}) は、サーバーが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を緩和することができる標準です。例えば、サイトが埋め込み可能なサービスを提供する場合、このような制約を緩和する必要があるかもしれません。このような CORS の構成の設定は必ずしも簡単ではなく、いくらか冒険的です。これらのページでは、よくある CORS のエラーメッセージと解決方法を調査します。
 
-<p>CORS 構成が正しく設定されていないと、ブラウザーコンソールには <code>"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at $somesite"</code> のようなエラーを表示して、リクエストが CORS のセキュリティ規則を侵害しているためにブロックされたことを示します。これは必ずしも設定ミスとは限りません。実際には、ユーザーのウェブアプリケーションおよびリモートの外部サービスからのリクエストが、意図的に許可されていない場合もあります。しかし、ただし、エンドポイントが使用可能である場合、成功するためにはデバッグが必要です。</p>
+CORS 構成が正しく設定されていないと、ブラウザーコンソールには `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at $somesite"` のようなエラーを表示して、リクエストが CORS のセキュリティ規則を侵害しているためにブロックされたことを示します。これは必ずしも設定ミスとは限りません。実際には、ユーザーのウェブアプリケーションおよびリモートの外部サービスからのリクエストが、意図的に許可されていない場合もあります。しかし、ただし、エンドポイントが使用可能である場合、成功するためにはデバッグが必要です。
 
-<h2 id="Identifying_the_issue" name="Identifying_the_issue">問題の識別</h2>
+## 問題の識別
 
-<p>CORS の構成に関する問題を理解するために、どのリクエストが、なぜ失敗したのかを調べる必要があります。そのためには以下の手順が役立つかもしれません。</p>
+CORS の構成に関する問題を理解するために、どのリクエストが、なぜ失敗したのかを調べる必要があります。そのためには以下の手順が役立つかもしれません。
 
-<ol>
- <li>問題のウェブサイトやウェブアプリを実行し、<a href="/ja/docs/Tools">開発者ツール</a>を開く。</li>
- <li>失敗するトランザクションを再現してみて、<a href="/ja/docs/Tools/Web_Console">コンソール</a>で CORS 違反エラーメッセージが表示されるかを調べる。おそらく次のように見える。</li>
-</ol>
+1.  問題のウェブサイトやウェブアプリを実行し、[開発者ツール](/ja/docs/Tools)を開く。
+2.  失敗するトランザクションを再現してみて、[コンソール](/ja/docs/Tools/Web_Console)で CORS 違反エラーメッセージが表示されるかを調べる。おそらく次のように見える。
 
-<p><img alt="CORS エラーを表示している Firefox コンソール" src="https://mdn.mozillademos.org/files/16050/cors-error2.png"></p>
+![CORS エラーを表示している Firefox コンソール](https://mdn.mozillademos.org/files/16050/cors-error2.png)
 
-<p>エラーメッセージのテキストは以下のようなものになるでしょう。</p>
+エラーメッセージのテキストは以下のようなものになるでしょう。
 
-<pre>Cross-Origin Request Blocked: The Same Origin Policy disallows
-reading the remote resource at <em>https://some-url-here</em>. (<em>Reason:
-additional information here</em>).</pre>
+```
+Cross-Origin Request Blocked: The Same Origin Policy disallows
+reading the remote resource at https://some-url-here. (Reason:
+additional information here).
+```
 
-<div class="note">
-<p><strong>メモ:</strong> セキュリティ上の理由から、 CORS リクエストで何を失敗したかについては <em>JavaScript コードからは特定できません</em>。コードから分かることは、エラーが発生したことだけです。何を失敗したかを特定するための唯一の方法は、詳細をブラウザーのコンソールで見ることです。</p>
-</div>
+> **Note:** **メモ:** セキュリティ上の理由から、 CORS リクエストで何を失敗したかについては _JavaScript コードからは特定できません_。コードから分かることは、エラーが発生したことだけです。何を失敗したかを特定するための唯一の方法は、詳細をブラウザーのコンソールで見ることです。
 
-<h2 id="CORS_error_messages" name="CORS_error_messages">CORS のエラーメッセージ</h2>
+## CORS のエラーメッセージ
 
-<p>Firefox のコンソールは、 CORS のためにリクエストが失敗した場合はコンソールにメッセージを表示します。エラーテキストには、何が失敗したのかの分析が追加された「reason」の部分があります。 reason のメッセージは以下の通りです。メッセージをクリックすると、エラーをより詳細に説明し、可能な解決方法を提供する記事を開くことができます。</p>
+Firefox のコンソールは、 CORS のためにリクエストが失敗した場合はコンソールにメッセージを表示します。エラーテキストには、何が失敗したのかの分析が追加された「reason」の部分があります。 reason のメッセージは以下の通りです。メッセージをクリックすると、エラーをより詳細に説明し、可能な解決方法を提供する記事を開くことができます。
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSDisabled">Reason: CORS disabled</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed">Reason: CORS request did not succeed</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded">Reason: CORS header ‘Origin’ cannot be added</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed">Reason: CORS request external redirect not allowed</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp">Reason: CORS request not http</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin">Reason: CORS header ‘Access-Control-Allow-Origin’ missing</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin">Reason: CORS header ‘Access-Control-Allow-Origin’ does not match ‘xyz’</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials">Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound">Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials">Reason: expected ‘true’ in CORS header ‘Access-Control-Allow-Credentials’</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed">Reason: CORS preflight channel did not succeed</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod">Reason: invalid token ‘xyz’ in CORS header ‘Access-Control-Allow-Methods’</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader">Reason: invalid token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight">Reason: missing token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’ from CORS preflight channel</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed">Reason: Multiple CORS header ‘Access-Control-Allow-Origin’ not allowed</a></li>
-</ul>
+- [Reason: CORS disabled](/ja/docs/Web/HTTP/CORS/Errors/CORSDisabled)
+- [Reason: CORS request did not succeed](/ja/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)
+- [Reason: CORS header ‘Origin’ cannot be added](/ja/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
+- [Reason: CORS request external redirect not allowed](/ja/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
+- [Reason: CORS request not http](/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
+- [Reason: CORS header ‘Access-Control-Allow-Origin’ missing](/ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
+- [Reason: CORS header ‘Access-Control-Allow-Origin’ does not match ‘xyz’](/ja/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
+- [Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘\*’](/ja/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
+- [Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’](/ja/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
+- [Reason: expected ‘true’ in CORS header ‘Access-Control-Allow-Credentials’](/ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
+- [Reason: CORS preflight channel did not succeed](/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed)
+- [Reason: invalid token ‘xyz’ in CORS header ‘Access-Control-Allow-Methods’](/ja/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
+- [Reason: invalid token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’](/ja/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
+- [Reason: missing token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’ from CORS preflight channel](/ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
+- [Reason: Multiple CORS header ‘Access-Control-Allow-Origin’ not allowed](/ja/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>用語集: {{Glossary("CORS")}}</li>
- <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
- <li><a href="/ja/docs/Web/HTTP/Server-Side_Access_Control">サーバー側 CORS 設定</a></li>
- <li><a href="/ja/docs/Web/HTML/CORS_enabled_image">CORS 有効化の画像</a></li>
- <li><a href="/ja/docs/Web/HTML/CORS_settings_attributes">CORS の設定属性</a></li>
- <li><a href="https://www.test-cors.org">https://www.test-cors.org</a> – CORS リクエストの試験ページ</li>
-</ul>
+- 用語集: {{Glossary("CORS")}}
+- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [サーバー側 CORS 設定](/ja/docs/Web/HTTP/Server-Side_Access_Control)
+- [CORS 有効化の画像](/ja/docs/Web/HTML/CORS_enabled_image)
+- [CORS の設定属性](/ja/docs/Web/HTML/CORS_settings_attributes)
+- <https://www.test-cors.org> – CORS リクエストの試験ページ

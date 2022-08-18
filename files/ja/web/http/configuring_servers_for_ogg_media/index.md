@@ -8,83 +8,82 @@ tags:
   - Video
 translation_of: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p class="summary">HTML {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を使用すると、ユーザーはプラグインやその他のソフトウェアをインストールする必要なくメディアを表示できます。サーバーが Ogg メディアを正しく配信するためには、いくつか設定が必要な場合があります。</p>
+HTML {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を使用すると、ユーザーはプラグインやその他のソフトウェアをインストールする必要なくメディアを表示できます。サーバーが Ogg メディアを正しく配信するためには、いくつか設定が必要な場合があります。
 
-<h2 id="正しい_MIME_タイプの_Ogg_メディアを提供する">正しい MIME タイプの Ogg メディアを提供する</h2>
+## 正しい MIME タイプの Ogg メディアを提供する
 
-<p>*.ogg and *.ogv files containing video (possibly with an audio track as well, of course), should be served with the <code>video/ogg</code> MIME type. *.oga and *.ogg files containing only audio should be served with the <code>audio/ogg</code> MIME type.</p>
+\*.ogg and \*.ogv files containing video (possibly with an audio track as well, of course), should be served with the `video/ogg` MIME type. \*.oga and \*.ogg files containing only audio should be served with the `audio/ogg` MIME type.
 
-<p>If you don't know whether the Ogg file contains audio or video, you can serve it with the MIME type application/ogg, and Gecko will treat it as a video file.</p>
+If you don't know whether the Ogg file contains audio or video, you can serve it with the MIME type application/ogg, and Gecko will treat it as a video file.
 
-<p>Most servers don't by default serve Ogg media with the correct MIME types, so you'll likely need to add the appropriate configuration for this.</p>
+Most servers don't by default serve Ogg media with the correct MIME types, so you'll likely need to add the appropriate configuration for this.
 
-<p>For Apache, you can add the following to your configuration:</p>
+For Apache, you can add the following to your configuration:
 
-<pre>AddType audio/ogg .oga
+```
+AddType audio/ogg .oga
 AddType video/ogg .ogv
 AddType application/ogg .ogg
-</pre>
+```
 
-<h2 id="HTTP_1.1_byte_range_requests_を正しく処理する">HTTP 1.1 byte range requests を正しく処理する</h2>
+## HTTP 1.1 byte range requests を正しく処理する
 
-<p>In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.</p>
+In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
 
-<p>Your server should accept the {{HTTPHeader("Accept-Ranges")}}<code>: bytes</code> HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}<code>: Partial content</code> to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.</p>
+Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
 
-<p>Your server must also return "<code>206: Partial Content</code>" for the request "<code>Range: bytes=0-</code>" as well.</p>
+Your server must also return "`206: Partial Content`" for the request "`Range: bytes=0-`" as well.
 
-<h2 id="通常のキーフレームを含める">通常のキーフレームを含める</h2>
+## 通常のキーフレームを含める
 
-<p>When Gecko seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.</p>
+When Gecko seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
 
-<p>By default, <a class="external" href="http://v2v.cc/~j/ffmpeg2theora/"><code>ffmpeg2theora</code></a> uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.</p>
+By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
-<div class="note"><strong>Note:</strong> Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.</div>
+> **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
-<h2 id="preload_属性の使用を検討する">preload 属性の使用を検討する</h2>
+## preload 属性の使用を検討する
 
-<p>The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the <code>preload</code> attribute, which tells Gecko to attempt to download the entire media when the page loads. Without <code>preload</code>, Gecko only downloads enough of the media to display the first video frame, and to determine the media's duration.</p>
+The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells Gecko to attempt to download the entire media when the page loads. Without `preload`, Gecko only downloads enough of the media to display the first video frame, and to determine the media's duration.
 
-<p><code>preload</code> is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include <code>preload</code> in your video elements.</p>
+`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements.
 
-<h2 id="古いバージョンの_Firefox_の設定">古いバージョンの Firefox の設定</h2>
+## 古いバージョンの Firefox の設定
 
-<h3 id="Serve_X-Content-Duration_headers">Serve X-Content-Duration headers</h3>
+### Serve X-Content-Duration headers
 
-<div class="note">
-<p><strong>Note</strong>: As of <a href="/ja/Firefox/Releases/41">Firefox 41</a>, the <code>X-Content-Duration</code> header is no longer supported. See {{Bug(1160695)}} for more details.</p>
-</div>
+> **Note:** As of [Firefox 41](/ja/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
 
-<p>The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.</p>
+The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 
-<p>There are two ways Gecko can do this. The best way is to offer an <code>X-Content-Duration</code> header when serving Ogg media files. This header provides the duration of the video in seconds (<strong>not</strong> in HH:MM:SS format) as a floating-point value.</p>
+There are two ways Gecko can do this. The best way is to offer an `X-Content-Duration` header when serving Ogg media files. This header provides the duration of the video in seconds (**not** in HH:MM:SS format) as a floating-point value.
 
-<p>For example, if the video is 1 minute and 32.6 seconds long, this header would be:</p>
+For example, if the video is 1 minute and 32.6 seconds long, this header would be:
 
-<pre>X-Content-Duration: 92.6
-</pre>
+```
+X-Content-Duration: 92.6
+```
 
-<p>If your server provides the <code>X-Content-Duration</code> header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.</p>
+If your server provides the `X-Content-Duration` header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.
 
-<p>As an inferior alternative, Gecko can estimate the video length based on the Content-Length. See next point.</p>
+As an inferior alternative, Gecko can estimate the video length based on the Content-Length. See next point.
 
-<h3 id="Don't_use_gzipdeflate_compression">Don't use gzip/deflate compression</h3>
+### Don't use gzip/deflate compression
 
-<p>One common way to reduce the load on a web server is to use <a class="external" href="http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip or deflate compression</a> when serving to a supporting web browser. When Firefox requests an Ogg media, it advertises that it can handle a gzipped or deflated response; the HTTP request includes the <code>Accept-Encoding: gzip,deflate</code> header. But despite Firefox advertising that it supports gzip/deflate, you probably don't want to gzip or deflate Ogg media. If you serve an Ogg media compressed, Firefox won't be able to seek in the media, or determine its duration. Since the video/audio data in Ogg files is already compressed, gzip/deflate won't actually save you much bandwidth anyway, so you probably want to disable compression when serving Ogg files.</p>
+One common way to reduce the load on a web server is to use [gzip or deflate compression](http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/) when serving to a supporting web browser. When Firefox requests an Ogg media, it advertises that it can handle a gzipped or deflated response; the HTTP request includes the `Accept-Encoding: gzip,deflate` header. But despite Firefox advertising that it supports gzip/deflate, you probably don't want to gzip or deflate Ogg media. If you serve an Ogg media compressed, Firefox won't be able to seek in the media, or determine its duration. Since the video/audio data in Ogg files is already compressed, gzip/deflate won't actually save you much bandwidth anyway, so you probably want to disable compression when serving Ogg files.
 
-<p>Also, Apache servers don't send the Content-Length response header if gzip encoding is used.</p>
+Also, Apache servers don't send the Content-Length response header if gzip encoding is used.
 
-<div class="note">
-<p><strong>Note:</strong> Starting in {{Gecko("2.0") }}, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.</p>
-</div>
+> **Note:** Starting in {{Gecko("2.0") }}, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
 
-<h3 id="Getting_the_duration_of_Ogg_media">Getting the duration of Ogg media</h3>
+### Getting the duration of Ogg media
 
-<p>You can use the <code>oggz-info</code> tool to get the media duration; this tool is included with the <a class="external" href="http://www.xiph.org/oggz/"><code>oggz-tools</code></a> package. The output from <code>oggz-info</code> looks like this:</p>
+You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](http://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
 
-<pre> $ oggz-info /g/media/bruce_vs_ironman.ogv
+```
+ $ oggz-info /g/media/bruce_vs_ironman.ogv
  Content-Duration: 00:01:00.046
 
  Skeleton: serialno 1976223438
@@ -102,15 +101,13 @@ AddType application/ogg .ogg
          4531 packets in 167 pages, 27.1 packets/page, 1.408% Ogg overhead
          Audio-Samplerate: 44100 Hz
          Audio-Channels: 2
-</pre>
+```
 
-<p>Note that you can't simply serve up the reported Content-Duration line reported by <code>oggz-info</code>, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your <code>X-Content-Duration</code> value. Just parse out the HH, MM, and SS into numbers, then do (HH*3600)+(MM*60)+SS to get the value you should report.</p>
+Note that you can't simply serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your `X-Content-Duration` value. Just parse out the HH, MM, and SS into numbers, then do (HH\*3600)+(MM\*60)+SS to get the value you should report.
 
-<p>It's important to note that it appears that <code>oggz-info</code> makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.</p>
+It's important to note that it appears that `oggz-info` makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/ja/docs/Web/HTML/Supported_media_formats">Media formats supported by the audio and video elements</a></li>
-</ul>
+- [Video and audio content](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Media formats supported by the audio and video elements](/ja/docs/Web/HTML/Supported_media_formats)
