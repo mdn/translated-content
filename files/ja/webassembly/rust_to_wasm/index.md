@@ -193,11 +193,11 @@ $ wasm-pack build --target web
 
 このコマンドは多くのことをします (そして時間がかかます。特に初めて `wasm-pack` を実行したときはそうです)。それらについて詳しく学ぶには、[Mozilla Hacks のこのブログ投稿](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)を確認してください。手短に説明すると、`wasm-pack build` は次のことをします。
 
-1.  Rust コードを WebAssembly にコンパイルする。
-2.  `wasm-bindgen` をその WebAssembly に対して実行し、WebAssembly ファイルを npm が理解できるモジュールにラップする JavaScript ファイルを生成する。
-3.  `pkg` ディレクトリーを作成し、その JavaScript ファイルと WebAssembly コードをそこに移動する。
-4.  `Cargo.toml` を読み、等価な `package.json` を生成する。
-5.  (もし存在するなら) `README.md` をパッケージにコピーする。
+1. Rust コードを WebAssembly にコンパイルする。
+2. `wasm-bindgen` をその WebAssembly に対して実行し、WebAssembly ファイルを npm が理解できるモジュールにラップする JavaScript ファイルを生成する。
+3. `pkg` ディレクトリーを作成し、その JavaScript ファイルと WebAssembly コードをそこに移動する。
+4. `Cargo.toml` を読み、等価な `package.json` を生成する。
+5. (もし存在するなら) `README.md` をパッケージにコピーする。
 
 最終的な結果は？ npm パッケージが `pkg` ディレクトリーに生成されます。
 

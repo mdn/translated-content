@@ -123,11 +123,11 @@ function loadShader(gl, type, source) {
 
 The `loadShader()` function takes as input the WebGL context, the shader type, and the source code, then creates and compiles the shader as follows:
 
-1.  A new shader is created by calling {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.
-2.  The shader's source code is sent to the shader by calling {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.
-3.  Once the shader has the source code, it's compiled using {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.
-4.  To check to be sure the shader successfully compiled, the shader parameter `gl.COMPILE_STATUS` is checked. To get its value, we call {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, specifying the shader and the name of the parameter we want to check (`gl.COMPILE_STATUS`). If that's `false`, we know the shader failed to compile, so show an alert with log information obtained from the compiler using {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, then delete the shader and return `null` to indicate a failure to load the shader.
-5.  If the shader was loaded and successfully compiled, the compiled shader is returned to the caller.
+1. A new shader is created by calling {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.
+2. The shader's source code is sent to the shader by calling {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.
+3. Once the shader has the source code, it's compiled using {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.
+4. To check to be sure the shader successfully compiled, the shader parameter `gl.COMPILE_STATUS` is checked. To get its value, we call {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, specifying the shader and the name of the parameter we want to check (`gl.COMPILE_STATUS`). If that's `false`, we know the shader failed to compile, so show an alert with log information obtained from the compiler using {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, then delete the shader and return `null` to indicate a failure to load the shader.
+5. If the shader was loaded and successfully compiled, the compiled shader is returned to the caller.
 
 To use this code we call it like this
 
@@ -197,7 +197,7 @@ Once that's done, we create a JavaScript array containing the position for each 
 
 Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 
-> **Note:** You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on `glmatrix`. You can include [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js)[ ](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js)to resolve this issue, as suggested [here](https://github.com/mdn/webgl-examples/issues/20).
+> **Note:** You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on `glmatrix`. You can include [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) to resolve this issue, as suggested [here](https://github.com/mdn/webgl-examples/issues/20).
 
 ```js
 function drawScene(gl, programInfo, buffers) {

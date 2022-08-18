@@ -42,9 +42,9 @@ mvRotate(squareRotation, [1, 0, 1]);
 ```js
   var currentTime = Date.now();
   if (lastSquareUpdateTime) {
-  	var delta = currentTime - lastSquareUpdateTime;
+    var delta = currentTime - lastSquareUpdateTime;
 
-  	squareRotation += (30 * delta) / 1000.0;
+    squareRotation += (30 * delta) / 1000.0;
   }
 
   lastSquareUpdateTime = currentTime;

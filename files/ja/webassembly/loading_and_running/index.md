@@ -88,10 +88,10 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) は Fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は `simple.wasm` とします:
 
-1.  {{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを `GET` に設定し、フェッチするためのパスを宣言します。
-2.  キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを `'arraybuffer'` にすることです。
-3.  次に {{domxref("XMLHttpRequest.send()")}} を使用してリクエストします。
-4.  そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.onload", "onload")}} イベントハンドラから関数を実行します — この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetch で行ったように {{jsxref("WebAssembly.instantiate()")}} メソッドに渡します。
+1. {{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを `GET` に設定し、フェッチするためのパスを宣言します。
+2. キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを `'arraybuffer'` にすることです。
+3. 次に {{domxref("XMLHttpRequest.send()")}} を使用してリクエストします。
+4. そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.onload", "onload")}} イベントハンドラから関数を実行します — この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetch で行ったように {{jsxref("WebAssembly.instantiate()")}} メソッドに渡します。
 
 最終的なコードは以下のようになります:
 
