@@ -2,19 +2,21 @@
 title: Rust から WebAssembly にコンパイルする
 slug: WebAssembly/Rust_to_wasm
 tags:
+  - Compiling
   - WebAssembly
   - rust
   - wasm
-  - コンパイル
 translation_of: WebAssembly/Rust_to_wasm
+l10n:
+  sourceCommit: 51f2cde58fff4a44242577b2540bdfdfc525dda4
 ---
 {{WebAssemblySidebar}}
 
 Rust のコードがあれば、それを [WebAssembly](/ja/docs/WebAssembly) (wasm) にコンパイルすることができます。このチュートリアルでは Rust プロジェクトをコンパイルして既存のウェブアプリケーションで使用するために必要なことについて説明します。
 
-## Rust と WebAssembly のユースケース
+## Rust と WebAssembly の用途
 
-Rust と WebAssembly には、主に 2 つのユースケースがあります。
+Rust と WebAssembly には、主に 2 つの用途があります。
 
 - アプリケーション全体を構築する — ウェブアプリ全体を Rust ベースで構築します。
 - アプリケーションの一部を構築する — 既存の JavaScript フロントエンドの内部で Rust を使用します。
@@ -41,34 +43,9 @@ Rust と WebAssembly には、主に 2 つのユースケースがあります�
 $ cargo install wasm-pack
 ```
 
-### Node.js のインストールと npm アカウントの取得
+## WebAssembly パッケージのビルド
 
-このチュートリアルでは npm パッケージをビルドするので、Node.js と npm のインストールが必要になります。さらに、パッケージを npm にパブリッシュするので、npm アカウントも必要になります。それらは無料です。*技術的には*パッケージをパブリッシュする必要はありませんが、そのほうが簡単に使用できるので、このチュートリアルではそうすると仮定します。
-
-Node.js と npm を取得するために、[Get npm!](https://www.npmjs.com/get-npm) ページに行き、手順に従ってください。バージョンの選択に関しては、好きなバージョンを選択してください。このチュートリアルはバージョンに特有ではありません。
-
-npm アカウントを取得するために、[npm signup page](https://www.npmjs.com/signup) に行き、フォームに記入してください。
-
-次に、コマンドラインで `npm adduser` を実行してください。
-
-```bash
-$ npm adduser
-Username: yournpmusername
-Password:
-Email: (this IS public) you@example.com
-```
-
-ユーザー名とパスワードとメールアドレスを記入してください。うまくいけば、以下の表示が見られます。
-
-```bash
-Logged in as yournpmusername on https://registry.npmjs.org/.
-```
-
-もし何かうまくいかなければ、トラブルシューティングのヘルプを得るために npm に連絡してください。
-
-## WebAssembly の npm パッケージのビルド
-
-セットアップは以上です。Rust で新しいパッケージを作りましょう。個人的なプロジェクトを置いておく場所へ移動して以下を実行してください。
+セットアップは以上です。 Rust で新しいパッケージを作りましょう。個人的なプロジェクトを置いておく場所へ移動して以下を実行してください。
 
 ```bash
 $ cargo new --lib hello-wasm
@@ -77,21 +54,25 @@ $ cargo new --lib hello-wasm
 
 これにより新たなライブラリが出発に必要なものすべてと一緒に `hello-wasm` という名前のサブディレクトリーに作成されます。
 
-<pre class="brush: none no-line-numbers">+-- Cargo.toml
+```plain
++-- Cargo.toml
 +-- src
-    +-- lib.rs</pre>
+    +-- lib.rs
+```
 
 まず `Cargo.toml` があります。これはビルドを設定するためのファイルです。もし `Gemfile` を Bundler から使ったり、`package.json` を npm から使ったりしたことがあるなら、なじみがあるでしょう。cargo は両者と似たような動作をします。
 
-次に、cargo はいくつかの Rust コードを `src/lib.rs` に生成してくれています。
+次に、 Cargo はいくつかの Rust コードを `src/lib.rs` に生成してくれています。
 
-<pre class="brush: rust;">#[cfg(test)]
+```rust
+#[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
         assert_eq!(2 + 2, 4);
     }
-}</pre>
+}
+```
 
 このチュートリアルでは、このテストコードはまったく使わないので、消してください。
 
@@ -99,19 +80,19 @@ mod tests {
 
 代わりに以下のコードを `src/lib.rs` に書き込みましょう。
 
-<pre class="brush: rust">extern crate wasm_bindgen;
-
+```rust
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern {
-    pub fn alert(s: &#x26;str);
+    pub fn alert(s: &str);
 }
 
 #[wasm_bindgen]
-pub fn greet(name: &#x26;str) {
-    alert(&#x26;format!("Hello, {}!", name));
-}</pre>
+pub fn greet(name: &str) {
+    alert(&format!("Hello, {}!", name));
+}
+```
 
 これが Rust プロジェクトの中身です。三つの主要な部分があります。順番に説明しましょう。ここでは高水準な説明を行い、細部は省略します。Rust についてもっと学びたいのであれば、無料のオンラインブック [The Rust Programming Language](https://doc.rust-lang.org/book/) (訳注: [和訳](https://doc.rust-jp.rs/book/second-edition/)もあります) を確認してください。
 
@@ -119,11 +100,11 @@ pub fn greet(name: &#x26;str) {
 
 最初の部分は以下のようになっています。
 
-<pre class="brush: rust">extern crate wasm_bindgen;
+```rust
+use wasm_bindgen::prelude::*;
+```
 
-use wasm_bindgen::prelude::*;</pre>
-
-1 行目は「やあ Rust、`wasm_bindgen` というライブラリを使ってるよ」ということです。ライブラリは Rust では「クレート」と呼ばれ、外部 (external) のクレートを使っているので `extern` キーワードを使用しています。
+ライブラリは Rust では「クレート」と呼ばれます。
 
 理解できましたか？ _Cargo_ が*クレート*を取り入れるのです。
 
@@ -139,10 +120,12 @@ use wasm_bindgen::prelude::*;</pre>
 
 次の部分は以下のようになっています。
 
-<pre class="brush: rust;">#[wasm_bindgen]
+```rust
+#[wasm_bindgen]
 extern {
-    pub fn alert(s: &#x26;str);
-}</pre>
+    pub fn alert(s: &str);
+}
+```
 
 `#[ ]` の内側は「アトリビュート」と呼ばれ、次に来る文を何らかの形で修飾します。この場合、その文は外部で定義された関数を呼び出したいことを Rust に伝える `extern` です。アトリビュートは「wasm-bindgen はこれらの関数を見つける方法を知っている」ということを意味しています。
 
@@ -156,10 +139,12 @@ JavaScript 関数を呼び出したい時はいつでも、このファイルに
 
 最後の部分は以下のコードです。
 
-<pre class="brush: rust">#[wasm_bindgen]
-pub fn greet(name: &#x26;str) {
-    alert(&#x26;format!("Hello, {}!", name));
-}</pre>
+```rust
+#[wasm_bindgen]
+pub fn greet(name: &str) {
+    alert(&format!("Hello, {}!", name));
+}
+```
 
 再び `#[wasm_bindgen]` アトリビュートが目に入ります。この場合、`extern` ブロックではなく `fn` を改変しています。これは JavaScript がこの Rust 関数を呼び出せるようにしてほしいということを意味します。これは `extern` とは逆です。自分が必要とする関数ではなく、外の世界に渡す関数なのです。
 
@@ -175,19 +160,22 @@ pub fn greet(name: &#x26;str) {
 
 コードを正しくコンパイルするには、はじめに `Cargo.toml` で設定する必要があります。`Cargo.toml` を開き、以下のように中身を変更してください。
 
-<pre class="brush: toml">[package]
+```toml
+[package]
 name = "hello-wasm"
 version = "0.1.0"
-authors = ["Your Name &#x3C;you@example.com>"]
+authors = ["Your Name <you@example.com>"]
 description = "A sample project with wasm-pack"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/yourgithubusername/hello-wasm"
+edition = "2018"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2"</pre>
+wasm-bindgen = "0.2"
+```
 
 自分自身のリポジトリを記入し、`git` が `authors` フィールドに使用するものと同じ情報を使用してください。
 
@@ -200,7 +188,7 @@ wasm-bindgen = "0.2"</pre>
 すべてのセットアップが完了したので、ビルドしましょう。ターミナルに以下のものを入力してください。
 
 ```bash
-$ wasm-pack build --scope mynpmusername
+$ wasm-pack build --target web
 ```
 
 このコマンドは多くのことをします (そして時間がかかます。特に初めて `wasm-pack` を実行したときはそうです)。それらについて詳しく学ぶには、[Mozilla Hacks のこのブログ投稿](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)を確認してください。手短に説明すると、`wasm-pack build` は次のことをします。
@@ -217,16 +205,63 @@ $ wasm-pack build --scope mynpmusername
 
 生成された WebAssembly のコードサイズについて確認すると、それはおそらく数百キロバイトでしょう。Rust にはサイズの最適化をまったく指示しておらず、最適化すればサイズを大幅に削減できます。これはこのチュートリアルの脱線ですが、もしもっと学習したいなら、Rust WebAssembly Working Group の[.wasm のサイズの縮小](https://rustwasm.github.io/book/game-of-life/code-size.html#shrinking-wasm-size)を確認してください。
 
-### パッケージの npm への発行
+## パッケージのウェブでの利用
 
-この新たなパッケージを npm レジストリに発行しましょう。
+さて、コンパイルされた wasm モジュールが入手できたので、ブラウザーで動かしてみましょう。
+
+まず、プロジェクトのルートに `index.html` という名前のファイルを作成し、以下のような内容にしてみましょう。
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, {greet} from "./pkg/hello_wasm.js";
+      init()
+        .then(() => {
+          greet("WebAssembly")
+        });
+    </script>
+  </body>
+</html>
+```
+
+このファイルのスクリプトは、js グルーコードをインポートし、wasm モジュールを初期化し、rust で書いた `greet` 関数を呼び出します。
+
+プロジェクトのルートディレクトリに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server` ）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server)を参考にしてください。
+
+> **Note:** 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。
+
+ウェブサーバーから `index.html` を読み込む （Python3 の例を使用する場合: `http://localhost:8000`）。 画面上にアラートボックスが現れ、 `Hello, WebAssembly!` と表示されます。 JavaScript から Rust へ、そして Rust から JavaScript への呼び出しに成功しました。
+
+## npm でパッケージが利用できるようにする
+
+WebAssembly モジュールを npm で使用する場合、いくつかの変更が必要です。
+
+まず、Rust を target bundler オプションで再コンパイルすることから始めましょう。
+
+```bash
+$ wasm-pack build --target bundler
+```
+
+### Node.js と npm のインストール
+
+npmパッケージを構築しているので、Node.jsと npm をインストールしておく必要があります。
+
+Node.js と npm を入手するには、 [Get npm!](https://docs.npmjs.com/getting-started/) ページへ移動して指示に従ってください。バージョンは好きなものを選んでください。このチュートリアルはバージョンを詳細に指定するものではありません。
+
+次に、インストールした他の JavaScript パッケージがこのパッケージを利用できるようにするために、 \`npm link\` を使用しましょう。
 
 ```bash
 $ cd pkg
-$ npm publish --access=public
+$ npm link
 ```
 
-Rust で書かれ、WebAssembly にコンパイルされた npm パッケージができました。JavaScript から利用する準備ができており、ユーザーが Rust をインストールすることを必要としません。コードに含まれているのは WebAssembly コードであり、Rust のソースではないのです。
+Rust で書かれ、 WebAssembly にコンパイルされた npm パッケージができました。JavaScript から利用する準備ができており、ユーザーが Rust をインストールすることを必要としません。コードに含まれているのは WebAssembly コードであり、Rust のソースではないのです。
 
 ## パッケージのウェブでの利用
 
@@ -235,9 +270,10 @@ Rust で書かれ、WebAssembly にコンパイルされた npm パッケージ�
 `pkg` ディレクトリーの外に戻り、新たなディレクトリー `site` を作成し、そこでこれを試してみましょう。
 
 ```bash
-$ cd ../..
+$ cd ..
 $ mkdir site
 $ cd site
+$ npm link hello-wasm
 ```
 
 新しいファイル `package.json` を作成し、次のコードをそこに書き込んでください。
@@ -248,7 +284,7 @@ $ cd site
     "serve": "webpack-dev-server"
   },
   "dependencies": {
-    "@mynpmusername/hello-wasm": "^0.1.0"
+    "hello-wasm": "^0.1.0"
   },
   "devDependencies": {
     "webpack": "^4.25.1",
@@ -257,8 +293,6 @@ $ cd site
   }
 }
 ```
-
-dependencies の項の `@` の後に自分自身のユーザー名を記入する必要があることに注意してください。
 
 次に、Webpack を設定する必要があります。`webpack.config.js` を作成し、そこに次のことを記入してください。
 
@@ -274,11 +308,21 @@ module.exports = {
 };
 ```
 
-さて HTML ファイルが必要です。`index.html` を作成し、次の内容を追加してください。
+次に、HTML ファイルで参照される `index.js` を作成し、以下の内容を追加してください。
+
+```js
+import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
+  js.greet("WebAssembly with npm");
+});
+```
+
+まこれは新しいモジュールを `node_modules` フォルダーからインポートします。これは最善の方法ではないと思いますが、デモなので、これでいいでしょう。一度そのモジュールが読み込まれると、そこから `greet` 関数を呼び出し、`"WebAssembly"` を文字列として渡します。ここに特別なことはなにもありませんが、Rust コードを呼び出していることに注意してください。JavaScript コードから観察する限り、これはただの普通のモジュールです。
+
+最後に HTML ファイルが必要です。 `index.html` を作成し、次の内容を追加してください。
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>hello-wasm example</title>
@@ -289,19 +333,6 @@ module.exports = {
 </html>
 ```
 
-最後に、HTML ファイルで参照される `index.js` を作成し、以下の内容を追加してください。
-
-```js
-const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-js.then(js => {
-  js.greet("WebAssembly");
-});
-```
-
-また npm のユーザー名を記入する必要があることに注意してください。
-
-これは新しいモジュールを `node_modules` フォルダーからインポートします。これは最善の方法ではないと思いますが、デモなので、これでいいでしょう。一度そのモジュールが読み込まれると、そこから `greet` 関数を呼び出し、`"WebAssembly"` を文字列として渡します。ここに特別なことはなにもありませんが、Rust コードを呼び出していることに注意してください。JavaScript コードから観察する限り、これはただの普通のモジュールです。
-
 ファイルを作りました。これを試してみましょう。
 
 ```bash
@@ -309,10 +340,10 @@ $ npm install
 $ npm run serve
 ```
 
-これでウェブサーバーが起動します。http\://localhost:8080 を読み込んでください。`Hello, WebAssembly!` と書かれたアラートボックスが画面に出てくるはずです。JavaScript からの Rust の呼び出しと Rust からの JavaScript の呼び出しに成功しました。
+これでウェブサーバーが起動します。 `http://localhost:8080` を読み込んでください。 `Hello, WebAssembly!` と書かれたアラートボックスが画面に出てくるはずです。JavaScript からの Rust の呼び出しと Rust からの JavaScript の呼び出しに成功しました。
 
-## 結び
+## おわりに
 
 ここでチュートリアルは終わりです。あなたの役に立ったと思われることを望みます。
 
-この領域にはたくさんの進行中の刺激的な仕事があります。もしそれをもっとよくするのを手伝いたいなら、[Rust Webassembly Working Group](http://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html) を確認してください。
+この領域にはたくさんの進行中の刺激的な仕事があります。もしそれをもっとよくするのを手伝いたいなら、 [the Rust WebAssembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html) を確認してください。
