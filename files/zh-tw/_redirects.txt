@@ -58,7 +58,7 @@
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/物件初始化子的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer
-/zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
+/zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/物件屬性的索引	/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/針對物件的類型定義屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性
 /zh-TW/docs/Core_JavaScript_1.5_教學/條件文法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
 /zh-TW/docs/Core_JavaScript_1.5_教學/條件語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
@@ -214,7 +214,7 @@
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/物件初始化子的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer
-/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
+/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/條件文法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/條件語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
@@ -310,7 +310,7 @@
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer
-/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
+/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/條件文法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/條件語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
@@ -758,7 +758,7 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer
-/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
+/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/條件文法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/條件語法	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5
