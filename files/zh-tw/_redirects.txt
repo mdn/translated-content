@@ -9,10 +9,10 @@
 /zh-TW/docs/AJAX/上手篇	/zh-TW/docs/Web/Guide/AJAX/Getting_Started
 /zh-TW/docs/AJAX:上手篇	/zh-TW/docs/Web/Guide/AJAX/Getting_Started
 /zh-TW/docs/CSS	/zh-TW/docs/Web/CSS
-/zh-TW/docs/CSS/-moz-border-image	/zh-TW/docs/orphaned/Web/CSS/border-image/border-image
+/zh-TW/docs/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/CSS/@font-face	/zh-TW/docs/Web/CSS/@font-face
 /zh-TW/docs/CSS/border-image	/zh-TW/docs/Web/CSS/border-image
-/zh-TW/docs/CSS/border-image/border-image	/zh-TW/docs/orphaned/Web/CSS/border-image/border-image
+/zh-TW/docs/CSS/border-image/border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/CSS/ime-mode	/zh-TW/docs/Web/CSS/ime-mode
 /zh-TW/docs/CSS:ime-mode	/zh-TW/docs/Web/CSS/ime-mode
 /zh-TW/docs/CSS_一般問題	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
@@ -608,7 +608,7 @@
 /zh-TW/docs/Web/API/document.querySelector	/zh-TW/docs/Web/API/Document/querySelector
 /zh-TW/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/zh-TW/docs/conflicting/Web/Accessibility/ARIA
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
-/zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/orphaned/Web/CSS/border-image/border-image
+/zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/conflicting/Web/CSS/@viewport
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
@@ -620,7 +620,7 @@
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Descendant_combinator
 /zh-TW/docs/Web/CSS/attr()	/zh-TW/docs/Web/CSS/attr
-/zh-TW/docs/Web/CSS/border-image/border-image	/zh-TW/docs/orphaned/Web/CSS/border-image/border-image
+/zh-TW/docs/Web/CSS/border-image/border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/Web/CSS/radial-gradient	/zh-TW/docs/orphaned/Web/CSS/radial-gradient()
 /zh-TW/docs/Web/CSS/radial-gradient()	/zh-TW/docs/orphaned/Web/CSS/radial-gradient()
 /zh-TW/docs/Web/CSS/transform-function/translate3d()	/zh-TW/docs/Web/CSS/transform-function/translate3d
