@@ -11,189 +11,166 @@ tags:
   - Web
 translation_of: Web/HTML/Element/canvas
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML の <code>&lt;canvas&gt;</code> 要素</strong> と <a href="/ja/docs/Web/API/Canvas_API">Canvas スクリプティング API</a> や <a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> を使用して、グラフィックやアニメーションを描画することができます。</p>
+**HTML の `<canvas>` 要素** と [Canvas スクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td>透過的コンテンツ、ただし子孫に<a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>のうち {{HTMLElement("a")}} 要素, {{HTMLElement("button")}} 要素, {{HTMLElement("input")}} 要素の {{htmlattrxref("type", "input")}} 属性が <code>checkbox</code>, <code>radio</code>, <code>button</code> のいずれか以外を含まないもの</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLCanvasElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#埋め込みコンテンツ"
+          >埋め込みコンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        透過的コンテンツ、ただし子孫に<a
+          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          >対話型コンテンツ</a
+        >のうち {{HTMLElement("a")}} 要素,
+        {{HTMLElement("button")}} 要素, {{HTMLElement("input")}}
+        要素の {{htmlattrxref("type", "input")}} 属性が
+        <code>checkbox</code>, <code>radio</code>,
+        <code>button</code> のいずれか以外を含まないもの
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLCanvasElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>他のすべての HTML 要素と同様に、<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を持ちます。</p>
+他のすべての HTML 要素と同様に、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-<dl>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>CSS ピクセルで示した座標空間の高さ。既定では150ピクセルに設定されています。</dd>
- <dt>{{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>canvas に半透明性がファクターになるかを知らせます。キャンバスは半透明性がないことがわかっていれば、描画パフォーマンスを最適化できます。これは Mozilla ベースのブラウザーしか対応していません。代わりに標準化された {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} を使用してください。</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>CSS ピクセルで示した座標空間の幅。既定では300ピクセルに設定されています。</dd>
-</dl>
+- {{htmlattrdef("height")}}
+  - : CSS ピクセルで示した座標空間の高さ。既定では 150 ピクセルに設定されています。
+- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : canvas に半透明性がファクターになるかを知らせます。キャンバスは半透明性がないことがわかっていれば、描画パフォーマンスを最適化できます。これは Mozilla ベースのブラウザーしか対応していません。代わりに標準化された {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} を使用してください。
+- {{htmlattrdef("width")}}
+  - : CSS ピクセルで示した座標空間の幅。既定では 300 ピクセルに設定されています。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<h3 id="Alternative_content" name="Alternative_content">代替コンテンツ</h3>
+### 代替コンテンツ
 
-<p><code>&lt;canvas&gt;</code> のブロックの中で、代替コンテンツを提供することが可能 (また、提供すべき) です。その内容物は、 canvas に対応しない古いブラウザーおよび JavaScript が無効であるブラウザーで描画されます。有用な代替テキストやサブ DOM のヘルプを提供すると、<a href="/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">キャンバスがよりアクセシブルになります</a>。</p>
+`<canvas>` のブロックの中で、代替コンテンツを提供することが可能 (また、提供すべき) です。その内容物は、 canvas に対応しない古いブラウザーおよび JavaScript が無効であるブラウザーで描画されます。有用な代替テキストやサブ DOM のヘルプを提供すると、[キャンバスがよりアクセシブルになります](/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)。
 
-<h3 id="Required_&lt;canvas>_tag" name="Required_&lt;canvas>_tag">&lt;/canvas&gt; タグが必要</h3>
+### \</canvas> タグが必要
 
-<p>{{HTMLElement("img")}} 要素とは異なり、 {{HTMLElement("canvas")}} 要素は終了タグ (<code>&lt;/canvas&gt;</code>) が<strong>必要です</strong>。</p>
+{{HTMLElement("img")}} 要素とは異なり、 {{HTMLElement("canvas")}} 要素は終了タグ (`</canvas>`) が**必要です**。
 
-<h3 id="Sizing_the_canvas_using_CSS_versus_HTML" name="Sizing_the_canvas_using_CSS_versus_HTML">CSS と HTML におけるキャンバスの寸法指定の違い</h3>
+### CSS と HTML におけるキャンバスの寸法指定の違い
 
-<p>表示されるキャンバスの寸法は、スタイルシートを用いて変更できますが、そうすると画像はスタイルで設定した寸法に合うように拡大縮小され、最終的なグラフィックが歪んで表示されることがあります。</p>
+表示されるキャンバスの寸法は、スタイルシートを用いて変更できますが、そうすると画像はスタイルで設定した寸法に合うように拡大縮小され、最終的なグラフィックが歪んで表示されることがあります。
 
-<p>キャンバスの寸法は、 HTML または JavaScript を用いて <code>width</code> および <code>height</code> 属性を <code>&lt;canvas&gt;</code> 要素に直接設定するした方がいいでしょう。</p>
+キャンバスの寸法は、 HTML または JavaScript を用いて `width` および `height` 属性を `<canvas>` 要素に直接設定するした方がいいでしょう。
 
-<h3 id="Maximum_canvas_size" name="Maximum_canvas_size">キャンバスの最大寸法</h3>
+### キャンバスの最大寸法
 
-<p><code>&lt;canvas&gt;</code> 要素の最大寸法はとても広いのですが、正確な寸法はブラウザーに依存します。以下のものは様々なテストやその他の情報源 (<a href="https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element">Stack Overflow</a> など) から収集したいくらかのデータです。</p>
+`<canvas>` 要素の最大寸法はとても広いのですが、正確な寸法はブラウザーに依存します。以下のものは様々なテストやその他の情報源 ([Stack Overflow](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element) など) から収集したいくらかのデータです。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">ブラウザー</th>
-   <th scope="col">最大高</th>
-   <th scope="col">最大幅</th>
-   <th scope="col">最大面積</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Chrome</td>
-   <td>32,767 pixels</td>
-   <td>32,767 pixels</td>
-   <td>268,435,456 pixels (つまり 16,384 x 16,384)</td>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>32,767 pixels</td>
-   <td>32,767 pixels</td>
-   <td>472,907,776 pixels (つまり 22,528 x 20,992)</td>
-  </tr>
-  <tr>
-   <td>Safari</td>
-   <td>32,767 pixels</td>
-   <td>32,767 pixels</td>
-   <td>268,435,456 pixels (つまり 16,384 x 16,384)</td>
-  </tr>
-  <tr>
-   <td>IE</td>
-   <td>8,192 pixels</td>
-   <td>8,192 pixels</td>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| ブラウザー | 最大高        | 最大幅        | 最大面積                                    |
+| ---------- | ------------- | ------------- | ------------------------------------------- |
+| Chrome     | 32,767 pixels | 32,767 pixels | 268,435,456 pixels (つまり 16,384 x 16,384) |
+| Firefox    | 32,767 pixels | 32,767 pixels | 472,907,776 pixels (つまり 22,528 x 20,992) |
+| Safari     | 32,767 pixels | 32,767 pixels | 268,435,456 pixels (つまり 16,384 x 16,384) |
+| IE         | 8,192 pixels  | 8,192 pixels  | ?                                           |
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。</p>
-</div>
+> **Note:** **注**: 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>このコードスニペットは、 HTML 文書に canvas 要素を追加します。ブラウザーがキャンバスをレンダリングできない場合や、キャンバスを読み込めない場合には、代替テキストが提供されます。</p>
+このコードスニペットは、 HTML 文書に canvas 要素を追加します。ブラウザーがキャンバスをレンダリングできない場合や、キャンバスを読み込めない場合には、代替テキストが提供されます。
 
-<pre class="brush: html notranslate">&lt;canvas width="300" height="300"&gt;
+```html
+<canvas width="300" height="300">
   キャンバスの表示内容を説明する代替テキストです。
-&lt;/canvas&gt;
-</pre>
+</canvas>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>それから JavaScript コード内で {{domxref("HTMLCanvasElement.getContext()")}} を呼び出して描画コンテキストを取得し、キャンバス上に描画を開始します。</p>
+それから JavaScript コード内で {{domxref("HTMLCanvasElement.getContext()")}} を呼び出して描画コンテキストを取得し、キャンバス上に描画を開始します。
 
-<pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
+```js
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);</pre>
+ctx.fillRect(10, 10, 100, 100);
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<h3 id="Alternative_content_2" name="Alternative_content_2">代替コンテンツ</h3>
+### 代替コンテンツ
 
-<p><code>canvas</code> 要素は単なるビットマップであり、描かれたオブジェクトに関する情報は提供しません。キャンバスのコンテンツには、セマンティック HTML のようなアクセシビリティツールには公開されていません。一般的に、アクセシビリティに配慮したウェブサイトやアプリではキャンバスを使用しないでください。アクセシビリティを改善するには、以下のガイドが役立ちます。</p>
+`canvas` 要素は単なるビットマップであり、描かれたオブジェクトに関する情報は提供しません。キャンバスのコンテンツには、セマンティック HTML のようなアクセシビリティツールには公開されていません。一般的に、アクセシビリティに配慮したウェブサイトやアプリではキャンバスを使用しないでください。アクセシビリティを改善するには、以下のガイドが役立ちます。
 
-<ul>
- <li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">MDN ヒット領域とアクセシビリティ</a></li>
- <li><a href="https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases">Canvas accessibility use cases</a></li>
- <li><a href="https://www.w3.org/html/wg/wiki/AddedElementCanvas">Canvas element accessibility issues</a></li>
- <li><a href="https://developer.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/">HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/scripting.html#best-practices">Best practices for interactive canvas elements</a></li>
-</ul>
+- [MDN ヒット領域とアクセシビリティ](/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
+- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
+- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
+- [HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://developer.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
+- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'semantics-scripting.html#the-canvas-element', '&lt;canvas&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                             | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}}             | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5 W3C', 'semantics-scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.canvas")}}</p>
+{{Compat("html.elements.canvas")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Canvas_API">MDN の canvas ポータル</a></li>
- <li><a href="/ja/docs/Web/API/Canvas_API/Tutorial">Canvas チュートリアル</a></li>
- <li><a href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">Canvas チートシート</a></li>
- <li><a href="/ja/demos/tag/tech:canvas">Canvas に関するデモ</a></li>
- <li><a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html">Apple によるキャンバスの紹介</a></li>
-</ul>
+- [MDN の canvas ポータル](/ja/docs/Web/API/Canvas_API)
+- [Canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)
+- [Canvas チートシート](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [Canvas に関するデモ](/ja/demos/tag/tech:canvas)
+- [Apple によるキャンバスの紹介](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
