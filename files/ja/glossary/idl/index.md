@@ -1,5 +1,5 @@
 ---
-title: IDL (インタフェース記述言語)
+title: IDL (インターフェイス記述言語)
 slug: Glossary/IDL
 tags:
   - CodingScripting
@@ -7,8 +7,10 @@ tags:
   - IDL
   - Interface description language
 translation_of: Glossary/IDL
+l10n:
+  sourceCommit: a4d73f3e2a41b98e26f8f39af143338ad4900bd5
 ---
-**IDL** (_Interface Description Language_、インタフェース記述言語) は、特定のプログラミング言語とは別にオブジェクトのインタフェースを指定するために使用される汎用言語です。
+**IDL** (_Interface Description Language_、インターフェイス記述言語) は、特定のプログラミング言語とは別にオブジェクトのインターフェイスを指定するために使用される汎用言語です。
 
 ## コンテンツ属性と IDL 属性
 
@@ -24,13 +26,8 @@ IDL 属性は必ずしも文字列とは限らず、例えば `input.maxlength` 
 
 IDL 属性は、 unsigned long、 URL、 論理型など、[他の型を反映](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes)することができます。残念ながら、明確なルールはなく、 IDL 属性が対応するコンテンツ属性と連動してどのように振る舞うかは、属性に依存します。ほとんどの場合、仕様書で定められた規則に従いますが、そうでない場合もあります。 HTML の仕様は、これを可能な限り開発者に優しいものにしようとしていますが、様々な理由 (主に歴史的な理由) で、属性によっては (例えば `select.size` など) 奇妙な振る舞いをすることもありますので、それらが正確にどのように振る舞うかを理解するには仕様書を読んでください。
 
-## 詳細情報
+## 関連情報
 
-### 一般知識
-
-- Wikipedia 上の {{interwiki("wikipedia", "インタフェース記述言語")}}
+- ウィキペディアの[インタフェース記述言語](https://ja.wikipedia.org/wiki/インタフェース記述言語)
 - [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
-
-### 技術リファレンス
-
-- [インタフェース定義言語](http://www.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)（英語）
+- [インターフェイス定義言語](https://people.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)（英語）
