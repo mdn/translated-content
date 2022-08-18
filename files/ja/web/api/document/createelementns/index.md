@@ -22,7 +22,17 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ### 引数
 
-<dl><dt><var>namespaceURI</var></dt><dd>文字列で、要素に関連付ける<a class="external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">名前空間 URI</a> を指定します。生成される要素の {{DOMxRef("element.namespaceURI", "namespaceURI")}} プロパティは <var>namespaceURI</var> の値で初期化されます。<a href="#Important_Namespace_URIs">妥当な名前空間 URI</a> も参照してください。</dd><dt><var>qualifiedName</var></dt><dd>文字列で、生成される要素の型を指定します。生成される要素の {{DOMxRef("element.nodeName", "nodeName")}} プロパティは、 <var>qualifiedName</var> の値で初期化されます。</dd><dt><var>options</var>{{Optional_Inline}}</dt><dd>任意の <code>ElementCreationOptions</code> オブジェクトで、 <code>is</code> という名前の単一のプロパティを持ち、その値として以前に <code>customElements.define()</code> を使用して定義されたカスタム要素のタグ名を設定します。以前のバージョンの <a class="external external-icon" href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a> との後方互換性のため、ブラウザーによってはここにオブジェクトの代わりに、文字列を渡すことができ、その文字列の値はカスタム要素のタグ名になります。この引数の使い方について詳しい情報は、 <a class="external external-icon" href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> を参照してください。</dd><dd>新しい要素には <code>is</code> 属性が与えられ、値はカスタム要素のタグ名になります。カスタム要素は一部のブラウザーのみで利用できる試行的な機能です。</dd></dl>
+- `namespaceURI`
+  - : 文字列で、要素に関連付ける[名前空間 URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) を指定します。生成される要素の {{DOMxRef("element.namespaceURI", "namespaceURI")}} プロパティは _namespaceURI_ の値で初期化されます。 [妥当な名前空間 URI](#important_namespace_uris) も参照してください。
+- `qualifiedName`
+  - : 文字列で、生成される要素の型を指定します。生成される要素の {{DOMxRef("element.nodeName", "nodeName")}} プロパティは、 _qualifiedName_ の値で初期化されます。
+- `options` {{Optional_Inline}}
+
+  - : 任意の `ElementCreationOptions` オブジェクトで、 `is` という名前の単一のプロパティを持ち、その値として以前に `customElements.define()` を使用して定義されたカスタム要素のタグ名を設定します。
+    以前のバージョンの [Custom Elements specification](https://www.w3.org/TR/custom-elements/) との後方互換性のため、ブラウザーによってはここにオブジェクトの代わりに、文字列を渡すことができ、その文字列の値はカスタム要素のタグ名になります。
+    この引数の使い方について詳しい情報は、  [Extending native HTML elements](https://web.dev/web-components/)  を参照してください。
+
+    新しい要素には `is` 属性が与えられ、値はカスタム要素のタグ名になります。カスタム要素は一部のブラウザーのみで利用できる試行的な機能です。
 
 ### 返値
 
