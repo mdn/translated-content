@@ -8,47 +8,28 @@ tags:
   - Reference
 translation_of: Web/API/DOMStringList
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><a href="/ja/DOM/DOMString">DOMString</a> (strings) のリストを含むいくつかの API が返す型です。</p>
+[DOMString](/ja/DOM/DOMString) (strings) のリストを含むいくつかの API が返す型です。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("DOMStringList.length")}} {{ReadOnlyInline}}</dt>
- <dd>リストの長さを返す。</dd>
-</dl>
+- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
+  - : リストの長さを返す。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("DOMStringList.item()")}}</dt>
- <dd>{{domxref("DOMString")}} を返す。</dd>
- <dt>{{domxref("DOMStringList.contains()")}}</dt>
- <dd>与えられた文字列がリストに含まれるかどうかを示す {{jsxref("Boolean")}} を返す。</dd>
-</dl>
+- {{domxref("DOMStringList.item()")}}
+  - : {{domxref("DOMString")}} を返す。
+- {{domxref("DOMStringList.contains()")}}
+  - : 与えられた文字列がリストに含まれるかどうかを示す {{jsxref("Boolean")}} を返す。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                     | ステータス                       | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-
-
-<p>{{Compat("api.DOMStringList")}}</p>
+{{Compat("api.DOMStringList")}}

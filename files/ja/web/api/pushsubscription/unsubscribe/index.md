@@ -13,25 +13,28 @@ tags:
   - unsubscribe
 translation_of: Web/API/PushSubscription/unsubscribe
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>{{domxref("PushSubscription")}} インターフェースの <code>unsubscribe()</code> メソッドは、現在のサブスクリプションが成功裏に登録解除されたときに {{domxref("Boolean")}} で解決される{{domxref("Promise")}} を返します。</p>
+{{domxref("PushSubscription")}} インターフェースの `unsubscribe()` メソッドは、現在のサブスクリプションが成功裏に登録解除されたときに {{domxref("Boolean")}} で解決される{{domxref("Promise")}} を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">​PushSubscription.unsubscribe().then(function(Boolean) { ... });</pre>
+```
+​PushSubscription.unsubscribe().then(function(Boolean) { ... });
+```
 
-<h3 id="パラメーター">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>現在のサブスクリプションが成功裏に登録解除されたときに {{domxref("Boolean")}} で解決される{{domxref("Promise")}}。</p>
+現在のサブスクリプションが成功裏に登録解除されたときに {{domxref("Boolean")}} で解決される{{domxref("Promise")}}。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
+```js
+navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
     subscription.unsubscribe().then(function(successful) {
       // 登録解除が成功
@@ -39,32 +42,20 @@ translation_of: Web/API/PushSubscription/unsubscribe
       // 登録解除が失敗
     })
   })
-});</pre>
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API','#widl-PushSubscription-unsubscribe-Promise-boolean','unsubscribe()')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                         | 状態                         | コメント   |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName('Push API','#widl-PushSubscription-unsubscribe-Promise-boolean','unsubscribe()')}} | {{Spec2('Push API')}} | 初期定義。 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.PushSubscription.unsubscribe")}}</p>
+{{Compat("api.PushSubscription.unsubscribe")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
- <li>{{domxref("PushManager.getSubscription")}}</li>
-</ul>
+- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+- {{domxref("PushManager.getSubscription")}}

@@ -3,61 +3,44 @@ title: Response.error()
 slug: Web/API/Response/error
 translation_of: Web/API/Response/error
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Response")}} インターフェイスの <strong><code>error()</code></strong> メソッドはネットワークエラーに関連付けられた新規の <code>Response</code> オブジェクトを返します。</p>
+{{domxref("Response")}} インターフェイスの **`error()`** メソッドはネットワークエラーに関連付けられた新規の `Response` オブジェクトを返します。
 
-<div class="note">
-<p><strong>Note</strong>: これは主に <a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。 エラーレスポンスの {{domxref("Response.type","type")}} は <code>error</code> に設定されています。</p>
-</div>
+> **Note:** これは主に [ServiceWorkers](/ja/docs/Web/API/ServiceWorker_API) に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。 エラーレスポンスの {{domxref("Response.type","type")}} は `error` に設定されています。
 
-<div class="note">
-<p><strong>Note</strong>: "エラー" <code>Response</code> は実際にスクリプトに公開されません。 {{domxref("GlobalFetch.fetch","fetch()")}} に対するそのような応答は、 promise を拒否します。</p>
-</div>
+> **Note:** "エラー" `Response` は実際にスクリプトに公開されません。 {{domxref("GlobalFetch.fetch","fetch()")}} に対するそのような応答は、 promise を拒否します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <em>errorResponse</em> = Response.error();</pre>
+```
+var errorResponse = Response.error();
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<p>無し</p>
+無し
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>{{domxref("Response")}} オブジェクト</p>
+{{domxref("Response")}} オブジェクト
 
-<h2 id="例">例</h2>
+## 例
 
-<p>TBD (まだどこでもサポートされていません。)</p>
+TBD (まだどこでもサポートされていません。)
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-response-error','error()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                     | 状態                     | コメント |
+| ------------------------------------------------------------------------ | ------------------------ | -------- |
+| {{SpecName('Fetch','#dom-response-error','error()')}} | {{Spec2('Fetch')}} |          |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("api.Response.error")}}
 
+## 関連項目
 
-<p>{{Compat("api.Response.error")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

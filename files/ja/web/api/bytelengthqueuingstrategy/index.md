@@ -10,67 +10,50 @@ tags:
   - Streams
 translation_of: Web/API/ByteLengthQueuingStrategy
 ---
-<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/API/Streams_API">Streams API</a> の <strong><code>ByteLengthQueuingStrategy</code></strong> インターフェイスは、ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略を提供します。</span></p>
+[Streams API](/ja/docs/Web/API/Streams_API) の **`ByteLengthQueuingStrategy`** インターフェイスは、ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略を提供します。
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}</dt>
- <dd>新しい <code>ByteLengthQueuingStrategy</code> オブジェクトのインスタンスを作成します。</dd>
-</dl>
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
+  - : 新しい `ByteLengthQueuingStrategy` オブジェクトのインスタンスを作成します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p>なし。</p>
+なし。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("ByteLengthQueuingStrategy.size()")}}</dt>
- <dd>所与のチャンクの <code>byteLength</code> プロパティを返します。</dd>
-</dl>
+- {{domxref("ByteLengthQueuingStrategy.size()")}}
+  - : 所与のチャンクの `byteLength` プロパティを返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queueingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> ByteLength<span class="class-name token">QueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+```js
+const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-<span class="keyword token">const</span> readableStream <span class="operator token">=</span> <span class="keyword token">new</span> Readable<span class="class-name token">Stream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">start</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  pull<span class="punctuation token">(controller</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">cancel</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"stream error:"</span><span class="punctuation token">,</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queueingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+const readableStream = new ReadableStream({
+  start(controller) {
+    ...
+  },
+  pull(controller) {
+    ...
+  },
+  cancel(err) {
+    console.log("stream error:", err);
+  }
+}, queueingStrategy);
 
-<span class="keyword token">var</span> size <span class="operator token">=</span> queueingStrategy<span class="punctuation token">.</span><span class="function token">size</span><span class="punctuation token">(</span><span class="punctuation token">chunk)</span></code>;</pre>
+var size = queueingStrategy.size(chunk);
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Streams','#blqs-class','ByteLengthQueuingStrategy')}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                     | 状態                         | コメント |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('Streams','#blqs-class','ByteLengthQueuingStrategy')}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.ByteLengthQueuingStrategy")}}</p>
-</div>
+{{Compat("api.ByteLengthQueuingStrategy")}}

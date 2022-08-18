@@ -15,37 +15,34 @@ tags:
   - resize
 translation_of: Web/API/MutationObserver
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>{{domxref("MutationObserver")}} インターフェイスは、 <a href="/ja/docs/Web/API/Document_Object_Model">DOM</a> ツリーへ変更が加えられたことを監視することができる機能を提供します。これは DOM3 Events の仕様で定義されていた <a href="/ja/docs/Web/API/MutationEvent">Mutation Events</a> 機能の置き換えとして設計されたものです。</p>
+{{domxref("MutationObserver")}} インターフェイスは、 [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーへ変更が加えられたことを監視することができる機能を提供します。これは DOM3 Events の仕様で定義されていた [Mutation Events](/ja/docs/Web/API/MutationEvent) 機能の置き換えとして設計されたものです。
 
-<h2 id="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
-	<dt>{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}</dt>
-	<dd>DOM の変更が行われたときに指定されたコールバック関数を呼び出す新しい <code>MutationObserver</code> を生成して返します。</dd>
-</dl>
+- {{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}
+  - : DOM の変更が行われたときに指定されたコールバック関数を呼び出す新しい `MutationObserver` を生成して返します。
 
-<h2 id="Methods">メソッド</h2>
+## メソッド
 
-<dl>
-	<dt>{{domxref("MutationObserver.disconnect()", "disconnect()")}}</dt>
-	<dd><code>MutationObserver</code> のインスタンスが今後の通知を受け取ることを、 {{domxref("MutationObserver.observe", "observe()")}} が再び呼び出されるまで停止します。</dd>
-	<dt>{{domxref("MutationObserver.observe()", "observe()")}}</dt>
-	<dd>指定したオプションに合う DOM の変更が発生したときに、コールバック関数を介して通知を受信し始めるように <code>MutationObserver</code> を構成します。</dd>
-	<dt>{{domxref("MutationObserver.takeRecords()", "takeRecords()")}}</dt>
-	<dd><code>MutationObserver</code> の通知キューから保留中の通知をすべて削除し、 {{domxref("MutationRecord")}} の新しい配列 ({{jsxref("Array")}}) で返します。</dd>
-</dl>
+- {{domxref("MutationObserver.disconnect()", "disconnect()")}}
+  - : `MutationObserver` のインスタンスが今後の通知を受け取ることを、 {{domxref("MutationObserver.observe", "observe()")}} が再び呼び出されるまで停止します。
+- {{domxref("MutationObserver.observe()", "observe()")}}
+  - : 指定したオプションに合う DOM の変更が発生したときに、コールバック関数を介して通知を受信し始めるように `MutationObserver` を構成します。
+- {{domxref("MutationObserver.takeRecords()", "takeRecords()")}}
+  - : `MutationObserver` の通知キューから保留中の通知をすべて削除し、 {{domxref("MutationRecord")}} の新しい配列 ({{jsxref("Array")}}) で返します。
 
-<h2 id="Mutation_Observer_customize_resize_event_listener_demo">Mutation Observer と resize イベントリスナーのカスタマイズとデモ</h2>
+## Mutation Observer と resize イベントリスナーのカスタマイズとデモ
 
-<p><a href="https://codepen.io/webgeeker/full/YjrZgg/">https://codepen.io/webgeeker/full/YjrZgg/</a></p>
+<https://codepen.io/webgeeker/full/YjrZgg/>
 
-<h2 id="Example">例</h2>
+## 例
 
-<p>以下の例は <a class="external" href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">このブログ記事</a> を参考にしたものです。</p>
+以下の例は [このブログ記事](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/) を参考にしたものです。
 
-<pre class="brush: js">// 変更を監視するノードを選択
+```js
+// 変更を監視するノードを選択
 const targetNode = document.getElementById('some-id');
 
 // (変更を監視する) オブザーバーのオプション
@@ -71,38 +68,24 @@ const observer = new MutationObserver(callback);
 observer.observe(targetNode, config);
 
 // その後で、監視を停止することができる
-observer.disconnect();</pre>
+observer.disconnect();
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">仕様書</th>
-			<th scope="col">状態</th>
-			<th scope="col">備考</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#interface-mutationobserver', 'MutationObserver')}}</td>
-			<td>{{ Spec2('DOM WHATWG') }}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('DOM WHATWG', '#interface-mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |      |
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MutationObserver")}}</p>
+{{Compat("api.MutationObserver")}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-	<li>{{domxref('PerformanceObserver')}}</li>
-	<li>{{domxref('ResizeObserver')}}</li>
-	<li>{{domxref('IntersectionObserver')}}</li>
-	<li><a href="https://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">A brief overview</a></li>
-	<li><a href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a></li>
-	<li><a href="https://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a></li>
-</ul>
+- {{domxref('PerformanceObserver')}}
+- {{domxref('ResizeObserver')}}
+- {{domxref('IntersectionObserver')}}
+- [A brief overview](https://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
+- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)

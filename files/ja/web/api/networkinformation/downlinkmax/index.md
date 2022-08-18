@@ -11,25 +11,26 @@ tags:
   - Reference
 translation_of: Web/API/NetworkInformation/downlinkMax
 ---
-<p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p><strong><code>NetworkInformation.downlinkMax</code></strong> 読み取り専用プロパティは、メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を返します。</p>
+**`NetworkInformation.downlinkMax`** 読み取り専用プロパティは、メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>max</em> = NetworkInformation.<em>downlinkMax</em></pre>
+```
+var max = NetworkInformation.downlinkMax
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<ul>
- <li>メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を表す<code>無制限のdouble</code>。</li>
-</ul>
+- メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を表す`無制限のdouble`。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次の例は、<code>change</code> イベントで接続をモニターして、発生した変更をロギングしています。</p>
+次の例は、`change` イベントで接続をモニターして、発生した変更をロギングしています。
 
-<pre class="brush: js"><code>function logConnectionType() {
+```js
+function logConnectionType() {
   var connectionType = 'not supported';
   var downlinkMax = 'not supported';
 
@@ -46,27 +47,15 @@ translation_of: Web/API/NetworkInformation/downlinkMax
 }
 
 logConnectionType();
-navigator.connection.addEventListener('change', logConnectionType);</code></pre>
+navigator.connection.addEventListener('change', logConnectionType);
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Network Information', '#widl-NetworkInformation-downlinkMax', 'downlinkMax')}}</td>
-   <td>{{Spec2('Network Information')}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                     | ステータス                                   | コメント   |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------- |
+| {{SpecName('Network Information', '#widl-NetworkInformation-downlinkMax', 'downlinkMax')}} | {{Spec2('Network Information')}} | 最初の定義 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.NetworkInformation.downlinkMax")}}</p>
+{{Compat("api.NetworkInformation.downlinkMax")}}

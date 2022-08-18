@@ -11,21 +11,24 @@ tags:
   - focused
 translation_of: Web/API/WindowClient/focused
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("WindowClient")}} インターフェイスの <strong><code>focused</code></strong> 読み取り専用プロパティは、現在のクライアントにフォーカスがあるかどうかを示す {{jsxref("Boolean")}} です。</span></p>
+{{domxref("WindowClient")}} インターフェイスの **`focused`** 読み取り専用プロパティは、現在のクライアントにフォーカスがあるかどうかを示す {{jsxref("Boolean")}} です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>myFocused</em> = <em>windowClient</em>.focused;</pre>
+```
+var myFocused = windowClient.focused;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{jsxref("Boolean")}}。</p>
+{{jsxref("Boolean")}}。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -34,9 +37,9 @@ translation_of: Web/API/WindowClient/focused
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client) {
+      if (client.url == '/' && 'focus' in client) {
         if(!client.focused)
           return client.focus();
         }
@@ -45,29 +48,15 @@ translation_of: Web/API/WindowClient/focused
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-windowclient-focused', 'WindowClient: focused')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                                 | コメント |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#dom-windowclient-focused', 'WindowClient: focused')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.WindowClient.focused")}}</p>
-</div>
+{{Compat("api.WindowClient.focused")}}

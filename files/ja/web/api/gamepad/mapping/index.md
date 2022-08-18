@@ -12,46 +12,39 @@ tags:
   - Référence(2)
 translation_of: Web/API/Gamepad/mapping
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>{{domxref("Gamepad")}} インターフェイスの <code><strong>Gamepad.mapping</strong></code> プロパティは、ブラウザーがデバイスのコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。</p>
+{{domxref("Gamepad")}} インターフェイスの **`Gamepad.mapping`** プロパティは、ブラウザーがデバイスのコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。
 
-<p>現在、サポートされている既知のレイアウトは1つだけです – <a href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping">標準のゲームパッド</a>。ブラウザーがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 <code>mapping</code> プロパティは文字列 <code>standard</code> に設定されます。</p>
+現在、サポートされている既知のレイアウトは 1 つだけです – [標準のゲームパッド](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping)。ブラウザーがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 `mapping` プロパティは文字列 `standard` に設定されます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMString</span>           <span class="idlAttrName">mapping</span>;</span></span></pre>
+```
+readonly    attribute DOMString           mapping;
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js notranslate">var gp = navigator.getGamepads()[0];
-console.log(gp.mapping);</pre>
+```js
+var gp = navigator.getGamepads()[0];
+console.log(gp.mapping);
+```
 
-<h2 id="値">値</h2>
+## 値
 
-<p>{{domxref("string")}} 。</p>
+{{domxref("string")}} 。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#dom-gamepad-mapping", "Gamepad.mapping")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                     | ステータス                   | 備考               |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("Gamepad", "#dom-gamepad-mapping", "Gamepad.mapping")}} | {{Spec2("Gamepad")}} | Initial definition |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.Gamepad.mapping")}}</p>
+{{Compat("api.Gamepad.mapping")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<p><a href="/ja/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ja/docs/Web/Guide/API/Gamepad)

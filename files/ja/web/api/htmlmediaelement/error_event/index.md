@@ -9,12 +9,11 @@ tags:
   - HTMLMediaElement
   - Reference
   - Web
-browser-compat: api.HTMLMediaElement.error_event
 translation_of: Web/API/HTMLMediaElement/error_event
+browser-compat: api.HTMLMediaElement.error_event
 ---
 {{APIRef}}
-
-**`error`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
+\*\*\`error\`\*\* イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
 
 <table class="properties">
   <tbody>
@@ -39,30 +38,21 @@ translation_of: Web/API/HTMLMediaElement/error_event
   </tbody>
 </table>
 
-## 例
-
-```js
+\## 例
+\`\`\`js
 const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
-
+const videoSrc = 'https\://path/to/video.webm';
 video.addEventListener('error', () => {
-  console.error(`Error loading: ${videoSrc}`);
+console.error(\`Error loading: ${videoSrc}\`);
 });
-
 video.setAttribute('src', videoSrc);
-```
-
-## 仕様書
-
+\`\`\`
+\## 仕様書
 {{Specifications}}
-
-## ブラウザーの互換性
-
+\## ブラウザーの互換性
 {{Compat}}
-
-## 関連情報
-
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+\## 関連情報
+\- {{domxref("HTMLAudioElement")}}
+\- {{domxref("HTMLVideoElement")}}
+\- {{HTMLElement("audio")}}
+\- {{HTMLElement("video")}}

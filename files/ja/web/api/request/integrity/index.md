@@ -11,54 +11,43 @@ tags:
   - request
 translation_of: Web/API/Request/integrity
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Request")}} インターフェイスの <strong><code>integrity</code></strong> 読み取り専用プロパティには、リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a> 値が含まれています。</p>
+{{domxref("Request")}} インターフェイスの **`integrity`** 読み取り専用プロパティには、リクエストの [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity) 値が含まれています。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js notranslate">var myIntegrity = request.integrity;</pre>
+```js
+var myIntegrity = request.integrity;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a> 値 (例, <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>)。</p>
+リクエストの [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity) 値 (例, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`)。
 
-<p>完全性が指定されていない場合、 <code>''</code> を返します。</p>
+完全性が指定されていない場合、 `''` を返します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次のスニペットでは {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の <code>integrity</code> 値を変数に保存します:</p>
+次のスニペットでは {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の `integrity` 値を変数に保存します:
 
-<pre class="brush: js notranslate">var myRequest = new Request('flowers.jpg');
-var myIntegrity = myRequest.integrity;</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myIntegrity = myRequest.integrity;
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request-integrity','integrity')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                     | コメント   |
+| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('Fetch','#dom-request-integrity','integrity')}} | {{Spec2('Fetch')}} | 初回定義。 |
 
-<h2 id="ブラウザーの実装状況">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
+{{Compat("api.Request.integrity")}}
 
+## 関連項目
 
-<p>{{Compat("api.Request.integrity")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

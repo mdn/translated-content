@@ -9,30 +9,27 @@ tags:
 translation_of: Web/API/Proximity_Events
 original_slug: WebAPI/Proximity
 ---
-<p>{{DefaultAPISidebar("Proximity Events")}}{{ SeeCompatTable }}</p>
+{{DefaultAPISidebar("Proximity Events")}}{{ SeeCompatTable }}
 
-<p><strong>proximity events</strong> は、ユーザーが端末の近くにいるときを知るのに便利な手段です。これらのイベントは近接度の変化への対応、例えばユーザーがスマートフォンを耳の近くに持ってきて電話をしているときにスクリーンを休止することを可能にします。</p>
+**proximity events** は、ユーザーが端末の近くにいるときを知るのに便利な手段です。これらのイベントは近接度の変化への対応、例えばユーザーがスマートフォンを耳の近くに持ってきて電話をしているときにスクリーンを休止することを可能にします。
 
-<div class="note">
-<p><strong>メモ:</strong> この API は端末に近接センサーを必要とすることが明らかです。近接センサーは、たいていモバイル端末のみで使用できます。センサーを搭載していない端末もイベントをサポートするかもしれませんが、イベントは発生しません。</p>
-</div>
+> **Note:** **メモ:** この API は端末に近接センサーを必要とすることが明らかです。近接センサーは、たいていモバイル端末のみで使用できます。センサーを搭載していない端末もイベントをサポートするかもしれませんが、イベントは発生しません。
 
-<h2 id="Proximity_Events" name="Proximity_Events">Proximity Event</h2>
+## Proximity Event
 
-<p>端末の近接センサーが端末と物体との距離の変化を検出すると、それをブラウザーに通知します。ブラウザーが通知を受けると、あらゆる変化について {{domxref("DeviceProximityEvent")}} イベントが、またよりおおざっぱな変化の場合に {{domxref("UserProximityEvent")}} イベントが発生します。</p>
+端末の近接センサーが端末と物体との距離の変化を検出すると、それをブラウザーに通知します。ブラウザーが通知を受けると、あらゆる変化について {{domxref("DeviceProximityEvent")}} イベントが、またよりおおざっぱな変化の場合に {{domxref("UserProximityEvent")}} イベントが発生します。
 
-<p>このイベントは {{domxref("EventTarget.addEventListener","addEventListener")}} メソッド (イベント名 {{event("deviceproximity")}} または {{event("userproximity")}} を使用) を使用するか、イベントハンドラーを {{domxref("window.ondeviceproximity")}} プロパティまたは {{domxref("window.onuserproximity")}} プロパティに接続することにより、<code>window</code> オブジェクトレベルで取得できます。</p>
+このイベントは {{domxref("EventTarget.addEventListener","addEventListener")}} メソッド (イベント名 {{event("deviceproximity")}} または {{event("userproximity")}} を使用) を使用するか、イベントハンドラーを {{domxref("window.ondeviceproximity")}} プロパティまたは {{domxref("window.onuserproximity")}} プロパティに接続することにより、`window` オブジェクトレベルで取得できます。
 
-<p>イベントを取得すると、イベントオブジェクトでさまざまな種類の情報にアクセスできます。</p>
+イベントを取得すると、イベントオブジェクトでさまざまな種類の情報にアクセスできます。
 
-<ul>
- <li>{{domxref("DeviceProximityEvent")}} イベントは、端末と物体との距離に一致する値を {{domxref("DeviceProximityEvent.value","value")}} プロパティで提供します。また、端末が何らかの物体を検出できる最短距離および最長距離を、{{domxref("DeviceProximityEvent.min","min")}} プロパティおよび {{domxref("DeviceProximityEvent.max","max")}} プロパティで提供します。</li>
- <li>{{domxref("UserProximityEvent")}} イベントは、距離の大まかな近さを真偽値で表します。{{domxref("UserProximityEvent.near")}} は物体が近いときに <code>true</code> に、また物体が遠いときに <code>false</code> になります。</li>
-</ul>
+- {{domxref("DeviceProximityEvent")}} イベントは、端末と物体との距離に一致する値を {{domxref("DeviceProximityEvent.value","value")}} プロパティで提供します。また、端末が何らかの物体を検出できる最短距離および最長距離を、{{domxref("DeviceProximityEvent.min","min")}} プロパティおよび {{domxref("DeviceProximityEvent.max","max")}} プロパティで提供します。
+- {{domxref("UserProximityEvent")}} イベントは、距離の大まかな近さを真偽値で表します。{{domxref("UserProximityEvent.near")}} は物体が近いときに `true` に、また物体が遠いときに `false` になります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">window.addEventListener('userproximity', function(event) {
+```js
+window.addEventListener('userproximity', function(event) {
   if (event.near) {
     // スクリーンの電源を切る
     navigator.mozPower.screenEnabled = false;
@@ -40,42 +37,28 @@ original_slug: WebAPI/Proximity
     // スクリーンの電源を入れる
     navigator.mozPower.screenEnabled = true;
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Proximity Events', '', 'Proximity Events')}}</td>
-   <td>{{Spec2('Proximity Events')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | 状態                                     | 備考     |
+| ---------------------------------------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName('Proximity Events', '', 'Proximity Events')}} | {{Spec2('Proximity Events')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<h3 id="DeviceProximityEvent"><code>DeviceProximityEvent</code></h3>
+### `DeviceProximityEvent`
 
-<p>{{Compat("api.DeviceProximityEvent")}}</p>
+{{Compat("api.DeviceProximityEvent")}}
 
-<h3 id="UserProximityEvent"><code>UserProximityEvent</code></h3>
+### `UserProximityEvent`
 
-<p>{{Compat("api.UserProximityEvent")}}</p>
+{{Compat("api.UserProximityEvent")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("DeviceProximityEvent")}}</li>
- <li>{{domxref("UserProximityEvent")}}</li>
- <li>{{event("deviceproximity")}}</li>
- <li>{{event("userproximity")}}</li>
-</ul>
+- {{domxref("DeviceProximityEvent")}}
+- {{domxref("UserProximityEvent")}}
+- {{event("deviceproximity")}}
+- {{event("userproximity")}}

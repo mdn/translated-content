@@ -11,56 +11,42 @@ tags:
   - Reference
 translation_of: Web/API/BroadcastChannel/BroadcastChannel
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p><span class="seoSummary"><strong><code>BroadcastChannel()</code></strong> コンストラクタは新しい {{domxref("BroadcastChannel")}} を作成し、それを基礎となるチャネルに接続します。</span></p>
+**`BroadcastChannel()`** コンストラクタは新しい {{domxref("BroadcastChannel")}} を作成し、それを基礎となるチャネルに接続します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"> <em>channel</em> = new BroadcastChannel(<em>channel</em>);</pre>
+```
+ channel = new BroadcastChannel(channel);
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><em>channel</em></dt>
- <dd>チャネルの名前を表す {{domxref("DOMString")}} です。 同じ{{glossary("origin","オリジン")}}を持つすべての{{glossary("browsing context", "閲覧コンテキスト")}}に対して、この名前を持つ単一のチャンネルがあります。</dd>
-</dl>
+- _channel_
+  - : チャネルの名前を表す {{domxref("DOMString")}} です。 同じ{{glossary("origin","オリジン")}}を持つすべての{{glossary("browsing context", "閲覧コンテキスト")}}に対して、この名前を持つ単一のチャンネルがあります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">// "internal_notification" チャンネルをリッスンする新しいチャンネルを作成します。
+```js
+// "internal_notification" チャンネルをリッスンする新しいチャンネルを作成します。
 
 var bc = new BroadcastChannel('internal_notification');
 bc.postMessage('New listening connected!');
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel", "BroadcastChannel()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                             | コメント |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel", "BroadcastChannel()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.BroadcastChannel.BroadcastChannel")}}
 
+## 関連情報
 
-<p>{{Compat("api.BroadcastChannel.BroadcastChannel")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("BroadcastChannel")}}: これが属するインターフェース。</li>
-</ul>
+- {{domxref("BroadcastChannel")}}: これが属するインターフェース。

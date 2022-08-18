@@ -8,67 +8,38 @@ tags:
   - リファレンス
 translation_of: Web/API/HTMLMapElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLMapElement</code></strong> インターフェイスは、map 要素のレイアウトと表示を操作するための特別なプロパティとメソッド (継承によっても利用可能な通常のオブジェクト {{domxref("HTMLElement")}} インターフェイスを超えるもの) を提供します。</p>
+**`HTMLMapElement`** インターフェイスは、map 要素のレイアウトと表示を操作するための特別なプロパティとメソッド (継承によっても利用可能な通常のオブジェクト {{domxref("HTMLElement")}} インターフェイスを超えるもの) を提供します。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>親の {{domxref("HTMLElement")}} からプロパティを継承しています。</em></p>
+_親の {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLMapElement.name")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the {{HTMLElement("map")}} element for referencing it other context. If the <code>id</code> attribute is set, this must have the same value; and it cannot be <code>null</code> or empty.</dd>
- <dt>{{domxref("HTMLMapElement.areas")}} {{readonlyInline}}</dt>
- <dd>Is a live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.</dd>
-</dl>
+- {{domxref("HTMLMapElement.name")}}
+  - : Is a {{domxref("DOMString")}} representing the {{HTMLElement("map")}} element for referencing it other context. If the `id` attribute is set, this must have the same value; and it cannot be `null` or empty.
+- {{domxref("HTMLMapElement.areas")}} {{readonlyInline}}
+  - : Is a live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>特定のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承します。</em></p>
+_特定のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承します。_
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlmapelement", "HTMLMapElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-map-element", "HTMLMapElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td><code>images</code> プロパティを追加します。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-94109203', 'HTMLAreaElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName("DOM1")}} からの変更はありません。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-94109203', 'HTMLAreaElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | ステータス                       | コメント                                              |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#htmlmapelement", "HTMLMapElement")}}                                 | {{Spec2('HTML WHATWG')}} |                                                       |
+| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-map-element", "HTMLMapElement")}} | {{Spec2('HTML5 W3C')}}     | `images` プロパティを追加します。                     |
+| {{SpecName('DOM2 HTML', 'html.html#ID-94109203', 'HTMLAreaElement')}}                         | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} からの変更はありません。 |
+| {{SpecName('DOM1', 'level-one-html.html#ID-94109203', 'HTMLAreaElement')}}                 | {{Spec2('DOM1')}}         | 初期定義                                              |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.HTMLMapElement")}}</p>
+{{Compat("api.HTMLMapElement")}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>HTML element implementing this interface: {{ HTMLElement("map") }}.</li>
-</ul>
+- HTML element implementing this interface: {{ HTMLElement("map") }}.

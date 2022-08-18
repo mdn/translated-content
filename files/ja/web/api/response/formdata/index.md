@@ -14,45 +14,43 @@ translation_of: Web/API/Response/formData
 original_slug: Web/API/Body/formData
 browser-compat: api.Response.formData
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><strong><code>formData()</code></strong> は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} のストリームを取得して完全に読み取ります。 {{domxref("FormData")}} オブジェクトで解決されるプロミスを返します。</p>
+**`formData()`** は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} のストリームを取得して完全に読み取ります。 {{domxref("FormData")}} オブジェクトで解決されるプロミスを返します。
 
-<div class="note">
-	<p><strong>メモ</strong>: これは主に<a href="/ja/docs/Web/API/Service_Worker_API">サービスワーカー</a>に関連しています。 ユーザーがフォームを送信し、サービスワーカーがリクエストに介入した場合を考えてみましょう。 例えば、キーと値のマップを取得するために <code>formData()</code> を呼び出し、一部のフィールドを修正した後、フォームをサーバー側に送信 (またはローカルで使用) することができます。</p>
-</div>
+> **Note:** **メモ**: これは主に[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)に関連しています。 ユーザーがフォームを送信し、サービスワーカーがリクエストに介入した場合を考えてみましょう。 例えば、キーと値のマップを取得するために `formData()` を呼び出し、一部のフィールドを修正した後、フォームをサーバー側に送信 (またはローカルで使用) することができます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><em>response</em>.formData()
-.then(function(<em>formdata</em>) {
+```js
+response.formData()
+.then(function(formdata) {
   // formdata を使った何らかの処理
-});</pre>
+});
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>{{domxref("FormData")}} オブジェクトで解決される {{jsxref("Promise")}}。</p>
+{{domxref("FormData")}} オブジェクトで解決される {{jsxref("Promise")}}。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-	<li><a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-	<li><a href="/ja/docs/Web/HTTP/CORS">HTTP アクセス制御 (CORS)</a></li>
-	<li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP](/ja/docs/Web/HTTP)

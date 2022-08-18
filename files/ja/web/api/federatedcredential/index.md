@@ -11,41 +11,38 @@ tags:
   - インターフェイス
 translation_of: Web/API/FederatedCredential
 ---
-<div>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</div>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-<p><strong><code>FederatedCredential</code></strong> は <a href="/ja/docs/Web/API/Credential_Management_API">Credential Management API</a> のインターフェイスで、連合アイデンティティのプロバイダーからの認証情報についての情報を提供します。連合アイデンティティのプロバイダーは、ウェブサイトが正しくユーザーを認証し、そのための API を提供する主体です。連合アイデンティティプロバイダーの一例として、 <a href="http://openid.net/developers/specs/">OpenID Connect</a> があります。</p>
+**`FederatedCredential`** は [Credential Management API](/ja/docs/Web/API/Credential_Management_API) のインターフェイスで、連合アイデンティティのプロバイダーからの認証情報についての情報を提供します。連合アイデンティティのプロバイダーは、ウェブサイトが正しくユーザーを認証し、そのための API を提供する主体です。連合アイデンティティプロバイダーの一例として、 [OpenID Connect](http://openid.net/developers/specs/) があります。
 
-<p>対応しているブラウザーにおいては、このインターフェイスのインスタンスがグローバル {{domxref('fetch')}} の <code>init</code> オブジェクトの <code>credential</code> メンバーとして渡されることがあります。</p>
+対応しているブラウザーにおいては、このインターフェイスのインスタンスがグローバル {{domxref('fetch')}} の `init` オブジェクトの `credential` メンバーとして渡されることがあります。
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}</dt>
- <dd>新しい <code>FederatedCredential</code> オブジェクトを生成します。</dd>
-</dl>
+- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}
+  - : 新しい `FederatedCredential` オブジェクトを生成します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>祖先である {{domxref("Credential")}} からプロパティを継承しています。</em></p>
+_祖先である {{domxref("Credential")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("FederatedCredential.provider")}} {{readonlyInline}}</dt>
- <dd>認証情報の連合アイデンティティプロバイダーを含む {{domxref("USVString")}} です。</dd>
- <dt>{{domxref("FederatedCredential.protocol")}} {{readonlyInline}}</dt>
- <dd>認証情報の連合アイデンティティプロトコルを含む {{domxref("DOMString")}} です。</dd>
-</dl>
+- {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
+  - : 認証情報の連合アイデンティティプロバイダーを含む {{domxref("USVString")}} です。
+- {{domxref("FederatedCredential.protocol")}} {{readonlyInline}}
+  - : 認証情報の連合アイデンティティプロトコルを含む {{domxref("DOMString")}} です。
 
-<h3 id="Event_handlers" name="Event_handlers">イベントハンドラー</h3>
+### イベントハンドラー
 
-<p>なし。</p>
+なし。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p>なし。</p>
+なし。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">var cred = new FederatedCredential({
+```js
+var cred = new FederatedCredential({
   id: id,
   name: name,
   provider: 'https://account.google.com',
@@ -56,25 +53,15 @@ translation_of: Web/API/FederatedCredential
 navigator.credentials.store(cred)
   .then(function() {
   // 他に何かをする
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                           | 状態                                         | 備考     |
+| ------------------------------------------------ | -------------------------------------------- | -------- |
+| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.FederatedCredential")}}</p>
+{{Compat("api.FederatedCredential")}}

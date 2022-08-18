@@ -11,43 +11,45 @@ tags:
   - メソッド
 translation_of: Web/API/SVGGraphicsElement/getBBox
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>SVGGraphicsElement.getBBox()</strong></code> で、オブジェクトが収まる最小の矩形の座標を特定することができます。返される座標は、現在の SVG 空間、すなわち対象の要素に含まれる位置に関する属性すべてを適用した後の空間に従います。</p>
+**`SVGGraphicsElement.getBBox()`** で、オブジェクトが収まる最小の矩形の座標を特定することができます。返される座標は、現在の SVG 空間、すなわち対象の要素に含まれる位置に関する属性すべてを適用した後の空間に従います。
 
-<p>メモ: <code>getBBox</code> は要素がまだレンダリングされていない場合でも、メソッドが呼び出されたときに実際の境界ボックスを返します。また、要素またはその親に適用される変換は無視します。</p>
+メモ: `getBBox` は要素がまだレンダリングされていない場合でも、メソッドが呼び出されたときに実際の境界ボックスを返します。また、要素またはその親に適用される変換は無視します。
 
-<div class="blockIndicator note">
-<p><code>getBBox</code> は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。</p>
-</div>
+> **Note:** `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">let bboxRect = object.getBBox();</pre>
+```
+let bboxRect = object.getBBox();
+```
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>返値は {{domxref("SVGRect")}} オブジェクトで、境界ボックスを定義します。この値はその要素や親要素に適用された変形属性を無視したものです。</p>
+返値は {{domxref("SVGRect")}} オブジェクトで、境界ボックスを定義します。この値はその要素や親要素に適用された変形属性を無視したものです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;g id="group_text_1"&gt;
-        &lt;text x="5" y="16" transform="scale(2, 2)"&gt;Hello World!&lt;/text&gt;
-        &lt;text x="8" y="32" transform="translate(0 20) scale(1.25 1)"&gt;Hello World Again!&lt;/text&gt;
-    &lt;/g&gt;
-    &lt;!-- Shows BBox in green --&gt;
-    &lt;rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"&gt; &lt;/rect&gt;
-    &lt;!-- Shows BoundingClientRect in red --&gt;
-    &lt;rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"&gt;&lt;/rect&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g id="group_text_1">
+        <text x="5" y="16" transform="scale(2, 2)">Hello World!</text>
+        <text x="8" y="32" transform="translate(0 20) scale(1.25 1)">Hello World Again!</text>
+    </g>
+    <!-- Shows BBox in green -->
+    <rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"> </rect>
+    <!-- Shows BoundingClientRect in red -->
+    <rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"></rect>
+</svg>
+```
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var rectBBox = document.querySelector('#rect_1');
+```js
+var rectBBox = document.querySelector('#rect_1');
 var rectBoundingClientRect = document.querySelector('#rect_2');
 var groupElement = document.querySelector('#group_text_1');
 
@@ -61,29 +63,15 @@ var boundingClientRectGroup = groupElement.getBoundingClientRect();
 rectBoundingClientRect.setAttribute('x', boundingClientRectGroup.x);
 rectBoundingClientRect.setAttribute('y', boundingClientRectGroup.y);
 rectBoundingClientRect.setAttribute('width', boundingClientRectGroup.width);
-rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);</pre>
+rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'types.html#__svg__SVGLocatable__getBBox', 'getBBox')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>初回定義 (SVG 要素のみに適用).</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               | 状態                     | 備考                           |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------ |
+| {{SpecName('SVG1.1', 'types.html#__svg__SVGLocatable__getBBox', 'getBBox')}} | {{Spec2('SVG1.1')}} | 初回定義 (SVG 要素のみに適用). |
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox">getBBox in SVG Primer</a></li>
-</ul>
+- [getBBox in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)

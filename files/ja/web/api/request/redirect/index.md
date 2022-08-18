@@ -11,60 +11,47 @@ tags:
   - request
 translation_of: Web/API/Request/redirect
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Request")}} インターフェイスの <strong><code>redirect</code></strong> 読み取り専用プロパティには、リダイレクトの処理方法モードが含まれています。</p>
+{{domxref("Request")}} インターフェイスの **`redirect`** 読み取り専用プロパティには、リダイレクトの処理方法モードが含まれています。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js notranslate">var myRedirect = request.redirect;</pre>
+```js
+var myRedirect = request.redirect;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p><code>RequestRedirect</code> 列挙値、次の文字列のいずれかになります:</p>
+`RequestRedirect` 列挙値、次の文字列のいずれかになります:
 
-<ul>
- <li><code>follow</code></li>
- <li><code>error</code></li>
- <li><code>manual</code></li>
-</ul>
+- `follow`
+- `error`
+- `manual`
 
-<p>request の作成時に指定されない場合、デフォルト値の <code>follow</code> になります。</p>
+request の作成時に指定されない場合、デフォルト値の `follow` になります。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の <code>redirect</code> 値を変数に保存します:</p>
+次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の `redirect` 値を変数に保存します:
 
-<pre class="brush: js notranslate">var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.redirect;</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myCred = myRequest.redirect;
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request-redirect','redirect')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                     | コメント   |
+| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('Fetch','#dom-request-redirect','redirect')}} | {{Spec2('Fetch')}} | 初回定義。 |
 
-<h2 id="ブラウザーの実装状況">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
+{{Compat("api.Request.redirect")}}
 
+## 関連項目
 
-<p>{{Compat("api.Request.redirect")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

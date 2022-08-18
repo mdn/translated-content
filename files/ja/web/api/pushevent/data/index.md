@@ -11,24 +11,27 @@ tags:
   - data
 translation_of: Web/API/PushEvent/data
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p><strong><code>PushEvent</code></strong> インターフェースの <code>data</code> 読み取り専用プロパティは、<span style="line-height: 19.0909080505371px;">{{domxref("PushSubscription")}}</span> に送信されてたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。</p>
+**`PushEvent`** インターフェースの `data` 読み取り専用プロパティは、{{domxref("PushSubscription")}} に送信されてたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var myPushData = PushEvent.data;</pre>
+```js
+var myPushData = PushEvent.data;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>{{domxref("PushMessageData")}} オブジェクト</p>
+{{domxref("PushMessageData")}} オブジェクト
 
-<p><strong style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">例</strong></p>
+**例**
 
-<p>次の例は、 <code>PushEvent</code> からデータを取得して、すべての service worker クライアントで表示しています。</p>
+次の例は、 `PushEvent` からデータを取得して、すべての service worker クライアントで表示しています。
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
-  if (!(self.Notification &amp;&amp; self.notification.permission === 'granted')) {
+```js
+self.addEventListener('push', function(event) {
+  if (!(self.Notification && self.notification.permission === 'granted')) {
     return;
   }
 
@@ -52,31 +55,18 @@ translation_of: Web/API/PushEvent/data
     }
   };
 });
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API','#widl-PushEvent-data','data')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                     | 状態                         | コメント |
+| ------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName('Push API','#widl-PushEvent-data','data')}} | {{Spec2('Push API')}} | 初期定義 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.PushEvent.data")}}</p>
+{{Compat("api.PushEvent.data")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
-</ul>
+- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)

@@ -9,70 +9,59 @@ tags:
   - Reference
 translation_of: Web/API/MessagePort/start
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("MessagePort")}} インターフェイスの <code><strong>start()</strong></code> メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。これは、{{domxref("MessageChannel.onmessage")}} を使用する場合は包含されています。</p>
+{{domxref("MessagePort")}} インターフェイスの **`start()`** メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。これは、{{domxref("MessageChannel.onmessage")}} を使用する場合は包含されています。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">port.start()</pre>
+```
+port.start()
+```
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+### 戻り値
 
-<p>無効。</p>
+無効。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次のコードブロックには、<code>handleMessage</code> ハンドラ関数があり、<code>onmessage</code> を使用して、メッセージがこのドキュメントに送り返された時に実行されます:</p>
+次のコードブロックには、`handleMessage` ハンドラ関数があり、`onmessage` を使用して、メッセージがこのドキュメントに送り返された時に実行されます:
 
-<pre class="brush: js">channel.port1.onmessage = handleMessage;
+```js
+channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-}   </pre>
+}
+```
 
-<p>これを行うもう一つの方法は、{{domxref("EventTarget.addEventListener")}} を使用します。しかし、このメソッドが使用された場合、明示的に <code>start()</code> を呼び出してメッセージの送信を開始する必要があります:</p>
+これを行うもう一つの方法は、{{domxref("EventTarget.addEventListener")}} を使用します。しかし、このメソッドが使用された場合、明示的に `start()` を呼び出してメッセージの送信を開始する必要があります:
 
-<pre class="brush: js">channel.port1.addEventListener('message', handleMessage, false);
+```js
+channel.port1.addEventListener('message', handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
   textInput.value = '';
 }
 
-channel.port1.start();</pre>
+channel.port1.start();
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#dom-messageport-start', 'start()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       | 策定状況                         | 備考 |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'web-messaging.html#dom-messageport-start', 'start()')}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの実装状況</h2>
+## ブラウザの実装状況
 
-<div>
+{{Compat("api.MessagePort.start")}}
 
+## 関連情報
 
-<p>{{Compat("api.MessagePort.start")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
