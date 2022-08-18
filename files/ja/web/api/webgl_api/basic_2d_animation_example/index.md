@@ -11,16 +11,16 @@ tags:
   - WebGL API
 translation_of: Web/API/WebGL_API/Basic_2D_animation_example
 ---
-<div>{{WebGLSidebar}}</div>
+{{WebGLSidebar}}
 
-<div id="live-sample">
-<p>この WebGL の例では、キャンバスを作成し、その中に WebGL を使用して回転する四角形をレンダリングします。シーンを表すために使用する座標系は、キャンバスの座標系と同じです。つまり、(0, 0) は左上隅にあり、右下隅は (600, 460) となります。</p>
+この WebGL の例では、キャンバスを作成し、その中に WebGL を使用して回転する四角形をレンダリングします。シーンを表すために使用する座標系は、キャンバスの座標系と同じです。つまり、(0, 0) は左上隅にあり、右下隅は (600, 460) となります。
 
-<h2 id="Vertex_shader" name="Vertex_shader">頂点シェーダー</h2>
+## 頂点シェーダー
 
-<p>まず頂点シェーダーを見てみましょう。いつものように、シーンに使用している座標をクリップスペース座標に変換することです (つまり (0, 0) がコンテキストの中心にあり、コンテキストの実際のサイズに関係なく各軸が -1.0 から 1.0 に伸びるシステムです)</p>
+まず頂点シェーダーを見てみましょう。いつものように、シーンに使用している座標をクリップスペース座標に変換することです (つまり (0, 0) がコンテキストの中心にあり、コンテキストの実際のサイズに関係なく各軸が -1.0 から 1.0 に伸びるシステムです)
 
-<pre class="brush: html">&lt;script id="vertex-shader" type="x-shader/x-vertex"&gt;
+```html
+<script id="vertex-shader" type="x-shader/x-vertex">
   attribute vec2 aVertexPosition;
 
   uniform vec2 uScalingFactor;
@@ -36,21 +36,23 @@ translation_of: Web/API/WebGL_API/Basic_2D_animation_example
 
     gl_Position = vec4(rotatedPosition * uScalingFactor, 0.0, 1.0);
   }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>メインプログラムは属性 <code>aVertexPosition</code> を共有します。これは使用している座標系の頂点の位置です。位置の両方のコンポーネントが -1.0 から 1.0 の範囲になるように、これらの値を変換する必要があります。これは、コンテキストのアスペクト比に基づいたスケーリング係数を掛けることで簡単に実行できます。この計算については、後ほど説明します。</p>
+メインプログラムは属性 `aVertexPosition` を共有します。これは使用している座標系の頂点の位置です。位置の両方のコンポーネントが -1.0 から 1.0 の範囲になるように、これらの値を変換する必要があります。これは、コンテキストのアスペクト比に基づいたスケーリング係数を掛けることで簡単に実行できます。この計算については、後ほど説明します。
 
-<p>形状も回転し、変換を適用することでそれを行うことができます。最初にそれを行います。頂点の回転位置は、JavaScript コードによって計算された均一な <code>uRotationVector</code> にある回転ベクトルを適用して計算されます。</p>
+形状も回転し、変換を適用することでそれを行うことができます。最初にそれを行います。頂点の回転位置は、JavaScript コードによって計算された均一な `uRotationVector` にある回転ベクトルを適用して計算されます。
 
-<p>次に、<code>uScalingFactor</code> の JavaScript コードによって提供されるスケーリングベクトルを回転位置に乗算することにより、最終位置が計算されます。2D で描画しているため、<code>z</code> と <code>w</code> の値はそれぞれ 0.0 と 1.0 に固定されています。</p>
+次に、`uScalingFactor` の JavaScript コードによって提供されるスケーリングベクトルを回転位置に乗算することにより、最終位置が計算されます。2D で描画しているため、`z` と `w` の値はそれぞれ 0.0 と 1.0 に固定されています。
 
-<p>次に、標準 WebGL グローバル変数の <code>gl_Position</code> へ変換および回転された頂点の位置を設定します。</p>
+次に、標準 WebGL グローバル変数の `gl_Position` へ変換および回転された頂点の位置を設定します。
 
-<h2 id="Fragment_shader" name="Fragment_shader">フラグメントシェーダー</h2>
+## フラグメントシェーダー
 
-<p>次はフラグメントシェーダーです。その役割はレンダリングされる形状の各ピクセルの色を返すことです。ライティングが適用されていない、テクスチャのないソリッドオブジェクトを描画しているため、これは非常に簡単です:</p>
+次はフラグメントシェーダーです。その役割はレンダリングされる形状の各ピクセルの色を返すことです。ライティングが適用されていない、テクスチャのないソリッドオブジェクトを描画しているため、これは非常に簡単です:
 
-<pre class="brush: html">&lt;script id="fragment-shader" type="x-shader/x-fragment"&gt;
+```html
+<script id="fragment-shader" type="x-shader/x-fragment">
   #ifdef GL_ES
     precision highp float;
   #endif
@@ -60,25 +62,29 @@ translation_of: Web/API/WebGL_API/Basic_2D_animation_example
   void main() {
     gl_FragColor = uGlobalColor;
   }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>これは必要に応じて <code>float</code> 型の精度を指定することから始まります次に uniform 修飾子付きの <code>uGlobalColor</code> の値をグローバル変数 <code>gl_FragColor</code> へ設定します。これは、JavaScript コードにより正方形の描画に使用される色に設定されます。</p>
+これは必要に応じて `float` 型の精度を指定することから始まります次に uniform 修飾子付きの `uGlobalColor` の値をグローバル変数 `gl_FragColor` へ設定します。これは、JavaScript コードにより正方形の描画に使用される色に設定されます。
 
-<h2 id="HTML" name="HTML">HTML</h2>
+## HTML
 
-<p>HTML は、WebGL コンテキストを取得する {{HTMLElement("canvas")}} のみで構成されています。</p>
+HTML は、WebGL コンテキストを取得する {{HTMLElement("canvas")}} のみで構成されています。
 
-<pre class="brush: html">&lt;canvas id="glcanvas" width="600" height="460"&gt;
+```html
+<canvas id="glcanvas" width="600" height="460">
   Oh no! Your browser doesn't support canvas!
-&lt;/canvas&gt;</pre>
+</canvas>
+```
 
-<h2 id="JavaScript" name="JavaScript">JavaScript</h2>
+## JavaScript
 
-<h3 id="Globals_and_initialization" name="Globals_and_initialization">グローバル変数と初期化</h3>
+### グローバル変数と初期化
 
-<p>まず、グローバル変数。ここではこれらについては説明しません。代わりに、今後のコードで使用される場合について説明します。</p>
+まず、グローバル変数。ここではこれらについては説明しません。代わりに、今後のコードで使用される場合について説明します。
 
-<pre class="brush: js">let gl = null;
+```js
+let gl = null;
 let glCanvas = null;
 
 // Aspect ratio and coordinate system
@@ -107,11 +113,12 @@ let aVertexPosition;
 
 let previousTime = 0.0;
 let degreesPerSecond = 90.0;
-</pre>
+```
 
-<p>プログラムの初期化は <code>startup()</code> と呼ばれる {{event("load")}} イベントハンドラーによって処理します:</p>
+プログラムの初期化は `startup()` と呼ばれる {{event("load")}} イベントハンドラーによって処理します:
 
-<pre class="brush: js">window.addEventListener("load", startup, false);
+```js
+window.addEventListener("load", startup, false);
 
 function startup() {
   glCanvas = document.getElementById("glcanvas");
@@ -150,33 +157,35 @@ function startup() {
   rotationRate = 6;
 
   animateScene();
-}</pre>
+}
+```
 
-<p>WebGL コンテキスト <code>gl</code> を取得し、シェーダープログラムを構築することから始める必要があります。ここでは、プログラムに複数のシェーダーを非常に簡単に追加できるように設計されたコードを使用しています。配列 <code>shaderSet</code> にはオブジェクトのリストが含まれ、各オブジェクトはプログラムにコンパイルされる 1 つのシェーダー関数を記述しています。各関数には、タイプ (<code>gl.VERTEX_SHADER</code> または <code>gl.FRAGMENT_SHADER</code> のいずれか) と ID (シェーダーのコードを含む {{HTMLElement("script")}} 要素の ID)。</p>
+WebGL コンテキスト `gl` を取得し、シェーダープログラムを構築することから始める必要があります。ここでは、プログラムに複数のシェーダーを非常に簡単に追加できるように設計されたコードを使用しています。配列 `shaderSet` にはオブジェクトのリストが含まれ、各オブジェクトはプログラムにコンパイルされる 1 つのシェーダー関数を記述しています。各関数には、タイプ (`gl.VERTEX_SHADER` または `gl.FRAGMENT_SHADER` のいずれか) と ID (シェーダーのコードを含む {{HTMLElement("script")}} 要素の ID)。
 
-<p>シェーダーセットは <code>buildShaderProgram()</code> 関数に渡され、コンパイルされリンクされたシェーダープログラムを返します。次にこれがどのように機能するかを見ていきます。</p>
+シェーダーセットは `buildShaderProgram()` 関数に渡され、コンパイルされリンクされたシェーダープログラムを返します。次にこれがどのように機能するかを見ていきます。
 
-<p>シェーダープロシェグラムが構築し、幅を高さで割ってからコンテキストのアスペクト比を計算します。次に、アニメーションの現在の回転ベクトルを <code>[0, 1]</code> に設定し、スケーリングベクトルを <code>[1.0, aspectRatio]</code> に設定します。頂点シェーダーで見たスケーリングベクトルは、-1.0 から 1.0 の範囲に合うように座標をスケーリングするために使用されます。</p>
+シェーダープロシェグラムが構築し、幅を高さで割ってからコンテキストのアスペクト比を計算します。次に、アニメーションの現在の回転ベクトルを `[0, 1]` に設定し、スケーリングベクトルを `[1.0, aspectRatio]` に設定します。頂点シェーダーで見たスケーリングベクトルは、-1.0 から 1.0 の範囲に合うように座標をスケーリングするために使用されます。
 
-<p>次に頂点の配列が {{jsxref("Float32Array")}} として作成され、三角形ごとに 6 つの座標 (3 つの 2D 頂点) が描画され、合計 12 個の値が作成されます。</p>
+次に頂点の配列が {{jsxref("Float32Array")}} として作成され、三角形ごとに 6 つの座標 (3 つの 2D 頂点) が描画され、合計 12 個の値が作成されます。
 
-<p>ご覧のとおり、各軸に -1.0 〜 1.0 の座標系を使用しています。なぜ調整する必要があるのでしょうか？これは単にコンテキストが正方形ではないためです。幅 600 ピクセル、高さ 460 のコンテキストを使用しています。これらの各ディメンションは、-1.0 〜 1.0 の範囲にマッピングされます。2 つの軸は同じ長さではないため、2 つの軸のいずれかの値を調整しないと、正方形は一方または他方に引き伸ばされます。したがって、これらの値を正規化する必要があります。</p>
+ご覧のとおり、各軸に -1.0 〜 1.0 の座標系を使用しています。なぜ調整する必要があるのでしょうか？これは単にコンテキストが正方形ではないためです。幅 600 ピクセル、高さ 460 のコンテキストを使用しています。これらの各ディメンションは、-1.0 〜 1.0 の範囲にマッピングされます。2 つの軸は同じ長さではないため、2 つの軸のいずれかの値を調整しないと、正方形は一方または他方に引き伸ばされます。したがって、これらの値を正規化する必要があります。
 
-<p>頂点配列が作成されたら、{{domxref("WebGLRenderingContext.createBuffer", "gl.createBuffer()")}} を呼び出し、それらを含む新しい GL バッファーを作成します。{{domxref("WebGLRenderingContext.bindBuffer", "gl.bindBuffer()")}} を呼び出して標準の WebGL 配列バッファー参照をバインドし、{{domxref("WebGLRenderingContext.bufferData", "gl.bufferData()")}} を使用して頂点データをバッファーにコピーします。<code>gl.STATIC_DRAW</code> の使用法が指定されており、データは 1 回だけ設定され、変更されることはありませんが、繰り返し使用されることを WebGL に伝えます。これにより、WebGL は、その情報に基づいてパフォーマンスを向上させる可能性のある、適用可能な最適化を検討します。</p>
+頂点配列が作成されたら、{{domxref("WebGLRenderingContext.createBuffer", "gl.createBuffer()")}} を呼び出し、それらを含む新しい GL バッファーを作成します。{{domxref("WebGLRenderingContext.bindBuffer", "gl.bindBuffer()")}} を呼び出して標準の WebGL 配列バッファー参照をバインドし、{{domxref("WebGLRenderingContext.bufferData", "gl.bufferData()")}} を使用して頂点データをバッファーにコピーします。`gl.STATIC_DRAW` の使用法が指定されており、データは 1 回だけ設定され、変更されることはありませんが、繰り返し使用されることを WebGL に伝えます。これにより、WebGL は、その情報に基づいてパフォーマンスを向上させる可能性のある、適用可能な最適化を検討します。
 
-<p>WebGL に提供される頂点データを使用して、<code>vertexNumComponents</code> を各頂点のコンポーネントの数 (2D 頂点であるため 2) に設定し、<code>vertexCount</code> を頂点リストの頂点の数に設定します。</p>
+WebGL に提供される頂点データを使用して、`vertexNumComponents` を各頂点のコンポーネントの数 (2D 頂点であるため 2) に設定し、`vertexCount` を頂点リストの頂点の数に設定します。
 
-<p>次に、まだ回転を実行していないため、現在の回転角度 (度) を 0.0 に設定し、回転速度 (画面の更新期間ごとの度、通常 60 FPS) を 6 に設定します。</p>
+次に、まだ回転を実行していないため、現在の回転角度 (度) を 0.0 に設定し、回転速度 (画面の更新期間ごとの度、通常 60 FPS) を 6 に設定します。
 
-<p>最後に、<code>animateScene()</code> が呼び出されて、最初のフレームをレンダリングし、アニメーションの次のフレームのレンダリングをスケジュールします。</p>
+最後に、`animateScene()` が呼び出されて、最初のフレームをレンダリングし、アニメーションの次のフレームのレンダリングをスケジュールします。
 
-<h3 id="Compiling_and_linking_the_shader_program" name="Compiling_and_linking_the_shader_program">シェーダープログラムのコンパイルとリンク</h3>
+### シェーダープログラムのコンパイルとリンク
 
-<h4 id="Constructing_and_linking_the_program" name="Constructing_and_linking_the_program">プログラムの構築とリンク</h4>
+#### プログラムの構築とリンク
 
-<p><code>buildShaderProgram()</code> 関数は、シェーダープログラムにコンパイルおよびリンクされるシェーダー関数のセットを記述するオブジェクトの配列を入力として受け取り、ビルドおよびリンク後にシェーダープログラムを返します。</p>
+`buildShaderProgram()` 関数は、シェーダープログラムにコンパイルおよびリンクされるシェーダー関数のセットを記述するオブジェクトの配列を入力として受け取り、ビルドおよびリンク後にシェーダープログラムを返します。
 
-<pre class="brush: js">function buildShaderProgram(shaderInfo) {
+```js
+function buildShaderProgram(shaderInfo) {
   let program = gl.createProgram();
 
   shaderInfo.forEach(function(desc) {
@@ -195,27 +204,27 @@ function startup() {
   }
 
   return program;
-}</pre>
+}
+```
 
-<p>まず、{{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} は新しい空の GLSL プログラムを作成するために呼び出されます。</p>
+まず、{{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} は新しい空の GLSL プログラムを作成するために呼び出されます。
 
-<p>次に、指定されたシェーダーのリスト内の各シェーダーに対して、<code>compileShader()</code> 関数を呼び出してコンパイルし、ビルドするシェーダー関数のIDとタイプを渡します。前述のように、これらの各オブジェクトには、シェーダーコードが存在する <code>&lt;script&gt;</code> 要素の ID とシェーダーのタイプが含まれます。コンパイルされたシェーダーは、{{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}} へ渡すことでシェーダープログラムにアタッチされます。</p>
+次に、指定されたシェーダーのリスト内の各シェーダーに対して、`compileShader()` 関数を呼び出してコンパイルし、ビルドするシェーダー関数の ID とタイプを渡します。前述のように、これらの各オブジェクトには、シェーダーコードが存在する `<script>` 要素の ID とシェーダーのタイプが含まれます。コンパイルされたシェーダーは、{{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}} へ渡すことでシェーダープログラムにアタッチされます。
 
-<div class="note">
-<p>実際には、ここよりさらに一歩進んで、<code>&lt;script&gt;</code> 要素の <code>type</code> 属性の値を見て、シェーダーのタイプを判断できます。</p>
-</div>
+> **Note:** 実際には、ここよりさらに一歩進んで、`<script>` 要素の `type` 属性の値を見て、シェーダーのタイプを判断できます。
 
-<p>すべてのシェーダーがコンパイルされると、{{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}} を使用してプログラムがリンクされます。</p>
+すべてのシェーダーがコンパイルされると、{{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}} を使用してプログラムがリンクされます。
 
-<p>プログラムのリンク中にエラーが発生した場合、エラーメッセージはコンソールに記録されます。</p>
+プログラムのリンク中にエラーが発生した場合、エラーメッセージはコンソールに記録されます。
 
-<p>最後に、コンパイルされたプログラムが呼び出し元に返されます。</p>
+最後に、コンパイルされたプログラムが呼び出し元に返されます。
 
-<h4 id="Compiling_an_individual_shader" name="Compiling_an_individual_shader">個々のシェーダーをコンパイルする</h4>
+#### 個々のシェーダーをコンパイルする
 
-<p>以下の <code>compileShader()</code> 関数は、単一のシェーダーをコンパイルするために <code>buildShaderProgram()</code> によって呼び出されます。</p>
+以下の `compileShader()` 関数は、単一のシェーダーをコンパイルするために `buildShaderProgram()` によって呼び出されます。
 
-<pre class="brush: js">function compileShader(id, type) {
+```js
+function compileShader(id, type) {
   let code = document.getElementById(id).firstChild.nodeValue;
   let shader = gl.createShader(type);
 
@@ -227,21 +236,23 @@ function startup() {
     console.log(gl.getShaderInfoLog(shader));
   }
   return shader;
-}</pre>
+}
+```
 
-<p>コードは指定された ID を持つ {{HTMLElement("script")}} 要素内に含まれるテキストノードの値を取得することにより、HTML ドキュメントから取得されます。次に {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}} を使用して、指定されたタイプの新しいシェーダーが作成されます。</p>
+コードは指定された ID を持つ {{HTMLElement("script")}} 要素内に含まれるテキストノードの値を取得することにより、HTML ドキュメントから取得されます。次に {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}} を使用して、指定されたタイプの新しいシェーダーが作成されます。
 
-<p>ソースコードは {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}} を通して新しいシェーダーに送信され、そのときシェーダーは {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}} を使用してコンパイルされます。</p>
+ソースコードは {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}} を通して新しいシェーダーに送信され、そのときシェーダーは {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}} を使用してコンパイルされます。
 
-<p>コンパイルエラーはコンソールに記録されます。生成されるメッセージに正しいシェーダータイプの文字列を挿入するための<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a>文字列の使用に注意してください。実際のエラーの詳細は、{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}を呼び出すことによって取得されます。</p>
+コンパイルエラーはコンソールに記録されます。生成されるメッセージに正しいシェーダータイプの文字列を挿入するための[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)文字列の使用に注意してください。実際のエラーの詳細は、{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}を呼び出すことによって取得されます。
 
-<p>最後に、コンパイルされたシェーダーが呼び出し元 (<code>buildShaderProgram()</code> 関数) へ返します。</p>
+最後に、コンパイルされたシェーダーが呼び出し元 (`buildShaderProgram()` 関数) へ返します。
 
-<h3 id="Drawing_and_animating_the_scene" name="Drawing_and_animating_the_scene">シーンの描画とアニメーション化</h3>
+### シーンの描画とアニメーション化
 
-<p><code>animateScene()</code> 関数は各アニメーションフレームをレンダリングするために呼び出されます。</p>
+`animateScene()` 関数は各アニメーションフレームをレンダリングするために呼び出されます。
 
-<pre class="brush: js">function animateScene() {
+```js
+function animateScene() {
   gl.viewport(0, 0, glCanvas.width, glCanvas.height);
   gl.clearColor(0.8, 0.9, 1.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
@@ -283,42 +294,40 @@ function startup() {
     previousTime = currentTime;
     animateScene();
   });
-}</pre>
+}
+```
 
-<p>アニメーションのフレームを描画するために最初に行う必要があるのは、背景を目的の色にクリアすることです。この場合、{{HTMLElement("canvas")}} のサイズに基づいてビューポートを設定し、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} を呼び出して使用する色を設定します。コンテンツをクリアするとき、{{domxref("WebGLRenderingContext.clear", "clear()")}} でバッファーをクリアします。</p>
+アニメーションのフレームを描画するために最初に行う必要があるのは、背景を目的の色にクリアすることです。この場合、{{HTMLElement("canvas")}} のサイズに基づいてビューポートを設定し、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} を呼び出して使用する色を設定します。コンテンツをクリアするとき、{{domxref("WebGLRenderingContext.clear", "clear()")}} でバッファーをクリアします。
 
-<p>次に、現在の回転ベクトルは、現在の回転角度 (<code>currentAngle</code>) を {{interwiki("wikipedia", "ラジアン")}} に変換し、回転ベクトルの最初のコンポーネントを {{interwiki("wikipedia", "三角関数", "sin")}} に設定し、2 番目のコンポーネントを {{interwiki("wikipedia", "三角関数", "cos")}} へ設定します。<code>currentRotation</code> ベクトルは、現在の角度 <code>currentAngle</code> にある {{interwiki("wikipedia", "単位円")}} 上のポイントの位置です。</p>
+次に、現在の回転ベクトルは、現在の回転角度 (`currentAngle`) を {{interwiki("wikipedia", "ラジアン")}} に変換し、回転ベクトルの最初のコンポーネントを {{interwiki("wikipedia", "三角関数", "sin")}} に設定し、2 番目のコンポーネントを {{interwiki("wikipedia", "三角関数", "cos")}} へ設定します。`currentRotation` ベクトルは、現在の角度 `currentAngle` にある {{interwiki("wikipedia", "単位円")}} 上のポイントの位置です。
 
-<p>{{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} は、以前に確立した GLSL シェーディングプログラムをアクティブにするために呼び出されます。次に、JavaScript コードとシェーダー間 ({{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}} を使用) で情報を共有するために使用される各 uniform の位置を取得します。</p>
+{{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} は、以前に確立した GLSL シェーディングプログラムをアクティブにするために呼び出されます。次に、JavaScript コードとシェーダー間 ({{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}} を使用) で情報を共有するために使用される各 uniform の位置を取得します。
 
-<p><code>uScalingFactor</code> という名前の uniform は、以前に計算された <code>currentScale</code> 値に設定されます。覚えているかもしれませんが、これはコンテキストのアスペクト比に基づいて座標系を調整するために使用される値です。これは {{domxref("WebGLRenderingContext.uniform2fv", "uniform2fv()")}} を使用して行われます (これは 2 値の浮動小数点ベクトルであるため)。</p>
+`uScalingFactor` という名前の uniform は、以前に計算された `currentScale` 値に設定されます。覚えているかもしれませんが、これはコンテキストのアスペクト比に基づいて座標系を調整するために使用される値です。これは {{domxref("WebGLRenderingContext.uniform2fv", "uniform2fv()")}} を使用して行われます (これは 2 値の浮動小数点ベクトルであるため)。
 
-<p><code>uRotationVector</code> は、同じく <code>uniform2fv()</code> を使用して、現在の回転ベクトル (<code>currentRotation</code>) に設定されます。</p>
+`uRotationVector` は、同じく `uniform2fv()` を使用して、現在の回転ベクトル (`currentRotation`) に設定されます。
 
-<p><code>uGlobalColor</code> は {{domxref("WebGLRenderingContext.uniform4fv", "uniform4fv()")}} を使用して、正方形を描画するときに使用する色に設定されます。これは 4 コンポーネントの浮動小数点ベクトルです (赤、緑、青、およびアルファごとに 1 つのコンポーネント)。</p>
+`uGlobalColor` は {{domxref("WebGLRenderingContext.uniform4fv", "uniform4fv()")}} を使用して、正方形を描画するときに使用する色に設定されます。これは 4 コンポーネントの浮動小数点ベクトルです (赤、緑、青、およびアルファごとに 1 つのコンポーネント)。
 
-<p>これですべてが終ったので、頂点バッファーを設定して形状を描画できます。まず、{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}} を呼び出すことにより、形状の三角形の描画に使用される頂点のバッファーを設定します。次に、{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}} を呼び出して、シェーダープログラムから頂点位置属性のインデックスを取得します。</p>
+これですべてが終ったので、頂点バッファーを設定して形状を描画できます。まず、{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}} を呼び出すことにより、形状の三角形の描画に使用される頂点のバッファーを設定します。次に、{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}} を呼び出して、シェーダープログラムから頂点位置属性のインデックスを取得します。
 
-<p>頂点位置属性のインデックスが <code>aVertexPosition</code> で利用可能になったので、<code>enableVertexAttribArray()</code> を呼び出して位置属性を有効にし、シェーダープログラム (特に頂点シェーダー) で使用できるようにします。</p>
+頂点位置属性のインデックスが `aVertexPosition` で利用可能になったので、`enableVertexAttribArray()` を呼び出して位置属性を有効にし、シェーダープログラム (特に頂点シェーダー) で使用できるようにします。
 
-<p>次に、{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}} を呼び出すことにより、頂点バッファーが <code>aVertexPosition</code> 属性にバインドされます。このステップはほとんど副作用であるため、このステップは明らかではありません。ただし、結果として、<code>aVertexPosition</code> にアクセスすると、頂点バッファーからデータを取得するようになります。</p>
+次に、{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}} を呼び出すことにより、頂点バッファーが `aVertexPosition` 属性にバインドされます。このステップはほとんど副作用であるため、このステップは明らかではありません。ただし、結果として、`aVertexPosition` にアクセスすると、頂点バッファーからデータを取得するようになります。
 
-<p>シェイプの頂点バッファーと頂点を 1 つずつ頂点シェーダーに配信するために使用される <code>aVertexPosition</code> 属性との間に関連付けがあれば、{{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}} を呼び出してシェイプを描画する準備が整います。</p>
+シェイプの頂点バッファーと頂点を 1 つずつ頂点シェーダーに配信するために使用される `aVertexPosition` 属性との間に関連付けがあれば、{{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}} を呼び出してシェイプを描画する準備が整います。
 
-<p>この時点で、フレームが描画されました。あとは、次の描画をスケジュールするだけです。ここでは {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を呼び出して、ブラウザーが画面を更新する準備ができたときにコールバック関数を実行するように要求します。</p>
+この時点で、フレームが描画されました。あとは、次の描画をスケジュールするだけです。ここでは {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を呼び出して、ブラウザーが画面を更新する準備ができたときにコールバック関数を実行するように要求します。
 
-<p><code>requestAnimationFrame()</code> コールバックは、フレーム描画が開始された時間を指定する単一のパラメーター <code>currentTime</code> を入力として受け取ります。それと、最後のフレームが描画された保存時間、<code>previousTime</code>、および正方形が回転する1秒あたりの度数 (<code>degreesPerSecond</code>) を使用して、<code>currentAngle</code> の新しい値を計算します。次に、<code>previousTime</code> の値が更新され、<code>animateScene()</code> を呼び出して次のフレームを描画します (そして、次のフレームが描画されるように無限にスケジュールします )。</p>
-</div>
+`requestAnimationFrame()` コールバックは、フレーム描画が開始された時間を指定する単一のパラメーター `currentTime` を入力として受け取ります。それと、最後のフレームが描画された保存時間、`previousTime`、および正方形が回転する 1 秒あたりの度数 (`degreesPerSecond`) を使用して、`currentAngle` の新しい値を計算します。次に、`previousTime` の値が更新され、`animateScene()` を呼び出して次のフレームを描画します (そして、次のフレームが描画されるように無限にスケジュールします )。
 
-<h2 id="Result" name="Result">結果</h2>
+## 結果
 
-<p>これは 1 つの単純なオブジェクトを描画しているだけの非常に単純な例ですが、ここで使用されている概念ははるかに複雑なアニメーションに拡張されます。</p>
+これは 1 つの単純なオブジェクトを描画しているだけの非常に単純な例ですが、ここで使用されている概念ははるかに複雑なアニメーションに拡張されます。
 
-<p>{{EmbedLiveSample("live-sample", 660, 500)}}</p>
+{{EmbedLiveSample("live-sample", 660, 500)}}
 
-<h2 id="See_also" name="See_also">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a></li>
- <li><a href="/ja/docs/Web/API/WebGL_API/Tutorial">WebGL チュートリアル</a></li>
-</ul>
+- [WebGL API](/ja/docs/Web/API/WebGL_API)
+- [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)
