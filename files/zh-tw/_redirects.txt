@@ -82,7 +82,6 @@
 /zh-TW/docs/Core_JavaScript_1.5_教學/職員的例子/物件的屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性
 /zh-TW/docs/Core_JavaScript_1.5_教學/職員的例子/物件的屬性/屬性的加入	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入
 /zh-TW/docs/Core_JavaScript_1.5_教學/職員的例子/物件的屬性/屬性的繼承	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承
-/zh-TW/docs/Core_JavaScript_1.5_教學/職員的例子/階層的建立	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立
 /zh-TW/docs/Core_JavaScript_1.5_教學/表達式	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-TW/docs/Core_JavaScript_1.5_教學/註解	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_74154e098f4b1e7026df3945ceb0fa4a
 /zh-TW/docs/Core_JavaScript_1.5_教學/變數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_ef6fc79abc28f5eadd6c126341df5e49
@@ -238,7 +237,6 @@
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/職員的例子/物件的屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承
-/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/職員的例子/階層的建立	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/表達式	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/註解	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_74154e098f4b1e7026df3945ceb0fa4a
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/變數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_ef6fc79abc28f5eadd6c126341df5e49
@@ -334,7 +332,6 @@
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承
-/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/表達式	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/註解	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_74154e098f4b1e7026df3945ceb0fa4a
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/變數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_ef6fc79abc28f5eadd6c126341df5e49
@@ -782,7 +779,6 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承
-/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/表達式	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/註解	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_74154e098f4b1e7026df3945ceb0fa4a
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/變數	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Grammar_and_types_ef6fc79abc28f5eadd6c126341df5e49
