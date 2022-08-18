@@ -9,139 +9,145 @@ tags:
   - Web
 translation_of: Web/HTML/Element/article
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;article&gt;</code> 要素</strong>は文書、ページ、アプリケーション、サイトなどの中で自己完結しており、 (集合したものの中で) 個別に配信や再利用を行うことを意図した構成物を表します。</span>例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。</p>
+**HTML の `<article>` 要素**は文書、ページ、アプリケーション、サイトなどの中で自己完結しており、 (集合したものの中で) 個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<p>ある文書に複数の記事を含めることができます。たとえば、読者がスクロールするたびに各記事のテキストを次々と表示するブログでは、各記事は <code>&lt;article&gt;</code> 要素に含まれ、おそらくその中に1つ以上の <code>&lt;section&gt;</code> があります。</p>
+ある文書に複数の記事を含めることができます。たとえば、読者がスクロールするたびに各記事のテキストを次々と表示するブログでは、各記事は `<article>` 要素に含まれ、おそらくその中に 1 つ以上の `<section>` があります。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ">区分コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。なお、 <code>&lt;article&gt;</code> 要素を {{HTMLElement("address")}} 要素の子孫にしてはいけません。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("main")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ"
+          >区分コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+          >知覚可能コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素。なお、 <code>&#x3C;article></code> 要素を
+        {{HTMLElement("address")}} 要素の子孫にしてはいけません。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+            >article</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        {{ARIARole("application")}}, {{ARIARole("document")}},
+        {{ARIARole("feed")}}, {{ARIARole("main")}},
+        {{ARIARole("none")}}, {{ARIARole("presentation")}},
+        {{ARIARole("region")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes" title="HTML/Global attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<ul>
- <li>それぞれの <code>&lt;article&gt;</code> は、子要素として見出し (<a href="/ja/docs/Web/HTML/Element/Heading_Elements"><code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code></a> 要素) を含むなどの方法で識別できるようにするべきです。</li>
- <li><code>&lt;article&gt;</code> 要素を入れ子にした場合、内側の要素は外側の要素に関する記事を表します。例えばブログ投稿へのコメントは、ブログ投稿を表す <code>&lt;article&gt;</code> 内へ入れ子にした <code>&lt;article&gt;</code> 要素にできます。</li>
- <li><code>&lt;article&gt;</code> 要素の著者情報は {{HTMLElement("address")}} 要素で提供できますが、入れ子にされた <code>&lt;article&gt;</code> 要素には適用されません。</li>
- <li><code>&lt;article&gt;</code> 要素の発行日時は、 {{HTMLElement("time")}} 要素の {{htmlattrxref("datetime", "time")}} 属性で示すことができます。なお、 <em>{{HTMLElement("time")}} 要素の {{htmlattrxref("pubdate", "time")}} 属性は {{glossary("W3C")}} {{glossary("HTML5")}} 標準から外されました。</em></li>
-</ul>
+- それぞれの `<article>` は、子要素として見出し ([`<h1>`-`<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素) を含むなどの方法で識別できるようにするべきです。
+- `<article>` 要素を入れ子にした場合、内側の要素は外側の要素に関する記事を表します。例えばブログ投稿へのコメントは、ブログ投稿を表す `<article>` 内へ入れ子にした `<article>` 要素にできます。
+- `<article>` 要素の著者情報は {{HTMLElement("address")}} 要素で提供できますが、入れ子にされた `<article>` 要素には適用されません。
+- `<article>` 要素の発行日時は、 {{HTMLElement("time")}} 要素の {{htmlattrxref("datetime", "time")}} 属性で示すことができます。なお、 _{{HTMLElement("time")}} 要素の {{htmlattrxref("pubdate", "time")}} 属性は {{glossary("W3C")}} {{glossary("HTML5")}} 標準から外されました。_
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html notranslate">&lt;article class="film_review"&gt;
-  &lt;header&gt;
-    &lt;h2&gt;Jurassic Park&lt;/h2&gt;
-  &lt;/header&gt;
-  &lt;section class="main_review"&gt;
-    &lt;p&gt;Dinos were great!&lt;/p&gt;
-  &lt;/section&gt;
-  &lt;section class="user_reviews"&gt;
-    &lt;article class="user_review"&gt;
-      &lt;p&gt;Way too scary for me.&lt;/p&gt;
-      &lt;footer&gt;
-        &lt;p&gt;
+```html
+<article class="film_review">
+  <header>
+    <h2>Jurassic Park</h2>
+  </header>
+  <section class="main_review">
+    <p>Dinos were great!</p>
+  </section>
+  <section class="user_reviews">
+    <article class="user_review">
+      <p>Way too scary for me.</p>
+      <footer>
+        <p>
           Posted on
-          &lt;time datetime="2015-05-16 19:00"&gt;May 16&lt;/time&gt;
+          <time datetime="2015-05-16 19:00">May 16</time>
           by Lisa.
-        &lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class="user_review"&gt;
-      &lt;p&gt;I agree, dinos are my favorite.&lt;/p&gt;
-      &lt;footer&gt;
-        &lt;p&gt;
+        </p>
+      </footer>
+    </article>
+    <article class="user_review">
+      <p>I agree, dinos are my favorite.</p>
+      <footer>
+        <p>
           Posted on
-          &lt;time datetime="2015-05-17 19:00"&gt;May 17&lt;/time&gt;
+          <time datetime="2015-05-17 19:00">May 17</time>
           by Tom.
-        &lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/article&gt;
-  &lt;/section&gt;
-  &lt;footer&gt;
-    &lt;p&gt;
+        </p>
+      </footer>
+    </article>
+  </section>
+  <footer>
+    <p>
       Posted on
-      &lt;time datetime="2015-05-15 19:00"&gt;May 15&lt;/time&gt;
+      <time datetime="2015-05-15 19:00">May 15</time>
       by Staff.
-    &lt;/p&gt;
-  &lt;/footer&gt;
-&lt;/article&gt;
-</pre>
+    </p>
+  </footer>
+</article>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-article-element', '&lt;article&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sections.html#the-article-element', '&lt;article&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-article-element', '&lt;article&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-article-element', '&lt;article&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5.1', 'sections.html#the-article-element', '&lt;article&gt;')}}         | {{Spec2('HTML5.1')}}     |      |
+| {{SpecName('HTML5 W3C', 'sections.html#the-article-element', '&lt;article&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.article")}}</p>
+{{Compat("html.elements.article")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">HTML のセクションとアウトラインの使用</a></li>
-</ul>
+- 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)

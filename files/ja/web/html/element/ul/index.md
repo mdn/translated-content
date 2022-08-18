@@ -8,183 +8,175 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/ul
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML の <code>&lt;ul&gt;</code> 要素</strong>は、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。</p>
+**HTML の `<ul>` 要素**は、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。また、 <code>&lt;ul&gt;</code> 要素の子に少なくとも 1 個 {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td>0個以上の {{HTMLElement("li")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}} 要素。</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLUListElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリ</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >。また、 <code>&#x3C;ul></code> 要素の子に少なくとも 1 個
+        {{HTMLElement("li")}} 要素を包含する場合は、<a
+          href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ"
+          >知覚可能コンテンツ</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        0個以上の {{HTMLElement("li")}},
+        {{HTMLElement("script")}}, {{HTMLElement("template")}}
+        要素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role"
+            >list</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        {{ARIARole("directory")}}, {{ARIARole("group")}},
+        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
+        {{ARIARole("menubar")}}, {{ARIARole("none")}},
+        {{ARIARole("presentation")}},
+        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
+        {{ARIARole("toolbar")}}, {{ARIARole("tree")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLUListElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<dl>
- <dt>{{ htmlattrdef("compact") }} {{Deprecated_inline}}</dt>
- <dd>この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。</dd>
- <dd>
- <div class="warning"><strong>警告:</strong> この属性は非推奨になっているため、使用しないでください。代わりに <a href="/ja/docs/Web/CSS">CSS</a> を使用してください。 <code>compact</code> 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として <code>80%</code> を指定します。</div>
- </dd>
- <dt>{{ htmlattrdef("type") }} {{Deprecated_inline}}</dt>
- <dd>リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。
- <ul>
-  <li><code>circle</code></li>
-  <li><code>disc</code></li>
-  <li><code>square</code></li>
- </ul>
+<dl><dt>{{ htmlattrdef("compact") }} {{Deprecated_inline}}</dt><dd>この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。</dd><dd><div class="warning"><strong>警告:</strong> この属性は非推奨になっているため、使用しないでください。代わりに <a href="/ja/docs/Web/CSS">CSS</a> を使用してください。 <code>compact</code> 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として <code>80%</code> を指定します。</div></dd><dt>{{ htmlattrdef("type") }} {{Deprecated_inline}}</dt><dd>リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。<ul><li><code>circle</code></li><li><code>disc</code></li><li><code>square</code></li></ul><p>4 つ目の行頭記号の形状として、 WebTV インターフェイスで <code>triangle</code> が定義されていますが、すべてのブラウザーが対応しているわけではありません。</p><p>この属性が存在せず、 <a href="/ja/docs/Web/CSS">CSS</a> の {{ cssxref("list-style-type") }} プロパティがその要素に適用されていない場合は、ユーザーエージェントが行頭記号の種類を、リストの入れ子階層に応じて選択します。</p><div class="warning"><strong>警告:</strong> この属性は非推奨なので使用しないでください。代替として <a href="/ja/docs/Web/CSS">CSS</a> の {{ cssxref("list-style-type") }} プロパティを使用してください。</div></dd></dl>
 
- <p>4 つ目の行頭記号の形状として、 WebTV インターフェイスで <code>triangle</code> が定義されていますが、すべてのブラウザーが対応しているわけではありません。</p>
+## 使用上のメモ
 
- <p>この属性が存在せず、 <a href="/ja/docs/Web/CSS">CSS</a> の {{ cssxref("list-style-type") }} プロパティがその要素に適用されていない場合は、ユーザーエージェントが行頭記号の種類を、リストの入れ子階層に応じて選択します。</p>
+- `<ul>` 要素は、数的な順序がなく、その配置順に意味を持たない項目を持つリストを表します。通常、順序なしリストの項目はドット、円形、四角形などいくつかの形式による行頭記号を伴って描画されます。行頭記号のスタイルは HTML 仕様書のページでは定義されていませんが、 CSS の {{ cssxref("list-style-type") }} プロパティを用いて変更することが可能です。
+- `<ul>` 要素と {{HTMLElement("ol")}} 要素は、必要なだけ深く入れ子にすることができます。さらに言えば、入れ子になったリストが `<ol>` と `<ul>` の間で変化することにで制限はありません。
+- {{ HTMLElement("ol") }} と `<ul>` は、どちらも項目のリストを表します。両者の違いは、 {{ HTMLElement("ol") }} 要素では順序に意味があることです。使い分けの目安としては、項目の順序を変更してみてください。意味が変わるようであれば {{ HTMLElement("ol") }} 要素を使用し、そうでない場合は `<ul>` 要素を使用することができます。
 
- <div class="warning"><strong>警告:</strong> この属性は非推奨なので使用しないでください。代替として <a href="/ja/docs/Web/CSS">CSS</a> の {{ cssxref("list-style-type") }} プロパティを使用してください。</div>
- </dd>
-</dl>
+## 例
 
-<h2 id="Usage_notes">使用上のメモ</h2>
+### シンプルな例
 
+```html
 <ul>
- <li><code>&lt;ul&gt;</code> 要素は、数的な順序がなく、その配置順に意味を持たない項目を持つリストを表します。通常、順序なしリストの項目はドット、円形、四角形などいくつかの形式による行頭記号を伴って描画されます。行頭記号のスタイルは HTML 仕様書のページでは定義されていませんが、 CSS の {{ cssxref("list-style-type") }} プロパティを用いて変更することが可能です。</li>
- <li><code>&lt;ul&gt;</code> 要素と {{HTMLElement("ol")}} 要素は、必要なだけ深く入れ子にすることができます。さらに言えば、入れ子になったリストが <code>&lt;ol&gt;</code> と <code>&lt;ul&gt;</code> の間で変化することにで制限はありません。</li>
- <li>{{ HTMLElement("ol") }} と <code>&lt;ul&gt;</code> は、どちらも項目のリストを表します。両者の違いは、 {{ HTMLElement("ol") }} 要素では順序に意味があることです。使い分けの目安としては、項目の順序を変更してみてください。意味が変わるようであれば {{ HTMLElement("ol") }} 要素を使用し、そうでない場合は <code>&lt;ul&gt;</code> 要素を使用することができます。</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
+```
 
-<h2 id="Examples">例</h2>
+次のように出力されます。
 
-<h3 id="Simple_example">シンプルな例</h3>
+{{EmbedLiveSample("Simple_example", 400, 100)}}
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item&lt;/li&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+### 入れ子になったリスト
 
-<p>次のように出力されます。</p>
-
-<p>{{EmbedLiveSample("Simple_example", 400, 100)}}</p>
-
-<h3 id="Nesting_a_list">入れ子になったリスト</h3>
-
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item
-  &lt;!-- 閉じタグの &lt;/li&gt; がここにはありません。 --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem
-      &lt;!-- 入れ子になった第二の順序なしリストでも同じです。 --&gt;
-        &lt;ul&gt;
-          &lt;li&gt;second item second subitem first sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem second sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem third sub-subitem&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt; &lt;!-- 三番目の順序なしリストを含む li の
-                  閉じタグ &lt;/li&gt; です --&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;!-- Here is the closing &lt;/li&gt; tag --&gt;
-  &lt;/li&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<p>次のように出力されます。</p>
-
-<p>{{EmbedLiveSample("Nesting_a_list", 400, 220)}}</p>
-
-<h3 id="Nested_ul_and_ol">&lt;ul&gt; と &lt;ol&gt; のネスト</h3>
-
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item
-  &lt;!-- ここには &lt;li&gt; の閉じタグはない --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem&lt;/li&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;!-- ここに &lt;/li&gt; を記述し、要素を閉じている --&gt;
-  &lt;/li&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<p>次のように出力されます。</p>
-
-<p>{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 150)}}</p>
-
-<h2 id="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-ul-element', '&lt;ul&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-ul-element', '&lt;ul&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("html.elements.ul")}}</p>
-
-<h2 id="See_also">関連情報</h2>
-
+```html
 <ul>
- <li>その他のリスト関連要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}</li>
- <li><code>&lt;ul&gt;</code> 要素の整形に有益な CSS プロパティ:
-  <ul>
-   <li>{{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更</li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters">CSS カウンター</a>: 複雑に入れ子になったリストの扱い</li>
-   <li>{{CSSxRef("line-height")}} プロパティ: 非推奨の {{htmlattrxref("compact", "ul")}} 属性のシミュレート</li>
-   <li>{{CSSxRef("margin")}} プロパティ: リストのインデントの制御</li>
-  </ul>
- </li>
+  <li>first item</li>
+  <li>second item
+  <!-- 閉じタグの </li> がここにはありません。 -->
+    <ul>
+      <li>second item first subitem</li>
+      <li>second item second subitem
+      <!-- 入れ子になった第二の順序なしリストでも同じです。 -->
+        <ul>
+          <li>second item second subitem first sub-subitem</li>
+          <li>second item second subitem second sub-subitem</li>
+          <li>second item second subitem third sub-subitem</li>
+        </ul>
+      </li> <!-- 三番目の順序なしリストを含む li の
+                  閉じタグ </li> です -->
+      <li>second item third subitem</li>
+    </ul>
+  <!-- Here is the closing </li> tag -->
+  </li>
+  <li>third item</li>
 </ul>
+```
+
+次のように出力されます。
+
+{{EmbedLiveSample("Nesting_a_list", 400, 220)}}
+
+### \<ul> と \<ol> のネスト
+
+```html
+<ul>
+  <li>first item</li>
+  <li>second item
+  <!-- ここには <li> の閉じタグはない -->
+    <ol>
+      <li>second item first subitem</li>
+      <li>second item second subitem</li>
+      <li>second item third subitem</li>
+    </ol>
+  <!-- ここに </li> を記述し、要素を閉じている -->
+  </li>
+  <li>third item</li>
+</ul>
+```
+
+次のように出力されます。
+
+{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 150)}}
+
+## 仕様書
+
+| 仕様書                                                                                                   | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-ul-element', '&lt;ul&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-ul-element', '&lt;ul&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+
+## ブラウザーの互換性
+
+{{Compat("html.elements.ul")}}
+
+## 関連情報
+
+- その他のリスト関連要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
+- `<ul>` 要素の整形に有益な CSS プロパティ:
+
+  - {{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更
+  - [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
+  - {{CSSxRef("line-height")}} プロパティ: 非推奨の {{htmlattrxref("compact", "ul")}} 属性のシミュレート
+  - {{CSSxRef("margin")}} プロパティ: リストのインデントの制御

@@ -13,75 +13,79 @@ tags:
   - button
 translation_of: Web/HTML/Element/input/button
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p><span class="seoSummary">{{HTMLElement("input")}} 要素の <strong><code>button</code></strong> 型は、単純なプッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{event("click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。</span></p>
+{{HTMLElement("input")}} 要素の **`button`** 型は、単純なプッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{event("click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<div class="note">
-<p><strong>注</strong>: <code>&lt;input&gt;</code> 要素の <code>button</code> 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。</p>
-</div>
+> **Note:** **注**: `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong><a href="#value">値</a></strong></td>
-   <td>ボタンのラベルとして使われる {{domxref("DOMString")}}</td>
-  </tr>
-  <tr>
-   <td><strong>イベント</strong></td>
-   <td>{{domxref("Element/click_event", "click")}}</td>
-  </tr>
-  <tr>
-   <td><strong>対応している共通属性</strong></td>
-   <td>{{htmlattrxref("type", "input")}}, {{htmlattrxref("value", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL 属性</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>メソッド</strong></td>
-   <td>なし</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <strong><a href="#value">値</a></strong>
+      </td>
+      <td>ボタンのラベルとして使われる {{domxref("DOMString")}}</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        {{htmlattrxref("type", "input")}},
+        {{htmlattrxref("value", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>なし</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value" name="Value">値</h2>
+## 値
 
-<p><code>&lt;input type="button"&gt;</code> 要素の {{htmlattrxref("value", "input")}} 属性には、ボタンのラベルとして使われる {{domxref("DOMString")}} を設定します。</p>
+`<input type="button">` 要素の {{htmlattrxref("value", "input")}} 属性には、ボタンのラベルとして使われる {{domxref("DOMString")}} を設定します。
 
-<div id="summary-example3">
-<pre class="brush: html notranslate">&lt;input type="button" value="クリックしてね"&gt;</pre>
-</div>
+```html
+<input type="button" value="クリックしてね">
+```
 
-<p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
+{{EmbedLiveSample("summary-example3", 650, 30)}}
 
-<p><code>value</code> を指定しなかった場合は、無印のボタンになります。</p>
+`value` を指定しなかった場合は、無印のボタンになります。
 
-<div id="summary-example1">
-<pre class="brush: html notranslate">&lt;input type="button"&gt;</pre>
-</div>
+```html
+<input type="button">
+```
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+{{EmbedLiveSample("summary-example1", 650, 30)}}
 
-<h2 id="Using_buttons" name="Using_buttons">ボタンの使用</h2>
+## ボタンの使用
 
-<p><code>&lt;input type="button"&gt;</code> 要素には既定の動作がありません (親戚である <code><a href="/ja/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> や <code><a href="/ja/docs/Web/HTML/Element/input/reset">&lt;input type="reset"&gt;</a></code> は、それぞれフォームの送信とリセットに使用されます)。ボタンに何かをさせる場合は、処理を行うための JavaScript コードを書く必要があります。</p>
+`<input type="button">` 要素には既定の動作がありません (親戚である [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) や [`<input type="reset">`](/ja/docs/Web/HTML/Element/input/reset) は、それぞれフォームの送信とリセットに使用されます)。ボタンに何かをさせる場合は、処理を行うための JavaScript コードを書く必要があります。
 
-<h3 id="A_simple_button" name="A_simple_button">単純なボタン</h3>
+### 単純なボタン
 
-<p>単純なボタンに {{event("click")}} イベントハンドラーを設定し、マシンを起動させましょう (つまり、ボタンの <code>value</code> と続く段落の文字列コンテンツを切り替えます)。</p>
+単純なボタンに {{event("click")}} イベントハンドラーを設定し、マシンを起動させましょう (つまり、ボタンの `value` と続く段落の文字列コンテンツを切り替えます)。
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;input type="button" value="マシンを起動"&gt;
-&lt;/form&gt;
-&lt;p&gt;マシンが停止しています。&lt;/p&gt;</pre>
+```html
+<form>
+  <input type="button" value="マシンを起動">
+</form>
+<p>マシンが停止しています。</p>
+```
 
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+```js
+const button = document.querySelector('input');
 const paragraph = document.querySelector('p');
 
 button.addEventListener('click', updateButton);
@@ -94,28 +98,28 @@ function updateButton() {
     button.value = 'マシンを起動';
     paragraph.textContent = 'マシンが停止しています。';
   }
-}</pre>
+}
+```
 
-<p>このスクリプトは DOM で <code>&lt;input&gt;</code> を表す {{domxref("HTMLInputElement")}} オブジェクトの参照を受け取り、この参照を変数 <code>button</code> に保存します。{{domxref("EventTarget.addEventListener", "addEventListener()")}} は、ボタンに {{event("click")}} イベントが発生したときに実行される関数を設定します。</p>
+このスクリプトは DOM で `<input>` を表す {{domxref("HTMLInputElement")}} オブジェクトの参照を受け取り、この参照を変数 `button` に保存します。{{domxref("EventTarget.addEventListener", "addEventListener()")}} は、ボタンに {{event("click")}} イベントが発生したときに実行される関数を設定します。
 
-<p>{{EmbedLiveSample("A_simple_button", 650, 100)}}</p>
+{{EmbedLiveSample("A_simple_button", 650, 100)}}
 
-<h3 id="Adding_keyboard_shortcuts_to_buttons" name="Adding_keyboard_shortcuts_to_buttons">ボタンへのショートカットキーの追加</h3>
+### ボタンへのショートカットキーの追加
 
-<p>ショートカットキーは、アクセスキーやキーボードショートカットとも呼ばれますが、ユーザーがキーボード上のキーまたはキーの組み合わせを使用してボタンを操作できるものです。ボタンにショートカットキーを追加するには、どの {{HTMLElement("input")}} でも同じですが、 {{htmlattrxref("accesskey")}} グローバル属性を使用します。</p>
+ショートカットキーは、アクセスキーやキーボードショートカットとも呼ばれますが、ユーザーがキーボード上のキーまたはキーの組み合わせを使用してボタンを操作できるものです。ボタンにショートカットキーを追加するには、どの {{HTMLElement("input")}} でも同じですが、 {{htmlattrxref("accesskey")}} グローバル属性を使用します。
 
-<p>この例では、 <kbd>s</kbd> がアクセスキーとして指定されています (ブラウザーと OS の組み合わせによっては、 <kbd>s</kbd> と特定の修飾キーの組み合わせが必要です。その一覧については <a href="/ja/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> を参照してください)。</p>
+この例では、 <kbd>s</kbd> がアクセスキーとして指定されています (ブラウザーと OS の組み合わせによっては、 <kbd>s</kbd> と特定の修飾キーの組み合わせが必要です。その一覧については [accesskey](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください)。
 
-<div id="accesskey-example1">
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;input type="button" value="マシンを起動" accesskey="s"&gt;
-&lt;/form&gt;
-&lt;p&gt;マシンが停止しています。&lt;/p&gt;
-</pre>
-</div>
+```html
+<form>
+  <input type="button" value="マシンを起動" accesskey="s">
+</form>
+<p>マシンが停止しています。</p>
+```
 
-<div class="hidden">
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+```js hidden
+const button = document.querySelector('input');
 const paragraph = document.querySelector('p');
 
 button.addEventListener('click', updateButton);
@@ -128,31 +132,29 @@ function updateButton() {
     button.value = 'マシンを起動';
     paragraph.textContent = 'マシンが停止しています。';
   }
-}</pre>
-</div>
+}
+```
 
-<p>{{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}</p>
+{{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-<div class="note">
-<p><strong>注</strong>: 上記の例では、ユーザーがアクセスキーが何であるかを知ることができないという問題があります。実際のサイトでは、この情報を、サイトのデザインに干渉しない方法で提供する必要があります (たとえば、簡単にアクセスできるリンクを設置して、サイトのアクセスキーに関する情報を指すなど)。</p>
-</div>
+> **Note:** **注**: 上記の例では、ユーザーがアクセスキーが何であるかを知ることができないという問題があります。実際のサイトでは、この情報を、サイトのデザインに干渉しない方法で提供する必要があります (たとえば、簡単にアクセスできるリンクを設置して、サイトのアクセスキーに関する情報を指すなど)。
 
-<h3 id="Disabling_and_enabling_a_button" name="Disabling_and_enabling_a_button">ボタンの無効化と有効化</h3>
+### ボタンの無効化と有効化
 
-<p>ボタンを無効にするには、次のように {{htmlattrxref("disabled")}} グローバル属性を指定するだけです。</p>
+ボタンを無効にするには、次のように {{htmlattrxref("disabled")}} グローバル属性を指定するだけです。
 
-<div id="disable-example1">
-<pre class="brush: html notranslate">&lt;input type="button" value="Disable me" disabled&gt;</pre>
-</div>
+```html
+<input type="button" value="Disable me" disabled>
+```
 
-<p>実行時に <code>disabled</code> に <code>true</code> または <code>false</code> を設定するだけで、ボタンを有効化したり無効化したりすることができます。この例では、ボタンは有効の状態で始まりますが、押すと <code>button.disabled = true</code> を使用して無効化されます。それから {{domxref("WindowTimers.setTimeout","setTimeout()")}} 関数を使用して、2秒後にボタンの状態を有効の状態にリセットしています。</p>
+実行時に `disabled` に `true` または `false` を設定するだけで、ボタンを有効化したり無効化したりすることができます。この例では、ボタンは有効の状態で始まりますが、押すと `button.disabled = true` を使用して無効化されます。それから {{domxref("WindowTimers.setTimeout","setTimeout()")}} 関数を使用して、2 秒後にボタンの状態を有効の状態にリセットしています。
 
-<div class="hidden">
-<h6 id="Hidden_code_1">Hidden code 1</h6>
+```html hidden
+<input type="button" value="Enabled">
+```
 
-<pre class="brush: html notranslate">&lt;input type="button" value="Enabled"&gt;</pre>
-
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+```js hidden
+const button = document.querySelector('input');
 
 button.addEventListener('click', disableButton);
 
@@ -163,26 +165,26 @@ function disableButton() {
     button.disabled = false;
     button.value = 'Enabled';
   }, 2000);
-}</pre>
-</div>
+}
+```
 
-<p>{{EmbedLiveSample("Hidden_code_1", 650, 60)}}</p>
+{{EmbedLiveSample("Hidden_code_1", 650, 60)}}
 
-<p><code>disabled</code> 属性が指定されなかった場合、ボタンは <code>disabled</code> の状態を親要素から継承します。これによって、複数の要素を {{HTMLElement("fieldset")}} 要素のようなコンテナーの中に入れ、コンテナーに <code>disabled</code> を設定することで、一括で有効化したり無効化したりすることができます。</p>
+`disabled` 属性が指定されなかった場合、ボタンは `disabled` の状態を親要素から継承します。これによって、複数の要素を {{HTMLElement("fieldset")}} 要素のようなコンテナーの中に入れ、コンテナーに `disabled` を設定することで、一括で有効化したり無効化したりすることができます。
 
-<p>以下の例はこの操作を表しています。これは一つ前の例ととても似ていますが、最初のボタンが押されたときに <code>disabled</code> 属性が <code>&lt;fieldset&gt;</code> に設定され、2秒経過するまで3つのボタンがすべて無効になります。</p>
+以下の例はこの操作を表しています。これは一つ前の例ととても似ていますが、最初のボタンが押されたときに `disabled` 属性が `<fieldset>` に設定され、2 秒経過するまで 3 つのボタンがすべて無効になります。
 
-<div class="hidden">
-<h6 id="Hidden_code_2">Hidden code 2</h6>
+```html hidden
+<fieldset>
+  <legend>Button group</legend>
+  <input type="button" value="Button 1">
+  <input type="button" value="Button 2">
+  <input type="button" value="Button 3">
+</fieldset>
+```
 
-<pre class="brush: html notranslate">&lt;fieldset&gt;
-  &lt;legend&gt;Button group&lt;/legend&gt;
-  &lt;input type="button" value="Button 1"&gt;
-  &lt;input type="button" value="Button 2"&gt;
-  &lt;input type="button" value="Button 3"&gt;
-&lt;/fieldset&gt;</pre>
-
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+```js hidden
+const button = document.querySelector('input');
 const fieldset = document.querySelector('fieldset');
 
 button.addEventListener('click', disableButton);
@@ -192,35 +194,35 @@ function disableButton() {
   window.setTimeout(function() {
     fieldset.disabled = false;
   }, 2000);
-}</pre>
+}
+```
+
+{{EmbedLiveSample("Hidden_code_2", 650, 60)}}
+
+> **Note:** **注**: Firefox は他のブラウザーとは異なり、ページのロード中は既定で {{HTMLElement("button")}} に[動的な無効状態を維持](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)します。この機能を制御するには {{htmlattrxref("autocomplete","button")}} 属性を使用してください。
+
+## 検証
+
+ボタンに対して制約検証は行われません。制約するべき値はありません。
+
+## 例
+
+以下の例では、 {{htmlelement("canvas")}} 要素といくらかの単純な CSS と JavaScript を使用して作成した、とても簡単なお絵かきアプリを紹介します。 (簡略化のため CSS を省略します)。上部の 2 つのコントロールで、色と描画するペンの大きさを選択できます。ボタンは、クリックすると、キャンバスを消去する関数を呼び出します。
+
+```html
+<div class="toolbar">
+  <input type="color" aria-label="select pen color">
+  <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
+  <input type="button" value="Clear canvas">
 </div>
 
-<p>{{EmbedLiveSample("Hidden_code_2", 650, 60)}}</p>
+<canvas class="myCanvas">
+  <p>Add suitable fallback here.</p>
+</canvas>
+```
 
-<div class="note">
-<p><strong>注</strong>: Firefox は他のブラウザーとは異なり、ページのロード中は既定で {{HTMLElement("button")}} に<a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">動的な無効状態を維持</a>します。この機能を制御するには {{htmlattrxref("autocomplete","button")}} 属性を使用してください。</p>
-</div>
-
-<h2 id="Validation" name="Validation">検証</h2>
-
-<p>ボタンに対して制約検証は行われません。制約するべき値はありません。</p>
-
-<h2 id="Examples" name="Examples">例</h2>
-
-<p>以下の例では、 {{htmlelement("canvas")}} 要素といくらかの単純な CSS と JavaScript を使用して作成した、とても簡単なお絵かきアプリを紹介します。 (簡略化のため CSS を省略します)。上部の2つのコントロールで、色と描画するペンの大きさを選択できます。ボタンは、クリックすると、キャンバスを消去する関数を呼び出します。</p>
-
-<pre class="brush: html notranslate">&lt;div class="toolbar"&gt;
-  &lt;input type="color" aria-label="select pen color"&gt;
-  &lt;input type="range" min="2" max="50" value="30" aria-label="select pen size"&gt;&lt;span class="output"&gt;30&lt;/span&gt;
-  &lt;input type="button" value="Clear canvas"&gt;
-&lt;/div&gt;
-
-&lt;canvas class="myCanvas"&gt;
-  &lt;p&gt;Add suitable fallback here.&lt;/p&gt;
-&lt;/canvas&gt;</pre>
-
-<div class="hidden">
-<pre class="brush: css notranslate">body {
+```css hidden
+body {
   background: #ccc;
   margin: 0;
   overflow: hidden;
@@ -246,10 +248,11 @@ input[type="range"] {
 span {
   position: relative;
   bottom: 5px;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('.myCanvas');
+```js
+var canvas = document.querySelector('.myCanvas');
 var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight-85;
 var ctx = canvas.getContext('2d');
@@ -308,42 +311,24 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-draw();</pre>
+draw();
+```
 
-<p>{{EmbedLiveSample("Examples", '100%', 600)}}</p>
+{{EmbedLiveSample("Examples", '100%', 600)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                               | 状態                             | 備考 |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.input.input-button")}}</p>
+{{Compat("html.elements.input.input-button")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("input")}} およびそれに実装されている {{domxref("HTMLInputElement")}} インターフェイス。</li>
- <li>より新しい {{HTMLElement("button")}} 要素。</li>
- <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS プロパティの互換性</a></li>
-</ul>
+- {{HTMLElement("input")}} およびそれに実装されている {{domxref("HTMLInputElement")}} インターフェイス。
+- より新しい {{HTMLElement("button")}} 要素。
+- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

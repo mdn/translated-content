@@ -25,204 +25,227 @@ tags:
   - 要素
 translation_of: Web/HTML/Element/menu
 ---
-<p>{{HTMLRef}}{{SeeCompatTable}}</p>
+{{HTMLRef}}{{SeeCompatTable}}
 
-<p><strong>HTML の <code>&lt;menu&gt;</code> 要素</strong>は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような<a href="/ja/docs/Web/HTML/Element/menu#context_menu">コンテキストメニュー</a>の両方を含みます。</p>
+**HTML の `<menu>` 要素**は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような[コンテキストメニュー](/ja/docs/Web/HTML/Element/menu#context_menu)の両方を含みます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td>
-    <p><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。この要素の子に 1 個以上の {{HTMLElement("li")}} 要素がある場合は<a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td>
-    <p>要素が<em>リストメニュー</em>状態である場合: <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>または 0 個以上の {{HTMLElement("li")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}}。 (<em>リストメニュー</em>は、親要素が<em>コンテキストメニュー</em>状態の {{HTMLElement("menu")}} でない場合の既定の状態です。)</p>
-
-    <p>要素が<em>コンテキストメニュー</em>状態である場合: 任意の順序で、 0 個以上の {{HTMLElement("menu")}} (コンテキストメニュー状態に限る), {{HTMLElement("menuitem")}}, {{HTMLElement("hr")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}}。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{No_Tag_Omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{DOMxRef("HTMLMenuElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <p>
+          <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+            >フローコンテンツ</a
+          >。この要素の子に 1 個以上の {{HTMLElement("li")}}
+          要素がある場合は<a
+            href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ"
+            >知覚可能コンテンツ</a
+          >。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <p>
+          要素が<em>リストメニュー</em>状態である場合:
+          <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+            >フローコンテンツ</a
+          >または 0 個以上の {{HTMLElement("li")}},
+          {{HTMLElement("script")}},
+          {{HTMLElement("template")}}。
+          (<em>リストメニュー</em>は、親要素が<em>コンテキストメニュー</em>状態の
+          {{HTMLElement("menu")}} でない場合の既定の状態です。)
+        </p>
+        <p>
+          要素が<em>コンテキストメニュー</em>状態である場合: 任意の順序で、 0
+          個以上の {{HTMLElement("menu")}}
+          (コンテキストメニュー状態に限る),
+          {{HTMLElement("menuitem")}}, {{HTMLElement("hr")}},
+          {{HTMLElement("script")}},
+          {{HTMLElement("template")}}。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{No_Tag_Omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role"
+            >list</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        {{ARIARole("directory")}}, {{ARIARole("group")}},
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+            >listbox</a
+          ></code
+        >, {{ARIARole("menu")}}, {{ARIARole("menubar")}},
+        {{ARIARole("none")}}, {{ARIARole("presentation")}},
+        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
+        {{ARIARole("toolbar")}}, {{ARIARole("tree")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{DOMxRef("HTMLMenuElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<dl>
- <dt>{{HTMLAttrDef("label")}} {{Deprecated_inline}}</dt>
- <dd>ユーザーに対して表示されるメニューの名称です。入れ子のメニューの中で、サブメニューへアクセスするためのラベルを提供するために使用されます。親要素が {{HTMLElement("menu")}} で<em>コンテキストメニュー</em>状態である場合に限り、指定する必要があります。</dd>
- <dt>{{HTMLAttrDef("type")}}</dt>
- <dd>この属性は定義済みのメニューの種類を示すものであり、以下 2 つの値のいずれかを指定します。
- <ul>
-  <li><code>context</code> {{Deprecated_inline}} : 他の要素を介して起動されるコマンドのグループを表す<em>ポップアップメニュー</em>状態を表します。これは {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性で参照されるボタンメニューや、 <a href="/ja/docs/Web/HTML/Global_attributes#attr-contextmenu"><code>contextmenu</code></a> 属性のある要素のコンテキストメニューである可能性があります。この値はこの属性がなく、その親要素も <code>&lt;menu&gt;</code> であった場合の既定値です。</li>
-  <li><code>toolbar</code>: <em>ツールバー</em>状態であり、ユーザーと対話するための一連のコマンドから成るツールバーを表します。これは {{HTMLElement("li")}} の番号なしリストの形か、子要素に <code>&lt;li&gt;</code> を含まない場合は、利用できるコマンドを記述した<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>です。この値はこの属性が指定されていない場合の既定値です。</li>
- </ul>
- </dd>
-</dl>
+- {{HTMLAttrDef("label")}} {{Deprecated_inline}}
+  - : ユーザーに対して表示されるメニューの名称です。入れ子のメニューの中で、サブメニューへアクセスするためのラベルを提供するために使用されます。親要素が {{HTMLElement("menu")}} で*コンテキストメニュー*状態である場合に限り、指定する必要があります。
+- {{HTMLAttrDef("type")}}
 
-<h2 id="Usage_notes">使用上の注意</h2>
+  - : この属性は定義済みのメニューの種類を示すものであり、以下 2 つの値のいずれかを指定します。
 
-<p>{{HTMLElement("menu")}} 要素と {{HTMLElement("ul")}} 要素はともに順序なしリストの項目を表すものです。主な違いは、 {{HTMLElement("ul")}} は主に項目の表示を目的とするのに対し、 {{HTMLElement("menu")}} 要素は操作を行うための対話型の項目のためのものです。</p>
+    - `context` {{Deprecated_inline}} : 他の要素を介して起動されるコマンドのグループを表す*ポップアップメニュー*状態を表します。これは {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性で参照されるボタンメニューや、 [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#attr-contextmenu) 属性のある要素のコンテキストメニューである可能性があります。この値はこの属性がなく、その親要素も `<menu>` であった場合の既定値です。
+    - `toolbar`: *ツールバー*状態であり、ユーザーと対話するための一連のコマンドから成るツールバーを表します。これは {{HTMLElement("li")}} の番号なしリストの形か、子要素に `<li>` を含まない場合は、利用できるコマンドを記述した[フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ)です。この値はこの属性が指定されていない場合の既定値です。
 
-<p>HTML メニューは、コンテキストメニュー (一般的に、別の要素を右クリックすると表示される) またはツールバーを作成するために使用することができます。</p>
+## 使用上の注意
 
-<p><strong><a href="#context_menu">コンテキストメニュー</a></strong>は、 <code>&lt;menu&gt;</code> 要素の中にメニューで選択可能な項目を表す {{HTMLElement("menuitem")}} 要素、メニュー内のサブメニューを表す <code>&lt;menu&gt;</code> 要素、メニューの内容をセクションに分けるセパレーター行を表す {{HTMLElement("hr")}} 要素が含まれたもので構成されます。 コンテキストメニューは、関連付ける要素の {{HTMLAttrxRef("contextmenu")}} 属性、または<a href="#button_menu">ボタンでアクティブにするメニュー</a>であれば {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性を使用して、メニューをアクティブ化する要素に紐づけます。</p>
+{{HTMLElement("menu")}} 要素と {{HTMLElement("ul")}} 要素はともに順序なしリストの項目を表すものです。主な違いは、 {{HTMLElement("ul")}} は主に項目の表示を目的とするのに対し、 {{HTMLElement("menu")}} 要素は操作を行うための対話型の項目のためのものです。
 
-<p><strong><a href="#toolbar">ツールバーメニュー</a></strong> は、 <code>&lt;menu&gt;</code> 要素の中身が 2 通りのうちの一方で記述されたもので構成されます。 {{HTMLElement("li")}} 要素で表した項目の順不同リスト (それぞれの項目が、ユーザーが利用できるコマンドやオプションを表す) または、 (<code>&lt;li&gt;</code> 要素がない場合) 使用なコマンドやオプションを表す<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>のどちらかです。</p>
+HTML メニューは、コンテキストメニュー (一般的に、別の要素を右クリックすると表示される) またはツールバーを作成するために使用することができます。
 
-<p>この要素は HTML4 で非推奨になりましたが、 HTML5.1 および HTML living standard で再導入されました。本ドキュメントは、現行の Firefox の実装について説明します。 HTML 5.1 によれば、 type 属性の 'list' が 'toolbar' に変わったようです。</p>
+**[コンテキストメニュー](#context_menu)**は、 `<menu>` 要素の中にメニューで選択可能な項目を表す {{HTMLElement("menuitem")}} 要素、メニュー内のサブメニューを表す `<menu>` 要素、メニューの内容をセクションに分けるセパレーター行を表す {{HTMLElement("hr")}} 要素が含まれたもので構成されます。 コンテキストメニューは、関連付ける要素の {{HTMLAttrxRef("contextmenu")}} 属性、または[ボタンでアクティブにするメニュー](#button_menu)であれば {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性を使用して、メニューをアクティブ化する要素に紐づけます。
 
-<h2 id="Examples">例</h2>
+**[ツールバーメニュー](#toolbar)** は、 `<menu>` 要素の中身が 2 通りのうちの一方で記述されたもので構成されます。 {{HTMLElement("li")}} 要素で表した項目の順不同リスト (それぞれの項目が、ユーザーが利用できるコマンドやオプションを表す) または、 (`<li>` 要素がない場合) 使用なコマンドやオプションを表す[フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ)のどちらかです。
 
-<h3 id="Context_menu">コンテキストメニュー</h3>
+この要素は HTML4 で非推奨になりましたが、 HTML5.1 および HTML living standard で再導入されました。本ドキュメントは、現行の Firefox の実装について説明します。 HTML 5.1 によれば、 type 属性の 'list' が 'toolbar' に変わったようです。
 
-<p>{{Deprecated_header}}</p>
+## 例
 
-<h4 id="HTML">HTML</h4>
+### コンテキストメニュー
 
-<pre class="brush: html;">&lt;!-- A &lt;div&gt; element with a context menu --&gt;
-&lt;div contextmenu="popup-menu"&gt;
+{{Deprecated_header}}
+
+#### HTML
+
+```html
+<!-- A <div> element with a context menu -->
+<div contextmenu="popup-menu">
   Right-click to see the adjusted context menu
-&lt;/div&gt;
+</div>
 
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
+<menu type="context" id="popup-menu">
+  <menuitem>Action</menuitem>
+  <menuitem>Another action</menuitem>
+  <hr/>
+  <menuitem>Separated action</menuitem>
+</menu>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css;">div {
+```css
+div {
   width: 300px;
   height: 80px;
   background-color: lightgreen;
 }
-</pre>
+```
 
-<h4 id="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Context_menu", "100%", 80)}}</p>
+{{EmbedLiveSample("Context_menu", "100%", 80)}}
 
-<h3 id="Menu_button">メニューボタン</h3>
+### メニューボタン
 
-<div class="notecard warning">
-<p>メニューボタンを実装しているブラウザーはまだ知られていません。 <code>&lt;menu&gt;</code> 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。</p>
-</div>
+<div class="notecard warning"><p>メニューボタンを実装しているブラウザーはまだ知られていません。 <code>&#x3C;menu></code> 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。</p></div>
 
-<div class="notecard warning">
-<p>{{HTMLElement("menuitem")}} 要素は廃止されました。</p>
-</div>
+<div class="notecard warning"><p>{{HTMLElement("menuitem")}} 要素は廃止されました。</p></div>
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;!-- A button, which displays a menu when clicked. --&gt;
-&lt;button type="menu" menu="popup-menu"&gt;
+```html
+<!-- A button, which displays a menu when clicked. -->
+<button type="menu" menu="popup-menu">
   Dropdown
-&lt;/button&gt;
+</button>
 
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
+<menu type="context" id="popup-menu">
+  <menuitem>Action</menuitem>
+  <menuitem>Another action</menuitem>
+  <hr/>
+  <menuitem>Separated action</menuitem>
+</menu>
+```
 
-<h4 id="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Menu_button", "100%", 50)}}</p>
+{{EmbedLiveSample("Menu_button", "100%", 50)}}
 
-<h3 id="Toolbar">ツールバー</h3>
+### ツールバー
 
-<div class="notecard warning">
-<p>ツールバーメニューを実装しているブラウザーはまだ知られていません。</p>
-</div>
+<div class="notecard warning"><p>ツールバーメニューを実装しているブラウザーはまだ知られていません。</p></div>
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;!-- A context menu for a simple editor,
-   - containing two menu buttons. --&gt;
-&lt;menu type="toolbar"&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="file-menu"&gt;File&lt;/button&gt;
-    &lt;menu type="context" id="file-menu"&gt;
-      &lt;menuitem label="New..." onclick="newFile()"&gt;
-      &lt;menuitem label="Save..." onclick="saveFile()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="edit-menu"&gt;Edit&lt;/button&gt;
-    &lt;menu type="context" id="edit-menu"&gt;
-      &lt;menuitem label="Cut..." onclick="cutEdit()"&gt;
-      &lt;menuitem label="Copy..." onclick="copyEdit()"&gt;
-      &lt;menuitem label="Paste..." onclick="pasteEdit()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
-&lt;/menu&gt;
-</pre>
+```html
+<!-- A context menu for a simple editor,
+   - containing two menu buttons. -->
+<menu type="toolbar">
+  <li>
+    <button type="menu" menu="file-menu">File</button>
+    <menu type="context" id="file-menu">
+      <menuitem label="New..." onclick="newFile()">
+      <menuitem label="Save..." onclick="saveFile()">
+    </menu>
+  </li>
+  <li>
+    <button type="menu" menu="edit-menu">Edit</button>
+    <menu type="context" id="edit-menu">
+      <menuitem label="Cut..." onclick="cutEdit()">
+      <menuitem label="Copy..." onclick="copyEdit()">
+      <menuitem label="Paste..." onclick="pasteEdit()">
+    </menu>
+  </li>
+</menu>
+```
 
-<h4 id="Result_3">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Toolbar", "100%", 100)}}</p>
+{{EmbedLiveSample("Toolbar", "100%", 100)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>最新のスナップショット {{SpecName("HTML5.2")}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考                                                                 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
+| {{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML WHATWG")}} | 最新のスナップショット {{SpecName("HTML5.2")}} から変更なし |
+| {{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML5.1")}}     |                                                                      |
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.menu")}}</p>
+{{Compat("html.elements.menu")}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>他のリスト関連 HTML 要素: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}} および廃止済の {{HTMLElement("dir")}}</li>
- <li><a href="/ja/docs/Web/HTML/Global_attributes#attr-contextmenu"><code>contextmenu</code></a> <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>: {{HTMLAttrxRef("type", "menu", 'type="context"')}} がついた <code>menu</code> の <code>id</code> を参照するために使用することができる</li>
-</ul>
+- 他のリスト関連 HTML 要素: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}} および廃止済の {{HTMLElement("dir")}}
+- [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#attr-contextmenu) [グローバル属性](/ja/docs/Web/HTML/Global_attributes): {{HTMLAttrxRef("type", "menu", 'type="context"')}} がついた `menu` の `id` を参照するために使用することができる

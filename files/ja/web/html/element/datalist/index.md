@@ -7,8 +7,8 @@ tags:
   - HTML forms
   - HTML フォーム
   - HTML5
-  - 'HTML:フローコンテンツ'
-  - 'HTML:記述コンテンツ'
+  - HTML:フローコンテンツ
+  - HTML:記述コンテンツ
   - Reference
   - Web
   - ウェブ
@@ -17,101 +17,97 @@ tags:
   - 要素
 translation_of: Web/HTML/Element/datalist
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;datalist&gt;</code> 要素</strong>は、他のコントロールで利用可能な値を表現する一連の {{HTMLElement("option")}} 要素を含みます。</span></p>
+**HTML の `<datalist>` 要素**は、他のコントロールで利用可能な値を表現する一連の {{HTMLElement("option")}} 要素を含みます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、または 0 個以上の {{HTMLElement("option")}} 要素のどちらか</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLDataListElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、または 0 個以上の {{HTMLElement("option")}} 要素のどちらか
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLDataListElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には、すべての要素が持つ<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>以外の属性はありません。</p>
+この要素には、すべての要素が持つ[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html">&lt;label for="myBrowser"&gt;一覧からブラウザーを選択して下さい:&lt;/label&gt;
-&lt;input list="browsers" id="myBrowser" name="myBrowser" /&gt;
-&lt;datalist id="browsers"&gt;
-  &lt;option value="Chrome"&gt;
-  &lt;option value="Firefox"&gt;
-  &lt;option value="Internet Explorer"&gt;
-  &lt;option value="Opera"&gt;
-  &lt;option value="Safari"&gt;
-  &lt;option value="Microsoft Edge"&gt;
-&lt;/datalist&gt;
-</pre>
+```html
+<label for="myBrowser">一覧からブラウザーを選択して下さい:</label>
+<input list="browsers" id="myBrowser" name="myBrowser" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-datalist-element', '&lt;datalist&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'sec-forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("html.elements.datalist")}}</p>
+{{Compat("html.elements.datalist")}}
 
-<h2 id="Polyfill" name="Polyfill">代替手段</h2>
+## 代替手段
 
-<p>古いブラウザーや非互換の現行ブラウザーで対応するための代替手段 (polyfill) を以下に挙げます。<br>
- <a href="https://github.com/mfranzke/datalist-polyfill">datalist-polyfill</a></p>
+古いブラウザーや非互換の現行ブラウザーで対応するための代替手段 (polyfill) を以下に挙げます。
+[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("input")}} 要素、およびもっと具体的な {{htmlattrxref("list", "input")}} 属性</li>
- <li>{{HTMLElement("option")}} 要素</li>
-</ul>
+- {{HTMLElement("input")}} 要素、およびもっと具体的な {{htmlattrxref("list", "input")}} 属性
+- {{HTMLElement("option")}} 要素

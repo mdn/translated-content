@@ -13,168 +13,195 @@ tags:
   - Web
 translation_of: Web/HTML/Element/section
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;section&gt;</code> 要素</strong>は、文書の自立した一般的なセクション (区間) を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。</span>少数の例外を除いて、セクションには見出しを置いてください。</p>
+**HTML の `<section>` 要素**は、文書の自立した一般的なセクション (区間) を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。少数の例外を除いて、セクションには見出しを置いてください。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただけるのであれば、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ">区分コンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。ただし、 <code>&lt;section&gt;</code> 要素は {{HTMLElement("address")}} 要素の子孫要素として配置してはならない。</td>
-  </tr>
-  <tr>
-    <th scope="row">暗黙の ARIA ロール</th>
-    <td>要素に<a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">アクセシブル名</a>がある場合は<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a></code>、それ以外の場合は<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("alert")}}, {{ARIARole("alertdialog")}}, {{ARIARole("application")}}, {{ARIARole("banner")}}, {{ARIARole("complementary")}}, {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("log")}}, {{ARIARole("main")}}, {{ARIARole("marquee")}}, {{ARIARole("navigation")}}, {{ARIARole("none")}}, {{ARIARole("note")}}, {{ARIARole("presentation")}}, {{ARIARole("search")}}, {{ARIARole("status")}}, {{ARIARole("tabpanel")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ"
+          >区分コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ"
+          >知覚可能コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素。ただし、 <code>&#x3C;section></code> 要素は
+        {{HTMLElement("address")}}
+        要素の子孫要素として配置してはならない。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        要素に<a
+          href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"
+          >アクセシブル名</a
+        >がある場合は<code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role"
+            >region</a
+          ></code
+        >、それ以外の場合は<a
+          href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
+        {{ARIARole("application")}}, {{ARIARole("banner")}},
+        {{ARIARole("complementary")}},
+        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
+        {{ARIARole("document")}}, {{ARIARole("feed")}},
+        {{ARIARole("log")}}, {{ARIARole("main")}},
+        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
+        {{ARIARole("none")}}, {{ARIARole("note")}},
+        {{ARIARole("presentation")}}, {{ARIARole("search")}},
+        {{ARIARole("status")}}, {{ARIARole("tabpanel")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes" rel="internal">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p>前述のように、 <code>&lt;section&gt;</code> は汎用的な区分要素ですので、それを表現するためのより具体的な要素がない場合にのみ使用してください。例えば、ナビゲーションメニューは {{htmlelement("nav")}} 要素で囲むべきですが、検索結果のリストや地図表示とそのコントロールなどは特定の要素を持たないので、 <code>&lt;section&gt;</code> の中に入れることができます。</p>
+前述のように、 `<section>` は汎用的な区分要素ですので、それを表現するためのより具体的な要素がない場合にのみ使用してください。例えば、ナビゲーションメニューは {{htmlelement("nav")}} 要素で囲むべきですが、検索結果のリストや地図表示とそのコントロールなどは特定の要素を持たないので、 `<section>` の中に入れることができます。
 
-<p>また、次のようなことも考慮してください。</p>
+また、次のようなことも考慮してください。
 
-<ul>
-  <li>この要素の内容が単独の、自立した記事として配信されて意味のある不可分の単位のコンテンツ (例えば、ブログ投稿やブログのコメント、新聞記事など) を表す場合は、 {{HTMLElement("article")}} 要素を使用したほうがいいでしょう。</li>
-  <li>内容が、メインコンテンツと一緒に機能する有用な付帯情報を表しているものの、メインコンテンツの一部ではない場合 (関連リンクや著者の経歴など) は、 {{HTMLElement("aside")}} を使用してください。</li>
-  <li>内容が文書のメインコンテンツを表す場合は、 {{HTMLElement("main")}} を使用してください。</li>
-  <li>スタイル付けのためのラッパーとしてのみ使用する場合は、 {{HTMLElement("div")}} を使用してください。大まかに言うと、 <code>&lt;section&gt;</code> は文書のアウトラインの中に論理的に現れるべきです。</li>
-</ul>
+- この要素の内容が単独の、自立した記事として配信されて意味のある不可分の単位のコンテンツ (例えば、ブログ投稿やブログのコメント、新聞記事など) を表す場合は、 {{HTMLElement("article")}} 要素を使用したほうがいいでしょう。
+- 内容が、メインコンテンツと一緒に機能する有用な付帯情報を表しているものの、メインコンテンツの一部ではない場合 (関連リンクや著者の経歴など) は、 {{HTMLElement("aside")}} を使用してください。
+- 内容が文書のメインコンテンツを表す場合は、 {{HTMLElement("main")}} を使用してください。
+- スタイル付けのためのラッパーとしてのみ使用する場合は、 {{HTMLElement("div")}} を使用してください。大まかに言うと、 `<section>` は文書のアウトラインの中に論理的に現れるべきです。
 
-<p>繰り返しになりますが、それぞれの <code>&lt;section&gt;</code> はできるだけ、特に見出し
-({{HTMLElement('h1')}}-{{HTMLElement('h6')}} 要素) を <code>&lt;section&gt;</code> の子要素に含めて識別できるようにするべきです。見出しのない <code>&lt;section&gt;</code> の例については以下を参照してください。</p>
+繰り返しになりますが、それぞれの `<section>` はできるだけ、特に見出し
+({{HTMLElement('h1')}}-{{HTMLElement('h6')}} 要素) を `<section>` の子要素に含めて識別できるようにするべきです。見出しのない `<section>` の例については以下を参照してください。
 
-<h2 id="Example">例</h2>
+## 例
 
-<h3 id="simple_usage_example">単純な使い方の例</h3>
+### 単純な使い方の例
 
-<h3 id="Before">導入前</h3>
+### 導入前
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;h2&gt;見出し&lt;/h2&gt;
-  &lt;p&gt;素晴らしいコンテンツの数々&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <h2>見出し</h2>
+  <p>素晴らしいコンテンツの数々</p>
+</div>
+```
 
-<h3 id="After">導入後</h3>
+### 導入後
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;h2&gt;見出し&lt;/h2&gt;
-  &lt;p&gt;素晴らしいコンテンツの数々&lt;/p&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section>
+  <h2>見出し</h2>
+  <p>素晴らしいコンテンツの数々</p>
+</section>
+```
 
-<h3 id="using_a_section_without_a_heading">見出しのないセクションの使用</h3>
+### 見出しのないセクションの使用
 
-<p><code>&lt;section&gt;</code> が見出しなしで使用されている状況は、伝統的な文書構造よりも、ウェブアプリケーションや UI のセクションでよく見られます。文書内では、コンテンツの内容を示す見出しのない独立したセクションがあっても、実際には何の意味もありません。このような見出しは、すべての読者にとって便利ですが、特に画面リーダーのような支援技術のユーザーにとっては便利であり、また、 SEO にも有効です。</p>
+`<section>` が見出しなしで使用されている状況は、伝統的な文書構造よりも、ウェブアプリケーションや UI のセクションでよく見られます。文書内では、コンテンツの内容を示す見出しのない独立したセクションがあっても、実際には何の意味もありません。このような見出しは、すべての読者にとって便利ですが、特に画面リーダーのような支援技術のユーザーにとっては便利であり、また、 SEO にも有効です。
 
-<p>しかし、二次的なナビゲーションの仕組みを考えてみましょう。グローバルナビゲーションがすでに <code>&lt;nav&gt;</code> 要素で囲まれている場合、 <code>&lt;section&gt;</code> の中に前へ/次へのメニューを入れることも考えられます。</p>
+しかし、二次的なナビゲーションの仕組みを考えてみましょう。グローバルナビゲーションがすでに `<nav>` 要素で囲まれている場合、 `<section>` の中に前へ/次へのメニューを入れることも考えられます。
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;a href="#"&gt;前の記事&lt;/a&gt;
-  &lt;a href="#"&gt;次の記事&lt;/a&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section>
+  <a href="#">前の記事</a>
+  <a href="#">次の記事</a>
+</section>
+```
 
-<p>また、アプリを制御するためのボタンバーのようなものはどうでしょうか。必ずしも見出しが必要ではないかもしれませんが、それでも文書の明確なセクションであることに変わりはありません。</p>
+また、アプリを制御するためのボタンバーのようなものはどうでしょうか。必ずしも見出しが必要ではないかもしれませんが、それでも文書の明確なセクションであることに変わりはありません。
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;button class="reply"&gt;返信&lt;/button&gt;
-  &lt;button class="reply-all"&gt;全員に返信&lt;/button&gt;
-  &lt;button class="fwd"&gt;転送&lt;/button&gt;
-  &lt;button class="del"&gt;削除&lt;/button&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section>
+  <button class="reply">返信</button>
+  <button class="reply-all">全員に返信</button>
+  <button class="fwd">転送</button>
+  <button class="del">削除</button>
+</section>
+```
 
-<p>見出しのないセクションは、文書のアウトラインには表示されません。このような HTML ブロックを文書のアウトラインの中に強制的に入れたいが、視覚的な出力には何の影響も与えたくない場合は、非表示にした見出しを入れることができます。</p>
+見出しのないセクションは、文書のアウトラインには表示されません。このような HTML ブロックを文書のアウトラインの中に強制的に入れたいが、視覚的な出力には何の影響も与えたくない場合は、非表示にした見出しを入れることができます。
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;h2 class="hidden"&gt;コントロール&lt;/h2&gt;
-  &lt;button class="reply"&gt;返信&lt;/button&gt;
-  &lt;button class="reply-all"&gt;全員に返信&lt;/button&gt;
-  &lt;button class="fwd"&gt;転送&lt;/button&gt;
-  &lt;button class="del"&gt;削除&lt;/button&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section>
+  <h2 class="hidden">コントロール</h2>
+  <button class="reply">返信</button>
+  <button class="reply-all">全員に返信</button>
+  <button class="fwd">転送</button>
+  <button class="del">削除</button>
+</section>
+```
 
-<p>支援技術や画面リーダーに適した CSS を使って非表示にするには、次のようにします。</p>
+支援技術や画面リーダーに適した CSS を使って非表示にするには、次のようにします。
 
-<pre class="brush: html">.hidden {
+```html
+.hidden {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-</pre>
+```
 
-<p>コンテンツによっては、見出しを入れることで SEO 施策にもなるので、選択肢の一つとして検討してみてはいかがでしょうか。</p>
+コンテンツによっては、見出しを入れることで SEO 施策にもなるので、選択肢の一つとして検討してみてはいかがでしょうか。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}         | {{Spec2('HTML5.1')}}     |      |
+| {{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.section")}}</p>
+{{Compat("html.elements.section")}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>その他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">HTML のセクションとアウトラインの使用</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role">ARIA: Region ロール</a></li>
- <li><a href="https://www.smashingmagazine.com/2020/01/html5-article-section/">Why You Should Choose HTML5 article Over section</a>, by Bruce Lawson</li>
-</ul>
+- その他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [ARIA: Region ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson

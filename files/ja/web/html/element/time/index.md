@@ -6,170 +6,137 @@ tags:
   - HTML
   - HTML text-level semantics
   - HTML5
-  - 'HTML:Flow content'
-  - 'HTML:Palpable Content'
-  - 'HTML:Phrasing content'
+  - HTML:Flow content
+  - HTML:Palpable Content
+  - HTML:Phrasing content
   - Reference
   - Web
 translation_of: Web/HTML/Element/time
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">HTML の <strong><code>&lt;time&gt;</code> 要素</strong>は、特定の時の区間を表します。</span> <code>datetime</code> 属性を使用して、機械可読な形式の日付を記述することができ、検索エンジンの結果を改善したりリマインダーなどの独自機能に使用したりすることができます。</p>
+HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datetime` 属性を使用して、機械可読な形式の日付を記述することができ、検索エンジンの結果を改善したりリマインダーなどの独自機能に使用したりすることができます。
 
-<p>次のうちの一つを表します。</p>
+次のうちの一つを表します。
 
-<ul>
- <li>24時間制の時刻</li>
- <li>{{interwiki("wikipedia", "グレゴリオ暦")}}の正確な日付 (時刻やタイムゾーンを伴うことも可能)</li>
- <li><a href="https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string">妥当な期間</a></li>
-</ul>
+- 24 時間制の時刻
+- {{interwiki("wikipedia", "グレゴリオ暦")}}の正確な日付 (時刻やタイムゾーンを伴うことも可能)
+- [妥当な期間](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string)
 
-<div>{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLTimeElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLTimeElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>他のすべての HTML 要素と同様に、この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>に対応しています。</p>
+他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
 
-<dl>
- <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>この属性は要素の日付や時刻を表し、下記に示す書式のうちの一つでなければなりません。</dd>
-</dl>
+- {{htmlattrdef("datetime")}}
+  - : この属性は要素の日付や時刻を表し、下記に示す書式のうちの一つでなければなりません。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+## 使用上のメモ
 
-<p>この要素は、機械可読な形式で日付や時刻を表現するためのものです。例えばユーザーエージェントが、ユーザーのカレンダーにイベントの予定情報を提供することに役立てることができます。</p>
+この要素は、機械可読な形式で日付や時刻を表現するためのものです。例えばユーザーエージェントが、ユーザーのカレンダーにイベントの予定情報を提供することに役立てることができます。
 
-<p>この要素はグレゴリオ暦導入前の日付に対して使用するべきではありません (日付の計算で混乱するため)。</p>
+この要素はグレゴリオ暦導入前の日付に対して使用するべきではありません (日付の計算で混乱するため)。
 
-<p><dfn>datetime 値</dfn> (機械可読な日時の値) は要素の <code>datetime</code> 属性の値であり、正しい書式 (下記参照) でなければなりません。要素に <code>datetime</code> 属性がない場合、<strong>子孫要素を持ってはならず</strong>、 <dfn>datetime 値</dfn>が要素のテキストの内容になります。</p>
+_datetime 値_ (機械可読な日時の値) は要素の `datetime` 属性の値であり、正しい書式 (下記参照) でなければなりません。要素に `datetime` 属性がない場合、**子孫要素を持ってはならず**、 *datetime 値*が要素のテキストの内容になります。
 
-<h3 id="Valid_datetime_Values" name="Valid_datetime_Values">妥当な datetime 値</h3>
+### 妥当な datetime 値
 
-<dl>
- <dt>妥当な年の文字列</dt>
- <dd><code>2011</code></dd>
- <dt>妥当な月の文字列</dt>
- <dd><code>2011-11</code></dd>
- <dt>妥当な日付の文字列</dt>
- <dd><code>2011-11-18</code></dd>
- <dt>年のない妥当な日付の文字列</dt>
- <dd><code>11-18</code></dd>
- <dt>妥当な週の文字列</dt>
- <dd><code>2011-W47</code></dd>
- <dt>妥当な時刻の文字列</dt>
- <dd><code>14:54</code></dd>
- <dd><code>14:54:39</code></dd>
- <dd><code>14:54:39.929</code></dd>
- <dt>妥当なローカル日時の文字列</dt>
- <dd><code>2011-11-18T14:54:39.929</code></dd>
- <dd><code>2011-11-18 14:54:39.929</code></dd>
- <dt>妥当なグローバル日時の文字列</dt>
- <dd><code>2011-11-18T14:54:39.929Z</code></dd>
- <dd><code>2011-11-18T14:54:39.929-0400</code></dd>
- <dd><code>2011-11-18T14:54:39.929-04:00</code></dd>
- <dd><code>2011-11-18 14:54:39.929Z</code></dd>
- <dd><code>2011-11-18 14:54:39.929-0400</code></dd>
- <dd><code>2011-11-18 14:54:39.929-04:00</code></dd>
- <dt>妥当な期間の文字列</dt>
- <dd><code>PT4H18M3S</code></dd>
-</dl>
+<dl><dt>妥当な年の文字列</dt><dd><code>2011</code></dd><dt>妥当な月の文字列</dt><dd><code>2011-11</code></dd><dt>妥当な日付の文字列</dt><dd><code>2011-11-18</code></dd><dt>年のない妥当な日付の文字列</dt><dd><code>11-18</code></dd><dt>妥当な週の文字列</dt><dd><code>2011-W47</code></dd><dt>妥当な時刻の文字列</dt><dd><code>14:54</code></dd><dd><code>14:54:39</code></dd><dd><code>14:54:39.929</code></dd><dt>妥当なローカル日時の文字列</dt><dd><code>2011-11-18T14:54:39.929</code></dd><dd><code>2011-11-18 14:54:39.929</code></dd><dt>妥当なグローバル日時の文字列</dt><dd><code>2011-11-18T14:54:39.929Z</code></dd><dd><code>2011-11-18T14:54:39.929-0400</code></dd><dd><code>2011-11-18T14:54:39.929-04:00</code></dd><dd><code>2011-11-18 14:54:39.929Z</code></dd><dd><code>2011-11-18 14:54:39.929-0400</code></dd><dd><code>2011-11-18 14:54:39.929-04:00</code></dd><dt>妥当な期間の文字列</dt><dd><code>PT4H18M3S</code></dd></dl>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Simple_example" name="Simple_example">単純な例</h3>
+### 単純な例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;コンサートは&lt;time datetime="2018-07-07T20:00:00"&gt;20:00&lt;/time&gt;に始まります。&lt;/p&gt;
-</pre>
+```html
+<p>コンサートは<time datetime="2018-07-07T20:00:00">20:00</time>に始まります。</p>
+```
 
-<h4 id="Output" name="Output">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Simple_example', 250, 60)}}</p>
+{{EmbedLiveSample('Simple_example', 250, 60)}}
 
-<h3 id="Datetime_example" name="Datetime_example"><code>datetime</code> の例</h3>
+### `datetime` の例
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;コンサートは&lt;time
-  datetime="2001-05-15T19:00"&gt;5月15日&lt;/time&gt;に開催されます。&lt;/p&gt;
-</pre>
+```html
+<p>コンサートは<time
+  datetime="2001-05-15T19:00">5月15日</time>に開催されます。</p>
+```
 
-<h4 id="Output_2" name="Output_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Datetime_example', 250, 60)}}</p>
+{{EmbedLiveSample('Datetime_example', 250, 60)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName('HTML5.1')}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'textlevel-semantics.html#the-time-element', '&lt;time&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>{{SpecName('HTML5 W3C')}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                             | 備考                                          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}} | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5.1')}} から変更なし |
+| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-time-element', '&lt;time&gt;')}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.time")}}</p>
+{{Compat("html.elements.time")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("data")}} 要素では、他の種類の値を示すことが可能です。</li>
-</ul>
+- {{HTMLElement("data")}} 要素では、他の種類の値を示すことが可能です。

@@ -6,209 +6,209 @@ tags:
   - Element
   - HTML
   - HTML text-level semantics
-  - 'HTML:Flow content'
-  - 'HTML:Palpable Content'
-  - 'HTML:Phrasing content'
+  - HTML:Flow content
+  - HTML:Palpable Content
+  - HTML:Phrasing content
   - Reference
   - Unarticulated Annotation
   - Underline
   - Web
 translation_of: Web/HTML/Element/u
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML</strong> の<strong>非言語的注釈要素</strong> (<strong><code>&lt;u&gt;</code></strong>) は、非言語的に注釈があることを示す方法で表示する行内テキストの区間を示します。</span>これは既定で単純な実線の下線として表示されますが、 CSS を使用して変更することもできます。</p>
+**HTML** の**非言語的注釈要素** (**`<u>`**) は、非言語的に注釈があることを示す方法で表示する行内テキストの区間を示します。これは既定で単純な実線の下線として表示されますが、 CSS を使用して変更することもできます。
 
-<div class="warning">
-<p>この要素は古いバージョンの HTML で "Underline" (下線) 要素と呼ばれる傾向があり、現在でもそのように誤用されることがあります。テキストに下線を引くのであれば、代わりに CSS の {{cssxref("text-decoration")}} プロパティを <code>underline</code> に設定したスタイルを適用してください。</p>
-</div>
+> **Warning:** この要素は古いバージョンの HTML で "Underline" (下線) 要素と呼ばれる傾向があり、現在でもそのように誤用されることがあります。テキストに下線を引くのであれば、代わりに CSS の {{cssxref("text-decoration")}} プロパティを `underline` に設定したスタイルを適用してください。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
-
-<p><code>&lt;u&gt;</code> を使用するのがどのような場合に適切で、どのような場合に適切でないのかについての詳細は、<a href="#usage_notes">使用上の注意</a>を参照してください。</p>
+`<u>` を使用するのがどのような場合に適切で、どのような場合に適切でないのかについての詳細は、[使用上の注意](#usage_notes)を参照してください。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p>他の純粋な整形要素と同様に、以前の HTML の下線 (<code>&lt;u&gt;</code>) 要素は HTML 4 で非推奨になりました。しかし <code>&lt;u&gt;</code> は、 HTML 5 で新しい意味論的な、何らかの曖昧な注釈が適用されるテキストをマークするという意味で復活しました。</p>
+他の純粋な整形要素と同様に、以前の HTML の下線 (`<u>`) 要素は HTML 4 で非推奨になりました。しかし `<u>` は、 HTML 5 で新しい意味論的な、何らかの曖昧な注釈が適用されるテキストをマークするという意味で復活しました。
 
-<div class="note">
-<p>(既定で下線が引かれる) ハイパーリンクと誤認されるような方法で、 (これも既定で下線が引かれる) <code>&lt;u&gt;</code> 要素を使用することは避けるように注意してください。</p>
-</div>
+> **Note:** (既定で下線が引かれる) ハイパーリンクと誤認されるような方法で、 (これも既定で下線が引かれる) `<u>` 要素を使用することは避けるように注意してください。
 
-<h3 id="Use_cases" name="Use_cases">使用例</h3>
+### 使用例
 
-<p><code>&lt;u&gt;</code> 要素の有効な使用例としては、綴りエラーの通知、中国語の文字列の{{interwiki("wikipedia", "proper name mark", "固有名詞記号")}}の記述、その他の形の注釈などがあります。</p>
+`<u>` 要素の有効な使用例としては、綴りエラーの通知、中国語の文字列の{{interwiki("wikipedia", "proper name mark", "固有名詞記号")}}の記述、その他の形の注釈などがあります。
 
-<p>単に表現の目的で下線を引いたり、本の題名を記述したりするために <code>&lt;u&gt;</code> を使用するべきでは<em>ありません</em>。</p>
+単に表現の目的で下線を引いたり、本の題名を記述したりするために `<u>` を使用するべきでは*ありません*。
 
-<h3 id="Other_elements_to_consider_using" name="Other_elements_to_consider_using">仕様を考慮するべきその他の要素</h3>
+### 仕様を考慮するべきその他の要素
 
-<p>多くの場合、次のような場合は <code>&lt;u&gt;</code> よりも他の要素を使用するべきです。</p>
+多くの場合、次のような場合は `<u>` よりも他の要素を使用するべきです。
 
-<ul>
- <li>{{HTMLElement("em")}}: 強調の記述</li>
- <li>{{HTMLElement("b")}}: テキストに注意を引かせる</li>
- <li>{{HTMLElement("mark")}}: キーワードや句をマーク</li>
- <li>{{HTMLElement("strong")}}: 強い重要性のあるテキストを示す</li>
- <li>{{HTMLElement("cite")}}: 書籍やその他の出版物の題名をマーク</li>
- <li>{{HTMLElement("i")}}: 西洋言語のテキストで技術用語、音訳、考え、船名などを記述</li>
-</ul>
+- {{HTMLElement("em")}}: 強調の記述
+- {{HTMLElement("b")}}: テキストに注意を引かせる
+- {{HTMLElement("mark")}}: キーワードや句をマーク
+- {{HTMLElement("strong")}}: 強い重要性のあるテキストを示す
+- {{HTMLElement("cite")}}: 書籍やその他の出版物の題名をマーク
+- {{HTMLElement("i")}}: 西洋言語のテキストで技術用語、音訳、考え、船名などを記述
 
-<p>(<code>&lt;u&gt;</code> で作成された非言語的な注釈に対して) 言語的な注釈を提供する場合は、 {{HTMLElement("ruby")}} 要素を使用してください。</p>
+(`<u>` で作成された非言語的な注釈に対して) 言語的な注釈を提供する場合は、 {{HTMLElement("ruby")}} 要素を使用してください。
 
-<p>意味論的な意味なしで下線を引きたい場合は、 {{cssxref("text-decoration")}} プロパティの値 <code>underline</code> を使用してください。</p>
+意味論的な意味なしで下線を引きたい場合は、 {{cssxref("text-decoration")}} プロパティの値 `underline` を使用してください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Indicating_a_spelling_error" name="Indicating_a_spelling_error">綴りエラーを表示</h3>
+### 綴りエラーを表示
 
-<p>この例は、 <code>&lt;u&gt;</code> 要素と CSS を使用して、綴り間違いのエラーを含む段落を表示し、エラー箇所をこの目的でよく使用される、赤い波線の下線スタイルで示します。</p>
+この例は、 `<u>` 要素と CSS を使用して、綴り間違いのエラーを含む段落を表示し、エラー箇所をこの目的でよく使用される、赤い波線の下線スタイルで示します。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;This paragraph includes a &lt;u class="spelling"&gt;wrnogly&lt;/u&gt;
-spelled word.&lt;/p&gt;</pre>
+```html
+<p>This paragraph includes a <u class="spelling">wrnogly</u>
+spelled word.</p>
+```
 
-<p>この HTML では、 <code>&lt;u&gt;</code> にクラス <code>spelling</code> を付けて、 "wrongly" という語の綴りミスを示すために使用しているのが分かります。</p>
+この HTML では、 `<u>` にクラス `spelling` を付けて、 "wrongly" という語の綴りミスを示すために使用しているのが分かります。
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">u.spelling {
+```css
+u.spelling {
   text-decoration: red wavy underline;
-}</pre>
+}
+```
 
-<p>この CSS は <code>&lt;u&gt;</code> 要素にクラス <code>spelling</code> がついてスタイル付けされるとき、テキストすぐ下に赤い波線の下線を引くことを示しています。これはスペルミスをスタイル付けするときに一般的なスタイル付けです。 <code>red dashed underline</code> を使って表現できるスタイルもよく使われます。</p>
+この CSS は `<u>` 要素にクラス `spelling` がついてスタイル付けされるとき、テキストすぐ下に赤い波線の下線を引くことを示しています。これはスペルミスをスタイル付けするときに一般的なスタイル付けです。 `red dashed underline` を使って表現できるスタイルもよく使われます。
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>結果は現在利用可能なもっと有名なワープロを使ってきた人になじみがあるものでしょう。</p>
+結果は現在利用可能なもっと有名なワープロを使ってきた人になじみがあるものでしょう。
 
-<p>{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}</p>
+{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}
 
-<h3 id="Avoiding_&lt;u>" name="Avoiding_&lt;u>">&lt;u&gt; の回避</h3>
+### \<u> の回避
 
-<p>多くの場合、実際には <code>&lt;u&gt;</code> を使用したいと思わないでしょう。いくつかの場面で代わりに何をするべきかを示す例を挙げましょう。</p>
+多くの場合、実際には `<u>` を使用したいと思わないでしょう。いくつかの場面で代わりに何をするべきかを示す例を挙げましょう。
 
-<h4 id="Non-semantic_underlines" name="Non-semantic_underlines">意味を伴わない下線</h4>
+#### 意味を伴わない下線
 
-<p>意味を含むことがないテキストに下線を引くには、次のように、 {{HTMLElement("span")}} 要素と {{cssxref("text-decoration")}} プロパティに <code>"underline"</code> を設定したものを使用してください。</p>
+意味を含むことがないテキストに下線を引くには、次のように、 {{HTMLElement("span")}} 要素と {{cssxref("text-decoration")}} プロパティに `"underline"` を設定したものを使用してください。
 
-<h5 id="HTML_2">HTML</h5>
+##### HTML
 
-<pre class="brush: html notranslate">&lt;span class="underline"&gt;Today's Special&lt;/span&gt;
-&lt;br&gt;
-Chicken Noodle Soup With Carrots</pre>
+```html
+<span class="underline">Today's Special</span>
+<br>
+Chicken Noodle Soup With Carrots
+```
 
-<h5 id="CSS_2">CSS</h5>
+##### CSS
 
-<pre class="brush: css notranslate">.underline {
+```css
+.underline {
   text-decoration: underline;
-}</pre>
+}
+```
 
-<h5 id="Result_2" name="Result_2">結果</h5>
+##### 結果
 
-<p>{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}</p>
+{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}
 
-<h4 id="Presenting_a_book_title" name="Presenting_a_book_title">書籍の題名の表現</h4>
+#### 書籍の題名の表現
 
-<div id="example-unstyled-cite">
-<p>書籍の題名は <code>&lt;u&gt;</code> や <code>&lt;i&gt;</code> でもなく、 {{HTMLElement("cite")}} 要素を使用して表現してください。</p>
+書籍の題名は `<u>` や `<i>` でもなく、 {{HTMLElement("cite")}} 要素を使用して表現してください。
 
-<h5 id="HTML_3">HTML</h5>
+##### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;The class read &lt;cite&gt;Moby Dick&lt;/cite&gt; in the first term.&lt;/p&gt;</pre>
+```html
+<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+```
 
-<h5 id="Result_with_default_style" name="Result_with_default_style">既定のスタイルでの結果</h5>
+##### 既定のスタイルでの結果
 
-<p>{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}</p>
-</div>
+{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}
 
-<p>なお、 <code>&lt;cite&gt;</code> 要素の既定のスタイルではテキストを斜体で表示します。ご希望であれば、 CSS を使用して上書きすることができます。</p>
+なお、 `<cite>` 要素の既定のスタイルではテキストを斜体で表示します。ご希望であれば、 CSS を使用して上書きすることができます。
 
-<pre class="brush: css notranslate">cite {
+```css
+cite {
   font-style: normal;
   text-decoration: underline;
-}</pre>
+}
+```
 
-<h5 id="Result_with_custom_style" name="Result_with_custom_style">カスタムスタイルでの結果</h5>
+##### カスタムスタイルでの結果
 
-<p>{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}</p>
+{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-u-element', '&lt;u&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-u-element', '&lt;u&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-u-element', '&lt;u&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-u-element', '&lt;u&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}                 | {{Spec2('HTML4.01')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.u")}}</p>
+{{Compat("html.elements.u")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>ふつう、 {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, {{HTMLElement("cite")}} 要素が代わりに使用されます。</li>
- <li>意味論的なものではない下線には、 CSS の {{cssxref("text-decoration")}} プロパティを使用してください。</li>
-</ul>
+- ふつう、 {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, {{HTMLElement("cite")}} 要素が代わりに使用されます。
+- 意味論的なものではない下線には、 CSS の {{cssxref("text-decoration")}} プロパティを使用してください。

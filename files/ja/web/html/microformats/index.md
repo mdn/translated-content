@@ -9,145 +9,99 @@ tags:
   - Reference
 translation_of: Web/HTML/microformats
 ---
-<h2 id="Summary" name="Summary">概要</h2>
+## 概要
 
-<p><span class="seoSummary"><ruby><a href="http://microformats.org/"><dfn>マイクロフォーマット</dfn></a><rp> (</rp><rt>Microformat</rt><rp>)</rp></ruby> (<strong>μF</strong> と略記されることもあります) は、意味情報と構造化データを HTML に埋め込むために使用される規格で、検索エンジンやアグリゲーター、その他のツールが使用するための API を提供します。HTML のこれらの最小限のパターンは、人、組織、イベント、場所などの基本的な情報からドメイン固有の情報まで、さまざまなものをマークアップするために使用されます。マイクロフォーマットは、オブジェクトを記述するためにサポートする語彙を使用し、そのプロパティに値を割り当てるために名前と値のペアを使用します。プロパティはクラス属性で運ばれ、任意の HTML 要素に追加することができ、データ値は HTML 要素のコンテンツとセマンティック属性を再利用します。マイクロフォーマット 2 はマイクロフォーマットの更新版で、HTML の構造化された構文や語彙に注釈を付けるために新しい属性を学習する必要がある RDFa やマイクロデータを使用する以前のアプローチよりもシンプルな方法を提供します。</span></p>
+[_マイクロフォーマット_](http://microformats.org/) (Microformat) (**μF** と略記されることもあります) は、意味情報と構造化データを HTML に埋め込むために使用される規格で、検索エンジンやアグリゲーター、その他のツールが使用するための API を提供します。HTML のこれらの最小限のパターンは、人、組織、イベント、場所などの基本的な情報からドメイン固有の情報まで、さまざまなものをマークアップするために使用されます。マイクロフォーマットは、オブジェクトを記述するためにサポートする語彙を使用し、そのプロパティに値を割り当てるために名前と値のペアを使用します。プロパティはクラス属性で運ばれ、任意の HTML 要素に追加することができ、データ値は HTML 要素のコンテンツとセマンティック属性を再利用します。マイクロフォーマット 2 はマイクロフォーマットの更新版で、HTML の構造化された構文や語彙に注釈を付けるために新しい属性を学習する必要がある RDFa やマイクロデータを使用する以前のアプローチよりもシンプルな方法を提供します。
 
-<p>マイクロフォーマットは、すべての主要な検索エンジンが対応しています。検索エンジンは、この構造化データに直接アクセスすることで、ウェブページ上の情報を理解し、より関連性の高い結果をユーザーに提供することができるため、大きな利益を得ることができます。マイクロフォーマットは機械可読性があることにくわえ、人間も簡単に読めるように設計されています。</p>
+マイクロフォーマットは、すべての主要な検索エンジンが対応しています。検索エンジンは、この構造化データに直接アクセスすることで、ウェブページ上の情報を理解し、より関連性の高い結果をユーザーに提供することができるため、大きな利益を得ることができます。マイクロフォーマットは機械可読性があることにくわえ、人間も簡単に読めるように設計されています。
 
-<ul>
- <li>マイクロフォーマットのオブジェクトを生成するには、class 属性に h-* というクラス名を付けてください。</li>
- <li>オブジェクトへプロパティを追加するには、p-*, u-*, dt-*, e-* のクラス名がオブジェクトの子孫の一つに使用されます。</li>
-</ul>
+- マイクロフォーマットのオブジェクトを生成するには、class 属性に h-\* というクラス名を付けてください。
+- オブジェクトへプロパティを追加するには、p-\*, u-\*, dt-\*, e-\* のクラス名がオブジェクトの子孫の一つに使用されます。
 
-<p>マイクロフォーマット 2 には<a href="http://microformats.org/wiki/microformats2#Parsers">オープンソースの主要言語における解釈ライブラリ</a>があります。</p>
+マイクロフォーマット 2 には[オープンソースの主要言語における解釈ライブラリ](http://microformats.org/wiki/microformats2#Parsers)があります。
 
-<h2 id="How_Microformats_Work" name="How_Microformats_Work"><span id="How_do_Microformats_Work">マイクロフォーマットはどのように動作するのか</span></h2>
+## マイクロフォーマットはどのように動作するのか
 
-<p>An author of a webpage can add microformats to their HTML. For example if they wanted to identify themselves they could use an <a href="http://microformats.org/wiki/h-card">h-card</a> such as:</p>
+An author of a webpage can add microformats to their HTML. For example if they wanted to identify themselves they could use an [h-card](http://microformats.org/wiki/h-card) such as:
 
-<h3 id="HTML_Example" name="HTML_Example">HTML の例</h3>
+### HTML の例
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict notranslate">&lt;a class="h-card" href="http://alice.example.com"&gt;Alice Blogger&lt;/a&gt;</pre>
+<pre class="source-html4strict notranslate">&#x3C;a class="h-card" href="http://alice.example.com">Alice Blogger&#x3C;/a></pre>
 
-<p>When a parser encounters this data, it will know that this page contains a "card" which describes a person or organization named <code>Alice Blogger</code> with a URL of <code>http://alice.example.com/</code>. The parser makes this data available via APIs that can be used for different applications.</p>
+When a parser encounters this data, it will know that this page contains a "card" which describes a person or organization named `Alice Blogger` with a URL of `http://alice.example.com/`. The parser makes this data available via APIs that can be used for different applications.
 
-<p>As in this example, some markup patterns require only a single microformat root class name, which parsers use to find a few generic properties such as <code>name</code>, <code>url</code>, <code>photo</code>.</p>
-</div>
+As in this example, some markup patterns require only a single microformat root class name, which parsers use to find a few generic properties such as `name`, `url`, `photo`.
 
-<h2 id="Microformats_Prefixes" name="Microformats_Prefixes">マイクロフォーマットの接頭辞</h2>
+## マイクロフォーマットの接頭辞
 
-<p>All microformats consist of a root, and a collection of properties. Properties are all optional and potentially multivalued - applications needing a singular value may use the first instance of a property. Hierarchical data is represented with nested microformats, typically as property values themselves.</p>
+All microformats consist of a root, and a collection of properties. Properties are all optional and potentially multivalued - applications needing a singular value may use the first instance of a property. Hierarchical data is represented with nested microformats, typically as property values themselves.
 
-<p>All microformats class names use prefixes. Prefixes are <strong>syntax independent from vocabularies</strong>, which are developed separately.</p>
+All microformats class names use prefixes. Prefixes are **syntax independent from vocabularies**, which are developed separately.
 
-<ul>
- <li><strong>"h-*" for root class names</strong>, e.g. "h-card", "h-entry", "h-feed", and many more. These top-level root classes usually indicate a type and corresponding expected vocabulary of properties. For example:
+- **"h-\*" for root class names**, e.g. "h-card", "h-entry", "h-feed", and many more. These top-level root classes usually indicate a type and corresponding expected vocabulary of properties. For example:
 
-  <ul>
-   <li><a href="http://microformats.org/wiki/h-card">h-card</a> describes a person or organization</li>
-   <li><a href="http://microformats.org/wiki/h-entry">h-entry</a> describes episodic or date stamped online content like a blog post</li>
-   <li><a href="http://microformats.org/wiki/h-feed">h-feed</a> describes a stream or feed of posts</li>
-   <li>You can find many more <a href="http://microformats.org/wiki/microformats2#v2_vocabularies">vocabularies on the microformats2 wiki.</a></li>
-  </ul>
- </li>
- <li><strong>"p-*" for plain (text) properties</strong>, e.g. "p-name", "p-summary"
-  <ul>
-   <li>Generic plain text parsing, element text in general. On certain HTML elements, use special attributes first, e.g. img/alt, abbr/title.</li>
-  </ul>
- </li>
- <li><strong>"u-*" for URL properties</strong>, e.g. "u-url", "u-photo", "u-logo"
-  <ul>
-   <li>Special parsing: element attributes a/href, img/src, object/data etc. attributes over element contents.</li>
-  </ul>
- </li>
- <li><strong>"dt-*" for datetime properties</strong>, e.g. "dt-start", "dt-end", "dt-bday"
-  <ul>
-   <li>Special parsing: time element datetime attribute, <a href="http://microformats.org/wiki/value-class-pattern" title="value-class-pattern">value-class-pattern</a> and separate date time value parsing for readability.</li>
-  </ul>
- </li>
- <li><strong>"e-*" for element tree properties</strong> where the entire contained element hierarchy is the value, e.g. "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".</li>
-</ul>
+  - [h-card](http://microformats.org/wiki/h-card) describes a person or organization
+  - [h-entry](http://microformats.org/wiki/h-entry) describes episodic or date stamped online content like a blog post
+  - [h-feed](http://microformats.org/wiki/h-feed) describes a stream or feed of posts
+  - You can find many more [vocabularies on the microformats2 wiki.](http://microformats.org/wiki/microformats2#v2_vocabularies)
 
-<h2 id="Some_microformats_examples" name="Some_microformats_examples">マイクロフォーマットの例</h2>
+- **"p-\*" for plain (text) properties**, e.g. "p-name", "p-summary"
 
-<h3 id="h-card" name="h-card">h-card</h3>
+  - Generic plain text parsing, element text in general. On certain HTML elements, use special attributes first, e.g. img/alt, abbr/title.
 
-<p>The <a href="http://microformats.org/wiki/h-card">h-card</a> microformat represents a a person or organization.</p>
+- **"u-\*" for URL properties**, e.g. "u-url", "u-photo", "u-logo"
 
-<p>The value of each property is defined in HTML using the class property any element can carry</p>
+  - Special parsing: element attributes a/href, img/src, object/data etc. attributes over element contents.
 
-<h4 id="Example_h-card" name="Example_h-card">h-card の例</h4>
+- **"dt-\*" for datetime properties**, e.g. "dt-start", "dt-end", "dt-bday"
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict notranslate">&lt;p class="h-card"&gt;
-  &lt;img class="u-photo" src="http://example.org/photo.png" alt="" /&gt;
-  &lt;a class="p-name u-url" href="http://example.org"&gt;Joe Bloggs&lt;/a&gt;
-  &lt;a class="u-email" href="mailto:joebloggs@example.com"&gt;joebloggs@example.com&lt;/a&gt;,
-  &lt;span class="p-street-address"&gt;17 Austerstræti&lt;/span&gt;
-  &lt;span class="p-locality"&gt;Reykjavík&lt;/span&gt;
-  &lt;span class="p-country-name"&gt;Iceland&lt;/span&gt;
-&lt;/p&gt;</pre>
-</div>
+  - Special parsing: time element datetime attribute, [value-class-pattern](http://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>プロパティ</th>
-   <th>説明</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>The full/formatted name of the person or organization.</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-email</code></strong></td>
-   <td>email address</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-photo</code></strong></td>
-   <td>a photo of the person or organization</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-url</code></strong></td>
-   <td>home page or other URL representing the person or organization</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-uid</code></strong></td>
-   <td>universally unique identifier, preferably canonical URL</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-street-address</code></strong></td>
-   <td>street number + name</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-locality</code></strong></td>
-   <td>city/town/village</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-country-name</code></strong></td>
-   <td>country name</td>
-  </tr>
- </tbody>
-</table>
+- **"e-\*" for element tree properties** where the entire contained element hierarchy is the value, e.g. "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".
 
-<h4 id="Nested_h-card_example" name="Nested_h-card_example">入れ子になった h-card の例</h4>
+## マイクロフォーマットの例
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict notranslate">&lt;div class="h-card"&gt;
-  &lt;a class="p-name u-url"
+### h-card
+
+The [h-card](http://microformats.org/wiki/h-card) microformat represents a a person or organization.
+
+The value of each property is defined in HTML using the class property any element can carry
+
+#### h-card の例
+
+<pre class="source-html4strict notranslate">&#x3C;p class="h-card">
+  &#x3C;img class="u-photo" src="http://example.org/photo.png" alt="" />
+  &#x3C;a class="p-name u-url" href="http://example.org">Joe Bloggs&#x3C;/a>
+  &#x3C;a class="u-email" href="mailto:joebloggs@example.com">joebloggs@example.com&#x3C;/a>,
+  &#x3C;span class="p-street-address">17 Austerstræti&#x3C;/span>
+  &#x3C;span class="p-locality">Reykjavík&#x3C;/span>
+  &#x3C;span class="p-country-name">Iceland&#x3C;/span>
+&#x3C;/p></pre>
+
+| プロパティ             | 説明                                                           |
+| ---------------------- | -------------------------------------------------------------- |
+| **`p-name`**           | The full/formatted name of the person or organization.         |
+| **`u-email`**          | email address                                                  |
+| **`u-photo`**          | a photo of the person or organization                          |
+| **`u-url`**            | home page or other URL representing the person or organization |
+| **`u-uid`**            | universally unique identifier, preferably canonical URL        |
+| **`p-street-address`** | street number + name                                           |
+| **`p-locality`**       | city/town/village                                              |
+| **`p-country-name`**   | country name                                                   |
+
+#### 入れ子になった h-card の例
+
+<pre class="source-html4strict notranslate">&#x3C;div class="h-card">
+  &#x3C;a class="p-name u-url"
    href="http://blog.lizardwrangler.com/"
-  &gt;Mitchell Baker&lt;/a&gt;
-  (&lt;a class="p-org h-card"
+  >Mitchell Baker&#x3C;/a>
+  (&#x3C;a class="p-org h-card"
     href="http://mozilla.org/"
-   &gt;Mozilla Foundation&lt;/a&gt;)
-&lt;/div&gt;</pre>
-</div>
+   >Mozilla Foundation&#x3C;/a>)
+&#x3C;/div></pre>
 
-<p>Parsed JSON:</p>
+Parsed JSON:
 
-<div dir="ltr" style="text-align: left;">
 <pre class="source-javascript notranslate">{
   "items": [{
   "type": ["h-card"],
@@ -165,78 +119,55 @@ translation_of: Web/HTML/microformats
   }
   }]
 }</pre>
+
+Note: the nested h-card has implied 'name' and 'url' properties, just like any other root-class-name-only h-card on an `<a href>` would.
+
+### h-entry
+
+The [h-entry](http://microformats.org/wiki/h-entry) microformat represents episodic or datestamped content on the web. h-entry is often used with content intended to be syndicated, e.g. blog posts.
+
+Example h-entry as a blog post:
+
+<pre class="source-html4strict notranslate">&#x3C;article class="h-entry">
+  &#x3C;h1 class="p-name">Microformats are amazing&#x3C;/h1>
+  &#x3C;p>Published by &#x3C;a class="p-author h-card" href="http://example.com">W. Developer&#x3C;/a>
+   on &#x3C;time class="dt-published" datetime="2013-06-13 12:00:00">13&#x3C;sup>th&#x3C;/sup> June 2013&#x3C;/time>&#x3C;/p>
+
+  &#x3C;p class="p-summary">In which I extoll the virtues of using microformats.&#x3C;/p>
+
+  &#x3C;div class="e-content">
+  &#x3C;p>Blah blah blah&#x3C;/p>
+  &#x3C;/div>
+&#x3C;/article></pre>
+
+#### プロパティ
+
+| プロパティ         | 説明                                            |
+| ------------------ | ----------------------------------------------- |
+| **`p-name`**       | entry name/title                                |
+| **`p-author`**     | who wrote the entry, optionally embedded h-card |
+| **`dt-published`** | when the entry was published                    |
+| **`p-summary`**    | short entry summary                             |
+| **`e-content`**    | full content of the entry                       |
+
+#### Parsed reply h-entry example
+
+```
+<div class="h-entry">
+  <p><span class="p-author h-card">
+    <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106" ><img class="u-photo" src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"/></a>
+    <a class="p-name u-url" href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a></span>
+     Replied to <a class="u-in-reply-to" href="https://developer.mozilla.org/ja/docs/Web/HTML/microformats">a post on
+   <strong>developer.mozilla.org</strong> </a>:
+  </p>
+   <p class="p-name e-content">Hey thanks for making this microformats resource</p>
+   <p> <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a>
+  published this <a class="u-url url" href="https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"><time class="dt-published"
+   datetime="2019-05-31T14:19:09+0000">31 May 2019</time></a></p>
 </div>
+```
 
-<p>Note: the nested h-card has implied 'name' and 'url' properties, just like any other root-class-name-only h-card on an <code>&lt;a href&gt;</code> would.</p>
-
-<h3 id="h-entry" name="h-entry">h-entry</h3>
-
-<p>The <a href="http://microformats.org/wiki/h-entry">h-entry</a> microformat represents episodic or datestamped content on the web. h-entry is often used with content intended to be syndicated, e.g. blog posts.</p>
-
-<p>Example h-entry as a blog post:</p>
-
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict notranslate">&lt;article class="h-entry"&gt;
-  &lt;h1 class="p-name"&gt;Microformats are amazing&lt;/h1&gt;
-  &lt;p&gt;Published by &lt;a class="p-author h-card" href="http://example.com"&gt;W. Developer&lt;/a&gt;
-   on &lt;time class="dt-published" datetime="2013-06-13 12:00:00"&gt;13&lt;sup&gt;th&lt;/sup&gt; June 2013&lt;/time&gt;&lt;/p&gt;
-
-  &lt;p class="p-summary"&gt;In which I extoll the virtues of using microformats.&lt;/p&gt;
-
-  &lt;div class="e-content"&gt;
-  &lt;p&gt;Blah blah blah&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/article&gt;</pre>
-
-<h4 id="Properties" name="Properties">プロパティ</h4>
-</div>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>プロパティ</th>
-   <th>説明</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>entry name/title</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-author</code></strong></td>
-   <td>who wrote the entry, optionally embedded h-card</td>
-  </tr>
-  <tr>
-   <td><strong><code>dt-published</code></strong></td>
-   <td>when the entry was published</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-summary</code></strong></td>
-   <td>short entry summary</td>
-  </tr>
-  <tr>
-   <td><strong><code>e-content</code></strong></td>
-   <td>full content of the entry</td>
-  </tr>
- </tbody>
-</table>
-
-<h4 id="Parsed_reply_h-entry_example" name="Parsed_reply_h-entry_example">Parsed reply h-entry example</h4>
-
-<pre id="line1">&lt;div class="<a class="attribute-value">h-entry</a>"&gt;
-  &lt;p&gt;&lt;span class="p-author h-card"&gt;
-    &lt;a href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/profile/jgmac1106</a>" &gt;&lt;img class="<a class="attribute-value">u-photo</a>" src="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg</a>"/&gt;&lt;/a&gt;
-    &lt;a class="<a class="attribute-value">p-name u-url</a>" href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/profile/jgmac1106</a>"&gt;Greg McVerry&lt;/a&gt;&lt;/span&gt;
-     Replied to &lt;a class="<a class="attribute-value">u-in-reply-to</a>" href="<a class="attribute-value">https://developer.mozilla.org/ja/docs/Web/HTML/microformats</a>"&gt;a post on
-   &lt;strong&gt;developer.mozilla.org&lt;/strong&gt; &lt;/a&gt;:
-  &lt;/p&gt;
-   &lt;p class="<a class="attribute-value">p-name e-content</a>"&gt;Hey thanks for making this microformats resource&lt;/p&gt;
-   &lt;p&gt; &lt;a href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/profile/jgmac1106</a>"&gt;Greg McVerry&lt;/a&gt;
-  published this &lt;a class="<a class="attribute-value">u-url url</a>" href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource</a>"&gt;&lt;time class="<a class="attribute-value">dt-published</a>"
-   datetime="<a class="attribute-value">2019-05-31T14:19:09+0000</a>"&gt;31 May 2019&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<div class="panelContent">
-<pre class="data notranslate">{
+<div class="panelContent"><pre class="data notranslate">{
   "items": [
     {
       "type": [ "h-entry" ],
@@ -266,137 +197,90 @@ translation_of: Web/HTML/microformats
         ]
       },
       "lang": "en"
-    }</pre>
+    }</pre></div>
+
+### h-feed
+
+The [h-feed](http://microformats.org/wiki/h-feed) is a stream or feed of [h-entry](http://microformats.org/wiki/h-entry "h-entry") posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts
+
+#### Example h-feed
+
+<pre class="source-html4strict notranslate">&#x3C;div class="h-feed">
+  &#x3C;h1 class="p-name">Microformats Blogs&#x3C;/h1>
+  &#x3C;article class="h-entry">
+  &#x3C;h2 class="p-name">Microformats are amazing&#x3C;/h2>
+  &#x3C;p>Published by &#x3C;a class="p-author h-card" href="http://example.com">W. Developer&#x3C;/a>
+     on &#x3C;time class="dt-published" datetime="2013-06-13 12:00:00">13&#x3C;sup>th&#x3C;/sup> June 2013&#x3C;/time>
+  &#x3C;/p>
+  &#x3C;p class="p-summary">In which I extoll the virtues of using microformats.&#x3C;/p>
+  &#x3C;div class="e-content"> &#x3C;p>Blah blah blah&#x3C;/p> &#x3C;/div>
+  &#x3C;/article>
+&#x3C;/div></pre>
+
+#### プロパティ
+
+| プロパティ     | 説明                                           |
+| -------------- | ---------------------------------------------- |
+| **`p-name`**   | name of the feed                               |
+| **`p-author`** | author of the feed, optionally embed an h-card |
+
+#### Children
+
+| **Nested h-entry**                         |     |
+| ------------------------------------------ | --- |
+| objects representing the items of the feed |     |
+
+### h-event
+
+The `h-event` is for events on the web. h-event is often used with both event listings and individual event pages
+
+<pre class="source-html4strict notranslate">&#x3C;div class="h-event">
+  &#x3C;h1 class="p-name">Microformats Meetup&#x3C;/h1>
+  &#x3C;p>From
+  &#x3C;time class="dt-start" datetime="2013-06-30 12:00">30&#x3C;sup>th&#x3C;/sup> June 2013, 12:00&#x3C;/time>
+  to &#x3C;time class="dt-end" datetime="2013-06-30 18:00">18:00&#x3C;/time>
+  at &#x3C;span class="p-location">Some bar in SF&#x3C;/span>&#x3C;/p>
+  &#x3C;p class="p-summary">Get together and discuss all things microformats-related.&#x3C;/p>
+&#x3C;/div></pre>
+
+#### プロパティ
+
+| プロパティ       | 説明                                                    |
+| ---------------- | ------------------------------------------------------- |
+| **`p-name`**     | event name (or title)                                   |
+| **`p-summary`**  | short summary of the event                              |
+| **`dt-start`**   | datetime the event starts                               |
+| **`dt-end`**     | datetime the event ends                                 |
+| **`p-location`** | where the event takes place, optionally embedded h-card |
+
+#### Parsed h-event Example
+
+```
+<div class="h-event">
+  <h2 class="p-name">IndieWeb Summit</h2>
+  <time class="dt-start" datetime="2019-06-29T09:00:00-07:00">June 29, 2019 at 9:00am  (-0700)</time><br>through <time class="dt-end" datetime="2019-06-30T18:00:00-07:00">June 30, 2019 at 6:00pm (-0700)</time><br>
+  <div class="p-location h-card">
+    <div>
+    <span class="p-name">Mozilla</span>
+     </div>
+     <div>
+      <span class="p-street-address">1120 NW Couch St</span>,
+      <span class="p-locality">Portland</span>,
+      <span class="p-region">Oregon</span>,
+      <span class="p-country">US</span>
+     </div>
+       <data class="p-latitude" value="45.52345"></data>
+      <data class="p-longitude" value="-122.682677"></data>
+  </div>
+    <div class="e-content">Come join us
+     </div>
+    <div>
+     <span class="p-author h-card"><a class="u-url p-name" href="https://aaronparecki.com">Aaron Parecki</a></span> Published this <a href="https://aaronparecki.com/2019/06/29/1/" class="u-url">event </a>on <time class="dt published" datetime="2019-05-25T18:00:00-07:00">May 5th, 2019</time>
+    </div>
 </div>
+```
 
-<h3 id="h-feed" name="h-feed">h-feed</h3>
-
-<p>The <a href="http://microformats.org/wiki/h-feed">h-feed</a> is a stream or feed of <a href="http://microformats.org/wiki/h-entry" title="h-entry">h-entry</a> posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts</p>
-
-<h4 id="Example_h-feed" name="Example_h-feed">Example h-feed</h4>
-
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict notranslate">&lt;div class="h-feed"&gt;
-  &lt;h1 class="p-name"&gt;Microformats Blogs&lt;/h1&gt;
-  &lt;article class="h-entry"&gt;
-  &lt;h2 class="p-name"&gt;Microformats are amazing&lt;/h2&gt;
-  &lt;p&gt;Published by &lt;a class="p-author h-card" href="http://example.com"&gt;W. Developer&lt;/a&gt;
-     on &lt;time class="dt-published" datetime="2013-06-13 12:00:00"&gt;13&lt;sup&gt;th&lt;/sup&gt; June 2013&lt;/time&gt;
-  &lt;/p&gt;
-  &lt;p class="p-summary"&gt;In which I extoll the virtues of using microformats.&lt;/p&gt;
-  &lt;div class="e-content"&gt; &lt;p&gt;Blah blah blah&lt;/p&gt; &lt;/div&gt;
-  &lt;/article&gt;
-&lt;/div&gt;</pre>
-</div>
-
-<h4 id="Properties_2" name="Properties_2">プロパティ</h4>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>プロパティ</th>
-   <th>説明</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>name of the feed</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-author</code></strong></td>
-   <td>author of the feed, optionally embed an h-card</td>
-  </tr>
- </tbody>
-</table>
-
-<h4 id="Children" name="Children">Children</h4>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><strong>Nested h-entry</strong></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>objects representing the items of the feed</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="h-event" name="h-event">h-event</h3>
-
-<p>The <code>h-event</code> is for events on the web. h-event is often used with both event listings and individual event pages</p>
-
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict notranslate">&lt;div class="h-event"&gt;
-  &lt;h1 class="p-name"&gt;Microformats Meetup&lt;/h1&gt;
-  &lt;p&gt;From
-  &lt;time class="dt-start" datetime="2013-06-30 12:00"&gt;30&lt;sup&gt;th&lt;/sup&gt; June 2013, 12:00&lt;/time&gt;
-  to &lt;time class="dt-end" datetime="2013-06-30 18:00"&gt;18:00&lt;/time&gt;
-  at &lt;span class="p-location"&gt;Some bar in SF&lt;/span&gt;&lt;/p&gt;
-  &lt;p class="p-summary"&gt;Get together and discuss all things microformats-related.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</div>
-
-<h4 id="Properties_3" name="Properties_3">プロパティ</h4>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>プロパティ</th>
-   <th>説明</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>event name (or title)</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-summary</code></strong></td>
-   <td>short summary of the event</td>
-  </tr>
-  <tr>
-   <td><strong><code>dt-start</code></strong></td>
-   <td>datetime the event starts</td>
-  </tr>
-  <tr>
-   <td><strong><code>dt-end</code></strong></td>
-   <td>datetime the event ends</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-location</code></strong></td>
-   <td>where the event takes place, optionally embedded h-card</td>
-  </tr>
- </tbody>
-</table>
-
-<h4 id="Parsed_h-event_Example" name="Parsed_h-event_Example">Parsed h-event Example</h4>
-
-<div dir="ltr" style="text-align: left;">
-<pre class="notranslate">&lt;div class="h-event"&gt;
-  &lt;h2 class="p-name"&gt;IndieWeb Summit&lt;/h2&gt;
-  &lt;time class="dt-start" datetime="2019-06-29T09:00:00-07:00"&gt;June 29, 2019 at 9:00am  (-0700)&lt;/time&gt;&lt;br&gt;through &lt;time class="dt-end" datetime="2019-06-30T18:00:00-07:00"&gt;June 30, 2019 at 6:00pm (-0700)&lt;/time&gt;&lt;br&gt;
-  &lt;div class="p-location h-card"&gt;
-    &lt;div&gt;
-    &lt;span class="p-name"&gt;Mozilla&lt;/span&gt;
-     &lt;/div&gt;
-     &lt;div&gt;
-      &lt;span class="p-street-address"&gt;1120 NW Couch St&lt;/span&gt;,
-      &lt;span class="p-locality"&gt;Portland&lt;/span&gt;,
-      &lt;span class="p-region"&gt;Oregon&lt;/span&gt;,
-      &lt;span class="p-country"&gt;US&lt;/span&gt;
-     &lt;/div&gt;
-       &lt;data class="p-latitude" value="45.52345"&gt;&lt;/data&gt;
-      &lt;data class="p-longitude" value="-122.682677"&gt;&lt;/data&gt;
-  &lt;/div&gt;
-    &lt;div class="e-content"&gt;Come join us
-     &lt;/div&gt;
-    &lt;div&gt;
-     &lt;span class="p-author h-card"&gt;&lt;a class="u-url p-name" href="https://aaronparecki.com"&gt;Aaron Parecki&lt;/a&gt;&lt;/span&gt; Published this &lt;a href="https://aaronparecki.com/2019/06/29/1/" class="u-url"&gt;event &lt;/a&gt;on &lt;time class="dt published" datetime="2019-05-25T18:00:00-07:00"&gt;May 5th, 2019&lt;/time&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<div class="panelContent">
-<pre class="data notranslate">{
+<div class="panelContent"><pre class="data notranslate">{
   "items": [
     {
       "type": [ "h-event" ],
@@ -443,20 +327,16 @@ translation_of: Web/HTML/microformats
       },
       "lang": "en"
     }
-  ],</pre>
-</div>
-</div>
+  ],</pre></div>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>すべてのブラウザーが class 属性と DOM API に対応していることにより対応しています。</p>
+すべてのブラウザーが class 属性と DOM API に対応していることにより対応しています。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Global_attributes/class">class 属性</a></li>
- <li>Wikipedia の {{interwiki("wikipedia", "Microformat")}}</li>
- <li><a href="http://microformats.org/">Microformats 公式ウェブサイト</a></li>
- <li><a href="http://microformats.org/wiki/search_engines">Search engines support</a> on Microformats official website</li>
- <li><a href="https://indiewebcamp.com/microformats">Microformats on IndieWebCamp</a></li>
-</ul>
+- [class 属性](/ja/docs/Web/HTML/Global_attributes/class)
+- Wikipedia の {{interwiki("wikipedia", "Microformat")}}
+- [Microformats 公式ウェブサイト](http://microformats.org/)
+- [Search engines support](http://microformats.org/wiki/search_engines) on Microformats official website
+- [Microformats on IndieWebCamp](https://indiewebcamp.com/microformats)

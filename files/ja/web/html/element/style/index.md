@@ -11,197 +11,193 @@ tags:
   - Web
 translation_of: Web/HTML/Element/style
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;style&gt;</code> 要素</strong>は、文書あるいは文書の一部分のスタイル情報を含みます。</span> <code>&lt;style&gt;</code> 要素を含んでいる文書のコンテンツに適用される CSS を含みます。</p>
+**HTML の `<style>` 要素**は、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+`<style>` 要素は文書の {{htmlelement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmlelement("link")}} 要素を使用することをより推奨します。
 
-<p><code>&lt;style&gt;</code> 要素は文書の {{htmlelement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmlelement("link")}} 要素を使用することをより推奨します。</p>
+文書に複数の `<style>` 及び `<link>` が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
 
-<p>文書に複数の <code>&lt;style&gt;</code> 及び <code>&lt;link&gt;</code> が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。</p>
+`<link>` 要素と同じ方法で、 `<style>` 要素に `media` 属性を付けて[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
 
-<p><code>&lt;link&gt;</code> 要素と同じ方法で、 <code>&lt;style&gt;</code> 要素に <code>media</code> 属性を付けて<a href="/ja/docs/Web/CSS/Media_Queries">メディアクエリ</a>を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。</p>
+## 属性
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+この要素には[グローバル属性](/ja/docs/HTML/Global_attributes "HTML/Global attributes")があります。
 
-<p>この要素には<a href="/ja/docs/HTML/Global_attributes" title="HTML/Global attributes">グローバル属性</a>があります。</p>
+- {{htmlattrdef("type")}}
+  - : この属性は、スタイル言語を MIME タイプで定義します (文字セットは指定すべきではありません)。この属性は省略可能であり、省略した場合の既定値は `text/css` です。空文字列と `text/css` 以外の値は使用されません。 **注:** 現代のウェブ文書では、この属性を含める理由はほとんどありません。
+- {{htmlattrdef("media")}}
+  - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリ](/ja/docs/Web/Guide/CSS/Media_queries)であり、省略した場合の既定値は `all` です。
+- {{htmlattrdef("nonce")}}
+  - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)内の行内スクリプトをホワイトリストに入れるために使われる暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
+- {{htmlattrdef("title")}}
+  - : この属性は[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)のセットを指定します。
 
-<dl>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>この属性は、スタイル言語を MIME タイプで定義します (文字セットは指定すべきではありません)。この属性は省略可能であり、省略した場合の既定値は <code>text/css</code> です。空文字列と <code>text/css</code> 以外の値は使用されません。 <strong>注:</strong> 現代のウェブ文書では、この属性を含める理由はほとんどありません。</dd>
- <dt>{{htmlattrdef("media")}}</dt>
- <dd>この属性はスタイルを適用するメディアを定義します。値は<a href="/ja/docs/Web/Guide/CSS/Media_queries">メディアクエリ</a>であり、省略した場合の既定値は <code>all</code> です。</dd>
- <dt>{{htmlattrdef("nonce")}}</dt>
- <dd><a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src コンテンツセキュリティポリシー</a>内の行内スクリプトをホワイトリストに入れるために使われる暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。</dd>
- <dt>{{htmlattrdef("title")}}</dt>
- <dd>この属性は<a href="/ja/docs/Web/CSS/Alternative_style_sheets">代替スタイルシート</a>のセットを指定します。</dd>
-</dl>
+### 非推奨の属性
 
-<h3 id="Deprecated_attributes" name="Deprecated_attributes">非推奨の属性</h3>
+- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
 
-<dl>
- <dt>{{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>
- <p>この属性が指定された場合、スタイルは、その親要素および親要素の子要素にのみ適用されます。</p>
+  - : この属性が指定された場合、スタイルは、その親要素および親要素の子要素にのみ適用されます。
 
- <div class="note">
- <p>この属性は、 <a href="https://github.com/w3c/csswg-drafts/issues/3547">https://github.com/w3c/csswg-drafts/issues/3547</a> により、将来再導入されるかもしれません。今この属性を使用したい場合は、<a href="https://github.com/samthor/scoped">ポリフィル</a>を利用することができます。</p>
- </div>
- </dd>
-</dl>
+    > **Note:** この属性は、 <https://github.com/w3c/csswg-drafts/issues/3547> により、将来再導入されるかもしれません。今この属性を使用したい場合は、[ポリフィル](https://github.com/samthor/scoped)を利用することができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="A_simple_stylesheet" name="A_simple_stylesheet">単純なスタイルシート</h3>
+### 単純なスタイルシート
 
-<p>以下の例では、文書にとても単純なスタイルシートを適用します。</p>
+以下の例では、文書にとても単純なスタイルシートを適用します。
 
-<pre class="brush:html notranslate">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
+```html
+<!doctype html>
+<html>
+<head>
+  <style>
     p {
       color: red;
     }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;This is my paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  </style>
+</head>
+<body>
+  <p>This is my paragraph.</p>
+</body>
+</html>
+```
 
-<p>{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}</p>
+{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}
 
-<h3 id="Multiple_style_elements" name="Multiple_style_elements">複数の style 要素</h3>
+### 複数の style 要素
 
-<p>この例には、二つの <code>&lt;style&gt;</code> 要素が含まれています。 — 競合する宣言は、<a href="/ja/docs/Web/CSS/Specificity">詳細度</a>が同じであれば、後の <code>&lt;style&gt;</code> 要素が優先されることに注意してください。</p>
+この例には、二つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
 
-<pre class="brush:html notranslate">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
+```html
+<!doctype html>
+<html>
+<head>
+  <style>
     p {
       color: white;
       background-color: blue;
       padding: 5px;
       border: 1px solid black;
     }
-  &lt;/style&gt;
-  &lt;style&gt;
+  </style>
+  <style>
     p {
       color: blue;
       background-color: yellow;
     }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;This is my paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  </style>
+</head>
+<body>
+  <p>This is my paragraph.</p>
+</body>
+</html>
+```
 
-<p>{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}</p>
+{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}
 
-<h3 id="Including_a_media_query" name="Including_a_media_query">メディアクエリが含まれるもの</h3>
+### メディアクエリが含まれるもの
 
-<p>この例では一つ前に作ったものに対して、二番目の <code>&lt;style&gt;</code> 要素に <code>media</code> 属性を設定してあるので、ビューポートが 500px 未満の場合のみ適用されるようにします。</p>
+この例では一つ前に作ったものに対して、二番目の `<style>` 要素に `media` 属性を設定してあるので、ビューポートが 500px 未満の場合のみ適用されるようにします。
 
-<pre class="brush:html notranslate">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
+```html
+<!doctype html>
+<html>
+<head>
+  <style>
     p {
       color: white;
       background-color: blue;
       padding: 5px;
       border: 1px solid black;
     }
-  &lt;/style&gt;
-  &lt;style media="all and (max-width: 500px)"&gt;
+  </style>
+  <style media="all and (max-width: 500px)">
     p {
       color: blue;
       background-color: yellow;
     }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;This is my paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  </style>
+</head>
+<body>
+  <p>This is my paragraph.</p>
+</body>
+</html>
+```
 
-<p>{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}</p>
+{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}
 
-<h2 id="Technical_summary" name="Technical_summary">技術的概要</h2>
+## 技術的概要
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>、 <code>scoped</code> 属性が提供された場合: <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th>許可されている内容</th>
-   <td><code>type</code> 属性に合致するテキストコンテンツ、すなわち <code>text/css</code>。</td>
-  </tr>
-  <tr>
-   <th>タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th>許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>許可されている <code>role</code> なし</td>
-  </tr>
-  <tr>
-   <th>DOM インターフェイス</th>
-   <td>{{domxref("HTMLStyleElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+          >メタデータコンテンツ</a
+        >、 <code>scoped</code> 属性が提供された場合:
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th>許可されている内容</th>
+      <td>
+        <code>type</code> 属性に合致するテキストコンテンツ、すなわち
+        <code>text/css</code>。
+      </td>
+    </tr>
+    <tr>
+      <th>タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th>許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+          >メタデータコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th>DOM インターフェイス</th>
+      <td>{{domxref("HTMLStyleElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'semantics.html#the-style-element', 'style') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td><code>type</code> 属性が省略可能になった。</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style') }}</td>
-   <td>{{ Spec2('HTML4.01') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       | 状態                                 | 備考                            |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------- |
+| {{ SpecName('HTML WHATWG', 'semantics.html#the-style-element', 'style') }}         | {{ Spec2('HTML WHATWG') }} |                                 |
+| {{ SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style') }} | {{ Spec2('HTML5 W3C') }}     | `type` 属性が省略可能になった。 |
+| {{ SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style') }}                     | {{ Spec2('HTML4.01') }}     |                                 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.style")}}</p>
+{{Compat("html.elements.style")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>文書に外部スタイルシートを適用することができる {{HTMLElement("link")}} 要素</li>
- <li><a href="/ja/docs/Web/CSS/Alternative_style_sheets">代替スタイルシート</a></li>
-</ul>
+- 文書に外部スタイルシートを適用することができる {{HTMLElement("link")}} 要素
+- [代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)

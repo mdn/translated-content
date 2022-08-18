@@ -5,167 +5,101 @@ tags:
   - Beginner
   - HTML
   - HTML 要素
-  - 'HTML:Element Reference'
+  - HTML:Element Reference
   - Reference
   - レイアウト
   - 要素
 translation_of: Web/HTML/Inline_elements
 ---
-<p>HTML (<strong>Hypertext Markup Language</strong>) の要素は従来、<a href="/ja/docs/Web/HTML/Block-level_elements">「ブロックレベル」要素</a>と「インライン」要素に分類されていました。<span class="seoSummary">インライン要素は、コンテンツの流れを分断せずに、要素を定義するタグで囲まれた範囲だけを占有するものです。</span>この記事では、 HTML のインライン要素と、 <a href="/ja/docs/Web/HTML/Block-level_elements">ブロックレベル要素</a>との違いについて説明します。</p>
+HTML (**Hypertext Markup Language**) の要素は従来、[「ブロックレベル」要素](/ja/docs/Web/HTML/Block-level_elements)と「インライン」要素に分類されていました。インライン要素は、コンテンツの流れを分断せずに、要素を定義するタグで囲まれた範囲だけを占有するものです。この記事では、 HTML のインライン要素と、 [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)との違いについて説明します。
 
-<div class="note">
-<p>インライン要素は新しい行から始まらず、必要な幅のみを占有します。</p>
-</div>
+> **Note:** インライン要素は新しい行から始まらず、必要な幅のみを占有します。
 
-<h2 id="Inline_vs._block-level_elements_a_demonstration" name="Inline_vs._block-level_elements_a_demonstration">デモによるインライン要素とブロックレベル要素の比較</h2>
+## デモによるインライン要素とブロックレベル要素の比較
 
-<p>これは最も簡単なデモとシンプルな例です。最初に、使用するシンプルな CSS は以下のものです。</p>
+これは最も簡単なデモとシンプルな例です。最初に、使用するシンプルな CSS は以下のものです。
 
-<pre class="brush: css">.highlight {
+```css
+.highlight {
   background-color:#ee3;
-}</pre>
+}
+```
 
-<h3 id="Inline" name="Inline">インライン要素</h3>
+### インライン要素
 
-<p>インライン要素を紹介する以下の例を見てください。</p>
+インライン要素を紹介する以下の例を見てください。
 
-<pre class="brush: html">&lt;div&gt;The following span is an &lt;span class="highlight"&gt;inline element&lt;/span&gt;;
+```html
+<div>The following span is an <span class="highlight">inline element</span>;
 its background has been colored to display both the beginning and end of
-the inline element's influence.&lt;/div&gt;</pre>
+the inline element's influence.</div>
+```
 
-<p>この例では、ブロックレベル要素の {{HTMLElement("div")}} がいくらかのテキストを含んでいます。そのテキストの中に、インライン要素である {{HTMLElement("span")}} 要素があります。 <code>&lt;span&gt;</code> 要素はインラインなので、段落は単独で、テキストの流れを分断せずに、以下のように表示されます。</p>
+この例では、ブロックレベル要素の {{HTMLElement("div")}} がいくらかのテキストを含んでいます。そのテキストの中に、インライン要素である {{HTMLElement("span")}} 要素があります。 `<span>` 要素はインラインなので、段落は単独で、テキストの流れを分断せずに、以下のように表示されます。
 
-<p>{{EmbedLiveSample("Inline", 600, 80)}}</p>
+{{EmbedLiveSample("Inline", 600, 80)}}
 
-<div class="hidden">
-<p>表示上、以下の CSS も使われています (標準モードでは表示されません)。</p>
-
-<pre class="brush: css">body {
+<div class="hidden"><p>表示上、以下の CSS も使われています (標準モードでは表示されません)。</p><pre class="brush: css">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
 }
 
 .highlight {
-  background-color:#ee3;
-}</pre>
-</div>
+background-color:#ee3;
+}</pre></div>
 
-<h3 id="Block-level" name="Block-level">ブロックレベル要素</h3>
+### ブロックレベル要素
 
-<p>それでは <code>&lt;span&gt;</code> を {{HTMLElement("p")}} のようなブロックレベル要素に変更してみましょう。</p>
+それでは `<span>` を {{HTMLElement("p")}} のようなブロックレベル要素に変更してみましょう。
 
-<pre class="brush: html">&lt;div&gt;The following paragraph is a &lt;p class="highlight"&gt;block-level element;&lt;/p&gt;
+```html
+<div>The following paragraph is a <p class="highlight">block-level element;</p>
 its background has been colored to display both the beginning and end of
-the block-level element's influence.&lt;/div&gt;</pre>
+the block-level element's influence.</div>
+```
 
-<div class="hidden">
-<p>この CSS も使われています (標準モードでは表示されません)。</p>
-
-<pre class="brush: css">body {
+<div class="hidden"><p>この CSS も使われています (標準モードでは表示されません)。</p><pre class="brush: css">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
 }
 
 .highlight {
-  background-color:#ee3;
-}</pre>
-</div>
+background-color:#ee3;
+}</pre></div>
 
-<p>前回と同じ CSS を使って表示していますが、結果は以下のようになります。</p>
+前回と同じ CSS を使って表示していますが、結果は以下のようになります。
 
-<p>{{EmbedLiveSample("Block-level", 600, 150)}}</p>
+{{EmbedLiveSample("Block-level", 600, 150)}}
 
-<p>違いが分かりましたか。 <code>&lt;p&gt;</code> 要素は文字列を <code>&lt;p&gt;</code> の前の文字列、 <code>&lt;p&gt;</code> の文字列、そして <code>&lt;p&gt;</code> の後の文字列と3つの部分に分割して、レイアウトを全体的に変更しました。</p>
+違いが分かりましたか。 `<p>` 要素は文字列を `<p>` の前の文字列、 `<p>` の文字列、そして `<p>` の後の文字列と 3 つの部分に分割して、レイアウトを全体的に変更しました。
 
-<h3 id="Changing_element_levels" name="Changing_element_levels">要素レベルの変更</h3>
+### 要素レベルの変更
 
-<p>CSS の {{cssxref("display")}} プロパティを使用すると、要素の<em>視覚表現</em>を変更することができます。例えば、 <code>display</code> の値を <code>"inline"</code> から <code>"block"</code> に変更することで、インライン要素をインラインボックスではなくブロックボックスで描画するようブラウザーに指示することができます。しかし、これによって要素の<em>カテゴリ</em>や<em>コンテンツモデル</em>が変更される訳ではありません。例えば、 <code>span</code> 要素の <code>display</code> を <code>"block"</code> に変更しても、その中に <code>div</code> 要素を含めることができるようになる訳ではありません。</p>
+CSS の {{cssxref("display")}} プロパティを使用すると、要素の*視覚表現*を変更することができます。例えば、 `display` の値を `"inline"` から `"block"` に変更することで、インライン要素をインラインボックスではなくブロックボックスで描画するようブラウザーに指示することができます。しかし、これによって要素の*カテゴリ*や*コンテンツモデル*が変更される訳ではありません。例えば、 `span` 要素の `display` を `"block"` に変更しても、その中に `div` 要素を含めることができるようになる訳ではありません。
 
-<h2 id="Conceptual_differences" name="Conceptual_differences">概念上の違い</h2>
+## 概念上の違い
 
-<p>簡単に言えば、インライン要素とブロックレベル要素の基本概念の違いは以下の通りです。</p>
+簡単に言えば、インライン要素とブロックレベル要素の基本概念の違いは以下の通りです。
 
-<dl>
- <dt>コンテンツモデル</dt>
- <dd>一般に、インライン要素はデータや他のインライン要素のみを含みます。ブロック要素をインライン要素の中に置くことはできません。</dd>
- <dt>整形</dt>
- <dd>既定では、インライン要素は文書の流れの中で強制的に新しい行から始まりません。一方、ブロックレベル要素は一般的に改行が行われます (ただし、これは CSS を使って変更することができます)。</dd>
-</dl>
+- コンテンツモデル
+  - : 一般に、インライン要素はデータや他のインライン要素のみを含みます。ブロック要素をインライン要素の中に置くことはできません。
+- 整形
+  - : 既定では、インライン要素は文書の流れの中で強制的に新しい行から始まりません。一方、ブロックレベル要素は一般的に改行が行われます (ただし、これは CSS を使って変更することができます)。
 
-<h2 id="Elements" name="Elements">「インライン」要素の一覧</h2>
+## 「インライン」要素の一覧
 
-<p>以下の要素は既定でインラインです (ただし、ブロック要素とインライン要素は HTML5 では定義されなくなり、代わりに<a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a>が使用されます)。</p>
+以下の要素は既定でインラインです (ただし、ブロック要素とインライン要素は HTML5 では定義されなくなり、代わりに[コンテンツカテゴリ](/ja/docs/Web/Guide/HTML/Content_categories)が使用されます)。
 
-<div class="threecolumns">
-<dl>
- <dt>{{ HTMLElement("a") }}</dt>
- <dt>{{ HTMLElement("abbr") }}</dt>
- <dt>{{ HTMLElement("acronym") }}</dt>
- <dt>{{ HTMLElement("audio") }} (視覚的なコントロールがある場合)</dt>
- <dt>{{ HTMLElement("b") }}</dt>
- <dt>{{ HTMLElement("bdi") }}</dt>
- <dt>{{ HTMLElement("bdo") }}</dt>
- <dt>{{ HTMLElement("big") }}</dt>
- <dt>{{ HTMLElement("br") }}</dt>
- <dt>{{ HTMLElement("button") }}</dt>
- <dt>{{ HTMLElement("canvas") }}</dt>
- <dt>{{ HTMLElement("cite") }}</dt>
- <dt>{{ HTMLElement("code") }}</dt>
- <dt>{{ HTMLElement("data") }}</dt>
- <dt>{{ HTMLElement("datalist") }}</dt>
- <dt>{{ HTMLElement("del") }}</dt>
- <dt>{{ HTMLElement("dfn") }}</dt>
- <dt>{{ HTMLElement("em") }}</dt>
- <dt>{{ HTMLElement("embed") }}</dt>
- <dt>{{ HTMLElement("i") }}</dt>
- <dt>{{ HTMLElement("iframe") }}</dt>
- <dt>{{ HTMLElement("img") }}</dt>
- <dt>{{ HTMLElement("input") }}</dt>
- <dt>{{ HTMLElement("ins") }}</dt>
- <dt>{{ HTMLElement("kbd") }}</dt>
- <dt>{{ HTMLElement("label") }}</dt>
- <dt>{{ HTMLElement("map") }}</dt>
- <dt>{{ HTMLElement("mark") }}</dt>
- <dt>{{ HTMLElement("meter") }}</dt>
- <dt>{{ HTMLElement("noscript") }}</dt>
- <dt>{{ HTMLElement("object") }}</dt>
- <dt>{{ HTMLElement("output") }}</dt>
- <dt>{{ HTMLElement("picture") }}</dt>
- <dt>{{ HTMLElement("progress") }}</dt>
- <dt>{{ HTMLElement("q") }}</dt>
- <dt>{{ HTMLElement("ruby") }}</dt>
- <dt>{{ HTMLElement("s") }}</dt>
- <dt>{{ HTMLElement("samp") }}</dt>
- <dt>{{ HTMLElement("script") }}</dt>
- <dt>{{ HTMLElement("select") }}</dt>
- <dt>{{ HTMLElement("slot") }}</dt>
- <dt>{{ HTMLElement("small") }}</dt>
- <dt>{{ HTMLElement("span") }}</dt>
- <dt>{{ HTMLElement("strong") }}</dt>
- <dt>{{ HTMLElement("sub") }}</dt>
- <dt>{{ HTMLElement("sup") }}</dt>
- <dt>{{ HTMLElement("svg") }}</dt>
- <dt>{{ HTMLElement("template") }}</dt>
- <dt>{{ HTMLElement("textarea") }}</dt>
- <dt>{{ HTMLElement("time") }}</dt>
- <dt>{{ HTMLElement("u") }}</dt>
- <dt>{{ HTMLElement("tt") }}</dt>
- <dt>{{ HTMLElement("var") }}</dt>
- <dt>{{ HTMLElement("video") }}</dt>
- <dt>{{ HTMLElement("wbr") }}</dt>
-</dl>
-</div>
+<dl><dt>{{ HTMLElement("a") }}</dt><dt>{{ HTMLElement("abbr") }}</dt><dt>{{ HTMLElement("acronym") }}</dt><dt>{{ HTMLElement("audio") }} (視覚的なコントロールがある場合)</dt><dt>{{ HTMLElement("b") }}</dt><dt>{{ HTMLElement("bdi") }}</dt><dt>{{ HTMLElement("bdo") }}</dt><dt>{{ HTMLElement("big") }}</dt><dt>{{ HTMLElement("br") }}</dt><dt>{{ HTMLElement("button") }}</dt><dt>{{ HTMLElement("canvas") }}</dt><dt>{{ HTMLElement("cite") }}</dt><dt>{{ HTMLElement("code") }}</dt><dt>{{ HTMLElement("data") }}</dt><dt>{{ HTMLElement("datalist") }}</dt><dt>{{ HTMLElement("del") }}</dt><dt>{{ HTMLElement("dfn") }}</dt><dt>{{ HTMLElement("em") }}</dt><dt>{{ HTMLElement("embed") }}</dt><dt>{{ HTMLElement("i") }}</dt><dt>{{ HTMLElement("iframe") }}</dt><dt>{{ HTMLElement("img") }}</dt><dt>{{ HTMLElement("input") }}</dt><dt>{{ HTMLElement("ins") }}</dt><dt>{{ HTMLElement("kbd") }}</dt><dt>{{ HTMLElement("label") }}</dt><dt>{{ HTMLElement("map") }}</dt><dt>{{ HTMLElement("mark") }}</dt><dt>{{ HTMLElement("meter") }}</dt><dt>{{ HTMLElement("noscript") }}</dt><dt>{{ HTMLElement("object") }}</dt><dt>{{ HTMLElement("output") }}</dt><dt>{{ HTMLElement("picture") }}</dt><dt>{{ HTMLElement("progress") }}</dt><dt>{{ HTMLElement("q") }}</dt><dt>{{ HTMLElement("ruby") }}</dt><dt>{{ HTMLElement("s") }}</dt><dt>{{ HTMLElement("samp") }}</dt><dt>{{ HTMLElement("script") }}</dt><dt>{{ HTMLElement("select") }}</dt><dt>{{ HTMLElement("slot") }}</dt><dt>{{ HTMLElement("small") }}</dt><dt>{{ HTMLElement("span") }}</dt><dt>{{ HTMLElement("strong") }}</dt><dt>{{ HTMLElement("sub") }}</dt><dt>{{ HTMLElement("sup") }}</dt><dt>{{ HTMLElement("svg") }}</dt><dt>{{ HTMLElement("template") }}</dt><dt>{{ HTMLElement("textarea") }}</dt><dt>{{ HTMLElement("time") }}</dt><dt>{{ HTMLElement("u") }}</dt><dt>{{ HTMLElement("tt") }}</dt><dt>{{ HTMLElement("var") }}</dt><dt>{{ HTMLElement("video") }}</dt><dt>{{ HTMLElement("wbr") }}</dt></dl>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/HTML/Block-level_elements">ブロックレベル要素</a></li>
- <li><a href="/ja/docs/Web/HTML/Element">HTML 要素リファレンス</a></li>
- <li>{{cssxref("display")}}</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">通常フローでのブロック及びインラインレイアウト</a></li>
-</ul>
+- [ブロックレベル要素](/ja/HTML/Block-level_elements)
+- [HTML 要素リファレンス](/ja/docs/Web/HTML/Element)
+- {{cssxref("display")}}
+- [コンテンツカテゴリ](/ja/docs/Web/Guide/HTML/Content_categories)
+- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 
-<div>{{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}</div>
+{{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}

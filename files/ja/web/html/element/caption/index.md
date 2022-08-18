@@ -14,101 +14,114 @@ tags:
   - caption
 translation_of: Web/HTML/Element/caption
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;caption&gt;</code> 要素</strong>は、表のキャプション (またはタイトル) を指定します。</span></p>
+**HTML の `<caption>` 要素**は、表のキャプション (またはタイトル) を指定します。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>要素の直後に ASCII 空白文字やコメントが続かない場合、終了タグは省略可能です。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td>{{HTMLElement("table")}} 要素。table 要素の最初の子要素としてのみ配置可能。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>許可されている <code>role</code> なし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLTableCaptionElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        要素の直後に ASCII
+        空白文字やコメントが続かない場合、終了タグは省略可能です。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        {{HTMLElement("table")}} 要素。table
+        要素の最初の子要素としてのみ配置可能。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLTableCaptionElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素は <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a> を持ちます。</p>
+この要素は [グローバル属性](/ja/docs/Web/HTML/Global_attributes) を持ちます。
 
-<h3 id="Deprecated_attributes" name="Deprecated_attributes">非推奨の属性</h3>
+### 非推奨の属性
 
-<p>以下の属性は非推奨であり、使用するべきではありません。以下に記述しているのは、既存コードを更新する際の参考や、歴史的な関心としてのためのみです。</p>
+以下の属性は非推奨であり、使用するべきではありません。以下に記述しているのは、既存コードを更新する際の参考や、歴史的な関心としてのためのみです。
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
- <dd>この列挙属性は caption 要素の、自身の指し示す table 要素を基準とした相対的な位置を指定します。以下の値を指定できます。
- <dl>
-  <dt><code>left</code></dt>
-  <dd>キャプションを表の左側に表示します。</dd>
-  <dt><code>top</code></dt>
-  <dd>キャプションを表の上側に表示します。</dd>
-  <dt><code>right</code></dt>
-  <dd>キャプションを表の右側に表示します。</dd>
-  <dt><code>bottom</code></dt>
-  <dd>キャプションを表の下側に表示します。</dd>
- </dl>
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
- <div class="note"><strong>使用上の注意:</strong> この属性は非推奨ですので使用しないでください。 {{HTMLElement("caption")}} 要素にスタイルを適用するには、 <a href="/ja/docs/Web/CSS">CSS</a> プロパティの {{cssxref("caption-side")}} および {{cssxref("text-align")}} を使用してください。</div>
- </dd>
-</dl>
+  - : この列挙属性は caption 要素の、自身の指し示す table 要素を基準とした相対的な位置を指定します。以下の値を指定できます。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+    - `left`
+      - : キャプションを表の左側に表示します。
+    - `top`
+      - : キャプションを表の上側に表示します。
+    - `right`
+      - : キャプションを表の右側に表示します。
+    - `bottom`
+      - : キャプションを表の下側に表示します。
 
-<p><code>&lt;caption&gt;</code> 要素は親である {{htmlelement("table")}} 要素の最初の子としてください。</p>
+    > **Note:** **使用上の注意:** この属性は非推奨ですので使用しないでください。 {{HTMLElement("caption")}} 要素にスタイルを適用するには、 [CSS](/ja/docs/Web/CSS) プロパティの {{cssxref("caption-side")}} および {{cssxref("text-align")}} を使用してください。
 
-<p><code>&lt;table&gt;</code> 要素が {{HTMLElement("figure")}} 要素の唯一の子孫である場合は、 {{HTMLElement("figcaption")}} 要素を <code>&lt;caption&gt;</code> の代わりに使用してください。</p>
+## 使用上の注意
 
-<h2 id="Example" name="Example">例</h2>
+`<caption>` 要素は親である {{htmlelement("table")}} 要素の最初の子としてください。
 
-<p>このシンプルな例は、キャプションを含む票を表します。</p>
+`<table>` 要素が {{HTMLElement("figure")}} 要素の唯一の子孫である場合は、 {{HTMLElement("figcaption")}} 要素を `<caption>` の代わりに使用してください。
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;caption&gt;Example Caption&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Login&lt;/th&gt;
-    &lt;th&gt;Email&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;user1&lt;/td&gt;
-    &lt;td&gt;user1@sample.com&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;user2&lt;/td&gt;
-    &lt;td&gt;user2@sample.com&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+## 例
 
-<div class="hidden">
-<pre class="brush: css notranslate">caption {
+このシンプルな例は、キャプションを含む票を表します。
+
+```html
+<table>
+  <caption>Example Caption</caption>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>user1</td>
+    <td>user1@sample.com</td>
+  </tr>
+  <tr>
+    <td>user2</td>
+    <td>user2@sample.com</td>
+  </tr>
+</table>
+```
+
+```css hidden
+caption {
   caption-side: top;
   align: right;
 }
@@ -119,52 +132,26 @@ table {
 table, th, td {
   border: 1px solid black;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('Example', 650, 100)}}</p>
+{{EmbedLiveSample('Example', 650, 100)}}
 
-<p><code>table {background: red;}</code> ではキャプションは変更されません。そのためには <code>display: block</code> が必要です。</p>
+`table {background: red;}` ではキャプションは変更されません。そのためには `display: block` が必要です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'tables.html#the-caption-element', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'tabular-data.html#the-caption-element', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/tables.html#h-11.2.2', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'tables.html#the-caption-element', '&lt;caption&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'tabular-data.html#the-caption-element', '&lt;caption&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+| {{SpecName('HTML4.01', 'struct/tables.html#h-11.2.2', '&lt;caption&gt;')}}             | {{Spec2('HTML4.01')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.caption")}}</p>
+{{Compat("html.elements.caption")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("caption")}} 要素の align 属性 の代替となる CSS プロパティ:
-  <ul>
-   <li>{{cssxref("text-align")}}, {{cssxref("caption-side")}}</li>
-  </ul>
- </li>
-</ul>
+- {{HTMLElement("caption")}} 要素の align 属性 の代替となる CSS プロパティ:
+
+  - {{cssxref("text-align")}}, {{cssxref("caption-side")}}

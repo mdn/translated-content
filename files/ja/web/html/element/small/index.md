@@ -10,115 +10,114 @@ tags:
   - font-size
 translation_of: Web/HTML/Element/small
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML の <code>&lt;small&gt;</code> 要素</strong>は、表示上のスタイルとは関係なく、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 <code>small</code> から <code>x-small</code> のように、一段階小さいフォントでテキストが表示されます。</p>
+**HTML の `<small>` 要素**は、表示上のスタイルとは関係なく、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `small` から `x-small` のように、一段階小さいフォントでテキストが表示されます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">コンテンツカテゴリ</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>不可。開始タグと終了タグの両方が必要です。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">コンテンツカテゴリ</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>不可。開始タグと終了タグの両方が必要です。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素、または<a
+          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Basic_usage" name="Basic_usage">基本的な使用</h3>
+### 基本的な使用
 
-<pre class="brush: html notranslate">&lt;p&gt;これは最初の文です。
- &lt;small&gt;この文は小さい文字で表記されています。&lt;/small&gt;
-&lt;/p&gt;
-</pre>
+```html
+<p>これは最初の文です。
+ <small>この文は小さい文字で表記されています。</small>
+</p>
+```
 
-<p>{{EmbedLiveSample("Basic_usage")}}</p>
+{{EmbedLiveSample("Basic_usage")}}
 
-<h3 id="CSS_alternative" name="CSS_alternative">CSS による代替</h3>
+### CSS による代替
 
-<pre class="brush: html notranslate">&lt;p&gt;これは最初の文です。
-  &lt;span style="font-size:0.8em"&gt;この文は小さい文字で表記されています。
-    &lt;/span&gt;
-&lt;/p&gt;
-</pre>
+```html
+<p>これは最初の文です。
+  <span style="font-size:0.8em">この文は小さい文字で表記されています。
+    </span>
+</p>
+```
 
-<p>{{EmbedLiveSample("CSS_alternative")}}</p>
+{{EmbedLiveSample("CSS_alternative")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-small-element', '&lt;small&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-small-element', '&lt;small&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/graphics.html#edef-SMALL', '&lt;small&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-small-element', '&lt;small&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-small-element', '&lt;small&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+| {{SpecName('HTML4.01', 'present/graphics.html#edef-SMALL', '&lt;small&gt;')}}             | {{Spec2('HTML4.01')}}     |      |
 
-<h2 id="Notes" name="Notes">注</h2>
+## 注
 
-<p><code>&lt;small&gt;</code> 要素は {{htmlelement("b")}} 要素や {{htmlelement("i")}} 要素と同様に、構造と表現の分離の原則に反しますが、これら3つの要素は HTML5 で有効です。作者は <code>&lt;small&gt;</code> を使用するか CSS を使用するかを決める際に最良の判断を行うよう求められます。</p>
+`<small>` 要素は {{htmlelement("b")}} 要素や {{htmlelement("i")}} 要素と同様に、構造と表現の分離の原則に反しますが、これら 3 つの要素は HTML5 で有効です。作者は `<small>` を使用するか CSS を使用するかを決める際に最良の判断を行うよう求められます。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.small")}}</p>
+{{Compat("html.elements.small")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("b")}}</li>
- <li>{{HTMLElement("sub")}} と {{HTMLElement("sup")}}</li>
- <li>{{HTMLElement("font")}}</li>
- <li>{{HTMLElement("style")}}</li>
- <li>HTML 4.01 仕様書: <a class="external" href="https://www.w3.org/TR/html4/present/graphics.html#h-15.2">Font Styles</a></li>
-</ul>
+- {{HTMLElement("b")}}
+- {{HTMLElement("sub")}} と {{HTMLElement("sup")}}
+- {{HTMLElement("font")}}
+- {{HTMLElement("style")}}
+- HTML 4.01 仕様書: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

@@ -9,165 +9,166 @@ tags:
   - main
 translation_of: Web/HTML/Element/main
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;main&gt;</code> 要素</strong>は、文書の {{HTMLElement("body")}} の主要な内容を表します。主要な内容とは、文書の中心的な主題、またはアプリケーションの中心的な機能に直接関連または拡張した内容の範囲のことです。</span></p>
+**HTML の `<main>` 要素**は、文書の {{HTMLElement("body")}} の主要な内容を表します。主要な内容とは、文書の中心的な主題、またはアプリケーションの中心的な機能に直接関連または拡張した内容の範囲のことです。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<p>文書には {{htmlattrxref("hidden")}} 属性が指定されていない <code>&lt;main&gt;</code> 要素を2つ以上置くことはできません。</p>
+文書には {{htmlattrxref("hidden")}} 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>不可。開始タグと終了タグの両方が必須。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れる場所、但し<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element" id="the-main-element:hierarchically-correct-main-element">階層的に正しい <code>main</code> 要素であること</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>許可されている <code>role</code> なし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリ</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>不可。開始タグと終了タグの両方が必須。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れる場所、但し<a
+          href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element"
+          id="the-main-element:hierarchically-correct-main-element"
+          >階層的に正しい <code>main</code> 要素であること</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role"
+            >main</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p><code>&lt;main&gt;</code> 要素の内容は、文書で固有のものにしてください。この内容はサイドバー、ナビゲーションリンク、著作権表示、サイトロゴ、検索フォームのような、文書のセットや文書のセクションにまたがって繰り返されるものを除くべきです。(もちろん、主な内容が検索フォームでない限り)</p>
+`<main>` 要素の内容は、文書で固有のものにしてください。この内容はサイドバー、ナビゲーションリンク、著作権表示、サイトロゴ、検索フォームのような、文書のセットや文書のセクションにまたがって繰り返されるものを除くべきです。(もちろん、主な内容が検索フォームでない限り)
 
-<p><code>&lt;main&gt;</code> は文書のアウトラインに寄与しません。すなわち {{HTMLElement("body")}} や {{HTMLElement("h2")}} などの見出しとは異なり、 <code>&lt;main&gt;</code> はページの構造の {{glossary("DOM")}} の概念に影響を与えません。これは情報を与えるだけです。</p>
+`<main>` は文書のアウトラインに寄与しません。すなわち {{HTMLElement("body")}} や {{HTMLElement("h2")}} などの見出しとは異なり、 `<main>` はページの構造の {{glossary("DOM")}} の概念に影響を与えません。これは情報を与えるだけです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html notranslate">&lt;!-- 他のコンテンツ --&gt;
+```html
+<!-- 他のコンテンツ -->
 
-&lt;main&gt;
-  &lt;h1&gt;Apples&lt;/h1&gt;
-  &lt;p&gt;The apple is the pomaceous fruit of the apple tree.&lt;/p&gt;
+<main>
+  <h1>Apples</h1>
+  <p>The apple is the pomaceous fruit of the apple tree.</p>
 
-  &lt;article&gt;
-    &lt;h2&gt;Red Delicious&lt;/h2&gt;
-    &lt;p&gt;These bright red apples are the most common found in many
-    supermarkets.&lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-  &lt;/article&gt;
+  <article>
+    <h2>Red Delicious</h2>
+    <p>These bright red apples are the most common found in many
+    supermarkets.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
 
-  &lt;article&gt;
-    &lt;h2&gt;Granny Smith&lt;/h2&gt;
-    &lt;p&gt;These juicy, green apples make a great filling for
-    apple pies.&lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-  &lt;/article&gt;
-&lt;/main&gt;
+  <article>
+    <h2>Granny Smith</h2>
+    <p>These juicy, green apples make a great filling for
+    apple pies.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
+</main>
 
-&lt;!-- 他のコンテンツ --&gt;</pre>
+<!-- 他のコンテンツ -->
+```
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<h3 id="Landmark" name="Landmark">ランドマーク</h3>
+### ランドマーク
 
-<p><code>&lt;main&gt;</code> 要素は <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role"><code>main</code> ランドマーク</a>ロールのように動作します。<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#Landmark_roles">ランドマーク</a>は、文書の長いセクションをすばやく識別して移動するための支援技術として使用することができます。 <a href="/ja/docs/Web/HTML/Element/main#Browser_compatibility">古いブラウザーの互換性の確認</a>ができない限り、 <code>&lt;main&gt;</code> を <code>role="main"</code> の宣言付きで使用するべきです。</p>
+`<main>` 要素は [`main` ランドマーク](/ja/docs/Web/Accessibility/ARIA/Roles/Main_role)ロールのように動作します。[ランドマーク](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#Landmark_roles)は、文書の長いセクションをすばやく識別して移動するための支援技術として使用することができます。 [古いブラウザーの互換性の確認](/ja/docs/Web/HTML/Element/main#Browser_compatibility)ができない限り、 `<main>` を `role="main"` の宣言付きで使用するべきです。
 
-<h3 id="Skip_navigation" name="Skip_navigation">スキップナビゲーション</h3>
+### スキップナビゲーション
 
-<p>スキップナビゲーションは、 "skipnav" とも呼ばれますが、支援技術のユーザーが繰り返されるコンテンツ (メインナビゲーション、情報バナー、等) の大きなセクションをすばやく飛ばすことができる技法です。これによって、ユーザーがページのメインコンテンツをより早くアクセスすることができます。</p>
+スキップナビゲーションは、 "skipnav" とも呼ばれますが、支援技術のユーザーが繰り返されるコンテンツ (メインナビゲーション、情報バナー、等) の大きなセクションをすばやく飛ばすことができる技法です。これによって、ユーザーがページのメインコンテンツをより早くアクセスすることができます。
 
-<p>{{htmlattrxref("id")}} 属性を追加することで、 <code>&lt;main&gt;</code> 要素がスキップナビゲーションリンクのターゲットになることができます。</p>
+{{htmlattrxref("id")}} 属性を追加することで、 `<main>` 要素がスキップナビゲーションリンクのターゲットになることができます。
 
-<pre class="brush: html notranslate">&lt;body&gt;
-  &lt;a href="#main-content"&gt;Skip to main content&lt;/a&gt;
+```html
+<body>
+  <a href="#main-content">Skip to main content</a>
 
-  &lt;!-- navigation and header content --&gt;
+  <!-- navigation and header content -->
 
-  &lt;main id="main-content"&gt;
-    &lt;!-- main page content --&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-</pre>
+  <main id="main-content">
+    <!-- main page content -->
+  </main>
+</body>
+```
 
-<ul>
- <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
-</ul>
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 
-<h3 id="Reader_mode" name="Reader_mode">リーダーモード</h3>
+### リーダーモード
 
-<p>ブラウザーのリーダーモードでは、コンテンツをリーダーに特化したビューに変換するときに、<a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a>や<a href="/ja/docs/Web/HTML/Element#Content_sectioning">コンテンツ区分要素</a>と同様に <code>&lt;main&gt;</code> 要素の存在を探します。</p>
+ブラウザーのリーダーモードでは、コンテンツをリーダーに特化したビューに変換するときに、[見出し](/ja/docs/Web/HTML/Element/Heading_Elements)や[コンテンツ区分要素](/ja/docs/Web/HTML/Element#Content_sectioning)と同様に `<main>` 要素の存在を探します。
 
-<ul>
- <li><a href="https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9">Building websites for Safari Reader Mode and other reading apps.</a></li>
-</ul>
+- [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>{{SpecName('HTML5 W3C')}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考                                          |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                             | {{Spec2('HTML WHATWG')}} |                                               |
+| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p><code>&lt;main&gt;</code> は広く対応されています。 Internet Explorer 11 およびそれ以前については、アクセシビリティのために {{glossary("ARIA")}} の <code>"main"</code> ロールを <code>&lt;main&gt;</code> 要素に追加することが提案されています (JAWS のような、古い Internet Explorer との組み合わせで使用する読み上げソフトは、 <code>&lt;main&gt;</code> 要素の意味論的な意味を <code>role</code> 属性を含めることで理解できるでしょう)。</p>
+`<main>` は広く対応されています。 Internet Explorer 11 およびそれ以前については、アクセシビリティのために {{glossary("ARIA")}} の `"main"` ロールを `<main>` 要素に追加することが提案されています (JAWS のような、古い Internet Explorer との組み合わせで使用する読み上げソフトは、 `<main>` 要素の意味論的な意味を `role` 属性を含めることで理解できるでしょう)。
 
-<pre class="brush: html notranslate">&lt;main role="main"&gt;
+```html
+<main role="main">
   ...
-&lt;/main&gt;
-</pre>
+</main>
+```
 
-<p>{{Compat("html.elements.main")}}</p>
+{{Compat("html.elements.main")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>基本構造の要素: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}</li>
- <li>セクション関連の要素: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}}</li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role">ARIA: Main ロール</a></li>
-</ul>
+- 基本構造の要素: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
+- セクション関連の要素: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}}
+- [ARIA: Main ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Main_role)

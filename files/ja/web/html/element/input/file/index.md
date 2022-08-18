@@ -14,312 +14,276 @@ tags:
   - Type
 translation_of: Web/HTML/Element/input/file
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p><span class="seoSummary"><strong><code>type="file"</code></strong> 型の {{HTMLElement("input")}} 要素は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは<a href="/ja/docs/Learn/HTML/Forms">フォーム投稿</a>を使用してサーバーにアップロードしたり、 JavaScript コードと <a href="/ja/docs/Web/API/File/Using_files_from_web_applications">File API</a> を使用して操作したりすることができます。</span></p>
+**`type="file"`** 型の {{HTMLElement("input")}} 要素は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn/HTML/Forms)を使用してサーバーにアップロードしたり、 JavaScript コードと [File API](/ja/docs/Web/API/File/Using_files_from_web_applications) を使用して操作したりすることができます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong><a href="#value">値</a></strong></td>
-   <td>選択されたファイルのパスを表す {{domxref("DOMString")}} です。</td>
-  </tr>
-  <tr>
-   <td><strong>イベント</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>対応する共通属性</strong></td>
-   <td>{{htmlattrxref("required", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>追加の属性</strong></td>
-   <td>{{htmlattrxref("accept", "input/file")}}, {{htmlattrxref("capture", "input/file")}}, {{htmlattrxref("files", "input/file")}}, {{htmlattrxref("multiple", "input/file")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL 属性</strong></td>
-   <td><code>files</code> および <code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>DOM インターフェイス</strong></td>
-   <td>
-    <p>{{domxref("HTMLInputElement")}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>プロパティ</strong></td>
-   <td>
-    <p><a href="/ja/docs/Web/API/HTMLInputElement#Properties_file"><code>file</code> 型の要素にだけ適用されるプロパティ</a></p>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>メソッド</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <strong><a href="#value">値</a></strong>
+      </td>
+      <td>
+        選択されたファイルのパスを表す {{domxref("DOMString")}} です。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応する共通属性</strong></td>
+      <td>{{htmlattrxref("required", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>追加の属性</strong></td>
+      <td>
+        {{htmlattrxref("accept", "input/file")}},
+        {{htmlattrxref("capture", "input/file")}},
+        {{htmlattrxref("files", "input/file")}},
+        {{htmlattrxref("multiple", "input/file")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>files</code> および <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>プロパティ</strong></td>
+      <td>
+        <p>
+          <a href="/ja/docs/Web/API/HTMLInputElement#Properties_file"
+            ><code>file</code> 型の要素にだけ適用されるプロパティ</a
+          >
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value" name="Value">値</h2>
+## 値
 
-<p>ファイル入力欄の {{htmlattrxref("value", "input")}} 属性には、選択されたファイルへのパスを表す {{domxref("DOMString")}} が入ります。ユーザーが複数のファイルを選択すると、 <code>value</code> は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは input 要素の <code>HTMLInputElement.files</code> プロパティを使って得ることができます。</p>
+ファイル入力欄の {{htmlattrxref("value", "input")}} 属性には、選択されたファイルへのパスを表す {{domxref("DOMString")}} が入ります。ユーザーが複数のファイルを選択すると、 `value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは input 要素の `HTMLInputElement.files` プロパティを使って得ることができます。
 
-<div class="note"><strong>注:</strong>
+> **Note:** **注:**1. 複数のファイルが選択された場合、文字列は最初に選択されたファイルを表します。 JavaScript は他のファイルに [input の `FileList` プロパティを通して](/ja/docs/Using_files_from_web_applications#Getting_information_about_selected_files)アクセスすることができます。 2. ファイルが選択されていない場合、文字列は `""` (空) になります。 3. 疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するため、文字列には [`C:\fakepath\` の接頭辞が付きます](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)。
 
-<ol>
- <li>複数のファイルが選択された場合、文字列は最初に選択されたファイルを表します。 JavaScript は他のファイルに <a href="/ja/docs/Using_files_from_web_applications#Getting_information_about_selected_files">input の <code>FileList</code> プロパティを通して</a>アクセスすることができます。</li>
- <li>ファイルが選択されていない場合、文字列は <code>""</code> (空) になります。</li>
- <li>疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するため、文字列には <a href="https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly"><code>C:\fakepath\</code> の接頭辞が付きます</a>。</li>
-</ol>
-</div>
+## 追加の属性
 
-<h2 id="Additional_attributes" name="Additional_attributes">追加の属性</h2>
+すべての {{HTMLElement("input")}} に共通の属性に加え、 `file` 型の入力欄は次の属性にも対応しています。
 
-<p>すべての {{HTMLElement("input")}} に共通の属性に加え、 <code>file</code> 型の入力欄は次の属性にも対応しています。</p>
+| 属性                    | 説明                                                                                    |
+| ----------------------- | --------------------------------------------------------------------------------------- |
+| [`accept`](#accept)     | 許可するファイル型を表す 1 つ以上の[固有ファイル型指定子](#unique_file_type_specifiers) |
+| [`capture`](#capture)   | 画像や動画データをキャプチャするのに使用するソースは何か                                |
+| [`files`](#files)       | 選択されたファイルを列挙する {{domxref("FileList")}}                           |
+| [`multiple`](#multiple) | 論理値で、存在すれば、ユーザーが複数のファイルを選択することができることを表す          |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="#accept">accept</a></code></td>
-   <td>許可するファイル型を表す1つ以上の<a href="#unique_file_type_specifiers">固有ファイル型指定子</a></td>
-  </tr>
-  <tr>
-   <td><code><a href="#capture">capture</a></code></td>
-   <td>画像や動画データをキャプチャするのに使用するソースは何か</td>
-  </tr>
-  <tr>
-   <td><code><a href="#files">files</a></code></td>
-   <td>選択されたファイルを列挙する {{domxref("FileList")}}</td>
-  </tr>
-  <tr>
-   <td><code><a href="#multiple">multiple</a></code></td>
-   <td>論理値で、存在すれば、ユーザーが複数のファイルを選択することができることを表す</td>
-  </tr>
- </tbody>
-</table>
+### {{htmlattrdef("accept")}}
 
-<h3 id="htmlattrdefaccept">{{htmlattrdef("accept")}}</h3>
+[`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性の値は文字列で、ファイル入力欄が受け付けるファイル型を定義します。この文字列は**[固有ファイル型指定子](#unique_file_type_specifiers)**をカンマで区切ったリストです。指定されたファイル型が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。
 
-<p><a href="/ja/docs/Web/HTML/Attributes/accept"><code>accept</code></a> 属性の値は文字列で、ファイル入力欄が受け付けるファイル型を定義します。この文字列は<strong><a href="#unique_file_type_specifiers">固有ファイル型指定子</a></strong>をカンマで区切ったリストです。指定されたファイル型が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。</p>
+例えば、 Microsoft Word ファイルを識別する方法がいくつもあるので、 Word ファイルを受け付けるサイトは次のように `<input>` を使用することがあります。
 
-<p>例えば、 Microsoft Word ファイルを識別する方法がいくつもあるので、 Word ファイルを受け付けるサイトは次のように <code>&lt;input&gt;</code> を使用することがあります。</p>
+```html
+<input type="file" id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+```
 
-<pre class="brush: html notranslate">&lt;input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
+### {{htmlattrdef("capture")}}
 
-<h3 id="htmlattrdefcapture">{{htmlattrdef("capture")}}</h3>
+[`capture`](/ja/docs/Web/HTML/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("user agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
 
-<p><a href="/ja/docs/Web/HTML/Attributes/capture"><code>capture</code></a> 属性は文字列で、 <a href="/ja/docs/Web/HTML/Attributes/accept"><code>accept</code></a> 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 <code>user</code> の値では、ユーザーの方を向いているカメラやマイクを使用します。 <code>environment</code> は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("user agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。</p>
+> **Note:** **注:** `capture` は以前は論理値であり、存在した場合、ファイル入力を要求する代わりに、カメラやマイクなどその端末のメディア取り込み機器を使用するように要求していました。
 
-<div class="note"><strong>注:</strong> <code>capture</code> は以前は論理値であり、存在した場合、ファイル入力を要求する代わりに、カメラやマイクなどその端末のメディア取り込み機器を使用するように要求していました。</div>
+### {{htmlattrdef("files")}}
 
-<h3 id="htmlattrdeffiles">{{htmlattrdef("files")}}</h3>
+{{domxref("FileList")}} オブジェクトで、選択されたそれぞれのファイルのリストです。このリストは {{htmlattrxref("multiple", "input/file")}} 属性が指定されていない限り、メンバーが複数にはなりません。
 
-<p>{{domxref("FileList")}} オブジェクトで、選択されたそれぞれのファイルのリストです。このリストは {{htmlattrxref("multiple", "input/file")}} 属性が指定されていない限り、メンバーが複数にはなりません。</p>
+### {{htmlattrdef("multiple")}}
 
-<h3 id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</h3>
+[`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 論理属性が指定されていると、ファイル入力欄はユーザーに複数のファイルを選択することを許します。
 
-<p><a href="/ja/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> 論理属性が指定されていると、ファイル入力欄はユーザーに複数のファイルを選択することを許します。</p>
+## 標準外の属性
 
-<h2 id="Non-standard_attributes" name="Non-standard_attributes">標準外の属性</h2>
+上記に挙げた属性に加え、以下の標準外の属性が一部のブラウザーで利用できます。実装していないブラウザーではコードが機能する可能性が制限されるため、できれば使用することを避けてください。
 
-<p>上記に挙げた属性に加え、以下の標準外の属性が一部のブラウザーで利用できます。実装していないブラウザーではコードが機能する可能性が制限されるため、できれば使用することを避けてください。</p>
+| 属性                                  | 説明                                                                                                                                                        |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`webkitdirectory`](#webkitdirectory) | 論理値で、ユーザーが単一のディレクトリ (または [`multiple`](#multiple) 属性がある場合は複数のディレクトリ) のみを選択できるようにするかどうかを選択します。 |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="#webkitdirectory">webkitdirectory</a></code></td>
-   <td>論理値で、ユーザーが単一のディレクトリ (または <code><a href="#multiple">multiple</a></code> 属性がある場合は複数のディレクトリ) のみを選択できるようにするかどうかを選択します。</td>
-  </tr>
- </tbody>
-</table>
+### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
 
-<h3 id="htmlattrdefwebkitdirectory_non-standard_inline">{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</h3>
+論理値の `webkitdirectory` 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
 
-<div id="webkitdirectory-include">
-<p>論理値の <code>webkitdirectory</code> 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。</p>
+> **Note:** **注:** `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
 
-<div class="note">
-<p><strong>注:</strong> <code>webkitdirectory</code> はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。</p>
-</div>
-</div>
+## 固有ファイル型指定子
 
-<h2 id="Unique_file_type_specifiers" name="Unique_file_type_specifiers">固有ファイル型指定子</h2>
+**固有ファイル型指定子**は文字列で、 `file` 型の {{HTMLElement("input")}} 要素でユーザーが選択することができるファイルの種類を記述します。それぞれの固有ファイル型指定子は、次の形のうち一つを取ることができます。
 
-<p><strong>固有ファイル型指定子</strong>は文字列で、 <code>file</code> 型の {{HTMLElement("input")}} 要素でユーザーが選択することができるファイルの種類を記述します。それぞれの固有ファイル型指定子は、次の形のうち一つを取ることができます。</p>
+- 有効なファイル拡張子で、大文字小文字の区別なく、ピリオド (".") 文字で始まるもの。例えば、 `.jpg`, `.pdf`, `.doc` など。
+- 有効な MIME タイプ文字列で、拡張子のないもの。
+- 文字列 `audio/*` で「任意の音声ファイル」を意味する。
+- 文字列 `video/*` で「任意の動画ファイル」を意味する。
+- 文字列 `image/*` で「任意の画像ファイル」を意味する。
 
-<ul>
- <li>有効なファイル拡張子で、大文字小文字の区別なく、ピリオド (".") 文字で始まるもの。例えば、 <code>.jpg</code>, <code>.pdf</code>, <code>.doc</code> など。</li>
- <li>有効な MIME タイプ文字列で、拡張子のないもの。</li>
- <li>文字列 <code>audio/*</code> で「任意の音声ファイル」を意味する。</li>
- <li>文字列 <code>video/*</code> で「任意の動画ファイル」を意味する。</li>
- <li>文字列 <code>image/*</code> で「任意の画像ファイル」を意味する。</li>
-</ul>
+`accept` 属性は、これらの固有ファイル型指定子を 1 つ以上含む文字列を取ります。例えば、ファイル選択ダイアログが画像として表示することができるコンテンツを必要としており、標準の画像形式と PDF ファイルの両方を含める場合、このようになります。
 
-<p><code>accept</code> 属性は、これらの固有ファイル型指定子を1つ以上含む文字列を取ります。例えば、ファイル選択ダイアログが画像として表示することができるコンテンツを必要としており、標準の画像形式と PDF ファイルの両方を含める場合、このようになります。</p>
+```html
+<input type="file" accept="image/*,.pdf">
+```
 
-<pre class="brush: html notranslate">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
+## ファイル入力欄の使用
 
-<h2 id="Using_file_inputs" name="Using_file_inputs">ファイル入力欄の使用</h2>
+### 基本的な例
 
-<h3 id="A_basic_example" name="A_basic_example">基本的な例</h3>
+```html
+<form method="post" enctype="multipart/form-data">
+ <div>
+   <label for="file">アップロードするファイルを選択してください</label>
+   <input type="file" id="file" name="file" multiple>
+ </div>
+ <div>
+   <button>送信</button>
+ </div>
+</form>
+```
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
- &lt;div&gt;
-   &lt;label for="file"&gt;アップロードするファイルを選択してください&lt;/label&gt;
-   &lt;input type="file" id="file" name="file" multiple&gt;
- &lt;/div&gt;
- &lt;div&gt;
-   &lt;button&gt;送信&lt;/button&gt;
- &lt;/div&gt;
-&lt;/form&gt;</pre>
-
-<div class="hidden">
-<pre class="brush: css notranslate">div {
+```css hidden
+div {
   margin-bottom: 10px;
-}</pre>
-</div>
+}
+```
 
-<p>これは以下のような出力になります。</p>
+これは以下のような出力になります。
 
-<p>{{EmbedLiveSample('A_basic_example', 650, 60)}}</p>
+{{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-<div class="note">
-<p><strong>注</strong>: この例は GitHub にもあります。 — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">ソースコード</a>と<a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">ライブ実行</a>を確認してください。</p>
-</div>
+> **Note:** **注**: この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
-<p>ユーザーの端末やオペレーティングシステムに関わらず、ファイル入力欄にはユーザーがファイルを選択することができるファイル選択ダイアログを開くボタンがあります。</p>
+ユーザーの端末やオペレーティングシステムに関わらず、ファイル入力欄にはユーザーがファイルを選択することができるファイル選択ダイアログを開くボタンがあります。
 
-<p>上記のように、 {{htmlattrxref("multiple", "input/file")}} 属性を含めると、複数のファイルを一度に選択することができることを指定します。ユーザーはファイル選択ダイアログから、プラットフォームが許す方法 (例えば、 <kbd>Shift</kbd> または <kbd>Control</kbd> を押しながらクリック) によって、複数のファイルを選択できます。ユーザーに <code>&lt;input&gt;</code> あたり1つのファイルを選択させたい場合は、 <code>multiple</code> 属性を省略してください。</p>
+上記のように、 {{htmlattrxref("multiple", "input/file")}} 属性を含めると、複数のファイルを一度に選択することができることを指定します。ユーザーはファイル選択ダイアログから、プラットフォームが許す方法 (例えば、 <kbd>Shift</kbd> または <kbd>Control</kbd> を押しながらクリック) によって、複数のファイルを選択できます。ユーザーに `<input>` あたり 1 つのファイルを選択させたい場合は、 `multiple` 属性を省略してください。
 
-<h3 id="Getting_information_on_selected_files" name="Getting_information_on_selected_files">選択されたファイルの情報の取得</h3>
+### 選択されたファイルの情報の取得
 
-<p>選択されたファイルは、要素の {{domxref("HTMLElement.files", "files")}} プロパティで返され、これは {{domxref("File")}} オブジェクトのリストを含む {{domxref("FileList")}} オブジェクトです。 <code>FileList</code> は配列のようにふるまうので、 <code>length</code> プロパティを使用して選択されたファイルの数を取得することができます。</p>
+選択されたファイルは、要素の {{domxref("HTMLElement.files", "files")}} プロパティで返され、これは {{domxref("File")}} オブジェクトのリストを含む {{domxref("FileList")}} オブジェクトです。 `FileList` は配列のようにふるまうので、 `length` プロパティを使用して選択されたファイルの数を取得することができます。
 
-<p>それぞれの <code>File</code> オブジェクトは以下のような情報を持っています。</p>
+それぞれの `File` オブジェクトは以下のような情報を持っています。
 
-<dl>
- <dt><code>name</code></dt>
- <dd>ファイルの名前です。</dd>
- <dt><code>lastModified</code></dt>
- <dd>ファイルが最後に変更された日時を表す数値で、 UNIX 時刻 (1970年1月1日午前0時) からの経過ミリ秒数です。</dd>
- <dt><code>lastModifiedDate</code> {{deprecated_inline}}</dt>
- <dd>ファイルが最後に変更された日時を表す {{jsxref("Date")}} オブジェクトです。<em>これは非推奨であり使うべきではありません。代わりに <code>lastModified</code> を使用してください。</em></dd>
- <dt><code>size</code></dt>
- <dd>バイト数によるファイルの長さです。</dd>
- <dt><code>type</code></dt>
- <dd>ファイルの <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME タイプ</a>です。</dd>
- <dt><code>webkitRelativePath</code> {{non-standard_inline}}</dt>
- <dd>ディレクトリ選択ダイアログ (つまり、 {{htmlattrxref("webkitdirectory", "input/file")}} 属性が設定されている <code>file</code> ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。<em>これは標準外なので使用するには注意してください。</em></dd>
-</dl>
+- `name`
+  - : ファイルの名前です。
+- `lastModified`
+  - : ファイルが最後に変更された日時を表す数値で、 UNIX 時刻 (1970 年 1 月 1 日午前 0 時) からの経過ミリ秒数です。
+- `lastModifiedDate` {{deprecated_inline}}
+  - : ファイルが最後に変更された日時を表す {{jsxref("Date")}} オブジェクトです。_これは非推奨であり使うべきではありません。代わりに `lastModified` を使用してください。_
+- `size`
+  - : バイト数によるファイルの長さです。
+- `type`
+  - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+- `webkitRelativePath` {{non-standard_inline}}
+  - : ディレクトリ選択ダイアログ (つまり、 {{htmlattrxref("webkitdirectory", "input/file")}} 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
-<div class="note">
-<p><strong>注</strong>: 最近のブラウザーはすべて、 <code>HTMLInputElement.files</code> の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン57で追加されました (see {{bug(1384030)}})。</p>
-</div>
+> **Note:** **注**: 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see {{bug(1384030)}})。
 
-<h3 id="Limiting_accepted_file_types" name="Limiting_accepted_file_types">受け付けるファイル型の制限</h3>
+### 受け付けるファイル型の制限
 
-<p>ふつう、ユーザーが自由な形式のファイルを選択できるようにはしたくないでしょう。代わりに、特定の形式のファイルを選択させたいでしょう。例えば、ファイル入力欄でユーザーにプロフィールファイルをアップロードさせるのであれば、おそらく {{Glossary("JPEG")}} または {{Glossary("PNG")}} のようなウェブに互換性がある画像形式を選択させたいでしょう。</p>
+ふつう、ユーザーが自由な形式のファイルを選択できるようにはしたくないでしょう。代わりに、特定の形式のファイルを選択させたいでしょう。例えば、ファイル入力欄でユーザーにプロフィールファイルをアップロードさせるのであれば、おそらく {{Glossary("JPEG")}} または {{Glossary("PNG")}} のようなウェブに互換性がある画像形式を選択させたいでしょう。
 
-<p>受付可能なファイル形式は {{htmlattrxref("accept","input/file")}} 属性で、受け付けるファイルの拡張子または MIME タイプいくつか例を示します。</p>
+受付可能なファイル形式は {{htmlattrxref("accept","input/file")}} 属性で、受け付けるファイルの拡張子または MIME タイプいくつか例を示します。
 
-<ul>
- <li><code>accept="image/png"</code> または <code>accept=".png"</code> — PNG ファイルを受け付けます。</li>
- <li><code>accept="image/png, image/jpeg"</code> または <code>accept=".png, .jpg, .jpeg"</code> — PNG または JPEG ファイルを受け付けます。</li>
- <li><code>accept="image/*"</code> — <code>image/*</code> の MIME タイプである任意のファイルを受け付けます。 (多くのモバイル端末では、この場合にユーザーがカメラで写真を撮ることもできるようになっています。)</li>
- <li><code>accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"</code> — MS Word 文書と思われるファイルをすべて受け付けます。</li>
-</ul>
+- `accept="image/png"` または `accept=".png"` — PNG ファイルを受け付けます。
+- `accept="image/png, image/jpeg"` または `accept=".png, .jpg, .jpeg"` — PNG または JPEG ファイルを受け付けます。
+- `accept="image/*"` — `image/*` の MIME タイプである任意のファイルを受け付けます。 (多くのモバイル端末では、この場合にユーザーがカメラで写真を撮ることもできるようになっています。)
+- `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — MS Word 文書と思われるファイルをすべて受け付けます。
 
-<p>もっと複雑な例を見てみましょう。</p>
+もっと複雑な例を見てみましょう。
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
-  &lt;div&gt;
-    &lt;label for="profile_pic"&gt;アップロードするファイルを選択してください&lt;/label&gt;
-    &lt;input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;送信&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <label for="profile_pic">アップロードするファイルを選択してください</label>
+    <input type="file" id="profile_pic" name="profile_pic"
+          accept=".jpg, .jpeg, .png">
+  </div>
+  <div>
+    <button>送信</button>
+  </div>
+</form>
+```
 
-<div class="hidden">
-<pre class="brush: css notranslate">div {
+```css hidden
+div {
   margin-bottom: 10px;
-}</pre>
-</div>
+}
+```
 
-<p>これは前回の例と似た外見の出力をします。</p>
+これは前回の例と似た外見の出力をします。
 
-<p>{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}</p>
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
 
-<div class="note">
-<p><strong>注</strong>: この例は GitHub にもあります。 — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html">ソースコード</a>と<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html">ライブ実行</a>を確認してください。</p>
-</div>
+> **Note:** **注**: この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)を確認してください。
 
-<p>同じように見えるかもしれませんが、この入力欄でファイルを選択しようとすると、このファイル選択ダイアログでは <code>accept</code> の値で指定されたファイル形式しか選択できません。 (細かい動きはブラウザーやオペレーティングシステムによって異なります)。</p>
+同じように見えるかもしれませんが、この入力欄でファイルを選択しようとすると、このファイル選択ダイアログでは `accept` の値で指定されたファイル形式しか選択できません。 (細かい動きはブラウザーやオペレーティングシステムによって異なります)。
 
-<p><img alt="macOS のファイル選択ダイアログのスクリーンショットです。 JPEG 以外のファイルは灰色になり選択できません。" src="https://mdn.mozillademos.org/files/15183/file-chooser.png" style="margin: 0 auto;"></p>
+![macOS のファイル選択ダイアログのスクリーンショットです。 JPEG 以外のファイルは灰色になり選択できません。](https://mdn.mozillademos.org/files/15183/file-chooser.png)
 
-<p><code>accept</code> 属性は選択されたファイルの形式を検証しません。単にブラウザーにユーザーが正しいファイル形式を選択するためのガイドするためのヒントを出すだけです。 (多くの場合) ユーザーがファイル選択ダイアログオプションを切り替えることで、ファイル選択ダイアログがこの設定を上書きして任意のファイルを選択することができるので、不正なファイル形式を選択する可能性があります。</p>
+`accept` 属性は選択されたファイルの形式を検証しません。単にブラウザーにユーザーが正しいファイル形式を選択するためのガイドするためのヒントを出すだけです。 (多くの場合) ユーザーがファイル選択ダイアログオプションを切り替えることで、ファイル選択ダイアログがこの設定を上書きして任意のファイルを選択することができるので、不正なファイル形式を選択する可能性があります。
 
-<p>このため、 <code>accept</code> 属性は適切なサーバー側の検証でバックアップする必要があることを意識しておいてください。</p>
+このため、 `accept` 属性は適切なサーバー側の検証でバックアップする必要があることを意識しておいてください。
 
-<h3 id="Notes" name="Notes">注</h3>
+### 注
 
-<ol>
- <li>
-  <p>スクリプトからファイル選択ダイアログの値を設定することはできません。 — 以下のようにしても効果はありません。</p>
+1.  スクリプトからファイル選択ダイアログの値を設定することはできません。 — 以下のようにしても効果はありません。
 
-  <pre class="brush: js notranslate">const input = document.querySelector("input[type=file]");
-input.value = "foo";
-</pre>
- </li>
- <li>
-  <p><code>&lt;input type="file"&gt;</code> を使用してファイルが選択された場合、セキュリティ上の理由から、元のファイルへの実際のパスが <code>value</code> 属性上では見えないようになっています。その代わりに、ファイル名の先頭に <code>C:\fakepath\</code> を追加したものが表示されます。この処置にはいくつかの経緯上の理由がありますが、すべての最新のブラウザーで対応されており、実際に<a href="https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly">仕様書で定義されています</a>。</p>
- </li>
-</ol>
+    ```js
+    const input = document.querySelector("input[type=file]");
+    input.value = "foo";
+    ```
 
-<h2 id="Examples" name="Examples">例</h2>
+2.  `<input type="file">` を使用してファイルが選択された場合、セキュリティ上の理由から、元のファイルへの実際のパスが `value` 属性上では見えないようになっています。その代わりに、ファイル名の先頭に `C:\fakepath\` を追加したものが表示されます。この処置にはいくつかの経緯上の理由がありますが、すべての最新のブラウザーで対応されており、実際に[仕様書で定義されています](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
 
-<p>この例では、この例では、 {{domxref("HTMLInputElement.files")}} プロパティで利用できるファイル情報を利用する、さらに高度なファイル選択ダイアログを示し、またいくつか巧妙なテクニックを示します。</p>
+## 例
 
-<div class="note">
-<p><strong>注</strong>: この例の完全なソースコードは GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">ライブ版もあります</a>) で見ることができます。 CSS については説明しません。 JavaScript が中心です。</p>
-</div>
+この例では、この例では、 {{domxref("HTMLInputElement.files")}} プロパティで利用できるファイル情報を利用する、さらに高度なファイル選択ダイアログを示し、またいくつか巧妙なテクニックを示します。
 
-<p>最初に、 HTML を見てみましょう。</p>
+> **Note:** **注**: この例の完全なソースコードは GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([ライブ版もあります](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)) で見ることができます。 CSS については説明しません。 JavaScript が中心です。
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
-  &lt;div&gt;
-    &lt;label for="image_uploads"&gt;アップロードする画像を選択してください (PNG, JPG)&lt;/label&gt;
-    &lt;input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple&gt;
-  &lt;/div&gt;
-  &lt;div class="preview"&gt;
-    &lt;p&gt;アップロードするファイルが選択されていません&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;送信&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+最初に、 HTML を見てみましょう。
 
-<div class="hidden">
-<pre class="brush: css notranslate">html {
+```html
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <label for="image_uploads">アップロードする画像を選択してください (PNG, JPG)</label>
+    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+  </div>
+  <div class="preview">
+    <p>アップロードするファイルが選択されていません</p>
+  </div>
+  <div>
+    <button>送信</button>
+  </div>
+</form>
+```
+
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -335,7 +299,7 @@ form ol {
   padding-left: 0;
 }
 
-form li, div &gt; p {
+form li, div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -371,46 +335,46 @@ form label:hover, form button:hover {
 form label:active, form button:active {
   background-color: #0D3F8F;
   color: white;
-}</pre>
-</div>
+}
+```
 
-<p>これは以前見たものに似ています。特筆するべきものはありません。</p>
+これは以前見たものに似ています。特筆するべきものはありません。
 
-<p>次に、 JavaScript を一通り見てみましょう。</p>
+次に、 JavaScript を一通り見てみましょう。
 
-<p>スクリプトの最初の行で、フォームの入力欄自体と <code>.preview</code> クラスが設定された {{htmlelement("div")}} 要素の参照を取得します。次に {{htmlelement("input")}} 要素を非表示にします。 — これは、ファイル入力欄が概して醜く、スタイル付けをするのが難しく、ブラウザー間でデザインに一貫性がないからです。 {{htmlelement("label")}} をクリックすることで <code>input</code> 要素をアクティブ化することができるので、 <code>input</code> 要素を見かけは非表示にしてラベルをボタンらしくしたほうが、ユーザーがファイルをアップロードしたいときの操作が分かります。</p>
+スクリプトの最初の行で、フォームの入力欄自体と `.preview` クラスが設定された {{htmlelement("div")}} 要素の参照を取得します。次に {{htmlelement("input")}} 要素を非表示にします。 — これは、ファイル入力欄が概して醜く、スタイル付けをするのが難しく、ブラウザー間でデザインに一貫性がないからです。 {{htmlelement("label")}} をクリックすることで `input` 要素をアクティブ化することができるので、 `input` 要素を見かけは非表示にしてラベルをボタンらしくしたほうが、ユーザーがファイルをアップロードしたいときの操作が分かります。
 
-<pre class="brush: js notranslate">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const preview = document.querySelector('.preview');
 
-input.style.opacity = 0;</pre>
+input.style.opacity = 0;
+```
 
-<div class="note">
-<p><strong>注:</strong> ファイル入力欄を非表示にするのに {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} ではなく {{cssxref("opacity")}} を使用しているのは、支援技術が前二者のファイル入力欄が対話可能ではないと解釈するからです。</p>
-</div>
+> **Note:** **注:** ファイル入力欄を非表示にするのに {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} ではなく {{cssxref("opacity")}} を使用しているのは、支援技術が前二者のファイル入力欄が対話可能ではないと解釈するからです。
 
-<p>次に、<a href="/ja/docs/Web/API/EventTarget/addEventListener">イベントリスナー</a>を入力欄に追加して、選択された値の変化 (この場合、ファイルが選択されたこと) を監視します。イベントリスナーは独自の <code>updateImageDisplay()</code> 関数を呼び出します。</p>
+次に、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)を入力欄に追加して、選択された値の変化 (この場合、ファイルが選択されたこと) を監視します。イベントリスナーは独自の `updateImageDisplay()` 関数を呼び出します。
 
-<pre class="brush: js notranslate">input.addEventListener('change', updateImageDisplay);</pre>
+```js
+input.addEventListener('change', updateImageDisplay);
+```
 
-<p><code>updateImageDisplay()</code> 関数が呼び出されるたびに、以下のことを行います。</p>
+`updateImageDisplay()` 関数が呼び出されるたびに、以下のことを行います。
 
-<ul>
- <li>{{jsxref("Statements/while", "while")}} ループを使ってプレビューの <code>&lt;div&gt;</code> の中にある以前のコンテンツを空にします。</li>
- <li>選択されたすべてのファイルの情報を持つ {{domxref("FileList")}} オブジェクトを取り、 <code>curFiles</code> と呼ばれる変数に保存します。</li>
- <li><code>curFiles.length</code> が0かどうかをチェックすることで、ファイルが選択されていないかを確認します。選択されていない場合は、プレビューの <code>&lt;div&gt;</code> に選択されているファイルがない旨のメッセージを表示します。</li>
- <li>ファイルが選択されて<em>いた</em>場合、ループで1つずつ、プレビューの <code>&lt;div&gt;</code> にそれについての情報を表示します。特筆するべきは次です。</li>
- <li>独自の <code>validFileType()</code> 関数を使用して、ファイルが正しい形式 (つまり、 <code>accept</code> 属性で指定された画像形式) であるかどうかをチェックします。</li>
- <li>そうであるなら、次のことを行います。
-  <ul>
-   <li>ファイルの名前とファイルの長さを、前述の <code>&lt;div&gt;</code> (<code>file.name</code> および <code>file.size</code> で取得) 内のリストアイテムに出力します。独自の <code>returnFileSize()</code> 関数はファイルの長さを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。</li>
-   <li>{{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その {{htmlattrxref("src", "img")}} をサムネイルに設定することで、リスト項目にも画像を挿入します。</li>
-  </ul>
- </li>
- <li>ファイル形式が無効である場合、リストのアイテム内にメッセージを表示して、ユーザーに別なファイル形式を選択する必要があることを伝えます。</li>
-</ul>
+- {{jsxref("Statements/while", "while")}} ループを使ってプレビューの `<div>` の中にある以前のコンテンツを空にします。
+- 選択されたすべてのファイルの情報を持つ {{domxref("FileList")}} オブジェクトを取り、 `curFiles` と呼ばれる変数に保存します。
+- `curFiles.length` が 0 かどうかをチェックすることで、ファイルが選択されていないかを確認します。選択されていない場合は、プレビューの `<div>` に選択されているファイルがない旨のメッセージを表示します。
+- ファイルが選択されて*いた*場合、ループで 1 つずつ、プレビューの `<div>` にそれについての情報を表示します。特筆するべきは次です。
+- 独自の `validFileType()` 関数を使用して、ファイルが正しい形式 (つまり、 `accept` 属性で指定された画像形式) であるかどうかをチェックします。
+- そうであるなら、次のことを行います。
 
-<pre class="brush: js notranslate">function updateImageDisplay() {
+  - ファイルの名前とファイルの長さを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルの長さを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
+  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その {{htmlattrxref("src", "img")}} をサムネイルに設定することで、リスト項目にも画像を挿入します。
+
+- ファイル形式が無効である場合、リストのアイテム内にメッセージを表示して、ユーザーに別なファイル形式を選択する必要があることを伝えます。
+
+```js
+function updateImageDisplay() {
   while(preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
@@ -442,11 +406,13 @@ input.style.opacity = 0;</pre>
       list.appendChild(listItem);
     }
   }
-}</pre>
+}
+```
 
-<p>独自の <code>validFileType()</code> 関数は {{domxref("File")}} オブジェクトを引数として取り、それから {{jsxref("Array.prototype.includes()")}} を使用して、 <code>fileTypes</code> の中の値にファイルの <code>type</code> プロパティに一致するものがあるかどうかをチェックします。一致するものが見つかった場合は、関数は <code>true</code> を返します。一致するものが見つからなければ、 <code>false</code> を返します。</p>
+独自の `validFileType()` 関数は {{domxref("File")}} オブジェクトを引数として取り、それから {{jsxref("Array.prototype.includes()")}} を使用して、 `fileTypes` の中の値にファイルの `type` プロパティに一致するものがあるかどうかをチェックします。一致するものが見つかった場合は、関数は `true` を返します。一致するものが見つからなければ、 `false` を返します。
 
-<pre class="brush: js notranslate">// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+```js
+// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",
@@ -462,60 +428,40 @@ const fileTypes = [
 
 function validFileType(file) {
   return fileTypes.includes(file.type);
-}</pre>
+}
+```
 
-<p><code>returnFileSize()</code> 関数は数値 (現在のファイルの <code>size</code> プロパティから取得したバイト数) を取り、バイト/KB/MB のうち適切な形式で返します。</p>
+`returnFileSize()` 関数は数値 (現在のファイルの `size` プロパティから取得したバイト数) を取り、バイト/KB/MB のうち適切な形式で返します。
 
-<pre class="brush: js notranslate">function returnFileSize(number) {
-  if(number &lt; 1024) {
+```js
+function returnFileSize(number) {
+  if(number < 1024) {
     return number + 'bytes';
-  } else if(number &gt;= 1024 &amp;&amp; number &lt; 1048576) {
+  } else if(number >= 1024 && number < 1048576) {
     return (number/1024).toFixed(1) + 'KB';
-  } else if(number &gt;= 1048576) {
+  } else if(number >= 1048576) {
     return (number/1048576).toFixed(1) + 'MB';
   }
-}</pre>
+}
+```
 
-<p>この例は次のようにできます。使ってみましょう。</p>
+この例は次のようにできます。使ってみましょう。
 
-<p>{{EmbedLiveSample('Examples', '100%', 200)}}</p>
+{{EmbedLiveSample('Examples', '100%', 200)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#file-upload-state-(type=file)', '&lt;input type="file"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>初回定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}</td>
-   <td>{{Spec2('HTML Media Capture')}}</td>
-   <td>initial <code>capture</code> attribute</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                               | 状態                                     | 備考                        |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------- |
+| {{SpecName('HTML WHATWG', 'input.html#file-upload-state-(type=file)', '&lt;input type="file"&gt;')}} | {{Spec2('HTML WHATWG')}}         | 初回定義                    |
+| {{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}     | {{Spec2('HTML5.1')}}             | 初回定義                    |
+| {{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}                         | {{Spec2('HTML Media Capture')}} | initial `capture` attribute |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.input.input-file")}}</p>
+{{Compat("html.elements.input.input-file")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/File/Using_files_from_web_applications">ウェブアプリケーションからのファイルの利用</a> — <code>&lt;input type="file"&gt;</code> および <a href="/ja/docs/Web/API/File">File API</a> に関するたくさんの有用な例も含まれています。</li>
- <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS プロパティの互換性</a></li>
-</ul>
+- [ウェブアプリケーションからのファイルの利用](/ja/docs/Web/API/File/Using_files_from_web_applications) — `<input type="file">` および [File API](/ja/docs/Web/API/File) に関するたくさんの有用な例も含まれています。
+- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

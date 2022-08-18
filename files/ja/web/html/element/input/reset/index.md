@@ -15,161 +15,147 @@ tags:
   - reset
 translation_of: Web/HTML/Element/input/reset
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p><span class="seoSummary">{{HTMLElement("input")}} 要素の <strong><code>reset</code></strong> 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。</span></p>
+{{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<div class="note">
-<p>通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります (<a href="/ja/docs/Web/HTML/Element/input/submit">送信ボタン</a>をクリックしようとしているときにクリックしてしまうことが多いです)。</p>
-</div>
+> **Note:** 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります ([送信ボタン](/ja/docs/Web/HTML/Element/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです)。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong><a href="#value">値</a></strong></td>
-   <td>ボタンのラベルとして使用する {{domxref("DOMString")}}</td>
-  </tr>
-  <tr>
-   <td><strong>イベント</strong></td>
-   <td>{{domxref("Element/click_event", "click")}}</td>
-  </tr>
-  <tr>
-   <td><strong>対応している共通属性</strong></td>
-   <td>{{htmlattrxref("type", "input")}} および {{htmlattrxref("value", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL 属性</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>メソッド</strong></td>
-   <td>なし</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <strong><a href="#value">値</a></strong>
+      </td>
+      <td>ボタンのラベルとして使用する {{domxref("DOMString")}}</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        {{htmlattrxref("type", "input")}} および
+        {{htmlattrxref("value", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>なし</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value" name="Value">値</h2>
+## 値
 
-<p><code>&lt;input type="reset"&gt;</code> 要素の {{htmlattrxref("value", "input")}} 属性は、ボタンのラベルとして表示される {{domxref("DOMString")}} を示します。 <code>reset</code> などのボタンは他の値を持ちません。</p>
+`<input type="reset">` 要素の {{htmlattrxref("value", "input")}} 属性は、ボタンのラベルとして表示される {{domxref("DOMString")}} を示します。 `reset` などのボタンは他の値を持ちません。
 
-<div id="summary-example3">
-<pre class="brush: html notranslate">&lt;input type="reset" value="フォームをリセット"&gt;</pre>
-</div>
+```html
+<input type="reset" value="フォームをリセット">
+```
 
-<p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
+{{EmbedLiveSample("summary-example3", 650, 30)}}
 
-<p><code>value</code> を指定しなかった場合は、既定のラベルが付いたボタンが表示されます (通常は「リセット」ですが、{{Glossary("user agent", "ユーザーエージェント")}}によって異なります)。</p>
+`value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます (通常は「リセット」ですが、{{Glossary("user agent", "ユーザーエージェント")}}によって異なります)。
 
-<div id="summary-example1">
-<pre class="brush: html notranslate">&lt;input type="reset"&gt;</pre>
-</div>
+```html
+<input type="reset">
+```
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+{{EmbedLiveSample("summary-example1", 650, 30)}}
 
-<h2 id="Using_reset_buttons" name="Using_reset_buttons">リセットボタンの使用</h2>
+## リセットボタンの使用
 
-<p><code>&lt;input type="reset"&gt;</code> ボタンはフォームをリセットするために使用されます。独自のボタンを作成して JavaScript を使用してカスタマイズしたいのであれば、 <code><a href="/ja/docs/Web/HTML/Element/input/button">&lt;input type="button"&gt;</a></code> またはよりよい {{htmlelement("button")}} 要素を使用してください。</p>
+`<input type="reset">` ボタンはフォームをリセットするために使用されます。独自のボタンを作成して JavaScript を使用してカスタマイズしたいのであれば、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button) またはよりよい {{htmlelement("button")}} 要素を使用してください。
 
-<h3 id="A_simple_reset_button" name="A_simple_reset_button">単純なリセットボタン</h3>
+### 単純なリセットボタン
 
-<p>単純なリセットボタンを作成するところから始めましょう。</p>
+単純なリセットボタンを作成するところから始めましょう。
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
-    &lt;input id="example" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="reset" value="フォームをリセット"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <div>
+    <label for="example">Type in some sample text</label>
+    <input id="example" type="text">
+  </div>
+  <div>
+    <input type="reset" value="フォームをリセット">
+  </div>
+</form>
+```
 
-<p>次のように表示されます。</p>
+次のように表示されます。
 
-<p>{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}</p>
+{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}
 
-<p>テキストフィールドにいくらかテキストを入力してから、リセットボタンを押してみてください。</p>
+テキストフィールドにいくらかテキストを入力してから、リセットボタンを押してみてください。
 
-<h3 id="Adding_a_reset_keyboard_shortcut" name="Adding_a_reset_keyboard_shortcut">リセットのショートカットキーの追加</h3>
+### リセットのショートカットキーの追加
 
-<p>リセットボタンにショートカットキーを追加するには — あらゆる {{HTMLElement("input")}} で通用する方法としてと — グローバル属性の {{htmlattrxref("accesskey")}} を使用します。</p>
+リセットボタンにショートカットキーを追加するには — あらゆる {{HTMLElement("input")}} で通用する方法としてと — グローバル属性の {{htmlattrxref("accesskey")}} を使用します。
 
-<p>この例では、 <kbd>r</kbd> がアクセスキーとして指定されます (<kbd>r</kbd> はブラウザーや OS の組み合わせによる特定の修飾キーを押しながら押す必要があります {{htmlattrxref("accesskey")}} に有益なリストがあります)。</p>
+この例では、 <kbd>r</kbd> がアクセスキーとして指定されます (<kbd>r</kbd> はブラウザーや OS の組み合わせによる特定の修飾キーを押しながら押す必要があります {{htmlattrxref("accesskey")}} に有益なリストがあります)。
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
-    &lt;input id="example" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="reset" value="Reset the form"
-     accesskey="r"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="example">Type in some sample text</label>
+    <input id="example" type="text">
+  </div>
+  <div>
+    <input type="reset" value="Reset the form"
+     accesskey="r">
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}</p>
+{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
 
-<p>上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください (例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど)。ボタンにツールチップを追加する ({{htmlattrxref("title")}} 属性を使う) ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。</p>
+上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください (例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど)。ボタンにツールチップを追加する ({{htmlattrxref("title")}} 属性を使う) ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。
 
-<h3 id="Disabling_and_enabling_a_reset_button" name="Disabling_and_enabling_a_reset_button">リセットボタンの無効化と有効化</h3>
+### リセットボタンの無効化と有効化
 
-<p>リセットボタンを無効化するには、以下のようにグローバル属性の {{htmlattrxref("disabled")}} を指定するだけです。</p>
+リセットボタンを無効化するには、以下のようにグローバル属性の {{htmlattrxref("disabled")}} を指定するだけです。
 
-<div id="disable-example1">
-<pre class="brush: html notranslate">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
-</div>
+```html
+<input type="reset" value="Disabled" disabled>
+```
 
-<p>実行時に <code>disabled</code> を <code>true</code> または <code>false</code> に設定することで、ボタンを有効化したり無効化したりすることができます。 JavaScript では、これは <code>btn.disabled = true</code> や <code>btn.disabled = false</code> のようになります。</p>
+実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効化したり無効化したりすることができます。 JavaScript では、これは `btn.disabled = true` や `btn.disabled = false` のようになります。
 
-<div class="note">
-<p><strong>注</strong>: ボタンの有効化や無効化についてのより詳しい情報は、 <code><a href="/ja/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> のページを参照してください。</p>
-</div>
+> **Note:** **注**: ボタンの有効化や無効化についてのより詳しい情報は、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) のページを参照してください。
 
-<h2 id="Validation" name="Validation">検証</h2>
+## 検証
 
-<p>ボタンは制約の検証には関係しません。制約を受ける実際の値を持っていません。</p>
+ボタンは制約の検証には関係しません。制約を受ける実際の値を持っていません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>上記に簡単な例を挙げました。リセットボタンについては、これ以上言うことはありません。</p>
+上記に簡単な例を挙げました。リセットボタンについては、これ以上言うことはありません。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                   | 状態                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('HTML WHATWG', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}} | {{Spec2('HTML WHATWG')}} |
+| {{SpecName('HTML5 W3C', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}} | {{Spec2('HTML5 W3C')}}     |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.input.input-reset")}}</p>
+{{Compat("html.elements.input.input-reset")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス</li>
- <li><a href="/ja/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons">フォームとボタン</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/forms">フォーム (アクセシビリティ)</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms">HTML フォーム</a></li>
- <li>{{HTMLElement("button")}} 要素</li>
- <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS プロパティの互換性</a></li>
-</ul>
+- {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
+- [フォームとボタン](/ja/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons)
+- [フォーム (アクセシビリティ)](/ja/docs/Web/Accessibility/ARIA/forms)
+- [HTML フォーム](/ja/docs/Learn/HTML/Forms)
+- {{HTMLElement("button")}} 要素
+- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
