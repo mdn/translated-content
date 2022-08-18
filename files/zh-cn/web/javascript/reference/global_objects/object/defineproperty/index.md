@@ -33,7 +33,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 ## 描述
 
-该方法允许精确地添加或修改对象的属性。通过赋值操作添加的普通属性是可枚举的，在枚举对象属性时会被枚举到（{{jsxref("Statements/for...in", "for...in")}} 或 {{jsxref("Object.keys")}}[ ](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/keys)方法），可以改变这些属性的值，也可以{{jsxref("Operators/delete", "删除")}}这些属性。这个方法允许修改默认的额外选项（或配置）。默认情况下，使用 `Object.defineProperty()` 添加的属性值是不可修改（immutable）的。
+该方法允许精确地添加或修改对象的属性。通过赋值操作添加的普通属性是可枚举的，在枚举对象属性时会被枚举到（{{jsxref("Statements/for...in", "for...in")}} 或 {{jsxref("Object.keys")}}方法），可以改变这些属性的值，也可以{{jsxref("Operators/delete", "删除")}}这些属性。这个方法允许修改默认的额外选项（或配置）。默认情况下，使用 `Object.defineProperty()` 添加的属性值是不可修改（immutable）的。
 
 对象里目前存在的属性描述符有两种主要形式：*数据描述符*和*存取描述符*。*数据描述符*是一个具有值的属性，该值可以是可写的，也可以是不可写的。*存取描述符*是由 getter 函数和 setter 函数所描述的属性。一个描述符只能是这两者其中之一；不能同时是两者。
 

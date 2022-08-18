@@ -832,8 +832,8 @@ SVG files are text files containing source code that, when interpreted, draws th
 
 SVG can be used in web content in two ways:
 
-1.  You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/zh-CN/docs/Web/SVG/Element) to draw the image.
-2.  You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
+1. You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/zh-CN/docs/Web/SVG/Element) to draw the image.
+2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size. It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.
 

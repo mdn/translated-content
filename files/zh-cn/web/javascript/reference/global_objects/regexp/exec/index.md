@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
 {{JSRef}}
 
-**`exec() `**方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 {{jsxref("null")}}。
+**`exec()`** 方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 {{jsxref("null")}}。
 
 在设置了 {{jsxref("RegExp.global", "global")}} 或 {{jsxref("RegExp.sticky", "sticky")}} 标志位的情况下（如 `/foo/g` or `/foo/y`），JavaScript {{jsxref("RegExp")}} 对象是**有状态**的。他们会将上次成功匹配后的位置记录在 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性中。使用此特性，`exec()` 可用来对单个字符串中的多次匹配结果进行逐条的遍历（包括捕获到的匹配），而相比之下， {{jsxref("String.prototype.match()")}} 只会返回匹配到的结果。
 

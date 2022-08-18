@@ -48,7 +48,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 不同于“老式”的传入回调，在使用 Promise 时，会有以下约定：
 
 - 在本轮 [事件循环](/zh-CN/docs/Web/JavaScript/EventLoop#执行至完成) 运行完成之前，回调函数是不会被调用的。
-- 即使异步操作已经完成（成功或失败），在这之后通过 [`then()` ](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)添加的回调函数也会被调用。
+- 即使异步操作已经完成（成功或失败），在这之后通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 添加的回调函数也会被调用。
 - 通过多次调用 [`then()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 可以添加多个回调函数，它们会按照插入顺序进行执行。
 
 Promise 很棒的一点就是**链式调用**（**chaining**）。
@@ -173,7 +173,7 @@ try {
 }
 ```
 
-在 ECMAScript 2017 标准的 [`async/await`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 语法糖中，这种异步代码的对称性得到了极致的体现：
+在 ECMAScript 2017 标准的 [`async/await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 语法糖中，这种异步代码的对称性得到了极致的体现：
 
 ```js
 async function foo() {

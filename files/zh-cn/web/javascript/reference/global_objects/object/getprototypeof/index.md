@@ -35,7 +35,7 @@ Object.getPrototypeOf(reg) === RegExp.prototype; // true
 
 ### 说明
 
-JavaScript 中的 **[Object](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)** 是构造函数（创建对象的包装器）。
+JavaScript 中的 **[Object](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)** 是构造函数（创建对象的包装器）。
 
 ```js
 // 一般用法是：

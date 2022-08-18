@@ -29,7 +29,7 @@ str.concat(str2, [, ...strN])
 
 ## 性能
 
-强烈建议使用[赋值操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)（`+`, `+=`）代替 `concat` 方法。
+强烈建议使用[赋值操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)（`+`, `+=`）代替 `concat` 方法。
 
 ## 示例
 

@@ -42,7 +42,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### 从类的构造函数和其他方法
 
-非静态方法中，不能直接使用 [`this`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 关键字来访问静态方法。而是要用类名来调用：`CLASSNAME.STATIC_METHOD_NAME()` ，或者用构造函数的属性来调用该方法： `this.constructor.STATIC_METHOD_NAME()`.
+非静态方法中，不能直接使用 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 关键字来访问静态方法。而是要用类名来调用：`CLASSNAME.STATIC_METHOD_NAME()` ，或者用构造函数的属性来调用该方法： `this.constructor.STATIC_METHOD_NAME()`.
 
 ```js
 class StaticMethodCall {

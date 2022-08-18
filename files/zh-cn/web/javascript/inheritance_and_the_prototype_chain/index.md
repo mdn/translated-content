@@ -197,7 +197,7 @@ console.log( doSomeInstancing );
 
 如果 `doSomeInstancing` 不包含属性信息，那么浏览器会在 `doSomeInstancing` 的 `__proto__` 中进行查找 (同 doSomething.prototype). 如属性在 `doSomeInstancing` 的 `__proto__` 中查找到，则使用 `doSomeInstancing` 中 `__proto__` 的属性。
 
-否则，如果 `doSomeInstancing` 中 `__proto__` 不具有该属性，则检查`doSomeInstancing` 的 `__proto__` 的 `__proto__` 是否具有该属性。默认情况下，任何函数的原型属性 `__proto__` 都是 `window.Object.prototype.` 因此，通过`doSomeInstancing` 的 `__proto__` 的 `__proto__` ( 同 doSomething.prototype 的 `__proto__ `(同 `Object.prototype`)) 来查找要搜索的属性。
+否则，如果 `doSomeInstancing` 中 `__proto__` 不具有该属性，则检查`doSomeInstancing` 的 `__proto__` 的 `__proto__` 是否具有该属性。默认情况下，任何函数的原型属性 `__proto__` 都是 `window.Object.prototype.` 因此，通过 `doSomeInstancing` 的 `__proto__` 的 `__proto__` ( 同 doSomething.prototype 的 `__proto__` (同 `Object.prototype`)) 来查找要搜索的属性。
 
 如果属性不存在 `doSomeInstancing` 的 `__proto__` 的 `__proto__` 中， 那么就会在`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 中查找。然而，这里存在个问题：`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 其实不存在。因此，只有这样，在 `__proto__` 的整个原型链被查看之后，这里没有更多的 `__proto__` ， 浏览器断言该属性不存在，并给出属性值为 `undefined` 的结论。
 

@@ -8,13 +8,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 
 返回调用指定函数的函数。
 
-该属性不是 ECMA-262 第 3 版标准的一部分。不过，[SpiderMonkey](/zh-cn/SpiderMonkey) (Mozilla 的 JavaScript 引擎) (查看{{ Bug("65683") }}), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。
+该属性不是 ECMA-262 第 3 版标准的一部分。不过，[SpiderMonkey](/zh-CN/SpiderMonkey) (Mozilla 的 JavaScript 引擎) (查看{{ Bug("65683") }}), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。
 
 ## 描述
 
 如果一个函数 `f` 是在全局作用域内被调用的，则 `f.caller 为` `null`。相反，如果一个函数是在另外一个函数作用域内被调用的，则 `f.caller` 指向调用它的那个函数。
 
-该属性的常用形式 `arguments.callee.caller` 替代了被废弃的 [arguments.caller](/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/caller).
+该属性的常用形式 `arguments.callee.caller` 替代了被废弃的 [arguments.caller](/zh-CN/JavaScript/Reference/Functions_and_function_scope/arguments/caller).
 
 ### 备注
 

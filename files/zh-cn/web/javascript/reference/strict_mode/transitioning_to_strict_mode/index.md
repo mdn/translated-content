@@ -19,8 +19,8 @@ ECMAScript 5 引入了 [strict mode](/zh-CN/docs/JavaScript/Strict_mode) ,现在
 如果代码中使用`"use strict"开启了严格模式`,则下面的情况都会在脚本运行之前抛出[SyntaxError](/zh-CN/docs/Core_JavaScript_1.5_Guide/SyntaxError)异常：
 
 - 八进制语法`:var n = 023 和 var s = "\047"`
-- [`with`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/with)语句
-- 使用[delete](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Operators/delete)删除一个变量名 (而不是属性名)`:delete myVariable`
+- [`with`](/zh-CN/docs/JavaScript/Reference/Statements/with)语句
+- 使用[delete](/zh-CN/docs/JavaScript/Reference/Operators/delete)删除一个变量名 (而不是属性名)`:delete myVariable`
 - 使用`eval`或`arguments`作为变量名或函数名
 - 使用未来保留字 (也许会在 ECMAScript 6 中使用):`implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`,和`yield`作为变量名或函数名
 - 在语句块中使用函数声明：`if(a<b){ function f(){} }`

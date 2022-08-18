@@ -17,7 +17,7 @@ Intl.NumberFormat.call(this[, locales[, options]])
 
 - `locales`
 
-  - : 可选。缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见[Intl page](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation). 下面的这些 Unicode 扩展键也是被允许的：
+  - : 可选。缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见[Intl page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation). 下面的这些 Unicode 扩展键也是被允许的：
 
     译者注：下面扩展的使用方式是 language\[-scripts]\[-region]-u-nu-\*,例如:zh-u-nu-hanidec(表示中文十进制数字)
 

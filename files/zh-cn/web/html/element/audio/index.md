@@ -23,10 +23,11 @@ slug: Web/HTML/Element/audio
 - {{htmlattrdef("controls")}}
   - : 如果声明了该属性，浏览器将提供一个包含声音，播放进度，播放暂停的控制面板，让用户可以控制音频的播放。
 - {{htmlattrdef("crossorigin")}}
-  - : 枚举属性 展示音频资源是否可以通过 CORS 加载。[支持 CORS 的资源 ](/zh-CN/docs/CORS_Enabled_Image)可以被 {{HTMLElement("canvas")}} 元素复用而不污染。可选值如下：_ `anonymous`
-    _ : 在发送跨域请求时不携带验证信息。换句话说，浏览器在发送`Origin:` HTTP 请求首部时将不携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 `Access-Control-Allow-Origin:` 响应首部），那么图片就被认为是污染的，它就会被限制使用。
+  - : 枚举属性 展示音频资源是否可以通过 CORS 加载。[支持 CORS 的资源](/zh-CN/docs/CORS_Enabled_Image)可以被 {{HTMLElement("canvas")}} 元素复用而不污染。可选值如下：
+    - `anonymous`
+      - : 在发送跨域请求时不携带验证信息。换句话说，浏览器在发送`Origin:` HTTP 请求首部时将不携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 `Access-Control-Allow-Origin:` 响应首部），那么图片就被认为是污染的，它就会被限制使用。
     - `use-credentials`
-      - : 在发送跨域请求时携带验证信息。换句话说，在发送`Origin:` HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置`Access-Control-Allow-Credentials:` 响应首部）那么图片就被认为是污染的，它就会被限制使用。在未指定时，资源将不通过 CORS 请求来获取（也就是不发送 `Origin: `请求首部），以保护 {{HTMLElement('canvas')}} 元素中未污染的内容。如果验证失败，它会表现的好像 **anonymous** 选项是选中的。查看 [CORS settings attributes](/zh-CN/docs/HTML/CORS_settings_attributes) 来获取更多信息。
+      - : 在发送跨域请求时携带验证信息。换句话说，在发送`Origin:` HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置`Access-Control-Allow-Credentials:` 响应首部）那么图片就被认为是污染的，它就会被限制使用。在未指定时，资源将不通过 CORS 请求来获取（也就是不发送 `Origin:`请求首部），以保护 {{HTMLElement('canvas')}} 元素中未污染的内容。如果验证失败，它会表现的好像 **anonymous** 选项是选中的。查看 [CORS settings attributes](/zh-CN/docs/HTML/CORS_settings_attributes) 来获取更多信息。
 - {{htmlattrdef("currentTime")}}
   - : 读取 `currentTime` 属性将返回一个双精度浮点值，用以标明以秒为单位的当前音频的播放位置。如果音频的元数据暂时无法访问——这意味着你无法的知道媒体的开始或持续时间。这时，`currentTime` 相对应的，能够被用于改变重播的时间。否则，设置 `currentTime` 将设置当前的播放位置，并且会自动搜寻到媒体的那个位置，如果媒体目前已经被加载的话。如果音频是以流的形式加载的，并且数据超出了媒体的缓冲区（buffer），{{Glossary("user agent")}} 可能无法获取资源的某些部分。另一些音频的时间轴可能并非从 0 秒开始，所以设置 `currentTime` 到一个开始时间之前的时间可能会失败。举个例子，如果音频媒体的时间轴从 12 小时开始，把 `currentTime` 设置到 3600 将会尝试把当前播放位置设置到媒体的开始位置之前，从而导致错误。{{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} 方法能够用于确定媒体时间轴的开始位置。
 - {{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}
@@ -48,7 +49,9 @@ slug: Web/HTML/Element/audio
     - _空字符串_ : 等效于`auto`属性。不同浏览器会有自己的默认值，规范建议的默认值为 `metadata`。
 
     > **备注：** `autoplay` 属性的优先级高于 `preload`。如果 `autoplay` 被指定，浏览器将显式地开始下载媒体以供播放。
+    >
     > - 浏览器并不被强制遵循该属性的规范，该属性只是一个建议与提示。
+
 - {{htmlattrdef("src")}}
   - : 嵌入的音频的 URL。 该 URL 应遵从 [HTTP access controls](/zh-CN/docs/HTTP_access_control). 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。
 
@@ -61,7 +64,7 @@ slug: Web/HTML/Element/audio
 | {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} | 浏览器预测已经可以在不暂停的前提下将媒体播放到结束。                                                                               |
 | {{Event("complete")}}                                                                 | 一个 {{DOMxRef("OfflineAudioContext")}} 的渲染已经中止。                                                                 |
 | {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} | `duration` 属性发生了变化。                                                                                                        |
-| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                 | 媒体置空。举个例子，当一个媒体已经加载（或部分加载）的情况下话调用 `load() `方法，这个事件就将被触发。                             |
+| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                 | 媒体置空。举个例子，当一个媒体已经加载（或部分加载）的情况下话调用 `load()` 方法，这个事件就将被触发。                             |
 | {{domxref("HTMLMediaElement.ended_event", 'ended')}}                         | 播放到媒体的结束位置，播放停止。                                                                                                   |
 | {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}         | 媒体的第一帧加载完成。                                                                                                             |
 | {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} | 元数据加载完成。                                                                                                                   |

@@ -59,7 +59,7 @@ console.log(Rectangle.name);
 // 输出: "Rectangle2"
 ```
 
-> **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes$edit#Class_declarations)部分中提到的类型提升的限制。
+> **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes#Class_declarations)部分中提到的类型提升的限制。
 
 ## 类体和方法定义
 
@@ -67,7 +67,7 @@ console.log(Rectangle.name);
 
 ### 严格模式
 
-类声明和类表达式的主体都执行在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。
+类声明和类表达式的主体都执行在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。
 
 ### 构造函数
 

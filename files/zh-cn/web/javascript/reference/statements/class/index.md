@@ -20,9 +20,9 @@ class name [extends] {
 
 ## 描述
 
-和类表达式一样，类声明体在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行。构造函数是可选的。
+和类表达式一样，类声明体在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行。构造函数是可选的。
 
-类声明不可以提升（这与[函数声明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
+类声明不可以提升（这与[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
 
 ## 示例
 

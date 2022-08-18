@@ -27,7 +27,7 @@ str.charCodeAt(index)
 
 ## 描述
 
-Unicode 码点（code points）的范围从 `0` 到 `1114111` `(0x10FFFF）`。开头的 128 个 Unicode 编码单元和 ASCII 字符编码一样。（关于 Unicode 的更多信息，可查看 [JavaScript Guide](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode)。）
+Unicode 码点（code points）的范围从 `0` 到 `1114111` `(0x10FFFF）`。开头的 128 个 Unicode 编码单元和 ASCII 字符编码一样。（关于 Unicode 的更多信息，可查看 [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode)。）
 
 > **备注：** `charCodeAt` 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。
 >

@@ -18,9 +18,9 @@ str.replace(regexp|substr, newSubStr|function)
 
 ### 参数
 
-- `regexp `(pattern)
+- `regexp` (pattern)
   - : 一个{{jsxref("RegExp")}} 对象或者其字面量。该正则所匹配的内容会被第二个参数的返回值替换掉。
-- `substr `(pattern)
+- `substr` (pattern)
   - : 一个将被 `newSubStr` 替换的 {{jsxref("String","字符串")}}。其被视为一整个字符串，而不是一个正则表达式。仅第一个匹配项会被替换。
 - `newSubStr` (replacement)
   - : 用于替换掉第一个参数在原字符串中的匹配部分的{{jsxref("String", "字符串")}}。该字符串中可以内插一些特殊的变量名。参考下面的[使用字符串作为参数](#使用字符串作为参数)。

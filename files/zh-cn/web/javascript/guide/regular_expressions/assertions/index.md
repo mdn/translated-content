@@ -272,7 +272,7 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 
 ### 不同含义的'?!'：断言和范围的组合用法
 
-不同含义的`?!` 结合使用 [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `和 [范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+不同含义的`?!` 结合使用 [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` 和 [范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
 ```plain
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";

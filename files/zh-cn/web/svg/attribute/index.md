@@ -342,11 +342,11 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ### Generic Attributes
 
-#### [核心属性](/docs/Web/SVG/Attribute/Core)
+#### [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
 
 {{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
 
-#### [样式属性](/docs/Web/SVG/Attribute/Styling)
+#### [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
 
 {{SVGAttr("class")}}, {{SVGAttr("style")}}
 
@@ -358,7 +358,7 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}}, {{SVGAttr("xlink:actuate")}}
 
-### [显示属性](/docs/Web/SVG/Attribute/Presentation)
+### [显示属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)
 
 > **备注：** 所有 SVG 显示属性都可以作为 CSS 属性来使用。
 
@@ -394,19 +394,19 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ### 事件属性
 
-#### [动画事件属性](/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
+#### [动画事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
 
 **`onbegin`**, **`onend`**, **`onrepeat`**
 
-#### [文档事件属性](/docs/Web/SVG/Attribute/Events#Document_Event_Attributes)
+#### [文档事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Document_Event_Attributes)
 
 **`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
 
-#### [全局事件属性](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes)
+#### [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Global_Event_Attributes)
 
 **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
 
-#### [图像事件属性](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+#### [图像事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
 
 **`onactivate`**, **`onfocusin`**, **`onfocusout`**
 

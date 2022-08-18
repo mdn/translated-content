@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 当您有多个彼此不依赖的异步任务成功完成时，或者您总是想知道每个`promise`的结果时，通常使用它。
 
-相比之下，[`Promise.all()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 更适合彼此相互依赖或者在其中任何一个`reject`时立即结束。
+相比之下，[`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 更适合彼此相互依赖或者在其中任何一个`reject`时立即结束。
 
 {{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
 

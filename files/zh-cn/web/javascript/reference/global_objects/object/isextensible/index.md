@@ -21,7 +21,7 @@ Object.isExtensible(obj)
 
 ### 返回值
 
-表示给定对象是否可扩展的一个[`Boolean`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Boolean) 。
+表示给定对象是否可扩展的一个 [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Boolean)。
 
 ## 描述
 

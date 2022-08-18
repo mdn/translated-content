@@ -50,13 +50,15 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
     >
     > 如果把这个属性设置为空字符串（`alt=""`），则表明该图像*不是*内容的关键部分（这是一种装饰或者一个追踪像素点），非可视化浏览器在{{glossary("Rendering engine", "渲染")}}的时候可能会忽略它。而且，如果图片加载失败，可视化浏览器会隐藏表示图片损坏的图标。将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。
 - {{htmlattrdef("crossorigin")}}
-  - : 这个枚举属性表明是否必须使用 CORS 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/CORS_Enabled_Image) 可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#What_is_a_tainted_canvas)（tainted）。允许的值有：_ `anonymous`
-    _ : 执行一个跨域请求（比如，有 {{httpheader("Origin")}} {{glossary("HTTP")}} header）。但是没有发送证书（比如，没有 cookie，没有 [X.509 证书](https://tools.ietf.org/html/rfc5280)，没有 [HTTP 基本授权认证](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)）。如果服务器没有把证书给到源站（没有设置 {{httpheader("Access-Control-Allow-Origin")}} HTTP 头），图像会被污染，而且它的使用会被限制。
+  - : 这个枚举属性表明是否必须使用 CORS 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/CORS_Enabled_Image) 可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#What_is_a_tainted_canvas)（tainted）。允许的值有：
+    - `anonymous`
+      - : 执行一个跨域请求（比如，有 {{httpheader("Origin")}} {{glossary("HTTP")}} header）。但是没有发送证书（比如，没有 cookie，没有 [X.509 证书](https://tools.ietf.org/html/rfc5280)，没有 [HTTP 基本授权认证](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)）。如果服务器没有把证书给到源站（没有设置 {{httpheader("Access-Control-Allow-Origin")}} HTTP 头），图像会被污染，而且它的使用会被限制。
     - `use-credentials`
       - : 一个有证书的跨域请求（比如，有 `Origin` HTTP header）被发送（比如，cookie，一份证书，或者 HTTP 基本验证信息）。如果服务器没有给源站发送证书（通过 `Access-Control-Allow-Credentials` HTTP header），图像将会被污染，且它的使用会受限制。当用户并未显式使用本属性时，默认不使用 CORS 发起请求（例如，不会向服务器发送`原有的`HTTP 头部信息），可防止其在 {{HTMLElement('canvas')}} 中的使用。如果无效，默认当做 `anonymous` 关键字生效。更多信息，请查看 [CORS 属性设置](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 。
 - {{htmlattrdef("decoding")}}
-  - : 为浏览器提供图像解码方式上的提示。允许的值：_ `sync`
-    _ : 同步解码图像，实现与其他内容的显示相互斥的原子显示。此图像的解码将是一个原子操作，在完成解码显示之前，不被其他内容的显示而打断，因此其他内容的显示会被延迟。
+  - : 为浏览器提供图像解码方式上的提示。允许的值：
+    - `sync`
+      - : 同步解码图像，实现与其他内容的显示相互斥的原子显示。此图像的解码将是一个原子操作，在完成解码显示之前，不被其他内容的显示而打断，因此其他内容的显示会被延迟。
     - `async`
       - : 异步解码图像，以减少其他内容的显示延迟。
     - `auto`
@@ -64,8 +66,9 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
 - {{htmlattrdef("height")}}
   - : 图像的高度，单位是 CSS 像素。可以只指定 `width` 和 `height` 中的一个值，浏览器会根据原始图像进行缩放。
 - {{htmlattrdef("importance")}} {{experimental_inline}}
-  - : 指示下载资源时相对重要性，或者说优先级。允许的值：_ `auto`
-    _ : **不指定优先级。**浏览器可以使用自己的算法来为图像选择优先级。
+  - : 指示下载资源时相对重要性，或者说优先级。允许的值：
+    - `auto`
+      - : **不指定优先级。**浏览器可以使用自己的算法来为图像选择优先级。
     - `high`
       - : 此图像在下载时优先级**较高**。
     - `low`
@@ -77,8 +80,9 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
 
     > **备注：** 只有在 `<img>` 元素是一个拥有有效 {{htmlattrxref("href","a")}} 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
 - {{htmlattrdef("loading")}} {{experimental_inline}}
-  - : 指示浏览器应当如何加载该图像。允许的值：_ `eager`
-    _ : 立即加载图像，不管它是否在可视视口（visible viewport）之外（默认值）。
+  - : 指示浏览器应当如何加载该图像。允许的值：
+    - `eager`
+      - : 立即加载图像，不管它是否在可视视口（visible viewport）之外（默认值）。
     - `lazy`
       - : 延迟加载图像，直到它和视口接近到一个计算得到的距离，由浏览器定义。
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
@@ -97,8 +101,8 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
 
   - : 以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像。每一个字符串由以下组成：1. 指向图像的 {{glossary("URL")}}。 2. 可选地，再加一个空格之后，附加以下的其一：
 
-        *   一个宽度描述符，这是一个正整数，后面紧跟 '`w`' 符号。该整数宽度除以 sizes 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。
-        *   一个像素密度描述符，这是一个正浮点数，后面紧跟 '`x`' 符号。如果没有指定源描述符，那它会被指定为默认的 `1x`。在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.
+    - 一个宽度描述符，这是一个正整数，后面紧跟 '`w`' 符号。该整数宽度除以 sizes 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。
+    - 一个像素密度描述符，这是一个正浮点数，后面紧跟 '`x`' 符号。如果没有指定源描述符，那它会被指定为默认的 `1x`。在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.
 
 - {{htmlattrdef("width")}}
   - : 图像的宽度，在单位是 CSS 像素。
@@ -110,8 +114,9 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
 ### 已废弃的属性
 
 - {{htmlattrdef("align")}} {{Deprecated_Inline}} 使用 {{cssxref('vertical-align')}} CSS 属性
-  - : 图像相对于它周围上下文的对齐。使用 {{cssxref('float')}} 和/或 {{cssxref('vertical-align')}} 这两个 {{glossary("CSS")}} 属性作为代替，而不是这个废弃的属性。允许的值：_ `top`
-    _ : 等价于 `vertical-align: top` 或 `vertical-align: text-top`
+  - : 图像相对于它周围上下文的对齐。使用 {{cssxref('float')}} 和/或 {{cssxref('vertical-align')}} 这两个 {{glossary("CSS")}} 属性作为代替，而不是这个废弃的属性。允许的值：
+    - `top`
+      - : 等价于 `vertical-align: top` 或 `vertical-align: text-top`
     - `middle`
       - : 等价于 `vertical-align: -moz-middle-with-baseline`
     - `bottom`

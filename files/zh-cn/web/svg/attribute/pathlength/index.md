@@ -50,7 +50,7 @@ html,body,svg { height:100% }
 
 For {{SVGElement('circle')}}, `pathLength` lets authors specify a total length for the circle, in user units.
 
-| Value         | **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| Value         | **[\<number>](/zh-CN/docs/Web/SVG/Content_type#Number)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -59,7 +59,7 @@ For {{SVGElement('circle')}}, `pathLength` lets authors specify a total length f
 
 For {{SVGElement('ellipse')}}, `pathLength` lets authors specify a total length for the ellipse, in user units.
 
-| Value         | **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| Value         | **[\<number>](/zh-CN/docs/Web/SVG/Content_type#Number)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -68,7 +68,7 @@ For {{SVGElement('ellipse')}}, `pathLength` lets authors specify a total length 
 
 For {{SVGElement('line')}}, `pathLength` lets authors specify a total length for the line, in user units.
 
-| Value         | **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| Value         | **[\<number>](/zh-CN/docs/Web/SVG/Content_type#Number)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -77,7 +77,7 @@ For {{SVGElement('line')}}, `pathLength` lets authors specify a total length for
 
 For {{SVGElement('path')}}, `pathLength` lets authors specify a total length for the path, in user units.
 
-| Value         | **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| Value         | **[\<number>](/zh-CN/docs/Web/SVG/Content_type#Number)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -86,7 +86,7 @@ For {{SVGElement('path')}}, `pathLength` lets authors specify a total length for
 
 For {{SVGElement('polygon')}}, `pathLength` lets authors specify a total length for the shape, in user units.
 
-| Value         | **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| Value         | **[\<number>](/zh-CN/docs/Web/SVG/Content_type#Number)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -95,7 +95,7 @@ For {{SVGElement('polygon')}}, `pathLength` lets authors specify a total length 
 
 For {{SVGElement('polyline')}}, `pathLength` lets authors specify a total length for the shape, in user units.
 
-| Value         | **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| Value         | **[\<number>](/zh-CN/docs/Web/SVG/Content_type#Number)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -104,7 +104,7 @@ For {{SVGElement('polyline')}}, `pathLength` lets authors specify a total length
 
 For {{SVGElement('circle')}}, `pathLength` lets authors specify a total length for the rectangle, in user units.
 
-| Value         | **[\<number>](/docs/Web/SVG/Content_type#Number)** |
+| Value         | **[\<number>](/zh-CN/docs/Web/SVG/Content_type#Number)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |

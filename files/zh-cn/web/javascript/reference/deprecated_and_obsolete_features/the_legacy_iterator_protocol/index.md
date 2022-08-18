@@ -5,11 +5,11 @@ slug: >-
 ---
 {{jsSidebar("More")}}
 
-> **警告：** 非标准。旧式迭代器协议是一个特定于 SpiderMonkey 的功能，在 Firefox 58+ 中删除。对于面向未来的用法，请考虑使用 [for..of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环与[迭代协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+> **警告：** 非标准。旧式迭代器协议是一个特定于 SpiderMonkey 的功能，在 Firefox 58+ 中删除。对于面向未来的用法，请考虑使用 [for..of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环与[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
 ## 废弃的 Firefox 专用迭代器协议
 
-Firefox，在版本 26 之前实现了另一个迭代器协议，类似于标准的 [ES2015 迭代器协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+Firefox，在版本 26 之前实现了另一个迭代器协议，类似于标准的 [ES2015 迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
 一个对象实现了 next() 方法，并在迭代结束时抛出 {{jsxref("Global_Objects/StopIteration", "StopIteration")}}，它就是一个旧式迭代器。
 
@@ -54,5 +54,5 @@ catch(e){
 
 ## 参见
 
-- [迭代器和生成器](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-- 更多[弃用和过时的功能](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- 更多[弃用和过时的功能](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

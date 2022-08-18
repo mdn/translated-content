@@ -32,7 +32,7 @@ html,body,svg { height:100% }
 
 另外，作为 SVG 1.1 的遗留物，{{SVGElement('linearGradient')}}和{{SVGElement('radialGradient')}}支持 `gradientTransform` 属性，而{{SVGElement('pattern')}}支持 `patternTransform` 属性，两者的行为完全相同于 `transform` 属性
 
-| Value         | **[\<transform-list>](/docs/Web/SVG/Content_type#Transform-list)** |
+| Value         | **[\<transform-list>](/zh-CN/docs/Web/SVG/Content_type#Transform-list)** |
 | ------------- | ----------------------------------------------------------------- |
 | Default value | _none_                                                            |
 | Animatable    | Yes                                                               |
