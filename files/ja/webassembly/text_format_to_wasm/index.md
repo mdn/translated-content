@@ -16,19 +16,21 @@ translation_of: WebAssembly/Text_format_to_wasm
 
 WebAssembly には S 式ベースのテキスト表現があります。これはテキストエディタ、ブラウザの開発者ツールなどで見せるために設計された中間表現です。この記事では、これがどのように動作するか、テキスト形式のファイルを `.wasm` アセンブリ形式に変換するのに利用可能なツールの使用方法について少し説明します。
 
-> **Note:** **注**: テキスト形式のファイルは通常 `.wat` という拡張子で保存されます。場合によっては `.wast` も使われます。これはアサーションなどの変換時に .wasm に含まれない特別なテストコマンドを含むファイルを指します。
+> **Note:** テキスト形式のファイルは通常 `.wat` という拡張子で保存されます。場合によっては `.wast` も使われます。これはアサーションなどの変換時に .wasm に含まれない特別なテストコマンドを含むファイルを指します。
 
 ## はじめてのテキストフォーマット
 
 簡単な例を見てみましょう。次のプログラムは `imports` というモジュールから `imported_func` という名前の関数をインポートし、`exported_func` という名前の関数をエクスポートしています:
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42
     call $i
   )
-)</pre>
+)
+```
 
 WebAssembly 関数 `exported_func` は私達の環境 (WebAssembly モジュールを使用しているウェブアプリケーションなど) で使用するためにエクスポートされます。この関数が呼び出されたとき、インポートされた JavaScript 関数 `imported_func` パラメータとして値 (42) を渡して実行されます。
 
@@ -47,7 +49,7 @@ WebAssembly 関数 `exported_func` は私達の環境 (WebAssembly モジュー�
 
 これで `simple.wasm` という名前のファイルに wasm が出力されます。これには `.wasm` アセンブリのコードが含まれます。
 
-> **Note:** **注**: wasm2wat を使用して wasm から テキスト表現に戻すことができます。例: `wasm2wat simple.wasm -o text.wat`.
+> **Note:** wasm2wat を使用して wasm から テキスト表現に戻すことができます。例: `wasm2wat simple.wasm -o text.wat`.
 
 ## アセンブリの出力を見る
 
