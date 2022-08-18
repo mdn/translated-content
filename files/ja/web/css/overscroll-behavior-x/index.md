@@ -7,16 +7,17 @@ tags:
   - CSS Property
   - Reference
   - overscroll-behavior-x
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/overscroll-behavior-x
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>overscroll-behavior-x</code></strong> は CSS のプロパティで、スクロール領域の水平方向の境界に達したときのブラウザーの挙動を設定します。</span></p>
+**`overscroll-behavior-x`** は CSS のプロパティで、スクロール領域の水平方向の境界に達したときのブラウザーの挙動を設定します。
 
-<p>全体的な説明は {{cssxref("overscroll-behavior")}} を参照してください。</p>
+全体的な説明は {{cssxref("overscroll-behavior")}} を参照してください。
 
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 overscroll-behavior-x: auto; /* 既定値 */
 overscroll-behavior-x: contain;
 overscroll-behavior-x: none;
@@ -25,40 +26,39 @@ overscroll-behavior-x: none;
 overscroll-behavior-x: inherit;
 overscroll-behavior-x: initial;
 overscroll-behavior-x: unset;
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>overscroll-behavior-x</code> プロパティは、次の値の一覧のうち一つのキーワードで指定します。</p>
+`overscroll-behavior-x` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>スクロールの末端における既定の振る舞いが通常通りに発生します。</dd>
- <dt><code>contain</code></dt>
- <dd>この値が設定された要素の内部では、スクロールの末端における既定の振る舞いが見られますが、隣接するスクロール領域に対するスクロール連鎖はありません。例えば、基底となる要素はスクロールしません。</dd>
- <dt><code>none</code></dt>
- <dd>隣接するスクロール領域に対するスクロール連鎖はなく、スクロールの末端における既定の振る舞いが抑制されます。</dd>
-</dl>
+- `auto`
+  - : スクロールの末端における既定の振る舞いが通常通りに発生します。
+- `contain`
+  - : この値が設定された要素の内部では、スクロールの末端における既定の振る舞いが見られますが、隣接するスクロール領域に対するスクロール連鎖はありません。例えば、基底となる要素はスクロールしません。
+- `none`
+  - : 隣接するスクロール領域に対するスクロール連鎖はなく、スクロールの末端における既定の振る舞いが抑制されます。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Preventing_an_underlying_element_from_scrolling_horizontally" name="Preventing_an_underlying_element_from_scrolling_horizontally">背後にある要素が横にスクロールするのを防ぐ</h3>
+### 背後にある要素が横にスクロールするのを防ぐ
 
-<p>簡単な <a href="https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x">overscroll-behavior-x の例</a> (<a href="https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html">ソースコード</a>も参照) の中で、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxref("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxref("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い <code>width</code> を持ち、水平にスクロールします。</p>
+簡単な [overscroll-behavior-x の例](https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x) ([ソースコード](https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html)も参照) の中で、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxref("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxref("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い `width` を持ち、水平にスクロールします。
 
-<p>既定では、内側のボックスがスクロールして境界に達すると、ページ全体がスクロールし始めますが、これはおそらく望ましくない動きです。これを防ぐために、内側のボックスに <code>overscroll-behavior-x: contain</code> を設定することができます。</p>
+既定では、内側のボックスがスクロールして境界に達すると、ページ全体がスクロールし始めますが、これはおそらく望ましくない動きです。これを防ぐために、内側のボックスに `overscroll-behavior-x: contain` を設定することができます。
 
-<pre class="brush: css notranslate">main &gt; div {
+```css
+main > div {
   height: 300px;
   width: 500px;
   overflow: auto;
@@ -66,34 +66,20 @@ overscroll-behavior-x: unset;
   top: 100px;
   left: 100px;
   overscroll-behavior-x: contain;
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior-x', 'overscroll-behavior-x')}}</td>
-   <td>{{Spec2('CSS Overscroll Behavior')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                               | 状態                                             | 備考 |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---- |
+| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior-x', 'overscroll-behavior-x')}} | {{Spec2('CSS Overscroll Behavior')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.overscroll-behavior-x")}}</p>
+{{Compat("css.properties.overscroll-behavior-x")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo">スクロールを制御する: 引いて更新や末端の効果のカスタマイズ</a></li>
- <li>対応付けられる論理的プロパティ: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}</li>
-</ul>
+- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- 対応付けられる論理的プロパティ: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}

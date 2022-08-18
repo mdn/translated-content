@@ -8,22 +8,21 @@ tags:
   - Layout
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/visibility
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>visibility</code></strong> は CSS のプロパティで、文書のレイアウトを変更することなく要素を表示したり非表示にしたりします。このプロパティは {{HTMLElement("table")}} の行や列を隠すこともできます。</p>
+**`visibility`** は CSS のプロパティで、文書のレイアウトを変更することなく要素を表示したり非表示にしたりします。このプロパティは {{HTMLElement("table")}} の行や列を隠すこともできます。
 
-<div>{{EmbedInteractiveExample("pages/css/visibility.html")}}</div>
+{{EmbedInteractiveExample("pages/css/visibility.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+要素を不可視にして*レイアウトから除去する*には、 `visibility` を使用する代わりに {{cssxref("display")}} プロパティを `none` に設定してください。
 
-<p>要素を不可視にして<em>レイアウトから除去する</em>には、 <code>visibility</code> を使用する代わりに {{cssxref("display")}} プロパティを <code>none</code> に設定してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 visibility: visible;
 visibility: hidden;
 visibility: collapse;
@@ -32,100 +31,100 @@ visibility: collapse;
 visibility: inherit;
 visibility: initial;
 visibility: unset;
-</pre>
+```
 
-<p><code>visibility</code> プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。</p>
+`visibility` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>要素のボックスが可視になります。</dd>
- <dt><code>hidden</code></dt>
- <dd>要素のボックスは不可視になります (描画されません) が、レイアウトには通常通り影響します。子孫要素は <code>visibility</code> が <code>visible</code> に設定されていれば可視になります。(<a href="/ja/docs/Web/HTML/Global_attributes/tabindex">タブ順</a>で操作された時などに) 要素はフォーカスを受け取ることができません。</dd>
- <dt><code>collapse</code></dt>
- <dd>
- <ul>
-  <li>{{HTMLElement("table")}} の行、列、列グループ、行グループでは、行や列が不可視になり、 (表の列や行に <code>{{Cssxref("display")}}: none</code> が適用された場合のように) 占めていた領域も除去されます。しかし、他の行や列の寸法は、不可視になった行や列のセルが存在するときのように計算されます。この値は表全体の幅や高さを強制的に再計算することなく、すばやく行や列を不可視にすることができます。</li>
-  <li>フレックス項目では、不可視になり、占めていた領域は削除されます。</li>
-  <li><a href="/ja/docs/Mozilla/Tech/XUL">XUL</a> 要素では、通常は寸法に影響するその他のスタイルに関わらず、要素の寸法が常にゼロと計算されますが、マージンは有効になります。</li>
-  <li>その他の要素では、 <code>collapse</code> は <code>hidden</code> と同じと扱われます。</li>
- </ul>
- </dd>
-</dl>
+- `visible`
+  - : 要素のボックスが可視になります。
+- `hidden`
+  - : 要素のボックスは不可視になります (描画されません) が、レイアウトには通常通り影響します。子孫要素は `visibility` が `visible` に設定されていれば可視になります。([タブ順](/ja/docs/Web/HTML/Global_attributes/tabindex)で操作された時などに) 要素はフォーカスを受け取ることができません。
+- `collapse`
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+  - :&#x20;
 
-<p>要素の <code>visibility</code> の値に <code>hidden</code> を使用すると、 <a href="/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">アクセシビリティツリー</a>から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。</p>
+    - {{HTMLElement("table")}} の行、列、列グループ、行グループでは、行や列が不可視になり、 (表の列や行に `{{Cssxref("display")}}: none` が適用された場合のように) 占めていた領域も除去されます。しかし、他の行や列の寸法は、不可視になった行や列のセルが存在するときのように計算されます。この値は表全体の幅や高さを強制的に再計算することなく、すばやく行や列を不可視にすることができます。
+    - フレックス項目では、不可視になり、占めていた領域は削除されます。
+    - [XUL](/ja/docs/Mozilla/Tech/XUL) 要素では、通常は寸法に影響するその他のスタイルに関わらず、要素の寸法が常にゼロと計算されますが、マージンは有効になります。
+    - その他の要素では、 `collapse` は `hidden` と同じと扱われます。
 
-<h2 id="Interpolation" name="Interpolation">補間</h2>
+## アクセシビリティの考慮
 
-<p>visibility の値は<em>可視</em>及び<em>不可視</em>の間で補間可能です。従って、開始または終了の値の一つが <code>visible</code> でない限りは、補間は行われません。値は離散的なステップとして補間され、タイミング関数の <code>0</code> と <code>1</code> 間の値が、 <code class="css">visible</code> に対応し、タイミング関数の他の値 (トランジションの開始点または終了点でのみ、または [0、1] の外側の y 値を有する <code class="css">cubic-bezier()</code> 関数の結果として) はより近い終了点に対応します。</p>
+要素の `visibility` の値に `hidden` を使用すると、 [アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs)から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。
 
-<h2 id="Notes" name="Notes">注</h2>
+## 補間
 
-<ul>
- <li>現在の一部のブラウザーでは、 <code>visibility:collapse</code> の対応がないか、部分的に不正確です。表の行や列以外の要素に用いた場合、誤って <code>visibility:hidden</code> のように扱われることがあります。</li>
- <li><code>visibility:collapse</code> を用いた表の、折り畳まれたセルに入れ子の表があると、入れ子の表で <code>visibility:visible</code> が明示的に指定されていない限りは、表のレイアウトが変わる可能性があります。</li>
-</ul>
+visibility の値は*可視*及び*不可視*の間で補間可能です。従って、開始または終了の値の一つが `visible` でない限りは、補間は行われません。値は離散的なステップとして補間され、タイミング関数の `0` と `1` 間の値が、 <code class="css">visible</code> に対応し、タイミング関数の他の値 (トランジションの開始点または終了点でのみ、または \[0、1] の外側の y 値を有する <code class="css">cubic-bezier()</code> 関数の結果として) はより近い終了点に対応します。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 注
 
-<p>{{CSSInfo}}</p>
+- 現在の一部のブラウザーでは、 `visibility:collapse` の対応がないか、部分的に不正確です。表の行や列以外の要素に用いた場合、誤って `visibility:hidden` のように扱われることがあります。
+- `visibility:collapse` を用いた表の、折り畳まれたセルに入れ子の表があると、入れ子の表で `visibility:visible` が明示的に指定されていない限りは、表のレイアウトが変わる可能性があります。
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
+### 基本的な例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p class="visible"&gt;The first paragraph is visible.&lt;/p&gt;
-&lt;p class="not-visible"&gt;The second paragraph is NOT visible.&lt;/p&gt;
-&lt;p class="visible"&gt;The third paragraph is visible. Notice the second paragraph is still occupying space.&lt;/p&gt;
-</pre>
+```html
+<p class="visible">The first paragraph is visible.</p>
+<p class="not-visible">The second paragraph is NOT visible.</p>
+<p class="visible">The third paragraph is visible. Notice the second paragraph is still occupying space.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.visible {
+```css
+.visible {
   visibility: visible;
 }
 
 .not-visible {
   visibility: hidden;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Basic_example')}}</p>
+{{EmbedLiveSample('Basic_example')}}
 
-<h3 id="Table_example" name="Table_example">表の例</h3>
+### 表の例
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;1.1&lt;/td&gt;
-    &lt;td class="collapse"&gt;1.2&lt;/td&gt;
-    &lt;td&gt;1.3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class="collapse"&gt;
-    &lt;td&gt;2.1&lt;/td&gt;
-    &lt;td&gt;2.2&lt;/td&gt;
-    &lt;td&gt;2.3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;3.1&lt;/td&gt;
-    &lt;td&gt;3.2&lt;/td&gt;
-    &lt;td&gt;3.3&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td>1.1</td>
+    <td class="collapse">1.2</td>
+    <td>1.3</td>
+  </tr>
+  <tr class="collapse">
+    <td>2.1</td>
+    <td>2.2</td>
+    <td>2.3</td>
+  </tr>
+  <tr>
+    <td>3.1</td>
+    <td>3.2</td>
+    <td>3.3</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.collapse {
+```css
+.collapse {
   visibility: collapse;
 }
 
@@ -136,40 +135,21 @@ table {
 td {
   border: 1px solid gray;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Table_example')}}</p>
+{{EmbedLiveSample('Table_example')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>フレックスアイテムに適用する <code>collapse</code> の値を定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                   | 状態                             | 備考                                                 |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}} | フレックスアイテムに適用する `collapse` の値を定義。 |
+| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}         | 初回定義                                             |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.visibility")}}</p>
+{{Compat("css.properties.visibility")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("display")}}</li>
-</ul>
+- {{cssxref("display")}}
