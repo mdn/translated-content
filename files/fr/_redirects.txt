@@ -5752,6 +5752,7 @@
 /fr/docs/Web/Media/Formats/Questions_sur_le_soutien	/fr/docs/Web/Media/Formats/Support_issues
 /fr/docs/Web/Media/Formats/Types_des_images	/fr/docs/Web/Media/Formats/Image_types
 /fr/docs/Web/Performance/Budgets_de_performance	/fr/docs/Web/Performance/Performance_budgets
+/fr/docs/Web/Privacy/Tracking_Protection	/fr/docs/Web/Privacy/Firefox_tracking_protection
 /fr/docs/Web/Progressive_web_apps/Adaptative	/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 /fr/docs/Web/Progressive_web_apps/Chargement	/fr/docs/Web/Progressive_web_apps/Loading
 /fr/docs/Web/Progressive_web_apps/Identifiable	/fr/docs/Web/Progressive_web_apps
