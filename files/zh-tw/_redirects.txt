@@ -91,7 +91,7 @@
 /zh-TW/docs/Core_JavaScript_1.5_教學/運算子/代入運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_e70c1f2655520c542321ddbdb2c4f28d
 /zh-TW/docs/Core_JavaScript_1.5_教學/運算子/位元運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_11969cb29fead65c26360f554426c217
 /zh-TW/docs/Core_JavaScript_1.5_教學/運算子/字串運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_eb65eb8f4e6b3c16f08b95149183cfb8
-/zh-TW/docs/Core_JavaScript_1.5_教學/運算子/比較運算子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子
+/zh-TW/docs/Core_JavaScript_1.5_教學/運算子/比較運算子	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Core_JavaScript_1.5_教學/運算子/特殊運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_952d66f1fe521bc0574c89750f5b406e
 /zh-TW/docs/Core_JavaScript_1.5_教學/運算子/算術運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_05717c12b1ecaebc9d68cf43524d31b1
 /zh-TW/docs/Core_JavaScript_1.5_教學/運算子/邏輯運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_351a6d9e4d31b32eff9762ef5deead93
@@ -247,7 +247,7 @@
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/代入運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_e70c1f2655520c542321ddbdb2c4f28d
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/位元運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_11969cb29fead65c26360f554426c217
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/字串運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_eb65eb8f4e6b3c16f08b95149183cfb8
-/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/比較運算子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子
+/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/比較運算子	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/特殊運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_952d66f1fe521bc0574c89750f5b406e
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/算術運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_05717c12b1ecaebc9d68cf43524d31b1
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/運算子/邏輯運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_351a6d9e4d31b32eff9762ef5deead93
@@ -343,7 +343,7 @@
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/代入運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_e70c1f2655520c542321ddbdb2c4f28d
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/位元運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_11969cb29fead65c26360f554426c217
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/字串運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_eb65eb8f4e6b3c16f08b95149183cfb8
-/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子
+/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/特殊運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_952d66f1fe521bc0574c89750f5b406e
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/算術運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_05717c12b1ecaebc9d68cf43524d31b1
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/邏輯運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_351a6d9e4d31b32eff9762ef5deead93
@@ -791,7 +791,7 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/代入運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_e70c1f2655520c542321ddbdb2c4f28d
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/位元運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_11969cb29fead65c26360f554426c217
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/字串運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_eb65eb8f4e6b3c16f08b95149183cfb8
-/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子
+/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/特殊運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_952d66f1fe521bc0574c89750f5b406e
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/算術運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_05717c12b1ecaebc9d68cf43524d31b1
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/邏輯運算子	/zh-TW/docs/conflicting/Web/JavaScript/Guide/Expressions_and_Operators_351a6d9e4d31b32eff9762ef5deead93
