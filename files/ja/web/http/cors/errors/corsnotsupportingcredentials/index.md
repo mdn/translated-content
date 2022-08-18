@@ -17,30 +17,28 @@ tags:
   - 理由
 translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Reason" name="Reason">理由</h2>
+## 理由
 
-<pre class="syntaxbox">Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’</pre>
+```
+Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’
+```
 
-<h2 id="What_went_wrong" name="What_went_wrong">何が悪いのか</h2>
+## 何が悪いのか
 
-<p>{{Glossary("CORS")}} リクエストが認証フラグ付きで試みられましたが、サーバーが {{HTTPHeader("Access-Control-Allow-Origin")}} の値としてワイルドカード (<code>"*"</code>) を使用して構成されており、認証情報を利用することが許可されていません。</p>
+{{Glossary("CORS")}} リクエストが認証フラグ付きで試みられましたが、サーバーが {{HTTPHeader("Access-Control-Allow-Origin")}} の値としてワイルドカード (`"*"`) を使用して構成されており、認証情報を利用することが許可されていません。
 
-<p>この問題をクライアント側で修正するには、 CORS リクエストを発行する際に認証フラグの値を確実に <code>false</code> にするだけです。</p>
+この問題をクライアント側で修正するには、 CORS リクエストを発行する際に認証フラグの値を確実に `false` にするだけです。
 
-<ul>
- <li>リクエストが {{domxref("XMLHttpRequest")}} を用いて発行されている場合は、 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} に <code>true</code> を設定しないよう確認してください。</li>
- <li><a href="/ja/docs/Web/API/Server-sent_events">Server-sent event</a> を使用している場合は、 {{domxref("EventSource.withCredentials")}} が <code>false</code> (既定値) であることを確認してください。</li>
- <li><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> を使用している場合は、 {{domxref("Request.credentials")}} が <code>"omit"</code> であることを確認してください。</li>
-</ul>
+- リクエストが {{domxref("XMLHttpRequest")}} を用いて発行されている場合は、 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} に `true` を設定しないよう確認してください。
+- [Server-sent event](/ja/docs/Web/API/Server-sent_events) を使用している場合は、 {{domxref("EventSource.withCredentials")}} が `false` (既定値) であることを確認してください。
+- [Fetch API](/ja/docs/Web/API/Fetch_API) を使用している場合は、 {{domxref("Request.credentials")}} が `"omit"` であることを確認してください。
 
-<p>サーバーの動作を調整する必要がある場合は、 <code>Access-Control-Allow-Origin</code> の画像を変更して、クライアントが読み込まれたオリジンへのアクセスを許可する必要があるでしょう。</p>
+サーバーの動作を調整する必要がある場合は、 `Access-Control-Allow-Origin` の画像を変更して、クライアントが読み込まれたオリジンへのアクセスを許可する必要があるでしょう。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
- <li>用語集: {{Glossary("CORS")}}</li>
- <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
-</ul>
+- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- 用語集: {{Glossary("CORS")}}
+- [CORS 入門](/ja/docs/Web/HTTP/CORS)

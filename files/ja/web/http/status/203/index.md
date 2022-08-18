@@ -10,37 +10,26 @@ tags:
   - 成功レスポンス
 translation_of: Web/HTTP/Status/203
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の <strong><code>203 Non-Authoritative Information</code></strong> レスポンスステータスは、リクエストが成功したものの、変換{{Glossary("Proxy server", "プロキシ")}}によって元のサーバーの{{HTTPStatus("200")}} (<code>OK</code>) レスポンスからペイロードが変更されたことを表します。</p>
+HTTP の **`203 Non-Authoritative Information`** レスポンスステータスは、リクエストが成功したものの、変換{{Glossary("Proxy server", "プロキシ")}}によって元のサーバーの{{HTTPStatus("200")}} (`OK`) レスポンスからペイロードが変更されたことを表します。
 
-<p><code>203</code> レスポンスは <code><a href="/ja/docs/Web/HTTP/Headers/Warning#Warning_codes">214</a></code> の値、すなわち <code>Transformation Applied</code> の {{HTTPHeader("Warning")}} ヘッダーコードと似ていますが、こちらはどのステータスコードのレスポンスにも適用できるという利点があります。</p>
+`203` レスポンスは [`214`](/ja/docs/Web/HTTP/Headers/Warning#Warning_codes) の値、すなわち `Transformation Applied` の {{HTTPHeader("Warning")}} ヘッダーコードと似ていますが、こちらはどのステータスコードのレスポンスにも適用できるという利点があります。
 
-<h2 id="Status" name="Status">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">203 Non-Authoritative Information</pre>
+```
+203 Non-Authoritative Information
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 題名                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPStatus("200")}}</li>
- <li>{{Glossary("Proxy server")}}</li>
- <li>{{HTTPHeader("Warning")}}</li>
-</ul>
+- {{HTTPStatus("200")}}
+- {{Glossary("Proxy server")}}
+- {{HTTPHeader("Warning")}}

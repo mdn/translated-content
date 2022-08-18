@@ -7,38 +7,29 @@ tags:
   - ステータスコード
 translation_of: Web/HTTP/Status/100
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>100 Continue</code></strong> 情報ステータスレスポンスコードは、これまでのすべてが OK であり、クライアントが要求を続行するか、または要求がすでに終了している場合は無視することを示します。<br>
- <br>
- サーバーが要求のヘッダーをチェックするようにするには、クライアントは最初の要求でヘッダーとして{{HTTPHeader("Expect")}}<code>: 100-continue</code> を送信し、本文を送信する前にレスポンスとして <code>100 Continue</code> ステータスコードを受け取ります。</p>
+HTTP **`100 Continue`** 情報ステータスレスポンスコードは、これまでのすべてが OK であり、クライアントが要求を続行するか、または要求がすでに終了している場合は無視することを示します。
 
-<h2 id="ステータス">ステータス</h2>
+サーバーが要求のヘッダーをチェックするようにするには、クライアントは最初の要求でヘッダーとして{{HTTPHeader("Expect")}}`: 100-continue` を送信し、本文を送信する前にレスポンスとして `100 Continue` ステータスコードを受け取ります。
 
-<pre class="syntaxbox">100 Continue</pre>
+## ステータス
 
-<h2 id="仕様">仕様</h2>
+```
+100 Continue
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">タイトル</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "100 Continue" , "6.2.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+## 仕様
 
-<h2 id="ブラウザの実装状況">ブラウザの実装状況</h2>
+| 仕様                                                     | タイトル                                                      |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "100 Continue" , "6.2.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<p>{{Compat("http.status.100")}}</p>
+## ブラウザの実装状況
 
-<h2 id="関連情報">関連情報</h2>
+{{Compat("http.status.100")}}
 
-<ul>
- <li>{{HTTPHeader("Expect")}}</li>
- <li>{{HTTPStatus(417)}}</li>
-</ul>
+## 関連情報
+
+- {{HTTPHeader("Expect")}}
+- {{HTTPStatus(417)}}

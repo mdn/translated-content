@@ -7,46 +7,35 @@ tags:
   - 成功
 translation_of: Web/HTTP/Status/200
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>200 OK</code></strong> はリクエストが成功した場合に返すレスポンスコード。200のレスポンスはデフォルトでキャッシュしてよい。</p>
+HTTP **`200 OK`** はリクエストが成功した場合に返すレスポンスコード。200 のレスポンスはデフォルトでキャッシュしてよい。
 
-<p>成功したという意味はリクエストのメソッドによって異なる:</p>
+成功したという意味はリクエストのメソッドによって異なる:
 
-<ul>
- <li>{{HTTPMethod("GET")}}: リソースがフェッチされメッセージのボディ部で返送された。</li>
- <li>{{HTTPMethod("HEAD")}}: エンティティヘッダがボディ部で返送された。</li>
- <li>{{HTTPMethod("POST")}}: 実行された結果が記載されたリソースがボディ部で返送された。</li>
- <li>{{HTTPMethod("TRACE")}}: メッセージのボディ部にサーバーで受信したリクエストメッセージを含んでいる。</li>
-</ul>
+- {{HTTPMethod("GET")}}: リソースがフェッチされメッセージのボディ部で返送された。
+- {{HTTPMethod("HEAD")}}: エンティティヘッダがボディ部で返送された。
+- {{HTTPMethod("POST")}}: 実行された結果が記載されたリソースがボディ部で返送された。
+- {{HTTPMethod("TRACE")}}: メッセージのボディ部にサーバーで受信したリクエストメッセージを含んでいる。
 
-<p>{{HTTPMethod("PUT")}} や {{HTTPMethod("DELETE")}} の成功結果は <code>200</code> <code>OK</code> ではなく、 {{HTTPStatus("204")}} <code>No Content</code> (や、リソースの初回アップロードによる作成の場合は {{HTTPStatus("201")}} <code>Created</code> )である場合もある。</p>
+{{HTTPMethod("PUT")}} や {{HTTPMethod("DELETE")}} の成功結果は `200` `OK` ではなく、 {{HTTPStatus("204")}} `No Content` (や、リソースの初回アップロードによる作成の場合は {{HTTPStatus("201")}} `Created` )である場合もある。
 
-<h2 id="ステータス">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">200 OK</pre>
+```
+200 OK
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">タイトル</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "200 OK" , "6.3.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                             | タイトル                                                      |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザー互換性
 
-<p>{{Compat("http.status.200")}}</p>
+{{Compat("http.status.200")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+- [HTTP request methods](/ja/docs/Web/HTTP/Methods)

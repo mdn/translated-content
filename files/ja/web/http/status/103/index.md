@@ -10,39 +10,26 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/103
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>103 Early Hints</code></strong> インフォメーションレスポンスステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用され、サーバーがまだレスポンスを準備している間にユーザーエージェントがリソースのプリロードを開始できるようにすることを目的としています。</p>
+HTTP **`103 Early Hints`** インフォメーションレスポンスステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用され、サーバーがまだレスポンスを準備している間にユーザーエージェントがリソースのプリロードを開始できるようにすることを目的としています。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">103 Early Hints</pre>
+```
+103 Early Hints
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC(8297, "103 Early Hints")}}</td>
-   <td><span class="spec-RFC">IETF RFC</span></td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                       | ステータス                             | コメント |
+| -------------------------------------------- | -------------------------------------- | -------- |
+| {{RFC(8297, "103 Early Hints")}} | <span class="spec-RFC">IETF RFC</span> | 初期定義 |
 
-<h2 id="ブラウザーの実装状況">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
-<p>{{Compat("http.status.103")}}</p>
+{{Compat("http.status.103")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Link")}}</li>
-</ul>
+- {{HTTPHeader("Link")}}

@@ -16,22 +16,22 @@ tags:
   - 無効
 translation_of: Web/HTTP/CORS/Errors/CORSDisabled
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Reason" name="Reason">理由</h2>
+## 理由
 
-<pre class="syntaxbox">Reason: CORS disabled</pre>
+```
+Reason: CORS disabled
+```
 
-<h2 id="What_went_wrong" name="What_went_wrong">何に失敗したか</h2>
+## 何に失敗したか
 
-<p>{{Glossary("CORS")}} を使う必要がある要求が行われましたが、ユーザーのブラウザーで CORS が無効になっています。これが発生した場合、ブラウザーの CORS を有効に戻す必要があります。</p>
+{{Glossary("CORS")}} を使う必要がある要求が行われましたが、ユーザーのブラウザーで CORS が無効になっています。これが発生した場合、ブラウザーの CORS を有効に戻す必要があります。
 
-<p>Firefox では、 CORS を無効にする設定は <code>content.cors.disable</code> です。これを <code>true</code> に設定すると CORS が無効になり、この場合は常に、 CORS 要求は常にこのエラーで失敗します。</p>
+Firefox では、 CORS を無効にする設定は `content.cors.disable` です。これを `true` に設定すると CORS が無効になり、この場合は常に、 CORS 要求は常にこのエラーで失敗します。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
- <li>用語集: {{Glossary("CORS")}}</li>
- <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
-</ul>
+- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- 用語集: {{Glossary("CORS")}}
+- [CORS 入門](/ja/docs/Web/HTTP/CORS)

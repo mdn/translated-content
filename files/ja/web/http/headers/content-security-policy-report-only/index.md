@@ -10,98 +10,111 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の <strong><code>Content-Security-Policy-Report-Only</code></strong> レスポンスヘッダーにより、ウェブ開発者はポリシーの効果を監視する (ただし強制はしない) ことによりポリシーを試行することができます。これらの違反レポートは {{Glossary("JSON")}} の文書で構成され、 HTTP の <code>POST</code> リクエストを通して指定された URI に送信されます。</p>
+HTTP の **`Content-Security-Policy-Report-Only`** レスポンスヘッダーにより、ウェブ開発者はポリシーの効果を監視する (ただし強制はしない) ことによりポリシーを試行することができます。これらの違反レポートは {{Glossary("JSON")}} の文書で構成され、 HTTP の `POST` リクエストを通して指定された URI に送信されます。
 
-<p>詳細については、<a href="/ja/docs/Web/HTTP/CSP">コンテンツセキュリティポリシー (CSP)</a> のこの記事も参照してください。</p>
+詳細については、[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP) のこの記事も参照してください。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">ヘッダー種別</th>
-   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">This header is not supported inside a {{HTMLElement("meta")}} element.</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">ヘッダー種別</th>
+      <td>
+        {{Glossary("Response header", "レスポンスヘッダー")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+      </th>
+      <td>いいえ</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">
+        This header is not supported inside a {{HTMLElement("meta")}}
+        element.
+      </th>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
-</pre>
+```
+Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
+```
 
-<h2 id="Directives" name="Directives">ディレクティブ</h2>
+## ディレクティブ
 
-<p>{{HTTPHeader("Content-Security-Policy")}} ヘッダーのディレクティブは <code>Content-Security-Policy-Report-Only</code> にも適用することができます。</p>
+{{HTTPHeader("Content-Security-Policy")}} ヘッダーのディレクティブは `Content-Security-Policy-Report-Only` にも適用することができます。
 
-<p>CSP の {{CSP("report-uri")}} ディレクティブをこのヘッダーで使用しないと、このヘッダーは負荷が高く何もしない機械となります。</p>
+CSP の {{CSP("report-uri")}} ディレクティブをこのヘッダーで使用しないと、このヘッダーは負荷が高く何もしない機械となります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>このヘッダーは発生した違反を報告します。これを使用して、コンテンツセキュリティポリシーを反復的に処理できます。サイトがどのように動作するのかを観察したり、違反レポートや<a href="https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/">マルウエアリダイレクト</a>を監視したりして、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーで強制することが要求されるポリシーを選択します。</p>
+このヘッダーは発生した違反を報告します。これを使用して、コンテンツセキュリティポリシーを反復的に処理できます。サイトがどのように動作するのかを観察したり、違反レポートや[マルウエアリダイレクト](https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/)を監視したりして、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーで強制することが要求されるポリシーを選択します。
 
-<pre class="notranslate">Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+```
+Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
-<p>レポートを受信し続けながら、ポリシーの強制も行いたい場合は、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{CSP("report-uri")}} ディレクティブを指定して使用してください。</p>
+レポートを受信し続けながら、ポリシーの強制も行いたい場合は、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{CSP("report-uri")}} ディレクティブを指定して使用してください。
 
-<pre class="notranslate">Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+```
+Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
-<h2 id="Violation_report_syntax" name="Violation_report_syntax">違反レポートの構文</h2>
+## 違反レポートの構文
 
-<p>レポート JSON オブジェクトには、次のデータが含まれています。</p>
+レポート JSON オブジェクトには、次のデータが含まれています。
 
-<dl>
- <dt><code>blocked-uri</code></dt>
- <dd>The URI of the resource that was blocked from loading by the Content Security Policy. If the blocked URI is from a different origin than the document-uri, then the blocked URI is truncated to contain just the scheme, host, and port.</dd>
- <dt><code>disposition</code></dt>
- <dd>Either <code>"enforce"</code> or <code>"report"</code> depending on whether the {{HTTPHeader("Content-Security-Policy")}} header or the <code>Content-Security-Policy-Report-Only</code> header is used.</dd>
- <dt><code>document-uri</code></dt>
- <dd>The URI of the document in which the violation occurred.</dd>
- <dt><code>effective-directive</code></dt>
- <dd>The directive whose enforcement caused the violation.</dd>
- <dt><code>original-policy</code></dt>
- <dd>The original policy as specified by the <code>Content-Security-Policy-Report-Only</code> HTTP header.</dd>
- <dt><code>referrer</code></dt>
- <dd>The referrer of the document in which the violation occurred.</dd>
- <dt><code>script-sample</code></dt>
- <dd>The first 40 characters of the inline script, event handler, or style that caused the violation.</dd>
- <dt><code>status-code</code></dt>
- <dd>The HTTP status code of the resource on which the global object was instantiated.</dd>
- <dt><code>violated-directive</code></dt>
- <dd>The name of the policy section that was violated.</dd>
-</dl>
+- `blocked-uri`
+  - : The URI of the resource that was blocked from loading by the Content Security Policy. If the blocked URI is from a different origin than the document-uri, then the blocked URI is truncated to contain just the scheme, host, and port.
+- `disposition`
+  - : Either `"enforce"` or `"report"` depending on whether the {{HTTPHeader("Content-Security-Policy")}} header or the `Content-Security-Policy-Report-Only` header is used.
+- `document-uri`
+  - : The URI of the document in which the violation occurred.
+- `effective-directive`
+  - : The directive whose enforcement caused the violation.
+- `original-policy`
+  - : The original policy as specified by the `Content-Security-Policy-Report-Only` HTTP header.
+- `referrer`
+  - : The referrer of the document in which the violation occurred.
+- `script-sample`
+  - : The first 40 characters of the inline script, event handler, or style that caused the violation.
+- `status-code`
+  - : The HTTP status code of the resource on which the global object was instantiated.
+- `violated-directive`
+  - : The name of the policy section that was violated.
 
-<h2 id="Sample_violation_report" name="Sample_violation_report">違反レポートのサンプル</h2>
+## 違反レポートのサンプル
 
-<div>Let's consider a page located at <code>http://example.com/signup.html</code>. It uses the following policy, disallowing everything but stylesheets from <code>cdn.example.com</code>.</div>
+Let's consider a page located at `http://example.com/signup.html`. It uses the following policy, disallowing everything but stylesheets from `cdn.example.com`.
 
-<div>
-<pre class="notranslate">Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
-</div>
+```
+Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+```
 
-<div>The HTML of <code>signup.html</code> looks like this:</div>
+The HTML of `signup.html` looks like this:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Sign Up&lt;/title&gt;
-    &lt;link rel="stylesheet" href="css/style.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
     ... Content ...
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  </body>
+</html>
+```
 
-<div>Can you spot the violation? Stylesheets are only allowed to be loaded from <code>cdn.example.com</code>, yet the website tries to load one from its own origin (<code>http://example.com</code>). A browser capable of enforcing CSP will send the following violation report as a POST request to <code>http://example.com/_/csp-reports</code>, when the document is visited:</div>
+Can you spot the violation? Stylesheets are only allowed to be loaded from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`). A browser capable of enforcing CSP will send the following violation report as a POST request to `http://example.com/_/csp-reports`, when the document is visited:
 
-<pre class="brush: js notranslate">{
+```js
+{
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
     "referrer": "",
@@ -110,43 +123,25 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
     "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
     "disposition": "report"
   }
-}</pre>
+}
+```
 
-<p>As you can see, the report includes the full path to the violating resource in <code>blocked-uri</code>. This is not always the case. For example, when the <code>signup.html</code> would attempt to load CSS from <code>http://anothercdn.example.com/stylesheet.css</code>, the browser would <em>not</em> include the full path but only the origin (<code>http://anothercdn.example.com</code>). This is done to prevent leaking sensitive information about cross-origin resources.</p>
+As you can see, the report includes the full path to the violating resource in `blocked-uri`. This is not always the case. For example, when the `signup.html` would attempt to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path but only the origin (`http://anothercdn.example.com`). This is done to prevent leaking sensitive information about cross-origin resources.
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                           | 状態                         | 備考     |
+| -------------------------------- | ---------------------------- | -------- |
+| {{specName("CSP 3.0")}} | {{Spec2('CSP 3.0')}} | 変更なし |
+| {{specName("CSP 1.1")}} | {{Spec2('CSP 1.1')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.Content-Security-Policy-Report-Only")}}</p>
+{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>CSP {{CSP("report-uri")}} ディレクティブ</li>
- <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">WebExtensions のコンテンツセキュリティ</a></li>
- <li><a href="/ja/docs/Tools/GCLI/Display_security_and_privacy_policies">Display security and privacy policies In Firefox Developer Tools</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- CSP {{CSP("report-uri")}} ディレクティブ
+- [WebExtensions のコンテンツセキュリティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Display security and privacy policies In Firefox Developer Tools](/ja/docs/Tools/GCLI/Display_security_and_privacy_policies)
