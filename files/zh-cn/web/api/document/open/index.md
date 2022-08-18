@@ -54,7 +54,7 @@ See [Security check basics](/en/Security_check_basics) for more about principals
 
 从 Gecko 1.9 开始，这个方法与其他属性一样受到同源策略的控制，若调用会使文档的源产生变化则不可用。
 
-从 Gecko 1.9.2 开始，`document.open()` 使用文档的使用的 URI 的[principal](/docs/Security_check_basics)大，而不是从 stack 中取来 principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用[`wrappedJSObject`](/en/wrappedJSObject)。关于 principal 的更多信息详见[Security check basics](/en/Security_check_basics)。
+从 Gecko 1.9.2 开始，`document.open()` 使用文档的使用的 URI 的[principal](/zh-CN/docs/Security_check_basics)大，而不是从 stack 中取来 principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用[`wrappedJSObject`](/en/wrappedJSObject)。关于 principal 的更多信息详见[Security check basics](/en/Security_check_basics)。
 
 ## 三个参数的 document.open()
 

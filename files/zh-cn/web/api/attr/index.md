@@ -89,7 +89,7 @@ slug: Web/API/Attr
   - : 使用{{domxref("Element.getAttribute()")}}来代替
 - `getAttributeNodeNS()`
   - : 使用{{domxref("Element.getAttributeNS()")}}来代替
-- `hasAttributes() `{{Deprecated_Inline}}
+- `hasAttributes()` {{Deprecated_Inline}}
   - : `当前该方法总是返回`false.
 - `hasChildNodes()`
   - : `当前该方法总是返回`false.

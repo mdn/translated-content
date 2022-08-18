@@ -181,7 +181,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What is bracket notation?](/en-US/docs/Learn/JavaScript/Objects/Basics#Bracket_notation)
 - [How do you get and set the methods and properties of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#Setting_object_members)
 - [What is `this`, in the context of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#What_is_this)
-- [What is object-oriented programming?](/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)
+- [What is object-oriented programming?](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)
 - [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Constructors_and_object_instances)
 - [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Other_ways_to_create_object_instances)
 

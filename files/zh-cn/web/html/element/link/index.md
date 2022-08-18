@@ -117,6 +117,7 @@ slug: Web/HTML/Element/link
     > **备注：** 大多数的 icon 格式只能存储一个 icon。因此绝大多数使用 {{htmlattrxref("sizes")}}时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式都是这样，ICO 使用得更加广泛，推荐你使用它。
     >
     > - 苹果的 IOS 系统并不支持这个属性，于是苹果的 IPhone 以及 IPad 使用特殊的、非标准的 [link 类型值](/zh-CN/docs/Web/HTML/Link_types)去定义作为 Web Clip 或开始占位符：`apple-touch-icon` 和 `apple-touch-startup-icon`。
+
 - {{HTMLAttrDef("title")}}
   - : 属性在`<link>`元素上有特殊的语义。当用于`<link rel="stylesheet">`时，它定义了一个[首选样式表或备用样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。不正确地使用它可能会导致[样式表被忽略](/zh-CN/docs/Correctly_Using_Titles_With_External_Stylesheets)。
 - {{htmlattrdef("type")}}

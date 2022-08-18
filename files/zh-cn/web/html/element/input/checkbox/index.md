@@ -8,7 +8,7 @@ HTML input 元素 **`<input type="checkbox">`** 允许你为表单中（或不�
 
 ## 属性
 
-该元素包含[全局属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("checked")}}
   - : 当**type**属性的值为`checkbox 时`, 这个属性的存在表示 input 是否默认被选中。你可以将该属性设置为`checked="checked"，`或更简单地只设置为`checked。`

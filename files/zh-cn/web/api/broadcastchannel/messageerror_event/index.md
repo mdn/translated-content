@@ -73,4 +73,4 @@ channel.onmessageerror = (event) => {
 
 ## 另见
 
-- 相关事件：[`message`](/docs/Web/API/BroadcastChannel/message_event)
+- 相关事件：[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)

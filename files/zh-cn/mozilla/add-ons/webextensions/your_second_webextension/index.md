@@ -85,7 +85,7 @@ cd beastify
 ```
 
 - 最开始的三个属性：**`manifest_version`**, **`name`**, **`version`**, 是必须的并且包含了插件最基本的信息。
-- [description](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/description) 和 [homepage_url](/Add-ons/WebExtensions/manifest.json/homepage_url) 是可选的，但是推荐填写，因为它们提供关于扩展的有用信息。
+- [description](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/description) 和 [homepage_url](/zh-CN/Add-ons/WebExtensions/manifest.json/homepage_url) 是可选的，但是推荐填写，因为它们提供关于扩展的有用信息。
 - [icons](/zh-CN/Add-ons/WebExtensions/manifest.json/icons) 也是可选但推荐的，它决定了插件在附加组件中的图标。
 - **`permissions`** 列出了插件所需要的权限。在这里我们仅需要 [activeTab permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)。
 - **`browser_action`** 指定了工具栏按钮。我们在这里提供了三个信息片段：

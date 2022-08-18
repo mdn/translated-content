@@ -471,13 +471,18 @@ slug: Web/HTML/Element/Input
 
     > **备注：** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
 - {{htmlattrdef("dirname")}}
-  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [name](#attr-name) and [value](#attr-value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.```plain
+  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [name](#attr-name) and [value](#attr-value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.
+
+    ```html
     <form action="page.html" method="post">
       <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
       <input type="submit"/>
     </form>
     <!-- page.html?fruit=cherry&fruit.dir=ltr -->
-    ```When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+    ```
+
+    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+
 - {{ htmlattrdef("disabled") }}
   - : 这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， `click` 事件 [将不会被分发](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 **type** 属性为 hidden，此属性将被忽略。
 
@@ -606,7 +611,7 @@ See the {{htmlelement('datalist')}} element.
 - {{htmlattrdef('title')}}
   - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's {{htmlattrdef('id')}} attribute. See [Labels](#labels) below.
 - {{ htmlattrdef("type") }}
-  - : 要呈现的控件类型。有关各个类型的信息，请参阅 [Form \<input> types](#<input>_types)，其中包含指向每个类型的更多信息的链接。
+  - : 要呈现的控件类型。有关各个类型的信息，请参阅 [Form \<input> types](#input_types)，其中包含指向每个类型的更多信息的链接。
 - {{ htmlattrdef("usemap") }} {{Deprecated_Inline}}
   - : 作为图像映射的 {{ HTMLElement("map") }} 元素的名称。
 - {{ htmlattrdef("value") }}
@@ -739,7 +744,7 @@ Only the subset of CSS properties that apply to the [`::first-line`](/zh-CN/docs
 
 The [`appearance`](/zh-CN/docs/Web/CSS/appearance) property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
 
-You could make a `<div>` look like a radio button with `div {appearance: radio;} `or a radio look like a checkbox with `[type="checkbox] {appearance: checkbox;}`, but don't.
+You could make a `<div>` look like a radio button with `div {appearance: radio;}` or a radio look like a checkbox with `[type="checkbox] {appearance: checkbox;}`, but don't.
 
 Setting `appearance: none` removes platform native borders, but not functionality.
 
@@ -778,7 +783,7 @@ For more information about adding color to elements in HTML, see:
 Also see:
 
 - [Styling HTML forms,](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms) [advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms), and
-- the[ compatibility table of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets).
+- the [compatibility table of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets).
 
 ## Additional Features
 
@@ -831,7 +836,7 @@ Specific attributes and their values can lead to specific error [`ValidityState`
 | [minlength](#htmlattrdefminlength) | [`validityState.tooShort`](/zh-CN/docs/Web/API/ValidityState/tooShort)               | Occurs when the number of characters is less than the number required by the `minlength` property                                                                                      |
 | [pattern](#htmlattrdefpattern)     | [`validityState.patternMismatch`](/zh-CN/docs/Web/API/ValidityState/patternMismatch) | Occurs when a pattern attribute is included with a valid regular expression and the `value` does not match it.                                                                         |
 | [required](#htmlattrdefrequired)   | [`validityState.valueMissing`](/zh-CN/docs/Web/API/ValidityState/valueMissing)       | Occurs when the `required` attribute is present but the value is `null` or radio or checkbox is not checked.                                                                           |
-| [step](#htmlattrdefstep)           | [`validityState.stepMismatch`](/zh-CN/docs/Web/API/ValidityState/stepMismatch)       | The value doesn't match the step increment. Increment default is `1`, so only integers are valid on` type="number"` is step is not included. `step="any"` will never throw this error. |
+| [step](#htmlattrdefstep)           | [`validityState.stepMismatch`](/zh-CN/docs/Web/API/ValidityState/stepMismatch)       | The value doesn't match the step increment. Increment default is `1`, so only integers are valid on `type="number"` is step is not included. `step="any"` will never throw this error. |
 | [type](#htmlattrdeftyoe)           | [`validityState.typeMismatch`](/zh-CN/docs/Web/API/ValidityState/typeMismatch)       | Occurs when the value is not of the correct type, for example a email does not contain an `@` or a url doesn't contain a protocol.                                                     |
 
 If a form control doesn't have the required attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `'required'`, and empty string will not lead to an error.

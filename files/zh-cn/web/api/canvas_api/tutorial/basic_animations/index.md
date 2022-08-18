@@ -12,13 +12,13 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 你可以通过以下的步骤来画出一帧：
 
-1.  **清空 canvas**
+1. **清空 canvas**
     除非接下来要画的内容会完全充满 canvas（例如背景图），否则你需要清空所有。最简单的做法就是用 `clearRect` 方法。
-2.  **保存 canvas 状态**
+2. **保存 canvas 状态**
     如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。
-3.  **绘制动画图形（animated shapes）**
+3. **绘制动画图形（animated shapes）**
     这一步才是重绘动画帧。
-4.  **恢复 canvas 状态**
+4. **恢复 canvas 状态**
     如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。
 
 ## 操控动画 Controlling an animation

@@ -59,7 +59,7 @@ If the **type** attribute isn't specified, the media's type is retrieved from th
 
 ## Examples
 
-This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the` audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. See also the list of [media formats supported by the audio and video elements](/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements) in various browsers.
+This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the `audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. See also the list of [media formats supported by the audio and video elements](/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements) in various browsers.
 
 ```html
 <video controls>

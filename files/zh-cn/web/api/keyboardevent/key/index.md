@@ -6,7 +6,7 @@ slug: Web/API/KeyboardEvent/key
 
 只读属性 **`KeyboardEvent.key`** 返回用户按下的物理按键的值。它还与 `shiftKey` 等调节性按键的状态和键盘的区域 / 和布局有关。它的值由以下因素决定：
 
-查看 [所有键值列表](/docs/Web/API/KeyboardEvent/key/Key_Values)
+查看 [所有键值列表](/zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values)
 
 - 如果按下的键拥有可打印的内容，则返回一个非空的 Unicode 字符来代表这个键的可打印内容。
 - 如果按下的键是一个控制键或特殊字符，则返回一个事先定义好的值，见[预定义键值列表](/zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values)。

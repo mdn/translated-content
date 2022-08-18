@@ -4,7 +4,7 @@ slug: Web/HTML/Element/Input/hidden
 ---
 {{HTMLRef}}
 
-**`"hidden"`** 类型的 `{{HTMLElement("input")}}` 元素允许 Web 开发者存放一些用户不可见、不可改的数据，在用户提交表单时，这些数据会一并发送出。比如，正被请求或编辑的内容的 ID，或是一个唯一的安全令牌。这些隐藏的 [`<input>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input)元素在渲染完成的页面中完全不可见，而且没有方法可以使它重新变为可见。
+**`"hidden"`** 类型的 `{{HTMLElement("input")}}` 元素允许 Web 开发者存放一些用户不可见、不可改的数据，在用户提交表单时，这些数据会一并发送出。比如，正被请求或编辑的内容的 ID，或是一个唯一的安全令牌。这些隐藏的 [`<input>`](/zh-CN/docs/Web/HTML/Element/input)元素在渲染完成的页面中完全不可见，而且没有方法可以使它重新变为可见。
 
 > **备注：** 本警告框下面的代码下，就有一个 `<input type="hidden">` 的 live example 可交互示例——如果它正常运作的话，你应当什么也看不到！
 
@@ -39,7 +39,7 @@ slug: Web/HTML/Element/Input/hidden
  </tbody>
 </table>
 
-> **备注：** `{{HTMLElement("input")}}`和[`change`](https://developer.mozilla.org/zh-CN/docs/Web/Events/change)事件不适用于此输入类型。隐藏的输入无法获得焦点， 即使使用 JavaScript 例如 (e.g. `hiddenInput.focus()`)
+> **备注：** `{{HTMLElement("input")}}`和 [`change`](/zh-CN/docs/Web/Events/change) 事件不适用于此输入类型。隐藏的输入无法获得焦点， 即使使用 JavaScript 例如 (e.g. `hiddenInput.focus()`)
 
 ## 属性值
 
@@ -59,7 +59,7 @@ slug: Web/HTML/Element/Input/hidden
 
 这实际上是常见属性之一，但它对于隐藏的 `{{HTMLElement("input")}}` 具有一个特殊含义。一般来说，`{{htmlattrxref("name", "input")}}` 的属性在隐藏 `{{HTMLElement("input")}}` 上的作用和任何其他 `{{HTMLElement("input")}}` 上的一样；但是，在提交表单时， `name` 属性被设置为 `_charset_` 的隐藏 `{{HTMLElement("input")}}`，其值会被自动设置为被提交表单的字符编码。
 
-## 使用隐藏 [`<input>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input)
+## 使用隐藏 `<input>`
 
 如上所述，隐藏的 `{{HTMLElement("input")}}` 可以用于任何有需要提交给服务器的、用户无法查看或编辑的数据的地方。让我们看一些说明其用法的例子吧。
 
@@ -68,9 +68,9 @@ slug: Web/HTML/Element/Input/hidden
 隐藏输入的最常见用途之一是当被编辑的表单提交时，保持跟踪数据库数据的更新。
 典型的工作流程如下所示：
 
-1.  用户决定编辑他们可以控制的某些内容，例如博客文章或产品条目。 他们可以通过按编辑按钮开始。
-2.  要被编辑的内容从数据库中提取并加载到 HTML 表单中，以允许用户进行更改。
-3.  编辑后，用户提交表单，并将更新后的被数据发送回服务器以在数据库中进行更新。
+1. 用户决定编辑他们可以控制的某些内容，例如博客文章或产品条目。 他们可以通过按编辑按钮开始。
+2. 要被编辑的内容从数据库中提取并加载到 HTML 表单中，以允许用户进行更改。
+3. 编辑后，用户提交表单，并将更新后的被数据发送回服务器以在数据库中进行更新。
 
 在这里的步骤 2 思路中，要被更新的 ID 记录保留在隐藏的输入中。 在步骤 3 中提交表单后，该 ID 随记录内容自动发送回服务器。 该 ID 使站点的服务器端组件确切知道哪些记录需要被提交的数据更新的。
 
