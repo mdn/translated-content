@@ -5032,6 +5032,13 @@
       "gn00979905"
     ]
   },
+  "Web/CSS/radial-gradient": {
+    "modified": "2020-11-18T14:43:15.827Z",
+    "contributors": [
+      "chrisdavidmills",
+      "linzging"
+    ]
+  },
   "Web/CSS/ruby-position": {
     "modified": "2020-10-15T21:51:03.131Z",
     "contributors": [
@@ -8274,13 +8281,6 @@
       "jackblackevo",
       "Mgjbot",
       "BobChao"
-    ]
-  },
-  "orphaned/Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:43:15.827Z",
-    "contributors": [
-      "chrisdavidmills",
-      "linzging"
     ]
   },
   "orphaned/Web/Guide/Events": {
