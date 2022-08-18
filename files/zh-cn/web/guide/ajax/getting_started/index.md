@@ -282,4 +282,4 @@ $array = ['userName' => $name, 'computedString' => $computedString];
 echo json_encode($array);
 ```
 
-想获取更多 DOM 方法，可以查看 `Mozilla's DOM implementation 文档。`
+想获取更多 DOM 方法，可以查看 `Mozilla's DOM implementation` 文档。
