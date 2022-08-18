@@ -1,7 +1,6 @@
 ---
 title: MimeType
 slug: Web/API/MimeType
-translation_of: Web/API/MimeType
 ---
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 

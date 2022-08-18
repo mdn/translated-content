@@ -1,10 +1,6 @@
 ---
 title: TextEncoder.prototype.encode()
 slug: Web/API/TextEncoder/encode
-tags:
-  - 文本编码
-  - 编码
-translation_of: Web/API/TextEncoder/encode
 ---
 {{APIRef("Encoding API")}}
 

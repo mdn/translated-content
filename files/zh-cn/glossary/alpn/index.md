@@ -1,10 +1,6 @@
 ---
 title: 应用层协议协商
 slug: Glossary/ALPN
-tags:
-  - ALPN
-  - TLS
-translation_of: Glossary/ALPN
 ---
 **应用层协议协商**（**Application-Layer Protocol Negotiation**，简称**ALPN**）是 {{Glossary("TLS")}} 的一个扩展，故而应用层协议在协商加密协议的过程中，避免了额外的往返通讯开销。
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
-translation_of: Web/API/HTMLFormElement/reportValidity
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,11 +1,6 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
 {{jsSidebar("Functions")}}
 

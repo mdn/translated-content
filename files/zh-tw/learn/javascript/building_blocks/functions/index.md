@@ -1,7 +1,6 @@
 ---
 title: 函數 - 可重複使用的代碼塊
 slug: Learn/JavaScript/Building_blocks/Functions
-translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 

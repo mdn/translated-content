@@ -1,12 +1,6 @@
 ---
 title: JavaScript shells 编程环境
 slug: Web/JavaScript/Shells
-tags:
-  - JavaScript
-  - 工具
-  - 扩展
-  - 指南
-translation_of: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 

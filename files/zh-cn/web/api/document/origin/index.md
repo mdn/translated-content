@@ -1,7 +1,6 @@
 ---
 title: Document.origin
 slug: Web/API/Document/origin
-translation_of: Web/API/Document/origin
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

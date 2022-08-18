@@ -1,11 +1,6 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - Gecko DOM Reference
-  - Property
-translation_of: Web/API/Node/childNodes
-translation_of_original: childNodes
 ---
 {{ APIRef() }}
 

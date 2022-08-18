@@ -1,15 +1,6 @@
 ---
 title: 处理文件
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - 初学者
-  - CodingScripting
-  - 文件
-  - 指南
-  - HTML
-  - 理论
-  - 网站
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 

@@ -1,7 +1,6 @@
 ---
 title: PerformanceTiming.navigationStart
 slug: Web/API/PerformanceTiming/navigationStart
-translation_of: Web/API/PerformanceTiming/navigationStart
 ---
 {{APIRef("Navigation Timing")}}
 

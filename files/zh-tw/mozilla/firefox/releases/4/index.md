@@ -1,7 +1,6 @@
 ---
 title: Firefox 4 技術文件
 slug: Mozilla/Firefox/Releases/4
-translation_of: Mozilla/Firefox/Releases/4
 ---
 {{FirefoxSidebar}}
 

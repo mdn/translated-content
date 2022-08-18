@@ -1,8 +1,6 @@
 ---
 title: Window.ongamepaddisconnected
 slug: Web/API/Window/gamepaddisconnected_event
-translation_of: Web/API/Window/ongamepaddisconnected
-original_slug: Web/API/Window/ongamepaddisconnected
 ---
 {{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 

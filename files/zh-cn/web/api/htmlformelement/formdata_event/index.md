@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onformdata
 slug: Web/API/HTMLFormElement/formdata_event
-translation_of: Web/API/GlobalEventHandlers/onformdata
-original_slug: Web/API/GlobalEventHandlers/onformdata
 ---
 {{ApiRef("HTML DOM")}}
 

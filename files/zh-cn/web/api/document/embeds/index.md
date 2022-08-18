@@ -1,16 +1,6 @@
 ---
 title: document.embeds
 slug: Web/API/Document/embeds
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsContent
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-translation_of: Web/API/Document/embeds
 ---
 {{ ApiRef() }}
 

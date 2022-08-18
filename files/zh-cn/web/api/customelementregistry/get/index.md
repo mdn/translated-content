@@ -1,12 +1,6 @@
 ---
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
-tags:
-  - CustomElementRegistry
-  - Experimental
-  - Web Components
-  - custom elements
-translation_of: Web/API/CustomElementRegistry/get
 ---
 {{APIRef("CustomElementRegistry")}}
 

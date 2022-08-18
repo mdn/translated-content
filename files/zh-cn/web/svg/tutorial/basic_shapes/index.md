@@ -1,10 +1,6 @@
 ---
 title: 基本形状
 slug: Web/SVG/Tutorial/Basic_Shapes
-tags:
-  - SVG
-  - SVG:教程
-translation_of: Web/SVG/Tutorial/Basic_Shapes
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
 

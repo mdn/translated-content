@@ -1,10 +1,6 @@
 ---
 title: SVG 元素参考
 slug: Web/SVG/Element
-tags:
-  - SVG
-  - SVG 参考
-translation_of: Web/SVG/Element
 ---
 « [SVG](/zh-CN/docs/SVG) / [SVG 属性参考](/zh-CN/docs/Web/SVG/Attribute) »
 

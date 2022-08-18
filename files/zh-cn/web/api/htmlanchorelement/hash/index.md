@@ -1,10 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.hash
 slug: Web/API/HTMLAnchorElement/hash
-tags:
-  - HTMLHyperlinkElementUtils.hash
-translation_of: Web/API/HTMLHyperlinkElementUtils/hash
-original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 ---
 {{ APIRef("URLUtils") }}
 

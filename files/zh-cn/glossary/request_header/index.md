@@ -1,10 +1,6 @@
 ---
 title: Request header（请求头）
 slug: Glossary/Request_header
-tags:
-  - HTTP
-  - 术语
-translation_of: Glossary/Request_header
 original_slug: Glossary/请求头
 ---
 **请求头**是 {{glossary("header", "HTTP 头")}}的一种，它可在 HTTP 请求中使用，并且和请求主体无关。某些请求头如 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language", "Accept-*")}}、 {{HTTPHeader("If-Modified-Since", "If-*")}} 允许执行条件请求。某些请求头如：{{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} 和 {{HTTPHeader("Referer")}} 描述了请求本身以确保服务端能返回正确的响应。

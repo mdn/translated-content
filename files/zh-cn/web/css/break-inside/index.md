@@ -1,9 +1,6 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
-tags:
-  - CSS
-translation_of: Web/CSS/break-inside
 ---
 {{CSSRef}}
 

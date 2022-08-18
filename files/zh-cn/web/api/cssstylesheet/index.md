@@ -1,16 +1,6 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-tags:
-  - API
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Interface
-  - Reference
-  - Stylesheets
-  - TopicStub
-translation_of: Web/API/CSSStyleSheet
 ---
 {{ APIRef("CSSOM") }}
 

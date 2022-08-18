@@ -24,12 +24,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 <dl>
  <dt><code>start</code></dt>
- <dd>Index ab welchem das Array geändert werden soll. Falls <code>start</code> größer als die Länge des Arrays ist, wird <code>start</code> auf die Länge des Arrays gesetzt.</dd>
- <dd>Falls <code>start</code> negativ ist, beginnt die Änderung entsprechend viele Stellen rückwärts vom Ende des Arrays (d.h. hat <code>start</code> den Wert -n ist dies gleichbedeutend mit <code>array.length - n</code>) und wird auf 0 gesetzt wenn der absolute Wert von <code>start</code> größer als die Länge des Arrays ist.</dd>
+ <dd>Index ab welchem das Array geändert werden soll. Falls <code>start</code> größer als die Länge des Arrays ist, wird <code>start</code> auf die Länge des Arrays gesetzt. <br/><br/>Falls <code>start</code> negativ ist, beginnt die Änderung entsprechend viele Stellen rückwärts vom Ende des Arrays (d.h. hat <code>start</code> den Wert -n ist dies gleichbedeutend mit <code>array.length - n</code>) und wird auf 0 gesetzt wenn der absolute Wert von <code>start</code> größer als die Länge des Arrays ist.</dd>
  <dt><code>deleteCount</code> {{optional_inline}}</dt>
- <dd>Gibt die Anzahl der zu entfernenden alten Array Elemente an.</dd>
- <dd>Wenn <code>deleteCount</code> weggelassen wird oder wenn der Wert größer oder gleich <code>array.length - start</code> ist (d. h. wenn der Wert größer oder gleich der Anzahl der von <code>start</code> aus verbleibenden Elemente ist), wird das ganze Array ab dem Index <code>start</code> gelöscht.</dd>
- <dd>Wenn <code>deleteCount</code> 0 oder negativ ist, werden keine Elemente entfernt. In diesem Fall sollte man mindestens ein neues Element als weiteren Parameter übergeben, da das Array sonst nicht geändert wird.</dd>
+ <dd>Gibt die Anzahl der zu entfernenden alten Array Elemente an. <br/><br/>Wenn <code>deleteCount</code> weggelassen wird oder wenn der Wert größer oder gleich <code>array.length - start</code> ist (d. h. wenn der Wert größer oder gleich der Anzahl der von <code>start</code> aus verbleibenden Elemente ist), wird das ganze Array ab dem Index <code>start</code> gelöscht. <br/><br/>Wenn <code>deleteCount</code> 0 oder negativ ist, werden keine Elemente entfernt. In diesem Fall sollte man mindestens ein neues Element als weiteren Parameter übergeben, da das Array sonst nicht geändert wird.</dd>
  <dt><code>item1, item2, ...</code> {{optional_inline}}</dt>
  <dd>Die Elemente, die dem Array ab dem Index <code>start</code> hinzugefügt werden sollen. Falls keine Elemente angegeben werden, entfernt <code>splice</code> lediglich Elemente des Arrays.</dd>
 </dl>

@@ -1,10 +1,6 @@
 ---
 title: 可替换元素
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - 参考
-translation_of: Web/CSS/Replaced_element
 ---
 {{CSSRef()}}
 

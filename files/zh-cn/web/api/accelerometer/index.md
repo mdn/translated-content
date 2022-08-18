@@ -1,11 +1,10 @@
 ---
 title: Accelerometer
 slug: Web/API/Accelerometer
-translation_of: Web/API/Accelerometer
 ---
 {{APIRef("Generic Sensor API")}}
 
-The **`Accelerometer`** interface of the [Sensor APIs](/docs/Web/API/Sensor_APIs) provides on each reading the acceleration applied to the device along all three axes.
+The **`Accelerometer`** interface of the [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs) provides on each reading the acceleration applied to the device along all three axes.
 
 To use this sensor, the user must grant permission to the `'accelerometer'`, device sensor through the [`Permissions`](/en-US/docs/Web/API/Permissions) API.
 

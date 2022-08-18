@@ -1,8 +1,6 @@
 ---
 title: window.mozAnimationStartTime
 slug: Web/API/Animation/startTime
-translation_of: Web/API/Window/mozAnimationStartTime
-original_slug: Web/API/Window/mozAnimationStartTIme
 ---
 {{ ApiRef() }}
 
@@ -10,7 +8,7 @@ original_slug: Web/API/Window/mozAnimationStartTIme
 
 ### 概述
 
-Returns the time, in milliseconds since the epoch, at which animations started now should be considered to have started. This value should be used instead of, for example, [`Date.now()`](/zh-cn/JavaScript/Reference/Global_Objects/Date/now), because this value will be the same for all animations started in this window during this refresh interval, allowing them to remain in sync with one another.
+Returns the time, in milliseconds since the epoch, at which animations started now should be considered to have started. This value should be used instead of, for example, [`Date.now()`](/zh-CN/JavaScript/Reference/Global_Objects/Date/now), because this value will be the same for all animations started in this window during this refresh interval, allowing them to remain in sync with one another.
 
 This also allows JavaScript-based animations to remain synchronized with CSS transitions and SMIL animations triggered during the same refresh interval.
 

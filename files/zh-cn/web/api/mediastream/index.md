@@ -1,7 +1,6 @@
 ---
 title: 媒体流 (MediaStream)
 slug: Web/API/MediaStream
-translation_of: Web/API/MediaStream
 ---
 {{APIRef("Media Capture and Streams")}} **`MediaStream`** 接口是一个媒体内容的流.。一个流包含几个*轨道*，比如视频和音频轨道。
 

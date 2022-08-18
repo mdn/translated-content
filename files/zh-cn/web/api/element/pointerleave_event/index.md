@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerleave
 slug: Web/API/Element/pointerleave_event
-translation_of: Web/API/GlobalEventHandlers/onpointerleave
-original_slug: Web/API/GlobalEventHandlers/onpointerleave
 ---
 {{APIRef("HTML DOM")}}
 

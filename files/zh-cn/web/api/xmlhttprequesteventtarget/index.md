@@ -1,12 +1,6 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
-tags:
-  - AJAX
-  - API
-  - XMLHttpRequest
-  - 参考
-translation_of: Web/API/XMLHttpRequestEventTarget
 ---
 {{APIRef("XMLHttpRequest")}}
 

@@ -1,12 +1,6 @@
 ---
 title: 继承性
 slug: Web/CSS/@property/inherits
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

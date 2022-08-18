@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/length
 ---
 {{JSRef}}
 

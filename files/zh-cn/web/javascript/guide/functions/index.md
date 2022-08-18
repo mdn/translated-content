@@ -1,12 +1,6 @@
 ---
 title: 函数
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - JavaScript
-  - 函数
-  - 初学者
-  - 教程
-translation_of: Web/JavaScript/Guide/Functions
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
@@ -143,7 +137,7 @@ function square(n) { return n*n }
 
 函数域是指函数声明时的所在的地方，或者函数在顶层被声明时指整个程序。
 
-> **备注：**注意只有使用如上的语法形式（即 `function funcName(){}`）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。
+> **备注：** 只有使用如上的语法形式（即 `function funcName(){}`）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。
 
 ```js example-bad
 console.log(square); // square is hoisted with an initial value undefined.
@@ -465,7 +459,7 @@ var getCode = (function(){
 getCode();    // Returns the secret code
 ```
 
-> **备注：**尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。
+> **备注：** 尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。
 >
 > ```js
 > var createPet = function(name) {  // Outer function defines a variable called "name"

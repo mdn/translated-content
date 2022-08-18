@@ -1,7 +1,6 @@
 ---
 title: WebGLQuery
 slug: Web/API/WebGLQuery
-translation_of: Web/API/WebGLQuery
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

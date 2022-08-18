@@ -1,7 +1,6 @@
 ---
 title: <blink>
 slug: Web/HTML/Element/blink
-translation_of: Web/HTML/Element/blink
 ---
 {{Deprecated_header}}
 

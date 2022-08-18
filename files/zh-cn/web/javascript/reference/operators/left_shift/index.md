@@ -1,7 +1,6 @@
 ---
 title: 左移 (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
-translation_of: Web/JavaScript/Reference/Operators/Left_shift
 ---
 {{jsSidebar("Operators")}}
 

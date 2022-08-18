@@ -1,7 +1,6 @@
 ---
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
-translation_of: Web/API/MediaQueryList/addListener
 ---
 {{APIRef("CSSOM")}}
 

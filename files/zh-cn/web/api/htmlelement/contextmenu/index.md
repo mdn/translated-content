@@ -1,9 +1,6 @@
 ---
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
-tags:
-  - API
-translation_of: Web/API/HTMLElement/contextMenu
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header()}}
 

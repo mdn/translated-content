@@ -1,12 +1,6 @@
 ---
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
-tags:
-  - 属性
-  - 约束验证 API
-  - HTML
-  - 参考
-translation_of: Web/HTML/Attributes/pattern
 ---
 
 {{HTMLSidebar}}

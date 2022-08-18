@@ -1,13 +1,6 @@
 ---
 title: glyphRef
 slug: Web/SVG/Element/glyphRef
-tags:
-  - SVG
-  - SVG 文本内容
-  - 元素
-  - 参考
-  - 需要示例
-translation_of: Web/SVG/Element/glyphRef
 ---
 {{SVGRef}}
 

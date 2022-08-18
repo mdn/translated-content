@@ -1,7 +1,6 @@
 ---
 title: Window.back()
 slug: Web/API/Window/back
-translation_of: Web/API/Window/back
 ---
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 

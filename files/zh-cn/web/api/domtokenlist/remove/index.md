@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
-translation_of: Web/API/DOMTokenList/remove
 ---
 {{APIRef("DOM")}}
 

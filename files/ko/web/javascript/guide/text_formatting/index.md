@@ -76,10 +76,12 @@ eval(s2); // Returns the string "2 + 2"
 
 문자열 개체는 문자열의 문자 수를 나타내는 하나의 속성, 길이를 갖습니다. 예를 들어, "Hello, World!"가 13자 이므로 다음 코드는 x를 값 13으로 할당합니다. `String` 객체는 문자열에있는 UTF-16 코드 단위의 수를 나타내는 길이가 하나의 속성을 가집니다. 예를 들어, 다음 코드에서는 "Hello, World!"가 UTF-16 코드 단위로 표현되는 13개의 문자를 가지고 있기 때문에 x 값이 13이 됩니다. 배열 브래킷 스타일을 사용하여 각 코드 단위에 액세스 할 수 있습니다. 문자열은 변경 불가능한 배열과 같은 객체이기 때문에 개별 문자를 변경할 수 없습니다.
 
-    var mystring = 'Hello, World!';
-    var x = mystring.length;
-    mystring[0] = 'L'; // This has no effect, because strings are immutable
-    mystring[0]; // This returns "H"
+```js
+var mystring = 'Hello, World!';
+var x = mystring.length;
+mystring[0] = 'L'; // This has no effect, because strings are immutable
+mystring[0]; // This returns "H"
+```
 
 유니 코드 스칼라 값이 U + FFFF (희귀 한 중국어 / 일본어 / 한국어 / 베트남어 문자 및 일부 이모티콘)보다 큰 문자는 각각 서로 다른 두 개의 코드 단위로 UTF-16에 저장됩니다. 예를 들어, 단일 문자 U + 1F600 "Emoji grinning face"를 포함하는 문자열은 길이가 2입니다. 대괄호를 사용하여 이러한 문자열의 개별 코드 단위에 액세스하면 일치하지 않는 대리 코드 단위가있는 문자열이 만들어지는 등의 바람직하지 않은 결과가 발생할 수 있습니다. 유니 코드 표준 위반 MDN 버그 857438이 수정 된 후에 예제가 이 페이지에 추가되어야합니다. {{jsxref ( "String.fromCodePoint ()")}} 또는 {{jsxref ( "String.prototype.codePointAt ()")}}도 참조하십시오.
 

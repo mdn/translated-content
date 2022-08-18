@@ -1,18 +1,12 @@
 ---
 title: 结构化克隆算法
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
-tags:
-  - DOM
-  - HTML5
-  - 结构化克隆算法
-translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
-original_slug: Web/Guide/API/DOM/The_structured_clone_algorithm
 ---
 结构化克隆算法是[由 HTML5 规范定义](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)的用于复制复杂 JavaScript 对象的算法。通过来自 [Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker)的 `postMessage()` 或使用 [IndexedDB](https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
 
 ## 结构化克隆所不能做到的
 
-- [`Error`](/cn/JavaScript/Reference/Global_Objects/Error) 以及 [`Function`](/cn/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
+- [`Error`](/zh-CN/JavaScript/Reference/Global_Objects/Error) 以及 [`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
 - 企图去克隆 DOM 节点同样会抛出 `DATA_CLONE_ERR` 异常。
 - 对象的某些特定参数也不会被保留
 

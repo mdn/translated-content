@@ -1,7 +1,6 @@
 ---
 title: 自定义时间测量 API
 slug: Web/API/User_Timing_API
-translation_of: Web/API/User_Timing_API
 ---
 {{DefaultAPISidebar("自定义时间测量 API")}}
 

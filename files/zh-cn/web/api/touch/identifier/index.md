@@ -1,9 +1,6 @@
 ---
 title: Touch.identifier
 slug: Web/API/Touch/identifier
-tags:
-  - touch
-translation_of: Web/API/Touch/identifier
 ---
 {{ ApiRef() }}
 

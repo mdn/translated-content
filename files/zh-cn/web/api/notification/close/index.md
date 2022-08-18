@@ -1,9 +1,6 @@
 ---
 title: Notification.close()
 slug: Web/API/notification/close
-tags:
-  - Notification.close()
-translation_of: Web/API/Notification/close
 ---
 {{APIRef("Web Notifications")}}
 

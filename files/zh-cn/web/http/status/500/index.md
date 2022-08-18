@@ -1,11 +1,6 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-tags:
-  - HTTP
-  - 服务器端错误
-  - 状态码
-translation_of: Web/HTTP/Status/500
 ---
 {{HTTPSidebar}}
 

@@ -1,9 +1,6 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - XPath
-translation_of: Web/XPath
 ---
 XPath 的意思是 XML 路径语言。它使用的一个非 XML 语法提供一种灵活地定位 [XML](/zh-CN/docs/XML) 文档的不同部分的方法。它同时也可以用于检测文档中某个节点是否与某个模式（pattern）匹配。
 

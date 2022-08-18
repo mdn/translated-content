@@ -1,10 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
 {{jsSidebar("Statements")}}
 
@@ -61,7 +57,7 @@ a + b;
 
 控制台会警告“unreachable code after return statement”。
 
-> **备注：**从 Gecko 40 {{geckoRelease(40)}}开始，如果在一个 return 语句后发现无法访问的代码，控制台将会显示一个警告。
+> **备注：** 从 Gecko 40 {{geckoRelease(40)}}开始，如果在一个 return 语句后发现无法访问的代码，控制台将会显示一个警告。
 
 ## 示例
 

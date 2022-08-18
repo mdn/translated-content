@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.depthMask()
 slug: Web/API/WebGLRenderingContext/depthMask
-translation_of: Web/API/WebGLRenderingContext/depthMask
 ---
 {{APIRef("WebGL")}}
 

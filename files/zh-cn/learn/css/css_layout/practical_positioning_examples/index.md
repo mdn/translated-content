@@ -1,7 +1,6 @@
 ---
 title: 定位实例练习
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
-tags:
-  - API
-  - Selection
-translation_of: Web/API/Selection/rangeCount
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

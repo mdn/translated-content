@@ -1,16 +1,6 @@
 ---
 title: SVGGeometryElement
 slug: Web/API/SVGGeometryElement
-tags:
-  - API
-  - DOM
-  - NeedsExample
-  - NeedsTranslation
-  - Reference
-  - SVG
-  - SVG DOM
-  - TopicStub
-translation_of: Web/API/SVGGeometryElement
 ---
 {{APIRef("SVG")}}
 

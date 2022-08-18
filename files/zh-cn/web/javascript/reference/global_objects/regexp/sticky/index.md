@@ -1,11 +1,6 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-tags:
-  - JavaScript
-  - RegExp
-  - 正则表达式
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
 {{JSRef}}
 

@@ -1,18 +1,6 @@
 ---
 title: Window.dialogArguments
 slug: Web/API/Window/dialogArguments
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/dialogArguments
 ---
 {{ deprecated_header() }}{{APIRef}}
 

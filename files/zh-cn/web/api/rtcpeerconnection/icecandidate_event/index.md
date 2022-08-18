@@ -1,8 +1,6 @@
 ---
 title: 'RTCPeerConnection: icecandidate 事件'
 slug: Web/API/RTCPeerConnection/icecandidate_event
-translation_of: Web/API/RTCPeerConnection/icecandidate_event
-original_slug: Web/Events/icecandidate
 ---
 {{APIRef("WebRTC")}}
 

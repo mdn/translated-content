@@ -1,7 +1,6 @@
 ---
 title: pointer-events
 slug: Web/SVG/Attribute/pointer-events
-translation_of: Web/SVG/Attribute/pointer-events
 ---
 {{SVGRef}}
 

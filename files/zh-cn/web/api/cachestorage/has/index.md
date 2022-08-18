@@ -1,7 +1,6 @@
 ---
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
-translation_of: Web/API/CacheStorage/has
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 

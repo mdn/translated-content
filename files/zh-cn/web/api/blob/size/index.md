@@ -1,7 +1,6 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-translation_of: Web/API/Blob/size
 ---
 {{APIRef("File API")}}
 

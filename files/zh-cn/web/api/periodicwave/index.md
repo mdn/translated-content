@@ -1,7 +1,6 @@
 ---
 title: PeriodicWave
 slug: Web/API/PeriodicWave
-translation_of: Web/API/PeriodicWave
 ---
 {{ APIRef("Web Audio API") }}
 

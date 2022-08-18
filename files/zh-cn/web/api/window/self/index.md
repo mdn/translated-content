@@ -1,7 +1,6 @@
 ---
 title: Window.self
 slug: Web/API/Window/self
-translation_of: Web/API/Window/self
 ---
 {{ APIRef() }}
 

@@ -1,12 +1,6 @@
 ---
 title: 扩展示例
 slug: Mozilla/Add-ons/WebExtensions/Examples
-tags:
-  - firefox extension
-  - firefox 扩展
-  - 扩展案例
-  - 火狐扩展
-translation_of: Mozilla/Add-ons/WebExtensions/Examples
 ---
 {{AddonSidebar}}
 

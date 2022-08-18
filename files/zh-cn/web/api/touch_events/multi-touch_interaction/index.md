@@ -1,7 +1,6 @@
 ---
 title: 多点触控交互
 slug: Web/API/Touch_events/Multi-touch_interaction
-translation_of: Web/API/Touch_events/Multi-touch_interaction
 ---
 {{DefaultAPISidebar("Touch Events")}}
 

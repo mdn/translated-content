@@ -1,8 +1,6 @@
 ---
 title: element.oncopy
 slug: Web/API/HTMLElement/copy_event
-translation_of: Web/API/HTMLElement/oncopy
-original_slug: Web/API/HTMLElement/oncopy
 ---
 {{ ApiRef() }}
 
@@ -54,5 +52,5 @@ _functionRef_ 是一个函数名或者函数表达式。
 
 ### 相关链接
 
-- [`oncut`](/zh-cn/DOM/element.oncut)
-- [`onpaste`](/zh-cn/DOM/element.onpaste)
+- [`oncut`](/zh-CN/DOM/element.oncut)
+- [`onpaste`](/zh-CN/DOM/element.onpaste)

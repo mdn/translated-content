@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.blendEquation()
 slug: Web/API/WebGLRenderingContext/blendEquation
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/blendEquation
 ---
 {{APIRef("WebGL")}}
 

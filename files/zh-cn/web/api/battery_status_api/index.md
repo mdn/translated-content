@@ -1,12 +1,6 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-tags:
-  - API
-  - 电池
-  - 电池 API
-  - 电池状态 API
-translation_of: Web/API/Battery_Status_API
 ---
 {{DefaultAPISidebar("Battery API")}}
 

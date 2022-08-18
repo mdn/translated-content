@@ -1,7 +1,6 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
-translation_of: Web/API/Navigator/mozIsLocallyAvailable
 ---
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
@@ -31,7 +30,7 @@ if (available) {
 
 ### 备注
 
-> **备注：**查询的 URI 和当前页面的 URI 不同域的话，会抛出安全异常。
+> **备注：** 查询的 URI 和当前页面的 URI 不同域的话，会抛出安全异常。
 
 ### 规范
 

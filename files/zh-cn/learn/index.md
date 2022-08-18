@@ -1,19 +1,6 @@
 ---
 title: 学习 Web 开发
 slug: Learn
-tags:
-  - CSS
-  - HTML
-  - Web
-  - 交互式网站
-  - 初学者
-  - 前端
-  - 启程
-  - 学习
-  - 学习 Web 开发
-  - 索引
-  - 网站
-translation_of: Learn
 ---
 {{LearnSidebar}}
 

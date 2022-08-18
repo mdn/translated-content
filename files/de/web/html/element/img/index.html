@@ -42,10 +42,7 @@ translation_of: Web/HTML/Element/img
  <dd>Ausrichtung der Grafik im Verhältnis zu ihrer Umgebung.<br>
  Benutzen Sie stattdessen die CSS-Eigenschaft {{cssxref('vertical-align')}}.</dd>
  <dt>{{htmlattrdef("alt")}}</dt>
- <dd>Text, der vom Browser alternativ statt der Grafik angezeigt werden kann, zum Beispiel falls sie noch nicht heruntergeladen wurde, bei Übertragungsfehlern oder falls sie in keinem <a href="#Supported_image_formats" title="HTML/Element/Img#Supported image formats">unterstützten Format</a> vorliegt. Der Benutzer kann die Grafikdarstellung auch abgeschaltet haben oder einen Browser benutzen, der keine Grafik darstellen kann.</dd>
- <dd>Der Text sollte das von der Grafik Dargestellte kurz und sinnvoll wiedergeben, so dass der Inhalt, den sie transportieren, ersichtlich wird. Ist dies nicht möglich, sollte das Attribut weggelassen werden.</dd>
- <dd>Reine Dekorationselemente sollten hingegen mit einem leeren Attribut (<code>alt=""</code>) eingefügt werden; Alternativtexte wie "Roter Punkt" sind unbedingt zu vermeiden!</dd>
- <dd>
+ <dd>Text, der vom Browser alternativ statt der Grafik angezeigt werden kann, zum Beispiel falls sie noch nicht heruntergeladen wurde, bei Übertragungsfehlern oder falls sie in keinem <a href="#Supported_image_formats" title="HTML/Element/Img#Supported image formats">unterstützten Format</a> vorliegt. Der Benutzer kann die Grafikdarstellung auch abgeschaltet haben oder einen Browser benutzen, der keine Grafik darstellen kann.<br /><br />Der Text sollte das von der Grafik Dargestellte kurz und sinnvoll wiedergeben, so dass der Inhalt, den sie transportieren, ersichtlich wird. Ist dies nicht möglich, sollte das Attribut weggelassen werden.<br /><br />Reine Dekorationselemente sollten hingegen mit einem leeren Attribut (<code>alt=""</code>) eingefügt werden; Alternativtexte wie "Roter Punkt" sind unbedingt zu vermeiden!<br /><br />
  <div class="note">
  <p><strong>Hinweis:</strong> Eine aussagekräftige Beschreibung des Bildes ist vor allem für die Barrierefreiheit von elementarer Bedeutung!<br>
   Dies gilt auch für das leere Attribut <code>alt=""</code>. Browser können die (Ersatz-) Darstellung des img-Elements in diesem Fall ganz überspringen, was merklich der Übersichtlichkeit dient – niemand möchte einen Text vorgelesen bekommen, ständig von nutzlosen Hinweisen wie "Roter Punkt" unterbrochen.</p>
@@ -62,9 +59,7 @@ translation_of: Web/HTML/Element/img
   <dd>Es wird eine CORS-basierte Anfrage durchgeführt, gegebenenfalls mit Benutzerauthentifizierung (Cookies, X.509-Zertifikat, HTTP-Authentifizierung).</dd>
  </dl>
  Hat das Attribut einen ungültigen Wert, wird stattdessen die Einstellung <strong>anonymous</strong> angenommen.<br>
- Fehlt das crossorigin-Attribut, wird die Grafik ohne CORS heruntergeladen (d.h. ohne die HTTP-Kopfzeile {{HTTPHeader('Origin')}}).</dd>
- <dd>Damit das Dokument uneingeschränkt auf die Grafik zugreifen kann (zum Beispiel im {{HTMLElement("canvas")}}-Element), muss der Server zusätzlich mit einer {{HTTPHeader('Access-Control-Allow-Credentials')}}-Angabe antworten, die den Ursprung des Dokuments einschließt.</dd>
- <dd>Weitere Informationen sind im Artikel über <a href="/en-US/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS-Attribute</a> nachzulesen.</dd>
+ Fehlt das crossorigin-Attribut, wird die Grafik ohne CORS heruntergeladen (d.h. ohne die HTTP-Kopfzeile {{HTTPHeader('Origin')}}).<br /><br />Damit das Dokument uneingeschränkt auf die Grafik zugreifen kann (zum Beispiel im {{HTMLElement("canvas")}}-Element), muss der Server zusätzlich mit einer {{HTTPHeader('Access-Control-Allow-Credentials')}}-Angabe antworten, die den Ursprung des Dokuments einschließt.<br /><br />Weitere Informationen sind im Artikel über <a href="/en-US/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS-Attribute</a> nachzulesen.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>Tatsächliche Höhe der Grafik in {{HTMLVersionInline(5)}} CSS-Pixeln, in {{HTMLVersionInline(4)}} Bildschirmpixeln oder als prozentualer Wert.</dd>
  <dt>{{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
@@ -109,8 +104,7 @@ translation_of: Web/HTML/Element/img
  <dd>URL der Grafik. Dieses Attribut ist zwingend erforderlich.<br>
  Browser, die <code>srcset</code> unterstützen, behandeln <code>src</code> als Grafik mit einer Pixeldichte von <code>1x</code>, sofern keine andere Grafik mit dieser Dichte in <code>srcset</code> aufgeführt ist oder falls <code>srcset</code> '<code>w</code>'-Bezeichner enthält.</dd>
  <dt>{{htmlattrdef("srcset")}}{{HTMLVersionInline(5)}}</dt>
- <dd><code>srcset</code> erlaubt das Bereitsstellen derselben Grafik in verschiedenen Versionen für niedrig- und hochauflösende Anzeigegeräte. Letztere profitieren von der höheren Bildqualität -bei größerer Datenmenge-, erstere von der geringeren Datenmenge.</dd>
- <dd><code>srcset</code> enthält mehrere – durch Kommata getrennte – Einträge, jeweils bestehend aus:
+ <dd><code>srcset</code> erlaubt das Bereitsstellen derselben Grafik in verschiedenen Versionen für niedrig- und hochauflösende Anzeigegeräte. Letztere profitieren von der höheren Bildqualität -bei größerer Datenmenge-, erstere von der geringeren Datenmenge.<br /><br /><code>srcset</code> enthält mehrere – durch Kommata getrennte – Einträge, jeweils bestehend aus:
  <ol>
   <li>einer URL,</li>
   <li>optional, Leerzeichen gefolgt von einem Kennwert:

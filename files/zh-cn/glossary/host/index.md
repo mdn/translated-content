@@ -1,12 +1,6 @@
 ---
 title: Host
 slug: Glossary/Host
-tags:
-  - Glossary
-  - Intermediate
-  - Web
-  - WebMechanics
-translation_of: Glossary/Host
 ---
 主机（host）是一种连接到 {{glossary("Internet")}} （或者一个本地网络）的设备。有一些被称作 {{glossary("server","servers")}} （服务器）的主机可以提供额外的服务，如：提供网页、存储文件以及电子邮件。
 

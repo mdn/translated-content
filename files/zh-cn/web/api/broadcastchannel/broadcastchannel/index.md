@@ -1,7 +1,6 @@
 ---
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
-translation_of: Web/API/BroadcastChannel/BroadcastChannel
 ---
 {{APIRef("BroadCastChannel API")}}
 

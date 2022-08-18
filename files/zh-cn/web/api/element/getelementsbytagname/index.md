@@ -1,11 +1,6 @@
 ---
 title: element.getElementsByTagName
 slug: Web/API/Element/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - 节点
-translation_of: Web/API/Element/getElementsByTagName
 ---
 {{ APIRef("DOM") }}
 

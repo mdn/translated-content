@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesis.paused
 slug: Web/API/SpeechSynthesis/paused
-translation_of: Web/API/SpeechSynthesis/paused
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

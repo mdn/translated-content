@@ -1,7 +1,6 @@
 ---
 title: WebGLSync
 slug: Web/API/WebGLSync
-translation_of: Web/API/WebGLSync
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

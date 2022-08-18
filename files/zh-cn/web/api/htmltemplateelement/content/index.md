@@ -1,7 +1,6 @@
 ---
 title: HTMLTemplateElement.content
 slug: Web/API/HTMLTemplateElement/content
-translation_of: Web/API/HTMLTemplateElement/content
 ---
 {{APIRef("Web Components")}}
 

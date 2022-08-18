@@ -1,18 +1,6 @@
 ---
 title: CSS 和 JavaScript 无障碍最佳实践
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - CSS
-  - hiding
-  - unobtursive
-  - 初学者
-  - 对比
-  - 导航
-  - 文章
-  - 无障碍
-  - 编码脚本
-  - 颜色
-translation_of: Learn/Accessibility/CSS_and_JavaScript
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 

@@ -1,11 +1,10 @@
 ---
 title: window.find
 slug: Web/API/Window/find
-translation_of: Web/API/Window/find
 ---
 {{ ApiRef() }}
 
-> **备注：**`window.find()`可能会在未来版本的 Gecko 中被废弃。查看 {{Bug("672395")}}
+> **备注：** `window.find()` 可能会在未来版本的 Gecko 中被废弃。查看 {{Bug("672395")}}
 
 ### 概述
 

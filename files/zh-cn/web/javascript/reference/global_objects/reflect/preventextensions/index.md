@@ -1,7 +1,6 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ---
 {{JSRef}}
 

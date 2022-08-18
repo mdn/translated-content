@@ -1,13 +1,6 @@
 ---
 title: MathMLElement
 slug: Web/API/MathMLElement
-tags:
-  - API
-  - MathML
-  - 元素
-  - 参考
-  - 接口
-translation_of: Web/API/MathMLElement
 ---
 {{APIRef("MathML")}}
 

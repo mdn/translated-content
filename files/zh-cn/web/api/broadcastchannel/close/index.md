@@ -1,7 +1,6 @@
 ---
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
-translation_of: Web/API/BroadcastChannel/close
 ---
 {{APIRef("BroadCastChannel API")}}
 

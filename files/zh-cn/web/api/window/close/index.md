@@ -1,13 +1,6 @@
 ---
 title: Window.close()
 slug: Web/API/Window/close
-tags:
-  - API
-  - DOM
-  - Window
-  - 参考
-  - 方法
-translation_of: Web/API/Window/close
 ---
 {{APIRef}}
 

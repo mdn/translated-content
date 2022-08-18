@@ -1,10 +1,6 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - JavaScript
-  - isFinite
-translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
 {{jsSidebar("Objects")}}
 

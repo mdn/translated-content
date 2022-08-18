@@ -1,7 +1,6 @@
 ---
 title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
-translation_of: Web/API/ResizeObserver/disconnect
 ---
 {{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 

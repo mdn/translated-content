@@ -1,7 +1,6 @@
 ---
 title: Division assignment (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
-translation_of: Web/JavaScript/Reference/Operators/Division_assignment
 ---
 {{jsSidebar("Operators")}}
 

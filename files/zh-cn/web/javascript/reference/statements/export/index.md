@@ -1,13 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - export
-  - 声明
-  - 模块
-translation_of: Web/JavaScript/Reference/Statements/export
 ---
 {{jsSidebar("Statements")}}
 
@@ -127,7 +120,7 @@ export { function1, function2 };
 
 但这里的 `function1` 和 `function2` 在当前模块中变得不可用。
 
-> **备注：**尽管与 import 等效，但以下语法在语法上无效：
+> **备注：** 尽管与 import 等效，但以下语法在语法上无效：
 
 ```js
 import DefaultExport from 'bar.js'; // 有效的

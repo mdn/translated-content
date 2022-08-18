@@ -1,21 +1,6 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-tags:
-  - AJAX
-  - API
-  - XHR
-  - XMLHttpRequest
-  - 加载数据
-  - 参考
-  - 只读
-  - 响应
-  - 属性
-  - 服务器
-  - 获取内容
-  - 获取数据
-  - 读取数据
-translation_of: Web/API/XMLHttpRequest/response
 ---
 {{APIRef('XMLHttpRequest')}}
 

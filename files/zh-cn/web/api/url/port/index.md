@@ -1,7 +1,6 @@
 ---
 title: URL.port
 slug: Web/API/URL/port
-translation_of: Web/API/URL/port
 ---
 {{ApiRef("URL API")}}{{domxref("URL")}} 接口的端口属性是包含了 URL 的端口号信息的{{domxref("USVString")}}值，如果 URL 中不包含明确的端口号，这个属性将为`''`.
 

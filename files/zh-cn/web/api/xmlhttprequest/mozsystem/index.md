@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.mozSystem
 slug: Web/API/XMLHttpRequest/mozSystem
-translation_of: Web/API/XMLHttpRequest/mozSystem
 ---
 {{APIRef('XMLHttpRequest')}}
 

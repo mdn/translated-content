@@ -1,14 +1,6 @@
 ---
 title: feSpotLight
 slug: Web/SVG/Element/feSpotLight
-tags:
-  - SVG
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要内容
-  - 需要示例
-translation_of: Web/SVG/Element/feSpotLight
 ---
 {{SVGRef}}
 

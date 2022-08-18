@@ -1,7 +1,6 @@
 ---
 title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
-translation_of: Web/API/MediaStreamEvent
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

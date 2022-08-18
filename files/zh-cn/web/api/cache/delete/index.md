@@ -1,10 +1,6 @@
 ---
 title: Cache.delete()
 slug: Web/API/Cache/delete
-tags:
-  - API
-  - Cache
-translation_of: Web/API/Cache/delete
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 

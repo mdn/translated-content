@@ -1,7 +1,6 @@
 ---
 title: Element.scrollTopMax
 slug: Web/API/Element/scrollTopMax
-translation_of: Web/API/Element/scrollTopMax
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
 

@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-tags:
-  - JavaScript
-  - 原型
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
 {{JSRef}}
 
@@ -39,7 +33,7 @@ var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
 
 - 数据类型如字符串，数字和布尔（不是{{jsxref("Global_Objects/String", "String")}}，{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：`concat`将字符串和数字的值复制到新数组中。
 
-> **备注：**数组/值在连接时保持不变。此外，对于新数组的任何操作（仅当元素不是对象引用时）都不会对原始数组产生影响，反之亦然。
+> **备注：** 数组/值在连接时保持不变。此外，对于新数组的任何操作（仅当元素不是对象引用时）都不会对原始数组产生影响，反之亦然。
 
 ## 示例
 

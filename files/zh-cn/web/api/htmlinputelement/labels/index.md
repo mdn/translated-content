@@ -1,7 +1,6 @@
 ---
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
-translation_of: Web/API/HTMLInputElement/labels
 ---
 {{APIRef("DOM")}}
 

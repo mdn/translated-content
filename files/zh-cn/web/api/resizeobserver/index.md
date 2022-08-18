@@ -1,7 +1,6 @@
 ---
 title: ResizeObserver
 slug: Web/API/ResizeObserver
-translation_of: Web/API/ResizeObserver
 ---
 {{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 

@@ -1,11 +1,6 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Statement
-  - 语句
-translation_of: Web/JavaScript/Reference/Statements/label
 ---
 {{jsSidebar("Statements")}}
 
@@ -13,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Statements/label
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
-> **备注：**使用标记的循环或语句块非常罕见。通常情况下，可以使用函数调用而不是（基于标记的）循环跳转。
+> **备注：** 使用标记的循环或语句块非常罕见。通常情况下，可以使用函数调用而不是（基于标记的）循环跳转。
 
 ## 语法
 

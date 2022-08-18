@@ -1,7 +1,6 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
-translation_of: Web/API/CustomElementRegistry/whenDefined
 ---
 {{APIRef("CustomElementRegistry")}}
 

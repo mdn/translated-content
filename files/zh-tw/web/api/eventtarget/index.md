@@ -32,7 +32,7 @@ translation_of: Web/API/EventTarget
 
 ### Mozilla chrome code 的額外方法
 
-Mozilla extensions for use by JS-implemented event targets to implement on\* properties. See also [WebIDL bindings](/docs/Mozilla/WebIDL_bindings).
+Mozilla extensions for use by JS-implemented event targets to implement on properties. See also [WebIDL bindings](/docs/Mozilla/WebIDL_bindings).
 
 - void **setEventHandler**(DOMString type, EventHandler handler) {{non-standard_inline}}
 - EventHandler **getEventHandler**(DOMString type) {{non-standard_inline}}

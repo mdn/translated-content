@@ -1,12 +1,6 @@
 ---
 title: CSSRuleList
 slug: Web/API/CSSRuleList
-tags:
-  - API
-  - CSSOM
-  - 参考
-  - 接口
-translation_of: Web/API/CSSRuleList
 ---
 {{ APIRef("CSSOM") }}
 

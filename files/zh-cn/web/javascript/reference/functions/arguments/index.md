@@ -1,13 +1,6 @@
 ---
 title: Arguments 对象
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Functions
-  - JavaScript
-  - Reference
-  - arguments
-  - arguments.length
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
 {{jsSidebar("Functions")}}
 
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 > **备注：** 如果你编写兼容 ES6 的代码，那么优先推荐使用 [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
-> **备注：** “类数组” 意味着 `arguments` 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法， 例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 [§Description](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments$edit#Description).
+> **备注：** “类数组” 意味着 `arguments` 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法， 例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 [§Description](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#Description).
 
 `arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
 
@@ -46,7 +39,7 @@ const args = Array.from(arguments);
 const args = [...arguments];
 ```
 
-> **警告：**对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - [更多信息](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments))。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的`Array`构造函数作为一个函数：
+> **警告：** 对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - [更多信息](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments))。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的`Array`构造函数作为一个函数：
 >
 > ```js
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
@@ -98,7 +91,7 @@ var args = [...arguments];
 - [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : 返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。
 
-> **备注：**在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
+> **备注：** 在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
 
 ## 例子
 

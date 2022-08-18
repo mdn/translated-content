@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - 原型
-  - 参考
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
 {{JSRef}}
 

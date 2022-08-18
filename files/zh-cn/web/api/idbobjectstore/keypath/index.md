@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.keyPath
 slug: Web/API/IDBObjectStore/keyPath
-translation_of: Web/API/IDBObjectStore/keyPath
 ---
 {{ APIRef("IndexedDB") }}
 

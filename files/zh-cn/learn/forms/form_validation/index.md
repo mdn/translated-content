@@ -1,9 +1,6 @@
 ---
 title: 表单数据校验
 slug: Learn/Forms/Form_validation
-tags:
-  - HTML
-translation_of: Learn/Forms/Form_validation
 original_slug: Learn/HTML/Forms/Data_form_validation
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}

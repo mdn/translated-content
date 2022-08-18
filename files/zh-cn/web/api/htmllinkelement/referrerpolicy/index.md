@@ -1,7 +1,6 @@
 ---
 title: HTMLLinkElement.referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
-translation_of: Web/API/HTMLLinkElement/referrerPolicy
 ---
 {{APIRef}}{{SeeCompatTable}}
 

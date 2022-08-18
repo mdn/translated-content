@@ -1,13 +1,6 @@
 ---
 title: RTCStats.id
 slug: Web/API/RTCStats/id
-tags:
-  - RTCStats
-  - WebRTC
-  - id
-  - 属性
-  - 统计信息
-translation_of: Web/API/RTCStats/id
 ---
 {{APIRef("WebRTC")}}
 

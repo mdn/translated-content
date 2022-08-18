@@ -1,7 +1,6 @@
 ---
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 {{JSRef}}
 

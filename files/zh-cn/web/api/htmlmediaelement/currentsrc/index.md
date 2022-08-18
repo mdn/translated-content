@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
-translation_of: Web/API/HTMLMediaElement/currentSrc
 ---
 {{APIRef("HTML DOM")}}
 

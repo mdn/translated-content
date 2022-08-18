@@ -1,7 +1,6 @@
 ---
 title: touchend
 slug: Web/API/Document/touchend_event
-translation_of: Web/API/Document/touchend_event
 ---
 当触点离开触控平面时触发`touchend`事件。
 

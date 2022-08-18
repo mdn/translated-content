@@ -1,13 +1,6 @@
 ---
 title: DeviceMotionEvent.interval
 slug: Web/API/DeviceMotionEvent/interval
-tags:
-  - API
-  - Firefox OS
-  - 传感器
-  - 运动传感器
-  - 需要示例
-translation_of: Web/API/DeviceMotionEvent/interval
 ---
 {{ apiref("Device Orientation Events") }}
 

@@ -1,10 +1,6 @@
 ---
 title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
-tags:
-  - 媒体
-  - 音频
-translation_of: Web/API/AudioContext/AudioContext
 ---
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 

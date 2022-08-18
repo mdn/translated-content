@@ -1,11 +1,6 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - JavaScript
-  - Method
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
 {{JSRef}}
 

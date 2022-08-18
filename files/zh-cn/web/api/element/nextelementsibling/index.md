@@ -1,8 +1,6 @@
 ---
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
-translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
-original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
 {{ ApiRef() }}
 
@@ -99,9 +97,9 @@ if(!("nextElementSibling" in document.documentElement)){
 
 ## 相关链接
 
-- [`nextSibling`](/zh-cn/DOM/Node.nextSibling)
-- [`childElementCount`](/zh-cn/DOM/Element.childElementCount)
-- [`children`](/zh-cn/DOM/Element.children)
-- [`firstElementChild`](/zh-cn/DOM/Element.firstElementChild)
-- [`lastElementChild`](/zh-cn/DOM/Element.lastElementChild)
-- [`previousElementSibling`](/zh-cn/DOM/Element.previousElementSibling)
+- [`nextSibling`](/zh-CN/DOM/Node.nextSibling)
+- [`childElementCount`](/zh-CN/DOM/Element.childElementCount)
+- [`children`](/zh-CN/DOM/Element.children)
+- [`firstElementChild`](/zh-CN/DOM/Element.firstElementChild)
+- [`lastElementChild`](/zh-CN/DOM/Element.lastElementChild)
+- [`previousElementSibling`](/zh-CN/DOM/Element.previousElementSibling)

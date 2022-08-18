@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 {{JSRef("Global_Objects", "Object")}} {{ Non-standard_header }} {{ Deprecated_header }}
 

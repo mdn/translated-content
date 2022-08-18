@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toGMTString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
 {{JSRef("Global_Objects", "Date")}} {{ Deprecated_header() }}
 

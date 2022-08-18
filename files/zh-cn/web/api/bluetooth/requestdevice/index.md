@@ -1,11 +1,6 @@
 ---
 title: Bluetooth.requestDevice()
 slug: Web/API/Bluetooth/requestDevice
-tags:
-  - API
-  - Web 蓝牙
-  - 蓝牙
-translation_of: Web/API/Bluetooth/requestDevice
 ---
 {{APIRef()}}{{SeeCompatTable}}
 

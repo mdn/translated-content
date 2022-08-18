@@ -1,8 +1,6 @@
 ---
 title: AudioContext.state
 slug: Web/API/BaseAudioContext/state
-translation_of: Web/API/BaseAudioContext/state
-original_slug: Web/API/AudioContext/state
 ---
 {{ APIRef("Web Audio API") }}
 

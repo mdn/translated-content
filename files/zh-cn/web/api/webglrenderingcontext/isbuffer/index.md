@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
-translation_of: Web/API/WebGLRenderingContext/isBuffer
 ---
 {{APIRef("WebGL")}}
 

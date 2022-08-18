@@ -1,16 +1,6 @@
 ---
 title: isSecureContext
 slug: Web/API/isSecureContext
-tags:
-  - API
-  - Property
-  - Reference
-  - Window
-  - WindowOrWorkerGlobalContext
-  - Workers
-  - isSecureContext
-translation_of: Web/API/isSecureContext
-original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 ---
 {{APIRef()}}{{SeeCompatTable}}
 

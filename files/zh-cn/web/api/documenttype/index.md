@@ -1,13 +1,6 @@
 ---
 title: DocumentType
 slug: Web/API/DocumentType
-tags:
-  - API
-  - DOM
-  - DocumentType
-  - Interface
-  - 接口
-translation_of: Web/API/DocumentType
 ---
 {{APIRef("DOM")}}
 

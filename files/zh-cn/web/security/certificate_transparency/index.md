@@ -1,7 +1,6 @@
 ---
 title: HTTP Public Key Pinning (HPKP)
 slug: Web/Security/Certificate_Transparency
-translation_of: Web/HTTP/Public_Key_Pinning
 original_slug: Web/HTTP/Public_Key_Pinning
 ---
 HTTP 公钥锁定（HPKP）是一种安全功能，它告诉 Web 客户端将特定加密公钥与某个 Web 服务器相关联，以降低使用伪造证书进行 MITM 攻击的风险。

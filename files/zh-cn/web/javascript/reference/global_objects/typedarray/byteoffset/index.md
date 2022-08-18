@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 ---
 {{JSRef}}
 

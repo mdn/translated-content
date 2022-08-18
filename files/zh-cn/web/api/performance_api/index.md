@@ -1,10 +1,6 @@
 ---
 title: Performance API
 slug: Web/API/Performance_API
-tags:
-  - web 性能
-  - 性能
-translation_of: Web/API/Performance_API
 ---
 {{DefaultAPISidebar("High Resolution Time")}}
 

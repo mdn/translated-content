@@ -1,7 +1,6 @@
 ---
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
-translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 

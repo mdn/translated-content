@@ -1,7 +1,6 @@
 ---
 title: HTMLImageElement.decode()
 slug: Web/API/HTMLImageElement/decode
-translation_of: Web/API/HTMLImageElement/decode
 ---
 {{APIRef("HTML DOM")}}
 

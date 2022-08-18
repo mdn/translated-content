@@ -1,10 +1,6 @@
 ---
 title: Notification.onclose
 slug: Web/API/Notification/close_event
-tags:
-  - Notification.onclose
-translation_of: Web/API/Notification/onclose
-original_slug: Web/API/notification/onclose
 ---
 {{APIRef("Web Notifications")}}
 

@@ -1,7 +1,6 @@
 ---
 title: DOMQuad
 slug: Web/API/DOMQuad
-translation_of: Web/API/DOMQuad
 ---
 {{SeeCompatTable}}{{APIRef("Geometry Interfaces")}}
 

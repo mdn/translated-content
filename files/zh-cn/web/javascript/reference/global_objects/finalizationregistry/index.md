@@ -1,11 +1,6 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-tags:
-  - FinalizationRegistry
-  - GC
-  - 垃圾回收
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 ---
 {{JSRef}}
 

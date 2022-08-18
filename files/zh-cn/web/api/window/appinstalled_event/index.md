@@ -1,8 +1,6 @@
 ---
 title: Window.onappinstalled
 slug: Web/API/Window/appinstalled_event
-translation_of: Web/API/Window/onappinstalled
-original_slug: Web/API/Window/onappinstalled
 ---
 {{APIRef}}
 

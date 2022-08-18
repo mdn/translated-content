@@ -1,7 +1,6 @@
 ---
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
-translation_of: Web/API/DataTransferItemList
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

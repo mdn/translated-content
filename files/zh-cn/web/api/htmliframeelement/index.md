@@ -1,7 +1,6 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
-translation_of: Web/API/HTMLIFrameElement
 ---
 {{APIRef("HTML DOM")}}
 

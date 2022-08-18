@@ -1,7 +1,6 @@
 ---
 title: CanvasGradient
 slug: Web/API/CanvasGradient
-translation_of: Web/API/CanvasGradient
 ---
 {{APIRef("Canvas")}}
 

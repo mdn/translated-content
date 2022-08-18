@@ -1,12 +1,6 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - JavaScript
-  - String
-  - 参考
-  - 字符串
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
 {{JSRef}}
 
@@ -72,7 +66,7 @@ new String(thing)
 | `\u{X}` ... `\u{XXXXXX}` | unicode codepoint {{experimental_inline}} |
 | `\xXX`                   | Latin-1 字符 (x 小写)                              |
 
-> **备注：**和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行 。
+> **备注：** 和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行 。
 
 ### 长字符串
 
@@ -228,4 +222,4 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 - {{domxref("DOMString")}}
 - [`StringView` – a C-like representation of strings based on typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView)
-- [Binary strings](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString/Binary)
+- [Binary strings](/zh-CN/docs/Web/API/DOMString/Binary)

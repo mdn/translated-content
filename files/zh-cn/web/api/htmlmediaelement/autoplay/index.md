@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
-translation_of: Web/API/HTMLMediaElement/autoplay
 ---
 {{APIRef("HTML DOM")}}
 

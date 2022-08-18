@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
-tags:
-  - API
-  - HTML DOM
-  - 属性
-translation_of: Web/API/GlobalEventHandlers/onscroll
-original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
 {{ ApiRef("HTML DOM") }}
 
@@ -22,7 +16,7 @@ element.onscroll = functionReference
 
 functionReference 是一个函数的引用。当该元素滚动时，会执行该函数。
 
-> **备注：**不要将 onscroll 与 {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}混淆。onwheel 是鼠标滚轮旋转， 而 onscroll 处理的是对象内部内容区的滚动事件。
+> **备注：** 不要将 onscroll 与 {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}混淆。onwheel 是鼠标滚轮旋转， 而 onscroll 处理的是对象内部内容区的滚动事件。
 
 ## 示例
 

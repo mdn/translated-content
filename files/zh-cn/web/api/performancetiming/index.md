@@ -1,10 +1,6 @@
 ---
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
-tags:
-  - API
-  - Navi
-translation_of: Web/API/PerformanceTiming
 ---
 {{APIRef("Navigation Timing")}}
 

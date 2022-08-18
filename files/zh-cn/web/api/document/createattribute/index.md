@@ -1,12 +1,6 @@
 ---
 title: document.createAttribute()
 slug: Web/API/Document/createAttribute
-tags:
-  - API
-  - DOM
-  - 参考
-  - 方法
-translation_of: Web/API/Document/createAttribute
 ---
 {{ ApiRef("DOM") }}
 

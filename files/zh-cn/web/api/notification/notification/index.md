@@ -1,9 +1,6 @@
 ---
 title: Notification.Notification()
 slug: Web/API/notification/Notification
-tags:
-  - Notification.Notification()
-translation_of: Web/API/Notification/Notification
 ---
 {{APIRef("Web Notifications")}}
 

@@ -1,13 +1,12 @@
 ---
 title: DOMImplementation.createHTMLDocument
 slug: Web/API/DOMImplementation/createHTMLDocument
-translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
 ### 概述
 
-该方法 (属于[`document.implementation`](/zh-cn/DOM/document.implementation)) 用来创建一个新的 HTML 文档。
+该方法 (属于[`document.implementation`](/zh-CN/DOM/document.implementation)) 用来创建一个新的 HTML 文档。
 
 ### 语法
 

@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-tags:
-  - JavaScript
-  - polyfill
-  - 原型
-  - 参考
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 {{JSRef}}
 
@@ -16,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 
-> **备注：**对于 String 方法，请参阅 {{jsxref("String.prototype.indexOf()")}}。
+> **备注：** 对于 String 方法，请参阅 {{jsxref("String.prototype.indexOf()")}}。
 
 ## 语法
 

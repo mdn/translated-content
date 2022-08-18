@@ -1,7 +1,6 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-translation_of: Web/CSS/animation-iteration-count
 ---
 {{CSSRef}} {{ SeeCompatTable() }}
 

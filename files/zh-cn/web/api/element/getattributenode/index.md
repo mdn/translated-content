@@ -1,10 +1,6 @@
 ---
 title: Element.getAttributeNode()
 slug: Web/API/Element/getAttributeNode
-tags:
-  - API
-  - DOM
-translation_of: Web/API/Element/getAttributeNode
 ---
 {{ APIRef("DOM") }}
 

@@ -115,5 +115,5 @@ p {
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS "Tutorial about CSS animations")
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

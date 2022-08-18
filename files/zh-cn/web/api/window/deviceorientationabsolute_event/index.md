@@ -1,8 +1,6 @@
 ---
 title: Window.ondeviceorientationabsolute
 slug: Web/API/Window/deviceorientationabsolute_event
-translation_of: Web/API/Window/ondeviceorientationabsolute
-original_slug: Web/API/Window/ondeviceorientationabsolute
 ---
 {{ ApiRef() }}{{Non-standard_header}}
 

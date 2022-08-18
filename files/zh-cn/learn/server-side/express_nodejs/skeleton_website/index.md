@@ -1,18 +1,6 @@
 ---
 title: Express 教程 2：创建站点框架
 slug: learn/Server-side/Express_Nodejs/skeleton_website
-tags:
-  - Express
-  - Node
-  - node.js
-  - npm
-  - 入门
-  - 初学者
-  - 学习
-  - 开发环境
-  - 服务器端
-  - 服务器端编程
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 {{LearnSidebar}}
 

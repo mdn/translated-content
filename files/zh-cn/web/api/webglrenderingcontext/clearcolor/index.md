@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
-translation_of: Web/API/WebGLRenderingContext/clearColor
 ---
 {{APIRef("WebGL")}}
 

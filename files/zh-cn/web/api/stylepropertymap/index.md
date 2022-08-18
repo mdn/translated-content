@@ -1,11 +1,6 @@
 ---
 title: StylePropertyMap
 slug: Web/API/StylePropertyMap
-tags:
-  - API
-  - 参考
-  - 接口
-translation_of: Web/API/StylePropertyMap
 ---
 {{APIRef("CSS Typed Object Model API")}} {{SeeCompatTable}}
 

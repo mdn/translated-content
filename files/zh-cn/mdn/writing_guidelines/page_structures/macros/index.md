@@ -1,7 +1,6 @@
 ---
 title: 使用宏
 slug: MDN/Writing_guidelines/Page_structures/Macros
-translation_of: MDN/Writing_guidelines/Page_structures/Macros
 ---
 {{MDNSidebar}}
 

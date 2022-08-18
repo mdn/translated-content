@@ -1,14 +1,6 @@
 ---
 title: 客户端存储
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - IndexedDB
-  - JavaScript
-  - 初学者
-  - 存储
-  - 文章
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 {{LearnSidebar}}
 

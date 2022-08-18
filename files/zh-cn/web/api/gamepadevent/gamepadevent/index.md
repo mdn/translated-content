@@ -1,7 +1,6 @@
 ---
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
-translation_of: Web/API/GamepadEvent/GamepadEvent
 ---
 {{APIRef("Gamepad API")}}
 

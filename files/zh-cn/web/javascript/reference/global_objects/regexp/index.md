@@ -1,19 +1,12 @@
 ---
 title: RegExp(正则表达式)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 {{JSRef}}
 
 **`RegExp`** 对象用于将文本与一个模式匹配。
 
-有关正则表达式的介绍，请阅读 [JavaScript 指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/)中的[正则表达式章节](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
+有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
 
 ## 描述
 
@@ -211,7 +204,7 @@ var url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 ```
 
-> **备注：**使用浏览器内建的[URL API](/en-US/docs/Web/API/URL_API)而非正则表达式来解析 URL 是更好的做法
+> **备注：** 使用浏览器内建的[URL API](/en-US/docs/Web/API/URL_API)而非正则表达式来解析 URL 是更好的做法
 
 ## 规范
 
@@ -223,6 +216,6 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 ## 相关链接
 
-- [JavaScript 指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)一节
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)一节
 - [String.prototype.match()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 - [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)

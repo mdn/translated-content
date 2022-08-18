@@ -1,7 +1,6 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-translation_of: Web/API/Geolocation/clearWatch
 ---
 {{ APIref("Geolocation API") }}
 

@@ -1,15 +1,6 @@
 ---
 title: ':scope'
 slug: Web/CSS/:scope
-tags:
-  - ':scope'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Scoped Elements
-  - Web
-translation_of: Web/CSS/:scope
 ---
 {{CSSRef}}
 

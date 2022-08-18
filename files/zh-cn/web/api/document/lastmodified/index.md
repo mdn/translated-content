@@ -1,7 +1,6 @@
 ---
 title: document.lastModified
 slug: Web/API/Document/lastModified
-translation_of: Web/API/Document/lastModified
 ---
 {{ ApiRef() }}
 

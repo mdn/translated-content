@@ -1,15 +1,6 @@
 ---
 title: Range.getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Range
-  - 域
-  - 方法
-  - 范围
-translation_of: Web/API/Range/getBoundingClientRect
 ---
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 

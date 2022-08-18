@@ -1,16 +1,6 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - gap
-  - recipe:css-property
-translation_of: Web/CSS/gap
 ---
 {{CSSRef}}
 

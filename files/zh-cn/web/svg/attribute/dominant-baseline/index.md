@@ -1,7 +1,6 @@
 ---
 title: dominant-baseline
 slug: Web/SVG/Attribute/dominant-baseline
-translation_of: Web/SVG/Attribute/dominant-baseline
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

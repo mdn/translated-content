@@ -1,13 +1,6 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - JavaScript
-  - Promise
-  - await
-  - 实验性
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
 {{jsSidebar("Operators")}}
 

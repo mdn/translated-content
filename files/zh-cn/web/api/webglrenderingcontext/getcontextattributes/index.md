@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
-translation_of: Web/API/WebGLRenderingContext/getContextAttributes
 ---
 {{APIRef("WebGL")}}
 

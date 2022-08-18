@@ -1,7 +1,6 @@
 ---
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 ---
 {{AddonSidebar()}}
 

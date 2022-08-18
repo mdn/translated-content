@@ -1,16 +1,6 @@
 ---
 title: 迭代器和生成器
 slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Generator
-  - Guide
-  - Intermediate
-  - Iterator
-  - JavaScript
-  - 中级
-  - 生成器
-  - 迭代器
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
@@ -68,7 +58,7 @@ while (!result.done) {
 console.log("Iterated over sequence of size: ", result.value); // 5
 ```
 
-> **备注：**反射性地知道特定对象是否是迭代器是不可能的。 如果您需要这样做，请使用 [Iterables](#Iterables).
+> **备注：** 反射性地知道特定对象是否是迭代器是不可能的。 如果您需要这样做，请使用 [Iterables](#Iterables).
 
 ## 生成器函数
 

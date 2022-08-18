@@ -1,14 +1,6 @@
 ---
 title: '-webkit-border-before'
 slug: Web/CSS/-webkit-border-before
-tags:
-  - '-webkit-border-before'
-  - CSS
-  - CSS:WebKit Extensions
-  - CSS 属性
-  - Reference
-  - 非标准
-translation_of: Web/CSS/-webkit-border-before
 ---
 {{CSSRef}}{{Non-standard_header}}
 

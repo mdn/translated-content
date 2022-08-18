@@ -1,7 +1,6 @@
 ---
 title: ARIA live regions
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 ---
 使用 JavaScript，我们可以动态更改页面的某些部分，而无需重新加载整个页面——例如，可以动态更新搜索结果列表，或者显示不需要用户交互的警告或通知。虽然这些更改对于能够看到页面的用户来说通常是显而易见的，但是对于残疾用户来说，它们可能并不明显。ARIA Live 区域填补了这个空白，并提供了一种以编程方式显现动态内容更改的方法，这种方式可以由残疾辅助技术提供提示。
 

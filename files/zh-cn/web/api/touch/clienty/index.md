@@ -1,7 +1,6 @@
 ---
 title: Touch.clientY
 slug: Web/API/Touch/clientY
-translation_of: Web/API/Touch/clientY
 ---
 {{ ApiRef() }}
 

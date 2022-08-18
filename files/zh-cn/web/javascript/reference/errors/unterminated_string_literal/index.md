@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 {{jsSidebar("Errors")}}
 

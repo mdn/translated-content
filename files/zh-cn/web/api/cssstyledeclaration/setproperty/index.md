@@ -1,7 +1,6 @@
 ---
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
-translation_of: Web/API/CSSStyleDeclaration/setProperty
 ---
 {{ APIRef("CSSOM") }}
 

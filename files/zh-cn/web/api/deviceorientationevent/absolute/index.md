@@ -1,7 +1,6 @@
 ---
 title: DeviceOrientationEvent.absolute
 slug: Web/API/DeviceOrientationEvent/absolute
-translation_of: Web/API/DeviceOrientationEvent/absolute
 ---
 {{ apiref("Device Orientation Events") }}
 

@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Guide/함수
 
 ### 함수 선언
 
-함수 정의(또는 함수 선언)는 다음과 같은 [`함수`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function "function") 키워드로 구성되어 있습니다:
+함수 정의(또는 함수 선언)는 다음과 같은 [`함수`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function) 키워드로 구성되어 있습니다:
 
 - 함수의 이름
 - 괄호 안에서 쉼표로 분리된 함수의 매개변수 목록
@@ -28,7 +28,7 @@ function square(number) {
 }
 ```
 
-함수 `square`은 `number`라는 하나의 매개변수를 가집니다. 이 함수는 인수 (즉, `number`) 자체를 곱하여 반환하는 하나의 문장으로 구성되어 있습니다. [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return "return") 문은 함수에 의해 반환된 값을 지정합니다.
+함수 `square`은 `number`라는 하나의 매개변수를 가집니다. 이 함수는 인수 (즉, `number`) 자체를 곱하여 반환하는 하나의 문장으로 구성되어 있습니다. [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) 문은 함수에 의해 반환된 값을 지정합니다.
 
 ```js
 return number * number;
@@ -113,7 +113,7 @@ if (num == 0){
 
 여기에 기술된 바와 같이 함수를 정의하는것에 더하여 {{jsxref("eval", "eval()")}} 과 같이 런타임에 문자열에서 함수들을 만들기위해 {{jsxref("Function")}} 생성자를 사용할 수 있습니다.
 
-객체내의 한 속성이 함수인 경우 **메서드**라고 합니다. [Working with objects](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects "en-US/docs/JavaScript/Guide/Working with Objects")에서 객체와 방법에 대해 자세히 알아보세요.
+객체내의 한 속성이 함수인 경우 **메서드**라고 합니다. [Working with objects](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects)에서 객체와 방법에 대해 자세히 알아보세요.
 
 ## 함수 호출
 
@@ -145,7 +145,7 @@ square = function (n) {
 }
 ```
 
-함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. `show_props()` 함수([Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties "https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties")에서 정의된)는 인수로 객체를 취하는 함수의 예입니다.
+함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. `show_props()` 함수([Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)에서 정의된)는 인수로 객체를 취하는 함수의 예입니다.
 
 함수는 자신을 호출할 수 있습니다. 예를 들어, 팩토리얼을 재귀적으로 계산하는 함수가 있습니다:
 
@@ -209,9 +209,9 @@ getScore(); // Returns "Chamahk scored 5"
 
 함수는 자신을 참조하고 호출할 수 있습니다. 함수가 자신을 참조하는 방법은 세 가지가 있습니다.
 
-1.  함수의 이름
-2.  [`arguments.callee`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3.  함수를 참조하는 범위 내 변수
+1. 함수의 이름
+2. [`arguments.callee`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+3. 함수를 참조하는 범위 내 변수
 
 예를 들어, 다음 함수의 정의를 고려해보세요.
 
@@ -223,9 +223,9 @@ var foo = function bar() {
 
 함수 본문 내에서 다음은 모두 동일합니다.
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 자신을 호출하는 함수를 *재귀 함수*라고 합니다. 어떤 면에서, 재귀는 루프와 유사합니다. 둘 다 동일한 코드를 여러 번 실행하고, 조건(무한 루프를 방지하거나, 이 경우에는 오히려 무한 재귀하는)을 요구합니다. 예를 들어, 다음 루프는:
 
@@ -360,9 +360,9 @@ A(1); // logs 6 (1 + 2 + 3)
 
 이 예에서, C는 B의 y와 A의 x를 엑세스 합니다. 이 때문에 수행할 수 있습니다:
 
-1.  B는 A를 포함하는 클로저를 형성합니다. 즉, B는 A의 인수와 변수를 엑세스할 수 있습니다.
-2.  C는 B를 포함하는 클로저를 형성합니다.
-3.  B의 클로저는 A를 포함하고, C의 클로저는 A를 포함하기 때문에, C는 B와 A의 인수와 변수를 엑세스할 수 있습니다. 즉, 순서대로 C는 A와 B의 범위를 체이닝합니다.
+1. B는 A를 포함하는 클로저를 형성합니다. 즉, B는 A의 인수와 변수를 엑세스할 수 있습니다.
+2. C는 B를 포함하는 클로저를 형성합니다.
+3. B의 클로저는 A를 포함하고, C의 클로저는 A를 포함하기 때문에, C는 B와 A의 인수와 변수를 엑세스할 수 있습니다. 즉, 순서대로 C는 A와 B의 범위를 체이닝합니다.
 
 그러나 역은 사실이 아닙니다. A는 C에 접근 할 수 없습니다. 왜냐하면 A는 B의 인수와 변수(C는 B변수)에 접근할수 없기 때문입니다. 그래서 C는 B에게만 사적으로 남게됩니다.
 

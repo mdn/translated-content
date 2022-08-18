@@ -1,7 +1,6 @@
 ---
 title: Node.lookupPrefix
 slug: Web/API/Node/lookupPrefix
-translation_of: Web/API/Node/lookupPrefix
 ---
 {{APIRef("DOM")}}
 

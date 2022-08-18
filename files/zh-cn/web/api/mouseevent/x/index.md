@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.x
 slug: Web/API/MouseEvent/x
-translation_of: Web/API/MouseEvent/x
 ---
 {{APIRef}}{{SeeCompatTable}}
 

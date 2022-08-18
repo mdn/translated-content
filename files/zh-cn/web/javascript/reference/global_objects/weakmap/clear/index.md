@@ -1,20 +1,12 @@
 ---
 title: WeakMap.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
-tags:
-  - JavaScript
-  - Method
-  - WeakMap
-  - clear()
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
 {{JSRef}} {{deprecated_header}}
 
 **`clear()`**用来从 `WeakMap` 对象中移除所有元素。但不再是 ECMAScript 和它的实现部分。
 
-> **警告：**Warning:
->
-> ![WeakMap(no clear() any more).png](<https://mdn.mozillademos.org/files/15608/WeakMap(no%20clear()%20any%20more).png>)
+![WeakMap(no clear() any more).png](<https://mdn.mozillademos.org/files/15608/WeakMap(no%20clear()%20any%20more).png>)
 
 ## 语法
 

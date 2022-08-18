@@ -1,7 +1,6 @@
 ---
 title: 'Location: hash'
 slug: Web/API/Location/hash
-translation_of: Web/API/Location/hash
 ---
 {{ APIRef("Location") }}
 

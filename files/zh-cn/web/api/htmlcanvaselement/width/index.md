@@ -1,7 +1,6 @@
 ---
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
-translation_of: Web/API/HTMLCanvasElement/width
 ---
 {{APIRef("Canvas API")}}
 

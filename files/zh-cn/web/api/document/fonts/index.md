@@ -1,7 +1,6 @@
 ---
 title: fonts
 slug: Web/API/Document/fonts
-translation_of: Web/API/Document/fonts
 ---
 {{domxref("Document")}}的 **`fonts`** 属性接口返回文档的 {{domxref("FontFaceSet")}} 接口。
 

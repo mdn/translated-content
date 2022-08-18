@@ -1,7 +1,6 @@
 ---
 title: WebGL2RenderingContext.beginQuery()
 slug: Web/API/WebGL2RenderingContext/beginQuery
-translation_of: Web/API/WebGL2RenderingContext/beginQuery
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

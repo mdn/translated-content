@@ -1,13 +1,6 @@
 ---
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-  - 属性
-translation_of: Web/API/Node/ownerDocument
 ---
 {{ APIRef("DOM")}}
 
@@ -19,7 +12,7 @@ translation_of: Web/API/Node/ownerDocument
 document = node.ownerDocument
 ```
 
-- `document` 是当前元素的 [`document`](https://developer.mozilla.org/zh-CN/docs/DOM/document) 对象，其是当前元素的祖先。
+- `document` 是当前元素的 [`document`](/zh-CN/docs/DOM/document) 对象，其是当前元素的祖先。
 
 ## 例子
 

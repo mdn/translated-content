@@ -1,11 +1,6 @@
 ---
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
-tags:
-  - JavaScript
-  - 已废弃
-  - 日期
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
 {{JSRef}} {{deprecated_header}}
 

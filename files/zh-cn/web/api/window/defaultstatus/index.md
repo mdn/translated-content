@@ -1,10 +1,6 @@
 ---
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
-tags:
-  - HTML DOM 对象
-  - 接口
-translation_of: Web/API/Window/defaultStatus
 ---
 {{deprecated_header}}
 

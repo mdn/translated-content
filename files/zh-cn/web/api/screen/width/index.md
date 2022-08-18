@@ -1,7 +1,6 @@
 ---
 title: Screen.width
 slug: Web/API/Screen/width
-translation_of: Web/API/Screen/width
 ---
 {{APIRef}}
 

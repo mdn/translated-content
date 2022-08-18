@@ -27,7 +27,6 @@ generatorObject.throw(exception)
 - `exception`
   - : 발생시킬 예외입니다. 디버깅을 위해 {{jsxref("Error")}} 인스턴스(`instanceof` {{jsxref("Error")}})로 만드는 것이 유용합니다.
 
-
 ## 반환 값
 
 예외가 [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch)에서 발생하고 제너레이터가 재개하여 더 많은 값을 yield하면 다음 두 가지 속성을 가진 객체를 반환합니다.
@@ -77,7 +76,6 @@ g.throw(new Error('Something went wrong'));
 {{Specifications}}
 
 ## 브라우저 호환성
->>>>>>> aa72b95ba0 (update: sync with en-us on 7/27/22)
 
 {{Compat}}
 

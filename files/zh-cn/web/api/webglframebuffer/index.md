@@ -1,7 +1,6 @@
 ---
 title: WebGLFramebuffer
 slug: Web/API/WebGLFramebuffer
-translation_of: Web/API/WebGLFramebuffer
 ---
 {{APIRef("WebGL")}}
 

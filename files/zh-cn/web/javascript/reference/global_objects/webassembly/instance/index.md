@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Instance
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 {{JSRef}} {{SeeCompatTable}}
 
@@ -17,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 
 ## 构造函数
 
-> **警告：**由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用`Instance()`；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .
+> **警告：** 由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用`Instance()`；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .
 
 ```plain
 var myInstance = new WebAssembly.Instance(module, importObject);

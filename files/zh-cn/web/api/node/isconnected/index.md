@@ -1,15 +1,6 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
-tags:
-  - API
-  - DOM
-  - Node
-  - Property
-  - Reference
-  - 参考
-  - 属性
-translation_of: Web/API/Node/isConnected
 ---
 {{APIRef("DOM")}}
 

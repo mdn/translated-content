@@ -1,7 +1,6 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
-translation_of: Web/CSS/mask-border-mode
 ---
 {{cssref}}{{SeeCompatTable}}
 

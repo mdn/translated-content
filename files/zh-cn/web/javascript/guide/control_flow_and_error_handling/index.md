@@ -1,9 +1,6 @@
 ---
 title: 流程控制与错误处理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
@@ -208,8 +205,8 @@ document.write("Is there anything else you'd like?<br>");
 
 你可以用 `throw` 语句抛出一个异常并且用 `try...catch` 语句捕获处理它。
 
-- [`throw`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#throw_statement)语句
-- [`try...catch`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#try...catch_statement)语句
+- [`throw`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#throw_statement)语句
+- [`try...catch`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#try...catch_statement)语句
 
 ### 异常类型
 
@@ -235,7 +232,7 @@ throw true;       // Boolean type
 throw {toString: function() { return "I'm an object!"; } };
 ```
 
-> **备注：**你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
+> **备注：** 你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
 
 ```js
 // Create an object type UserException

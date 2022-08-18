@@ -1,16 +1,6 @@
 ---
 title: 类
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - ECMAScript 2015
-  - Học
-  - JavaScript
-  - 中级
-  - 构造函数
-  - 类
-  - 继承
-  - 高阶类
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 
@@ -69,7 +59,7 @@ console.log(Rectangle.name);
 // 输出: "Rectangle2"
 ```
 
-> **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes$edit#Class_declarations)部分中提到的类型提升的限制。
+> **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes#Class_declarations)部分中提到的类型提升的限制。
 
 ## 类体和方法定义
 
@@ -77,7 +67,7 @@ console.log(Rectangle.name);
 
 ### 严格模式
 
-类声明和类表达式的主体都执行在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。
+类声明和类表达式的主体都执行在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。
 
 ### 构造函数
 
@@ -213,7 +203,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 ### 字段声明
 
-> **警告：**公共和私有字段声明是 JavaScript 标准委员会[TC39](https://tc39.es/)提出的[实验性功能（第 3 阶段）](https://github.com/tc39/proposal-class-fields)。浏览器中的支持是有限的，但是可以通过[Babel](https://babeljs.io/)等系统构建后使用此功能。
+> **警告：** 公共和私有字段声明是 JavaScript 标准委员会[TC39](https://tc39.es/)提出的[实验性功能（第 3 阶段）](https://github.com/tc39/proposal-class-fields)。浏览器中的支持是有限的，但是可以通过[Babel](https://babeljs.io/)等系统构建后使用此功能。
 
 #### 公有字段声明
 
@@ -253,7 +243,7 @@ class Rectangle {
 
 从类外部引用私有字段是错误的。它们只能在类里面中读取或写入。通过定义在类外部不可见的内容，可以确保类的用户不会依赖于内部，因为内部可能在不同版本之间发生变化。
 
-> **备注：**私有字段仅能在字段声明中预先定义。
+> **备注：** 私有字段仅能在字段声明中预先定义。
 
 私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。
 

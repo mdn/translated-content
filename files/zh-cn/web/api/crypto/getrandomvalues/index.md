@@ -1,15 +1,6 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-tags:
-  - API
-  - 加密
-  - 参考
-  - 安全
-  - 密码学
-  - 方法
-translation_of: Web/API/Crypto/getRandomValues
-original_slug: Web/API/RandomSource/getRandomValues
 ---
 {{APIRef("Web Crypto API")}}
 

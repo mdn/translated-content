@@ -1,10 +1,6 @@
 ---
 title: parseInt
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - JavaScript
-  - parseInt()
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 {{jsSidebar("Objects")}}
 
@@ -64,7 +60,7 @@ parseInt('123', 5) // 将'123'看作 5 进制数，返回十进制数 38 => 1*5^
 
 要将一个数字转换为特定的 `radix` 中的字符串字段，请使用 `thatNumber.toString(radix)` 函数。
 
-> **警告：**{{jsxref("BigInt")}}。警告：`parseInt` 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。
+> **警告：** {{jsxref("BigInt")}}。警告：`parseInt` 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。
 
 ## 示例
 

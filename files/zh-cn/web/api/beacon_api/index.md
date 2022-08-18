@@ -1,15 +1,6 @@
 ---
 title: Beacon API
 slug: Web/API/Beacon_API
-tags:
-  - SDK
-  - user behavior tracker
-  - user tracker
-  - 同步请求
-  - 埋点
-  - 数据分析
-  - 规范
-translation_of: Web/API/Beacon_API
 ---
 {{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}
 
@@ -17,8 +8,7 @@ translation_of: Web/API/Beacon_API
 
 Beacon API 的示例用例是记录活动并向服务器发送分析数据。
 
-本文档中描述的接口的示例代码包含在[使用信标 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API
-)中。
+本文档中描述的接口的示例代码包含在[使用信标 API](/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API) 中。
 
 ## 为什么是信标？
 

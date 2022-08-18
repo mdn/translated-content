@@ -1,13 +1,6 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
-tags:
-  - API
-  - DOM
-  - Document
-  - 参考
-  - 方法
-translation_of: Web/API/Document/createTextNode
 ---
 {{APIRef("DOM")}}
 

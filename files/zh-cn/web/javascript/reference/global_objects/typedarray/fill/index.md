@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 ---
 {{JSRef}}
 

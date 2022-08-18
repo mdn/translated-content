@@ -1,15 +1,6 @@
 ---
 title: DeviceAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
-tags:
-  - API
-  - 传感器
-  - 实验性
-  - 接口
-  - 需要示例
-translation_of: Web/API/DeviceMotionEventAcceleration
-translation_of_original: Web/API/DeviceAcceleration
-original_slug: Web/API/DeviceAcceleration
 ---
 {{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 

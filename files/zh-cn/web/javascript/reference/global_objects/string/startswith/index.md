@@ -1,15 +1,6 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - JavaScript
-  - Prototype
-  - String
-  - 原型
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
 {{JSRef}}
 

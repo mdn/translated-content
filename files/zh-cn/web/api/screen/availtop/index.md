@@ -1,7 +1,6 @@
 ---
 title: Screen.availTop
 slug: Web/API/Screen/availTop
-translation_of: Web/API/Screen/availTop
 ---
 {{ ApiRef() }}
 

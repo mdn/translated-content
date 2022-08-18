@@ -1,20 +1,6 @@
 ---
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
-tags:
-  - API
-  - Interface
-  - Media
-  - NeedsTranslation
-  - RTCTrackEvent
-  - Reference
-  - TopicStub
-  - WebRTC
-  - WebRTC API
-  - events
-  - rtc
-  - track
-translation_of: Web/API/RTCTrackEvent
 ---
 {{APIRef("WebRTC")}}
 

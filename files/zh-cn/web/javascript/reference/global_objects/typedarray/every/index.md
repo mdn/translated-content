@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 ---
 {{JSRef}}
 

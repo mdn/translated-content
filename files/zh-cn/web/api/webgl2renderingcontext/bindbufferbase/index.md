@@ -1,14 +1,6 @@
 ---
 title: WebGL2RenderingContext.bindBufferBase()
 slug: Web/API/WebGL2RenderingContext/bindBufferBase
-tags:
-  - API
-  - WebGL
-  - WebGL2
-  - 参考
-  - 实验性
-  - 方法
-translation_of: Web/API/WebGL2RenderingContext/bindBufferBase
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

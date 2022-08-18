@@ -1,7 +1,6 @@
 ---
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
-translation_of: Web/API/Navigator/vibrate
 ---
 {{APIRef("HTML DOM")}}
 

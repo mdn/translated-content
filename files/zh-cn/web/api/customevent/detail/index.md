@@ -1,7 +1,6 @@
 ---
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
-translation_of: Web/API/CustomEvent/detail
 ---
 {{APIRef("DOM")}}
 

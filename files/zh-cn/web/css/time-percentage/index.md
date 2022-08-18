@@ -1,11 +1,6 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/time-percentage
-tags:
-  - 值
-  - 单位
-  - 层叠样式表
-translation_of: Web/CSS/time-percentage
 ---
 {{CSSRef}}
 

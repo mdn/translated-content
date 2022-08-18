@@ -1,13 +1,6 @@
 ---
 title: Window.stop()
 slug: Web/API/Window/stop
-tags:
-  - API
-  - DOM
-  - Window
-  - 参考
-  - 方法
-translation_of: Web/API/Window/stop
 ---
 {{APIRef}}
 

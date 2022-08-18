@@ -346,7 +346,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <pre>DOMString getAllResponseHeaders();</pre>
 
-<p>Liefert alle Antwort-Header als String, oder <code>null</code> falls keine Antwort empfangen wurde.<strong> </strong></p>
+<p>Liefert alle Antwort-Header als String, oder <code>null</code> falls keine Antwort empfangen wurde. </p>
 
 <p><strong>Anmerkung:</strong> Für mehrteilige Anfragen gibt dies die Header des <em>aktuellen </em>Teils der Anfrage zurück, nicht die des ursprünglichen Kanals.</p>
 
@@ -509,12 +509,12 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 <h2 id="Anmerkungen_2">Anmerkungen</h2>
 
 <ul>
- <li class="note">Standardmässig begrenzt Firefox 3 die Anzahl gleichzeitiger <code>XMLHttpRequest</code> Verbindungen pro Server auf 6 (frühere Versionen begrenzen dies auf 2 pro Server). Manche interaktiven Websites können eine <code>XMLHttpRequest</code> Verbindung offen halten, so dass das Öffnen mehrerer Sitzungen auf solchen Sites dazu führen kann, dass der Browser auf eine Art und Weise hängen bleibt, dass das Fenster nicht mehr neu gezeichnet wird und Steuerelemente nicht mehr reagieren. Dieser Wert lässt sich ändern durch Editieren der Voreinstellung <code>network.http.max-persistent-connections-per-server</code> in <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
- <li class="note">Ab Gecko 7 werden Header, die durch <a href="#setrequestheader">setRequestHeader</a> gesetzt wurden, mit der Anfrage mitgeschickt, wenn einer Umleitung gefolgt wird. Zuvor wurden diese Header nicht gesendet.</li>
- <li class="note"><code>XMLHttpRequest</code> ist in Gecko implementiert mittels der <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, und <code>nsIJSXMLHttpRequest</code> Schnittstellen.</li>
+ <li>Standardmässig begrenzt Firefox 3 die Anzahl gleichzeitiger <code>XMLHttpRequest</code> Verbindungen pro Server auf 6 (frühere Versionen begrenzen dies auf 2 pro Server). Manche interaktiven Websites können eine <code>XMLHttpRequest</code> Verbindung offen halten, so dass das Öffnen mehrerer Sitzungen auf solchen Sites dazu führen kann, dass der Browser auf eine Art und Weise hängen bleibt, dass das Fenster nicht mehr neu gezeichnet wird und Steuerelemente nicht mehr reagieren. Dieser Wert lässt sich ändern durch Editieren der Voreinstellung <code>network.http.max-persistent-connections-per-server</code> in <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
+ <li>Ab Gecko 7 werden Header, die durch <a href="#setrequestheader">setRequestHeader</a> gesetzt wurden, mit der Anfrage mitgeschickt, wenn einer Umleitung gefolgt wird. Zuvor wurden diese Header nicht gesendet.</li>
+ <li><code>XMLHttpRequest</code> ist in Gecko implementiert mittels der <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, und <code>nsIJSXMLHttpRequest</code> Schnittstellen.</li>
 </ul>
 
-<h4 class="note" id="Events">Events</h4>
+<h4>Events</h4>
 
 <p><code>onreadystatechange</code> als eine Eigenschaft der <code>XMLHttpRequest</code> Instanz wird von allen Browsern unterstützt.</p>
 

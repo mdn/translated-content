@@ -1,7 +1,6 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
-translation_of: Web/API/Document/queryCommandSupported
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

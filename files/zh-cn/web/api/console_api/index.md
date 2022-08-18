@@ -1,7 +1,6 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-translation_of: Web/API/Console_API
 ---
 {{DefaultAPISidebar("Console API")}}
 

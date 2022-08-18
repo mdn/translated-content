@@ -1,13 +1,6 @@
 ---
 title: LockedFile
 slug: Web/API/IDBFileHandle
-tags:
-  - API
-  - 文件
-  - 文件操作
-  - 锁定
-translation_of: Web/API/LockedFile
-original_slug: Web/API/LockedFile
 ---
 {{APIRef("File System API")}} {{non-standard_header}}
 

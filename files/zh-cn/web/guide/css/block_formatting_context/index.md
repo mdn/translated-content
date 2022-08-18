@@ -1,12 +1,6 @@
 ---
 title: 块格式化上下文
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - BFC
-  - Block Formatting Context
-  - CSS
-  - 块格式化上下文
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
 {{ CSSRef }}
 
@@ -156,7 +150,7 @@ section {
 
 {{EmbedLiveSample("排除外部浮动", 200, 330)}}
 
-在示例中，我们不需要设置右侧 `div` 元素的宽度（为 `inline-block` 设置 `width: <percentage>`）。
+与 `inline-block` 需要设置 `width: <percentage>` 不同的是，在示例中，我们不需要设置右侧 `div` 元素的宽度
 
 请注意，flexbox 是在现代 CSS 中实现多列布局的更有效的方法。
 

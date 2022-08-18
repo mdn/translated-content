@@ -1,14 +1,6 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - 元素
-  - 参考
-translation_of: Web/HTML/Element/hr
 ---
 
 {{HTMLRef}}

@@ -1,12 +1,6 @@
 ---
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
-tags:
-  - API
-  - DOM
-  - 参考
-  - 接口
-translation_of: Web/API/HTMLLIElement
 ---
 {{APIRef("HTML DOM")}}
 

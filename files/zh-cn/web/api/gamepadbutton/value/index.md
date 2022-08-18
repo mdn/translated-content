@@ -1,7 +1,6 @@
 ---
 title: GamepadButton.value
 slug: Web/API/GamepadButton/value
-translation_of: Web/API/GamepadButton/value
 ---
 {{APIRef("Gamepad API")}}
 

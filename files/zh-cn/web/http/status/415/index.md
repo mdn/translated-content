@@ -1,12 +1,6 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
-tags:
-  - 响应状态码
-  - 响应码
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/415
 ---
 {{HTTPSidebar}}
 

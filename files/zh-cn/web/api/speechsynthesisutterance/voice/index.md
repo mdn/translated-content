@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisUtterance.voice
 slug: Web/API/SpeechSynthesisUtterance/voice
-translation_of: Web/API/SpeechSynthesisUtterance/voice
 ---
 {{APIRef("Web Speech API")}}
 

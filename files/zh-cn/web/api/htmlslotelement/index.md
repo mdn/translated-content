@@ -1,7 +1,6 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
-translation_of: Web/API/HTMLSlotElement
 ---
 {{SeeCompatTable}}{{APIRef('Web Components')}}
 

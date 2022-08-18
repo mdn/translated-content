@@ -1,7 +1,6 @@
 ---
 title: Using the aria-labelledby attribute
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 ---
 ### **描述**
 

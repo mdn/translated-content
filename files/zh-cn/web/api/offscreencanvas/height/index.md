@@ -1,7 +1,6 @@
 ---
 title: OffscreenCanvas.height
 slug: Web/API/OffscreenCanvas/height
-translation_of: Web/API/OffscreenCanvas/height
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

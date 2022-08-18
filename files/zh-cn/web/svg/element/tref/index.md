@@ -1,13 +1,6 @@
 ---
 title: tref
 slug: Web/SVG/Element/tref
-tags:
-  - SVG
-  - SVG 文本内容
-  - 元素
-  - 参考
-  - 需要兼容性表
-translation_of: Web/SVG/Element/tref
 ---
 {{SVGRef}}
 

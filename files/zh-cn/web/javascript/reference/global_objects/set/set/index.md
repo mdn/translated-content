@@ -1,12 +1,6 @@
 ---
 title: Set() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 {{JSRef}}
 

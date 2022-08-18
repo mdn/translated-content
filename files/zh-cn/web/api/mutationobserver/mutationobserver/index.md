@@ -1,14 +1,6 @@
 ---
 title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
-tags:
-  - API
-  - Constructor
-  - DOM
-  - MutationObserver
-  - 参考
-  - 构造器
-translation_of: Web/API/MutationObserver/MutationObserver
 ---
 {{APIRef("DOM WHATWG")}}
 

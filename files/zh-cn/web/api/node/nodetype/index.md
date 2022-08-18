@@ -1,13 +1,6 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-  - Reference
-translation_of: Web/API/Node/nodeType
 ---
 {{APIRef("DOM")}}
 

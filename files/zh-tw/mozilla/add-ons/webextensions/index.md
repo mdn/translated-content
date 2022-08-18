@@ -1,10 +1,6 @@
 ---
 title: 瀏覽器擴充功能
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 {{AddonSidebar}}
 

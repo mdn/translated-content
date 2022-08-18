@@ -63,7 +63,7 @@ Au-delà des concepts de base, CSS dispose de techniques de conception avancées
 ### Mise en page
 
 - [Utiliser les boîtes flexibles CSS (_flexbox_)](/fr/docs/Web/Guide/CSS/Flexible_boxes)
-- [Utiliser une structure CSS avec plusieurs colonnes](/fr/docs/Web/CSS/Colonnes_CSS3 "/en-US/docs/Web/Guide/CSS/Using_multi-column_layouts")
+- [Utiliser une structure CSS avec plusieurs colonnes](/fr/docs/Web/CSS/Colonnes_CSS3)
 - [Utiliser les contenus générés par CSS](/fr/docs/CSS/Premiers_pas/Contenu)
 
 ## Voir aussi

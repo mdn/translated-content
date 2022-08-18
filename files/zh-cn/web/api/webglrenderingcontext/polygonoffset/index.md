@@ -1,8 +1,6 @@
 ---
 title: WebGLRenderingContext.polygonOffset()
 slug: Web/API/WebGLRenderingContext/polygonOffset
-translation_of: Web/API/WebGLRenderingContext/polygonOffset
-original_slug: Web/API/WebGLRenderingContext/多边形偏移 (polygonOffset)
 ---
 {{APIRef("WebGL")}}
 

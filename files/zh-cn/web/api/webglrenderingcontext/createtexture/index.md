@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.createTexture()
 slug: Web/API/WebGLRenderingContext/createTexture
-translation_of: Web/API/WebGLRenderingContext/createTexture
 ---
 {{APIRef("WebGL")}}
 

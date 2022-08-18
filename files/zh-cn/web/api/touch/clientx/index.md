@@ -1,9 +1,6 @@
 ---
 title: Touch.clientX
 slug: Web/API/Touch/clientX
-tags:
-  - touch
-translation_of: Web/API/Touch/clientX
 ---
 {{ ApiRef() }}
 

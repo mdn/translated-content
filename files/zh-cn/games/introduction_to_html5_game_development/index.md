@@ -1,10 +1,6 @@
 ---
 title: HTML5 游戏开发简介
 slug: Games/Introduction_to_HTML5_Game_Development
-tags:
-  - Games
-  - HTML5
-translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 ---
 {{GamesSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: Animation.finish()
 slug: Web/API/Animation/finish
-tags:
-  - API
-  - Animation
-  - Finish
-  - Interface
-  - Methos
-  - Web Animations
-translation_of: Web/API/Animation/finish
 ---
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 

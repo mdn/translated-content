@@ -1,11 +1,6 @@
 ---
 title: 使用 aria-label 属性
 slug: Web/Accessibility/ARIA/Attributes/aria-label
-tags:
-  - ARIA
-  - 参考
-  - 可访问性
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
 aria-label 属性用来给当前元素加上的标签描述，接受字符串作为参数。是用不可视的方式给元素加 label（如果被描述元素存在真实的描述元素，可使用 [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性作为来绑定描述元素和被描述元素来代替）。
 

@@ -3,9 +3,10 @@ title: 値の定義構文
 slug: Web/CSS/Value_definition_syntax
 tags:
   - CSS
-  - ガイド
-  - リファレンス
+  - Guide
+  - Reference
   - Syntax
+spec-urls: https://drafts.csswg.org/css-values/#value-defs
 translation_of: Web/CSS/Value_definition_syntax
 ---
 {{CSSRef}}
@@ -380,12 +381,25 @@ bold smaller#
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                     | 備考                         |
-| -------------------------------------------------------------------------------- | ------------------------ | ---------------------------- |
-| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}            | {{Spec2("CSS3 Values")}} | ハッシュ記号乗算子を追加     |
-| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}       | {{Spec2("CSS2.1")}}      | 二重アンパサンド結合子を追加 |
-| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}        | 初回定義                     |
+{{Specifications}}
 
 ## 関連情報
 
-- {{CSS_key_concepts}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

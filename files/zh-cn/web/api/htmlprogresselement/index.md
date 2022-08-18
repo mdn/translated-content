@@ -1,7 +1,6 @@
 ---
 title: HTMLProgressElement
 slug: Web/API/HTMLProgressElement
-translation_of: Web/API/HTMLProgressElement
 ---
 {{ APIRef("HTML DOM") }}
 

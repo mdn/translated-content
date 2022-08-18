@@ -1,13 +1,6 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Fetch
-  - 属性
-  - 证书
-  - 请求
-translation_of: Web/API/Request/credentials
 ---
 {{APIRef("Fetch")}}
 

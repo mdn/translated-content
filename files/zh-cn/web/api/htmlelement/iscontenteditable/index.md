@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
-translation_of: Web/API/HTMLElement/isContentEditable
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -26,4 +25,4 @@ editable = element.isContentEditable
 ## 相关链接
 
 - {{domxref("HTMLElement.contentEditable")}}
-- 全局属性 [contenteditable](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
+- 全局属性 [contenteditable](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)

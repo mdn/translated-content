@@ -1,7 +1,6 @@
 ---
 title: 'Location: search'
 slug: Web/API/Location/search
-translation_of: Web/API/Location/search
 ---
 {{ApiRef("Location")}}
 

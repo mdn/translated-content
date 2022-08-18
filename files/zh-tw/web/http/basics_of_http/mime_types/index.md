@@ -9,11 +9,11 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 {{HTTPSidebar}}
 
-**媒體類別(多用途網際網路郵件擴展**或是**MIME 類別**)是一種表示文件、檔案或各式位元組的標準。它被定義並規範在 IETF 的 {{RFC(6838)}}**。**
+**媒體類別**(多用途網際網路郵件擴展或是**MIME 類別**)是一種表示文件、檔案或各式位元組的標準。它被定義並規範在 IETF 的 {{RFC(6838)}}。
 
 [國際網路號碼分配局(IANA)](https://www.iana.org/) 負責所有官方的 MIME 類別，你可以從他們的 [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) 頁面找到最新且完整的類別清單。
 
-> **警告：** **重要:** 瀏覽器會採用 MIME 類別， _而非副檔名_ ，來判定如何對 URL 進行處理。所以伺服器要在回應的{{HTTPHeader("Content-Type")}}裡放入正確的 MIME 類別，否則瀏覽器很有可能轉譯錯誤或是無法正常運作，造成下載的檔案無法被正常處理。
+> **警告：** 瀏覽器會採用 MIME 類別，_而非副檔名_，來判定如何對 URL 進行處理。所以伺服器要在回應的{{HTTPHeader("Content-Type")}}裡放入正確的 MIME 類別，否則瀏覽器很有可能轉譯錯誤或是無法正常運作，造成下載的檔案無法被正常處理。
 
 ## MIME 類別的結構
 
@@ -23,7 +23,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 type/subtype
 ```
 
-_\*\*主類別(\_type)_**\_代表廣泛性的分類，譬如`video` 或 `text`。**_子類別_**(**_subtype)_\*\* 則定義該資料精確的 MIME 類別。例如 MIME 類別為`text`, 子類可能會是 `plain` (純文字), `html` ({{Glossary("HTML")}} 源碼), 或`calendar` (iCalendar/`.ics`) 檔案。
+**_主類別(type)_** 代表廣泛性的分類，譬如`video` 或 `text`。**_子類別_**(_subtype_) 則定義該資料精確的 MIME 類別。例如 MIME 類別為`text`, 子類可能會是 `plain` (純文字), `html` ({{Glossary("HTML")}} 源碼), 或`calendar` (iCalendar/`.ics`) 檔案。
 
 每一種主類別都可能有一組自己的子類別，MIME 類別永遠都有主類別和子類別，從來不會只有單一個。
 
@@ -87,7 +87,7 @@ There are two multipart types:
 
 文字檔案的預設類別。就算是未知的文字檔案，瀏覽器都先假設他們是可以被呈現於畫面的。
 
-> **備註：** 注意 `text/plain` 不代表"任何一種文字檔案"。例如從用於表示 CSS 檔案的{{HTMLElement("link")}}元素載了一個 `text/plain` 檔案，瀏覽器不會識別該檔案為一個有效的 CSS 檔案。CSS 的 MIME 類別必須要使用 `text/css`。
+> **備註：** `text/plain` 不代表"任何一種文字檔案"。例如從用於表示 CSS 檔案的{{HTMLElement("link")}}元素載了一個 `text/plain` 檔案，瀏覽器不會識別該檔案為一個有效的 CSS 檔案。CSS 的 MIME 類別必須要使用 `text/css`。
 
 ### text/css
 

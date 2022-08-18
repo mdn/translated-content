@@ -1,14 +1,6 @@
 ---
 title: SVG
 slug: Web/SVG
-tags:
-  - 2D 图形
-  - SVG
-  - Web
-  - 参考
-  - 响应式网页设计
-  - 矢量图形
-translation_of: Web/SVG
 ---
 {{SVGRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: EventSource()
 slug: Web/API/EventSource/EventSource
-tags:
-  - API
-  - EventSource
-  - Server-sent events
-translation_of: Web/API/EventSource/EventSource
-original_slug: Server-sent_events/EventSource/EventSource
 ---
 {{APIRef('WebSockets API')}}
 
@@ -46,7 +40,7 @@ evtSource.onmessage = function(e) {
 }
 ```
 
-> **备注：**你可以在 GitHub 查看完整示例 — 请查看 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **备注：** 你可以在 GitHub 查看完整示例 — 请查看 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## 规范
 

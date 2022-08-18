@@ -1,13 +1,6 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-tags:
-  - Class
-  - ECMAScript6
-  - JavaScript
-  - set
-  - 全局对象
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
 {{ JSRef }}
 

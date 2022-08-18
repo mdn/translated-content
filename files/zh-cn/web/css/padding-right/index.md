@@ -1,11 +1,6 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-tags:
-  - CSS
-  - CSS 内边距
-  - CSS 属性
-translation_of: Web/CSS/padding-right
 ---
 {{CSSRef}}
 

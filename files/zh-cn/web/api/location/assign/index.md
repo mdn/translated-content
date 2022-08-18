@@ -1,14 +1,6 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - Location
-  - 参考
-  - 导航
-  - 方法
-  - 跳转
-translation_of: Web/API/Location/assign
 ---
 {{ APIRef("HTML DOM") }}
 

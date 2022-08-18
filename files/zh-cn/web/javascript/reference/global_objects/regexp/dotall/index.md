@@ -1,11 +1,6 @@
 ---
 title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-tags:
-  - JavaScript
-  - 修饰符
-  - 正则表达式
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 ---
 {{JSRef}}
 

@@ -1,19 +1,12 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-tags:
-  - JavaScript
-  - Math
-  - Math.random()
-  - Method
-  - 随机数
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 {{JSRef}}**`Math.random()`** 函数返回一个浮点数， 伪随机数在范围从**0 到**小于**1**，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
-> **备注：**`Math.random()` *不能*提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用 Web Crypto API 来代替，和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法。
+> **备注：** `Math.random()` *不能*提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用 Web Crypto API 来代替，和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法。
 
 ## 语法
 
@@ -59,7 +52,7 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **备注：**也许很容易想到用 `Math.round()` 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
+> **备注：** 也许很容易想到用 `Math.round()` 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
 
 ### 得到一个两数之间的随机整数，包括两个数在内
 

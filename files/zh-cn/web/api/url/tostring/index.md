@@ -1,13 +1,6 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
-tags:
-  - API
-  - URL
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/API/URL/toString
 ---
 {{ApiRef("URL API")}}
 

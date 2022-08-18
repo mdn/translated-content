@@ -1,12 +1,6 @@
 ---
 title: Blob.stream()
 slug: Web/API/Blob/stream
-tags:
-  - API
-  - Blob
-  - stream
-  - 文件读写
-translation_of: Web/API/Blob/stream
 ---
 {{APIRef("File API")}}
 

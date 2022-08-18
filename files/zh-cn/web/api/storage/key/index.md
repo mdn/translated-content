@@ -1,7 +1,6 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-translation_of: Web/API/Storage/key
 ---
 {{APIRef()}}
 

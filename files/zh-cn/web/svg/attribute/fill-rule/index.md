@@ -1,13 +1,6 @@
 ---
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
-tags:
-  - SVG
-  - SVG 属性
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Attribute/fill-rule
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

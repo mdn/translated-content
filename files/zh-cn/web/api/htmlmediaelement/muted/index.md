@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
-translation_of: Web/API/HTMLMediaElement/muted
 ---
 {{APIRef("HTML DOM")}}
 

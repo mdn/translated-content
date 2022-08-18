@@ -1,7 +1,6 @@
 ---
 title: 学习和获得帮助
 slug: Learn/Learning_and_getting_help
-translation_of: Learn/Learning_and_getting_help
 ---
 {{learnsidebar}}/p>
 

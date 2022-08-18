@@ -1,10 +1,6 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
-tags:
-  - 响应状态码
-  - 客户端错误
-translation_of: Web/HTTP/Status/408
 ---
 {{HTTPSidebar}}
 

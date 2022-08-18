@@ -1,7 +1,6 @@
 ---
 title: overflow
 slug: Web/SVG/Attribute/overflow
-translation_of: Web/SVG/Attribute/overflow
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

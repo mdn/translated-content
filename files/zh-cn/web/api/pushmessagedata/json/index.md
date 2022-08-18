@@ -1,9 +1,6 @@
 ---
 title: PushMessageData.json()
 slug: Web/API/PushMessageData/json
-tags:
-  - PushMessageData.json()
-translation_of: Web/API/PushMessageData/json
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 

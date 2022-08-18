@@ -1,7 +1,6 @@
 ---
 title: Web performance basics
 slug: learn/Performance/Web_Performance_Basics
-translation_of: Learn/Performance/Web_Performance_Basics
 ---
 有很多的[理由](https://developers.google.com/web/fundamentals/performance/why-performance-matters/)告诉你为什么你的网站需要尽可能好的性能。下面是关于最佳实践，工具，API 以及链接的简明介绍，它为每个主题提供了更多的信息。意识到对用户来说什么是真正重要的也至关重要，他可能不是绝对意义上的时间而是[用户感知的时间](/en-US/docs/Learn/Performance/perceived_performance)。
 

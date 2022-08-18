@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.ondragleave
 slug: Web/API/HTMLElement/dragleave_event
-translation_of: Web/API/GlobalEventHandlers/ondragleave
-original_slug: Web/API/GlobalEventHandlers/ondragleave
 ---
 {{ApiRef("HTML DOM")}}
 

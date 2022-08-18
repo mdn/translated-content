@@ -1,7 +1,6 @@
 ---
 title: Selection.focusNode
 slug: Web/API/Selection/focusNode
-translation_of: Web/API/Selection/focusNode
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

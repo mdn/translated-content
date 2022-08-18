@@ -1,15 +1,6 @@
 ---
 title: 收尾工作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-tags:
-  - Canvas
-  - JavaScript
-  - requestAnimationFrame
-  - 入门
-  - 教程
-  - 游戏
-  - 生命
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/收尾工作
 ---
 {{GamesSidebar}}

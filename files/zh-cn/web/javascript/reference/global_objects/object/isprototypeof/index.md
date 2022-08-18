@@ -1,21 +1,12 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - JavaScript
-  - Object
-  - Prototype
-  - isPrototypeOf()
-  - 原型
-  - 对象
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
 {{JSRef}}
 
 **`isPrototypeOf()`** 方法用于测试一个对象是否存在于另一个对象的原型链上。
 
-> **备注：**`isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "`object instanceof AFunction`"中，`object` 的原型链是针对 `AFunction.prototype` 进行检查的，而不是针对 `AFunction` 本身。
+> **备注：** `isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "`object instanceof AFunction`"中，`object` 的原型链是针对 `AFunction.prototype` 进行检查的，而不是针对 `AFunction` 本身。
 
 ## 语法
 

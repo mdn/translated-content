@@ -1,15 +1,6 @@
 ---
 title: Console.timeLog()
 slug: Web/API/Console/timeLog
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
-translation_of: Web/API/Console/timeLog
 ---
 {{APIRef("Console API")}}在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
 

@@ -1,7 +1,6 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
 {{JSRef}}
 

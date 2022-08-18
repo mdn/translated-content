@@ -1,15 +1,6 @@
 ---
 title: Element.append()
 slug: Web/API/Element/append
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-translation_of: Web/API/Element/append
-browser-compat: api.Element.append
 ---
 {{APIRef("DOM")}}**`Element.append`** 方法在 `Element`的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。与 {{domxref("Node.appendChild()")}} 的差异：
 

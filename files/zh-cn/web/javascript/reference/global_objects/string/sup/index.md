@@ -1,9 +1,6 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - String.prototype.sup()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
 {{JSRef}} {{deprecated_header}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
-translation_of: Web/API/WebGLRenderingContext/linkProgram
 ---
 {{APIRef("WebGL")}}
 {{domxref("WebGLRenderingContext")}} 接口的**linkProgram()**方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。

@@ -1,15 +1,12 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
-tags:
-  - defaultView
-translation_of: Web/API/Document/defaultView
 ---
 {{ ApiRef() }}
 
 ### 概述
 
-在浏览器中，该属性返回当前 `document` 对象所关联的 [`window`](/zh-cn/DOM/window) 对象，如果没有，会返回 `null`。
+在浏览器中，该属性返回当前 `document` 对象所关联的 [`window`](/zh-CN/DOM/window) 对象，如果没有，会返回 `null`。
 
 ### 语法
 
@@ -25,6 +22,6 @@ var win = document.defaultView;
 
 ### 规范
 
-- [HTML5: defaultView](/zh-cn/HTML/HTML5)
+- [HTML5: defaultView](/zh-CN/HTML/HTML5)
 - [DOM Level 2 Views: defaultView](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
 - [DOM Level 3 Views](http://www.w3.org/TR/DOM-Level-3-Views/) (Only developed to Working Group Note and not implemented)

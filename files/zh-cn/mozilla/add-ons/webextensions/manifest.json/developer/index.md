@@ -1,9 +1,6 @@
 ---
 title: developer
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
-tags:
-  - Developer
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 ---
 {{AddonSidebar}}
 

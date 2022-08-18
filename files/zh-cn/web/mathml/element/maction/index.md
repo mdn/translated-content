@@ -1,7 +1,6 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
-translation_of: Web/MathML/Element/maction
 ---
 {{MathMLRef}}
 

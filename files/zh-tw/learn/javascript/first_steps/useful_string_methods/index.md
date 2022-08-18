@@ -1,7 +1,6 @@
 ---
 title: 有用的字符串方法
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Range.cloneRange()
 slug: Web/API/Range/cloneRange
-translation_of: Web/API/Range/cloneRange
 ---
 {{ APIRef("DOM") }}
 

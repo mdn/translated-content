@@ -1,7 +1,6 @@
 ---
 title: Selection.type
 slug: Web/API/Selection/type
-translation_of: Web/API/Selection/type
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

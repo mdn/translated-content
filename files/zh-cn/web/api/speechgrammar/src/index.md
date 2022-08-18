@@ -1,17 +1,6 @@
 ---
 title: SpeechGrammar.src
 slug: Web/API/SpeechGrammar/src
-tags:
-  - API
-  - SpeechGrammar
-  - Web Speech API
-  - src
-  - 实验性
-  - 属性
-  - 引用
-  - 识别
-  - 语音
-translation_of: Web/API/SpeechGrammar/src
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

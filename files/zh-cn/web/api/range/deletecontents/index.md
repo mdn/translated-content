@@ -1,12 +1,6 @@
 ---
 title: Range.deleteContents()
 slug: Web/API/Range/deleteContents
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-translation_of: Web/API/Range/deleteContents
 ---
 {{ApiRef("DOM")}}
 

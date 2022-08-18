@@ -1,15 +1,6 @@
 ---
 title: Element.before()
 slug: Web/API/Element/before
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
-translation_of: Web/API/Element/before
-original_slug: Web/API/ChildNode/before
-browser-compat: api.Element.before
 ---
 {{APIRef("DOM")}} {{SeeCompatTable}}
 

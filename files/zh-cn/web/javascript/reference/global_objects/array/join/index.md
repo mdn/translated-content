@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - Array.prototype.join()
-  - join()
-  - separator
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
 {{JSRef}}
 
@@ -33,7 +27,7 @@ arr.join([separator])
 
 所有的数组元素被转换成字符串，再用一个分隔符将这些字符串连接起来。
 
-> **警告：**如果一个元素为 `undefined` 或 `null`，它会被转换为空字符串。
+> **警告：** 如果一个元素为 `undefined` 或 `null`，它会被转换为空字符串。
 
 ## 示例
 

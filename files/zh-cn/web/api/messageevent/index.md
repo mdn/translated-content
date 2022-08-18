@@ -1,14 +1,6 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
-tags:
-  - API
-  - MessageEvent
-  - WebRTC
-  - Websockets API
-  - 参考
-  - 接口
-translation_of: Web/API/MessageEvent
 ---
 {{APIRef("HTML DOM")}}
 
@@ -53,7 +45,7 @@ _继承其父类 {{domxref("Event")}} 的属性。_
 _继承父类 {{domxref("Event")}} 的方法。_
 
 - {{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}
-  - : … **不要再使用**: 使用 {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}。
+  - : **不要再使用**: 使用 {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}。
 
 ## 示例
 

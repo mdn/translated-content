@@ -1,7 +1,6 @@
 ---
 title: 表单控件兼容性列表
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 ---
 {{learnsidebar}}
 

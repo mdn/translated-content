@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Classes
 {{JsSidebar("Classes")}}
 
 類別 (class) 是在 ECMAScript 6 中引入，用來作為建立新物件的模板。它能將程式碼封裝起來便於處理。
-類別基於基於原型（prototype），但在語法和定義上，與 ES5 的類類別（class-like）有所不同。
+類別基於原型（prototype），但在語法和定義上，與 ES5 的類類別（class-like）有所不同。
 
 ## 定義類別
 

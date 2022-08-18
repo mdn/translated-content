@@ -1,17 +1,6 @@
 ---
 title: Console.profile()
 slug: Web/API/Console/profile
-tags:
-  - API
-  - DOM
-  - Web 开发
-  - web 控制台
-  - 参考
-  - 描述信息
-  - 方法
-  - 调试
-  - 非标准
-translation_of: Web/API/Console/profile
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 

@@ -1,7 +1,6 @@
 ---
 title: DragEvent.dataTransfer
 slug: Web/API/DragEvent/dataTransfer
-translation_of: Web/API/DragEvent/dataTransfer
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

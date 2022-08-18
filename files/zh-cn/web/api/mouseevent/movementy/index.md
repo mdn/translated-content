@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
-translation_of: Web/API/MouseEvent/movementY
 ---
 {{APIRef("DOM Events")}}
 

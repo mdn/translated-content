@@ -1,11 +1,6 @@
 ---
 title: MouseEvent.y
 slug: Web/API/MouseEvent/y
-tags:
-  - API
-  - 只读属性
-  - 鼠标事件
-translation_of: Web/API/MouseEvent/y
 ---
 {{APIRef}}{{SeeCompatTable}}
 

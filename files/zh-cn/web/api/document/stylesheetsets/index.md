@@ -1,9 +1,6 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
-tags:
-  - Document.styleSheetSets
-translation_of: Web/API/Document/styleSheetSets
 ---
 {{APIRef("DOM")}}
 

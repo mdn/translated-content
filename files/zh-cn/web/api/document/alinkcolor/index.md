@@ -1,16 +1,6 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-translation_of: Web/API/Document/alinkColor
 ---
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 

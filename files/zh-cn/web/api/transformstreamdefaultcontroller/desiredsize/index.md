@@ -1,14 +1,6 @@
 ---
 title: TransformStreamDefaultController.desiredSize
 slug: Web/API/TransformStreamDefaultController/desiredSize
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - desiredSize
-  - TransformStreamDefaultController
-translation_of: Web/api/TransformStreamDefaultController/desiredSize
 ---
 {{DefaultAPISidebar("Streams API")}}
 

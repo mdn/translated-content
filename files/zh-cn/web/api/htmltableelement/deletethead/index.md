@@ -1,11 +1,6 @@
 ---
 title: HTMLTableElement.deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
-tags:
-  - API
-  - table
-  - 参考
-translation_of: Web/API/HTMLTableElement/deleteTHead
 ---
 {{APIRef("HTML DOM")}}
 

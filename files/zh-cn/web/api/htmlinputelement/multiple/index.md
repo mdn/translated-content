@@ -1,7 +1,6 @@
 ---
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
-translation_of: Web/API/HTMLInputElement/multiple
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -1,7 +1,6 @@
 ---
 title: MDN 10 週年
 slug: MDN/At_ten
-translation_of: MDN_at_ten
 original_slug: MDN_at_ten
 ---
 慶祝文件化網頁 10 年.

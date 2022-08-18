@@ -1,7 +1,6 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
-translation_of: Web/CSS/perspective-origin
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: DOMException.code
 slug: Web/API/DOMException/code
-translation_of: Web/API/DOMException/code
 ---
 {{ APIRef("DOM") }}
 

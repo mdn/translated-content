@@ -1,13 +1,6 @@
 ---
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - 参考
-  - 方法
-translation_of: Web/API/HTMLSelectElement/add
 ---
 {{APIRef("HTML DOM")}}
 

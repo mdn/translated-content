@@ -1,9 +1,6 @@
 ---
 title: KeyboardEvent.repeat
 slug: Web/API/KeyboardEvent/repeat
-tags:
-  - KeyboardEvent
-translation_of: Web/API/KeyboardEvent/repeat
 ---
 {{APIRef("DOM Events")}}
 

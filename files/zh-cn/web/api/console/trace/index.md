@@ -1,11 +1,10 @@
 ---
 title: console.trace
 slug: Web/API/Console/trace
-translation_of: Web/API/Console/trace
 ---
 {{APIRef("Console API")}}
 
-{{domxref("console")}} 的 **`trace()` 方法**向 [Web 控制台](/zh-cn/Tools/Web_Console) 输出一个堆栈跟踪。
+{{domxref("console")}} 的 **`trace()` 方法**向 [Web 控制台](/zh-CN/Tools/Web_Console) 输出一个堆栈跟踪。
 
 {{AvailableInWorkers}}
 

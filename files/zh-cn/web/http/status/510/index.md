@@ -1,11 +1,6 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/510
 ---
 {{HTTPSidebar}}
 

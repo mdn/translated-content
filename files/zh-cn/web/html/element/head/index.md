@@ -1,14 +1,6 @@
 ---
 title: <head>
 slug: Web/HTML/Element/head
-tags:
-  - HTML
-  - HTML 文档元数据
-  - Web
-  - head
-  - 元素
-  - 参考
-translation_of: Web/HTML/Element/head
 ---
 ## 概述
 
@@ -21,7 +13,7 @@ translation_of: Web/HTML/Element/head
 
 ## 属性
 
-该元素包含[全局属性](https://developer.mozilla.org/zh-CN/docs/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - {{htmlattrdef("profile")}} {{Deprecated_Inline}}
   - : 一个由空格分隔的 URL 列表，这些 URL 包含着有关页面的配置信息。

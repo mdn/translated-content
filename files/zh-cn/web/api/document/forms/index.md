@@ -1,9 +1,6 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-tags:
-  - Document.forms
-translation_of: Web/API/Document/forms
 ---
 {{APIRef("DOM")}}
 
@@ -57,4 +54,4 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## 相关链接
 
-- [DOM:form](/zh-cn/DOM/HTMLFormElement)
+- [DOM:form](/zh-CN/DOM/HTMLFormElement)

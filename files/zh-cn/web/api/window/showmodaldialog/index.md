@@ -1,7 +1,6 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
-translation_of: Web/API/Window/showModalDialog
 ---
 {{ deprecated_header() }}{{APIRef}}
 
@@ -30,7 +29,7 @@ returnVal = window.showModalDialog(uri[, arguments][, options]);
 | `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | If this argument's value is `on`, `yes`, or 1, the dialog window can be resized by the user; otherwise its size is fixed. The default value is `no`. |
 | `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | If this argument's value is `on`, `yes`, or 1, the dialog window has scroll bars; otherwise its size is fixed. The default value is `no`.            |
 
-> **备注：**Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
+> **备注：** Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
 
 ## Compatibility
 

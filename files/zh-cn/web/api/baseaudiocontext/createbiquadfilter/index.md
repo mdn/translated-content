@@ -1,15 +1,6 @@
 ---
 title: AudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
-tags:
-  - API
-  - EQ
-  - Web Audio API
-  - 参考
-  - 方法
-  - 滤波器
-translation_of: Web/API/BaseAudioContext/createBiquadFilter
-original_slug: Web/API/AudioContext/createBiquadFilter
 ---
 {{ APIRef("Web Audio API") }}
 

@@ -1,13 +1,6 @@
 ---
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
-tags:
-  - API
-  - Web Speech API
-  - isFinal
-  - 语音
-  - 语音识别
-translation_of: Web/API/SpeechRecognitionResult/isFinal
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 

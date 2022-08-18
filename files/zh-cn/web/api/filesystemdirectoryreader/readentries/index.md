@@ -1,7 +1,6 @@
 ---
 title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
-translation_of: Web/API/FileSystemDirectoryReader/readEntries
 ---
 {{APIRef("File System API")}}
 

@@ -1,15 +1,6 @@
 ---
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
-tags:
-  - API
-  - DOM
-  - MutationObserver
-  - Node
-  - 参考
-  - 变化
-  - 方法
-translation_of: Web/API/MutationObserver/observe
 ---
 {{APIRef("DOM WHATWG")}}
 

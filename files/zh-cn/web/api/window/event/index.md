@@ -1,13 +1,6 @@
 ---
 title: Window.event
 slug: Web/API/Window/event
-tags:
-  - API
-  - DOM
-  - Window
-  - 事件
-  - 方法
-translation_of: Web/API/Window/event
 ---
 {{APIRef}}
 

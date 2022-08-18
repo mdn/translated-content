@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
-translation_of: Web/API/HTMLMediaElement/load
 ---
 {{APIRef("HTML DOM")}}
 

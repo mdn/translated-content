@@ -1,13 +1,6 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-tags:
-  - API
-  - DOM
-  - Event
-  - Property
-  - Read-only
-translation_of: Web/API/Event/currentTarget
 ---
 {{APIRef("DOM")}}
 

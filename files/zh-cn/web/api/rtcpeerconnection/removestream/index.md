@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
-translation_of: Web/API/RTCPeerConnection/removeStream
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

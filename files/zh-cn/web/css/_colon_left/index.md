@@ -1,11 +1,6 @@
 ---
 title: ':left'
 slug: Web/CSS/:left
-tags:
-  - '@page'
-  - CSS
-  - Pseudo-class
-translation_of: Web/CSS/:left
 ---
 {{ CSSRef() }}
 

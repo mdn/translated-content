@@ -1,14 +1,6 @@
 ---
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
-tags:
-  - API
-  - Experimental
-  - Interface
-  - SpeechSynthesis
-  - Web Speech API
-  - speech
-translation_of: Web/API/SpeechSynthesis
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

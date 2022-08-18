@@ -1,7 +1,6 @@
 ---
 title: OffscreenCanvas.transferToImageBitmap()
 slug: Web/API/OffscreenCanvas/transferToImageBitmap
-translation_of: Web/API/OffscreenCanvas/transferToImageBitmap
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
