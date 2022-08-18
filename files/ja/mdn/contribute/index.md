@@ -6,6 +6,8 @@ tags:
   - Landing
   - MDN Meta
 translation_of: MDN/Contribute
+l10n:
+  sourceCommit: b5b22824e0c66855c55b9e4d275890aa3bec9483
 ---
 {{MDNSidebar}}
 
