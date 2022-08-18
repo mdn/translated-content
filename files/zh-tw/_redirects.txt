@@ -835,7 +835,7 @@
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures
 /zh-TW/docs/Web/JavaScript/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /zh-TW/docs/Web/Reference	/zh-TW/docs/orphaned/Web/Reference
-/zh-TW/docs/Web/Reference/API	/zh-TW/docs/orphaned/Web/Reference/API
+/zh-TW/docs/Web/Reference/API	/zh-TW/docs/Web/API
 /zh-TW/docs/Web/Reference/Events	/zh-TW/docs/Web/Events
 /zh-TW/docs/Web/Reference/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Web/Reference/Events/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
