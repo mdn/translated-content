@@ -2,6 +2,8 @@
 title: 网格布局中的盒模型对齐
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
+{{CSSRef}}
+
 如果你熟悉 [flex 布局方式](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)，那么你应该已经学习过如何在 flex 容器中对 flex 项目恰当对齐的方法了。这些对齐属性最初出现在 flex 布局方式中，后来被移到了一个新的被称为“[盒模型对齐 Level 3](https://drafts.csswg.org/css-align/)”的规范中，这个规范详细约定了在不同的布局方式下如何处理对齐问题。
 
 每种布局方式对盒模型对齐规范的实现都有一些差异，因为实际情况是每种方式都有各自的特点以及历史包袱，不能期望在所有的实现方式中都有完全一致的对齐表现。盒模型对齐规范对每种布局方式下的实现都有详细描述，不过如果你在各种布局方式下尝试过后可能会感到失望，因为浏览器对它还没有足够支持，好在浏览器已经支持网格布局下的对齐和空间分配了。本文将演示它是如何工作的，你会发现很多属性和值与 flex 布局中的用法是类似的，由于网格布局是二维的，flex 布局是一维的，所以你也会发现它们有一些小区别。我们就从处理网格对齐时用到的两条轴线开始吧。
@@ -621,53 +623,3 @@ slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 上面所有的例子都是工作在英语这样一种从左到右的语言环境下，这意味着当从物理方向观察时，网格的起始线是在从左上开始的。
 
 CSS 网格布局和盒模型对齐规范是为了解决 CSS 中的书写模式而设计的，这意味着，如果你用一种从右到左的语言工作，比如阿拉伯语，那网格的起始线就应该是从右上开始，此时 justify-content: start 也将使网格轨道从网格的右侧开始。为 `margin-right` 和 `margin-left` 设置自动外边距，或者使用绝对位置如 ` top，``right，``bottom ` 和 `left` 来设置偏移量对书写模式来说并不是一种友好的表达方式。在下一篇文章中，我们会深入讨论 CSS 网格布局、盒模型对齐和书写模式之间的关系，理解这些原理，对于开发用多种语言显示的网站，或者设计混合了多种语言和书写模式的页面将大有益处。
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4. **指南**
-
-    1. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS 网格布局和可及性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [使用网格实现常见布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5. **属性**
-
-    1. [grid](/zh-CN/docs/Web/CSS/grid)
-    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
-    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
-
-6. **词汇**
-
-    1. [Grid](/zh-CN/docs/Glossary/Grid)
-    2. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    5. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    6. [Gutters](/zh-CN/docs/Glossary/Gutters)
-    7. [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
-    8. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    9. [Grid column](/zh-CN/docs/Glossary/Grid_column)

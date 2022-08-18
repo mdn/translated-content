@@ -2,11 +2,13 @@
 title: grid layout 和其它布局方法的联系
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
+{{CSSRef}}
+
 CSS 网格布局作为实现布局的一个完整系统，其设计使之和 css 其它部分能协同合作。在这个指南中，我会向你解释网格布局是如何与你正在使用的其它技巧协同合作的。
 
 ## Grid and flexbox
 
-CSS**网格布局**和**弹性盒布局**的主要区别在于[弹性盒布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)是为一维布局服务的（沿横向或纵向的），而网格布局是为二维布局服务的（同时沿着横向和纵向）。这两个规格有一些相同的特性。如果你已经掌握如何使用弹性盒布局的话，你可能会想知道这些相似之处怎样在能帮助你掌握网格布局。
+CSS **网格布局**和**弹性盒布局**的主要区别在于[弹性盒布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)是为一维布局服务的（沿横向或纵向的），而网格布局是为二维布局服务的（同时沿着横向和纵向）。这两个规格有一些相同的特性。如果你已经掌握如何使用弹性盒布局的话，你可能会想知道这些相似之处怎样在能帮助你掌握网格布局。
 
 ### 一维布局 vs. 二维布局
 
@@ -557,53 +559,3 @@ We now have the ability to create a grid with a flexible number of flexible trac
 这可以让项目嵌套到网格中，就好像它们是网格的一部分一样，并且可以用它解决 `subgrid` 值尚未实现时要解决的一些问题。也可以在 flex 布局中用类似的方法通过 `display: contents` 使嵌套的项目成为 flex 项目。
 
 正如本文中所述，CSS Grid Layout 只是您工具包的一部分。不要害怕在布局时将它与其他布局方法混用，大胆用它获得你想要的效果吧。
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS 索引**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4. **指南**
-
-    1. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS 网格布局和可访问性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [使用网格实现常见布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5. **属性**
-
-    1. [grid](/zh-CN/docs/Web/CSS/grid)
-    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
-    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
-
-6. **词汇**
-
-    1. [Grid](/zh-CN/docs/Glossary/Grid)
-    2. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    5. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    6. [Gutters](/zh-CN/docs/Glossary/Gutters)
-    7. [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
-    8. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    9. [Grid column](/zh-CN/docs/Glossary/Grid_column)

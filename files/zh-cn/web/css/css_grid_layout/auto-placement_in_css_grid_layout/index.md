@@ -2,7 +2,13 @@
 title: CSS 网格布局中的自动定位
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
-为了精确地把项目摆放到网格中，CSS 网格布局规范还包含另外一组规则，用来约定当部分或全部子项目没有被明确指定位置时该如何处理。你会发现针对含有数个项目的网格，实际上最简单的方式就是使用自动定位。如果没有为项目指定位置信息，它们就会把自己摆放在网格中，每个单元格中放一个。
+{{CSSRef}}
+
+为了精确地把项目摆放到网格中，CSS 网格布局规范还包含另外一组规则，用来约定当部分或全部子项目没有被明确指定位置时该如何处理。你会发现针对含有数个项目的网格，实际上最简单的方式就是使用自动定位。
+
+## 默认定位
+
+如果没有为项目指定位置信息，它们就会把自己摆放在网格中，每个单元格中放一个。
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -26,7 +32,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
 }
 ```
 
@@ -40,11 +46,11 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 </div>
 ```
 
-{{ EmbedLiveSample('placement_1', '500', '230') }}
+{{ EmbedLiveSample('默认定位', '500', '230') }}
 
 ## 自动定位的默认规则
 
-正如上例所示，所有子项目都会把自己摆放到网格中，每个单元格中放一个。默认的流向是按行排列项目，网格会首先尝试在第 1 行的每个单元格中摆放项目。如果已经通过 `grid-template-rows` 属性创建了其他行，网格就会继续把项目摆放到这些行中。如果在显式的网格中没有足够的行用来摆放所有的项目，隐式的新行就会被创建出来。
+正如上例所示，所有子项目都会把自己摆放到网格中，每个单元格中放一个。默认的流向是按行排列项目，网格会首先尝试在第 1 行的每个单元格中摆放项目。如果已经通过 `grid-template-rows` 属性创建了其他行，网格就会继续把项目摆放到这些行中。如果在显式的网格中没有足够的行用来摆放所有的项目，*隐式*的新行就会被创建出来。
 
 ### 调整网格中隐式行的大小
 
@@ -84,12 +90,14 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px;
 }
 ```
 
-{{ EmbedLiveSample('placement_2', '500', '330') }}
+{{ EmbedLiveSample('调整网格中隐式行的大小', '500', '330') }}
+
+### 使用 minmax() 调整行的大小
 
 也可以为 {{cssxref("grid-auto-rows")}} 设置 {{cssxref("minmax","minmax()")}} 值，这会让创建出的行保持一个最小尺寸，而且能够自动加高以适应更多的内容。
 
@@ -121,7 +129,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
      <br>Has extra
      <br>content.
      <br>Max is auto
-     <br> so the row expands.
+     <br>so the row expands.
      </div>
      <div>Five</div>
 </div>
@@ -131,12 +139,14 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 ```
 
-{{ EmbedLiveSample('placement_3', '500', '330') }}
+{{ EmbedLiveSample('使用 minmax() 调整行的大小', '500', '330') }}
+
+### 使用轨道列表调整行的大小
 
 也可以向 `grid-auto-rows` 属性传入一个轨道列表，行的大小就会按轨道列表重复设置。在下例中，轨道列表声明了一个 100 像素的行和第二个 200 像素的行，当内容很多时网格就会自动创建足够多的隐式行来容纳内容。
 
@@ -175,12 +185,12 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px 200px;
 }
 ```
 
-{{ EmbedLiveSample('placement_4', '500', '330') }}
+{{ EmbedLiveSample('使用轨道列表调整行的大小', '500', '450') }}
 
 ### 按列自动定位
 
@@ -192,7 +202,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 .wrapper {
     display: grid;
     grid-template-rows: repeat(3, 200px);
-    grid-gap: 10px;
+    gap: 10px;
     grid-auto-flow: column;
     grid-auto-columns: 300px 100px;
 }
@@ -229,7 +239,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 </div>
 ```
 
-{{ EmbedLiveSample('placement_5', '500', '640') }}
+{{ EmbedLiveSample('按列自动定位', '500', '700') }}
 
 ## 被自动定位的项目的顺序
 
@@ -283,7 +293,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
 }
  .wrapper div:nth-child(2) {
    grid-column: 3;
@@ -295,7 +305,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 }
 ```
 
-{{ EmbedLiveSample('placement_6', '500', '450') }}
+{{ EmbedLiveSample('含有定位属性的项目', '500', '500') }}
 
 ### 对占据多条轨道的项目的处理规则
 
@@ -342,7 +352,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
 }
 .wrapper div:nth-child(4n+1) {
   grid-column-end: span 2;
@@ -359,7 +369,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 }
 ```
 
-{{ EmbedLiveSample('placement_7', '500', '770') }}
+{{ EmbedLiveSample('对占据多条轨道的项目的处理规则', '500', '800') }}
 
 ### 填充缺口
 
@@ -421,18 +431,18 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-flow: dense;
 }
 ```
 
-{{ EmbedLiveSample('placement_8', '500', '730') }}
+{{ EmbedLiveSample('填充缺口', '500', '730') }}
 
 ### 匿名网格项目
 
 标准中还提到了匿名网格项目。当有一些字符串或文本被包含在网格容器中，但却没有被其他元素包装，它们就会被创建为匿名网格项目。下面的例子，假设容器的类 `grid` 设置了 `display: grid` 属性，那么网格中就有三个网格项目，第一个就是匿名项目，因为它没有用标签分隔，所以会被自动定位规则处理。另 2 个放在 div 中的项目，它们可以被自动定位，也可以通过网格的定位属性来定位。
 
-```css
+```html
 <div class="grid">
   I am a string and will become an anonymous item
   <div>A grid item</div>
@@ -446,49 +456,11 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 
 当要展示一组相互之间没有逻辑顺序的项目，比如一组照片或产品列表，自动定位就非常有用了，这时你可以使用密集填充模式来填满网格的缺口。在下面的图片墙例子中，有横幅图片和纵幅图片，我们为所有横幅图片设置了样式 `landscape`，让它占据两列，然后使用 `grid-auto-flow: dense` 去创建一个密集填充的网格。
 
-```css
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-gap: 10px;
-    grid-auto-flow: dense;
-    list-style: none;
-    margin: 1em auto;
-    padding: 0;
-    max-width: 800px;
-}
-.wrapper li {
-    border: 1px solid #ccc;
-}
-.wrapper li.landscape {
-    grid-column-end: span 2;
-}
-.wrapper li img {
-   display: block;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
-}
-```
+尝试移除 `grid-auto-flow: dense` 这一行，以查看内容重排后在布局中留下的缺口。
 
-```html
-<ul class="wrapper">
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-</ul>
-```
+{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}
 
-{{ EmbedLiveSample('placement_9', '500', '1300') }}
-
-自动定位还可以帮你布局有逻辑顺序的界面元素。下面的术语列表就是一个例子。对术语列表有一个广泛质疑，即它的结构是扁平的，没有把成组的 `dt` 和 `dd` 元素包装起来。在例子中，我们使用自动定位来定位项目，另外还通过样式类把 `dt` 摆放在第 1 列，把 `dd` 摆放在第 2 列，以便让术语显示在一边，术语的定义显示在另一边，而不用管它们各有多少个。
+自动定位还可以帮你布局有逻辑顺序的界面元素。下面的术语列表就是一个示例。为定义列表添加样式是一个有趣的挑战，即它的结构是扁平的，没有把成组的 `dt` 和 `dd` 元素包装起来。在示例中，我们使用自动定位来定位项目，另外还通过样式类把 `dt` 摆放在第 1 列，把 `dd` 摆放在第 2 列，以便让术语显示在一边，术语的定义显示在另一边，而不用管它们各有多少个。
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -533,60 +505,10 @@ dd {
  }
 ```
 
-{{ EmbedLiveSample('placement_10', '500', '230') }}
+{{ EmbedLiveSample('自动定位实例', '500', '230') }}
 
 ## 自动定位做不了什么？
 
 前面已经讨论过，目前我们还不能选定网格中的任意单元格上的任意项目，在上一篇文章的最后一节讲到如何为多条线定义相同名字，但是当这两个功能在一起执行时就会带来问题。这个问题被称为“自动定位的项目违反了后续第 n 个同名行的规则”，网格的自动定位算法将会跳过一些不该跳过的行。这个问题在 CSSWG 的 GitHub 仓库中[已经被提出](https://github.com/w3c/csswg-drafts/issues/796)了，欢迎你去添加自己的用例。
 
 可能你在使用自动定位或网格布局的其他功能时也会遇到问题，如果遇到了，请把它们抛出来，或者作为用例追加到已有问题上，一方面便于解决，另一方面也会帮助规范在未来的新版本变得更好。
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4. **指南**
-
-    1. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS 网格布局和可及性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [使用网格实现常见布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5. **属性**
-
-    1. [grid](/zh-CN/docs/Web/CSS/grid)
-    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
-    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
-
-6. **词汇**
-
-    1. [Grid](/zh-CN/docs/Glossary/Grid)
-    2. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    5. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    6. [Gutters](/zh-CN/docs/Glossary/Gutters)
-    7. [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
-    8. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    9. [Grid column](/zh-CN/docs/Glossary/Grid_column)
