@@ -16,9 +16,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 这个示例中我用弹性盒布置了一些盒子。容器中有 5 个元素，它们被设置了伸缩属性，在 150px 基准上伸缩。
 
-我还设置了 {{CSSxref("flex-wrap")}} 属性为 `wrap`，从而当容器变得太窄时，元素会换到新的一行。
+我还设置了 {{cssxref("flex-wrap")}} 属性为 `wrap`，从而当容器变得太窄时，元素会换到新的一行。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -46,7 +46,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   width: 500px;
   display: flex;
@@ -67,7 +67,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 下例中我用网格创建同样的布局。这次我们有 3 个 `1fr` 的列轨道。我们并不需要给这些子元素设置任何属性，它们会自动按顺序填充到网格的单元格中。你可以看到它们按网格规整的排列，行与行、列与列对齐。当有 5 个子元素时，第二行的尾部会留出一个空隙。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -95,7 +95,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -121,13 +121,13 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 对于很多人来说，弹性盒特性最让人激动的一点是我们第一次拥有了正当的对齐能力。这让一个盒子在页面里中心对齐变得简单。弹性元素还可以使自己延伸到和容器等高，意味我们能实现等高列。长久以来，我们都想实现这些行为，并一直在用一些所谓“技巧”去达到起码的视觉效果。
 
-弹性盒特性已经被加入到新的规范 [Box Alignment Level 3](https://drafts.CSSwg.org/CSS-align/)。意味它们能被用在包括网格布局的其它规范中。它们未来也可能被用在其它的布局方法中。
+弹性盒特性已经被加入到新的规范 [Box Alignment Level 3](https://drafts.csswg.org/css-align/)。意味它们能被用在包括网格布局的其它规范中。它们未来也可能被用在其它的布局方法中。
 
 本系列后续的指南中我会正式介绍盒对齐（Box Alignment）和它在网格布局中是如何工作的。不过现在我们先看一个比较弹性盒和网格的简单示例。
 
-在这第一个示例中，我使用了弹性盒，一个容器内有三个元素。wrapper 设定了 {{CSSxref("min-height")}}，确定了弹性容器的高度。我还在弹性容器中设定 {{CSSxref("align-items")}} 为 `flex-end`，因此子元素会从弹性容器尾部开始排列。我还在 `box1` 上设定了 {{CSSxref("align-self")}} 属性，这会覆盖默认值，使它延长至容器的高度，而 `box2` 则与弹性容器的起点对齐。
+在这第一个示例中，我使用了弹性盒，一个容器内有三个元素。wrapper 设定了 {{cssxref("min-height")}}，确定了弹性容器的高度。我还在弹性容器中设定 {{cssxref("align-items")}} 为 `flex-end`，因此子元素会从弹性容器尾部开始排列。我还在 `box1` 上设定了 {{cssxref("align-self")}} 属性，这会覆盖默认值，使它延长至容器的高度，而 `box2` 则与弹性容器的起点对齐。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -153,7 +153,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: flex;
   align-items: flex-end;
@@ -173,7 +173,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 这个第二个示例使用了网格创建一个同样的布局。这次我们使用了应用于网格布局的盒对齐属性。因此我们是相对网格而不是弹性盒的起始对齐。对于网格来说，我们是让元素在它们各自的网格区域中对齐。在本例中就是一个单元格，但它也可能是多个单元格组成的一个区域。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -199,7 +199,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
    display: grid;
    grid-template-columns: repeat(3,1fr);
@@ -218,7 +218,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 ### `fr` 单位和 `flex-basis` 属性
 
-我们已经看到了 `fr` 单元如何在网格容器中分配一定比例的可用空间到我们的网格轨道。当与 {{CSSxref("minmax", "minmax()")}} 函数结合使用时，`fr` 单元可以给我们与弹性盒中的 `flex` 属性非常相似的行为——同时仍然可以创建二维布局。
+我们已经看到了 `fr` 单元如何在网格容器中分配一定比例的可用空间到我们的网格轨道。当与 {{cssxref("minmax", "minmax()")}} 函数结合使用时，`fr` 单元可以给我们与弹性盒中的 `flex` 属性非常相似的行为——同时仍然可以创建二维布局。
 
 之前我们通过示例验证了一维布局和二维布局的差异，可以发现这两种布局方式对响应式的处理存在着不同。对于弹性布局，当我们拖拽以改变浏览器大小时，弹性盒会根据可用空间适当的调整行中元素的个数。当有足够的空间时，全部的 5 个元素全部在一行展示，当容器变的过窄时，每行则只能展示一个元素。
 
@@ -230,7 +230,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 在接下来的示例中，在 `repeat` 方法中使用 `auto-fill` 属性替换整数值，并且设置轨道的宽度为 200px。这意味着网格布局将会根据容器的宽度创建最多的宽度为 200px 的列轨道。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -256,7 +256,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
@@ -267,9 +267,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 ### 灵活的轨道数量
 
-到这为止就和弹性盒布局不太一样了。在弹性盒布局示例中，子元素在被包裹起来之前大于基准的 200px。我们可以用使用网格布局中的 `auto-fill` 和 {{CSSxref("minmax", "minmax()")}} 函数实现同样的功能。在这个示例中，我创建了一个用 `minmax` 自动填充的轨道。我想要这个轨道的元素最小有 200px，最大 `1fr` 的宽度。 一旦浏览器计算出有多少个 200px 会填充到这个容器里面，并算好网格间距，那么，浏览器就会把剩余的空间等分成以最大 `1fr` 单位计算的区域给其它元素。
+到这为止就和弹性盒布局不太一样了。在弹性盒布局示例中，子元素在被包裹起来之前大于基准的 200px。我们可以用使用网格布局中的 `auto-fill` 和 {{cssxref("minmax", "minmax()")}} 函数实现同样的功能。在这个示例中，我创建了一个用 `minmax` 自动填充的轨道。我想要这个轨道的元素最小有 200px，最大 `1fr` 的宽度。 一旦浏览器计算出有多少个 200px 会填充到这个容器里面，并算好网格间距，那么，浏览器就会把剩余的空间等分成以最大 `1fr` 单位计算的区域给其它元素。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -295,7 +295,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -316,7 +316,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 在下面的示例中，一个容器中包含了四个子项。第三项是绝对定位的，并且使用基于行定位的方式把自己放置在网格中。网格容器具有 `position: relative` 属性，因此网格就成为该元素的定位上下文。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -345,7 +345,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -384,7 +384,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 `.box3` 被设置了 `position: relative` 属性，其子元素设置了定位的偏移属性。此时，子元素的定位的参照语境就变成了网格区域。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -415,7 +415,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -444,7 +444,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 ## 网格和 display: contents
 
-最后一个值得关注的与其它布局规范的交互是 CSS 网格布局与 `display: contents` 之间的交互。`display` 属性的 `contents` 值是[显示规范](https://drafts.CSSwg.org/CSS-display/#box-generation)中描述的新值，如下所示：
+最后一个值得关注的与其它布局规范的交互是 CSS 网格布局与 `display: contents` 之间的交互。`display` 属性的 `contents` 值是[显示规范](https://drafts.csswg.org/css-display/#box-generation)中描述的新值，如下所示：
 
 > “元素本身不会生成任何盒子，但其子元素和伪元素仍然会像平常一样生成盒子。（用户代理）为了生成盒子和布局，必须将元素视为已在文档树中被其子元素和伪元素替换。“
 
@@ -454,7 +454,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 在下面的网格中，第一个元素设置为跨越三个列轨道，它包含三个嵌套的元素，由于这些元素不是直接子元素，因此它们不会成为网格布局的一部分，因此使用常规的块布局进行显示。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -492,7 +492,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -510,7 +510,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 
 现在如果将 `display：contents` 添加到 `box1` 的样式规则中，则该元素的盒子将消失，子元素成为网格元素，并且应用自动定位规则放置在网格中。
 
-```CSS hidden
+```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
@@ -548,7 +548,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 </div>
 ```
 
-```CSS
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
