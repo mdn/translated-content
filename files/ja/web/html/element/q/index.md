@@ -15,106 +15,101 @@ tags:
   - quote
 translation_of: Web/HTML/Element/q
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;q&gt;</code> 要素</strong> は、その内容が行内の引用であることを表します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。</span>この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。</p>
+**HTML の `<q>` 要素** は、その内容が行内の引用であることを表します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLQuoteElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリ</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLQuoteElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>注:</strong> 最近の多くのブラウザーは、<code>&lt;q&gt;</code> 要素内の文字列の周りに自動的に引用符を追加します。古いブラウザーでは引用符を追加するためにスタイル規則が必要な場合があります。</p>
-</div>
+> **Note:** **注:** 最近の多くのブラウザーは、`<q>` 要素内の文字列の周りに自動的に引用符を追加します。古いブラウザーでは引用符を追加するためにスタイル規則が必要な場合があります。
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を持ちます。</p>
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>この属性の値は、引用した情報の引用元文書やメッセージの URL です。この属性は、引用文の文脈や参照先を説明する情報を指すためのものです。</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : この属性の値は、引用した情報の引用元文書やメッセージの URL です。この属性は、引用文の文脈や参照先を説明する情報を指すためのものです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html notranslate">&lt;p&gt;According to Mozilla's website,
-  &lt;q
-  cite="https://www.mozilla.org/en-US/about/history/details/"&gt;Firefox 1.0
-  was released in 2004 and became a big success.&lt;/q&gt;&lt;/p&gt;
-</pre>
+```html
+<p>According to Mozilla's website,
+  <q
+  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
+  was released in 2004 and became a big success.</q></p>
+```
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-q-element', '&lt;q&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       | 状態                             | 備考     |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}             | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}     |          |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;')}}                     | {{Spec2('HTML4.01')}}     | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.q")}}</p>
+{{Compat("html.elements.q")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("blockquote")}} 要素は長い引用のためのものです。</li>
- <li>{{HTMLElement("cite")}} 要素は引用元のためのものです。</li>
-</ul>
+- {{HTMLElement("blockquote")}} 要素は長い引用のためのものです。
+- {{HTMLElement("cite")}} 要素は引用元のためのものです。

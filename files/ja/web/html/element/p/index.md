@@ -4,106 +4,136 @@ slug: Web/HTML/Element/p
 tags:
   - HTML
   - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - 'HTML:知覚可能コンテンツ'
+  - HTML:フローコンテンツ
+  - HTML:知覚可能コンテンツ
   - Reference
   - ウェブ
   - 要素
 translation_of: Web/HTML/Element/p
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;p&gt;</code> 要素</strong>は、テキストの段落を表します。</span>視覚メディアにおいて、段落はふつう隣接するブロックと上下の空白や最初の行の字下げによって隔てられたテキストのブロックとして表現されますが、 HTML の段落は画像やフォーム欄などの関連するコンテンツを構造的にまとめることができます。</p>
+**HTML の `<p>` 要素**は、テキストの段落を表します。視覚メディアにおいて、段落はふつう隣接するブロックと上下の空白や最初の行の字下げによって隔てられたテキストのブロックとして表現されますが、 HTML の段落は画像やフォーム欄などの関連するコンテンツを構造的にまとめることができます。
 
-<p>段落は<a href="/ja/docs/Web/HTML/Block-level_elements">ブロックレベル要素</a>であり、特徴的なのは <code>&lt;/p&gt;</code> で閉じる前に他のブロックレベル要素が見つかった場合は自動的に閉じることです。下記の「タグの省略」をご覧ください。</p>
+段落は[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であり、特徴的なのは `</p>` で閉じる前に他のブロックレベル要素が見つかった場合は自動的に閉じることです。下記の「タグの省略」をご覧ください。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>開始タグは必須。後続する要素が {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hr")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}}, {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("section")}}, {{HTMLElement("table")}}, {{HTMLElement("ul")}} または別の {{HTMLElement("p")}} 要素のいずれかである、または親要素内で他のコンテンツがなく親要素が {{HTMLElement("a")}} 要素ではない場合は終了タグを省略することが可能。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLParagraphElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        開始タグは必須。後続する要素が {{HTMLElement("address")}},
+        {{HTMLElement("article")}}, {{HTMLElement("aside")}},
+        {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
+        {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
+        {{HTMLElement("footer")}}, {{HTMLElement("form")}},
+        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
+        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
+        {{HTMLElement("h5")}}, {{HTMLElement("h6")}},
+        {{HTMLElement("header")}}, {{HTMLElement("hr")}},
+        {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
+        {{HTMLElement("ol")}}, {{HTMLElement("pre")}},
+        {{HTMLElement("section")}}, {{HTMLElement("table")}},
+        {{HTMLElement("ul")}} または別の {{HTMLElement("p")}}
+        要素のいずれかである、または親要素内で他のコンテンツがなく親要素が
+        {{HTMLElement("a")}}
+        要素ではない場合は終了タグを省略することが可能。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLParagraphElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes" title="HTML/Global_attributes">グローバル属性</a>があります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global_attributes")があります。
 
-<div class="note">
-<p><strong>メモ:</strong> <code>&lt;p&gt;</code> の <code>align</code> 属性は廃止済みであり、使用するべきではありません。</p>
-</div>
+> **Note:** **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;これはテキストの最初の段落です。
+```html
+<p>これはテキストの最初の段落です。
   これはテキストの最初の段落です。
   これはテキストの最初の段落です。
-  これはテキストの最初の段落です。&lt;/p&gt;
-&lt;p&gt;これはテキストの二番目の段落です。
+  これはテキストの最初の段落です。</p>
+<p>これはテキストの二番目の段落です。
   これはテキストの二番目の段落です。
   これはテキストの二番目の段落です。
-  これはテキストの二番目の段落です。&lt;/p&gt;
-</pre>
+  これはテキストの二番目の段落です。</p>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Styling_paragraphs" name="Styling_paragraphs">段落のスタイル付け</h2>
+## 段落のスタイル付け
 
-<p>既定で、ブラウザーは段落を単一の空行で分割します。例えば先頭行を字下げするなど、他の分割方法は {{glossary("CSS")}} で実現することができます。</p>
+既定で、ブラウザーは段落を単一の空行で分割します。例えば先頭行を字下げするなど、他の分割方法は {{glossary("CSS")}} で実現することができます。
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Separating paragraphs with blank lines is easiest
+```html
+<p>Separating paragraphs with blank lines is easiest
 for readers to scan, but they can also be separated
 by indenting their first lines. This is often used
-to take up less space, such as to save paper in print.&lt;/p&gt;
+to take up less space, such as to save paper in print.</p>
 
-&lt;p&gt;Writing that is intended to be edited, such as school
+<p>Writing that is intended to be edited, such as school
 papers and rough drafts, uses both blank lines and
 indentation for separation. In finished works, combining
-both is considered redundant and amateurish.&lt;/p&gt;
+both is considered redundant and amateurish.</p>
 
-&lt;p&gt;In very old writing, paragraphs were separated with a
-special character: ¶, the &lt;i&gt;pilcrow&lt;/i&gt;. Nowadays, this
-is considered claustrophobic and hard to read.&lt;/p&gt;
+<p>In very old writing, paragraphs were separated with a
+special character: ¶, the <i>pilcrow</i>. Nowadays, this
+is considered claustrophobic and hard to read.</p>
 
-&lt;p&gt;How hard to read? See for yourself:
-  &lt;button data-toggle-text="Oh no! Switch back!"&gt;Use pilcrow for paragraphs&lt;/button&gt;
-&lt;/p&gt;
-</pre>
+<p>How hard to read? See for yourself:
+  <button data-toggle-text="Oh no! Switch back!">Use pilcrow for paragraphs</button>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
   text-indent: 3ch;
 }
@@ -114,11 +144,13 @@ p.pilcrow {
 }
 p.pilcrow + p.pilcrow::before {
   content: " ¶ ";
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.querySelector('button').addEventListener('click', function (event) {
+```js
+document.querySelector('button').addEventListener('click', function (event) {
   document.querySelectorAll('p').forEach(function (paragraph) {
     paragraph.classList.toggle('pilcrow');
   });
@@ -126,61 +158,40 @@ p.pilcrow + p.pilcrow::before {
   var oldText = event.target.innerText;
   event.target.innerText = newButtonText;
   event.target.dataset.toggleText = oldText;
-});</pre>
+});
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Styling_paragraphs')}}</p>
+{{EmbedLiveSample('Styling_paragraphs')}}
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+## アクセシビリティの考慮事項
 
-<p>コンテンツを段落に分割すると、ページのアクセシビリティを向上するのに役立ちます。読み上げソフトやその他の支援技術が、このようなユーザーに前後の段落に飛ぶショートカットを提供することができ、空行によって視覚ユーザーが飛ばし見をすることができるのと同様、コンテンツをざっと見ることができるようになります。</p>
+コンテンツを段落に分割すると、ページのアクセシビリティを向上するのに役立ちます。読み上げソフトやその他の支援技術が、このようなユーザーに前後の段落に飛ぶショートカットを提供することができ、空行によって視覚ユーザーが飛ばし見をすることができるのと同様、コンテンツをざっと見ることができるようになります。
 
-<p>段落間の間隔を広げるために空の <code>&lt;p&gt;</code> 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。読み上げソフトは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これは読み上げソフトを使用している人の利用を混乱させ不満をためる可能性があります。</p>
+段落間の間隔を広げるために空の `<p>` 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。読み上げソフトは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これは読み上げソフトを使用している人の利用を混乱させ不満をためる可能性があります。
 
-<p>追加の間隔をあける必要がある場合は、 {{cssxref("margin")}} のような {{glossary("CSS")}} プロパティを使用して効果を得るようにしてください。</p>
+追加の間隔をあける必要がある場合は、 {{cssxref("margin")}} のような {{glossary("CSS")}} プロパティを使用して効果を得るようにしてください。
 
-<pre class="brush: css">p {
+```css
+p {
   margin-bottom: 2em; // 段落の後の空白を増加させる
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>最新の {{glossary("W3C")}} スナップショットである {{SpecName("HTML5 W3C")}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td><code>align</code> 属性を廃止</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考                                                                                                 |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}         | {{Spec2('HTML WHATWG')}} | 最新の {{glossary("W3C")}} スナップショットである {{SpecName("HTML5 W3C")}} から変更なし |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}     | `align` 属性を廃止                                                                                   |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}                 | {{Spec2('HTML4.01')}}     | 初回定義                                                                                             |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.p")}}</p>
+{{Compat("html.elements.p")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("hr")}}</li>
- <li>{{HTMLElement("br")}}</li>
-</ul>
+- {{HTMLElement("hr")}}
+- {{HTMLElement("br")}}

@@ -8,112 +8,155 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/header
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;header&gt;</code> 要素</strong>は、導入的なコンテンツ、ふつうは導入部やナビゲーション等のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、作者名、その他の要素を含むこともできます。</span></p>
+**HTML の `<header>` 要素**は、導入的なコンテンツ、ふつうは導入部やナビゲーション等のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、作者名、その他の要素を含むこともできます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただけるのであれば、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。但し、子孫に他の <code>&lt;header&gt;</code> や {{HTMLElement("footer")}} がないこと。</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。ただし、{{HTMLElement("address")}}、{{HTMLElement("footer")}}、他の {{HTMLElement("header")}} 要素の子孫要素として配置してはなりません。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a>, または <code><a href="/ja/docs/Web/HTML/Element/article">article</a></code>, <code><a href="/ja/docs/Web/HTML/Element/aside">aside</a></code>, <code><a href="/ja/docs/Web/HTML/Element/main">main</a></code>, <code><a href="/ja/docs/Web/HTML/Element/nav">nav</a></code>, <code><a href="/ja/docs/Web/HTML/Element/section">section</a></code> の各要素、または <code>role=<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a></code> の要素の子孫である場合は<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}, {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+          >知覚可能コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >。但し、子孫に他の <code>&#x3C;header></code> や
+        {{HTMLElement("footer")}} がないこと。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素。ただし、{{HTMLElement("address")}}、{{HTMLElement("footer")}}、他の
+        {{HTMLElement("header")}}
+        要素の子孫要素として配置してはなりません。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a>,
+        または
+        <code><a href="/ja/docs/Web/HTML/Element/article">article</a></code
+        >, <code><a href="/ja/docs/Web/HTML/Element/aside">aside</a></code
+        >, <code><a href="/ja/docs/Web/HTML/Element/main">main</a></code
+        >, <code><a href="/ja/docs/Web/HTML/Element/nav">nav</a></code
+        >,
+        <code><a href="/ja/docs/Web/HTML/Element/section">section</a></code>
+        の各要素、または
+        <code
+          >role=<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+            >article</a
+          ></code
+        >,
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+            >complementary</a
+          ></code
+        >,
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role"
+            >main</a
+          ></code
+        >,
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+            >navigation</a
+          ></code
+        >,
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role"
+            >region</a
+          ></code
+        >
+        の要素の子孫である場合は<a
+          href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        {{ARIARole("group")}}, {{ARIARole("presentation")}},
+        {{ARIARole("none")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p><code>&lt;header&gt;</code> 要素は区分コンテンツではありません。つまり、この要素が新たな<a href="/ja/docs/Sections_and_Outlines_of_an_HTML5_document">アウトライン</a>を生成することはありません。すなわち <code>header</code> 要素は通常、自身を囲む <code>section</code> の見出し (<code>h1</code>–<code>h6</code> 要素) を含むことを意図していますが、<strong>必須ではありません</strong>。</p>
+`<header>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document)を生成することはありません。すなわち `header` 要素は通常、自身を囲む `section` の見出し (`h1`–`h6` 要素) を含むことを意図していますが、**必須ではありません**。
 
-<h3 id="Historical_Usage" name="Historical_Usage">歴史的な使用法</h3>
+### 歴史的な使用法
 
-<p><code>&lt;header&gt;</code> 要素は {{glossary("HTML5")}} まで仕様書には現れていませんでしたが、実は HTML の最初期に存在していました。 <a href="http://info.cern.ch/">the very first website</a> に見られるように、元は <code>&lt;head&gt;</code> 要素として使用されていました。ある時点で、別な名前を使用することが決定されました。これによって <code>&lt;header&gt;</code> が自由になり、のちに別な役割を担うことができるようになりました。</p>
+`<header>` 要素は {{glossary("HTML5")}} まで仕様書には現れていませんでしたが、実は HTML の最初期に存在していました。 [the very first website](http://info.cern.ch/) に見られるように、元は `<head>` 要素として使用されていました。ある時点で、別な名前を使用することが決定されました。これによって `<header>` が自由になり、のちに別な役割を担うことができるようになりました。
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Page_Header" name="Page_Header">ページのヘッダー</h3>
+### ページのヘッダー
 
-<pre class="brush: html notranslate">&lt;header&gt;
-  &lt;h1&gt;Main Page Title&lt;/h1&gt;
-  &lt;img src="mdn-logo-sm.png" alt="MDN logo"&gt;
-&lt;/header&gt;
-</pre>
+```html
+<header>
+  <h1>Main Page Title</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo">
+</header>
+```
 
-<h3 id="Article_Header" name="Article_Header">記事のヘッダー</h3>
+### 記事のヘッダー
 
-<pre class="brush: html notranslate">&lt;article&gt;
-  &lt;header&gt;
-    &lt;h2&gt;The Planet Earth&lt;/h2&gt;
-    &lt;p&gt;Posted on Wednesday, &lt;time datetime="2017-10-04"&gt;4 October 2017&lt;/time&gt; by Jane Smith&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;p&gt;We live on a planet that's blue and green, with so many things still unseen.&lt;/p&gt;
-  &lt;p&gt;&lt;a href="https://janesmith.com/the-planet-earth/"&gt;Continue reading....&lt;/a&gt;&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <header>
+    <h2>The Planet Earth</h2>
+    <p>Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by Jane Smith</p>
+  </header>
+  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
+  <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+</article>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-header-element', '&lt;header&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       | 状態                             | 備考 |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-header-element', '&lt;header&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.header")}}</p>
+{{Compat("html.elements.header")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">HTML のセクションとアウトラインの使用</a></li>
-</ul>
+- 他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)

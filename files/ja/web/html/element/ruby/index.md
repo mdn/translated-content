@@ -10,103 +10,109 @@ tags:
   - 日本語処理
 translation_of: Web/HTML/Element/ruby
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong>HTML <code>&lt;ruby&gt;</code> element</strong> はベーステキストの上、下、隣に描画される小さな注釈で、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。</p>
+The **HTML `<ruby>` element** はベーステキストの上、下、隣に描画される小さな注釈で、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。
 
-<p><em>ルビ</em>という言葉は<a href="https://en.wikipedia.org/wiki/Agate_(typography)">写植者が使用した長さの単位</a>に由来しており、読みやすい状態を保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。</p>
+*ルビ*という言葉は[写植者が使用した長さの単位](<https://en.wikipedia.org/wiki/Agate_(typography)>)に由来しており、読みやすい状態を保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリ</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Example_1_Character" name="Example_1_Character">例1: 文字ごとのルビ</h3>
+### 例 1: 文字ごとのルビ
 
-<pre class="brush:html notranslate">&lt;ruby&gt;
-  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;かん&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;じ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  漢 <rp>(</rp><rt>かん</rt><rp>)</rp>
+  字 <rp>(</rp><rt>じ</rt><rp>)</rp>
+</ruby>
+```
 
-<h3 id="Example_2_Word" name="Example_2_Word">例2: 熟語のルビ</h3>
+### 例 2: 熟語のルビ
 
-<pre class="brush:html notranslate">&lt;ruby&gt;
-  明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;あした&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  明日 <rp>(</rp><rt>あした</rt><rp>)</rp>
+</ruby>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-ruby-element', '&lt;ruby&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-ruby-element', '&lt;ruby&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-ruby-element', '&lt;ruby&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-ruby-element', '&lt;ruby&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.ruby")}}</p>
+{{Compat("html.elements.ruby")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>{{HTMLElement("rtc")}}</li>
- <li>{{HTMLElement("rbc")}}</li>
- <li>{{CSSxRef("text-transform")}}: full-size-kana</li>
-</ul>
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
+- {{HTMLElement("rbc")}}
+- {{CSSxRef("text-transform")}}: full-size-kana

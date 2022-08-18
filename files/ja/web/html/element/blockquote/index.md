@@ -5,9 +5,9 @@ tags:
   - Blockquote
   - HTML
   - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - 'HTML:区分化ルート'
-  - 'HTML:知覚可能コンテンツ'
+  - HTML:フローコンテンツ
+  - HTML:区分化ルート
+  - HTML:知覚可能コンテンツ
   - Reference
   - Web
   - ウェブ
@@ -15,68 +15,83 @@ tags:
   - 要素
 translation_of: Web/HTML/Element/blockquote
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML の <code>&lt;blockquote&gt;</code> 要素</strong><em> (HTML ブロック引用要素</em>) は、内包する要素の文字列が引用文であることを示します。通常、字下げを伴ってレンダリングされます (整形方法については<a href="#Usage_notes" rel="internal">注意</a>の項を参照してください)。 <strong>cite</strong> 属性により引用元の文書の URL を、 {{HTMLElement("cite")}} 要素により引用元の文書のタイトルなどを明示可能です。</p>
+**HTML の `<blockquote>` 要素** _(HTML ブロック引用要素_) は、内包する要素の文字列が引用文であることを示します。通常、字下げを伴ってレンダリングされます (整形方法については[注意](#Usage_notes)の項を参照してください)。 **cite** 属性により引用元の文書の URL を、 {{HTMLElement("cite")}} 要素により引用元の文書のタイトルなどを明示可能です。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 区分化ルート, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLQuoteElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >, 区分化ルート, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLQuoteElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>引用元の文書の URL、または引用元の情報に関するメッセージを示します。この属性は、引用文の背景や出典についての説明を指し示そうとするものです。</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : 引用元の文書の URL、または引用元の情報に関するメッセージを示します。この属性は、引用文の背景や出典についての説明を指し示そうとするものです。
 
-<h2 id="Notes" name="Notes">使用上の注意</h2>
+## 使用上の注意
 
-<p>引用された文字列に適用される字下げを変更するには、 {{Glossary("CSS")}} の {{cssxref("margin-left")}} や {{cssxref("margin-right")}} プロパティ、または一括指定の {{cssxref("margin")}} プロパティを使用してください。</p>
+引用された文字列に適用される字下げを変更するには、 {{Glossary("CSS")}} の {{cssxref("margin-left")}} や {{cssxref("margin-right")}} プロパティ、または一括指定の {{cssxref("margin")}} プロパティを使用してください。
 
-<p>独立したブロックというより行内の短い引用を行うには、 {{HTMLElement("q")}} (Quotation) 要素を使用してください。</p>
+独立したブロックというより行内の短い引用を行うには、 {{HTMLElement("q")}} (Quotation) 要素を使用してください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は {{RFC(1149)}}, <cite>A Standard for the Transmission of IP Datagrams on Avian Carriers</cite> からの文言を引用するために <code>&lt;blockquote&gt;</code> 要素を使用する例です。</p>
+この例は {{RFC(1149)}}, A Standard for the Transmission of IP Datagrams on Avian Carriers からの文言を引用するために `<blockquote>` 要素を使用する例です。
 
-<pre class="brush: html">&lt;blockquote cite="https://tools.ietf.org/html/rfc1149"&gt;
-  &lt;p&gt;Avian carriers can provide high delay, low
+```html
+<blockquote cite="https://tools.ietf.org/html/rfc1149">
+  <p>Avian carriers can provide high delay, low
   throughput, and low altitude service. The
   connection topology is limited to a single
   point-to-point path for each carrier, used with
@@ -86,50 +101,27 @@ translation_of: Web/HTML/Element/blockquote
   ether space available to the carriers, in contrast
   to the 1D ether used by IEEE802.3. The carriers
   have an intrinsic collision avoidance system, which
-  increases availability.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+  increases availability.</p>
+</blockquote>
+```
 
-<p>以下のように出力されます。</p>
+以下のように出力されます。
 
-<p>{{EmbedLiveSample("Example", 640, 180)}}</p>
+{{EmbedLiveSample("Example", 640, 180)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-blockquote-element', '&lt;blockquote&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-blockquote-element', '&lt;blockquote&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;blockquote&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-blockquote-element', '&lt;blockquote&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-blockquote-element', '&lt;blockquote&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;blockquote&gt;')}}                             | {{Spec2('HTML4.01')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.blockquote")}}</p>
+{{Compat("html.elements.blockquote")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("q")}}: インラインの引用のための要素</li>
- <li>{{HTMLElement("cite")}}: 情報源の引用のための要素</li>
-</ul>
+- {{HTMLElement("q")}}: インラインの引用のための要素
+- {{HTMLElement("cite")}}: 情報源の引用のための要素

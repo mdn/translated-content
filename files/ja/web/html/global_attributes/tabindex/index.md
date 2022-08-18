@@ -8,85 +8,48 @@ tags:
   - リファレンス
 translation_of: Web/HTML/Global_attributes/tabindex
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><span class="seoSummary"><strong><code>tabindex</code></strong> <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>は、要素が入力フォーカスを持てることと、キーボードの順次ナビゲーション (ふつうは名前の由来である <kbd>Tab</kbd> キーによる) に加わるかどうか、どの位置に加わるかを示します。</span></p>
+**`tabindex`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素が入力フォーカスを持てることと、キーボードの順次ナビゲーション (ふつうは名前の由来である <kbd>Tab</kbd> キーによる) に加わるかどうか、どの位置に加わるかを示します。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+値としては整数値を受け付け、値によって次のような様々な結果になります。
 
-<p>値としては整数値を受け付け、値によって次のような様々な結果になります。</p>
+- _負の数_ (ふつう `tabindex="-1"`) は、その要素がキーボードの順次ナビゲーションでは到達できませんが、 JavaScript や視覚的にフォーカスを持つことができるという意味です。これは主に、 JavaScript で操作可能なウィジェットを作成するのに有用です。
 
-<ul>
- <li><em>負の数</em> (ふつう <code>tabindex="-1"</code>) は、その要素がキーボードの順次ナビゲーションでは到達できませんが、 JavaScript や視覚的にフォーカスを持つことができるという意味です。これは主に、 JavaScript で操作可能なウィジェットを作成するのに有用です。
+  > **Note:** 負の値はオフスクリーンのコンテンツで特定のイベントにより現れる場合に有用です。ユーザーは負の `tabindex` が付いた要素に、キーボードを使用してフォーカスを与えることはできませんが、スクリプトは `focus()` [メソッド](/ja/docs/Web/API/HTMLElement/focus)を呼び出すことでフォーカスを与えることはできます。
 
-  <div class="note">
-  <p>負の値はオフスクリーンのコンテンツで特定のイベントにより現れる場合に有用です。ユーザーは負の <code>tabindex</code> が付いた要素に、キーボードを使用してフォーカスを与えることはできませんが、スクリプトは <code>focus()</code> <a href="/ja/docs/Web/API/HTMLElement/focus">メソッド</a>を呼び出すことでフォーカスを与えることはできます。</p>
-  </div>
- </li>
- <li><code>tabindex="0"</code> は、要素がキーボードの順次ナビゲーションでフォーカスを持つことが可能ですが、その順序は文書のソース内の順序で決定されることを表します。</li>
- <li><em>正の数</em>は、要素がキーボードの順次ナビゲーションでフォーカスを持つことが可能であり、その順序は数値で定義されることを表します。つまり、 <code>tabindex="4"</code> は <code>tabindex="5"</code> よりも前にフォーカスが来ますが、 <code>tabindex="3"</code> よりも後だということです。複数の要素に同じ正の数の <code>tabindex</code> が指定された場合は、文書のソース内の互いの位置に従った順序になります。 <code>tabindex</code> の最大値は32767です。指定されなかった場合、既定値の0を取ります。
-  <div class="warning">
-  <p><code>tabindex</code> の値に0よりも大きな値を使用することは避けてください。そうすると、支援技術に頼っている人がページコンテンツを移動したり操作したりすることが難しくなります。代わりに、論理的な順序で要素を並べて文書を書いてください。</p>
-  </div>
- </li>
-</ul>
+- `tabindex="0"` は、要素がキーボードの順次ナビゲーションでフォーカスを持つことが可能ですが、その順序は文書のソース内の順序で決定されることを表します。
+- *正の数*は、要素がキーボードの順次ナビゲーションでフォーカスを持つことが可能であり、その順序は数値で定義されることを表します。つまり、 `tabindex="4"` は `tabindex="5"` よりも前にフォーカスが来ますが、 `tabindex="3"` よりも後だということです。複数の要素に同じ正の数の `tabindex` が指定された場合は、文書のソース内の互いの位置に従った順序になります。 `tabindex` の最大値は 32767 です。指定されなかった場合、既定値の 0 を取ります。
 
-<p><code>tabindex</code> 属性を{{htmlelement("div")}} に設定する場合は、子のコンテンツにも <code>tabindex</code> を設定しなければ、矢印キーを使用して子のコンテンツをスクロールできなくなります。 <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/"><code>tabindex</code> のスクロール効果を理解するには、こちらの fiddle を確認してください</a>。</p>
+  > **Warning:** `tabindex` の値に 0 よりも大きな値を使用することは避けてください。そうすると、支援技術に頼っている人がページコンテンツを移動したり操作したりすることが難しくなります。代わりに、論理的な順序で要素を並べて文書を書いてください。
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+`tabindex` 属性を{{htmlelement("div")}} に設定する場合は、子のコンテンツにも `tabindex` を設定しなければ、矢印キーを使用して子のコンテンツをスクロールできなくなります。 [`tabindex` のスクロール効果を理解するには、こちらの fiddle を確認してください](https://jsfiddle.net/jainakshay/0b2q4Lgv/)。
 
-<p>キーボード入力で対話的にフォーカスを設定できるようにするために、 <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>ではないものに <code>tabindex</code> 属性を組み合わせて使用することは避けてください。例えば、 {{HTMLElement("button")}} 要素を使用する代わりに {{HTMLElement("div")}} 要素を使用してボタンを記述する場合などです。</p>
+## アクセシビリティの考慮事項
 
-<p>対話的要素でないものを使用して対話的コンポーネントを記述すると、<a href="/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">アクセシビリティツリー</a>に掲載されません。これは、支援技術によって移動や操作を行うことを阻害します。このようなコンテンツは、代わりに ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, などの) 対話型要素を使用して意味的に記述するべきです。これらの要素には、 <a href="/ja/docs/Web/Accessibility/ARIA">ARIA</a> によって管理しなければならないアクセシビリティにステータスを伝える、組み込みのロールと状態があります。</p>
+キーボード入力で対話的にフォーカスを設定できるようにするために、 [対話型コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ)ではないものに `tabindex` 属性を組み合わせて使用することは避けてください。例えば、 {{HTMLElement("button")}} 要素を使用する代わりに {{HTMLElement("div")}} 要素を使用してボタンを記述する場合などです。
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/">Using the tabindex attribute | The Paciello Group</a></li>
-</ul>
+対話的要素でないものを使用して対話的コンポーネントを記述すると、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs)に掲載されません。これは、支援技術によって移動や操作を行うことを阻害します。このようなコンテンツは、代わりに ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, などの) 対話型要素を使用して意味的に記述するべきです。これらの要素には、 [ARIA](/ja/docs/Web/Accessibility/ARIA) によって管理しなければならないアクセシビリティにステータスを伝える、組み込みのロールと状態があります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+- [Using the tabindex attribute | The Paciello Group](https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/)
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>{{SpecName('HTML WHATWG')}} のスナップショットであり、 {{SpecName('HTML5 W3C')}} から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>{{SpecName('HTML WHATWG')}} のスナップショット。 {{SpecName("HTML4.01")}} との違いは、すべての要素でこの属性に対応したこと (グローバル属性化)。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素でのみ対応。</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+| 仕様書                                                                                           | 状態                             | 備考                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "interaction.html#attr-tabindex", "tabindex")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                |
+| {{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、 {{SpecName('HTML5 W3C')}} から変更なし。                                                                                                             |
+| {{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショット。 {{SpecName("HTML4.01")}} との違いは、すべての要素でこの属性に対応したこと (グローバル属性化)。                                                            |
+| {{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}} | {{Spec2('HTML4.01')}}     | {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素でのみ対応。 |
 
-<p>{{Compat("html.global_attributes.tabindex")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat("html.global_attributes.tabindex")}}
 
-<ul>
- <li>すべての<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>。</li>
- <li>{{domxref("HTMLElement.tabIndex")}} は、この属性を反映します。</li>
- <li>tabindex に関するアクセシビリティの問題について、 Adrian Roselli による <a href="http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html">Don’t Use Tabindex Greater than 0</a> を参照。</li>
-</ul>
+## 関連情報
+
+- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
+- {{domxref("HTMLElement.tabIndex")}} は、この属性を反映します。
+- tabindex に関するアクセシビリティの問題について、 Adrian Roselli による [Don’t Use Tabindex Greater than 0](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) を参照。

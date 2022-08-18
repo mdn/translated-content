@@ -11,125 +11,115 @@ tags:
   - Web
 translation_of: Web/HTML/Element/rt
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML のルビ文字列 (<code>&lt;rt&gt;</code>) 要素</strong>は、ルビによる注釈（振り仮名）のルビ文字列の部分を定義し、東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 <code>&lt;rt&gt;</code> 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。</p>
+**HTML のルビ文字列 (`<rt>`) 要素**は、ルビによる注釈（振り仮名）のルビ文字列の部分を定義し、東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 `<rt>` 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<p>より多くの例については {{HTMLElement("ruby")}} 要素についての記事を参照してください。</p>
+より多くの例については {{HTMLElement("ruby")}} 要素についての記事を参照してください。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{HTMLElement("rt")}} 要素の直後に {{HTMLElement("rt")}} 要素または {{HTMLElement("rp")}} 要素がある場合、または親要素内に他のコンテンツがない場合は終了タグを省略可能。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td>{{HTMLElement("ruby")}} 要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        {{HTMLElement("rt")}} 要素の直後に {{HTMLElement("rt")}}
+        要素または {{HTMLElement("rp")}}
+        要素がある場合、または親要素内に他のコンテンツがない場合は終了タグを省略可能。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("ruby")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes" title="HTML/Global attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この例では、 {{HTMLElement("ruby")}} 要素内の漢字にローマ字表記を提供します。</p>
+この例では、 {{HTMLElement("ruby")}} 要素内の漢字にローマ字表記を提供します。
 
-<div id="with-ruby">
-<pre class="brush: html notranslate">&lt;ruby&gt;
-  漢 &lt;rt&gt;Kan&lt;/rt&gt;
-  字 &lt;rt&gt;ji&lt;/rt&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  漢 <rt>Kan</rt>
+  字 <rt>ji</rt>
+</ruby>
+```
 
-<div class="hidden">
-<pre class="brush: css notranslate">body {
+```css hidden
+body {
   font-size: 22px;
 }
-</pre>
-</div>
-</div>
+```
 
-<p>このブラウザーの出力は次のように見えます。</p>
+このブラウザーの出力は次のように見えます。
 
-<p>{{EmbedLiveSample("with-ruby", 600, 60)}}</p>
+{{EmbedLiveSample("with-ruby", 600, 60)}}
 
-<p>ルビに対応して<em>いない</em>ブラウザーでは、この例は次のように見えます。</p>
+ルビに対応して*いない*ブラウザーでは、この例は次のように見えます。
 
-<div id="without-ruby">
-<div class="hidden">
-<pre class="brush: html notranslate">漢 Kan 字 ji</pre>
+```html hidden
+漢 Kan 字 ji
+```
 
-<pre class="brush: css notranslate">body {
+```css hidden
+body {
   font-size: 22px;
 }
-</pre>
-</div>
-</div>
+```
 
-<p>{{EmbedLiveSample("without-ruby", 600, 60)}}</p>
+{{EmbedLiveSample("without-ruby", 600, 60)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-rt-element', '&lt;rt&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-rt-element', '&lt;rt&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.rt")}}</p>
+{{Compat("html.elements.rt")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("ruby")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>{{HTMLElement("rtc")}}</li>
- <li>{{CSSXRef("text-transform", "text-transform: full-size-kana")}}</li>
-</ul>
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
+- {{CSSXRef("text-transform", "text-transform: full-size-kana")}}

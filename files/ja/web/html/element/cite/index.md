@@ -14,139 +14,135 @@ tags:
   - Web
 translation_of: Web/HTML/Element/cite
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の引用元要素</strong> (<strong><code>&lt;cite&gt;</code></strong>) は、引用された創作物の参照を表し、作品のタイトルを含む必要があります。参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。</span></p>
+**HTML の引用元要素** (**`<cite>`**) は、引用された創作物の参照を表し、作品のタイトルを含む必要があります。参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4) 以前では、この要素には {{domxref("HTMLSpanElement")}} インターフェイスが実装されています。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>
+        {{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4)
+        以前では、この要素には {{domxref("HTMLSpanElement")}}
+        インターフェイスが実装されています。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes" rel="internal">グローバル属性</a>のみを持ちます。</p>
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p><code>&lt;cite&gt;</code> 要素の文脈では、例えば以下のような創作物のうちの一つを引用することができます。</p>
+`<cite>` 要素の文脈では、例えば以下のような創作物のうちの一つを引用することができます。
 
-<div class="threecolumns" id="creative-works">
-<ul>
- <li>書籍</li>
- <li>研究論文</li>
- <li>エッセイ</li>
- <li>詩</li>
- <li>楽譜</li>
- <li>歌</li>
- <li>演劇や映画の台本</li>
- <li>映画</li>
- <li>テレビ番組</li>
- <li>ゲーム</li>
- <li>彫刻</li>
- <li>絵画</li>
- <li>舞台作品</li>
- <li>演劇</li>
- <li>オペラ</li>
- <li>ミュージカル</li>
- <li>展示</li>
- <li>事件報告書</li>
- <li>コンピュータープログラム</li>
- <li>ウェブサイト</li>
- <li>ウェブページ</li>
- <li>ブログ投稿やコメント</li>
- <li>フォーラム投稿やコメント</li>
- <li>ツイート</li>
- <li>Facebook 投稿</li>
- <li>記述された、または口頭の声明</li>
- <li>その他</li>
-</ul>
-</div>
+- 書籍
+- 研究論文
+- エッセイ
+- 詩
+- 楽譜
+- 歌
+- 演劇や映画の台本
+- 映画
+- テレビ番組
+- ゲーム
+- 彫刻
+- 絵画
+- 舞台作品
+- 演劇
+- オペラ
+- ミュージカル
+- 展示
+- 事件報告書
+- コンピュータープログラム
+- ウェブサイト
+- ウェブページ
+- ブログ投稿やコメント
+- フォーラム投稿やコメント
+- ツイート
+- Facebook 投稿
+- 記述された、または口頭の声明
+- その他
 
-<p>注目すべきこととして、 W3C の仕様書では、 <code>&lt;cite&gt;</code> 要素に含められる創作物の参照には、作者名を含めてよいとしています。しかし、 WHATWG における <code>&lt;cite&gt;</code> の仕様では逆に、どのような場合でも人名を含めてはならないとしています。</p>
+注目すべきこととして、 W3C の仕様書では、 `<cite>` 要素に含められる創作物の参照には、作者名を含めてよいとしています。しかし、 WHATWG における `<cite>` の仕様では逆に、どのような場合でも人名を含めてはならないとしています。
 
-<p>{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の {{htmlattrxref("cite", "blockquote")}} 属性を使用してください。</p>
+{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の {{htmlattrxref("cite", "blockquote")}} 属性を使用してください。
 
-<p>通常、ブラウザーは既定で <code>&lt;cite&gt;</code> に斜体を適用します。これを防ぐには、要素で既定のイタリックスタイルが使用されるのを避けるには、 <code>&lt;cite&gt;</code> 要素に CSS の {{cssxref("font-style")}} プロパティを適用してください。</p>
+通常、ブラウザーは既定で `<cite>` に斜体を適用します。これを防ぐには、要素で既定のイタリックスタイルが使用されるのを避けるには、 `<cite>` 要素に CSS の {{cssxref("font-style")}} プロパティを適用してください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html notranslate">より詳しい情報については &lt;cite&gt;[ISO-0000]&lt;/cite&gt; に記載されています。</pre>
+```html
+より詳しい情報については <cite>[ISO-0000]</cite> に記載されています。
+```
 
-<p>以下のように出力されます。</p>
+以下のように出力されます。
 
-<p>{{EmbedLiveSample("Example", 640, 60)}}</p>
+{{EmbedLiveSample("Example", 640, 60)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-cite-element', '&lt;cite&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-cite-element', '&lt;cite&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;cite&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-cite-element', '&lt;cite&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-cite-element', '&lt;cite&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;cite&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("html.elements.cite")}}</p>
-</div>
+{{Compat("html.elements.cite")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("blockquote")}} 要素は長い引用に使用します。</li>
- <li>{{HTMLElement("q")}} 要素は行内の引用に使用します。</li>
-</ul>
+- {{HTMLElement("blockquote")}} 要素は長い引用に使用します。
+- {{HTMLElement("q")}} 要素は行内の引用に使用します。

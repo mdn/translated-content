@@ -10,187 +10,196 @@ tags:
   - Web
 translation_of: Web/HTML/Element/label
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML の <code>&lt;label&gt;</code> 要素</strong>は、ユーザーインターフェイスの項目のキャプションを表します。</p>
+**HTML の `<label>` 要素**は、ユーザーインターフェイスの項目のキャプションを表します。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+`<label>` を {{htmlelement("input")}} 要素と関連付けると、いくらかの利点が発生します。
 
-<p><code>&lt;label&gt;</code> を {{htmlelement("input")}} 要素と関連付けると、いくらかの利点が発生します。</p>
+- ラベルのテキストが、対応するテキスト入力欄に視覚的に関連付けられるだけではありません。プログラム的にも関連付けられます。つまり、例えばユーザーがフォーム入力欄にフォーカスを移動した時、読み上げソフトがラベルを読み上げ、支援技術のユーザーが何のデータを入力するべきか理解しやすくすることができます。
+- 関連付けられたラベルをクリックして、入力欄自体をクリックした場合と同様に、入力欄にフォーカスを与えたりアクティブ化にしたりすることができます。こうしてヒット領域を拡大すると、タッチパネルの端末を使用している場合を含めて、入力欄をアクティブ化させやすくなります。
 
-<ul>
- <li>ラベルのテキストが、対応するテキスト入力欄に視覚的に関連付けられるだけではありません。プログラム的にも関連付けられます。つまり、例えばユーザーがフォーム入力欄にフォーカスを移動した時、読み上げソフトがラベルを読み上げ、支援技術のユーザーが何のデータを入力するべきか理解しやすくすることができます。</li>
- <li>関連付けられたラベルをクリックして、入力欄自体をクリックした場合と同様に、入力欄にフォーカスを与えたりアクティブ化にしたりすることができます。こうしてヒット領域を拡大すると、タッチパネルの端末を使用している場合を含めて、入力欄をアクティブ化させやすくなります。</li>
-</ul>
+`<label>` を `<input>` 要素に関連付けるには、 `<input>` に `id` 属性を設定しなければなりません。そして `<label>` に `for` 属性を設定して、値を input の `id` と同じにします。
 
-<p><code>&lt;label&gt;</code> を <code>&lt;input&gt;</code> 要素に関連付けるには、 <code>&lt;input&gt;</code> に <code>id</code> 属性を設定しなければなりません。そして <code>&lt;label&gt;</code> に <code>for</code> 属性を設定して、値を input の <code>id</code> と同じにします。</p>
+他の方法として、 `<input>` を直接 `<label>` の内側に入れることができますが、この場合は関連付けが明確なので、 `for` および `id` 属性は必要ありません。
 
-<p>他の方法として、 <code>&lt;input&gt;</code> を直接 <code>&lt;label&gt;</code> の内側に入れることができますが、この場合は関連付けが明確なので、 <code>for</code> および <code>id</code> 属性は必要ありません。</p>
+```html
+<label>Do you like peas?
+  <input type="checkbox" name="peas">
+</label>
+```
 
-<pre class="brush: html notranslate">&lt;label&gt;Do you like peas?
-  &lt;input type="checkbox" name="peas"&gt;
-&lt;/label&gt;
-</pre>
+その他の使用上の注意事項
 
-<p id="Usage_notes">その他の使用上の注意事項</p>
+- label がラベル付けするフォームコントロールは*ラベル付きコントロール* (labeled control) と呼ばれます。一つの入力欄に複数のラベルを関連付けることができます。
+- `<label>` がクリックやタップされ、それがフォームのコントロールに関連付けられていた場合は、 `click` イベントが関連付けられたコントロールにも発生するようになります。
 
-<ul>
- <li>label がラベル付けするフォームコントロールは<ruby><em>ラベル付きコントロール</em><rp> (</rp><rt>labeled control</rt><rp>) </rp></ruby>と呼ばれます。一つの入力欄に複数のラベルを関連付けることができます。</li>
- <li><code>&lt;label&gt;</code> がクリックやタップされ、それがフォームのコントロールに関連付けられていた場合は、 <code>click</code> イベントが関連付けられたコントロールにも発生するようになります。</li>
-</ul>
+## 属性
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+- {{htmlattrdef("for")}}
 
-<dl>
- <dt>{{htmlattrdef("for")}}</dt>
- <dd><code>&lt;label&gt;</code> 要素と同一の文書内にある<a href="/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能">ラベル付け可能</a>フォーム関連要素の {{htmlattrxref("id")}}。文書中の <code>for</code> 属性の値と合致する <code>id</code> を持つ最初の要素がラベル付け可能な要素であれば、このラベル要素の示す<em>ラベル付きコントロール</em>となります。<a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">ラベル付け可能要素</a>でなければ、 <code>for</code> 属性は効果がありません。一致する <code>id</code> 値を持つ他の要素が文書内のその後にあったとしても、考慮されません。
- <div class="note"><strong>注</strong>: <code>&lt;label&gt;</code> 要素は、 <code>for</code> 属性が指す要素が包含するコントロール要素である場合、 <code>for</code> 属性を持ちつつ、中にコントロール要素を含めることができます。</div>
- </dd>
-</dl>
+  - : `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能)フォーム関連要素の {{htmlattrxref("id")}}。文書中の `for` 属性の値と合致する `id` を持つ最初の要素がラベル付け可能な要素であれば、このラベル要素の示す*ラベル付きコントロール*となります。[ラベル付け可能要素](https://html.spec.whatwg.org/multipage/forms.html#category-label)でなければ、 `for` 属性は効果がありません。一致する `id` 値を持つ他の要素が文書内のその後にあったとしても、考慮されません。
 
-<h2 id="Styling_with_CSS" name="Styling_with_CSS">CSS のスタイル付け</h2>
+    > **Note:** **注**: `<label>` 要素は、 `for` 属性が指す要素が包含するコントロール要素である場合、 `for` 属性を持ちつつ、中にコントロール要素を含めることができます。
 
-<p><code>&lt;label&gt;</code> には特殊なスタイル上の考慮事項はありません。 — 構造的に単純なインライン要素であり、ほとんどは {{htmlelement("span")}} や {{htmlelement("a")}} 要素と同じ方法でスタイルを適用します。テキストが読みにくくならない限り、あらゆる方法でスタイルを適用することができます。</p>
+## CSS のスタイル付け
 
-<h2 id="Examples" name="Examples">例</h2>
+`<label>` には特殊なスタイル上の考慮事項はありません。 — 構造的に単純なインライン要素であり、ほとんどは {{htmlelement("span")}} や {{htmlelement("a")}} 要素と同じ方法でスタイルを適用します。テキストが読みにくくならない限り、あらゆる方法でスタイルを適用することができます。
 
-<h3 id="Simple_label_example" name="Simple_label_example">シンプルな label の例</h3>
+## 例
 
-<pre class="brush: html notranslate">&lt;label&gt;Click me &lt;input type="text"&gt;&lt;/label&gt;</pre>
+### シンプルな label の例
 
-<p>{{EmbedLiveSample('Simple_label_example', '200', '50', '')}}</p>
+```html
+<label>Click me <input type="text"></label>
+```
 
-<h3 id="Using_the_for_attribute" name="Using_the_for_attribute">"for" 属性の使用例</h3>
+{{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
 
-<pre class="brush: html notranslate">&lt;label for="username"&gt;Click me&lt;/label&gt;
-&lt;input type="text" id="username"&gt;</pre>
+### "for" 属性の使用例
 
-<p>{{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}</p>
+```html
+<label for="username">Click me</label>
+<input type="text" id="username">
+```
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+{{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
 
-<h3 id="Interactive_content" name="Interactive_content">対話型コンテンツ</h3>
+## アクセシビリティの考慮
 
-<p><code>label</code> の中に{{HTMLElement("a", "アンカー")}}や{{HTMLElement("button", "ボタン")}}のような対話型要素を配置しないでください。そのようにすると、ユーザーが <code>label</code> に関連したフォーム入力欄を有効化する事が難しくなります。</p>
+### 対話型コンテンツ
 
-<h4 id="Dont" name="Dont">悪い例</h4>
+`label` の中に{{HTMLElement("a", "アンカー")}}や{{HTMLElement("button", "ボタン")}}のような対話型要素を配置しないでください。そのようにすると、ユーザーが `label` に関連したフォーム入力欄を有効化する事が難しくなります。
 
-<pre class="brush: html example-bad notranslate">&lt;label for="tac"&gt;
-  &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
-  &lt;a href="terms-and-conditions.html"&gt;利用規約と利用条件&lt;/a&gt;に同意します。
-&lt;/label&gt;
-</pre>
+#### 悪い例
 
-<h4 id="Do" name="Do">良い例</h4>
+```html example-bad
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <a href="terms-and-conditions.html">利用規約と利用条件</a>に同意します。
+</label>
+```
 
-<pre class="brush: html example-good notranslate">&lt;label for="tac"&gt;
-  &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
+#### 良い例
+
+```html example-good
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
   利用規約と利用条件に同意します。
-&lt;/label&gt;
-&lt;p&gt;
-  &lt;a href="terms-and-conditions.html"&gt;利用規約と利用条件を読む&lt;/a&gt;
-&lt;/p&gt;
-</pre>
+</label>
+<p>
+  <a href="terms-and-conditions.html">利用規約と利用条件を読む</a>
+</p>
+```
 
-<h3 id="Headings" name="Headings">見出し</h3>
+### 見出し
 
-<p>見出しは一般的に<a href="/ja/docs/Web/HTML/Element/Heading_Elements#Navigation">ナビゲーションエイド</a>として使用されるため、 <code>&lt;label&gt;</code> の中に<a href="/ja/docs/Web/HTML/Element/Heading_Elements">ヘッダー要素</a>を配置すると、数多くの種類の支援技術を妨げることになります。ラベルの文字列を視覚的に調整する必要がある場合は、代わりに <code>&lt;label&gt;</code> 要素に CSS クラスを適用してください。</p>
+見出しは一般的に[ナビゲーションエイド](/ja/docs/Web/HTML/Element/Heading_Elements#Navigation)として使用されるため、 `<label>` の中に[ヘッダー要素](/ja/docs/Web/HTML/Element/Heading_Elements)を配置すると、数多くの種類の支援技術を妨げることになります。ラベルの文字列を視覚的に調整する必要がある場合は、代わりに `<label>` 要素に CSS クラスを適用してください。
 
-<p><a href="/ja/docs/Web/HTML/Element/form">フォーム</a>、またはフォームのセクションにタイトルが必要な場合は、 {{HTMLElement("fieldset")}} の中に {{HTMLElement("legend")}} を配置して使用してください。</p>
+[フォーム](/ja/docs/Web/HTML/Element/form)、またはフォームのセクションにタイトルが必要な場合は、 {{HTMLElement("fieldset")}} の中に {{HTMLElement("legend")}} を配置して使用してください。
 
-<h4 id="Dont_2" name="Dont_2">悪い例</h4>
+#### 悪い例
 
-<pre class="brush: html example-bad notranslate">&lt;label for="your-name"&gt;
-  &lt;h3&gt;Your name&lt;/h3&gt;
-  &lt;input id="your-name" name="your-name" type="text"&gt;
-&lt;/label&gt;
-</pre>
+```html example-bad
+<label for="your-name">
+  <h3>Your name</h3>
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
 
-<h4 id="Do_2" name="Do_2">良い例</h4>
+#### 良い例
 
-<pre class="brush: html example-good notranslate">&lt;label class="large-label" for="your-name"&gt;
+```html example-good
+<label class="large-label" for="your-name">
   Your name
-  &lt;input id="your-name" name="your-name" type="text"&gt;
-&lt;/label&gt; </pre>
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
 
-<h3 id="Buttons" name="Buttons">ボタン</h3>
+### ボタン
 
-<p>{{HTMLElement("input")}} 要素に <code>type="button"</code> がついた宣言に妥当な <code>value</code> 属性があれば、関連付けるラベルは必要ありません。ラベルを付けると、支援技術がボタン入力をどう解釈するかをじゃまする可能性があります。 {{HTMLElement("button")}} 要素でも同じことが言えます。</p>
+{{HTMLElement("input")}} 要素に `type="button"` がついた宣言に妥当な `value` 属性があれば、関連付けるラベルは必要ありません。ラベルを付けると、支援技術がボタン入力をどう解釈するかをじゃまする可能性があります。 {{HTMLElement("button")}} 要素でも同じことが言えます。
 
-<h2 id="Technical_summary" name="Technical_summary">技術的概要</h2>
+## 技術的概要
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、ただし、子孫に <code>label</code> 要素を持つことはできない。ラベル付けの対象となるコントロール以外の<a href="/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能">ラベル付け可能</a>要素を入れてはならない。</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>許可されている <code>role</code> なし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLLabelElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          >対話型コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+          >フォーム関連要素</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、ただし、子孫に
+        <code>label</code>
+        要素を持つことはできない。ラベル付けの対象となるコントロール以外の<a
+          href="/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能"
+          >ラベル付け可能</a
+        >要素を入れてはならない。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLLabelElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-label-element', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="https://www.w3.org/TR/REC-html40-971218/interact/forms.html#h-17.9.1" hreflang="en" lang="en" rel="noopener">HTML 4.0 Specification<br>
-    <small lang="ja">&lt;label&gt; の定義</small></a></td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                         | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}}           | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5 W3C', 'sec-forms.html#the-label-element', '&lt;label&gt;')}}       | {{Spec2('HTML5 W3C')}}     |          |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}               | {{Spec2('HTML4.01')}}     |          |
+| [HTML 4.0 Specification \<label> の定義](https://www.w3.org/TR/REC-html40-971218/interact/forms.html#h-17.9.1) | {{Spec2('HTML4.01')}}     | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.label")}}</p>
+{{Compat("html.elements.label")}}

@@ -8,106 +8,127 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/footer
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;footer&gt;</code> 要素</strong>は、直近の<a href="/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ">区分コンテンツ</a>または<a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_root">区分化ルート</a>要素のフッターを表します。フッターには通常、そのセクションの著作者に関する情報、関連文書へのリンク、著作権情報等を含めます。</span></p>
+**HTML の `<footer>` 要素**は、直近の[区分コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_root)要素のフッターを表します。フッターには通常、そのセクションの著作者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。但し、他の <code>&lt;footer&gt;</code> や {{HTMLElement("header")}} の子孫がないもの。</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。ただし、 {{HTMLElement("address")}}, {{HTMLElement("header")}}, 他の <code>&lt;footer&gt;</code> の子孫要素として配置してはならない。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>、ただし <a href="/ja/docs/Web/HTML/Element/article">article</a>, <a href="/ja/docs/Web/HTML/Element/aside">aside</a>, <a href="/ja/docs/Web/HTML/Element/main">main</a>, <a href="/ja/docs/Web/HTML/Element/nav">nav</a>, <a href="/ja/docs/Web/HTML/Element/section">section</a> のいずれかの要素、または <code>role=<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a> がある要素の子である場合は<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}, {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >。但し、他の <code>&#x3C;footer></code> や
+        {{HTMLElement("header")}} の子孫がないもの。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素。ただし、
+        {{HTMLElement("address")}}, {{HTMLElement("header")}},
+        他の <code>&#x3C;footer></code> の子孫要素として配置してはならない。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role"
+          >contentinfo</a
+        >、ただし <a href="/ja/docs/Web/HTML/Element/article">article</a>,
+        <a href="/ja/docs/Web/HTML/Element/aside">aside</a>,
+        <a href="/ja/docs/Web/HTML/Element/main">main</a>,
+        <a href="/ja/docs/Web/HTML/Element/nav">nav</a>,
+        <a href="/ja/docs/Web/HTML/Element/section">section</a>
+        のいずれかの要素、または
+        <code
+          >role=<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+            >article</a
+          ></code
+        >,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+          >complementary</a
+        >, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+          >navigation</a
+        >,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a>
+        がある要素の子である場合は<a
+          href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        {{ARIARole("group")}}, {{ARIARole("presentation")}},
+        {{ARIARole("none")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+## 使用上のメモ
 
-<ul>
- <li>セクションの著作者や編集者の連絡先情報は、多くの場合 <code>&lt;footer&gt;</code> 要素内に {{HTMLElement("address")}} 要素として配置します。</li>
- <li><code>&lt;footer&gt;</code> 要素は区分コンテンツではありません。つまり、この要素が新たな<a href="/ja/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">アウトライン</a>を生成することはありません。</li>
-</ul>
+- セクションの著作者や編集者の連絡先情報は、多くの場合 `<footer>` 要素内に {{HTMLElement("address")}} 要素として配置します。
+- `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document")を生成することはありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html notranslate">&lt;footer&gt;
+```html
+<footer>
   Some copyright info or perhaps some author
-  info for an &amp;lt;article&amp;gt;?
-&lt;/footer&gt;
-</pre>
+  info for an &lt;article&gt;?
+</footer>
+```
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<p>Safari 13 のリリース以前は、 <code>contentinfo</code> の<a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">ランドマークロール</a>が <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> によって適切に公開されていませんでした。古い Safari ブラウザーに対応する必要がある場合は、 <code>role="contentinfo"</code> を <code>footer</code> 要素に追加して、ランドマークが適切に表示されるようにしてください。</p>
+Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロール](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks)が [VoiceOver](https://help.apple.com/voiceover/info/guide/) によって適切に公開されていませんでした。古い Safari ブラウザーに対応する必要がある場合は、 `role="contentinfo"` を `footer` 要素に追加して、ランドマークが適切に表示されるようにしてください。
 
-<ul>
- <li>関連記事: <a href="https://bugs.webkit.org/show_bug.cgi?id=146930">WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't</a></li>
-</ul>
+- 関連記事: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://bugs.webkit.org/show_bug.cgi?id=146930)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-footer-element', '&lt;footer&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-footer-element', '&lt;footer&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', '#the-footer-element', '&lt;footer&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'sections.html#the-footer-element', '&lt;footer&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.footer")}}</p>
+{{Compat("html.elements.footer")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">HTML のセクションとアウトラインの使用</a></li>
- <li class="last"><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">ARIA: Contentinfo ロール</a></li>
-</ul>
+- 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [ARIA: Contentinfo ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)

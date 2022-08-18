@@ -10,136 +10,139 @@ tags:
   - Web
 translation_of: Web/HTML/Element/meter
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML の <code>&lt;meter&gt;</code> 要素</strong>は、既知の範囲内のスカラー値、または小数値を表します。</p>
+**HTML の `<meter>` 要素**は、既知の範囲内のスカラー値、または小数値を表します。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, ラベル付け可能コンテンツ, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。ただし他の <code>&lt;meter&gt;</code> 要素の子孫要素として配置してはならない。</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>許可されている <code>role</code> なし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLMeterElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, ラベル付け可能コンテンツ, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >。ただし他の
+        <code>&#x3C;meter></code> 要素の子孫要素として配置してはならない。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLMeterElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>他のすべての要素と同様に、この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を持ちます。</p>
+他のすべての要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-<dl>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>現在の数値。<code>min</code> 属性と <code>max</code> 属性が指定されている場合、これらの表す範囲内に収まる値でなくてはなりません。この <code>value</code> 属性が未定義、あるいは不正な値であった場合は、その値は <code>0</code> となります。指定されている値が <code>min</code> 属性と <code>max</code> 属性が示す範囲の範囲外の値である場合、その範囲の内のもっとも近い値が適用されます。
- <div class="note"><strong>注意:</strong> <code>value</code> 属性の値が <code>0</code> を下限、<code>1</code> を上限とするものでない限り、<code>min</code> 属性および <code>max</code> 属性で <code>value</code> 属性の下限および上限を定義しなくてはなりません。</div>
- </dd>
- <dt>{{htmlattrdef("min")}}</dt>
- <dd>範囲全体の下限。 <code>max</code> 属性により上限が設定されている場合は、それより小さい値でなくてはなりません。未設定の場合、下限値は <code>0</code> となります。</dd>
- <dt>{{htmlattrdef("max")}}</dt>
- <dd>範囲全体の上限。 <code>min</code> 属性により下限が設定されている場合は、それより大きい値でなくてはなりません。未設定の場合、上限値は <code>1</code> となります。</dd>
- <dt>{{htmlattrdef("low")}}</dt>
- <dd>「低」とされる範囲全体の上限値。属性値は、<code>min</code> 属性の値より大きく、かつ <code>high</code> 属性および <code>max</code> 属性の値より小さいものでなくてはなりません (※これらが定義されている場合)。<code>low</code> が未定義、もしくはその値が <code>min</code> 属性の値より小さい場合、<code>low</code> の値は最小値と同じです。</dd>
- <dt>{{htmlattrdef("high")}}</dt>
- <dd>「高」とされる範囲全体の下限値。属性値は、<code>max</code> 属性の値より小さく、かつ <code>low</code> 属性や <code>min</code> 属性の値より大きいものでなくてはなりません (※これらが定義されている場合)。<code>high</code> 属性が未定義、もしくはその値が <code>max</code> 属性の値より大きい場合、<code>high</code> の値は最大値と同じです。</dd>
- <dt>{{htmlattrdef("optimum")}}</dt>
- <dd><strong>最適な数値の範囲</strong>を表します。<code>min</code> 属性と <code>max</code> 属性によって定義される範囲内の値でなくてはなりません。 <code>low</code> 属性と <code>high</code> 属性が指定されている場合、この属性の値を含む範囲が最適な数値の範囲とみなされます。例えば、値が <code>min</code> 属性と <code>low</code> 属性の間のいずれかであった場合、「低」の範囲が最適な数値となります。ブラウザーは optimum の値以下であるかどうかでメーターのバーの色を変更することがあります。</dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd><code>&lt;meter&gt;</code> 要素と関連付ける {{HTMLElement("form")}} 要素 (<em>フォームオーナー</em>) です。この属性の値は同じ文書内の <code>&lt;form&gt;</code> の {{htmlattrxref("id")}} である必要があります。この属性が設定されていなかった場合、その <code>&lt;meter&gt;</code> の祖先に <code>&lt;form&gt;</code> 要素があれば、それに関連付けられます。この属性は <code>&lt;meter&gt;</code> 要素がフォーム関連要素として使用されている場合、例えば対応する <a href="/ja/docs/Web/HTML/Element/input/number"><code>&lt;input type="number"&gt;</code></a> の範囲を表示するようなものでのみ使用されます。</dd>
-</dl>
+- {{htmlattrdef("value")}}
 
-<h2 id="Examples" name="Examples">例</h2>
+  - : 現在の数値。`min` 属性と `max` 属性が指定されている場合、これらの表す範囲内に収まる値でなくてはなりません。この `value` 属性が未定義、あるいは不正な値であった場合は、その値は `0` となります。指定されている値が `min` 属性と `max` 属性が示す範囲の範囲外の値である場合、その範囲の内のもっとも近い値が適用されます。
 
-<h3 id="Simple_example" name="Simple_example">シンプルな例</h3>
+    > **Note:** **注意:** `value` 属性の値が `0` を下限、`1` を上限とするものでない限り、`min` 属性および `max` 属性で `value` 属性の下限および上限を定義しなくてはなりません。
 
-<h4 id="HTML">HTML</h4>
+- {{htmlattrdef("min")}}
+  - : 範囲全体の下限。 `max` 属性により上限が設定されている場合は、それより小さい値でなくてはなりません。未設定の場合、下限値は `0` となります。
+- {{htmlattrdef("max")}}
+  - : 範囲全体の上限。 `min` 属性により下限が設定されている場合は、それより大きい値でなくてはなりません。未設定の場合、上限値は `1` となります。
+- {{htmlattrdef("low")}}
+  - : 「低」とされる範囲全体の上限値。属性値は、`min` 属性の値より大きく、かつ `high` 属性および `max` 属性の値より小さいものでなくてはなりません (※これらが定義されている場合)。`low` が未定義、もしくはその値が `min` 属性の値より小さい場合、`low` の値は最小値と同じです。
+- {{htmlattrdef("high")}}
+  - : 「高」とされる範囲全体の下限値。属性値は、`max` 属性の値より小さく、かつ `low` 属性や `min` 属性の値より大きいものでなくてはなりません (※これらが定義されている場合)。`high` 属性が未定義、もしくはその値が `max` 属性の値より大きい場合、`high` の値は最大値と同じです。
+- {{htmlattrdef("optimum")}}
+  - : **最適な数値の範囲**を表します。`min` 属性と `max` 属性によって定義される範囲内の値でなくてはなりません。 `low` 属性と `high` 属性が指定されている場合、この属性の値を含む範囲が最適な数値の範囲とみなされます。例えば、値が `min` 属性と `low` 属性の間のいずれかであった場合、「低」の範囲が最適な数値となります。ブラウザーは optimum の値以下であるかどうかでメーターのバーの色を変更することがあります。
+- {{htmlattrdef("form")}}
+  - : `<meter>` 要素と関連付ける {{HTMLElement("form")}} 要素 (_フォームオーナー_) です。この属性の値は同じ文書内の `<form>` の {{htmlattrxref("id")}} である必要があります。この属性が設定されていなかった場合、その `<meter>` の祖先に `<form>` 要素があれば、それに関連付けられます。この属性は `<meter>` 要素がフォーム関連要素として使用されている場合、例えば対応する [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) の範囲を表示するようなものでのみ使用されます。
 
-<pre class="brush: html notranslate">&lt;p&gt;オーブンの温度: &lt;meter min="200" max="500"
-  value="350"&gt;350 degrees&lt;/meter&gt;&lt;/p&gt;
-</pre>
+## 例
 
-<h4 id="Result" name="Result">結果</h4>
+### シンプルな例
 
-<p>{{EmbedLiveSample("Simple_example", 300, 60)}}</p>
+#### HTML
 
-<p>Google Chrome での表示結果は以下のようになります。</p>
+```html
+<p>オーブンの温度: <meter min="200" max="500"
+  value="350">350 degrees</meter></p>
+```
 
-<p><img alt="meter1.png" class="default internal" src="/@api/deki/files/4940/=meter1.png"></p>
+#### 結果
 
-<h3 id="High_and_Low_range_example" name="High_and_Low_range_example">「高」の範囲と「低」の範囲の使用例</h3>
+{{EmbedLiveSample("Simple_example", 300, 60)}}
 
-<p>この例では {{htmlattrxref("min", "meter")}} 属性が省略されています。よって、下限値は <code>0</code> となっています。</p>
+Google Chrome での表示結果は以下のようになります。
 
-<h4 id="HTML_2">HTML</h4>
+![meter1.png](/@api/deki/files/4940/=meter1.png)
 
-<pre class="brush: html notranslate">&lt;p&gt;He got a &lt;meter low="69" high="80" max="100"
-  value="84"&gt;B&lt;/meter&gt; on the exam.&lt;/p&gt;
-</pre>
+### 「高」の範囲と「低」の範囲の使用例
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+この例では {{htmlattrxref("min", "meter")}} 属性が省略されています。よって、下限値は `0` となっています。
 
-<p>{{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}</p>
+#### HTML
 
-<p>Google Chrome では、 meter の結果は次のように見えます。</p>
+```html
+<p>He got a <meter low="69" high="80" max="100"
+  value="84">B</meter> on the exam.</p>
+```
 
-<p><img alt="meter2.png" class="default internal" src="/@api/deki/files/4941/=meter2.png"></p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-meter-element', '&lt;meter&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-meter-element', '&lt;meter&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+Google Chrome では、 meter の結果は次のように見えます。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+![meter2.png](/@api/deki/files/4941/=meter2.png)
 
-<p>{{Compat("html.elements.meter")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+| 仕様書                                                                                                   | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', '&lt;meter&gt;')}}     | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5 W3C', 'sec-forms.html#the-meter-element', '&lt;meter&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
 
-<ul>
- <li>{{HTMLElement("progress")}}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat("html.elements.meter")}}
+
+## 関連情報
+
+- {{HTMLElement("progress")}}

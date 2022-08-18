@@ -12,249 +12,256 @@ tags:
   - 要素
 translation_of: Web/HTML/Element/select
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;select&gt;</code> 要素</strong>は、選択式のメニューを提供するコントロールを表します。</span></p>
+**HTML の `<select>` 要素**は、選択式のメニューを提供するコントロールを表します。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+上のデモは、典型的な `<select>` の利用方法を示しています。アクセシビリティのために、 {{htmlelement("label")}} と結び付けられるように `id` 属性が与えられています。それぞれのメニューの選択肢は、 `<select>` の中の {{htmlelement("option")}} 要素で定義されています。
 
-<p>上のデモは、典型的な <code>&lt;select&gt;</code> の利用方法を示しています。アクセシビリティのために、 {{htmlelement("label")}} と結び付けられるように <code>id</code> 属性が与えられています。それぞれのメニューの選択肢は、 <code>&lt;select&gt;</code> の中の {{htmlelement("option")}} 要素で定義されています。</p>
+`<option>` 要素は、選択肢が選択されたときにサーバーに送信するデータの値を含む {{htmlattrxref("value", "option")}} 属性を持ちます。 `value` 属性が含まれない場合、既定で要素の中に含まれるテキストの値が使用されます。 `<option>` 要素に {{htmlattrxref("selected")}} 属性を付けることで、ページが最初に読み込まれたときに既定で選択状態にすることができます。
 
-<p><code>&lt;option&gt;</code> 要素は、選択肢が選択されたときにサーバーに送信するデータの値を含む {{htmlattrxref("value", "option")}} 属性を持ちます。 <code>value</code> 属性が含まれない場合、既定で要素の中に含まれるテキストの値が使用されます。 <code>&lt;option&gt;</code> 要素に {{htmlattrxref("selected")}} 属性を付けることで、ページが最初に読み込まれたときに既定で選択状態にすることができます。</p>
+`<select>` 要素は、複数の選択肢を選択することができるかどうかを定める `multiple`、同時にいくつの選択肢を表示することができるかを定める `size` など、制御のために利用することができる固有の属性がいくつかあります。 `required`, `disabled`, `autofocus`, などのような一般のフォーム入力属性の多くも受け付けます。
 
-<p><code>&lt;select&gt;</code> 要素は、複数の選択肢を選択することができるかどうかを定める <code>multiple</code>、同時にいくつの選択肢を表示することができるかを定める <code>size</code> など、制御のために利用することができる固有の属性がいくつかあります。 <code>required</code>, <code>disabled</code>, <code>autofocus</code>, などのような一般のフォーム入力属性の多くも受け付けます。</p>
+さらに、 `<option>` 要素を {{htmlelement("optgroup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。
 
-<p>さらに、 <code>&lt;option&gt;</code> 要素を {{htmlelement("optgroup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。</p>
+その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/Learn/HTML/Forms/The_native_form_widgets#Drop-down_content)を参照してください。
 
-<p>その他の例は、<a href="/ja/docs/Learn/HTML/Forms/The_native_form_widgets#Drop-down_content">ネイティブフォームウィジェット: ドロップダウンコンテンツ</a>を参照してください。</p>
+## 属性
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-<p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を持ちます。</p>
+<dl><dt>{{htmlattrdef("autocomplete")}}</dt><dd>{{domxref("DOMString")}} で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 <a href="/ja/docs/Web/HTML/Attributes/autocomplete">HTML の autocomplete 属性</a>を参照してください。</dd><dt>{{htmlattrdef("autofocus")}}</dt><dd>真偽値属性で、ページが読み込まれた時にこのフォームコントロールが入力フォーカスを持つべきであることを指定することができます。文書内で <code>autofocus</code> 属性を持つことができるフォーム要素は一つだけです。</dd><dt>{{htmlattrdef("disabled")}}</dt><dd>真偽値属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に <code>disabled</code> 属性を持つものがなければ、そのコントロールは利用可能です。</dd><dt>{{htmlattrdef("form")}}</dt><dd><code>&#x3C;select></code> を関連付ける {{HTMLElement("form")}} 要素 (<em>フォームオーナー</em>) です。この属性の値は、同じ文書内の <code>form</code> 要素の {{htmlattrxref("id")}} でなければなりません。 (この属性が設定されていない場合は、 <code>&#x3C;select></code> はその祖先である <code>&#x3C;form></code> が存在すればそれと関連付けられます。)</dd><dd>この属性によって、 <code>&#x3C;select></code> 要素は、 <code>&#x3C;form></code> 要素の子孫に限らず、文書内のどこの <code>&#x3C;form></code> と結び付けることもできます。これは祖先の <code>&#x3C;form></code> を上書きすることもできます。</dd><dt>{{htmlattrdef("multiple")}}</dt><dd>真偽値属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 <code>multiple</code> が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。</dd><dt>{{htmlattrdef("name")}}</dt><dd>この属性は、コントロールの名前を指定するために使用します。</dd><dt>{{htmlattrdef("required")}}</dt><dd>真偽値属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。</dd><dt>{{htmlattrdef("size")}}</dt><dd><p>コントロールがスクロールするリストボックスとして表示される場合 (つまり、 <code>multiple</code> が指定されている場合)、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は <code>0</code> です。</p><div class="note"><strong>注:</strong> HTML5 の仕様によると、 size 属性の初期値は <code>1</code> であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも <code>0</code> を返し続けることを選択しました。</div></dd></dl>
 
-<dl>
- <dt>{{htmlattrdef("autocomplete")}}</dt>
- <dd>{{domxref("DOMString")}} で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 <a href="/ja/docs/Web/HTML/Attributes/autocomplete">HTML の autocomplete 属性</a>を参照してください。</dd>
- <dt>{{htmlattrdef("autofocus")}}</dt>
- <dd>真偽値属性で、ページが読み込まれた時にこのフォームコントロールが入力フォーカスを持つべきであることを指定することができます。文書内で <code>autofocus</code> 属性を持つことができるフォーム要素は一つだけです。</dd>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>真偽値属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に <code>disabled</code> 属性を持つものがなければ、そのコントロールは利用可能です。</dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd><code>&lt;select&gt;</code> を関連付ける {{HTMLElement("form")}} 要素 (<em>フォームオーナー</em>) です。この属性の値は、同じ文書内の <code>form</code> 要素の {{htmlattrxref("id")}} でなければなりません。 (この属性が設定されていない場合は、 <code>&lt;select&gt;</code> はその祖先である <code>&lt;form&gt;</code> が存在すればそれと関連付けられます。)</dd>
- <dd>この属性によって、 <code>&lt;select&gt;</code> 要素は、 <code>&lt;form&gt;</code> 要素の子孫に限らず、文書内のどこの <code>&lt;form&gt;</code> と結び付けることもできます。これは祖先の <code>&lt;form&gt;</code> を上書きすることもできます。</dd>
- <dt>{{htmlattrdef("multiple")}}</dt>
- <dd>真偽値属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 <code>multiple</code> が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。</dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>この属性は、コントロールの名前を指定するために使用します。</dd>
- <dt>{{htmlattrdef("required")}}</dt>
- <dd>真偽値属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。</dd>
- <dt>{{htmlattrdef("size")}}</dt>
- <dd>
- <p>コントロールがスクロールするリストボックスとして表示される場合 (つまり、 <code>multiple</code> が指定されている場合)、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は <code>0</code> です。</p>
+## 使用上の注意
 
- <div class="note"><strong>注:</strong> HTML5 の仕様によると、 size 属性の初期値は <code>1</code> であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも <code>0</code> を返し続けることを選択しました。</div>
- </dd>
-</dl>
+### 複数の項目の選択
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+デスクトップコンピューターでは、 `<select>` 要素に `multiple` 属性がついている場合に、複数の項目を選択する方法がいくつもあります。
 
-<h3 id="Selecting_multiple_options" name="Selecting_multiple_options">複数の項目の選択</h3>
+マウスを使用すると、 <kbd>Ctrl</kbd>, <kbd>Command</kbd>, <kbd>Shift</kbd> キー (オペレーティングシステムによって異なります) を押しながらクリックすることで、複数の項目を選択または解除することができます。
 
-<p>デスクトップコンピューターでは、 <code>&lt;select&gt;</code> 要素に <code>multiple</code> 属性がついている場合に、複数の項目を選択する方法がいくつもあります。</p>
+> **Warning:** **警告**: キーボードから連続していない複数の項目を選択する仕組みは、今のところ Firefox でしか動作しないようです。
+>
+> **注:** macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS 既定の _Mission Control_ および _Application windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
 
-<p>マウスを使用すると、 <kbd>Ctrl</kbd>, <kbd>Command</kbd>, <kbd>Shift</kbd> キー (オペレーティングシステムによって異なります) を押しながらクリックすることで、複数の項目を選択または解除することができます。</p>
+キーボードを使用して、連続した複数の項目を選択するには以下のようにします。
 
-<div class="blockIndicator warning">
-<p><strong>警告</strong>: キーボードから連続していない複数の項目を選択する仕組みは、今のところ Firefox でしか動作しないようです。</p>
+- `<select>` 要素にフォーカスを移動します。 (例えば&#x20;
 
-<p><strong>注:</strong> macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS 既定の <em>Mission Control</em> および <em>Application windows</em> のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。</p>
-</div>
+  <kbd>Tab</kbd>
 
-<p>キーボードを使用して、連続した複数の項目を選択するには以下のようにします。</p>
+  &#x20;を使用するなど)。
 
-<ul>
- <li><code>&lt;select&gt;</code> 要素にフォーカスを移動します。 (例えば <kbd>Tab</kbd> を使用するなど)。</li>
- <li><kbd>↑</kbd> および <kbd>↓</kbd> のカーソルキーを使用して、項目を上下に移動し、選択したい範囲の先頭または末尾の項目を選択する。</li>
- <li><kbd>Shift</kbd> キーを押したまま <kbd>↑</kbd> および <kbd>↓</kbd> のカーソルキーを使用して、項目を選択する範囲を増加または減少させる。</li>
-</ul>
+- <kbd>↑</kbd>
 
-<p>キーボードを使用して、連続していない複数の項目を選択するには以下のようにします。</p>
+  &#x20;および&#x20;
 
-<ul>
- <li><code>&lt;select&gt;</code> 要素にフォーカスを移動します。 (例えば <kbd>Tab</kbd> を使用するなど)。</li>
- <li><kbd>Ctrl</kbd> キーを押したまま <kbd>↑</kbd> および <kbd>↓</kbd> のカーソルキーを使用して「フォーカスのある」選択肢を、選択したいものに移動します。「フォーカスのある」選択肢は、キーボードでリンクをフォーカスしたときと同様に、点線の輪郭線で強調されます。</li>
- <li><kbd>スペース</kbd>を押して「フォーカスのある」選択肢を選択または解除します。</li>
-</ul>
+  <kbd>↓</kbd>
 
-<h2 id="Styling_with_CSS" name="Styling_with_CSS">CSS のスタイル付け</h2>
+  &#x20;のカーソルキーを使用して、項目を上下に移動し、選択したい範囲の先頭または末尾の項目を選択する。
 
-<p><code>&lt;select&gt;</code> 要素は、 CSS を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。 — 例えば、<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model">ボックスモデル</a>や<a href="/ja/docs/Web/CSS/CSS_Fonts">表示されるフォント</a>を操作する、 {{cssxref("appearance")}} プロパティを使用してシステムの既定の <code>appearance</code> を削除することができます。</p>
+- <kbd>Shift</kbd>
 
-<p>しかし、これらのプロパティはブラウザー間で一貫した結果が得られませんし、異なる種類のフォーム要素を互いに一列に並べたりするのは困難なことです。 <code>&lt;select&gt;</code> 要素の内部構造は複雑で、制御するのは困難です。完全に制御したいのであれば、スタイル付けをするのに優れた機能を備えたライブラリを使用するか、非意味的要素や JavaScript や <a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> をを使用して独自のドロップダウンメニューを実装することを検討してください。</p>
+  &#x20;キーを押したまま&#x20;
 
-<p><code>&lt;select&gt;</code> のスタイル付けについてのさらなる有益な情報は、以下を参照してください。</p>
+  <kbd>↑</kbd>
 
-<ul>
- <li><a href="/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">HTML フォームのスタイル付け</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">HTML フォームの高度なスタイル付け</a></li>
-</ul>
+  &#x20;および&#x20;
 
-<p>Also see the "Customizing select styles" example below for an example of you could attempt a simple <code>&lt;select&gt;</code> styling.</p>
+  <kbd>↓</kbd>
 
-<h2 id="Examples" name="Examples">例</h2>
+  &#x20;のカーソルキーを使用して、項目を選択する範囲を増加または減少させる。
 
-<h3 id="Basic_select" name="Basic_select">基本的な select</h3>
+キーボードを使用して、連続していない複数の項目を選択するには以下のようにします。
 
-<p>以下の例では、とても簡単なドロップダウンメニューを生成し、既定で第二の選択肢を選択状態にしておきます。</p>
+- `<select>` 要素にフォーカスを移動します。 (例えば&#x20;
 
-<pre class="brush: html notranslate">&lt;!-- 最初に Second Value が選択されます。 --&gt;
-&lt;select name="choice"&gt;
-  &lt;option value="first"&gt;First Value&lt;/option&gt;
-  &lt;option value="second" selected&gt;Second Value&lt;/option&gt;
-  &lt;option value="third"&gt;Third Value&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+  <kbd>Tab</kbd>
 
-<p>{{EmbedLiveSample("Basic_select", "", "100")}}</p>
+  &#x20;を使用するなど)。
 
-<h3 id="Advanced_select_with_multiple_features" name="Advanced_select_with_multiple_features">高度な複数選択の機能</h3>
+- <kbd>Ctrl</kbd>
 
-<p>以下の例はもっと複雑で、 <code>&lt;select&gt;</code> 要素で使用できる機能をもっと示しています。</p>
+  &#x20;キーを押したまま&#x20;
 
-<pre class="brush: html notranslate">&lt;label&gt;Please choose one or more pets:
-  &lt;select name="pets" multiple size="4"&gt;
-    &lt;optgroup label="4-legged pets"&gt;
-      &lt;option value="dog"&gt;Dog&lt;/option&gt;
-      &lt;option value="cat"&gt;Cat&lt;/option&gt;
-      &lt;option value="hamster" disabled&gt;Hamster&lt;/option&gt;
-    &lt;/optgroup&gt;
-    &lt;optgroup label="Flying pets"&gt;
-      &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
-      &lt;option value="macaw"&gt;Macaw&lt;/option&gt;
-      &lt;option value="albatross"&gt;Albatross&lt;/option&gt;
-    &lt;/optgroup&gt;
-  &lt;/select&gt;
-&lt;/label&gt;
-</pre>
+  <kbd>↑</kbd>
 
-<p>{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}</p>
+  &#x20;および&#x20;
 
-<p>次のことが分かるでしょう。</p>
+  <kbd>↓</kbd>
 
-<ul>
- <li><code>multiple</code> 属性を入れてあるので、複数のオプションを選択することができます。</li>
- <li><code>size</code> 属性は、同時に4行だけ表示できるようにします。スクロールしてすべての選択肢を表示することができます。</li>
- <li>{{htmlelement("optgroup")}} を入れることで、選択肢を複数のグループに分割しています。これは純粋に視覚的なグループ化であり、視覚表現は通常、太字のグループ名と字下げした選択肢で構成されます。</li>
- <li>"Hamster" の選択肢には <code>disabled</code> 属性が入っているので、選択することができません。</li>
-</ul>
+  &#x20;のカーソルキーを使用して「フォーカスのある」選択肢を、選択したいものに移動します。「フォーカスのある」選択肢は、キーボードでリンクをフォーカスしたときと同様に、点線の輪郭線で強調されます。
 
-<h3 id="Customizing_select_styles" name="Customizing_select_styles">select のスタイルのカスタマイズ</h3>
+- <kbd>スペース</kbd>
 
-<p>この例では、 CSS と JavaScript を使用して <code>&lt;select&gt;</code> ボックスに広範な独自スタイルを適用する方法を示しています。</p>
+  を押して「フォーカスのある」選択肢を選択または解除します。
 
-<p>この例では基本的に以下のことを行います。</p>
+## CSS のスタイル付け
 
-<ul>
- <li>親ラッパーの <code>&lt;select&gt;</code> のコンテキスト ({{HTMLElement("option")}}}) を複製し、追加の HTML 要素と JavaScript を使用して標準の期待される動作を再実装します。これには、キーボードアクセシビリティを提供するための基本的なタブの動作が含まれます。</li>
- <li>状態と CSS を管理するために、いくつかの標準ネイティブの <code>属性</code> を新しい要素の <code>data-attributes</code> に対応付けします。</li>
-</ul>
+`<select>` 要素は、 CSS を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。 — 例えば、[ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/CSS_Fonts)を操作する、 {{cssxref("appearance")}} プロパティを使用してシステムの既定の `appearance` を削除することができます。
 
-<div class="blockIndicator note">
-<p>すべてのネイティブ機能をサポートしているわけではありません。これは標準的な HTML から始まりますが、 JSON データ、カスタム HTML、または他のソリューションから始めても同じ結果を得ることができます。</p>
-</div>
+しかし、これらのプロパティはブラウザー間で一貫した結果が得られませんし、異なる種類のフォーム要素を互いに一列に並べたりするのは困難なことです。 `<select>` 要素の内部構造は複雑で、制御するのは困難です。完全に制御したいのであれば、スタイル付けをするのに優れた機能を備えたライブラリを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) をを使用して独自のドロップダウンメニューを実装することを検討してください。
 
-<h4 id="HTML">HTML</h4>
+`<select>` のスタイル付けについてのさらなる有益な情報は、以下を参照してください。
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-   &lt;head&gt;
-      &lt;meta charset="UTF-8"&gt;
-      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-      &lt;title&gt;Select&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-      &lt;form&gt;
-         &lt;fieldset&gt;
-            &lt;legend&gt;Standard controls&lt;/legend&gt;
-            &lt;select
+- [HTML フォームのスタイル付け](/ja/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [HTML フォームの高度なスタイル付け](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
+
+Also see the "Customizing select styles" example below for an example of you could attempt a simple `<select>` styling.
+
+## 例
+
+### 基本的な select
+
+以下の例では、とても簡単なドロップダウンメニューを生成し、既定で第二の選択肢を選択状態にしておきます。
+
+```html
+<!-- 最初に Second Value が選択されます。 -->
+<select name="choice">
+  <option value="first">First Value</option>
+  <option value="second" selected>Second Value</option>
+  <option value="third">Third Value</option>
+</select>
+```
+
+{{EmbedLiveSample("Basic_select", "", "100")}}
+
+### 高度な複数選択の機能
+
+以下の例はもっと複雑で、 `<select>` 要素で使用できる機能をもっと示しています。
+
+```html
+<label>Please choose one or more pets:
+  <select name="pets" multiple size="4">
+    <optgroup label="4-legged pets">
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="hamster" disabled>Hamster</option>
+    </optgroup>
+    <optgroup label="Flying pets">
+      <option value="parrot">Parrot</option>
+      <option value="macaw">Macaw</option>
+      <option value="albatross">Albatross</option>
+    </optgroup>
+  </select>
+</label>
+```
+
+{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
+
+次のことが分かるでしょう。
+
+- `multiple` 属性を入れてあるので、複数のオプションを選択することができます。
+- `size` 属性は、同時に 4 行だけ表示できるようにします。スクロールしてすべての選択肢を表示することができます。
+- {{htmlelement("optgroup")}} を入れることで、選択肢を複数のグループに分割しています。これは純粋に視覚的なグループ化であり、視覚表現は通常、太字のグループ名と字下げした選択肢で構成されます。
+- "Hamster" の選択肢には `disabled` 属性が入っているので、選択することができません。
+
+### select のスタイルのカスタマイズ
+
+この例では、 CSS と JavaScript を使用して `<select>` ボックスに広範な独自スタイルを適用する方法を示しています。
+
+この例では基本的に以下のことを行います。
+
+- 親ラッパーの `<select>` のコンテキスト ({{HTMLElement("option")}}}) を複製し、追加の HTML 要素と JavaScript を使用して標準の期待される動作を再実装します。これには、キーボードアクセシビリティを提供するための基本的なタブの動作が含まれます。
+- 状態と CSS を管理するために、いくつかの標準ネイティブの `属性` を新しい要素の `data-attributes` に対応付けします。
+
+> **Note:** すべてのネイティブ機能をサポートしているわけではありません。これは標準的な HTML から始まりますが、 JSON データ、カスタム HTML、または他のソリューションから始めても同じ結果を得ることができます。
+
+#### HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Select</title>
+   </head>
+   <body>
+      <form>
+         <fieldset>
+            <legend>Standard controls</legend>
+            <select
                name=1A
                id=select
                autocomplete=off
                required
-               &gt;
-               &lt;option&gt;Carrots&lt;/option&gt;
-               &lt;option&gt;Peas&lt;/option&gt;
-               &lt;option&gt;Beans&lt;/option&gt;
-               &lt;option&gt;Pneumonoultramicroscopicsilicovolcanoconiosis&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;label for="1B"&gt;1B&lt;/label&gt;
-            &lt;select name="1B" multiple size="4" required&gt;
-               &lt;optgroup label="4-legged pets"&gt;
-                  &lt;option value="dog"&gt;Dog&lt;/option&gt;
-                  &lt;option value="cat"&gt;Cat&lt;/option&gt;
-                  &lt;option value="hamster" disabled&gt;Hamster&lt;/option&gt;
-               &lt;/optgroup&gt;
-               &lt;optgroup label="Flying pets"&gt;
-                  &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
-                  &lt;option value="macaw"&gt;Macaw&lt;/option&gt;
-                  &lt;option value="albatross"&gt;Albatross&lt;/option&gt;
-               &lt;/optgroup&gt;
-               &lt;option value="albatross"&gt;Albatross&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;label for="1C"&gt;1C&lt;/label&gt;
-            &lt;select name="1C" required&gt;
-               &lt;option value="first"&gt;First Value&lt;/option&gt;
-               &lt;option value="second" selected&gt;Second Value&lt;/option&gt;
-               &lt;option value="third"&gt;Third Value&lt;/option&gt;
-            &lt;/select&gt;
-         &lt;/fieldset&gt;
-         &lt;fieldset id=custom&gt;
-            &lt;legend&gt;Custom controls&lt;/legend&gt;
-            &lt;select
+               >
+               <option>Carrots</option>
+               <option>Peas</option>
+               <option>Beans</option>
+               <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+            </select>
+            <label for="1B">1B</label>
+            <select name="1B" multiple size="4" required>
+               <optgroup label="4-legged pets">
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="hamster" disabled>Hamster</option>
+               </optgroup>
+               <optgroup label="Flying pets">
+                  <option value="parrot">Parrot</option>
+                  <option value="macaw">Macaw</option>
+                  <option value="albatross">Albatross</option>
+               </optgroup>
+               <option value="albatross">Albatross</option>
+            </select>
+            <label for="1C">1C</label>
+            <select name="1C" required>
+               <option value="first">First Value</option>
+               <option value="second" selected>Second Value</option>
+               <option value="third">Third Value</option>
+            </select>
+         </fieldset>
+         <fieldset id=custom>
+            <legend>Custom controls</legend>
+            <select
                name="2A"
                id="select"
                autocomplete="off"
                required
-               &gt;
-               &lt;option&gt;Carrots&lt;/option&gt;
-               &lt;option&gt;Peas&lt;/option&gt;
-               &lt;option&gt;Beans&lt;/option&gt;
-               &lt;option&gt;Pneumonoultramicroscopicsilicovolcanoconiosis&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;label for=2B&gt;2B&lt;/label&gt;
-            &lt;select id=2B name="2B" multiple size="4" required&gt;
-               &lt;optgroup label="4-legged pets"&gt;
-                  &lt;option value="dog"&gt;Dog&lt;/option&gt;
-                  &lt;option value="cat"&gt;Cat&lt;/option&gt;
-                  &lt;option value="hamster" disabled&gt;Hamster&lt;/option&gt;
-               &lt;/optgroup&gt;
-               &lt;optgroup label="Flying pets"&gt;
-                  &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
-                  &lt;option value="macaw"&gt;Macaw&lt;/option&gt;
-                  &lt;option value="albatross"&gt;Albatross&lt;/option&gt;
-               &lt;/optgroup&gt;
-            &lt;/select&gt;
-            &lt;label for="2C"&gt;2C&lt;/label&gt;
-            &lt;select name="2C" required&gt;
-               &lt;option value="first"&gt;First Value&lt;/option&gt;
-               &lt;option value="second" selected&gt;Second Value&lt;/option&gt;
-               &lt;option value="third"&gt;Third Value&lt;/option&gt;
-            &lt;/select&gt;
-         &lt;/fieldset&gt;
-         &lt;button type="reset"&gt;Reset&lt;/button&gt;
-         &lt;button type="submit"&gt;Submit&lt;/button&gt;
-      &lt;/form&gt;
-      &lt;code id=submit&gt;&lt;/code&gt;
-      &lt;link rel=stylesheet href=style.css&gt;
-      &lt;script src="script.js"&gt;&lt;/script&gt;
-   &lt;/body&gt;
-&lt;/html&gt;</pre>
+               >
+               <option>Carrots</option>
+               <option>Peas</option>
+               <option>Beans</option>
+               <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+            </select>
+            <label for=2B>2B</label>
+            <select id=2B name="2B" multiple size="4" required>
+               <optgroup label="4-legged pets">
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="hamster" disabled>Hamster</option>
+               </optgroup>
+               <optgroup label="Flying pets">
+                  <option value="parrot">Parrot</option>
+                  <option value="macaw">Macaw</option>
+                  <option value="albatross">Albatross</option>
+               </optgroup>
+            </select>
+            <label for="2C">2C</label>
+            <select name="2C" required>
+               <option value="first">First Value</option>
+               <option value="second" selected>Second Value</option>
+               <option value="third">Third Value</option>
+            </select>
+         </fieldset>
+         <button type="reset">Reset</button>
+         <button type="submit">Submit</button>
+      </form>
+      <code id=submit></code>
+      <link rel=stylesheet href=style.css>
+      <script src="script.js"></script>
+   </body>
+</html>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">body {
+```css
+body {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -416,11 +423,12 @@ html body form fieldset#custom div.select div.header span {
 	flex: 1;
 	padding: .5em;
 }
-</pre>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">const selects = custom.querySelectorAll('select');
+```js
+const selects = custom.querySelectorAll('select');
 for (const select of selects) {
     const div = document.createElement('div');
     const header = document.createElement('div');
@@ -445,7 +453,7 @@ for (const select of selects) {
                 };
             } else {
                 const options = div.querySelectorAll('.option');
-                for (i = 0; i &lt; options.length; i++) {
+                for (i = 0; i < options.length; i++) {
                     const option = options[i];
                     option.removeAttribute("data-checked");
                 };
@@ -467,7 +475,7 @@ for (const select of selects) {
     span.innerText = select.label;
     header.appendChild(span);
     for (attribute of select.attributes) div.dataset[attribute.name] = attribute.value;
-    for (i = 0; i &lt; options.length; i++) {
+    for (i = 0; i < options.length; i++) {
         const option = document.createElement('div');
         const label = document.createElement('div');
         const o = options[i];
@@ -551,84 +559,98 @@ document.forms[0].onsubmit = function(e) {
     const data = new FormData(this);
     e.preventDefault();
     submit.innerText = JSON.stringify([...data.entries()]);
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Customizing_select_styles', '100%', 300)}}</p>
+{{EmbedLiveSample('Customizing_select_styles', '100%', 300)}}
 
-<h2 id="Technical_summary" name="Technical_summary">技術的概要</h2>
+## 技術的概要
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、<a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>、<a href="/ja/docs/Web/HTML/Content_categories#リスト化">リスト化</a>、<a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能">ラベル付け可能</a>、<a href="/ja/docs/Web/HTML/Content_categories#リセット可能">リセット可能</a>、及び<a href="/ja/docs/Web/HTML/Content_categories#送信可能">サブミット可能</a>な<a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連</a>要素</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td>0 個以上の {{HTMLElement("option")}} 要素または {{HTMLElement("optgroup")}} 要素</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい <code>size</code> 属性が<strong>ない</strong>ならば {{ARIARole("combobox")}}、それ以外の場合は {{ARIARole("listbox")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td><code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい <code>size</code> 属性が<strong>ない</strong>ならば {{ARIARole("menu")}}、それ以外の場合は許可されている <code>role</code> はなし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLSelectElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、<a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          >対話型コンテンツ</a
+        >、<a href="/ja/docs/Web/HTML/Content_categories#リスト化">リスト化</a
+        >、<a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
+          >ラベル付け可能</a
+        >、<a href="/ja/docs/Web/HTML/Content_categories#リセット可能"
+          >リセット可能</a
+        >、及び<a href="/ja/docs/Web/HTML/Content_categories#送信可能"
+          >サブミット可能</a
+        >な<a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+          >フォーム関連</a
+        >要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        0 個以上の {{HTMLElement("option")}} 要素または
+        {{HTMLElement("optgroup")}} 要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
+        <code>size</code> 属性が<strong>ない</strong>ならば
+        {{ARIARole("combobox")}}、それ以外の場合は
+        {{ARIARole("listbox")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
+        <code>size</code> 属性が<strong>ない</strong>ならば
+        {{ARIARole("menu")}}、それ以外の場合は許可されている
+        <code>role</code> はなし
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLSelectElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-select-element', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       | 状態                             | 備考 |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'sec-forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}             | {{Spec2('HTML4.01')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.select")}}</p>
+{{Compat("html.elements.select")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><code>&lt;select&gt;</code> で発生するイベント: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}</li>
- <li>{{HTMLElement("option")}} 要素</li>
- <li>{{HTMLElement("optgroup")}} 要素</li>
-</ul>
+- `<select>` で発生するイベント: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}
+- {{HTMLElement("option")}} 要素
+- {{HTMLElement("optgroup")}} 要素

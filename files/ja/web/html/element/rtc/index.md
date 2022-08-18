@@ -13,110 +13,95 @@ tags:
   - rtc
 translation_of: Web/HTML/Element/rtc
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML のルビ文字列コンテナー (<code>&lt;rtc&gt;</code>) 要素</strong>は、 {{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。</p>
+**HTML のルビ文字列コンテナー (`<rtc>`) 要素**は、 {{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>または {{HTMLElement("rt")}} 要素</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>直後に {{HTMLElement("rb")}}, {{HTMLElement("rtc")}}, {{HTMLElement("rt")}} 要素の開始タグがある、または親要素の終了タグがある場合は、この要素の終了タグを省略可能。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td>{{HTMLElement("ruby")}} 要素</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >または {{HTMLElement("rt")}} 要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        直後に {{HTMLElement("rb")}}, {{HTMLElement("rtc")}},
+        {{HTMLElement("rt")}}
+        要素の開始タグがある、または親要素の終了タグがある場合は、この要素の終了タグを省略可能。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("ruby")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html highlight[8] notranslate">&lt;div class="info"&gt;
-  &lt;ruby&gt;
-    &lt;rbc&gt;
-      &lt;rb&gt;旧&lt;/rb&gt;&lt;rt&gt;jiù&lt;/rt&gt;
-      &lt;rb&gt;金&lt;/rb&gt;&lt;rt&gt;jīn&lt;/rt&gt;
-      &lt;rb&gt;山&lt;/rb&gt;&lt;rt&gt;shān&lt;/rt&gt;
-    &lt;/rbc&gt;
-    &lt;rtc&gt;San Francisco&lt;/rtc&gt;
-  &lt;/ruby&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="info">
+  <ruby>
+    <rbc>
+      <rb>旧</rb><rt>jiù</rt>
+      <rb>金</rb><rt>jīn</rt>
+      <rb>山</rb><rt>shān</rt>
+    </rbc>
+    <rtc>San Francisco</rtc>
+  </ruby>
+</div>
+```
 
-<div class="hidden">
-<pre class="brush: css notranslate">.info {
+```css hidden
+.info {
   padding-top: 10px;
   font-size: 36px;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("Example", 600, 120)}}</p>
+{{EmbedLiveSample("Example", 600, 120)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                         | 備考     |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.2')}} |          |
+| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.1')}} |          |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rtc-element', '&lt;rtc&gt;')}} | {{Spec2('HTML5 W3C')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.rtc")}}</p>
+{{Compat("html.elements.rtc")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("ruby")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rbc")}}</li>
-</ul>
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rbc")}}

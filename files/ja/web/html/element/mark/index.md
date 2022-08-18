@@ -5,9 +5,9 @@ tags:
   - HTML
   - HTML 文字レベルの意味付け
   - HTML5
-  - 'HTML:フローコンテンツ'
-  - 'HTML:知覚可能コンテンツ'
-  - 'HTML:記述コンテンツ'
+  - HTML:フローコンテンツ
+  - HTML:知覚可能コンテンツ
+  - HTML:記述コンテンツ
   - Reference
   - ウェブ
   - マーク
@@ -15,109 +15,129 @@ tags:
   - 要素
 translation_of: Web/HTML/Element/mark
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の文字列マーク要素</strong> (<strong><code>&lt;mark&gt;</code></strong>) は、周囲の文脈の中でマークを付けた部分の関連性や重要性のために、参照や記述の目的で目立たせたり強調したりする文字列を表します。</span></p>
+**HTML の文字列マーク要素** (**`<mark>`**) は、周囲の文脈の中でマークを付けた部分の関連性や重要性のために、参照や記述の目的で目立たせたり強調したりする文字列を表します。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-standard")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>以外の属性はありません。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+## 使用上のメモ
 
-<p><code>&lt;mark&gt;</code> のよくある利用方法は以下のようなものです。</p>
+`<mark>` のよくある利用方法は以下のようなものです。
 
-<ul>
- <li>引用 ({{HTMLElement("q")}}) またはブロック引用 ({{HTMLElement("blockquote")}}) の中で使用される場合は、ふつう原文で特にマークされていなくても特別な関心事となる文字列、または原文の筆者が特に重要だと考えていなかったことでも、特別に精査が必要な部分を示します。本の中で興味のある部分が見つかったときに、蛍光ペンを使ってマークするようなものだと考えてください。</li>
- <li>それ以外に、 <code>&lt;mark&gt;</code> はユーザーの現在の行動に関する文書中の部分を示します。これは例えば、検索操作で検索された語を示す場合などに使用されます。</li>
- <li><code>&lt;mark&gt;</code> を (ソースコードなどの) 構文の強調には使用しないで下さい。{{HTMLElement("span")}} 要素とそれに適用する適切な CSS を使用してください。</li>
-</ul>
+- 引用 ({{HTMLElement("q")}}) またはブロック引用 ({{HTMLElement("blockquote")}}) の中で使用される場合は、ふつう原文で特にマークされていなくても特別な関心事となる文字列、または原文の筆者が特に重要だと考えていなかったことでも、特別に精査が必要な部分を示します。本の中で興味のある部分が見つかったときに、蛍光ペンを使ってマークするようなものだと考えてください。
+- それ以外に、 `<mark>` はユーザーの現在の行動に関する文書中の部分を示します。これは例えば、検索操作で検索された語を示す場合などに使用されます。
+- `<mark>` を (ソースコードなどの) 構文の強調には使用しないで下さい。{{HTMLElement("span")}} 要素とそれに適用する適切な CSS を使用してください。
 
-<div class="note">
-<p><code>&lt;mark&gt;</code> 要素と {{HTMLElement("strong")}} 要素を混同しないよう注意してください。 <code>&lt;mark&gt;</code> は<em>関連性</em>のあるコンテンツを表すために使用されますが、 <code>&lt;strong&gt;</code> は<em>重要性</em>のある文字列の区間を表します。</p>
-</div>
+> **Note:** `<mark>` 要素と {{HTMLElement("strong")}} 要素を混同しないよう注意してください。 `<mark>` は*関連性*のあるコンテンツを表すために使用されますが、 `<strong>` は*重要性*のある文字列の区間を表します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Marking_text_of_interest" name="Marking_text_of_interest">関心のある文字列のマーク</h3>
+### 関心のある文字列のマーク
 
-<p>最初の例では <code>&lt;mark&gt;</code> 要素を使用して、引用の中でユーザーに特定の関心を引く部分の文字列をマークしています。</p>
+最初の例では `<mark>` 要素を使用して、引用の中でユーザーに特定の関心を引く部分の文字列をマークしています。
 
-<pre class="brush: html notranslate">&lt;blockquote&gt;
+```html
+<blockquote>
   It is a period of civil war. Rebel spaceships, striking from a
   hidden base, have won their first victory against the evil
-  Galactic Empire. During the battle, &lt;mark&gt;Rebel spies managed
-  to steal secret plans&lt;/mark&gt; to the Empire’s ultimate weapon,
+  Galactic Empire. During the battle, <mark>Rebel spies managed
+  to steal secret plans</mark> to the Empire’s ultimate weapon,
   the DEATH STAR, an armored space station with enough power to
   destroy an entire planet.
-&lt;/blockquote&gt;</pre>
+</blockquote>
+```
 
-<p>出力結果は以下のようになります。</p>
+出力結果は以下のようになります。
 
-<p>{{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}</p>
+{{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}
 
-<h3 id="Identifying_context-sensitive_passages" name="Identifying_context-sensitive_passages">文脈に依存する部分の識別</h3>
+### 文脈に依存する部分の識別
 
-<p>この例では <code>&lt;mark&gt;</code> を使用して一節の中の検索結果をマークしています。</p>
+この例では `<mark>` を使用して一節の中の検索結果をマークしています。
 
-<pre class="brush: html notranslate">&lt;p&gt;It is a dark time for the Rebellion. Although the Death
-Star has been destroyed, &lt;mark class="match"&gt;Imperial&lt;/mark&gt;
+```html
+<p>It is a dark time for the Rebellion. Although the Death
+Star has been destroyed, <mark class="match">Imperial</mark>
 troops have driven the Rebel forces from their hidden base and
-pursued them across the galaxy.&lt;/p&gt;
+pursued them across the galaxy.</p>
 
-&lt;p&gt;Evading the dreaded &lt;mark class="match"&gt;Imperial&lt;/mark&gt;
+<p>Evading the dreaded <mark class="match">Imperial</mark>
 Starfleet, a group of freedom fighters led by Luke Skywalker
 has established a new secret base on the remote ice world of
-Hoth.&lt;/p&gt;</pre>
+Hoth.</p>
+```
 
-<p>検索結果に対する <code>&lt;mark&gt;</code> の使用を他の使い方と区別しやすくするように、この例ではそれぞれの一致部分に <code>"match"</code> カスタムクラスを適用しています。</p>
+検索結果に対する `<mark>` の使用を他の使い方と区別しやすくするように、この例ではそれぞれの一致部分に `"match"` カスタムクラスを適用しています。
 
-<p>結果は以下のようになります。</p>
+結果は以下のようになります。
 
-<p>{{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}</p>
+{{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<p><code>mark</code> 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("::before")}} 及び {{cssxref("::after")}} 擬似要素と共に {{cssxref("content")}} プロパティを使うことでアナウンスさせることができます。</p>
+`mark` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("::before")}} 及び {{cssxref("::after")}} 擬似要素と共に {{cssxref("content")}} プロパティを使うことでアナウンスさせることができます。
 
-<pre class="brush: css notranslate">mark::before,
+```css
+mark::before,
 mark::after {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -135,39 +155,20 @@ mark::before {
 mark::after {
   content: " [強調終了] ";
 }
-</pre>
+```
 
-<p>読み上げソフトを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが強調されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。</p>
+読み上げソフトを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが強調されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/">Short note on making your mark (more accessible) | The Paciello Group</a></li>
- <li><a href="http://adrianroselli.com/2017/12/tweaking-text-level-styles.html">Tweaking Text Level Styles | Adrian Roselli</a></li>
-</ul>
+- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-mark-element', '&lt;mark&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                             | 備考 |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-mark-element', '&lt;mark&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.mark")}}</p>
+{{Compat("html.elements.mark")}}

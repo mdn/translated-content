@@ -11,86 +11,114 @@ tags:
   - figure
 translation_of: Web/HTML/Element/figure
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;figure&gt;</code> (キャプションが付けられる図) 要素</strong>は、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。</span>図、すなわちキャプションとその中身は一つの単位として参照されます。</p>
+**HTML の `<figure>` (キャプションが付けられる図) 要素**は、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一つの単位として参照されます。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}</div>
-
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">区分化ルート</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td>{{HTMLElement("figcaption")}} 要素とそれに続く<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、またはフローコンテンツとそれに続く {{HTMLElement("figcaption")}} 要素、またはフローコンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-		<th scope="row">暗黙の ARIA ロール</th>
-		<td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Figure_Role">figure</a></td>
-	</tr>
-	 <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>子孫に <a href="/ja/docs/Web/HTML/Element/figcaption">figcaption</a> がない場合: <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>、それ以外の場合は許可されているロールなし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリ</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a
+          href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots"
+          >区分化ルート</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        {{HTMLElement("figcaption")}} 要素とそれに続く<a
+          href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、またはフローコンテンツとそれに続く
+        {{HTMLElement("figcaption")}} 要素、またはフローコンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Figure_Role">figure</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        子孫に
+        <a href="/ja/docs/Web/HTML/Element/figcaption">figcaption</a>
+        がない場合:
+        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a
+        >、それ以外の場合は許可されているロールなし
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Usage_notes">使用上のメモ</h2>
+## 使用上のメモ
 
-<ul>
- <li>ふつう <code>&lt;figure&gt;</code> は画像、イラスト、グラフ、コードの断片など、文書の本文の流れから参照されるものの、本文の流れに影響を与えることなく、文書のほかの部分や付録に移動することが可能なものに用います。</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">区分化ルート</a>となり、 <code>&lt;figure&gt;</code> 要素のコンテンツのアウトラインは、文書の本文のアウトラインから除外されます。</li>
- <li>キャプションは <code>&lt;figure&gt;</code> 要素の中に (最初または最後の子要素として) {{HTMLElement("figcaption")}} 要素を挿入することで表すことができます。図の中で最初に見つかった最初の <code>&lt;figcaption&gt;</code> 要素が図のキャプションとして表示されます。</li>
-</ul>
+- ふつう `<figure>` は画像、イラスト、グラフ、コードの断片など、文書の本文の流れから参照されるものの、本文の流れに影響を与えることなく、文書のほかの部分や付録に移動することが可能なものに用います。
+- [区分化ルート](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots)となり、 `<figure>` 要素のコンテンツのアウトラインは、文書の本文のアウトラインから除外されます。
+- キャプションは `<figure>` 要素の中に (最初または最後の子要素として) {{HTMLElement("figcaption")}} 要素を挿入することで表すことができます。図の中で最初に見つかった最初の `<figcaption>` 要素が図のキャプションとして表示されます。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Images">画像</h3>
+### 画像
 
-<pre class="brush: html">&lt;!-- 単なる画像 --&gt;
-&lt;figure&gt;
-  &lt;img
+```html
+<!-- 単なる画像 -->
+<figure>
+  <img
   src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="美しい MDN のロゴ"&gt;
-&lt;/figure&gt;
+  alt="美しい MDN のロゴ">
+</figure>
 
-&lt;!-- キャプションが付いた画像 --&gt;
-&lt;figure&gt;
-  &lt;img
+<!-- キャプションが付いた画像 -->
+<figure>
+  <img
   src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="美しい MDN のロゴ"&gt;
-  &lt;figcaption&gt;MDN ロゴ&lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
+  alt="美しい MDN のロゴ">
+  <figcaption>MDN ロゴ</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Images", "100%", 375)}}</div>
+{{EmbedLiveSample("Images", "100%", 375)}}
 
-<h3 id="Code_snippets">コードスニペット</h3>
+### コードスニペット
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;Get browser details using &lt;code&gt;navigator&lt;/code&gt;.&lt;/figcaption&gt;
-  &lt;pre&gt;
+```html
+<figure>
+  <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+  <pre>
 function NavigatorExample() {
   var txt;
   txt = "Browser CodeName: " + navigator.appCodeName + "; ";
@@ -101,73 +129,54 @@ function NavigatorExample() {
   txt+= "User-agent header: " + navigator.userAgent  + "; ";
   console.log("NavigatorExample", txt);
 }
-  &lt;/pre&gt;
-&lt;/figure&gt;</pre>
+  </pre>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Code_snippets", "100%", 250)}}</div>
+{{EmbedLiveSample("Code_snippets", "100%", 250)}}
 
-<h3 id="Quotations">引用</h3>
+### 引用
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Edsger Dijkstra:&lt;/cite&gt;&lt;/figcaption&gt;
-  &lt;blockquote&gt;デバッグがソフトウェアのバグを取るプロセスであるならば、
-  プログラミングはそれを入れるプロセスだ。&lt;/blockquote&gt;
-&lt;/figure&gt;
-</pre>
+```html
+<figure>
+  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+  <blockquote>デバッグがソフトウェアのバグを取るプロセスであるならば、
+  プログラミングはそれを入れるプロセスだ。</blockquote>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Quotations")}}</div>
+{{EmbedLiveSample("Quotations")}}
 
-<h3 id="Poems">詩</h3>
+### 詩
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;p style="white-space:pre"&gt;
+```html
+<figure>
+  <p style="white-space:pre">
 Bid me discourse, I will enchant thine ear,
   Or like a fairy trip upon the green,
 Or, like a nymph, with long dishevell'd hair,
   Dance on the sands, and yet no footing seen:
 Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.&lt;/p&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Venus and Adonis&lt;/cite&gt;,
-    by William Shakespeare&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
+  Not gross to sink, but light, and will aspire.</p>
+  <figcaption><cite>Venus and Adonis</cite>,
+    by William Shakespeare</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Poems", "100%", 250)}}</div>
+{{EmbedLiveSample("Poems", "100%", 250)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.2', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td>HTML 5.0 から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考                  |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-figure-element', '&lt;figure&gt;')}}         | {{Spec2('HTML WHATWG')}} |                       |
+| {{SpecName('HTML5.2', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}     | {{Spec2('HTML5.2')}}     | HTML 5.0 から変更なし |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}} | {{Spec2('HTML5 W3C')}}     |                       |
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.figure")}}</p>
+{{Compat("html.elements.figure")}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("figcaption")}} 要素</li>
-</ul>
+- {{HTMLElement("figcaption")}} 要素
