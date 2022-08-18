@@ -5130,6 +5130,13 @@
       "louisremi"
     ]
   },
+  "Web/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-23T22:48:01.128Z",
+    "contributors": [
+      "jackblackevo",
+      "Shiyou"
+    ]
+  },
   "Web/Guide": {
     "modified": "2019-03-23T23:29:55.855Z",
     "contributors": [
@@ -8288,13 +8295,6 @@
     "contributors": [
       "jackblackevo",
       "gportioli"
-    ]
-  },
-  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:48:01.128Z",
-    "contributors": [
-      "jackblackevo",
-      "Shiyou"
     ]
   },
   "orphaned/Web/Guide/Events/Event_handlers": {
