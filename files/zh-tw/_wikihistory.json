@@ -7294,11 +7294,10 @@
     ]
   },
   "Web/JavaScript/Reference/Operators/this": {
-    "modified": "2020-10-15T21:48:46.137Z",
+    "modified": "2019-03-24T00:01:06.045Z",
     "contributors": [
-      "iigmir",
-      "Rocker",
-      "chloewlin"
+      "teoli",
+      "happysadman"
     ]
   },
   "Web/JavaScript/Reference/Operators/typeof": {
@@ -8323,13 +8322,6 @@
     "contributors": [
       "fscholz",
       "jigs12",
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考": {
-    "modified": "2019-03-24T00:01:06.045Z",
-    "contributors": [
       "teoli",
       "happysadman"
     ]
