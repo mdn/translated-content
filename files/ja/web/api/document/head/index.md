@@ -9,74 +9,53 @@ tags:
   - head
 translation_of: Web/API/Document/head
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">{{domxref("Document")}} インターフェイスの <code><strong>head</strong></code> は読み取り専用のプロパティで、現在の文書の {{HTMLElement("head")}} 要素を返します。</span></p>
+{{domxref("Document")}} インターフェイスの **`head`** は読み取り専用のプロパティで、現在の文書の {{HTMLElement("head")}} 要素を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>objRef</var> = <var>document</var>.head;
-</pre>
+```
+var objRef = document.head;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("HTMLHeadElement")}} です。</p>
+{{domxref("HTMLHeadElement")}} です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;head id="my-document-head"&gt;
-  &lt;title&gt;Example: using document.head&lt;/title&gt;
-&lt;/head&gt;
+```html
+<!doctype html>
+<head id="my-document-head">
+  <title>Example: using document.head</title>
+</head>
 
-&lt;script&gt;
+<script>
   var theHead = document.head;
 
   console.log(theHead.id); // "my-document-head";
 
   console.log( theHead === document.querySelector("head") ); // true
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p><code>document.head</code> は読取専用です。このプロパティに値を代入した場合は、暗黙に失敗するか、 <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">Strict モード</a>の場合は、 {{jsxref("TypeError")}} を投げます。</p>
+`document.head` は読取専用です。このプロパティに値を代入した場合は、暗黙に失敗するか、 [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)の場合は、 {{jsxref("TypeError")}} を投げます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="spectable standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5.1','dom.html#dom-document-head','Document.head')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','dom.html#dom-document-head','Document.head')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','dom.html#dom-document-head','Document.head')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                             | 備考     |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML5.1','dom.html#dom-document-head','Document.head')}}     | {{Spec2('HTML5.1')}}     |          |
+| {{SpecName('HTML5 W3C','dom.html#dom-document-head','Document.head')}}     | {{Spec2('HTML5 W3C')}}     |          |
+| {{SpecName('HTML WHATWG','dom.html#dom-document-head','Document.head')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>{{Compat("api.Document.head")}}</div>
+{{Compat("api.Document.head")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.body")}}</li>
-</ul>
+- {{domxref("document.body")}}

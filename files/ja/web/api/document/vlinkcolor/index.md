@@ -12,34 +12,29 @@ tags:
   - 非推奨
 translation_of: Web/API/Document/vlinkColor
 ---
-<div>{{APIRef("DOM")}} {{ Deprecated_header() }}</div>
+{{APIRef("DOM")}} {{ Deprecated_header() }}
 
-<p><code><strong>Document.vlinkColor</strong></code> プロパティは、文書内のユーザーが訪問済みのリンクの色を取得または設定します。</p>
+**`Document.vlinkColor`** プロパティは、文書内のユーザーが訪問済みのリンクの色を取得または設定します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>color</var> = <var>document</var>.vlinkColor
-<var>document</var>.vlinkColor = <var>color</var>
-</pre>
+```
+color = document.vlinkColor
+document.vlinkColor = color
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>color</code> は、色を表す単語 (<code>red</code> など) または16進値 (<code>#ff0000</code> など) の文字列です。</li>
-</ul>
+- `color` は、色を表す単語 (`red` など) または 16 進値 (`#ff0000` など) の文字列です。
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<ul>
- <li>Mozilla Firefox ではこのプロパティの初期値は紫 (16進で <code>#551a8b</code>) です。
+- Mozilla Firefox ではこのプロパティの初期値は紫 (16 進で `#551a8b`) です。
 
-  <p> </p>
- </li>
- <li><code>Document.vlinkColor</code> は <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML では非推奨です</a>。</li>
- <li>推奨される代替方法は、 HTML の {{HtmlElement("a")}} 要素において CSS で {{ Cssxref(":visited") }} 擬似クラスの色を設定または取得する方法です (例えば <code>a:visited {color:red;}</code>)。</li>
- <li>他の代替方法に <code>document.body.vLink</code> がありますが、これは <a href="http://www.w3.org/TR/html401/struct/global.html#adef-vlink">HTML 4.01 で非推奨</a>となり、 CSS で代替されました。</li>
-</ul>
+- `Document.vlinkColor` は [DOM Level 2 HTML では非推奨です](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)。
+- 推奨される代替方法は、 HTML の {{HtmlElement("a")}} 要素において CSS で {{ Cssxref(":visited") }} 擬似クラスの色を設定または取得する方法です (例えば `a:visited {color:red;}`)。
+- 他の代替方法に `document.body.vLink` がありますが、これは [HTML 4.01 で非推奨](http://www.w3.org/TR/html401/struct/global.html#adef-vlink)となり、 CSS で代替されました。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.vlinkColor")}}</p>
+{{Compat("api.Document.vlinkColor")}}

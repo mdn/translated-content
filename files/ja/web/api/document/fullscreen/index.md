@@ -10,69 +10,56 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/fullscreen
 ---
-<div>{{APIRef("Fullscreen API")}}{{Deprecated_Header}}</div>
+{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
-<p><span class="seoSummary">廃止された {{domxref("Document")}} インターフェイスの <strong><code>fullscreen</code></strong> プロパティは読み取り専用で、文書が現在全画面モードで表示されているかどうかを報告します。</span></p>
+廃止された {{domxref("Document")}} インターフェイスの **`fullscreen`** プロパティは読み取り専用で、文書が現在全画面モードで表示されているかどうかを報告します。
 
-<p>このプロパティは読み取り専用ですが、変更されても (strict モードでも) 例外を投げません。セッターは何もしないので、無視されます。</p>
+このプロパティは読み取り専用ですが、変更されても (strict モードでも) 例外を投げません。セッターは何もしないので、無視されます。
 
-<div class="note">
-<p><strong>メモ:</strong> このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が <code>null</code> ではないことで確認することができます。</p>
-</div>
+> **Note:** **メモ:** このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="eval">var <var>isFullScreen</var> = <var>document</var>.fullscreen;
-</pre>
+```
+var isFullScreen = document.fullscreen;
+```
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>真偽値であり、文書が全画面モードで表示されているときに <code>true</code>、それ以外の場合に <code>false</code> になります。</p>
+真偽値であり、文書が全画面モードで表示されているときに `true`、それ以外の場合に `false` になります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>このシンプルな関数は、現在全画面モードがアクティブになっているかどうかを、廃止された <code>fullscreen</code> プロパティを使用して報告しています。</p>
+このシンプルな関数は、現在全画面モードがアクティブになっているかどうかを、廃止された `fullscreen` プロパティを使用して報告しています。
 
-<pre class="brush: js">function isDocumentInFullScreenMode() {
+```js
+function isDocumentInFullScreenMode() {
   return document.fullscreen;
 }
-</pre>
+```
 
-<p>一方、次の例では、現在の <code>fullscreenElement</code> プロパティを使用して同じことを確認しています。</p>
+一方、次の例では、現在の `fullscreenElement` プロパティを使用して同じことを確認しています。
 
-<pre class="brush: js">function isDocumentInFullScreenMode() {
+```js
+function isDocumentInFullScreenMode() {
   return document.fullscreenElement !== null;
-}</pre>
+}
+```
 
-<p><code>fullscreenElement</code> が <code>null</code> でなければ、これは <code>true</code> を返し、全画面モードで表示されていることを示します。</p>
+`fullscreenElement` が `null` でなければ、これは `true` を返し、全画面モードで表示されていることを示します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>初回定義 (廃止プロパティとして)</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考                            |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
+| {{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}} | {{Spec2("Fullscreen")}} | 初回定義 (廃止プロパティとして) |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.fullscreen")}}</p>
+{{Compat("api.Document.fullscreen")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/ja/docs/Web/API/Fullscreen_API/Guide">Fullscreen API ガイド</a></li>
- <li>{{DOMxRef("Document.fullscreenEnabled")}}</li>
-</ul>
+- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
+- [Fullscreen API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+- {{DOMxRef("Document.fullscreenEnabled")}}

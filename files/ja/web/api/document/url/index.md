@@ -2,66 +2,56 @@
 title: Document.URL
 slug: Web/API/Document/URL
 tags:
-- API
-- DOM
-- Document
-- Property
-- Reference
-- プロパティ
-- リファレンス
+  - API
+  - DOM
+  - Document
+  - Property
+  - Reference
+  - プロパティ
+  - リファレンス
 translation_of: Web/API/Document/URL
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Document")}} インターフェイスの <code><strong>URL</strong></code> プロパティは読取専用で、文書の位置を文字列で返します。</p>
+{{domxref("Document")}} インターフェイスの **`URL`** プロパティは読取専用で、文書の位置を文字列で返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">const <em>url</em> = <em>document</em>.URL
-</pre>
+```js
+const url = document.URL
+```
 
-<h2 id="Example">例</h2>
+## 例
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("url").textContent = document.URL;</pre>
+```js
+document.getElementById("url").textContent = document.URL;
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="urlText"&gt;
-  URL:&lt;br/&gt;
-  &lt;span id="url"&gt;URL goes here&lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p id="urlText">
+  URL:<br/>
+  <span id="url">URL goes here</span>
+</p>
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
+{{EmbedLiveSample("Example", "100%", 100)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-document-url", "Document.URL")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td>プロパティを {{domxref("DOMString")}} ではなく {{domxref("USVString")}} と定義</td>
-    </tr>
-  </tbody>
-</table>
+| 仕様書                                                                               | 状態                             | 備考                                                                                           |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------- |
+| {{SpecName("DOM WHATWG", "#dom-document-url", "Document.URL")}} | {{Spec2("DOM WHATWG")}} | プロパティを {{domxref("DOMString")}} ではなく {{domxref("USVString")}} と定義 |
 
-<h2 id="Browser_compatibility"">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.URL")}}</p>
+{{Compat("api.Document.URL")}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-	<li>同じ値を返す {{domxref("document.documentURI")}} プロパティ</li>
-</ul>
+- 同じ値を返す {{domxref("document.documentURI")}} プロパティ

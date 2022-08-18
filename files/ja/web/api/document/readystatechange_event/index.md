@@ -8,50 +8,50 @@ tags:
   - interactive
 translation_of: Web/API/Document/readystatechange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>readystatechange</code></strong> eventは、文書の {{domxref("Document.readyState", "readyState")}} 属性が変化したときに発生します。</p>
+**`readystatechange`** event は、文書の {{domxref("Document.readyState", "readyState")}} 属性が変化したときに発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td><code>onreadystatechange</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td><code>onreadystatechange</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Live_example" name="Live_example">ライブデモ</h3>
+### ライブデモ
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="reload" type="button">Reload</button>
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -78,65 +78,48 @@ label, button {
 #reload {
   height: 2rem;
 }
+```
 
-</pre>
-</div>
+#### JS
 
-<h4 id="JS">JS</h4>
-
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
-reload.addEventListener('click', () =&gt; {
+reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() =&gt; {
+  window.setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) =&gt; {
+window.addEventListener('load', (event) => {
     log.textContent = log.textContent + 'load\n';
 });
 
-document.addEventListener('readystatechange', (event) =&gt; {
+document.addEventListener('readystatechange', (event) => {
     log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) =&gt; {
+document.addEventListener('DOMContentLoaded', (event) => {
     log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
+```
 
-</pre>
+#### 結果
 
-<h4 id="Result" name="Result">結果</h4>
+{{ EmbedLiveSample('Live_example', '100%', '160px') }}
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '160px') }}</p>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+| 仕様書                                                                                                               | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName("HTML WHATWG", "indices.html#event-readystatechange", "readystatechange")}} | {{Spec2("HTML WHATWG")}} |      |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#event-readystatechange", "readystatechange")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat("api.Document.readystatechange_event")}}
 
-<p>{{Compat("api.Document.readystatechange_event")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>関連イベント: {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}</li>
-</ul>
+- 関連イベント: {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}

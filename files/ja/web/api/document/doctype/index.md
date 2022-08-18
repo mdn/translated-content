@@ -10,55 +10,43 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/doctype
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>現在の文書に関連付けられた<ruby>文書型宣言<rp> (</rp><rt>Document Type Declaration</rt><rp>)</rp></ruby> (DTD) を返します。返されるオブジェクトは、 {{domxref("DocumentType")}} インターフェイスを持ちます。 <code>DocumentType</code> を生成するには {{domxref("DOMImplementation.createDocumentType()")}} を使用してください。</p>
+現在の文書に関連付けられた文書型宣言 (Document Type Declaration) (DTD) を返します。返されるオブジェクトは、 {{domxref("DocumentType")}} インターフェイスを持ちます。 `DocumentType` を生成するには {{domxref("DOMImplementation.createDocumentType()")}} を使用してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>doctype</var> = <var>document</var>.doctype;
-</pre>
+```
+doctype = document.doctype;
+```
 
-<ul>
- <li><code>doctype</code> : 読み取り専用のプロパティです。</li>
-</ul>
+- `doctype` : 読み取り専用のプロパティです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js">var doctypeObj = document.doctype;
+```js
+var doctypeObj = document.doctype;
 
 console.log(
   "doctypeObj.name: "           + doctypeObj.name            + "\n" +
   "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
   "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
   "doctypeObj.systemId: "       + doctypeObj.systemId
-);</pre>
+);
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p>現在の文書に関連付けられている DTD が存在しないは <code>null</code> が返されます。</p>
+現在の文書に関連付けられている DTD が存在しないは `null` が返されます。
 
-<p>DOM レベル 2 では、文書型宣言の編集に対応していません。</p>
+DOM レベル 2 では、文書型宣言の編集に対応していません。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-doctype', 'Document: doctype')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                             | 備考 |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('DOM WHATWG', '#dom-document-doctype', 'Document: doctype')}} | {{Spec2('DOM WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.doctype")}}</p>
+{{Compat("api.Document.doctype")}}

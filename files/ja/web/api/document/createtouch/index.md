@@ -12,105 +12,84 @@ tags:
   - touch
 translation_of: Web/API/Document/createTouch
 ---
-<div>{{APIRef("DOM")}}{{Deprecated_Header}}</div>
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。</p>
-</div>
+> **Note:** **注:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。
 
-<p><strong><code>Document.createTouch()</code></strong> メソッドは、<span class="seosummary">新しい {{DOMxRef("Touch")}} オブジェクトを生成して返します。</span></p>
+**`Document.createTouch()`** メソッドは、新しい {{DOMxRef("Touch")}} オブジェクトを生成して返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>touch</var> = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
+```
+var touch = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
                                       screenX, screenY);
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<div class="note"><strong>注:</strong> すべての引数が省略可能です。</div>
+> **Note:** **注:** すべての引数が省略可能です。
 
-<dl>
- <dt><code>view</code></dt>
- <dd>タッチが発生した {{DOMxRef("window")}} です。</dd>
- <dt><code>target</code></dt>
- <dd>タッチの {{DOMxRef("EventTarget")}} です。</dd>
- <dt><code>identifier</code></dt>
- <dd>{{DOMxRef("Touch.identifier")}} の値です。</dd>
- <dt><code>pageX</code></dt>
- <dd>{{DOMxRef("Touch.pageX")}} の値です。</dd>
- <dt><code>pageY</code></dt>
- <dd>{{DOMxRef("Touch.pageY")}} の値です。</dd>
- <dt><code>screenX</code></dt>
- <dd>{{DOMxRef("Touch.screenX")}} の値です。</dd>
- <dt><code>screenY</code></dt>
- <dd>{{DOMxRef("Touch.screenY")}} の値です。</dd>
-</dl>
+- `view`
+  - : タッチが発生した {{DOMxRef("window")}} です。
+- `target`
+  - : タッチの {{DOMxRef("EventTarget")}} です。
+- `identifier`
+  - : {{DOMxRef("Touch.identifier")}} の値です。
+- `pageX`
+  - : {{DOMxRef("Touch.pageX")}} の値です。
+- `pageY`
+  - : {{DOMxRef("Touch.pageY")}} の値です。
+- `screenX`
+  - : {{DOMxRef("Touch.screenX")}} の値です。
+- `screenY`
+  - : {{DOMxRef("Touch.screenY")}} の値です。
 
-<div class="note"><strong>注:</strong> このメソッドの以前のバージョンでは、以下の追加の引数を含んでいましたが、これらの引数は下記の標準のいずれにも含まれていません。従って、これらの引数は非推奨であり、使用されないと考えてください。</div>
+> **Note:** **注:** このメソッドの以前のバージョンでは、以下の追加の引数を含んでいましたが、これらの引数は下記の標準のいずれにも含まれていません。従って、これらの引数は非推奨であり、使用されないと考えてください。
 
-<dl>
- <dt><code>clientX</code></dt>
- <dd>{{DOMxRef("Touch.clientX")}} の値です。</dd>
- <dt><code>clientY</code></dt>
- <dd>{{DOMxRef("Touch.clientY")}} の値です。</dd>
- <dt><code>radiusX</code></dt>
- <dd>{{DOMxRef("Touch.radiusX")}} の値です。</dd>
- <dt><code>radiusY</code></dt>
- <dd>{{DOMxRef("Touch.radiusY")}} の値です。</dd>
- <dt><code>rotationAngle</code></dt>
- <dd>{{DOMxRef("Touch.rotationAngle")}} の値です。</dd>
- <dt><code>force</code></dt>
- <dd>{{DOMxRef("Touch.force")}} の値です。</dd>
-</dl>
+- `clientX`
+  - : {{DOMxRef("Touch.clientX")}} の値です。
+- `clientY`
+  - : {{DOMxRef("Touch.clientY")}} の値です。
+- `radiusX`
+  - : {{DOMxRef("Touch.radiusX")}} の値です。
+- `radiusY`
+  - : {{DOMxRef("Touch.radiusY")}} の値です。
+- `rotationAngle`
+  - : {{DOMxRef("Touch.rotationAngle")}} の値です。
+- `force`
+  - : {{DOMxRef("Touch.force")}} の値です。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<dl>
- <dt><code>touch</code></dt>
- <dd>入力引数で記述されたように構成された {{DOMxRef("Touch")}} オブジェクトです。</dd>
-</dl>
+- `touch`
+  - : 入力引数で記述されたように構成された {{DOMxRef("Touch")}} オブジェクトです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は {{DOMxRef("Document.createTouch()")}} メソッドを使用して {{DOMxRef("Touch")}} オブジェクトを生成する様子を示しています。</p>
+この例は {{DOMxRef("Document.createTouch()")}} メソッドを使用して {{DOMxRef("Touch")}} オブジェクトを生成する様子を示しています。
 
-<p>以下のコードスニペットでは、2つの {{DOMxRef("Touch")}} オブジェクトが <code>target</code> 要素に生成されます。</p>
+以下のコードスニペットでは、2 つの {{DOMxRef("Touch")}} オブジェクトが `target` 要素に生成されます。
 
-<pre class="brush: js notranslate">var target = document.getElementById("target");
+```js
+var target = document.getElementById("target");
 
 var touch1 = Document.createTouch(window, target, 1, 15, 20, 35, 40);
 var touch2 = Document.createTouch(window, target, 2, 25, 30, 45, 50);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Touch Events", "#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY", "Document.createTouch()")}}</td>
-   <td>{{Spec2("Touch Events")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                                                                                                                       | 状態                             | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName("Touch Events", "#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY", "Document.createTouch()")}} | {{Spec2("Touch Events")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.createTouch")}}</p>
+{{Compat("api.Document.createTouch")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Touch_events">タッチイベント</a></li>
- <li>{{DOMxRef("TouchList")}}</li>
- <li>{{DOMxRef("Touch")}}</li>
- <li>{{DOMxRef("Document.createTouchList()")}}</li>
-</ul>
+- [タッチイベント](/ja/docs/Web/API/Touch_events)
+- {{DOMxRef("TouchList")}}
+- {{DOMxRef("Touch")}}
+- {{DOMxRef("Document.createTouchList()")}}

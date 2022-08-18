@@ -12,89 +12,104 @@ tags:
   - メソッド
 translation_of: Web/API/Document/getElementsByClassName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Document")}} インターフェイスの <strong><code>getElementsByClassName</code></strong> メソッドは、<span class="seoSummary">指定されたクラス名をすべて持つすべての子要素の配列風オブジェクトを返します。</span> {{domxref("document")}} オブジェクトに対して呼び出したときは、ルートノードを含む文書全体が検索されます。任意の要素に対して {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} を呼び出すこともできます。その場合は、指定されたルート要素下の指定されたクラス名を持つ要素だけを返します。</p>
+{{domxref("Document")}} インターフェイスの **`getElementsByClassName`** メソッドは、指定されたクラス名をすべて持つすべての子要素の配列風オブジェクトを返します。 {{domxref("document")}} オブジェクトに対して呼び出したときは、ルートノードを含む文書全体が検索されます。任意の要素に対して {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} を呼び出すこともできます。その場合は、指定されたルート要素下の指定されたクラス名を持つ要素だけを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>elements</var> = document.getElementsByClassName(<var>names</var>); // または
-var <var>elements</var> = <var>rootElement</var>.getElementsByClassName(<var>names</var>);</pre>
+```
+var elements = document.getElementsByClassName(names); // または
+var elements = rootElement.getElementsByClassName(names);
+```
 
-<ul>
- <li><var>elements</var> は、見つかった要素の生きた {{domxref("HTMLCollection")}} です。</li>
- <li><var>names</var> は文字列で、一致させるクラス名を表します。複数のクラス名はホワイトスペースで区切ります。</li>
- <li>{{domxref("Element.getElementsByClassName", "getElementsByClassName")}} は、 {{domxref("document")}} だけでなく、任意の要素に対して呼び出すことができます。呼び出した要素が検索のルートとして使われます。</li>
-</ul>
+- _elements_ は、見つかった要素の生きた {{domxref("HTMLCollection")}} です。
+- _names_ は文字列で、一致させるクラス名を表します。複数のクラス名はホワイトスペースで区切ります。
+- {{domxref("Element.getElementsByClassName", "getElementsByClassName")}} は、 {{domxref("document")}} だけでなく、任意の要素に対して呼び出すことができます。呼び出した要素が検索のルートとして使われます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>'test' クラスを持つすべての要素を取得します。</p>
+'test' クラスを持つすべての要素を取得します。
 
-<pre class="brush: js">document.getElementsByClassName('test')</pre>
+```js
+document.getElementsByClassName('test')
+```
 
-<p>'red' および 'test' クラスを両方持つすべての要素を取得します。</p>
+'red' および 'test' クラスを両方持つすべての要素を取得します。
 
-<pre class="brush: js">document.getElementsByClassName('red test')</pre>
+```js
+document.getElementsByClassName('red test')
+```
 
-<p>'main' という ID を持った要素の中にある、 'text' クラスを持つすべての要素を取得します。</p>
+'main' という ID を持った要素の中にある、 'text' クラスを持つすべての要素を取得します。
 
-<pre class="brush: js">document.getElementById('main').getElementsByClassName('test')</pre>
+```js
+document.getElementById('main').getElementsByClassName('test')
+```
 
-<p>'test' クラスを持つ最初の要素を取得し、一致する要素がなければ <code>undefined</code> になります。</p>
+'test' クラスを持つ最初の要素を取得し、一致する要素がなければ `undefined` になります。
 
-<pre class="brush: js">document.getElementsByClassName('test')[0]</pre>
+```js
+document.getElementsByClassName('test')[0]
+```
 
-<p>メソッドの <var>this</var> 値として {{domxref("HTMLCollection")}} を渡すことで、 Array プロトタイプのメソッドを <code>HTMLCollection</code> で使用することができます。ここでは、 'test' クラスを持つすべての div 要素を検索します。</p>
+メソッドの _this_ 値として {{domxref("HTMLCollection")}} を渡すことで、 Array プロトタイプのメソッドを `HTMLCollection` で使用することができます。ここでは、 'test' クラスを持つすべての div 要素を検索します。
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+```js
+var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
   return testElement.nodeName === 'DIV';
-});</pre>
+});
+```
 
-<h3 id="Get_the_first_element_whose_class_is_test" name="Get_the_first_element_whose_class_is_'test'">クラスが 'test' である最初の要素を取得する</h3>
+### クラスが 'test' である最初の要素を取得する
 
-<p>これは最もよく使われる操作のメソッドです。</p>
+これは最もよく使われる操作のメソッドです。
 
-<pre>&lt;html&gt;
-&lt;body&gt;
-    &lt;div id="parent-id"&gt;
-        &lt;p&gt;hello world 1&lt;/p&gt;
-        &lt;p class="test"&gt;hello world 2&lt;/p&gt;
-        &lt;p&gt;hello world 3&lt;/p&gt;
-        &lt;p&gt;hello world 4&lt;/p&gt;
-    &lt;/div&gt;
+```
+<html>
+<body>
+    <div id="parent-id">
+        <p>hello world 1</p>
+        <p class="test">hello world 2</p>
+        <p>hello world 3</p>
+        <p>hello world 4</p>
+    </div>
 
-    &lt;script&gt;
+    <script>
         var parentDOM = document.getElementById("parent-id");
 
         var test = parentDOM.getElementsByClassName("test"); // 一致する要素のリストであり、要素自身では*ない*
         console.log(test); //HTMLCollection[1]
 
         var testTarget = parentDOM.getElementsByClassName("test")[0]; // 求める最初の要素
-        console.log(testTarget); //&lt;p class="test"&gt;hello world 2&lt;/p&gt;
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+        console.log(testTarget); //<p class="test">hello world 2</p>
+    </script>
+</body>
+</html>
+```
 
-<h3 id="Multiple_Classes_Example" name="Multiple_Classes_Example">複数のクラスの例</h3>
+### 複数のクラスの例
 
-<p><code>document.getElementsByClassName</code> は <code>document.querySelector</code> や <code>document.querySelectorAll</code> ととても似た動きをします。指定されたクラス名がすべてある要素のみが選択されます。</p>
+`document.getElementsByClassName` は `document.querySelector` や `document.querySelectorAll` ととても似た動きをします。指定されたクラス名がすべてある要素のみが選択されます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;span class="orange fruit"&gt;Orange Fruit&lt;/span&gt;
-&lt;span class="orange juice"&gt;Orange Juice&lt;/span&gt;
-&lt;span class="apple juice"&gt;Apple Juice&lt;/span&gt;
-&lt;span class="foo bar"&gt;Something Random&lt;/span&gt;
-&lt;textarea id="resultArea" style="width:98%;height:7em"&gt;&lt;/textarea&gt;</pre>
+```html
+<span class="orange fruit">Orange Fruit</span>
+<span class="orange juice">Orange Juice</span>
+<span class="apple juice">Apple Juice</span>
+<span class="foo bar">Something Random</span>
+<textarea id="resultArea" style="width:98%;height:7em"></textarea>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">// getElementsByClassName は指定された両方のクラスを持つ要素のみを選択する
+```js
+// getElementsByClassName は指定された両方のクラスを持つ要素のみを選択する
 var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i&lt;len; i=i+1|0) {
+for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
     result += "\n  " + allOrangeJuiceByClass[i].textContent;
 }
 
@@ -102,35 +117,23 @@ for (var i=0, len=allOrangeJuiceByClass.length|0; i&lt;len; i=i+1|0) {
 // querySelector は完全一致で選択する
 var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i&lt;len; i=i+1|0) {
+for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
     result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
-document.getElementById("resultArea").value = result;</pre>
+document.getElementById("resultArea").value = result;
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Multiple_Classes_Example', '100%', 200)}}</p>
+{{EmbedLiveSample('Multiple_Classes_Example', '100%', 200)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-getelementsbyclassname', 'document.getElementsByClassName')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                   | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('DOM WHATWG', '#dom-document-getelementsbyclassname', 'document.getElementsByClassName')}} | {{Spec2('DOM WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.getElementsByClassName")}}</p>
+{{Compat("api.Document.getElementsByClassName")}}

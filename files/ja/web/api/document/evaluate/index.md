@@ -3,33 +3,30 @@ title: Document.evaluate()
 slug: Web/API/Document/evaluate
 translation_of: Web/API/Document/evaluate
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}[XPath](/ja/docs/XPath "XPath") 式やその他与えられたパラメータに基づいて [`XPathResult`](/ja/docs/XPathResult "XPathResult") を返します。
 
-<div><a href="/ja/docs/XPath" title="XPath">XPath</a> 式やその他与えられたパラメータに基づいて <code><a href="/ja/docs/XPathResult" title="XPathResult">XPathResult</a></code> を返します。</div>
+## 構文
 
-<div> </div>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox">var xpathResult = document.evaluate(
+```
+var xpathResult = document.evaluate(
  xpathExpression,
  contextNode,
  namespaceResolver,
  resultType,
  result
-);</pre>
+);
+```
 
-<ul>
- <li><code>xpathExpression</code> は評価される Xpath を示す文字列です。</li>
- <li><code>contextNode</code> はクエリの<em>コンテキストノード</em>を指定します(<a href="http://www.w3.org/TR/xpath" rel="freelink">XPath の仕様</a>を参照してください)　コンテキストノードとして <code>document</code> を渡すのが一般的です。</li>
- <li><code>namespaceResolver</code> は、任意の名前空間接頭辞を受け取り、その接頭辞に関連付けられた名前空間 URI を文字列として返す関数です。接頭辞が文書の中でマッチされるように、XPath 自身の中で接頭辞を解決するために使われます。HTML 文書向け、または名前空間接頭辞を使わないときは <code>null</code> を指定するのが一般的です。</li>
- <li><code>resultType</code> は返り値である <code>XPathResult</code> のタイプに対応する整数です。XPathResult コンストラクタの<a href="#Result_types">名前付き定数プロパティ</a> (例えば <code>XPathResult.ANY_TYPE</code>) を使用してください。これらは0から9までの整数に対応しています。</li>
- <li><code>result</code> は結果として使われる既存の <code>XPathResult</code> です。<code>null</code> を指定するのが最も一般的です。<code>null</code> は新しい <code>XPathResult　を生成します。</code></li>
-</ul>
+- `xpathExpression` は評価される Xpath を示す文字列です。
+- `contextNode` はクエリの*コンテキストノード*を指定します([XPath の仕様](http://www.w3.org/TR/xpath)を参照してください)　コンテキストノードとして `document` を渡すのが一般的です。
+- `namespaceResolver` は、任意の名前空間接頭辞を受け取り、その接頭辞に関連付けられた名前空間 URI を文字列として返す関数です。接頭辞が文書の中でマッチされるように、XPath 自身の中で接頭辞を解決するために使われます。HTML 文書向け、または名前空間接頭辞を使わないときは `null` を指定するのが一般的です。
+- `resultType` は返り値である `XPathResult` のタイプに対応する整数です。XPathResult コンストラクタの[名前付き定数プロパティ](#Result_types) (例えば `XPathResult.ANY_TYPE`) を使用してください。これらは 0 から 9 までの整数に対応しています。
+- `result` は結果として使われる既存の `XPathResult` です。`null` を指定するのが最も一般的です。`null` は新しい `XPathResult を生成します。`
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+```js
+var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
 /* Search the document for all h2 elements.
  * The result will likely be an unordered node iterator. */
 var thisHeading = headings.iterateNext();
@@ -39,123 +36,60 @@ while (thisHeading) {
   thisHeading = headings.iterateNext();
 }
 alert(alertText); // Alerts the text of all h2 elements
-</pre>
+```
 
-<p>Note, in the above example, a more verbose XPath is preferred over common shortcuts such as <code>//h2</code>. Generally, more specific XPath selectors as in the above example usually gives a significant performance improvement, especially on very large documents. This is because the evaluation of the query spends does not waste time visiting unnecessary nodes. Using // is generally slow as it visits <em>every</em> node from the root and all subnodes looking for possible matches.</p>
+Note, in the above example, a more verbose XPath is preferred over common shortcuts such as `//h2`. Generally, more specific XPath selectors as in the above example usually gives a significant performance improvement, especially on very large documents. This is because the evaluation of the query spends does not waste time visiting unnecessary nodes. Using // is generally slow as it visits _every_ node from the root and all subnodes looking for possible matches.
 
-<p>Further optimization can be achieved by careful use of the context parameter. For example, if you know the content you are looking for is somewhere inside the body tag, you can use this:</p>
+Further optimization can be achieved by careful use of the context parameter. For example, if you know the content you are looking for is somewhere inside the body tag, you can use this:
 
-<pre class="brush: js">document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
-</pre>
+```js
+document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
+```
 
-<p>Notice in the above <code>document.body</code> has been used as the context instead of <code>document</code> so the XPath starts from the body element. (In this example, the <code>"."</code> is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving <code>//h2</code>) the query would start from the root node (<code>html</code>) which would be more wasteful.)</p>
+Notice in the above `document.body` has been used as the context instead of `document` so the XPath starts from the body element. (In this example, the `"."` is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving `//h2`) the query would start from the root node (`html`) which would be more wasteful.)
 
-<p>See <a href="/ja/docs/Introduction_to_using_XPath_in_JavaScript" title="Introduction to using XPath in JavaScript">Introduction to using XPath in JavaScript</a> for more information.</p>
+See [Introduction to using XPath in JavaScript](/ja/docs/Introduction_to_using_XPath_in_JavaScript "Introduction to using XPath in JavaScript") for more information.
 
-<h2 id="Notes" name="Notes">注釈</h2>
+## 注釈
 
-<ul>
- <li>XPath expressions can be evaluated on HTML and XML documents.</li>
- <li>While using document.evaluate() works in FF2, in FF3 one must use someXMLDoc.evaluate() if evaluating against something other than the current document.</li>
-</ul>
+- XPath expressions can be evaluated on HTML and XML documents.
+- While using document.evaluate() works in FF2, in FF3 one must use someXMLDoc.evaluate() if evaluating against something other than the current document.
 
-<h2 id="Result_types" name="Result_types">戻り値の分類</h2>
+## 戻り値の分類
 
-<p>(Merge with <a href="/Template:XPathResultConstants" title="Template:XPathResultConstants">Template:XPathResultConstants</a>?</p>
+(Merge with [Template:XPathResultConstants](/Template:XPathResultConstants "Template:XPathResultConstants")?
 
-<p>These are supported values for the <code>resultType</code> parameter of the <code>evaluate</code> method:</p>
+These are supported values for the `resultType` parameter of the `evaluate` method:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Result Type</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>ANY_TYPE</code></td>
-   <td>0</td>
-   <td>Whatever type naturally results from the given expression.</td>
-  </tr>
-  <tr>
-   <td><code>NUMBER_TYPE</code></td>
-   <td>1</td>
-   <td>A result set containing a single number. Useful, for example, in an XPath expression using the <code>count()</code> function.</td>
-  </tr>
-  <tr>
-   <td><code>STRING_TYPE</code></td>
-   <td>2</td>
-   <td>A result set containing a single string.</td>
-  </tr>
-  <tr>
-   <td><code>BOOLEAN_TYPE</code></td>
-   <td>3</td>
-   <td>A result set containing a single boolean value. Useful, for example, an an XPath expression using the <code>not()</code> function.</td>
-  </tr>
-  <tr>
-   <td><code>UNORDERED_NODE_ITERATOR_TYPE</code></td>
-   <td>4</td>
-   <td>A result set containing all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document.</td>
-  </tr>
-  <tr>
-   <td><code>ORDERED_NODE_ITERATOR_TYPE</code></td>
-   <td>5</td>
-   <td>A result set containing all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.</td>
-  </tr>
-  <tr>
-   <td><code>UNORDERED_NODE_SNAPSHOT_TYPE</code></td>
-   <td>6</td>
-   <td>A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document.</td>
-  </tr>
-  <tr>
-   <td><code>ORDERED_NODE_SNAPSHOT_TYPE</code></td>
-   <td>7</td>
-   <td>A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.</td>
-  </tr>
-  <tr>
-   <td><code>ANY_UNORDERED_NODE_TYPE</code></td>
-   <td>8</td>
-   <td>A result set containing any single node that matches the expression. The node is not necessarily the first node in the document that matches the expression.</td>
-  </tr>
-  <tr>
-   <td><code>FIRST_ORDERED_NODE_TYPE</code></td>
-   <td>9</td>
-   <td>A result set containing the first node in the document that matches the expression.</td>
-  </tr>
- </tbody>
-</table>
+| Result Type                    | Value | Description                                                                                                                                                                |
+| ------------------------------ | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ANY_TYPE`                     | 0     | Whatever type naturally results from the given expression.                                                                                                                 |
+| `NUMBER_TYPE`                  | 1     | A result set containing a single number. Useful, for example, in an XPath expression using the `count()` function.                                                         |
+| `STRING_TYPE`                  | 2     | A result set containing a single string.                                                                                                                                   |
+| `BOOLEAN_TYPE`                 | 3     | A result set containing a single boolean value. Useful, for example, an an XPath expression using the `not()` function.                                                    |
+| `UNORDERED_NODE_ITERATOR_TYPE` | 4     | A result set containing all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document.              |
+| `ORDERED_NODE_ITERATOR_TYPE`   | 5     | A result set containing all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.                              |
+| `UNORDERED_NODE_SNAPSHOT_TYPE` | 6     | A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document. |
+| `ORDERED_NODE_SNAPSHOT_TYPE`   | 7     | A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.                 |
+| `ANY_UNORDERED_NODE_TYPE`      | 8     | A result set containing any single node that matches the expression. The node is not necessarily the first node in the document that matches the expression.               |
+| `FIRST_ORDERED_NODE_TYPE`      | 9     | A result set containing the first node in the document that matches the expression.                                                                                        |
 
-<p>Results of <code>NODE_ITERATOR</code> types contain references to nodes in the document. Modifying a node will invalidate the iterator. After modifying a node, attempting to iterate through the results will result in an error.</p>
+Results of `NODE_ITERATOR` types contain references to nodes in the document. Modifying a node will invalidate the iterator. After modifying a node, attempting to iterate through the results will result in an error.
 
-<p>Results of <code>NODE_SNAPSHOT</code> types are snapshots, which are essentially lists of matched nodes. You can make changes to the document by altering snapshot nodes. Modifying the document doesn't invalidate the snapshot; however, if the document is changed, the snapshot may not correspond to the current state of the document, since nodes may have moved, been changed, added, or removed.</p>
+Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of matched nodes. You can make changes to the document by altering snapshot nodes. Modifying the document doesn't invalidate the snapshot; however, if the document is changed, the snapshot may not correspond to the current state of the document, since nodes may have moved, been changed, added, or removed.
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator-evaluate", "Document.evaluate")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Initial specification</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment               |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
+| {{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator-evaluate", "Document.evaluate")}} | {{Spec2("DOM3 XPath")}} | Initial specification |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("api.Document.evaluate")}}</p>
+{{Compat("api.Document.evaluate")}}
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/DOM/document.createExpression" title="DOM/document.createExpression">DOM:document.createExpression</a></li>
- <li><a href="/ja/docs/Code_snippets/XPath" title="Code_snippets/XPath">XPath Code Snippets</a></li>
- <li><a href="http://codepen.io/johan/full/ckFgn">Check for browser support</a></li>
-</ul>
+- [DOM:document.createExpression](/ja/docs/DOM/document.createExpression "DOM/document.createExpression")
+- [XPath Code Snippets](/ja/docs/Code_snippets/XPath "Code_snippets/XPath")
+- [Check for browser support](http://codepen.io/johan/full/ckFgn)

@@ -9,23 +9,22 @@ tags:
   - HTML5
 translation_of: Web/API/Document/clear
 ---
-<div>{{APIRef("DOM")}}{{ Deprecated_header() }}</div>
+{{APIRef("DOM")}}{{ Deprecated_header() }}
 
-<p><code><strong>Document.clear()</strong></code> メソッドは指定された文書全体を消去するもので、初期 (1.0 以前) の Mozilla アプリケーションにありました。</p>
+**`Document.clear()`** メソッドは指定された文書全体を消去するもので、初期 (1.0 以前) の Mozilla アプリケーションにありました。
 
-<p>近年のバージョンの Mozilla ベースアプリケーションでも、 Internet Explorer や Netscape 4 でも、このメソッドは何も行いません。</p>
+近年のバージョンの Mozilla ベースアプリケーションでも、 Internet Explorer や Netscape 4 でも、このメソッドは何も行いません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">document.clear();
-</pre>
+```
+document.clear();
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<ul>
- <li><a href="http://www.whatwg.org/html/#dom-document-clear">HTML5</a></li>
-</ul>
+- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>{{Compat("api.Document.clear")}}</div>
+{{Compat("api.Document.clear")}}

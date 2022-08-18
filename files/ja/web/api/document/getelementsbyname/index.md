@@ -12,86 +12,61 @@ tags:
   - メソッド
 translation_of: Web/API/Document/getElementsByName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">{{domxref("Document")}} オブジェクトの <strong><code>getElementsByName()</code></strong> メソッドは、文書内で指定した {{domxref("element.name","name")}} を持つ要素の {{domxref("NodeList")}} コレクションを返します。</span></p>
+{{domxref("Document")}} オブジェクトの **`getElementsByName()`** メソッドは、文書内で指定した {{domxref("element.name","name")}} を持つ要素の {{domxref("NodeList")}} コレクションを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>elements</var> = document.getElementsByName(<var>name</var>);
-</pre>
+```
+var elements = document.getElementsByName(name);
+```
 
-<ul>
- <li><var>elements</var> は、生きた {{domxref("NodeList")}} コレクション、つまり文書内で同じ <code>name</code> を持った新しい要素が追加されたり削除されたりすると自動的に更新されるものです。</li>
- <li><code>name</code> は、要素の <code>name</code> 属性の値です。</li>
-</ul>
+- _elements_ は、生きた {{domxref("NodeList")}} コレクション、つまり文書内で同じ `name` を持った新しい要素が追加されたり削除されたりすると自動的に更新されるものです。
+- `name` は、要素の `name` 属性の値です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;title&gt;document.getElementsByName の使用例&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<title>document.getElementsByName の使用例</title>
 
-&lt;input type="hidden" name="up"&gt;
-&lt;input type="hidden" name="down"&gt;
+<input type="hidden" name="up">
+<input type="hidden" name="down">
 
-&lt;script&gt;
+<script>
   var up_names = document.getElementsByName("up");
   console.log(up_names[0].tagName); // "INPUT" と表示
-&lt;/script&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</html>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p>{{domxref("element.name","name")}} 属性は、(X)HTML 文書にのみ適用可能です。</p>
+{{domxref("element.name","name")}} 属性は、(X)HTML 文書にのみ適用可能です。
 
-<p>返却された {{domxref("NodeList")}} コレクションには、 {{htmlelement("meta")}} や {{htmlelement("object")}} など、それに <code>name</code> 属性にまったく対応していない要素も含め、指定された <code>name</code> を持つ<em>すべての</em>要素が含まれます。</p>
+返却された {{domxref("NodeList")}} コレクションには、 {{htmlelement("meta")}} や {{htmlelement("object")}} など、それに `name` 属性にまったく対応していない要素も含め、指定された `name` を持つ*すべての*要素が含まれます。
 
-<div class="warning">
-<p><strong>getElementsByName</strong> メソッドは、 IE10 以前では動作が異なります。この場合、 <code>getElementsByName()</code> は指定された <a href="/ja/docs/Web/HTML/Global_attributes/id"><code>id</code> 属性</a>を持つ要素も返します。 <code>name</code> および <code>id</code> で同じ文字列を使用しないように注意してください。</p>
-</div>
+> **Warning:** **getElementsByName** メソッドは、 IE10 以前では動作が異なります。この場合、 `getElementsByName()` は指定された [`id` 属性](/ja/docs/Web/HTML/Global_attributes/id)を持つ要素も返します。 `name` および `id` で同じ文字列を使用しないように注意してください。
 
-<div class="warning">
-<p><strong>getElementsByName</strong> メソッドは IE では動作が異なります。この場合、 <code>getElementsByName()</code> は <code>name</code> 属性を許容しない要素 (<code>&lt;span&gt;</code> など) を返しません。</p>
-</div>
+> **Warning:** **getElementsByName** メソッドは IE では動作が異なります。この場合、 `getElementsByName()` は `name` 属性を許容しない要素 (`<span>` など) を返しません。
 
-<div class="warning">
-<p>IE および Edge では、 {{domxref("NodeList")}} ではなく {{domxref("HTMLCollection")}} を返します。</p>
-</div>
+> **Warning:** IE および Edge では、 {{domxref("NodeList")}} ではなく {{domxref("HTMLCollection")}} を返します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       | 状態                                 | 備考     |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |          |
+| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.getElementsByName")}}</p>
+{{Compat("api.Document.getElementsByName")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.getElementById()")}} : 固有の <code>id</code> を持つ要素への参照を返す</li>
- <li>{{domxref("document.getElementsByTagName()")}} : 同じ<a href="/ja/docs/Web/API/Element/tagName">タグ名</a>の要素への参照を返す</li>
- <li>{{domxref("document.querySelector()")}} : <code>'div.myclass'</code> のような CSS セレクターによって要素への参照をかえす</li>
-</ul>
+- {{domxref("document.getElementById()")}} : 固有の `id` を持つ要素への参照を返す
+- {{domxref("document.getElementsByTagName()")}} : 同じ[タグ名](/ja/docs/Web/API/Element/tagName)の要素への参照を返す
+- {{domxref("document.querySelector()")}} : `'div.myclass'` のような CSS セレクターによって要素への参照をかえす

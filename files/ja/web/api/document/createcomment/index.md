@@ -8,51 +8,39 @@ tags:
   - Reference
 translation_of: Web/API/Document/createComment
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>createComment()</code></strong> は新たにコメントノードを作成し、返します。</p>
+**`createComment()`** は新たにコメントノードを作成し、返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>CommentNode</var> = <var>document</var>.createComment(<var>data</var>);
-</pre>
+```
+CommentNode = document.createComment(data);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><var>data</var></dt>
- <dd>文字列で、コメントに追加されるデータを含みます。</dd>
-</dl>
+- _data_
+  - : 文字列で、コメントに追加されるデータを含みます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js notranslate">var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  'application/xml');
+```js
+var docu = new DOMParser().parseFromString('<xml></xml>',  'application/xml');
 var comment = docu.createComment('This is a not-so-secret comment in your document');
 
 docu.getElementsByTagName('xml')[0].appendChild(comment);
 
 alert(new XMLSerializer().serializeToString(docu));
-// 表示結果: &lt;xml&gt;&lt;!--This is a not-so-secret comment in your document--&gt;&lt;/xml&gt;</pre>
+// 表示結果: <xml><!--This is a not-so-secret comment in your document--></xml>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createcomment', 'document.createComment')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('DOM WHATWG', '#dom-document-createcomment', 'document.createComment')}} | {{Spec2('DOM WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.createComment")}}</p>
+{{Compat("api.Document.createComment")}}

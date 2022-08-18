@@ -15,87 +15,74 @@ tags:
 translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary"><strong><code>elementsFromPoint()</code></strong> は {{domxref("DocumentOrShadowRoot")}} インターフェイスのメソッドで、指定された座標 (ビューポートからの相対) にあるすべての要素の配列を返します。</span></p>
+**`elementsFromPoint()`** は {{domxref("DocumentOrShadowRoot")}} インターフェイスのメソッドで、指定された座標 (ビューポートからの相対) にあるすべての要素の配列を返します。
 
-<p>これは {{domxref("DocumentOrShadowRoot.elementFromPoint", "elementFromPoint()")}} メソッドと同じような方法で動作します。</p>
+これは {{domxref("DocumentOrShadowRoot.elementFromPoint", "elementFromPoint()")}} メソッドと同じような方法で動作します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">const elements = document.elementsFromPoint(<var>x</var>, <var>y</var>);</pre>
+```
+const elements = document.elementsFromPoint(x, y);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>点の水平座標です。</dd>
- <dt><code><var>y</var></code></dt>
- <dd>点の垂直座標です。</dd>
-</dl>
+- `x`
+  - : 点の水平座標です。
+- `y`
+  - : 点の垂直座標です。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>{{domxref("Element")}} オブジェクトの配列です。</p>
+{{domxref("Element")}} オブジェクトの配列です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;Some text&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Elements at point 30, 20:&lt;/p&gt;
-&lt;div id="output"&gt;&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p>Some text</p>
+</div>
+<p>Elements at point 30, 20:</p>
+<div id="output"></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;highlight[1]">let output = document.getElementById("output");
+```js
+let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
-  for (var i = 0; i &lt; elements.length; i++) {
+  for (var i = 0; i < elements.length; i++) {
     output.textContent += elements[i].localName;
-    if (i &lt; elements.length - 1) {
-      output.textContent += " &lt; ";
+    if (i < elements.length - 1) {
+      output.textContent += " < ";
     }
   }
 } else {
-  output.innerHTML = "&lt;span style=\"color: red;\"&gt;" +
-     "Browser does not support &lt;code&gt;document.elementsFromPoint()&lt;/code&gt;" +
-     "&lt;/span&gt;";
-}</pre>
+  output.innerHTML = "<span style=\"color: red;\">" +
+     "Browser does not support <code>document.elementsFromPoint()</code>" +
+     "</span>";
+}
+```
 
-<p>{{EmbedLiveSample('Example', '420', '120')}}</p>
+{{EmbedLiveSample('Example', '420', '120')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Shadow DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'elementsFromPoint()')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       | 状態                             |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('Shadow DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}} | {{Spec2('Shadow DOM')}} |
+| {{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'elementsFromPoint()')}}             | {{Spec2('CSSOM View')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}</p>
+{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</li>
- <li>{{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}</li>
-</ul>
+- {{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}
+- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}

@@ -9,56 +9,39 @@ tags:
   - メソッド
 translation_of: Web/API/Document/writeln
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>テキストの文字列とその直後に続く改行文字を文書に書き込みます。</p>
+テキストの文字列とその直後に続く改行文字を文書に書き込みます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="eval">document.writeln(<em>line</em>);
-</pre>
+```
+document.writeln(line);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>line</code> はテキストの行を含む文字列です。</li>
-</ul>
+- `line` はテキストの行を含む文字列です。
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<pre>document.writeln("&lt;p&gt;パスワードを入力してください:&lt;/p&gt;");
-</pre>
+```
+document.writeln("<p>パスワードを入力してください:</p>");
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p><strong>document.writeln</strong> は {{domxref("document.write")}} と同じですが、改行文字を追加します。</p>
+**document.writeln** は {{domxref("document.write")}} と同じですが、改行文字を追加します。
 
-<div class="note"><strong>メモ:</strong> <strong>document.writeln</strong> は (<strong>document.write</strong> と同様に) XHTML 文書では動作しません (エラーコンソールに "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] エラーが表示されます)。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が <code>application/xhtml+xml</code> の MIME タイプで提供されたときに発生します。詳細は <a href="http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a> で確認することができます。</div>
+> **Note:** **メモ:** **document.writeln** は (**document.write** と同様に) XHTML 文書では動作しません (エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます)。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の MIME タイプで提供されたときに発生します。詳細は [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-writeln", "document.writeln()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-35318390", "document.writeln()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName("HTML WHATWG", "#dom-document-writeln", "document.writeln()")}} | {{Spec2("HTML WHATWG")}} |      |
+| {{SpecName("DOM2 HTML", "html.html#ID-35318390", "document.writeln()")}}     | {{Spec2("DOM2 HTML")}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.writeln")}}</p>
+{{Compat("api.Document.writeln")}}
