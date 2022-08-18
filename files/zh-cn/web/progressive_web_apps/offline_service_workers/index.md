@@ -40,7 +40,7 @@ if('serviceWorker' in navigator) {
 };
 ```
 
-如果浏览器支持 Service Workers API，则使用 [`ServiceWorkerContainer.register()`](https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 方法在该站点注册。其内容在 sw\.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw\.js 文件中。
+如果浏览器支持 Service Workers API，则使用 [`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 方法在该站点注册。其内容在 sw\.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw\.js 文件中。
 
 ### Service Worker 的生命周期
 

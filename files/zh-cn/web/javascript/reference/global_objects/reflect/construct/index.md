@@ -31,7 +31,7 @@ Reflect.construct(target, argumentsList[, newTarget])
 
 ## 描述
 
-`Reflect.construct`允许你使用可变的参数来调用构造函数 ，这和使用[new 操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)搭配[对象展开符](<https://developer.mozilla.org/ zh-CN/docs/Web/JavaScript/Reference/Operators/new>)调用一样。
+`Reflect.construct`允许你使用可变的参数来调用构造函数，这和使用[new 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)搭配[对象展开符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)调用一样。
 
 ```js
 var obj = new Foo(...args);

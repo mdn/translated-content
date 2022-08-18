@@ -35,7 +35,7 @@ myCar.year = 1969;
 myCar.noProperty; // undefined
 ```
 
-JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar` 对象的属性：
+JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar` 对象的属性：
 
 ```js
 myCar["make"] = "Ford";
@@ -112,14 +112,14 @@ myCar.year = 1969
 
 ```js
 function listAllProperties(o){
-	var objectToInspect;
-	var result = [];
+  var objectToInspect;
+  var result = [];
 
-	for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){
-		result = result.concat(Object.getOwnPropertyNames(objectToInspect));
-	}
+  for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){
+    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+  }
 
-	return result;
+  return result;
 }
 ```
 
@@ -271,7 +271,7 @@ fish.displayType(); // Output:Fishes
 
 ## **继承**
 
-所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 `prototype` 对象找到。查看更多详细 [Inheritance and the prototype chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 `prototype` 对象找到。查看更多详细 [Inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 ## **对象属性索引**
 
@@ -294,7 +294,7 @@ car1.color = "black";
 
 ## 定义方法
 
-一个*方法* 是关联到某个对象的函数，或者简单地说，一个方法是一个值为某个函数的对象属性。定义方法就像定义普通的函数，除了它们必须被赋给对象的某个属性。查看 [method definitions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)了解更多详情例如：
+一个*方法* 是关联到某个对象的函数，或者简单地说，一个方法是一个值为某个函数的对象属性。定义方法就像定义普通的函数，除了它们必须被赋给对象的某个属性。查看 [method definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)了解更多详情例如：
 
 ```js
 objectName.methodname = function_name;
@@ -390,7 +390,7 @@ function validate(obj, lowval, hival) {
 
 ## **定义 getters 与 setters**
 
-一个 [getter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 是一个获取某个特定属性的值的方法。一个 [setter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。
+一个 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 是一个获取某个特定属性的值的方法。一个 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。
 
 下面例子描述了 getters 和 setters 是如何为用户定义的对象 `o` 工作的。
 
@@ -518,11 +518,11 @@ fruit == fruitbear // return true
 fruit === fruitbear // return true
 ```
 
-了解更多关于比较操作符的用法，查看 [Comparison operators](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
+了解更多关于比较操作符的用法，查看 [Comparison operators](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
 
 ## 附加参考
 
-- 想要深入了解，请阅读[details of javaScript's objects model](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
-- 想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 [JavaScript classes](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes) 章节。
+- 想要深入了解，请阅读[details of javaScript's objects model](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
+- 想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 [JavaScript classes](/zh-CN/docs/Web/JavaScript/Reference/Classes) 章节。
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

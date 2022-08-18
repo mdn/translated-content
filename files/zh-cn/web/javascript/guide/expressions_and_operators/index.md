@@ -134,11 +134,11 @@ var var2 = 4;
 
 | Operator                                                                                     | Usage     | Description                                                                                                        |
 | -------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| 按位与[ AND](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND)   | `a & b`   | 在 a,b 的位表示中，每一个对应的位都为 1 则返回 1， 否则返回 0.                                                     |
-| 按位或[ OR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR)     | `a \| b`  | 在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1， 否则返回 0.                                           |
-| 按位异或[ XOR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR) | `a ^ b`   | 在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.                                               |
-| 按位非[ NOT](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT)   | `~ a`     | 反转被操作数的位。                                                                                                 |
-| 左移[ shift](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift)    | `a << b`  | 将 a 的二进制串向左移动 b 位，右边移入 0.                                                                          |
+| 按位与 [AND](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND)   | `a & b`   | 在 a,b 的位表示中，每一个对应的位都为 1 则返回 1， 否则返回 0.                                                     |
+| 按位或 [OR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR)     | `a \| b`  | 在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1， 否则返回 0.                                           |
+| 按位异或 [XOR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR) | `a ^ b`   | 在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.                                               |
+| 按位非 [NOT](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT)   | `~ a`     | 反转被操作数的位。                                                                                                 |
+| 左移 [shift](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift)    | `a << b`  | 将 a 的二进制串向左移动 b 位，右边移入 0.                                                                          |
 | 算术右移                                                                                     | `a >> b`  | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位。(译注：算术右移左边空出的位是根据最高位是 0 和 1 来进行填充的) |
 | 无符号右移(左边空出位用 0 填充)                                                              | `a >>> b` | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位，并把左边空出的位都填充为 0                                     |
 
@@ -163,8 +163,8 @@ var var2 = 4;
 | `15 & 9`  | `9`   | `1111 & 1001 = 1001`                                              |
 | `15 \| 9` | `15`  | `1111 \| 1001 = 1111`                                             |
 | `15 ^ 9`  | `6`   | `1111 ^ 1001 = 0110`                                              |
-| `~15`     | `-16` | ` ~``00000000...`` 00001111 = ``1111``1111``...``11110000 `       |
-| `~9`      | `-10` | ` ~``00000000``...``0000`` 1001 = ``1111``1111``...``1111``0110 ` |
+| `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 注意位运算符“非”将所有的 32 位取反，而值的最高位 (最左边的一位) 为 1 则表示负数 (2-补码表示法)。
 
@@ -192,9 +192,9 @@ var var2 = 4;
 
 | 运算符                                                                                         | 范例               | 描述                                                                                                                                                                      |
 | ---------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND)` (&&`)  | `expr1 && expr2`   | (逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回`expr2`。因此`，&&`用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.                           |
-| [逻辑或 ](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR)(`\|\|`) | `expr1 \|\| expr2` | (逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回`expr2`。因此，\|\| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。 |
-| [逻辑非](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT)` (!)`   | `!expr`            | (逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。                                                                                                          |
+| [逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND) `(&&`)  | `expr1 && expr2`   | (逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回`expr2`。因此`，&&`用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.                           |
+| [逻辑或](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) (`\|\|`) | `expr1 \|\| expr2` | (逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回`expr2`。因此，\|\| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。 |
+| [逻辑非](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) `(!)`   | `!expr`            | (逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。                                                                                                          |
 
 能被转换为`false`的值有`null`, `0`, `NaN`, 空字符串 ("") 和`undefined`。（译者注：也可以称作”falsy“）
 
@@ -273,7 +273,7 @@ myString += "bet"; // 返回 "alphabet"
 var status = (age >= 18) ? "adult" : "minor";
 ```
 
-当 `age` 大于等于 18 的时候，将“adult”赋值给` status`；否则将“minor”赋值给 `status`。
+当 `age` 大于等于 18 的时候，将“adult”赋值给 `status`；否则将“minor”赋值给 `status`。
 
 ### 逗号操作符
 
@@ -631,7 +631,7 @@ var objectName = new objectType([param1, param2, ..., paramN]);
 
 super
 
-[super ](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)关键字可以用来调用一个对象父类的函数，它在用来调用一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的父类的构造函数时非常有用，比如：
+[super](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 关键字可以用来调用一个对象父类的函数，它在用来调用一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的父类的构造函数时非常有用，比如：
 
 ```plain
 super([arguments]); // calls the parent constructor. super.functionOnParent([arguments]);

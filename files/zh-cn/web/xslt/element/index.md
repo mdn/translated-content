@@ -25,38 +25,38 @@ This would result in the following:
 
 The element annotations that follow include a description, a syntax listing, a list of required and optional attributes, a description of type and position, its source in the W3C Recommendation and an explanation of the degree of present Gecko support.
 
-- [xsl:apply-imports](/cn/XSLT/apply-imports)
-- [xsl:apply-templates](/cn/XSLT/apply-templates)
-- [xsl:attribute](/cn/XSLT/attribute)
-- [xsl:attribute-set](/cn/XSLT/attribute-set)
-- [xsl:call-template](/cn/XSLT/call-template)
-- [xsl:choose](/cn/XSLT/choose)
-- [xsl:comment](/cn/XSLT/comment)
-- [xsl:copy](/cn/XSLT/copy)
-- [xsl:copy-of](/cn/XSLT/copy-of)
-- [xsl:decimal-format](/cn/XSLT/decimal-format)
-- [xsl:element](/cn/XSLT/element)
-- [xsl:fallback](/cn/XSLT/fallback) _(not supported)_
-- [xsl:for-each](/cn/XSLT/for-each)
-- [xsl:if](/cn/XSLT/if)
-- [xsl:import](/cn/XSLT/import) _(mostly supported)_
-- [xsl:include](/cn/XSLT/include)
-- [xsl:key](/cn/XSLT/key)
-- [xsl:message](/cn/XSLT/message)
-- [xsl:namespace-alias](/cn/XSLT/namespace-alias) _(not supported)_
-- [xsl:number](/cn/XSLT/number) _(partially supported)_
-- [xsl:otherwise](/cn/XSLT/otherwise)
-- [xsl:output](/cn/XSLT/output) _(partially supported)_
-- [xsl:param](/cn/XSLT/param)
-- [xsl:preserve-space](/cn/XSLT/preserve-space)
-- [xsl:processing-instruction](/cn/XSLT/processing-instruction)
-- [xsl:sort](/cn/XSLT/sort)
-- [xsl:strip-space](/cn/XSLT/strip-space)
-- [xsl:stylesheet](/cn/XSLT/stylesheet) _(partially supported)_
-- [xsl:template](/cn/XSLT/template)
-- [xsl:text](/cn/XSLT/text) _(partially supported)_
-- [xsl:transform](/cn/XSLT/transform)
-- [xsl:value-of](/cn/XSLT/value-of) _(partially supported)_
-- [xsl:variable](/cn/XSLT/variable)
-- [xsl:when](/cn/XSLT/when)
-- [xsl:with-param](/cn/XSLT/with-param)
+- [xsl:apply-imports](/zh-CN/XSLT/apply-imports)
+- [xsl:apply-templates](/zh-CN/XSLT/apply-templates)
+- [xsl:attribute](/zh-CN/XSLT/attribute)
+- [xsl:attribute-set](/zh-CN/XSLT/attribute-set)
+- [xsl:call-template](/zh-CN/XSLT/call-template)
+- [xsl:choose](/zh-CN/XSLT/choose)
+- [xsl:comment](/zh-CN/XSLT/comment)
+- [xsl:copy](/zh-CN/XSLT/copy)
+- [xsl:copy-of](/zh-CN/XSLT/copy-of)
+- [xsl:decimal-format](/zh-CN/XSLT/decimal-format)
+- [xsl:element](/zh-CN/XSLT/element)
+- [xsl:fallback](/zh-CN/XSLT/fallback) _(not supported)_
+- [xsl:for-each](/zh-CN/XSLT/for-each)
+- [xsl:if](/zh-CN/XSLT/if)
+- [xsl:import](/zh-CN/XSLT/import) _(mostly supported)_
+- [xsl:include](/zh-CN/XSLT/include)
+- [xsl:key](/zh-CN/XSLT/key)
+- [xsl:message](/zh-CN/XSLT/message)
+- [xsl:namespace-alias](/zh-CN/XSLT/namespace-alias) _(not supported)_
+- [xsl:number](/zh-CN/XSLT/number) _(partially supported)_
+- [xsl:otherwise](/zh-CN/XSLT/otherwise)
+- [xsl:output](/zh-CN/XSLT/output) _(partially supported)_
+- [xsl:param](/zh-CN/XSLT/param)
+- [xsl:preserve-space](/zh-CN/XSLT/preserve-space)
+- [xsl:processing-instruction](/zh-CN/XSLT/processing-instruction)
+- [xsl:sort](/zh-CN/XSLT/sort)
+- [xsl:strip-space](/zh-CN/XSLT/strip-space)
+- [xsl:stylesheet](/zh-CN/XSLT/stylesheet) _(partially supported)_
+- [xsl:template](/zh-CN/XSLT/template)
+- [xsl:text](/zh-CN/XSLT/text) _(partially supported)_
+- [xsl:transform](/zh-CN/XSLT/transform)
+- [xsl:value-of](/zh-CN/XSLT/value-of) _(partially supported)_
+- [xsl:variable](/zh-CN/XSLT/variable)
+- [xsl:when](/zh-CN/XSLT/when)
+- [xsl:with-param](/zh-CN/XSLT/with-param)

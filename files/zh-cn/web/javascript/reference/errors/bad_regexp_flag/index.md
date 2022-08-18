@@ -79,5 +79,5 @@ let obj = {
 
 ## 相关页面
 
-- [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [XRegEx flags](http://xregexp.com/flags/) – 正则表达式库提供新的四个标记 (`n`, `s`, `x`, `A`)

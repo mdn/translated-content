@@ -172,8 +172,8 @@ JavaScript 中的字符串是一串[Unicode 字符](/zh-CN/docs/Web/JavaScript/G
 
 JavaScript 包含布尔类型，这个类型的变量有两个可能的值，分别是 `true` 和 `false`（两者都是关键字）。根据具体需要，JavaScript 按照如下规则将变量转换成布尔类型：
 
-1.  `false`、`0`、空字符串（`""`）、`NaN`、`null` 和 `undefined` 被转换为 `false`
-2.  所有其他值被转换为 `true`
+1. `false`、`0`、空字符串（`""`）、`NaN`、`null` 和 `undefined` 被转换为 `false`
+2. 所有其他值被转换为 `true`
 
 也可以使用 `Boolean()` 函数进行显式转换：
 
@@ -508,7 +508,7 @@ var a = ["dog", "cat", "hen"];
 a.length; // 3
 ```
 
-注意，`Array.length `并不总是等于数组中元素的个数，如下所示：
+注意，`Array.length` 并不总是等于数组中元素的个数，如下所示：
 
 ```js
 var a = ["dog", "cat", "hen"];
@@ -837,7 +837,7 @@ Person.prototype.fullNameReversed = function() {
 }
 ```
 
-`Person.prototype` 是一个可以被`Person`的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 `Person `某个实例（例如上个例子中的 s）一个没有定义的属性时，解释器会首先检查这个 `Person.prototype` 来判断是否存在这样一个属性。所以，任何分配给 `Person.prototype` 的东西对通过 `this` 对象构造的实例都是可用的。
+`Person.prototype` 是一个可以被 `Person` 的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 `Person` 某个实例（例如上个例子中的 s）一个没有定义的属性时，解释器会首先检查这个 `Person.prototype` 来判断是否存在这样一个属性。所以，任何分配给 `Person.prototype` 的东西对通过 `this` 对象构造的实例都是可用的。
 
 这个特性功能十分强大，JavaScript 允许你在程序中的任何时候修改原型（prototype）中的一些东西，也就是说你可以在运行时 (runtime) 给已存在的对象添加额外的方法：
 

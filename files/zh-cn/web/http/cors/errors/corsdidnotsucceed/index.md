@@ -16,6 +16,6 @@ slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 
 ## 参见
 
-- [HTTP 访问控制（CORS）错误](/zh-cn/docs/Web/HTTP/CORS/Errors)
+- [HTTP 访问控制（CORS）错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - 词汇: {{Glossary("CORS")}}
 - [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)

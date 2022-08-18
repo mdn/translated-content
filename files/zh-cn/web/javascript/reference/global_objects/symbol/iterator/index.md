@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
 - {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
-更多信息请参见[迭代协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+更多信息请参见[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
 ## 示例
 

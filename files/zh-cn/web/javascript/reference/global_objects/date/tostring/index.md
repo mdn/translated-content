@@ -26,7 +26,6 @@ toString()
 
 当 Date 被强制转换为字符串时，`toString()` 方法会被自动调用，例如：`const today = 'Today is ' + new Date()`。
 
-
 `Date.prototype.toString()` 必须在 {{jsxref("Date")}} 实例上调用，如果 `this` 的值不是继承自 `Date.prototype`，则抛出 {{jsxref("TypeError")}}。
 
 - 如果你只想获取*日期*，请使用 [`toDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString)。

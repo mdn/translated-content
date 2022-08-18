@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 
 ## 描述
 
-这些原子操作属于 `Atomics` 模块。与一般的全局对象不同，`Atomics` 不是构造函数，因此不能使用 [new](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符调用，也不能将其当作函数直接调用。`Atomics` 的所有属性和方法都是静态的（与 {{jsxref("Math")}} 对象一样）。
+这些原子操作属于 `Atomics` 模块。与一般的全局对象不同，`Atomics` 不是构造函数，因此不能使用 [new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符调用，也不能将其当作函数直接调用。`Atomics` 的所有属性和方法都是静态的（与 {{jsxref("Math")}} 对象一样）。
 
 ### 原子操作
 

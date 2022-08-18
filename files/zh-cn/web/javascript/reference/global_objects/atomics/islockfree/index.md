@@ -17,11 +17,11 @@ Atomics.isLockFree(size)
 ### 参数
 
 - `size`
-  - : 整形。字节长度，通常为[`TypedArray.BYTES_PER_ELEMENT`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
+  - : 整形。字节长度，通常为[`TypedArray.BYTES_PER_ELEMENT`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
 
 ### 返回值
 
-{{jsxref("Boolean")}} 是否为能够使用原子操作的[`TypedArray`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)的标准字节长度之一。
+{{jsxref("Boolean")}} 是否为能够使用原子操作的[`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)的标准字节长度之一。
 
 ## 示例
 

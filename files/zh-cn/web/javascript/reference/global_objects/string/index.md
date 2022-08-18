@@ -222,4 +222,4 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 - {{domxref("DOMString")}}
 - [`StringView` – a C-like representation of strings based on typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView)
-- [Binary strings](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString/Binary)
+- [Binary strings](/zh-CN/docs/Web/API/DOMString/Binary)

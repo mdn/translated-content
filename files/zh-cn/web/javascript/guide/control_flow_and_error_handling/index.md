@@ -205,8 +205,8 @@ document.write("Is there anything else you'd like?<br>");
 
 你可以用 `throw` 语句抛出一个异常并且用 `try...catch` 语句捕获处理它。
 
-- [`throw`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#throw_statement)语句
-- [`try...catch`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#try...catch_statement)语句
+- [`throw`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#throw_statement)语句
+- [`try...catch`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#try...catch_statement)语句
 
 ### 异常类型
 

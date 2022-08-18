@@ -32,7 +32,7 @@ arr.includes(valueToFind[, fromIndex])
 
 0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），但 `false` 不被认为与 0 相等。
 
-> **备注：** 技术上来讲，`includes()` 使用 [`零值相等`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89) 算法来确定是否找到给定的元素。
+> **备注：** 技术上来讲，`includes()` 使用 [`零值相等`](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89) 算法来确定是否找到给定的元素。
 
 ## 示例
 
@@ -139,7 +139,7 @@ if (!Array.prototype.includes) {
 }
 ```
 
-如果你需要支持那些不支持[`Object.defineProperty`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的废弃 JavaScript 引擎，你最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
+如果你需要支持那些不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的废弃 JavaScript 引擎，你最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
 
 ## 规范
 

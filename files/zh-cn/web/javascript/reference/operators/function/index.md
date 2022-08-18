@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Operators/function
 
 **`function`** 关键字可以用来在一个表达式中定义一个函数。
 
-你也可以使用 [`Function`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数和一个[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)来定义函数。
+你也可以使用 [`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数和一个[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)来定义函数。
 
 ## 语法
 
@@ -16,7 +16,7 @@ let function_expression = function [name]([param1[, param2[, ..., paramN]]]) {
 };
 ```
 
-从 [ES2015](https://developer.mozilla.org/zh-CN/docs/)开始，你也可以使用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 。
+从 [ES2015](/zh-CN/docs/)开始，你也可以使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 。
 
 ### 参数
 
@@ -57,7 +57,7 @@ var math = {
 };
 ```
 
-被函数表达式赋值的那个变量会有一个 name 属性，如果你把这个变量赋值给另一个变量的话，这个 name 属性的值也不会改变。如果函数是一个匿名函数，那 name 属性的值就是被赋值的变量的名称（隐藏值）。如果函数不是匿名的话，那 name 属性的值就是这个函数的名称（显性值）。这对于[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)也同样适用（箭头函数没有名字，所以你只能赋予 name 属性一个隐性名）。
+被函数表达式赋值的那个变量会有一个 name 属性，如果你把这个变量赋值给另一个变量的话，这个 name 属性的值也不会改变。如果函数是一个匿名函数，那 name 属性的值就是被赋值的变量的名称（隐藏值）。如果函数不是匿名的话，那 name 属性的值就是这个函数的名称（显性值）。这对于[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)也同样适用（箭头函数没有名字，所以你只能赋予 name 属性一个隐性名）。
 
 ```js
 var foo = function() {}

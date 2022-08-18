@@ -8,7 +8,7 @@ ES2015 中有四种相等算法：
 
 - 抽象（非严格）相等比较 (`==`)
 - 严格相等比较 (`===`): 用于 `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, 和 `case`-matching
-- 同值零：用于 `%TypedArray%` 和 `ArrayBuffer `构造函数、以及`Map`和`Set`操作，并将用于 ES2016/ES7 中的`String.prototype.includes`
+- 同值零：用于 `%TypedArray%` 和 `ArrayBuffer` 构造函数、以及`Map`和`Set`操作，并将用于 ES2016/ES7 中的`String.prototype.includes`
 - 同值：用于所有其他地方
 
 JavaScript 提供三种不同的值比较操作：
@@ -131,7 +131,7 @@ console.log(obj === undefined); // false
 
 在上面的表格中，`ToNumber(A)` 尝试在比较前将参数 A 转换为数字，这与 +A（单目运算符 +）的效果相同。`ToPrimitive(A)`通过尝试调用 A 的`A.toString()` 和 `A.valueOf()` 方法，将参数 A 转换为原始值（Primitive）。
 
-一般而言，根据 ECMAScript 规范，所有的对象都与 `undefined `和 `null `不相等。但是大部分浏览器允许非常窄的一类对象（即，所有页面中的 `document.all `对象），在某些情况下，充当效仿 `undefined `的角色。相等操作符就是在这样的一个背景下。因此，`IsFalsy(A) `方法的值为 `true `，当且仅当 `A `效仿 `undefined`。在其他所有情况下，一个对象都不会等于 `undefined `或 `null`。
+一般而言，根据 ECMAScript 规范，所有的对象都与 `undefined` 和 `null` 不相等。但是大部分浏览器允许非常窄的一类对象（即，所有页面中的 `document.all` 对象），在某些情况下，充当效仿 `undefined` 的角色。相等操作符就是在这样的一个背景下。因此，`IsFalsy(A)` 方法的值为 `true`，当且仅当 `A` 效仿 `undefined`。在其他所有情况下，一个对象都不会等于 `undefined`或 `null`。
 
 ```js
 var num = 0;
@@ -223,7 +223,7 @@ function attemptMutation(v)
 这里是一个会区别对待-0 和 +0 的内置方法和操作符不完全列表：
 
 - [`- (一元负)`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
-  - : 显而易见，对` 0 一元负操作得到``-0 `。但表达式的抽象化可能在你没有意识到得情况下导致-0 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity `如果`obj.velocity`是`0` (或计算结果为`0`), `一个-0`就在上处产生并被赋值为`stoppingForce 的值`.
+  - : 显而易见，对 `0` 一元负操作得到 `-0`。但表达式的抽象化可能在你没有意识到得情况下导致 `-0` 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity` 如果 `obj.velocity` 是 `0` (或计算结果为 `0`), 一个 `-0` 就在上处产生并被赋值为`stoppingForce 的值.
 - [`Math.atan2`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2),
   [`Math.ceil`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil),
   [`Math.pow`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow),

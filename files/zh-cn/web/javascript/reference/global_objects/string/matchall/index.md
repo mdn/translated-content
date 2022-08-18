@@ -18,7 +18,7 @@ str.matchAll(regexp)
 
 regexp
 
-正则表达式对象。如果所传参数不是一个正则表达式对象，则会隐式地使用 `new RegExp(obj)` 将其转换为一个 [`RegExp`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/RegExp) 。
+正则表达式对象。如果所传参数不是一个正则表达式对象，则会隐式地使用 `new RegExp(obj)` 将其转换为一个 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/RegExp)。
 
 `RegExp`必须是设置了全局模式`g`的形式，否则会抛出异常`TypeError`。
 

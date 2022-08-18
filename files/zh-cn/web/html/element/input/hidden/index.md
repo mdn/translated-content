@@ -74,7 +74,7 @@ slug: Web/HTML/Element/Input/hidden
 
 在这里的步骤 2 思路中，要被更新的 ID 记录保留在隐藏的输入中。 在步骤 3 中提交表单后，该 ID 随记录内容自动发送回服务器。 该 ID 使站点的服务器端组件确切知道哪些记录需要被提交的数据更新的。
 
-您可以在下面的 [](/zh-CN/docs/Web/HTML/Element/input/hidden#例子)[例子](#例子) 部分中看到完整的[示例](/zh-CN/docs/Web/HTML/Element/input/hidden#例子)。
+您可以在下面的 [例子](/zh-CN/docs/Web/HTML/Element/input/hidden#例子) 部分中看到完整的[示例](/zh-CN/docs/Web/HTML/Element/input/hidden#例子)。
 
 ### 改善网站安全性
 

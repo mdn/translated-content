@@ -70,7 +70,7 @@ f2() === undefined; // true
 
 > **备注：** 在第二个例子中，`this` 应是 [undefined](/zh-CN/docs/Glossary/undefined)，因为 `f2` 是被直接调用的，而不是作为对象的属性或方法调用的（如 `window.f2()`）。有一些浏览器最初在支持[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)时没有正确实现这个功能，于是它们错误地返回了`window`对象。
 
-如果要想把 `this` 的值从一个环境传到另一个，就要用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或者[`apply`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法，如下方的示例所示。
+如果要想把 `this` 的值从一个环境传到另一个，就要用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或者[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法，如下方的示例所示。
 
 ### 类上下文
 

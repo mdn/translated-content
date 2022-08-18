@@ -24,10 +24,10 @@ function(a, b, ...theArgs) {
 
 ### 剩余参数和 `arguments`对象的区别
 
-剩余参数和 [`arguments`](/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments)对象之间的区别主要有三个：
+剩余参数和 [`arguments`](/zh-CN/JavaScript/Reference/Functions_and_function_scope/arguments)对象之间的区别主要有三个：
 
 - 剩余参数只包含那些没有对应形参的实参，而 `arguments` 对象包含了传给函数的所有实参。
-- `arguments`对象不是一个真正的数组，而剩余参数是真正的 [`Array`](/zh-cn/JavaScript/Reference/Global_Objects/Array)实例，也就是说你能够在它上面直接使用所有的数组方法，比如 [`sort`](/zh-cn/JavaScript/Reference/Global_Objects/Array/sort)，[`map`](/zh-cn/JavaScript/Reference/Global_Objects/Array/map)，[`forEach`](/zh-cn/JavaScript/Reference/Global_Objects/Array/forEach)或[`pop`](/zh-cn/JavaScript/Reference/Global_Objects/Array/pop)。
+- `arguments`对象不是一个真正的数组，而剩余参数是真正的 [`Array`](/zh-CN/JavaScript/Reference/Global_Objects/Array)实例，也就是说你能够在它上面直接使用所有的数组方法，比如 [`sort`](/zh-CN/JavaScript/Reference/Global_Objects/Array/sort)，[`map`](/zh-CN/JavaScript/Reference/Global_Objects/Array/map)，[`forEach`](/zh-CN/JavaScript/Reference/Global_Objects/Array/forEach)或[`pop`](/zh-CN/JavaScript/Reference/Global_Objects/Array/pop)。
 - `arguments`对象还有一些附加的属性 （如`callee`属性）。
 
 ### 从 arguments 到数组
