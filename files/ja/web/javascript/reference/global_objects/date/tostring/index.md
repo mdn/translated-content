@@ -9,103 +9,88 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toString()</code></strong> メソッドは、指定した {{jsxref("Date")}} オブジェクトを表す文字列を返します。</p>
+**`toString()`** メソッドは、指定した {{jsxref("Date")}} オブジェクトを表す文字列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.toString()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.toString()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた日付を表す文字列。
 
-<p>与えられた日付を表す文字列。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+{{jsxref("Date")}} のインスタンスは `toString()` メソッドを {{jsxref("Date.prototype")}} から継承しており、 {{jsxref("Object.prototype")}} から継承しているわけではありません。 `Date.prototype.toString()` は Date を表す文字列を、 ECMA-262 で指定された以下のような書式で返します。
 
-<p>{{jsxref("Date")}} のインスタンスは <code>toString()</code> メソッドを {{jsxref("Date.prototype")}} から継承しており、 {{jsxref("Object.prototype")}} から継承しているわけではありません。 <code>Date.prototype.toString()</code> は Date を表す文字列を、 ECMA-262 で指定された以下のような書式で返します。</p>
+- 曜日: 3 文字の英語の曜日名。例 "Sat"
+- 空白
+- 月名: 3 文字の英語の月名。例 "Sep"
+- 空白
+- 日: 2 桁の日。例 "01"
+- 空白
+- 年: 4 桁の年。例 "2018"
+- 空白
+- 時: 2 桁の時。例 "14"
+- コロン
+- 分: 2 桁の分。例 "53"
+- コロン
+- 秒: 2 桁の秒。例 "26"
+- 空白
+- 文字列 "GMT"
+- タイムゾーンのオフセット記号。以下のどちらかです。
 
-<ul>
- <li>曜日: 3文字の英語の曜日名。例 "Sat"</li>
- <li>空白</li>
- <li>月名: 3文字の英語の月名。例 "Sep"</li>
- <li>空白</li>
- <li>日: 2桁の日。例 "01"</li>
- <li>空白</li>
- <li>年: 4桁の年。例 "2018"</li>
- <li>空白</li>
- <li>時: 2桁の時。例 "14"</li>
- <li>コロン</li>
- <li>分: 2桁の分。例 "53"</li>
- <li>コロン</li>
- <li>秒: 2桁の秒。例 "26"</li>
- <li>空白</li>
- <li>文字列 "GMT"</li>
- <li>タイムゾーンのオフセット記号。以下のどちらかです。
-  <ul>
-   <li>"+" 正のオフセット (0以上)</li>
-   <li>"-" 負のオフセット (0未満)</li>
-  </ul>
- </li>
- <li>2桁の時間のオフセット。例 "14"</li>
- <li>2桁の分のオフセット。例 "00"</li>
- <li>任意で、以下の形のタイムゾーン名。
-  <ul>
-   <li>空白</li>
-   <li>左括弧、すなわち "("</li>
-   <li>タイムゾーンを表す実装依存の文字列で、省略形の場合も完全な名前の場合もあります (タイムゾーンに名前や省略形の標準はありません。例 "Line Islands Time" または "LINT"</li>
-   <li>右括弧、すなわち ")"</li>
-  </ul>
- </li>
-</ul>
+  - "+" 正のオフセット (0 以上)
+  - "-" 負のオフセット (0 未満)
 
-<p>例 "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"</p>
+- 2 桁の時間のオフセット。例 "14"
+- 2 桁の分のオフセット。例 "00"
+- 任意で、以下の形のタイムゾーン名。
 
-<p>ECMAScript 2018 (第9編) まで、 <code>Date.prototype.toString</code> が返す文字列の書式は実装に依存していました。したがって、指定された書式通りであることに頼ってはいけません。</p>
+  - 空白
+  - 左括弧、すなわち "("
+  - タイムゾーンを表す実装依存の文字列で、省略形の場合も完全な名前の場合もあります (タイムゾーンに名前や省略形の標準はありません。例 "Line Islands Time" または "LINT"
+  - 右括弧、すなわち ")"
 
-<p><code>toString()</code> メソッドは、日付がテキスト値で表現されるとき、例えば <code>console.log(new Date())</code>、または日付が文字列に強制変換されるとき、例えば <code>var today = 'Today is ' + new Date()</code> などで自動的に呼び出されます。</p>
+例 "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"
 
-<p><code>toString()</code> は汎用メソッドです。 <code>this</code> が {{jsxref("Date")}} インスタンスある必要はありません。しかし、ネイティブの JavaScript を使用して構築することができない内部の <code>[[TimeValue]]</code> プロパティを持っている必要があるため、事実上は {{jsxref("Date")}} インスタンスでの使用に限定されています。日付でないインスタンスで呼び出された場合、 {{jsxref("TypeError")}} が発生します。</p>
+ECMAScript 2018 (第 9 編) まで、 `Date.prototype.toString` が返す文字列の書式は実装に依存していました。したがって、指定された書式通りであることに頼ってはいけません。
 
-<h2 id="Examples" name="Examples">例</h2>
+`toString()` メソッドは、日付がテキスト値で表現されるとき、例えば `console.log(new Date())`、または日付が文字列に強制変換されるとき、例えば `var today = 'Today is ' + new Date()` などで自動的に呼び出されます。
 
-<h3 id="Using_toString" name="Using_toString">toString() の使用</h3>
+`toString()` は汎用メソッドです。 `this` が {{jsxref("Date")}} インスタンスある必要はありません。しかし、ネイティブの JavaScript を使用して構築することができない内部の `[[TimeValue]]` プロパティを持っている必要があるため、事実上は {{jsxref("Date")}} インスタンスでの使用に限定されています。日付でないインスタンスで呼び出された場合、 {{jsxref("TypeError")}} が発生します。
 
-<p>次の例は、{{jsxref("Date")}} オブジェクトの <code>toString()</code> 値を <code>myVar</code> に代入します。</p>
+## 例
 
-<pre class="brush: js notranslate">var x = new Date();
+### toString() の使用
+
+次の例は、{{jsxref("Date")}} オブジェクトの `toString()` 値を `myVar` に代入します。
+
+```js
+var x = new Date();
 var myVar = x.toString(); // 次のような値を myVar に代入します:
                           // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.toString")}}</p>
+{{Compat("javascript.builtins.Date.toString")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("Date.prototype.toDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}

@@ -7,61 +7,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>Error</code></strong> コンストラクターは、エラーオブジェクトを生成します。</span></p>
+**`Error`** コンストラクターは、エラーオブジェクトを生成します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+```
+new Error([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>message</var></code>{{Optional_Inline}}</dt>
- <dd>人間が読めるエラーの説明。</dd>
- <dt><code><var>fileName</var></code> {{Optional_Inline}}{{Non-standard_inline}}</dt>
- <dd>生成された <code>Error</code> オブジェクト上の <code><var>fileName</var></code> プロパティに設定される値。既定では、<code>Error()</code> コンストラクターを呼び出したコードを含むファイルの名前です。</dd>
- <dt><code><var>lineNumber</var></code> {{Optional_Inline}}{{Non-standard_inline}}</dt>
- <dd>生成された <code>Error</code> オブジェクト上の <code><var>lineNumber</var></code> プロパティに設定される値。既定では、<code>Error()</code> コンストラクターの呼び出しを含む行番号。</dd>
-</dl>
+- `message`{{Optional_Inline}}
+  - : 人間が読めるエラーの説明。
+- `fileName` {{Optional_Inline}}{{Non-standard_inline}}
+  - : 生成された `Error` オブジェクト上の `fileName` プロパティに設定される値。既定では、`Error()` コンストラクターを呼び出したコードを含むファイルの名前です。
+- `lineNumber` {{Optional_Inline}}{{Non-standard_inline}}
+  - : 生成された `Error` オブジェクト上の `lineNumber` プロパティに設定される値。既定では、`Error()` コンストラクターの呼び出しを含む行番号。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Function_call_or_new_construction" name="Function_call_or_new_construction">関数呼び出しか new による構築か</h3>
+### 関数呼び出しか new による構築か
 
-<p><code>Error</code> が関数のように使用された場合 -- {{JSxRef("Operators/new", "new")}} がなかった場合、 <code>Error</code> オブジェクトを返します。したがって、 <code>Error</code> を呼び出すだけで <code>Error</code> オブジェクトを <code>new</code> キーワードから構築した場合と同じものを出力します。</p>
+`Error` が関数のように使用された場合 -- {{JSxRef("Operators/new", "new")}} がなかった場合、 `Error` オブジェクトを返します。したがって、 `Error` を呼び出すだけで `Error` オブジェクトを `new` キーワードから構築した場合と同じものを出力します。
 
-<pre class="brush: js; notranslate">// これは...
+```js
+// これは...
 const x = Error('関数呼び出しによって生成されました。')
 
 ​​​​// ...これと同じ機能です。
-const y = new Error('"new" キーワードによって生成されました。')</pre>
+const y = new Error('"new" キーワードによって生成されました。')
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Error.Error")}}</p>
-</div>
+{{Compat("javascript.builtins.Error.Error")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{JSxRef("Statements/throw", "throw")}}</li>
- <li>{{JSxRef("Statements/try...catch", "try...catch")}}</li>
-</ul>
+- {{JSxRef("Statements/throw", "throw")}}
+- {{JSxRef("Statements/try...catch", "try...catch")}}

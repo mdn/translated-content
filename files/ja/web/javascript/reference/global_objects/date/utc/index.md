@@ -9,114 +9,103 @@ tags:
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Date.UTC()</code></strong> メソッドは、コンストラクターと同じ最も長い書式の引数を受け入れ、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表す {{jsxref("Date")}} オブジェクトのミリ秒単位の数値を返します。</p>
+**`Date.UTC()`** メソッドは、コンストラクターと同じ最も長い書式の引数を受け入れ、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表す {{jsxref("Date")}} オブジェクトのミリ秒単位の数値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-utc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-utc.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+**ECMAScript 2017 より:**
 
-<p><strong>ECMAScript 2017 より:</strong></p>
+```
+Date.UTC(year[, month[, day[, hour[, minute[, second[, millisecond]]]]]])
+```
 
-<pre class="syntaxbox">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
+**ECMAScript 2016 以前:** _(`month` が必須であった)_
 
-<p><strong>ECMAScript 2016 以前:</strong> <em>(<code><var>month</var></code> が必須であった)</em></p>
+```
+Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])
+```
 
-<pre class="syntaxbox">Date.UTC(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `year`
+  - : 完全な形の「年」
+- `month`
+  - : 「月」を表す `0` (1 月) から `11` (12 月) までの整数値。 _(ECMAScript 2016 まで、 `month` は必須の引数でした。 ES2017 では必須ではなくなりました。)_
+- `day` {{optional_inline}}
+  - : 「日」を表す `1` から `31` までの整数値。省略された場合の既定値は `1` です。
+- `hour` {{optional_inline}}
+  - : 「時」を表す `0` から `23` までの整数値。省略された場合の既定値は `0` です。
+- `minute` {{optional_inline}}
+  - : 「分」を表す `0` から `59` までの整数値。省略された場合の既定値は `0` です。
+- `second` {{optional_inline}}
+  - : 「秒」を表す `0` から `59` までの整数値。省略された場合の既定値は `0` です。
+- `millisecond` {{optional_inline}}
+  - : 「ミリ秒」を表す `0` から `999` までの整数値。省略された場合の既定値は `0` です。
 
-<dl>
- <dt><code><var>year</var></code></dt>
- <dd>完全な形の「年」</dd>
- <dt><code><var>month</var></code></dt>
- <dd>「月」を表す <code>0</code> (1 月) から <code>11</code> (12 月) までの整数値。 <em>(ECMAScript 2016 まで、 <code><var>month</var></code> は必須の引数でした。 ES2017 では必須ではなくなりました。)</em></dd>
- <dt><code><var>day</var></code> {{optional_inline}}</dt>
- <dd>「日」を表す <code>1</code> から <code>31</code> までの整数値。省略された場合の既定値は <code>1</code> です。</dd>
- <dt><code>hour</code> {{optional_inline}}</dt>
- <dd>「時」を表す <code>0</code> から <code>23</code> までの整数値。省略された場合の既定値は <code>0</code> です。</dd>
- <dt><code>minute</code> {{optional_inline}}</dt>
- <dd>「分」を表す <code>0</code> から <code>59</code> までの整数値。省略された場合の既定値は <code>0</code> です。</dd>
- <dt><code>second</code> {{optional_inline}}</dt>
- <dd>「秒」を表す <code>0</code> から <code>59</code> までの整数値。省略された場合の既定値は <code>0</code> です。</dd>
- <dt><code>millisecond</code> {{optional_inline}}</dt>
- <dd>「ミリ秒」を表す <code>0</code> から <code>999</code> までの整数値。省略された場合の既定値は <code>0</code> です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時 (UTC) の 1970 年 1 月 1 日 00:00:00 から指定された日時までの経過時間を表すミリ秒単位の数値です。
 
-<p>協定世界時 (UTC) の 1970 年 1 月 1 日 00:00:00 から指定された日時までの経過時間を表すミリ秒単位の数値です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`UTC()` はカンマ区切りの日時の引数を取り、世界時の 1970 年 1 月 1 日 00:00:00 から指定した日時までの経過時間を表すミリ秒単位の数値を返します。
 
-<p><code>UTC()</code> はカンマ区切りの日時の引数を取り、世界時の 1970 年 1 月 1 日 00:00:00 から指定した日時までの経過時間を表すミリ秒単位の数値を返します。</p>
+`0` から `99` までの年は、 20 世紀の年 `(1900 + year)` に変換されます。例えば、 `95` は 1995 年に変換されます。
 
-<p><code>0</code> から <code>99</code> までの年は、 20 世紀の年 <code>(1900 + year)</code> に変換されます。例えば、 <code>95</code> は 1995 年に変換されます。</p>
+この `UTC()` メソッドは {{jsxref("Date")}} コンストラクターと 2 つの点で異なります。
 
-<p>この <code>UTC()</code> メソッドは {{jsxref("Date")}} コンストラクターと 2 つの点で異なります。</p>
+1.  `Date.UTC()` は地方時ではなく、協定世界時を用います。
+2.  `Date.UTC()` は `Date` オブジェクトを生成せず、時刻値を整数で返します。
 
-<ol>
- <li><code>Date.UTC()</code> は地方時ではなく、協定世界時を用います。</li>
- <li><code>Date.UTC()</code> は <code>Date</code> オブジェクトを生成せず、時刻値を整数で返します。</li>
-</ol>
+引数が日時に期待される範囲を超えている場合、 `UTC()` メソッドは指定した値を受け入れるよう他の引数を更新します。例えば `15` が `month` に使用された場合、年が 1 つ増加し `(year + 1)`、月には `3` が使われます。
 
-<p>引数が日時に期待される範囲を超えている場合、 <code>UTC()</code> メソッドは指定した値を受け入れるよう他の引数を更新します。例えば <code>15</code> が <code><var>month</var></code> に使用された場合、年が 1 つ増加し <code>(<var>year</var> + 1)</code>、月には <code>3</code> が使われます。</p>
+`UTC` は {{jsxref("Date")}} の静的メソッドなので、生成した `Date` オブジェクトのメソッドとしてではなく、常に `Date.UTC()` のように使用してください。
 
-<p><code>UTC</code> は {{jsxref("Date")}} の静的メソッドなので、生成した <code>Date</code> オブジェクトのメソッドとしてではなく、常に <code>Date.UTC()</code> のように使用してください。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Date.UTC の使用
 
-<h3 id="Using_Date.UTC" name="Using_Date.UTC">Date.UTC の使用</h3>
+以下の文では、地方時の代わりに UTC を用いて {{jsxref("Date")}} オブジェクトを生成します。
 
-<p>以下の文では、地方時の代わりに UTC を用いて {{jsxref("Date")}} オブジェクトを生成します。</p>
+```js
+let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+```
 
-<pre class="brush:js">let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
-</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+| 仕様書                                                               |
+| -------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.utc', 'Date.UTC')}} |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.utc', 'Date.UTC')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat("javascript.builtins.Date.UTC")}}
 
-<p>{{Compat("javascript.builtins.Date.UTC")}}</p>
+### 互換性ノート
 
-<h3 id="Compatibility_notes" name="Compatibility_notes">互換性ノート</h3>
+#### Date.UTC() の引数が 2 つ未満であった場合
 
-<h4 id="Date.UTC_with_fewer_than_two_arguments" name="Date.UTC_with_fewer_than_two_arguments">Date.UTC() の引数が2つ未満であった場合</h4>
+`Date.UTC()` の引数が 2 つ未満の場合、 ECMAScript 2017 では {{jsxref("NaN")}} を返すよう要求しています。この動作に対応していなかったエンジンも対応済みです ([bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755), [ecma-262 #642](https://github.com/tc39/ecma262/pull/642) を参照)。
 
-<p><code>Date.UTC()</code> の引数が 2 つ未満の場合、 ECMAScript 2017 では {{jsxref("NaN")}} を返すよう要求しています。この動作に対応していなかったエンジンも対応済みです (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1050755">bug 1050755</a>, <a href="https://github.com/tc39/ecma262/pull/642">ecma-262 #642</a> を参照)。</p>
-
-<pre class="brush: js">Date.UTC();
+```js
+Date.UTC();
 Date.UTC(1);
 
 // Safari: NaN
 // Chrome/Opera/V8: NaN
 
-// Firefox &lt;54: non-NaN
+// Firefox <54: non-NaN
 // Firefox 54+: NaN
 
 // IE: non-NaN
 // Edge: NaN
-</pre>
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.parse()")}}</li>
- <li>{{jsxref("Date")}}</li>
-</ul>
+- {{jsxref("Date.parse()")}}
+- {{jsxref("Date")}}

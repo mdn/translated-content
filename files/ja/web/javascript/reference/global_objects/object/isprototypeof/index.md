@@ -10,51 +10,46 @@ tags:
   - isPrototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>isPrototypeOf()</strong></code> メソッドは、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。</p>
+**`isPrototypeOf()`** メソッドは、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+> **Note:** `isPrototypeOf()` は、{{jsxref("Operators/instanceof", "instanceof")}} 演算子とは異なります。"`object instanceof AFunction`" 式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
 
-<div class="note">
-<p><code>isPrototypeOf()</code> は、{{jsxref("Operators/instanceof", "instanceof")}} 演算子とは異なります。"<code>object instanceof AFunction</code>" 式では、<code>object</code> のプロトタイプチェーンは <code>AFunction</code> 自身ではなく、<code>AFunction.prototype</code> に対して判定されます。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+prototypeObj.isPrototypeOf(object)
+```
 
-<pre class="syntaxbox notranslate"><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `object`
+  - : プロトタイプチェーンの検索対象。
 
-<dl>
- <dt><code><var>object</var></code></dt>
- <dd>プロトタイプチェーンの検索対象。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+呼び出されたオブジェクトがプロトタイプチェーン内に指定されたオブジェクトを持つかどうかを示す {{jsxref("Boolean")}}。
 
-<p>呼び出されたオブジェクトがプロトタイプチェーン内に指定されたオブジェクトを持つかどうかを示す {{jsxref("Boolean")}}。</p>
+### 発生するエラー
 
-<h3 id="Errors_thrown" name="Errors_thrown">発生するエラー</h3>
+- {{jsxref("TypeError")}}
+  - : `prototypeObj` が undefined か null の場合、{{jsxref("TypeError")}} 発生する
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd><code><var>prototypeObj</var></code> が undefined か null の場合、{{jsxref("TypeError")}} 発生する</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`isPrototypeOf()` を用いると、オブジェクトが別のオブジェクト内のプロトタイプチェーンに存在するかどうかをチェックする事ができます。
 
-<p><code>isPrototypeOf()</code> を用いると、オブジェクトが別のオブジェクト内のプロトタイプチェーンに存在するかどうかをチェックする事ができます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### isPrototypeOf の使用
 
-<h3 id="Using_isPrototypeOf" name="Using_isPrototypeOf">isPrototypeOf の使用</h3>
+この例は、`baz` オブジェクトのプロトタイプチェーンに、`Baz.prototype` と `Bar.prototype`、`Foo.prototype`、`Object.prototype` が存在しているデモです。
 
-<p>この例は、<code>baz</code> オブジェクトのプロトタイプチェーンに、<code>Baz.prototype</code> と <code>Bar.prototype</code>、<code>Foo.prototype</code>、<code>Object.prototype</code> が存在しているデモです。</p>
-
-<pre class="brush: js notranslate">function Foo() {}
+```js
+function Foo() {}
 function Bar() {}
 function Baz() {}
 
@@ -67,45 +62,31 @@ console.log(Baz.prototype.isPrototypeOf(baz)); // true
 console.log(Bar.prototype.isPrototypeOf(baz)); // true
 console.log(Foo.prototype.isPrototypeOf(baz)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
-</pre>
+```
 
-<p><code>isPrototypeOf()</code> メソッドは、{{jsxref("Operators/instanceof", "instanceof")}} 演算子と同様に、特定のプロトタイプチェーンから継承されたオブジェクトを扱うときにのみ機能するコードを持つ場合、たとえばそのオブジェクトに特定のメソッドやプロパティが存在することを保証する場合に特に便利です。</p>
+`isPrototypeOf()` メソッドは、{{jsxref("Operators/instanceof", "instanceof")}} 演算子と同様に、特定のプロトタイプチェーンから継承されたオブジェクトを扱うときにのみ機能するコードを持つ場合、たとえばそのオブジェクトに特定のメソッドやプロパティが存在することを保証する場合に特に便利です。
 
-<p>たとえば、<code>baz</code> オブジェクトが <code>Foo.prototype</code> に由来しているか検証してみます:</p>
+たとえば、`baz` オブジェクトが `Foo.prototype` に由来しているか検証してみます:
 
-<pre class="brush: js notranslate">if (Foo.prototype.isPrototypeOf(baz)) {
+```js
+if (Foo.prototype.isPrototypeOf(baz)) {
   // do something safe
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Object.isPrototypeOf")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.isPrototypeOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>
-  <div>{{jsxref("Object.setPrototypeOf()")}}</div>
- </li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}

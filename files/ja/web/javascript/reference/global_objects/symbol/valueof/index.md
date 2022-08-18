@@ -9,54 +9,45 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>valueOf()</code></strong> メソッドは、 Symbol オブジェクトのプリミティブ値を返します。</p>
+**`valueOf()`** メソッドは、 Symbol オブジェクトのプリミティブ値を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="notranslate">Symbol().valueOf()
-</pre>
+```
+Symbol().valueOf()
+```
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>指定された {{jsxref("Symbol")}} オブジェクトのプリミティブ値です。</p>
+指定された {{jsxref("Symbol")}} オブジェクトのプリミティブ値です。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>{{jsxref("Symbol")}} オブジェクトの <code>valueOf()</code> メソッドは、 Symbol オブジェクトのプリミティブ値を Symbol データ型として返します。</p>
+{{jsxref("Symbol")}} オブジェクトの `valueOf()` メソッドは、 Symbol オブジェクトのプリミティブ値を Symbol データ型として返します。
 
-<p>JavaScript はオブジェクトをプリミティブ値に変換するために <code>valueOf()</code> メソッドを呼び出します。 <code>valueOf()</code> メソッドを自分で呼び出す必要はほとんどありません。 JavaScript は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。</p>
+JavaScript はオブジェクトをプリミティブ値に変換するために `valueOf()` メソッドを呼び出します。 `valueOf()` メソッドを自分で呼び出す必要はほとんどありません。 JavaScript は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_valueOf" name="Using_valueOf">valueOf() の使用</h3>
+### valueOf() の使用
 
-<pre class="brush: js notranslate">const sym = Symbol("example");
+```js
+const sym = Symbol("example");
 sym === sym.valueOf(); // true
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Symbol.valueOf")}}</p>
+{{Compat("javascript.builtins.Symbol.valueOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}

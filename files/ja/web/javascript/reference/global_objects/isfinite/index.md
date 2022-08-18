@@ -9,40 +9,39 @@ tags:
   - inFinite
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>グローバル関数 <code><strong>isFinite()</strong></code> は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。</p>
+グローバル関数 **`isFinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+isFinite(testValue)
+```
 
-<pre class="syntaxbox notranslate">isFinite(<var>testValue</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `testValue`
+  - : 有限性の評価を行いたい値。
 
-<dl>
- <dt><code><var>testValue</var></code></dt>
- <dd>有限性の評価を行いたい値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+正または負の {{jsxref("Infinity")}} か {{jsxref("NaN")}} か {{jsxref("undefined")}} の場合は **`false`** です。それ以外の場合は **`true`** です。
 
-<p>正または負の {{jsxref("Infinity")}} か {{jsxref("NaN")}} か {{jsxref("undefined")}} の場合は <strong><code>false</code></strong> です。それ以外の場合は <strong><code>true</code></strong> です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`isFinite` はグローバルオブジェクトの関数プロパティです。
 
-<p><code>isFinite</code> はグローバルオブジェクトの関数プロパティです。</p>
+この関数を使用すると、ある数値が有限数かどうかを判定できます。 `isFinite` 関数はその引数内の数値を調査します。この関数は、引数が `NaN`、正の無限大、負の無限大のいずれかの場合に `false` を返し、それ以外は `true` を返します。
 
-<p>この関数を使用すると、ある数値が有限数かどうかを判定できます。 <code>isFinite</code> 関数はその引数内の数値を調査します。この関数は、引数が <code>NaN</code>、正の無限大、負の無限大のいずれかの場合に <code>false</code> を返し、それ以外は <code>true</code> を返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### isFinite の使用
 
-<h3 id="Using_isFinite" name="Using_isFinite">isFinite の使用</h3>
-
-<pre class="brush: js notranslate">isFinite(Infinity);  // false
+```js
+isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -55,32 +54,21 @@ isFinite(null);      // true が返される、より堅牢性の高い
 
 isFinite('0');       // true が返される、より堅牢性の高い
                      // Number.isFinite("0") では false となる
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           |
+| -------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.isFinite")}}</p>
+{{Compat("javascript.builtins.isFinite")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Number.NaN")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
-</ul>
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Number.NaN")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.NEGATIVE_INFINITY")}}

@@ -2,50 +2,51 @@
 title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 tags:
-- Error
-- Errors
-- JavaScript
-- Security
+  - Error
+  - Errors
+  - JavaScript
+  - Security
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の例外 "Permission denied to access property" は、権限がない状態でオブジェクトへのアクセスの試行があった場合に発生します。</p>
+JavaScript の例外 "Permission denied to access property" は、権限がない状態でオブジェクトへのアクセスの試行があった場合に発生します。
 
-<h2 id="Message">エラーメッセージ</h2>
+## エラーメッセージ
 
-<pre class="brush: js">Error: Permission denied to access property "x"
-</pre>
+```js
+Error: Permission denied to access property "x"
+```
 
-<h2 id="Error_type">エラーの種類</h2>
+## エラーの種類
 
-<p>{{jsxref("Error")}}</p>
+{{jsxref("Error")}}
 
-<h2 id="What_went_wrong">エラーの原因</h2>
+## エラーの原因
 
-<p>権限がない状態でオブジェクトへのアクセスの試行がありました。これは異なるドメインから読み込んだ {{HTMLElement("iframe")}} 要素が<a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a>に違反する場合などです。</p>
+権限がない状態でオブジェクトへのアクセスの試行がありました。これは異なるドメインから読み込んだ {{HTMLElement("iframe")}} 要素が[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に違反する場合などです。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="No_permission_to_access_document">文書にアクセスする権限がない</h3>
+### 文書にアクセスする権限がない
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <script>
       onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </head>
+  <body></body>
+</html>
+```
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{HTMLElement("iframe")}}</li>
-  <li><a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a></li>
-</ul>
+- {{HTMLElement("iframe")}}
+- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)

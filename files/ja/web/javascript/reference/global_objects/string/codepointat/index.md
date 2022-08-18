@@ -10,56 +10,57 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>codePointAt()</code></strong> メソッドは、 Unicode コードポイント値である負ではない整数を返します。</p>
+**`codePointAt()`** メソッドは、 Unicode コードポイント値である負ではない整数を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.codePointAt(pos)
+```
 
-<pre class="syntaxbox notranslate"><var>str</var>.codePointAt(<var>pos</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `pos`
+  - : コードポイント値を返す `str` の中の要素の位置です。
 
-<dl>
- <dt><code><var>pos</var></code></dt>
- <dd>コードポイント値を返す <code><var>str</var></code> の中の要素の位置です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた `pos` の位置にあるコードポイント値を表す数値です。 `pos` の位置に要素がない場合は {{jsxref("undefined")}} を返します。
 
-<p>与えられた <code><var>pos</var></code> の位置にあるコードポイント値を表す数値です。 <code>pos</code> の位置に要素がない場合は {{jsxref("undefined")}} を返します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+指定された位置に要素が存在しない場合は {{jsxref("undefined")}} を返します。 `pos` の位置から UTF-16 サロゲートペアが始まらない場合は、 `pos` の位置のコードユニットを返します。
 
-<p>指定された位置に要素が存在しない場合は {{jsxref("undefined")}} を返します。 <code><var>pos</var></code> の位置から UTF-16 サロゲートペアが始まらない場合は、 <code><var>pos</var></code> の位置のコードユニットを返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### codePointAt() の使用
 
-<h3 id="Using_codePointAt" name="Using_codePointAt">codePointAt() の使用</h3>
-
-<pre class="brush: js notranslate">'ABC'.codePointAt(1)           // 66
+```js
+'ABC'.codePointAt(1)           // 66
 '\uD800\uDC00'.codePointAt(0)  // 65536
 
 'XYZ'.codePointAt(42)          // undefined
-</pre>
+```
 
-<h3 id="Looping_with_codePointAt" name="Looping_with_codePointAt">codePointAt() の繰り返し</h3>
+### codePointAt() の繰り返し
 
-<pre class="brush: js notranslate">for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
+```js
+for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
    console.log(codePoint.codePointAt(0).toString(16))
 }
 // '1f40e', '1f471', '2764'
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p>次のプログラムは、 ECMAScript 2015 で定義された <code>codePointAt()</code> をネイティブで対応していないブラウザーで利用できるよう String を拡張します。</p>
+次のプログラムは、 ECMAScript 2015 で定義された `codePointAt()` をネイティブで対応していないブラウザーで利用できるよう String を拡張します。
 
-<pre class="brush: js notranslate">/*! https://mths.be/codepointat v0.2.0 by @mathias */
+```js
+/*! https://mths.be/codepointat v0.2.0 by @mathias */
 if (!String.prototype.codePointAt) {
   (function() {
     'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
@@ -68,7 +69,7 @@ if (!String.prototype.codePointAt) {
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) &amp;&amp; $defineProperty;
+        var result = $defineProperty(object, object, object) && $defineProperty;
       } catch(error) {}
       return result;
     }());
@@ -84,18 +85,18 @@ if (!String.prototype.codePointAt) {
         index = 0;
       }
       // Account for out-of-bounds indices:
-      if (index &lt; 0 || index &gt;= size) {
+      if (index < 0 || index >= size) {
         return undefined;
       }
       // Get the first code unit
       var first = string.charCodeAt(index);
       var second;
       if ( // check if it’s the start of a surrogate pair
-        first &gt;= 0xD800 &amp;&amp; first &lt;= 0xDBFF &amp;&amp; // high surrogate
-        size &gt; index + 1 // there is a next code unit
+        first >= 0xD800 && first <= 0xDBFF && // high surrogate
+        size > index + 1 // there is a next code unit
       ) {
         second = string.charCodeAt(index + 1);
-        if (second &gt;= 0xDC00 &amp;&amp; second &lt;= 0xDFFF) { // low surrogate
+        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
           // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
         }
@@ -113,32 +114,21 @@ if (!String.prototype.codePointAt) {
     }
   }());
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.codePointAt")}}</p>
+{{Compat("javascript.builtins.String.codePointAt")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.charAt()")}}

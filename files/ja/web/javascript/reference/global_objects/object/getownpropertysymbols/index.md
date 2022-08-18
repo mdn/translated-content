@@ -8,40 +8,39 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.getOwnPropertySymbols()</code></strong> メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。</p>
+**`Object.getOwnPropertySymbols()`** メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+Object.getOwnPropertySymbols(obj)
+```
 
-<pre class="brush: js notranslate">Object.getOwnPropertySymbols(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : シンボルプロパティが返されるオブジェクトです。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>シンボルプロパティが返されるオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列です。
 
-<p>与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+{{jsxref("Object.getOwnPropertyNames()")}} と同様、与えられたオブジェクトのすべてのシンボルプロパティをシンボルの配列として取得することができます。 {{jsxref("Object.getOwnPropertyNames()")}} 自体はオブジェクトのシンボルプロパティを含まず、文字列プロパティのみを含むことに注意して下さい。
 
-<p>{{jsxref("Object.getOwnPropertyNames()")}} と同様、与えられたオブジェクトのすべてのシンボルプロパティをシンボルの配列として取得することができます。 {{jsxref("Object.getOwnPropertyNames()")}} 自体はオブジェクトのシンボルプロパティを含まず、文字列プロパティのみを含むことに注意して下さい。</p>
+すべてのオブジェクトが最初に自身のシンボルプロパティを持っているとは限らないので、 `Object.getOwnPropertySymbols()` は、オブジェクトにシンボルプロパティを設定しない限りは空の配列を返します。
 
-<p>すべてのオブジェクトが最初に自身のシンボルプロパティを持っているとは限らないので、 <code>Object.getOwnPropertySymbols()</code> は、オブジェクトにシンボルプロパティを設定しない限りは空の配列を返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getOwnPropertySymbols の使用
 
-<h3 id="Using_getOwnPropertySymbols" name="Using_getOwnPropertySymbols">getOwnPropertySymbols の使用</h3>
-
-<pre class="brush: js notranslate">var obj = {};
+```js
+var obj = {};
 var a = Symbol('a');
 var b = Symbol.for('b');
 
@@ -53,32 +52,19 @@ var objectSymbols = Object.getOwnPropertySymbols(obj);
 console.log(objectSymbols.length); // 2
 console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
 console.log(objectSymbols[0]);     // Symbol(a)
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Symbol")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Symbol")}}

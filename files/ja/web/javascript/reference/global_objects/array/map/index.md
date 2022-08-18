@@ -11,89 +11,81 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><code><strong>map()</strong></code> メソッドは、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる<strong>新しい配列を生成します</strong>。</span></p>
+**`map()`** メソッドは、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる**新しい配列を生成します**。
 
-<div>{{EmbedInteractiveExample("pages/js/array-map.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-map.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">let <var>new_array</var> = <var>arr</var>.map(function <var>callback</var>( <var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
+```
+let new_array = arr.map(function callback( currentValue[, index[, array]]) {
     // 新しい配列の要素を返す
-}[, <var>thisArg</var>])
-</pre>
+}[, thisArg])
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>
- <p><code><var>arr</var></code> の要素ごとに呼び出される関数です。 <code><var>callback</var></code> が実行されるたびに、返された値が <code><var>new_array</var></code> に追加されます。</p>
+- `callback`
 
- <p><code><var>callback</var></code> 関数は以下の引数を受け付けます。</p>
+  - : `arr` の要素ごとに呼び出される関数です。 `callback` が実行されるたびに、返された値が `new_array` に追加されます。
 
- <dl>
-  <dt><code><var>currentValue</var></code></dt>
-  <dd>現在処理中の要素の値です。</dd>
-  <dt><code><var>index</var></code>{{optional_inline}}</dt>
-  <dd>現在処理中の要素の配列内における添字です。</dd>
-  <dt><code><var>array</var></code>{{optional_inline}}</dt>
-  <dd><code>map</code> が実行されている配列です。</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd><code><var>callback</var></code> を実行するときに <code>this</code> として使う値です。</dd>
-</dl>
+    `callback` 関数は以下の引数を受け付けます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `currentValue`
+      - : 現在処理中の要素の値です。
+    - `index`{{optional_inline}}
+      - : 現在処理中の要素の配列内における添字です。
+    - `array`{{optional_inline}}
+      - : `map` が実行されている配列です。
 
-<p>与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列です。</p>
+- `thisArg`{{optional_inline}}
+  - : `callback` を実行するときに `this` として使う値です。
 
-<h2 id="Description" name="Description">解説</h2>
+### 返値
 
-<p><code>map</code> は、与えられた <code><var>callback</var></code> 関数を配列の順番通りに、<strong>各要素に対して一度ずつ呼び出し</strong>、その結果から新しい配列を生成します。 <code><var>callback</var></code> は、値が代入されている配列の要素に対してのみ呼び出されます ({{jsxref("undefined")}} が代入されているものも含みます)。</p>
+与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列です。
 
-<p>これは配列の中で存在しない要素、すなわち以下の要素に対しては呼び出し<em>ません</em>。</p>
+## 解説
 
-<ul>
- <li>設定されたことがない添字</li>
- <li>削除された要素</li>
- <li>値を割り当てられたことがない要素</li>
-</ul>
+`map` は、与えられた `callback` 関数を配列の順番通りに、**各要素に対して一度ずつ呼び出し**、その結果から新しい配列を生成します。 `callback` は、値が代入されている配列の要素に対してのみ呼び出されます ({{jsxref("undefined")}} が代入されているものも含みます)。
 
-<h3 id="When_not_to_use_map" name="When_not_to_use_map">map() を使用すべきではない場合</h3>
+これは配列の中で存在しない要素、すなわち以下の要素に対しては呼び出し*ません*。
 
-<p><code>map</code> は新しい配列を作成するので、返された配列を使わない場合、map を使うのはパターンに合いません。代わりに {{jsxref("Array/forEach", "forEach")}} または {{jsxref("Statements/for...of", "for...of")}} を使用してください。</p>
+- 設定されたことがない添字
+- 削除された要素
+- 値を割り当てられたことがない要素
 
-<p><code>map</code> を使用するべきでないのは以下の場合です。</p>
+### map() を使用すべきではない場合
 
-<ul>
- <li>返された配列を使用しない場合</li>
- <li>コールバックから値を返さない場合</li>
-</ul>
+`map` は新しい配列を作成するので、返された配列を使わない場合、map を使うのはパターンに合いません。代わりに {{jsxref("Array/forEach", "forEach")}} または {{jsxref("Statements/for...of", "for...of")}} を使用してください。
 
-<h3 id="Parameters_in_Detail" name="Parameters_in_Detail">引数の詳細</h3>
+`map` を使用するべきでないのは以下の場合です。
 
-<p><code><var>callback</var></code> は、要素の値、要素の添字、走査されている Array オブジェクトという 3 つの引数をともなって呼び出されます。</p>
+- 返された配列を使用しない場合
+- コールバックから値を返さない場合
 
-<p><code>thisArg</code> 引数が与えられた場合は、それがコールバックの <code>this</code> として使用されます。引数が省略された場合は、 {{jsxref("undefined")}} が <code>this</code> の値として使用されます。 <code><var>callback</var></code> によって最終的に識別できる <code>this</code> の値は、<a href="/ja/docs/Web/JavaScript/Reference/Operators/this">関数における通常の <code>this</code> を決定するルール</a>に従って決まります。</p>
+### 引数の詳細
 
-<p><code>map</code> は呼び出された配列を変化させません (ただし、呼び出された <code><var>callback</var></code> が配列を変更する可能性はあります)。</p>
+`callback` は、要素の値、要素の添字、走査されている Array オブジェクトという 3 つの引数をともなって呼び出されます。
 
-<p><code>map</code> によって処理される要素の範囲は、 <code><var>callback</var></code> が最初に呼び出される前に設定されます。 <code>map</code> の呼び出しが開始された後に追加された要素に対しては、 <code><var>callback</var></code> は実行されません。既存の配列要素が変更されたり、削除された場合、 <code><var>callback</var></code> に渡される値は <code>map</code> がそれらを訪れた時点での値になり、 <code>map</code> が削除された要素を訪問することはありません。</p>
+`thisArg` 引数が与えられた場合は、それがコールバックの `this` として使用されます。引数が省略された場合は、 {{jsxref("undefined")}} が `this` の値として使用されます。 `callback` によって最終的に識別できる `this` の値は、[関数における通常の `this` を決定するルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に従って決まります。
 
-<p>仕様書で定義されているアルゴリズムによって、 <code>map</code> が呼び出された配列がまばらである場合、結果の配列もまばらとなり、要素を空欄のままにします。</p>
+`map` は呼び出された配列を変化させません (ただし、呼び出された `callback` が配列を変更する可能性はあります)。
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+`map` によって処理される要素の範囲は、 `callback` が最初に呼び出される前に設定されます。 `map` の呼び出しが開始された後に追加された要素に対しては、 `callback` は実行されません。既存の配列要素が変更されたり、削除された場合、 `callback` に渡される値は `map` がそれらを訪れた時点での値になり、 `map` が削除された要素を訪問することはありません。
 
-<p><code>map</code> は ECMA-262 標準に最近追加されたものである為、標準準拠を謳う実装中に存在しない場合があります。</p>
+仕様書で定義されているアルゴリズムによって、 `map` が呼び出された配列がまばらである場合、結果の配列もまばらとなり、要素を空欄のままにします。
 
-<p>次のコードをスクリプトの先頭に挿入すると、 <code>map</code> にネイティブで対応していない ECMA-262 実装でも <code>map</code> を使用できるようになります。このアルゴリズムは ECMA-262 第 5 版で指示されたアルゴリズムと全く同じものです。 {{jsxref("Object")}}、{{jsxref("TypeError")}}、{{jsxref("Array")}} はそれぞれオリジナルの値を持ち、またそれらの {{jsxref("Function.prototype.call")}} のオリジナルの値として評価されます。</p>
+## ポリフィル
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.19
+`map` は ECMA-262 標準に最近追加されたものである為、標準準拠を謳う実装中に存在しない場合があります。
+
+次のコードをスクリプトの先頭に挿入すると、 `map` にネイティブで対応していない ECMA-262 実装でも `map` を使用できるようになります。このアルゴリズムは ECMA-262 第 5 版で指示されたアルゴリズムと全く同じものです。 {{jsxref("Object")}}、{{jsxref("TypeError")}}、{{jsxref("Array")}} はそれぞれオリジナルの値を持ち、またそれらの {{jsxref("Function.prototype.call")}} のオリジナルの値として評価されます。
+
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
 
@@ -112,7 +104,7 @@ if (!Array.prototype.map) {
     // 2. Let lenValue be the result of calling the Get internal
     //    method of O with the argument "length".
     // 3. Let len be ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
@@ -121,7 +113,7 @@ if (!Array.prototype.map) {
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = arguments[1];
     }
 
@@ -133,8 +125,8 @@ if (!Array.prototype.map) {
     // 7. Let k be 0
     k = 0;
 
-    // 8. Repeat, while k &lt; len
-    while (k &lt; len) {
+    // 8. Repeat, while k < len
+    while (k < len) {
 
       var kValue, mappedValue;
 
@@ -182,31 +174,33 @@ if (!Array.prototype.map) {
     return A;
   };
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Mapping_an_array_of_numbers_to_an_array_of_square_roots">数値の配列を平方根の配列にマッピング</h3>
+### 数値の配列を平方根の配列にマッピング
 
-<p>次のコードは、数値からなる配列を取り、それらの数値の平方根からなる新しい配列を生成します。</p>
+次のコードは、数値からなる配列を取り、それらの数値の平方根からなる新しい配列を生成します。
 
-<pre class="brush: js notranslate">let numbers = [1, 4, 9]
+```js
+let numbers = [1, 4, 9]
 let roots = numbers.map(function(num) {
     return Math.sqrt(num)
 })
 // roots の内容は [1, 2, 3] となる
 // numbers の内容は [1, 4, 9] のまま
-</pre>
+```
 
-<h3 id="Using_map_to_reformat_objects_in_an_array" name="Using_map_to_reformat_objects_in_an_array">map を使用して配列内のオブジェクトを再フォーマット</h3>
+### map を使用して配列内のオブジェクトを再フォーマット
 
-<p>次のコードは、オブジェクトの配列を受け取り、新たにフォーマットされた新しい配列を生成しています。</p>
+次のコードは、オブジェクトの配列を受け取り、新たにフォーマットされた新しい配列を生成しています。
 
-<pre class="brush: js notranslate">let kvArray = [{key: 1, value: 10},
+```js
+let kvArray = [{key: 1, value: 10},
                {key: 2, value: 20},
                {key: 3, value: 30}]
 
-let reformattedArray = kvArray.map(obj =&gt; {
+let reformattedArray = kvArray.map(obj => {
    let rObj = {}
    rObj[obj.key] = obj.value
    return rObj
@@ -217,79 +211,85 @@ let reformattedArray = kvArray.map(obj =&gt; {
 // [{key: 1, value: 10},
 //  {key: 2, value: 20},
 //  {key: 3, value: 30}]
-// のまま</pre>
+// のまま
+```
 
-<h3 id="Mapping_an_array_of_numbers_using_a_function_containing_an_argument" name="Mapping_an_array_of_numbers_using_a_function_containing_an_argument">引数を含む関数を使用して数値配列をマッピングする</h3>
+### 引数を含む関数を使用して数値配列をマッピングする
 
-<p>次のコードは、1 つの引数を必要とする関数を使用するときに <code>map</code> がどのように動作するかを示しています。引数は元の配列を通した <code>map</code> ループとして、配列の各要素に自動的に割り当てられます。</p>
+次のコードは、1 つの引数を必要とする関数を使用するときに `map` がどのように動作するかを示しています。引数は元の配列を通した `map` ループとして、配列の各要素に自動的に割り当てられます。
 
-<pre class="brush: js notranslate">let numbers = [1, 4, 9]
+```js
+let numbers = [1, 4, 9]
 let doubles = numbers.map(function(num) {
   return num * 2
 })
 
 // doubles is now   [2, 8, 18]
 // numbers is still [1, 4, 9]
-</pre>
+```
 
-<h3 id="Using_map_generically" name="Using_map_generically">汎用的な map の使用</h3>
+### 汎用的な map の使用
 
-<p>以下の例は、各文字を表す ASCII エンコードのバイトの配列を得るために {{jsxref("String")}} に map を使う方法を示しています。:</p>
+以下の例は、各文字を表す ASCII エンコードのバイトの配列を得るために {{jsxref("String")}} に map を使う方法を示しています。:
 
-<pre class="brush: js notranslate">let map = Array.prototype.map
+```js
+let map = Array.prototype.map
 let a = map.call('Hello World', function(x) {
   return x.charCodeAt(0)
 })
 // a の内容は [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100] となる
-</pre>
+```
 
-<h3 id="Mapping_an_array_of_numbers_using_a_function_containing_an_argument" name="Mapping_an_array_of_numbers_using_a_function_containing_an_argument">汎用的な map の使用: querySelectorAll</h3>
+### 汎用的な map の使用: querySelectorAll
 
-<p>この例では、<code>querySelectorAll</code> によって収集されたオブジェクトのコレクションを反復処理する方法を示します。これは <code>querySelectorAll</code> が <code>NodeList</code> (オブジェクトの集合) を返すためです。</p>
+この例では、`querySelectorAll` によって収集されたオブジェクトのコレクションを反復処理する方法を示します。これは `querySelectorAll` が `NodeList` (オブジェクトの集合) を返すためです。
 
-<p>この場合、画面に選択されているすべての <code>option</code> の値を返します。</p>
+この場合、画面に選択されているすべての `option` の値を返します。
 
-<pre class="brush: js notranslate">let elems = document.querySelectorAll('select option:checked')
+```js
+let elems = document.querySelectorAll('select option:checked')
 let values = Array.prototype.map.call(elems, function(obj) {
   return obj.value
 })
-</pre>
+```
 
-<p>もっと簡単な方法は {{jsxref("Array.from()")}} メソッドを使用することです。</p>
+もっと簡単な方法は {{jsxref("Array.from()")}} メソッドを使用することです。
 
-<h3 id="Tricky_use_case" name="Tricky_use_case">トリッキーな使用例</h3>
+### トリッキーな使用例
 
-<p>(<a href="http://www.wirfs-brock.com/allen/posts/166">このブログの記事に創発されました</a>)</p>
+([このブログの記事に創発されました](http://www.wirfs-brock.com/allen/posts/166))
 
-<p>コールバック関数は第一引数 (変換するべき要素) だけを意識して指定するケースがほとんどだと思います。しかし一般的に第一引数しか使わないような関数でも、実は追加のオプション引数を受け取っている場合があります。これは混乱につながる可能性があります。</p>
+コールバック関数は第一引数 (変換するべき要素) だけを意識して指定するケースがほとんどだと思います。しかし一般的に第一引数しか使わないような関数でも、実は追加のオプション引数を受け取っている場合があります。これは混乱につながる可能性があります。
 
-<p>まずこの例をご覧ください。</p>
+まずこの例をご覧ください。
 
-<pre class="brush: js notranslate">["1", "2", "3"].map(parseInt)</pre>
+```js
+["1", "2", "3"].map(parseInt)
+```
 
-<p>返値は <code>[1, 2, 3]</code> となりそうですが、実際には <code>[1, NaN, NaN]</code> となります。</p>
+返値は `[1, 2, 3]` となりそうですが、実際には `[1, NaN, NaN]` となります。
 
-<p>{{jsxref("parseInt")}} は大抵一つの引数のみで使われますが、実際には二つの引数を取っています。一つ目は数値文字列、二つ目は基数です。 <code>Array.prototype.map</code> はコールバックに次の 3 つの引数を与えています。</p>
+{{jsxref("parseInt")}} は大抵一つの引数のみで使われますが、実際には二つの引数を取っています。一つ目は数値文字列、二つ目は基数です。 `Array.prototype.map` はコールバックに次の 3 つの引数を与えています。
 
-<ul>
- <li>その要素</li>
- <li>その添字</li>
- <li>その配列</li>
-</ul>
+- その要素
+- その添字
+- その配列
 
-<p>{{jsxref("parseInt")}} は三つ目の引数を無視しますが、二つ目の引数は無視<em>しません</em>。これは混乱を起こす可能性があるソースです。</p>
+{{jsxref("parseInt")}} は三つ目の引数を無視しますが、二つ目の引数は無視*しません*。これは混乱を起こす可能性があるソースです。
 
-<p>繰り返し手順の正確な例は以下の通りです。</p>
+繰り返し手順の正確な例は以下の通りです。
 
-<pre class="brush: js notranslate">// parseInt(string, radix) -&gt; map(parseInt(value, index))
+```js
+// parseInt(string, radix) -> map(parseInt(value, index))
 /*  first iteration  (index is 0): */ parseInt("1", 0)  // 1
 /*  second iteration (index is 1): */ parseInt("2", 1)  // NaN
 /*  third iteration  (index is 2): */ parseInt("3", 2)  // NaN
-</pre>
+```
 
-<p>解決策を考えてみましょう。</p>
+解決策を考えてみましょう。
 
-<pre class="brush: js notranslate">function returnInt(element) {
+```js
+function returnInt(element) {
   return parseInt(element, 10)
 }
 
@@ -297,7 +297,7 @@ let values = Array.prototype.map.call(elems, function(obj) {
 // 期待した通り、数値の配列が返る。
 
 // アロー関数構文を使って、より簡潔に上記と同じ結果を得ることが出来ます。
-['1', '2', '3'].map( str =&gt; parseInt(str) )
+['1', '2', '3'].map( str => parseInt(str) )
 
 // ちなみにこの命題ではもっと簡単に同じ結果を得る方法があります。
 ['1', '2', '3'].map(Number)  // [1, 2, 3]
@@ -306,59 +306,48 @@ let values = Array.prototype.map.call(elems, function(obj) {
 ['1.1', '2.2e2', '3e300'].map(Number)  // [1.1, 220, 3e+300]
 
 // 比較のために、上記の配列に parseInt() を用いると次のようになります。
-['1.1', '2.2e2', '3e300'].map( str =&gt; parseInt(str) ) // [1, 2, 3]
-</pre>
+['1.1', '2.2e2', '3e300'].map( str => parseInt(str) ) // [1, 2, 3]
+```
 
-<p>{{jsxref("parseInt")}} を引数として呼び出された map メソッドの代替出力の 1 つは、次のように実行されます。</p>
+{{jsxref("parseInt")}} を引数として呼び出された map メソッドの代替出力の 1 つは、次のように実行されます。
 
-<pre class="brush: js notranslate">let xs = ['10', '10', '10']
+```js
+let xs = ['10', '10', '10']
 
 xs = xs.map(parseInt)
 
 console.log(xs)
-// 実際の結果 10,NaN,2 は上記の説明からすると意外なものかもしれません。</pre>
+// 実際の結果 10,NaN,2 は上記の説明からすると意外なものかもしれません。
+```
 
-<h3 id="undefined_を持つマップされた配列">undefined を持つマップされた配列</h3>
+### undefined を持つマップされた配列
 
-<p>{{jsxref("undefined")}} または nothing を返すと、以下のものを返します。</p>
+{{jsxref("undefined")}} または nothing を返すと、以下のものを返します。
 
-<pre class="brush: js notranslate">let numbers = [1, 2, 3, 4]
+```js
+let numbers = [1, 2, 3, 4]
 let filteredNumbers = numbers.map(function(num, index) {
-  if (index &lt; 3) {
+  if (index < 3) {
      return num
   }
 })
 // index は 0 から始まるので、 filterNumbers は 1,2,3 および undefined になります。
 // filteredNumbers は [1, 2, undefined, undefined]
 // numbers は [1, 2, 3, 4] のまま
+```
 
-</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}} |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat("javascript.builtins.Array.map")}}
 
-<div>
-<p>{{Compat("javascript.builtins.Array.map")}}</p>
-</div>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Map")}} object</li>
- <li>{{jsxref("Array.from()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Map")}} object
+- {{jsxref("Array.from()")}}

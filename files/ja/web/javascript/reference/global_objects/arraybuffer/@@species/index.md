@@ -1,5 +1,5 @@
 ---
-title: 'get ArrayBuffer[@@species]'
+title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 tags:
   - ArrayBuffer
@@ -8,55 +8,46 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>ArrayBuffer[@@species]</code></strong> アクセサープロパティは、<code>ArrayBuffer</code> コンストラクターを返します。</p>
+**`ArrayBuffer[@@species]`** アクセサープロパティは、`ArrayBuffer` コンストラクターを返します。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>species アクセサープロパティは、既定のコンストラクターである <code>ArrayBuffer</code> オブジェクトを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドできます。</p>
+species アクセサープロパティは、既定のコンストラクターである `ArrayBuffer` オブジェクトを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドできます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Species_in_ordinary_objects" name="Species_in_ordinary_objects">通常のオブジェクトの spicies</h3>
+### 通常のオブジェクトの spicies
 
-<p>species プロパティは、<code>ArrayBuffer</code> オブジェクトの既定のコンストラクター関数である <code>ArrayBuffer</code> コンストラクターを返します。</p>
+species プロパティは、`ArrayBuffer` オブジェクトの既定のコンストラクター関数である `ArrayBuffer` コンストラクターを返します。
 
-<pre class="brush: js notranslate">ArrayBuffer[Symbol.species]; // ArrayBuffer() 関数</pre>
+```js
+ArrayBuffer[Symbol.species]; // ArrayBuffer() 関数
+```
 
-<h3 id="Species_in_derived_objects" name="Species_in_derived_objects">派生オブジェクトの spicies</h3>
+### 派生オブジェクトの spicies
 
-<p>派生コレクションオブジェクト (たとえば、独自の配列バッファーである <code>MyArrayBuffer</code>) では、<code>MyArrayBuffer</code> の species は <code>MyArrayBuffer</code> コンストラクターです。しかし、派生クラスのメソッドで、親である <code>ArrayBuffer</code> オブジェクトを返すためにこれをオーバーライドしたいかもしれません。</p>
+派生コレクションオブジェクト (たとえば、独自の配列バッファーである `MyArrayBuffer`) では、`MyArrayBuffer` の species は `MyArrayBuffer` コンストラクターです。しかし、派生クラスのメソッドで、親である `ArrayBuffer` オブジェクトを返すためにこれをオーバーライドしたいかもしれません。
 
-<pre class="brush: js notranslate">class MyArrayBuffer extends ArrayBuffer {
+```js
+class MyArrayBuffer extends ArrayBuffer {
   // MyArrayBuffer species を親である ArrayBuffer コンストラクタにオーバーライド。
   static get [Symbol.species]() { return ArrayBuffer; }
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.ArrayBuffer.@@species")}}</p>
-</div>
+{{Compat("javascript.builtins.ArrayBuffer.@@species")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("Symbol.species")}}

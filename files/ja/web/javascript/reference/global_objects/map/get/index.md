@@ -10,61 +10,51 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>get()</code></strong> メソッドは、指定された要素を <code>Map</code> オブジェクトから返します。指定されたキーに関連付けられた値がオブジェクトである場合は、そのオブジェクトの参照を受け取ることになり、そのオブジェクトに対して変更を行った場合は、 <code>Map</code> オブジェクトの中にあるものに変更が行われます。</p>
+**`get()`** メソッドは、指定された要素を `Map` オブジェクトから返します。指定されたキーに関連付けられた値がオブジェクトである場合は、そのオブジェクトの参照を受け取ることになり、そのオブジェクトに対して変更を行った場合は、 `Map` オブジェクトの中にあるものに変更が行われます。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+myMap.get(key)
+```
 
-<pre class="syntaxbox notranslate"><var>myMap</var>.get(<var>key</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `key`
+  - : `Map` オブジェクトから返される要素のキーです。
 
-<dl>
- <dt><code><var>key</var></code></dt>
- <dd><code>Map</code> オブジェクトから返される要素のキーです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+指定されたキーに関連付けられた要素が返されます。 `Map` オブジェクト内にキーが見つからない場合は、 `undefined` を返されます。
 
-<p>指定されたキーに関連付けられた要素が返されます。 <code>Map</code> オブジェクト内にキーが見つからない場合は、 <code>undefined</code> を返されます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Using get()
 
-<h3 id="Using_get" name="Using_get">Using get()</h3>
-
-<pre class="brush: js notranslate">let myMap = new Map();
+```js
+let myMap = new Map();
 myMap.set('bar', 'foo');
 
 myMap.get('bar');   // "foo" を返す
 myMap.get('baz');   // undefined を返す
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Map.get")}}</p>
+{{Compat("javascript.builtins.Map.get")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.set()")}}</li>
- <li>{{jsxref("Map.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.has()")}}

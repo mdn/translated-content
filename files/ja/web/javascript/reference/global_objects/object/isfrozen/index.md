@@ -8,38 +8,37 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.isFrozen()</code></strong> はオブジェクトが{{jsxref("Object.freeze()", "凍結されている", "", 1)}}かどうかを判定します。</p>
+**`Object.isFrozen()`** はオブジェクトが{{jsxref("Object.freeze()", "凍結されている", "", 1)}}かどうかを判定します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Object.isFrozen(obj)
+```
 
-<pre class="syntaxbox notranslate">Object.isFrozen(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : 確認したいオブジェクトです。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>確認したいオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられたオブジェクトが凍結されているかどうかを示す {{jsxref("Boolean")}}。
 
-<p>与えられたオブジェクトが凍結されているかどうかを示す {{jsxref("Boolean")}}。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+オブジェクトが{{jsxref("Object.isExtensible()", "拡張可能", "", 1)}}ではなく、すべてのプロパティは設定変更不可であり、そしてすべてのデータプロパティ (これはゲッターやセッターコンポーネントを持つアクセサプロパティではないものを指します) が書き込み不可である場合に、凍結されているとなります。
 
-<p>オブジェクトが{{jsxref("Object.isExtensible()", "拡張可能", "", 1)}}ではなく、すべてのプロパティは設定変更不可であり、そしてすべてのデータプロパティ (これはゲッターやセッターコンポーネントを持つアクセサプロパティではないものを指します) が書き込み不可である場合に、凍結されているとなります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Object.isFrozen の使用
 
-<h3 id="Object.isFrozen_の使用">Object.isFrozen の使用</h3>
-
-<pre class="brush: js notranslate">// 新しいオブジェクトは拡張可能であるので、凍結されていません
+```js
+// 新しいオブジェクトは拡張可能であるので、凍結されていません
 Object.isFrozen({}); // === false
 
 // 拡張可能ではない空のオブジェクトは、他に何もしなくても
@@ -120,46 +119,34 @@ Object.isExtensible(frozen); // === false
 
 // また、凍結されたオブジェクトは封印されています
 Object.isSealed(frozen); // === true
-</pre>
+```
 
-<h3 id="Non-object_coercion" name="Non-object_coercion">オブジェクト以外の型強制</h3>
+### オブジェクト以外の型強制
 
-<p>ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが凍結された通常のオブジェクトであるかのように扱われ、単に <code>true</code> を返します。</p>
+ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが凍結された通常のオブジェクトであるかのように扱われ、単に `true` を返します。
 
-<pre class="brush: js notranslate">Object.isFrozen(1);
+```js
+Object.isFrozen(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isFrozen(1);
 // true                          (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                   |
+| ---------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Object.isFrozen")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.isFrozen")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

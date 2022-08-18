@@ -13,78 +13,69 @@ tags:
   - 正規表現
 translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>split()</code></strong> メソッドは、 {{jsxref("String")}} を指定した区切り文字列で分割することにより、文字列の配列に分割します。</span></p>
+**`split()`** メソッドは、 {{jsxref("String")}} を指定した区切り文字列で分割することにより、文字列の配列に分割します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.split([separator[, limit]])
+```
 
-<pre class="syntaxbox"><var>str</var>.split([<var>separator</var>[, <var>limit</var>]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `separator` {{optional_inline}}
 
-<dl>
- <dt><code><var>separator</var></code> {{optional_inline}}</dt>
- <dd>
- <p>分割を行うところにある文字列です。文字列または{{jsxref("Global_Objects/RegExp", "正規表現", "", 1)}}を指定することができます。</p>
+  - : 分割を行うところにある文字列です。文字列または{{jsxref("Global_Objects/RegExp", "正規表現", "", 1)}}を指定することができます。
 
- <ul>
-  <li><code><var>separator</var></code> が複数の文字を含んだ文字列である場合、分割にはその文字列の並び全体が見つかることが必要です。</li>
-  <li><code><var>separator</var></code> が省略されたり <code><var>str</var></code> の中に現れなかったりした場合は、返却される配列には文字列全体から成る要素が1つだけ含まれます。</li>
-  <li><code><var>separator</var></code> が文字列の先頭または末尾、またはその両方に現れた場合、配列の先頭、末尾、または先頭と末尾の両方が、それぞれ空文字列になります。</li>
-  <li><code><var>separator</var></code> が空文字列 (<code>""</code>) の場合、 <code><var>str</var></code> は個々の UTF-16 「文字」の配列になります。</li>
- </ul>
+    - `separator` が複数の文字を含んだ文字列である場合、分割にはその文字列の並び全体が見つかることが必要です。
+    - `separator` が省略されたり `str` の中に現れなかったりした場合は、返却される配列には文字列全体から成る要素が 1 つだけ含まれます。
+    - `separator` が文字列の先頭または末尾、またはその両方に現れた場合、配列の先頭、末尾、または先頭と末尾の両方が、それぞれ空文字列になります。
+    - `separator` が空文字列 (`""`) の場合、 `str` は個々の UTF-16 「文字」の配列になります。
 
- <div class="blockIndicator warning">
- <p><strong>警告:</strong> 空文字列 (<code>""</code>) を区切り文字列として使用すると、文字列が<em>ユーザーが知覚可能な文字</em> (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">書記素クラスター</a>) に分割されるわけでは<strong>なく</strong>、 Unicode 文字 (コードポイント)、ただし UTF-16 コード単位です。これは<a href="http://unicode.org/faq/utf_bom.html#utf16-2">サロゲートペア</a>を破壊します。 <a href="https://stackoverflow.com/a/34717402">StackOverflow の “How do you get a string to a character array in JavaScript?”</a> を参照してください。</p>
- </div>
- </dd>
- <dt><code>limit</code> {{optional_inline}}</dt>
- <dd>
- <p>非負の整数で、分割する数を制限します。指定された場合、文字列は <code>separator</code> が現れるたびに分割されますが、 <code>limit</code> の数の項目が配列に配置されると停止します。残りのテキストは配列に入りません。</p>
+    > **Warning:** **警告:** 空文字列 (`""`) を区切り文字列として使用すると、文字列が*ユーザーが知覚可能な文字* ([書記素クラスター](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) に分割されるわけでは**なく**、 Unicode 文字 (コードポイント)、ただし UTF-16 コード単位です。これは[サロゲートペア](http://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。 [StackOverflow の “How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/a/34717402) を参照してください。
 
- <ul>
-  <li>制限数に達する以前に文字列の末尾に達した場合は、配列の要素が <code>limit</code> よりも少なくなることがあります。</li>
-  <li><code>limit</code> が <code>0</code> の場合は、分割は行われません。</li>
- </ul>
- </dd>
-</dl>
+- `limit` {{optional_inline}}
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+  - : 非負の整数で、分割する数を制限します。指定された場合、文字列は `separator` が現れるたびに分割されますが、 `limit` の数の項目が配列に配置されると停止します。残りのテキストは配列に入りません。
 
-<p>文字列の {{jsxref("Array")}} で、指定された文字列で <code>separator</code> が現れるたびに分割されたものです。</p>
+    - 制限数に達する以前に文字列の末尾に達した場合は、配列の要素が `limit` よりも少なくなることがあります。
+    - `limit` が `0` の場合は、分割は行われません。
 
-<h2 id="Description" name="Description">解説</h2>
+### 返値
 
-<p><code>separator</code> は見つかると文字列から削除され、部分文字列が配列に入って返されます。</p>
+文字列の {{jsxref("Array")}} で、指定された文字列で `separator` が現れるたびに分割されたものです。
 
-<p><code>separator</code> が、キャプチャする括弧を含む正規表現だった場合、 <code>separator</code> が一致するごとに、キャプチャする括弧の結果が (未定義の結果であった場合を含め) 出力配列に追加されます。</p>
+## 解説
 
-<p><code>separator</code> が配列であった場合、その配列が String に変換された上で区切り文字列として使用されます。</p>
+`separator` は見つかると文字列から削除され、部分文字列が配列に入って返されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+`separator` が、キャプチャする括弧を含む正規表現だった場合、 `separator` が一致するごとに、キャプチャする括弧の結果が (未定義の結果であった場合を含め) 出力配列に追加されます。
 
-<h3 id="Using_split" name="Using_split"><code>split()</code> の使用</h3>
+`separator` が配列であった場合、その配列が String に変換された上で区切り文字列として使用されます。
 
-<div id="split_empty_string">
-<p>文字列が空の場合、 <code>split()</code> は空の配列ではなく、1つの空文字列を含む配列を返します。文字列と区切り文字列が共に空文字列の場合、空の配列が返ります。</p>
+## 例
 
-<pre class="brush: js">const myString = ''
+### `split()` の使用
+
+文字列が空の場合、 `split()` は空の配列ではなく、1 つの空文字列を含む配列を返します。文字列と区切り文字列が共に空文字列の場合、空の配列が返ります。
+
+```js
+const myString = ''
 const splits = myString.split()
 
 console.log(splits)
 
 // ↪ [""]
-</pre>
-</div>
+```
 
-<p>以下の例は、指定された区切りを使って、文字列を文字列の配列に分割する関数を定義します。文字列を分割した後、その関数は元の文字列（分割する前）、使用した区切り、配列中の要素の数、そして、個々の配列要素を示すメッセージを表示します。</p>
+以下の例は、指定された区切りを使って、文字列を文字列の配列に分割する関数を定義します。文字列を分割した後、その関数は元の文字列（分割する前）、使用した区切り、配列中の要素の数、そして、個々の配列要素を示すメッセージを表示します。
 
-<pre class="brush: js">function splitString(stringToSplit, separator) {
+```js
+function splitString(stringToSplit, separator) {
   const arrayOfStrings = stringToSplit.split(separator)
 
   console.log('元の文字列: ', stringToSplit)
@@ -101,11 +92,12 @@ const comma = ','
 splitString(tempestString, space)
 splitString(tempestString)
 splitString(monthString, comma)
-</pre>
+```
 
-<p>この例は次のような出力結果を生み出します。</p>
+この例は次のような出力結果を生み出します。
 
-<pre>元の文字列: "Oh brave new world that has such people in it."
+```
+元の文字列: "Oh brave new world that has such people in it."
 区切り: " "
 配列は 10 要素: Oh / brave / new / world / that / has / such / people / in / it.
 
@@ -116,13 +108,14 @@ splitString(monthString, comma)
 元の文字列: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
 区切り: ","
 配列は 12 要素: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec
-</pre>
+```
 
-<h3 id="Removing_spaces_from_a_string" name="Removing_spaces_from_a_string">文字列からの空白の削除</h3>
+### 文字列からの空白の削除
 
-<p>以下の例では、<code>split()</code> は、0 回以上の空白とそれに続くセミコロン、それにさらに続く 0 回以上の空白を探し、それらが見つかったとき、文字列から空白を削除します。<code>nameList</code> は、<code>split()</code> の結果として返された配列です。</p>
+以下の例では、`split()` は、0 回以上の空白とそれに続くセミコロン、それにさらに続く 0 回以上の空白を探し、それらが見つかったとき、文字列から空白を削除します。`nameList` は、`split()` の結果として返された配列です。
 
-<pre class="brush: js">const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
+```js
+const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
 
 console.log(names)
 
@@ -130,95 +123,87 @@ const re = /\s*(?:;|$)\s*/
 const nameList = names.split(re)
 
 console.log(nameList)
-</pre>
+```
 
-<p>これは 2 つの行を出力します。1 行目は元の文字列を出力し、2 行目は <code>split</code> メソッドの実行結果の配列を出力します。</p>
+これは 2 つの行を出力します。1 行目は元の文字列を出力し、2 行目は `split` メソッドの実行結果の配列を出力します。
 
-<pre>Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
+```
+Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
-</pre>
+```
 
-<h3 id="Returning_a_limited_number_of_splits" name="Returning_a_limited_number_of_splits">限られた数の分割結果を返す</h3>
+### 限られた数の分割結果を返す
 
-<p>以下の例では、<code>split()</code> は 文字列中の 0 回以上の空白を探し、見つかった最初の 3 つの分割結果を返します。</p>
+以下の例では、`split()` は 文字列中の 0 回以上の空白を探し、見つかった最初の 3 つの分割結果を返します。
 
-<pre class="brush: js">const myString = 'Hello World. How are you doing?'
+```js
+const myString = 'Hello World. How are you doing?'
 const splits = myString.split(' ', 3)
 
 console.log(splits)
-</pre>
+```
 
-<p>このスクリプトは以下の例を出力します。</p>
+このスクリプトは以下の例を出力します。
 
-<pre>["Hello", "World.", "How"]
-</pre>
+```
+["Hello", "World.", "How"]
+```
 
-<h3 id="Splitting_with_a_RegExp_to_include_parts_of_the_separator_in_the_result" name="Splitting_with_a_RegExp_to_include_parts_of_the_separator_in_the_result"><code>RegExp</code> で分割して結果に区切り文字列の一部を含める</h3>
+### `RegExp` で分割して結果に区切り文字列の一部を含める
 
-<p><code>separator</code> がキャプチャの括弧 <code>(</code><code>)</code> を含む正規表現である場合、一致した結果が配列に含まれます。</p>
+`separator` がキャプチャの括弧 ` (``) ` を含む正規表現である場合、一致した結果が配列に含まれます。
 
-<pre class="brush: js">const myString = 'Hello 1 word. Sentence number 2.'
+```js
+const myString = 'Hello 1 word. Sentence number 2.'
 const splits = myString.split(/(\d)/)
 
 console.log(splits)
-</pre>
+```
 
-<p>このスクリプトは、以下を表示します。</p>
+このスクリプトは、以下を表示します。
 
-<pre>[ "Hello ", "1", " word. Sentence number ", "2", "." ]
-</pre>
+```
+[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+```
 
-<div class="blockIndicator note">
-<p><strong>メモ: </strong><code>\d</code> は<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">文字クラス</a>で、0から9の数字に一致します。</p>
-</div>
+> **Note:** **メモ:** `\d` は[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)で、0 から 9 の数字に一致します。
 
-<h3 id="Reversing_a_String_using_split" name="Reversing_a_String_using_split"><code>split()</code> を使った文字列を反転</h3>
+### `split()` を使った文字列を反転
 
-<div class="warning">
-<p>この手法は文字列を正しく反転できるとは限りません。</p>
+> **Warning:** この手法は文字列を正しく反転できるとは限りません。
+>
+> ```js
+> const str = 'asdfghjkl'
+> const strReverse = str.split('').reverse().join('')
+> // 'lkjhgfdsa'
+>
+> // split() が配列を返し、 reverse() および join() が適用できます
+> ```
+>
+> Unicode 対応の分割を使用している場合でも、文字列に書記素クラスターが含まれていると機能しません (代わりに [esrever](https://github.com/mathiasbynens/esrever) などを使ってください)。
+>
+> ```js
+> const str = 'résumé'
+> const strReverse = str.split(/(?:)/u).reverse().join('')
+> // => "́emuśer"
+> ```
+>
+> **ボーナス:** {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} 演算子を使用すると、元の文字列が回文であるかどうかが判定できます。
 
-<pre class="brush: js">const str = 'asdfghjkl'
-const strReverse = str.split('').reverse().join('')
-// 'lkjhgfdsa'
+## 仕様書
 
-// split() が配列を返し、 reverse() および join() が適用できます
-</pre>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}} |
 
-<p>Unicode 対応の分割を使用している場合でも、文字列に書記素クラスターが含まれていると機能しません (代わりに <a href="https://github.com/mathiasbynens/esrever">esrever</a> などを使ってください)。</p>
+## ブラウザーの互換性
 
-<pre class="brush: js">const str = 'résumé'
-const strReverse = str.split(/(?:)/u).reverse().join('')
-// =&gt; "́emuśer"
-</pre>
+{{Compat("javascript.builtins.String.split")}}
 
-<p><strong>ボーナス:</strong> {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} 演算子を使用すると、元の文字列が回文であるかどうかが判定できます。</p>
-</div>
+## 関連情報
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("javascript.builtins.String.split")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("Array.prototype.join()")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript での正規表現の使用</a></li>
-</ul>
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.join()")}}
+- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)

@@ -9,44 +9,43 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.preventExtensions()</code></strong> メソッドはすでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。</p>
+**`Object.preventExtensions()`** メソッドはすでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。
 
-<div>{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Object.preventExtensions(obj)
+```
 
-<pre class="syntaxbox notranslate">Object.preventExtensions(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : 拡張を不可能にしたいオブジェクトです。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>拡張を不可能にしたいオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+拡張不可能にされたオブジェクトです。
 
-<p>拡張不可能にされたオブジェクトです。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+新しいプロパティを追加できる場合、オブジェクトは拡張可能です。 `Object.preventExtensions()` はオブジェクトを拡張不可能と標示することで、その時点で持っているプロパティ以外のプロパティを持たせることを不可能にします。拡張不可能なオブジェクトのプロパティは通常、依然として*削除*できることに注意してください。拡張不可能なオブジェクトへ新たにプロパティを追加しようとしても、暗黙的あるいは {{jsxref("TypeError")}} エラーを発生させて失敗します (通常は {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}} において、ただしこれに限定はされません)。
 
-<p>新しいプロパティを追加できる場合、オブジェクトは拡張可能です。 <code>Object.preventExtensions()</code> はオブジェクトを拡張不可能と標示することで、その時点で持っているプロパティ以外のプロパティを持たせることを不可能にします。拡張不可能なオブジェクトのプロパティは通常、依然として<em>削除</em>できることに注意してください。拡張不可能なオブジェクトへ新たにプロパティを追加しようとしても、暗黙的あるいは {{jsxref("TypeError")}} エラーを発生させて失敗します (通常は {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}} において、ただしこれに限定はされません)。</p>
+`Object.preventExtensions()` は、自身のプロパティの追加のみを抑制します。オブジェクトプロトタイプにプロパティを追加することは可能です。
 
-<p><code>Object.preventExtensions()</code> は、自身のプロパティの追加のみを抑制します。オブジェクトプロトタイプにプロパティを追加することは可能です。</p>
+このメソッドは対象の `[[prototype]]` を不変にし、それ以降のあらゆる `[[prototype]]` への再代入は {{jsxref("TypeError")}} を発生します。この動作は `[[prototype]]` 内部プロパティ固有のものであり、他のプロパティは変更可能なままです。
 
-<p>このメソッドは対象の <code>[[prototype]]</code> を不変にし、それ以降のあらゆる <code>[[prototype]]</code> への再代入は {{jsxref("TypeError")}} を発生します。この動作は <code>[[prototype]]</code> 内部プロパティ固有のものであり、他のプロパティは変更可能なままです。</p>
+拡張可能なオブジェクトを拡張不可能にする方法はありますが、逆の方法はありません。
 
-<p>拡張可能なオブジェクトを拡張不可能にする方法はありますが、逆の方法はありません。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Object.preventExtensions の使用
 
-<h3 id="Using_Object.preventExtensions" name="Using_Object.preventExtensions">Object.preventExtensions の使用</h3>
-
-<pre class="brush: js notranslate">// Object.preventExtensions は拡張不可能にしたオブジェクトを返します
+```js
+// Object.preventExtensions は拡張不可能にしたオブジェクトを返します
 var obj = {};
 var obj2 = Object.preventExtensions(obj);
 obj === obj2; // true
@@ -75,53 +74,43 @@ function fail() {
   nonExtensible.newProperty = 'FAIL';
 }
 fail();
-</pre>
+```
 
-<p>拡張不可能なオブジェクトのプロトタイプは不変になります。</p>
+拡張不可能なオブジェクトのプロトタイプは不変になります。
 
-<pre class="brush: js notranslate">var fixed = Object.preventExtensions({});
+```js
+var fixed = Object.preventExtensions({});
 // TypeError が発生
-fixed.__proto__ = { oh: 'hai' };</pre>
+fixed.__proto__ = { oh: 'hai' };
+```
 
-<h3 id="Non-object_coercion" name="Non-object_coercion">オブジェクト以外の型強制</h3>
+### オブジェクト以外の型強制
 
-<p>ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単にそれを返します。</p>
+ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単にそれを返します。
 
-<pre class="brush: js notranslate">Object.preventExtensions(1);
+```js
+Object.preventExtensions(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.preventExtensions(1);
 // 1                             (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Object.preventExtensions")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.preventExtensions")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

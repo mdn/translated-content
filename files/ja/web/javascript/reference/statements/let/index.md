@@ -15,47 +15,48 @@ tags:
   - 言語機能
 translation_of: Web/JavaScript/Reference/Statements/let
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>let</code></strong> 文はブロックスコープのローカル変数を宣言します。任意で値を代入して初期化できます。</p>
+**`let`** 文はブロックスコープのローカル変数を宣言します。任意で値を代入して初期化できます。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-let.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-let.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN];
+```
 
-<pre class="syntaxbox notranslate">let <var>var1</var> [= <var>value1</var>] [, <var>var2</var> [= <var>value2</var>]] [, ..., <var>varN</var> [= <var>valueN</var>];</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `var1`, `var2`, …, `varN`
+  - : 宣言する変数または複数の変数の名前です。それぞれは JavaScript の正式な識別子である必要があります。
+- `value1`, `value2`, …, `valueN` {{optional_inline}}
+  - : 宣言される変数ごとに、任意で初期値を JavaScript の正式な式で指定することができます。
 
-<dl>
- <dt><code><var>var1</var></code>, <code><var>var2</var></code>, …, <code><var>varN</var></code></dt>
- <dd>宣言する変数または複数の変数の名前です。それぞれは JavaScript の正式な識別子である必要があります。</dd>
- <dt><code><var>value1</var></code>, <code><var>value2</var></code>, …, <code><var>valueN</var></code> {{optional_inline}}</dt>
- <dd>宣言される変数ごとに、任意で初期値を JavaScript の正式な式で指定することができます。</dd>
-</dl>
+[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文は、変数の宣言にも使用できます。
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">分割代入</a>構文は、変数の宣言にも使用できます。</p>
+```
+let { bar } = foo; // where foo = { bar:10, baz:12 };
+/* これは、値が 10 の 'bar' という名前の変数を作成します。*/
+```
 
-<pre class="syntaxbox notranslate">let <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
-/* これは、値が 10 の 'bar' という名前の変数を作成します。*/</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+**`let`** を使用することで、それが使用された{{jsxref("statements/block", "ブロック", "", 1)}}、文または式にスコープを限定した変数を宣言することができます。これは {{jsxref("statements/var", "var")}} キーワードのように、変数をブロックスコープに関係なく、グローバルや関数全体のローカルに定義するようなことはありません。他にも、{{jsxref("statements/var", "var")}} と `let` は、後者は[パーサーが評価したときのみ](#Temporal_dead_zone)値の初期化が行われる点が異なります。(下記参照)
 
-<p><strong><code>let</code></strong> を使用することで、それが使用された{{jsxref("statements/block", "ブロック", "", 1)}}、文または式にスコープを限定した変数を宣言することができます。これは {{jsxref("statements/var", "var")}} キーワードのように、変数をブロックスコープに関係なく、グローバルや関数全体のローカルに定義するようなことはありません。他にも、{{jsxref("statements/var", "var")}} と <code>let</code> は、後者は<a href="#Temporal_dead_zone">パーサーが評価したときのみ</a>値の初期化が行われる点が異なります。(下記参照)</p>
+{{jsxref("statements/const", "const", "Description")}} と同様に、`let` はグローバル (一番上のスコープ) で宣言されたときに {{domxref("window")}} オブジェクトのプロパティを生成*しません*。
 
-<p>{{jsxref("statements/const", "const", "Description")}} と同様に、<code>let</code> はグローバル (一番上のスコープ) で宣言されたときに {{domxref("window")}} オブジェクトのプロパティを生成<em>しません</em>。</p>
+なぜ "**let**" という名前が選ばれたのかについては、[こちら](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri) で解説されています。
 
-<p>なぜ "<strong>let</strong>" という名前が選ばれたのかについては、<a href="https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri">こちら</a> で解説されています。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### スコープのルール
 
-<h3 id="Scoping_rules_2" name="Scoping_rules_2">スコープのルール</h3>
+**`let`** で定義された変数は、自身が定義されたブロックと、そこに含まれるサブブロックがスコープになります。この点において **`let`** のふるまいは **`var`** にとてもよく似ています。大きな違いは、**`var`** で定義された変数のスコープはそれを含んでいる関数全体になるということです。
 
-<p><strong><code>let</code></strong> で定義された変数は、自身が定義されたブロックと、そこに含まれるサブブロックがスコープになります。この点において <strong><code>let</code></strong> のふるまいは <strong><code>var</code></strong> にとてもよく似ています。大きな違いは、<strong><code>var</code></strong> で定義された変数のスコープはそれを含んでいる関数全体になるということです。</p>
-
-<pre class="brush:js notranslate">function varTest() {
+```js
+function varTest() {
   var x = 1;
   {
     var x = 2;  // 同じ変数です!
@@ -72,21 +73,23 @@ function letTest() {
   }
   console.log(x);  // 1
 }
-</pre>
+```
 
-<p id="Scoping_rules">プログラムや関数の最上位においては、<strong><code>let</code></strong> は <strong><code>var</code></strong> とは異なり、グローバルオブジェクト上にプロパティを生成しません。</p>
+プログラムや関数の最上位においては、**`let`** は **`var`** とは異なり、グローバルオブジェクト上にプロパティを生成しません。
 
-<pre class="brush:js notranslate">var x = 'global';
+```js
+var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
-</pre>
+```
 
-<h3 id="Emulating_private_members" name="Emulating_private_members">プライベートメンバーの模倣</h3>
+### プライベートメンバーの模倣
 
-<p>{{Glossary("Constructor", "コンストラクター")}}の処理の中で <strong><code>let</code></strong> を使用すれば、<a href="/ja/docs/Web/JavaScript/Closures">クロージャ</a>を使用することなくプライベートメンバーを結び付けることができます。</p>
+{{Glossary("Constructor", "コンストラクター")}}の処理の中で **`let`** を使用すれば、[クロージャ](/ja/docs/Web/JavaScript/Closures)を使用することなくプライベートメンバーを結び付けることができます。
 
-<pre class="brush:js notranslate">var Thing;
+```js
+var Thing;
 
 {
   let privateScope = new WeakMap();
@@ -122,23 +125,25 @@ thing.showPublic();
 
 thing.showPrivate();
 // 1
-</pre>
+```
 
-<p>ローカル変数をクロージャで閉じた場合と同様に、<code>var</code> を使ってプライバシーパターンを作成できますが、上の例のようなブロックスコープではなく、関数スコープ（通常はモジュールパターンの IIFE）が必要です。</p>
+ローカル変数をクロージャで閉じた場合と同様に、`var` を使ってプライバシーパターンを作成できますが、上の例のようなブロックスコープではなく、関数スコープ（通常はモジュールパターンの IIFE）が必要です。
 
-<h3 id="Redeclarations" name="Redeclarations">再宣言</h3>
+### 再宣言
 
-<p>同じ関数やブロックのスコープ内で同じ変数を再宣言すると {{jsxref("SyntaxError")}} が発生します。</p>
+同じ関数やブロックのスコープ内で同じ変数を再宣言すると {{jsxref("SyntaxError")}} が発生します。
 
-<pre class="brush: js example-bad notranslate">if (x) {
+```js example-bad
+if (x) {
   let foo;
   let foo; // SyntaxError が発生します。
 }
-</pre>
+```
 
-<p>{{jsxref("Statements/switch", "switch")}} 文には 1 つのブロックしかないため、エラーを発生させてしまうかもしれません。</p>
+{{jsxref("Statements/switch", "switch")}} 文には 1 つのブロックしかないため、エラーを発生させてしまうかもしれません。
 
-<pre class="brush: js example-bad notranslate">let x = 1;
+```js example-bad
+let x = 1;
 switch(x) {
   case 0:
     let foo;
@@ -147,11 +152,13 @@ switch(x) {
   case 1:
     let foo; // 再宣言のため TypeError
     break;
-}</pre>
+}
+```
 
-<p>ただし、指摘しておくべき重要な点として、case 節の中で入れ子にしたブロックを使えば、新しいブロックスコープの字句環境を作ることができるため、上記のような再宣言エラーが発生しなくなります。</p>
+ただし、指摘しておくべき重要な点として、case 節の中で入れ子にしたブロックを使えば、新しいブロックスコープの字句環境を作ることができるため、上記のような再宣言エラーが発生しなくなります。
 
-<pre class="brush: js notranslate">let x = 1;
+```js
+let x = 1;
 
 switch(x) {
   case 0: {
@@ -162,51 +169,59 @@ switch(x) {
     let foo;
     break;
   }
-}</pre>
+}
+```
 
-<h3 id="Temporal_dead_zone" name="Temporal_dead_zone">一時的なデッドゾーン</h3>
+### 一時的なデッドゾーン
 
-<p>{{jsxref("Statements/var", "var", "var_hoisting")}} で宣言された変数が <code>undefined</code> の値で始まるのとは異なり、<code>let</code> の変数は定義が評価されるまで初期化されません。変数を宣言より前で参照すると {{jsxref("ReferenceError")}} が発生します。変数はブロックの先頭から初期化が行われるまで、「一時的なデッドゾーン」にあるのです。</p>
+{{jsxref("Statements/var", "var", "var_hoisting")}} で宣言された変数が `undefined` の値で始まるのとは異なり、`let` の変数は定義が評価されるまで初期化されません。変数を宣言より前で参照すると {{jsxref("ReferenceError")}} が発生します。変数はブロックの先頭から初期化が行われるまで、「一時的なデッドゾーン」にあるのです。
 
-<pre class="brush: js example-bad notranslate">function do_something() {
+```js example-bad
+function do_something() {
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
   let foo = 2;
-}</pre>
+}
+```
 
-<h3 id="The_temporal_dead_zone_and_typeof" name="The_temporal_dead_zone_and_typeof">一時的なデッドゾーンと <code>typeof</code></h3>
+### 一時的なデッドゾーンと `typeof`
 
-<p>単純に宣言されていない変数や <code>undefined</code> の値を持つ変数とは異なり、<code>typeof</code> 演算子を使用して一時的なデッドゾーン内の変数の型を確認するしようとすると、{{jsxref("ReferenceError")}} が発生します。</p>
+単純に宣言されていない変数や `undefined` の値を持つ変数とは異なり、`typeof` 演算子を使用して一時的なデッドゾーン内の変数の型を確認するしようとすると、{{jsxref("ReferenceError")}} が発生します。
 
-<pre class="brush: js example-bad notranslate">// 'undefined' を表示
+```js example-bad
+// 'undefined' を表示
 console.log(typeof undeclaredVariable);
 
 // 'ReferenceError' が発生します
 console.log(typeof i);
-let i = 10;</pre>
+let i = 10;
+```
 
-<h3 id="Another_example_of_temporal_dead_zone_combined_with_lexical_scoping" name="Another_example_of_temporal_dead_zone_combined_with_lexical_scoping">一時的なデッドゾーンとレキシカルスコープと組み合わせた例</h3>
+### 一時的なデッドゾーンとレキシカルスコープと組み合わせた例
 
-<p>字句スコープのため、式 <code>(foo + 55)</code> の中にある識別子 <code>foo</code> は <code>if</code> ブロックの <code>foo</code> と評価され、その上にある変数 <code>foo</code> (<code>33</code> の値を持つ) とは評価されません。</p>
+字句スコープのため、式 `(foo + 55)` の中にある識別子 `foo` は `if` ブロックの `foo` と評価され、その上にある変数 `foo` (`33` の値を持つ) とは評価されません。
 
-<p>同じ行では、<code>if</code> ブロックの <code>foo</code> が字句環境よりすでに生成されていますが、初期化に達していない (完了していない) 状態です (その分自身の一部であるため)。</p>
+同じ行では、`if` ブロックの `foo` が字句環境よりすでに生成されていますが、初期化に達していない (完了していない) 状態です (その分自身の一部であるため)。
 
-<p>このブロックの <code>foo</code> は一時的なデッドゾーンの中にあります。</p>
+このブロックの `foo` は一時的なデッドゾーンの中にあります。
 
-<pre class="brush: js example-bad notranslate">function test(){
+```js example-bad
+function test(){
    var foo = 33;
    if(foo) {
       let foo = (foo + 55); // ReferenceError
    }
 }
-test();</pre>
+test();
+```
 
-<p>この現象は、以下のような状況で混乱を催すかもしれません。<code>let n of n.a</code> という命令は、すでに for ループブロックの私的スコープの中になります。そのため、識別子 <code>n.a</code> は命令自身 (<code>let n</code>) の最初の部分にある '<code>n</code>' オブジェクトのプロパティ '<code>a</code>' として解決されます。</p>
+この現象は、以下のような状況で混乱を催すかもしれません。`let n of n.a` という命令は、すでに for ループブロックの私的スコープの中になります。そのため、識別子 `n.a` は命令自身 (`let n`) の最初の部分にある '`n`' オブジェクトのプロパティ '`a`' として解決されます。
 
-<p>その宣言文にはまだ到達・完了していないため、まだ一時的なデッドゾーン内にあるとみなされます。</p>
+その宣言文にはまだ到達・完了していないため、まだ一時的なデッドゾーン内にあるとみなされます。
 
-<pre class="brush: js example-bad notranslate">function go(n) {
+```js example-bad
+function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
@@ -216,13 +231,14 @@ test();</pre>
 }
 
 go({a: [1, 2, 3]});
-</pre>
+```
 
-<h3 id="Other_situations" name="Other_situations">そのほかの場面</h3>
+### そのほかの場面
 
-<p>ブロックの中で使えば、<strong><code>let</code></strong> の変数のスコープはそのブロックの中に制限されます。スコープが自身の宣言された関数全体になる <code><strong>var</strong></code> との違いに注意してください。</p>
+ブロックの中で使えば、**`let`** の変数のスコープはそのブロックの中に制限されます。スコープが自身の宣言された関数全体になる **`var`** との違いに注意してください。
 
-<pre class="brush: js notranslate">var a = 1;
+```js
+var a = 1;
 var b = 2;
 
 if (a === 1) {
@@ -235,44 +251,34 @@ if (a === 1) {
 
 console.log(a); // 11
 console.log(b); // 2
-</pre>
+```
 
-<p>しかし、下記の <strong><code>var</code></strong> と <strong><code>let</code></strong> 宣言の組み合わせは、<strong><code>var</code></strong> がブロックの先頭に配置されているため、{{jsxref("SyntaxError")}} になります。これによって、変数が暗黙的に再宣言されるからです。</p>
+しかし、下記の **`var`** と **`let`** 宣言の組み合わせは、**`var`** がブロックの先頭に配置されているため、{{jsxref("SyntaxError")}} になります。これによって、変数が暗黙的に再宣言されるからです。
 
-<pre class="brush: js example-bad notranslate">let x = 1;
+```js example-bad
+let x = 1;
 
 {
   var x = 2; // 再宣言のため SyntaxError
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.let")}}</p>
+{{Compat("javascript.statements.let")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Statements/const", "const")}}</li>
- <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/">ES6 In Depth: <code>let</code> and <code>const</code></a></li>
- <li><a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">Breaking changes in <code>let</code> and <code>const</code> in Firefox 44</a></li>
- <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md">You Don't Know JS: Scope &amp; Closures: Chapter 3: Function vs. Block Scope</a></li>
- <li><a href="https://stackoverflow.com/a/33198850/1125029">StackOverflow: What is the Temporal Dead Zone</a>?</li>
- <li><a href="https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable">StackOverflow: What is the difference between using <code>let</code> and <code>var</code>?</a></li>
-</ul>
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/const", "const")}}
+- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
+- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
+- [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
+- [StackOverflow: What is the Temporal Dead Zone](https://stackoverflow.com/a/33198850/1125029)?
+- [StackOverflow: What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable)

@@ -2,90 +2,102 @@
 title: 'SyntaxError: function statement requires a name'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の例外 "function statement requires a name" は、名前が必要な<a href="/ja/docs/Web/JavaScript/Reference/Statements/function">関数文</a>がコードの中にあった場合に発生します。</p>
+JavaScript の例外 "function statement requires a name" は、名前が必要な[関数文](/ja/docs/Web/JavaScript/Reference/Statements/function)がコードの中にあった場合に発生します。
 
-<h2 id="Message">エラーメッセージ</h2>
+## エラーメッセージ
 
-<pre class="brush: js">Syntax Error: Expected identifier (Edge)
+```js
+Syntax Error: Expected identifier (Edge)
 SyntaxError: function statement requires a name [Firefox]
 SyntaxError: Unexpected token ( [Chrome]
-</pre>
+```
 
-<h2 id="Error_type">エラーの種類</h2>
+## エラーの種類
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+## 何がうまくいかなかったのか？
 
-<p>コードに名前が必要な<a href="/ja/docs/Web/JavaScript/Reference/Statements/function">関数文</a>があります。関数がどのように定義されているか、関数の名前を指定する必要があるかどうか、または問題の関数が関数式、<a href="/ja/docs/Glossary/IIFE">IIFE</a> である必要があるかどうか、 コードがこのコンテクストに正しく置かれているかどうかを確認する必要があります。</p>
+コードに名前が必要な[関数文](/ja/docs/Web/JavaScript/Reference/Statements/function)があります。関数がどのように定義されているか、関数の名前を指定する必要があるかどうか、または問題の関数が関数式、[IIFE](/ja/docs/Glossary/IIFE) である必要があるかどうか、 コードがこのコンテクストに正しく置かれているかどうかを確認する必要があります。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="Statements_vs_expressions">文と式</h3>
+### 文と式
 
-<p><em><a href="/ja/docs/Web/JavaScript/Reference/Statements/function">function 文</a></em> (または <em>function 宣言</em>) では名前が必要であり、次のものは動作しません。</p>
+_[function 文](/ja/docs/Web/JavaScript/Reference/Statements/function)_ (または _function 宣言_) では名前が必要であり、次のものは動作しません。
 
-<pre class="brush: js example-bad">function () {
+```js example-bad
+function () {
   return 'Hello world';
 }
 // SyntaxError: function statement requires a name
-</pre>
+```
 
-<p>代わりに、<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">function 式</a> (代入) を使用することができます。</p>
+代わりに、[function 式](/ja/docs/Web/JavaScript/Reference/Operators/function) (代入) を使用することができます。
 
-<pre class="brush: js example-good">var greet = function() {
+```js example-good
+var greet = function() {
   return 'Hello world';
-};</pre>
+};
+```
 
-<p>または、定義するとすぐに実行される <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a> (即時実行関数式) を定義しようとしているのかもしれません。その場合は、もう少々括弧が必要です。</p>
+または、定義するとすぐに実行される [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (即時実行関数式) を定義しようとしているのかもしれません。その場合は、もう少々括弧が必要です。
 
-<pre class="brush: js example-good">(function () {
+```js example-good
+(function () {
 
-})();</pre>
+})();
+```
 
-<h3 id="Labeled_functions">ラベル付けされた関数</h3>
+### ラベル付けされた関数
 
-<p>関数 <a href="/ja/docs/Web/JavaScript/Reference/Statements/label">label</a> を使用している場合、<code>function</code> キーワードの後に関数名を指定する必要があります。これは動作しません:</p>
+関数 [label](/ja/docs/Web/JavaScript/Reference/Statements/label) を使用している場合、`function` キーワードの後に関数名を指定する必要があります。これは動作しません:
 
-<pre class="brush: js example-bad">function Greeter() {
+```js example-bad
+function Greeter() {
   german: function () {
     return "Moin";
   }
 }
 // SyntaxError: function statement requires a name
-</pre>
+```
 
-<p>たとえば、これは動作します。</p>
+たとえば、これは動作します。
 
-<pre class="brush: js example-good">function Greeter() {
+```js example-good
+function Greeter() {
   german: function g() {
     return "Moin";
   }
-}</pre>
+}
+```
 
-<h3 id="Object_methods">オブジェクトのメソッド</h3>
+### オブジェクトのメソッド
 
-<p>オブジェクトのメソッドを作るならば、オブジェクトを作る必要があります。その場合、<code>function</code> キーワードの後に名前がない次の構文は有効です。</p>
+オブジェクトのメソッドを作るならば、オブジェクトを作る必要があります。その場合、`function` キーワードの後に名前がない次の構文は有効です。
 
-<pre class="brush: js example-good">var greeter = {
+```js example-good
+var greeter = {
   german: function () {
     return "Moin";
   }
-};</pre>
+};
+```
 
-<h3 id="Callback_syntax">コールバック構文</h3>
+### コールバック構文
 
-<p>コールバックを使用するときの構文もチェックします。大括弧とカンマが混同しやすいです。</p>
+コールバックを使用するときの構文もチェックします。大括弧とカンマが混同しやすいです。
 
-<pre class="brush: js example-bad">promise.then(
+```js example-bad
+promise.then(
   function() {
     console.log("success");
   });
@@ -93,11 +105,12 @@ SyntaxError: Unexpected token ( [Chrome]
     console.log("error");
 }
 // SyntaxError: function statement requires a name
-</pre>
+```
 
-<p>正しくは、次の通りです。</p>
+正しくは、次の通りです。
 
-<pre class="brush: json example-good">promise.then(
+```json example-good
+promise.then(
   function() {
     console.log("success");
   },
@@ -105,14 +118,12 @@ SyntaxError: Unexpected token ( [Chrome]
     console.log("error");
   }
 );
-</pre>
+```
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
-  <li><a href="/ja/docs/Web/JavaScript/Guide/Functions">関数 (JavaScript ガイド)</a></li>
-  <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/function">関数文</a></li>
-  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a></li>
-  <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/label">label</a></li>
-</ul>
+- [関数 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Functions)
+- [関数文](/ja/docs/Web/JavaScript/Reference/Statements/function)
+- [関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)
+- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+- [label](/ja/docs/Web/JavaScript/Reference/Statements/label)

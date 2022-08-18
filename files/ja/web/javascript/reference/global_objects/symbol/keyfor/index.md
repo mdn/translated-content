@@ -8,34 +8,33 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.keyFor(sym)</code></strong> メソッドは、指定されたシンボルについて、共有シンボルキーをグローバルシンボルレジストリから受け取ります。</p>
+**`Symbol.keyFor(sym)`** メソッドは、指定されたシンボルについて、共有シンボルキーをグローバルシンボルレジストリから受け取ります。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Symbol.keyFor(sym);
+```
 
-<pre class="syntaxbox notranslate">Symbol.keyFor(<var>sym</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `sym`
+  - : シンボル、必須。キーを探すシンボル。
 
-<dl>
- <dt><code><var>sym</var></code></dt>
- <dd>シンボル、必須。キーを探すシンボル。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+グローバルレジストリで見つかった場合は、与えられたシンボルのキーを表す文字列です。それ以外の場合は {{jsxref("undefined")}} です。
 
-<p>グローバルレジストリで見つかった場合は、与えられたシンボルのキーを表す文字列です。それ以外の場合は {{jsxref("undefined")}} です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### keyFor() の使用
 
-<h3 id="Using_keyFor" name="Using_keyFor">keyFor() の使用</h3>
-
-<pre class="brush: js notranslate">var globalSym = Symbol.for('foo'); // create a new global symbol
+```js
+var globalSym = Symbol.for('foo'); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 var localSym = Symbol();
@@ -44,29 +43,18 @@ Symbol.keyFor(localSym); // undefined
 // well-known symbols are not symbols registered
 // in the global symbol registry
 Symbol.keyFor(Symbol.iterator) // undefined
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               |
+| ------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Symbol.keyFor")}}</p>
+{{Compat("javascript.builtins.Symbol.keyFor")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Symbol.for()")}}</li>
-</ul>
+- {{jsxref("Symbol.for()")}}

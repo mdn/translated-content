@@ -2,74 +2,72 @@
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
-browser-compat: javascript.builtins.String.fontsize
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
+browser-compat: javascript.builtins.String.fontsize
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>fontsize()</code></strong> メソッドは、文字列を指定された大きさで表示させる HTML の {{HTMLElement("font")}} 要素を生成します。</p>
+**`fontsize()`** メソッドは、文字列を指定された大きさで表示させる HTML の {{HTMLElement("font")}} 要素を生成します。
 
-<div class="note">
-<p><strong>注:</strong> &lt;font&gt; 要素は <a href="/ja/docs/Glossary/HTML5">HTML5</a> で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は <a href="/ja/docs/Web/CSS">CSS</a> プロパティを使用してください。</p>
-</div>
+> **Note:** **注:** \<font> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">fontsize(size)</pre>
+```js
+fontsize(size)
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-  <dt><code><var>size</var></code></dt>
-  <dd>1 ～ 7 の整数、 1 ～ 7 の符号付き整数を表す文字列です。</dd>
-</dl>
+- `size`
+  - : 1 ～ 7 の整数、 1 ～ 7 の符号付き整数を表す文字列です。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>HTML の {{HTMLElement("font")}} 要素を含む文字列です。</p>
+HTML の {{HTMLElement("font")}} 要素を含む文字列です。
 
-<h2 id="Description">解説</h2>
+## 解説
 
-<p>大きさを整数で指定した場合は、 <code>str</code> のフォントの大きさを7つの定義済みの大きさで設定します。 <code>size</code> を "-2" のような文字列で指定すると、 <code>str</code> のフォントの大きさを {{HTMLElement("basefont")}} 要素からの相対的な大きさを設定します。</p>
+大きさを整数で指定した場合は、 `str` のフォントの大きさを 7 つの定義済みの大きさで設定します。 `size` を "-2" のような文字列で指定すると、 `str` のフォントの大きさを {{HTMLElement("basefont")}} 要素からの相対的な大きさを設定します。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Using_fontsize">fontsize() の使用</h3>
+### fontsize() の使用
 
-<p>以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。</p>
+以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Hello, world&lt;/fontsize&gt;
-</pre>
+console.log(worldString.small());     // <small>Hello, world</small>
+console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+```
 
-<p>{{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の <code>style</code> 属性を使用して、次のようにもっと汎用的に操作することができます。</p>
+{{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の `style` 属性を使用して、次のようにもっと汎用的に操作することができます。
 
-<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '0.7em';
-</pre>
+```js
+document.getElementById('yourElemId').style.fontSize = '0.7em';
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li><code>String.prototype.fontsize</code> のポリフィルは <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a> で利用できます</li>
-  <li>{{jsxref("String.prototype.big()")}}</li>
-  <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- `String.prototype.fontsize` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) で利用できます
+- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.small()")}}

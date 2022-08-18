@@ -11,62 +11,58 @@ tags:
   - concat
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>concat()</strong></code> メソッドは、2つ以上の配列を結合するために使用します。このメソッドは既存の配列を変更せず、新しい配列を返します。</p>
+**`concat()`** メソッドは、2 つ以上の配列を結合するために使用します。このメソッドは既存の配列を変更せず、新しい配列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
+```
 
-<pre class="syntaxbox notranslate">const <var>new_array</var> = <var>old_array</var>.concat([<var>value1</var>[, <var>value2</var>[, ...[, <var>valueN</var>]]]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `valueN` {{optional_inline}}
+  - : 新しい配列に連結する配列や値です。すべての `valueN` 引数が省略された場合、 `concat` は呼び出された既存の配列のシャローコピーを返します。詳しくは下記の解説をお読みください。
 
-<dl>
- <dt><code>value<em>N</em></code> {{optional_inline}}</dt>
- <dd>新しい配列に連結する配列や値です。すべての <code>value<em>N</em></code> 引数が省略された場合、 <code>concat</code> は呼び出された既存の配列のシャローコピーを返します。詳しくは下記の解説をお読みください。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+新しい {{jsxref("Array")}} インスタンス。
 
-<p>新しい {{jsxref("Array")}} インスタンス。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`concat` は、メソッドを呼び出した `this` オブジェクトの要素に、与えられた引数の要素 (引数が配列である場合) または引数そのもの (引数が配列でない場合) が順に続く、新しい配列オブジェクトを生成します。
 
-<p><code>concat</code> は、メソッドを呼び出した <code>this</code> オブジェクトの要素に、与えられた引数の要素 (引数が配列である場合) または引数そのもの (引数が配列でない場合) が順に続く、新しい配列オブジェクトを生成します。</p>
+`concat` は `this` や引数として与えられた配列を変更しませんが、その代わりに元の配列から結合させた同じ要素のコピーを含むシャローコピー (1 次元の配列要素までの浅いコピー) を返します。元の配列の要素は以下のようにして新しい配列にコピーされます。
 
-<p><code>concat</code> は <code>this</code> や引数として与えられた配列を変更しませんが、その代わりに元の配列から結合させた同じ要素のコピーを含むシャローコピー (1 次元の配列要素までの浅いコピー) を返します。元の配列の要素は以下のようにして新しい配列にコピーされます。</p>
+- オブジェクトの参照 (実際のオブジェクトではなく): `concat` はオブジェクトの参照を新しい配列にコピーします。元の配列も新しい配列も同じオブジェクトを参照します。これはつまり、もし参照されているオブジェクトが修正されれば、その変更は元の配列と新しい配列の両方に現れるわけです。
+- 文字列や数値、真偽値 ({{jsxref("Global_Objects/String", "String")}} オブジェクトや {{jsxref("Global_Objects/Number", "Number")}} オブジェクト、{{jsxref("Global_Objects/Boolean", "Boolean")}} オブジェクトではなく): `concat` は文字列や数値の値を新しい配列にコピーします。
 
-<ul>
- <li>オブジェクトの参照 (実際のオブジェクトではなく): <code>concat</code> はオブジェクトの参照を新しい配列にコピーします。元の配列も新しい配列も同じオブジェクトを参照します。これはつまり、もし参照されているオブジェクトが修正されれば、その変更は元の配列と新しい配列の両方に現れるわけです。</li>
- <li>文字列や数値、真偽値 ({{jsxref("Global_Objects/String", "String")}} オブジェクトや {{jsxref("Global_Objects/Number", "Number")}} オブジェクト、{{jsxref("Global_Objects/Boolean", "Boolean")}} オブジェクトではなく): <code>concat</code> は文字列や数値の値を新しい配列にコピーします。</li>
-</ul>
+> **Note:** **注:** 連結した配列/値は元の配列には手を付けません。さらに、新しい配列へどんな操作をしても、元の配列には影響しません。逆もまた同様です（要素がオブジェクト参照ではない場合のみです）。
 
-<div class="note">
-<p><strong>注:</strong> 連結した配列/値は元の配列には手を付けません。さらに、新しい配列へどんな操作をしても、元の配列には影響しません。逆もまた同様です（要素がオブジェクト参照ではない場合のみです）。</p>
-</div>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 2 つの配列を連結させる
 
-<h3 id="2_つの配列を連結させる">2 つの配列を連結させる</h3>
+以下のコードは 2 つの配列を連結させます。
 
-<p>以下のコードは 2 つの配列を連結させます。</p>
-
-<pre class="brush: js notranslate">const letters = ['a', 'b', 'c'];
+```js
+const letters = ['a', 'b', 'c'];
 const numbers = [1, 2, 3];
 
 letters.concat(numbers);
 // result in ['a', 'b', 'c', 1, 2, 3]
-</pre>
+```
 
-<h3 id="3_つの配列を連結させる">3 つの配列を連結させる</h3>
+### 3 つの配列を連結させる
 
-<p>以下のコードは 3 つの配列を連結させます。</p>
+以下のコードは 3 つの配列を連結させます。
 
-<pre class="brush: js notranslate">const num1 = [1, 2, 3];
+```js
+const num1 = [1, 2, 3];
 const num2 = [4, 5, 6];
 const num3 = [7, 8, 9];
 
@@ -74,25 +70,27 @@ const numbers = num1.concat(num2, num3);
 
 console.log(numbers);
 // results in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-</pre>
+```
 
-<h3 id="配列に値を連結させる">配列に値を連結させる</h3>
+### 配列に値を連結させる
 
-<p>以下のコードは配列に値を連結させます。</p>
+以下のコードは配列に値を連結させます。
 
-<pre class="brush: js notranslate">const letters = ['a', 'b', 'c'];
+```js
+const letters = ['a', 'b', 'c'];
 
 const alphaNumeric = letters.concat(1, [2, 3]);
 
 console.log(alphaNumeric);
 // results in ['a', 'b', 'c', 1, 2, 3]
-</pre>
+```
 
-<h3 id="ネストした配列を連結する">ネストした配列を連結する</h3>
+### ネストした配列を連結する
 
-<p>以下のコードはネストした配列同士を連結させます。また、元の配列からの参照を保持しています。</p>
+以下のコードはネストした配列同士を連結させます。また、元の配列からの参照を保持しています。
 
-<pre class="brush: js notranslate">const num1 = [[1]];
+```js
+const num1 = [[1]];
 const num2 = [2, [3]];
 
 const numbers = num1.concat(num2);
@@ -105,35 +103,22 @@ num1[0].push(4);
 
 console.log(numbers);
 // results in [[1, 4], 2, [3]]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.concat', 'Array.prototype.concat')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-array.prototype.concat', 'Array.prototype.concat')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Array.concat")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.concat")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} - 配列末尾への要素の追加 / 配列末尾の要素の削除</li>
- <li>{{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} - 配列の先頭に要素を追加 / 配列の先頭の要素を削除</li>
- <li>{{jsxref("Array.splice", "splice")}} - 配列の指定位置に要素を追加 / 指定位置の要素を削除</li>
- <li>{{jsxref("String.prototype.concat()")}}</li>
- <li>{{jsxref("Symbol.isConcatSpreadable")}} – 平坦化を制御</li>
-</ul>
+- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} - 配列末尾への要素の追加 / 配列末尾の要素の削除
+- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} - 配列の先頭に要素を追加 / 配列の先頭の要素を削除
+- {{jsxref("Array.splice", "splice")}} - 配列の指定位置に要素を追加 / 指定位置の要素を削除
+- {{jsxref("String.prototype.concat()")}}
+- {{jsxref("Symbol.isConcatSpreadable")}} – 平坦化を制御

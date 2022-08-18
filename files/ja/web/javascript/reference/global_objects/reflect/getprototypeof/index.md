@@ -9,50 +9,49 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静的な <strong><code>Reflect.getPrototypeOf()</code></strong> メソッドは、{{jsxref("Object.getPrototypeOf()")}} とほぼ同じメソッドです。これは指定したオブジェクトのプロトタイプ (つまり、内部の <code>[[Prototype]]</code> プロパティの値) を返します。</p>
+静的な **`Reflect.getPrototypeOf()`** メソッドは、{{jsxref("Object.getPrototypeOf()")}} とほぼ同じメソッドです。これは指定したオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティの値) を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Reflect.getPrototypeOf(target)
+```
 
-<pre class="syntaxbox notranslate">Reflect.getPrototypeOf(<var>target</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `target`
+  - : プロトタイプを取得する対象のオブジェクトです。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>プロトタイプを取得する対象のオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、{{jsxref("null")}} を返します。
 
-<p>与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、{{jsxref("null")}} を返します。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+`target` が {{jsxref("Object")}} でない場合に {{jsxref("TypeError")}} がスローされます。
 
-<p><code>target</code> が {{jsxref("Object")}} でない場合に {{jsxref("TypeError")}} がスローされます。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Reflect.getPrototypeOf` メソッドは、指定したオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティの値) を返します。
 
-<p><code>Reflect.getPrototypeOf</code> メソッドは、指定したオブジェクトのプロトタイプ (つまり、内部の <code>[[Prototype]]</code> プロパティの値) を返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Reflect.getPrototypeOf() の使用
 
-<h3 id="Using_Reflect.getPrototypeOf" name="Using_Reflect.getPrototypeOf">Reflect.getPrototypeOf() の使用</h3>
-
-<pre class="brush: js notranslate">Reflect.getPrototypeOf({})                  // Object.prototype
+```js
+Reflect.getPrototypeOf({})                  // Object.prototype
 Reflect.getPrototypeOf(Object.prototype)    // null
 Reflect.getPrototypeOf(Object.create(null)) // null
-</pre>
+```
 
-<h3 id="Compared_to_Object.getPrototypeOf" name="Compared_to_Object.getPrototypeOf">Object.getPrototypeOf() との比較</h3>
+### Object.getPrototypeOf() との比較
 
-<pre class="brush: js notranslate">// Object の結果は同じです
+```js
+// Object の結果は同じです
 Object.getPrototypeOf({})   // Object.prototype
 Reflect.getPrototypeOf({})  // Object.prototype
 
@@ -66,30 +65,19 @@ Reflect.getPrototypeOf('foo')  // Throws TypeError
 
 // To mimic the Object ES2015 behavior you need to coerce
 Reflect.getPrototypeOf(Object('foo'))  // String.prototype
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}</p>
+{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getPrototypeOf()")}}

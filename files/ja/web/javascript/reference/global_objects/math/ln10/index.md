@@ -8,58 +8,44 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.LN10</code></strong> プロパティは 10 の自然対数、およそ 2.302 を表します。</p>
+**`Math.LN10`** プロパティは 10 の自然対数、およそ 2.302 を表します。
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-ln10.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ln10.html","shorter")}}{{js_property_attributes(0, 0, 0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 解説
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`LN10` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.LN10` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<h2 id="Description" name="Description">解説</h2>
+## 例
 
-<p><code>LN10</code> は <code>Math</code> オブジェクトの静的プロパティなので、 <code>Math</code> オブジェクトを生成してプロパティとして使用するのではなく、常に <code>Math.LN10</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+### Math.LN10 の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+以下の関数は、10 の自然対数を返します。
 
-<h3 id="Using_Math.LN10" name="Using_Math.LN10">Math.LN10 の使用</h3>
-
-<p>以下の関数は、10 の自然対数を返します。</p>
-
-<pre class="brush:js notranslate">function getNatLog10() {
+```js
+function getNatLog10() {
   return Math.LN10;
 }
 
 getNatLog10(); // 2.302585092994046
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.ln10', 'Math.LN10')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   |
+| ------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-math.ln10', 'Math.LN10')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.LN10")}}</p>
+{{Compat("javascript.builtins.Math.LN10")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}

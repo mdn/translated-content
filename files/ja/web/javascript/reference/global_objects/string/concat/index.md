@@ -9,47 +9,46 @@ tags:
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>concat()</code></strong> メソッドは、文字列引数を呼び出し文字列に連結して、新しい文字列を返します。</span></p>
+**`concat()`** メソッドは、文字列引数を呼び出し文字列に連結して、新しい文字列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-concat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.concat(str2 [, ...strN])
+```
 
-<pre class="syntaxbox"><var>str</var>.concat(<var>str2</var> [, ...<var>strN</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `str2 [, ...strN]`
+  - : `str` に連結する文字列。
 
-<dl>
- <dt><code><var>str2</var> [, ...<var>strN</var>]</code></dt>
- <dd><code><var>str</var></code> に連結する文字列。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+提供された文字列を結合したテキストを含む新しい文字列。
 
-<p>提供された文字列を結合したテキストを含む新しい文字列。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`concat()` 関数は、文字列引数を呼び出し文字列に連結し、新しい文字列を返します。元の文字列または返された文字列の変更は、他の文字列には影響しません。
 
-<p><code>concat()</code> 関数は、文字列引数を呼び出し文字列に連結し、新しい文字列を返します。元の文字列または返された文字列の変更は、他の文字列には影響しません。</p>
+引数が文字列型でない場合は、連結前に文字列値に変換されます。
 
-<p>引数が文字列型でない場合は、連結前に文字列値に変換されます。</p>
+## 性能
 
-<h2 id="Performance" name="Performance">性能</h2>
+`concat()` メソッドの代わりに {{jsxref("Operators/Assignment_Operators", "代入演算子", "", 1)}} (`+` または `+=`) を使用する事を強くお勧めします。
+この[性能試験](https://jsperf.com/concat-vs-plus-vs-join)によれば、{{jsxref("Operators/Assignment_Operators", "代入演算子", "", 1)}}のほうが数倍高速です。
 
-<p><code>concat()</code> メソッドの代わりに {{jsxref("Operators/Assignment_Operators", "代入演算子", "", 1)}} (<code>+</code> または <code>+=</code>) を使用する事を強くお勧めします。<br>
- この<a href="https://jsperf.com/concat-vs-plus-vs-join">性能試験</a>によれば、{{jsxref("Operators/Assignment_Operators", "代入演算子", "", 1)}}のほうが数倍高速です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### concat() の使用
 
-<h3 id="Using_concat" name="Using_concat">concat() の使用</h3>
+複数の文字列を連結してコンソールに表示する例を以下に示します。
 
-<p>複数の文字列を連結してコンソールに表示する例を以下に示します。</p>
-
-<pre class="brush: js">let hello = 'こんにちは、'
+```js
+let hello = 'こんにちは、'
 console.log(hello.concat('鈴木さん', '。よい1日を。'))
 /* こんにちは、鈴木さん。よい1日を。*/
 
@@ -61,31 +60,19 @@ let greetList = ['こんにちは', ' ', '佐藤さん', '!']
 "".concat(null)  // "null"
 "".concat(true)  // "true"
 "".concat(4, 5)  // "45"
+```
 
-</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat("javascript.builtins.String.concat")}}
 
-<p>{{Compat("javascript.builtins.String.concat")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}

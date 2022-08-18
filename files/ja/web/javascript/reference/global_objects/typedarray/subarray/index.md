@@ -9,43 +9,41 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>subarray()</code></strong> メソッドは、同じ {{jsxref("ArrayBuffer")}} ストアで、この <em>TypedArray</em> オブジェクトと同じ要素の型をもつ新しい <em>TypedArray</em> を返します。先頭のオフセットは<strong>含み</strong>、末尾のオフセットは<strong>含みません</strong>。 <em>TypedArray</em> は<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>の一つです。</p>
+**`subarray()`** メソッドは、同じ {{jsxref("ArrayBuffer")}} ストアで、この _TypedArray_ オブジェクトと同じ要素の型をもつ新しい _TypedArray_ を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。 _TypedArray_ は[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.subarray([begin[, end]])
+```
 
-<pre class="syntaxbox notranslate"><var>typedarr</var>ay.subarray([<var>begin</var>[, <var>end</var>]])
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `begin` {{optional_inline}}
+  - : 先頭の要素です。この位置は含まれます。この値が指定されていない場合、配列全体が新しいビューに含まれます。
+- `end` {{optional_inline}}
+  - : 末尾の要素です。この位置は含まれません。この値が指定されていない場合、 `begin` によって指定された要素から配列の最後まですべての要素が新しいビューに含まれます。
 
-<dl>
- <dt><code><var>begin</var></code> {{optional_inline}}</dt>
- <dd>先頭の要素です。この位置は含まれます。この値が指定されていない場合、配列全体が新しいビューに含まれます。</dd>
- <dt><code><var>end</var></code> {{optional_inline}}</dt>
- <dd>末尾の要素です。この位置は含まれません。この値が指定されていない場合、 <code><var>begin</var></code> によって指定された要素から配列の最後まですべての要素が新しいビューに含まれます。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+新しい {{jsxref("TypedArray")}} オブジェクトです。
 
-<p>新しい {{jsxref("TypedArray")}} オブジェクトです。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`begin` と `end` によって指定される範囲は、現在の配列に対して有効なインデックスの範囲に丸められます。すなわち、新しい範囲の計算された長さがマイナスなら、ゼロに縮められます。 `begin` か `end` のどちらかがマイナスなら、配列の最初からではなく、最後からインデックスを参照します。
 
-<p><code><var>begin</var></code> と <code><var>end</var></code> によって指定される範囲は、現在の配列に対して有効なインデックスの範囲に丸められます。すなわち、新しい範囲の計算された長さがマイナスなら、ゼロに縮められます。 <code><var>begin</var></code> か <code><var>end</var></code> のどちらかがマイナスなら、配列の最初からではなく、最後からインデックスを参照します。</p>
+既存のバッファ上に新しいビューを作っていることにも注意して下さい。すなわち、新しいオブジェクトの内容への変更は、元のオブジェクトに強い影響を与えます。逆もまた同様です。
 
-<p>既存のバッファ上に新しいビューを作っていることにも注意して下さい。すなわち、新しいオブジェクトの内容への変更は、元のオブジェクトに強い影響を与えます。逆もまた同様です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### subarray() メソッドの使用
 
-<h3 id="Using_the_subarray_method" name="Using_the_subarray_method">subarray() メソッドの使用</h3>
-
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
 uint8.set([1,2,3]);
 
@@ -54,31 +52,20 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 var sub = uint8.subarray(0,4);
 
 console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.TypedArray.subarray")}}</p>
+{{Compat("javascript.builtins.TypedArray.subarray")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Typed_arrays">JavaScript の型付き配列</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}

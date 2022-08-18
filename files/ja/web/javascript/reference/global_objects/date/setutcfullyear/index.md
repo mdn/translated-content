@@ -9,69 +9,57 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setUTCFullYear()</code></strong> メソッドは、協定世界時に基づき、指定された日付の年を設定します。</p>
+**`setUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日付の年を設定します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.setUTCFullYear(yearValue[, monthValue[, dayValue]])
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setUTCFullYear(<var>yearValue</var>[, <var>monthValue</var>[, <var>dayValue</var>]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `yearValue`
+  - : 「年」の数字を指定する整数値。例えば、1995。
+- `monthValue`
+  - : 任意。1 月から 12 月を表す 0 から 11 までの間の整数値。
+- `dayValue`
+  - : 任意。「日」を表す 1 から 31 までの間の整数値。`dayValue` 引数を指定した場合、`monthValue` も指定しなければなりません。
 
-<dl>
- <dt><code><var>yearValue</var></code></dt>
- <dd>「年」の数字を指定する整数値。例えば、1995。</dd>
- <dt><code><var>monthValue</var></code></dt>
- <dd>任意。1 月から 12 月を表す 0 から 11 までの間の整数値。</dd>
- <dt><code><var>dayValue</var></code></dt>
- <dd>任意。「日」を表す 1 から 31 までの間の整数値。<code><var>dayValue</var></code> 引数を指定した場合、<code><var>monthValue</var></code> も指定しなければなりません。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
-<p>協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`monthValue` 引数と `dayValue` 引数を指定しない場合、{{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} メソッドと {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} メソッドから返される値が使われます。
 
-<p><code><var>monthValue</var></code> 引数と <code><var>dayValue</var></code> 引数を指定しない場合、{{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} メソッドと {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} メソッドから返される値が使われます。</p>
+指定した値が期待される日付の範囲外の場合、それに応じて `setUTCFullYear()` が他の引数と {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`monthValue` に 15 を指定した場合、年に 1 が加算 (`yearValue + 1`) され、月が 3 になります。
 
-<p>指定した値が期待される日付の範囲外の場合、それに応じて <code>setUTCFullYear()</code> が他の引数と {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、<code><var>monthValue</var></code> に 15 を指定した場合、年に 1 が加算 (<code><var>yearValue</var> + 1</code>) され、月が 3 になります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### setUTCFullYear() の使用
 
-<h3 id="Using_setUTCFullYear" name="Using_setUTCFullYear">setUTCFullYear() の使用</h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCFullYear(1997);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.setUTCFullYear")}}</p>
+{{Compat("javascript.builtins.Date.setUTCFullYear")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}

@@ -10,33 +10,31 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>for...of</code> 文</strong>は、<a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル">反復可能オブジェクト</a>、たとえば組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列状オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}} や {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, およびユーザー定義の反復可能オブジェクトなどに対して、反復的な処理をするループを作成します。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。</p>
+**`for...of` 文**は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)、たとえば組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列状オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}} や {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, およびユーザー定義の反復可能オブジェクトなどに対して、反復的な処理をするループを作成します。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-forof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">for (<var>variable</var> of <var>iterable</var>) {
-  <var>statement</var>
+```
+for (variable of iterable) {
+  statement
 }
-</pre>
+```
 
-<dl>
- <dt><code><var>variable</var></code></dt>
- <dd>反復処理の各回において、異なるプロパティの値が <code><var>variable</var></code> に割り当てられます。<code><var>variable</var></code> は <code>const</code>, <code>let</code>, <code>var</code> で宣言することができます。</dd>
- <dt><code><var>iterable</var></code></dt>
- <dd>反復処理が行われる反復可能なプロパティを持つオブジェクトです。</dd>
-</dl>
+- `variable`
+  - : 反復処理の各回において、異なるプロパティの値が `variable` に割り当てられます。`variable` は `const`, `let`, `var` で宣言することができます。
+- `iterable`
+  - : 反復処理が行われる反復可能なプロパティを持つオブジェクトです。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Iterating_over_an_jsxrefArray" name="Iterating_over_an_jsxrefArray">{{jsxref("Array")}} での反復処理</h3>
+### {{jsxref("Array")}} での反復処理
 
-<pre class="brush:js notranslate">const iterable = [10, 20, 30];
+```js
+const iterable = [10, 20, 30];
 
 for (const value of iterable) {
   console.log(value);
@@ -44,11 +42,12 @@ for (const value of iterable) {
 // 10
 // 20
 // 30
-</pre>
+```
 
-<p>{{jsxref("let")}} を {{jsxref("const")}} の代わりに使用しても、ブロック内で変数が再割り当てされます。</p>
+{{jsxref("let")}} を {{jsxref("const")}} の代わりに使用しても、ブロック内で変数が再割り当てされます。
 
-<pre class="brush:js notranslate">const iterable = [10, 20, 30];
+```js
+const iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 1;
@@ -57,11 +56,12 @@ for (let value of iterable) {
 // 11
 // 21
 // 31
-</pre>
+```
 
-<h3 id="Iterating_over_a_jsxrefString" name="Iterating_over_a_jsxrefString">{{jsxref("String")}} での反復処理</h3>
+### {{jsxref("String")}} での反復処理
 
-<pre class="brush:js notranslate">const iterable = 'boo';
+```js
+const iterable = 'boo';
 
 for (const value of iterable) {
   console.log(value);
@@ -69,22 +69,24 @@ for (const value of iterable) {
 // "b"
 // "o"
 // "o"
-</pre>
+```
 
-<h3 id="Iterating_over_a_jsxrefTypedArray" name="Iterating_over_a_jsxrefTypedArray">{{jsxref("TypedArray")}} での反復処理</h3>
+### {{jsxref("TypedArray")}} での反復処理
 
-<pre class="brush:js notranslate">const iterable = new Uint8Array([0x00, 0xff]);
+```js
+const iterable = new Uint8Array([0x00, 0xff]);
 
 for (const value of iterable) {
   console.log(value);
 }
 // 0
 // 255
-</pre>
+```
 
-<h3 id="Iterating_over_a_jsxrefMap" name="Iterating_over_a_jsxrefMap">{{jsxref("Map")}} での反復処理</h3>
+### {{jsxref("Map")}} での反復処理
 
-<pre class="brush:js notranslate">const iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
+```js
+const iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
 
 for (const entry of iterable) {
   console.log(entry);
@@ -99,11 +101,12 @@ for (const [key, value] of iterable) {
 // 1
 // 2
 // 3
-</pre>
+```
 
-<h3 id="Iterating_over_a_jsxrefSet" name="Iterating_over_a_jsxrefSet">{{jsxref("Set")}} での反復処理</h3>
+### {{jsxref("Set")}} での反復処理
 
-<pre class="brush:js notranslate">const iterable = new Set([1, 1, 2, 2, 3, 3]);
+```js
+const iterable = new Set([1, 1, 2, 2, 3, 3]);
 
 for (const value of iterable) {
   console.log(value);
@@ -111,13 +114,14 @@ for (const value of iterable) {
 // 1
 // 2
 // 3
-</pre>
+```
 
-<h3 id="Iterating_over_the_jsxrefarguments_object" name="Iterating_over_the_jsxref(arguments)_object">arguments オブジェクトでの反復処理</h3>
+### arguments オブジェクトでの反復処理
 
-<p>{{jsxref("Functions/arguments", "arguments")}} オブジェクトで反復処理をすると、ある JavaScript 関数にすべての引数を渡すことができます。</p>
+{{jsxref("Functions/arguments", "arguments")}} オブジェクトで反復処理をすると、ある JavaScript 関数にすべての引数を渡すことができます。
 
-<pre class="brush: js notranslate">(function() {
+```js
+(function() {
   for (const argument of arguments) {
     console.log(argument);
   }
@@ -125,26 +129,29 @@ for (const value of iterable) {
 
 // 1
 // 2
-// 3</pre>
+// 3
+```
 
-<h3 id="Iterating_over_a_DOM_collection" name="Iterating_over_a_DOM_collection">DOM コレクションでの反復処理</h3>
+### DOM コレクションでの反復処理
 
-<p>{{domxref("NodeList")}} のような DOM コレクションでの反復処理です。次の例では、<code>read</code> クラスを <code>article</code> の直下の子である段落に加えます。</p>
+{{domxref("NodeList")}} のような DOM コレクションでの反復処理です。次の例では、`read` クラスを `article` の直下の子である段落に加えます。
 
-<pre class="brush:js notranslate">// 注: これは以下のものに対応しているプラットフォームでのみ動作します。
+```js
+// 注: これは以下のものに対応しているプラットフォームでのみ動作します。
 // implemented NodeList.prototype[Symbol.iterator]
-const articleParagraphs = document.querySelectorAll('article &gt; p');
+const articleParagraphs = document.querySelectorAll('article > p');
 
 for (const paragraph of articleParagraphs) {
   paragraph.classList.add('read');
 }
-</pre>
+```
 
-<h3 id="Closing_iterators" name="Closing_iterators">反復処理の終了</h3>
+### 反復処理の終了
 
-<p><code>for...of</code> ループ内では、<code>break</code>, <code>throw</code>, <code>return</code> を発生させることで反復処理を中断させることができます。この場合、反復子は閉じられます。</p>
+`for...of` ループ内では、`break`, `throw`, `return` を発生させることで反復処理を中断させることができます。この場合、反復子は閉じられます。
 
-<pre class="brush: js notranslate">function* foo(){
+```js
+function* foo(){
   yield 1;
   yield 2;
   yield 3;
@@ -155,13 +162,14 @@ for (const o of foo()) {
   break; // 反復処理を閉じ、ループの外の実行が継続されます
 }
 console.log('done');
-</pre>
+```
 
-<h3 id="Iterating_over_generators" name="Iterating_over_generators">ジェネレーターでの反復処理</h3>
+### ジェネレーターでの反復処理
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Statements/function*">ジェネレーター</a>、すなわち反復可能オブジェクトを生成する関数で反復処理することもできます。</p>
+[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Statements/function*)、すなわち反復可能オブジェクトを生成する関数で反復処理することもできます。
 
-<pre class="brush:js notranslate">function* fibonacci() { // ジェネレーター関数
+```js
+function* fibonacci() { // ジェネレーター関数
   let [prev, curr] = [0, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -172,17 +180,18 @@ console.log('done');
 for (const n of fibonacci()) {
   console.log(n);
   // 1000 で繰り返しを終了する
-  if (n &gt;= 1000) {
+  if (n >= 1000) {
     break;
   }
 }
-</pre>
+```
 
-<h4 id="Do_not_reuse_generators" name="Do_not_reuse_generators">ジェネレーターを再利用してはいけない</h4>
+#### ジェネレーターを再利用してはいけない
 
-<p>ジェネレーターは、<code>for...of</code> ループが {{jsxref("Statements/break", "break")}} キーワードなどで早く終了しても再利用してはいけません。ループを抜けると、ジェネレーターは閉じられ、そこで繰り返してもそれ以上の結果は算出されません。</p>
+ジェネレーターは、`for...of` ループが {{jsxref("Statements/break", "break")}} キーワードなどで早く終了しても再利用してはいけません。ループを抜けると、ジェネレーターは閉じられ、そこで繰り返してもそれ以上の結果は算出されません。
 
-<pre class="brush: js example-bad notranslate">const gen = (function *(){
+```js example-bad
+const gen = (function *(){
   yield 1;
   yield 2;
   yield 3;
@@ -196,18 +205,19 @@ for (const o of gen) {
 for (const o of gen) {
   console.log(o); // Never called.
 }
-</pre>
+```
 
-<h3 id="Iterating_over_other_iterable_objects" name="Iterating_over_other_iterable_objects">その他の反復可能オブジェクトでの反復処理</h3>
+### その他の反復可能オブジェクトでの反復処理
 
-<p>明示的に <a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">iterable</a> プロトコルを実装しているオブジェクトで反復処理することもできます。</p>
+明示的に [iterable](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) プロトコルを実装しているオブジェクトで反復処理することもできます。
 
-<pre class="brush:js notranslate">const iterable = {
+```js
+const iterable = {
   [Symbol.iterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
@@ -222,19 +232,20 @@ for (const value of iterable) {
 // 0
 // 1
 // 2
-</pre>
+```
 
-<h3 id="Difference_between_for...of_and_for...in" name="Difference_between_for...of_and_for...in"><code>for...of</code> と <code>for...in</code> との違い</h3>
+### `for...of` と `for...in` との違い
 
-<p><code>for...in</code> および <code>for...of</code> 文は、両方とも何かに対する繰り返しです。これらの主な違いは何に対する繰り返しなのかというところです。</p>
+`for...in` および `for...of` 文は、両方とも何かに対する繰り返しです。これらの主な違いは何に対する繰り返しなのかというところです。
 
-<p>{{jsxref("Statements/for...in", "for...in")}} 文は、オブジェクトのすべての<a href="/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">列挙可能なプロパティ</a>に対して、順序不定で繰り返し処理を行います。</p>
+{{jsxref("Statements/for...in", "for...in")}} 文は、オブジェクトのすべての[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)に対して、順序不定で繰り返し処理を行います。
 
-<p><code>for...of</code> 文は、<a href="/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">反復可能なオブジェクト</a>が定義した順序で値を反復処理します。</p>
+`for...of` 文は、[反復可能なオブジェクト](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)が定義した順序で値を反復処理します。
 
-<p>次の例では、{{jsxref("Array")}} に対して <code>for...of</code> ループと <code>for...in</code> ループを使用した場合の違いを示しています。</p>
+次の例では、{{jsxref("Array")}} に対して `for...of` ループと `for...in` ループを使用した場合の違いを示しています。
 
-<pre class="brush:js notranslate">Object.prototype.objCustom = function() {};
+```js
+Object.prototype.objCustom = function() {};
 Array.prototype.arrCustom = function() {};
 
 const iterable = [3, 5, 7];
@@ -253,61 +264,58 @@ for (const i in iterable) {
 for (const i of iterable) {
   console.log(i); // logs 3, 5, 7
 }
-</pre>
+```
 
-<p>上記のコードをステップを追って見ていきましょう。</p>
+上記のコードをステップを追って見ていきましょう。
 
-<pre class="brush: js notranslate">Object.prototype.objCustom = function() {};
+```js
+Object.prototype.objCustom = function() {};
 Array.prototype.arrCustom = function() {};
 
 const iterable = [3, 5, 7];
-iterable.foo = 'hello';</pre>
+iterable.foo = 'hello';
+```
 
-<p>すべてのオブジェクトは <code>objCustom</code> プロパティを継承し、すべての {{jsxref("Array")}} オブジェクトは <code>arrCustom</code> プロパティを継承します。{{jsxref("Object.prototype")}} と {{jsxref("Array.prototype")}} にそれぞれこれらのプロパティを追加されているためです。オブジェクト <code>iterable</code> は <code>objCustom</code> と <code>arrCustom</code> の各プロパティを、<a href="/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">継承とプロトタイプチェーン</a>によって継承しています。</p>
+すべてのオブジェクトは `objCustom` プロパティを継承し、すべての {{jsxref("Array")}} オブジェクトは `arrCustom` プロパティを継承します。{{jsxref("Object.prototype")}} と {{jsxref("Array.prototype")}} にそれぞれこれらのプロパティを追加されているためです。オブジェクト `iterable` は `objCustom` と `arrCustom` の各プロパティを、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)によって継承しています。
 
-<pre class="brush: js notranslate">for (const i in iterable) {
+```js
+for (const i in iterable) {
   console.log(i); // 0, 1, 2, "foo", "arrCustom", "objCustom" と出力
-}</pre>
+}
+```
 
-<p>このループは <code>iterable</code> オブジェクトの<a href="/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">列挙可能なプロパティ</a>のみを、順序不定で出力します。配列の<strong>要素</strong>である <code>3</code>, <code>5</code>, <code>7</code> や <code>hello</code> は、列挙可能なプロパティ<strong>ではない</strong>ため出力しません。実際、これらはプロパティではなく、値です。配列の<strong>添字</strong>が <code>arrCustom</code> や <code>objCustom</code> と共に出力されます。なぜプロパティが反復処理に出てこないのかが分からない場合は、{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} にもっと詳しい説明があります。</p>
+このループは `iterable` オブジェクトの[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)のみを、順序不定で出力します。配列の**要素**である `3`, `5`, `7` や `hello` は、列挙可能なプロパティ**ではない**ため出力しません。実際、これらはプロパティではなく、値です。配列の**添字**が `arrCustom` や `objCustom` と共に出力されます。なぜプロパティが反復処理に出てこないのかが分からない場合は、{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} にもっと詳しい説明があります。
 
-<pre class="brush: js notranslate">for (const i in iterable) {
+```js
+for (const i in iterable) {
   if (iterable.hasOwnProperty(i)) {
     console.log(i); // 0, 1, 2, "foo" と出力
   }
-}</pre>
+}
+```
 
-<p>このループは最初のものと似ていますが、{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} を使用して見つかった列挙可能なプロパティがオブジェクト自身のものであるか、すなわち継承したものでないかどうかをチェックしています。オブジェクト自身のプロパティである場合は、ログ出力します。<code>0</code>, <code>1</code>, <code>2</code>, <code>foo</code> は自身のプロパティである (<strong>継承されたものではない</strong>) ため出力されます。<code>arrCustom</code> と <code>objCustom</code> は<strong>継承されたものである</strong>ために出力されません。</p>
+このループは最初のものと似ていますが、{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} を使用して見つかった列挙可能なプロパティがオブジェクト自身のものであるか、すなわち継承したものでないかどうかをチェックしています。オブジェクト自身のプロパティである場合は、ログ出力します。`0`, `1`, `2`, `foo` は自身のプロパティである (**継承されたものではない**) ため出力されます。`arrCustom` と `objCustom` は**継承されたものである**ために出力されません。
 
-<pre class="brush: js notranslate">for (const i of iterable) {
+```js
+for (const i of iterable) {
   console.log(i); // 3, 5, 7 と出力
-}</pre>
+}
+```
 
-<p>このループは、<code>iterable</code> が<a href="/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">反復可能なオブジェクト</a>として定義している順序で<strong>値</strong>を反復処理し、ログ出力します。オブジェクトの<strong>要素</strong>である <code>3</code>, <code>5</code>, <code>7</code> は表示されますが、オブジェクトの<strong>プロパティ</strong>は表示されません。</p>
+このループは、`iterable` が[反復可能なオブジェクト](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)として定義している順序で**値**を反復処理し、ログ出力します。オブジェクトの**要素**である `3`, `5`, `7` は表示されますが、オブジェクトの**プロパティ**は表示されません。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.for_of")}}</p>
+{{Compat("javascript.statements.for_of")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
- <li>{{jsxref("Object.entries()")}} – オブジェクトに <strong><code>for...of</code></strong> を使用するときに便利です。</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxref("Object.entries()")}} – オブジェクトに **`for...of`** を使用するときに便利です。

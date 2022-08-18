@@ -9,54 +9,44 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getMilliseconds()</code></strong> メソッドは、ローカル時間に基づき、指定された日時の「ミリ秒」を返します。</p>
+**`getMilliseconds()`** メソッドは、ローカル時間に基づき、指定された日時の「ミリ秒」を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.getMilliseconds()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.getMilliseconds()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+ローカル時間に基づき、指定された日時の「ミリ秒」を表す 0 から 999 までの間の数値。
 
-<p>ローカル時間に基づき、指定された日時の「ミリ秒」を表す 0 から 999 までの間の数値。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getMilliseconds() の使用
 
-<h3 id="Using_getMilliseconds" name="Using_getMilliseconds">getMilliseconds() の使用</h3>
+次の例は、現在時刻のミリ秒部を変数 `milliseconds` に代入します。
 
-<p>次の例は、現在時刻のミリ秒部を変数 <code>milliseconds</code> に代入します。</p>
-
-<pre class="brush: js notranslate">var today = new Date();
+```js
+var today = new Date();
 var milliseconds = today.getMilliseconds();
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.getMilliseconds")}}</p>
+{{Compat("javascript.builtins.Date.getMilliseconds")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+- {{jsxref("Date.prototype.setMilliseconds()")}}

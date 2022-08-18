@@ -11,56 +11,55 @@ tags:
   - 言語機能
 translation_of: Web/JavaScript/Reference/Statements/switch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><span class="seoSummary"><strong><code>switch</code> 文</strong>は<a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators">式</a>を評価し、その式の値が <code>case</code> 節と一致した場合は、その <code>case</code> に関連付けられた<a href="/ja/docs/Web/JavaScript/Reference/Statements">文</a>を実行し、一致した <code>case</code> の後にある文も同様に実行します。</span></p>
+**`switch` 文**は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)を評価し、その式の値が `case` 節と一致した場合は、その `case` に関連付けられた[文](/ja/docs/Web/JavaScript/Reference/Statements)を実行し、一致した `case` の後にある文も同様に実行します。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
 
-<p class="hidden">このインタラクティブなサンプルのソースは GitHub リポジトリに保存されています。インタラクティブなサンプルプロジェクトに貢献したい場合は <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンして、プルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox">switch (<var>expression</var>) {
-  case <var>value1</var>:
+```
+switch (expression) {
+  case value1:
     // 式の結果が value1 に一致する場合に実行する文
     [break;]
-  case <var>value2</var>:
+  case value2:
     // 式の結果が value2 に一致する場合に実行する文
     [break;]
   ...
-  case <var>valueN</var>:
+  case valueN:
     // 式の結果が valueN に一致する場合に実行する文
     [break;]
   [default:
     // 式の値に一致するものが存在しない場合に実行する文
     [break;]]
-}</pre>
+}
+```
 
-<dl>
- <dt><code><var>expression</var></code></dt>
- <dd>結果が各 <code>case</code> 節と一致するか調べる式。</dd>
- <dt><code>case <var>valueN</var></code> {{optional_inline}}</dt>
- <dd><code><var>expression</var></code> との照合に使用される <code>case</code> 節。 <code><var>expression</var></code> が特定の <code><var>valueN</var></code> と一致する場合、 <code>case</code> 節の中の処理は、 <code>switch</code> 文の末尾または <code>break</code> のいずれかに達するまで実行されます。</dd>
- <dt><code>default</code> {{optional_inline}}</dt>
- <dd><code>default</code> 節。 <code><var>expression</var></code> の値が <code>case</code> 節のいずれとも一致しない場合、この節が実行されます。</dd>
-</dl>
+- `expression`
+  - : 結果が各 `case` 節と一致するか調べる式。
+- `case valueN` {{optional_inline}}
+  - : `expression` との照合に使用される `case` 節。 `expression` が特定の `valueN` と一致する場合、 `case` 節の中の処理は、 `switch` 文の末尾または `break` のいずれかに達するまで実行されます。
+- `default` {{optional_inline}}
+  - : `default` 節。 `expression` の値が `case` 節のいずれとも一致しない場合、この節が実行されます。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>switch</code> 文はまず始めに式を評価します。次に、式が入力式の結果と評価される値が等しい最初の <code>case</code> 節を (<a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">厳密等価演算子</a> <code>===</code> を使用して) 探し、その節に制御を移して、関連する処理を実行します。 (複数の <code>case</code> 節の値が指定された値と一致する場合、 <code>case</code> 節が互いに等しくなくても、最初に一致した <code>case</code> 節が選択されます。)</p>
+`switch` 文はまず始めに式を評価します。次に、式が入力式の結果と評価される値が等しい最初の `case` 節を ([厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) `===` を使用して) 探し、その節に制御を移して、関連する処理を実行します。 (複数の `case` 節の値が指定された値と一致する場合、 `case` 節が互いに等しくなくても、最初に一致した `case` 節が選択されます。)
 
-<p>一致する <code>case</code> 節が見つからない場合、プログラムは省略可能な <code>default</code> 節を探し、見つかればその節に制御を移し、関連する文を実行します。<code>default</code> 節が見つからない場合、プログラムは <code>switch</code> の終了に続く文で実行を続けます。慣習では、<code>default</code> 節は最後の節ですが、そうである必要はありません。</p>
+一致する `case` 節が見つからない場合、プログラムは省略可能な `default` 節を探し、見つかればその節に制御を移し、関連する文を実行します。`default` 節が見つからない場合、プログラムは `switch` の終了に続く文で実行を続けます。慣習では、`default` 節は最後の節ですが、そうである必要はありません。
 
-<p>省略可能な <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> 文は、各 <code>case</code> 節のラベルに関連付けられれており、一致した文を一回実行した後で <code>switch</code> を抜け出し、 <code>switch</code> に続く文から実行を継続することを保証します。もし <code>break</code> が省略されたら、プログラムは <code>switch</code> 文の中の次の文から実行を継続します。</p>
+省略可能な [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break "JavaScript/Reference/Statements/break") 文は、各 `case` 節のラベルに関連付けられれており、一致した文を一回実行した後で `switch` を抜け出し、 `switch` に続く文から実行を継続することを保証します。もし `break` が省略されたら、プログラムは `switch` 文の中の次の文から実行を継続します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_switch" name="Using_switch"><code>switch</code> の使用</h3>
+### `switch` の使用
 
-<p>次の例では、 <code>expr</code> が <code>Bananas</code> と評価された場合、プログラムは <code>case 'Bananas'</code> で値に一致し、関連付けられた文を実行します。 <code>break</code> と遭遇したとき、プログラムは <code>switch</code> から抜け出し、 <code>switch</code> に続く文を実行します。 <code>break</code> が省略された場合は、 <code>case 'Cherries'</code> に対する文も実行されます。</p>
+次の例では、 `expr` が `Bananas` と評価された場合、プログラムは `case 'Bananas'` で値に一致し、関連付けられた文を実行します。 `break` と遭遇したとき、プログラムは `switch` から抜け出し、 `switch` に続く文を実行します。 `break` が省略された場合は、 `case 'Cherries'` に対する文も実行されます。
 
-<pre class="brush: js">switch (expr) {
+```js
+switch (expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -82,15 +81,16 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 }
 
 console.log("Is there anything else you'd like?");
-</pre>
+```
 
-<h3 id="What_happens_if_I_forgot_a_break" name="What_happens_if_I_forgot_a_break"><code>break</code> を置かないとどうなるか</h3>
+### `break` を置かないとどうなるか
 
-<p><code>break</code> を置かなかった場合、スクリプトは基準を満たす <code>case</code> から実行され、その後の <code>case</code> も条件に合うかに関係なく実行されます。</p>
+`break` を置かなかった場合、スクリプトは基準を満たす `case` から実行され、その後の `case` も条件に合うかに関係なく実行されます。
 
-<p>こちらの例をご覧ください。</p>
+こちらの例をご覧ください。
 
-<pre class="brush: js">var foo = 0;
+```js
+var foo = 0;
 switch (foo) {
   case -1:
     console.log('negative 1');
@@ -106,13 +106,15 @@ switch (foo) {
     break;
   default:
     console.log('default');
-}</pre>
+}
+```
 
-<h3 id="Can_I_put_a_default_between_cases" name="Can_I_put_a_default_between_cases">case の間に <code>default</code> を置くことはできるか</h3>
+### case の間に `default` を置くことはできるか
 
-<p>はい、できます！ 一致するものが見つからない場合、 JavaScript は <code>default</code> に戻ります。</p>
+はい、できます！ 一致するものが見つからない場合、 JavaScript は `default` に戻ります。
 
-<pre class="brush: js">var foo = 5;
+```js
+var foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
@@ -123,23 +125,24 @@ switch (foo) {
   case 1:
     console.log('1');
 }
-</pre>
+```
 
-<p>他のすべての <code>case</code> の前に <code>default</code> を設定した場合にも機能します。</p>
+他のすべての `case` の前に `default` を設定した場合にも機能します。
 
-<h3 id="Methods_for_multi-criteria_case" name="Methods_for_multi-criteria_case">複数基準の <code>case</code> の使用法</h3>
+### 複数基準の `case` の使用法
 
-<p>この技法の出典はこちらです:</p>
+この技法の出典はこちらです:
 
-<p><a href="http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript">Switch statement multiple cases in JavaScript (Stack Overflow)</a></p>
+[Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
 
-<h4 id="Multi-case_single_operation" name="Multi-case_single_operation">複数の <code>case</code> とひとつの操作の対応付け</h4>
+#### 複数の `case` とひとつの操作の対応付け
 
-<p>この方法は、 <code>case</code> 節の配下に <code>break</code> がない場合に、次の <code>case</code> も基準を満たすかに関係なく実行されるという事実を活用します。 (<a href="What_happens_if_I_forgot_a_break"><code>break</code> を置かないとどうなるか</a>の節をご覧ください。)</p>
+この方法は、 `case` 節の配下に `break` がない場合に、次の `case` も基準を満たすかに関係なく実行されるという事実を活用します。 ([`break` を置かないとどうなるか](What_happens_if_I_forgot_a_break)の節をご覧ください。)
 
-<p>これは連続した <code>case</code> 文でひとつの操作を行う例であり、4つの異なる値でまったく同じ操作を行います。</p>
+これは連続した `case` 文でひとつの操作を行う例であり、4 つの異なる値でまったく同じ操作を行います。
 
-<pre class="brush: js">var Animal = 'Giraffe';
+```js
+var Animal = 'Giraffe';
 switch (Animal) {
   case 'Cow':
   case 'Giraffe':
@@ -150,13 +153,15 @@ switch (Animal) {
   case 'Dinosaur':
   default:
     console.log('This animal will not.');
-}</pre>
+}
+```
 
-<h4 id="Multi-case_chained_operations" name="Multi-case_chained_operations">複数の <code>case</code> と一連の操作</h4>
+#### 複数の `case` と一連の操作
 
-<p>これは一連の <code>case</code> 節と複数の操作の例であり、与えられた整数によって、異なる出力を行います。ここから実行されるのが <code>case</code> 節を置いた順であり、数値の順とは限らないことが分かります。 JavaScript では、これらの <code>case</code> 文の中に文字列の定義を混入することもできます。</p>
+これは一連の `case` 節と複数の操作の例であり、与えられた整数によって、異なる出力を行います。ここから実行されるのが `case` 節を置いた順であり、数値の順とは限らないことが分かります。 JavaScript では、これらの `case` 文の中に文字列の定義を混入することもできます。
 
-<pre class="brush: js">var foo = 1;
+```js
+var foo = 1;
 var output = 'Output: ';
 switch (foo) {
   case 0:
@@ -178,56 +183,29 @@ switch (foo) {
     break;
   default:
     console.log('Please pick a number from 0 to 5!');
-}</pre>
+}
+```
 
-<p>この例の出力は以下のとおりです:</p>
+この例の出力は以下のとおりです:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">値</th>
-   <th scope="col">出力するテキスト</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>foo</code> が <code>NaN</code> であるか、 <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>0</code> のいずれでもない</td>
-   <td>Please pick a number from 0 to 5!</td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td>Output: So What Is Your Name?</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td>Output: What Is Your Name?</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td>Output: Your Name?</td>
-  </tr>
-  <tr>
-   <td><code>3</code></td>
-   <td>Output: Name?</td>
-  </tr>
-  <tr>
-   <td><code>4</code></td>
-   <td>Output: ?</td>
-  </tr>
-  <tr>
-   <td><code>5</code></td>
-   <td>Output: !</td>
-  </tr>
- </tbody>
-</table>
+| 値                                                                      | 出力するテキスト                  |
+| ----------------------------------------------------------------------- | --------------------------------- |
+| `foo` が `NaN` であるか、 `1`, `2`, `3`, `4`, `5`, `0` のいずれでもない | Please pick a number from 0 to 5! |
+| `0`                                                                     | Output: So What Is Your Name?     |
+| `1`                                                                     | Output: What Is Your Name?        |
+| `2`                                                                     | Output: Your Name?                |
+| `3`                                                                     | Output: Name?                     |
+| `4`                                                                     | Output: ?                         |
+| `5`                                                                     | Output: !                         |
 
-<h3 id="Block-scope_variables_within_switch_statements" name="Block-scope_variables_within_switch_statements"><code>switch</code> 文の中のブロックスコープの変数</h3>
+### `switch` 文の中のブロックスコープの変数
 
-<p>ECMAScript 2015 (ES6) に対応している最近のブラウザーでは、 {{jsxref("Statements/let", "let")}} および {{jsxref("Statements/const", "const")}} 文を使用してブロックスコープを持つ変数を宣言したい場合があるでしょう。</p>
+ECMAScript 2015 (ES6) に対応している最近のブラウザーでは、 {{jsxref("Statements/let", "let")}} および {{jsxref("Statements/const", "const")}} 文を使用してブロックスコープを持つ変数を宣言したい場合があるでしょう。
 
-<p>この例を見てみてください。</p>
+この例を見てみてください。
 
-<pre class="brush: js">const action = 'say_hello';
+```js
+const action = 'say_hello';
 switch (action) {
   case 'say_hello':
     let message = 'hello';
@@ -240,55 +218,47 @@ switch (action) {
   default:
     console.log('Empty action received.');
     break;
-}</pre>
+}
+```
 
-<p>この例では、おそらく予想していなかった <code>Uncaught SyntaxError: Identifier 'message' has already been declared</code> エラーを出力します。</p>
+この例では、おそらく予想していなかった `Uncaught SyntaxError: Identifier 'message' has already been declared` エラーを出力します。
 
-<p>これは、最初の <code>let message = 'hello';</code> と次の let 文 <code>let message = 'hi';</code> が競合しているためで、それぞれ別々な case 節である <code>case 'say_hello':</code> と <code>case 'say_hi':</code> に含まれていても発生します。つまるところ、これは両方の <code>let</code> 文が同じブロックスコープ内で同じ変数名の宣言を重複して行ったと解釈されます。</p>
+これは、最初の `let message = 'hello';` と次の let 文 `let message = 'hi';` が競合しているためで、それぞれ別々な case 節である `case 'say_hello':` と `case 'say_hi':` に含まれていても発生します。つまるところ、これは両方の `let` 文が同じブロックスコープ内で同じ変数名の宣言を重複して行ったと解釈されます。
 
-<p>これは、 <code>case</code> 節を中括弧で囲むことで簡単に修正することができます。</p>
+これは、 `case` 節を中括弧で囲むことで簡単に修正することができます。
 
-<pre class="brush: js">const action = 'say_hello';
+```js
+const action = 'say_hello';
 switch (action) {
-  case 'say_hello': <strong>{ // 中括弧を追加</strong>
+  case 'say_hello': { // 中括弧を追加
     let message = 'hello';
     console.log(message);
     break;
-  <strong>} // 中括弧を追加</strong>
-  case 'say_hi': <strong>{ // 中括弧を追加</strong>
+  } // 中括弧を追加
+  case 'say_hi': { // 中括弧を追加
     let message = 'hi';
     console.log(message);
     break;
-  <strong>} // 中括弧を追加</strong>
-  default: <strong>{ // 中括弧を追加</strong>
+  } // 中括弧を追加
+  default: { // 中括弧を追加
     console.log('Empty action received.');
     break;
-  <strong>} // 中括弧を追加</strong>
-}</pre>
+  } // 中括弧を追加
+}
+```
 
-<p>このコードは仕様通り <code>hello</code> をコンソールに出力し、エラーは全く発生しません。</p>
+このコードは仕様通り `hello` をコンソールに出力し、エラーは全く発生しません。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.switch")}}</p>
+{{Compat("javascript.statements.switch")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Statements/if...else", "if...else")}}</li>
-</ul>
+- {{jsxref("Statements/if...else", "if...else")}}

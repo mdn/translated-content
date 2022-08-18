@@ -8,73 +8,67 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>ArrayBuffer()</code></strong> コンストラクターは {{jsxref("ArrayBuffer")}} オブジェクトを生成するために使用されます。</p>
+**`ArrayBuffer()`** コンストラクターは {{jsxref("ArrayBuffer")}} オブジェクトを生成するために使用されます。
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+new ArrayBuffer(length)
+```
 
-<pre class="syntaxbox notranslate">new ArrayBuffer(<var>length</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `length`
+  - : 作成する配列バッファーのサイズをバイト単位で指定します。
 
-<dl>
- <dt><code><var>length</var></code></dt>
- <dd>作成する配列バッファーのサイズをバイト単位で指定します。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+指定されたサイズの新しい `ArrayBuffer` オブジェクト。その内容は 0 に初期化されます。
 
-<p>指定されたサイズの新しい <code>ArrayBuffer</code> オブジェクト。その内容は 0 に初期化されます。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+{{jsxref("RangeError")}}: `length` が {{jsxref("Number.MAX_SAFE_INTEGER")}} よりも大きい (>= 2 \*\* 53) か、負の値であった場合。
 
-<p>{{jsxref("RangeError")}}: <code>length</code> が {{jsxref("Number.MAX_SAFE_INTEGER")}} よりも大きい (&gt;= 2 ** 53) か、負の値であった場合。</p>
+## 互換性の注意
 
-<h2 id="Compatibility_notes" name="Compatibility_notes">互換性の注意</h2>
+ECMAScript 2015 から、`ArrayBuffer` のコンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `new` を指定せずに関数として `ArrayBuffer` コンストラクターを呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
 
-<p>ECMAScript 2015 から、<code>ArrayBuffer</code> のコンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 <code>new</code> を指定せずに関数として <code>ArrayBuffer</code> コンストラクターを呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。</p>
-
-<pre class="brush: js example-bad notranslate">var dv = ArrayBuffer(10);
+```js example-bad
+var dv = ArrayBuffer(10);
 // TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good notranslate">var dv = new ArrayBuffer(10);</pre>
+```js example-good
+var dv = new ArrayBuffer(10);
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Creating_an_ArrayBuffer" name="Creating_an_ArrayBuffer">ArrayBuffer の作成</h3>
+### ArrayBuffer の作成
 
-<p>この例では、バッファーを参照する {{jsxref("Global_Objects/Int32Array", "Int32Array")}} ビューを持つ 8 バイトのバッファーを作成しています。</p>
+この例では、バッファーを参照する {{jsxref("Global_Objects/Int32Array", "Int32Array")}} ビューを持つ 8 バイトのバッファーを作成しています。
 
-<pre class="brush: js notranslate">var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);</pre>
+```js
+var buffer = new ArrayBuffer(8);
+var view   = new Int32Array(buffer);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.ArrayBuffer")}}</p>
+{{Compat("javascript.builtins.ArrayBuffer.ArrayBuffer")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Typed_arrays">JavaScript 型付き配列</a></li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("SharedArrayBuffer")}}

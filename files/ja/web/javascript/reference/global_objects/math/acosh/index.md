@@ -8,82 +8,71 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.acosh()</code></strong> 関数は、数値の双曲線余弦 (ハイパーボリックアークコサイン) を返します。</p>
+**`Math.acosh()`** 関数は、数値の双曲線余弦 (ハイパーボリックアークコサイン) を返します。
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-acosh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-acosh.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.acosh(x)
+```
 
-<pre class="syntaxbox notranslate">Math.acosh(<var>x</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x`
+  - : 数値。
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>数値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた数値の双曲線余弦 (ハイパーボリックアークコサイン) です。数値が **1** 未満であれば、 {{jsxref("NaN")}} になります。
 
-<p>与えられた数値の双曲線余弦 (ハイパーボリックアークコサイン) です。数値が <strong>1</strong> 未満であれば、 {{jsxref("NaN")}} になります。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`acosh()` は `Math` の静的メソッドであるため、作成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.acosh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<p><code>acosh()</code> は <code>Math</code> の静的メソッドであるため、作成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に <code>Math.acosh()</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.acosh() の使用
 
-<h3 id="Using_Math.acosh" name="Using_Math.acosh">Math.acosh() の使用</h3>
-
-<pre class="brush: js notranslate">Math.acosh(-1);  // NaN
+```js
+Math.acosh(-1);  // NaN
 Math.acosh(0);   // NaN
 Math.acosh(0.5); // NaN
 Math.acosh(1);   // 0
 Math.acosh(2);   // 1.3169578969248166
-</pre>
+```
 
-<p>1 未満の値に対しては、 <code>Math.acosh()</code> は {{jsxref("NaN")}} を返します。</p>
+1 未満の値に対しては、 `Math.acosh()` は {{jsxref("NaN")}} を返します。
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p><math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>に対して、<math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math> になり、次の関数でエミュレートできます。</p>
+<math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>に対して、<math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math> になり、次の関数でエミュレートできます。
 
-<pre class="brush: js notranslate">Math.acosh = Math.acosh || function(x) {
+```js
+Math.acosh = Math.acosh || function(x) {
   return Math.log(x + Math.sqrt(x * x - 1));
 };
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.acosh")}}</p>
+{{Compat("javascript.builtins.Math.acosh")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

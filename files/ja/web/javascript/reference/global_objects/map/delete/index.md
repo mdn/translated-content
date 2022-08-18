@@ -10,64 +10,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>delete()</code></strong> メソッドは <code>Map</code> オブジェクトから特定の要素を削除します。</p>
+**`delete()`** メソッドは `Map` オブジェクトから特定の要素を削除します。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+myMap.delete(key);
+```
 
-<pre class="syntaxbox notranslate"><var>myMap</var>.delete(<var>key</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `key`
+  - : `Map` オブジェクトから削除する要素のキーです。
 
-<dl>
- <dt><code><var>key</var></code></dt>
- <dd><code>Map</code> オブジェクトから削除する要素のキーです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`Map` オブジェクトの要素が削除されたら `true` を、要素が存在しなければ `false` を返します。
 
-<p><code>Map</code> オブジェクトの要素が削除されたら <code>true</code> を、要素が存在しなければ <code>false</code> を返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### delete() メソッドの使用
 
-<h3 id="Using_delete" name="Using_delete">delete() メソッドの使用</h3>
-
-<pre class="brush: js notranslate">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set('bar', 'foo');
 
 myMap.delete('bar'); // 正常に削除出来れば true を返す
 myMap.has('bar');    // 存在しない要素を確認すると false を返す
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} |
+| {{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Map.delete")}}</p>
+{{Compat("javascript.builtins.Map.delete")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Map")}}</li>
-</ul>
+- {{jsxref("Map")}}

@@ -2,47 +2,49 @@
 title: 'RangeError: repeat count must be non-negative'
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
 tags:
-- Error
-- Errors
-- JavaScript
-- RangeError
+  - Error
+  - Errors
+  - JavaScript
+  - RangeError
 translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の例外 "repeat count must be non-negative" は、 {{jsxref("String.prototype.repeat()")}} メソッドに <code>count</code> 引数が指定され、その値が負の数であった場合に発生します。</p>
+JavaScript の例外 "repeat count must be non-negative" は、 {{jsxref("String.prototype.repeat()")}} メソッドに `count` 引数が指定され、その値が負の数であった場合に発生します。
 
-<h2 id="Message">メッセージ</h2>
+## メッセージ
 
-<pre class="brush: js">RangeError: argument out of range
+```js
+RangeError: argument out of range
 RangeError: repeat count must be non-negative (Firefox)
 RangeError: Invalid count value (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">エラータイプ</h2>
+## エラータイプ
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="What_went_wrong">エラーの原因</h2>
+## エラーの原因
 
-<p>{{jsxref("String.prototype.repeat()")}} メソッドを使用しています。 <code>count</code> 引数は、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxref("Infinity")}} 未満の値である必要があり、負の数は使用できません。 有効値の範囲は [0, +∞) のように説明できます。</p>
+{{jsxref("String.prototype.repeat()")}} メソッドを使用しています。 `count` 引数は、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxref("Infinity")}} 未満の値である必要があり、負の数は使用できません。 有効値の範囲は \[0, +∞) のように説明できます。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Invalid_cases">無効なケース</h3>
+### 無効なケース
 
-<pre class="brush: js example-bad">'abc'.repeat(-1); // RangeError </pre>
+```js example-bad
+'abc'.repeat(-1); // RangeError
+```
 
-<h3 id="Valid_cases">有効な場合</h3>
+### 有効な場合
 
-<pre class="brush: js example-good">'abc'.repeat(0);    // ''
+```js example-good
+'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'
 'abc'.repeat(2);    // 'abcabc'
 'abc'.repeat(3.5);  // 'abcabcabc' (count は整数に変換されます)
-</pre>
+```
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{jsxref("String.prototype.repeat()")}}</li>
-</ul>
+- {{jsxref("String.prototype.repeat()")}}

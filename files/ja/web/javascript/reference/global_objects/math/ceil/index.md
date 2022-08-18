@@ -8,52 +8,52 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.ceil()</code></strong> 関数は、引数として与えた数以上の最小の整数を返します。</p>
+**`Math.ceil()`** 関数は、引数として与えた数以上の最小の整数を返します。
 
-<p><strong>注: </strong><code>Math.ceil({{jsxref("null")}})</code> は整数の 0 を返し、 {{jsxref("NaN")}} エラーは返しません。</p>
+**注:** `Math.ceil({{jsxref("null")}})` は整数の 0 を返し、 {{jsxref("NaN")}} エラーは返しません。
 
-<div>{{EmbedInteractiveExample("pages/js/math-ceil.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.ceil(x)
+```
 
-<pre class="syntaxbox"><code>Math.ceil(<var>x</var>)</code></pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x`
+  - : 数値。
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>数値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+引数として与えた数以上の最小の整数を返します。
 
-<p>引数として与えた数以上の最小の整数を返します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`ceil()` は `Math` オブジェクトの静的メソッドなので、 `Math` オブジェクトを生成してメソッドとして使用するのではなく、常に `Math.ceil()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<p><code>ceil()</code> は <code>Math</code> オブジェクトの静的メソッドなので、 <code>Math</code> オブジェクトを生成してメソッドとして使用するのではなく、常に <code>Math.ceil()</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.ceil() の使用
 
-<h3 id="Using_Math.ceil" name="Using_Math.ceil">Math.ceil() の使用</h3>
+以下の例は、`Math.ceil()` を使用した例です。
 
-<p>以下の例は、<code>Math.ceil()</code> を使用した例です。</p>
-
-<pre class="brush: js">Math.ceil(.95);    // 1
+```js
+Math.ceil(.95);    // 1
 Math.ceil(4);      // 4
 Math.ceil(7.004);  // 8
 Math.ceil(-0.95);  // -0
 Math.ceil(-4);     // -4
 Math.ceil(-7.004); // -7
-</pre>
+```
 
-<h3 id="Decimal_adjustment" name="Decimal_adjustment">10進補正 (Decimal adjustment)</h3>
+### 10 進補正 (Decimal adjustment)
 
-<pre class="brush: js">// Closure
+```js
+// Closure
 (function() {
   /**
    * Decimal adjustment of a number.
@@ -71,7 +71,7 @@ Math.ceil(-7.004); // -7
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -121,33 +121,22 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.ceil', 'Math.ceil')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   |
+| ------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-math.ceil', 'Math.ceil')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.ceil")}}</p>
+{{Compat("javascript.builtins.Math.ceil")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

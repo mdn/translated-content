@@ -13,76 +13,70 @@ tags:
   - 配列
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>filter()</code></strong> メソッドは、与えられた関数によって実装されたテストに合格したすべての配列からなる<strong>新しい配列を生成</strong>します。</p>
+**`filter()`** メソッドは、与えられた関数によって実装されたテストに合格したすべての配列からなる**新しい配列を生成**します。
 
-<div>{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+let newArray = arr.filter(callback(element[, index, [array]])[, thisArg])
+```
 
-<pre class="brush: js notranslate">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>element</var>[, <var>index</var>, [<var>array</var>]])[, <var>thisArg</var>])
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `callback`
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>
- <p>配列の各要素に対して実行するテスト関数です。この関数が <code>true</code> を返した要素は残され、<code>false</code> を返した要素は取り除かれます。</p>
+  - : 配列の各要素に対して実行するテスト関数です。この関数が `true` を返した要素は残され、`false` を返した要素は取り除かれます。
 
- <p>この関数は３つの引数を受け付けます。</p>
+    この関数は３つの引数を受け付けます。
 
- <dl>
-  <dt><code><var>element</var></code></dt>
-  <dd>配列内で処理中の現在の要素です。</dd>
-  <dt><code><var>index</var></code>{{optional_inline}}</dt>
-  <dd>配列内で処理中の現在の要素の位置です。</dd>
-  <dt><code><var>array</var></code>{{optional_inline}}</dt>
-  <dd><code>filter</code> メソッドが実行されている配列です。</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code>{{optional_inline}}</dt>
- <dd><code><var>callback</var></code> を実行するときに <code>this</code> として使用する値です。</dd>
-</dl>
+    - `element`
+      - : 配列内で処理中の現在の要素です。
+    - `index`{{optional_inline}}
+      - : 配列内で処理中の現在の要素の位置です。
+    - `array`{{optional_inline}}
+      - : `filter` メソッドが実行されている配列です。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+- `thisArg`{{optional_inline}}
+  - : `callback` を実行するときに `this` として使用する値です。
 
-<p>テストに合格した要素からなる新しい配列です。テストに合格した要素がなかった場合は、空の配列が返されます。</p>
+### 返値
 
-<h2 id="Description" name="Description">解説</h2>
+テストに合格した要素からなる新しい配列です。テストに合格した要素がなかった場合は、空の配列が返されます。
 
-<p><code>filter()</code> は、与えられた <code><var>callback</var></code> 関数を配列の各要素に対して一度ずつ呼び出し、<code><var>callback</var></code> が <a href="/ja/docs/Glossary/Truthy"><code>true</code> と評価される値</a>を返したすべての要素からなる新しい配列を生成します。<code><var>callback</var></code> は値が代入されている配列の添字に対してのみ呼び出されます。つまり、すでに削除された添字や、まだ値が代入されていない添字に対しては呼び出されません。<code><var>callback</var></code> によるテストに合格しなかった配列要素は単純にスキップされ、新しい配列には含まれないだけです。</p>
+## 解説
 
-<p><code><var>callback</var></code> は 3 つの引数と共に呼び出されます。</p>
+`filter()` は、与えられた `callback` 関数を配列の各要素に対して一度ずつ呼び出し、`callback` が [`true` と評価される値](/ja/docs/Glossary/Truthy)を返したすべての要素からなる新しい配列を生成します。`callback` は値が代入されている配列の添字に対してのみ呼び出されます。つまり、すでに削除された添字や、まだ値が代入されていない添字に対しては呼び出されません。`callback` によるテストに合格しなかった配列要素は単純にスキップされ、新しい配列には含まれないだけです。
 
-<ol>
- <li>要素の値</li>
- <li>要素の添字</li>
- <li>走査されている配列オブジェクト</li>
-</ol>
+`callback` は 3 つの引数と共に呼び出されます。
 
-<p><code>filter</code> に引数 <code><var>thisArg</var></code> が与えられた場合、そのオブジェクトは <code><var>callback</var></code> 関数内の <code>this</code> 値として使われます。そうでない場合、 <code>undefined</code> が <code>this</code> 値として使われます。<code><var>callback</var></code> 関数内の最終的な <code>this</code> 値は<a href="/ja/docs/Web/JavaScript/Reference/Operators/this">関数内の <code>this</code> を決定する一般的ルール</a>に従って決められます。</p>
+1.  要素の値
+2.  要素の添字
+3.  走査されている配列オブジェクト
 
-<p><code>filter()</code> は呼び出された配列を変化させません。</p>
+`filter` に引数 `thisArg` が与えられた場合、そのオブジェクトは `callback` 関数内の `this` 値として使われます。そうでない場合、 `undefined` が `this` 値として使われます。`callback` 関数内の最終的な `this` 値は[関数内の `this` を決定する一般的ルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に従って決められます。
 
-<p><code>filter()</code> によって処理される配列要素の範囲は、<code><var>callback</var></code> が最初に呼び出される前に設定されます。<code>filter()</code> の呼び出しが開始された後に (<code><var>callback</var></code> から) 追加された配列要素に対しては、<code><var>callback</var></code> は実行されません。既存の配列要素が削除された場合は、同様にそれらの要素は処理されません。</p>
+`filter()` は呼び出された配列を変化させません。
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+`filter()` によって処理される配列要素の範囲は、`callback` が最初に呼び出される前に設定されます。`filter()` の呼び出しが開始された後に (`callback` から) 追加された配列要素に対しては、`callback` は実行されません。既存の配列要素が削除された場合は、同様にそれらの要素は処理されません。
 
-<p><code>filter()</code> は ECMA-262 標準の第5版で追加されました。したがって、この標準のすべての実装に存在するとは限りません。</p>
+## ポリフィル
 
-<p>回避策として、スクリプトの最初に以下のコードを挿入して、ネイティブに対応していない ECMA-262 の実装で filter() を使用できるようにすることができます。このアルゴリズムは ECMA-262 第5版で指定されているものと完全に等価で、 <code>fn.call</code> が {{jsxref("Function.prototype.bind()")}} の元の値を評価し、 {{jsxref("Array.prototype.push()")}} が元の値を持つことを仮定しています。</p>
+`filter()` は ECMA-262 標準の第 5 版で追加されました。したがって、この標準のすべての実装に存在するとは限りません。
 
-<pre class="brush: js notranslate">if (!Array.prototype.filter){
+回避策として、スクリプトの最初に以下のコードを挿入して、ネイティブに対応していない ECMA-262 の実装で filter() を使用できるようにすることができます。このアルゴリズムは ECMA-262 第 5 版で指定されているものと完全に等価で、 `fn.call` が {{jsxref("Function.prototype.bind()")}} の元の値を評価し、 {{jsxref("Array.prototype.push()")}} が元の値を持つことを仮定しています。
+
+```js
+if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') &amp;&amp; this) )
+    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
         throw new TypeError();
 
-    var len = this.length &gt;&gt;&gt; 0,
+    var len = this.length >>> 0,
         res = new Array(len), // preallocate array
         t = this, c = 0, i = -1;
 
@@ -113,44 +107,49 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
     res.length = c; // shrink down array to proper size
     return res;
   };
-}</pre>
+}
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Filtering_out_all_small_values" name="Filtering_out_all_small_values">小さい値をすべて取り除く</h3>
+### 小さい値をすべて取り除く
 
-<p>次の例では、<code>filter()</code> を使って <code>10</code> 未満の値を持つ要素をすべて取り除いた配列を生成します。</p>
+次の例では、`filter()` を使って `10` 未満の値を持つ要素をすべて取り除いた配列を生成します。
 
-<pre class="brush: js notranslate">function isBigEnough(value) {
-  return value &gt;= 10
+```js
+function isBigEnough(value) {
+  return value >= 10
 }
 
 let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
 // filtered は [12, 130, 44]
-</pre>
+```
 
-<h3 id="Find_all_prime_numbers_in_an_array" name="Find_all_prime_numbers_in_an_array">配列内の素数をすべて検索する</h3>
+### 配列内の素数をすべて検索する
 
-<p>以下の例は配列内のすべての素数を返します。</p>
+以下の例は配列内のすべての素数を返します。
 
-<pre class="notranslate"><code>const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+```
+const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function isPrime(num) {
-  for (let i = 2; num &gt; i; i++) {
+  for (let i = 2; num > i; i++) {
     if (num % i == 0) {
       return false;
     }
   }
-  return num &gt; 1;
+  return num > 1;
 }
 
-console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]</code></pre>
+console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
+```
 
-<h3 id="Filtering_invalid_entries_from_JSON" name="Filtering_invalid_entries_from_JSON">JSON の不正な内容を取り除く</h3>
+### JSON の不正な内容を取り除く
 
-<p>次の例では、<code>filter()</code> を使って <code>id</code> の数値が 0 以外の要素だけに絞った JSON を生成します。</p>
+次の例では、`filter()` を使って `id` の数値が 0 以外の要素だけに絞った JSON を生成します。
 
-<pre class="brush: js notranslate">let arr = [
+```js
+let arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -165,7 +164,7 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]</code></pre>
 let invalidEntries = 0
 
 function filterByID(item) {
-  if (Number.isFinite(item.id) &amp;&amp; item.id !== 0) {
+  if (Number.isFinite(item.id) && item.id !== 0) {
     return true
   }
   invalidEntries++
@@ -180,13 +179,14 @@ console.log('Filtered Array\n', arrByID)
 
 console.log('Number of Invalid Entries = ', invalidEntries)
 // Number of Invalid Entries = 5
-</pre>
+```
 
-<h3 id="Searching_in_array" name="Searching_in_array">配列内の検索</h3>
+### 配列内の検索
 
-<p>次の例では <code>filter()</code> を使って検索条件で配列の絞り込みをしています。</p>
+次の例では `filter()` を使って検索条件で配列の絞り込みをしています。
 
-<pre class="brush: js notranslate">let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+```js
+let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
 
 /**
  * Filter array items based on search criteria (query)
@@ -198,34 +198,36 @@ function filterItems(arr, query) {
 }
 
 console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']</pre>
+console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
+```
 
-<h4 id="ES2015_Implementation" name="ES2015_Implementation">ES2015 版の実装</h4>
+#### ES2015 版の実装
 
-<pre class="brush: js notranslate">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+```js
+const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
 
 /**
  * Filter array items based on search criteria (query)
  */
-const filterItems = (arr, query) =&gt; {
-  return arr.filter(el =&gt; el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+const filterItems = (arr, query) => {
+  return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
 }
 
 console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
 console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
+```
 
-</pre>
+### 初期の配列への影響 (変更、追加、削除)
 
-<h3 id="初期の配列への影響_変更、追加、削除">初期の配列への影響 (変更、追加、削除)</h3>
+以下の例は、配列が変更された時の `filter` の動作をテストするものです。
 
-<p>以下の例は、配列が変更された時の <code>filter</code> の動作をテストするものです。</p>
-
-<pre class="brush: js notranslate">// Modifying each words
+```js
+// Modifying each words
 let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
 
-const modifiedWords = words.filter( (word, index, arr) =&gt; {
+const modifiedWords = words.filter( (word, index, arr) => {
   arr[index+1] +=' extra'
-  return word.length &lt; 6
+  return word.length < 6
 })
 
 console.log(modifiedWords)
@@ -234,9 +236,9 @@ console.log(modifiedWords)
 
 // Appending new words
 words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
-const appendedWords = words.filter( (word, index, arr) =&gt; {
+const appendedWords = words.filter( (word, index, arr) => {
   arr.push('new')
-  return word.length &lt; 6
+  return word.length < 6
 })
 
 console.log(appendedWords)
@@ -245,41 +247,29 @@ console.log(appendedWords)
 
 // Deleting words
 words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const deleteWords = words.filter( (word, index, arr) =&gt; {
+const deleteWords = words.filter( (word, index, arr) => {
   arr.pop()
-  return word.length &lt; 6
+  return word.length < 6
 })
 
 console.log(deleteWords)
 // Notice 'elite' is not even obtained as its been popped off `words` before filter can even get there
-// ["spray" ,"limit"]</pre>
+// ["spray" ,"limit"]
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Array.filter")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.filter")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.reduce()")}}

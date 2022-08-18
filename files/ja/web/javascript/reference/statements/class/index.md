@@ -11,39 +11,38 @@ tags:
   - 宣言
 translation_of: Web/JavaScript/Reference/Statements/class
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>クラス宣言</strong>は、プロトタイプベースの継承を使って、指定された名前の新しいクラスを作成します。</p>
+**クラス宣言**は、プロトタイプベースの継承を使って、指定された名前の新しいクラスを作成します。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-class.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{jsxref("Operators/class", "クラス式", "", 1)}}を使ってクラスを定義することもできます。しかし、クラス式と異なり、クラス宣言は既存のクラスを再宣言することができず、再宣言しようとすると {{jsxref("SyntaxError")}} が発生します。
 
-<div class="noinclude">
-<p>{{jsxref("Operators/class", "クラス式", "", 1)}}を使ってクラスを定義することもできます。しかし、クラス式と異なり、クラス宣言は既存のクラスを再宣言することができず、再宣言しようとすると {{jsxref("SyntaxError")}} が発生します。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox">class <var>name</var> [extends <var>otherName</var>] {
+```
+class name [extends otherName] {
   // クラス本体
-}</pre>
+}
+```
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>クラス式と同様、クラス宣言の内部は<a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">厳格モード</a>で実行されます。 <code>constructor</code> メソッドは省略可能です。</p>
+クラス式と同様、クラス宣言の内部は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で実行されます。 `constructor` メソッドは省略可能です。
 
-<p>クラス宣言は{{Glossary("Hoisting", "巻き上げ")}}が行われません (<a href="/ja/docs/Web/JavaScript/Reference/Statements/function">関数宣言</a>とは異なります)。</p>
+クラス宣言は{{Glossary("Hoisting", "巻き上げ")}}が行われません ([関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とは異なります)。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="A_simple_class_declaration" name="A_simple_class_declaration">単純なクラス宣言</h3>
+### 単純なクラス宣言
 
-<p>次の例では、はじめに <code>Polygon</code> という名前のクラスを定義し、次にそれを拡張して <code>Square</code> という名前のクラスを作成します。</p>
+次の例では、はじめに `Polygon` という名前のクラスを定義し、次にそれを拡張して `Square` という名前のクラスを作成します。
 
-<p>なお、コンストラクターで使われている <code>super()</code> は、コンストラクター内でのみ使えること、 <code>this</code> キーワードの使用<em>前</em>に呼び出さなくてはならないことに注意してください。</p>
+なお、コンストラクターで使われている `super()` は、コンストラクター内でのみ使えること、 `this` キーワードの使用*前*に呼び出さなくてはならないことに注意してください。
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';
     this.height = height;
@@ -56,45 +55,37 @@ class Square extends Polygon {
     super(length, length);
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<h3 id="Attempting_to_declare_a_class_twice" name="Attempting_to_declare_a_class_twice">クラスを二度宣言する</h3>
+### クラスを二度宣言する
 
-<p>クラス宣言を使って再度クラスを宣言すると、 {{jsxref("SyntaxError")}} が発生します。</p>
+クラス宣言を使って再度クラスを宣言すると、 {{jsxref("SyntaxError")}} が発生します。
 
-<pre class="brush: js example-bad">class Foo {};
+```js example-bad
+class Foo {};
 class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-</pre>
+```
 
-<p>クラス式を使って事前にクラスを定義していたときも、同じエラーが発生します。</p>
+クラス式を使って事前にクラスを定義していたときも、同じエラーが発生します。
 
-<pre class="brush: js example-bad">let Foo = class {};
+```js example-bad
+let Foo = class {};
 class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.class")}}</p>
+{{Compat("javascript.statements.class")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/function"><code>function</code> 宣言</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> 式</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Classes">クラス</a></li>
-</ul>
+- [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` 式](/ja/docs/Web/JavaScript/Reference/Operators/class)
+- [クラス](/ja/docs/Web/JavaScript/Reference/Classes)

@@ -12,85 +12,83 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
-<div>{{JSSidebar("Statements")}}</div>
+{{JSSidebar("Statements")}}
 
-<p><strong><code>import.meta</code></strong> オブジェクトはコンテキスト固有のメタデータを JavaScript のモジュールに公開します。これには、モジュールの URL のようなモジュールに関する情報が含まれています。</p>
+**`import.meta`** オブジェクトはコンテキスト固有のメタデータを JavaScript のモジュールに公開します。これには、モジュールの URL のようなモジュールに関する情報が含まれています。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">import.meta</pre>
+```
+import.meta
+```
 
-<h2 id="Description" name="Description">説明</h2>
+## 説明
 
-<p>構文は、<code>import</code> キーワードとドット、プロパティ名の <code>meta</code> で構成されています。通常、ドットの左側はプロパティアクセスが実行されるオブジェクトですが、ここでの <code>import</code> はオブジェクトではありません。</p>
+構文は、`import` キーワードとドット、プロパティ名の `meta` で構成されています。通常、ドットの左側はプロパティアクセスが実行されるオブジェクトですが、ここでの `import` はオブジェクトではありません。
 
-<p><code>import.meta</code> オブジェクトは ECMAScript 実装によって生成され、プロトタイプは {{jsxref("null")}} です。オブジェクトは拡張でき、そのプロパティは書き込み、構成、列挙可能です。</p>
+`import.meta` オブジェクトは ECMAScript 実装によって生成され、プロトタイプは {{jsxref("null")}} です。オブジェクトは拡張でき、そのプロパティは書き込み、構成、列挙可能です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_import.meta" name="Using_import.meta">import.meta を使用する</h3>
+### import.meta を使用する
 
-<p><code>my-module.mjs</code> モジュールを指定します。</p>
+`my-module.mjs` モジュールを指定します。
 
-<pre class="brush: html notranslate">&lt;script type="module" src="my-module.js"&gt;&lt;/script&gt;
-</pre>
+```html
+<script type="module" src="my-module.js"></script>
+```
 
-<p><code>import.meta</code> オブジェクトを使用してモジュールのメタ情報にアクセスできます。</p>
+`import.meta` オブジェクトを使用してモジュールのメタ情報にアクセスできます。
 
-<pre class="brush: js; notranslate">console.log(import.meta); // { url: "file:///home/user/my-module.js" }</pre>
+```js
+console.log(import.meta); // { url: "file:///home/user/my-module.js" }
+```
 
-<p>モジュールのベース URL を示す <code>url</code> プロパティを持つオブジェクトを返します。これは、外部スクリプトの場合はスクリプトを取得した URL、インラインスクリプトの場合はそれを含むドキュメントのベース URL です。</p>
+モジュールのベース URL を示す `url` プロパティを持つオブジェクトを返します。これは、外部スクリプトの場合はスクリプトを取得した URL、インラインスクリプトの場合はそれを含むドキュメントのベース URL です。
 
-<p>これには、クエリパラメータまたはハッシュ（つまり、<code>?</code> または <code>#</code>）が含まれることに注意してください。</p>
+これには、クエリパラメータまたはハッシュ（つまり、`?` または `#`）が含まれることに注意してください。
 
-<p>例えば、以下のような HTML で</p>
+例えば、以下のような HTML で
 
-<pre class="brush: html notranslate">&lt;script type="module"&gt;
+```html
+<script type="module">
 import './index.mjs?someURLInfo=5';
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>以下の JavaScript ファイルは、<code>someURLInfo</code> パラメータをログに記録します。</p>
+以下の JavaScript ファイルは、`someURLInfo` パラメータをログに記録します。
 
-<pre class="brush: js notranslate">// index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
+```js
+// index.mjs
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+```
 
-<p>ファイルが別のファイルをインポートする場合も同様です。</p>
+ファイルが別のファイルをインポートする場合も同様です。
 
-<pre class="brush: js notranslate">// index.mjs
+```js
+// index.mjs
 import './index2.mjs?someURLInfo=5';
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+```
 
-<p>メモ: 後者の例のように Node.js はクエリパラメータ（またはハッシュ）を渡しますが、Node 14.1.0 以降、クエリパラメータを持つ URL を <code>node --experimental-modules index.mjs?someURLInfo=5</code> という形式で読み込むとエラーになることに注意してください（この文脈では URL ではなくファイルとして扱われます）。</p>
+メモ: 後者の例のように Node.js はクエリパラメータ（またはハッシュ）を渡しますが、Node 14.1.0 以降、クエリパラメータを持つ URL を `node --experimental-modules index.mjs?someURLInfo=5` という形式で読み込むとエラーになることに注意してください（この文脈では URL ではなくファイルとして扱われます）。
 
-<p>このようなファイル固有の引数の受け渡しは、アプリケーション全体の <code>location.href</code>（HTML ファイルパスの後にクエリ文字列やハッシュを追加したもの [Node.js では <code>process.argv</code> を介して]）で使用されているものを補完する場合があります。</p>
+このようなファイル固有の引数の受け渡しは、アプリケーション全体の `location.href`（HTML ファイルパスの後にクエリ文字列やハッシュを追加したもの \[Node.js では `process.argv` を介して]）で使用されているものを補完する場合があります。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td><code><a href="https://tc39.es/proposal-import-meta/#prod-ImportMeta">import.meta</a></code> proposal</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta) proposal                                          |
+| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("javascript.statements.import_meta")}}
 
+## 関連情報
 
-<p>{{Compat("javascript.statements.import_meta")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{JSxRef("Statements/import", "import")}}</li>
- <li>{{JSxRef("Statements/export", "export")}}</li>
-</ul>
+- {{JSxRef("Statements/import", "import")}}
+- {{JSxRef("Statements/export", "export")}}

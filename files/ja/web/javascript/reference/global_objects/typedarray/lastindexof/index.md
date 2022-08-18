@@ -11,70 +11,58 @@ tags:
   - 型付き配列
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>lastIndexOf()</strong></code> メソッドは、指定された要素が型付き配列内で見つかった最後の位置の添字を返し、存在しなければ -1 を返します。型付き配列は <code><var>fromIndex</var></code> で始まる位置から逆方向に検索されます。 このメソッドは {{jsxref("Array.prototype.lastIndexOf()")}}と同じアルゴリズムです。 <em>TypedArray</em> は、ここでは<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの一つです。</p>
+**`lastIndexOf()`** メソッドは、指定された要素が型付き配列内で見つかった最後の位置の添字を返し、存在しなければ -1 を返します。型付き配列は `fromIndex` で始まる位置から逆方向に検索されます。 このメソッドは {{jsxref("Array.prototype.lastIndexOf()")}}と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-lastindexof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-lastindexof.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.lastIndexOf(searchElement[, fromIndex = typedarray.length])
+```
 
-<pre class="syntaxbox"><var>typedarray</var>.lastIndexOf(<var>searchElement</var>[, <var>fromIndex</var> = typedarray.length])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `searchElement`
+  - : typed array 内で検索する要素。
+- `fromIndex`
+  - : オプション。逆方向に検索を開始する位置の添字。既定値は型付き配列の長さで、すなわち型付き配列全体が検索されます。添字が型付き配列の長さ以上の場合、型付き配列全体が検索されます。添字が負の数の場合、型付き配列の末尾からのオフセットとして扱われます。添字が負の数であっても、型付き配列は末尾から先頭に向けて検索されます。計算された添字が 0 未満になった場合は、 -1 が返され、すなわち型付き配列は検索されません。
 
-<dl>
- <dt><code><var>searchElement</var></code></dt>
- <dd>typed array内で検索する要素。</dd>
- <dt><code><var>fromIndex</var></code></dt>
- <dd>オプション。逆方向に検索を開始する位置の添字。既定値は型付き配列の長さで、すなわち型付き配列全体が検索されます。添字が型付き配列の長さ以上の場合、型付き配列全体が検索されます。添字が負の数の場合、型付き配列の末尾からのオフセットとして扱われます。添字が負の数であっても、型付き配列は末尾から先頭に向けて検索されます。計算された添字が0未満になった場合は、 -1 が返され、すなわち型付き配列は検索されません。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+配列内の要素の最後の添字です。見つからなかったら `-1` になります。
 
-<p>配列内の要素の最後の添字です。見つからなかったら <code>-1</code> になります。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`lastIndexOf` は `searchElement` と型付き配列の要素を、[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (===、イコール 3 つの演算子と同じ方法) を使用して比較します。
 
-<p><code>lastIndexOf</code> は <code><var>searchElement</var></code> と型付き配列の要素を、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">厳密等価</a> (===、イコール3つの演算子と同じ方法) を使用して比較します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### lastIndexOf の使用
 
-<h3 id="Using_lastIndexOf" name="Using_lastIndexOf">lastIndexOf の使用</h3>
-
-<pre class="brush: js">var uint8 = new Uint8Array([2, 5, 9, 2]);
+```js
+var uint8 = new Uint8Array([2, 5, 9, 2]);
 uint8.lastIndexOf(2);     // 3
 uint8.lastIndexOf(7);     // -1
 uint8.lastIndexOf(2, 3);  // 3
 uint8.lastIndexOf(2, 2);  // 0
 uint8.lastIndexOf(2, -2); // 0
 uint8.lastIndexOf(2, -1); // 3
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.TypedArray.lastIndexOf")}}</p>
+{{Compat("javascript.builtins.TypedArray.lastIndexOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
- <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}

@@ -8,31 +8,32 @@ tags:
   - Language feature
 translation_of: Web/JavaScript/Reference/Classes/extends
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p><strong><code>extends</code></strong> キーワードは<a href="/ja/docs/Web/JavaScript/Reference/Statements/class">クラス宣言</a>や<a href="/ja/docs/Web/JavaScript/Reference/Operators/class">クラス式</a>の中で、他のクラスの子であるクラスを生成するために使用します。</p>
+**`extends`** キーワードは[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)や[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)の中で、他のクラスの子であるクラスを生成するために使用します。
 
-<div>{{EmbedInteractiveExample("pages/js/classes-extends.html")}}</div>
+{{EmbedInteractiveExample("pages/js/classes-extends.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+class ChildClass extends ParentClass { ... }
+```
 
-<pre class="syntaxbox notranslate">class ChildClass extends ParentClass { ... }</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`extends` キーワードは、独自のクラスや組込みオブジェクトをサブクラス化するために使用することができます。
 
-<p><code>extends</code> キーワードは、独自のクラスや組込みオブジェクトをサブクラス化するために使用することができます。</p>
+拡張したものの `.prototype` は、{{jsxref("Object")}} か {{jsxref("null")}} である必要があります。
 
-<p>拡張したものの <code>.prototype</code> は、{{jsxref("Object")}} か {{jsxref("null")}} である必要があります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### extends の使用
 
-<h3 id="Using_extends" name="Using_extends">extends の使用</h3>
+最初の例では、 `Square` と呼ばれるクラスを `Polygon` と呼ばれるクラスから作成します。この例は、[ライブデモ](https://googlechrome.github.io/samples/classes-es6/index.html) [(ソース)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) から転載しています。
 
-<p>最初の例では、 <code>Square</code> と呼ばれるクラスを <code>Polygon</code> と呼ばれるクラスから作成します。この例は、<a href="https://googlechrome.github.io/samples/classes-es6/index.html">ライブデモ</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(ソース)</a> から転載しています。</p>
-
-<pre class="brush: js notranslate">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // ここでは、親クラスのコンストラクターを呼び出し、
     // Polygon の幅と高さの寸法を渡します。
@@ -45,45 +46,36 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   get area() {
     return this.height * this.width;
   }
-}</pre>
+}
+```
 
-<h3 id="Using_extends_with_built-in_objects" name="Using_extends_with_built-in_objects">組込みオブジェクトでの extends の使用</h3>
+### 組込みオブジェクトでの extends の使用
 
-<p>この例では、組込みの {{jsxref("Date")}} オブジェクトを拡張します。この例は、<a href="https://googlechrome.github.io/samples/classes-es6/index.html">ライブデモ</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(ソース)</a> から転載しています。</p>
+この例では、組込みの {{jsxref("Date")}} オブジェクトを拡張します。この例は、[ライブデモ](https://googlechrome.github.io/samples/classes-es6/index.html) [(ソース)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) から転載しています。
 
-<pre class="brush: js notranslate">class myDate extends Date {
+```js
+class myDate extends Date {
 
   getFormattedDate() {
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     return this.getDate() + '-' + months[this.getMonth()] + '-' + this.getFullYear();
   }
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'extends')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           |
+| -------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'extends')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.classes.extends")}}</p>
+{{Compat("javascript.classes.extends")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Classes">クラス</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Classes/constructor">コンストラクター</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/super">super</a></li>
- <li><a href="https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420">Anurag Majumdar - Super &amp; Extends in JavaScript</a></li>
-</ul>
+- [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
+- [コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)
+- [super](/ja/docs/Web/JavaScript/Reference/Operators/super)
+- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)

@@ -9,34 +9,33 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>add()</code></strong> メソッドは、新しい要素を <code>WeakSet</code> オブジェクトの最後に追加します。</p>
+**`add()`** メソッドは、新しい要素を `WeakSet` オブジェクトの最後に追加します。
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+ws.add(value);
+```
 
-<pre class="syntaxbox notranslate"><var>ws</var>.add(<var>value</var>);</pre>
+### 引数
 
-<h3 id="Syntax" name="Syntax">引数</h3>
+- `value`
+  - : 必須。 `WeakSet` コレクションに追加する要素の値です。
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>必須。 <code>WeakSet</code> コレクションに追加する要素の値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`WeakSet` オブジェクトです。
 
-<p><code>WeakSet</code> オブジェクトです。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### add() の使用
 
-<h3 id="Using_add" name="Using_add">add() の使用</h3>
-
-<pre class="brush: js notranslate">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 
 ws.add(window); //window オブジェクトを WeakSet へ追加
 
@@ -45,31 +44,21 @@ ws.has(window); // true
 // WeakSet は引数としてオブジェクトのみを取ります。
 ws.add(1);
 // 結果は "TypeError: Invalid value used in weak set" (Chrome)
-// "TypeError: 1 is not a non-null object" (Firefox)</pre>
+// "TypeError: 1 is not a non-null object" (Firefox)
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.WeakSet.add")}}</p>
+{{Compat("javascript.builtins.WeakSet.add")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
- <li>{{jsxref("WeakSet.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

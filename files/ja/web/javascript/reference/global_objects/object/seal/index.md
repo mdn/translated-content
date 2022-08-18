@@ -10,44 +10,43 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>Object.seal()</strong></code> メソッドは、オブジェクトを封印して、新しいオブジェクトを追加することを抑制し、すべての既存のプロパティを設定変更不可にします。現存するプロパティの値は、書き込み可能である限り変更できます。</p>
+**`Object.seal()`** メソッドは、オブジェクトを封印して、新しいオブジェクトを追加することを抑制し、すべての既存のプロパティを設定変更不可にします。現存するプロパティの値は、書き込み可能である限り変更できます。
 
-<div>{{EmbedInteractiveExample("pages/js/object-seal.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-seal.html")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Object.seal(obj)
+```
 
-<pre class="syntaxbox notranslate">Object.seal(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : 封印するオブジェクトです。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>封印するオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+封印されたオブジェクトです。
 
-<p>封印されたオブジェクトです。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+既定では、オブジェクトは{{jsxref("Object.isExtensible()", "拡張可能", "", 1)}} (新しいプロパティを追加できる状態) です。オブジェクトを封印することで、新しいオブジェクトの追加を抑制し、すべての既存のプロパティを設定変更を不可にします。これは、オブジェクトにあるプロパティ一式を固定かつ不変にする効果があります。プロパティを設定変更不可にすることで、データプロパティからアクセサプロパティへの変換やその逆を抑制しますが、データプロパティの値の変更は抑制しません。封印されたオブジェクトでプロパティの削除や追加、あるいはデータプロパティからアクセサプロパティへの変換およびその逆を試みると、暗黙的あるいは {{jsxref("TypeError")}} エラーを発生させて (もっとも一般的には {{jsxref("Strict_mode", "strict mode", "", 1)}} において、ただしこれに限定はされません) 失敗します。
 
-<p>既定では、オブジェクトは{{jsxref("Object.isExtensible()", "拡張可能", "", 1)}} (新しいプロパティを追加できる状態) です。オブジェクトを封印することで、新しいオブジェクトの追加を抑制し、すべての既存のプロパティを設定変更を不可にします。これは、オブジェクトにあるプロパティ一式を固定かつ不変にする効果があります。プロパティを設定変更不可にすることで、データプロパティからアクセサプロパティへの変換やその逆を抑制しますが、データプロパティの値の変更は抑制しません。封印されたオブジェクトでプロパティの削除や追加、あるいはデータプロパティからアクセサプロパティへの変換およびその逆を試みると、暗黙的あるいは {{jsxref("TypeError")}} エラーを発生させて (もっとも一般的には {{jsxref("Strict_mode", "strict mode", "", 1)}} において、ただしこれに限定はされません) 失敗します。</p>
+プロトタイプチェインには手をつけず、そのままにします。ただし、 {{jsxref("Object.proto", "__proto__")}} プロパティは同様に封印されます。
 
-<p>プロトタイプチェインには手をつけず、そのままにします。ただし、 {{jsxref("Object.proto", "__proto__")}} プロパティは同様に封印されます。</p>
+### Object.freeze() との比較
 
-<h3 id="Comparison_to_Object.freeze" name="Comparison_to_Object.freeze">Object.freeze() との比較</h3>
+{{jsxref("Object.freeze()")}} で凍結されたオブジェクトに存在するプロパティは不変になります。 `Object.seal()` で封印されたオブジェクトに存在するプロパティを変更することができます。
 
-<p>{{jsxref("Object.freeze()")}} で凍結されたオブジェクトに存在するプロパティは不変になります。 <code>Object.seal()</code> で封印されたオブジェクトに存在するプロパティを変更することができます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Object.seal の使用
 
-<h3 id="Using_Object.seal" name="Using_Object.seal">Object.seal の使用</h3>
-
-<pre class="brush: js notranslate">var obj = {
+```js
+var obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -91,44 +90,34 @@ Object.defineProperty(obj, 'ohai', {
 Object.defineProperty(obj, 'foo', {
   value: 'eit'
 }); // 既存のプロパティの値を変更
-</pre>
+```
 
-<h3 id="Non-object_coercion" name="Non-object_coercion">非オブジェクトの強制</h3>
+### 非オブジェクトの強制
 
-<p>ES5 では、このメソッドへの引数がオブジェクトではない場合 (プリミティブである場合)、 {{jsxref("TypeError")}} になります。 ES2015 では、オブジェクトではない引数は封印された通常のオブジェクトと同様に扱われ、単純にそれを返します。</p>
+ES5 では、このメソッドへの引数がオブジェクトではない場合 (プリミティブである場合)、 {{jsxref("TypeError")}} になります。 ES2015 では、オブジェクトではない引数は封印された通常のオブジェクトと同様に扱われ、単純にそれを返します。
 
-<pre class="brush: js notranslate">Object.seal(1);
+```js
+Object.seal(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.seal(1);
 // 1                             (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Object.seal")}}</p>
+{{Compat("javascript.builtins.Object.seal")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

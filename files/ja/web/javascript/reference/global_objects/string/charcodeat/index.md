@@ -9,59 +9,57 @@ tags:
   - Unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>charCodeAt()</code></strong> メソッドは、指定された位置にある UTF-16 コードユニットを表す <code>0</code> から <code>65535</code> までの整数を返します。</span></p>
+**`charCodeAt()`** メソッドは、指定された位置にある UTF-16 コードユニットを表す `0` から `65535` までの整数を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+単一の UTF-16 コードユニットで表現可能なコードポイントであれば、 UTF-16 コードユニットは Unicode コードポイントと一致します。 Unicode コードポイントが単一の UTF-16 コードユニットで表現できない場合 (値が `0xFFFF` を超える場合)、返されるコードユニットはそのコードポイントの*サロゲートペアの最初の部分*になります。コードポイント値全体を取得したい場合は、 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}} を使用してください。
 
-<p>単一の UTF-16 コードユニットで表現可能なコードポイントであれば、 UTF-16 コードユニットは Unicode コードポイントと一致します。 Unicode コードポイントが単一の UTF-16 コードユニットで表現できない場合 (値が <code>0xFFFF</code> を超える場合)、返されるコードユニットはそのコードポイントの<em>サロゲートペアの最初の部分</em>になります。コードポイント値全体を取得したい場合は、 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}} を使用してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.charCodeAt(index)
+```
 
-<pre class="syntaxbox notranslate"><var>str</var>.charCodeAt(<var>index</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `index`
+  - : 整数で、 `0` 以上、文字列の `length` 未満の値です。 `index` が数値でない場合は、既定で `0` になります。
 
-<dl>
- <dt><code><var>index</var></code></dt>
- <dd>整数で、 <code>0</code> 以上、文字列の <code>length</code> 未満の値です。 <code><var>index</var></code> が数値でない場合は、既定で <code>0</code> になります。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた `index` の位置にあるコードポイント値を表す数値です。 `index` の位置に要素がない場合は {{jsxref("Global_Objects/NaN", "NaN")}} を返します。
 
-<p>与えられた <code><var>index</var></code> の位置にあるコードポイント値を表す数値です。 <code><var>index</var></code> の位置に要素がない場合は {{jsxref("Global_Objects/NaN", "NaN")}} を返します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+Unicode コードポイントの範囲は、 `0` から `1114111` (`0x10FFFF`) です。最初の 128 の Unicode コードポイントは、 ASCII 文字エンコーディングに直接対応しています。 (Unicode についての詳細は、[Java Script ガイド](/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode)を参照してください。)
 
-<p>Unicode コードポイントの範囲は、 <code>0</code> から <code>1114111</code> (<code>0x10FFFF</code>) です。最初の 128 の Unicode コードポイントは、 ASCII 文字エンコーディングに直接対応しています。 (Unicode についての詳細は、<a href="/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Java Script ガイド</a>を参照してください。)</p>
+> **Note:** **注:** `charCodeAt()` は常に `65536` より小さい値を返すことに注意してください。これは、より高いコードポイントは、実際の文字を含むように使用されている (下の値) の "代理" 擬似文字のペアで表されているためです。
+>
+> これにより、 `65536` 以上の値の個々の文字について完全な文字を検証したり再現したりするためには、 `charCodeAt(i)` だけではなく、 `charCodeAt(i+1)` (2 文字の文字列を検証/再現する場合) か `codePointAt(i)` を代わりに使用する必要があります。下記の例 2 と 3 を見てください。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code>charCodeAt()</code> は常に <code>65536</code> より小さい値を返すことに注意してください。これは、より高いコードポイントは、実際の文字を含むように使用されている (下の値) の "代理" 擬似文字のペアで表されているためです。</p>
+与えられたインデックスが 0 と文字列の長さの間にない場合、`charCodeAt()` は {{jsxref("Global_Objects/NaN", "NaN")}} を返します。
 
-<p>これにより、 <code>65536</code> 以上の値の個々の文字について完全な文字を検証したり再現したりするためには、 <code>charCodeAt(<var>i</var>)</code> だけではなく、 <code>charCodeAt(<var>i</var>+1)</code> (2 文字の文字列を検証/再現する場合) か <code>codePointAt(<var>i</var>)</code> を代わりに使用する必要があります。下記の例 2 と 3 を見てください。</p>
-</div>
+後方互換: (JavaScript 1.2 などの) 過去のバージョンでは、 `charCodeAt()` メソッドは、与えられた位置の文字の ISO-Latin-1 コードセットの値を示す数を返します。 ISO-Latin-1 コードセットの範囲は 0 から 255 です。最初の 0 から 127 までは ASCII 文字セットに直接対応しています。
 
-<p>与えられたインデックスが 0 と文字列の長さの間にない場合、<code>charCodeAt()</code> は {{jsxref("Global_Objects/NaN", "NaN")}} を返します。</p>
+## 例
 
-<p>後方互換: (JavaScript 1.2 などの) 過去のバージョンでは、 <code>charCodeAt()</code> メソッドは、与えられた位置の文字の ISO-Latin-1 コードセットの値を示す数を返します。 ISO-Latin-1 コードセットの範囲は 0 から 255 です。最初の 0 から 127 までは ASCII 文字セットに直接対応しています。</p>
+### charCodeAt() の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+以下の例では、 Unicode 文字の A である `65` を返します。
 
-<h3 id="Using_charCodeAt" name="Using_charCodeAt">charCodeAt() の使用</h3>
+```js
+'ABC'.charCodeAt(0)  // returns 65
+```
 
-<p>以下の例では、 Unicode 文字の A である <code>65</code> を返します。</p>
+### 基本多言語面以外の文字が文字列の前方に存在するかどうか不明な場合に扱えるように charCodeAt() を修正
 
-<pre class="brush: js notranslate">'ABC'.charCodeAt(0)  // returns 65
-</pre>
+このバージョンは、指定された位置の前に BMP 以外の文字が存在するかどうかが不明な場合に、 for ループなどで使用されることがあります。
 
-<h3 id="Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_unknown" name="Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_unknown">基本多言語面以外の文字が文字列の前方に存在するかどうか不明な場合に扱えるように charCodeAt() を修正</h3>
-
-<p>このバージョンは、指定された位置の前に BMP 以外の文字が存在するかどうかが不明な場合に、 for ループなどで使用されることがあります。</p>
-
-<pre class="brush: js notranslate">function fixedCharCodeAt(str, idx) {
+```js
+function fixedCharCodeAt(str, idx) {
   // ex. fixedCharCodeAt('\uD800\uDC00', 0); // 65536
   // ex. fixedCharCodeAt('\uD800\uDC00', 1); // false
   idx = idx || 0;
@@ -71,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   // High surrogate (could change last hex to 0xDB7F
   // to treat high private surrogates
   // as single characters)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+  if (0xD800 <= code && code <= 0xDBFF) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
@@ -82,7 +80,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
       (hi - 0xD800) * 0x400) +
       (low - 0xDC00) + 0x10000;
   }
-  if (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF) { // Low surrogate
+  if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
     // We return false to allow loops to skip
     // this iteration since should have already handled
     // high surrogate above in the previous iteration
@@ -94,11 +92,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   }
   return code;
 }
-</pre>
+```
 
-<h3 id="文字列の前方に基本多言語面以外の文字が存在することが分かっている場合に扱えるように_charCodeAt_を修正">文字列の前方に基本多言語面以外の文字が存在することが分かっている場合に扱えるように charCodeAt() を修正</h3>
+### 文字列の前方に基本多言語面以外の文字が存在することが分かっている場合に扱えるように charCodeAt() を修正
 
-<pre class="brush: js notranslate">function knownCharCodeAt(str, idx) {
+```js
+function knownCharCodeAt(str, idx) {
   str += '';
   var code,
       end = str.length;
@@ -106,7 +105,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str)) != null) {
     var li = surrogatePairs.lastIndex;
-    if (li - 2 &lt; idx) {
+    if (li - 2 < idx) {
       idx++;
     }
     else {
@@ -114,14 +113,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     }
   }
 
-  if (idx &gt;= end || idx &lt; 0) {
+  if (idx >= end || idx < 0) {
     return NaN;
   }
 
   code = str.charCodeAt(idx);
 
   var hi, low;
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+  if (0xD800 <= code && code <= 0xDBFF) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     // Go one further, since one of the "characters"
@@ -131,32 +130,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   }
   return code;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.charCodeAt")}}</p>
+{{Compat("javascript.builtins.String.charCodeAt")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.codePointAt()")}}

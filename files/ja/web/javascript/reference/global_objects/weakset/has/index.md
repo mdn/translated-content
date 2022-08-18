@@ -9,67 +9,53 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>has()</code></strong> メソッドは、特定の値をもつ要素が <code>WeakSet</code> オブジェクト内に存在するかどうかを示す真偽値を返します。</p>
+**`has()`** メソッドは、特定の値をもつ要素が `WeakSet` オブジェクト内に存在するかどうかを示す真偽値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+ws.has(value);
+```
 
-<pre class="syntaxbox notranslate"><var>ws</var>.has(<var>value</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value`
+  - : `WeakSet` オブジェクトに存在するかテストする値です。
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd><code>WeakSet</code> オブジェクトに存在するかテストする値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+- Boolean
+  - : `WeakSet` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
 
-<dl>
- <dt>Boolean</dt>
- <dd><code>WeakSet</code> オブジェクト内に特定の値をもつ要素が存在していたら <code>true</code> を返します。さもなければ <code>false</code> を返します。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### has() メソッドの使用
 
-<h3 id="Using_the_has_method" name="Using_the_has_method">has() メソッドの使用</h3>
-
-<pre class="brush: js notranslate">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
 mySet.has(window);  // returns true
 mySet.has(obj);     // returns false
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.WeakSet.has")}}</p>
+{{Compat("javascript.builtins.WeakSet.has")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.add()")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.delete()")}}

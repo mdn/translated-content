@@ -9,63 +9,57 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.preventExtensions()</code></strong> は {{jsxref("Object.preventExtensions()")}} に対するトラップです。</p>
+**`handler.preventExtensions()`** は {{jsxref("Object.preventExtensions()")}} に対するトラップです。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
-  preventExtensions: function(<var>target</var>) {
+```js
+const p = new Proxy(target, {
+  preventExtensions: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>次の引数は <code>preventExtensions()</code> メソッドに渡されます。 <code>this</code> はハンドラーにバインドされます。</p>
+次の引数は `preventExtensions()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>ターゲットオブジェクトです。</dd>
-</dl>
+- `target`
+  - : ターゲットオブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>preventExtensions()</code> メソッドは真偽値を返さなければなりません。</p>
+`preventExtensions()` メソッドは真偽値を返さなければなりません。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code><strong>handler.preventExtensions()</strong></code> メソッドは {{jsxref("Object.preventExtensions()")}} に対するトラップです。</p>
+**`handler.preventExtensions()`** メソッドは {{jsxref("Object.preventExtensions()")}} に対するトラップです。
 
-<h3 id="Interceptions" name="Interceptions">介入</h3>
+### 介入
 
-<p>このトラップは下記の操作に介入できます。</p>
+このトラップは下記の操作に介入できます。
 
-<ul>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}
 
-<h3 id="Invariants" name="Invariants">不変条件</h3>
+### 不変条件
 
-<p>以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。</p>
+以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
 
-<ul>
- <li><code>Object.preventExtensions(<var>proxy</var>)</code> は、 <code>Object.isExtensible(<var>proxy</var>)</code> が <code>false</code> の場合のみ <code>true</code> を返します。</li>
-</ul>
+- `Object.preventExtensions(proxy)` は、 `Object.isExtensible(proxy)` が `false` の場合のみ `true` を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="preventExtensions_のトラップ">preventExtensions のトラップ</h3>
+### preventExtensions のトラップ
 
-<p>次のコードでは {{jsxref("Object.preventExtensions()")}} をトラップします。</p>
+次のコードでは {{jsxref("Object.preventExtensions()")}} をトラップします。
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   preventExtensions: function(target) {
     console.log('called');
     Object.preventExtensions(target);
@@ -75,45 +69,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExten
 
 console.log(Object.preventExtensions(p)); // "called"
                                           // false
-</pre>
+```
 
-<p>The following code violates the invariant.</p>
+The following code violates the invariant.
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy({}, {
+```js example-bad
+const p = new Proxy({}, {
   preventExtensions: function(target) {
     return true;
   }
 });
 
 Object.preventExtensions(p); // TypeError is thrown
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Proxy.handler.preventExtensions")}}</p>
-</div>
+{{Compat("javascript.builtins.Proxy.handler.preventExtensions")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

@@ -8,28 +8,29 @@ tags:
   - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WeakMap()</code> コンストラクター</strong>は、キーが弱く参照されている、キーと値の組のコレクションである <code>WeakMap</code> オブジェクトを生成します。キーはオブジェクトでなければならず、値は任意の値を指定することができます。</p>
+**`WeakMap()` コンストラクター**は、キーが弱く参照されている、キーと値の組のコレクションである `WeakMap` オブジェクトを生成します。キーはオブジェクトでなければならず、値は任意の値を指定することができます。
 
-<p><code>WeakMap</code> については、<a href="/ja/docs/Web/JavaScript/Guide/Keyed_collections">キー付きコレクション</a>の <a href="/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object">WeakMap オブジェクト</a>の節を参照してください。</p>
+`WeakMap` については、[キー付きコレクション](/ja/docs/Web/JavaScript/Guide/Keyed_collections)の [WeakMap オブジェクト](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)の節を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new WeakMap([<var>iterable</var>])</pre>
+```
+new WeakMap([iterable])
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>iterable</var></code></dt>
- <dd>iterable は配列などの反復可能オブジェクトであり、その要素はキーと値の組 (2 要素の配列) となります。それぞれのキーと値の組は、新しい WeakMap に追加されます。 null は undefined として扱われます。</dd>
-</dl>
+- `iterable`
+  - : iterable は配列などの反復可能オブジェクトであり、その要素はキーと値の組 (2 要素の配列) となります。それぞれのキーと値の組は、新しい WeakMap に追加されます。 null は undefined として扱われます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_WeakMap" name="Using_WeakMap">WeakMap の使用</h3>
+### WeakMap の使用
 
-<pre class="brush: js notranslate">const wm1 = new WeakMap(),
+```js
+const wm1 = new WeakMap(),
       wm2 = new WeakMap(),
       wm3 = new WeakMap();
 const o1 = {},
@@ -56,33 +57,22 @@ wm3.get(o1); // 37
 wm1.has(o1); // true
 wm1.delete(o1);
 wm1.has(o1); // false
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap-constructor', 'WeakMap constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-weakmap-constructor', 'WeakMap constructor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.WeakMap.WeakMap")}}</p>
+{{Compat("javascript.builtins.WeakMap.WeakMap")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object"><code>WeakMap</code> (JavaScript ガイド)</a></li>
- <li><a href="http://fitzgeraldnick.com/weblog/53/">Hiding Implementation Details with ECMAScript 6 WeakMaps</a></li>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- [`WeakMap` (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakSet")}}

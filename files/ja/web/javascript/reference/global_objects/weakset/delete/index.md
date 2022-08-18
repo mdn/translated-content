@@ -9,34 +9,33 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>delete()</code></strong> メソッドは、<code>WeakSet</code> オブジェクトから指定された要素を取り除きます。</p>
+**`delete()`** メソッドは、`WeakSet` オブジェクトから指定された要素を取り除きます。
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+ws.delete(value);
+```
 
-<pre class="syntaxbox notranslate"><var>ws</var>.delete(<var>value</var>);</pre>
+### 引数
 
-<h3 id="Syntax" name="Syntax">引数</h3>
+- `value`
+  - : 必須。 `WeakSet` オブジェクトから取り除くオブジェクトです。
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>必須。 <code>WeakSet</code> オブジェクトから取り除くオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`WeakSet` オブジェクトの中の要素が正常に削除された場合は `true` を返します。 `value` が `WeakSet` の中で見つからなかったり、 `value` がオブジェクトではなかった場合は `false` を返します。
 
-<p><code>WeakSet</code> オブジェクトの中の要素が正常に削除された場合は <code>true</code> を返します。 <code><var>value</var></code> が <code>WeakSet</code> の中で見つからなかったり、 <code><var>value</var></code> がオブジェクトではなかった場合は <code>false</code> を返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### delete() メソッドの使用
 
-<h3 id="Using_the_delete_method" name="Using_the_delete_method">delete() メソッドの使用</h3>
-
-<pre class="brush: js notranslate">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 
 ws.add(window);
@@ -45,30 +44,19 @@ ws.delete(obj);    // false を返します。削除する obj が見つかり�
 ws.delete(window); // true を返します。正常に削除されます。
 
 ws.has(window);    // false を返します。 window はもう WeakSet の中にないからです。
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.WeakSet.delete")}}</p>
+{{Compat("javascript.builtins.WeakSet.delete")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.clear()")}}

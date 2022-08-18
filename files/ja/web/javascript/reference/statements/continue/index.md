@@ -7,47 +7,44 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/continue
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>continue</code> 文</strong>は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了して、次の反復処理でループの実行を続けます。</p>
+**`continue` 文**は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了して、次の反復処理でループの実行を続けます。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-continue.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+continue [label];
+```
 
-<pre class="syntaxbox notranslate">continue [<var>label</var>];</pre>
+- `label`
+  - : その文のラベルに関連付けられた識別子。
 
-<dl>
- <dt><code><var>label</var></code></dt>
- <dd>その文のラベルに関連付けられた識別子。</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+{{jsxref("Statements/break", "break")}} 文と対照的に、 `continue` はループの実行を完全には終了しません。代わりに、
 
-<p>{{jsxref("Statements/break", "break")}} 文と対照的に、 <code>continue</code> はループの実行を完全には終了しません。代わりに、</p>
+- {{jsxref("Statements/while", "while")}} ループでは、条件式にジャンプします。
 
-<ul>
- <li>{{jsxref("Statements/while", "while")}} ループでは、条件式にジャンプします。</li>
-</ul>
+<!---->
 
-<ul>
- <li>{{jsxref("Statements/for", "for")}} ループでは、更新式までジャンプします。</li>
-</ul>
+- {{jsxref("Statements/for", "for")}} ループでは、更新式までジャンプします。
 
-<p><code>continue</code> 文には任意でラベルを含めることができ、現在のループの代わりにラベル付きループ文の次の反復処理へジャンプすることができます。この場合、<code>continue</code> 文は、ラベル付き文の中にある必要があります。</p>
+`continue` 文には任意でラベルを含めることができ、現在のループの代わりにラベル付きループ文の次の反復処理へジャンプすることができます。この場合、`continue` 文は、ラベル付き文の中にある必要があります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_continue_with_while" name="Using_continue_with_while">while における continue の使用</h3>
+### while における continue の使用
 
-<p>次の例では、 {{jsxref("Statements/while", "while")}} ループで <code>i</code> の値が 3 であるときに実行される <code>continue</code> 文を持つものを示しています。よって、 <code>n</code> は 1、3、7、12 の値をとります。</p>
+次の例では、 {{jsxref("Statements/while", "while")}} ループで `i` の値が 3 であるときに実行される `continue` 文を持つものを示しています。よって、 `n` は 1、3、7、12 の値をとります。
 
-<pre class="brush: js notranslate">var i = 0;
+```js
+var i = 0;
 var n = 0;
 
-while (i &lt; 5) {
+while (i < 5) {
   i++;
 
   if (i === 3) {
@@ -56,24 +53,25 @@ while (i &lt; 5) {
 
   n += i;
 }
-</pre>
+```
 
-<h3 id="Using_continue_with_a_label" name="Using_continue_with_a_label">ラベル付き continue の使用</h3>
+### ラベル付き continue の使用
 
-<p>次の例では、<code>checkiandj</code> とラベル付けされた文が、<code>checkj</code> とラベル付けされた文を含んでいます。もし <code>continue</code> と遭遇したなら、プログラムは <code>checkj</code> 文の先頭から継続します。<code>continue</code> と遭遇するたびに、<code>checkj</code> の条件が false を返すまで、<code>checkj</code> は再度反復します。false が返されたら、<code>checkiandj</code> 文の残りが完遂されます。</p>
+次の例では、`checkiandj` とラベル付けされた文が、`checkj` とラベル付けされた文を含んでいます。もし `continue` と遭遇したなら、プログラムは `checkj` 文の先頭から継続します。`continue` と遭遇するたびに、`checkj` の条件が false を返すまで、`checkj` は再度反復します。false が返されたら、`checkiandj` 文の残りが完遂されます。
 
-<p>もし <code>continue</code> がラベル <code>checkiandj</code> を持っていたなら、プログラムは <code>checkiandj</code> 文の先頭から継続します。</p>
+もし `continue` がラベル `checkiandj` を持っていたなら、プログラムは `checkiandj` 文の先頭から継続します。
 
-<p>{{jsxref("Statements/label", "ラベル", "", 1)}}もご覧ください。</p>
+{{jsxref("Statements/label", "ラベル", "", 1)}}もご覧ください。
 
-<pre class="brush: js notranslate">var i = 0;
+```js
+var i = 0;
 var j = 8;
 
-checkiandj: while (i &lt; 4) {
+checkiandj: while (i < 4) {
   console.log('i: ' + i);
   i += 1;
 
-  checkj: while (j &gt; 4) {
+  checkj: while (j > 4) {
     console.log('j: ' + j);
     j -= 1;
 
@@ -84,11 +82,12 @@ checkiandj: while (i &lt; 4) {
   console.log('i = ' + i);
   console.log('j = ' + j);
 }
-</pre>
+```
 
-<p>結果:</p>
+結果:
 
-<pre class="brush: js notranslate">i: 0
+```js
+i: 0
 
 // start checkj
 j: 8
@@ -113,30 +112,19 @@ j = 4
 i: 3
 i = 4
 j = 4
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.continue")}}</p>
+{{Compat("javascript.statements.continue")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/label", "ラベル", "", 1)}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/label", "ラベル", "", 1)}}

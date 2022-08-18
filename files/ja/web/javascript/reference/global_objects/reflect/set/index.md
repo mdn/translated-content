@@ -9,49 +9,47 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静的な <strong><code>Reflect.set()</code></strong> メソッドは、オブジェクトにプロパティを設定するかのように動作します。</p>
+静的な **`Reflect.set()`** メソッドは、オブジェクトにプロパティを設定するかのように動作します。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-set.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-set.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Reflect.set(target, propertyKey, value[, receiver])
+```
 
-<pre class="syntaxbox notranslate">Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `target`
+  - : プロパティを設定する対象のオブジェクト。
+- `propertyKey`
+  - : 設定するプロパティ名。
+- `value`
+  - : 設定する値。
+- `receiver` {{optional_inline}}
+  - : セッターによって `target` が呼び出されたときの `this` 値を提供する。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>プロパティを設定する対象のオブジェクト。</dd>
- <dt><code><var>propertyKey</var></code></dt>
- <dd>設定するプロパティ名。</dd>
- <dt><code><var>value</var></code></dt>
- <dd>設定する値。</dd>
- <dt><code><var>receiver</var></code> {{optional_inline}}</dt>
- <dd>セッターによって <code><var>target</var></code> が呼び出されたときの <code>this</code> 値を提供する。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+プロパティが成功裏に設定できたかどうかを示す {{jsxref("Boolean")}} 値。
 
-<p>プロパティが成功裏に設定できたかどうかを示す {{jsxref("Boolean")}} 値。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではなかった場合。
 
-<p>{{jsxref("TypeError")}}: <code><var>target</var></code> が {{jsxref("Object")}} ではなかった場合。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Reflect.set` メソッドは、オブジェクトにプロパティを設定します。これはプロパティの割り当てを行い、機能としては [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 構文のようなものです。
 
-<p><code>Reflect.set</code> メソッドは、オブジェクトにプロパティを設定します。これはプロパティの割り当てを行い、機能としては <a href="/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors">プロパティアクセサー</a> 構文のようなものです。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Reflect.set() の使用
 
-<h3 id="Using_Reflect.set" name="Using_Reflect.set">Reflect.set() の使用</h3>
-
-<pre class="brush: js notranslate">// オブジェクト
+```js
+// オブジェクト
 let obj = {}
 Reflect.set(obj, 'prop', 'value')  // true
 obj.prop  // "value"
@@ -70,30 +68,19 @@ let obj = {}
 Reflect.set(obj)  // true
 Reflect.getOwnPropertyDescriptor(obj, 'undefined')
 // { value: undefined, writable: true, enumerable: true, configurable: true }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Reflect.set")}}</p>
+{{Compat("javascript.builtins.Reflect.set")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors">プロパティアクセサー</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

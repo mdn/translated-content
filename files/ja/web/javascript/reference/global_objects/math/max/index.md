@@ -8,91 +8,83 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>Math.max()</code></strong> 関数は、入力引数として与えられた0個以上の数値のうち最大の数を返します。</span></p>
+**`Math.max()`** 関数は、入力引数として与えられた 0 個以上の数値のうち最大の数を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-max.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力してくださる場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.max([value1[, value2[, ...]]])
+```
 
-<pre class="syntaxbox notranslate">Math.max([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value1, value2, ...`
+  - : 数値です。
 
-<dl>
- <dt><code><var>value1</var>, <var>value2</var>, ...</code></dt>
- <dd>数値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた数のうちの最大の値です。何れかの引数が `NaN` であったり、数値に変換することができなかった場合は {{jsxref("NaN")}} を返します。
 
-<p>与えられた数のうちの最大の値です。何れかの引数が <code>NaN</code> であったり、数値に変換することができなかった場合は {{jsxref("NaN")}} を返します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Math` はコンストラクターではないので、 `max()` は `Math` の静的メソッドです (常に `Math` インスタンスのメソッドとしてではなく、 `Math.min()` として使用してください)。
 
-<p><code>Math</code> はコンストラクターではないので、 <code>max()</code> は <code>Math</code> の静的メソッドです (常に <code>Math</code> インスタンスのメソッドとしてではなく、 <code>Math.min()</code> として使用してください)。</p>
+\-{{jsxref("Infinity")}} は他のすべての数値よりも小さいため初期の比較対象となっており、そのため引数が与えられなかった場合は -{{jsxref("Infinity")}} が返されます。
 
-<p>-{{jsxref("Infinity")}} は他のすべての数値よりも小さいため初期の比較対象となっており、そのため引数が与えられなかった場合は -{{jsxref("Infinity")}} が返されます。</p>
+何れかの引数が `NaN` であったり、数値に変換することができなかった場合、結果は {{jsxref("NaN")}} になります。
 
-<p>何れかの引数が <code>NaN</code> であったり、数値に変換することができなかった場合、結果は {{jsxref("NaN")}} になります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.max() の使用
 
-<h3 id="Using_Math.max" name="Using_Math.max">Math.max() の使用</h3>
-
-<pre class="brush: js notranslate">Math.max(10, 20);   //  20
+```js
+Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
-</pre>
+```
 
-<h3 id="Getting_the_maximum_element_of_an_array" name="Getting_the_maximum_element_of_an_array">配列の最大値の取得</h3>
+### 配列の最大値の取得
 
-<p>{{jsxref("Array.prototype.reduce", "Array.reduce()")}} を使用して、数値の配列の中にある最大値の要素を、それぞれの値を比較して探し出すことができます。</p>
+{{jsxref("Array.prototype.reduce", "Array.reduce()")}} を使用して、数値の配列の中にある最大値の要素を、それぞれの値を比較して探し出すことができます。
 
-<pre class="brush: js notranslate">var arr = [1,2,3];
+```js
+var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
 }, -Infinity);
-</pre>
+```
 
-<p>次の関数では {{jsxref("Function.prototype.apply()")}} を使用して配列の最大値を取得します。 <code>getMaxOfArray([1, 2, 3])</code> は <code>Math.max(1, 2, 3)</code> と同等ですが、 <code>getMaxOfArray()</code> はプログラム的に構築された配列に使用することができます。これは比較的要素が少ない配列に対して使用してください。</p>
+次の関数では {{jsxref("Function.prototype.apply()")}} を使用して配列の最大値を取得します。 `getMaxOfArray([1, 2, 3])` は `Math.max(1, 2, 3)` と同等ですが、 `getMaxOfArray()` はプログラム的に構築された配列に使用することができます。これは比較的要素が少ない配列に対して使用してください。
 
-<pre class="brush: js notranslate">function getMaxOfArray(numArray) {
+```js
+function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
-}</pre>
+}
+```
 
-<p>新しい<a href="/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator">スプレッド演算子</a>で、 <code>apply</code> によって配列の最大値を得る方法をより短く書くことができます。</p>
+新しい[スプレッド演算子](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)で、 `apply` によって配列の最大値を得る方法をより短く書くことができます。
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var max = Math.max(...arr);
-</pre>
+```
 
-<p>しかし、スプレッド構文の (<code>...</code>) と <code>apply</code> のどちらも、配列に膨大な要素があった場合は、配列の要素を関数の引数として渡そうとするため、失敗したり、誤った結果を返したりすることがあります。詳しくは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">apply をビルトイン関数と共に利用する</a>を参照してください。 <code>reduce</code> の方法はこの問題が発生しません。</p>
+しかし、スプレッド構文の (`...`) と `apply` のどちらも、配列に膨大な要素があった場合は、配列の要素を関数の引数として渡そうとするため、失敗したり、誤った結果を返したりすることがあります。詳しくは [apply をビルトイン関数と共に利用する](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions)を参照してください。 `reduce` の方法はこの問題が発生しません。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.max', 'Math.max')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                               |
+| -------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.max', 'Math.max')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.max")}}</p>
+{{Compat("javascript.builtins.Math.max")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.min()")}}</li>
-</ul>
+- {{jsxref("Math.min()")}}

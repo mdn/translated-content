@@ -9,90 +9,76 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静的な <strong><code>Reflect.defineProperty()</code></strong> メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。</p>
+静的な **`Reflect.defineProperty()`** メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Reflect.defineProperty(target, propertyKey, attributes)
+```
 
-<pre class="syntaxbox notranslate">Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `target`
+  - : プロパティを定義する対象のオブジェクトです。
+- `propertyKey`
+  - : 定義または修正をするプロパティ名です。
+- `attributes`
+  - : 定義または修正されているプロパティのための属性です。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>プロパティを定義する対象のオブジェクトです。</dd>
- <dt><code><var>propertyKey</var></code></dt>
- <dd>定義または修正をするプロパティ名です。</dd>
- <dt><code><var>attributes</var></code></dt>
- <dd>定義または修正されているプロパティのための属性です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+プロパティの定義に成功したかどうかを示す {{jsxref("Boolean")}} です。
 
-<p>プロパティの定義に成功したかどうかを示す {{jsxref("Boolean")}} です。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではなかった場合。
 
-<p>{{jsxref("TypeError")}}: <code>target</code> が {{jsxref("Object")}} ではなかった場合。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Reflect.defineProperty` メソッドは、オブジェクトのプロパティの正確な追加や修正を行います。詳細は、類似メソッドの {{jsxref("Object.defineProperty")}} を参照してください。
 
-<p><code>Reflect.defineProperty</code> メソッドは、オブジェクトのプロパティの正確な追加や修正を行います。詳細は、類似メソッドの {{jsxref("Object.defineProperty")}} を参照してください。</p>
+> **Note:** `Object.defineProperty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、`Reflect.defineProperty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
 
-<div class="blockIndicator note"><code>Object.defineProperty</code> はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、<code>Reflect.defineProperty</code> は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
+## 例
 
+### Reflect.defineProperty() の使用
 
-</div>
-
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Using_Reflect.defineProperty" name="Using_Reflect.defineProperty">Reflect.defineProperty() の使用</h3>
-
-<pre class="brush: js notranslate">let obj = {}
+```js
+let obj = {}
 Reflect.defineProperty(obj, 'x', {value: 7})  // true
 obj.x                                         // 7
-</pre>
+```
 
-<h3 id="Checking_if_property_definition_has_been_successful" name="Checking_if_property_definition_has_been_successful">プロパティ定義が成功したかチェックする</h3>
+### プロパティ定義が成功したかチェックする
 
-<p>成功してオブジェクトを返すか、失敗して {{jsxref("TypeError")}} をスローする {{jsxref("Object.defineProperty")}} を使う場合、プロパティの定義中に発生する何らかの例外をキャッチするには、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> ブロックを使用します。</p>
+成功してオブジェクトを返すか、失敗して {{jsxref("TypeError")}} をスローする {{jsxref("Object.defineProperty")}} を使う場合、プロパティの定義中に発生する何らかの例外をキャッチするには、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックを使用します。
 
-<p><code>Reflect.defineProperty</code> は真偽値の成功ステータスを返すので、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code> ブロックを使用することができます。</p>
+`Reflect.defineProperty` は真偽値の成功ステータスを返すので、[`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) ブロックを使用することができます。
 
-<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+```js
+if (Reflect.defineProperty(target, property, attributes)) {
   // success
 } else {
   // failure
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Reflect.defineProperty")}}</p>
+{{Compat("javascript.builtins.Reflect.defineProperty")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.defineProperty()")}}

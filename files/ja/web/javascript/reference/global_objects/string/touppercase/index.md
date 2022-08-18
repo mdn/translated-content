@@ -10,45 +10,45 @@ tags:
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toUpperCase()</code></strong> メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。</p>
+**`toUpperCase()`** メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.toUpperCase()
+```
 
-<pre class="syntaxbox"><var>str</var>.toUpperCase()</pre>
+### 戻り値
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+呼び出す文字列の値を大文字に変換した新しい文字列です。
 
-<p>呼び出す文字列の値を大文字に変換した新しい文字列です。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+- {{jsxref("TypeError")}}
+  - : {{jsxref("null")}} か {{jsxref("undefined")}} で呼ばれた場合（例えば、`String.prototype.toUpperCase.call(undefined)`）。
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>{{jsxref("null")}} か {{jsxref("undefined")}} で呼ばれた場合（例えば、<code>String.prototype.toUpperCase.call(undefined)</code>）。</dd>
-</dl>
+## 詳細
 
-<h2 id="Description" name="Description">詳細</h2>
+`toUpperCase()` メソッドは、大文字に変換された文字列の値を返します。このメソッドは、文字列自身の値に影響を与えません（JavaScript の文字列は不変です）。
 
-<p><code>toUpperCase()</code> メソッドは、大文字に変換された文字列の値を返します。このメソッドは、文字列自身の値に影響を与えません（JavaScript の文字列は不変です）。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 基本的な使用
 
-<h3 id="Basic_usage" name="Basic_usage">基本的な使用</h3>
+```js
+console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+```
 
-<pre class="brush: js">console.log('alphabet'.toUpperCase()); // 'ALPHABET'
-</pre>
+### 文字列でない `this` 値を文字列に変換する
 
-<h3 id="Conversion_of_non-string_this_values_to_strings" name="Conversion_of_non-string_this_values_to_strings">文字列でない <code>this</code> 値を文字列に変換する</h3>
+このメソッドは `this` に文字列でない値を設定した場合、文字列に変換します。:
 
-<p>このメソッドは <code>this</code> に文字列でない値を設定した場合、文字列に変換します。:</p>
-
-<pre class="brush: js">const a = String.prototype.toUpperCase.call({
+```js
+const a = String.prototype.toUpperCase.call({
   toString: function toString() {
     return 'abcdef';
   }
@@ -58,31 +58,20 @@ const b = String.prototype.toUpperCase.call(true);
 
 // prints out 'ABCDEF TRUE'.
 console.log(a, b);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.toUpperCase")}}</p>
+{{Compat("javascript.builtins.String.toUpperCase")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}

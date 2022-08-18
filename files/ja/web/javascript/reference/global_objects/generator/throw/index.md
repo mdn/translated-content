@@ -10,44 +10,43 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>throw()</code></strong> メソッドは、ジェネレーターの例外を、エラーを発生させることで再開し、 <code>done</code> と <code>value</code> の2つのプロパティを持ったオブジェクトを返します。</span></p>
+**`throw()`** メソッドは、ジェネレーターの例外を、エラーを発生させることで再開し、 `done` と `value` の 2 つのプロパティを持ったオブジェクトを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><code><var>gen</var>.throw(<var>exception</var>)</code></pre>
+```
+gen.throw(exception)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>exception</var></code></dt>
- <dd>発生させる例外。デバッグ時には <code>instanceof</code> {{jsxref("Error")}} を行うと便利です。</dd>
-</dl>
+- `exception`
+  - : 発生させる例外。デバッグ時には `instanceof` {{jsxref("Error")}} を行うと便利です。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>2つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} です。</p>
+2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} です。
 
-<dl>
- <dt><code>done</code> (boolean)</dt>
- <dd>
- <ul>
-  <li>イテレーターが反復処理の末尾を過ぎている場合、値は <code>true</code> になります。この場合、 <code>value</code> はオプションでそのイテレーターの<em>返値</em>を指定します。</li>
-  <li>イテレーターが反復処理の次の値を生成することができた場合、値は <code>false</code> になります。これは <code>done</code> プロパティを指定しない場合も同等です。</li>
- </ul>
- </dd>
- <dt><code>value</code></dt>
- <dd>イテレーターが返す何らかの JavaScript の値です。 <code>done</code> が <code>true</code> の場合は省略可能です。</dd>
-</dl>
+- `done` (boolean)
 
-<h2 id="Examples" name="Examples">例</h2>
+  - :&#x20;
 
-<h3 id="Using_throw" name="Using_throw">throw() の使用</h3>
+    - イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの*返値*を指定します。
+    - イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
 
-<p>次の例では、簡単なジェネレーターと、 <code>throw</code>メソッドを用いて発生させるエラーを示します。エラーは通常 {{jsxref("Statements/try...catch", "try...catch")}} ブロックによって受け取られます。</p>
+- `value`
+  - : イテレーターが返す何らかの JavaScript の値です。 `done` が `true` の場合は省略可能です。
 
-<pre class="brush: js notranslate">function* gen() {
+## 例
+
+### throw() の使用
+
+次の例では、簡単なジェネレーターと、 `throw`メソッドを用いて発生させるエラーを示します。エラーは通常 {{jsxref("Statements/try...catch", "try...catch")}} ブロックによって受け取られます。
+
+```js
+function* gen() {
   while(true) {
     try {
        yield 42;
@@ -63,31 +62,18 @@ g.next();
 g.throw(new Error('Something went wrong'));
 // "Error caught!"
 // { value: 42, done: false }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Generator.throw")}}</p>
-</div>
+{{Compat("javascript.builtins.Generator.throw")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
-</ul>
+- {{jsxref("Statements/function*", "function*")}}

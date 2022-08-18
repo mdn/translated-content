@@ -8,70 +8,68 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.sign()</code></strong> 関数は、引数として渡された数値の符号が<strong>正</strong>か<strong>負</strong>かを表す +/- 1 を返します。 <code>Math.sign()</code> に渡された数が 0 であれば、 +/- 0 を返します。なお、数値が正である場合、明示的な (+) は返され<strong>ません</strong>。</p>
+**`Math.sign()`** 関数は、引数として渡された数値の符号が**正**か**負**かを表す +/- 1 を返します。 `Math.sign()` に渡された数が 0 であれば、 +/- 0 を返します。なお、数値が正である場合、明示的な (+) は返され**ません**。
 
-<div>{{EmbedInteractiveExample("pages/js/math-sign.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sign.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力してくださる場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.sign(x)
+```
 
-<pre class="syntaxbox notranslate">Math.sign(<var>x</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x`
+  - : 数値です。引数が `number` ではない場合は、暗黙に変換されます。
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>数値です。引数が <code>number</code> ではない場合は、暗黙に変換されます。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた引数の符号を表す数値です。
 
-<p>与えられた引数の符号を表す数値です。</p>
+- 引数が正の値の場合は、 `1` を返します。
+- 引数が負の値の場合は、 `-1` を返します。
+- 引数が正のゼロの場合は、 `0` を返します。
+- 引数が負のゼロの場合は、 `-0` を返します。
+- それ以外は {{jsxref("NaN")}} を返します。
 
-<ul>
- <li>引数が正の値の場合は、 <code>1</code> を返します。</li>
- <li>引数が負の値の場合は、 <code>-1</code> を返します。</li>
- <li>引数が正のゼロの場合は、 <code>0</code> を返します。</li>
- <li>引数が負のゼロの場合は、 <code>-0</code> を返します。</li>
- <li>それ以外は {{jsxref("NaN")}} を返します。</li>
-</ul>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`sign()` は `Math` の静的メソッドなので、常に `Math.sign()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
 
-<p><code>sign()</code> は <code>Math</code> の静的メソッドなので、常に <code>Math.sign()</code> として使用し、自分で <code>Math</code> オブジェクトを生成してそのメソッドとして使用しないでください。 (<code>Math</code> にはコンストラクターがありません)。</p>
+## ポリフィル
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
-
-<pre class="brush: js notranslate">if (!Math.sign) {
+```js
+if (!Math.sign) {
   Math.sign = function(x) {
     // If x is NaN, the result is NaN.
     // If x is -0, the result is -0.
     // If x is +0, the result is +0.
     // If x is negative and not -0, the result is -1.
     // If x is positive and not +0, the result is +1.
-    return ((x &gt; 0) - (x &lt; 0)) || +x;
+    return ((x > 0) - (x < 0)) || +x;
     // A more aesthetic pseudo-representation:
     //
-    // ( (x &gt; 0) ? 1 : 0 )  // if x is positive, then positive one
+    // ( (x > 0) ? 1 : 0 )  // if x is positive, then positive one
     //          +           // else (because you can't be both - and +)
-    // ( (x &lt; 0) ? -1 : 0 ) // if x is negative, then negative one
+    // ( (x < 0) ? -1 : 0 ) // if x is negative, then negative one
     //         ||           // if x is 0, -0, or NaN, or not a number,
     //         +x           // then the result will be x, (or) if x is
     //                      // not a number, then x converts to number
   };
 }
-</pre>
+```
 
-<p>上記のポリフィルでは <code>(x &gt; 0)</code> と <code>(x &lt; 0)</code> の数値を互いに減算することで、真偽値から数値型へ強制的に型変換されるため、追加の型強制は必要ありません。</p>
+上記のポリフィルでは `(x > 0)` と `(x < 0)` の数値を互いに減算することで、真偽値から数値型へ強制的に型変換されるため、追加の型強制は必要ありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_Math.sign" name="Using_Math.sign">Math.sign() の使用</h3>
+### Math.sign() の使用
 
-<pre class="brush: js notranslate">Math.sign(3);     //  1
+```js
+Math.sign(3);     //  1
 Math.sign(-3);    // -1
 Math.sign('-3');  // -1
 Math.sign(0);     //  0
@@ -79,33 +77,22 @@ Math.sign(-0);    // -0
 Math.sign(NaN);   // NaN
 Math.sign('foo'); // NaN
 Math.sign();      // NaN
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   |
+| ------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.sign")}}</p>
+{{Compat("javascript.builtins.Math.sign")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.trunc()")}}

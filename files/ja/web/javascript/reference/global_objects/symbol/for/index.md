@@ -8,60 +8,46 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.for(key)</code></strong> メソッドは、引数で与えられたキーでランタイム全体のシンボルレジストリ内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリ内に生成されます。</p>
+**`Symbol.for(key)`** メソッドは、引数で与えられたキーでランタイム全体のシンボルレジストリ内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリ内に生成されます。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-for.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-for.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Symbol.for(key);
+```
 
-<pre class="syntaxbox notranslate">Symbol.for(<var>key</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `key`
+  - : 必須の文字列です。シンボルに対するキー（シンボルの説明のためにも使用されます）。
 
-<dl>
- <dt><code><var>key</var></code></dt>
- <dd>必須の文字列です。シンボルに対するキー（シンボルの説明のためにも使用されます）。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+見つかった場合は指定したキーを持つ既存のシンボルです。さもなければ新しいシンボルを作成して返します。
 
-<p>見つかった場合は指定したキーを持つ既存のシンボルです。さもなければ新しいシンボルを作成して返します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Symbol()` と対照的に、`Symbol.for()` 関数はグローバルシンボルレジストリリスト内で利用可能なシンボルを生成します。`Symbol.for()` は必ずしもすべての呼び出しで新しいシンボルを生成するわけでなく、引数で与えられた `key` をもつシンボルがレジストリ内にすでに存在しているかどうか最初に調べます。存在している場合は、そのシンボルが返されます。引数で与えられたキーをもつシンボルが見つからない場合、`Symbol.for()` は新しいグローバルシンボルを生成します。
 
-<p><code>Symbol()</code> と対照的に、<code>Symbol.for()</code> 関数はグローバルシンボルレジストリリスト内で利用可能なシンボルを生成します。<code>Symbol.for()</code> は必ずしもすべての呼び出しで新しいシンボルを生成するわけでなく、引数で与えられた <code>key</code> をもつシンボルがレジストリ内にすでに存在しているかどうか最初に調べます。存在している場合は、そのシンボルが返されます。引数で与えられたキーをもつシンボルが見つからない場合、<code>Symbol.for()</code> は新しいグローバルシンボルを生成します。</p>
+### グローバルシンボルレジストリ
 
-<h3 id="Global_symbol_registry" name="Global_symbol_registry">グローバルシンボルレジストリ</h3>
+グローバルシンボルレジストリは次のレコード構造をもつリストで、値は空で初期化されます:
 
-<p>グローバルシンボルレジストリは次のレコード構造をもつリストで、値は空で初期化されます:</p>
+| フィールド名 | 値                                   |
+| ------------ | ------------------------------------ |
+| \[\[key]]    | シンボルを識別するための文字列キー。 |
+| \[\[symbol]] | グローバルに格納されているシンボル。 |
 
-<table class="standard-table">
- <caption>グローバルシンボルレジストリ内のレコード</caption>
- <tbody>
-  <tr>
-   <th>フィールド名</th>
-   <th>値</th>
-  </tr>
-  <tr>
-   <td>[[key]]</td>
-   <td>シンボルを識別するための文字列キー。</td>
-  </tr>
-  <tr>
-   <td>[[symbol]]</td>
-   <td>グローバルに格納されているシンボル。</td>
-  </tr>
- </tbody>
-</table>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Symbol.for() の使用
 
-<h3 id="Using_Symbol.for" name="Using_Symbol.for">Symbol.for() の使用</h3>
-
-<pre class="brush: js notranslate">Symbol.for('foo'); // create a new global symbol
+```js
+Symbol.for('foo'); // create a new global symbol
 Symbol.for('foo'); // retrieve the already created symbol
 
 // Same global symbol, but not locally
@@ -71,35 +57,25 @@ Symbol('bar') === Symbol('bar'); // false
 // The key is also used as the description
 var sym = Symbol.for('mario');
 sym.toString(); // "Symbol(mario)"
-</pre>
+```
 
-<p>グローバルシンボルキーや他の (ライブラリコードの) グローバルシンボルとの名前の衝突を避けるために、シンボルの前に接頭辞をつけると良いかもしれません。</p>
+グローバルシンボルキーや他の (ライブラリコードの) グローバルシンボルとの名前の衝突を避けるために、シンボルの前に接頭辞をつけると良いかもしれません。
 
-<pre class="brush: js notranslate">Symbol.for('mdn.foo');
+```js
+Symbol.for('mdn.foo');
 Symbol.for('mdn.bar');
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Symbol.for")}}</p>
+{{Compat("javascript.builtins.Symbol.for")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Symbol.keyFor()")}}</li>
-</ul>
+- {{jsxref("Symbol.keyFor()")}}

@@ -9,56 +9,46 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getMinutes()</code></strong> メソッドは、地方時に基づき、指定された日時の「分」を返します。</p>
+**`getMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.getMinutes()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.getMinutes()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+地方時に基づき、与えた日時の「分」を表す 0 から 59 までの間の整数値。
 
-<p>地方時に基づき、与えた日時の「分」を表す 0 から 59 までの間の整数値。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getMinutes() の使用
 
-<h3 id="Using_getMinutes" name="Using_getMinutes">getMinutes() の使用</h3>
+以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクト `Xmas95` の値に基づき、変数 `minutes` に 15 という値を代入します。
 
-<p>以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクト <code>Xmas95</code> の値に基づき、変数 <code>minutes</code> に 15 という値を代入します。</p>
-
-<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var minutes = Xmas95.getMinutes();
 
 console.log(minutes); // 15
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getminutes', 'Date.prototype.getMinutes')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.getminutes', 'Date.prototype.getMinutes')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.getMinutes")}}</p>
+{{Compat("javascript.builtins.Date.getMinutes")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMinutes()")}}
+- {{jsxref("Date.prototype.setMinutes()")}}

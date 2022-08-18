@@ -10,80 +10,63 @@ tags:
   - RelativeTimeFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.RelativeTimeFormat.prototype.formatToParts()</code></strong> メソッドは、ロケールを考慮したカスタム書式設定に使用できる相対時間書式を部品単位で表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。</p>
+**`Intl.RelativeTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮したカスタム書式設定に使用できる相対時間書式を部品単位で表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+RelativeTimeFormat.formatToParts(value, unit)
+```
 
-<pre class="brush: js notranslate">RelativeTimeFormat.formatToParts(<var>value</var>, <var>unit</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value`
+  - : 国際化された相対時間のメッセージに使用する数値です。
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>国際化された相対時間のメッセージに使用する数値です。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code><var>unit</var></code></dt>
- <dd>国際化された相対時間のメッセージに使用する単位です。利用可能な値は、 "<code>year</code>", "<code>quarter</code>", "<code>month</code>", "<code>week</code>", "<code>day</code>", "<code>hour</code>", "<code>minute</code>", "<code>second</code>" です。複数形も許容されています。</dd>
-</dl>
+- `unit`
+  - : 国際化された相対時間のメッセージに使用する単位です。利用可能な値は、 "`year`", "`quarter`", "`month`", "`week`", "`day`", "`hour`", "`minute`", "`second`" です。複数形も許容されています。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>書式化された相対時間を部品単位で含むオブジェクトの配列 ({{jsxref("Array")}}) です。</p>
+書式化された相対時間を部品単位で含むオブジェクトの配列 ({{jsxref("Array")}}) です。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<div><code>Intl.RelativeTimeFormat.prototype.formatToParts</code> メソッドは、書式化メソッドのバージョンの一つで、書式化された数値を他の周囲のテキストから分離し、それぞれの構成部品に分解した、オブジェクトの「部分」を表すオブジェクトの配列を返すものです。これらのオブジェクトには二つのプロパティがあります。 type は <code>NumberFormat</code> の formatToParts 型で、値は出力の構成要素である文字列です。もし "part" が <code>NumberFormat</code> から来たものであれば、書式化された単位を示す unit プロパティを持ちます。</div>
+`Intl.RelativeTimeFormat.prototype.formatToParts` メソッドは、書式化メソッドのバージョンの一つで、書式化された数値を他の周囲のテキストから分離し、それぞれの構成部品に分解した、オブジェクトの「部分」を表すオブジェクトの配列を返すものです。これらのオブジェクトには二つのプロパティがあります。 type は `NumberFormat` の formatToParts 型で、値は出力の構成要素である文字列です。もし "part" が `NumberFormat` から来たものであれば、書式化された単位を示す unit プロパティを持ちます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_formatToParts" name="Using_formatToParts">formatToParts の使用</h3>
+### formatToParts の使用
 
-<pre class="brush: js notranslate">const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+```js
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using the day unit
 rtf.formatToParts(-1, "day");
-// &gt; [{ type: "literal", value: "yesterday"}]
+// > [{ type: "literal", value: "yesterday"}]
 
 rtf.formatToParts(100, "day");
-// &gt; [{ type: "literal", value: "in " },
-// &gt;  { type: "integer", value: "100", unit: "day" },
-// &gt;  { type: "literal", value: " days" }]</pre>
+// > [{ type: "literal", value: "in " },
+// >  { type: "integer", value: "100", unit: "day" },
+// >  { type: "literal", value: " days" }]
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.formatToParts', 'RelativeTimeFormat.formatToParts()')}}</td>
-   <td>第 4 段階</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                               | 状態      | 備考 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---- |
+| {{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.formatToParts', 'RelativeTimeFormat.formatToParts()')}} | 第 4 段階 |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}</p>
-</div>
+{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Intl.RelativeTimeFormat")}}</li>
-</ul>
+- {{jsxref("Intl.RelativeTimeFormat")}}

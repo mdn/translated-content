@@ -7,90 +7,81 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p><code><strong>decodeURIComponent()</strong></code> 関数は、{{jsxref("encodeURIComponent", "encodeURIComponent()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) の構成要素をデコードします。</p>
+**`decodeURIComponent()`** 関数は、{{jsxref("encodeURIComponent", "encodeURIComponent()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) の構成要素をデコードします。
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+decodeURIComponent(encodedURI)
+```
 
-<pre class="syntaxbox notranslate">decodeURIComponent(<var>encodedURI</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `encodedURI`
+  - : エンコードされた URI の構成要素です。
 
-<dl>
- <dt><code><var>encodedURI</var></code></dt>
- <dd>エンコードされた URI の構成要素です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+エンコードされた統一資源識別子 (URI) の構成要素をデコードしたものを表す新しい文字列です。
 
-<p>エンコードされた統一資源識別子 (URI) の構成要素をデコードしたものを表す新しい文字列です。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+不正に利用された場合は {{jsxref("URIError")}} ("malformed URI sequence") 例外が発生します。
 
-<p>不正に利用された場合は {{jsxref("URIError")}} ("malformed URI sequence") 例外が発生します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+エンコードされた URI の構成要素のエスケープシーケンスを、それぞれが表す文字に置き換えます。
 
-<p>エンコードされた URI の構成要素のエスケープシーケンスを、それぞれが表す文字に置き換えます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### キリル文字の URL の構成要素をデコード
 
-<h3 id="Decoding_a_Cyrillic_URL_component" name="Decoding_a_Cyrillic_URL_component">キリル文字の URL の構成要素をデコード</h3>
-
-<pre class="brush: js notranslate">decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+```js
+decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 // "JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="Catching_errors" name="Catching_errors">エラーの捕捉</h3>
+### エラーの捕捉
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   var a = decodeURIComponent('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
-// URIError: malformed URI sequence</pre>
+// URIError: malformed URI sequence
+```
 
-<h3 id="Decoding_query_parameters_from_a_URL" name="Decoding_query_parameters_from_a_URL">URL からのクエリパラメータのデコード</h3>
+### URL からのクエリパラメータのデコード
 
-<p>decodeURIComponent は、URL からのクエリパラメータを解析するために直接使用することはできません。少し準備が必要です。</p>
+decodeURIComponent は、URL からのクエリパラメータを解析するために直接使用することはできません。少し準備が必要です。
 
-<pre class="brush: js notranslate">function decodeQueryParam(p) {
+```js
+function decodeQueryParam(p) {
   return decodeURIComponent(p.replace(/\+/g, ' '));
 }
 
 decodeQueryParam('search+query%20%28correct%29');
 // 'search query (correct)'
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-decodeuricomponent-encodeduricomponent', 'decodeURIComponent')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-decodeuricomponent-encodeduricomponent', 'decodeURIComponent')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.decodeURIComponent")}}</p>
+{{Compat("javascript.builtins.decodeURIComponent")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

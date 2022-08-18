@@ -11,286 +11,306 @@ tags:
   - Tutorial
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
-<div>{{jsSidebar}}</div>
+{{jsSidebar}}
 
-<p>なぜ「再」入門なのでしょうか。それは、 <a href="/ja/docs/Glossary/JavaScript">JavaScript</a> が誤解されていることで有名だからです。しばしばおもちゃだと馬鹿にされながら、しかしその嘘のような単純さの下に、強力な言語機能が隠されているのです。 JavaScript はとても多くの著名なアプリケーションで使用されるようになっており、この技術の深い知識が、あらゆるウェブやモバイルの開発者にとって重要なスキルであることを示しています。</p>
+なぜ「再」入門なのでしょうか。それは、 [JavaScript](/ja/docs/Glossary/JavaScript) が誤解されていることで有名だからです。しばしばおもちゃだと馬鹿にされながら、しかしその嘘のような単純さの下に、強力な言語機能が隠されているのです。 JavaScript はとても多くの著名なアプリケーションで使用されるようになっており、この技術の深い知識が、あらゆるウェブやモバイルの開発者にとって重要なスキルであることを示しています。
 
-<p>まずは、この言語の歴史を振り返ってみましょう。 JavaScript は、 1995 年に Netscape 社のエンジニアだった Brendan Eich 氏によって開発されました。 JavaScript は、 1996 年の初めに Netscape 2 とともにリリースされました。当初は LiveScript と呼ばれる予定でしたが、 Sun Microsystems の Java 言語の人気にあやかろうとしたマーケティング上の不運な決定により、両者にはほとんど共通点がないにもかかわらず改名されました。このことは、いまだに混同の元となっています。</p>
+まずは、この言語の歴史を振り返ってみましょう。 JavaScript は、 1995 年に Netscape 社のエンジニアだった Brendan Eich 氏によって開発されました。 JavaScript は、 1996 年の初めに Netscape 2 とともにリリースされました。当初は LiveScript と呼ばれる予定でしたが、 Sun Microsystems の Java 言語の人気にあやかろうとしたマーケティング上の不運な決定により、両者にはほとんど共通点がないにもかかわらず改名されました。このことは、いまだに混同の元となっています。
 
-<p>その数か月後、 Microsoft は Internet Explorer 3 とともに JScript をリリースしました。これはほぼ互換性のある JavaScript の互換品でした。さらに数か月後、 Netscape はこの言語をヨーロッパの標準化団体である <a href="https://www.ecma-international.org/">Ecma International</a> に提出し、その結果、同年に <a href="/ja/docs/Glossary/ECMAScript">ECMAScript</a> という標準の第 1 版が生まれました。この標準は 1999 年に <a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第 3 版</a>として大幅に更新され、それ以降はほぼ安定しています。第 4 版は、言語の複雑化に関する政治的な見解の相違から放棄されました。第 4 版の多くの部分は、 2009 年 12 月に発行された新しい ECMAScript 第 5 版と、 2015 年 6 月に発行された第 6 版の基礎になりました。</p>
+その数か月後、 Microsoft は Internet Explorer 3 とともに JScript をリリースしました。これはほぼ互換性のある JavaScript の互換品でした。さらに数か月後、 Netscape はこの言語をヨーロッパの標準化団体である [Ecma International](https://www.ecma-international.org/) に提出し、その結果、同年に [ECMAScript](/ja/docs/Glossary/ECMAScript) という標準の第 1 版が生まれました。この標準は 1999 年に [ECMAScript 第 3 版](https://www.ecma-international.org/publications/standards/Ecma-262.htm)として大幅に更新され、それ以降はほぼ安定しています。第 4 版は、言語の複雑化に関する政治的な見解の相違から放棄されました。第 4 版の多くの部分は、 2009 年 12 月に発行された新しい ECMAScript 第 5 版と、 2015 年 6 月に発行された第 6 版の基礎になりました。
 
-<div class="note">
-<p><strong>注:</strong> より馴染んでいるため、ここからは  ECMAScript を "JavaScript" と呼ぶことにします。</p>
-</div>
+> **Note:** **注:** より馴染んでいるため、ここからは ECMAScript を "JavaScript" と呼ぶことにします。
 
-<p>大部分のプログラミング言語と違って、 JavaScript という言語には入出力の概念がありません。この言語はあるホスト環境でのスクリプト言語として実行されるよう設計されており、外部の世界とコミュニケーションするための機構はそのホスト環境が提供するものとしているのです。もっとも一般的なホスト環境はブラウザーですが、JavaScript のインタープリターは Adobe Acrobat や Photoshop、SVG 画像、Yahoo! ウィジェットエンジン、さらには <a href="https://nodejs.org/">Node.js</a> といったサーバーサイド環境、オープンソースの <a href="https://couchdb.apache.org/">Apache CouchDB</a> のような NoSQL データベース、組み込みコンピューター、<a href="https://www.gnome.org/">GNOME</a> (GNU/Linux オペレーティングシステムでもっとも人気がある GUI 環境のひとつ) のようなデスクトップ環境など、さまざまなところでみられます。</p>
+大部分のプログラミング言語と違って、 JavaScript という言語には入出力の概念がありません。この言語はあるホスト環境でのスクリプト言語として実行されるよう設計されており、外部の世界とコミュニケーションするための機構はそのホスト環境が提供するものとしているのです。もっとも一般的なホスト環境はブラウザーですが、JavaScript のインタープリターは Adobe Acrobat や Photoshop、SVG 画像、Yahoo! ウィジェットエンジン、さらには [Node.js](https://nodejs.org/) といったサーバーサイド環境、オープンソースの [Apache CouchDB](https://couchdb.apache.org/) のような NoSQL データベース、組み込みコンピューター、[GNOME](https://www.gnome.org/) (GNU/Linux オペレーティングシステムでもっとも人気がある GUI 環境のひとつ) のようなデスクトップ環境など、さまざまなところでみられます。
 
-<h2 id="Overview">概要</h2>
+## 概要
 
-<p>JavaScript はマルチパラダイムの動的言語であり、型や演算子、標準組み込みオブジェクト、メソッドがあります。その構文は Java や C 言語に由来するので、それらの言語の多くの構造が JavaScript にも同様に適用できます。JavaScript は、クラスの代わりにオブジェクトプロトタイプによるオブジェクト指向プログラミングをサポートします (詳しくは <a href="/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" title="prototypical inheritance">プロトタイプの継承</a> や ES2015 の <a href="/ja/docs/Web/JavaScript/Reference/Classes">classes</a> をご覧ください)。また、JavaScript は関数型プログラミングもサポートします。関数もオブジェクトであり、関数に実行可能なコードを持たせて、他のオブジェクトと同じように受け渡しすることができます。</p>
+JavaScript はマルチパラダイムの動的言語であり、型や演算子、標準組み込みオブジェクト、メソッドがあります。その構文は Java や C 言語に由来するので、それらの言語の多くの構造が JavaScript にも同様に適用できます。JavaScript は、クラスの代わりにオブジェクトプロトタイプによるオブジェクト指向プログラミングをサポートします (詳しくは [プロトタイプの継承](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain "prototypical inheritance") や ES2015 の [classes](/ja/docs/Web/JavaScript/Reference/Classes) をご覧ください)。また、JavaScript は関数型プログラミングもサポートします。関数もオブジェクトであり、関数に実行可能なコードを持たせて、他のオブジェクトと同じように受け渡しすることができます。
 
-<p>まずはあらゆる言語の構成要素、「型」を見ることから始めましょう。 JavaScript のプログラムは値を操作し、それらの値はすべて型に属しています。JavaScript の型は次の通りです。</p>
+まずはあらゆる言語の構成要素、「型」を見ることから始めましょう。 JavaScript のプログラムは値を操作し、それらの値はすべて型に属しています。JavaScript の型は次の通りです。
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#number_type">Number</a> (数値型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#bigint_type">BigInt</a> (長整数型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#string_type">String</a> (文字列型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#boolean_type">Boolean</a> (論理型)</li>
- <li>{{jsxref("Function")}} (関数)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#objects">Object</a> (オブジェクト型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#symbol_type">Symbol</a> (シンボル型、ES2015 で新登場)</li>
-</ul>
+- [Number](/ja/docs/Web/JavaScript/Data_structures#number_type) (数値型)
+- [BigInt](/ja/docs/Web/JavaScript/Data_structures#bigint_type) (長整数型)
+- [String](/ja/docs/Web/JavaScript/Data_structures#string_type) (文字列型)
+- [Boolean](/ja/docs/Web/JavaScript/Data_structures#boolean_type) (論理型)
+- {{jsxref("Function")}} (関数)
+- [Object](/ja/docs/Web/JavaScript/Data_structures#objects) (オブジェクト型)
+- [Symbol](/ja/docs/Web/JavaScript/Data_structures#symbol_type) (シンボル型、ES2015 で新登場)
 
-<p>...ああ、あと <a href="/ja/docs/Web/JavaScript/Data_structures#undefined_type">undefined</a> と <a href="/ja/docs/Web/JavaScript/Data_structures#null_type">null</a>、これらはちょっと変わっています。そして {{jsxref("Array")}} (配列)、これは特殊なオブジェクトの一種。さらに {{jsxref("Date")}} (日付) と {{jsxref("RegExp")}} (正規表現)、これらは自由に使えるオブジェクトです。あと技術的に正確なことを言うと、関数もオブジェクトの特殊な型です。したがって、この型の図はより正確にはこうなります。</p>
+...ああ、あと [undefined](/ja/docs/Web/JavaScript/Data_structures#undefined_type) と [null](/ja/docs/Web/JavaScript/Data_structures#null_type)、これらはちょっと変わっています。そして {{jsxref("Array")}} (配列)、これは特殊なオブジェクトの一種。さらに {{jsxref("Date")}} (日付) と {{jsxref("RegExp")}} (正規表現)、これらは自由に使えるオブジェクトです。あと技術的に正確なことを言うと、関数もオブジェクトの特殊な型です。したがって、この型の図はより正確にはこうなります。
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#number_type">Number</a> (数値型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#bigint_type">BigInt</a> (長整数型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#string_type">String</a> (文字列型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#boolean_type">Boolean</a> (論理型)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#symbol_type">Symbol</a> (シンボル型、ES2015 で新登場)</li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#objects">Object</a> (オブジェクト型)
-  <ul>
-   <li>{{jsxref("Function")}} (関数)</li>
-   <li>{{jsxref("Array")}} (配列)</li>
-   <li>{{jsxref("Date")}} (日付)</li>
-   <li>{{jsxref("RegExp")}} (正規表現)</li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#null_type">null</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures#undefined_type">undefined</a></li>
-</ul>
+- [Number](/ja/docs/Web/JavaScript/Data_structures#number_type) (数値型)
+- [BigInt](/ja/docs/Web/JavaScript/Data_structures#bigint_type) (長整数型)
+- [String](/ja/docs/Web/JavaScript/Data_structures#string_type) (文字列型)
+- [Boolean](/ja/docs/Web/JavaScript/Data_structures#boolean_type) (論理型)
+- [Symbol](/ja/docs/Web/JavaScript/Data_structures#symbol_type) (シンボル型、ES2015 で新登場)
+- [Object](/ja/docs/Web/JavaScript/Data_structures#objects) (オブジェクト型)
 
-<p>さらにいくつかの組み込み {{jsxref("Error")}} 型もあります。しかし、最初の図のままでいく方が物事はとても簡単になるでしょうから、当面は最初の図で説明します。</p>
+  - {{jsxref("Function")}} (関数)
+  - {{jsxref("Array")}} (配列)
+  - {{jsxref("Date")}} (日付)
+  - {{jsxref("RegExp")}} (正規表現)
 
-<h2 id="Numbers">数値</h2>
+- [null](/ja/docs/Web/JavaScript/Data_structures#null_type)
+- [undefined](/ja/docs/Web/JavaScript/Data_structures#undefined_type)
 
-<p>ECMAScript には 2 つの組み込み数値型があります。 <strong>Number</strong> と <strong>BigInt</strong> です。</p>
+さらにいくつかの組み込み {{jsxref("Error")}} 型もあります。しかし、最初の図のままでいく方が物事はとても簡単になるでしょうから、当面は最初の図で説明します。
 
-<p>Number 型は<a href="https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">IEEE 754 倍精度 64 ビットバイナリー値</a> (-(2<sup>53</sup> − 1) と 2<sup>53</sup> − 1 の間の数) です。そして、この記事や他の MDN の記事で「整数」という場合は、ふつう Number 値を使った整数の<em>表現</em>を意味しています。しかし、このような Number 値は本物の整数ではないので、少し注意が必要です。以下の例を見てください。</p>
+## 数値
 
-<pre class="brush: js">console.log(3 / 2);             // 1.5, 1 <em>ではない</em>
-console.log(Math.floor(3 / 2)); // 1</pre>
+ECMAScript には 2 つの組み込み数値型があります。 **Number** と **BigInt** です。
 
-<p>したがって、<em>見かけ上は整数</em>でも、実際には<em>暗黙的に浮動小数点数</em>となります。</p>
+Number 型は[IEEE 754 倍精度 64 ビットバイナリー値](https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) (-(253 − 1) と 253 − 1 の間の数) です。そして、この記事や他の MDN の記事で「整数」という場合は、ふつう Number 値を使った整数の*表現*を意味しています。しかし、このような Number 値は本物の整数ではないので、少し注意が必要です。以下の例を見てください。
 
-<p>また、次のようなことに注意してください。</p>
+```js
+console.log(3 / 2);             // 1.5, 1 ではない
+console.log(Math.floor(3 / 2)); // 1
+```
 
-<pre class="brush: js">0.1 + 0.2 == 0.30000000000000004;
-</pre>
+したがって、*見かけ上は整数*でも、実際には*暗黙的に浮動小数点数*となります。
 
-<p>実のところ、整数値は 32 ビット整数として扱われます。また一部の実装では、32 ビット整数値ではなく Number で有効な命令の実行を求められるまでの間、32 ビット整数値として保存します。これはビット演算を行う際に重要なことです。</p>
+また、次のようなことに注意してください。
 
-<p>標準的な<a href="/ja/docs/Web/JavaScript/Reference/Operators#arithmetic_operators">算術演算子</a>に対応しています。例えば、足し算、引き算、モジュロ (剰余) などです。さらに、これは前に言及していなかったのですが、より高度な数学関数や定数を扱う {{jsxref("Math")}} という組み込みオブジェクトもあります。</p>
+```js
+0.1 + 0.2 == 0.30000000000000004;
+```
 
-<pre class="brush: js">Math.sin(3.5);
+実のところ、整数値は 32 ビット整数として扱われます。また一部の実装では、32 ビット整数値ではなく Number で有効な命令の実行を求められるまでの間、32 ビット整数値として保存します。これはビット演算を行う際に重要なことです。
+
+標準的な[算術演算子](/ja/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)に対応しています。例えば、足し算、引き算、モジュロ (剰余) などです。さらに、これは前に言及していなかったのですが、より高度な数学関数や定数を扱う {{jsxref("Math")}} という組み込みオブジェクトもあります。
+
+```js
+Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
-</pre>
+```
 
-<p>組み込みの {{jsxref("Global_Objects/parseInt", "parseInt()")}} 関数を使うことで、文字列を整数に変換することができます。この関数は省略可能な第 2 引数として変換の基数を取りますが、この引数を常に指定してください。</p>
+組み込みの {{jsxref("Global_Objects/parseInt", "parseInt()")}} 関数を使うことで、文字列を整数に変換することができます。この関数は省略可能な第 2 引数として変換の基数を取りますが、この引数を常に指定してください。
 
-<pre class="brush: js">parseInt('123', 10); // 123
+```js
+parseInt('123', 10); // 123
 parseInt('010', 10); // 10
-</pre>
+```
 
-<p>古いブラウザーでは、 "0" から始まる文字列を 8 進数 (基数 8) とみなしますが、これは 2013 年以降のブラウザーにはあてはまりません。文字列の書式を理解していなければ、古いブラウザーは驚くような結果になることがあります。</p>
+古いブラウザーでは、 "0" から始まる文字列を 8 進数 (基数 8) とみなしますが、これは 2013 年以降のブラウザーにはあてはまりません。文字列の書式を理解していなければ、古いブラウザーは驚くような結果になることがあります。
 
-<pre class="brush: js">parseInt('010');  //  8
+```js
+parseInt('010');  //  8
 parseInt('0x10'); // 16
-</pre>
+```
 
-<p>この例では、{{jsxref("Global_Objects/parseInt", "parseInt()")}} が最初の文字列を先頭の 0 から 8 進数として、また 2 番目の文字列を先頭の "0x" から 16 進数として扱われたことがわかります。<em>16 進数表記は現在も有効です</em>。8 進数のみ削除されました。</p>
+この例では、{{jsxref("Global_Objects/parseInt", "parseInt()")}} が最初の文字列を先頭の 0 から 8 進数として、また 2 番目の文字列を先頭の "0x" から 16 進数として扱われたことがわかります。_16 進数表記は現在も有効です_。8 進数のみ削除されました。
 
-<p>もし 2 進数を整数に変換したいなら、単純に基数を変えましょう。</p>
+もし 2 進数を整数に変換したいなら、単純に基数を変えましょう。
 
-<pre class="brush: js">parseInt('11', 2); // 3
-</pre>
+```js
+parseInt('11', 2); // 3
+```
 
-<p>同様に浮動小数点数への変換を行う、組み込みの {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 関数があります。 {{jsxref("Global_Objects/parseInt", "parseInt()")}} と異なり、 <code>parseFloat()</code> では基数は常に 10 が用いられます。</p>
+同様に浮動小数点数への変換を行う、組み込みの {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 関数があります。 {{jsxref("Global_Objects/parseInt", "parseInt()")}} と異なり、 `parseFloat()` では基数は常に 10 が用いられます。
 
-<p>また、単項演算子 <code>+</code> を使って値を数値に変換することもできます。</p>
+また、単項演算子 `+` を使って値を数値に変換することもできます。
 
-<pre class="brush: js">+ '42';   // 42
+```js
++ '42';   // 42
 + '010';  // 10
 + '0x10'; // 16
-</pre>
+```
 
-<p>もし文字列が数値でない場合、 {{jsxref("NaN")}} (非数、"Not a Number" の略) と呼ばれる特別な値が返されます。</p>
+もし文字列が数値でない場合、 {{jsxref("NaN")}} (非数、"Not a Number" の略) と呼ばれる特別な値が返されます。
 
-<pre class="brush: js">parseInt('hello', 10); // NaN
-</pre>
+```js
+parseInt('hello', 10); // NaN
+```
 
-<p><code>NaN</code> には毒性があります。これを算術演算に入力として与えても、その結果は同様に <code>NaN</code> になるのです。</p>
+`NaN` には毒性があります。これを算術演算に入力として与えても、その結果は同様に `NaN` になるのです。
 
-<pre class="brush: js">NaN + 5; // NaN
-</pre>
+```js
+NaN + 5; // NaN
+```
 
-<p><code>NaN</code> であるかどうかを確実に確認するには、組み込みの {{jsxref("Number.isNaN", "Number.isNaN()")}} 関数を使用してください。この関数は、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN#description">名前が示す通りの動作</a>をします。</p>
+`NaN` であるかどうかを確実に確認するには、組み込みの {{jsxref("Number.isNaN", "Number.isNaN()")}} 関数を使用してください。この関数は、[名前が示す通りの動作](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN#description)をします。
 
-<pre class="brush: js">Number.isNaN(NaN); // true
+```js
+Number.isNaN(NaN); // true
 Number.isNaN('hello'); // false
 Number.isNaN('1'); // false
 Number.isNaN(undefined); // false
 Number.isNaN({}); // false
 Number.isNaN([1]) // false
 Number.isNaN([1,2]) // false
-</pre>
+```
 
-<p>しかし、 <code>NaN</code> であるかどうかをグローバル関数の {{jsxref("Global_Objects/isNaN", "isNaN()")}} で確認しないでください。<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior">これは直感的でない動作</a>をします。</p>
+しかし、 `NaN` であるかどうかをグローバル関数の {{jsxref("Global_Objects/isNaN", "isNaN()")}} で確認しないでください。[これは直感的でない動作](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior)をします。
 
-<pre class="brush: js">isNaN('hello'); // true
+```js
+isNaN('hello'); // true
 isNaN('1'); // false
 isNaN(undefined); // true
 isNaN({}); // true
 isNaN([1]) // false
 isNaN([1,2]) // true
-</pre>
+```
 
-<p>JavaScript はまた、特別な値 {{jsxref("Infinity")}} と <code>-Infinity</code> を持っています。</p>
+JavaScript はまた、特別な値 {{jsxref("Infinity")}} と `-Infinity` を持っています。
 
-<pre class="brush: js"> 1 / 0; //  Infinity
+```js
+ 1 / 0; //  Infinity
 -1 / 0; // -Infinity
-</pre>
+```
 
-<p><code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> であるかをどうかは、組み込みの {{jsxref("Global_Objects/isFinite", "isFinite()")}} 関数を使用して確認することができます。</p>
+`Infinity`、`-Infinity`、`NaN` であるかをどうかは、組み込みの {{jsxref("Global_Objects/isFinite", "isFinite()")}} 関数を使用して確認することができます。
 
-<pre class="brush: js">isFinite(1 / 0); // false
+```js
+isFinite(1 / 0); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
-</pre>
+```
 
-<div class="note"><p><strong>注:</strong> {{jsxref("Global_Objects/parseInt", "parseInt()")}} および {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 関数は文字列を、規定の数値書式に該当しない文字が現れるまで解釈し、その箇所までの数値を返します。一方、"+" 演算子は適切でない文字を含む文字列を <code>NaN</code> に変換します。コンソールから、文字列 "10.2abc" をそれぞれの方法で解釈させるとその違いがよくわかるでしょう。</p></div>
+> **Note:** **注:** {{jsxref("Global_Objects/parseInt", "parseInt()")}} および {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 関数は文字列を、規定の数値書式に該当しない文字が現れるまで解釈し、その箇所までの数値を返します。一方、"+" 演算子は適切でない文字を含む文字列を `NaN` に変換します。コンソールから、文字列 "10.2abc" をそれぞれの方法で解釈させるとその違いがよくわかるでしょう。
 
-<h2 id="Strings">文字列</h2>
+## 文字列
 
-<p>JavaScript における文字列は、<a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#unicode">Unicode 文字</a>の並びです。これは、国際化を扱う必要があった誰もが歓迎する知らせでしょう。より正確に言えば UTF-16 コード単位の連なったものであり、つまりそれぞれのコード単位は 16 ビットの整数で表されます。また、それぞれの Unicode 文字は 1 または 2 個のコード単位で表します。</p>
+JavaScript における文字列は、[Unicode 文字](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#unicode)の並びです。これは、国際化を扱う必要があった誰もが歓迎する知らせでしょう。より正確に言えば UTF-16 コード単位の連なったものであり、つまりそれぞれのコード単位は 16 ビットの整数で表されます。また、それぞれの Unicode 文字は 1 または 2 個のコード単位で表します。
 
-<p>もし単一の文字を表したいなら、単純に 1 文字で構成された文字列を使います。</p>
+もし単一の文字を表したいなら、単純に 1 文字で構成された文字列を使います。
 
-<p>文字列の長さ (コード単位) を知るには、その文字列の <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length">length</a></code> プロパティにアクセスしましょう。</p>
+文字列の長さ (コード単位) を知るには、その文字列の [`length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length) プロパティにアクセスしましょう。
 
-<pre class="brush: js">'hello'.length; // 5
-</pre>
+```js
+'hello'.length; // 5
+```
 
-<p>ここで初めて JavaScript のオブジェクトに触れました。文字列を{{jsxref("Object", "オブジェクト", "", 1)}}のように使うことができることには、既に触れましたっけ？文字列にも{{jsxref("String", "メソッド", "#instance_methods", 1)}}があり、文字列を操作したり、文字列に関する情報にアクセスしたりすることができます。</p>
+ここで初めて JavaScript のオブジェクトに触れました。文字列を{{jsxref("Object", "オブジェクト", "", 1)}}のように使うことができることには、既に触れましたっけ？文字列にも{{jsxref("String", "メソッド", "#instance_methods", 1)}}があり、文字列を操作したり、文字列に関する情報にアクセスしたりすることができます。
 
-<pre class="brush: js">'hello'.charAt(0); // "h"
+```js
+'hello'.charAt(0); // "h"
 'hello, world'.replace('world', 'mars'); // "hello, mars"
 'hello'.toUpperCase(); // "HELLO"
-</pre>
+```
 
-<h2 id="Other_types">その他の型</h2>
+## その他の型
 
-<p>JavaScript は {{jsxref("null")}} と {{jsxref("undefined")}} を区別します。 <code>null</code> は、意図的に値がないことを示す値です (また、<code>null</code> キーワードによってのみアクセスできます)。対して <code>undefined</code> とは、初期化されていない値 — すなわち、まだ値が代入されていないことを示す <code>undefined</code> 型の値です。変数については後で話しますが、 JavaScript では値を代入しないで変数を宣言することができるのです。そのようにした場合、その変数の型は <code>undefined</code> です。実際は、<code>undefined</code> は定数です。</p>
+JavaScript は {{jsxref("null")}} と {{jsxref("undefined")}} を区別します。 `null` は、意図的に値がないことを示す値です (また、`null` キーワードによってのみアクセスできます)。対して `undefined` とは、初期化されていない値 — すなわち、まだ値が代入されていないことを示す `undefined` 型の値です。変数については後で話しますが、 JavaScript では値を代入しないで変数を宣言することができるのです。そのようにした場合、その変数の型は `undefined` です。実際は、`undefined` は定数です。
 
-<p>JavaScript は <code>true</code> と <code>false</code> (これらはともにキーワードです) を取りうる値とする論理型を持っています。どんな値でも以下の規則に基づいて論理値に変換できます。</p>
+JavaScript は `true` と `false` (これらはともにキーワードです) を取りうる値とする論理型を持っています。どんな値でも以下の規則に基づいて論理値に変換できます。
 
-<ol>
- <li><code>false</code>、<code>0</code>、空文字列 (<code>""</code>)、<code>NaN</code>、<code>null</code>、<code>undefined</code> は、すべて <code>false</code> になる。</li>
- <li>その他の値はすべて <code>true</code> になる。</li>
-</ol>
+1.  `false`、`0`、空文字列 (`""`)、`NaN`、`null`、`undefined` は、すべて `false` になる。
+2.  その他の値はすべて `true` になる。
 
-<p><code>Boolean()</code> 関数を使うことで、明示的にこの変換を行うことができます。</p>
+`Boolean()` 関数を使うことで、明示的にこの変換を行うことができます。
 
-<pre class="brush: js">Boolean('');  // false
+```js
+Boolean('');  // false
 Boolean(234); // true
-</pre>
+```
 
-<p>しかし、これはほとんど必要ありません。 JavaScript は、 <code>if</code> 文の中 (下記参照) のように論理値が期待される場面で、暗黙にこの変換を行うからです。このため、ときどき "true values" または "false values" と言うことがありますが、これは論理値に変換されるときにそれぞれ <code>true</code> または <code>false</code> になる値という意味です。他にも、これらの値はそれぞれ "truthy" または "falsy" と呼ばれることがあります。</p>
+しかし、これはほとんど必要ありません。 JavaScript は、 `if` 文の中 (下記参照) のように論理値が期待される場面で、暗黙にこの変換を行うからです。このため、ときどき "true values" または "false values" と言うことがありますが、これは論理値に変換されるときにそれぞれ `true` または `false` になる値という意味です。他にも、これらの値はそれぞれ "truthy" または "falsy" と呼ばれることがあります。
 
-<p><code>&amp;&amp;</code> (論理 <em>AND</em>) や <code>||</code> (論理 <em>OR</em>)、<code>!</code> (論理 <em>NOT</em>) などの論理演算がサポートされています (下記参照)。</p>
+`&&` (論理 _AND_) や `||` (論理 _OR_)、`!` (論理 _NOT_) などの論理演算がサポートされています (下記参照)。
 
-<h2 id="Variables">変数</h2>
+## 変数
 
-<p>JavaScript では、新しい変数を宣言するのに <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code>、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/const">const</a></code>、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/var">var</a></code> の 3 つのキーワードのいずれかを使用します。</p>
+JavaScript では、新しい変数を宣言するのに [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)、[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の 3 つのキーワードのいずれかを使用します。
 
-<p><strong><code>let</code></strong> は、ブロックレベルの変数を宣言できます。宣言した変数は、変数を包含する<em>ブロック</em>から使用できます。</p>
+**`let`** は、ブロックレベルの変数を宣言できます。宣言した変数は、変数を包含する*ブロック*から使用できます。
 
-<pre class="brush: js">let a;
+```js
+let a;
 let name = 'Simon';
-</pre>
+```
 
-<p>以下の例は、<code><strong>let</strong></code> で宣言した変数のスコープを示しています。</p>
+以下の例は、**`let`** で宣言した変数のスコープを示しています。
 
-<pre class="brush: js">// ここでは myLetVariable が *見えません*
+```js
+// ここでは myLetVariable が *見えません*
 
-for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
+for (let myLetVariable = 0; myLetVariable < 5; myLetVariable++) {
   // ここだけで myLetVariable が見えます
 }
 
 // ここでは myLetVariable が *見えません*
+```
 
-</pre>
+**`const`** は、値を変更することを意図しない変数を宣言することができます。宣言した変数は、変数を宣言した*ブロック*から使用できます。
 
-<p><code><strong>const</strong></code> は、値を変更することを意図しない変数を宣言することができます。宣言した変数は、変数を宣言した<em>ブロック</em>から使用できます。</p>
+```js
+const Pi = 3.14; // 変数 Pi を設定
+Pi = 1; // 定数の変数は変更できないため、エラーが発生します
+```
 
-<pre class="brush: js">const Pi = 3.14; // 変数 Pi を設定
-Pi = 1; // 定数の変数は変更できないため、エラーが発生します</pre>
+**`var`** は、もっとも一般的な宣言キーワードです。こちらは、他の 2 つのキーワードのような制約がありません。これは、伝統的に JavaScript で変数を宣言する唯一の方法であったためです。 **`var`** キーワードで宣言した変数は、変数を宣言した*関数*から使用できます。
 
-<p><code><strong>var</strong></code> は、もっとも一般的な宣言キーワードです。こちらは、他の 2 つのキーワードのような制約がありません。これは、伝統的に JavaScript で変数を宣言する唯一の方法であったためです。 <strong><code>var</code></strong> キーワードで宣言した変数は、変数を宣言した<em>関数</em>から使用できます。</p>
+```js
+var a;
+var name = 'Simon';
+```
 
-<pre class="brush: js">var a;
-var name = 'Simon';</pre>
+以下の例は、 **`var`** で宣言した変数のスコープを示しています。
 
-<p>以下の例は、 <strong><code>var</code></strong> で宣言した変数のスコープを示しています。</p>
+```js
+// ここでは myVarVariable が *見えます*
 
-<pre class="brush: js">// ここでは myVarVariable が *見えます*
-
-for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
+for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
   // myVarVariable は関数全体で見えます
 }
 
 // ここでは myVarVariable が *見えます*
-</pre>
+```
 
-<p>値を代入せずに変数を宣言すると、その型は <code>undefined</code> になります。</p>
+値を代入せずに変数を宣言すると、その型は `undefined` になります。
 
-<p>Java など他の言語との重要な相違点は、 JavaScript ではブロックがスコープを持たないことです。関数のみがスコープを持ちます。よって、変数が複合文内 (例えば <code>if</code> 制御構造の内部) で <code>var</code> を用いて定義された場合でも、その変数は関数全体でアクセス可能です。ただし ECMAScript 2015 より、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> および <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 宣言でブロックスコープの変数を作成することができます。</p>
+Java など他の言語との重要な相違点は、 JavaScript ではブロックがスコープを持たないことです。関数のみがスコープを持ちます。よって、変数が複合文内 (例えば `if` 制御構造の内部) で `var` を用いて定義された場合でも、その変数は関数全体でアクセス可能です。ただし ECMAScript 2015 より、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) 宣言でブロックスコープの変数を作成することができます。
 
-<h2 id="Operators">演算子</h2>
+## 演算子
 
-<p>JavaScript の算術演算子は、<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>、そして剰余演算子の <code>%</code> (<a href="/ja/docs/Web/JavaScript/Reference/Operators#remainder_%28%29">モジュロと同じです</a>) です。値は <code>=</code> を使って代入されます。また <code>+=</code> や <code>-=</code> のような複合代入文もあります。これらは <code>x = x <em>演算子</em> y</code> と展開できるものです。</p>
+JavaScript の算術演算子は、`+`、`-`、`*`、`/`、そして剰余演算子の `%` ([モジュロと同じです](/ja/docs/Web/JavaScript/Reference/Operators#remainder_%28%29)) です。値は `=` を使って代入されます。また `+=` や `-=` のような複合代入文もあります。これらは `x = x 演算子 y` と展開できるものです。
 
-<pre class="brush: js">x += 5;
+```js
+x += 5;
 x = x + 5;
-</pre>
+```
 
-<p><code>++</code> や <code>--</code> を使ってインクリメントやデクリメントできます。これらは前置あるいは後置演算子として使うことができます。</p>
+`++` や `--` を使ってインクリメントやデクリメントできます。これらは前置あるいは後置演算子として使うことができます。
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Operators#addition"><code>+</code> 演算子</a>は文字列の結合も行います。</p>
+[`+` 演算子](/ja/docs/Web/JavaScript/Reference/Operators#addition)は文字列の結合も行います。
 
-<pre class="brush: js">'hello' + ' world'; // "hello world"
-</pre>
+```js
+'hello' + ' world'; // "hello world"
+```
 
-<p>文字列を数字 (や他の値) に足すと、すべてのものが最初に文字列に変換されます。このことはミスを誘うかもしれません。</p>
+文字列を数字 (や他の値) に足すと、すべてのものが最初に文字列に変換されます。このことはミスを誘うかもしれません。
 
-<pre class="brush: js">'3' + 4 + 5;  // "345"
+```js
+'3' + 4 + 5;  // "345"
  3 + 4 + '5'; // "75"
-</pre>
+```
 
-<p>空文字列を足すのは、何かを文字列に変換する便利な方法です。</p>
+空文字列を足すのは、何かを文字列に変換する便利な方法です。
 
-<p>JavaScript における <a href="/ja/docs/Web/JavaScript/Reference/Operators">比較</a> は、<code>&lt;</code> や <code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code> を使って行うことができます。これらは文字列と数値のどちらでも機能します。等価性はちょっと明快ではありません。二重イコール演算子は、異なる型を与えると型強制を行います。これは時に面白い結果を返します。</p>
+JavaScript における [比較](/ja/docs/Web/JavaScript/Reference/Operators) は、`<` や `>`、`<=`、`>=` を使って行うことができます。これらは文字列と数値のどちらでも機能します。等価性はちょっと明快ではありません。二重イコール演算子は、異なる型を与えると型強制を行います。これは時に面白い結果を返します。
 
-<pre class="brush: js">123 == '123'; // true
+```js
+123 == '123'; // true
 1 == true; // true
-</pre>
+```
 
-<p>型強制を防いで厳密な比較を行うようにする場合は、三重イコール演算子を使います。</p>
+型強制を防いで厳密な比較を行うようにする場合は、三重イコール演算子を使います。
 
-<pre class="brush: js">123 === '123'; // false
+```js
+123 === '123'; // false
 1 === true;    // false
-</pre>
+```
 
-<p><code>!=</code> と <code>!==</code> 演算子もあります。</p>
+`!=` と `!==` 演算子もあります。
 
-<p>JavaScript は <a href="/ja/docs/Web/JavaScript/Reference/Operators">ビット演算子</a> も持っています。使いたいなら、ちゃんとありますよ。</p>
+JavaScript は [ビット演算子](/ja/docs/Web/JavaScript/Reference/Operators) も持っています。使いたいなら、ちゃんとありますよ。
 
-<h2 id="Control_structures">制御構造</h2>
+## 制御構造
 
-<p>JavaScript は C 言語ファミリーの他の言語とよく似た制御構造セットを持っています。条件文は <code>if</code> と <code>else</code> でサポートされています。必要ならこれらを連鎖させることもできます。</p>
+JavaScript は C 言語ファミリーの他の言語とよく似た制御構造セットを持っています。条件文は `if` と `else` でサポートされています。必要ならこれらを連鎖させることもできます。
 
-<pre class="brush: js">var name = 'kittens';
+```js
+var name = 'kittens';
 if (name === 'puppies') {
   name += ' woof';
 } else if (name === 'kittens') {
@@ -299,11 +319,12 @@ if (name === 'puppies') {
   name += '!';
 }
 name === 'kittens meow';
-</pre>
+```
 
-<p>JavaScript は <code>while</code> ループと <code>do-while</code> ループを持っています。1 つ目は普通のループ処理に適しており、2 つ目はループの本体が少なくとも 1 回は実行されるようにしたいときのループです。</p>
+JavaScript は `while` ループと `do-while` ループを持っています。1 つ目は普通のループ処理に適しており、2 つ目はループの本体が少なくとも 1 回は実行されるようにしたいときのループです。
 
-<pre class="brush: js">while (true) {
+```js
+while (true) {
   // 無限ループ!
 }
 
@@ -311,47 +332,54 @@ var input;
 do {
   input = get_input();
 } while (inputIsNotValid(input));
-</pre>
+```
 
-<p>JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Statements/for"><code>for</code> ループ</a>は C や Java のそれと同じです。これはループの制御情報を 1 行で与えることができます。</p>
+JavaScript の [`for` ループ](/ja/docs/Web/JavaScript/Reference/Statements/for)は C や Java のそれと同じです。これはループの制御情報を 1 行で与えることができます。
 
-<pre class="brush: js">for (var i = 0; i &lt; 5; i++) {
+```js
+for (var i = 0; i < 5; i++) {
   // 5 回実行されます
 }
-</pre>
+```
 
-<p>JavaScript にはこの他に、特徴的な for ループが 2 つあります。ひとつは <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a> です。</p>
+JavaScript にはこの他に、特徴的な for ループが 2 つあります。ひとつは [`for`...`of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) です。
 
-<pre class="brush: js">for (let value of array) {
+```js
+for (let value of array) {
   // 値に関する処理
 }
-</pre>
+```
 
-<p>もうひとつは <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> です。</p>
+もうひとつは [`for`...`in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) です。
 
-<pre class="brush: js">for (let property in object) {
+```js
+for (let property in object) {
   // オブジェクトのプロパティに関する処理
 }
-</pre>
+```
 
-<p><code>&amp;&amp;</code> と <code>||</code> 演算子は、1 つ目のオペランドによって 2 つ目のオペランドを評価するか否かが決まる短絡論理 (short-circuit logic) を採用しています。これはあるオブジェクトの属性にアクセスする前に、それが null オブジェクトかをチェックするのに便利です。</p>
+`&&` と `||` 演算子は、1 つ目のオペランドによって 2 つ目のオペランドを評価するか否かが決まる短絡論理 (short-circuit logic) を採用しています。これはあるオブジェクトの属性にアクセスする前に、それが null オブジェクトかをチェックするのに便利です。
 
-<pre class="brush: js">var name = o &amp;&amp; o.getName();
-</pre>
+```js
+var name = o && o.getName();
+```
 
-<p>あるいは値の格納にも便利です (falsy な値は無効であるとき)。</p>
+あるいは値の格納にも便利です (falsy な値は無効であるとき)。
 
-<pre class="brush: js">var name = cachedName || (cachedName = getName());
-</pre>
+```js
+var name = cachedName || (cachedName = getName());
+```
 
-<p>JavaScript は条件による式のための三項演算子を持っています。</p>
+JavaScript は条件による式のための三項演算子を持っています。
 
-<pre class="brush: js">var allowed = (age &gt; 18) ? 'yes' : 'no';
-</pre>
+```js
+var allowed = (age > 18) ? 'yes' : 'no';
+```
 
-<p><code>switch</code> 文はある数値や文字列を元にした複数分岐に使われます。</p>
+`switch` 文はある数値や文字列を元にした複数分岐に使われます。
 
-<pre class="brush: js">switch (action) {
+```js
+switch (action) {
   case 'draw':
     drawIt();
     break;
@@ -361,11 +389,12 @@ do {
   default:
     doNothing();
 }
-</pre>
+```
 
-<p>もし <code>break</code> 文を入れなければ、処理は次の段階へ「落下」 (fall through) します。この動作が望むものであることはまれでしょう — 実際にそれが意図的な落下であれば、デバッグの助けになるようにコメントでラベル付しておくといいでしょう。</p>
+もし `break` 文を入れなければ、処理は次の段階へ「落下」 (fall through) します。この動作が望むものであることはまれでしょう — 実際にそれが意図的な落下であれば、デバッグの助けになるようにコメントでラベル付しておくといいでしょう。
 
-<pre class="brush: js">switch (a) {
+```js
+switch (a) {
   case 1: // 落下
   case 2:
     eatIt();
@@ -373,50 +402,52 @@ do {
   default:
     doNothing();
 }
-</pre>
+```
 
-<p>default 節は省略できます。必要ならば、switch 部と case のどちらにも式を置くことができます。比較はこれら 2 つの間で <code>===</code> 演算子を使って行われます。</p>
+default 節は省略できます。必要ならば、switch 部と case のどちらにも式を置くことができます。比較はこれら 2 つの間で `===` 演算子を使って行われます。
 
-<pre class="brush: js">switch (1 + 3) {
+```js
+switch (1 + 3) {
   case 2 + 2:
     yay();
     break;
   default:
     neverhappens();
 }
-</pre>
+```
 
-<h2 id="Objects">オブジェクト</h2>
+## オブジェクト
 
-<p>JavaScript のオブジェクトは、名前と値のペアの単純なコレクションであると考えることができます。これは以下のものに似ています。</p>
+JavaScript のオブジェクトは、名前と値のペアの単純なコレクションであると考えることができます。これは以下のものに似ています。
 
-<ul>
- <li>Python の辞書型</li>
- <li>Perl や Ruby のハッシュ</li>
- <li>C や C++ のハッシュテーブル</li>
- <li>Java の HashMap クラス</li>
- <li>PHP の連想配列</li>
-</ul>
+- Python の辞書型
+- Perl や Ruby のハッシュ
+- C や C++ のハッシュテーブル
+- Java の HashMap クラス
+- PHP の連想配列
 
-<p>このデータ構造がこれほど広く使われているのは、その汎用性の高さを物語っています。 JavaScript では (コアデータ型を除いて) すべてのものはオブジェクトなので、どんな JavaScript のプログラムでは当然、ハッシュテーブルの参照が大量に行われます。ハッシュテーブルが高速なのは良いことですね。</p>
+このデータ構造がこれほど広く使われているのは、その汎用性の高さを物語っています。 JavaScript では (コアデータ型を除いて) すべてのものはオブジェクトなので、どんな JavaScript のプログラムでは当然、ハッシュテーブルの参照が大量に行われます。ハッシュテーブルが高速なのは良いことですね。
 
-<p>「名前」部は JavaScript における文字列であるのに対し、値は JavaScript のどんな値でも ― さらなるオブジェクトでも ― 構いません。この仕様が任意の複雑なデータ構造を作ることを可能にしています。</p>
+「名前」部は JavaScript における文字列であるのに対し、値は JavaScript のどんな値でも ― さらなるオブジェクトでも ― 構いません。この仕様が任意の複雑なデータ構造を作ることを可能にしています。
 
-<p>空のオブジェクトを生成する 2 つの基本的な方法があります。</p>
+空のオブジェクトを生成する 2 つの基本的な方法があります。
 
-<pre class="brush: js">var obj = new Object();
-</pre>
+```js
+var obj = new Object();
+```
 
-<p>そして、</p>
+そして、
 
-<pre class="brush: js">var obj = {};
-</pre>
+```js
+var obj = {};
+```
 
-<p>これらは意味的に等価です。2 つ目はオブジェクトリテラル構文と呼ばれ、こちらの方がより便利です。オブジェクトリテラル構文は JSON 書式の中核でもあり、こちらを採用するべきです。</p>
+これらは意味的に等価です。2 つ目はオブジェクトリテラル構文と呼ばれ、こちらの方がより便利です。オブジェクトリテラル構文は JSON 書式の中核でもあり、こちらを採用するべきです。
 
-<p>オブジェクトリテラル構文はオブジェクト全体を初期化するのに使えます。</p>
+オブジェクトリテラル構文はオブジェクト全体を初期化するのに使えます。
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   name: 'Carrot',
   _for: 'Max', // 'for' は予約語であるため、代わりに '_for' を使用します
   details: {
@@ -424,17 +455,19 @@ do {
     size: 12
   }
 };
-</pre>
+```
 
-<p>属性へのアクセスは同時に連鎖させることができます。</p>
+属性へのアクセスは同時に連鎖させることができます。
 
-<pre class="brush: js">obj.details.color; // orange
+```js
+obj.details.color; // orange
 obj['details']['size']; // 12
-</pre>
+```
 
-<p>以下の例ではオブジェクトのプロトタイプ (<code>Person</code>) と、プロトタイプのインスタンス (<code>you</code>) を生成しています。</p>
+以下の例ではオブジェクトのプロトタイプ (`Person`) と、プロトタイプのインスタンス (`you`) を生成しています。
 
-<pre class="brush: js">function Person(name, age) {
+```js
+function Person(name, age) {
   this.name = name;
   this.age = age;
 }
@@ -442,214 +475,185 @@ obj['details']['size']; // 12
 // オブジェクトを定義する
 var you = new Person('You', 24);
 // "You" という名前で、年齢が 24 歳の新たな Person を作成しました
-</pre>
+```
 
-<p><strong>一度作ってしまえば</strong>、オブジェクトのプロパティには下記の 2 つの方法のいずれかで再びアクセスすることができます。</p>
+**一度作ってしまえば**、オブジェクトのプロパティには下記の 2 つの方法のいずれかで再びアクセスすることができます。
 
-<pre class="brush: js">// ドット記法
+```js
+// ドット記法
 obj.name = 'Simon';
 var name = obj.name;
-</pre>
+```
 
-<p>そして...</p>
+そして...
 
-<pre class="brush: js">// ブラケット記法
+```js
+// ブラケット記法
 obj['name'] = 'Simon';
 var name = obj['name'];
 // 変数をキー定義に使用できる
 var user = prompt('what is your key?')
 obj[user] = prompt('what is its value?')
-</pre>
+```
 
-<p>これらもまた意味的に等価です。2 つ目の方法はプロパティの名前を文字列として与えるという利点があり、つまりその名前を実行時に計算できることを意味します。ただ、この方法を用いると JavaScript エンジンや minifier による最適化が適用されなくなります。またこの方法は、<a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">予約語</a> と同じ名前のプロパティを設定したり取得したりするのに使うことができます。</p>
+これらもまた意味的に等価です。2 つ目の方法はプロパティの名前を文字列として与えるという利点があり、つまりその名前を実行時に計算できることを意味します。ただ、この方法を用いると JavaScript エンジンや minifier による最適化が適用されなくなります。またこの方法は、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) と同じ名前のプロパティを設定したり取得したりするのに使うことができます。
 
-<pre class="brush: js">obj.for = 'Simon'; // 構文エラー。'for' が予約語であるため
+```js
+obj.for = 'Simon'; // 構文エラー。'for' が予約語であるため
 obj['for'] = 'Simon'; // うまく動きます
-</pre>
+```
 
-<div class="note">
-<p><strong>注:</strong> ECMAScript 第 5 版より、予約語をオブジェクトのプロパティ名として「そのまま」使用できます。つまりオブジェクトリテラルの定義時に引用符で「括る」必要はありません。 ES5 の<a href="https://es5.github.io/#x7.6.1">仕様</a>を確認してください。</p>
-</div>
+> **Note:** **注:** ECMAScript 第 5 版より、予約語をオブジェクトのプロパティ名として「そのまま」使用できます。つまりオブジェクトリテラルの定義時に引用符で「括る」必要はありません。 ES5 の[仕様](https://es5.github.io/#x7.6.1)を確認してください。
 
-<p>オブジェクトやプロトタイプについて、詳しくは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object">Object.prototype</a> をご覧ください。オブジェクトプロトタイプやオブジェクトプロトタイプチェーンの説明は、<a href="/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">継承とプロトタイプチェーン</a> をご覧ください。</p>
+オブジェクトやプロトタイプについて、詳しくは [Object.prototype](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object) をご覧ください。オブジェクトプロトタイプやオブジェクトプロトタイプチェーンの説明は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) をご覧ください。
 
-<div class="note">
-<p>ECMAScript 2015 より、オブジェクトのキーがブラケット記法を使った変数で定義できるようになりました。 <code>{[phoneType]: 12345}</code> が <code>var userPhone = {}; userPhone[phoneType] = 12345</code> の代わりにできます。</p>
-</div>
+> **Note:** ECMAScript 2015 より、オブジェクトのキーがブラケット記法を使った変数で定義できるようになりました。 `{[phoneType]: 12345}` が `var userPhone = {}; userPhone[phoneType] = 12345` の代わりにできます。
 
-<h2 id="Arrays">配列</h2>
+## 配列
 
-<p>JavaScript における配列は、実はオブジェクトの特殊型です。普通のオブジェクトとほとんど同じように働きます (数値のプロパティは当然 <code>[]</code> の構文でのみアクセスできます) が、しかし配列は '<code>length</code>' という魔法のプロパティを持っています。これは常に配列の一番大きな添字より 1 大きい値を取ります。</p>
+JavaScript における配列は、実はオブジェクトの特殊型です。普通のオブジェクトとほとんど同じように働きます (数値のプロパティは当然 `[]` の構文でのみアクセスできます) が、しかし配列は '`length`' という魔法のプロパティを持っています。これは常に配列の一番大きな添字より 1 大きい値を取ります。
 
-<p>配列を生成する方法のひとつは以下の通りです。</p>
+配列を生成する方法のひとつは以下の通りです。
 
-<pre class="brush: js">var a = new Array();
+```js
+var a = new Array();
 a[0] = 'dog';
 a[1] = 'cat';
 a[2] = 'hen';
 a.length; // 3
-</pre>
+```
 
-<p>より便利な書き方は配列リテラルを使うことです。</p>
+より便利な書き方は配列リテラルを使うことです。
 
-<pre class="brush: js">var a = ['dog', 'cat', 'hen'];
+```js
+var a = ['dog', 'cat', 'hen'];
 a.length; // 3
-</pre>
+```
 
-<p><code>array.length</code> は必ずしも配列中の要素の数ではないことに注意してください。以下の例を考えてみましょう。</p>
+`array.length` は必ずしも配列中の要素の数ではないことに注意してください。以下の例を考えてみましょう。
 
-<pre class="brush: js">var a = ['dog', 'cat', 'hen'];
+```js
+var a = ['dog', 'cat', 'hen'];
 a[100] = 'fox';
 a.length; // 101
-</pre>
+```
 
-<p>思い出してください ― 配列の長さは一番大きな添字より 1 大きい値です。</p>
+思い出してください ― 配列の長さは一番大きな添字より 1 大きい値です。
 
-<p>もし存在しない配列の添字を要求すると、<code>undefined</code> が得られます。</p>
+もし存在しない配列の添字を要求すると、`undefined` が得られます。
 
-<pre class="brush: js">typeof a[90]; // undefined
-</pre>
+```js
+typeof a[90]; // undefined
+```
 
-<p>上記の <code>[]</code> と <code>length</code> を考慮に入れれば、以下の <code>for</code> ループを使って配列を反復処理することができます。</p>
+上記の `[]` と `length` を考慮に入れれば、以下の `for` ループを使って配列を反復処理することができます。
 
-<pre class="brush: js">for (var i = 0; i &lt; a.length; i++) {
+```js
+for (var i = 0; i < a.length; i++) {
   // a[i] について何かする
 }
-</pre>
+```
 
-<p>ES2015 では配列のような反復可能オブジェクト向けに、より正確な <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a> ループが導入されました。</p>
+ES2015 では配列のような反復可能オブジェクト向けに、より正確な [`for`...`of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループが導入されました。
 
-<pre class="brush: js">for (const currentValue of a) {
+```js
+for (const currentValue of a) {
   // currentValue (現在の値) で何かをする
-}</pre>
+}
+```
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> ループを使用して配列を反復処理することもできます。ただし、もし誰かが <code>Array.prototype</code> に新しいプロパティを追加していたら、このループでそれらに対しても反復処理されてしまうので注意してください。よって、この方法は配列に対しては推奨しません。</p>
+[`for`...`in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループを使用して配列を反復処理することもできます。ただし、もし誰かが `Array.prototype` に新しいプロパティを追加していたら、このループでそれらに対しても反復処理されてしまうので注意してください。よって、この方法は配列に対しては推奨しません。
 
-<p>配列を繰り返すもうひとつの方法が、 ECMAScript 5 で追加された <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code> です。</p>
+配列を繰り返すもうひとつの方法が、 ECMAScript 5 で追加された [`forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) です。
 
-<pre class="brush: js">['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
+```js
+['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
   // currentValue (現在の値) または array[index] について何かする
 });
-</pre>
+```
 
-<p>配列に要素を追加したいなら、このようにするのがもっともシンプルです。</p>
+配列に要素を追加したいなら、このようにするのがもっともシンプルです。
 
-<pre class="brush: js">a.push(item);</pre>
+```js
+a.push(item);
+```
 
-<p>配列には多くのメソッドがついてきます。<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array">配列のメソッドに関するドキュメント</a> もご覧ください。</p>
+配列には多くのメソッドがついてきます。[配列のメソッドに関するドキュメント](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) もご覧ください。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">メソッド名</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>a.toString()</code></td>
-   <td>各要素に <code>toString()</code> を適用したものを、カンマ区切りで並べた文字列を返します。</td>
-  </tr>
-  <tr>
-   <td><code>a.toLocaleString()</code></td>
-   <td>各要素に <code>toLocaleString()</code> を適用したものを、カンマ区切りで並べた文字列を返します。</td>
-  </tr>
-  <tr>
-   <td><code>a.concat(item1[, item2[, ...[, itemN]]])</code></td>
-   <td>配列に要素を追加した、新しい配列を返します。</td>
-  </tr>
-  <tr>
-   <td><code>a.join(sep)</code></td>
-   <td>配列を文字列に変換します。値は引数 <code>sep</code> で区切ります。</td>
-  </tr>
-  <tr>
-   <td><code>a.pop()</code></td>
-   <td>最後の要素を取り除いて、その要素を返します。</td>
-  </tr>
-  <tr>
-   <td><code>a.push(item1, ..., itemN)</code></td>
-   <td>配列の末尾に要素を追加します。</td>
-  </tr>
-  <tr>
-   <td><code>a.shift()</code></td>
-   <td>最初の要素を取り除いて、その要素を返します。</td>
-  </tr>
-  <tr>
-   <td><code>a.unshift(item1[, item2[, ...[, itemN]]])</code></td>
-   <td>要素を配列の先頭に挿入します。</td>
-  </tr>
-  <tr>
-   <td><code>a.slice(start[, end])</code></td>
-   <td>部分配列を返します。</td>
-  </tr>
-  <tr>
-   <td><code>a.sort([cmpfn])</code></td>
-   <td>オプションとして比較関数をとります。</td>
-  </tr>
-  <tr>
-   <td><code>a.splice(start, delcount[, item1[, ...[, itemN]]])</code></td>
-   <td>ある部分を削除したり他の追加要素に置き換えることで、配列を修正することができます。</td>
-  </tr>
-  <tr>
-   <td><code>a.reverse()</code></td>
-   <td>配列を反転します。</td>
-  </tr>
- </tbody>
-</table>
+| メソッド名                                           | 説明                                                                                 |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `a.toString()`                                       | 各要素に `toString()` を適用したものを、カンマ区切りで並べた文字列を返します。       |
+| `a.toLocaleString()`                                 | 各要素に `toLocaleString()` を適用したものを、カンマ区切りで並べた文字列を返します。 |
+| `a.concat(item1[, item2[, ...[, itemN]]])`           | 配列に要素を追加した、新しい配列を返します。                                         |
+| `a.join(sep)`                                        | 配列を文字列に変換します。値は引数 `sep` で区切ります。                              |
+| `a.pop()`                                            | 最後の要素を取り除いて、その要素を返します。                                         |
+| `a.push(item1, ..., itemN)`                          | 配列の末尾に要素を追加します。                                                       |
+| `a.shift()`                                          | 最初の要素を取り除いて、その要素を返します。                                         |
+| `a.unshift(item1[, item2[, ...[, itemN]]])`          | 要素を配列の先頭に挿入します。                                                       |
+| `a.slice(start[, end])`                              | 部分配列を返します。                                                                 |
+| `a.sort([cmpfn])`                                    | オプションとして比較関数をとります。                                                 |
+| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | ある部分を削除したり他の追加要素に置き換えることで、配列を修正することができます。   |
+| `a.reverse()`                                        | 配列を反転します。                                                                   |
 
-<h2 id="Functions">関数</h2>
+## 関数
 
-<p>オブジェクトとともに、関数は JavaScript を理解するうえで核となる構成要素です。もっとも基本的な関数は極めてシンプルです。</p>
+オブジェクトとともに、関数は JavaScript を理解するうえで核となる構成要素です。もっとも基本的な関数は極めてシンプルです。
 
-<pre class="brush: js">function add(x, y) {
+```js
+function add(x, y) {
   var total = x + y;
   return total;
 }
-</pre>
+```
 
-<p>これは基本的な関数を例示しています。JavaScript の関数は 0 以上の名前のついた引数を取ることができます。関数の本体は好きなだけたくさんの文を含ませることができ、またその関数内で局所的な変数を宣言することができます。<code>return</code> 文は好きなときに関数を終了し値を返すために使うことができます。もし return 文が使われなかったら (あるいは値を持たない空の return が使われたら)、JavaScript は <code>undefined</code> を返します。</p>
+これは基本的な関数を例示しています。JavaScript の関数は 0 以上の名前のついた引数を取ることができます。関数の本体は好きなだけたくさんの文を含ませることができ、またその関数内で局所的な変数を宣言することができます。`return` 文は好きなときに関数を終了し値を返すために使うことができます。もし return 文が使われなかったら (あるいは値を持たない空の return が使われたら)、JavaScript は `undefined` を返します。
 
-<p>名前のついた引数は、何よりもガイドラインのようなものです。期待された引数を渡さずに関数を呼び出すことができます。その場合、引数には <code>undefined</code> が設定されます。</p>
+名前のついた引数は、何よりもガイドラインのようなものです。期待された引数を渡さずに関数を呼び出すことができます。その場合、引数には `undefined` が設定されます。
 
-<pre class="brush: js">add(); // NaN
+```js
+add(); // NaN
 // undefined では加算を実行できない
-</pre>
+```
 
-<p>また、関数が期待するより多くの引数を渡すこともできます。</p>
+また、関数が期待するより多くの引数を渡すこともできます。
 
-<pre class="brush: js">add(2, 3, 4); // 5
+```js
+add(2, 3, 4); // 5
 // 第 1、第 2 引数を加算。4 は無視される
-</pre>
+```
 
-<p>これは少し馬鹿げているように見えるかもしれませんが、関数はその本体の中で <a href="/ja/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a> と呼ばれる追加の変数を利用することができます。これはその関数へ渡されたすべての値を保持する配列のようなオブジェクトです。 add 関数を好きなだけたくさんの値をとれるよう書き直してみましょう。</p>
+これは少し馬鹿げているように見えるかもしれませんが、関数はその本体の中で [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) と呼ばれる追加の変数を利用することができます。これはその関数へ渡されたすべての値を保持する配列のようなオブジェクトです。 add 関数を好きなだけたくさんの値をとれるよう書き直してみましょう。
 
-<pre class="brush: js">function add() {
+```js
+function add() {
   var sum = 0;
-  for (var i = 0, j = arguments.length; i &lt; j; i++) {
+  for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
   }
   return sum;
 }
 
 add(2, 3, 4, 5); // 14
-</pre>
+```
 
-<p>しかしこれは <code>2 + 3 + 4 + 5</code> と書くより使い勝手がいいものではまったくありません。平均を取る関数を作ってみましょう。</p>
+しかしこれは `2 + 3 + 4 + 5` と書くより使い勝手がいいものではまったくありません。平均を取る関数を作ってみましょう。
 
-<pre class="brush: js">function avg() {
+```js
+function avg() {
   var sum = 0;
-  for (var i = 0, j = arguments.length; i &lt; j; i++) {
+  for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
   }
   return sum / arguments.length;
 }
 
 avg(2, 3, 4, 5); // 3.5
-</pre>
+```
 
-<p>これはとても便利ですが、少し冗長な印象を受けます。このコードをもう少し減らすために、引数配列の代わりに<a href="/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters">残余引数構文</a>を使ってみましょう。この方法では、コードを最小限に保ちながら、関数に任意の数の引数を渡すことができます。<strong>残余引数演算子</strong>は、関数の引数リストで <strong>...変数</strong> という書式で使用され、その変数の中に、関数が呼び出されたときに取得されなかった引数のリストをすべて含めることができます。また、 <strong>for</strong> ループを <strong>for...of</strong> ループに置き換えて、変数内の値を返すようにします。</p>
+これはとても便利ですが、少し冗長な印象を受けます。このコードをもう少し減らすために、引数配列の代わりに[残余引数構文](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)を使ってみましょう。この方法では、コードを最小限に保ちながら、関数に任意の数の引数を渡すことができます。**残余引数演算子**は、関数の引数リストで **...変数** という書式で使用され、その変数の中に、関数が呼び出されたときに取得されなかった引数のリストをすべて含めることができます。また、 **for** ループを **for...of** ループに置き換えて、変数内の値を返すようにします。
 
-<pre class="brush: js">function avg(...args) {
+```js
+function avg(...args) {
   var sum = 0;
   for (let value of args) {
     sum += value;
@@ -658,74 +662,80 @@ avg(2, 3, 4, 5); // 3.5
 }
 
 avg(2, 3, 4, 5); // 3.5
-</pre>
+```
 
-<p>上記のコードで変数 <strong>args</strong> は、関数に渡されたすべての値が格納されています。</p>
+上記のコードで変数 **args** は、関数に渡されたすべての値が格納されています。
 
-<p>注意すべき点は、関数宣言の中に残余引数演算子が置かれている場合、宣言の<em>後</em>のすべての引数が格納されますが、宣言の前の引数は格納されないということです。すなわち、 <em>function avg(<strong>firstValue, </strong>...args)</em> では、関数に渡された最初の値が変数 <strong>firstValue</strong> に格納され、残りの引数が <strong>args</strong> に格納されます。これも便利な言語機能のひとつですが、新たな問題が発生しました。 <code>avg()</code> 関数はカンマで区切られた引数のリストを受け取りますが、配列の平均値を求めたい場合はどうすればよいのでしょうか。この関数を次のように書き換えればよいのです。</p>
+注意すべき点は、関数宣言の中に残余引数演算子が置かれている場合、宣言の*後*のすべての引数が格納されますが、宣言の前の引数は格納されないということです。すなわち、 _function avg(**firstValue,** ...args)_ では、関数に渡された最初の値が変数 **firstValue** に格納され、残りの引数が **args** に格納されます。これも便利な言語機能のひとつですが、新たな問題が発生しました。 `avg()` 関数はカンマで区切られた引数のリストを受け取りますが、配列の平均値を求めたい場合はどうすればよいのでしょうか。この関数を次のように書き換えればよいのです。
 
-<pre class="brush: js">function avgArray(arr) {
+```js
+function avgArray(arr) {
   var sum = 0;
-  for (var i = 0, j = arr.length; i &lt; j; i++) {
+  for (var i = 0, j = arr.length; i < j; i++) {
     sum += arr[i];
   }
   return sum / arr.length;
 }
 
 avgArray([2, 3, 4, 5]); // 3.5
-</pre>
+```
 
-<p>しかし、せっかく作った関数を再利用できたらいいですよね。幸い JavaScript では、任意の関数オブジェクトの {{jsxref("Function.apply", "apply()")}} メソッドを使って、任意の配列を引数として関数を呼び出すことができます。</p>
+しかし、せっかく作った関数を再利用できたらいいですよね。幸い JavaScript では、任意の関数オブジェクトの {{jsxref("Function.apply", "apply()")}} メソッドを使って、任意の配列を引数として関数を呼び出すことができます。
 
-<pre class="brush: js">avg.apply(null, [2, 3, 4, 5]); // 3.5
-</pre>
+```js
+avg.apply(null, [2, 3, 4, 5]); // 3.5
+```
 
-<p><code>apply()</code> の第 2 引数は引数として使う配列です。第 1 引数は後で論じます。このようなことは関数もまたオブジェクトであるという事実を強調します。</p>
+`apply()` の第 2 引数は引数として使う配列です。第 1 引数は後で論じます。このようなことは関数もまたオブジェクトであるという事実を強調します。
 
-<p>関数呼び出しで<a href="/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax">スプレッド演算子</a>を使用しても同じ結果を実現できます。</p>
+関数呼び出しで[スプレッド演算子](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用しても同じ結果を実現できます。
 
-<p>例: <code>avg(...numbers)</code></p>
+例: `avg(...numbers)`
 
-<h3 id="anonymous_functions">無名関数</h3>
+### 無名関数
 
-<p>JavaScript では無名関数 (anonymous function) — すなわち、名前のない関数を作ることができます。</p>
+JavaScript では無名関数 (anonymous function) — すなわち、名前のない関数を作ることができます。
 
-<pre class="brush: js">function() {
+```js
+function() {
   var sum = 0;
-  for (var i = 0, j = arguments.length; i &lt; j; i++) {
+  for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
   }
   return sum / arguments.length;
 };
-</pre>
+```
 
-<p>しかし、このような無名関数は単独では役に立ちません。 — 名前がなければ、その関数を呼び出す方法がないからです。そのため、実際には、無名関数は他の関数の引数として使われたり、関数を呼び出すために使用することができる変数に直接代入して呼び出し可能にしたりするのが一般的です。</p>
+しかし、このような無名関数は単独では役に立ちません。 — 名前がなければ、その関数を呼び出す方法がないからです。そのため、実際には、無名関数は他の関数の引数として使われたり、関数を呼び出すために使用することができる変数に直接代入して呼び出し可能にしたりするのが一般的です。
 
-<pre class="brush: js">var avg = function() {
+```js
+var avg = function() {
   var sum = 0;
-  for (var i = 0, j = arguments.length; i &lt; j; i++) {
+  for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
   }
   return sum / arguments.length;
 };
-</pre>
+```
 
-<p>これによって、無名関数を <code>avg()</code> に引数を付けて呼ぶことで呼び出すことが可能になります。 — すなわち、意味的には <code>function avg()</code> という名前付き関数の形を使用して関数を宣言するのと同等になります。</p>
+これによって、無名関数を `avg()` に引数を付けて呼ぶことで呼び出すことが可能になります。 — すなわち、意味的には `function avg()` という名前付き関数の形を使用して関数を宣言するのと同等になります。
 
-<p>しかし、変数に代入したり、他の関数の引数として渡されたりしなくても、無名関数が役に立つ方法があります。 JavaScript には、 1 つの式で関数の宣言と起動を同時に行う仕組みがあります。これは <a href="/ja/docs/Glossary/IIFE">IIFE (Immediately invoked function expression)</a> と呼ばれ、無名関数で使用する場合の構文は次のようになります。</p>
+しかし、変数に代入したり、他の関数の引数として渡されたりしなくても、無名関数が役に立つ方法があります。 JavaScript には、 1 つの式で関数の宣言と起動を同時に行う仕組みがあります。これは [IIFE (Immediately invoked function expression)](/ja/docs/Glossary/IIFE) と呼ばれ、無名関数で使用する場合の構文は次のようになります。
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   // …
 })();
-</pre>
+```
 
-<p>IIFE の詳細については、この入門記事の範囲を越えますが、どのように役立つかについては、<a href="/ja/docs/Web/JavaScript/Closures">クロージャ</a>の記事の<a href="/ja/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">クロージャでプライベートメソッドを模倣する</a>の節に良い例があります。</p>
+IIFE の詳細については、この入門記事の範囲を越えますが、どのように役立つかについては、[クロージャ](/ja/docs/Web/JavaScript/Closures)の記事の[クロージャでプライベートメソッドを模倣する](/ja/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures)の節に良い例があります。
 
-<h3 id="recursive_functions">再帰関数</h3>
+### 再帰関数
 
-<p>JavaScript では関数を再帰的に呼び出すことができます。これは特にブラウザーの DOM などにみられる木構造を取り扱うときに便利でしょう。</p>
+JavaScript では関数を再帰的に呼び出すことができます。これは特にブラウザーの DOM などにみられる木構造を取り扱うときに便利でしょう。
 
-<pre class="brush: js">function countChars(elm) {
+```js
+function countChars(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
     return elm.nodeValue.length;
   }
@@ -735,11 +745,12 @@ avgArray([2, 3, 4, 5]); // 3.5
   }
   return count;
 }
-</pre>
+```
 
-<p>この例は無名関数に関するある潜在的な問題を際立たせます。名前を持たない関数を再帰呼び出しさせるにはどうしたらよいのでしょう? JavaScript では、名前付き関数式で実現できます。以下のように、名前付き <a href="/ja/docs/Glossary/IIFE">IIFE (Immediately Invoked Function Expressions)</a> を使用できます。</p>
+この例は無名関数に関するある潜在的な問題を際立たせます。名前を持たない関数を再帰呼び出しさせるにはどうしたらよいのでしょう? JavaScript では、名前付き関数式で実現できます。以下のように、名前付き [IIFE (Immediately Invoked Function Expressions)](/ja/docs/Glossary/IIFE) を使用できます。
 
-<pre class="brush: js">var charsInBody = (function counter(elm) {
+```js
+var charsInBody = (function counter(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
     return elm.nodeValue.length;
   }
@@ -749,19 +760,20 @@ avgArray([2, 3, 4, 5]); // 3.5
   }
   return count;
 })(document.body);
-</pre>
+```
 
-<p>上記のように関数式に与えられた名前は、関数自身のスコープ内でのみ有効です。これはエンジンによる高度な最適化を実現して、結果的に可読性が高いコードになります。この名前はデバッガーやスタックトレースにも表示されますので、デバッグにかかる時間を節約できます。</p>
+上記のように関数式に与えられた名前は、関数自身のスコープ内でのみ有効です。これはエンジンによる高度な最適化を実現して、結果的に可読性が高いコードになります。この名前はデバッガーやスタックトレースにも表示されますので、デバッグにかかる時間を節約できます。
 
-<p>JavaScript の関数自体が (他のものすべてと同様に) オブジェクトですので、オブジェクトの節で見てきたとおり、プロパティの追加や変更が可能です。</p>
+JavaScript の関数自体が (他のものすべてと同様に) オブジェクトですので、オブジェクトの節で見てきたとおり、プロパティの追加や変更が可能です。
 
-<h2 id="Custom_objects">カスタムオブジェクト</h2>
+## カスタムオブジェクト
 
-<div class="note">JavaScript でのオブジェクト指向プログラミングの詳細な論考については、<a href="/ja/docs/Learn/JavaScript/Objects">オブジェクト指向 JavaScript 入門</a> をご覧ください。</div>
+> **Note:** JavaScript でのオブジェクト指向プログラミングの詳細な論考については、[オブジェクト指向 JavaScript 入門](/ja/docs/Learn/JavaScript/Objects) をご覧ください。
 
-<p>古典的なオブジェクト指向プログラミングにおいて、オブジェクトとはデータとそのデータを操作するメソッドの集まりです。JavaScript は、C++ や Java に見られる class 文を持たない、プロトタイプベースの言語です (これは、 class 文を持つ言語に慣れたプログラマーを混乱させることがあります)。代わりに、 JavaScript は関数をクラスとして用います。ファーストネームとラストネームのフィールドを持つ person オブジェクトを考えてみましょう。その名前を表示させる方法には、 "first last" と "last, first" の 2 種類が考えられます。ここまでで論じた関数とオブジェクトを使ってみると、以下のようにデータを表示できるでしょう。</p>
+古典的なオブジェクト指向プログラミングにおいて、オブジェクトとはデータとそのデータを操作するメソッドの集まりです。JavaScript は、C++ や Java に見られる class 文を持たない、プロトタイプベースの言語です (これは、 class 文を持つ言語に慣れたプログラマーを混乱させることがあります)。代わりに、 JavaScript は関数をクラスとして用います。ファーストネームとラストネームのフィールドを持つ person オブジェクトを考えてみましょう。その名前を表示させる方法には、 "first last" と "last, first" の 2 種類が考えられます。ここまでで論じた関数とオブジェクトを使ってみると、以下のようにデータを表示できるでしょう。
 
-<pre class="brush: js">function makePerson(first, last) {
+```js
+function makePerson(first, last) {
   return {
     first: first,
     last: last
@@ -777,11 +789,12 @@ function personFullNameReversed(person) {
 var s = makePerson('Simon', 'Willison');
 personFullName(s); // "Simon Willison"
 personFullNameReversed(s); // "Willison, Simon"
-</pre>
+```
 
-<p>これはこれでうまく行きますが、かなり見苦しいですね。グローバルな名前空間にいくつもの関数を作ることになってしまいます。本当にしたいことは関数をオブジェクトにくっつけることです。関数はオブジェクトなので、簡単にできます。</p>
+これはこれでうまく行きますが、かなり見苦しいですね。グローバルな名前空間にいくつもの関数を作ることになってしまいます。本当にしたいことは関数をオブジェクトにくっつけることです。関数はオブジェクトなので、簡単にできます。
 
-<pre class="brush: js">function makePerson(first, last) {
+```js
+function makePerson(first, last) {
   return {
     first: first,
     last: last,
@@ -797,22 +810,24 @@ personFullNameReversed(s); // "Willison, Simon"
 var s = makePerson('Simon', 'Willison');
 s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
-</pre>
+```
 
-<p><code><a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a></code> キーワードに注意してください。関数内で使われると、<code>this</code> は現在のオブジェクトを参照します。実際に意味するところは関数の呼び出し方によります。オブジェクト上で<a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#accessing_properties">ドット記法やブラケット記法</a>を使って呼び出すと、そのオブジェクトが <code>this</code> になります。ドット記法を使わずに呼び出すと、 <code>this</code> はグローバルオブジェクトを参照します。</p>
+[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) キーワードに注意してください。関数内で使われると、`this` は現在のオブジェクトを参照します。実際に意味するところは関数の呼び出し方によります。オブジェクト上で[ドット記法やブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#accessing_properties)を使って呼び出すと、そのオブジェクトが `this` になります。ドット記法を使わずに呼び出すと、 `this` はグローバルオブジェクトを参照します。
 
-<p><code>this</code> は次のように、失敗の原因になることがよくありますので注意してください。</p>
+`this` は次のように、失敗の原因になることがよくありますので注意してください。
 
-<pre class="brush: js">var s = makePerson('Simon', 'Willison');
+```js
+var s = makePerson('Simon', 'Willison');
 var fullName = s.fullName;
 fullName(); // undefined undefined
-</pre>
+```
 
-<p><code>s.fullName()</code> とせずに <code>fullName()</code> を単独で呼び出すと、<code>this</code> はグローバルオブジェクトに結び付けられます。<code>first</code> や <code>last</code> というグローバル変数はありませんので、それぞれに対して <code>undefined</code> が得られます。</p>
+`s.fullName()` とせずに `fullName()` を単独で呼び出すと、`this` はグローバルオブジェクトに結び付けられます。`first` や `last` というグローバル変数はありませんので、それぞれに対して `undefined` が得られます。
 
-<p>この <code>this</code> キーワードを活用することで、<code>makePerson</code> 関数を改良することができます。</p>
+この `this` キーワードを活用することで、`makePerson` 関数を改良することができます。
 
-<pre class="brush: js">function Person(first, last) {
+```js
+function Person(first, last) {
   this.first = first;
   this.last = last;
   this.fullName = function() {
@@ -823,15 +838,16 @@ fullName(); // undefined undefined
   };
 }
 var s = new Person('Simon', 'Willison');
-</pre>
+```
 
-<p>もう 1 つのキーワード <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/new">new</a></code> が出てきました。 <code>new</code> は <code>this</code> と強い関連があります。これは新しい空のオブジェクトを作り、 <code>this</code> にその新しいオブジェクトを設定して、後に続く関数を呼びます。<code>this</code> に指定された関数は値を返しているのではなく、単に <code>this</code> オブジェクトを変更していることに注意してください。 <code>this</code> オブジェクトを呼び出し元に返しているのは <code>new</code> です。<code>new</code> によって呼ばれるよう設計された関数は、コンストラクター関数と呼ばれます。一般的には、これらの関数の先頭を大文字にして、 <code>new</code> で呼び出すように注意します。</p>
+もう 1 つのキーワード [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) が出てきました。 `new` は `this` と強い関連があります。これは新しい空のオブジェクトを作り、 `this` にその新しいオブジェクトを設定して、後に続く関数を呼びます。`this` に指定された関数は値を返しているのではなく、単に `this` オブジェクトを変更していることに注意してください。 `this` オブジェクトを呼び出し元に返しているのは `new` です。`new` によって呼ばれるよう設計された関数は、コンストラクター関数と呼ばれます。一般的には、これらの関数の先頭を大文字にして、 `new` で呼び出すように注意します。
 
-<p>改良した関数でも、<code>fullName()</code> を単独で呼び出すときの落とし穴がまだあります。</p>
+改良した関数でも、`fullName()` を単独で呼び出すときの落とし穴がまだあります。
 
-<p>person オブジェクトはだいぶ良くなりましたが、まだ改善の余地があります。person オブジェクトを作るたびに、その中に 2 つの新しい関数オブジェクトを作っています。関数のコードは共有されたほうがいいですよね。</p>
+person オブジェクトはだいぶ良くなりましたが、まだ改善の余地があります。person オブジェクトを作るたびに、その中に 2 つの新しい関数オブジェクトを作っています。関数のコードは共有されたほうがいいですよね。
 
-<pre class="brush: js">function personFullName() {
+```js
+function personFullName() {
   return this.first + ' ' + this.last;
 }
 function personFullNameReversed() {
@@ -843,11 +859,12 @@ function Person(first, last) {
   this.fullName = personFullName;
   this.fullNameReversed = personFullNameReversed;
 }
-</pre>
+```
 
-<p>このほうが良いですね。メソッド関数を一度だけ作って、コンストラクターの中でそれへの参照を代入しています。もっとよくならないでしょうか。答えは yes です。</p>
+このほうが良いですね。メソッド関数を一度だけ作って、コンストラクターの中でそれへの参照を代入しています。もっとよくならないでしょうか。答えは yes です。
 
-<pre class="brush: js">function Person(first, last) {
+```js
+function Person(first, last) {
   this.first = first;
   this.last = last;
 }
@@ -857,74 +874,84 @@ Person.prototype.fullName = function() {
 Person.prototype.fullNameReversed = function() {
   return this.last + ', ' + this.first;
 };
-</pre>
+```
 
-<p><code>Person.prototype</code> は <code>Person</code> のすべてのインスタンスで共有されるオブジェクトです。これは (「プロトタイプチェーン」という特別な名前を持った) ルックアップチェーンの一部を構成します。<code>Person</code> の何もセットされていないプロパティにアクセスしようとするときはいつでも、 JavaScript は <code>Person.prototype</code> が代わりのプロパティを持っているか確認します。結果として、<code>Person.prototype</code> に割り当てられたプロパティはすべて <code>this</code> オブジェクトを通じてコンストラクターのすべてのインスタンスで利用できるようになります。</p>
+`Person.prototype` は `Person` のすべてのインスタンスで共有されるオブジェクトです。これは (「プロトタイプチェーン」という特別な名前を持った) ルックアップチェーンの一部を構成します。`Person` の何もセットされていないプロパティにアクセスしようとするときはいつでも、 JavaScript は `Person.prototype` が代わりのプロパティを持っているか確認します。結果として、`Person.prototype` に割り当てられたプロパティはすべて `this` オブジェクトを通じてコンストラクターのすべてのインスタンスで利用できるようになります。
 
-<p>これはとても強力です。 JavaScript では、プログラム上でいつでもどれかのプロトタイプを変更することができます。ということは、実行時に既存のオブジェクトに対して追加のメソッドを加えることができるのです。</p>
+これはとても強力です。 JavaScript では、プログラム上でいつでもどれかのプロトタイプを変更することができます。ということは、実行時に既存のオブジェクトに対して追加のメソッドを加えることができるのです。
 
-<pre class="brush: js">var s = new Person('Simon', 'Willison');
+```js
+var s = new Person('Simon', 'Willison');
 s.firstNameCaps(); // TypeError on line 1: s.firstNameCaps is not a function
 
 Person.prototype.firstNameCaps = function() {
   return this.first.toUpperCase();
 };
 s.firstNameCaps(); // "SIMON"
-</pre>
+```
 
-<p>興味深いことに、JavaScript の組み込みオブジェクトのプロトタイプにも差し込むことができます。<code>String</code> オブジェクトに文字列を逆さにして返すメソッドを加えてみましょう。</p>
+興味深いことに、JavaScript の組み込みオブジェクトのプロトタイプにも差し込むことができます。`String` オブジェクトに文字列を逆さにして返すメソッドを加えてみましょう。
 
-<pre class="brush: js">var s = 'Simon';
+```js
+var s = 'Simon';
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
 String.prototype.reversed = function() {
   var r = '';
-  for (var i = this.length - 1; i &gt;= 0; i--) {
+  for (var i = this.length - 1; i >= 0; i--) {
     r += this[i];
   }
   return r;
 };
 
 s.reversed(); // nomiS
-</pre>
+```
 
-<p>私たちの新しいメソッドは文字列リテラル上でさえも動きます!</p>
+私たちの新しいメソッドは文字列リテラル上でさえも動きます!
 
-<pre class="brush: js">'This can now be reversed'.reversed(); // desrever eb won nac sihT
-</pre>
+```js
+'This can now be reversed'.reversed(); // desrever eb won nac sihT
+```
 
-<p>前述の通り、プロトタイプはチェーンの一部を構成します。チェーンの根は <code>Object.prototype</code> であり、 <code>toString()</code> メソッドを含んでいます。これはオブジェクトを文字列で表そうとするときに呼ばれるメソッドです。これは <code>Person</code> オブジェクトをデバッグするときに役立ちます。</p>
+前述の通り、プロトタイプはチェーンの一部を構成します。チェーンの根は `Object.prototype` であり、 `toString()` メソッドを含んでいます。これはオブジェクトを文字列で表そうとするときに呼ばれるメソッドです。これは `Person` オブジェクトをデバッグするときに役立ちます。
 
-<pre class="brush: js">var s = new Person('Simon', 'Willison');
+```js
+var s = new Person('Simon', 'Willison');
 s.toString(); // [object Object]
 
 Person.prototype.toString = function() {
-  return '&lt;Person: ' + this.fullName() + '&gt;';
+  return '<Person: ' + this.fullName() + '>';
 }
 
-s.toString(); // "&lt;Person: Simon Willison&gt;"
-</pre>
+s.toString(); // "<Person: Simon Willison>"
+```
 
-<p><code>avg.apply()</code> の第 1 引数が null であったことを覚えていますか? もう一度見てみましょう。<code>apply()</code> の第 1 引数は '<code>this</code>' として扱われるオブジェクトです。例えば、これは <code>new</code> のありふれた実装です。</p>
+`avg.apply()` の第 1 引数が null であったことを覚えていますか? もう一度見てみましょう。`apply()` の第 1 引数は '`this`' として扱われるオブジェクトです。例えば、これは `new` のありふれた実装です。
 
-<pre class="brush: js">function trivialNew(constructor, ...args) {
+```js
+function trivialNew(constructor, ...args) {
   var o = {}; // オブジェクトを作成
   constructor.apply(o, args);
   return o;
 }
-</pre>
+```
 
-<p>プロトタイプチェーンを設定しないので (これを説明するのは困難です)、<code>trivialNew()</code> は <code>new</code> の完全な複製ではありません。よく使うことはないでしょうが、知っていると役に立ちます。このスニペットで、<code>...args</code> (省略符号を含む) は「<a href="/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters">残余引数 (rest arguments)</a>」と呼ばれます。名前が示唆するとおり、これは残りの引数が含まれます。</p>
+プロトタイプチェーンを設定しないので (これを説明するのは困難です)、`trivialNew()` は `new` の完全な複製ではありません。よく使うことはないでしょうが、知っていると役に立ちます。このスニペットで、`...args` (省略符号を含む) は「[残余引数 (rest arguments)](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)」と呼ばれます。名前が示唆するとおり、これは残りの引数が含まれます。
 
-<p>以下の 2 つの呼び出しはほぼ等価です。</p>
+以下の 2 つの呼び出しはほぼ等価です。
 
-<pre class="brush: js">var bill = trivialNew(Person, 'William', 'Orange');</pre>
+```js
+var bill = trivialNew(Person, 'William', 'Orange');
+```
 
-<pre class="brush: js">var bill = new Person('William', 'Orange');</pre>
+```js
+var bill = new Person('William', 'Orange');
+```
 
-<p><code>apply()</code> には <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a> という姉妹関数があります。 <code>this</code> を設定できる点は同じですが、引数に配列ではなく展開された値のリストをとります。</p>
+`apply()` には [`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) という姉妹関数があります。 `this` を設定できる点は同じですが、引数に配列ではなく展開された値のリストをとります。
 
-<pre class="brush: js">function lastNameCaps() {
+```js
+function lastNameCaps() {
   return this.last.toUpperCase();
 }
 var s = new Person('Simon', 'Willison');
@@ -932,13 +959,14 @@ lastNameCaps.call(s);
 // 上記の文は以下と等価:
 s.lastNameCaps = lastNameCaps;
 s.lastNameCaps(); // WILLISON
-</pre>
+```
 
-<h3 id="Inner_functions">内部関数</h3>
+### 内部関数
 
-<p>JavaScript での関数宣言は他の関数内でも行うことができます。これは最初のころの <code>makePerson()</code> 関数で見ています。 JavaScript で関数を入れ子にすることの重要なことは、内部関数内で親関数スコープの変数にアクセスできることです。</p>
+JavaScript での関数宣言は他の関数内でも行うことができます。これは最初のころの `makePerson()` 関数で見ています。 JavaScript で関数を入れ子にすることの重要なことは、内部関数内で親関数スコープの変数にアクセスできることです。
 
-<pre class="brush: js">function parentFunc() {
+```js
+function parentFunc() {
   var a = 1;
 
   function nestedFunc() {
@@ -947,17 +975,18 @@ s.lastNameCaps(); // WILLISON
   }
   return nestedFunc(); // 5
 }
-</pre>
+```
 
-<p>内部関数は保守しやすいコードを書くときに多大な利便性をもたらします。ある関数が他の部分のコードでは役立たない関数を 1 つか 2 つ使っているなら、これらのユーティリティ関数を他から呼び出される関数の入れ子にすることができます。内部関数はグローバルスコープでなくなるので、いいことです。</p>
+内部関数は保守しやすいコードを書くときに多大な利便性をもたらします。ある関数が他の部分のコードでは役立たない関数を 1 つか 2 つ使っているなら、これらのユーティリティ関数を他から呼び出される関数の入れ子にすることができます。内部関数はグローバルスコープでなくなるので、いいことです。
 
-<p>内部関数はグローバル変数を使うという誘惑に対する対抗措置です。複雑なコードを書くとき、複数の関数間で値を共有するためにグローバル変数を使いたくなります。しかし、これでは保守がしづらくなります。内部関数は親関数の変数を共有できるので、グローバルな名前空間を汚染せずに (いわば「ローカルなグローバル」) 複数の関数をまとめることができます。この仕組みは注意して使用する必要がありますが、便利です。</p>
+内部関数はグローバル変数を使うという誘惑に対する対抗措置です。複雑なコードを書くとき、複数の関数間で値を共有するためにグローバル変数を使いたくなります。しかし、これでは保守がしづらくなります。内部関数は親関数の変数を共有できるので、グローバルな名前空間を汚染せずに (いわば「ローカルなグローバル」) 複数の関数をまとめることができます。この仕組みは注意して使用する必要がありますが、便利です。
 
-<h2 id="Closures"">クロージャ</h2>
+<h2 id="Closures" &#x22;="">クロージャ</h2>
 
-<p>ここでは JavaScript が持つもっとも強力な、しかしもっともわかりにくいとも思われる概念のひとつを紹介します。これは何をしているのでしょうか。</p>
+ここでは JavaScript が持つもっとも強力な、しかしもっともわかりにくいとも思われる概念のひとつを紹介します。これは何をしているのでしょうか。
 
-<pre class="brush: js">function makeAdder(a) {
+```js
+function makeAdder(a) {
   return function(b) {
     return a + b;
   };
@@ -966,20 +995,21 @@ var add5 = makeAdder(5);
 var add20 = makeAdder(20);
 add5(6); // ?
 add20(7); // ?
-</pre>
+```
 
-<p><code>makeAdder()</code> 関数がクロージャの正体を明らかにします。この関数はそれぞれ、1 つの引数とともに呼び出されたときに、その値と自身が生成されたときの引数の値とを加算する、新たな「加算」関数を生成しています。</p>
+`makeAdder()` 関数がクロージャの正体を明らかにします。この関数はそれぞれ、1 つの引数とともに呼び出されたときに、その値と自身が生成されたときの引数の値とを加算する、新たな「加算」関数を生成しています。
 
-<p>ここで起きていることは、前出の内部関数で起きていることとほとんど同じです。つまり、ある関数の内部で定義された関数は、外側の関数が持つ変数にアクセスすることができます。唯一の違いは外側の関数が値を返していることであり、それゆえ一般的な考えではローカル変数は存在しなくなると考えられます。しかし、ここではローカル変数が残り続けます。そうでなければ、加算関数は動作しないでしょう。さらに、 <code>makeAdder()</code> のローカル変数には異なる 2 つの「複製」が存在します。一方の <code>a</code> は 5、もう一方の <code>a</code> は 20 です。よって、これらの関数を呼び出した結果は以下のようになります。</p>
+ここで起きていることは、前出の内部関数で起きていることとほとんど同じです。つまり、ある関数の内部で定義された関数は、外側の関数が持つ変数にアクセスすることができます。唯一の違いは外側の関数が値を返していることであり、それゆえ一般的な考えではローカル変数は存在しなくなると考えられます。しかし、ここではローカル変数が残り続けます。そうでなければ、加算関数は動作しないでしょう。さらに、 `makeAdder()` のローカル変数には異なる 2 つの「複製」が存在します。一方の `a` は 5、もう一方の `a` は 20 です。よって、これらの関数を呼び出した結果は以下のようになります。
 
-<pre class="brush: js">add5(6); // 11 を返す
+```js
+add5(6); // 11 を返す
 add20(7); // 27 を返す
-</pre>
+```
 
-<p>これは実際に起きていることです。 JavaScript で関数を実行するときは必ず、その関数内で作成されたローカル変数を保持する 'scope' オブジェクトが作成されます。それは関数の引数として渡された変数とともに初期化されます。これはすべてのグローバル変数やグローバル関数が存在している global オブジェクトに似ていますが、2 つの重要な違いがあります。ひとつは、関数を実行し始めるたびに新たな scope オブジェクトが生成されること、もうひとつは、global オブジェクト (<code>this</code> としてアクセスでき、またブラウザーでは <code>window</code> として存在する) とは異なり、これらの scope オブジェクトに JavaScript のコードから直接アクセスできないことです。例えば、現存する scope オブジェクトのプロパティをたどる仕組みはありません。</p>
+これは実際に起きていることです。 JavaScript で関数を実行するときは必ず、その関数内で作成されたローカル変数を保持する 'scope' オブジェクトが作成されます。それは関数の引数として渡された変数とともに初期化されます。これはすべてのグローバル変数やグローバル関数が存在している global オブジェクトに似ていますが、2 つの重要な違いがあります。ひとつは、関数を実行し始めるたびに新たな scope オブジェクトが生成されること、もうひとつは、global オブジェクト (`this` としてアクセスでき、またブラウザーでは `window` として存在する) とは異なり、これらの scope オブジェクトに JavaScript のコードから直接アクセスできないことです。例えば、現存する scope オブジェクトのプロパティをたどる仕組みはありません。
 
-<p>よって <code>makeAdder()</code> が呼び出されたときは、1 個のプロパティを持つ scope オブジェクトが生成されます。そのプロパティとは、<code>makeAdder()</code> 関数に渡される引数の <code>a</code> です。そして <code>makeAdder()</code> は、新たに生成された関数を返します。通常 JavaScript のガベージコレクターは、この時点で <code>makeAdder()</code> のために生成された scope オブジェクトを破棄しますが、返された関数は scope オブジェクトへの参照を維持しています。その結果、scope オブジェクトは <code>makeAdder()</code> が返した関数オブジェクトへの参照がなくなるまでの間、ガベージコレクションの対象になりません。</p>
+よって `makeAdder()` が呼び出されたときは、1 個のプロパティを持つ scope オブジェクトが生成されます。そのプロパティとは、`makeAdder()` 関数に渡される引数の `a` です。そして `makeAdder()` は、新たに生成された関数を返します。通常 JavaScript のガベージコレクターは、この時点で `makeAdder()` のために生成された scope オブジェクトを破棄しますが、返された関数は scope オブジェクトへの参照を維持しています。その結果、scope オブジェクトは `makeAdder()` が返した関数オブジェクトへの参照がなくなるまでの間、ガベージコレクションの対象になりません。
 
-<p>JavaScript のオブジェクトシステムが利用するプロトタイプチェーンと同様に、scope オブジェクトはスコープチェーンと呼ばれるチェーンを構成します。</p>
+JavaScript のオブジェクトシステムが利用するプロトタイプチェーンと同様に、scope オブジェクトはスコープチェーンと呼ばれるチェーンを構成します。
 
-<p><strong>クロージャ</strong>は、関数と関数が生成した scope オブジェクトを組み合わせたものです。クロージャは状態を保存します。従って、オブジェクトの代わりとしてよく使用されます。<a href="https://stackoverflow.com/questions/111102/how-do-javascript-closures-work">クロージャのすばらしい解説</a>を読むことができます。</p>
+**クロージャ**は、関数と関数が生成した scope オブジェクトを組み合わせたものです。クロージャは状態を保存します。従って、オブジェクトの代わりとしてよく使用されます。[クロージャのすばらしい解説](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work)を読むことができます。

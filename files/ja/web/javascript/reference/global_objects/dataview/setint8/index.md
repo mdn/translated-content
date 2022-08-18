@@ -9,70 +9,56 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setInt8()</code></strong> メソッドは、符号付き8ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。</p>
+**`setInt8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-setint8.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-setint8.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dataview.setInt8(byteOffset, value)
+```
 
-<pre class="syntaxbox notranslate"><var>dataview</var>.setInt8(<var>byteOffset</var>, <var>value</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `byteOffset`
+  - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
+- `value`
+  - : 設定する値です。
 
-<dl>
- <dt><code><var>byteOffset</var></code></dt>
- <dd>ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。</dd>
- <dt><code><var>value</var></code></dt>
- <dd>設定する値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+{{jsxref("undefined")}}。
 
-<p>{{jsxref("undefined")}}。</p>
+### 発生するエラー
 
-<h3 id="Errors_thrown" name="Errors_thrown">発生するエラー</h3>
+- {{jsxref("RangeError")}}
+  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd><code>byteOffset</code> がビューの末尾を超えて格納するように設定されている場合に発生します。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### setInt8 メソッドの使用
 
-<h3 id="Using_the_setInt8_method" name="Using_the_setInt8_method">setInt8 メソッドの使用</h3>
-
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.setInt8(1, 3);
 dataview.getInt8(1); // 3
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-dataview.prototype.setint8', 'DataView.prototype.setInt8')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.setint8', 'DataView.prototype.setInt8')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.DataView.setInt8")}}</p>
+{{Compat("javascript.builtins.DataView.setInt8")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

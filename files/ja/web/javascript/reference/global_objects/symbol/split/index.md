@@ -8,23 +8,20 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.split</code></strong> ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxref("String.prototype.split()")}} メソッドによって呼び出されます。</p>
+**`Symbol.split`** ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxref("String.prototype.split()")}} メソッドによって呼び出されます。
 
-<p>詳しくは、 {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} と {{jsxref("String.prototype.split()")}} を参照してください。</p>
+詳しくは、 {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} と {{jsxref("String.prototype.split()")}} を参照してください。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-split.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 例
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### 独自の逆方向の分割
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Custom_reverse_split" name="Custom_reverse_split">独自の逆方向の分割</h3>
-
-<pre class="brush: js notranslate">class ReverseSplit {
+```js
+class ReverseSplit {
   [Symbol.split](string) {
     const array = string.split(' ');
     return array.reverse();
@@ -32,32 +29,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 }
 
 console.log('Another one bites the dust'.split(new ReverseSplit()));
-// expected output: [ "dust", "the", "bites", "one", "Another" ]</pre>
+// expected output: [ "dust", "the", "bites", "one", "Another" ]
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           |
+| -------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Symbol.split")}}</p>
+{{Compat("javascript.builtins.Symbol.split")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}

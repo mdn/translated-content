@@ -9,59 +9,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toJSON()</code></strong> メソッドは、{{jsxref("Date")}} オブジェクトの文字列表現を返します。</p>
+**`toJSON()`** メソッドは、{{jsxref("Date")}} オブジェクトの文字列表現を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-tojson.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tojson.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.toJSON()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.toJSON()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた日付を表す文字列。
 
-<p>与えられた日付を表す文字列。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+{{jsxref("Date")}} インスタンスは、特定の時点を参照します。`toJSON()` の呼び出しは、{{jsxref("Date")}} オブジェクトの値を表す文字列 ({{jsxref("Date.prototype.toISOString()", "toISOString()")}} を使用) を返します。このメソッドは、一般的に、{{Glossary("JSON")}} シリアライズを目的として {{jsxref("Date")}} オブジェクトをシリアライズするために使用されます。
 
-<p>{{jsxref("Date")}} インスタンスは、特定の時点を参照します。<code>toJSON()</code> の呼び出しは、{{jsxref("Date")}} オブジェクトの値を表す文字列 ({{jsxref("Date.prototype.toISOString()", "toISOString()")}} を使用) を返します。このメソッドは、一般的に、{{Glossary("JSON")}} シリアライズを目的として {{jsxref("Date")}} オブジェクトをシリアライズするために使用されます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### toJSON() を使う
 
-<h3 id="Using_toJSON" name="Using_toJSON">toJSON() を使う</h3>
-
-<pre class="brush:js notranslate">var jsonDate = (new Date()).toJSON();
+```js
+var jsonDate = (new Date()).toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.toJSON")}}</p>
+{{Compat("javascript.builtins.Date.toJSON")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

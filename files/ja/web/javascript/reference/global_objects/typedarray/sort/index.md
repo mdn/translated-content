@@ -11,36 +11,35 @@ tags:
   - 型付き配列
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>sort()</strong></code> メソッドは、型付き配列の要素を<em>その場で</em>数値的に並べ替え、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムです。 <em>TypedArray</em> は、ここでは<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの一つです。</p>
+**`sort()`** メソッドは、型付き配列の要素を*その場で*数値的に並べ替え、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-reverse.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-reverse.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.sort([compareFunction])
+```
 
-<pre class="syntaxbox"><var>typedarray</var>.sort([<var>compareFunction</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `compareFunction` {{optional_inline}}
+  - : ソート順を定義する関数を指定します。
 
-<dl>
- <dt><code><var>compareFunction</var></code> {{optional_inline}}</dt>
- <dd>ソート順を定義する関数を指定します。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+並べ替えた型付き配列です。
 
-<p>並べ替えた型付き配列です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### sort の使用
 
-<h3 id="Using_sort" name="Using_sort">sort の使用</h3>
+他の例は、 {{jsxref("Array.prototype.sort()")}} メソッドです。
 
-<p>他の例は、 {{jsxref("Array.prototype.sort()")}} メソッドです。</p>
-
-<pre class="brush: js">let numbers = new Uint8Array([40, 1, 5, 200]);
+```js
+let numbers = new Uint8Array([40, 1, 5, 200]);
 numbers.sort();
 // Uint8Array [ 1, 5, 40, 200 ]
 // ふつうの配列とは異なり、数値的に数値を並べ替えるためには
@@ -51,31 +50,20 @@ numbers = [40, 1, 5, 200];
 numbers.sort();
 // [1, 200, 40, 5]
 
-numbers.sort((a, b) =&gt; a - b); // 数値を比較
+numbers.sort((a, b) => a - b); // 数値を比較
 // [ 1, 5, 40, 200 ]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.TypedArray.indexOf")}}</p>
+{{Compat("javascript.builtins.TypedArray.indexOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.sort()")}}

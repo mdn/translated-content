@@ -9,73 +9,59 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getInt32()</code></strong> メソッドは、符号付き32ビット整数 (long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。</p>
+**`getInt32()`** メソッドは、符号付き 32 ビット整数 (long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dataview.getInt32(byteOffset [, littleEndian])
+```
 
-<pre class="syntaxbox notranslate"><var>dataview</var>.getInt32(<var>byteOffset</var> [, <var>littleEndian</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `byteOffset`
+  - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
+- `littleEndian`
+  - : {{optional_inline}} 32 ビット整数が{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 `false` または `undefined` の場合、ビッグエンディアン値を読み取ります。
 
-<dl>
- <dt><code><var>byteOffset</var></code></dt>
- <dd>ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。</dd>
- <dt><code><var>littleEndian</var></code></dt>
- <dd>{{optional_inline}} 32ビット整数が{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 <code>false</code> または <code>undefined</code> の場合、ビッグエンディアン値を読み取ります。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+符号付き 32 ビット整数。
 
-<p>符号付き32ビット整数。</p>
+### 発生するエラー
 
-<h3 id="Errors_thrown" name="Errors_thrown">発生するエラー</h3>
+- {{jsxref("RangeError")}}
+  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd><code>byteOffset</code> がビューの末尾を超えて読み取るように設定されている場合に発生します。</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。
 
-<p>アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getInt32 メソッドの使用
 
-<h3 id="Using_the_getInt32_method" name="Using_the_getInt32_method">getInt32 メソッドの使用</h3>
-
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getInt32(1); // 0
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-dataview.prototype.getint32', 'DataView.prototype.getInt32')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.getint32', 'DataView.prototype.getInt32')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.DataView.getInt32")}}</p>
+{{Compat("javascript.builtins.DataView.getInt32")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

@@ -9,54 +9,44 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getUTCSeconds()</code></strong> メソッドは、協定世界時に基づき、指定された日時の「秒」を返します。</p>
+**`getUTCSeconds()`** メソッドは、協定世界時に基づき、指定された日時の「秒」を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcseconds.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcseconds.html", "shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.getUTCSeconds()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.getUTCSeconds()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時に基づき、与えられた日時の「秒」を表す 0 から 59 までの間の整数値。
 
-<p>協定世界時に基づき、与えられた日時の「秒」を表す 0 から 59 までの間の整数値。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getUTCSeconds() の使用
 
-<h3 id="getUTCSeconds_の使用">getUTCSeconds() の使用</h3>
+次の例は、現在日時の「秒」部を変数 `seconds` に代入します。
 
-<p>次の例は、現在日時の「秒」部を変数 <code>seconds</code> に代入します。</p>
-
-<pre class="brush: js notranslate">var today = new Date();
+```js
+var today = new Date();
 var seconds = today.getUTCSeconds();
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getutcseconds', 'Date.prototype.getUTCSeconds')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcseconds', 'Date.prototype.getUTCSeconds')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.getUTCSeconds")}}</p>
+{{Compat("javascript.builtins.Date.getUTCSeconds")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getSeconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCSeconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getSeconds()")}}
+- {{jsxref("Date.prototype.setUTCSeconds()")}}

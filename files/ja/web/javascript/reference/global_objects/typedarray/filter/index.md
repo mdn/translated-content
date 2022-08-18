@@ -10,94 +10,80 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>filter()</code></strong> メソッドは、提供された関数によって実装されたテストに合格したすべての要素を含む新しい型付き配列を生成します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.filter()")}} と同じです。ここで <em>TypedArray</em> は、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの1つです。</p>
+**`filter()`** メソッドは、提供された関数によって実装されたテストに合格したすべての要素を含む新しい型付き配列を生成します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.filter()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.filter(callback[, thisArg])
+```
 
-<pre class="syntaxbox notranslate"><var>typedarray</var>.filter(<var>callback</var>[, <var>thisArg</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `callback`
+  - : 型付き配列の各要素をテストする関数。 `(element, index, typedarray)` の引数で呼び出されます。 `true` を返すと要素を維持し、それでなければ `false` を返します。
+- `thisArg`{{optional_inline}}
+  - : `callback` を実行するときに `this` として使用する値です。
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>型付き配列の各要素をテストする関数。 <code>(<var>element</var>, <var>index</var>, <var>typedarray</var>)</code> の引数で呼び出されます。 <code>true</code> を返すと要素を維持し、それでなければ <code>false</code> を返します。</dd>
- <dt><code><var>thisArg</var></code>{{optional_inline}}</dt>
- <dd><code><var>callback</var></code> を実行するときに <code>this</code> として使用する値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+テストに合格した要素を持つ新しい型付き配列。
 
-<p>テストに合格した要素を持つ新しい型付き配列。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`filter()` は、与えられた `callback` 関数を型付き配列の各要素に対して一度ずつ呼び出し、`callback` が [`true` と評価される値](/ja/docs/Glossary/Truthy)を返したすべての要素からなる新しい型付き配列を生成します。`callback` は値が代入されている型付き配列の添字に対してのみ呼び出されます。つまり、すでに削除された添字や、まだ値が代入されていない添字に対しては呼び出されません。`callback` によるテストに合格しなかった型付き配列の要素は単純にスキップされ、新しい型付き配列には含まれません。
 
-<p><code>filter()</code> は、与えられた <code><var>callback</var></code> 関数を型付き配列の各要素に対して一度ずつ呼び出し、<code><var>callback</var></code> が <a href="/ja/docs/Glossary/Truthy"><code>true</code> と評価される値</a>を返したすべての要素からなる新しい型付き配列を生成します。<code><var>callback</var></code> は値が代入されている型付き配列の添字に対してのみ呼び出されます。つまり、すでに削除された添字や、まだ値が代入されていない添字に対しては呼び出されません。<code><var>callback</var></code> によるテストに合格しなかった型付き配列の要素は単純にスキップされ、新しい型付き配列には含まれません。</p>
+`callback` は 3 つの引数で呼び出されます。
 
-<p><code><var>callback</var></code> は 3 つの引数で呼び出されます。</p>
+1.  要素の値
+2.  要素の添字
+3.  走査中の型付き配列オブジェクト
 
-<ol>
- <li>要素の値</li>
- <li>要素の添字</li>
- <li>走査中の型付き配列オブジェクト</li>
-</ol>
+引数 `thisArg` が `filter()` に与えられた場合、そのオブジェクトは `callback` が呼び出された際に `this` 値として使われます。そうでない場合、 `undefined` が `this` 値として使われます。`callback` 関数内の最終的な `this` 値は[関数内の `this` を決定する一般的ルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に従って決められます。
 
-<p>引数 <code><var>thisArg</var></code> が <code>filter()</code> に与えられた場合、そのオブジェクトは <code><var>callback</var></code> が呼び出された際に <code>this</code> 値として使われます。そうでない場合、 <code>undefined</code> が <code>this</code> 値として使われます。<code><var>callback</var></code> 関数内の最終的な <code>this</code> 値は<a href="/ja/docs/Web/JavaScript/Reference/Operators/this">関数内の <code>this</code> を決定する一般的ルール</a>に従って決められます。</p>
+`filter()` は呼び出された型付き配列を変化させません。
 
-<p><code>filter()</code> は呼び出された型付き配列を変化させません。</p>
+`filter()` によって処理される要素の範囲は `callback` が最初の呼び出し前に設定されます。 `filter()` の呼び出しが始まった後で型付き配列にに追加された要素は `callback` によって処理されません。型付き配列の存在している要素が変更されたり、削除された場合、 `callback` に渡される値は、 `filter()` が処理する直前の値になります。
 
-<p><code>filter()</code> によって処理される要素の範囲は <code><var>callback</var></code> が最初の呼び出し前に設定されます。 <code>filter()</code> の呼び出しが始まった後で型付き配列にに追加された要素は <code><var>callback</var></code> によって処理されません。型付き配列の存在している要素が変更されたり、削除された場合、 <code><var>callback</var></code> に渡される値は、 <code>filter()</code> が処理する直前の値になります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 小さな値をすべて取り除く
 
-<h3 id="Filtering_out_all_small_values" name="Filtering_out_all_small_values">小さな値をすべて取り除く</h3>
+次の例では、`filter()` を使って `10` 未満の値を持つ要素をすべて取り除いた型付き配列を生成します。
 
-<p>次の例では、<code>filter()</code> を使って <code>10</code> 未満の値を持つ要素をすべて取り除いた型付き配列を生成します。</p>
-
-<pre class="brush: js notranslate">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 // Uint8Array [ 12, 130, 44 ]
-</pre>
+```
 
-<h3 id="Filtering_typed_array_elements_using_arrow_functions" name="Filtering_typed_array_elements_using_arrow_functions">アロー関数を使用して型付き配列の要素をフィルターする</h3>
+### アロー関数を使用して型付き配列の要素をフィルターする
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>によって、同じテストをより短い構文で実現できます。</p>
+[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)によって、同じテストをより短い構文で実現できます。
 
-<pre class="brush: js notranslate">new Uint8Array([12, 5, 8, 130, 44]).filter(elem =&gt; elem &gt;= 10);
-// Uint8Array [ 12, 130, 44 ]</pre>
+```js
+new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
+// Uint8Array [ 12, 130, 44 ]
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.TypedArray.filter")}}</p>
-</div>
+{{Compat("javascript.builtins.TypedArray.filter")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.filter()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.filter()")}}

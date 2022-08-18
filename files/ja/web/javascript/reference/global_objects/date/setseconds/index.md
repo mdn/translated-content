@@ -9,71 +9,61 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setSeconds()</code></strong> メソッドは、地方時に基づき、指定された日時の「秒」を設定します。</p>
+**`setSeconds()`** メソッドは、地方時に基づき、指定された日時の「秒」を設定します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.setSeconds(secondsValue[, msValue])
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setSeconds(<var>secondsValue</var>[, <var>msValue</var>])</pre>
+### JavaScript 1.3 より前のバージョン
 
-<h3 id="Versions_prior_to_JavaScript_1.3" name="Versions_prior_to_JavaScript_1.3">JavaScript 1.3 より前のバージョン</h3>
+```
+dateObj.setSeconds(secondsValue)
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setSeconds(<var>secondsValue</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `secondsValue`
+  - : 日付の「秒」を表す 0 から 59 までの間の整数値。
+- `msValue` {{Optional_inline}}
+  - : 日付の「ミリ秒」を表す 0 から 999 までの間の整数。
 
-<dl>
- <dt><code><var>secondsValue</var></code></dt>
- <dd>日付の「秒」を表す 0 から 59 までの間の整数値。</dd>
- <dt><code><var>msValue</var></code> {{Optional_inline}}</dt>
- <dd>日付の「ミリ秒」を表す 0 から 999 までの間の整数。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
-<p>協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`msValue` 引数を指定しなかった場合、{{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} メソッドから返される値が使われます。
 
-<p><code><var>msValue</var></code> 引数を指定しなかった場合、{{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} メソッドから返される値が使われます。</p>
+指定した値が期待される日付の範囲外の場合、それに応じて `setSeconds()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、 `secondsValue` に 100 を指定した場合、分に 1 が加算され、秒が 40 になります。
 
-<p>指定した値が期待される日付の範囲外の場合、それに応じて <code>setSeconds()</code> が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、 <code><var>secondsValue</var></code> に 100 を指定した場合、分に 1 が加算され、秒が 40 になります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### setSeconds() の使用
 
-<h3 id="Using_setSeconds" name="Using_setSeconds">setSeconds() の使用</h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setSeconds(30);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.setSeconds")}}</p>
+{{Compat("javascript.builtins.Date.setSeconds")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getSeconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCSeconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getSeconds()")}}
+- {{jsxref("Date.prototype.setUTCSeconds()")}}

@@ -9,27 +9,28 @@ tags:
   - arguments
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><code><strong><em>function</em>.arguments</strong></code> プロパティは、関数に渡される引数に対応する、配列風のオブジェクトです。より単純な {{jsxref("Functions/arguments", "arguments")}} 変数を使用してください。このプロパティは厳格モードでは使用できません。</p>
+<code><strong><em>function</em>.arguments</strong></code> プロパティは、関数に渡される引数に対応する、配列風のオブジェクトです。より単純な {{jsxref("Functions/arguments", "arguments")}} 変数を使用してください。このプロパティは厳格モードでは使用できません。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code><em>function</em>.arguments</code> の構文は非推奨です。関数内で {{jsxref("Functions/arguments", "arguments")}} オブジェクトにアクセスする方法としては、変数 {{jsxref("Functions/arguments", "arguments")}} が利用できます。</p>
+`function.arguments` の構文は非推奨です。関数内で {{jsxref("Functions/arguments", "arguments")}} オブジェクトにアクセスする方法としては、変数 {{jsxref("Functions/arguments", "arguments")}} が利用できます。
 
-<p>再帰呼び出しの場合、すなわちコールスタックに関数 <code>f</code> が複数回現れる場合に、<code>f.arguments</code> はもっとも直近に実行された関数に対応する引数を表します。</p>
+再帰呼び出しの場合、すなわちコールスタックに関数 `f` が複数回現れる場合に、`f.arguments` はもっとも直近に実行された関数に対応する引数を表します。
 
-<p>実行中の関数の未処理の呼び出しがない (つまり、関数が呼び出された状態で返してない) 場合、 arguments プロパティの値は通常 null です。</p>
+実行中の関数の未処理の呼び出しがない (つまり、関数が呼び出された状態で返してない) 場合、 arguments プロパティの値は通常 null です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Using_the_arguments_object" name="Using_the_arguments_object">arguments オブジェクトの使用</h3>
+### arguments オブジェクトの使用
 
-<pre class="brush: js notranslate">function f(n) { g(n - 1) }
+```js
+function f(n) { g(n - 1) }
 
 function g(n) {
   console.log('before: ' + g.arguments[0])
-  if (n &gt; 0) { f(n) }
+  if (n > 0) { f(n) }
   console.log('after: ' + g.arguments[0])
 }
 
@@ -44,21 +45,17 @@ console.log('returned: ' + g.arguments)
 // after: 0
 // after: 1
 // returned: null
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p><span class="pl-s">何れかの標準で定義されたものではありません。</span> ECMAScript 3 で {{jsxref("Functions/arguments", "arguments")}} に置き換えられました。</p>
+何れかの標準で定義されたものではありません。 ECMAScript 3 で {{jsxref("Functions/arguments", "arguments")}} に置き換えられました。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Function.arguments")}}</p>
-</div>
+{{Compat("javascript.builtins.Function.arguments")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Functions/arguments", "arguments")}} オブジェクト</li>
- <li>{{jsxref("Functions", "関数と関数スコープ", "", 1)}}</li>
-</ul>
+- {{jsxref("Functions/arguments", "arguments")}} オブジェクト
+- {{jsxref("Functions", "関数と関数スコープ", "", 1)}}
