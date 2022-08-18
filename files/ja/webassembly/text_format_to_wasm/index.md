@@ -12,17 +12,15 @@ tags:
   - wat2wasm
 translation_of: WebAssembly/Text_format_to_wasm
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p class="summary">WebAssembly にはS式ベースのテキスト表現があります。これはテキストエディタ、ブラウザの開発者ツールなどで見せるために設計された中間表現です。この記事では、これがどのように動作するか、テキスト形式のファイルを <code>.wasm</code> アセンブリ形式に変換するのに利用可能なツールの使用方法について少し説明します。</p>
+WebAssembly には S 式ベースのテキスト表現があります。これはテキストエディタ、ブラウザの開発者ツールなどで見せるために設計された中間表現です。この記事では、これがどのように動作するか、テキスト形式のファイルを `.wasm` アセンブリ形式に変換するのに利用可能なツールの使用方法について少し説明します。
 
-<div class="note">
-<p><strong>注</strong>: テキスト形式のファイルは通常 <code>.wat</code> という拡張子で保存されます。場合によっては <code>.wast</code> も使われます。これはアサーションなどの変換時に .wasm に含まれない特別なテストコマンドを含むファイルを指します。</p>
-</div>
+> **Note:** **注**: テキスト形式のファイルは通常 `.wat` という拡張子で保存されます。場合によっては `.wast` も使われます。これはアサーションなどの変換時に .wasm に含まれない特別なテストコマンドを含むファイルを指します。
 
-<h2 id="A_first_look_at_the_text_format" name="A_first_look_at_the_text_format">はじめてのテキストフォーマット</h2>
+## はじめてのテキストフォーマット
 
-<p>簡単な例を見てみましょう。次のプログラムは <code>imports</code> というモジュールから <code>imported_func</code> という名前の関数をインポートし、<code>exported_func</code> という名前の関数をエクスポートしています:</p>
+簡単な例を見てみましょう。次のプログラムは `imports` というモジュールから `imported_func` という名前の関数をインポートし、`exported_func` という名前の関数をエクスポートしています:
 
 <pre class="brush: wasm; notranslate">(module
   (func $i (import "imports" "imported_func") (param i32))
@@ -32,43 +30,41 @@ translation_of: WebAssembly/Text_format_to_wasm
   )
 )</pre>
 
-<p>WebAssembly 関数 <code>exported_func</code> は私達の環境 (WebAssembly モジュールを使用しているウェブアプリケーションなど) で使用するためにエクスポートされます。この関数が呼び出されたとき、インポートされた JavaScript 関数 <code>imported_func</code> パラメータとして値 (42) を渡して実行されます。</p>
+WebAssembly 関数 `exported_func` は私達の環境 (WebAssembly モジュールを使用しているウェブアプリケーションなど) で使用するためにエクスポートされます。この関数が呼び出されたとき、インポートされた JavaScript 関数 `imported_func` パラメータとして値 (42) を渡して実行されます。
 
-<h2 id="Converting_the_text_.wat_into_a_binary_.wasm_file" name="Converting_the_text_.wat_into_a_binary_.wasm_file">テキストの .wat ファイルからバイナリの .wasm ファイルに変換する</h2>
+## テキストの .wat ファイルからバイナリの .wasm ファイルに変換する
 
-<p>上の <code>.wat</code> テキスト表現の例を <code>.wasm</code> アセンブリ形式に変換してみましょう。</p>
+上の `.wat` テキスト表現の例を `.wasm` アセンブリ形式に変換してみましょう。
 
-<ol>
- <li>はじめに、上のコードをテキストファイルにコピーして <code>simple.wat</code> という名前のファイルを作成します。</li>
- <li>このテキスト表現をブラウザが実際に読み込んで利用可能なアセンブリ言語にアセンブルする必要があります。 このために wabt ツールを使用することができます。これは WebAssembly のテキスト表現から wasm 変換する、または逆に変換するコンパイラ(加えてもう少し別のツール)が含まれます。<a href="https://github.com/webassembly/wabt">https://github.com/webassembly/wabt</a> に行って、そのページの説明に従ってツールの設定をします。</li>
- <li>ツールをビルドしたら、システム <code>PATH</code> に <code>/wabt/out</code> ディレクトリを追加します。</li>
- <li>次に、wast2wasm プログラムを実行します。入力ファイルパス、続いて <code>-o</code> パラメータ、出力ファイルパスを指定します:
-  <pre class="brush: bash; no-line-numbers notranslate">wat2wasm simple.wat -o simple.wasm</pre>
- </li>
-</ol>
+1.  はじめに、上のコードをテキストファイルにコピーして `simple.wat` という名前のファイルを作成します。
+2.  このテキスト表現をブラウザが実際に読み込んで利用可能なアセンブリ言語にアセンブルする必要があります。 このために wabt ツールを使用することができます。これは WebAssembly のテキスト表現から wasm 変換する、または逆に変換するコンパイラ(加えてもう少し別のツール)が含まれます。<https://github.com/webassembly/wabt> に行って、そのページの説明に従ってツールの設定をします。
+3.  ツールをビルドしたら、システム `PATH` に `/wabt/out` ディレクトリを追加します。
+4.  次に、wast2wasm プログラムを実行します。入力ファイルパス、続いて `-o` パラメータ、出力ファイルパスを指定します:
 
-<p>これで <code>simple.wasm</code> という名前のファイルに wasm が出力されます。これには <code>.wasm</code> アセンブリのコードが含まれます。</p>
+    ```bash
+    wat2wasm simple.wat -o simple.wasm
+    ```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: wasm2wat を使用して wasm から テキスト表現に戻すことができます。例: <code>wasm2wat simple.wasm -o text.wat</code>.</p>
-</div>
+これで `simple.wasm` という名前のファイルに wasm が出力されます。これには `.wasm` アセンブリのコードが含まれます。
 
-<h2 id="Viewing_the_assembly_output" name="Viewing_the_assembly_output">アセンブリの出力を見る</h2>
+> **Note:** **注**: wasm2wat を使用して wasm から テキスト表現に戻すことができます。例: `wasm2wat simple.wasm -o text.wat`.
 
-<p>出力されたファイルはアセンブリベースなので通常のテキストエディタで表示することができません。ただし、wat2wasm ツールの <code>-v</code> オプションを使用して見ることができます。以下を試してみてください:</p>
+## アセンブリの出力を見る
 
-<pre class="brush: bash; no-line-numbers notranslate">wat2wasm simple.wat -v</pre>
+出力されたファイルはアセンブリベースなので通常のテキストエディタで表示することができません。ただし、wat2wasm ツールの `-v` オプションを使用して見ることができます。以下を試してみてください:
 
-<p>ターミナルには次のように出力されるでしょう:</p>
+```bash
+wat2wasm simple.wat -v
+```
 
-<p><img alt="several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code " src="/en-US/docs/WebAssembly/Text_format_to_wasm/assembly-output.png" style="display: block; margin: 0px auto;"></p>
+ターミナルには次のように出力されるでしょう:
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+![several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code ](/en-US/docs/WebAssembly/Text_format_to_wasm/assembly-output.png)
 
-<ul>
- <li><a href="/ja/docs/WebAssembly/Understanding_the_text_format">WebAssembly テキストフォーマットを理解する</a> — テキスト形式のシンタックスの詳細説明。</li>
- <li><a href="/ja/docs/WebAssembly/C_to_wasm">C/C++ から WebAssembly にコンパイルする</a> — Binaryen/Emscripten のようなツールはソースコードを wasm にコンパイルし、JavaScript のコンテキストでモジュールを実行するために必要な API コードを作成します。それらの使用方法の詳細はこちらから探してください。</li>
- <li><a href="/ja/docs/WebAssembly/Using_the_JavaScript_API">WebAssembly JavaScript API の使用</a> — WebAssembly API コードがどのように機能するかについて詳しく知りたい場合はこちらをお読みください。</li>
- <li><a href="https://webassembly.github.io/spec/core/text/index.html">Text format</a> — WebAssembly GitHub レポジトリのテキスト形式の詳細説明。</li>
- <li><a href="https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader">wast-loader</a> — あなたのためにこれをすべて処理する WebPack のローダーです。</li>
-</ul>
+## 関連情報
+
+- [WebAssembly テキストフォーマットを理解する](/ja/docs/WebAssembly/Understanding_the_text_format) — テキスト形式のシンタックスの詳細説明。
+- [C/C++ から WebAssembly にコンパイルする](/ja/docs/WebAssembly/C_to_wasm) — Binaryen/Emscripten のようなツールはソースコードを wasm にコンパイルし、JavaScript のコンテキストでモジュールを実行するために必要な API コードを作成します。それらの使用方法の詳細はこちらから探してください。
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API) — WebAssembly API コードがどのように機能するかについて詳しく知りたい場合はこちらをお読みください。
+- [Text format](https://webassembly.github.io/spec/core/text/index.html) — WebAssembly GitHub レポジトリのテキスト形式の詳細説明。
+- [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — あなたのためにこれをすべて処理する WebPack のローダーです。
