@@ -3,6 +3,8 @@ title: CSS 网格，逻辑值和书写模式
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
 ---
+{{CSSRef}}
+
 在前面的文章中，我们已经接触了网格布局的一个重要特性：被纳入规范的对不同书写模式的支持。本文我们将探讨在网格和其他现代布局方式下的这个特性的表现，以及学习一些关于书写模式和逻辑属性与物理属性的知识。
 
 ## 逻辑属性与物理属性及逻辑值与物理值
@@ -425,53 +427,3 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 新的布局方法赋予使用逻辑值定位项目的能力，不过如果和使用物理属性的 `margin`、`padding` 属性混用，切记这些物理属性并不会依据书写模式来改变它们的显示效果。
 
 [CSS 逻辑属性规范](https://drafts.csswg.org/css-logical-props/) 的目标是改变现状，在未来的 CSS 中，{{cssxref("margin-left")}} 和 {{cssxref("margin-right")}} 将与[逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)相同。Firefox 已经实现了，所以你现在就可以在 Firefox 中试上一试。未来如果得到全面支持，那么通过网格学习到的“块和行内”的知识，你也能马上举一反三地用在其他地方了。
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4. **指南**
-
-    1. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS 网格布局和可及性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [使用网格实现常见布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5. **属性**
-
-    1. [grid](/zh-CN/docs/Web/CSS/grid)
-    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
-    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
-
-6. **词汇**
-
-    1. [Grid](/zh-CN/docs/Glossary/Grid)
-    2. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    5. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    6. [Gutters](/zh-CN/docs/Glossary/Gutters)
-    7. [Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)
-    8. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    9. [Grid column](/zh-CN/docs/Glossary/Grid_column)

@@ -2,6 +2,8 @@
 title: CSS 网格布局和可访问性
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 ---
+{{CSSRef}}
+
 我们这些做 web 开发多年的人和比我们更早入行的人，可能都觉得 CSS 网格有一点像曾经用过的“表格布局”。在 web 设计的早期，构建页面布局的方式是使用 HTML 表格，通过把设计分割成表格的单元格来创建布局。这比后来的“CSS 定位”的优势在于，可以利用表格显示能力提供的对齐和全高度的列。最大的负面影响在于它将设计和 HTML 标记绑在一起，经常会造成可访问性的问题。为了将设计摆到表格中，内容被打散了，如果用屏幕阅读器去读它，读出来的内容就是毫无意义的。
 
 在转向 CSS 布局时，我们经常说 CSS 把内容标记与内容表现分离了。最终的目标是，我们可以创建一个语义和结构良好的文档，然后应用 CSS 来创建我们想要的布局。[CSS Zen Garden](http://www.csszengarden.com/) 等网站展示了这种能力，[CSS Zen Garden](http://www.csszengarden.com/) 提供的挑战是，对于一个具有固定标记的 HTML 页面，却能用 CSS 来创建各种独特的设计。
@@ -107,53 +109,3 @@ CSS 网格布局中需要注意的另一个问题（在 CSS Flex 布局中程度
 依据文档源代码顺序进行可视化显示的概念在 _WCAG（无障碍网页内容指引）成熟标准技巧 - [技巧 C27](https://www.w3.org/TR/WCAG20-TECHS/C27.html)_ 中有详细描述。
 
 作为一种开始思考这些问题的方式，当使用 CSS 网格布局时，建议阅读 Leonie Watson 的 _[Flexbox & the Keyboard Navigation Disconnect](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)。[来自 ffconf 的 Leoie 的演示视频](https://www.youtube.com/watch?v=spxT2CmHoPk)有助于了解屏幕阅读器如何使用 CSS 的视觉表示进行工作。Adrian Roselli 也发表了 [tab order in various browsers](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) —— 尽管这是在 Firefox 完全实现网格支持之前。_
-
-1. _[**CSS**](/zh-CN/docs/Web/CSS)_
-2. _[**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)_
-3. _[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)_
-4. _**指南**_
-
-    1. _[网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-    2. _[与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)_
-    3. _[基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-    4. _[网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-    5. _[使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
-    6. _[网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-    7. _[网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-    8. _[网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)_
-    9. _[CSS 网格布局和可访问性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_
-    10. _[CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)_
-    11. _[使用网格实现常见布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)_
-
-5. _**属性**_
-
-    1. _[grid](/zh-CN/docs/Web/CSS/grid)_
-    2. _[grid-area](/zh-CN/docs/Web/CSS/grid-area)_
-    3. _[grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)_
-    4. _[grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)_
-    5. _[grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)_
-    6. _[grid-column](/zh-CN/docs/Web/CSS/grid-column)_
-    7. _[grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)_
-    8. _[grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)_
-    9. _[grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)_
-    10. _[grid-gap](/zh-CN/docs/Web/CSS/grid-gap)_
-    11. _[grid-row](/zh-CN/docs/Web/CSS/grid-row)_
-    12. _[grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)_
-    13. _[grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)_
-    14. _[grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)_
-    15. _[grid-template](/zh-CN/docs/Web/CSS/grid-template)_
-    16. _[grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)_
-    17. _[grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)_
-    18. _[grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)_
-
-6. _**词汇**_
-
-    1. _[Grid](/zh-CN/docs/Glossary/Grid)_
-    2. _[Grid lines](/zh-CN/docs/Glossary/Grid_lines)_
-    3. _[Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)_
-    4. _[Grid cell](/zh-CN/docs/Glossary/Grid_cell)_
-    5. _[Grid areas](/zh-CN/docs/Glossary/Grid_areas)_
-    6. _[Gutters](/zh-CN/docs/Glossary/Gutters)_
-    7. _[Grid Axis](/zh-CN/docs/Glossary/Grid_Axis)_
-    8. _[Grid row](/zh-CN/docs/Glossary/Grid_rows)_
-    9. _[Grid column](/zh-CN/docs/Glossary/Grid_column)_
