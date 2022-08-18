@@ -18,156 +18,134 @@ tags:
 translation_of: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/Styling_text/ウェブフォント
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}</div>
+このモジュールの最初の記事では、フォントとテキストの装飾に使用できる基本的な CSS 機能について調べました。 この記事では、ウェブフォントの詳細を調べながら、さらに進みます — これらを使用すると、ウェブページと一緒にカスタムフォントをダウンロードすることを可能にして、より多様なカスタムテキストの装飾を可能にします。
 
-<p class="summary"><span class="seoSummary">このモジュールの最初の記事では、フォントとテキストの装飾に使用できる基本的な CSS 機能について調べました。 この記事では、ウェブフォントの詳細を調べながら、さらに進みます — これらを使用すると、ウェブページと一緒にカスタムフォントをダウンロードすることを可能にして、より多様なカスタムテキストの装飾を可能にします。</span></p>
+| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、CSS の基本（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)を学ぶ）、[CSS のテキストとフォントの基礎](/ja/docs/Learn/CSS/Styling_text/Fundamentals)。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 学習目標: | サードパーティのサービスを使用するか、独自のコードを作成することによって、ウェブフォントをウェブページに適用する方法を習得する。                                                                                                                                       |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターリテラシー、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>を学ぶ）、CSS の基本（<a href="/ja/docs/Learn/CSS/Introduction_to_CSS">CSS 入門</a>を学ぶ）、<a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">CSS のテキストとフォントの基礎</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習目標:</th>
-   <td>サードパーティのサービスを使用するか、独自のコードを作成することによって、ウェブフォントをウェブページに適用する方法を習得する。</td>
-  </tr>
- </tbody>
-</table>
+## フォントファミリーの復習
 
-<h2 id="Font_families_recap" name="Font_families_recap">フォントファミリーの復習</h2>
+[基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)で見たように、HTML に適用されるフォントは {{cssxref("font-family")}} プロパティを使って制御できます。 これは 1 つ以上のフォントファミリー名を取り、ブラウザーはそれが実行されているシステムで利用可能なフォントを見つけるまでリストを順にたどります。
 
-<p><a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">基本的なテキストとフォントの装飾</a>で見たように、HTML に適用されるフォントは {{cssxref("font-family")}} プロパティを使って制御できます。 これは1つ以上のフォントファミリー名を取り、ブラウザーはそれが実行されているシステムで利用可能なフォントを見つけるまでリストを順にたどります。</p>
-
-<pre class="brush: css notranslate">p {
+```css
+p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
-}</pre>
+}
+```
 
-<p>このシステムはうまく機能しますが、伝統的にウェブ開発者のフォント選択は限られていました。 一般的なすべてのシステムで利用できることを保証できるフォントは、ほんの一握りです — いわゆる<a href="/ja/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts">ウェブセーフフォント</a>です。 フォントスタックを使用して希望するフォントを指定し、その後にウェブセーフの代替フォントを指定してからデフォルトのシステムフォントを指定することができますが、これはデザインが各フォントなどでうまく見えることを確認するためにテストの面でオーバーヘッドを追加します。（訳注：日本語フォントを英語フォントの後、デフォルトフォントの前に指定すれば、英語部分だけ英語フォントにすることができます。 つまり、英語フォントだけの指定であっても、日本語環境なら、日本語には日本語のデフォルトフォントが使われるということです。 中国語環境なら、中国語の漢字が使われることでしょう。）</p>
+このシステムはうまく機能しますが、伝統的にウェブ開発者のフォント選択は限られていました。 一般的なすべてのシステムで利用できることを保証できるフォントは、ほんの一握りです — いわゆる[ウェブセーフフォント](/ja/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)です。 フォントスタックを使用して希望するフォントを指定し、その後にウェブセーフの代替フォントを指定してからデフォルトのシステムフォントを指定することができますが、これはデザインが各フォントなどでうまく見えることを確認するためにテストの面でオーバーヘッドを追加します。（訳注：日本語フォントを英語フォントの後、デフォルトフォントの前に指定すれば、英語部分だけ英語フォントにすることができます。 つまり、英語フォントだけの指定であっても、日本語環境なら、日本語には日本語のデフォルトフォントが使われるということです。 中国語環境なら、中国語の漢字が使われることでしょう。）
 
-<h2 id="Web_fonts" name="Web_fonts">ウェブフォント</h2>
+## ウェブフォント
 
-<p>しかし、IE バージョン 6 でも非常にうまく動作する代替手段があります。 ウェブフォントは、ウェブサイトにアクセスした時に一緒にダウンロードするフォントファイルを指定できる CSS の機能です。 つまり、ウェブフォントをサポートするブラウザーであれば、指定したフォントをそのまま使用できることを意味しています。 すばらしい！ 必要な構文は次のようになります。</p>
+しかし、IE バージョン 6 でも非常にうまく動作する代替手段があります。 ウェブフォントは、ウェブサイトにアクセスした時に一緒にダウンロードするフォントファイルを指定できる CSS の機能です。 つまり、ウェブフォントをサポートするブラウザーであれば、指定したフォントをそのまま使用できることを意味しています。 すばらしい！ 必要な構文は次のようになります。
 
-<p>まず最初に、CSS の先頭に {{cssxref("@font-face")}} ブロックがあり、ダウンロードするフォントファイルを指定します。</p>
+まず最初に、CSS の先頭に {{cssxref("@font-face")}} ブロックがあり、ダウンロードするフォントファイルを指定します。
 
-<pre class="brush: css notranslate">@font-face {
+```css
+@font-face {
   font-family: "myFont";
   src: url("myFont.woff");
-}</pre>
+}
+```
 
-<p>これより下では、<code>@font-face</code> の中で指定されているフォントファミリー名を使ってカスタムフォントを通常通り好きなものに適用できます。</p>
+これより下では、`@font-face` の中で指定されているフォントファミリー名を使ってカスタムフォントを通常通り好きなものに適用できます。
 
-<pre class="brush: css notranslate">html {
+```css
+html {
   font-family: "myFont", "Bitstream Vera Serif", serif;
-}</pre>
+}
+```
 
-<p>構文はこれより少し複雑になります。 以下で詳しく説明します。</p>
+構文はこれより少し複雑になります。 以下で詳しく説明します。
 
-<p>ウェブフォントに関して留意すべき重要な点が2つあります。</p>
+ウェブフォントに関して留意すべき重要な点が 2 つあります。
 
-<ol>
- <li>ブラウザーはさまざまなフォント形式をサポートしているため、適切なクロスブラウザーをサポートするには複数のフォント形式が必要になります。 例えば、最近のほとんどのブラウザーは最も効率的な形式である WOFF / WOFF2（Web Open Font Format バージョン 1 および 2）をサポートしていますが、古いバージョンの IE は EOT（Embedded Open Type）フォントしかサポートしていないし、古いバージョンの iPhone や Android のブラウザーをサポートするには、SVG 版のフォントを含める必要があるかもしれません。 必要なコードの生成方法を下の方で示します。</li>
- <li>フォントは一般に自由に使用できません。 それらの代金を払わなければなりません、そして/またはコードの中で（またはサイトで）フォント作成者のクレジット表示のような他のライセンス条件に従わなければなりません。 フォントを盗み、適切なクレジットを与えずに使用するべきではありません。</li>
-</ol>
+1.  ブラウザーはさまざまなフォント形式をサポートしているため、適切なクロスブラウザーをサポートするには複数のフォント形式が必要になります。 例えば、最近のほとんどのブラウザーは最も効率的な形式である WOFF / WOFF2（Web Open Font Format バージョン 1 および 2）をサポートしていますが、古いバージョンの IE は EOT（Embedded Open Type）フォントしかサポートしていないし、古いバージョンの iPhone や Android のブラウザーをサポートするには、SVG 版のフォントを含める必要があるかもしれません。 必要なコードの生成方法を下の方で示します。
+2.  フォントは一般に自由に使用できません。 それらの代金を払わなければなりません、そして/またはコードの中で（またはサイトで）フォント作成者のクレジット表示のような他のライセンス条件に従わなければなりません。 フォントを盗み、適切なクレジットを与えずに使用するべきではありません。
 
-<div class="note">
-<p><strong>注</strong>: テクノロジーとしてのウェブフォントは、バージョン 4 以降の Internet Explorer でサポートされています！</p>
-</div>
+> **Note:** **注**: テクノロジーとしてのウェブフォントは、バージョン 4 以降の Internet Explorer でサポートされています！
 
-<h2 id="Active_learning_A_web_font_example" name="Active_learning_A_web_font_example">能動的学習: ウェブフォントの例</h2>
+## 能動的学習: ウェブフォントの例
 
-<p>この点を考慮して、最初の原則から基本的なウェブフォントの例を作り上げましょう。 埋め込まれたライブの例を使用してこれをデモすることは困難なので、代わりに、以下のセクションで詳述されている手順に従うことでプロセスを理解してください。</p>
+この点を考慮して、最初の原則から基本的なウェブフォントの例を作り上げましょう。 埋め込まれたライブの例を使用してこれをデモすることは困難なので、代わりに、以下のセクションで詳述されている手順に従うことでプロセスを理解してください。
 
-<p>コードを追加するための出発点として、<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html">web-font-start.html</a> ファイルと <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css">web-font-start.css</a> ファイルを使用する必要があります（<a href="http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html">ライブの例</a>を見る）。 ここで、これらのファイルのコピーをコンピュータの新しいディレクトリに作成します。 <code>web-font-start.css</code> ファイルには、この例の基本的なレイアウトと組版を処理するための最小限の CSS がいくつかあります。</p>
+コードを追加するための出発点として、[web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) ファイルと [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) ファイルを使用する必要があります（[ライブの例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)を見る）。 ここで、これらのファイルのコピーをコンピュータの新しいディレクトリに作成します。 `web-font-start.css` ファイルには、この例の基本的なレイアウトと組版を処理するための最小限の CSS がいくつかあります。
 
-<h3 id="Finding_fonts" name="Finding_fonts">フォントを探す</h3>
+### フォントを探す
 
-<p>この例では、見出し用と本文テキスト用の2つのウェブフォントを使用します。 まず最初に、フォントを含むフォントファイルを見つける必要があります。 フォントはフォント製造元によって作成され、さまざまなファイル形式で保存されます。 フォントを入手できるサイトは、一般的に3種類あります。</p>
+この例では、見出し用と本文テキスト用の 2 つのウェブフォントを使用します。 まず最初に、フォントを含むフォントファイルを見つける必要があります。 フォントはフォント製造元によって作成され、さまざまなファイル形式で保存されます。 フォントを入手できるサイトは、一般的に 3 種類あります。
 
-<ul>
- <li>無料フォント配布会社: これは無料フォントをダウンロードできるサイトです（フォント作成者へのクレジット表示などのライセンス条件が他にあるかもしれません）。 例としては、<a href="https://www.fontsquirrel.com/">Font Squirrel</a>、<a href="http://www.dafont.com/">dafont</a>、<a href="https://everythingfonts.com/">Everything Fonts</a> などがあります。</li>
- <li>有料フォント配布会社: これは、<a href="http://www.fonts.com/">fonts.com</a> や <a href="http://www.myfonts.com/">myfonts.com</a> など、フォントを有料で利用できるようにするサイトです。 <a href="https://www.linotype.com/">Linotype</a>、<a href="http://www.monotype.com">Monotype</a>、<a href="http://www.exljbris.com/">Exljbris</a> などのフォント製造元から直接フォントを購入することもできます。</li>
- <li>オンラインフォントサービス: これはあなたに代わってフォントを保存し提供するサイトで、全体のプロセスをより簡単にします。 詳細については、<a href="#using_an_online_font_service">オンラインフォントサービスの使用</a>のセクションを参照してください。</li>
-</ul>
+- 無料フォント配布会社: これは無料フォントをダウンロードできるサイトです（フォント作成者へのクレジット表示などのライセンス条件が他にあるかもしれません）。 例としては、[Font Squirrel](https://www.fontsquirrel.com/)、[dafont](http://www.dafont.com/)、[Everything Fonts](https://everythingfonts.com/) などがあります。
+- 有料フォント配布会社: これは、[fonts.com](http://www.fonts.com/) や [myfonts.com](http://www.myfonts.com/) など、フォントを有料で利用できるようにするサイトです。 [Linotype](https://www.linotype.com/)、[Monotype](http://www.monotype.com)、[Exljbris](http://www.exljbris.com/) などのフォント製造元から直接フォントを購入することもできます。
+- オンラインフォントサービス: これはあなたに代わってフォントを保存し提供するサイトで、全体のプロセスをより簡単にします。 詳細については、[オンラインフォントサービスの使用](#using_an_online_font_service)のセクションを参照してください。
 
-<p>いくつかのフォントを見つけましょう！ <a href="https://www.fontsquirrel.com/">Font Squirrel</a> に行き、2つのフォントを選択します — 見出しには素敵で面白いフォント（多分素敵な display や slab serif フォント）、段落にはやや派手で読みやすいフォントです。 各フォントが見つかったら、download（ダウンロード）ボタンを押して、先ほど保存した HTML ファイルと CSS ファイルと同じディレクトリ内にファイルを保存します。 TTF（True Type Fonts）か OTF（Open Type Fonts）かは関係ありません。</p>
+いくつかのフォントを見つけましょう！ [Font Squirrel](https://www.fontsquirrel.com/) に行き、2 つのフォントを選択します — 見出しには素敵で面白いフォント（多分素敵な display や slab serif フォント）、段落にはやや派手で読みやすいフォントです。 各フォントが見つかったら、download（ダウンロード）ボタンを押して、先ほど保存した HTML ファイルと CSS ファイルと同じディレクトリ内にファイルを保存します。 TTF（True Type Fonts）か OTF（Open Type Fonts）かは関係ありません。
 
-<p>いずれの場合も、フォントパッケージを解凍します（ウェブフォントは通常、フォントファイルとライセンス情報を含む ZIP ファイルで配布されます）。 パッケージの中に複数のフォントファイルを見つけるかもしれません — 例えば、thin（細字）、medium（中字）、bold（太字）、italic（イタリック）、thin italic（細字イタリック）など、利用可能なさまざまな異形（variant）を持つファミリーとして配布されるフォントがあります。 この例では、それぞれの選択に対して 1つのフォントファイルを使用することを考慮してください。</p>
+いずれの場合も、フォントパッケージを解凍します（ウェブフォントは通常、フォントファイルとライセンス情報を含む ZIP ファイルで配布されます）。 パッケージの中に複数のフォントファイルを見つけるかもしれません — 例えば、thin（細字）、medium（中字）、bold（太字）、italic（イタリック）、thin italic（細字イタリック）など、利用可能なさまざまな異形（variant）を持つファミリーとして配布されるフォントがあります。 この例では、それぞれの選択に対して 1 つのフォントファイルを使用することを考慮してください。
 
-<div class="note">
-<p><strong>注</strong>: 右側の列の "Find fonts"（フォントの検索）セクションで、さまざまな tags（タグ）や classifications（分類）をクリックして表示された選択肢を絞り込むことができます。 （訳注：残念なことに現在のところ日本語フォントはないようです。）</p>
-</div>
+> **Note:** **注**: 右側の列の "Find fonts"（フォントの検索）セクションで、さまざまな tags（タグ）や classifications（分類）をクリックして表示された選択肢を絞り込むことができます。 （訳注：残念なことに現在のところ日本語フォントはないようです。）
 
-<h3 id="Generating_the_required_code" name="Generating_the_required_code">必要なコードの生成</h3>
+### 必要なコードの生成
 
-<p>今、必要なコード（そしてフォント形式）を生成する必要があります。 フォントごとに、次の手順に従います。</p>
+今、必要なコード（そしてフォント形式）を生成する必要があります。 フォントごとに、次の手順に従います。
 
-<ol>
- <li>商用やウェブのプロジェクトでこれを使用する場合は、ライセンス要件をすべて満たしていることを確認してください。</li>
- <li>Font Squirrel の <a href="https://www.fontsquirrel.com/tools/webfont-generator">Webfont Generator</a>（ウェブフォントジェネレータ）に行きます。</li>
- <li><em>Upload Fonts</em>（フォントのアップロード）ボタンを使って2つのフォントファイルをアップロードします。</li>
- <li>"Yes, the fonts I'm uploading are legally eligible for web embedding." （はい、アップロードしたフォントはウェブの埋め込みに法的に適格です。）というチェックボックスをオンにします。</li>
- <li><em>Download your kit</em>（キットをダウンロードする）をクリックします。</li>
-</ol>
+1.  商用やウェブのプロジェクトでこれを使用する場合は、ライセンス要件をすべて満たしていることを確認してください。
+2.  Font Squirrel の [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator)（ウェブフォントジェネレータ）に行きます。
+3.  _Upload Fonts_（フォントのアップロード）ボタンを使って 2 つのフォントファイルをアップロードします。
+4.  "Yes, the fonts I'm uploading are legally eligible for web embedding." （はい、アップロードしたフォントはウェブの埋め込みに法的に適格です。）というチェックボックスをオンにします。
+5.  _Download your kit_（キットをダウンロードする）をクリックします。
 
-<p>ジェネレータの処理が完了したら、ZIP ファイルをダウンロードする必要があります — それを HTML と CSS と同じディレクトリに保存してください。</p>
+ジェネレータの処理が完了したら、ZIP ファイルをダウンロードする必要があります — それを HTML と CSS と同じディレクトリに保存してください。
 
-<h3 id="Implementing_the_code_in_your_demo" name="Implementing_the_code_in_your_demo">デモでのコードの実装</h3>
+### デモでのコードの実装
 
-<p>この時点で、生成したばかりのウェブフォントのキットを解凍します。 解凍したディレクトリ内には、3つの便利なアイテムがあります。</p>
+この時点で、生成したばかりのウェブフォントのキットを解凍します。 解凍したディレクトリ内には、3 つの便利なアイテムがあります。
 
-<ul>
- <li>各フォントの複数のバージョン: （例えば、<code>.ttf</code>、<code>.woff</code>、<code>.woff2</code> などで、ブラウザーのサポート要件が変わると、提供される正確なフォントも次第に更新されます）。 上記のように、クロスブラウザーをサポートするには複数のフォントが必要です — これが、必要なものがすべて揃っていることを確認するための Font Squirrel の方法です。</li>
- <li>各フォントのデモ HTML ファイル: ブラウザーにこれらをロードして、フォントがさまざまな使用状況でどのように見えるかを確認します。</li>
- <li><code>stylesheet.css</code> ファイル: 生成された <code>@font-face</code> コードが含まれています。</li>
-</ul>
+- 各フォントの複数のバージョン: （例えば、`.ttf`、`.woff`、`.woff2` などで、ブラウザーのサポート要件が変わると、提供される正確なフォントも次第に更新されます）。 上記のように、クロスブラウザーをサポートするには複数のフォントが必要です — これが、必要なものがすべて揃っていることを確認するための Font Squirrel の方法です。
+- 各フォントのデモ HTML ファイル: ブラウザーにこれらをロードして、フォントがさまざまな使用状況でどのように見えるかを確認します。
+- `stylesheet.css` ファイル: 生成された `@font-face` コードが含まれています。
 
-<p>デモにこれらのフォントを実装するには、次の手順に従います。</p>
+デモにこれらのフォントを実装するには、次の手順に従います。
 
-<ol>
- <li>解凍したディレクトリの名前を <code>fonts</code> のように簡単でシンプルなものに変更します。</li>
- <li><code>stylesheet.css</code> ファイルを開き、その中に含まれている両方の <code>@font-face</code> ブロックを <code>web-font-start.css</code> ファイルにコピーします — フォントはサイトで使用する前にインポートする必要があるため、CSS のどれよりも前の一番上に配置する必要があります。</li>
- <li>各 <code>url()</code> 関数は CSS にインポートしたいフォントファイルを指しています — ファイルへのパスが正しいことを確認する必要があるので、各パスの先頭に <code>fonts/</code> を追加します（必要に応じて調整します）。</li>
- <li>これで、ウェブセーフフォントやデフォルトのシステムフォントと同じように、これらのフォントをフォントスタックで使用できます。 例えば、
-  <pre class="brush: css notranslate">font-family: 'zantrokeregular', serif;</pre>
- </li>
-</ol>
+1.  解凍したディレクトリの名前を `fonts` のように簡単でシンプルなものに変更します。
+2.  `stylesheet.css` ファイルを開き、その中に含まれている両方の `@font-face` ブロックを `web-font-start.css` ファイルにコピーします — フォントはサイトで使用する前にインポートする必要があるため、CSS のどれよりも前の一番上に配置する必要があります。
+3.  各 `url()` 関数は CSS にインポートしたいフォントファイルを指しています — ファイルへのパスが正しいことを確認する必要があるので、各パスの先頭に `fonts/` を追加します（必要に応じて調整します）。
+4.  これで、ウェブセーフフォントやデフォルトのシステムフォントと同じように、これらのフォントをフォントスタックで使用できます。 例えば、
 
-<p>いくつかの素敵なフォントが実装されたデモページができあがるはずです。異なるフォントは異なるサイズで作成されるため、サイズや間隔などを調整して、ルック・アンド・フィールを調整する必要があります。</p>
+    ```css
+    font-family: 'zantrokeregular', serif;
+    ```
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12984/web-font-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+いくつかの素敵なフォントが実装されたデモページができあがるはずです。異なるフォントは異なるサイズで作成されるため、サイズや間隔などを調整して、ルック・アンド・フィールを調整する必要があります。
 
-<div class="note">
-<p><strong>注</strong>: これがうまくいかない場合は、あなたのバージョンと完成したファイルとを比較してみてください — <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html">web-font-finished.html</a> と <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css">web-font-finished.css</a> を見てください（<a href="http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html">完成した例をライブで実行してください</a>）。</p>
-</div>
+![](https://mdn.mozillademos.org/files/12984/web-font-example.png)
 
-<h2 id="Using_an_online_font_service" name="Using_an_online_font_service">オンラインフォントサービスの使用</h2>
+> **Note:** **注**: これがうまくいかない場合は、あなたのバージョンと完成したファイルとを比較してみてください — [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) と [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) を見てください（[完成した例をライブで実行してください](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)）。
 
-<p>オンラインフォントサービスは一般的にあなたのためにフォントを保存して提供するので、<code>@font-face</code> コードを書くことを心配する必要はなく、一般的にサイトに1行か2行の単純なコードを挿入するだけですべてがうまくいきます。例としては、<a href="https://fonts.adobe.com/">Adobe Fonts</a> や <a href="http://www.typography.com/cloud/welcome/">Cloud.typography</a> などが挙げられます。これらのサービスのほとんどはサブスクリプションベースですが、特に迅速なテスト作業やデモを書くのに便利な無料のサービスである <a href="https://www.google.com/fonts">Google Fonts</a> は例外です。</p>
+## オンラインフォントサービスの使用
 
-<p>これらのサービスのほとんどは使いやすいので、詳細には説明しません。 Google のフォントを簡単に見てみましょう。 そうすれば、アイデアを得ることができます。 ここでも、出発点として <code>web-font-start.html</code> と <code>web-font-start.css</code> のコピーを使用してください。</p>
+オンラインフォントサービスは一般的にあなたのためにフォントを保存して提供するので、`@font-face` コードを書くことを心配する必要はなく、一般的にサイトに 1 行か 2 行の単純なコードを挿入するだけですべてがうまくいきます。例としては、[Adobe Fonts](https://fonts.adobe.com/) や [Cloud.typography](http://www.typography.com/cloud/welcome/) などが挙げられます。これらのサービスのほとんどはサブスクリプションベースですが、特に迅速なテスト作業やデモを書くのに便利な無料のサービスである [Google Fonts](https://www.google.com/fonts) は例外です。
 
-<ol>
- <li><a href="https://www.google.com/fonts">Google Fonts</a> に行きます。</li>
- <li>左側のフィルタを使って、選択したいフォントの種類を表示し、好きなフォントをいくつか選択します。 （訳注：Languages（言語）に Japanese（日本語）を選んでも、中国語のフォントも表示されます。 フォントによっては、存在しない文字があるようなので注意しましょう。 日本語環境なら文字は表示されますが、書体の統一感はなくなってしまいます。）</li>
- <li>フォントファミリーを選択するには、その横にある ⊕ ボタンを押します。</li>
- <li>フォントファミリーを選択したら、ページ下部の <em>[選択数] Families Selected</em> バーを押します。</li>
- <li>表示された画面で、最初に表示された HTML コードの行をコピーして、それを HTML ファイルの先頭に貼り付ける必要があります。 フォントを CSS で使用する前にインポートされるように、既存の {{htmlelement("link")}} 要素の上に配置します。 （訳注：{{cssxref("@import")}} を選択すれば、CSS ファイルに貼り付けることもできます。）</li>
- <li>次に、カスタムフォントを HTML に適用するために、リストされている CSS 宣言を必要に応じて CSS にコピーする必要があります。</li>
-</ol>
+これらのサービスのほとんどは使いやすいので、詳細には説明しません。 Google のフォントを簡単に見てみましょう。 そうすれば、アイデアを得ることができます。 ここでも、出発点として `web-font-start.html` と `web-font-start.css` のコピーを使用してください。
 
-<div class="note">
-<p><strong>注</strong>: あなたの作品を私たちの作品と照合する必要がある場合は、完成版を <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html">google-font.html</a> および <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css">google-font.css</a> で見ることができます（それを<a href="http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html">ライブで見る</a>）。</p>
-</div>
+1.  [Google Fonts](https://www.google.com/fonts) に行きます。
+2.  左側のフィルタを使って、選択したいフォントの種類を表示し、好きなフォントをいくつか選択します。 （訳注：Languages（言語）に Japanese（日本語）を選んでも、中国語のフォントも表示されます。 フォントによっては、存在しない文字があるようなので注意しましょう。 日本語環境なら文字は表示されますが、書体の統一感はなくなってしまいます。）
+3.  フォントファミリーを選択するには、その横にある ⊕ ボタンを押します。
+4.  フォントファミリーを選択したら、ページ下部の _\[選択数] Families Selected_ バーを押します。
+5.  表示された画面で、最初に表示された HTML コードの行をコピーして、それを HTML ファイルの先頭に貼り付ける必要があります。 フォントを CSS で使用する前にインポートされるように、既存の {{htmlelement("link")}} 要素の上に配置します。 （訳注：{{cssxref("@import")}} を選択すれば、CSS ファイルに貼り付けることもできます。）
+6.  次に、カスタムフォントを HTML に適用するために、リストされている CSS 宣言を必要に応じて CSS にコピーする必要があります。
 
-<h2 id="font-face_in_more_detail" name="font-face_in_more_detail">@font-face の詳細</h2>
+> **Note:** **注**: あなたの作品を私たちの作品と照合する必要がある場合は、完成版を [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) および [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css) で見ることができます（それを[ライブで見る](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）。
 
-<p>Font Squirrel によって生成された <code>@font-face</code> 構文を調べてみましょう。 これは、ブロックの1つがどのように見えるかです。</p>
+## @font-face の詳細
 
-<pre class="brush: css notranslate">@font-face {
+Font Squirrel によって生成された `@font-face` 構文を調べてみましょう。 これは、ブロックの 1 つがどのように見えるかです。
+
+```css
+@font-face {
   font-family: 'ciclefina';
   src: url('fonts/cicle_fina-webfont.eot');
   src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
@@ -177,44 +155,37 @@ original_slug: Learn/CSS/Styling_text/ウェブフォント
          url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
   font-weight: normal;
   font-style: normal;
-}</pre>
+}
+```
 
-<p><code>@font-face</code> が普及し始めた頃の Paul Irish による投稿（<a href="http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/">Bulletproof @font-face Syntax</a>）の後、これは "bulletproof  @font-face 構文" と呼ばれています。 それを見て、それが何をするのか見てみましょう。</p>
+`@font-face` が普及し始めた頃の Paul Irish による投稿（[Bulletproof @font-face Syntax](http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)）の後、これは "bulletproof @font-face 構文" と呼ばれています。 それを見て、それが何をするのか見てみましょう。
 
-<ul>
- <li><code>font-family</code>: この行はフォントとして参照したい名前を指定します。 CSS を通して一貫してそれを使う限り、好きなものにすることができます。</li>
- <li><code>src</code>: これらの行は CSS にインポートされるフォントファイルへのパス（<code>url</code> 部分）と各フォントファイルの形式（<code>format</code> 部分）を指定します。 どの場合も後者の部分はオプションですが、ブラウザーが使用できるフォントをすばやく見つけることができるため、宣言すると有益です。 複数の宣言をカンマで区切ってリストすることができます — ブラウザーはそれらを検索し、最初に理解できるとわかったものを使用します — 従って、先に WOFF2 のようなより新しくより良い形式を置き、そして後に TTF のようなより古くあまり良くない形式を置くのが最善です。 これに対する1つの例外は EOT フォントです — それらは、古いバージョンの IE が実際にフォントを使用できない場合でも、最初に見つかったものを使用しようとするので、古いバージョンの IE のいくつかのバグを修正するために最初に配置されています。</li>
- <li>{{cssxref("font-weight")}} / {{cssxref("font-style")}}: これらの行はフォントの太さ、およびイタリックかどうかを指定します。 同じフォントの複数の太さをインポートする場合は、フォントファミリーのすべての異なるメンバーに異なる名前を付けるのではなく、それらの太さ/スタイルを指定して、異なる値の {{cssxref("font-weight")}} / {{cssxref("font-style")}} を使用することができます。 <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face のこつ: CSS をシンプルに保つために font-weight と font-style を定義する</a>（英語）によって Roger Johansson が何をすべきかをより詳細に示しています。</li>
-</ul>
+- `font-family`: この行はフォントとして参照したい名前を指定します。 CSS を通して一貫してそれを使う限り、好きなものにすることができます。
+- `src`: これらの行は CSS にインポートされるフォントファイルへのパス（`url` 部分）と各フォントファイルの形式（`format` 部分）を指定します。 どの場合も後者の部分はオプションですが、ブラウザーが使用できるフォントをすばやく見つけることができるため、宣言すると有益です。 複数の宣言をカンマで区切ってリストすることができます — ブラウザーはそれらを検索し、最初に理解できるとわかったものを使用します — 従って、先に WOFF2 のようなより新しくより良い形式を置き、そして後に TTF のようなより古くあまり良くない形式を置くのが最善です。 これに対する 1 つの例外は EOT フォントです — それらは、古いバージョンの IE が実際にフォントを使用できない場合でも、最初に見つかったものを使用しようとするので、古いバージョンの IE のいくつかのバグを修正するために最初に配置されています。
+- {{cssxref("font-weight")}} / {{cssxref("font-style")}}: これらの行はフォントの太さ、およびイタリックかどうかを指定します。 同じフォントの複数の太さをインポートする場合は、フォントファミリーのすべての異なるメンバーに異なる名前を付けるのではなく、それらの太さ/スタイルを指定して、異なる値の {{cssxref("font-weight")}} / {{cssxref("font-style")}} を使用することができます。 [@font-face のこつ: CSS をシンプルに保つために font-weight と font-style を定義する](http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/)（英語）によって Roger Johansson が何をすべきかをより詳細に示しています。
 
-<div class="note">
-<p><strong>注</strong>: ウェブフォントに特定の {{cssxref("font-variant")}} および {{cssxref("font-stretch")}} の値を指定することもできます。 新しいブラウザーでは、<code><a href="/ja/docs/Web/CSS/@font-face/unicode-range">unicode-range</a></code> の値でウェブフォントで使用する特定の文字範囲を指定することもできます — サポートしているブラウザーでは、指定された文字のみがダウンロードされ、不要なダウンロードを節約できます。 Drew McLellan による <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">unicode-range を使ったカスタムフォントスタックの作成</a>（英語）は、これをどのように利用するかについていくつかの役に立つアイデアを提供します。</p>
-</div>
+> **Note:** **注**: ウェブフォントに特定の {{cssxref("font-variant")}} および {{cssxref("font-stretch")}} の値を指定することもできます。 新しいブラウザーでは、[`unicode-range`](/ja/docs/Web/CSS/@font-face/unicode-range) の値でウェブフォントで使用する特定の文字範囲を指定することもできます — サポートしているブラウザーでは、指定された文字のみがダウンロードされ、不要なダウンロードを節約できます。 Drew McLellan による [unicode-range を使ったカスタムフォントスタックの作成](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)（英語）は、これをどのように利用するかについていくつかの役に立つアイデアを提供します。
 
-<h2 id="Summary" name="Summary">可変フォント</h2>
+## 可変フォント
 
-<p>これは、幅、太さ、スタイルごとに別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを一つのファイルに組み込むことができるフォントです。これらのフォントは初心者向けのコースにしてはやや高度なものですが、もしあなたが自分自身を伸ばして調べたいと思っているのであれば、可変フォントガイドを読んでみてください。</p>
+これは、幅、太さ、スタイルごとに別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを一つのファイルに組み込むことができるフォントです。これらのフォントは初心者向けのコースにしてはやや高度なものですが、もしあなたが自分自身を伸ばして調べたいと思っているのであれば、可変フォントガイドを読んでみてください。
 
-<p>ブラウザでは、可変フォントと呼ばれる新しいフォントテクノロジーがあります。これらは、幅、太さ、スタイルごとに個別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを1つのファイルに組み込むことができるフォントです。 初心者コースでは多少上級ですが、調べてみたい場合は、<a href="/ja/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable フォントガイド</a>をお読みください。</p>
+ブラウザでは、可変フォントと呼ばれる新しいフォントテクノロジーがあります。これらは、幅、太さ、スタイルごとに個別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを 1 つのファイルに組み込むことができるフォントです。 初心者コースでは多少上級ですが、調べてみたい場合は、[Variable フォントガイド](/ja/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)をお読みください。
 
-<h2 id="Summary" name="Summary">あなたのスキルをテストしてください！</h2>
+## あなたのスキルをテストしてください！
 
-<p>あなたはこの記事の最後に到達し、すでに私たちのアクティブラーニングのセクションでいくつかのスキルテストを行いましたが、今後の最も重要な情報を覚えていますか？あなたがこの情報を保持していることを確認するための評価をモジュールの最後に見つけることができます。<a href="/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">コミュニティスクールのホームページの組版</a>を参照してください。</p>
+あなたはこの記事の最後に到達し、すでに私たちのアクティブラーニングのセクションでいくつかのスキルテストを行いましたが、今後の最も重要な情報を覚えていますか？あなたがこの情報を保持していることを確認するための評価をモジュールの最後に見つけることができます。[コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)を参照してください。
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p>テキストの装飾の基本についての記事を読み終えたので、今度はモジュール「コミュニティスクールのホームページの組版」の評価で理解度をテストします。</p>
+テキストの装飾の基本についての記事を読み終えたので、今度はモジュール「コミュニティスクールのホームページの組版」の評価で理解度をテストします。
 
-<p>{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}</p>
+{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
+## このモジュール内の文書
 
-
-<h2 id="In_this_module" name="In_this_module">このモジュール内の文書</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">基本的なテキストとフォントの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_lists">リストの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_links">リンクの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Web_fonts">ウェブフォント</a></li>
- <li><a href="/ja/Learn/CSS/Styling_text/Typesetting_a_homepage">コミュニティスクールのホームページの組版</a></li>
-</ul>
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
+- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
+- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
+- [コミュニティスクールのホームページの組版](/ja/Learn/CSS/Styling_text/Typesetting_a_homepage)

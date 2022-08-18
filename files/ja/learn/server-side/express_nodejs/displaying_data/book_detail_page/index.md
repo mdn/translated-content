@@ -3,16 +3,17 @@ title: 本の詳細ページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
-<p>The <em>Book detail page</em> needs to display the information for a specific <code>Book</code>, identified using its (automatically generated) <code>_id</code> field value, along with information about each associated copy in the libary (<code>BookInstance</code>). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.</p>
+The _Book detail page_ needs to display the information for a specific `Book`, identified using its (automatically generated) `_id` field value, along with information about each associated copy in the libary (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
 
-<h2 id="Controller">Controller</h2>
+## Controller
 
-<p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_detail()</code> controller method and replace it with the following code.</p>
+Open **/controllers/bookController.js**. Find the exported `book_detail()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Display detail page for a specific book.
+```js
+// Display detail page for a specific book.
 exports.book_detail = function(req, res, next) {
 
-<strong>    async.parallel({
+    async.parallel({
         book: function(callback) {
 
             Book.findById(req.params.id)
@@ -34,23 +35,21 @@ exports.book_detail = function(req, res, next) {
         }
         // Successful, so render.
         res.render('book_detail', { title: 'Title', book: results.book, book_instances: results.book_instance } );
-    });</strong>
+    });
 
 };
+```
 
-</pre>
+> **Note:** We don't need to require _async_ and _BookInstance_, as we already imported those modules when we implemented the home page controller.
 
-<div class="note">
-<p><strong>Note:</strong> We don't need to require <em>async</em> and <em>BookInstance</em>, as we already imported those modules when we implemented the home page controller.</p>
-</div>
+The method uses `async.parallel()` to find the `Book` and its associated copies (`BookInstances`) in parallel. The approach is exactly the same as described for the _Genre detail page_ above.
 
-<p>The method uses <code>async.parallel()</code> to find the <code>Book</code> and its associated copies (<code>BookInstances</code>) in parallel. The approach is exactly the same as described for the <em>Genre detail page</em> above.</p>
+## View
 
-<h2 id="View">View</h2>
+Create **/views/book_detail.pug** and add the text below.
 
-<p>Create <strong>/views/book_detail.pug</strong> and add the text below.</p>
-
-<pre class="brush: js">extends layout
+```js
+extends layout
 
 block content
   h1 #{title}: #{book.title}
@@ -59,10 +58,10 @@ block content
     a(href=book.author.url) #{book.author.name}
   p #[strong Summary:] #{book.summary}
   p #[strong ISBN:] #{book.isbn}
-  p #[strong Genre:]&amp;nbsp;
+  p #[strong Genre:]&nbsp;
     each val, index in book.genre
       a(href=val.url) #{val.name}
-      if index &lt; book.genre.length - 1
+      if index < book.genre.length - 1
         |,
 
   div(style='margin-left:20px;margin-top:20px')
@@ -71,7 +70,7 @@ block content
     each val in book_instances
       hr
       if val.status=='Available'
-        <strong>p.text-success</strong> #{val.status}
+        p.text-success #{val.status}
       else if val.status=='Maintenance'
         p.text-danger #{val.status}
       else
@@ -79,34 +78,32 @@ block content
       p #[strong Imprint:] #{val.imprint}
       if val.status!='Available'
         p #[strong Due back:] #{val.due_back}
-      p #[strong Id:]&amp;nbsp;
+      p #[strong Id:]&nbsp;
         a(href=val.url) #{val._id}
 
     else
       p There are no copies of this book in the library.
-</pre>
+```
 
-<p>Almost everything in this template has been demonstrated in previous sections.</p>
+Almost everything in this template has been demonstrated in previous sections.
 
-<div class="note">
-<p><strong>Note:</strong> The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.</p>
+> **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
+>
+> ```
+>   p #[strong Genre:]
+>     each val, index in book.genre
+>       a(href=val.url) #{val.name}
+>       if index < book.genre.length - 1
+>         |,
+> ```
 
-<pre>  p #[strong Genre:]
-    each val, index in book.genre
-      a(href=val.url) #{val.name}
-      if index &lt; book.genre.length - 1
-        |, </pre>
-</div>
+## What does it look like?
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+Run the application and open your browser to <http://localhost:3000/>. Select the _All books_ link, then select one of the books. If everything is set up correctly, your page should look something like the following screenshot.
 
-<p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Select the <em>All books</em> link, then select one of the books. If everything is set up correctly, your page should look something like the following screenshot.</p>
+![Book Detail Page - Express Local Library site](https://mdn.mozillademos.org/files/14470/LocalLibary_Express_Book_Detail.png)
 
-<p><img alt="Book Detail Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14470/LocalLibary_Express_Book_Detail.png" style="border-style: solid; border-width: 1px; display: block; height: 616px; margin: 0px auto; width: 1200px;"></p>
+## Next steps
 
-<h2 id="Next_steps">Next steps</h2>
-
-<ul>
- <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page">Author detail page</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Author detail page](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page).

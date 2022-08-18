@@ -15,51 +15,43 @@ tags:
   - whitespace
 translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</div>
+CSS の概要と基本的な使い方について理解できたので、今度は CSS の構造をもう少し詳しく見てみましょう。
 
-<p class="summary">CSS の概要と基本的な使い方について理解できたので、今度は CSS の構造をもう少し詳しく見てみましょう。</p>
+| 前提条件: | 基本的なコンピュータリテラシー、 [基本的なソフトウェアのインストール](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、 基本的な [ファイル操作](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、 HTML の基本 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で学習)、[基本的な CSS の動作](/ja/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works) |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | CSS の基本的な構文の構造を詳細に学ぶ。                                                                                                                                                                                                                                                                                                                                                |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピュータリテラシー、 <a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a>、 基本的な <a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイル操作</a>、 HTML の基本 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>で学習)、<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">基本的な CSS の動作</a></td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>CSS の基本的な構文の構造を詳細に学ぶ。</td>
-  </tr>
- </tbody>
-</table>
+## CSS を HTML に適用する
 
-<h2 id="Applying_CSS_to_HTML" name="Applying_CSS_to_HTML">CSS を HTML に適用する</h2>
+まず、文書に CSS を適用する方法として、外部スタイルシートを使う方法、内部スタイルシートを使う方法、インラインスタイルを使う方法の 3 つの方法を見てみましょう。
 
-<p>まず、文書に CSS を適用する方法として、外部スタイルシートを使う方法、内部スタイルシートを使う方法、インラインスタイルを使う方法の3つの方法を見てみましょう。</p>
+### 外部スタイルシート
 
-<h3 id="External_stylesheet" name="External_stylesheet">外部スタイルシート</h3>
+外部スタイルシートには `.css` という拡張子を持つ別のファイルに CSS が含まれています。これは、文書に CSS を持ち込む最も一般的で便利な方法です。1 つの CSS ファイルを複数のウェブページにリンクして、すべてのウェブページを同じ CSS スタイルシートでスタイル付けすることができます。 [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)では、外部のスタイルシートをウェブページにリンクしました。
 
-<p>外部スタイルシートには <code>.css</code> という拡張子を持つ別のファイルに CSS が含まれています。これは、文書に CSS を持ち込む最も一般的で便利な方法です。1つの CSS ファイルを複数のウェブページにリンクして、すべてのウェブページを同じ CSS スタイルシートでスタイル付けすることができます。 <a href="/ja/docs/Learn/CSS/First_steps/Getting_started">CSS 入門</a>では、外部のスタイルシートをウェブページにリンクしました。</p>
+HTML の `<link>` 要素から外部 CSS スタイルシートを参照しています。
 
-<p>HTML の <code>&lt;link&gt;</code> 要素から外部 CSS スタイルシートを参照しています。</p>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is my first CSS example</p>
+  </body>
+</html>
+```
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiment&lt;/title&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is my first CSS example&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+CSS ファイルはこのようになります。
 
-<p>CSS ファイルはこのようになります。</p>
-
-<pre class="brush: css notranslate">h1 {
+```css
+h1 {
   color: blue;
   background-color: yellow;
   border: 1px solid black;
@@ -67,31 +59,35 @@ translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 
 p {
   color: red;
-}</pre>
+}
+```
 
-<p>{{htmlelement("link")}} 要素の <code>href</code> 属性は、ファイルシステム上のファイルを参照する必要があります。上の例では、 CSS ファイルは HTML 文書と同じフォルダーにありますが、どこか別の場所に配置してパスを調整することもできます。以下に 3 つの例を示します。</p>
+{{htmlelement("link")}} 要素の `href` 属性は、ファイルシステム上のファイルを参照する必要があります。上の例では、 CSS ファイルは HTML 文書と同じフォルダーにありますが、どこか別の場所に配置してパスを調整することもできます。以下に 3 つの例を示します。
 
-<pre class="brush: html notranslate">&lt;!-- 現在のディレクトリの中の styles というサブディレクトリの中 --&gt;
-&lt;link rel="stylesheet" href="styles/style.css"&gt;
+```html
+<!-- 現在のディレクトリの中の styles というサブディレクトリの中 -->
+<link rel="stylesheet" href="styles/style.css">
 
-&lt;!-- カレントディレクトリの中にある styles というサブディレクトリの中にある、 general というサブディレクトリの中 --&gt;
-&lt;link rel="stylesheet" href="styles/general/style.css"&gt;
+<!-- カレントディレクトリの中にある styles というサブディレクトリの中にある、 general というサブディレクトリの中 -->
+<link rel="stylesheet" href="styles/general/style.css">
 
-&lt;!-- ひとつ上のレベルのディレクトリに行き、その下にある styles というサブディレクトリの中 --&gt;
-&lt;link rel="stylesheet" href="../styles/style.css"&gt;</pre>
+<!-- ひとつ上のレベルのディレクトリに行き、その下にある styles というサブディレクトリの中 -->
+<link rel="stylesheet" href="../styles/style.css">
+```
 
-<h3 id="Internal_stylesheet" name="Internal_stylesheet">内部スタイルシート</h3>
+### 内部スタイルシート
 
-<p>内部スタイルシートは、 HTML 文書の中に配置します。内部スタイルシートを作成するには、 CSS を HTML 文書の {{htmlelement("head")}} の中にある {{htmlelement("style")}} 要素の中に入れてください。</p>
+内部スタイルシートは、 HTML 文書の中に配置します。内部スタイルシートを作成するには、 CSS を HTML 文書の {{htmlelement("head")}} の中にある {{htmlelement("style")}} 要素の中に入れてください。
 
-<p>例えば、 HTML はこのようになります。</p>
+例えば、 HTML はこのようになります。
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiment&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+    <style>
       h1 {
         color: blue;
         background-color: yellow;
@@ -101,184 +97,187 @@ p {
       p {
         color: red;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is my first CSS example&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is my first CSS example</p>
+  </body>
+</html>
+```
 
-<p>状況によっては、内部スタイルシートが便利な場合もあります。たとえば、コンテンツ管理システムを使用している場合、外部の CSS ファイルを変更することがブロックされているかもしれません。</p>
+状況によっては、内部スタイルシートが便利な場合もあります。たとえば、コンテンツ管理システムを使用している場合、外部の CSS ファイルを変更することがブロックされているかもしれません。
 
-<p>しかし、複数のページを持つサイトでは、内部スタイルシートは効率の悪い作業方法になります。内部スタイルシートを使用して、複数のページに統一された CSS スタイルを適用するには、そのスタイルを使用するすべてのウェブページに内部スタイルシートをコピーしなければなりません。効率性の低下はサイトの保守にも影響します。内部スタイルシートの CSS では、1 つの簡単なスタイル変更でも、複数のウェブページの編集が必要になるリスクがあります。</p>
+しかし、複数のページを持つサイトでは、内部スタイルシートは効率の悪い作業方法になります。内部スタイルシートを使用して、複数のページに統一された CSS スタイルを適用するには、そのスタイルを使用するすべてのウェブページに内部スタイルシートをコピーしなければなりません。効率性の低下はサイトの保守にも影響します。内部スタイルシートの CSS では、1 つの簡単なスタイル変更でも、複数のウェブページの編集が必要になるリスクがあります。
 
-<h3 id="Inline_styles" name="Inline_styles">インラインスタイル</h3>
+### インラインスタイル
 
-<p>インラインスタイルは、単一の HTML 要素のみに影響を与える CSS 宣言で、 <code>style</code> 属性の中に記述します。 HTML 文書におけるインラインスタイルの実装は次のようになります。</p>
+インラインスタイルは、単一の HTML 要素のみに影響を与える CSS 宣言で、 `style` 属性の中に記述します。 HTML 文書におけるインラインスタイルの実装は次のようになります。
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiment&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1 style="color: blue;background-color: yellow;border: 1px solid black;"&gt;Hello World!&lt;/h1&gt;
-    &lt;p style="color:red;"&gt;This is my first CSS example&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+  </head>
+  <body>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <p style="color:red;">This is my first CSS example</p>
+  </body>
+</html>
+```
 
-<p><strong>この方法での CSS の使用は、可能な限り避けてください。</strong>まず、 CSS の実装の中では最も保守の効率が悪いものです。一つのスタイルを変更するために、一つのウェブページ内で複数の編集が必要になるかもしれません。第二に、インライン CSS はプレゼンテーション用のコードを HTML やコンテンツに混ぜてしまうため、すべてが読んだり理解したりしにくいものになってしまいます。コードとコンテンツを分離すれば、ウェブサイトで働くすべての人にとって保守が容易になります。</p>
+**この方法での CSS の使用は、可能な限り避けてください。**まず、 CSS の実装の中では最も保守の効率が悪いものです。一つのスタイルを変更するために、一つのウェブページ内で複数の編集が必要になるかもしれません。第二に、インライン CSS はプレゼンテーション用のコードを HTML やコンテンツに混ぜてしまうため、すべてが読んだり理解したりしにくいものになってしまいます。コードとコンテンツを分離すれば、ウェブサイトで働くすべての人にとって保守が容易になります。
 
-<p>インラインスタイルが一般的な状況はいくつかあります。作業環境が非常に制限されている場合は、インラインスタイルの使用に頼らざるを得ないかもしれません。例えば、 CMS では HTML の本文しか編集できない場合があります。また、できるだけ多くのメールクライアントとの互換性を実現するために、 HTML メールでインラインスタイルが多用されているのを見ることもあるでしょう。</p>
+インラインスタイルが一般的な状況はいくつかあります。作業環境が非常に制限されている場合は、インラインスタイルの使用に頼らざるを得ないかもしれません。例えば、 CMS では HTML の本文しか編集できない場合があります。また、できるだけ多くのメールクライアントとの互換性を実現するために、 HTML メールでインラインスタイルが多用されているのを見ることもあるでしょう。
 
-<h2 id="Playing_with_the_CSS_in_this_article" name="Playing_with_the_CSS_in_this_article">CSS を試してみる</h2>
+## CSS を試してみる
 
-<p>次の演習では、コンピューターにフォルダーを作成してください。フォルダーには好きな名前をつけてください。以下のテキストをコピーして、フォルダーの中に 2 つのファイルを作成してください。</p>
+次の演習では、コンピューターにフォルダーを作成してください。フォルダーには好きな名前をつけてください。以下のテキストをコピーして、フォルダーの中に 2 つのファイルを作成してください。
 
-<p><strong>index.html:</strong></p>
+**index.html:**
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiments&lt;/title&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiments</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-    &lt;p&gt;Create your test HTML here&lt;/p&gt;
+    <p>Create your test HTML here</p>
 
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  </body>
+</html>
+```
 
-<p><strong>styles.css:</strong></p>
+**styles.css:**
 
-<pre class="brush: css notranslate">/* Create your test CSS here */
+```css
+/* Create your test CSS here */
 
 p {
   color: red;
-}</pre>
+}
+```
 
-<p>試してみたい CSS を見つけたら、 HTML の <code>&lt;body&gt;</code> の内容をスタイル付けする HTML に置き換え、テスト用の CSS コードを CSS ファイルに追加してください。</p>
+試してみたい CSS を見つけたら、 HTML の `<body>` の内容をスタイル付けする HTML に置き換え、テスト用の CSS コードを CSS ファイルに追加してください。
 
-<p>別の方法として、以下のインタラクティブなエディターを使用することもできます。</p>
+別の方法として、以下のインタラクティブなエディターを使用することもできます。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}}
 
-<p>楽しみながら、先に進んでいきましょう。</p>
+楽しみながら、先に進んでいきましょう。
 
-<h2 id="Selectors" name="Selectors">セレクター</h2>
+## セレクター
 
-<p>セレクターは CSS に欠かせない構成要素です。<a href="/ja/docs/Learn/CSS/First_steps/Getting_started">CSS 入門</a>のチュートリアルでは、すでにさまざまな種類のセレクターを見てきました。セレクターは、 HTML 文書のなかでスタイルを適用する対象を指定するものです。もし CSS が期待通りにコンテンツに適用されなかったら、セレクターが一致すると思っていた方法で一致していないのかもしれません。</p>
+セレクターは CSS に欠かせない構成要素です。[CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)のチュートリアルでは、すでにさまざまな種類のセレクターを見てきました。セレクターは、 HTML 文書のなかでスタイルを適用する対象を指定するものです。もし CSS が期待通りにコンテンツに適用されなかったら、セレクターが一致すると思っていた方法で一致していないのかもしれません。
 
-<p>それぞれの CSS 規則の先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザにどの要素にCSS規則を適用するかを指示します。次のコード例は、いずれも有効なセレクター、またはセレクターのリストです。</p>
+それぞれの CSS 規則の先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザにどの要素に CSS 規則を適用するかを指示します。次のコード例は、いずれも有効なセレクター、またはセレクターのリストです。
 
-<pre class="brush: css notranslate">h1
+```css
+h1
 a:link
 .manythings
 #onething
 *
 .box p
 .box p:first-child
-h1, h2, .intro</pre>
+h1, h2, .intro
+```
 
-<p>上記のセレクターを使った CSS 規則を作ってみてください。セレクターによってスタイル付けされる HTML を追加します。上記の構文に馴染みのないものがあれば、 MDN を検索してみてください。</p>
+上記のセレクターを使った CSS 規則を作ってみてください。セレクターによってスタイル付けされる HTML を追加します。上記の構文に馴染みのないものがあれば、 MDN を検索してみてください。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 次のモジュールの記事 <a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">CSS セレクター</a> で、セレクターについてより詳しく学ぶことができます。</p>
-</div>
+> **Note:** **注**: 次のモジュールの記事 [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors) で、セレクターについてより詳しく学ぶことができます。
 
-<h3 id="Specificity" name="Specificity">詳細度</h3>
+### 詳細度
 
-<p>2 つのセレクターが同じ HTML 要素を選択するシナリオに遭遇するかもしれません。以下のスタイルシートを考えてみましょう。 <code>p</code> セレクターで段落のテキストを青に設定します。しかし、選択された要素のテキストを赤に設定するクラスもあります。</p>
+2 つのセレクターが同じ HTML 要素を選択するシナリオに遭遇するかもしれません。以下のスタイルシートを考えてみましょう。 `p` セレクターで段落のテキストを青に設定します。しかし、選択された要素のテキストを赤に設定するクラスもあります。
 
-<pre class="brush: css notranslate">.special {
+```css
+.special {
   color: red;
 }
 
 p {
   color: blue;
-}</pre>
+}
+```
 
-<p>HTML 文書の中に <code>special</code> のクラスを持つ段落があるとします。両方の規則が適用されます。どちらのセレクターが優先されるでしょうか？段落のテキストが青と赤のどちらになると思いますか？</p>
+HTML 文書の中に `special` のクラスを持つ段落があるとします。両方の規則が適用されます。どちらのセレクターが優先されるでしょうか？段落のテキストが青と赤のどちらになると思いますか？
 
-<pre class="brush: html notranslate">&lt;p class="special"&gt;What color am I?&lt;/p&gt;</pre>
+```html
+<p class="special">What color am I?</p>
+```
 
-<p>CSS 言語には、競合が発生した場合にどちらのセレクターが強いかを制御するための規則があります。これらの規則は<ruby><strong>カスケード</strong><rp> (</rp><rt>cascade</rt><rp>) </rp></ruby>と<ruby><strong>詳細度</strong><rp> (</rp><rt>specificity</rt><rp>) </rp></ruby>と呼ばれています。以下のコードブロックでは、 <code>p</code> セレクターに対して2つの規則が定義されていますが、段落テキストは青くなります。これは、段落テキストを青に設定する宣言がスタイルシートの後に現れているからです。後のスタイルは、それより前のスタイルシートに現れた競合するスタイルを置き換えます。これが<strong>カスケード</strong>規則です。</p>
+CSS 言語には、競合が発生した場合にどちらのセレクターが強いかを制御するための規則があります。これらの規則は**カスケード** (cascade) と**詳細度** (specificity) と呼ばれています。以下のコードブロックでは、 `p` セレクターに対して 2 つの規則が定義されていますが、段落テキストは青くなります。これは、段落テキストを青に設定する宣言がスタイルシートの後に現れているからです。後のスタイルは、それより前のスタイルシートに現れた競合するスタイルを置き換えます。これが**カスケード**規則です。
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   color: red;
 }
 
 p {
   color: blue;
-}</pre>
+}
+```
 
-<p>しかし、クラスセレクターと要素セレクターの間に競合がある前の例では、クラスが優先され、赤い段落テキストがレンダリングされます。スタイルシートの後方に競合するスタイルが表示されているにもかかわらず、どうしてこのようなことが起こるのでしょうか？クラスは、要素セレクターよりも<strong>詳細度</strong>が高いことになっており、より具体的であると評価されるので、他の競合するスタイル宣言をキャンセルしたのです。</p>
+しかし、クラスセレクターと要素セレクターの間に競合がある前の例では、クラスが優先され、赤い段落テキストがレンダリングされます。スタイルシートの後方に競合するスタイルが表示されているにもかかわらず、どうしてこのようなことが起こるのでしょうか？クラスは、要素セレクターよりも**詳細度**が高いことになっており、より具体的であると評価されるので、他の競合するスタイル宣言をキャンセルしたのです。
 
-<p>この実験を自分でやってみましょう。 HTML を追加して、2つの <code>p { ... }</code> 規則をスタイルシートに追加します。次に、最初の <code>p</code> セレクターを <code>.special</code> に変更して、それがスタイルをどのように変えるかを見てみましょう。</p>
+この実験を自分でやってみましょう。 HTML を追加して、2 つの `p { ... }` 規則をスタイルシートに追加します。次に、最初の `p` セレクターを `.special` に変更して、それがスタイルをどのように変えるかを見てみましょう。
 
-<p>詳細度とカスケードの規則は、最初は複雑に見えるかもしれません。これらの規則は、 CSS に慣れてくると理解しやすくなります。次のモジュールの <a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a> の章では、詳細度の計算方法を含めて詳しく説明しています。</p>
+詳細度とカスケードの規則は、最初は複雑に見えるかもしれません。これらの規則は、 CSS に慣れてくると理解しやすくなります。次のモジュールの [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) の章では、詳細度の計算方法を含めて詳しく説明しています。
 
-<p>今のところ、詳細度が存在することを覚えておいてください。スタイルシートの他の何かがより高い詳細度を持っているために、 CSS が期待通りに適用されないことがあります。 1 つの要素に複数の規則が適用される可能性があることを認識することは、この種の問題を解決するための最初のステップです。</p>
+今のところ、詳細度が存在することを覚えておいてください。スタイルシートの他の何かがより高い詳細度を持っているために、 CSS が期待通りに適用されないことがあります。 1 つの要素に複数の規則が適用される可能性があることを認識することは、この種の問題を解決するための最初のステップです。
 
-<h2 id="Properties_and_values" name="Properties_and_values">プロパティと値</h2>
+## プロパティと値
 
-<p>もっとも基本的なレベルでは、 CSS は2つの部品でできています。</p>
+もっとも基本的なレベルでは、 CSS は 2 つの部品でできています。
 
-<ul>
- <li><strong>プロパティ</strong>: スタイルに関して変更できる何らかの特徴をあらわす、人間が理解できる識別子です。例えば、 {{cssxref("font-size")}}, {{cssxref("width")}}, {{cssxref("background-color")}} などです。</li>
- <li><strong>値</strong>: 各プロパティには値が割り当てられています。この値は、プロパティをどのようにスタイル付けするかを示します。</li>
-</ul>
+- **プロパティ**: スタイルに関して変更できる何らかの特徴をあらわす、人間が理解できる識別子です。例えば、 {{cssxref("font-size")}}, {{cssxref("width")}}, {{cssxref("background-color")}} などです。
+- **値**: 各プロパティには値が割り当てられています。この値は、プロパティをどのようにスタイル付けするかを示します。
 
-<p>次の例では、一組のプロパティと値を強調表示しています。プロパティ名は <code>color</code> で、値は <code>blue</code> です。</p>
+次の例では、一組のプロパティと値を強調表示しています。プロパティ名は `color` で、値は `blue` です。
 
-<p><img alt="A declaration highlighted in the CSS" src="https://mdn.mozillademos.org/files/16498/declaration.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
 
-<p>プロパティが値と組み合わせられているとき、この組み合わせを <ruby><em>CSS 宣言</em><rp> (</rp><rt>CSS declaration</rt><rp>) </rp></ruby>と呼びます。 CSS 宣言は <ruby><em>CSS 宣言ブロック</em><rp> (</rp><rt>CSS Declaration Blocks</rt><rp>) </rp></ruby>の中に入っています。次のコード例では CSS の宣言ブロックを強調しています。</p>
+プロパティが値と組み合わせられているとき、この組み合わせを _CSS 宣言_ (CSS declaration) と呼びます。 CSS 宣言は _CSS 宣言ブロック_ (CSS Declaration Blocks) の中に入っています。次のコード例では CSS の宣言ブロックを強調しています。
 
-<p><img alt="A highlighted declaration block" src="https://mdn.mozillademos.org/files/16499/declaration-block.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
 
-<p>そして、 CSS 宣言ブロックは<em>セレクター</em>と組になって <em>CSS 規則セット</em> (または <em>CSS 規則</em>) になります。1つは <code>h1</code> セレクター用、もう1つは <code>p</code> セレクター用です。色付きのハイライトは <code>h1</code> 規則を識別します。</p>
+そして、 CSS 宣言ブロックは*セレクター*と組になって _CSS 規則セット_ (または _CSS 規則_) になります。1 つは `h1` セレクター用、もう 1 つは `p` セレクター用です。色付きのハイライトは `h1` 規則を識別します。
 
-<p><img alt="The rule for h1 highlighted" src="https://mdn.mozillademos.org/files/16500/rules.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
 
-<p>CSS プロパティを特定の値に設定することが、文書のレイアウトとスタイルを定義する主な方法です。 CSS エンジンは、どの宣言がページの各要素に適用されるかを計算します。</p>
+CSS プロパティを特定の値に設定することが、文書のレイアウトとスタイルを定義する主な方法です。 CSS エンジンは、どの宣言がページの各要素に適用されるかを計算します。
 
-<div class="blockIndicator warning">
-<p><strong>重要:</strong> CSS のプロパティと値は大文字と小文字を区別します。それぞれのプロパティと値の組はコロン (<code>:</code>) で区切られます。</p>
-</div>
+> **Warning:** **重要:** CSS のプロパティと値は大文字と小文字を区別します。それぞれのプロパティと値の組はコロン (`:`) で区切られます。
 
-<p><strong>以下に挙げたプロパティの様々な値を調べてみてください。それぞれの HTML 要素にスタイルを適用する CSS 規則を書いてみてください。</strong></p>
+**以下に挙げたプロパティの様々な値を調べてみてください。それぞれの HTML 要素にスタイルを適用する CSS 規則を書いてみてください。**
 
+- **{{cssxref("font-size")}}**
+- **{{cssxref("width")}}**
+- **{{cssxref("background-color")}}**
+- **{{cssxref("color")}}**
+- **{{cssxref("border")}}**
 
+> **Warning:** **重要**: プロパティが不明だった場合、または指定されたプロパティの値が妥当ではなかった場合は、宣言が*無効*なものとして扱われます。ブラウザーの CSS エンジンはこれを完全に無視します。
 
-<ul>
- <li><strong>{{cssxref("font-size")}}</strong></li>
- <li><strong>{{cssxref("width")}}</strong></li>
- <li><strong>{{cssxref("background-color")}}</strong></li>
- <li><strong>{{cssxref("color")}}</strong></li>
- <li><strong>{{cssxref("border")}}</strong></li>
-</ul>
+> **Warning:** **重要**: CSS (および他のウェブ標準) では、言語ごとに綴りに揺れがあったり確実でない場合には、アメリカ綴りを標準とすることが合意されています。例えば、 `color` は `color` と綴るべきであり、 `colour` では動作しません。
 
-<div class="warning">
-<p><strong>重要</strong>: プロパティが不明だった場合、または指定されたプロパティの値が妥当ではなかった場合は、宣言が<em>無効</em>なものとして扱われます。ブラウザーの CSS エンジンはこれを完全に無視します。</p>
-</div>
+### 関数
 
-<div class="warning">
-<p><strong>重要</strong>: CSS (および他のウェブ標準) では、言語ごとに綴りに揺れがあったり確実でない場合には、アメリカ綴りを標準とすることが合意されています。例えば、 <code>color</code> は <code>color</code> と綴るべきであり、 <code>colour</code> では動作しません。</p>
-</div>
+ほとんどの値は比較的単純なキーワードや数値ですが、関数の形をとる値もあります。例として、`calc()` 関数があります。これは CSS 内で簡単な数式を行うことができます。
 
-<h3 id="Functions" name="Functions">関数</h3>
+```html
+<div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
+```
 
-<p>ほとんどの値は比較的単純なキーワードや数値ですが、関数の形をとる値もあります。例として、<code>calc()</code> 関数があります。これは CSS 内で簡単な数式を行うことができます。</p>
-
-<div id="calc_example">
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;&lt;div class="box"&gt;The inner box is 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
-
-<pre class="brush: css notranslate">.outer {
+```css
+.outer {
   border: 5px solid black;
 }
 
@@ -287,52 +286,55 @@ p {
   width: calc(90% - 30px);
   background-color: rebeccapurple;
   color: white;
-}</pre>
-</div>
+}
+```
 
-<p>これは次のように表示されます。</p>
+これは次のように表示されます。
 
-<p>{{EmbedLiveSample('calc_example', '100%', 200)}}</p>
+{{EmbedLiveSample('calc_example', '100%', 200)}}
 
-<p>関数は、関数名と、関数に渡す値を囲む括弧で構成されています。上記の <code>calc()</code> の例では、値は、このボックスの幅を含むブロックの幅の 90% から 30 ピクセルを引いた値と定義しています。計算の結果は、事前に計算して静的な値として入力できるものではありません。</p>
+関数は、関数名と、関数に渡す値を囲む括弧で構成されています。上記の `calc()` の例では、値は、このボックスの幅を含むブロックの幅の 90% から 30 ピクセルを引いた値と定義しています。計算の結果は、事前に計算して静的な値として入力できるものではありません。
 
-<p>他の例としては、 {{cssxref("transform")}} のさまざまな値、たとえば <code>rotate()</code> などがあります。</p>
+他の例としては、 {{cssxref("transform")}} のさまざまな値、たとえば `rotate()` などがあります。
 
-<div id="transform_example">
-<pre class="brush: html notranslate">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+```html
+<div class="box"></div>
+```
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   margin: 30px;
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
   transform: rotate(0.8turn);
-}</pre>
-</div>
+}
+```
 
-<p>上記のコードの出力は次のようになります。</p>
+上記のコードの出力は次のようになります。
 
-<p>{{EmbedLiveSample('transform_example', '100%', 200)}}</p>
+{{EmbedLiveSample('transform_example', '100%', 200)}}
 
-<p><strong>以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS 規則を記述してみましょう。</strong></p>
+**以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS 規則を記述してみましょう。**
 
-<ul>
- <li><strong>{{cssxref("transform")}}</strong></li>
- <li><strong>{{cssxref("background-image")}}、特に gradient の値</strong></li>
- <li><strong>{{cssxref("color")}}、特に rgb/rgba/hsl/hsla の値</strong></li>
-</ul>
+- **{{cssxref("transform")}}**
+- **{{cssxref("background-image")}}、特に gradient の値**
+- **{{cssxref("color")}}、特に rgb/rgba/hsl/hsla の値**
 
-<h2 id="rules" name="rules">アット規則</h2>
+## アット規則
 
-<p>CSS の<a href="/ja/docs/Web/CSS/At-rule">アット規則</a> は、 CSS が実行すること、またはそれがどのように動作するべきかの指示を提供します。いくつかのアット規則は、キーワードと値だけのシンプルなものです。例えば、 <code>@import</code> はスタイルシートを別の CSS スタイルシートにインポートします。</p>
+CSS の[アット規則](/ja/docs/Web/CSS/At-rule) は、 CSS が実行すること、またはそれがどのように動作するべきかの指示を提供します。いくつかのアット規則は、キーワードと値だけのシンプルなものです。例えば、 `@import` はスタイルシートを別の CSS スタイルシートにインポートします。
 
-<pre class="brush: css notranslate">@import 'styles2.css';</pre>
+```css
+@import 'styles2.css';
+```
 
-<p>よく目にするであろうアット規則が <code>@media</code> があり、<a href="/ja/docs/Web/CSS/Media_Queries">メディアクエリ</a>を作成するために使用されます。メディアクエリは CSS スタイルを提供する条件を使用します。</p>
+よく目にするであろうアット規則が `@media` があり、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)を作成するために使用されます。メディアクエリは CSS スタイルを提供する条件を使用します。
 
-<p>以下の例では、スタイルシートは <code>&lt;body&gt;</code> 要素に既定でピンクの背景を定義しています。しかし、ブラウザーのビューポートが 30em よりも広い場合は、青い背景を定義するメディアクエリが続いています。</p>
+以下の例では、スタイルシートは `<body>` 要素に既定でピンクの背景を定義しています。しかし、ブラウザーのビューポートが 30em よりも広い場合は、青い背景を定義するメディアクエリが続いています。
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   background-color: pink;
 }
 
@@ -340,58 +342,66 @@ p {
   body {
     background-color: blue;
   }
-}</pre>
+}
+```
 
-<p>これ以外のアット規則にも、これからのチュートリアルで遭遇するでしょう。</p>
+これ以外のアット規則にも、これからのチュートリアルで遭遇するでしょう。
 
-<p><strong>ビューポートの幅に基づいてスタイルを変更するメディアクエリを追加できるかどうかを確認してください。ブラウザーウィンドウの幅を変更して結果を確認してみてください。</strong></p>
+**ビューポートの幅に基づいてスタイルを変更するメディアクエリを追加できるかどうかを確認してください。ブラウザーウィンドウの幅を変更して結果を確認してみてください。**
 
-<h2 id="Shorthands" name="Shorthands">一括指定</h2>
+## 一括指定
 
-<p>{{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, {{cssxref("margin")}} のようなプロパティは<ruby><strong>一括指定プロパティ</strong><rp> (</rp><rt>shorthand properties</rt><rp>) </rp></ruby>と呼ばれています。これは一括指定プロパティが複数の値を1行で設定するからです。</p>
+{{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, {{cssxref("margin")}} のようなプロパティは**一括指定プロパティ** (shorthand properties) と呼ばれています。これは一括指定プロパティが複数の値を 1 行で設定するからです。
 
-<p>例えば、コードのこの 1 行を見てください。</p>
+例えば、コードのこの 1 行を見てください。
 
-<pre class="brush: css notranslate">/* 4 つの値による一括定義、例えば padding や margin
+```css
+/* 4 つの値による一括定義、例えば padding や margin
    では、値が適用される順序は top, right, bottom, left の順 (top から時計回り) です。
    他の種類の一括指定もあり、例えば 2 つの値による一括指定を padding/margin に設定すると、
    top/bottom と left/right になります。*/
-padding: 10px 15px 15px 5px;</pre>
+padding: 10px 15px 15px 5px;
+```
 
-<p>これは以下の 4 行のコードと同等です。</p>
+これは以下の 4 行のコードと同等です。
 
-<pre class="brush: css notranslate">padding-top: 10px;
+```css
+padding-top: 10px;
 padding-right: 15px;
 padding-bottom: 15px;
-padding-left: 5px;</pre>
+padding-left: 5px;
+```
 
-<p>次の 1 行を見てください。</p>
+次の 1 行を見てください。
 
-<pre class="brush: css notranslate">background: red url(bg-graphic.png) 10px 10px repeat-x fixed;</pre>
+```css
+background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+```
 
-<p>以下の 5 行と同等です。</p>
+以下の 5 行と同等です。
 
-<pre class="brush: css notranslate">background-color: red;
+```css
+background-color: red;
 background-image: url(bg-graphic.png);
 background-position: 10px 10px;
 background-repeat: repeat-x;
-background-attachment: fixed;</pre>
+background-attachment: fixed;
+```
 
-<p>コースの後半では、他にも多くの一括指定プロパティの例に遭遇します。 MDN の <a href="/ja/docs/Web/CSS/Reference">CSS リファレンス</a>は、あらゆる一括指定プロパティについてのより詳しい情報を得るための良いリソースです。</p>
+コースの後半では、他にも多くの一括指定プロパティの例に遭遇します。 MDN の [CSS リファレンス](/ja/docs/Web/CSS/Reference)は、あらゆる一括指定プロパティについてのより詳しい情報を得るための良いリソースです。
 
-<p><strong>自分の CSS の練習でこれらの前述) 使用してみて、それがどのように動作するかをよりよく理解するようにしてください。また、様々な値を使って実験してみてください。</strong></p>
+**自分の CSS の練習でこれらの前述) 使用してみて、それがどのように動作するかをよりよく理解するようにしてください。また、様々な値を使って実験してみてください。**
 
-<div class="blockIndicator warning">
-<p><strong>警告</strong>: CSS の一括指定を使用する際に、省略した値がどのようにリセットされるかはあまり目立たない側面です。 CSS 一括指定で指定されていない値は初期値に戻ります。これは、 CSS 一括指定で省略された値は、<strong>以前に設定された値を上書きしてしまう</strong>可能性があることを意味します。</p>
-</div>
+> **Warning:** **警告**: CSS の一括指定を使用する際に、省略した値がどのようにリセットされるかはあまり目立たない側面です。 CSS 一括指定で指定されていない値は初期値に戻ります。これは、 CSS 一括指定で省略された値は、**以前に設定された値を上書きしてしまう**可能性があることを意味します。
 
-<h2 id="Comments" name="Comments">コメント</h2>
+## コメント
 
-<p>どんなコーディング作業でもそうですが、 CSS と一緒にコメントを書くのがベストプラクティスです。これは、後で修正や強化のために戻ってきたときに、コードがどのように動作するかを思い出すのに役立ちます。また、他の人がコードを理解するのにも役立ちます。</p>
+どんなコーディング作業でもそうですが、 CSS と一緒にコメントを書くのがベストプラクティスです。これは、後で修正や強化のために戻ってきたときに、コードがどのように動作するかを思い出すのに役立ちます。また、他の人がコードを理解するのにも役立ちます。
 
-<p>CSS のコメントは <code>/*</code> で始まり <code>*/</code> で終わります。以下の例では、コメントはコードのそれぞれの区間のの先頭をマークしています。これは、コードベースが大きくなるにつれて、コードベースを移動するのに役立ちます。このようなコメントの付け方をすると、コードエディターでコメントを検索することで、コードの区間を効率的に見つけることができます。</p>
+CSS のコメントは `/*` で始まり `*/` で終わります。以下の例では、コメントはコードのそれぞれの区間のの先頭をマークしています。これは、コードベースが大きくなるにつれて、コードベースを移動するのに役立ちます。このようなコメントの付け方をすると、コードエディターでコメントを検索することで、コードの区間を効率的に見つけることができます。
 
-<pre class="brush: css notranslate">/* 基本的な要素のスタイル付けを扱う */
+```css
+/* 基本的な要素のスタイル付けを扱う */
 /* -------------------------------------------------------------------------------------------- */
 body {
   font: 1em/150% Helvetica, Arial, sans-serif;
@@ -424,27 +434,31 @@ div p {
 
 div p + p {
   padding-top: 0;
-}</pre>
+}
+```
 
-<p>コードを「コメントアウト」すると、試験的にコードの区間を一時的に無効にするのにも便利です。以下の例では、 <code>.special</code> の規則はコードを「コメントアウト」することで無効化されています。</p>
+コードを「コメントアウト」すると、試験的にコードの区間を一時的に無効にするのにも便利です。以下の例では、 `.special` の規則はコードを「コメントアウト」することで無効化されています。
 
-<pre class="brush: css notranslate">/*.special {
+```css
+/*.special {
   color: red;
 }*/
 
 p {
   color: blue;
-}</pre>
+}
+```
 
-<p><strong>CSS にコメントを追加してみましょう。</strong></p>
+**CSS にコメントを追加してみましょう。**
 
-<h2 id="White_space" name="White_space">ホワイトスペース</h2>
+## ホワイトスペース
 
-<p>ホワイトスペースとは、半角スペース、タブ、改行を意味します。ブラウザーが HTML のホワイトスペースを無視するように、ブラウザーは CSS の中のホワイトスペースを無視します。ホワイトスペースの価値は、読みやすさを向上させるためにあります。</p>
+ホワイトスペースとは、半角スペース、タブ、改行を意味します。ブラウザーが HTML のホワイトスペースを無視するように、ブラウザーは CSS の中のホワイトスペースを無視します。ホワイトスペースの価値は、読みやすさを向上させるためにあります。
 
-<p>下の例では、それぞれの宣言 (と規則の先頭/末尾) が個別の行で行われています。これは間違いなく、CSS を書くのに良い方法です。これにより、CSS の保守や理解が容易になります。</p>
+下の例では、それぞれの宣言 (と規則の先頭/末尾) が個別の行で行われています。これは間違いなく、CSS を書くのに良い方法です。これにより、CSS の保守や理解が容易になります。
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   font: 1em/150% Helvetica, Arial, sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -475,11 +489,12 @@ div p {
 div p + p {
   padding-top: 0;
 }
-</pre>
+```
 
-<p id="Very_compact">次の例は、同等の CSS をより圧縮したものです。2つの例は同じように動作しますが、下の例の方が読みにくいでしょう。</p>
+次の例は、同等の CSS をより圧縮したものです。2 つの例は同じように動作しますが、下の例の方が読みにくいでしょう。
 
-<pre class="brush: css notranslate">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+```css
+body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
 @media (min-width: 70em) { body {font-size: 130%;} }
 
 h1 {font-size: 1.5em;}
@@ -487,44 +502,42 @@ h1 {font-size: 1.5em;}
 div p, #id:first-line {background-color: red; border-radius: 3px;}
 div p {margin: 0; padding: 1em;}
 div p + p {padding-top: 0;}
-</pre>
+```
 
-<p>自分のプロジェクトでは、個人的な好みに応じてコードを書式化します。チームプロジェクトでは、チームやプロジェクトに独自のスタイルガイドがあるかもしれません。</p>
+自分のプロジェクトでは、個人的な好みに応じてコードを書式化します。チームプロジェクトでは、チームやプロジェクトに独自のスタイルガイドがあるかもしれません。
 
-<div class="blockIndicator warning">
-<p><strong>重要:</strong> CSS 宣言ではホワイトスペースが値を区切っていますが、<strong>プロパティ名にホワイトスペースが含まれることはありません。</strong></p>
-<strong> </strong></div>
+<div class="blockIndicator warning"><p><strong>重要:</strong> CSS 宣言ではホワイトスペースが値を区切っていますが、<strong>プロパティ名にホワイトスペースが含まれることはありません。</strong></p><strong></strong></div>
 
-<p><strong>例えば、以下の宣言は正しい CSS です。</strong></p>
+**例えば、以下の宣言は正しい CSS です。**
 
+```css
+margin: 0 auto;
+padding-left: 10px;
+```
 
+**次の例は誤った CSS です:**
 
-<pre class="brush: css notranslate"><strong>margin: 0 auto;
-padding-left: 10px;</strong></pre>
+```css
+margin: 0auto;
+padding- left: 10px;
+```
 
-<p><strong>次の例は誤ったCSSです:</strong></p>
+**`0auto` という書き方をブラウザは正しい値と解釈してくれません。なぜなら、`margin` プロパティの値 `0`、および `auto` はふたつの別々の値だからです。`padding-`もまた、ブラウザが認識できる正しいプロパティ名ではありません。**
 
-<pre class="brush: css notranslate"><strong>margin: 0auto;
-padding- left: 10px;</strong></pre>
+**CSS のプロパティに対する複数の値どうしを区別するためには、最低でも 1 個以上の空白をあいだにおく必要があります。また、プロパティの名称や値のひとつひとつは、その一部分だけを切り離したりせず続けて書かなければなりません。**
 
-<p><strong><code>0auto</code> という書き方をブラウザは正しい値と解釈してくれません。なぜなら、<code>margin</code> プロパティの値 <code>0</code>、および <code>auto</code> はふたつの別々の値だからです。<code>padding-</code>もまた、ブラウザが認識できる正しいプロパティ名ではありません。</strong></p>
+\***\*自分の CSS のなかで空白をさまざまに入れてみて、どうすれば CSS が正しく機能して、どうすれば機能しなくなるかたしかめてみましょう。\*\***
 
-<p><strong>CSSのプロパティに対する複数の値どうしを区別するためには、最低でも1個以上の空白をあいだにおく必要があります。また、プロパティの名称や値のひとつひとつは、その一部分だけを切り離したりせず続けて書かなければなりません。</strong></p>
+## 次のステップ
 
-<p><strong><strong>自分のCSSのなかで空白をさまざまに入れてみて、どうすればCSSが正しく機能して、どうすれば機能しなくなるかたしかめてみましょう。</strong></strong></p>
+**ブラウザが HTML や CSS を解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「[CSS はどう働くか？」 ](/ja/docs/Learn/CSS/First_steps/How_CSS_works)では、ブラウザが Web ページを生成する過程についてみていきましょう。**
 
-<h2 id="Whats_next" name="Whats_next"><strong>次のステップ</strong></h2>
+**{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}**
 
-<p><strong>ブラウザがHTMLやCSSを解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「<a href="/ja/docs/Learn/CSS/First_steps/How_CSS_works">CSS はどう働くか？」 </a> では、ブラウザがWebページを生成する過程についてみていきましょう。</strong></p>
+## このモジュール内
 
-<p><strong>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</strong></p>
-
-<h2 id="In_this_module" name="In_this_module"><strong>このモジュール内</strong></h2>
-
-<ol>
- <li><strong><a href="/ja/docs/Learn/CSS/First_steps/What_is_CSS">CSS とは何か？</a></strong></li>
- <li><strong><a href="/ja/docs/Learn/CSS/First_steps/Getting_started">CSS 入門</a></strong></li>
- <li><strong><a href="/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured">CSS の全体像</a></strong></li>
- <li><strong><a href="/ja/docs/Learn/CSS/First_steps/How_CSS_works">CSS はどう働くか？</a></strong></li>
- <li><strong><a href="/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge">新しい知識を使う</a></strong></li>
-</ol>
+1.  **[CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)**
+2.  **[CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)**
+3.  **[CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)**
+4.  **[CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)**
+5.  **[新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)**

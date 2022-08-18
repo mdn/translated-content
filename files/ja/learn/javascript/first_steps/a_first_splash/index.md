@@ -8,7 +8,7 @@ tags:
   - Objects
   - Operators
   - events
-  - 'l10n:priority'
+  - l10n:priority
   - 初心者
   - 変数
   - 学習
@@ -16,53 +16,38 @@ tags:
   - 関数
 translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</div>
+JavaScript の理論、そしてそれを使ってできることについて学んだところで、完全に実用的なチュートリアルを通じて、JavaScript の基本的な機能についての短期集中コースをお見せします。ここでは、簡単な「数字を当てる」ゲームをステップバイステップで構築します。
 
-<p class="summary">JavaScript の理論、そしてそれを使ってできることについて学んだところで、完全に実用的なチュートリアルを通じて、JavaScript の基本的な機能についての短期集中コースをお見せします。ここでは、簡単な「数字を当てる」ゲームをステップバイステップで構築します。</p>
+| 前提条件: | 基本的なコンピューターの知識および HTML と CSS への理解、JavaScript とは何かを知っている。 |
+| --------- | ------------------------------------------------------------------------------------------ |
+| 目的:     | 簡単な JavaScript を書いてみて、JavaScript のプログラムを書くために必要な知識を会得する。  |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターの知識および HTML と CSS への理解、JavaScript とは何かを知っている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>簡単な JavaScript を書いてみて、JavaScript のプログラムを書くために必要な知識を会得する。</td>
-  </tr>
- </tbody>
-</table>
+ここでは、JavaScript (とその他のプログラミング言語) がどのように動くのかという高度なコンセプトを紹介したいので、一度ですべての詳細を理解する必要はありません。詳細については続く記事にてご紹介しますので！
 
-<p>ここでは、JavaScript (とその他のプログラミング言語) がどのように動くのかという高度なコンセプトを紹介したいので、一度ですべての詳細を理解する必要はありません。詳細については続く記事にてご紹介しますので！</p>
+> **Note:** **注記**: JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、コンセプトは大体同じです。
 
-<div class="note">
-<p><strong>注記</strong>: JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、コンセプトは大体同じです。</p>
-</div>
+## プログラマーのように考える
 
-<h2 id="Thinking_like_a_programmer" name="Thinking_like_a_programmer">プログラマーのように考える</h2>
+プログラミングで一番難しいのは、書き方を覚えることではなく、現実の問題にどう適用するかということです。プログラマーのように考え始める必要があります — それは一般的に、そのプログラムが何をしなければならないかという説明を見て、それを満たすためにコードのどんな機能を用いるかを考え、さらにそれを組み合わせていかなければなりません。
 
-<p>プログラミングで一番難しいのは、書き方を覚えることではなく、現実の問題にどう適用するかということです。プログラマーのように考え始める必要があります — それは一般的に、そのプログラムが何をしなければならないかという説明を見て、それを満たすためにコードのどんな機能を用いるかを考え、さらにそれを組み合わせていかなければなりません。</p>
+これには努力・プログラミング文法の経験・練習に加え、少しの想像力が必要です。たくさんコードを書けばもっと慣れていくでしょう。たったの 5 分で「プログラマー脳」を開発することは約束できませんが、このコースを通じてプログラマーのように考えるたくさんの機会を提供したいと思います。
 
-<p>これには努力・プログラミング文法の経験・練習に加え、少しの想像力が必要です。たくさんコードを書けばもっと慣れていくでしょう。たったの 5分で「プログラマー脳」を開発することは約束できませんが、このコースを通じてプログラマーのように考えるたくさんの機会を提供したいと思います。</p>
+まずはそれを念頭に置いてから、この記事で作るプログラムの実例を見てみましょう。さらにその後、具体的な手順に落とし込む方法について学習しましょう。
 
-<p>まずはそれを念頭に置いてから、この記事で作るプログラムの実例を見てみましょう。さらにその後、具体的な手順に落とし込む方法について学習しましょう。</p>
+## 例: 数字当てゲーム
 
-<h2 id="Example_—_Guess_the_number_game" name="Example_—_Guess_the_number_game">例: 数字当てゲーム</h2>
+この記事では、以下に示す簡単なゲームを作る方法を紹介します。
 
-<p>この記事では、以下に示す簡単なゲームを作る方法を紹介します。</p>
+```html hidden
+<!DOCTYPE html>
+<html>
 
-<div class="hidden">
-<h6 id="Top_hidden_code" name="Top_hidden_code">Top hidden code</h6>
-
-<pre class="brush: html line-numbers language-html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;数字当てゲーム&lt;/title&gt;
-    &lt;style&gt;
+<head>
+    <meta charset="utf-8">
+    <title>数字当てゲーム</title>
+    <style>
         html {
             font-family: sans-serif;
         }
@@ -78,29 +63,29 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
             color: white;
             padding: 3px;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
+    </style>
+</head>
 
-&lt;body&gt;
-    &lt;h1&gt;数字当てゲーム&lt;/h1&gt;
-    &lt;p&gt;1 から 100 までの数字を当ててみて！10 回以内に当てられるでしょうか。選んだ数字が大きいか小さいかを表示します。&lt;/p&gt;
-    &lt;div class="form"&gt; &lt;label for="guessField"&gt;予想を入力してください: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt; &lt;input type="submit" value="予想を入力" class="guessSubmit"&gt; &lt;/div&gt;
-    &lt;div class="resultParas"&gt;
-        &lt;p class="guesses"&gt;&lt;/p&gt;
-        &lt;p class="lastResult"&gt;&lt;/p&gt;
-        &lt;p class="lowOrHi"&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;script&gt;
+<body>
+    <h1>数字当てゲーム</h1>
+    <p>1 から 100 までの数字を当ててみて！10 回以内に当てられるでしょうか。選んだ数字が大きいか小さいかを表示します。</p>
+    <div class="form"> <label for="guessField">予想を入力してください: </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="予想を入力" class="guessSubmit"> </div>
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+</body>
+<script>
     // JavaScript はここから
-<code class="language-html"><span class="script token"><span class="language-javascript token"><span class="keyword token">    let</span> randomNumber <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>Math<span class="punctuation token">.</span><span class="function token">random</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="number token">100</span><span class="punctuation token">)</span> <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">;</span>
-    <span class="keyword token">const</span> guesses <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.guesses'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">const</span> lastResult <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.lastResult'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">const</span> lowOrHi <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.lowOrHi'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">const</span> guessSubmit <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.guessSubmit'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">const</span> guessField <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.guessField'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">let</span> guessCount <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-    <span class="keyword token">let</span> resetButton<span class="punctuation token">;</span></span></span></code>
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    const guesses = document.querySelector('.guesses');
+    const lastResult = document.querySelector('.lastResult');
+    const lowOrHi = document.querySelector('.lowOrHi');
+    const guessSubmit = document.querySelector('.guessSubmit');
+    const guessField = document.querySelector('.guessField');
+    let guessCount = 1;
+    let resetButton;
     function checkGuess() {
       let userGuess = Number(guessField.value);
       if (guessCount === 1) {
@@ -121,286 +106,272 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
       } else {
         lastResult.textContent = '間違いです!';
         lastResult.style.backgroundColor = 'red';
-        if(userGuess &lt; randomNumber) {
+        if(userGuess < randomNumber) {
           lowOrHi.textContent='今の予想は小さすぎです!もっと大きな数字です。' ;
-        } else if(userGuess &gt; randomNumber) {
+        } else if(userGuess > randomNumber) {
           lowOrHi.textContent = '今の予想は大きすぎです!もっと小さな数字です。';
         }
       }
 
-      <code class="language-html"><span class="script token"><span class="language-javascript token">guessCount<span class="operator token">++</span><span class="punctuation token">;</span>
-      guessField<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+      guessCount++;
+      guessField.value = '';
+    }
 
-    guessSubmit<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> checkGuess<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    guessSubmit.addEventListener('click', checkGuess);
 
-    <span class="keyword token">function</span> <span class="function token">setGameOver</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      guessField<span class="punctuation token">.</span>disabled <span class="operator token">=</span> <span class="boolean token">true</span><span class="punctuation token">;</span>
-      guessSubmit<span class="punctuation token">.</span>disabled <span class="operator token">=</span> <span class="boolean token">true</span><span class="punctuation token">;</span>
-      resetButton <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      resetButton<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'Start new game'</span><span class="punctuation token">;</span>
-      document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>resetButton<span class="punctuation token">)</span><span class="punctuation token">;</span>
-      resetButton<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> resetGame<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+    function setGameOver() {
+      guessField.disabled = true;
+      guessSubmit.disabled = true;
+      resetButton = document.createElement('button');
+      resetButton.textContent = 'Start new game';
+      document.body.appendChild(resetButton);
+      resetButton.addEventListener('click', resetGame);
+    }
 
-    <span class="keyword token">function</span> <span class="function token">resetGame</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      guessCount <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-      <span class="keyword token">const</span> resetParas <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelectorAll</span><span class="punctuation token">(</span><span class="string token">'.resultParas p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">for</span><span class="punctuation token">(</span><span class="keyword token">let</span> i <span class="operator token">=</span> <span class="number token">0</span> <span class="punctuation token">;</span> i <span class="operator token">&lt;</span> resetParas<span class="punctuation token">.</span>length <span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        resetParas<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
+    function resetGame() {
+      guessCount = 1;
+      const resetParas = document.querySelectorAll('.resultParas p');
+      for(let i = 0 ; i < resetParas.length ; i++) {
+        resetParas[i].textContent = '';
+      }
 
-      resetButton<span class="punctuation token">.</span>parentNode<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>resetButton<span class="punctuation token">)</span><span class="punctuation token">;</span>
-      guessField<span class="punctuation token">.</span>disabled <span class="operator token">=</span> <span class="boolean token">false</span><span class="punctuation token">;</span>
-      guessSubmit<span class="punctuation token">.</span>disabled <span class="operator token">=</span> <span class="boolean token">false</span><span class="punctuation token">;</span>
-      guessField<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span>
-      guessField<span class="punctuation token">.</span><span class="function token">focus</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      lastResult<span class="punctuation token">.</span>style<span class="punctuation token">.</span>backgroundColor <span class="operator token">=</span> <span class="string token">'white'</span><span class="punctuation token">;</span>
-      randomNumber <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>Math<span class="punctuation token">.</span><span class="function token">random</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="number token">100</span><span class="punctuation token">)</span> <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+      resetButton.parentNode.removeChild(resetButton);
+      guessField.disabled = false;
+      guessSubmit.disabled = false;
+      guessField.value = '';
+      guessField.focus();
+      lastResult.style.backgroundColor = 'white';
+      randomNumber = Math.floor(Math.random() * 100) + 1;
+    }
+</script>
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
-</div>
+</body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Top_hidden_code', '100%', 320, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Top_hidden_code', '100%', 320, "", "", "hide-codepen-jsfiddle") }}
 
-<p>さあ、ゲームで遊んでみてください。次に進む前にゲームに慣れておきましょう。</p>
+さあ、ゲームで遊んでみてください。次に進む前にゲームに慣れておきましょう。
 
-<p>上司から、次のように作るゲームの概要を聞いたところを想像してみてください。</p>
+上司から、次のように作るゲームの概要を聞いたところを想像してみてください。
 
-<blockquote>
-<p>数字を予想する単純なゲームを作って欲しい。ランダムな 1 から 100 の数字を決めて、プレイヤーに 10 回以内に当ててもらうゲームだ。プレイヤーには予想する都度、正解か間違いかを表示する。もしプレイヤーが間違っていれば、プレイヤーが予想した数字に応じて、大きすぎるか小さすぎるかを表示する。また、プレイヤーの前回の予想がどうだったかも表示する。ゲームはプレイヤーの予想が正しかった場合、もしくは回数の上限に達した場合に終了する。ゲームが終了したら、プレイヤーはもう一度プレイ開始できるようにする。</p>
-</blockquote>
+> 数字を予想する単純なゲームを作って欲しい。ランダムな 1 から 100 の数字を決めて、プレイヤーに 10 回以内に当ててもらうゲームだ。プレイヤーには予想する都度、正解か間違いかを表示する。もしプレイヤーが間違っていれば、プレイヤーが予想した数字に応じて、大きすぎるか小さすぎるかを表示する。また、プレイヤーの前回の予想がどうだったかも表示する。ゲームはプレイヤーの予想が正しかった場合、もしくは回数の上限に達した場合に終了する。ゲームが終了したら、プレイヤーはもう一度プレイ開始できるようにする。
 
-<p>できるだけプログラマーのように考えると、この概要から最初に行うべきことは、簡潔な実行可能な単位に分割することです。</p>
+できるだけプログラマーのように考えると、この概要から最初に行うべきことは、簡潔な実行可能な単位に分割することです。
 
-<ol>
- <li>1 から 100 までの数字をランダムに一つ生成する。</li>
- <li>プレイヤーの予想した回数を記録する。最初は 1 回から。</li>
- <li>プレイヤーが数字が何かを予想する方法を用意する。</li>
- <li>予想が入力されたら、プレイヤーが以前の予想を見られるように、どこかに記録する。</li>
- <li>入力された数字が正しいかどうかを調べる。</li>
- <li>入力された数字が正しい場合...
-  <ol>
-   <li>正解したお祝いのメッセージを表示する。</li>
-   <li>プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)</li>
-   <li>プレイヤーが次のゲームを始められるようなコントロールを表示する。</li>
-  </ol>
- </li>
- <li>プレイヤーの予想が間違いで、予想回数の上限にはまだ達していない場合...
-  <ol>
-   <li>プレイヤーが間違っていることを表示する。</li>
-   <li>次の予想を入力できるようにする。</li>
-   <li>予想回数に 1 を加算する。</li>
-  </ol>
- </li>
- <li>プレイヤーの予想が間違いで、予想回数の上限に達した場合...
-  <ol>
-   <li>プレイヤーにゲームオーバーであることを伝える。</li>
-   <li>プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)</li>
-   <li>プレイヤーが次のゲームを始められるようなコントロールを表示する。</li>
-  </ol>
- </li>
- <li>ゲームがもう一度始まったら、画面とロジックが完全にリセットされるようにして、1.に戻る。</li>
-</ol>
+1.  1 から 100 までの数字をランダムに一つ生成する。
+2.  プレイヤーの予想した回数を記録する。最初は 1 回から。
+3.  プレイヤーが数字が何かを予想する方法を用意する。
+4.  予想が入力されたら、プレイヤーが以前の予想を見られるように、どこかに記録する。
+5.  入力された数字が正しいかどうかを調べる。
+6.  入力された数字が正しい場合...
 
-<p>さあ、先に進みましょう。この手順をどのようにコードにするのか見て、JavaScript の機能を探求していきましょう。</p>
+    1.  正解したお祝いのメッセージを表示する。
+    2.  プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)
+    3.  プレイヤーが次のゲームを始められるようなコントロールを表示する。
 
-<h3 id="Initial_setup" name="Initial_setup">まず初めに</h3>
+7.  プレイヤーの予想が間違いで、予想回数の上限にはまだ達していない場合...
 
-<p>チュートリアルを開始するにあたり、自分のコンピューターに <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">number-guessing-game-start.html</a> ファイル (<a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">こちらでデモが見られます</a>) をコピーしてください。テキストエディターとブラウザーの両方でそのファイルを開いてください。すると、簡単な見出しと説明の段落、予想を入力するフォームが見えるでしょう。ただし、そのフォームはまだ何もできません。</p>
+    1.  プレイヤーが間違っていることを表示する。
+    2.  次の予想を入力できるようにする。
+    3.  予想回数に 1 を加算する。
 
-<p>コードを入力するのはすべて HTML の一番下にある {{htmlelement("script")}} 要素の中です。</p>
+8.  プレイヤーの予想が間違いで、予想回数の上限に達した場合...
 
-<pre class="brush: html notranslate">&lt;script&gt;
+    1.  プレイヤーにゲームオーバーであることを伝える。
+    2.  プレイヤーが次の予想を出来ないようにする。(ゲームがおかしくならないように)
+    3.  プレイヤーが次のゲームを始められるようなコントロールを表示する。
+
+9.  ゲームがもう一度始まったら、画面とロジックが完全にリセットされるようにして、1.に戻る。
+
+さあ、先に進みましょう。この手順をどのようにコードにするのか見て、JavaScript の機能を探求していきましょう。
+
+### まず初めに
+
+チュートリアルを開始するにあたり、自分のコンピューターに [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) ファイル ([こちらでデモが見られます](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)) をコピーしてください。テキストエディターとブラウザーの両方でそのファイルを開いてください。すると、簡単な見出しと説明の段落、予想を入力するフォームが見えるでしょう。ただし、そのフォームはまだ何もできません。
+
+コードを入力するのはすべて HTML の一番下にある {{htmlelement("script")}} 要素の中です。
+
+```html
+<script>
 
   // JavaScript をここに書きます
 
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Adding_variables_to_store_our_data" name="Adding_variables_to_store_our_data">データを保持する変数を追加する</h3>
+### データを保持する変数を追加する
 
-<p>始めましょう。まず、{{htmlelement("script")}} 要素の中に以下の内容を書いてみてください。</p>
+始めましょう。まず、{{htmlelement("script")}} 要素の中に以下の内容を書いてみてください。
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> randomNumber <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>Math<span class="punctuation token">.</span><span class="function token">random</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="number token">100</span><span class="punctuation token">)</span> <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">;</span>
+```js
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-<span class="keyword token">const</span> guesses <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.guesses'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> lastResult <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.lastResult'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> lowOrHi <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.lowOrHi'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
 
-<span class="keyword token">const</span> guessSubmit <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.guessSubmit'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> guessField <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.guessField'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
 
-<span class="keyword token">let</span> guessCount <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> resetButton<span class="punctuation token">;</span></code></pre>
+let guessCount = 1;
+let resetButton;
+```
 
-<p>上記のコードはプログラムが使用するデータを保持する変数と定数をセットアップしています。変数とは基本的には値 (数字や文字など) の入れ物です。 <code>let</code> (か <code>var</code>)  キーワードに続いて変数の名前を書くことで、変数を作成します (これらのキーワードの違いは<a href="/ja/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">以降の記事</a>で見ます) 。定数は変更しない値を保持するのに、 <code>const</code> キーワードといっしょに使います。この場合では、定数をユーザーインターフェイスのパーツへの参照を保存するのに使っていて、一部の内部のテキストは変わるかも知れませんが、参照されるHTML要素は同じままです。</p>
+上記のコードはプログラムが使用するデータを保持する変数と定数をセットアップしています。変数とは基本的には値 (数字や文字など) の入れ物です。 `let` (か `var`) キーワードに続いて変数の名前を書くことで、変数を作成します (これらのキーワードの違いは[以降の記事](/ja/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let)で見ます) 。定数は変更しない値を保持するのに、 `const` キーワードといっしょに使います。この場合では、定数をユーザーインターフェイスのパーツへの参照を保存するのに使っていて、一部の内部のテキストは変わるかも知れませんが、参照される HTML 要素は同じままです。
 
-<p>等号記号 ( <code>=</code> ) に続いて、与えたい値を書いて、変数や定数に値を代入できます。</p>
+等号記号 ( `=` ) に続いて、与えたい値を書いて、変数や定数に値を代入できます。
 
-<p>この例では:</p>
+この例では:
 
-<ul>
- <li>最初の変数 ( <code>randomNumber</code> ) には数学的なアルゴリズムにより計算された 1 から 100 までのランダムな数字が代入されます。</li>
- <li>続く 3 つの変数 ( <code>guesses</code>、<code>lastResult</code>、<code>lowOrHi</code> ) には、以下に示す HTML の段落の場所がそれぞれに保持されます。後ほど段落に値を追加するために使用します。 (すべて<code>&lt;div&gt;</code> 要素内にあり、後にゲーム再開時にリセットするのにすべてを選択するのに使われるのに注意してください):
-  <pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>resultParas<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>guesses<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>lastResult<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>lowOrHi<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
- </li>
- <li>次の 2 つの定数にはテキスト入力フォームおよび送信ボタンへの参照が保持され、後で予想の送信をコントロールする際に使用されます。
-  <pre class="brush: html notranslate">&lt;label for="guessField"&gt;予想を入力してください: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
-&lt;input type="submit" value="予想を投稿" class="guessSubmit"&gt;</pre>
- </li>
- <li>最後の 2 つの変数はプレイヤーが予想した回数を記録するため 1 を (プレイヤーが何回予想したかの回数を追跡します) 、そしてまだ存在していない(あとで追加する)リセットボタンへの参照を保持します。</li>
-</ul>
+- 最初の変数 ( `randomNumber` ) には数学的なアルゴリズムにより計算された 1 から 100 までのランダムな数字が代入されます。
+- 続く 3 つの変数 ( `guesses`、`lastResult`、`lowOrHi` ) には、以下に示す HTML の段落の場所がそれぞれに保持されます。後ほど段落に値を追加するために使用します。 (すべて`<div>` 要素内にあり、後にゲーム再開時にリセットするのにすべてを選択するのに使われるのに注意してください):
 
-<div class="note">
-<p><strong>注記</strong>: 変数や定数についてはこのコースの間に、<a href="/ja/docs/user:chrisdavidmills/variables">次の記事</a>を始めとして何度も出てきます。</p>
-</div>
+  ```html
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
+  ```
 
-<h3 id="Functions" name="Functions">関数</h3>
+- 次の 2 つの定数にはテキスト入力フォームおよび送信ボタンへの参照が保持され、後で予想の送信をコントロールする際に使用されます。
 
-<p>次に、以下のコードを先ほどの JavaScript に追加してください。</p>
+  ```html
+  <label for="guessField">予想を入力してください: </label><input type="text" id="guessField" class="guessField">
+  <input type="submit" value="予想を投稿" class="guessSubmit">
+  ```
 
-<pre class="brush: js notranslate">function checkGuess() {
+- 最後の 2 つの変数はプレイヤーが予想した回数を記録するため 1 を (プレイヤーが何回予想したかの回数を追跡します) 、そしてまだ存在していない(あとで追加する)リセットボタンへの参照を保持します。
+
+> **Note:** **注記**: 変数や定数についてはこのコースの間に、[次の記事](/ja/docs/user:chrisdavidmills/variables)を始めとして何度も出てきます。
+
+### 関数
+
+次に、以下のコードを先ほどの JavaScript に追加してください。
+
+```js
+function checkGuess() {
   alert('ここはプレースホルダです');
-}</pre>
+}
+```
 
-<p>関数は再利用可能なコードのかたまりです。何度も実行することができ、同じコードを書く手間を省けます。これはとても便利です。関数の書き方 (定義の仕方) はいくつかありますが、今回は集中するために、一つの簡単な書き方だけを使用します。ここでは <code>function</code> キーワードに続いて関数の名前、括弧 ( <code>()</code> )、中括弧 ( <code>{ }</code> )が続く書き方で定義しました。中括弧の中に、関数を呼ぶたびに実行されるコードを書きます。</p>
+関数は再利用可能なコードのかたまりです。何度も実行することができ、同じコードを書く手間を省けます。これはとても便利です。関数の書き方 (定義の仕方) はいくつかありますが、今回は集中するために、一つの簡単な書き方だけを使用します。ここでは `function` キーワードに続いて関数の名前、括弧 ( `()` )、中括弧 ( `{ }` )が続く書き方で定義しました。中括弧の中に、関数を呼ぶたびに実行されるコードを書きます。
 
-<p>関数を実行したい場合には、関数の名前に続いて括弧を書きます。</p>
+関数を実行したい場合には、関数の名前に続いて括弧を書きます。
 
-<p>それでは試してみましょう。コードを保存してブラウザーを再読み込みしてみてください。<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">開発者ツールの JavaScript コンソール</a>を開いてください。そして次のコードを実行します。</p>
+それでは試してみましょう。コードを保存してブラウザーを再読み込みしてみてください。[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開いてください。そして次のコードを実行します。
 
-<pre class="brush: js notranslate">checkGuess();</pre>
+```js
+checkGuess();
+```
 
-<p><kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、"ここはプレースホルダです"という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。</p>
+<kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、"ここはプレースホルダです"という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。
 
-<div class="note">
-<p><strong>注記</strong>: 関数についても<a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions">このコースの後の方で</a>詳しく学びます。</p>
-</div>
+> **Note:** **注記**: 関数についても[このコースの後の方で](/ja/docs/Learn/JavaScript/Building_blocks/Functions)詳しく学びます。
 
-<h3 id="Operators" name="Operators">演算子</h3>
+### 演算子
 
-<p>JavaScript で演算子を使用して値の確認をしたり、計算したり、文字を結合したりなど、いろいろなことができます。</p>
+JavaScript で演算子を使用して値の確認をしたり、計算したり、文字を結合したりなど、いろいろなことができます。
 
-<p>コードを保存してブラウザーを再読み込みしてみてください。まだ開いていなければ、<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">開発者ツールの JavaScript コンソール</a>を開いて、表の「例」の列に書いてある通りに入力してみましょう。例を一つ入力したら、その都度 <kbd>Return</kbd>/<kbd>Enter</kbd> キーを押してください。結果が表示されるはずです。</p>
+コードを保存してブラウザーを再読み込みしてみてください。まだ開いていなければ、[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開いて、表の「例」の列に書いてある通りに入力してみましょう。例を一つ入力したら、その都度 <kbd>Return</kbd>/<kbd>Enter</kbd> キーを押してください。結果が表示されるはずです。
 
-<p>まずは算術演算子の例を見てください。</p>
+まずは算術演算子の例を見てください。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">演算子</th>
-   <th scope="col">名前</th>
-   <th scope="col">例</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>+</code></td>
-   <td>加算</td>
-   <td><code>6 + 9</code></td>
-  </tr>
-  <tr>
-   <td><code>-</code></td>
-   <td>減算</td>
-   <td><code>20 - 15</code></td>
-  </tr>
-  <tr>
-   <td><code>*</code></td>
-   <td>乗算</td>
-   <td><code>3 * 7</code></td>
-  </tr>
-  <tr>
-   <td><code>/</code></td>
-   <td>除算</td>
-   <td><code>10 / 5</code></td>
-  </tr>
- </tbody>
-</table>
+| 演算子 | 名前 | 例        |
+| ------ | ---- | --------- |
+| `+`    | 加算 | `6 + 9`   |
+| `-`    | 減算 | `20 - 15` |
+| `*`    | 乗算 | `3 * 7`   |
+| `/`    | 除算 | `10 / 5`  |
 
-<p>また、 <code>+</code> 演算子は 2 つの文字を繋げて一つにするときにも使います。(プログラミングでは文字列を<em>結合</em>すると言います。) 下の例も試してみてください。</p>
+また、 `+` 演算子は 2 つの文字を繋げて一つにするときにも使います。(プログラミングでは文字列を*結合*すると言います。) 下の例も試してみてください。
 
-<pre class="brush: js notranslate">let name = 'ビンゴさん';
+```js
+let name = 'ビンゴさん';
 name;
 let hello = 'が、こんにちは！と言っています。';
 hello;
 let greeting = name + hello;
-greeting;</pre>
+greeting;
+```
 
-<p>累算<a href="/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">代入演算子</a>と呼ばれるもっと短い書き方もあります。すでにある文字列に、さらに文字を追加した結果を返したい場合などに使います。例えば、</p>
+累算[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)と呼ばれるもっと短い書き方もあります。すでにある文字列に、さらに文字を追加した結果を返したい場合などに使います。例えば、
 
-<pre class="brush: js notranslate">name += 'が、こんにちは！と言っています。';</pre>
+```js
+name += 'が、こんにちは！と言っています。';
+```
 
-<p>のように書いたとき、次と同じです:</p>
+のように書いたとき、次と同じです:
 
-<pre class="brush: js notranslate">name = name + 'が、こんにちは！と言っています。';</pre>
+```js
+name = name + 'が、こんにちは！と言っています。';
+```
 
-<p>true/false テスト（例えば条件内 - <a href="#conditionals">below</a>参照）を実行しているとき、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比較演算子</a>を使用します。例えば：</p>
+true/false テスト（例えば条件内 - [below](#conditionals)参照）を実行しているとき、[比較演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)を使用します。例えば：
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">演算子</th>
-   <th scope="col">名前</th>
-   <th scope="col">例</th>
-  </tr>
-  <tr>
-   <td><code>===</code></td>
-   <td>厳密に等しい (全く同じかどうか)</td>
-   <td>
-    <pre class="brush: js line-numbers language-js notranslate">
-<code class="language-js"><span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// false</span>
+  <thead>
+    <tr>
+      <th scope="col">演算子</th>
+      <th scope="col">名前</th>
+      <th scope="col">例</th>
+    </tr>
+    <tr>
+      <td><code>===</code></td>
+      <td>厳密に等しい (全く同じかどうか)</td>
+      <td>
+        <pre
+          class="brush: js line-numbers language-js notranslate"
+        ><code class="language-js"><span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// false</span>
 <span class="string token">'Chris'</span> <span class="operator token">===</span> <span class="string token">'Bob'</span> <span class="comment token">// false</span>
 <span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// true</span>
 <span class="number token">2</span> <span class="operator token">===</span> <span class="string token">'2'</span> <span class="comment token">// false; number versus string</span></code></pre>
-   </td>
-  </tr>
-  <tr>
-   <td><code>!==</code></td>
-   <td>等しくない (違うかどうか)</td>
-   <td>
-    <pre class="brush: js line-numbers language-js notranslate">
-<code class="language-js"><span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// true</span>
+      </td>
+    </tr>
+    <tr>
+      <td><code>!==</code></td>
+      <td>等しくない (違うかどうか)</td>
+      <td>
+        <pre
+          class="brush: js line-numbers language-js notranslate"
+        ><code class="language-js"><span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// true</span>
 <span class="string token">'Chris'</span> <span class="operator token">!==</span> <span class="string token">'Bob'</span> <span class="comment token">// true</span>
 <span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// false</span>
 <span class="number token">2</span> <span class="operator token">!==</span> <span class="string token">'2'</span> <span class="comment token">// true; number versus string</span></code></pre>
-   </td>
-  </tr>
-  <tr>
-   <td><code>&lt;</code></td>
-   <td>小なり</td>
-   <td>
-    <pre class="brush: js line-numbers language-js notranslate">
-<code class="language-js"><span class="number token">6</span> <span class="operator token">&lt;</span> <span class="number token">10</span> <span class="comment token">// true</span>
-<span class="number token">20</span> <span class="operator token">&lt;</span> <span class="number token">10</span> <span class="comment token">// false</span></code></pre>
-   </td>
-  </tr>
-  <tr>
-   <td><code>&gt;</code></td>
-   <td>大なり</td>
-   <td>
-    <pre class="brush: js line-numbers language-js notranslate">
-<code class="language-js"><span class="number token">6</span> <span class="operator token">&gt;</span> <span class="number token">10</span> <span class="comment token">// false</span>
-<span class="number token">20</span> <span class="operator token">&gt;</span> <span class="number token">10</span>  <span class="comment token">// true</span></code></pre>
-   </td>
-  </tr>
- </thead>
+      </td>
+    </tr>
+    <tr>
+      <td><code>&#x3C;</code></td>
+      <td>小なり</td>
+      <td>
+        <pre
+          class="brush: js line-numbers language-js notranslate"
+        ><code class="language-js"><span class="number token">6</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// true</span>
+<span class="number token">20</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// false</span></code></pre>
+      </td>
+    </tr>
+    <tr>
+      <td><code>></code></td>
+      <td>大なり</td>
+      <td>
+        <pre
+          class="brush: js line-numbers language-js notranslate"
+        ><code class="language-js"><span class="number token">6</span> <span class="operator token">></span> <span class="number token">10</span> <span class="comment token">// false</span>
+<span class="number token">20</span> <span class="operator token">></span> <span class="number token">10</span>  <span class="comment token">// true</span></code></pre>
+      </td>
+    </tr>
+  </thead>
 </table>
 
-<h3 id="Conditionals" name="Conditionals">条件式</h3>
+### 条件式
 
-<p>先ほどの <code>checkGuess()</code> 関数に話を戻します。当然ですが、ただ単にプレースホルダメッセージを出したいわけではありませんよね。この関数にはプレイヤーの予想が正しいかどうかを調べて適切に返事をすることを望みます。</p>
+先ほどの `checkGuess()` 関数に話を戻します。当然ですが、ただ単にプレースホルダメッセージを出したいわけではありませんよね。この関数にはプレイヤーの予想が正しいかどうかを調べて適切に返事をすることを望みます。
 
-<p>それでは、今の <code>checkGuess()</code> 関数を以下のように書き換えてみましょう。</p>
+それでは、今の `checkGuess()` 関数を以下のように書き換えてみましょう。
 
-<pre class="brush: js notranslate">function checkGuess() {
+```js
+function checkGuess() {
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = '前回の予想: ';
@@ -418,9 +389,9 @@ greeting;</pre>
   } else {
     lastResult.textContent = '間違いです!';
     lastResult.style.backgroundColor = 'red';
-    if(userGuess &lt; randomNumber) {
+    if(userGuess < randomNumber) {
       lowOrHi.textContent='今の予想は小さすぎです!' ;
-    } else if(userGuess &gt; randomNumber) {
+    } else if(userGuess > randomNumber) {
       lowOrHi.textContent = '今の予想は大きすぎです!';
     }
   }
@@ -428,64 +399,70 @@ greeting;</pre>
   guessCount++;
   guessField.value = '';
   guessField.focus();
-}</pre>
+}
+```
 
-<p>たくさん書きましたね！各部分に分割して、それぞれの部分を詳細に見て何をしているか説明しましょう。</p>
+たくさん書きましたね！各部分に分割して、それぞれの部分を詳細に見て何をしているか説明しましょう。
 
-<ul>
- <li>関数の最初の行 (上のコードの 2行目) で、<code>userGuess</code> という変数を宣言して、現在のテキストフィールドに入力された値をセットしています。そして、組み込みの <code>Number()</code> 関数を呼び出して、テキストフィールドに入力された値が間違いなく数値であることも確認しています。</li>
- <li>次に、初めて条件分岐を伴うコードブロックが出てきます (3行目～5行目)。条件分岐は、条件の判定結果が真 (true) であるかどうかによって、次に実行するコードが変わります。見た目が少しだけ関数に似ていますが、違うものです。条件分岐の最も単純な書き方は <code>if</code> キーワードから始まり、括弧が続き、中括弧が続きます。括弧の中には分岐する条件を書きます。条件が <code>true</code> となれば、中括弧の中にあるコードが実行されます。条件が <code>true</code> にならなければ、中括弧の次のコードまで移動します。今回の条件は <code>guessCount</code> 変数が <code>1</code> であるかどうかを判定しています。(つまり、プレイヤーの初回の予想かどうかを判定しているのです。)
-  <pre class="brush: js notranslate">guessCount === 1</pre>
-  もしそうなら、<code>guesses</code> 段落 ({{htmlelement("p")}}要素) の内容を "<samp>前回の予想: </samp>" に変更します。違うなら、何もしません。</li>
- <li>6行目では、<code>guesses</code> 段落の最後にスペースを付けて、現在の <code>userGuess</code> 変数の値を追加しています。なので、予想が表示されるときにはスペースで区切られて表示されます。</li>
- <li>次の部分 (8行目～24行目) には、確認すべきことがいくつかあります。
-  <ul>
-   <li>最初の <code>if(){ }</code> は、プレイヤーの予想が、JavaScript のコードの先頭で設定したランダムな数字を格納した <code>randomNumber</code> 変数の値と等しいかどうかを調べています。もし等しければ、プレイヤーは正解し勝ちとなるため、祝福のメッセージを素敵な緑色で表示します。さらに、数字の大小を表示する段落をクリアして、後で説明する <code>setGameOver()</code> 関数を実行します。</li>
-   <li>今度は <code>else if(){ }</code> という部分で、ひとつ前の条件に続けて条件を書いています。この条件はユーザの最後のターンかどうかを調べています。もし最後の回ならば、プログラムは祝福のメッセージの代わりにゲームオーバーメッセージとする以外は、ひとつ前の部分と同じことをします。</li>
-   <li>このコードに連なる最後のブロック (<code>else { }</code>) は、前の二つの条件がどちらも真とならなかった場合にのみ実行されます。(つまり、プレイヤーは間違えてはいるものの、予想回数が残っている場合です。) この場合、プレイヤーに予想が間違っていることを伝え、入力された数字が大きいか小さいかを伝えるため、さらなる条件の確認を行います。</li>
-  </ul>
- </li>
- <li>最後の 3行 (26行目～28行目) は、次の予想の入力を受け取るための準備です。<code>guessCount</code> 変数に 1 を加算して、プレイヤーの予想回数を数えます。(<code>++</code> はインクリメント演算子で、1 だけインクリメント(増加)します。) そして、入力フォームのテキストフィールドを空にしてからフォーカスを当て、プレイヤーの次の入力に備えます。</li>
-</ul>
+- 関数の最初の行 (上のコードの 2 行目) で、`userGuess` という変数を宣言して、現在のテキストフィールドに入力された値をセットしています。そして、組み込みの `Number()` 関数を呼び出して、テキストフィールドに入力された値が間違いなく数値であることも確認しています。
+- 次に、初めて条件分岐を伴うコードブロックが出てきます (3 行目～ 5 行目)。条件分岐は、条件の判定結果が真 (true) であるかどうかによって、次に実行するコードが変わります。見た目が少しだけ関数に似ていますが、違うものです。条件分岐の最も単純な書き方は `if` キーワードから始まり、括弧が続き、中括弧が続きます。括弧の中には分岐する条件を書きます。条件が `true` となれば、中括弧の中にあるコードが実行されます。条件が `true` にならなければ、中括弧の次のコードまで移動します。今回の条件は `guessCount` 変数が `1` であるかどうかを判定しています。(つまり、プレイヤーの初回の予想かどうかを判定しているのです。)
 
-<h3 id="Events" name="Events">イベント</h3>
+  ```js
+  guessCount === 1
+  ```
 
-<p>ここまでで、<code>checkGuess()</code> 関数を上手に実装することができました。しかしまだ何も起きません。なぜなら、まだこの関数を呼び出していないからです。出来れば、"予想を入力"のボタンが押されたときに、この関数が呼ばれるようにしたいです。そのためにはイベントを使います。イベントとは、ボタンが押されたり、ページが読み込まれたり、ビデオを再生したりといったブラウザーで起きることで、それに反応してコードを実行させることができます。イベントが発生したことを聞き取る構成が<strong>イベントリスナー</strong>で、発生したイベントに反応して実行されるコードブロックが<strong>イベントハンドラー</strong>です。</p>
+  もしそうなら、`guesses` 段落 ({{htmlelement("p")}}要素) の内容を "`前回の予想: `" に変更します。違うなら、何もしません。
 
-<p><code>checkGuess()</code> 関数の下に、以下の一文を加えましょう。</p>
+- 6 行目では、`guesses` 段落の最後にスペースを付けて、現在の `userGuess` 変数の値を追加しています。なので、予想が表示されるときにはスペースで区切られて表示されます。
+- 次の部分 (8 行目～ 24 行目) には、確認すべきことがいくつかあります。
 
-<pre class="brush: js notranslate">guessSubmit.addEventListener('click', checkGuess);</pre>
+  - 最初の `if(){ }` は、プレイヤーの予想が、JavaScript のコードの先頭で設定したランダムな数字を格納した `randomNumber` 変数の値と等しいかどうかを調べています。もし等しければ、プレイヤーは正解し勝ちとなるため、祝福のメッセージを素敵な緑色で表示します。さらに、数字の大小を表示する段落をクリアして、後で説明する `setGameOver()` 関数を実行します。
+  - 今度は `else if(){ }` という部分で、ひとつ前の条件に続けて条件を書いています。この条件はユーザの最後のターンかどうかを調べています。もし最後の回ならば、プログラムは祝福のメッセージの代わりにゲームオーバーメッセージとする以外は、ひとつ前の部分と同じことをします。
+  - このコードに連なる最後のブロック (`else { }`) は、前の二つの条件がどちらも真とならなかった場合にのみ実行されます。(つまり、プレイヤーは間違えてはいるものの、予想回数が残っている場合です。) この場合、プレイヤーに予想が間違っていることを伝え、入力された数字が大きいか小さいかを伝えるため、さらなる条件の確認を行います。
 
-<p><code>guessSubmit</code> ボタンに対して、イベントリスナーを追加しました。これは発生したことを知りたいイベントの種類 (この場合は <code>click</code>)と、イベントが発生した場合に実行するコード (この場合は <code>checkGuess()</code>) の 2 つの入力値 (<em>引数</em>と言います) を取る関数です。({{domxref("EventTarget.addEventListener", "addEventListener()")}}の中では括弧を書く必要はありません。)</p>
+- 最後の 3 行 (26 行目～ 28 行目) は、次の予想の入力を受け取るための準備です。`guessCount` 変数に 1 を加算して、プレイヤーの予想回数を数えます。(`++` はインクリメント演算子で、1 だけインクリメント(増加)します。) そして、入力フォームのテキストフィールドを空にしてからフォーカスを当て、プレイヤーの次の入力に備えます。
 
-<p>保存して再度コードを読み直してください。今度はきっとある程度まで動くはずです。ただし、まだ問題があります。もし正解したり、予想回数の上限に達してしまった場合には、ゲームが止まってしまうでしょう。なぜなら、ゲームが終わった時に実行されるべき関数 <code>setGameOver()</code> をまだ定義していないためです。さあ、足りないコードを書いてチュートリアルの機能を完成させましょう。</p>
+### イベント
 
-<h3 id="Finishing_the_game_functionality" name="Finishing_the_game_functionality">ゲームの機能を完成させる</h3>
+ここまでで、`checkGuess()` 関数を上手に実装することができました。しかしまだ何も起きません。なぜなら、まだこの関数を呼び出していないからです。出来れば、"予想を入力"のボタンが押されたときに、この関数が呼ばれるようにしたいです。そのためにはイベントを使います。イベントとは、ボタンが押されたり、ページが読み込まれたり、ビデオを再生したりといったブラウザーで起きることで、それに反応してコードを実行させることができます。イベントが発生したことを聞き取る構成が**イベントリスナー**で、発生したイベントに反応して実行されるコードブロックが**イベントハンドラー**です。
 
-<p><code>setGameOver()</code> 関数をコードの一番下に追加して、中身を見てみましょう。これを JavaScript の一番下に追加します。</p>
+`checkGuess()` 関数の下に、以下の一文を加えましょう。
 
-<pre class="brush: js notranslate">function setGameOver() {
+```js
+guessSubmit.addEventListener('click', checkGuess);
+```
+
+`guessSubmit` ボタンに対して、イベントリスナーを追加しました。これは発生したことを知りたいイベントの種類 (この場合は `click`)と、イベントが発生した場合に実行するコード (この場合は `checkGuess()`) の 2 つの入力値 (*引数*と言います) を取る関数です。({{domxref("EventTarget.addEventListener", "addEventListener()")}}の中では括弧を書く必要はありません。)
+
+保存して再度コードを読み直してください。今度はきっとある程度まで動くはずです。ただし、まだ問題があります。もし正解したり、予想回数の上限に達してしまった場合には、ゲームが止まってしまうでしょう。なぜなら、ゲームが終わった時に実行されるべき関数 `setGameOver()` をまだ定義していないためです。さあ、足りないコードを書いてチュートリアルの機能を完成させましょう。
+
+### ゲームの機能を完成させる
+
+`setGameOver()` 関数をコードの一番下に追加して、中身を見てみましょう。これを JavaScript の一番下に追加します。
+
+```js
+function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement('button');
   resetButton.textContent = '新しいゲームを始める';
   document.body.appendChild(resetButton);
   resetButton.addEventListener('click', resetGame);
-}</pre>
+}
+```
 
-<ul>
- <li>最初の 2行は入力フォームのテキストフィールドとボタンの <code>disabled</code> プロパティを <code>true</code> に設定することで、入力できないようにしています。ゲーム終了後にユーザーがさらに予想を入力し、ゲームが予期しない動作をすることを防ぐために必要です。</li>
- <li>さらに次の 3行では、新しい {{htmlelement("button")}} 要素を生成し、そのラベルに"<samp>新しいゲームを始める</samp>"という文言を設定し、HTML ページに追加しています。</li>
- <li>最後の行では、上で生成したボタンがクリックされたときに <code>resetGame()</code> という関数が実行されるようにイベントリスナーを設定しています。</li>
-</ul>
+- 最初の 2 行は入力フォームのテキストフィールドとボタンの `disabled` プロパティを `true` に設定することで、入力できないようにしています。ゲーム終了後にユーザーがさらに予想を入力し、ゲームが予期しない動作をすることを防ぐために必要です。
+- さらに次の 3 行では、新しい {{htmlelement("button")}} 要素を生成し、そのラベルに"`新しいゲームを始める`"という文言を設定し、HTML ページに追加しています。
+- 最後の行では、上で生成したボタンがクリックされたときに `resetGame()` という関数が実行されるようにイベントリスナーを設定しています。
 
-<p>この関数も定義しなければなりませんね！もう一度、以下のコードを JavaScript のいちばん下に追加してください。</p>
+この関数も定義しなければなりませんね！もう一度、以下のコードを JavaScript のいちばん下に追加してください。
 
-<pre class="brush: js notranslate">function resetGame() {
+```js
+function resetGame() {
   guessCount = 1;
 
   const resetParas = document.querySelectorAll('.resultParas p');
-  for (let i = 0 ; i &lt; resetParas.length ; i++) {
+  for (let i = 0 ; i < resetParas.length ; i++) {
     resetParas[i].textContent = '';
   }
 
@@ -499,112 +476,141 @@ greeting;</pre>
   lastResult.style.backgroundColor = 'white';
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
-}</pre>
+}
+```
 
-<p>ちょっと長めのこのコードブロックは、プレイヤーが次のゲームができるように、ゲームを起動したときの状態に完全にリセットします。</p>
+ちょっと長めのこのコードブロックは、プレイヤーが次のゲームができるように、ゲームを起動したときの状態に完全にリセットします。
 
-<ul>
- <li><code>guessCount</code> に 1 を代入して元に戻します。</li>
- <li>情報段落のすべてを消去します。</li>
- <li>リセットボタンをページから削除します。</li>
- <li>入力フォームの要素を使用可能にして、新しい予想が入力できるようにテキストフィールドを空にしてフォーカスを設定します。</li>
- <li>最終結果を表示している <code>lastResult</code> 段落の背景色を消去します。</li>
- <li>同じ数字以外の数字でゲームができるように、新しいランダムな数字を再度生成します。</li>
-</ul>
+- `guessCount` に 1 を代入して元に戻します。
+- 情報段落のすべてを消去します。
+- リセットボタンをページから削除します。
+- 入力フォームの要素を使用可能にして、新しい予想が入力できるようにテキストフィールドを空にしてフォーカスを設定します。
+- 最終結果を表示している `lastResult` 段落の背景色を消去します。
+- 同じ数字以外の数字でゲームができるように、新しいランダムな数字を再度生成します。
 
-<p><strong>ここまでで (単純ではありますが) 動くゲームの完成です。お疲れ様でした!</strong></p>
+**ここまでで (単純ではありますが) 動くゲームの完成です。お疲れ様でした!**
 
-<p>この記事では、あと少し説明しなければならない大事な機能が残っています。既に見ているはずですが気づいたでしょうか。</p>
+この記事では、あと少し説明しなければならない大事な機能が残っています。既に見ているはずですが気づいたでしょうか。
 
-<h3 id="Loops" name="Loops">ループ (繰り返し)</h3>
+### ループ (繰り返し)
 
-<p>上のコードでもう少し詳しく説明しなければならないのは、<a href="/ja/docs/Web/JavaScript/Reference/Statements/for">for</a> ループです。ループはプログラミングにおいてとても重要な概念です。ある条件に達するまで何度も何度もコードを繰り返し実行することができます。</p>
+上のコードでもう少し詳しく説明しなければならないのは、[for](/ja/docs/Web/JavaScript/Reference/Statements/for) ループです。ループはプログラミングにおいてとても重要な概念です。ある条件に達するまで何度も何度もコードを繰り返し実行することができます。
 
-<p><a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザーの開発者ツールの JavaScript コンソール</a> をもう一度開いて次のコードを入力してみましょう。</p>
+[ブラウザーの開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools) をもう一度開いて次のコードを入力してみましょう。
 
-<pre class="brush: js notranslate">for (let i = 1 ; i &lt; 21 ; i++) { console.log(i) }</pre>
+```js
+for (let i = 1 ; i < 21 ; i++) { console.log(i) }
+```
 
-<p>どうでしょうか。<samp>1</samp> から <samp>20</samp> の数字がコンソールに出力されましたね。これが繰り返しです。<code>for</code> ループには 3 つの入力値 (引数) が必要です。</p>
+どうでしょうか。`1` から `20` の数字がコンソールに出力されましたね。これが繰り返しです。`for` ループには 3 つの入力値 (引数) が必要です。
 
-<ol>
- <li><strong>初期値</strong>: 上の例では、<code>i</code> を 1 からはじめましたが、どんな数字でもかまいません。さらに言えば、<code>i</code> という名前でなくともかまいません。ただし、ループでは短くて覚えやすいため、<code>i</code> という変数の名前がよく使われることを覚えておいてください。</li>
- <li><strong>条件</strong>: 上の例では <code>i &lt; 21</code> をループが継続する条件としました。つまりループは <code>i</code> が 21未満でなくなるまで継続します。<code>i</code> が 21 になったらループの実行が終了します。</li>
- <li><strong>増分</strong>: 上の例では増分を <code>i++</code> と指定しています。つまり「<code>i</code> に 1 を足し」ます。ループは <code>i</code> が 21 になるまで(それは 2.の継続条件で説明しましたね) 、<code>i</code> の取りうる値について、それぞれ一度ずつ実行されます。今回の例では繰り返しのコードが実行される度に <code>i</code> の値を{{domxref("Console.log", "console.log()")}}を使用してコンソールに出力しています。</li>
-</ol>
+1.  **初期値**: 上の例では、`i` を 1 からはじめましたが、どんな数字でもかまいません。さらに言えば、`i` という名前でなくともかまいません。ただし、ループでは短くて覚えやすいため、`i` という変数の名前がよく使われることを覚えておいてください。
+2.  **条件**: 上の例では `i < 21` をループが継続する条件としました。つまりループは `i` が 21 未満でなくなるまで継続します。`i` が 21 になったらループの実行が終了します。
+3.  **増分**: 上の例では増分を `i++` と指定しています。つまり「`i` に 1 を足し」ます。ループは `i` が 21 になるまで(それは 2.の継続条件で説明しましたね) 、`i` の取りうる値について、それぞれ一度ずつ実行されます。今回の例では繰り返しのコードが実行される度に `i` の値を{{domxref("Console.log", "console.log()")}}を使用してコンソールに出力しています。
 
-<p>さて、それでは数字当てゲームに登場したループを見てみましょう。<code>resetGame()</code> 関数に以下の記述がありますね。</p>
+さて、それでは数字当てゲームに登場したループを見てみましょう。`resetGame()` 関数に以下の記述がありますね。
 
-<pre class="brush: js notranslate">const resetParas = document.querySelectorAll('.resultParas p');
-for (let i = 0 ; i &lt; resetParas.length ; i++) {
+```js
+const resetParas = document.querySelectorAll('.resultParas p');
+for (let i = 0 ; i < resetParas.length ; i++) {
   resetParas[i].textContent = '';
-}</pre>
+}
+```
 
-<p>このコードは <code>&lt;div class="resultParas"&gt;</code> に含まれるすべての {{htmlelement("p")}} 要素を {{domxref("Document.querySelectorAll", "querySelectorAll()")}} というメソッドを使用して取得しています。そしてループを使用してその一つ一つの要素の中身を消去しています。</p>
+このコードは `<div class="resultParas">` に含まれるすべての {{htmlelement("p")}} 要素を {{domxref("Document.querySelectorAll", "querySelectorAll()")}} というメソッドを使用して取得しています。そしてループを使用してその一つ一つの要素の中身を消去しています。
 
-<h3 id="A_small_discussion_on_objects" name="A_small_discussion_on_objects">オブジェクトについて(簡単に)</h3>
+### オブジェクトについて(簡単に)
 
-<p>オブジェクトについて説明する前に、プログラムに対して最後のちょっとした改良を加えてみましょう。JavaScript の書き出しの方にある <code>let resetButton;</code> のすぐ下に、以下の行を追記してファイルを保存します。</p>
+オブジェクトについて説明する前に、プログラムに対して最後のちょっとした改良を加えてみましょう。JavaScript の書き出しの方にある `let resetButton;` のすぐ下に、以下の行を追記してファイルを保存します。
 
-<pre class="brush: js notranslate">guessField.focus();</pre>
+```js
+guessField.focus();
+```
 
-<p>この行はページが読み込まれるとすぐ、 {{domxref("HTMLElement.focus", "focus()")}} メソッドを呼び出して、入力フォームの {{htmlelement("input")}} 要素に対して自動的にカーソル (フォーカス) を設定しています。つまり、ページが開いたと同時に、入力フォームを最初にクリックすることなくプレイヤーが予想を入力できるようにしているのです。本当にちょっとしたことですが、ユーザーにゲームで遊ぶためには何をすればよいかの視覚的なヒントを教えてあげることで、使い勝手が向上します。</p>
+この行はページが読み込まれるとすぐ、 {{domxref("HTMLElement.focus", "focus()")}} メソッドを呼び出して、入力フォームの {{htmlelement("input")}} 要素に対して自動的にカーソル (フォーカス) を設定しています。つまり、ページが開いたと同時に、入力フォームを最初にクリックすることなくプレイヤーが予想を入力できるようにしているのです。本当にちょっとしたことですが、ユーザーにゲームで遊ぶためには何をすればよいかの視覚的なヒントを教えてあげることで、使い勝手が向上します。
 
-<p>もう少し詳細に何が起こっているのか分析しましょう。JavaScript では、すべてのものはオブジェクトです。オブジェクトというのは 1 か所に関連する機能をまとめたものです。自分でオブジェクトを作ることもできますが、高度なことなので、このコースの大分後まで出てきません。今は簡単に、これを使うと多くの便利なことができるようになる、ブラウザーに含まれる組み込みオブジェクトについて説明します。</p>
+もう少し詳細に何が起こっているのか分析しましょう。JavaScript では、すべてのものはオブジェクトです。オブジェクトというのは 1 か所に関連する機能をまとめたものです。自分でオブジェクトを作ることもできますが、高度なことなので、このコースの大分後まで出てきません。今は簡単に、これを使うと多くの便利なことができるようになる、ブラウザーに含まれる組み込みオブジェクトについて説明します。
 
-<p>この具体的なケースでは、HTML のテキスト入力フィールドを参照するために、最初に <code>guessField</code> 変数を作成しました。以下の行は最上部のあたりの変数定義で見つかります、</p>
+この具体的なケースでは、HTML のテキスト入力フィールドを参照するために、最初に `guessField` 変数を作成しました。以下の行は最上部のあたりの変数定義で見つかります、
 
-<pre class="brush: js notranslate">const guessField = document.querySelector('.guessField');</pre>
+```js
+const guessField = document.querySelector('.guessField');
+```
 
-<p>この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。<code>querySelector()</code> はある情報 (必要な要素を選択する <a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors">CSS セレクタ</a>) を受け取ります。</p>
+この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。`querySelector()` はある情報 (必要な要素を選択する [CSS セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)) を受け取ります。
 
-<p><code>guessField</code> に {{htmlelement("input")}} 要素の参照が得られたので、これでたくさんのプロパティ (基本的にはオブジェクトの内部に保持されている変数のことですが、中には値を変えられないものもあります) とメソッド (基本的にはオブジェクトの内部に保持されている関数のこと) にアクセスできるようになりました。ようやく {{htmlelement("input")}} 要素のメソッドの一つである <code>focus()</code> メソッドを使ってテキストフィールドにフォーカスを当てられます。</p>
+`guessField` に {{htmlelement("input")}} 要素の参照が得られたので、これでたくさんのプロパティ (基本的にはオブジェクトの内部に保持されている変数のことですが、中には値を変えられないものもあります) とメソッド (基本的にはオブジェクトの内部に保持されている関数のこと) にアクセスできるようになりました。ようやく {{htmlelement("input")}} 要素のメソッドの一つである `focus()` メソッドを使ってテキストフィールドにフォーカスを当てられます。
 
-<pre class="brush: js notranslate">guessField.focus();</pre>
+```js
+guessField.focus();
+```
 
-<p>入力フォームの要素の参照を含まない変数に対しては、<code>focus()</code> は使用できません。例えば、<code>guesses</code> 変数には {{htmlelement("p")}} 要素への参照が入っていますし、<code>guessCount</code> には数値が入っています。</p>
+入力フォームの要素の参照を含まない変数に対しては、`focus()` は使用できません。例えば、`guesses` 変数には {{htmlelement("p")}} 要素への参照が入っていますし、`guessCount` には数値が入っています。
 
-<h3 id="Playing_with_browser_objects" name="Playing_with_browser_objects">ブラウザーのオブジェクトで遊ぼう</h3>
+### ブラウザーのオブジェクトで遊ぼう
 
-<p>少しブラウザーが持っているオブジェクトで遊んでみましょう。</p>
+少しブラウザーが持っているオブジェクトで遊んでみましょう。
 
-<ol>
- <li>まずブラウザーでプログラムを開いてください</li>
- <li>次に<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">開発者ツール</a>を開き、JavaScript コンソールのタブが開いたのを確認します</li>
- <li><code>guessField</code> と入力してみてください。するとコンソールに {{htmlelement("input")}} 要素を含む変数が表示されます。また、気づいたと思いますが、コンソールは実行中の環境にある変数名を含んだオブジェクト名を自動的に補完しました!</li>
- <li>さらに下のように入力してみてください
-  <pre class="brush: js notranslate">guessField.value = 'Hello';</pre>
-  <code>value</code> プロパティは今のテキストフィールドに入力された値を表しています。コマンドを入力したら、テキストフィールドの値が変わりましたね！</li>
- <li>さらに続けて <code>guesses</code> と入力して  <kbd>Return</kbd>/<kbd>Enter</kbd> を押します。{{htmlelement("p")}} 要素を含む変数がコンソールに表示されますね。</li>
- <li>そして次のコードを入力します
-  <pre class="brush: js notranslate">guesses.value</pre>
-  コンソールには  <code>undefined</code> (未定義) という文字が返ってきましたね。<code>value</code> というプロパティは {{htmlelement("p")}} 要素にはないためです。</li>
- <li>パラグラフ内のテキストを変えたい場合には、{{domxref("Node.textContent", "textContent")}} プロパティを使用する必要があります。こうしてみます
-  <pre class="brush: js notranslate">guesses.textContent = 'Where is my paragraph?';</pre>
- </li>
- <li>ちょっと遊んでみましょう。下のコードをひとつづつ入力してみてください。
-  <pre class="brush: js notranslate">guesses.style.backgroundColor = 'yellow';
-guesses.style.fontSize = '200%';
-guesses.style.padding = '10px';
-guesses.style.boxShadow = '3px 3px 6px black';</pre>
-  ページ内に存在するすべての要素は <code>style</code> プロパティを持っていて、そのオブジェクトを介して CSS のインラインスタイルで要素に適用されるすべてのプロパティにアクセスすることができます。これを使うことで、JavaScript から動的に要素の CSS のスタイルを設定できるのです。</li>
-</ol>
+1.  まずブラウザーでプログラムを開いてください
+2.  次に[開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開き、JavaScript コンソールのタブが開いたのを確認します
+3.  `guessField` と入力してみてください。するとコンソールに {{htmlelement("input")}} 要素を含む変数が表示されます。また、気づいたと思いますが、コンソールは実行中の環境にある変数名を含んだオブジェクト名を自動的に補完しました!
+4.  さらに下のように入力してみてください
 
-<h2 id="Finished_for_now..." name="Finished_for_now...">ここで一息...</h2>
+    ```js
+    guessField.value = 'Hello';
+    ```
 
-<p>これで数字当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください 。(最後のプログラムは<a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">こちらでも遊べます</a>。) もし作ったプログラムが動かなければ、<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">ソースコード</a>と見比べてみてください。</p>
+    `value` プロパティは今のテキストフィールドに入力された値を表しています。コマンドを入力したら、テキストフィールドの値が変わりましたね！
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</p>
+5.  さらに続けて `guesses` と入力して&#x20;
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+    <kbd>Return</kbd>
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript って何?</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript への最初のダイブ</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_went_wrong">何が間違っている? JavaScript のトラブルシューティング</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables">必要な情報を保存する — 変数</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math">JavaScript での数学入門 — 数値と演算子について</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings">テキストを扱う — JavaScript での文字列</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays">配列</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator">評価: バカ話ジェネレーター</a></li>
-</ul>
+    /
+
+    <kbd>Enter</kbd>
+
+    &#x20;を押します。{{htmlelement("p")}} 要素を含む変数がコンソールに表示されますね。
+
+6.  そして次のコードを入力します
+
+    ```js
+    guesses.value
+    ```
+
+    コンソールには `undefined` (未定義) という文字が返ってきましたね。`value` というプロパティは {{htmlelement("p")}} 要素にはないためです。
+
+7.  パラグラフ内のテキストを変えたい場合には、{{domxref("Node.textContent", "textContent")}} プロパティを使用する必要があります。こうしてみます
+
+    ```js
+    guesses.textContent = 'Where is my paragraph?';
+    ```
+
+8.  ちょっと遊んでみましょう。下のコードをひとつづつ入力してみてください。
+
+    ```js
+    guesses.style.backgroundColor = 'yellow';
+    guesses.style.fontSize = '200%';
+    guesses.style.padding = '10px';
+    guesses.style.boxShadow = '3px 3px 6px black';
+    ```
+
+    ページ内に存在するすべての要素は `style` プロパティを持っていて、そのオブジェクトを介して CSS のインラインスタイルで要素に適用されるすべてのプロパティにアクセスすることができます。これを使うことで、JavaScript から動的に要素の CSS のスタイルを設定できるのです。
+
+## ここで一息...
+
+これで数字当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください 。(最後のプログラムは[こちらでも遊べます](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。) もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
+
+{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+
+## このモジュール
+
+- [JavaScript って何?](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript への最初のダイブ](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [必要な情報を保存する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)
+- [JavaScript での数学入門 — 数値と演算子について](/ja/docs/Learn/JavaScript/First_steps/Math)
+- [テキストを扱う — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)
+- [便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)
+- [評価: バカ話ジェネレーター](/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator)

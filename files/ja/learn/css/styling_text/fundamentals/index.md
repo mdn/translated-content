@@ -16,283 +16,208 @@ tags:
   - weight
 translation_of: Learn/CSS/Styling_text/Fundamentals
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
-<div>{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}</div>
+この記事では、{{glossary("CSS")}} によるテキストの装飾の習得に向けて旅を始めましょう。 ここでは、フォントの太さ、ファミリーそしてスタイルの設定、フォントの一括指定、テキストの配置とその他のエフェクト、ラインと文字の間隔などを含んだ、テキストやフォントの装飾の基本について詳しく説明します。
 
-<p class="summary"><span class="seoSummary">この記事では、{{glossary("CSS")}} によるテキストの装飾の習得に向けて旅を始めましょう。</span> ここでは、フォントの太さ、ファミリーそしてスタイルの設定、フォントの一括指定、テキストの配置とその他のエフェクト、ラインと文字の間隔などを含んだ、テキストやフォントの装飾の基本について詳しく説明します。</p>
+| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、CSS の基本（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)を学ぶ）。 |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 学習目標: | ウェブページのテキストを装飾するために必要な基本的なプロパティとテクニックを学ぶこと。                                                                                                 |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターリテラシー、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>を学ぶ）、CSS の基本（<a href="/ja/docs/Learn/CSS/Introduction_to_CSS">CSS 入門</a>を学ぶ）。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習目標:</th>
-   <td>ウェブページのテキストを装飾するために必要な基本的なプロパティとテクニックを学ぶこと。</td>
-  </tr>
- </tbody>
-</table>
+## CSS においてテキストの装飾には何が関係していますか？
 
-<h2 id="What_is_involved_in_styling_text_in_CSS" name="What_is_involved_in_styling_text_in_CSS">CSS においてテキストの装飾には何が関係していますか？</h2>
+HTML と CSS を使った作業ですでに経験したように、要素内のテキストは要素のコンテンツボックス内にレイアウトされます。 コンテンツ領域の左上（RTL 言語のコンテンツの場合は右上）から始まり、ラインの終りに向かって流れます。 終りに達すると、次のラインに進み、続けてすべてのコンテンツがボックスに配置されるまで次のラインに進みます。 テキストコンテンツは事実上一連のインライン要素のようにふるまい、互いに隣接するラインに配置され、ラインの終りに達するまで、または、{{htmlelement("br")}} 要素を使用して手動で改行を強制しない限り改行を作成しません。
 
-<p>HTML と CSS を使った作業ですでに経験したように、要素内のテキストは要素のコンテンツボックス内にレイアウトされます。 コンテンツ領域の左上（RTL 言語のコンテンツの場合は右上）から始まり、ラインの終りに向かって流れます。 終りに達すると、次のラインに進み、続けてすべてのコンテンツがボックスに配置されるまで次のラインに進みます。 テキストコンテンツは事実上一連のインライン要素のようにふるまい、互いに隣接するラインに配置され、ラインの終りに達するまで、または、{{htmlelement("br")}} 要素を使用して手動で改行を強制しない限り改行を作成しません。</p>
+> **Note:** **注**: 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)の記事に戻って見直してください。
 
-<div class="note">
-<p><strong>注</strong>: 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model">ボックスモデル</a>の記事に戻って見直してください。</p>
-</div>
+テキストを装飾するために使用される CSS プロパティは、一般的に次の 2 つのカテゴリに分類されます。 この記事では、これらのプロパティを個別に説明します。
 
-<p>テキストを装飾するために使用される CSS プロパティは、一般的に次の2つのカテゴリに分類されます。 この記事では、これらのプロパティを個別に説明します。</p>
+- **フォントスタイル**: テキストに適用されるフォントに影響するプロパティで、適用するフォント、大きさ、太字、斜体などに影響します。
+- **テキストのレイアウトスタイル**: テキストの間隔やその他のレイアウト機能に影響するプロパティで、例えば、行間や文字間のスペースや、コンテンツボックス内でのテキストの配置方法などを操作できます。
 
-<ul>
- <li><strong>フォントスタイル</strong>: テキストに適用されるフォントに影響するプロパティで、適用するフォント、大きさ、太字、斜体などに影響します。</li>
- <li><strong>テキストのレイアウトスタイル</strong>: テキストの間隔やその他のレイアウト機能に影響するプロパティで、例えば、行間や文字間のスペースや、コンテンツボックス内でのテキストの配置方法などを操作できます。</li>
-</ul>
+> **Note:** **注**: 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素でラップしたり、{{cssxref("::first-letter")}}（要素のテキストの最初の文字を選択）、{{cssxref("::first-line")}}（要素のテキストの最初の行を選択）、{{cssxref("::selection")}}（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の疑似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
 
-<div class="note">
-<p><strong>注</strong>: 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素でラップしたり、{{cssxref("::first-letter")}}（要素のテキストの最初の文字を選択）、{{cssxref("::first-line")}}（要素のテキストの最初の行を選択）、{{cssxref("::selection")}}（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の疑似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。</p>
-</div>
+## フォント
 
-<h2 id="Fonts" name="Fonts">フォント</h2>
+フォントを装飾するためのプロパティを見るためにまっすぐに進みましょう。 この例では、次のような同じ HTML サンプルにいくつかの異なる CSS プロパティを適用します。
 
-<p>フォントを装飾するためのプロパティを見るためにまっすぐに進みましょう。 この例では、次のような同じ HTML サンプルにいくつかの異なる CSS プロパティを適用します。</p>
+```html
+<h1>Tommy the cat</h1>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
-
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;</pre>
+occasion such as this that he did.</p>
+```
 
-<p><a href="http://mdn.github.io/learning-area/css/styling-text/fundamentals/">完成した例</a>は Github にあります（<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html">ソースコード</a>も参照してください）。</p>
+[完成した例](http://mdn.github.io/learning-area/css/styling-text/fundamentals/)は Github にあります（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)も参照してください）。
 
-<h3 id="Color" name="Color">色</h3>
+### 色
 
-<p>{{cssxref("color")}} プロパティは、選択された要素の前景のコンテンツの色を設定します（通常はテキストですが、{{cssxref("text-decoration")}} プロパティを使用してテキストに下線や上線を配置するなど、他のいくつかの要素を含めることもできます）。</p>
+{{cssxref("color")}} プロパティは、選択された要素の前景のコンテンツの色を設定します（通常はテキストですが、{{cssxref("text-decoration")}} プロパティを使用してテキストに下線や上線を配置するなど、他のいくつかの要素を含めることもできます）。
 
-<p><code>color</code> は次のように任意の <a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS カラー単位</a>を受け入れることができます。</p>
+`color` は次のように任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を受け入れることができます。
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   color: red;
-}</pre>
+}
+```
 
-<p>これにより、次のように段落は標準のブラウザーのデフォルトの黒ではなく赤になります。</p>
+これにより、次のように段落は標準のブラウザーのデフォルトの黒ではなく赤になります。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+```html hidden
+<h1>Tommy the cat</h1>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;</pre>
-</div>
+occasion such as this that he did.</p>
+```
 
-<p>{{ EmbedLiveSample('Color', '100%', 220) }}</p>
+{{ EmbedLiveSample('Color', '100%', 220) }}
 
-<h3 id="Font_families" name="Font_families">フォントファミリー</h3>
+### フォントファミリー
 
-<p>テキストに別のフォントを設定するには、{{cssxref("font-family")}} プロパティを使用します — これにより、選択した要素に適用するブラウザーのフォント（またはフォントのリスト）を指定できます。 ウェブサイトにアクセスしているマシンで利用可能な場合にのみ、ブラウザーはフォントを適用します。 そうでない場合は、ブラウザーの<a href="#default_fonts">デフォルトフォント</a>を使用するだけです。 簡単な例はこんな感じです。</p>
+テキストに別のフォントを設定するには、{{cssxref("font-family")}} プロパティを使用します — これにより、選択した要素に適用するブラウザーのフォント（またはフォントのリスト）を指定できます。 ウェブサイトにアクセスしているマシンで利用可能な場合にのみ、ブラウザーはフォントを適用します。 そうでない場合は、ブラウザーの[デフォルトフォント](#default_fonts)を使用するだけです。 簡単な例はこんな感じです。
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   font-family: arial;
-}</pre>
+}
+```
 
-<p>これにより、ページ上のすべての段落に、どのコンピュータでも見られる arial フォントが採用されます。</p>
+これにより、ページ上のすべての段落に、どのコンピュータでも見られる arial フォントが採用されます。
 
-<h4 id="Web_safe_fonts" name="Web_safe_fonts">ウェブセーフフォント</h4>
+#### ウェブセーフフォント
 
-<p>フォントの入手可能性と言えば、すべてのシステムで一般的に利用でき、したがってそれほど心配することなく使用できるフォントの数は限られています。これらはいわゆる<strong>ウェブセーフフォント </strong>(web safe fonts) です。</p>
+フォントの入手可能性と言えば、すべてのシステムで一般的に利用でき、したがってそれほど心配することなく使用できるフォントの数は限られています。これらはいわゆる**ウェブセーフフォント** (web safe fonts) です。
 
-<p>ほとんどの場合、ウェブ開発者は、テキストコンテンツの表示に使用されるフォントをより具体的に制御したいと考えています。 問題は、ウェブページを見るために使用されているコンピュータでどのフォントが利用可能かを知る方法を見つけることです。 あらゆる場合にこれを知る方法はありませんが、ウェブセーフフォントは最も使用されているオペレーティングシステム（Windows、Mac、最も一般的な Linux ディストリビューション、Android、および iOS）のほぼすべての実例で使用可能です。</p>
+ほとんどの場合、ウェブ開発者は、テキストコンテンツの表示に使用されるフォントをより具体的に制御したいと考えています。 問題は、ウェブページを見るために使用されているコンピュータでどのフォントが利用可能かを知る方法を見つけることです。 あらゆる場合にこれを知る方法はありませんが、ウェブセーフフォントは最も使用されているオペレーティングシステム（Windows、Mac、最も一般的な Linux ディストリビューション、Android、および iOS）のほぼすべての実例で使用可能です。
 
-<p>実際のウェブセーフフォントのリストは、オペレーティングシステムが進化するにつれて変わりますが、少なくとも現時点では次のフォントをウェブセーフと見なすことをお勧めします（それらの多くは90年代後半から2000年代初頭にかけての Microsoft の <a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">Core fonts for the Web</a> の先鞭のおかげで普及しました）。</p>
+実際のウェブセーフフォントのリストは、オペレーティングシステムが進化するにつれて変わりますが、少なくとも現時点では次のフォントをウェブセーフと見なすことをお勧めします（それらの多くは 90 年代後半から 2000 年代初頭にかけての Microsoft の [Core fonts for the Web](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web) の先鞭のおかげで普及しました）。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">名前</th>
-   <th scope="col" style="white-space: nowrap;">総称タイプ</th>
-   <th scope="col">注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Arial</td>
-   <td>sans-serif</td>
-   <td><em>Arial</em> に好ましい代替として <em>Helvetica</em> を追加するのがベストプラクティスと考えられることがよくあります。 それらのフォントフェースはほぼ同じですが、<em>Arial</em> の方が広く入手可能であっても <em>Helvetica</em> はより良い形状をしていると考えられます。</td>
-  </tr>
-  <tr>
-   <td>Courier New</td>
-   <td>monospace</td>
-   <td>いくつかの OS は <em>Courier</em> と呼ばれる <em>Courier New</em> フォントの代替（おそらく古い）バージョンを持っています。 <em>Courier New</em> と一緒に両方を使用することを推奨します。</td>
-  </tr>
-  <tr>
-   <td style="white-space: nowrap;">Georgia</td>
-   <td>serif</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td style="white-space: nowrap;">Times New Roman</td>
-   <td>serif</td>
-   <td>いくつかの OS は <em>Times</em> と呼ばれる <em>Times New Roman</em> フォントの代替（おそらく古い）バージョンを持っています。 <em>Times New Roman</em> と一緒に両方を使用することを推奨します。</td>
-  </tr>
-  <tr>
-   <td>Trebuchet MS</td>
-   <td>sans-serif</td>
-   <td>このフォントの使用には注意が必要です — モバイル OS では広く使用されていません。</td>
-  </tr>
-  <tr>
-   <td>Verdana</td>
-   <td>sans-serif</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 名前            | 総称タイプ | 注                                                                                                                                                                                                                                            |
+| --------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Arial           | sans-serif | _Arial_ に好ましい代替として _Helvetica_ を追加するのがベストプラクティスと考えられることがよくあります。 それらのフォントフェースはほぼ同じですが、_Arial_ の方が広く入手可能であっても _Helvetica_ はより良い形状をしていると考えられます。 |
+| Courier New     | monospace  | いくつかの OS は _Courier_ と呼ばれる _Courier New_ フォントの代替（おそらく古い）バージョンを持っています。 _Courier New_ と一緒に両方を使用することを推奨します。                                                                           |
+| Georgia         | serif      |                                                                                                                                                                                                                                               |
+| Times New Roman | serif      | いくつかの OS は _Times_ と呼ばれる _Times New Roman_ フォントの代替（おそらく古い）バージョンを持っています。 _Times New Roman_ と一緒に両方を使用することを推奨します。                                                                     |
+| Trebuchet MS    | sans-serif | このフォントの使用には注意が必要です — モバイル OS では広く使用されていません。                                                                                                                                                               |
+| Verdana         | sans-serif |                                                                                                                                                                                                                                               |
 
-<div class="note">
-<p><strong>注</strong>: さまざまなリソースの中で、<a href="http://www.cssfontstack.com/">cssfontstack.com</a> ウェブサイトには、Windows および macOS オペレーティングシステムで利用可能なウェブセーフフォントのリストがあり、使用しても安全と見なせるものについて判断を下すことができます。</p>
-</div>
+> **Note:** **注**: さまざまなリソースの中で、[cssfontstack.com](http://www.cssfontstack.com/) ウェブサイトには、Windows および macOS オペレーティングシステムで利用可能なウェブセーフフォントのリストがあり、使用しても安全と見なせるものについて判断を下すことができます。
 
-<div class="note">
-<p><strong>注</strong>: ウェブページとともにカスタムフォントをダウンロードして、フォントの使用方法を自由にカスタマイズできる方法があります。 それは、<strong>ウェブフォント</strong>（web fonts）です。 これはもう少し複雑で、このモジュールの後の別の記事でこれを議論するでしょう。</p>
-</div>
+> **Note:** **注**: ウェブページとともにカスタムフォントをダウンロードして、フォントの使用方法を自由にカスタマイズできる方法があります。 それは、**ウェブフォント**（web fonts）です。 これはもう少し複雑で、このモジュールの後の別の記事でこれを議論するでしょう。
 
-<h4 id="Default_fonts" name="Default_fonts">デフォルトフォント</h4>
+#### デフォルトフォント
 
-<p>CSS はフォントの5つの総称名を定義しています: セリフ（<code>serif</code>）、サンセリフ（<code>sans-serif</code>）、等幅（<code>monospace</code>）、筆記体（<code>cursive</code>）、ファンタジー（<code>fantasy</code>）。 これらは非常に一般的なものであり、それらの総称名を使用するときに使用される正確なフォントは各ブラウザー次第であり、それらが実行されているオペレーティングシステムごとに異なります。 これは、ブラウザーが最低限適切なフォントを提供するように最善を尽くそうとする場合の<em>最悪のシナリオ</em>を表します。 <code>serif</code>、<code>sans-serif</code>、および <code>monospace</code> はかなり予測可能であり、妥当なものを提供するはずです。 その一方で、<code>cursive</code> や <code>fantasy</code> はそれほど予測できないので、慎重に使用してテストすることをお勧めします。</p>
+CSS はフォントの 5 つの総称名を定義しています: セリフ（`serif`）、サンセリフ（`sans-serif`）、等幅（`monospace`）、筆記体（`cursive`）、ファンタジー（`fantasy`）。 これらは非常に一般的なものであり、それらの総称名を使用するときに使用される正確なフォントは各ブラウザー次第であり、それらが実行されているオペレーティングシステムごとに異なります。 これは、ブラウザーが最低限適切なフォントを提供するように最善を尽くそうとする場合の*最悪のシナリオ*を表します。 `serif`、`sans-serif`、および `monospace` はかなり予測可能であり、妥当なものを提供するはずです。 その一方で、`cursive` や `fantasy` はそれほど予測できないので、慎重に使用してテストすることをお勧めします。
 
-<p>5つの名前は次のように定義されています。</p>
+5 つの名前は次のように定義されています。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">用語</th>
-   <th scope="col">定義</th>
-   <th scope="col">例</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>serif</code></td>
-   <td>セリフ（いくつかの書体のストロークの終わりに見られる隆起やその他の細部）を持つフォントです。</td>
-   <td><span style="font-family: serif;">My big red elephant</span></td>
-  </tr>
-  <tr>
-   <td><code>sans-serif</code></td>
-   <td>セリフがないフォントです。</td>
-   <td><span style="font-family: sans-serif;">My big red elephant</span></td>
-  </tr>
-  <tr>
-   <td><code>monospace</code></td>
-   <td>すべての文字が同じ幅を持つフォントで、通常はコードリストで使用されます。</td>
-   <td><span style="font-family: monospace;">My big red elephant</span></td>
-  </tr>
-  <tr>
-   <td><code>cursive</code></td>
-   <td>流れるような連続したストロークで、手書き文字を模倣することを目的としたフォントです。</td>
-   <td><span style="font-family: cursive;">My big red elephant</span></td>
-  </tr>
-  <tr>
-   <td><code>fantasy</code></td>
-   <td>装飾的なフォントです。</td>
-   <td><span style="font-family: fantasy;">My big red elephant</span></td>
-  </tr>
- </tbody>
-</table>
+| 用語         | 定義                                                                                         | 例                  |
+| ------------ | -------------------------------------------------------------------------------------------- | ------------------- |
+| `serif`      | セリフ（いくつかの書体のストロークの終わりに見られる隆起やその他の細部）を持つフォントです。 | My big red elephant |
+| `sans-serif` | セリフがないフォントです。                                                                   | My big red elephant |
+| `monospace`  | すべての文字が同じ幅を持つフォントで、通常はコードリストで使用されます。                     | My big red elephant |
+| `cursive`    | 流れるような連続したストロークで、手書き文字を模倣することを目的としたフォントです。         | My big red elephant |
+| `fantasy`    | 装飾的なフォントです。                                                                       | My big red elephant |
 
-<h4 id="Font_stacks" name="Font_stacks">フォントスタック</h4>
+#### フォントスタック
 
-<p>ウェブページで使用したいフォントの可用性を保証することはできないため（ウェブフォントでさえ何らかの理由で失敗する<em>可能性</em>もあります）、ブラウザーに複数のフォントから選択できるように<strong>フォントスタック</strong>（font stack）を指定できます。 これは単に、次のようにカンマで区切られた複数のフォント名からなる <code>font-family</code> の値です。</p>
+ウェブページで使用したいフォントの可用性を保証することはできないため（ウェブフォントでさえ何らかの理由で失敗する*可能性*もあります）、ブラウザーに複数のフォントから選択できるように**フォントスタック**（font stack）を指定できます。 これは単に、次のようにカンマで区切られた複数のフォント名からなる `font-family` の値です。
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   font-family: "Trebuchet MS", Verdana, sans-serif;
-}</pre>
+}
+```
 
-<p>そのような場合、ブラウザーはリストの先頭から始めて、そのフォントがマシンで利用可能かどうかを確認します。 そうであれば、そのフォントを選択した要素に適用します。 そうでない場合は、次のフォントに移動します。</p>
+そのような場合、ブラウザーはリストの先頭から始めて、そのフォントがマシンで利用可能かどうかを確認します。 そうであれば、そのフォントを選択した要素に適用します。 そうでない場合は、次のフォントに移動します。
 
-<p>リストされているフォントがどれも利用できない場合、ブラウザーが少なくともほぼ適切なものを提供できるように、スタックの最後に適切な総称フォント名を指定することをお勧めします。 この点を強調するために、他のオプションが利用できない場合、段落にはブラウザーのデフォルトの serif フォントを使用します — これは通常は Times New Roman です — これは sans-serif フォントには不適切です！</p>
+リストされているフォントがどれも利用できない場合、ブラウザーが少なくともほぼ適切なものを提供できるように、スタックの最後に適切な総称フォント名を指定することをお勧めします。 この点を強調するために、他のオプションが利用できない場合、段落にはブラウザーのデフォルトの serif フォントを使用します — これは通常は Times New Roman です — これは sans-serif フォントには不適切です！
 
-<div class="note">
-<p><strong>注</strong>: <code>Trebuchet MS</code> のように、複数の単語を含むフォント名は <code>"Trebuchet MS"</code> のように引用符で囲む必要があります。</p>
-</div>
+> **Note:** **注**: `Trebuchet MS` のように、複数の単語を含むフォント名は `"Trebuchet MS"` のように引用符で囲む必要があります。
 
-<h4 id="A_font-family_example" name="A_font-family_example">font-family の例</h4>
+#### font-family の例
 
-<p>前の例に追加して、次のように段落に sans-serif フォントを付けます。</p>
+前の例に追加して、次のように段落に sans-serif フォントを付けます。
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
-}</pre>
+}
+```
 
-<p>これにより、次のような結果が得られます。</p>
+これにより、次のような結果が得られます。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+```html hidden
+<h1>Tommy the cat</h1>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;</pre>
-</div>
+occasion such as this that he did.</p>
+```
 
-<p>{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}</p>
+{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}
 
-<h3 id="Font_size" name="Font_size">フォントサイズ</h3>
+### フォントサイズ
 
-<p>前のモジュールの <a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS の値と単位</a>の記事で、<a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">長さとサイズの単位</a>を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および<a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages">パーセント</a>などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。</p>
+前のモジュールの [CSS の値と単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)の記事で、[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および[パーセント](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。
 
-<ul>
- <li><code>px</code> (pixels): テキストを表示したい高さのピクセル数。 これは絶対的な単位です — それはほとんどどんな状況でもページ上のフォントの同じ最終的な計算値になります。</li>
- <li><code>em</code>: <code>1em</code> は、現在装飾している要素の親要素に設定されているフォントサイズ（より具体的には、親要素の内側に含まれる大文字の M の幅）に等しくなります。 フォントサイズの異なるネストされた要素が多数設定されている場合には厄介な作業になるかもしれませんが、以下に示すように、それは実行可能です。 なぜわざわざそうする？ 慣れると非常に自然になり、テキストだけでなく、<code>em</code> を使用してすべてのサイズを変更できます。 ウェブサイト全体を <code>em</code> を使用してサイズ設定することができ、これにより、メンテナンスが簡単になります。</li>
- <li><code>rem</code>: これらは <code>em</code> とまったく同じように機能しますが、<code>1rem</code> が親要素ではなく文書のルート要素に設定されたフォントサイズ（つまり {{htmlelement("html")}}）に等しい点が異なります。 これにより、フォントサイズを簡単に計算することができますが、残念ながら Internet Explorer 8 以下では <code>rem</code> はサポートされていません。 プロジェクトで古いブラウザーをサポートする必要がある場合は、<code>em</code> や <code>px</code> を使用するか、<a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a> などの{{glossary("polyfill","ポリフィル")}}を使用することができます。</li>
-</ul>
+- `px` (pixels): テキストを表示したい高さのピクセル数。 これは絶対的な単位です — それはほとんどどんな状況でもページ上のフォントの同じ最終的な計算値になります。
+- `em`: `1em` は、現在装飾している要素の親要素に設定されているフォントサイズ（より具体的には、親要素の内側に含まれる大文字の M の幅）に等しくなります。 フォントサイズの異なるネストされた要素が多数設定されている場合には厄介な作業になるかもしれませんが、以下に示すように、それは実行可能です。 なぜわざわざそうする？ 慣れると非常に自然になり、テキストだけでなく、`em` を使用してすべてのサイズを変更できます。 ウェブサイト全体を `em` を使用してサイズ設定することができ、これにより、メンテナンスが簡単になります。
+- `rem`: これらは `em` とまったく同じように機能しますが、`1rem` が親要素ではなく文書のルート要素に設定されたフォントサイズ（つまり {{htmlelement("html")}}）に等しい点が異なります。 これにより、フォントサイズを簡単に計算することができますが、残念ながら Internet Explorer 8 以下では `rem` はサポートされていません。 プロジェクトで古いブラウザーをサポートする必要がある場合は、`em` や `px` を使用するか、[REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill) などの{{glossary("polyfill","ポリフィル")}}を使用することができます。
 
-<p>要素の <code>font-size</code> は、その要素の親要素から継承されます。 これはすべてドキュメント全体のルート要素 — {{htmlelement("html")}} — で始まり、<code>font-size</code> はブラウザー間で標準で <code>16px</code> に設定されています。 ルート要素内の段落（またはブラウザーによって設定された異なるサイズを持たない他の要素）は、最終サイズが <code>16px</code> になります。 他の要素はデフォルトサイズが異なる場合があります。 例えば、{{htmlelement("h1")}} 要素のサイズはデフォルトで <code>2em</code> に設定されているため、最終的なサイズは <code>32px</code> になります。</p>
+要素の `font-size` は、その要素の親要素から継承されます。 これはすべてドキュメント全体のルート要素 — {{htmlelement("html")}} — で始まり、`font-size` はブラウザー間で標準で `16px` に設定されています。 ルート要素内の段落（またはブラウザーによって設定された異なるサイズを持たない他の要素）は、最終サイズが `16px` になります。 他の要素はデフォルトサイズが異なる場合があります。 例えば、{{htmlelement("h1")}} 要素のサイズはデフォルトで `2em` に設定されているため、最終的なサイズは `32px` になります。
 
-<p>入れ子になった要素のフォントサイズを変更し始めると、物事はより複雑になります。 例えば、ページに {{htmlelement("article")}} 要素があり、その <code>font-size</code> を <code>1.5em</code>（これは計算すると <code>24px</code> の最終的なサイズになります）に設定し、次に <code>&lt;article&gt;</code> 要素内の段落に <code>20px</code> で計算したフォントサイズを使用するようにしたい場合に、あなたは何 <code>em</code> の値を使用しますか？</p>
+入れ子になった要素のフォントサイズを変更し始めると、物事はより複雑になります。 例えば、ページに {{htmlelement("article")}} 要素があり、その `font-size` を `1.5em`（これは計算すると `24px` の最終的なサイズになります）に設定し、次に `<article>` 要素内の段落に `20px` で計算したフォントサイズを使用するようにしたい場合に、あなたは何 `em` の値を使用しますか？
 
-<pre class="brush: html notranslate">&lt;!-- ドキュメントのベースフォントサイズは 16px です --&gt;
-&lt;article&gt; &lt;!-- ここのフォントサイズが 1.5em の場合 --&gt;
-  &lt;p&gt;My paragraph&lt;/p&gt; &lt;!-- 20px のフォントサイズにするにはどう計算しますか？ --&gt;
-&lt;/article&gt;</pre>
+```html
+<!-- ドキュメントのベースフォントサイズは 16px です -->
+<article> <!-- ここのフォントサイズが 1.5em の場合 -->
+  <p>My paragraph</p> <!-- 20px のフォントサイズにするにはどう計算しますか？ -->
+</article>
+```
 
-<p>その <code>em</code> 値を 20 / 24 、つまり <code>0.83333333em</code> に設定する必要があります。 数学は複雑になる可能性があるため、装飾方法には注意が必要です。 可能な限り <code>rem</code> を使用して、物事を単純にし、可能な限りコンテナ要素のフォントサイズを設定しないようにするのが最善です。</p>
+その `em` 値を 20 / 24 、つまり `0.83333333em` に設定する必要があります。 数学は複雑になる可能性があるため、装飾方法には注意が必要です。 可能な限り `rem` を使用して、物事を単純にし、可能な限りコンテナ要素のフォントサイズを設定しないようにするのが最善です。
 
-<h4 id="A_simple_sizing_example" name="A_simple_sizing_example">簡単なサイズ設定の例</h4>
+#### 簡単なサイズ設定の例
 
-<p>テキストのサイズを変更するときは、通常、ドキュメントのベース <code>font-size</code> を <code>10px</code> に設定することをお勧めします。 そうすれば、数学の計算がはるかに簡単になります — その場合、必要な <code>(r)em</code> 値は、16 ではなく、10 で割ったピクセルフォントサイズです。 これで、ドキュメント内のさまざまな種類のテキストのサイズを簡単に変更できます。 スタイルシートの指定された領域にすべての <code>font-size</code> の規則セットをリストすることをお勧めします。 そうすれば、それらは簡単に見つけられます。</p>
+テキストのサイズを変更するときは、通常、ドキュメントのベース `font-size` を `10px` に設定することをお勧めします。 そうすれば、数学の計算がはるかに簡単になります — その場合、必要な `(r)em` 値は、16 ではなく、10 で割ったピクセルフォントサイズです。 これで、ドキュメント内のさまざまな種類のテキストのサイズを簡単に変更できます。 スタイルシートの指定された領域にすべての `font-size` の規則セットをリストすることをお勧めします。 そうすれば、それらは簡単に見つけられます。
 
-<p>新しい結果はこんな感じです。</p>
+新しい結果はこんな感じです。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+```html hidden
+<h1>Tommy the cat</h1>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;
-</pre>
-</div>
+occasion such as this that he did.</p>
+```
 
-<pre class="brush: css notranslate">html {
+```css
+html {
   font-size: 10px;
 }
 
@@ -304,68 +229,62 @@ p {
   font-size: 1.4rem;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('A_simple_sizing_example', '100%', 220) }}</p>
+{{ EmbedLiveSample('A_simple_sizing_example', '100%', 220) }}
 
-<h3 id="Font_style_font_weight_text_transform_and_text_decoration" name="Font_style_font_weight_text_transform_and_text_decoration">フォントスタイル、フォントの太さ、テキスト変換、テキスト飾り</h3>
+### フォントスタイル、フォントの太さ、テキスト変換、テキスト飾り
 
-<p>CSS は、テキストの視覚的な太さや強調を変更するために次の4つの共通のプロパティを提供します。</p>
+CSS は、テキストの視覚的な太さや強調を変更するために次の 4 つの共通のプロパティを提供します。
 
-<ul>
- <li>{{cssxref("font-style")}}: イタリック体テキストのオンとオフを切り替えるために使用されます。 可能な値は次のとおりです（何らかの理由でイタリック装飾をオフにしたい場合を除いて、これを使用することはめったにありません）。
-  <ul>
-   <li><code>normal</code>: テキストを通常のフォントに設定します（既存のイタリック体をオフにします）。</li>
-   <li><code>italic</code>: 利用できる場合は、<em>イタリック体版のフォント</em>を使用するようにテキストを設定します。 利用できない場合は、代わりに <code>oblique</code> でイタリック体をシミュレートします。</li>
-   <li><code>oblique</code>: <span style="font-style: oblique;">通常版を斜め​​にして</span>作成された、イタリック体フォントのシミュレート版を使用するようにテキストを設定します。</li>
-  </ul>
- </li>
- <li>{{cssxref("font-weight")}}: テキストの太さを設定します。 利用可能なフォントのバリエーションが多数ある場合（<em>-light</em>、<em>-normal</em>、<em>-bold</em>、<em>-extrabold</em>、<em>-black</em> など）、これには多くの値がありますが、現実的には <code>normal</code> と <code>bold</code> 以外のものを使用することはほとんどありません。
-  <ul>
-   <li><code>normal</code>, <code>bold</code>: 標準および<strong style="font-weight: bold;">太字</strong>のフォントの太さ。</li>
-   <li><code>lighter</code>, <code>bolder</code>: 現在の要素の太さを、親要素の太さよりも1段階細くまたは太くします。</li>
-   <li><code>100</code>～<code>900</code>: 必要に応じて、上記のキーワードよりもきめ細かい制御を提供する太さの数値。</li>
-  </ul>
- </li>
- <li>{{cssxref("text-transform")}}: フォントを変換するように設定できます。 値は次のとおりです。
-  <ul>
-   <li><code>none</code>: 変換を禁止します。</li>
-   <li><code>uppercase</code>: すべてのテキストを大文字（<span style="text-transform: uppercase;">all text to capitals</span>）に変換します。</li>
-   <li><code>lowercase</code>: すべてのテキストを小文字（<span style="text-transform: lowercase;">ALL TEXT TO LOWER CASE</span>）に変換します。</li>
-   <li><code>capitalize</code>: すべての単語を最初の文字を大文字にする（<span style="text-transform: capitalize;">have the first letter capitalized</span>）ように変換します。</li>
-   <li><code>full-width</code>: 例えば、ラテン文字を（中国語、日本語、韓国語など）アジア言語のグリフと一緒に揃えて、等幅フォントのように、固定幅の四角形の中にすべてのグリフを書く（<span style="text-transform: full-width;">written inside a fixed-width square</span>）ように変換します。</li>
-  </ul>
- </li>
- <li>{{cssxref("text-decoration")}}: フォントのテキスト飾りを設定/設定解除します（主にリンクのデフォルトの下線を解除するために使用します）。 使用可能な値は次のとおりです。</li>
- <li>
-  <ul>
-   <li><code>none</code>: 既に存在するテキスト飾りをすべて解除します。</li>
-   <li><code>underline</code>: <u>テキストに下線を引きます</u>。</li>
-   <li><code>overline</code>: <span style="text-decoration: overline;">テキストに上線を付けます</span>。</li>
-   <li><code>line-through</code>: <s style="text-decoration: line-through;">テキストの上に取り消し線を引きます</s>。</li>
-  </ul>
-  複数の飾りを同時に追加したい場合は、<span style="text-decoration: underline overline;"><code>text-decoration: underline overline</code></span> のように、{{cssxref("text-decoration")}} は一度に複数の値を受け入れることができます。 また、{{cssxref("text-decoration")}} は、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-style")}}、および {{cssxref("text-decoration-color")}} の一括指定プロパティです。 例えば、<span style="text-decoration: line-through red wavy;"><code>text-decoration: line-through red wavy</code></span> のように、これらのプロパティ値の組み合わせを使用して、興味深い効果を生み出すことができます。</li>
-</ul>
+- {{cssxref("font-style")}}: イタリック体テキストのオンとオフを切り替えるために使用されます。 可能な値は次のとおりです（何らかの理由でイタリック装飾をオフにしたい場合を除いて、これを使用することはめったにありません）。
 
-<p>例にこれらのプロパティをいくつか追加してみましょう。</p>
+  - `normal`: テキストを通常のフォントに設定します（既存のイタリック体をオフにします）。
+  - `italic`: 利用できる場合は、*イタリック体版のフォント*を使用するようにテキストを設定します。 利用できない場合は、代わりに `oblique` でイタリック体をシミュレートします。
+  - `oblique`: 通常版を斜め ​​ にして作成された、イタリック体フォントのシミュレート版を使用するようにテキストを設定します。
 
-<p>新しい結果はこんな感じです。</p>
+- {{cssxref("font-weight")}}: テキストの太さを設定します。 利用可能なフォントのバリエーションが多数ある場合（_-light_、_-normal_、_-bold_、_-extrabold_、_-black_ など）、これには多くの値がありますが、現実的には `normal` と `bold` 以外のものを使用することはほとんどありません。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+  - `normal`, `bold`: 標準および**太字**のフォントの太さ。
+  - `lighter`, `bolder`: 現在の要素の太さを、親要素の太さよりも 1 段階細くまたは太くします。
+  - `100`～`900`: 必要に応じて、上記のキーワードよりもきめ細かい制御を提供する太さの数値。
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+- {{cssxref("text-transform")}}: フォントを変換するように設定できます。 値は次のとおりです。
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+  - `none`: 変換を禁止します。
+  - `uppercase`: すべてのテキストを大文字（all text to capitals）に変換します。
+  - `lowercase`: すべてのテキストを小文字（ALL TEXT TO LOWER CASE）に変換します。
+  - `capitalize`: すべての単語を最初の文字を大文字にする（have the first letter capitalized）ように変換します。
+  - `full-width`: 例えば、ラテン文字を（中国語、日本語、韓国語など）アジア言語のグリフと一緒に揃えて、等幅フォントのように、固定幅の四角形の中にすべてのグリフを書く（written inside a fixed-width square）ように変換します。
+
+- {{cssxref("text-decoration")}}: フォントのテキスト飾りを設定/設定解除します（主にリンクのデフォルトの下線を解除するために使用します）。 使用可能な値は次のとおりです。
+- - `none`: 既に存在するテキスト飾りをすべて解除します。
+  - `underline`: **テキストに下線を引きます**。
+  - `overline`: テキストに上線を付けます。
+  - `line-through`: ~~テキストの上に取り消し線を引きます~~。
+
+  複数の飾りを同時に追加したい場合は、`text-decoration: underline overline` のように、{{cssxref("text-decoration")}} は一度に複数の値を受け入れることができます。 また、{{cssxref("text-decoration")}} は、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-style")}}、および {{cssxref("text-decoration-color")}} の一括指定プロパティです。 例えば、`text-decoration: line-through red wavy` のように、これらのプロパティ値の組み合わせを使用して、興味深い効果を生み出すことができます。
+
+例にこれらのプロパティをいくつか追加してみましょう。
+
+新しい結果はこんな感じです。
+
+```html hidden
+<h1>Tommy the cat</h1>
+
+<p>I remember as if it were a meal ago...</p>
+
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;
-</pre>
-</div>
+occasion such as this that he did.</p>
+```
 
-<pre class="brush: css notranslate">html {
+```css
+html {
   font-size: 10px;
 }
 
@@ -382,54 +301,56 @@ p {
   font-size: 1.4rem;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 220) }}</p>
+{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 220) }}
 
-<h3 id="Text_drop_shadows" name="Text_drop_shadows">テキストのドロップシャドウ</h3>
+### テキストのドロップシャドウ
 
-<p>{{cssxref("text-shadow")}} プロパティを使ってテキストにドロップシャドウを付けることができます。 次の例に示すように、これは最大4つの値を取ります。</p>
+{{cssxref("text-shadow")}} プロパティを使ってテキストにドロップシャドウを付けることができます。 次の例に示すように、これは最大 4 つの値を取ります。
 
-<pre class="brush: css notranslate">text-shadow: 4px 4px 5px red;</pre>
+```css
+text-shadow: 4px 4px 5px red;
+```
 
-<p>4つのプロパティは次のとおりです。</p>
+4 つのプロパティは次のとおりです。
 
-<ol>
- <li>元のテキストからの影の水平方向のオフセット — これは、ほとんどの CSS の<a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">長さとサイズの単位</a>を取ることができますが、最も一般的には <code>px</code> を使用します。 この値を含める必要があります。</li>
- <li>元のテキストからの影の垂直方向のオフセット — 基本的に水平方向のオフセットと同じようにふるまいますが、影を左右に移動するのではなく上下に移動する点が異なります。 この値を含める必要があります。</li>
- <li>ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の<a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">長さとサイズの単位</a>を取ることができます。</li>
- <li>影のベースカラー — 任意の <a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS カラー単位</a>を取ります。 含まれていない場合、デフォルトは <code>black</code> です。</li>
-</ol>
+1.  元のテキストからの影の水平方向のオフセット — これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができますが、最も一般的には `px` を使用します。 この値を含める必要があります。
+2.  元のテキストからの影の垂直方向のオフセット — 基本的に水平方向のオフセットと同じようにふるまいますが、影を左右に移動するのではなく上下に移動する点が異なります。 この値を含める必要があります。
+3.  ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
+4.  影のベースカラー — 任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を取ります。 含まれていない場合、デフォルトは `black` です。
 
-<div class="note">
-<p>注: 正のオフセット値は影を右下に移動させますが、<code>-1px -1px</code> のように負のオフセット値を使用して影を左上に移動させることもできます。</p>
-</div>
+> **Note:** 注: 正のオフセット値は影を右下に移動させますが、`-1px -1px` のように負のオフセット値を使用して影を左上に移動させることもできます。
 
-<h4 id="Multiple_shadows" name="Multiple_shadows">複数の影</h4>
+#### 複数の影
 
-<p>複数の影の値をコンマで区切って含めることで、次のように同じテキストに複数の影を付けることができます。</p>
+複数の影の値をコンマで区切って含めることで、次のように同じテキストに複数の影を付けることができます。
 
-<pre class="brush: css notranslate"><code class="language-css"><span class="property token">text-shadow</span><span class="punctuation token">:</span> -<span class="number token">1</span>px -<span class="number token">1</span>px <span class="number token">1</span>px <span class="hexcode token">#aaa</span>,
-             <span class="number token">0</span>px <span class="number token">4</span>px <span class="number token">1</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.5</span><span class="punctuation token">)</span>,
-             <span class="number token">4</span>px <span class="number token">4</span>px <span class="number token">5</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.7</span><span class="punctuation token">)</span>,
-             <span class="number token">0</span>px <span class="number token">0</span>px <span class="number token">7</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.4</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+```css
+text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+```
 
-<p>これを Tommy the cat の例の {{htmlelement("h1")}} 要素に適用すると、結果は次のようになります。</p>
+これを Tommy the cat の例の {{htmlelement("h1")}} 要素に適用すると、結果は次のようになります。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+```html hidden
+<h1>Tommy the cat</h1>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;
-</pre>
+occasion such as this that he did.</p>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-size: 10px;
 }
 
@@ -450,46 +371,43 @@ p {
   font-size: 14px;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
-}</pre>
-</div>
+}
+```
 
-<p>{{ EmbedLiveSample('Multiple_shadows', '100%', 220) }}</p>
+{{ EmbedLiveSample('Multiple_shadows', '100%', 220) }}
 
-<div class="note">
-<p><strong>注</strong>:  Sitepoint の記事 <a href="http://www.sitepoint.com/moonlighting-css-text-shadow/">Moonlighting with CSS text-shadow</a> で、<code>text-shadow</code> の使い方のより興味深い例を見ることができます。</p>
-</div>
+> **Note:** **注**: Sitepoint の記事 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
 
-<h2 id="Text_layout" name="Text_layout">テキストのレイアウト</h2>
+## テキストのレイアウト
 
-<p>基本的なフォントのプロパティ以外の方法で、テキストのレイアウトに影響を与えるために使用できるプロパティを見てみましょう。</p>
+基本的なフォントのプロパティ以外の方法で、テキストのレイアウトに影響を与えるために使用できるプロパティを見てみましょう。
 
-<h3 id="Text_alignment" name="Text_alignment">テキストの配置</h3>
+### テキストの配置
 
-<p>{{cssxref("text-align")}} プロパティは、テキストを含むコンテンツボックス内でのテキストの配置方法を制御するために使用されます。 利用可能な値は次の通りで、通常のワードプロセッサアプリケーションとほとんど同じように機能します。</p>
+{{cssxref("text-align")}} プロパティは、テキストを含むコンテンツボックス内でのテキストの配置方法を制御するために使用されます。 利用可能な値は次の通りで、通常のワードプロセッサアプリケーションとほとんど同じように機能します。
 
-<ul>
- <li><code>left</code>: テキストを左揃えにします。</li>
- <li><code>right</code>: テキストを右揃えにします。</li>
- <li><code>center</code>: テキストを中央揃えにします。</li>
- <li><code>justify</code>: テキストを両端揃えにします。 すべてのテキストのラインが同じ幅になるように、単語の間隔を変えてテキストを広げます。 これは慎重に使用する必要があります — 特に、長い単語が多数含まれている段落に適用すると、ひどく見えます。 もしこれを使うつもりなら、{{cssxref("hyphens")}} のような他の何かを使用して、複数ラインにまたがる長い単語を分割することも考えてください。</li>
-</ul>
+- `left`: テキストを左揃えにします。
+- `right`: テキストを右揃えにします。
+- `center`: テキストを中央揃えにします。
+- `justify`: テキストを両端揃えにします。 すべてのテキストのラインが同じ幅になるように、単語の間隔を変えてテキストを広げます。 これは慎重に使用する必要があります — 特に、長い単語が多数含まれている段落に適用すると、ひどく見えます。 もしこれを使うつもりなら、{{cssxref("hyphens")}} のような他の何かを使用して、複数ラインにまたがる長い単語を分割することも考えてください。
 
-<p>例の {{htmlelement("h1")}} に、<code>text-align: center;</code> を適用した場合、次のようになるでしょう。</p>
+例の {{htmlelement("h1")}} に、`text-align: center;` を適用した場合、次のようになるでしょう。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+```html hidden
+<h1>Tommy the cat</h1>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;
-</pre>
+occasion such as this that he did.</p>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-size: 10px;
 }
 
@@ -511,33 +429,36 @@ p {
   font-size: 1.4rem;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
-}</pre>
-</div>
+}
+```
 
-<p>{{ EmbedLiveSample('Text_alignment', '100%', 220) }}</p>
+{{ EmbedLiveSample('Text_alignment', '100%', 220) }}
 
-<h3 id="Line_height" name="Line_height">ラインの高さ</h3>
+### ラインの高さ
 
-<p>{{cssxref("line-height")}} プロパティはテキストの各ラインの高さを設定します — これはほとんどの<a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">長さとサイズの単位</a>をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます — <code>line-height</code> を得るために {{cssxref("font-size")}} が乗算されます。 本文はラインが離れていると、一般的に見栄えがよく、読みやすくなります。 推奨されるラインの高さは約 1.5 〜 2（ダブルスペース）です。 したがって、テキストのラインをフォントの高さの 1.5 倍に設定するには、次のようにします。</p>
+{{cssxref("line-height")}} プロパティはテキストの各ラインの高さを設定します — これはほとんどの[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます — `line-height` を得るために {{cssxref("font-size")}} が乗算されます。 本文はラインが離れていると、一般的に見栄えがよく、読みやすくなります。 推奨されるラインの高さは約 1.5 〜 2（ダブルスペース）です。 したがって、テキストのラインをフォントの高さの 1.5 倍に設定するには、次のようにします。
 
-<pre class="brush: css notranslate">line-height: 1.5;</pre>
+```css
+line-height: 1.5;
+```
 
-<p>この例の {{htmlelement("p")}} 要素にこれを適用すると、次のようになります。</p>
+この例の {{htmlelement("p")}} 要素にこれを適用すると、次のようになります。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+```html hidden
+<h1>Tommy the cat</h1>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;
-</pre>
+occasion such as this that he did.</p>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-size: 10px;
 }
 
@@ -560,38 +481,41 @@ p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
-}</pre>
-</div>
+}
+```
 
-<p>{{ EmbedLiveSample('Line_height', '100%', 250) }}</p>
+{{ EmbedLiveSample('Line_height', '100%', 250) }}
 
-<h3 id="Letter_and_word_spacing" name="Letter_and_word_spacing">文字と単語の間隔設定</h3>
+### 文字と単語の間隔設定
 
-<p>{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの<a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">長さとサイズの単位</a>を取ることができます。</p>
+{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
 
-<p>例として、この例の {{htmlelement("p")}} 要素の最初のラインに次を適用したとします。</p>
+例として、この例の {{htmlelement("p")}} 要素の最初のラインに次を適用したとします。
 
-<pre class="brush: css notranslate">p::first-line {
+```css
+p::first-line {
   letter-spacing: 2px;
   word-spacing: 4px;
-}</pre>
+}
+```
 
-<p>次のようになります。</p>
+次のようになります。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+```html hidden
+<h1>Tommy the cat</h1>
 
-&lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
+<p>I remember as if it were a meal ago...</p>
 
-&lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
 had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.&lt;/p&gt;
-</pre>
+occasion such as this that he did.</p>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-size: 10px;
 }
 
@@ -619,89 +543,86 @@ p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
-}</pre>
+}
+```
+
+{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 250) }}
+
+### その他の検討に値するプロパティ
+
+上記のプロパティは、ウェブページ上でテキストを装飾する方法のアイデアを与えますが、使うことができるもっと多くのプロパティがあります。 ここでは最も重要なものだけを取り上げたいと思います。 上記の使い方に慣れてきたら、次のことも調べてください。
+
+フォントスタイル
+
+- {{cssxref("font-variant")}}: スモールキャップと通常の代替フォントを切り替えます。
+- {{cssxref("font-kerning")}}: フォントのカーニングオプションのオンとオフを切り替えます。
+- {{cssxref("font-feature-settings")}}: さまざまな [OpenType](https://en.wikipedia.org/wiki/OpenType) フォント機能のオンとオフを切り替えます。
+- {{cssxref("font-variant-alternates")}}: 与えられたフォントフェースのための代替グリフの使用を制御します。
+- {{cssxref("font-variant-caps")}}: 代替大文字グリフの使用を制御します。
+- {{cssxref("font-variant-east-asian")}}: 日本語や中国語など、東アジアの文字の代替グリフの使用方法を制御します。
+- {{cssxref("font-variant-ligatures")}}:テキストで使用される合字と文脈形式を制御します。
+- {{cssxref("font-variant-numeric")}}: 数字、分数、および序数記号の代替グリフの使用方法を制御します。
+- {{cssxref("font-variant-position")}}: 上付き文字または下付き文字として配置された、小さいサイズの代替グリフの使用方法を制御します。
+- {{cssxref("font-size-adjust")}}: 実際のフォントサイズとは無関係にフォントの表示サイズを調整します。
+- {{cssxref("font-stretch")}}: 与えられたフォントの可能な代替の伸縮バージョン間で切り替えます。
+- {{cssxref("text-underline-position")}}: `text-decoration-line` プロパティの `underline` 値を使用して設定された下線の位置を指定します。
+- {{cssxref("text-rendering")}}: テキストレンダリングの最適化を試します。
+
+テキストのレイアウトスタイル
+
+- {{cssxref("text-indent")}}: テキスト内容の最初のラインの始まりの前にどれだけの水平スペースを残すべきかを指定します。
+- {{cssxref("text-overflow")}}: 表示されないオーバーフローしたコンテンツがユーザーに通知される方法を定義します。
+- {{cssxref("white-space")}}: 要素内の空白とそれに関連する改行の扱い方を定義します。
+- {{cssxref("word-break")}}: 単語内で改行するかどうかを指定します。
+- {{cssxref("direction")}}: テキストの方向を定義します（これは言語に依存します。 通常、テキストの内容に結び付けられているので、HTML にその部分を処理させる方が良いです）。
+- {{cssxref("hyphens")}}: サポートしている言語のハイフネーションをオンまたはオフにします。
+- {{cssxref("line-break")}}: アジア言語の改行を緩和または強化します。
+- {{cssxref("text-align-last")}}: ブロックの最後のラインまたは強制改行の直前のラインの配置方法を定義します。
+- {{cssxref("text-orientation")}}: ライン内での文字の向きを定義します。
+- {{cssxref("overflow-wrap")}}: オーバーフローを防ぐために、ブラウザーが単語内で改行できるかどうかを指定します。
+- {{cssxref("writing-mode")}}: テキストのラインを水平に配置するか垂直に配置するか、およびそれに続いてラインが流れる方向を定義します。
+
+## フォントの一括指定
+
+多くのフォントプロパティは、一括指定プロパティの {{cssxref("font")}} を介して設定することもできます。 これらは、{{cssxref("font-style")}}、{{cssxref("font-variant")}}、{{cssxref("font-weight")}}、{{cssxref("font-stretch")}}、{{cssxref("font-size")}}、{{cssxref("line-height")}}、{{cssxref("font-family")}} の順に書きます。
+
+これらすべてのプロパティのうち、`font` 一括指定プロパティを使用する場合に必要なのは、`font-size` と `font-family` のみです。
+
+{{cssxref("font-size")}} プロパティと {{cssxref("line-height")}} プロパティの間にスラッシュを入れる必要があります。
+
+完全な例は次のようになります。
+
+```css
+font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+```
+
+## 能動的学習: テキストの装飾で遊ぶ
+
+この能動的学習セッションでは、具体的な演習はありません。 フォントやテキストのレイアウトのプロパティをいくつか試してみて、作成できるものを確認してください！ オフラインの HTML / CSS ファイルを使用してこれを行うか、下記のライブ編集可能な例にコードを入力することができます。
+
+間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。
+
+```html hidden
+<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+  <h2>HTML Input</h2>
+  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <p>Some sample text for your delight</p></textarea>
+
+  <h2>CSS Input</h2>
+  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {
+
+  }</textarea>
+
+  <h2>Output</h2>
+  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div class="controls">
+    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+  </div>
 </div>
+```
 
-<p>{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 250) }}</p>
-
-<h3 id="Other_properties_worth_looking_at" name="Other_properties_worth_looking_at">その他の検討に値するプロパティ</h3>
-
-<p>上記のプロパティは、ウェブページ上でテキストを装飾する方法のアイデアを与えますが、使うことができるもっと多くのプロパティがあります。 ここでは最も重要なものだけを取り上げたいと思います。 上記の使い方に慣れてきたら、次のことも調べてください。</p>
-
-<p>フォントスタイル</p>
-
-<ul>
- <li>{{cssxref("font-variant")}}: スモールキャップと通常の代替フォントを切り替えます。</li>
- <li>{{cssxref("font-kerning")}}: フォントのカーニングオプションのオンとオフを切り替えます。</li>
- <li>{{cssxref("font-feature-settings")}}: さまざまな <a href="https://en.wikipedia.org/wiki/OpenType">OpenType</a> フォント機能のオンとオフを切り替えます。</li>
- <li>{{cssxref("font-variant-alternates")}}: 与えられたフォントフェースのための代替グリフの使用を制御します。</li>
- <li>{{cssxref("font-variant-caps")}}: 代替大文字グリフの使用を制御します。</li>
- <li>{{cssxref("font-variant-east-asian")}}: 日本語や中国語など、東アジアの文字の代替グリフの使用方法を制御します。</li>
- <li>{{cssxref("font-variant-ligatures")}}:テキストで使用される合字と文脈形式を制御します。</li>
- <li>{{cssxref("font-variant-numeric")}}: 数字、分数、および序数記号の代替グリフの使用方法を制御します。</li>
- <li>{{cssxref("font-variant-position")}}: 上付き文字または下付き文字として配置された、小さいサイズの代替グリフの使用方法を制御します。</li>
- <li>{{cssxref("font-size-adjust")}}: 実際のフォントサイズとは無関係にフォントの表示サイズを調整します。</li>
- <li>{{cssxref("font-stretch")}}: 与えられたフォントの可能な代替の伸縮バージョン間で切り替えます。</li>
- <li>{{cssxref("text-underline-position")}}: <code>text-decoration-line</code> プロパティの <code>underline</code> 値を使用して設定された下線の位置を指定します。</li>
- <li>{{cssxref("text-rendering")}}: テキストレンダリングの最適化を試します。</li>
-</ul>
-
-<p>テキストのレイアウトスタイル</p>
-
-<ul>
- <li>{{cssxref("text-indent")}}: テキスト内容の最初のラインの始まりの前にどれだけの水平スペースを残すべきかを指定します。</li>
- <li>{{cssxref("text-overflow")}}: 表示されないオーバーフローしたコンテンツがユーザーに通知される方法を定義します。</li>
- <li>{{cssxref("white-space")}}: 要素内の空白とそれに関連する改行の扱い方を定義します。</li>
- <li>{{cssxref("word-break")}}: 単語内で改行するかどうかを指定します。</li>
- <li>{{cssxref("direction")}}: テキストの方向を定義します（これは言語に依存します。 通常、テキストの内容に結び付けられているので、HTML にその部分を処理させる方が良いです）。</li>
- <li>{{cssxref("hyphens")}}: サポートしている言語のハイフネーションをオンまたはオフにします。</li>
- <li>{{cssxref("line-break")}}: アジア言語の改行を緩和または強化します。</li>
- <li>{{cssxref("text-align-last")}}: ブロックの最後のラインまたは強制改行の直前のラインの配置方法を定義します。</li>
- <li>{{cssxref("text-orientation")}}:  ライン内での文字の向きを定義します。</li>
- <li>{{cssxref("overflow-wrap")}}: オーバーフローを防ぐために、ブラウザーが単語内で改行できるかどうかを指定します。</li>
- <li>{{cssxref("writing-mode")}}: テキストのラインを水平に配置するか垂直に配置するか、およびそれに続いてラインが流れる方向を定義します。</li>
-</ul>
-
-<h2 id="Font_shorthand" name="Font_shorthand">フォントの一括指定</h2>
-
-<p>多くのフォントプロパティは、一括指定プロパティの {{cssxref("font")}} を介して設定することもできます。 これらは、{{cssxref("font-style")}}、{{cssxref("font-variant")}}、{{cssxref("font-weight")}}、{{cssxref("font-stretch")}}、{{cssxref("font-size")}}、{{cssxref("line-height")}}、{{cssxref("font-family")}} の順に書きます。</p>
-
-<p>これらすべてのプロパティのうち、<code>font</code> 一括指定プロパティを使用する場合に必要なのは、<code>font-size</code> と <code>font-family</code> のみです。</p>
-
-<p>{{cssxref("font-size")}} プロパティと {{cssxref("line-height")}} プロパティの間にスラッシュを入れる必要があります。</p>
-
-<p>完全な例は次のようになります。</p>
-
-<pre class="brush: css notranslate">font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;</pre>
-
-<h2 id="Active_learning_Playing_with_styling_text" name="Active_learning_Playing_with_styling_text">能動的学習: テキストの装飾で遊ぶ</h2>
-
-<p>この能動的学習セッションでは、具体的な演習はありません。 フォントやテキストのレイアウトのプロパティをいくつか試してみて、作成できるものを確認してください！ オフラインの HTML / CSS ファイルを使用してこれを行うか、下記のライブ編集可能な例にコードを入力することができます。</p>
-
-<p>間違えた場合は、<em>Reset</em> ボタンを使用していつでもリセットできます。</p>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
-  &lt;h2&gt;HTML Input&lt;/h2&gt;
-  &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;
-  &lt;p&gt;Some sample text for your delight&lt;/p&gt;&lt;/textarea&gt;
-
-  &lt;h2&gt;CSS Input&lt;/h2&gt;
-  &lt;textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;p {
-
-  }&lt;/textarea&gt;
-
-  &lt;h2&gt;Output&lt;/h2&gt;
-  &lt;div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;/div&gt;
-  &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: js notranslate">var htmlInput = document.querySelector(".html-input");
+```js hidden
+var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -726,23 +647,20 @@ reset.addEventListener("click", function() {
 htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 800) }}
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p>この記事のテキストで遊んで楽しんでくださいね！ 次の記事では、HTML リストの装飾について知っておくべきことをすべて説明します。</p>
+この記事のテキストで遊んで楽しんでくださいね！ 次の記事では、HTML リストの装飾について知っておくべきことをすべて説明します。
 
-<p>{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}</p>
+{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール内の文書</h2>
+## このモジュール内の文書
 
-<ul>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">基本的なテキストとフォントの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_lists">リストの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_links">リンクの装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_text/Web_fonts">ウェブフォント</a></li>
- <li><a href="/ja/Learn/CSS/Styling_text/Typesetting_a_homepage">コミュニティスクールのホームページの組版</a></li>
-</ul>
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
+- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
+- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
+- [コミュニティスクールのホームページの組版](/ja/Learn/CSS/Styling_text/Typesetting_a_homepage)

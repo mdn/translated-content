@@ -14,88 +14,63 @@ tags:
 translation_of: Learn/CSS/Building_blocks/A_cool_looking_box
 original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
-<div>{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}</div>
+この評価では、人目を引くボックスを作成しようとすることで、かっこいいボックスを作成する方法をさらに習得できます。
 
-<p class="summary"><span class="seoSummary">この評価では、人目を引くボックスを作成しようとすることで、かっこいいボックスを作成する方法をさらに習得できます。</span></p>
+| 前提知識: | この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。             |
+| --------- | ------------------------------------------------------------------------------------ |
+| 学習目標: | CSS ボックスモデルと、境界線や背景などの他のボックス関連機能の理解をテストすること。 |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習目標:</th>
-   <td>CSS ボックスモデルと、境界線や背景などの他のボックス関連機能の理解をテストすること。</td>
-  </tr>
- </tbody>
-</table>
+## 出発点
 
-<h2 id="Starting_point" name="Starting_point">出発点</h2>
+この評価を開始するには、次のことが必要です。
 
-<p>この評価を開始するには、次のことが必要です。</p>
+- [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリに保存します。
 
-<ul>
- <li><a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html">HTML</a> と <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css">CSS</a> のローカルコピーを作成します — それらを <code>index.html</code> と <code>style.css</code> として新しいディレクトリに保存します。</li>
-</ul>
+> **Note:** **注**: あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
-<div class="note">
-<p><strong>注</strong>: あるいは、<a class="external external-icon" href="https://jsbin.com/">JSBin</a> や <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の <code>&lt;style&gt;</code>  要素に自由に配置してください。</p>
-</div>
+## プロジェクトの概要
 
-<h2 id="Project_brief" name="Project_brief">プロジェクトの概要</h2>
+あなたの仕事は、かっこよくて装飾的な箱を作り、私たちが CSS で持つことができる楽しみを探ることです。
 
-<p>あなたの仕事は、かっこよくて装飾的な箱を作り、私たちが CSS で持つことができる楽しみを探ることです。</p>
+### 一般的なタスク
 
-<h3 id="General_tasks" name="General_tasks">一般的なタスク</h3>
+- CSS を HTML に適用します。
 
-<ul>
- <li>CSS を HTML に適用します。</li>
-</ul>
+### ボックスの装飾
 
-<h3 id="Styling_the_box" name="Styling_the_box">ボックスの装飾</h3>
+提供された {{htmlelement("p")}} に次のように装飾を設定してください。
 
-<p>提供された {{htmlelement("p")}} に次のように装飾を設定してください。</p>
+- およそ 200 ピクセルくらいの、大きなボタンに適した幅。
+- 過程でテキストを垂直方向に中央揃えする、大きなボタンに適した高さ。
+- 中央揃えのテキスト。
+- フォントサイズがわずかに増加し、計算したスタイルはおおよそ 17 から 18 ピクセルになりました。 rem を使用してください。 どのように値を導いたかについてのコメントを書いてください。
+- デザインの基本色。 この色を背景色としてボックスに付けます。
+- テキストの色は同じで、黒いテキストの影を使って読みやすくします。
+- かなり微妙な境界線の半径。
+- 基本色に似た色で、やや暗い色合いの 1 ピクセルの実線の境界線。
+- 右下隅に向かう半透明の黒の線形グラデーション。 最初は完全に透明にし、それに沿って 30% ずつ不透明度を約 0.2 に段階的に調整し、最後まで同じ色のままにします。
+- 複数のボックスの影。 ボックスがページから少し浮き上がって見えるようにするには、標準のボックスの影を 1 つ指定します。 他の 2 つは、ボックスの内側の影であるべきです — 左上近くの半透明の白い影と右下近くの半透明の黒い影 — ボックスの素敵な浮いた 3D の外観に追加する。
 
-<ul>
- <li>およそ 200 ピクセルくらいの、大きなボタンに適した幅。</li>
- <li>過程でテキストを垂直方向に中央揃えする、大きなボタンに適した高さ。</li>
- <li>中央揃えのテキスト。</li>
- <li>フォントサイズがわずかに増加し、計算したスタイルはおおよそ 17 から 18 ピクセルになりました。 rem を使用してください。 どのように値を導いたかについてのコメントを書いてください。</li>
- <li>デザインの基本色。 この色を背景色としてボックスに付けます。</li>
- <li>テキストの色は同じで、黒いテキストの影を使って読みやすくします。</li>
- <li>かなり微妙な境界線の半径。</li>
- <li>基本色に似た色で、やや暗い色合いの1ピクセルの実線の境界線。</li>
- <li>右下隅に向かう半透明の黒の線形グラデーション。 最初は完全に透明にし、それに沿って 30% ずつ不透明度を約 0.2 に段階的に調整し、最後まで同じ色のままにします。</li>
- <li>複数のボックスの影。 ボックスがページから少し浮き上がって見えるようにするには、標準のボックスの影を1つ指定します。 他の2つは、ボックスの内側の影であるべきです — 左上近くの半透明の白い影と右下近くの半透明の黒い影 — ボックスの素敵な浮いた3Dの外観に追加する。</li>
-</ul>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+次のスクリーンショットは、完成したデザインがどのように見えるかの例を示しています。
 
-<p>次のスクリーンショットは、完成したデザインがどのように見えるかの例を示しています。</p>
+![](https://mdn.mozillademos.org/files/13148/fancy-box.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13148/fancy-box.png" style="display: block; height: 76px; margin: 0px auto; width: 228px;"></p>
+## 評価
 
-<h2 id="Assessment" name="Assessment">評価</h2>
+組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/a-cool-looking-box-assessment/24685)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
 
-<p>組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、<a href="https://discourse.mozilla.org/t/a-cool-looking-box-assessment/24685">この演習についてのディスカッションスレッド</a>や <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> の <a href="irc://irc.mozilla.org/mdn">#mdn</a> IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！</p>
+{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
-<p>{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}</p>
+## このモジュール内の文書
 
-<p> </p>
-
-<h2 id="In_this_module" name="In_this_module">このモジュール内の文書</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/CSS/Styling_boxes/Box_model_recap">ボックスモデルの復習</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_boxes/Backgrounds">背景</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_boxes/Borders">境界線</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_boxes/Styling_tables">表の装飾</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects">ボックスの高度なエフェクト</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper">装飾的なレターヘッド付きの便箋の作成</a></li>
- <li><a href="/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box">かっこいいボックス</a></li>
-</ul>
-
-<p> </p>
+- [ボックスモデルの復習](/ja/docs/Learn/CSS/Styling_boxes/Box_model_recap)
+- [背景](/ja/docs/Learn/CSS/Styling_boxes/Backgrounds)
+- [境界線](/ja/docs/Learn/CSS/Styling_boxes/Borders)
+- [表の装飾](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)
+- [ボックスの高度なエフェクト](/ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
+- [装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
+- [かっこいいボックス](/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)

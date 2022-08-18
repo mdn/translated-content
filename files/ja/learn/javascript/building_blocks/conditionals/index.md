@@ -12,116 +12,112 @@ tags:
   - conditions
   - else
   - if
-  - 'l10n:priority'
+  - l10n:priority
   - ternary
 translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
-<div>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</div>
+どのプログラミング言語でも、コードは様々な入力に応じた決定を迫られ、その結果として動作を起こします。例えば、ゲームではプレイヤーの残機が 0 になった場合、ゲームオーバーとなります。天気アプリは朝に起動された場合は日の出の画像を表示し、夜に起動された場合は星や月の画像を表示します。この記事では、JavaScript において、条件文と呼ばれるものがどのように動作するかを説明します。
 
-<p class="summary">どのプログラミング言語でも、コードは様々な入力に応じた決定を迫られ、その結果として動作を起こします。例えば、ゲームではプレイヤーの残機が 0 になった場合、ゲームオーバーとなります。天気アプリは朝に起動された場合は日の出の画像を表示し、夜に起動された場合は星や月の画像を表示します。この記事では、JavaScript において、条件文と呼ばれるものがどのように動作するかを説明します。</p>
+| 前提条件: | 基本的なコンピューターの知識および HTML と CSS への理解、[JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)。 |
+| --------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | JavaScript における条件分岐構造をどのように使用するかを理解する。                                                       |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターの知識および HTML と CSS への理解、<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>JavaScript における条件分岐構造をどのように使用するかを理解する。</td>
-  </tr>
- </tbody>
-</table>
+## すべては条件次第..
 
-<h2 id="You_can_have_it_on_one_condition..!" name="You_can_have_it_on_one_condition..!">すべては条件次第..</h2>
+人類 (と他の動物たち)は 小さいもの (「クッキーを 1 つ食べるべきか、2 つ食べるべきか...。」) から大きいもの (「故郷に残って親父の農場を継ぐべきか、アメリカで宇宙物理学を学ぶべきか...。」) まで、生活に関わるすべての決定を下します。
 
-<p>人類 (と他の動物たち)は 小さいもの (「クッキーを 1 つ食べるべきか、2 つ食べるべきか...。」) から大きいもの (「故郷に残って親父の農場を継ぐべきか、アメリカで宇宙物理学を学ぶべきか...。」) まで、生活に関わるすべての決定を下します。</p>
+JavaScript では、条件文を使ってそのような決定を下すことが可能です。条件文は、選ばなければならない選択肢 (例えば「クッキーを 1 つまたは 2 つ食べる」) からそれを選んだ場合の結果を導き出します (おそらく「1 つクッキーを食べる」を選んだら、「まだちょっとお腹が空いている」という結果となるでしょうし、「2 つクッキーを食べる」を選んだら「お腹いっぱい。だけどクッキーを全部食べてママに怒られる」という結果となってしまうでしょう。)
 
-<p>JavaScript では、条件文を使ってそのような決定を下すことが可能です。条件文は、選ばなければならない選択肢 (例えば「クッキーを 1 つまたは 2 つ食べる」) からそれを選んだ場合の結果を導き出します (おそらく「1 つクッキーを食べる」を選んだら、「まだちょっとお腹が空いている」という結果となるでしょうし、「2 つクッキーを食べる」を選んだら「お腹いっぱい。だけどクッキーを全部食べてママに怒られる」という結果となってしまうでしょう。)</p>
+![](https://mdn.mozillademos.org/files/13703/cookie-choice-small.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png" style="display: block; margin: 0px auto;"></p>
+## if ... else ステートメント
 
-<h2 id="if_..._else_statements" name="if_..._else_statements">if ... else ステートメント</h2>
+それでは、JavaScript で最もよく使われる条件文から始めましょう。それは [`if ... else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)[ ステートメント](/ja/docs/Web/JavaScript/Reference/Statements/if...else)です。
 
-<p>それでは、JavaScript で最もよく使われる条件文から始めましょう。それは <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/ja/docs/Web/JavaScript/Reference/Statements/if...else"> ステートメント</a>です。</p>
+### if ... else の基本的な構文
 
-<h3 id="Basic_if_..._else_syntax" name="Basic_if_..._else_syntax">if ... else の基本的な構文</h3>
+`if...else` の基本的な構文は以下の{{glossary("pseudocode", "擬似コード")}}のようになっています。
 
-<p><code>if...else</code> の基本的な構文は以下の{{glossary("pseudocode", "擬似コード")}}のようになっています。</p>
-
-<pre class="notranslate">if (条件式) {
+```
+if (条件式) {
   条件式が true の場合に実行されるコード
 } else {
   それ以外の場合に実行されるコード
-}</pre>
+}
+```
 
-<p>ここでは...</p>
+ここでは...
 
-<ol>
- <li><code>if</code> キーワードの後ろに括弧が並んでいます。</li>
- <li>判断に用いる条件式はその括弧の中にあります (たいていの場合は「この値はもう一方より大きい」や、「この値は存在する」などです)。この条件には、前回のモジュールで習った<a href="/ja/Learn/JavaScript/First_steps/Math#Comparison_operators">比較演算子</a>を使用し、<code>true</code> または <code>false</code> を返します。</li>
- <li>中にコードが書いてある (実際のコードはどんなものでも構いません) 中括弧のペアは、条件式が <code>true</code> の場合に実行されます。</li>
- <li>続いて <code>else</code> キーワードがあります。</li>
- <li>さらに他のコードが書いてある (こちらもどんなコードでも構いません) 中括弧のペアは条件式が <code>true</code> ではない場合に実行されます。</li>
-</ol>
+1.  `if` キーワードの後ろに括弧が並んでいます。
+2.  判断に用いる条件式はその括弧の中にあります (たいていの場合は「この値はもう一方より大きい」や、「この値は存在する」などです)。この条件には、前回のモジュールで習った[比較演算子](/ja/Learn/JavaScript/First_steps/Math#Comparison_operators)を使用し、`true` または `false` を返します。
+3.  中にコードが書いてある (実際のコードはどんなものでも構いません) 中括弧のペアは、条件式が `true` の場合に実行されます。
+4.  続いて `else` キーワードがあります。
+5.  さらに他のコードが書いてある (こちらもどんなコードでも構いません) 中括弧のペアは条件式が `true` ではない場合に実行されます。
 
-<p>このコードは (英語を使う人には) とても読みやすいものになっています。このコードは「もし ( <strong>if</strong> ) 条件式 ( <strong>condition</strong> ) が <code>true</code> を返したら A のコードを実行し、それ以外ならば ( <strong>else</strong> ) B のコードを実行する」と読めます。</p>
+このコードは (英語を使う人には) とても読みやすいものになっています。このコードは「もし ( **if** ) 条件式 ( **condition** ) が `true` を返したら A のコードを実行し、それ以外ならば ( **else** ) B のコードを実行する」と読めます。
 
-<p><code>else</code> とそれに続く中括弧は必ずしも書く必要がないことを覚えておきましょう。次のコードも全く問題のないコードです。</p>
+`else` とそれに続く中括弧は必ずしも書く必要がないことを覚えておきましょう。次のコードも全く問題のないコードです。
 
-<pre class="notranslate">if (条件式) {
+```
+if (条件式) {
   条件式が true の場合に実行されるコード
 }
 
-普通に実行されるコード</pre>
+普通に実行されるコード
+```
 
-<p>ここで注意しておかなければならないことがあります。それは 2 つ目のコードブロックは、条件分岐の管理下になく、条件式が <code>true</code> か <code>false</code> かに関係なく、<strong>常に</strong>実行されることです。これはまったく悪いことではないのですが、条件に応じてどちらか一方のみ動かしたいと思っている場合には、気を付けておかないと思った通りの動作をしないでしょう。</p>
+ここで注意しておかなければならないことがあります。それは 2 つ目のコードブロックは、条件分岐の管理下になく、条件式が `true` か `false` かに関係なく、**常に**実行されることです。これはまったく悪いことではないのですが、条件に応じてどちらか一方のみ動かしたいと思っている場合には、気を付けておかないと思った通りの動作をしないでしょう。
 
-<p>最後の確認点として、<code>if...else</code> ステートメントが中括弧なしで書かれているのを見ることがあります。以下のような省略した書き方です。</p>
+最後の確認点として、`if...else` ステートメントが中括弧なしで書かれているのを見ることがあります。以下のような省略した書き方です。
 
-<pre class="notranslate">if (条件式) 条件式が true の場合に実行されるコード
-else それ以外の場合に実行されるコード</pre>
+```
+if (条件式) 条件式が true の場合に実行されるコード
+else それ以外の場合に実行されるコード
+```
 
-<p>これは正常なコードですが、あまり推奨されません。中括弧でコードブロックを分割して、複数の行とインデントを使って書いたほうが読みやすく、コードがどうなっているかを把握しやすいためです。</p>
+これは正常なコードですが、あまり推奨されません。中括弧でコードブロックを分割して、複数の行とインデントを使って書いたほうが読みやすく、コードがどうなっているかを把握しやすいためです。
 
-<h3 id="A_real_example" name="A_real_example">実際の例</h3>
+### 実際の例
 
-<p>構文をもっとよく理解するため、実際の例を考えてみましょう。例えば両親にお使いを頼まれた子供を想像してください。「欲しがってたおもちゃがあるよね。お使いを頼まれてくれたら、お小遣いを追加であげるよ。」と親が頼みます。JavaScript では以下のようなコードで表現できます。</p>
+構文をもっとよく理解するため、実際の例を考えてみましょう。例えば両親にお使いを頼まれた子供を想像してください。「欲しがってたおもちゃがあるよね。お使いを頼まれてくれたら、お小遣いを追加であげるよ。」と親が頼みます。JavaScript では以下のようなコードで表現できます。
 
-<pre class="brush: js notranslate">let shoppingDone = false;
+```js
+let shoppingDone = false;
 
 if (shoppingDone === true) {
   let childsAllowance = 10;
 } else {
   let childsAllowance = 5;
-}</pre>
+}
+```
 
-<p>このコードは常に <code>shoppingDone</code> 変数が <code>false</code> なので、かわいそうな子供は追加のお小遣いを受け取れません。両親が子供がお使いを完了した場合に <code>shoppingDone</code> 変数を <code>true</code> にセットしてあげるかどうかはプログラム次第です (つまり私たち次第です。)</p>
+このコードは常に `shoppingDone` 変数が `false` なので、かわいそうな子供は追加のお小遣いを受け取れません。両親が子供がお使いを完了した場合に `shoppingDone` 変数を `true` にセットしてあげるかどうかはプログラム次第です (つまり私たち次第です。)
 
-<div class="note">
-<p><strong>注</strong>: <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">GitHub で上記のコードの完全なバージョン</a>が公開されています (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">ライブ実行</a>でも確認できます。)</p>
-</div>
+> **Note:** **注**: [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。)
 
-<h3 id="else_if" name="else_if">else if</h3>
+### else if
 
-<p>先ほどの例では実行結果は 2 つだけでしたが、もっと選択肢がある場合はどうでしょうか？</p>
+先ほどの例では実行結果は 2 つだけでしたが、もっと選択肢がある場合はどうでしょうか？
 
-<p><code>else if</code> を使って、追加の選択肢を <code>if...else</code> に繋ぐ方法があります。追加の選択肢は <code>if() { ... }</code> と <code>else { ... }</code> の間に、コードブロックを続けて追加する必要があります。具体的な例として、天気予報のアプリケーションの一部を見てみましょう。</p>
+`else if` を使って、追加の選択肢を `if...else` に繋ぐ方法があります。追加の選択肢は `if() { ... }` と `else { ... }` の間に、コードブロックを続けて追加する必要があります。具体的な例として、天気予報のアプリケーションの一部を見てみましょう。
 
-<pre class="brush: html notranslate">&lt;label for="weather"&gt;今日の天気を選択してください: &lt;/label&gt;
-&lt;select id="weather"&gt;
-  &lt;option value=""&gt;--選択してください--&lt;/option&gt;
-  &lt;option value="sunny"&gt;晴れ&lt;/option&gt;
-  &lt;option value="rainy"&gt;雨&lt;/option&gt;
-  &lt;option value="snowing"&gt;雪&lt;/option&gt;
-  &lt;option value="overcast"&gt;曇り&lt;/option&gt;
-&lt;/select&gt;
+```html
+<label for="weather">今日の天気を選択してください: </label>
+<select id="weather">
+  <option value="">--選択してください--</option>
+  <option value="sunny">晴れ</option>
+  <option value="rainy">雨</option>
+  <option value="snowing">雪</option>
+  <option value="overcast">曇り</option>
+</select>
 
-&lt;p&gt;&lt;/p&gt;</pre>
+<p></p>
+```
 
-<pre class="brush: js notranslate">const select = document.querySelector('select');
+```js
+const select = document.querySelector('select');
 const para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
@@ -141,132 +137,140 @@ function setWeather() {
     para.textContent = '';
   }
 }
+```
 
-</pre>
+{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-<p>{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+1.  HTML に、天気を選ぶことが可能な {{htmlelement("select")}} 要素があり、1 つの段落がありますね。
+2.  JavaScript では、{{htmlelement("select")}} と {{htmlelement("p")}} の各要素について、参照を取得して保持し、`<select>` 要素にはイベントリスナーを設定しています。もし、要素の値が変わったら `setWeather()` 関数が動きます。
+3.  この関数が実行されると、まずは `choice` という変数に、`<select>` 要素の現在選択されている値を入れます。そして、条件文を使い、`choice` の値に応じた文字列が段落に設定されます。最初の `if() {...}` のブロックを除いて、どのように `else if() {...}` のブロックで判定しているか注目してください。
+4.  一番下の `else {...}` 選択肢は、「最後の手段」となるオプションで、この中のコードは、どの条件にも一致しなかった場合 (`true` とならなかった場合) に実行されます。今回の場合選択されていない場合に、段落を空にしています。何も選択されていない場合というのは、ユーザーが再度最初に表示されていた「--選択してください--」というオプションを選んだ場合です。
 
-<ol>
- <li>HTML に、天気を選ぶことが可能な {{htmlelement("select")}} 要素があり、1 つの段落がありますね。</li>
- <li>JavaScript では、{{htmlelement("select")}} と {{htmlelement("p")}} の各要素について、参照を取得して保持し、<code>&lt;select&gt;</code> 要素にはイベントリスナーを設定しています。もし、要素の値が変わったら <code>setWeather()</code> 関数が動きます。</li>
- <li>この関数が実行されると、まずは <code>choice</code> という変数に、<code>&lt;select&gt;</code> 要素の現在選択されている値を入れます。そして、条件文を使い、<code>choice</code> の値に応じた文字列が段落に設定されます。最初の <code>if() {...}</code> のブロックを除いて、どのように <code>else if() {...}</code> のブロックで判定しているか注目してください。</li>
- <li>一番下の <code>else {...}</code> 選択肢は、「最後の手段」となるオプションで、この中のコードは、どの条件にも一致しなかった場合 (<code>true</code> とならなかった場合) に実行されます。今回の場合選択されていない場合に、段落を空にしています。何も選択されていない場合というのは、ユーザーが再度最初に表示されていた「--選択してください--」というオプションを選んだ場合です。</li>
-</ol>
+> **Note:** **注**: [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。)
 
-<div class="note">
-<p><strong>注</strong>: <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">GitHub で上記のコードの完全なバージョン</a>が公開されています (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">ライブ実行</a>でも確認できます。)</p>
-</div>
+### 比較演算子に関するメモ
 
-<h3 id="A_note_on_comparison_operators" name="A_note_on_comparison_operators">比較演算子に関するメモ</h3>
+比較演算子は条件文の中で使われます。[JavaScript での数学入門 — 数値と演算子について](/ja/Learn/JavaScript/First_steps/Math#Comparison_operators)で初めて出てきましたね。演算子には以下のようなものがありました。
 
-<p>比較演算子は条件文の中で使われます。<a href="/ja/Learn/JavaScript/First_steps/Math#Comparison_operators">JavaScript での数学入門 — 数値と演算子について</a>で初めて出てきましたね。演算子には以下のようなものがありました。</p>
+- `===` と `!==` は、ある値がもう一方の値と等しいか、もしくは等しくないかを判定します。
+- `<` と `>` は、ある値がもう一方の値より大きいか、より小さいかを判定します。
+- `<=` と `>=` は、ある値がもう一方の値以上か、以下かを判定します。
 
-<ul>
- <li><code>===</code> と <code>!==</code> は、ある値がもう一方の値と等しいか、もしくは等しくないかを判定します。</li>
- <li><code>&lt;</code> と <code>&gt;</code> は、ある値がもう一方の値より大きいか、より小さいかを判定します。</li>
- <li><code>&lt;=</code> と <code>&gt;=</code> は、ある値がもう一方の値以上か、以下かを判定します。</li>
-</ul>
+> **Note:** **注**: もし記憶があいまいならば、上記のリンク先を見て復習しましょう。
 
-<div class="note">
-<p><strong>注</strong>: もし記憶があいまいならば、上記のリンク先を見て復習しましょう。</p>
-</div>
+真偽 (`true`/`false`) の値を判定する場合には少しの配慮が必要であることを付け加えさせてください。おそらく何度か躓くであろう、よくあるパターンです。`false`、`undefined`、`null`、`0`、`NaN`、空文字列 (`''`) 以外の値は条件文で使った場合に `true` となります。ですから、その値が `true` であるか判定したい場合や、その値が存在するか (例えば、`undefined` ではないこと) 判定したい場合は単に変数名を使用するだけです。
 
-<p>真偽 (<code>true</code>/<code>false</code>) の値を判定する場合には少しの配慮が必要であることを付け加えさせてください。おそらく何度か躓くであろう、よくあるパターンです。<code>false</code>、<code>undefined</code>、<code>null</code>、<code>0</code>、<code>NaN</code>、空文字列 (<code>''</code>) 以外の値は条件文で使った場合に <code>true</code> となります。ですから、その値が <code>true</code> であるか判定したい場合や、その値が存在するか (例えば、<code>undefined</code> ではないこと) 判定したい場合は単に変数名を使用するだけです。</p>
-
-<pre class="brush: js notranslate">let cheese = 'チェダー';
+```js
+let cheese = 'チェダー';
 
 if (cheese) {
   console.log('やった！チーズトーストを作るチーズがあるよ。');
 } else {
   console.log('今日はチーズトーストのチーズがないよ。');
-}</pre>
+}
+```
 
-<p>先ほどの子供のお使いの例に戻ると、以下のようにも書くことができます。</p>
+先ほどの子供のお使いの例に戻ると、以下のようにも書くことができます。
 
-<pre class="brush: js notranslate">let shoppingDone = false;
+```js
+let shoppingDone = false;
 
 if (shoppingDone) { // '=== true' を明示的に指定する必要はありません
   let childsAllowance = 10;
 } else {
   let childsAllowance = 5;
-}</pre>
+}
+```
 
-<h3 id="Nesting_if_..._else" name="Nesting_if_..._else">入れ子の if ... else</h3>
+### 入れ子の if ... else
 
-<p><code>if...else</code> ステートメントを入れ子にして、他の <code>if...else</code> ステートメントの中で使用することは全く問題ありません。例えば、天気予報アプリケーションで気温に応じて表示する内容を切り替えたい場合以下のように書くことができます。</p>
+`if...else` ステートメントを入れ子にして、他の `if...else` ステートメントの中で使用することは全く問題ありません。例えば、天気予報アプリケーションで気温に応じて表示する内容を切り替えたい場合以下のように書くことができます。
 
-<pre class="brush: js notranslate">if (choice === 'sunny') {
-  if (temperature &lt; 86) {
+```js
+if (choice === 'sunny') {
+  if (temperature < 86) {
     para.textContent = '外の気温は ' + temperature + ' 度です — とてもいい天気です。海水浴や、公園に出かけてアイスクリームを食べましょう';
-  } else if (temperature &gt;= 86) {
+  } else if (temperature >= 86) {
     para.textContent = '外の気温は ' + temperature + ' 度です — かなり暑いです！外出する場合にはアイスクリームを持って出かけましょう。';
   }
-}</pre>
+}
+```
 
-<p>内側の <code>if...else</code> ステートメントは、外側の <code>if</code> ステートメントとは完全に独立して作用します。</p>
+内側の `if...else` ステートメントは、外側の `if` ステートメントとは完全に独立して作用します。
 
-<h3 id="Logical_operators_AND_OR_and_NOT" name="Logical_operators_AND_OR_and_NOT">論理演算子: AND と OR と NOT</h3>
+### 論理演算子: AND と OR と NOT
 
-<p>複数の条件を入れ子の <code>if...else</code> ステートメントを書かずに判定したいなら、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators">論理演算子</a>の出番です。条件文の中で使用する場合、AND と OR は以下の作用をもたらすでしょう。</p>
+複数の条件を入れ子の `if...else` ステートメントを書かずに判定したいなら、[論理演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators)の出番です。条件文の中で使用する場合、AND と OR は以下の作用をもたらすでしょう。
 
-<ul>
- <li><code>&amp;&amp;</code> — AND は 2 つ以上の式を一つに繋げ、それぞれの式を個別に評価して、すべて <code>true</code> になった場合、その式全体が <code>true</code> として返します。</li>
- <li><code>||</code> — OR は 2 つ以上の式を 1 つに繋げ、それぞれの式を個別に評価し、最初に <code>true</code> になったところで、その式全体を <code>true</code> として返します。</li>
-</ul>
+- `&&` — AND は 2 つ以上の式を一つに繋げ、それぞれの式を個別に評価して、すべて `true` になった場合、その式全体が `true` として返します。
+- `||` — OR は 2 つ以上の式を 1 つに繋げ、それぞれの式を個別に評価し、最初に `true` になったところで、その式全体を `true` として返します。
 
-<p>AND の例を示すため、先ほどのコードを書き直すと以下のようになります。</p>
+AND の例を示すため、先ほどのコードを書き直すと以下のようになります。
 
-<pre class="brush: js notranslate">if (choice === 'sunny' &amp;&amp; temperature &lt; 86) {
+```js
+if (choice === 'sunny' && temperature < 86) {
   para.textContent = '外の気温は ' + temperature + ' 度です — とてもいい天気です。海水浴や、公園に出かけてアイスクリームを食べましょう';
-} else if (choice === 'sunny' &amp;&amp; temperature &gt;= 86) {
+} else if (choice === 'sunny' && temperature >= 86) {
   para.textContent = '外の気温は ' + temperature + ' 度です — かなり暑いです！外出する場合にはアイスクリームを持って出かけましょう。';
-}</pre>
+}
+```
 
-<p>例では、最初のブロックは <code>choice === 'sunny'</code> <em>と</em> <code>temperature &lt; 86</code> のどちらも <code>true</code> となった場合にのみ実行されます。</p>
+例では、最初のブロックは `choice === 'sunny'` _と_ `temperature < 86` のどちらも `true` となった場合にのみ実行されます。
 
-<p>今度は OR の例を見てみましょう。</p>
+今度は OR の例を見てみましょう。
 
-<pre class="brush: js notranslate">if (iceCreamCarOutside || houseStatus === '火事') {
+```js
+if (iceCreamCarOutside || houseStatus === '火事') {
   console.log('すぐに家から出ましょう。');
 } else {
   console.log('それでは家にいましょう。');
-}</pre>
+}
+```
 
-<p>論理演算子の最後は NOT です。<code>!</code> 演算子で表され、式を否定するのに使用します。それでは先ほどの OR と組み合わせてみましょう。</p>
+論理演算子の最後は NOT です。`!` 演算子で表され、式を否定するのに使用します。それでは先ほどの OR と組み合わせてみましょう。
 
-<pre class="brush: js notranslate">if (!(iceCreamVanOutside || houseStatus === '火事')) {
+```js
+if (!(iceCreamVanOutside || houseStatus === '火事')) {
   console.log('それでは家にいましょう。');
 } else {
   console.log('すぐに家から出ましょう。');
-}</pre>
+}
+```
 
-<p>このコード例では、OR ステートメントが <code>true</code> となれば、NOT 演算子がそれを否定します。そのため、式全体は <code>false</code> となります。</p>
+このコード例では、OR ステートメントが `true` となれば、NOT 演算子がそれを否定します。そのため、式全体は `false` となります。
 
-<p>論理ステートメントは思うがままに、いくつでも繋げることが可能です。次の例では両方の OR ステートメントが真を返した場合に AND ステートメントが真となり、<code>if</code> の中のコードが実行されます。</p>
+論理ステートメントは思うがままに、いくつでも繋げることが可能です。次の例では両方の OR ステートメントが真を返した場合に AND ステートメントが真となり、`if` の中のコードが実行されます。
 
-<pre class="brush: js notranslate">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (loggedIn || userName === 'スティーブ')) {
+```js
+if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'スティーブ')) {
   // コードを実行
-}</pre>
+}
+```
 
-<p>論理 OR 演算子を使用するうえでよくある間違いは、判定しようとしている変数を一度だけ書いて、その後に判定したい値を <code>||</code> (OR) 演算子で区切って指定する誤りです。次のような例です。</p>
+論理 OR 演算子を使用するうえでよくある間違いは、判定しようとしている変数を一度だけ書いて、その後に判定したい値を `||` (OR) 演算子で区切って指定する誤りです。次のような例です。
 
-<pre class="example-bad brush: js notranslate">if (x === 5 || 7 || 10 || 20) {
+```js example-bad
+if (x === 5 || 7 || 10 || 20) {
   // コードを実行する
-}</pre>
+}
+```
 
-<p>この場合、<code>if(...)</code>  の条件式は常に真となります。なぜなら 7 (もしくはその他 0 以外の数値) が常に <code>true</code> と評価されるためです。この条件式は「もし x が 5 であるか 7 が真であるならば (7 は常に真です)」となります。これは求めているものではありませんよね！このコードの誤りを修正するためには、OR 演算子の隣に常に完全な条件を書かなければなりません。</p>
+この場合、`if(...)` の条件式は常に真となります。なぜなら 7 (もしくはその他 0 以外の数値) が常に `true` と評価されるためです。この条件式は「もし x が 5 であるか 7 が真であるならば (7 は常に真です)」となります。これは求めているものではありませんよね！このコードの誤りを修正するためには、OR 演算子の隣に常に完全な条件を書かなければなりません。
 
-<pre class="brush: js notranslate">if (x === 5 || x === 7 || x === 10 ||x === 20) {
+```js
+if (x === 5 || x === 7 || x === 10 ||x === 20) {
   // コードを実行する
-}</pre>
+}
+```
 
-<h2 id="switch_statements" name="switch_statements">switch ステートメント</h2>
+## switch ステートメント
 
-<p><code>if...else</code> ステートメントは条件の判定を上手くこなしていましたが、欠点がないわけではありません。いくつかの選択肢しかない場合には申し分ないのですが、AND / OR の条件が複雑になるにつれて (例えば、複数の論理演算子を使ったりする場合など)、相当量のコードを書かなければなりません。ある選択肢に応じて値を変数に設定したり、特定の条件に応じて何かを表示したりするとき、選択肢がたくさんあると、<code>if...else</code> ステートメントを書くのは面倒です。</p>
+`if...else` ステートメントは条件の判定を上手くこなしていましたが、欠点がないわけではありません。いくつかの選択肢しかない場合には申し分ないのですが、AND / OR の条件が複雑になるにつれて (例えば、複数の論理演算子を使ったりする場合など)、相当量のコードを書かなければなりません。ある選択肢に応じて値を変数に設定したり、特定の条件に応じて何かを表示したりするとき、選択肢がたくさんあると、`if...else` ステートメントを書くのは面倒です。
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code> ステートメント</a>はそんなときの味方です。<code>switch</code> ステートメントは一つの式または値を受け取り、それに合致する値が見つかるまで選択肢を探します。そして合致した選択肢に対応するコードを実行します。まずは擬似コードを見て、雰囲気をつかみましょう。</p>
+[`switch` ステートメント](/ja/docs/Web/JavaScript/Reference/Statements/switch)はそんなときの味方です。`switch` ステートメントは一つの式または値を受け取り、それに合致する値が見つかるまで選択肢を探します。そして合致した選択肢に対応するコードを実行します。まずは擬似コードを見て、雰囲気をつかみましょう。
 
-<pre class="notranslate">switch ( 式 ) {
+```
+switch ( 式 ) {
   case 選択肢1:
     このコードを実行する
     break;
@@ -279,40 +283,40 @@ if (shoppingDone) { // '=== true' を明示的に指定する必要はありま�
 
   default:
     既定でこのコードを実行する
-}</pre>
+}
+```
 
-<p>上記のコードには...</p>
+上記のコードには...
 
-<ol>
- <li><code>switch</code> キーワードに続き、一組の括弧があります。</li>
- <li>括弧の中には、式または値があります。</li>
- <li><code>case</code> キーワードに続き、選択肢となる式または値、それにコロン (<code>:</code>) が並んでいます。</li>
- <li>もしその選択肢にマッチすれば、コードが実行されます。</li>
- <li><code>break</code> ステートメントとセミコロン (<code>;</code>) があります。もし前の選択肢にマッチして入ればブラウザーはコードの実行をここでやめ、switch ステートメントの後ろにあるコードに移動します。</li>
- <li><code>case</code> 節 (上記 3. から 5. ) は好きなだけ書くことができます。</li>
- <li>上記 3. から 5.の <code>case</code> 節と全く同じコードパターンで書かれている <code>default</code> キーワードがあります。違いは <code>default</code> の後ろに選択肢が書かれていないことです。また、後ろに続くコードがないので、ここには <code>break</code> ステートメントが必要ありません。もし、選択肢のどれにもマッチするものがない場合に既定のオプションとして実行されます。</li>
-</ol>
+1.  `switch` キーワードに続き、一組の括弧があります。
+2.  括弧の中には、式または値があります。
+3.  `case` キーワードに続き、選択肢となる式または値、それにコロン (`:`) が並んでいます。
+4.  もしその選択肢にマッチすれば、コードが実行されます。
+5.  `break` ステートメントとセミコロン (`;`) があります。もし前の選択肢にマッチして入ればブラウザーはコードの実行をここでやめ、switch ステートメントの後ろにあるコードに移動します。
+6.  `case` 節 (上記 3. から 5. ) は好きなだけ書くことができます。
+7.  上記 3. から 5.の `case` 節と全く同じコードパターンで書かれている `default` キーワードがあります。違いは `default` の後ろに選択肢が書かれていないことです。また、後ろに続くコードがないので、ここには `break` ステートメントが必要ありません。もし、選択肢のどれにもマッチするものがない場合に既定のオプションとして実行されます。
 
-<div class="note">
-<p><strong>注</strong>: 評価する式の値が不明な値にならないのであれば、<code>default</code> 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、<code>default</code> 節を書くことで対応が可能です。</p>
-</div>
+> **Note:** **注**: 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
 
-<h3 id="A_switch_example" name="A_switch_example">switch を使用する例</h3>
+### switch を使用する例
 
-<p>それでは実際の例を見てみましょう。先ほどの天気予報アプリを switch ステートメントを使用して書き直してみました。</p>
+それでは実際の例を見てみましょう。先ほどの天気予報アプリを switch ステートメントを使用して書き直してみました。
 
-<pre class="brush: html notranslate">&lt;label for="weather"&gt;今日の天気を選択してください: &lt;/label&gt;
-&lt;select id="weather"&gt;
-  &lt;option value=""&gt;--選択してください--&lt;/option&gt;
-  &lt;option value="sunny"&gt;晴れ&lt;/option&gt;
-  &lt;option value="rainy"&gt;雨&lt;/option&gt;
-  &lt;option value="snowing"&gt;雪&lt;/option&gt;
-  &lt;option value="overcast"&gt;曇り&lt;/option&gt;
-&lt;/select&gt;
+```html
+<label for="weather">今日の天気を選択してください: </label>
+<select id="weather">
+  <option value="">--選択してください--</option>
+  <option value="sunny">晴れ</option>
+  <option value="rainy">雨</option>
+  <option value="snowing">雪</option>
+  <option value="overcast">曇り</option>
+</select>
 
-&lt;p&gt;&lt;/p&gt;</pre>
+<p></p>
+```
 
-<pre class="brush: js notranslate">const select = document.querySelector('select');
+```js
+const select = document.querySelector('select');
 const para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
@@ -337,39 +341,45 @@ function setWeather() {
     default:
       para.textContent = '';
   }
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-<div class="note">
-<p><strong>注</strong>: <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">このサンプルを GitHub で見る</a>ことができます。(<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">実行可能なデモ</a>もあります。)</p>
-</div>
+> **Note:** **注**: [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html)ことができます。([実行可能なデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。)
 
-<h2 id="Ternary_operator" name="Ternary_operator">三項演算子</h2>
+## 三項演算子
 
-<p>例題に進む前に、ちょっとした構文をご紹介しましょう。<a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">三項演算子 (もしくは条件演算子)</a> は条件式を判定し、その結果に応じて 2 つの値または式のうち、どちらか一方を返します。これはある状況においてはとても便利です。単純に <code>true</code>/<code>false</code> で判定可能な 2 つの選択肢のうちより片方を選ぶという場合には、<code>if...else</code> ブロックを書くよりも多くのコードを節約できます。この擬似コードは以下のようなものになります。</p>
+例題に進む前に、ちょっとした構文をご紹介しましょう。[三項演算子 (もしくは条件演算子)](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) は条件式を判定し、その結果に応じて 2 つの値または式のうち、どちらか一方を返します。これはある状況においてはとても便利です。単純に `true`/`false` で判定可能な 2 つの選択肢のうちより片方を選ぶという場合には、`if...else` ブロックを書くよりも多くのコードを節約できます。この擬似コードは以下のようなものになります。
 
-<pre class="notranslate">( 条件式 ) ? こちらのコードを実行する : 代わりにこちらのコードを実行する</pre>
+```
+( 条件式 ) ? こちらのコードを実行する : 代わりにこちらのコードを実行する
+```
 
-<p>それでは実際に例を見て見ましょう。</p>
+それでは実際に例を見て見ましょう。
 
-<pre class="brush: js notranslate">let greeting = ( isBirthday ) ? 'スミスさん、誕生日おめでとうございます！良い一日を。' : 'スミスさんおはようございます。';</pre>
+```js
+let greeting = ( isBirthday ) ? 'スミスさん、誕生日おめでとうございます！良い一日を。' : 'スミスさんおはようございます。';
+```
 
-<p>この例では <code>isBirthday</code> という変数があり、この変数が <code>true</code> の場合、お客に誕生日を祝福するメッセージを送ります。そうでなければ、通常の挨拶を送ります。</p>
+この例では `isBirthday` という変数があり、この変数が `true` の場合、お客に誕生日を祝福するメッセージを送ります。そうでなければ、通常の挨拶を送ります。
 
-<h3 id="Ternary_operator_example" name="Ternary_operator_example">三項演算子を使用する例</h3>
+### 三項演算子を使用する例
 
-<p>三項演算子を変数の代入にのみ使用する必要はありません。関数や、複数行に渡るコードを実行する場合にも (それ以外にも好きなように) 使用できます。次の例は三項演算子を使用してサイトにテーマを適用しています。</p>
+三項演算子を変数の代入にのみ使用する必要はありません。関数や、複数行に渡るコードを実行する場合にも (それ以外にも好きなように) 使用できます。次の例は三項演算子を使用してサイトにテーマを適用しています。
 
-<pre class="brush: html notranslate">&lt;label for="theme"&gt;テーマを選んでください: &lt;/label&gt;
-&lt;select id="theme"&gt;
-  &lt;option value="white"&gt;白&lt;/option&gt;
-  &lt;option value="black"&gt;黒&lt;/option&gt;
-&lt;/select&gt;
+```html
+<label for="theme">テーマを選んでください: </label>
+<select id="theme">
+  <option value="white">白</option>
+  <option value="black">黒</option>
+</select>
 
-&lt;h1&gt;私のウェブサイト&lt;/h1&gt;</pre>
+<h1>私のウェブサイト</h1>
+```
 
-<pre class="brush: js notranslate">const select = document.querySelector('select');
+```js
+const select = document.querySelector('select');
 const html = document.querySelector('html');
 document.body.style.padding = '10px';
 
@@ -381,74 +391,64 @@ function update(bgColor, textColor) {
 select.onchange = function() {
   ( select.value === 'black' ) ? update('black','white') : update('white','black');
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-<p>上記の例では、テーマ (黒または白) を選択することができる {{htmlelement('select')}} 要素と、サイトのタイトルが書かれた単純な {{htmlelement('h1')}} 要素があります。さらに <code>update()</code> という関数があり、その関数は引数 (入力値) として 2 つの色を取ります。この関数が呼ばれると、ウェブサイトの背景色は 1 つ目の引数に、文字の色は 2 つの目の引数に設定されます。</p>
+上記の例では、テーマ (黒または白) を選択することができる {{htmlelement('select')}} 要素と、サイトのタイトルが書かれた単純な {{htmlelement('h1')}} 要素があります。さらに `update()` という関数があり、その関数は引数 (入力値) として 2 つの色を取ります。この関数が呼ばれると、ウェブサイトの背景色は 1 つ目の引数に、文字の色は 2 つの目の引数に設定されます。
 
-<p>さらに、三項演算子を含む <a href="/ja/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> イベントリスナーがあります。<code>select.value === 'black'</code> という条件式で始まっています。この式が <code>true</code> であるならば、<code>update()</code> 関数を引数に <code>'black'</code>、<code>'white'</code> を指定して実行します (つまり、背景色を黒、文字色を白に設定します)。この式が <code>false</code> であるならば、<code>update()</code> 関数を引数に <code>'white'</code>、<code>'black'</code> を指定して実行します (つまり、背景色を逆にします)。</p>
+さらに、三項演算子を含む [onchange](/ja/docs/Web/API/GlobalEventHandlers/onchange) イベントリスナーがあります。`select.value === 'black'` という条件式で始まっています。この式が `true` であるならば、`update()` 関数を引数に `'black'`、`'white'` を指定して実行します (つまり、背景色を黒、文字色を白に設定します)。この式が `false` であるならば、`update()` 関数を引数に `'white'`、`'black'` を指定して実行します (つまり、背景色を逆にします)。
 
-<div class="note">
-<p><strong>注</strong>: この例は <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">GitHub でも公開しています</a> (または、<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">動くデモ</a>もあります。)</p>
+> **Note:** **注**: この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (または、[動くデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)もあります。)
+
+## アクティブ学習: 単純なカレンダー
+
+この例では、単純なカレンダーアプリケーションの作成を手伝ってもらいます。現在、以下の内容がコードに書かれています。
+
+- ユーザーが月を選択できるように {{htmlelement("select")}} 要素があります。
+- `<select>` メニューの選択内容が変更された場合に、イベントを補足できるように `onchange` イベントハンドラーが設定されています。
+- カレンダーを描画し、{{htmlelement("h1")}} 要素に適切な月を設定する `createCalendar()` と呼ばれる関数があります。
+
+あなたには、`onchange` ハンドラーの内部に条件式を書いてもらいます。`// 条件式をここに書く` というコメントのすぐ下に...
+
+1.  選択されている月を取得します (これは `choice` 変数に格納されています。この値は `<select>` 要素で選択された後の値で、例えば 1 月なら、"1" といった値です。)
+2.  `days` という変数に、選択された月の日数を設定します。そのためには、1 年の各月の日数を調べる必要があるでしょう。うるう年はこの例題の目的から外れるため、無視してください。
+
+ヒント:
+
+- ほとんどの月は日数が同じなので、複数の月を OR 演算子を用いて一つの条件式にまとめるのが良いでしょう。
+- どの月が最も多い日数なのか考えてください。そして、その日数をデフォルト値として使用しましょう。
+
+もし間違ってしまっても、「リセット」ボタンを押すことでいつでも元に戻せます。詰まってしまったら、「答えを見る」ボタンで答えが見られます。
+
+```html hidden
+<h2>出力結果</h2>
+<div class="output" style="height: 500px;overflow: auto;">
+  <label for="month">月を選択してください: </label>
+  <select id="month">
+    <option value="1">1 月</option>
+    <option value="2">2 月</option>
+    <option value="3">3 月</option>
+    <option value="4">4 月</option>
+    <option value="5">5 月</option>
+    <option value="6">6 月</option>
+    <option value="7">7 月</option>
+    <option value="8">8 月</option>
+    <option value="9">9 月</option>
+    <option value="10">10 月</option>
+    <option value="11">11 月</option>
+    <option value="12">12 月</option>
+  </select>
+
+  <h1></h1>
+
+  <ul></ul>
 </div>
 
-<h2 id="Active_learning_A_simple_calendar" name="Active_learning_A_simple_calendar">アクティブ学習: 単純なカレンダー</h2>
+<h2>コードエディタ</h2>
+<p class="a11y-label">コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
 
-<p>この例では、単純なカレンダーアプリケーションの作成を手伝ってもらいます。現在、以下の内容がコードに書かれています。</p>
-
-<ul>
- <li>ユーザーが月を選択できるように {{htmlelement("select")}} 要素があります。</li>
- <li><code>&lt;select&gt;</code> メニューの選択内容が変更された場合に、イベントを補足できるように <code>onchange</code> イベントハンドラーが設定されています。</li>
- <li>カレンダーを描画し、{{htmlelement("h1")}} 要素に適切な月を設定する <code>createCalendar()</code> と呼ばれる関数があります。</li>
-</ul>
-
-<p>あなたには、<code>onchange</code> ハンドラーの内部に条件式を書いてもらいます。<code>// 条件式をここに書く</code> というコメントのすぐ下に...</p>
-
-<ol>
- <li>選択されている月を取得します (これは <code>choice</code> 変数に格納されています。この値は <code>&lt;select&gt;</code> 要素で選択された後の値で、例えば 1 月なら、"1" といった値です。)</li>
- <li><code>days</code> という変数に、選択された月の日数を設定します。そのためには、1年の各月の日数を調べる必要があるでしょう。うるう年はこの例題の目的から外れるため、無視してください。</li>
-</ol>
-
-<p>ヒント:</p>
-
-<ul>
- <li>ほとんどの月は日数が同じなので、複数の月を OR 演算子を用いて一つの条件式にまとめるのが良いでしょう。</li>
- <li>どの月が最も多い日数なのか考えてください。そして、その日数をデフォルト値として使用しましょう。</li>
-</ul>
-
-<p>もし間違ってしまっても、「リセット」ボタンを押すことでいつでも元に戻せます。詰まってしまったら、「答えを見る」ボタンで答えが見られます。</p>
-
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;出力結果&lt;/h2&gt;
-&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
-  &lt;label for="month"&gt;月を選択してください: &lt;/label&gt;
-  &lt;select id="month"&gt;
-    &lt;option value="1"&gt;1 月&lt;/option&gt;
-    &lt;option value="2"&gt;2 月&lt;/option&gt;
-    &lt;option value="3"&gt;3 月&lt;/option&gt;
-    &lt;option value="4"&gt;4 月&lt;/option&gt;
-    &lt;option value="5"&gt;5 月&lt;/option&gt;
-    &lt;option value="6"&gt;6 月&lt;/option&gt;
-    &lt;option value="7"&gt;7 月&lt;/option&gt;
-    &lt;option value="8"&gt;8 月&lt;/option&gt;
-    &lt;option value="9"&gt;9 月&lt;/option&gt;
-    &lt;option value="10"&gt;10 月&lt;/option&gt;
-    &lt;option value="11"&gt;11 月&lt;/option&gt;
-    &lt;option value="12"&gt;12 月&lt;/option&gt;
-  &lt;/select&gt;
-
-  &lt;h1&gt;&lt;/h1&gt;
-
-  &lt;ul&gt;&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;コードエディタ&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 400px;width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const select = document.querySelector('select');
 const list = document.querySelector('ul');
 const h1 = document.querySelector('h1');
@@ -464,7 +464,7 @@ select.onchange = function() {
 function createCalendar(days, choice) {
   list.innerHTML = '';
   h1.textContent = choice;
-  for (let i = 1; i &lt;= days; i++) {
+  for (let i = 1; i <= days; i++) {
     const listItem = document.createElement('li');
     listItem.textContent = i;
     list.appendChild(listItem);
@@ -472,15 +472,16 @@ function createCalendar(days, choice) {
 }
 
 createCalendar(31,'1 月');
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="リセット"&gt;
-  &lt;input id="solution" type="button" value="答えを見る"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="リセット">
+  <input id="solution" type="button" value="答えを見る">
+</div>
+```
 
-<pre class="brush: css notranslate">.output * {
+```css hidden
+.output * {
   box-sizing: border-box;
 }
 
@@ -517,9 +518,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+```js hidden
+const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -548,7 +551,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nlet h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n let choice = select.value;\n let days = 31;\n if(choice === \'2\') {\n days = 28;\n } else if(choice === \'4\' || choice === \'6\' || choice === \'9\'|| choice === \'11\') {\n days = 30;\n }\n\n createCalendar(days, choice + \' 月\');\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i &lt;= days; i++) {\n let listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'1 月\');';
+const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nlet h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n let choice = select.value;\n let days = 31;\n if(choice === \'2\') {\n days = 28;\n } else if(choice === \'4\' || choice === \'6\' || choice === \'9\'|| choice === \'11\') {\n days = 30;\n }\n\n createCalendar(days, choice + \' 月\');\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i <= days; i++) {\n let listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'1 月\');';
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -593,44 +596,40 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
+
+{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}
+
+## アクティブ学習: もっとたくさんの色から選ぶ！
+
+この例では、先ほどの三項演算子の例を switch ステートメントに変換し、単純なウェブサイトに、より多くの選択肢を与えます。{{htmlelement("select")}} 要素を見てください。今回は先ほどの 2 つではなく、5 つの選択肢があります。`// ここに SWITCH ステートメントを書く` というコメントの真下に switch ステートメントを追加してください。
+
+- `choice` 変数を判定する式として使用します。
+- 各ケース (case) で、`choice` 変数は選択可能な値 ('white'、'black'、'purple'、'yellow'、'psychedelic') のうちのどれかです。
+- 各ケース (case) で、`update()` 関数が実行されるようにしてください。関数には 2 つの引数を指定します。1 つ目の引数は背景色、2 つ目の色は前景色です。色は文字列なので、忘れずに引用符で囲みましょう。
+
+もし間違ってしまっても、「リセット」ボタンを押すことでいつでも元に戻せます。詰まってしまったら、「答えを見る」ボタンで答えが見られます。
+
+```html hidden
+<h2>出力結果</h2>
+<div class="output" style="height: 300px;">
+  <label for="theme">テーマを選んでください: </label>
+  <select id="theme">
+    <option value="white">白</option>
+    <option value="black">黒</option>
+    <option value="purple">紫</option>
+    <option value="yellow">黄</option>
+    <option value="psychedelic">サイケ</option>
+  </select>
+
+  <h1>私のウェブサイト</h1>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
+<h2>コードエディタ</h2>
+<p class="a11y-label">コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
 
-<h2 id="Active_learning_More_color_choices!" name="Active_learning_More_color_choices!">アクティブ学習: もっとたくさんの色から選ぶ！</h2>
-
-<p>この例では、先ほどの三項演算子の例を switch ステートメントに変換し、単純なウェブサイトに、より多くの選択肢を与えます。{{htmlelement("select")}} 要素を見てください。今回は先ほどの 2 つではなく、5 つの選択肢があります。<code>// ここに SWITCH ステートメントを書く</code> というコメントの真下に switch ステートメントを追加してください。</p>
-
-<ul>
- <li><code>choice</code> 変数を判定する式として使用します。</li>
- <li>各ケース (case) で、<code>choice</code> 変数は選択可能な値 ('white'、'black'、'purple'、'yellow'、'psychedelic') のうちのどれかです。</li>
- <li>各ケース (case) で、<code>update()</code> 関数が実行されるようにしてください。関数には 2 つの引数を指定します。1 つ目の引数は背景色、2 つ目の色は前景色です。色は文字列なので、忘れずに引用符で囲みましょう。</li>
-</ul>
-
-<p>もし間違ってしまっても、「リセット」ボタンを押すことでいつでも元に戻せます。詰まってしまったら、「答えを見る」ボタンで答えが見られます。</p>
-
-<div class="hidden">
-<h6 id="Playable_code_2" name="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;出力結果&lt;/h2&gt;
-&lt;div class="output" style="height: 300px;"&gt;
-  &lt;label for="theme"&gt;テーマを選んでください: &lt;/label&gt;
-  &lt;select id="theme"&gt;
-    &lt;option value="white"&gt;白&lt;/option&gt;
-    &lt;option value="black"&gt;黒&lt;/option&gt;
-    &lt;option value="purple"&gt;紫&lt;/option&gt;
-    &lt;option value="yellow"&gt;黄&lt;/option&gt;
-    &lt;option value="psychedelic"&gt;サイケ&lt;/option&gt;
-  &lt;/select&gt;
-
-  &lt;h1&gt;私のウェブサイト&lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;コードエディタ&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 450px;width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 450px;width: 95%">
 const select = document.querySelector('select');
 const html = document.querySelector('.output');
 
@@ -643,15 +642,16 @@ select.onchange = function() {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}&lt;/textarea&gt;
+}</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="リセット"&gt;
-  &lt;input id="solution" type="button" value="答えを見る"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="リセット">
+  <input id="solution" type="button" value="答えを見る">
+</div>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -669,9 +669,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+```js hidden
+const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -745,38 +747,34 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="スキルをテストしましょう!">スキルをテストしましょう!</h2>
+## スキルをテストしましょう!
 
-<p>この記事の最後まで来ましたが、最も大事な情報を覚えていますか？先に進む前に、この情報を保持しているか検証するテストがあります — <a href="/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals">Test your skills: Conditionals</a> を見てください。</p>
+この記事の最後まで来ましたが、最も大事な情報を覚えていますか？先に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Conditionals](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals) を見てください。
 
-<h2 id="Conclusion" name="Conclusion">まとめ</h2>
+## まとめ
 
-<p>これで JavaScript での条件構造について今知っておくべきことはすべてです！簡単な例を通してそのコンセプトが理解できたと思います。もし理解できないことがあれば、何度も記事を読み返しましょう。<a href="/ja/Learn#Contact_us">私たちに連絡を</a>しても構いません。</p>
+これで JavaScript での条件構造について今知っておくべきことはすべてです！簡単な例を通してそのコンセプトが理解できたと思います。もし理解できないことがあれば、何度も記事を読み返しましょう。[私たちに連絡を](/ja/Learn#Contact_us)しても構いません。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/Learn/JavaScript/First_steps/Math#Comparison_operators">比較演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements">条件式についての詳細</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/if...else">if...else リファレンス</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件 (三項) 演算子リファレンス</a></li>
-</ul>
+- [比較演算子](/ja/Learn/JavaScript/First_steps/Math#Comparison_operators)
+- [条件式についての詳細](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+- [if...else リファレンス](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
+- [条件 (三項) 演算子リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-<p>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</p>
+{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/conditionals">コードでの意思決定 — 条件文</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Looping_code">ループコード</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions">関数 — 再利用可能なコードブロック</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">独自の関数を作る</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Return_values">関数の戻り値</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの紹介</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery">イメージギャラリー</a></li>
-</ul>
+- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
+- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

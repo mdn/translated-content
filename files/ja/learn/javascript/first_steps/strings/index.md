@@ -10,231 +10,273 @@ tags:
   - Join
   - Quotes
   - concatenation
-  - 'l10n:priority'
+  - l10n:priority
   - strings
 translation_of: Learn/JavaScript/First_steps/Strings
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</div>
+プログラミングでは文字の羅列を文字列と呼びますが、次はこれを学習しましょう。この記事では、JavaScript でよく使われる、文字列を作ったり、引用符をエスケープしたり、文字列を結合したりといった、文字列について本当に知っておくべきことだけを見てみましょう。
 
-<p class="summary">プログラミングでは文字の羅列を文字列と呼びますが、次はこれを学習しましょう。この記事では、JavaScript でよく使われる、文字列を作ったり、引用符をエスケープしたり、文字列を結合したりといった、文字列について本当に知っておくべきことだけを見てみましょう。</p>
+| 前提条件: | 基本的なコンピュータの知識および HTML と CSS への理解、JavaScript とは何かを知っている。 |
+| --------- | ---------------------------------------------------------------------------------------- |
+| 目的:     | JavaScript の文字列操作に慣れる。                                                        |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピュータの知識および HTML と CSS への理解、JavaScript とは何かを知っている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>JavaScript の文字列操作に慣れる。</td>
-  </tr>
- </tbody>
-</table>
+## 言葉の力
 
-<h2 id="The_power_of_words" name="The_power_of_words">言葉の力</h2>
+言葉はコミュニケーションの大部分を担う、人類にとって、とても大切なものです。Web は情報の共有やコミュニケーションができるように設計された大規模な文字ベースの媒体ですので、そこで使用される言葉を操作できると便利です。{{glossary("HTML")}} は意味付けされ、構造化されたテキストを提供し、{{glossary("CSS")}} がきれいに体裁を整える事を可能にし、そして JavaScript には、挨拶用の文章を生成したり、適切なラベルを表示したり、言葉を並べ替えたりといった、文字列を操作するたくさんの機能が含まれています。
 
-<p>言葉はコミュニケーションの大部分を担う、人類にとって、とても大切なものです。Web は情報の共有やコミュニケーションができるように設計された大規模な文字ベースの媒体ですので、そこで使用される言葉を操作できると便利です。{{glossary("HTML")}} は意味付けされ、構造化されたテキストを提供し、{{glossary("CSS")}} がきれいに体裁を整える事を可能にし、そして JavaScript には、挨拶用の文章を生成したり、適切なラベルを表示したり、言葉を並べ替えたりといった、文字列を操作するたくさんの機能が含まれています。</p>
+今までこのコースでお見せしたプログラムのほとんどが、何らかの文字列操作を含んでいましたね。
 
-<p>今までこのコースでお見せしたプログラムのほとんどが、何らかの文字列操作を含んでいましたね。</p>
+## 文字列 — 基本
 
-<h2 id="Strings_—_the_basics" name="Strings_—_the_basics">文字列 — 基本</h2>
+文字列は一見すると数値と同じように見えますが、少し深く見ていくと、違いに気づくことでしょう。まずは慣らすために基本的なコードを[ブラウザの開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)に入力してみましょう。
 
-<p>文字列は一見すると数値と同じように見えますが、少し深く見ていくと、違いに気づくことでしょう。まずは慣らすために基本的なコードを<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザの開発者ツール</a>に入力してみましょう。</p>
+### 文字列を作る
 
-<h3 id="Creating_a_string" name="Creating_a_string">文字列を作る</h3>
+1.  初めに、次の行を入力してみましょう。
 
-<ol>
- <li>初めに、次の行を入力してみましょう。
-  <pre class="brush: js notranslate">let string = '革命はテレビでは放送されない。';
-string;</pre>
-  数値のところでやったのと同じように、変数を宣言して、値を入れて初期化しています。そして値を返しています。ただ違うのは、文字列が引用符で囲まれて書かれていることです。</li>
- <li>もし引用符で囲わななかったり、どちらか一方を書き忘れたりすると、エラーになります。
-  <pre class="brush: js example-bad notranslate">let badString = これはテストです;
-let badString = 'これはテストです;
-let badString = これはテストです';</pre>
-  これらの行は動きません。なぜなら引用符で文字を囲わなければ、変数名や、プロパティ名や、予約語などと解釈されてしまうためです。もしブラウザが引用符を見つけられないと、エラーとなります (たとえば "missing ; before statement" [文の前に、セミコロンが見つかりません] のようなエラーです)。2行目の例のように、ブラウザが引用符を見つけても、文字列の終わりが示されていなければ、これもエラーとなります ("unterminated string literal" [文字列リテラルの終わりがありません] というエラーです)。このようなエラーがプログラムで起きたら、全ての文字列について、引用符の付け忘れがないかを確認してください。</li>
- <li>続くコードは先ほど変数を <code>string</code> という名前で宣言していれば、動くでしょう。試してみましょう。
-  <pre class="brush: js notranslate">let badString = string;
-badString;</pre>
-  <code>badString</code> という変数に <code>string</code> という変数の値が設定されたことでしょう。</li>
-</ol>
+    ```js
+    let string = '革命はテレビでは放送されない。';
+    string;
+    ```
 
-<h3 id="Single_quotes_vs._double_quotes" name="Single_quotes_vs._double_quotes">シングルクォーテーション vs. ダブルクォーテーション</h3>
+    数値のところでやったのと同じように、変数を宣言して、値を入れて初期化しています。そして値を返しています。ただ違うのは、文字列が引用符で囲まれて書かれていることです。
 
-<ol>
- <li>JavaScript では、文字列を囲む引用符として、シングルクォーテーションとダブルクォーテーションを使用することができます。以下のどちらの例も正しく動きます。
-  <pre class="brush: js notranslate">let sgl = 'シングルクォーテーション';
-let dbl = "ダブルクォーテーション";
-sgl;
-dbl;</pre>
- </li>
- <li>どちらを使ってもほとんど違いはありません。どちらを使うかは好みの問題ですが、どちらを使うかは統一するべきでしょう。両方を同時に使うと混乱してしまいます、特に同じ文字列に二種類の引用符を使ってしまうときなど！次の行はエラーです。
-  <pre class="brush: js example-bad notranslate">let badQuotes = 'なんということだ！";</pre>
- </li>
- <li>ブラウザは上の文字列が閉じていないと認識します。なぜなら、文字列を囲うのに使用していない引用符はその文字列の中に含めることができるからです。たとえば次の例は問題ありません。
-  <pre class="brush: js notranslate">let sglDbl = 'Would you eat a "fish supper"?';
-let dblSgl = "I'm feeling blue.";
-sglDbl;
-dblSgl;</pre>
- </li>
- <li>ただし、文字列の中に、囲んでいるのと同じ種類の引用符を含めることはできません。以下の例は文字列の終わりがわからないので、ブラウザを混乱させてしまいます。
-  <pre class="brush: js example-bad notranslate">let bigmouth = 'I've got no right to take my place...';</pre>
-  それでは同じ種類の引用符を含めるにはどのようにすればよいでしょうか。</li>
-</ol>
+2.  もし引用符で囲わななかったり、どちらか一方を書き忘れたりすると、エラーになります。
 
-<h3 id="Escaping_characters_in_a_string" name="Escaping_characters_in_a_string">文字列をエスケープする</h3>
+    ```js example-bad
+    let badString = これはテストです;
+    let badString = 'これはテストです;
+    let badString = これはテストです';
+    ```
 
-<p>先ほどのコード行を直すには、問題となっている引用符をエスケープする必要があります。文字のエスケープとは、その文字が、コードではなく、文字列の一部であるとブラウザに認識させる書き方です。JavaScript ではバックスラッシュ ( \ [環境によっては円マーク (￥)]) を文字の前におくことでエスケープすることができます。</p>
+    これらの行は動きません。なぜなら引用符で文字を囲わなければ、変数名や、プロパティ名や、予約語などと解釈されてしまうためです。もしブラウザが引用符を見つけられないと、エラーとなります (たとえば "missing ; before statement" \[文の前に、セミコロンが見つかりません] のようなエラーです)。2 行目の例のように、ブラウザが引用符を見つけても、文字列の終わりが示されていなければ、これもエラーとなります ("unterminated string literal" \[文字列リテラルの終わりがありません] というエラーです)。このようなエラーがプログラムで起きたら、全ての文字列について、引用符の付け忘れがないかを確認してください。
 
-<pre class="brush: js notranslate">let bigmouth = 'I\'ve got no right to take my place...';
-bigmouth;</pre>
+3.  続くコードは先ほど変数を `string` という名前で宣言していれば、動くでしょう。試してみましょう。
 
-<p>これでうまく動きます。 同じ方法で他の文字をエスケープする (例えば <code>\"</code>) ことができ、それ以外にも特別なコードがあります。詳細は<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">エスケープ記法</a>を見てください。</p>
+    ```js
+    let badString = string;
+    badString;
+    ```
 
-<h2 id="Concatenating_strings" name="Concatenating_strings">文字列を連結する</h2>
+    `badString` という変数に `string` という変数の値が設定されたことでしょう。
 
-<ol>
- <li>コンカチする (concatenate) という単語は「結合する」ことを表すプログラミングの用語です。JavaScript で文字列を結合するにはプラス (+) 演算子を使用します。数値の加算をするのに使用した演算子ですが、今回は違う動作をします。下の例をコンソールに入力してみてください。
-  <pre class="brush: js notranslate">let one = 'こんにちは、';
-let two = 'ご機嫌いかがでしょう？';
-let joined = one + two;
-joined;</pre>
-  この例の実行結果は <code>joined</code> という変数に格納され、値は "こんにちは、ご機嫌いかがでしょう？" となります。</li>
- <li>今の例は 2 つの文字列だけを結合しましたが、<code>+</code> 演算子が変数と変数の間にあれば、いくつでも結合することができます。例えば、次の例を試しましょう。
-  <pre class="brush: js notranslate">let multiple = one + one + one + one + two;
-multiple;</pre>
- </li>
- <li>変数のほかに、実際の文字列と混ぜて使うこともできます。
-  <pre class="brush: js notranslate">let response = one + '私は元気です。' + two;
-response;</pre>
- </li>
-</ol>
+### シングルクォーテーション vs. ダブルクォーテーション
 
-<div class="note">
-<p><strong>注</strong>: コード中に、シングルクォーテーションおよびダブルクォーテーションで囲われた、実際の文字列を書いたときそれは<strong>文字列リテラル</strong>と呼ばれます。</p>
-</div>
+1.  JavaScript では、文字列を囲む引用符として、シングルクォーテーションとダブルクォーテーションを使用することができます。以下のどちらの例も正しく動きます。
 
-<h3 id="Concatenation_in_context" name="Concatenation_in_context">様々な結合</h3>
+    ```js
+    let sgl = 'シングルクォーテーション';
+    let dbl = "ダブルクォーテーション";
+    sgl;
+    dbl;
+    ```
 
-<p>実際に文字列が結合されている場面を見てみましょう。これはこのコースの最初の方からの例です。</p>
+2.  どちらを使ってもほとんど違いはありません。どちらを使うかは好みの問題ですが、どちらを使うかは統一するべきでしょう。両方を同時に使うと混乱してしまいます、特に同じ文字列に二種類の引用符を使ってしまうときなど！次の行はエラーです。
 
-<pre class="brush: html notranslate">&lt;button&gt;押してみて！&lt;/button&gt;</pre>
+    ```js example-bad
+    let badQuotes = 'なんということだ！";
+    ```
 
-<pre class="brush: js notranslate">let button = document.querySelector('button');
+3.  ブラウザは上の文字列が閉じていないと認識します。なぜなら、文字列を囲うのに使用していない引用符はその文字列の中に含めることができるからです。たとえば次の例は問題ありません。
+
+    ```js
+    let sglDbl = 'Would you eat a "fish supper"?';
+    let dblSgl = "I'm feeling blue.";
+    sglDbl;
+    dblSgl;
+    ```
+
+4.  ただし、文字列の中に、囲んでいるのと同じ種類の引用符を含めることはできません。以下の例は文字列の終わりがわからないので、ブラウザを混乱させてしまいます。
+
+    ```js example-bad
+    let bigmouth = 'I've got no right to take my place...';
+    ```
+
+    それでは同じ種類の引用符を含めるにはどのようにすればよいでしょうか。
+
+### 文字列をエスケープする
+
+先ほどのコード行を直すには、問題となっている引用符をエスケープする必要があります。文字のエスケープとは、その文字が、コードではなく、文字列の一部であるとブラウザに認識させる書き方です。JavaScript ではバックスラッシュ ( \ \[環境によっては円マーク (￥)]) を文字の前におくことでエスケープすることができます。
+
+```js
+let bigmouth = 'I\'ve got no right to take my place...';
+bigmouth;
+```
+
+これでうまく動きます。 同じ方法で他の文字をエスケープする (例えば `\"`) ことができ、それ以外にも特別なコードがあります。詳細は[エスケープ記法](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)を見てください。
+
+## 文字列を連結する
+
+1.  コンカチする (concatenate) という単語は「結合する」ことを表すプログラミングの用語です。JavaScript で文字列を結合するにはプラス (+) 演算子を使用します。数値の加算をするのに使用した演算子ですが、今回は違う動作をします。下の例をコンソールに入力してみてください。
+
+    ```js
+    let one = 'こんにちは、';
+    let two = 'ご機嫌いかがでしょう？';
+    let joined = one + two;
+    joined;
+    ```
+
+    この例の実行結果は `joined` という変数に格納され、値は "こんにちは、ご機嫌いかがでしょう？" となります。
+
+2.  今の例は 2 つの文字列だけを結合しましたが、`+` 演算子が変数と変数の間にあれば、いくつでも結合することができます。例えば、次の例を試しましょう。
+
+    ```js
+    let multiple = one + one + one + one + two;
+    multiple;
+    ```
+
+3.  変数のほかに、実際の文字列と混ぜて使うこともできます。
+
+    ```js
+    let response = one + '私は元気です。' + two;
+    response;
+    ```
+
+> **Note:** **注**: コード中に、シングルクォーテーションおよびダブルクォーテーションで囲われた、実際の文字列を書いたときそれは**文字列リテラル**と呼ばれます。
+
+### 様々な結合
+
+実際に文字列が結合されている場面を見てみましょう。これはこのコースの最初の方からの例です。
+
+```html
+<button>押してみて！</button>
+```
+
+```js
+let button = document.querySelector('button');
 
 button.onclick = function() {
   let name = prompt('あなたの名前は？');
   alert('こんにちは、' + name + 'さん。初めまして！');
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
 
-<p>4行目でユーザに答えてもらうため、{{domxref("Window.prompt()", "Window.prompt()")}}関数を使用して、テキストを入力できるポップアップダイアログを表示し、ユーザによって入力された文字列を <code>name</code> 変数に格納しています。そして、5行目で{{domxref("Window.alert()", "Window.alert()")}}関数を使用し、2 つの文字列リテラルと <code>name</code> 変数を結合して別のポップアップに文字列を作り上げています。</p>
+4 行目でユーザに答えてもらうため、{{domxref("Window.prompt()", "Window.prompt()")}}関数を使用して、テキストを入力できるポップアップダイアログを表示し、ユーザによって入力された文字列を `name` 変数に格納しています。そして、5 行目で{{domxref("Window.alert()", "Window.alert()")}}関数を使用し、2 つの文字列リテラルと `name` 変数を結合して別のポップアップに文字列を作り上げています。
 
-<h3 id="Numbers_vs._strings" name="Numbers_vs._strings">数値 vs. 文字列</h3>
+### 数値 vs. 文字列
 
-<ol>
- <li>それでは文字列と数値を足したら (もしくは結合したら) 何が起きるでしょうか。コンソールに入力してみましょう。
-  <pre class="brush: js notranslate">'フロント' + 242;
-</pre>
-  エラーが起きると予想したかもしれませんが、普通に動きます。文字列を数値として表すのには意味がありませんが、数値を文字で表すのはわかりますね。つまりブラウザはどうやら、数値を文字列に変換し、2 つの文字列としてから結合しているようです。</li>
- <li>数字同士でやっても同じです。数字を引用符で囲むと文字列になります。次の行を実行してみてください。(<code>typeof</code>演算子で変数が文字列なのか数値なのか調べています。)
-  <pre class="brush: js notranslate">let myDate = '19' + '67';
-typeof myDate;</pre>
- </li>
- <li>もし、数値を文字列に変換したかったり、文字列を数値に変換したかったりする場合には、次の 2 つの生成方法を見てください。
-  <ul>
-   <li>{{jsxref("Number")}}オブジェクトは渡されたものすべてを数値に変換します。次の例を実行してみましょう。
-    <pre class="brush: js notranslate">let myString = '123';
-let myNum = Number(myString);
-typeof myNum;</pre>
-   </li>
-   <li>反対に全ての数値は <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> という文字列に変換するメソッドを持っています。
-    <pre class="brush: js notranslate">let myNum = 123;
-let myString = myNum.toString();
-typeof myString;</pre>
-   </li>
-  </ul>
-  この生成方法は状況によってはとても便利です。例えば、ユーザがフォームのテキストフィールドに数字を入力した場合、入力された値は文字列です。しかし、その数字を使って計算したい場合、数値にしなければなりません。そんな時は <code>Number()</code> に任せましょう。これは実際に<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54">数字当てゲームの 54行目</a>で使用した方法です。</li>
-</ol>
+1.  それでは文字列と数値を足したら (もしくは結合したら) 何が起きるでしょうか。コンソールに入力してみましょう。
 
-<h2 id="テンプレートリテラル">テンプレートリテラル</h2>
+    ```js
+    'フロント' + 242;
+    ```
 
-<p>遭遇する可能性のある別のタイプの文字列構文は、<strong>テンプレートリテラル</strong>（テンプレート文字列と呼ばれることもあります）です。 これは、より柔軟で読みやすい文字列を提供する新しい構文です。</p>
+    エラーが起きると予想したかもしれませんが、普通に動きます。文字列を数値として表すのには意味がありませんが、数値を文字で表すのはわかりますね。つまりブラウザはどうやら、数値を文字列に変換し、2 つの文字列としてから結合しているようです。
 
-<div class="blockIndicator note">
-<p>注: 以下の例をブラウザの JavaScript コンソールに入力して、どのような結果が得られるかを確認してください。</p>
-</div>
+2.  数字同士でやっても同じです。数字を引用符で囲むと文字列になります。次の行を実行してみてください。(`typeof`演算子で変数が文字列なのか数値なのか調べています。)
 
-<p>標準の文字列リテラルをテンプレートリテラルに変換するには、引用符 (<code>' '</code> または <code>" "</code>) をバッククォート文字 (<code>` `</code>) に置き換える必要があります。</p>
+    ```js
+    let myDate = '19' + '67';
+    typeof myDate;
+    ```
 
-<p>簡単な例。</p>
+3.  もし、数値を文字列に変換したかったり、文字列を数値に変換したかったりする場合には、次の 2 つの生成方法を見てください。
 
-<pre class="brush: js notranslate">let song = 'Fight the Youth';</pre>
+    - {{jsxref("Number")}}オブジェクトは渡されたものすべてを数値に変換します。次の例を実行してみましょう。
 
-<p>テンプレートリテラルに変換します。</p>
+      ```js
+      let myString = '123';
+      let myNum = Number(myString);
+      typeof myNum;
+      ```
 
-<pre class="brush: js notranslate">song = `Fight the Youth`;</pre>
+    - 反対に全ての数値は [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) という文字列に変換するメソッドを持っています。
 
-<p>文字列を連結したり、文字列内に式の結果を含めたりする場合、従来の文字列で書くのは面倒です。</p>
+      ```js
+      let myNum = 123;
+      let myString = myNum.toString();
+      typeof myString;
+      ```
 
-<pre class="brush: js notranslate">let score = 9;
+    この生成方法は状況によってはとても便利です。例えば、ユーザがフォームのテキストフィールドに数字を入力した場合、入力された値は文字列です。しかし、その数字を使って計算したい場合、数値にしなければなりません。そんな時は `Number()` に任せましょう。これは実際に[数字当てゲームの 54 行目](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54)で使用した方法です。
+
+## テンプレートリテラル
+
+遭遇する可能性のある別のタイプの文字列構文は、**テンプレートリテラル**（テンプレート文字列と呼ばれることもあります）です。 これは、より柔軟で読みやすい文字列を提供する新しい構文です。
+
+> **Note:** 注: 以下の例をブラウザの JavaScript コンソールに入力して、どのような結果が得られるかを確認してください。
+
+標準の文字列リテラルをテンプレートリテラルに変換するには、引用符 (`' '` または `" "`) をバッククォート文字 (`` ` ` ``) に置き換える必要があります。
+
+簡単な例。
+
+```js
+let song = 'Fight the Youth';
+```
+
+テンプレートリテラルに変換します。
+
+```js
+song = `Fight the Youth`;
+```
+
+文字列を連結したり、文字列内に式の結果を含めたりする場合、従来の文字列で書くのは面倒です。
+
+```js
+let score = 9;
 let highestScore = 10;
-let output = 'I like the song "' + song + '". I gave it a score of ' + (score/highestScore * 100) + '%.';</pre>
+let output = 'I like the song "' + song + '". I gave it a score of ' + (score/highestScore * 100) + '%.';
+```
 
-<p>テンプレートリテラルはこれを非常に簡単に行えます。</p>
+テンプレートリテラルはこれを非常に簡単に行えます。
 
-<pre class="brush: js notranslate">output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 }%.`;</pre>
+```js
+output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 }%.`;
+```
 
-<p>複数の文のピースを繋げる必要はありません。文章全体を1組のバッククォートで囲むだけです。文字列内に変数または式を含める場合は、プレースホルダーと呼ばれる <code>${ }</code> 構造内に含めます。</p>
+複数の文のピースを繋げる必要はありません。文章全体を 1 組のバッククォートで囲むだけです。文字列内に変数または式を含める場合は、プレースホルダーと呼ばれる `${ }` 構造内に含めます。
 
-<p>テンプレートリテラル内に複雑な式を含めることもできます。</p>
+テンプレートリテラル内に複雑な式を含めることもできます。
 
-<pre class="brush: js notranslate">let examScore = 45;
+```js
+let examScore = 45;
 let examHighestScore = 70;
-examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((examScore/examHighestScore*100)) }%). ${ examScore &gt;= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;</pre>
+examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((examScore/examHighestScore*100)) }%). ${ examScore >= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;
+```
 
-<ul>
- <li>最初の2つのプレースホルダーは非常に単純で、変数を参照する単純な文字列のみが含まれています。</li>
- <li>3つ目は、パーセンテージの結果を計算し、それを最も近い整数に丸めます。</li>
- <li>4つ目は、三項演算子を使用してスコアが特定の値を超えているかどうかを確認し、結果に応じて合格または不合格のメッセージを出力します。</li>
-</ul>
+- 最初の 2 つのプレースホルダーは非常に単純で、変数を参照する単純な文字列のみが含まれています。
+- 3 つ目は、パーセンテージの結果を計算し、それを最も近い整数に丸めます。
+- 4 つ目は、三項演算子を使用してスコアが特定の値を超えているかどうかを確認し、結果に応じて合格または不合格のメッセージを出力します。
 
-<p>従来の文字列リテラルで複数の行に分割する場合は、改行文字 <code>\n</code> を含める必要がありました。</p>
+従来の文字列リテラルで複数の行に分割する場合は、改行文字 `\n` を含める必要がありました。
 
-<pre class="brush: js notranslate">output = 'I like the song "' + song + '".\nI gave it a score of ' + (score/highestScore * 100) + '%.';</pre>
+```js
+output = 'I like the song "' + song + '".\nI gave it a score of ' + (score/highestScore * 100) + '%.';
+```
 
-<p>テンプレートリテラルはソースコードの改行をそのまま再現するため、改行文字は不要になります。 以下は同じ結果を得ます。</p>
+テンプレートリテラルはソースコードの改行をそのまま再現するため、改行文字は不要になります。 以下は同じ結果を得ます。
 
-<pre class="brush: js notranslate">output = `I like the song "${ song }".
-I gave it a score of ${ score/highestScore * 100 }%.`;</pre>
+```js
+output = `I like the song "${ song }".
+I gave it a score of ${ score/highestScore * 100 }%.`;
+```
 
-<p>できるだけ早くテンプレートリテラルの使用に慣れることをお勧めします。 これらは最新のブラウザで十分にサポートされており、サポートが不足しているのは Internet Explorer だけです。私たちの例の多くはまだ標準の文字列リテラルを使用していますが、今後さらに多くのテンプレートリテラルを含める予定です。</p>
+できるだけ早くテンプレートリテラルの使用に慣れることをお勧めします。 これらは最新のブラウザで十分にサポートされており、サポートが不足しているのは Internet Explorer だけです。私たちの例の多くはまだ標準の文字列リテラルを使用していますが、今後さらに多くのテンプレートリテラルを含める予定です。
 
-<p>高度な機能の例と詳細については、<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a>のリファレンスページを参照してください。</p>
+高度な機能の例と詳細については、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)のリファレンスページを参照してください。
 
-<h2 id="あなたのスキルをテストしてください！">あなたのスキルをテストしてください！</h2>
+## あなたのスキルをテストしてください！
 
-<p>この記事の最後に到達しましたが、最も重要な情報を覚えていますか？ 先に進む前に、この情報を記憶していることを確認するためのいくつかの<a href="/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings">テスト</a>を見つけることができます。これには次の記事の知識も必要なので、最初にそれを読むことをお勧めします。</p>
+この記事の最後に到達しましたが、最も重要な情報を覚えていますか？ 先に進む前に、この情報を記憶していることを確認するためのいくつかの[テスト](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings)を見つけることができます。これには次の記事の知識も必要なので、最初にそれを読むことをお勧めします。
 
-<h2 id="Conclusion" name="Conclusion">結論</h2>
+## 結論
 
-<p>ここまでが JavaScript での文字列の基礎になります。次の記事では、JavaScript で使える文字列操作の組み込み関数と、それを使って思い通りの形に文字列を変換する方法を、その基礎の上に建てていきましょう。</p>
+ここまでが JavaScript での文字列の基礎になります。次の記事では、JavaScript で使える文字列操作の組み込み関数と、それを使って思い通りの形に文字列を変換する方法を、その基礎の上に建てていきましょう。
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール内</h2>
+## このモジュール内
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript って何?</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript への最初のダイブ</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_went_wrong">何が間違っている? JavaScript のトラブルシューティング</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables">必要な情報を保存する — 変数</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math">JavaScript での数学入門 — 数値と演算子について</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings">テキストを扱う — JavaScript での文字列</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays">配列</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator">評価: バカ話ジェネレーター</a></li>
-</ul>
+- [JavaScript って何?](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript への最初のダイブ](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [必要な情報を保存する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)
+- [JavaScript での数学入門 — 数値と演算子について](/ja/docs/Learn/JavaScript/First_steps/Math)
+- [テキストを扱う — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)
+- [便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)
+- [評価: バカ話ジェネレーター](/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator)

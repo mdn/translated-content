@@ -13,117 +13,90 @@ tags:
   - WAI-ARIA
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-<div>{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}</div>
+このモジュールの評価では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。
 
-<p class="summary">このモジュールの評価では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。</p>
+| 前提知識: | 基本的なコンピューターの知識、HTML、CSS、JavaScript に対する基本的な理解、[このコースのこれまでの記事](/ja/docs/Learn/Accessibility)への理解。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 学習目標: | アクセシビリティの基礎に対する基本的な知識をテストすること。                                                                                   |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターの知識、HTML、CSS、JavaScript に対する基本的な理解、<a href="/ja/docs/Learn/Accessibility">このコースのこれまでの記事</a>への理解。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習目標:</th>
-   <td>アクセシビリティの基礎に対する基本的な知識をテストすること。</td>
-  </tr>
- </tbody>
-</table>
+## 開始地点
 
-<h2 id="Starting_point" name="Starting_point">開始地点</h2>
+評価を始めるために、[例を含むファイルの ZIP](https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true) を取得してください。あなたのコンピューターのいずれかのディレクトリーにそのコンテンツを解凍してください。
 
-<p>評価を始めるために、<a href="https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true">例を含むファイルの ZIP</a> を取得してください。あなたのコンピューターのいずれかのディレクトリーにそのコンテンツを解凍してください。</p>
+あるいは、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) のようなサイトを使って試験できます。HTML, CSS, JavaScript をオンラインエディターのいずれかにペーストします。もし使っているオンラインエディターに個別の CSS/JS パネルがない場合、適当な `<style>` / `<script>` 要素内に置いて下さい。
 
-<p>あるいは、<a class="external external-icon" href="https://jsbin.com/">JSBin</a> や <a href="https://glitch.com/">Glitch</a> のようなサイトを使って試験できます。HTML, CSS, JavaScript をオンラインエディターのいずれかにペーストします。もし使っているオンラインエディターに個別の CSS/JS パネルがない場合、適当な <code>&lt;style&gt;</code> / <code>&lt;script&gt;</code> 要素内に置いて下さい。</p>
+解凍が完了した評価サイトは次のように見えるはずです:
 
-<p>解凍が完了した評価サイトは次のように見えるはずです:</p>
+![](https://mdn.mozillademos.org/files/14555/assessment-site-finished.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14555/assessment-site-finished.png" style="border-style: solid; border-width: 1px; display: block; height: 457px; margin: 0px auto; width: 800px;"></p>
+この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、CSS が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！
 
-<p>この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、CSS が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！</p>
+> **Note:** **注**: もし行き詰まって助けを求める場合 — ページ最下部の [Assessment or further help](#assessment_or_further_help) セクションを見てください。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: もし行き詰まって助けを求める場合 — ページ最下部の <a href="#assessment_or_further_help">Assessment or further help</a> セクションを見てください。</p>
-</div>
+## プロジェクトの概要
 
-<h2 id="Project_brief" name="Project_brief">プロジェクトの概要</h2>
+このプロジェクトでは、熊の「事実」に関する記事を表示する架空の自然のサイトが表示されます。現状では、これはいくつものアクセシビリティの問題を持っています。あなたの仕事は現状のサイトを見て、全力を尽くして修正し、以下の質問に答えることです。
 
-<p>このプロジェクトでは、熊の「事実」に関する記事を表示する架空の自然のサイトが表示されます。現状では、これはいくつものアクセシビリティの問題を持っています。あなたの仕事は現状のサイトを見て、全力を尽くして修正し、以下の質問に答えることです。 </p>
+### 色
 
-<h3 id="Color" name="Color">色</h3>
+テキストは現在のカラースキームのせいで読みづらくなっています。現状のカラーコントラスト (テキスト/背景) をテストして、テストの結果を報告し、割り当てられた色を変更して修正できますか？
 
-<p>テキストは現在のカラースキームのせいで読みづらくなっています。現状のカラーコントラスト (テキスト/背景) をテストして、テストの結果を報告し、割り当てられた色を変更して修正できますか？</p>
+### セマンティック HTML
 
-<h3 id="Semantic_HTML" name="Semantic_HTML">セマンティック HTML</h3>
+1.  コンテンツはまだあまりアクセシブルではありません。スクリーンリーダーを使ってナビゲートしようとしたとき、何が起こるか報告してください。
+2.  スクリーンリーダーのユーザーがナビゲートしやすいように、記事のテキストを変更できますか？
+3.  サイトのナビゲーションメニュー ( `<div class="nav"></div>` で囲まれた部分) は正しい HTML5 セマンティック要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。
 
-<ol>
- <li>コンテンツはまだあまりアクセシブルではありません。スクリーンリーダーを使ってナビゲートしようとしたとき、何が起こるか報告してください。</li>
- <li>スクリーンリーダーのユーザーがナビゲートしやすいように、記事のテキストを変更できますか？</li>
- <li>サイトのナビゲーションメニュー ( <code>&lt;div class="nav"&gt;&lt;/div&gt;</code> で囲まれた部分) は正しい HTML5 セマンティック要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。</li>
-</ol>
+> **Note:** **注**: タグをスタイル付けする CSS ルールセレクターは、セマンティック見出しのために適切に変更する必要があります。パラグラフ要素を加えると、スタイルもより良く見えることに気がつくでしょう。
 
-<div class="note">
-<p><strong>注</strong>: タグをスタイル付けする CSS ルールセレクターは、セマンティック見出しのために適切に変更する必要があります。<font>パラグラフ要素を加えると、スタイルもより良く見えることに気がつくでしょう。</font></p>
-</div>
+### 画像
 
-<h3 id="The_images" name="The_images"><font>画像</font></h3>
+現状の画像はスクリーンリーダーのユーザーにとってアクセシブルではありません。修正できますか？
 
-<p><font>現状の画像はスクリーンリーダーのユーザーにとってアクセシブルではありません。修正できますか？</font></p>
+### オーディオプレイヤー
 
-<h3 id="The_audio_player" name="The_audio_player"><font>オーディオプレイヤー</font></h3>
+1.  `<audio>` プレイヤーは聴覚障害者にとってアクセシブルではありません。それらのユーザーのために何らかのアクセシブルな代替手段を加えることができますか？
+2.  `<audio>` プレイヤーは、HTML5 をサポートしていない古いブラウザーを使用しているユーザーにとってアクセシブルではありません。彼らに対してどのようにオーディオにアクセスさせることができますか？
 
-<ol>
- <li><font><code>&lt;audio&gt;</code> プレイヤーは聴覚障害者にとってアクセシブルではありません</font>。それらのユーザーのために何らかのアクセシブルな代替手段を加えることができますか？</li>
- <li><font><code>&lt;audio&gt;</code> プレイヤーは、HTML5 をサポートしていない古いブラウザーを使用しているユーザーにとってアクセシブルではありません。彼らに対してどのようにオーディオにアクセスさせることができますか？</font></li>
-</ol>
+### フォーム
 
-<h3 id="The_forms" name="The_forms"><font>フォーム</font></h3>
+1.  トップにある検索フォームの `<input>` 要素はラベルとともに使用できるかもしれませんが、表示されるテキストを追加するとデザインを悪化させる可能性がありますし、視覚に問題のないユーザーにとってはあまり必要ありません。スクリーンリーダーにのみアクセシブルなラベルをどうやって追加すればいいでしょう？
+2.  コメントフォームの中の 2 つの `<input>` 要素は表示されるテキストラベルを含んでいますが、それらのラベルと明確に関連付けられていません。どのように関連付けますか？いくつかの CSS ルールも修正しなければいけない点に注意してください。
 
-<ol>
- <li><font>トップにある検索フォームの <code>&lt;input&gt;</code> 要素はラベルとともに使用できるかもしれませんが、表示されるテキストを追加するとデザインを悪化させる可能性がありますし、視覚に問題のないユーザーにとってはあまり必要ありません。スクリーンリーダーにのみアクセシブルなラベルをどうやって追加すればいいでしょう？</font></li>
- <li><font>コメントフォームの中の 2 つの <code>&lt;input&gt;</code> 要素は表示されるテキストラベルを含んでいますが、それらのラベルと明確に関連付けられていません。どのように関連付けますか？いくつかの CSS ルールも修正しなければいけない点に注意してください。</font></li>
-</ol>
+### コメント show/hide 制御
 
-<h3 id="The_showhide_comment_control" name="The_showhide_comment_control"><font>コメント show/hide 制御</font></h3>
+現状のコメント show/hide 制御ボタンは、キーボードからアクセスすることができません。タブキーによるフォーカス、リターンキーによる有効化という形で、キーボードをアクセシブルにすることができますか？
 
-<p><font>現状のコメント show/hide 制御ボタンは、キーボードからアクセスすることができません。タブキーによるフォーカス、リターンキーによる有効化という形で、キーボードをアクセシブルにすることができますか？</font></p>
+### テーブル
 
-<h3 id="The_table" name="The_table"><font>テーブル</font></h3>
+現状のデータテーブルはあまりアクセシブルではありません。スクリーンリーダーのユーザーにとって行と列を関連付けることは難しく、またテーブルが何を示しているのかを明確にする概要もありません。この問題を解決するために何らかの機能を HTML に追加することはできますか？
 
-<p><font>現状のデータテーブルはあまりアクセシブルではありません。スクリーンリーダーのユーザーにとって行と列を関連付けることは難しく、またテーブルが何を示しているのかを明確にする概要もありません。この問題を解決するために何らかの機能を HTML に追加することはできますか？</font></p>
+### 他には？
 
-<h3 id="Other_considerations" name="Other_considerations"><font>他には？</font></h3>
+このウェブサイトをよりアクセシブルにする 2 つ以上の改善アイデアを挙げることができますか？
 
-<p><font>このウェブサイトをよりアクセシブルにする 2 つ以上の改善アイデアを挙げることができますか？</font></p>
+## 評価とヒント
 
-<h2 id="Assessment_or_further_help" name="Assessment_or_further_help"><font>評価とヒント</font></h2>
+あなたの作業を教師やメンターに渡して採点してもらったり、行き詰まってヒントが欲しい場合は次のようにしてください:
 
-<p><font>あなたの作業を教師やメンターに渡して採点してもらったり、行き詰まってヒントが欲しい場合は次のようにしてください:</font></p>
+1.  成果をオンラインで共有できるエディター、例えば [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) に置きます。
+2.  採点や手助けのための投稿を [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) に書いてください。投稿には次のものを(英語で)入れて下さい:
 
-<ol>
- <li>成果をオンラインで共有できるエディター、例えば <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, <a href="https://glitch.com/">Glitch</a> に置きます。</li>
- <li>採点や手助けのための投稿を <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a> に書いてください。投稿には次のものを(英語で)入れて下さい:
-  <ul>
-   <li>"Assessment wanted for Accessibility troubleshooting"のような説明的なタイトル。</li>
-   <li>何を試して、どうしてほしいのかの詳細。つまり行き詰まって助けてほしいのか、採点評価してほしいのか。</li>
-   <li>オンラインで共有できるエディター (上記ステップ 1 で触れたもの)での例のリンク。これは身につけるとよい習慣です — コーティングの問題を、他の人がコードを見ずに助けるのは困難です。</li>
-   <li>助けてもらいたい問題が見つかるような、タスクや評価のページのリンク</li>
-  </ul>
- </li>
-</ol>
+    - "Assessment wanted for Accessibility troubleshooting"のような説明的なタイトル。
+    - 何を試して、どうしてほしいのかの詳細。つまり行き詰まって助けてほしいのか、採点評価してほしいのか。
+    - オンラインで共有できるエディター (上記ステップ 1 で触れたもの)での例のリンク。これは身につけるとよい習慣です — コーティングの問題を、他の人がコードを見ずに助けるのは困難です。
+    - 助けてもらいたい問題が見つかるような、タスクや評価のページのリンク
 
-<p><font>{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}</font></p>
+{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-<h2 id="このモジュール内">このモジュール内</h2>
+## このモジュール内
 
-<ul>
- <li><a href="/ja/docs/Learn/Accessibility/What_is_accessibility">アクセシビリティとは？</a></li>
- <li><a href="/ja/docs/Learn/Accessibility/HTML">HTML: アクセシビリティの基礎</a></li>
- <li><a href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript">CSS と JavaScript のアクセシビリティ成功事例</a></li>
- <li><a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics" rel="nofollow">WAI-ARIA の基本</a></li>
- <li><a href="/ja/docs/Learn/Accessibility/Multimedia" rel="nofollow">アクセシブルなマルチメディア</a></li>
- <li><a href="/ja/docs/Learn/Accessibility/Mobile" rel="nofollow">モバイルアクセシビリティ</a></li>
- <li><a href="/ja/docs/Learn/Accessibility/Accessibility_troubleshooting" rel="nofollow">アクセシビリティのトラブルシューティング</a></li>
-</ul>
+- [アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
+- [CSS と JavaScript のアクセシビリティ成功事例](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
+- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
+- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

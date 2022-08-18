@@ -3,261 +3,230 @@ title: 'Express チュートリアル Part 6: フォームの操作'
 slug: Learn/Server-side/Express_Nodejs/forms
 translation_of: Learn/Server-side/Express_Nodejs/forms
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}</div>
+このチュートリアルでは、Pug を使用して Express で HTML フォームを操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。
 
-<p class="summary">このチュートリアルでは、Pug を使用して Express で HTML フォームを操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。</p>
+| 前提条件: | [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)など、これまでのチュートリアルのトピックをすべて完了してください。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 目標:     | ユーザからデータを取得するためのフォームの作成方法を理解し、このデータでデータベースを更新する。                                                                                     |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express チュートリアル Part 5: ライブラリデータの表示</a>など、これまでのチュートリアルのトピックをすべて完了してください。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>ユーザからデータを取得するためのフォームの作成方法を理解し、このデータでデータベースを更新する。</td>
-  </tr>
- </tbody>
-</table>
+## 概要
 
-<h2 id="概要">概要</h2>
+[HTML フォーム](/ja/docs/Web/Guide/HTML/Forms)とは、サーバーに送信するためにユーザーから情報を収集するために使用できる Web ページ上の 1 つ以上のフィールド/ウィジェットのグループのことです。テキストボックス、チェックボックス、ラジオボタン、日付選択など、さまざまなタイプのデータを入力するのに適したフォーム入力が用意されているので、フォームを使えばユーザーからの入力を柔軟に収集することが出来ます。また、フォームはサーバとデータを共有するための比較的安全な方法でもあり、クロスサイトリクエストフォージェリ保護機能を使って POST リクエストでデータを送信することができます。
 
-<p><a href="/ja/docs/Web/Guide/HTML/Forms">HTMLフォーム</a>とは、サーバーに送信するためにユーザーから情報を収集するために使用できる Web ページ上の 1 つ以上のフィールド/ウィジェットのグループのことです。テキストボックス、チェックボックス、ラジオボタン、日付選択など、さまざまなタイプのデータを入力するのに適したフォーム入力が用意されているので、フォームを使えばユーザーからの入力を柔軟に収集することが出来ます。また、フォームはサーバとデータを共有するための比較的安全な方法でもあり、クロスサイトリクエストフォージェリ保護機能を使ってPOSTリクエストでデータを送信することができます。</p>
+フォームを扱うのは複雑です。開発者はフォーム用の HTML を書き、サーバー上で入力されたデータを検証して特殊文字を置換し、無効なフィールドをユーザーに知らせるためにエラーメッセージを表示してフォームを再度表示し、送信が成功したときにデータを処理し、最後に成功を示す何らかの方法でユーザーに応答しなければなりません。
 
-<p>フォームを扱うのは複雑です。開発者はフォーム用の HTML を書き、サーバー上で入力されたデータを検証して特殊文字を置換し、無効なフィールドをユーザーに知らせるためにエラーメッセージを表示してフォームを再度表示し、送信が成功したときにデータを処理し、最後に成功を示す何らかの方法でユーザーに応答しなければなりません。</p>
+このチュートリアルでは、上記の操作を Express で実行する方法を紹介します。途中で、サンプルとして地域図書館のウェブサイトを拡張して、ユーザーがライブラリからアイテムを作成、編集、削除できるようにします。
 
-<p>このチュートリアルでは、上記の操作をExpressで実行する方法を紹介します。途中で、サンプルとして地域図書館のウェブサイトを拡張して、ユーザーがライブラリからアイテムを作成、編集、削除できるようにします。</p>
+> **Note:**サンプルとして準備されている地域図書館のウェブサイトは認証済みユーザのみに閲覧を制限する方法については書いてないので、現時点ではどのユーザでもデータベースに変更を加えることができます。
 
-<div class="note">
-<p><strong>Note: </strong>サンプルとして準備されている地域図書館のウェブサイトは認証済みユーザのみに閲覧を制限する方法については書いてないので、現時点ではどのユーザでもデータベースに変更を加えることができます。</p>
-</div>
+### HTML フォーム
 
-<h3 id="HTMLフォーム">HTMLフォーム</h3>
+最初に[HTML フォーム](/ja/docs/Web/Guide/HTML/Forms)の簡単な概要を説明します。ある「チーム」の名前とそれに関連するラベルを入力するための単一のテキストフィールドを持つシンプルな HTML フォームを考えてみましょう。
 
-<p>最初に<a href="/ja/docs/Web/Guide/HTML/Forms">HTMLフォーム</a>の簡単な概要を説明します。ある「チーム」の名前とそれに関連するラベルを入力するための単一のテキストフィールドを持つシンプルな HTML フォームを考えてみましょう。</p>
+![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
 
-<p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
+フォームは HTML で `<form>...</form>` タグ内の要素の集合として定義され、`type="submit" `の`input`要素を少なくとも 1 つ含みます。
 
-<p>フォームは HTML で <code>&lt;form&gt;...&lt;/form&gt;</code> タグ内の要素の集合として定義され、<code>type="submit" </code>の<code>input</code>要素を少なくとも 1 つ含みます。</p>
+```html
+<form action="/team_name_url/" method="post">
+    <label for="team_name">名前を入力してください: </label>
+    <input id="team_name" type="text" name="name_field" value="デフォルトのチーム名.">
+    <input type="submit" value="OK">
+</form>
+```
 
-<pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;名前を入力してください: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="デフォルトのチーム名."&gt;
-    &lt;input type="submit" value="OK"&gt;
-&lt;/form&gt;</pre>
+ここではチーム名を入力するための 1 つのテキストフィールドだけを含んでいますが、フォームは他の入力要素とそれに関連したラベルをいくつでも含むことができます。フィールドの`type`属性はどのような種類のウィジェットが表示されるかを定義します。フィールドの`name`と`id`は JavaScript/CSS/HTML でフィールドを識別するために使われ、`value`はフィールドが最初に表示されるときの初期値を定義します。マッチングするチームのラベルは、`label`タグ（上記の「名前を入力してください」を参照）を使用して指定され、`for`フィールドには関連する`input`タグの`id`値が含まれます。
 
-<p>ここではチーム名を入力するための1つのテキストフィールドだけを含んでいますが、フォームは他の入力要素とそれに関連したラベルをいくつでも含むことができます。フィールドの<code>type</code>属性はどのような種類のウィジェットが表示されるかを定義します。フィールドの<code>name</code>と<code>id</code>はJavaScript/CSS/HTMLでフィールドを識別するために使われ、<code>value</code>はフィールドが最初に表示されるときの初期値を定義します。マッチングするチームのラベルは、<code>label</code>タグ（上記の「名前を入力してください」を参照）を使用して指定され、<code>for</code>フィールドには関連する<code>input</code>タグの<code>id</code>値が含まれます。</p>
+`submit` input タグは標準ではボタンとして表示されます。このボタンは、他の`input`要素に含まれるデータをサーバーにアップロードするためにユーザーが押すことができます(この例だと`team_name`だけ)。フォーム属性はデータを送信するために使用される HTTP `method`とサーバー上のデータの送信先(`action`)を定義します。
 
-<p><code>submit</code> inputタグは標準ではボタンとして表示されます。このボタンは、他の<code>input</code>要素に含まれるデータをサーバーにアップロードするためにユーザーが押すことができます(この例だと<code>team_name</code>だけ)。フォーム属性はデータを送信するために使用されるHTTP <code>method</code>とサーバー上のデータの送信先(<code>action</code>)を定義します。</p>
+- `action`: フォームが送信されたときに処理のためにデータが送信される URL です。これが設定されていない場合(または空の文字列が設定されている場合)、フォームは現在のページ URL に戻って送信されます。
+- `method`: データを送信するために使用される HTTP メソッド: `POST` または `GET`.
 
-<ul>
- <li><code>action</code>: フォームが送信されたときに処理のためにデータが送信されるURLです。これが設定されていない場合(または空の文字列が設定されている場合)、フォームは現在のページURLに戻って送信されます。</li>
- <li><code>method</code>: データを送信するために使用される HTTP メソッド: <code>POST</code> または <code>GET</code>.
-  <ul>
-   <li><code>POST</code>メソッドは、データがサーバのデータベースに変更をもたらす場合は、常に使用されるべきです。なぜならクロスサイトフォージェリ要求攻撃に対してより耐性を持たせることができるからです。</li>
-   <li><code>GET</code>メソッドは、ユーザーデータを変更しないフォーム（検索フォームなど）にのみ使用してください。URLをブックマークや共有できるようにしたい場合におすすめです。</li>
-  </ul>
- </li>
-</ul>
+  - `POST`メソッドは、データがサーバのデータベースに変更をもたらす場合は、常に使用されるべきです。なぜならクロスサイトフォージェリ要求攻撃に対してより耐性を持たせることができるからです。
+  - `GET`メソッドは、ユーザーデータを変更しないフォーム（検索フォームなど）にのみ使用してください。URL をブックマークや共有できるようにしたい場合におすすめです。
 
-<h3 id="フォーム処理工程">フォーム処理工程</h3>
+### フォーム処理工程
 
-<p>フォームの処理はモデルに関する情報を表示するために学んだのと同じテクニックをすべて使います: ルートはリクエストをコントローラ関数に送り、モデルからのデータの読み込みを含む必要なデータベースアクションを実行し、HTMLページを生成して返します。さらに複雑なのは、サーバーがユーザーによって提供されたデータを処理し、何か問題があればエラー情報とともにフォームを再表示する必要があるということです。</p>
+フォームの処理はモデルに関する情報を表示するために学んだのと同じテクニックをすべて使います: ルートはリクエストをコントローラ関数に送り、モデルからのデータの読み込みを含む必要なデータベースアクションを実行し、HTML ページを生成して返します。さらに複雑なのは、サーバーがユーザーによって提供されたデータを処理し、何か問題があればエラー情報とともにフォームを再表示する必要があるということです。
 
-<p>フォームを含むページのリクエスト（緑色で示されている）から始まる、フォームリクエストを処理するためのプロセスフローチャートを以下に示す。<img alt="" src="https://mdn.mozillademos.org/files/14478/Web%20server%20form%20handling.png" style="height: 649px; width: 800px;"></p>
+フォームを含むページのリクエスト（緑色で示されている）から始まる、フォームリクエストを処理するためのプロセスフローチャートを以下に示す。![](https://mdn.mozillademos.org/files/14478/Web%20server%20form%20handling.png)
 
-<p>上の図のように、フォーム処理のコードが必要とする主なものは以下の通りです。</p>
+上の図のように、フォーム処理のコードが必要とする主なものは以下の通りです。
 
-<ol>
- <li>ユーザーが最初に要求したときにデフォルトのフォームを表示します。
-  <ul>
-   <li>フォームには空白のフィールドが含まれていたり (新しいレコードを作成している場合など)、初期値があらかじめ入力されていたり (レコードを変更している場合や、デフォルトの初期値がある場合など) します。</li>
-  </ul>
- </li>
- <li>ユーザーから送信されたデータを、通常はHTTP <code>POST</code>リクエストで受信します。</li>
- <li>データを検証し、ハッキング防止のために特殊文字を置換(サニタイズ)します。</li>
- <li>データが無効な場合は、ユーザーが入力した値と問題のあるフィールドのエラーメッセージをフォームに再表示します。</li>
- <li>すべてのデータが有効な場合、必要なアクションを実行します（例：データベースにデータを保存する、通知メールを送信する、検索結果を返す、ファイルをアップロードするなど）。</li>
- <li>すべてのアクションが完了したら、ユーザーを別のページにリダイレクトします。</li>
-</ol>
+1.  ユーザーが最初に要求したときにデフォルトのフォームを表示します。
 
-<p>多くの場合、フォーム処理コードは、フォームの初期表示のための<code>GET</code>ルートと、フォームデータの検証と処理のための同じパスへの<code>POST</code>ルートを使用して実装されています。これがこのチュートリアルで使用されるアプローチです。</p>
+    - フォームには空白のフィールドが含まれていたり (新しいレコードを作成している場合など)、初期値があらかじめ入力されていたり (レコードを変更している場合や、デフォルトの初期値がある場合など) します。
 
-<p>Express 自体はフォーム操作のための特別なサポートを提供していませんが、ミドルウェアを使用してフォームからの <code>POST</code> や <code>GET </code>パラメータを処理したり、それらの値を検証/サニタイズしたりすることができます。</p>
+2.  ユーザーから送信されたデータを、通常は HTTP `POST`リクエストで受信します。
+3.  データを検証し、ハッキング防止のために特殊文字を置換(サニタイズ)します。
+4.  データが無効な場合は、ユーザーが入力した値と問題のあるフィールドのエラーメッセージをフォームに再表示します。
+5.  すべてのデータが有効な場合、必要なアクションを実行します（例：データベースにデータを保存する、通知メールを送信する、検索結果を返す、ファイルをアップロードするなど）。
+6.  すべてのアクションが完了したら、ユーザーを別のページにリダイレクトします。
 
-<h3 id="検証とサニタイズ">検証とサニタイズ</h3>
+多くの場合、フォーム処理コードは、フォームの初期表示のための`GET`ルートと、フォームデータの検証と処理のための同じパスへの`POST`ルートを使用して実装されています。これがこのチュートリアルで使用されるアプローチです。
 
-<p>フォームからのデータが保存される前に、それは検証され、サニタイズされなければなりません。</p>
+Express 自体はフォーム操作のための特別なサポートを提供していませんが、ミドルウェアを使用してフォームからの `POST` や `GET `パラメータを処理したり、それらの値を検証/サニタイズしたりすることができます。
 
-<ul>
- <li>入力された値が各フィールドに対して適切であるか（正しい範囲、フォーマットなど）、およびすべての必須フィールドに対して値が提供されているかどうかを確認します。</li>
- <li>サニタイズは、悪意のあるコンテンツをサーバーに送信するために使用される可能性のあるデータ内の文字を削除したり、置換したりします。</li>
-</ul>
+### 検証とサニタイズ
 
-<p>このチュートリアルでは、人気のある express-validator モジュールを使ってフォームデータの検証とサニタイズを行います。</p>
+フォームからのデータが保存される前に、それは検証され、サニタイズされなければなりません。
 
-<h4 id="インストール">インストール</h4>
+- 入力された値が各フィールドに対して適切であるか（正しい範囲、フォーマットなど）、およびすべての必須フィールドに対して値が提供されているかどうかを確認します。
+- サニタイズは、悪意のあるコンテンツをサーバーに送信するために使用される可能性のあるデータ内の文字を削除したり、置換したりします。
 
-<p>プロジェクトのルートで以下のコマンドを実行してモジュールをインストールします。</p>
+このチュートリアルでは、人気のある express-validator モジュールを使ってフォームデータの検証とサニタイズを行います。
 
-<pre class="brush: bash notranslate">npm install express-validator
-</pre>
+#### インストール
 
-<h4 id="express-validatorの使用">express-validatorの使用</h4>
+プロジェクトのルートで以下のコマンドを実行してモジュールをインストールします。
 
-<div class="note">
-<p><strong>Note:</strong> Githubの<a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a>ガイドにAPIの概要が書かれています。(カスタムバリデータの作成を含む) すべての機能を知るには、これを読むことをお勧めします。以下では、サンプルの「地域図書館」にとって有用なサブセットだけを取り上げます。</p>
-</div>
+```bash
+npm install express-validator
+```
 
-<p>コントローラでバリデータを使うには、以下のように <strong>'express-validator/check'</strong> と <strong>'express-validator/filter'</strong>モジュールから使いたい関数を要求(require)しなければなりません。</p>
+#### express-validator の使用
 
-<pre class="brush: js notranslate">const { body,validationResult } = require('express-validator/check');
+> **Note:** Github の[express-validator](https://github.com/ctavan/express-validator#express-validator)ガイドに API の概要が書かれています。(カスタムバリデータの作成を含む) すべての機能を知るには、これを読むことをお勧めします。以下では、サンプルの「地域図書館」にとって有用なサブセットだけを取り上げます。
+
+コントローラでバリデータを使うには、以下のように **'express-validator/check'** と **'express-validator/filter'**モジュールから使いたい関数を要求(require)しなければなりません。
+
+```js
+const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
-</pre>
+```
 
-<p>多くの関数が用意されており、リクエストパラメータ、body、ヘッダー、Cookieなどのデータをチェックしてサニタイズすることができますし、一度にすべてのデータをチェックしてサニタイズすることもできます。このチュートリアルでは、主に<code>body</code>、<code>sanitizeBody</code>、<code>validationResult</code>を使用します。</p>
+多くの関数が用意されており、リクエストパラメータ、body、ヘッダー、Cookie などのデータをチェックしてサニタイズすることができますし、一度にすべてのデータをチェックしてサニタイズすることもできます。このチュートリアルでは、主に`body`、`sanitizeBody`、`validationResult`を使用します。
 
-<p>機能は以下のように定義されています。</p>
+機能は以下のように定義されています。
 
-<ul>
- <li><code><a href="https://github.com/ctavan/express-validator#bodyfields-message">body(fields[, message])</a></code>: テストに失敗した場合に表示されるオプションのエラーメッセージとともに検証するリクエストボディ (<code>POST</code>パラメータ) のフィールドのセットを指定します。検証基準は、<code>body()</code>メソッドにデイジーチェーンで接続されています。例えば、以下の最初のチェックでは「name」フィールドが空でないことをテストし、空の場合は「Empty name」というエラーメッセージを設定します。2 番目のテストでは、年齢フィールドが有効な日付であるかどうかをチェックし、<code>optional()</code> を使用して null や空の文字列を指定しても検証に失敗しないようにしています。
+- [`body(fields[, message])`](https://github.com/ctavan/express-validator#bodyfields-message): テストに失敗した場合に表示されるオプションのエラーメッセージとともに検証するリクエストボディ (`POST`パラメータ) のフィールドのセットを指定します。検証基準は、`body()`メソッドにデイジーチェーンで接続されています。例えば、以下の最初のチェックでは「name」フィールドが空でないことをテストし、空の場合は「Empty name」というエラーメッセージを設定します。2 番目のテストでは、年齢フィールドが有効な日付であるかどうかをチェックし、`optional()` を使用して null や空の文字列を指定しても検証に失敗しないようにしています。
 
-  <pre class="brush: js notranslate">body('name', 'Empty name').isLength({ min: 1 }),
-body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
-</pre>
-  また、異なるバリデータをデイジーチェーン化して、前のバリデータが真の場合に表示されるメッセージを追加することもできます。<br>
+  ```js
+  body('name', 'Empty name').isLength({ min: 1 }),
+  body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
+  ```
 
-  <pre class="brush: js notranslate">body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
-    .isAlpha().withMessage('Name must be alphabet letters.'),
-</pre>
+  また、異なるバリデータをデイジーチェーン化して、前のバリデータが真の場合に表示されるメッセージを追加することもできます。
 
-  <div class="note">
-  <p><strong>Note:</strong> また、上記のように <code>trim()</code> のようなインラインサニタイザーを追加することもできます。しかし、ここで適用されるサニタイザは検証ステップにのみ適用されます。最終的な出力をサニタイザ処理したい場合は、以下のように別のサニタイザメソッドを使用する必要があります。</p>
-  </div>
- </li>
- <li><code><a href="https://github.com/ctavan/express-validator#sanitizebodyfields">sanitizeBody(fields)</a></code>: サニタイズするフィールドを指定します。サニタイズ操作は、このメソッドにデイジーチェーン接続されます。例えば、以下の <code>escape()</code> サニタイズ操作は、JavaScript のクロスサイトスクリプティング攻撃で使用される可能性のある HTML 文字（例えば「'」、「"」、「&amp;」など）を name 変数から削除します。
-  <pre class="brush: js notranslate">sanitizeBody('name').trim().escape(),
-sanitizeBody('date').toDate(),</pre>
- </li>
- <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: Runs the validation, making errors available in the form of a <code>validation</code> result object. This is invoked in a separate callback, as shown below:
-  <pre class="brush: js notranslate">(req, res, next) =&gt; {
-    // Extract the validation errors from a request.
-    const errors = validationResult(req);
+  ```js
+  body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
+      .isAlpha().withMessage('Name must be alphabet letters.'),
+  ```
 
-    if (!errors.isEmpty()) {
-        // There are errors. Render form again with sanitized values/errors messages.
-        // Error messages can be returned in an array using `errors.array()`.
-        }
-    else {
-        // Data from form is valid.
-    }
-}</pre>
-  We use the validation result's <code>isEmpty()</code> method to check if there were errors, and its <code>array()</code> method to get the set of error messages. See the <a href="https://github.com/ctavan/express-validator#validation-result-api">Validation Result API</a> for more information.</li>
-</ul>
+  > **Note:** また、上記のように `trim()` のようなインラインサニタイザーを追加することもできます。しかし、ここで適用されるサニタイザは検証ステップにのみ適用されます。最終的な出力をサニタイザ処理したい場合は、以下のように別のサニタイザメソッドを使用する必要があります。
 
-<p>The validation and sanitization chains are middleware that should be passed to the Express route handler (we do this indirectly, via the controller). When the middleware runs, each validator/sanitizer is run in the order specified.</p>
+- [`sanitizeBody(fields)`](https://github.com/ctavan/express-validator#sanitizebodyfields): サニタイズするフィールドを指定します。サニタイズ操作は、このメソッドにデイジーチェーン接続されます。例えば、以下の `escape()` サニタイズ操作は、JavaScript のクロスサイトスクリプティング攻撃で使用される可能性のある HTML 文字（例えば「'」、「"」、「&」など）を name 変数から削除します。
 
-<p>We'll cover some real examples when we implement the <em>LocalLibrary</em> forms below.</p>
+  ```js
+  sanitizeBody('name').trim().escape(),
+  sanitizeBody('date').toDate(),
+  ```
 
-<h3 id="Form_design">Form design</h3>
+- [`validationResult(req)`](https://github.com/ctavan/express-validator#validationresultreq): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:
 
-<p>Many of the models in the library are related/dependent—for example, a <code>Book</code> <em>requires</em> an <code>Author</code>, and <em>may</em> also have one or more <code>Genres</code>. This raises the question of how we should handle the case where a user wishes to:</p>
+  ```js
+  (req, res, next) => {
+      // Extract the validation errors from a request.
+      const errors = validationResult(req);
 
-<ul>
- <li>Create an object when its related objects do not yet exist (for example, a book where the author object hasn't been defined).</li>
- <li>Delete an object that is still being used by another object (so for example, deleting a <code>Genre</code> that is still being used by a <code>Book</code>).</li>
-</ul>
+      if (!errors.isEmpty()) {
+          // There are errors. Render form again with sanitized values/errors messages.
+          // Error messages can be returned in an array using `errors.array()`.
+          }
+      else {
+          // Data from form is valid.
+      }
+  }
+  ```
 
-<p>For this project we will simplify the implementation by stating that a form can only:</p>
+  We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Validation Result API](https://github.com/ctavan/express-validator#validation-result-api) for more information.
 
-<ul>
- <li>Create an object using objects that already exist (so users will have to create any required <code>Author</code> and <code>Genre</code> instances before attempting to create any <code>Book</code> objects).</li>
- <li>Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a <code>Book</code> until all associated <code>BookInstance</code> objects have been deleted).</li>
-</ul>
+The validation and sanitization chains are middleware that should be passed to the Express route handler (we do this indirectly, via the controller). When the middleware runs, each validator/sanitizer is run in the order specified.
 
-<div class="note">
-<p><strong>Note:</strong> A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).</p>
-</div>
+We'll cover some real examples when we implement the _LocalLibrary_ forms below.
 
-<h3 id="Routes">Routes</h3>
+### Form design
 
-<p>In order to implement our form handling code, we will need two routes that have the same URL pattern. The first (<code>GET</code>) route is used to display a new empty form for creating the object. The second route (<code>POST</code>) is used for validating data entered by the user, and then saving the information and redirecting to the detail page (if the data is valid) or redisplaying the form with errors (if the data is invalid).</p>
+Many of the models in the library are related/dependent—for example, a `Book` _requires_ an `Author`, and _may_ also have one or more `Genres`. This raises the question of how we should handle the case where a user wishes to:
 
-<p>We have already created the routes for all our model's create pages in <strong>/routes/catalog.js</strong> (in a <a href="/ja/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>). For example, the genre routes are shown below:</p>
+- Create an object when its related objects do not yet exist (for example, a book where the author object hasn't been defined).
+- Delete an object that is still being used by another object (so for example, deleting a `Genre` that is still being used by a `Book`).
 
-<pre class="brush: js notranslate">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
+For this project we will simplify the implementation by stating that a form can only:
+
+- Create an object using objects that already exist (so users will have to create any required `Author` and `Genre` instances before attempting to create any `Book` objects).
+- Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a `Book` until all associated `BookInstance` objects have been deleted).
+
+> **Note:** A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
+
+### Routes
+
+In order to implement our form handling code, we will need two routes that have the same URL pattern. The first (`GET`) route is used to display a new empty form for creating the object. The second route (`POST`) is used for validating data entered by the user, and then saving the information and redirecting to the detail page (if the data is valid) or redisplaying the form with errors (if the data is invalid).
+
+We have already created the routes for all our model's create pages in **/routes/catalog.js** (in a [previous tutorial](/ja/docs/Learn/Server-side/Express_Nodejs/routes)). For example, the genre routes are shown below:
+
+```js
+// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get('/genre/create', genre_controller.genre_create_get);
 
 // POST request for creating Genre.
 router.post('/genre/create', genre_controller.genre_create_post);
-</pre>
+```
 
-<h2 id="Express_forms_subarticles">Express forms subarticles</h2>
+## Express forms subarticles
 
-<p>The following sub articles will take us through the process of adding the required forms to our example application. You need to read and work through each one in turn, before moving on to the next one.</p>
+The following sub articles will take us through the process of adding the required forms to our example application. You need to read and work through each one in turn, before moving on to the next one.
 
-<ol>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form">Create Genre form</a> — Defining a page to create <code>Genre</code> objects.</li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">Create Author form</a> — Defining a page to create <code>Author</code> objects.</li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form">Create Book form</a> — Defining a page/form to create <code>Book</code> objects.</li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form">Create BookInstance form</a> — Defining a page/form to create <code>BookInstance</code> objects.</li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">Delete Author form</a> — Defining a page to delete <code>Author</code> objects.</li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">Update Book form</a> — Defining page to update <code>Book</code> objects.</li>
-</ol>
+1.  [Create Genre form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — Defining a page to create `Genre` objects.
+2.  [Create Author form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — Defining a page to create `Author` objects.
+3.  [Create Book form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — Defining a page/form to create `Book` objects.
+4.  [Create BookInstance form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — Defining a page/form to create `BookInstance` objects.
+5.  [Delete Author form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — Defining a page to delete `Author` objects.
+6.  [Update Book form](/ja/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — Defining page to update `Book` objects.
 
-<h2 id="Challenge_yourself">Challenge yourself</h2>
+## Challenge yourself
 
-<p>Implement the delete pages for the <code>Book</code>, <code>BookInstance</code>, and <code>Genre</code> models, linking them from the associated detail pages in the same way as our <em>Author delete </em>page. The pages should follow the same design approach:</p>
+Implement the delete pages for the `Book`, `BookInstance`, and `Genre` models, linking them from the associated detail pages in the same way as our _Author delete_ page. The pages should follow the same design approach:
 
-<ul>
- <li>If there are references to the object from other objects, then these other objects should be displayed along with a note that this record can't be deleted until the listed objects have been deleted.</li>
- <li>If there are no other references to the object then the view should prompt to delete it. If the user presses the <strong>Delete</strong> button, the record should then be deleted.</li>
-</ul>
+- If there are references to the object from other objects, then these other objects should be displayed along with a note that this record can't be deleted until the listed objects have been deleted.
+- If there are no other references to the object then the view should prompt to delete it. If the user presses the **Delete** button, the record should then be deleted.
 
-<p>A few tips:</p>
+A few tips:
 
-<ul>
- <li>Deleting a <code>Genre</code> is just like deleting an <code>Author</code> as both objects are dependencies of <code>Book</code> (so in both cases you can delete the object only when the associated books are deleted).</li>
- <li>Deleting a <code>Book</code> is also similar, but you need to check that there are no associated <code>BookInstances</code>.</li>
- <li>Deleting a <code>BookInstance</code> is the easiest of all because there are no dependent objects. In this case, you can just find the associated record and delete it.</li>
-</ul>
+- Deleting a `Genre` is just like deleting an `Author` as both objects are dependencies of `Book` (so in both cases you can delete the object only when the associated books are deleted).
+- Deleting a `Book` is also similar, but you need to check that there are no associated `BookInstances`.
+- Deleting a `BookInstance` is the easiest of all because there are no dependent objects. In this case, you can just find the associated record and delete it.
 
-<p>Implement the update pages for the <code>BookInstance</code>, <code>Author</code>, and <code>Genre</code> models, linking them from the associated detail pages in the same way as our <em>Book update </em>page.</p>
+Implement the update pages for the `BookInstance`, `Author`, and `Genre` models, linking them from the associated detail pages in the same way as our _Book update_ page.
 
-<p>A few tips:</p>
+A few tips:
 
-<ul>
- <li>The <em>Book update page</em> we just implemented is the hardest! The same patterns can be used for the update pages for the other objects.</li>
- <li>The <code>Author</code> date of death and date of birth fields and the <code>BookInstance</code> due_date field are the wrong format to input into the date input field on the form (it requires data in form "YYYY-MM-DD"). The easiest way to get around this is to define a new virtual property for the dates that formats the dates appropriately, and then use this field in the associated view templates.</li>
- <li>If you get stuck, there are examples of the update pages in <a href="https://github.com/mdn/express-locallibrary-tutorial">the example here</a>.</li>
-</ul>
+- The _Book update page_ we just implemented is the hardest! The same patterns can be used for the update pages for the other objects.
+- The `Author` date of death and date of birth fields and the `BookInstance` due_date field are the wrong format to input into the date input field on the form (it requires data in form "YYYY-MM-DD"). The easiest way to get around this is to define a new virtual property for the dates that formats the dates appropriately, and then use this field in the associated view templates.
+- If you get stuck, there are examples of the update pages in [the example here](https://github.com/mdn/express-locallibrary-tutorial).
 
-<h2 id="まとめ">まとめ</h2>
+## まとめ
 
-<p>NPM の Express、Node、およびサードパーティのパッケージは、Web サイトにフォームを追加するために必要なすべてを提供します。この記事では、Pug を使用してフォームを作成する方法、express-validator を使用して入力を検証およびサニタイズする方法、およびデータベース内のレコードを追加、削除、および変更する方法を学びました。</p>
+NPM の Express、Node、およびサードパーティのパッケージは、Web サイトにフォームを追加するために必要なすべてを提供します。この記事では、Pug を使用してフォームを作成する方法、express-validator を使用して入力を検証およびサニタイズする方法、およびデータベース内のレコードを追加、削除、および変更する方法を学びました。
 
-<p>これで、基本的なフォームとフォーム処理コードを自分の Node Web サイトに追加する方法を理解したはずです。</p>
+これで、基本的なフォームとフォーム処理コードを自分の Node Web サイトに追加する方法を理解したはずです。
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li><a href="https://www.npmjs.com/package/express-validator">express-validator</a> (npm ドキュメント).</li>
-</ul>
+- [express-validator](https://www.npmjs.com/package/express-validator) (npm ドキュメント).
 
-<p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}</p>
+{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
-<h2 id="このモジュール">このモジュール</h2>
+## このモジュール
 
-<ul>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node のイントロダクション</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/development_environment">Node 開発環境の設定</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express チュートリアル: 地域図書館の Web サイト</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express チュートリアル Part 2: スケルトン Web サイトの作成</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/mongoose">Express チュートリアル Part 3: データベースを使う (Mongoose を使用)</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/routes">Express チュートリアル Part 4: ルートとコントローラ</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express チュートリアル Part 5: ライブラリデータの表示</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms">Express チュートリアル Part 6: フォームの操作</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/deployment">Express チュートリアル Part 7: プロダクションへのデプロイ</a></li>
-</ul>
+- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express チュートリアル: 地域図書館の Web サイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express チュートリアル Part 2: スケルトン Web サイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

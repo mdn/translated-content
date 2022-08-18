@@ -17,394 +17,374 @@ tags:
   - 開発環境
 translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}</div>
+Express の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。
 
-<p class="summary">Express の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。</p>
+| 前提条件: | 端末/コマンドラインを開く方法を知っている。開発用コンピューターの OS にソフトウェアパッケージをインストールする方法を知っている。 |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 目標:     | コンピューター上に Express 用の開発環境をセットアップします。                                                                     |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>端末/コマンドラインを開く方法を知っている。開発用コンピューターの OS にソフトウェアパッケージをインストールする方法を知っている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>コンピューター上に Express 用の開発環境をセットアップします。</td>
-  </tr>
- </tbody>
-</table>
+## Express 開発環境概要
 
-<h2 id="Express_開発環境概要">Express 開発環境概要</h2>
+Node と Express のおかげでウェブアプリケーションの開発を始めるためにコンピューターをセットアップすることが非常に簡単になります。このセクションでは必要なツールの概要、Ubuntu、macOS、および Windows に Node (および Express) をインストールするための最も簡単な方法について説明し、インストールをテストする方法を示します。
 
-<p>Node と Express のおかげでウェブアプリケーションの開発を始めるためにコンピューターをセットアップすることが非常に簡単になります。このセクションでは必要なツールの概要、Ubuntu、macOS、および Windows に Node (および Express) をインストールするための最も簡単な方法について説明し、インストールをテストする方法を示します。</p>
+### Express 開発環境とは何か?
 
-<h3 id="Express_開発環境とは何か">Express 開発環境とは何か?</h3>
+_Express_ 開発環境には _Nodejs_、_NPM_ パッケージマネージャー、および (オプションで) ローカルコンピューターに _Express Application Generator_ がインストールされています。
 
-<p><em>Express</em> 開発環境には <em>Nodejs</em>、<em>NPM</em> パッケージマネージャー、および (オプションで) ローカルコンピューターに <em>Express Application Generator</em> がインストールされています。</p>
+_Node_ と _NPM_ パッケージマネージャーは、準備されたバイナリパッケージ、インストーラー、オペレーティングシステムのパッケージマネージャー、またはソースから一緒にインストールされます (次のセクションを参照)。 _Express_ は、_NPM_ によって、個々の _Express_ ウェブアプリケーションの依存関係として (テンプレートエンジン、データベースドライバー、認証ミドルウェア、静的ファイルを提供するためのミドルウェアなどの他のライブラリと共に) インストールされます。
 
-<p><em>Node</em> と <em>NPM</em> パッケージマネージャーは、準備されたバイナリパッケージ、インストーラー、オペレーティングシステムのパッケージマネージャー、またはソースから一緒にインストールされます (次のセクションを参照)。 <em>Express</em> は、<em>NPM</em> によって、個々の <em>Express</em> ウェブアプリケーションの依存関係として (テンプレートエンジン、データベースドライバー、認証ミドルウェア、静的ファイルを提供するためのミドルウェアなどの他のライブラリと共に) インストールされます。</p>
+_NPM_ は [MVC パターン](/ja/docs/Glossary/MVC)に従ったスケルトンの _Express_ ウェブアプリケーションを作成するための便利なツールである *Express Application Generator*を (グローバルに) インストールするためにも使用できます。Express を使用するアプリを作成したり、同じアーキテクチャ上のレイアウトや依存関係を持つ Express アプリを構築したりするためにこのツールを使用する必要はないため、アプリケーションジェネレーターはオプションです。ただし、使い始めるのがはるかに簡単になり、モジュール式のアプリケーション構造が促進されるため、これを使用します。
 
-<p><em>NPM</em> は <a href="/ja/docs/Glossary/MVC">MVC パターン</a>に従ったスケルトンの <em>Express</em> ウェブアプリケーションを作成するための便利なツールである <em>Express Application Generator</em>を (グローバルに) インストールするためにも使用できます。Express を使用するアプリを作成したり、同じアーキテクチャ上のレイアウトや依存関係を持つ Express アプリを構築したりするためにこのツールを使用する必要はないため、アプリケーションジェネレーターはオプションです。ただし、使い始めるのがはるかに簡単になり、モジュール式のアプリケーション構造が促進されるため、これを使用します。</p>
+> **Note:** **メモ:** 他のウェブフレームワークとは異なり、開発環境には独立した開発用の ウェブサーバーは含まれていません。_Node/Express_ では、ウェブアプリケーションが独自のウェブサーバーを作成して実行します。
 
-<div class="note">
-<p><strong>メモ:</strong> 他のウェブフレームワークとは異なり、開発環境には独立した開発用の ウェブサーバーは含まれていません。<em>Node/Express</em> では、ウェブアプリケーションが独自のウェブサーバーを作成して実行します。</p>
-</div>
+[テキストエディタ](/ja/docs/Learn/Common_questions/Available_text_editors)やコード編集用の IDE、コードの異なるバージョンを安全に管理するための [Git](https://git-scm.com/) などのソース管理マネジメントツールなど、一般的な開発環境の一部である他の周辺ツールもあります。これらの種類のツール (特にテキストエディタ) が既にインストールされていると仮定しています。
 
-<p><a href="/ja/docs/Learn/Common_questions/Available_text_editors">テキストエディタ</a>やコード編集用の IDE、コードの異なるバージョンを安全に管理するための <a href="https://git-scm.com/">Git</a> などのソース管理マネジメントツールなど、一般的な開発環境の一部である他の周辺ツールもあります。これらの種類のツール (特にテキストエディタ) が既にインストールされていると仮定しています。</p>
+### どのオペレーティングシステムがサポートされていますか？
 
-<h3 id="どのオペレーティングシステムがサポートされていますか？">どのオペレーティングシステムがサポートされていますか？</h3>
+_Node_ は Windows、macOS、Linux の多くの「フレーバー」、Docker などで実行できます (nodejs の[ダウンロード](https://nodejs.org/ja/download/)ページに完全なリストがあります)。ほとんどのパーソナルコンピューターは開発中に Node を実行するのに必要な性能を持っているはずです。_Express_ は _Node_ 環境で実行されるため、_Node_ を実行する任意のプラットフォームで実行できます。
 
-<p><em>Node </em>は Windows、macOS、Linux の多くの「フレーバー」、Docker などで実行できます (nodejs の<a href="https://nodejs.org/ja/download/">ダウンロード</a>ページに完全なリストがあります)。ほとんどのパーソナルコンピューターは開発中に Node を実行するのに必要な性能を持っているはずです。<em>Express</em> は <em>Node</em> 環境で実行されるため、<em>Node</em> を実行する任意のプラットフォームで実行できます。</p>
+この記事では Windows、macOS、および Ubuntu Linux のセットアップ手順を説明します。
 
-<p>この記事では Windows、macOS、および Ubuntu Linux のセットアップ手順を説明します。</p>
+### どのバージョンの Node/Express を使用すべきですか？
 
-<h3 id="どのバージョンの_NodeExpress_を使用すべきですか？">どのバージョンの Node/Express を使用すべきですか？</h3>
+たくさんの [Node のリリース](https://nodejs.org/ja/blog/release/)があります - 新しいリリースにはバグ修正、ECMAScript (JavaScript) 標準のより最新のバージョンのサポート、そして Node API の改良が含まれています。
 
-<p>たくさんの <a href="https://nodejs.org/ja/blog/release/">Node のリリース</a>があります - 新しいリリースにはバグ修正、ECMAScript (JavaScript) 標準のより最新のバージョンのサポート、そして Node API の改良が含まれています。</p>
+一般的には最新の _LTS_ (長期サポート) リリースを使用するべきです。比較的最新の機能を持ちながら (そして現在も積極的にメンテナンスされています)、"最新の" リリースより安定しているからです。LTS バージョンに存在しない機能が必要な場合は、*最新版*リリースを使用してください。
 
-<p>一般的には最新の <em>LTS </em>(長期サポート) リリースを使用するべきです。比較的最新の機能を持ちながら (そして現在も積極的にメンテナンスされています)、"最新の" リリースより安定しているからです。LTS バージョンに存在しない機能が必要な場合は、<em>最新版</em>リリースを使用してください。</p>
+_Express_ は常に最新のバージョンを使うべきです。
 
-<p><em>Express </em>は常に最新のバージョンを使うべきです。</p>
+### データベースやその他の依存関係についてはどうですか？
 
-<h3 id="データベースやその他の依存関係についてはどうですか？">データベースやその他の依存関係についてはどうですか？</h3>
+データベースドライバー、テンプレートエンジン、認証エンジンなどのその他の依存関係はアプリケーションの一部であり、NPM パッケージマネージャーを使用してアプリケーション環境にインポートされます。それらについては、後のアプリ固有の記事で説明します。
 
-<p>データベースドライバー、テンプレートエンジン、認証エンジンなどのその他の依存関係はアプリケーションの一部であり、NPM パッケージマネージャーを使用してアプリケーション環境にインポートされます。それらについては、後のアプリ固有の記事で説明します。</p>
+## Node のインストール
 
-<h2 id="Node_のインストール">Node のインストール</h2>
+_Express_ を使用するには、まず _Nodejs_ と [Node Package Manager (NPM)](https://docs.npmjs.com/) をオペレーティングシステムにインストールする必要があります。以下のセクションでは Ubuntu Linux 18.04、macOS、および Windows 10 に Long Term Supported (LTS) バージョンの Nodejs をインストールする最も簡単な方法について説明します。
 
-<p><em>Express </em>を使用するには、まず <em>Nodejs </em>と <a href="https://docs.npmjs.com/">Node Package Manager (NPM)</a> をオペレーティングシステムにインストールする必要があります。以下のセクションでは Ubuntu Linux 18.04、macOS、および Windows 10 に Long Term Supported (LTS) バージョンの Nodejs をインストールする最も簡単な方法について説明します。</p>
+> **Note:** **Tip:** 以下のセクションは、ターゲット OS プラットフォームに _Node_ と _NPM_ をインストールする最も簡単な方法を示しています。他の OS を使用している場合、または現在のプラットフォームで他の方法を使用したい場合は、[パッケージマネージャーによる Node.js のインストール](https://nodejs.org/ja/download/package-manager/) (nodejs.org) を参照してください。
 
-<div class="note">
-<p><strong>Tip:</strong> 以下のセクションは、ターゲット OS プラットフォームに <em>Node </em>と <em>NPM </em>をインストールする最も簡単な方法を示しています。他の OS を使用している場合、または現在のプラットフォームで他の方法を使用したい場合は、<a href="https://nodejs.org/ja/download/package-manager/">パッケージマネージャーによる Node.js のインストール</a> (nodejs.org) を参照してください。</p>
-</div>
+### macOS および Windows
 
-<h3 id="macOS_および_Windows">macOS および Windows</h3>
+Windows と macOS への _Node_ と _NPM_ のインストールは、提供されているインストーラーを使用することができるため、簡単です。
 
-<p>Windows と macOS への <em>Node </em>と <em>NPM </em>のインストールは、提供されているインストーラーを使用することができるため、簡単です。</p>
+1.  必要なインストーラーをダウンロードします
 
-<ol>
- <li>必要なインストーラーをダウンロードします
-  <ol>
-   <li><a href="https://nodejs.org/ja/">https://nodejs.org/ja/</a> に進みます</li>
-   <li>"ほとんどのユーザーに推奨" である LTS ビルドをダウンロードするためのボタンを選択してください。</li>
-  </ol>
- </li>
- <li>ダウンロードしたファイルをダブルクリックし、インストールの指示に従って Node をインストールします。</li>
-</ol>
+    1.  <https://nodejs.org/ja/> に進みます
+    2.  "ほとんどのユーザーに推奨" である LTS ビルドをダウンロードするためのボタンを選択してください。
 
-<h3 id="Ubuntu_18.04">Ubuntu 18.04</h3>
+2.  ダウンロードしたファイルをダブルクリックし、インストールの指示に従って Node をインストールします。
 
-<p>Node 10.x の最新の LTS バージョンをインストールする最も簡単な方法は、<a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">パッケージマネージャー</a>を使ってそれを Ubuntu <em>バイナリ配布</em>リポジトリーから入手することです。これはあなたの端末で以下の2つのコマンドを実行することによって非常に簡単に行うことができます。</p>
+### Ubuntu 18.04
 
-<pre class="brush: bash"><code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs</code>
-</pre>
+Node 10.x の最新の LTS バージョンをインストールする最も簡単な方法は、[パッケージマネージャー](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)を使ってそれを Ubuntu *バイナリ配布*リポジトリーから入手することです。これはあなたの端末で以下の 2 つのコマンドを実行することによって非常に簡単に行うことができます。
 
-<div class="warning">
-<p><strong>警告:</strong> それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。</p>
-</div>
+```bash
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
-<ol>
-</ol>
+> **Warning:** **警告:** それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。
 
-<h3 id="Nodejs_および_NPM_インストールのテスト">Nodejs および NPM インストールのテスト</h3>
+### Nodejs および NPM インストールのテスト
 
-<p>Node がインストールされていることをテストする最も簡単な方法は、ターミナル/コマンドプロンプトで "version" コマンドを実行し、バージョン文字列が返されることを確認することです。</p>
+Node がインストールされていることをテストする最も簡単な方法は、ターミナル/コマンドプロンプトで "version" コマンドを実行し、バージョン文字列が返されることを確認することです。
 
-<pre class="brush: bash">&gt;node -v
-v10.16.0</pre>
+```bash
+>node -v
+v10.16.0
+```
 
-<p><em>Nodejs </em>パッケージマネージャー <em>NPM</em> もインストールされているはずで、同じ方法でテストできます。</p>
+_Nodejs_ パッケージマネージャー _NPM_ もインストールされているはずで、同じ方法でテストできます。
 
-<pre class="brush: bash">&gt;npm -v
-6.9.0</pre>
-
-<p>もう少し刺激的なテストとして、ブラウザーで正しい URL にアクセスしたときにブラウザーに「Hello World」を単純に出力する、非常に基本的な "純粋な Node" サーバーを作成しましょう。</p>
-
-<ol>
- <li>次のテキストを <strong>hellonode.js</strong> というファイルにコピーします。これは純粋な Node 関数 (Express からは何もしていません) といくつかの ES6 構文を使用します。
-
-  <pre class="brush: js">//HTTP モジュールを読み込む
-const http = require("http");
-<code>const hostname = '127.0.0.1';
-const port = 3000;
-
-//HTTP サーバーを作成し、3000 番ポートでリクエストを待機します。
-const server = http.createServer((req, res) =&gt; {
-
-  //HTTP ステータスとコンテンツタイプを持つ応答 HTTP ヘッダーを設定します。
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
-
-//3000 番ポートでリクエストを待機し、受信したときにログ出力するコールバック関数
-server.listen(port, hostname, () =&gt; {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});</code>
-
-</pre>
-
-  <p>このコードは "http" モジュールをインポートし、それを使用して 3000 番ポートで HTTP リクエストを待機するサーバーを作成 (<code>createServer()</code>) します。次に、スクリプトはサーバーをテストするために使用できるブラウザー URL についてのメッセージをコンソールに出力します。 <code>createServer()</code> 関数は、HTTP リクエストを受信したときに呼び出されるコールバック関数を引数として取ります。これは HTTP ステータスコード 200 ("OK") とプレーンテキスト "Hello World" のレスポンスを返します。</p>
-
-  <div class="note">
-  <p><strong>メモ:</strong>  このコードが何をしているのか正確に理解できなくても心配しないでください。Express を使い始めたら、コードについて詳しく説明します。</p>
-  </div>
- </li>
- <li>コマンドプロンプトで <code>hellonode.js</code> ファイルと同じディレクトリに移動し、次のようにスクリプト名とともに <code>node</code> を呼び出してサーバーを起動します。
-  <pre class="brush: bash">&gt;node hellonode.js
-Server running at http://127.0.0.1:3000/
-</pre>
- </li>
- <li>http://127.0.0.1:3000 の URL に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World" を表示するはずです。</li>
-</ol>
-
-<h2 id="NPM_の使用">NPM の使用</h2>
-
-<p>Node 自体の次に、<a href="https://docs.npmjs.com/">NPM</a> は Node アプリケーションを操作するための最も重要なツールです。NPM は、アプリケーションが開発、テスト、および/または運用に必要なパッケージ(JavaScript ライブラリ) を取得するために使用されます。また、開発プロセスで使用されるテストやツールを実行するために使用されることもあります。</p>
-
-<div class="note">
-<p><strong>メモ:</strong> Node の観点からすると、Express は NPM を使用してインストールしてから独自のコードで必要とするもう1つのパッケージです。</p>
-</div>
-
-<p>手動で NPM を使用して、必要な各パッケージを別々に取り出すことができます。通常、代わりに <a href="https://docs.npmjs.com/files/package.json">package.json</a> というプレーンテキストの定義ファイルを使用して依存関係を管理します。このファイルにはパッケージの名前、バージョン、説明、実行する初期ファイル、プロダクション依存関係、開発依存関係、それが動作可能な <em>Node </em>のバージョンなど、特定のJavaScript "package" に対するすべての依存関係が一覧表示されます。<strong>package.json</strong> ファイルには、NPM がアプリケーションを取得して実行するために必要なものがすべて含まれている必要があります (再利用可能なライブラリを作成している場合は、この定義を使用してパッケージを npm リポジトリーにアップロードし、他のユーザが利用できるようにします)。</p>
-
-<h3 id="依存関係の追加">依存関係の追加</h3>
-
-<p>次の手順では NPM を使用してパッケージをダウンロードし、それをプロジェクトの依存関係に保存してから、それを Node アプリケーションで要求する方法を示します。</p>
-
-<div class="note">
-<p><strong>メモ:</strong> ここでは Express パッケージを取得してインストールするための手順を示します。後で、このパッケージなどが Express Application Generator を使用してすでにどのように指定されているかを示します。このセクションは NPM がどのように機能するのか、および Application Generator によって何が作成されているのかを理解するのに役立ちます。</p>
-</div>
-
-<ol>
- <li>
-  <p>まず、新しいアプリケーション用のディレクトリーを作成し、そこに移動します。</p>
-
-  <pre class="brush: bash">mkdir myapp
-cd myapp</pre>
- </li>
- <li>
-  <p>アプリケーション用の <strong>package.json</strong> ファイルを作成するには、npm <code>init</code> コマンドを使用します。このコマンドはアプリケーションの名前とバージョン、初期エントリポイントファイルの名前 (デフォルトでは <strong>index.js</strong>) など、さまざまなことを要求します。今のところ、デフォルトをそのまま使用します。</p>
-
-  <pre class="brush: bash">npm init</pre>
-
-  <p><strong>package.json</strong> ファイル (<code>cat package.json</code>) を表示すると、受け入れたデフォルトが表示され、最後にライセンスが表示されます。</p>
-
-  <pre class="brush: json">{
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
-  },
-  "author": "",
-  "license": "ISC"
-}
-</pre>
- </li>
- <li>
-  <p><code>myapp</code> ディレクトリーに Express をインストールし、それをあなたの package.json ファイルの依存関係リストに保存してください。</p>
-
-  <pre class="brush: bash">  npm install express --save
-</pre>
- </li>
- <li>
-  <p><strong>package.json</strong> の依存関係セクションが <strong>package.json</strong> ファイルの最後に表示され、Express が含まれます。</p>
-
-  <pre class="brush: json">{
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-<strong>  "dependencies": {
-    "express": "^4.16.3"
-  }</strong>
-}
-</pre>
- </li>
- <li>このライブラリを使用するには、index.js ファイルで以下に示すように <code>require()</code> 関数を呼び出します。"myapp" アプリケーションディレクトリーのルートにファイルを作り、以下の内容を記述します。
-  <pre><code><strong>const express = require('express')</strong>
-const app = express();
-
-app.get('/', (req, res) =&gt; {
-  res.send('Hello World!')
-});
-
-app.listen(</code>8000<code>, () =&gt; {
-  console.log('Example app listening on port </code>8000<code>!')
-});</code>
-</pre>
-
-  <p>このコードは、最小限の「HelloWorld」Express ウェブアプリケーションを示しています。これは「express」モジュールをインポートし、それを使用して 8000 番ポートで HTTP リクエストを待機するサーバ ー(<code>app</code>) を作成し、サーバーをテストするために使用できるブラウザー URL を説明するメッセージをコンソールに出力します。 <code>app.get()</code> 関数は、指定された URLパス ('/') で HTTP <code>GET</code> リクエストにのみ応答します。この場合、関数を呼び出して <em>Hello World!</em> メッセージを送信します。</p>
- </li>
- <li>コマンドプロンプトでスクリプトを使用して node を呼び出すことでサーバーを起動できます。
-  <pre class="brush: bash">&gt;node index.js
-Example app listening on port 8000
-</pre>
- </li>
- <li>URL (<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>) に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World!" を表示するはずです。</li>
-</ol>
-
-<h3 id="開発の依存関係">開発の依存関係</h3>
-
-<p>依存関係が開発中にのみ使用される場合は、代わりに "開発依存関係" として保存する必要があります (パッケージユーザーが本番環境にインストールする必要がないようにするため)。たとえば、一般的な JavaScript Linting ツールの <a href="http://eslint.org/">eslint</a> を使用するには、次のように NPM を呼び出します。</p>
-
-<pre class="brush: bash"><code>npm install eslint --save-dev</code></pre>
-
-<p>次のエントリがアプリケーションの <strong>package.json</strong> に追加されます。</p>
-
-<pre class="brush: js">  "devDependencies": {
+```bash
+>npm -v
+6.9.0
+```
+
+もう少し刺激的なテストとして、ブラウザーで正しい URL にアクセスしたときにブラウザーに「Hello World」を単純に出力する、非常に基本的な "純粋な Node" サーバーを作成しましょう。
+
+1.  次のテキストを **hellonode.js** というファイルにコピーします。これは純粋な Node 関数 (Express からは何もしていません) といくつかの ES6 構文を使用します。
+
+    ```js
+    //HTTP モジュールを読み込む
+    const http = require("http");
+    const hostname = '127.0.0.1';
+    const port = 3000;
+
+    //HTTP サーバーを作成し、3000 番ポートでリクエストを待機します。
+    const server = http.createServer((req, res) => {
+
+      //HTTP ステータスとコンテンツタイプを持つ応答 HTTP ヘッダーを設定します。
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Hello World\n');
+    });
+
+    //3000 番ポートでリクエストを待機し、受信したときにログ出力するコールバック関数
+    server.listen(port, hostname, () => {
+      console.log(`Server running at http://${hostname}:${port}/`);
+    });
+    ```
+
+    このコードは "http" モジュールをインポートし、それを使用して 3000 番ポートで HTTP リクエストを待機するサーバーを作成 (`createServer()`) します。次に、スクリプトはサーバーをテストするために使用できるブラウザー URL についてのメッセージをコンソールに出力します。 `createServer()` 関数は、HTTP リクエストを受信したときに呼び出されるコールバック関数を引数として取ります。これは HTTP ステータスコード 200 ("OK") とプレーンテキスト "Hello World" のレスポンスを返します。
+
+    > **Note:** **メモ:** このコードが何をしているのか正確に理解できなくても心配しないでください。Express を使い始めたら、コードについて詳しく説明します。
+
+2.  コマンドプロンプトで `hellonode.js` ファイルと同じディレクトリに移動し、次のようにスクリプト名とともに `node` を呼び出してサーバーを起動します。
+
+    ```bash
+    >node hellonode.js
+    Server running at http://127.0.0.1:3000/
+    ```
+
+3.  http\://127.0.0.1:3000 の URL に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World" を表示するはずです。
+
+## NPM の使用
+
+Node 自体の次に、[NPM](https://docs.npmjs.com/) は Node アプリケーションを操作するための最も重要なツールです。NPM は、アプリケーションが開発、テスト、および/または運用に必要なパッケージ(JavaScript ライブラリ) を取得するために使用されます。また、開発プロセスで使用されるテストやツールを実行するために使用されることもあります。
+
+> **Note:** **メモ:** Node の観点からすると、Express は NPM を使用してインストールしてから独自のコードで必要とするもう 1 つのパッケージです。
+
+手動で NPM を使用して、必要な各パッケージを別々に取り出すことができます。通常、代わりに [package.json](https://docs.npmjs.com/files/package.json) というプレーンテキストの定義ファイルを使用して依存関係を管理します。このファイルにはパッケージの名前、バージョン、説明、実行する初期ファイル、プロダクション依存関係、開発依存関係、それが動作可能な _Node_ のバージョンなど、特定の JavaScript "package" に対するすべての依存関係が一覧表示されます。**package.json** ファイルには、NPM がアプリケーションを取得して実行するために必要なものがすべて含まれている必要があります (再利用可能なライブラリを作成している場合は、この定義を使用してパッケージを npm リポジトリーにアップロードし、他のユーザが利用できるようにします)。
+
+### 依存関係の追加
+
+次の手順では NPM を使用してパッケージをダウンロードし、それをプロジェクトの依存関係に保存してから、それを Node アプリケーションで要求する方法を示します。
+
+> **Note:** **メモ:** ここでは Express パッケージを取得してインストールするための手順を示します。後で、このパッケージなどが Express Application Generator を使用してすでにどのように指定されているかを示します。このセクションは NPM がどのように機能するのか、および Application Generator によって何が作成されているのかを理解するのに役立ちます。
+
+1.  まず、新しいアプリケーション用のディレクトリーを作成し、そこに移動します。
+
+    ```bash
+    mkdir myapp
+    cd myapp
+    ```
+
+2.  アプリケーション用の **package.json** ファイルを作成するには、npm `init` コマンドを使用します。このコマンドはアプリケーションの名前とバージョン、初期エントリポイントファイルの名前 (デフォルトでは **index.js**) など、さまざまなことを要求します。今のところ、デフォルトをそのまま使用します。
+
+    ```bash
+    npm init
+    ```
+
+    **package.json** ファイル (`cat package.json`) を表示すると、受け入れたデフォルトが表示され、最後にライセンスが表示されます。
+
+    ```json
+    {
+      "name": "myapp",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC"
+    }
+    ```
+
+3.  `myapp` ディレクトリーに Express をインストールし、それをあなたの package.json ファイルの依存関係リストに保存してください。
+
+    ```bash
+      npm install express --save
+    ```
+
+4.  **package.json** の依存関係セクションが **package.json** ファイルの最後に表示され、Express が含まれます。
+
+    ```json
+    {
+      "name": "myapp",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "express": "^4.16.3"
+      }
+    }
+    ```
+
+5.  このライブラリを使用するには、index.js ファイルで以下に示すように `require()` 関数を呼び出します。"myapp" アプリケーションディレクトリーのルートにファイルを作り、以下の内容を記述します。
+
+    ```
+    const express = require('express')
+    const app = express();
+
+    app.get('/', (req, res) => {
+      res.send('Hello World!')
+    });
+
+    app.listen(8000, () => {
+      console.log('Example app listening on port 8000!')
+    });
+    ```
+
+    このコードは、最小限の「HelloWorld」Express ウェブアプリケーションを示しています。これは「express」モジュールをインポートし、それを使用して 8000 番ポートで HTTP リクエストを待機するサーバ ー(`app`) を作成し、サーバーをテストするために使用できるブラウザー URL を説明するメッセージをコンソールに出力します。 `app.get()` 関数は、指定された URL パス ('/') で HTTP `GET` リクエストにのみ応答します。この場合、関数を呼び出して _Hello World!_ メッセージを送信します。
+
+6.  コマンドプロンプトでスクリプトを使用して node を呼び出すことでサーバーを起動できます。
+
+    ```bash
+    >node index.js
+    Example app listening on port 8000
+    ```
+
+7.  URL (<http://127.0.0.1:8000/>) に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World!" を表示するはずです。
+
+### 開発の依存関係
+
+依存関係が開発中にのみ使用される場合は、代わりに "開発依存関係" として保存する必要があります (パッケージユーザーが本番環境にインストールする必要がないようにするため)。たとえば、一般的な JavaScript Linting ツールの [eslint](http://eslint.org/) を使用するには、次のように NPM を呼び出します。
+
+```bash
+npm install eslint --save-dev
+```
+
+次のエントリがアプリケーションの **package.json** に追加されます。
+
+```js
+  "devDependencies": {
     "eslint": "^4.12.1"
   }
-</pre>
+```
 
-<div class="note">
-<p><strong>メモ:</strong> "<a href="https://en.wikipedia.org/wiki/Lint_(software)">Lint</a>" は一連のコーディングのベストプラクティスに準拠しているかどうかを認識して報告するために、ソフトウェアで静的分析を実行するツールです。</p>
-</div>
+> **Note:** **メモ:** "[Lint](<https://en.wikipedia.org/wiki/Lint_(software)>)" は一連のコーディングのベストプラクティスに準拠しているかどうかを認識して報告するために、ソフトウェアで静的分析を実行するツールです。
 
-<h3 id="タスクの実行">タスクの実行</h3>
+### タスクの実行
 
-<p>依存関係の定義と取得に加えて、<strong>package.json</strong> ファイルに名前付きスクリプトを定義し、NPM を呼び出してそれらを <a href="https://docs.npmjs.com/cli/run-script">run-script</a> コマンドで実行することもできます。このアプローチは、実行中のテストや開発の一部を自動化したり、ツールチェーン (たとえば JavaScript の縮小、画像の縮小、コードの LINT/分析などのツールの実行) を構築したりするためによく使用されます。</p>
+依存関係の定義と取得に加えて、**package.json** ファイルに名前付きスクリプトを定義し、NPM を呼び出してそれらを [run-script](https://docs.npmjs.com/cli/run-script) コマンドで実行することもできます。このアプローチは、実行中のテストや開発の一部を自動化したり、ツールチェーン (たとえば JavaScript の縮小、画像の縮小、コードの LINT/分析などのツールの実行) を構築したりするためによく使用されます。
 
-<div class="note">
-<p><strong>メモ:</strong> <a href="http://gulpjs.com/">Gulp</a> や <a href="http://gruntjs.com/">Grunt</a> のようなタスクランナーもテストや他の外部ツールを実行するために使うことができます。</p>
-</div>
+> **Note:** **メモ:** [Gulp](http://gulpjs.com/) や [Grunt](http://gruntjs.com/) のようなタスクランナーもテストや他の外部ツールを実行するために使うことができます。
 
-<p>たとえば、前のセクションで指定した eslint 開発依存関係を実行するためのスクリプトを定義するには、次のスクリプトブロックを <strong>package.json</strong> ファイルに追加します (アプリケーションソースが /src/js フォルダにあると仮定します)。</p>
+たとえば、前のセクションで指定した eslint 開発依存関係を実行するためのスクリプトを定義するには、次のスクリプトブロックを **package.json** ファイルに追加します (アプリケーションソースが /src/js フォルダにあると仮定します)。
 
-<pre class="brush: js">"scripts": {
+```js
+"scripts": {
   ...
   "lint": "eslint src/js"
   ...
 }
-</pre>
+```
 
-<p>もう少し詳しく説明すると、<code>eslint src/js</code> は、app ディレクトリー内の <code>src/js</code> ディレクトリーに含まれる JavaScript ファイルに対して <code>eslint</code> を実行するために terminal/command 行に入力できるコマンドです。アプリの package.json ファイル内に上記を含めると、このコマンドのショートカット - つまり <code>lint</code> が提供されます。</p>
+もう少し詳しく説明すると、`eslint src/js` は、app ディレクトリー内の `src/js` ディレクトリーに含まれる JavaScript ファイルに対して `eslint` を実行するために terminal/command 行に入力できるコマンドです。アプリの package.json ファイル内に上記を含めると、このコマンドのショートカット - つまり `lint` が提供されます。
 
-<p>こうすれば、NPM を使って eslint を実行することができます。</p>
+こうすれば、NPM を使って eslint を実行することができます。
 
-<pre class="brush: bash"><code>npm run-script lint
+```bash
+npm run-script lint
 # OR (using the alias)
-npm run lint</code>
-</pre>
+npm run lint
+```
 
-<p>この例は元のコマンドより短く見えないかもしれませんが、複数のコマンドのチェーンを含めて、npm スクリプト内にもっと大きなコマンドを含めることができます。一度にすべてのテストを実行する単一の npm スクリプトを指定できます。</p>
+この例は元のコマンドより短く見えないかもしれませんが、複数のコマンドのチェーンを含めて、npm スクリプト内にもっと大きなコマンドを含めることができます。一度にすべてのテストを実行する単一の npm スクリプトを指定できます。
 
-<h2 id="Express_Application_Generator_のインストール">Express Application Generator のインストール</h2>
+## Express Application Generator のインストール
 
-<p><a href="https://expressjs.com/ja/starter/generator.html">Express Application Generator</a> ツールは Express アプリケーションの「スケルトン」を生成します。次に示すように、NPM を使用してジェネレーターをインストールします (<code>-g</code> フラグを指定すると、ツールをグローバルにインストールして、どこからでも呼び出すことができます)。</p>
+[Express Application Generator](https://expressjs.com/ja/starter/generator.html) ツールは Express アプリケーションの「スケルトン」を生成します。次に示すように、NPM を使用してジェネレーターをインストールします (`-g` フラグを指定すると、ツールをグローバルにインストールして、どこからでも呼び出すことができます)。
 
-<pre><code>npm install express-generator -g</code></pre>
+```
+npm install express-generator -g
+```
 
-<p>デフォルト設定で "helloworld" という名前の Express アプリを作成するには、作成する場所に移動して、図のようにアプリを実行します。</p>
+デフォルト設定で "helloworld" という名前の Express アプリを作成するには、作成する場所に移動して、図のようにアプリを実行します。
 
-<pre class="brush: bash">express helloworld</pre>
+```bash
+express helloworld
+```
 
-<div class="note">
-<p><strong>注記: </strong>利用するテンプレートライブラリ等の他の設定を指定することもできます。すべてのオプションを見るには、<code>help</code> コマンドを使用してください。</p>
+> **Note:** **注記:** 利用するテンプレートライブラリ等の他の設定を指定することもできます。すべてのオプションを見るには、`help` コマンドを使用してください。
+>
+> ```bash
+> express --help
+> ```
 
-<pre class="brush: bash">express --help
-</pre>
-</div>
+NPM は現在の場所のサブフォルダーに新しい Express アプリケーションを作成し、コンソールにビルドの進行状況を表示します。完了すると、Node の依存関係をインストールしてアプリを起動するために入力する必要があるコマンドがツールに表示されます。
 
-<p>NPM は現在の場所のサブフォルダーに新しい Express アプリケーションを作成し、コンソールにビルドの進行状況を表示します。完了すると、Node の依存関係をインストールしてアプリを起動するために入力する必要があるコマンドがツールに表示されます。</p>
+> **Note:** 新しいアプリには、そのルートディレクトリーに **package.json** ファイルがあります。これを開くと、Express やテンプレートライブラリ Jade など、インストールされている依存関係を確認できます。
+>
+> ```js
+> {
+>   "name": "helloworld",
+>   "version": "0.0.0",
+>   "private": true,
+>   "scripts": {
+>     "start": "node ./bin/www"
+>   },
+>   "dependencies": {
+>     "body-parser": "~1.18.2",
+>     "cookie-parser": "~1.4.3",
+>     "debug": "~2.6.9",
+>     "express": "~4.15.5",
+>     "jade": "~1.11.0",
+>     "morgan": "~1.9.0",
+>     "serve-favicon": "~2.4.5"
+>   }
+> }
+> ```
 
-<div class="note">
-<p>新しいアプリには、そのルートディレクトリーに <strong>package.json</strong> ファイルがあります。これを開くと、Express やテンプレートライブラリ Jade など、インストールされている依存関係を確認できます。</p>
+次に示すように、NPM を使用して helloworld アプリのすべての依存関係をインストールします。
 
-<pre class="brush: js">{
-  "name": "helloworld",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
-  }
-}</pre>
-
-
-</div>
-
-<p>次に示すように、NPM を使用して helloworld アプリのすべての依存関係をインストールします。</p>
-
-<pre class="brush: bash">cd helloworld
+```bash
+cd helloworld
 npm install
-</pre>
+```
 
-<p>次に、以下のようにアプリを実行します (コマンドは Windows と Linux/macOS で若干異なります)。</p>
+次に、以下のようにアプリを実行します (コマンドは Windows と Linux/macOS で若干異なります)。
 
-<pre class="brush: bash">#  Windows のコマンドプロンプトで helloworld を実行
-SET DEBUG=helloworld:* &amp; npm start
+```bash
+#  Windows のコマンドプロンプトで helloworld を実行
+SET DEBUG=helloworld:* & npm start
 
 # Windows の PowerShell で helloworld を実行
 SET DEBUG=helloworld:* | npm start
 
 # Linux/macOS で helloworld を実行
 DEBUG=helloworld:* npm start
-</pre>
+```
 
-<p>DEBUG コマンドは有用なロギングを作成し、その結果、以下に示すような出力が得られます。</p>
+DEBUG コマンドは有用なロギングを作成し、その結果、以下に示すような出力が得られます。
 
-<pre class="brush: bash">&gt;SET DEBUG=helloworld:* &amp; npm start
+```bash
+>SET DEBUG=helloworld:* & npm start
 
-&gt; helloworld@0.0.0 start D:\Github\expresstests\helloworld
-&gt; node ./bin/www
+> helloworld@0.0.0 start D:\Github\expresstests\helloworld
+> node ./bin/www
 
-  helloworld:server Listening on port 3000 +0ms</pre>
+  helloworld:server Listening on port 3000 +0ms
+```
 
-<p>ブラウザーを開いて http://127.0.0.1:3000/ に移動し、デフォルトの Express ウェルカムページを表示します。</p>
+ブラウザーを開いて http\://127.0.0.1:3000/ に移動し、デフォルトの Express ウェルカムページを表示します。
 
-<p><img alt="Express - Generated App Default Screen" src="https://mdn.mozillademos.org/files/14331/express_default_screen.png" style="border-style: solid; border-width: 1px; display: block; height: 301px; margin: 0px auto; width: 675px;"></p>
+![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
 
-<p>スケルトンアプリケーションの生成に関する記事にアクセスしたら、生成されたアプリケーションについて詳しく説明します。</p>
+スケルトンアプリケーションの生成に関する記事にアクセスしたら、生成されたアプリケーションについて詳しく説明します。
 
-<ul>
-</ul>
+## まとめ
 
-<h2 id="まとめ">まとめ</h2>
+これで、Express ウェブアプリケーションを作成するために使用できる Node 開発環境がコンピューター上で稼働しています。また、NPM を使用して Express をアプリケーションにインポートする方法、および Express Application Generator ツールを使用してアプリケーションを作成して実行する方法についても説明しました。
 
-<p>これで、Express ウェブアプリケーションを作成するために使用できる Node 開発環境がコンピューター上で稼働しています。また、NPM を使用して Express をアプリケーションにインポートする方法、および Express Application Generator ツールを使用してアプリケーションを作成して実行する方法についても説明しました。</p>
+次の記事では、この環境と関連ツールを使って完全なウェブアプリケーションを構築するためのチュートリアルを始めます。
 
-<p>次の記事では、この環境と関連ツールを使って完全なウェブアプリケーションを構築するためのチュートリアルを始めます。</p>
+## あわせて参照
 
-<h2 id="あわせて参照">あわせて参照</h2>
+- [ダウンロード](https://nodejs.org/ja/download/) ページ (nodejs.org)
+- [パッケージマネージャを利用した Node.js のインストール](https://nodejs.org/ja/download/package-manager/) (nodejs.org)
+- [Express のインストール](http://expressjs.com/ja/starter/installing.html) (expressjs.com)
+- [Express Application Generator](https://expressjs.com/ja/starter/generator.html) (expressjs.com)
 
-<ul>
- <li><a href="https://nodejs.org/ja/download/">ダウンロード</a> ページ (nodejs.org)</li>
- <li><a href="https://nodejs.org/ja/download/package-manager/">パッケージマネージャを利用した Node.js のインストール</a> (nodejs.org)</li>
- <li><a href="http://expressjs.com/ja/starter/installing.html">Express のインストール</a> (expressjs.com)</li>
- <li><a href="https://expressjs.com/ja/starter/generator.html">Express Application Generator</a> (expressjs.com)</li>
-</ul>
+{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
-<p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}</p>
+## このモジュールの中
 
-<h2 id="このモジュールの中">このモジュールの中</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node のイントロダクション</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/development_environment">Node 開発環境の設定</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express チュートリアル: 地域図書館のウェブサイト</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express チュートリアル Part 2: スケルトンウェブサイトの作成</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/mongoose">Express チュートリアル Part 3: データベースを使う (Mongoose を使用)</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/routes">Express チュートリアル Part 4: ルートとコントローラー</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express チュートリアル Part 5: ライブラリデータの表示</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms">Express チュートリアル Part 6: フォームの操作</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/deployment">Express チュートリアル Part 7: プロダクションへのデプロイ</a></li>
-</ul>
+- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express チュートリアル: 地域図書館のウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express チュートリアル Part 4: ルートとコントローラー](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

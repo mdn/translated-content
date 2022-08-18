@@ -7,296 +7,225 @@ tags:
   - Learn
 translation_of: Learn/JavaScript/Howto
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p class="summary">JavaScript のコードが正しく動作しないので修正したい、というような場合にみられる、よくある問題の解決方法へのリンクを以下に示します。</p>
+JavaScript のコードが正しく動作しないので修正したい、というような場合にみられる、よくある問題の解決方法へのリンクを以下に示します。
 
-<h2 id="Common_beginner's_mistakes" name="Common_beginner's_mistakes">初学者がよく陥る誤り</h2>
+## 初学者がよく陥る誤り
 
-<h3 id="Correct_spelling_and_casing" name="Correct_spelling_and_casing">スペル、大文字小文字を訂正する</h3>
+### スペル、大文字小文字を訂正する
 
-<p>コードが正しく動かない場合や、何かが未定義であるとブラウザーがエラーを出した場合、変数名や関数名のスペルが正しいか確認してください。</p>
+コードが正しく動かない場合や、何かが未定義であるとブラウザーがエラーを出した場合、変数名や関数名のスペルが正しいか確認してください。
 
-<p>ブラウザーの組み込み関数についての正誤例:</p>
+ブラウザーの組み込み関数についての正誤例:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">正</th>
-   <th scope="col">誤</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>getElementsByTagName()</code></td>
-   <td><code>getElementbyTagName()</code></td>
-  </tr>
-  <tr>
-   <td><code>getElementsByName()</code></td>
-   <td><code>getElementByName()</code></td>
-  </tr>
-  <tr>
-   <td><code>getElementsByClassName()</code></td>
-   <td><code>getElementByClassName()</code></td>
-  </tr>
-  <tr>
-   <td><code>getElementById()</code></td>
-   <td><code>getElementsById()</code></td>
-  </tr>
- </tbody>
-</table>
+| 正                         | 誤                        |
+| -------------------------- | ------------------------- |
+| `getElementsByTagName()`   | `getElementbyTagName()`   |
+| `getElementsByName()`      | `getElementByName()`      |
+| `getElementsByClassName()` | `getElementByClassName()` |
+| `getElementById()`         | `getElementsById()`       |
 
-<h3 id="Semi-colon_position" name="Semi-colon_position">セミコロンの位置</h3>
+### セミコロンの位置
 
-<p>セミコロンの位置に誤りがないか確認してください。</p>
+セミコロンの位置に誤りがないか確認してください。
 
-<p>例:</p>
+例:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">正</th>
-   <th scope="col">誤</th>
-  </tr>
-  <tr>
-   <td><code>elem.style.color = 'red';</code></td>
-   <td><code>elem.style.color = 'red;'</code></td>
-  </tr>
- </thead>
-</table>
+| 正                          | 誤                          |
+| --------------------------- | --------------------------- |
+| `elem.style.color = 'red';` | `elem.style.color = 'red;'` |
 
-<h3 id="Functions" name="Functions">関数</h3>
+### 関数
 
-<p>関数についての誤りは何点かあります。</p>
+関数についての誤りは何点かあります。
 
-<p>よくある誤りの一つとして、関数を定義したがどこからも呼び出していない、というものがあります。</p>
+よくある誤りの一つとして、関数を定義したがどこからも呼び出していない、というものがあります。
 
-<p>例:</p>
+例:
 
-<pre class="brush: js">function myFunction() {
+```js
+function myFunction() {
   alert('This is my function.');
-};</pre>
+};
+```
 
-<p>上記のコードで定義した関数は、例えば以下のように呼び出さないかぎり何もしません。</p>
+上記のコードで定義した関数は、例えば以下のように呼び出さないかぎり何もしません。
 
-<pre class="brush: js">myFunction();</pre>
+```js
+myFunction();
+```
 
-<h4 id="Function_scope" name="Function_scope">関数のスコープ</h4>
+#### 関数のスコープ
 
-<p><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts">関数は関数自身のスコープを持ちます</a>。変数をグローバルに（関数の外で）定義するか、<a href="/ja/docs/Learn/JavaScript/Building_blocks/Return_values">戻り値</a>として変数の値を関数の外に返さないかぎり、関数の外から関数の中で定義された変数にアクセスすることはできません。</p>
+[関数は関数自身のスコープを持ちます](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)。変数をグローバルに（関数の外で）定義するか、[戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)として変数の値を関数の外に返さないかぎり、関数の外から関数の中で定義された変数にアクセスすることはできません。
 
-<h4 id="Running_code_after_a_return_statement" name="Running_code_after_a_return_statement">return 文の後ろのコードの実行</h4>
+#### return 文の後ろのコードの実行
 
-<p>return文で関数から値を返したとき、JavaScript のインタプリタはその関数を終了します。return文の後ろのコードは実行されません。</p>
+return 文で関数から値を返したとき、JavaScript のインタプリタはその関数を終了します。return 文の後ろのコードは実行されません。
 
-<p>Firefox などのいくつかのブラウザーは、return文の後ろにコードが存在する場合、開発者ツールのコンソールにエラーメッセージを出力します。Firefox が出力するメッセージは "unreachable code after return statement" です。</p>
+Firefox などのいくつかのブラウザーは、return 文の後ろにコードが存在する場合、開発者ツールのコンソールにエラーメッセージを出力します。Firefox が出力するメッセージは "unreachable code after return statement" です。
 
-<h3 id="Object_notation_versus_normal_assignment" name="Object_notation_versus_normal_assignment">オブジェクトリテラル記法 vs 代入</h3>
+### オブジェクトリテラル記法 vs 代入
 
-<p>通常、JavaScript で代入する場合、等号を使います。</p>
+通常、JavaScript で代入する場合、等号を使います。
 
-<p>例:</p>
+例:
 
-<pre class="brush: js">var myNumber = 0;</pre>
+```js
+var myNumber = 0;
+```
 
-<p><a href="/ja/docs/Learn/JavaScript/Objects">オブジェクト</a>の場合は、メンバー名とその値をコロンで区切り、メンバー間をカンマで区切る必要があります。</p>
+[オブジェクト](/ja/docs/Learn/JavaScript/Objects)の場合は、メンバー名とその値をコロンで区切り、メンバー間をカンマで区切る必要があります。
 
-<p>例:</p>
+例:
 
-<pre class="brush: js">var myObject = {
+```js
+var myObject = {
   name : 'Chris',
   age : 38
-}</pre>
+}
+```
 
-<h2 id="Basic_definitions" name="Basic_definitions">基本的な定義</h2>
+## 基本的な定義
 
-<div class="column-container">
-<div class="column-half">
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#A_high-level_definition">JavaScript とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable">変数とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings">文字列とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array">配列とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Looping_code">ループとは</a></li>
-</ul>
-</div>
+- [JavaScript とは](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#A_high-level_definition)
+- [変数とは](/ja/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable)
+- [文字列とは](/ja/docs/Learn/JavaScript/First_steps/Strings)
+- [配列とは](/ja/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array)
+- [ループとは](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
 
-<div class="column-half">
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions">関数とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントとは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Basics#Object_basics">オブジェクトとは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/JSON#No_really_what_is_JSON">JSON とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#What_are_APIs">Web API とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model">DOM とは</a></li>
-</ul>
-</div>
-</div>
+<!---->
 
-<h2 id="Basic_use_cases" name="Basic_use_cases">初級のユースケース</h2>
+- [関数とは](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
+- [イベントとは](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [オブジェクトとは](/ja/docs/Learn/JavaScript/Objects/Basics#Object_basics)
+- [JSON とは](/ja/docs/Learn/JavaScript/Objects/JSON#No_really_what_is_JSON)
+- [Web API とは](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#What_are_APIs)
+- [DOM とは](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model)
 
-<div class="column-container">
-<div class="column-half">
-<h3 id="General" name="General">全般</h3>
+## 初級のユースケース
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#How_do_you_add_JavaScript_to_your_page">JavaScript をページに追加するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Comments">JavaScript のコードにコメントを追加するには</a></li>
-</ul>
+### 全般
 
-<h3 id="Variables" name="Variables">変数</h3>
+- [JavaScript をページに追加するには](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#How_do_you_add_JavaScript_to_your_page)
+- [JavaScript のコードにコメントを追加するには](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Comments)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable">変数を宣言するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables#Initializing_a_variable">変数を値で初期化するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables#Updating_a_variable">変数の値を変更するには</a>(<a href="/ja/docs/Learn/JavaScript/First_steps/Math#Assignment_operators">代入演算子</a>についても参照してください)</li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables#Variable_types">JavaScript のデータ型とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables#Loose_typing">「弱い型付け」とは</a></li>
-</ul>
+### 変数
 
-<h3 id="Math" name="Math">数学</h3>
+- [変数を宣言するには](/ja/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable)
+- [変数を値で初期化するには](/ja/docs/Learn/JavaScript/First_steps/Variables#Initializing_a_variable)
+- [変数の値を変更するには](/ja/docs/Learn/JavaScript/First_steps/Variables#Updating_a_variable)([代入演算子](/ja/docs/Learn/JavaScript/First_steps/Math#Assignment_operators)についても参照してください)
+- [JavaScript のデータ型とは](/ja/docs/Learn/JavaScript/First_steps/Variables#Variable_types)
+- [「弱い型付け」とは](/ja/docs/Learn/JavaScript/First_steps/Variables#Loose_typing)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math#Types_of_numbers">Web開発で扱わなければならない数値型とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math#Arithmetic_operators">JavaScript での基本的な算術演算の方法とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math#Operator_precedence">JavaScript での演算子の優先順位とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math#Increment_and_decrement_operators">JavaScript で値をインクリメント、デクリメントするには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math#Comparison_operators">JavaScript で値を比較するには</a>(どちらが大きいか、ある値が別の値と等しいか、など)</li>
-</ul>
+### 数学
 
-<h3 id="Strings" name="Strings">文字列</h3>
+- [Web 開発で扱わなければならない数値型とは](/ja/docs/Learn/JavaScript/First_steps/Math#Types_of_numbers)
+- [JavaScript での基本的な算術演算の方法とは](/ja/docs/Learn/JavaScript/First_steps/Math#Arithmetic_operators)
+- [JavaScript での演算子の優先順位とは](/ja/docs/Learn/JavaScript/First_steps/Math#Operator_precedence)
+- [JavaScript で値をインクリメント、デクリメントするには](/ja/docs/Learn/JavaScript/First_steps/Math#Increment_and_decrement_operators)
+- [JavaScript で値を比較するには](/ja/docs/Learn/JavaScript/First_steps/Math#Comparison_operators)(どちらが大きいか、ある値が別の値と等しいか、など)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings#Creating_a_string">JavaScript で文字列を作成するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings#Single_quotes_versus_double_quotes">シングルクォーテーションを使うべきか、ダブルクォーテーションを使うべきか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings#Escaping_characters_in_a_string">文字列をエスケープするには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings">文字列を連結するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">文字列と数値を連結できるかどうか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_the_length_of_a_string">文字列の長さを調べるには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character">文字列内の特定位置の文字を調べるには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_a_substring_inside_a_string_and_extracting_it">文字列から部分文字列を抽出するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Changing_case">文字列の大文字・小文字を切り替えるには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Updating_parts_of_a_string">文字列内の一部の文字列を別の文字列に置き換えるには</a></li>
-</ul>
-</div>
+### 文字列
 
-<div class="column-half">
-<h3 id="Arrays" name="Arrays">配列</h3>
+- [JavaScript で文字列を作成するには](/ja/docs/Learn/JavaScript/First_steps/Strings#Creating_a_string)
+- [シングルクォーテーションを使うべきか、ダブルクォーテーションを使うべきか](/ja/docs/Learn/JavaScript/First_steps/Strings#Single_quotes_versus_double_quotes)
+- [文字列をエスケープするには](/ja/docs/Learn/JavaScript/First_steps/Strings#Escaping_characters_in_a_string)
+- [文字列を連結するには](/ja/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings)
+- [文字列と数値を連結できるかどうか](/ja/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings)
+- [文字列の長さを調べるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_the_length_of_a_string)
+- [文字列内の特定位置の文字を調べるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)
+- [文字列から部分文字列を抽出するには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_a_substring_inside_a_string_and_extracting_it)
+- [文字列の大文字・小文字を切り替えるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Changing_case)
+- [文字列内の一部の文字列を別の文字列に置き換えるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#Updating_parts_of_a_string)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays#Creating_an_array">配列を作成するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays#Accessing_and_modifying_array_items">配列内の要素を取得したり変更したりするには</a>(多次元配列の場合についても含む)</li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays#Finding_the_length_of_an_array">配列の長さを調べるには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays#Adding_and_removing_array_items">配列に要素を追加する、もしくは、配列から要素を削除するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays#Converting_between_strings_and_arrays">文字列を分割して配列にするには、もしくは配列を連結して一つの文字列にするには</a></li>
-</ul>
+### 配列
 
-<h3 id="Debugging_JavaScript" name="Debugging_JavaScript">JavaScript のデバッグ</h3>
+- [配列を作成するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#Creating_an_array)
+- [配列内の要素を取得したり変更したりするには](/ja/docs/Learn/JavaScript/First_steps/Arrays#Accessing_and_modifying_array_items)(多次元配列の場合についても含む)
+- [配列の長さを調べるには](/ja/docs/Learn/JavaScript/First_steps/Arrays#Finding_the_length_of_an_array)
+- [配列に要素を追加する、もしくは、配列から要素を削除するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#Adding_and_removing_array_items)
+- [文字列を分割して配列にするには、もしくは配列を連結して一つの文字列にするには](/ja/docs/Learn/JavaScript/First_steps/Arrays#Converting_between_strings_and_arrays)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#Types_of_error">基本的なエラーの種類とは</a></li>
- <li><a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザー開発者ツールとは何か、どのように開くのか</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API">JavaScript コンソールに値を出力するには</a></li>
- <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger">ブレイクポイント等の JavaScript のデバッグ機能を使うには</a></li>
-</ul>
+### JavaScript のデバッグ
 
-<p>JavaScript のデバッグに関する詳細については、<a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">JavaScript のよくある問題を扱う</a>を参照してください。よくあるエラーの説明については<a href="/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors">その他のよくあるエラー</a>を参照してください。</p>
+- [基本的なエラーの種類とは](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#Types_of_error)
+- [ブラウザー開発者ツールとは何か、どのように開くのか](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [JavaScript コンソールに値を出力するには](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API)
+- [ブレイクポイント等の JavaScript のデバッグ機能を使うには](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger)
 
-<h3 id="Making_decisions_in_code" name="Making_decisions_in_code">コード内での決定</h3>
+JavaScript のデバッグに関する詳細については、[JavaScript のよくある問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)を参照してください。よくあるエラーの説明については[その他のよくあるエラー](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors)を参照してください。
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/conditionals">変数の値やその他の条件によって異なるコードブロックのうちどれを実行するか決定するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">if...else文を使用するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Nesting_if_..._else">条件判定のブロックを別のブロックに入れ子にするには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Logical_operators_AND_OR_and_NOT">AND や OR、NOT を JavaScript で使用するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements">多くの選択肢を一つの条件として手軽に扱うには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Ternary_operator">true/false の判定によって 2 つの選択肢から 1 つを手早く選択するのに、三項演算子を使用するには</a></li>
-</ul>
+### コード内での決定
 
-<h3 id="Loopingiteration" name="Loopingiteration">ループ/イテレーション</h3>
+- [変数の値やその他の条件によって異なるコードブロックのうちどれを実行するか決定するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [if...else 文を使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)
+- [条件判定のブロックを別のブロックに入れ子にするには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Nesting_if_..._else)
+- [AND や OR、NOT を JavaScript で使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Logical_operators_AND_OR_and_NOT)
+- [多くの選択肢を一つの条件として手軽に扱うには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)
+- [true/false の判定によって 2 つの選択肢から 1 つを手早く選択するのに、三項演算子を使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Ternary_operator)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Looping_code">同一のコード片を繰り返し実行するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#Exiting_loops_with_break">終了条件にマッチする前に、ループを終了させるには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#Skipping_iterations_with_continue">次の繰り返し処理にスキップするには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">while ループ、do ... while ループを使用するには</a></li>
- <li>配列内の要素を反復処理する方法</li>
- <li>多次元配列の要素を反復処理する方法</li>
- <li>オブジェクト内のメンバーを反復処理する方法</li>
- <li>配列内にネストされたオブジェクトのメンバーを反復処理する方法</li>
-</ul>
-</div>
-</div>
+### ループ/イテレーション
 
-<h2 id="Intermediate_use_cases" name="Intermediate_use_cases">中級のユースケース</h2>
+- [同一のコード片を繰り返し実行するには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [終了条件にマッチする前に、ループを終了させるには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#Exiting_loops_with_break)
+- [次の繰り返し処理にスキップするには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#Skipping_iterations_with_continue)
+- [while ループ、do ... while ループを使用するには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
+- 配列内の要素を反復処理する方法
+- 多次元配列の要素を反復処理する方法
+- オブジェクト内のメンバーを反復処理する方法
+- 配列内にネストされたオブジェクトのメンバーを反復処理する方法
 
-<div class="column-container">
-<div class="column-half">
-<h3 id="Functions_2" name="Functions_2">関数</h3>
+## 中級のユースケース
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Built-in_browser_functions">ブラウザー内での関数を調べるには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Functions_versus_methods">関数とメソッドの違いとは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">独自の関数を作成するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Invoking_functions">関数を呼び出すには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions">匿名関数とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Function_parameters">関数を実行するときに引数を指定するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts">関数のスコープとは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Return_values">戻り値とは何か、どのように戻り値を返すか</a></li>
-</ul>
+### 関数
 
-<h3 id="Objects" name="Objects">オブジェクト</h3>
+- [ブラウザー内での関数を調べるには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Built-in_browser_functions)
+- [関数とメソッドの違いとは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Functions_versus_methods)
+- [独自の関数を作成するには](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [関数を呼び出すには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Invoking_functions)
+- [匿名関数とは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions)
+- [関数を実行するときに引数を指定するには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Function_parameters)
+- [関数のスコープとは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)
+- [戻り値とは何か、どのように戻り値を返すか](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Basics#Object_basics">オブジェクトを作成するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Basics#Dot_notation">ドット記法とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Basics#Bracket_notation">角括弧を用いた記法とは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Basics#Setting_object_members">オブジェクトのメソッドやプロパティを取得、設定するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Basics#What_is_this">オブジェクトのコンテキストにおける <code>this</code> とは何か</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters">オブジェクト指向プログラミングとは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Constructors_and_object_instances">コンストラクターやインスタンスとは何か、それらをどのように作成するか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Other_ways_to_create_object_instances">JavaScript でオブジェクトを作成する方法にはどのようなものがあるか</a></li>
-</ul>
+### オブジェクト
 
-<h3 id="JSON" name="JSON">JSON</h3>
+- [オブジェクトを作成するには](/ja/docs/Learn/JavaScript/Objects/Basics#Object_basics)
+- [ドット記法とは](/ja/docs/Learn/JavaScript/Objects/Basics#Dot_notation)
+- [角括弧を用いた記法とは](/ja/docs/Learn/JavaScript/Objects/Basics#Bracket_notation)
+- [オブジェクトのメソッドやプロパティを取得、設定するには](/ja/docs/Learn/JavaScript/Objects/Basics#Setting_object_members)
+- [オブジェクトのコンテキストにおける `this` とは何か](/ja/docs/Learn/JavaScript/Objects/Basics#What_is_this)
+- [オブジェクト指向プログラミングとは](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)
+- [コンストラクターやインスタンスとは何か、それらをどのように作成するか](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Constructors_and_object_instances)
+- [JavaScript でオブジェクトを作成する方法にはどのようなものがあるか](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Other_ways_to_create_object_instances)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/JSON#JSON_structure">JSON の構造とは、JavaScript から JSON を読み取るには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/JSON#Loading_our_JSON">JSON ファイルをページに読み込むには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text">JSON からテキストに変換するには、テキストから JSON に変換するには</a></li>
-</ul>
-</div>
+### JSON
 
-<div class="column-half">
-<h3 id="Events" name="Events">イベント</h3>
+- [JSON の構造とは、JavaScript から JSON を読み取るには](/ja/docs/Learn/JavaScript/Objects/JSON#JSON_structure)
+- [JSON ファイルをページに読み込むには](/ja/docs/Learn/JavaScript/Objects/JSON#Loading_our_JSON)
+- [JSON からテキストに変換するには、テキストから JSON に変換するには](/ja/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_handler_properties">イベントハンドラとは何か、どのように使うのか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these">インラインイベントハンドラとは</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#addEventListener()_and_removeEventListener()"><code>addEventListener()</code> 関数は何をするものか、どのように使うのか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use">自分のページにイベントのコードを追加するのに、どの方法を使用すべきか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_objects">イベントオブジェクトとは何か、どのように使うのか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behaviour">既定のイベントの挙動を抑制するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">ネストされた要素でどのようにイベントが発火するか(イベントの伝播、キャプチャ、バブリング)</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation">イベントのデリゲートとは何か、どのように動作するか</a></li>
-</ul>
+### イベント
 
-<h3 id="Object-oriented_JavaScript" name="Object-oriented_JavaScript">オブジェクト指向 JavaScript</h3>
+- [イベントハンドラとは何か、どのように使うのか](/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_handler_properties)
+- [インラインイベントハンドラとは](/ja/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these)
+- [`addEventListener()` 関数は何をするものか、どのように使うのか](</ja/docs/Learn/JavaScript/Building_blocks/Events#addEventListener()_and_removeEventListener()>)
+- [自分のページにイベントのコードを追加するのに、どの方法を使用すべきか](/ja/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use)
+- [イベントオブジェクトとは何か、どのように使うのか](/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_objects)
+- [既定のイベントの挙動を抑制するには](/ja/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behaviour)
+- [ネストされた要素でどのようにイベントが発火するか(イベントの伝播、キャプチャ、バブリング)](/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)
+- [イベントのデリゲートとは何か、どのように動作するか](/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Object_prototypes">オブジェクトのプロトタイプとは何か</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Object_prototypes#The_constructor_property">コンストラクタープロパティとは何か、どのように使用するか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Object_prototypes#Modifying_prototypes">どのようにコンストラクターにメソッドを追加するか</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Inheritance">継承元からメンバーを引き継いで新しいコンストラクターを作成するには</a></li>
- <li><a href="/ja/docs/Learn/JavaScript/Objects/Inheritance#Object_member_summary">JavaScript で継承を使用すべきときはいつか</a></li>
-</ul>
+### オブジェクト指向 JavaScript
 
-<h3 id="Web_APIs" name="Web_APIs">Web API</h3>
+- [オブジェクトのプロトタイプとは何か](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [コンストラクタープロパティとは何か、どのように使用するか](/ja/docs/Learn/JavaScript/Objects/Object_prototypes#The_constructor_property)
+- [どのようにコンストラクターにメソッドを追加するか](/ja/docs/Learn/JavaScript/Objects/Object_prototypes#Modifying_prototypes)
+- [継承元からメンバーを引き継いで新しいコンストラクターを作成するには](/ja/docs/Learn/JavaScript/Objects/Inheritance)
+- [JavaScript で継承を使用すべきときはいつか](/ja/docs/Learn/JavaScript/Objects/Inheritance#Object_member_summary)
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#Active_learning_Basic_DOM_manipulation">JavaScript を使用して DOM を操作(要素の追加や削除)するには</a></li>
-</ul>
+### Web API
 
-<p> </p>
-</div>
-</div>
+- [JavaScript を使用して DOM を操作(要素の追加や削除)するには](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#Active_learning_Basic_DOM_manipulation)

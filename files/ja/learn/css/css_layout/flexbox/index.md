@@ -15,271 +15,275 @@ tags:
   - flexbox
 translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}</div>
+[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)（Flexbox）は、項目を行または列にレイアウトするための 1 次元のレイアウト方法です。 項目は追加のスペースを埋めるためにたわみ、小さいスペースに収まるように縮小します。 この記事では、すべての基本事項について説明します。
 
-<p class="summary"><span class="seoSummary"><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">フレックスボックス</a>（Flexbox）は、項目を行または列にレイアウトするための1次元のレイアウト方法です。 項目は追加のスペースを埋めるためにたわみ、小さいスペースに収まるように縮小します。 この記事では、すべての基本事項について説明します。</span></p>
+| 前提知識: | HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、および CSS の機能の考え方（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)を学ぶ）。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 学習目標: | フレックスボックス・レイアウトシステムを使用してウェブのレイアウトを作成する方法を習得する。                                                                        |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>を学ぶ）、および CSS の機能の考え方（<a href="/ja/docs/Learn/CSS/Introduction_to_CSS">CSS 入門</a>を学ぶ）。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習目標:</th>
-   <td>フレックスボックス・レイアウトシステムを使用してウェブのレイアウトを作成する方法を習得する。</td>
-  </tr>
- </tbody>
-</table>
+## なぜフレックスボックスなのか？
 
-<h2 id="Why_Flexbox" name="Why_Flexbox">なぜフレックスボックスなのか？</h2>
+長い間、CSS レイアウトを作成するために利用可能な唯一の信頼できるクロスブラウザー互換ツールは[フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)と[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)のようなものでした。 これらは問題なく機能しますが、いくつかの点ではかなり限定的でイライラするものです。
 
-<p>長い間、CSS レイアウトを作成するために利用可能な唯一の信頼できるクロスブラウザー互換ツールは<a href="/ja/docs/Learn/CSS/CSS_layout/Floats">フロート</a>と<a href="/ja/docs/Learn/CSS/CSS_layout/Positioning">位置指定</a>のようなものでした。 これらは問題なく機能しますが、いくつかの点ではかなり限定的でイライラするものです。</p>
+次のような単純なレイアウト要件は、このようなツールを使用しても、便利で柔軟な方法で実現するのが困難または不可能です。
 
-<p>次のような単純なレイアウト要件は、このようなツールを使用しても、便利で柔軟な方法で実現するのが困難または不可能です。</p>
+- コンテンツのブロックをその親内で垂直方向に中央揃えにします。
+- コンテナのすべての子が、使用可能な幅や高さに関係なく、使用可能な幅や高さについて等しい量を占めるようにします。
+- 複数列レイアウトのすべての列に、異なる量のコンテンツが含まれていても、同じ高さを採用するようにします。
 
-<ul>
- <li>コンテンツのブロックをその親内で垂直方向に中央揃えにします。</li>
- <li>コンテナのすべての子が、使用可能な幅や高さに関係なく、使用可能な幅や高さについて等しい量を占めるようにします。</li>
- <li>複数列レイアウトのすべての列に、異なる量のコンテンツが含まれていても、同じ高さを採用するようにします。</li>
-</ul>
+以降のセクションで見るように、フレックスボックスは多くのレイアウト作業をずっと簡単にします。 さあ始めましょう！
 
-<p>以降のセクションで見るように、フレックスボックスは多くのレイアウト作業をずっと簡単にします。 さあ始めましょう！</p>
+## 簡単な例の紹介
 
-<h2 id="Introducing_a_simple_example" name="Introducing_a_simple_example">簡単な例の紹介</h2>
+この記事では、フレックスボックスがどのように機能するのかを理解するのに役立つ一連の演習を進めていくようにします。 まず始めに、github リポジトリから最初のスターターファイル [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) のローカルコピーを作成し、最新のブラウザー（Firefox や Chrome など）にロードして、コードエディタでコードを確認してください。 ここでも[ライブを見る](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)ことができます。
 
-<p>この記事では、フレックスボックスがどのように機能するのかを理解するのに役立つ一連の演習を進めていくようにします。 まず始めに、github リポジトリから最初のスターターファイル <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a> のローカルコピーを作成し、最新のブラウザー（Firefox や Chrome など）にロードして、コードエディタでコードを確認してください。 ここでも<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html">ライブを見る</a>ことができます。</p>
+内部に最上位の見出しを持つ {{htmlelement("header")}} 要素と、3 つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 これらを使用して、かなり標準的な 3 列のレイアウトを作成します。
 
-<p>内部に最上位の見出しを持つ {{htmlelement("header")}} 要素と、3つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 これらを使用して、かなり標準的な3列のレイアウトを作成します。</p>
+![](flexbox-example1.png)
 
-<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+## 柔軟な箱としてレイアウトする要素を指定
 
-<h2 id="Specifying_what_elements_to_lay_out_as_flexible_boxes" name="Specifying_what_elements_to_lay_out_as_flexible_boxes">柔軟な箱としてレイアウトする要素を指定</h2>
+まず最初に、どの要素を柔軟な箱（flexible box）としてレイアウトするかを選択する必要があります。 これを行うために、あなたが影響を与えたい要素の親要素に {{cssxref("display")}} の特別な値を設定します。 この場合、{{htmlelement("article")}} 要素をレイアウトしたいので、これを {{htmlelement("section")}} に設定します（これがフレックスコンテナになります）。
 
-<p>まず最初に、どの要素を柔軟な箱（flexible box）としてレイアウトするかを選択する必要があります。 これを行うために、あなたが影響を与えたい要素の親要素に {{cssxref("display")}} の特別な値を設定します。 この場合、{{htmlelement("article")}} 要素をレイアウトしたいので、これを {{htmlelement("section")}} に設定します（これがフレックスコンテナになります）。</p>
-
-<pre class="brush: css notranslate">section {
+```css
+section {
   display: flex;
-}</pre>
+}
+```
 
-<p>この結果は次のようになります。</p>
+この結果は次のようになります。
 
-<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+![](flexbox-example2.png)
 
-<p>それで、このたった一つの宣言が必要なものすべてを与えてくれます — 信じられないでしょ？ 同じ幅の列を持つ複数列のレイアウトがあり、列の高さはすべて同じです。 これは、フレックス項目（フレックスコンテナの子）に与えられるデフォルト値が、このような一般的な問題を解決するために設定されているためです。 それらについての詳細は後で。</p>
+それで、このたった一つの宣言が必要なものすべてを与えてくれます — 信じられないでしょ？ 同じ幅の列を持つ複数列のレイアウトがあり、列の高さはすべて同じです。 これは、フレックス項目（フレックスコンテナの子）に与えられるデフォルト値が、このような一般的な問題を解決するために設定されているためです。 それらについての詳細は後で。
 
-<div class="note">
-<p><strong>注</strong>: インライン項目を柔軟な箱としてレイアウトしたい場合は、<code>inline-flex</code> を {{cssxref("display")}} の値として設定することもできます。</p>
-</div>
+> **Note:** **注**: インライン項目を柔軟な箱としてレイアウトしたい場合は、`inline-flex` を {{cssxref("display")}} の値として設定することもできます。
 
-<h2 id="An_aside_on_the_flex_model" name="An_aside_on_the_flex_model">フレックスモデルのさておき</h2>
+## フレックスモデルのさておき
 
-<p>要素が柔軟な箱として配置されるとき、それらは次のように2つの軸に沿って配置されます。</p>
+要素が柔軟な箱として配置されるとき、それらは次のように 2 つの軸に沿って配置されます。
 
-<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
+![flex_terms.png](flex_terms.png)
 
-<ul>
- <li>主軸（<strong>main axis</strong>）は、フレックス項目が配置されている方向に走る軸です（例えば、ページを横切る行、またはページ下の列として）。 この軸の始点と終点は、主始点（<strong>main start</strong>）と主終点（<strong>main end</strong>）と呼ばれます。</li>
- <li>交差軸（<strong>cross axis</strong>）は、フレックス項目が配置されている方向に対して垂直に走る軸です。 この軸の始点と終点は、交差始点（<strong>cross start</strong>）と交差終点（<strong>cross end</strong>）と呼ばれます。</li>
- <li><code>display: flex</code> が設定されている親要素（この例では {{htmlelement("section")}}）は、フレックスコンテナ（<strong>flex container</strong>）と呼ばれます。</li>
- <li>フレックスコンテナ内の柔軟な箱としてレイアウトされている項目は、フレックス項目（<strong>flex item</strong>）と呼ばれます（この例では {{htmlelement("article")}} 要素）。</li>
-</ul>
+- 主軸（**main axis**）は、フレックス項目が配置されている方向に走る軸です（例えば、ページを横切る行、またはページ下の列として）。 この軸の始点と終点は、主始点（**main start**）と主終点（**main end**）と呼ばれます。
+- 交差軸（**cross axis**）は、フレックス項目が配置されている方向に対して垂直に走る軸です。 この軸の始点と終点は、交差始点（**cross start**）と交差終点（**cross end**）と呼ばれます。
+- `display: flex` が設定されている親要素（この例では {{htmlelement("section")}}）は、フレックスコンテナ（**flex container**）と呼ばれます。
+- フレックスコンテナ内の柔軟な箱としてレイアウトされている項目は、フレックス項目（**flex item**）と呼ばれます（この例では {{htmlelement("article")}} 要素）。
 
-<p>次のセクションを進むときには、この用語集のことを覚えておいてください。 使用されている用語のいずれかについて混乱した場合は、いつでもここを参照することができます。</p>
+次のセクションを進むときには、この用語集のことを覚えておいてください。 使用されている用語のいずれかについて混乱した場合は、いつでもここを参照することができます。
 
-<h2 id="Columns_or_rows" name="Columns_or_rows">列それとも行？</h2>
+## 列それとも行？
 
-<p>フレックスボックスは {{cssxref("flex-direction")}} というプロパティを提供します。 これは主軸が走る方向（フレックスボックスの子がどの方向にレイアウトされるか）を指定します — デフォルトではこれは <code>row</code> に設定されていて、ブラウザーのデフォルト言語が動作する方向（英語のブラウザーの場合は左から右に）にそれらが横一列にレイアウトされます。</p>
+フレックスボックスは {{cssxref("flex-direction")}} というプロパティを提供します。 これは主軸が走る方向（フレックスボックスの子がどの方向にレイアウトされるか）を指定します — デフォルトではこれは `row` に設定されていて、ブラウザーのデフォルト言語が動作する方向（英語のブラウザーの場合は左から右に）にそれらが横一列にレイアウトされます。
 
-<p>次の宣言を {{htmlelement("section")}}）の規則に追加してみてください。</p>
+次の宣言を {{htmlelement("section")}}）の規則に追加してみてください。
 
-<pre class="brush: css notranslate">flex-direction: column;</pre>
+```css
+flex-direction: column;
+```
 
-<p>これにより、CSS を追加する前と同じように、項目が縦一列のレイアウトに戻されます。 先に進む前に、この宣言を例から削除してください。</p>
+これにより、CSS を追加する前と同じように、項目が縦一列のレイアウトに戻されます。 先に進む前に、この宣言を例から削除してください。
 
-<div class="note">
-<p><strong>注</strong>: <code>row-reverse</code> と <code>column-reverse</code> の値を使用して、フレックス項目を逆方向にレイアウトすることもできます。 これらの値も試してみてください！</p>
-</div>
+> **Note:** **注**: `row-reverse` と `column-reverse` の値を使用して、フレックス項目を逆方向にレイアウトすることもできます。 これらの値も試してみてください！
 
-<h2 id="Columns_or_rows" name="Columns_or_rows">ラッピング</h2>
+## ラッピング
 
-<p>レイアウトの幅や高さが決まっているときに発生する問題の1つは、最終的にはフレックスボックスの子がコンテナをオーバーフローさせてレイアウトが壊れることです。 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> の例を見て、それを<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">ライブで見て</a>みてください（この例に沿って進めたい場合は、このファイルのローカルコピーを取ってください）。</p>
+レイアウトの幅や高さが決まっているときに発生する問題の 1 つは、最終的にはフレックスボックスの子がコンテナをオーバーフローさせてレイアウトが壊れることです。 [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) の例を見て、それを[ライブで見て](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html)みてください（この例に沿って進めたい場合は、このファイルのローカルコピーを取ってください）。
 
-<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+![](flexbox-example3.png)
 
-<p>ここで実際に子がコンテナから抜け出しているのを見ます。 これを修正できる1つの方法は、{{htmlelement("section")}}）の規則に次の宣言を追加することです。</p>
+ここで実際に子がコンテナから抜け出しているのを見ます。 これを修正できる 1 つの方法は、{{htmlelement("section")}}）の規則に次の宣言を追加することです。
 
-<pre class="brush: css notranslate">flex-wrap: wrap;</pre>
+```css
+flex-wrap: wrap;
+```
 
-<p>また、{{htmlelement("article")}} の規則に次の宣言を追加します。</p>
+また、{{htmlelement("article")}} の規則に次の宣言を追加します。
 
-<pre class="brush: css notranslate">flex: 200px;</pre>
+```css
+flex: 200px;
+```
 
-<p>試してみてください。 これが含まれていると次のようにレイアウトがはるかに良く見えることがわかります。</p>
+試してみてください。 これが含まれていると次のようにレイアウトがはるかに良く見えることがわかります。
 
-<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">現在、複数の行があります — 多くのフレックスボックスの子が各行に納められているので、オーバーフローは次のラインに移動します。 <code>article</code> に設定した <code>flex: 200px</code> の宣言は、それぞれが少なくとも 200px 幅になることを意味します。 このプロパティについては後で詳しく説明します。 また、最後の行の最後の数個の子がそれぞれ幅広になっているので、依然として行全体がいっぱいになっていることに気付くかもしれません。</p>
+![](flexbox-example4.png)現在、複数の行があります — 多くのフレックスボックスの子が各行に納められているので、オーバーフローは次のラインに移動します。 `article` に設定した `flex: 200px` の宣言は、それぞれが少なくとも 200px 幅になることを意味します。 このプロパティについては後で詳しく説明します。 また、最後の行の最後の数個の子がそれぞれ幅広になっているので、依然として行全体がいっぱいになっていることに気付くかもしれません。
 
-<p>しかし、ここでできることは他にもあります。 まず最初に、{{cssxref("flex-direction")}} プロパティの値を <code>row-reverse</code> に変更してみてください。 これで、まだ複数行のレイアウトがあることがわかりますが、ブラウザーウィンドウの反対側の隅から開始して逆方向に流れます。</p>
+しかし、ここでできることは他にもあります。 まず最初に、{{cssxref("flex-direction")}} プロパティの値を `row-reverse` に変更してみてください。 これで、まだ複数行のレイアウトがあることがわかりますが、ブラウザーウィンドウの反対側の隅から開始して逆方向に流れます。
 
-<h2 id="flex-flow_shorthand" name="flex-flow_shorthand">flex-flow 一括指定</h2>
+## flex-flow 一括指定
 
-<p>この時点で、{{cssxref("flex-flow")}} という {{cssxref("flex-direction")}} と {{cssxref("flex-wrap")}} の一括指定が存在することに注目する価値があります。 例えば、次のように置き換えることができます。</p>
+この時点で、{{cssxref("flex-flow")}} という {{cssxref("flex-direction")}} と {{cssxref("flex-wrap")}} の一括指定が存在することに注目する価値があります。 例えば、次のように置き換えることができます。
 
-<pre class="brush: css notranslate">flex-direction: row;
-flex-wrap: wrap;</pre>
+```css
+flex-direction: row;
+flex-wrap: wrap;
+```
 
-<p>を</p>
+を
 
-<pre class="brush: css notranslate">flex-flow: row wrap;</pre>
+```css
+flex-flow: row wrap;
+```
 
-<h2 id="Flexible_sizing_of_flex_items" name="Flexible_sizing_of_flex_items">フレックス項目の柔軟なサイズ変更</h2>
+## フレックス項目の柔軟なサイズ変更
 
-<p>それでは、最初の例に戻って、フレックス項目の占めるスペースの割合を制御する方法を見てみましょう。 ローカルコピーの <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a> を起動するか、新しい出発点として <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html">flexbox1.html</a> のコピーを入手してください（<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html">ライブで見る</a>）。</p>
+それでは、最初の例に戻って、フレックス項目の占めるスペースの割合を制御する方法を見てみましょう。 ローカルコピーの [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) を起動するか、新しい出発点として [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) のコピーを入手してください（[ライブで見る](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)）。
 
-<p>まず、CSS の一番下に次の規則を追加します。</p>
+まず、CSS の一番下に次の規則を追加します。
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   flex: 1;
-}</pre>
+}
+```
 
-<p>これは、各フレックス項目が主軸に沿って使用可能なスペースのうちどれだけを占めるかを決定する、無単位の割合値です。 この場合、各 {{htmlelement("article")}} 要素に 1 の値を与えています。 つまり、パディングやマージンなどを設定した後の残りの予備スペースのうちから、すべてが同じ量を占めます。 これは割合であり、各フレックス項目に 400000 の値を指定してもまったく同じ効果があることを意味します。</p>
+これは、各フレックス項目が主軸に沿って使用可能なスペースのうちどれだけを占めるかを決定する、無単位の割合値です。 この場合、各 {{htmlelement("article")}} 要素に 1 の値を与えています。 つまり、パディングやマージンなどを設定した後の残りの予備スペースのうちから、すべてが同じ量を占めます。 これは割合であり、各フレックス項目に 400000 の値を指定してもまったく同じ効果があることを意味します。
 
-<p>それでは、前の規則の下に次の規則を追加します。</p>
+それでは、前の規則の下に次の規則を追加します。
 
-<pre class="brush: css notranslate">article:nth-of-type(3) {
+```css
+article:nth-of-type(3) {
   flex: 2;
-}</pre>
+}
+```
 
-<p>リフレッシュすると、3番目の {{htmlelement("article")}} が他の2つの幅の2倍の幅を占めます。 合計で 4 割合単位が使用可能です。 最初の2つのフレックス項目はそれぞれ 1 単位ずつ持つため、それぞれ使用可能なスペースの 1/4 を占めます。 3つ目は 2 単位を持っているので、それは使用可能なスペースの 2/4（または 1/2）を占めます。</p>
+リフレッシュすると、3 番目の {{htmlelement("article")}} が他の 2 つの幅の 2 倍の幅を占めます。 合計で 4 割合単位が使用可能です。 最初の 2 つのフレックス項目はそれぞれ 1 単位ずつ持つため、それぞれ使用可能なスペースの 1/4 を占めます。 3 つ目は 2 単位を持っているので、それは使用可能なスペースの 2/4（または 1/2）を占めます。
 
-<p><code>flex</code> の値内に最小サイズ値を指定することもできます。 既存の <code>article</code> の規則を次のように更新してみてください。</p>
+`flex` の値内に最小サイズ値を指定することもできます。 既存の `article` の規則を次のように更新してみてください。
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   flex: 1 200px;
 }
 
 article:nth-of-type(3) {
   flex: 2 200px;
-}</pre>
+}
+```
 
-<p>これは基本的に「各フレックス項目には最初に 200px の使用可能なスペースが与えられます。 その後、残りの使用可能なスペースは割合単位に従って共有されます。」と述べています。 リフレッシュしてみると、スペースの共有方法に違いが見られます。</p>
+これは基本的に「各フレックス項目には最初に 200px の使用可能なスペースが与えられます。 その後、残りの使用可能なスペースは割合単位に従って共有されます。」と述べています。 リフレッシュしてみると、スペースの共有方法に違いが見られます。
 
-<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+![](flexbox-example1.png)
 
-<p>フレックスボックスの真の価値は、その柔軟性/応答性に見ることができます — ブラウザーウィンドウのサイズを変更したり、別の {{htmlelement("article")}} 要素を追加したりしても、レイアウトは問題なく機能します。</p>
+フレックスボックスの真の価値は、その柔軟性/応答性に見ることができます — ブラウザーウィンドウのサイズを変更したり、別の {{htmlelement("article")}} 要素を追加したりしても、レイアウトは問題なく機能します。
 
-<h2 id="flex_shorthand_versus_longhand" name="flex_shorthand_versus_longhand">flex: 一括指定対個別指定</h2>
+## flex: 一括指定対個別指定
 
-<p>{{cssxref("flex")}} は、最大3つの異なる値を指定できる{{cssxref("Shorthand_properties","一括指定プロパティ")}}です。</p>
+{{cssxref("flex")}} は、最大 3 つの異なる値を指定できる{{cssxref("Shorthand_properties","一括指定プロパティ")}}です。
 
-<ul>
- <li>上記で説明した無単位の割合値。 これは {{cssxref("flex-grow")}} 個別指定プロパティを使用して個別に指定できます。</li>
- <li>{{cssxref("flex-shrink")}} というフレックス項目がコンテナをオーバーフローしているときに有効になる、2番目の無単位の割合値。 これは、各フレックス項目のサイズからオーバーフローする量を取り除き、それらがコンテナからオーバーフローするのを防ぐために指定します。 これはかなり高度なフレックスボックスの機能で、この記事ではこれ以上説明しません。</li>
- <li>上記で説明した最小サイズ値。 これは、{{cssxref("flex-basis")}} の個別指定値を使用して個別に指定できます。</li>
-</ul>
+- 上記で説明した無単位の割合値。 これは {{cssxref("flex-grow")}} 個別指定プロパティを使用して個別に指定できます。
+- {{cssxref("flex-shrink")}} というフレックス項目がコンテナをオーバーフローしているときに有効になる、2 番目の無単位の割合値。 これは、各フレックス項目のサイズからオーバーフローする量を取り除き、それらがコンテナからオーバーフローするのを防ぐために指定します。 これはかなり高度なフレックスボックスの機能で、この記事ではこれ以上説明しません。
+- 上記で説明した最小サイズ値。 これは、{{cssxref("flex-basis")}} の個別指定値を使用して個別に指定できます。
 
-<p>本当に必要な場合以外は、個別指定の flex プロパティを使用しないことをお勧めします（例えば、以前に設定したものを上書きする場合など）。 それらは多くの余分なコードが書かれることにつながり、多少混乱するかもしれません。</p>
+本当に必要な場合以外は、個別指定の flex プロパティを使用しないことをお勧めします（例えば、以前に設定したものを上書きする場合など）。 それらは多くの余分なコードが書かれることにつながり、多少混乱するかもしれません。
 
-<h2 id="Horizontal_and_vertical_alignment" name="Horizontal_and_vertical_alignment">水平方向と垂直方向の配置</h2>
+## 水平方向と垂直方向の配置
 
-<p>フレックスボックスの機能を使用して、主軸または交差軸に沿ってフレックス項目を整列させることもできます。 新しい例である <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> を見て（<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">ライブも見る</a>）、これを調べてみましょう。 これは、きちんとした柔軟なボタン/ツールバーに変わります。 現時点では、いくつかのボタンが左上隅に詰まった水平のメニューバーが表示されます。</p>
+フレックスボックスの機能を使用して、主軸または交差軸に沿ってフレックス項目を整列させることもできます。 新しい例である [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) を見て（[ライブも見る](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)）、これを調べてみましょう。 これは、きちんとした柔軟なボタン/ツールバーに変わります。 現時点では、いくつかのボタンが左上隅に詰まった水平のメニューバーが表示されます。
 
-<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+![](flexbox-example5.png)
 
-<p>まず、この例のローカルコピーを取ります。</p>
+まず、この例のローカルコピーを取ります。
 
-<p>それでは、例の CSS の最後に次のものを追加してください。</p>
+それでは、例の CSS の最後に次のものを追加してください。
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}</pre>
+}
+```
 
-<p>ページをリフレッシュすると、ボタンが横方向と縦方向に中央揃えになっていることがわかります。 これを2つの新しいプロパティを介して行いました。</p>
+ページをリフレッシュすると、ボタンが横方向と縦方向に中央揃えになっていることがわかります。 これを 2 つの新しいプロパティを介して行いました。
 
-<p>{{cssxref("align-items")}} は、フレックス項目が交差軸上のどこに配置されるかを制御します。</p>
+{{cssxref("align-items")}} は、フレックス項目が交差軸上のどこに配置されるかを制御します。
 
-<ul>
- <li>デフォルトでは、この値は <code>stretch</code> です。 これは、すべてのフレックス項目を交差軸の方向に親を埋めるように引き伸ばします。 親が交差軸方向に固定幅を持っていない場合、すべてのフレックス項目は最長のフレックス項目と同じ長さになります。 これが最初の例がデフォルトで同じ高さの列を得た方法です。</li>
- <li>上記のコードで使用した <code>center</code> の値により、項目は固有の寸法を維持しますが、交差軸の中心に配置されます。 これが、この例のボタンが縦方向に中央揃えされている理由です。</li>
- <li><code>flex-start</code> や <code>flex-end</code> のような値を持つこともできます。 これは、すべての項目をそれぞれ交差軸の始点や終点に揃えます。 詳細については {{cssxref("align-items")}} を参照してください。</li>
-</ul>
+- デフォルトでは、この値は `stretch` です。 これは、すべてのフレックス項目を交差軸の方向に親を埋めるように引き伸ばします。 親が交差軸方向に固定幅を持っていない場合、すべてのフレックス項目は最長のフレックス項目と同じ長さになります。 これが最初の例がデフォルトで同じ高さの列を得た方法です。
+- 上記のコードで使用した `center` の値により、項目は固有の寸法を維持しますが、交差軸の中心に配置されます。 これが、この例のボタンが縦方向に中央揃えされている理由です。
+- `flex-start` や `flex-end` のような値を持つこともできます。 これは、すべての項目をそれぞれ交差軸の始点や終点に揃えます。 詳細については {{cssxref("align-items")}} を参照してください。
 
-<p>{{cssxref("align-self")}} プロパティを適用することで、個々のフレックス項目の {{cssxref("align-items")}} のふるまいを上書きできます。 例えば、CSS に次のコードを追加してみてください。</p>
+{{cssxref("align-self")}} プロパティを適用することで、個々のフレックス項目の {{cssxref("align-items")}} のふるまいを上書きできます。 例えば、CSS に次のコードを追加してみてください。
 
-<pre class="brush: css notranslate">button:first-child {
+```css
+button:first-child {
   align-self: flex-end;
-}</pre>
+}
+```
 
-<p>これがどのような影響を与えるのかを見て、終了したらもう一度削除します。</p>
+これがどのような影響を与えるのかを見て、終了したらもう一度削除します。
 
-<p>{{cssxref("justify-content")}} は、フレックス項目が主軸上のどこに配置されるかを制御します。</p>
+{{cssxref("justify-content")}} は、フレックス項目が主軸上のどこに配置されるかを制御します。
 
-<ul>
- <li>デフォルト値は <code>flex-start</code> です。 これにより、すべての項目が主軸の始点に配置されます。</li>
- <li>それらを終点に配置させるために <code>flex-end</code> を使うことができます。</li>
- <li><code>center</code> は <code>justify-content</code> のための値でもあり、フレックス項目を主軸の中心に配置します。</li>
- <li>上記で使用した値、<code>space-around</code> は便利です。 両端に少しのスペースを残して、すべての項目を主軸に沿って均等に配置します。</li>
- <li>もう1つの値、<code>space-between</code> があります。 これは、両端にスペースを残さないという点を除けば、<code>space-around</code> に非常に似ています。</li>
-</ul>
+- デフォルト値は `flex-start` です。 これにより、すべての項目が主軸の始点に配置されます。
+- それらを終点に配置させるために `flex-end` を使うことができます。
+- `center` は `justify-content` のための値でもあり、フレックス項目を主軸の中心に配置します。
+- 上記で使用した値、`space-around` は便利です。 両端に少しのスペースを残して、すべての項目を主軸に沿って均等に配置します。
+- もう 1 つの値、`space-between` があります。 これは、両端にスペースを残さないという点を除けば、`space-around` に非常に似ています。
 
-<p>続ける前に、これらの値を使用してそれらがどのように機能するかを確認することをお勧めします。</p>
+続ける前に、これらの値を使用してそれらがどのように機能するかを確認することをお勧めします。
 
-<h2 id="Ordering_flex_items" name="Ordering_flex_items">フレックス項目の順序付け</h2>
+## フレックス項目の順序付け
 
-<p>フレックスボックスには、ソース順に影響を与えずにフレックス項目のレイアウトの順序を変更する機能もあります。 これも従来のレイアウト方法では不可能なことです。</p>
+フレックスボックスには、ソース順に影響を与えずにフレックス項目のレイアウトの順序を変更する機能もあります。 これも従来のレイアウト方法では不可能なことです。
 
-<p>このコードは簡単です。 ボタンバーのサンプルコードに次の CSS を追加してみてください。</p>
+このコードは簡単です。 ボタンバーのサンプルコードに次の CSS を追加してみてください。
 
-<pre class="brush: css notranslate">button:first-child {
+```css
+button:first-child {
   order: 1;
-}</pre>
+}
+```
 
-<p>リフレッシュすると、[Smile] ボタンが主軸の終点に移動したことがわかります。 これがどのように機能するかについてもう少し詳しく説明しましょう。</p>
+リフレッシュすると、\[Smile] ボタンが主軸の終点に移動したことがわかります。 これがどのように機能するかについてもう少し詳しく説明しましょう。
 
-<ul>
- <li>デフォルトでは、すべてのフレックス項目の {{cssxref("order")}} の値は 0 です。</li>
- <li>大きな <code>order</code> の値が設定されているフレックス項目は、小さな <code>order</code> の値を持つ項目よりも表示順序の後半に表示されます。</li>
- <li>同じ <code>order</code> の値を持つフレックス項目は、ソース順で表示されます。 そのため、2、1、1、0 の <code>order</code> の値がそれぞれ設定された4つの項目がある場合、それらの表示順序は 4、2、3、1 となります。</li>
- <li>3番目の項目は2番目の後に表示されます。 これは、同じ <code>order</code> の値を持ち、ソース順でそれより後にあるためです。</li>
-</ul>
+- デフォルトでは、すべてのフレックス項目の {{cssxref("order")}} の値は 0 です。
+- 大きな `order` の値が設定されているフレックス項目は、小さな `order` の値を持つ項目よりも表示順序の後半に表示されます。
+- 同じ `order` の値を持つフレックス項目は、ソース順で表示されます。 そのため、2、1、1、0 の `order` の値がそれぞれ設定された 4 つの項目がある場合、それらの表示順序は 4、2、3、1 となります。
+- 3 番目の項目は 2 番目の後に表示されます。 これは、同じ `order` の値を持ち、ソース順でそれより後にあるためです。
 
-<p>負の <code>order</code> の値を設定して、0 が設定されている項目よりも早く項目を表示することができます。 例えば、次の規則を使用して、[Blush] ボタンを主軸の始点に表示させることができます。</p>
+負の `order` の値を設定して、0 が設定されている項目よりも早く項目を表示することができます。 例えば、次の規則を使用して、\[Blush] ボタンを主軸の始点に表示させることができます。
 
-<pre class="brush: css notranslate">button:last-child {
+```css
+button:last-child {
   order: -1;
-}</pre>
+}
+```
 
-<h2 id="Nested_flex_boxes" name="Nested_flex_boxes">ネストしたフレックスボックス</h2>
+## ネストしたフレックスボックス
 
-<p>フレックスボックスを使ってかなり複雑なレイアウトを作成することは可能です。 フレックス項目をフレックスコンテナとしても設定して、その子も柔軟な箱のようにレイアウトできるようにしてもまったく問題ありません。 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> を見てください（<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">ライブも見る</a>）。</p>
+フレックスボックスを使ってかなり複雑なレイアウトを作成することは可能です。 フレックス項目をフレックスコンテナとしても設定して、その子も柔軟な箱のようにレイアウトできるようにしてもまったく問題ありません。 [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) を見てください（[ライブも見る](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
 
-<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](flexbox-example7.png)
 
-<p>このための HTML はかなり単純です。 3つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 3番目の {{htmlelement("article")}} には3つの {{htmlelement("div")}} が含まれています。</p>
+このための HTML はかなり単純です。 3 つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 3 番目の {{htmlelement("article")}} には 3 つの {{htmlelement("div")}} が含まれています。
 
-<pre class="notranslate">section - article
+```
+section - article
           article
           article - div - button
                     div   button
                     div   button
                           button
-                          button</pre>
+                          button
+```
 
-<p>レイアウトに使用したコードを見てみましょう。</p>
+レイアウトに使用したコードを見てみましょう。
 
-<p>まず、{{htmlelement("section")}} の子を柔軟な箱として配置するように設定します。</p>
+まず、{{htmlelement("section")}} の子を柔軟な箱として配置するように設定します。
 
-<pre class="brush: css notranslate">section {
+```css
+section {
   display: flex;
-}</pre>
+}
+```
 
-<p>次に、{{htmlelement("article")}} 自体にいくつかの <code>flex</code> の値を設定します。 ここで2番目の規則に特に注意してください — 3番目の {{htmlelement("article")}} は、その子もフレックス項目のようにレイアウトするように設定していますが、今回はそれらを <code>column</code> のようにレイアウトしています。</p>
+次に、{{htmlelement("article")}} 自体にいくつかの `flex` の値を設定します。 ここで 2 番目の規則に特に注意してください — 3 番目の {{htmlelement("article")}} は、その子もフレックス項目のようにレイアウトするように設定していますが、今回はそれらを `column` のようにレイアウトしています。
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   flex: 1 200px;
 }
 
@@ -288,62 +292,62 @@ article:nth-of-type(3) {
   display: flex;
   flex-flow: column;
 }
-</pre>
+```
 
-<p>次に、最初の {{htmlelement("div")}} を選択します。 最初に <code>flex: 1 100px;</code> を使用して効果的にそれの最小の高さを 100px にしてから、その子（{{htmlelement("button")}} 要素）もフレックス項目のように配置されるように設定します。 ここでそれらをラッピングする行にレイアウトし、先ほど見た個々のボタンの例で行ったように、それらを使用可能なスペースの中央に配置します。</p>
+次に、最初の {{htmlelement("div")}} を選択します。 最初に `flex: 1 100px;` を使用して効果的にそれの最小の高さを 100px にしてから、その子（{{htmlelement("button")}} 要素）もフレックス項目のように配置されるように設定します。 ここでそれらをラッピングする行にレイアウトし、先ほど見た個々のボタンの例で行ったように、それらを使用可能なスペースの中央に配置します。
 
-<pre class="brush: css notranslate">article:nth-of-type(3) div:first-child {
+```css
+article:nth-of-type(3) div:first-child {
   flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-}</pre>
+}
+```
 
-<p>最後に、ボタンのサイズを設定しましたが、もっとおもしろいことに、<code>1 auto</code> の <code>flex</code> の値を設定しています。 これは非常に興味深い効果があり、ブラウザーウィンドウの幅を変更してみるとわかります。 ボタンは可能な限り多くのスペースを占有し、できるだけ同じラインに配置できますが、同じラインに収まりきらなくなった場合は、ドロップダウンして新しいラインを作成します。</p>
+最後に、ボタンのサイズを設定しましたが、もっとおもしろいことに、`1 auto` の `flex` の値を設定しています。 これは非常に興味深い効果があり、ブラウザーウィンドウの幅を変更してみるとわかります。 ボタンは可能な限り多くのスペースを占有し、できるだけ同じラインに配置できますが、同じラインに収まりきらなくなった場合は、ドロップダウンして新しいラインを作成します。
 
-<pre class="brush: css notranslate">button {
+```css
+button {
   flex: 1 auto;
   margin: 5px;
   font-size: 18px;
   line-height: 1.5;
-}</pre>
+}
+```
 
-<h2 id="Cross_browser_compatibility" name="Cross_browser_compatibility">クロスブラウザー互換性</h2>
+## クロスブラウザー互換性
 
-<p>フレックスボックスのサポートは、Firefox、Chrome、Opera、Microsoft Edge、IE 11、Android / iOS の新しいバージョンなど、ほとんどの新しいブラウザーで利用できます。 ただし、フレックスボックスをサポートしていない古いブラウザーもまだあります（または、しますが、本当に古い、時代遅れのバージョンをサポートします）。</p>
+フレックスボックスのサポートは、Firefox、Chrome、Opera、Microsoft Edge、IE 11、Android / iOS の新しいバージョンなど、ほとんどの新しいブラウザーで利用できます。 ただし、フレックスボックスをサポートしていない古いブラウザーもまだあります（または、しますが、本当に古い、時代遅れのバージョンをサポートします）。
 
-<p>あなたがただ学んで実験している間、これはあまり重要ではありません。 ただし、実際のウェブサイトでフレックスボックスを使用することを検討している場合は、テストを行い、できるだけ多くのブラウザーでユーザーエクスペリエンスが許容範囲内であることを確認する必要があります。</p>
+あなたがただ学んで実験している間、これはあまり重要ではありません。 ただし、実際のウェブサイトでフレックスボックスを使用することを検討している場合は、テストを行い、できるだけ多くのブラウザーでユーザーエクスペリエンスが許容範囲内であることを確認する必要があります。
 
-<p>フレックスボックスはいくつかの CSS 機能よりも少しトリッキーです。 例えば、ブラウザーに CSS ドロップシャドウがない場合でも、そのサイトは引き続き使用可能です。 ただし、フレックスボックス機能をサポートしていないと、レイアウトが完全に壊れて使用できなくなる可能性があります。</p>
+フレックスボックスはいくつかの CSS 機能よりも少しトリッキーです。 例えば、ブラウザーに CSS ドロップシャドウがない場合でも、そのサイトは引き続き使用可能です。 ただし、フレックスボックス機能をサポートしていないと、レイアウトが完全に壊れて使用できなくなる可能性があります。
 
-<p><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing">クロスブラウザーテスト</a>のモジュールでは、クロスブラウザーのサポートの問題を解決するための戦略について説明します。</p>
+[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)のモジュールでは、クロスブラウザーのサポートの問題を解決するための戦略について説明します。
 
-<h2 id="スキルをテストしましょう!">スキルをテストしましょう!</h2>
+## スキルをテストしましょう!
 
-<p>この記事では多くをカバーしましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox_skills">Test your skills: Flexbox</a> を見てください。</p>
+この記事では多くをカバーしましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Flexbox](/ja/docs/Learn/CSS/CSS_layout/Flexbox_skills) を見てください。
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p>これで、フレックスボックスの基本についてのツアーは終了です。 私たちはあなたが楽しみを持って、学習と共に前進するにつれてそれと一緒に良い遊びがあることを願っています。 次に、CSS レイアウトのもう1つの重要な側面、CSS グリッドについて見ていきます。</p>
+これで、フレックスボックスの基本についてのツアーは終了です。 私たちはあなたが楽しみを持って、学習と共に前進するにつれてそれと一緒に良い遊びがあることを願っています。 次に、CSS レイアウトのもう 1 つの重要な側面、CSS グリッドについて見ていきます。
 
-<div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}</div>
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-<div>
-<h2 id="In_this_module" name="In_this_module">このモジュール内の文書</h2>
+## このモジュール内の文書
 
-<ul>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Introduction">CSS レイアウト入門</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Normal_Flow">通常フロー</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">フレックスボックス</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Grids">グリッド</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Floats">フロート</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Positioning">位置指定</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">段組みレイアウト</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Responsive_Design">レスポンシブデザイン</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Media_queries">メディアクエリーの初心者向けガイド</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">過去のレイアウト方法</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">古いブラウザーのサポート</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">基礎的なレイアウトの理解</a></li>
-</ul>
-</div>
+- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
+- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
+- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
+- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
+- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
+- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
+- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

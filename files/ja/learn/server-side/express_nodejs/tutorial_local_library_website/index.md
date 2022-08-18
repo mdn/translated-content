@@ -16,83 +16,64 @@ tags:
   - 学習
 translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}</div>
+実用的なチュートリアルシリーズの最初の記事では、これから学ぶことについて説明します。そして、私たちがこれから取り組んでいき、その後の記事で進化していく「地域図書館」のサンプルウェブサイトの概要を説明します。
 
-<p class="summary">実用的なチュートリアルシリーズの最初の記事では、これから学ぶことについて説明します。そして、私たちがこれから取り組んでいき、その後の記事で進化していく「地域図書館」のサンプルウェブサイトの概要を説明します。</p>
+| 前提条件: | [Express のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)を読んでください。以下の記事では、[Node 開発環境を設定する](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)必要もあります。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 目標:     | このチュートリアルで使用されているサンプルアプリケーションを紹介し、どのトピックがカバーされるのかを読者が理解できるようにします。                                                                                                   |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Introduction">Express のイントロダクション</a>を読んでください。以下の記事では、<a href="/ja/docs/Learn/Server-side/Express_Nodejs/development_environment">Node 開発環境を設定する</a>必要もあります。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>このチュートリアルで使用されているサンプルアプリケーションを紹介し、どのトピックがカバーされるのかを読者が理解できるようにします。</td>
-  </tr>
- </tbody>
-</table>
+## 概要
 
-<h2 id="概要">概要</h2>
+MDN "Local Library" Express (Node) チュートリアルへようこそ。このチュートリアルでは、地域図書館の目録を管理するために使用される可能性があるウェブサイトを開発します。
 
-<p>MDN "Local Library" Express (Node) チュートリアルへようこそ。このチュートリアルでは、地域図書館の目録を管理するために使用される可能性があるウェブサイトを開発します。</p>
+この一連のチュートリアル記事では、次のことを行います。
 
-<p>この一連のチュートリアル記事では、次のことを行います。</p>
+- Express Application Generator ツールを使用して、スケルトンウェブサイトとアプリケーションを作成します。
+- Node ウェブサーバーを起動および停止します。
+- データベースを使用してアプリケーションのデータを保存します。
+- さまざまな情報を要求するためのルートを作成し、ブラウザーに表示するデータを HTML としてレンダリングするためのテンプレート ("ビュー" )を作成します
+- フォームを操作します。
+- アプリケーションを運用環境にデプロイします。
 
-<ul>
- <li>Express Application Generator ツールを使用して、スケルトンウェブサイトとアプリケーションを作成します。</li>
- <li>Node ウェブサーバーを起動および停止します。</li>
- <li>データベースを使用してアプリケーションのデータを保存します。</li>
- <li>さまざまな情報を要求するためのルートを作成し、ブラウザーに表示するデータを HTML としてレンダリングするためのテンプレート ("ビュー" )を作成します</li>
- <li>フォームを操作します。</li>
- <li>アプリケーションを運用環境にデプロイします。</li>
-</ul>
+あなたはすでにこれらのトピックのいくつかについて学び、他のものについても簡単に触れました。チュートリアルシリーズの最後までに、簡単な Express アプリケーションを自分で開発するのに十分な知識があるはずです。
 
-<p>あなたはすでにこれらのトピックのいくつかについて学び、他のものについても簡単に触れました。チュートリアルシリーズの最後までに、簡単な Express アプリケーションを自分で開発するのに十分な知識があるはずです。</p>
+## LocalLibrary ウェブサイト
 
-<h2 id="LocalLibrary_ウェブサイト">LocalLibrary ウェブサイト</h2>
+_LocalLibrary_ は、この一連のチュートリアルの過程で作成および進化するウェブサイトの名前です。ご想像のとおり、この ウェブサイトの目的は利用できる書籍を閲覧したり自分のアカウントを管理したりできる、地元の小さな図書館用のオンライン目録を提供することです。
 
-<p><em>LocalLibrary</em> は、この一連のチュートリアルの過程で作成および進化するウェブサイトの名前です。ご想像のとおり、この ウェブサイトの目的は利用できる書籍を閲覧したり自分のアカウントを管理したりできる、地元の小さな図書館用のオンライン目録を提供することです。</p>
+この例は慎重に選択されています。必要なだけ詳細を表示することも、ほとんどすべての Express 機能を見せるために使用することもできるためです。さらに重要なことに、それはどんなウェブサイトでも必要とする機能性への*ガイド付きの*道筋を提供することができます：
 
-<p>この例は慎重に選択されています。必要なだけ詳細を表示することも、ほとんどすべての Express 機能を見せるために使用することもできるためです。さらに重要なことに、それはどんなウェブサイトでも必要とする機能性への<em>ガイド付きの</em>道筋を提供することができます：</p>
+- 最初のいくつかのチュートリアル記事では、図書館のメンバーがどの本が利用できるかを調べるために使用できる簡単な*ブラウズ専用*ライブラリを定義します。これにより、ほぼすべての ウェブサイトに共通の操作、つまりデータベースからのコンテンツの読み取りと表示を探ることができます。
+- 先へ進むにつれて、図書館の例は自然に拡張され、より高度な ウェブサイト機能を実演します。たとえば、新しい本を作成できるようにライブラリを拡張し、これを使用してフォームの使用方法を示し、ユーザ認証をサポートすることができます。
 
-<ul>
- <li>最初のいくつかのチュートリアル記事では、図書館のメンバーがどの本が利用できるかを調べるために使用できる簡単な<em>ブラウズ専用</em>ライブラリを定義します。これにより、ほぼすべての ウェブサイトに共通の操作、つまりデータベースからのコンテンツの読み取りと表示を探ることができます。</li>
- <li>先へ進むにつれて、図書館の例は自然に拡張され、より高度な ウェブサイト機能を実演します。たとえば、新しい本を作成できるようにライブラリを拡張し、これを使用してフォームの使用方法を示し、ユーザ認証をサポートすることができます。</li>
-</ul>
+これは非常に拡張可能な例ですが、_**Local**Library_ と呼ばれる理由があります。私たちは Express をすぐに使い始めるための最小限の情報を示すことを望んでいます。その結果、私たちは本に関する情報、本のコピー、作者、その他の重要な情報を保存します。ただし、図書館が貸し出す可能性のある他のアイテムに関する情報を保存したり、複数の図書館サイトやその他の "大きな図書館" 機能をサポートするために必要なインフラストラクチャを提供することはしません。
 
-<p>これは非常に拡張可能な例ですが、<em><strong>Local</strong>Library</em> と呼ばれる理由があります。私たちは Express をすぐに使い始めるための最小限の情報を示すことを望んでいます。その結果、私たちは本に関する情報、本のコピー、作者、その他の重要な情報を保存します。ただし、図書館が貸し出す可能性のある他のアイテムに関する情報を保存したり、複数の図書館サイトやその他の "大きな図書館" 機能をサポートするために必要なインフラストラクチャを提供することはしません。</p>
+## 私は立ち往生しています、どこでソースを入手できますか？
 
-<h2 id="私は立ち往生しています、どこでソースを入手できますか？">私は立ち往生しています、どこでソースを入手できますか？</h2>
+チュートリアルを進めていくうちに、適切なコードスニペットを各ポイントにコピーして貼り付けることができます。また、他のコードも (ある程度の手引きを付けて) 自身で拡張することを望んでいます。
 
-<p>チュートリアルを進めていくうちに、適切なコードスニペットを各ポイントにコピーして貼り付けることができます。また、他のコードも (ある程度の手引きを付けて) 自身で拡張することを望んでいます。</p>
+すべてのコードスニペットをコピーして貼り付けるのではなく、それらを入力してみてください。次回同様のコードを書くときに、コードに慣れ親しんでいることになるので、長期的に役に立ちます。
 
-<p>すべてのコードスニペットをコピーして貼り付けるのではなく、それらを入力してみてください。次回同様のコードを書くときに、コードに慣れ親しんでいることになるので、長期的に役に立ちます。</p>
+あなたが立ち往生したならば、[Github のここ](https://github.com/mdn/express-locallibrary-tutorial)で ウェブサイトの完全に開発されたバージョンを見つけることができます。
 
-<p>あなたが立ち往生したならば、<a href="https://github.com/mdn/express-locallibrary-tutorial">Github のここ</a>で ウェブサイトの完全に開発されたバージョンを見つけることができます。</p>
+> **Note:** **メモ:** この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) にリストされています。
 
-<div class="note">
-<p><strong>メモ:</strong> この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト <a href="https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json">package.json</a> にリストされています。</p>
-</div>
+## まとめ
 
-<h2 id="まとめ">まとめ</h2>
+_LocalLIbrary_ ウェブサイトと、これから学ぶことについて少し知りました。今度は私たちの例を含む[スケルトンプロジェクト](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)の作成を開始します。
 
-<p><em>LocalLIbrary</em> ウェブサイトと、これから学ぶことについて少し知りました。今度は私たちの例を含む<a href="/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website">スケルトンプロジェクト</a>の作成を開始します。</p>
+{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
-<p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}</p>
+## このモジュールの中
 
-<h2 id="このモジュールの中">このモジュールの中</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node のイントロダクション</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/development_environment">Node 開発環境の設定</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express チュートリアル: 地域図書館のウェブサイト</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express チュートリアル Part 2: スケルトンウェブサイトの作成</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/mongoose">Express チュートリアル Part 3: データベースを使う (Mongoose を使用)</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/routes">Express チュートリアル Part 4: ルートとコントローラ</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express チュートリアル Part 5: ライブラリデータの表示</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/forms">Express チュートリアル Part 6: フォームの操作</a></li>
- <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs/deployment">Express チュートリアル Part 7: プロダクションへのデプロイ</a></li>
-</ul>
+- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express チュートリアル: 地域図書館のウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

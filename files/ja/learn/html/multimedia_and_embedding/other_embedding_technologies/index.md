@@ -16,78 +16,63 @@ tags:
   - iframe
 translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}</div>
+そろそろ、画像、動画、音声など、ウェブページへの埋め込みのコツがつかめてきたはずです。ここでは、少し横道にそれて、ウェブページに様々な種類のコンテンツを埋め込むことができる要素、 {{htmlelement("iframe")}}、 {{htmlelement("embed")}}、 {{htmlelement("object")}} を見てみたいと思います。 `<iframe>` は他のウェブページを埋め込むためのもので、他の 2 つの要素は PDF、SVG、 さらに Flash — もうすぐなくなる技術ですが、まだ時々見かけるもの — も、埋め込むことができます。
 
-<p class="summary">そろそろ、画像、動画、音声など、ウェブページへの埋め込みのコツがつかめてきたはずです。ここでは、少し横道にそれて、ウェブページに様々な種類のコンテンツを埋め込むことができる要素、 {{htmlelement("iframe")}}、 {{htmlelement("embed")}}、 {{htmlelement("object")}} を見てみたいと思います。 <code>&lt;iframe&gt;</code> は他のウェブページを埋め込むためのもので、他の2つの要素は PDF、SVG、 さらに Flash — もうすぐなくなる技術ですが、まだ時々見かけるもの — も、埋め込むことができます。</p>
+| 前提条件: | 基本的なコンピュータリテラシー、[インストールされた基本ソフトウェア](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、[ファイルの操作](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)に関する基本知識、HTML の基礎知識 ([HTML の入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started))、およびこのモジュールの前の記事 |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | Flash ムービーなどのウェブページのように、{{htmlelement("object")}}、{{htmlelement("embed")}}、{{htmlelement("iframe")}} を使用してアイテムをウェブページに埋め込む方法を学びます。                                                                                                                                                      |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピュータリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">インストールされた基本ソフトウェア</a>、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの操作</a>に関する基本知識、HTML の基礎知識 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTML の入門</a>)、およびこのモジュールの前の記事</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>Flash ムービーなどのウェブページのように、{{htmlelement("object")}}、{{htmlelement("embed")}}、{{htmlelement("iframe")}} を使用してアイテムをウェブページに埋め込む方法を学びます。</td>
-  </tr>
- </tbody>
-</table>
+## 埋め込みの短い歴史
 
-<h2 id="A_short_history_of_embedding" name="A_short_history_of_embedding">埋め込みの短い歴史</h2>
+昔、ウェブ上では、**フレーム**を使ってウェブサイトを作るのが一般的でした - ウェブサイトの小さな部分が個々の HTML ページに保存されていました。これらは、**フレームセット**と呼ばれるマスター文書に埋め込まれていました。これにより、テーブルの列と行のサイジングのように、各フレームが埋めた画面上の領域を指定することができました。これらは 90 年代半ばから後半にかけてのクールさの極みと考えられていました。このような小さな塊に分割されたウェブページを持っているとダウンロード速度が向上したという証拠がありました — 特にネットワーク接続が非常に遅いため、特に顕著です。それらは多くの問題を抱えていましたが、ネットワーク速度がより速くなるにつれて、これ以上の利点はなく、あなたはそれらがもう使用されているのを見ていません。
 
-<p>昔、ウェブ上では、<strong>フレーム</strong>を使ってウェブサイトを作るのが一般的でした - ウェブサイトの小さな部分が個々の HTML ページに保存されていました。これらは、<strong>フレームセット</strong>と呼ばれるマスター文書に埋め込まれていました。これにより、テーブルの列と行のサイジングのように、各フレームが埋めた画面上の領域を指定することができました。これらは90年代半ばから後半にかけてのクールさの極みと考えられていました。このような小さな塊に分割されたウェブページを持っているとダウンロード速度が向上したという証拠がありました — 特にネットワーク接続が非常に遅いため、特に顕著です。それらは多くの問題を抱えていましたが、ネットワーク速度がより速くなるにつれて、これ以上の利点はなく、あなたはそれらがもう使用されているのを見ていません。</p>
+ちょっと後で(90 年代後半、2000 年代初頭)、{{Glossary("Java","Java アプレット")}}や {{Glossary("Adobe_Flash","Flash")}} などのプラグイン技術が普及しました。これにより、ウェブ開発者は動画やアニメーションなどのウェブページに豊富なコンテンツを埋め込むことができました。これらの技術を埋め込むことは、{{htmlelement("object")}} や、あまり使われていない {{htmlelement("embed")}} などの要素によって実現され、当時は非常に便利でした。アクセシビリティ、セキュリティ、ファイルサイズなど、多くの問題が発生して以来、それらは流行していませんでした。最近のモバイルデバイスのほとんどは、このようなプラグインをサポートしておらず、デスクトップのサポートは出口にあります。
 
-<p>ちょっと後で(90年代後半、2000年代初頭)、{{Glossary("Java","Java アプレット")}}や {{Glossary("Adobe_Flash","Flash")}} などのプラグイン技術が普及しました。これにより、ウェブ開発者は動画やアニメーションなどのウェブページに豊富なコンテンツを埋め込むことができました。これらの技術を埋め込むことは、{{htmlelement("object")}} や、あまり使われていない {{htmlelement("embed")}} などの要素によって実現され、当時は非常に便利でした。アクセシビリティ、セキュリティ、ファイルサイズなど、多くの問題が発生して以来、それらは流行していませんでした。最近のモバイルデバイスのほとんどは、このようなプラグインをサポートしておらず、デスクトップのサポートは出口にあります。</p>
+最後に、{{htmlelement("iframe")}} 要素が現れました({{htmlelement("canvas")}}、{{htmlelement("video")}} などのコンテンツを埋め込む他の方法と一緒に)。これは、ウェブ文書全体を別のウェブ文書に埋め込む方法を提供し、あたかも {{htmlelement("img")}} か他の要素であるかのように、今日では普通に使用されています。
 
-<p>最後に、{{htmlelement("iframe")}} 要素が現れました({{htmlelement("canvas")}}、{{htmlelement("video")}} などのコンテンツを埋め込む他の方法と一緒に)。これは、ウェブ文書全体を別のウェブ文書に埋め込む方法を提供し、あたかも {{htmlelement("img")}} か他の要素であるかのように、今日では普通に使用されています。</p>
+歴史の授業を終了して、これらのいくつかの使い方を見てみましょう。
 
-<p>歴史の授業を終了して、これらのいくつかの使い方を見てみましょう。</p>
+## アクティブラーニング: 従来の埋め込みを使う
 
-<h2 id="Active_learning_classic_embedding_uses" name="Active_learning_classic_embedding_uses">アクティブラーニング: 従来の埋め込みを使う</h2>
+この記事では、能動的学習セクションにまっすぐ飛び込んで、埋め込み技術が有用であるかどうかをすぐに知ることができます。オンラインの世界では [Youtube](https://www.youtube.com) はとてもよく知られていますが、多くの人は利用可能な共有施設については知らないのです。YouTube が {{htmlelement("iframe")}} を使って好きなページに動画を埋め込むことができる仕組みを見てみましょう。
 
-<p>この記事では、能動的学習セクションにまっすぐ飛び込んで、埋め込み技術が有用であるかどうかをすぐに知ることができます。オンラインの世界では <a href="https://www.youtube.com">Youtube</a> はとてもよく知られていますが、多くの人は利用可能な共有施設については知らないのです。YouTube が {{htmlelement("iframe")}} を使って好きなページに動画を埋め込むことができる仕組みを見てみましょう。</p>
+1.  まず、Youtube へ行き、あなたが好きな動画を見つけてください。
+2.  動画の下に \[共有] ボタンがあります。これを選択すると、共有オプションが表示されます。
+3.  \[埋め込む] ボタンを選択すると、`<iframe>` コードがいくつか表示されます。これをコピーします。
+4.  下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。
 
-<ol>
- <li>まず、Youtube へ行き、あなたが好きな動画を見つけてください。</li>
- <li>動画の下に [共有] ボタンがあります。これを選択すると、共有オプションが表示されます。</li>
- <li>[埋め込む] ボタンを選択すると、<code>&lt;iframe&gt;</code> コードがいくつか表示されます。これをコピーします。</li>
- <li>下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。</li>
-</ol>
+ボーナスポイントとして、例の中に [Google マップ](https://www.google.com/maps/)を埋め込むこともできます。
 
-<p>ボーナスポイントとして、例の中に <a href="https://www.google.com/maps/">Google マップ</a>を埋め込むこともできます。</p>
+1.  Google マップへ行き、好きな地図を見つけます。
+2.  UI の左上にあるハンバーガーメニュー(3 本の水平線)をクリックします。
+3.  \[地図を共有または埋め込む] オプションを選択します。
+4.  \[地図を埋め込む] オプションを選択します。これは、`<iframe>` コードをいくつか提供します。これをコピーします。
+5.  下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。
 
-<ol>
- <li>Google マップへ行き、好きな地図を見つけます。</li>
- <li>UI の左上にあるハンバーガーメニュー(3本の水平線)をクリックします。</li>
- <li>[地図を共有または埋め込む] オプションを選択します。</li>
- <li>[地図を埋め込む] オプションを選択します。これは、<code>&lt;iframe&gt;</code> コードをいくつか提供します。これをコピーします。</li>
- <li>下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。</li>
-</ol>
+間違えた場合は、\[Reset] ボタンを使用してリセットすることができます。あなたが本当に立ち往生したら、\[Show solution] ボタンを押して回答を見てください。
 
-<p>間違えた場合は、[Reset] ボタンを使用してリセットすることができます。あなたが本当に立ち往生したら、[Show solution] ボタンを押して回答を見てください。</p>
+```html hidden
+<h2>Live output</h2>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<div class="output" style="min-height: 250px;">
+</div>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;div class="output" style="min-height: 250px;"&gt;
-&lt;/div&gt;
+<textarea id="code" class="input" style="width: 95%;min-height: 100px;">
+</textarea>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-&lt;textarea id="code" class="input" style="width: 95%;min-height: 100px;"&gt;
-&lt;/textarea&gt;
-
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -105,9 +90,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -137,7 +124,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen&gt;\n&lt;/iframe&gt;\n\n&lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen&gt;\n&lt;/iframe&gt;';
+var htmlSolution = '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -183,217 +170,166 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 600, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 600, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Iframes_in_detail" name="Iframes_in_detail">iframe の詳細</h2>
+## iframe の詳細
 
-<p>それは簡単で楽しいものでしたか? {{htmlelement("iframe")}} 要素は、他のウェブ文書を現在の文書に埋め込むことができるように設計されています。これは、直接制御できない可能性のある第三者のコンテンツをウェブサイトに組み込むのに適していて、独自のバージョンを実装する必要はありません — オンライン動画プロバイダの動画、<a href="https://disqus.com/">Disqus</a> のようなコメントシステム、オンライン地図プロバイダの地図、広告バナーなど。このコースで使用しているライブ編集可能な例は、<code>&lt;iframe&gt;</code> を使用して実装されています。</p>
+それは簡単で楽しいものでしたか? {{htmlelement("iframe")}} 要素は、他のウェブ文書を現在の文書に埋め込むことができるように設計されています。これは、直接制御できない可能性のある第三者のコンテンツをウェブサイトに組み込むのに適していて、独自のバージョンを実装する必要はありません — オンライン動画プロバイダの動画、[Disqus](https://disqus.com/) のようなコメントシステム、オンライン地図プロバイダの地図、広告バナーなど。このコースで使用しているライブ編集可能な例は、`<iframe>` を使用して実装されています。
 
-<p><code>&lt;iframe&gt;</code> で検討すべき<a href="#security_concerns">セキュリティ上の懸念</a>がいくつかあり、これについては以下で説明しますが、あなたのウェブサイトで使用しないでください — ちょっとした知識と慎重な考えが必要です。コードを少し詳しく見てみましょう。あなたのウェブページの1つに MDN の用語集を含めることを考えていたら、次のようなことを試すことができます。</p>
+`<iframe>` で検討すべき[セキュリティ上の懸念](#security_concerns)がいくつかあり、これについては以下で説明しますが、あなたのウェブサイトで使用しないでください — ちょっとした知識と慎重な考えが必要です。コードを少し詳しく見てみましょう。あなたのウェブページの 1 つに MDN の用語集を含めることを考えていたら、次のようなことを試すことができます。
 
-<pre class="notranslate">&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+```
+<iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
         width="100%" height="500" frameborder="0"
-        allowfullscreen sandbox&gt;
-  &lt;p&gt;
-    &lt;a href="https://developer.mozilla.org/en-US/docs/Glossary"&gt;
+        allowfullscreen sandbox>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary">
     iframe をサポートしていないブラウザーのための代替リンク
-    &lt;/a&gt;
-  &lt;/p&gt;
-&lt;/iframe&gt;</pre>
+    </a>
+  </p>
+</iframe>
+```
 
-<p>この例には、<code>&lt;iframe&gt;</code> の使用に必要な基本的な要素が含まれています。</p>
+この例には、`<iframe>` の使用に必要な基本的な要素が含まれています。
 
-<dl>
- <dt>{{htmlattrxref('allowfullscreen','iframe')}}</dt>
- <dd>設定されている場合、<code>&lt;iframe&gt;</code> は、 <a href="/ja/docs/Web/API/Fullscreen_API">Full Screen API</a> を使用してフルスクリーンモードにすることができます(この記事の範囲外です)。</dd>
- <dt>{{htmlattrxref('frameborder','iframe')}}</dt>
- <dd>1 に設定すると、これはブラウザーにこのフレームと他のフレームとの境界を描画するように指示します。これは既定の動作です。0 は境界を取り去ります。{{Glossary('CSS')}} で {{cssxref('border')}}<code>: none;</code> を使用すると、同じ効果がより良く達成できるので、この属性を使用することはもうお勧めできません。</dd>
- <dt>{{htmlattrxref('src','iframe')}}</dt>
- <dd>この属性は、{{htmlelement("video")}} や {{htmlelement("img")}} と同様に、埋め込む文書の URL を指すパスを含んでいます。</dd>
- <dt>{{htmlattrxref('width','iframe')}} と {{htmlattrxref('height','iframe')}}</dt>
- <dd>これらの属性は、iframe の幅と高さを指定します。</dd>
- <dt>代替コンテンツ</dt>
- <dd>{{htmlelement("video")}} のような他の要素と同じように、 <code>&lt;iframe&gt;</code> と <code>&lt;/iframe&gt;</code> のタグの間に、ブラウザーが <code>&lt;iframe&gt;</code> をサポートしていない場合に表示される代替コンテンツを含めることができます。この場合、代わりにページへのリンクが含まれています。最近では、<code>&lt;iframe&gt;</code> をサポートしていないブラウザーを見つけることはまずありません。</dd>
- <dt>{{htmlattrxref('sandbox','iframe')}}</dt>
- <dd>この属性は、他の <code>&lt;iframe&gt;</code> の機能よりも若干現代的なブラウザー(たとえば、IE 10 以上)で機能し、高度なセキュリティ設定を要求します。これについては、次のセクションで詳しく説明します。</dd>
-</dl>
+- {{htmlattrxref('allowfullscreen','iframe')}}
+  - : 設定されている場合、`<iframe>` は、 [Full Screen API](/ja/docs/Web/API/Fullscreen_API) を使用してフルスクリーンモードにすることができます(この記事の範囲外です)。
+- {{htmlattrxref('frameborder','iframe')}}
+  - : 1 に設定すると、これはブラウザーにこのフレームと他のフレームとの境界を描画するように指示します。これは既定の動作です。0 は境界を取り去ります。{{Glossary('CSS')}} で {{cssxref('border')}}`: none;` を使用すると、同じ効果がより良く達成できるので、この属性を使用することはもうお勧めできません。
+- {{htmlattrxref('src','iframe')}}
+  - : この属性は、{{htmlelement("video")}} や {{htmlelement("img")}} と同様に、埋め込む文書の URL を指すパスを含んでいます。
+- {{htmlattrxref('width','iframe')}} と {{htmlattrxref('height','iframe')}}
+  - : これらの属性は、iframe の幅と高さを指定します。
+- 代替コンテンツ
+  - : {{htmlelement("video")}} のような他の要素と同じように、 `<iframe>` と `</iframe>` のタグの間に、ブラウザーが `<iframe>` をサポートしていない場合に表示される代替コンテンツを含めることができます。この場合、代わりにページへのリンクが含まれています。最近では、`<iframe>` をサポートしていないブラウザーを見つけることはまずありません。
+- {{htmlattrxref('sandbox','iframe')}}
+  - : この属性は、他の `<iframe>` の機能よりも若干現代的なブラウザー(たとえば、IE 10 以上)で機能し、高度なセキュリティ設定を要求します。これについては、次のセクションで詳しく説明します。
 
-<div class="note">
-<p><strong>メモ</strong>: 速度を向上させるためには、メインコンテンツの読み込みが完了した後に iframe の <code>src</code> 属性を JavaScript で設定することをお勧めします。これにより、ページがより早く使用できるようになり、公式ページの読み込み時間が短縮されます(重要な {{glossary("SEO")}} の測定基準)。</p>
-</div>
+> **Note:** **メモ**: 速度を向上させるためには、メインコンテンツの読み込みが完了した後に iframe の `src` 属性を JavaScript で設定することをお勧めします。これにより、ページがより早く使用できるようになり、公式ページの読み込み時間が短縮されます(重要な {{glossary("SEO")}} の測定基準)。
 
-<h3 id="Security_concerns" name="Security_concerns">セキュリティ上の懸念</h3>
+### セキュリティ上の懸念
 
-<p>上ではセキュリティ上の懸念について言及しました。これについてもう少し詳しく説明しましょう。あなたはこのコンテンツのすべてを初めから完全に理解することを期待していません。この懸念を認識して、より経験豊かになり、あなたの実験や作業で <code>&lt;iframe&gt;</code> の使用を検討し始める参考にしてください。また、恐怖を感じ、<code>&lt;iframe&gt;</code> を使わない必要はありません — 注意するだけです。</p>
+上ではセキュリティ上の懸念について言及しました。これについてもう少し詳しく説明しましょう。あなたはこのコンテンツのすべてを初めから完全に理解することを期待していません。この懸念を認識して、より経験豊かになり、あなたの実験や作業で `<iframe>` の使用を検討し始める参考にしてください。また、恐怖を感じ、`<iframe>` を使わない必要はありません — 注意するだけです。
 
-<p>ブラウザーメーカーやウェブ開発者は、iframe がウェブ上の悪意ある人物(しばしば<strong>ハッカー</strong>、またはより正確には<strong>クラッカー</strong>と呼ばれます)の共通のターゲット(公式の用語: <strong>攻撃ベクター</strong>)であるということを苦労して学びました。悪意ある人物は、あなたのウェブページを悪意を持って改ざんすることや、ユーザ名やパスワードなどの機密情報を明らかにするなど、人を騙し望んでいないことを行います。このため、仕様技術者とブラウザー開発者は、<code>&lt;iframe&gt;</code> をより安全にするためのさまざまなセキュリティ・メカニズムを開発しました。また、考慮すべき最善の措置もあります — これらのいくつかを以下で説明します。</p>
+ブラウザーメーカーやウェブ開発者は、iframe がウェブ上の悪意ある人物(しばしば**ハッカー**、またはより正確には**クラッカー**と呼ばれます)の共通のターゲット(公式の用語: **攻撃ベクター**)であるということを苦労して学びました。悪意ある人物は、あなたのウェブページを悪意を持って改ざんすることや、ユーザ名やパスワードなどの機密情報を明らかにするなど、人を騙し望んでいないことを行います。このため、仕様技術者とブラウザー開発者は、`<iframe>` をより安全にするためのさまざまなセキュリティ・メカニズムを開発しました。また、考慮すべき最善の措置もあります — これらのいくつかを以下で説明します。
 
-<div class="note">
-<p>{{interwiki('wikipedia','クリックジャッキング')}}は、ハッカーが目に見えない iframe をあなたの文書に埋め込んだり(あなたの文書を自分の悪意のあるウェブサイトに埋め込んだり)して、ユーザの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザを誤解させたり機密データを盗む一般的な方法です。</p>
-</div>
+> **Note:** {{interwiki('wikipedia','クリックジャッキング')}}は、ハッカーが目に見えない iframe をあなたの文書に埋め込んだり(あなたの文書を自分の悪意のあるウェブサイトに埋め込んだり)して、ユーザの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザを誤解させたり機密データを盗む一般的な方法です。
 
-<p>簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">ライブ</a>が公開されています(<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">ソースコード</a>も参照してください)。実際にページに何も表示されませんが、<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザーの開発者ツール</a>のコンソールに、理由を示すメッセージが表示されます。Firefox では、"Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing." (X-Frame-Optionsによって読み込みが拒否されました: https://developer.mozilla.org/en-US/docs/Glossary はフレーミングを許可していません。)というメッセージが表示されます。これは、MDN を作成した開発者が、<code>&lt;iframe&gt;</code> 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです(下記の <a href="#configure_csp_directives">CSP ディレクティブの設定</a>を参照してください)。これは、理にかなっています — あなたのサイトにそれらを埋め込んであなた自身のものと主張するようなことをしない限り、MDN のページ全体が他のページに埋め込まれるのは本当に意味がありません — または、クリックジャッキングを介してデータを盗み出そうとする。どちらも本当に悪いことです。さらに、誰もがこれをやり始めたら、すべての追加の帯域幅が Mozilla に多額の費用をかけるようになります。</p>
+簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています([ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください)。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。Firefox では、"Load denied by X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary does not permit framing." (X-Frame-Options によって読み込みが拒否されました: https\://developer.mozilla.org/en-US/docs/Glossary はフレーミングを許可していません。)というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです(下記の [CSP ディレクティブの設定](#configure_csp_directives)を参照してください)。これは、理にかなっています — あなたのサイトにそれらを埋め込んであなた自身のものと主張するようなことをしない限り、MDN のページ全体が他のページに埋め込まれるのは本当に意味がありません — または、クリックジャッキングを介してデータを盗み出そうとする。どちらも本当に悪いことです。さらに、誰もがこれをやり始めたら、すべての追加の帯域幅が Mozilla に多額の費用をかけるようになります。
 
-<h4 id="Only_embed_when_necessary" name="Only_embed_when_necessary">必要なときにのみ埋め込みます</h4>
+#### 必要なときにのみ埋め込みます
 
-<p>場合によっては、第三者のコンテンツを埋め込むことが理にかなっています — youtube 動画や地図のようなものですが、完全に必要なときに第三者のコンテンツだけを埋め込むのであれば、頭を悩ますことはありません。ウェブセキュリティのための良い経験則は、「慎重すぎることは決してありません。もしあなたがそれを作ったら、とにかくそれをもう一度チェックしてください。他の誰かがそれを作ったら、そうでないと証明されるまでそれは危険です。」ということです。</p>
+場合によっては、第三者のコンテンツを埋め込むことが理にかなっています — youtube 動画や地図のようなものですが、完全に必要なときに第三者のコンテンツだけを埋め込むのであれば、頭を悩ますことはありません。ウェブセキュリティのための良い経験則は、「慎重すぎることは決してありません。もしあなたがそれを作ったら、とにかくそれをもう一度チェックしてください。他の誰かがそれを作ったら、そうでないと証明されるまでそれは危険です。」ということです。
 
-<div>
-<p>セキュリティのほかに、知的財産の問題にも注意する必要があります。ほとんどのコンテンツは著作権で保護されており、オフラインでもオンラインでも、予期していないコンテンツ(例えば、<a href="https://commons.wikimedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8?uselang=ja">ウィキメディアコモンズ</a>のほとんどの画像)でさえもあります。あなたが所有しているか、または所有者があなたに書面による明白な許可を与えていない限り、ウェブページにコンテンツを表示しないでください。著作権侵害に対する罰則は厳しいものです。繰り返しますが、決して慎重すぎることはありません。</p>
+セキュリティのほかに、知的財産の問題にも注意する必要があります。ほとんどのコンテンツは著作権で保護されており、オフラインでもオンラインでも、予期していないコンテンツ(例えば、[ウィキメディアコモンズ](https://commons.wikimedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8?uselang=ja)のほとんどの画像)でさえもあります。あなたが所有しているか、または所有者があなたに書面による明白な許可を与えていない限り、ウェブページにコンテンツを表示しないでください。著作権侵害に対する罰則は厳しいものです。繰り返しますが、決して慎重すぎることはありません。
 
-<p>コンテンツにライセンスが付与されている場合は、ライセンス条項に従わなければなりません。たとえば、MDN のコンテンツは <a href="/ja/docs/MDN/About#Copyrights_and_licenses">CC-BY-SA でライセンス</a>されています。つまり、コンテンツを大幅に変更した場合でも、コンテンツを引用する際には、<a href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">適切にクレジットを表示する</a>(英語)必要があります。</p>
-</div>
+コンテンツにライセンスが付与されている場合は、ライセンス条項に従わなければなりません。たとえば、MDN のコンテンツは [CC-BY-SA でライセンス](/ja/docs/MDN/About#Copyrights_and_licenses)されています。つまり、コンテンツを大幅に変更した場合でも、コンテンツを引用する際には、[適切にクレジットを表示する](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution)(英語)必要があります。
 
-<h4 id="Use_HTTPS" name="Use_HTTPS">HTTPS を使用する</h4>
+#### HTTPS を使用する
 
-<p>{{Glossary("HTTPS")}} は {{Glossary("HTTP")}} の暗号化されたバージョンです。可能であれば、HTTPS を使用してウェブサイトを提供する必要があります。</p>
+{{Glossary("HTTPS")}} は {{Glossary("HTTP")}} の暗号化されたバージョンです。可能であれば、HTTPS を使用してウェブサイトを提供する必要があります。
 
-<ol>
- <li>HTTPS を使用すると、転送中にリモートコンテンツが改ざんされる可能性が減り、</li>
- <li>HTTPS は、埋め込みコンテンツが親文書内のコンテンツにアクセスすることを防止し、逆も同様です。</li>
-</ol>
+1.  HTTPS を使用すると、転送中にリモートコンテンツが改ざんされる可能性が減り、
+2.  HTTPS は、埋め込みコンテンツが親文書内のコンテンツにアクセスすることを防止し、逆も同様です。
 
-<p>HTTPS を使用するには、高価なセキュリティ証明書が必要です(ただし、<a href="https://letsencrypt.org/">Let's Encrypt</a> で簡単にできます) — 入手できない場合は、親文書を HTTP で配信できます。しかし、上記の HTTPS の2つ目の利点のため、コストにかかわらず、第三者のコンテンツを HTTP に埋め込むことは絶対にしないでください(最良の場合のシナリオでは、ユーザのウェブブラウザーは恐ろしい警告を表示します)。<code>&lt;iframe&gt;</code> を使用してコンテンツを埋め込むことができる評判の良い企業はすべて、HTTPS 経由で利用できるようになります — たとえば、Google マップや YouTube からコンテンツを埋め込む場合は、<code>&lt;iframe&gt;</code> の <code>src</code> 属性内の URL を調べます。</p>
+HTTPS を使用するには、高価なセキュリティ証明書が必要です(ただし、[Let's Encrypt](https://letsencrypt.org/) で簡単にできます) — 入手できない場合は、親文書を HTTP で配信できます。しかし、上記の HTTPS の 2 つ目の利点のため、コストにかかわらず、第三者のコンテンツを HTTP に埋め込むことは絶対にしないでください(最良の場合のシナリオでは、ユーザのウェブブラウザーは恐ろしい警告を表示します)。`<iframe>` を使用してコンテンツを埋め込むことができる評判の良い企業はすべて、HTTPS 経由で利用できるようになります — たとえば、Google マップや YouTube からコンテンツを埋め込む場合は、`<iframe>` の `src` 属性内の URL を調べます。
 
-<div class="note">
-<p><strong>メモ</strong>: <a href="/ja/docs/Learn/Common_questions/Using_Github_pages">Github のページ</a>では、既定で HTTPS 経由でコンテンツを提供できるため、コンテンツのホスティングに便利です。異なるホスティングを使用していて、わからない場合は、ホスティングプロバイダに問い合わせてください。</p>
-</div>
+> **Note:** **メモ**: [Github のページ](/ja/docs/Learn/Common_questions/Using_Github_pages)では、既定で HTTPS 経由でコンテンツを提供できるため、コンテンツのホスティングに便利です。異なるホスティングを使用していて、わからない場合は、ホスティングプロバイダに問い合わせてください。
 
-<h4 id="Always_use_the_sandbox_attribute" name="Always_use_the_sandbox_attribute">常に <code>sandbox</code> 属性を使用する</h4>
+#### 常に `sandbox` 属性を使用する
 
-<p>攻撃者には、あなたのウェブサイトで悪いことを行うことができるような力を与えたくないので、埋め込みコンテンツには、その仕事を行うために必要な権限のみを与えるべきです。もちろん、これは自分のコンテンツにも当てはまります。適切に(またはテスト用に)使用できるが、コードベースの残りの部分に何らかの害(偶発的または悪意のある)を及ぼすことができないコード用のコンテナは、<a href="https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9_(%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3)">サンドボックス</a>と呼ばれます。</p>
+攻撃者には、あなたのウェブサイトで悪いことを行うことができるような力を与えたくないので、埋め込みコンテンツには、その仕事を行うために必要な権限のみを与えるべきです。もちろん、これは自分のコンテンツにも当てはまります。適切に(またはテスト用に)使用できるが、コードベースの残りの部分に何らかの害(偶発的または悪意のある)を及ぼすことができないコード用のコンテナは、[サンドボックス](<https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9_(%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3)>)と呼ばれます。
 
-<p>サンドボックスにないコンテンツはあまりにも多くのことを行うことができます( JavaScript の実行、フォームの送信、ポップアップウィンドウなど)。既定では、前述の例に示すように、パラメーターなしの <code>sandbox</code> 属性を使用して、使用可能なすべての制限を課す必要があります。</p>
+サンドボックスにないコンテンツはあまりにも多くのことを行うことができます( JavaScript の実行、フォームの送信、ポップアップウィンドウなど)。既定では、前述の例に示すように、パラメーターなしの `sandbox` 属性を使用して、使用可能なすべての制限を課す必要があります。
 
-<p>絶対に必要な場合は、権限を1つずつ追加することができます(<code>sandbox=""</code> 属性値内に) — 使用可能なすべてのオプションについては、{{htmlattrxref('sandbox','iframe')}} のリファレンスのエントリを参照してください。重要な注意点の1つは、 <code>sandbox</code> 属性に <code>allow-scripts</code> と <code>allow-same-origin</code> の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジン・セキュリティポリシーをバイパスし、JavaScript を使用してサンドボックスを完全に無効にします。</p>
+絶対に必要な場合は、権限を 1 つずつ追加することができます(`sandbox=""` 属性値内に) — 使用可能なすべてのオプションについては、{{htmlattrxref('sandbox','iframe')}} のリファレンスのエントリを参照してください。重要な注意点の 1 つは、 `sandbox` 属性に `allow-scripts` と `allow-same-origin` の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジン・セキュリティポリシーをバイパスし、JavaScript を使用してサンドボックスを完全に無効にします。
 
-<div class="note">
-<p><strong>メモ</strong>: 攻撃者が欺いて悪意のあるコンテンツ(iframe 外にある)を直接訪問させることができれば、サンドボックスは保護を提供しません。特定のコンテンツが悪意のあるコンテンツ(ユーザ生成コンテンツなど)である可能性がある場合は、別の{{glossary("domain","ドメイン")}}からメインサイトへ配信してください。</p>
-</div>
+> **Note:** **メモ**: 攻撃者が欺いて悪意のあるコンテンツ(iframe 外にある)を直接訪問させることができれば、サンドボックスは保護を提供しません。特定のコンテンツが悪意のあるコンテンツ(ユーザ生成コンテンツなど)である可能性がある場合は、別の{{glossary("domain","ドメイン")}}からメインサイトへ配信してください。
 
-<h4 id="Configure_CSP_directives" name="Configure_CSP_directives">CSP ディレクティブの設定</h4>
+#### CSP ディレクティブの設定
 
-<p>{{Glossary("CSP")}} は<strong><a href="/ja/docs/Web/Security/CSP">コンテンツセキュリティポリシー</a></strong>の略で、HTML 文書のセキュリティを強化するために設計された<a href="/ja/docs/Web/Security/CSP/CSP_policy_directives">一連の HTTP ヘッダー</a>(ウェブサーバーから配信されたときにウェブページとともに送信されるメタデータ)を提供します。<code>&lt;iframe&gt;</code> を保護する場合、<a href="/ja/docs/Web/HTTP/X-Frame-Options">適切な X-Frame-Options ヘッダーを送信するようにサーバーを構成</a>できます。これにより、他のウェブサイトがそのウェブページにあなたのコンテンツを埋め込むのを防ぐことができます({{interwiki('wikipedia','クリックジャッキング')}}や他の攻撃のホストを可能にする)。以前に見たように、これはまさに MDN 開発者が行ったことです。</p>
+{{Glossary("CSP")}} は**[コンテンツセキュリティポリシー](/ja/docs/Web/Security/CSP)**の略で、HTML 文書のセキュリティを強化するために設計された[一連の HTTP ヘッダー](/ja/docs/Web/Security/CSP/CSP_policy_directives)(ウェブサーバーから配信されたときにウェブページとともに送信されるメタデータ)を提供します。`<iframe>` を保護する場合、[適切な X-Frame-Options ヘッダーを送信するようにサーバーを構成](/ja/docs/Web/HTTP/X-Frame-Options)できます。これにより、他のウェブサイトがそのウェブページにあなたのコンテンツを埋め込むのを防ぐことができます({{interwiki('wikipedia','クリックジャッキング')}}や他の攻撃のホストを可能にする)。以前に見たように、これはまさに MDN 開発者が行ったことです。
 
-<div class="note">
-<p><strong>メモ</strong>: Frederik Braun 氏の投稿 <a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">X-Frame-Options セキュリティヘッダーについて</a>(英語)で、このトピックの背景情報を読むことができます。明らかに、これは、この記事の詳述の範囲外です。</p>
-</div>
+> **Note:** **メモ**: Frederik Braun 氏の投稿 [X-Frame-Options セキュリティヘッダーについて](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)(英語)で、このトピックの背景情報を読むことができます。明らかに、これは、この記事の詳述の範囲外です。
 
-<h2 id="The_&lt;embed>_and_&lt;object>_elements" name="The_&lt;embed>_and_&lt;object>_elements">&lt;embed&gt; 要素と &lt;object&gt; 要素</h2>
+## \<embed> 要素と \<object> 要素
 
-<p>{{htmlelement("embed")}} 要素と {{htmlelement("object")}} 要素は、{{htmlelement("iframe")}} とは異なる機能を果たします。これらの要素は、Java アプレットや Flash などのプラグイン技術、PDF(ブラウザーで PDF プラグインを使用して表示できる)、動画、SVG、画像などのコンテンツを含む、複数のタイプの外部コンテンツを埋め込む汎用埋め込みツールです!</p>
+{{htmlelement("embed")}} 要素と {{htmlelement("object")}} 要素は、{{htmlelement("iframe")}} とは異なる機能を果たします。これらの要素は、Java アプレットや Flash などのプラグイン技術、PDF(ブラウザーで PDF プラグインを使用して表示できる)、動画、SVG、画像などのコンテンツを含む、複数のタイプの外部コンテンツを埋め込む汎用埋め込みツールです!
 
-<div class="note">
-<p><strong>メモ</strong>: <strong>プラグイン</strong>は、ブラウザーがネイティブに読むことができないコンテンツへのアクセスを提供するソフトウェアです。</p>
-</div>
+> **Note:** **メモ**: **プラグイン**は、ブラウザーがネイティブに読むことができないコンテンツへのアクセスを提供するソフトウェアです。
 
-<p>しかし、あなたはこれらの要素を大いに利用することはまずありません。アプレットは何年も使われておらず、Flash は多くの理由から人気がなくなりました (下記の<a href="#the_case_against_plugins">プラグインに対するケース</a>を参照)。PDF は埋め込まれたものよりもリンクされている傾向があり、画像や動画などの他のコンテンツには、それらを扱うためのずっと優れた、より簡単な要素があります。プラグインとこれらの埋め込み方法は、従来の技術ですが、イントラネットやエンタープライズプロジェクトのような特定の状況でそれらを見かけた場合に備えて言及しています。</p>
+しかし、あなたはこれらの要素を大いに利用することはまずありません。アプレットは何年も使われておらず、Flash は多くの理由から人気がなくなりました (下記の[プラグインに対するケース](#the_case_against_plugins)を参照)。PDF は埋め込まれたものよりもリンクされている傾向があり、画像や動画などの他のコンテンツには、それらを扱うためのずっと優れた、より簡単な要素があります。プラグインとこれらの埋め込み方法は、従来の技術ですが、イントラネットやエンタープライズプロジェクトのような特定の状況でそれらを見かけた場合に備えて言及しています。
 
-<p>プラグインのコンテンツを埋め込む必要がある場合の最低限必要な情報です。</p>
+プラグインのコンテンツを埋め込む必要がある場合の最低限必要な情報です。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col">{{htmlelement("embed")}}</th>
-   <th scope="col">{{htmlelement("object")}}</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>埋め込みコンテンツの {{glossary("URL")}}</td>
-   <td>{{htmlattrxref('src','embed')}}</td>
-   <td>{{htmlattrxref('data','object')}}</td>
-  </tr>
-  <tr>
-   <td>埋め込みコンテンツの正確な{{glossary("MIME type", 'メディアタイプ')}}</td>
-   <td>{{htmlattrxref('type','embed')}}</td>
-   <td>{{htmlattrxref('type','object')}}</td>
-  </tr>
-  <tr>
-   <td>プラグインによって制御されるボックスの高さと幅 (CSS ピクセル単位)</td>
-   <td>{{htmlattrxref('height','embed')}}<br>
-    {{htmlattrxref('width','embed')}}</td>
-   <td>{{htmlattrxref('height','object')}}<br>
-    {{htmlattrxref('width','object')}}</td>
-  </tr>
-  <tr>
-   <td>プラグインにパラメータとして供給するための名前と値</td>
-   <td>それらの名前と値を持つ特別な属性</td>
-   <td><code>&lt;object&gt;</code> 内に含まれる単一タグの {{htmlelement("param")}} 要素</td>
-  </tr>
-  <tr>
-   <td>利用不可能なリソースに対する代替として独立した HTML コンテンツ</td>
-   <td>サポートされていません(<code>&lt;noembed&gt;</code> は廃止されました)</td>
-   <td><code>&lt;object&gt;</code> 内の、<code>&lt;param&gt;</code> 要素の後に含まれる</td>
-  </tr>
- </tbody>
-</table>
+|                                                                                                | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
+| ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| 埋め込みコンテンツの {{glossary("URL")}}                                                  | {{htmlattrxref('src','embed')}}                                                  | {{htmlattrxref('data','object')}}                                                  |
+| 埋め込みコンテンツの正確な{{glossary("MIME type", 'メディアタイプ')}} | {{htmlattrxref('type','embed')}}                                              | {{htmlattrxref('type','object')}}                                                  |
+| プラグインによって制御されるボックスの高さと幅 (CSS ピクセル単位)                              | {{htmlattrxref('height','embed')}} {{htmlattrxref('width','embed')}} | {{htmlattrxref('height','object')}} {{htmlattrxref('width','object')}} |
+| プラグインにパラメータとして供給するための名前と値                                             | それらの名前と値を持つ特別な属性                                                          | `<object>` 内に含まれる単一タグの {{htmlelement("param")}} 要素                       |
+| 利用不可能なリソースに対する代替として独立した HTML コンテンツ                                 | サポートされていません(`<noembed>` は廃止されました)                                      | `<object>` 内の、`<param>` 要素の後に含まれる                                                 |
 
-<div class="note">
-<p><strong>メモ</strong>: <code>&lt;object&gt;</code> には、<code>data</code> 属性、<code>type</code> 属性、またはその両方が必要です。両方を使用する場合は、{{htmlattrxref('typemustmatch','object')}} 属性を使用することもできます(この記事の執筆時点では、Firefox でのみ実装されています)。<code>typemustmatch</code> は、<code>type</code> 属性が正しいメディアタイプを提供していない限り、埋め込みファイルが実行されないようにします。<code>typemustmatch</code> は、異なる{{glossary("origin","オリジン")}}のコンテンツを埋め込んでいる場合に、大きなセキュリティ上の利点をもたらすことができます(攻撃者がプラグインを介して任意のスクリプトを実行することを防ぐことができます)。</p>
-</div>
+> **Note:** **メモ**: `<object>` には、`data` 属性、`type` 属性、またはその両方が必要です。両方を使用する場合は、{{htmlattrxref('typemustmatch','object')}} 属性を使用することもできます(この記事の執筆時点では、Firefox でのみ実装されています)。`typemustmatch` は、`type` 属性が正しいメディアタイプを提供していない限り、埋め込みファイルが実行されないようにします。`typemustmatch` は、異なる{{glossary("origin","オリジン")}}のコンテンツを埋め込んでいる場合に、大きなセキュリティ上の利点をもたらすことができます(攻撃者がプラグインを介して任意のスクリプトを実行することを防ぐことができます)。
 
-<p>次に、{{htmlelement("embed")}} 要素を使用して Flash ムービーを埋め込む例を示します(Github で<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">ライブ</a>を見て、<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">ソースコード</a>も確認してください)。</p>
+次に、{{htmlelement("embed")}} 要素を使用して Flash ムービーを埋め込む例を示します(Github で[ライブ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html)を見て、[ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html)も確認してください)。
 
-<pre class="brush: html notranslate">&lt;embed src="whoosh.swf" quality="medium"
+```html
+<embed src="whoosh.swf" quality="medium"
        bgcolor="#ffffff" width="550" height="400"
        name="whoosh" align="middle" allowScriptAccess="sameDomain"
        allowFullScreen="false" type="application/x-shockwave-flash"
-       pluginspage="http://www.macromedia.com/go/getflashplayer"&gt;</pre>
+       pluginspage="http://www.macromedia.com/go/getflashplayer">
+```
 
-<p>かなり恐ろしいですね。Adobe Flash ツールで生成された HTML は、<code>&lt;embed&gt;</code> 要素が埋め込まれた <code>&lt;object&gt;</code> 要素を使用して、すべてのベースをカバーするために悪化する傾向がありました(例を参照してください)。Flash は、HTML5 動画の代替コンテンツとしても使用されていましたが、これは必要ではないと見られています。</p>
+かなり恐ろしいですね。Adobe Flash ツールで生成された HTML は、`<embed>` 要素が埋め込まれた `<object>` 要素を使用して、すべてのベースをカバーするために悪化する傾向がありました(例を参照してください)。Flash は、HTML5 動画の代替コンテンツとしても使用されていましたが、これは必要ではないと見られています。
 
-<p>次に、PDF をページに埋め込む <code>&lt;object&gt;</code> の例を見てみましょう(<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">ライブ</a>のサンプルと<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">ソースコード</a>を参照)。</p>
+次に、PDF をページに埋め込む `<object>` の例を見てみましょう([ライブ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)のサンプルと[ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)を参照)。
 
-<pre class="brush: html notranslate">&lt;object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch&gt;
-  &lt;p&gt;PDF プラグインはありませんが、
-    &lt;a href="mypdf.pdf"&gt;PDF ファイルをダウンロードできます。
-    &lt;/a&gt;
-  &lt;/p&gt;
-&lt;/object&gt;</pre>
+```html
+<object data="mypdf.pdf" type="application/pdf"
+        width="800" height="1200" typemustmatch>
+  <p>PDF プラグインはありませんが、
+    <a href="mypdf.pdf">PDF ファイルをダウンロードできます。
+    </a>
+  </p>
+</object>
+```
 
-<p>PDF は紙とデジタルの間の必要な足がかりでしたが、多くの<a href="http://webaim.org/techniques/acrobat/acrobat">アクセシビリティ上の課題</a>(英語)があり、小さな画面では読みにくい場合があります。それらはまだいくつかのサークルで人気がある傾向がありますが、ウェブページに埋め込むのではなく、ダウンロードしたり、別のページで読むことができるように、リンクする方がはるかに優れています。</p>
+PDF は紙とデジタルの間の必要な足がかりでしたが、多くの[アクセシビリティ上の課題](http://webaim.org/techniques/acrobat/acrobat)(英語)があり、小さな画面では読みにくい場合があります。それらはまだいくつかのサークルで人気がある傾向がありますが、ウェブページに埋め込むのではなく、ダウンロードしたり、別のページで読むことができるように、リンクする方がはるかに優れています。
 
-<h3 id="The_case_against_plugins" name="The_case_against_plugins">プラグインに対するケース</h3>
+### プラグインに対するケース
 
-<p>かつて、プラグインはウェブ上で不可欠でした。映画をオンラインで見るために Adobe Flash Player をインストールしなければならない時代を覚えていますか? そして、常に Flash Player と Java Runtime Environment のアップデートに関する迷惑な警告を受けていました。ウェブ技術はこれまでより堅牢に成長し、その時代は終わりを告げています。ほとんどのアプリケーションでは、プラグインに依存するコンテンツの配信をやめ、代わりにウェブテクノロジを活用し始めてください。</p>
+かつて、プラグインはウェブ上で不可欠でした。映画をオンラインで見るために Adobe Flash Player をインストールしなければならない時代を覚えていますか? そして、常に Flash Player と Java Runtime Environment のアップデートに関する迷惑な警告を受けていました。ウェブ技術はこれまでより堅牢に成長し、その時代は終わりを告げています。ほとんどのアプリケーションでは、プラグインに依存するコンテンツの配信をやめ、代わりにウェブテクノロジを活用し始めてください。
 
-<ul>
- <li><strong>すべての人にあなたの手を広げる</strong>。誰もがブラウザーを持っていますが、プラグインはますます稀になっています(特にモバイルユーザの場合)。ウェブはプラグインなしで大部分が使えるので、プラグインをインストールするよりもむしろ競争相手のウェブサイトに行くだけです。</li>
- <li><strong>Flash や他のプラグインに付属している<a href="http://webaim.org/techniques/flash/">余分なアクセシビリティの頭痛</a>(英語)から逃れてください。</strong></li>
- <li><strong>さらなるセキュリティ上の危険から逃れてください</strong>。無数のパッチの後でさえ、Adobe Flash は<a href="http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">安全ではないことが知られています</a>(英語)。Facebook の最高セキュリティ責任者である Alex Stamos は、2015年に <a href="http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso">Adobe が Flash を打ち切るよう依頼しました</a>(英語)。</li>
-</ul>
+- **すべての人にあなたの手を広げる**。誰もがブラウザーを持っていますが、プラグインはますます稀になっています(特にモバイルユーザの場合)。ウェブはプラグインなしで大部分が使えるので、プラグインをインストールするよりもむしろ競争相手のウェブサイトに行くだけです。
+- **Flash や他のプラグインに付属している[余分なアクセシビリティの頭痛](http://webaim.org/techniques/flash/)(英語)から逃れてください。**
+- **さらなるセキュリティ上の危険から逃れてください**。無数のパッチの後でさえ、Adobe Flash は[安全ではないことが知られています](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53)(英語)。Facebook の最高セキュリティ責任者である Alex Stamos は、2015 年に [Adobe が Flash を打ち切るよう依頼しました](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)(英語)。
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> その固有の問題点と Flash のサポート不足により、 Adobe は2020年末に Flash のサポートを終了すると発表しました。 2020年1月の時点で、ほとんどのブラウザーは既定で Flash コンテンツをブロックしており、2020年12月31日までにはすべてのブラウザーで Flash 機能が完全に削除されます。それ以降は、既存の Flash コンテンツにアクセスできなくなります。</p>
-</div>
+> **Note:** その固有の問題点と Flash のサポート不足により、 Adobe は 2020 年末に Flash のサポートを終了すると発表しました。 2020 年 1 月の時点で、ほとんどのブラウザーは既定で Flash コンテンツをブロックしており、2020 年 12 月 31 日までにはすべてのブラウザーで Flash 機能が完全に削除されます。それ以降は、既存の Flash コンテンツにアクセスできなくなります。
 
-<p>だから何をすべきか? 双方向性が必要な場合、HTML と {{glossary("JavaScript")}} は、Java アプレットや旧式の ActiveX/BHO 技術を必要とせずに、簡単に仕事を完了させることができます。Adobe Flash に頼る代わりに、メディアの要求に合わせて <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">HTML5 動画</a>、ベクターグラフィックスに <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">SVG</a>、複雑な画像やアニメーションに <a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial">Canvas</a> を使用することができます。<a href="https://plus.google.com/+PeterElst/posts/P5t4pFhptvp">Peter Elst は、数年前にすでに、Adobe Flash が特殊なゲームやビジネスアプリケーションを除いて、仕事のための適切なツールではないことを書いていました</a>(英語)。ActiveX に関しては、Microsoft の {{glossary("Microsoft Edge","Edge")}} ブラウザーでさえサポートされなくなりました。</p>
+だから何をすべきか? 双方向性が必要な場合、HTML と {{glossary("JavaScript")}} は、Java アプレットや旧式の ActiveX/BHO 技術を必要とせずに、簡単に仕事を完了させることができます。Adobe Flash に頼る代わりに、メディアの要求に合わせて [HTML5 動画](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)、ベクターグラフィックスに [SVG](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)、複雑な画像やアニメーションに [Canvas](/ja/docs/Web/Guide/HTML/Canvas_tutorial) を使用することができます。[Peter Elst は、数年前にすでに、Adobe Flash が特殊なゲームやビジネスアプリケーションを除いて、仕事のための適切なツールではないことを書いていました](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp)(英語)。ActiveX に関しては、Microsoft の {{glossary("Microsoft Edge","Edge")}} ブラウザーでさえサポートされなくなりました。
 
-<h2 id="Test_your_skills!" name="Test_your_skills!">スキルをテストしよう</h2>
+## スキルをテストしよう
 
-<p>この記事はここまでですが、最も重要な情報を覚えていますか？先に進む前に、この情報を保持しているかどうかを確認するためのテストをいくつか見つけることができます — <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding">マルチメディアと埋め込みのスキルのテスト</a>を参照してください。</p>
+この記事はここまでですが、最も重要な情報を覚えていますか？先に進む前に、この情報を保持しているかどうかを確認するためのテストをいくつか見つけることができます — [マルチメディアと埋め込みのスキルのテスト](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)を参照してください。
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p>ウェブ文書に他のコンテンツを埋め込むという話題は、すぐに非常に複雑になる可能性があるので、関連する技術のより高度な機能のいくつかを示唆しながらも、すぐに関連すると思われる単純で使い慣れた方法で紹介しようとしました。まず、あなたのページに地図や動画などの第三者のコンテンツを含めること以外に埋め込みを使用する可能性は低いです。しかし、経験が増すにつれて、より多くの用途を見つけることになるでしょう。</p>
+ウェブ文書に他のコンテンツを埋め込むという話題は、すぐに非常に複雑になる可能性があるので、関連する技術のより高度な機能のいくつかを示唆しながらも、すぐに関連すると思われる単純で使い慣れた方法で紹介しようとしました。まず、あなたのページに地図や動画などの第三者のコンテンツを含めること以外に埋め込みを使用する可能性は低いです。しかし、経験が増すにつれて、より多くの用途を見つけることになるでしょう。
 
-<p>ここで説明したもの以外にも、外部コンテンツの埋め込みを含む他の多くの技術があります。以前の記事では {{htmlelement("video")}}、{{htmlelement("audio")}}、{{htmlelement("img")}} などいくつかを見ましたが、JavaScript で生成された 2D および 3D グラフィックスの場合は {{htmlelement("canvas")}}、ベクターグラフィックスを埋め込む場合は {{SVGElement("svg")}} など、他にも見い出されるものがあります。モジュールの次の記事では <a href="/ja/docs/Web/SVG">SVG</a> を見ていきます。</p>
+ここで説明したもの以外にも、外部コンテンツの埋め込みを含む他の多くの技術があります。以前の記事では {{htmlelement("video")}}、{{htmlelement("audio")}}、{{htmlelement("img")}} などいくつかを見ましたが、JavaScript で生成された 2D および 3D グラフィックスの場合は {{htmlelement("canvas")}}、ベクターグラフィックスを埋め込む場合は {{SVGElement("svg")}} など、他にも見い出されるものがあります。モジュールの次の記事では [SVG](/ja/docs/Web/SVG) を見ていきます。
 
-<p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}</p>
+{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<ul>
- <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">HTML の画像</a></li>
- <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">動画と音声のコンテンツ</a></li>
- <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">&lt;object&gt; から &lt;iframe&gt; へ — その他の埋め込み技術</a></li>
- <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">ウェブにベクターグラフィックスを追加する</a></li>
- <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">レスポンシブ画像</a></li>
- <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla のスプラッシュページ</a></li>
-</ul>
+- [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [\<object> から \<iframe> へ — その他の埋め込み技術](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [ウェブにベクターグラフィックスを追加する](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Mozilla のスプラッシュページ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

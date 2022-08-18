@@ -9,93 +9,72 @@ tags:
 translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
-<p>{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<p class="summary">先のいくつかのレッスンで、あなたは CSS を使ってシンプルなテキストドキュメントにスタイルを追加してフォーマットする方法を学びました。ここでは、それを実際に行ってみましょう。</p>
+先のいくつかのレッスンで、あなたは CSS を使ってシンプルなテキストドキュメントにスタイルを追加してフォーマットする方法を学びました。ここでは、それを実際に行ってみましょう。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基礎コンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a>、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイル操作</a>の基礎知識 HTML の基礎 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML の入門</a>で学ぶ)、CSS の基礎(このモジュールの残り)</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>いくつかの CSS を試し、知識レベルを確認します</td>
-  </tr>
- </tbody>
-</table>
+| 前提条件: | 基礎コンピューターリテラシー、[基本的なソフトウェアのインストール](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、[ファイル操作](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)の基礎知識 HTML の基礎 ([HTML の入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で学ぶ)、CSS の基礎(このモジュールの残り) |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | いくつかの CSS を試し、知識レベルを確認します                                                                                                                                                                                                                                                                                           |
 
-<h2 id="Lets_play_with_some_CSS" name="Let's_play_with_some_CSS">さあ始めよう</h2>
+## さあ始めよう
 
-<p>下の Live エディタで試すこともできますし、<a href="https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/">我々の Github リポジトリ</a>からサンプルファイルをダウンロードして試してみることもできます。ここで使うサンプルはシンプルな一ページの HTML で、頭にはとりあえずシンプルな CSS が埋め込まれています。もしローカルで動かすとき HTML と CSS が一緒になっているのが嫌だったら別々のファイルに分割しても構いません。あるいは、<a href="https://codepen.io/" rel="noopener">CodePen</a> や <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>、<a href="https://glitch.com/" rel="noopener">Glitch </a>といったオンラインエディタを使うこともできます。</p>
+下の Live エディタで試すこともできますし、[我々の Github リポジトリ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)からサンプルファイルをダウンロードして試してみることもできます。ここで使うサンプルはシンプルな一ページの HTML で、頭にはとりあえずシンプルな CSS が埋め込まれています。もしローカルで動かすとき HTML と CSS が一緒になっているのが嫌だったら別々のファイルに分割しても構いません。あるいは、[CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch ](https://glitch.com/)といったオンラインエディタを使うこともできます。
 
-<div class="blockIndicator note">
-<p>注記: もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。</p>
-</div>
+> **Note:** 注記: もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。
 
-<h2 id="Lets_play_with_some_CSS" name="Let's_play_with_some_CSS">CSS を少し試してみよう</h2>
+## CSS を少し試してみよう
 
-<p>下のサンプルは、CSS でスタイルされたプロフィールページの例です。ここで使われているプロパティは次の通りです。これらについてはそれぞれリンクから MDN の記事に飛べますので、プロパティの詳細な説明についてはそちらをご参照ください。</p>
+下のサンプルは、CSS でスタイルされたプロフィールページの例です。ここで使われているプロパティは次の通りです。これらについてはそれぞれリンクから MDN の記事に飛べますので、プロパティの詳細な説明についてはそちらをご参照ください。
 
-<ul>
- <li>{{cssxref("font-family")}}</li>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("border-bottom")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("text-decoration")}}</li>
-</ul>
+- {{cssxref("font-family")}}
+- {{cssxref("color")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("font-size")}}
+- {{cssxref("text-decoration")}}
 
-<p>下のプロフィールページでは、いろんなセレクタを使ったり、h1要素や h2要素などの装飾要素を使ったりしただけでなく、職業を表す部分ではクラスを定義してデザインを設定しました。</p>
+下のプロフィールページでは、いろんなセレクタを使ったり、h1 要素や h2 要素などの装飾要素を使ったりしただけでなく、職業を表す部分ではクラスを定義してデザインを設定しました。
 
-<p>プロパティの値をいろいろに変えて見た目がどう変わるか試してみましょう。</p>
+プロパティの値をいろいろに変えて見た目がどう変わるか試してみましょう。
 
-<ol>
- <li>見出し 1 の文字色をピンクに変えてみましょう。色の指定には <code>hotpink</code> を使うとよいでしょう。</li>
- <li>見出し 1 の下に太さ 10px の点線をつけてみましょう。そしてその色を <code>purple</code> にしてみましょう。</li>
- <li>見出し 2 の書体をイタリックに変えてみましょう。</li>
- <li>連絡先情報の部分で使われている <code>ul</code> 要素の {{cssxref("background-color")}} を <code>#eeeeee</code> にして、{{cssxref("border")}} を太さ 5px の紫の線に変えてみましょう。また、{{cssxref("padding")}} を指定してコンテンツと連絡先情報の部分にスペースが空くように設定しましょう。</li>
- <li>リンクの部分にマウスが乗ったとき、リンクが <code>green</code> に変わるように設定しましょう。</li>
-</ol>
+1.  見出し 1 の文字色をピンクに変えてみましょう。色の指定には `hotpink` を使うとよいでしょう。
+2.  見出し 1 の下に太さ 10px の点線をつけてみましょう。そしてその色を `purple` にしてみましょう。
+3.  見出し 2 の書体をイタリックに変えてみましょう。
+4.  連絡先情報の部分で使われている `ul` 要素の {{cssxref("background-color")}} を `#eeeeee` にして、{{cssxref("border")}} を太さ 5px の紫の線に変えてみましょう。また、{{cssxref("padding")}} を指定してコンテンツと連絡先情報の部分にスペースが空くように設定しましょう。
+5.  リンクの部分にマウスが乗ったとき、リンクが `green` に変わるように設定しましょう。
 
-<p>完成したら次の画像のようになるはずです。</p>
+完成したら次の画像のようになるはずです。
 
-<p><img alt="" src="https://media.prod.mdn.mozit.cloud/attachments/2019/12/31/17035/da8ff2a04da214e57e18a6ea3ac6832e/learn-css-basics-assessment.png" style="height: 1199px; width: 1104px;"></p>
+![](https://media.prod.mdn.mozit.cloud/attachments/2019/12/31/17035/da8ff2a04da214e57e18a6ea3ac6832e/learn-css-basics-assessment.png)
 
-<p>それから、このページに書かれていない属性をみてみましょう。<a href="/ja/docs/Web/CSS/Reference">MDN の CSS リファレンス</a> には冒険が待っています!</p>
+それから、このページに書かれていない属性をみてみましょう。[MDN の CSS リファレンス](/ja/docs/Web/CSS/Reference) には冒険が待っています!
 
-<p>ここには間違った回答はないことを覚えていてください — ここではいろいろ試して楽しみながら学びましょう。</p>
+ここには間違った回答はないことを覚えていてください — ここではいろいろ試して楽しみながら学びましょう。
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}} </p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
 
-<h2 id="Whats_next" name="What's_next">アセスメントとさらなるヘルプ</h2>
+## アセスメントとさらなるヘルプ
 
-<p>作ったものを見てほしいときや、作業に詰まってしまって質問をしたいとき：</p>
+作ったものを見てほしいときや、作業に詰まってしまって質問をしたいとき：
 
-<ol>
- <li>あなたが作ったものを <a href="https://codepen.io/" rel="noopener">CodePen</a> や <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>、<a href="https://glitch.com/" rel="noopener">Glitch</a> などのコード共有サービスに公開してください。</li>
- <li>添削の依頼あるいは訊きたいことを <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a> に投稿してください。ここに投稿するときには次のことを忘れないようにしてください。
-  <ul>
-   <li>タイトルは何についての質問か分かるように、「Assessment wanted for CSS First Steps」のようにしてください。</li>
-   <li>添削や質問を依頼したいコードへのリンクを貼ってください。ソースコードを示してもらわないとこちらもどうサポートしたらよいかがわからないからです。</li>
-   <li>どの課題に取り組んでいるのか分かるように課題へのリンクを貼ってください。そうしていただけるとあなたがどこで躓いているのか知ることができます。</li>
-  </ul>
- </li>
-</ol>
+1.  あなたが作ったものを [CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのコード共有サービスに公開してください。
+2.  添削の依頼あるいは訊きたいことを [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) に投稿してください。ここに投稿するときには次のことを忘れないようにしてください。
 
-<h2 id="Whats_next" name="What's_next">次のステップ</h2>
+    - タイトルは何についての質問か分かるように、「Assessment wanted for CSS First Steps」のようにしてください。
+    - 添削や質問を依頼したいコードへのリンクを貼ってください。ソースコードを示してもらわないとこちらもどうサポートしたらよいかがわからないからです。
+    - どの課題に取り組んでいるのか分かるように課題へのリンクを貼ってください。そうしていただけるとあなたがどこで躓いているのか知ることができます。
 
-<p>最初のモジュールを修了しました。おめでとうございます。あなたはもう CSS の基本的な部分は理解できたはずです。そして、スタイルシートの挙動が分かるようになったはずです。次のモジュール、<a href="/ja/docs/Learn/CSS/Building_blocks">CSS ブロック構築</a>ではいくつかの重要な部分を深く見ていきましょう。</p>
+## 次のステップ
 
-<p>{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+最初のモジュールを修了しました。おめでとうございます。あなたはもう CSS の基本的な部分は理解できたはずです。そして、スタイルシートの挙動が分かるようになったはずです。次のモジュール、[CSS ブロック構築](/ja/docs/Learn/CSS/Building_blocks)ではいくつかの重要な部分を深く見ていきましょう。
 
-<h2 id="In_this_module" name="In_this_module">このモジュール内</h2>
+{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<ol>
- <li><a href="/ja/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured">How CSS is structured</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a></li>
- <li><a href="/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Using your new knowledge</a></li>
-</ol>
+## このモジュール内
+
+1.  [What is CSS?](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2.  [Getting started with CSS](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3.  [How CSS is structured](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4.  [How CSS works](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5.  [Using your new knowledge](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

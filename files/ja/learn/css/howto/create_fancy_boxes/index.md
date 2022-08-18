@@ -8,40 +8,41 @@ tags:
   - Learn
 translation_of: Learn/CSS/Howto/create_fancy_boxes
 ---
-<p class="summary">CSS ボックスは、CSS で装飾されたウェブページの構成要素です。 見栄えを良くすることは、楽しさとやりがいの両方です。 デザインのアイデアを実用的なコードに変えることがすべてだからです。 面倒な制約と CSS の使用における狂気の自由のために、それは挑戦的です。 いくつかの装飾的なボックスをやりましょう。</p>
+CSS ボックスは、CSS で装飾されたウェブページの構成要素です。 見栄えを良くすることは、楽しさとやりがいの両方です。 デザインのアイデアを実用的なコードに変えることがすべてだからです。 面倒な制約と CSS の使用における狂気の自由のために、それは挑戦的です。 いくつかの装飾的なボックスをやりましょう。
 
-<p>実用的な側面に取り掛かる前に、<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model">CSS ボックスモデル</a>に慣れていることを確認してください。 いくつかの <a href="/ja/docs/Learn/CSS/CSS_layout/Introduction">CSS レイアウトの基本</a>を熟知していることも賢明ですが、前提条件ではありません。</p>
+実用的な側面に取り掛かる前に、[CSS ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)に慣れていることを確認してください。 いくつかの [CSS レイアウトの基本](/ja/docs/Learn/CSS/CSS_layout/Introduction)を熟知していることも賢明ですが、前提条件ではありません。
 
-<p>技術面では、装飾的なボックスの作成は、CSS の境界線と背景のプロパティの習得と、それらを特定のボックスに適用する方法についてのものです。 しかし、テクニックを超えてそれはまたあなたの創造性を解き放つことに関するすべてです。 それは1日で終わらないでしょうし、何人かのウェブ開発者はそれを楽しんで一生を過ごします。</p>
+技術面では、装飾的なボックスの作成は、CSS の境界線と背景のプロパティの習得と、それらを特定のボックスに適用する方法についてのものです。 しかし、テクニックを超えてそれはまたあなたの創造性を解き放つことに関するすべてです。 それは 1 日で終わらないでしょうし、何人かのウェブ開発者はそれを楽しんで一生を過ごします。
 
-<p>私たちは多くの例を見ようとしていますが、可能な限り最も単純な HTML の部分、次の単純な要素に取り組むつもりです。</p>
+私たちは多くの例を見ようとしていますが、可能な限り最も単純な HTML の部分、次の単純な要素に取り組むつもりです。
 
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
+```html
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>はい、それは HTML のごく一部ですが、その要素について何を調整できるのでしょうか？ 次のすべてです。</p>
+はい、それは HTML のごく一部ですが、その要素について何を調整できるのでしょうか？ 次のすべてです。
 
-<ul>
- <li>そのボックスモデルのプロパティ: {{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("border")}} など</li>
- <li>その背景のプロパティ: {{cssxref("background")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-position")}}、{{cssxref("background-size")}} など</li>
- <li>その擬似要素: {{cssxref("::before")}} および {{cssxref("::after")}}</li>
- <li>そして、いくつかの脇のプロパティ: {{cssxref("box-shadow")}}、{{cssxref("transform")}}、{{cssxref("outline")}} など</li>
-</ul>
+- そのボックスモデルのプロパティ: {{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("border")}} など
+- その背景のプロパティ: {{cssxref("background")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-position")}}、{{cssxref("background-size")}} など
+- その擬似要素: {{cssxref("::before")}} および {{cssxref("::after")}}
+- そして、いくつかの脇のプロパティ: {{cssxref("box-shadow")}}、{{cssxref("transform")}}、{{cssxref("outline")}} など
 
-<p>とても広い遊び場があります。 楽しく始めましょう。</p>
+とても広い遊び場があります。 楽しく始めましょう。
 
-<h2 id="Box_model_tweak" name="Box_model_tweak">ボックスモデルの調整</h2>
+## ボックスモデルの調整
 
-<p>ボックスモデルだけで、単純な境界線の追加、四角形の作成など、基本的なことを行うことができます。 負の <code>padding</code> や負の <code>margin</code>、あるいはその両方を使用して、<code>border-radius</code> をボックスの実際のサイズよりも大きくすることによって、プロパティを限界にプッシュすると、面白くなり始めます。</p>
+ボックスモデルだけで、単純な境界線の追加、四角形の作成など、基本的なことを行うことができます。 負の `padding` や負の `margin`、あるいはその両方を使用して、`border-radius` をボックスの実際のサイズよりも大きくすることによって、プロパティを限界にプッシュすると、面白くなり始めます。
 
-<h3 id="Making_circles" name="Making_circles">円を作る</h3>
+### 円を作る
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>これはとてもシンプルでとても楽しいものです。 {{cssxref("border-radius")}} プロパティは、ボックスに適用される丸い角を作成するように作られていますが、半径のサイズがボックスの実際の幅と等しいかそれより大きい場合はどうなるでしょうか？</p>
+これはとてもシンプルでとても楽しいものです。 {{cssxref("border-radius")}} プロパティは、ボックスに適用される丸い角を作成するように作られていますが、半径のサイズがボックスの実際の幅と等しいかそれより大きい場合はどうなるでしょうか？
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   /* 円の中では、中央揃えのテキストは見栄えがよくなります。 */
   text-align : center;
 
@@ -63,30 +64,30 @@ translation_of: Learn/CSS/Howto/create_fancy_boxes
 
   /* そして正方形を円に変えましょう。 */
   border-radius: 100%;
-}</pre>
+}
+```
 
-<p>はい、円ができます。</p>
+はい、円ができます。
 
-<p>{{ EmbedLiveSample('Making_circles', '100%', '170') }}</p>
+{{ EmbedLiveSample('Making_circles', '100%', '170') }}
 
-<h2 id="Backgrounds" name="Backgrounds">Backgrounds</h2>
+## Backgrounds
 
-<p>装飾的なボックスについて話すとき、それを扱うためのコアとなるプロパティは <a href="/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders">background-* プロパティ</a>です。 背景をいじり始めると、CSS ボックスはあなたが満たすための空白のキャンバスになります。</p>
+装飾的なボックスについて話すとき、それを扱うためのコアとなるプロパティは [background-\* プロパティ](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)です。 背景をいじり始めると、CSS ボックスはあなたが満たすための空白のキャンバスになります。
 
-<p>いくつかの実用的な例に進む前に、背景について知っておくべきことが2つあるので、少し後退しましょう。</p>
+いくつかの実用的な例に進む前に、背景について知っておくべきことが 2 つあるので、少し後退しましょう。
 
-<ul>
- <li>一つのボックスに<a href="/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_CSS_multiple_backgrounds">複数の背景</a>を設定することが可能です。 それらは層のように互いの上に積み重ねられています。</li>
- <li>背景は単色や画像のどちらでもかまいません。 単色は常に表面全体を塗りつぶしますが、画像は拡大縮小して配置することができます。</li>
-</ul>
+- 一つのボックスに[複数の背景](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_CSS_multiple_backgrounds)を設定することが可能です。 それらは層のように互いの上に積み重ねられています。
+- 背景は単色や画像のどちらでもかまいません。 単色は常に表面全体を塗りつぶしますが、画像は拡大縮小して配置することができます。
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>さて、背景を楽しんでみましょう。</p>
+さて、背景を楽しんでみましょう。
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   padding : 1em;
   width: 100%;
   height: 200px;
@@ -113,27 +114,27 @@ translation_of: Learn/CSS/Howto/create_fancy_boxes
                     linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
                     linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
                     linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Backgrounds', '100%', '200') }}</p>
+{{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-<div class="note">
-<p>グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、<a href="http://lea.verou.me/css3patterns/">Lea Verou の CSS パターン</a>（英語）を見てください。 こういったグラデーションの使用はかなり高くつきますが、パフォーマンス的に優れていることを忘れないでください。 グラデーションについてもっと知りたい場合は、気軽に<a href="/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients">専用記事</a>にアクセスしてください。</p>
-</div>
+> **Note:** グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](http://lea.verou.me/css3patterns/)（英語）を見てください。 こういったグラデーションの使用はかなり高くつきますが、パフォーマンス的に優れていることを忘れないでください。 グラデーションについてもっと知りたい場合は、気軽に[専用記事](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)にアクセスしてください。
 
-<h2 id="Pseudo_elements" name="Pseudo_elements">疑似要素</h2>
+## 疑似要素
 
-<p>1つのボックスを装飾するときに、自分自身が制限されていることに気付き、さらに素晴らしい装飾を作成するためにもっとボックスを追加したいと思うかもしれません。 ほとんどの場合、これは独自の装飾の目的で HTML 要素を追加することによって DOM を汚染することにつながります。 たとえそれが必要であっても、それはやや悪い習慣と考えられています。 そのような落とし穴を回避するための1つの解決策は、<a href="/ja/docs/Web/CSS/Pseudo-elements">CSS 疑似要素</a>を使用することです。</p>
+1 つのボックスを装飾するときに、自分自身が制限されていることに気付き、さらに素晴らしい装飾を作成するためにもっとボックスを追加したいと思うかもしれません。 ほとんどの場合、これは独自の装飾の目的で HTML 要素を追加することによって DOM を汚染することにつながります。 たとえそれが必要であっても、それはやや悪い習慣と考えられています。 そのような落とし穴を回避するための 1 つの解決策は、[CSS 疑似要素](/ja/docs/Web/CSS/Pseudo-elements)を使用することです。
 
-<h3 id="A_cloud" name="A_cloud">雲</h3>
+### 雲
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>ボックスを雲に変える例を見てみましょう。</p>
+ボックスを雲に変える例を見てみましょう。
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   text-align: center;
 
   /* 以前に円を作るために使用したのと同じトリックです。 */
@@ -201,20 +202,24 @@ translation_of: Learn/CSS/Howto/create_fancy_boxes
   /* 雲の底が平らに保たれるようにするには、
      右耳の正方形の左下角を作る必要があります。 */
   border-bottom-left-radius: 0;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('A_cloud', '100%', '160') }}</p>
+{{ EmbedLiveSample('A_cloud', '100%', '160') }}
 
-<h3 id="Blockquote" name="Blockquote">ブロッククォート</h3>
+### ブロッククォート
 
-<p>擬似要素を使用するより実用的な例は、HTML の {{HTMLElement('blockquote')}} 要素のための素晴らしいフォーマットを構築することです。 それでは、少し異なる HTML スニペットを使った例を見てみましょう（デザインのローカライゼーションもどのように処理するかを見る機会を提供してくれます）。</p>
+擬似要素を使用するより実用的な例は、HTML の {{HTMLElement('blockquote')}} 要素のための素晴らしいフォーマットを構築することです。 それでは、少し異なる HTML スニペットを使った例を見てみましょう（デザインのローカライゼーションもどのように処理するかを見る機会を提供してくれます）。
 
-<pre class="brush: html">&lt;blockquote&gt;People who think they know everything are a great annoyance to those of us who do. &lt;i&gt;Isaac Asimov&lt;/i&gt;&lt;/blockquote&gt;
-&lt;blockquote lang="fr"&gt;L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase. &lt;i&gt;Pierre Desproges&lt;/i&gt;&lt;/blockquote&gt;</pre>
+```html
+<blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
+<blockquote lang="fr">L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase. <i>Pierre Desproges</i></blockquote>
+```
 
-<p>それで、これが装飾です。</p>
+それで、これが装飾です。
 
-<pre class="brush: css">blockquote {
+```css
+blockquote {
   min-height: 5em;
   padding   : 1em 4em;
   font      : 1em/150% sans-serif;
@@ -259,21 +264,23 @@ blockquote i {
   margin-top: 1rem;
   text-style: italic;
   text-align: right;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Blockquote', '100%', '300') }}</p>
+{{ EmbedLiveSample('Blockquote', '100%', '300') }}
 
-<h2 id="All_together_and_more" name="All_together_and_more">すべて一緒に、他</h2>
+## すべて一緒に、他
 
-<p>ですから、これらすべてを混ぜ合わせると素晴らしいエフェクトを生み出すことができます。 ある時点で、そのようなボックス装飾を達成することは、CSS プロパティの設計と技術的使用の両方において、創造性の問題です。 このようにすることで、この例のようにボックスを生き生きとさせることができる錯視を作成することが可能です。</p>
+ですから、これらすべてを混ぜ合わせると素晴らしいエフェクトを生み出すことができます。 ある時点で、そのようなボックス装飾を達成することは、CSS プロパティの設計と技術的使用の両方において、創造性の問題です。 このようにすることで、この例のようにボックスを生き生きとさせることができる錯視を作成することが可能です。
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>部分的なドロップシャドウ・エフェクトを作りましょう。 {{cssxref("box-shadow")}} プロパティを使用すると、内部光と平らなドロップシャドウ・エフェクトを作成できますが、ちょっとした追加作業で、擬似要素と {{cssxref("transform")}} プロパティを使用してより自然なジオメトリを作成することが可能になります。</p>
+部分的なドロップシャドウ・エフェクトを作りましょう。 {{cssxref("box-shadow")}} プロパティを使用すると、内部光と平らなドロップシャドウ・エフェクトを作成できますが、ちょっとした追加作業で、擬似要素と {{cssxref("transform")}} プロパティを使用してより自然なジオメトリを作成することが可能になります。
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   position: relative;
   background-color: #FFC;
   padding: 2rem;
@@ -294,12 +301,13 @@ blockquote i {
 
   box-shadow: 0px 13px 10px black;
   transform: rotate(4deg);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('All_together_and_more', '100%', '100') }}</p>
+{{ EmbedLiveSample('All_together_and_more', '100%', '100') }}
 
-<h2 id="What's_next" name="What's_next">次は何ですか？</h2>
+## 次は何ですか？
 
-<p>多くの点で、装飾的なボックスを作ることは主に背景の中に色と画像を追加することなので、<a href="/ja/docs/Learn/CSS/Howto/manage_colors_and_images">色と画像の管理</a>を掘り下げる価値があるかもしれません。 また、装飾的なボックス自体がより大きなレイアウトの一部でなければ、それ自体はまったく役に立ちません。 まだチェックしていないのであれば、<a href="/ja/docs/Learn/CSS/CSS_layout/Introduction">レイアウトの基本</a>を見てください。</p>
+多くの点で、装飾的なボックスを作ることは主に背景の中に色と画像を追加することなので、[色と画像の管理](/ja/docs/Learn/CSS/Howto/manage_colors_and_images)を掘り下げる価値があるかもしれません。 また、装飾的なボックス自体がより大きなレイアウトの一部でなければ、それ自体はまったく役に立ちません。 まだチェックしていないのであれば、[レイアウトの基本](/ja/docs/Learn/CSS/CSS_layout/Introduction)を見てください。
 
-<div class="grammarly-disable-indicator"> </div>
+<div class="grammarly-disable-indicator"></div>

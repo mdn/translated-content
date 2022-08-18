@@ -11,55 +11,48 @@ tags:
   - normal flow
 translation_of: Learn/CSS/CSS_layout/Normal_Flow
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}</p>
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
-<p class="summary"><span class="seoSummary">この記事では、通常フロー、つまりレイアウトを変更していない場合のウェブページの要素のレイアウト方法について説明します。</span></p>
+この記事では、通常フロー、つまりレイアウトを変更していない場合のウェブページの要素のレイアウト方法について説明します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>HTML の基礎 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>を学ぶ)、および CSS の機能の考え方 (<a href="/ja/docs/Learn/CSS/Introduction_to_CSS">CSS 入門</a>を学ぶ)。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習目標:</th>
-   <td>変更を加える前に、ブラウザーがデフォルトでウェブページをどのようにレイアウトするかを説明します。</td>
-  </tr>
- </tbody>
-</table>
+| 前提知識: | HTML の基礎 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ)、および CSS の機能の考え方 ([CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)を学ぶ)。 |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 学習目標: | 変更を加える前に、ブラウザーがデフォルトでウェブページをどのようにレイアウトするかを説明します。                                                                  |
 
-<p>レイアウトを紹介した前回のレッスンで詳しく説明したように、CSS を適用してふるまいを変更していない場合、ウェブページ上の要素は通常フローでレイアウトされます。そして、理解を深め始めるにつれ、その通常フローの中で要素の位置を調整したり、要素を完全に取り除くたりして、要素のふるまいを変更できます。通常フローで読み取り可能な、しっかりとよく構造化された文書から始めることは、どんなウェブページでも始めるための最良の方法です。それは、ユーザーが非常に制限されたブラウザーを使用している場合や、ページのコンテンツを読み上げるスクリーンリーダーなどのデバイスを使用している場合でも、コンテンツを読みやすくすることができます。さらに、通常フローは読み取り可能な文書を作成するように設計されているので、この方法で始めることで、レイアウトを変更するときに文書と戦うのではなく文書とともに作業します。</p>
+レイアウトを紹介した前回のレッスンで詳しく説明したように、CSS を適用してふるまいを変更していない場合、ウェブページ上の要素は通常フローでレイアウトされます。そして、理解を深め始めるにつれ、その通常フローの中で要素の位置を調整したり、要素を完全に取り除くたりして、要素のふるまいを変更できます。通常フローで読み取り可能な、しっかりとよく構造化された文書から始めることは、どんなウェブページでも始めるための最良の方法です。それは、ユーザーが非常に制限されたブラウザーを使用している場合や、ページのコンテンツを読み上げるスクリーンリーダーなどのデバイスを使用している場合でも、コンテンツを読みやすくすることができます。さらに、通常フローは読み取り可能な文書を作成するように設計されているので、この方法で始めることで、レイアウトを変更するときに文書と戦うのではなく文書とともに作業します。
 
-<p>さまざまなレイアウト方法を深く掘り下げる前に、以前のモジュールで通常のドキュメントフローに関して検討したことのいくつかを再検討する価値があります。</p>
+さまざまなレイアウト方法を深く掘り下げる前に、以前のモジュールで通常のドキュメントフローに関して検討したことのいくつかを再検討する価値があります。
 
-<h2 id="How_are_elements_laid_out_by_default" name="How_are_elements_laid_out_by_default">要素はデフォルトでどのようにレイアウトされますか？</h2>
+## 要素はデフォルトでどのようにレイアウトされますか？
 
-<p>まず初めに、個々の要素ボックスは要素のコンテンツを取り、それからそれらの周りにパディング (padding、詰め物)、ボーダー (border、境界線) そしてマージン (margin、余白) を追加することによってレイアウトされます — これはまた以前に見たことがある<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">ボックスモデル</a>のことです。</p>
+まず初めに、個々の要素ボックスは要素のコンテンツを取り、それからそれらの周りにパディング (padding、詰め物)、ボーダー (border、境界線) そしてマージン (margin、余白) を追加することによってレイアウトされます — これはまた以前に見たことがある[ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)のことです。
 
-<p>デフォルトでは、<a href="/ja/docs/Web/HTML/Block-level_elements">ブロックレベル要素</a>のコンテンツは、その親要素の幅の 100% で、そのコンテンツと同じ高さです <a href="/ja/docs/Web/HTML/Inline_elements">インライン要素</a>は、コンテンツと同じ高さで、コンテンツと同じ幅です。インライン要素に幅や高さを設定することはできません — それらはブロックレベル要素のコンテンツの中にあるだけです。この方法でインライン要素のサイズを制御したい場合は、<code>display: block;</code> を使用してブロックレベル要素のようにふるまうように設定する必要があります (あるいは、<code>display: inline-block;</code> で、両方の特性を混在させます)。</p>
+デフォルトでは、[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)のコンテンツは、その親要素の幅の 100% で、そのコンテンツと同じ高さです [インライン要素](/ja/docs/Web/HTML/Inline_elements)は、コンテンツと同じ高さで、コンテンツと同じ幅です。インライン要素に幅や高さを設定することはできません — それらはブロックレベル要素のコンテンツの中にあるだけです。この方法でインライン要素のサイズを制御したい場合は、`display: block;` を使用してブロックレベル要素のようにふるまうように設定する必要があります (あるいは、`display: inline-block;` で、両方の特性を混在させます)。
 
-<p>それは個々の要素を説明していますが、要素がどのように相互作用するかについてはどうでしょうか？ 通常のレイアウトフロー (レイアウト入門の記事に記載) は、ブラウザーのビューポート内に要素を配置するシステムです デフォルトでは、ブロックレベル要素は、親の<a href="/ja/docs/Web/CSS/writing-mode">書字方向モード</a> (writing mode、<em>初期</em> は horizontal-tb) に基づいて<em>ブロックのフロー方向</em> にレイアウトされます — 各要素は、最後の要素の下の新しい行に表示され、それらに設定されたマージンで区切られます したがって英語やその他の横書きで、上から下へ改行する書字方向モードでは、ブロックレベル要素は垂直にレイアウトされます。</p>
+それは個々の要素を説明していますが、要素がどのように相互作用するかについてはどうでしょうか？ 通常のレイアウトフロー (レイアウト入門の記事に記載) は、ブラウザーのビューポート内に要素を配置するシステムです デフォルトでは、ブロックレベル要素は、親の[書字方向モード](/ja/docs/Web/CSS/writing-mode) (writing mode、_初期_ は horizontal-tb) に基づいて*ブロックのフロー方向* にレイアウトされます — 各要素は、最後の要素の下の新しい行に表示され、それらに設定されたマージンで区切られます したがって英語やその他の横書きで、上から下へ改行する書字方向モードでは、ブロックレベル要素は垂直にレイアウトされます。
 
-<p>インライン要素は異なるふるまいをします — 新しい行に現れません。代わりに、親ブロックレベル要素の幅の内側にマージンがある限り、それらは互いに同じ行に配置され、隣接する (または折り返された) テキストコンテンツに配置されます。スペースがなければ、あふれているテキストや要素は新しい行に移動します。</p>
+インライン要素は異なるふるまいをします — 新しい行に現れません。代わりに、親ブロックレベル要素の幅の内側にマージンがある限り、それらは互いに同じ行に配置され、隣接する (または折り返された) テキストコンテンツに配置されます。スペースがなければ、あふれているテキストや要素は新しい行に移動します。
 
-<p>隣接する 2 つの要素の両方にマージンが設定されていて、2 つのマージンが接触している場合、2 つのうち大きい方が残り、小さい方が消えます — これは<a href="/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">マージンの相殺</a> (margin collapsing) と呼ばれます。</p>
+隣接する 2 つの要素の両方にマージンが設定されていて、2 つのマージンが接触している場合、2 つのうち大きい方が残り、小さい方が消えます — これは[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) (margin collapsing) と呼ばれます。
 
-<p>これらすべてを説明する簡単な例を見てみましょう。</p>
+これらすべてを説明する簡単な例を見てみましょう。
 
-<div id="Normal_Flow">
-<pre class="brush: html notranslate">&lt;h1&gt;基本的なドキュメントフロー&lt;/h1&gt;
+```html
+<h1>基本的なドキュメントフロー</h1>
 
-&lt;p&gt;これは基本的なブロックレベル要素です。隣接するブロックレベル要素は下の新しい行に配置されています。&lt;/p&gt;
+<p>これは基本的なブロックレベル要素です。隣接するブロックレベル要素は下の新しい行に配置されています。</p>
 
-&lt;p&gt;デフォルトでは、親要素の幅の 100% にまたがり、子コンテンツと同じ高さになります。幅と高さの合計は、コンテンツ + パディング + ボーダーの幅/高さです。&lt;/p&gt;
+<p>デフォルトでは、親要素の幅の 100% にまたがり、子コンテンツと同じ高さになります。幅と高さの合計は、コンテンツ + パディング + ボーダーの幅/高さです。</p>
 
-&lt;p&gt;マージンによって分けられています。マージンの相殺のため、両方ではなく、1 つのマージンの幅で区切られます。&lt;/p&gt;
+<p>マージンによって分けられています。マージンの相殺のため、両方ではなく、1 つのマージンの幅で区切られます。</p>
 
-&lt;p&gt;&lt;span&gt;これ&lt;/span&gt;および&lt;span&gt;これのような&lt;/span&gt;インライン要素は、同じ行に配置され、同じ行にスペースがある場合は隣接するテキストノードに配置されます。オーバーフローするインライン要素は&lt;span&gt;可能であれば新しいラインに折り返され (これのようにテキストを含む)&lt;/span&gt;、そうでなければ次の画像のように単に新しい行に進むでしょう。&lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
+<p><span>これ</span>および<span>これのような</span>インライン要素は、同じ行に配置され、同じ行にスペースがある場合は隣接するテキストノードに配置されます。オーバーフローするインライン要素は<span>可能であれば新しいラインに折り返され (これのようにテキストを含む)</span>、そうでなければ次の画像のように単に新しい行に進むでしょう。<img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+```
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   width: 500px;
   margin: 0 auto;
 }
@@ -74,30 +67,28 @@ p {
 span {
   background: white;
   border: 1px solid black;
-}</pre>
-</div>
+}
+```
 
-<p>{{ EmbedLiveSample('Normal_Flow', '100%', 500) }}</p>
+{{ EmbedLiveSample('Normal_Flow', '100%', 500) }}
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## まとめ
 
-<p>通常フロー、およびブラウザーがデフォルトでどのようにレイアウトするかを理解したので、次にこのデフォルトの <code>display</code> を変更してデザインに必要なレイアウトを作成する方法を理解することに進みます。</p>
+通常フロー、およびブラウザーがデフォルトでどのようにレイアウトするかを理解したので、次にこのデフォルトの `display` を変更してデザインに必要なレイアウトを作成する方法を理解することに進みます。
 
-<p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}</p>
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール内の文書</h2>
+## このモジュール内の文書
 
-<ul>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Introduction">CSS レイアウト入門</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Normal_Flow">通常フロー</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">フレックスボックス</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Grids">グリッド</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Floats">フロート</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Positioning">位置指定</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">段組みレイアウト</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Responsive_Design">レスポンシブデザイン</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Media_queries">メディアクエリーの初心者向けガイド</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">過去のレイアウト方法</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">古いブラウザーのサポート</a></li>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">基礎的なレイアウトの理解</a></li>
-</ul>
+- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
+- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
+- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
+- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
+- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
+- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
+- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -14,137 +14,117 @@ tags:
   - 例
 translation_of: Learn/Forms/Form_validation
 ---
-<div>
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
-<div>{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}</div>
-</div>
+データをサーバーへ送信する前に、必須のフォームコントロールが記入され、すべてのフォームコントロールが正しい書式で記入されていることを保証することが重要です。この**クライアント側フォーム\*\***検証\*\*（validation）は、送信されるデータが様々なフォームコントロールで指定されている要件を満たしていることを保証します。この記事では、クライアント側フォーム検証の基本概念と例を紹介します。
 
-<p>データをサーバーへ送信する前に、必須のフォームコントロールが記入され、すべてのフォームコントロールが正しい書式で記入されていることを保証することが重要です。この<strong>クライアント側フォーム</strong><ruby><strong>検証</strong><rp>（</rp><rt>validation</rt><rp>）</rp></ruby>は、送信されるデータが様々なフォームコントロールで指定されている要件を満たしていることを保証します。この記事では、クライアント側フォーム検証の基本概念と例を紹介します。</p>
+| 前提知識: | コンピューターリテラシー、適度な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、[JavaScript](/ja/docs/Learn/JavaScript) の理解。 |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | フォーム検証とは何か、なぜ重要なのか、どのように実装するのかを理解すること。                                                              |
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提知識:</th>
-   <td>コンピューターリテラシー、適度な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> の理解。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>フォーム検証とは何か、なぜ重要なのか、どのように実装するのかを理解すること。</td>
-  </tr>
- </tbody>
-</table>
+クライアント側検証は最初のチェックであり、ユーザーの使い勝手を良くするために重要な機能ですクライアント側で不当なデータを捕捉することで、ユーザーはすぐに修正できます。もしも無効なデータがサーバーに送られてから拒否される場合、サーバーへの往復とクライアント側に戻ってユーザーにデータを修正するように指示することにより、かなり時間を浪費します。
 
-<p>クライアント側検証は最初のチェックであり、ユーザーの使い勝手を良くするために重要な機能ですクライアント側で不当なデータを捕捉することで、ユーザーはすぐに修正できます。もしも無効なデータがサーバーに送られてから拒否される場合、サーバーへの往復とクライアント側に戻ってユーザーにデータを修正するように指示することにより、かなり時間を浪費します。</p>
+しかし、クライアント側の検証はセキュリティ対策*とは考えられません*!アプリは常に*サーバー側でも*クライアント側と**同様に**送信されたデータのセキュリティをチェックします。なぜならクライアント側の検証は容易に回避することができて、悪意のユーザーは簡単に、サーバーへ不正なデータを送信できます。何が起こり得るかは [ウェブサイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を見てください。サーバー側検証はこのガイドの範囲を超えますが、覚えておいてください。
 
-<p>しかし、クライアント側の検証はセキュリティ対策<em>とは考えられません</em>!アプリは常に<em>サーバー側でも</em>クライアント側と<strong>同様に</strong>送信されたデータのセキュリティをチェックします。なぜならクライアント側の検証は容易に回避することができて、悪意のユーザーは簡単に、サーバーへ不正なデータを送信できます。何が起こり得るかは <a href="/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトセキュリティ</a>を見てください。サーバー側検証はこのガイドの範囲を超えますが、覚えておいてください。</p>
+## フォーム検証とは何か
 
-<h2 id="What_is_form_validation" name="What_is_form_validation">フォーム検証とは何か</h2>
+有名なサイトの登録フォームに行き、データを求められている書式で入力しないと、フィードバックがあることに気づくでしょう。次のようなメッセージが表示されます。
 
-<p>有名なサイトの登録フォームに行き、データを求められている書式で入力しないと、フィードバックがあることに気づくでしょう。次のようなメッセージが表示されます。</p>
+- 「このフィールドは必須です」 (このフィールドが空欄にできない場合)
+- 「電話番号は XXX-XXXX の形式で入力してください」 (あるデータフォーマットが必須の場合)
+- 「有効なメールアドレスを入力してください」 (入力データが適切なフォーマットではない場合)
+- 「パスワードは 8 文字から 30 文字の間で、1 文字以上の大文字、記号、数字を含む必要があります。」 (特に詳しいデータフォーマットが必要な場合)
 
-<ul>
- <li>「このフィールドは必須です」 (このフィールドが空欄にできない場合)</li>
- <li>「電話番号は XXX-XXXX の形式で入力してください」 (あるデータフォーマットが必須の場合)</li>
- <li>「有効なメールアドレスを入力してください」 (入力データが適切なフォーマットではない場合)</li>
- <li>「パスワードは 8 文字から 30 文字の間で、1 文字以上の大文字、記号、数字を含む必要があります。」 (特に詳しいデータフォーマットが必要な場合)</li>
-</ul>
+これは**フォーム検証**と呼ばれます。データを入力したとき、ブラウザー、またはウェブアプリケーションは、そのデータが正しい書式であり、アプリケーションに設定された制約に合っているかをチェックします。ブラウザーで行われる検証は**クライアント側**検証と、サーバー側で行われるものは**サーバー側**検証と呼ばれます。この章では、クライアント側検証に集中します。
 
-<p>これは<strong>フォーム検証</strong>と呼ばれます。データを入力したとき、ブラウザー、またはウェブアプリケーションは、そのデータが正しい書式であり、アプリケーションに設定された制約に合っているかをチェックします。ブラウザーで行われる検証は<strong>クライアント側</strong>検証と、サーバー側で行われるものは<strong>サーバー側</strong>検証と呼ばれます。この章では、クライアント側検証に集中します。</p>
+情報が正しい書式であれば、アプリケーションはデータのサーバーへの送信を許可し、(ふつうは) データベースに保存されます。正しい書式でなければ、何を修正する必要があるかを説明するメッセージを表示し、ユーザーに再入力させます。
 
-<p>情報が正しい書式であれば、アプリケーションはデータのサーバーへの送信を許可し、(ふつうは) データベースに保存されます。正しい書式でなければ、何を修正する必要があるかを説明するメッセージを表示し、ユーザーに再入力させます。</p>
+私たちはできるだけ簡単にフォームを埋めてもらいたいわけですが、なぜフォームを検証する必要があるのでしょうか？理由は主に三つあります。
 
-<p>私たちはできるだけ簡単にフォームを埋めてもらいたいわけですが、なぜフォームを検証する必要があるのでしょうか？理由は主に三つあります。</p>
+- **正しいデータを正しい書式で入力してほしい。**ユーザーのデータが誤った形式で格納されたり、ユーザーが正しい情報を入力しなかったり、省略したりすると、アプリケーションが正しく動作しないからです。
+- **ユーザーのデータを保護したい。**ユーザーに安全なパスワードを入力させることで、アカウント情報を保護しやすくなります。
+- **自分たちを守りたい。**悪意のあるユーザーが保護のないフォームを悪用して、そのフォームを一部に持つアプリケーションに危害を加える方法がたくさんあります。([ウェブサイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を参照してください)。
+  {{warning("クライアントからサーバーに渡されたデータを信用しないでください。フォームが正しく検証を行い、クライアント側で悪意のある入力を防いでいるとしても、悪意のあるユーザーはネットワークリクエストを改ざんすることができます。")}}
 
-<ul>
- <li><strong>正しいデータを正しい書式で入力してほしい。</strong>ユーザーのデータが誤った形式で格納されたり、ユーザーが正しい情報を入力しなかったり、省略したりすると、アプリケーションが正しく動作しないからです。</li>
- <li><strong>ユーザーのデータを保護したい。</strong>ユーザーに安全なパスワードを入力させることで、アカウント情報を保護しやすくなります。</li>
- <li><strong>自分たちを守りたい。</strong>悪意のあるユーザーが保護のないフォームを悪用して、そのフォームを一部に持つアプリケーションに危害を加える方法がたくさんあります。(<a href="/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトセキュリティ</a>を参照してください)。<br>
-  {{warning("クライアントからサーバーに渡されたデータを信用しないでください。フォームが正しく検証を行い、クライアント側で悪意のある入力を防いでいるとしても、悪意のあるユーザーはネットワークリクエストを改ざんすることができます。")}}</li>
-</ul>
+## 様々な種類のフォーム検証
 
-<h2 id="Different_types_of_form_validation" name="Different_types_of_form_validation">様々な種類のフォーム検証</h2>
+ウェブで見かけるフォーム検証には二つの種類があります。
 
-<p>ウェブで見かけるフォーム検証には二つの種類があります。</p>
+- **クライアント側検証**は、データがサーバーへ送信される前にブラウザー内で行われる検証です。これはすぐに反応を返せるので、サーバー側検証よりもユーザーに親切です。これはさらに分類できます。
+- **JavaScript** 検証は JavaScript を使ってコーディングされるものです。これは完全にカスタマイズ可能ですが、すべて作成する(かライブラリを使う)必要があります。
 
-<ul>
- <li><strong>クライアント側検証</strong>は、データがサーバーへ送信される前にブラウザー内で行われる検証です。これはすぐに反応を返せるので、サーバー側検証よりもユーザーに親切です。これはさらに分類できます。</li>
- <li><strong>JavaScript</strong> 検証は JavaScript を使ってコーディングされるものです。これは完全にカスタマイズ可能ですが、すべて作成する(かライブラリを使う)必要があります。</li>
-</ul>
+## 内蔵フォーム検証の利用
 
-<h2 id="Using_built-in_form_validation" name="Using_built-in_form_validation">内蔵フォーム検証の利用</h2>
+[HTML5](/ja/docs/HTML/HTML5) のフォーム制御の機能の一つに JavaScript に頼らない多くのユーザーデータの検証があります。これはフォーム要素の検証の属性を使って行います。これまで多くを見てきましたが、まとめ直すと:
 
-<p><a href="/ja/docs/HTML/HTML5">HTML5</a> のフォーム制御の機能の一つに JavaScript に頼らない多くのユーザーデータの検証があります。これはフォーム要素の検証の属性を使って行います。これまで多くを見てきましたが、まとめ直すと:</p>
+- [`required`](/ja/docs/Web/HTML/Attributes/required): 属性は値が入力されているべきかどうかを指定します。
+- [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) 属性と [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength)属性: データ長の最小値と最大値を指定します。
+- [`min`](/ja/docs/Web/HTML/Attributes/min) 属性と [`max`](/ja/docs/Web/HTML/Attributes/max)属性: 値の最小値と最大値を指定します。
+- `type` 属性: その入力データが数値や、E メールアドレスや、特定の指定型かを指定します。
+- [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性: データが指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)にマッチするかどうかを指定します。
 
-<ul>
- <li><code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code>: 属性は値が入力されているべきかどうかを指定します。</li>
- <li><code><a href="/ja/docs/Web/HTML/Attributes/minlength">minlength</a></code> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>属性: データ長の最小値と最大値を指定します。</li>
- <li><code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code>属性: 値の最小値と最大値を指定します。</li>
- <li><code>type</code> 属性: その入力データが数値や、E メールアドレスや、特定の指定型かを指定します。</li>
- <li><code><a href="/ja/docs/Web/HTML/Attributes/pattern">pattern</a></code> 属性: データが指定された<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>にマッチするかどうかを指定します。</li>
-</ul>
+入力データをこの指定されたルールに基いて検証します。検証にパスすれば妥当で検証にパスしなければ妥当ではないと考えます。
 
-<p>入力データをこの指定されたルールに基いて検証します。検証にパスすれば妥当で検証にパスしなければ妥当ではないと考えます。</p>
+要素が妥当な場合は、次のようになります。
 
-<p>要素が妥当な場合は、次のようになります。</p>
+- 要素が CSS の {{cssxref(":valid")}} 疑似クラスに一致します。これにより、妥当な要素に特定のスタイルを適用することができます。
+- ユーザーがデータを送信しようとすると、ブラウザーは止めるものが他になければ（JavaScript など）、フォームを送信します。
 
-<ul>
- <li>要素が CSS の {{cssxref(":valid")}} 疑似クラスに一致します。これにより、妥当な要素に特定のスタイルを適用することができます。</li>
- <li>ユーザーがデータを送信しようとすると、ブラウザーは止めるものが他になければ（JavaScript など）、フォームを送信します。</li>
-</ul>
+要素が不正なときは、次のようになります。
 
-<p>要素が不正なときは、次のようになります。</p>
+- 要素が CSS の {{cssxref(":invalid")}} 疑似クラスに一致します。これにより、不正な要素に特定のスタイルを適用することができます。
+- ユーザーがデータを送信しようとすると、ブラウザーはフォームをブロックしてエラーメッセージを表示します。
 
-<ul>
- <li>要素が CSS の {{cssxref(":invalid")}} 疑似クラスに一致します。これにより、不正な要素に特定のスタイルを適用することができます。</li>
- <li>ユーザーがデータを送信しようとすると、ブラウザーはフォームをブロックしてエラーメッセージを表示します。</li>
-</ul>
+> **Note:** **注:** サーバーへの送信を中断するエラーがいくつかあります。次のものが含まれます: {{domxref('validityState.badInput', 'badInput')}}、{{domxref('validityState.patternMismatch','patternMismatch')}}、{{domxref('validityState.rangeOverflow','rangeOverflow')}} または{{domxref('validityState.rangeUnderflow','underFlow')}}、{{domxref('validityState.stepMismatch','stepMismatch')}}、フォームの制御の {{domxref('validityState.tooLong','tooLong')}} または{{domxref('validityState.tooShort','tooShort')}}、{{domxref('validityState.typeMismatch','typeMismatch')}}、と 必要とされた値の{{domxref('validityState.valueMissing','valueMissing')}}、また {{domxref('validityState.customError','customError')}}も含まれる。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> サーバーへの送信を中断するエラーがいくつかあります。次のものが含まれます: {{domxref('validityState.badInput', 'badInput')}}、{{domxref('validityState.patternMismatch','patternMismatch')}}、{{domxref('validityState.rangeOverflow','rangeOverflow')}} または{{domxref('validityState.rangeUnderflow','underFlow')}}、{{domxref('validityState.stepMismatch','stepMismatch')}}、フォームの制御の {{domxref('validityState.tooLong','tooLong')}} または{{domxref('validityState.tooShort','tooShort')}}、{{domxref('validityState.typeMismatch','typeMismatch')}}、と 必要とされた値の{{domxref('validityState.valueMissing','valueMissing')}}、また {{domxref('validityState.customError','customError')}}も含まれる。</p>
-</div>
+## 入力要素の制約の検証
 
-<h2 id="Validation_constraints_on_input_elements_—_starting_simple" name="Validation_constraints_on_input_elements_—_starting_simple">入力要素の制約の検証</h2>
+この節では、これまで述べてきたいくつかの属性をテストします。
 
-<p>この節では、これまで述べてきたいくつかの属性をテストします。</p>
+### 簡単な最初のファイル
 
-<h3 id="簡単な最初のファイル">簡単な最初のファイル</h3>
+簡単な例から始めましょう。― 好きな果物を banana(バナナ)か cherry(サクランボ)から選べる入力欄があるとします。単純なテキストの {{HTMLElement("input")}} とそれに合わせたラベル、送信の {{htmlelement("button")}} から成ります。ソースコードは GitHub の [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) で、ライブサンプルは次の通りです。
 
-<p>簡単な例から始めましょう。― 好きな果物を banana(バナナ)か cherry(サクランボ)から選べる入力欄があるとします。単純なテキストの {{HTMLElement("input")}} とそれに合わせたラベル、送信の {{htmlelement("button")}} から成ります。ソースコードは GitHub の <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> で、ライブサンプルは次の通りです。</p>
+```html
+<form>
+  <label for="choose">banana と cherry のどちらが好き?</label>
+  <input id="choose" name="i_like">
+  <button>Submit</button>
+</form>
+```
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;label for="choose"&gt;banana と cherry のどちらが好き?&lt;/label&gt;
-  &lt;input id="choose" name="i_like"&gt;
-  &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
-
-<pre class="brush: css notranslate">input:invalid {
+```css
+input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Simple_start_file", "100%", 80)}}</p>
+{{EmbedLiveSample("Simple_start_file", "100%", 80)}}
 
-<p>始めるにあたって、ハードディスク内の新しいディレクトリーに <code>fruit-start.html</code> のコピーを作成してください。</p>
+始めるにあたって、ハードディスク内の新しいディレクトリーに `fruit-start.html` のコピーを作成してください。
 
-<h3 id="The_required_attribute" name="The_required_attribute">required 属性</h3>
+### required 属性
 
-<p><code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code> 属性は、使うのがもっとも簡単な HTML5 の検証機能です。入力欄を必須にしたい場合は、この属性を使用して要素をマークすることができます。この属性が設定されていて、要素が {{cssxref(':required')}} にマッチすると、UI疑似クラスとフォームは送信されず、入力が空の場合のエラーメッセージが表示されるでしょう。空のままでは、この入力は不正とみなされ、{{cssxref(':invalid')}} 疑似クラスにマッチします。</p>
+[`required`](/ja/docs/Web/HTML/Attributes/required) 属性は、使うのがもっとも簡単な HTML5 の検証機能です。入力欄を必須にしたい場合は、この属性を使用して要素をマークすることができます。この属性が設定されていて、要素が {{cssxref(':required')}} にマッチすると、UI 疑似クラスとフォームは送信されず、入力が空の場合のエラーメッセージが表示されるでしょう。空のままでは、この入力は不正とみなされ、{{cssxref(':invalid')}} 疑似クラスにマッチします。
 
-<p>以下のように、<code>required</code> 属性を入力欄に追加しましょう。</p>
+以下のように、`required` 属性を入力欄に追加しましょう。
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;label for="choose"&gt;banana と cherry のどちらが好き? (要入力)&lt;/label&gt;
-  &lt;input id="choose" name="i_like" required&gt;
-  &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="choose">banana と cherry のどちらが好き? (要入力)</label>
+  <input id="choose" name="i_like" required>
+  <button>Submit</button>
+</form>
+```
 
-<p>このサンプルファイルの中に含まれている CSS も書いておきましょう。</p>
+このサンプルファイルの中に含まれている CSS も書いておきましょう。
 
-<pre class="brush: css notranslate">input:invalid {
+```css
+input:invalid {
   border: 2px dashed red;
 }
 
@@ -154,113 +134,107 @@ input:invalid:required {
 
 input:valid {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>この CSS によって、入力が妥当でない場合には、入力を赤の破線で境界線を描きますが、入力が妥当な場合には、黒の直線で境界線を描きます。要求された値があり、値が妥当でないときは背景にグラディエーションを追加します。つぎの例の動作を確認しましょう。</p>
+この CSS によって、入力が妥当でない場合には、入力を赤の破線で境界線を描きますが、入力が妥当な場合には、黒の直線で境界線を描きます。要求された値があり、値が妥当でないときは背景にグラディエーションを追加します。つぎの例の動作を確認しましょう。
 
-<p>{{EmbedLiveSample("The_required_attribute", "100%", 80)}}</p>
+{{EmbedLiveSample("The_required_attribute", "100%", 80)}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この例は GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html">fruit-validation.html</a> で見ることができます (<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html">ソースコード</a>も見てください)。</p>
-</div>
+> **Note:** **注**: この例は GitHub の [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) で見ることができます ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html)も見てください)。
 
-<p>値のないままフォームを送信してみましょう。妥当ではない入力がどのようにフォーカスされるか注意しましょう。デフォルトのエラーメッセージ(「このフィールドは入力必須です。」) が表示され、フォームの送信を阻止します。</p>
+値のないままフォームを送信してみましょう。妥当ではない入力がどのようにフォーカスされるか注意しましょう。デフォルトのエラーメッセージ(「このフィールドは入力必須です。」) が表示され、フォームの送信を阻止します。
 
-<p><code>required</code> 属性をサポートしている要素にこの属性がある場合、その要素に値があるかないかによって、要素が {{cssxref(':required')}} 疑似クラスに一致するかどうかが決まります。もし {{HTMLElement("input")}} に値がなければ、<code>input</code> は{{cssxref(':invalid')}} 疑似クラスに一致します。</p>
+`required` 属性をサポートしている要素にこの属性がある場合、その要素に値があるかないかによって、要素が {{cssxref(':required')}} 疑似クラスに一致するかどうかが決まります。もし {{HTMLElement("input")}} に値がなければ、`input` は{{cssxref(':invalid')}} 疑似クラスに一致します。
 
-<div class="blockIndicator note">
-<p>注意: よりよいユーザーエクスペリエンスのために、フォームのフィールドが必要なときにはユーザーに通知しましょう。これはユーザーエクスペリエンスだけに良いというわけではなく、WCAG <a href="/ja/docs/Learn/Accessibility">アクセシビリティ</a> ガイドラインで求められています。また、あなたが本当に必要とする場合にのみ必須にしましょう。例えばあなたは誰かの性別や肩書などの情報は本当に必要でしょうか?</p>
-</div>
+> **Note:** 注意: よりよいユーザーエクスペリエンスのために、フォームのフィールドが必要なときにはユーザーに通知しましょう。これはユーザーエクスペリエンスだけに良いというわけではなく、WCAG [アクセシビリティ](/ja/docs/Learn/Accessibility) ガイドラインで求められています。また、あなたが本当に必要とする場合にのみ必須にしましょう。例えばあなたは誰かの性別や肩書などの情報は本当に必要でしょうか?
 
-<h3 id="Validating_against_a_regular_expression" name="Validating_against_a_regular_expression">正規表現での検証</h3>
+### 正規表現での検証
 
-<p>もう一つとてもよく使われる機能は <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性で、値として<a href="/ja/docs/JavaScript/Guide/Regular_Expressions">正規表現</a>を取ります。正規表現 (regex) はテキスト文字列の中の文字の組み合わせに一致させるために使うことができ、フォームの検証には理想的です (JavaScript と同様に様々な利用ができます) 。</p>
+もう一つとてもよく使われる機能は [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で、値として[正規表現](/ja/docs/JavaScript/Guide/Regular_Expressions)を取ります。正規表現 (regex) はテキスト文字列の中の文字の組み合わせに一致させるために使うことができ、フォームの検証には理想的です (JavaScript と同様に様々な利用ができます) 。
 
-<p>正規表現はかなり複雑です。このモジュールでは正規表現のすべてを説明する意図はありません。いくつかの例を挙げますのでどのように動作するか基本的なアイディアを把握してください。</p>
+正規表現はかなり複雑です。このモジュールでは正規表現のすべてを説明する意図はありません。いくつかの例を挙げますのでどのように動作するか基本的なアイディアを把握してください。
 
-<ul>
- <li><code>a</code> — <code>a</code> の 1文字に一致する (<code>b</code> や <code>aa</code> などではない)。</li>
- <li><code>abc</code> — <code>a</code> と、その次の <code>b</code> と、その次の <code>c</code> の並びに一致する。</li>
- <li><code>ab?c</code>— <code>a</code> と、その次にひとつだけ <code>b</code> があるかないかと、その次の <code>c</code> の並びに一致する ( <code>ac</code> または <code>abc</code>)</li>
- <li><code>ab*c</code>— <code>a</code> と、その次に任意の数の <code>b</code> が続き、その次に <code>c</code> のある並びに一致する。( <code>ac</code> , <code>abc</code>, <code>abbbbbc</code>, 等)</li>
- <li><code>a|b</code> — 一文字の <code>a</code> または <code>b</code> に一致する</li>
- <li><code>abc|xyz</code> —  <code>abc</code> の並びまたは <code>xyz</code> の並びに一致する。これは <code>abcxyz</code> や <code>a</code> や <code>y</code> などには一致しない。</li>
-</ul>
+- `a` — `a` の 1 文字に一致する (`b` や `aa` などではない)。
+- `abc` — `a` と、その次の `b` と、その次の `c` の並びに一致する。
+- `ab?c`— `a` と、その次にひとつだけ `b` があるかないかと、その次の `c` の並びに一致する ( `ac` または `abc`)
+- `ab*c`— `a` と、その次に任意の数の `b` が続き、その次に `c` のある並びに一致する。( `ac` , `abc`, `abbbbbc`, 等)
+- `a|b` — 一文字の `a` または `b` に一致する
+- `abc|xyz` — `abc` の並びまたは `xyz` の並びに一致する。これは `abcxyz` や `a` や `y` などには一致しない。
 
-<p>正規表現には多くの組合せがあるので例はここまでとする。完全な一覧や多くの例は、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>ドキュメントを参照してください。</p>
+正規表現には多くの組合せがあるので例はここまでとする。完全な一覧や多くの例は、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)ドキュメントを参照してください。
 
-<p>使用例を実装しましょう。HTML を更新して <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性を追加しましょう:</p>
+使用例を実装しましょう。HTML を更新して [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を追加しましょう:
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;label for="choose"&gt;banana と cherry のどちらが好き?&lt;/label&gt;
-  &lt;input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry"&gt;
-  &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="choose">banana と cherry のどちらが好き?</label>
+  <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+  <button>Submit</button>
+</form>
+```
 
-<pre class="brush: css notranslate">input:invalid {
+```css
+input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>これは下記の更新があります。次のものを使ってみてください:</p>
+これは下記の更新があります。次のものを使ってみてください:
 
-<p>{{EmbedLiveSample("Validating_against_a_regular_expression", "100%", 80)}}</p>
+{{EmbedLiveSample("Validating_against_a_regular_expression", "100%", 80)}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html">fruit-pattern.html</a> でライブサンプルを見ることができます(<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">ソースコード</a>も見てください)</p>
-</div>
+> **Note:** **注**: GitHub の [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)も見てください)
 
-<p>この例では、{{HTMLElement("input")}} 要素は "banana"、"Banana"、"cherry" または "Cherry" という 4 つの文字列値のうち 1 つを受け付けます。正規表現は大文字小文字を区別しますが、中括弧にはさまれた"Aa"のパターンを使って小文字と同様に先頭が大文字のバージョンをサポートします。</p>
+この例では、{{HTMLElement("input")}} 要素は "banana"、"Banana"、"cherry" または "Cherry" という 4 つの文字列値のうち 1 つを受け付けます。正規表現は大文字小文字を区別しますが、中括弧にはさまれた"Aa"のパターンを使って小文字と同様に先頭が大文字のバージョンをサポートします。
 
-<p>この時点で、<a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性の中の値を以前に見たいくつかの例と同じ値に変更してみて、入力欄が有効になるように入力する値がどのように影響するかを確認してください。自分で考えた値も書いてみて、どのようになるか確認しましょう。果物に関する値を可能にすれば、例が分かりやすくなります。</p>
+この時点で、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性の中の値を以前に見たいくつかの例と同じ値に変更してみて、入力欄が有効になるように入力する値がどのように影響するかを確認してください。自分で考えた値も書いてみて、どのようになるか確認しましょう。果物に関する値を可能にすれば、例が分かりやすくなります。
 
-<p>もし {{HTMLElement("input")}} の空ではない値が正規表現パターンに一致しなかった場合、この <code>input</code> は {{cssxref(':invalid')}} 疑似クラスに一致します。</p>
+もし {{HTMLElement("input")}} の空ではない値が正規表現パターンに一致しなかった場合、この `input` は {{cssxref(':invalid')}} 疑似クラスに一致します。
 
-<div class="blockIndicator note">
-<p><strong>メモ:</strong> {{HTMLElement("input")}} 要素の型によっては、検証のために <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性が必要ないことがあります。例えば <code>email</code> 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 <a href="/ja/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。</p>
-</div>
+> **Note:** **メモ:** {{HTMLElement("input")}} 要素の型によっては、検証のために [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性が必要ないことがあります。例えば `email` 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。
 
-<div class="blockIndicator note">
-<p><strong>メモ</strong>: {{HTMLElement("textarea")}} 要素は <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性に対応していません。</p>
-</div>
+> **Note:** **メモ**: {{HTMLElement("textarea")}} 要素は [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性に対応していません。
 
-<h3 id="Constraining_the_length_of_your_entries" name="Constraining_the_length_of_your_entries">入力欄の長さの制約</h3>
+### 入力欄の長さの制約
 
-<p>あなたが、{{HTMLElement("input")}} または {{HTMLElement("textarea")}} によって作成してすべてのテキストフィールドで文字数を制限したいときには <a href="/ja/docs/Web/HTML/Attributes/minlength"><code>minlength</code></a> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> 属性が使用できます。フィールドが値をもっており、その文字数が <a href="/ja/docs/Web/HTML/Attributes/minlength"><code>minlength</code></a> の値より少ないか、文字数が <code><a href="/ja/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> の値より大きい場合は、フィールドは不正です。</p>
+あなたが、{{HTMLElement("input")}} または {{HTMLElement("textarea")}} によって作成してすべてのテキストフィールドで文字数を制限したいときには [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) 属性と [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) 属性が使用できます。フィールドが値をもっており、その文字数が [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) の値より少ないか、文字数が [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) の値より大きい場合は、フィールドは不正です。
 
-<p>ブラウザーはよくテキストフィールドに期待している以上に入力させないことがあります。単に <code>maxlength</code> を使うよりも良いユーザーエクスペリエンスは、入力文字数のフィードバックを提供してサイズ以下でコンテンツを編集できるようにもしておくことです。例えば、Twitter の文字入力の制限があります。これは JavaScript と <a href="https://github.com/mimo84/bootstrap-maxlength"><code>maxlength</code> を使った解決策</a>の組合せで実現できます。</p>
+ブラウザーはよくテキストフィールドに期待している以上に入力させないことがあります。単に `maxlength` を使うよりも良いユーザーエクスペリエンスは、入力文字数のフィードバックを提供してサイズ以下でコンテンツを編集できるようにもしておくことです。例えば、Twitter の文字入力の制限があります。これは JavaScript と [`maxlength` を使った解決策](https://github.com/mimo84/bootstrap-maxlength)の組合せで実現できます。
 
-<h3 id="Constraining_the_values_of_your_entries" name="Constraining_the_values_of_your_entries">入力欄の値に制約を加える</h3>
+### 入力欄の値に制約を加える
 
-<p>数値のフィールド (例えば <code><a href="/ja/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code>) の場合、<code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code> 属性によって入力に制限を加えられます。もしそのフィールドの値がこの範囲を超える場合、そのフィールドは妥当ではありません。</p>
+数値のフィールド (例えば [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number)) の場合、[`min`](/ja/docs/Web/HTML/Attributes/min) 属性と [`max`](/ja/docs/Web/HTML/Attributes/max) 属性によって入力に制限を加えられます。もしそのフィールドの値がこの範囲を超える場合、そのフィールドは妥当ではありません。
 
-<p>他の例を見てみましょう。<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> ファイルの新しいコピーを作成してください。</p>
+他の例を見てみましょう。[fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) ファイルの新しいコピーを作成してください。
 
-<p>では、<code>&lt;body&gt;</code> 要素の中身を削除して、以下のように置き換えてください。</p>
+では、`<body>` 要素の中身を削除して、以下のように置き換えてください。
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="choose"&gt;banana と cherry のどちらが好き?&lt;/label&gt;
-    &lt;input type="text" id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="number"&gt;どのくらい要ります?&lt;/label&gt;
-    &lt;input type="number" id="number" name="amount" value="1" min="1" max="10"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="choose">banana と cherry のどちらが好き?</label>
+    <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+  </div>
+  <div>
+    <label for="number">どのくらい要ります?</label>
+    <input type="number" id="number" name="amount" value="1" min="1" max="10">
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<ul>
- <li>ここで、<code>text</code> フィールドには <code>minlength</code> 属性と <code>maxlength</code> 属性には 6 を指定しています。これは banana (バナナ) と cherry (さくらんぼ) の文字数と同じです。</li>
- <li>またここでは、<code>number</code> フィールドに <code>min</code> 属性で 1 を <code>max</code> 属性で 10 を指定しました。この範囲外の数字の入力は妥当ではないと表示されます。ユーザーは矢印を使ってこの範囲外の値に増減できませんが、ユーザーが数字を手入力した場合はデータは不正となります。この数字は必須ではないので、値を除去すると妥当になります。</li>
-</ul>
+- ここで、`text` フィールドには `minlength` 属性と `maxlength` 属性には 6 を指定しています。これは banana (バナナ) と cherry (さくらんぼ) の文字数と同じです。
+- またここでは、`number` フィールドに `min` 属性で 1 を `max` 属性で 10 を指定しました。この範囲外の数字の入力は妥当ではないと表示されます。ユーザーは矢印を使ってこの範囲外の値に増減できませんが、ユーザーが数字を手入力した場合はデータは不正となります。この数字は必須ではないので、値を除去すると妥当になります。
 
-<pre class="brush: css notranslate">input:invalid {
+```css
+input:invalid {
   border: 2px dashed red;
 }
 
@@ -270,79 +244,79 @@ input:valid {
 
 div {
   margin-bottom: 10px;
-}</pre>
+}
+```
 
-<p>例をライブで実行してみましょう。</p>
+例をライブで実行してみましょう。
 
-<p>{{EmbedLiveSample("Constraining_the_values_of_your_entries", "100%", 100)}}</p>
+{{EmbedLiveSample("Constraining_the_values_of_your_entries", "100%", 100)}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html">fruit-length.html</a> でライブサンプルを見ることができます(<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">ソースコード</a>も見てください)</p>
-</div>
+> **Note:** **注**: GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)も見てください)
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: <code>&lt;input type="number"&gt;</code> （及び <code>range</code> や <code>date</code> のような他の型）は <a href="/ja/docs/Web/HTML/Attributes/step"><code>step</code></a> 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では <code>step</code> 属性を入れていませんので、既定値の <code>1</code> となります。つまり 3.2 のような浮動小数でも、不正になります。</p>
-</div>
+> **Note:** **注**: `<input type="number">` （及び `range` や `date` のような他の型）は [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では `step` 属性を入れていませんので、既定値の `1` となります。つまり 3.2 のような浮動小数でも、不正になります。
 
-<h3 id="Full_example" name="Full_example">サンプル全体</h3>
+### サンプル全体
 
-<p>HTML の内蔵検証機能の使い方を示す例の全体を示します。まずは HTML から:</p>
+HTML の内蔵検証機能の使い方を示す例の全体を示します。まずは HTML から:
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;p&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Do you have a driver's license?&lt;abbr title="This field is mandatory" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
-      &lt;!-- While only one radio button in a same-named group can be selected at a time,
+```html
+<form>
+  <p>
+    <fieldset>
+      <legend>Do you have a driver's license?<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+      <!-- While only one radio button in a same-named group can be selected at a time,
            and therefore only one radio button in a same-named group having the "required"
-           attribute suffices in making a selection a requirement --&gt;
-      &lt;input type="radio" required name="driver" id="r1" value="yes"&gt;&lt;label for="r1"&gt;Yes&lt;/label&gt;
-      &lt;input type="radio" required name="driver" id="r2" value="no"&gt;&lt;label for="r2"&gt;No&lt;/label&gt;
-    &lt;/fieldset&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="n1"&gt;How old are you?&lt;/label&gt;
-    &lt;!-- pattern 属性は number 型の入力欄を実装していないものの、pattern
+           attribute suffices in making a selection a requirement -->
+      <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
+      <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+    </fieldset>
+  </p>
+  <p>
+    <label for="n1">How old are you?</label>
+    <!-- pattern 属性は number 型の入力欄を実装していないものの、pattern
          属性には対応しているブラウザー向けの代替策として動作できます。
          なお、pattern 属性に対応しているブラウザーでは、number 型の入力欄
          で使用すると暗黙に失敗します。
-         ここでは代替策としての使い方のみです。--&gt;
-    &lt;input type="number" min="12" max="120" step="1" id="n1" name="age"
-           pattern="\d+"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="t1"&gt;What's your favorite fruit?&lt;abbr title="This field is mandatory" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;
-    &lt;input type="text" id="t1" name="fruit" list="l1" required
-           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range"&gt;
-    &lt;datalist id="l1"&gt;
-      &lt;option&gt;Banana&lt;/option&gt;
-      &lt;option&gt;Cherry&lt;/option&gt;
-      &lt;option&gt;Apple&lt;/option&gt;
-      &lt;option&gt;Strawberry&lt;/option&gt;
-      &lt;option&gt;Lemon&lt;/option&gt;
-      &lt;option&gt;Orange&lt;/option&gt;
-    &lt;/datalist&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="t2"&gt;What's your e-mail address?&lt;/label&gt;
-    &lt;input type="email" id="t2" name="email"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="t3"&gt;Leave a short message&lt;/label&gt;
-    &lt;textarea id="t3" name="msg" maxlength="140" rows="5"&gt;&lt;/textarea&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
+         ここでは代替策としての使い方のみです。-->
+    <input type="number" min="12" max="120" step="1" id="n1" name="age"
+           pattern="\d+">
+  </p>
+  <p>
+    <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+    <input type="text" id="t1" name="fruit" list="l1" required
+           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+    <datalist id="l1">
+      <option>Banana</option>
+      <option>Cherry</option>
+      <option>Apple</option>
+      <option>Strawberry</option>
+      <option>Lemon</option>
+      <option>Orange</option>
+    </datalist>
+  </p>
+  <p>
+    <label for="t2">What's your e-mail address?</label>
+    <input type="email" id="t2" name="email">
+  </p>
+  <p>
+    <label for="t3">Leave a short message</label>
+    <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+  </p>
+  <p>
+    <button>Submit</button>
+  </p>
+</form>
+```
 
-<p>この HTML をスタイル設定する CSS は:</p>
+この HTML をスタイル設定する CSS は:
 
-<pre class="brush: css notranslate">form {
+```css
+form {
   font: 1em sans-serif;
   max-width: 320px;
 }
 
-p &gt; label {
+p > label {
   display: block;
 }
 
@@ -362,87 +336,80 @@ input:invalid {
 
 input:focus:invalid {
   box-shadow: none;
-}</pre>
+}
+```
 
-<p>これで次のようにレンダリングされます。</p>
+これで次のようにレンダリングされます。
 
-<p>{{EmbedLiveSample("Full_example", "100%", 420)}}</p>
+{{EmbedLiveSample("Full_example", "100%", 420)}}
 
-<p>入力値と、それをサポートする入力タイプの制約に使える属性の完全なリストは、<a href="/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes">検証関連の属性</a>を見てください。</p>
+入力値と、それをサポートする入力タイプの制約に使える属性の完全なリストは、[検証関連の属性](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes)を見てください。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html">fruit-length.html</a> でライブサンプルを見ることができます(<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">ソースコード</a>も見てください)</p>
-</div>
+> **Note:** **注**: GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)も見てください)
 
-<h2 id="Validating_forms_using_JavaScript" name="Validating_forms_using_JavaScript">JavaScript を使用したフォーム検証</h2>
+## JavaScript を使用したフォーム検証
 
-<p>内蔵のエラーメッセージの見かけを制御したい場合や、HTML5 のフォーム検証に対応していないブラウザーに対処したい場合は、JavaScript を使用する必要があります。この節では、このようにするさまざまな方法を見ていきます。</p>
+内蔵のエラーメッセージの見かけを制御したい場合や、HTML5 のフォーム検証に対応していないブラウザーに対処したい場合は、JavaScript を使用する必要があります。この節では、このようにするさまざまな方法を見ていきます。
 
-<h3 id="The_HTML5_constraint_validation_API" name="The_HTML5_constraint_validation_API">HTML5 の制約検証 API</h3>
+### HTML5 の制約検証 API
 
-<p>多くのブラウザーが <a href="/ja/docs/Web/API/Constraint_validation">制約検証API</a>  に対応しています。この API は各フォーム要素で使用できる一連のメソッドやプロパティで構成されています。</p>
+多くのブラウザーが [制約検証 API](/ja/docs/Web/API/Constraint_validation) に対応しています。この API は各フォーム要素で使用できる一連のメソッドやプロパティで構成されています。
 
-<ul>
- <li><code><a href="/ja/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> 要素を表現)</li>
- <li><code><a href="/ja/docs/Web/API/HTMLFieldSetElement">HTMLFieldSetElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code> 要素を表現)</li>
- <li><code><a href="/ja/docs/Web/API/HTMLInputElement">HTMLInputElement</a></code> ( <code><a href="/ja/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> 要素を表現)</li>
- <li><code><a href="/ja/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/output">&lt;output&gt;</a></code> 要素を表現)</li>
- <li><code><a href="/ja/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/select">&lt;select&gt;</a></code> 要素を表現)</li>
- <li><code><a href="/ja/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> 要素を表現)</li>
-</ul>
+- [`HTMLButtonElement`](/ja/docs/Web/API/HTMLButtonElement) ([`<button>`](/ja/docs/Web/HTML/Element/button) 要素を表現)
+- [`HTMLFieldSetElement`](/ja/docs/Web/API/HTMLFieldSetElement) ([`<fieldset>`](/ja/docs/Web/HTML/Element/fieldset) 要素を表現)
+- [`HTMLInputElement`](/ja/docs/Web/API/HTMLInputElement) ( [`<input>`](/ja/docs/Web/HTML/Element/input) 要素を表現)
+- [`HTMLOutputElement`](/ja/docs/Web/API/HTMLOutputElement) ([`<output>`](/ja/docs/Web/HTML/Element/output) 要素を表現)
+- [`HTMLSelectElement`](/ja/docs/Web/API/HTMLSelectElement) ([`<select>`](/ja/docs/Web/HTML/Element/select) 要素を表現)
+- [`HTMLTextAreaElement`](/ja/docs/Web/API/HTMLTextAreaElement) ([`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素を表現)
 
-<p id="Constraint_validation_API_properties">制約検証 API には、上記の要素で利用できる、次のプロパティがあります。</p>
+制約検証 API には、上記の要素で利用できる、次のプロパティがあります。
 
-<ul>
- <li><code>validationMessage</code>: コントロールが合格していない制約検証 (もしあれば) を説明するローカライズ済みのメッセージです。またはコントロールが制約の検証の対象ではない場合 (<code>willValidate</code> が <code>false</code>) または要素の値が制約に合格している場合は、空文字列です。</li>
- <li><code>validity</code>: 要素の検証状態を説明する <code>ValidityState</code> オブジェクトです。取りうる検証状態の詳細は {{domxref("ValidityState")}}のリファレンスを参照してください。下記はよく使われるものを少し、一覧にしています:
-  <ul>
-   <li>{{domxref("ValidityState.patternMismatch", "patternMismatch")}}: 値が指定した {{htmlattrxref("pattern", "input")}}にマッチしない場合 <code>true</code> を、マッチする場合 <code>false</code> を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。</li>
-   <li>{{domxref("ValidityState.tooLong", "tooLong")}}: {{htmlattrxref("maxlength", "input")}} 属性で指定した最大値より値が長い場合 <code>true</code> を、同じ長さ以下の場合 <code>false</code> を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。</li>
-   <li>{{domxref("ValidityState.tooShort", "tooShort")}}: {{htmlattrxref("minlength", "input")}} 属性で指定した最小値より値が短い場合 <code>true</code> を、同じ長さ以上の場合<code>false</code> を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。</li>
-   <li>{{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: {{htmlattrxref("max", "input")}} 属性で指定し最大値より値が大きい場合<code>true</code> を、同じ大きさ以下の場合 <code>false</code> を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスにマッチする。</li>
-   <li>{{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: {{htmlattrxref("min", "input")}} 属性で指定し最小値より値が小さい場合<code>true</code> を、同じ大きさ以上の場合 <code>false</code> を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスにマッチする。</li>
-   <li>{{domxref("ValidityState.typeMismatch", "typeMismatch")}}: 値が要求する文法でない場合 ({{htmlattrxref("type", "input")}} が <code>email</code> か <code>url</code> のとき)は <code>true</code> を、文法が正しい場合は <code>false</code> を返す。<code>true</code> なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。</li>
-   <li><code>valid</code>: 要素が検証制約をすべて満たす、ゆえに妥当とみなされる場合<code>true</code> を、いずれかの制約を満たさない場合 <code>false</code> を返す。true なら、要素は {{cssxref(":valid")}} CSS 擬似クラスにマッチする。そうでない場合は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。</li>
-   <li><code>valueMissing</code>: 要素に {{htmlattrxref("required", "input")}} 属性があって値がない場合は <code>true</code> を、そうでない場合 <code>false</code> を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。</li>
-  </ul>
- </li>
- <li><code>willValidate</code>: フォームが送信されるときに要素が検証される場合に <code>true</code> を返します。そうでない場合は <code>false</code> を返します。</li>
-</ul>
+- `validationMessage`: コントロールが合格していない制約検証 (もしあれば) を説明するローカライズ済みのメッセージです。またはコントロールが制約の検証の対象ではない場合 (`willValidate` が `false`) または要素の値が制約に合格している場合は、空文字列です。
+- `validity`: 要素の検証状態を説明する `ValidityState` オブジェクトです。取りうる検証状態の詳細は {{domxref("ValidityState")}}のリファレンスを参照してください。下記はよく使われるものを少し、一覧にしています:
 
-<p id="Constraint_validation_API_methods">制約検証 API には、上記の要素で利用できる、次のメソッドがあります。</p>
+  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: 値が指定した {{htmlattrxref("pattern", "input")}}にマッチしない場合 `true` を、マッチする場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。
+  - {{domxref("ValidityState.tooLong", "tooLong")}}: {{htmlattrxref("maxlength", "input")}} 属性で指定した最大値より値が長い場合 `true` を、同じ長さ以下の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。
+  - {{domxref("ValidityState.tooShort", "tooShort")}}: {{htmlattrxref("minlength", "input")}} 属性で指定した最小値より値が短い場合 `true` を、同じ長さ以上の場合`false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。
+  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: {{htmlattrxref("max", "input")}} 属性で指定し最大値より値が大きい場合`true` を、同じ大きさ以下の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスにマッチする。
+  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: {{htmlattrxref("min", "input")}} 属性で指定し最小値より値が小さい場合`true` を、同じ大きさ以上の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスにマッチする。
+  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: 値が要求する文法でない場合 ({{htmlattrxref("type", "input")}} が `email` か `url` のとき)は `true` を、文法が正しい場合は `false` を返す。`true` なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。
+  - `valid`: 要素が検証制約をすべて満たす、ゆえに妥当とみなされる場合`true` を、いずれかの制約を満たさない場合 `false` を返す。true なら、要素は {{cssxref(":valid")}} CSS 擬似クラスにマッチする。そうでない場合は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。
+  - `valueMissing`: 要素に {{htmlattrxref("required", "input")}} 属性があって値がない場合は `true` を、そうでない場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスにマッチする。
 
-<ul>
- <li><code>checkValidity()</code>: 要素の値で妥当性の問題がない場合に <code>true</code> を返します。そうでない場合は <code>false</code> を返します。要素が不正である場合、このメソッドは要素で {<a href="/ja/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code> イベント</a>を発生させます。</li>
- <li><code>setCustomValidity(<em>message</em>)</code>: 要素に独自のエラーメッセージを追加します。独自のエラーメッセージを設定すると、要素が不正であるとみなされる場合に指定したエラーが表示されます。これにより JavaScript で、標準の HTML5 制約検証 API で提供されるもの以外の検証不合格状態を作り出すことができます。ユーザーに問題を報告する際に、メッセージが表示されます。</li>
-</ul>
+- `willValidate`: フォームが送信されるときに要素が検証される場合に `true` を返します。そうでない場合は `false` を返します。
 
-<h4 id="独自のエラーメッセージを実装する">独自のエラーメッセージを実装する</h4>
+制約検証 API には、上記の要素で利用できる、次のメソッドがあります。
 
-<p>上記の HTML5 の検証制約の例で見てきたように、ユーザーが不正なフォームを送信しようとするたびにブラウザーはエラーメッセージを表示します。このメッセージを表示する方法は、ブラウザーにより異なります。</p>
+- `checkValidity()`: 要素の値で妥当性の問題がない場合に `true` を返します。そうでない場合は `false` を返します。要素が不正である場合、このメソッドは要素で {[`invalid` イベント](/ja/docs/Web/API/HTMLInputElement/invalid_event)を発生させます。
+- `setCustomValidity(message)`: 要素に独自のエラーメッセージを追加します。独自のエラーメッセージを設定すると、要素が不正であるとみなされる場合に指定したエラーが表示されます。これにより JavaScript で、標準の HTML5 制約検証 API で提供されるもの以外の検証不合格状態を作り出すことができます。ユーザーに問題を報告する際に、メッセージが表示されます。
 
-<p>これらの自動のメッセージには、2 つの欠点があります。</p>
+#### 独自のエラーメッセージを実装する
 
-<ul>
- <li>    CSS でメッセージの表示方法を変更するための標準的な方法がありません。</li>
- <li>    メッセージはブラウザーのロケールに依存しており、ある言語のページでエラーメッセージが別の言語で表示されることがあり、これは下記の Firefox スクリーンショットで見ることができます。</li>
-</ul>
+上記の HTML5 の検証制約の例で見てきたように、ユーザーが不正なフォームを送信しようとするたびにブラウザーはエラーメッセージを表示します。このメッセージを表示する方法は、ブラウザーにより異なります。
 
-<p><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></p>
+これらの自動のメッセージには、2 つの欠点があります。
 
-<p>これらのメッセージの外見やテキストを変更するには、<a href="/ja/docs/Web/API/Constraint_validation" rel="external">制約検証 API</a> の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。</p>
+- CSS でメッセージの表示方法を変更するための標準的な方法がありません。
+- メッセージはブラウザーのロケールに依存しており、ある言語のページでエラーメッセージが別の言語で表示されることがあり、これは下記の Firefox スクリーンショットで見ることができます。
 
-<p>いくつかの簡単な HTML で開始します (空の HTML ファイルにこれを入力します; もしよければ、<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> を基礎としてもいいでしょう):</p>
+![Example of an error message with Firefox in French on an English page](/files/4329/error-firefox-win7.png)
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;label for="mail"&gt;私にメールアドレスを教えてください:&lt;/label&gt;
-  &lt;input type="email" id="mail" name="mail"&gt;
-  &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
+これらのメッセージの外見やテキストを変更するには、[制約検証 API](/ja/docs/Web/API/Constraint_validation) の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。
 
-<p>このページに次の JavaScript を追加します:</p>
+いくつかの簡単な HTML で開始します (空の HTML ファイルにこれを入力します; もしよければ、[fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) を基礎としてもいいでしょう):
 
-<pre class="brush: js notranslate">const email = document.getElementById("mail");
+```html
+<form>
+  <label for="mail">私にメールアドレスを教えてください:</label>
+  <input type="email" id="mail" name="mail">
+  <button>Submit</button>
+</form>
+```
+
+このページに次の JavaScript を追加します:
+
+```js
+const email = document.getElementById("mail");
 
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
@@ -450,52 +417,52 @@ email.addEventListener("input", function (event) {
   } else {
     email.setCustomValidity("");
   }
-});</pre>
+});
+```
 
-<p>ここでメールアドレス入力への参照を保管して、入力値が変更されるたびに制約コードが走るためのイベントリスナーを追加します。</p>
+ここでメールアドレス入力への参照を保管して、入力値が変更されるたびに制約コードが走るためのイベントリスナーを追加します。
 
-<p>制約コードの中で、メールアドレス入力の <code>validity.typeMismatch</code> プロパティが <code>true</code>かどうか、つまり値がメールアドレスの形式のパターンにマッチしていないかを確認します。その場合、カスタムメッセージとともに <a href="/ja/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> を呼び出して、フォームを送信するときに、送信が失敗してカスタムエラーメッセージが表示されます。</p>
+制約コードの中で、メールアドレス入力の `validity.typeMismatch` プロパティが `true`かどうか、つまり値がメールアドレスの形式のパターンにマッチしていないかを確認します。その場合、カスタムメッセージとともに [`setCustomValidity()`](</ja/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>) を呼び出して、フォームを送信するときに、送信が失敗してカスタムエラーメッセージが表示されます。
 
-<p><code>validity.typeMismatch</code> が <code>false</code>の場合、空文字で <code>setCustomValidity()</code> メソッドを呼び出します。これは入力が妥当となり、フォームが送信されます。</p>
+`validity.typeMismatch` が `false`の場合、空文字で `setCustomValidity()` メソッドを呼び出します。これは入力が妥当となり、フォームが送信されます。
 
-<p>次のもので試すことができます:</p>
+次のもので試すことができます:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この例は GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html">custom-error-message.html</a> で見ることができます (<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html">ソースコード</a>も見てください)。</p>
-</div>
+> **Note:** **注**: この例は GitHub の [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) で見ることができます ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)も見てください)。
 
-<h4 id="Example_using_the_constraint_validation_API" name="Example_using_the_constraint_validation_API">制約検証 API の使用例</h4>
+#### 制約検証 API の使用例
 
-<p>これまでほんとうに簡単な例を見てきましたので、少し複雑な独自の検証を作成するために API を使用する方法を見ていきましょう。</p>
+これまでほんとうに簡単な例を見てきましたので、少し複雑な独自の検証を作成するために API を使用する方法を見ていきましょう。
 
-<p>始めに、HTML です。また、次のものに沿ってみてください:</p>
+始めに、HTML です。また、次のものに沿ってみてください:
 
-<pre class="brush: html notranslate">&lt;form novalidate&gt;
-  &lt;p&gt;
-    &lt;label for="mail"&gt;
-      &lt;span&gt;メールアドレスを入力してください。&lt;/span&gt;
-      &lt;input type="email" id="mail" name="mail"&gt;
-      &lt;span class="error" aria-live="polite"&gt;&lt;/span&gt;
-    &lt;/label&gt;
-  &lt;/p&gt;
-  &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form novalidate>
+  <p>
+    <label for="mail">
+      <span>メールアドレスを入力してください。</span>
+      <input type="email" id="mail" name="mail">
+      <span class="error" aria-live="polite"></span>
+    </label>
+  </p>
+  <button>Submit</button>
+</form>
+```
 
-<p>この簡単なフォームでは、ブラウザーの自動検証を無効にするために <code><a href="/ja/docs/Web/HTML/Attributes/novalidate">novalidate</a></code> 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の疑似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。</p>
+この簡単なフォームでは、ブラウザーの自動検証を無効にするために [`novalidate`](/ja/docs/Web/HTML/Attributes/novalidate) 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の疑似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。
 
-<p>検証する入力は <code><a href="/ja/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code>で、これは <code>required</code>(入力必須)で、8文字の <code>minlength</code> があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。</p>
+検証する入力は [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)で、これは `required`(入力必須)で、8 文字の `minlength` があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。
 
-<p><code>&lt;span&gt;</code>要素の中にエラーメッセージを表示させようとしています。 <code>&lt;span&gt;</code>にセットされた <a href="/ja/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> 属性は、スクリーンリーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。</p>
+`<span>`要素の中にエラーメッセージを表示させようとしています。 `<span>`にセットされた [`aria-live`](/ja/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性は、スクリーンリーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: ここでの要点は、フォームに <code>novalidate</code> 属性をつけると、フォームがエラーメッセージのバブルを表示するのを停止して、その代わりDOM内にカスタムエラーメッセージを選択した方法で表示させられることです。</p>
-</div>
+> **Note:** **注**: ここでの要点は、フォームに `novalidate` 属性をつけると、フォームがエラーメッセージのバブルを表示するのを停止して、その代わり DOM 内にカスタムエラーメッセージを選択した方法で表示させられることです。
 
-<p>この CSS はフォームの見栄えを少し良くして、入力データが無効なときの見た目のフィードバックを提供します。</p>
+この CSS はフォームの見栄えを少し良くして、入力データが無効なときの見た目のフィードバックを提供します。
 
-<pre class="brush: css notranslate">/* これはサンプルの見栄えをよくするスタイルです */
+```css
+/* これはサンプルの見栄えをよくするスタイルです */
 body {
   font: 1em sans-serif;
   width: 200px;
@@ -546,11 +513,13 @@ input:focus:invalid {
 
 .error.active {
   padding: 0.3em;
-}</pre>
+}
+```
 
-<p>以下の JavaScript コードは独自のエラー検証を制御します。</p>
+以下の JavaScript コードは独自のエラー検証を制御します。
 
-<pre class="brush: js notranslate">// DOM ノードの選択法はたくさんあります。ここではフォーム自体、メールアドレス
+```js
+// DOM ノードの選択法はたくさんあります。ここではフォーム自体、メールアドレス
 // 入力ボックス、そしてエラーメッセージを配置する span 要素を取得しています。
 const form  = document.getElementsByTagName('form')[0];
 
@@ -602,74 +571,69 @@ function showError() {
 
   // Set the styling appropriately
   emailError.className = 'error active';
-}</pre>
+}
+```
 
-<p>コメントがよく説明していますが、簡単にいうと:</p>
+コメントがよく説明していますが、簡単にいうと:
 
-<ul>
- <li>入力値を変えるたびに、それが妥当なデータを含んでいるかをチェックします。その場合は表示されたエラーメッセージを削除します。データが不正の場合は、適当なエラーを表示する <code>showError()</code> を実行します。</li>
- <li>フォームの送信を試すごとに、またデータが妥当かチェックします。その場合はフォームの送信を許可します。そうでない場合、適当なエラーを表示する <code>showError()</code> を実行し、<code><a href="/ja/docs/Web/API/Event/preventDefault">preventDefault()</a></code>でフォーム送信を停止します。</li>
- <li><code>showError()</code> 関数は、入力の <code>validity</code> オブジェクトのさまざまなプロパティを使ってエラーがどれかを決めて、適当なエラーメッセージを表示します。</li>
-</ul>
+- 入力値を変えるたびに、それが妥当なデータを含んでいるかをチェックします。その場合は表示されたエラーメッセージを削除します。データが不正の場合は、適当なエラーを表示する `showError()` を実行します。
+- フォームの送信を試すごとに、またデータが妥当かチェックします。その場合はフォームの送信を許可します。そうでない場合、適当なエラーを表示する `showError()` を実行し、[`preventDefault()`](/ja/docs/Web/API/Event/preventDefault)でフォーム送信を停止します。
+- `showError()` 関数は、入力の `validity` オブジェクトのさまざまなプロパティを使ってエラーがどれかを決めて、適当なエラーメッセージを表示します。
 
-<p>こちらが実際の結果です。</p>
+こちらが実際の結果です。
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html">detailed-custom-validation.html</a> に例があります(<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html">ソースコード</a>見てください)</p>
-</div>
+> **Note:** **注**: GitHub の [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) に例があります([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)見てください)
 
-<p>制約検証 API はフォーム検証を制御するための強力なツールであり、HTML および CSS のみで検証を行うよりもはるかにユーザーインターフェイスをコントロールできます。</p>
+制約検証 API はフォーム検証を制御するための強力なツールであり、HTML および CSS のみで検証を行うよりもはるかにユーザーインターフェイスをコントロールできます。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: さらなる情報は、<a href="/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation">制約検証ガイド</a>と<a href="/ja/docs/Web/API/Constraint_validation">制約検証 API</a> リファレンスを見てください。</p>
-</div>
+> **Note:** **注**: さらなる情報は、[制約検証ガイド](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation)と[制約検証 API](/ja/docs/Web/API/Constraint_validation) リファレンスを見てください。
 
-<h3 id="Validating_forms_without_a_built-in_API" name="Validating_forms_without_a_built-in_API">組み込み API を使用しないフォーム検証</h3>
+### 組み込み API を使用しないフォーム検証
 
-<p>古いブラウザーや<a href="/ja/docs/HTML/Forms/How_to_build_custom_form_widgets">カスタムコントロール</a>において、制約検証 API を使用できない （または使用したくない）ことがあるでしょう。このような場合でも、フォームを検証するために JavaScript が使用できます。フォームを検証には、実際のデータの検証よりもユーザーインターフェイスの疑問が多くなります。</p>
+古いブラウザーや[カスタムコントロール](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets)において、制約検証 API を使用できない （または使用したくない）ことがあるでしょう。このような場合でも、フォームを検証するために JavaScript が使用できます。フォームを検証には、実際のデータの検証よりもユーザーインターフェイスの疑問が多くなります。
 
-<p>フォームを検証するために、あなたはいくつかの疑問を考えなければなりません。</p>
+フォームを検証するために、あなたはいくつかの疑問を考えなければなりません。
 
-<dl>
- <dt>どのような検証を実施するべきか</dt>
- <dd>どのようにデータを検証するかを決めなければなりません。文字列演算、型変換、正規表現など。これはあなた次第です。フォームのデータは常にテキストであり、スクリプトには常に文字列として渡されることを忘れないようにしてください。</dd>
- <dt>フォームが妥当でない場合に何をするべきか</dt>
- <dd>これは明らかにユーザーインターフェイスの問題です。フォームがどのように動作するかを決めなければなりません。どのような場合でもフォームのデータを送信しますか？エラー状態の入力欄を強調しますか？エラーメッセージを表示しますか？</dd>
- <dt>ユーザーが不正なデータを修正することをどのように支援できるか</dt>
- <dd>ユーザーの不満を軽減するためには、ユーザーに入力内容の修正を案内するために、できるだけ多くの役立つ情報を提供することがとても重要です。明確なエラーメッセージはもちろん、ユーザーが何を求められているか理解できるように前向きの提案をするべきです。フォーム検証のユーザーインターフェイスの要件について深く知りたいのであれば、ぜひ読むべきである有用な記事があります（英語）。
- <ul>
-  <li>SmashingMagazine: <a href="http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Form-Field Validation: The Errors-Only Approach</a></li>
-  <li>SmashingMagazine: <a href="http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Web Form Validation: Best Practices and Tutorials</a></li>
-  <li>Six Revision: <a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/" rel="external">Best Practices for Hints and Validation in Web Forms</a></li>
-  <li>A List Apart: <a href="http://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Inline Validation in Web Forms</a></li>
- </ul>
- </dd>
-</dl>
+- どのような検証を実施するべきか
+  - : どのようにデータを検証するかを決めなければなりません。文字列演算、型変換、正規表現など。これはあなた次第です。フォームのデータは常にテキストであり、スクリプトには常に文字列として渡されることを忘れないようにしてください。
+- フォームが妥当でない場合に何をするべきか
+  - : これは明らかにユーザーインターフェイスの問題です。フォームがどのように動作するかを決めなければなりません。どのような場合でもフォームのデータを送信しますか？エラー状態の入力欄を強調しますか？エラーメッセージを表示しますか？
+- ユーザーが不正なデータを修正することをどのように支援できるか
 
-<h4 id="An_example_that_doesnt_use_the_constraint_validation_API" name="An_example_that_doesnt_use_the_constraint_validation_API">制約検証 API を使用しない例</h4>
+  - : ユーザーの不満を軽減するためには、ユーザーに入力内容の修正を案内するために、できるだけ多くの役立つ情報を提供することがとても重要です。明確なエラーメッセージはもちろん、ユーザーが何を求められているか理解できるように前向きの提案をするべきです。フォーム検証のユーザーインターフェイスの要件について深く知りたいのであれば、ぜひ読むべきである有用な記事があります（英語）。
 
-<p>これまでのことを説明するため、古いブラウザーでも動作するように前出のサンプルを作り直してみましょう。</p>
+    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
+    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
+    - Six Revision: [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
+    - A List Apart: [Inline Validation in Web Forms](http://www.alistapart.com/articles/inline-validation-in-web-forms/)
 
-<p>ご覧の通り、HTML はほとんど同じであり、HTML5 の validation機能を取り除いただけです</p>
+#### 制約検証 API を使用しない例
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;p&gt;
-    &lt;label for="mail"&gt;
-        &lt;span&gt;メールアドレスを入力してください。&lt;/span&gt;
-        &lt;input type="text" class="mail" id="mail" name="mail"&gt;
-        &lt;span class="error" aria-live="polite"&gt;&lt;/span&gt;
-    &lt;/label&gt;
-  &lt;p&gt;
-  &lt;!-- 一部の古いブラウザーでは button 要素で、type 属性に明示的に
-       submit を設定する必要があります。--&gt;
-  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
+これまでのことを説明するため、古いブラウザーでも動作するように前出のサンプルを作り直してみましょう。
 
-<p>同様に、CSS も大きく変更する必要はありません。{{cssxref(":invalid")}} 疑似クラスから実クラスへの変更と、Internet Explorer 6 で動作しない属性セレクターの使用を避けただけです。</p>
+ご覧の通り、HTML はほとんど同じであり、HTML5 の validation 機能を取り除いただけです
 
-<pre class="brush: css notranslate">/* これはサンプルの見栄えをよくするスタイルです */
+```html
+<form>
+  <p>
+    <label for="mail">
+        <span>メールアドレスを入力してください。</span>
+        <input type="text" class="mail" id="mail" name="mail">
+        <span class="error" aria-live="polite"></span>
+    </label>
+  <p>
+  <!-- 一部の古いブラウザーでは button 要素で、type 属性に明示的に
+       submit を設定する必要があります。-->
+  <button type="submit">Submit</button>
+</form>
+```
+
+同様に、CSS も大きく変更する必要はありません。{{cssxref(":invalid")}} 疑似クラスから実クラスへの変更と、Internet Explorer 6 で動作しない属性セレクターの使用を避けただけです。
+
+```css
+/* これはサンプルの見栄えをよくするスタイルです */
 body {
   font: 1em sans-serif;
   padding: 0;
@@ -721,11 +685,13 @@ input:focus.invalid {
 
 .error.active {
   padding: 0.3em;
-}</pre>
+}
+```
 
-<p>JavaScript コードでは大きな変更があり、多くの面倒な作業が必要です。</p>
+JavaScript コードでは大きな変更があり、多くの面倒な作業が必要です。
 
-<pre class="brush: js notranslate">// 古いブラウザーで DOM ノードを選択する方法は少ない
+```js
+// 古いブラウザーで DOM ノードを選択する方法は少ない
 const form  = document.getElementsByTagName('form')[0];
 const email = document.getElementById('mail');
 
@@ -736,7 +702,7 @@ let error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // HTML5 仕様書より
-const emailRegExp = /^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // 多くの古いブラウザーは addEventListener メソッドをサポートしていません。
 // 以下はこれを扱うためのシンプルな方法です。なお唯一の方法ではありません。
@@ -795,51 +761,46 @@ addEvent(form, "submit", function () {
     error.textContent = "";
     error.className = "error";
   }
-});</pre>
+});
+```
 
-<p>結果は以下のようになります。</p>
+結果は以下のようになります。
 
-<p>{{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 130)}}</p>
+{{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 130)}}
 
-<p>ご覧の通り、自分でで検証システムを構築するのは大変なことではありません。難しいのはクロスプラットフォームで、かつ作成するであろうあらゆるフォームで使用できる汎用的なものにすることです。フォーム検証を行うために利用できる、<a href="http://rickharrison.github.com/validate.js/" rel="external">Validate.js</a> のような多くのライブラリがあります。</p>
+ご覧の通り、自分でで検証システムを構築するのは大変なことではありません。難しいのはクロスプラットフォームで、かつ作成するであろうあらゆるフォームで使用できる汎用的なものにすることです。フォーム検証を行うために利用できる、[Validate.js](http://rickharrison.github.com/validate.js/) のような多くのライブラリがあります。
 
-<h2 id="Test_your_skills!" name="Test_your_skills!">スキルをテストしましょう!</h2>
+## スキルをテストしましょう!
 
-<p>この記事の最後に到着しましたが、最も大事な情報を覚えていますか？ 次に進む前に、この情報を保持しているか検証するテストがあります — <a href="/ja/docs/Learn/Forms/Test_your_skills:_Form_validation">Test your skills: Form validation</a> を見てください。</p>
+この記事の最後に到着しましたが、最も大事な情報を覚えていますか？ 次に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Form validation](/ja/docs/Learn/Forms/Test_your_skills:_Form_validation) を見てください。
 
-<h2 id="Conclusion" name="Conclusion">まとめ</h2>
+## まとめ
 
-<p>クライアント側のフォーム検証は、カスタムスタイル設定やエラーメッセージには複雑な JavaScript を必要としませんが、ユーザーについては注意深く考えることが必要です。ユーザーが正しいデータを入力できるよう支援することを、常に忘れないでください。最後に、以下のことを必ず行ってください。</p>
+クライアント側のフォーム検証は、カスタムスタイル設定やエラーメッセージには複雑な JavaScript を必要としませんが、ユーザーについては注意深く考えることが必要です。ユーザーが正しいデータを入力できるよう支援することを、常に忘れないでください。最後に、以下のことを必ず行ってください。
 
-<ul>
- <li>明確なエラーメッセージを表示してください。</li>
- <li>入力形式については寛容になってください。</li>
- <li>どこでエラーが発生しているかを正確に示してください（特に大きなフォームで）。</li>
-</ul>
+- 明確なエラーメッセージを表示してください。
+- 入力形式については寛容になってください。
+- どこでエラーが発生しているかを正確に示してください（特に大きなフォームで）。
 
-<p>フォームが正しく埋められたことをチェックしたら、送信することができます。次の<a href="/ja/docs/Learn/Forms/Sending_and_retrieving_form_data">データ送信</a>でカバーします。</p>
+フォームが正しく埋められたことをチェックしたら、送信することができます。次の[データ送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)でカバーします。
 
-<p>{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}</p>
+{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+## このモジュール
 
-<ul>
- <li><a href="/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めてのフォーム</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">フォームの構築方法</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
- <li><a class="external" href="/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
- <li><a class="external" href="/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">フォームへのスタイル設定</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">フォームへの高度なスタイル設定</a></li>
- <li><a class="external" href="/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
-</ul>
+- [初めてのフォーム](/ja/docs/Learn/HTML/Forms/Your_first_HTML_form)
+- [フォームの構築方法](/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+- [ネイティブフォームウィジェット](/ja/docs/Learn/HTML/Forms/The_native_form_widgets)
+- [The HTML5 input types](/ja/docs/Learn/Forms/HTML5_input_types)
+- [Other form controls](/ja/docs/Learn/Forms/Other_form_controls)
+- [フォームへのスタイル設定](/ja/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [フォームへの高度なスタイル設定](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
+- [UI pseudo-classes](/ja/docs/Learn/Forms/UI_pseudo-classes)
+- [フォームデータの検証](/ja/docs/Learn/HTML/Forms/Data_form_validation)
+- [フォームデータの送信](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
 
-<h3 id="Advanced_Topics" name="Advanced_Topics">上級トピック</h3>
+### 上級トピック
 
-<ul>
- <li><a class="external" href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
- <li><a class="external" href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
- <li><a class="external" href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
-</ul>
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)
