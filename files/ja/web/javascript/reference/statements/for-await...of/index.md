@@ -14,40 +14,38 @@ tags:
   - 非同期
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>for await...of</code> 文</strong>は非同期および同期の<a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル">反復可能オブジェクト</a>を使用して、反復処理を行うループを作成します。たとえば、組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列風オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}}, {{domxref("NodeList")}} など), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, さらに、ユーザー定義の非同期・同期の反復可能オブジェクトを使用することができます。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。 {{jsxref("Operators/await", "await")}} 演算子と同様に、この分は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}の中でのみ使用されます。</p>
+**`for await...of` 文**は非同期および同期の[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を使用して、反復処理を行うループを作成します。たとえば、組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列風オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}}, {{domxref("NodeList")}} など), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, さらに、ユーザー定義の非同期・同期の反復可能オブジェクトを使用することができます。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。 {{jsxref("Operators/await", "await")}} 演算子と同様に、この分は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}の中でのみ使用されます。
 
-<div class="blockIndicator note">
-<p><code>for await...of</code> は非同期の反復可能オブジェクトではない非同期イテレーターでは動作しません。</p>
-</div>
+> **Note:** `for await...of` は非同期の反復可能オブジェクトではない非同期イテレーターでは動作しません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">for await (<var>variable</var> of <var>iterable</var>) {
-  <var>statement</var>
+```
+for await (variable of iterable) {
+  statement
 }
-</pre>
+```
 
-<dl>
- <dt><code><var>variable</var></code></dt>
- <dd>反復処理の各回において、異なるプロパティの値が <code><var>variable</var></code> に割り当てられます。 <code><var>variable</var></code> は <code>const</code>, <code>let</code>, <code>var</code> で宣言することができます。</dd>
- <dt><code><var>iterable</var></code></dt>
- <dd>反復処理が行われる反復可能なプロパティを持つオブジェクトです。</dd>
-</dl>
+- `variable`
+  - : 反復処理の各回において、異なるプロパティの値が `variable` に割り当てられます。 `variable` は `const`, `let`, `var` で宣言することができます。
+- `iterable`
+  - : 反復処理が行われる反復可能なプロパティを持つオブジェクトです。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Iterating_over_async_iterables" name="Iterating_over_async_iterables">非同期の反復可能オブジェクトでの繰り返し処理</h3>
+### 非同期の反復可能オブジェクトでの繰り返し処理
 
-<p>非同期反復可能プロトコルを明示的に実装しているオブジェクトを反復処理することができます。</p>
+非同期反復可能プロトコルを明示的に実装しているオブジェクトを反復処理することができます。
 
-<pre class="brush:js notranslate">const asyncIterable = {
+```js
+const asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return Promise.resolve({ value: this.i++, done: false });
         }
 
@@ -66,15 +64,16 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 // 0
 // 1
 // 2
-</pre>
+```
 
-<h3 id="Iterating_over_async_generators" name="Iterating_over_async_generators">非同期のジェネレータの反復処理</h3>
+### 非同期のジェネレータの反復処理
 
-<p>非同期の反復可能プロトコルを実装している非同期ジェネレーターであれば、 <code>for await...of</code> を使用して繰り返し処理を行うことができます。</p>
+非同期の反復可能プロトコルを実装している非同期ジェネレーターであれば、 `for await...of` を使用して繰り返し処理を行うことができます。
 
-<pre class="brush: js notranslate">async function* asyncGenerator() {
+```js
+async function* asyncGenerator() {
   let i = 0;
-  while (i &lt; 3) {
+  while (i < 3) {
     yield i++;
   }
 }
@@ -86,13 +85,15 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 })();
 // 0
 // 1
-// 2</pre>
+// 2
+```
 
-<p><code>for await...of</code> を使用して非同期ジェネレータを反復処理するより具体的な例として、API からのデータを反復処理することを考えてみましょう。</p>
+`for await...of` を使用して非同期ジェネレータを反復処理するより具体的な例として、API からのデータを反復処理することを考えてみましょう。
 
-<p>この例では、まずデータのストリームに対して非同期の反復可能オブジェクトを作成し、それを使用して API からのレスポンスの長さを計算します。</p>
+この例では、まずデータのストリームに対して非同期の反復可能オブジェクトを作成し、それを使用して API からのレスポンスの長さを計算します。
 
-<pre class="brush: js notranslate">async function* streamAsyncIterable(stream) {
+```js
+async function* streamAsyncIterable(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -121,13 +122,15 @@ async function getResponseSize(url) {
   // 期待される出力: "Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
+getResponseSize('https://jsonplaceholder.typicode.com/photos');
+```
 
-<h3 id="Iterating_over_sync_iterables_and_generators" name="Iterating_over_sync_iterables_and_generators">同期の反復可能オブジェクトおよびジェネレーターの反復処理</h3>
+### 同期の反復可能オブジェクトおよびジェネレーターの反復処理
 
-<p><code>for await...of</code> ループは同期の反復可能オブジェクトやジェネレーターで使用することもできます。この場合、内部的にはループの制御変数に代入する前に、値が出力されるのを待ちます。</p>
+`for await...of` ループは同期の反復可能オブジェクトやジェネレーターで使用することもできます。この場合、内部的にはループの制御変数に代入する前に、値が出力されるのを待ちます。
 
-<pre class="brush: js notranslate">function* generator() {
+```js
+function* generator() {
   yield 0;
   yield 1;
   yield Promise.resolve(2);
@@ -156,15 +159,12 @@ for (let numOrPromise of generator()) {
 // Promise { 2 }
 // Promise { 3 }
 // 4
-</pre>
+```
 
+> **Note:** **注**: 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 `for await...of` は拒否されたプロミスを消費するので、ジェネレーター内の `finally` ブロックが呼び出されません。これは、確保したリソースを `try/finally` で解放する必要がある場合は望ましくない動作になる可能性があります。
 
-
-<div class="blockIndicator note">
-<p><strong>注</strong>: 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 <code>for await...of</code> は拒否されたプロミスを消費するので、ジェネレーター内の <code>finally</code> ブロックが呼び出されません。これは、確保したリソースを <code>try/finally</code> で解放する必要がある場合は望ましくない動作になる可能性があります。</p>
-</div>
-
-<pre class="brush: js notranslate">function* generatorWithRejectedPromises() {
+```js
+function* generatorWithRejectedPromises() {
   try {
     yield 0;
     yield 1;
@@ -203,15 +203,16 @@ try {
 // 0
 // 1
 // Promise { 2 }
-// Promise { &lt;rejected&gt; 3 }
+// Promise { <rejected> 3 }
 // 4
 // catched 5
 // called finally
-</pre>
+```
 
-<p>同期ジェネレーター関数の <code>finally</code> ブロックが常に呼び出されるようにするには、非同期のジェネレーター関数の場合は <code>for await...of</code> を、同期ジェネレーター関数の場合は <code>for...of</code> を使用し、ループの中で生成されたプロミスを明示的に待つようにしてください。</p>
+同期ジェネレーター関数の `finally` ブロックが常に呼び出されるようにするには、非同期のジェネレーター関数の場合は `for await...of` を、同期ジェネレーター関数の場合は `for...of` を使用し、ループの中で生成されたプロミスを明示的に待つようにしてください。
 
-<pre class="brush: js notranslate">(async function() {
+```js
+(async function() {
   try {
     for (let numOrPromise of generatorWithRejectedPromises()) {
       console.log(await numOrPromise);
@@ -224,30 +225,20 @@ try {
 // 1
 // 2
 // catched 3
-// called finally</pre>
+// called finally
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.for_await_of")}}</p>
+{{Compat("javascript.statements.for_await_of")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}</li>
- <li>{{jsxref("Statements/for...of", "for...of")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}
+- {{jsxref("Statements/for...of", "for...of")}}

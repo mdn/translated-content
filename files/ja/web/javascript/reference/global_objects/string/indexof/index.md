@@ -10,66 +10,67 @@ tags:
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>indexOf()</code></strong> メソッドは、呼び出す {{jsxref("String")}} オブジェクト中で、 <code>fromIndex</code> から検索を始め、指定された値が最初に現れたインデックスを返します。値が見つからない場合は <code>-1</code> を返します。</span></p>
+**`indexOf()`** メソッドは、呼び出す {{jsxref("String")}} オブジェクト中で、 `fromIndex` から検索を始め、指定された値が最初に現れたインデックスを返します。値が見つからない場合は `-1` を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-indexof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+> **Note:** **メモ:** 配列メソッドについては {{jsxref("Array.prototype.indexOf()")}} を参照してください。
 
-<div class="note"><strong>メモ:</strong> 配列メソッドについては {{jsxref("Array.prototype.indexOf()")}} を参照してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.indexOf(searchValue [, fromIndex])
+```
 
-<pre class="syntaxbox"><var>str</var>.indexOf(<var>searchValue [</var>, <var>fromIndex]</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `searchValue`
 
-<dl>
- <dt><code><var>searchValue</var></code></dt>
- <dd>
- <p>検索する値を表す文字列です。</p>
+  - : 検索する値を表す文字列です。
 
- <p>文字列が明示的に提供されなかった場合は、 <a href="https://tc39.github.io/ecma262/#sec-tostring"><var>searchValue</var> は "<code>undefined</code>" となり</a>、この値が <code><var>str</var></code> の中から検索されます。</p>
+    文字列が明示的に提供されなかった場合は、 [_searchValue_ は "`undefined`" となり](https://tc39.github.io/ecma262/#sec-tostring)、この値が `str` の中から検索されます。
 
- <p>ですから、例えば <code>'undefined'.indexOf()</code> は <code>undefined</code> が <code>undefined</code> という文字列の中の <code>0</code> の位置に見つかるため、 <code>0</code> を返します。しかし、 <code>'undefine'.indexOf()</code> は <code>undefined</code> が <code>undefine</code> という文字列の中で見つからないため、 <code>-1</code> を返します。</p>
- </dd>
- <dt><var><code>fromIndex</code></var> {{optional_inline}}</dt>
- <dd>
- <p>整数値で、検索を始める位置を表します。既定値は <code>0</code> です。</p>
+    ですから、例えば `'undefined'.indexOf()` は `undefined` が `undefined` という文字列の中の `0` の位置に見つかるため、 `0` を返します。しかし、 `'undefine'.indexOf()` は `undefined` が `undefine` という文字列の中で見つからないため、 `-1` を返します。
 
- <p><var><code>fromIndex</code></var> の値が <code>0</code> より小さい場合や <code><var>str</var>.length</code> より大きい場合は、それぞれ <code>0</code> の位置、 <code><var>str</var>.length</code> の位置から検索を始めます。</p>
+- _`fromIndex`_ {{optional_inline}}
 
- <p>例えば、 <code>'hello world'.indexOf('o', -5)</code> は、 <code>0</code> の位置から検索を始め、 <code>o</code> が <code>4</code> の位置にあるので <code>4</code> を返します。一方、 <code>'hello world'.indexOf('o', 11)</code> (および <code>fromIndex</code> の値が <code>11</code> よりも大きな場合) は、 <code>11</code> が文字列の末尾よりも<em>後</em>の位置であるため、 <code>-1</code> を返します。</p>
- </dd>
-</dl>
+  - : 整数値で、検索を始める位置を表します。既定値は `0` です。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    _`fromIndex`_ の値が `0` より小さい場合や `str.length` より大きい場合は、それぞれ `0` の位置、 `str.length` の位置から検索を始めます。
 
-<p><code><var>searchValue</var></code> が初めて出現した位置です。見つからなかった場合は、 <strong>-1</strong> になります。</p>
+    例えば、 `'hello world'.indexOf('o', -5)` は、 `0` の位置から検索を始め、 `o` が `4` の位置にあるので `4` を返します。一方、 `'hello world'.indexOf('o', 11)` (および `fromIndex` の値が `11` よりも大きな場合) は、 `11` が文字列の末尾よりも*後*の位置であるため、 `-1` を返します。
 
-<p><code><var>searchValue</var></code> が空文字列であった場合は奇妙な結果になります。 <code><var>fromIndex</var></code> の値がなかった場合や、 <code><var>fromIndex</var></code> の値が文字列の <code>length</code> よりも小さかった場合は、返値は <code><var>fromIndex</var></code> と同じになります。</p>
+### 返値
 
-<pre class="brush: js">'hello world'.indexOf('') // 0 を返す
+`searchValue` が初めて出現した位置です。見つからなかった場合は、 **-1** になります。
+
+`searchValue` が空文字列であった場合は奇妙な結果になります。 `fromIndex` の値がなかった場合や、 `fromIndex` の値が文字列の `length` よりも小さかった場合は、返値は `fromIndex` と同じになります。
+
+```js
+'hello world'.indexOf('') // 0 を返す
 'hello world'.indexOf('', 0) // 0 を返す
 'hello world'.indexOf('', 3) // 3 を返す
-'hello world'.indexOf('', 8) // 8 を返す</pre>
+'hello world'.indexOf('', 8) // 8 を返す
+```
 
-<p>しかし、 <code><var>fromIndex</var></code> の値が文字列の <code>length</code> 以上であった場合、返値は文字列の <code>length</code> になります。</p>
+しかし、 `fromIndex` の値が文字列の `length` 以上であった場合、返値は文字列の `length` になります。
 
-<pre class="brush: js">'hello world'.indexOf('', 11) // 11 を返す
+```js
+'hello world'.indexOf('', 11) // 11 を返す
 'hello world'.indexOf('', 13) // 11 を返す
-'hello world'.indexOf('', 22) // 11 を返す</pre>
+'hello world'.indexOf('', 22) // 11 を返す
+```
 
-<p>前者の例では、 JS は指定された位置の直後に空文字列を見つけているようです。後者の例では、 JS は検索される文字列の末尾で空文字列を見つけているようです。</p>
+前者の例では、 JS は指定された位置の直後に空文字列を見つけているようです。後者の例では、 JS は検索される文字列の末尾で空文字列を見つけているようです。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>文字列における文字は左から右にインデックス化されます。一番最初の文字の位置は <code>0</code> で、 <code><var>stringName</var></code> として呼び出された文字列における一番最後の文字は <code><var>stringName</var>.length - 1</code> です。</p>
+文字列における文字は左から右にインデックス化されます。一番最初の文字の位置は `0` で、 `stringName` として呼び出された文字列における一番最後の文字は `stringName.length - 1` です。
 
-<pre class="brush:js">'Blue Whale'.indexOf('Blue')      // 0 を返します
+```js
+'Blue Whale'.indexOf('Blue')      // 0 を返します
 'Blue Whale'.indexOf('Blute')     // -1 を返します
 'Blue Whale'.indexOf('Whale', 0)  // 5 を返します
 'Blue Whale'.indexOf('Whale', 5)  // 5 を返します
@@ -78,54 +79,59 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 'Blue Whale'.indexOf('', 9)       // 9 を返します
 'Blue Whale'.indexOf('', 10)      // 10 を返します
 'Blue Whale'.indexOf('', 11)      // 10 を返します
-</pre>
+```
 
-<p><code>indexOf()</code> メソッドは大文字と小文字を区別します。例えば、以下の式は <code>-1</code> を返します。</p>
+`indexOf()` メソッドは大文字と小文字を区別します。例えば、以下の式は `-1` を返します。
 
-<pre class="brush: js">'Blue Whale'.indexOf('blue')  // -1 を返します
-</pre>
+```js
+'Blue Whale'.indexOf('blue')  // -1 を返します
+```
 
-<h3 id="Checking_occurrences" name="Checking_occurrences">出現のチェック</h3>
+### 出現のチェック
 
-<p><code>0</code> は <code>true</code> と評価されず、 <code>-1</code> は <code>false</code> と評価されないことに注意してください。そのため、特定の文字列がほかの文字列に含まれているかをチェックする正確な方法は次のようになります。</p>
+`0` は `true` と評価されず、 `-1` は `false` と評価されないことに注意してください。そのため、特定の文字列がほかの文字列に含まれているかをチェックする正確な方法は次のようになります。
 
-<pre class="brush: js">'Blue Whale'.indexOf('Blue') !== -1  // true
+```js
+'Blue Whale'.indexOf('Blue') !== -1  // true
 'Blue Whale'.indexOf('Bloe') !== -1  // false
 ~('Blue Whale'.indexOf('Bloe')) // 0, which is falsy
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_indexOf" name="Using_indexOf"><code>indexOf()</code> を使う</h3>
+### `indexOf()` を使う
 
-<p>以下の例は、<code>"Brave new world"</code> という文字列において、与えられた値の位置を求めるために、<code>indexOf()</code> を使用しています。</p>
+以下の例は、`"Brave new world"` という文字列において、与えられた値の位置を求めるために、`indexOf()` を使用しています。
 
-<pre class="brush: js">const str = 'Brave new world'
+```js
+const str = 'Brave new world'
 
 console.log('Index of first w from start is ' + str.indexOf('w'))   // 8 を表示
 console.log('Index of "new" from start is ' + str.indexOf('new'))   // 6 を表示
-</pre>
+```
 
-<h3 id="indexOf_and_case-sensitivity" name="indexOf_and_case-sensitivity"><code>indexOf()</code> と 大文字と小文字の区別</h3>
+### `indexOf()` と 大文字と小文字の区別
 
-<p>以下の例は 2 つの文字列の変数を定義しています。</p>
+以下の例は 2 つの文字列の変数を定義しています。
 
-<p>それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console.log()")}} メソッドは <code>19</code> を表示します。しかし、 <code>indexOf()</code> メソッドは大文字と小文字を区別するので、 "<code>cheddar</code>" という文字列は <code>myCapString</code> では見つけられません。ですから、 <code>console.log()</code> メソッドは <code>-1</code> を表示します。</p>
+それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console.log()")}} メソッドは `19` を表示します。しかし、 `indexOf()` メソッドは大文字と小文字を区別するので、 "`cheddar`" という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
 
-<pre class="brush: js">const myString    = 'brie, pepper jack, cheddar'
+```js
+const myString    = 'brie, pepper jack, cheddar'
 const myCapString = 'Brie, Pepper Jack, Cheddar'
 
 console.log('myString.indexOf("cheddar") is ' + myString.indexOf('cheddar'))
 // 19 を表示します
 console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'))
 // -1 を表示します
-</pre>
+```
 
-<h3 id="Using_indexOf_to_count_occurrences_of_a_letter_in_a_string" name="Using_indexOf_to_count_occurrences_of_a_letter_in_a_string"><code>indexOf()</code> を使って文字列中である文字が現れる回数を数える</h3>
+### `indexOf()` を使って文字列中である文字が現れる回数を数える
 
-<p>以下の例は、 <code>count</code> に、 <code>str</code> という文字列中で <code>e</code> という文字が出現する回数を設定します。</p>
+以下の例は、 `count` に、 `str` という文字列中で `e` という文字が出現する回数を設定します。
 
-<pre class="brush: js">const str = 'To be, or not to be, that is the question.'
+```js
+const str = 'To be, or not to be, that is the question.'
 let count = 0
 let position = str.indexOf('e')
 
@@ -135,33 +141,22 @@ while (position !== -1) {
 }
 
 console.log(count)  // 4 を表示
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.indexOf")}}</p>
+{{Compat("javascript.builtins.String.indexOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

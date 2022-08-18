@@ -11,69 +11,57 @@ tags:
   - 型付き配列
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>indexOf()</strong></code> メソッドは、指定された要素が型付き配列内で見つかった最初の添字を返し、存在しなければ -1 を返します。このメソッドは {{jsxref("Array.prototype.indexOf()")}} と同じアルゴリズムです。 <em>TypedArray</em> は、ここでは<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの一つです。</p>
+**`indexOf()`** メソッドは、指定された要素が型付き配列内で見つかった最初の添字を返し、存在しなければ -1 を返します。このメソッドは {{jsxref("Array.prototype.indexOf()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-indexof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-indexof.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.indexOf(searchElement[, fromIndex = 0])
+```
 
-<pre class="syntaxbox"><var>typedarray</var>.indexOf(<var>searchElement</var>[, <var>fromIndex</var> = 0])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `searchElement`
+  - : 型付き配列内を検索する要素。
+- `fromIndex`
+  - : 検索開始位置の添字。添字が型付き配列の長さ以上なら、 -1 が返り、これは型付き配列が検索されなかったことを意味します。与えられた添字が負の数の場合、型付き配列の最後からのオフセット値として扱われます。注意: 指定された添字が負の数であっても、型付き配列は前から後ろに向けて検索されます。計算された添字が 0 未満になった場合は、型付き配列の全体が検索されます。既定値: 0 (型付き配列全体が検索されます)。
 
-<dl>
- <dt><code><var>searchElement</var></code></dt>
- <dd>型付き配列内を検索する要素。</dd>
- <dt><code><var>fromIndex</var></code></dt>
- <dd>検索開始位置の添字。添字が型付き配列の長さ以上なら、 -1 が返り、これは型付き配列が検索されなかったことを意味します。与えられた添字が負の数の場合、型付き配列の最後からのオフセット値として扱われます。注意: 指定された添字が負の数であっても、型付き配列は前から後ろに向けて検索されます。計算された添字が0未満になった場合は、型付き配列の全体が検索されます。既定値: 0 (型付き配列全体が検索されます)。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+配列内の要素の最初の添字です。見つからなかったら `-1` になります。
 
-<p>配列内の要素の最初の添字です。見つからなかったら <code>-1</code> になります。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`indexOf` は `searchElement` と型付き配列の要素を、[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (===、イコール 3 つの演算子と同じ方法) を使用して比較します。
 
-<p><code>indexOf</code> は <code><var>searchElement</var></code> と型付き配列の要素を、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">厳密等価</a> (===、イコール3つの演算子と同じ方法) を使用して比較します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### indexOf の使用
 
-<h3 id="Using_indexOf" name="Using_indexOf">indexOf の使用</h3>
-
-<pre class="brush: js">var uint8 = new Uint8Array([2, 5, 9]);
+```js
+var uint8 = new Uint8Array([2, 5, 9]);
 uint8.indexOf(2);     // 0
 uint8.indexOf(7);     // -1
 uint8.indexOf(9, 2);  // 2
 uint8.indexOf(2, -1); // -1
 uint8.indexOf(2, -3); // 0
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.TypedArray.indexOf")}}</p>
+{{Compat("javascript.builtins.TypedArray.indexOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

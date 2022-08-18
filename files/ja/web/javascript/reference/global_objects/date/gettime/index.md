@@ -9,33 +9,34 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getTime()</code></strong> メソッドは、 <a href="https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93">UNIX 元期</a>からの経過ミリ秒数*を返します。</p>
+**`getTime()`** メソッドは、 [UNIX 元期](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93)からの経過ミリ秒数\*を返します。
 
-<p>* JavaScriptは測定単位として<em>ミリ秒</em>を使用しますが、 Unix 時間は<em>秒</em>単位です。</p>
+\* JavaScript は測定単位として*ミリ秒*を使用しますが、 Unix 時間は*秒*単位です。
 
-<p><em>getTime() は時間表現に常に UTC を使用します。例えば、あるタイムゾーンに設定されているブラウザーの getTime() も、他のタイムゾーンに設定されたブラウザーの getTime() も、同じ値を返します。</em></p>
+_getTime() は時間表現に常に UTC を使用します。例えば、あるタイムゾーンに設定されているブラウザーの getTime() も、他のタイムゾーンに設定されたブラウザーの getTime() も、同じ値を返します。_
 
-<p>このメソッドは、日付と時刻を別の {{jsxref("Date")}} オブジェクトへ代入する助けとして使用できます。このメソッドは、{{jsxref("Date.valueof", "valueOf()")}} メソッドと機能的に同等です。</p>
+このメソッドは、日付と時刻を別の {{jsxref("Date")}} オブジェクトへ代入する助けとして使用できます。このメソッドは、{{jsxref("Date.valueof", "valueOf()")}} メソッドと機能的に同等です。
 
-<div>{{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.getTime()
+```
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getTime()</code></pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+1970 年 1 月 1 日 00:00:00 UTC から指定した日時までの経過時間をミリ秒で表した数値。
 
-<p>1970 年 1 月 1 日 00:00:00 UTC から指定した日時までの経過時間をミリ秒で表した数値。</p>
+## 時刻の低精度化
 
-<h2 id="Reduced_time_precision" name="Reduced_time_precision">時刻の低精度化</h2>
+ブラウザーの設定によっては、タイミング攻撃と Fingerprinting に対する保護を提供するために `new Date().getTime()` の精度が落とされていることがあります。 Firefox では、`privacy.reduceTimerPrecision` が既定で有効になっています。既定値は Firefox 59 では 20 マイクロ秒で、 Firefox 60 では 2 ミリ秒です。
 
-<p>ブラウザーの設定によっては、タイミング攻撃と Fingerprinting に対する保護を提供するために <code>new Date().getTime()</code> の精度が落とされていることがあります。 Firefox では、<code>privacy.reduceTimerPrecision</code> が既定で有効になっています。既定値は Firefox 59 では 20 マイクロ秒で、 Firefox 60 では 2 ミリ秒です。</p>
-
-<pre class="brush: js notranslate">// Firefox 60 での時刻の精度の低下（2 ミリ秒）
+```js
+// Firefox 60 での時刻の精度の低下（2 ミリ秒）
 new Date().getTime();
 // 1519211809934
 // 1519211810362
@@ -49,60 +50,51 @@ new Date().getTime();
 // 1519129858900
 // 1519129864400
 // ...
-</pre>
+```
 
-<p>Firefox では、 <code>privacy.resistFingerprinting</code> も有効にできます。この場合、精度は 100 ミリ秒と <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> 値のうち大きい方になります。</p>
+Firefox では、 `privacy.resistFingerprinting` も有効にできます。この場合、精度は 100 ミリ秒と `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 値のうち大きい方になります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_getTime_for_copying_dates" name="Using_getTime_for_copying_dates">getTime() を使って日付をコピーする</h3>
+### getTime() を使って日付をコピーする
 
-<p>同一の time 値を持つ date オブジェクトを構築します。</p>
+同一の time 値を持つ date オブジェクトを構築します。
 
-<pre class="brush: js notranslate">// month は 0 を基点とするため、birthday は 1995 年 1 月 10 日になります
+```js
+// month は 0 を基点とするため、birthday は 1995 年 1 月 10 日になります
 var birthday = new Date(1994, 12, 10);
 var copy = new Date();
 copy.setTime(birthday.getTime());
-</pre>
+```
 
-<h3 id="Measuring_execution_time" name="Measuring_execution_time">実行時間を計測する</h3>
+### 実行時間を計測する
 
-<p>新たに生成された {{jsxref("Date")}} オブジェクトでの、続く 2 個の <code>getTime()</code> の結果を減算して、これらの呼び出しと呼び出しの間の時間を得ます。これは、何らかの命令の実行時間を計測するために使用できます。不要な {{jsxref("Date")}} オブジェクトのインスタンス化を避けるため、{{jsxref("Date.now()")}} も参照してください。</p>
+新たに生成された {{jsxref("Date")}} オブジェクトでの、続く 2 個の `getTime()` の結果を減算して、これらの呼び出しと呼び出しの間の時間を得ます。これは、何らかの命令の実行時間を計測するために使用できます。不要な {{jsxref("Date")}} オブジェクトのインスタンス化を避けるため、{{jsxref("Date.now()")}} も参照してください。
 
-<pre class="brush: js notranslate">var end, start;
+```js
+var end, start;
 
 start = new Date();
-for (var i = 0; i &lt; 1000; i++) {
+for (var i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();
 
 console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.getTime")}}</p>
+{{Compat("javascript.builtins.Date.getTime")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.setTime()")}}</li>
- <li>{{jsxref("Date.prototype.valueOf()")}}</li>
- <li>{{jsxref("Date.now()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.setTime()")}}
+- {{jsxref("Date.prototype.valueOf()")}}
+- {{jsxref("Date.now()")}}

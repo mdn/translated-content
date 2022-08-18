@@ -11,48 +11,36 @@ tags:
   - プロパティ
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Map[@@toStringTag]</code></strong> プロパティは、 "Map" の初期値を持ちます。</p>
+**`Map[@@toStringTag]`** プロパティは、 "Map" の初期値を持ちます。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-@@tostringtag.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-@@tostringtag.html","shorter")}}{{js_property_attributes(0,0,1)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+```
+Map[Symbol.toStringTag]
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 例
 
-<pre class="syntaxbox">Map[Symbol.toStringTag]</pre>
+### toStringTag の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+```js
+Object.prototype.toString.call(new Map()) // "[object Map]"
+```
 
-<h3 id="Using_toStringTag" name="Using_toStringTag">toStringTag の使用</h3>
+## 仕様書
 
-<pre class="brush:js">Object.prototype.toString.call(new Map()) // "[object Map]"
-</pre>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} |
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("javascript.builtins.Map.@@toStringTag")}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 関連情報
 
-<p>{{Compat("javascript.builtins.Map.@@toStringTag")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Symbol.toStringTag")}}</li>
-</ul>
+- {{jsxref("Symbol.toStringTag")}}

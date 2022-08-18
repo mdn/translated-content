@@ -9,63 +9,51 @@ tags:
   - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>get()</code></strong> メソッドは、<code>WeakMap</code> オブジェクトから指定された要素を返します。</p>
+**`get()`** メソッドは、`WeakMap` オブジェクトから指定された要素を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+wm.get(key);
+```
 
-<pre class="syntaxbox notranslate"><var>wm</var>.get(<var>key</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `key`
+  - : 必須。`WeakMap` オブジェクトから返す要素のキーです。
 
-<dl>
- <dt><code><var>key</var></code></dt>
- <dd>必須。<code>WeakMap</code> オブジェクトから返す要素のキーです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+指定されたキーと関連した要素を返します。キーが `WeakMap` オブジェクトに見つからない場合、 {{jsxref("undefined")}} を返します。
 
-<p>指定されたキーと関連した要素を返します。キーが <code>WeakMap</code> オブジェクトに見つからない場合、 {{jsxref("undefined")}} を返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### get() メソッドの使用
 
-<h3 id="Using_the_get_method" name="Using_the_get_method">get() メソッドの使用</h3>
-
-<pre class="brush: js notranslate">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.get(window); // "foo" を返す
 wm.get('baz');  // undefined を返す
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.WeakMap.get")}}</p>
+{{Compat("javascript.builtins.WeakMap.get")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakMap.set()")}}</li>
- <li>{{jsxref("WeakMap.has()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.set()")}}
+- {{jsxref("WeakMap.has()")}}

@@ -10,27 +10,28 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>entries()</code></strong> メソッドは、挿入順で <code>Map</code> オブジェクトの要素に対する <code>[key, value]</code> ペアを含む新しい <a href="/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a> オブジェクトを返します。</p>
+**`entries()`** メソッドは、挿入順で `Map` オブジェクトの要素に対する `[key, value]` ペアを含む新しい [Iterator](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators) オブジェクトを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+myMap.entries()
+```
 
-<pre class="syntaxbox notranslate"><code><var>myMap</var>.entries()</code></pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+新しい {{jsxref("Map")}} の反復子オブジェクトです。
 
-<p>新しい {{jsxref("Map")}} の反復子オブジェクトです。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### entries() の使用
 
-<h3 id="Using_entries" name="Using_entries">entries() の使用</h3>
-
-<pre class="brush:js notranslate">let myMap = new Map()
+```js
+let myMap = new Map()
 myMap.set('0', 'foo')
 myMap.set(1, 'bar')
 myMap.set({}, 'baz')
@@ -40,30 +41,19 @@ let mapIter = myMap.entries()
 console.log(mapIter.next().value)  // ["0", "foo"]
 console.log(mapIter.next().value)  // [1, "bar"]
 console.log(mapIter.next().value)  // [Object, "baz"]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Map.entries")}}</p>
+{{Compat("javascript.builtins.Map.entries")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

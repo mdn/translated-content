@@ -10,65 +10,60 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>forEach()</code></strong> メソッドは、指定された関数を <code>Map</code> オブジェクト内にあるキーと値のペアそれぞれに対して1回ずつ、挿入順に実行します。</span></p>
+**`forEach()`** メソッドは、指定された関数を `Map` オブジェクト内にあるキーと値のペアそれぞれに対して 1 回ずつ、挿入順に実行します。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+myMap.forEach(callback([value][, key][, map])[, thisArg])
+```
 
-<pre class="syntaxbox notranslate"><var>myMap</var>.forEach(<var>callback</var>([<var>value</var>][, <var>key</var>][, <var>map</var>])[, <var>thisArg</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `callback`
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>
- <p><code><var>myMap</var></code> のそれぞれの項目に対して実行される関数。以下の引数を取ります。</p>
+  - : `myMap` のそれぞれの項目に対して実行される関数。以下の引数を取ります。
 
- <dl>
-  <dt><code><var>value</var></code> {{Optional_Inline}}</dt>
-  <dd>それぞれの反復処理における値です。</dd>
-  <dt><code><var>key</var></code> {{Optional_Inline}}</dt>
-  <dd>それぞれの反復処理におけるキーです。</dd>
-  <dt><code><var>map</var></code> {{Optional_Inline}}</dt>
-  <dd>反復処理されるマップです (上記の構文ボックスでは <code><var>myMap</var></code> です)。</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{Optional_Inline}}</dt>
- <dd><code><var>callback</var></code> の実行時に <code>this</code> として使用される値です。</dd>
-</dl>
+    - `value` {{Optional_Inline}}
+      - : それぞれの反復処理における値です。
+    - `key` {{Optional_Inline}}
+      - : それぞれの反復処理におけるキーです。
+    - `map` {{Optional_Inline}}
+      - : 反復処理されるマップです (上記の構文ボックスでは `myMap` です)。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+- `thisArg` {{Optional_Inline}}
+  - : `callback` の実行時に `this` として使用される値です。
 
-<p>{{jsxref("undefined")}} です。</p>
+### 返値
 
-<h2 id="Description" name="Description">解説</h2>
+{{jsxref("undefined")}} です。
 
-<p><code>forEach</code> メソッドは、指定された関数 <code><var>callback</var></code> を、マップの実在するそれぞれのキーに対して一度ずつ呼び出します。これは削除されたキーに対しては呼び出しません。ただし、存在していて <code>undefined</code> である値に対しては呼び出します。</p>
+## 解説
 
-<p><code><var>callback</var></code> は次の <strong>3 つの引数</strong>で呼び出されます。</p>
+`forEach` メソッドは、指定された関数 `callback` を、マップの実在するそれぞれのキーに対して一度ずつ呼び出します。これは削除されたキーに対しては呼び出しません。ただし、存在していて `undefined` である値に対しては呼び出します。
 
-<ul>
- <li>項目の値 (<code><var>value</var></code>)</li>
- <li>項目のキー (<code><var>key</var></code>)</li>
- <li>走査中の <strong><code>Map</code> オブジェクト</strong></li>
-</ul>
+`callback` は次の **3 つの引数**で呼び出されます。
 
-<p><code><var>thisArg</var></code> 引数が <code>forEach</code> に指定されると、 <code><var>callback</var></code> の呼び出し時にそのオブジェクトが <code>this</code> の値として使用されます。与えられなかった場合は、 <code>undefined</code> が <code>this</code> の値として渡されます。 <code><var>callback</var></code> によって究極に管理される <code>this</code> の値は、<a href="/ja/docs/Web/JavaScript/Reference/Operators/this">関数から見える <code>this</code> を特定する一般規則</a>に従います。</p>
+- 項目の値 (`value`)
+- 項目のキー (`key`)
+- 走査中の **`Map` オブジェクト**
 
-<p>それぞれの値に対して一度ずつ実行されますが、 <code>forEach</code> が終了するまでに削除され再追加された場合は除きます。 <code><var>callback</var></code> はその前に削除された値に対しては実行されません。 <code>forEach</code> が終了する前に追加された新しい値に対しては実行されます。</p>
+`thisArg` 引数が `forEach` に指定されると、 `callback` の呼び出し時にそのオブジェクトが `this` の値として使用されます。与えられなかった場合は、 `undefined` が `this` の値として渡されます。 `callback` によって究極に管理される `this` の値は、[関数から見える `this` を特定する一般規則](/ja/docs/Web/JavaScript/Reference/Operators/this)に従います。
 
-<h2 id="Examples" name="Examples">例</h2>
+それぞれの値に対して一度ずつ実行されますが、 `forEach` が終了するまでに削除され再追加された場合は除きます。 `callback` はその前に削除された値に対しては実行されません。 `forEach` が終了する前に追加された新しい値に対しては実行されます。
 
-<h3 id="Printing_the_contents_of_a_Map_object" name="Printing_the_contents_of_a_Map_object">Map オブジェクトの内容を表示</h3>
+## 例
 
-<p>以下のコードは <code>Map</code> オブジェクト内の各要素を1行ずつ出力します。</p>
+### Map オブジェクトの内容を表示
 
-<pre class="brush:js notranslate">function logMapElements(value, key, map) {
+以下のコードは `Map` オブジェクト内の各要素を 1 行ずつ出力します。
+
+```js
+function logMapElements(value, key, map) {
     console.log(`map.get('${key}') = ${value}`)
 }
 new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
@@ -76,30 +71,19 @@ new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"
 // "map.get('baz') = undefined"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Map.forEach")}}</p>
+{{Compat("javascript.builtins.Map.forEach")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Set.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Set.prototype.forEach()")}}

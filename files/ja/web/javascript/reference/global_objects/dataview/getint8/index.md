@@ -9,71 +9,57 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getInt8()</code></strong> メソッドは、符号付き8ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。</p>
+**`getInt8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getint8.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getint8.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dataview.getInt8(byteOffset)
+```
 
-<pre class="syntaxbox notranslate"><var>dataview</var>.getInt8(<var>byteOffset</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `byteOffset`
+  - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
 
-<dl>
- <dt><code><var>byteOffset</var></code></dt>
- <dd>ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+符号付き 8 ビット整数。
 
-<p>符号付き8ビット整数。</p>
+### 発生するエラー
 
-<h3 id="Errors_thrown" name="Errors_thrown">発生するエラー</h3>
+- {{jsxref("RangeError")}}
+  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd><code>byteOffset</code> がビューの末尾を超えて読み取るように設定されている場合に発生します。</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。
 
-<p>アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getInt8 メソッドの使用
 
-<h3 id="Using_the_getInt8_method" name="Using_the_getInt8_method">getInt8 メソッドの使用</h3>
-
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getInt8(1); // 0
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-dataview.prototype.getint8', 'DataView.prototype.getInt8')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.getint8', 'DataView.prototype.getInt8')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.DataView.getInt8")}}</p>
+{{Compat("javascript.builtins.DataView.getInt8")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

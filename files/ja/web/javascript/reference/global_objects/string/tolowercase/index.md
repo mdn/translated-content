@@ -10,56 +10,46 @@ tags:
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toLowerCase()</code></strong> メソッドは、呼び出す文字列の値を小文字に変換して返します。</p>
+**`toLowerCase()`** メソッドは、呼び出す文字列の値を小文字に変換して返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.toLowerCase()
+```
 
-<pre class="syntaxbox"><code><var>str</var>.toLowerCase()</code></pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+呼び出す文字列の値を小文字に変換した新しい文字列です。
 
-<p>呼び出す文字列の値を小文字に変換した新しい文字列です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`toLowerCase()` メソッドは、小文字に変換された文字列の値を返します。`toLowerCase()` メソッドは、文字列 `str` 自身の値には影響を与えません。
 
-<p><code>toLowerCase()</code> メソッドは、小文字に変換された文字列の値を返します。<code>toLowerCase()</code> メソッドは、文字列 <code>str</code> 自身の値には影響を与えません。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### `toLowerCase()` メソッドの使用
 
-<h3 id="Using_toLowerCase" name="Using_toLowerCase"><code>toLowerCase()</code> メソッドの使用</h3>
+```js
+console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+```
 
-<pre class="brush: js">console.log('ALPHABET'.toLowerCase()); // 'alphabet'
-</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}} |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat("javascript.builtins.String.toLowerCase")}}
 
-<p>{{Compat("javascript.builtins.String.toLowerCase")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

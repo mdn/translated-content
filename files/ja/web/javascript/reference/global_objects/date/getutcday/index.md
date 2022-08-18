@@ -9,55 +9,45 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getUTCDay()</code></strong> メソッドは、協定世界時に基づき、指定された日時の「曜日」を返します。0 は日曜日を表します。</p>
+**`getUTCDay()`** メソッドは、協定世界時に基づき、指定された日時の「曜日」を返します。0 は日曜日を表します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcday.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcday.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.getUTCDay()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.getUTCDay()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時に基づき、与えられた日付の「曜日」に相当する整数値。0 は日曜日、1 は月曜日、2 は火曜日を表します。
 
-<p>協定世界時に基づき、与えられた日付の「曜日」に相当する整数値。0 は日曜日、1 は月曜日、2 は火曜日を表します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getUTCDay() の使用
 
-<h3 id="Using_getUTCDay" name="Using_getUTCDay">getUTCDay() の使用</h3>
+次の例は、現在日時の「曜日」部を変数 `weekday` に代入します。
 
-<p>次の例は、現在日時の「曜日」部を変数 <code>weekday</code> に代入します。</p>
-
-<pre class="brush: js notranslate">var today = new Date();
+```js
+var today = new Date();
 var weekday = today.getUTCDay();
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.getUTCDay")}}</p>
+{{Compat("javascript.builtins.Date.getUTCDay")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getDay()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getDay()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

@@ -9,56 +9,42 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getTimezoneOffset()</code></strong> メソッドは、 (ホストシステム上における) 現在のロケールから協定世界時 (UTC) までのタイムゾーンの差を分単位で返します。</p>
+**`getTimezoneOffset()`** メソッドは、 (ホストシステム上における) 現在のロケールから協定世界時 (UTC) までのタイムゾーンの差を分単位で返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.getTimezoneOffset()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.getTimezoneOffset()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+ホストシステム上の現在の日付から協定世界時 (UTC) までの分単位のタイムゾーンオフセットを表す数値です。
 
-<p>ホストシステム上の現在の日付から協定世界時 (UTC) までの分単位のタイムゾーンオフセットを表す数値です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+タイムゾーンオフセットは、地方時から協定世界時 (UTC) までの間の分単位の差です。
 
-<p>タイムゾーンオフセットは、地方時から協定世界時 (UTC) までの間の分単位の差です。</p>
+このオフセットは、地方時が UTC より遅れている時刻の場合は正の数になり、進んでいる時刻の場合は負の数になることを意味します。例えば、タイムゾーンが UTC+10:00（オーストラリア東部標準時、ロシアのウラジオストク時、チャモロ標準時）の場合、-600 が返されます。
 
-<p>このオフセットは、地方時が UTC より遅れている時刻の場合は正の数になり、進んでいる時刻の場合は負の数になることを意味します。例えば、タイムゾーンが UTC+10:00（オーストラリア東部標準時、ロシアのウラジオストク時、チャモロ標準時）の場合、-600 が返されます。</p>
+| 現在のロケール | UTC-8 | UTC | UTC+3 |
+| -------------- | ----- | --- | ----- |
+| 返値           | 480   | 0   | -180  |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="row">現在のロケール</th>
-   <th scope="col">UTC-8</th>
-   <th scope="col">UTC</th>
-   <th scope="col">UTC+3</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">返値</th>
-   <td>480</td>
-   <td>0</td>
-   <td>-180</td>
-  </tr>
- </tbody>
-</table>
+返されるタイムゾーンオフセットは呼ばれた Date で適用されているものです。
 
-<p>返されるタイムゾーンオフセットは呼ばれた Date で適用されているものです。</p>
+ホストシステムで夏時間が設定されている場合、Date が表す日時と夏時間が適用される日時によって、オフセットが変わります。
 
-<p>ホストシステムで夏時間が設定されている場合、Date が表す日時と夏時間が適用される日時によって、オフセットが変わります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getTimezoneOffset() の使用
 
-<h3 id="Using_getTimezoneOffset" name="Using_getTimezoneOffset">getTimezoneOffset() の使用</h3>
-
-<pre class="brush: js notranslate">// Get current timezone offset for host device
+```js
+// Get current timezone offset for host device
 let x = new Date();
 let currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
 // 1
@@ -68,29 +54,18 @@ let currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
 // represented with 4 (and not 5)
 let labourDay = new Date(2016, 4, 1)
 let labourDayOffset = labourDay.getTimezoneOffset() / 60;
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.getTimezoneOffset")}}</p>
+{{Compat("javascript.builtins.Date.getTimezoneOffset")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date")}}</li>
-</ul>
+- {{jsxref("Date")}}

@@ -7,77 +7,81 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/return
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>return</code> 文</strong>は、関数の実行を終了して、関数の呼び出し元に返す値を指定します。</p>
+**`return` 文**は、関数の実行を終了して、関数の呼び出し元に返す値を指定します。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-return.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+return [expression];
+```
 
-<pre class="syntaxbox notranslate">return [<var>expression</var>]; </pre>
+- `expression`
+  - : 返す式。もし省略されたなら、`undefined` が代わりに返ります。
 
-<dl>
- <dt><code><var>expression</var></code></dt>
- <dd>返す式。もし省略されたなら、<code>undefined</code> が代わりに返ります。</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+関数内で `return` 文を呼び出すと、関数の実行が停止します。値が指定されていれば、その値を関数の呼び出し元に返します。例えば、以下の関数は引数 `x` が数値の場合、 `x` の平方を返します。
 
-<p>関数内で <code>return</code> 文を呼び出すと、関数の実行が停止します。値が指定されていれば、その値を関数の呼び出し元に返します。例えば、以下の関数は引数 <code>x</code> が数値の場合、 <code>x</code> の平方を返します。</p>
-
-<pre class="brush: js notranslate">function square(x) {
+```js
+function square(x) {
    return x * x;
 }
 var demo = square(3);
 // demo will equal 9
-</pre>
+```
 
-<p>値が省略された場合は <code>undefined</code> が代わりに返されます。</p>
+値が省略された場合は `undefined` が代わりに返されます。
 
-<p>以下の return 文はすべて、関数の実行を中断します。</p>
+以下の return 文はすべて、関数の実行を中断します。
 
-<pre class="brush: js notranslate">return;
+```js
+return;
 return true;
 return false;
 return x;
 return x + y / 3;
-</pre>
+```
 
-<h3 id="Automatic_Semicolon_Insertion" name="Automatic_Semicolon_Insertion">自動セミコロン挿入</h3>
+### 自動セミコロン挿入
 
-<p><code>return</code> 文は<a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a> の影響を受けます。<code>return</code> キーワードと式の間に改行文字を置くことはできません。</p>
+`return` 文は[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) の影響を受けます。`return` キーワードと式の間に改行文字を置くことはできません。
 
-<pre class="brush: js notranslate">return
+```js
+return
 a + b;
-</pre>
+```
 
-<p>は ASI によって以下のように変換されます。</p>
+は ASI によって以下のように変換されます。
 
-<pre class="brush: js notranslate">return;
+```js
+return;
 a + b;
-</pre>
+```
 
-<p>コンソールに "unreachable code after return statement" という警告が現れます。</p>
+コンソールに "unreachable code after return statement" という警告が現れます。
 
-<div class="note">Firefox 40 以降では、 <code>return</code> 文の後に到達できないコードがある場合に、コンソールに警告が表示されます。</div>
+> **Note:** Firefox 40 以降では、 `return` 文の後に到達できないコードがある場合に、コンソールに警告が表示されます。
 
-<p>括弧を使用すると、この問題を防ぐ (ASI を抑止する) ことができます。</p>
+括弧を使用すると、この問題を防ぐ (ASI を抑止する) ことができます。
 
-<pre class="brush: js notranslate">return (
+```js
+return (
   a + b
 );
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Interrupt_a_function" name="Interrupt_a_function">関数を中断する</h3>
+### 関数を中断する
 
-<p><code>return</code> を呼び出した時点で、関数の実行が即座に終了します。</p>
+`return` を呼び出した時点で、関数の実行が即座に終了します。
 
-<pre class="brush: js notranslate">function counter() {
+```js
+function counter() {
   for (var count = 1; ; count++) {  // 無限ループ
     console.log(count + 'A'); // 5 まで
       if (count === 5) {
@@ -100,42 +104,32 @@ counter();
 // 4A
 // 4B
 // 5A
-</pre>
+```
 
-<h3 id="Returning_a_function" name="Returning_a_function">関数を返す</h3>
+### 関数を返す
 
-<p><a href="/ja/docs/Web/JavaScript/Closures">クロージャ</a>の記事もご覧ください。</p>
+[クロージャ](/ja/docs/Web/JavaScript/Closures)の記事もご覧ください。
 
-<pre class="brush: js notranslate">function magic() {
+```js
+function magic() {
   return function calc(x) { return x * 42; };
 }
 
 var answer = magic();
 answer(1337); // 56154
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.return")}}</p>
+{{Compat("javascript.statements.return")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope">関数</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Closures">クロージャ</a></li>
-</ul>
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [クロージャ](/ja/docs/Web/JavaScript/Closures)

@@ -10,116 +10,110 @@ tags:
   - fround
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p class="seoSummary"><strong><code>Math.fround()</code></strong> 関数は、ある {{jsxref("Number")}} を表す最も近い{{interwiki("wikipedia", "単精度浮動小数点数", "32ビット単精度")}}浮動小数点数を返します。</p>
+**`Math.fround()`** 関数は、ある {{jsxref("Number")}} を表す最も近い{{interwiki("wikipedia", "単精度浮動小数点数", "32ビット単精度")}}浮動小数点数を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/math-fround.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-fround.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+var singleFloat = Math.fround(doubleFloat);
+```
 
-<pre class="syntaxbox notranslate">var <var>singleFloat</var> = Math.fround(<var>doubleFloat</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `doubleFloat`
+  - : {{jsxref("Number")}}。この引数が異なる方であった場合は、数値に変換されるか、変換できなければ {{jsxref("NaN")}} になります。
 
-<dl>
- <dt><code><var>doubleFloat</var></code></dt>
- <dd>{{jsxref("Number")}}。この引数が異なる方であった場合は、数値に変換されるか、変換できなければ {{jsxref("NaN")}} になります。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた値を表す最も近い {{interwiki("wikipedia", "単精度浮動小数点数", "32 ビット単精度")}}浮動小数点数です。
 
-<p>与えられた値を表す最も近い {{interwiki("wikipedia", "単精度浮動小数点数", "32 ビット単精度")}}浮動小数点数です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+JavaScript は内部的に 64 ビットの倍精度浮動小数点数を使用しており、非常に高い精度を提供しています。しかし、例えば {{jsxref("Float32Array")}} から値を読み込む場合など 32 ビットの浮動小数点数を扱うことがあるかもしれません。これは混乱を招く可能性があります。 64 ビットの浮動小数点数と 32 ビットの浮動小数点数が等しいかどうかをチェックすると、一見同じように見える数値であっても失敗することがあります。
 
-<p>JavaScriptは内部的に 64 ビットの倍精度浮動小数点数を使用しており、非常に高い精度を提供しています。しかし、例えば {{jsxref("Float32Array")}} から値を読み込む場合など 32 ビットの浮動小数点数を扱うことがあるかもしれません。これは混乱を招く可能性があります。 64 ビットの浮動小数点数と 32 ビットの浮動小数点数が等しいかどうかをチェックすると、一見同じように見える数値であっても失敗することがあります。</p>
+これを解決するには、 `Math.fround()` を使用して、 64 ビット浮動小数点数を 32 ビットの浮動小数点数にキャストすることができます。内部的には、 JavaScript は数値を 64 ビットの浮動小数点数として扱い続けますが、仮数の 23 番目のビットに「偶数への丸め」を実行し、それに続く仮数ビットをすべて 0 に設定します。数値が 32 ビットの浮動小数点数の範囲外の場合は、 {{jsxref("Infinity")}} または `-Infinity` が返されます。
 
-<p>これを解決するには、 <code>Math.fround()</code> を使用して、 64 ビット浮動小数点数を 32 ビットの浮動小数点数にキャストすることができます。内部的には、 JavaScript は数値を 64 ビットの浮動小数点数として扱い続けますが、仮数の23番目のビットに「偶数への丸め」を実行し、それに続く仮数ビットをすべて 0 に設定します。数値が 32 ビットの浮動小数点数の範囲外の場合は、 {{jsxref("Infinity")}} または <code>-Infinity</code> が返されます。</p>
+`fround()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.fround()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<p><code>fround()</code> は <code>Math</code> の静的メソッドであるため、生成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に <code>Math.fround()</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.fround() の使用
 
-<h3 id="Using_Math.fround" name="Using_Math.fround">Math.fround() の使用</h3>
+1.5 という数値は二進数で正確に表すことができ、32 ビットと 64 ビットとで同じになります。
 
-<p>1.5 という数値は二進数で正確に表すことができ、32ビットと64ビットとで同じになります。</p>
-
-<pre class="brush: js notranslate">Math.fround(1.5); // 1.5
+```js
+Math.fround(1.5); // 1.5
 Math.fround(1.5) === 1.5; // true
-</pre>
+```
 
-<p>しかし、 1.337 という数値は二進数では正確に表すことができず、32ビットと64ビットとで異なります。</p>
+しかし、 1.337 という数値は二進数では正確に表すことができず、32 ビットと 64 ビットとで異なります。
 
-<pre class="brush: js notranslate">Math.fround(1.337); // 1.3370000123977661
+```js
+Math.fround(1.337); // 1.3370000123977661
 Math.fround(1.337) === 1.337; // false
-</pre>
+```
 
-<p><math><semantics><msup><mn>2</mn><mn>150</mn></msup><annotation encoding="TeX">2^150</annotation></semantics></math> は32ビット浮動小数点では大きすぎるため、 <code>Infinity</code> が返されます。</p>
+<math><semantics><msup><mn>2</mn><mn>150</mn></msup><annotation encoding="TeX">2^150</annotation></semantics></math> は 32 ビット浮動小数点では大きすぎるため、 `Infinity` が返されます。
 
-<pre class="brush: js notranslate">2 ** 150; // 1.42724769270596e+45
+```js
+2 ** 150; // 1.42724769270596e+45
 Math.fround(2 ** 150); // Infinity
-</pre>
+```
 
-<p>引数が数値に変換できない場合、または{{interwiki("wikipedia", "NaN", "非数")}} (<code>NaN</code>) であった場合、 <code>Math.fround()</code> は <code>NaN</code> を返します。</p>
+引数が数値に変換できない場合、または{{interwiki("wikipedia", "NaN", "非数")}} (`NaN`) であった場合、 `Math.fround()` は `NaN` を返します。
 
-<pre class="brush: js notranslate">Math.fround('abc'); // NaN
+```js
+Math.fround('abc'); // NaN
 Math.fround(NaN); // NaN
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p>これは {{jsxref("Float32Array")}} に対応している場合、次の関数でエミュレートできます。</p>
+これは {{jsxref("Float32Array")}} に対応している場合、次の関数でエミュレートできます。
 
-<pre class="brush: js notranslate">Math.fround = Math.fround || (function (array) {
+```js
+Math.fround = Math.fround || (function (array) {
   return function(x) {
     return array[0] = x, array[0];
   };
 })(new Float32Array(1));
-</pre>
+```
 
-<p>古いブラウザーに対応するには、より遅いですが、次のものも利用できます。</p>
+古いブラウザーに対応するには、より遅いですが、次のものも利用できます。
 
-<pre class="brush: js notranslate">if (!Math.fround) Math.fround = function(arg) {
+```js
+if (!Math.fround) Math.fround = function(arg) {
   arg = Number(arg);
   // Return early for ±0 and NaN.
   if (!arg) return arg;
-  var sign = arg &lt; 0 ? -1 : 1;
-  if (sign &lt; 0) arg = -arg;
+  var sign = arg < 0 ? -1 : 1;
+  if (sign < 0) arg = -arg;
   // Compute the exponent (8 bits, signed).
   var exp = Math.floor(Math.log(arg) / Math.LN2);
   var powexp = Math.pow(2, Math.max(-126, Math.min(exp, 127)));
   // Handle subnormals: leading digit is zero if exponent bits are all zero.
-  var leading = exp &lt; -127 ? 0 : 1;
+  var leading = exp < -127 ? 0 : 1;
   // Compute 23 bits of mantissa, inverted to round toward zero.
   var mantissa = Math.round((leading - arg / powexp) * 0x800000);
-  if (mantissa &lt;= -0x800000) return sign * Infinity;
+  if (mantissa <= -0x800000) return sign * Infinity;
   return sign * powexp * (leading - mantissa / 0x800000);
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.fround")}}</p>
+{{Compat("javascript.builtins.Math.fround")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.round()")}}</li>
-</ul>
+- {{jsxref("Math.round()")}}

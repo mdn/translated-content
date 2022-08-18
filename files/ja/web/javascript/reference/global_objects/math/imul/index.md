@@ -9,101 +9,93 @@ tags:
   - imul
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.imul()</code></strong> 関数は、2つの引数で C 言語風の32ビット乗算を行った結果を返します。</p>
+**`Math.imul()`** 関数は、2 つの引数で C 言語風の 32 ビット乗算を行った結果を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/math-imul.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-imul.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力してくださる場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+var product = Math.imul(a, b);
+```
 
-<pre class="syntaxbox notranslate">var <var>product</var> = Math.imul(<var>a</var>, <var>b</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `a`
+  - : 第一の数値。
+- `b`
+  - : 第二の数値。
 
-<dl>
- <dt><code><var>a</var></code></dt>
- <dd>第一の数値。</dd>
- <dt><code><var>b</var></code></dt>
- <dd>第二の数値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた引数で C 言語風の 32 ビット乗算を行った結果です。
 
-<p>与えられた引数で C 言語風の32ビット乗算を行った結果です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Math.imul()` で C 言語と同様のの意味を持った 32 ビット乗算を行うことができます。この機能は [Emscripten](http://en.wikipedia.org/wiki/Emscripten) などのプロジェクトに有効です。
 
-<p><code>Math.imul()</code> で C 言語と同様のの意味を持った32ビット乗算を行うことができます。この機能は <a href="http://en.wikipedia.org/wiki/Emscripten">Emscripten</a> などのプロジェクトに有効です。</p>
+`imul()` は `Math` の静的メソッドなので、常に `Math.imul()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
 
-<p><code>imul()</code> は <code>Math</code> の静的メソッドなので、常に <code>Math.imul()</code> として使用し、自分で <code>Math</code> オブジェクトを生成してそのメソッドとして使用しないでください。 (<code>Math</code> にはコンストラクターがありません)。</p>
+通常の JavaScript の浮動小数点数を imul で使用すると、性能が低下します。これは、乗算のために浮動小数点から整数に変換し、乗算された整数を浮動小数点に変換するというコストのかかる作業があるからです。 imul が存在する理由は、 (今のところ) たった 1 つの状況では imul の方が高速だからです。それは AsmJS です。 AsmJS は JIST オプティマイザーが JavaScript で内部整数をより簡単に実装できるようにします。内部的に整数として格納されている 2 つの数値を imul で乗算すること (これは AsmJS でのみ可能です) は、 Math.imul が現在のブラウザーで性能を発揮する可能性がある唯一の潜在的な状況です。
 
-<p>通常の JavaScript の浮動小数点数を imul で使用すると、性能が低下します。これは、乗算のために浮動小数点から整数に変換し、乗算された整数を浮動小数点に変換するというコストのかかる作業があるからです。 imul が存在する理由は、 (今のところ) たった1つの状況では imul の方が高速だからです。それは AsmJS です。 AsmJS は JIST オプティマイザーが JavaScript で内部整数をより簡単に実装できるようにします。内部的に整数として格納されている2つの数値を imul で乗算すること (これは AsmJS でのみ可能です) は、 Math.imul が現在のブラウザーで性能を発揮する可能性がある唯一の潜在的な状況です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.imul() の使用
 
-<h3 id="Using_Math.imul" name="Using_Math.imul">Math.imul() の使用</h3>
-
-<pre class="brush: js notranslate">Math.imul(2, 4);          // 8
+```js
+Math.imul(2, 4);          // 8
 Math.imul(-1, 8);         // -8
 Math.imul(-2, -2);        // 4
 Math.imul(0xffffffff, 5); // -5
 Math.imul(0xfffffffe, 5); // -10
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p>これは次の関数でエミュレートすることができます。</p>
+これは次の関数でエミュレートすることができます。
 
-<pre class="brush: js notranslate">if (!Math.imul) Math.imul = function(a, b) {
-  var aHi = (a &gt;&gt;&gt; 16) &amp; 0xffff;
-  var aLo = a &amp; 0xffff;
-  var bHi = (b &gt;&gt;&gt; 16) &amp; 0xffff;
-  var bLo = b &amp; 0xffff;
+```js
+if (!Math.imul) Math.imul = function(a, b) {
+  var aHi = (a >>> 16) & 0xffff;
+  var aLo = a & 0xffff;
+  var bHi = (b >>> 16) & 0xffff;
+  var bLo = b & 0xffff;
   // the shift by 0 fixes the sign on the high part
   // the final |0 converts the unsigned value into a signed value
-  return ((aLo * bLo) + (((aHi * bLo + aLo * bHi) &lt;&lt; 16) &gt;&gt;&gt; 0) | 0);
-};</pre>
+  return ((aLo * bLo) + (((aHi * bLo + aLo * bHi) << 16) >>> 0) | 0);
+};
+```
 
-<p>しかし、このポリフィルが使われるであろうブラウザーは、 JavaScript の内部整数型で最適化されておらず、すべての数値に浮動小数点を使用している可能性が高いため、次の関数の方が性能が高くなります。</p>
+しかし、このポリフィルが使われるであろうブラウザーは、 JavaScript の内部整数型で最適化されておらず、すべての数値に浮動小数点を使用している可能性が高いため、次の関数の方が性能が高くなります。
 
-<pre class="brush: js notranslate">if (!Math.imul) Math.imul = function(opA, opB) {
+```js
+if (!Math.imul) Math.imul = function(opA, opB) {
   opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.
   // floating points give us 53 bits of precision to work with plus 1 sign bit
   // automatically handled for our convienence:
-  // 1. 0x003fffff /*opA &amp; 0x000fffff*/ * 0x7fffffff /*opB*/ = 0x1fffff7fc00001
-  //    0x1fffff7fc00001 &lt; Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
-  var result = (opA &amp; 0x003fffff) * opB;
+  // 1. 0x003fffff /*opA & 0x000fffff*/ * 0x7fffffff /*opB*/ = 0x1fffff7fc00001
+  //    0x1fffff7fc00001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
+  var result = (opA & 0x003fffff) * opB;
   // 2. We can remove an integer coersion from the statement above because:
   //    0x1fffff7fc00001 + 0xffc00000 = 0x1fffffff800001
-  //    0x1fffffff800001 &lt; Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
-  if (opA &amp; 0xffc00000 /*!== 0*/) result += (opA &amp; 0xffc00000) * opB |0;
+  //    0x1fffffff800001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
+  if (opA & 0xffc00000 /*!== 0*/) result += (opA & 0xffc00000) * opB |0;
   return result |0;
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.imul', 'Math.imul')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   |
+| ------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-math.imul', 'Math.imul')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.imul")}}</p>
+{{Compat("javascript.builtins.Math.imul")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="http://en.wikipedia.org/wiki/Emscripten">Emscripten</a></li>
-</ul>
+- [Emscripten](http://en.wikipedia.org/wiki/Emscripten)

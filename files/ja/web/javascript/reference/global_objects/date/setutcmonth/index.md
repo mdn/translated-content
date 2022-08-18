@@ -9,67 +9,55 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setUTCMonth()</code></strong> メソッドは、協定世界時に基づき、指定された日時の「月」を設定します。</p>
+**`setUTCMonth()`** メソッドは、協定世界時に基づき、指定された日時の「月」を設定します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.setUTCMonth(monthValue[, dayValue])
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setUTCMonth(<var>monthValue</var>[, <var>dayValue</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `monthValue`
+  - : 1 月から 12 月を表す 0 から 11 までの間の整数値。
+- `dayValue`
+  - : 任意。「日」を表す 1 から 31 までの間の整数値。
 
-<dl>
- <dt><code><var>monthValue</var></code></dt>
- <dd>1 月から 12 月を表す 0 から 11 までの間の整数値。</dd>
- <dt><code><var>dayValue</var></code></dt>
- <dd>任意。「日」を表す 1 から 31 までの間の整数値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
-<p>協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`dayValue` 引数を指定しない場合、{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} メソッドから返される値が使われます。
 
-<p><code><var>dayValue</var></code> 引数を指定しない場合、{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} メソッドから返される値が使われます。</p>
+指定した値が期待される日時の範囲外の場合、それに応じて `setUTCMonth()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`monthValue` に 15 を指定した場合、年に 1 が加算され、月が 3 になります。
 
-<p>指定した値が期待される日時の範囲外の場合、それに応じて <code>setUTCMonth()</code> が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、<code><var>monthValue</var></code> に 15 を指定した場合、年に 1 が加算され、月が 3 になります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### setUTCMonth() の使用
 
-<h3 id="Using_setUTCMonth" name="Using_setUTCMonth">setUTCMonth() の使用</h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCMonth(11);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcmonth', 'Date.prototype.setUTCMonth')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcmonth', 'Date.prototype.setUTCMonth')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.setUTCMonth")}}</p>
+{{Compat("javascript.builtins.Date.setUTCMonth")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+- {{jsxref("Date.prototype.setMonth()")}}

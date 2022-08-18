@@ -9,45 +9,43 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静的な <strong><code>Reflect.setPrototypeOf()</code></strong> メソッドは、返値を除いて、 {{jsxref("Object.setPrototypeOf()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の <code>[[Prototype]]</code> プロパティ) にほかのオブジェクト、または {{jsxref("null")}} を設定し、操作が成功したなら <code>true</code> を、そうでないなら <code>false</code> を返します。</p>
+静的な **`Reflect.setPrototypeOf()`** メソッドは、返値を除いて、 {{jsxref("Object.setPrototypeOf()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) にほかのオブジェクト、または {{jsxref("null")}} を設定し、操作が成功したなら `true` を、そうでないなら `false` を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Reflect.setPrototypeOf(target, prototype)
+```
 
-<pre class="syntaxbox notranslate">Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `target`
+  - : プロトタイプを設定する対象のオブジェクトです。
+- `prototype`
+  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは {{jsxref("null")}}) です。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>プロトタイプを設定する対象のオブジェクトです。</dd>
- <dt><code><var>prototype</var></code></dt>
- <dd>オブジェクトの新しいプロトタイプ (オブジェクトまたは {{jsxref("null")}}) です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+プロトタイプが正常に設定されたかどうかを示す {{jsxref("Boolean")}} 値です。
 
-<p>プロトタイプが正常に設定されたかどうかを示す {{jsxref("Boolean")}} 値です。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合、または `prototype` がオブジェクトでも {{jsxref("null")}} でもない場合。
 
-<p>{{jsxref("TypeError")}}: <code><var>target</var></code> が {{jsxref("Object")}} ではない場合、または <code>prototype</code> がオブジェクトでも {{jsxref("null")}} でもない場合。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Reflect.setPrototypeOf` メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) を変更します。
 
-<p><code>Reflect.setPrototypeOf</code> メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の <code>[[Prototype]]</code> プロパティ) を変更します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Reflect.setPrototypeOf() の使用
 
-<h3 id="Using_Reflect.setPrototypeOf" name="Using_Reflect.setPrototypeOf">Reflect.setPrototypeOf() の使用</h3>
-
-<pre class="brush: js notranslate">Reflect.setPrototypeOf({}, Object.prototype)  // true
+```js
+Reflect.setPrototypeOf({}, Object.prototype)  // true
 
 // オブジェクトの [[Prototype]] は null に変更できる。
 Reflect.setPrototypeOf({}, null)  // true
@@ -59,30 +57,19 @@ Reflect.setPrototypeOf(Object.freeze({}), null)  // false
 let target = {}
 let proto = Object.create(target)
 Reflect.setPrototypeOf(target, proto)  // false
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}</p>
+{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.setPrototypeOf()")}}

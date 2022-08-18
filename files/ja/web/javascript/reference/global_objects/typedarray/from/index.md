@@ -10,115 +10,107 @@ tags:
   - from
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code><var>TypedArray</var>.from()</code></strong> メソッドは、配列風オブジェクトや反復可能オブジェクトから新しい<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列</a>を生成します。このメソッドは {{jsxref("Array.from()")}} とほぼ同じです。</p>
+**`TypedArray.from()`** メソッドは、配列風オブジェクトや反復可能オブジェクトから新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)を生成します。このメソッドは {{jsxref("Array.from()")}} とほぼ同じです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}
 
+## 構文
 
+```
+TypedArray.from(source[, mapFn[, thisArg]])
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+ここで `TypedArray` は次のいずれかです。
 
-<pre class="syntaxbox notranslate"><var>TypedArray</var>.from(<var>source</var>[, <var>mapFn</var>[, <var>thisArg</var>]])
-</pre>
+- {{jsxref("Int8Array")}}
+- {{jsxref("Uint8Array")}}
+- {{jsxref("Uint8ClampedArray")}}
+- {{jsxref("Int16Array")}}
+- {{jsxref("Uint16Array")}}
+- {{jsxref("Int32Array")}}
+- {{jsxref("Uint32Array")}}
+- {{jsxref("Float32Array")}}
+- {{jsxref("Float64Array")}}
+- {{jsxref("BigInt64Array")}}
+- {{jsxref("BigUint64Array")}}
 
-<p>ここで <code><var>TypedArray</var></code> は次のいずれかです。</p>
+### 引数
 
-<div class="threecolumns">
-<ul>
- <li>{{jsxref("Int8Array")}}</li>
- <li>{{jsxref("Uint8Array")}}</li>
- <li>{{jsxref("Uint8ClampedArray")}}</li>
- <li>{{jsxref("Int16Array")}}</li>
- <li>{{jsxref("Uint16Array")}}</li>
- <li>{{jsxref("Int32Array")}}</li>
- <li>{{jsxref("Uint32Array")}}</li>
- <li>{{jsxref("Float32Array")}}</li>
- <li>{{jsxref("Float64Array")}}</li>
- <li>{{jsxref("BigInt64Array")}}</li>
- <li>{{jsxref("BigUint64Array")}}</li>
-</ul>
-</div>
+- `source`
+  - : 型付き配列に変換する配列風オブジェクトか反復可能オブジェクト
+- `mapFn` {{optional_inline}}
+  - : 型付き配列のすべての要素に適用される map 関数。
+- `thisArg` {{optional_inline}}
+  - : `mapFn` を実行するときに `this` として使う値。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 返値
 
-<dl>
- <dt><code><var>source</var></code></dt>
- <dd>型付き配列に変換する配列風オブジェクトか反復可能オブジェクト</dd>
- <dt><code><var>mapFn</var></code> {{optional_inline}}</dt>
- <dd>型付き配列のすべての要素に適用される map 関数。</dd>
- <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
- <dd><code><var>mapFn</var></code> を実行するときに <code>this</code> として使う値。</dd>
-</dl>
+新しい {{jsxref("TypedArray")}} インスタンス。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+## 解説
 
-<p>新しい {{jsxref("TypedArray")}} インスタンス。</p>
+`TypedArray.from()` によって下記から型付き配列を生成できます:
 
-<h2 id="Description" name="Description">解説</h2>
+- 配列風オブジェクト (`length` プロパティと、番号の振られた要素をもつオブジェクト)
+- [反復可能オブジェクト](/ja/docs/Web/JavaScript/Guide/iterable) ({{jsxref("Map")}} や {{jsxref("Set")}} のように要素が取得できるオブジェクト)
 
-<p><code><var>TypedArray</var>.from()</code> によって下記から型付き配列を生成できます:</p>
+`TypedArray.from()` は省略可能な引数 `mapFn` を持ち、これは生成中の型付き配列 (またはサブクラスのオブジェクト) のそれぞれの要素に対して {{jsxref("Array.prototype.map", "map()")}} 関数を実行することができます。すなわち、以下のものと同等です。
 
-<ul>
- <li>配列風オブジェクト (<code>length</code> プロパティと、番号の振られた要素をもつオブジェクト)</li>
- <li><a href="/ja/docs/Web/JavaScript/Guide/iterable">反復可能オブジェクト</a> ({{jsxref("Map")}} や {{jsxref("Set")}} のように要素が取得できるオブジェクト)</li>
-</ul>
+- `TypedArray.from(obj, mapFn, thisArg)`
+- `TypedArray.from(Array.prototype.map.call(obj, mapFn, thisArg))`.
 
-<p><code><var>TypedArray</var>.from()</code> は省略可能な引数 <code><var>mapFn</var></code> を持ち、これは生成中の型付き配列 (またはサブクラスのオブジェクト) のそれぞれの要素に対して {{jsxref("Array.prototype.map", "map()")}} 関数を実行することができます。すなわち、以下のものと同等です。</p>
+`from()` メソッドの `length` プロパティは `1` です。
 
-<ul>
- <li><code><var>TypedArray</var>.from(<var>obj</var>, <var>mapFn</var>, <var>thisArg</var>)</code></li>
- <li><code><var>TypedArray</var>.from(Array.prototype.map.call(<var>obj</var>, <var>mapFn</var>, <var>thisArg</var>))</code>.</li>
-</ul>
+### Array.from() との違い
 
-<p><code>from()</code> メソッドの <code>length</code> プロパティは <code>1</code> です。</p>
+{{jsxref("Array.from()")}} と `TypedArray.from()` の間には、いくつかの微妙な違いがあります。
 
-<h3 id="Differences_from_Array.from" name="Differences_from_Array.from">Array.from() との違い</h3>
+- `TypedArray.from()` に渡された `thisArg` の値がコンストラクターではなかった場合、 `TypedArray.from()` で {{jsxref("TypeError")}} が発生します。これは `Array.from()` が既定で新しい {{jsxref("Array")}} を生成するためです。
+- `TypedArray.from()` は `[[Put]]` を使用します。 `Array.from()` は `[[DefineProperty]]` を使用します。 従って {{jsxref("Proxy")}} オブジェクトを使っている場合は、新しい要素を追加するときに {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}} ではなく {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} が呼び出されます。
+- `source` 引数がイテレーターであった場合、 `TypedArray.from()` は最初にイテレーターからすべての値を集め、その数の大きさを持つ `thisArg` のインスタンスを生成し、そのインスタンスに値を設定します。 `Array.from()` はイテレーターから取得して各値を設定し、最後に `length` を設定します。
+- `Array.from()` がイテレーターではない配列風オブジェクトを受け取ったときは、穴をそのまま残します。 `TypedArray.from()` は必ず密配列 (dense array) を生成します。
 
-<p>{{jsxref("Array.from()")}} と <code><var>TypedArray</var>.from()</code> の間には、いくつかの微妙な違いがあります。</p>
+## 例
 
-<ul>
- <li><code><var>TypedArray</var>.from()</code> に渡された <code><var>thisArg</var></code> の値がコンストラクターではなかった場合、 <code><var>TypedArray</var>.from()</code> で {{jsxref("TypeError")}} が発生します。これは <code>Array.from()</code> が既定で新しい {{jsxref("Array")}} を生成するためです。</li>
- <li><code><var>TypedArray</var>.from()</code> は <code>[[Put]]</code> を使用します。 <code>Array.from()</code> は <code>[[DefineProperty]]</code> を使用します。 従って {{jsxref("Proxy")}} オブジェクトを使っている場合は、新しい要素を追加するときに {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}} ではなく {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} が呼び出されます。</li>
- <li><code><var>source</var></code> 引数がイテレーターであった場合、 <code><var>TypedArray</var>.from()</code> は最初にイテレーターからすべての値を集め、その数の大きさを持つ <code><var>thisArg</var></code> のインスタンスを生成し、そのインスタンスに値を設定します。 <code>Array.from()</code> はイテレーターから取得して各値を設定し、最後に <code>length</code> を設定します。</li>
- <li><code>Array.from()</code> がイテレーターではない配列風オブジェクトを受け取ったときは、穴をそのまま残します。 <code><var>TypedArray</var>.from()</code> は必ず<ruby>密配列<rp> (</rp><rt>dense array</rt><rp>) </rp></ruby>を生成します。</li>
-</ul>
+### 反復可能オブジェクトから (Set)
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="From_an_iterable_object_Set" name="From_an_iterable_object_Set">反復可能オブジェクトから (Set)</h3>
-
-<pre class="brush: js notranslate">const s = new Set([1, 2, 3]);
+```js
+const s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
-</pre>
+```
 
-<h3 id="From_a_string" name="From_a_string">文字列から</h3>
+### 文字列から
 
-<pre class="notranslate">Int16Array.from('123');
+```
+Int16Array.from('123');
 // Int16Array [ 1, 2, 3 ]
-</pre>
+```
 
-<h3 id="Use_with_arrow_function_and_map" name="Use_with_arrow_function_and_map">アロー関数と map の使用</h3>
+### アロー関数と map の使用
 
-<p>アロー関数をマップ関数として使用して要素を操作します。</p>
+アロー関数をマップ関数として使用して要素を操作します。
 
-<pre class="notranslate">Float32Array.from([1, 2, 3], x =&gt; x + x);
+```
+Float32Array.from([1, 2, 3], x => x + x);
 // Float32Array [ 2, 4, 6 ]
-</pre>
+```
 
-<h3 id="Generate_a_sequence_of_numbers" name="Generate_a_sequence_of_numbers">数列を生成する</h3>
+### 数列を生成する
 
-<pre class="notranslate">Uint8Array.from({length: 5}, (v, k) =&gt; k);
+```
+Uint8Array.from({length: 5}, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p>JavaScript エンジンの実装がこのメソッドにネイティブに対応していない場合、回避策として、以下のコードをスクリプトの先頭に挿入することで、 <code>from()</code> の機能の大部分が使えるようになります。</p>
+JavaScript エンジンの実装がこのメソッドにネイティブに対応していない場合、回避策として、以下のコードをスクリプトの先頭に挿入することで、 `from()` の機能の大部分が使えるようになります。
 
-<pre class="brush: js notranslate">if (!Int8Array.__proto__.from) {
+```js
+if (!Int8Array.__proto__.from) {
     (function () {
         Int8Array.__proto__.from = function (obj, func, thisObj) {
 
@@ -143,44 +135,34 @@ Uint8Array.from(s);
                 return new this(0);
             }
             var copy_data = [];
-            for(var i = 0; i &lt; obj.length; i++) {
+            for(var i = 0; i < obj.length; i++) {
                 copy_data.push(obj[i]);
             }
 
             copy_data = copy_data.map(func, thisObj);
 
             var typed_array = new this(copy_data.length);
-            for(var i = 0; i &lt; typed_array.length; i++) {
+            for(var i = 0; i < typed_array.length; i++) {
                 typed_array[i] = copy_data[i];
             }
             return typed_array;
         }
     })();
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.TypedArray.from")}}</p>
+{{Compat("javascript.builtins.TypedArray.from")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("TypedArray.of()")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
-</ul>
+- {{jsxref("TypedArray.of()")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("Array.prototype.map()")}}

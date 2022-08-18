@@ -8,54 +8,54 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.cbrt()</code></strong> 関数は、引数として与えた数の立方根を返します。すなわち、</p>
+**`Math.cbrt()`** 関数は、引数として与えた数の立方根を返します。すなわち、
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.cbrt(x)
+```
 
-<pre class="syntaxbox notranslate"><code>Math.cbrt(<var>x</var>)</code></pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- _x_
+  - : 数値。
 
-<dl>
- <dt><var>x</var></dt>
- <dd>数値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた数値の立方根です。
 
-<p>与えられた数値の立方根です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`cbrt()` は `Math` の静的なメソッドであるため、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、 `Math.cbrt()` として使用してください (`Math` はコンストラクターではありません)。
 
-<p><code>cbrt()</code> は <code>Math</code> の静的なメソッドであるため、自ら生成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に、 <code>Math.cbrt()</code> として使用してください (<code>Math</code> はコンストラクターではありません)。</p>
+## ポリフィル
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+すべての <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math> に対して、 <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math> が存在し、次の関数でエミュレートできます:
 
-<p>すべての <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math> に対して、 <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math> が存在し、次の関数でエミュレートできます:</p>
-
-<pre class="brush: js notranslate">if (!Math.cbrt) {
+```js
+if (!Math.cbrt) {
   Math.cbrt = (function(pow) {
     return function cbrt(x){
       // ensure negative numbers remain negative:
-      return x &lt; 0 ? -pow(-x, 1/3) : pow(x, 1/3);
+      return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
     };
   })(Math.pow); // localize Math.pow to increase efficiency
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_Math.cbrt" name="Using_Math.cbrt">Math.cbrt() の使用</h3>
+### Math.cbrt() の使用
 
-<pre class="brush: js notranslate">Math.cbrt(NaN); // NaN
+```js
+Math.cbrt(NaN); // NaN
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
 Math.cbrt(-Infinity); // -Infinity
@@ -64,30 +64,19 @@ Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
 Math.cbrt(2);  // 1.2599210498948732
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   |
+| ------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.cbrt")}}</p>
+{{Compat("javascript.builtins.Math.cbrt")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

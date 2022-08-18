@@ -8,77 +8,66 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.getPrototypeOf()</code></strong> メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ <code>[[Prototype]]</code> の値) を返します。</p>
+**`Object.getPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ `[[Prototype]]` の値) を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Object.getPrototypeOf(obj)
+```
 
-<pre class="syntaxbox notranslate">Object.getPrototypeOf(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : プロトタイプを取得したいオブジェクト。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>プロトタイプを取得したいオブジェクト。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+指定されたオブジェクトのプロトタイプです。何も継承していないオブジェクトの場合は {{jsxref("null")}} です。
 
-<p>指定されたオブジェクトのプロトタイプです。何も継承していないオブジェクトの場合は {{jsxref("null")}} です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getPrototypeOf の使用
 
-<h3 id="Using_getPrototypeOf" name="Using_getPrototypeOf">getPrototypeOf の使用</h3>
-
-<pre class="brush: js notranslate">var proto = {};
+```js
+var proto = {};
 var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
-</pre>
+```
 
-<h3 id="Non-object_coercion" name="Non-object_coercion">オブジェクト以外の型変換</h3>
+### オブジェクト以外の型変換
 
-<p>ES5 では引数 <var>obj</var> がオブジェクトではない場合 {{jsxref("TypeError")}} が発生します。しかし ES2015 では対応する {{jsxref("Object")}} に変換されてから処理されます。</p>
+ES5 では引数 _obj_ がオブジェクトではない場合 {{jsxref("TypeError")}} が発生します。しかし ES2015 では対応する {{jsxref("Object")}} に変換されてから処理されます。
 
-<pre class="brush: js notranslate">Object.getPrototypeOf('foo');
+```js
+Object.getPrototypeOf('foo');
 // TypeError: "foo" is not an object (ES5 code)
 Object.getPrototypeOf('foo');
 // String.prototype                  (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.getprototypeof', 'Object.getPrototypeOf')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.getprototypeof', 'Object.getPrototypeOf')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Object.getPrototypeOf")}}</p>
+{{Compat("javascript.builtins.Object.getPrototypeOf")}}
 
-<h3 id="Opera-specific_notes" name="Opera-specific_notes">Opera 固有のメモ</h3>
+### Opera 固有のメモ
 
-<p>古いバージョンの Opera は <code>Object.getPrototypeOf()</code> に対応していませんが、 Opera 10.50 以降で標準外の {{jsxref("Object.proto", "__proto__")}} に対応しています。</p>
+古いバージョンの Opera は `Object.getPrototypeOf()` に対応していませんが、 Opera 10.50 以降で標準外の {{jsxref("Object.proto", "__proto__")}} に対応しています。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>John Resig 氏の記事 : <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
- <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}
+- John Resig 氏の記事 : [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- {{jsxref("Reflect.getPrototypeOf()")}}

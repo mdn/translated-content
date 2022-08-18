@@ -8,79 +8,70 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>Symbol()</code> コンストラクターは <strong>symbol</strong> 型の値を返しますが、 "<code>new Symbol()</code>" という構文に対応しておらず、サブクラス化を意図していないため、コンストラクターとしては不完全です。 <code>class</code> 定義の <code><a href="/ja/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> 句の値として使用することもできますが、 <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/super">super</a></code> の呼び出しを行うと例外が発生します。</p>
+`Symbol()` コンストラクターは **symbol** 型の値を返しますが、 "`new Symbol()`" という構文に対応しておらず、サブクラス化を意図していないため、コンストラクターとしては不完全です。 `class` 定義の [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) 句の値として使用することもできますが、 [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) の呼び出しを行うと例外が発生します。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Symbol([description])
+```
 
-<pre class="syntaxbox notranslate">Symbol([<var>description</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `description` {{optional_inline}}
+  - : 文字列。デバッグには使用できるこのシンボルの説明ですが、シンボル自体にはアクセスできません。
 
-<dl>
- <dt><code><var>description</var></code> {{optional_inline}}</dt>
- <dd>文字列。デバッグには使用できるこのシンボルの説明ですが、シンボル自体にはアクセスできません。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### シンボルの作成
 
-<h3 id="Creating_symbols" name="Creating_symbols">シンボルの作成</h3>
+新しいプリミティブであるシンボルを生成するには、解説にあるように `Symbol()` を任意の文字列とともに書きます。
 
-<p>新しいプリミティブであるシンボルを生成するには、解説にあるように <code>Symbol()</code> を任意の文字列とともに書きます。</p>
-
-<pre class="brush: js notranslate">let sym1 = Symbol()
+```js
+let sym1 = Symbol()
 let sym2 = Symbol('foo')
 let sym3 = Symbol('foo')
-</pre>
+```
 
-<p>上記のコードは3つの新しいシンボルを生成します。なお、 <code>Symbol("foo")</code> は <code>"foo"</code> と言う文字列を強制的に記号にするわけではないことに注意してください。毎回新しいシンボルを生成します。</p>
+上記のコードは 3 つの新しいシンボルを生成します。なお、 `Symbol("foo")` は `"foo"` と言う文字列を強制的に記号にするわけではないことに注意してください。毎回新しいシンボルを生成します。
 
-<pre class="brush: js notranslate">Symbol('foo') === Symbol('foo')  // false
-</pre>
+```js
+Symbol('foo') === Symbol('foo')  // false
+```
 
-<h3 id="new_Symbol...">new Symbol(...)</h3>
+### new Symbol(...)
 
-<p>以下のように {{jsxref("Operators/new", "new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。</p>
+以下のように {{jsxref("Operators/new", "new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。
 
-<pre class="brush: js notranslate">let sym = new Symbol()  // TypeError
-</pre>
+```js
+let sym = new Symbol()  // TypeError
+```
 
-<p>このため、新しいシンボル値の代わりに明示的なシンボルラッパーオブジェクトを作成することができず、プリミティブなデータ型の周りに明示的なラッパーオブジェクトを作成することは一般的に可能です (例えば、 <code>new Boolean</code>, <code>new String</code>, <code>new Number</code> です)。</p>
+このため、新しいシンボル値の代わりに明示的なシンボルラッパーオブジェクトを作成することができず、プリミティブなデータ型の周りに明示的なラッパーオブジェクトを作成することは一般的に可能です (例えば、 `new Boolean`, `new String`, `new Number` です)。
 
-<p>本当に <code>Symbol</code> のラッパーオブジェクトを生成したい場合は、 <code>Object()</code> 関数を使用することができます。</p>
+本当に `Symbol` のラッパーオブジェクトを生成したい場合は、 `Object()` 関数を使用することができます。
 
-<pre class="brush: js notranslate">let sym    = Symbol('foo');
+```js
+let sym    = Symbol('foo');
 let symObj = Object(sym);
-typeof sym    // =&gt; "symbol"
-typeof symObj // =&gt; "object"
-</pre>
+typeof sym    // => "symbol"
+typeof symObj // => "object"
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol-constructor', 'Symbol constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol-constructor', 'Symbol constructor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Symbol.Symbol")}}</p>
+{{Compat("javascript.builtins.Symbol.Symbol")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Glossary/Symbol">用語集: Symbol データ型</a></li>
-</ul>
+- [用語集: Symbol データ型](/ja/docs/Glossary/Symbol)

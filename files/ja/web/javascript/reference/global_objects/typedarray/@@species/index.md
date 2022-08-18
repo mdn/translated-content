@@ -1,5 +1,5 @@
 ---
-title: 'get TypedArray[@@species]'
+title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 tags:
   - JavaScript
@@ -9,58 +9,48 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>TypedArray[@@species]</strong></code> アクセッサプロパティは、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> のコンストラクタを返します。</p>
+**`TypedArray[@@species]`** アクセッサプロパティは、[typed array](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) のコンストラクタを返します。
 
-<h2 id="説明">説明</h2>
+## 説明
 
-<p><code>species</code> アクセッサプロパティは、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトの既定のコンストラクタを返します。サブクラスのコンストラクタは、コンストラクタの割り当てを変更するために、これをオーバーライドできます。</p>
+`species` アクセッサプロパティは、[typed array](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) オブジェクトの既定のコンストラクタを返します。サブクラスのコンストラクタは、コンストラクタの割り当てを変更するために、これをオーバーライドできます。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="普通のオブジェクト">普通のオブジェクト</h3>
+### 普通のオブジェクト
 
-<p><code>species</code> プロパティは、指定した <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトの typed array コンストラクタを既定のコンストラクタ関数として返します。</p>
+`species` プロパティは、指定した [typed array](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) オブジェクトの typed array コンストラクタを既定のコンストラクタ関数として返します。
 
-<pre class="brush: js notranslate">Int8Array[Symbol.species];    // function Int8Array()
+```js
+Int8Array[Symbol.species];    // function Int8Array()
 Uint8Array[Symbol.species];   // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
-</pre>
+```
 
-<h3 id="派生オブジェクト">派生オブジェクト</h3>
+### 派生オブジェクト
 
-<p>派生コレクションオブジェクト（たとえば、カスタム typed array の <code>MyTypedArray</code>）では、<code>MyTypedArray</code> の species は <code>MyTypedArray</code> コンストラクタです。しかし、派生クラスのメソッドで、親である <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトを返すためにこれをオーバーライドしたいかもしれません。</p>
+派生コレクションオブジェクト（たとえば、カスタム typed array の `MyTypedArray`）では、`MyTypedArray` の species は `MyTypedArray` コンストラクタです。しかし、派生クラスのメソッドで、親である [typed array](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) オブジェクトを返すためにこれをオーバーライドしたいかもしれません。
 
-<pre class="brush: js notranslate">class MyTypedArray extends Uint8Array {
+```js
+class MyTypedArray extends Uint8Array {
   // MyTypedArray の species を親である Uint8Array コンストラクタにオーバーライド
   static get [Symbol.species]() { return Uint8Array; }
-}</pre>
+}
+```
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}} |
 
-<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("javascript.builtins.TypedArray.@@species")}}
 
+## 関連情報
 
-<p>{{Compat("javascript.builtins.TypedArray.@@species")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("TypedArray")}}
+- {{jsxref("Symbol.species")}}

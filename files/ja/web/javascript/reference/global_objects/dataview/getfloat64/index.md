@@ -9,73 +9,59 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getFloat64()</code></strong> メソッドは、符号付き64ビット浮動小数点数 (double) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。</p>
+**`getFloat64()`** メソッドは、符号付き 64 ビット浮動小数点数 (double) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getfloat64.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getfloat64.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dataview.getFloat64(byteOffset [, littleEndian])
+```
 
-<pre class="syntaxbox notranslate"><var>dataview</var>.getFloat64(<var>byteOffset</var> [, <var>littleEndian</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `byteOffset`
+  - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
+- `littleEndian`
+  - : {{optional_inline}} 64 ビット浮動小数点数が{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 `false` または `undefined` の場合、ビッグエンディアン値を読み取ります。
 
-<dl>
- <dt><code><var>byteOffset</var></code></dt>
- <dd>ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。</dd>
- <dt><code><var>littleEndian</var></code></dt>
- <dd>{{optional_inline}} 64ビット浮動小数点数が{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 <code>false</code> または <code>undefined</code> の場合、ビッグエンディアン値を読み取ります。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+符号付き 64 ビット浮動小数点数。
 
-<p>符号付き64ビット浮動小数点数。</p>
+### 発生するエラー
 
-<h3 id="Errors_thrown" name="Errors_thrown">発生するエラー</h3>
+- {{jsxref("RangeError")}}
+  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd><code>byteOffset</code> がビューの末尾を超えて読み取るように設定されている場合に発生します。</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。
 
-<p>アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getFloat64 メソッドの使用
 
-<h3 id="Using_the_getFloat64_method" name="Using_the_getFloat64_method">getFloat64 メソッドの使用</h3>
-
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getFloat64(0); // 0
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.DataView.getFloat64")}}</p>
+{{Compat("javascript.builtins.DataView.getFloat64")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

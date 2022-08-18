@@ -10,67 +10,64 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>every()</code></strong> メソッドは、列内のすべての要素が指定された関数で実装されたテストに合格するかどうかをテストします。これは論理値を返します。</span></p>
+**`every()`** メソッドは、列内のすべての要素が指定された関数で実装されたテストに合格するかどうかをテストします。これは論理値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+arr.every(callback(element[, index[, array]])[, thisArg])
+```
 
-<pre class="syntaxbox notranslate"><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `callback`
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>各要素に対してテストを実行する関数です。次の 3 つの引数を取ります。
- <dl>
-  <dt><code><var>element</var></code></dt>
-  <dd>現在処理されている要素です。</dd>
-  <dt><code><var>index</var></code> {{Optional_inline}}</dt>
-  <dd>現在処理されている要素の添字です。</dd>
-  <dt><code><var>array</var></code> {{Optional_inline}}</dt>
-  <dd><code>every</code> が実行されている配列です。</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
- <dd><code><var>callback</var></code> を実行するときに <code>this</code> として使用すされる値です。</dd>
-</dl>
+  - : 各要素に対してテストを実行する関数です。次の 3 つの引数を取ります。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `element`
+      - : 現在処理されている要素です。
+    - `index` {{Optional_inline}}
+      - : 現在処理されている要素の添字です。
+    - `array` {{Optional_inline}}
+      - : `every` が実行されている配列です。
 
-<p><code><var>callback</var></code> 関数が配列のすべての要素について{{Glossary("truthy", "真値")}}を返した場合は <strong><code>true</code></strong>。それ以外は <strong><code>false</code></strong>。</p>
+- `thisArg` {{Optional_inline}}
+  - : `callback` を実行するときに `this` として使用すされる値です。
 
-<h2 id="Description" name="Description">解説</h2>
+### 返値
 
-<p><code>every</code> は、与えられた <code><var>callback</var></code> 関数を、配列に含まれる各要素に対して一度ずつ、<code><var>callback</var></code> が{{Glossary("falsy", "偽値")}}を返す要素が見つかるまで呼び出します。そのような要素が見つかると、<code>every</code> メソッドはただちに <code>false</code> を返します。<code><var>callback</var></code> がすべての要素に対して{{Glossary("truthy", "真値")}}を返した場合、<code>every</code> は <code>true</code> を返します。</p>
+`callback` 関数が配列のすべての要素について{{Glossary("truthy", "真値")}}を返した場合は **`true`**。それ以外は **`false`**。
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: このメソッドを空の配列に対して呼び出すと、無条件に <code>true</code> を返します。</p>
-</div>
+## 解説
 
-<p><code><var>callback</var></code> は値が代入されている配列の要素に対してのみ呼び出されます。つまり、すでに削除された要素や、まだ値が代入されていない要素に対しては呼び出されません。</p>
+`every` は、与えられた `callback` 関数を、配列に含まれる各要素に対して一度ずつ、`callback` が{{Glossary("falsy", "偽値")}}を返す要素が見つかるまで呼び出します。そのような要素が見つかると、`every` メソッドはただちに `false` を返します。`callback` がすべての要素に対して{{Glossary("truthy", "真値")}}を返した場合、`every` は `true` を返します。
 
-<p><code><var>callback</var></code> は、要素の値、要素の添字、走査されている Array オブジェクトという 3 つの引数をともなって呼び出されます。</p>
+> **Note:** **注意**: このメソッドを空の配列に対して呼び出すと、無条件に `true` を返します。
 
-<p><code><var>thisArg</var></code> 引数が <code>every</code> に与えられると、それがコールバックの <code>this</code> として使用されます。それ以外の場合は <code>undefined</code> が <code>this</code> の値として使われます。<code><var>callback</var></code> が最終的に監視できる <code>this</code> の値は、<a href="/ja/docs/Web/JavaScript/Reference/Operators/this">関数から見た <code>this</code> の決定に関する一般的なルール</a>によって決定されます。</p>
+`callback` は値が代入されている配列の要素に対してのみ呼び出されます。つまり、すでに削除された要素や、まだ値が代入されていない要素に対しては呼び出されません。
 
-<p><code>every</code> は呼び出された配列を変化させません。</p>
+`callback` は、要素の値、要素の添字、走査されている Array オブジェクトという 3 つの引数をともなって呼び出されます。
 
-<p><code>every</code> によって処理される要素の範囲は、<code><var>callback</var></code> が最初に呼び出される前に設定されます。<code><var>callback</var></code> は、<code>every</code> の呼び出しが開始された後に追加された要素に対しては、実行されません。既存の配列要素が変更されたり、削除された場合、<code><var>callback</var></code> に渡される値は <code>every</code> がそれらを訪れた時点での値になり、<code>every</code> が削除された要素を訪問することはありません。</p>
+`thisArg` 引数が `every` に与えられると、それがコールバックの `this` として使用されます。それ以外の場合は `undefined` が `this` の値として使われます。`callback` が最終的に監視できる `this` の値は、[関数から見た `this` の決定に関する一般的なルール](/ja/docs/Web/JavaScript/Reference/Operators/this)によって決定されます。
 
-<p><code>every</code> は数学における「∀ （すべての / for all）」記号と同様のふるまいをします。具体的に言うと、空の配列に対しては <code>true</code> を返します。(<a href="https://en.wikipedia.org/wiki/Empty_set#Properties">空集合</a>のすべての要素が与えられた任意の条件を満たすことは<a href="https://en.wikipedia.org/wiki/Vacuous_truth">空虚に真</a>です。)</p>
+`every` は呼び出された配列を変化させません。
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+`every` によって処理される要素の範囲は、`callback` が最初に呼び出される前に設定されます。`callback` は、`every` の呼び出しが開始された後に追加された要素に対しては、実行されません。既存の配列要素が変更されたり、削除された場合、`callback` に渡される値は `every` がそれらを訪れた時点での値になり、`every` が削除された要素を訪問することはありません。
 
-<p><code>every</code> は ECMA-262 標準に第5版で追加されたもので、この標準のそれ以外の実装には存在しないかもしれません。これを回避するには、スクリプトの最初に以下のコードを挿入することで、ネイティブで対応していない実装でも <code>every</code> を使用できるようにすることができます。</p>
+`every` は数学における「∀ （すべての / for all）」記号と同様のふるまいをします。具体的に言うと、空の配列に対しては `true` を返します。([空集合](https://en.wikipedia.org/wiki/Empty_set#Properties)のすべての要素が与えられた任意の条件を満たすことは[空虚に真](https://en.wikipedia.org/wiki/Vacuous_truth)です。)
 
-<p>このアルゴリズムは、<code>Object</code> と <code>TypeError</code> が元の値を持ち、<code><var>callbackfn</var>.call</code> が {{jsxref("Function.prototype.call")}} の元の値に評価されると仮定するもので、ECMA-262 第5版で指定されているものと全く同じです。</p>
+## ポリフィル
 
-<pre class="brush: js notranslate">if (!Array.prototype.every) {
+`every` は ECMA-262 標準に第 5 版で追加されたもので、この標準のそれ以外の実装には存在しないかもしれません。これを回避するには、スクリプトの最初に以下のコードを挿入することで、ネイティブで対応していない実装でも `every` を使用できるようにすることができます。
+
+このアルゴリズムは、`Object` と `TypeError` が元の値を持ち、`callbackfn.call` が {{jsxref("Function.prototype.call")}} の元の値に評価されると仮定するもので、ECMA-262 第 5 版で指定されているものと全く同じです。
+
+```js
+if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;
@@ -86,23 +83,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     // 2. Let lenValue be the result of calling the Get internal method
     //    of O with the argument "length".
     // 3. Let len be ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== 'function' &amp;&amp; Object.prototype.toString.call(callbackfn) !== '[object Function]') {
+    if (typeof callbackfn !== 'function' && Object.prototype.toString.call(callbackfn) !== '[object Function]') {
       throw new TypeError();
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = thisArg;
     }
 
     // 6. Let k be 0.
     k = 0;
 
-    // 7. Repeat, while k &lt; len
-    while (k &lt; len) {
+    // 7. Repeat, while k < len
+    while (k < len) {
 
       var kValue;
 
@@ -135,107 +132,99 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     return true;
   };
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Testing_size_of_all_array_elements" name="Testing_size_of_all_array_elements">すべての配列要素の大きさをテストする</h3>
+### すべての配列要素の大きさをテストする
 
-<p>次の例は、配列内のすべての要素が 10 よりも大きいかどうかテストします。</p>
+次の例は、配列内のすべての要素が 10 よりも大きいかどうかテストします。
 
-<pre class="brush: js notranslate">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
-</pre>
+```
 
-<h3 id="Using_arrow_functions" name="Using_arrow_functions">アロー関数の使用</h3>
+### アロー関数の使用
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>はより短い構文で同じテストを提供します。</p>
+[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)はより短い構文で同じテストを提供します。
 
-<pre class="brush: js notranslate">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10);   // false
-[12, 54, 18, 130, 44].every(x =&gt; x &gt;= 10); // true</pre>
+```js
+[12, 5, 8, 130, 44].every(x => x >= 10);   // false
+[12, 54, 18, 130, 44].every(x => x >= 10); // true
+```
 
-<h3 id="初期配列への影響_変更、追加、削除">初期配列への影響 (変更、追加、削除)</h3>
+### 初期配列への影響 (変更、追加、削除)
 
-<p>次の例は、配列が変更されたときに <code>every</code> メソッドの動作をテストするものです。</p>
+次の例は、配列が変更されたときに `every` メソッドの動作をテストするものです。
 
-<pre class="brush: js notranslate">// ---------------
+```js
+// ---------------
 // Modifying items
 // ---------------
 let arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) =&gt; {
+arr.every( (elem, index, arr) => {
   arr[index+1] -= 1
-  console.log(`[${arr}][${index}] -&gt; ${elem}`)
-  return elem &lt; 2
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 2
 })
 
 // Loop runs for 3 iterations, but would
 // have run 2 iterations without any modification
 //
-// 1st iteration: [1,1,3,4][0] -&gt; 1
-// 2nd iteration: [1,1,2,4][1] -&gt; 1
-// 3rd iteration: [1,1,2,3][2] -&gt; 2
+// 1st iteration: [1,1,3,4][0] -> 1
+// 2nd iteration: [1,1,2,4][1] -> 1
+// 3rd iteration: [1,1,2,3][2] -> 2
 
 // ---------------
 // Appending items
 // ---------------
 arr = [1, 2, 3];
-arr.every( (elem, index, arr) =&gt; {
+arr.every( (elem, index, arr) => {
   arr.push('new')
-  console.log(`[${arr}][${index}] -&gt; ${elem}`)
-  return elem &lt; 4
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 4
 })
 
 // Loop runs for 3 iterations, even after appending new items
 //
-// 1st iteration: [1, 2, 3, new][0] -&gt; 1
-// 2nd iteration: [1, 2, 3, new, new][1] -&gt; 2
-// 3rd iteration: [1, 2, 3, new, new, new][2] -&gt; 3
+// 1st iteration: [1, 2, 3, new][0] -> 1
+// 2nd iteration: [1, 2, 3, new, new][1] -> 2
+// 3rd iteration: [1, 2, 3, new, new, new][2] -> 3
 
 // ---------------
 // Deleting items
 // ---------------
 arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) =&gt; {
+arr.every( (elem, index, arr) => {
   arr.pop()
-  console.log(`[${arr}][${index}] -&gt; ${elem}`)
-  return elem &lt; 4
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 4
 })
 
 // Loop runs for 2 iterations only, as the remaining
 // items are `pop()`ed off
 //
-// 1st iteration: [1,2,3][0] -&gt; 1
-// 2nd iteration: [1,2][1] -&gt; 2</pre>
+// 1st iteration: [1,2,3][0] -> 1
+// 2nd iteration: [1,2][1] -> 2
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.every', 'Array.prototype.every')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-array.prototype.every', 'Array.prototype.every')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Array.every")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.every")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.every()")}}

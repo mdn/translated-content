@@ -10,56 +10,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.NumberFormat</code></strong> オブジェクトは、言語に依存した数値書式を可能にするオブジェクトのコンストラクターです。</p>
+**`Intl.NumberFormat`** オブジェクトは、言語に依存した数値書式を可能にするオブジェクトのコンストラクターです。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## コンストラクター
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+- {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+  - : 新しい `NumberFormat` オブジェクトを生成します。
 
-<dl>
- <dt>{{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}</dt>
- <dd>新しい <code>NumberFormat</code> オブジェクトを生成します。</dd>
-</dl>
+## 静的メソッド
 
-<h2 id="Static_methods" name="Static_methods">静的メソッド</h2>
+- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+  - : 提供されたロケールのうち、実行時の既定のロケールにフォールバックせずにサポートされるものを配列に納めて返します。
 
-<dl>
- <dt>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</dt>
- <dd>提供されたロケールのうち、実行時の既定のロケールにフォールバックせずにサポートされるものを配列に納めて返します。</dd>
-</dl>
+## インスタンスメソッド
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+- {{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}
+  - : ゲッター関数で、ローケルに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。
+- {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
+  - : オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。
+- {{jsxref("NumberFormat.resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
+  - : ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
 
-<dl>
- <dt>{{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}</dt>
- <dd>ゲッター関数で、ローケルに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。</dd>
- <dt>{{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}</dt>
- <dd>オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。</dd>
- <dt>{{jsxref("NumberFormat.resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}</dt>
- <dd>ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 基本的な使用
 
-<h3 id="Basic_usage" name="Basic_usage">基本的な使用</h3>
+ローケルを指定しない基本的な使い方では、既定のローケルとオプションで書式化された文字列が返されます。
 
-<p>ローケルを指定しない基本的な使い方では、既定のローケルとオプションで書式化された文字列が返されます。</p>
-
-<pre class="brush: js notranslate">var number = 3500;
+```js
+var number = 3500;
 
 console.log(new Intl.NumberFormat().format(number));
 // → '3,500' 英語(U.S.)ロケールの場合
-</pre>
+```
 
-<h3 id="locales_の使用">locales の使用</h3>
+### locales の使用
 
-<p>この例では、地域による数値書式の違いをいくつか紹介します。アプリケーションのユーザーインターフェイスで使われた言語書式を得るには、言語 (およびフォールバック言語) を <code>locales</code> 引数により指定してください。</p>
+この例では、地域による数値書式の違いをいくつか紹介します。アプリケーションのユーザーインターフェイスで使われた言語書式を得るには、言語 (およびフォールバック言語) を `locales` 引数により指定してください。
 
-<pre class="brush: js notranslate">var number = 123456.789;
+```js
+var number = 123456.789;
 
 // ドイツではカンマを小数、ピリオドを千単位の区切りに用います
 console.log(new Intl.NumberFormat('de-DE').format(number));
@@ -81,13 +75,14 @@ console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
 // フォールバック言語を含めます。次の例ではインドネシア語です。
 console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // → 123.456,789
-</pre>
+```
 
-<h3 id="Using_options" name="Using_options">options の使用</h3>
+### options の使用
 
-<p><code>options</code>引数を使うと結果をカスタマイズできます。</p>
+`options`引数を使うと結果をカスタマイズできます。
 
-<pre class="brush: js notranslate">var number = 123456.789;
+```js
+var number = 123456.789;
 
 // 通貨フォーマットを用います
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
@@ -100,11 +95,12 @@ console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' 
 // 有効数字を3桁に狭めます
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
 // → 1,23,000
-</pre>
+```
 
-<h3 id="style_と_unit_の使用">style と unit の使用</h3>
+### style と unit の使用
 
-<pre class="brush: js notranslate">console.log(new Intl.NumberFormat("pt-PT",  {
+```js
+console.log(new Intl.NumberFormat("pt-PT",  {
     style: 'unit',
     unit: "mile-per-hour"
 }).format(50));
@@ -116,31 +112,18 @@ console.log((16).toLocaleString('en-GB', {
     unitDisplay: "long"
 }));
 // → 16 litres
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.NumberFormat")}}</p>
-</div>
+{{Compat("javascript.builtins.Intl.NumberFormat")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Intl")}}</li>
-</ul>
+- {{jsxref("Intl")}}

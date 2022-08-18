@@ -11,31 +11,31 @@ tags:
   - Regular Expressions
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>flags</code></strong> プロパティは、現在の正規表現オブジェクトの<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">フラグ</a>から成る文字列を返します。</p>
+**`flags`** プロパティは、現在の正規表現オブジェクトの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2)から成る文字列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{JS_Property_Attributes(0, 0, 1)}}
 
-<p>{{JS_Property_Attributes(0, 0, 1)}}</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`flags` プロパティのフラグはアルファベット順にソートされます(左から右へ 例えば、`"gimuy"`)。
 
-<p><code>flags</code> プロパティのフラグはアルファベット順にソートされます(左から右へ 例えば、<code>"gimuy"</code>)。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### flags の使用
 
-<h3 id="Using_flags" name="Using_flags">flags の使用</h3>
-
-<pre class="brush: js; notranslate">/foo/ig.flags;   // "gi"
+```js
+/foo/ig.flags;   // "gi"
 /bar/myu.flags;  // "muy"
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<pre class="brush: js; notranslate">if (RegExp.prototype.flags === undefined) {
+```js
+if (RegExp.prototype.flags === undefined) {
   Object.defineProperty(RegExp.prototype, 'flags', {
     configurable: true,
     get: function() {
@@ -43,29 +43,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
     }
   });
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("ESDraft", "#sec-get-regexp.prototype.flags", "RegExp.prototype.flags")}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("ESDraft", "#sec-get-regexp.prototype.flags", "RegExp.prototype.flags")}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.RegExp.flags")}}</p>
+{{Compat("javascript.builtins.RegExp.flags")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
-</ul>
+- {{JSxRef("RegExp.prototype.source")}}

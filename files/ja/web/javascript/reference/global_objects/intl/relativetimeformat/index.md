@@ -9,46 +9,39 @@ tags:
   - RelativeTimeFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.RelativeTimeFormat</code></strong> オブジェクトは言語に依存の相対時間の書式化を可能にします。</p>
+**`Intl.RelativeTimeFormat`** オブジェクトは言語に依存の相対時間の書式化を可能にします。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## コンストラクター
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+- {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}
+  - : 新しい `Intl.RelativeTimeFormat` オブジェクトを生成します。
 
-<dl>
- <dt>{{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}</dt>
- <dd>新しい <code>Intl.RelativeTimeFormat</code> オブジェクトを生成します。</dd>
-</dl>
+## 静的メソッド
 
-<h2 id="Static_methods" name="Static_methods">静的メソッド</h2>
+- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+  - : 指定されたロケールのうち、実行時の既定のロケールにフォールバックせずに対応されるものを配列に収めて返します。
 
-<dl>
- <dt>{{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>指定されたロケールのうち、実行時の既定のロケールにフォールバックせずに対応されるものを配列に収めて返します。</dd>
-</dl>
+## インスタンスメソッド
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+- {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
+  - : `value` および `unit` を、指定された {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと書式化オプションに従って書式化します。
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+  - : ロケール固有のカスタムフォーマットに使用可能な相対時間のフォーマットを部分的に表現したオブジェクトの {{jsxref("Array")}} を返します。
+- {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
+  - : オブジェクトの初期化中に計算されたロケールやフォーマットのオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-<dl>
- <dt>{{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
- <dd><code>value</code> および <code>unit</code> を、指定された {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと書式化オプションに従って書式化します。</dd>
- <dt>{{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
- <dd>ロケール固有のカスタムフォーマットに使用可能な相対時間のフォーマットを部分的に表現したオブジェクトの {{jsxref("Array")}} を返します。</dd>
- <dt>{{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
- <dd>オブジェクトの初期化中に計算されたロケールやフォーマットのオプションを反映したプロパティを持つ新しいオブジェクトを返します。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 基本的な `format` の使用例
 
-<h3 id="Basic_format_usage" name="Basic_format_usage">基本的な <code>format</code> の使用例</h3>
+以下は英語の相対時間フォーマッターの使い方の例です。
 
-<p>以下は英語の相対時間フォーマッターの使い方の例です。</p>
-
-<pre class="brush: js notranslate">// 明示的に渡された既定値を使って
+```js
+// 明示的に渡された既定値を使って
 // ロケールの相対時間を生成します
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -58,53 +51,40 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 
 // 負数の値 (-1) を使った相対時間のフォーマット
 rtf.format(-1, "day");
-// &gt; "1 day ago"
+// > "1 day ago"
 
 // 正数の値 (1) を使った相対時間のフォーマット
 rtf.format(1, "day");
-// &gt; "in 1 day"</pre>
+// > "in 1 day"
+```
 
-<h3 id="Using_formatToParts" name="Using_formatToParts">formatToParts の使用例</h3>
+### formatToParts の使用例
 
-<p>以下はフォーマットされた部品を返す相対時間フォーマッターの生成方法の例です。</p>
+以下はフォーマットされた部品を返す相対時間フォーマッターの生成方法の例です。
 
-<pre class="brush: js notranslate">const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+```js
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // 日単位の相対時間フォーマット
 rtf.formatToParts(-1, "day");
-// &gt; [{ type: "literal", value: "yesterday"}]
+// > [{ type: "literal", value: "yesterday"}]
 
 rtf.formatToParts(100, "day");
-// &gt; [{ type: "literal", value: "in " },
-// &gt;  { type: "integer", value: "100", unit: "day" },
-// &gt;  { type: "literal", value: " days" }]
-</pre>
+// > [{ type: "literal", value: "in " },
+// >  { type: "integer", value: "100", unit: "day" },
+// >  { type: "literal", value: " days" }]
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}}</td>
-   <td>第 4 段階</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       | 状態      | 備考 |
+| ------------------------------------------------------------------------------------------------------------ | --------- | ---- |
+| {{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}} | 第 4 段階 |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}</p>
+{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2018/10/intl-relativetimeformat">The Intl.RelativeTimeFormat API</a></li>
-</ul>
+- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)

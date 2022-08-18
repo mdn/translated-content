@@ -8,76 +8,65 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.tan()</code></strong> 関数は、数値のタンジェントを返します。</p>
+**`Math.tan()`** 関数は、数値のタンジェントを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/math-tan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-tan.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.tan(x)
+```
 
-<pre class="syntaxbox notranslate"><code>Math.tan(<var>x</var>)</code></pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x`
+  - : 数値です。
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>数値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた数値のタンジェントです。
 
-<p>与えられた数値のタンジェントです。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Math.tan()` メソッドは、ある角度のタンジェントを表す数値を返します。
 
-<p><code>Math.tan()</code> メソッドは、ある角度のタンジェントを表す数値を返します。</p>
+`tan()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.tan()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<p><code>tan()</code> は <code>Math</code> の静的メソッドであるため、生成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に <code>Math.tan()</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.tan() の使用
 
-<h3 id="Using_Math.atan" name="Using_Math.atan()">Math.tan() の使用</h3>
+```js
+Math.tan(1); // 1.5574077246549023
+```
 
-<pre class="brush: js notranslate">Math.tan(1); // 1.5574077246549023
-</pre>
+`Math.tan()` 関数はラジアンを受け付けますが、角度で使用したほうが簡単な場合が多いので、次の関数は角度の値を受け付け、それをラジアンに変換してタンジェントを返します。
 
-<p><code>Math.tan()</code> 関数はラジアンを受け付けますが、角度で使用したほうが簡単な場合が多いので、次の関数は角度の値を受け付け、それをラジアンに変換してタンジェントを返します。</p>
-
-<pre class="brush: js notranslate">function getTanDeg(deg) {
+```js
+function getTanDeg(deg) {
   var rad = deg * Math.PI/180;
   return Math.tan(rad);
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                               |
+| -------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.tan")}}</p>
+{{Compat("javascript.builtins.Math.tan")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
-</ul>
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.sin()")}}

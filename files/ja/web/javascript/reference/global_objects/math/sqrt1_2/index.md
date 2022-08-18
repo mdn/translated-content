@@ -8,57 +8,43 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.SQRT2</code></strong> プロパティは、 1/2 の平方根、約 0.707 を表します。</p>
+**`Math.SQRT2`** プロパティは、 1/2 の平方根、約 0.707 を表します。
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.707</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.707</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-sqrt1_2.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sqrt1_2.html", "shorter")}}{{js_property_attributes(0, 0, 0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 解説
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`SQRT1_2` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.SQRT1_2` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<h2 id="Description" name="Description">解説</h2>
+## 例
 
-<p><code>SQRT1_2</code> は <code>Math</code> オブジェクトの静的プロパティなので、 <code>Math</code> オブジェクトを生成してプロパティとして使用するのではなく、常に <code>Math.SQRT1_2</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+### Math.SQRT1_2 の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+以下の関数は 1 を 2 の平方根で割った値を返します。
 
-<h3 id="Using_Math.SQRT1_2" name="Using_Math.SQRT1_2">Math.SQRT1_2 の使用</h3>
-
-<p>以下の関数は 1 を 2 の平方根で割った値を返します。</p>
-
-<pre class="brush:js notranslate">function getRoot1_2() {
+```js
+function getRoot1_2() {
   return Math.SQRT1_2;
 }
 
 getRoot1_2(); // 0.7071067811865476
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           |
+| -------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.SQRT1_2")}}</p>
+{{Compat("javascript.builtins.Math.SQRT1_2")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

@@ -8,83 +8,72 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.set()</code></strong> はプロパティの値を設定することに対するトラップです。</p>
+**`handler.set()`** はプロパティの値を設定することに対するトラップです。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
-  set: function(<var>target</var>, <var>property</var>, <var>value</var>, <var>receiver</var>) {
+```
+const p = new Proxy(target, {
+  set: function(target, property, value, receiver) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>次の引数は <code>set()</code> メソッドに渡されます。<code>this</code> はハンドラーにバインドされます。</p>
+次の引数は `set()` メソッドに渡されます。`this` はハンドラーにバインドされます。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>ターゲットオブジェクトです。</dd>
- <dt><code><var>property</var></code></dt>
- <dd>プロパティを設定する名前または {{jsxref("Symbol")}} です。</dd>
- <dt><code><var>value</var></code></dt>
- <dd>設定するプロパティの新しい値です。</dd>
- <dt><code><var>receiver</var></code></dt>
- <dd>
- <p>割り当てがもともと行われていたオブジェクトです。これは通常、プロキシそのものです。しかし、 <code>set()</code> ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。</p>
+- `target`
+  - : ターゲットオブジェクトです。
+- `property`
+  - : プロパティを設定する名前または {{jsxref("Symbol")}} です。
+- `value`
+  - : 設定するプロパティの新しい値です。
+- `receiver`
 
- <div class="note">
- <p><strong>例:</strong> スクリプト上に <code><var>obj</var>.name = "jen"</code> があり、<code><var>obj</var></code> はプロキシではなく、独自の <code>.name</code> プロパティを持っていません。しかし、プロトタイプチェーンでプロキシを持っています。その場合、そのプロキシの <code>set()</code> ハンドラが呼ばれて、 <code>obj</code> は receiver として渡されます。</p>
- </div>
- </dd>
-</dl>
+  - : 割り当てがもともと行われていたオブジェクトです。これは通常、プロキシそのものです。しかし、 `set()` ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    > **Note:** **例:** スクリプト上に `obj.name = "jen"` があり、`obj` はプロキシではなく、独自の `.name` プロパティを持っていません。しかし、プロトタイプチェーンでプロキシを持っています。その場合、そのプロキシの `set()` ハンドラが呼ばれて、 `obj` は receiver として渡されます。
 
-<p><code>set()</code> メソッドは真偽値を返します。</p>
+### 返値
 
-<ul>
- <li><code>true</code> を返すと割り当てが成功したことを示します。</li>
- <li><code>set()</code> メソッドの返値が <code>false</code> で、厳格モードで割り当てが起こった場合、 {{jsxref("TypeError")}} が発生します。</li>
-</ul>
+`set()` メソッドは真偽値を返します。
 
-<h2 id="Description" name="Description">解説</h2>
+- `true` を返すと割り当てが成功したことを示します。
+- `set()` メソッドの返値が `false` で、厳格モードで割り当てが起こった場合、 {{jsxref("TypeError")}} が発生します。
 
-<p><code><strong>handler.set</strong></code> メソッドはプロパティの値を設定することに対するトラップです。</p>
+## 解説
 
-<h3 id="Interceptions" name="Interceptions">介入</h3>
+**`handler.set`** メソッドはプロパティの値を設定することに対するトラップです。
 
-<p>このトラップは下記の操作に介入できます。</p>
+### 介入
 
-<ul>
- <li>プロパティの割り当て: <code><var>proxy</var>[<var>foo</var>] = <var>bar</var></code> や <code><var>proxy</var>.<var>foo</var> = <var>bar</var></code></li>
- <li>継承したプロパティの割り当て: <code>Object.create(<var>proxy</var>)[<var>foo</var>] = <var>bar</var></code></li>
- <li>{{jsxref("Reflect.set()")}}</li>
-</ul>
+このトラップは下記の操作に介入できます。
 
-<h3 id="Invariants" name="Invariants">不変条件</h3>
+- プロパティの割り当て: `proxy[foo] = bar` や `proxy.foo = bar`
+- 継承したプロパティの割り当て: `Object.create(proxy)[foo] = bar`
+- {{jsxref("Reflect.set()")}}
 
-<p>以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。</p>
+### 不変条件
 
-<ul>
- <li>対応するターゲットオブジェクトのプロパティが書き込み不可かつ設定不可のデータプロパティの場合、プロパティの値と異なる値に変更することはできません。</li>
- <li>対応するターゲットオブジェクトのプロパティが <code>[[Set]]</code> 属性として <code>undefined</code> を持つ設定不可のアクセスプロパティの場合、プロパティの値を設定することはできません。</li>
- <li>厳格モードでは、 <code>set</code> ハンドラーから <code>false</code> を返す場合、 {{jsxref("TypeError")}} 例外をスローします。</li>
-</ul>
+以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
 
-<h2 id="Examples" name="Examples">例</h2>
+- 対応するターゲットオブジェクトのプロパティが書き込み不可かつ設定不可のデータプロパティの場合、プロパティの値と異なる値に変更することはできません。
+- 対応するターゲットオブジェクトのプロパティが `[[Set]]` 属性として `undefined` を持つ設定不可のアクセスプロパティの場合、プロパティの値を設定することはできません。
+- 厳格モードでは、 `set` ハンドラーから `false` を返す場合、 {{jsxref("TypeError")}} 例外をスローします。
 
-<h3 id="Trap_setting_of_a_property_value" name="Trap_setting_of_a_property_value">プロパティ値の設定のトラップ</h3>
+## 例
 
-<p>次のコードではプロパティの値の設定をトラップします。</p>
+### プロパティ値の設定のトラップ
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+次のコードではプロパティの値の設定をトラップします。
+
+```js
+const p = new Proxy({}, {
   set: function(target, prop, value, receiver) {
     target[prop] = value;
     console.log('property set: ' + prop + ' = ' + value);
@@ -97,33 +86,20 @@ console.log('a' in p);  // false
 p.a = 10;               // "property set: a = 10"
 console.log('a' in p);  // true
 console.log(p.a);       // 10
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Proxy.handler.set")}}</p>
-</div>
+{{Compat("javascript.builtins.Proxy.handler.set")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Reflect.set()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Reflect.set()")}}

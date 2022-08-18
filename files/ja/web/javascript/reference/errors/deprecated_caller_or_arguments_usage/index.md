@@ -2,41 +2,42 @@
 title: 'ReferenceError: deprecated caller or arguments usage'
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 tags:
-- Error
-- Errors
-- JavaScript
-- Strict Mode
-- Warning
+  - Error
+  - Errors
+  - JavaScript
+  - Strict Mode
+  - Warning
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>独自の例外 "deprecated caller or arguments usage" は、非推奨の {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} プロパティが使用されたときに発生します。</p>
+JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)独自の例外 "deprecated caller or arguments usage" は、非推奨の {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} プロパティが使用されたときに発生します。
 
-<h2 id="Message">エラーメッセージ</h2>
+## エラーメッセージ
 
-<pre class="brush: js">TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
+```js
+TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
 Warning: ReferenceError: deprecated caller usage (Firefox)
 Warning: ReferenceError: deprecated arguments usage (Firefox)
 TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
-</pre>
+```
 
-<h2 id="Error_type">エラーの種類</h2>
+## エラーの種類
 
-<p>strict モードでのみ、{{jsxref("ReferenceError")}} の警告が発生します。 JavaScript の実行は、停止しません。</p>
+strict モードでのみ、{{jsxref("ReferenceError")}} の警告が発生します。 JavaScript の実行は、停止しません。
 
-<h2 id="What_went_wrong">エラーの原因</h2>
+## エラーの原因
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a> で、 {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} が使われていますが、それらは使用すべきではありません。呼び出し元を漏洩させること、標準外であること、最適化が困難になること、性能に悪影響を与える機能であるため、非推奨になりました。</p>
+[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) で、 {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} が使われていますが、それらは使用すべきではありません。呼び出し元を漏洩させること、標準外であること、最適化が困難になること、性能に悪影響を与える機能であるため、非推奨になりました。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Deprecated_function.caller_or_arguments.callee.caller">非推奨の
-  <code>function.caller</code> または <code>arguments.callee.caller</code></h3>
+### 非推奨の `function.caller` または `arguments.callee.caller`
 
-<p>{{jsxref("Function.caller")}} と <code><a href="/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee.caller</a></code> は非推奨です (詳細は参照記事を見てください)。</p>
+{{jsxref("Function.caller")}} と [`arguments.callee.caller`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) は非推奨です (詳細は参照記事を見てください)。
 
-<pre class="brush: js example-bad">'use strict';
+```js example-bad
+'use strict';
 
 function myFunc() {
   if (myFunc.caller == null) {
@@ -48,19 +49,21 @@ function myFunc() {
 
 myFunc();
 // Warning: ReferenceError: deprecated caller usage
-// "The function was called from the top!"</pre>
+// "The function was called from the top!"
+```
 
-<h3 id="Function.arguments"><code>Function.arguments</code></h3>
+### `Function.arguments`
 
-<p>{{jsxref("Function.arguments")}} は非推奨です (詳細は参照記事を見てください)。</p>
+{{jsxref("Function.arguments")}} は非推奨です (詳細は参照記事を見てください)。
 
-<pre class="brush: js example-bad">'use strict';
+```js example-bad
+'use strict';
 
 function f(n) { g(n - 1); }
 
 function g(n) {
   console.log('before: ' + g.arguments[0]);
-  if (n &gt; 0) { f(n); }
+  if (n > 0) { f(n); }
   console.log('after: ' + g.arguments[0]);
 }
 
@@ -68,13 +71,11 @@ f(2);
 
 console.log('returned: ' + g.arguments);
 // Warning: ReferenceError: deprecated arguments usage
-</pre>
+```
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li><a href="/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">非推奨の機能、廃止された機能</a></li>
-  <li><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">Strict モード</a></li>
-  <li>{{jsxref("Function.arguments")}}</li>
-  <li>{{jsxref("Function.caller")}} と <code><a href="/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee.caller</a></code></li>
-</ul>
+- [非推奨の機能、廃止された機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
+- {{jsxref("Function.arguments")}}
+- {{jsxref("Function.caller")}} と [`arguments.callee.caller`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee)

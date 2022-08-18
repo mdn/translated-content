@@ -9,47 +9,42 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>TypeError</strong></code> オブジェクトは、演算が実行できなくなった時の新しいエラーを表します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。</p>
+**`TypeError`** オブジェクトは、演算が実行できなくなった時の新しいエラーを表します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。
 
-<p><code>TypeError</code> は以下のような場合に発生します。</p>
+`TypeError` は以下のような場合に発生します。
 
-<ul>
- <li>関数に渡されたオペランドや引数が、その演算子や関数で期待された型と互換性がなかった場合</li>
- <li>変更できない値を変更しようとした場合</li>
- <li>適切ではない方法で値を使用しようとした場合</li>
-</ul>
+- 関数に渡されたオペランドや引数が、その演算子や関数で期待された型と互換性がなかった場合
+- 変更できない値を変更しようとした場合
+- 適切ではない方法で値を使用しようとした場合
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}</dt>
- <dd>新しい <code>TypeError</code> オブジェクトを生成します。</dd>
-</dl>
+- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
+  - : 新しい `TypeError` オブジェクトを生成します。
 
-<h2 id="Instance_properties" name="Instance_properties">インスタンスプロパティ</h2>
+## インスタンスプロパティ
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "TypeError.prototype.message")}}</dt>
- <dd>エラーメッセージです。 ECMA-262 において {{jsxref("TypeError")}} は自身の <code>message</code> プロパティを提供するべきとされていますが、 <a href="/ja/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> では {{jsxref("Error.prototype.message")}} を継承しています。</dd>
- <dt>{{jsxref("Error.prototype.name", "TypeError.prototype.name")}}</dt>
- <dd>エラー名です。 {{jsxref("Error")}} から継承しています。</dd>
- <dt>{{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}</dt>
- <dd>このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}</dt>
- <dd>このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}</dt>
- <dd>このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。</dd>
- <dt>{{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}</dt>
- <dd>スタックトレースです。 {{jsxref("Error")}} から継承しています。</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
+  - : エラーメッセージです。 ECMA-262 において {{jsxref("TypeError")}} は自身の `message` プロパティを提供するべきとされていますが、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} を継承しています。
+- {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
+  - : エラー名です。 {{jsxref("Error")}} から継承しています。
+- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}
+  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
+- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}
+  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
+- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
+  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
+- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}
+  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Catching_a_TypeError" name="Catching_a_TypeError">TypeError のキャッチ</h3>
+### TypeError のキャッチ
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   null.f()
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -60,11 +55,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
   console.log(e.columnNumber)          // 2
   console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Creating_a_TypeError" name="Creating_a_TypeError">TypeError の生成</h3>
+### TypeError の生成
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   throw new TypeError('Hello', "someFile.js", 10)
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -75,31 +71,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
   console.log(e.columnNumber)          // 0
   console.log(e.stack)                 // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.TypeError")}}</p>
-</div>
+{{Compat("javascript.builtins.TypeError")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Error")}}</li>
-</ul>
+- {{jsxref("Error")}}

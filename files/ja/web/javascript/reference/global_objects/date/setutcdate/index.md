@@ -9,63 +9,51 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setUTCDate()</code></strong> メソッドは、協定世界時に基づき、指定された日付の「日」を設定します。</p>
+**`setUTCDate()`** メソッドは、協定世界時に基づき、指定された日付の「日」を設定します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.setUTCDate(dayValue)
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setUTCDate(<var>dayValue</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `dayValue`
+  - : 任意。「日」を表す 1 から 31 までの間の整数値。
 
-<dl>
- <dt><code><var>dayValue</var></code></dt>
- <dd>任意。「日」を表す 1 から 31 までの間の整数値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
-<p>協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+指定した値が期待される日付の範囲外の場合、それに応じて `setUTCDate()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`dayValue` に 40 を指定し、{{jsxref("Date")}} に格納された「月」が 6 月の場合、「日」は 10 に変更され、「月」が繰り上がって 7 月になります。
 
-<p>指定した値が期待される日付の範囲外の場合、それに応じて <code>setUTCDate()</code> が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、<code>dayValue</code> に 40 を指定し、{{jsxref("Date")}} に格納された「月」が 6 月の場合、「日」は 10 に変更され、「月」が繰り上がって 7 月になります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### setUTCDate() の使用
 
-<h3 id="Using_setUTCDate" name="Using_setUTCDate">setUTCDate() の使用</h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCDate(20);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.setUTCDate")}}</p>
+{{Compat("javascript.builtins.Date.setUTCDate")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.setDate()")}}

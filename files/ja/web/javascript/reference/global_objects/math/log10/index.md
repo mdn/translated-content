@@ -9,84 +9,73 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.log10()</code></strong> 関数は、数値の 10 を底とした対数を返します。</p>
+**`Math.log10()`** 関数は、数値の 10 を底とした対数を返します。
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-log10.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-log10.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.log10(x)
+```
 
-<pre class="syntaxbox notranslate">Math.log10(<var>x</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x`
+  - : 数値です。
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>数値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた数値の 10 を底とした対数です。数値が負の数であった場合、 {{jsxref("NaN")}} が返されます。
 
-<p>与えられた数値の 10 を底とした対数です。数値が負の数であった場合、 {{jsxref("NaN")}} が返されます。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`x` の値が 0 未満であった場合、返値は常に {{jsxref("NaN")}} です。
 
-<p><code><var>x</var></code> の値が 0 未満であった場合、返値は常に {{jsxref("NaN")}} です。</p>
+`log10()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.log10()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<p><code>log10()</code> は <code>Math</code> の静的メソッドであるため、生成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に <code>Math.log10()</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+この関数は Math.log(x) / Math.log(10) と同等です。 log10(e) には定数 {{jsxref("Math.LOG10E")}} を使用してください (これは 1 / {{jsxref("Math.LN10")}} です。)
 
-<p>この関数は Math.log(x) / Math.log(10) と同等です。 log10(e) には定数 {{jsxref("Math.LOG10E")}} を使用してください (これは 1 / {{jsxref("Math.LN10")}} です。)</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.log10() の使用
 
-<h3 id="Using_Math.log10" name="Using_Math.log10">Math.log10() の使用</h3>
-
-<pre class="brush: js notranslate">Math.log10(2);      // 0.3010299956639812
+```js
+Math.log10(2);      // 0.3010299956639812
 Math.log10(1);      // 0
 Math.log10(0);      // -Infinity
 Math.log10(-2);     // NaN
 Math.log10(100000); // 5
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p>これは以下の関数でエミュレートできます。</p>
+これは以下の関数でエミュレートできます。
 
-<pre class="brush: js notranslate">Math.log10 = Math.log10 || function(x) {
+```js
+Math.log10 = Math.log10 || function(x) {
   return Math.log(x) * Math.LOG10E;
 };
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.log10")}}</p>
+{{Compat("javascript.builtins.Math.log10")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

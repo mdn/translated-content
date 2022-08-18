@@ -9,38 +9,37 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.isExtensible()</code></strong> メソッドは、オブジェクトが拡張可能であるか (新しいプロパティを追加することができるかどうか) を判定します。</p>
+**`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか (新しいプロパティを追加することができるかどうか) を判定します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Object.isExtensible(obj)
+```
 
-<pre class="syntaxbox notranslate">Object.isExtensible(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : チェックするオブジェクトです。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>チェックするオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+{{jsxref("Boolean")}} で、与えられたオブジェクトが拡張可能であるかどうかを示します。
 
-<p>{{jsxref("Boolean")}} で、与えられたオブジェクトが拡張可能であるかどうかを示します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、 ({{jsxref("Object.proto", "__proto__")}} のプロパティに対応しているエンジンでは) `__proto__` プロパティを変更することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}} の何れかを用いる事で拡張不能に設定する事が可能です。
 
-<p>オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、 ({{jsxref("Object.proto", "__proto__")}} のプロパティに対応しているエンジンでは) <code>__proto__</code> プロパティを変更することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}} の何れかを用いる事で拡張不能に設定する事が可能です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Object.isExtensible の使用
 
-<h3 id="Using_Object.isExtensible" name="Using_Object.isExtensible">Object.isExtensible の使用</h3>
-
-<pre class="brush: js notranslate">// 新規のオブジェクトは拡張可能
+```js
+// 新規のオブジェクトは拡張可能
 var empty = {};
 Object.isExtensible(empty); // === true
 
@@ -55,47 +54,35 @@ Object.isExtensible(sealed); // === false
 // freeze メソッドで凍結されたオブジェクトも拡張不可と定義される
 var frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
-</pre>
+```
 
-<h3 id="Non-object_coercion" name="Non-object_coercion">オブジェクト以外の型強制</h3>
+### オブジェクト以外の型強制
 
-<p>ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単に <code>false</code> を返します。</p>
+ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単に `false` を返します。
 
-<pre class="brush: js notranslate">Object.isExtensible(1);
+```js
+Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isExtensible(1);
 // false                         (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Object.isExtensible")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.isExtensible")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Reflect.isExtensible()")}}

@@ -10,36 +10,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>set()</code></strong> メソッドは、指定されたキーと値を持つ要素を <code>Map</code> オブジェクトに追加したり、更新したりします。</p>
+**`set()`** メソッドは、指定されたキーと値を持つ要素を `Map` オブジェクトに追加したり、更新したりします。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+myMap.set(key, value)
+```
 
-<pre class="syntaxbox notranslate"><var>myMap</var>.set(<var>key</var>, <var>value</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `key`
+  - : `Map` オブジェクトに追加する要素のキーです。
+- `value`
+  - : `Map` オブジェクトに追加する要素の値です。
 
-<dl>
- <dt><code><var>key</var></code></dt>
- <dd><code>Map</code> オブジェクトに追加する要素のキーです。</dd>
- <dt><code><var>value</var></code></dt>
- <dd><code>Map</code> オブジェクトに追加する要素の値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`Map`オブジェクト。
 
-<p><code>Map</code>オブジェクト。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### set() の使用
 
-<h3 id="Using_set" name="Using_set">set() の使用</h3>
-
-<pre class="brush: js notranslate">let myMap = new Map()
+```js
+let myMap = new Map()
 
 // マップに新しい要素を追加する
 myMap.set('bar', 'foo')
@@ -47,39 +46,31 @@ myMap.set(1, 'foobar')
 
 // マップにある要素を更新する
 myMap.set('bar', 'baz')
-</pre>
+```
 
-<h3 id="Using_the_set_with_chaining" name="Using_the_set_with_chaining">set() のメソッドチェーンの使用</h3>
+### set() のメソッドチェーンの使用
 
-<p><code>set()</code> メソッドは <code>Map</code> オブジェクトを返すため、以下のようにメソッドチェーンを作ることができます。</p>
+`set()` メソッドは `Map` オブジェクトを返すため、以下のようにメソッドチェーンを作ることができます。
 
-<pre class="brush: js notranslate">// チェーンを使用してマップに新しい要素を追加する
+```js
+// チェーンを使用してマップに新しい要素を追加する
 myMap.set('bar', 'foo')
      .set(1, 'foobar')
      .set(2, 'baz');
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Map.set")}}</p>
+{{Compat("javascript.builtins.Map.set")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.get()")}}</li>
- <li>{{jsxref("Map.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.has()")}}

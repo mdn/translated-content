@@ -10,63 +10,59 @@ tags:
   - stringify
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>JSON.stringify()</code></strong> メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。</p>
+**`JSON.stringify()`** メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
 
-<div>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</div>
+{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
 
-<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+JSON.stringify(value[, replacer[, space]])
+```
 
-<pre class="syntaxbox notranslate">JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value`
+  - : JSON 文字列に変換する値です。
+- `replacer` {{optional_inline}}
+  - : 文字列化の手順の挙動を変更する関数、または値のオブジェクトを JSON 文字列に含めるプロパティを選択する許可リストとして機能する {{JSxRef("String")}} と {{JSxRef("Number")}} の配列。もしこの値が {{JSxRef("null")}} であるか提供されなかった場合は、結果の文字列にオブジェクトのすべてのプロパティが含まれます。
+- `space` {{optional_inline}}
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>JSON 文字列に変換する値です。</dd>
- <dt><code><var>replacer</var></code> {{optional_inline}}</dt>
- <dd>文字列化の手順の挙動を変更する関数、または値のオブジェクトを JSON 文字列に含めるプロパティを選択する許可リストとして機能する {{JSxRef("String")}} と {{JSxRef("Number")}} の配列。もしこの値が {{JSxRef("null")}} であるか提供されなかった場合は、結果の文字列にオブジェクトのすべてのプロパティが含まれます。</dd>
- <dt><code><var>space</var></code> {{optional_inline}}</dt>
- <dd>出力する JSON 文字列に可読性を目的に空白を挿入するために使う {{JSxRef("String")}} または {{JSxRef("Number")}} オブジェクトです。
- <p>これが <code>Number</code> のときは、空白として使う空白文字の数を示します。この数の上限は10です (それより大きい数値は、単に <code>10</code> となります)。 1 より小さい値は空白を使わないことを示します。</p>
+  - : 出力する JSON 文字列に可読性を目的に空白を挿入するために使う {{JSxRef("String")}} または {{JSxRef("Number")}} オブジェクトです。
 
- <p>これが <code>String</code> のときは、その文字列 (10文字より長い場合はその最初の10文字) が空白として使われます。もしこの引数が提供されない (または null である) 場合は、空白は使用されません。</p>
- </dd>
-</dl>
+    これが `Number` のときは、空白として使う空白文字の数を示します。この数の上限は 10 です (それより大きい数値は、単に `10` となります)。 1 より小さい値は空白を使わないことを示します。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    これが `String` のときは、その文字列 (10 文字より長い場合はその最初の 10 文字) が空白として使われます。もしこの引数が提供されない (または null である) 場合は、空白は使用されません。
 
-<p>与えられた値を表現する JSON 文字列。</p>
+### 返値
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+与えられた値を表現する JSON 文字列。
 
-<ul>
- <li>{{JSxRef("TypeError")}} ("cyclic object value") 例外は、循環参照が見つかった時に発生します。</li>
- <li>{{JSxRef("TypeError")}} ("BigInt value can't be serialized in JSON") 例外は、 {{JSxRef("BigInt")}} 値を文字列化しようとしたときに発生します。</li>
-</ul>
+### 例外
 
-<h2 id="Description" name="Description">説明</h2>
+- {{JSxRef("TypeError")}} ("cyclic object value") 例外は、循環参照が見つかった時に発生します。
+- {{JSxRef("TypeError")}} ("BigInt value can't be serialized in JSON") 例外は、 {{JSxRef("BigInt")}} 値を文字列化しようとしたときに発生します。
 
-<p><code>JSON.stringify()</code> は値をそれを表す JSON 表記に変換します。</p>
+## 説明
 
-<ul>
- <li>値が <code><a href="#toJSON_behavior">toJSON()</a></code> メソッドを持っている場合は、データがどのようにシリアライズされるかを定義する必要があります。</li>
- <li>{{JSxRef("Boolean")}}、 {{JSxRef("Number")}}、 {{JSxRef("String")}} の各オブジェクトは、文字列化の際に慣習的な変換セマンティクスに従い、対応するプリミティブ値に変換されます。</li>
- <li>{{JSxRef("undefined")}}、 関数 ({{JSxRef("Function")}})、シンボル ({{JSxRef("Symbol")}}) は有効な JSON 値ではありません。変換中にそのような値に遭遇した場合は、 (オブジェクトの中で発見された場合は) 省略されたり、 (配列の中で見つかった場合は) {{JSxRef("null")}} に変換されたりします。 <code>JSON.stringify</code> は <code>JSON.stringify(function(){})</code> や <code>JSON.stringify(undefined)</code> のように「純粋」な値を渡した場合に <code>undefined</code> を返すことがあります。</li>
- <li>シンボル ({{JSxRef("Symbol")}}) がキーとなっているプロパティはすべて、 <code><var>replacer</var></code> 関数を使用する場合でも完全に無視されます。</li>
- <li>{{JSxRef("Date")}} のインスタンスは文字列を返す <code>toJSON()</code> を実装しています (<code>date.toISOString()</code> と同じです)。したがって、これらは文字列として扱われます。</li>
- <li>{{JSxRef("Infinity")}} および {{JSxRef("NaN")}} の数値は、 {{JSxRef("null")}} の値と同様、すべて <code>null</code> と見なされます。</li>
- <li>その他のすべての {{JSxRef("Object")}} のインスタンスは ({{JSxRef("Map")}}, {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, {{JSxRef("WeakSet")}} を含め)、列挙可能なプロパティのみがシリアライズされます。</li>
-</ul>
+`JSON.stringify()` は値をそれを表す JSON 表記に変換します。
 
-<h2 id="Examples" name="Examples">例</h2>
+- 値が [`toJSON()`](#toJSON_behavior) メソッドを持っている場合は、データがどのようにシリアライズされるかを定義する必要があります。
+- {{JSxRef("Boolean")}}、 {{JSxRef("Number")}}、 {{JSxRef("String")}} の各オブジェクトは、文字列化の際に慣習的な変換セマンティクスに従い、対応するプリミティブ値に変換されます。
+- {{JSxRef("undefined")}}、 関数 ({{JSxRef("Function")}})、シンボル ({{JSxRef("Symbol")}}) は有効な JSON 値ではありません。変換中にそのような値に遭遇した場合は、 (オブジェクトの中で発見された場合は) 省略されたり、 (配列の中で見つかった場合は) {{JSxRef("null")}} に変換されたりします。 `JSON.stringify` は `JSON.stringify(function(){})` や `JSON.stringify(undefined)` のように「純粋」な値を渡した場合に `undefined` を返すことがあります。
+- シンボル ({{JSxRef("Symbol")}}) がキーとなっているプロパティはすべて、 `replacer` 関数を使用する場合でも完全に無視されます。
+- {{JSxRef("Date")}} のインスタンスは文字列を返す `toJSON()` を実装しています (`date.toISOString()` と同じです)。したがって、これらは文字列として扱われます。
+- {{JSxRef("Infinity")}} および {{JSxRef("NaN")}} の数値は、 {{JSxRef("null")}} の値と同様、すべて `null` と見なされます。
+- その他のすべての {{JSxRef("Object")}} のインスタンスは ({{JSxRef("Map")}}, {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, {{JSxRef("WeakSet")}} を含め)、列挙可能なプロパティのみがシリアライズされます。
 
-<h3 id="Using_JSON.stringify" name="Using_JSON.stringify">JSON.stringify の使用</h3>
+## 例
 
-<pre class="brush: js notranslate">JSON.stringify({});                    // '{}'
+### JSON.stringify の使用
+
+```js
+JSON.stringify({});                    // '{}'
 JSON.stringify(true);                  // 'true'
 JSON.stringify('foo');                 // '"foo"'
 JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
@@ -128,35 +124,30 @@ JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: {
 // BigInt の値は例外が発生
 JSON.stringify({x: 2n});
 // TypeError: BigInt value can't be serialized in JSON
-</pre>
+```
 
-<h3 id="The_replacer_parameter" name="The_replacer_parameter">replacer 引数</h3>
+### replacer 引数
 
-<p><code><var>replacer</var></code> 引数は関数または配列です。</p>
+`replacer` 引数は関数または配列です。
 
-<p><strong>関数の場合</strong>、 <var>key</var> と文字列化される <var>value</var> の2つの引数を取ります。キーをもつオブジェクトが <code><var>replacer</var></code> では <code>this</code> 引数として提供されます。</p>
+**関数の場合**、 _key_ と文字列化される _value_ の 2 つの引数を取ります。キーをもつオブジェクトが `replacer` では `this` 引数として提供されます。
 
-<p>最初、 <code><var>replacer</var></code> 関数が、文字列化されるオブジェクト自体を表すキーとして空文字列で呼び出されます。それから、文字列化されるオブジェクトのそれぞれのプロパティや配列に対して呼び出されます。</p>
+最初、 `replacer` 関数が、文字列化されるオブジェクト自体を表すキーとして空文字列で呼び出されます。それから、文字列化されるオブジェクトのそれぞれのプロパティや配列に対して呼び出されます。
 
-<p>これは、 JSON 文字列に加えるべき値を次のように返します。</p>
+これは、 JSON 文字列に加えるべき値を次のように返します。
 
-<ul>
- <li>数値 ({{JSxRef("Number")}}), 文字列 ({{JSxRef("String")}}), 論理値 ({{JSxRef("Boolean")}}), {{JSxRef("null")}} を返すと、その値を文字列化したものがプロパティの値として使用されます。</li>
- <li>関数 ({{JSxRef("Function")}}), シンボル ({{JSxRef("Symbol")}}), {{JSxRef("undefined")}} を返すと、出力にはそのプロパティが含まれなくなります。</li>
- <li>その他のオブジェクトを返した場合、そのオブジェクトはそれぞれのプロパティに <code><var>replacer</var></code> 関数を呼び出して再帰的に文字列化します。</li>
-</ul>
+- 数値 ({{JSxRef("Number")}}), 文字列 ({{JSxRef("String")}}), 論理値 ({{JSxRef("Boolean")}}), {{JSxRef("null")}} を返すと、その値を文字列化したものがプロパティの値として使用されます。
+- 関数 ({{JSxRef("Function")}}), シンボル ({{JSxRef("Symbol")}}), {{JSxRef("undefined")}} を返すと、出力にはそのプロパティが含まれなくなります。
+- その他のオブジェクトを返した場合、そのオブジェクトはそれぞれのプロパティに `replacer` 関数を呼び出して再帰的に文字列化します。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code><var>replacer</var></code> 関数を使用して配列から値を削除することはできません。 <code>undefined</code> や関数を返すと、代わりに <code>null</code> が使用されます。</p>
-</div>
+> **Note:** **注:** `replacer` 関数を使用して配列から値を削除することはできません。 `undefined` や関数を返すと、代わりに `null` が使用されます。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code><var>replacer</var></code> が、オブジェクトが初期状態であるか、空文字列のキーを持つプロパティであるかを判別するには (どちらの場合もキーが空文字列になり、オブジェクトが値になる可能性があるので)、繰り返し回数を追跡しておく必要があります (繰り返しが1回を超えた場合、空文字列のキーであることが分かります)。</p>
-</div>
+> **Note:** **注:** `replacer` が、オブジェクトが初期状態であるか、空文字列のキーを持つプロパティであるかを判別するには (どちらの場合もキーが空文字列になり、オブジェクトが値になる可能性があるので)、繰り返し回数を追跡しておく必要があります (繰り返しが 1 回を超えた場合、空文字列のキーであることが分かります)。
 
-<h4 id="Example_replacer_as_a_function" name="Example_replacer_as_a_function">関数としての replacer の例</h4>
+#### 関数としての replacer の例
 
-<pre class="brush: js notranslate">function replacer(key, value) {
+```js
+function replacer(key, value) {
   // Filtering out properties
   if (typeof value === 'string') {
     return undefined;
@@ -167,54 +158,54 @@ JSON.stringify({x: 2n});
 var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
 JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}'
-</pre>
+```
 
-<h4 id="Example_replacer_as_an_array" name="Example_replacer_as_an_array">配列としての replacer の例</h4>
+#### 配列としての replacer の例
 
-<p><code><var>replacer</var></code> が配列である場合、その配列の値は結果の JSON 文字列に含めるプロパティの名前を示します。</p>
+`replacer` が配列である場合、その配列の値は結果の JSON 文字列に含めるプロパティの名前を示します。
 
-<pre class="brush: js notranslate">JSON.stringify(foo, ['week', 'month']);
+```js
+JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', "week" と "month" プロパティだけが保持される
-</pre>
+```
 
-<h3 id="The_space_argument" name="The_space_argument">space 引数</h3>
+### space 引数
 
-<p><code>space</code> 引数で最終的な文字列での空白の数を調整できます。</p>
+`space` 引数で最終的な文字列での空白の数を調整できます。
 
-<ul>
- <li><strong>数値であれば</strong>、レベルの階層がそれぞれその数の空白文字 (最大10文字) でインデントされます。</li>
- <li><strong>文字列であれば</strong>、レベル階層がそれぞれこの文字列 (またはその最初の10文字) でインデントされます。</li>
-</ul>
+- **数値であれば**、レベルの階層がそれぞれその数の空白文字 (最大 10 文字) でインデントされます。
+- **文字列であれば**、レベル階層がそれぞれこの文字列 (またはその最初の 10 文字) でインデントされます。
 
-<pre class="brush: js notranslate">JSON.stringify({ a: 2 }, null, ' ');
+```js
+JSON.stringify({ a: 2 }, null, ' ');
 // '{
 //  "a": 2
 // }'
-</pre>
+```
 
-<p>タブ文字を使うと、標準的な表示の整形と同様になります。</p>
+タブ文字を使うと、標準的な表示の整形と同様になります。
 
-<pre class="brush: js notranslate">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+```js
+JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // returns the string:
 // '{
 //     "uno": 1,
 //     "dos": 2
 // }'
-</pre>
+```
 
-<h3 id="toJSON_behavior" name="toJSON_behavior">toJSON() の挙動</h3>
+### toJSON() の挙動
 
-<p>文字列化されるオブジェクトに <code>toJSON</code> という名前の値に関数を持ったプロパティがある場合、その <code>toJSON()</code> メソッドで JSON の文字列化の挙動をカスタマイズできます。シリアライズされるオブジェクトの代わりに、その <code>toJSON()</code> メソッドが呼び出されたときの返値がシリアライズされます。 <code>JSON.stringify()</code> は <code>toJSON</code> に以下のどれか1つの引数をつけて呼び出します。</p>
+文字列化されるオブジェクトに `toJSON` という名前の値に関数を持ったプロパティがある場合、その `toJSON()` メソッドで JSON の文字列化の挙動をカスタマイズできます。シリアライズされるオブジェクトの代わりに、その `toJSON()` メソッドが呼び出されたときの返値がシリアライズされます。 `JSON.stringify()` は `toJSON` に以下のどれか 1 つの引数をつけて呼び出します。
 
-<ul>
- <li>このオブジェクトがプロパティの値であった場合は、プロパティ名</li>
- <li>配列内の値であった場合は、文字列化した配列のインデックス</li>
- <li><code>JSON.stringify()</code> がこのオブジェクトに対して直接呼び出された場合は、空文字列</li>
-</ul>
+- このオブジェクトがプロパティの値であった場合は、プロパティ名
+- 配列内の値であった場合は、文字列化した配列のインデックス
+- `JSON.stringify()` がこのオブジェクトに対して直接呼び出された場合は、空文字列
 
-<p>例</p>
+例
 
-<pre class="brush: js notranslate">var obj = {
+```js
+var obj = {
     data: 'data',
 
     toJSON (key) {
@@ -233,28 +224,30 @@ JSON.stringify({ obj }); // Shorthand property names (ES2015).
 
 JSON.stringify([ obj ]);
 // '["Now I am a nested object under key '0'"]'
-</pre>
+```
 
-<h3 id="循環参照をシリアライズした場合の_JSON.stringify_に関する問題">循環参照をシリアライズした場合の JSON.stringify() に関する問題</h3>
+### 循環参照をシリアライズした場合の JSON.stringify() に関する問題
 
-<p><a href="https://www.json.org/">JSON 形式</a>はオブジェクト参照に対応していないため (<a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF 草稿</a>はありますが)、循環参照のあるオブジェクトをエンコードしようとすると {{JSxRef("TypeError")}} が発生します。</p>
+[JSON 形式](https://www.json.org/)はオブジェクト参照に対応していないため ([IETF 草稿](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)はありますが)、循環参照のあるオブジェクトをエンコードしようとすると {{JSxRef("TypeError")}} が発生します。
 
-<pre class="brush: js example-bad notranslate">const circularReference = {};
+```js example-bad
+const circularReference = {};
 circularReference.myself = circularReference;
 
 // 循環参照をシリアライズすると "TypeError: cyclic object value" が発生
 JSON.stringify(circularReference);
-</pre>
+```
 
-<p>循環参照をシリアライズするためには、これに対応したライブラリを使用したり (Douglas Crockford による <a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> など)、自分自身で解決策を実装したりする方法があります。循環参照を探索してシリアライズされた値に置き換える (または削除する) 必要があるでしょう。</p>
+循環参照をシリアライズするためには、これに対応したライブラリを使用したり (Douglas Crockford による [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) など)、自分自身で解決策を実装したりする方法があります。循環参照を探索してシリアライズされた値に置き換える (または削除する) 必要があるでしょう。
 
-<h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript" name="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">JSON.stringify をそのまま JavaScript として使用する際の問題</h3>
+### JSON.stringify をそのまま JavaScript として使用する際の問題
 
-<p>従来、 JSON は <a href="http://timelessrepo.com/json-isnt-a-javascript-subset">JavaScript の完全に厳密なサブセットではありません</a>でした。文字コードポイント U+2028 LINE SEPARATOR (改行) と U+2029 PARAGRAPH SEPARATOR (改段落) は JSON テキスト内の文字列リテラルやプロパティ名に使用することができます。しかし、 JavsScript のテキスト内で同様の文脈では使用することができず、 Unicode エスケープを使用した <code>\u2028</code> および <code>\u2029</code> しか使うことができません。これは最近変更され、どちらのコードポイントも JSON と JavaScript の両方の文字列で使用することができるようになりました。</p>
+従来、 JSON は [JavaScript の完全に厳密なサブセットではありません](http://timelessrepo.com/json-isnt-a-javascript-subset)でした。文字コードポイント U+2028 LINE SEPARATOR (改行) と U+2029 PARAGRAPH SEPARATOR (改段落) は JSON テキスト内の文字列リテラルやプロパティ名に使用することができます。しかし、 JavsScript のテキスト内で同様の文脈では使用することができず、 Unicode エスケープを使用した `\u2028` および `\u2029` しか使うことができません。これは最近変更され、どちらのコードポイントも JSON と JavaScript の両方の文字列で使用することができるようになりました。
 
-<p>したがって、古い JavaScript エンジンとの互換性が必要な場合は、 <code>JSON.stringify</code> から返された文字列を JavaScript の文字列に代入するために、直接 <code>eval</code> や <code>new Function</code> に渡したり、 <a href="https://ja.wikipedia.org/wiki/JSONP">JSONP</a> URL の一部として用いたりするのは危険です。次のユーティリティを使用することができます。</p>
+したがって、古い JavaScript エンジンとの互換性が必要な場合は、 `JSON.stringify` から返された文字列を JavaScript の文字列に代入するために、直接 `eval` や `new Function` に渡したり、 [JSONP](https://ja.wikipedia.org/wiki/JSONP) URL の一部として用いたりするのは危険です。次のユーティリティを使用することができます。
 
-<pre class="brush: js notranslate">function jsFriendlyJSONStringify (s) {
+```js
+function jsFriendlyJSONStringify (s) {
     return JSON.stringify(s).
         replace(/\u2028/g, '\\u2028').
         replace(/\u2029/g, '\\u2029');
@@ -276,13 +269,12 @@ eval('(' + jsFriendlyJSONStringify(s) + ')');
 // Firefox での console.log はコンソールにログ出力をする場合
 //   Unicode エスケープを解除するので、alert を使う
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 配列以外のオブジェクトのプロパティでは、特定の順番で文字列化されることは保証されていません。文字列化された同じオブジェクトの中でプロパティの順番に依存しないようにしてください。</p>
-</div>
+> **Note:** **注**: 配列以外のオブジェクトのプロパティでは、特定の順番で文字列化されることは保証されていません。文字列化された同じオブジェクトの中でプロパティの順番に依存しないようにしてください。
 
-<pre class="brush: js notranslate">var a = JSON.stringify({ foo: "bar", baz: "quux" })
+```js
+var a = JSON.stringify({ foo: "bar", baz: "quux" })
 //'{"foo":"bar","baz":"quux"}'
 var b = JSON.stringify({ baz: "quux", foo: "bar" })
 //'{"baz":"quux","foo":"bar"}'
@@ -290,13 +282,14 @@ console.log(a !== b) // true
 
 // 一部の記憶関数は JSON.stringify を使用して引数をシリアライズしており、
 // 上記のような同じオブジェクトに出会った時にキャッチし損ねることがあります
-</pre>
+```
 
-<h3 id="Example_of_using_JSON.stringify_with_localStorage" name="Example_of_using_JSON.stringify_with_localStorage">localStorage で JSON.stringify() を使った例</h3>
+### localStorage で JSON.stringify() を使った例
 
-<p>ユーザーが作成したオブジェクトを格納し、ブラウザーが閉じた後に復元できるようにしたい場合は以下の例が <code>JSON.stringify()</code> を適用した模範例です。</p>
+ユーザーが作成したオブジェクトを格納し、ブラウザーが閉じた後に復元できるようにしたい場合は以下の例が `JSON.stringify()` を適用した模範例です。
 
-<pre class="brush: js notranslate">// JSON の一例を作成
+```js
+// JSON の一例を作成
 var session = {
   'screens': [],
   'state': true
@@ -319,44 +312,35 @@ var restoredSession = JSON.parse(localStorage.getItem('session'));
 // ここで変数 restoredSession には localStorage に保存されていた
 // オブジェクトが入っている
 console.log(restoredSession);
-</pre>
+```
 
-<h3 id="Well-formed_JSON.stringify" name="Well-formed_JSON.stringify">Well-formed JSON.stringify()</h3>
+### Well-formed JSON.stringify()
 
-<p><a href="https://github.com/tc39/proposal-well-formed-stringify">well-formed JSON.stringify 仕様</a>を実装しているエンジンは、サロゲート文字 、 U+D800 から U+DFFF までのすべてのコードポイントを、リテラルではなく Unicode エスケープシーケンスを使用して文字列化します。この変更前は、入力にサロゲート文字が含まれている場合、 <code>JSON.stringify</code> はサロゲート文字をそのまま出力していました。このような文字列は妥当な UTF-8 または UTF-16 でエンコードされていませんでした。</p>
+[well-formed JSON.stringify 仕様](https://github.com/tc39/proposal-well-formed-stringify)を実装しているエンジンは、サロゲート文字 、 U+D800 から U+DFFF までのすべてのコードポイントを、リテラルではなく Unicode エスケープシーケンスを使用して文字列化します。この変更前は、入力にサロゲート文字が含まれている場合、 `JSON.stringify` はサロゲート文字をそのまま出力していました。このような文字列は妥当な UTF-8 または UTF-16 でエンコードされていませんでした。
 
-<pre class="brush: js; no-line-numbers notranslate">JSON.stringify("\uD800"); // '"�"'</pre>
+```js
+JSON.stringify("\uD800"); // '"�"'
+```
 
-<p>しかし、この変更で <code>JSON.stringify</code> は lone surrogates を JSON エスケープシーケンスによって表すようになり、妥当な UTF-8 または UTF-16 でエンコードすることができるようになりました。</p>
+しかし、この変更で `JSON.stringify` は lone surrogates を JSON エスケープシーケンスによって表すようになり、妥当な UTF-8 または UTF-16 でエンコードすることができるようになりました。
 
-<pre class="brush: js; no-line-numbers notranslate">JSON.stringify("\uD800"); // '"\\ud800"'</pre>
+```js
+JSON.stringify("\uD800"); // '"\\ud800"'
+```
 
-<p>この変更では、サロゲート文字の Unicode エスケープをサロゲート文字と同一のものとして扱うため、 <code>JSON.stringify</code> の結果を、 JSON テキストを妥当である限りどのようなものでも受け付ける <code>JSON.parse</code> のような API に渡したときに後方互換性があります。 <code>JSON.stringify</code> の結果を直接解析する場合<em>のみ</em>、 <code>JSON.stringify</code> がこれらのコードポイントに対して2通りのエンコーディングをする可能性があることに注意して扱う必要があります。</p>
+この変更では、サロゲート文字の Unicode エスケープをサロゲート文字と同一のものとして扱うため、 `JSON.stringify` の結果を、 JSON テキストを妥当である限りどのようなものでも受け付ける `JSON.parse` のような API に渡したときに後方互換性があります。 `JSON.stringify` の結果を直接解析する場合*のみ*、 `JSON.stringify` がこれらのコードポイントに対して 2 通りのエンコーディングをする可能性があることに注意して扱う必要があります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               |
+| ------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.JSON.stringify")}}</p>
-</div>
+{{Compat("javascript.builtins.JSON.stringify")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{JSxRef("JSON.parse()")}}</li>
- <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> – <code>JSON.decycle</code> と <code>JSON.retrocycle</code> の2つの関数を導入します。これらは循環的な構造と DAG を、拡張されたレトロ互換性のある JSON 形式にエンコードおよびデコードすることができます。</li>
-</ul>
+- {{JSxRef("JSON.parse()")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – `JSON.decycle` と `JSON.retrocycle` の 2 つの関数を導入します。これらは循環的な構造と DAG を、拡張されたレトロ互換性のある JSON 形式にエンコードおよびデコードすることができます。

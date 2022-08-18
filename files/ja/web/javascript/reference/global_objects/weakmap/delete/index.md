@@ -9,62 +9,50 @@ tags:
   - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>delete()</code></strong> メソッドは、 {{jsxref("WeakMap")}} オブジェクトから指定された要素を削除します。</p>
+**`delete()`** メソッドは、 {{jsxref("WeakMap")}} オブジェクトから指定された要素を削除します。
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+wm.delete(key);
+```
 
-<pre class="syntaxbox notranslate"><var>wm</var>.delete(<var>key</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `key`
+  - : `WeakMap` オブジェクトから削除する要素のキーです。
 
-<dl>
- <dt><code><var>key</var></code></dt>
- <dd><code>WeakMap</code> オブジェクトから削除する要素のキーです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`WeakMap` オブジェクト内の要素を削除するのに成功した場合、`true` を返します。`WeakMap` 内でキーが見つからなかったり、キーがオブジェクトでなかったりした場合、`false` を返します。
 
-<p><code>WeakMap</code> オブジェクト内の要素を削除するのに成功した場合、<code>true</code> を返します。<code>WeakMap</code> 内でキーが見つからなかったり、キーがオブジェクトでなかったりした場合、<code>false</code> を返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### delete() メソッドの使用
 
-<h3 id="Using_the_delete_method" name="Using_the_delete_method">delete() メソッドの使用</h3>
-
-<pre class="brush: js;highlight:[4] notranslate">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.delete(window); // true を返す。削除に成功。
 
 wm.has(window);    // false を返す。 window はもう WeakMap に存在しない。
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.WeakMap.delete")}}</p>
+{{Compat("javascript.builtins.WeakMap.delete")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

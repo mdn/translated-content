@@ -8,70 +8,58 @@ tags:
   - 言語機能
 translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>do...while</code> 文</strong>は指定された文を、テスト条件が false に評価されるまで実行するループを作成します。条件は文を実行した後に評価されます。結果として、指定された文は少なくとも 1 回は実行されます。</p>
+**`do...while` 文**は指定された文を、テスト条件が false に評価されるまで実行するループを作成します。条件は文を実行した後に評価されます。結果として、指定された文は少なくとも 1 回は実行されます。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+do
+   statement
+while (condition);
+```
 
-<pre class="syntaxbox">do
-   <em>statement</em>
-while (<em>condition</em>);
-</pre>
+- `statement`
+  - : 少なくとも 1 回は実行され、条件が真に評価されるたびに再度実行される文。ループ内で複数の文を実行するには、それらの文をグループ化するために{{jsxref("Statements/block", "ブロック", "", 1)}}文 (`{ ... }`) を使ってください。
 
-<dl>
- <dt><code><em>statement</em></code></dt>
- <dd>少なくとも 1 回は実行され、条件が真に評価されるたびに再度実行される文。ループ内で複数の文を実行するには、それらの文をグループ化するために{{jsxref("Statements/block", "ブロック", "", 1)}}文 (<code>{ ... }</code>) を使ってください。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code><em>condition</em></code></dt>
- <dd>ループを通過した後ごとに評価される式。もし <code>condition</code> が true に評価されるなら、<code>statement</code> は再度実行されます。<code>condition</code> が false に評価されるときは、制御が <code>do...while</code> に続く文へ渡ります。</dd>
-</dl>
+- `condition`
+  - : ループを通過した後ごとに評価される式。もし `condition` が true に評価されるなら、`statement` は再度実行されます。`condition` が false に評価されるときは、制御が `do...while` に続く文へ渡ります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_do...while" name="Using_do...while"><code>do...while</code> の使用</h3>
+### `do...while` の使用
 
-<p>次の例では、 <code>do...while</code> ループを少なくとも1回は実行し、 <code>i</code> が 5 より小さいという条件を満たさなくなるまで反復します。</p>
+次の例では、 `do...while` ループを少なくとも 1 回は実行し、 `i` が 5 より小さいという条件を満たさなくなるまで反復します。
 
-<pre class="brush: js">var result = '';
+```js
+var result = '';
 var i = 0;
 do {
    i += 1;
    result += i + ' ';
 }
-while (i &gt; 0 &amp;&amp; i &lt; 5);
+while (i > 0 && i < 5);
 // Despite i == 0 this will still loop as it starts off without the test
 
-console.log(result);</pre>
+console.log(result);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-do-while-statement', 'do-while statement')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-do-while-statement', 'do-while statement')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.statements.do_while")}}</p>
+{{Compat("javascript.statements.do_while")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/for", "for")}}

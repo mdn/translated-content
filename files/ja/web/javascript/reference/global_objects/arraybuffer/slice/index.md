@@ -9,67 +9,57 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>slice()</code></strong> メソッドは新しい <code>ArrayBuffer</code> を返し、その中にこの <code>ArrayBuffer</code> の <code>begin</code> から <code>end</code> の手前までをコピーします。</p>
+**`slice()`** メソッドは新しい `ArrayBuffer` を返し、その中にこの `ArrayBuffer` の `begin` から `end` の手前までをコピーします。
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+arraybuffer.slice(begin[, end])
+```
 
-<pre class="syntaxbox notranslate">arraybuffer.slice(<var>begin</var>[, <var>end</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `begin`
+  - : スライスの起点を表すゼロ基点のバイトインデックスです。
 
-<dl>
- <dt><code><var>begin</var></code></dt>
- <dd>スライスの起点を表すゼロ基点のバイトインデックスです。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code><var>end</var></code> {{optional_inline}}</dt>
- <dd>スライスをその前で終了するバイトインデックスです。 end が指定されなかった場合は、新しい <code>ArrayBuffer</code> は、この <code>ArrayBuffer</code> の起点から終点まですべてのバイトを含みます。</dd>
-</dl>
+- `end` {{optional_inline}}
+  - : スライスをその前で終了するバイトインデックスです。 end が指定されなかった場合は、新しい `ArrayBuffer` は、この `ArrayBuffer` の起点から終点まですべてのバイトを含みます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>新しい {{jsxref("ArrayBuffer")}} オブジェクト。</p>
+新しい {{jsxref("ArrayBuffer")}} オブジェクト。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>slice()</code> メソッドは、 <code>end</code> 引数で指定されたバイトの手前までコピーを行います。 <code>begin</code> または <code>end</code> のどちらかが負の数の場合、開始位置とは反対に、配列の末尾からのインデックスを参照します。</p>
+`slice()` メソッドは、 `end` 引数で指定されたバイトの手前までコピーを行います。 `begin` または `end` のどちらかが負の数の場合、開始位置とは反対に、配列の末尾からのインデックスを参照します。
 
-<p><code>begin</code> および <code>end</code> 引数で指定された範囲は、現在の配列で妥当なインデックスの範囲に丸められます。新しい <code>ArrayBuffer</code> の計算された長さが負の数であった場合、ゼロに丸められます。</p>
+`begin` および `end` 引数で指定された範囲は、現在の配列で妥当なインデックスの範囲に丸められます。新しい `ArrayBuffer` の計算された長さが負の数であった場合、ゼロに丸められます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Copying_an_ArrayBuffer" name="Copying_an_ArrayBuffer">ArrayBuffer のコピー</h3>
+### ArrayBuffer のコピー
 
-<pre class="brush: js notranslate">const buf1 = new ArrayBuffer(8);
+```js
+const buf1 = new ArrayBuffer(8);
 const buf2 = buf1.slice(0);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.slice")}}</p>
+{{Compat("javascript.builtins.ArrayBuffer.slice")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}

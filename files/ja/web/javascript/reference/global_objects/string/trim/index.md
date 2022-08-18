@@ -10,75 +10,65 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>trim()</code></strong> メソッドは、文字列の両端の空白を削除します。このコンテクストでの空白には、空白文字（スペースやタブ、ノーブレークスペースなど）とすべての改行文字（LF や CR など）を含みます。</p>
+**`trim()`** メソッドは、文字列の両端の空白を削除します。このコンテクストでの空白には、空白文字（スペースやタブ、ノーブレークスペースなど）とすべての改行文字（LF や CR など）を含みます。
 
-<div>{{EmbedInteractiveExample("pages/js/string-trim.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-trim.html")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.trim()
+```
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.trim()</code></pre>
+### 戻り値
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+呼び出し元の文字列の両端から空白を取り除いた新しい文字列です。
 
-<p>呼び出し元の文字列の両端から空白を取り除いた新しい文字列です。</p>
+## 説明
 
-<h2 id="Description" name="Description">説明</h2>
+`trim()` メソッドは両端の空白を取り除いた文字列を返します。`trim()` はその文字列自身の値には影響を与えません（非破壊メソッド）。
 
-<p><code>trim()</code> メソッドは両端の空白を取り除いた文字列を返します。<code>trim()</code> はその文字列自身の値には影響を与えません（非破壊メソッド）。</p>
+## Polyfill
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+ネイティブで使用できない場合、他のコードの前に次のコードを実行することにより `String.trim()` が使用可能になります。
 
-<p>ネイティブで使用できない場合、他のコードの前に次のコードを実行することにより <code>String.trim()</code> が使用可能になります。</p>
-
-<pre class="brush: js notranslate">if (!String.prototype.trim) {
+```js
+if (!String.prototype.trim) {
   String.prototype.trim = function () {
     return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };
 }
-</pre>
+```
 
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### `trim()` を使う
 
-<h3 id="Using_trim" name="Using_trim()"><code>trim()</code> を使う</h3>
+以下の例は小文字の文字列 `'foo'` を表示します。
 
-<p>以下の例は小文字の文字列 <code>'foo'</code> を表示します。</p>
-
-<pre class="brush: js notranslate">var orig = '   foo  ';
+```js
+var orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
 
 // 片方からだけ空白を取り除く .trim() の例。
 
 var orig = 'foo    ';
 console.log(orig.trim()); // 'foo'
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.trim', 'String.prototype.trim')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.trim', 'String.prototype.trim')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("javascript.builtins.String.trim")}}</p>
+{{Compat("javascript.builtins.String.trim")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.prototype.trimStart()")}}</li>
- <li>{{jsxref("String.prototype.trimEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trimStart()")}}
+- {{jsxref("String.prototype.trimEnd()")}}

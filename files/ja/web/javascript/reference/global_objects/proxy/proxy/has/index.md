@@ -8,68 +8,62 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.has()</code></strong> は {{jsxref("Operators/in", "in")}} 演算子に対するトラップです。</p>
+**`handler.has()`** は {{jsxref("Operators/in", "in")}} 演算子に対するトラップです。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
-  has: function(<var>target</var>, <var>prop</var>) {
+```
+const p = new Proxy(target, {
+  has: function(target, prop) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>次の引数は <code>has()</code> メソッドに渡されます。 <code>this</code> はハンドラーにバインドされます。</p>
+次の引数は `has()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>ターゲットオブジェクトです。</dd>
- <dt><code>prop</code></dt>
- <dd>存在を確認するプロパティ名です。</dd>
-</dl>
+- `target`
+  - : ターゲットオブジェクトです。
+- `prop`
+  - : 存在を確認するプロパティ名です。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>has</code> メソッドは真偽値を返さなければなりません。</p>
+`has` メソッドは真偽値を返さなければなりません。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code><strong>handler.has()</strong></code> メソッドは {{jsxref("Operators/in", "in")}} 演算子に対するトラップです。</p>
+**`handler.has()`** メソッドは {{jsxref("Operators/in", "in")}} 演算子に対するトラップです。
 
-<h3 id="Interceptions" name="Interceptions">介入</h3>
+### 介入
 
-<p>このトラップは下記の操作に介入できます。</p>
+このトラップは下記の操作に介入できます。
 
-<ul>
- <li>プロパティクエリ: <code><var>foo</var> in <var>proxy</var></code></li>
- <li>継承したプロパティクエリ: <code>foo in Object.create(<var>proxy</var>)</code></li>
- <li><code>with</code> チェック: <code>with(<var>proxy</var>) { (<var>foo</var>); }</code></li>
- <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- プロパティクエリ: `foo in proxy`
+- 継承したプロパティクエリ: `foo in Object.create(proxy)`
+- `with` チェック: `with(proxy) { (foo); }`
+- {{jsxref("Reflect.has()")}}
 
-<h3 id="Invariants" name="Invariants">不変条件</h3>
+### 不変条件
 
-<p>以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。</p>
+以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
 
-<ul>
- <li>プロパティがターゲットオブジェクトの設定不可の独自プロパティとして存在する場合、存在しないとして報告されてはいけません。</li>
- <li>プロパティがターゲットオブジェクトの独自プロパティとして存在し、そのターゲットオブジェクトが拡張不可の場合、存在しないとして報告されてはいけません。</li>
-</ul>
+- プロパティがターゲットオブジェクトの設定不可の独自プロパティとして存在する場合、存在しないとして報告されてはいけません。
+- プロパティがターゲットオブジェクトの独自プロパティとして存在し、そのターゲットオブジェクトが拡張不可の場合、存在しないとして報告されてはいけません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Trapping_the_in_operator" name="Trapping_the_in_operator">in 演算子のトラップ</h3>
+### in 演算子のトラップ
 
-<p>次のコードでは {{jsxref("Operators/in", "in")}} 演算子をトラップします。</p>
+次のコードでは {{jsxref("Operators/in", "in")}} 演算子をトラップします。
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   has: function(target, prop) {
     console.log('called: ' + prop);
     return true;
@@ -78,11 +72,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 
 console.log('a' in p); // "called: a"
                        // true
-</pre>
+```
 
-<p>次のコードでは不変条件に違反します。</p>
+次のコードでは不変条件に違反します。
 
-<pre class="brush: js example-bad notranslate">const obj = { a: 10 };
+```js example-bad
+const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {
@@ -92,34 +87,21 @@ const p = new Proxy(obj, {
 });
 
 'a' in p; // TypeError is thrown
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Proxy.handler.has")}}</p>
-</div>
+{{Compat("javascript.builtins.Proxy.handler.has")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Operators/in", "in")}} 演算子</li>
- <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/in", "in")}} 演算子
+- {{jsxref("Reflect.has()")}}

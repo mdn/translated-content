@@ -8,67 +8,61 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.construct()</code></strong> メソッドは {{jsxref("Operators/new", "new")}} 演算子のトラップです。結果として得られるプロキシオブジェクトに対して新しい操作を有効にするためには、プロキシを初期化するために使われるターゲット自身が <code>[[Construct]]</code> 内部メソッドを持っていなければなりません(つまり、 <code>new target</code> が有効でなければなりません)。</p>
+**`handler.construct()`** メソッドは {{jsxref("Operators/new", "new")}} 演算子のトラップです。結果として得られるプロキシオブジェクトに対して新しい操作を有効にするためには、プロキシを初期化するために使われるターゲット自身が `[[Construct]]` 内部メソッドを持っていなければなりません(つまり、 `new target` が有効でなければなりません)。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
-  construct: function(<var>target</var>, <var>argumentsList</var>, <var>newTarget</var>) {
+```js
+const p = new Proxy(target, {
+  construct: function(target, argumentsList, newTarget) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>次の引数が <code>construct()</code> メソッドに渡されます。 <code>this</code> はハンドラーにバインドされます。</p>
+次の引数が `construct()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>ターゲットオブジェクト</dd>
- <dt><code><var>argumentsList</var></code></dt>
- <dd>コンストラクタに対する引数のリスト</dd>
- <dt><code><var>newTarget</var></code></dt>
- <dd>上記の <code><var>p</var></code> に呼び出された元のコンストラクターです。</dd>
-</dl>
+- `target`
+  - : ターゲットオブジェクト
+- `argumentsList`
+  - : コンストラクタに対する引数のリスト
+- `newTarget`
+  - : 上記の `p` に呼び出された元のコンストラクターです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>construct</code> メソッドはオブジェクトを返す必要があります。</p>
+`construct` メソッドはオブジェクトを返す必要があります。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code><strong>handler.construct()</strong></code> メソッドは {{jsxref("Operators/new", "new")}} 操作に対するトラップです。</p>
+**`handler.construct()`** メソッドは {{jsxref("Operators/new", "new")}} 操作に対するトラップです。
 
-<h3 id="Interceptions" name="Interceptions">介入</h3>
+### 介入
 
-<p>このトラップは下記の操作に介入できます。</p>
+このトラップは下記の操作に介入できます。
 
-<ul>
- <li><code>new proxy(...args)</code></li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- `new proxy(...args)`
+- {{jsxref("Reflect.construct()")}}
 
-<h3 id="Invariants" name="Invariants">不変条件</h3>
+### 不変条件
 
-<p>以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。</p>
+以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
 
-<ul>
- <li>結果が <code>Object</code> でならなければならない。</li>
-</ul>
+- 結果が `Object` でならなければならない。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Trapping_the_new_operator" name="Trapping_the_new_operator">new 演算子のトラップ</h3>
+### new 演算子のトラップ
 
-<p>次のコードでは {{jsxref("Operators/new", "new")}} 操作をトラップします。</p>
+次のコードでは {{jsxref("Operators/new", "new")}} 操作をトラップします。
 
-<pre class="brush: js notranslate">const p = new Proxy(function() {}, {
+```js
+const p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     console.log('called: ' + argumentsList.join(', '));
     return { value: argumentsList[0] * 10 };
@@ -77,56 +71,45 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 
 console.log(new p(1).value); // "called: 1"
                              // 10
-</pre>
+```
 
-<p>次のコードでは不変条件に違反します。</p>
+次のコードでは不変条件に違反します。
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy(function() {}, {
+```js example-bad
+const p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     return 1;
   }
 });
 
 new p(); // TypeError is thrown
-</pre>
+```
 
-<p>次のコードはプロキシを正しく初期化していません。プロキシの <code><var>target</var></code> の初期化は、それ自身が {{jsxref("Operators/new", "new")}} 演算子に有効なコンストラクターでなければなりません。</p>
+次のコードはプロキシを正しく初期化していません。プロキシの `target` の初期化は、それ自身が {{jsxref("Operators/new", "new")}} 演算子に有効なコンストラクターでなければなりません。
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy({}, {
+```js example-bad
+const p = new Proxy({}, {
   construct: function(target, argumentsList, newTarget) {
     return {};
   }
 });
 
 new p(); // TypeError is thrown, "p" is not a constructor
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Proxy.handler.construct")}}</p>
-</div>
+{{Compat("javascript.builtins.Proxy.handler.construct")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Operators/new", "new")}} operator.</li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/new", "new")}} operator.
+- {{jsxref("Reflect.construct()")}}

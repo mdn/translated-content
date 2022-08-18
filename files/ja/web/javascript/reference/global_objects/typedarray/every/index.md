@@ -10,94 +10,82 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>every()</code></strong> メソッドは、型付き配列内のすべての要素が提供された関数で実装されたテストに合格するかどうかをテストします。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。ここで <em>TypedArray</em> は、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの1つです。</p>
+**`every()`** メソッドは、型付き配列内のすべての要素が提供された関数で実装されたテストに合格するかどうかをテストします。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-every.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-every.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.every(callback[, thisArg])
+```
 
-<pre class="syntaxbox notranslate"><var>typedarray</var>.every(<var>callback</var>[, <var>thisArg</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `callback`
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>各要素に対してテストを実行する関数です。次の 3 つの引数を取ります。
- <dl>
-  <dt><code><var>element</var></code></dt>
-  <dd>現在処理されている型付き配列の要素です。</dd>
-  <dt><code><var>index</var></code> {{Optional_inline}}</dt>
-  <dd>現在処理されている型付き配列の要素の添字です。</dd>
-  <dt><code><var>array</var></code> {{Optional_inline}}</dt>
-  <dd><code>every</code> が実行されている型付き配列です。</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
- <dd><code><var>callback</var></code> を実行するときに <code>this</code> として使用すされる値です。</dd>
-</dl>
+  - : 各要素に対してテストを実行する関数です。次の 3 つの引数を取ります。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `element`
+      - : 現在処理されている型付き配列の要素です。
+    - `index` {{Optional_inline}}
+      - : 現在処理されている型付き配列の要素の添字です。
+    - `array` {{Optional_inline}}
+      - : `every` が実行されている型付き配列です。
 
-<p><code><var>callback</var></code> 関数が型付き配列のすべての要素について{{Glossary("truthy", "真値")}}を返した場合は <code>true</code>。それ以外は <code>false</code>。</p>
+- `thisArg` {{Optional_inline}}
+  - : `callback` を実行するときに `this` として使用すされる値です。
 
-<h2 id="Description" name="Description">解説</h2>
+### 返値
 
-<p><code>every</code> は、与えられた <code><var>callback</var></code> 関数を、配列に含まれる各要素に対して一度ずつ、 <code><var>callback</var></code> が{{Glossary("falsy", "偽値")}}を返す要素が見つかるまで呼び出します。そのような要素が見つかると、<code>every</code> メソッドはただちに <code>false</code> を返します。<code><var>callback</var></code> がすべての要素に対して{{Glossary("truthy", "真値")}}を返した場合、<code>every</code> は <code>true</code> を返します。</p>
+`callback` 関数が型付き配列のすべての要素について{{Glossary("truthy", "真値")}}を返した場合は `true`。それ以外は `false`。
 
-<p><code><var>callback</var></code> は、要素の値、要素の添字、走査されている型付き配列オブジェクトという 3 つの引数をともなって呼び出されます。</p>
+## 解説
 
-<p><code><var>thisArg</var></code> 引数が <code>every</code> に与えられると、それがコールバックの <code>this</code> として使用されます。それ以外の場合は <code>undefined</code> が <code>this</code> の値として使われます。 <code><var>callback</var></code> が最終的に監視できる <code>this</code> の値は、<a href="/ja/docs/Web/JavaScript/Reference/Operators/this">関数から見た <code>this</code> の決定に関する一般的なルール</a>によって決定されます。</p>
+`every` は、与えられた `callback` 関数を、配列に含まれる各要素に対して一度ずつ、 `callback` が{{Glossary("falsy", "偽値")}}を返す要素が見つかるまで呼び出します。そのような要素が見つかると、`every` メソッドはただちに `false` を返します。`callback` がすべての要素に対して{{Glossary("truthy", "真値")}}を返した場合、`every` は `true` を返します。
 
-<p><code>every</code> は呼び出された型付き配列を変化させません。</p>
+`callback` は、要素の値、要素の添字、走査されている型付き配列オブジェクトという 3 つの引数をともなって呼び出されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+`thisArg` 引数が `every` に与えられると、それがコールバックの `this` として使用されます。それ以外の場合は `undefined` が `this` の値として使われます。 `callback` が最終的に監視できる `this` の値は、[関数から見た `this` の決定に関する一般的なルール](/ja/docs/Web/JavaScript/Reference/Operators/this)によって決定されます。
 
-<h3 id="Testing_size_of_all_typed_array_elements" name="Testing_size_of_all_typed_array_elements">すべての型付き配列の要素の大きさをテストする</h3>
+`every` は呼び出された型付き配列を変化させません。
 
-<p>次の例は、型付き配列内のすべての要素が 10 より大きいかどうかテストします。</p>
+## 例
 
-<pre class="brush: js notranslate">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+### すべての型付き配列の要素の大きさをテストする
+
+次の例は、型付き配列内のすべての要素が 10 より大きいかどうかテストします。
+
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 new Uint8Array([12, 5, 8, 130, 44]).every(isBigEnough);   // false
 new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
-</pre>
+```
 
-<h3 id="Testing_typed_array_elements_using_arrow_functions" name="Testing_typed_array_elements_using_arrow_functions">アロー関数を使用して型付き配列の要素をテストする</h3>
+### アロー関数を使用して型付き配列の要素をテストする
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>によって、同じテストをより短い構文で実現できます。</p>
+[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)によって、同じテストをより短い構文で実現できます。
 
-<pre class="brush: js notranslate">new Uint8Array([12, 5, 8, 130, 44]).every(elem =&gt; elem &gt;= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(elem =&gt; elem &gt;= 10); // true</pre>
+```js
+new Uint8Array([12, 5, 8, 130, 44]).every(elem => elem >= 10); // false
+new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.TypedArray.every")}}</p>
-</div>
+{{Compat("javascript.builtins.TypedArray.every")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.every()")}}

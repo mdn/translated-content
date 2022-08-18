@@ -8,71 +8,65 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.defineProperty()</code></strong> は {{jsxref("Object.defineProperty()")}} に対するトラップです。</p>
+**`handler.defineProperty()`** は {{jsxref("Object.defineProperty()")}} に対するトラップです。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
-  defineProperty: function(<var>target</var>, <var>property</var>, <var>descriptor</var>) {
+```
+const p = new Proxy(target, {
+  defineProperty: function(target, property, descriptor) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>次の引数が <code>defineProperty()</code> メソッドに渡されます。 <code>this</code> はハンドラにバインドされます。</p>
+次の引数が `defineProperty()` メソッドに渡されます。 `this` はハンドラにバインドされます。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>ターゲットオブジェクトです。</dd>
- <dt><code><var>property</var></code></dt>
- <dd>説明を受け取るプロパティの名前または {{jsxref("Symbol")}} です。</dd>
- <dt><code><var>descriptor</var></code></dt>
- <dd>定義や変更されるプロパティに対するディスクリプターです。</dd>
-</dl>
+- `target`
+  - : ターゲットオブジェクトです。
+- `property`
+  - : 説明を受け取るプロパティの名前または {{jsxref("Symbol")}} です。
+- `descriptor`
+  - : 定義や変更されるプロパティに対するディスクリプターです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>defineProperty()</code> メソッドはプロパティが正しく定義されたかどうかを表す {{jsxref("Boolean")}} を返す必要があります。</p>
+`defineProperty()` メソッドはプロパティが正しく定義されたかどうかを表す {{jsxref("Boolean")}} を返す必要があります。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code><strong>handler.defineProperty()</strong></code> メソッドは {{jsxref("Object.defineProperty()")}} に対するトラップです。</p>
+**`handler.defineProperty()`** メソッドは {{jsxref("Object.defineProperty()")}} に対するトラップです。
 
-<h3 id="Interceptions" name="Interceptions">介入</h3>
+### 介入
 
-<p>このトラップは下記の操作に介入できます。</p>
+このトラップは下記の操作に介入できます。
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Reflect.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Reflect.defineProperty()")}}
 
-<h3 id="Invariants" name="Invariants">不変条件</h3>
+### 不変条件
 
-<p>以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。</p>
+以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
 
-<ul>
- <li>ターゲットオブジェクトが拡張不可の場合、プロパティは追加できません。</li>
- <li>ターゲットオブジェクトの設定不可の独自のプロパティとして存在しない場合、プロパティは設定不可とみなされ、追加や変更ができません。</li>
- <li>ターゲットオブジェクトの対応する設定可能なプロパティが存在する場合、プロパティは設定不可にすることができません。</li>
- <li>対応するターゲットオブジェクトのプロパティが存在する場合、<code>Object.defineProperty(target, prop, descriptor)</code> は例外をスローしません。</li>
- <li>strict モードでは、<code>defineProperty</code> ハンドラから <code>false</code> が返ってきた場合、{{jsxref("TypeError")}} 例外をスローします。</li>
-</ul>
+- ターゲットオブジェクトが拡張不可の場合、プロパティは追加できません。
+- ターゲットオブジェクトの設定不可の独自のプロパティとして存在しない場合、プロパティは設定不可とみなされ、追加や変更ができません。
+- ターゲットオブジェクトの対応する設定可能なプロパティが存在する場合、プロパティは設定不可にすることができません。
+- 対応するターゲットオブジェクトのプロパティが存在する場合、`Object.defineProperty(target, prop, descriptor)` は例外をスローしません。
+- strict モードでは、`defineProperty` ハンドラから `false` が返ってきた場合、{{jsxref("TypeError")}} 例外をスローします。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Trapping_of_defineProperty" name="Trapping_of_defineProperty">defineProperty のトラップ</h3>
+### defineProperty のトラップ
 
-<p>次のコードは {{jsxref("Object.defineProperty()")}} をトラップします。</p>
+次のコードは {{jsxref("Object.defineProperty()")}} をトラップします。
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   defineProperty: function(target, prop, descriptor) {
     console.log('called: ' + prop);
     return true;
@@ -81,20 +75,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProper
 
 const desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, 'a', desc); // "called: a"
-</pre>
+```
 
-<p>{{jsxref("Object.defineProperty()")}} または {{jsxref("Reflect.defineProperty()")}} を呼び出した時、 <code>defineProperty()</code> トラップに渡されるディスクリプターには制約があります。下記のプロパティのみが使用可能で、標準ではないプロパティは無視されます。</p>
+{{jsxref("Object.defineProperty()")}} または {{jsxref("Reflect.defineProperty()")}} を呼び出した時、 `defineProperty()` トラップに渡されるディスクリプターには制約があります。下記のプロパティのみが使用可能で、標準ではないプロパティは無視されます。
 
-<ul>
- <li><code>enumerable</code></li>
- <li><code>configurable</code></li>
- <li><code>writable</code></li>
- <li><code>value</code></li>
- <li><code>get</code></li>
- <li><code>set</code></li>
-</ul>
+- `enumerable`
+- `configurable`
+- `writable`
+- `value`
+- `get`
+- `set`
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   defineProperty(target, prop, descriptor) {
     console.log(descriptor);
     return Reflect.defineProperty(target, prop, descriptor);
@@ -105,34 +98,21 @@ Object.defineProperty(p, 'name', {
   value: 'proxy',
   type: 'custom'
 });  // { value: 'proxy' }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}</p>
-</div>
+{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Reflect.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Reflect.defineProperty()")}}

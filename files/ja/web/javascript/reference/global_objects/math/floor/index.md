@@ -8,51 +8,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.floor()</code></strong> 関数は与えられた数値以下の最大の整数を返します。</p>
+**`Math.floor()`** 関数は与えられた数値以下の最大の整数を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/math-floor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-floor.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.floor(x)
+```
 
-<pre class="syntaxbox notranslate">Math.floor(<var>x</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x`
+  - : 数値です。
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>数値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+指定された数値以下の最大の整数を表す数値です。
 
-<p>指定された数値以下の最大の整数を表す数値です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`floor()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.floor()` として使用するようにしてください (`Math` のコンストラクターはありません)。
 
-<p><code>floor()</code> は <code>Math</code> オブジェクトの静的なメソッドなので、自ら生成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に、<code>Math.floor()</code> として使用するようにしてください (<code>Math</code> のコンストラクターはありません)。</p>
+> **Note:** **注:** `Math.floor(null)` は {{jsxref("NaN")}} ではなく 0 を返します。
 
-<div class="blockIndicator note">
-<p><strong>注: </strong><code>Math.floor(null)</code> は {{jsxref("NaN")}} ではなく 0 を返します。</p>
-</div>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Math.floor() の使用
 
-<h3 id="Using_Math.floor" name="Using_Math.floor">Math.floor() の使用</h3>
-
-<pre class="brush: js notranslate">Math.floor( 45.95); //  45
+```js
+Math.floor( 45.95); //  45
 Math.floor( 45.05); //  45
 Math.floor(  4   ); //   4
 Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
-</pre>
+```
 
-<h3 id="Decimal_adjustment" name="Decimal_adjustment">十進数の丸め</h3>
+### 十進数の丸め
 
-<pre class="brush: js notranslate">/**
+```js
+/**
  * Decimal adjustment of a number.
  *
  * @param {String}  type  The type of adjustment.
@@ -68,7 +66,7 @@ function decimalAdjust(type, value, exp) {
   value = +value;
   exp = +exp;
   // If the value is not a number or the exp is not an integer...
-  if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+  if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
     return NaN;
   }
   // Shift
@@ -80,11 +78,11 @@ function decimalAdjust(type, value, exp) {
 }
 
 // Decimal round
-const round10 = (value, exp) =&gt; decimalAdjust('round', value, exp);
+const round10 = (value, exp) => decimalAdjust('round', value, exp);
 // Decimal floor
-const floor10 = (value, exp) =&gt; decimalAdjust('floor', value, exp);
+const floor10 = (value, exp) => decimalAdjust('floor', value, exp);
 // Decimal ceil
-const ceil10 = (value, exp) =&gt; decimalAdjust('ceil', value, exp);
+const ceil10 = (value, exp) => decimalAdjust('ceil', value, exp);
 
 // Round
 round10(55.55, -1);   // 55.6
@@ -105,33 +103,22 @@ ceil10(55.51, -1);    // 55.6
 ceil10(51, 1);        // 60
 ceil10(-55.59, -1);   // -55.5
 ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.floor', 'Math.floor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.floor', 'Math.floor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.floor")}}</p>
+{{Compat("javascript.builtins.Math.floor")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

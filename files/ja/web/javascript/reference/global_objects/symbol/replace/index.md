@@ -8,23 +8,20 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.replace</code></strong> ウェルノウンシンボルは、文字列の一致した部分を置き換えるメソッドを指定します。この関数は {{jsxref("String.prototype.replace()")}} メソッドから呼び出されます。</p>
+**`Symbol.replace`** ウェルノウンシンボルは、文字列の一致した部分を置き換えるメソッドを指定します。この関数は {{jsxref("String.prototype.replace()")}} メソッドから呼び出されます。
 
-<p>詳しくは、 {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} と {{jsxref("String.prototype.replace()")}} を参照してください。</p>
+詳しくは、 {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} と {{jsxref("String.prototype.replace()")}} を参照してください。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}{{js_property_attributes(0,0,0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 例
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### Symbol.replace の使用
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Using_Symbol.replace" name="Using_Symbol.replace">Symbol.replace の使用</h3>
-
-<pre class="brush: js notranslate">class CustomReplacer {
+```js
+class CustomReplacer {
   constructor(value) {
     this.value = value;
   }
@@ -34,32 +31,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 }
 
 console.log('football'.replace(new CustomReplacer('foo')));
-// expected output: "#!@?tball"</pre>
+// expected output: "#!@?tball"
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               |
+| ------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Symbol.replace")}}</p>
+{{Compat("javascript.builtins.Symbol.replace")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}

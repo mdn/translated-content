@@ -8,68 +8,62 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.ownKeys()</code></strong> メソッドは {{jsxref("Reflect.ownKeys()")}} に対するトラップです。</p>
+**`handler.ownKeys()`** メソッドは {{jsxref("Reflect.ownKeys()")}} に対するトラップです。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
-  ownKeys: function(<var>target</var>) {
+```
+const p = new Proxy(target, {
+  ownKeys: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>次の引数は <code>ownKeys</code> メソッドに渡されます。 <code>this</code> はハンドラーにバインドされます。</p>
+次の引数は `ownKeys` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>ターゲットオブジェクトです。</dd>
-</dl>
+- `target`
+  - : ターゲットオブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>ownKeys()</code> メソッドは列挙可能オブジェクトを返さなければなりません。</p>
+`ownKeys()` メソッドは列挙可能オブジェクトを返さなければなりません。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code><strong>handler.ownKeys()</strong></code> メソッドは {{jsxref("Reflect.ownKeys()")}} に対するトラップです。</p>
+**`handler.ownKeys()`** メソッドは {{jsxref("Reflect.ownKeys()")}} に対するトラップです。
 
-<h3 id="Interceptions" name="Interceptions">介入</h3>
+### 介入
 
-<p>このトラップは下記の操作に介入できます。</p>
+このトラップは下記の操作に介入できます。
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.getOwnPropertySymbols()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.getOwnPropertySymbols()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Reflect.ownKeys()")}}
 
-<h3 id="Invariants" name="Invariants">不変条件</h3>
+### 不変条件
 
-<p>以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。</p>
+以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
 
-<ul>
- <li><code>ownKeys</code>の結果はリストです。</li>
- <li>結果リストのそれぞれの要素の型は{{jsxref("String")}} または {{jsxref("Symbol")}}のどちらかです。</li>
- <li>結果リストはターゲットオブジェクトのすべての非設定の独自プロパティのキーを含みます。</li>
- <li>ターゲットオブジェクトが拡張可能でないなら、結果リストはターゲットオブジェクトのすべての独自プロパティのキーを含まなければなりません。そして、他の値を含みません。</li>
-</ul>
+- `ownKeys`の結果はリストです。
+- 結果リストのそれぞれの要素の型は{{jsxref("String")}} または {{jsxref("Symbol")}}のどちらかです。
+- 結果リストはターゲットオブジェクトのすべての非設定の独自プロパティのキーを含みます。
+- ターゲットオブジェクトが拡張可能でないなら、結果リストはターゲットオブジェクトのすべての独自プロパティのキーを含まなければなりません。そして、他の値を含みません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Trapping_of_getOwnPropertyNames" name="Trapping_of_getOwnPropertyNames">getOwnPropertyNames のトラップ</h3>
+### getOwnPropertyNames のトラップ
 
-<p>次のコードでは {{jsxref("Object.getOwnPropertyNames()")}} をトラップします。</p>
+次のコードでは {{jsxref("Object.getOwnPropertyNames()")}} をトラップします。
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   ownKeys: function(target) {
     console.log('called');
     return ['a', 'b', 'c'];
@@ -77,11 +71,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 });
 
 console.log(Object.getOwnPropertyNames(p)); // "called"
-                                            // [ 'a', 'b', 'c' ]</pre>
+                                            // [ 'a', 'b', 'c' ]
+```
 
-<p>次のコードでは不変条件に違反します。</p>
+次のコードでは不変条件に違反します。
 
-<pre class="brush: js example-bad notranslate">const obj = {};
+```js example-bad
+const obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: true,
@@ -98,34 +94,21 @@ console.log(Object.getOwnPropertyNames(p));
 
 // TypeError: proxy [[OwnPropertyKeys]] must return an array
 // with only string and symbol elements
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Proxy.handler.ownKeys")}}</p>
-</div>
+{{Compat("javascript.builtins.Proxy.handler.ownKeys")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Reflect.ownKeys()")}}

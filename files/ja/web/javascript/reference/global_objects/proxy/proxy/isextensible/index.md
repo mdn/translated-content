@@ -8,63 +8,57 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.isExtensible()</code></strong> は {{jsxref("Object.isExtensible()")}} に対するトラップです。</p>
+**`handler.isExtensible()`** は {{jsxref("Object.isExtensible()")}} に対するトラップです。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
-  isExtensible: function(<var>target</var>) {
+```
+const p = new Proxy(target, {
+  isExtensible: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>次の引数は <code>isExtensible</code> メソッドに渡されます。 <code>this</code> はハンドラーにバインドされます。</p>
+次の引数は `isExtensible` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>ターゲットオブジェクトです。</dd>
-</dl>
+- `target`
+  - : ターゲットオブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>isExtensible</code> メソッドは真偽値を返さなければなりません。</p>
+`isExtensible` メソッドは真偽値を返さなければなりません。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code><strong>handler.isExtensible()</strong></code> メソッドは {{jsxref("Object.isExtensible()")}} に対するトラップです。</p>
+**`handler.isExtensible()`** メソッドは {{jsxref("Object.isExtensible()")}} に対するトラップです。
 
-<h3 id="Interceptions" name="Interceptions">介入</h3>
+### 介入
 
-<p>このトラップは下記の操作に介入できます。</p>
+このトラップは下記の操作に介入できます。
 
-<ul>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Reflect.isExtensible()")}}
 
-<h3 id="Invariants" name="Invariants">不変条件</h3>
+### 不変条件
 
-<p>以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。</p>
+以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
 
-<ul>
- <li><code>Object.isExtensible(proxy)</code> は <code>Object.isExtensible(target)</code> と同じ値を返さなければなりません。</li>
-</ul>
+- `Object.isExtensible(proxy)` は `Object.isExtensible(target)` と同じ値を返さなければなりません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Trapping_of_getOwnPropertyNames" name="Trapping_of_getOwnPropertyNames">getOwnPropertyNames のトラップ</h3>
+### getOwnPropertyNames のトラップ
 
-<p>次のコードでは {{jsxref("Object.isExtensible()")}} をトラップします。</p>
+次のコードでは {{jsxref("Object.isExtensible()")}} をトラップします。
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   isExtensible: function(target) {
     console.log('called');
     return true;
@@ -73,45 +67,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 
 console.log(Object.isExtensible(p)); // "called"
                                      // true
-</pre>
+```
 
-<p>次のコードでは不変条件に違反します。</p>
+次のコードでは不変条件に違反します。
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy({}, {
+```js example-bad
+const p = new Proxy({}, {
   isExtensible: function(target) {
     return false;
   }
 });
 
 Object.isExtensible(p); // TypeError is thrown
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Proxy.handler.isExtensible")}}</p>
-</div>
+{{Compat("javascript.builtins.Proxy.handler.isExtensible")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Reflect.isExtensible()")}}

@@ -8,55 +8,45 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Map()</code> コンストラクター</strong>は、 {{jsxref("Map")}} オブジェクトを生成します。</p>
+**`Map()` コンストラクター**は、 {{jsxref("Map")}} オブジェクトを生成します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new Map([<var>iterable</var>])</pre>
+```
+new Map([iterable])
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>iterable</var></code></dt>
- <dd>{{jsxref("Array")}} または他の<a href="/ja/docs/Web/JavaScript/Guide/iterable">反復処理可能</a>なオブジェクトで、要素はキーと値の組です。 (たとえば、 <code>[[ 1, 'one' ],[ 2, 'two' ]]</code> のような2つの要素を持つ配列。) それぞれのそれぞれのキーと値の組が新しい <code>Map</code> に追加されます。</dd>
-</dl>
+- `iterable`
+  - : {{jsxref("Array")}} または他の[反復処理可能](/ja/docs/Web/JavaScript/Guide/iterable)なオブジェクトで、要素はキーと値の組です。 (たとえば、 `[[ 1, 'one' ],[ 2, 'two' ]]` のような 2 つの要素を持つ配列。) それぞれのそれぞれのキーと値の組が新しい `Map` に追加されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Creating_a_new_Map" name="Creating_a_new_Map">新しい Map の生成</h3>
+### 新しい Map の生成
 
-<pre class="brush: js notranslate">let myMap = new Map([
+```js
+let myMap = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
 ])
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map-constructor', 'Map constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                   |
+| ---------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-map-constructor', 'Map constructor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Map.Map")}}</p>
+{{Compat("javascript.builtins.Map.Map")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}

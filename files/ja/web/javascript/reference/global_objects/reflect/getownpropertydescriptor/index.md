@@ -9,45 +9,43 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">静的な <strong><code>Reflect.getOwnPropertyDescriptor()</code></strong> メソッドは {{jsxref("Object.getOwnPropertyDescriptor()")}} と似ています。オブジェクトにプロパティが存在する場合は、指定されたプロパティのプロパティ記述子を返します。一方、プロパティが存在しない場合は {{jsxref("undefined")}} を返します。</span></p>
+静的な **`Reflect.getOwnPropertyDescriptor()`** メソッドは {{jsxref("Object.getOwnPropertyDescriptor()")}} と似ています。オブジェクトにプロパティが存在する場合は、指定されたプロパティのプロパティ記述子を返します。一方、プロパティが存在しない場合は {{jsxref("undefined")}} を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Reflect.getOwnPropertyDescriptor(target, propertyKey)
+```
 
-<pre class="syntaxbox notranslate">Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `target`
+  - : プロパティを探す対象のオブジェクト。
+- `propertyKey`
+  - : 所有しているプロパティ記述子を取得するためのプロパティ名。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>プロパティを探す対象のオブジェクト。</dd>
- <dt><code><var>propertyKey</var></code></dt>
- <dd>所有しているプロパティ記述子を取得するためのプロパティ名。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`target` オブジェクト内にプロパティが存在する場合は、プロパティ記述子オブジェクト、または {{jsxref("undefined")}}。
 
-<p><code><var>target</var></code> オブジェクト内にプロパティが存在する場合は、プロパティ記述子オブジェクト、または {{jsxref("undefined")}}。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合
 
-<p>{{jsxref("TypeError")}}: <code><var>target</var></code> が {{jsxref("Object")}} ではない場合</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Reflect.getOwnPropertyDescriptor` オブジェクトにプロパティが存在する場合、与えられたプロパティのプロパティディスクリプタを返します。一方、プロパティが存在しない場合は、{{jsxref("undefined")}} を返します。{{jsxref("Object.getOwnPropertyDescriptor()")}} との唯一の違いは、非オブジェクトの対象がどのようにバンドルされるかだけです。
 
-<p><code>Reflect.getOwnPropertyDescriptor</code> オブジェクトにプロパティが存在する場合、与えられたプロパティのプロパティディスクリプタを返します。一方、プロパティが存在しない場合は、{{jsxref("undefined")}} を返します。{{jsxref("Object.getOwnPropertyDescriptor()")}} との唯一の違いは、非オブジェクトの対象がどのようにバンドルされるかだけです。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Reflect.getOwnPropertyDescriptor() の使用
 
-<h3 id="Using_Reflect.getOwnPropertyDescriptor" name="Using_Reflect.getOwnPropertyDescriptor">Reflect.getOwnPropertyDescriptor() の使用</h3>
-
-<pre class="brush: js notranslate">Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x')
+```js
+Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x')
 // {value: "hello", writable: true, enumerable: true, configurable: true}
 
 Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y')
@@ -55,40 +53,31 @@ Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y')
 
 Reflect.getOwnPropertyDescriptor([], 'length')
 // {value: 0, writable: true, enumerable: false, configurable: false}
-</pre>
+```
 
-<h3 id="Difference_to_Object.getOwnPropertyDescriptor" name="Difference_to_Object.getOwnPropertyDescriptor">Object.getOwnPropertyDescriptor() との違い</h3>
+### Object.getOwnPropertyDescriptor() との違い
 
-<p>このメソッドへの最初の引数がオブジェクトではない (プリミティブであった) 場合、 {{jsxref("TypeError")}} が発生します。 {{jsxref("Object.getOwnPropertyDescriptor")}} だと、非オブジェクトである最初の引数は強制的にオブジェクトに変換されます。</p>
+このメソッドへの最初の引数がオブジェクトではない (プリミティブであった) 場合、 {{jsxref("TypeError")}} が発生します。 {{jsxref("Object.getOwnPropertyDescriptor")}} だと、非オブジェクトである最初の引数は強制的にオブジェクトに変換されます。
 
-<pre class="brush: js notranslate">Reflect.getOwnPropertyDescriptor('foo', 0)
+```js
+Reflect.getOwnPropertyDescriptor('foo', 0)
 // TypeError: "foo" is not non-null object
 
 Object.getOwnPropertyDescriptor('foo', 0)
-// { value: "f", writable: false, enumerable: true, configurable: false }</pre>
+// { value: "f", writable: false, enumerable: true, configurable: false }
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Reflect.getOwnPropertyDescriptor")}}</p>
+{{Compat("javascript.builtins.Reflect.getOwnPropertyDescriptor")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}

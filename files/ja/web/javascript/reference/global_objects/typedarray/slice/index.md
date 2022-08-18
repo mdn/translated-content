@@ -10,58 +10,50 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>slice()</code></strong> メソッドは、元の型付き配列の部分的なコピーを含む新しい型付き配列 (新しいバッファーによる) を返します。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムを持ちます。 <em>TypedArray</em> は、ここでは<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>の一つです。</p>
+**`slice()`** メソッドは、元の型付き配列の部分的なコピーを含む新しい型付き配列 (新しいバッファーによる) を返します。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムを持ちます。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-slice.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-slice.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.slice([begin[, end]])
+```
 
-<pre class="syntaxbox notranslate"><var>typedarray</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+<dl><dt><code><var>begin</var></code> {{optional_inline}}</dt><dd>抽出範囲の先頭の位置を示す 0 から始まる添字です。</dd><dd>負の添字を使って、配列の末尾からの相対位置を表すことができます。 <code>slice(-2)</code> は配列の最後から 2 番目の要素と最後の要素を抽出します。</dd><dd><code><var>begin</var></code> を省略した場合、 <code>slice</code> は <code>0</code> 番目の要素から開始します。</dd><dt><code><var>end</var></code> {{optional_inline}}</dt><dd>抽出範囲の末尾の<em>直前</em>の位置を示す 0 から始まる添字です。 <code>slice</code> は <code><var>end</var></code> 自体は含めず、その直前まで抽出します。</dd><dd><code>slice(1,4)</code> は 2 番目の要素から 4 番目の要素まで (添字が 1, 2, 3 の要素) を取り出します。</dd><dd>負の添字を使って、配列の末尾からの相対位置を表すことができます。 <code>slice(2,-1)</code> は配列の 3 番目の要素から、最後から 2 番目の要素まで取り出します。</dd><dd><code><var>end</var></code> が省略された場合、 <code>slice</code> は配列の最後 (<code>typedarray.length</code>) まで取り出します。</dd></dl>
 
-<dl>
- <dt><code><var>begin</var></code> {{optional_inline}}</dt>
- <dd>抽出範囲の先頭の位置を示す 0 から始まる添字です。</dd>
- <dd>負の添字を使って、配列の末尾からの相対位置を表すことができます。 <code>slice(-2)</code> は配列の最後から 2 番目の要素と最後の要素を抽出します。</dd>
- <dd><code><var>begin</var></code> を省略した場合、 <code>slice</code> は <code>0</code> 番目の要素から開始します。</dd>
- <dt><code><var>end</var></code> {{optional_inline}}</dt>
- <dd>抽出範囲の末尾の<em>直前</em>の位置を示す 0 から始まる添字です。 <code>slice</code> は <code><var>end</var></code> 自体は含めず、その直前まで抽出します。</dd>
- <dd><code>slice(1,4)</code> は 2 番目の要素から 4 番目の要素まで (添字が 1, 2, 3 の要素) を取り出します。</dd>
- <dd>負の添字を使って、配列の末尾からの相対位置を表すことができます。 <code>slice(2,-1)</code> は配列の 3 番目の要素から、最後から 2 番目の要素まで取り出します。</dd>
- <dd><code><var>end</var></code> が省略された場合、 <code>slice</code> は配列の最後 (<code>typedarray.length</code>) まで取り出します。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+抽出された要素が入った新しい型付き配列。
 
-<p>抽出された要素が入った新しい型付き配列。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`slice` メソッドは元の配列を変更しません。元の配列から取り出された要素のコピーを含む浅いコピーを返します。
 
-<p><code>slice</code> メソッドは元の配列を変更しません。元の配列から取り出された要素のコピーを含む浅いコピーを返します。</p>
+一方の型付き配列に新しい要素が追加されても、他方の型付き配列に影響はしません。
 
-<p>一方の型付き配列に新しい要素が追加されても、他方の型付き配列に影響はしません。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 例: 既存の配列の一部を返す
 
-<h3 id="Example_Return_a_portion_of_an_existing_array" name="Example:_Return_a_portion_of_an_existing_array">例: 既存の配列の一部を返す</h3>
-
-<pre class="brush: js notranslate">var uint8 = new Uint8Array([1,2,3]);
+```js
+var uint8 = new Uint8Array([1,2,3]);
 uint8.slice(1);   // Uint8Array [ 2, 3 ]
 uint8.slice(2);   // Uint8Array [ 3 ]
 uint8.slice(-2);  // Uint8Array [ 2, 3 ]
 uint8.slice(0,1); // Uint8Array [ 1 ]
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p><em>TypedArray</em> という名前のグローバルオブジェクトはないため、ポリフィルの使用は「必要に応じて」の原則で行う必要があります。</p>
+_TypedArray_ という名前のグローバルオブジェクトはないため、ポリフィルの使用は「必要に応じて」の原則で行う必要があります。
 
-<pre class="brush: js notranslate">if (!Uint8Array.prototype.slice) {
+```js
+if (!Uint8Array.prototype.slice) {
   Object.defineProperty(Uint8Array.prototype, 'slice', {
     value: function (begin, end)
      {
@@ -69,33 +61,20 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
      }
   });
 }
-</pre>
+```
 
-<p>{{jsxref("Object.defineProperty")}} に対応していない本当に古い JavaScript エンジンに対応する必要がある場合は、列挙不可能にすることができないため、 <code>Array.prototype</code> メソッドのポリフィルを行わないことが適切です。</p>
+{{jsxref("Object.defineProperty")}} に対応していない本当に古い JavaScript エンジンに対応する必要がある場合は、列挙不可能にすることができないため、 `Array.prototype` メソッドのポリフィルを行わないことが適切です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.TypedArray.slice")}}</p>
-</div>
+{{Compat("javascript.builtins.TypedArray.slice")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.slice()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.slice()")}}

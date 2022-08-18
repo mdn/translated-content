@@ -11,62 +11,53 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>blink()</code></strong> メソッドは、文字列を点滅させる HTML の {{HTMLElement("blink")}} 要素を生成します。</p>
+**`blink()`** メソッドは、文字列を点滅させる HTML の {{HTMLElement("blink")}} 要素を生成します。
 
-<div class="warning">
-<p><strong>警告:</strong> 文字列の点滅はアクセシビリティの観点から好ましくありません。また、<code>&lt;blink&gt;</code> 要素は非標準であり非推奨です！</p>
-</div>
+> **Warning:** **警告:** 文字列の点滅はアクセシビリティの観点から好ましくありません。また、`<blink>` 要素は非標準であり非推奨です！
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>str</var>.blink()</pre>
+```
+str.blink()
+```
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>HTML の {{HTMLElement("blink")}} 要素を含む文字列です。</p>
+HTML の {{HTMLElement("blink")}} 要素を含む文字列です。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>blink()</code> メソッドは、文字列を <code>&lt;blink&gt;</code> 要素の中に、 "<code>&lt;blink&gt;str&lt;/blink&gt;</code>" のように埋め込みます。</p>
+`blink()` メソッドは、文字列を `<blink>` 要素の中に、 "`<blink>str</blink>`" のように埋め込みます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_blink" name="Using_blink">blink() の使用</h3>
+### blink() の使用
 
-<p>以下の例では文字列のメソッドを使用して、文字列の整形方法を変化させています。</p>
+以下の例では文字列のメソッドを使用して、文字列の整形方法を変化させています。
 
-<pre class="brush: js notranslate">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.blink());   // &lt;blink&gt;Hello, world&lt;/blink&gt;
-console.log(worldString.bold());    // &lt;b&gt;Hello, world&lt;/b&gt;
-console.log(worldString.italics()); // &lt;i&gt;Hello, world&lt;/i&gt;
-console.log(worldString.strike());  // &lt;strike&gt;Hello, world&lt;/strike&gt;</pre>
+console.log(worldString.blink());   // <blink>Hello, world</blink>
+console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.italics()); // <i>Hello, world</i>
+console.log(worldString.strike());  // <strike>Hello, world</strike>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.blink")}}</p>
+{{Compat("javascript.builtins.String.blink")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

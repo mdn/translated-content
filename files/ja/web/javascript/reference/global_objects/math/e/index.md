@@ -8,58 +8,44 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.E</code></strong> プロパティは自然対数の底 (e)、約 2.718 を表します。</p>
+**`Math.E`** プロパティは自然対数の底 (e)、約 2.718 を表します。
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-e.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-e.html")}}{{js_property_attributes(0, 0, 0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 解説
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`E` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.E` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-<h2 id="Description" name="Description">解説</h2>
+## 例
 
-<p><code>E</code> は <code>Math</code> オブジェクトの静的プロパティなので、 <code>Math</code> オブジェクトを生成してプロパティとして使用するのではなく、常に <code>Math.E</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
+### Math.E の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+以下の関数は、e を返します。
 
-<h3 id="Using_Math.E" name="Using_Math.E">Math.E の使用</h3>
-
-<p>以下の関数は、e を返します。</p>
-
-<pre class="brush: js notranslate">function getNapier() {
+```js
+function getNapier() {
   return Math.E;
 }
 
 getNapier(); // 2.718281828459045
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.e', 'Math.E')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           |
+| ---------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.e', 'Math.E')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.E")}}</p>
+{{Compat("javascript.builtins.Math.E")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}

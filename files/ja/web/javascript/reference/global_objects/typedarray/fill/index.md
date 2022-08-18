@@ -10,85 +10,72 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>fill()</code></strong> メソッドは、型付き配列の開始位置から終了位置までのすべての要素を固定値で埋めます。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。ここで <em>TypedArray</em> は、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの1つです。</p>
+**`fill()`** メソッドは、型付き配列の開始位置から終了位置までのすべての要素を固定値で埋めます。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.fill(value[, start = 0[, end = this.length]])
+```
 
-<pre class="syntaxbox notranslate"><var>typedarray</var>.fill(<var>value</var>[, <var>start = 0</var>[, <var>end = this.length</var>]])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value`
+  - : 型付き配列を埋める値です。
+- `start` {{optional_inline}}
+  - : 開始位置です。既定値は 0 です。
+- `end` {{optional_inline}}
+  - : 終了位置 (の次の位置) です既定値は `this.length` です。
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>型付き配列を埋める値です。</dd>
- <dt><code><var>start</var></code> {{optional_inline}}</dt>
- <dd>開始位置です。既定値は 0 です。</dd>
- <dt><code><var>end</var></code> {{optional_inline}}</dt>
- <dd>終了位置 (の次の位置) です既定値は <code>this.length</code> です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+変更された配列です。
 
-<p>変更された配列です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+埋める区間は \[`start`, `end`) です。
 
-<p>埋める区間は [<code><var>start</var></code>, <code><var>end</var></code>) です。</p>
+**`fill()`** メソッドは `value`, `start`, `end` の 3 つまでの引数を取ります。 `start` と `end` の各引数は省略可能で、既定値はそれぞれ `0` と、 `this` オブジェクトの `length` です。
 
-<p><strong><code>fill()</code></strong> メソッドは <code><var>value</var></code>, <code><var>start</var></code>, <code><var>end</var></code> の3つまでの引数を取ります。 <code><var>start</var></code> と <code><var>end</var></code> の各引数は省略可能で、既定値はそれぞれ <code>0</code> と、 <code>this</code> オブジェクトの <code>length</code> です。</p>
+`start` が負の数であった場合は、 `length+start` (`length` は配列の長さ) として扱われます。 `end` が負の数であった場合は、 `length+end` として扱われます。
 
-<p><code><var>start</var></code> が負の数であった場合は、 <code>length+start</code> (<code>length</code> は配列の長さ) として扱われます。 <code><var>end</var></code> が負の数であった場合は、 <code>length+end</code> として扱われます。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### fill() の使用
 
-<h3 id="Using_fill" name="Using_fill">fill() の使用</h3>
-
-<pre class="brush: js notranslate">new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
+```js
+new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
 new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p><em>TypedArray</em> という名前のグローバルオブジェクトはないため、ポリフィルの使用は「必要に応じて」の原則で行う必要があります。以下の「ポリフィル」は、 {{jsxref("Array.prototype.fill()")}} のポリフィルと同時に使用してください。</p>
+_TypedArray_ という名前のグローバルオブジェクトはないため、ポリフィルの使用は「必要に応じて」の原則で行う必要があります。以下の「ポリフィル」は、 {{jsxref("Array.prototype.fill()")}} のポリフィルと同時に使用してください。
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
+```js
+// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
 if (!Uint8Array.prototype.fill) {
   Uint8Array.prototype.fill = Array.prototype.fill;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.TypedArray.fill")}}</p>
-</div>
+{{Compat("javascript.builtins.TypedArray.fill")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.fill()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.fill()")}}

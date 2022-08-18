@@ -10,42 +10,40 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>matchAll()</code></strong> は<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">キャプチャグループ</a>を含む<em><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a></em>に一致するすべての<var>文字列</var>をイテレーターで返すメソッドです。</p>
+**`matchAll()`** は[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を含む*[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)*に一致するすべての*文字列*をイテレーターで返すメソッドです。
 
-<div>{{EmbedInteractiveExample("pages/js/string-matchall.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.matchAll(regexp)
+```
 
-<pre class="syntaxbox notranslate"><var>str</var>.matchAll(<var>regexp</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `regexp`
 
-<dl>
- <dt><code><var>regexp</var></code></dt>
- <dd>
- <p>正規表現オブジェクトです。</p>
+  - : 正規表現オブジェクトです。
 
- <p><code>RegExp</code> でないオブジェクト <code><var>obj</var></code> が渡された場合は {{jsxref("RegExp")}} オブジェクトに <code>new RegExp(<var>obj</var>)</code> を使用して暗黙的に変換されます。</p>
+    `RegExp` でないオブジェクト `obj` が渡された場合は {{jsxref("RegExp")}} オブジェクトに `new RegExp(obj)` を使用して暗黙的に変換されます。
 
- <p><code>RegExp</code> オブジェクトには <code>/g</code> フラグが必須であり、ない場合は <code>TypeError</code> が発生します。</p>
- </dd>
-</dl>
+    `RegExp` オブジェクトには `/g` フラグが必須であり、ない場合は `TypeError` が発生します。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><a href="/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators">イテレーター</a> (再起動不可能なもの)。</p>
+[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators) (再起動不可能なもの)。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Regexp.exec_and_matchAll" name="Regexp.exec_and_matchAll">Regexp.exec() と matchAll()</h3>
+### Regexp.exec() と matchAll()
 
-<p><code>matchAll</code> が JavaScript に追加される前は、 <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">regexp.exec</a> (および <code>/g</code> フラグ付きの正規表現) をループの中で呼び出すことですべての一致結果を取得することができました。</p>
+`matchAll` が JavaScript に追加される前は、 [regexp.exec](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (および `/g` フラグ付きの正規表現) をループの中で呼び出すことですべての一致結果を取得することができました。
 
-<pre class="brush: js notranslate">const regexp = RegExp('foo[a-z]*','g');
+```js
+const regexp = RegExp('foo[a-z]*','g');
 const str = 'table football, foosball';
 let match;
 
@@ -53,13 +51,15 @@ while ((match = regexp.exec(str)) !== null) {
   console.log(`Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`);
   // expected output: "Found football start=6 end=14."
   // expected output: "Found foosball start=16 end=24."
-}</pre>
+}
+```
 
-<p><code>matchAll</code> が使えるようになったことで、 {{jsxref("Statements/while", "while")}} によるループと、 <code>g</code> 付きの <code>exec</code> を避けることができます。</p>
+`matchAll` が使えるようになったことで、 {{jsxref("Statements/while", "while")}} によるループと、 `g` 付きの `exec` を避けることができます。
 
-<p>また代わりに <code>matchAll</code> を使うことで、 {{jsxref("Statements/for...of", "for...of")}}、 {{jsxref("Operators/Spread_syntax", "配列スプレッド", "", 1)}}、 {{jsxref("Array.from()")}} 構造と効率よく組み合わせることができます。</p>
+また代わりに `matchAll` を使うことで、 {{jsxref("Statements/for...of", "for...of")}}、 {{jsxref("Operators/Spread_syntax", "配列スプレッド", "", 1)}}、 {{jsxref("Array.from()")}} 構造と効率よく組み合わせることができます。
 
-<pre class="brush: js notranslate">const regexp = RegExp('foo[a-z]*','g');
+```js
+const regexp = RegExp('foo[a-z]*','g');
 const str = 'table football, foosball';
 const matches = str.matchAll(regexp);
 
@@ -71,73 +71,69 @@ for (const match of matches) {
 
 // matches iterator is exhausted after the for..of iteration
 // Call matchAll again to create a new iterator
-Array.from(str.matchAll(regexp), m =&gt; m[0]);
-// Array [ "football", "foosball" ]</pre>
+Array.from(str.matchAll(regexp), m => m[0]);
+// Array [ "football", "foosball" ]
+```
 
-<p><code>matchAll</code> は、グローバル (<code>g</code>) フラグがない場合は例外が発生します。</p>
+`matchAll` は、グローバル (`g`) フラグがない場合は例外が発生します。
 
-<pre class="brush: js notranslate">const regexp = RegExp('[a-c]','');
+```js
+const regexp = RegExp('[a-c]','');
 const str = 'abc';
 str.matchAll(regexp);
 // TypeError
-</pre>
+```
 
-<p><code>matchAll</code> では内部的に {{jsxref("RegExp")}} オブジェクトをクローンします。そのため {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}} とは違って文字列をスキャンした際に <code>lastIndex</code> が変わることはありません。</p>
+`matchAll` では内部的に {{jsxref("RegExp")}} オブジェクトをクローンします。そのため {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}} とは違って文字列をスキャンした際に `lastIndex` が変わることはありません。
 
-<pre class="brush: js notranslate">const regexp = RegExp('[a-c]','g');
+```js
+const regexp = RegExp('[a-c]','g');
 regexp.lastIndex = 1;
 const str = 'abc';
-Array.from(str.matchAll(regexp), m =&gt; `${regexp.lastIndex} ${m[0]}`);
-// Array [ "1 b", "1 c" ]</pre>
+Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
+// Array [ "1 b", "1 c" ]
+```
 
-<h3 id="Better_access_to_capturing_groups_than_String.prototype.match" name="Better_access_to_capturing_groups_than_String.prototype.match">キャプチャリンググループへのより良いアクセス（String.prototype.match()との比較）</h3>
+### キャプチャリンググループへのより良いアクセス（String.prototype.match()との比較）
 
-<p><code>matchAll</code> はキャプチャグループへのよりよいアクセスを実現します。</p>
+`matchAll` はキャプチャグループへのよりよいアクセスを実現します。
 
-<p>{{jsxref("Global_Objects/String/match", "match()")}} では、グローバル <code>/g</code> フラグを使用するとキャプチャグループが無視されてしまいます。</p>
+{{jsxref("Global_Objects/String/match", "match()")}} では、グローバル `/g` フラグを使用するとキャプチャグループが無視されてしまいます。
 
-<pre class="brush: js notranslate">let regexp = /t(e)(st(\d?))/g;
+```js
+let regexp = /t(e)(st(\d?))/g;
 let str = 'test1test2';
 
 str.match(regexp);
-// Array ['test1', 'test2']</pre>
+// Array ['test1', 'test2']
+```
 
-<p><code>matchAll</code> を使えば簡単にキャプチャグループにアクセスできます。</p>
+`matchAll` を使えば簡単にキャプチャグループにアクセスできます。
 
-<pre class="brush: js notranslate">let array = [...str.matchAll(regexp)];
+```js
+let array = [...str.matchAll(regexp)];
 
 array[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
 array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.matchAll")}}</p>
+{{Compat("javascript.builtins.String.matchAll")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript での正規表現の使用</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Capturing groups</a></li>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.match()")}}
+- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Capturing groups](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- {{jsxref("RegExp")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

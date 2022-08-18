@@ -10,27 +10,28 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>entries()</code></strong> メソッドは、配列内の各要素に対するキー/値のペアを含む新しい <strong>Array イテレーター</strong>オブジェクトを返します。</p>
+**`entries()`** メソッドは、配列内の各要素に対するキー/値のペアを含む新しい **Array イテレーター**オブジェクトを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/array-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+array.entries()
+```
 
-<pre class="syntaxbox notranslate"><var>array</var>.entries()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+新しい {{jsxref("Array")}} イテレーターオブジェクトを返します。
 
-<p>新しい {{jsxref("Array")}} イテレーターオブジェクトを返します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### インデックスと要素の反復処理
 
-<h3 id="Iterating_with_index_and_element" name="Iterating_with_index_and_element">インデックスと要素の反復処理</h3>
-
-<pre class="brush:js notranslate">const a = ['a', 'b', 'c'];
+```js
+const a = ['a', 'b', 'c'];
 
 for (const [index, element] of a.entries())
   console.log(index, element);
@@ -38,11 +39,12 @@ for (const [index, element] of a.entries())
 // 0 'a'
 // 1 'b'
 // 2 'c'
-</pre>
+```
 
-<h3 id="Using_a_for…of_loop" name="Using_a_for…of_loop"><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> loop で使う</h3>
+### [for…of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) loop で使う
 
-<pre class="brush:js notranslate">var a = ['a', 'b', 'c'];
+```js
+var a = ['a', 'b', 'c'];
 var iterator = a.entries();
 
 for (let e of iterator) {
@@ -51,37 +53,24 @@ for (let e of iterator) {
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Array.entries")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.entries")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols">反復処理プロトコル</a></li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

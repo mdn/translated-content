@@ -9,57 +9,47 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getDate()</code></strong> メソッドは、地方時に基づき、指定された日付の「日」を返します。</p>
+**`getDate()`** メソッドは、地方時に基づき、指定された日付の「日」を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getdate.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getdate.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.getDate()
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.getDate()</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+1 から 31 までの間の整数値。地方時に基づき、指定された日付の「日」を表します。
 
-<p>1 から 31 までの間の整数値。地方時に基づき、指定された日付の「日」を表します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### getDate() の使用
 
-<h3 id="Using_getDate" name="Using_getDate">getDate() の使用</h3>
+以下の 2 行目の文は、{{jsxref("Date")}} オブジェクト `Xmas95` の値に基づき、変数 `day` に 25 という値を代入します。
 
-<p>以下の 2 行目の文は、{{jsxref("Date")}} オブジェクト <code>Xmas95</code> の値に基づき、変数 <code>day</code> に 25 という値を代入します。</p>
-
-<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var day = Xmas95.getDate();
 
 console.log(day); // 25
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getdate', 'Date.prototype.getDate')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.getdate', 'Date.prototype.getDate')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.getDate")}}</p>
+{{Compat("javascript.builtins.Date.getDate")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setDate()")}}

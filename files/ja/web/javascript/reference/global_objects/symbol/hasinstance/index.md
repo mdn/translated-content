@@ -9,70 +9,59 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>Symbol.hasInstance</code></strong> は、コンストラクターオブジェクトが、そのインスタンスのオブジェクトとして認識されるかどうかを決定するために使用されます。このシンボルで、{{jsxref("Operators/instanceof", "instanceof")}} 演算子の動作をカスタマイズすることができます。</span></p>
+**`Symbol.hasInstance`** は、コンストラクターオブジェクトが、そのインスタンスのオブジェクトとして認識されるかどうかを決定するために使用されます。このシンボルで、{{jsxref("Operators/instanceof", "instanceof")}} 演算子の動作をカスタマイズすることができます。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+## 例
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### 独自のインスタンスでの動作
 
-<h2 id="Examples" name="Examples">例</h2>
+たとえば、次のようにして `instanceof` の独自の動作を実装することができます。
 
-<h3 id="Custom_instanceof_behavior" name="Custom_instanceof_behavior">独自のインスタンスでの動作</h3>
-
-<p>たとえば、次のようにして <code>instanceof</code> の独自の動作を実装することができます。</p>
-
-<pre class="brush: js notranslate">class MyArray {
+```js
+class MyArray {
   static [Symbol.hasInstance](instance) {
     return Array.isArray(instance)
   }
 }
 console.log([] instanceof MyArray); // true
-</pre>
+```
 
-<pre class="brush: js notranslate">function MyArray() { }
+```js
+function MyArray() { }
 Object.defineProperty(MyArray, Symbol.hasInstance, {
   value: function(instance) { return Array.isArray(instance); }
 });
-console.log([] instanceof MyArray); // true</pre>
+console.log([] instanceof MyArray); // true
+```
 
-<h3 id="Checking_the_instance_of_an_object" name="Checking_the_instance_of_an_object">オブジェクトのインスタンスを確認する</h3>
+### オブジェクトのインスタンスを確認する
 
-<p><code>instanceof</code> キーワードを使ってオブジェクトがクラスのインスタンスであるかどうかを確認するのと同じ方法で、<code>Symbol.hasInstance</code> を使って確認することもできます。</p>
+`instanceof` キーワードを使ってオブジェクトがクラスのインスタンスであるかどうかを確認するのと同じ方法で、`Symbol.hasInstance` を使って確認することもできます。
 
-<pre class="brush: js notranslate">class Animal {
+```js
+class Animal {
   constructor() {}
 }
 
 const cat = new Animal();
 
 console.log(Animal[Symbol.hasInstance](cat)); // true
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Symbol.hasInstance")}}</p>
+{{Compat("javascript.builtins.Symbol.hasInstance")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}

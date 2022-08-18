@@ -10,71 +10,58 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>search()</code></strong> メソッドは、対象の {{jsxref("String")}} オブジェクトが正規表現で一致するかどうかを調べるためのメソッドです。</p>
+**`search()`** メソッドは、対象の {{jsxref("String")}} オブジェクトが正規表現で一致するかどうかを調べるためのメソッドです。
 
-<div>{{EmbedInteractiveExample("pages/js/string-search.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-search.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.search(regexp)
+```
 
-<pre class="syntaxbox notranslate"><var>str</var>.search(<var>regexp</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+<dl><dt><code><var>regexp</var></code></dt><dd><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>正規表現オブジェクトです。</dd><dd>正規表現でないオブジェクト <code><var>regexp</var></code> が渡された場合は {{jsxref("RegExp")}} オブジェクトに <code>new RegExp(<var>regexp</var>)</code> を使用して暗黙的に変換されます。</dd></dl>
 
-<dl>
- <dt><code><var>regexp</var></code></dt>
- <dd><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>正規表現オブジェクトです。</dd>
- <dd>正規表現でないオブジェクト <code><var>regexp</var></code> が渡された場合は {{jsxref("RegExp")}} オブジェクトに <code>new RegExp(<var>regexp</var>)</code> を使用して暗黙的に変換されます。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた文字列と正規表現の間で最初にマッチした箇所のインデックスを返します。マッチしなかった場合は `-1` を返します。
 
-<p>与えられた文字列と正規表現の間で最初にマッチした箇所のインデックスを返します。マッチしなかった場合は <code>-1</code> を返します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+あるパターンが見つかるかどうかを知りたい場合*や*、文字列の中の位置を知りたい場合は、 `search()` メソッドを利用してください。 (存在するかどうかを知りたいだけの場合は、 `RegExp` に同様のメソッドである {{jsxref("RegExp.prototype.test()", "test()")}} メソッドがあり、これは論理値を返します。
 
-<p>あるパターンが見つかるかどうかを知りたい場合<em>や</em>、文字列の中の位置を知りたい場合は、 <code>search()</code> メソッドを利用してください。 (存在するかどうかを知りたいだけの場合は、 <code>RegExp</code> に同様のメソッドである {{jsxref("RegExp.prototype.test()", "test()")}} メソッドがあり、これは論理値を返します。</p>
+より多くの情報が欲しい場合は (実行速度が遅くなりますが) {{jsxref("String.prototype.match()", "match()")}} メソッドを使用してください (同様のメソッドとして、{{jsxref("RegExp.prototype.exec()", "exec()")}} メソッドがあります)。
 
-<p>より多くの情報が欲しい場合は (実行速度が遅くなりますが) {{jsxref("String.prototype.match()", "match()")}} メソッドを使用してください (同様のメソッドとして、{{jsxref("RegExp.prototype.exec()", "exec()")}} メソッドがあります)。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### search() の使用
 
-<h3 id="Using_search" name="Using_search">search() の使用</h3>
+次の例は、2 つの異なる正規表現オブジェクトで文字列を検索し、成功した検索 (正の値) と失敗した検索 (`-1`) を表示します。
 
-<p>次の例は、2つの異なる正規表現オブジェクトで文字列を検索し、成功した検索 (正の値) と失敗した検索 (<code>-1</code>) を表示します。</p>
-
-<pre class="brush: js notranslate">let str = "hey JudE"
+```js
+let str = "hey JudE"
 let re = /[A-Z]/g
 let reDot = /[.]/g
 console.log(str.search(re))    // 最初の大文字 "J" の位置である 4 を返します
-console.log(str.search(reDot)) // '.' ドット記号が見つからないので -1 を返します</pre>
+console.log(str.search(reDot)) // '.' ドット記号が見つからないので -1 を返します
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.search")}}</p>
+{{Compat("javascript.builtins.String.search")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript の正規表現の使用</a></li>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
-</ul>
+- [JavaScript の正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}

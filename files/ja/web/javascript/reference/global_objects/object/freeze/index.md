@@ -15,75 +15,76 @@ tags:
   - 変更可能性
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.freeze()</strong></code> メソッドはオブジェクトを<strong>凍結</strong>します。凍結されたオブジェクトは変更できなくなります。オブジェクトを凍結すると、新しいプロパティを追加したり、既存のプロパティを削除したりすることができなくなり、既存のプロパティに対する列挙可否、構成可否、書き込み可否の変更ができなくなり、既存のプロパティの値が変更できなくなります。加えて、オブジェクトを凍結するとプロトタイプも変更できなくなります。<code>freeze()</code> は渡されたものと同じオブジェクトを返します。</p>
+**`Object.freeze()`** メソッドはオブジェクトを**凍結**します。凍結されたオブジェクトは変更できなくなります。オブジェクトを凍結すると、新しいプロパティを追加したり、既存のプロパティを削除したりすることができなくなり、既存のプロパティに対する列挙可否、構成可否、書き込み可否の変更ができなくなり、既存のプロパティの値が変更できなくなります。加えて、オブジェクトを凍結するとプロトタイプも変更できなくなります。`freeze()` は渡されたものと同じオブジェクトを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-freeze.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Object.freeze(obj)
+```
 
-<pre class="syntaxbox notranslate">Object.freeze(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : 凍結するオブジェクトです。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>凍結するオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+この関数に渡されたオブジェクトです。
 
-<p>この関数に渡されたオブジェクトです。</p>
+## 説明
 
-<h2 id="Description" name="Description">説明</h2>
+凍結されたオブジェクトにプロパティのセットを追加あるいは削除することはできません。実行しようとすると暗黙に失敗するか、または {{jsxref("TypeError")}} 例外が発生して失敗します (多くの場合は、ただし{{jsxref("Strict_mode", "厳格モード", "", 1)}}ではこれに限りません)。
 
-<p>凍結されたオブジェクトにプロパティのセットを追加あるいは削除することはできません。実行しようとすると暗黙に失敗するか、または {{jsxref("TypeError")}} 例外が発生して失敗します (多くの場合は、ただし{{jsxref("Strict_mode", "厳格モード", "", 1)}}ではこれに限りません)。</p>
+凍結されたオブジェクトデータプロパティについては、値を変更することはできず、構成可否、書き込み可否の属性は false に設定されます。アクセサープロパティ (ゲッターおよびセッター) は同様に動作します (そして、値を変更しているかのようにみえます)。なお、オブジェクトである値については、それも凍結されていない限り変更可能です。オブジェクトとして、配列は凍結可能です。凍結すると、要素が変更可能ではなくなり、配列に対する要素の追加や削除ができなくなります。
 
-<p>凍結されたオブジェクトデータプロパティについては、値を変更することはできず、構成可否、書き込み可否の属性は false に設定されます。アクセサープロパティ (ゲッターおよびセッター) は同様に動作します (そして、値を変更しているかのようにみえます)。なお、オブジェクトである値については、それも凍結されていない限り変更可能です。オブジェクトとして、配列は凍結可能です。凍結すると、要素が変更可能ではなくなり、配列に対する要素の追加や削除ができなくなります。</p>
+`freeze()` は関数に渡されたものと同じオブジェクトを返します。凍結されたコピーを生成する訳では*ありません*。
 
-<p><code>freeze()</code> は関数に渡されたものと同じオブジェクトを返します。凍結されたコピーを生成する訳では<em>ありません</em>。</p>
+ECMAScript 5 では、このメソッドの引数がオブジェクトではない (プリミティブである) 場合、{{jsxref("TypeError")}} が発生します。ECMAScript 2015 では、オブジェクトではない引数は通常の凍結済みのオブジェクトである場合と同様に扱い、単純に返されます。
 
-<p>ECMAScript 5 では、このメソッドの引数がオブジェクトではない (プリミティブである) 場合、{{jsxref("TypeError")}} が発生します。ECMAScript 2015 では、オブジェクトではない引数は通常の凍結済みのオブジェクトである場合と同様に扱い、単純に返されます。</p>
-
-<pre class="brush: js notranslate">&gt; Object.freeze(1)
+```js
+> Object.freeze(1)
 TypeError: 1 is not an object // ES5 のコード
 
-&gt; Object.freeze(1)
+> Object.freeze(1)
 1                             // ES2015 のコード
-</pre>
+```
 
-<p>要素を伴う {{domxref("ArrayBufferView")}} では、メモリー上のビューであり絶対的に他の問題の可能性があるため、{{jsxref("TypeError")}} が発生します。</p>
+要素を伴う {{domxref("ArrayBufferView")}} では、メモリー上のビューであり絶対的に他の問題の可能性があるため、{{jsxref("TypeError")}} が発生します。
 
-<pre class="brush: js notranslate">&gt; Object.freeze(new Uint8Array(0)) // 要素なし
-<em>Uint8Array</em> []
+```js
+> Object.freeze(new Uint8Array(0)) // 要素なし
+Uint8Array []
 
-&gt; Object.freeze(new Uint8Array(1)) // 要素あり
+> Object.freeze(new Uint8Array(1)) // 要素あり
 TypeError: Cannot freeze array buffer views with elements
 
-&gt; Object.freeze(new DataView(new ArrayBuffer(32))) // 要素なし
-<em>DataView</em> {}
+> Object.freeze(new DataView(new ArrayBuffer(32))) // 要素なし
+DataView {}
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // 要素なし
-<em>Float64Array</em> []
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // 要素なし
+Float64Array []
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // 要素あり
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // 要素あり
 TypeError: Cannot freeze array buffer views with elements
-</pre>
+```
 
-<p>なお、標準の3つのプロパティ (<code>buf.byteLength</code>, <code>buf.byteOffset</code> and <code>buf.buffer</code>) は読み取り専用ですので ({{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の場合)、これらのプロパティを凍結しようとする理由はありません。</p>
+なお、標準の 3 つのプロパティ (`buf.byteLength`, `buf.byteOffset` and `buf.buffer`) は読み取り専用ですので ({{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の場合)、これらのプロパティを凍結しようとする理由はありません。
 
-<h3 id="Comparison_to_Object.seal" name="Comparison_to_Object.seal()">Object.seal() との比較</h3>
+### Object.seal() との比較
 
-<p>{{jsxref("Object.seal()")}} によって封印されたオブジェクトは、既存のプロパティを変更することができます。<code>Object.freeze()</code> によって凍結されたオブジェクトの既存のプロパティは、不変になります。</p>
+{{jsxref("Object.seal()")}} によって封印されたオブジェクトは、既存のプロパティを変更することができます。`Object.freeze()` によって凍結されたオブジェクトの既存のプロパティは、不変になります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Freezing_objects" name="Freezing_objects">オブジェクトの凍結</h3>
+### オブジェクトの凍結
 
-<pre class="brush: js notranslate">const obj = {
+```js
+const obj = {
   prop() {},
   foo: 'bar'
 };
@@ -128,11 +129,12 @@ Object.defineProperty(obj, 'foo', { value: 'eit' });
 // 以下のどちらの文も TypeError が発生します。
 Object.setPrototypeOf(obj, { x: 20 })
 obj.__proto__ = { x: 20 }
-</pre>
+```
 
-<h3 id="Freezing_arrays" name="Freezing_arrays">配列の凍結</h3>
+### 配列の凍結
 
-<pre class="brush: js notranslate">let a = [0];
+```js
+let a = [0];
 Object.freeze(a); // 配列が変更できなくなりました。
 
 a[0] = 1; // 暗黙に失敗
@@ -146,26 +148,30 @@ function fail() {
 fail();
 
 // push を試みる
-a.push(2); // TypeError が発生</pre>
+a.push(2); // TypeError が発生
+```
 
-<p>凍結されたオブジェクトは<em>不変</em>になります。しかし、<em>定数</em>であるとは限りません。以下の例では、凍結されたオブジェクトが定数ではないことを示しています (凍結が浅い)。</p>
+凍結されたオブジェクトは*不変*になります。しかし、*定数*であるとは限りません。以下の例では、凍結されたオブジェクトが定数ではないことを示しています (凍結が浅い)。
 
-<pre class="brush: js notranslate">const obj1 = {
+```js
+const obj1 = {
   internal: {}
 };
 
 Object.freeze(obj1);
 obj1.internal.a = 'aValue';
 
-obj1.internal.a // 'aValue'</pre>
+obj1.internal.a // 'aValue'
+```
 
-<p>定数オブジェクトになるには、参照のつながり全体 (他のオブジェクトへの直接または間接的な参照) が不変で凍結されたオブジェクトのみを参照していなければなりません。凍結されるオブジェクトは、オブジェクト全体の中にあるオブジェクトの<em>状態</em> (値と他のオブジェクトへの参照) がすべて固定されているので、不変ということができます。なお、文字列、数値、真偽値はすべて不変となり、関数や配列はオブジェクト扱いです。</p>
+定数オブジェクトになるには、参照のつながり全体 (他のオブジェクトへの直接または間接的な参照) が不変で凍結されたオブジェクトのみを参照していなければなりません。凍結されるオブジェクトは、オブジェクト全体の中にあるオブジェクトの*状態* (値と他のオブジェクトへの参照) がすべて固定されているので、不変ということができます。なお、文字列、数値、真偽値はすべて不変となり、関数や配列はオブジェクト扱いです。
 
-<h4 id="What_is_shallow_freeze" name="What_is_shallow_freeze">浅い凍結とは</h4>
+#### 浅い凍結とは
 
-<p><code>Object.freeze(<var>object</var>)</code> を呼び出した結果は、<code>object</code> の直属のプロパティにのみ適用され、<code>object</code> 上<em>のみ</em>に対するその後のプロパティの追加、削除、値の再割り当て操作を禁止します。これらのプロパティの値がオブジェクトそのものであった場合、これらのオブジェクトは凍結されず、プロパティの追加、削除、値の再割り当て操作の対象になり得ます。</p>
+`Object.freeze(object)` を呼び出した結果は、`object` の直属のプロパティにのみ適用され、`object` 上*のみ*に対するその後のプロパティの追加、削除、値の再割り当て操作を禁止します。これらのプロパティの値がオブジェクトそのものであった場合、これらのオブジェクトは凍結されず、プロパティの追加、削除、値の再割り当て操作の対象になり得ます。
 
-<pre class="brush: js notranslate">const employee = {
+```js
+const employee = {
   name: "Mayank",
   designation: "Developer",
   address: {
@@ -180,11 +186,12 @@ employee.name = "Dummy"; // 非 strict モードでは暗黙に失敗
 employee.address.city = "Noida"; // 子オブジェクトの属性は変更できる
 
 console.log(employee.address.city) // 出力: "Noida"
-</pre>
+```
 
-<p>オブジェクトを不変にするには、オブジェクト型のプロパティをそれぞれ再帰的に凍結させてください (深い凍結)。オブジェクトが参照グラフに{{interwiki("wikipedia", "閉路")}}を含まないことが分かっている場合は、デザインパターンに基づいてケースバイケースのパターンを使用してください。そうでないと、無限ループが発生します。<code>deepFreeze()</code> をパス (例えば配列) 引数を受け取る内部関数を持つよう拡張すると、オブジェクトを不変にするプロセスにいるときに、<code>deepFreeze()</code> が再帰的に呼び出されることを防ぐことができます。凍結させてはいけない [window] のようなオブジェクトを凍結させる危険性がなおあります。</p>
+オブジェクトを不変にするには、オブジェクト型のプロパティをそれぞれ再帰的に凍結させてください (深い凍結)。オブジェクトが参照グラフに{{interwiki("wikipedia", "閉路")}}を含まないことが分かっている場合は、デザインパターンに基づいてケースバイケースのパターンを使用してください。そうでないと、無限ループが発生します。`deepFreeze()` をパス (例えば配列) 引数を受け取る内部関数を持つよう拡張すると、オブジェクトを不変にするプロセスにいるときに、`deepFreeze()` が再帰的に呼び出されることを防ぐことができます。凍結させてはいけない \[window] のようなオブジェクトを凍結させる危険性がなおあります。
 
-<pre class="brush: js notranslate">function deepFreeze(object) {
+```js
+function deepFreeze(object) {
   // オブジェクトで定義されたプロパティ名を取得
   const propNames = Object.getOwnPropertyNames(object);
 
@@ -193,7 +200,7 @@ console.log(employee.address.city) // 出力: "Noida"
   for (const name of propNames) {
     const value = object[name];
 
-    if (value &amp;&amp; typeof value === "object") {
+    if (value && typeof value === "object") {
       deepFreeze(value);
     }
   }
@@ -211,33 +218,22 @@ deepFreeze(obj2);
 
 obj2.internal.a = 'anotherValue'; // 非 strict モードでは暗黙に失敗
 obj2.internal.a; // null
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               |
+| ------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Object.freeze")}}</p>
+{{Compat("javascript.builtins.Object.freeze")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

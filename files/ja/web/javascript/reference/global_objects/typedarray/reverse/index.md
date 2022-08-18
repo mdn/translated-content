@@ -11,53 +11,43 @@ tags:
   - 型付き配列
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>reverse()</strong></code> メソッドは、その場で型付き配列を反転します。型付き配列の先頭の要素は末尾になり、末尾の要素は先頭になります。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。 <em>TypedArray</em> は、ここでは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの一つです。</p>
+**`reverse()`** メソッドは、その場で型付き配列を反転します。型付き配列の先頭の要素は末尾になり、末尾の要素は先頭になります。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは [型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-reverse.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-reverse.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.reverse();
+```
 
-<pre class="syntaxbox"><var>typedarray</var>.reverse();</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+反転された配列です。
 
-<p>反転された配列です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### reverse の使用
 
-<h3 id="Using_reverse" name="Using_reverse">reverse の使用</h3>
-
-<pre class="brush: js">var uint8 = new Uint8Array([1, 2, 3]);
+```js
+var uint8 = new Uint8Array([1, 2, 3]);
 uint8.reverse();
 
 console.log(uint8); // Uint8Array [3, 2, 1]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.TypedArray.reverse")}}</p>
+{{Compat("javascript.builtins.TypedArray.reverse")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.reverse()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reverse()")}}

@@ -9,75 +9,65 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setHours()</code></strong> メソッドは、地方時に基づき、指定された日付の「時」を設定し、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された {{jsxref("Date")}} インスタンスが表す時刻までの間のミリ秒単位の数値を返します。</p>
+**`setHours()`** メソッドは、地方時に基づき、指定された日付の「時」を設定し、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された {{jsxref("Date")}} インスタンスが表す時刻までの間のミリ秒単位の数値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/date-sethours.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+dateObj.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setHours(<var>hoursValue</var>[, <var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]]])</pre>
+### JavaScript 1.3 以前
 
-<h3 id="JavaScript_1.3_以前">JavaScript 1.3 以前</h3>
+```
+dateObj.setHours(hoursValue)
+```
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setHours(<var>hoursValue</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `hoursValue`
+  - : 理想的には、「時」を表す 0 から 23 までの間の整数値です。23 よりも大きな値が指定された場合は、日時は追加の時間数だけ増加します。
+- `minutesValue`
+  - : 任意。理想的には、「分」を表す 0 から 59 までの間の整数値です。59 よりも大きな値が指定された場合は、日時は追加の分数だけ増加します。
+- `secondsValue`
+  - : 任意。理想的には、「秒」を表す 0 から 59 までの間の整数値です。59 より大きな値が指定された場合は、日時は追加の秒数だけ増加します。`secondsValue` 引数を指定した場合は、`minutesValue` も指定しなければなりません。
+- `msValue`
+  - : 任意。理想的には、ミリ秒を表す 0 から 999 までの間の整数値です。999 よりも大きな値が指定された場合は、日時は追加のミリ秒数だけ増加します。`msValue` 引数を指定した場合、`minutesValue` と `secondsValue` も指定しなければなりません。
 
-<dl>
- <dt><code><var>hoursValue</var></code></dt>
- <dd>理想的には、「時」を表す 0 から 23 までの間の整数値です。23よりも大きな値が指定された場合は、日時は追加の時間数だけ増加します。</dd>
- <dt><code><var>minutesValue</var></code></dt>
- <dd>任意。理想的には、「分」を表す 0 から 59 までの間の整数値です。59よりも大きな値が指定された場合は、日時は追加の分数だけ増加します。</dd>
- <dt><code><var>secondsValue</var></code></dt>
- <dd>任意。理想的には、「秒」を表す 0 から 59 までの間の整数値です。59より大きな値が指定された場合は、日時は追加の秒数だけ増加します。<code><var>secondsValue</var></code> 引数を指定した場合は、<code><var>minutesValue</var></code> も指定しなければなりません。</dd>
- <dt><code><var>msValue</var></code></dt>
- <dd>任意。理想的には、ミリ秒を表す 0 から 999 までの間の整数値です。999よりも大きな値が指定された場合は、日時は追加のミリ秒数だけ増加します。<code><var>msValue</var></code> 引数を指定した場合、<code><var>minutesValue</var></code> と <code><var>secondsValue</var></code> も指定しなければなりません。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
-<p>協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`minutesValue`, `secondsValue` および `msValue` 引数を指定しなかった場合、{{jsxref("Date.prototype.getMinutes()", "getMinutes()")}} と {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}}、{{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} メソッドから返される値が使われます。
 
-<p><code><var>minutesValue</var></code>, <code><var>secondsValue</var></code> および <code><var>msValue</var></code> 引数を指定しなかった場合、{{jsxref("Date.prototype.getMinutes()", "getMinutes()")}} と {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}}、{{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} メソッドから返される値が使われます。</p>
+指定した値が期待される日付の範囲外の場合、それに応じて `setHours()` が他の引数と {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`secondsValue` に 100 を指定した場合、分に 1 加算 (`minutesValue + 1`) され、秒が 40 になります。
 
-<p>指定した値が期待される日付の範囲外の場合、それに応じて <code>setHours()</code> が他の引数と {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、<code><var>secondsValue</var></code> に 100 を指定した場合、分に 1 加算 (<code><var>minutesValue</var> + 1</code>) され、秒が 40 になります。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### setHours() の使用
 
-<h3 id="Using_setHours" name="Using_setHours">setHours() の使用</h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setHours(7);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Date.setHours")}}</p>
+{{Compat("javascript.builtins.Date.setHours")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Date.prototype.getHours()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getHours()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

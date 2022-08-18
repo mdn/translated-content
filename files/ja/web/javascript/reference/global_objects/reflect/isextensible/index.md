@@ -9,45 +9,43 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">静的な <strong><code>Reflect.isExtensible()</code></strong> メソッドは 、オブジェクトを拡張できるかを測定します (オブジェクトに追加された新しいプロパティを持てるかどうか)。これは {{jsxref("Object.isExtensible()")}} に似ていますが、いくつかの<a href="#Difference_to_Object.isExtensible">違いがあります</a>。</span></p>
+静的な **`Reflect.isExtensible()`** メソッドは 、オブジェクトを拡張できるかを測定します (オブジェクトに追加された新しいプロパティを持てるかどうか)。これは {{jsxref("Object.isExtensible()")}} に似ていますが、いくつかの[違いがあります](#Difference_to_Object.isExtensible)。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Reflect.isExtensible(target)
+```
 
-<pre class="syntaxbox notranslate">Reflect.isExtensible(<var>target</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `target`
+  - : 拡張できるかどうかをチェックする対象のオブジェクト。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>拡張できるかどうかをチェックする対象のオブジェクト。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+対象が拡張可能かどうかを示す {{jsxref("Boolean")}} 値。
 
-<p>対象が拡張可能かどうかを示す {{jsxref("Boolean")}} 値。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではなかった場合。
 
-<p>{{jsxref("TypeError")}}: <code>target</code> が {{jsxref("Object")}} ではなかった場合。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Reflect.isExtensible` メソッドは 、オブジェクトを拡張できるかを測定します（オブジェクトに追加された新しいプロパティを持てるかどうか）。これは {{jsxref("Object.isExtensible()")}} と同じメソッドです。
 
-<p><code>Reflect.isExtensible</code> メソッドは 、オブジェクトを拡張できるかを測定します（オブジェクトに追加された新しいプロパティを持てるかどうか）。これは {{jsxref("Object.isExtensible()")}} と同じメソッドです。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Reflect.isExtensible() の使用
 
-<h3 id="Using_Reflect.isExtensible" name="Using_Reflect.isExtensible">Reflect.isExtensible() の使用</h3>
+{{jsxref("Object.isExtensible()")}} も見てください。
 
-<p>{{jsxref("Object.isExtensible()")}} も見てください。</p>
-
-<pre class="brush: js notranslate">// 今オブジェクトは拡張可能。
+```js
+// 今オブジェクトは拡張可能。
 let empty = {}
 Reflect.isExtensible(empty)  // === true
 
@@ -62,41 +60,31 @@ Reflect.isExtensible(sealed)  // === false
 // フローズンオブジェクトも拡張できないように定義される。
 let frozen = Object.freeze({})
 Reflect.isExtensible(frozen)  // === false
-</pre>
+```
 
-<h3 id="Difference_to_Object.isExtensible" name="Difference_to_Object.isExtensible">Object.isExtensible() との違い</h3>
+### Object.isExtensible() との違い
 
-<p>このメソッドへの最初の引数がオブジェクトではなかった (プリミティブであった) 場合、これは {{jsxref("TypeError")}} を引き起こします。{{jsxref("Object.isExtensible()")}} だと、オブジェクトではない最初の引数はオブジェクトに強制的に変換されます。</p>
+このメソッドへの最初の引数がオブジェクトではなかった (プリミティブであった) 場合、これは {{jsxref("TypeError")}} を引き起こします。{{jsxref("Object.isExtensible()")}} だと、オブジェクトではない最初の引数はオブジェクトに強制的に変換されます。
 
-<pre class="brush: js notranslate">Reflect.isExtensible(1)
+```js
+Reflect.isExtensible(1)
 // TypeError: 1 はオブジェクトではない
 
 Object.isExtensible(1)
 // false
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Reflect.isExtensible")}}</p>
+{{Compat("javascript.builtins.Reflect.isExtensible")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

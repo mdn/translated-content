@@ -10,25 +10,24 @@ tags:
   - asynchronous
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.asyncIterator</code></strong> は、オブジェクトのデフォルトの AsyncIterator を指定します。このプロパティがオブジェクトに設定されている場合、それは非同期反復可能項目であり、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for-await...of">for await...of</a></code> ループで使用できます。</p>
+**`Symbol.asyncIterator`** は、オブジェクトのデフォルトの AsyncIterator を指定します。このプロパティがオブジェクトに設定されている場合、それは非同期反復可能項目であり、[`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループで使用できます。
 
+## 説明
 
+`Symbol.asyncIterator` シンボルは、オブジェクトの `@@asyncIterator` メソッドにアクセスするための組み込みシンボルです。オブジェクトを非同期で反復可能にするには、`Symbol.asyncIterator` キーが必要です。
 
-<h2 id="Description" name="Description">説明</h2>
+{{js_property_attributes(0,0,0)}}
 
-<p><code>Symbol.asyncIterator</code> シンボルは、オブジェクトの <code>@@asyncIterator</code> メソッドにアクセスするための組み込みシンボルです。オブジェクトを非同期で反復可能にするには、<code>Symbol.asyncIterator</code> キーが必要です。</p>
+## 例
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+### ユーザー定義の非同期反復可能項目
 
-<h2 id="Examples" name="Examples">例</h2>
+オブジェクトに `[Symbol.asyncIterator]` プロパティを設定することで、独自の非同期イテレータを定義することができます。
 
-<h3 id="User-defined_Async_Iterables" name="User-defined_Async_Iterables">ユーザー定義の非同期反復可能項目</h3>
-
-<p>オブジェクトに <code>[Symbol.asyncIterator]</code> プロパティを設定することで、独自の非同期イテレータを定義することができます。</p>
-
-<pre class="brush: js notranslate">const myAsyncIterable = {
+```js
+const myAsyncIterable = {
     async* [Symbol.asyncIterator]() {
         yield "hello";
         yield "async";
@@ -36,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
     }
 };
 
-(async () =&gt; {
+(async () => {
     for await (const x of myAsyncIterable) {
         console.log(x);
         // 期待される出力:
@@ -45,38 +44,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
         // "iteration!"
     }
 })();
-</pre>
+```
 
-<p>API を作成するとき、非同期反復可能項目はデータのストリームやリストのような、<em>反復可能</em>なものを表すために設計されたものであり、ほとんどの状況でコールバックやイベントを完全に置き換えるものではないことに注意してください。</p>
+API を作成するとき、非同期反復可能項目はデータのストリームやリストのような、*反復可能*なものを表すために設計されたものであり、ほとんどの状況でコールバックやイベントを完全に置き換えるものではないことに注意してください。
 
-<h3 id="Built-in_Async_Iterables" name="Built-in_Async_Iterables">組み込みの非同期反復処理</h3>
+### 組み込みの非同期反復処理
 
-<p>現在のところ、デフォルトで <code>[Symbol.asyncIterator]</code> キーが設定されている組み込み JavaScript オブジェクトはありません。しかし、WHATWG Streams は非同期反復可能な最初の組み込みオブジェクトになるように設定されており、最近 <code>[Symbol.asyncIterator]</code> が仕様に組み込まれました。</p>
+現在のところ、デフォルトで `[Symbol.asyncIterator]` キーが設定されている組み込み JavaScript オブジェクトはありません。しかし、WHATWG Streams は非同期反復可能な最初の組み込みオブジェクトになるように設定されており、最近 `[Symbol.asyncIterator]` が仕様に組み込まれました。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{compat("javascript.builtins.Symbol.asyncIterator")}}
 
+## 関連情報
 
-<p>{{compat("javascript.builtins.Symbol.asyncIterator")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols">反復処理プロトコル </a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/for-await...of">for await... of</a></li>
-</ul>
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [for await... of](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of)

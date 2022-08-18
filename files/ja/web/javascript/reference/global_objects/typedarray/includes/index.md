@@ -11,36 +11,35 @@ tags:
   - 型付き配列
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>includes()</strong></code> メソッドは、型付き配列が特定の要素を含んでいるかどうかを判断し、その結果に応じて <code>true</code> か <code>false</code> を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。 <em>TypedArray</em> は、ここでは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの一つです。</p>
+**`includes()`** メソッドは、型付き配列が特定の要素を含んでいるかどうかを判断し、その結果に応じて `true` か `false` を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは [型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-includes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-includes.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.includes(searchElement[, fromIndex]);
+```
 
-<pre class="syntaxbox"><var>typedarray</var>.includes(<var>searchElement</var>[, <var>fromIndex</var>]);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `searchElement`
+  - : 探す対象の要素
+- `fromIndex`
+  - : オプション。`searchElement`を探し始める配列内の位置。既定では 0 です。
 
-<dl>
- <dt><code><var>searchElement</var></code></dt>
- <dd>探す対象の要素</dd>
- <dt><code><var>fromIndex</var></code></dt>
- <dd>オプション。<code>searchElement</code>を探し始める配列内の位置。既定では0です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+{{jsxref("Boolean")}} です。
 
-<p>{{jsxref("Boolean")}} です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### includes の使用
 
-<h3 id="Using_includes" name="Using_includes">includes の使用</h3>
-
-<pre class="brush: js">var uint8 = new Uint8Array([1,2,3]);
+```js
+var uint8 = new Uint8Array([1,2,3]);
 uint8.includes(2);     // true
 uint8.includes(4);     // false
 uint8.includes(3, 3);  // false
@@ -49,31 +48,20 @@ uint8.includes(3, 3);  // false
 new Uint8Array([NaN]).includes(NaN); // false (コンストラクターに渡した NaN は 0 に変換されるため)
 new Float32Array([NaN]).includes(NaN); // true;
 new Float64Array([NaN]).includes(NaN); // true;
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.TypedArray.includes")}}</p>
+{{Compat("javascript.builtins.TypedArray.includes")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}

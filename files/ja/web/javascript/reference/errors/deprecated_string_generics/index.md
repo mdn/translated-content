@@ -8,13 +8,14 @@ tags:
   - 警告
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の警告で、 Firefox 68 以前で使用されていた String ジェネリックに関するものです。 String ジェネリックは Firefox 68 から削除されました。</p>
+JavaScript の警告で、 Firefox 68 以前で使用されていた String ジェネリックに関するものです。 String ジェネリックは Firefox 68 から削除されました。
 
-<h2 id="Message" name="Message">メッセージ</h2>
+## メッセージ
 
-<pre class="syntaxbox">Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
+```
+Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
 Warning: String.charCodeAt        is deprecated; use String.prototype.charCodeAt        instead
 Warning: String.concat            is deprecated; use String.prototype.concat            instead
 Warning: String.contains          is deprecated; use String.prototype.contains          instead
@@ -39,34 +40,38 @@ Warning: String.toUpperCase       is deprecated; use String.prototype.toUpperCas
 Warning: String.trim              is deprecated; use String.prototype.trim              instead
 Warning: String.trimLeft          is deprecated; use String.prototype.trimLeft          instead
 Warning: String.trimRight         is deprecated; use String.prototype.trimRight         instead
-</pre>
+```
 
-<h2 id="Error_type">エラーの種類</h2>
+## エラーの種類
 
-<p>警告。 JavaScript の実行は中断されません。</p>
+警告。 JavaScript の実行は中断されません。
 
-<h2 id="What_went_wrong" name="What_went_wrong">原因</h2>
+## 原因
 
-<p>標準外のジェネリック {{jsxref("String")}} のメソッドは非推奨であり、 Firefox 68 で削除されました。 String ジェネリックは、 <code>String</code> インスタンスメソッドを <code>String</code> オブジェクトに提供し、 <code>String</code> の「メソッドを任意のオブジェクトに適用できるようにします。</p>
+標準外のジェネリック {{jsxref("String")}} のメソッドは非推奨であり、 Firefox 68 で削除されました。 String ジェネリックは、 `String` インスタンスメソッドを `String` オブジェクトに提供し、 `String` の「メソッドを任意のオブジェクトに適用できるようにします。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Deprecated_syntax" name="Deprecated_syntax">非推奨の構文</h3>
+### 非推奨の構文
 
-<pre class="brush: js example-bad">var num = 15;
-String.replace(num, /5/, '2');</pre>
+```js example-bad
+var num = 15;
+String.replace(num, /5/, '2');
+```
 
-<h3 id="Standard_syntax" name="Standard_syntax">標準の構文</h3>
+### 標準の構文
 
-<pre class="brush: js example-good">var num = 15;
+```js example-good
+var num = 15;
 String(num).replace(/5/, '2');
-</pre>
+```
 
-<h2 id="Shim">Shim</h2>
+## Shim
 
-<p>対応していないブラウザーで対応できるようにするための Shim です。</p>
+対応していないブラウザーで対応できるようにするための Shim です。
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Assumes all supplied String instance methods already present
 // (one may use shims for these if not available)
 (function() {
@@ -93,13 +98,12 @@ String(num).replace(/5/, '2');
       };
     };
 
-  for (i = 0; i &lt; methodCount; i++) {
+  for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
-}());</pre>
+}());
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String")}}</li>
-</ul>
+- {{jsxref("String")}}

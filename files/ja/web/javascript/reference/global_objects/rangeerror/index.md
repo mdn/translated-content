@@ -8,53 +8,48 @@ tags:
   - RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><code><strong>RangeError</strong></code> オブジェクトは、値が配列内に存在しない、または値が許容範囲にない場合のエラーを表します。</span></p>
+**`RangeError`** オブジェクトは、値が配列内に存在しない、または値が許容範囲にない場合のエラーを表します。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>RangeError</code>は、関数に対して引数として許容されない範囲の数値を渡そうとした場合に発生します。</p>
+`RangeError`は、関数に対して引数として許容されない範囲の数値を渡そうとした場合に発生します。
 
-<p>これは次のような場合に発生します。</p>
+これは次のような場合に発生します。
 
-<ul>
- <li>許容されない文字を含む文字列を {{jsxref("String.prototype.normalize()")}} に渡した場合</li>
- <li>{{jsxref("Array")}} コンストラクターで不正な長さの配列を作ろうとした場合</li>
- <li>数値に関するメソッド {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}}, {{jsxref("Number.prototype.toPrecision()")}} に不適切な値を渡した場合</li>
-</ul>
+- 許容されない文字を含む文字列を {{jsxref("String.prototype.normalize()")}} に渡した場合
+- {{jsxref("Array")}} コンストラクターで不正な長さの配列を作ろうとした場合
+- 数値に関するメソッド {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}}, {{jsxref("Number.prototype.toPrecision()")}} に不適切な値を渡した場合
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{jsxref("RangeError/RangeError", "RangeError()")}}</dt>
- <dd>新しい <code>RangeError</code> オブジェクトを生成します。</dd>
-</dl>
+- {{jsxref("RangeError/RangeError", "RangeError()")}}
+  - : 新しい `RangeError` オブジェクトを生成します。
 
-<h2 id="Instance_properties" name="Instance_properties">インスタンスプロパティ</h2>
+## インスタンスプロパティ
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "RangeError.prototype.message")}}</dt>
- <dd>エラーメッセージ。 ECMA-262 は {{jsxref("RangeError")}} 自身が <code>message</code> プロパティを提供するべきであると規定しているにもかかわらず、 <a href="/ja/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> では {{jsxref("Error.prototype.message")}} が継承される。</dd>
- <dt>{{jsxref("Error.prototype.name", "RangeError.prototype.name")}}</dt>
- <dd>エラー名。 {{jsxref("Error")}} から継承。</dd>
- <dt>{{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}</dt>
- <dd>エラーが発生したファイルへのパス。 {{jsxref("Error")}} から継承。</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}</dt>
- <dd>エラーが発生したファイルの行番号。 {{jsxref("Error")}} から継承。</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}</dt>
- <dd>エラーが発生したファイルの列番号。 {{jsxref("Error")}} から継承。</dd>
- <dt>{{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}</dt>
- <dd>スタックトレース。{{jsxref("Error")}}から継承。</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
+  - : エラーメッセージ。 ECMA-262 は {{jsxref("RangeError")}} 自身が `message` プロパティを提供するべきであると規定しているにもかかわらず、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} が継承される。
+- {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
+  - : エラー名。 {{jsxref("Error")}} から継承。
+- {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}
+  - : エラーが発生したファイルへのパス。 {{jsxref("Error")}} から継承。
+- {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}
+  - : エラーが発生したファイルの行番号。 {{jsxref("Error")}} から継承。
+- {{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}
+  - : エラーが発生したファイルの列番号。 {{jsxref("Error")}} から継承。
+- {{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}
+  - : スタックトレース。{{jsxref("Error")}}から継承。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_RangeError_for_numeric_values" name="Using_RangeError_for_numeric_values">数値に対する RangeError の使用</h3>
+### 数値に対する RangeError の使用
 
-<pre class="brush: js notranslate">function check(n)
+```js
+function check(n)
 {
-    if( !(n &gt;= -500 &amp;&amp; n &lt;= 500) )
+    if( !(n >= -500 && n <= 500) )
     {
         throw new RangeError("The argument must be between -500 and 500.")
     }
@@ -70,11 +65,13 @@ catch(error)
     {
         // Handle the error
     }
-}</pre>
+}
+```
 
-<h3 id="Using_RangeError_for_non-numeric_values" name="Using_RangeError_for_non-numeric_values">RangeError の使用 (数値以外に対して)</h3>
+### RangeError の使用 (数値以外に対して)
 
-<pre class="brush: js notranslate">function check(value)
+```js
+function check(value)
 {
     if(["apple", "banana", "carrot"].includes(value) === false)
     {
@@ -93,36 +90,23 @@ catch(error)
         // Handle the error
     }
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.RangeError")}}</p>
-</div>
+{{Compat("javascript.builtins.RangeError")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Number.toExponential()")}}</li>
- <li>{{jsxref("Number.toFixed()")}}</li>
- <li>{{jsxref("Number.toPrecision()")}}</li>
- <li>{{jsxref("String.prototype.normalize()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Array")}}
+- {{jsxref("Number.toExponential()")}}
+- {{jsxref("Number.toFixed()")}}
+- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("String.prototype.normalize()")}}

@@ -9,51 +9,55 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>trimStart()</code></strong> メソッドは、文字列の先頭のホワイトスペースを削除します。 <code>trimLeft()</code> はこのメソッドのエイリアスです。</p>
+**`trimStart()`** メソッドは、文字列の先頭のホワイトスペースを削除します。 `trimLeft()` はこのメソッドのエイリアスです。
 
-<div>{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+str.trimStart();
+str.trimLeft();
+```
 
-<pre class="syntaxbox notranslate"><var>str</var>.trimStart();
-<var>str</var>.trimLeft();</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+呼び出した文字列から先頭 (左端) からホワイトスペースを削除した新しい文字列です。
 
-<p>呼び出した文字列から先頭 (左端) からホワイトスペースを削除した新しい文字列です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`trimStart()` と `trimLeft()` メソッドは、左端のホワイトスペースを取り除いた文字列を返します。 `trimLeft()` または `trimStart()` は元の文字列自身の値に影響を与えません。
 
-<p><code>trimStart()</code> と <code>trimLeft()</code> メソッドは、左端のホワイトスペースを取り除いた文字列を返します。 <code>trimLeft()</code> または <code>trimStart()</code> は元の文字列自身の値に影響を与えません。</p>
+### エイリアス
 
-<h3 id="Aliasing" name="Aliasing">エイリアス</h3>
+{{jsxref("String.prototype.padStart")}} のような関数との一貫性を持たせるため、標準メソッドの名前は `trimStart` となっています。しかし、ウェブの互換性の観点から、 `trimLeft` が `trimStart` のエイリアスとして残されます。エンジンによっては、以下のように解釈されます。
 
-<p>{{jsxref("String.prototype.padStart")}} のような関数との一貫性を持たせるため、標準メソッドの名前は <code>trimStart</code> となっています。しかし、ウェブの互換性の観点から、 <code>trimLeft</code> が <code>trimStart</code> のエイリアスとして残されます。エンジンによっては、以下のように解釈されます。</p>
+```js
+String.prototype.trimLeft.name === "trimStart";
+```
 
-<pre class="brush: js notranslate">String.prototype.trimLeft.name === "trimStart";</pre>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### trimStart() の使用
 
-<h3 id="Using_trimStart" name="Using_trimStart">trimStart() の使用</h3>
+以下の例では、小文字の文字列 `'foo '` を表示します。
 
-<p>以下の例では、小文字の文字列 <code>'foo  '</code> を表示します。</p>
-
-<pre class="brush: js; highlight: [5] notranslate">var str = '   foo  ';
+```js
+var str = '   foo  ';
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
 console.log(str);        // 'foo  '
-</pre>
+```
 
-<h2 id="ポリフィル">ポリフィル</h2>
+## ポリフィル
 
-<pre class="brush: js; highlight: [5] notranslate">//https://github.com/FabioVergani/js-Polyfill_String-trimStart
+```js
+//https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
 (function(w){
     var String=w.String, Proto=String.prototype;
@@ -72,10 +76,10 @@ console.log(str);        // 'foo  '
 
 /*
 ES6:
-(w=&gt;{
+(w=>{
     const String=w.String, Proto=String.prototype;
 
-    ((o,p)=&gt;{
+    ((o,p)=>{
         if(p in o?o[p]?false:true:true){
             const r=/^\s+/;
             o[p]=o.trimLeft||function(){
@@ -85,30 +89,20 @@ ES6:
     })(Proto,'trimStart');
 
 })(window);
-*/</pre>
+*/
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.trimStart")}}</p>
+{{Compat("javascript.builtins.String.trimStart")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimEnd()")}}

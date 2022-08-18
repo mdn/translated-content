@@ -11,97 +11,84 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>find()</code></strong> メソッドは、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。ここで <em>TypedArray</em> は<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型付き配列型</a>のうちの一つです。</p>
+**`find()`** メソッドは、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。ここで _TypedArray_ は[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
 
-<p>{{jsxref("TypedArray.findIndex", "findIndex()")}} メソッドも参照してください。こちらはそのメソッドは値のかわりに型付き配列で見つかった要素の<strong>添字</strong>を返します。</p>
+{{jsxref("TypedArray.findIndex", "findIndex()")}} メソッドも参照してください。こちらはそのメソッドは値のかわりに型付き配列で見つかった要素の**添字**を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+typedarray.find(callback[, thisArg])
+```
 
-<pre class="syntaxbox notranslate"><var>typedarray</var>.find(<var>callback</var>[, <var>thisArg</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `callback`
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>型付き配列の各要素で実行する関数。3 つの引数を取ります。
- <dl>
-  <dt><code><var>element</var></code></dt>
-  <dd>型付き配列内で現在処理されている要素。</dd>
-  <dt><code><var>index</var></code></dt>
-  <dd>型付き配列内で現在処理されている要素の位置。</dd>
-  <dt><code><var>array</var></code></dt>
-  <dd><code>find()</code> が呼び出された配列。</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
- <dd><code><var>callback</var></code> を実行するときに <code>this</code> として使用するオブジェクト。</dd>
-</dl>
+  - : 型付き配列の各要素で実行する関数。3 つの引数を取ります。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `element`
+      - : 型付き配列内で現在処理されている要素。
+    - `index`
+      - : 型付き配列内で現在処理されている要素の位置。
+    - `array`
+      - : `find()` が呼び出された配列。
 
-<p>テストを満たした配列の要素の位置を返します。それ以外の場合は、 {{jsxref("undefined")}} を返します。</p>
+- `thisArg` {{optional_inline}}
+  - : `callback` を実行するときに `this` として使用するオブジェクト。
 
-<h2 id="Description" name="Description">解説</h2>
+### 返値
 
-<p><code>find()</code> メソッドは <code><var>callback</var></code> 関数が true 値を返す要素を見つけるまで、型付き配列内に存在している各要素に対して一度ずつ <code><var>callback</var></code> 関数を実行します。そのような要素が見つかったら、 <code>find()</code> はすぐに要素の値を返します。さもなければ、 <code>find()</code> は {{jsxref("undefined")}} を返します。 <code><var>callback</var></code> は型付き配列の値を割り当てた位置に対してのみ呼び出されます。つまり、削除されたり、値が割り当てられて位置に対しては呼び出されません。</p>
+テストを満たした配列の要素の位置を返します。それ以外の場合は、 {{jsxref("undefined")}} を返します。
 
-<p><code><var>callback</var></code> は、要素の値、要素の位置、走査中の型付き配列の 3 つの引数とともに呼び出されます。</p>
+## 解説
 
-<p><code><var>thisArg</var></code> 引数が <code>find()</code> に与えられた場合、 <code><var>callback</var></code> の各呼び出しで <code>this</code> として使用されます。与えられなかった場合は、 {{jsxref("undefined")}}が使用されます。</p>
+`find()` メソッドは `callback` 関数が true 値を返す要素を見つけるまで、型付き配列内に存在している各要素に対して一度ずつ `callback` 関数を実行します。そのような要素が見つかったら、 `find()` はすぐに要素の値を返します。さもなければ、 `find()` は {{jsxref("undefined")}} を返します。 `callback` は型付き配列の値を割り当てた位置に対してのみ呼び出されます。つまり、削除されたり、値が割り当てられて位置に対しては呼び出されません。
 
-<p><code>find()</code> は呼び出されている型付き配列を変更しません。</p>
+`callback` は、要素の値、要素の位置、走査中の型付き配列の 3 つの引数とともに呼び出されます。
 
-<p><code>find()</code> によって処理される要素の範囲は、最初に <code><var>callback</var></code> が呼び出される前に設定されます。 <code>find()</code> の呼び出しが始まったあとで型付き配列に追加された要素は、 <code><var>callback</var></code> メソッドによって処理されません。存在していて、処理されていない型付き配列の要素が <code><var>callback</var></code> によって変更された場合、処理している <code><var>callback</var></code> 関数に渡される値は、 <code>find()</code> が要素の位置を処理する直前の値です。削除された要素は処理されません。</p>
+`thisArg` 引数が `find()` に与えられた場合、 `callback` の各呼び出しで `this` として使用されます。与えられなかった場合は、 {{jsxref("undefined")}}が使用されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+`find()` は呼び出されている型付き配列を変更しません。
 
-<h3 id="Find_a_prime_number_in_a_typed_array" name="Find_a_prime_number_in_a_typed_array">型付き配列内の素数を探す</h3>
+`find()` によって処理される要素の範囲は、最初に `callback` が呼び出される前に設定されます。 `find()` の呼び出しが始まったあとで型付き配列に追加された要素は、 `callback` メソッドによって処理されません。存在していて、処理されていない型付き配列の要素が `callback` によって変更された場合、処理している `callback` 関数に渡される値は、 `find()` が要素の位置を処理する直前の値です。削除された要素は処理されません。
 
-<p>次の例では、型付き配列内で素数である要素を探します (または、素数がない場合は {{jsxref("undefined")}} を返します)。</p>
+## 例
 
-<pre class="brush: js notranslate">function isPrime(element, index, array) {
+### 型付き配列内の素数を探す
+
+次の例では、型付き配列内で素数である要素を探します (または、素数がない場合は {{jsxref("undefined")}} を返します)。
+
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 var uint8 = new Uint8Array([4, 5, 8, 12]);
-console.log(uint8.find(isPrime)); // 5</pre>
+console.log(uint8.find(isPrime)); // 5
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.TypedArray.find")}}</p>
-</div>
+{{Compat("javascript.builtins.TypedArray.find")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.findIndex()")}}</li>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.every()")}}

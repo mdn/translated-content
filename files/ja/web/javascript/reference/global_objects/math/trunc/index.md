@@ -9,76 +9,76 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.trunc()</code></strong> 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。</p>
+**`Math.trunc()`** 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/math-trunc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-trunc.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Math.trunc(x)
+```
 
-<pre class="syntaxbox notranslate">Math.trunc(<var>x</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x`
+  - : 数値。
 
-<dl>
- <dt><code><var>x</var></code></dt>
- <dd>数値。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+The integer part of the given number.
 
-<p>The integer part of the given number.</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+他の 3 つの `Math` メソッド、 {{jsxref("Math.floor()")}}、 {{jsxref("Math.ceil()")}}、 {{jsxref("Math.round()")}} とは異なり、 `Math.trunc()` の動作は非常にシンプルで分かりやすいです。引数が正の数または負の数であるかに関わらず、ただ小数点とそれ以降にある数字を*切り捨て*ます。
 
-<p>他の3 つの <code>Math</code> メソッド、 {{jsxref("Math.floor()")}}、 {{jsxref("Math.ceil()")}}、 {{jsxref("Math.round()")}} とは異なり、 <code>Math.trunc()</code> の動作は非常にシンプルで分かりやすいです。引数が正の数または負の数であるかに関わらず、ただ小数点とそれ以降にある数字を<em>切り捨て</em>ます。</p>
+このメソッドに渡された引数は暗黙のうちに数値型に変換されることに注意して下さい。
 
-<p>このメソッドに渡された引数は暗黙のうちに数値型に変換されることに注意して下さい。</p>
+`trunc()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.trunc()` として使用してください (`Math` オブジェクトにはコンストラクタがありません)。
 
-<p><code>trunc()</code> は <code>Math</code> オブジェクトの静的なメソッドなので、自ら生成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に、<code>Math.trunc()</code> として使用してください (<code>Math</code> オブジェクトにはコンストラクタがありません)。</p>
+## ポリフィル
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
-
-<pre class="brush: js notranslate">if (!Math.trunc) {
+```js
+if (!Math.trunc) {
   Math.trunc = function(v) {
     v = +v;
     if (!isFinite(v)) return v;
 
-    return (v - v % 1)   ||   (v &lt; 0 ? -0 : v === 0 ? v : 0);
+    return (v - v % 1)   ||   (v < 0 ? -0 : v === 0 ? v : 0);
 
     // returns:
-    //  0        -&gt;  0
-    // -0        -&gt; -0
-    //  0.2      -&gt;  0
-    // -0.2      -&gt; -0
-    //  0.7      -&gt;  0
-    // -0.7      -&gt; -0
-    //  Infinity -&gt;  Infinity
-    // -Infinity -&gt; -Infinity
-    //  NaN      -&gt;  NaN
-    //  null     -&gt;  0
+    //  0        ->  0
+    // -0        -> -0
+    //  0.2      ->  0
+    // -0.2      -> -0
+    //  0.7      ->  0
+    // -0.7      -> -0
+    //  Infinity ->  Infinity
+    // -Infinity -> -Infinity
+    //  NaN      ->  NaN
+    //  null     ->  0
   };
 }
-</pre>
+```
 
-<p>または</p>
+または
 
-<pre class="brush: js notranslate">if (!Math.trunc) {
+```js
+if (!Math.trunc) {
   Math.trunc = function (v) {
-    return v &lt; 0 ? Math.ceil(v) : Math.floor(v);
+    return v < 0 ? Math.ceil(v) : Math.floor(v);
   };
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_Math.trunc" name="Using_Math.trunc">Math.trunc() の使用</h3>
+### Math.trunc() の使用
 
-<pre class="brush: js notranslate">Math.trunc(13.37);    // 13
+```js
+Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0
@@ -86,33 +86,22 @@ Math.trunc('-1.123'); // -1
 Math.trunc(NaN);      // NaN
 Math.trunc('foo');    // NaN
 Math.trunc();         // NaN
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Math.trunc")}}</p>
+{{Compat("javascript.builtins.Math.trunc")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}

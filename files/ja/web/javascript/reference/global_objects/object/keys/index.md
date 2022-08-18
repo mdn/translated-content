@@ -9,38 +9,37 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.keys()</strong></code> メソッドは、指定されたオブジェクトが持つプロパティの <strong>名前</strong>の配列を、通常のループで取得するのと同じ順序で返します。</p>
+**`Object.keys()`** メソッドは、指定されたオブジェクトが持つプロパティの **名前**の配列を、通常のループで取得するのと同じ順序で返します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-keys.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Object.keys(obj)
+```
 
-<pre class="syntaxbox notranslate">Object.keys(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : 自身の列挙可能なプロパティが返されるオブジェクトです。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>自身の列挙可能なプロパティが返されるオブジェクトです。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられたオブジェクトのすべての列挙可能なプロパティを表す文字列の配列。
 
-<p>与えられたオブジェクトのすべての列挙可能なプロパティを表す文字列の配列。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Object.keys()` は、`object` で直接発見された列挙可能なプロパティに対応する文字列を要素とする配列を返します。プロパティの順序は、オブジェクトのプロパティをループにより手動で取得した場合と同じです。
 
-<p><code>Object.keys()</code> は、<code>object</code> で直接発見された列挙可能なプロパティに対応する文字列を要素とする配列を返します。プロパティの順序は、オブジェクトのプロパティをループにより手動で取得した場合と同じです。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Object.keys の使用
 
-<h3 id="Using_Object.keys" name="Using_Object.keys">Object.keys の使用</h3>
-
-<pre class="brush: js notranslate">// 単純な配列
+```js
+// 単純な配列
 const arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
@@ -60,28 +59,30 @@ const myObj = Object.create({}, {
 });
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
-</pre>
+```
 
-<p>列挙可能ではないものを含むすべてのプロパティを取得したい場合、{{jsxref("Object.getOwnPropertyNames()")}} をご覧ください。</p>
+列挙可能ではないものを含むすべてのプロパティを取得したい場合、{{jsxref("Object.getOwnPropertyNames()")}} をご覧ください。
 
-<h3 id="Non-object_coercion" name="Non-object_coercion">オブジェクト以外の型変換</h3>
+### オブジェクト以外の型変換
 
-<p>ES5 では、このメソッドへの引数がオブジェクトではない (プリミティブである) 場合、 {{jsxref("TypeError")}} が発生します。</p>
+ES5 では、このメソッドへの引数がオブジェクトではない (プリミティブである) 場合、 {{jsxref("TypeError")}} が発生します。
 
-<p>ES2015 以降では、オブジェクトでない引数はオブジェクトへ変換されるようになりました。</p>
+ES2015 以降では、オブジェクトでない引数はオブジェクトへ変換されるようになりました。
 
-<pre class="brush: js notranslate">// In ES5
+```js
+// In ES5
 Object.keys('foo');  // TypeError: "foo" is not an object
 
 Object.keys('foo');
 // ["0", "1", "2"]                   (ES2015 code)
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p><code>Object.keys</code> にネイティブに対応していない環境向けに互換性を確保するには、以下のコード部品をコピーしてください。</p>
+`Object.keys` にネイティブに対応していない環境向けに互換性を確保するには、以下のコード部品をコピーしてください。
 
-<pre class="brush: js notranslate">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+```js
+// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';
@@ -99,7 +100,7 @@ if (!Object.keys) {
         dontEnumsLength = dontEnums.length;
 
     return function(obj) {
-      if (typeof obj !== 'function' &amp;&amp; (typeof obj !== 'object' || obj === null)) {
+      if (typeof obj !== 'function' && (typeof obj !== 'object' || obj === null)) {
         throw new TypeError('Object.keys called on non-object');
       }
 
@@ -112,7 +113,7 @@ if (!Object.keys) {
       }
 
       if (hasDontEnumBug) {
-        for (i = 0; i &lt; dontEnumsLength; i++) {
+        for (i = 0; i < dontEnumsLength; i++) {
           if (hasOwnProperty.call(obj, dontEnums[i])) {
             result.push(dontEnums[i]);
           }
@@ -122,38 +123,27 @@ if (!Object.keys) {
     };
   }());
 }
-</pre>
+```
 
-<p>上記のコードは IE7 において (もしかすると IE8 でも)、他のウィンドウから渡されたオブジェクトの場合、列挙不可能な key を含むことに注意してください。</p>
+上記のコードは IE7 において (もしかすると IE8 でも)、他のウィンドウから渡されたオブジェクトの場合、列挙不可能な key を含むことに注意してください。
 
-<p>より簡単なブラウザーのポリフィルについては、<a class="external" href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a> をご覧ください。</p>
+より簡単なブラウザーのポリフィルについては、[Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html) をご覧ください。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Object.keys")}}</p>
+{{Compat("javascript.builtins.Object.keys")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">列挙可能性とプロパティの所有権</a></li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.values()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
-</ul>
+- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.values()")}}
+- {{jsxref("Object.entries()")}}
