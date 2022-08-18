@@ -10,46 +10,51 @@ tags:
   - resize
 browser-compat: api.Window.resize_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>resize</code></strong> イベントは、この文書のビュー (ウィンドウ) の大きさが変更されたときに発行されます。</span></p>
+**`resize`** イベントは、この文書のビュー (ウィンドウ) の大きさが変更されたときに発行されます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("UIEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onresize", "onresize")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("UIEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onresize", "onresize")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>一部の初期のブラウザーでは、 <code>resize</code> イベントのハンドラーをすべての HTML 要素に設定することができました。現在でも <code>onresize</code> 属性や {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、どの要素にもハンドラーを設定することができます。しかし、 <code>resize</code> イベントは {{domxref("Window", "window")}} オブジェクト (すなわち {{domxref("document.defaultView")}} で返されるもの) でのみ発行されます。 <code>window</code> オブジェクトに登録されたハンドラーのみが、 <code>resize</code> イベントを受け取ります。</p>
+一部の初期のブラウザーでは、 `resize` イベントのハンドラーをすべての HTML 要素に設定することができました。現在でも `onresize` 属性や {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、どの要素にもハンドラーを設定することができます。しかし、 `resize` イベントは {{domxref("Window", "window")}} オブジェクト (すなわち {{domxref("document.defaultView")}} で返されるもの) でのみ発行されます。 `window` オブジェクトに登録されたハンドラーのみが、 `resize` イベントを受け取ります。
 
-<p>すべての要素が大きさの変更を通知できるようにする提案があります。 <a href="https://wicg.github.io/ResizeObserver/">Resize Observer</a> で草稿のドキュメントを、 <a href="https://github.com/WICG/ResizeObserver/issues">GitHub issue</a> で進行中の議論を読むことができます。</p>
+すべての要素が大きさの変更を通知できるようにする提案があります。 [Resize Observer](https://wicg.github.io/ResizeObserver/) で草稿のドキュメントを、 [GitHub issue](https://github.com/WICG/ResizeObserver/issues) で進行中の議論を読むことができます。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Window_size_logger">ウィンドウの大きさのログ出力</h3>
+### ウィンドウの大きさのログ出力
 
-<p>以下の例では、ウィンドウの大きさが変更されるたびに報告を出力します。この例は <code>&lt;iframe&gt;</code> 内で実行されているので、効果を見る前に実際に <code>&lt;iframe&gt;</code> の大きさを変更する必要があることを覚えておいてください。</p>
+以下の例では、ウィンドウの大きさが変更されるたびに報告を出力します。この例は `<iframe>` 内で実行されているので、効果を見る前に実際に `<iframe>` の大きさを変更する必要があることを覚えておいてください。
 
-<pre class="brush: html">&lt;p&gt;ブラウザーウィンドウを変更すると &lt;code&gt;resize&lt;/code&gt; イベントを発行します。&lt;/p&gt;
-&lt;p&gt;ウィンドウの高さ: &lt;span id="height"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;ウィンドウの幅: &lt;span id="width"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+```html
+<p>ブラウザーウィンドウを変更すると <code>resize</code> イベントを発行します。</p>
+<p>ウィンドウの高さ: <span id="height"></span></p>
+<p>ウィンドウの幅: <span id="width"></span></p>
+```
 
-<pre class="brush: js">const heightOutput = document.querySelector('#height');
+```js
+const heightOutput = document.querySelector('#height');
 const widthOutput = document.querySelector('#width');
 
 function reportWindowSize() {
@@ -57,26 +62,27 @@ function reportWindowSize() {
   widthOutput.textContent = window.innerWidth;
 }
 
-window.onresize = reportWindowSize;</pre>
+window.onresize = reportWindowSize;
+```
 
-<p>{{EmbedLiveSample("Window_size_logger")}}</p>
+{{EmbedLiveSample("Window_size_logger")}}
 
-<h3 id="addEventListener_equivalent">addEventListener による同等の実装</h3>
+### addEventListener による同等の実装
 
-<p>イベントハンドラーを設定するために <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> メソッドを使用することもできます。</p>
+イベントハンドラーを設定するために [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドを使用することもできます。
 
-<pre class="brush: js">window.addEventListener('resize', reportWindowSize);</pre>
+```js
+window.addEventListener('resize', reportWindowSize);
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.onresize")}}</li>
-</ul>
+- {{domxref("GlobalEventHandlers.onresize")}}

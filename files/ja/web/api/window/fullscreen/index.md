@@ -13,44 +13,43 @@ tags:
   - 標準外
 translation_of: Web/API/Window/fullScreen
 ---
-<div>{{APIRef}}{{Non-standard_Header}}</div>
+{{APIRef}}{{Non-standard_Header}}
 
-<p><code><strong>fullScreen</strong></code> は <code>Window</code> インターフェイスのプロパティで、そのウィンドウが全画面モードで表示されているかどうかを示します。</p>
+**`fullScreen`** は `Window` インターフェイスのプロパティで、そのウィンドウが全画面モードで表示されているかどうかを示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>isInFullScreen</var> = <var>windowRef</var>.fullScreen;
-</pre>
+```
+isInFullScreen = windowRef.fullScreen;
+```
 
-<p>クローム特権があればこのプロパティは読み書き可能で、それ以外では読み取り専用です。クローム特権なしでこのプロパティを設定しようとすると、例外は発生せず、ただ暗黙に失敗することに注意してください。これは、 Internet Explorer でこのプロパティを設定するように設計されたスクリプトが壊れるのを防ぐためです。</p>
+クローム特権があればこのプロパティは読み書き可能で、それ以外では読み取り専用です。クローム特権なしでこのプロパティを設定しようとすると、例外は発生せず、ただ暗黙に失敗することに注意してください。これは、 Internet Explorer でこのプロパティを設定するように設計されたスクリプトが壊れるのを防ぐためです。
 
-<h3 id="Return_Value" name="Return_Value">返値</h3>
+### 返値
 
-<dl>
- <dt><code>isInFullScreen</code></dt>
- <dd>論理値。取り得る値は次の通りです。</dd>
-</dl>
+- `isInFullScreen`
+  - : 論理値。取り得る値は次の通りです。
 
-<ul>
- <li><code>true</code>: そのウィンドウは全画面モードです。</li>
- <li><code>false</code>: そのウィンドウは全画面モードではありません。</li>
-</ul>
+<!---->
 
-<h2 id="Notes" name="Notes">注</h2>
+- `true`: そのウィンドウは全画面モードです。
+- `false`: そのウィンドウは全画面モードではありません。
 
-<ul>
- <li>通常のウィンドウと全画面との間で切り替えが行われると、 "resize" イベントが該当するウィンドウで発生します。</li>
-</ul>
+## 注
 
-<h2 id="Example" name="Example">例</h2>
+- 通常のウィンドウと全画面との間で切り替えが行われると、 "resize" イベントが該当するウィンドウで発生します。
 
-<pre class="brush: js notranslate">if (window.fullScreen) {
+## 例
+
+```js
+if (window.fullScreen) {
   // 全画面モード
 }
 else {
   // 全画面モードではない
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.fullScreen")}}</p>
+{{Compat("api.Window.fullScreen")}}
