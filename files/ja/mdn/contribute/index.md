@@ -141,7 +141,7 @@ MDN に貢献するには、あなたの持つスキルセットや興味に応�
 - [なじみのある分野のトピックで新しい記事を書く](https://github.com/mdn/content#adding-a-new-document) (1 時間以上)
 - [リファレンスページのブラウザー互換性データを追加したり更新したりする](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) (30 分から 1 時間)
 
-> **Note:** **注**: MDN 上で誤りを見つけたものの、それを修正する方法が分からない場合、[ドキュメントの問題を提出](https://github.com/mdn/content/issues/new/choose)することで問題を報告することができます。その際、問題を説明するタイトルを付けてください。(どこでリンクを見つけたかを書かずに「リンク切れ」と言っても役に立ちません。)
+> **Note:** MDN 上で誤りを見つけたものの、それを修正する方法が分からない場合、[ドキュメントの問題を提出](https://github.com/mdn/content/issues/new/choose)することで問題を報告することができます。その際、問題を説明するタイトルを付けてください。(どこでリンクを見つけたかを書かずに「リンク切れ」と言っても役に立ちません。)
 
 ## その他の有用なページ
 

@@ -11,7 +11,7 @@ original_slug: MDN/Contribute/Fixing_MDN_content_bugs
 
 MDN の文書に関する問題は、[コンテンツリポジトリーの課題 (issue)](https://github.com/mdn/content/issues) として報告されます (また、以前の [sprints リポジトリー](https://github.com/mdn/sprints/issues)にも未解決の課題があります)。この記事では、あなたの専門知識と作業可能な時間に基づいて、作業するのに最適な問題を見つけ、それらを修正するための主な手順を概説します。
 
-> **Note:** **注**コンテンツのバグはたくさんあります。修正するためにご協力いただけるのであれば、何でも助かります。
+> **Note:** コンテンツのバグはたくさんあります。修正するためにご協力いただけるのであれば、何でも助かります。
 
 > **Note:** **訳注:** この記事は原文 (英語) の記事の修正に関する案内です。そのため、下記のリンクは英語版の文書に対するリンクになっています。日本語訳の課題については [translated-content リポジトリー上の l10n-ja の課題](https://github.com/mdn/translated-content/labels/l10n-ja)や [mozilla-japan/translation リポジトリー上の課題](https://github.com/mozilla-japan/translation/issues)を参照してください。
 
@@ -64,4 +64,4 @@ MDN の文書に関する問題は、[コンテンツリポジトリーの課題
 3.  問題を修正したら、提出者にレビューを依頼してください。うまくいけば、さらに作業が必要だと思うかどうかを教えてくれるでしょう。必要に応じて私たちも関与します。
 4.  課題が修正されたことが確認されたら、閉じることができます。課題を閉じることができる人は、元の課題の提出者か、 MDN のスタッフのどちらかです。
 
-> **Note:** **注**: 課題を選択して作業する際には、 [GitHub のベストプラクティス](/ja/docs/MDN/Contribute/GitHub_best_practices)や [MDN で始めよう](/ja/docs/MDN/Contribute/Getting_started)のガイドも参考になるでしょう。
+> **Note:** 課題を選択して作業する際には、 [GitHub のベストプラクティス](/ja/docs/MDN/Contribute/GitHub_best_practices)や [MDN で始めよう](/ja/docs/MDN/Contribute/Getting_started)のガイドも参考になるでしょう。
