@@ -443,7 +443,7 @@
 /zh-CN/docs/DOM/window.frameElement	/zh-CN/docs/Web/API/Window/frameElement
 /zh-CN/docs/DOM/window.length	/zh-CN/docs/Web/API/Window/length
 /zh-CN/docs/DOM/window.location	/zh-CN/docs/Web/API/Window/location
-/zh-CN/docs/DOM/window.minimize	/zh-CN/docs/conflicting/Web/API/Window
+/zh-CN/docs/DOM/window.minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/DOM/window.moveTo	/zh-CN/docs/Web/API/Window/moveTo
 /zh-CN/docs/DOM/window.mozAnimationStartTime	/zh-CN/docs/Web/API/Animation/startTime
 /zh-CN/docs/DOM/window.navigator	/zh-CN/docs/Web/API/Window/navigator
@@ -1469,7 +1469,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeydown	/zh-CN/docs/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeypress	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeyup	/zh-CN/docs/Web/API/Element/keyup_event
-/zh-CN/docs/Web/API/GlobalEventHandlers.onload	/zh-CN/docs/conflicting/Web/API/Window/load_event
+/zh-CN/docs/Web/API/GlobalEventHandlers.onload	/zh-CN/docs/Web/API/Window/load_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmousedown	/zh-CN/docs/Web/API/Element/mousedown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmousemove	/zh-CN/docs/Web/API/Element/mousemove_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmouseout	/zh-CN/docs/Web/API/Element/mouseout_event
@@ -1506,7 +1506,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup	/zh-CN/docs/Web/API/Element/keyup_event
-/zh-CN/docs/Web/API/GlobalEventHandlers/onload	/zh-CN/docs/conflicting/Web/API/Window/load_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onload	/zh-CN/docs/Web/API/Window/load_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onloadeddata	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onloadedmetadata	/zh-CN/docs/Web/API/HTMLMediaElement/loadedmetadata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onloadend	/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event
@@ -1765,7 +1765,7 @@
 /zh-CN/docs/Web/API/Window.length	/zh-CN/docs/Web/API/Window/length
 /zh-CN/docs/Web/API/Window.location	/zh-CN/docs/Web/API/Window/location
 /zh-CN/docs/Web/API/Window.matchMedia	/zh-CN/docs/Web/API/Window/matchMedia
-/zh-CN/docs/Web/API/Window.minimize	/zh-CN/docs/conflicting/Web/API/Window
+/zh-CN/docs/Web/API/Window.minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window.moveBy	/zh-CN/docs/Web/API/Window/moveBy
 /zh-CN/docs/Web/API/Window.moveTo	/zh-CN/docs/Web/API/Window/moveTo
 /zh-CN/docs/Web/API/Window.mozAnimationStartTime	/zh-CN/docs/Web/API/Animation/startTime
@@ -1802,7 +1802,7 @@
 /zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
-/zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
+/zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
 /zh-CN/docs/Web/API/Window/mozPaintCount	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/onappinstalled	/zh-CN/docs/Web/API/Window/appinstalled_event

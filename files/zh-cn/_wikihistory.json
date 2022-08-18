@@ -45399,22 +45399,6 @@
       "Carrie zhxj"
     ]
   },
-  "conflicting/Web/API/Window": {
-    "modified": "2019-01-16T17:02:20.467Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "conflicting/Web/API/Window/load_event": {
-    "modified": "2019-03-23T23:15:22.431Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "teoli",
-      "khalid32",
-      "ReyCG_sub"
-    ]
-  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:25:01.381Z",
     "contributors": [
