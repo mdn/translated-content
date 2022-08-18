@@ -13,8 +13,7 @@ HTML `autocomplete` 属性可用于以文本或数字值作为输入的 {{HTMLEl
 
 有关更多信息，请参见 {{HTMLElement("form")}} 中的{{htmlattrxref("autocomplete", "form")}} 属性。
 
-> **备注：**
-> 为了提供自动完成功能，用户代理可能需要 `<input>` / `<select>` / `<textarea>` 元素才能：
+> **备注：** 为了提供自动完成功能，用户代理可能需要 `<input>` / `<select>` / `<textarea>` 元素才能：
 >
 > 1. 具有 `name` 和/或 `id` 属性
 > 2. 成为 `<form>` 的后代
