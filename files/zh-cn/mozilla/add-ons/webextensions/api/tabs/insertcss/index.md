@@ -1,9 +1,6 @@
 ---
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
-tags:
-  - 注入 CSS
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
 {{AddonSidebar()}}
 

@@ -1,10 +1,6 @@
 ---
 title: API
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
 {{AddonSidebar}}
 

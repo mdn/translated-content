@@ -1,7 +1,6 @@
 ---
 title: 与本地应用通信
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
 {{AddonSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: What next?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 ---
 {{AddonSidebar}}
 

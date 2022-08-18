@@ -1,7 +1,6 @@
 ---
 title: Firefox 62 for developers
 slug: Mozilla/Firefox/Releases/62
-translation_of: Mozilla/Firefox/Releases/62
 ---
 {{FirefoxSidebar}}
 

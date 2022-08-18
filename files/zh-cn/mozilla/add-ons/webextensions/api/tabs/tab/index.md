@@ -1,14 +1,6 @@
 ---
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
-tags:
-  - 扩展
-  - 标签
-  - 标签页
-  - 类型
-  - 非标准
-  - 页面扩展
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
 {{AddonSidebar()}}
 

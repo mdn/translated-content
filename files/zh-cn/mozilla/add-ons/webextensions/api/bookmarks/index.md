@@ -1,7 +1,6 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
 {{AddonSidebar}}
 

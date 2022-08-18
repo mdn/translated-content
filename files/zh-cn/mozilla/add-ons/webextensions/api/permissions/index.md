@@ -1,16 +1,6 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - Permissions
-  - Reference
-  - TopicStub
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
 {{AddonSidebar}}Enables extensions to request extra permissions at runtime, after they have been installed.
 

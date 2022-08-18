@@ -1,9 +1,6 @@
 ---
 title: 扩展是什么？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-tags:
-  - Extensions
-  - WebExtensions
 ---
 {{AddonSidebar}}
 

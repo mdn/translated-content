@@ -1,9 +1,6 @@
 ---
 title: 致 Firefox 3 开发者
 slug: Mozilla/Firefox/Releases/3
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3
 ---
 {{FirefoxSidebar}}
 
