@@ -9,7 +9,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/By_example
 ---
-{{learnsidebar}}{{IncludeSubnav("/ja/Learn")}}
+{{learnsidebar}}
 
 {{Next("Learn/WebGL/By_example/Detect_WebGL")}}
 
