@@ -33,7 +33,7 @@ DOM 接口                {{domxref("HTMLProgressElement")}}
 
 ## 属性
 
-和其他的 HTML 元素一样，该元素具有[全局属性](/zh-cn/HTML/Global_attributes).
+和其他的 HTML 元素一样，该元素具有[全局属性](/zh-CN/HTML/Global_attributes).
 
 - {{ htmlattrdef("max") }}
   - : 该属性描述了这个`progress`元素所表示的任务一共需要完成多少工作。
@@ -44,7 +44,7 @@ DOM 接口                {{domxref("HTMLProgressElement")}}
 
 ## DOM 接口
 
-该元素实现了[`HTMLProgressElement`](/zh-cn/DOM/HTMLProgressElement)接口。
+该元素实现了[`HTMLProgressElement`](/zh-CN/DOM/HTMLProgressElement)接口。
 
 ## 例子
 

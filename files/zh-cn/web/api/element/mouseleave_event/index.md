@@ -81,7 +81,7 @@ slug: Web/API/Element/mouseleave_event
 
 ## 例子
 
-[`mouseout` ](/zh-CN/docs/Web/Events/mouseout#Example)文档有一个例子，说明了`mouseout`和`mouseleave`之间的区别。
+[`mouseout`](/zh-CN/docs/Web/Events/mouseout#Example) 文档有一个例子，说明了 `mouseout` 和 `mouseleave` 之间的区别。
 
 以下示例说明了如何使用`mouseout`来模拟`mouseleave`事件的事件委托原则。
 

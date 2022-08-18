@@ -18,7 +18,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 ### CSS
 
-- 实现了标准的不带前缀的 [CSS Transforms](/En/CSS/Using_CSS_transforms). ([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523))
+- 实现了标准的不带前缀的 [CSS Transforms](/zh-CN/docs/CSS/Using_CSS_transforms). ([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523))
 - Support for reverse animation direction (keywords `reverse` and `alternate-reverse` on the {{cssxref("animation-direction")}} property) has been added. ([bug 655920](https://bugzilla.mozilla.org/show_bug.cgi?id=655920)).
 - You can now animate the CSS {{cssxref("height")}} and {{cssxref("width")}} properties.
 - The {{cssxref("animation-duration")}} and {{cssxref("transition-duration")}} CSS properties now reject negative values (and do not handle them as `0s` anymore) ([bug 773102](https://bugzilla.mozilla.org/show_bug.cgi?id=773102)).

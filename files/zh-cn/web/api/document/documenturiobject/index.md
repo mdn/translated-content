@@ -10,7 +10,7 @@ slug: Web/API/Document/documentURIObject
 
 该属性只能在拥有 UniversalXPConnect 特权的代码中运行，比如扩展中的代码。如果是 web 页面中的代码，则该属性默认不存在，必须开启 UniversalXPConnect 特权才可用。
 
-使用特权代码必须小心，不要在一个 non-wrapped 的 content 对象上使用该属性 (比如一个[`XPCNativeWrapper`](/zh-cn/XPCNativeWrapper)方法处理过的`wrappedJSObject`). 查看 {{ Bug("324464") }} 了解详情
+使用特权代码必须小心，不要在一个 non-wrapped 的 content 对象上使用该属性 (比如一个[`XPCNativeWrapper`](/zh-CN/XPCNativeWrapper)方法处理过的`wrappedJSObject`). 查看 {{ Bug("324464") }} 了解详情
 
 ### 语法
 

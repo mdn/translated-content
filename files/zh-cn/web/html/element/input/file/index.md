@@ -228,14 +228,14 @@ div {
 
 ### 注意事项
 
-1.  你不能从脚本中设置文件选取器的值 — You cannot set the value of a file picker from a script — 做下面这样的事情是没有效果的：
+1. 你不能从脚本中设置文件选取器的值 — You cannot set the value of a file picker from a script — 做下面这样的事情是没有效果的：
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "foo";
     ```
 
-2.  当使用一个 `<input type="file">` 选择一个文件，When a file is chosen using an `<input type="file">`，出于明显的安全原因，源文件的实际路径没有显示在 input 的 `value` 属性中。相反，显示了文件名，并用 `C:\fakepath\` 附加在路径的开头。这种怪癖有一些历史原因，但它在所有现代浏览器中都受到支持，而且实际上[在规范中也有定义](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
+2. 当使用一个 `<input type="file">` 选择一个文件，When a file is chosen using an `<input type="file">`，出于明显的安全原因，源文件的实际路径没有显示在 input 的 `value` 属性中。相反，显示了文件名，并用 `C:\fakepath\` 附加在路径的开头。这种怪癖有一些历史原因，但它在所有现代浏览器中都受到支持，而且实际上[在规范中也有定义](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
 
 ## 示例
 

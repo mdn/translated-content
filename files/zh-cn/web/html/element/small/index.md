@@ -12,11 +12,11 @@ HTML 中的\<small>元素將使文本的字体变小一号。(例如从大变成
  <tbody>
   <tr>
    <th scope="row">内容分类</th>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>， <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>， <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -24,7 +24,7 @@ HTML 中的\<small>元素將使文本的字体变小一号。(例如从大变成
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>接受<a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>或者<a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>的任何元素。</td>
+   <td>接受<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>或者<a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>的任何元素。</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>

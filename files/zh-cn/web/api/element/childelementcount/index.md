@@ -92,8 +92,8 @@ if (foo.childElementCount > 0) {
 
 ## 相关链接
 
-- [`children`](/zh-cn/DOM/Element.children)
-- [`firstElementChild`](/zh-cn/DOM/Element.firstElementChild)
-- [`lastElementChild`](/zh-cn/DOM/Element.lastElementChild)
-- [`nextElementSibling`](/zh-cn/DOM/Element.nextElementSibling)
-- [`previousElementSibling`](/zh-cn/DOM/element.previousElementSibling)
+- [`children`](/zh-CN/DOM/Element.children)
+- [`firstElementChild`](/zh-CN/DOM/Element.firstElementChild)
+- [`lastElementChild`](/zh-CN/DOM/Element.lastElementChild)
+- [`nextElementSibling`](/zh-CN/DOM/Element.nextElementSibling)
+- [`previousElementSibling`](/zh-CN/DOM/element.previousElementSibling)

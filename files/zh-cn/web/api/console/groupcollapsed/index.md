@@ -20,7 +20,7 @@ console.groupCollapsed();
 
 ## 备注
 
-在文档{{ domxref("console") }}中查看[在控制台中使用分组](/zh-cn/DOM/console#Using_groups_in_the_console),了解更多详细内容。
+在文档{{ domxref("console") }}中查看[在控制台中使用分组](/zh-CN/DOM/console#Using_groups_in_the_console),了解更多详细内容。
 
 ## 规范
 

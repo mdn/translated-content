@@ -24,9 +24,9 @@ Third-party libraries are a great way to add complex features or functionality t
 
 Browser extensions need to be signed to install into the release or beta versions of Firefox. Signing takes place in addons.mozilla.org (AMO) and is subject to the terms and conditions of the Firefox Add-on Distribution Agreement. The goal of the agreement is to ensure Firefox users get access to well supported, quality add-ons that enhance the Firefox experience.
 
-[Read the agreement](/Add-ons/AMO/Policy/Agreement)
+[Read the agreement](https://extensionworkshop.com/documentation/publish/firefox-add-on-distribution-agreement/)
 
-[Learn more about signing](/en-US/Add-ons/WebExtensions/Distribution)
+[Learn more about signing](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
 
 ## The review process
 

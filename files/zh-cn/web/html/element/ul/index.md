@@ -44,7 +44,7 @@ slug: Web/HTML/Element/ul
 - {{ htmlattrdef("compact") }}{{ Deprecated_inline() }}
   - : 此布尔属性提示列表是否需要被渲染为更紧凑的样式。用户代理决定如何解释这个属性，且并非所有浏览器都支持它。
 
-    > **备注：** 不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 [CSS](/zh-CN/docs/CSS) 来更改样式。（CSS）可以提供与` compact` 属性相同的效果，将 [CSS](/zh-CN/docs/CSS) 属性 [line-height](/zh-CN/docs/CSS/line-height) 的值设为 `80%` 即可。
+    > **备注：** 不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 [CSS](/zh-CN/docs/CSS) 来更改样式。（CSS）可以提供与 `compact` 属性相同的效果，将 [CSS](/zh-CN/docs/CSS) 属性 [line-height](/zh-CN/docs/CSS/line-height) 的值设为 `80%` 即可。
 
 - {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
   - : 用于设置列表的着重号样式 ，被定义在 [HTML3.2](/en/HTML3.2) 和过渡版本 [HTML 4.0/4.01](/en/HTML4.01) 中的可用值有：
@@ -138,9 +138,9 @@ slug: Web/HTML/Element/ul
 - first item
 - second item
 
-  1.  second item first subitem
-  2.  second item second subitem
-  3.  second item third subitem
+  1. second item first subitem
+  2. second item second subitem
+  3. second item third subitem
 
 - third item
 
