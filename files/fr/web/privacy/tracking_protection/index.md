@@ -1,13 +1,12 @@
 ---
 title: Protection contre le pistage
-slug: Web/Privacy/Firefox_tracking_protection
+slug: Web/Privacy/Tracking_Protection
 tags:
   - Privacy
   - Private browsing
   - blocking
   - tracking
 translation_of: Web/Privacy/Tracking_Protection
-original_slug: Web/Privacy/Tracking_Protection
 ---
 ## La protection contre le pistage, qu'est-ce que c'est ?
 
