@@ -9,24 +9,26 @@ tags:
   - Non-standard
 translation_of: Web/API/Window/captureEvents
 ---
-<div>{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}</div>
+{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
 
-<p><code><strong>Window.captureEvents()</strong></code> メソッドは、指定した種類のすべてのイベントをキャプチャするように、そのウィンドウを登録します。</p>
+**`Window.captureEvents()`** メソッドは、指定した種類のすべてのイベントをキャプチャするように、そのウィンドウを登録します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">window.captureEvents(<em>eventType</em>)
-</pre>
+```js
+window.captureEvents(eventType)
+```
 
-<p><code>eventType</code> は、 <code>Event.ABORT</code>, <code>Event.BLUR</code>, <code>Event.CLICK</code>, <code>Event.CHANGE</code>, <code>Event.DBLCLICK</code>, <code>Event.DRAGDDROP</code>, <code>Event.ERROR</code>, <code>Event.FOCUS</code>, <code>Event.KEYDOWN</code>, <code>Event.KEYPRESS</code>, <code>Event.KEYUP</code>, <code>Event.LOAD</code>, <code>Event.MOUSEDOWN</code>, <code>Event.MOUSEMOVE</code>, <code>Event.MOUSEOUT</code>, <code>Event.MOUSEOVER</code>, <code>Event.MOUSEUP</code>, <code>Event.MOVE</code>, <code>Event.RESET</code>, <code>Event.RESIZE</code>, <code>Event.SELECT</code>, <code>Event.SUBMIT</code>, <code>Event.UNLOAD</code> の値の組み合わせを取ります。</p>
+`eventType` は、 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD` の値の組み合わせを取ります。
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;!-- ... --&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ... -->
+<script>
 function reg() {
   window.captureEvents(Event.CLICK);
   window.onclick = page_click;
@@ -35,24 +37,24 @@ function reg() {
 function page_click() {
   alert('ページクリックイベントが検出されました！');
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="reg();"&gt;
-&lt;p&gt;click anywhere on this page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="reg();">
+<p>click anywhere on this page.</p>
+</body>
+</html>
+```
 
-<h3 id="Notes">注</h3>
+### 注
 
-<p>ユーザーの操作によって DOM 内で発生したイベント (ボタンのクリックや現在の文書からのフォーカス移動など) は、通常、イベントを開始したオブジェクトに到達する前に、まず高レベルの <a href="/ja/docs/Web/API/Window"><code>window</code></a> や <a href="/ja/docs/Web/API/Document"><code>document</code></a> オブジェクトを通過します。</p>
+ユーザーの操作によって DOM 内で発生したイベント (ボタンのクリックや現在の文書からのフォーカス移動など) は、通常、イベントを開始したオブジェクトに到達する前に、まず高レベルの [`window`](/ja/docs/Web/API/Window) や [`document`](/ja/docs/Web/API/Document) オブジェクトを通過します。
 
-<p><a href="/ja/docs/Web/API/Window"><code>window</code></a> の <code>captureEvents()</code> メソッドを呼び出すと、指定した種類のイベント (例えば <code>Event.CLICK</code>) は、階層内の「下位」オブジェクトに通過しなくなります。イベントを通常のように「バブルアップ」させるためには、 <a href="/ja/docs/Web/API/Window/releaseEvents"><code>window.releaseEvents()</code></a> ({{deprecated_inline}}) を window 上で呼び出し、イベントをトラップしないようにしなければなりません。</p>
+[`window`](/ja/docs/Web/API/Window) の `captureEvents()` メソッドを呼び出すと、指定した種類のイベント (例えば `Event.CLICK`) は、階層内の「下位」オブジェクトに通過しなくなります。イベントを通常のように「バブルアップ」させるためには、 [`window.releaseEvents()`](/ja/docs/Web/API/Window/releaseEvents) ({{deprecated_inline}}) を window 上で呼び出し、イベントをトラップしないようにしなければなりません。
 
-<p>なお、次の構文を使用することでこのメソッドにイベントのリストを渡すことができます。
-  <code>window.captureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)</code>.</p>
+なお、次の構文を使用することでこのメソッドにイベントのリストを渡すことができます。
+`window.captureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<p>どの仕様書にも含まれていません。</p>
+どの仕様書にも含まれていません。

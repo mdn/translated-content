@@ -8,73 +8,64 @@ tags:
   - Reference
 translation_of: Web/API/Window/scrollX
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}
 
-<p>{{domxref("Window")}} インターフェイスの読み取り専用プロパティである <code><strong>scrollX</strong></code> は、文書が水平スクロールされているピクセル数を返します。現代のブラウザーではこの値がサブピクセル精度ですので、必ずしも整数であるとは限りません。文書が垂直スクロールされているピクセル数は、{{domxref("Window.scrollY", "scrollY")}} プロパティで取得できます。</p>
+{{domxref("Window")}} インターフェイスの読み取り専用プロパティである **`scrollX`** は、文書が水平スクロールされているピクセル数を返します。現代のブラウザーではこの値がサブピクセル精度ですので、必ずしも整数であるとは限りません。文書が垂直スクロールされているピクセル数は、{{domxref("Window.scrollY", "scrollY")}} プロパティで取得できます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var x = window.scrollX;</pre>
+```
+var x = window.scrollX;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>実際に返される値は、文書が原点から水平方向にスクロールされた量をピクセル数で表す倍精度浮動小数点数です。正の値は、内容物が左にスクロールされていることを表します。文書がサブピクセル精度のデバイスに表示されている場合は、戻り値も小数部を含むサブピクセル精度の値になります。文書が左にも右にもスクロールされていない場合の <code>scrollX</code> は 0 です。</p>
+実際に返される値は、文書が原点から水平方向にスクロールされた量をピクセル数で表す倍精度浮動小数点数です。正の値は、内容物が左にスクロールされていることを表します。文書がサブピクセル精度のデバイスに表示されている場合は、戻り値も小数部を含むサブピクセル精度の値になります。文書が左にも右にもスクロールされていない場合の `scrollX` は 0 です。
 
-<div class="note">
-<p>整数値が必要である場合は、{{jsxref("Math.round()")}} を使用して切り捨てできます。</p>
-</div>
+> **Note:** 整数値が必要である場合は、{{jsxref("Math.round()")}} を使用して切り捨てできます。
 
-<p>専門用語で説明すると <code>scrollX</code> は、現在の {{Glossary("viewport", "ビューポート")}} の左端の X 座標を返します。ビューポートがない場合の戻り値は 0 です。</p>
+専門用語で説明すると `scrollX` は、現在の {{Glossary("viewport", "ビューポート")}} の左端の X 座標を返します。ビューポートがない場合の戻り値は 0 です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>これは、文書の現在の水平スクロール位置を確認する例です。400 ピクセルより大きい場合は、文書の左上にスクロール位置をリセットします。</p>
+これは、文書の現在の水平スクロール位置を確認する例です。400 ピクセルより大きい場合は、文書の左上にスクロール位置をリセットします。
 
-<pre class="brush:js">if (window.scrollX &gt; 400) {
+```js
+if (window.scrollX > 400) {
   window.scroll(0,0);
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">注記</h2>
+## 注記
 
-<p><code>pageXOffset</code> プロパティは、<code>scrollX</code> プロパティのエイリアスです。:</p>
+`pageXOffset` プロパティは、`scrollX` プロパティのエイリアスです。:
 
-<pre class="brush:js">window.pageXOffset == window.scrollX; // 常に true</pre>
+```js
+window.pageXOffset == window.scrollX; // 常に true
+```
 
-<p>クロスブラウザー互換性のため、<code>window.scrollX</code> ではなく <code>window.pageXOffset</code> を使用します。<em>さらに</em>、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。</p>
+クロスブラウザー互換性のため、`window.scrollX` ではなく `window.pageXOffset` を使用します。_さらに_、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。
 
-<pre class="brush:js">var x = (window.pageXOffset !== undefined)
+```js
+var x = (window.pageXOffset !== undefined)
   ? window.pageXOffset
   : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
 
 var y = (window.pageYOffset !== undefined)
   ? window.pageYOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollTop;</pre>
+  : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状況                             | 備考 |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }} | {{ Spec2('CSSOM View') }} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.Window.scrollX")}}</p>
+{{Compat("api.Window.scrollX")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("window.scrollY")}}</li>
-</ul>
+- {{domxref("window.scrollY")}}

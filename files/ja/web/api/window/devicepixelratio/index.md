@@ -1,6 +1,7 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Adaptive Design
@@ -9,55 +10,54 @@ tags:
   - Reference
   - Window
   - devicePixelRatio
-  - pixel
   - ratio
   - resolution
+browser-compat: api.Window.devicePixelRatio
 translation_of: Web/API/Window/devicePixelRatio
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><span class="seoSummary">{{domxref("Window")}}プロパティの<code><strong>devicePixelRatio</strong></code>は現在のディスプレイにおけるCSS解像度と物理解像度の比を返します。</span> これは物理1ピクセルの大きさに対するCSS1ピクセルの大きさの比率と考えることもできます。もっと簡単に言うと、CSS上の1pxが物理ピクセルいくつで表示されているかという値です。</p>
+**`devicePixelRatio`** は {{domxref("Window")}} インターフェイスのプロパティで、現在のディスプレイ機器における  CSS 解像度と物理解像度の比を返します。
 
-<p>これは一般的なディスプレイと、HiDPI(高DPI)やRetinaのように同じ大きさのオブジェクトを描画するのにより多くのピクセルを使って鮮明さを得ているディスプレイとの差異を扱うのに便利です。</p>
+これは 1 物理ピクセルの大きさに対する 1 CSS ピクセルの大きさの比率と考えることもできます。もっと簡単に言うと、 1 つの CSS ピクセルが実際にはいくつの物理ピクセルで表示されるかという値です。
 
-<p>{{domxref("Window.matchMedia", "window.matchMedia()")}} を使うと、<code>devicePixelRatio</code> の値の変化（例えば、ユーザーが異なるピクセル解像度の画面へウィンドウをドラッグした時など）を検知することができます。<a href="#monitoring_screen_resolution_or_zoom_level_changes">後述の例</a>を参照して下さい。</p>
+これは一般的なディスプレイと、HiDPI (高 DPI) やレティナのように同じ大きさのオブジェクトを描画するのにより多くのピクセルを使って鮮明さを得ているディスプレイとの差異を扱うのに便利です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+{{domxref("Window.matchMedia", "window.matchMedia()")}} を使うと、`devicePixelRatio` の値の変化（例えば、ユーザーが異なるピクセル解像度の画面へウィンドウをドラッグした時など）を検知することができます。[後述の例](#画面解像度や拡大率の変化の監視)を参照して下さい。
 
-<pre class="syntaxbox"><em><var>value</var></em> = window.devicePixelRatio;
-</pre>
+### 値
 
-<h3 id="Value" name="Value">値</h3>
+倍精度浮動小数点の値であり、 CSS ピクセル解像度に対するディスプレイの物理的なピクセル解像度の比率を表します。この値が 1 であることは、それが伝統的な 96 DPI (プラットフォームによっては 76 DPI) であることを意味し、2 であることは、HiDPI やレティナのディスプレイであると考えられます。それ以外の値が返されることもあり、それは一般的でない低解像度のディスプレイの場合や、より考えられるのはスクリーンが標準的な 96 または 76 DPI の解像度の単純な 2 倍よりも高いピクセル密度を持つ場合です。
 
-<p>倍精度浮動小数点の値であり、CSS ピクセル解像度に対するディスプレイの物理的なピクセル解像度の比率を表します。この値が 1 であることは、それが伝統的な 96 DPI (プラットフォームによっては 76 DPI) であることを意味し、2 であることは、HiDPI やレティナのディスプレイであると考えられます。それ以外の値が返されることもあり、それは一般的でない低解像度のディスプレイの場合や、より考えられるのはスクリーンが標準的な 96 または 76 DPI の解像度の単純な 2 倍よりも高いピクセル密度を持つ場合です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">使用例</h2>
+### `<canvas>` の解像度の補正
 
-<h3 id="Correcting_resolution_in_a_&lt;canvas>" name="Correcting_resolution_in_a_&lt;canvas>">&lt;canvas&gt; の解像度を補正する</h3>
+レティナ画面では {{htmlelement("canvas")}} がぼやけて見えることがあるでしょう。 `window.devicePixelRatio` を使うことで、鮮明に表示するために必要なピクセル密度を調べます。
 
-<p>レティナでは <code>canvas</code> がぼやけて見えることがあるでしょう。<code>window.devicePixelRatio</code>を使うことで、鮮明に表示するために必要なピクセル密度を調べます。</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-<pre><code>var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-</code>
-// 表示サイズを設定(CSSにおけるピクセル数です)。
-var size = 200;
-canvas.style.width = size + "px";
-canvas.style.height = size + "px";
+// 表示サイズを設定（CSS におけるピクセル数です）。
+const size = 200;
+canvas.style.width = `${size}px`;
+canvas.style.height = `${size}px`;
 
-// メモリ上における実際のサイズを設定(ピクセル密度の分だけ倍増させます)。
-var scale = window.devicePixelRatio; // レティナでこの値を1にするとぼやけたcanvasになります
-canvas.width = size * scale;
-canvas.height = size * scale;
+// メモリ上における実際のサイズを設定（ピクセル密度の分だけ倍増させます）。
+const scale = window.devicePixelRatio; // レティナでこの値を 1 にするとぼやけた canvas になります
+canvas.width = Math.floor(size * scale);
+canvas.height = Math.floor(size * scale);
 
-// CSS上のピクセル数を前提としているシステムに合わせます。
+// CSS 上のピクセル数を前提としているシステムに合わせます。
 ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";
@@ -67,61 +67,62 @@ ctx.font = '18px Arial';
 ctx.textAlign = 'center';
 ctx.textBaseline = 'middle';
 
-var x = size / 2;
-var y = size / 2;
+const x = size / 2;
+const y = size / 2;
 
-var textString = "I love MDN";
+const textString = "I love MDN";
 ctx.fillText(textString, x, y);
-</pre>
+```
 
-<p><a href="https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png"><img alt="この画像は、レティナディスプレイにおける異なる値の影響を表すものです。" src="https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png" style="height: 57px; width: 600px;"></a></p>
+[![この画像は、レティナディスプレイにおける異なる値の影響を表すものです。](devicepixelration_diff.jpg)](devicepixelration_diff.jpg)
 
-<h3 id="Monitoring_screen_resolution_or_zoom_level_changes" name="Monitoring_screen_resolution_or_zoom_level_changes">画面解像度やズームレベルの変化を監視する</h3>
+### 画面解像度や拡大率の変化の監視
 
-<p>この例では、<code>devicePixelRatio</code> の値をチェックして必要な変化に対処できるよう、メディアクエリを設定してデバイス解像度がいつ変化するかを監視します。</p>
+この例では、`devicePixelRatio` の値をチェックして必要な変化に対処できるよう、メディアクエリーを設定して機器の解像度がいつ変化するかを監視します。
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>この JavaScript のコードは、デバイス解像度を監視するメディアクエリを作り、<code>devicePixelRatio</code> の値が変化したときはいつでもそれをチェックします。</p>
+この JavaScript のコードは、機器の解像度を監視するメディアクエリーを作り、`devicePixelRatio` の値が変化したときはいつでもそれをチェックします。
 
-<pre class="brush: js">let pixelRatioBox = document.querySelector(".pixel-ratio");
-let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
+```js
+let pixelRatioBox = document.querySelector(".pixel-ratio");
 
-const updatePixelRatio = () =&gt; {
+const updatePixelRatio = () => {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
+  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
 }
 
 updatePixelRatio();
+```
 
-matchMedia(mqString).addEventListener("change", updatePixelRatio);</pre>
+文字列 `mqString` は、メディアクエリーそのものになるように作ります。このメディアクエリーは、`(resolution: 1dppx)` (標準的なディスプレイの場合)、または `(resolution: 2dppx)` (HiDPI / レティナディスプレイの場合) のような内容で始まり、現在のディスプレイ解像度のピクセルあたりのドット数が特定の数であるかをチェックします。
 
-<p>文字列 <code>mqString</code> は、メディアクエリそのものになるように作ります。このメディアクエリは、<code>(resolution: 1dppx)</code> (標準的なディスプレイの場合)、または <code>(resolution: 2dppx)</code> (HiDPI / レティナディスプレイの場合) のような内容で始まり、現在のディスプレイ解像度のピクセルあたりのドット数が特定の数であるかをチェックします。</p>
+関数 `updatePixelRatio()` は、現在の `devicePixelRatio` の値を取得し、`pixelRatioBox` 要素の {{domxref("HTMLElement.innerText", "innerText")}} に、その比率をパーセント値と小数第 2 位までの未加工の 10 進数の値の両方で表示する文字列を設定します。
 
-<p>関数 <code>updatePixelRatio()</code> は、現在の <code>devicePixelRatio</code> の値を取得し、<code>pixelRatioBox</code> 要素の {{domxref("HTMLElement.innerText", "innerText")}} に、その比率を百分率と小数第 2 位までの未加工の 10 進数の値の両方で表示する文字列を設定します。</p>
+そして、 `updatePixelRatio()` 関数が一度呼び出されて開始値を表示した後、 {{domxref("Window.matchMedia", "matchMedia()")}} を用いてメディアクエリーを作成し、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} が呼び出されて `updatePixelRatio()` が `change` イベントに対するハンドラーとして設定されます。
 
-<p>そして、関数 <code>updatePixelRatio()</code> が最初の値を表示するために一回実行され、その後メディアクエリが作られて <code>updatePixelRatio()</code> を <code>change</code> イベントのハンドラーとして登録するために {{domxref("EventTarget.addEventListener", "addEventListener()")}} が実行されます。</p>
+#### HTML
 
-<h4 id="HTML_2">HTML</h4>
+この HTML は、説明文を含むボックスと、現在のピクセル比率情報を表示する `pixel-ratio` ボックスを作成します。
 
-<p>この HTML は、説明文を含むボックスと、現在のピクセル比率情報を表示する <code>pixel-ratio</code> ボックスを作成します。</p>
-
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="inner-container"&gt;
-    &lt;p&gt;この使用例により、ページをズームまたはズームアウトすること
+```html
+<div class="container">
+  <div class="inner-container">
+    <p>この使用例により、ページをズームまたはズームアウトすること
        (または異なる表示倍率の画面にページを移動させること) の
-       &lt;code&gt;Window.devicePixelRatio&lt;/code&gt; プロパティに与える影響がわかります。
-       どのようなことが起こるか、試してみましょう！&lt;/p&gt;
-  &lt;/div&gt;
-    &lt;div class="pixel-ratio"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+       <code>Window.devicePixelRatio</code> プロパティに与える影響がわかります。
+       どのようなことが起こるか、試してみましょう！</p>
+  </div>
+    <div class="pixel-ratio"></div>
+</div>
+```
 
-<details><summary>
-<h4 id="CSS">CSS</h4>
-</summary>
+#### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   font: 22px arial, sans-serif;
 }
 
@@ -149,43 +150,24 @@ matchMedia(mqString).addEventListener("change", updatePixelRatio);</pre>
   bottom: 0;
   right: 1em;
   font-weight: bold;
-}</pre>
-</details>
+}
+```
 
-<h4 id="結果">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Example_2_Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}</p>
+{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-window-devicepixelratio", "Window.devicePixelRatio")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.Window.devicePixelRatio")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/CSS/Media_Queries">メディアクエリ</a></li>
- <li><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries">メディアクエリの使用</a></li>
- <li><a href="/ja/docs/Web/CSS/@media/resolution">CSS の <code>resolution</code> メディア特性</a></li>
- <li>PPK が行った <a href="http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html">devicePixelRatio に関する調査</a></li>
-</ul>
+- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS の `resolution` メディア特性](/ja/docs/Web/CSS/@media/resolution)
+- {{cssxref("image-resolution")}} プロパティ

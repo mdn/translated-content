@@ -14,41 +14,39 @@ tags:
   - Window
 translation_of: Web/API/Window/defaultStatus
 ---
-<p>{{APIRef()}}{{deprecated_header}}</p>
+{{APIRef()}}{{deprecated_header}}
 
-<div class="note notebox">
-  <p><strong>注:</strong>このメソッドは Firefox 23 以降で削除されました。</p>
-</div>
+> **Note:** **注:**このメソッドは Firefox 23 以降で削除されました。
 
-<h2 id="Summary">概要</h2>
+## 概要
 
-<p>与えられたウィンドウのステータスバーのテキストを取得/設定します。</p>
+与えられたウィンドウのステータスバーのテキストを取得/設定します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="eval"><em>var sMsg</em> = window.defaultStatus;
-window.defaultStatus = <em>sMsg;</em>
-</pre>
+```
+var sMsg = window.defaultStatus;
+window.defaultStatus = sMsg;
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>sMsg</code> は、ステータスバーで既定で表示されるテキストを含む文字列です。</li>
-</ul>
+- `sMsg` は、ステータスバーで既定で表示されるテキストを含む文字列です。
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre>&lt;html&gt;
- &lt;body onload="window.defaultStatus='hello!';"/&gt;
-  &lt;button onclick="window.confirm('Are you sure you want to quit?');"&gt;confirm&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```
+<html>
+ <body onload="window.defaultStatus='hello!';"/>
+  <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
+ </body>
+</html>
+```
 
-<h2 id="Notes">注</h2>
+## 注
 
-<p>一度開いたウィンドウのステータスバーのテキストを設定するには、 {{domxref("window.status")}} を使用してください。</p>
+一度開いたウィンドウのステータスバーのテキストを設定するには、 {{domxref("window.status")}} を使用してください。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<p>HTML5</p>
+HTML5
