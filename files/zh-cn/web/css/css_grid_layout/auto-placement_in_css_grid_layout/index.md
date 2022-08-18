@@ -6,7 +6,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 
 为了精确地把项目摆放到网格中，CSS 网格布局规范还包含另外一组规则，用来约定当部分或全部子项目没有被明确指定位置时该如何处理。你会发现针对含有数个项目的网格，实际上最简单的方式就是使用自动定位。
 
-## 默认摆放
+## 默认定位
 
 如果没有为项目指定位置信息，它们就会把自己摆放在网格中，每个单元格中放一个。
 
@@ -46,7 +46,7 @@ slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 </div>
 ```
 
-{{ EmbedLiveSample('默认摆放', '500', '230') }}
+{{ EmbedLiveSample('默认定位', '500', '230') }}
 
 ## 自动定位的默认规则
 
