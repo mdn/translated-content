@@ -1,7 +1,6 @@
 ---
 title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 ---
 {{AddonSidebar()}}
 

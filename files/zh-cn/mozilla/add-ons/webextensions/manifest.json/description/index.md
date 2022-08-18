@@ -1,10 +1,6 @@
 ---
 title: 描述 - description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
-tags:
-  - 描述
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 ---
 {{AddonSidebar}}
 

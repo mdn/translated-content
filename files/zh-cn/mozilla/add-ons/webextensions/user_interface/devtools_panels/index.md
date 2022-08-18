@@ -1,7 +1,6 @@
 ---
 title: devtools panels
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
 {{AddonSidebar}}
 

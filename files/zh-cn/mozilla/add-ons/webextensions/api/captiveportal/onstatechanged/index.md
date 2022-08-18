@@ -1,7 +1,6 @@
 ---
 title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 ---
 {{AddonSidebar()}}
 

@@ -1,11 +1,6 @@
 ---
 title: Firefox 15 for developers
 slug: Mozilla/Firefox/Releases/15
-tags:
-  - Firefox
-  - Firefox 15
-  - Gecko 15
-translation_of: Mozilla/Firefox/Releases/15
 ---
 {{FirefoxSidebar}}
 

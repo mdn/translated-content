@@ -1,12 +1,6 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - 实验的
-  - 火狐
-  - 特性
-  - 设置
-translation_of: Mozilla/Firefox/Experimental_features
 ---
 {{FirefoxSidebar}}
 
