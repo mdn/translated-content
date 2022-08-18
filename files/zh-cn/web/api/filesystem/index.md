@@ -13,7 +13,7 @@ slug: Web/API/FileSystem
 
 ## 基本概念
 
-你可以通过调用 [`window.requestFileSystem()`](/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem) 来请求对一个沙盒文件系统的访问权限。调用 `requestFileSystem() `会创建一个新的沙盒存储空间。成功调用之后会返回一个 [`FileSystem 对象`](/en/DOM/File_API/File_System_API/FileSystem)。它有两个属性：名称和文件系统的根目录。
+你可以通过调用 [`window.requestFileSystem()`](/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem) 来请求对一个沙盒文件系统的访问权限。调用 `requestFileSystem()` 会创建一个新的沙盒存储空间。成功调用之后会返回一个 [`FileSystem 对象`](/en/DOM/File_API/File_System_API/FileSystem)。它有两个属性：名称和文件系统的根目录。
 
 [`FileSystem 对象`](/en/DOM/File_API/File_System_API/FileSystem)是你访问文件系统所必须的，所以你最好为它创建一个引用，然后储存起来。
 

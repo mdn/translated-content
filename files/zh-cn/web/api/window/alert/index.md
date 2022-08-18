@@ -15,7 +15,7 @@ window.alert(message);
 ```
 
 > **备注：**
-> 
+>
 > ```js
 > alert(uid = `${uid}`);
 >

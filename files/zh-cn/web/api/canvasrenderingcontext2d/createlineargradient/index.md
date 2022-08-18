@@ -32,7 +32,7 @@ CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
 ### 返回值
 
 - {{domxref("CanvasGradient")}}
-  - : 一个根据指定线路初始化的线性` ``CanvasGradient` 对象。
+  - : 一个根据指定线路初始化的线性 `CanvasGradient` 对象。
 
 ## 示例
 
@@ -121,7 +121,7 @@ window.addEventListener("load", drawCanvas);
 
 ### Gecko 特性说明
 
-- 自 Gecko 2.0 {{geckoRelease("2.0")}}开始，参数指定了极值会抛出`NOT_SUPPORTED_ERR` 而不再是之前的 `SYNTAX_ERR `异常。
+- 自 Gecko 2.0 {{geckoRelease("2.0")}}开始，参数指定了极值会抛出`NOT_SUPPORTED_ERR` 而不再是之前的 `SYNTAX_ERR`异常。
 
 ## <br>参见
 

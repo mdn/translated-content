@@ -4,7 +4,7 @@ slug: Web/API/Document/open
 ---
 {{APIRef("DOM")}}
 
-**`Document.open()`** 方法打开一个要[写入](/zh-US/docs/Web/API/Document/write)的文档。
+**`Document.open()`** 方法打开一个要[写入](/zh-CN/docs/Web/API/Document/write)的文档。
 
 这将会有一些连带的影响。例如：
 

@@ -115,7 +115,7 @@ form.addEventListener('submit', function(ev) {
 data.append("myfile", myBlob, "filename.txt");
 ```
 
-使用 append() 方法时，可以通过第三个可选参数设置发送请求的头 `Content-Disposition `指定文件名。如果不指定文件名（或者不支持该参数时），将使用名字“blob”。
+使用 append() 方法时，可以通过第三个可选参数设置发送请求的头 `Content-Disposition` 指定文件名。如果不指定文件名（或者不支持该参数时），将使用名字“blob”。
 
 如果你设置正确的配置项，你也可以通过 jQuery 来使用 FormData 对象：
 

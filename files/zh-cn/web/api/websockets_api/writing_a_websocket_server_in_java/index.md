@@ -38,21 +38,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WebSocket {
-	public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
-		ServerSocket server = new ServerSocket(80);
-		try {
-			System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
-			Socket client = server.accept();
-			System.out.println("A client connected.");
+  public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
+    ServerSocket server = new ServerSocket(80);
+    try {
+      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
+      Socket client = server.accept();
+      System.out.println("A client connected.");
 ```
 
 ### Socket
 
 方法：
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getInputStream()`
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)`getInputStream()`
   返回这个 Socket 的输入流 InputStream
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getOutputStream()`
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)`getOutputStream()`
   返回这个 Socket 的输出流 OutputStream
 
 ### OutputStream
@@ -75,8 +75,8 @@ public class WebSocket {
 
 ```java
 InputStream in = client.getInputStream();
-			OutputStream out = client.getOutputStream();
-			Scanner s = new Scanner(in, "UTF-8");
+      OutputStream out = client.getOutputStream();
+      Scanner s = new Scanner(in, "UTF-8");
 ```
 
 ## 握手
@@ -85,30 +85,30 @@ InputStream in = client.getInputStream();
 
 ```java
 try {
-	String data = s.useDelimiter("\\r\\n\\r\\n").next();
-	Matcher get = Pattern.compile("^GET").matcher(data);
+  String data = s.useDelimiter("\\r\\n\\r\\n").next();
+  Matcher get = Pattern.compile("^GET").matcher(data);
 ```
 
 创建响应比理解为什么必须以这种方式来创建响应更容易。
 
 你必须：
 
-1.  获取 Sec-WebSocket-Key 请求标头的值，去除头部和尾部的所有空格
-2.  追加字符串"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-3.  使用 SHA-1 计算拿到结果值并进行 Base64 编码
-4.  将其作为 HTTP 响应的一部分写回 Sec-WebSocket-Accept 响应头的值
+1. 获取 Sec-WebSocket-Key 请求标头的值，去除头部和尾部的所有空格
+2. 追加字符串"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+3. 使用 SHA-1 计算拿到结果值并进行 Base64 编码
+4. 将其作为 HTTP 响应的一部分写回 Sec-WebSocket-Accept 响应头的值
 
 ```java
 if (get.find()) {
-					Matcher match = Pattern.compile("Sec-WebSocket-Key: (.*)").matcher(data);
-					match.find();
-					byte[] response = ("HTTP/1.1 101 Switching Protocols\r\n"
-						+ "Connection: Upgrade\r\n"
-						+ "Upgrade: websocket\r\n"
-						+ "Sec-WebSocket-Accept: "
-						+ Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA-1").digest((match.group(1) + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").getBytes("UTF-8")))
-						+ "\r\n\r\n").getBytes("UTF-8");
-					out.write(response, 0, response.length);
+          Matcher match = Pattern.compile("Sec-WebSocket-Key: (.*)").matcher(data);
+          match.find();
+          byte[] response = ("HTTP/1.1 101 Switching Protocols\r\n"
+            + "Connection: Upgrade\r\n"
+            + "Upgrade: websocket\r\n"
+            + "Sec-WebSocket-Accept: "
+            + Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA-1").digest((match.group(1) + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").getBytes("UTF-8")))
+            + "\r\n\r\n").getBytes("UTF-8");
+          out.write(response, 0, response.length);
 ```
 
 ## 解码消息
@@ -146,19 +146,19 @@ Java 例子：
 
 ```java
 byte[] decoded = new byte[6];
-					byte[] encoded = new byte[] { (byte) 198, (byte) 131, (byte) 130, (byte) 182, (byte) 194, (byte) 135 };
-					byte[] key = new byte[] { (byte) 167, (byte) 225, (byte) 225, (byte) 210 };
-					for (int i = 0; i < encoded.length; i++) {
-						decoded[i] = (byte) (encoded[i] ^ key[i & 0x3]);
-					}
-				}
-			} finally {
-				s.close();
-			}
-		} finally {
-			server.close();
-		}
-	}
+          byte[] encoded = new byte[] { (byte) 198, (byte) 131, (byte) 130, (byte) 182, (byte) 194, (byte) 135 };
+          byte[] key = new byte[] { (byte) 167, (byte) 225, (byte) 225, (byte) 210 };
+          for (int i = 0; i < encoded.length; i++) {
+            decoded[i] = (byte) (encoded[i] ^ key[i & 0x3]);
+          }
+        }
+      } finally {
+        s.close();
+      }
+    } finally {
+      server.close();
+    }
+  }
 }
 ```
 

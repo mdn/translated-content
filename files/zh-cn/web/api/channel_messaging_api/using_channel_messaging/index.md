@@ -74,9 +74,9 @@ function onMessage(e) {
 
 让我们来了解一下 `iframe.contentWindow.postMessage` 更多的工作细节。它接受三个参数：
 
-1.  被发送的消息。对于一开始的 port 传递，这个消息可以是个空字符串，但是在例子里，我们传了 `'init'`.
-2.  消息将被发送到的源（origin）。 `*` 意思是 "任何源".
-3.  一个对象，它的所有权会被传给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame, 然后它就可以用于与主页面通信了。
+1. 被发送的消息。对于一开始的 port 传递，这个消息可以是个空字符串，但是在例子里，我们传了 `'init'`.
+2. 消息将被发送到的源（origin）。 `*` 意思是 "任何源".
+3. 一个对象，它的所有权会被传给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame, 然后它就可以用于与主页面通信了。
 
 当我们的按钮被点击时，我们阻止了默认的表单提交，然后把输入到输入框里的内容通过 {{domxref("MessageChannel")}} 发送给 IFrame.
 

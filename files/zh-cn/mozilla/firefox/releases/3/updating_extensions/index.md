@@ -138,7 +138,7 @@ Or use the following technique to make your overlay work on both Firefox 2 and F
 
 _Add simple changes you had to make while updating your extension to work with Firefox 3 here._
 
-- [`chrome://browser/base/utilityOverlay.js`]() is no longer supported for security reasons. If you were previously using this, you should switch to [`chrome://browser/content/utilityOverlay.js`]().
+- `chrome://browser/base/utilityOverlay.js` is no longer supported for security reasons. If you were previously using this, you should switch to `chrome://browser/content/utilityOverlay.js`.
 - [`nsIAboutModule`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746))
 - The [`tabbrowser`](/zh-CN/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
 - Changes to [nsISupports proxies](/cn/NsISupports_proxies) and possibly to threading-related interfaces need to be documented.

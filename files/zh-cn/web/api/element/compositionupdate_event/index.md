@@ -35,8 +35,8 @@ slug: Web/API/Element/compositionupdate_event
 | `cancelable` {{ReadOnlyInline}} | `boolean`                                 | Is it possible to cancel the event?                                              |
 | `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}      | {{domxref("Document.defaultView")}} (the `window` of the document). |
 | `detail` {{ReadOnlyInline}}     | `long` (`float`)                          | 0.                                                                               |
-| `data `{{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 要被替换掉的字符串，如果输入时没有字符串被选，则为空字符串。只读。               |
-| `locale `{{ReadOnlyInline}}     | {{domxref("DOMString")}} (string) | 输入事件的语言代号，或者空字符串。只读。                                         |
+| `data` {{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 要被替换掉的字符串，如果输入时没有字符串被选，则为空字符串。只读。               |
+| `locale` {{ReadOnlyInline}}     | {{domxref("DOMString")}} (string) | 输入事件的语言代号，或者空字符串。只读。                                         |
 
 ## 规范
 

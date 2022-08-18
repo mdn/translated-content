@@ -134,13 +134,13 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 
 逐行解读上面的代码：
 
-1.  首先调用{{domxref("RTCPeerConnection.createOffer()")}} 方法创建 {{Glossary("SDP")}} (Session Description Protocol) 字节块用于描述我们期待建立的连接。该方法可选地接受一个描述连接限制的对象，例如连接是否必须支持音频、视频或者两者都支持。在我们的简单示例中，没有引入该限制。
-2.  如果该 offer 成功建立，我们将上述字节块传递给 local 连接的 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法。 用于配置 local 端的连接。
-3.  下一步通过调用`remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}，告知 remote 节点上述描述，将 local 节点连接到到远程 。 现在 `remoteConnection` 了解正在建立的连接。
-4.  该是 remote 节点回应的时刻了。remote 节点调用 {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} 方法予以回应。 该方法生成一个 SDP 二进制块，用于描述 remote 节点愿意并且有能力建立的连接。 这样的连接配置是两端均可以支持可选项的结合。
-5.  应答建立之后，通过调用{{domxref("RTCPeerConnection.setLocalDescription()")}}传入 remoteConnection 。该调用完成了 remote 端连接的建立 (对于对端的 remote 节点而言，是它的 local 端。 这种叙述容易使人困惑，但是看多了您就习惯了。
-6.  最终，通过调用 localConnection 的{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法，本地连接的远端描述被设置为指向 remote 节点。
-7.  `catch()` 调用一个用于处理任何异常的逻辑。
+1. 首先调用{{domxref("RTCPeerConnection.createOffer()")}} 方法创建 {{Glossary("SDP")}} (Session Description Protocol) 字节块用于描述我们期待建立的连接。该方法可选地接受一个描述连接限制的对象，例如连接是否必须支持音频、视频或者两者都支持。在我们的简单示例中，没有引入该限制。
+2. 如果该 offer 成功建立，我们将上述字节块传递给 local 连接的 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法。 用于配置 local 端的连接。
+3. 下一步通过调用`remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}，告知 remote 节点上述描述，将 local 节点连接到到远程 。 现在 `remoteConnection` 了解正在建立的连接。
+4. 该是 remote 节点回应的时刻了。remote 节点调用 {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} 方法予以回应。 该方法生成一个 SDP 二进制块，用于描述 remote 节点愿意并且有能力建立的连接。 这样的连接配置是两端均可以支持可选项的结合。
+5. 应答建立之后，通过调用{{domxref("RTCPeerConnection.setLocalDescription()")}}传入 remoteConnection 。该调用完成了 remote 端连接的建立 (对于对端的 remote 节点而言，是它的 local 端。 这种叙述容易使人困惑，但是看多了您就习惯了。
+6. 最终，通过调用 localConnection 的{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法，本地连接的远端描述被设置为指向 remote 节点。
+7. `catch()` 调用一个用于处理任何异常的逻辑。
 
 > **备注：** 再次申明，上述处理过程并非针对现实世界的实现，在正常环境下，建立连接的两端的机器，运行两块不同的代码，用于交互和协商连接过程。
 
