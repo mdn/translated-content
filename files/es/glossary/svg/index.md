@@ -3,31 +3,25 @@ title: SVG
 slug: Glossary/SVG
 translation_of: Glossary/SVG
 ---
-<p>Gráficos vectoriales escalables (del inglés <em><strong>S</strong>calable <strong>V</strong>ector <strong>G</strong>raphics</em>) o <strong>SVG</strong> es un formato de imagen vectorial 2D basado en una sintaxis de {{Glossary("XML")}} .</p>
+Gráficos vectoriales escalables (del inglés _**S**calable **V**ector **G**raphics_) o **SVG** es un formato de imagen vectorial 2D basado en una sintaxis de {{Glossary("XML")}} .
 
-<p>{{Glossary("W3C")}} comenzó a trabajar en SVG a finales de la década de 1990, pero SVG solo se hizo popular cuando {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 salió con soporte para SVG. Todos los principales {{Glossary("browser","navegadores")}} ahora son compatibles con SVG.</p>
+{{Glossary("W3C")}} comenzó a trabajar en SVG a finales de la década de 1990, pero SVG solo se hizo popular cuando {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 salió con soporte para SVG. Todos los principales {{Glossary("browser","navegadores")}} ahora son compatibles con SVG.
 
-<p>Basado en una sintaxis de {{Glossary("XML")}}, SVG se puede diseñar con {{Glossary("CSS")}} e interactuar usando {{Glossary("JavaScript")}}. HTML5 ahora permite la inserción directa de {{Glossary("Tag","etiquetas")}} SVG en un documento {{Glossary("HTML")}}.</p>
+Basado en una sintaxis de {{Glossary("XML")}}, SVG se puede diseñar con {{Glossary("CSS")}} e interactuar usando {{Glossary("JavaScript")}}. HTML5 ahora permite la inserción directa de {{Glossary("Tag","etiquetas")}} SVG en un documento {{Glossary("HTML")}}.
 
-<p>Como <a href="http://en.wikipedia.org/wiki/Vector_graphics">formato de imagen vectorial</a>, los gráficos SVG pueden escalarse infinitamente, lo que los hace inestimables en {{Glossary("responsive design")}}, ya que puede crear elementos de interfaz y gráficos que se adaptan a cualquier tamaño de pantalla. SVG también proporciona un útil conjunto de herramientas, como recorte, enmascaramiento, filtros y animaciones.</p>
+Como [formato de imagen vectorial](http://en.wikipedia.org/wiki/Vector_graphics), los gráficos SVG pueden escalarse infinitamente, lo que los hace inestimables en {{Glossary("responsive design")}}, ya que puede crear elementos de interfaz y gráficos que se adaptan a cualquier tamaño de pantalla. SVG también proporciona un útil conjunto de herramientas, como recorte, enmascaramiento, filtros y animaciones.
 
-<h2 id="Aprender_más">Aprender más</h2>
+## Aprender más
 
-<h3 id="Conocimientos_generales">Conocimientos generales</h3>
+### Conocimientos generales
 
-<ul>
- <li>{{Interwiki("wikipedia", "SVG")}} en Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "SVG")}} en Wikipedia
 
-<h3 id="Aprendiendo_SVG">Aprendiendo SVG</h3>
+### Aprendiendo SVG
 
-<ul>
- <li><a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">W3.org's SVG Primer</a></li>
-</ul>
+- [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
 
-<h3 id="Información_técnica">Información técnica</h3>
+### Información técnica
 
-<ul>
- <li><a href="/es/docs/Web/SVG">Documentación de SVG en MDN</a></li>
- <li><a href="http://www.w3.org/TR/SVG/" rel="external">Última especificación SVG</a></li>
-</ul>
+- [Documentación de SVG en MDN](/es/docs/Web/SVG)
+- [Última especificación SVG](http://www.w3.org/TR/SVG/)
