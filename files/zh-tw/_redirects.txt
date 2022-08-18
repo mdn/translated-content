@@ -55,7 +55,7 @@
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/Getter_和_Setter_的定義	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/使用_this_取得物件的參考	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/屬性的刪除	/zh-TW/docs/Web/JavaScript/Reference/Operators/delete
-/zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/建構子函數的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用
+/zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/Core_JavaScript_1.5_教學/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
@@ -211,7 +211,7 @@
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/屬性的刪除	/zh-TW/docs/Web/JavaScript/Reference/Operators/delete
-/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用
+/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/JavaScript/Guide/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
@@ -307,7 +307,7 @@
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/屬性的刪除	/zh-TW/docs/Web/JavaScript/Reference/Operators/delete
-/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用
+/zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
@@ -755,7 +755,7 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/屬性的刪除	/zh-TW/docs/Web/JavaScript/Reference/Operators/delete
-/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用
+/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/方法的定義	/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引
