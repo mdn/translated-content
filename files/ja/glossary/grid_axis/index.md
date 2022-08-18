@@ -6,26 +6,24 @@ tags:
   - CSS Grids
 translation_of: Glossary/Grid_Axis
 ---
-<p>CSS グリッドレイアウトはコンテンツを<strong>行</strong>と<strong>列</strong>でレイアウトできるようにする 2 次元レイアウトです。従って全てのグリッドには、<strong>ブロックもしくは列の軸</strong>と、<strong>インラインもしくは行の列</strong>という、二つの軸があります。</p>
+CSS グリッドレイアウトはコンテンツを**行**と**列**でレイアウトできるようにする 2 次元レイアウトです。従って全てのグリッドには、**ブロックもしくは列の軸**と、**インラインもしくは行の列**という、二つの軸があります。
 
-<p>各アイテムはこれら 2 つの軸に沿って、<a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box Alignment 仕様</a>で定義されるプロパティを使って配置されます。</p>
+各アイテムはこれら 2 つの軸に沿って、[Box Alignment 仕様](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)で定義されるプロパティを使って配置されます。
 
-<p>CSS ではブロックもしくは行の軸がテキストのブロックをレイアウトするのに使用する軸となります。右から左、上から下に書く言語で 2 つの段落があるばあい、ブロック軸に沿って一方が他方の下にレイアウトされます。</p>
+CSS ではブロックもしくは行の軸がテキストのブロックをレイアウトするのに使用する軸となります。右から左、上から下に書く言語で 2 つの段落があるばあい、ブロック軸に沿って一方が他方の下にレイアウトされます。
 
-<p><img alt="Diagram showing the block axis in CSS Grid Layout." src="https://mdn.mozillademos.org/files/14775/7_Block_Axis.png" style="height: 306px; width: 940px;"></p>
+![Diagram showing the block axis in CSS Grid Layout.](https://mdn.mozillademos.org/files/14775/7_Block_Axis.png)
 
-<p>インラインもしくは行の軸はブロック軸と交差し、通常のテキストが流れる方向沿った軸です。CSS グリッドレイアウトでは次のような行の軸となります。</p>
+インラインもしくは行の軸はブロック軸と交差し、通常のテキストが流れる方向沿った軸です。CSS グリッドレイアウトでは次のような行の軸となります。
 
-<p><img alt="Diagram showing the inline axis in CSS Grid Layout." src="https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png" style="height: 306px; width: 940px;"></p>
+![Diagram showing the inline axis in CSS Grid Layout.](https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png)
 
-<p>これらの軸の物理的な方向は文書の<a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">ライティングモード</a>によって変更可能です。</p>
+これらの軸の物理的な方向は文書の[ライティングモード](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)によって変更可能です。
 
-<h2 id="より詳しく">より詳しく</h2>
+## より詳しく
 
-<h3 id="より詳しい説明">より詳しい説明</h3>
+### より詳しい説明
 
-<ul>
- <li>CSS グリッドレイアウトガイド: <em><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">グリッドレイアウトの基本コンセプト</a></em></li>
- <li>CSS グリッドレイアウトガイド: <em><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">グリッドレイアウトに於けるボックス配置</a></em></li>
- <li>CSS グリッドレイアウトガイド: <em><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">グリッドや論理値とライティングモード</a></em></li>
-</ul>
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトに於けるボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS グリッドレイアウトガイド: _[グリッドや論理値とライティングモード](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)_

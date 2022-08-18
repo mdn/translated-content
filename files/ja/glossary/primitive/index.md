@@ -8,19 +8,20 @@ tags:
   - 用語集
 translation_of: Glossary/Primitive
 ---
-<p><span class="seoSummary">{{Glossary("JavaScript")}} において、<strong>プリミティブ</strong> (primitive、プリミティブ値、プリミティブデータ型) は{{Glossary("object","オブジェクト")}}でなく、{{glossary("method","メソッド")}}を持たないデータのことです。 6 種類のプリミティブデータ型があります。{{Glossary("string","文字列")}}、{{Glossary("number","数値")}}、</span>{{Glossary("bigint","BigInt")}}<span class="seoSummary">、{{Glossary("boolean","真偽値")}}、{{Glossary("undefined")}}、そして{{Glossary("symbol","シンボル")}} ({{Glossary("ECMAScript")}} 2016 で追加) です。また、プリミティブに見える {{Glossary("null")}} もありますが、実際にはすべての {{jsxref("Object")}} の特殊なケースです。そして、構造化された型はすべてプロトタイプチェーンによって <code>null</code> から派生しています。</span></p>
+{{Glossary("JavaScript")}} において、**プリミティブ** (primitive、プリミティブ値、プリミティブデータ型) は{{Glossary("object","オブジェクト")}}でなく、{{glossary("method","メソッド")}}を持たないデータのことです。 6 種類のプリミティブデータ型があります。{{Glossary("string","文字列")}}、{{Glossary("number","数値")}}、{{Glossary("bigint","BigInt")}}、{{Glossary("boolean","真偽値")}}、{{Glossary("undefined")}}、そして{{Glossary("symbol","シンボル")}} ({{Glossary("ECMAScript")}} 2016 で追加) です。また、プリミティブに見える {{Glossary("null")}} もありますが、実際にはすべての {{jsxref("Object")}} の特殊なケースです。そして、構造化された型はすべてプロトタイプチェーンによって `null` から派生しています。
 
-<p>多くの場合、プリミティブ値は、その言語実装の最下層にて直接的に表現されます。</p>
+多くの場合、プリミティブ値は、その言語実装の最下層にて直接的に表現されます。
 
-<p>すべてのプリミティブ値は、<ruby><strong>イミュータブル</strong><rp> (</rp><rt>immutable</rt><rp>) </rp></ruby>、つまり変更できません。変数には新しい値を再割り当てすることができますが、既存の値については、オブジェクト、配列、関数が変更できるのに対して、プリミティブ値は変更することができません。</p>
+すべてのプリミティブ値は、**イミュータブル** (immutable) 、つまり変更できません。変数には新しい値を再割り当てすることができますが、既存の値については、オブジェクト、配列、関数が変更できるのに対して、プリミティブ値は変更することができません。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は、プリミティブ値が<strong>変更不可</strong>である事実を理解するために役立つでしょう。</p>
+この例は、プリミティブ値が**変更不可**である事実を理解するために役立つでしょう。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">// 文字列のメソッドを使用しても文字列は変更されない
+```js
+// 文字列のメソッドを使用しても文字列は変更されない
 var bar = "baz";
 console.log(bar);               // baz
 bar.toUpperCase();
@@ -34,17 +35,18 @@ console.log(foo);               // ["plugh"]
 
 // プリミティブ値を代入することで新しい (変更されたわけではない) 値になる
 bar = bar.toUpperCase();       // BAZ
-</pre>
+```
 
-<p>プリミティブ値は置き換えることができますが、直接変更することはできません。</p>
+プリミティブ値は置き換えることができますが、直接変更することはできません。
 
-<h2 id="Another_Example_Step-by-step" name="Another_Example_Step-by-step">他の例 [ 手順を追って ]</h2>
+## 他の例 \[ 手順を追って ]
 
-<p>以下の例は JavaScript がプリミティブ値をどのように扱うかを概観するのに役立つでしょう。</p>
+以下の例は JavaScript がプリミティブ値をどのように扱うかを概観するのに役立つでしょう。
 
-<h3 id="JavaScript_2">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js line-numbers  language-js">// プリミティブ値
+```js
+// プリミティブ値
 let foo = 5;
 
 // プリミティブ値を変更する関数を定義
@@ -64,63 +66,50 @@ console.log(foo);   // 5
 // 第二の関数を呼び出してみる...
 addTwo_v2(foo);
 console.log(foo);   // 5
-</pre>
+```
 
-<p><code>5</code> ではなく <code>7</code> になると思いませんでしたか？そう思った場合は、このコードがどのように実行されるかを見てください。</p>
+`5` ではなく `7` になると思いませんでしたか？そう思った場合は、このコードがどのように実行されるかを見てください。
 
-<ul>
- <li><code>addTwo</code> および <code>addTwo_v2</code> の両関数の呼び出しにおいて、 JavaScript は <code>foo</code> 識別子の値を探します。最初の文で確立された変数が見つかります。</li>
- <li>見つかったら、式が評価されて <code>foo</code> が 5 で置き換えられ、 JavaScript エンジンはその値を関数に引数として渡します。</li>
- <li>関数本体の中の文を実行する前に、 <strong>JavaScript は渡された引数のコピーを取り</strong> (すなわちプリミティブ値)、ローカルのコピーを生成します。これらのコピーは、関数のスコープの中でしか存在せず、関数定義の中で指定された識別子でアクセスすることができます (<code>addTwo</code> では <code>num</code>、 <code>addTwo_v2</code> では <code>foo</code>)</li>
- <li>それから関数内の文が実行されます。
-  <ul>
-   <li>最初の関数では、ローカル変数 <code>num</code> が生成されます。この値を2つ増加させますが、元の <code>foo</code> の値ではありません。</li>
-   <li>二番目の関数では、ローカル変数 <code>foo</code> が生成されます。この値を2つ増加させますが、元の (外部の) <code>foo</code> の値ではありません。このような場合、外部変数 <code>foo</code> は直接アクセスすることができません。これは JavaScript の語彙スコープであり、結果的に変数を見えなくするためです。ローカルの <code>foo</code> が外側の <code>foo</code> を隠します。詳しくは、<a href="/ja/docs/Web/JavaScript/Closures">クロージャー</a>をご覧ください。 (なお、 <code>window.foo</code> を使用して外部変数 <code>foo</code> へアクセスすることができます。)</li>
-  </ul>
- </li>
- <li>結果として、関数内で変更を行っても<strong>コピー</strong>に対して作業をすることになるので、元の <code>foo</code> にはまったく影響<strong>しません</strong>。</li>
-</ul>
+- `addTwo` および `addTwo_v2` の両関数の呼び出しにおいて、 JavaScript は `foo` 識別子の値を探します。最初の文で確立された変数が見つかります。
+- 見つかったら、式が評価されて `foo` が 5 で置き換えられ、 JavaScript エンジンはその値を関数に引数として渡します。
+- 関数本体の中の文を実行する前に、 **JavaScript は渡された引数のコピーを取り** (すなわちプリミティブ値)、ローカルのコピーを生成します。これらのコピーは、関数のスコープの中でしか存在せず、関数定義の中で指定された識別子でアクセスすることができます (`addTwo` では `num`、 `addTwo_v2` では `foo`)
+- それから関数内の文が実行されます。
 
-<p>これが、プリミティブ値が変更不可である理由です - 直接作業するのではなく、<em>元の値に影響せずにコピーで</em>作業しています。</p>
+  - 最初の関数では、ローカル変数 `num` が生成されます。この値を 2 つ増加させますが、元の `foo` の値ではありません。
+  - 二番目の関数では、ローカル変数 `foo` が生成されます。この値を 2 つ増加させますが、元の (外部の) `foo` の値ではありません。このような場合、外部変数 `foo` は直接アクセスすることができません。これは JavaScript の語彙スコープであり、結果的に変数を見えなくするためです。ローカルの `foo` が外側の `foo` を隠します。詳しくは、[クロージャー](/ja/docs/Web/JavaScript/Closures)をご覧ください。 (なお、 `window.foo` を使用して外部変数 `foo` へアクセスすることができます。)
 
-<h2 id="Primitive_wrapper_objects_in_JavaScript" name="Primitive_wrapper_objects_in_JavaScript">JavaScript のプリミティブラッパーオブジェクト</h2>
+- 結果として、関数内で変更を行っても**コピー**に対して作業をすることになるので、元の `foo` にはまったく影響**しません**。
 
-<p><code>null</code> と <code>undefined</code> を除くすべてのプリミティブ値には、そのプリミティブ値を内包する等価のラッパーオブジェクトがあります。</p>
+これが、プリミティブ値が変更不可である理由です - 直接作業するのではなく、*元の値に影響せずにコピーで*作業しています。
 
-<ul>
- <li>{{jsxref("String")}}: 文字列プリミティブ用。</li>
- <li>{{jsxref("Number")}}: 数値プリミティブ用</li>
- <li>{{jsxref("BigInt")}}: 巨大整数プリミティブ用。</li>
- <li>{{jsxref("Boolean")}}: {{Glossary("boolean","真偽値")}}プリミティブ用。</li>
- <li>{{jsxref("Symbol")}}: {{Glossary("symbol","シンボル")}}プリミティブ用。</li>
-</ul>
+## JavaScript のプリミティブラッパーオブジェクト
 
-<p>ラッパーの {{jsxref("Global_Objects/Object/valueOf","valueOf()")}} メソッドは、そのプリミティブ値を返します。</p>
+`null` と `undefined` を除くすべてのプリミティブ値には、そのプリミティブ値を内包する等価のラッパーオブジェクトがあります。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+- {{jsxref("String")}}: 文字列プリミティブ用。
+- {{jsxref("Number")}}: 数値プリミティブ用
+- {{jsxref("BigInt")}}: 巨大整数プリミティブ用。
+- {{jsxref("Boolean")}}: {{Glossary("boolean","真偽値")}}プリミティブ用。
+- {{jsxref("Symbol")}}: {{Glossary("symbol","シンボル")}}プリミティブ用。
 
-<h3 id="General_knowledge" name="General_knowledge">基礎知識</h3>
+ラッパーの {{jsxref("Global_Objects/Object/valueOf","valueOf()")}} メソッドは、そのプリミティブ値を返します。
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures">JavaScript のデータ構造</a></li>
- <li>Wikipedia の {{Interwiki("wikipedia", "プリミティブ型")}} の記事</li>
-</ul>
+## 詳細情報
 
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Glossary">用語集</a>
+### 基礎知識
 
-  <ol>
-   <li>{{Glossary("JavaScript")}}</li>
-   <li>{{Glossary("string", "文字列")}}</li>
-   <li>{{Glossary("number")}}</li>
-   <li>{{Glossary("bigint")}}</li>
-   <li>{{Glossary("boolean")}}</li>
-   <li>{{Glossary("null")}}</li>
-   <li>{{Glossary("undefined")}}</li>
-   <li>{{Glossary("symbol")}}</li>
-  </ol>
- </li>
- <li><a href="/ja/docs/Web/JavaScript/Data_structures">JavaScript のデータ型</a></li>
-</ol>
-</section>
+- [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- Wikipedia の {{Interwiki("wikipedia", "プリミティブ型")}} の記事
+
+1.  [用語集](/ja/docs/Glossary)
+
+    1.  {{Glossary("JavaScript")}}
+    2.  {{Glossary("string", "文字列")}}
+    3.  {{Glossary("number")}}
+    4.  {{Glossary("bigint")}}
+    5.  {{Glossary("boolean")}}
+    6.  {{Glossary("null")}}
+    7.  {{Glossary("undefined")}}
+    8.  {{Glossary("symbol")}}
+
+2.  [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)

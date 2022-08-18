@@ -11,23 +11,16 @@ tags:
   - 用語集
 translation_of: Glossary/https
 ---
-<p><strong>HTTPS</strong> (<strong><em>HyperText Transfer Protocol Secure</em></strong>) は {{Glossary("HTTP")}} プロトコルを暗号化したバージョンです。 HTTPS は通常、 {{Glossary("SSL")}} または {{Glossary("TLS")}} を用いてクライアントとサーバー間のすべての通信を暗号化します。この安全な接続により、クライアントは機密データをサーバーと安全に交換できます (例えば、銀行取引やオンラインショッピングなどで)。</p>
+**HTTPS** (**_HyperText Transfer Protocol Secure_**) は {{Glossary("HTTP")}} プロトコルを暗号化したバージョンです。 HTTPS は通常、 {{Glossary("SSL")}} または {{Glossary("TLS")}} を用いてクライアントとサーバー間のすべての通信を暗号化します。この安全な接続により、クライアントは機密データをサーバーと安全に交換できます (例えば、銀行取引やオンラインショッピングなどで)。
 
-<section id="Quick_links">
-<ol>
- <li>一般知識
-  <ol>
-   <li>Wikipedia 上の {{Interwiki("wikipedia", "HTTPS")}}</li>
-   <li><a href="https://movingtohttps.com/">Moving to HTTPS community guide</a></li>
-   <li><a href="/ja/docs/Web/Security/Secure_Contexts">安全なコンテキスト</a></li>
-  </ol>
- </li>
- <li><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a>
-  <ol>
-   <li>{{glossary("HTTP")}}</li>
-   <li>{{glossary("SSL")}}</li>
-   <li>{{glossary("TLS")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+1.  一般知識
+
+    1.  Wikipedia 上の {{Interwiki("wikipedia", "HTTPS")}}
+    2.  [Moving to HTTPS community guide](https://movingtohttps.com/)
+    3.  [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+
+2.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+
+    1.  {{glossary("HTTP")}}
+    2.  {{glossary("SSL")}}
+    3.  {{glossary("TLS")}}

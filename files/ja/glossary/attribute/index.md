@@ -7,24 +7,23 @@ tags:
   - HTML
 translation_of: Glossary/Attribute
 ---
-<p><span class="glossaryLink new"><ruby><strong>属性</strong><rp> (</rp><rt>attribute</rt><rp>) </rp></ruby></span>属性は{{Glossary("element", "要素")}}を拡張し、動作を変更したりメタデータを提供したりします。</p>
+**属性** (attribute) 属性は{{Glossary("element", "要素")}}を拡張し、動作を変更したりメタデータを提供したりします。
 
-<p>属性は常に <code>name="value"</code> の形式を取ります (属性の識別子に関連付けられた値が続きます)。</p>
+属性は常に `name="value"` の形式を取ります (属性の識別子に関連付けられた値が続きます)。
 
-<p>等号や値のない属性を見かけることもあります。これは HTML では空文字列を、 XML では属性名を提供する略記法です。</p>
+等号や値のない属性を見かけることもあります。これは HTML では空文字列を、 XML では属性名を提供する略記法です。
 
-<pre class="brush: html notranslate">&lt;input required&gt;
-&lt;!-- is the same as… --&gt;
-&lt;input required=""&gt;
-&lt;!-- or --&gt;
-&lt;input required="required"&gt;
-</pre>
+```html
+<input required>
+<!-- is the same as… -->
+<input required="">
+<!-- or -->
+<input required="required">
+```
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
+### 技術リファレンス
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Attributes">HTML 属性リファレンス</a></li>
- <li><a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a></li>
-</ul>
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
+- [グローバル属性](/ja/docs/Web/HTML/Global_attributes)

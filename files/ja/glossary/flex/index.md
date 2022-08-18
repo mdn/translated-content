@@ -9,40 +9,36 @@ tags:
   - 用語集
 translation_of: Glossary/Flex
 ---
-<p><code>flex</code> は CSS {{cssxref("display")}}のプロパティに新しく追加された値です。<code>inline-flex</code> と同じく、使用すると Element(要素)に {{glossary("flex container", "Flex コンテナ")}} が適用されます。また、その Element(要素)の子Element(要素)それぞれには {{glossary("flex item", "Flex アイテム")}} が適用されます。flex アイテムが適用された Element(要素)は flex layout を構成し、CSS Flexible Box Layout Module で定義されているプロパティの全てが適用されるはずです。</p>
+`flex` は CSS {{cssxref("display")}}のプロパティに新しく追加された値です。`inline-flex` と同じく、使用すると Element(要素)に {{glossary("flex container", "Flex コンテナ")}} が適用されます。また、その Element(要素)の子 Element(要素)それぞれには {{glossary("flex item", "Flex アイテム")}} が適用されます。flex アイテムが適用された Element(要素)は flex layout を構成し、CSS Flexible Box Layout Module で定義されているプロパティの全てが適用されるはずです。
 
-<p><code>flex</code> プロパティは flexbox プロパティを縮めて表したプロパティです。<code>flex-grow</code> や <code>flex-shrink</code>、<code>flex-basis</code> 等があります。</p>
+`flex` プロパティは flexbox プロパティを縮めて表したプロパティです。`flex-grow` や `flex-shrink`、`flex-basis` 等があります。
 
-<p><code>&lt;flex&gt;</code> については、CSS Grid Layout内の <a href="/ja/docs/Web/CSS/flex_value">flexible length</a> にて確認できます。</p>
+`<flex>` については、CSS Grid Layout 内の [flexible length](/ja/docs/Web/CSS/flex_value) にて確認できます。
 
-<h2 id="Learn_more" name="Learn_more">関連項目</h2>
+## 関連項目
 
-<h3 id="Property_reference" name="Property_reference">プロパティリファレンス</h3>
+### プロパティリファレンス
 
-<ul>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-direction")}}</li>
- <li>{{cssxref("flex-flow")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("flex-wrap")}}</li>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("justify-content")}}
+- {{cssxref("order")}}
 
-<h3 id="Further_reading" name="Further_reading">参考文献</h3>
+### 参考文献
 
-<ul>
- <li><em><a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout Module Level 1 Specification</a></em></li>
- <li>CSS Flexbox ガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox の基本概念</a></em></li>
- <li>CSS Flexbox ガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">Flexbox と他のレイアウトとの関係</a></em></li>
- <li>CSS Flexbox ガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Flex コンテナにおけるアイテムの位置合わせ</a></em></li>
- <li>CSS Flexbox ガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Flex アイテムの順序を設定する</a></em></li>
- <li>CSS Flexbox ガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Flex アイテムを主軸に沿わせる時の制御割合</a></em></li>
- <li>CSS Flexbox ガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Flex アイテムをまとめるのをマスターする</a></em></li>
- <li>CSS Flexbox ガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox">Flexbox の典型的なユースケース</a></em></li>
-</ul>
+- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
+- CSS Flexbox ガイド: _[Flexbox の基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox ガイド: _[Flexbox と他のレイアウトとの関係](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)_
+- CSS Flexbox ガイド: _[Flex コンテナにおけるアイテムの位置合わせ](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Flexbox ガイド: _[Flex アイテムの順序を設定する](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- CSS Flexbox ガイド: _[Flex アイテムを主軸に沿わせる時の制御割合](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox ガイド: _[Flex アイテムをまとめるのをマスターする](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- CSS Flexbox ガイド: _[Flexbox の典型的なユースケース](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_

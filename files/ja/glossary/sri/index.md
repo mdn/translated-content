@@ -6,13 +6,9 @@ tags:
   - Security
 translation_of: Glossary/SRI
 ---
-<p><strong>サブリソース完全性</strong> (SRI) は、ブラウザーがフェッチするファイル (例えば、 {{Glossary("CDN")}} から) が予期しない操作無しで配信されることをブラウザーが確認できるようにするセキュリティ機能です。 フェッチされたファイルと一致する必要のある暗号化ハッシュを提供できる様にすることで機能します。</p>
+**サブリソース完全性** (SRI) は、ブラウザーがフェッチするファイル (例えば、 {{Glossary("CDN")}} から) が予期しない操作無しで配信されることをブラウザーが確認できるようにするセキュリティ機能です。 フェッチされたファイルと一致する必要のある暗号化ハッシュを提供できる様にすることで機能します。
 
-<div>
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a></li>
- <li>{{HTTPHeader("Content-Security-Policy")}}: {{CSP("require-sri-for")}}</li>
-</ul>
-</div>
+- [Subresource Integrity](/ja/docs/Web/Security/Subresource_Integrity)
+- {{HTTPHeader("Content-Security-Policy")}}: {{CSP("require-sri-for")}}

@@ -5,14 +5,12 @@ tags:
   - Glossary
 translation_of: Glossary/SISD
 ---
-<p>SISD は{{Interwiki("wikipedia","フリンの分類","コンピュータ・アーキテクチャの分類（フリンの分類）")}}の一つである <strong>Single Instruction/SIngle Data</strong> （単一命令/単一データ）を略したものです。SISD アーキテクチャでは単一のプロセッサが単一の命令を実行し、メモリ内の単一データ列を演算します。</p>
+SISD は{{Interwiki("wikipedia","フリンの分類","コンピュータ・アーキテクチャの分類（フリンの分類）")}}の一つである **Single Instruction/SIngle Data** （単一命令/単一データ）を略したものです。SISD アーキテクチャでは単一のプロセッサが単一の命令を実行し、メモリ内の単一データ列を演算します。
 
-<p>1 回の演算で多重データ列を処理可能な並列アーキテクチャの {{Glossary("SIMD")}} についても参照ください。</p>
+1 回の演算で多重データ列を処理可能な並列アーキテクチャの {{Glossary("SIMD")}} についても参照ください。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<h3 id="General_knowledge" name="General_knowledge">基礎知識</h3>
+### 基礎知識
 
-<ul>
- <li>Wikipedia 上の記事 「{{Interwiki("wikipedia", "SISD")}}」</li>
-</ul>
+- Wikipedia 上の記事 「{{Interwiki("wikipedia", "SISD")}}」

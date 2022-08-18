@@ -8,10 +8,8 @@ tags:
   - 用語集
 translation_of: Glossary/XHTML
 ---
-<p><span class="seoSummary"><strong>XHTML</strong> は、 HTML 文書のうち {{Glossary("XML")}} の構文規則に適合して書かれたものを指すために歴史的に使用されてきた用語です。</span></p>
+**XHTML** は、 HTML 文書のうち {{Glossary("XML")}} の構文規則に適合して書かれたものを指すために歴史的に使用されてきた用語です。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<ul>
- <li><a href="/ja/docs/Web/Guide/HTML/XHTML">XHTML</a></li>
-</ul>
+- [XHTML](/ja/docs/Web/Guide/HTML/XHTML)

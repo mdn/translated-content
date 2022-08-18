@@ -6,12 +6,10 @@ tags:
   - Glossary
 translation_of: Glossary/Shim
 ---
-<p><strong>シム (shim)</strong>とは既存のコードの動作を修正するために使われるコードであり、通常新たなAPIを追加することで問題の修正が行われます。古いブラウザーにサポートされていない新しいAPIを実装する{{Glossary("polyfill","ポリフィル")}}とは異なります。</p>
+**シム (shim)**とは既存のコードの動作を修正するために使われるコードであり、通常新たな API を追加することで問題の修正が行われます。古いブラウザーにサポートされていない新しい API を実装する{{Glossary("polyfill","ポリフィル")}}とは異なります。
 
-<h2 id="より詳しく知る">より詳しく知る</h2>
+## より詳しく知る
 
-<h3 id="一般知識">一般知識</h3>
+### 一般知識
 
-<ul>
- <li>ウィキペディア(英) <a href="https://en.wikipedia.org/wiki/Shim_(computing)">Shim</a></li>
-</ul>
+- ウィキペディア(英) [Shim](<https://en.wikipedia.org/wiki/Shim_(computing)>)

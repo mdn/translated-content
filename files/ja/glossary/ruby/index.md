@@ -7,21 +7,17 @@ tags:
   - Ruby
 translation_of: Glossary/Ruby
 ---
-<p><strong>Ruby</strong> はオープンソースのプログラミング言語です。{{glossary("world wide web","Web")}} コンテキストでは、Ruby はウェブサイト/アプリを生産するための <em>Ruby On Rails</em> (ROR) フレームワークと一緒にサーバー・サイドでよく使用されます。</p>
+**Ruby** はオープンソースのプログラミング言語です。{{glossary("world wide web","Web")}} コンテキストでは、Ruby はウェブサイト/アプリを生産するための _Ruby On Rails_ (ROR) フレームワークと一緒にサーバー・サイドでよく使用されます。
 
-<p>ルビはまた、HTML で東アジアのテキストを強調して発音情報を与える方法でもあります;  {{HTMLElement("ruby")}} 要素を見てください。</p>
+ルビはまた、HTML で東アジアのテキストを強調して発音情報を与える方法でもあります; {{HTMLElement("ruby")}} 要素を見てください。
 
-<h2 id="Learn_More" name="Learn_More">Learn More</h2>
+## Learn More
 
-<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
+### 一般知識
 
-<ul>
- <li>Wikipeia 上の <a href="https://ja.wikipedia.org/wiki/Ruby">Ruby</a> </li>
-</ul>
+- Wikipeia 上の [Ruby](https://ja.wikipedia.org/wiki/Ruby)
 
-<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
+### 技術リファレンス
 
-<ul>
- <li><a href="https://www.ruby-lang.org">Ruby の公式 Web サイト</a></li>
- <li><a href="http://rubyonrails.org/">Ruby On Rails の公式 Web サイト</a></li>
-</ul>
+- [Ruby の公式 Web サイト](https://www.ruby-lang.org)
+- [Ruby On Rails の公式 Web サイト](http://rubyonrails.org/)
