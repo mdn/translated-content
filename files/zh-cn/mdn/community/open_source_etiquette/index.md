@@ -4,7 +4,7 @@ slug: MDN/Community/Open_source_etiquette
 ---
 {{MDNSidebar}}
 
-如果你从未在开源项目（open source project，OSP）工作过，在你开始向 MDN Web Docs（或其他开源项目）贡献之前，我们推荐你阅读这篇文章。这里有一些可供实行的最佳实践，来帮助确保你和其他项目贡献者感到受重视和安心，并保持生产力。
+如果你从未在开源项目（open source project，OSP）工作过，在你开始向 MDN Web 文档（或其他开源项目）贡献之前，我们推荐你阅读这篇文章。这里有一些可供实行的最佳实践，来帮助确保你和其他项目贡献者感到受重视和安心，并保持生产力。
 
 这篇文章不会教到你所有如何为开源项目做贡献的技巧，这篇文章的目标主要是为了让你为开源项目贡献时，有一些好的出发点。
 
@@ -51,15 +51,15 @@ slug: MDN/Community/Open_source_etiquette
 
 需要注意的是，任何一个好的开源项目都会有相应的规则来保护它的贡献者，以避免他们在贡献时感到不自在。这在 GitHub 中往往以 CODE_OF_CONDUCT.md 文件的形式给出。
 
-例如，MDN 的代码库受影响广泛的[Mozilla 社区参与准则](https://www.mozilla.org/zh-CN/about/governance/policies/participation/)影响。通常在 MDN Web Docs 库中轻微的攻击性行为（比如持续不合主题的讨论或破坏性行为，或举止粗鲁）会收到一次 repo 内的警告，然后是最后一次警告，最后就是临时或永久的封禁。更加严重的行为问题，如仇恨言论、对其他贡献成员的威胁，将不受容忍，且可能立即遭受封禁处理。
+例如，MDN 的代码库受影响广泛的 [Mozilla 社区参与准则](https://www.mozilla.org/zh-CN/about/governance/policies/participation/)的管理。通常在 MDN Web 文档库中轻微的攻击性行为（比如持续不合主题的讨论或破坏性行为，或举止粗鲁）会收到一次 repo 内的警告，然后是最后一次警告，最后就是临时或永久的封禁。更加严重的行为问题，如仇恨言论、对其他贡献成员的威胁，将不受容忍，且可能立即遭受封禁处理。
 
 如果你收到任何令你不舒服的内容，总是可以使用行为准则（code of conduct）中提及的机制进行举报。
 
 ## 选择有效的贡献
 
-想清楚你在项目中要做什么。比如，我们会有一个在[贡献者任务板](https://github.com/orgs/mdn/projects/25/views/1)上记录的一些议题（issue）列表，根据任务的种类分开显示。
+想清楚你在项目中要做什么。比如，我们会有一个在[贡献者任务面板](https://github.com/orgs/mdn/projects/25/views/1)上记录的一些议题（issue）列表，根据任务的种类分开显示。
 
-你也可以通过开启[拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)来修复在阅读 MDN 文章时一眼扫到的问题。
+你也可以通过创建[拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)来修复在阅读 MDN 文章时一眼扫到的问题。
 
 MDN 上的很多工作围绕于文档及示例代码的编写，不过，通过这些方式也可以作出贡献：
 
@@ -80,7 +80,7 @@ MDN 上的很多工作围绕于文档及示例代码的编写，不过，通过�
 
 ## 阅读手册
 
-好的开源项目总会让贡献者文档随时可供查阅。对于 GitHub 项目，内容往往存在于仓库的 CONTRIBUTING.md 文件中，或者项目的 README.md 文件中。作为文档类项目，MDN content 有一个 [README](https://github.com/mdn/content/blob/main/README.md) 文件和一整套对于网站本身的贡献者文档（请参阅 [为 MDN 做贡献](/zh-CN/docs/MDN/Community)）。
+好的开源项目总会让贡献者文档随时可供查阅。对于 GitHub 项目，内容往往存在于仓库的 CONTRIBUTING.md 文件中，或者项目的 README.md 文件中。作为文档类项目，MDN content 有一个 [README](https://github.com/mdn/content/blob/main/README.md) 文件和一整套对于网站本身的贡献者文档（请参阅[为 MDN 做贡献](/zh-CN/docs/MDN/Community)）。
 
 不要害怕寻求帮助，但总是尝试在提问之前，先自己寻找答案。这样可以让自己独立积累对项目的知识，而且不会给其他贡献者带来不必要的负担。
 
@@ -117,7 +117,7 @@ MDN 上的很多工作围绕于文档及示例代码的编写，不过，通过�
 
 了解项目中有什么样的版主是很有用的，这样你就可以知道在诸如拉取请求（pull request）或提出问题的贴子（issue threads）中应该向谁寻求帮助。
 
-## 耐心点，及时点
+## 耐心点、及时点
 
 记住，很多人在用他们的业余时间运营于开源项目中，没有收入，且一般工作在开源项目的人都非常繁忙。如果你在等待拉取请求审查（pull request review）或问题的解答，请耐心一点。
 
@@ -129,6 +129,6 @@ MDN 上的很多工作围绕于文档及示例代码的编写，不过，通过�
 
 ## 参见
 
-- [如何为开源项目贡献（Opensource）](https://opensource.guide/how-to-contribute/)
-- [freeCodeCamp 提出的 "How to contribute to open source" 资源列表](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
-- [开始为开源项目做贡献（Stackoverflow）](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
+- [如何为开源项目贡献](https://opensource.guide/how-to-contribute/)
+- [freeCodeCamp 提出的“How to contribute to open source”资源列表](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
+- [开始为开源项目做贡献](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
