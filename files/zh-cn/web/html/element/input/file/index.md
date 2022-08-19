@@ -4,7 +4,7 @@ slug: Web/HTML/Element/Input/file
 ---
 {{HTMLRef}}
 
-使用 **`type="file"` **的 {{HTMLElement("input")}} 元素使得用户可以选择一个或多个元素以[提交表单](/zh-CN/docs/Learn/HTML/Forms)的方式上传到服务器上，或者通过 Javascript 的 [File API](/zh-CN/docs/Web/API/File/Using_files_from_web_applications) 对文件进行操作。
+使用 **`type="file"`** 的 {{HTMLElement("input")}} 元素使得用户可以选择一个或多个元素以[提交表单](/zh-CN/docs/Learn/HTML/Forms)的方式上传到服务器上，或者通过 Javascript 的 [File API](/zh-CN/docs/Web/API/File/Using_files_from_web_applications) 对文件进行操作。
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
