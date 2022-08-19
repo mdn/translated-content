@@ -1,18 +1,6 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - Comparison
-  - Condition
-  - Conditional
-  - ECMAScript 2015
-  - Equality
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
-browser-compat: javascript.builtins.Object.is
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
 {{JSRef}}
 

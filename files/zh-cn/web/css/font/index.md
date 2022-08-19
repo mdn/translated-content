@@ -16,7 +16,7 @@ slug: Web/CSS/font
 
 可以将`font`属性指定为单个关键字，它将选择系统字体，或者作为字体相关的属性的简写。
 
-如果将 `font` 指定为系统关键字，则它必须是以下之一：[`caption`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#caption), [`icon`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#icon), [`menu`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#menu), [`message-box`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#message-box), [`small-caption`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#small-caption), [`status-bar`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#status-bar)。
+如果将 `font` 指定为系统关键字，则它必须是以下之一：[`caption`](/zh-CN/docs/Web/CSS/font#caption), [`icon`](/zh-CN/docs/Web/CSS/font#icon), [`menu`](/zh-CN/docs/Web/CSS/font#menu), [`message-box`](/zh-CN/docs/Web/CSS/font#message-box), [`small-caption`](/zh-CN/docs/Web/CSS/font#small-caption), [`status-bar`](/zh-CN/docs/Web/CSS/font#status-bar)。
 
 如果 `font` 字体相关的属性的简写：
 

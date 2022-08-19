@@ -4,7 +4,7 @@ slug: Web/API/Request
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 **`Request`**接口？用来表示资源请求。
 
-你可以使用 {{domxref("Request.Request()")}} ?构造函数创建一个`Request 对象，但是你可能会遇到一个 Request 对象作为其它 API 的操作被返回，比如一个 `service worker 的{{domxref("FetchEvent.request")}}。
+你可以使用 {{domxref("Request.Request()")}} ?构造函数创建一个 `Request` 对象，但是你可能会遇到一个 Request 对象作为其它 API 的操作被返回，比如一个 `service worker` 的{{domxref("FetchEvent.request")}}。
 
 ## 构造器
 
@@ -26,7 +26,7 @@ slug: Web/API/Request
 - {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
   - : ?包含请求来源的策略 (例如：`no-referrer`)。
 - {{domxref("Request.mode")}} {{readonlyInline}}
-  - : 包含请求的模式 (例如： `cors`, `no-cors`, `same-origin`,` navigate`).
+  - : 包含请求的模式 (例如： `cors`, `no-cors`, `same-origin`, `navigate`).
 - {{domxref("Request.credentials")}} {{readonlyInline}}
   - : 包含请求的证书 (例如： `omit`, `same-origin`).
 - {{domxref("Request.redirect")}} {{readonlyinline}}

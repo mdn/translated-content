@@ -1,18 +1,6 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-  - await
-  - for
-  - for await...of
-  - for...in
-  - for...of
-  - 异步
-  - 迭代
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
 {{jsSidebar("Statements")}}
 

@@ -1,14 +1,6 @@
 ---
 title: 浏览器的同源策略
 slug: Web/Security/Same-origin_policy
-tags:
-  - AJAX
-  - CORS
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - 同源策略
-translation_of: Web/Security/Same-origin_policy
 ---
 **同源策略**是一个重要的安全策略，它用于限制一个{{Glossary("origin")}}的文档或者它加载的脚本如何能与另一个源的资源进行交互。它能帮助阻隔恶意文档，减少可能被攻击的媒介。
 

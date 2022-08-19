@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 ---
 {{JSRef}}
 

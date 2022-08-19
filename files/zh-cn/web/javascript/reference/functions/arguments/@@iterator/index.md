@@ -1,7 +1,6 @@
 ---
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
-translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
 {{jsSidebar("Functions")}}
 

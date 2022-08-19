@@ -110,7 +110,7 @@ Web 提供的功能和 API 如果被滥用，可能会带来隐私或安全风�
 
 ## 参见
 
-- [Using Feature Policy](/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes
 - [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)

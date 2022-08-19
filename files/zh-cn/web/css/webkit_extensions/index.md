@@ -4,7 +4,7 @@ slug: Web/CSS/WebKit_Extensions
 ---
 {{ CSSRef() }}
 
-WebKit 支持大量的[CSS](/zh-cn/CSS)扩展，这种 css 属性的前缀`为-webkit-`.
+WebKit 支持大量的[CSS](/zh-CN/CSS)扩展，这种 css 属性的前缀`为-webkit-`.
 
 这些属性其中的一部分已经被包含在 CSS 规范草案中，并且可能成为最后的推荐标准，但目前仍然是试验性的属性， 还有一些属性是不规范的属性，它们没有出现在跟踪规范中。
 

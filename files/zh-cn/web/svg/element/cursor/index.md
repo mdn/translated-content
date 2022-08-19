@@ -1,13 +1,6 @@
 ---
 title: cursor
 slug: Web/SVG/Element/cursor
-tags:
-  - SVG
-  - 元素
-  - 参考
-  - 废弃
-  - 需要示例
-translation_of: Web/SVG/Element/cursor
 ---
 {{SVGRef}}{{Deprecated_Header}}
 

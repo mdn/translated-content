@@ -58,12 +58,13 @@ slug: Web/HTML/Element/col
     - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
     - `middle`, which will center the text in the cell;
     - and `top`, which will put the text as close to the top of the cell as it is possible.
-    
+
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard:
     >
     > - Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
     > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
     > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+
 - {{htmlattrdef("width")}} {{Deprecated_Inline}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
 

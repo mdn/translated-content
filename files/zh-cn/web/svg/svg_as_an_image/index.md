@@ -1,11 +1,6 @@
 ---
 title: SVG 作为图片
 slug: Web/SVG/SVG_as_an_Image
-tags:
-  - SVG
-  - 图像
-  - 需要内容
-translation_of: Web/SVG/SVG_as_an_Image
 ---
 SVG 图像可以作为一种图片格式用在很多环境中。很多浏览器支持在下列环境中应用 SVG 图像：
 

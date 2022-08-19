@@ -43,7 +43,7 @@ slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
 #### 注意
 
-1.  `当使用 font-variation-settings` 时，请务必注意轴名称区分大小写。注册轴名称必须为小写，自定义轴必须为大写。例如：
+1. 当使用 `font-variation-settings` 时，请务必注意轴名称区分大小写。注册轴名称必须为小写，自定义轴必须为大写。例如：
 
     ```css
     font-variation-settings: 'wght' 375, 'GRAD' 88;
@@ -51,7 +51,7 @@ slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
     `wght` (weight) 是一个注册轴， `GRAD` (grade) 是一个自定义轴。
 
-2.  如果您使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。您可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
+2. 如果您使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。您可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
 
 ### 字重
 

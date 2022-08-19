@@ -70,7 +70,7 @@ function clearAlert() {
 
 {{EmbedLiveSample('例子')}}
 
-也可参考 [`clearTimeout()` ](/zh-CN/docs/DOM/window.clearTimeout#Example)示例。
+也可参考 [`clearTimeout()`](/zh-CN/docs/DOM/window.clearTimeout#Example) 示例。
 
 ## 兼容旧环境（polyfill）
 
@@ -325,9 +325,9 @@ setInterval(f, 0);
 
 如果想在浏览器中实现 0ms 延时的定时器，你可以参考[这里](http://dbaron.org/log/20100309-faster-timeouts)所说的 {{domxref("window.postMessage()")}}
 
-> **备注：** 最小延时， `DOM_MIN_TIMEOUT_VALUE`, 是 4ms (但在 Firefox 中通常是是存储在 `dom.min_timeout_value `这个变量中), `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` 的第 5 层。
+> **备注：** 最小延时， `DOM_MIN_TIMEOUT_VALUE`, 是 4ms (但在 Firefox 中通常是是存储在 `dom.min_timeout_value` 这个变量中), `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` 的第 5 层。
 
-> **备注：** 4 ms 是在 [HTML5 spec ](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers)中精确的，并且在 2010 年及以后的跨浏览器中保持了一致，这个数值比 {{geckoRelease("5.0")}}规定的嵌套函数的最小延时 10ms 更为精确。
+> **备注：** 4 ms 是在 [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) 中精确的，并且在 2010 年及以后的跨浏览器中保持了一致，这个数值比 {{geckoRelease("5.0")}}规定的嵌套函数的最小延时 10ms 更为精确。
 
 #### 未被激活的 tabs 的定时最小延迟>=1000ms
 

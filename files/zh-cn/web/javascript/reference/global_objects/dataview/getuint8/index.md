@@ -1,10 +1,6 @@
 ---
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
-tags:
-  - 类型化
-  - 类型化数组
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 ---
 {{JSRef}}
 

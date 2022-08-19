@@ -1,14 +1,6 @@
 ---
 title: 尾后逗号
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - Comma
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - 语法
-  - 逗号
-translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
 {{JsSidebar("More")}}
 

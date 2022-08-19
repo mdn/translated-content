@@ -1,14 +1,6 @@
 ---
 title: SVG 教程
 slug: Web/SVG/Tutorial
-tags:
-  - SVG
-  - SVG 教程
-  - 中间体
-  - 需要内容
-  - 需要帮助
-  - 需要更新
-translation_of: Web/SVG/Tutorial
 ---
 可缩放矢量图形，即[SVG](/zh-CN/SVG)，是 W3C XML 的分支语言之一，用于标记可缩放的矢量图形。目前 SVG 在 Firefox、Opera、Webkit 浏览器、IE 等浏览器中已经部分实现。
 

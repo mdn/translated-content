@@ -2,7 +2,9 @@
 title: Shapes from box values
 slug: Web/CSS/CSS_Shapes/From_box_values
 ---
-{{CSSRef}}A straightforward way to create a shape is to use a value from the CSS Box Model. This article explains how to do this.
+{{CSSRef}}
+
+A straightforward way to create a shape is to use a value from the CSS Box Model. This article explains how to do this.
 
 创建形状的一个简单方法是使用 CSS 框模型中的值。本文将解释如何执行此操作
 

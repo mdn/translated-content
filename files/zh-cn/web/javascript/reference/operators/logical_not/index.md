@@ -1,7 +1,6 @@
 ---
 title: Logical NOT (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-translation_of: Web/JavaScript/Reference/Operators/Logical_NOT
 ---
 {{jsSidebar("Operators")}}
 

@@ -45,14 +45,14 @@ CSS 是**开放网络**的核心语言之一，由 [W3C 规范](http://w3.org/St
 - CSS 关键概念:
 
   - [语言语法和形式](/zh-CN/docs/CSS/Syntax)（The [syntax and forms of the language](/zh-CN/docs/CSS/Syntax)）
-  - [特殊性（另译优先级）](/zh-CN/docs/CSS/Specificity)、[继承](/zh-CN/docs/CSS/inheritance)和[级联](/zh-CN/docs/Web/CSS/Cascade)（[Specificity](/zh-CN/docs/CSS/Specificity), [inheritance ](/zh-CN/docs/CSS/inheritance)and [the Cascade](/zh-CN/docs/Web/CSS/Cascade)）
+  - [特殊性（另译优先级）](/zh-CN/docs/CSS/Specificity)、[继承](/zh-CN/docs/CSS/inheritance)和[级联](/zh-CN/docs/Web/CSS/Cascade)（[Specificity](/zh-CN/docs/CSS/Specificity), [inheritance](/zh-CN/docs/CSS/inheritance) and [the Cascade](/zh-CN/docs/Web/CSS/Cascade)）
   - [盒子模型](/zh-CN/docs/CSS/box_model)和[外边距合并](/zh-CN/docs/CSS/margin_collapsing)（[Box model](/zh-CN/docs/CSS/box_model) and [margin collapse](/zh-CN/docs/CSS/margin_collapsing)）
   - [包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)（The [containing block](/zh-CN/docs/Web/CSS/Containing_block)）
   - [堆叠](/zh-CN/docs/CSS/Understanding_z-index/The_stacking_context)和[块格式化](/zh-CN/docs/CSS/block_formatting_context)上下文（[Stacking](/zh-CN/docs/CSS/Understanding_z-index/The_stacking_context) and [block-formatting](/zh-CN/docs/CSS/block_formatting_context) contexts）
   - [初始值](/zh-CN/docs/CSS/initial_value)、[计算值](/zh-CN/docs/Web/CSS/computed_value)、[应用值](/zh-CN/docs/CSS/used_value)和[实际值](/zh-CN/docs/CSS/actual_value)（[Initial](/zh-CN/docs/CSS/initial_value), [computed](/zh-CN/docs/CSS/computed_value), [used](/zh-CN/docs/CSS/used_value), and [actual](/zh-CN/docs/CSS/actual_value) values）
   - [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)（[CSS shorthand properties](/zh-CN/docs/CSS/Shorthand_properties)）
   - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) ([CSS Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout))
-  - [CSS 网格布局 ](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)([Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout))
+  - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) ([Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout))
   - [媒体查询](/zh-CN/docs/Web/CSS/媒体查询)
   - [动画](/zh-CN/docs/Web/CSS/animation)
 
@@ -75,6 +75,6 @@ CSS 是**开放网络**的核心语言之一，由 [W3C 规范](http://w3.org/St
 
 - [CSS 演示说明](/zh-CN/docs/Web/%E6%BC%94%E7%A4%BA%E8%AF%B4%E6%98%8E#CSS)：最新活跃的 CSS 技术——创造力的推动。
 - 常与 CSS 一起应用的 Web 语言：[HTML](/zh-CN/docs/HTML)、[SVG](/zh-CN/docs/SVG)、[MathML](/zh-CN/docs/Web/MathML)、{{Glossary("XHTML", "", 1)}} 以及 [XML](/zh-CN/docs/XML_介绍)。
-- Mozilla CSS 扩展用途技术：[XUL](/zh-CN/docs/Mozilla/Tech/XUL)、[Firefox](https://developer.mozilla.org/zh-CN/Firefox)、以及 [Thunderbird 扩展](/zh-CN/docs/Mozilla/Thunderbird)与[主题](/zh-CN/docs/Mozilla/Add-ons/Themes)。
+- Mozilla CSS 扩展用途技术：[XUL](/zh-CN/docs/Mozilla/Tech/XUL)、[Firefox](/zh-CN/Firefox)、以及 [Thunderbird 扩展](/zh-CN/docs/Mozilla/Thunderbird)与[主题](/zh-CN/docs/Mozilla/Add-ons/Themes)。
 - [Mozilla 邮件列表](https://lists.mozilla.org/listinfo/dev-tech-layout)
 - [StackOverflow 上 css 相关的问题](http://stackoverflow.com/questions/tagged/css)

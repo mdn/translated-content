@@ -2,7 +2,7 @@
 title: 使用样式和颜色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/cn/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
 
 ## 色彩 Colors
 
@@ -104,7 +104,7 @@ ctx.strokeStyle = "rgba(255,0,0,0.5)";
 ctx.fillStyle = "rgba(255,0,0,0.5)";
 ```
 
-`rgba() `方法与 `rgb() `方法类似，就多了一个用于设置色彩透明度的参数。它的有效范围是从 0.0（完全透明）到 1.0（完全不透明）。
+`rgba()` 方法与 `rgb()` 方法类似，就多了一个用于设置色彩透明度的参数。它的有效范围是从 0.0（完全透明）到 1.0（完全不透明）。
 
 ### `globalAlpha` 示例
 
@@ -301,7 +301,7 @@ draw();
 
 ![](/@api/deki/files/89/=Canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter。`默认是 ` miter``。 `
 
-这里我同样用三条折线来做例子，分别设置不同的 `lineJoin` 值。最上面一条是 `round` 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 `miter `的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 `miterLimit` 属性的制约。
+这里我同样用三条折线来做例子，分别设置不同的 `lineJoin` 值。最上面一条是 `round` 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 `miter` 的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 `miterLimit` 属性的制约。
 
 ```js
 function draw() {
@@ -408,7 +408,7 @@ draw();
 
 ### 使用虚线
 
-用 `setLineDash` 方法和 `lineDashOffset` 属性来制定虚线样式。`setLineDash` 方法接受一个数组，来指定线段与间隙的交替；`lineDashOffset `属性设置起始偏移量。
+用 `setLineDash` 方法和 `lineDashOffset` 属性来制定虚线样式。`setLineDash` 方法接受一个数组，来指定线段与间隙的交替；`lineDashOffset` 属性设置起始偏移量。
 
 在这个例子中，我们要创建一个蚂蚁线的效果。它往往应用在计算机图形程序选区工具动效中。它可以帮助用户通过动画的边界来区分图像背景选区边框。在本教程的后面部分，你可以学习如何实现这一点和其他[基本的动画](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations)。
 
@@ -623,9 +623,9 @@ The result looks like this:
 ## 阴影 Shadows
 
 - {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}
-  - : `shadowOffsetX` 和 `shadowOffsetY `用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 `0`。
+  - : `shadowOffsetX` 和 `shadowOffsetY` 用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 `0`。
 - {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}
-  - : shadowOffsetX 和 `shadowOffsetY `用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 `0`。
+  - : shadowOffsetX 和 `shadowOffsetY` 用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 `0`。
 - {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}
   - : shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 `0`。
 - {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}

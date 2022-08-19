@@ -1,11 +1,6 @@
 ---
 title: 按位与赋值 (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
-tags:
-  - JavaScript
-  - 按位与赋值运算
-  - 操作符运算
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 ---
 {{jsSidebar("Operators")}}按位与赋值运算符（＆=）表示两个操作数的二进制，对它们进行按位 AND 运算并将结果分配给变量。{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
 

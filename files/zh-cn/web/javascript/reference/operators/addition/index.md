@@ -1,7 +1,6 @@
 ---
 title: 相加运算符 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-translation_of: Web/JavaScript/Reference/Operators/Addition
 original_slug: Web/JavaScript/Reference/Operators/相加
 ---
 {{jsSidebar("相加运算符")}}

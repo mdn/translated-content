@@ -1,12 +1,6 @@
 ---
 title: 元编程
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
@@ -220,6 +214,7 @@ console.log(p.a, p.b); // 1, 42
         {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
       </td>
       <td>
+        <!-- markdownlint-disable MD011 -->
         Property access: <code>proxy[foo]</code>and <code>proxy.bar</code
         ><br />Inherited property access: <code>Object.create(proxy)[foo]</code
         ><br />{{jsxref("Reflect.get()")}}

@@ -1,10 +1,6 @@
 ---
 title: 'Warning: expression closures are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
-tags:
-  - JavaScript
-  - 警告
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
 {{jsSidebar("Errors")}}
 

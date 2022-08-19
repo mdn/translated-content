@@ -1,10 +1,6 @@
 ---
 title: Intl.getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
-tags:
-  - 区域语言代码
-  - 去重
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 ---
 {{JSRef}}
 

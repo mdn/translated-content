@@ -12,7 +12,7 @@ slug: Web/API/FileError
 
 | 属性名 | 类型             | 描述                                                  |
 | ------ | ---------------- | ----------------------------------------------------- |
-| `code` | `unsigned short` | The [error code](/zh-cn/nsIDOMFileError#Error_codes). |
+| `code` | `unsigned short` | The [error code](/zh-CN/nsIDOMFileError#Error_codes). |
 
 ## Error codes
 

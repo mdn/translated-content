@@ -23,7 +23,6 @@ slug: Web/HTML/Element/Input/email
   <tr>
    <td>
     <p><strong>支持的属性</strong></p>
-
     <p><strong>通用的属性</strong></p>
    </td>
    <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("multiple", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("size", "input")}}</td>
@@ -43,9 +42,9 @@ slug: Web/HTML/Element/Input/email
 
 {{HTMLElement("input")}} 元素的 {{htmlattrxref("value", "input")}} 属性包含一个会自动验证是否符合电子邮件语法的 {{domxref("DOMString")}}。具体来说，此处有三个格式可以通过验证：
 
-1.  一个空字符串（“”），表示用户未输入值或该值已被删除。
-2.  单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 `"username@domain"` 或者 `"username@domain.tld"`，当然并不局限于此。关于匹配电子邮件地址验证算法的 {{Glossary("regular expression")}}，参见 [Validation](#validation)。
-3.  当且仅当明确 {{htmlattrxref("multiple", "input")}} 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。
+1. 一个空字符串（“”），表示用户未输入值或该值已被删除。
+2. 单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 `"username@domain"` 或者 `"username@domain.tld"`，当然并不局限于此。关于匹配电子邮件地址验证算法的 {{Glossary("regular expression")}}，参见 [Validation](#validation)。
+3. 当且仅当明确 {{htmlattrxref("multiple", "input")}} 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。
 
 关于如何验证电子邮件地址以保证其格式正确的细节，参见 [Validation](#validation)。
 

@@ -58,8 +58,6 @@ void removeListener(
 
 {{Compat("api.MediaQueryList")}}
 
-##
-
 ## 規範標準
 
 - [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)

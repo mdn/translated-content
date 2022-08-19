@@ -33,7 +33,7 @@ slug: Web/API/AudioParam
 AudioParam _初始化的方法来自它的父类，_`AudioNode`.
 
 - {{domxref("AudioParam.setValueAtTime()")}}
-  - : 在一个确切的时间，即时更改 `AudioParam `的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 `value` 参数。
+  - : 在一个确切的时间，即时更改 `AudioParam` 的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 `value` 参数。
 - {{domxref("AudioParam.linearRampToValueAtTime()")}}
   - : 调整 `AudioParam 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。`
 - {{domxref("AudioParam.exponentialRampToValueAtTime()")}}

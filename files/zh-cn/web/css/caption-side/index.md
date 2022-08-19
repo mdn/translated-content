@@ -4,7 +4,7 @@ slug: Web/CSS/caption-side
 ---
 {{CSSRef}}
 
-[CSS ](/zh-CN/CSS)中 **`caption-side`** 属性会将表格的标题{{HTMLElement("caption")}} 放到规定的位置。但是具体显示的位置与表格的 {{cssxref('writing-mode')}} 属性值有关。
+[CSS](/zh-CN/CSS) 中 **`caption-side`** 属性会将表格的标题{{HTMLElement("caption")}} 放到规定的位置。但是具体显示的位置与表格的 {{cssxref('writing-mode')}} 属性值有关。
 
 {{EmbedInteractiveExample("pages/css/caption-side.html")}}
 

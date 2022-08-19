@@ -1,13 +1,6 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - 函数
-  - 函数声明提升
-  - 函数表达式
-  - 提升
-  - 语句
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 

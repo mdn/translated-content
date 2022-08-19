@@ -2,7 +2,9 @@
 title: ':out-of-range'
 slug: Web/CSS/:out-of-range
 ---
-{{CSSRef}}**`:out-of-range` **[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-min) 和 [`max`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-max) 限定的范围外。
+{{CSSRef}}
+
+**`:out-of-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Element/input#attr-min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#attr-max) 限定的范围外。
 
 ```css
 /* 该伪类可选定任意的<input>, 但只有在该元素指定了取值范围，并且元素值处于指定范围时才有效 */

@@ -1,10 +1,6 @@
 ---
 title: TypedArray.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
-tags:
-  - TypedArray
-  - Uint8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 ---
 {{JSRef}}
 

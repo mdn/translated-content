@@ -9,7 +9,7 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Metadata_content">元数据内容</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流式元素</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语元素</a>.</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Metadata_content">元数据内容</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流式元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语元素</a>.</td>
   </tr>
   <tr>
    <th scope="row">可用内容</th>
@@ -50,9 +50,11 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
     关于浏览器支持请参见[浏览器兼容性](#浏览器兼容性)。另可参见文章[asm.js 的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)。
 - {{htmlattrdef("crossorigin")}}
   - : 那些没有通过标准[CORS](/zh-CN/docs/HTTP_access_control)检查的正常`script` 元素传递最少的信息到 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。可以使用本属性来使那些将静态资源放在另外一个域名的站点打印错误信息。参考 [CORS 设置属性](/zh-CN/docs/Web/HTML/CORS_settings_attributes)了解对有效参数的更具描述性的解释。
+
     ```html
     <script src="" crossorigin="anonymous"></script>
     ```
+
 - {{htmlattrdef("defer")}}
   - : 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 {{event("DOMContentLoaded")}} 事件前执行。
     有 `defer` 属性的脚本会阻止 `DOMContentLoaded` 事件，直到脚本被加载并且解析完成。

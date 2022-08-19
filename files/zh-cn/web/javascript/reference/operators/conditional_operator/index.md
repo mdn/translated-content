@@ -1,10 +1,6 @@
 ---
 title: 条件运算符
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - JavaScript
-  - Operator
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
 {{jsSidebar("Operators")}}
 

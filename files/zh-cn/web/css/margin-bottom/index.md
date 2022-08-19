@@ -8,7 +8,7 @@ slug: Web/CSS/margin-bottom
 
 ![The effect of the CSS margin-bottom property on the element box](https://mdn.mozillademos.org/files/12980/margin-bottom%20explained.svg)
 
-CSS 的` margin-bottom 属性用于设置元素的底部外边距，允许设置负数值。一个正数值将让它相对于正常流与邻近块更远，而负数值将使得更近。`
+CSS 的 `margin-bottom` 属性用于设置元素的底部外边距，允许设置负数值。一个正数值将让它相对于正常流与邻近块更远，而负数值将使得更近。
 
 该属性对于*不可替代 (non-replaced 元素在规范中有概念，请自行搜索)*的行级元素没有效果，比如： {{HTMLElement("tt")}} 或者 {{HTMLElement("span")}}.
 

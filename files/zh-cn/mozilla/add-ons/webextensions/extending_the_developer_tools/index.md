@@ -1,12 +1,6 @@
 ---
 title: 扩展开发人员工具
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-tags:
-  - Add-ons
-  - DevTools
-  - Guide
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
 {{AddonSidebar}}
 

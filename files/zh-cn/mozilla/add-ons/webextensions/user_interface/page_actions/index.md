@@ -1,7 +1,6 @@
 ---
 title: 地址栏按钮
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 {{AddonSideBar}}通常来说的 page action，是添加到浏览器地址栏中的按钮。用户通过点击这个按钮与你的扩展进行交互。
 

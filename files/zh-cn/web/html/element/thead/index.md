@@ -80,7 +80,7 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
 
 ## 示例
 
-See {{ HTMLElement("table") }} for examples on` <thead>`.
+See {{ HTMLElement("table") }} for examples on `<thead>`.
 
 ## 规范
 

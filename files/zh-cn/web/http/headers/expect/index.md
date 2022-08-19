@@ -58,5 +58,5 @@ Expect: 100-continue
 
 ## 参见
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417")}} `Expectation Failed`
+- {{HTTPStatus("100")}} `Continue`

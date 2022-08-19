@@ -13,10 +13,10 @@ Whether we are dealing with pre-recorded audio files or live streams, the mechan
 
 To deliver video and audio, the general workflow is usually something like this:
 
-1.  Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
-2.  If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
-3.  Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
-4.  Deliver the media file to the player.
+1. Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
+2. If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
+3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+4. Deliver the media file to the player.
 
 ### HTML 音频
 

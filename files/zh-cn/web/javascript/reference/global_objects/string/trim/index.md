@@ -1,16 +1,6 @@
 ---
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/Trim
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
 {{JSRef}}
 

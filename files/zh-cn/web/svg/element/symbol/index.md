@@ -1,12 +1,6 @@
 ---
 title: symbol
 slug: Web/SVG/Element/symbol
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 需要示例
-translation_of: Web/SVG/Element/symbol
 ---
 {{SVGRef}}
 

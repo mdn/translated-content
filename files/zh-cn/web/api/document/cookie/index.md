@@ -14,7 +14,7 @@ slug: Web/API/Document/cookie
 allCookies = document.cookie;
 ```
 
-在上面的代码中，allCookies 被赋值为一个字符串，该字符串包含所有的 Cookie，每条 cookie 以"分号和空格 (; )"分隔 (即， `key=value `键值对)。
+在上面的代码中，allCookies 被赋值为一个字符串，该字符串包含所有的 Cookie，每条 cookie 以"分号和空格 (; )"分隔 (即， `key=value` 键值对)。
 
 ##### 写一个新 cookie
 
@@ -73,8 +73,6 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 }
 }
 ```
-
-##
 
 ## 一个小框架：一个完整支持 unicode 的 cookie 读取/写入器
 
@@ -205,7 +203,7 @@ docCookies.removeItem(name[, path],domain)
   - : 要移除的 cookie 名 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String)).
 - `path` *(*可选*)*
   - : 例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
-- `domain `(可选)
+- `domain` (可选)
   - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string或`[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 
 ### 检测 cookie

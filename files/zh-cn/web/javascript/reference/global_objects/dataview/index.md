@@ -1,12 +1,6 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-tags:
-  - DataView
-  - JavaScript
-  - TypedArrays
-  - 构造器
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
 {{JSRef}}
 

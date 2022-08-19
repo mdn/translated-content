@@ -16,7 +16,7 @@ slug: Web/HTML/Element/legend
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">语句内容（Phrasing content</a>）。</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">语句内容（Phrasing content</a>）。</td>
   </tr>
   <tr>
    <th scope="row">标签忽略</th>

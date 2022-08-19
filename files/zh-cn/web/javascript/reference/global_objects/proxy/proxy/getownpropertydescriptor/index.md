@@ -1,7 +1,6 @@
 ---
 title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor
 ---
 {{JSRef}}

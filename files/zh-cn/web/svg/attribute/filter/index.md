@@ -1,11 +1,6 @@
 ---
 title: filter
 slug: Web/SVG/Attribute/filter
-tags:
-  - SVG
-  - SVG 过滤器
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/filter
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

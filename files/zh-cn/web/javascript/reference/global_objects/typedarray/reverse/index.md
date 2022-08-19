@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 ---
 {{JSRef}}
 

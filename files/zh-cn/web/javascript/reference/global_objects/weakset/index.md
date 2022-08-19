@@ -1,9 +1,6 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-tags:
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 {{JSRef}}
 

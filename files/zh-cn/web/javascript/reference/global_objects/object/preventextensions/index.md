@@ -1,12 +1,6 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
 {{JSRef("Global_Objects", "Object")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
 {{JSRef}}
 

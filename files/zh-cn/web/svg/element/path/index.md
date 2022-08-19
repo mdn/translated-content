@@ -1,12 +1,6 @@
 ---
 title: path
 slug: Web/SVG/Element/path
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/path
 ---
 {{SVGRef}}
 

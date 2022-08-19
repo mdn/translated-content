@@ -1,13 +1,6 @@
 ---
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
-  - 构造函数
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 ---
 {{JSRef}}
 

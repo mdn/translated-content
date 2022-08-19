@@ -1,10 +1,6 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
-tags:
-  - JavaScript
-  - Math
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 {{JSRef}}
 

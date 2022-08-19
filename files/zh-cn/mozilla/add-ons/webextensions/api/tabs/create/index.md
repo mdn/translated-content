@@ -1,13 +1,6 @@
 ---
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
-tags:
-  - API
-  - 扩展
-  - 方法
-  - 标签页
-  - 页面扩展
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
 {{AddonSidebar()}}
 

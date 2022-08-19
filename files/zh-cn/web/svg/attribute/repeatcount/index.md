@@ -1,7 +1,6 @@
 ---
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
-translation_of: Web/SVG/Attribute/repeatCount
 ---
 « [SVG 属性参考](/en/SVG/Attribute)
 

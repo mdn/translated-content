@@ -30,7 +30,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 
 > **备注：** 面代码只是简单版的如何创建一个 XMLHttp 实例。更实际的例子，请看本篇文章的 step 3。**
 
-发送一个请求后，你会收到响应。在这一阶段，你要告诉 XMLHttp 请求对象是由哪一个 JavaScript 函数处理响应，在设置了对象的 `onreadystatechange `属性后给他命名，当请求状态改变时调用函数。
+发送一个请求后，你会收到响应。在这一阶段，你要告诉 XMLHttp 请求对象是由哪一个 JavaScript 函数处理响应，在设置了对象的 `onreadystatechange` 属性后给他命名，当请求状态改变时调用函数。
 
 ```js
 httpRequest.onreadystatechange = nameOfTheFunction;
@@ -164,7 +164,7 @@ if (httpRequest.status === 200) {
 
 > **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数 (详情见 [bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
 
-> **备注：** 如果变量 `httpRequest` 在全局范围内使用，它会在 `makeRequest()` 函数中被相互覆盖，从而导致资源竞争。为了避免这个情况，请在包含 AJAX 函数的[闭包](/zh-CN/docs/Web/JavaScript/Closures)中声明 `httpRequest `变量。
+> **备注：** 如果变量 `httpRequest` 在全局范围内使用，它会在 `makeRequest()` 函数中被相互覆盖，从而导致资源竞争。为了避免这个情况，请在包含 AJAX 函数的[闭包](/zh-CN/docs/Web/JavaScript/Closures)中声明 `httpRequest` 变量。
 
 在通信错误的事件中（例如服务器宕机），在访问响应状态 onreadystatechange 方法中会抛出一个例外。为了缓和这种情况，则可以使用 `try...catch` 把 `if...then` 语句包裹起来。
 
@@ -187,7 +187,7 @@ function alertContents() {
 
 ## Step 4 – 处理 XML 响应
 
-在上一个例子中，在收到 HTTP 请求的响应后我们会请求对象的 `responseText` 属性，包含 `test.html` 文件的内容。现在我们试试 `responseXML `属性。
+在上一个例子中，在收到 HTTP 请求的响应后我们会请求对象的 `responseText` 属性，包含 `test.html` 文件的内容。现在我们试试 `responseXML` 属性。
 
 首先，我们创建一个稍后将要请求的有效的 XML 文档。文档（`test.html`）包含以下内容：
 
@@ -240,7 +240,7 @@ alert(root_node.firstChild.data);
   };
 ```
 
-我们还要修改 `makeRequest()` 让它接受用户数据并将其发给服务器。把请求方法从 `GET` 改为 `POST`，把数据作为参数让` httpRequest.send()` 调用。
+我们还要修改 `makeRequest()` 让它接受用户数据并将其发给服务器。把请求方法从 `GET` 改为 `POST`，把数据作为参数让 `httpRequest.send()` 调用。
 
 ```js
   function makeRequest(url, userName) {
@@ -282,4 +282,4 @@ $array = ['userName' => $name, 'computedString' => $computedString];
 echo json_encode($array);
 ```
 
-想获取更多 DOM 方法，可以查看` Mozilla's DOM implementation 文档。`
+想获取更多 DOM 方法，可以查看 `Mozilla's DOM implementation` 文档。

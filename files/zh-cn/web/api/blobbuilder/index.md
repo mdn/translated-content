@@ -6,7 +6,7 @@ slug: Web/API/BlobBuilder
 
 {{ SeeCompatTable() }}
 
-The `BlobBuilder` interface provides an easy way to construct {{ domxref("Blob") }} objects. Just create a `BlobBuilder` and append chunks of data to it by calling the [`append()`](<#append()>) method. When you're done building your blob, call [`getBlob()`](<#getBlob()>) to retrieve a {{ domxref("Blob") }} containing the data you sent into the blob builder.
+The `BlobBuilder` interface provides an easy way to construct {{ domxref("Blob") }} objects. Just create a `BlobBuilder` and append chunks of data to it by calling the [`append()`](#append) method. When you're done building your blob, call [`getBlob()`](#getBlob) to retrieve a {{ domxref("Blob") }} containing the data you sent into the blob builder.
 
 > **备注：** `BlobBuilder`接口已经废弃，请使用新版草案中引入的 {{domxref('Blob') }}构造函数。
 
@@ -51,7 +51,7 @@ void append(
 
 ### getBlob()
 
-Returns the {{ domxref("Blob") }} object that has been constructed using the data passed through calls to [`append()`](<#append()>).
+Returns the {{ domxref("Blob") }} object that has been constructed using the data passed through calls to [`append()`](#append).
 
 ```
 Blob getBlob(
@@ -66,7 +66,7 @@ Blob getBlob(
 
 ###### 返回值
 
-A {{ domxref("Blob") }} object containing all of the data passed to any calls to [`append()`](<#append()>) made since the `BlobBuilder` was created. This also resets the `BlobBuilder` so that the next call to [`append()`](<#append()>) is starting a new, empty blob.
+A {{ domxref("Blob") }} object containing all of the data passed to any calls to [`append()`](#append) made since the `BlobBuilder` was created. This also resets the `BlobBuilder` so that the next call to [`append()`](#append) is starting a new, empty blob.
 
 ### getFile() {{ non-standard_inline() }}
 

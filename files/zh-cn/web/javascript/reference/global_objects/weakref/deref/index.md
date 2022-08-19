@@ -1,7 +1,6 @@
 ---
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 ---
 {{JSRef}}`deref`方法返回{{jsxref("WeakRef")}} 实例的目标对象，如果目标对象已被垃圾收集，则返回`undefined` 。
 

@@ -1,7 +1,6 @@
 ---
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
 {{JSRef}}
 

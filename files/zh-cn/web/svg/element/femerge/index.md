@@ -1,14 +1,6 @@
 ---
 title: feMerge
 slug: Web/SVG/Element/feMerge
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-  - 需要内容
-  - 需要示例
-translation_of: Web/SVG/Element/feMerge
 ---
 {{SVGRef}}
 

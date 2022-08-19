@@ -46,7 +46,7 @@ Base64 编码普遍应用于需要通过被设计为处理文本数据的媒介�
 
 ## 工具
 
-- [Rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
+- [Rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8](#Solution_.232_.E2.80.93_rewriting_atob_and_btoa_using_TypedArrays_and_UTF-8)
 - [`StringView` – a C-like representation of strings based on typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView)
 
 ## 相关文章
@@ -68,7 +68,7 @@ Base64 编码普遍应用于需要通过被设计为处理文本数据的媒介�
 - [the second method](#Solution_2_–_JavaScript's_UTF-16_>_UTF-8_>_base64) consists in converting JavaScript's native UTF-16 strings to UTF-8 and then encode the latter into base64 (relatively fast, portable, clean)
 - [the third method](#Solution_3_–_JavaScript's_UTF-16_>_binary_string_>_base64) consists in encoding JavaScript's native UTF-16 strings directly into base64 via binary strings (very fast, relatively portable, very compact)
 - [the fourth method](#Solution_4_–_escaping_the_string_before_encoding_it) consists in escaping the whole string (with UTF-8, see {{jsxref("encodeURIComponent")}}) and then encode it (portable, non-standard)
-- [the fifth method](<#Solution_5_–_rewrite_the_DOMs_atob()_and_btoa()_using_JavaScript's_TypedArrays_and_UTF-8>) is similar to the second method, but uses third party libraries
+- [the fifth method](#Solution_5_–_rewrite_the_DOMs_atob_and_btoa_using_JavaScripts_TypedArrays_and_UTF-8) is similar to the second method, but uses third party libraries
 
 ### Solution #1 – JavaScript's UTF-16 => base64
 

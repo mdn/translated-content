@@ -1,11 +1,6 @@
 ---
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
-tags:
-  - WebExtensions
-  - 扩展
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
 {{AddonSidebar}}
 

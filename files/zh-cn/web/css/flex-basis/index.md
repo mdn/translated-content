@@ -33,7 +33,7 @@ flex-basis: initial;
 flex-basis: unset;
 ```
 
-这个 `flex-basis` 属性 被指定为关键词 [`content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#content) 或者 [`<'width'>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#%3C'width'%3E).
+这个 `flex-basis` 属性 被指定为关键词 [`content`](/zh-CN/docs/Web/CSS/flex-basis#content) 或者 [`<'width'>`](/zh-CN/docs/Web/CSS/flex-basis#%3C'width'%3E).
 
 ### 取值
 

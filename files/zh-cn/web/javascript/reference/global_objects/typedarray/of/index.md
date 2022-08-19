@@ -1,12 +1,6 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-tags:
-  - Typed
-  - TypedArray
-  - TypedArray.fo()
-  - TypedArray.from()
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
 {{JSRef}}
 

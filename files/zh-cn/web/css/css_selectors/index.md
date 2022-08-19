@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_Selectors
 ## 组合器（Combinators）
 
 - [后代组合器](/zh-CN/docs/Web/CSS/Descendant_selectors)（[Descendant combinator](/zh-CN/docs/Web/CSS/Descendant_combinator)）
-  - : ``（空格）组合器选择前一个元素的后代节点。 **语法：**`A B` **例子：**`div span` 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。
+  - : “ ”（空格）组合器选择前一个元素的后代节点。 **语法：**`A B` **例子：**`div span` 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。
 - [直接子代组合器](/zh-CN/docs/Web/CSS/Child_selectors)（[Child combinator](/zh-CN/docs/Web/CSS/Child_combinator)）
   - : `>` 组合器选择前一个元素的直接子代的节点。
     **语法**：`A > B`

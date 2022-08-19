@@ -192,7 +192,7 @@ button:before {
 ```
 
 - 我们将外部 `.timer` `<div>` 设为 flex：5，这样它占据了控件栏的大部分宽度。我们还设置 {{cssxref("position")}}`: relative`，这样我们就可以根据它的边界方便地定位元素，而不是{{htmlelement("body")}} 元素的边界。
-- 内部 `<div> ``position：absolute` 绝对定位于外部 `<div>` 的顶部。它的初始宽度为 0，因此根本无法看到它。随着视频的播放，JavaScript 将动态的增加其宽度。
+- 内部 `<div>` 绝对定位于外部 `<div>` 的顶部。它的初始宽度为 0，因此根本无法看到它。随着视频的播放，JavaScript 将动态的增加其宽度。
 - `<span>` 也绝对位于计时器/进度条 `timer` 栏的左侧附近。
 - 我们还对内部 `<div>` 和 `<span>` 定义适当数值的 {{cssxref("z-index")}} ，以便进度条显示在最上层，内部 `<div>` 显示在下层。这样，我们确保我们可以看到所有信息 —— 一个 box 不会遮挡另一个。
 
@@ -447,7 +447,7 @@ clearInterval(intervalFwd);
 
 1. 如果视频是一小时或更长时间（嗯，它不会显示小时;只有几分钟和几秒），当前显示时间会中断。你能弄清楚如何更改示例以使其显示小时数吗？
 2. 由于 `<audio>` 元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此您可以轻松地将此播放器用于 `<audio>` 元素。试着这样做。
-3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，您可以通过[`getBoundingClientRect()`](/ch-ZN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：
+3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，您可以通过[`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：
 
     ```js
     document.onclick = function(e) {

@@ -21,8 +21,8 @@ console.countReset([label]);
 ### 参数
 
 - `label`
-  - : 一个字符串，若传入此参数 `countReset() `重置此 label 的 count 为 0。
-    若忽略此参数 `countReset()` 重置 count() 默认的 default 字段的 count 为 0
+  - : 一个字符串，若传入此参数 `countReset()` 重置此 label 的 count 为 0。
+    若忽略此参数 `countReset()` 重置 `count()` 默认的 default 字段的 count 为 0
 
 ### 返回值
 
@@ -87,7 +87,7 @@ Note that the call to console.counterReset() resets the value of the default cou
 
 可以看到 调用 `console.counterReset()` 重置了`default` 的计数为 0
 
-如果我们把 `user` 变量做为 `label` 传入第一次调用的 `count() `把字符串 `'alice' `作为第二次调用`count()` 的参数
+如果我们把 `user` 变量做为 `label` 传入第一次调用的 `count()` 把字符串 `'alice'` 作为第二次调用 `count()` 的参数
 
 ```js
 var user = "";

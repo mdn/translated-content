@@ -1,7 +1,6 @@
 ---
 title: 按位异或赋值 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
 {{jsSidebar("Operators")}}
 

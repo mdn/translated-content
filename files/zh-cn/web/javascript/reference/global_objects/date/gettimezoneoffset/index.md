@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
 {{JSRef("Global_Objects", "Date")}}
 

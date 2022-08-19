@@ -1,13 +1,6 @@
 ---
 title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
-tags:
-  - Experimental
-  - JavaScript
-  - Method
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 ---
 {{JSRef}}
 

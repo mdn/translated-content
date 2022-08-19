@@ -75,6 +75,6 @@ This topic contains the following modules, in a suggested order for working thro
 ## See Also
 
 - [Mobile performance checklist](/en-US/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimizing Startup Performance](/en-US/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)[](/en-US/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
+- [Optimizing Startup Performance](/en-US/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
 
 {{LandingPageListSubpages}}

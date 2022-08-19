@@ -1,12 +1,6 @@
 ---
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - 初学者
-  - 数据结构
-  - 类型
-translation_of: Web/JavaScript/Data_structures
 ---
 {{jsSidebar("More")}}
 

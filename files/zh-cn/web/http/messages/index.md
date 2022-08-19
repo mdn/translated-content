@@ -16,10 +16,10 @@ HTTP/2 二进制框架机制被设计为不需要改动任何 API 或配置文�
 
 HTTP 请求和响应具有相似的结构，由以下部分组成︰
 
-1.  一行起始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个起始行总是单行的。
-2.  一个可选的 HTTP 头集合指明请求或描述消息正文。
-3.  一个空行指示所有关于请求的元数据已经发送完毕。
-4.  一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。 正文的大小有起始行的 HTTP 头来指定。
+1. 一行起始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个起始行总是单行的。
+2. 一个可选的 HTTP 头集合指明请求或描述消息正文。
+3. 一个空行指示所有关于请求的元数据已经发送完毕。
+4. 一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。 正文的大小有起始行的 HTTP 头来指定。
 
 起始行和 HTTP 消息中的 HTTP 头统称为请求头，而其有效负载被称为消息正文。
 
@@ -31,8 +31,8 @@ HTTP 请求和响应具有相似的结构，由以下部分组成︰
 
 HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_起始行 (start-line)_ 包含三个元素：
 
-1.  一个 _[HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)_，一个动词 (像 {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}) 或者一个名词 (像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}), 描述要执行的动作。例如，`GET` 表示要获取资源，`POST` 表示向服务器推送数据 (创建或修改资源，或者产生要返回的临时文件)。
-2.  *请求目标 (request target)，*通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
+1. 一个 _[HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)_，一个动词 (像 {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}) 或者一个名词 (像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}), 描述要执行的动作。例如，`GET` 表示要获取资源，`POST` 表示向服务器推送数据 (创建或修改资源，或者产生要返回的临时文件)。
+2. *请求目标 (request target)，*通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
 
     - 一个绝对路径，末尾跟上一个 ' ? ' 和查询字符串。这是最常见的形式，称为 _原始形式 (origin form)_，被 GET，POST，HEAD 和 OPTIONS 方法所使用。
       `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
@@ -43,7 +43,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
     - _星号形式 (asterisk form)_，一个简单的星号 (`'*'`)，配合 `OPTIONS` 方法使用，代表整个服务器。
       `OPTIONS * HTTP/1.1`
 
-3.  _HTTP 版本 (HTTP version_)*，*定义了剩余报文的结构，作为对期望的响应版本的指示符。
+3. _HTTP 版本 (HTTP version_)*，*定义了剩余报文的结构，作为对期望的响应版本的指示符。
 
 ### Headers
 
@@ -72,9 +72,9 @@ Body 大致可分为两类：
 
 HTTP 响应的起始行被称作 _状态行_ _(status line)_，包含以下信息：
 
-1.  _协议版本_，通常为 `HTTP/1.1。`
-2.  _状态码_ (_status code_)，表明请求是成功或失败。常见的状态码是 {{HTTPStatus("200")}}，{{HTTPStatus("404")}}，或 {{HTTPStatus("302")}}。
-3.  _状态文本 (status text)_。一个简短的，纯粹的信息，通过状态码的文本描述，帮助人们理解该 HTTP 消息。
+1. _协议版本_，通常为 `HTTP/1.1。`
+2. _状态码_ (_status code_)，表明请求是成功或失败。常见的状态码是 {{HTTPStatus("200")}}，{{HTTPStatus("404")}}，或 {{HTTPStatus("302")}}。
+3. _状态文本 (status text)_。一个简短的，纯粹的信息，通过状态码的文本描述，帮助人们理解该 HTTP 消息。
 
 一个典型的状态行看起来像这样：`HTTP/1.1 404 Not Found`。
 
@@ -97,7 +97,7 @@ HTTP 响应的起始行被称作 _状态行_ _(status line)_，包含以下信�
 Body 大致可分为三类：
 
 - Single-resource bodies，由**已知**长度的单个文件组成。该类型 body 由两个 header 定义：{{HTTPHeader("Content-Type")}} 和 {{HTTPHeader("Content-Length")}}。
-- Single-resource bodies，由**未知**长度的单个文件组成，通过将 {{HTTPHeader("Transfer-Encoding")}} 设置为 `chunked `来使用 chunks 编码。
+- Single-resource bodies，由**未知**长度的单个文件组成，通过将 {{HTTPHeader("Transfer-Encoding")}} 设置为 `chunked`来使用 chunks 编码。
 - [Multiple-resource bodies](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)，由多部分 body 组成，每部分包含不同的信息段。但这是比较少见的。
 
 ## HTTP/2 帧
