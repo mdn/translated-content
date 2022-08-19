@@ -4,10 +4,10 @@ slug: Glossary/Grid
 tags:
   - CSS
   - CSS Grid
-  - CSS グリッド
   - Glossary
-  - 用語集
 translation_of: Glossary/Grid
+l10n:
+  sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
 **CSS グリッド** は {{cssxref("display")}} プロパティの値に `grid` を指定して定義します。グリッドの列や行は {{cssxref("grid-template-rows")}} や {{cssxref("grid-template-columns")}} プロパティで定義します。
 
@@ -16,6 +16,8 @@ translation_of: Glossary/Grid
 明示的グリッドの外にコンテンツを配置する場合や、自動配置に任せる場合、{{glossary("grid item", "グリッドアイテム")}} が収まるように行や列の {{glossary("grid tracks", "グリッドトラック")}} がグリッドアルゴリズムに従って暗黙的に追加されます。**暗黙的グリッド** (_implicit grid_) は、定義済みのトラックの外部にコンテンツを配置するため自動的に作成されるグリッドです。
 
 次の例では 3 列 2 行の**明示的グリッド**を作成しています。グリッドで 3 つ目の行は、明示的グリッドが定義している 6 つ以上のアイテムが含まれていることで作られた、**暗黙的グリッド**による行トラックです。
+
+## 例
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -56,13 +58,14 @@ translation_of: Glossary/Grid
 </div>
 ```
 
-{{ EmbedLiveSample('example', '500', '330') }}
+{{ EmbedLiveSample('Example', '500', '330') }}
 
-1.  CSS グリッドレイアウトガイド:
-    _[グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-2.  プロパティリファレンス
+### 関連情報
 
-    1.  {{cssxref("grid-template-columns")}}
-    2.  {{cssxref("grid-template-rows")}}
-    3.  {{cssxref("grid")}}
-    4.  {{cssxref("grid-template")}}
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- プロパティリファレンス
+
+  - {{cssxref("grid-template-columns")}}
+  - {{cssxref("grid-template-rows")}}
+  - {{cssxref("grid")}}
+  - {{cssxref("grid-template")}}
