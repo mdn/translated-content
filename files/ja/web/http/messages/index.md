@@ -16,7 +16,7 @@ HTTP メッセージは ASCII でエンコードされたテキスト情報で�
 
 ウェブ開発者やウェブ管理者がこれらテキスト形式の HTTP メッセージを作成することはめったにありません。ウェブブラウザー、プロキシ、ウェブサーバーといったソフトウェアが行います。それらは HTTP メッセージを設定ファイル (プロキシやサーバー)、API (ブラウザー)、あるいは他のインターフェイスによって提供します。
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](https://mdn.mozillademos.org/files/13825/HTTPMsg2.png)
+![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
 HTTP/2 のバイナリフレーム化方式は、適用される API や設定ファイルの変更を必要としないように設計されています。これはユーザーに対して透過的です。
 
@@ -29,7 +29,7 @@ HTTP のリクエストやレスポンスは似た構造を共用しており、
 
 HTTP メッセージの開始行と HTTP ヘッダーは、まとめてリクエストの*ヘッド*として知られています。一方、ペイロードは*本文*として知られています。
 
-![Requests and responses share a common structure in HTTP](https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png)
+![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
 ## HTTP リクエスト
 
@@ -116,7 +116,7 @@ HTTP/1.x のメッセージには、パフォーマンスの欠点がありま�
 
 HTTP/2 は次の段階に進みました。 HTTP/1.x のメッセージを、ストリーム内に埋め込まれるフレームに分割します。データのフレームとヘッダーのフレームは区別され、ヘッダーの圧縮が可能になります。*多重化*と呼ばれる処理によって複数のストリームがまとめられ、下層の TCP コネクションの効率を向上させることができます。
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](https://mdn.mozillademos.org/files/13819/Binary_framing2.png)
+![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 
 HTTP フレームは、ウェブ開発者によって透過的になります。これは HTTP/2 において、 HTTP/1.1 メッセージと基盤となるトランスポート層との間のさらなるステップです。 HTTP フレームを利用するためにウェブ開発者が使用する API を変更する必要はありません。ブラウザーとサーバーの両方で利用可能になれば、 HTTP/2 が有効になり使用されます。
 

@@ -61,7 +61,7 @@ urn:ietf:rfc:7230
 
 ### スキームまたはプロトコル
 
-- ![Protocol](https://mdn.mozillademos.org/files/8013/mdn-url-protocol@x2.png)
+- ![Protocol](mdn-url-protocol@x2.png)
   - : `http://` はプロトコルです。これは、ブラウザーが使用すべきプロトコルを示します。通常、 HTTP プロトコルまたは安全なバージョンである HTTPS になります。ウェブではこれら 2 つのうちひとつを必要としますが、ブラウザーは `mailto:` (メールクライアントを開く) やファイル転送を扱う `ftp:` といったほかのプロトコルの扱い方も知っていますので、このようなプロトコルが現れても驚かないでください。主なスキームは以下のとおりです:
 
 | スキーム    | 説明                                                             |
@@ -80,27 +80,27 @@ urn:ietf:rfc:7230
 
 ### オーソリティ
 
-- ![Domaine Name](https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png)
+- ![Domaine Name](mdn-url-domain@x2.png)
   - : `www.example.com` は、名前空間を統制するドメイン名またはオーソリティです。これは、どのウェブサーバーが要求されているかを示します。代わりに {{Glossary("IP address","IP アドレス")}} を直接使用することもできますが、利便性が低いためウェブではあまり使用されません。
 
 ### ポート
 
-- ![Port](https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png)
+- ![Port](mdn-url-port@x2.png)
   - : ここで `:80` はポートです。これはウェブサーバー内のリソースへアクセスするために使用する、技術上の "出入口" です。ウェブサーバーがリソースへのアクセスを受け入れるために HTTP プロトコルの標準ポート (HTTP では 80、HTTPS では 443) を使用している場合、通常はポートを省略します。それ以外の場合は、ポートが必須です。
 
 ### パス
 
-- ![Path to the file](https://mdn.mozillademos.org/files/8019/mdn-url-path@x2.png)
+- ![Path to the file](mdn-url-path@x2.png)
   - : `/path/to/myfile.html` は、ウェブサーバー内にあるリソースのパスです。初期のウェブではこのようなパスが、ウェブサーバー内の物理的なファイルの場所を表していました。現代のパスはたいてい物理的な実情と関係がない、ウェブサーバーによって制御される抽象的なものになっています。
 
 ### クエリ
 
-- ![Parameters](https://mdn.mozillademos.org/files/8021/mdn-url-parameters@x2.png)
+- ![Parameters](mdn-url-parameters@x2.png)
   - : `?key1=value1&key2=value2` は、ウェブサーバーに提供する追加パラメーターです。このパラメーターは `&` 記号で区切られた、キーと値のペアのリストです。ウェブサーバーは、ユーザーへリソースを返す前に追加の処理を行うために、このパラメーターを使用できます。それぞれのウェブサーバーはパラメーターについて独自の規則を持っており、特定のウェブサーバーがパラメーターを扱う方法を知るために唯一信頼できる方法は、ウェブサーバーの所有者に尋ねることです。
 
 ### フラグメント
 
-- ![Anchor](https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png)
+- ![Anchor](mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` は、リソース自体の別の場所へのアンカーです。アンカーはリソース内の一種の "ブックマーク" を表しており、 "ブックマーク" 地点にあるコンテンツを表示するようにブラウザーへ指示を与えます。例えば HTML ドキュメントでは、ブラウザーはアンカーが定義されている位置にスクロールします。動画や音声のドキュメントでは、ブラウザーはアンカーが示す位置への移動を試みます。 # より後の部分はフラグメント識別としても知られており、要求でサーバーには送信されないことは注目に値します。
 
 ## 使用上のメモ
