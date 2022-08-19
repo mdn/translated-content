@@ -7,9 +7,9 @@ tags:
   - HTML
   - l10n:priority
 translation_of: Glossary/HTML
+l10n:
+  sourceCommit: 6f6fab05dbcaddffe9ee5a4490f0ea02c791d5e7
 ---
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}
-
 **HTML** (HyperText Markup Language) は、ウェブページ構造を指定する記述言語です。
 
 ## 略歴
@@ -24,22 +24,14 @@ HTML 文書は、{{Glossary("element","要素")}}によって構造化された�
 
 HTML タグは、どのようにブラウザーが要素を解釈するかに影響する追加情報を提供する{{Glossary("attribute","属性")}}で拡張することができます。
 
-![HTML 要素の構造の詳細](https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png)
+![HTML 要素の構造の詳細](anatomy-of-an-html-element.png)
 
 HTML ファイルは、通常は `.htm` または `.html` という拡張子で保存され、{{Glossary("Server","ウェブサーバー")}}によって提供され、どの{{Glossary("Browser","ウェブブラウザー")}}でも表示することができます。
 
-## 理解を深める
+## 関連情報
 
-### 一般知識
-
-- ウィキペディア上の {{interwiki("wikipedia", "HTML", "HTML")}}
-
-### HTML を学ぶ
-
-- [HTML チュートリアル](/ja/Learn/HTML)
-- [codecademy.com の Web コース](http://www.codecademy.com/en/tracks/web)
-
-### 技術情報
-
-- [MDN の HTML ドキュメンテーション](/ja/docs/Web/HTML)
-- [HTML の仕様](http://www.w3.org/TR/html5/)
+- ウィキペディア上の [HTML](https://ja.wikipedia.org/wiki/HTML)
+- [HTML チュートリアル](/ja/docs/Learn/HTML)
+- [The web course on codecademy.com](https://www.codecademy.com/learn/learn-html)
+- [MDN の HTML ドキュメント](/ja/docs/Web/HTML)
+- [HTML 仕様書](https://html.spec.whatwg.org/multipage/)
