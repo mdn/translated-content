@@ -1,10 +1,6 @@
 ---
 title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
-tags:
-  - API
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
 {{AddonSidebar}}
 

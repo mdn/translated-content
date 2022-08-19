@@ -1,11 +1,6 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-tags:
-  - CSS
-  - CSS 数据单位
-  - CSS 数据类型
-translation_of: Web/CSS/percentage
 ---
 {{CSSRef}}
 

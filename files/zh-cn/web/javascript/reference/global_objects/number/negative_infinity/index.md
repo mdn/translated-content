@@ -1,7 +1,6 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
 {{JSRef("Global_Objects", "Number")}}
 

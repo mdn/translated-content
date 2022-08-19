@@ -32,7 +32,7 @@ clip: unset;
 ### Values
 
 - `<shape>`
-  - : A rectangular {{cssxref("&lt;shape&gt;")}} of the form `rect(<top>, <right>, <bottom>, <left>)` or of the form `rect(<top> <right> <bottom> <left>)` (which is a more backwards compatible syntax) `<top>` and `<bottom>` specify offsets from the _inside top border edge_ of the box, and `<right>`, and `<left>` specify offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.`<top>`, `<right>`, `<bottom>`, and `<left>` may either have a {{cssxref("&lt;length&gt;")}} value or` auto`. If any side's value is `auto`, the element is clipped to that side's _inside border edge_.
+  - : A rectangular {{cssxref("&lt;shape&gt;")}} of the form `rect(<top>, <right>, <bottom>, <left>)` or of the form `rect(<top> <right> <bottom> <left>)` (which is a more backwards compatible syntax) `<top>` and `<bottom>` specify offsets from the _inside top border edge_ of the box, and `<right>`, and `<left>` specify offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.`<top>`, `<right>`, `<bottom>`, and `<left>` may either have a {{cssxref("&lt;length&gt;")}} value or `auto`. If any side's value is `auto`, the element is clipped to that side's _inside border edge_.
 - `auto`
   - : The element does not clip (default value). Note that this is distinct from `rect(auto, auto, auto, auto)`, which does clip to the inside border edges of the element.
 

@@ -14,11 +14,11 @@ Web Audio API 使用户可以在**音频上下文**(AudioContext) 中进行音�
 
 一个简单而典型的 web audio 流程如下：
 
-1.  创建音频上下文
-2.  在音频上下文里创建源 — 例如 `<audio>`, 振荡器，流
-3.  创建效果节点，例如混响、双二阶滤波器、平移、压缩
-4.  为音频选择一个目的地，例如你的系统扬声器
-5.  连接源到效果器，对目的地进行效果输出
+1. 创建音频上下文
+2. 在音频上下文里创建源 — 例如 `<audio>`, 振荡器，流
+3. 创建效果节点，例如混响、双二阶滤波器、平移、压缩
+4. 为音频选择一个目的地，例如你的系统扬声器
+5. 连接源到效果器，对目的地进行效果输出
 
 ![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12241/webaudioAPI_en.svg)
 
@@ -141,7 +141,7 @@ Web Audio API 使用的音频源接口。
 
 ### 音频工作者
 
-在了解这一部分内容之前，你可以先了解一个新的 WebWorker 方面的内容。音频工作者提供了一种可以在一个[WebWorker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)上下文中直接进行音频处理的方式。现在已经定义了一些这部分功能的新接口，接口定义是在 2014 年的 8 月 29 日文档中。到目前为止，还没有浏览器已经对这些接口进行了实现。当这些接口被实现后，{{domxref("ScriptProcessorNode")}}和[前文](/zh-CN/docs/Web/API/Web_Audio_API$edit#Audio_processing_via_JavaScript)中提到的其它接口都会被替代。
+在了解这一部分内容之前，你可以先了解一个新的 WebWorker 方面的内容。音频工作者提供了一种可以在一个[WebWorker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)上下文中直接进行音频处理的方式。现在已经定义了一些这部分功能的新接口，接口定义是在 2014 年的 8 月 29 日文档中。到目前为止，还没有浏览器已经对这些接口进行了实现。当这些接口被实现后，{{domxref("ScriptProcessorNode")}}和[前文](/zh-CN/docs/Web/API/Web_Audio_API#Audio_processing_via_JavaScript)中提到的其它接口都会被替代。
 
 - {{domxref("AudioWorkerNode")}}
   - : AudioWorkerNode 也是{{domxref("AudioNode")}}类型，但是它用于与工作者线程合作来直接完成音频的生成，处理或分析等操作。
@@ -346,30 +346,30 @@ function voiceMute() { // toggle to mute and unmute sound
 
 ### Quicklinks
 
-1.  **Guides**
+1. **Guides**
 
-    1.  [Basic concepts behind Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
-    2.  [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-    3.  [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-    4.  [Web audio spatialisation basics](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-    5.  [Porting webkitAudioContext code to standards based AudioContext](/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+    1. [Basic concepts behind Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
+    2. [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+    3. [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+    4. [Web audio spatialisation basics](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
+    5. [Porting webkitAudioContext code to standards based AudioContext](/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
 
-2.  **Examples**
+2. **Examples**
 
-    1.  [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-    2.  [Violent Theremin](http://mdn.github.io/violent-theremin/)
+    1. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
+    2. [Violent Theremin](http://mdn.github.io/violent-theremin/)
 
-3.  **Interfaces**
+3. **Interfaces**
 
-    1.  {{domxref("AnalyserNode")}}
-    2.  {{domxref("AudioBuffer")}}
-    3.  {{domxref("AudioBufferSourceNode")}}
-    4.  {{domxref("AudioContext")}}
-    5.  {{domxref("AudioDestinationNode")}}
-    6.  {{domxref("AudioListener")}}
-    7.  {{domxref("AudioNode")}}
-    8.  {{domxref("AudioParam")}}
-    9.  {{event("audioprocess")}} (event)
+    1. {{domxref("AnalyserNode")}}
+    2. {{domxref("AudioBuffer")}}
+    3. {{domxref("AudioBufferSourceNode")}}
+    4. {{domxref("AudioContext")}}
+    5. {{domxref("AudioDestinationNode")}}
+    6. {{domxref("AudioListener")}}
+    7. {{domxref("AudioNode")}}
+    8. {{domxref("AudioParam")}}
+    9. {{event("audioprocess")}} (event)
     10. {{domxref("AudioProcessingEvent")}}
     11. {{domxref("BiquadFilterNode")}}
     12. {{domxref("ChannelMergerNode")}}

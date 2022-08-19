@@ -1,15 +1,6 @@
 ---
 title: ARIA 状态及属性
 slug: Web/Accessibility/ARIA/Attributes
-tags:
-  - ARIA
-  - ARIA states and properties
-  - ARIA attributes
-  - Accessibility
-  - Reference
-  - States
-  - Properties
-translation_of: Web/Accessibility/ARIA/Attributes
 ---
 这个页面列出了 MDN 上讨论的所有 WAI-ARIA 属性的参考页面。
 

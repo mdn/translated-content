@@ -1,19 +1,6 @@
 ---
 title: HTML 表格高级特性和无障碍
 slug: Learn/HTML/Tables/Advanced
-tags:
-  - HTML
-  - scope
-  - table
-  - tbody
-  - tfoot
-  - thead
-  - 初学者
-  - 无障碍
-  - 学习
-  - 标题
-  - 高级
-translation_of: Learn/HTML/Tables/Advanced
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 

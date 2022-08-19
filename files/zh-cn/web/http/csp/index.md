@@ -1,10 +1,6 @@
 ---
 title: 内容安全策略 ( CSP )
 slug: Web/HTTP/CSP
-tags:
-  - 内容安全策略
-  - 安全
-translation_of: Web/HTTP/CSP
 ---
 {{HTTPSidebar}}
 

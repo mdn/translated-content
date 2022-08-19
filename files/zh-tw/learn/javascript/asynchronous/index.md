@@ -1,21 +1,6 @@
 ---
 title: 非同步的 JavaScript
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Promises
-  - async
-  - asynchronous
-  - await
-  - callbacks
-  - requestAnimationFrame
-  - setInterval
-  - setTimeout
-  - 非同步的
 ---
 {{LearnSidebar}}
 

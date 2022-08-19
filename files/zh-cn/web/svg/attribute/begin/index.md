@@ -1,12 +1,6 @@
 ---
 title: begin
 slug: Web/SVG/Attribute/begin
-tags:
-  - SVG
-  - SVG 属性
-  - 参考
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/begin
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

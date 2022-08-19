@@ -1,13 +1,6 @@
 ---
 title: '@property'
 slug: Web/CSS/@property
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

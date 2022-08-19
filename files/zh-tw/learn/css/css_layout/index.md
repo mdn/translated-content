@@ -1,16 +1,6 @@
 ---
 title: CSS 排版
 slug: Learn/CSS/CSS_layout
-tags:
-  - CSS
-  - 佈局
-  - 多欄
-  - 彈性盒子
-  - 排版
-  - 新手
-  - 浮動
-  - 網格
-translation_of: Learn/CSS/CSS_layout
 ---
 {{LearnSidebar}}
 

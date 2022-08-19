@@ -1,13 +1,6 @@
 ---
 title: for
 slug: Web/JavaScript/Reference/Statements/for
-tags:
-  - JavaScript
-  - Loop
-  - Reference
-  - Statement
-  - for
-translation_of: Web/JavaScript/Reference/Statements/for
 ---
 {{jsSidebar("Statements")}}
 

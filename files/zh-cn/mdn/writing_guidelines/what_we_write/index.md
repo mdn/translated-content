@@ -1,11 +1,6 @@
 ---
 title: MDN 收录规则
 slug: MDN/Writing_guidelines/What_we_write
-tags:
-  - Guide
-  - Guidelines
-  - MDN Meta
-translation_of: MDN/Guidelines/Does_this_belong_on_MDN
 original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 ---
 {{MDNSidebar}}

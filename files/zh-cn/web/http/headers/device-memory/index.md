@@ -1,7 +1,6 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-translation_of: Web/HTTP/Headers/Device-Memory
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 

@@ -1,14 +1,6 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-tags:
-  - Atmoics
-  - Experimental
-  - JavaScript
-  - Method
-  - 共享内存
-  - 实验性
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
 {{JSRef}} {{SeeCompatTable}}
 

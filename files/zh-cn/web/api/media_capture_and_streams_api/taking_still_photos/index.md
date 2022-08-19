@@ -144,8 +144,6 @@ slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 
 为了在每次用户单击启动按钮时捕获静态照片，我们需要向按钮添加一个事件侦听器，以便在发出点击事件时被调用：
 
-####
-
 ```js
     startbutton.addEventListener('click', function(ev){
       takepicture();

@@ -264,7 +264,7 @@ function invite(evt) {
 
 创建 `RTCPeerConnection` 后，我们通过调用 {{domxref("MediaDevices.getUserMedia()")}}，请求访问用户的相机和麦克风，该命令通过 {{domxref("Navigator.mediaDevices.getUserMedia")}} 属性向我们公开。当成功完成返回的 promise 时，将执行我们的 `then` 处理程序。它接收一个 {{domxref("MediaStream")}} 对象作为输入，该对象表示来自用户麦克风的音频和来自网络摄像机的视频流。
 
-> **备注：** 我们可以通过调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} **获取设备列表，根据所需条件筛选结果列表，然后使用所选设备**{{domxref("MediaTrackConstraints.deviceId", "deviceId")}} **传入**`getUserMedia() `**的** `mediaConstraints` **对象的**`deviceId` **字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由** `getUserMedia()`**为你完成的。**
+> **备注：** 我们可以通过调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} **获取设备列表，根据所需条件筛选结果列表，然后使用所选设备**{{domxref("MediaTrackConstraints.deviceId", "deviceId")}} **传入**`getUserMedia()`**的** `mediaConstraints` **对象的**`deviceId` **字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由** `getUserMedia()`**为你完成的。**
 
 我们通过设置元素的 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性，将传入流附加到本地预览 {{HTMLElement("video")}} 元素。由于元素被配置为自动播放传入的视频，因此流开始在本地预览框中播放。
 
@@ -445,7 +445,7 @@ function handleVideoOfferMsg(msg) {
 
 一旦使用 {{domxref("RTCPeerConnection.createAnswer", "myPeerConnection.createAnswer()")}} 创建了应答，通过调用{{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}} 连接本地端的描述被设置为应答的 SDP，则通过信令服务器将应答发送给调用者，让他们知道应答是什么。
 
-捕捉到的任何错误都会被传递给 `handleGetUserMediaError()`，详见 [处理 getUserMedia() 错误](<#处理_getusermedia()_错误>) 。
+捕捉到的任何错误都会被传递给 `handleGetUserMediaError()`，详见 [处理 getUserMedia() 错误](#处理_getusermedia_错误) 。
 
 > **备注：** 与调用者的情况一样，一旦 `setLocalDescription()`实现处理程序运行完毕，浏览器将开始触发被调用者必须处理的{{event("icecandidate")}} 事件，每个需要传输到远程对等方的候选事件对应一个事件。
 
@@ -601,10 +601,10 @@ function closeVideoCall() {
 
 在引用了两个 {{HTMLElement("video")}} 元素之后，我们检查 WebRTC 连接是否仍然存在；如果存在，则继续断开并关闭调用：
 
-1.  所有事件处理程序都将被删除。这可以防止在连接关闭过程中触发杂散事件处理程序，从而可能导致错误。
-2.  对于远程视频流和本地视频流，我们对每个磁道进行迭代，调用{{domxref("MediaStreamTrack.stop()")}} 方法关闭每个磁道。
-3.  通过调用{{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.关闭 {{domxref("RTCPeerConnection")}} 。
-4.  设置 `myPeerConnection` 为 `null`，确保我们的代码知道没有正在进行的调用；当用户单击用户列表中的名称时，这很有用。
+1. 所有事件处理程序都将被删除。这可以防止在连接关闭过程中触发杂散事件处理程序，从而可能导致错误。
+2. 对于远程视频流和本地视频流，我们对每个磁道进行迭代，调用{{domxref("MediaStreamTrack.stop()")}} 方法关闭每个磁道。
+3. 通过调用{{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.关闭 {{domxref("RTCPeerConnection")}} 。
+4. 设置 `myPeerConnection` 为 `null`，确保我们的代码知道没有正在进行的调用；当用户单击用户列表中的名称时，这很有用。
 
 然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 {{htmlattrxref("srcObject", "video")}}和{{htmlattrxref("src", "video")}} 属性。这就完成了流与视频元素的分离。
 

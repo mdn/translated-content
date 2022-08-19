@@ -1,18 +1,10 @@
 ---
 title: <a>
 slug: Web/HTML/Element/a
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 元素
-translation_of: Web/HTML/Element/a
 ---
 {{HTMLRef}}
 
-**HTML `<a>` 元素**（或称锚元素）可以通过[它的 `href` 属性](#href)创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。`<a>` 中的内容**应该**应该指明链接的意图。如果存在[ `href` 属性](#href)，当 `<a>` 元素聚焦时按下回车键就会激活它。
+**HTML `<a>` 元素**（或称锚元素）可以通过[它的 `href` 属性](#href)创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。`<a>` 中的内容**应该**应该指明链接的意图。如果存在 [`href` 属性](#href)，当 `<a>` 元素聚焦时按下回车键就会激活它。
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 

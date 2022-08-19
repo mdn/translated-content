@@ -35,8 +35,8 @@ Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました�
 
 ### CSS
 
-- {{cssxref("text-transform")}} と {{cssxref("font-variant")}} CSS プロパティが `i` → `İ` および `ı` → `I `という [テュルク諸語](http://ja.wikipedia.org/wiki/%E3%83%86%E3%83%A5%E3%83%AB%E3%82%AF%E8%AB%B8%E8%AA%9E) 固有の文字対応の組を正しく扱うように修正されました。
-- オランダ語の IJ という連字が `text-transform: capitalization` `で正しく扱われるようになりました。類似のものとして、ギリシャ文字の `Σ` には、2つの小文字 `σ` と `ς` がありますが、これらが `text-transform: lowercase` で正しく扱われるようになりました。
+- {{cssxref("text-transform")}} と {{cssxref("font-variant")}} CSS プロパティが `i` → `İ` および `ı` → `I` という [テュルク諸語](http://ja.wikipedia.org/wiki/%E3%83%86%E3%83%A5%E3%83%AB%E3%82%AF%E8%AB%B8%E8%AA%9E) 固有の文字対応の組を正しく扱うように修正されました。
+- オランダ語の IJ という連字が `text-transform: capitalization` で正しく扱われるようになりました。類似のものとして、ギリシャ文字の `Σ` には、2つの小文字 `σ` と `ς` がありますが、これらが `text-transform: lowercase` で正しく扱われるようになりました。
 - ドラフト標準から削除されたため、`skew()` 関数のサポートが {{cssxref("transform")}} プロパティから削除されました。
 - {{cssxref("border-image")}} の構文が最新版の仕様書に合うように更新されました。末尾のスラッシュ ("/") を受け付けなくなりました。
 
@@ -60,7 +60,7 @@ Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs
 
 - 現在の選択範囲をコメントアウトする、もしくは、コメントアウトを解除するためのキーボードショートカットが追加されました（Ctrl-/ もしくは Mac OS X では Cmd-/）。
 - 現在のブロックの開始と終端にテキスト入力位置を移動するための Ctrl-\[ および Ctrl-]  キーボードショートカットが追加されました。
-- 新しく [`getLineStart()`](/ja/docs/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29) `および `[`getLineEnd()`](docs/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29) メソッドが追加されました。
+- 新しく [`getLineStart()`](/ja/docs/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29) および [`getLineEnd()`](docs/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29) メソッドが追加されました。
 
 ### XUL
 

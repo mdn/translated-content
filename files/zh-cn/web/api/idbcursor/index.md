@@ -26,7 +26,7 @@ slug: Web/API/IDBCursor
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
   - : 返回一个游标正在迭代的 {{domxref("IDBObjectStore")}} 或者 {{domxref("IDBIndex")}} 。这个方法永远不会返回一个空或者抛出异常，即使游标当前正在被迭代，已迭代超过其结束，再或者其事务没有处于活动状态。
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
-  - : 返回光标遍历方向。请查看[ 常数](#const_next) 中可能的值。
+  - : 返回光标遍历方向。请查看 [常数](#const_next) 中可能的值。
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
   - : 返回记录中游标位置的有效主键。如果游标在区间之外，将会设置成 `undefined`。游标主键可以是任意的数据类型（data type）。
 - {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
@@ -38,16 +38,16 @@ slug: Web/API/IDBCursor
 
 > **警告：** 这些常量不再被支持。你应该使用字符串常量。({{ bug(891944) }})
 
-- `NEXT `: `"next"` :游标展示所有记录，包括重复的记录。它从主键区间下届开始逐步上升（按键的顺序单调递增）。
+- `NEXT`: `"next"` :游标展示所有记录，包括重复的记录。它从主键区间下届开始逐步上升（按键的顺序单调递增）。
 - `NEXTUNIQUE` : `"nextunique"` : 游标展示所有记录，不包括重复的记录。如果同一个主键存在重复的记录，只有第一条迭代记录被取出。它从主键区间的下界开始逐步上升
-- `PREV `: `"prev"` : 游标展示所有记录，包括重复的记录。它从主键区间上界开始逐步往下移动（按主键的顺序单调递减）
-- `PREVUNIQUE `: `"prevunique"` :游标展示所有记录，不包括重复的记录。如果主键存在重复记录，只有第一个迭代记录被取出。它从主键区间上界开始逐步往下移动。
+- `PREV`: `"prev"` : 游标展示所有记录，包括重复的记录。它从主键区间上界开始逐步往下移动（按主键的顺序单调递减）
+- `PREVUNIQUE`: `"prevunique"` :游标展示所有记录，不包括重复的记录。如果主键存在重复记录，只有第一个迭代记录被取出。它从主键区间上界开始逐步往下移动。
 
 ## 示例
 
 在这个简单的代码片段中，我们创建了一个事务和检索一个对象存储，之后使用一个游标遍历存储对象中所有的记录。游标不是必须使用主键来选则数据库，我们可以把它全部拿出来。同时需要注意在每次循环遍历中，你可以在当前记录下的游标对象中使用 `cursor.value.foo` 抓取数据。对于完整的工作示例，请查看我们的 [IDBCursor example](https://github.com/mdn/IDBcursor-example/) ([在线查看示例](http://mdn.github.io/IDBcursor-example/))。
 
-```
+```js
 function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');

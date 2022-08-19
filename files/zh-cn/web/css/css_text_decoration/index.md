@@ -1,7 +1,6 @@
 ---
 title: CSS 文本装饰
 slug: Web/CSS/CSS_Text_Decoration
-translation_of: Web/CSS/CSS_Text_Decoration
 ---
 {{CSSRef}}
 

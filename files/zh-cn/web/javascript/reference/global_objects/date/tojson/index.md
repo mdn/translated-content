@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
 {{JSRef}}
 

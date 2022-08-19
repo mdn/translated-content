@@ -1,10 +1,6 @@
 ---
 title: 逗号操作符
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-  - comma operator
-  - 逗号操作符
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,11 +1,6 @@
 ---
 title: height
 slug: Web/SVG/Attribute/height
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/height
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

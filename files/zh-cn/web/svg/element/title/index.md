@@ -1,12 +1,6 @@
 ---
 title: title
 slug: Web/SVG/Element/title
-tags:
-  - SVG
-  - SVG 描述
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/title
 ---
 {{SVGRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
-tags:
-  - HTTP 协议
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/429
 ---
 {{HTTPSidebar}}
 

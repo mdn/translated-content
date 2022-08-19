@@ -1,7 +1,6 @@
 ---
 title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。
 

@@ -4,7 +4,7 @@ slug: Web/API/IDBObjectStore
 ---
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的 **`IDBObjectStore `**接口表示数据库中的 一个 [对象库 (object store)](https://developer.mozilla.org/en/IndexedDB#gloss_object_store) 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的 **`IDBObjectStore`** 接口表示数据库中的 一个 [对象库 (object store)](https://developer.mozilla.org/en/IndexedDB#gloss_object_store) 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。
 
 {{AvailableInWorkers}}
 
@@ -14,13 +14,13 @@ slug: Web/API/IDBObjectStore
 
 | `IDBRequest add (in any value, in optional any key) raises (DOMException);`                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IDBRequest clear () raises (DOMException);`                                                                                                 |
-| ` IDBRequest count (in optional any key) raises``(DOMException); `                                                                           |
-| `IDBIndex createIndex (in DOMString name, in `[`DOMString`](/En/DOM/DOMString)` keyPath, in optional boolean unique) raises (DOMException);` |
-| ` IDBRequest delete (in any key) raises ``(DOMException); `                                                                                  |
-| `void deleteIndex (in any `[`DOMString`](/En/DOM/DOMString)` indexName) raises (DOMException);`                                              |
+| `IDBRequest clear() raises (DOMException);`                                                                                                 |
+| `IDBRequest count (in optional any key) raises (DOMException);`                                                                           |
+| `IDBIndex createIndex (in DOMString name, in DOMString keyPath, in optional boolean unique) raises (DOMException);` |
+| ` IDBRequest delete (in any key) raises (DOMException); `                                                                                  |
+| `void deleteIndex (in any DOMString indexName) raises (DOMException);                                              |
 | `IDBRequest get (in any key) raises (DOMException);`                                                                                         |
-| `IDBIndex index (in `[`DOMString`](/En/DOM/DOMString)` name) raises (DOMException);`                                                         |
+| `IDBIndex index (in DOMString name) raises (DOMException);`                                                         |
 | `IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short direction) raises(DOMException);`                          |
 | `IDBRequest put (in any value, in optional any key) raises (DOMException);`                                                                  |
 
@@ -29,8 +29,8 @@ slug: Web/API/IDBObjectStore
 | Attribute       | Type                                        | Description                                                                                                                  |
 | --------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `indexNames`    | `readonly DOMStringList`                    | 表中对象的[索引](https://developer.mozilla.org/en/IndexedDB#gloss_index)名列表。                                             |
-| `keyPath`       | `readonly `[`DOMString`](/En/DOM/DOMString) | 表中的[键路径](https://developer.mozilla.org/en/IndexedDB#gloss_key_path)，如果该属性为 null，每次操作表时必须提供一个键名。 |
-| `name`          | `readonly `[`DOMString`](/En/DOM/DOMString) | 表名                                                                                                                         |
+| `keyPath`       | `readonly` [`DOMString`](/En/DOM/DOMString) | 表中的[键路径](https://developer.mozilla.org/en/IndexedDB#gloss_key_path)，如果该属性为 null，每次操作表时必须提供一个键名。 |
+| `name`          | `readonly` [`DOMString`](/En/DOM/DOMString) | 表名                                                                                                                         |
 | `transaction`   | `readonly IDBTransaction`                   | 事务的名称，该表属于此事务。                                                                                                 |
 | `autoIncrement` | `readonly boolean`                          | 表中自增字段的值                                                                                                             |
 
@@ -359,7 +359,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 Returns an [IDBRequest](/en/IndexedDB/IDBRequest) object, and, in a separate thread, creates a [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the [`result`](/en-US/docs/IndexedDB/IDBRequest) set to the key for the stored record, and [`transaction`](/en-US/docs/IndexedDB/IDBRequest) set to the transaction in which this object store is opened.
 
-The put method is an _update or insert_ method. See also the [add()](<#add()>) method.
+The put method is an _update or insert_ method. See also the [add()](#add) method.
 
 ```
 IDBRequest put (in any value, in optional any key) raises (DOMException);

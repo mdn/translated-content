@@ -1,14 +1,6 @@
 ---
 title: CSS 逻辑属性与值
 slug: Web/CSS/CSS_Logical_Properties
-tags:
-  - CSS
-  - CSS Logical Properies
-  - CSS 逻辑属性
-  - Reference
-  - 参考
-  - 概览
-translation_of: Web/CSS/CSS_Logical_Properties
 ---
 {{CSSRef}}
 

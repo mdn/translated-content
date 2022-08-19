@@ -1,10 +1,6 @@
 ---
 title: scroll-snap-points-y
 slug: Web/CSS/scroll-snap-points-y
-tags:
-  - CSS
-  - css snap
-translation_of: Web/CSS/scroll-snap-points-y
 ---
 {{CSSRef}}{{SeeCompatTable}}{{deprecated_header}}
 

@@ -1,7 +1,6 @@
 ---
 title: 常规流中的块和内联布局
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 ---
 {{CSSRef}}
 

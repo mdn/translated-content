@@ -1,17 +1,6 @@
 ---
 title: '::part()'
 slug: Web/CSS/::part
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - Experimental
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - Pseudo-element
-  - Reference
-  - Selector
-translation_of: Web/CSS/::part
 ---
 {{CSSRef}}
 

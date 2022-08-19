@@ -1,11 +1,6 @@
 ---
 title: 通配选择器
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Selectors
-  - 选择器
-translation_of: Web/CSS/Universal_selectors
 ---
 {{ CSSRef() }}
 

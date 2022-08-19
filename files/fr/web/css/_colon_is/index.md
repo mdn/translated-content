@@ -176,7 +176,7 @@ En revanche, le modèle d'usage suivant n'est pas recommandée (cf. [la section 
 
 ### Simplifier les sélecteurs de section
 
-La pseudo-classe `:matches` est particulièrement utile lorsqu'on manipule les [sections et en-têtes](/fr/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans `:matches()`) s'avèrerait plutôt compliqué.
+La pseudo-classe `:matches` est particulièrement utile lorsqu'on manipule les [sections et en-têtes](/fr/docs/Sections_and_Outlines_of_an_HTML5_document) HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans `:matches()`) s'avèrerait plutôt compliqué.
 
 Par exemple, pour mettre en forme les éléments {{HTMLElement("h1")}} à différents niveaux sans utiliser `:matches()`, on obtient ces règles plutôt compliquées :
 

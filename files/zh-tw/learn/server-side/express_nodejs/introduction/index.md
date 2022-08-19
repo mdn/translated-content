@@ -1,14 +1,6 @@
 ---
 title: Express/Node introduction
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Express
-  - Node
-  - nodejs
-  - 伺服器端
-  - 初學者
-  - 學習
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
 {{LearnSidebar}}
 

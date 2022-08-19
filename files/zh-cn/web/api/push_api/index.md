@@ -16,7 +16,7 @@ slug: Web/API/Push_API
 
 Service worker 会在必要的时候启动并接收接下来的推送消息，传递给 {{domxref("ServiceWorkerGlobalScope.onpush")}} 事件句柄。该方法允许将接收到的推送消息使用在应用上，例如通过显示一条通知（使用 {{domxref("ServiceWorkerRegistration.showNotification()")}}）
 
-每一个订阅对 service worker 来说都是唯一的。同时订阅的端点也是一个唯一的[ 功能性 URL](http://www.w3.org/TR/capability-urls/)：端点的信息是给应用发送信息的全部必要条件。所以端点地址需要保证隐私，否则其他应用也可以向你的应用发送消息。
+每一个订阅对 service worker 来说都是唯一的。同时订阅的端点也是一个唯一的 [功能性 URL](http://www.w3.org/TR/capability-urls/)：端点的信息是给应用发送信息的全部必要条件。所以端点地址需要保证隐私，否则其他应用也可以向你的应用发送消息。
 
 激活一个 service worker 来提供推送消息会导致资源消耗的增加，尤其是电池。不同的浏览器对此有不同的方案——目前为止还没有标准的机制。Firefox 允许对发送给应用的推送消息做数量限制（配额）。该限制会在站点每一次被访问之后刷新。相比之下，Chrome 选择不做限制，但要求站点在每一次消息到达后都显示通知，这样可以让用户确认他们仍希望接收消息并确保用户可见性。
 

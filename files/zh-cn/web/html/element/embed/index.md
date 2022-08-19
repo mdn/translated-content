@@ -1,12 +1,6 @@
 ---
 title: <embed>：外部内容嵌入元素
 slug: Web/HTML/Element/embed
-tags:
-  - HTML
-  - HTML5
-  - Web
-  - 嵌入
-translation_of: Web/HTML/Element/embed
 ---
 **HTML `<embed>` 元素**将外部内容嵌入文档中的指定位置。此内容由外部应用程序或其他交互式内容源（如浏览器插件）提供。
 

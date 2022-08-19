@@ -1,14 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML 表单
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/select
 ---
 {{HTMLRef}}
 

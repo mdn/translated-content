@@ -1,10 +1,6 @@
 ---
 title: 感知性能
 slug: Learn/Performance/perceived_performance
-tags:
-  - Web 性能
-  - 感知性能
-translation_of: Learn/Performance/perceived_performance
 original_slug: learn/Performance/感知性能
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}

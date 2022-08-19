@@ -1,11 +1,6 @@
 ---
 title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/stroke-opacity
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

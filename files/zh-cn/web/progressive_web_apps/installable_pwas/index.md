@@ -1,14 +1,6 @@
 ---
 title: 让 PWA 易于安装
 slug: Web/Progressive_web_apps/Installable_PWAs
-tags:
-  - PWAs
-  - a2hs
-  - js13kGames
-  - 可安装
-  - 添加至主屏幕
-  - 渐进式应用
-translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 

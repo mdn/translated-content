@@ -1,12 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS Font
-  - 参考
-  - 字体
-translation_of: Web/CSS/font-family
 ---
 {{CSSRef}}
 
@@ -46,7 +40,7 @@ font-family: initial;
 font-family: unset;
 ```
 
-属性 `font-family` 列举一个或多个由逗号隔开的字体族。每个字体族由 [`<family-name>`](#<family-name>) 或 [`<generic-name>`](#<generic-name>) 值指定。
+属性 `font-family` 列举一个或多个由逗号隔开的字体族。每个字体族由 [`<family-name>`](#family-name) 或 [`<generic-name>`](#generic-name) 值指定。
 
 下面的例子列举了两个字体族，其中第一个是 `<family-name>`，第二个是 `<generic-name>`：
 

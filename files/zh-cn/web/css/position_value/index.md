@@ -1,7 +1,6 @@
 ---
 title: <position>
 slug: Web/CSS/position_value
-translation_of: Web/CSS/position_value
 ---
 {{ CSSRef() }}
 

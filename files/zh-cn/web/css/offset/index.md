@@ -1,7 +1,6 @@
 ---
 title: offset
 slug: Web/CSS/offset
-translation_of: Web/CSS/offset
 original_slug: Web/CSS/偏移
 ---
 {{SeeCompatTable}}{{CSSRef}}

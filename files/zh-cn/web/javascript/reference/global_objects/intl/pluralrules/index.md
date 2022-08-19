@@ -1,7 +1,6 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 ---
 {{JSRef}}
 

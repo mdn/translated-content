@@ -1,13 +1,6 @@
 ---
 title: use
 slug: Web/SVG/Element/use
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-  - 需要浏览器兼容性
-translation_of: Web/SVG/Element/use
 ---
 {{SVGRef}}
 

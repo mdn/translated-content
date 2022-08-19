@@ -1,11 +1,6 @@
 ---
 title: padding-bottom
 slug: Web/CSS/padding-bottom
-tags:
-  - CSS
-  - CSS 内边距
-  - CSS 属性
-translation_of: Web/CSS/padding-bottom
 ---
 {{CSSRef}}
 

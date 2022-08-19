@@ -1,11 +1,6 @@
 ---
 title: 'Assessment: DIY Django mini blog'
 slug: Learn/Server-side/Django/django_assessment_blog
-tags:
-  - django
-  - 初學者
-  - 部落格
-translation_of: Learn/Server-side/Django/django_assessment_blog
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 

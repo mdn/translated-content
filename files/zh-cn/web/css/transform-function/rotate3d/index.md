@@ -1,11 +1,6 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-tags:
-  - 3D
-  - CSS
-  - CSS Transforms
-translation_of: Web/CSS/transform-function/rotate3d()
 original_slug: Web/CSS/transform-function/rotate3d()
 ---
 {{CSSRef}}

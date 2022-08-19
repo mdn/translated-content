@@ -1,7 +1,6 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-translation_of: Web/HTML/Global_attributes/id
 ---
 {{HTMLSidebar("Global_attributes")}}
 

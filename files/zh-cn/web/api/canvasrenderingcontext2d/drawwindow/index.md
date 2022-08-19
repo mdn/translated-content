@@ -4,7 +4,7 @@ slug: Web/API/CanvasRenderingContext2D/drawWindow
 ---
 {{APIRef}} {{deprecated_header}}
 
-**`CanvasRenderingContext2D.drawWindow()`** 是 Canvas 2D API 在 `canvas `内部画布上渲染一个窗体区域的已弃用的非标准接口。 用来渲染窗口可视区的内容，忽略窗口的剪切和滚动。
+**`CanvasRenderingContext2D.drawWindow()`** 是 Canvas 2D API 在 `canvas` 内部画布上渲染一个窗体区域的已弃用的非标准接口。 用来渲染窗口可视区的内容，忽略窗口的剪切和滚动。
 
 这个 API 不能在 Web 内容中应用。它是一个同步的 API，并且由于它不能对裂变的跨域 `iframe` （译者注：我也不知道这裂变是个啥），如果你的浏览器扩展中使用这一 API 的话，建议你改用 {{WebExtAPIRef('tabs.captureTab')}} 。如果你的代码是针对 chrome 的话，用来自父进程的 [WindowGlobalParent.drawSnapshot](https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98) 接口可能会更合适。
 

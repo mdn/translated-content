@@ -1,15 +1,6 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - 原型
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
 {{JSRef}}
 

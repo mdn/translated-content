@@ -14,7 +14,7 @@ translation_of: Games/Techniques/Async_scripts
 
 ## 非同期を動作させる
 
-非同期のコンパイルは簡単です。 JavaScript を書く時に、単に` async` 属性を使います。
+非同期のコンパイルは簡単です。 JavaScript を書く時に、単に `async` 属性を使います。
 
 ```html
 <script async src="file.js"></script>

@@ -1,7 +1,6 @@
 ---
 title: ':default'
 slug: Web/CSS/:default
-translation_of: Web/CSS/:default
 ---
 {{CSSRef}}
 

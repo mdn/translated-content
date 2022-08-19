@@ -1,7 +1,6 @@
 ---
 title: 事件参考
 slug: Web/Events
-translation_of: Web/Events
 ---
 [事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其它的情况。
 

@@ -1,13 +1,6 @@
 ---
 title: JavaScript 模块
 slug: Web/JavaScript/Guide/Modules
-tags:
-  - JavaScript
-  - 导入
-  - 导出
-  - 指南
-  - 模块
-translation_of: Web/JavaScript/Guide/Modules
 ---
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 

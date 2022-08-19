@@ -1,12 +1,6 @@
 ---
 title: 循环与迭代
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - JavaScript
-  - 循环
-  - 指南
-  - 语法
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 

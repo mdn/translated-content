@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
 {{JSRef}}
 

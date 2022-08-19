@@ -25,7 +25,7 @@ None.
 
 ### 异常
 
-- 如果 `sfactor 或` `dfactor `不是列出的可能值一直，则抛出 `gl.INVALID_ENUM` 错误。
+- 如果 `sfactor` 或 `dfactor` 不是列出的可能值一直，则抛出 `gl.INVALID_ENUM` 错误。
 - 如果使用恒定的颜色和恒定的 alpha 值作为源和目标因子，则抛出`gl.INVALID_ENUM` 错误。
 
 ## 常量

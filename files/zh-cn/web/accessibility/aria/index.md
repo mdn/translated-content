@@ -1,12 +1,6 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-  - HTML
-translation_of: Web/Accessibility/ARIA
 ---
 **ARIA** (Accessible Rich Internet Applications) 是一组属性，用于定义使残障人士更容易访问 Web 内容和 Web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
 

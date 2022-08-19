@@ -1,12 +1,6 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
-tags:
-  - CSS
-  - CSS 函数
-  - CSS 变换
-  - 参考
-translation_of: Web/CSS/transform-function/translate3d()
 original_slug: Web/CSS/transform-function/translate3d()
 ---
 {{CSSRef}}
@@ -21,11 +15,11 @@ translate3d(tx, ty, tz)
 
 ## 常量
 
-- _tx_
+- `tx`
   - : 是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的横坐标。
-- _ty_
+- `ty`
   - : 是一个{{cssxref("&lt;length&gt;")}} 代表移动向量的纵坐标。
-- _tz_
+- `tz`
   - : 是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的 z 坐标。它不能是{{cssxref("&lt;percentage&gt;")}} 值；那样的移动是没有意义的。
 
 <table class="standard-table">

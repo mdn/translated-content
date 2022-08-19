@@ -1,16 +1,7 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/values
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/values
-browser-compat: javascript.builtins.Map.values
 ---
 **`values()`** 方法返回一个新的 Iterator 对象。它包含按顺序插入 Map 对象中每个元素的 value 值。
 

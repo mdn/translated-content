@@ -1,9 +1,6 @@
 ---
 title: CSS 基础框盒模型
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-translation_of: Web/CSS/CSS_Box_Model
 ---
 {{CSSRef}}
 

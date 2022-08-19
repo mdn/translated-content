@@ -1,13 +1,6 @@
 ---
 title: 无符号右移运算符（>>>）
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ---
 {{jsSidebar("Operators")}}
 

@@ -16,7 +16,7 @@ Web Audio API 的一个强大之处在于，它没有任何严格的声音呼叫
 
 注意带有播放按钮的复古磁带卡座，及用于改变音量和立体声声像的平移滑块。我们可以使其更复杂，但这是该阶段进行简单学习的理想选择。
 
-查看最终 demo 代码[ here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/)，或者在 [GitHub 查看源代码 on GitHub](https://github.com/mdn/webaudio-examples/tree/master/audio-basics)。
+查看最终 demo 代码 [here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/)，或者在 [GitHub 查看源代码 on GitHub](https://github.com/mdn/webaudio-examples/tree/master/audio-basics)。
 
 ## 浏览器支持
 
@@ -53,7 +53,7 @@ const audioContext = new AudioContext();
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
 ```
 
-> **备注：** 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin `属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
+> **备注：** 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
 
 为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:
 

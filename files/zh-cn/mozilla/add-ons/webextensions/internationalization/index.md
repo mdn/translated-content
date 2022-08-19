@@ -1,7 +1,6 @@
 ---
 title: 国际化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
-translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
 {{AddonSidebar}}
 

@@ -4,9 +4,9 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
 ---
 下列表格列出了不同范畴的键的标准键值，以及这些键的一般作用。对应的，通用平台上可用的虚拟键码也包含其中。
 
-Learn how to use these key values in JavaScript using [KeyboardEvent.key](/docs/Web/API/KeyboardEvent/key)
+Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN/docs/Web/API/KeyboardEvent/key)
 
-[Special Values ](#Special_values)| [Modifier Keys](#Modifier_keys) | [Whitespace Keys](#Whitespace_keys) | [Navigation Keys](#Navigation_keys) | [Editing Keys](#Editing_keys) | [UI Keys](#UI_keys) | [Device Keys](#Device_keys) | [IME and Composition Keys](#IME_and_composition_keys) | [Function Keys](#Function_keys) | [Phone Keys](#Phone_keys) | [Multimedia Keys](#Multimedia_keys) | [Audio Control Keys](#Audio_control_keys) | [TV Control Keys](#TV_control_keys) | [Media Controller Keys](#Media_controller_keys) | [Speech Recognition Keys](#Speech_recognition_keys) | [Document Keys](#Document_keys) | [Application Selector Keys](#Application_selector_keys) | [Browser Control Keys](#Browser_control_keys) | [Numeric Keypad Keys](#Numeric_keypad_keys)
+[Special Values](#Special_values) | [Modifier Keys](#Modifier_keys) | [Whitespace Keys](#Whitespace_keys) | [Navigation Keys](#Navigation_keys) | [Editing Keys](#Editing_keys) | [UI Keys](#UI_keys) | [Device Keys](#Device_keys) | [IME and Composition Keys](#IME_and_composition_keys) | [Function Keys](#Function_keys) | [Phone Keys](#Phone_keys) | [Multimedia Keys](#Multimedia_keys) | [Audio Control Keys](#Audio_control_keys) | [TV Control Keys](#TV_control_keys) | [Media Controller Keys](#Media_controller_keys) | [Speech Recognition Keys](#Speech_recognition_keys) | [Document Keys](#Document_keys) | [Application Selector Keys](#Application_selector_keys) | [Browser Control Keys](#Browser_control_keys) | [Numeric Keypad Keys](#Numeric_keypad_keys)
 
 ## Special values
 

@@ -10,7 +10,7 @@ slug: Web/API/File/getAsDataURL
 
 ## 概述
 
-getAsDataURL`函数返回一个形如 `[`data:`](/zh-CN/docs/data_URIs) 的 URL，这个 URL 包含了所涉及到的内容的编码形式。
+`getAsDataURL` 函数返回一个形如 [`data:`](/zh-CN/docs/data_URIs) 的 URL，这个 URL 包含了所涉及到的内容的编码形式。
 
 > **备注：** 这个方法已经废弃，你应该使用 {{domxref("FileReader")}} 对象中的{{domxref("FileReader.readAsDataURL","readAsDataURL()")}} 方法作为替代。
 

@@ -1,11 +1,6 @@
 ---
 title: background-position-y
 slug: Web/CSS/background-position-y
-tags:
-  - CSS 背景
-  - 参考
-  - 实验性
-translation_of: Web/CSS/background-position-y
 ---
 {{CSSRef}}
 

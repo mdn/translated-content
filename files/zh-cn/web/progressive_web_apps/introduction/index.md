@@ -1,7 +1,6 @@
 ---
 title: 渐进式 Web 应用介绍
 slug: Web/Progressive_web_apps/Introduction
-translation_of: Web/Progressive_web_apps/Introduction
 ---
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
 

@@ -1,15 +1,6 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - HTML
-  - HTML 表单
-  - textarea
-  - 元素
-  - 参考
-  - 文本区域
-  - 表单
-translation_of: Web/HTML/Element/textarea
 ---
 **HTML `<textarea>` 元素**表示一个多行纯文本编辑控件，当你希望用户输入一段相当长的、不限格式的文本，例如评论或反馈表单中的一段意见时，这很有用。
 

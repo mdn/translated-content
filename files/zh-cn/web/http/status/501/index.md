@@ -1,11 +1,6 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/501
 ---
 {{HTTPSidebar}}
 

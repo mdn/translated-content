@@ -1,13 +1,6 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/Input/week
-tags:
-  - HTML
-  - 元素
-  - 参考
-  - 周
-  - 输出类型
-translation_of: Web/HTML/Element/input/week
 ---
 {{HTMLRef("Input_types")}}
 

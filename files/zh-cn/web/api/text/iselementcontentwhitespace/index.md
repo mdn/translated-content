@@ -36,4 +36,4 @@ ws.isElementContentWhitespace; /* 返回true */
 
 ### 相关链接
 
-- [`Text`](/zh-cn/DOM/Text)
+- [`Text`](/zh-CN/DOM/Text)

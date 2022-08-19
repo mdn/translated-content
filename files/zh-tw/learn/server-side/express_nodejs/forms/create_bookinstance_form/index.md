@@ -1,7 +1,6 @@
 ---
 title: Create BookInstance form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
 [Edi](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form)本章節演示如何定義一個頁面/表單，以創建 `BookInstance` 物件。這很像我們用來創建書本 `Book` 物件的表單。
 

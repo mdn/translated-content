@@ -6,7 +6,7 @@ slug: Web/API/MouseEvent
 
 **`MouseEvent`** 接口指用户与指针设备（如鼠标）交互时发生的事件。使用此接口的常见事件包括：{{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}}、{{event("mousedown")}}。
 
-`MouseEvent` 派生自 {{domxref("UIEvent")}}，{{domxref("UIEvent")}} 派生自 {{domxref("Event")}}。虽然 `MouseEvent.initMouseEvent() `方法保持向后兼容性，但是应该使用 `MouseEvent()` 构造函数创建一个 `MouseEvent` 对象。
+`MouseEvent` 派生自 {{domxref("UIEvent")}}，{{domxref("UIEvent")}} 派生自 {{domxref("Event")}}。虽然 `MouseEvent.initMouseEvent()` 方法保持向后兼容性，但是应该使用 `MouseEvent()` 构造函数创建一个 `MouseEvent` 对象。
 
 一些具体的事件都派生自 `MouseEvent`：{{domxref("WheelEvent")}} 和{{domxref("DragEvent")}}。
 
@@ -64,7 +64,7 @@ _这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型�
 - {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}
   - : 点击事件发生时施加在触摸屏或者平板设备的压力量。这个数值在 0.0（最小压力）和 1.0（最大压力）之间。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : 生成事件的类型（若干 `MOZ_SOURCE_* `常量如下列出）。可通过该属性获知鼠标事件是否由真实鼠标设备触发，亦或通过触摸事件触发（这可能影响处理坐标事件时的精确程度）。
+  - : 生成事件的类型（若干 `MOZ_SOURCE_*`常量如下列出）。可通过该属性获知鼠标事件是否由真实鼠标设备触发，亦或通过触摸事件触发（这可能影响处理坐标事件时的精确程度）。
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
   - : 点击时施加的压力量。
 - {{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}

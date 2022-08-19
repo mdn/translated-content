@@ -40,15 +40,15 @@ The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters
 
 一个创建自定义音频处理算法的步骤的实例：
 
-1.  创建一个独立的文件;
-2.  在这个文件中：
+1. 创建一个独立的文件;
+2. 在这个文件中：
 
-    1.  Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#Deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
-    2.  Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
+    1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#Deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
+    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 
-3.  Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;
-4.  Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the `AudioWorkletNode` constructor.
-5.  Connect the node to the other nodes.
+3. Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;
+4. Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the `AudioWorkletNode` constructor.
+5. Connect the node to the other nodes.
 
 ## 例子
 

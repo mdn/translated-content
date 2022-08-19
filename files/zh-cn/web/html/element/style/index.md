@@ -1,10 +1,6 @@
 ---
 title: <style>
 slug: Web/HTML/Element/style
-tags:
-  - 文档
-  - 样式表
-translation_of: Web/HTML/Element/style
 ---
 {{HTMLRef}}
 

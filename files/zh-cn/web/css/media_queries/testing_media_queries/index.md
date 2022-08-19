@@ -1,13 +1,6 @@
 ---
 title: 使用编程方法测试媒体查询
 slug: Web/CSS/Media_Queries/Testing_media_queries
-tags:
-  - CSS
-  - DOM
-  - Event
-  - Media Queries
-  - Web
-translation_of: Web/CSS/Media_Queries/Testing_media_queries
 original_slug: Web/Guide/CSS/Testing_media_queries
 ---
 {{cssref}}

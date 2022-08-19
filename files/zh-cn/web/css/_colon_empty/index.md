@@ -1,18 +1,6 @@
 ---
 title: ':empty'
 slug: Web/CSS/:empty
-tags:
-  - ':empty'
-  - CSS
-  - CSS 骨架效果
-  - CSS 伪类
-  - Layout
-  - css skeleton
-  - skelenton
-  - 参考
-  - 布局
-  - 网络
-translation_of: Web/CSS/:empty
 ---
 {{ CSSRef()}}
 

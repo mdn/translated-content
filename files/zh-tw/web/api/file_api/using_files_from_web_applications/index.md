@@ -71,11 +71,11 @@ function handleFiles() {
 }
 ```
 
-在這個例子中，`handleFiles() `函數找尋檔案清單而非接收參數, 因為這樣增加的 event listeners 不能接受參數.
+在這個例子中，`handleFiles()` 函數找尋檔案清單而非接收參數, 因為這樣增加的 event listeners 不能接受參數.
 
 ## 獲得選取檔案的資訊
 
-由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 `{{domxref("File")}} `物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
+由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 `{{domxref("File")}}` 物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
 
 ```js
 var numFiles = files.length;
@@ -141,9 +141,9 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-在這個範例中，我們將 ID "dropbox" 設為放的區域，這是由於我們監聽了 ` dragenter 、`` dragover  `和 `drop`事件。
+在這個範例中，我們將 ID "dropbox" 設為放的區域，這是由於我們監聽了 `dragenter`、`dragover` 和 `drop`事件。
 
-我們甚至不需要處理 ` dragenter 和 ``dragover`事件，所以這些函數很簡單。他們阻止了事件的傳播和預設事件的發生：
+我們甚至不需要處理 `dragenter` 和 `dragover` 事件，所以這些函數很簡單。他們阻止了事件的傳播和預設事件的發生：
 
 ```js
 function dragenter(e) {
@@ -171,7 +171,7 @@ function drop(e) {
 }
 ```
 
-`這邊我們用 dataTransfer `來獲取檔案清單, 並傳遞給 `handleFiles()`.。 我們可以發現，不論使用拖放或是其他取得檔案，處理檔案的方式都是相同。
+`這邊我們用 dataTransfer` 來獲取檔案清單, 並傳遞給 `handleFiles()`。 我們可以發現，不論使用拖放或是其他取得檔案，處理檔案的方式都是相同。
 
 ## 範例：顯示選取的圖片
 
@@ -203,7 +203,7 @@ function handleFiles(files) {
 
 為了使圖片可以在 DOM 裡面更容易被找到，所以每個圖片都有設定 CSS class “obj”。 我們也在每個圖檔標記 `file` 屬性以辨認 [`File`](/en/DOM/File)；這使我們更容易取得真正要上傳的圖檔。最後我們使用{{ domxref("Node.appendChild()") }} 在文件中增加縮圖的元素。
 
-[`FileReader`](/en/DOM/FileReader) 處理要非同步讀取的圖檔並跟 `img` 元素連接。在創建 `FileReader` 物件後，我們設置了 `onload `並 呼叫 `readAsDataURL()` 在背景呼叫讀取的程序。當所有圖檔都被讀取時，他們被轉換為傳到 ` onload callback 的`` data  ` URL。 這個範例簡易的設置`img` 元素的 `src` 屬性來讀取圖檔並在螢幕上顯示。
+[`FileReader`](/en/DOM/FileReader) 處理要非同步讀取的圖檔並跟 `img` 元素連接。在創建 `FileReader` 物件後，我們設置了 `onload`並 呼叫 `readAsDataURL()` 在背景呼叫讀取的程序。當所有圖檔都被讀取時，他們被轉換為傳到 `onload callback` 的 `data` URL。 這個範例簡易的設置`img` 元素的 `src` 屬性來讀取圖檔並在螢幕上顯示。
 
 ## 使用 object URLs
 
@@ -284,16 +284,16 @@ This starts by fetching the URL of the {{ HTMLElement("div") }} with the ID "fil
 
 If the {{ domxref("FileList") }} object passed to `handleFiles()` is `null`, we simply set the inner HTML of the block to display "No files selected!". Otherwise, we start building our file list, as follows:
 
-1.  A new unordered list ({{ HTMLElement("ul") }} element is created.
-2.  The new list element is inserted into the {{ HTMLElement("div") }} block by calling its {{ domxref("element.appendChild()") }} method.
-3.  For each {{ domxref("File") }} in the {{ domxref("FileList") }} represented by `files`:
+1. A new unordered list ({{ HTMLElement("ul") }} element is created.
+2. The new list element is inserted into the {{ HTMLElement("div") }} block by calling its {{ domxref("element.appendChild()") }} method.
+3. For each {{ domxref("File") }} in the {{ domxref("FileList") }} represented by `files`:
 
-    1.  Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
-    2.  Create a new image ({{ HTMLElement("img") }}) element.
-    3.  Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
-    4.  Set the image's height to 60 pixels.
-    5.  Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
-    6.  Append the new list item to the list.
+    1. Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
+    2. Create a new image ({{ HTMLElement("img") }}) element.
+    3. Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
+    4. Set the image's height to 60 pixels.
+    5. Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
+    6. Append the new list item to the list.
 
 ## 範例：上傳檔案
 
@@ -313,7 +313,7 @@ function sendFiles() {
 }
 ```
 
-第二行創建了 `imgs `陣列，存放著所有文件中 CSS class 為 “obj” 的 Node。在這個範例中，我們使用這個來創建縮圖。Once we have that list, it's trivial to go through the list, creating a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
+第二行創建了 `imgs` 陣列，存放著所有文件中 CSS class 為 “obj” 的 Node。在這個範例中，我們使用這個來創建縮圖。Once we have that list, it's trivial to go through the list, creating a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
 
 ### 處理上傳檔案的程序
 
@@ -352,12 +352,12 @@ function FileUpload(img, file) {
 
 傳輸資料前的幾個準備工作:
 
-1.  The `XMLHttpRequest`'s upload "progress" listener is set to update the throbber with new percentage information, so that as the upload progresses, the throbber will be updated based on the latest information.
-2.  The `XMLHttpRequest`'s upload "load" event handler is set to update the throbber with 100% as the progress information (to ensure the progress indicator actually reaches 100%, in case of granularity quirks during the process). It then removes the throbber, since it's no longer needed. This causes the throbber to disappear once the upload is complete.
-3.  The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
-4.  The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all, depending on your use case.
-5.  The `FileReader` object is used to convert the file to a binary string.
-6.  Finally, when the content is loaded the `XMLHttpRequest` function `sendAsBinary()` is called to upload the file's content.
+1. The `XMLHttpRequest`'s upload "progress" listener is set to update the throbber with new percentage information, so that as the upload progresses, the throbber will be updated based on the latest information.
+2. The `XMLHttpRequest`'s upload "load" event handler is set to update the throbber with 100% as the progress information (to ensure the progress indicator actually reaches 100%, in case of granularity quirks during the process). It then removes the throbber, since it's no longer needed. This causes the throbber to disappear once the upload is complete.
+3. The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
+4. The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all, depending on your use case.
+5. The `FileReader` object is used to convert the file to a binary string.
+6. Finally, when the content is loaded the `XMLHttpRequest` function `sendAsBinary()` is called to upload the file's content.
 
 > **備註：** 範例中非標準的 `sendAsBinary` 方法已經在 Gecko 31 {{ geckoRelease(31) }} 廢棄且很快將會被移除。可以改使用標準的 `send(Blob data)。`
 

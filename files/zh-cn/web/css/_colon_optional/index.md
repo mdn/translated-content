@@ -1,7 +1,6 @@
 ---
 title: ':optional'
 slug: Web/CSS/:optional
-translation_of: Web/CSS/:optional
 ---
 {{ CSSRef() }}
 

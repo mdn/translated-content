@@ -1,7 +1,6 @@
 ---
 title: border-right-style
 slug: Web/CSS/border-right-style
-translation_of: Web/CSS/border-right-style
 ---
 {{CSSRef}}
 

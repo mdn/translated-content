@@ -1,12 +1,6 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS Value
-  - Default state
-  - initial
-translation_of: Web/CSS/initial
 ---
 {{CSSRef}}
 

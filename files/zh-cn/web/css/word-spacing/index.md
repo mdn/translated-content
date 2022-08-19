@@ -1,13 +1,12 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-translation_of: Web/CSS/word-spacing
 ---
 {{ CSSRef() }}
 
 ## Summary
 
-` 属性 ``word-spacing ` 用于声明标签和单词直接的间距行为。
+属性 `word-spacing` 用于声明标签和单词直接的间距行为。
 
 {{cssinfo}}
 

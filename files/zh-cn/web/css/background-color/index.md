@@ -1,12 +1,6 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS Background
-  - CSS Property
-  - CSS_参考
-  - Reference
-translation_of: Web/CSS/background-color
 ---
 {{CSSRef}}
 

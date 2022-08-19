@@ -1,7 +1,6 @@
 ---
 title: counter-reset
 slug: Web/CSS/counter-reset
-translation_of: Web/CSS/counter-reset
 ---
 {{CSSRef}}
 

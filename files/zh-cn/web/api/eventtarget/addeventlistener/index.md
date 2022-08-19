@@ -4,7 +4,7 @@ slug: Web/API/EventTarget/addEventListener
 ---
 {{APIRef("DOM Events")}}
 
-**EventTarget.addEventListener()** 方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。 事件目标可以是一个文档上的元素 {{domxref("Element")}},{{domxref("Document")}}和{{domxref("Window")}}或者任何其他支持事件的对象 (比如 [`XMLHttpRequest`](/zh-cn/DOM/XMLHttpRequest))`。`
+**EventTarget.addEventListener()** 方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。 事件目标可以是一个文档上的元素 {{domxref("Element")}},{{domxref("Document")}}和{{domxref("Window")}}或者任何其他支持事件的对象 (比如 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest))`。`
 
 `addEventListener()`的工作原理是将实现{{domxref("EventListener")}}的函数或对象添加到调用它的{{domxref("EventTarget")}}上的指定事件类型的事件侦听器列表中。
 
@@ -26,13 +26,13 @@ Non-standard_inline}});  // Gecko/Mozilla only
   - : 当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。`listener` 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)。有关回调本身的详细信息，请参阅[事件监听回调](#事件监听回调)
 - options {{optional_inline}}
 
-  - : 一个指定有关 `listener `属性的可选参数**对象**。可用的选项如下：
+  - : 一个指定有关 `listener` 属性的可选参数**对象**。可用的选项如下：
 
     - `capture`: {{jsxref("Boolean")}}，表示 `listener` 会在该类型的事件捕获阶段传播到该 `EventTarget` 时触发。
     - `once`: {{jsxref("Boolean")}}，表示 `listener 在添加之后最多只调用一次。如果是` `true，` `listener` 会在其被调用之后自动移除。
     - `passive`: {{jsxref("Boolean")}}，设置为 true 时，表示 `listener` 永远不会调用 `preventDefault()`。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。查看 [使用 passive 改善的滚屏性能](#使用_passive_改善的滚屏性能) 了解更多。
     - `signal`：{{domxref("AbortSignal")}}，该 `AbortSignal` 的 {{domxref("AbortController/abort()", "abort()")}} 方法被调用时，监听器会被移除。
-    - {{non-standard_inline}}` mozSystemGroup`: 只能在 XBL 或者是 Firefox' chrome 使用，这是个 {{jsxref("Boolean")}}，表示 `listener `被添加到 system group。
+    - {{non-standard_inline}} `mozSystemGroup`: 只能在 XBL 或者是 Firefox' chrome 使用，这是个 {{jsxref("Boolean")}}，表示 `listener` 被添加到 system group。
 
 - `useCapture` {{optional_inline}}
   - : {{jsxref("Boolean")}}，在 DOM 树中，注册了 listener 的元素， 是否要先于它下面的 EventTarget，调用该 listener。 当 useCapture(设为 true) 时，沿着 DOM 树向上冒泡的事件，不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 [事件流](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) 及 [JavaScript Event order](http://www.quirksmode.org/js/events_order.html#link4) 文档。 如果没有指定， `useCapture` 默认为 false 。
@@ -40,7 +40,7 @@ Non-standard_inline}});  // Gecko/Mozilla only
 > **备注：** 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。捕获阶段的事件监听器在任何非捕获阶段的事件监听器之前被调用。
 
 - `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
-  - : 如果为 `true `, 则事件处理程序会接收网页自定义的事件。此参数只适用于 Gecko（{{glossary("chrome")}}的默认值为 true，其他常规网页的默认值为 false），主要用于附加组件的代码和浏览器本身。
+  - : 如果为 `true`, 则事件处理程序会接收网页自定义的事件。此参数只适用于 Gecko（{{glossary("chrome")}}的默认值为 true，其他常规网页的默认值为 false），主要用于附加组件的代码和浏览器本身。
 
 ### 返回值
 
@@ -334,11 +334,11 @@ let outer  = document.getElementsByClassName('outer') [0];
 - 它提供了一种更精细的手段控制 `listener` 的触发阶段。（即可以选择捕获或者冒泡）。
 - 它对任何 DOM 元素都是有效的，而不仅仅只对 HTML 元素有效。
 
-除了这种方法以外，后文会简单阐述一些[注册事件监听器的旧方法 ](<#注册 listener 的旧方法>)。
+除了这种方法以外，后文会简单阐述一些[注册事件监听器的旧方法](#注册_listener_的旧方法)。
 
 ### 在事件分派时添加事件处理器
 
-当一个 `EventListener `在 `EventTarget `正在处理事件的时候被注册到 `EventTarget `上，它不会被立即触发，但可能在事件流后面的事件触发阶段被触发，例如可能在捕获阶段添加，然后在冒泡阶段被触发。
+当一个 `EventListener` 在 `EventTarget` 正在处理事件的时候被注册到 `EventTarget` 上，它不会被立即触发，但可能在事件流后面的事件触发阶段被触发，例如可能在捕获阶段添加，然后在冒泡阶段被触发。
 
 ### 多个相同的事件处理器
 
@@ -361,7 +361,7 @@ let outer  = document.getElementsByClassName('outer') [0];
 
 这时`modifyText()`中的`this` 的值会变成全局 (window) 对象的引用（在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中为 `undefined）`。
 
-> **备注：**  JavaScript 1.8.5 引入了[`Function.prototype.bind()`](/zh-cn/JavaScript/Reference/Global_Objects/Function/bind) 方法，允许制定函数调用时的 `this` 的值。这使得想要绕开由于调用情况不同，this 取值不同的问题变得十分容易 。然而请注意，你应该保留一个 `listener 的`引用，以便在未来需要的时候能够比较好地移除。
+> **备注：**  JavaScript 1.8.5 引入了[`Function.prototype.bind()`](/zh-CN/JavaScript/Reference/Global_Objects/Function/bind) 方法，允许制定函数调用时的 `this` 的值。这使得想要绕开由于调用情况不同，this 取值不同的问题变得十分容易 。然而请注意，你应该保留一个 `listener 的`引用，以便在未来需要的时候能够比较好地移除。
 
 下面是 `bind` 相关的例子：
 
@@ -454,7 +454,7 @@ if (el.addEventListener) {
 }
 ```
 
-使用 `attachEvent `方法有个缺点，`this` 的值会变成 `window` 对象的引用而不是触发事件的元素。
+使用 `attachEvent` 方法有个缺点，`this` 的值会变成 `window` 对象的引用而不是触发事件的元素。
 
 `attachEvent()`方法可以与`onresize`事件配对，以检测何时调整网页中的某些元素的大小。专有的`mselementresize`事件与注册事件处理程序的`addEventListener`方法配对时，提供与`onresize`类似的功能，在调整某些 HTML 元素大小时触发。
 
@@ -539,7 +539,7 @@ if (el.addEventListener) {
 })();
 ```
 
-### 注册 `listener `的旧方法
+### 注册 `listener` 的旧方法
 
 `addEventListener()` 在 DOM 2 [Events](http://www.w3.org/TR/DOM-Level-2-Events) 规范中引入。在这之前，事件监听器应该用以下的方法注册：
 
@@ -578,7 +578,7 @@ for(i=0 ; i<els.length ; i++){
 }
 ```
 
-在第一种情况下，每个循环中都会创建一个新的（匿名）函数。在第二种情况下，会使用先前声明的相同的函数作为事件处理器。这样的结果是占用的存储空间更小。而且，在第一种情况中，由于没有保持到匿名函数的引用，它不可能被调用 [`element.removeEventListener`](/zh-cn/DOM/element.removeEventListener)，这是因为我们没有一个可参考的处理器，而在第二种情况，它可以被 `myElement.removeEventListener("click", processEvent, false)`。
+在第一种情况下，每个循环中都会创建一个新的（匿名）函数。在第二种情况下，会使用先前声明的相同的函数作为事件处理器。这样的结果是占用的存储空间更小。而且，在第一种情况中，由于没有保持到匿名函数的引用，它不可能被调用 [`element.removeEventListener`](/zh-CN/DOM/element.removeEventListener)，这是因为我们没有一个可参考的处理器，而在第二种情况，它可以被 `myElement.removeEventListener("click", processEvent, false)`。
 
 但是，真正影响内存的并不是没有保持函数引用，而是没有保持 **静态** 函数引用。在下面的两个示例中，每一个循环都重新定义了一个函数，并且保持了函数引用，但是并不是动态的函数引用。第三个示例中，在每次循环中都重新赋值了一个匿名函数的引用。第四个示例，函数定义始终没有改变，但是依然是非静态的，因为每次都重新定义了函数（除非被编译器变量 \[\[提升]]）。尽管表现上看起来很好理解（\[\[重复添加相同的事件监听]]），但是每次循环都是将事件处理函数指向了一个唯一的新创建的函数的引用。同时，因为函数定义本身没有改变，每次触发事件监听器时调用的还是同一个方法（特别是在经过优化的代码中）。
 

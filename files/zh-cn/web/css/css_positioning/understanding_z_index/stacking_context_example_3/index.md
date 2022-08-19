@@ -1,11 +1,6 @@
 ---
 title: Stacking context example 3
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-tags:
-  - CSS
-  - 层叠上下文
-  - 理解 css 的 z-index 属性
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3
 ---
 « [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)

@@ -1,14 +1,6 @@
 ---
 title: 高阶文字排版
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - 上下标
-  - 代码
-  - 引文
-  - 引用
-  - 描述列表
-  - 缩略语
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}
 

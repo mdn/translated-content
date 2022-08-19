@@ -1,17 +1,6 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/radial-gradient()
 original_slug: Web/CSS/gradient/radial-gradient()
 ---
 {{CSSRef}}

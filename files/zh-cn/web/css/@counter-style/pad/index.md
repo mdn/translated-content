@@ -1,7 +1,6 @@
 ---
 title: pad
 slug: Web/CSS/@counter-style/pad
-translation_of: Web/CSS/@counter-style/pad
 ---
 {{CSSRef}}
 

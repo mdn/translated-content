@@ -1,10 +1,6 @@
 ---
 title: color
 slug: Web/SVG/Attribute/color
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/color
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

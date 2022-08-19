@@ -1,7 +1,6 @@
 ---
 title: Unsigned right shift assignment (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
-translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Genre detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
 種類*細節*頁面，需要利用`_id` 字段值 (自動生成) ，以呈現特定種類實例的信息。此頁面應該呈現種類名稱，各個種類的所有書本列表(每本書都連結到書本的細節頁面)。
 

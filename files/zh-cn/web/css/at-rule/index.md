@@ -1,9 +1,6 @@
 ---
 title: '@规则'
 slug: Web/CSS/At-rule
-tags:
-  - At-rule
-translation_of: Web/CSS/At-rule
 ---
 一个 **at-rule** 是一个[CSS 语句，](https://developer.mozilla.org/en/CSS/Syntax#CSS_statements)以 at 符号开头， '`@`' (`U+0040 COMMERCIAL AT`), 后跟一个标识符，并包括直到下一个分号的所有内容， '`;`' (`U+003B SEMICOLON`), 或下一个 CSS 块，以先到者为准。
 

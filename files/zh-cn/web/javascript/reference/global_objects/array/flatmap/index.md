@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-translation_of: Web/CSS/bottom
 ---
 {{CSSRef}}
 

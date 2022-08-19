@@ -1,11 +1,6 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
-tags:
-  - SVG
-  - SVG 动画
-  - 元素
-translation_of: Web/SVG/Element/animate
 ---
 {{SVGRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: counters()
 slug: Web/CSS/counters
-tags:
-  - CSS
-  - CSS 函数
-  - CSS 计数器
-translation_of: Web/CSS/counters()
 original_slug: Web/CSS/counters()
 ---
 {{CSSRef}}

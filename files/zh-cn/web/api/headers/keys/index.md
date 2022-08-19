@@ -2,7 +2,9 @@
 title: Headers.keys()
 slug: Web/API/Headers/keys
 ---
-{{APIRef}}**`Headers.keys() `**方法返回一个 headers(Object) 对象所有 key 组成的迭代器，通过迭代器可以遍历 headers 这个对象，返回的迭代器中的元素 key 都是字符串。
+{{APIRef}}
+
+**`Headers.keys()`** 方法返回一个 headers(Object) 对象所有 key 组成的迭代器，通过迭代器可以遍历 headers 这个对象，返回的迭代器中的元素 key 都是字符串。
 
 > **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 也可以使用。
 

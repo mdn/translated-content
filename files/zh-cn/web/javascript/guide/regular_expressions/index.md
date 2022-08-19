@@ -1,15 +1,6 @@
 ---
 title: 正则表达式
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - JavaScript
-  - RegExp
-  - Regular Expressions
-  - 中级
-  - 参考
-  - 指南
-  - 正则表达式
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
@@ -223,7 +214,7 @@ var re = new RegExp("ab+c");
           <code>\1</code>、<code>\2</code>、...、<code>\n</code>
           是用在正则表达式的匹配环节，详情可以参阅后文的
           <a
-            href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference"
+            href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference"
             >\n</a
           >
           条目。而在正则表达式的替换环节，则要使用像

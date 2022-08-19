@@ -40,10 +40,10 @@ oReq.send();
 
 透過 `XMLHttpRequest` 取得一個遠端的 XML 文件內容時，`responseXML` 屬性（{{Glossary("property/JavaScript", "property")}}）將會是一個由 XML 文件解析而來的 DOM 物件。這可能會造成分析和操作上的一些困難，以下有四種主要的 XML 文件分析方式：
 
-1.  利用 [XPath](/docs/Web/XPath) 指向需要部份。
-2.  手動的[解析與序列化 XML](/docs/Web/Guide/Parsing_and_serializing_XML) 成字串或物件。
-3.  利用 {{domxref("XMLSerializer")}} 來序列化 **DOM 樹成字串或檔案**。
-4.  如果事先知道 XML 文件內容，可利用 {{jsxref("RegExp")}}。如果換行符號會影響 `RegExp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（last resort）」，因為一旦 XML 文件內容稍有變動，此方式就可能會失敗。
+1. 利用 [XPath](/docs/Web/XPath) 指向需要部份。
+2. 手動的[解析與序列化 XML](/docs/Web/Guide/Parsing_and_serializing_XML) 成字串或物件。
+3. 利用 {{domxref("XMLSerializer")}} 來序列化 **DOM 樹成字串或檔案**。
+4. 如果事先知道 XML 文件內容，可利用 {{jsxref("RegExp")}}。如果換行符號會影響 `RegExp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（last resort）」，因為一旦 XML 文件內容稍有變動，此方式就可能會失敗。
 
 ### 分析及操作含有 HTML 文件的 `responseText` 屬性
 
@@ -51,9 +51,9 @@ oReq.send();
 
 若透過 `XMLHttpRequest` 來取得一個遠端的 HTML 網頁內容，則 `responseText` 屬性（{{Glossary("property/JavaScript", "property")}}）會是「一串（soup）」包含所有 HTML 標籤的字串。這可能使得在分析和操作上造成困難，以下有三種主要分析此一大串 HTML 字串的方式：
 
-1.  利用 `XMLHttpRequest.responseXML` 屬性。
-2.  將內容透過 `fragment.body.innerHTML` 注入[文件片段（document fragment）](/docs/Web/API/DocumentFragment)之 `body` 中，並遍歷（traverse）文件片段的 DOM。
-3.  如果事先知道 HTML 之 `responseText` 內容，可利用 {{jsxref("RegExp")}}。如果換行符號會影響 `RegExp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（last resort）」，因為一旦 HTML 程式碼稍有變動，此方式就可能會失敗。
+1. 利用 `XMLHttpRequest.responseXML` 屬性。
+2. 將內容透過 `fragment.body.innerHTML` 注入[文件片段（document fragment）](/docs/Web/API/DocumentFragment)之 `body` 中，並遍歷（traverse）文件片段的 DOM。
+3. 如果事先知道 HTML 之 `responseText` 內容，可利用 {{jsxref("RegExp")}}。如果換行符號會影響 `RegExp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（last resort）」，因為一旦 HTML 程式碼稍有變動，此方式就可能會失敗。
 
 ## 處理二進位資料
 
@@ -767,11 +767,11 @@ var oReq = new XMLHttpRequest();
 
 ## 參見
 
-1.  [MDN AJAX 介紹](/docs/AJAX/Getting_Started)
-2.  [HTTP 存取控制](/docs/Web/HTTP/Access_control_CORS)
-3.  [How to check the security state of an XMLHTTPRequest over SSL](/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-4.  [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-5.  [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
-6.  [Apple developers' reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Articles/XHR.html)
-7.  ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8.  [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
+1. [MDN AJAX 介紹](/docs/AJAX/Getting_Started)
+2. [HTTP 存取控制](/docs/Web/HTTP/Access_control_CORS)
+3. [How to check the security state of an XMLHTTPRequest over SSL](/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
+4. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
+5. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
+6. [Apple developers' reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Articles/XHR.html)
+7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
+8. [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

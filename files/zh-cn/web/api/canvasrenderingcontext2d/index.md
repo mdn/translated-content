@@ -274,7 +274,7 @@ ctx.stroke();
 - {{non-standard_inline}} `CanvasRenderingContext2D.clearShadow()`
   - : 删除所有的阴影设置，例如 {{domxref("CanvasRenderingContext2D.shadowColor")}} 和{{domxref("CanvasRenderingContext2D.shadowBlur")}}。
 - {{non-standard_inline}} `CanvasRenderingContext2D.drawImageFromRect()`
-  - : 这是一个和 `drawImage `相等的多余的方法。
+  - : 这是一个和 `drawImage` 相等的多余的方法。
 - {{non-standard_inline}} `CanvasRenderingContext2D.setAlpha()`
   - : 使用{{domxref("CanvasRenderingContext2D.globalAlpha")}} 替代。
 - {{non-standard_inline}} `CanvasRenderingContext2D.setCompositeOperation()`

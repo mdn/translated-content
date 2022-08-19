@@ -1,7 +1,6 @@
 ---
 title: match
 slug: Web/EXSLT/regexp/match
-translation_of: Web/EXSLT/regexp/match
 ---
 {{ XsltRef() }}
 

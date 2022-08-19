@@ -6,7 +6,7 @@ slug: Web/API/OscillatorNode
 
 **`OscillatorNode`** 接口表示一个振荡器，它产生一个周期的波形信号（如正弦波）。它是一个 {{domxref("AudioScheduledSourceNode")}} 音频处理模块， 这个模块会生成一个指定频率的波形信号（即一个固定的音调）
 
-一个 `OscillatorNode 对象是通过 `{{domxref("AudioContext.createOscillator()")}} 方法创建的。它总是有一个输出，但没有输入。它的基础属性（定义见 {{domxref("AudioNode")}} ）默认如下：
+一个 `OscillatorNode` 对象是通过 {{domxref("AudioContext.createOscillator()")}} 方法创建的。它总是有一个输出，但没有输入。它的基础属性（定义见 {{domxref("AudioNode")}} ）默认如下：
 
 <table class="properties">
   <tbody>

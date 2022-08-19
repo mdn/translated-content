@@ -1,9 +1,6 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - <acronym>
-translation_of: Web/HTML/Element/acronym
 ---
 {{deprecated_header}}
 

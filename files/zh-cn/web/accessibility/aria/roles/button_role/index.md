@@ -1,11 +1,6 @@
 ---
 title: Using the button role
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-translation_of: Web/Accessibility/ARIA/Roles/button_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 ---
 **[button](https://www.w3.org/TR/wai-aria/roles#button)** 角色应该用于可单击的元素， 当用户激活时触发响应。 在其本身，`role="button"` 可以使任何元素 (e.g. {{HTMLElement("p")}}, {{HTMLElement("span")}} or {{HTMLElement("div")}}) 作为一个屏幕阅读器的按钮控件出现。此外，该角色还可以与 `aria-pressed` 属性组合使用，以创建切换按钮。

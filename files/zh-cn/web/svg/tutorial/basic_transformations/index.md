@@ -1,7 +1,6 @@
 ---
 title: 基础变形
 slug: Web/SVG/Tutorial/Basic_Transformations
-translation_of: Web/SVG/Tutorial/Basic_Transformations
 ---
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 

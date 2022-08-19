@@ -11,7 +11,7 @@ translation_of: Web/CSS/:first-of-type
 ---
 {{CSSRef}}
 
-在 CSS `虛擬類別（pseudo-class）中，`**`:first-of-type `**`代表本節點為兄弟節點中第一個此類型節點。`
+在 CSS 虛擬類別（pseudo-class）中，**`:first-of-type`** 代表本節點為兄弟節點中第一個此類型節點。
 
 ```css
 /* 選取第一個出現在父節點下的<p>，不考慮其在所有子節點中的位置。 */

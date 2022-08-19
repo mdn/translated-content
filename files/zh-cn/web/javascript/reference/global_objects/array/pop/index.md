@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - Array.prototype.pop()
-  - ES5
-  - ES6
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
 {{JSRef}}
 

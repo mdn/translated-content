@@ -1,7 +1,6 @@
 ---
 title: 协议升级机制
 slug: Web/HTTP/Protocol_upgrade_mechanism
-translation_of: Web/HTTP/Protocol_upgrade_mechanism
 ---
 {{HTTPSidebar}}
 

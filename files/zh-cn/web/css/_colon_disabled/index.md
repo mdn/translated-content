@@ -1,7 +1,6 @@
 ---
 title: ':disabled'
 slug: Web/CSS/:disabled
-translation_of: Web/CSS/:disabled
 ---
 {{ CSSRef() }}
 

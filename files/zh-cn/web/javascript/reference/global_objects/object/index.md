@@ -1,13 +1,6 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-tags:
-  - Constructor
-  - JavaScript
-  - Object
-  - 对象
-  - 构造器
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 {{JSRef}}
 

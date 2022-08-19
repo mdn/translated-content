@@ -1,7 +1,6 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-translation_of: Web/CSS/place-content
 ---
 {{CSSRef}}
 

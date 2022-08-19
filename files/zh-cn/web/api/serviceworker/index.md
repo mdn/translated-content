@@ -2,7 +2,7 @@
 title: ServiceWorker
 slug: Web/API/ServiceWorker
 ---
-{{SeeCompatTable}} {{APIRef("Service Workers API")}}ServiceWorker API 的[ ServiceWorker 接口](/zh-CN/docs/Web/API/ServiceWorker_API) 提供一个对一个服务工作者的引用。 多个浏览上下文（例如页面，工作者等）可以与相同的服务工作者相关联，每个都通过唯一的 ServiceWorker 对象。
+{{SeeCompatTable}} {{APIRef("Service Workers API")}}ServiceWorker API 的 [ServiceWorker 接口](/zh-CN/docs/Web/API/ServiceWorker_API) 提供一个对一个服务工作者的引用。 多个浏览上下文（例如页面，工作者等）可以与相同的服务工作者相关联，每个都通过唯一的 ServiceWorker 对象。
 
 一个 ServiceWorker 对象在 {{domxref("ServiceWorkerRegistration.active")}} 属性和 {{domxref("ServiceWorkerContainer.controller")}} 属性中可用 — 这是一个激活并在控制页面的 service worker(service worker 成功注册，被控页面已经重新加载完毕.)
 

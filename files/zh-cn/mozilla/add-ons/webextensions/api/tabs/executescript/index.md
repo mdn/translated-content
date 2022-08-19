@@ -1,14 +1,6 @@
 ---
 title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
-tags:
-  - Chrome Extensions
-  - Extensions
-  - Plugins
-  - WebExtensions
-  - executeScript
-  - tabs.executeScript()
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
 {{AddonSidebar()}}
 

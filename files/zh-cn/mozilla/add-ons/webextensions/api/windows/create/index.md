@@ -1,7 +1,6 @@
 ---
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
 {{AddonSidebar()}}
 

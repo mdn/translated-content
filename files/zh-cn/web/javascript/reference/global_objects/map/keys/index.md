@@ -1,16 +1,7 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-browser-compat: javascript.builtins.Map.keys
 ---
 {{JSRef}}
 

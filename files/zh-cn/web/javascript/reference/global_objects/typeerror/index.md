@@ -1,16 +1,6 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - Référence(2)
-  - TypeError
-  - 参考
-  - 类型错误
-translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
 {{JSRef}}
 

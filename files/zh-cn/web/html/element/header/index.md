@@ -1,11 +1,6 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-tags:
-  - HTML
-  - HTML sections
-  - 元素
-translation_of: Web/HTML/Element/header
 ---
 {{HTMLRef}}
 

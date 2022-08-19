@@ -1,12 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Reference
-translation_of: Web/CSS/transform-function/translate()
 original_slug: Web/CSS/transform-function/translate()
 ---
 {{CSSRef}}

@@ -1,17 +1,6 @@
 ---
 title: CSS 盒子对齐
 slug: Web/CSS/CSS_Box_Alignment
-tags:
-  - CSS
-  - CSS Box Alignment
-  - Grid Layout
-  - NeedsTranslation
-  - TopicStub
-  - alignment
-  - box alignment
-  - flexbox
-  - multi-column
-translation_of: Web/CSS/CSS_Box_Alignment
 ---
 {{CSSRef}}
 

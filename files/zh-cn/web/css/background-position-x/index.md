@@ -1,11 +1,6 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-translation_of: Web/CSS/background-position-x
 ---
 {{CSSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: 使用媒体查询
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - CSS
-  - CSS 媒体查询
-  - Media
-  - Web
-  - 媒体
-  - 媒体查询
-  - 指南
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/Media_queries
 ---
 {{cssref}}

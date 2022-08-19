@@ -1,9 +1,6 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-tags:
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
 {{JSRef}}
 

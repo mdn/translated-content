@@ -285,7 +285,7 @@ draw();
 最後一個方法是設定變形矩陣，藉由改變變形矩陣，我們因此可以營造各種變形效果；其實先前所提到的 rotate, translate, scale 都是在設定變形矩陣，而這邊的這個方法就是直接去改變變形矩陣。
 
 - `transform(m11, m12, m21, m22, dx, dy)`
-  - : 呼叫 Transform 會拿目前的變形矩陣乘以下列矩陣:`plain m11 m21 dx m12 m22 dy 0 0 1 `運算後的新矩陣將取代目前的變形矩陣。其中 m11 代表水平縮放圖像，m12 代表水平偏移圖像，m21 代表垂直偏移圖像，m22 代表垂直縮放圖像，dx 代表水平移動圖像，dy 代表垂直移動圖像。如果輸入[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) 值，不會引起例外錯誤，矩陣值會依照輸入設成無限。
+  - : 呼叫 Transform 會拿目前的變形矩陣乘以下列矩陣:`plain m11 m21 dx m12 m22 dy 0 0 1` 運算後的新矩陣將取代目前的變形矩陣。其中 m11 代表水平縮放圖像，m12 代表水平偏移圖像，m21 代表垂直偏移圖像，m22 代表垂直縮放圖像，dx 代表水平移動圖像，dy 代表垂直移動圖像。如果輸入[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) 值，不會引起例外錯誤，矩陣值會依照輸入設成無限。
 - `setTransform(m11, m12, m21, m22, dx, dy)`
   - : 復原目前矩陣為恆等矩陣(Identiy matrix，也就是預設矩陣)，然後再以輸入參數呼叫 transform()。
 

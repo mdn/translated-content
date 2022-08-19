@@ -1,11 +1,6 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
-tags:
-  - Accept-Encoding
-  - 内容协商
-  - 请求头
-translation_of: Web/HTTP/Headers/Accept-Encoding
 ---
 {{HTTPSidebar}}
 

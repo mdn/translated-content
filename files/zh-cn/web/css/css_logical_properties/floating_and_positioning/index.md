@@ -1,7 +1,6 @@
 ---
 title: 浮动和定位的逻辑属性
 slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-translation_of: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 original_slug: Web/CSS/CSS_Logical_Properties/浮动和定位
 ---
 {{CSSRef}}

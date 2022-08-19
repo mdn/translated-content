@@ -23,7 +23,7 @@ target.removeEventListener(type, listener[, useCapture]);
 - options {{optional_inline}}
   - : An options object that specifies characteristics about the event listener. The available options are: `capture`: A {{jsxref("Boolean")}} that indicates that events of this type will be dispatched to the registered `listener` before being dispatched to any `EventTarget` beneath it in the DOM tree.
     - `passive`: A {{jsxref("Boolean")}} indicating that the `listener` will never call `preventDefault()`. If it does, the user agent should ignore it and generate a console warning.
-    - {{non-standard_inline}}` mozSystemGroup`: Available only in code running in XBL or in Firefox' chrome, it is a {{jsxref("Boolean")}} defining if the listener is added to the system group.
+    - {{non-standard_inline}} `mozSystemGroup`: Available only in code running in XBL or in Firefox' chrome, it is a {{jsxref("Boolean")}} defining if the listener is added to the system group.
 - `useCapture` {{optional_inline}}
   - : Specifies whether the {{domxref("EventListener")}} to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of `false` is assumed. If a listener is registered twice, one with capture and one without, remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.
 

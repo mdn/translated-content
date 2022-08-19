@@ -1,7 +1,6 @@
 ---
 title: widows
 slug: Web/CSS/widows
-translation_of: Web/CSS/widows
 ---
 {{CSSRef}}
 

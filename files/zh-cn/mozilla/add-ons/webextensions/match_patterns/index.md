@@ -1,11 +1,6 @@
 ---
 title: 匹配模式
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
-tags:
-  - Match_patterns
-  - URIs
-  - urls
-translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 {{AddonSidebar}}
 

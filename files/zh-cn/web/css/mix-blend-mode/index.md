@@ -1,7 +1,6 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-translation_of: Web/CSS/mix-blend-mode
 ---
 {{CSSRef()}}
 

@@ -8,15 +8,15 @@ slug: Web/API/IDBFactory/open
 
 连接数据库在一个单独的线程中进行，包括以下几个步骤：
 
-1.  指定数据库已经存在时：
+1. 指定数据库已经存在时：
 
     - 等待 {{domxref("versionchange")}} 操作完成。
     - 如果数据库已计划删除，那等着删除完成。
 
-2.  如果已有数据库版本高于给定的 `version，中止操作并返回`类型为 `VersionError 的` `DOMError` 。
-3.  如果已有数据库版本低于给定的 `version，触发一个` `versionchange` 操作。
-4.  如果数据库不存在，创建指定名称的数据库，将版本号设置为给定版本，如果给定版本号，则设置为 1，and no object stores.
-5.  创建数据库连接。
+2. 如果已有数据库版本高于给定的 `version`，中止操作并返回类型为 `VersionError` 的 `DOMError`。
+3. 如果已有数据库版本低于给定的 `version`，触发一个 `versionchange` 操作。
+4. 如果数据库不存在，创建指定名称的数据库，将版本号设置为给定版本，如果给定版本号，则设置为 1，and no object stores.
+5. 创建数据库连接。
 
 如果操作成功执行，将触发 `success` 事件 on the request object that is returned from this method, with its `result` attribute set to the new {{domxref("IDBDatabase")}} object for the connection.
 

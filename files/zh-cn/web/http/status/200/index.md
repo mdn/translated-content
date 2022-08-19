@@ -1,11 +1,6 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-tags:
-  - HTTP
-  - 成功
-  - 状态码
-translation_of: Web/HTTP/Status/200
 ---
 {{HTTPSidebar}}
 
