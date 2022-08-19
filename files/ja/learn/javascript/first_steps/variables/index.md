@@ -355,7 +355,7 @@ const daysInWeek = 7;
 const hoursInDay = 24;
 ```
 
-<span class="objectBox objectBox-number"><code>const</code></span> は <span class="objectBox objectBox-number"><code>let</code></span> と全く同じように動作しますが、<span class="objectBox objectBox-number"><code>const</code></span> に新しい値を与えることはできません。次の例では、2 行目でエラーが発生します。
+`const` は `let` と全く同じように動作しますが、`const` に新しい値を与えることはできません。次の例では、2 行目でエラーが発生します。
 
 ```js
 const daysInWeek = 7;

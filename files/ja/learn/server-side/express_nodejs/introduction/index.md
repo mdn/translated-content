@@ -43,31 +43,32 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
 1.  ターミナルを開きます (Windows ではコマンドラインユーティリティを開きます)。
 2.  プログラムを保存するフォルダ (たとえば "test-node") を作成し、端末に次のコマンドを入力して移動します。
 
-```html
-cd test-node
-```
+    ```html
+    cd test-node
+    ```
 
-<ol start="3"><li>好きなテキストエディタを使って "hello.js" というファイルを作成し、次のコードを貼り付けます。</li></ol>
+3.  好きなテキストエディタを使って "hello.js" というファイルを作成し、次のコードを貼り付けます。
 
-```js
-// HTTPモジュールの読み込み
-var http = require("http");
+    ```js
+    // HTTPモジュールの読み込み
+    var http = require("http");
 
-//  HTTPサーバーを作成し、ポート8000でリクエストを行う
-http.createServer(function(request, response) {
+    //  HTTPサーバーを作成し、ポート8000でリクエストを行う
+    http.createServer(function(request, response) {
 
-   // HTTP ステータスとコンテントタイプを持つ HTTP ヘッダのレスポンスを設定
-   response.writeHead(200, {'Content-Type': 'text/plain'});
+       // HTTP ステータスとコンテントタイプを持つ HTTP ヘッダのレスポンスを設定
+       response.writeHead(200, {'Content-Type': 'text/plain'});
 
-   // レスポンスボディー"Hello World"を送信
-   response.end('Hello World\n');
-}).listen(8000);
+       // レスポンスボディー"Hello World"を送信
+       response.end('Hello World\n');
+    }).listen(8000);
 
-//  サーバーにアクセスするための URL を出力
-console.log('Server running at http://127.0.0.1:8000/');
-```
+    //  サーバーにアクセスするための URL を出力
+    console.log('Server running at http://127.0.0.1:8000/');
+    ```
 
-<ol start="4"><li>上記で作成したフォルダにファイルを保存します。</li><li>ターミナルに戻り、次のコマンドを入力します。</li></ol>
+4.  上記で作成したフォルダにファイルを保存します。
+5.  ターミナルに戻り、次のコマンドを入力します。
 
 ```bash
 node "hello.js"

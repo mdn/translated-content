@@ -167,5 +167,3 @@ There are no specific assessment articles in this set of modules. The case study
 - [Git and GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) (5 時間の記事)
 - [Understanding client-side web development tools](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools) (20–25 時間の記事)
 - [Understanding client-side JavaScript frameworks](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks) (30-60 時間の学習)
-
-<div class="gtx-trans-icon"></div>

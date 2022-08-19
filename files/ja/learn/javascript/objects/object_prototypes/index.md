@@ -34,7 +34,7 @@ JavaScript はしばしば**プロトタイプベースの言語**として記�
 
 JavaScript では、あるオブジェクトのインスタンスとそのプロトタイプ (コンストラクタの `prototype` プロパティから派生した `__proto__` プロパティ) の間にリンクが張られており、そのプロパティとメソッドはプロトタイプの連鎖を辿って発見されます。
 
-> **Note:** **オブジェクトの `prototype`** (<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code> または非推奨の [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティで取得可能) と**コンストラクタ関数の`prototype` プロパティ**の違いを理解することが重要です。
+> **Note:** **オブジェクトの `prototype`** ([`Object.getPrototypeOf(obj)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) または非推奨の [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティで取得可能) と**コンストラクタ関数の`prototype` プロパティ**の違いを理解することが重要です。
 >
 > 前者は各インスタンス上のプロパティ、後者はコンストラクタ上のプロパティです。つまり、`Object.getPrototypeOf(new Foobar())` は`Foobar.prototype`と同じオブジェクトを参照しています。
 

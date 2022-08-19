@@ -32,15 +32,11 @@ Web デザインの初期には、特定の画面サイズを対象とするペ�
 
 ![モバイルサイズのビューポートに押しつぶされた2列のレイアウト。](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
 
-<figcaption></figcaption>
-
 > **Note:** **注**: このシンプルなリキッドレイアウトを見てください: [例](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html)。 例を表示しているときに、ブラウザーのウィンドウを内側または外側にドラッグして、さまざまなサイズでどのように見えるかを確認します。
 
 固定幅のサイトでは、画面の幅がサイトの幅よりも小さいと水平スクロールバーが発生するリスクがあり（下図参照）、大きな画面ではデザインの端に多くの空白ができます。
 
 ![モバイルのビューポートに水平スクロールバーを備えたレイアウト。](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
-
-<figcaption></figcaption>
 
 > **Note:** **注**: この単純な固定幅レイアウトを見てください: [例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)。 繰り返しますが、ブラウザーのウィンドウのサイズを変更したときの結果を確認してください。
 
@@ -114,13 +110,9 @@ Zoe Mickley Gillenwater は、フレキシブル（柔軟な）サイトを作�
 
 ![ボックスが上下に積み上げられたレイアウトのモバイルビュー。](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
 
-<figcaption></figcaption>
-
 より広い画面では、次のように 2 つの列に移動します。
 
 ![2列のレイアウトのデスクトップビュー。](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
-
-<figcaption></figcaption>
 
 > **Note:** **注**: この例の[ライブ例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)と[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)は GitHub にあります。
 
@@ -223,13 +215,9 @@ h1 {
 
 ![見出しサイズが小さいスタックレイアウト。](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
 
-<figcaption></figcaption>
-
 ただし、デスクトップでは、次のようにより大きな見出しサイズで表示されます。
 
 ![見出しが大きい2列レイアウト。](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
-
-<figcaption></figcaption>
 
 > **Note:** **注**: この例を実際に見てください: [例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html)。
 

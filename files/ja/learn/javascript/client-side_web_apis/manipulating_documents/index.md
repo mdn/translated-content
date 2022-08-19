@@ -331,7 +331,3 @@ linkPara.parentNode.removeChild(linkPara);
 - [絵を描く](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 - [クライアント側でのデータ保持](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
-
-<div class="simple-translate-button isShow" style="height: 22px; width: 22px; top: 12775px; left: 144px;"></div>
-
-<div class="simple-translate-panel" style="width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px; background-color: rgb(255, 255, 255);"><div class="simple-translate-result-wrapper" style="overflow: hidden;"><div class="simple-translate-move"></div><div class="simple-translate-result-contents"><p class="simple-translate-result" style="color: rgb(0, 0, 0);"></p><p class="simple-translate-candidate" style="color: rgb(115, 115, 115);"></p></div></div></div>
