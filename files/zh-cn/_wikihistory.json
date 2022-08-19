@@ -45050,13 +45050,6 @@
       "jackyong"
     ]
   },
-  "conflicting/Web/API": {
-    "modified": "2020-09-07T03:42:22.980Z",
-    "contributors": [
-      "SphinxKnight",
-      "hl7514576"
-    ]
-  },
   "conflicting/Web/API/Beacon_API": {
     "modified": "2020-04-23T03:45:20.732Z",
     "contributors": [
@@ -45163,16 +45156,6 @@
     "modified": "2020-10-15T22:26:24.148Z",
     "contributors": [
       "RainSlide"
-    ]
-  },
-  "conflicting/Web/API/Element/click_event": {
-    "modified": "2020-10-15T21:40:13.149Z",
-    "contributors": [
-      "knightyun",
-      "RainSlide",
-      "loicaplay",
-      "Ende93",
-      "Hughie"
     ]
   },
   "conflicting/Web/API/Element/localName": {
