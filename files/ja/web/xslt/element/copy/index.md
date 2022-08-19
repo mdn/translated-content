@@ -1,5 +1,5 @@
 ---
-title: '<xsl:copy>'
+title: <xsl:copy>
 slug: Web/XSLT/Element/copy
 tags:
   - XSLT
@@ -8,35 +8,35 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/copy
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:copy&gt;</code> 要素は、現在のノードの浅いコピー (ノードおよび関連する名前空間ノード) を出力ドキュメントに転送します。現在のノードの子または属性はコピーされません。</p>
+`<xsl:copy>` 要素は、現在のノードの浅いコピー (ノードおよび関連する名前空間ノード) を出力ドキュメントに転送します。現在のノードの子または属性はコピーされません。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:copy use-attribute-sets=LIST-OF-NAMES&gt;
+```
+<xsl:copy use-attribute-sets=LIST-OF-NAMES>
 	TEMPLATE
-&lt;/xsl:copy&gt;</pre>
+</xsl:copy>
+```
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<dl>
- <dt><code>use-attribute-sets</code></dt>
- <dd>要素であれば、出力ノードに適用される属性セットをリストします。 セットの名前は空白文字で区切る必要があります。</dd>
-</dl>
+- `use-attribute-sets`
+  - : 要素であれば、出力ノードに適用される属性セットをリストします。 セットの名前は空白文字で区切る必要があります。
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>命令は、テンプレート内に表示されます。</p>
+命令は、テンプレート内に表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 7.5.</p>
+XSLT, section 7.5.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

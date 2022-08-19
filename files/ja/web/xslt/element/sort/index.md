@@ -1,60 +1,60 @@
 ---
-title: '<xsl:sort>'
+title: <xsl:sort>
 slug: Web/XSLT/Element/sort
 translation_of: Web/XSLT/Element/sort
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:sort&gt;</code> 要素は、<code>&lt;xsl:apply-templates&gt;</code> または <code>&lt;xsl:for-each&gt;</code> で選択されたノードのソートキーを定義し、それらが処理される順序を決定します。</p>
+`<xsl:sort>` 要素は、`<xsl:apply-templates>` または `<xsl:for-each>` で選択されたノードのソートキーを定義し、それらが処理される順序を決定します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:sort
+```
+<xsl:sort
 	select=EXPRESSION
 	order="ascending" | "descending"
 	case-order="upper-first" | "lower-first"
 	lang=XML:LANG-CODE
-	data-type="text" | "number" /&gt; </pre>
+	data-type="text" | "number" />
+```
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<dl>
- <dt><code>select</code></dt>
- <dd>XPath 式を使用してソートするノードを指定します。</dd>
-</dl>
+- `select`
+  - : XPath 式を使用してソートするノードを指定します。
 
-<dl>
- <dt><code>order</code></dt>
- <dd>ノードを "<code>ascending</code>" または "<code>descending</code>" に処理するかどうかを指定します。デフォルトは "<code>ascending</code>" です。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>case-order</code></dt>
- <dd>大文字か小文字かを最初に指示するかどうかを示します。許容される値は "<code>upper-first</code>" および "<code>lower-first</code>" である。</dd>
-</dl>
+- `order`
+  - : ノードを "`ascending`" または "`descending`" に処理するかどうかを指定します。デフォルトは "`ascending`" です。
 
-<dl>
- <dt><code>lang</code></dt>
- <dd>ソートで使用する言語を指定します。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>data-type</code></dt>
- <dd>アイテムをアルファベット順または数値順に並べ替えるかどうかを定義します。 許容される値は "<code>text</code>" と "<code>number</code>" で、"<code>text</code>" がデフォルトです。</dd>
-</dl>
+- `case-order`
+  - : 大文字か小文字かを最初に指示するかどうかを示します。許容される値は "`upper-first`" および "`lower-first`" である。
 
-<h3 id="Type" name="Type">タイプ</h3>
+<!---->
 
-<p>Subinstructionは常に &lt;xsl:for-each&gt; の子として現れます。テンプレートの適切な場所または &lt;xsl:apply-templates&gt; の前に現れなければなりません。</p>
+- `lang`
+  - : ソートで使用する言語を指定します。
 
-<h3 id="Defined" name="Defined">定義</h3>
+<!---->
 
-<p>XSLT, section10.</p>
+- `data-type`
+  - : アイテムをアルファベット順または数値順に並べ替えるかどうかを定義します。 許容される値は "`text`" と "`number`" で、"`text`" がデフォルトです。
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### タイプ
 
-<p>サポート済み</p>
+Subinstruction は常に \<xsl:for-each> の子として現れます。テンプレートの適切な場所または \<xsl:apply-templates> の前に現れなければなりません。
+
+### 定義
+
+XSLT, section10.
+
+### Gecko のサポート
+
+サポート済み

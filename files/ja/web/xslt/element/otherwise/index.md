@@ -1,5 +1,5 @@
 ---
-title: '<xsl:otherwise>'
+title: <xsl:otherwise>
 slug: Web/XSLT/Element/otherwise
 tags:
   - XSLT
@@ -8,32 +8,34 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/otherwise
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:otherwise&gt;</code> 要素は <code>&lt;xsl:when&gt;</code> 条件のいずれも適用されない場合に実行されるアクションを定義するために使用されます。他のプログラミング言語の <code>else</code> または <code>default</code> の場合と似ています。</p>
+`<xsl:otherwise>` 要素は `<xsl:when>` 条件のいずれも適用されない場合に実行されるアクションを定義するために使用されます。他のプログラミング言語の `else` または `default` の場合と似ています。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:otherwise&gt;
+```
+<xsl:otherwise>
 	TEMPLATE
-&lt;/xsl:otherwise&gt;</pre>
+</xsl:otherwise>
+```
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>サブ命令は <code>&lt;xsl:choose&gt;</code> 要素の最後の子としてテンプレート内に現れなければなりません。</p>
+サブ命令は `<xsl:choose>` 要素の最後の子としてテンプレート内に現れなければなりません。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 9.2</p>
+XSLT, section 9.2
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み
