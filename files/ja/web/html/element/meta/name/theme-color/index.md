@@ -23,8 +23,7 @@ browser-compat: html.elements.meta.name.theme-color
 次の画像は、上記の {{htmlelement("meta")}} 要素が、 Android モバイル端末上で動作する Chrome で表示された文書に与える影響を示しています。
 
 ![theme-color を使用した影響を表す図](theme-color.png)
-
-<figcaption><small>画像の出典: <a href="https://developers.google.com/web/fundamentals/design-and-ux/browser-customization">Icons &#x26; Browser Colors</a> より、<a href="https://developers.google.com/readme/policies">Google</a> が作成・共有し <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a> に記載された条件に従って使用されています。</small></figcaption>
+_画像の出典: [Icons & Browser Colors](https://developers.google.com/web/fundamentals/design-and-ux/browser-customization) より、[Google](https://developers.google.com/readme/policies) が作成・共有し [Creative Commons 4.0 Attribution License](https://creativecommons.org/licenses/by/4.0/) に記載された条件に従って使用されています。_
 
 {{htmlattrxref("media", "meta")}} 属性で、メディア種別やクエリーを指定することができ、メディアの条件が真である場合にのみ、色が設定されます。例えば、以下のようになります。
 

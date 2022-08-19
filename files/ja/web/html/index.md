@@ -32,7 +32,7 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
 
 > **Callout:** #### フロントエンドのウェブ開発者を目指している方へゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。[**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
-<h2 class="Tools" id="Beginners_tutorials">初心者向けチュートリアル</h2>
+## 初心者向けチュートリアル
 
 [HTML 学習エリア](/ja/docs/Learn/HTML)は HTML を基礎から学ぶための複数のモジュールを中心としています。――前提知識は必要ありません。
 
@@ -56,7 +56,7 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
 - [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Preloading_content)
   - : HTML の {{htmlelement("head")}} 要素内において、 {{htmlelement("link")}} 要素で {{htmlattrxref("rel", "link")}} 属性に `preload` を指定することで、読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザーの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチリクエストを記述することができます。これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。この記事では `preload` がどのように動作するのかについての基本的なガイドを提供します。
 
-<h2 class="Documentation" id="References">リファレンス</h2>
+## リファレンス
 
 - [HTML リファレンス](/ja/docs/Web/HTML/Reference)
   - : HTML は**要素**の集まりで、それぞれの要素がいくつかの**属性**で修飾される場合があります。 HTML 文書は互いに[リンク](/ja/docs/Web/HTML/Link_types)で接続されます。
@@ -77,7 +77,7 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
 - [後方互換モードと標準準拠モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
   - : 後方互換モードと標準準拠モードの歴史的な情報です。
 
-<h2 class="landingPageList" id="Related_topics">関連トピック</h2>
+## 関連トピック
 
 - [CSS を使って HTML の要素に色をつける](/ja/docs/Web/HTML/Applying_color)
   - : この記事では、 CSS を使用して HTML コンテンツに色をつける方法、 HTML 文書のどの部分に色付けできるかの一覧、使用する CSS プロパティについて説明します。例えば、パレット作成ツールへのリンクなどが含みます。

@@ -178,9 +178,9 @@ div {
 
 ### メニューボタン
 
-<div class="notecard warning"><p>メニューボタンを実装しているブラウザーはまだ知られていません。 <code>&#x3C;menu></code> 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。</p></div>
+> **Warning:** メニューボタンを実装しているブラウザーはまだ知られていません。 `<menu>` 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。
 
-<div class="notecard warning"><p>{{HTMLElement("menuitem")}} 要素は廃止されました。</p></div>
+> **Warning:** {{HTMLElement("menuitem")}} 要素は廃止されました。
 
 #### HTML
 
@@ -204,7 +204,7 @@ div {
 
 ### ツールバー
 
-<div class="notecard warning"><p>ツールバーメニューを実装しているブラウザーはまだ知られていません。</p></div>
+> **Warning:** ツールバーメニューを実装しているブラウザーはまだ知られていません。
 
 #### HTML
 

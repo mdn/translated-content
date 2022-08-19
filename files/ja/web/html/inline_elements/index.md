@@ -39,15 +39,17 @@ the inline element's influence.</div>
 
 {{EmbedLiveSample("Inline", 600, 80)}}
 
-<div class="hidden"><p>表示上、以下の CSS も使われています (標準モードでは表示されません)。</p><pre class="brush: css">body {
+```css hidden
+body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
 }
 
 .highlight {
-background-color:#ee3;
-}</pre></div>
+  background-color:#ee3;
+}
+```
 
 ### ブロックレベル要素
 
@@ -59,15 +61,17 @@ its background has been colored to display both the beginning and end of
 the block-level element's influence.</div>
 ```
 
-<div class="hidden"><p>この CSS も使われています (標準モードでは表示されません)。</p><pre class="brush: css">body {
+```css hidden
+body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
 }
 
 .highlight {
-background-color:#ee3;
-}</pre></div>
+  background-color:#ee3;
+}
+```
 
 前回と同じ CSS を使って表示していますが、結果は以下のようになります。
 
@@ -92,7 +96,61 @@ CSS の {{cssxref("display")}} プロパティを使用すると、要素の*視
 
 以下の要素は既定でインラインです (ただし、ブロック要素とインライン要素は HTML5 では定義されなくなり、代わりに[コンテンツカテゴリ](/ja/docs/Web/Guide/HTML/Content_categories)が使用されます)。
 
-<dl><dt>{{ HTMLElement("a") }}</dt><dt>{{ HTMLElement("abbr") }}</dt><dt>{{ HTMLElement("acronym") }}</dt><dt>{{ HTMLElement("audio") }} (視覚的なコントロールがある場合)</dt><dt>{{ HTMLElement("b") }}</dt><dt>{{ HTMLElement("bdi") }}</dt><dt>{{ HTMLElement("bdo") }}</dt><dt>{{ HTMLElement("big") }}</dt><dt>{{ HTMLElement("br") }}</dt><dt>{{ HTMLElement("button") }}</dt><dt>{{ HTMLElement("canvas") }}</dt><dt>{{ HTMLElement("cite") }}</dt><dt>{{ HTMLElement("code") }}</dt><dt>{{ HTMLElement("data") }}</dt><dt>{{ HTMLElement("datalist") }}</dt><dt>{{ HTMLElement("del") }}</dt><dt>{{ HTMLElement("dfn") }}</dt><dt>{{ HTMLElement("em") }}</dt><dt>{{ HTMLElement("embed") }}</dt><dt>{{ HTMLElement("i") }}</dt><dt>{{ HTMLElement("iframe") }}</dt><dt>{{ HTMLElement("img") }}</dt><dt>{{ HTMLElement("input") }}</dt><dt>{{ HTMLElement("ins") }}</dt><dt>{{ HTMLElement("kbd") }}</dt><dt>{{ HTMLElement("label") }}</dt><dt>{{ HTMLElement("map") }}</dt><dt>{{ HTMLElement("mark") }}</dt><dt>{{ HTMLElement("meter") }}</dt><dt>{{ HTMLElement("noscript") }}</dt><dt>{{ HTMLElement("object") }}</dt><dt>{{ HTMLElement("output") }}</dt><dt>{{ HTMLElement("picture") }}</dt><dt>{{ HTMLElement("progress") }}</dt><dt>{{ HTMLElement("q") }}</dt><dt>{{ HTMLElement("ruby") }}</dt><dt>{{ HTMLElement("s") }}</dt><dt>{{ HTMLElement("samp") }}</dt><dt>{{ HTMLElement("script") }}</dt><dt>{{ HTMLElement("select") }}</dt><dt>{{ HTMLElement("slot") }}</dt><dt>{{ HTMLElement("small") }}</dt><dt>{{ HTMLElement("span") }}</dt><dt>{{ HTMLElement("strong") }}</dt><dt>{{ HTMLElement("sub") }}</dt><dt>{{ HTMLElement("sup") }}</dt><dt>{{ HTMLElement("svg") }}</dt><dt>{{ HTMLElement("template") }}</dt><dt>{{ HTMLElement("textarea") }}</dt><dt>{{ HTMLElement("time") }}</dt><dt>{{ HTMLElement("u") }}</dt><dt>{{ HTMLElement("tt") }}</dt><dt>{{ HTMLElement("var") }}</dt><dt>{{ HTMLElement("video") }}</dt><dt>{{ HTMLElement("wbr") }}</dt></dl>
+- {{ HTMLElement("a") }}
+- {{ HTMLElement("abbr") }}
+- {{ HTMLElement("acronym") }}
+- {{ HTMLElement("audio") }} (視覚的なコントロールがある場合)
+- {{ HTMLElement("b") }}
+- {{ HTMLElement("bdi") }}
+- {{ HTMLElement("bdo") }}
+- {{ HTMLElement("big") }}
+- {{ HTMLElement("br") }}
+- {{ HTMLElement("button") }}
+- {{ HTMLElement("canvas") }}
+- {{ HTMLElement("cite") }}
+- {{ HTMLElement("code") }}
+- {{ HTMLElement("data") }}
+- {{ HTMLElement("datalist") }}
+- {{ HTMLElement("del") }}
+- {{ HTMLElement("dfn") }}
+- {{ HTMLElement("em") }}
+- {{ HTMLElement("embed") }}
+- {{ HTMLElement("i") }}
+- {{ HTMLElement("iframe") }}
+- {{ HTMLElement("img") }}
+- {{ HTMLElement("input") }}
+- {{ HTMLElement("ins") }}
+- {{ HTMLElement("kbd") }}
+- {{ HTMLElement("label") }}
+- {{ HTMLElement("map") }}
+- {{ HTMLElement("mark") }}
+- {{ HTMLElement("meter") }}
+- {{ HTMLElement("noscript") }}
+- {{ HTMLElement("object") }}
+- {{ HTMLElement("output") }}
+- {{ HTMLElement("picture") }}
+- {{ HTMLElement("progress") }}
+- {{ HTMLElement("q") }}
+- {{ HTMLElement("ruby") }}
+- {{ HTMLElement("s") }}
+- {{ HTMLElement("samp") }}
+- {{ HTMLElement("script") }}
+- {{ HTMLElement("select") }}
+- {{ HTMLElement("slot") }}
+- {{ HTMLElement("small") }}
+- {{ HTMLElement("span") }}
+- {{ HTMLElement("strong") }}
+- {{ HTMLElement("sub") }}
+- {{ HTMLElement("sup") }}
+- {{ HTMLElement("svg") }}
+- {{ HTMLElement("template") }}
+- {{ HTMLElement("textarea") }}
+- {{ HTMLElement("time") }}
+- {{ HTMLElement("u") }}
+- {{ HTMLElement("tt") }}
+- {{ HTMLElement("var") }}
+- {{ HTMLElement("video") }}
+- {{ HTMLElement("wbr") }}
 
 ## 関連情報
 

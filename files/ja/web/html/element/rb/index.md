@@ -84,10 +84,15 @@ translation_of: Web/HTML/Element/rb
 </ruby>
 ```
 
-<div class="hidden"><div id="with-ruby"><pre class="brush: html notranslate">&#x3C;ruby> &#x3C;rb>漢&#x3C;rb>字 &#x3C;rp>(&#x3C;/rp>&#x3C;rt>kan&#x3C;rt>ji&#x3C;rp>)&#x3C;/rp> &#x3C;/ruby>
-</pre><pre class="brush: css notranslate">body {
+```html hidden
+<ruby> <rb>漢<rb>字 <rp>(</rp><rt>kan<rt>ji<rp>)</rp> </ruby>
+```
+
+```css
+body {
   font-size: 22px;
-}</pre></div></div>
+}
+```
 
 出力は以下のようになります。
 
