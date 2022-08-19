@@ -34,7 +34,7 @@ CSS3 以降、仕様の範囲が大幅に拡大し、CSS モジュールごと�
 
 > **Callout:** #### フロントエンドのウェブ開発者を目指している方へゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。[**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
-<h2 class="Documentation" id="Tutorials" name="Tutorials">チュートリアル</h2>
+## チュートリアル
 
 [CSS 学習エリア](/ja/docs/Learn/CSS) は基礎から CSS を教える複数のモジュールにスポットを当てています — 事前の知識は必要ありません。
 
@@ -53,7 +53,7 @@ CSS3 以降、仕様の範囲が大幅に拡大し、CSS モジュールごと�
 - [CSS を使ってよくある問題を解決する](/ja/docs/Learn/CSS/Howto)
   - : このモジュールは、ウェブページを作成する際の一般的な問題を解決するための CSS の使用方法を説明するコンテンツの節へのリンクを提供しています。
 
-<h2 class="Tools" id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
 - [CSS リファレンス](/ja/docs/Web/CSS/Reference): CSS のすべてのプロパティや概念について記述された、熟練のウェブ開発者向けの CSS リファレンスです。
 - CSS の主要な概念:
@@ -72,11 +72,11 @@ CSS3 以降、仕様の範囲が大幅に拡大し、CSS モジュールごと�
   - [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
   - [アニメーション](/ja/docs/Web/CSS/animation)
 
-<h2 class="Tools" id="Cookbook" name="Cookbook">料理帳</h2>
+## 料理帳
 
 [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)は、よくあるレイアウトパターンや、サイトに実装する必要がある可能性がある事柄のレシピを共有するためのものです。プロジェクトの出発点として使うことができるコードを提供することに加えて、これらのレシピは様々な方法のレイアウト仕様書を使用することができることに光を当て、開発者として選択ができるようにします。
 
-<h2 class="Tools" id="Tools_for_CSS_development" name="Tools_for_CSS_development">CSS 開発のためのツール</h2>
+## CSS 開発のためのツール
 
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) は CSS が正しく書かれているかを判定するために利用できます。デバッグのために重宝するツールです。
 - [Firefox Developer Tools](/ja/docs/Tools) は[インスペクター](/ja/docs/Tools/Page_Inspector)と[スタイルエディター](/ja/docs/Tools/Style_Editor)ツールを通じて、ページの CSS をライブでの閲覧や編集を可能にします。
