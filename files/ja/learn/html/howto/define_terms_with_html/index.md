@@ -31,7 +31,13 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 用語の意味が必要なときは、おそらくまっすぐに辞書や用語集に行くでしょう。 辞書や用語集は、キーワードを 1 つ以上の説明と正式に関連付けます。 この場合は次のようになります。
 
-> <dl><dt>Blue (<em>Adjective</em>)</dt><dd>Of a color like the sky in a sunny day.<br><em><q>The clear blue sky</q></em></dd><dd>Of a subtle sadness, melancholy.<br><em><q>I'm feeling blue</q></em></dd></dl>
+> - Blue (_Adjective_)
+>
+>   - : Of a color like the sky in a sunny day.
+>     _"The clear blue sky"_
+>
+>     Of a subtle sadness, melancholy.
+>     _"I'm feeling blue"_
 
 しかし、私たちは常に次のように非公式にキーワードを定義しています。
 

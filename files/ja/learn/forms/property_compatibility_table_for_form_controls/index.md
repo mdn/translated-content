@@ -5351,7 +5351,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       >
         Yes
       </td>
-      <td colspan="1"></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
@@ -5375,7 +5375,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       >
         Partial<sup>[1]</sup>
       </td>
-      <td colspan="1">
+      <td>
         <ol>
           <li>IE9 はこのプロパティに対応していません。</li>
         </ol>
@@ -5403,7 +5403,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       >
         Partial<sup>[1]</sup>
       </td>
-      <td colspan="1">
+      <td>
         <ol>
           <li>IE9 はこのプロパティに対応していません。</li>
         </ol>

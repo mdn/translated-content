@@ -875,7 +875,7 @@ do {
 - [for 文のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/ja/docs/Web/JavaScript/Reference/Statements/while) と [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) リファレンス
 - [break](/ja/docs/Web/JavaScript/Reference/Statements/break) と [continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) リファレンス
-- <p class="entry-title"><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — 高度なループのベストプラクティス</p>
+- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — 高度なループのベストプラクティス
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 

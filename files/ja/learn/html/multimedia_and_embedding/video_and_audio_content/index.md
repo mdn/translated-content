@@ -183,18 +183,19 @@ WebVTT は、複数のテキスト文字列を含むテキストファイルを�
 
 典型的な WebVTT ファイルは次のようになります。
 
-<pre class="eval line-numbers language-html"><code class="language-html">WEBVTT
+```html
+WEBVTT
 
 1
-00:00:22.230 --> 00:00:24.606</code>
-<code>これが最初の字幕です。</code>
-<code class="language-html">
+00:00:22.230 --> 00:00:24.606
+これが最初の字幕です。
+
 2
-00:00:30.739 --> 00:00:34.074</code>
-<code>これは二番目です。
-<code class="language-html">
-  ...</code></code>
-</pre>
+00:00:30.739 --> 00:00:34.074
+これは二番目です。
+
+  ...
+```
 
 これを HTML メディアの再生と一緒に表示するには、以下を行う必要があります。
 

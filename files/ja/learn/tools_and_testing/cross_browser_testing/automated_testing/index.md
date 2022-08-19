@@ -216,16 +216,18 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 
 1.  Install using the following lines:
 
-    <pre class="editor editor-colors">npm install --save-dev gulp-babel @babel/preset-env
+    ```
+    npm install --save-dev gulp-babel @babel/preset-env
     npm install --save-dev @babel/core
-    <span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
-    </pre>
+    npm install jshint gulp-jshint --save-dev
+    ```
 
 2.  Add the following dependencies to `gulpfile.js`:
 
-    <pre class="editor editor-colors">var babel = require('gulp-babel');
-    <span class="js source"><span class="js storage type"><span>var</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
-    </pre>
+    ```
+    var babel = require('gulp-babel');
+    var jshint = require('gulp-jshint');
+    ```
 
 3.  Add the following test to the bottom of `gulpfile.js`:
 

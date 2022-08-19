@@ -99,5 +99,3 @@ HTML は単一言語ではありません。一般的な国際化の問題を処
 ### パフォーマンス
 
 - [高速ロードの HTML ページを作成する方法](/ja/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages)
-
-<span class="hidden"></span><span class="hidden"></span><span class="hidden"></span>

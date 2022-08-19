@@ -369,8 +369,6 @@ button:focus {
 
 ## このモジュール
 
-## <a class="button section-edit only-icon" href="/ja/docs/Learn/HTML/Forms/Other_form_controls$edit#In_this_module" rel="nofollow, noindex"><span>E</span></a>
-
 - [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
 - [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
 - [ネイティブフォームウィジェット](/ja/docs/Learn/Forms/Basic_native_form_controls)

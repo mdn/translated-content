@@ -309,5 +309,3 @@ blockquote i {
 ## 次は何ですか？
 
 多くの点で、装飾的なボックスを作ることは主に背景の中に色と画像を追加することなので、[色と画像の管理](/ja/docs/Learn/CSS/Howto/manage_colors_and_images)を掘り下げる価値があるかもしれません。 また、装飾的なボックス自体がより大きなレイアウトの一部でなければ、それ自体はまったく役に立ちません。 まだチェックしていないのであれば、[レイアウトの基本](/ja/docs/Learn/CSS/CSS_layout/Introduction)を見てください。
-
-<div class="grammarly-disable-indicator"></div>

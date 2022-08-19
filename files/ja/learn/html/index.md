@@ -49,4 +49,5 @@ HTML 学習を学びの旅の起点にすることが理想的です。[HTML 概
 
 ## 関連情報
 
-<div class="document-head" id="wiki-document-head"><dl><dt>MDN 上の <a href="/ja/docs/Web/HTML">HTML (HyperText Markup Language)</a> .</dt><dd>MDN における HTML に関する文書の入口で、詳細な要素と属性のリファレンスがあります。例えば、要素が持っている属性は何か、属性の持つ値は何かなどを知りたかったら、これは最適な場所です。</dd></dl></div>
+- MDN 上の [HTML (HyperText Markup Language)](/ja/docs/Web/HTML) .
+  - : MDN における HTML に関する文書の入口で、詳細な要素と属性のリファレンスがあります。例えば、要素が持っている属性は何か、属性の持つ値は何かなどを知りたかったら、これは最適な場所です。

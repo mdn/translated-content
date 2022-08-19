@@ -55,10 +55,7 @@ JavaScript の基本をよく理解できたら、より高度なトピックに
 ## 関連情報
 
 - [MDN の JavaScript](/ja/docs/Web/JavaScript)
-
-  - :&#x20;
-
-    <div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><div id="tts_button"><span id="result_box" lang="ja"><span>MDN の主要な JavaScript ドキュメントの主要なエントリポイントです。ここでは、JavaScript 言語のあらゆる側面に関する広範なリファレンスドキュメント、および経験豊富な JavaScripter を対象とした高度なチュートリアルがあります。</span></span></div></div>
+  - : MDN の主要な JavaScript ドキュメントの主要なエントリポイントです。ここでは、JavaScript 言語のあらゆる側面に関する広範なリファレンスドキュメント、および経験豊富な JavaScripter を対象とした高度なチュートリアルがあります。
 
 <!---->
 
@@ -67,4 +64,6 @@ JavaScript の基本をよく理解できたら、より高度なトピックに
 
 **[JavaScript Fundamentals on EXLskills](https://exlskills.com/learn-en/courses/javascript-fundamentals-basics_javascript)**
 
-<dl><dd>JS でアプリケーションを構築するために必要なすべてを紹介する EXLskills オープンソースコースで、無料で JavaScript を学んでください。</dd><dt><a href="https://www.youtube.com/user/codingmath">Coding math</a></dt><dd><a href="https://twitter.com/bit101">Keith Peters</a> による、有能なプログラマーを理解するのに必要な数学の優れたビデオチュートリアルのシリーズ。</dd></dl>
+- - : JS でアプリケーションを構築するために必要なすべてを紹介する EXLskills オープンソースコースで、無料で JavaScript を学んでください。
+- [Coding math](https://www.youtube.com/user/codingmath)
+  - : [Keith Peters](https://twitter.com/bit101) による、有能なプログラマーを理解するのに必要な数学の優れたビデオチュートリアルのシリーズ。
