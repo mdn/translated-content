@@ -1,12 +1,15 @@
 ---
-title: ガター
+title: Gutter (ガター)
 slug: Glossary/Gutters
 tags:
   - CSS Grids
-  - CSS グリッドレイアウト
 translation_of: Glossary/Gutters
+l10n:
+  sourceCommit: 21bed6549ed179757c999336ef4637d16f663137
 ---
-**ガター** もしくはアレーはコンテンツトラック間のスペースです。[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)で {{cssxref("grid-column-gap")}}、{{cssxref("grid-row-gap")}} あるいは {{cssxref("grid-gap")}} プロパティを使うとガターが作成されます。
+**ガター** もしくはアレーはコンテンツトラック間のスペースです。[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)で {{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティを使うとガターが作成されます。
+
+## 例
 
 下の例では 3 列 2 行のトラックを持つグリッドを、列トラックの間には 20 ピクセルの、列トラックの間には 20 ピクセルの隙間を空けています。
 
@@ -31,10 +34,10 @@ translation_of: Glossary/Gutters
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1.2fr);
+  grid-template-columns: repeat(3, 1.2fr);
   grid-auto-rows: 45%;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 ```
 
@@ -48,21 +51,21 @@ translation_of: Glossary/Gutters
 </div>
 ```
 
-{{ EmbedLiveSample('example_1', '300', '280') }}
+{{EmbedLiveSample('Example', '300', '280')}}
 
 グリッドのサイズ決定においては、ガターによる隙間は通常のグリッドトラックのように扱われますが、隙間の中には何も配置できません。隙間の分だけその場所のグリッドラインのサイズが増えるように振る舞うため、そのラインの後のグリッドアイテムは隙間の後から始まるように配置されます。
 
-トラックに余白を作るのは grid-gap プロパティだけではありません。マージン、パディング、 [Box Alignment](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout) のスペース分配プロパティなどいずれも視覚上の隙間を作ります。したがって、これらの方法で追加の余白は一切作らないデザインをしていない限り、grid-gap プロパティと「ガターサイズ」が一致するようには見えません。
+トラックに余白を作るのは grid-gap プロパティだけではありません。マージン、パディング、[ボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)のスペース分配プロパティなどいずれも視覚上の隙間を作ります。したがって、これらの方法で追加の余白は一切作らないデザインをしていない限り、grid-gap プロパティと「ガターサイズ」が一致するようには見えません。
 
-## より詳しく
+## 関連情報
 
 ### プロパティリファレンス
 
-- {{cssxref("grid-column-gap")}}
-- {{cssxref("grid-row-gap")}}
-- {{cssxref("grid-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("row-gap")}}
+- {{cssxref("gap")}}
 
 ### より詳しい説明
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
 - [CSS グリッドレイアウト仕様におけるガターの定義](https://drafts.csswg.org/css-grid/#gutters)
