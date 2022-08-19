@@ -26,7 +26,7 @@ CORS の構成に関する問題を理解するために、どのリクエスト
 1.  問題のウェブサイトやウェブアプリを実行し、[開発者ツール](/ja/docs/Tools)を開く。
 2.  失敗するトランザクションを再現してみて、[コンソール](/ja/docs/Tools/Web_Console)で CORS 違反エラーメッセージが表示されるかを調べる。おそらく次のように見える。
 
-![CORS エラーを表示している Firefox コンソール](https://mdn.mozillademos.org/files/16050/cors-error2.png)
+![CORS エラーを表示している Firefox コンソール](cors-error2.png)
 
 エラーメッセージのテキストは以下のようなものになるでしょう。
 
