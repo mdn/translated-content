@@ -42,6 +42,6 @@ document.writeln("<p>パスワードを入力してください:</p>");
 | {{SpecName("HTML WHATWG", "#dom-document-writeln", "document.writeln()")}} | {{Spec2("HTML WHATWG")}} |      |
 | {{SpecName("DOM2 HTML", "html.html#ID-35318390", "document.writeln()")}}     | {{Spec2("DOM2 HTML")}}     |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.writeln")}}

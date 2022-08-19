@@ -41,6 +41,6 @@ if (uriObj.schemeIs('http')) {
 
 どの仕様にも属しません。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.documentURIObject")}}

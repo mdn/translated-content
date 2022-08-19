@@ -63,7 +63,7 @@ document.onpointerdown = (event) => {
 | ---------------------------------------------------------------------------- | ------------------------------------ |
 | {{SpecName('Pointer Events', '#the-pointerdown-event')}} | {{Spec2('Pointer Events')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointerdown_event")}}
 

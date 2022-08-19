@@ -42,6 +42,6 @@ Mozilla Firefox ではこのプロパティの既定値は黒 (16 進数で `#00
 
 他の代替手段として `document.body.text` がありますが、上記の CSS による代替手段が設置されたため [HTML 4.01 で非推奨](http://www.w3.org/TR/html401/struct/global.html#adef-text)となっています。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.fgColor")}}

@@ -50,7 +50,7 @@ function requestFullScreen() {
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
 | {{SpecName("Fullscreen", "#dom-document-fullscreenenabled", "Document.fullscreenEnabled")}} | {{Spec2("Fullscreen")}} | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.fullscreenEnabled")}}
 

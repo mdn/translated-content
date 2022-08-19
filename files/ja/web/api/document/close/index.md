@@ -40,6 +40,6 @@ document.close();
 | {{SpecName("HTML WHATWG", "#dom-document-close", "document.close()")}} | {{Spec2("HTML WHATWG")}} |      |
 | {{SpecName("DOM2 HTML", "html.html#ID-98948567", "document.close()")}} | {{Spec2("DOM2 HTML")}}     |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.close")}}

@@ -55,7 +55,7 @@ function isVideoInFullscreen() {
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
 | {{SpecName("Fullscreen", "#dom-document-fullscreenelement", "Document.fullscreenElement")}} | {{Spec2("Fullscreen")}} | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.DocumentOrShadowRoot.fullscreenElement")}}
 

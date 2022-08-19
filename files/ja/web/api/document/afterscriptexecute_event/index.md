@@ -39,7 +39,7 @@ document.addEventListener('afterscriptexecute', finished, true);
 
 - [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.onafterscriptexecute")}}
 

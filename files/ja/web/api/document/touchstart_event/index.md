@@ -43,7 +43,7 @@ translation_of: Web/API/Document/touchstart_event
 
 これらのイベントのコード例は、指定のページ「[タッチイベント](/ja/docs/Web/API/Touch_events)」で利用できます。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.touchstart_event")}}
 

@@ -40,7 +40,7 @@ HTML5
 
 `Document.linkColor` は [DOM Level 2 HTML で非推奨になりました](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.linkColor")}}
 

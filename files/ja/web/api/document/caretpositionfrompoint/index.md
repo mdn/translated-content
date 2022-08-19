@@ -90,6 +90,6 @@ window.onload = function (){
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
 | {{SpecName('CSSOM View','#dom-document-caretpositionfrompoint','caretPositionFromPoint()')}} | {{Spec2('CSSOM View')}} | Initial definition. |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.DocumentOrShadowRoot.caretPositionFromPoint")}}

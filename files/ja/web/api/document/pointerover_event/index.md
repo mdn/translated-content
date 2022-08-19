@@ -66,7 +66,7 @@ document.onpointerover = (event) => {
 | ---------------------------------------------------------------------------- | ------------------------------------ |
 | {{SpecName('Pointer Events', '#the-pointerover-event')}} | {{Spec2('Pointer Events')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointerover_event")}}
 

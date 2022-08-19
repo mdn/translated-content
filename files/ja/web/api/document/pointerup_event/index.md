@@ -65,7 +65,7 @@ document.onpointerup = (event) => {
 | ------------------------------------------------------------------------ | ------------------------------------ |
 | {{SpecName('Pointer Events', '#the-pointerup-event')}} | {{Spec2('Pointer Events')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointerup_event")}}
 

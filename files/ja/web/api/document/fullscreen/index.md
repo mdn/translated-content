@@ -54,7 +54,7 @@ function isDocumentInFullScreenMode() {
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
 | {{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}} | {{Spec2("Fullscreen")}} | 初回定義 (廃止プロパティとして) |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.fullscreen")}}
 

@@ -43,6 +43,6 @@ if (scripts.length) {
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
 | {{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}} | {{ Spec2('HTML WHATWG') }} |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.scripts")}}
