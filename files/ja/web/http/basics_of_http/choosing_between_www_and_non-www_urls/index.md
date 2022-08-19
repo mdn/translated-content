@@ -56,7 +56,7 @@ HTTP の URL では、先頭の `http://` または `https://` に続く部分�
 
 ## 状況を判断する
 
-<p class="entry-title">これは<a href="http://bikeshed.com/">自転車置き場</a>問題と考えられる、とても主観的な話題です。もっと深く読んでみたいと思ったら、この件に関する<a href="https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/">多くの</a><a href="https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/">記事</a>をご覧ください。</p>
+これは[自転車置き場](http://bikeshed.com/)問題と考えられる、とても主観的な話題です。もっと深く読んでみたいと思ったら、この件に関する[多くの](https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/)[記事](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/)をご覧ください。
 
 ## 関連情報
 

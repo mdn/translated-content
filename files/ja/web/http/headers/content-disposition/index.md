@@ -58,7 +58,13 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 ### ディレクティブ
 
-<dl><dt><code>name</code></dt><dd>このサブパートの内容が参照するフォームの HTML フィールドの名前を含む文字列が続きます。同じフィールド内の複数のファイルを扱う場合 (例えば、 <code>{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}</code> 要素の {{htmlattrxref("multiple", "input")}} 属性)、同じ名前を持つ複数のサブパートが存在することがあります。</dd><dd><code>name</code> の値が <code>'_charset_'</code> という値である場合は、その部分が HTML フィールドではなく、明示的な文字セット情報のない部分に使用される既定の文字セットであることを示します。</dd><dt><code>filename</code></dt><dd>送信された元のファイル名を含む文字列を指定します。このファイル名は常に任意であり、アプリケーションで使用する際は注意が必要です。例えばパス情報を取り除いたり、サーバーのファイルシステムに合わせてファイル名の変換を行ったりすべきです。この引数は、ほとんどの情報を提供します。 <code>Content-Disposition: attachment</code> と組み合わせて使用すると、ユーザーに表示される「名前を付けて保存」ダイアログの既定のファイル名として使用されます。</dd><dt><code>filename*</code></dt><dd><p>引数の <code>filename</code> と <code>filename*</code> の違いは、 <code>filename*</code> が <a href="https://tools.ietf.org/html/rfc5987">RFC 5987</a> で定義されているエンコーディングを使用するという点のみです。単一のヘッダーフィールドの値に <code>filename</code> と <code>filename*</code> の両方が存在する場合は、両方が解釈できる場合、 <code>filename*</code> が <code>filename</code> よりも優先されます。</p></dd></dl>
+- `name`
+  - : このサブパートの内容が参照するフォームの HTML フィールドの名前を含む文字列が続きます。同じフィールド内の複数のファイルを扱う場合 (例えば、 `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` 要素の {{htmlattrxref("multiple", "input")}} 属性)、同じ名前を持つ複数のサブパートが存在することがあります。
+    `name` の値が `'_charset_'` という値である場合は、その部分が HTML フィールドではなく、明示的な文字セット情報のない部分に使用される既定の文字セットであることを示します。
+- `filename`
+  - : 送信された元のファイル名を含む文字列を指定します。このファイル名は常に任意であり、アプリケーションで使用する際は注意が必要です。例えばパス情報を取り除いたり、サーバーのファイルシステムに合わせてファイル名の変換を行ったりすべきです。この引数は、ほとんどの情報を提供します。 `Content-Disposition: attachment` と組み合わせて使用すると、ユーザーに表示される「名前を付けて保存」ダイアログの既定のファイル名として使用されます。
+- `filename*`
+  - : 引数の `filename` と `filename*` の違いは、 `filename*` が [RFC 5987](https://tools.ietf.org/html/rfc5987) で定義されているエンコーディングを使用するという点のみです。単一のヘッダーフィールドの値に `filename` と `filename*` の両方が存在する場合は、両方が解釈できる場合、 `filename*` が `filename` よりも優先されます。
 
 ## 例
 
