@@ -24,7 +24,7 @@ Esta captura de pantall muestra los tres estados principales de nuestro widget: 
 
 En términos de comportamiento, queremos que nuestro widget sea utilizable tanto con un ratón como con un teclado, al igual que cualquier widget nativo. Comencemos por definir cómo el widget llega a cada estado:
 
-- El widget está en su estado normal cuando:
+El widget está en su estado normal cuando:
 
   - La página carga
   - El widget estaba activo y el usuario hace clic en cualquier lugar fuera del widget
@@ -32,27 +32,27 @@ En términos de comportamiento, queremos que nuestro widget sea utilizable tanto
 
 > **Nota:** Mover el foco al rededor de la página generalmente se hace presionando la tecla de tabulación, pero este no es el estándar en todas partes. Por ejemplo, el ciclo a través de enlaces en una página se realiza en Safari de forma predeterminada usando la combinación [combinación Opction+Tab](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
 
-- El widget está en su estado activo cuando:
+El widget está en su estado activo cuando:
 
   - El usuario hace clic en él
   - El usuario presiona la tecla tab y obtiene foco
   - El widget estaba en su estado abierto y el usuario hace clic en el widget.
 
-- El widget está en su estado abierto cuando:
+El widget está en su estado abierto cuando:
 
   - El widget está en cualquier otro estado diferente a abierto y el usuario hace clic en él.
 
 Una vez que sabemos cómo cambiar los estados, es importante definir cómo cambiar el valor del widget:
 
-- El valor cambia cuando:
+El valor cambia cuando:
 
   - El usuario hace clic en una opción cuando el widget está en estado abierto
   - El usuario pulsa las teclas de flecha hacia arriba o hacia abajocuando el widget está en estado activo
 
 Finalmente, definamos cómo se comportarán las opciones del widget:
 
-- Cuando se abre el widget, se resalta la opción seleccionada
-- Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal
+  - Cuando se abre el widget, se resalta la opción seleccionada
+  - Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal
 
 Para los fines de nuestro ejemplo, nos detendremos con eso; sin embargo, si eres un lector cuidadoso, notarás que faltan algunos comportamientos. Por ejemplo, ¿qué crees que sucederá si el usuario pulsa la tecla de tabulación mientras el widget está en estado abierto? La respuesta es ... nada. OK, el comportamiento correcto parece obvio, pero el hecho es que, como no está definido en nuestras especificaciones, es muy fácil pasar por alto este comportamiento. Esto es especialmente cierto en un entorno de equipo cuando las personas que diseñan el comportamiento del widget son diferentes de las que lo implementan.
 
@@ -64,7 +64,7 @@ En nuestro ejemplo, las especificaciones faltantes son obvias, así que las mane
 - [UXDesign.com](http://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](http://uxdesign.smashingmagazine.com/)
 
-> **Nota:**Ademas, en la mayoría de los sistemas hay una forma de abrir el elemento {{HTMLElement("select")}} para ver todas las opciones disponibles (esto es lo mismo que hacer clic en el elemento {{HTMLElement("select")}} con un ratón). Esto se logra con Alt+Flecha abajo en Windows y no fué implementado en nuestro ejemplo —pero sería facil hacerlo, ya que el mecanismo ya se implementó para el evento `clic`.
+> **Nota:** Ademas, en la mayoría de los sistemas hay una forma de abrir el elemento {{HTMLElement("select")}} para ver todas las opciones disponibles (esto es lo mismo que hacer clic en el elemento {{HTMLElement("select")}} con un ratón). Esto se logra con Alt+Flecha abajo en Windows y no fué implementado en nuestro ejemplo —pero sería facil hacerlo, ya que el mecanismo ya se implementó para el evento `clic`.
 
 ### Definiendo la estructura y semántica HTML
 

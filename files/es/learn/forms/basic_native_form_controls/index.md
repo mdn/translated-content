@@ -163,7 +163,7 @@ Las capturas de pantalla siguientes muestran botones de opción sin seleccionar 
 El botón de opción no es realmente un botón, a pesar de su nombre; sigamos adelante y echemos un vistazo a los controles de formulario que son botones propiamente. Hay tres tipos de entrada según el tipo de botones que se utilicen:
 
 - `submit`
-  - Envía los datos del formulario al servidor. Para los elementos {{HTMLElement ("button")}}, omitir el atributo `type` (o introducir un valor de tipo no válido) da como resultado un botón de envío (_submit_).
+  - : Envía los datos del formulario al servidor. Para los elementos {{HTMLElement ("button")}}, omitir el atributo `type` (o introducir un valor de tipo no válido) da como resultado un botón de envío (_submit_).
 - `reset`
   - : Restablece todos los controles de formulario a sus valores por defecto.
 - `button`
