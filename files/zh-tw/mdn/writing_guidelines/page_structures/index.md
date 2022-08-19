@@ -1,12 +1,6 @@
 ---
-title: MDN 內容與風格指南
-slug: conflicting/MDN/Writing_guidelines
-tags:
-  - Documentation
-  - Landing
-  - MDC Project
-  - MDN
-translation_of: MDN/Guidelines
+title: MDN 內容與風格指南文檔歷史
+slug: MDN/Writing_guidelines/Page_structures
 original_slug: MDN/Guidelines
 ---
 {{MDNSidebar}}

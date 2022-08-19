@@ -7760,16 +7760,6 @@
       "Aries0d0f"
     ]
   },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-09-30T15:33:00.096Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "fscholz",
-      "irvinfly",
-      "Sheppy"
-    ]
-  },
   "conflicting/Web/API": {
     "modified": "2019-03-23T23:28:55.141Z",
     "contributors": [
