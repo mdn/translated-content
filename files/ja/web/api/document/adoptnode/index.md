@@ -33,7 +33,7 @@ const importedNode = document.adoptNode(externalNode);
 
 このメソッドを呼び出した後、 `importedNode` および `externalNode` は同じオブジェクトになります。
 
-> **Note:** **注:** `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
+> **Note:** `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
 
 ## 例
 
