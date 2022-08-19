@@ -10,41 +10,40 @@ tags:
   - Reference
 original_slug: Web/API/NavigatorLanguage/language
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>Navigator.language</code></strong> 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器UI的文字</p>
+**`Navigator.language`** 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器UI的文字
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="brush: js">const <em>lang</em> = navigator.language
-</pre>
+```js
+const lang = navigator.language
+```
 
-<h3 id="Value"> 值</h3>
+### 值
 
-<p>一個 {{domxref("DOMString")}}. <em><code>lang</code></em> 儲存一個代表此語言的字串。定義在<a class="external"
-    href="https://tools.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a>。 範例: 合法的語言代碼  "en", "en-US", "fr", "fr-FR", "es-ES", etc.</p>
+一個 {{domxref("DOMString")}}. _`lang`_ 儲存一個代表此語言的字串。定義在[BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt)。範例: 合法的語言代碼 "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 
-<p>在 iOS 小於 10.2 的 Safari 國碼是回傳小寫的喲！
-  "en-us", "fr-fr" etc.</p>
+在 iOS 小於 10.2 的 Safari 國碼是回傳小寫的喲！
+"en-us", "fr-fr" etc.
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<pre class="brush: js">if (/^en\b/.test(navigator.language)) {
+```js
+if (/^en\b/.test(navigator.language)) {
   doLangSelect(window.navigator.language);
 }
-</pre>
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="See_also">參見</h2>
+## 參見
 
-<ul>
-  <li>{{domxref("Navigator.languages")}}</li>
-  <li>{{domxref("navigator")}}</li>
-</ul>
+- {{domxref("Navigator.languages")}}
+- {{domxref("navigator")}}
