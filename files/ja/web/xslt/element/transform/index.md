@@ -1,5 +1,5 @@
 ---
-title: '<xsl:transform>'
+title: <xsl:transform>
 slug: Web/XSLT/Element/transform
 tags:
   - XSLT
@@ -8,10 +8,10 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/transform
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:transform&gt;</code> 要素は <code><a href="/ja/docs/XSLT/Elements/stylesheet">&lt;xsl:stylesheet&gt;</a></code> 要素とまったく同じです。</p>
+The `<xsl:transform>` 要素は [`<xsl:stylesheet>`](/ja/docs/XSLT/Elements/stylesheet) 要素とまったく同じです。
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

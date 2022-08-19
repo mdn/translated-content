@@ -1,5 +1,5 @@
 ---
-title: '<xsl:if>'
+title: <xsl:if>
 slug: Web/XSLT/Element/if
 tags:
   - XSLT
@@ -8,35 +8,35 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/if
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:if&gt;</code> 要素にはテスト属性とテンプレートが含まれています。テストが真と評価された場合、テンプレートは処理されます。これは、他の言語のif文に似ています。ただし、if-then-elseステートメントの機能を実現するには、<code>&lt;xsl:when&gt;</code> と <code>&lt;xsl:otherwise&gt;</code> の子要素を1つずつ持つ <code>&lt;xsl:choose&gt;</code> 要素を使用します。</p>
+`<xsl:if>` 要素にはテスト属性とテンプレートが含まれています。テストが真と評価された場合、テンプレートは処理されます。これは、他の言語の if 文に似ています。ただし、if-then-else ステートメントの機能を実現するには、`<xsl:when>` と `<xsl:otherwise>` の子要素を 1 つずつ持つ `<xsl:choose>` 要素を使用します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:if test=EXPRESSION&gt;
+```
+<xsl:if test=EXPRESSION>
 	TEMPLATE
-&lt;/xsl:if&gt;</pre>
+</xsl:if>
+```
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<dl>
- <dt><code>test</code></dt>
- <dd>必要に応じて <code>boolean( )</code> に対して定義されたルールを使用して評価可能な XPath 式を含め、ブール値にします。値が true の場合、テンプレートは処理されます。そうでない場合は何もしません。</dd>
-</dl>
+- `test`
+  - : 必要に応じて `boolean( )` に対して定義されたルールを使用して評価可能な XPath 式を含め、ブール値にします。値が true の場合、テンプレートは処理されます。そうでない場合は何もしません。
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>命令は、テンプレート内に表示されます。</p>
+命令は、テンプレート内に表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSL section 9.1.</p>
+XSL section 9.1.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

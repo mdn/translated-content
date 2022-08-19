@@ -1,5 +1,5 @@
 ---
-title: '<xsl:output>'
+title: <xsl:output>
 slug: Web/XSLT/Element/output
 tags:
   - XSLT
@@ -8,13 +8,14 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/output
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:output&gt;</code> 要素は出力文書の特性を制御します。Netscape で正しく機能するには、method 属性を持つこの要素を使用する必要があります。 7.0より <code>method="text"</code> は期待通りに機能します。</p>
+`<xsl:output>` 要素は出力文書の特性を制御します。Netscape で正しく機能するには、method 属性を持つこの要素を使用する必要があります。 7.0 より `method="text"` は期待通りに機能します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:output
+```
+<xsl:output
 	method="xml" | "html" | "text"
 	version=STRING
 	encoding=STRING
@@ -24,72 +25,71 @@ translation_of: Web/XSLT/Element/output
 	doctype-system=STRING
 	cdata-section-elements=LIST-OF-NAMES
 	indent="yes" | "no"
-	media-type=STRING  /&gt;</pre>
+	media-type=STRING  />
+```
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<dl>
- <dt><code>method</code></dt>
- <dd>出力形式を指定します。</dd>
-</dl>
+- `method`
+  - : 出力形式を指定します。
 
-<dl>
- <dt><code>version</code></dt>
- <dd>出力文書内の XML 宣言または HTML 宣言の version 属性の値を指定します。この属性は <code>method="html"</code> または <code>method="xml"</code> の場合にのみ使用されます。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>encoding</code></dt>
- <dd>出力文書の <code>encoding</code> 属性の値を指定します。</dd>
-</dl>
+- `version`
+  - : 出力文書内の XML 宣言または HTML 宣言の version 属性の値を指定します。この属性は `method="html"` または `method="xml"` の場合にのみ使用されます。
 
-<dl>
- <dt><code>omit-xml-declaration</code></dt>
- <dd>XML宣言を出力に含めるかどうかを示します。許容可能な値は "<code>yes</code>" または "<code>no</code>" です。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>standalone</code> (サポートされていません)</dt>
- <dd>存在する場合、出力文書でスタンドアロン宣言が発生しその値が返されることを示します。許容可能な値は "yes" または "no" です。</dd>
-</dl>
+- `encoding`
+  - : 出力文書の `encoding` 属性の値を指定します。
 
-<dl>
- <dt><code>doctype-public</code></dt>
- <dd>出力文書の <code>DOCTYPE</code> 宣言の <code>PUBLIC</code> 属性の値を指定します。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>doctype-system</code></dt>
- <dd>出力文書の <code>DOCTYPE</code> 宣言の <code>SYSTEM</code> 属性の値を指定します。</dd>
-</dl>
+- `omit-xml-declaration`
+  - : XML 宣言を出力に含めるかどうかを示します。許容可能な値は "`yes`" または "`no`" です。
 
-<dl>
- <dt><code>cdata-section-elements</code></dt>
- <dd>テキストの内容を <code>CDATA</code> セクションとして記述する要素をリストします。要素は空白で区切る必要があります。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>indent</code> (サポートされていません)</dt>
- <dd>階層構造を示すために出力を字下げするかどうかを指定します。</dd>
-</dl>
+- `standalone` (サポートされていません)
+  - : 存在する場合、出力文書でスタンドアロン宣言が発生しその値が返されることを示します。許容可能な値は "yes" または "no" です。
 
-<dl>
- <dt><code>media-type</code> (サポートされていません)</dt>
- <dd>出力ドキュメントの MIME タイプを指定します。</dd>
-</dl>
+<!---->
 
-<h3 id="Type" name="Type">タイプ</h3>
+- `doctype-public`
+  - : 出力文書の `DOCTYPE` 宣言の `PUBLIC` 属性の値を指定します。
 
-<p>最上位は子 <code>&lt;xsl:stylesheet&gt;</code> または <code>&lt;xsl:transform&gt;</code> である必要があります。</p>
+<!---->
 
-<h3 id="Defined" name="Defined">定義</h3>
+- `doctype-system`
+  - : 出力文書の `DOCTYPE` 宣言の `SYSTEM` 属性の値を指定します。
 
-<p>XSLT, section 16.</p>
+<!---->
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+- `cdata-section-elements`
+  - : テキストの内容を `CDATA` セクションとして記述する要素をリストします。要素は空白で区切る必要があります。
 
-<p>部分的なサポート。上記のコメントを参照してください。</p>
+<!---->
+
+- `indent` (サポートされていません)
+  - : 階層構造を示すために出力を字下げするかどうかを指定します。
+
+<!---->
+
+- `media-type` (サポートされていません)
+  - : 出力ドキュメントの MIME タイプを指定します。
+
+### タイプ
+
+最上位は子 `<xsl:stylesheet>` または `<xsl:transform>` である必要があります。
+
+### 定義
+
+XSLT, section 16.
+
+### Gecko のサポート
+
+部分的なサポート。上記のコメントを参照してください。

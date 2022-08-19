@@ -1,5 +1,5 @@
 ---
-title: '<xsl:fallback>'
+title: <xsl:fallback>
 slug: Web/XSLT/Element/fallback
 tags:
   - XSLT
@@ -8,32 +8,34 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/fallback
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:fallback&gt;</code> 要素は指定された拡張子 (または、最終的には新しいバージョン) 要素がサポートされていない場合に使用するテンプレートを指定します。</p>
+`<xsl:fallback>` 要素は指定された拡張子 (または、最終的には新しいバージョン) 要素がサポートされていない場合に使用するテンプレートを指定します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:fallback&gt;
+```
+<xsl:fallback>
 	TEMPLATE
-&lt;/xsl:fallback&gt;</pre>
+</xsl:fallback>
+```
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>命令は、テンプレート内に表示されます。</p>
+命令は、テンプレート内に表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 15</p>
+XSLT, section 15
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>現時点ではサポートされていません。</p>
+現時点ではサポートされていません。

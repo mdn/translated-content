@@ -1,5 +1,5 @@
 ---
-title: '<xsl:apply-imports>'
+title: <xsl:apply-imports>
 slug: Web/XSLT/Element/apply-imports
 tags:
   - XSLT
@@ -8,30 +8,32 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/apply-imports
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:apply-imports&gt;</code> 要素は非常に秘密で、複雑なスタイルシートで主に使用されます。インポートの優先順位では、メインスタイルシートのテンプレートルールは、インポートされたスタイルシートのテンプレートルールより優先される必要があります。ただし、メインスタイルシートの同等のルールではなく、(低い優先順位の) インポートされたスタイルシートからテンプレートルールを使用するようにプロセッサを強制することが可能な場合があります。</p>
+`<xsl:apply-imports>` 要素は非常に秘密で、複雑なスタイルシートで主に使用されます。インポートの優先順位では、メインスタイルシートのテンプレートルールは、インポートされたスタイルシートのテンプレートルールより優先される必要があります。ただし、メインスタイルシートの同等のルールではなく、(低い優先順位の) インポートされたスタイルシートからテンプレートルールを使用するようにプロセッサを強制することが可能な場合があります。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:apply-imports/&gt;</pre>
+```
+<xsl:apply-imports/>
+```
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>命令は、テンプレート内に表示されます。</p>
+命令は、テンプレート内に表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 5.6.</p>
+XSLT, section 5.6.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

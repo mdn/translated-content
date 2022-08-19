@@ -5,97 +5,100 @@ tags:
   - XSLT
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 ---
-<h2 id="Basic_Example" name="Basic_Example">基本的な例</h2>
+## 基本的な例
 
-<p>基本的な例では、XMLファイルを読み込んでXSL変換を適用します。これらは、<a href="/ja/docs/Web/API/XSLTProcessor">Netscape GeckoのXSLT</a>の<a href="/ja/docs/XSLT_in_Gecko/Generating_HTML">HTML生成</a>例で使用されているのと同じファイルです。XMLファイルはアーティクルを記述し、XSLファイルは情報を表示用にフォーマットします。</p>
+基本的な例では、XML ファイルを読み込んで XSL 変換を適用します。これらは、[Netscape Gecko の XSLT](/ja/docs/Web/API/XSLTProcessor)の[HTML 生成](/ja/docs/XSLT_in_Gecko/Generating_HTML)例で使用されているのと同じファイルです。XML ファイルはアーティクルを記述し、XSL ファイルは情報を表示用にフォーマットします。
 
-<p><small><strong> サンプル 4 : XML ファイル</strong></small></p>
+**サンプル 4 : XML ファイル**
 
+```xml
+<?xml version="1.0"?>
+<myNS:Article xmlns:myNS="http://devedge.netscape.com/2002/de">
+  <myNS:Title>My Article</myNS:Title>
+  <myNS:Authors>
+    <myNS:Author company="Foopy Corp.">Mr. Foo</myNS:Author>
+    <myNS:Author>Mr. Bar</myNS:Author>
+  </myNS:Authors>
+  <myNS:Body>
+    The <b>rain</b> in <u>Spain</u> stays mainly in the plains.
+  </myNS:Body>
+</myNS:Article>
+```
 
-<pre class="brush:xml;auto-links:false">&lt;?xml version="1.0"?&gt;
-&lt;myNS:Article xmlns:myNS="http://devedge.netscape.com/2002/de"&gt;
-  &lt;myNS:Title&gt;My Article&lt;/myNS:Title&gt;
-  &lt;myNS:Authors&gt;
-    &lt;myNS:Author company="Foopy Corp."&gt;Mr. Foo&lt;/myNS:Author&gt;
-    &lt;myNS:Author&gt;Mr. Bar&lt;/myNS:Author&gt;
-  &lt;/myNS:Authors&gt;
-  &lt;myNS:Body&gt;
-    The &lt;b&gt;rain&lt;/b&gt; in &lt;u&gt;Spain&lt;/u&gt; stays mainly in the plains.
-  &lt;/myNS:Body&gt;
-&lt;/myNS:Article&gt;</pre>
+**サンプル 5 : XSLT スタイルシート**
 
-<p><small><strong>サンプル 5 : XSLT スタイルシート</strong></small></p>
-
-
-<pre class="brush:xml;auto-links:false">&lt;?xml version="1.0"?&gt;
-&lt;xsl:stylesheet version="1.0"
+```xml
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0"
                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                   xmlns:myNS="http://devedge.netscape.com/2002/de"&gt;
+                   xmlns:myNS="http://devedge.netscape.com/2002/de">
 
-  &lt;xsl:output method="html" /&gt;
+  <xsl:output method="html" />
 
-  &lt;xsl:template match="/"&gt;
-    &lt;html&gt;
+  <xsl:template match="/">
+    <html>
 
-      &lt;head&gt;
+      <head>
 
-        &lt;title&gt;
-          &lt;xsl:value-of select="/myNS:Article/myNS:Title"/&gt;
-        &lt;/title&gt;
+        <title>
+          <xsl:value-of select="/myNS:Article/myNS:Title"/>
+        </title>
 
-        &lt;style type="text/css"&gt;
+        <style type="text/css">
           .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
-        &lt;/style&gt;
+        </style>
 
-      &lt;/head&gt;
+      </head>
 
-      &lt;body&gt;
-        &lt;p class="myBox"&gt;
-          &lt;span class="title"&gt;
-            &lt;xsl:value-of select="/myNS:Article/myNS:Title"/&gt;
-          &lt;/span&gt; &lt;br /&gt;
+      <body>
+        <p class="myBox">
+          <span class="title">
+            <xsl:value-of select="/myNS:Article/myNS:Title"/>
+          </span> <br />
 
-          Authors:   &lt;br /&gt;
-            &lt;xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/&gt;
-          &lt;/p&gt;
+          Authors:   <br />
+            <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
+          </p>
 
-        &lt;p class="myBox"&gt;
-          &lt;xsl:apply-templates select="//myNS:Body"/&gt;
-        &lt;/p&gt;
+        <p class="myBox">
+          <xsl:apply-templates select="//myNS:Body"/>
+        </p>
 
-      &lt;/body&gt;
+      </body>
 
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
+    </html>
+  </xsl:template>
 
-  &lt;xsl:template match="myNS:Author"&gt;
-     --   &lt;xsl:value-of select="." /&gt;
+  <xsl:template match="myNS:Author">
+     --   <xsl:value-of select="." />
 
-    &lt;xsl:if test="@company"&gt;
-     ::   &lt;b&gt;  &lt;xsl:value-of select="@company" /&gt;  &lt;/b&gt;
-    &lt;/xsl:if&gt;
+    <xsl:if test="@company">
+     ::   <b>  <xsl:value-of select="@company" />  </b>
+    </xsl:if>
 
-    &lt;br /&gt;
-  &lt;/xsl:template&gt;
+    <br />
+  </xsl:template>
 
-  &lt;xsl:template match="myNS:Body"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:apply-templates select="@*|node()"/&gt;
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
+  <xsl:template match="myNS:Body">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
 
-  &lt;xsl:template match="@*|node()"&gt;
-      &lt;xsl:copy&gt;
-        &lt;xsl:apply-templates select="@*|node()"/&gt;
-      &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</pre>
+  <xsl:template match="@*|node()">
+      <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+      </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
-<p>この例では、.xsl (<code>xslStylesheet</code>) と .xml (<code>xmlDoc</code>) の両方のファイルを同期{{domxref("XMLHTTPRequest")}}のメモリに読み込みます。 次に、.xslファイルがインポートされ(<code>xsltProcessor.importStylesheet(xslStylesheet)</code>)、変換が実行されます(<code>xsltProcessor.transformToFragment(xmlDoc, document)</code>)。 これにより、新しいページのロードを開始することなく、ページがロードされた後のデータのフェッチが可能になります。</p>
+この例では、.xsl (`xslStylesheet`) と .xml (`xmlDoc`) の両方のファイルを同期{{domxref("XMLHTTPRequest")}}のメモリに読み込みます。 次に、.xsl ファイルがインポートされ(`xsltProcessor.importStylesheet(xslStylesheet)`)、変換が実行されます(`xsltProcessor.transformToFragment(xmlDoc, document)`)。 これにより、新しいページのロードを開始することなく、ページがロードされた後のデータのフェッチが可能になります。
 
-<p><small><strong>サンプル 6 : 例</strong></small></p>
+**サンプル 6 : 例**
 
-<pre class="brush:js">var xslStylesheet;
+```js
+var xslStylesheet;
 var xsltProcessor = new XSLTProcessor();
 var myDOM;
 
@@ -125,4 +128,5 @@ function Init(){
 
   myDOM = fragment;
   document.getElementById("example").appendChild(fragment);
-}</pre>
+}
+```
