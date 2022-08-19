@@ -7760,174 +7760,12 @@
       "Aries0d0f"
     ]
   },
-  "conflicting/Learn/HTML/Introduction_to_HTML": {
-    "modified": "2019-03-23T22:48:17.115Z",
-    "contributors": [
-      "iigmir",
-      "CodinCat",
-      "irvinfly",
-      "slhuang"
-    ]
-  },
-  "conflicting/Learn/JavaScript/Objects": {
-    "modified": "2020-08-05T00:50:19.955Z",
-    "contributors": [
-      "nientsu",
-      "cwlin0416",
-      "fscholz",
-      "jackblackevo",
-      "nightsnow0918",
-      "irvinfly",
-      "sailplaneTW"
-    ]
-  },
-  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
-    "modified": "2020-07-16T22:32:09.821Z",
-    "contributors": [
-      "DahisC",
-      "tangerine1202",
-      "iigmir",
-      "cjchng",
-      "roycrxtw",
-      "MashKao"
-    ]
-  },
-  "conflicting/Learn/Server-side/Django": {
-    "modified": "2019-03-23T23:33:19.493Z",
-    "contributors": [
-      "garylai1990"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-09-30T15:33:00.096Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "fscholz",
-      "irvinfly",
-      "Sheppy"
-    ]
-  },
-  "conflicting/Web/API": {
-    "modified": "2019-03-23T23:28:55.141Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "MashKao",
-      "sailplaneTW"
-    ]
-  },
-  "conflicting/Web/API/Canvas_API/Tutorial": {
-    "modified": "2019-03-23T23:13:40.314Z",
-    "contributors": [
-      "fscholz",
-      "sailplaneTW"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-03-23T23:29:56.158Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "conflicting/Web/API/Element": {
-    "modified": "2019-03-23T22:30:38.352Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "conflicting/Web/API/Element/click_event": {
-    "modified": "2019-08-27T10:57:49.300Z",
-    "contributors": [
-      "StanleyDing"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition": {
-    "modified": "2019-03-23T22:36:14.585Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6": {
-    "modified": "2019-03-23T22:36:20.985Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266": {
-    "modified": "2019-03-23T22:36:10.505Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54": {
-    "modified": "2019-03-23T22:36:18.389Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
-    ]
-  },
-  "conflicting/Web/API/HTML_Drag_and_Drop_API": {
-    "modified": "2019-01-16T13:26:51.358Z",
-    "contributors": [
-      "sailplaneTW"
-    ]
-  },
-  "conflicting/Web/API/WebSockets_API": {
-    "modified": "2019-03-24T00:11:12.133Z",
-    "contributors": [
-      "teoli",
-      "Kennyluck"
-    ]
-  },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
     "contributors": [
       "PatrickTaiwan",
       "Shiyou",
       "alk03073135"
-    ]
-  },
-  "conflicting/Web/CSS/@viewport": {
-    "modified": "2019-10-22T02:02:49.952Z",
-    "contributors": [
-      "Zhang-Junzhi",
-      "yvonne6344"
-    ]
-  },
-  "conflicting/Web/Guide": {
-    "modified": "2019-01-16T13:10:01.650Z",
-    "contributors": [
-      "teoli",
-      "Sonrisa"
-    ]
-  },
-  "conflicting/Web/Guide_6b4b72e1fc91461bde34734ce07b1c08": {
-    "modified": "2019-03-24T00:01:02.674Z",
-    "contributors": [
-      "happysadman"
-    ]
-  },
-  "conflicting/Web/HTTP/CORS": {
-    "modified": "2019-03-23T22:06:20.131Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "conflicting/Web/HTTP/Status/404": {
-    "modified": "2019-03-23T22:23:29.116Z",
-    "contributors": [
-      "iigmir",
-      "marktwtn"
-    ]
-  },
-  "conflicting/Web/HTTP/Status/502": {
-    "modified": "2019-03-18T21:44:50.733Z",
-    "contributors": [
-      "Rocker"
     ]
   },
   "conflicting/Web/JavaScript/Guide": {
@@ -8287,21 +8125,6 @@
     "modified": "2020-10-15T22:19:41.845Z",
     "contributors": [
       "chunhh1012"
-    ]
-  },
-  "conflicting/Web/Media/Formats": {
-    "modified": "2019-03-23T23:14:51.174Z",
-    "contributors": [
-      "young3578671",
-      "Keeseonglee"
-    ]
-  },
-  "conflicting/Web/OpenSearch": {
-    "modified": "2019-01-16T15:28:04.055Z",
-    "contributors": [
-      "jackblackevo",
-      "Mgjbot",
-      "BobChao"
     ]
   }
 }
