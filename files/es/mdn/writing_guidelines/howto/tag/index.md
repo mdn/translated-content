@@ -131,7 +131,7 @@ La comunidad de escritores utiliza estas etiquetas para designar los artículos 
   - El artículo tiene uno o más ejemplos que necesitan ser actualizados para usar el sistema [live sample system](/es/docs/Project:MDN/Contributing/How_to_help/Code_samples).
 - `NecesitaActualizacion`
   - : El contenido no está actualizado y necesita una actualización.
-- `excluir"`
+- `excluir`
   - : El contenido no necesita ser localizado y no aparecerá en las páginas de estados de localización.
 - `prioridad`
   - : El contenido es importante y debe ser marcado como prioritario para traductores de MDN.
@@ -191,33 +191,33 @@ Los filtros de búsqueda no funcionarán adecuadamente a menos que etiquetamos c
 
 | Grupo          | Nombre filtro          | Nombre de etiqueta                                                                                                    |
 | -------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Tema           | Open Web Apps          | Apps                                                                                                  |
-|                | HTML                   | HTML                                                                                                  |
-|                | CSS                    | CSS                                                                                                  |
-|                | JavaScript             | JavaScript                                                                                          |
-|                | APIs and DOM           | API                                                                                                  |
-|                | Canvas                 | Canvas                                                                                              |
-|                | SVG                    | SVG                                                                                                  |
-|                | MathML                 | MathML                                                                                              |
-|                | WebGL                  | WebGL                                                                                                  |
-|                | XUL                    | XUL                                                                                                  |
-|                | Marketplace            | Marketplace                                                                                          |
-|                | Firefox                | Firefox                                                                                              |
-|                | Firefox para Android   | Firefox Mobile                                                                                      |
-|                | Firefox para Desktop   | Firefox Desktop                                                                                  |
-|                | Firefox OS             | Firefox OS                                                                                          |
-|                | Movil                  | Movil                                                                                                  |
-|                | Web Development        | Web Development                                                                                  |
-|                | Add-ons & Extensions   | Add-ons \|\| Extensions \|\| Plugins \|\| Themes |
-|                | Juegos                 | Juegos                                                                                              |
-| Nivel          | Soy experto            | Experto                                                                                              |
-|                | Intermedio             | Intermedio                                                                                          |
-|                | Soy aprendiz           | Aprendiz                                                                                              |
+| Tema           | Open Web Apps          | `Apps`                                                   |
+|                | HTML                   | `HTML`                                                   |
+|                | CSS                    | `CSS`                                                    |
+|                | JavaScript             | `JavaScript`                                             |
+|                | APIs and DOM           | `API`                                                    |
+|                | Canvas                 | `Canvas`                                                 |
+|                | SVG                    | `SVG`                                                    |
+|                | MathML                 | `MathML`                                                 |
+|                | WebGL                  | `WebGL`                                                  |
+|                | XUL                    | `XUL`                                                    |
+|                | Marketplace            | `Marketplace`                                            |
+|                | Firefox                | `Firefox`                                                |
+|                | Firefox para Android   | `Firefox Mobile`                                         |
+|                | Firefox para Desktop   | `Firefox Desktop`                                        |
+|                | Firefox OS             | `Firefox OS`                                             |
+|                | Movil                  | `Movil`                                                  |
+|                | Web Development        | `Web Development`                                        |
+|                | Add-ons & Extensions   | `Add-ons` \|\| `Extensions` \|\| `Plugins` \|\| `Themes` |
+|                | Juegos                 | `Juegos`                                                 |
+| Nivel          | Soy experto            | `Experto`                                                |
+|                | Intermedio             | `Intermedio`                                             |
+|                | Soy aprendiz           | `Aprendiz`                                               |
 | Tipo Documento | Docs                   | Restringirá la búsqueda al contenido de los docs, dejando fuera otros contenidos MDN.                                 |
 |                | Demostración           | Incluirá el contenido de demostración en los resultados de búsqueda.                                                  |
-|                | Herramientas           | Herramientas                                                                                      |
-|                | Ejemplo Código         | Ejemplo                                                                                              |
-|                | Como & Tutorial        | Guia                                                                                                  |
+|                | Herramientas           | `Herramientas`                                                                                      |
+|                | Ejemplo Código         | `Ejemplo`                                                                                              |
+|                | Como & Tutorial        | `Guia`                                                                                                  |
 |                | Perfiles Desarrollador | Incluirá perfiles de desarrolladores de MDN en los resultados de búsqueda.                                            |
 |                | Recurso externo        | Es algo que el equipo de desarrollo todavía está descifrando...                                                       |
 
