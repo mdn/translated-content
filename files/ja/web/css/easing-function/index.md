@@ -104,7 +104,20 @@ steps(number_of_steps, direction)
 
 ここで、
 
-<dl><dt><var>number_of_steps</var></dt><dd>厳密に正の {{cssxref("&lt;integer&gt;")}} で、ステップ関数を構成する等間隔の段数を示すものです。</dd><dt><var>direction</var></dt><dd>関数が <a href="http://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity">左連続か右連続</a> かを表すキーワードです。</dd><dd></dd><dd><ul><li><code>jump-start</code> は左連続関数を表し、したがってアニメーションの開始時に最初のステップが発生します。</li><li><code>jump-end</code> は右連続関数を表し、したがってアニメーションの完了時に最後のステップが発生します。</li><li><code>jump-both</code> は右および左の連続関数を表し、0%と100%の位置の両方で停止し、アニメーションの繰り返しの間に効果的にステップを入れます。</li><li><code>jump-none</code> どちらの端にもジャンプしません。代わりに、それぞれ区間の 1/n ごとに0%の位置と100%の位置の両方を保持します。</li><li><code>start</code> は <code>jump-start</code> と同等です。</li><li><code>end</code> は <code>jump-end</code> と同等です。</li></ul></dd><dd><code>end</code> が既定値です。</dd></dl>
+- _number_of_steps_
+  - : 厳密に正の {{cssxref("&lt;integer&gt;")}} で、ステップ関数を構成する等間隔の段数を示すものです。
+- _direction_
+
+  - : 関数が [左連続か右連続](http://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity) かを表すキーワードです。
+
+    - `jump-start` は左連続関数を表し、したがってアニメーションの開始時に最初のステップが発生します。
+    - `jump-end` は右連続関数を表し、したがってアニメーションの完了時に最後のステップが発生します。
+    - `jump-both` は右および左の連続関数を表し、0%と 100%の位置の両方で停止し、アニメーションの繰り返しの間に効果的にステップを入れます。
+    - `jump-none` どちらの端にもジャンプしません。代わりに、それぞれ区間の 1/n ごとに 0%の位置と 100%の位置の両方を保持します。
+    - `start` は `jump-start` と同等です。
+    - `end` は `jump-end` と同等です。
+
+    `end` が既定値です。
 
 ##### steps( n, \<direction> )
 
