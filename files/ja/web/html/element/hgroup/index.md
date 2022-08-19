@@ -13,7 +13,9 @@ translation_of: Web/HTML/Element/hgroup
 ---
 {{HTMLRef}}
 
-<div class="notecard warning"><p><strong>警告:</strong><code>&#x3C;hgroup></code> は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。</p><p>詳細については、以下の<a href="#usage_notes">使用上の注意</a>を参照してください。</p></div>
+> **Warning:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。
+>
+> 詳細については、以下の[使用上の注意](#usage_notes)を参照してください。
 
 **HTML の `<hgroup>` 要素**は、文書のセクションの、複数レベルの見出しを表します。これは [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素のセットをグループ化します。
 

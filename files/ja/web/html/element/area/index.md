@@ -82,7 +82,61 @@ translation_of: Web/HTML/Element/area
 - {{htmlattrdef("alt")}}
   - : 画像を表示しないブラウザーが代わりに表示するテキスト文字列です。テキストの内容は、代替テキストを表示しない場合に画像が提供する選択肢と同じものをユーザーに与えるような表現にすべきです。この属性は {{htmlattrxref("href", "area")}} 属性が使用されている場合のみ必要です。
 
-<dl><dt>{{htmlattrdef("coords")}}</dt><dd><code>coords</code> 属性は <code>&#x3C;area></code> の寸法、形状、配置における <code><a href="#attr-shape">shape</a></code> 属性の座標を詳述します。</dd><dd><ul><li><code>rect</code>: 値は <code><var>x1,y1,x2,y2</var></code> です。値は長方形の左上と右下の座標を指定します。<br>例: <code>&#x3C;area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla"></code> この例では長方形の左上の隅が 0,0、右下の隅が 253,27 になります。</li><li><code>circle</code>: 値は <code><var>x,y,radius</var></code> です。値は円の中央の座標と半径を指定します。<br>例: <code>&#x3C;area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN"></code></li><li><code>poly</code>: 値は <code><var>x1,y1,x2,y2,..,xn,yn</var></code> です。値は多角形の角の座標を指定します。先頭と末尾の座標が同じではない場合、ブラウザーは最後に座標を追加して多角形を閉じます。</li><li><code>default</code>: 領域全体を定義します。</li></ul>値は CSS ピクセルの数です。</dd><dt>{{htmlattrdef("download")}}</dt><dd>この属性がある場合は、作者はハイパーリンクをリソースのダウンロードに使用すると考えていることを示します。{{htmlattrxref("download", "a")}} 属性の詳しい説明は {{HTMLElement("a")}} をご覧ください。</dd><dt>{{htmlattrdef("href")}}</dt><dd>この領域のハイパーリンクの宛先です。この値は有効な URL です。この属性は省略可能です。その場合、その <code>&#x3C;area></code> 要素はハイパーリンクを提供しません。</dd><dt>{{htmlattrdef("hreflang")}}</dt><dd>リンク先のリソースの言語を示します。許容される値は <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt" title="Tags for Identifying Languages">BCP47</a> で定めています。この属性は、 {{htmlattrxref("href", "area")}} 属性を与える場合にのみ使用してください。</dd><dt>{{htmlattrdef("ping")}}</dt><dd>ハイパーリンクがフォローされたときに、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を <code>PING</code> として (バックグラウンドで) 送信する URL を空白で区切ったリストで記述します。ふつうはトラッキング用に使用します。</dd><dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt><dd>リソースを読み込む際にどのリファラーを使用するかを示す文字列です:<ul><li>"<code>no-referrer</code>" は、<code>Referer:</code> ヘッダーを送信しないことを表します。</li><li>"<code>no-referrer-when-downgrade</code>" は、TLS (HTTPS) を使用せずに生成元へナビゲートする場合は <code>Referer:</code> ヘッダーを送信しないことを表します。これは他にポリシーが定められていない場合の、ユーザーエージェントの既定の動作です。</li><li>"<code>origin</code>" は、ページの生成元 (大まかにいえばスキーム、ホスト、ポート) をリファラーとすることを表します。</li><li>"<code>origin-when-cross-origin</code>" は、異なる生成元へのナビゲートではリファラーをスキーム、ホスト、ポートに制限します。同一生成元へのナビゲートでは、リファラーのパスも含めます。</li><li>"<code>unsafe-url</code>" は、リファラーに生成元とパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これは生成元やパスの情報が TLS で保護されたリソースからセキュアでない生成元へ漏えいしますので、安全ではありません。</li></ul></dd><dt>{{htmlattrdef("rel")}}</dt><dd>{{htmlattrxref("href", "area")}} 属性を含むアンカーで、この属性は、対象オブジェクトとリンクオブジェクトの関係を指定します。属性値は、空白で区切られた<a href="/ja/docs/Web/HTML/Link_types">リンク種別の値</a>のリストです。値とその意味は、文書作成者にとって意味を持つかもしれない何らかの権威によって登録されています。他に何も与えられていない場合の既定の関係は void です。この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。</dd><dt>{{htmlattrdef("shape")}}</dt><dd>関連づけたホットスポットの形状です。 HTML の仕様書では、長方形の領域を定義する値 <code>rect</code>、円形の領域を定義する値 <code>circle</code>、多角形を定義する値 <code>poly</code>、定義済みの領域以外のすべての領域を示す値 <code>default</code> を定めています。</dd><dd>多くのブラウザー、特に Internet Explorer 4 以降では <code>circ</code>, <code>polygon</code>, <code>rectangle</code> を {{htmlattrxref("shape", "area")}} の有効な値として対応していますが、これらの値は標準外です。</dd><dt>{{htmlattrdef("target")}}</dt><dd>キーワードまたは作成者が定義した名前で、リンクされたリソースを表示する{{Glossary("browsing context", "閲覧コンテキスト")}}です。</dd><dd>以下のキーワードは特別な意味を持っています。<ul><li><code>_self</code> (既定値): 現在の閲覧コンテキストのリソースを表します。</li><li><code>_blank</code>: 新しい名前の付けられていない閲覧コンテキストのリソースを表します。</li><li><code>_parent</code>: 現在のページがフレーム内にある場合は、現在の親の閲覧コンテキストのリソースを表します。親要素がない場合、 <code>_self</code> と同じ動作をします。</li><li><code>_top</code>: 最上位の閲覧コンテキストのリソースを表します (現在の閲覧コンテキストの祖先にあたり、それ以上親のない要素です)。親要素がない場合、 <code>_self</code> と同じ動作をします。</li></ul></dd><dd>この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。<div class="note"><p><strong>注:</strong> 新しいブラウザー (例えば Firefox 79 以降) では、 <code>target="_blank"</code> を <code>&#x3C;area></code> 要素に設定すると、暗黙に同じ動作をする <code>rel</code> を <code>rel="noopener"</code> と設定します。</p></div></dd></dl>
+<!---->
+
+- {{htmlattrdef("coords")}}
+
+  - : code>coords 属性は `<area>` の寸法、形状、配置における [`shape`](#attr-shape) 属性の座標を詳述します。
+
+    - `rect`: 値は `x1,y1,x2,y2` です。値は長方形の左上と右下の座標を指定します。
+      例: `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` この例では長方形の左上の隅が 0,0、右下の隅が 253,27 になります。
+    - `circle`: 値は `x,y,radius` です。値は円の中央の座標と半径を指定します。
+      例: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
+    - `poly`: 値は `x1,y1,x2,y2,..,xn,yn` です。値は多角形の角の座標を指定します。先頭と末尾の座標が同じではない場合、ブラウザーは最後に座標を追加して多角形を閉じます。
+    - `default`: 領域全体を定義します。
+
+    値は CSS ピクセルの数です。
+
+- {{htmlattrdef("download")}}
+  - : この属性がある場合は、作者はハイパーリンクをリソースのダウンロードに使用すると考えていることを示します。{{htmlattrxref("download", "a")}} 属性の詳しい説明は {{HTMLElement("a")}} をご覧ください。
+- {{htmlattrdef("href")}}
+  - : この領域のハイパーリンクの宛先です。この値は有効な URL です。この属性は省略可能です。その場合、その `<area>` 要素はハイパーリンクを提供しません。
+- {{htmlattrdef("hreflang")}}
+  - : リンク先のリソースの言語を示します。許容される値は [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt "Tags for Identifying Languages") で定めています。この属性は、 {{htmlattrxref("href", "area")}} 属性を与える場合にのみ使用してください。
+- {{htmlattrdef("ping")}}
+  - : ハイパーリンクがフォローされたときに、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を `PING` として (バックグラウンドで) 送信する URL を空白で区切ったリストで記述します。ふつうはトラッキング用に使用します。
+- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+
+  - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です:
+
+    - "`no-referrer`" は、`Referer:` ヘッダーを送信しないことを表します。
+    - "`no-referrer-when-downgrade`" は、TLS (HTTPS) を使用せずに生成元へナビゲートする場合は `Referer:` ヘッダーを送信しないことを表します。これは他にポリシーが定められていない場合の、ユーザーエージェントの既定の動作です。
+    - "`origin`" は、ページの生成元 (大まかにいえばスキーム、ホスト、ポート) をリファラーとすることを表します。
+    - "`origin-when-cross-origin`" は、異なる生成元へのナビゲートではリファラーをスキーム、ホスト、ポートに制限します。同一生成元へのナビゲートでは、リファラーのパスも含めます。
+    - "`unsafe-url`" は、リファラーに生成元とパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これは生成元やパスの情報が TLS で保護されたリソースからセキュアでない生成元へ漏えいしますので、安全ではありません。
+
+- {{htmlattrdef("rel")}}
+  - : {{htmlattrxref("href", "area")}} 属性を含むアンカーで、この属性は、対象オブジェクトとリンクオブジェクトの関係を指定します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Link_types)のリストです。値とその意味は、文書作成者にとって意味を持つかもしれない何らかの権威によって登録されています。他に何も与えられていない場合の既定の関係は void です。この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。
+- {{htmlattrdef("shape")}}
+
+  - : 関連づけたホットスポットの形状です。 HTML の仕様書では、長方形の領域を定義する値 `rect`、円形の領域を定義する値 `circle`、多角形を定義する値 `poly`、定義済みの領域以外のすべての領域を示す値 `default` を定めています。
+
+    多くのブラウザー、特に Internet Explorer 4 以降では `circ`, `polygon`, `rectangle` を {{htmlattrxref("shape", "area")}} の有効な値として対応していますが、これらの値は標準外です。
+
+- {{htmlattrdef("target")}}
+
+  - : キーワードまたは作成者が定義した名前で、リンクされたリソースを表示する{{Glossary("browsing context", "閲覧コンテキスト")}}です。
+
+    以下のキーワードは特別な意味を持っています。
+
+    - `_self` (既定値): 現在の閲覧コンテキストのリソースを表します。
+    - `_blank`: 新しい名前の付けられていない閲覧コンテキストのリソースを表します。
+    - `_parent`: 現在のページがフレーム内にある場合は、現在の親の閲覧コンテキストのリソースを表します。親要素がない場合、 `_self` と同じ動作をします。
+    - `_top`: 最上位の閲覧コンテキストのリソースを表します (現在の閲覧コンテキストの祖先にあたり、それ以上親のない要素です)。親要素がない場合、 `_self` と同じ動作をします。
+
+    この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。
+
+    > **Note:** **注:** 新しいブラウザー (例えば Firefox 79 以降) では、 `target="_blank"` を `<area>` 要素に設定すると、暗黙に同じ動作をする `rel` を `rel="noopener"` と設定します。
 
 ### 非推奨の属性
 

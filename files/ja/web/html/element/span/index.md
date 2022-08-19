@@ -86,7 +86,9 @@ translation_of: Web/HTML/Element/span
 
 #### HTML
 
-<pre class="brush:html gutter:false notranslate">&#x3C;p>&#x3C;span>Some text&#x3C;/span>&#x3C;/p></pre>
+```html
+<p><span>Some text</span></p>
+```
 
 #### 結果
 
@@ -96,10 +98,11 @@ translation_of: Web/HTML/Element/span
 
 #### HTML
 
-<pre class="brush:html gutter:false notranslate">&#x3C;li>&#x3C;span>
-    &#x3C;a href="portfolio.html" target="_blank">See my portfolio&#x3C;/a>
-&#x3C;/span>&#x3C;/li>
-</pre>
+```html
+<li><span>
+    <a href="portfolio.html" target="_blank">See my portfolio</a>
+</span></li>
+```
 
 #### CSS
 

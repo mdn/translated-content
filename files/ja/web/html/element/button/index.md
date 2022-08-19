@@ -104,7 +104,70 @@ translation_of: Web/HTML/Element/button
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-<dl><dt>{{htmlattrdef("autofocus")}}</dt><dd>論理属性で、ページ読み込み時にこのボタンが入力<a href="/ja/docs/Web/API/HTMLOrForeignElement/focus">フォーカス</a>を持つべきであることを指定します。<strong>文書中の要素一つだけにこの属性を設定することができます。</strong></dd><dt>{{htmlattrdef("autocomplete")}} {{non-standard_inline}}</dt><dd>{{HTMLElement("button")}} におけるこの属性は標準外であり、 Firefox 固有のものです。他のブラウザーとは異なり、 Firefox はページを再度読み込む時に<a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">動的に無効化した状態を維持します</a>。そのボタンに <code>autocomplete="off"</code> に設定すると、この機能が無効になります。 {{bug(654072)}} をご覧ください。</dd><dt>{{htmlattrdef("disabled")}}</dt><dd><p>論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。</p><p>Firefox の動作は他のブラウザーと異なり、ページを再読み込みしても {{HTMLElement("button")}} を<a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">動的に無効化した状態を維持します</a>。この機能は {{htmlattrxref("autocomplete","button")}} 属性で制御できます。</p></dd><dt>{{htmlattrdef("form")}}</dt><dd>ボタンに関連付けられた {{HTMLElement("form")}} 要素 (<em>フォームオーナー</em>) です。この属性の値は、同一文書内の <code>&#x3C;form></code> 要素の <code>id</code> 属性と同一でなければなりません。 (この属性を設定しなかった場合、 <code>&#x3C;button></code> は祖先に <code>&#x3C;form></code> 要素が存在すれば、その要素に関連付けられます。)</dd><dd>この属性によって <code>&#x3C;button></code> 要素が <code>&#x3C;form></code> の中になくても、同一文書内にある任意の <code>&#x3C;form></code> 要素に関連付けることが可能になりました。また、祖先の <code>&#x3C;form></code> 要素を上書きすることができます。</dd><dt>{{htmlattrdef("formaction")}}</dt><dd>このボタンによって送信された情報を処理する URL です。このボタンのフォームオーナーの {{htmlattrxref("action","form")}} 属性よりも優先されます。フォームオーナーがない場合は何もしません。</dd><dt>{{htmlattrdef("formenctype")}}</dt><dd>このボタンが送信ボタンである場合 (<code>&#x3C;form></code> の中にあるか関連付けられており、 <code>type="button"</code> が設定されていない場合)、送信されるフォームデータのエンコード方法を指定します。指定可能な値は以下の通りです。<ul><li><code>application/x-www-form-urlencoded</code>: この属性が使用されなかった場合の既定値。</li><li><code>multipart/form-data</code>: {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性に <code>file</code> を指定して使用する場合に使用します。</li><li><code>text/plain</code>: デバッグ目的で指定されるものです。実際のフォーム送信で使用するべきではありません。</li></ul><p>この属性が指定された場合、そのボタンのフォームオーナーの {{htmlattrxref("enctype","form")}} 属性より優先されます。</p></dd><dt>{{htmlattrdef("formmethod")}}</dt><dd>このボタンが送信ボタンである場合 (<code>&#x3C;form></code> の中にあるか関連付けられており、 <code>type="button"</code> が設定されていない場合)、この属性はこのフォームを送信するのに使用される <a href="/ja/docs/Web/HTTP/Methods">HTTP メソッド</a>を指定します。指定可能な値は以下の通りです。<ul><li><code>post</code>: フォームのデータは、サーバーへ送信する際に HTTP リクエストの本文に含められます。フォームにパスワードなどの公開するべきではない情報が含まれている場合は、このメソッドを使用してください。</li><li><code>get</code>: フォームのデータは、フォームの <code>action</code> の URL に、セパレーターとして '?' を使用して追加され、その結果となる URL をサーバーへ送信します。検索フォームのように、まったく<a href="/ja/docs/Glossary/Idempotent">副作用がない</a>場合にのみ、このメソッドを使用してください。</li></ul><p>指定された場合、この属性はボタンのフォームオーナーの {{htmlattrxref("method","form")}} 属性より優先して使用されます。</p></dd><dt>{{htmlattrdef("formnovalidate")}}</dt><dd>論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を<a href="/ja/docs/Learn/Forms/Form_validation">検証</a>しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの {{htmlattrxref("novalidate","form")}} 属性より優先して使用されます。</dd><dd>この属性は <code><a href="/ja/docs/Web/HTML/Element/input/image">&#x3C;input type="image"></a></code> および <code><a href="/ja/docs/Web/HTML/Element/input/submit">&#x3C;input type="submit"></a></code> 要素でも使用できます。</dd><dt>{{htmlattrdef("formtarget")}}</dt><dd>ボタンが送信ボタンである場合、フォームの送信後に受信するレスポンスを表示する場所を示すユーザー定義の名前、もしくはアンダースコアから始まる標準化されたキーワードです。これは、<em>閲覧コンテキスト</em> (タブ、ウィンドウ、{{HTMLElement("iframe")}}) の <code>name</code> またはそれを表すキーワードです。この属性が指定された場合、ボタンのフォームオーナーの {{htmlattrxref("target", "form")}} 属性より優先されます。以下のキーワードは特別な意味を持ちます。<ul><li><code>_self</code>: レスポンスを同じ閲覧コンテキストに読み込みます。これは、属性が指定されていない場合の既定値です。</li><li><code>_blank</code>: レスポンスを新しい無名の閲覧コンテキスト — 普通は、ブラウザーの設定に従い、新しいタブまたはウィンドウ — に読み込みます。</li><li><code>_parent</code>: レスポンスを現在のコンテキストの親の閲覧コンテキストに読み込みます。親要素がない場合、このオプションは <code>_self</code> と同じ振る舞いをします。</li><li><code>_top</code>: レスポンスを最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以前の祖先をもたない閲覧コンテキスト) に読み込みます。親要素がない場合、このオプションは <code>_self</code> と同じ振る舞いをします。</li></ul></dd><dt>{{htmlattrdef("name")}}</dt><dd>このボタンの名前で、フォームデータの一部としてこのボタンの <code>value</code> との組み合わせで送信されます。</dd><dt>{{htmlattrdef("type")}}</dt><dd>このボタンの既定の動作です。以下の値が指定可能です。<ul><li><code>submit</code>: このボタンはフォームのデータをサーバーへ送信します。これはこの属性が <code>&#x3C;form></code> に関連付けられたボタンに指定されていない場合、またはこの属性が空であったり不正な値であったりした場合の既定値です。</li><li><code>reset</code>: このボタンはすべてのコントロールを初期値に初期化します。 <a href="/ja/docs/Web/HTML/Element/input/reset">&#x3C;input type="reset"></a> と同様です。 (この動作はユーザーを困らせる傾向があります。)</li><li><code>button</code>: ボタンには既定の動作がなく、既定では押されても何も行いません。この要素のイベントを待ち受けし、イベントが発生すると起動されるクライアント側スクリプトを設定することができます。</li></ul></dd><dt>{{htmlattrdef("value")}}</dt><dd>フォームのデータと一緒に送信される際に、ボタンの <code>name</code> に結び付けられる値を定義します。この値は、フォームに送信する際にサーバーに引数として渡されます。</dd></dl>
+- {{htmlattrdef("autofocus")}}
+  - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLOrForeignElement/focus)を持つべきであることを指定します。**文書中の要素一つだけにこの属性を設定することができます。**
+- {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
+  - : {{HTMLElement("button")}} におけるこの属性は標準外であり、 Firefox 固有のものです。他のブラウザーとは異なり、 Firefox はページを再度読み込む時に[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。そのボタンに `autocomplete="off"` に設定すると、この機能が無効になります。 {{bug(654072)}} をご覧ください。
+- {{htmlattrdef("disabled")}}
+
+  - : 論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
+
+    Firefox の動作は他のブラウザーと異なり、ページを再読み込みしても {{HTMLElement("button")}} を[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は {{htmlattrxref("autocomplete","button")}} 属性で制御できます。
+
+- {{htmlattrdef("form")}}
+
+  - : ボタンに関連付けられた {{HTMLElement("form")}} 要素 (_フォームオーナー_) です。この属性の値は、同一文書内の `<form>` 要素の `id` 属性と同一でなければなりません。 (この属性を設定しなかった場合、 `<button>` は祖先に `<form>` 要素が存在すれば、その要素に関連付けられます。)
+
+    この属性によって `<button>` 要素が `<form>` の中になくても、同一文書内にある任意の `<form>` 要素に関連付けることが可能になりました。また、祖先の `<form>` 要素を上書きすることができます。
+
+- {{htmlattrdef("formaction")}}
+  - : このボタンによって送信された情報を処理する URL です。このボタンのフォームオーナーの {{htmlattrxref("action","form")}} 属性よりも優先されます。フォームオーナーがない場合は何もしません。
+- {{htmlattrdef("formenctype")}}
+
+  - : このボタンが送信ボタンである場合 (`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合)、送信されるフォームデータのエンコード方法を指定します。指定可能な値は以下の通りです。
+
+    - `application/x-www-form-urlencoded`: この属性が使用されなかった場合の既定値。
+    - `multipart/form-data`: {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性に `file` を指定して使用する場合に使用します。
+    - `text/plain`: デバッグ目的で指定されるものです。実際のフォーム送信で使用するべきではありません。
+
+    この属性が指定された場合、そのボタンのフォームオーナーの {{htmlattrxref("enctype","form")}} 属性より優先されます。
+
+- {{htmlattrdef("formmethod")}}
+
+  - : このボタンが送信ボタンである場合 (`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合)、この属性はこのフォームを送信するのに使用される [HTTP メソッド](/ja/docs/Web/HTTP/Methods)を指定します。指定可能な値は以下の通りです。
+
+    - `post`: フォームのデータは、サーバーへ送信する際に HTTP リクエストの本文に含められます。フォームにパスワードなどの公開するべきではない情報が含まれている場合は、このメソッドを使用してください。
+    - `get`: フォームのデータは、フォームの `action` の URL に、セパレーターとして '?' を使用して追加され、その結果となる URL をサーバーへ送信します。検索フォームのように、まったく[副作用がない](/ja/docs/Glossary/Idempotent)場合にのみ、このメソッドを使用してください。
+
+    指定された場合、この属性はボタンのフォームオーナーの {{htmlattrxref("method","form")}} 属性より優先して使用されます。
+
+- {{htmlattrdef("formnovalidate")}}
+
+  - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/Learn/Forms/Form_validation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの {{htmlattrxref("novalidate","form")}} 属性より優先して使用されます。
+
+    この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) 要素でも使用できます。
+
+- {{htmlattrdef("formtarget")}}
+
+  - : ボタンが送信ボタンである場合、フォームの送信後に受信するレスポンスを表示する場所を示すユーザー定義の名前、もしくはアンダースコアから始まる標準化されたキーワードです。これは、_閲覧コンテキスト_ (タブ、ウィンドウ、{{HTMLElement("iframe")}}) の `name` またはそれを表すキーワードです。この属性が指定された場合、ボタンのフォームオーナーの {{htmlattrxref("target", "form")}} 属性より優先されます。以下のキーワードは特別な意味を持ちます。
+
+    - `_self`: レスポンスを同じ閲覧コンテキストに読み込みます。これは、属性が指定されていない場合の既定値です。
+    - `_blank`: レスポンスを新しい無名の閲覧コンテキスト — 普通は、ブラウザーの設定に従い、新しいタブまたはウィンドウ — に読み込みます。
+    - `_parent`: レスポンスを現在のコンテキストの親の閲覧コンテキストに読み込みます。親要素がない場合、このオプションは `_self` と同じ振る舞いをします。
+    - `_top`: レスポンスを最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以前の祖先をもたない閲覧コンテキスト) に読み込みます。親要素がない場合、このオプションは `_self` と同じ振る舞いをします。
+
+- {{htmlattrdef("name")}}
+  - : このボタンの名前で、フォームデータの一部としてこのボタンの `value` との組み合わせで送信されます。
+- {{htmlattrdef("type")}}
+
+  - : このボタンの既定の動作です。以下の値が指定可能です。
+
+    - `submit`: このボタンはフォームのデータをサーバーへ送信します。これはこの属性が `<form>` に関連付けられたボタンに指定されていない場合、またはこの属性が空であったり不正な値であったりした場合の既定値です。
+    - `reset`: このボタンはすべてのコントロールを初期値に初期化します。 [\<input type="reset">](/ja/docs/Web/HTML/Element/input/reset) と同様です。 (この動作はユーザーを困らせる傾向があります。)
+    - `button`: ボタンには既定の動作がなく、既定では押されても何も行いません。この要素のイベントを待ち受けし、イベントが発生すると起動されるクライアント側スクリプトを設定することができます。
+
+- {{htmlattrdef("value")}}
+  - : フォームのデータと一緒に送信される際に、ボタンの `name` に結び付けられる値を定義します。この値は、フォームに送信する際にサーバーに引数として渡されます。
 
 ## メモ
 
@@ -134,12 +197,12 @@ translation_of: Web/HTML/Element/button
 
 ```
 <button name="favorite">
-  <svg aria-hidden="true" viewBox="0 0 10 10"><path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/></svg>
+  <svg aria-hien="true" viewBox="0 0 10 10"><path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/></svg>
   お気に入りに追加
 </button>
 ```
 
-ボタンのテキストを、アクセシブルな方法で視覚的に隠したい場合は、 [CSS プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用して画面から削除し、支援技術からは解析可能のままにします。
+ボタンのテキストを、アクセシブルな方法で視覚的に隠したい場合は、 [CSS プロパティの組み合わせ](https://gomakethings.com/hien-content-for-better-a11y/#hiding-the-link)を使用して画面から削除し、支援技術からは解析可能のままにします。
 
 しかし、ボタンのテキストを視覚的に見えるようにしておけば、アイコンの意味に慣れていない人がボタンの目的を理解できるようになります。これは特に、技術的に慣れていない人や、アイコンボタンが使用するアイコンの文化的解釈が異なる人に適しています。
 
@@ -185,78 +248,18 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
 
 {{HTMLElement("button")}} をクリックしたときに (既定で) フォーカスを得るかは、ブラウザーおよび OS により異なります。{{HTMLElement("input")}} 要素では `type="button"`、`type="submit"` ともに同じ動作になります。
 
-<table>
-  <caption>
-    {{HTMLElement("button")}} をクリックするとフォーカスを得るかどうか
-  </caption>
-  <thead>
-    <tr>
-      <th>デスクトップ版ブラウザー</th>
-      <th>Windows 8.1</th>
-      <th>OS X 10.X</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Firefox</th>
-      <td class="bc-supports-yes">はい - Firefox 30.0</td>
-      <td class="bc-supports-no">
-        いいえ (<code>tabindex</code> がある場合でも) Firefox 63
-      </td>
-    </tr>
-    <tr>
-      <th>Chrome</th>
-      <td class="bc-supports-yes">はい - Chrome 35</td>
-      <td class="bc-supports-yes">はい - Chrome 65</td>
-    </tr>
-    <tr>
-      <th>Safari</th>
-      <td style="background: #eee">N/A</td>
-      <td class="bc-supports-no">
-        いいえ (<code>tabindex</code> がある場合でも) Safari 12
-      </td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
-      <td class="bc-supports-yes">はい - Internet Explorer 11</td>
-      <td style="background: #eee">N/A</td>
-    </tr>
-    <tr>
-      <th>Presto</th>
-      <td class="bc-supports-yes">はい - Opera 12</td>
-      <td class="bc-supports-yes">はい - Opera 12</td>
-    </tr>
-  </tbody>
-</table>
+| デスクトップ版ブラウザー | Windows 8.1                 | OS X 10.X                                     |
+| ------------------------ | --------------------------- | --------------------------------------------- |
+| Firefox                  | はい - Firefox 30.0         | いいえ (`tabindex` がある場合でも) Firefox 63 |
+| Chrome                   | はい - Chrome 35            | はい - Chrome 65                              |
+| Safari                   | N/A                         | いいえ (`tabindex` がある場合でも) Safari 12  |
+| Internet Explorer        | はい - Internet Explorer 11 | N/A                                           |
+| Presto                   | はい - Opera 12             | はい - Opera 12                               |
 
-<table>
-  <caption>
-    {{HTMLElement("button")}} をタップするとフォーカスを得るかどうか
-  </caption>
-  <thead>
-    <tr>
-      <th>モバイル版ブラウザー</th>
-      <th>iOS 7.1.2</th>
-      <th>Android 4.4.4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Safari Mobile</th>
-      <td class="bc-supports-no">
-        いいえ (<code>tabindex</code> がある場合でも)
-      </td>
-      <td style="background-color: #eeeeee">N/A</td>
-    </tr>
-    <tr>
-      <th>Chrome 35</th>
-      <td class="bc-supports-no">
-        いいえ (<code>tabindex</code> がある場合でも)
-      </td>
-      <td class="bc-supports-yes">はい</td>
-    </tr>
-  </tbody>
-</table>
+| モバイル版ブラウザー | iOS 7.1.2                          | Android 4.4.4 |
+| -------------------- | ---------------------------------- | ------------- |
+| Safari Mobile        | いいえ (`tabindex` がある場合でも) | N/A           |
+| Chrome 35            | いいえ (`tabindex` がある場合でも) | はい          |
 
 ## 仕様書
 

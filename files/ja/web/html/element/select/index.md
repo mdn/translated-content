@@ -32,7 +32,29 @@ translation_of: Web/HTML/Element/select
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-<dl><dt>{{htmlattrdef("autocomplete")}}</dt><dd>{{domxref("DOMString")}} で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 <a href="/ja/docs/Web/HTML/Attributes/autocomplete">HTML の autocomplete 属性</a>を参照してください。</dd><dt>{{htmlattrdef("autofocus")}}</dt><dd>真偽値属性で、ページが読み込まれた時にこのフォームコントロールが入力フォーカスを持つべきであることを指定することができます。文書内で <code>autofocus</code> 属性を持つことができるフォーム要素は一つだけです。</dd><dt>{{htmlattrdef("disabled")}}</dt><dd>真偽値属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に <code>disabled</code> 属性を持つものがなければ、そのコントロールは利用可能です。</dd><dt>{{htmlattrdef("form")}}</dt><dd><code>&#x3C;select></code> を関連付ける {{HTMLElement("form")}} 要素 (<em>フォームオーナー</em>) です。この属性の値は、同じ文書内の <code>form</code> 要素の {{htmlattrxref("id")}} でなければなりません。 (この属性が設定されていない場合は、 <code>&#x3C;select></code> はその祖先である <code>&#x3C;form></code> が存在すればそれと関連付けられます。)</dd><dd>この属性によって、 <code>&#x3C;select></code> 要素は、 <code>&#x3C;form></code> 要素の子孫に限らず、文書内のどこの <code>&#x3C;form></code> と結び付けることもできます。これは祖先の <code>&#x3C;form></code> を上書きすることもできます。</dd><dt>{{htmlattrdef("multiple")}}</dt><dd>真偽値属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 <code>multiple</code> が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。</dd><dt>{{htmlattrdef("name")}}</dt><dd>この属性は、コントロールの名前を指定するために使用します。</dd><dt>{{htmlattrdef("required")}}</dt><dd>真偽値属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。</dd><dt>{{htmlattrdef("size")}}</dt><dd><p>コントロールがスクロールするリストボックスとして表示される場合 (つまり、 <code>multiple</code> が指定されている場合)、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は <code>0</code> です。</p><div class="note"><strong>注:</strong> HTML5 の仕様によると、 size 属性の初期値は <code>1</code> であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも <code>0</code> を返し続けることを選択しました。</div></dd></dl>
+- {{htmlattrdef("autocomplete")}}
+  - : {{domxref("DOMString")}} で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 [HTML の autocomplete 属性](/ja/docs/Web/HTML/Attributes/autocomplete)を参照してください。
+- {{htmlattrdef("autofocus")}}
+  - : 真偽値属性で、ページが読み込まれた時にこのフォームコントロールが入力フォーカスを持つべきであることを指定することができます。文書内で `autofocus` 属性を持つことができるフォーム要素は一つだけです。
+- {{htmlattrdef("disabled")}}
+  - : 真偽値属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。
+- {{htmlattrdef("form")}}
+
+  - : `<select>` を関連付ける {{HTMLElement("form")}} 要素 (_フォームオーナー_) です。この属性の値は、同じ文書内の `form` 要素の {{htmlattrxref("id")}} でなければなりません。 (この属性が設定されていない場合は、 `<select>` はその祖先である `<form>` が存在すればそれと関連付けられます。)
+
+    この属性によって、 `<select>` 要素は、 `<form>` 要素の子孫に限らず、文書内のどこの `<form>` と結び付けることもできます。これは祖先の `<form>` を上書きすることもできます。
+
+- {{htmlattrdef("multiple")}}
+  - : 真偽値属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 `multiple` が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。
+- {{htmlattrdef("name")}}
+  - : この属性は、コントロールの名前を指定するために使用します。
+- {{htmlattrdef("required")}}
+  - : 真偽値属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。
+- {{htmlattrdef("size")}}
+
+  - : コントロールがスクロールするリストボックスとして表示される場合 (つまり、 `multiple` が指定されている場合)、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は `0` です。
+
+    > **Note:** **注:** HTML5 の仕様によると、 size 属性の初期値は `1` であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも `0` を返し続けることを選択しました。
 
 ## 使用上の注意
 
