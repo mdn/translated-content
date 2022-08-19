@@ -10,40 +10,39 @@ tags:
   - メソッド
 translation_of: Web/API/Navigator/share
 ---
-<div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
+{{APIRef("HTML DOM")}}{{securecontext_header}}
 
-<p><strong><code>Navigator.share()</code></strong> メソッドは、 Web Share API の一部としてのネイティブの共有メカニズムを呼び出します。</p>
+**`Navigator.share()`** メソッドは、 Web Share API の一部としてのネイティブの共有メカニズムを呼び出します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var sharePromise = navigator.share(<var>data</var>);
-</pre>
+```
+var sharePromise = navigator.share(data);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>data</var></code></dt>
- <dd>シェアするデータを含むオブジェクトです。以下のフィールドのうち少なくとも一つを指定しなければなりません。利用可能なオプションは下記のとおりです。</dd>
-</dl>
+- `data`
+  - : シェアするデータを含むオブジェクトです。以下のフィールドのうち少なくとも一つを指定しなければなりません。利用可能なオプションは下記のとおりです。
 
-<ul>
- <li><code>url</code>: シェアする URL を表す {{domxref("USVString")}}。</li>
- <li><code>text</code>: シェアするテキストを表す {{domxref("USVString")}}。</li>
- <li><code>title</code>: シェアするタイトルを表す {{domxref("USVString")}}。</li>
-</ul>
+<!---->
 
-<dl>
-</dl>
+- `url`: シェアする URL を表す {{domxref("USVString")}}。
+- `text`: シェアするテキストを表す {{domxref("USVString")}}。
+- `title`: シェアするタイトルを表す {{domxref("USVString")}}。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+<!---->
 
-<p>ユーザーがシェア操作を完了させたとき (ふつうはユーザーがシェア先のアプリケーションを選択したとき) に解決する {{domxref("Promise")}} です。引数 <var>data</var> が正しく指定されなかった場合は直ちに拒否され、ユーザーがシェアをキャンセルした場合も拒否されます。</p>
+### 返値
 
-<h2 id="Examples" name="Examples">例</h2>
+ユーザーがシェア操作を完了させたとき (ふつうはユーザーがシェア先のアプリケーションを選択したとき) に解決する {{domxref("Promise")}} です。引数 _data_ が正しく指定されなかった場合は直ちに拒否され、ユーザーがシェアをキャンセルした場合も拒否されます。
 
-<p><a href="https://mdn.github.io/dom-examples/web-share/">ウェブシェアテスト</a> (<a href="https://github.com/mdn/dom-examples/blob/master/web-share/index.html">ソースコードを参照</a>) では、ボタンが一つあり、クリックすると Web Share API を呼び出して MDN の URL をシェアします。 JavaScript は以下のようになります。</p>
+## 例
 
-<pre class="brush: js">const shareData = {
+[ウェブシェアテスト](https://mdn.github.io/dom-examples/web-share/) ([ソースコードを参照](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)) では、ボタンが一つあり、クリックすると Web Share API を呼び出して MDN の URL をシェアします。 JavaScript は以下のようになります。
+
+```js
+const shareData = {
   title: 'MDN',
   text: 'MDN でウェブ開発を学びましょう。',
   url: 'https://developer.mozilla.org',
@@ -53,40 +52,26 @@ const btn = document.querySelector('button');
 const resultPara = document.querySelector('.result');
 
 // Must be triggered some kind of "user activation"
-btn.addEventListener('click', async () =&gt; {
+btn.addEventListener('click', async () => {
   try {
     await navigator.share(shareData)
     resultPara.textContent = 'MDN shared successfully'
   } catch(e) {
     resultPara.textContent = 'Error: ' + e
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Share API','#share-method','share()')}}</td>
-   <td>{{Spec2('Web Share API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   | 状態                                 | 備考 |
+| ------------------------------------------------------------------------ | ------------------------------------ | ---- |
+| {{SpecName('Web Share API','#share-method','share()')}} | {{Spec2('Web Share API')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Navigator.share")}}</p>
+{{Compat("api.Navigator.share")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref('navigator.canShare', 'navigator.canShare()')}}</li>
-</ul>
+- {{domxref('navigator.canShare', 'navigator.canShare()')}}

@@ -8,43 +8,42 @@ tags:
   - Property
   - Reference
   - appVersion
-browser-compat: api.Navigator.appVersion
 translation_of: Web/API/NavigatorID/appVersion
 original_slug: Web/API/NavigatorID/appVersion
+browser-compat: api.Navigator.appVersion
 ---
-<p>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</p>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>"<code>4.0</code>" またはそのブラウザーのバージョン情報を表す文字列のどちらかを返します。</p>
+"`4.0`" またはそのブラウザーのバージョン情報を表す文字列のどちらかを返します。
 
-<div class="notecard note">
-  <h4>メモ</h4>
-  <p>このプロパティがブラウザーの正しいバージョンを返すことを期待しないでください。</p>
-</div>
+> **Note:** #### メモこのプロパティがブラウザーの正しいバージョンを返すことを期待しないでください。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">window.navigator.appVersion
-</pre>
+```js
+window.navigator.appVersion
+```
 
-<h3 id="Returned_value">値</h3>
+### 値
 
-<p>"<code>4.0</code>" またはそのブラウザーのバージョン情報を表す文字列のどちらかです。</p>
+"`4.0`" またはそのブラウザーのバージョン情報を表す文字列のどちらかです。
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush: js">alert("このブラウザーのバージョンは " + navigator.appVersion + " と報告されています。");
-</pre>
+```js
+alert("このブラウザーのバージョンは " + navigator.appVersion + " と報告されています。");
+```
 
-<h2 id="Notes">注</h2>
+## 注
 
-<p><code>window.navigator.userAgent</code> プロパティもバージョン番号を含んでいる場合がありますが ("<code>Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1</code>" など)、ユーザーエージェント文字列を変更したり、他のブラウザー、プラットフォーム、ユーザーエージェントに「偽装」したり、ブラウザーベンダー自身がこれらのプロパティに無頓着であったりすることを意識しておいてください。</p>
+`window.navigator.userAgent` プロパティもバージョン番号を含んでいる場合がありますが ("`Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1`" など)、ユーザーエージェント文字列を変更したり、他のブラウザー、プラットフォーム、ユーザーエージェントに「偽装」したり、ブラウザーベンダー自身がこれらのプロパティに無頓着であったりすることを意識しておいてください。
 
-<p><code>window.navigator.appVersion</code>, <code>window.navigator.appName</code>, <code>window.navigator.userAgent</code> の各プロパティは、「ブラウザー推定」 (browser sniffing) コード、すなわち使用しているブラウザーを検出し、それに従ってページを調整しようとするスクリプトで使われてきました。これにより、一部のウェブサイトから拒否されないようにするために、ブラウザーがこれらのプロパティで偽の情報を返さなければならないという現在の状況が発生したのです。</p>
+`window.navigator.appVersion`, `window.navigator.appName`, `window.navigator.userAgent` の各プロパティは、「ブラウザー推定」 (browser sniffing) コード、すなわち使用しているブラウザーを検出し、それに従ってページを調整しようとするスクリプトで使われてきました。これにより、一部のウェブサイトから拒否されないようにするために、ブラウザーがこれらのプロパティで偽の情報を返さなければならないという現在の状況が発生したのです。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}

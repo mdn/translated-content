@@ -13,45 +13,31 @@ tags:
   - Web
 translation_of: Web/API/Navigator/mediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><strong><code>Navigator.mediaDevices</code></strong> 読み取り専用プロパティは、カメラやマイク、画面共有のような接続されたメディア入力装置へのアクセスを提供する {{domxref("MediaDevices")}} オブジェクトを返します。</p>
+**`Navigator.mediaDevices`** 読み取り専用プロパティは、カメラやマイク、画面共有のような接続されたメディア入力装置へのアクセスを提供する {{domxref("MediaDevices")}} オブジェクトを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <em>mediaDevices</em> = navigator.mediaDevices;
-</pre>
+```
+var mediaDevices = navigator.mediaDevices;
+```
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>{{domxref("MediaDevices")}} シングルトンオブジェクト。例えば {{domxref("navigator.mediaDevices.getUserMedia()")}} などを呼び出すなど、通常は、このオブジェクトのメンバーを直接使用するだけです。</p>
+{{domxref("MediaDevices")}} シングルトンオブジェクト。例えば {{domxref("navigator.mediaDevices.getUserMedia()")}} などを呼び出すなど、通常は、このオブジェクトのメンバーを直接使用するだけです。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediadevices', 'NavigatorUserMedia.mediaDevices')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       | 状態                                 | 備考     |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Media Capture', '#mediadevices', 'NavigatorUserMedia.mediaDevices')}} | {{Spec2('Media Capture')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Navigator.mediaDevices")}}</p>
+{{Compat("api.Navigator.mediaDevices")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: すべての media stream API についてのドキュメントのエントリーポイント。</li>
- <li><a href="/ja/docs/Web/API/WebRTC_API">WebRTC API</a>: 密接に関連する WebRTC API についてのドキュメント。</li>
-</ul>
+- [Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API): すべての media stream API についてのドキュメントのエントリーポイント。
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API): 密接に関連する WebRTC API についてのドキュメント。

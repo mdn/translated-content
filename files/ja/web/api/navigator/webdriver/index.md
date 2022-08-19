@@ -11,48 +11,35 @@ tags:
   - プロパティ
 translation_of: Web/API/Navigator/webdriver
 ---
-<div>{{SeeCompatTable}}{{APIRef("WebDriver")}}</div>
+{{SeeCompatTable}}{{APIRef("WebDriver")}}
 
-<p><span class="seoSummary"><strong><code>webdriver</code></strong> は {{domxref("navigator")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが自動制御されているかどうかを示します。</span></p>
+**`webdriver`** は {{domxref("navigator")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが自動制御されているかどうかを示します。
 
-<p>これは協調動作をするユーザーエージェントが <a href="/ja/docs/Web/WebDriver">WebDriver</a> によって制御されていることを文書に伝えるための標準の方法を定めており、例えば自動制御の間は異なるコードを実行したりすることができます。</p>
+これは協調動作をするユーザーエージェントが [WebDriver](/ja/docs/Web/WebDriver) によって制御されていることを文書に伝えるための標準の方法を定めており、例えば自動制御の間は異なるコードを実行したりすることができます。
 
-<p>次のような場合に <code>navigator.webdriver</code> プロパティが true になります。</p>
+次のような場合に `navigator.webdriver` プロパティが true になります。
 
-<dl>
- <dt>Chrome</dt>
- <dd><code>--enable-automation</code> または <code>--headless</code> フラグまたは <code>--remote-debugging-port</code> が使用されているとき。</dd>
- <dt>Firefox</dt>
- <dd>設定の <code>marionette.enabled</code> または <code>--marionette</code> フラグが渡されたとき。</dd>
-</dl>
+- Chrome
+  - : `--enable-automation` または `--headless` フラグまたは `--remote-debugging-port` が使用されているとき。
+- Firefox
+  - : 設定の `marionette.enabled` または `--marionette` フラグが渡されたとき。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>isAutomated</var> = navigator.webdriver</pre>
+```
+var isAutomated = navigator.webdriver
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>A {{JSxRef("Boolean")}}</p>
+A {{JSxRef("Boolean")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("WebDriver","#dom-navigatorautomationinformation-webdriver","webdriver")}}</td>
-   <td>{{Spec2("WebDriver")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                         | 備考     |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("WebDriver","#dom-navigatorautomationinformation-webdriver","webdriver")}} | {{Spec2("WebDriver")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("api.Navigator.webdriver")}}</div>
+{{Compat("api.Navigator.webdriver")}}

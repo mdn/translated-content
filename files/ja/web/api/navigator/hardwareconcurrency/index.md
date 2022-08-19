@@ -7,52 +7,53 @@ tags:
   - Navigator
   - Property
   - hardwareConcurrency
-browser-compat: api.Navigator.hardwareConcurrency
 translation_of: Web/API/Navigator/hardwareConcurrency
 original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
+browser-compat: api.Navigator.hardwareConcurrency
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>navigator.hardwareConcurrency</strong></code> は読み取り専用のプロパティで、ユーザーのコンピューター上でスレッドを実行するために使用可能な論理プロセッサー数を返します。</p>
+**`navigator.hardwareConcurrency`** は読み取り専用のプロパティで、ユーザーのコンピューター上でスレッドを実行するために使用可能な論理プロセッサー数を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><em>logicalProcessors</em> = window.navigator.hardwareConcurrency
-</pre>
+```js
+logicalProcessors = window.navigator.hardwareConcurrency
+```
 
-<h2 id="Value">値</h2>
+## 値
 
-<p>論理プロセッサーのコア数を示す数値です。</p>
+論理プロセッサーのコア数を示す数値です。
 
-<p>現代のコンピューターは CPU に複数の物理プロセッサーのコアがあります (通常は 2 コアか 4 コア)。しかし、通常それぞれの物理コアは高度なスケジューリング技術を用いて、一度に複数スレッドを実行することができます。 したがって、例えば 4 コアの CPU は 8 個の<strong>論理プロセッサーコア</strong>を提供することができます。論理プロセッサーのコア数は、コンテキスト切り替えを必要とせずに一度に効果的に実行できるスレッドの数を測定するために利用できます。</p>
+現代のコンピューターは CPU に複数の物理プロセッサーのコアがあります (通常は 2 コアか 4 コア)。しかし、通常それぞれの物理コアは高度なスケジューリング技術を用いて、一度に複数スレッドを実行することができます。 したがって、例えば 4 コアの CPU は 8 個の**論理プロセッサーコア**を提供することができます。論理プロセッサーのコア数は、コンテキスト切り替えを必要とせずに一度に効果的に実行できるスレッドの数を測定するために利用できます。
 
-<p>しかしながら、ブラウザーはより少ない論理コア数を報告することを選択することで、一度に実行できる {{domxref("Worker")}} の数をより正確に表すことがあります。したがって、この数値をユーザーのシステムのコア数の絶対的な測定値として扱わないようにしてください。</p>
+しかしながら、ブラウザーはより少ない論理コア数を報告することを選択することで、一度に実行できる {{domxref("Worker")}} の数をより正確に表すことがあります。したがって、この数値をユーザーのシステムのコア数の絶対的な測定値として扱わないようにしてください。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<p>この例では、ブラウザーが報告した論理プロセッサーごとに {{domxref("Worker")}} が 1 つ作られ、新しいワーカーへの参照と、そのワーカーをまだ使用しているかどうかを示す論理値の値を含むレコードを作っています。これらのオブジェクトは後で使用するために配列に順々に格納されています。後でリクエストを処理するために使うワーカーのプールを作っています。</p>
+この例では、ブラウザーが報告した論理プロセッサーごとに {{domxref("Worker")}} が 1 つ作られ、新しいワーカーへの参照と、そのワーカーをまだ使用しているかどうかを示す論理値の値を含むレコードを作っています。これらのオブジェクトは後で使用するために配列に順々に格納されています。後でリクエストを処理するために使うワーカーのプールを作っています。
 
-<pre class="brush: js">let workerList = [];
+```js
+let workerList = [];
 
-for (let i = 0; i &lt; window.navigator.hardwareConcurrency; i++) {
+for (let i = 0; i < window.navigator.hardwareConcurrency; i++) {
   let newWorker = {
     worker: new Worker('cpuworker.js'),
     inUse: false
   };
   workerList.push(newWorker);
-}</pre>
+}
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Navigator")}}</li>
-  <li>{{domxref("WorkerNavigator")}}</li>
-</ul>
+- {{domxref("Navigator")}}
+- {{domxref("WorkerNavigator")}}

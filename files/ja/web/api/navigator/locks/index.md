@@ -11,37 +11,26 @@ tags:
   - locks
 translation_of: Web/API/Navigator/locks
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Locks")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Locks")}}
 
-<p><span class="seoSummary">{{domxref("Navigator")}} インターフェイスの <strong><code>locks</code></strong> 読み取り専用プロパティは、新しい{{domxref('Lock')}} オブジェクトを要求するためのメソッドを提供する {{domxref("LockManager")}} オブジェクトを返します。既存の <code>Lock</code> オブジェクトを照会します。</span></p>
+{{domxref("Navigator")}} インターフェイスの **`locks`** 読み取り専用プロパティは、新しい{{domxref('Lock')}} オブジェクトを要求するためのメソッドを提供する {{domxref("LockManager")}} オブジェクトを返します。既存の `Lock` オブジェクトを照会します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>lockManager</var> = Navigator.locks</pre>
+```
+var lockManager = Navigator.locks
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>{{domxref("LockManager")}} オブジェクト。</p>
+{{domxref("LockManager")}} オブジェクト。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Locks','#navigator-mixins','locks')}}</td>
-   <td>{{Spec2('Web Locks')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                     | ステータス                   | 備考       |
+| ------------------------------------------------------------------------ | ---------------------------- | ---------- |
+| {{SpecName('Web Locks','#navigator-mixins','locks')}} | {{Spec2('Web Locks')}} | 初回定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-
-
-<p>{{Compat("api.Navigator.locks")}}</p>
+{{Compat("api.Navigator.locks")}}
