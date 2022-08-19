@@ -98,7 +98,7 @@ var selectFormElement = document.forms[index].elements[index];
 | {{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}} | {{ Spec2('HTML WHATWG') }} |          |
 | {{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}     | {{ Spec2('DOM2 Events') }} | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.forms")}}
 

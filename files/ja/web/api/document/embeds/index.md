@@ -31,6 +31,6 @@ nodeList = document.embeds
 | -------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
 | {{SpecName('HTML WHATWG', '#dom-document-embeds', 'Document.embeds')}} | {{ Spec2('HTML WHATWG') }} |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.embeds")}}

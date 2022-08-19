@@ -65,7 +65,7 @@ document.onpointermove = (event) => {
 | ---------------------------------------------------------------------------- | ------------------------------------ |
 | {{SpecName('Pointer Events', '#the-pointermove-event')}} | {{Spec2('Pointer Events')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointermove_event")}}
 

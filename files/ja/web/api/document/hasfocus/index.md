@@ -73,7 +73,7 @@ setInterval(checkPageFocus, 300);
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
 | {{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.hasFocus")}}
 

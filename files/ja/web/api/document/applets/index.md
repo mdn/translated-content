@@ -42,6 +42,6 @@ my_java_app = document.applets[1];
 | {{SpecName('HTML WHATWG', '#dom-document-applets', 'Document.applets')}} | {{ Spec2('HTML WHATWG') }} | 廃止     |
 | {{SpecName('DOM2 HTML', 'html.html#ID-85113862', 'Document.applets')}}     | {{ Spec2('DOM2 Events') }} | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.applets")}}

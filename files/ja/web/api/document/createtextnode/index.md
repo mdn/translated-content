@@ -60,6 +60,6 @@ function addTextNode(text) {
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
 | {{SpecName('DOM WHATWG', '#dom-document-createtextnode', 'Document: createTextNode')}} | {{Spec2('DOM WHATWG')}} |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.createTextNode")}}

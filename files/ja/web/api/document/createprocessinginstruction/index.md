@@ -59,6 +59,6 @@ console.log(new XMLSerializer().serializeToString(doc));
 | {{SpecName('DOM2 Core', 'core.html#ID-135944439', 'createProcessingInstruction()')}}                             | {{Spec2('DOM2 Core')}}     | 変更なし                                                                                                                                                                                             |
 | {{SpecName('DOM1', 'level-one-core.html#ID-135944439', 'createProcessingInstruction()')}}                     | {{Spec2('DOM1')}}         | 初回定義                                                                                                                                                                                             |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.createProcessingInstruction")}}

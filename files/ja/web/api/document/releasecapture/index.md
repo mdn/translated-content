@@ -39,7 +39,7 @@ releaseCapture()
 
 Internet Explorer の実装に基づく。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

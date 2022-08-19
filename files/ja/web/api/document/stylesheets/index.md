@@ -43,6 +43,6 @@ function getStyleSheet(unique_title) {
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
 | {{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}} | {{Spec2('Shadow DOM')}} | 初回定義 |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.DocumentOrShadowRoot.styleSheets")}}

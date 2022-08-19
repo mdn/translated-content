@@ -33,7 +33,7 @@ embedArrayObj = document.plugins
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
 | {{SpecName('HTML WHATWG', '#dom-document-plugins', 'Document.plugins')}} | {{ Spec2('HTML WHATWG') }} |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.plugins")}}
 

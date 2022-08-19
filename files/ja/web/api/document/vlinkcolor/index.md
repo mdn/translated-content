@@ -35,6 +35,6 @@ document.vlinkColor = color
 - 推奨される代替方法は、 HTML の {{HtmlElement("a")}} 要素において CSS で {{ Cssxref(":visited") }} 擬似クラスの色を設定または取得する方法です (例えば `a:visited {color:red;}`)。
 - 他の代替方法に `document.body.vLink` がありますが、これは [HTML 4.01 で非推奨](http://www.w3.org/TR/html401/struct/global.html#adef-vlink)となり、 CSS で代替されました。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.vlinkColor")}}

@@ -63,7 +63,7 @@ document.onpointerout = (event) => {
 | ------------------------------------------------------------------------ | ------------------------------------ |
 | {{SpecName('Pointer Events', '#the-pointerout-event')}} | {{Spec2('Pointer Events')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointerout_event")}}
 

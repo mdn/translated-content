@@ -63,7 +63,7 @@ document.onpointerenter = (event) => {
 | ---------------------------------------------------------------------------- | ------------------------------------ |
 | {{SpecName('Pointer Events', '#the-pointerenter-event')}} | {{Spec2('Pointer Events')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointerenter_event")}}
 

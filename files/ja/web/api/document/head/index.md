@@ -52,7 +52,7 @@ var objRef = document.head;
 | {{SpecName('HTML5 W3C','dom.html#dom-document-head','Document.head')}}     | {{Spec2('HTML5 W3C')}}     |          |
 | {{SpecName('HTML WHATWG','dom.html#dom-document-head','Document.head')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.head")}}
 

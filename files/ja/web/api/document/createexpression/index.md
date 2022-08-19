@@ -32,7 +32,7 @@ xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
 
 {{DOMxRef("XPathExpression")}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.createExpression")}}
 

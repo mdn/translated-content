@@ -30,6 +30,6 @@ scrollElm.scrollTop = 0;
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
 | {{SpecName('CSSOM View','#dom-document-scrollingelement','scrollingElement')}} | {{Spec2('CSSOM View')}} | Initial definition |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Document.scrollingElement")}}

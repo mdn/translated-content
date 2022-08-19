@@ -63,7 +63,7 @@ document.onpointerleave = (event) => {
 | ---------------------------------------------------------------------------- | ------------------------------------ |
 | {{SpecName('Pointer Events', '#the-pointerleave-event')}} | {{Spec2('Pointer Events')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointerleave_event")}}
 

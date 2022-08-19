@@ -35,6 +35,6 @@ contentType = document.contentType;
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
 | {{SpecName('DOM WHATWG', '#dom-document-contenttype', 'Document.contentType')}} | {{Spec2('DOM WHATWG')}} | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.contentType")}}

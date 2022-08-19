@@ -62,7 +62,7 @@ document.onpointerlockchange = (event) => {
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | {{SpecName('Pointer Lock', '#pointerlockchange-and-pointerlockerror-events')}} | {{Spec2('Pointer Lock')}} |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.pointerlockchange_event")}}
 

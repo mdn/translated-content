@@ -34,6 +34,6 @@ Mozilla Firefox では、このプロパティの既定値は赤 (16 進で `#ee
 
 [Gecko](/ja/docs/Mozilla/Gecko) は `alinkColor`/`:active` および {{Cssxref(":focus")}} の両方に対応しています。 Internet Explorer 6 および 7 は [HTML アンカー (\<a>) リンク](/ja/docs/Web/HTML/Element/a)には `alinkColor`/`:active` のみに対応しており、 `:focus` は Gecko と同様に動作します。 IE は `:focus` には対応していません。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.alinkColor")}}

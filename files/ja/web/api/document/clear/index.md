@@ -25,6 +25,6 @@ document.clear();
 
 - [HTML5](http://www.whatwg.org/html/#dom-document-clear)
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Document.clear")}}
