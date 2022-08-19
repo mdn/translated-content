@@ -1487,7 +1487,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncanplay	/zh-CN/docs/Web/API/HTMLMediaElement/canplay_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/zh-CN/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onchange	/zh-CN/docs/Web/API/HTMLElement/change_event
-/zh-CN/docs/Web/API/GlobalEventHandlers/onclick	/zh-CN/docs/conflicting/Web/API/Element/click_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onclick	/zh-CN/docs/Web/API/Element/click_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onclose	/zh-CN/docs/Web/API/HTMLDialogElement/close_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncontextmenu	/zh-CN/docs/Web/API/Element/contextmenu_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event

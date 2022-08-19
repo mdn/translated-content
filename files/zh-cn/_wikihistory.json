@@ -45165,16 +45165,6 @@
       "RainSlide"
     ]
   },
-  "conflicting/Web/API/Element/click_event": {
-    "modified": "2020-10-15T21:40:13.149Z",
-    "contributors": [
-      "knightyun",
-      "RainSlide",
-      "loicaplay",
-      "Ende93",
-      "Hughie"
-    ]
-  },
   "conflicting/Web/API/Element/localName": {
     "modified": "2019-03-24T00:17:44.401Z",
     "contributors": [
