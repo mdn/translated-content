@@ -10,25 +10,33 @@ tags:
   - objectStoreNames
 translation_of: Web/API/IDBDatabase/objectStoreNames
 ---
-<p>{{ APIRef("IDBDatabase") }}</p>
-<div>
- <p>{{domxref("IDBDatabase")}}インターフェイスの<code>objectStoreNames</code>プロパティは、現在接続しているデータベースの<a href="/ja/docs/IndexedDB#gloss_object_store">object stores</a>名のリストを含む{{ domxref("DOMStringList") }}です。</p>
-</div>
-<h2 id="構文">構文</h2>
-<pre class="brush: js">db.objectStoreNames</pre>
-<h3 id="値">値</h3>
-<p>現在接続しているデータベースの<a href="/ja/docs/IndexedDB#gloss_object_store">object stores</a>名のリストを含む{{ domxref("DOMStringList") }}。</p>
-<h2 id="例"><span style="line-height: 1.5;">例</span></h2>
-<pre class="brush: js;highlight:[17]">// Let us open our database
+{{ APIRef("IDBDatabase") }}
+
+{{domxref("IDBDatabase")}}インターフェイスの`objectStoreNames`プロパティは、現在接続しているデータベースの[object stores](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む{{ domxref("DOMStringList") }}です。
+
+## 構文
+
+```js
+db.objectStoreNames
+```
+
+### 値
+
+現在接続しているデータベースの[object stores](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む{{ domxref("DOMStringList") }}。
+
+## 例
+
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
@@ -36,33 +44,25 @@ DBOpenRequest.onsuccess = function(event) {
   // This line will log the version of the connected database, which should be
   // an object that looks like { ['my-store-name'] }
   console.log(db.objectStoreNames);
-};</pre>
-<h2 id="仕様">仕様</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-objectStoreNames', 'objectStoreNames')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+};
+```
 
-<p>{{Compat("api.IDBDatabase.objectStoreNames")}}</p>
+## 仕様
 
-<h2 id="関連情報">関連情報</h2>
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+| Specification                                                                                                    | Status                       | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-objectStoreNames', 'objectStoreNames')}} | {{Spec2('IndexedDB')}} |         |
+
+## ブラウザ実装状況
+
+{{Compat("api.IDBDatabase.objectStoreNames")}}
+
+## 関連情報
+
+- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

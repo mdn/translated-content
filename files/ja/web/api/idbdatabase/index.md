@@ -10,76 +10,58 @@ tags:
   - transactions
 translation_of: Web/API/IDBDatabase
 ---
-<p>{{APIRef()}}</p>
-<div>
- <p>IndexedDB API<code>のIDBDatabase</code>インターフェイスは、<a href="/ja/docs/IndexedDB#database_connection">データベースへの接続</a>を提供します。 <code>IDBDatabase</code>オブジェクトで、データベースの<a href="/ja/docs/IndexedDB#gloss_transaction">transaction</a>を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。</p>
-</div>
-<div class="note">
- <p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
-</div>
-<h2 id="メソッド">メソッド</h2>
-<p>Inherits from: <a href="/ja/docs/DOM/EventTarget">EventTarget</a></p>
-<dl>
- <dt>
-  {{domxref("IDBDatabase.close")}}</dt>
- <dd>
-  即座に応答して、別スレッドでデータベースを閉じる。</dd>
- <dt>
-  {{domxref("IDBDatabase.createObjectStore")}}</dt>
- <dd>
-  新しくオブジェクトストアかインデックスを生成して返す。</dd>
- <dt>
-  {{domxref("IDBDatabase.deleteObjectStore")}}</dt>
- <dd>
-  参照しているインデックスがあったとしても、接続中のデータベースで与えられた名前のオブジェクトストアを削除する。</dd>
- <dt>
-  {{domxref("IDBDatabase.transaction")}}</dt>
- <dd>
-  オブジェクトストアにアクセスできる{{domxref("IDBTransaction.objectStore")}}メソッドを含むトランザクションオブジェクト ({{domxref("IDBTransaction")}})を即座に返す。別スレッドで実行される。</dd>
-</dl>
-<h2 id="プロパティ">プロパティ</h2>
-<dl>
- <dt>
-  {{domxref("IDBDatabase.name")}} {{readonlyInline}}</dt>
- <dd>
-  接続しているデータベース名を含む{{ domxref("DOMString") }} 。</dd>
- <dt>
-  {{domxref("IDBDatabase.version")}} {{readonlyInline}}</dt>
- <dd>
-  接続しているデータベースのバージョンを含む<a href="/ja/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit integer</a>。データベースが初めて作られた場合、この属性は空文字である。</dd>
- <dt>
-  {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}</dt>
- <dd>
-  接続しているデータベースの<a href="/ja/docs/IndexedDB#gloss_object_store">object stores</a>名のリストを含む{{ domxref("DOMStringList") }} 。</dd>
-</dl>
-<h3 id="イベントハンドラ">イベントハンドラ</h3>
-<dl>
- <dt>
-  {{domxref("IDBDatabase.onabort")}}</dt>
- <dd>
-  データベースの接続が中止された場合に発生する。</dd>
- <dt>
-  {{domxref("IDBDatabase.onerror")}}</dt>
- <dd>
-  データベースへの接続が失敗した場合に発生する。</dd>
- <dt>
-  {{domxref("IDBDatabase.onversionchange")}}</dt>
- <dd>
-  <p>データベースの構造が({{domxref("IDBOpenDBRequest.onupgradeneeded")}}<code>イベントで変更されるか、</code>{{domxref("IDBFactory.deleteDatabase")}} がどこかで(ほとんどの場合、同じコンピューターの他のウィンドウやタブで)要求された場合に発生します。これはversion change transaction (see {{domxref("IDBVersionChangeEvent")}})とは異なりますが、関連があります。</p>
- </dd>
-</dl>
-<h2 id="example" name="example">例</h2>
-<p>次のコードスニペットでは、データベースを非同期で開き({{domxref("IDBFactory")}})、成功と失敗の場合にイベントを登録し、アップグレードが必要な場合には、新しいオブジェクトストアを生成しています({{ domxref("IDBdatabase") }})。 完璧に動作する例は、 <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)を見てください。</p>
-<pre class="brush: js;highlight:[13,24,26,27,28,32]">// Let us open our database
+{{APIRef()}}
+
+IndexedDB API`のIDBDatabase`インターフェイスは、[データベースへの接続](/ja/docs/IndexedDB#database_connection)を提供します。 `IDBDatabase`オブジェクトで、データベースの[transaction](/ja/docs/IndexedDB#gloss_transaction)を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。
+
+> **Note:** Everything you do in IndexedDB always happens in the context of a [transaction](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction), representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.
+
+## メソッド
+
+Inherits from: [EventTarget](/ja/docs/DOM/EventTarget)
+
+- {{domxref("IDBDatabase.close")}}
+  - : 即座に応答して、別スレッドでデータベースを閉じる。
+- {{domxref("IDBDatabase.createObjectStore")}}
+  - : 新しくオブジェクトストアかインデックスを生成して返す。
+- {{domxref("IDBDatabase.deleteObjectStore")}}
+  - : 参照しているインデックスがあったとしても、接続中のデータベースで与えられた名前のオブジェクトストアを削除する。
+- {{domxref("IDBDatabase.transaction")}}
+  - : オブジェクトストアにアクセスできる{{domxref("IDBTransaction.objectStore")}}メソッドを含むトランザクションオブジェクト ({{domxref("IDBTransaction")}})を即座に返す。別スレッドで実行される。
+
+## プロパティ
+
+- {{domxref("IDBDatabase.name")}} {{readonlyInline}}
+  - : 接続しているデータベース名を含む{{ domxref("DOMString") }} 。
+- {{domxref("IDBDatabase.version")}} {{readonlyInline}}
+  - : 接続しているデータベースのバージョンを含む[64-bit integer](</ja/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>)。データベースが初めて作られた場合、この属性は空文字である。
+- {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
+  - : 接続しているデータベースの[object stores](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む{{ domxref("DOMStringList") }} 。
+
+### イベントハンドラ
+
+- {{domxref("IDBDatabase.onabort")}}
+  - : データベースの接続が中止された場合に発生する。
+- {{domxref("IDBDatabase.onerror")}}
+  - : データベースへの接続が失敗した場合に発生する。
+- {{domxref("IDBDatabase.onversionchange")}}
+  - : データベースの構造が({{domxref("IDBOpenDBRequest.onupgradeneeded")}}`イベントで変更されるか、`{{domxref("IDBFactory.deleteDatabase")}} がどこかで(ほとんどの場合、同じコンピューターの他のウィンドウやタブで)要求された場合に発生します。これは version change transaction (see {{domxref("IDBVersionChangeEvent")}})とは異なりますが、関連があります。
+
+## 例
+
+次のコードスニペットでは、データベースを非同期で開き({{domxref("IDBFactory")}})、成功と失敗の場合にイベントを登録し、アップグレードが必要な場合には、新しいオブジェクトストアを生成しています({{ domxref("IDBdatabase") }})。 完璧に動作する例は、 [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)を見てください。
+
+```js
+// Let us open our database
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
   // these two event handlers act on the IDBDatabase object, when the database is opened successfully, or not
   DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error loading database.</li>';
   };
 
   DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+    note.innerHTML += '<li>Database initialised.</li>';
 
     // store the result of opening the database in the db variable. This is used a lot later on
     db = DBOpenRequest.result;
@@ -96,7 +78,7 @@ translation_of: Web/API/IDBDatabase
     var db = event.target.result;
 
     db.onerror = function(event) {
-      note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+      note.innerHTML += '<li>Error loading database.</li>';
     };
 
     // Create an objectStore for this database using IDBDatabase.createObjectStore
@@ -113,37 +95,32 @@ translation_of: Web/API/IDBDatabase
 
     objectStore.createIndex("notified", "notified", { unique: false });
 
-    note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
-  };</pre>
-<p>次の行は、データベースでトランザクションを開いて、そしてオブジェクトストアを開いて、内側のデータを操作しています。</p>
-<pre class="brush: js">    var objectStore = db.transaction('toDoList').objectStore('toDoList'); </pre>
-<h2 id="仕様">仕様</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+    note.innerHTML += '<li>Object store created.</li>';
+  };
+```
 
-<p>{{Compat("api.IDBDatabase")}}</p>
+次の行は、データベースでトランザクションを開いて、そしてオブジェクトストアを開いて、内側のデータを操作しています。
 
-<h2 id="関連情報">関連情報</h2>
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
-<p> </p>
+```js
+    var objectStore = db.transaction('toDoList').objectStore('toDoList');
+```
+
+## 仕様
+
+| Specification                                                                        | Status                       | Comment |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}} | {{Spec2('IndexedDB')}} |         |
+
+## ブラウザ実装状況
+
+{{Compat("api.IDBDatabase")}}
+
+## 関連情報
+
+- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
