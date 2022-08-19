@@ -45698,15 +45698,6 @@
       "phone-burner"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects": {
-    "modified": "2020-10-15T21:40:49.845Z",
-    "contributors": [
-      "zhangchen",
-      "imnodb",
-      "codert",
-      "Vincent.Yu"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
     "modified": "2020-10-15T21:37:49.333Z",
     "contributors": [
@@ -45805,12 +45796,6 @@
       "AlexChao"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
-    "modified": "2019-04-06T03:53:43.075Z",
-    "contributors": [
-      "AlexChao"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
     "modified": "2020-10-15T21:21:47.231Z",
     "contributors": [
@@ -45830,17 +45815,6 @@
       "LinusYu",
       "teoli",
       "iwo"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
-    "modified": "2020-10-15T21:21:01.572Z",
-    "contributors": [
-      "qiu_han",
-      "zhangchen",
-      "xgqfrms-GitHub",
-      "keller0",
-      "teoli",
-      "ziyunfei"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
@@ -45886,39 +45860,11 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
-    "modified": "2019-07-04T23:42:36.181Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer": {
     "modified": "2020-10-15T21:58:38.272Z",
     "contributors": [
       "wallena3",
       "xgqfrms-GitHub"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-10-15T23:14:01.224Z",
-    "contributors": [
-      "woshiqiang1",
-      "BobGreen",
-      "zhangchen",
-      "after1271349141",
-      "7anshuai",
-      "zhuangyin",
-      "ReggieLee",
-      "fengma",
-      "JoeyChen"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
-    "modified": "2019-09-06T06:31:54.610Z",
-    "contributors": [
-      "teoli",
-      "purple_force"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {
