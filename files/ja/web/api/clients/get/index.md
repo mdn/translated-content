@@ -10,56 +10,41 @@ tags:
   - get
 translation_of: Web/API/Clients/get
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("Clients")}} インターフェースの <strong><code>get()</code></strong> メソッドは、所与の <code>id</code> と一致するサービスワーカークライアントを取得し、{{jsxref("Promise")}} で返します。</span></p>
+{{domxref("Clients")}} インターフェースの **`get()`** メソッドは、所与の `id` と一致するサービスワーカークライアントを取得し、{{jsxref("Promise")}} で返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">self.clients.get(<em>id</em>).then(function(<em>client</em>) {
+```
+self.clients.get(id).then(function(client) {
   // 返されたクライアントで何かをします
-});</pre>
+});
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>id</code></dt>
- <dd>取得するクライアントの id を表す {{domxref("DOMString")}}。</dd>
-</dl>
+- `id`
+  - : 取得するクライアントの id を表す {{domxref("DOMString")}}。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<dl>
- <dd>{{domxref("Client")}} オブジェクトまたは <code>undefined</code> に解決される {{jsxref("Promise")}}。</dd>
-</dl>
+{{domxref("Client")}} オブジェクトまたは `undefined` に解決される {{jsxref("Promise")}}。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">self.clients.get(id).then(function(client) {
+```js
+self.clients.get(id).then(function(client) {
   self.clients.openWindow(client.url);
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-clients-get', 'get()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                                 | コメント |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#dom-clients-get', 'get()')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.Clients.get")}}</p>
-</div>
+{{Compat("api.Clients.get")}}
