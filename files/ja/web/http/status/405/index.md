@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Status/405
 
 HyperText Transfer Protocol (HTTP) の **`405`\*\***` Method Not Allowed`\*\* レスポンスステータスコードは、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
 
-<p class="newpage">サーバーは 405 レスポンスで、対象のリソースで現在対応しているメソッドの一覧を含む <strong><code>Allow</code></strong> ヘッダー欄を生成しなければなりません。</p>
+サーバーは 405 レスポンスで、対象のリソースで現在対応しているメソッドの一覧を含む **`Allow`** ヘッダー欄を生成しなければなりません。
 
 ## ステータス
 

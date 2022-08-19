@@ -15,11 +15,15 @@ translation_of: Web/HTTP/Headers/Date
 
 **`Date`** は HTTP の一般ヘッダーで、メッセージが発信された日時が含まれています。
 
-<div class="notecard warning"><p><code>Date</code> は fetch 仕様書において<a href="https://fetch.spec.whatwg.org/#forbidden-header-name" rel="nofollow noreferrer">禁止ヘッダー名</a>に挙げられています。 - そのため、このコードは <code>Date</code> ヘッダーを送信しません。</p><pre class="brush: js">fetch('https://httpbin.org/get', {
-    'headers': {
-        'Date': (new Date()).toUTCString()
-    }
-})</pre></div>
+> **Warning:** `Date` は fetch 仕様書において[禁止ヘッダー名](https://fetch.spec.whatwg.org/#forbidden-header-name)に挙げられています。 - そのため、このコードは `Date` ヘッダーを送信しません。
+>
+> ```js
+> fetch('https://httpbin.org/get', {
+>     'headers': {
+>         'Date': (new Date()).toUTCString()
+>     }
+> })
+> ```
 
 <table class="properties">
   <tbody>

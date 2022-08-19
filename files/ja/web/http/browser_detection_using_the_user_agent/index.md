@@ -30,64 +30,102 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 
 ユーザーエージェントの検出を使用しないようにするのであれば、いくつかの選択肢があります。
 
-<dl><dt>機能の検出</dt><dd>機能の検出とは、ページを表示しているブラウザーを特定するのではなく、必要な機能が利用可能であるかどうかを確認することです。利用できない場合は代替手段を使用します。ブラウザーによって異なる動作をする場合は稀ですが、ユーザーエージェント文字列をチェックする代わりに、ブラウザーがその API をどう実装しているか検査する処理を実装し、そこから使い方を判断しましょう。機能の検出の今のところ良い例は次の通りです。最近、 Chrome は<a href="https://www.chromestatus.com/feature/5668726032564224">正規表現に実験的な後方参照の対応を追加しました</a>が、他のブラウザーは今のところ対応していません。ですから、間違って以下のようにするべきと思うかもしれません。</dd><dd><pre class="brush: js">// this code snippet splits a string in a special notation
+- 機能の検出
 
-if (navigator.userAgent.indexOf("Chrome") !== -1){
-// YES! The user is suspected to support look-behind regexps
-// DO NOT USE /(?&#x3C;=[A-Z])/. It will cause a syntax error in
-// browsers that do not support look-behind expressions
-// because all browsers parse the entire script, including
-// sections of the code that are never executed.
-var camelCaseExpression = new RegExp("(?&#x3C;=[A-Z])");
-var splitUpString = function(str) {
-return (""+str).split(camelCaseExpression);
-};
-} else {
-/_This fallback code is much less performant, but works_/
-var splitUpString = function(str){
-return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
-}
-console.log(splitUpString("fooBare")); // ["fooB", "are"]
-console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]</pre><p>上記のコードでは、いくつかの間違った仮定をするでしょう。</p><ul><li>部分文字列 "Chrome" を含むすべてのユーザーエージェント文字列が Chrome であると仮定するでしょう。 UA 文字列は誤解を招くことで有名です。</li><li>ブラウザーが Chrome であれば、ルックバインド機能は常に利用可能であると仮定しています。エージェントは対応が追加される前の古いバージョンの Chrome かもしれないし、 (当時は実験的な機能だったので) それが削除された後のバージョンの Chrome かもしれません。</li><li>最も重要なのは、他のブラウザーがこの機能に対応していないことを前提としていることです。他のブラウザーではいつの間にか対応が追加されていたかもしれませんが、このコードでは劣った道を選択し続けることになります。</li></ul><p>このような問題は、機能自体の対応をテストすることで回避することができます。</p><pre class="brush: js">var isLookBehindSupported = false;
+  - : 機能の検出とは、ページを表示しているブラウザーを特定するのではなく、必要な機能が利用可能であるかどうかを確認することです。利用できない場合は代替手段を使用します。ブラウザーによって異なる動作をする場合は稀ですが、ユーザーエージェント文字列をチェックする代わりに、ブラウザーがその API をどう実装しているか検査する処理を実装し、そこから使い方を判断しましょう。機能の検出の今のところ良い例は次の通りです。最近、 Chrome は[正規表現に実験的な後方参照の対応を追加しました](https://www.chromestatus.com/feature/5668726032564224)が、他のブラウザーは今のところ対応していません。ですから、間違って以下のようにするべきと思うかもしれません。
 
-try {
-new RegExp("(?&#x3C;=)");
-isLookBehindSupported = true;
-} catch (err) {
-// If the agent doesn't support lookbehinds, the attempted
-// creation of a RegExp object using that syntax throws and
-// isLookBehindSupported remains false.
-}
+    ```js
+    // this code snippet splits a string in a special notation
 
-var splitUpString = isLookBehindSupported ? function(str) {
-return (""+str).split(new RegExp("(?&#x3C;=[A-Z])"));
-} : function(str) {
-return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
-
-</pre><p>上記のコードが示すように、ブラウザーの互換性をユーザーエージェントの判定なしに行う方法は<strong>常に</strong>あります。このためにユーザーの文字列をチェックする理由は<strong>決してありません</strong>。</p><p>最後に、上記のコードスニペットは、常に考慮しなければならないクロスブラウザーのコーディングで重大な問題を引き起こします。サポート対象外のブラウザーでテストしている API を意図せず使用しないでください。これは明らかでシンプルに聞こえるかもしれませんが、そうでない時もあります。たとえば、上記のコードスニペットでは、短い regexp 表記 (たとえば /reg/igm) で lookbehind を使用すると、サポートされていないブラウザーで parser エラーが発生します。したがって、あなたのコードの lookbehind がサポートされているセクションであっても、上記の例では <em>new RegExp("(?&#x3C;=look_behind_stuff)");</em> を <em>/(?&#x3C;=look_behind_stuff)/</em> の代わりに使用します。</p></dd><dt>プログレッシブエンハンスメント</dt><dd>この設計手法は、ウェブサイトを「階層」で開発し、ボトムアップのアプローチを使用して、より簡単な階層から始め、階層が上がるに従ってより多くの機能を使用して、サイトの機能を向上させる方法です。</dd><dt>グレイスフルデグラデーション</dt><dd>これはトップダウンのアプローチで、必要なすべての機能を使用して最適なサイトを構築し、それを古いブラウザーでも使用できるように調整する方法です。これは、プログレッシブエンハンスメントよりも難しく、有効性が低くなりますが、場合によっては有用であることがあります。</dd><dt id="Mobile_Device_Detection">モバイル端末の検出</dt><dd>おそらく、ユーザーエージェントの判定で最も一般的かつ誤った使用法は、その端末がモバイル端末であるかどうかを検出することです。しかし、それが後で本当にどうなるかは見過ごされがちです。開発者はユーザーエージェントの判定を使用して、ユーザーの端末がタッチ操作であることや小さい画面であることを判別し、それに応じてウェブサイトを最適化することがあります。ユーザーエージェントの判定でこれらを検出できることもありますが、すべての端末が同じではありません。モバイル端末が大きなサイズの画面を持っている場合もあるし、デスクトップが小さなタッチ画面を持っている場合もあるし、まったく異なる球技であるスマートテレビで見ている場合もあるし、タブレットの向きを回転させて画面の幅や高さを動的に変化させている人もいます。よって、ユーザーエージェントの検出は決定的な方法ではありません。幸い、はるかに良い代替方法があります。ユーザーの端末にタッチ画面があるかどうかを検出するには、 <a href="/ja/docs/Web/API/Navigator/maxTouchPoints">Navigator.maxTouchPoints</a> を使用しましょう。そして、 <em>if (!("maxTouchPoints" in navigator)) { /*Code here*/}</em> の場合のみ、ユーザーエージェントの画面をチェックする既定に戻します。この情報を使用して端末にタッチ画面があるかどうかを確認することができますが、タッチ端末であるだけのためにウェブサイトのレイアウト全体を変更しないようにしてください。これは自分の作業とメンテナンスの量を増やすだけです。それよりも、タッチに適したより大きい、よりクリックしやすいボタンを追加しましょう (CSS を使用してフォントを拡大することができます)。モバイル端末で #exampleButton のパディングを 1em に拡張するコードの例を示します。</dd><dd><pre class="brush: js">var hasTouchScreen = false;
-if ("maxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.maxTouchPoints > 0;
-} else if ("msMaxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.msMaxTouchPoints > 0;
-} else {
-    var mQ = window.matchMedia &#x26;&#x26; matchMedia("(pointer:coarse)");
-    if (mQ &#x26;&#x26; mQ.media === "(pointer:coarse)") {
-        hasTouchScreen = !!mQ.matches;
-    } else if ('orientation' in window) {
-        hasTouchScreen = true; // deprecated, but good fallback
+    if (navigator.userAgent.indexOf("Chrome") !== -1){
+        // YES! The user is suspected to support look-behind regexps
+        // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
+        //  browsers that do not support look-behind expressions
+        //  because all browsers parse the entire script, including
+        //  sections of the code that are never executed.
+        var camelCaseExpression = new RegExp("(?<=[A-Z])");
+        var splitUpString = function(str) {
+            return (""+str).split(camelCaseExpression);
+        };
     } else {
-        // Only as a last resort, fall back to user agent sniffing
-        var UA = navigator.userAgent;
-        hasTouchScreen = (
-            /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-            /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
-        );
+        /*This fallback code is much less performant, but works*/
+        var splitUpString = function(str){
+            return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+        };
     }
-}
-if (hasTouchScreen)
-    document.getElementById("exampleButton").style.padding="1em";</pre></dd><dd>画面のサイズについては、 <em>window.innerWidth</em> と window.addEventListener("resize", function(){ /*refresh screen size dependent things*/ }) を使用してください。画面サイズの対策としてやりたいことは、小さな画面の時に情報を削らないことです。デスクトップバージョンを使用するようになるので、人々を悩ますだけです。むしろ、小さい画面で長いページでは情報の列数を少なくし、画面サイズが大きいほど短いページで多くの列を持つようにしてください。この効果は、 CSS <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">フレックスボックス</a>を使用し、時には部分的な代替手段として<a href="/ja/docs/Learn/CSS/CSS_layout/Floats">浮動レイアウト</a>を用いることで簡単に達成できます。</dd><dd>また、関連性や重要性の低い情報を下に移動させ、ページのコンテンツを有意義にまとめてみてください。トピック外ではありますが、以下の詳細な例を見れば、ユーザーエージェントのスニッフィングを避けるための洞察力やアイデアが得られるかもしれません。複数の情報のボックスで構成されたページを想像してみましょう。それぞれのボックスは様々な猫や犬の品種についてのものであるとします。各ボックスには、画像、概要、経緯があるとします。画像は、大画面でも適切な最大の大きさが維持されるとします。意味のあるグループ分けをするために、すべての猫のボックスとすべての犬のボックスを分離し、猫と犬の箱が混在しないようにしています。大きな画面では、段組みをして画像の左右の無駄な空間を縮小することで、空間を節約します。このボックスは2つの等価な方法により、段組みに分割することができます。ここで、犬のボックスはすべてソースコードの上の方にあり、猫のボックスはすべてソースコードの下の方にあり、これらの箱の親要素はすべて共通であると仮定します。もちろん、猫ボックスのすぐ上に犬ボックスの単一のインスタンスがあります。最初の方法では、水平方向の<a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">フレックスボックス</a>を使用してコンテンツをグループ化し、ページがエンドユーザーに表示されたときに、すべての犬のボックスをページの上部に配置し、すべての猫のボックスをページの下部に配置するようにします。2つ目の方法は<a href="/ja/docs/Web/CSS/Layout_cookbook/Column_layouts">段組み</a>レイアウトを使用し、すべての犬を左に、すべての猫を右に配置します。この特定のシナリオでのみ、フレックスボックス/段組みのフォールバックを提供しないことが適切であり、その結果、古いブラウザー上では非常に幅の広いボックスの単一の列になります。また、以下のことも考慮してください。より多くの人がウェブページに猫を見に来るのであれば、ソースコード上で犬よりも猫をすべて先に書くと、コンテンツが一段になるような小さな画面でも、より多くの人が探しているものをより早く見つけることができるようになるので、良い考えかもしれません。</dd><dd>次に、コードを常に動的にしましょう。ユーザーは携帯端末の向きを回転させて、ページの幅と高さを変更することがあります。または、将来は広げると画面が拡張できるような、折り畳み式電話のような奇妙な端末が現れるかもしれません。折り畳み式電話のような端末をどのように扱うかということに頭を悩ませないでください。開発者ツールのサイドパネルを開いて画面のサイズを変更してみて、ウェブページが滑らかに、流動的に、動的にサイズ変更されるようになるまで満足しないようにしてください。これを行う最も単純な方法は、画面の大きさに基づいてコンテンツを移動させるすべてのコードを、ページが読み込まれたときと、その後の <a href="/ja/docs/Web/API/Window/resize_event">resize</a> イベントのたびに呼び出される単一の関数に分離することです。もし、このレイアウト関数がページの新しいレイアウトを決定する前に多くの計算がある場合は、イベントリスナーが呼び出されないようにイベントリスナーをデバウンスすることを検討してください。また、メディアクエリの <code>(max-width: 25em)</code>, <code>not all and (min-width: 25em)</code>, <code>(max-width: 24.99em)</code> の間には大きな違いがあることにも注意してください。 <code>(max-width: 25em)</code> は <code>(max-width: 25em)</code> を除外し、 <code>not all and (min-width: 25em)</code> は <code>(max-width: 25em)</code> を含みます。 <code>(max-width: 24.99em)</code> は、 <code>not all and (min-width: 25em)</code> の哀れな人のバージョンです。 <code>(max-width: 24.99em)</code> を使用しないでください。適切なメディアクエリを選択し、対応する JavaScript の中で適切な >=, &#x3C;=, >, &#x3C; を選択すると、これらが混ざってしまいやすく、結果として、レイアウトが変更された画面サイズでウェブサイトを見てしまうことになるからです。そのため、レイアウト変更が適切に行われているかどうかを確認するために、レイアウト変更が行われている正確な幅/高さでウェブサイトを徹底的にテストしてください。</dd></dl>
+    console.log(splitUpString("fooBare")); // ["fooB", "are"]
+    console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
+    ```
+
+    上記のコードでは、いくつかの間違った仮定をするでしょう。
+
+    - 部分文字列 "Chrome" を含むすべてのユーザーエージェント文字列が Chrome であると仮定するでしょう。 UA 文字列は誤解を招くことで有名です。
+    - ブラウザーが Chrome であれば、ルックバインド機能は常に利用可能であると仮定しています。エージェントは対応が追加される前の古いバージョンの Chrome かもしれないし、 (当時は実験的な機能だったので) それが削除された後のバージョンの Chrome かもしれません。
+    - 最も重要なのは、他のブラウザーがこの機能に対応していないことを前提としていることです。他のブラウザーではいつの間にか対応が追加されていたかもしれませんが、このコードでは劣った道を選択し続けることになります。
+
+    このような問題は、機能自体の対応をテストすることで回避することができます。
+
+    ```js
+    var isLookBehindSupported = false;
+
+    try {
+        new RegExp("(?<=)");
+        isLookBehindSupported = true;
+    } catch (err) {
+        // If the agent doesn't support lookbehinds, the attempted
+        // creation of a RegExp object using that syntax throws and
+        // isLookBehindSupported remains false.
+    }
+
+    var splitUpString = isLookBehindSupported ? function(str) {
+        return (""+str).split(new RegExp("(?<=[A-Z])"));
+    } : function(str) {
+        return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+    };
+    ```
+
+    上記のコードが示すように、ブラウザーの互換性をユーザーエージェントの判定なしに行う方法は**常に**あります。このためにユーザーの文字列をチェックする理由は**決してありません**。
+
+    最後に、上記のコードスニペットは、常に考慮しなければならないクロスブラウザーのコーディングで重大な問題を引き起こします。サポート対象外のブラウザーでテストしている API を意図せず使用しないでください。これは明らかでシンプルに聞こえるかもしれませんが、そうでない時もあります。たとえば、上記のコードスニペットでは、短い regexp 表記 (たとえば /reg/igm) で lookbehind を使用すると、サポートされていないブラウザーで parser エラーが発生します。したがって、あなたのコードの lookbehind がサポートされているセクションであっても、上記の例では _new RegExp("(?<=look_behind_stuff)");_ を _/(?<=look_behind_stuff)/_ の代わりに使用します。
+
+- プログレッシブエンハンスメント
+  - : この設計手法は、ウェブサイトを「階層」で開発し、ボトムアップのアプローチを使用して、より簡単な階層から始め、階層が上がるに従ってより多くの機能を使用して、サイトの機能を向上させる方法です。
+- グレイスフルデグラデーション
+  - : これはトップダウンのアプローチで、必要なすべての機能を使用して最適なサイトを構築し、それを古いブラウザーでも使用できるように調整する方法です。これは、プログレッシブエンハンスメントよりも難しく、有効性が低くなりますが、場合によっては有用であることがあります。
+- モバイル端末の検出
+
+  - : おそらく、ユーザーエージェントの判定で最も一般的かつ誤った使用法は、その端末がモバイル端末であるかどうかを検出することです。しかし、それが後で本当にどうなるかは見過ごされがちです。開発者はユーザーエージェントの判定を使用して、ユーザーの端末がタッチ操作であることや小さい画面であることを判別し、それに応じてウェブサイトを最適化することがあります。ユーザーエージェントの判定でこれらを検出できることもありますが、すべての端末が同じではありません。モバイル端末が大きなサイズの画面を持っている場合もあるし、デスクトップが小さなタッチ画面を持っている場合もあるし、まったく異なる球技であるスマートテレビで見ている場合もあるし、タブレットの向きを回転させて画面の幅や高さを動的に変化させている人もいます。よって、ユーザーエージェントの検出は決定的な方法ではありません。幸い、はるかに良い代替方法があります。ユーザーの端末にタッチ画面があるかどうかを検出するには、 [Navigator.maxTouchPoints](/ja/docs/Web/API/Navigator/maxTouchPoints) を使用しましょう。そして、 _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_ の場合のみ、ユーザーエージェントの画面をチェックする既定に戻します。この情報を使用して端末にタッチ画面があるかどうかを確認することができますが、タッチ端末であるだけのためにウェブサイトのレイアウト全体を変更しないようにしてください。これは自分の作業とメンテナンスの量を増やすだけです。それよりも、タッチに適したより大きい、よりクリックしやすいボタンを追加しましょう (CSS を使用してフォントを拡大することができます)。モバイル端末で #exampleButton のパディングを 1em に拡張するコードの例を示します。
+
+    ```js
+    var hasTouchScreen = false;
+    if ("maxTouchPoints" in navigator) {
+        hasTouchScreen = navigator.maxTouchPoints > 0;
+    } else if ("msMaxTouchPoints" in navigator) {
+        hasTouchScreen = navigator.msMaxTouchPoints > 0;
+    } else {
+        var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+        if (mQ && mQ.media === "(pointer:coarse)") {
+            hasTouchScreen = !!mQ.matches;
+        } else if ('orientation' in window) {
+            hasTouchScreen = true; // deprecated, but good fallback
+        } else {
+            // Only as a last resort, fall back to user agent sniffing
+            var UA = navigator.userAgent;
+            hasTouchScreen = (
+                /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+                /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+            );
+        }
+    }
+    if (hasTouchScreen)
+        document.getElementById("exampleButton").style.padding="1em";
+    ```
+
+    画面のサイズについては、 _window\.innerWidth_ と window\.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ }) を使用してください。画面サイズの対策としてやりたいことは、小さな画面の時に情報を削らないことです。デスクトップバージョンを使用するようになるので、人々を悩ますだけです。むしろ、小さい画面で長いページでは情報の列数を少なくし、画面サイズが大きいほど短いページで多くの列を持つようにしてください。この効果は、 CSS [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用し、時には部分的な代替手段として[浮動レイアウト](/ja/docs/Learn/CSS/CSS_layout/Floats)を用いることで簡単に達成できます。
+
+    また、関連性や重要性の低い情報を下に移動させ、ページのコンテンツを有意義にまとめてみてください。トピック外ではありますが、以下の詳細な例を見れば、ユーザーエージェントのスニッフィングを避けるための洞察力やアイデアが得られるかもしれません。複数の情報のボックスで構成されたページを想像してみましょう。それぞれのボックスは様々な猫や犬の品種についてのものであるとします。各ボックスには、画像、概要、経緯があるとします。画像は、大画面でも適切な最大の大きさが維持されるとします。意味のあるグループ分けをするために、すべての猫のボックスとすべての犬のボックスを分離し、猫と犬の箱が混在しないようにしています。大きな画面では、段組みをして画像の左右の無駄な空間を縮小することで、空間を節約します。このボックスは 2 つの等価な方法により、段組みに分割することができます。ここで、犬のボックスはすべてソースコードの上の方にあり、猫のボックスはすべてソースコードの下の方にあり、これらの箱の親要素はすべて共通であると仮定します。もちろん、猫ボックスのすぐ上に犬ボックスの単一のインスタンスがあります。最初の方法では、水平方向の[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用してコンテンツをグループ化し、ページがエンドユーザーに表示されたときに、すべての犬のボックスをページの上部に配置し、すべての猫のボックスをページの下部に配置するようにします。2 つ目の方法は[段組み](/ja/docs/Web/CSS/Layout_cookbook/Column_layouts)レイアウトを使用し、すべての犬を左に、すべての猫を右に配置します。この特定のシナリオでのみ、フレックスボックス/段組みのフォールバックを提供しないことが適切であり、その結果、古いブラウザー上では非常に幅の広いボックスの単一の列になります。また、以下のことも考慮してください。より多くの人がウェブページに猫を見に来るのであれば、ソースコード上で犬よりも猫をすべて先に書くと、コンテンツが一段になるような小さな画面でも、より多くの人が探しているものをより早く見つけることができるようになるので、良い考えかもしれません。
+
+    次に、コードを常に動的にしましょう。ユーザーは携帯端末の向きを回転させて、ページの幅と高さを変更することがあります。または、将来は広げると画面が拡張できるような、折り畳み式電話のような奇妙な端末が現れるかもしれません。折り畳み式電話のような端末をどのように扱うかということに頭を悩ませないでください。開発者ツールのサイドパネルを開いて画面のサイズを変更してみて、ウェブページが滑らかに、流動的に、動的にサイズ変更されるようになるまで満足しないようにしてください。これを行う最も単純な方法は、画面の大きさに基づいてコンテンツを移動させるすべてのコードを、ページが読み込まれたときと、その後の [resize](/ja/docs/Web/API/Window/resize_event) イベントのたびに呼び出される単一の関数に分離することです。もし、このレイアウト関数がページの新しいレイアウトを決定する前に多くの計算がある場合は、イベントリスナーが呼び出されないようにイベントリスナーをデバウンスすることを検討してください。また、メディアクエリの `(max-width: 25em)`, `not all and (min-width: 25em)`, `(max-width: 24.99em)` の間には大きな違いがあることにも注意してください。 `(max-width: 25em)` は `(max-width: 25em)` を除外し、 `not all and (min-width: 25em)` は `(max-width: 25em)` を含みます。 `(max-width: 24.99em)` は、 `not all and (min-width: 25em)` の哀れな人のバージョンです。 `(max-width: 24.99em)` を使用しないでください。適切なメディアクエリを選択し、対応する JavaScript の中で適切な >=, <=, >, < を選択すると、これらが混ざってしまいやすく、結果として、レイアウトが変更された画面サイズでウェブサイトを見てしまうことになるからです。そのため、レイアウト変更が適切に行われているかどうかを確認するために、レイアウト変更が行われている正確な幅/高さでウェブサイトを徹底的にテストしてください。
 
 ## 最適なユーザーエージェントの判定
 
