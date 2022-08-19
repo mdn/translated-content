@@ -1,17 +1,23 @@
 ---
-title: Grid エリア
+title: Grid Areas (グリッド領域)
 slug: Glossary/Grid_Areas
 tags:
+  - CSS
   - CSS Grids
+  - Reference
 translation_of: Glossary/Grid_Areas
+l10n:
+  sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
-**グリッドエリア**はグリッド上で一つ以上の {{glossary("grid cell", "グリッドセル")}} からなる長方形の領域です。グリッドエリアは [ライン指定による配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) や [名前付きグリッドエリア](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)でエリアを定義すると作成されます。
+**グリッド領域**はグリッド上で一つ以上の {{glossary("grid cell", "グリッドセル")}} からなる長方形の領域です。グリッド領域は [ライン指定による配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) や [名前付きグリッド領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)で領域を定義すると作成されます。
 
-![Image showing a highlighted grid area](https://mdn.mozillademos.org/files/14771/1_Grid_Area.png)
+![Image showing a highlighted grid area](1_grid_area.png)
 
-グリッドエリアはその性質上、必ず長方形の領域となります。例えば T 字型や L 字型のグリッドエリアを作ることはできません。
+グリッド領域はその性質上、必ず長方形の領域となります。例えば T 字型や L 字型のグリッド領域を作ることはできません。
 
-次の例ではグリッドコンテナに二つのグリッドアイテムを含み、これらに {{cssxref("grid-area")}} プロパティで名前を付け、グリッド上に {{cssxref("grid-template-areas")}} を使ってレイアウトしています。これによりグリッドセルと 4 つ含むものと、2 つ含むものの二つのグリッドエリアができます。
+## 例
+
+次の例ではグリッドコンテナーに 2 つのグリッドアイテムを含み、これらに {{cssxref("grid-area")}} プロパティで名前を付け、グリッド上に {{cssxref("grid-template-areas")}} を使ってレイアウトしています。これによりグリッドセルと 4 つ含むものと、2 つ含むものの 2 つのグリッド領域ができます。
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -55,9 +61,9 @@ translation_of: Glossary/Grid_Areas
 </div>
 ```
 
-{{ EmbedLiveSample('example_1', '300', '280') }}
+{{ EmbedLiveSample('Example', '300', '280') }}
 
-## より詳しく
+## 関連情報
 
 ### プロパティリファレンス
 
@@ -68,8 +74,8 @@ translation_of: Glossary/Grid_Areas
 - {{cssxref("grid-template-areas")}}
 - {{cssxref("grid-area")}}
 
-### さらに詳しい説明
+### それ以外の読み物
 
 - CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS グリッドレイアウトガイド: _[グリッドテンプレートエリア](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- [CSS グリッドレイアウト仕様に於けるグリッドエリアの定義](https://drafts.csswg.org/css-grid/#grid-area-concept)
+- CSS グリッドレイアウトガイド: _[グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- [CSS グリッドレイアウト仕様に於けるグリッド領域の定義](https://drafts.csswg.org/css-grid/#grid-area-concept)
