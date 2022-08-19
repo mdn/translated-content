@@ -10,59 +10,40 @@ tags:
   - createObjectStore
 translation_of: Web/API/IDBDatabase/createObjectStore
 ---
-<p>{{ APIRef("IDBDatabase") }}</p>
+{{ APIRef("IDBDatabase") }}
 
-<div>
-<p> {{domxref("IDBDatabase")}} インターフェイスの<code>createObjectStore()</code> メソッドは、新しいオブジェクトストアやインデックスを生成して返します。</p>
-</div>
+{{domxref("IDBDatabase")}} インターフェイスの`createObjectStore()` メソッドは、新しいオブジェクトストアやインデックスを生成して返します。
 
-<p>このメソッドは、ストアの名前をとるだけでなく、重要なオプションプロパティを定義するためのオプションオブジェクトもとります。ストアの個々のオブジェクトを一意にするために、プロパティを使用できます。 プロパティが識別子ならば、それはすべてのオブジェクトで一意であり、すべてのオブジェクトはそのプロパティを持つべきです。</p>
+このメソッドは、ストアの名前をとるだけでなく、重要なオプションプロパティを定義するためのオプションオブジェクトもとります。ストアの個々のオブジェクトを一意にするために、プロパティを使用できます。 プロパティが識別子ならば、それはすべてのオブジェクトで一意であり、すべてのオブジェクトはそのプロパティを持つべきです。
 
-<p>WebKitブラウザでは、オブジェクトストアやインデックスを生成できるようになる前に、{{ domxref("IDBVersionChangeRequest.setVersion")}}メソッドを呼び出さなければなりません。</p>
+WebKit ブラウザでは、オブジェクトストアやインデックスを生成できるようになる前に、{{ domxref("IDBVersionChangeRequest.setVersion")}}メソッドを呼び出さなければなりません。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="notranslate"><em>IDBDatabase</em>.createObjectStore(<em>name</em>);
-<em>IDBDatabase</em>.createObjectStore(<em>name</em>, <em>options</em>);</pre>
+```
+IDBDatabase.createObjectStore(name);
+IDBDatabase.createObjectStore(name, options);
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<dl>
- <dt>{{domxref("IDBObjectStore")}}</dt>
- <dd>新しく生成されたオブジェクトストア。</dd>
-</dl>
+- {{domxref("IDBObjectStore")}}
+  - : 新しく生成されたオブジェクトストア。
 
-<h3 id="例外">例外</h3>
+### 例外
 
-<p>このメソッドは、次の型の1つを含む{{domxref("DOMError")}}を伴う{{domxref("DOMException")}}を発生させるかもしれません。</p>
+このメソッドは、次の型の 1 つを含む{{domxref("DOMError")}}を伴う{{domxref("DOMException")}}を発生させるかもしれません。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>このメソッドが<code>versionchange</code>トランザクションのコールバックとして呼び出されなかった。WebKitブラウザでは、はじめに {{ APIRef("IDBVersionChangeRequest.setVersion")}}を呼び出さなければならない。既に削除されたか取り除かれたオブジェクトを要求した場合も発生する。</td>
-  </tr>
-  <tr>
-   <td><code>ConstraintError</code></td>
-   <td>与えられた名前のオブジェクトストア(based on case-sensitive comparison) が接続中のデータベースに既に存在する。</td>
-  </tr>
-  <tr>
-   <td><code>InvalidAccessError</code></td>
-   <td><code>autoIncrement</code>がtrueに設定されていて、<code>keyPathが空文字か空文字を含む配列の場合。</code><br>
-     </td>
-  </tr>
- </tbody>
-</table>
+| Exception            | Description                                                                                                                                                                                                                                                                       |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidStateError`  | このメソッドが`versionchange`トランザクションのコールバックとして呼び出されなかった。WebKit ブラウザでは、はじめに {{ APIRef("IDBVersionChangeRequest.setVersion")}}を呼び出さなければならない。既に削除されたか取り除かれたオブジェクトを要求した場合も発生する。 |
+| `ConstraintError`    | 与えられた名前のオブジェクトストア(based on case-sensitive comparison) が接続中のデータベースに既に存在する。                                                                                                                                                                     |
+| `InvalidAccessError` | `autoIncrement`が true に設定されていて、`keyPathが空文字か空文字を含む配列の場合。`                                                                                                                                                                                              |
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js;highlight:[17] notranslate"> // Let us open our database
+```js
+ // Let us open our database
   var request = window.indexedDB.open("toDoList", 4);
 
   // This event handles the event whereby a new version of the database needs to be created
@@ -73,7 +54,7 @@ translation_of: Web/API/IDBDatabase/createObjectStore
     var db = event.target.result;
 
     db.onerror = function(event) {
-      note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+      note.innerHTML += '<li>Error loading database.</li>';
     };
 
     // Create an objectStore for this database
@@ -90,70 +71,41 @@ translation_of: Web/API/IDBDatabase/createObjectStore
 
     objectStore.createIndex("notified", "notified", { unique: false });
 
-    note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
-  };</pre>
+    note.innerHTML += '<li>Object store created.</li>';
+  };
+```
 
-<h2 id="パラメーター">パラメーター</h2>
+## パラメーター
 
-<dl>
- <dt>name</dt>
- <dd>新しく作られるオブジェクトストア名。</dd>
- <dt>optionalParameters</dt>
- <dd>
- <p><em>オプション。</em>メソッドのオプションパラメーターとなる属性を持つオプションオブジェクト。これは次のプロパティを持つ。</p>
+- name
+  - : 新しく作られるオブジェクトストア名。
+- optionalParameters
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Attribute</th>
-    <th scope="col">Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>keyPath</code></td>
-    <td>新しいオブジェクトストアで使用される<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a>。空や特定されていない場合、オブジェクトストアはKey Pathなしで生成されて、<a href="/ja/docs/IndexedDB#gloss_out-of-line_key">out-of-line keys</a>が使用される。</td>
-   </tr>
-   <tr>
-    <td><code>autoIncrement</code></td>
-    <td><code>trueだった場合、オブジェクトストアは</code><a href="/ja/docs/IndexedDB#gloss_key_generator">key generator</a>を持つ。既定値は<code>false。</code></td>
-   </tr>
-  </tbody>
- </table>
+  - : *オプション。*メソッドのオプションパラメーターとなる属性を持つオプションオブジェクト。これは次のプロパティを持つ。
 
- <p>未知のパラメーターは無視される。</p>
- </dd>
-</dl>
+    | Attribute       | Description                                                                                                                                                                                                                                                                        |
+    | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `keyPath`       | 新しいオブジェクトストアで使用される[key path](/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath)。空や特定されていない場合、オブジェクトストアは Key Path なしで生成されて、[out-of-line keys](/ja/docs/IndexedDB#gloss_out-of-line_key)が使用される。 |
+    | `autoIncrement` | `trueだった場合、オブジェクトストアは`[key generator](/ja/docs/IndexedDB#gloss_key_generator)を持つ。既定値は`false。`                                                                                                                                                             |
 
-<h2 id="仕様">仕様</h2>
+    未知のパラメーターは無視される。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-createObjectStore-IDBObjectStore-DOMString-name-IDBObjectStoreParameters-optionalParameters', 'createObjectStore()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## 仕様
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+| Specification                                                                                                                                                                                                            | Status                       | Comment |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-createObjectStore-IDBObjectStore-DOMString-name-IDBObjectStoreParameters-optionalParameters', 'createObjectStore()')}} | {{Spec2('IndexedDB')}} |         |
 
-<p>{{Compat("api.IDBDatabase.createObjectStore")}}</p>
+## ブラウザ実装状況
 
-<h2 id="関連項目">関連項目</h2>
+{{Compat("api.IDBDatabase.createObjectStore")}}
 
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+## 関連項目
+
+- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
