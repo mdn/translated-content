@@ -38,11 +38,11 @@ document.cookie = newCookie;
 
   - `;path=パス` (例えば、 '`/`' 、 '`/mydir`') 指定されない場合は、既定で現在の文書の位置のパスになります。
 
-    > **Note:** **メモ:** {{Gecko("6.0")}} 以前では、引用符付きのパスは引用符が文字列を囲む区切り文字ではなく、文字列の一部であるかのように扱われます。これはすでに修正されています。
+    > **Note:** {{Gecko("6.0")}} 以前では、引用符付きのパスは引用符が文字列を囲む区切り文字ではなく、文字列の一部であるかのように扱われます。これはすでに修正されています。
 
   - `;domain=ドメイン` (例えば、 '`example.com`' または '`subdomain.example.com`')。指定されていない場合は、既定で現在の文書の位置のホストの部分になります。初期の仕様とは対照的に、ドメイン名の前のドットは無視されますが、ブラウザーはその様なドットを含むクッキーの設定を辞退することができます。ドメインが設定されれば、サブドメインも常に含まれます。
 
-    > **Note:** **メモ:** ドメインは JavaScript のオリジンと一致している*必要があります*。外部ドメインへのクッキーの設定は暗黙に無視されます。
+    > **Note:** ドメインは JavaScript のオリジンと一致している*必要があります*。外部ドメインへのクッキーの設定は暗黙に無視されます。
 
   - `;max-age=寿命 (秒数)` (例えば、1 年であれば `60*60*24*365` または 31536000)
   - `;expires=GMTString 形式の日付` もし `expires` も `max-age` も指定しなければ、有効期限はセッションの終了までになります。
@@ -67,7 +67,7 @@ document.cookie = newCookie;
 
   > **Note:** これらのフラグは `secure` 属性と一緒の場合のみ設定できます。
 
-> **Note:** **メモ:** 上記のコードに見られるように、 `document.cookie` はネイティブの*セッター*及び*ゲッター*を持つ[アクセサープロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)であり、値を持つ [データプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)では*ありません*。書き込んだものと読みこんだものは同じにはならず、常に JavaScript インタープリターに仲介されます。
+> **Note:** 上記のコードに見られるように、 `document.cookie` はネイティブの*セッター*及び*ゲッター*を持つ[アクセサープロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)であり、値を持つ [データプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)では*ありません*。書き込んだものと読みこんだものは同じにはならず、常に JavaScript インタープリターに仲介されます。
 
 ## 例
 

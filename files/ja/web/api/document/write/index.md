@@ -67,13 +67,13 @@ document.write(markup);
 </script>
 ```
 
-> **Note:** **注**: `document.write()` および {{domxref("document.writeln")}} は、 [XHTML 文書では動作しません](/ja/docs/Archive/Web/Writing_JavaScript_for_HTML) (エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます)。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の {{Glossary("MIME type", "MIME タイプ")}}で提供されたときに発生します。詳細は [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
+> **Note:** `document.write()` および {{domxref("document.writeln")}} は、 [XHTML 文書では動作しません](/ja/docs/Archive/Web/Writing_JavaScript_for_HTML) (エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます)。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の {{Glossary("MIME type", "MIME タイプ")}}で提供されたときに発生します。詳細は [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
 
-> **Note:** **注**: `document.write` は [deferred](/ja/docs/Web/HTML/Element/script#attr-defer) または [asynchronous](/ja/docs/Web/HTML/Element/script#attr-async) のスクリプト内では無視され、エラーコンソールに "A call to `document.write()` from an asynchronously-loaded external script was ignored" などのメッセージが表示されます。
+> **Note:** `document.write` は [deferred](/ja/docs/Web/HTML/Element/script#attr-defer) または [asynchronous](/ja/docs/Web/HTML/Element/script#attr-async) のスクリプト内では無視され、エラーコンソールに "A call to `document.write()` from an asynchronously-loaded external script was ignored" などのメッセージが表示されます。
 
-> **Note:** **注**: Edge のみ、`document.write()` を {{HTMLElement("iframe")}} 内で複数回呼び出すと、 SCRIPT70: Permission denied エラーが発生します。
+> **Note:** Edge のみ、`document.write()` を {{HTMLElement("iframe")}} 内で複数回呼び出すと、 SCRIPT70: Permission denied エラーが発生します。
 
-> **Note:** **注**: Chrome 55 からは、キャッシュされていない HTTP の場合、`document.write()` を通じて挿入された `<script>` 要素は実行されなくなります。これが成立するのに必要な条件の一覧については、[document.write() に対する介入](https://developers.google.com/web/updates/2016/08/removing-document-write)をご覧ください。
+> **Note:** Chrome 55 からは、キャッシュされていない HTTP の場合、`document.write()` を通じて挿入された `<script>` 要素は実行されなくなります。これが成立するのに必要な条件の一覧については、[document.write() に対する介入](https://developers.google.com/web/updates/2016/08/removing-document-write)をご覧ください。
 
 ## 仕様書
 

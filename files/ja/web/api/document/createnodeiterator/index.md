@@ -47,7 +47,7 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
 - `filter` {{ optional_inline() }}
   - : NodeFilter インターフェースを実装したオブジェクト。その acceptNode() メソッドは、反復可能なノードのリストに含めるかどうかを決定するために、 whatToShow フラグによって含まれていると受け入れられたルートを基準としたサブツリーの各ノードに対して呼び出されます (代わりに単純なコールバック関数を使用することもできます)。このメソッドは `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP` のいずれかを返します。[例](#example)を参照してください。
 
-> **Note:** **メモ:** Gecko 12.0 (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9) より前の版では、このメソッドは DOM4 仕様の一部ではないオプションの 4 番目の引数 (entityReferenceExpansion) を受け入れていました。この引数は、エンティティ参照ノードの子がイテレーターから見えるかどうかを示していました。このようなノードはブラウザーでは作成されないので、この引数は何の効果もありませんでした。
+> **Note:** Gecko 12.0 (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9) より前の版では、このメソッドは DOM4 仕様の一部ではないオプションの 4 番目の引数 (entityReferenceExpansion) を受け入れていました。この引数は、エンティティ参照ノードの子がイテレーターから見えるかどうかを示していました。このようなノードはブラウザーでは作成されないので、この引数は何の効果もありませんでした。
 
 ## 例
 

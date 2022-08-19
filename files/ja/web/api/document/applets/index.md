@@ -16,7 +16,7 @@ translation_of: Web/API/Document/applets
 
 {{domxref("Document")}} インターフェイスの **`applets`** プロパティは、文書内のアプレットのリストを返します。
 
-> **Note:** **メモ**: {{htmlelement("applet")}} 要素は [Gecko 56](https://bugzilla.mozilla.org/show_bug.cgi?id=1279218) および [2015 年後期の Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=470301) から削除されました。それ以来、これらのブラウザーで `document.applets` を呼び出しても空の {{domxref("HTMLCollection")}} しか返しません。 [WebKit](https://bugs.webkit.org/show_bug.cgi?id=157926) および [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11946645/) でも削除が検討されています。
+> **Note:** {{htmlelement("applet")}} 要素は [Gecko 56](https://bugzilla.mozilla.org/show_bug.cgi?id=1279218) および [2015 年後期の Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=470301) から削除されました。それ以来、これらのブラウザーで `document.applets` を呼び出しても空の {{domxref("HTMLCollection")}} しか返しません。 [WebKit](https://bugs.webkit.org/show_bug.cgi?id=157926) および [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11946645/) でも削除が検討されています。
 
 ## 構文
 
