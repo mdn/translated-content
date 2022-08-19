@@ -7,39 +7,35 @@ tags:
   - Navigator
   - Property
   - Reference
-browser-compat: api.Navigator.product
 translation_of: Web/API/NavigatorID/product
 original_slug: Web/API/NavigatorID/product
+browser-compat: api.Navigator.product
 ---
-<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p><strong><code>Navigator.product</code></strong> プロパティの値は、どのブラウザーでも常に "<code>Gecko</code>" です。このプロパティは互換性のためだけに維持されています。</p>
+**`Navigator.product`** プロパティの値は、どのブラウザーでも常に "`Gecko`" です。このプロパティは互換性のためだけに維持されています。
 
+> **Note:** このプロパティが実際の製品名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "`Gecko`" を返します。
 
-<div class="notecard note">
-  <p>このプロパティが実際の製品名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "<code>Gecko</code>" を返します。</p>
-</div>
+## 構文
 
-<h2 id="Syntax">構文</h2>
+```js
+productName = navigator.product
+```
 
-<pre class="brush: js"><em>productName</em> = navigator.product
-</pre>
+### 値
 
-<h3 id="Value">値</h3>
+文字列 "`Gecko`" です。
 
-<p>文字列 "<code>Gecko</code>" です。</p>
-
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Navigator.appCodeName")}}</li>
-  <li>{{domxref("Navigator.appName")}}</li>
-</ul>
+- {{domxref("Navigator.appCodeName")}}
+- {{domxref("Navigator.appName")}}

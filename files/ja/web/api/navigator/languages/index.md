@@ -9,44 +9,43 @@ tags:
   - Read-only
   - Reference
   - languages
-browser-compat: api.Navigator.languages
 translation_of: Web/API/Navigator/languages
 original_slug: Web/API/NavigatorLanguage/languages
+browser-compat: api.Navigator.languages
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p><code><strong>navigator.languages</strong></code> は読み取り専用プロパティで、ユーザーの推奨される言語を表す {{domxref("DOMString")}} の配列を返します。この言語は <a href="http://tools.ietf.org/html/bcp47">BCP 47</a> 言語タグを使用して記述されています。返された配列の中では、設定で最も推奨される言語が最初に来るように並べられています。</p>
+**`navigator.languages`** は読み取り専用プロパティで、ユーザーの推奨される言語を表す {{domxref("DOMString")}} の配列を返します。この言語は [BCP 47](http://tools.ietf.org/html/bcp47) 言語タグを使用して記述されています。返された配列の中では、設定で最も推奨される言語が最初に来るように並べられています。
 
-<p>{{domxref("Navigator.language","navigator.language")}} の値は返される配列の最初の要素です。</p>
+{{domxref("Navigator.language","navigator.language")}} の値は返される配列の最初の要素です。
 
-<p>この値を変更すると、ユーザーの推奨言語が変更され、 {{event("languagechange")}} イベントが {{domxref("Window")}} オブジェクトに発行されます。</p>
+この値を変更すると、ユーザーの推奨言語が変更され、 {{event("languagechange")}} イベントが {{domxref("Window")}} オブジェクトに発行されます。
 
-<p>ユーザーのブラウザーからのすべての HTTP リクエストにある <code>Accept-Language</code> ヘッダーは、 <code>navigator.languages</code> プロパティと同じ値ですが、拡張された <code>qvalues</code> (quality values) フィールドのみが異なります (例えば <code>en-US;q=0.8</code>)。
-</p>
+ユーザーのブラウザーからのすべての HTTP リクエストにある `Accept-Language` ヘッダーは、 `navigator.languages` プロパティと同じ値ですが、拡張された `qvalues` (quality values) フィールドのみが異なります (例えば `en-US;q=0.8`)。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><em>preferredLanguages</em> = <em>globalObj</em>.navigator.languages
-</pre>
+```js
+preferredLanguages = globalObj.navigator.languages
+```
 
-<h2 id="Examples">例</h2>
+## 例
 
-<pre class="brush: js">navigator.language   //"en-US"
+```js
+navigator.language   //"en-US"
 navigator.languages  //["en-US", "zh-CN", "ja-JP"]
-</pre>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("navigator.language")}}</li>
-  <li>{{domxref("navigator")}}</li>
-  <li>{{domxref("Window.onlanguagechange")}}</li>
-</ul>
+- {{domxref("navigator.language")}}
+- {{domxref("navigator")}}
+- {{domxref("Window.onlanguagechange")}}

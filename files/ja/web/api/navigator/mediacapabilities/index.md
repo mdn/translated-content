@@ -10,22 +10,24 @@ tags:
   - メディア能力 API
 translation_of: Web/API/Navigator/mediaCapabilities
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p><code><strong>Navigator.mediaCapabilities</strong></code> プロパティは読み取り専用で、 <a href="/ja/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> で定義されているように、指定された形式のエンコードとデコードおよび出力能力についての情報を取得することができる {{domxref("MediaCapabilities")}} オブジェクトを返します。</p>
+**`Navigator.mediaCapabilities`** プロパティは読み取り専用で、 [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API) で定義されているように、指定された形式のエンコードとデコードおよび出力能力についての情報を取得することができる {{domxref("MediaCapabilities")}} オブジェクトを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>mediaCapabilitiesObj</em> = <em>globalObj</em>.navigator.mediaCapabilities
-</pre>
+```
+mediaCapabilitiesObj = globalObj.navigator.mediaCapabilities
+```
 
-<h2 id="Value" name="Value">値</h2>
+## 値
 
-<p>{{domxref("MediaCapabilities")}} オブジェクト。</p>
+{{domxref("MediaCapabilities")}} オブジェクト。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">navigator.mediaCapabilities.decodingInfo({
+```js
+navigator.mediaCapabilities.decodingInfo({
     type : 'file',
     audio : {
         contentType : "audio/mp3",
@@ -39,36 +41,21 @@ translation_of: Web/API/Navigator/mediaCapabilities
         (result.smooth ? '' : 'not ') + 'smooth, and ' +
         (result.powerEfficient ? '' : 'not ') + 'power efficient.')
 });
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capabilities')}}</td>
-   <td>{{Spec2('Media Capabilities')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                       | 状態                                     | 備考     |
+| -------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName('Media Capabilities')}} | {{Spec2('Media Capabilities')}} | 初回定義 |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Navigator.mediaCapabilities")}}</p>
+{{Compat("api.Navigator.mediaCapabilities")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a></li>
- <li>{{domxref("Navigator")}}</li>
-</ul>
+- [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API)
+- {{domxref("Navigator")}}
 
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
