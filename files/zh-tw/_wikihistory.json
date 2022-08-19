@@ -7760,44 +7760,6 @@
       "Aries0d0f"
     ]
   },
-  "conflicting/Learn/HTML/Introduction_to_HTML": {
-    "modified": "2019-03-23T22:48:17.115Z",
-    "contributors": [
-      "iigmir",
-      "CodinCat",
-      "irvinfly",
-      "slhuang"
-    ]
-  },
-  "conflicting/Learn/JavaScript/Objects": {
-    "modified": "2020-08-05T00:50:19.955Z",
-    "contributors": [
-      "nientsu",
-      "cwlin0416",
-      "fscholz",
-      "jackblackevo",
-      "nightsnow0918",
-      "irvinfly",
-      "sailplaneTW"
-    ]
-  },
-  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
-    "modified": "2020-07-16T22:32:09.821Z",
-    "contributors": [
-      "DahisC",
-      "tangerine1202",
-      "iigmir",
-      "cjchng",
-      "roycrxtw",
-      "MashKao"
-    ]
-  },
-  "conflicting/Learn/Server-side/Django": {
-    "modified": "2019-03-23T23:33:19.493Z",
-    "contributors": [
-      "garylai1990"
-    ]
-  },
   "conflicting/MDN/Writing_guidelines": {
     "modified": "2020-09-30T15:33:00.096Z",
     "contributors": [

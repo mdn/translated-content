@@ -379,7 +379,7 @@
 /zh-TW/docs/JavaScript_typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/JavaScript_技術簡介	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/JavaScript_正規表達式	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
-/zh-TW/docs/JavaScript_物件導向介紹	/zh-TW/docs/conflicting/Learn/JavaScript/Objects
+/zh-TW/docs/JavaScript_物件導向介紹	/zh-TW/docs/Learn/JavaScript/Objects
 /zh-TW/docs/JavaScript_語言的資源	/zh-TW/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/Learn/CSS/CSS_轉場	/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /zh-TW/docs/Learn/CSS/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
@@ -408,10 +408,10 @@
 /zh-TW/docs/Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術	/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /zh-TW/docs/Learn/HTML/Tables/基礎	/zh-TW/docs/Learn/HTML/Tables/Basics
 /zh-TW/docs/Learn/How_to_contribute	/zh-TW/docs/MDN/Contribute/Howto
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-TW/docs/Learn/JavaScript/Asynchronous
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts	/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/zh-TW/docs/Learn/JavaScript/Asynchronous
 /zh-TW/docs/Learn/JavaScript/Building_blocks/函數	/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions
 /zh-TW/docs/Learn/JavaScript/Building_blocks/回傳值	/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values
 /zh-TW/docs/Learn/JavaScript/Building_blocks/建立自己的功能函數	/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
@@ -425,7 +425,7 @@
 /zh-TW/docs/Learn/JavaScript/First_steps/變數	/zh-TW/docs/Learn/JavaScript/First_steps/Variables
 /zh-TW/docs/Learn/JavaScript/First_steps/陣列	/zh-TW/docs/Learn/JavaScript/First_steps/Arrays
 /zh-TW/docs/Learn/JavaScript/Objects/Inheritance	/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
-/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS	/zh-TW/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS	/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /zh-TW/docs/Learn/JavaScript/如何運用	/zh-TW/docs/Learn/JavaScript/Howto
 /zh-TW/docs/Learn/JavaScript/第一步	/zh-TW/docs/Learn/JavaScript/First_steps
 /zh-TW/docs/Learn/Performance/多媒體	/zh-TW/docs/Learn/Performance/Multimedia
@@ -473,7 +473,7 @@
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/Events
 /zh-TW/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
-/zh-TW/docs/Python	/zh-TW/docs/conflicting/Learn/Server-side/Django
+/zh-TW/docs/Python	/zh-TW/docs/Learn/Server-side/Django
 /zh-TW/docs/Quirks_Mode_and_Standards_Mode	/zh-TW/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /zh-TW/docs/SVG	/zh-TW/docs/Web/SVG
 /zh-TW/docs/SVG/Tutorial	/zh-TW/docs/Web/SVG/Tutorial
@@ -705,7 +705,7 @@
 /zh-TW/docs/Web/JavaScript/Guide_old/Keyed_collections	/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections
 /zh-TW/docs/Web/JavaScript/Guide_old/Regular_Expressions	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/Web/JavaScript/Guide_old/Working_with_Objects	/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects
-/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/zh-TW/docs/conflicting/Learn/JavaScript/Objects
+/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/zh-TW/docs/Learn/JavaScript/Objects
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays	/zh-TW/docs/Web/JavaScript/Typed_arrays
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
@@ -861,7 +861,7 @@
 /zh-TW/docs/Web_development	/zh-TW/docs/conflicting/Web/Guide
 /zh-TW/docs/Web_development/Writing_forward-compatible_websites	/zh-TW/docs/Web/Guide/Writing_forward-compatible_websites
 /zh-TW/docs/Web_開發	/zh-TW/docs/conflicting/Web/Guide_6b4b72e1fc91461bde34734ce07b1c08
-/zh-TW/docs/Web_開發/Historical_artifacts_to_avoid	/zh-TW/docs/conflicting/Learn/HTML/Introduction_to_HTML
+/zh-TW/docs/Web_開發/Historical_artifacts_to_avoid	/zh-TW/docs/Learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web_開發/Web開發入門	/zh-TW/docs/Web/Guide/Introduction_to_Web_development
 /zh-TW/docs/XHTML	/zh-TW/docs/Glossary/XHTML
 /zh-TW/docs/en	/en-US/
