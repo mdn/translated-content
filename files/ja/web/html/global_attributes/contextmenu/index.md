@@ -45,7 +45,7 @@ translation_of: Web/HTML/Global_attributes/contextmenu
     <li contextmenu="ChangeImage" id="changeImage">
       以下の画像で、コンテキストメニューから "Change Image" の
       アクションを実行できます。<br />
-      <img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png"
+      <img src="promobutton_mdn5.png"
           contextmenu="ChangeImage" id="promoButton" />
       <menu type="context" id="ChangeImage">
         <menuitem label="Change Image" onclick="changeImage()"></menuitem>

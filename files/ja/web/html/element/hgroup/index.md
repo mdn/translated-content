@@ -9,6 +9,7 @@ tags:
   - HTML5
   - Reference
   - Web
+browser-compat: html.elements.hgroup
 translation_of: Web/HTML/Element/hgroup
 ---
 {{HTMLRef}}

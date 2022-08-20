@@ -84,7 +84,7 @@ translation_of: Web/HTML/Element/li
 
   - : これは整数値の属性で、 {{HTMLElement("ol")}} 要素で定義されたリスト項目の序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリスト項目は、その番号から続いて採番されます。順序なしリスト ({{HTMLElement("ul")}}) やメニュー ({{HTMLElement("menu")}}) では **value** 属性は意味がありません。
 
-    > **Note:** **注**: この属性は HTML4 で非推奨とされましたが、 HTML5 で再導入されました。
+    > **Note:** この属性は HTML4 で非推奨とされましたが、 HTML5 で再導入されました。
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 

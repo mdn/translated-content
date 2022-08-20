@@ -18,7 +18,7 @@ translation_of: Web/HTML/Global_attributes/spellcheck
 - `true`: 可能であればその要素でスペルチェックを行うことを示す
 - `false`: その要素でスペルチェックを行わないことを示す
 
-> **Note:** **注:** `spellcheck` 属性は*列挙型*であり、*論理属性*ではありません。これは、 `true` または `false` のどちらかを明確に使用することが必須であり、 `<textarea spellcheck></textarea>` のような省略形は使用できないということです。正しい使い方は `<textarea spellcheck="true"></textarea>` です。
+> **Note:** `spellcheck` 属性は*列挙型*であり、*論理属性*ではありません。これは、 `true` または `false` のどちらかを明確に使用することが必須であり、 `<textarea spellcheck></textarea>` のような省略形は使用できないということです。正しい使い方は `<textarea spellcheck="true"></textarea>` です。
 
 この属性を設定しなかった場合の既定値は、要素の種類やブラウザーによって定義されます。既定値は*継承*されます。つまりもっとも近い祖先要素の _spellcheck_ が `true` である場合にのみ、自身もスペルチェックを受けることがあります。
 

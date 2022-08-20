@@ -10,19 +10,12 @@ tags:
   - Input Types
   - Reference
   - hidden
+browser-compat: html.elements.input.type_hidden
 translation_of: Web/HTML/Element/input/hidden
 ---
 {{HTMLRef}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
-
-> **Note:** **注**: 以下のコードにはライブサンプルがあります。正しく動作していれば、何も見えないはずです。
-
-```html
-<input id="prodId" name="prodId" type="hidden" value="xm234jq">
-```
-
-{{ EmbedLiveSample('Basic_example', 600, 40) }}
 
 <table class="properties">
   <tbody>
@@ -54,7 +47,7 @@ translation_of: Web/HTML/Element/input/hidden
   </tbody>
 </table>
 
-> **Note:** **注**: {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
+> **Note:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
 
 ## 値
 
@@ -168,7 +161,7 @@ textarea {
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> **Note:** **注**: この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
+> **Note:** この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
 
 送信されるとき、サーバーへ送信されるフォームデータは以下のようになります。
 
@@ -185,7 +178,7 @@ textarea {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-hidden")}}
+{{Compat}}
 
 ## 関連情報
 

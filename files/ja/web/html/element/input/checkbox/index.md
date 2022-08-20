@@ -18,7 +18,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 {{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
 
-> **Note:** **メモ**: [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。ラジオボタンはグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
+> **Note:** [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。ラジオボタンはグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
 
 <table class="properties">
   <tbody>
@@ -74,7 +74,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 `value` 属性が省略された場合は、チェックボックスの既定値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
 
-> **Note:** **メモ**: フォームが送信されたときにチェックボックスがチェックされていなかった場合、チェックされていない状態を表す値 (`value=unchecked` など) が送信されることはなく、値はサーバーに全く送信されません。チェックボックスがチェックされていないときに既定値を送信したい場合は、フォーム内に {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を、同じ `name` と `value` で、おそらく JavaScript で含めることで実現できます。
+> **Note:** フォームが送信されたときにチェックボックスがチェックされていなかった場合、チェックされていない状態を表す値 (`value=unchecked` など) が送信されることはなく、値はサーバーに全く送信されません。チェックボックスがチェックされていないときに既定値を送信したい場合は、フォーム内に {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を、同じ `name` と `value` で、おそらく JavaScript で含めることで実現できます。
 
 ## 追加の属性
 
@@ -206,7 +206,7 @@ inputInstance.indeterminate = true;
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **Note:** **メモ**: 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
+> **Note:** 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
 
 ## 検証
 
@@ -299,6 +299,7 @@ otherCheckbox.addEventListener('change', () => {
 });
 ```
 
+### 結果
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
 ## 仕様書

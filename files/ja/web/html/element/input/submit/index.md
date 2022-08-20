@@ -21,12 +21,6 @@ translation_of: Web/HTML/Element/input/submit
 
 {{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき (ふつうはユーザーがボタンをクリックしたとき)、{{Glossary("user agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
 
-```html
-<input type="submit" value="リクエストを送信">
-```
-
-{{EmbedLiveSample("summary-example2", 650, 30)}}
-
 <table class="properties">
   <tbody>
     <tr>

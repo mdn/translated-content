@@ -9,9 +9,7 @@ tags:
   - HTML フォーム
   - Reference
   - color
-  - フォーム
-  - 入力型
-  - 色
+browser-compat: html.elements.input.type_color
 translation_of: Web/HTML/Element/input/color
 ---
 {{HTMLRef}}
@@ -64,9 +62,9 @@ translation_of: Web/HTML/Element/input/color
 
 type が `color` の {{HTMLElement("input")}} 要素の {{htmlattrxref("value", "input")}} は、常に 16 進表記で RGB カラーを特定する 7 文字の {{domxref("DOMString")}} になります。入力欄には色を大文字でも小文字でも入力することができ、大文字を指定した場合、小文字に変換して格納されます。これ以外の値や、空の値になることはありません。
 
-> **Note:** **注**: 有効な、不透明な *16 進表現*の RGB カラーではない値を設定した場合は、結果的に `#000000` に設定されます。特に、CSS で標準化されている色名や、CSS 関数を値の設定に使用することはできません。HTML と CSS は別な言語や仕様であることを考慮していただければお分かりでしょう。加えて、アルファチャネルのある色はサポートされていません。`#009900aa` のような 9 文字の 16 進表記で色を設定すると、結果的に `#000000` に設定されます。
+> **Note:** 有効な、不透明な *16 進表現*の RGB カラーではない値を設定した場合は、結果的に `#000000` に設定されます。特に、CSS で標準化されている色名や、CSS 関数を値の設定に使用することはできません。HTML と CSS は別な言語や仕様であることを考慮していただければお分かりでしょう。加えて、アルファチャネルのある色はサポートされていません。`#009900aa` のような 9 文字の 16 進表記で色を設定すると、結果的に `#000000` に設定されます。
 
-> **Note:** **注**: `input` の `color` 型に対応していないウェブブラウザーでは、自然に `text` 型にフォールバックされます。ユーザーは様々な方法で色を記述する可能性があるので (`rgb(255, 255, 0)` など)、回避策の一つとして、 `pattern` 属性を `#[0-9a-f]{6}` または `#[0-9A-Fa-f]{6}` に設定しておく方法にして (大文字小文字の変化で異なる結果を期待することはないので、おそらく後者)、 `placeholder` 属性を色を表すためにユーザーの入力を期待する書式、例えば `#ff0000` にする方法があります。
+> **Note:** `input` の `color` 型に対応していないウェブブラウザーでは、自然に `text` 型にフォールバックされます。ユーザーは様々な方法で色を記述する可能性があるので (`rgb(255, 255, 0)` など)、回避策の一つとして、 `pattern` 属性を `#[0-9a-f]{6}` または `#[0-9A-Fa-f]{6}` に設定しておく方法にして (大文字小文字の変化で異なる結果を期待することはないので、おそらく後者)、 `placeholder` 属性を色を表すためにユーザーの入力を期待する書式、例えば `#ff0000` にする方法があります。
 
 ## カラー入力欄の使用
 
@@ -108,20 +106,6 @@ function watchColorPicker(event) {
 ```js
 colorWell.select();
 ```
-
-### 外観のバリエーション
-
-先述の通り、ブラウザーがカラーピッカーのインターフェイスに対応していない場合、color 入力の実装は自動的に値を正しい形式になるよう検証を行うテキストボックスとなります。例えば Safari 10.1 では以下のような外見になります。
-
-![Safari で撮った例のスクリーンショット](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
-
-同じ内容でも Firefox 55 ではこのようになります。
-
-![macOS の Firefox 55 で撮った例のスクリーンショット](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
-
-このとき、対象をクリックすることでプラットフォームのカラーピッカーが表示されます(画像は macOS のカラーピッカー)。
-
-![Firefox Mac でカラーピッカーを開いたこの要素のスクリーンショット。](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
 
 ## 検証
 
@@ -212,14 +196,11 @@ function updateAll(event) {
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                             | 備考     |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#color-state-(type=color)')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-color")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -111,7 +111,7 @@ translation_of: Web/HTML/Element/meter
 
 Google Chrome での表示結果は以下のようになります。
 
-![meter1.png](/@api/deki/files/4940/=meter1.png)
+![current look of \<meter> in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
 ### 「高」の範囲と「低」の範囲の使用例
 
@@ -130,18 +130,15 @@ Google Chrome での表示結果は以下のようになります。
 
 Google Chrome では、 meter の結果は次のように見えます。
 
-![meter2.png](/@api/deki/files/4941/=meter2.png)
+![red meter in Google Chrome](screen_shot_2020-10-12_at_10.11.52_pm.png)
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', '&lt;meter&gt;')}}     | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-meter-element', '&lt;meter&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.meter")}}
+{{Compat}}
 
 ## 関連情報
 

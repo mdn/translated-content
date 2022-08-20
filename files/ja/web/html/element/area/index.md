@@ -136,7 +136,7 @@ translation_of: Web/HTML/Element/area
 
     この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。
 
-    > **Note:** **注:** 新しいブラウザー (例えば Firefox 79 以降) では、 `target="_blank"` を `<area>` 要素に設定すると、暗黙に同じ動作をする `rel` を `rel="noopener"` と設定します。
+    > **Note:** 新しいブラウザー (例えば Firefox 79 以降) では、 `target="_blank"` を `<area>` 要素に設定すると、暗黙に同じ動作をする `rel` を `rel="noopener"` と設定します。
 
 ### 非推奨の属性
 
@@ -146,7 +146,7 @@ translation_of: Web/HTML/Element/area
 
   - : 関連づけた領域にハイパーリンクがないことを示します。
 
-    > **Note:** **注:** HTML5 では `href` 属性を省略すれば十分です。
+    > **Note:** HTML5 では `href` 属性を省略すれば十分です。
 
 - {{htmlattrdef("tabindex")}} {{deprecated_inline}}
   - : ブラウザーのタブオーダーにおける、定義した領域の位置を示す数値です。この属性は HTML5 のグローバル属性です。
@@ -160,7 +160,7 @@ translation_of: Web/HTML/Element/area
   <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
   <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
 </map>
-<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
 ```
 
 ### 結果
@@ -169,13 +169,8 @@ translation_of: Web/HTML/Element/area
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態                                 | 備考                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}} | {{Spec2('Referrer Policy')}} | `referrerpolicy` 属性を追加。 |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-area-element', '&lt;area&gt;')}}                                 | {{Spec2('HTML WHATWG')}}     |                               |
-| {{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-area-element', '&lt;area&gt;')}}                     | {{Spec2('HTML5 W3C')}}         |                               |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.6.1', '&lt;area&gt;')}}                                                 | {{Spec2('HTML4.01')}}         |                               |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.area")}}
+{{Compat}}

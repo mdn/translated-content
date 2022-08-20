@@ -24,7 +24,7 @@ translation_of: Web/HTML/Global_attributes/hidden
 
 同様に、 canvas 要素に `hidden` 属性をつけたものはオフスクリーンバッファーとしてグラフィックエンジンを記述することができますし、フォーム制御では hidden のフォーム要素をフォーム属性を使用して参照することができます。
 
-> **Note:** **注:** `hidden` 属性を持つ要素について、 CSS の {{cssxref("display")}} プロパティの値を変更すると、挙動を上書きします。例えば `display: flex` を設定した要素は、 `hidden` 属性が存在しても表示されます。
+> **Note:** `hidden` 属性を持つ要素について、 CSS の {{cssxref("display")}} プロパティの値を変更すると、挙動を上書きします。例えば `display: flex` を設定した要素は、 `hidden` 属性が存在しても表示されます。
 
 ## 仕様書
 

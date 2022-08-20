@@ -110,7 +110,7 @@ translation_of: Web/HTML/Element/shadow
 
 この要素はどの仕様書でも定義されていません。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("html.elements.shadow")}}
 

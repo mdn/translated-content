@@ -12,7 +12,7 @@ translation_of: Web/HTML/Global_attributes/id
 ---
 {{HTMLSidebar("Global_attributes")}}
 
-**`id` {{glossary("global attribute", "グローバル属性")}}**は、文書全体で一意でなければならない識別子 (ID) を定義します。この属性の用途は、リンク ([フラグメント識別子](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment)を使用)、スクリプト、スタイル ({{glossary("CSS")}} を使用) で要素を特定することです。
+**`id`** {{glossary("global attribute", "グローバル属性")}}は、文書全体で一意でなければならない識別子 (ID) を定義します。この属性の用途は、リンク ([フラグメント識別子](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment)を使用)、スクリプト、スタイル ({{glossary("CSS")}} を使用) で要素を特定することです。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
 
@@ -20,7 +20,7 @@ translation_of: Web/HTML/Global_attributes/id
 
 `id` の値に{{glossary("whitespace", "ホワイトスペース")}}文字 (空白やタブなど) を含めてはいけません。ブラウザーはホワイトスペース文字を含む不適合な ID を、ホワイトスペース文字が ID の一部であるかのように扱います。空白区切りで並べた値を受け入れる {{htmlattrxref("class")}} 属性とは対照的に、要素は ID の値をひとつだけ持つことができます。
 
-> **Note:** **注:** {{glossary("ASCII")}} 英文字、数字、`'_'`、`'-'`、`'.'` 以外の文字は HTML 4 で許容されていなかったため、使用した場合に互換性の問題を引き起こす可能性があります。この制約は {{glossary("HTML5")}} で外されましたが、互換性のために ID は文字で始めるようにしましょう。
+> **Note:** {{glossary("ASCII")}} 英文字、数字、`'_'`、`'-'`、`'.'` 以外の文字は HTML 4 で許容されていなかったため、使用した場合に互換性の問題を引き起こす可能性があります。この制約は {{glossary("HTML5")}} で外されましたが、互換性のために ID は文字で始めるようにしましょう。
 
 ## 仕様書
 
