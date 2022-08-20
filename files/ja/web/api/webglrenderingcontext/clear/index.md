@@ -3,85 +3,68 @@ title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
 translation_of: Web/API/WebGLRenderingContext/clear
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.clear()</code></strong> メソッドは、バッファーをプリセット値で消去します。</p>
+[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clear()`** メソッドは、バッファーをプリセット値で消去します。
 
-<p>プリセット値は、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} や {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} で設定可能です。</p>
+プリセット値は、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} や {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} で設定可能です。
 
-<p>シザーボックス、ディザリング、バッファー書き込みマスクは <code>clear()</code> メソッドに影響します。</p>
+シザーボックス、ディザリング、バッファー書き込みマスクは `clear()` メソッドに影響します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var>gl</var>.clear(<var>mask</var>);
-</pre>
+```
+void gl.clear(mask);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>mask</code></dt>
- <dd>消去されるバッファーを示す {{domxref("GLbitfield")}} のビット論理和マスクです。以下の値を取ることができます。
- <ul>
-  <li><code>gl.COLOR_BUFFER_BIT</code></li>
-  <li><code>gl.DEPTH_BUFFER_BIT</code></li>
-  <li><code>gl.STENCIL_BUFFER_BIT</code></li>
- </ul>
- </dd>
-</dl>
+- `mask`
 
-<h3 id="返り値">返り値</h3>
+  - : 消去されるバッファーを示す {{domxref("GLbitfield")}} のビット論理和マスクです。以下の値を取ることができます。
 
-<p>ありません。</p>
+    - `gl.COLOR_BUFFER_BIT`
+    - `gl.DEPTH_BUFFER_BIT`
+    - `gl.STENCIL_BUFFER_BIT`
 
-<h3 id="例外">例外</h3>
+### 返り値
 
-<p><em>mask</em> が記載した値のうちどれでもない場合、<code>gl.INVALID_ENUM</code> エラーがスローされます。</p>
+ありません。
 
-<h2 id="例">例</h2>
+### 例外
 
-<p><code>clear()</code> メソッドは複数の値を受け入れることができます。</p>
+_mask_ が記載した値のうちどれでもない場合、`gl.INVALID_ENUM` エラーがスローされます。
 
-<pre class="brush: js">gl.clear(gl.DEPTH_BUFFER_BIT);
+## 例
+
+`clear()` メソッドは複数の値を受け入れることができます。
+
+```js
+gl.clear(gl.DEPTH_BUFFER_BIT);
 gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
-</pre>
+```
 
-<p>現在の消去する値を取得するには、<code>COLOR_CLEAR_VALUE</code>, <code>DEPTH_CLEAR_VALUE</code>, や <code>STENCIL_CLEAR_VALUE</code> 定数で問い合わせます。</p>
+現在の消去する値を取得するには、`COLOR_CLEAR_VALUE`, `DEPTH_CLEAR_VALUE`, や `STENCIL_CLEAR_VALUE` 定数で問い合わせます。
 
-<pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
+```js
+gl.getParameter(gl.COLOR_CLEAR_VALUE);
 gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 gl.getParameter(gl.STENCIL_CLEAR_VALUE);
-</pre>
+```
 
-<h2 id="仕様策定状況">仕様策定状況</h2>
+## 仕様策定状況
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.11", "clear")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>初回定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glClear.xml", "glClear")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL API のマニュアルページ。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   | 策定状況                             | コメント                        |
+| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------- |
+| {{SpecName('WebGL', "#5.14.11", "clear")}}                 | {{Spec2('WebGL')}}             | 初回定義。                      |
+| {{SpecName('OpenGL ES 2.0', "glClear.xml", "glClear")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
 
-<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.WebGLRenderingContext.clear")}}</p>
+{{Compat("api.WebGLRenderingContext.clear")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}
