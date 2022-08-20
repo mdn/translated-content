@@ -78,9 +78,9 @@ slug: Web/HTML/Element/table
     - left，表格将在文档左侧显示；
     - center， 表格将在文档中央显示；
     - right， 表格将在文档右侧显示；
-    
+
     > **备注：** 不要使用这个属性，它已经不赞成被使用。{{HTMLElement("table")}} 元素应该使用[CSS](/zh-CN/docs/CSS) 制定样式。设置 {{cssxref("margin-left")}} 、{{cssxref("margin-right")}} 为 `auto` ( 或者 {{cssxref("margin")}} `设置为 0 auto`) 来实现类似于 align 属性的效果。
-    > 
+    >
     > Firefox 4 之前的版本，在 quirks mode 模式下它还支持 `middle，` `absmiddle` `和近似于 center 的 abscenter`。
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
   - : 这个属性定义了表格的背景颜色。 它是一个 6 位的十六进制编码，定义于 [sRGB](http://www.w3.org/Graphics/Color/sRGB)，需要加上'#'作为前缀。 当然也可以使用下面已经被预先定义的字符串，来表示常用的 16 种颜色。
@@ -94,7 +94,7 @@ slug: Web/HTML/Element/table
 - {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
   - : 这个属性定义了表格单元的内容和边框之间的空间。如果它是一个像素长度单位，这个像素将被应用到所有的四个侧边；如果它是一个百分比的长度单位，内容将被作为中心，总的垂直（上和下）长度将代表这个百分比。这同样适用于总的水平（左和右）空间。
 
-    > **备注：** 不要使用这个属性，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用[ CSS](/zh-CN/docs/CSS) 定制样式。 在{{HTMLElement("table")}} 元素上使用 [CSS](/zh-CN/docs/CSS) 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。
+    > **备注：** 不要使用这个属性，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用 [CSS](/zh-CN/docs/CSS) 定制样式。 在{{HTMLElement("table")}} 元素上使用 [CSS](/zh-CN/docs/CSS) 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。
 - {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
   - : 这个属性（使用百分比或像素）定义了两个单元格之间空间的大小（从水平和垂直方向上），包括了表格的顶部与第一行的单元格，表的左边与第一列单元格，表的右边与最后一列的单元格，表的底部与最后一行单元格之间的空间。
 
@@ -103,15 +103,15 @@ slug: Web/HTML/Element/table
   - : 这个枚举属性定义了包围在表格周围的框架的哪个边必须显示。它可能有下列值：
   
     - above
-    - below 
+    - below
     - hsides
     - vsides
     - lhs
     - rhs
     - border
     - box
-    - void  
-    
+    - void
+
     > **备注：** 不要使用这个属性，因为它已经被废弃。{{HTMLElement("table")}} 元素应该使用 [CSS](/zh-CN/docs/CSS) 定制样式。在 {{HTMLElement("table")}} 元素上使用 CSS 的属性 {{cssxref(" border-style ")}} 和 {{cssxref("border-width")}} ，以达到类似于 frame 的效果。
 
 - {{htmlattrdef("rules")}} {{Deprecated_inline()}}
@@ -122,7 +122,7 @@ slug: Web/HTML/Element/table
     - rows，这将使规则在行之间显示；
     - columns，这将使规则在列之间显示；
     - all，这将使规则在列和行之间显示；
-    
+
     > **备注：** 规则的样式是依赖浏览器的（browser-dependant），并且 不能被修改。
     >
     > **不要使用这个属性，因为它已经被废弃。**规则应该使用 [CSS](/zh-CN/docs/CSS) 定义和设计样式。使用 {{cssxref("border")}} 属性，在适当的 {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} 或 {{HTMLElement("colgroup")}} 元素上。
@@ -137,6 +137,7 @@ slug: Web/HTML/Element/table
     > - 将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在旁边添加散文（prose ）描述。
     > - 将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在 {{HTMLElement("thead")}} 元素中添加散文（prose ）描述。
     > - 调整表格，以便不需要这样的描述 (比如，使用 {{HTMLElement("th")}} 和 {{HTMLElement("thead")}} 元素)。
+
 - {{htmlattrdef("width")}} {{Deprecated_inline}}
   - : 该属性定义了表格的宽度。宽度可能是一个像素或者是一个百分比值，宽度的百分比值将被定义为表格容器的宽度。
 

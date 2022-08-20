@@ -1,7 +1,6 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 

@@ -1,11 +1,6 @@
 ---
 title: filter
 slug: Web/SVG/Element/filter
-tags:
-  - SVG
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/filter
 ---
 {{SVGRef}}
 

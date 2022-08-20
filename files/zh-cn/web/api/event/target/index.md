@@ -14,7 +14,7 @@ let theTarget = event.target
 
 ## 示例
 
-`event.target `属性可以用来实现**事件委托** (**event delegation**)。
+`event.target` 属性可以用来实现**事件委托** (**event delegation**)。
 
 ```js
 // Make a list

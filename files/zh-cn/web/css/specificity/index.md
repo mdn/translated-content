@@ -20,11 +20,11 @@ slug: Web/CSS/Specificity
 
 下面列表中，选择器类型的优先级是递增的：
 
-1.  [类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)（例如，`h1`）和伪元素（例如，`::before`）
-2.  [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) (例如，`.example`)，属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
-3.  [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（例如，`#example`）。
+1. [类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)（例如，`h1`）和伪元素（例如，`::before`）
+2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) (例如，`.example`)，属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
+3. [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（例如，`#example`）。
 
-**通配选择符**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择符**（combinators）（{{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/zh-CN/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
+**通配选择符**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择符**（combinators）（{{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['``'](/zh-CN/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
 
 您可以访问 ["Specificity" in "Cascade and inheritance"](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2) 或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
 
@@ -42,8 +42,8 @@ slug: Web/CSS/Specificity
 - **永远不要**在全站范围的 CSS 代码中使用 `!important`
 - **与其使用** **`!important`**，你可以：
 
-1.  更好地利用 CSS 级联属性
-2.  使用更具体的规则。在您选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
+1. 更好地利用 CSS 级联属性
+2. 使用更具体的规则。在您选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
 
     ```html
     <div id="test">
@@ -59,7 +59,7 @@ slug: Web/CSS/Specificity
 
     无论 c​ss 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
 
-3.  对于（2）的一种特殊情况，当您无其他要指定的内容时，请复制简单的选择器以增加特异性。
+3. 对于（2）的一种特殊情况，当您无其他要指定的内容时，请复制简单的选择器以增加特异性。
 
     ```css
     #myId#myId span { color: yellow; }
@@ -100,7 +100,7 @@ p.awesome {
 }
 ```
 
-在外层有 `#someElement` 的情况下，你怎样能使 `awesome `的段落变成红色呢？这种情况下，如果不使用 `!important` ，第一条规则永远比第二条的优先级更高
+在外层有 `#someElement` 的情况下，你怎样能使 `awesome` 的段落变成红色呢？这种情况下，如果不使用 `!important`，第一条规则永远比第二条的优先级更高
 
 #### 怎样覆盖 `!important`
 
@@ -144,7 +144,7 @@ p.awesome {
 
 ### `:is()` 和 `:not()` 例外规则
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of [selector types](/zh-CN/docs/Web/CSS/Specificity$edit#Selector_Types).
+The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of [selector types](/zh-CN/docs/Web/CSS/Specificity#Selector_Types).
 
 `:not` 否定伪类在优先级计算中不会被看作是伪类。事实上，在计算选择器数量时还是会把其中的选择器当做普通选择器进行计数。
 

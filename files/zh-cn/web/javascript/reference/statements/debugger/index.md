@@ -1,10 +1,6 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/debugger
 ---
 {{jsSidebar("Statements")}}
 

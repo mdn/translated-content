@@ -31,7 +31,7 @@ formData.has(name);
 var formData = new FormData();
 ```
 
-下列代码用来检测 ` FormData对象是否存在``username这个key。默认检测一次，使用  `{{domxref("FormData.append")}} 插入`username之后再检测一次：`
+下列代码用来检测 `FormData` 对象是否存在 `username` 这个key。默认检测一次，使用 {{domxref("FormData.append")}} 插入`username` 之后再检测一次：
 
 ```js
 formData.has('username'); // Returns false

@@ -1,7 +1,6 @@
 ---
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 {{JSRef}}
 

@@ -10,7 +10,7 @@ slug: Web/CSS/outline-style
 
 元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出
 
-大多时候使用{{cssxref("outline")}}而不是` outline-style`,` outline-width 和`` outline-color`会更方便。
+大多时候使用{{cssxref("outline")}}而不是 `outline-style`, `outline-width` 和 `outline-color` 会更方便。
 
 {{cssinfo}}
 
@@ -37,10 +37,10 @@ outline-style: unset;
 
 ## 取值
 
-`<br-style> `可为以下这些值：
+`<br-style>` 可为以下这些值：
 
 - none
-  - : 无轮廓 ({{Cssxref("outline-width")}} 为` 0`).
+  - : 无轮廓 ({{Cssxref("outline-width")}} 为 `0`).
 - dotted
   - : 轮廓为一系列点。
 - dashed
@@ -52,11 +52,11 @@ outline-style: unset;
 - groove
   - : 轮廓呈凹下状。
 - ridge
-  - : 与` groove相反`: 轮廓呈凸起状。
+  - : 与 `groove` 相反: 轮廓呈凸起状。
 - inset
   - : 轮廓呈嵌入状。
 - outset
-  - : 与` inset相反`: 轮廓呈突出状。
+  - : 与 `inset` 相反: 轮廓呈突出状。
 
 ### 正式语法
 

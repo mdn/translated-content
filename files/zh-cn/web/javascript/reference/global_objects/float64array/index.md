@@ -1,12 +1,6 @@
 ---
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
-tags:
-  - JavaScript
-  - TypeArray
-  - TypeArrays
-  - 构造函数
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
 ---
 {{JSRef}}
 

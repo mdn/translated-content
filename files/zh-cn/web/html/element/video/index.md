@@ -27,8 +27,9 @@ slug: Web/HTML/Element/video
 - {{htmlattrdef("controlslist")}} {{experimental_inline}}
   - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性会帮助浏览器选择在控制面板上显示哪些控件。允许接受的值有 `nodownload`, `nofullscreen` 和 `noremoteplayback`。如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#attr-disablepictureinpicture) 属性。
 - {{htmlattrdef("crossorigin")}}
-  - : 该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image) 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：_ anonymous
-    _ : 在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将不会携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。
+  - : 该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image) 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
+    - anonymous
+      - : 在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将不会携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。
     - use-credentials
       - : 在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 **anonymous** 一样使用。 查看 [CORS 设置属性](/zh-CN/docs/HTML/CORS_settings_attributes) 获取更多信息。
 - {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}

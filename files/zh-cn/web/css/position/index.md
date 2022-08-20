@@ -10,8 +10,8 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
 
 ### 定位类型
 
-- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`, `absolute`, `fixed `或 `sticky` 的一个元素（换句话说，除`static`以外的任何东西）。
-- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative `的元素。
+- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`, `absolute`, `fixed` 或 `sticky` 的一个元素（换句话说，除`static`以外的任何东西）。
+- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`的元素。
 - **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `absolute` 或 `fixed` 的元素。
 - **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `sticky` 的元素。
 
@@ -29,7 +29,7 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
 ### 取值
 
 - `static`
-  - : 该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 `top`, `right`, `bottom`, `left` 和 `z-index `属性无效。
+  - : 该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 `top`, `right`, `bottom`, `left` 和 `z-index` 属性无效。
 - `relative`
   - : 该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 对 table-\*-group, table-row, table-column, table-cell, table-caption 元素无效。
 - `absolute`

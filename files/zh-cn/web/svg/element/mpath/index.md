@@ -1,14 +1,6 @@
 ---
 title: mpath
 slug: Web/SVG/Element/mpath
-tags:
-  - SVG
-  - SVG 动画
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/mpath
 ---
 {{SVGRef}}
 

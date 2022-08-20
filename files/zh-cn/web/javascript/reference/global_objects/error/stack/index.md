@@ -1,13 +1,6 @@
 ---
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
-tags:
-  - JavaScript
-  - 原型
-  - 参考
-  - 属性
-  - 错误
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
 {{JSRef}} {{non-standard_header}}
 

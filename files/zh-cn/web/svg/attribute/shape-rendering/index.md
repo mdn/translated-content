@@ -1,11 +1,6 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
-tags:
-  - SVG
-  - SVG 线条渲染
-  - 需要完善
-translation_of: Web/SVG/Attribute/shape-rendering
 ---
 « [SVG 属性参考主页](/zh-CN/docs/Web/SVG/Attribute)
 

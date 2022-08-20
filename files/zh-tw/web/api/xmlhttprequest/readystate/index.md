@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
-translation_of: Web/API/XMLHttpRequest/readyState
 ---
 {{APIRef('XMLHttpRequest')}}
 

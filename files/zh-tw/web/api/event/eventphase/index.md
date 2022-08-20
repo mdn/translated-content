@@ -1,7 +1,6 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-translation_of: Web/API/Event/eventPhase
 ---
 {{ApiRef("DOM")}}
 

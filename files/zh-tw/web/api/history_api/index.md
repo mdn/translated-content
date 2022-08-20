@@ -1,11 +1,6 @@
 ---
 title: 操控瀏覽器歷史紀錄
 slug: Web/API/History_API
-tags:
-  - DOM
-  - HTML5
-  - History
-translation_of: Web/API/History_API
 ---
 DOM {{ domxref("window") }} 物件透過 {{ domxref("window.history", "history") }} 物件，提供了進入瀏覽歷史的方式。他透過一些方便的屬性與方法，讓你可以在歷史紀錄中往上一步或往下一步移動，並且讓你——從 HTML5 開始——能操作歷史紀錄堆疊（history stack）的內容。
 

@@ -82,7 +82,7 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) 基于 canvas 的热点图的开源库
 - [JavaScript InfoVis Toolkit](http://thejit.org/) 创建交互式的 2D Canvas 数据可视化
 - [Konva.js](https://konvajs.github.io/) 用于桌面端和移动端应用的 2D canvas 库
-- [p5.js ](https://p5js.org/)包含给艺术家、设计师、教育者、初学者使用的完整的 canvas 绘制功能
+- [p5.js](https://p5js.org/) 包含给艺术家、设计师、教育者、初学者使用的完整的 canvas 绘制功能
 - [Paper.js](http://paperjs.org/) 运行于 HTML5 Canvas 上的开源矢量图形脚本框架
 - [Phaser](https://phaser.io/) 用于基于 Canvas 和 WebGL 的浏览器尤其的快速、自由、有趣的开源框架
 - [Processing.js](http://processingjs.org) 用于处理可视化语言

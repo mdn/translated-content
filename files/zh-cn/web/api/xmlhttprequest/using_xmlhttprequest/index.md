@@ -35,10 +35,10 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 
 如果你使用 `XMLHttpRequest` 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：
 
-1.  使用 [XPath](/zh-CN/docs/Web/XPath) 定位到文档的指定部分。
-2.  手动 [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML) 为字符串或对象。
-3.  使用 [XMLSerializer](/zh-CN/docs/XMLSerializer) 把 DOM 树序列化成字符串或文件。
-4.  如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
+1. 使用 [XPath](/zh-CN/docs/Web/XPath) 定位到文档的指定部分。
+2. 手动 [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML) 为字符串或对象。
+3. 使用 [XMLSerializer](/zh-CN/docs/XMLSerializer) 把 DOM 树序列化成字符串或文件。
+4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
 > **备注：** 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
 
@@ -48,9 +48,9 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 
 如果使用 `XMLHttpRequest` 从远端获取一个 HTML 页面，则所有 HTML 标记会以字符串的形式存放在 responseText 属性里，这样就使得操作和解析这些标记变得困难。解析这些 HTML 标记主要有三种方式：
 
-1.  使用 `XMLHttpRequest.responseXML` 属性。
-2.  将内容通过 `fragment.body.innerHTML` 注入到一个 [文档片段](/zh-CN/docs/Web/API/DocumentFragment) 中，并遍历 DOM 中的片段。
-3.  如果你预先知道 HTML 文档的内容，你可以使用 [RegExp ](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 RegExp 扫描时受到换行符的影响，你也许想要删除所有的换行符。 然而，这种方法是"最后手段"，因为如果 HTML 代码发生轻微变化，该方法将可能失败。
+1. 使用 `XMLHttpRequest.responseXML` 属性。
+2. 将内容通过 `fragment.body.innerHTML` 注入到一个 [文档片段](/zh-CN/docs/Web/API/DocumentFragment) 中，并遍历 DOM 中的片段。
+3. 如果你预先知道 HTML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 RegExp 扫描时受到换行符的影响，你也许想要删除所有的换行符。 然而，这种方法是"最后手段"，因为如果 HTML 代码发生轻微变化，该方法将可能失败。
 
 ## 处理二进制数据
 
@@ -172,7 +172,7 @@ function loadEnd(e) {
 - 使用 AJAX
 - 使用 {{domxref("XMLHttpRequest.FormData", "FormData")}} API
 
-第二种方式（使用 `FormData` API）是最简单最快捷的，但是缺点是被收集的数据无法使用[ JSON.stringify()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 转换为一个 JSON 字符串。
+第二种方式（使用 `FormData` API）是最简单最快捷的，但是缺点是被收集的数据无法使用 [JSON.stringify()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 转换为一个 JSON 字符串。
 只使用 AJAX 则更为复杂，但也更灵活、更强大。
 
 ### 仅使用 XMLHttpRequest
@@ -537,7 +537,7 @@ AJAXSubmit(myForm);
 
 ### 使用 FormData 对象
 
-{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 `XMLHttpRequest` 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 `submit()` 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data". FormData 对象可以被结合 `XMLHttpRequest` 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequests，请转到 [Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects) 页面。为了说教的目的，这里有一个早期的[例子](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest$edit#A_little_vanilla_framework)，被转译成了使用** `FormData` API** 的形式。注意以下代码片段：
+{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 `XMLHttpRequest` 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 `submit()` 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data". FormData 对象可以被结合 `XMLHttpRequest` 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequests，请转到 [Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects) 页面。为了说教的目的，这里有一个早期的[例子](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#A_little_vanilla_framework)，被转译成了使用** `FormData` API** 的形式。注意以下代码片段：
 
 ```html
 <!doctype html>
@@ -756,7 +756,7 @@ oReq.send(null);
 
 {{fx_minversion_note(5, "Versions of Firefox prior to Firefox 5 could use <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> to request cross-site access. This is no longer supported, even though it produces no warning and permission dialog is still presented.")}}
 
-要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 the `Access-Control-Allow-Origin `的 HTTP 头。
+要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 the `Access-Control-Allow-Origin` 的 HTTP 头。
 
 ### XMLHttpRequests 被停止
 
@@ -776,14 +776,14 @@ oReq.send(null);
 
 ## 参考资料
 
-1.  [MDC AJAX introduction](/zh-CN/AJAX/Getting_Started)
-2.  [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-3.  [HTTP access control](/zh-CN/HTTP_access_control)
-4.  [How to check the security state of an XMLHTTPRequest over SSL](/zh-CN/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-5.  [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-6.  [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-7.  [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-8.  ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-9.  [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
+1. [MDC AJAX introduction](/zh-CN/AJAX/Getting_Started)
+2. [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+3. [HTTP access control](/zh-CN/HTTP_access_control)
+4. [How to check the security state of an XMLHTTPRequest over SSL](/zh-CN/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
+5. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
+6. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
+7. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+8. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
+9. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
 10. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
 11. [Reading Ogg files with JavaScript (Chris Double)](http://www.bluishcoder.co.nz/2009/06/05/reading-ogg-files-with-javascript.html)

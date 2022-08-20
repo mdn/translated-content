@@ -1,12 +1,6 @@
 ---
 title: script
 slug: Web/SVG/Element/script
-tags:
-  - SVG
-  - 元素
-  - 参考
-  - 脚本
-translation_of: Web/SVG/Element/script
 ---
 一个 SVG 脚本元素等同于 HTML 中的`script元素，因此这个位置是面向脚本的（例如，ECMAScript）。`
 

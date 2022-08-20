@@ -1,10 +1,6 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-tags:
-  - ECMAScript 5
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 {{JSRef}}
 

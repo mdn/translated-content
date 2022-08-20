@@ -18,7 +18,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools
 >
 > 我们已经把你实现目标所需要的所有必要信息都放在了一个课程里面。
 >
-> [开始](/docs/Learn/Front-end_web_developer)
+> [开始](/zh-CN/docs/Learn/Front-end_web_developer)
 
 ## 指南
 

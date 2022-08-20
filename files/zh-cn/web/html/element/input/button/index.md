@@ -63,7 +63,7 @@ This element can have any of the [global attributes](/zh-CN/docs/HTML/Global_att
     - `post`: The data from the form is included in the body of the form and is sent to the server.
     - `get`: The data from the form is appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
 - {{htmlattrdef("formnovalidate")}}
-  - : Since the input element is a submit button, the **`formnovalidate `**attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner. This is a Boolean attribute.
+  - : Since the input element is a submit button, the **`formnovalidate`** attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner. This is a Boolean attribute.
 - {{htmlattrdef("formtarget")}}
   - : Since the input element is a submit button, the **`formtarget`** attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the element's form owner. The following keywords have special meanings:
 

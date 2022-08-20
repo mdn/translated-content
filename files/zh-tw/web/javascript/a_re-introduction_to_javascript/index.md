@@ -1,11 +1,6 @@
 ---
 title: 重新介紹 JavaScript
 slug: Web/JavaScript/A_re-introduction_to_JavaScript
-tags:
-  - JavaScript
-  - 待翻譯
-  - 所有類別
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 {{jsSidebar}}
 

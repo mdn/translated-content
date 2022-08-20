@@ -15,7 +15,7 @@ slug: Web/HTML/Element/track
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><strong><a href="https://developer.mozilla.org/zh-cn/docs/Web/HTML/Content_categories">内容分类</a></strong></td>
+   <td><strong><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></strong></td>
    <td>无</td>
   </tr>
   <tr>

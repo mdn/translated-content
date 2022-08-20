@@ -1,7 +1,6 @@
 ---
 title: Document.width
 slug: Web/API/Document/width
-translation_of: Web/API/Document/width
 ---
 {{APIRef("DOM")}} {{deprecated_header}}
 

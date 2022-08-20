@@ -1,7 +1,6 @@
 ---
 title: 全域屬性
 slug: Web/HTML/Global_attributes
-translation_of: Web/HTML/Global_attributes
 ---
 {{HTMLSidebar("Global_attributes")}}
 

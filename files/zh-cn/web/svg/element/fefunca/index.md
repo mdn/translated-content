@@ -1,10 +1,6 @@
 ---
 title: feFuncA
 slug: Web/SVG/Element/feFuncA
-tags:
-  - NeedsExample
-  - SVG
-translation_of: Web/SVG/Element/feFuncA
 ---
 {{SVGRef}}
 

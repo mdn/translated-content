@@ -89,5 +89,5 @@ slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 
 ## 参见
 
-- [在移动浏览器上使用配额](http://www.html5rocks.com/en/tutorials/offline/quota-research/)（[ Eiji Kitamura](http://blog.agektmr.com)著）：详细分析了移动浏览器上的客户端存储。
+- [在移动浏览器上使用配额](http://www.html5rocks.com/en/tutorials/offline/quota-research/)（[Eiji Kitamura](http://blog.agektmr.com)著）：详细分析了移动浏览器上的客户端存储。
 - [配额管理 API：快速实践](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts) （[Eiji Kitamura](http://blog.agektmr.com)著）：查看 Chrome / Blink 中的配额管理 API（也应包括 Opera）。

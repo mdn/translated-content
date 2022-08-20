@@ -1,7 +1,6 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-translation_of: Web/API/Event/type
 ---
 {{APIRef}}
 

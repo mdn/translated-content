@@ -1,7 +1,6 @@
 ---
 title: vector-effect
 slug: Web/SVG/Attribute/vector-effect
-translation_of: Web/SVG/Attribute/vector-effect
 ---
 {{SVGRef}}
 

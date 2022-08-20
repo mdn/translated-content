@@ -5,7 +5,7 @@ slug: Web/CSS/integer
 {{CSSRef}}
 
 The **`<integer>`** [CSS](/zh-CN/docs/Web/CSS) [data type](/zh-CN/docs/Web/CSS/CSS_Types) is a special type of {{cssxref("number")}} that represents a whole number, whether positive or negative. Integers can be used in numerous CSS properties, such as {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.
-The **`<integer> `**css 数据类型是一种特殊的\<number>类型，它表示一个整数，无论是正数还是负数。整数可以用于许多 css 属性，例如{{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.
+The **`<integer>`** css 数据类型是一种特殊的\<number>类型，它表示一个整数，无论是正数还是负数。整数可以用于许多 css 属性，例如{{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.
 
 ## 语法
 

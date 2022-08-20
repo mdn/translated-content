@@ -1,15 +1,6 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - WebExtensions
-  - download
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 {{AddonSidebar()}}
 

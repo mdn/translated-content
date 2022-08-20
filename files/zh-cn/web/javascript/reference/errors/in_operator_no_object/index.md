@@ -1,11 +1,6 @@
 ---
 title: 'TypeError: invalid ''in'' operand "x"'
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - JavaScript
-  - 类型错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
 {{jsSidebar("Errors")}}
 

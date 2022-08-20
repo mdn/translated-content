@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Instance
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 {{JSRef}} {{SeeCompatTable}}
 

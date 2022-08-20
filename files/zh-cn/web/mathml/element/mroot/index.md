@@ -1,7 +1,6 @@
 ---
 title: <mroot>
 slug: Web/MathML/Element/mroot
-translation_of: Web/MathML/Element/mroot
 ---
 {{MathMLRef}}
 

@@ -158,7 +158,7 @@ P
 
 本例以一种简单的方法阐述了事件是如何触发以及在 DOM 中是如何处理的。当这个 HTML 文档 BODY 载入的时候，在 TABLE 的首行注册了一个事件监听器。事件监听器通过执行函数 stopEvent 处理事件，从而改变在该表的底部单元的值。
 
-然而，stopEvent 同时也会调用一个事件对象的方法，[event.stopPropagation](/zh-cn/DOM/event.stopPropagation)，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。
+然而，stopEvent 同时也会调用一个事件对象的方法，[event.stopPropagation](/zh-CN/DOM/event.stopPropagation)，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。
 
 ```html
 <!DOCTYPE html>

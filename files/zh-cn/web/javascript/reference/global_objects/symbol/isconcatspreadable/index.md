@@ -1,10 +1,6 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-tags:
-  - JavaScript
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
 {{JSRef}}
 

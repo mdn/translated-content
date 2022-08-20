@@ -1,20 +1,6 @@
 ---
 title: <input>
 slug: Web/HTML/Element/input
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - MakeBrowserAgnostic
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web
-translation_of: Web/HTML/Element/input
 ---
 {{HTMLRef}}
 

@@ -1,15 +1,7 @@
 ---
 title: Map() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-browser-compat: javascript.builtins.Map.Map
 ---
 {{JSRef}}
 

@@ -4,11 +4,11 @@ slug: Web/API/Location
 ---
 {{APIRef("URLUtils")}}
 
-**`Location `**接口表示其链接到的对象的位置（URL）。所做的修改反映在与之相关的对象上。 {{domxref("Document")}} 和 {{domxref("Window")}} 接口都有这样一个链接的 Location，分别通过 {{domxref("Document.location")}}和{{domxref("Window.location")}} 访问。
+**`Location`** 接口表示其链接到的对象的位置（URL）。所做的修改反映在与之相关的对象上。 {{domxref("Document")}} 和 {{domxref("Window")}} 接口都有这样一个链接的 Location，分别通过 {{domxref("Document.location")}}和{{domxref("Window.location")}} 访问。
 
 ## 属性
 
-_`Location `接口不继承任何属性，但是实现了那些来自 {{domxref("URLUtils")}} 的属性。_
+_`Location` 接口不继承任何属性，但是实现了那些来自 {{domxref("URLUtils")}} 的属性。_
 
 - {{domxref("Location.href")}}
   - : 包含整个 URL 的一个{{domxref("DOMString")}}

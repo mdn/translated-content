@@ -1,14 +1,6 @@
 ---
 title: '@font-face'
 slug: Web/CSS/@font-face
-tags:
-  - CSS
-  - CSS Reference
-  - CSS 參考
-  - Fonts
-  - WOFF
-  - 字型
-translation_of: Web/CSS/@font-face
 ---
 {{CSSRef}}
 

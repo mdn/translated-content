@@ -58,7 +58,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("WorkerGlobalScope.close()")}}
   - : Discards any tasks queued in the `WorkerGlobalScope`'s event loop, effectively closing this particular scope.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 
 ### Non-standard methods
 

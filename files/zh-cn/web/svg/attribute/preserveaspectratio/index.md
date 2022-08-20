@@ -1,11 +1,6 @@
 ---
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
-tags:
-  - SVG
-  - SVG 属性
-  - 需要实例
-translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

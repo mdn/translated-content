@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
 {{JSRef("Global_Objects", "Date")}}
 

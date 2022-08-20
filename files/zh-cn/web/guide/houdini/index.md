@@ -25,7 +25,7 @@ Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且�
 
 ```css
 li {
-	background-image: paint(myComponent, stroke, 10px);
+    background-image: paint(myComponent, stroke, 10px);
     --hilights: blue;
     --lowlights: green;
 }

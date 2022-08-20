@@ -1,7 +1,6 @@
 ---
 title: 使用 Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
 Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 [XMLHttpRequest](/en/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
 

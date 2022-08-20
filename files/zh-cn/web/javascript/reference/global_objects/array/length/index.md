@@ -1,12 +1,6 @@
 ---
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - JavaScript
-  - 参考
-  - 属性
-  - 数组
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 {{JSRef}}
 

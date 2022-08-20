@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
 ---
 {{JSRef}}
 

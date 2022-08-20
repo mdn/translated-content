@@ -1,7 +1,6 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 {{JsSidebar("More")}}
 

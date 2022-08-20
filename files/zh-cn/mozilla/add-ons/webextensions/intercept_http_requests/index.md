@@ -1,11 +1,6 @@
 ---
 title: 拦截 HTTP 请求
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
 {{AddonSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: 變形效果
 slug: Web/API/Canvas_API/Tutorial/Transformations
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 

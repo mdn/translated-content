@@ -1,7 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-translation_of: Web/HTML/Element/template
 ---
 {{HTMLRef}}
 

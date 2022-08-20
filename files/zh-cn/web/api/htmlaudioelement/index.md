@@ -62,7 +62,7 @@ audioElement.addEventListener('loadeddata', () => {
 
 ## 事件
 
-_从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用_ [`addEventListener()`](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener) _监听事件或者赋值一个事件监听器给这个接口的_ `oneventname` 属性。
+_从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用_ [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) _监听事件或者赋值一个事件监听器给这个接口的_ `oneventname` 属性。
 
 ## 规范
 

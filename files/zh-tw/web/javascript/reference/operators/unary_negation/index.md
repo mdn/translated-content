@@ -1,12 +1,6 @@
 ---
 title: 一元負號運算子 (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unary_negation
 ---
 {{jsSidebar("Operators")}}
 

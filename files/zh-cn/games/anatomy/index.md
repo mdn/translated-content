@@ -70,7 +70,7 @@ main(); //开始循环
 
 > **备注：** 在实践中，更常见的终止下一个`requestAnimationFrame()`方式是使用 if 语句，而不是调用`cancelAnimationFrame()`。
 
-对于第二个问题，要终止循环，您需要调用` ``window.cancelAnimationFrame()`来取消`main()`的调用。该方法需要传入你最后一次调用`requestAnimationFrame()`时返回的 ID。让我们假设您的游戏的函数和变量是建立在您称为 MyGame 的名称空间上。扩展我们的最后一个例子，主循环现在看起来是这样的：
+对于第二个问题，要终止循环，您需要调用 `window.cancelAnimationFrame()` 来取消 `main()` 的调用。该方法需要传入你最后一次调用 `requestAnimationFrame()` 时返回的 ID。让我们假设您的游戏的函数和变量是建立在您称为 MyGame 的名称空间上。扩展我们的最后一个例子，主循环现在看起来是这样的：
 
 ```js
 /*

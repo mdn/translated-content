@@ -12,13 +12,13 @@ MediaStream Recording API 由一个主接口{{domxref("MediaRecorder")}}组成�
 
 记录一个流的过程是非常容易的：
 
-1.  建立一个 {{domxref("MediaStream")}}或者{{domxref("HTMLMediaElement")}} (以 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的形式) 来充当媒体数据的源。
-2.  创建一个 {{domxref("MediaRecorder")}} 对象，指定源以及任何有需求的的选项 (比如容器的 MIME 类型或它轨道所需的比特率).
-3.  给 {{event("dataavailable")}} 事件设置{{domxref("MediaRecorder.ondataavailable")}} 事件处理函数; 会在数据可利用时候调用。
-4.  一旦媒体源播放，你已经准备好录制，使用 {{domxref("MediaRecorder.start()")}} 开始录制。
-5.  {{event("dataavailable")}} 事件处理函数正如你所愿的在每次数据准备好时调用; 这个事件有一个值为包含媒体数据的{{domxref("Blob")}} 类型的 `data` 属性。你可以强制 `dataavailable` 事件发生，因此会给你传递最新的声音以至于可以让你过滤、保存或者做一些其他的事情。
-6.  当源媒体停止播放时候，录制自动结束。
-7.  你可以随时结束录制通过使用 {{domxref("MediaRecorder.stop()")}}.
+1. 建立一个 {{domxref("MediaStream")}}或者{{domxref("HTMLMediaElement")}} (以 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的形式) 来充当媒体数据的源。
+2. 创建一个 {{domxref("MediaRecorder")}} 对象，指定源以及任何有需求的的选项 (比如容器的 MIME 类型或它轨道所需的比特率).
+3. 给 {{event("dataavailable")}} 事件设置{{domxref("MediaRecorder.ondataavailable")}} 事件处理函数; 会在数据可利用时候调用。
+4. 一旦媒体源播放，你已经准备好录制，使用 {{domxref("MediaRecorder.start()")}} 开始录制。
+5. {{event("dataavailable")}} 事件处理函数正如你所愿的在每次数据准备好时调用; 这个事件有一个值为包含媒体数据的{{domxref("Blob")}} 类型的 `data` 属性。你可以强制 `dataavailable` 事件发生，因此会给你传递最新的声音以至于可以让你过滤、保存或者做一些其他的事情。
+6. 当源媒体停止播放时候，录制自动结束。
+7. 你可以随时结束录制通过使用 {{domxref("MediaRecorder.stop()")}}.
 
 > **备注：** 单单使用包含已经录制好媒体切片的{{domxref("Blob")}}s 将大可不能单独播放。媒体在重放之前需要重新组装。
 

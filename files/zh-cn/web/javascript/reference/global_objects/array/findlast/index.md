@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - findLast
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ---
 {{JSRef}}
 

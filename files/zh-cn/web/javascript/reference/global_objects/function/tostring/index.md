@@ -22,7 +22,7 @@ toString()
 
 {{jsxref("Function")}} 对象覆盖了从 {{jsxref("Object")}} 继承来的 `toString()` 方法，而没有继承 {{jsxref("Object.prototype.toString", "toString")}}。对于用户定义的 `Function` 对象，`toString` 方法返回一个字符串，其中包含用于定义函数的源文本段。
 
-在 `Function` 需要表示为字符串时，JavaScript 会自动调用函数的 `toString `方法，例如：函数与一个字符串进行拼接。
+在 `Function` 需要表示为字符串时，JavaScript 会自动调用函数的 `toString` 方法，例如：函数与一个字符串进行拼接。
 
 若 `this` 不是 `Function` 对象，则 `toString()` 方法将抛出 {{jsxref("TypeError")}}（"Function.prototype.toString called on incompatible object"）异常。
 
@@ -30,7 +30,7 @@ toString()
 Function.prototype.toString.call('foo'); // throws TypeError
 ```
 
-如果是在内置函数、由 {{jsxref("Function.prototype.bind()")}} 返回的函数，或其它非 JavaScript 函数上调用 `toString()`，则返回原生代码字符串，如下
+如果是在内置函数或由 `Function.prototype.bind` 返回的函数上调用 `toString()`，则`toString()` 返回原生代码字符串，如下
 
 ```js
 "function someName() { [native code] }"

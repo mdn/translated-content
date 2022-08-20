@@ -1,7 +1,6 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-translation_of: Web/JavaScript/Reference/Statements/throw
 ---
 {{jsSidebar("Statements")}}
 

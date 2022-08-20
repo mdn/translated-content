@@ -1,7 +1,6 @@
 ---
 title: Bitwise OR (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR
 ---
 {{jsSidebar("Operators")}}
 

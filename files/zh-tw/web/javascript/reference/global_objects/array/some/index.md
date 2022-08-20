@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
 {{JSRef}}
 

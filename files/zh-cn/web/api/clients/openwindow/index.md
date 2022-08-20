@@ -4,7 +4,7 @@ slug: Web/API/Clients/openWindow
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-{{domxref("Clients")}}接口的 **`openWindow()`** 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， **`openWindow() `**将抛出 InvalidAccessError.
+{{domxref("Clients")}}接口的 **`openWindow()`** 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， **`openWindow()`** 将抛出 InvalidAccessError.
 
 在 Firefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。
 

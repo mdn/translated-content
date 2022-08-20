@@ -1,17 +1,6 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-tags:
-  - Array
-  - ECMAScript 5
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 {{JSRef}}
 

@@ -4,7 +4,7 @@ slug: Web/API/FileSystemSync
 ---
 {{APIRef("File System API")}} {{non-standard_header}}
 
-在 [文件系统 API](/en/DOM/File_API/File_System_API) 中， `FileSystemSync `对象表示文件系统。它有两个属性。
+在 [文件系统 API](/en/DOM/File_API/File_System_API) 中， `FileSystemSync` 对象表示文件系统。它有两个属性。
 
 ## 关于这个文档
 

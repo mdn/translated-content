@@ -1,7 +1,6 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-translation_of: Web/API/Network_Information_API
 ---
 {{ SeeCompatTable() }}
 

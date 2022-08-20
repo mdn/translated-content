@@ -1,11 +1,6 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - General Header
-  - HTTP
-  - Reference
-  - header
 ---
 {{HTTPSidebar}}
 

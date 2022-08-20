@@ -1,7 +1,6 @@
 ---
 title: Proximity
 slug: Web/API/Proximity_Events
-translation_of: Web/API/Proximity_Events
 ---
 {{ SeeCompatTable }}
 

@@ -10,7 +10,7 @@ slug: Web/CSS/background-image
 
 在绘制时，图像以 z 方向堆叠的方式进行。先指定的图像会在之后指定的图像上面绘制。因此指定的第一个图像“最接近用户”。
 
-然后元素的边框 [border](/cn/CSS/border) 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。
+然后元素的边框 [border](/zh-CN/CSS/border) 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。
 
 如果一个指定的图像无法被绘制 (比如，被指定的 URI 所表示的文件无法被加载)，浏览器会将此情况等同于其值被设为 `none`。
 

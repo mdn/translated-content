@@ -1,12 +1,6 @@
 ---
 title: CSS 轉場
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - CSS animation
-  - CSS transition
-  - CSS 轉場
-  - CSS 過渡
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 ###
 

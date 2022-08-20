@@ -34,8 +34,8 @@ width: unset;
 
 `width` 属性也指定为：
 
-- 下面关键字值之一：[`min-content`](/zh-CN/docs/Web/CSS/width$edit#min-content)，[`max-content`](/zh-CN/docs/Web/CSS/width$edit#max-content)，[`fit-content`](/zh-CN/docs/Web/CSS/width$edit#fit-content)，[`auto`](/zh-CN/docs/Web/CSS/width$edit#auto)。
-- 一个长度值 [`<length>`](/zh-CN/docs/Web/CSS/width$edit#%3Clength%3E) 或者百分比值 [`<percentage>`](/zh-CN/docs/Web/CSS/width$edit#%3Cpercentage%3E)。
+- 下面关键字值之一：[`min-content`](/zh-CN/docs/Web/CSS/width#min-content)，[`max-content`](/zh-CN/docs/Web/CSS/width#max-content)，[`fit-content`](/zh-CN/docs/Web/CSS/width#fit-content)，[`auto`](/zh-CN/docs/Web/CSS/width#auto)。
+- 一个长度值 [`<length>`](/zh-CN/docs/Web/CSS/width#%3Clength%3E) 或者百分比值 [`<percentage>`](/zh-CN/docs/Web/CSS/width#%3Cpercentage%3E)。
 
 ### 值
 

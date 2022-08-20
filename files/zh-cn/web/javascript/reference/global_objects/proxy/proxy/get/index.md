@@ -1,12 +1,6 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
 ---
 {{JSRef}}

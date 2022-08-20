@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - 原型
-  - 填充工具
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
 {{JSRef}}
 

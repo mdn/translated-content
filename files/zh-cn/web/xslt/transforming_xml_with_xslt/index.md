@@ -1,11 +1,6 @@
 ---
 title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - NeedsMigration
-  - Transforming_XML_with_XSLT
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT
 ---
 ### [An Overview](cn/Transforming_XML_with_XSLT/An_Overview)
 

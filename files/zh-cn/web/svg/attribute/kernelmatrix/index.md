@@ -1,7 +1,6 @@
 ---
 title: kernelMatrix
 slug: Web/SVG/Attribute/kernelMatrix
-translation_of: Web/SVG/Attribute/kernelMatrix
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

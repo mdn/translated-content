@@ -1,11 +1,6 @@
 ---
 title: IndexedDB
 slug: Web/API/IndexedDB_API
-tags:
-  - Database
-  - IndexedDB
-  - bug-840092
-translation_of: Web/API/IndexedDB_API
 ---
 {{SeeCompatTable}}
 

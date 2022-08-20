@@ -1,7 +1,6 @@
 ---
 title: 使用影像
 slug: Web/API/Canvas_API/Tutorial/Using_images
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 

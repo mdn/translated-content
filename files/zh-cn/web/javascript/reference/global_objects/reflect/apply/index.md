@@ -1,12 +1,6 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 {{JSRef}}
 

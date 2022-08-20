@@ -6,7 +6,7 @@ Selectors API 提供了通过与一组选择器匹配来快速轻松地从 DOM �
 
 ## NodeSelector 接口
 
-此规范向实现 [`Document`](/zh-CN/docs/DOM/document), [`DocumentFragment`](/zh-CN/docs/DOM/DocumentFragment), 或 `Element `接口的任何对象添加了两种新方法：
+此规范向实现 [`Document`](/zh-CN/docs/DOM/document), [`DocumentFragment`](/zh-CN/docs/DOM/DocumentFragment), 或 `Element` 接口的任何对象添加了两种新方法：
 
 - `querySelector`
   - : 返回节点子树内与之相匹配的第一个 [`Element`](/zh-CN/docs/DOM/element) 节点。如果没有匹配的节点，则返回 null。

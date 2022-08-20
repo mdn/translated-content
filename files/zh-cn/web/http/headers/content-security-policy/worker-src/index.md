@@ -55,5 +55,5 @@ Content-Security-Policy: worker-src https://example.com/
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [CSP for Web Workers](/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy)
+- [CSP for Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy)
 - {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}

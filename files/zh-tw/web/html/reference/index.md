@@ -1,7 +1,6 @@
 ---
 title: HTML 參考
 slug: Web/HTML/Reference
-translation_of: Web/HTML/Reference
 ---
 {{HTMLSidebar}}
 

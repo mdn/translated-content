@@ -1,14 +1,6 @@
 ---
 title: 弱签名算法
 slug: Web/Security/Weak_Signature_Algorithm
-tags:
-  - Cryptography
-  - Guide
-  - Security
-  - 密码学
-  - 指南
-  - 安全
-translation_of: Web/Security/Weak_Signature_Algorithm
 ---
 在给{{Glossary("Digital certificate", "数字证书")}}{{Glossary("Signature/Security", "签名")}}时，用到的哈希算法的强度对证书的安全性至关重要。本文将提供一些已知的弱签名算法的信息，以便你在适当的时候避免使用它们。
 

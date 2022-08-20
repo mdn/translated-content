@@ -1,7 +1,6 @@
 ---
 title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
-translation_of: Web/JavaScript/Reference/Global_Objects/String/small
 ---
 {{JSRef}} {{deprecated_header}}
 

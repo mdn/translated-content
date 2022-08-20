@@ -17,7 +17,7 @@ anchorElt.referrer = refStr;
 
 - `"no-referrer"` 意味着不要发送 Referer 请求头。
 - `"origin"` 意味着所发送的 Referer 请求头的值为当前页面的源，即 `location.origin` 的值。
-- `"unsafe-url"` 意味着所发送的 Referrer 请求头的值为当前页面完整的 url（即` location.href`）去掉尾部的哈希（即 `location.hash`）之后的值。正如该选项的名字所言（unsafe），此选项是不安全的，它可以将一个 HTTPS 页面的路径信息透露给第三方。
+- `"unsafe-url"` 意味着所发送的 Referrer 请求头的值为当前页面完整的 url（即 `location.href`）去掉尾部的哈希（即 `location.hash`）之后的值。正如该选项的名字所言（unsafe），此选项是不安全的，它可以将一个 HTTPS 页面的路径信息透露给第三方。
 
 ## 示例
 

@@ -2,7 +2,9 @@
 title: <resolution>
 slug: Web/CSS/resolution
 ---
-{{CSSRef}}分辨率：用于描述[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)中的分辨率的\<resolution> CSS[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示输出设备的像素密度。
+{{CSSRef}}
+
+分辨率：用于描述[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)中的分辨率的\<resolution> CSS[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示输出设备的像素密度。
 
 在屏幕上，单位与 CSS 英寸，厘米或像素有关，而与物理值无关。
 

@@ -31,8 +31,9 @@ slug: Web/HTML/Element/iframe
 - {{htmlattrdef("height")}}
   - : 以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为`150`。
 - {{htmlattrdef("importance")}} {{experimental_inline}}
-  - : 表示 `<iframe> `的 `src` 属性指定的资源的加载优先级。允许的值有：_ `auto` (default)
-    _ : 不指定优先级。浏览器根据自身情况决定资源的加载顺序
+  - : 表示 `<iframe>` 的 `src` 属性指定的资源的加载优先级。允许的值有：
+    - `auto` (default)
+      - : 不指定优先级。浏览器根据自身情况决定资源的加载顺序
     - `high`
       - : 资源的加载优先级较高
     - `low`
@@ -60,7 +61,7 @@ slug: Web/HTML/Element/iframe
     - `allow-pointer-lock`: 允许嵌入的浏览上下文使用 [Pointer Lock API](/zh-CN/docs/API/Pointer_Lock_API).
     - `allow-popups`: 允许弹窗 (例如 window\.open, target="\_blank", `showModalDialog`)。如果没有使用该关键字，相应的功能将自动被禁用。
     - `allow-popups-to-escape-sandbox`: 允许沙箱化的文档打开新窗口，并且新窗口不会继承沙箱标记。例如，安全地沙箱化一个广告页面，而不会在广告链接到的新页面中启用相同的限制条件。
-    - `allow-presentation`: 允许嵌入的浏览上下文开始一个[ presentation session](/zh-CN/docs/Web/API/PresentationRequest)。
+    - `allow-presentation`: 允许嵌入的浏览上下文开始一个 [presentation session](/zh-CN/docs/Web/API/PresentationRequest)。
     - `allow-same-origin`: 如果没有使用该关键字，嵌入的浏览上下文将被视为来自一个独立的源，这将使 {{Glossary("same-origin policy")}} 同源检查失败。
     - `allow-scripts`: 允许嵌入的浏览上下文运行脚本（但不能创建弹窗）。如果没有使用该关键字，就无法运行脚本。
     - `allow-storage-access-by-user-activation` {{experimental_inline}}: 允许嵌入的浏览上下文通过 [Storage Access API](/zh-CN/docs/Web/API/Storage_Access_API) 使用父级浏览上下文的存储功能。
@@ -71,6 +72,7 @@ slug: Web/HTML/Element/iframe
     >
     > - 如果攻击者可以在沙箱化的 `iframe` 之外展示内容，例如用户在新标签页中打开内联框架，那么沙箱化也就没有意义了。建议把这种内容放置到独立的专用域中，以减小可能的损失。
     > - 沙箱属性 (sandbox) 在 Internet Explorer 9 及更早的版本上不被支持。
+
 - {{htmlattrdef("src")}}
   - : 被嵌套的页面的 URL 地址。使用 `about:blank` 值可以嵌入一个遵从[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)的空白页。在 Firefox（version 65 及更高版本）、基于 Chromium 的浏览器、Safari/iOS 中使用代码移除 `iframe` 的 `src` 属性（例如通过 {{domxref("Element.removeAttribute()")}} ）会导致 `about:blank` 被载入 frame。
 - {{htmlattrdef("srcdoc")}}

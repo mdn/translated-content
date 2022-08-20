@@ -33,7 +33,7 @@ original_slug: Web/HTTP/Caching_FAQ
 - 不完全的响应：响应状态码 {{HTTPStatus(206)}}，只返回局部的信息。
 - 除了 {{HTTPMethod("GET")}} 请求外，如果匹配到作为一个已被定义的 cache 键名的响应。
 
-针对一些特定的请求，也可以通过关键字区分多个存储的不同响应以组成缓存的内容。具体参考[下文](<#varying responses>)关于 {{HTTPHeader("Vary")}} 的信息。
+针对一些特定的请求，也可以通过关键字区分多个存储的不同响应以组成缓存的内容。具体参考[下文](#varying_responses)关于 {{HTTPHeader("Vary")}} 的信息。
 
 ## 缓存控制
 

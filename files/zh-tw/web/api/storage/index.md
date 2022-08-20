@@ -1,7 +1,6 @@
 ---
 title: Storage
 slug: Web/API/Storage
-translation_of: Web/API/Storage
 ---
 {{APIRef("Web Storage API")}}
 

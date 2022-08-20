@@ -1,13 +1,6 @@
 ---
 title: 方法的定义
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Object
-  - 语法
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
 {{JsSidebar("Functions")}}
 

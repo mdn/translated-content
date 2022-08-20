@@ -1,12 +1,6 @@
 ---
 title: style
 slug: Web/SVG/Attribute/style
-tags:
-  - SVG
-  - SVG Attribute
-  - Style
-  - svg style
-translation_of: Web/SVG/Attribute/style
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

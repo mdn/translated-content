@@ -1,13 +1,6 @@
 ---
 title: ':first-of-type'
 slug: Web/CSS/:first-of-type
-tags:
-  - CSS
-  - CSS 虛擬類別
-  - 參考
-  - 外觀
-  - 網頁
-translation_of: Web/CSS/:first-of-type
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: <br>（斷行元素）
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 ---
 {{HTMLRef}}
 

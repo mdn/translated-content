@@ -6,7 +6,7 @@ slug: Web/API/IDBObjectStore/add
 
 {{domxref("IDBObjectStore")}} 接口中的 **`add()`** 方法返回一个 {{domxref("IDBRequest")}} 对象，在单独的线程中创建一个结构（[structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone)）化克隆值，并且在对象存储中存储这个克隆值。这个方法用作在一个对象存储中添加一条新的记录。
 
-要确定添加操作是否成功完成，可以监听事务的 `complete` 事件。除了 `IDBObjectStore.add `请求 `success` 事件之外，因为事务在成功被触发后仍然可能失败。换句话说，成功事件只有在事务成功排队后才会触发。
+要确定添加操作是否成功完成，可以监听事务的 `complete` 事件。除了 `IDBObjectStore.add` 请求 `success` 事件之外，因为事务在成功被触发后仍然可能失败。换句话说，成功事件只有在事务成功排队后才会触发。
 
 **`add()`** 方法是唯一的插入方法。如果以关键字参数作为主键的一条记录已经存在在存储对象中，这时在返回的请求对象中 `ConstrainError` 错误事件将被触发。对于更新存在的记录，你应该使用 {{domxref("IDBObjectStore.put")}} 方法替代它。
 
@@ -91,7 +91,7 @@ var request = objectStore.add(value, key);
 
 ## 示例
 
-在以下的代码片段中，在我们数据库中打开一个 read/write（读写）事务和使用 `add()` 方法添加一些数据到存储对象中。还要注意附加到事务事件处理程序的函数，这些函数用于报告事务打开成功或失败时的结果。完整的示例代码，请查看我们的[ To-do Notifications](https://github.com/mdn/to-do-notifications/) 应用（ [在线查看示例](http://mdn.github.io/to-do-notifications/) ）。
+在以下的代码片段中，在我们数据库中打开一个 read/write（读写）事务和使用 `add()` 方法添加一些数据到存储对象中。还要注意附加到事务事件处理程序的函数，这些函数用于报告事务打开成功或失败时的结果。完整的示例代码，请查看我们的 [To-do Notifications](https://github.com/mdn/to-do-notifications/) 应用（[在线查看示例](http://mdn.github.io/to-do-notifications/)）。
 
 ```js
 // Let us open our database

@@ -30,7 +30,7 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 - {{domxref("IDBDatabase.name")}} {{readonlyInline}}
   - : {{ domxref("DOMString") }}类型，当前连接数据库名 。
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
-  - : [64-bit ](</zh-CN/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>)整型数，当前连接数据库的版本 。当数据第一次被创建时，这个属性是一个空的字符串。
+  - : [64-bit](</zh-CN/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>) 整型数，当前连接数据库的版本。当数据第一次被创建时，这个属性是一个空的字符串。
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
   - : {{ domxref("DOMStringList") }}类型，当前连接连接数据库中所有的 object store 名字列表。
 
@@ -44,7 +44,7 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 
   - : 当数据库结构发生更改时触发
 
-    ({{domxref("IDBOpenDBRequest.onupgradeneeded")}}事件或在其他地方请求` `{{domxref("IDBFactory.deleteDatabase")}} 时（最可能在同一台计算机上的另一个窗口/选项卡中）这与版本更改事务（请参阅参考资料{{domxref("IDBVersionChangeEvent")}}) 不同，但它是相关的。
+    ({{domxref("IDBOpenDBRequest.onupgradeneeded")}}事件或在其他地方请求 {{domxref("IDBFactory.deleteDatabase")}} 时（最可能在同一台计算机上的另一个窗口/选项卡中）这与版本更改事务（请参阅参考资料{{domxref("IDBVersionChangeEvent")}}) 不同，但它是相关的。
 
 ## 示例
 

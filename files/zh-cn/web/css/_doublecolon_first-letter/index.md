@@ -16,7 +16,7 @@ p::first-letter {
 元素首字符并不总是很容易识别：
 
 - 首字符之前或紧跟首字符的标点符号在伪元素匹配范围内。标点符号（Punctuation）包括在开（Ps），闭（Pe），初始引用（Pi），结束引用（Pf）当中定义的任何 Unicode 字符以及其他种类的标点符号（Po）。
-- 另外还会有一些以大写双字母组合命名的语言，比如荷兰的 `IJ `. 在这种罕见情况下，两个大写字母都理应被 `::first-letter` 伪元素匹配到. (但是浏览器对此支持得很糟糕，可以用 [browser compatibility table](/En/CSS/::first-letter#Browser_compatibility)进行核实).
+- 另外还会有一些以大写双字母组合命名的语言，比如荷兰的 `IJ`. 在这种罕见情况下，两个大写字母都理应被 `::first-letter` 伪元素匹配到. (但是浏览器对此支持得很糟糕，可以用[浏览器兼容性表格](#浏览器兼容性)进行核实).
 - {{ cssxref("::before") }} 伪元素 和 {{ cssxref("content") }} 属性结合起来有可能会在元素前面注入一些文本。如此，`::first-letter` 将会匹配到 content 文本的首字母。
 
 首行只在 [block-container box](/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes)内部才有意义，因此 `::first-letter` 伪元素 只在{{ cssxref("display") }}属性值为 block, `inline-block`, `table-cell`, `list-item` 或者 `table-caption`的元素上才起作用。其他情况下，`::first-letter` 毫无意义。

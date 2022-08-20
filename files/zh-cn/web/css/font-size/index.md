@@ -36,8 +36,8 @@ font-size: inherit;
 
 **font-size** 属性以两种方式之一指定：
 
-- 作为一个从绝对大小[absolute-size](/zh-CN/docs/Web/CSS/font-size$edit#absolute-size) 关键字列表或相对大小[relative-size](/zh-CN/docs/Web/CSS/font-size$edit#relative-size) 关键字列表中选择的单个关键字。
-- 作为一个 [`<length-percentage>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#<length-percentage>) 值。
+- 作为一个从绝对大小[absolute-size](/zh-CN/docs/Web/CSS/font-size#absolute-size) 关键字列表或相对大小[relative-size](/zh-CN/docs/Web/CSS/font-size#relative-size) 关键字列表中选择的单个关键字。
+- 作为一个 [`<length-percentage>`](/zh-CN/docs/Web/CSS/font-size#length-percentage) 值。
 
 ### 值
 
@@ -116,16 +116,16 @@ span { font-size: 16px; }
 
 ```css
 .small {
-	font-size: xx-small;
+  font-size: xx-small;
 }
 .larger {
-	font-size: larger;
+  font-size: larger;
 }
 .point {
-	font-size: 24pt;
+  font-size: 24pt;
 }
 .percent {
-	font-size: 200%;
+  font-size: 200%;
 }
 ```
 

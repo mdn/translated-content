@@ -1,10 +1,6 @@
 ---
 title: 'Warning: Date.prototype.toLocaleFormat is deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
-tags:
-  - JavaScript
-  - 警告
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 ---
 {{jsSidebar("Errors")}}
 

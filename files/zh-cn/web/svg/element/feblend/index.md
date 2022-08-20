@@ -1,12 +1,6 @@
 ---
 title: feBlend
 slug: Web/SVG/Element/feBlend
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/feBlend
 ---
 {{SVGRef}}
 

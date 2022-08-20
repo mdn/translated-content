@@ -1,7 +1,6 @@
 ---
 title: PWA 结构
 slug: Web/Progressive_web_apps/App_structure
-translation_of: Web/Progressive_web_apps/App_structure
 ---
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 

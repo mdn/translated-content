@@ -8,7 +8,7 @@ slug: Web/CSS/overflow-y
 
 当一个块级元素（div 元素、p 元素之类的）的内容在垂直方向发生溢出时，
 
-[CSS](/zh-CN/docs/Web/CSS)属性`overflow-y `决定如何处理溢出的内容。
+[CSS](/zh-CN/docs/Web/CSS)属性 `overflow-y` 决定如何处理溢出的内容。
 
 隐藏溢出内容（hidden），或者显示滚动条（scroll），或者直接显示溢出内容（visible），或者让浏览器来处理（auto）。
 

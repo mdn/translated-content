@@ -38,10 +38,6 @@ slug: Web/API/DOMRect
 - {{domxref("DOMRectReadOnly.left")}}
   - : 返回 `DOMRect` 的左坐标值（与 `x` 具有相同的值，如果 `width` 为负值，则为 `x + width` 的值）。
 
-## 方法
-
-_`DOMRect` 从它的父类继承方法，{{domxref("DOMRectReadOnly")}}。_
-
 ## 静态方法
 
 - {{domxref("DOMRectReadOnly.fromRect()")}}

@@ -16,16 +16,14 @@ slug: Web/CSS/CSS_Flexible_Box_Layout
 
 ### CSS 属性
 
-- - {{cssxref("flex")}}
-  - {{cssxref("flex-basis")}}
-  - {{cssxref("flex-direction")}}
-  - {{cssxref("flex-flow")}}
-  - {{cssxref("flex-grow")}}
-  - {{cssxref("flex-shrink")}}
-  - {{cssxref("flex-wrap")}}
-  - {{cssxref("order")}}
-  -
-  -
+- {{cssxref("flex")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("order")}}
 
 ### 对齐属性
 
@@ -39,7 +37,6 @@ slug: Web/CSS/CSS_Flexible_Box_Layout
 - {{cssxref("row-gap")}}
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}
--
 
 ### 术语表
 

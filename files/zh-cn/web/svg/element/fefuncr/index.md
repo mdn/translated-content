@@ -1,15 +1,6 @@
 ---
 title: feFuncR
 slug: Web/SVG/Element/feFuncR
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要内容
-  - 需要示例
-translation_of: Web/SVG/Element/feFuncR
 ---
 {{SVGRef}}
 

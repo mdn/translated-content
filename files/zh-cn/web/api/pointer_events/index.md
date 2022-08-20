@@ -15,7 +15,7 @@ slug: Web/API/Pointer_events
 ## 相关名词
 
 - active buttons state
-  - : The condition when a _[pointer](/zh-CN/docs/Web/API/Pointer_events$edit#term_pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
+  - : The condition when a _[pointer](/zh-CN/docs/Web/API/Pointer_events#term_pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
 - 活跃指针 - active pointer
   - : 任意*[指针](#term_pointer)输入设备都可以产生事件。一个可以产生后继事件的指针可以被认为是一个活跃指针。例如，一个触摸笔处于压下状态时可以认为是活跃的，因为它接下来的抬起或移动都会产生额外的后继事件。*
 - 数位设备 - digitizer

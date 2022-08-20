@@ -1,13 +1,6 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-tags:
-  - Atomics
-  - JavaScript
-  - 共享内存
-  - 实验性
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ---
 {{JSRef}} {{SeeCompatTable}}
 

@@ -1,10 +1,6 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - Classes
-  - Constructors
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 

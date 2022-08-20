@@ -22,7 +22,7 @@ workers 和主线程间的数据传递通过这样的消息机制进行——双
 
 ## 专用 worker
 
-如前文所述，一个专用 worker 仅仅能被生成它的脚本所使用。这一部分将探讨[ 专用 worker 基础示例](https://github.com/mdn/simple-web-worker) ([运行专用 worker](https://mdn.github.io/simple-web-worker/)) 中的 JavaScript 代码：将你输入的 2 个数字作乘法。输入的数字会发送给一个专用 worker，由专用 worker 作乘法后，再返回给页面进行展示。
+如前文所述，一个专用 worker 仅仅能被生成它的脚本所使用。这一部分将探讨 [专用 worker 基础示例](https://github.com/mdn/simple-web-worker) ([运行专用 worker](https://mdn.github.io/simple-web-worker/)) 中的 JavaScript 代码：将你输入的 2 个数字作乘法。输入的数字会发送给一个专用 worker，由专用 worker 作乘法后，再返回给页面进行展示。
 
 这个例子很小，但是我们决定在保持简单的同时向你介绍基础的 worker 概念。更多的细节会在之后的文章中进行讲解。
 
@@ -234,7 +234,7 @@ Content-Security-Policy: script-src 'self'
 
 ## worker 中数据的接收与发送：详细介绍
 
-在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker `的对象需要经过序列化，接下来在另一端还需要反序列化。页面与` worker `**不会共享同一个实例，**最终的结果就是在每次通信结束时生成了数据的**一个副本。**大部分浏览器使用[结构化拷贝](/en/DOM/The_structured_clone_algorithm)来实现该特性。
+在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化拷贝](/en/DOM/The_structured_clone_algorithm)来实现该特性。
 
 在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面 (反之亦然) 的通信过程中，变量的「_拷贝而非共享_」行为：
 
@@ -278,7 +278,7 @@ alert(example5.constructor); // Animal
 alert(emulateMessage(example5).constructor); // Object
 ```
 
-拷贝而并非共享的那个值称为 _消息_。再来谈谈 `worker，你可以使用 `postMessage() 将消息传递给主线程或从主线程传送回来。`message` 事件的 `data` 属性就包含了从 worker 传回来的数据。
+拷贝而并非共享的那个值称为 _消息_。再来谈谈 `worker`，你可以使用 `postMessage()` 将消息传递给主线程或从主线程传送回来。`message` 事件的 `data` 属性就包含了从 worker 传回来的数据。
 
 **example.html**: (主页面):
 
@@ -308,7 +308,7 @@ onmessage = function (oEvent) {
 
 #### 例子 #1： 创建一个通用的「异步 [`eval()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/eval)」
 
-下面这个例子介绍了，如何在 worker 内使用 `eval() `来按顺序执行**异步的**任何种类的 JavaScript 代码：
+下面这个例子介绍了，如何在 worker 内使用 `eval()` 来按顺序执行**异步的**任何种类的 JavaScript 代码：
 
 ```js
 // Syntax: asyncEval(code[, listener])
@@ -610,7 +610,7 @@ onmessage = function (oEvent) {
 
 ### 通过转让所有权 (可转让对象) 来传递数据
 
-Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 ([可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer ](/en/JavaScript_typed_arrays/ArrayBuffer)对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。
+Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 ([可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer](/en/JavaScript_typed_arrays/ArrayBuffer) 对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。
 
 ```js
 // Create a 32MB "file" and fill it.

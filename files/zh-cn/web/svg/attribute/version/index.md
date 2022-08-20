@@ -1,7 +1,6 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
-translation_of: Web/SVG/Attribute/version
 ---
 **`version`** 属性用于指明 SVG 文档遵循规范。 它只允许在根元素[\<svg>](/zh-CN/docs/Web/SVG/Element/svg) 上使用。 它纯粹是一个说明，对渲染或处理没有任何影响。
 

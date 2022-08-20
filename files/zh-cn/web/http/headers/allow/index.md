@@ -21,7 +21,7 @@ Allow: <http-methods>
 ## 声明
 
 - \<http-methods>
-  - : [HTTP ](/zh-CN/docs/Web/HTTP/Methods)请求方法的集合。
+  - : [HTTP](/zh-CN/docs/Web/HTTP/Methods) 请求方法的集合。
 
 ## 示例
 

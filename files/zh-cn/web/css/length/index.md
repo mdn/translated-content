@@ -26,22 +26,20 @@ slug: Web/CSS/length
 
 > **备注：** 这些相对单位，尤其是 em 和 rem, 经常被用于满足即使用户更改字体大小，也可以保持页面的垂直阅读节奏可拓展布局中
 
-- [`cap`]() {{experimental_inline}}
+- `cap` {{experimental_inline}}
   - : 表示元素字体 {{Cssxref("font")}} 的“上限高度”（cap height，大写字母的标称高度（nominal height））。
 - `ch`
   - : 这一单位代表元素所用字体 {{Cssxref("font")}} 中“0”这一字形的宽度（"0"，Unicode 字符 U+0030），更准确地说，是“0”这一字形的预测尺寸（advance measure）。
-
     如果无法确定“0”字形的大小，则必须假定其宽为 `0.5em`，高为 `1em`。
-
-- [`em`]()
+- `em`
   - : 相对长度单位，这个单位表示元素的 {{Cssxref("font-size")}} 的计算值。如果用在{{ Cssxref("font-size") }} 属性本身，它则表示元素*继承*的 `font-size` 值。
-- [`ex`]()
+- `ex`
   - : 这个单位表示元素{{Cssxref("font")}}的 [x-height](http://en.wikipedia.org/wiki/X-height) 。在含有“X”字母的字体中，它是该字体的小写字母的高度；对于很多字体来说，`1ex ≈ 0.5em`。
-- [`ic`]() {{experimental_inline}}
+- `ic` {{experimental_inline}}
   - : 等于在用于渲染的字体中找到的“水”（CJK 表意文字 "水"，U + 6C34）字形的使用预先测量（used advance measure）。
-- [`lh`]() {{experimental_inline}}
+- `lh` {{experimental_inline}}
   - : 等于使用它的元素的 {{Cssxref("line-height")}} 属性的计算值，转换为绝对长度。
-- [`rem`]()
+- `rem`
   - : 这个单位代表根元素（通常为{{HTMLElement("html")}} 元素）的 {{Cssxref("font-size")}} 大小。当用在根元素的 {{Cssxref("font-size")}} 上面时，它代表了它的初始值。
 - `rlh` {{experimental_inline}}
   - : 等于根元素行高 {{Cssxref("line-height")}} 的计算值。当用于设置根元素的行高 {{Cssxref("line-height")}} 或是字体大小 {{Cssxref("font-size")}} 时，该 rlh 指的是根元素行高 {{Cssxref("line-height")}} 或字体大小 {{Cssxref("font-size")}} 的初始值。
@@ -50,17 +48,17 @@ slug: Web/CSS/length
 
 视口百分比长度定义相对于 {{glossary("viewport")}} 的大小的 `<length>` 值，即文档的可见部分。视口长度在 {{cssxref("@page")}} 声明块中无效。
 
-- [`vh`]()
+- `vh`
   - : 视口的初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)的高度的 1%。
-- [`vw`]()
+- `vw`
   - : 视口的初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)的宽度的 1%。
-- `vi`{{experimental_inline}}
+- `vi` {{experimental_inline}}
   - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[行内轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#inline-dimension)方向上。
-- `vb`{{experimental_inline}}
+- `vb` {{experimental_inline}}
   - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#block-dimension)方向上。
-- [`vmin`]()
+- `vmin`
   - : 视口高度 `vw` 和宽度 `vh` 两者之间的最小值。
-- [`vmax`]()
+- `vmax`
   - : 视口高度 `vw` 和宽度 `vh` 两者之间的最大值。
 
 #### 绝对长度单位
@@ -75,22 +73,22 @@ slug: Web/CSS/length
 >
 > **译者注：** 一些浏览器还支持设置最低字体大小。常见的最低字体大小限制为 9px 到 12px，
 
-- [`px`]()
+- `px`
   - : 一像素（pixel）。对于普通的屏幕，通常是一个设备像素（点）。
     对于*打印机*和*高分辨率屏幕*，一个 CSS 像素往往占多个设备像素。一般来说，每英寸的像素的数量保持在 96 左右， `1px` = `1in` 的 96 分之一。
-- [`cm`]()
+- `cm`
   - : 一厘米。 `1cm = 96px / 2.54`。
-- [`mm`]()
+- `mm`
   - : 一毫米。 `1mm = 1/10 * 1cm`。
-- [`Q`]() {{experimental_inline}}
+- `Q` {{experimental_inline}}
   - : 四分之一毫米。`1Q = 1/40 * 1cm`。
-- [`in`]()
+- `in`
   - : 一英寸。`1in = 2.54cm = 96px`。
-- [`pc`]()
+- `pc`
   - : 一**十二点活字**（pica），六分之一英寸。 `1pc = 12pt = 1/6 * 1in`。
-- [`pt`]()
+- `pt`
   - : 一磅（point），72 分之一英寸。`1pt = 1/12 * 1pc = 1/72 * 1in`。
-- [`mozmm`]() {{non-standard_inline}}, 在 Firefox 59 中被移除
+- `mozmm` {{non-standard_inline}}, 在 Firefox 59 中被移除
   - : 一个实验单位，无论显示器的尺寸或分辨率如何，都会尝试在一毫米处进行渲染。很少会用到，但可能在移动设备上特别有用。
 
 ## 插值

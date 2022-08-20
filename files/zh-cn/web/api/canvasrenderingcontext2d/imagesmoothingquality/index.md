@@ -22,7 +22,7 @@ value = ctx.imageSmoothingQuality
 
 ### 使用 imageSmoothingQuality 属性
 
-这是一段简单的代码片段，对缩放的图片使用 `imageSmoothingQuality `属性。
+这是一段简单的代码片段，对缩放的图片使用 `imageSmoothingQuality` 属性。
 
 #### HTML
 

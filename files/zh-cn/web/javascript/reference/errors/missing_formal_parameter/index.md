@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: missing formal parameter'
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-tags:
-  - JavaScript
-  - 类型错误
-  - 错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
 {{jsSidebar("Errors")}}
 

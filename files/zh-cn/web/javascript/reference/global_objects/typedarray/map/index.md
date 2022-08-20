@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 ---
 {{JSRef}}
 

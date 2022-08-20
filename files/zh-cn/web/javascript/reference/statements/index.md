@@ -1,12 +1,6 @@
 ---
 title: 语句和声明
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - 参考
-  - 声明
-  - 语句和声明
-translation_of: Web/JavaScript/Reference/Statements
 ---
 {{jsSidebar("Statements")}}
 

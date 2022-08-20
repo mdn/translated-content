@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 ---
 {{JSRef}}
 

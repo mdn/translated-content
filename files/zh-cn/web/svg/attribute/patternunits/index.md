@@ -1,7 +1,6 @@
 ---
 title: patternUnits
 slug: Web/SVG/Attribute/patternUnits
-translation_of: Web/SVG/Attribute/patternUnits
 ---
 {{SVGRef}}
 

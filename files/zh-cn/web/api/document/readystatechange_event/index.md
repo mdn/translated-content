@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 {{Compat("api.Document.readystatechange_event")}}
 
-IE 浏览器是一直支持 `readystatechange` 事件的，可作为 [DOMContentLoaded ](</zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)>)事件的替代方法（参见[Browser compatibility](/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_%28event%29#Browser_compatibility)的注释 \[2]）。
+IE 浏览器是一直支持 `readystatechange` 事件的，可作为 [DOMContentLoaded](</zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)>) 事件的替代方法（参见[Browser compatibility](/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_%28event%29#Browser_compatibility)的注释 \[2]）。
 
 ## 参见
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-translation_of: Web/API/HTMLInputElement
 ---
 {{ APIRef("HTML DOM") }}
 

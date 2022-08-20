@@ -2,7 +2,9 @@
 title: transform
 slug: Web/CSS/transform
 ---
-{{CSSRef}}CSS**`transform`**属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS 视觉格式化模型的坐标空间来实现的。{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{CSSRef}}
+
+CSS **`transform`** 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS 视觉格式化模型的坐标空间来实现的。{{EmbedInteractiveExample("pages/css/transform.html")}}
 
 > **警告：** 只能转换由盒模型定位的元素。根据经验，如果元素具有`display: block`，则由盒模型定位元素。
 
@@ -44,7 +46,7 @@ transform: initial;
 transform: unset;
 ```
 
-`transform`属性可以指定为关键字值[`none`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform$edit#none) 或一个或多个[`<transform-function>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform$edit#%3Ctransform-function%3E)值。
+`transform`属性可以指定为关键字值 [`none`](/zh-CN/docs/Web/CSS/transform#none) 或一个或多个 [`<transform-function>`](/zh-CN/docs/Web/CSS/transform#%3Ctransform-function%3E) 值。
 
 ### 值
 

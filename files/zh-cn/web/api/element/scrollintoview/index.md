@@ -57,4 +57,4 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 ## 相关内容
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/zh-CN/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}
+- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}

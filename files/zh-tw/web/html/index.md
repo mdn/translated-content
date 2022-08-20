@@ -1,13 +1,6 @@
 ---
 title: HTML：超文本標記語言
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML元素
-  - 多媒體
-  - 影像
-  - 音樂
-translation_of: Web/HTML
 ---
 {{HTMLSidebar}}
 

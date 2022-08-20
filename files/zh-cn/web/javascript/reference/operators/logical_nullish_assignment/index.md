@@ -1,7 +1,6 @@
 ---
 title: 逻辑空赋值 (??=)
 slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
-translation_of: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 ---
 {{jsSidebar("Operators")}}
 

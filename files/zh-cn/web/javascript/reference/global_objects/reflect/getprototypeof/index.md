@@ -1,7 +1,6 @@
 ---
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ---
 {{JSRef}}
 

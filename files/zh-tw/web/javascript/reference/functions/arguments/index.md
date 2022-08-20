@@ -1,12 +1,6 @@
 ---
 title: Arguments 物件
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Functions
-  - JavaScript
-  - Reference
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
 {{jsSidebar("Functions")}}
 

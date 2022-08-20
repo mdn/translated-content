@@ -95,7 +95,7 @@ dateControl.value = '2017-06-01';
 
 ### 设置日期最大和最小值
 
-你可以通过 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性去限制用户的可选日期范围。在随后的例子中，我们将设定日期最小值为 `2017-04-01` 最大值为 `2017-04-30 `。
+你可以通过 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性去限制用户的可选日期范围。在随后的例子中，我们将设定日期最小值为 `2017-04-01` 最大值为 `2017-04-30`。
 
 ```html
 <form>
