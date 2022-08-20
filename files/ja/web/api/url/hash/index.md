@@ -9,54 +9,42 @@ tags:
   - URL
 translation_of: Web/API/URL/hash
 ---
-<div>{{ APIRef("URL API") }}</div>
+{{ APIRef("URL API") }}
 
-<p>{{domxref("URL")}} インターフェイスの <strong><code>hash</code></strong> プロパティは、<code>'#'</code> の後に URL のフラグメント識別子が続く {{domxref("USVString")}} を返します。</p>
+{{domxref("URL")}} インターフェイスの **`hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く {{domxref("USVString")}} を返します。
 
-<p>フラグメントは<a href="/ja/docs/Glossary/percent-encoding">パーセントデコード</a>されていません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 <code>""</code> が含まれます。</p>
+フラグメントは[パーセントデコード](/ja/docs/Glossary/percent-encoding)されていません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.hash;
-<em>object</em>.hash = <em>string</em>;
-</pre>
+```
+string = object.hash;
+object.hash = string;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("USVString")}}。</p>
+{{domxref("USVString")}}。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html">var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
-url.hash // '#Examples' を返します</pre>
+```html
+var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
+url.hash // '#Examples' を返します
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-hash', 'URL.hash')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                             | 状態                 | コメント |
+| ---------------------------------------------------------------- | -------------------- | -------- |
+| {{SpecName('URL', '#dom-url-hash', 'URL.hash')}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.URL.hash")}}
 
+## 関連情報
 
-<p>{{Compat("api.URL.hash")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("URL")}} インターフェイスに属します。</li>
-</ul>
+- {{domxref("URL")}} インターフェイスに属します。

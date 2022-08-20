@@ -10,56 +10,55 @@ tags:
   - URLSearchParams
 translation_of: Web/API/URLSearchParams
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p><strong><code>URLSearchParams</code></strong> インターフェイスは URL のクエリー文字列の操作に役立つメソッドを定義します。</p>
+**`URLSearchParams`** インターフェイスは URL のクエリー文字列の操作に役立つメソッドを定義します。
 
-<p><code>URLSearchParams</code> を実装するオブジェクトは 直接 {{jsxref("Statements/for...of", "for...of")}} で使うことができます。例えば次の 2行は等価です。</p>
+`URLSearchParams` を実装するオブジェクトは 直接 {{jsxref("Statements/for...of", "for...of")}} で使うことができます。例えば次の 2 行は等価です。
 
-<pre class="brush: js">for (const [key, value] of mySearchParams) {}
-for (const [key, value] of mySearchParams.entries()) {}</pre>
+```js
+for (const [key, value] of mySearchParams) {}
+for (const [key, value] of mySearchParams.entries()) {}
+```
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}</dt>
- <dd><code>URLSearchParams</code> オブジェクトを返すコンストラクターです。</dd>
-</dl>
+- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
+  - : `URLSearchParams` オブジェクトを返すコンストラクターです。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("URLSearchParams.append()")}}</dt>
- <dd>指定されたキーと値のペアを新しい検索パラメーターとして追加します。</dd>
- <dt>{{domxref("URLSearchParams.delete()")}}</dt>
- <dd>指定された検索パラメーターとその値を、検索パラメーターのリストからすべて削除します。</dd>
- <dt>{{domxref("URLSearchParams.entries()")}}</dt>
- <dd>このオブジェクトに含まれるすべてのキーと値のペアを列挙するための {{jsxref("Iteration_protocols","iterator")}} を返します。</dd>
- <dt>{{domxref("URLSearchParams.forEach()")}}</dt>
- <dd>コールバック関数を介して、このオブジェクトに含まれるすべての値を列挙します。</dd>
- <dt>{{domxref("URLSearchParams.get()")}}</dt>
- <dd>指定された検索パラメーターに対応する最初の値を返します。</dd>
- <dt>{{domxref("URLSearchParams.getAll()")}}</dt>
- <dd>指定された検索パラメーターに対応するすべての値を返します。</dd>
- <dt>{{domxref("URLSearchParams.has()")}}</dt>
- <dd>指定された検索パラメーターが存在するかを表す {{jsxref("Boolean")}} 値を返します。</dd>
- <dt>{{domxref("URLSearchParams.keys()")}}</dt>
- <dd>このオブジェクトに含まれるすべてのキーと値のペアの<strong>キー</strong>を列挙する {{jsxref("Iteration_protocols", "iterator")}} を返します。</dd>
- <dt>{{domxref("URLSearchParams.set()")}}</dt>
- <dd>指定された検索パラメーターに対応する値を設定します。複数の値が存在していた場合、それらは削除されます。</dd>
- <dt>{{domxref("URLSearchParams.sort()")}}</dt>
- <dd>すべてのキーと値のペアを、キーを基準にソートします。</dd>
- <dt>{{domxref("URLSearchParams.toString()")}}</dt>
- <dd>URL で使用するのに適したクエリー文字列を返します。</dd>
- <dt>{{domxref("URLSearchParams.values()")}}</dt>
- <dd>このオブジェクトに含まれるすべてのキーと値のペアの<strong>値</strong>を列挙する {{jsxref("Iteration_protocols", "iterator")}} を返します。</dd>
-</dl>
+- {{domxref("URLSearchParams.append()")}}
+  - : 指定されたキーと値のペアを新しい検索パラメーターとして追加します。
+- {{domxref("URLSearchParams.delete()")}}
+  - : 指定された検索パラメーターとその値を、検索パラメーターのリストからすべて削除します。
+- {{domxref("URLSearchParams.entries()")}}
+  - : このオブジェクトに含まれるすべてのキーと値のペアを列挙するための {{jsxref("Iteration_protocols","iterator")}} を返します。
+- {{domxref("URLSearchParams.forEach()")}}
+  - : コールバック関数を介して、このオブジェクトに含まれるすべての値を列挙します。
+- {{domxref("URLSearchParams.get()")}}
+  - : 指定された検索パラメーターに対応する最初の値を返します。
+- {{domxref("URLSearchParams.getAll()")}}
+  - : 指定された検索パラメーターに対応するすべての値を返します。
+- {{domxref("URLSearchParams.has()")}}
+  - : 指定された検索パラメーターが存在するかを表す {{jsxref("Boolean")}} 値を返します。
+- {{domxref("URLSearchParams.keys()")}}
+  - : このオブジェクトに含まれるすべてのキーと値のペアの**キー**を列挙する {{jsxref("Iteration_protocols", "iterator")}} を返します。
+- {{domxref("URLSearchParams.set()")}}
+  - : 指定された検索パラメーターに対応する値を設定します。複数の値が存在していた場合、それらは削除されます。
+- {{domxref("URLSearchParams.sort()")}}
+  - : すべてのキーと値のペアを、キーを基準にソートします。
+- {{domxref("URLSearchParams.toString()")}}
+  - : URL で使用するのに適したクエリー文字列を返します。
+- {{domxref("URLSearchParams.values()")}}
+  - : このオブジェクトに含まれるすべてのキーと値のペアの**値**を列挙する {{jsxref("Iteration_protocols", "iterator")}} を返します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">var paramsString = "q=URLUtils.searchParams&amp;topic=api";
+```js
+var paramsString = "q=URLUtils.searchParams&topic=api";
 var searchParams = new URLSearchParams(paramsString);
 
 // 検索パラメーターを列挙する
@@ -72,18 +71,19 @@ searchParams.get("topic") === "api"; // true
 searchParams.getAll("topic"); // ["api"]
 searchParams.get("foo") === null; // true
 searchParams.append("topic", "webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
+searchParams.toString(); // "q=URLUtils.searchParams&topic=api&topic=webdev"
 searchParams.set("topic", "More webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=More+webdev"
+searchParams.toString(); // "q=URLUtils.searchParams&topic=More+webdev"
 searchParams.delete("topic");
 searchParams.toString(); // "q=URLUtils.searchParams"
-</pre>
+```
 
-<h3 id="Gotchas" name="Gotchas">コラム</h3>
+### コラム
 
-<p><code>URLSearchParams</code> コンストラクターは完全な URL をパースしません。ただし、先頭に <code>?</code> が存在すれば、読み飛ばします。</p>
+`URLSearchParams` コンストラクターは完全な URL をパースしません。ただし、先頭に `?` が存在すれば、読み飛ばします。
 
-<pre class="brush: js">var paramsString1 = "http://example.com/search?query=%40";
+```js
+var paramsString1 = "http://example.com/search?query=%40";
 var searchParams1 = new URLSearchParams(paramsString1);
 
 searchParams1.has("query"); // false
@@ -99,34 +99,19 @@ searchParams2.has("query"); // true
 var url = new URL("http://example.com/search?query=%40");
 var searchParams3 = new URLSearchParams(url.search);
 searchParams3.has("query") // true
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#urlsearchparams', "URLSearchParams")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | 状態                 | 備考     |
+| ---------------------------------------------------------------------------- | -------------------- | -------- |
+| {{SpecName('URL', '#urlsearchparams', "URLSearchParams")}} | {{Spec2('URL')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.URLSearchParams")}}</p>
+{{Compat("api.URLSearchParams")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("URL")}} インターフェイス。</li>
- <li><a href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google Developers: URLSearchParams を使用した簡単な URL 操作</a> (英語)</li>
-</ul>
+- {{domxref("URL")}} インターフェイス。
+- [Google Developers: URLSearchParams を使用した簡単な URL 操作](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en) (英語)
