@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 {{JSRef}}
 
-**`matchAll()`** は[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を含む*[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)*に一致するすべての*文字列*をイテレーターで返すメソッドです。
+**`matchAll()`** は[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を含む *[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)* に一致するすべての*文字列*をイテレーターで返すメソッドです。
 
 {{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
