@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
 ---
 {{JSRef}}
 
-**`keys()`** メソッドは、 `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい**[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)**オブジェクトを返します。
+**`keys()`** メソッドは、 `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい **[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)** オブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
