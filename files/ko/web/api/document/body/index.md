@@ -15,8 +15,10 @@ translation_of: Web/API/Document/body
 
 ## 구문
 
-    const objRef = document.body
-    document.body = objRef
+```js
+const objRef = document.body
+document.body = objRef
+```
 
 ## 예제
 

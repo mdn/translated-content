@@ -96,7 +96,6 @@ browser.menus.create(
 - `callback` {{optional_inline}}
   - : `function`. Called when the item has been created. If there were any problems creating the item, details will be available in {{WebExtAPIRef('runtime.lastError')}}.
 
-
 ### Return value
 
 `integer` or `string`. The ID of the newly created item.

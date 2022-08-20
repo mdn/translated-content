@@ -27,7 +27,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Compositing
 
 잘라내기 경로와 위에서 살펴본 `globalCompositeOperation` 속성을 비교해 보면, `source-in`과 `source-atop`에서 비슷한 효과가 보입니다. 이들과 잘라내기 경로와의 가장 중요한 차이점은, 잘라내기 경로 자체는 캔버스에 전혀 그려지지 않는다는 것입니다. 잘라내기 경로는 제한된 영역 안에서 여러 가지 도형을 그리는 데에 적합합니다.
 
-[캔버스에 도형 그리기](/ko/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths")에서는 `stroke()`과 `fill()` 메소드만을 설명했었는데, `clip()`이라는 세 번째 메소드도 있습니다.
+[캔버스에 도형 그리기](/ko/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths)에서는 `stroke()`과 `fill()` 메소드만을 설명했었는데, `clip()`이라는 세 번째 메소드도 있습니다.
 
 - `clip()`
   - : 현재 그려지는 경로를 현재 잘라내기 경로로 만듭니다.

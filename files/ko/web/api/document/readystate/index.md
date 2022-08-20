@@ -11,7 +11,9 @@ Document.readyState 속성 값이 바뀔 때 {{event("readystatechange")}} 이�
 
 ## Syntax
 
-    var string = document.readyState;
+```js
+var string = document.readyState;
+```
 
 ### Values
 

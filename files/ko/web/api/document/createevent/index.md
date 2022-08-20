@@ -11,7 +11,9 @@ original_slug: Web/API/Event/createEvent
 
 ### Syntax
 
-    document.createEvent(type)
+```js
+document.createEvent(type)
+```
 
 - `type`
   - : A string indicating the event type to create.
@@ -20,7 +22,9 @@ original_slug: Web/API/Event/createEvent
 
 ### Example
 
-    var newEvent = document.createEvent("UIEvents");
+```js
+var newEvent = document.createEvent("UIEvents");
+```
 
 ### Specification
 

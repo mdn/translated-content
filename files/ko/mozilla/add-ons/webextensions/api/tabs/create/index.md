@@ -34,21 +34,21 @@ var creating = browser.tabs.create(
     - `pinned`{{optional_inline}}
       - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
     - `selected`{{optional_inline}}
-      -  : `boolean`. 윈도우에서 탭이 선택되는지를 지정한다. 기본값은  `true`.
-      
+      - : `boolean`. 윈도우에서 탭이 선택되는지를 지정한다. 기본값은  `true`.
+
         > **경고:** 이 속성은 사용이 중단되었다. 파이어폭스에서는 지원하지 않는다.  `active`가 대신한다.
-    `url`{{optional_inline}}
+    - `url` {{optional_inline}}
       - : `string`. 최초 표시될 URL. 기본값은 새 탭 페이지다.
         URL은 반드시 scheme를 포함해야 한다 (가령은 'http://www.google.com'은 되지만, 'www.google.com'은 안된다).
         보안상 파이어폭스에서 특권이 있는 URL은 안된다. 그래서 아래와 같은 URL을 주면 실패할 것이다:
-        
+
         - chrome: URL
         - javascript: URL
         - data: URL
         - file: URL (예, 파일시스템의 파일들. 단, 확장 안에 포함된 파일의 사용은 아래를 보라)
         - 특권이 있는 about: URL (예,  `about:config`, `about:addons`,  `about:debugging`). 특권이 없는 URL은 된다 (예, `about:blank`).
         - 새 탭 페이지 ( `about:newtab`)는 URL 값이 주어지지 않으면 열린다.
-        
+
         확장에 포함된 페이지의 로딩은 확장의 manifest.json 파일이 있는데서 시작하는 절대 경로를 써라. 예를 들면: '/path/to/my-page.html'. 만약 첫 '/'를 빼면 URL은 상대 경로로 취급되고, 다른 브라우저들은 다른 절대 경로를 생성해낼 것이다.
     - `windowId`{{optional_inline}}
       - : `integer`. 새 탭이 만들어질 윈도우. 기본값은 현재 윈도우.

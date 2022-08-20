@@ -21,9 +21,9 @@ Content scripts can only access [a small subset of the WebExtension APIs](https:
 
 You can load a content script into a web page in one of three ways:
 
-1.  **at install time, into pages that match URL patterns:** using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your manifest.json, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns).
-2.  **at runtime, into pages that match URL patterns:** using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns). This is just like method (1), except you can add and remove content scripts at runtime.
-3.  **at runtime, into specific tabs:** using the [`tabs.executeScript()`](/en-US/Add-ons/WebExtensions/API/Tabs/executeScript) API, you can load a content script into a specific tab whenever you want: for example, in response to the user clicking on a [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action).
+1. **at install time, into pages that match URL patterns:** using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your manifest.json, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns).
+2. **at runtime, into pages that match URL patterns:** using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns). This is just like method (1), except you can add and remove content scripts at runtime.
+3. **at runtime, into specific tabs:** using the [`tabs.executeScript()`](/en-US/Add-ons/WebExtensions/API/Tabs/executeScript) API, you can load a content script into a specific tab whenever you want: for example, in response to the user clicking on a [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action).
 
 There is only one global scope per frame per extension, so variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.
 
@@ -401,19 +401,23 @@ In Chrome, this will produce output like this:
 
 크롬에서, 이것은 아래처럼 출력될 것이다:
 
-    In content script, window.x: 1
-    In content script, window.y: 2
-    In page script, window.x: undefined
-    In page script, window.y: undefined
+```
+In content script, window.x: 1
+In content script, window.y: 2
+In page script, window.x: undefined
+In page script, window.y: undefined
+```
 
 In Firefox the following output is produced:
 
 파이어폭스에서는 아래의 출력이 만들어진다:
 
-    In content script, window.x: undefined
-    In content script, window.y: 2
-    In page script, window.x: 1
-    In page script, window.y: undefined
+```
+In content script, window.x: undefined
+In content script, window.y: 2
+In page script, window.x: 1
+In page script, window.y: undefined
+```
 
 The same applies to [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), [`setInterval()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval), and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
 

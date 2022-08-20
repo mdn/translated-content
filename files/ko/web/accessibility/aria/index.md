@@ -61,7 +61,6 @@ progressBar.setAttribute("aria-valuenow", percentComplete);
 - [ARIA 사용하기](https://w3c.github.io/using-aria/)
   - : 개발자를 위한 실용 가이드를 제공하는 글입니다. HTML 요소에 어떤 ARIA 속성들을 써야 하는지에 대해 제안하는 내용을 담고 있습니다. 제안은 실제 구현 상황을 바탕으로 합니다.
 
-
 ## 간단한 ARIA 향상
 
 - [ARIA 랜드마크를 사용하여 페이지 탐색 고도화](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
@@ -74,8 +73,8 @@ progressBar.setAttribute("aria-valuenow", percentComplete);
 - [JavaScript 위젯에 키보드 탐색 및 초점 적용하기](/ko/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : {{htmlelement("input")}}, {{htmlelement("button")}} 등 내장 요소는 기본적으로 키보드를 지원합니다. {{htmlelement("div")}}와 ARIA로 특정 요소를 흉내 낸다면, 그 위젯도 키보드를 지원하도록 해야 합니다.
 - [실시간 영역](/ko/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-  - : 실시간 영역은 페이지 콘텐츠에 가해지는 변경점을 접근성 보조 기술이 어떻게 처리해야 하는지 제안합니다. 
-- [ARIA 실시간 영역으로 콘텐츠 변경 알리기](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm) 
+  - : 실시간 영역은 페이지 콘텐츠에 가해지는 변경점을 접근성 보조 기술이 어떻게 처리해야 하는지 제안합니다.
+- [ARIA 실시간 영역으로 콘텐츠 변경 알리기](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm)
   - : JAWS 스크린 리더 소프트웨어의 개발진이 실시간 영역에 대해 요약한 글입니다.
 
 ## 표준화를 위한 노고

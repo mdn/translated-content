@@ -17,7 +17,9 @@ translation_of: Web/API/Document/all
 
 ## Syntax
 
-    var htmlAllCollection = document.all;
+```js
+var htmlAllCollection = document.all;
+```
 
 ### Value
 

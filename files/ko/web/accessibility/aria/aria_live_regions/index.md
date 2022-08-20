@@ -11,8 +11,8 @@ JavaScript를 이용하면, 전체 페이지를 다시 로드할 필요 없이 �
 
 페이지를 재로드 없이 업데이트 되는 동적 컨텐츠는 일반적으로 영역 또는 위젯입니다. 대화형 컨텐츠가 아닌 단순 컨텐츠 변경은 live regions 으로 표시해야만 합니다. 아래는 관련 ARIA live region 속성에 관한 리스트와 설명입니다.
 
-1.  **`aria-live`**: `aria-live=POLITENESS_SETTING`는 스크린 리더가 live regions에 대한 업데이트를 처리할때 우선 순위를 설정하는 데 사용되며, 가능한 세팅으로 `off`, ` polite, ``assertive`가 있습니다. 기본 설정은 `off`입니다. 이 속성은 단연코 가장 중요합니다.
-2.  **`aria-controls`**: The `aria-controls=[IDLIST]` is used to associate a control with the regions that it controls. Regions are identified just like an `id` in a `div`, and multiple regions can be associated with a control using a space, e.g. `aria-controls="myRegionID1 myRegionsID2"`.
+1. **`aria-live`**: `aria-live=POLITENESS_SETTING`는 스크린 리더가 live regions에 대한 업데이트를 처리할때 우선 순위를 설정하는 데 사용되며, 가능한 세팅으로 `off`, `polite`, `assertive` 가 있습니다. 기본 설정은 `off`입니다. 이 속성은 단연코 가장 중요합니다.
+2. **`aria-controls`**: The `aria-controls=[IDLIST]` is used to associate a control with the regions that it controls. Regions are identified just like an `id` in a `div`, and multiple regions can be associated with a control using a space, e.g. `aria-controls="myRegionID1 myRegionsID2"`.
 
 > **경고:** Not known if the aria-controls aspect of live regions is implemented in current ATs, or which. Needs research.
 
@@ -123,15 +123,15 @@ In the following well-known predefined cases it is better to use a specific prov
 
 General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).
 
-The Paciello Group has some [information about the state of the support of Live Regions ](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014). Paul J. Adam has researched[ the support of Aria-Atomic and Aria-Relevant](http://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
+The Paciello Group has some [information about the state of the support of Live Regions](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014). Paul J. Adam has researched [the support of Aria-Atomic and Aria-Relevant](http://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
-1.  **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
-2.  **[`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)**
+1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
+2. **[`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)**
 
     : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 
-3.  **`aria-labelledby`**: The `aria-labelledby=[IDLIST]` is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region. and label identifiers are separated with a space.
-4.  **`aria-describedby`**: The `aria-describedby=[IDLIST]` is used to associate a region with its descriptions, similar to aria-controls but instead associating descriptions to the region and description identifiers are separated with a space.
+3. **`aria-labelledby`**: The `aria-labelledby=[IDLIST]` is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region. and label identifiers are separated with a space.
+4. **`aria-describedby`**: The `aria-describedby=[IDLIST]` is used to associate a region with its descriptions, similar to aria-controls but instead associating descriptions to the region and description identifiers are separated with a space.
 
 ### Advanced use case: Clock
 
@@ -190,7 +190,7 @@ A working example of a simple year control for better understanding:
     };
 ```
 
-Without `aria-atomic="true" `the screenreader announces only the changed value of year.
+Without `aria-atomic="true"` the screenreader announces only the changed value of year.
 
 With `aria-atomic="true"`, the screenreader announces "The set year is: _changedvalue_"
 
@@ -200,7 +200,7 @@ A chat site would like to display a list of users currently logged in. Display a
 
 ```html
     <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-    	<!-- use JavaScript to add remove users here-->
+      <!-- use JavaScript to add remove users here-->
     </ul>
 ```
 

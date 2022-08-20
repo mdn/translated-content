@@ -16,7 +16,9 @@ translation_of: Web/API/Document/styleSheetSets
 
 ## 문법
 
-    var sets = document.styleSheetSets;
+```js
+var sets = document.styleSheetSets;
+```
 
 반환시, `sets`는 사용할 수 있는 스타일 시트 세트의 리스트.
 
