@@ -15,62 +15,44 @@ tags:
   - appendBuffer
 translation_of: Web/API/SourceBuffer/appendBuffer
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>{{domxref("SourceBuffer")}} インターフェイスの <strong><code>appendBuffer()</code></strong> メソッドは、{{jsxref("ArrayBuffer")}} オブジェクトまたは <code>ArrayBufferView</code> オブジェクトからのメディアセグメントデータを <code>SourceBuffer</code> に追加します。</p>
+{{domxref("SourceBuffer")}} インターフェイスの **`appendBuffer()`** メソッドは、{{jsxref("ArrayBuffer")}} オブジェクトまたは `ArrayBufferView` オブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>sourceBuffer</em>.appendBuffer(<em>source</em>);
-</pre>
+```
+sourceBuffer.appendBuffer(source);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>source</code></dt>
- <dd><code>SourceBuffer</code> に追加するメディアセグメントデータを含む {{domxref("BufferSource")}}（つまり、{{domxref("ArrayBufferView")}} または {{jsxref("ArrayBuffer")}}）。</dd>
-</dl>
+- `source`
+  - : `SourceBuffer` に追加するメディアセグメントデータを含む {{domxref("BufferSource")}}（つまり、{{domxref("ArrayBufferView")}} または {{jsxref("ArrayBuffer")}}）。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref('undefined')}}。</p>
+{{jsxref('undefined')}}。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<p>なし。</p>
+なし。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>未定</p>
+未定
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-appendbuffer(buffersource)', 'appendBuffer()')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                             | 状態                                             | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
+| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-appendbuffer(buffersource)', 'appendBuffer()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.SourceBuffer.appendBuffer")}}
 
+## 関連情報
 
-<p>{{Compat("api.SourceBuffer.appendBuffer")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}
