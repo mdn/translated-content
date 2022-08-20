@@ -8,13 +8,15 @@ tags:
   - Security
   - vulnerability
   - exploit
+translation_of: Glossary/Clickjacking
 ---
-Clickjacking is an interface-based attack that tricks website users into unwittingly clicking on malicious links. In clickjacking, the attackers embed their malicious links into buttons or legitimate pages in a website. In an infected {{glossary("Site")}}, whenever a user clicks on a legitimate link, the attacker gets the confidential information of that user, which ultimately compromises the user's privacy on the Internet.
 
-Clickjacking can be prevented by implementing a [Content Security Policy (frame-ancestors)](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) and implementing [Set-Cookie attributes](/en-US/docs/Web/HTTP/Headers/Set-Cookie#attributes).
+クリックジャッキングとは、ウェブサイトの利用者をだまして、悪意のあるリンクを無意識にクリックさせるインターフェイスベースの攻撃です。クリックジャッキングでは、攻撃者は、ウェブサイト内のボタンや正規のページに悪意のあるリンクを埋め込みます。攻撃が仕込まれた{{glossary("Site", "サイト")}}では、ユーザーが正規のリンクをクリックするたびに、攻撃者はそのユーザーの機密情報を取得し、最終的にインターネット上でのユーザーのプライバシーを侵害することになります。
 
-## Learn more
+クリックジャッキングは、[Content Security Policy (frame-ancestors)](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) の実装と、[Set-Cookie 属性](/ja/docs/Web/HTTP/Headers/Set-Cookie#属性)の実装により防ぐことができます。
 
-- [Web security: clickjacking protection](/en-US/docs/Web/Security#clickjacking_protection)
-- [Clickjacking](https://en.wikipedia.org/wiki/Clickjacking) on Wikipedia
-- [Clickjacking](https://owasp.org/www-community/attacks/Clickjacking) on OWASP
+## さらに学ぶ
+
+- [ウェブセキュリティ：クリックジャックからの保護](/ja/docs/Web/Security#クリックジャックからの保護)
+- Wikipedia 上の [Clickjacking](https://en.wikipedia.org/wiki/Clickjacking) （英語）
+- OWASP 上の [Clickjacking](https://owasp.org/www-community/attacks/Clickjacking) （英語）
