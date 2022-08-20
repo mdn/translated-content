@@ -28,7 +28,7 @@ regexObj.toString();
 
 ## 解説
 
-{{jsxref("RegExp")}} オブジェクトの `toString()` メソッドは、 jsxref("Object")}} オブジェクトのものを上書きします。つまり {{jsxref("Object.prototype.toString()")}} を継承しません。 {{jsxref("RegExp")}} オブジェクトにおける `toString()` メソッドは、その正規表現オブジェクトを表す文字列を返します。
+{{jsxref("RegExp")}} オブジェクトの `toString()` メソッドは、 {{jsxref("Object")}} オブジェクトのものを上書きします。つまり {{jsxref("Object.prototype.toString()")}} を継承しません。 {{jsxref("RegExp")}} オブジェクトにおける `toString()` メソッドは、その正規表現オブジェクトを表す文字列を返します。
 
 ## 例
 
