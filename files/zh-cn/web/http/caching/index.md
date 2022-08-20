@@ -16,7 +16,7 @@ HTTP 缓存存储与请求关联的响应，并将存储的响应复用于后续
 
 ## 不同种类的缓存
 
-在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中, 有两种不同类型的缓存: **私有缓存** and **共享缓存**.
+在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中, 有两种不同类型的缓存: **私有缓存** 和 **共享缓存**.
 
 ### 私有缓存
 
