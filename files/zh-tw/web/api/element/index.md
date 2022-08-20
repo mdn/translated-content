@@ -1,15 +1,6 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - NeedsTranslation
-  - TopicStub
-  - Élément(2)
-translation_of: Web/API/Element
 ---
 {{ APIRef("DOM") }}
 

@@ -1,7 +1,6 @@
 ---
 title: Document.documentElement
 slug: Web/API/Document/documentElement
-translation_of: Web/API/Document/documentElement
 ---
 {{ ApiRef("DOM") }}
 

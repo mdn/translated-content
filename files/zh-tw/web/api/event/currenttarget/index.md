@@ -1,7 +1,6 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-translation_of: Web/API/Event/currentTarget
 ---
 {{APIRef("DOM")}}
 

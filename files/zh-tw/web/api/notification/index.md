@@ -1,9 +1,6 @@
 ---
 title: Notification
 slug: Web/API/notification
-tags:
-  - 待翻譯
-translation_of: Web/API/Notification
 ---
 {{APIRef("Web Notifications")}}
 

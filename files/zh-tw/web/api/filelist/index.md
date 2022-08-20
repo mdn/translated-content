@@ -1,7 +1,6 @@
 ---
 title: FileList
 slug: Web/API/FileList
-translation_of: Web/API/FileList
 ---
 {{APIRef("File API")}}
 

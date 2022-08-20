@@ -1,8 +1,6 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-translation_of: Web/API/HTMLMediaElement/abort_event
-translation_of_original: Web/Events/abort
 original_slug: Web/Events/abort
 ---
 當資源載入被拒絕時將會觸發**`abort`**事件。

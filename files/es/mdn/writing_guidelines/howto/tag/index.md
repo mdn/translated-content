@@ -44,17 +44,17 @@ Cuando se etiqueta un artículo con una de estas categorías, estas ayudando a l
 
 Utilizamos los siguientes nombres de categoría como etiquetas de marcado estándar:
 
-- `{{Tag("Introducción")}}`
+- `Introducción`
   - : El artículo proporciona material introductorio sobre un tema. Lo ideal sería tener solo una etiqueta "Introducción" por tema tecnológico tratado.
-- `{{Tag("Destacado")}}`
+- `Destacado`
   - : El artículo es crítico y se mostrará de forma destacada en las páginas de inicio. Esta etiqueta se usara con moderación (nunca más de tres documentos por tema).
-- `{{Tag("Referencia")}}`
+- `Referencia`
   - : El artículo contiene material de referencia de una API, elemento, atributo, propiedad o similares.
-- `{{Tag("Inicio")}}`
+- `Inicio`
   - : Es una página de inicio.
-- `{{Tag("Guía")}}`
+- `Guía`
   - : El artículo es una página de cómo hacerlo o guía.
-- `{{Tag("Ejemplo")}}`
+- `Ejemplo`
   - : El artículo es una página de ejemplo de código o contiene ejemplos de código (es decir, fragmentos reales de código útil y no de una sola línea "ejemplos de sintaxis").
 
 ### Temas
@@ -63,25 +63,25 @@ Mediante la identificación del área temática del artículo, estás ayudando a
 
 Si bien hay cierta flexibilidad para identificar los nuevos temas, tratamos de limitarlos a los nombres de APIs o tecnologías. Algunos ejemplos:
 
-- `{{Tag("HTML")}}`
-- `{{Tag("CSS")}}`
-- `{{Tag("JavaScript")}}` (cuidado con la "S" mayúscula!)
-- `{{Tag("Documento")}}`
-- `{{Tag("DOM")}}`
-- `{{Tag("API")}}` para cada interfaz, método y propiedad
-- `{{Tag("Método")}}` para cada método de una API
-- `{{Tag("Propiedad")}}` para cada propiedad de una API
-- `{{Tag("Gráficos")}}`
-- `{{Tag("Firefox OS")}}`
-- `{{Tag("Gecko")}}`
-- `{{Tag("XUL")}}`
-- `{{Tag("XPCOM")}}`
-- `{{Tag("SVG")}}`
-- `{{Tag("WebGL")}}`
-- `{{Tag("Elemento")}}`
-- `{{Tag("Nodo")}}`
-- `{{Tag("Herramientas")}}`
-- `{{Tag("Web")}}`
+- `"HTML`
+- `"CSS`
+- `"JavaScript` (cuidado con la "S" mayúscula!)
+- `"Documento`
+- `"DOM`
+- `"API` para cada interfaz, método y propiedad
+- `"Método` para cada método de una API
+- `"Propiedad` para cada propiedad de una API
+- `"Gráficos`
+- `"Firefox OS`
+- `"Gecko`
+- `"XUL`
+- `"XPCOM`
+- `"SVG`
+- `"WebGL`
+- `"Elemento`
+- `"Nodo`
+- `"Herramientas`
+- `"Web`
 
 En general, la etiqueta de identificación del tema será el nombre de la interfaz con que este relacionada la página (como nodo "[Node"](/es/docs/Web/API/Node "/en-US/docs/Web/API/Node"), que tiene muchas páginas para sus diversas propiedades y métodos), o el nombre general de un tipo de tecnología. Puede etiquetar una página sobre WebGL con `Graphics` y `WebGL` ó una página sobre {{HTMLElement("canvas")}} con `HTML`, `Element`, `Canvas` y `Graphics`.
 
@@ -91,17 +91,17 @@ Para ayudar al visitante a comprender el estado actual de una tecnología, usamo
 
 Aquí tienen los posibles valores de esta etiqueta:
 
-- `{{Tag("Not-standard")}}`
+- `Not-standard`
   - : Indica que la tecnología o API descrita en la página no forma parte de un estándar, pero se considera estable en cualquier aplicación de navegador. Si no utiliza esta etiqueta, sus lectores asumirán que la tecnología es estándar. La tabla de compatibilidad en la página debe aclarar qué navegador o navegadores soportan esta tecnología o API.
-- `<{{Tag("Deprecated")}}`
+- `Deprecated`
   - : La tecnología o API cubierta en la página se marca como en desuso en las especificaciones y es probable que con el tiempo sea eliminada de navegadores actuales.
-- `{{Tag("Obsolete")}}`
+- `Obsolete`
   - : La tecnología o API ha sido considerada obsoleta y ha sido eliminada (o actualmente se está retirando) de la totalidad de los navegadores actuales.
-- `{{Tag ("Experimental")}}`
+- `Experimental`
   - : La tecnología no es estandar y es una tecnología o API experimental que pueden o no llegar a ser parte de un estandar. También está sujeta a cambios en el motor del navegador (normalmente sólo uno) que lo implementa.
-- `{{Tag("Necesita Privilegios")}}`
+- `Necesita Privilegios`
   - : La API requiere acceso privilegiado al dispositivo en el que se ejecuta el código.
-- `{{Tag("Solo Certificado")}}`
+- `Solo Certificado`
   - : La API sólo funciona con código certificado.
 
 ¡Estas etiquetas no excluyen el uso de la [tabla de compatibilidad](/es/docs/Project:Compatibility_tables "/en-US/docs/Project:Compatibility_tables") en su artículo!
@@ -110,67 +110,67 @@ Aquí tienen los posibles valores de esta etiqueta:
 
 Utilice este tipo de etiquetas solo para guías y tutoriales (es decir, para páginas que ya esten etiquetadas como `Guía`) para ayudar a los usuarios a elegir los tutoriales en base a su nivel. Hay tres valores posibles:
 
-- `{{Tag ("Principiante")}}`
+- `Principiante`
   - : Los artículos diseñados para introducir al lector en una tecnología que nunca han usado o sólo tienen una vaga familiaridad.
-- `{{Tag ("Intermedio")}}`
+- `Intermedio`
   - : Artículos para los usuarios que ya saben trabajar con la tecnología, pero no son expertos.
-- `{{Tag ("Advanced")}}`
+- `Advanced`
   - : Artículos sobre como ampliar las capacidades de una tecnología y del lector.
 
 ### Metadatos
 
 La comunidad de escritores utiliza estas etiquetas para designar los artículos que requieran algun tipo trabajo específico. He aquí una lista de los que más utilizamos:
 
-- `{{Tag ("basura")}}`
+- `basura`
   - : El artículo debe ser eliminado.
-- `{{Tag ("NecesitaContenido")}}`
+- `NecesitaContenido`
   - : El artículo es un esbozo o carece de información. Esta etiqueta significa que alguien debe revisar el contenido, añadir más detalles y/o terminar de escribir el artículo.
-- `{{Tag ("NecesitaEjemplos")}}`
+- `NecesitaEjemplos`
   - El artículo necesita uno o más ejemplos para ayudar a demostrar la finalidad el artículo. Estos ejemplos deben utilizar el sistema [live sample system](/es/docs/Project:MDN/Contributing/How_to_help/Code_samples).
-- `{{Tag ("NecesitaEjemplosReales")}}`
+- `NecesitaEjemplosReales`
   - El artículo tiene uno o más ejemplos que necesitan ser actualizados para usar el sistema [live sample system](/es/docs/Project:MDN/Contributing/How_to_help/Code_samples).
-- `{{Tag ("NecesitaActualizacion")}}`
+- `NecesitaActualizacion`
   - : El contenido no está actualizado y necesita una actualización.
-- `{{Tag ("excluir")}}`
+- `excluir`
   - : El contenido no necesita ser localizado y no aparecerá en las páginas de estados de localización.
-- `{{Tag ("prioridad")}}`
+- `prioridad`
   - : El contenido es importante y debe ser marcado como prioritario para traductores de MDN.
 
 ### Mapa de Alfabetización Web
 
 El proyecto [WebMaker](https://webmaker.org), a través de [Web Literacy Map](https://webmaker.org/literacy) ha definido las habilidades necesarias para leer, escribir y participar en la Web de forma óptima. Utilizaremos etiquetas de "Web Literacy Map" en MDN para ayudar a nuestros usuarios a encontrar los recursos que mejor se adapten a sus necesidades:
 
-- `{{Tag ("Navegacion")}}`
+- `Navegacion`
   - : Cómo navegar por la Web
-- `{{Tag ("WebMecanicas")}}`
+- `WebMecanicas`
   - : Cómo está organizada y cómo funciona la web
-- `{{Tag ("Buscar")}}`
+- `Buscar`
   - : Cómo encontrar información, personas y recursos en la Web
-- `{{Tag ("Credibilidad")}}`
+- `Credibilidad`
   - : Cómo evaluar críticamente la información que encuentre en la Web
-- `{{Tag ("Seguridad")}}`
+- `Seguridad`
   - : Cómo mantener sistemas, identidades y seguridad de los contenidos
-- `{{Tag ("Composición")}}`
+- `Composición`
   - : Cómo crear y organizar contenido para la Web
-- `{{Tag ("remezcla")}}`
+- `remezcla`
   - : Cómo modificar recursos Web existentes para crear algo nuevo
-- `{{Tag ("Diseno")}}`
+- `Diseno`
   - : Cómo mejorar la estética visual y la experiencia del usuario
-- `{{Tag ("Accesibilidad")}}`
+- `Accesibilidad`
   - : Cómo comunicarse de una manera universalmente reconocible a través de los recursos de la Web
-- `{{Tag ("CodigoScript")}}`
+- `CodigoScript`
   - : Cómo codificar y / o crear experiencias interactivas en la Web
-- `{{Tag ("infraestructura")}}`
+- `infraestructura`
   - : Cómo funcionan los detalles técnicos de la Internet
-- `{{Tag ("Compartir")}}`
+- `Compartir`
   - : Cómo crear recursos con otras personas
-- `{{Tag ("Colaborar")}}`
+- `Colaborar`
   - : Cómo trabajar con otras personas
-- `{{Tag ("Comunidad")}}`
+- `Comunidad`
   - : Cómo participar en las comunidades Web y entender cómo funcionan
-- `{{Tag ("Privacidad")}}`
+- `Privacidad`
   - : Cómo examinar las consecuencias de compartir datos en línea
-- `{{Tag ("Abriendo")}}`
+- `Abriendo`
   - : Cómo ayudar a mantener la Web accesible a todo el mundo
 
 ## Resumen
@@ -191,33 +191,33 @@ Los filtros de búsqueda no funcionarán adecuadamente a menos que etiquetamos c
 
 | Grupo          | Nombre filtro          | Nombre de etiqueta                                                                                                    |
 | -------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Tema           | Open Web Apps          | {{Tag("Apps")}}                                                                                                  |
-|                | HTML                   | {{Tag("HTML")}}                                                                                                  |
-|                | CSS                    | {{Tag("CSS")}}                                                                                                  |
-|                | JavaScript             | {{Tag("JavaScript")}}                                                                                          |
-|                | APIs and DOM           | {{Tag("API")}}                                                                                                  |
-|                | Canvas                 | {{Tag("Canvas")}}                                                                                              |
-|                | SVG                    | {{Tag("SVG")}}                                                                                                  |
-|                | MathML                 | {{Tag("MathML")}}                                                                                              |
-|                | WebGL                  | {{Tag("WebGL")}}                                                                                                  |
-|                | XUL                    | {{Tag("XUL")}}                                                                                                  |
-|                | Marketplace            | {{Tag("Marketplace")}}                                                                                          |
-|                | Firefox                | {{Tag("Firefox")}}                                                                                              |
-|                | Firefox para Android   | {{Tag("Firefox Mobile")}}                                                                                      |
-|                | Firefox para Desktop   | {{Tag("Firefox Desktop")}}                                                                                  |
-|                | Firefox OS             | {{Tag("Firefox OS")}}                                                                                          |
-|                | Movil                  | {{Tag("Movil")}}                                                                                                  |
-|                | Web Development        | {{Tag("Web Development")}}                                                                                  |
-|                | Add-ons & Extensions   | {{Tag("Add-ons ")}}\|\| {{Tag("Extensions")}} \|\| {{Tag("Plugins")}} \|\| {{Tag("Themes")}} |
-|                | Juegos                 | {{Tag("Juegos")}}                                                                                              |
-| Nivel          | Soy experto            | {{Tag("Experto")}}                                                                                              |
-|                | Intermedio             | {{Tag("Intermedio")}}                                                                                          |
-|                | Soy aprendiz           | {{Tag("Aprendiz")}}                                                                                              |
+| Tema           | Open Web Apps          | `Apps`                                                   |
+|                | HTML                   | `HTML`                                                   |
+|                | CSS                    | `CSS`                                                    |
+|                | JavaScript             | `JavaScript`                                             |
+|                | APIs and DOM           | `API`                                                    |
+|                | Canvas                 | `Canvas`                                                 |
+|                | SVG                    | `SVG`                                                    |
+|                | MathML                 | `MathML`                                                 |
+|                | WebGL                  | `WebGL`                                                  |
+|                | XUL                    | `XUL`                                                    |
+|                | Marketplace            | `Marketplace`                                            |
+|                | Firefox                | `Firefox`                                                |
+|                | Firefox para Android   | `Firefox Mobile`                                         |
+|                | Firefox para Desktop   | `Firefox Desktop`                                        |
+|                | Firefox OS             | `Firefox OS`                                             |
+|                | Movil                  | `Movil`                                                  |
+|                | Web Development        | `Web Development`                                        |
+|                | Add-ons & Extensions   | `Add-ons` \|\| `Extensions` \|\| `Plugins` \|\| `Themes` |
+|                | Juegos                 | `Juegos`                                                 |
+| Nivel          | Soy experto            | `Experto`                                                |
+|                | Intermedio             | `Intermedio`                                             |
+|                | Soy aprendiz           | `Aprendiz`                                               |
 | Tipo Documento | Docs                   | Restringirá la búsqueda al contenido de los docs, dejando fuera otros contenidos MDN.                                 |
 |                | Demostración           | Incluirá el contenido de demostración en los resultados de búsqueda.                                                  |
-|                | Herramientas           | {{Tag("Herramientas")}}                                                                                      |
-|                | Ejemplo Código         | {{Tag("Ejemplo")}}                                                                                              |
-|                | Como & Tutorial        | {{Tag("Guia")}}                                                                                                  |
+|                | Herramientas           | `Herramientas`                                                                                      |
+|                | Ejemplo Código         | `Ejemplo`                                                                                              |
+|                | Como & Tutorial        | `Guia`                                                                                                  |
 |                | Perfiles Desarrollador | Incluirá perfiles de desarrolladores de MDN en los resultados de búsqueda.                                            |
 |                | Recurso externo        | Es algo que el equipo de desarrollo todavía está descifrando...                                                       |
 

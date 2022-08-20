@@ -1,9 +1,6 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
-tags:
-  - 待翻譯
-translation_of: Web/API/UIEvent
 ---
 {{APIRef("DOM Events")}}
 

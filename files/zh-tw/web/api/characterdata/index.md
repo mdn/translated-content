@@ -1,7 +1,6 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
-translation_of: Web/API/CharacterData
 ---
 {{APIRef("DOM")}}
 

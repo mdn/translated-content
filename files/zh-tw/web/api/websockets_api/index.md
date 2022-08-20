@@ -1,9 +1,6 @@
 ---
 title: WebSockets
 slug: Web/API/WebSockets_API
-tags:
-  - WebSockets
-translation_of: Web/API/WebSockets_API
 original_slug: WebSockets
 ---
 {{ SeeCompatTable() }}

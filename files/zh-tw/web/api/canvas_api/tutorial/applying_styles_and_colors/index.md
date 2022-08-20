@@ -1,7 +1,6 @@
 ---
 title: 套用樣式與顏色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
