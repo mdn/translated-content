@@ -10,44 +10,42 @@ tags:
   - getReader
 translation_of: Web/API/ReadableStream/getReader
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStream")}} インターフェイスの <strong><code>getReader()</code></strong> メソッドはリーダーを作成し、それでストリームをロックします。 ストリームがロックされている間は、このリーダーが開放されるまで他のリーダーを取得できません。</span></p>
+{{domxref("ReadableStream")}} インターフェイスの **`getReader()`** メソッドはリーダーを作成し、それでストリームをロックします。 ストリームがロックされている間は、このリーダーが開放されるまで他のリーダーを取得できません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>reader</em> = <em>readableStream</em>.getReader(<em>{mode}</em>);</pre>
+```
+var reader = readableStream.getReader({mode});
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>{mode} {{optional_inline}}</dt>
- <dd>プロパティ <code>mode</code> を含むオブジェクト。 <code>mode</code> は作成するリーダーのタイプを指定する {{domxref("DOMString")}} を値として受け取ります。 値は次のとおりです。
- <ul>
-  <li><code>"byob"</code>。 これにより、読み取り可能なバイトストリームを読み取ることができる {{domxref("ReadableStreamBYOBReader")}} が作成されます（つまり、「独自のバッファーを持ち込む」読み取りを処理できます）。</li>
-  <li><code>undefined</code>（またはまったく指定されていない — これがデフォルトです）。 これにより、ストリームから個々のチャンクを読み取ることができる {{domxref("ReadableStreamDefaultReader")}} が作成されます。</li>
- </ul>
- </dd>
-</dl>
+- {mode} {{optional_inline}}
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+  - : プロパティ `mode` を含むオブジェクト。 `mode` は作成するリーダーのタイプを指定する {{domxref("DOMString")}} を値として受け取ります。 値は次のとおりです。
 
-<p><code>mode</code> 値に応じて、{{domxref("ReadableStreamDefaultReader")}} または {{domxref("ReadableStreamBYOBReader")}} オブジェクトのインスタンス。</p>
+    - `"byob"`。 これにより、読み取り可能なバイトストリームを読み取ることができる {{domxref("ReadableStreamBYOBReader")}} が作成されます（つまり、「独自のバッファーを持ち込む」読み取りを処理できます）。
+    - `undefined`（またはまったく指定されていない — これがデフォルトです）。 これにより、ストリームから個々のチャンクを読み取ることができる {{domxref("ReadableStreamDefaultReader")}} が作成されます。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 戻り値
 
-<dl>
- <dt>RangeError</dt>
- <dd>指定された <code>mode</code> 値は <code>"byob"</code> または <code>undefined</code> ではありません。</dd>
- <dt>TypeError</dt>
- <dd>リーダーを作成しようとしているストリームは {{domxref("ReadableStream")}} ではありません。</dd>
-</dl>
+`mode` 値に応じて、{{domxref("ReadableStreamDefaultReader")}} または {{domxref("ReadableStreamBYOBReader")}} オブジェクトのインスタンス。
 
-<h2 id="Examples" name="Examples">例</h2>
+### 例外
 
-<p>次の簡単な例では、<code>getReader()</code> を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成したカスタムの <code>ReadableStream</code> を読み取ります（完全なコードについては、<a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">単純なランダムストリームの例</a>を参照）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。</p>
+- RangeError
+  - : 指定された `mode` 値は `"byob"` または `undefined` ではありません。
+- TypeError
+  - : リーダーを作成しようとしているストリームは {{domxref("ReadableStream")}} ではありません。
 
-<pre class="brush: js">function fetchStream() {
+## 例
+
+次の簡単な例では、`getReader()` を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成したカスタムの `ReadableStream` を読み取ります（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。
+
+```js
+function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 
@@ -74,25 +72,15 @@ translation_of: Web/API/ReadableStream/getReader
     // さらに読み、この関数を再度呼び出します
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-get-reader","getReader()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                     | 状態                         | コメント |
+| ------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("Streams","#rs-get-reader","getReader()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStream.getReader")}}</p>
+{{Compat("api.ReadableStream.getReader")}}

@@ -11,39 +11,30 @@ tags:
   - byobRequest
 translation_of: Web/API/ReadableByteStreamController/byobRequest
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableByteStreamController")}} インターフェイスの <strong><code>byobRequest</code></strong> 読み取り専用プロパティは、現在の BYOB プルリクエストを返します。 保留中のリクエストがない場合は <code>undefined</code> を返します。</span></p>
+{{domxref("ReadableByteStreamController")}} インターフェイスの **`byobRequest`** 読み取り専用プロパティは、現在の BYOB プルリクエストを返します。 保留中のリクエストがない場合は `undefined` を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><code>var <em>request</em> = </code>readableByteStreamController</var>.byobRequest;</pre>
+```
+var request = readableByteStreamController.byobRequest;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("ReadableStreamBYOBRequest")}} オブジェクトのインスタンス、または <code>undefined</code>。</p>
+{{domxref("ReadableStreamBYOBRequest")}} オブジェクトのインスタンス、または `undefined`。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>未定。</p>
+未定。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rbs-controller-byob-request","byobRequest")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状態                         | コメント |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rbs-controller-byob-request","byobRequest")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableByteStreamController.byobRequest")}}</p>
+{{Compat("api.ReadableByteStreamController.byobRequest")}}

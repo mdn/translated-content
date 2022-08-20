@@ -10,41 +10,40 @@ tags:
   - enqueue
 translation_of: Web/API/ReadableStreamDefaultController/enqueue
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamDefaultController")}} インターフェイスの <strong><code>enqueue()</code></strong> メソッドは、所与のチャンクを関連するストリームのキューに入れます。</span></p>
+{{domxref("ReadableStreamDefaultController")}} インターフェイスの **`enqueue()`** メソッドは、所与のチャンクを関連するストリームのキューに入れます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>readableStreamDefaultController</em>.enqueue(<em>chunk</em>);</pre>
+```
+readableStreamDefaultController.enqueue(chunk);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><em>chunk</em></dt>
- <dd>キューに入れるチャンク。</dd>
-</dl>
+- _chunk_
+  - : キューに入れるチャンク。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>ソースオブジェクトは <code>ReadableStreamDefaultController</code> ではありません。</dd>
-</dl>
+- TypeError
+  - : ソースオブジェクトは `ReadableStreamDefaultController` ではありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次の単純な例では、コンストラクターを使用してカスタムの <code>ReadableStream</code> を作成します（完全なコードについては、<a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">単純なランダムストリームの例</a>を参照）。 <code>start()</code> 関数は、1秒ごとにテキストのランダムな文字列を生成し、それをストリームのキューに入れます — <code>controller.enqueue(string)</code> を参照。 {{domxref("ReadableStream.cancel()")}} が何らかの理由で呼び出された場合、生成を停止するための <code>cancel()</code> 関数も提供します。</p>
+次の単純な例では、コンストラクターを使用してカスタムの `ReadableStream` を作成します（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 `start()` 関数は、1 秒ごとにテキストのランダムな文字列を生成し、それをストリームのキューに入れます — `controller.enqueue(string)` を参照。 {{domxref("ReadableStream.cancel()")}} が何らかの理由で呼び出された場合、生成を停止するための `cancel()` 関数も提供します。
 
-<p>ボタンが押されると、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。</p>
+ボタンが押されると、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。
 
-<pre class="brush: js">const stream = new ReadableStream({
+```js
+const stream = new ReadableStream({
   start(controller) {
-    interval = setInterval(() =&gt; {
+    interval = setInterval(() => {
       let string = randomChars();
 
       // ストリームに文字列を追加
@@ -70,25 +69,15 @@ translation_of: Web/API/ReadableStreamDefaultController/enqueue
     // 文字列の生成を停止する必要があります
     clearInterval(interval);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-default-controller-enqueue","enqueue()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状態                         | コメント |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rs-default-controller-enqueue","enqueue()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStreamDefaultController.enqueue")}}</p>
+{{Compat("api.ReadableStreamDefaultController.enqueue")}}

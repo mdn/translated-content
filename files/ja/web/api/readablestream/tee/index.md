@@ -10,38 +10,39 @@ tags:
   - tee
 translation_of: Web/API/ReadableStream/tee
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStream")}} インターフェイスの <strong><code>tee()</code></strong> メソッドは、現在の読み取り可能なストリームを<a href="https://streams.spec.whatwg.org/#tee-a-readable-stream">ティーイング</a>し、結果の2つの分岐を新しい {{domxref("ReadableStream")}} インスタンスとして含む2要素配列を返します。</span></p>
+{{domxref("ReadableStream")}} インターフェイスの **`tee()`** メソッドは、現在の読み取り可能なストリームを[ティーイング](https://streams.spec.whatwg.org/#tee-a-readable-stream)し、結果の 2 つの分岐を新しい {{domxref("ReadableStream")}} インスタンスとして含む 2 要素配列を返します。
 
-<p>これは、2つのリーダーがストリームを同時に、おそらく異なる速度で読み取ることができるようにする場合に便利です。 例えば、サーバーから応答を取得してブラウザーにストリームしたいが、ServiceWorker キャッシュにもストリームしたい場合は、ServiceWorker でこれを行うことができます。 応答のボディを複数回使用することはできないため、これを行うには2つのコピーが必要です。</p>
+これは、2 つのリーダーがストリームを同時に、おそらく異なる速度で読み取ることができるようにする場合に便利です。 例えば、サーバーから応答を取得してブラウザーにストリームしたいが、ServiceWorker キャッシュにもストリームしたい場合は、ServiceWorker でこれを行うことができます。 応答のボディを複数回使用することはできないため、これを行うには 2 つのコピーが必要です。
 
-<p>ストリームをキャンセルするには、結果の両方の分岐をキャンセルする必要があります。 ストリームをティーイングすると、通常、その間はストリームがロックされ、他のリーダーがロックできなくなります。</p>
+ストリームをキャンセルするには、結果の両方の分岐をキャンセルする必要があります。 ストリームをティーイングすると、通常、その間はストリームがロックされ、他のリーダーがロックできなくなります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>teedStreams</em> = <em>readableStream</em>.tee();</pre>
+```
+var teedStreams = readableStream.tee();
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>2つの {{domxref("ReadableStream")}} インスタンスを含む {{jsxref("Array")}}。</p>
+2 つの {{domxref("ReadableStream")}} インスタンスを含む {{jsxref("Array")}}。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>ソースストリームは <code>ReadableStream</code> ではありません。</dd>
-</dl>
+- TypeError
+  - : ソースストリームは `ReadableStream` ではありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次の簡単な例では、以前に作成したストリームをティーイングした結果の両方のストリーム（生成された配列の2つのメンバーに含まれる）を、2つのストリームからデータを読み取り、各ストリームのチャンクを UI の異なる部分に順番に印刷する関数に渡します。 完全なコードについては、<a href="https://mdn.github.io/dom-examples/streams/simple-tee-example/">単純な tee の例</a>を参照してください。</p>
+次の簡単な例では、以前に作成したストリームをティーイングした結果の両方のストリーム（生成された配列の 2 つのメンバーに含まれる）を、2 つのストリームからデータを読み取り、各ストリームのチャンクを UI の異なる部分に順番に印刷する関数に渡します。 完全なコードについては、[単純な tee の例](https://mdn.github.io/dom-examples/streams/simple-tee-example/)を参照してください。
 
-<pre class="brush: js">function teeStream() {
+```js
+function teeStream() {
   const teedOff = stream.tee();
   fetchStream(teedOff[0], list2);
   fetchStream(teedOff[1], list3);
@@ -71,25 +72,15 @@ function fetchStream(stream, list) {
     // さらに読み、この関数を再度呼び出します
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-tee","tee()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                     | 状態                         | コメント |
+| -------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rs-tee","tee()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStream.tee")}}</p>
+{{Compat("api.ReadableStream.tee")}}

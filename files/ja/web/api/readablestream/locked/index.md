@@ -10,46 +10,39 @@ tags:
   - locked
 translation_of: Web/API/ReadableStream/locked
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStream")}} インターフェイスの <strong><code>locked</code></strong> 読み取り専用プロパティは、読み取り可能なストリームが<a href="https://streams.spec.whatwg.org/#lock" id="ref-for-locked-to-a-reader②">リーダーにロックされている</a>かどうかを返します。</span></p>
+{{domxref("ReadableStream")}} インターフェイスの **`locked`** 読み取り専用プロパティは、読み取り可能なストリームが[リーダーにロックされている](https://streams.spec.whatwg.org/#lock)かどうかを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><code>var <em>locked</em> = </code>readableStream</var>.locked;</pre>
+```
+var locked = readableStream.locked;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>読み取り可能なストリームがロックされているかどうかを示す {{jsxref("Boolean")}}。</p>
+読み取り可能なストリームがロックされているかどうかを示す {{jsxref("Boolean")}}。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">const stream = new ReadableStream({
+```js
+const stream = new ReadableStream({
   ...
 });
 
 const reader = stream.getReader();
 
 stream.locked
-// ストリームがリーダーにロックされているため、true を返すべきです</pre>
+// ストリームがリーダーにロックされているため、true を返すべきです
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-locked","locked")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                         | 状態                         | コメント |
+| ------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("Streams","#rs-locked","locked")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStream.locked")}}</p>
+{{Compat("api.ReadableStream.locked")}}
