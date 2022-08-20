@@ -1,15 +1,15 @@
 ---
-title: DSL (Digital Subscriber Line)
+title: DSL (デジタル加入者線)
 slug: Glossary/DSL/Digital_subscriber_line
 tags:
   - Glossary
   - Reference
 ---
-**DSL (Digital Subscriber Line)** is a type of broadband internet connection that sends wired data transmissions over telephone lines.
+**DSL (デジタル加入者線)** は、ブロードバンドインターネット接続の一種で、電話回線を使って有線データ通信を行うものです。
 
-The download and upload rates don't need to be the same. In such cases, the line is said to be _asymmetrical_ and the ADSL abbreviation is used.
-Contrast with cable, fiber optic, or dial-up connections.
+ダウンロードとアップロードの速度は同じである必要はありません。このような場合、回線は _非対称_ と言われ、ADSLの略称が使用されます。
+ケーブル、光ファイバー、ダイヤルアップ接続とは対照的となります。
 
-## See also
+## 関連情報
 
-- [Digital subscriber line](https://en.wikipedia.org/wiki/Digital_subscriber_line) on Wikipedia
+- Wikipedia 上の [デジタル加入者線](https://ja.wikipedia.org/wiki/デジタル加入者線)

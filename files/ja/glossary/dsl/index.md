@@ -5,10 +5,9 @@ tags:
   - Disambiguation
   - Glossary
 ---
-The term **DSL** can have several meanings depending on the context. It may refer to:
-
+**DSL**という用語は、文脈によって意味が異なることがあります。以下の可能性があります。
 {{GlossaryDisambiguation}}
 
-## See also
+## 関連情報
 
-- [DSL](https://en.wikipedia.org/wiki/DSL_(disambiguation)) on Wikipedia
+- Wikipedia 上の [DSL](https://ja.wikipedia.org/wiki/DSL)

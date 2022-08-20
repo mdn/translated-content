@@ -1,16 +1,16 @@
 ---
-title: DSL (Domain-Specific Language)
+title: DSL (ドメイン固有言語)
 slug: Glossary/DSL/Domain_specific_language
 tags:
   - CodingScripting
   - Glossary
   - ProgrammingLanguage
 ---
-A **Domain-Specific Language (DSL)** is a type of computer language of limited scope, designed to address a particular problem within an application domain.
+**DSL（ドメイン固有言語）** とは、あるアプリケーションドメイン内の特定の問題に対処するために設計された、範囲が限定されたコンピュータ言語の一種です。
 
-Contrast DSLs with *general-purpose languages (GPLs)*, which are designed to address various problems across domains.
+DSLは、ドメインにまたがる様々な問題に対応するように設計された *汎用言語（GPL）* とは対照的となります。
 
-## See also
+## 関連情報
 
-- [Domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language) on Wikipedia
-- [DSL Guide](https://martinfowler.com/dsl.html) on martinfowler.com
+- Wikipedia 上の [ドメイン固有言語](https://ja.wikipedia.org/wiki/ドメイン固有言語)
+- martinfowler.com 上の [DSL Guide](https://martinfowler.com/dsl.html)
