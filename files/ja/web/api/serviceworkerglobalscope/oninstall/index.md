@@ -11,20 +11,23 @@ tags:
   - oninstall
 translation_of: Web/API/ServiceWorkerGlobalScope/oninstall
 ---
-<p><span style="line-height: 19.0909080505371px;">{{SeeCompatTable}}{{APIRef("Service Workers API")}}</span></p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ServiceWorkerGlobalScope")}} インターフェースの <strong>oninstall</strong> プロパティは、（Service Worker がインストールされたときの）{{Event("install")}} イベントが発生するたびに発火するイベントハンドラーです。これはアクティブ化の前に発生します。</p>
+{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **oninstall** プロパティは、（Service Worker がインストールされたときの）{{Event("install")}} イベントが発生するたびに発火するイベントハンドラーです。これはアクティブ化の前に発生します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">ServiceWorkerGlobalScope.oninstall = function(event) { ... };
-ServiceWorkerGlobalScope.addEventListener('install', function(event) { ... });</pre>
+```js
+ServiceWorkerGlobalScope.oninstall = function(event) { ... };
+ServiceWorkerGlobalScope.addEventListener('install', function(event) { ... });
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次のスニペットは <a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Install_and_activate.3A_populating_your_cache">Using Service Workers</a> のものです。詳細はそちらをご覧ください。</p>
+次のスニペットは [Using Service Workers](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Install_and_activate.3A_populating_your_cache) のものです。詳細はそちらをご覧ください。
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
    caches.create('v1').then(function(cache) {
          return cache.add(
@@ -41,35 +44,23 @@ ServiceWorkerGlobalScope.addEventListener('install', function(event) { ... });</
      );
    })
    );
-});</pre>
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-global-scope-event-handlers', 'Event Handlers')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                             | ステータス                           | コメント   |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('Service Workers', '#service-worker-global-scope-event-handlers', 'Event Handlers')}} | {{Spec2('Service Workers')}} | 初期定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.oninstall")}}</p>
+{{Compat("api.ServiceWorkerGlobalScope.oninstall")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/ja/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/ja/docs/Web/Guide/Performance/Using_web_workers)

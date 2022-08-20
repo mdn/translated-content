@@ -12,22 +12,24 @@ tags:
   - onpush
 translation_of: Web/API/ServiceWorkerGlobalScope/onpush
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ServiceWorkerGlobalScope")}} インターフェースの <code><strong>ServiceWorkerGlobalScope.onpush</strong></code> イベントは、Service Worker がプッシュサーバー経由でメッセージを受け取るたびに発火します。</p>
+{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`ServiceWorkerGlobalScope.onpush`** イベントは、Service Worker がプッシュサーバー経由でメッセージを受け取るたびに発火します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">ServiceWorkerGlobalScope.onpush = function(PushEvent) { ... }
+```
+ServiceWorkerGlobalScope.onpush = function(PushEvent) { ... }
 self.addEventListener('push', function(PushEvent) { ... })
-</pre>
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次の例では、{{domxref("PushEvent")}} からデータを取得して、すべての Service Worker のクライアント上で表示しています。プッシュメッセージのデータペイロードは、イベントオブジェクトの <code>data</code> プロパティ（{{domxref("PushEvent.data")}} は {{domxref("PushMessageData")}} オブジェクトを含みます。）で利用できます。</p>
+次の例では、{{domxref("PushEvent")}} からデータを取得して、すべての Service Worker のクライアント上で表示しています。プッシュメッセージのデータペイロードは、イベントオブジェクトの `data` プロパティ（{{domxref("PushEvent.data")}} は {{domxref("PushMessageData")}} オブジェクトを含みます。）で利用できます。
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
- if (!(self.Notification &amp;&amp; self.Notification.permission === 'granted')) {
+```js
+self.addEventListener('push', function(event) {
+ if (!(self.Notification && self.Notification.permission === 'granted')) {
    return;
  }
 
@@ -50,33 +52,19 @@ self.addEventListener('push', function(PushEvent) { ... })
      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
    }
  });
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#widl-ServiceWorkerGlobalScope-onpush', 'onpush')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義。このイベントは {{domxref("ServiceWorkerGlobalScope")}} からアクセスしますが、Push API で定義されています。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                 | ステータス                   | コメント                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Push API', '#widl-ServiceWorkerGlobalScope-onpush', 'onpush')}} | {{Spec2('Push API')}} | 初期定義。このイベントは {{domxref("ServiceWorkerGlobalScope")}} からアクセスしますが、Push API で定義されています。 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.ServiceWorkerGlobalScope.onpush")}}</p>
-</div>
+{{Compat("api.ServiceWorkerGlobalScope.onpush")}}
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API">Push API</a></li>
-</ul>
+- [Push API](/ja/docs/Web/API/Push_API)

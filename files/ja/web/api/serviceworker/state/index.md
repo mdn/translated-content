@@ -11,24 +11,26 @@ tags:
   - state
 translation_of: Web/API/ServiceWorker/state
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p><code>ServiceWorker</code> インターフェイスの読み込みプロパティである <strong><code>state</code></strong> は service workerの現在の状態を表す文字列を返します。それは次のいずれかです: <code>installing</code>, <code>installed,</code> <code>activating</code>, <code>activated</code>, <code>redundant</code>。</p>
+`ServiceWorker` インターフェイスの読み込みプロパティである **`state`** は service worker の現在の状態を表す文字列を返します。それは次のいずれかです: `installing`, `installed,` `activating`, `activated`, `redundant`。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">someURL = ServiceWorker.state
-</pre>
+```
+someURL = ServiceWorker.state
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("ServiceWorkerState")}} 定義 (<a href="http://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-state-enum">仕様を見てください</a>)</p>
+{{domxref("ServiceWorkerState")}} 定義 ([仕様を見てください](http://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-state-enum))
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>このコードスニペットは<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>)から持ってきています。コードは {{domxref("ServiceWorker.state")}} のあらゆる変更をリッスンしてその値を返します。</p>
+このコードスニペットは[service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/))から持ってきています。コードは {{domxref("ServiceWorker.state")}} のあらゆる変更をリッスンしてその値を返します。
 
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -45,29 +47,15 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-state-attribute', 'state')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               | 策定状況                             | コメント |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#service-worker-state-attribute', 'state')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.ServiceWorker.state")}}</p>
-</div>
+{{Compat("api.ServiceWorker.state")}}

@@ -11,47 +11,34 @@ tags:
   - ServiceWorkerGlobalScope
 translation_of: Web/API/ServiceWorkerGlobalScope/clients
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ServiceWorkerGlobalScope")}} インターフェースの <strong><code>clients</code></strong> 読み取り専用プロパティは、service worker に関連する <a href="/ja/docs/Web/API/Clients" title="The ServiceWorkerClients interface of the ServiceWorker API represents a container for a list of ServiceWorkerClient objects."><code>Clients</code></a> オブジェクトを返します。</p>
+{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`clients`** 読み取り専用プロパティは、service worker に関連する [`Clients`](/ja/docs/Web/API/Clients) オブジェクトを返します。
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">構文</h2>
+## 構文
 
-<pre class="syntaxbox" style="font-size: 14px;">swClients = self.clients
-</pre>
+```
+swClients = self.clients
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>指定した worker に関連した {{domxref("Clients")}} オブジェクト。</p>
+指定した worker に関連した {{domxref("Clients")}} オブジェクト。
 
-<h2 id="仕様" style="line-height: 30px; font-size: 2.14285714285714rem;">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">仕様</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">ステータス</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">コメント</span></font></th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-global-scope-clients', 'ServiceWorkerRegistration.clients')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義。<br>
-     </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                             | ステータス                           | コメント   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
+| {{SpecName('Service Workers', '#service-worker-global-scope-clients', 'ServiceWorkerRegistration.clients')}} | {{Spec2('Service Workers')}} | 初期定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.clients")}}</p>
+{{Compat("api.ServiceWorkerGlobalScope.clients")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/ja/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/ja/docs/Web/Guide/Performance/Using_web_workers)
