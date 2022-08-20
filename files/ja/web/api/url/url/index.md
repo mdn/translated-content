@@ -9,97 +9,69 @@ tags:
   - URL API
 translation_of: Web/API/URL/URL
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p><span class="seoSummary"><strong><code>URL()</code></strong> コンストラクターは、パラメーターによって定義された URL を表す、新しく生成された {{domxref("URL")}} オブジェクトを返します。</span></p>
+**`URL()`** コンストラクターは、パラメーターによって定義された URL を表す、新しく生成された {{domxref("URL")}} オブジェクトを返します。
 
-<p>与えられたベース URL または結果の URL が有効な URL でない場合、JavaScript の {{jsxref("TypeError")}} 例外がスローされます。</p>
+与えられたベース URL または結果の URL が有効な URL でない場合、JavaScript の {{jsxref("TypeError")}} 例外がスローされます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>url</em> = new URL(<em>url</em>, [<em>base</em>])
-</pre>
+```
+url = new URL(url, [base])
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>url</code></dt>
- <dd>絶対 URL または相対 URL を表す {{domxref("USVString")}}。<code>url</code> が相対 URL の場合、<code>base</code> は必須であり、ベース URL として使用されます。<code>url</code> が絶対 URL の場合、指定された <code>base</code> は無視されます。</dd>
- <dt><code>base</code><em> </em>{{optional_inline}}</dt>
- <dd><code>url</code> が相対 URL の場合に使用するベース URL を表す {{domxref("USVString")}}。 指定しない場合のデフォルトは <code>''</code> です。</dd>
-</dl>
+- `url`
+  - : 絶対 URL または相対 URL を表す {{domxref("USVString")}}。`url` が相対 URL の場合、`base` は必須であり、ベース URL として使用されます。`url` が絶対 URL の場合、指定された `base` は無視されます。
+- `base`\_ \_{{optional_inline}}
+  - : `url` が相対 URL の場合に使用するベース URL を表す {{domxref("USVString")}}。 指定しない場合のデフォルトは `''` です。
 
-<div class="note">
-<p><strong>注</strong>: 既存の {{domxref("URL")}} オブジェクトを <code>base</code> に使用することも可能で、オブジェクトの {{domxref("URL.href","href")}} プロパティにそれ自体を文字列化します。</p>
-</div>
+> **Note:** **注**: 既存の {{domxref("URL")}} オブジェクトを `base` に使用することも可能で、オブジェクトの {{domxref("URL.href","href")}} プロパティにそれ自体を文字列化します。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("TypeError")}}</td>
-   <td><code>url</code> (絶対 URL の場合) または <code>base</code> + <code>url</code> (相対 URL の場合) が、有効な URL ではありません。</td>
-  </tr>
- </tbody>
-</table>
+| 例外                             | 説明                                                                                            |
+| -------------------------------- | ----------------------------------------------------------------------------------------------- |
+| {{jsxref("TypeError")}} | `url` (絶対 URL の場合) または `base` + `url` (相対 URL の場合) が、有効な URL ではありません。 |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// ベース URL
+```js
+// ベース URL
 var m = 'https://developer.mozilla.org';
-var a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
-var b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
+var a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
+var b = new URL(m);                                     // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
-var d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
+var d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
+                                                       // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', '');                    // '' は有効な URL ではないため、TypeError 例外が発生します
         new URL('/en-US/docs');                        // '/en-US/docs' は有効な URL ではないため、TypeError 例外が発生します
-        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
+        new URL('http://www.example.com', );           // => 'http://www.example.com/'
+        new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (相対 URL を参照)
-</pre>
+        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (相対 URL を参照)
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#constructors', 'URL.URL()')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                             | 状態                 | コメント |
+| ---------------------------------------------------------------- | -------------------- | -------- |
+| {{SpecName('URL', '#constructors', 'URL.URL()')}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.URL.URL")}}
 
+## 関連項目
 
-<p>{{Compat("api.URL.URL")}}</p>
-
-<h2 id="See_also" name="See_also">関連項目</h2>
-
-<ul>
- <li>所属しているインターフェース: {{domxref("URL")}}。</li>
-</ul>
+- 所属しているインターフェース: {{domxref("URL")}}。

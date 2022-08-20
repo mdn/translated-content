@@ -10,61 +10,51 @@ tags:
   - sort
 translation_of: Web/API/URLSearchParams/sort
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p><span class="seoSummary"><strong><code>URLSearchParams.sort()</code></strong> メソッドは、このオブジェクトに含まれるすべてのキー/値のペアをその場でソートし、<code>undefined</code> を返します。 ソート順は、キーの Unicode コードポイントに従っています。 このメソッドは、安定したソートアルゴリズムを使用します（つまり、等しいキーを持つキー/値のペア間の相対的な順序が保持されます）。</span></p>
+**`URLSearchParams.sort()`** メソッドは、このオブジェクトに含まれるすべてのキー/値のペアをその場でソートし、`undefined` を返します。 ソート順は、キーの Unicode コードポイントに従っています。 このメソッドは、安定したソートアルゴリズムを使用します（つまり、等しいキーを持つキー/値のペア間の相対的な順序が保持されます）。
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">searchParams.sort();</pre>
+```
+searchParams.sort();
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js;highlight:[5]">// テスト用の URLSearchParams オブジェクトの作成
-var searchParams = new URLSearchParams("c=4&amp;a=2&amp;b=3&amp;a=1");
+```js
+// テスト用の URLSearchParams オブジェクトの作成
+var searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
 
 // キー/値のペアのソート
 searchParams.sort();
 
 // ソートされたクエリー文字列の表示
 console.log(searchParams.toString());
-</pre>
+```
 
-<p>結果は次のとおりです。</p>
+結果は次のとおりです。
 
-<pre>a=2&amp;a=1&amp;b=3&amp;c=4</pre>
+```
+a=2&a=1&b=3&c=4
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-urlsearchparams-sort','sort()')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                 | コメント |
+| ---------------------------------------------------------------------------- | -------------------- | -------- |
+| {{SpecName('URL', '#dom-urlsearchparams-sort','sort()')}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.sort")}}</p>
-</div>
+{{Compat("api.URLSearchParams.sort")}}

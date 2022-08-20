@@ -9,58 +9,42 @@ tags:
   - has
 translation_of: Web/API/URLSearchParams/has
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><span class="seoSummary">{{domxref("URLSearchParams")}} インターフェイスの <strong><code>has()</code></strong> メソッドは、指定された名前のパラメーターが存在するかどうかを示す {{jsxref("Boolean")}} を返します。</span></p>
+{{domxref("URLSearchParams")}} インターフェイスの **`has()`** メソッドは、指定された名前のパラメーターが存在するかどうかを示す {{jsxref("Boolean")}} を返します。
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>hasName</em> = URLSearchParams.has(<em>name</em>)</pre>
+```
+var hasName = URLSearchParams.has(name)
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>name</dt>
- <dd>検索するパラメーターの名前。</dd>
-</dl>
+- name
+  - : 検索するパラメーターの名前。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref("Boolean")}}。</p>
+{{jsxref("Boolean")}}。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 params.has('bar') === true; // true
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#dom-urlsearchparams-has', "has()")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                 | コメント |
+| ---------------------------------------------------------------------------- | -------------------- | -------- |
+| {{SpecName('URL', '#dom-urlsearchparams-has', "has()")}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.has")}}</p>
-</div>
+{{Compat("api.URLSearchParams.has")}}
