@@ -1,18 +1,19 @@
 ---
-title: Synchronous
+title: Synchronous（同期通信方式）
 slug: Glossary/Synchronous
 tags:
   - Glossary
   - Web
   - WebMechanics
+translation_of: Glossary/Synchronous
 ---
-*Synchronous* refers to real-time communication where each party receives (and if necessary, processes and replies to) messages instantly (or as near to instantly as possible).
+同期 (*Synchronous*) とは、各当事者がメッセージを瞬時に（または可能な限り直ちに）受信（また必要な場合には処理および返信）するリアルタイムのコミュニケーションのことを指します。
 
-A human example is the telephone — during a telephone call you tend to respond to another person immediately.
+人間での例としては電話が挙げられます。電話の通話中は、あなたは通話相手に直ちに返事をしやすいです。
 
-Many programming commands are also synchronous — for example when you type in a calculation, the environment will return the result to you instantly, unless you program it not to.
+プログラミングのコマンドの多くも同期的です。例えば、計算式を入力すると、環境は即座にその結果を返します（そうならないようにプログラムをしない限り）。
 
-## See also
+## 関連情報
 
 - {{glossary("Asynchronous")}}
-- [Synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/en-US/docs/Web/API/XMLHttpRequest) {{glossary("API")}}
+- [Synchronous and asynchronous requests](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) （[XMLHttpRequest()](/ja/docs/Web/API/XMLHttpRequest) {{glossary("API")}} を用いている）
