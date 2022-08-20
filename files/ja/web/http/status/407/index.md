@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Status/407
 ---
 {{HTTPSidebar}}
 
-HTTP **`407 Proxy Authentication Required` **クライアントエラーというステータスのレスポンスコードは、リクエストが適用されていないことを示しています。なぜなら、ブラウザと要求されたリソースにアクセスできるサーバーの間にあるプロキシサーバーに有効な認証情報が不足しているためです。
+HTTP **`407 Proxy Authentication Required` **クライアントエラーというステータスのレスポンスコードは、リクエストが適用されていないことを示しています。なぜなら、ブラウザーと要求されたリソースにアクセスできるサーバーの間にあるプロキシサーバーに有効な認証情報が不足しているためです。
 
 このステータスは、正しい認証の仕方に関する情報を含む {{HTTPHeader("Proxy-Authenticate")}} ヘッダーと共に送信されます。
 
@@ -34,7 +34,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 | -------------------------------------------------------------------------------- | ------------------------ |
 | {{RFC("7235", "407 Proxy Authentication Required" , "3.2")}} | HTTP/1.1: Authentication |
 
-## ブラウザ互換性
+## ブラウザー互換性
 
 {{Compat("http.status.407")}}
 

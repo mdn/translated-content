@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/SourceMap
 ---
 {{HTTPSidebar}}
 
-**`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)にリンクし、ブラウザが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
+**`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)にリンクし、ブラウザーが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
 
 <table class="properties">
   <tbody>
@@ -50,7 +50,7 @@ SourceMap: /path/to/file.js.map
 | ------------------------------------------------------------------------------------------------- | ------------------------------ |
 | [Draft document](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k) | Source Map Revision 3 Proposal |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("http.headers.SourceMap")}}
 
