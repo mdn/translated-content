@@ -194,13 +194,13 @@ def youngest(request):
 
 > **참고:** [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)의 메인 웹사이트로 가보십시오, 그리고 문서와 커뮤니티를 확인하십시오.
 >
-> 1.  (위 링크들의) 메인 사이트를 둘러보기
+> 1. (위 링크들의) 메인 사이트를 둘러보기
 >
 >     - Documentation 메뉴에 링크들(Documentation, Guide, API Reference, Getting Started등)을 클릭해보십시오.
 >     - URL routing, templates, and databases/models등을 설정하는 주제들이 보이십니까?
 >     - 해당 문서들은 명료하게 작성이 되어있습니까?
 >
-> 2.  각각의 사이트에서 mailing lists(해당 커뮤니티의 링크들을 통해서 접근할 수 있습니다)를 둘러보기
+> 2. 각각의 사이트에서 mailing lists(해당 커뮤니티의 링크들을 통해서 접근할 수 있습니다)를 둘러보기
 >
 >     - 지난 며칠동안 얼마나 많은 질문들이 올라왔습니까?
 >     - 얼마나 많은 답변이 있습니까?

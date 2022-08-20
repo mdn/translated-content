@@ -358,11 +358,11 @@ TEMPLATES = [
 
 모델 쿼리, 뷰 그리고 탬플릿들과의 친밀함을 시험할 수 있는 두 가지 임무가 있습니다.
 
-1.  LocalLibrary 기본 탬플릿([base template](#The_LocalLibrary_base_template))에는 `title` 블록이 정의되어 있습니다. 색인 탬플릿([index template](#The_index_template)) 안에 이 블록을 덮어쓰기하고 페이지를 위한 새로운 제목을 만들어 보세요.
+1. LocalLibrary 기본 탬플릿([base template](#The_LocalLibrary_base_template))에는 `title` 블록이 정의되어 있습니다. 색인 탬플릿([index template](#The_index_template)) 안에 이 블록을 덮어쓰기하고 페이지를 위한 새로운 제목을 만들어 보세요.
 
     > **참고:** **힌트:** [Extending templates](#Extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
 
-2.  대소문자 구분 없이 특정한 단어를 포함하는 장르와 책들의 개수(count)를 생성하도록 [view](<#View_(function-based)>) 를 수정하고, 결과를 `context`에 전달해 보세요. 이것은 `num_books`와 `num_instances_available`을 생성하고 사용하는 것과 비슷한 방법으로 달성할 수 있습니다. 그리고 나서 이 변수들을 포함시키기 위해 [index template](#The_index_template) 를 업데이트 하세요.
+2. 대소문자 구분 없이 특정한 단어를 포함하는 장르와 책들의 개수(count)를 생성하도록 [view](<#View_(function-based)>) 를 수정하고, 결과를 `context`에 전달해 보세요. 이것은 `num_books`와 `num_instances_available`을 생성하고 사용하는 것과 비슷한 방법으로 달성할 수 있습니다. 그리고 나서 이 변수들을 포함시키기 위해 [index template](#The_index_template) 를 업데이트 하세요.
 
 ## 요약
 

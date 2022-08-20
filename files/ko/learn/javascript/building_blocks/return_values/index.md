@@ -54,8 +54,8 @@ console.log(newString); // Should print "The weather is warm"
 
 [`replace()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 함수는 `myText` 문자열에서 호출되었고, 두 매개변수(parameter)를 전달받았습니다:
 
-1.  찾을 부분열 ('cold').
-2.  바꿀 문자열 ('warm').
+1. 찾을 부분열 ('cold').
+2. 바꿀 문자열 ('warm').
 
 이 함수가 완료되었을 (실행을 끝냈을) 때, 값을 반환하는데, 그것은 교체된 문자열입니다. 위의 코드에서, 이 반환 값의 결과는 `newString`에 저장됩니다.
 
@@ -120,8 +120,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 반환 값을 포함하는 우리만의 함수를 작성해 봅시다.
 
-1.  우선, GitHub에서 [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) 파일을 다운받으세요. 이것은 텍스트 {{htmlelement("input")}} 필드와 단락을 포함하고 있는 단순한 HTML 페이지입니다. 또한 {{htmlelement("script")}} 요소가 있는데, 두 HTML 요소에 대한 참조를 두 변수에 저장해 놓았습니다. 이 작은 페이지는 숫자를 텍스트 박스에 입력할 수 있게 하고, 그것에 관련된 다른 숫자들을 아래의 단락에 표시할 것입니다.
-2.  몇몇 유용한 함수들을 이 `<script>` 요소에 추가합시다. 두 줄의 [JavaScript](/ko/docs/Web/JavaScript) 아래에, 다음의 함수 정의를 추가하세요.
+1. 우선, GitHub에서 [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) 파일을 다운받으세요. 이것은 텍스트 {{htmlelement("input")}} 필드와 단락을 포함하고 있는 단순한 HTML 페이지입니다. 또한 {{htmlelement("script")}} 요소가 있는데, 두 HTML 요소에 대한 참조를 두 변수에 저장해 놓았습니다. 이 작은 페이지는 숫자를 텍스트 박스에 입력할 수 있게 하고, 그것에 관련된 다른 숫자들을 아래의 단락에 표시할 것입니다.
+2. 몇몇 유용한 함수들을 이 `<script>` 요소에 추가합시다. 두 줄의 [JavaScript](/ko/docs/Web/JavaScript) 아래에, 다음의 함수 정의를 추가하세요.
 
     ```js
     function squared(num) {
@@ -146,7 +146,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     `squared()` 와 `cubed()` 함수는 분명합니다 — 이 함수들은 매개변수로 주어진 숫자의 제곱과 세제곱을 반환합니다. `factorial()` 함수는 주어진 숫자의 [팩토리얼](https://ko.wikipedia.org/wiki/%EA%B3%84%EC%8A%B9)을 반환합니다.
 
-3.  다음으로, 우리는 텍스트 인풋에 입력된 숫자에 대한 정보를 출력할 방법을 포함할 것입니다. 다음의 이벤트 핸들러를 존재하는 함수들 아래에 입력해 보세요:
+3. 다음으로, 우리는 텍스트 인풋에 입력된 숫자에 대한 정보를 출력할 방법을 포함할 것입니다. 다음의 이벤트 핸들러를 존재하는 함수들 아래에 입력해 보세요:
 
     ```js
     input.onchange = function() {
@@ -167,7 +167,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     만약 검사가 `false`를 반환했다면, `num` 값은 숫자입니다. 그러므로, 문장이 그 숫자의 제곱, 세제곱, 그리고 팩토리얼을 서술하는 단락 요소 내부에 출력됩니다. 문장은 `squared()`, `cubed()`, 그리고 `factorial()` 함수를 요구된 값을 계산하기 위해 호출합니다.
 
-4.  코드를 저장하고, 브라우저에서 로드한 후, 시도해 보세요.
+4. 코드를 저장하고, 브라우저에서 로드한 후, 시도해 보세요.
 
 > **참고:** 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 [GitHub에 있는 완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)과 비교해 보거나 ([실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)도 보세요), 우리에게 도움을 요청해 보세요.
 
