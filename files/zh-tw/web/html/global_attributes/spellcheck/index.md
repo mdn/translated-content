@@ -1,8 +1,6 @@
 ---
 title: 控制 HTML 表單中的拼字檢查功能
 slug: Web/HTML/Global_attributes/spellcheck
-translation_of: Web/HTML/Global_attributes/spellcheck
-translation_of_original: Web/HTML/Controlling_spell_checking_in_HTML_forms
 ---
 Firefox 2 新增了網頁表單文字輸入區的即時拼字檢查功能，使用者可以修改 about:config 來調整是否使用拼字檢查、是否同時檢查文字輸入**欄**等設定。預設值狀態下，Firefox 會檢查文字輸入區（text area）及 `designMode` 的文件，而不檢查文字輸入欄（text field）的拼字。
 

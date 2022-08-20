@@ -1,12 +1,6 @@
 ---
 title: 調整列表縮排
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - list indent
-  - 列表
-  - 縮排
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 原文 : [Consistent List Indentation](/en/Consistent_List_Indentation)
 

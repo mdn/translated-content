@@ -1,12 +1,6 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-tags:
-  - CSS
-  - CSS Property
-  - CSS 轉場
-  - Reference
-translation_of: Web/CSS/transition-duration
 ---
 {{CSSRef}}
 

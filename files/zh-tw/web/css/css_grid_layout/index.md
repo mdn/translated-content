@@ -1,14 +1,6 @@
 ---
 title: CSS格線布局
 slug: Web/CSS/CSS_Grid_Layout
-tags:
-  - CSS
-  - 參考
-  - 布局
-  - 柵格
-  - 示列
-  - 網格布局
-translation_of: Web/CSS/CSS_Grid_Layout
 ---
 {{CSSRef}}
 

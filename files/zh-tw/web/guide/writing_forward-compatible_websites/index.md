@@ -1,7 +1,6 @@
 ---
 title: Writing forward-compatible websites
 slug: Web/Guide/Writing_forward-compatible_websites
-translation_of: Web/Guide/Writing_forward-compatible_websites
 ---
 這個頁面將解釋如何撰寫在新的瀏覽器版本發布時不會遭受毀損的網頁。
 

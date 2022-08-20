@@ -1,7 +1,6 @@
 ---
 title: 原因：CORS 'Access-Control-Allow-Origin' 設定為「*」時不支援使用帳號密碼
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
-translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
 {{HTTPSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: HTTP 請求方法
 slug: Web/HTTP/Methods
-translation_of: Web/HTTP/Methods
 ---
 {{HTTPSidebar}}
 
