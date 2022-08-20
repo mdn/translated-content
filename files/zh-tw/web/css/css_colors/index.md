@@ -26,20 +26,6 @@ _None._
 
 {{Specifications}}
 
-## Browser compatibility
-
-### `color` property
-
-{{Compat("css.properties.color")}}
-
-### `print-color-adjust` property
-
-{{Compat("css.properties.print-color-adjust")}}
-
-### `opacity` property
-
-{{Compat("css.properties.opacity")}}
-
 ## See also
 
 - In CSS, gradients aren't colors but [images](/zh-TW/docs/Web/CSS/CSS_Images).

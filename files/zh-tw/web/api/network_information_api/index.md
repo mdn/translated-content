@@ -27,17 +27,10 @@ updateConnectionStatus();
 ## 規範
 
 {{Specifications}}
-{{Specifications("api.Navigator.connection")}}
 
 ## 瀏覽器相容性
 
-### NetworkInformation
-
 {{Compat}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
 
 ## See also
 
