@@ -9,41 +9,38 @@ tags:
   - Streams
 translation_of: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary"><strong><code>ReadableStreamDefaultReader()</code></strong> コンストラクターは、<code>ReadableStreamDefaultReader</code> オブジェクトのインスタンスを作成して返します。</span></p>
+**`ReadableStreamDefaultReader()`** コンストラクターは、`ReadableStreamDefaultReader` オブジェクトのインスタンスを作成して返します。
 
-<div class="note">
-<p><strong>注</strong>: 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}}) メソッドを使用します。</p>
-</div>
+> **Note:** **注**: 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}}) メソッドを使用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>readableStreamDefaultReader</em> = new ReadableStreamDefaultReader(<em>stream</em>);</pre>
+```
+var readableStreamDefaultReader = new ReadableStreamDefaultReader(stream);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>stream</dt>
- <dd>読み取られる {{domxref("ReadableStream")}}。</dd>
-</dl>
+- stream
+  - : 読み取られる {{domxref("ReadableStream")}}。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("ReadableStreamDefaultReader")}} オブジェクトのインスタンス。</p>
+{{domxref("ReadableStreamDefaultReader")}} オブジェクトのインスタンス。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>指定された <code>stream</code> パラメーターは {{domxref("ReadableStream")}} ではないか、別のリーダーによる読み取りのために既にロックされています。</dd>
-</dl>
+- TypeError
+  - : 指定された `stream` パラメーターは {{domxref("ReadableStream")}} ではないか、別のリーダーによる読み取りのために既にロックされています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次の簡単な例では、<code>getReader()</code> を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成したカスタムの <code>ReadableStream</code> を読み取ります（完全なコードについては、<a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">単純なランダムストリームの例</a>を参照）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。</p>
+次の簡単な例では、`getReader()` を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成したカスタムの `ReadableStream` を読み取ります（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。
 
-<pre class="brush: js">function fetchStream() {
+```js
+function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 
@@ -70,27 +67,15 @@ translation_of: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
     // さらに読み、この関数を再度呼び出します
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#default-reader-constructor","ReadableStreamDefaultReader()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                         | コメント |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#default-reader-constructor","ReadableStreamDefaultReader()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.ReadableStreamDefaultReader.ReadableStreamDefaultReader")}}</p>
+{{Compat("api.ReadableStreamDefaultReader.ReadableStreamDefaultReader")}}

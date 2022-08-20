@@ -11,54 +11,41 @@ tags:
   - close
 translation_of: Web/API/ReadableByteStreamController/close
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableByteStreamController")}} インターフェイスの <strong><code>close()</code></strong> メソッドは、関連するストリームを閉じます。</span></p>
+{{domxref("ReadableByteStreamController")}} インターフェイスの **`close()`** メソッドは、関連するストリームを閉じます。
 
-<div class="note">
-<p><strong>注</strong>: リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。</p>
-</div>
+> **Note:** **注**: リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>readableByteStreamController</em>.close();</pre>
+```
+readableByteStreamController.close();
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>ソースオブジェクトが <code>ReadableByteStreamController</code> ではないか、何らかの理由でストリームが読み取り可能ではありません。</dd>
-</dl>
+- TypeError
+  - : ソースオブジェクトが `ReadableByteStreamController` ではないか、何らかの理由でストリームが読み取り可能ではありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>未定。</p>
+未定。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rbs-controller-close","close()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                         | コメント |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rbs-controller-close","close()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableByteStreamController.close")}}</p>
+{{Compat("api.ReadableByteStreamController.close")}}

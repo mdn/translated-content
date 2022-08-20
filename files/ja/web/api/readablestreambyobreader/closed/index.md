@@ -11,39 +11,30 @@ tags:
   - closed
 translation_of: Web/API/ReadableStreamBYOBReader/closed
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamBYOBReader")}} インターフェイスの <strong><code>closed</code></strong> 読み取り専用プロパティは、ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たし、ストリームがエラーの場合は拒否する promise を返します。</span></p>
+{{domxref("ReadableStreamBYOBReader")}} インターフェイスの **`closed`** 読み取り専用プロパティは、ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たし、ストリームがエラーの場合は拒否する promise を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><code>var <em>closed</em> = </code>readableStreamBYOBReader</var>.closed;</pre>
+```
+var closed = readableStreamBYOBReader.closed;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{jsxref("Promise")}}。</p>
+{{jsxref("Promise")}}。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>未定。</p>
+未定。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#byob-reader-closed","closed")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                     | 状態                         | コメント |
+| ------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("Streams","#byob-reader-closed","closed")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStreamBYOBReader.closed")}}</p>
+{{Compat("api.ReadableStreamBYOBReader.closed")}}

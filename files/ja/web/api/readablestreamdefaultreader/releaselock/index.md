@@ -10,36 +10,37 @@ tags:
   - releaseLock
 translation_of: Web/API/ReadableStreamDefaultReader/releaseLock
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamDefaultReader")}} インターフェイスの <code>releaseLock()</code> メソッドは、ストリームのリーダーのロックを解除します。</span></p>
+{{domxref("ReadableStreamDefaultReader")}} インターフェイスの `releaseLock()` メソッドは、ストリームのリーダーのロックを解除します。
 
-<p>ロックを解除したときに関連するストリームにエラーが発生した場合、リーダーはその後同様にエラーが発生したようになります。 そうでない場合、リーダーは閉じた状態になります。</p>
+ロックを解除したときに関連するストリームにエラーが発生した場合、リーダーはその後同様にエラーが発生したようになります。 そうでない場合、リーダーは閉じた状態になります。
 
-<p>リーダーのロックは、保留中の読み取り要求が残っている間、つまり、リーダーの {{domxref("ReadableStreamDefaultReader.read()")}} メソッドによって返された promise が終了していない場合、解除できません。 これにより、<code>TypeError</code> がスローされます。</p>
+リーダーのロックは、保留中の読み取り要求が残っている間、つまり、リーダーの {{domxref("ReadableStreamDefaultReader.read()")}} メソッドによって返された promise が終了していない場合、解除できません。 これにより、`TypeError` がスローされます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>readableStreamDefaultReader</em>.releaseLock();</pre>
+```
+readableStreamDefaultReader.releaseLock();
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>ソースオブジェクトが <code>ReadableStreamDefaultReader</code> でないか、読み取り要求が保留中です。</dd>
-</dl>
+- TypeError
+  - : ソースオブジェクトが `ReadableStreamDefaultReader` でないか、読み取り要求が保留中です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">function fetchStream() {
+```js
+function fetchStream() {
   const reader = stream.getReader();
 
   ...
@@ -47,27 +48,15 @@ translation_of: Web/API/ReadableStreamDefaultReader/releaseLock
   reader.releaseLock()
 
   ...
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#default-reader-release-lock","releaseLock()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状態                         | コメント |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#default-reader-release-lock","releaseLock()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.ReadableStreamDefaultReader.releaseLock")}}</p>
+{{Compat("api.ReadableStreamDefaultReader.releaseLock")}}
