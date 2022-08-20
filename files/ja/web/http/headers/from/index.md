@@ -51,7 +51,7 @@ From: webmaster@example.org
 | -------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "From", "5.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("http.headers.From")}}
 

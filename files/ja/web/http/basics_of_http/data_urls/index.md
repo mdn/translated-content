@@ -104,7 +104,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 - クエリ文字列のサポートの欠如、など
   - : データ URL のデータ部分は不透明 (opaque) なので、データ URL と一緒にクエリ文字列 (`<url>?parameter-data` という構文で表されるページ固有のパラメータ) を使うと、データ URL が表現するデータに単にクエリ文字列が含まれたものになります。
 - セキュリティの課題
-  - : 多数のセキュリティ問題 (フィッシングなど) がデータ URL に関連付けられており、ブラウザーの最上位でそれらに移動しています。このような問題を軽減するために、Firefox 59+ (リリース版、Nightly/Beta は 58 以降) では `data://` URL へのトップレベルのナビゲーションがブロックされており、他のブラウザがすぐに対応することを期待しています。詳細については、[Firefox 58 におけるデータ URL へのトップレベルナビゲーションのブロック](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/)を参照してください。
+  - : 多数のセキュリティ問題 (フィッシングなど) がデータ URL に関連付けられており、ブラウザーの最上位でそれらに移動しています。このような問題を軽減するために、Firefox 59+ (リリース版、Nightly/Beta は 58 以降) では `data://` URL へのトップレベルのナビゲーションがブロックされており、他のブラウザーがすぐに対応することを期待しています。詳細については、[Firefox 58 におけるデータ URL へのトップレベルナビゲーションのブロック](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/)を参照してください。
 
 ## 仕様書
 

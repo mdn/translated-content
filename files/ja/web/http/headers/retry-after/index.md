@@ -61,7 +61,7 @@ Retry-After: 120
 | ---------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Retry-After", "7.1.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("http.headers.Retry-After")}}
 

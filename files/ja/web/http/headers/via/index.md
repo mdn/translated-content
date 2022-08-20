@@ -53,7 +53,7 @@ Via: 1.0 fred, 1.1 p.example.net
 | ---------------------------------------- | ------------------------------------------------------------------ |
 | {{RFC("7230", "Via", "5.7.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-## ブラウザの互換
+## ブラウザーの互換
 
 {{Compat("http.headers.Via")}}
 
