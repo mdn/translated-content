@@ -17,39 +17,40 @@ Now let's move on to adding functionality to allow users to filter their to-do i
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
-        knowledge of the
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-          >terminal/command line</a
-        >.
+        <p>
+          <a href="/ja/docs/Learn/HTML">HTML</a>、
+          <a href="/ja/docs/Learn/CSS">CSS</a>、
+          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
+          <a
+            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >ターミナル/コマンドライン</a
+          >に関する知識があること。
+        </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To add filtering functionality to our app.</td>
+      <th scope="row">目的:</th>
+      <td>アプリにフィルタリング機能を追加します。</td>
     </tr>
   </tbody>
 </table>
 
-## Our filtering code
+## フィルタリング コード
 
-Filtering items builds on the `filter` property, which you previously added to `app.component.ts`:
+フィルタリングは、以前に `app.component.ts` に追加した `filter` プロパティに基づいて構成されています。
 
 ```ts
 filter: 'all' | 'active' | 'done' = 'all';
 ```
 
-The default value for filter is `all`, but it can also be `active` or `done`.
+filter のデフォルト値は `all` ですが、 `active` または `done` にすることもできます。
 
-## Adding filter controls
+## フィルター コントロールの追加
 
-In `app.component.html`, add the following HTML before the **Add** button but above the section that lists the items.
-In the following snippet, the existing sections in your HTML are in comments so you can see exactly where to put the buttons.
+`app.component.html` で、次の HTML を **Add** ボタンの前、 items をリストするセクションの上に追加します。
+次のスニペットでは、HTML の既存のセクションがコメントになっているため、ボタンを配置する場所を正確に確認できます。
 
 ```html
 <!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
@@ -83,25 +84,25 @@ In the following snippet, the existing sections in your HTML are in comments so 
         <ul>... -->
 ```
 
-Clicking the buttons changes the `filter` values, which determines the `items` that show as well as the styles that Angular applies to the active button.
+ボタンをクリックすると `filter` 値が変更され、Angular がアクティブなボタンにスタイルを適用し、表示する `items` を決定します。
 
-- If the user clicks the **All** button, all of the items show.
-- If the user clicks the **To do** button, only the items with a `done` value of `false` show.
-- If the user clicks the **Done** button, only the items with a `done` value of `true` show.
+- ユーザーが **All** ボタンをクリックすると、すべての items が表示されます。
+- ユーザーが **To do** ボタンをクリックすると、 `done` の値が `false` の items が表示されます。
+- ユーザーが **Done** ボタンをクリックすると、 `done`  値が `true` の items が表示されます。
 
-A class attribute binding, using square brackets, `[]`, controls the text color of the buttons.
-The class binding, `[class.active]`, applies the `active` class when the value of `filter` matches the expression.
-For example, when the user clicks the **Done** button, which sets the `filter` value to `done`, the class binding expression of `filter == 'done'` evaluates to `true`.
-When the `filter` value is `done`, Angular applies the `active` class to the **Done** button to make the text color green.
-As soon as the user clicks on one of the other buttons, the value a `filter` is no longer `done`, so the green text color no longer applies.
+角括弧 `[]` を使用したクラス属性バインディングは、ボタンのテキストの色を制御します。
+クラスバインディング `[class.active]` は、 `filter` の値が式と一致する場合に `active` クラスを適用します。
+たとえば、ユーザーが **Done** ボタンをクリックして `filter` 値を `done` に設定すると、クラス バインディング式 `filter == 'done'` は `true` に評価されます。
+`filter` 値が `done` の場合、Angular は `active` クラスを **Done** ボタンに適用し、テキストの色を緑色にします。
+ユーザーが他のボタンのいずれかをクリックするとすぐに、 `filter` の値は `done` ではなくなるため、緑色のテキスト色は適用されなくなります。
 
-## Summary
+## まとめ
 
-That was quick! Since you already had the `filter` code in `app.component.ts`, all you had to do was edit the template in order to provide controls for filtering the items. Our next — and last — article looks at how to build your Angular app ready for production, and provides further resources to carry on your learning journey.
+早かった！ `app.component.ts` には既に `filter` コードがあるので、 items のフィルタリングをコントロールする為にテンプレートを編集するだけで済みました。 次の - そして最後の - 記事では、Angular アプリを本番環境で構築する方法を検討し、学習の旅を続けるための追加のリソースを提供します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-## In this module
+## このモジュール
 
 - [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
 - [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
