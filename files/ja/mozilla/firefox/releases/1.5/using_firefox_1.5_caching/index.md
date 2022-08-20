@@ -11,107 +11,96 @@ tags:
 translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 original_slug: Using_Firefox_1.5_caching
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<h2 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB">はじめに</h2>
+## はじめに
 
-<p><a href="/ja/Firefox_1.5_for_developers">Firefox 1.5</a> ではウェブページ全体をその JavaScript の状態も含めてメモリ内にキャッシュし、1 つのブラウザセッションとして使用します。訪問したページ間の戻る、進むという動作にページのロードが不要になり、JavaScript の状態も保存されます。この機能によってページナビゲーションが非常に高速化します。この機能は <strong>bfcache</strong>（"Back-Forward Cache" のこと）と呼ばれることもあります。このキャッシュ状態はユーザがブラウザを閉じるまで保存されます。</p>
+[Firefox 1.5](/ja/Firefox_1.5_for_developers) ではウェブページ全体をその JavaScript の状態も含めてメモリ内にキャッシュし、1 つのブラウザセッションとして使用します。訪問したページ間の戻る、進むという動作にページのロードが不要になり、JavaScript の状態も保存されます。この機能によってページナビゲーションが非常に高速化します。この機能は **bfcache**（"Back-Forward Cache" のこと）と呼ばれることもあります。このキャッシュ状態はユーザがブラウザを閉じるまで保存されます。
 
-<p>Firefox がページをキャッシュしない場合があります。ページがキャッシュされないプログラム的な理由でよくあるものをいくつか以下に示します。</p>
+Firefox がページをキャッシュしない場合があります。ページがキャッシュされないプログラム的な理由でよくあるものをいくつか以下に示します。
 
-<ul>
- <li>ページが <code>unload</code> ハンドラを使用している</li>
- <li>ページが "cache-control: no-store" をセットしている</li>
- <li>ページが "cache-control: no-cache" をセットしていて、サイトが HTTPS である</li>
- <li>ページが完全にはロードされないまま、ユーザがそのページから去るナビゲートをする</li>
- <li>トップレベルのページにキャッシュ不可能なフレームがある</li>
- <li>ページがフレーム内にあり、ユーザがそのフレーム内に新しいページをロードする（この場合、ユーザがそのページから去るナビゲートをするとそのフレームに最後にロードされたコンテンツがキャッシュされる）</li>
-</ul>
+- ページが `unload` ハンドラを使用している
+- ページが "cache-control: no-store" をセットしている
+- ページが "cache-control: no-cache" をセットしていて、サイトが HTTPS である
+- ページが完全にはロードされないまま、ユーザがそのページから去るナビゲートをする
+- トップレベルのページにキャッシュ不可能なフレームがある
+- ページがフレーム内にあり、ユーザがそのフレーム内に新しいページをロードする（この場合、ユーザがそのページから去るナビゲートをするとそのフレームに最後にロードされたコンテンツがキャッシュされる）
 
-<p>この新しいキャッシュ機能により、ページロードの挙動が変わります。ウェブ作者は次のことをしたいと思うことがあるでしょう。</p>
+この新しいキャッシュ機能により、ページロードの挙動が変わります。ウェブ作者は次のことをしたいと思うことがあるでしょう。
 
-<ul>
- <li>ナビゲートされたことがあるページであることを知ること（そのページがユーザのキャッシュからロードされるとき）</li>
- <li>ユーザがそのページを去るときのページの挙動を定義すること（ページがキャッシュされるようになっている間）</li>
-</ul>
+- ナビゲートされたことがあるページであることを知ること（そのページがユーザのキャッシュからロードされるとき）
+- ユーザがそのページを去るときのページの挙動を定義すること（ページがキャッシュされるようになっている間）
 
-<p>ブラウザの 2 つの新しいイベントによってウェブ作者はそのどちらもできるようになります。</p>
+ブラウザの 2 つの新しいイベントによってウェブ作者はそのどちらもできるようになります。
 
-<h2 id=".E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.AE.E6.96.B0.E3.81.97.E3.81.84.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name=".E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.AE.E6.96.B0.E3.81.97.E3.81.84.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88">ブラウザの新しいイベント</h2>
+## ブラウザの新しいイベント
 
-<p>これらの新しいイベントを使用すると、そのページは他のブラウザでは今までどおりにきちんと表示され（過去の Firefox、Internet Explorer、Opera、Safari でテスト済み）、Firefox 1.5 でロードしたときにこの新しいキャッシュ機能が使用されるようになります。</p>
+これらの新しいイベントを使用すると、そのページは他のブラウザでは今までどおりにきちんと表示され（過去の Firefox、Internet Explorer、Opera、Safari でテスト済み）、Firefox 1.5 でロードしたときにこの新しいキャッシュ機能が使用されるようになります。
 
-<p>ウェブページの標準的な挙動は次のとおりです。</p>
+ウェブページの標準的な挙動は次のとおりです。
 
-<ol>
- <li>ユーザがページにナビゲートする。</li>
- <li>ページロード時にインラインスクリプトが実行される。</li>
- <li>ページがロードされると <code>onload</code> ハンドラが実行される。</li>
-</ol>
+1.  ユーザがページにナビゲートする。
+2.  ページロード時にインラインスクリプトが実行される。
+3.  ページがロードされると `onload` ハンドラが実行される。
 
-<p>4 ステップ目があるページもあります。ページが <code>unload</code> ハンドラを使用していると、ユーザがそのページから去るナビゲートをするときにそれが実行されます。<code>unload</code> ハンドラが存在しているとそのページはキャッシュされません。</p>
+4 ステップ目があるページもあります。ページが `unload` ハンドラを使用していると、ユーザがそのページから去るナビゲートをするときにそれが実行されます。`unload` ハンドラが存在しているとそのページはキャッシュされません。
 
-<p>ユーザがキャッシュされたページにナビゲートしたとき、インラインスクリプトと <code>onload</code> ハンドラは実行されません（ステップ 2 および 3）。ほとんどの場合、これらのスクリプトの効果が保存されているためです。</p>
+ユーザがキャッシュされたページにナビゲートしたとき、インラインスクリプトと `onload` ハンドラは実行されません（ステップ 2 および 3）。ほとんどの場合、これらのスクリプトの効果が保存されているためです。
 
-<p>そのページにユーザがナビゲートするたびにロード中に実行されるようにしたいスクリプトや他の動作がそのページに含まれている場合、あるいはいつユーザがキャッシュされたページにナビゲートしたかを知りたい場合は、新しい <code>pageshow</code> イベントを使用します。</p>
+そのページにユーザがナビゲートするたびにロード中に実行されるようにしたいスクリプトや他の動作がそのページに含まれている場合、あるいはいつユーザがキャッシュされたページにナビゲートしたかを知りたい場合は、新しい `pageshow` イベントを使用します。
 
-<p>ユーザがそのページから去るナビゲートをするときに実行されるようにしたい動作があるものの、この新しいキャッシュ機能を生かしたく、さらにそれゆえに unload ハンドラを使用したくないという場合は、新しい <code>pagehide</code> イベントを使用します。</p>
+ユーザがそのページから去るナビゲートをするときに実行されるようにしたい動作があるものの、この新しいキャッシュ機能を生かしたく、さらにそれゆえに unload ハンドラを使用したくないという場合は、新しい `pagehide` イベントを使用します。
 
-<h3 id="pageshow_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name="pageshow_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88">pageshow イベント</h3>
+### pageshow イベント
 
-<p>このイベントは <code>load</code> イベントと同じように動作しますが、ページがロードされるたびに実行される点で異なります（一方、Firefox 1.5 ではページがキャッシュからロードされたときには <code>load</code> イベントは発動しません）。初めてページがロードされるとき、<code>load</code> イベントの発動直後に <code>pageshow</code> イベントが発動します。<code>pageshow</code> イベントは 初回ロード時には <code>false</code> がセットされる <code>persisted</code> という真偽値プロパティを使用します。初回ロードでなければ <code>true</code> がセットされます（つまり、そのページがキャッシュされているときに true がセットされます）。</p>
+このイベントは `load` イベントと同じように動作しますが、ページがロードされるたびに実行される点で異なります（一方、Firefox 1.5 ではページがキャッシュからロードされたときには `load` イベントは発動しません）。初めてページがロードされるとき、`load` イベントの発動直後に `pageshow` イベントが発動します。`pageshow` イベントは 初回ロード時には `false` がセットされる `persisted` という真偽値プロパティを使用します。初回ロードでなければ `true` がセットされます（つまり、そのページがキャッシュされているときに true がセットされます）。
 
-<p>ページロードのたびに実行したい JavaScript は <code>pageshow</code> イベントの発動時に実行されるようにセットします。</p>
+ページロードのたびに実行したい JavaScript は `pageshow` イベントの発動時に実行されるようにセットします。
 
-<p>この記事で後に示すサンプルのように、JavaScript の関数を <code>pageshow</code> イベントの一部として呼び出す場合、<code>pageshow</code> イベントを <code>load</code> イベントの一部として呼び出すことで、ページが Firefox 1.5 以外のブラウザでロードされたときにもその関数を呼び出せるようになります。</p>
+この記事で後に示すサンプルのように、JavaScript の関数を `pageshow` イベントの一部として呼び出す場合、`pageshow` イベントを `load` イベントの一部として呼び出すことで、ページが Firefox 1.5 以外のブラウザでロードされたときにもその関数を呼び出せるようになります。
 
-<h3 id="pagehide_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name="pagehide_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88">pagehide イベント</h3>
+### pagehide イベント
 
-<p>ユーザがそのページから去るナビゲートをするときに実行する動作を定義したいものの、<code>unload</code> イベント（そのページがキャッシュされなくなる）を使用したくないという場合は、新しい <code>pagehide</code> イベントを使用することができます。<code>pageshow</code> のように、<code>pagehide</code> イベントは <code>persisted</code> という真偽値プロパティを使用します。このプロパティは、ブラウザがそのページをキャッシュしていなければ <code>false</code> がセットされ、ブラウザがそのページをキャッシュしていれば <code>true</code> がセットされます。このプロパティに <code>false</code> がセットされているとき、<code>unload</code> があれば <code>pagehide</code> イベントの直後にそれが発動します。</p>
+ユーザがそのページから去るナビゲートをするときに実行する動作を定義したいものの、`unload` イベント（そのページがキャッシュされなくなる）を使用したくないという場合は、新しい `pagehide` イベントを使用することができます。`pageshow` のように、`pagehide` イベントは `persisted` という真偽値プロパティを使用します。このプロパティは、ブラウザがそのページをキャッシュしていなければ `false` がセットされ、ブラウザがそのページをキャッシュしていれば `true` がセットされます。このプロパティに `false` がセットされているとき、`unload` があれば `pagehide` イベントの直後にそれが発動します。
 
-<p>Firefox 1.5 は、そのページの初回ロード時と同じ順番でロードに関するイベントをシミュレートします。フレームはトップレベルの文書と同じように扱われます。そのページにフレームがあると、キャッシュされたページがロードされるときに次のことが起こります。</p>
+Firefox 1.5 は、そのページの初回ロード時と同じ順番でロードに関するイベントをシミュレートします。フレームはトップレベルの文書と同じように扱われます。そのページにフレームがあると、キャッシュされたページがロードされるときに次のことが起こります。
 
-<ul>
- <li>メイン文書で <code>pageshow</code> イベントが発動する前に、各フレームから <code>pageshow</code> イベントが発動する。</li>
- <li>ユーザがキャッシュされたページから去るナビゲートをすると、メイン文書で <code>pagehide</code> イベントが発動する前に、各フレームから <code>pagehide</code> イベントが発動する。</li>
- <li>単一のフレーム内でのナビゲーションについては、影響を受けるフレームでのみイベントが発動する。</li>
-</ul>
+- メイン文書で `pageshow` イベントが発動する前に、各フレームから `pageshow` イベントが発動する。
+- ユーザがキャッシュされたページから去るナビゲートをすると、メイン文書で `pagehide` イベントが発動する前に、各フレームから `pagehide` イベントが発動する。
+- 単一のフレーム内でのナビゲーションについては、影響を受けるフレームでのみイベントが発動する。
 
-<h2 id=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB.E3.82.B3.E3.83.BC.E3.83.89" name=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB.E3.82.B3.E3.83.BC.E3.83.89">サンプルコード</h2>
+## サンプルコード
 
-<p>下のサンプルは <code>load</code> イベントと <code>pageshow</code> イベントの両方を使用したページです。このサンプルページは次のような挙動をとります。</p>
+下のサンプルは `load` イベントと `pageshow` イベントの両方を使用したページです。このサンプルページは次のような挙動をとります。
 
-<ul>
- <li>Firefox 1.5 以外のブラウザでは、次のことがページロードのたびに起こる：<code>load</code> イベントが <code>onLoad</code> 関数をトリガする。<code>onLoad</code> 関数は <code>onPageShow</code> 関数を呼び出す（付随する関数はもちろんのこと）。</li>
-</ul>
+- Firefox 1.5 以外のブラウザでは、次のことがページロードのたびに起こる：`load` イベントが `onLoad` 関数をトリガする。`onLoad` 関数は `onPageShow` 関数を呼び出す（付随する関数はもちろんのこと）。
 
-<ul>
- <li>Firefox 1.5 では、初めてそのページがロードされるときに他のブラウザと同じように <code>load</code> イベントが発動する。さらに <code>pageshow</code> イベントが発動し、<code>persisted</code> に <code>false</code> がセットされるために他のアクションは生じない。</li>
-</ul>
+<!---->
 
-<ul>
- <li>Firefox 1.5 では、キャッシュからページがロードされるときは <code>pageshow</code> イベントだけが発動する。<code>persisted</code> には <code>true</code> がセットされるため、<code>onPageShow</code> 関数内の JavaScript アクションだけがトリガされる。</li>
-</ul>
+- Firefox 1.5 では、初めてそのページがロードされるときに他のブラウザと同じように `load` イベントが発動する。さらに `pageshow` イベントが発動し、`persisted` に `false` がセットされるために他のアクションは生じない。
 
-<p>この例では次のことが起こります。</p>
+<!---->
 
-<ul>
- <li>ページはロードされるたびに現在日時を算出し、表示する。この計算には秒とミリ秒が含まれるため、機能のテストが簡単になる。</li>
- <li>ページの初回ロード時にカーソルがフォームの Name フィールドに移動する。Firefox 1.5 では、ユーザがそのページに戻るナビゲートをすると、カーソルはユーザがそのページから去るナビゲートをしたときにあったフィールドに残る。他のブラウザではカーソルは Name フィールドに戻る。</li>
-</ul>
+- Firefox 1.5 では、キャッシュからページがロードされるときは `pageshow` イベントだけが発動する。`persisted` には `true` がセットされるため、`onPageShow` 関数内の JavaScript アクションだけがトリガされる。
 
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;HTML&gt;
-&lt;head&gt;
-&lt;title&gt;Order query : Firefox 1.5 Example&lt;/title&gt;
-&lt;style type="text/css"&gt;
+この例では次のことが起こります。
+
+- ページはロードされるたびに現在日時を算出し、表示する。この計算には秒とミリ秒が含まれるため、機能のテストが簡単になる。
+- ページの初回ロード時にカーソルがフォームの Name フィールドに移動する。Firefox 1.5 では、ユーザがそのページに戻るナビゲートをすると、カーソルはユーザがそのページから去るナビゲートをしたときにあったフィールドに残る。他のブラウザではカーソルは Name フィールドに戻る。
+
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<head>
+<title>Order query : Firefox 1.5 Example</title>
+<style type="text/css">
 body, p {
 	font-family: Verdana, sans-serif;
 	font-size: 12px;
    	}
-&lt;/style&gt;
-&lt;script type="text/javascript"&gt;
+</style>
+<script type="text/javascript">
 function onLoad() {
 	loadOnlyFirst();
 	onPageShow();
@@ -136,29 +125,30 @@ function onPageShow() {
 function loadOnlyFirst() {
 	document.zipForm.name.focus();
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();"&gt;
-&lt;h2&gt;Order query&lt;/h2&gt;
+</script>
+</head>
+<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+<h2>Order query</h2>
 
-&lt;form name="zipForm" action="http://www.example.com/formresult.html" method="get"&gt;
-&lt;label for="timefield"&gt;Date and time:&lt;/label&gt;
-&lt;input type="text" id="timefield"&gt;&lt;br&gt;
-&lt;label for="name"&gt;Name:&lt;/label&gt;
-&lt;input type="text" id="name"&gt;&lt;br&gt;
-&lt;label for="address"&gt;Email address:&lt;/label&gt;
-&lt;input type="text" id="address"&gt;&lt;br&gt;
-&lt;label for="order"&gt;Order number:&lt;/label&gt;
-&lt;input type="text" id="order"&gt;&lt;br&gt;
-&lt;input type="submit" name="submit" value="Submit Query"&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
+<label for="timefield">Date and time:</label>
+<input type="text" id="timefield"><br>
+<label for="name">Name:</label>
+<input type="text" id="name"><br>
+<label for="address">Email address:</label>
+<input type="text" id="address"><br>
+<label for="order">Order number:</label>
+<input type="text" id="order"><br>
+<input type="submit" name="submit" value="Submit Query">
+</form>
+</body>
+</html>
+```
 
-<p>一方、上記のページが <code>pageshow</code> イベントをリスンせず、すべての計算を <code>load</code> イベントの一部として扱う（そして代わりに下のサンプルコード片で置き換える）ものだとすると、ユーザがそのページから去るナビゲーションをするとカーソル位置も日時も Firefox 1.5 にキャッシュされます。ユーザがそのページに戻ると、キャッシュされた日時が表示されます。</p>
+一方、上記のページが `pageshow` イベントをリスンせず、すべての計算を `load` イベントの一部として扱う（そして代わりに下のサンプルコード片で置き換える）ものだとすると、ユーザがそのページから去るナビゲーションをするとカーソル位置も日時も Firefox 1.5 にキャッシュされます。ユーザがそのページに戻ると、キャッシュされた日時が表示されます。
 
-<pre>&lt;script&gt;
+```
+<script>
 function onLoad() {
 	loadOnlyFirst();
 
@@ -179,14 +169,14 @@ function onLoad() {
 function loadOnlyFirst() {
 	document.zipForm.name.focus();
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="onLoad();"&gt;
-</pre>
+<body onload="onLoad();">
+```
 
-<h2 id="Firefox_.E7.94.A8.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E9.96.8B.E7.99.BA" name="Firefox_.E7.94.A8.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E9.96.8B.E7.99.BA">Firefox 用拡張機能の開発</h2>
+## Firefox 用拡張機能の開発
 
-<p>Firefox 1.5 の <a href="/ja/Building_an_Extension">拡張機能</a> はこのキャッシュ機能を許容するものである必要があります。1.5 とそれより前のバージョンの両方と互換性を持つ Firefox の拡張機能を開発したいのであれば、キャッシュされるようにするトリガについては <code>load</code> イベントをリスンし、キャッシュされないようにするトリガについては <code>pageshow</code> イベントをリスンしてください。</p>
+Firefox 1.5 の [拡張機能](/ja/Building_an_Extension) はこのキャッシュ機能を許容するものである必要があります。1.5 とそれより前のバージョンの両方と互換性を持つ Firefox の拡張機能を開発したいのであれば、キャッシュされるようにするトリガについては `load` イベントをリスンし、キャッシュされないようにするトリガについては `pageshow` イベントをリスンしてください。
 
-<p>例えば Firefox 用 Google ツールバーは、1.5 とそれより前のバージョンの両方と互換性を持たせるためには、autolink 関数については <code>load</code> イベントをリスンすべきであり、PageRank 関数については <code>pageshow</code> イベントをリスンすべきです。</p>
+例えば Firefox 用 Google ツールバーは、1.5 とそれより前のバージョンの両方と互換性を持たせるためには、autolink 関数については `load` イベントをリスンすべきであり、PageRank 関数については `pageshow` イベントをリスンすべきです。

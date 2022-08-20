@@ -7,154 +7,132 @@ tags:
   - Gecko 9
 translation_of: Mozilla/Firefox/Releases/9
 ---
-<p>Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされました。その直後に見つかったクラッシュバグを修正した Mac 版および Linux 版のバージョン 9.0.1 は、2011 年 12 月 21 日にリリースされました。</p>
+Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされました。その直後に見つかったクラッシュバグを修正した Mac 版および Linux 版のバージョン 9.0.1 は、2011 年 12 月 21 日にリリースされました。
 
-<h2 id="Changes_for_web_developers" name="Changes_for_web_developers">Web 開発者向けの変更点一覧</h2>
+## Web 開発者向けの変更点一覧
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Element/li" title="HTML の &lt;li> 要素は、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト (&lt;ol>)、順序なしリスト (&lt;ul>)、メニュー (&lt;menu>) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字伴って表示され、順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。"><code>&lt;li&gt;</code></a> 要素の <code>value</code> 属性が負の値を取れるようになりました。これは HTML5 仕様に基づくもので、HTML5 以前は 0 に変換されていました。</li>
- <li><a href="/ja/docs/Web/HTML/Element/audio" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>&lt;audio&gt;</code></a> と <a href="/ja/docs/Web/HTML/Element/video" title="HTML の映像要素 (&lt;video>) は、文書中に映像再生に対応するメディアプレイヤーを埋め込みます。"><code>&lt;video&gt;</code></a> 要素を用いるときのメディアの URI において、<a href="/ja/docs/Using_HTML5_audio_and_video#Specifying_playback_range" title="Using_HTML5_audio_and_video#Specifying_playback_range">メディアの開始時間と終了時間を指定</a> できるようになりました。</li>
- <li><a href="/ja/docs/Web/HTML/Element/input" title="HTML の &lt;input> 要素は、ユーザーからデータを受け取るための、ウェブベースのフォーム用の対話的なコントロールを作成するために使用します。"><code>&lt;input&gt;</code></a> 要素と <a href="/ja/docs/Web/HTML/Element/textarea" title="HTML の &lt;textarea> 要素は、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。"><code>&lt;textarea&gt;</code></a> 要素が、スペルチェッカーの実行において <a href="/ja/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language" title="HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language"><code>lang</code> 属性の値を加味</a>するようになりました。</li>
- <li>Android 版 Firefox において、 <code>t</code><code>ype="file"</code> と <code>accept="image/*" を指定している </code><a href="/ja/docs/Web/HTML/Element/input" title="HTML の &lt;input> 要素は、ユーザーからデータを受け取るための、ウェブベースのフォーム用の対話的なコントロールを作成するために使用します。"><code>&lt;input&gt;</code></a> 要素<code>のときに</code>、ユーザがブラウザからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。</li>
- <li>Windows Vista スタイル PNG ICO イメージがサポートされるようになりました。</li>
- <li>CORS が許可されているときに、CORS アクセスを要求するために <a href="/ja/docs/HTML/CORS_settings_attributes" title="CORS settings attributes"><code>crossorigin</code></a> 属性 を用いた画像を描いても、不正に <a href="/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">Canvas を制限状態に</a>しないようになりました。</li>
- <li><code><a href="/ja/docs/Web/HTML/Element/td#attr-rowspan">rowspan</a></code> 属性に指定できる値の最大値が 8190 から 65,534 になりました。</li>
-</ul>
+- [`<li>`](/ja/docs/Web/HTML/Element/li "HTML の <li> 要素は、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト (<ol>)、順序なしリスト (<ul>)、メニュー (<menu>) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字伴って表示され、順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。") 要素の `value` 属性が負の値を取れるようになりました。これは HTML5 仕様に基づくもので、HTML5 以前は 0 に変換されていました。
+- [`<audio>`](/ja/docs/Web/HTML/Element/audio "この項目についての文書はまだ書かれていません。書いてみませんか？") と [`<video>`](/ja/docs/Web/HTML/Element/video "HTML の映像要素 (<video>) は、文書中に映像再生に対応するメディアプレイヤーを埋め込みます。") 要素を用いるときのメディアの URI において、[メディアの開始時間と終了時間を指定](/ja/docs/Using_HTML5_audio_and_video#Specifying_playback_range "Using_HTML5_audio_and_video#Specifying_playback_range") できるようになりました。
+- [`<input>`](/ja/docs/Web/HTML/Element/input "HTML の <input> 要素は、ユーザーからデータを受け取るための、ウェブベースのフォーム用の対話的なコントロールを作成するために使用します。") 要素と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea "HTML の <textarea> 要素は、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。") 要素が、スペルチェッカーの実行において [`lang` 属性の値を加味](/ja/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language "HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language")するようになりました。
+- Android 版 Firefox において、 ` t``ype="file" ` と `accept="image/*" を指定している `[`<input>`](/ja/docs/Web/HTML/Element/input "HTML の <input> 要素は、ユーザーからデータを受け取るための、ウェブベースのフォーム用の対話的なコントロールを作成するために使用します。") 要素`のときに`、ユーザがブラウザからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
+- Windows Vista スタイル PNG ICO イメージがサポートされるようになりました。
+- CORS が許可されているときに、CORS アクセスを要求するために [`crossorigin`](/ja/docs/HTML/CORS_settings_attributes "CORS settings attributes") 属性 を用いた画像を描いても、不正に [Canvas を制限状態に](/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F")しないようになりました。
+- [`rowspan`](/ja/docs/Web/HTML/Element/td#attr-rowspan) 属性に指定できる値の最大値が 8190 から 65,534 になりました。
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/font-stretch" title="font-stretch CSS プロパティは、フォントの normal, condensed, expanded のフェイスを選択します。"><code>font-stretch</code></a> プロパティがサポートされました。</li>
- <li><a href="/ja/docs/Web/CSS/columns" title="CSS の columns プロパティは、段組みされた要素の段の幅や段数を設定します。"><code>columns</code></a> プロパティが <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="/ja/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz' as this browser considers it experimental">-moz</a></span> 接頭辞付きでサポートされました。このプロパティは <a href="/ja/docs/Web/CSS/column-width" title="CSS の column-width プロパティは、段組みレイアウトで理想的な段の幅を指定します。"><code>column-width</code></a> と <a href="/ja/docs/Web/CSS/column-count" title="CSS の column-count プロパティは、指定された段数で要素のコンテンツを分割します。"><code>column-count</code></a> をまとめて記述する短縮形プロパティです。</li>
- <li><a href="/ja/docs/Web/HTML/Element/link" title='HTML 外部リソースへのリンク要素 (&amp;lt;link>) は、現在の文書と外部のリソースとの関係を指定します。この要素はスタイルシートへのリンクに最もよく使用されますが、サイトのアイコン ("favicon" スタイルのアイコンとモバイルのホーム画面/アプリのアイコンの両方) の確立や、その他のことにも使用されます。'><code>&lt;link&gt;</code></a> 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、<a href="/ja/docs/HTML/Element/link#Stylesheet_load_events" title="HTML/Element/link#Stylesheet_load_events"><code>load</code> イベント</a> が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、<code>error</code> イベントが発生します。</li>
- <li><a href="/ja/docs/Web/CSS/text-overflow" title="CSS の text-overflow プロパティは、表示されないあふれた内容をどのようにユーザーに知らせるのかを指定します。切り取られるか、省略記号 ('…', U+2026 Horizontal Ellipsis) を表示するか、独自の文字列を表示するかです。"><code>text-overflow</code></a> 向けの2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。</li>
-</ul>
+- [`font-stretch`](/ja/docs/Web/CSS/font-stretch "font-stretch CSS プロパティは、フォントの normal, condensed, expanded のフェイスを選択します。") プロパティがサポートされました。
+- [`columns`](/ja/docs/Web/CSS/columns "CSS の columns プロパティは、段組みされた要素の段の幅や段数を設定します。") プロパティが [-moz](/ja/docs/Web/Guide/Prefixes "The name of this feature is prefixed with '-moz' as this browser considers it experimental") 接頭辞付きでサポートされました。このプロパティは [`column-width`](/ja/docs/Web/CSS/column-width "CSS の column-width プロパティは、段組みレイアウトで理想的な段の幅を指定します。") と [`column-count`](/ja/docs/Web/CSS/column-count "CSS の column-count プロパティは、指定された段数で要素のコンテンツを分割します。") をまとめて記述する短縮形プロパティです。
+- [`<link>`](/ja/docs/Web/HTML/Element/link 'HTML 外部リソースへのリンク要素 (<link>) は、現在の文書と外部のリソースとの関係を指定します。この要素はスタイルシートへのリンクに最もよく使用されますが、サイトのアイコン ("favicon" スタイルのアイコンとモバイルのホーム画面/アプリのアイコンの両方) の確立や、その他のことにも使用されます。') 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、[`load` イベント](/ja/docs/HTML/Element/link#Stylesheet_load_events "HTML/Element/link#Stylesheet_load_events") が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、`error` イベントが発生します。
+- [`text-overflow`](/ja/docs/Web/CSS/text-overflow "CSS の text-overflow プロパティは、表示されないあふれた内容をどのようにユーザーに知らせるのかを指定します。切り取られるか、省略記号 ('…', U+2026 Horizontal Ellipsis) を表示するか、独自の文字列を表示するかです。") 向けの 2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<dl>
- <dt><a href="/ja/docs/DOM/Using_full-screen_mode" title="Using full-screen mode">フルスクリーンモードの利用</a></dt>
- <dd>新しい full-screen API は、ブラウザインターフェースを表示せずに、画面全体を用いてコンテンツを表示する方法を提供します。これはビデオおよびゲームにとって素晴らしいものです。この API は現在実験的かつプレフィックス付きです。</dd>
-</dl>
+- [フルスクリーンモードの利用](/ja/docs/DOM/Using_full-screen_mode "Using full-screen mode")
+  - : 新しい full-screen API は、ブラウザインターフェースを表示せずに、画面全体を用いてコンテンツを表示する方法を提供します。これはビデオおよびゲームにとって素晴らしいものです。この API は現在実験的かつプレフィックス付きです。
 
-<ul>
- <li><a href="/ja/docs/Web/API/Node/contains" title="Node.contains メソッドは指定ノードの子孫ノードに特定の子ノード（※自身も含む）が含まれるかどうかを示す真偽値を返します。"><code>Node.contains()</code></a> メソッドがサポートされました。このメソッドによって、あるノードが別のノードの子孫であるかを調べられます。</li>
- <li><a href="/ja/docs/Web/API/Node/parentElement" title="Node.parentElementのread-only プロパティはDOM ノード上の親の Element を返します。親ノードが存在しない場合や親ノードが DOM Element で無い場合、null が返ります。"><code>Node.parentElement</code></a> 属性が実装されました。このメソッドは DOM ノードの親 <a href="/ja/docs/Web/API/Element" title="Element は Document の中にあるすべての要素が継承する、もっとも一般的な基底クラスです。このインターフェイスは、すべての種類の要素に共通するメソッドとプロパティを記述するだけのものです。多くの具体的なクラスが Element を継承します。"><code>Element</code></a> 、または、親が要素ではない場合は <code>null</code> を返します。</li>
- <li>DOM Level 3 <a href="/ja/docs/DOM/CompositionEvent" title="CompositionEvent">Compositionイベント</a> がサポートされました。</li>
- <li><a href="/ja/docs/Web/API/Document/scripts" title="Document インターフェイスの scripts プロパティは、文書中の &lt;script> 要素のリストを返します。返されるオブジェクトは単一の HTMLCollection オブジェクトです。"><code>Document.scripts</code></a> 属性が実装されました。このメソッドはドキュメントのすべての <a href="/ja/docs/Web/HTML/Element/script" title="HTML の &lt;script> 要素は、実行できるコードを埋め込んだり参照したりするために使用されます。ふつうは JavaScript のコードの埋め込みや参照に使用されます。"><code>&lt;script&gt;</code></a> 要素の <a href="/ja/docs/Web/API/HTMLCollection" title="HTMLCollection は要素群 (document 内の順序) の一般的な集合 (arguments に似た配列状のオブジェクト) を表現したインターフェイスで、リストから選択するためのメソッドとプロパティを提供します。"><code>HTMLCollection</code></a> を返します。</li>
- <li><a href="/ja/docs/Web/API/Document/queryCommandSupported" title="Document.queryCommandSupported() メソッドは指定したエディタコマンドがブラウザでサポートされているかどうかを報告します。"><code>Document.queryCommandSupported()</code></a> メソッドが実装されました。</li>
- <li>標準 IDL インターフェースとして Event ハンドラが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、<a href="/ja/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9" title="DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9">例外が存在します。</a></li>
- <li>新しいレスポンスタイプ、 "moz-json" が XMLHttpRequest に追加されました。 そのタイプを用いると、 XMLHttpRequest に自動的に <a href="/ja/docs/JSON" title="JSON">JSON</a> 文字列をパースさせられます。つまり、このタイプをリクエストしたときはパースされた JSON 文字列が返るので、<code>response</code> プロパティの値がパース結果の JavaScript オブジェクトになります。</li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress" title="DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress">XMLHttpRequest の progress イベント</a> が受け取ったデータの各チャンクに対して確実に送信されるようになりました。つまり、以前のバージョンでは受け取ったデータの最後のチャンクが progeress イベントを発生させない可能性がありました。データの最後のチャンクを受け取ったかを判定するために load イベントも監視する必要はもう無くなり、progress イベントだけで進捗を追えるようになります。</li>
- <li>過去に、<code>null</code> のリスナーを指定した <a href="/ja/docs/DOM/element.addEventListener" title="element.addEventListener"><code>addEventListener()</code></a> の呼び出しは例外を投げていましたが、エラーを出すことなく、何の影響も及ぼさずに処理を戻すようになりました。</li>
- <li>新しい <a href="/ja/docs/Web/API/Navigator/doNotTrack" title='ユーザーの do-not-track 設定を返します。ユーザーがウェブサイトやコンテンツ、広告にトラッキングされたくないと要求している場合、この値は "1" です。'><code>navigator.doNotTrack</code></a> プロパティを用いることで、コンテンツ中で簡単にユーザが do-no-track 設定を有効にしているかを判定できます。この値が "yes" ならば、ユーザを追跡するべきではありません。</li>
- <li><a href="/ja/docs/Web/API/Text/splitText" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>splitText()</code></a> や <a href="/ja/docs/Web/API/Node/normalize" title="指定ノードの空のノードを削除し、隣接するテキストノードをひとつに纏め、文書を「正規化 (normalize)」します。"><code>normalize()</code></a> が呼び出されたとき、<a href="/ja/docs/Web/API/Range" title="Range インターフェイスとは document の断片で、ある document 中のノードやテキストノードの一部を含むことのできるものです。"><code>Range</code></a> オブジェクトや <a href="/ja/docs/Web/API/Selection" title="このオブジェクトのクラスは window.getSelection() やその他のメソッドによって返されるものです。"><code>Selection</code></a> オブジェクトがとる挙動が仕様通りになりました。</li>
- <li>doctype ノードに対しての <a href="/ja/docs/Web/API/Node/ownerDocument" title="ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。"><code>Node.ownerDocument</code></a> の値が、<code>null</code> ではなく、ノードを作成するために呼ばれた <a href="/ja/docs/DOM/DOMImplementation.createDocumentType" title="DOMImplementation.createDocumentType"><code>createDocumentType()</code></a> 上のドキュメントになるようになりました。</li>
- <li><code>window.navigator.taintEnabled</code> が削除されました。このプロパティは長年サポートされていませんでした。</li>
-</ul>
+<!---->
 
-<h3 id="Workers">Workers</h3>
+- [`Node.contains()`](/ja/docs/Web/API/Node/contains "Node.contains メソッドは指定ノードの子孫ノードに特定の子ノード（※自身も含む）が含まれるかどうかを示す真偽値を返します。") メソッドがサポートされました。このメソッドによって、あるノードが別のノードの子孫であるかを調べられます。
+- [`Node.parentElement`](/ja/docs/Web/API/Node/parentElement "Node.parentElementのread-only プロパティはDOM ノード上の親の Element を返します。親ノードが存在しない場合や親ノードが DOM Element で無い場合、null が返ります。") 属性が実装されました。このメソッドは DOM ノードの親 [`Element`](/ja/docs/Web/API/Element "Element は Document の中にあるすべての要素が継承する、もっとも一般的な基底クラスです。このインターフェイスは、すべての種類の要素に共通するメソッドとプロパティを記述するだけのものです。多くの具体的なクラスが Element を継承します。") 、または、親が要素ではない場合は `null` を返します。
+- DOM Level 3 [Composition イベント](/ja/docs/DOM/CompositionEvent "CompositionEvent") がサポートされました。
+- [`Document.scripts`](/ja/docs/Web/API/Document/scripts "Document インターフェイスの scripts プロパティは、文書中の <script> 要素のリストを返します。返されるオブジェクトは単一の HTMLCollection オブジェクトです。") 属性が実装されました。このメソッドはドキュメントのすべての [`<script>`](/ja/docs/Web/HTML/Element/script "HTML の <script> 要素は、実行できるコードを埋め込んだり参照したりするために使用されます。ふつうは JavaScript のコードの埋め込みや参照に使用されます。") 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection "HTMLCollection は要素群 (document 内の順序) の一般的な集合 (arguments に似た配列状のオブジェクト) を表現したインターフェイスで、リストから選択するためのメソッドとプロパティを提供します。") を返します。
+- [`Document.queryCommandSupported()`](/ja/docs/Web/API/Document/queryCommandSupported "Document.queryCommandSupported() メソッドは指定したエディタコマンドがブラウザでサポートされているかどうかを報告します。") メソッドが実装されました。
+- 標準 IDL インターフェースとして Event ハンドラが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9 "DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9")
+- 新しいレスポンスタイプ、 "moz-json" が XMLHttpRequest に追加されました。 そのタイプを用いると、 XMLHttpRequest に自動的に [JSON](/ja/docs/JSON "JSON") 文字列をパースさせられます。つまり、このタイプをリクエストしたときはパースされた JSON 文字列が返るので、`response` プロパティの値がパース結果の JavaScript オブジェクトになります。
+- [XMLHttpRequest の progress イベント](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress "DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress") が受け取ったデータの各チャンクに対して確実に送信されるようになりました。つまり、以前のバージョンでは受け取ったデータの最後のチャンクが progeress イベントを発生させない可能性がありました。データの最後のチャンクを受け取ったかを判定するために load イベントも監視する必要はもう無くなり、progress イベントだけで進捗を追えるようになります。
+- 過去に、`null` のリスナーを指定した [`addEventListener()`](/ja/docs/DOM/element.addEventListener "element.addEventListener") の呼び出しは例外を投げていましたが、エラーを出すことなく、何の影響も及ぼさずに処理を戻すようになりました。
+- 新しい [`navigator.doNotTrack`](/ja/docs/Web/API/Navigator/doNotTrack 'ユーザーの do-not-track 設定を返します。ユーザーがウェブサイトやコンテンツ、広告にトラッキングされたくないと要求している場合、この値は "1" です。') プロパティを用いることで、コンテンツ中で簡単にユーザが do-no-track 設定を有効にしているかを判定できます。この値が "yes" ならば、ユーザを追跡するべきではありません。
+- [`splitText()`](/ja/docs/Web/API/Text/splitText "この項目についての文書はまだ書かれていません。書いてみませんか？") や [`normalize()`](/ja/docs/Web/API/Node/normalize "指定ノードの空のノードを削除し、隣接するテキストノードをひとつに纏め、文書を「正規化 (normalize)」します。") が呼び出されたとき、[`Range`](/ja/docs/Web/API/Range "Range インターフェイスとは document の断片で、ある document 中のノードやテキストノードの一部を含むことのできるものです。") オブジェクトや [`Selection`](/ja/docs/Web/API/Selection "このオブジェクトのクラスは window.getSelection() やその他のメソッドによって返されるものです。") オブジェクトがとる挙動が仕様通りになりました。
+- doctype ノードに対しての [`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument "ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。") の値が、`null` ではなく、ノードを作成するために呼ばれた [`createDocumentType()`](/ja/docs/DOM/DOMImplementation.createDocumentType "DOMImplementation.createDocumentType") 上のドキュメントになるようになりました。
+- `window.navigator.taintEnabled` が削除されました。このプロパティは長年サポートされていませんでした。
 
-<ul>
- <li>Firefox 8 では、blob URL で実装された Workers が壊れていましたが、Firefox 9 から再び動作するようになりました。</li>
-</ul>
+### Workers
 
-<h3 id="MathML">MathML</h3>
+- Firefox 8 では、blob URL で実装された Workers が壊れていましたが、Firefox 9 から再び動作するようになりました。
 
-<ul>
- <li><code><a href="/ja/docs/Web/MathML/Element/maction" title="&lt;maction>">&lt;maction&gt;</a></code> 要素の <code>actiontype</code> 属性における非推奨な値 <code>restyle</code> が削除されました。</li>
- <li>まだ要素自体はサポートされていませんが、<code><a href="/ja/docs/Web/MathML/Element/mlabeledtr" title="&lt;mlabeledtr>">&lt;mlabeledtr&gt;</a></code> 要素を用いても、描画を完全に壊さないようになりました。この要素の実際のサポートの進捗は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=689641" title="Add support for mlabeledtr">バグ 689641</a> を参照してください。</li>
-</ul>
+### MathML
 
-<h3 id="Networking">Networking</h3>
+- [`<maction>`](/ja/docs/Web/MathML/Element/maction "<maction>") 要素の `actiontype` 属性における非推奨な値 `restyle` が削除されました。
+- まだ要素自体はサポートされていませんが、[`<mlabeledtr>`](/ja/docs/Web/MathML/Element/mlabeledtr "<mlabeledtr>") 要素を用いても、描画を完全に壊さないようになりました。この要素の実際のサポートの進捗は [バグ 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641 "Add support for mlabeledtr") を参照してください。
 
-<ul>
- <li>You can now send the contents of <a href="/ja/docs/JavaScript_typed_arrays" title="JavaScript typed arrays">JavaScript typed arrays</a> (that is, the contents of an <a href="/ja/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> object) <a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data" title="DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data">using XMLHttpRequest</a>.</li>
- <li>WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.</li>
- <li>The HTTP <code>Accept</code> header for XSLT requests has been changed to simply "*/*" for simplicity. Since fetching XSLT has always fallen back to "*/*" anyway, it made sense to simplify the initial request.</li>
- <li>Attempts by a server to use the <code>301 Moved Permanently</code> or <code>307 Temporary Redirect</code> response codes to redirect the user to a <code>javascript:</code> URI now <a href="/ja/docs/HTTP#More_on_redirection_responses" title="HTTP#More_on_redirection_responses">result in a "bad connection" error</a> instead of actually redirecting. This prevents certain types of cross-site scripting attacks.</li>
- <li>Content served with an empty <a href="/ja/docs/Web/HTTP/Headers/Content-Disposition" title="本文が multipart/form-data である場合、 Content-Disposition ヘッダーは、マルチパートを構成する各サブパートに付与され、そのフィールドに関する情報を示します。サブパートはContent-Type ヘッダーで定義された boundary によって区切られます。マルチパートの本文体に付与した場合、 Content-Disposition は何の意味も持ちません。"><code>Content-Disposition</code></a> were previously treated as if the <a href="/ja/docs/Web/HTTP/Headers/Content-Disposition" title="本文が multipart/form-data である場合、 Content-Disposition ヘッダーは、マルチパートを構成する各サブパートに付与され、そのフィールドに関する情報を示します。サブパートはContent-Type ヘッダーで定義された boundary によって区切られます。マルチパートの本文体に付与した場合、 Content-Disposition は何の意味も持ちません。"><code>Content-Disposition</code></a> were "attachment"; this didn't always work as expected. These are now handled as if the <a href="/ja/docs/Web/HTTP/Headers/Content-Disposition" title="本文が multipart/form-data である場合、 Content-Disposition ヘッダーは、マルチパートを構成する各サブパートに付与され、そのフィールドに関する情報を示します。サブパートはContent-Type ヘッダーで定義された boundary によって区切られます。マルチパートの本文体に付与した場合、 Content-Disposition は何の意味も持ちません。"><code>Content-Disposition</code></a> were "inline".</li>
- <li>The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.</li>
-</ul>
+### Networking
 
-<h3 id="Developer_tools">Developer tools</h3>
+- You can now send the contents of [JavaScript typed arrays](/ja/docs/JavaScript_typed_arrays "JavaScript typed arrays") (that is, the contents of an [`ArrayBuffer`](/ja/docs/JavaScript_typed_arrays/ArrayBuffer "ArrayBuffer") object) [using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data "DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data").
+- WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
+- The HTTP `Accept` header for XSLT requests has been changed to simply "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
+- Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/ja/docs/HTTP#More_on_redirection_responses "HTTP#More_on_redirection_responses") instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
+- Content served with an empty [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition "本文が multipart/form-data である場合、 Content-Disposition ヘッダーは、マルチパートを構成する各サブパートに付与され、そのフィールドに関する情報を示します。サブパートはContent-Type ヘッダーで定義された boundary によって区切られます。マルチパートの本文体に付与した場合、 Content-Disposition は何の意味も持ちません。") were previously treated as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition "本文が multipart/form-data である場合、 Content-Disposition ヘッダーは、マルチパートを構成する各サブパートに付与され、そのフィールドに関する情報を示します。サブパートはContent-Type ヘッダーで定義された boundary によって区切られます。マルチパートの本文体に付与した場合、 Content-Disposition は何の意味も持ちません。") were "attachment"; this didn't always work as expected. These are now handled as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition "本文が multipart/form-data である場合、 Content-Disposition ヘッダーは、マルチパートを構成する各サブパートに付与され、そのフィールドに関する情報を示します。サブパートはContent-Type ヘッダーで定義された boundary によって区切られます。マルチパートの本文体に付与した場合、 Content-Disposition は何の意味も持ちません。") were "inline".
+- The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
 
-<ul>
- <li>The web console now supports basic <a href="/ja/docs/Using_the_Web_Console#String_substitutions" title="Using_the_Web_Console#String_substitutions">string substitutions</a> in its logging methods.</li>
- <li>You can now <a href="/ja/docs/Using_the_Web_Console#Using_groups_in_the_console" title="Using_the_Web_Console#Using_groups_in_the_console">create visually nested blocks of output</a> in the web console, to help make it easier to read.</li>
-</ul>
+### Developer tools
 
-<h2 id="Mozilla_開発者とアドオン開発者向けの変更点">Mozilla 開発者とアドオン開発者向けの変更点</h2>
+- The web console now supports basic [string substitutions](/ja/docs/Using_the_Web_Console#String_substitutions "Using_the_Web_Console#String_substitutions") in its logging methods.
+- You can now [create visually nested blocks of output](/ja/docs/Using_the_Web_Console#Using_groups_in_the_console "Using_the_Web_Console#Using_groups_in_the_console") in the web console, to help make it easier to read.
 
-<p>See <a href="/ja/docs/Firefox/Updating_add-ons_for_Firefox_9" title="Firefox/Updating add-ons for Firefox 9">Updating add-ons for Firefox 9</a> for an overview of the changes you may need to make to get your add-ons working in Firefox 9.</p>
+## Mozilla 開発者とアドオン開発者向けの変更点
 
-<h3 id="XUL">XUL</h3>
+See [Updating add-ons for Firefox 9](/ja/docs/Firefox/Updating_add-ons_for_Firefox_9 "Firefox/Updating add-ons for Firefox 9") for an overview of the changes you may need to make to get your add-ons working in Firefox 9.
 
-<ul>
- <li>The <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> element now has a <code id="a-pending"><a href="/ja/docs/Mozilla/Tech/XUL/Attribute/pending">pending</a></code> attribute, whose value is <code>true</code>, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.</li>
- <li>The <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> element now has an <code id="a-unread"><a href="/ja/docs/Mozilla/Tech/XUL/Attribute/unread">unread</a></code> attribute, whose value is <code>true</code>, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.</li>
- <li>You can now use a <code><a href="/ja/docs/Mozilla/Tech/XUL/panel" title="panel">panel</a></code> as a drag image for DOM drag and drop operations. This lets you use the standard drag &amp; drop API for <a href="/ja/docs/DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images" title="DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images">drag and drop of XUL content</a>.</li>
- <li>The <code><a href="/ja/docs/Mozilla/Tech/XUL/notificationbox" title="notificationbox">notificationbox</a></code> element's <span id="m-appendNotification"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/appendNotification">appendNotification</a></code></span> method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.</li>
-</ul>
+### XUL
 
-<h3 id="JavaScript_code_module_changes">JavaScript code module changes</h3>
+- The [`tab`](/ja/docs/Mozilla/Tech/XUL/tab "tab") element now has a [`pending`](/ja/docs/Mozilla/Tech/XUL/Attribute/pending) attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
+- The [`tab`](/ja/docs/Mozilla/Tech/XUL/tab "tab") element now has an [`unread`](/ja/docs/Mozilla/Tech/XUL/Attribute/unread) attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
+- You can now use a [`panel`](/ja/docs/Mozilla/Tech/XUL/panel "panel") as a drag image for DOM drag and drop operations. This lets you use the standard drag & drop API for [drag and drop of XUL content](/ja/docs/DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images "DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images").
+- The [`notificationbox`](/ja/docs/Mozilla/Tech/XUL/notificationbox "notificationbox") element's [`appendNotification`](/ja/docs/Mozilla/Tech/XUL/Method/appendNotification) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
 
-<ul>
- <li><a href="/ja/docs/JavaScript_code_modules/FileUtils.jsm" title="FileUtils.jsm"><code>FileUtils.jsm</code></a> now has a <code>File</code> constructor that returns an <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> object representing a file specified by its pathname.</li>
-</ul>
+### JavaScript code module changes
 
-<h3 id="Service_changes">Service changes</h3>
+- [`FileUtils.jsm`](/ja/docs/JavaScript_code_modules/FileUtils.jsm "FileUtils.jsm") now has a `File` constructor that returns an [`nsIFile`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile) object representing a file specified by its pathname.
 
-<ul>
- <li>サイト別設定サービスが <a href="/ja/docs/Using_content_preferences#private-browsing" title="Using_content_preferences#private-browsing">プライベートブラウジングモードを考慮するようになりました</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=679784" title="FIXED: nsIContentPrefService should handle private browsing mode">バグ 679784</a> 参照)。</li>
-</ul>
+### Service changes
 
-<h3 id="Interface_changes">Interface changes</h3>
+- サイト別設定サービスが [プライベートブラウジングモードを考慮するようになりました](/ja/docs/Using_content_preferences#private-browsing "Using_content_preferences#private-browsing") ([バグ 679784](https://bugzilla.mozilla.org/show_bug.cgi?id=679784 "FIXED: nsIContentPrefService should handle private browsing mode") 参照)。
 
-<h4 id="Removed_interfaces">Removed interfaces</h4>
+### Interface changes
 
-<ul>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIGlobalHistory3" title="">nsIGlobalHistory3</a></code> has been removed during streamlining of the Places and DocShell code.</li>
-</ul>
+#### Removed interfaces
 
-<h4 id="Miscellaneous_interface_changes">Miscellaneous interface changes</h4>
+- [`nsIGlobalHistory3`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIGlobalHistory3) has been removed during streamlining of the Places and DocShell code.
 
-<ul>
- <li><a href="/ja/docs/XPCOM_Interface_Reference/nsISound" title="XPCOM_Interface_Reference/nsISound"><code>nsISound</code></a> インタフェースに新しい定数 <code>EVENT_EDITOR_MAX_LEN</code> が導入され、テキスト欄に入力された文字数が制限を超えた場合にシステム効果音を鳴らせるようになりました。今のところ、これは Windows のみで使用されています。</li>
- <li><a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptError2" title="XPCOM_Interface_Reference/nsIScriptError2"><code>nsIScriptError2</code></a> インタフェースに新しいプロパティ <code>timeStamp</code> と <code>innerWindowID</code> が追加されました。また、<code>initWithWindowID()</code> メソッドが、外部ウィンドウ ID の代わりに内部ウィンドウ ID を受け取るようになりました。</li>
- <li><a href="/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard" title="XPCOM_Interface_Reference/nsIBidiKeyboard"><code>nsIBidiKeyboard</code></a> インタフェースに <a href="/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards" title="XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards"><code>haveBidiKeyboards</code></a> 属性が追加されました。これは、OS に少なくともひとつ各方向 (LTR もしくは RTL) のキーボードがインストールされているかどうかを判別できるものです。.</li>
- <li>The new <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIEditor#isSelectionEditable">nsIEditor.isSelectionEditable</a></code> attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.</li>
- <li>The <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIBrowserHistory#registerOpenPage()">nsIBrowserHistory.registerOpenPage()</a></code> and <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIBrowserHistory#unregisterOpenPage()">nsIBrowserHistory.unregisterOpenPage()</a></code> methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIPlacesAutoComplete" title="">mozIPlacesAutoComplete</a></code> instead.</li>
- <li>The <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#wrapDOMFile()">nsIDOMWindowUtils.wrapDOMFile()</a></code> method has been added; this returns a DOM <a href="/ja/docs/Web/API/File" title="File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。"><code>File</code></a> object for a given <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code>.</li>
- <li>The <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#removeDelayedFrameScript()">nsIChromeFrameMessageManager.removeDelayedFrameScript()</a></code> method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#loadFrameScript()">nsIChromeFrameMessageManager.loadFrameScript()</a></code> with the delayed load flag set. This is exposed to add-ons as <code>browser.messageManager.removeDelayedFrameScript()</code>.</li>
- <li>The <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppStartup" title="">nsIAppStartup</a></code> interface has a new <code>interrupted</code> attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.</li>
- <li>The <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEditorSpellCheck" title="">nsIEditorSpellCheck</a></code> interface has been revised to support per-site selection of spell checker dictionaries.</li>
-</ul>
+#### Miscellaneous interface changes
 
-<h3 id="IDL_パーサ">IDL パーサ</h3>
+- [`nsISound`](/ja/docs/XPCOM_Interface_Reference/nsISound "XPCOM_Interface_Reference/nsISound") インタフェースに新しい定数 `EVENT_EDITOR_MAX_LEN` が導入され、テキスト欄に入力された文字数が制限を超えた場合にシステム効果音を鳴らせるようになりました。今のところ、これは Windows のみで使用されています。
+- [`nsIScriptError2`](/ja/docs/XPCOM_Interface_Reference/nsIScriptError2 "XPCOM_Interface_Reference/nsIScriptError2") インタフェースに新しいプロパティ `timeStamp` と `innerWindowID` が追加されました。また、`initWithWindowID()` メソッドが、外部ウィンドウ ID の代わりに内部ウィンドウ ID を受け取るようになりました。
+- [`nsIBidiKeyboard`](/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard "XPCOM_Interface_Reference/nsIBidiKeyboard") インタフェースに [`haveBidiKeyboards`](/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards "XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards") 属性が追加されました。これは、OS に少なくともひとつ各方向 (LTR もしくは RTL) のキーボードがインストールされているかどうかを判別できるものです。.
+- The new [`nsIEditor.isSelectionEditable`](/ja/docs/XPCOM_Interface_Reference/nsIEditor#isSelectionEditable) attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
+- The [`nsIBrowserHistory.registerOpenPage()`](</ja/docs/XPCOM_Interface_Reference/nsIBrowserHistory#registerOpenPage()>) and [`nsIBrowserHistory.unregisterOpenPage()`](</ja/docs/XPCOM_Interface_Reference/nsIBrowserHistory#unregisterOpenPage()>) methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in [`mozIPlacesAutoComplete`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIPlacesAutoComplete) instead.
+- The [`nsIDOMWindowUtils.wrapDOMFile()`](</ja/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#wrapDOMFile()>) method has been added; this returns a DOM [`File`](/ja/docs/Web/API/File "File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。") object for a given [`nsIFile`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile).
+- The [`nsIChromeFrameMessageManager.removeDelayedFrameScript()`](</ja/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#removeDelayedFrameScript()>) method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using [`nsIChromeFrameMessageManager.loadFrameScript()`](</ja/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#loadFrameScript()>) with the delayed load flag set. This is exposed to add-ons as `browser.messageManager.removeDelayedFrameScript()`.
+- The [`nsIAppStartup`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppStartup) interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
+- The [`nsIEditorSpellCheck`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEditorSpellCheck) interface has been revised to support per-site selection of spell checker dictionaries.
 
-<p>IDL パーサから、これまで完全に実装されたことのなかったユニークポインタの概念が削除されました。</p>
+### IDL パーサ
 
-<h3 id="Build_system_changes">Build system changes</h3>
+IDL パーサから、これまで完全に実装されたことのなかったユニークポインタの概念が削除されました。
 
-<ul>
- <li>The <code>--enable-application=standalone</code> option for building standalone XPConnect has been removed; it hasn't worked since 2007 anyway.</li>
- <li>The build system now looks for <code>.mozconfig</code> at <code>$topsrcdir/.mozconfig</code> or <code>$topsrcdir/mozconfig</code>, and nowhere else, unless you override the <code>.mozconfig</code> path using the <code>MOZCONFIG</code> environment variable.</li>
- <li>The xpidl utility has been replaced in the SDK with <a href="/ja/docs/XPIDL/pyxpidl" title="pyxpidl">pyxpidl</a>.</li>
-</ul>
+### Build system changes
 
-<h3 id="Other_changes">Other changes</h3>
+- The `--enable-application=standalone` option for building standalone XPConnect has been removed; it hasn't worked since 2007 anyway.
+- The build system now looks for `.mozconfig` at `$topsrcdir/.mozconfig` or `$topsrcdir/mozconfig`, and nowhere else, unless you override the `.mozconfig` path using the `MOZCONFIG` environment variable.
+- The xpidl utility has been replaced in the SDK with [pyxpidl](/ja/docs/XPIDL/pyxpidl "pyxpidl").
 
-<ul>
- <li>The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.</li>
- <li>You can now register components to add features to the <a href="/ja/docs/Web/API/Window/navigator" title="navigator オブジェクトへの参照を返します。 navigator オブジェクトを用いることで、スクリプトを実行しているアプリケーションについての情報を得ることができます。"><code>window.navigator</code></a> object by using the "JavaScript-navigator-property" category. See <a href="/ja/docs/Developer_Guide/Adding_APIs_to_the_navigator_object" title="Developer_Guide/Adding APIs to the navigator object">Adding APIs to the navigator object</a> for details and examples.</li>
-</ul>
+### Other changes
 
-<h2 id="See_also" name="See_also">参考</h2>
+- The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.
+- You can now register components to add features to the [`window.navigator`](/ja/docs/Web/API/Window/navigator "navigator オブジェクトへの参照を返します。 navigator オブジェクトを用いることで、スクリプトを実行しているアプリケーションについての情報を得ることができます。") object by using the "JavaScript-navigator-property" category. See [Adding APIs to the navigator object](/ja/docs/Developer_Guide/Adding_APIs_to_the_navigator_object "Developer_Guide/Adding APIs to the navigator object") for details and examples.
 
-<div><div class="multiColumnList">
-<ul>
-<li><a href="/ja/docs/Mozilla/Firefox/Releases/8">Firefox 8 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/6">Firefox 6 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/4">Firefox 4 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/2">Firefox 2 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5 for developers</a></li></ul>
-</div></div>
+## 参考
+
+- [Firefox 8 for developers](/ja/docs/Mozilla/Firefox/Releases/8)
+- [Firefox 7 for developers](/ja/docs/Mozilla/Firefox/Releases/7)
+- [Firefox 6 for developers](/ja/docs/Mozilla/Firefox/Releases/6)
+- [Firefox 5 for developers](/ja/docs/Mozilla/Firefox/Releases/5)
+- [Firefox 4 for developers](/ja/docs/Mozilla/Firefox/Releases/4)
+- [Firefox 3.6 for developers](/ja/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.5 for developers](/ja/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 for developers](/ja/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 for developers](/ja/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 for developers](/ja/docs/Mozilla/Firefox/Releases/1.5)

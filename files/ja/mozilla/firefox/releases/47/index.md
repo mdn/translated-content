@@ -6,170 +6,142 @@ tags:
   - Release Notes
 translation_of: Mozilla/Firefox/Releases/47
 ---
-<p>Firefox 47 は、米国時間 2016 年 6 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 47 の変更点をまとめています。</p>
+Firefox 47 は、米国時間 2016 年 6 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 47 の変更点をまとめています。
 
-<h2 id="Changes_for_Web_developers" name="Changes_for_Web_developers">ウェブ開発者向けの変更点一覧</h2>
+## ウェブ開発者向けの変更点一覧
 
-<h3 id="Developer_Tools" name="Developer_Tools">開発者ツール</h3>
+### 開発者ツール
 
-<ul>
- <li><a href="/ja/docs/Tools/Responsive_Design_Mode">レスポンシブデザインモード</a> で <a href="/ja/docs/Browser_detection_using_the_user_agent">ユーザーエージェントをスプーフィング</a> する</li>
- <li>メモリーツールの <a href="/ja/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel">Retaining paths パネル</a></li>
- <li><a href="/ja/docs/Web/API/ServiceWorker">Service Worker</a> と <a href="/ja/docs/Web/API/Push_API">Push API</a> のデバッグ
-  <ul>
-   <li>Worker 用の <a href="/ja/docs/Tools/about:debugging">about:debugging</a> ダッシュボード</li>
-   <li>キャッシュされたリクエストを <a href="/ja/docs/Tools/Network_Monitor">ネットワークモニター</a> で表示</li>
-   <li><a href="/ja/docs/Web/API/Cache">キャッシュストレージ</a> を <a href="/ja/docs/Tools/Storage_Inspector">ストレージインスペクター</a> でサポート</li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Tools/Storage_Inspector">ストレージインスペクター</a> で項目をフィルターする機能</li>
- <li><a href="/ja/docs/Tools/Web_Console">コンソール</a> が不完全なコマンド入力を検出して、自動的に複数行モードに切り替える</li>
- <li><a href="/ja/docs/Tools/Debugger">デバッガー</a> でブレークポイントのスタイルを更新</li>
- <li>ブラウザーやアドオンのデバッグを支援するため、<a href="/ja/docs/Tools/Browser_Toolbox">ブラウザーツールボックス</a> の使用中はパネルを自動的に閉じないようにする</li>
- <li><a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Fonts_view">フォントインスペクター</a> をデフォルトで無効化 ({{bug(1247723)}})</li>
- <li><a href="/ja/docs/Tools/3D_View">3D ビュー</a> を削除</li>
- <li>開発ツールのテーマを更新</li>
- <li>フォントパネルを無効化 ({{bug(1247723)}})</li>
-</ul>
+- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) で [ユーザーエージェントをスプーフィング](/ja/docs/Browser_detection_using_the_user_agent) する
+- メモリーツールの [Retaining paths パネル](/ja/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel)
+- [Service Worker](/ja/docs/Web/API/ServiceWorker) と [Push API](/ja/docs/Web/API/Push_API) のデバッグ
 
-<h3 id="HTML" name="HTML">HTML</h3>
+  - Worker 用の [about:debugging](/ja/docs/Tools/about:debugging) ダッシュボード
+  - キャッシュされたリクエストを [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で表示
+  - [キャッシュストレージ](/ja/docs/Web/API/Cache) を [ストレージインスペクター](/ja/docs/Tools/Storage_Inspector) でサポート
 
-<p><em>変更なし。</em></p>
+- [ストレージインスペクター](/ja/docs/Tools/Storage_Inspector) で項目をフィルターする機能
+- [コンソール](/ja/docs/Tools/Web_Console) が不完全なコマンド入力を検出して、自動的に複数行モードに切り替える
+- [デバッガー](/ja/docs/Tools/Debugger) でブレークポイントのスタイルを更新
+- ブラウザーやアドオンのデバッグを支援するため、[ブラウザーツールボックス](/ja/docs/Tools/Browser_Toolbox) の使用中はパネルを自動的に閉じないようにする
+- [フォントインスペクター](/ja/docs/Tools/Page_Inspector/UI_Tour#Fonts_view) をデフォルトで無効化 ({{bug(1247723)}})
+- [3D ビュー](/ja/docs/Tools/3D_View) を削除
+- 開発ツールのテーマを更新
+- フォントパネルを無効化 ({{bug(1247723)}})
 
-<h3 id="CSS" name="CSS">CSS</h3>
+### HTML
 
-<ul>
- <li>{{cssxref("::backdrop")}} 疑似要素をサポートしました ({{bug(1064843)}})。</li>
- <li><a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a> で大文字・小文字を区別しないことを示す修飾子 <code>i</code> (例: <code>[foo=bar i]</code>) を実装しました ({{bug(888190)}})。</li>
- <li>CSS Mask Image プロパティを実験的に実装しました。現在は Nightly 版の Firefox のみで使用できます。{{cssxref("mask-repeat")}}、{{cssxref("mask-position")}}、{{cssxref("mask-size")}}、およびショートハンドの {{cssxref("mask")}} を使用できます ({{bug(686281)}})。</li>
- <li>HTML 要素において、{{cssxref("clip-path")}} プロパティで <code>polygon()</code>, <code>ellipse()</code>, <code>circle()</code> を実験的にサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246762">inset()</a> および <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246764">path()</a> はサポートしていません)。設定項目 <code>layout.css.clip-path-shapes.enabled</code> で制御しており、既定値は <code>false</code> です ({{bug(1075457)}})。値の変更は (従ってアニメーションも) 未サポートです。</li>
- <li>CSS Grid の実験的な実装を更新しました:
-  <ul>
-   <li>グリッドコンテナーで、{{cssxref("align-content")}}<code>: normal</code> は <code>stretch</code> と同じ動作になりました ({{bug(1237754)}})。</li>
-   <li>{{cssxref('grid')}}、{{cssxref('grid-template')}}、{{cssxref('grid-gap')}} プロパティで、列と行の値の順序を入れ替えました ({{bug(1251999)}})。</li>
-  </ul>
- </li>
- <li>{{cssxref("@media/display-mode", "display-mode")}} メディア特性をサポートしました ({{bug("1104916")}})。</li>
- <li>{{cssxref("text-align")}} および {{cssxref("text-align-last")}} の値 <code>true</code> を、<code>unsafe</code> に改名しました ({{bug("1250342")}})。</li>
-</ul>
+_変更なし。_
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+### CSS
 
-<ul>
- <li>ES2017 の {{jsxref("Object.values()")}} および {{jsxref("Object.entries()")}} メソッドを実装しました ({{bug(1232639)}})。</li>
- <li>非推奨の <a href="/ja/docs/Archive/Web/Old_Proxy_API">古い Proxy API</a> (<code>Proxy.create</code> および <code>Proxy.createFunction</code>) は、コンソールで警告を表示するようになりました。また、将来のバージョンで削除する予定です。代わりに標準の {{jsxref("Proxy")}} オブジェクトを使用してください ({{bug(892903)}})。</li>
- <li>非推奨かつ非標準である、<code>String.prototype.</code>{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} の <code>flags</code> 引数をリリース版以外の以外のビルドで廃止しました ({{bug(1245801)}})。</li>
- <li>新たな ES2016 仕様に従い、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 用の {{jsxref("Proxy")}} <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate">enumerate</a> トラップを削除しました ({{bug(1246318)}})。</li>
- <li>ECMAScript 仕様に従い、{{jsxref("Array.prototype.indexOf()")}} および {{jsxref("Array.prototype.lastIndexOf()")}} メソッド (および {{jsxref("TypedArray")}} の同等メソッド) を、<code>-0</code> を返さないように更新しました ({{bug(1242043)}})。</li>
-</ul>
+- {{cssxref("::backdrop")}} 疑似要素をサポートしました ({{bug(1064843)}})。
+- [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) で大文字・小文字を区別しないことを示す修飾子 `i` (例: `[foo=bar i]`) を実装しました ({{bug(888190)}})。
+- CSS Mask Image プロパティを実験的に実装しました。現在は Nightly 版の Firefox のみで使用できます。{{cssxref("mask-repeat")}}、{{cssxref("mask-position")}}、{{cssxref("mask-size")}}、およびショートハンドの {{cssxref("mask")}} を使用できます ({{bug(686281)}})。
+- HTML 要素において、{{cssxref("clip-path")}} プロパティで `polygon()`, `ellipse()`, `circle()` を実験的にサポートしました ([inset()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246762) および [path()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246764) はサポートしていません)。設定項目 `layout.css.clip-path-shapes.enabled` で制御しており、既定値は `false` です ({{bug(1075457)}})。値の変更は (従ってアニメーションも) 未サポートです。
+- CSS Grid の実験的な実装を更新しました:
 
-<h3 id="InterfacesAPIsDOM" name="InterfacesAPIsDOM">インターフェイス/API/DOM</h3>
+  - グリッドコンテナーで、{{cssxref("align-content")}}`: normal` は `stretch` と同じ動作になりました ({{bug(1237754)}})。
+  - {{cssxref('grid')}}、{{cssxref('grid-template')}}、{{cssxref('grid-gap')}} プロパティで、列と行の値の順序を入れ替えました ({{bug(1251999)}})。
 
-<h4 id="DOM_HTML_DOM" name="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+- {{cssxref("@media/display-mode", "display-mode")}} メディア特性をサポートしました ({{bug("1104916")}})。
+- {{cssxref("text-align")}} および {{cssxref("text-align-last")}} の値 `true` を、`unsafe` に改名しました ({{bug("1250342")}})。
 
-<ul>
- <li>{{domxref("Document.scrollingElement")}} プロパティを実装しました。設定項目 <code>dom.document.scrollingElement.enabled</code> で制御しており、既定値は <code>false</code> です ({{bug(1153322)}})。</li>
-</ul>
+### JavaScript
 
-<h4 id="WebGL" name="WebGL">WebGL</h4>
+- ES2017 の {{jsxref("Object.values()")}} および {{jsxref("Object.entries()")}} メソッドを実装しました ({{bug(1232639)}})。
+- 非推奨の [古い Proxy API](/ja/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` および `Proxy.createFunction`) は、コンソールで警告を表示するようになりました。また、将来のバージョンで削除する予定です。代わりに標準の {{jsxref("Proxy")}} オブジェクトを使用してください ({{bug(892903)}})。
+- 非推奨かつ非標準である、`String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} の `flags` 引数をリリース版以外の以外のビルドで廃止しました ({{bug(1245801)}})。
+- 新たな ES2016 仕様に従い、[`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) 用の {{jsxref("Proxy")}} [enumerate](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate) トラップを削除しました ({{bug(1246318)}})。
+- ECMAScript 仕様に従い、{{jsxref("Array.prototype.indexOf()")}} および {{jsxref("Array.prototype.lastIndexOf()")}} メソッド (および {{jsxref("TypedArray")}} の同等メソッド) を、`-0` を返さないように更新しました ({{bug(1242043)}})。
 
-<p><em>変更なし。</em></p>
+### インターフェイス/API/DOM
 
-<h4 id="IndexedDB" name="IndexedDB">IndexedDB</h4>
+#### DOM & HTML DOM
 
-<ul>
- <li>{{domxref("IDBKeyRange.includes()")}} メソッドを実装しました ({{bug("1251498")}})。</li>
-</ul>
+- {{domxref("Document.scrollingElement")}} プロパティを実装しました。設定項目 `dom.document.scrollingElement.enabled` で制御しており、既定値は `false` です ({{bug(1153322)}})。
 
-<h4 id="Service_Worker_and_related_APIs" name="Service_Worker_and_related_APIs">Service Worker と関連 API</h4>
+#### WebGL
 
-<ul>
- <li>{{domxref("Request.Request()")}} コンストラクターで、init オプションとして referrer を受け入れるようになりました ({{bug(1251448)}})。</li>
- <li>{{domxref("Request.referrerPolicy")}} プロパティをサポートしました ({{bug(1251872)}})。</li>
- <li><a href="/ja/docs/Web/API/Service_Worker_API">Service workers</a> および <a href="/ja/docs/Web/API/Push_API">Push</a> を、<a class="external external-icon" href="https://www.mozilla.org/ja/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR) で無効にしました ({{bug(1232029)}})。</li>
-</ul>
+_変更なし。_
 
-<h4 id="WebRTC" name="WebRTC">WebRTC</h4>
+#### IndexedDB
 
-<ul>
- <li>{{domxref("RTCIceServer")}} 辞書のサポートを、{{domxref("RTCIceServer.credentialType", "credentialType")}} プロパティをサポートすることにより WebRTC 1.0 仕様に合わせて更新しました。このプロパティは、クレデンシャルがパスワードかトークンかを指定する文字列です。現在、Firefox は <code>"password"</code> のみサポートしています。</li>
-</ul>
+- {{domxref("IDBKeyRange.includes()")}} メソッドを実装しました ({{bug("1251498")}})。
 
-<h4 id="New_APIs" name="New_APIs">新規 API</h4>
+#### Service Worker と関連 API
 
-<p><em>変更なし。</em></p>
+- {{domxref("Request.Request()")}} コンストラクターで、init オプションとして referrer を受け入れるようになりました ({{bug(1251448)}})。
+- {{domxref("Request.referrerPolicy")}} プロパティをサポートしました ({{bug(1251872)}})。
+- [Service workers](/ja/docs/Web/API/Service_Worker_API) および [Push](/ja/docs/Web/API/Push_API) を、[Firefox 45 Extended Support Release](https://www.mozilla.org/ja/firefox/organizations/) (ESR) で無効にしました ({{bug(1232029)}})。
 
-<h4 id="Others" name="Others">その他</h4>
+#### WebRTC
 
-<ul>
- <li>{{domxref("Cache.add()")}} および {{domxref("Cache.addAll()")}} で、レスポンスステータスが <code>200</code> 番台ではない場合に <code>TypeError</code> 例外が発生するようになりました ({{bug(1244764)}})。</li>
- <li><a href="/ja/docs/Mozilla/Firefox_OS/API/App_installation_and_management_APIs">アプリのインストールと管理の API</a> (<code>navigator.mozApps.*</code>) を、Firefox OS 以外のプラットフォームでは公開しないようになりました ({{bug("1238576")}})。</li>
- <li><a href="/ja/docs/Web/API/Web_Crypto_API">Web Crypto API</a> のメソッドで、RSA-PSS 暗号化アルゴリズムが使用可能になりました ({{bug (1191936)}})。</li>
- <li><a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> の {{domxref("Permissions.revoke()")}} メソッドを追加しました ({{bug("1197461")}})。</li>
- <li>HTML を使用してウェブコンテンツを表示するフレームを作成できるようにするため {{htmlelement("iframe")}} の機能を拡張する、<a href="/ja/docs/Web/API/Browser_API">Browser API</a> (以前は Firefox OS のみサポートしていました) が、デスクトップ版の chrome コードでも使用可能になりました ({{bug(1238160)}})。</li>
- <li><a href="/ja/docs/Web/API/notification">Notification API</a> の {{domxref("Notification.requestPermission()","requestPermission()")}} メソッドを、コールバックベースの構文から Promise ベースの構文に更新しました ({{bug(1241278)}})。</li>
- <li><a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a> を最新の仕様に合わせて更新して、接頭辞を削除しました。一部のメソッドは改名および大文字・小文字を変更しました ({{bug(743198)}})。これは設定項目 <code>full-screen-api.unprefix.enabled</code> で制御されており、デフォルトで無効化していることに注意してください ({{bug(1268749)}})。</li>
-</ul>
+- {{domxref("RTCIceServer")}} 辞書のサポートを、{{domxref("RTCIceServer.credentialType", "credentialType")}} プロパティをサポートすることにより WebRTC 1.0 仕様に合わせて更新しました。このプロパティは、クレデンシャルがパスワードかトークンかを指定する文字列です。現在、Firefox は `"password"` のみサポートしています。
 
-<h3 id="AudioVideo" name="AudioVideo">Audio/Video</h3>
+#### 新規 API
 
-<ul>
- <li>u-law 圧縮の WAV ファイルが再生可能になりました ({{bug(851530)}})。</li>
- <li>Google Inc. が提供する <a href="https://www.widevine.com/">Widevine</a> Content Decryption Module が、Windows Vista 以降および Mac OS X で MP4との組み合わせにより <a href="/ja/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a> で使用可能になりました (MP4 限定。EME と WebM のサポートについては {{bug(1257716)}} をご覧ください)。Silverlight から移行することができます ({{bug(1265270)}})。</li>
-</ul>
+_変更なし。_
 
-<h2 id="HTTP" name="HTTP">HTTP</h2>
+#### その他
 
-<ul>
- <li>{{HTTPHeader("Accept")}} ヘッダーの、画像用の既定値を <code>image/png,image/*;q=0.8,*/*;q=0.5</code> から <code>*/*</code> に変更しました ({{bug(1249474)}})。</li>
-</ul>
+- {{domxref("Cache.add()")}} および {{domxref("Cache.addAll()")}} で、レスポンスステータスが `200` 番台ではない場合に `TypeError` 例外が発生するようになりました ({{bug(1244764)}})。
+- [アプリのインストールと管理の API](/ja/docs/Mozilla/Firefox_OS/API/App_installation_and_management_APIs) (`navigator.mozApps.*`) を、Firefox OS 以外のプラットフォームでは公開しないようになりました ({{bug("1238576")}})。
+- [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) のメソッドで、RSA-PSS 暗号化アルゴリズムが使用可能になりました ({{bug (1191936)}})。
+- [Permissions API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.revoke()")}} メソッドを追加しました ({{bug("1197461")}})。
+- HTML を使用してウェブコンテンツを表示するフレームを作成できるようにするため {{htmlelement("iframe")}} の機能を拡張する、[Browser API](/ja/docs/Web/API/Browser_API) (以前は Firefox OS のみサポートしていました) が、デスクトップ版の chrome コードでも使用可能になりました ({{bug(1238160)}})。
+- [Notification API](/ja/docs/Web/API/notification) の {{domxref("Notification.requestPermission()","requestPermission()")}} メソッドを、コールバックベースの構文から Promise ベースの構文に更新しました ({{bug(1241278)}})。
+- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) を最新の仕様に合わせて更新して、接頭辞を削除しました。一部のメソッドは改名および大文字・小文字を変更しました ({{bug(743198)}})。これは設定項目 `full-screen-api.unprefix.enabled` で制御されており、デフォルトで無効化していることに注意してください ({{bug(1268749)}})。
 
-<h2 id="Networking" name="Networking">ネットワーク</h2>
+### Audio/Video
 
-<p><em>変更なし。</em></p>
+- u-law 圧縮の WAV ファイルが再生可能になりました ({{bug(851530)}})。
+- Google Inc. が提供する [Widevine](https://www.widevine.com/) Content Decryption Module が、Windows Vista 以降および Mac OS X で MP4 との組み合わせにより [Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API) で使用可能になりました (MP4 限定。EME と WebM のサポートについては {{bug(1257716)}} をご覧ください)。Silverlight から移行することができます ({{bug(1265270)}})。
 
-<h2 id="Security" name="Security">セキュリティ</h2>
+## HTTP
 
-<ul>
- <li><code>view-source:</code> プロトコルの URL をウェブページから使用したときに、<a href="/ja/docs/Tools/View_source">ソース表示</a> ツールを開かないようになりました ({{bug(1172165)}})。</li>
- <li>Firefox の <a href="https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/">click-to-activate プラグインのホワイトリスト</a> を削除しました。アクティブにするためクリックする必要がないプラグインは、Flash だけです。 ({{bug(1263630)}})。</li>
-</ul>
+- {{HTTPHeader("Accept")}} ヘッダーの、画像用の既定値を `image/png,image/*;q=0.8,*/*;q=0.5` から `*/*` に変更しました ({{bug(1249474)}})。
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers" name="Changes_for_add-on_and_Mozilla_developers">アドオン開発者と Mozilla 開発者向けの変更点</h2>
+## ネットワーク
 
-<h3 id="Interfaces" name="Interfaces">インターフェイス</h3>
+_変更なし。_
 
-<ul>
- <li>アドオン向けに、JavaScript で CSS トークナイザーが使用可能になりました ({{bug(1152033)}})。</li>
-</ul>
+## セキュリティ
 
-<h3 id="FUEL" name="FUEL">FUEL</h3>
+- `view-source:` プロトコルの URL をウェブページから使用したときに、[ソース表示](/ja/docs/Tools/View_source) ツールを開かないようになりました ({{bug(1172165)}})。
+- Firefox の [click-to-activate プラグインのホワイトリスト](https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/) を削除しました。アクティブにするためクリックする必要がないプラグインは、Flash だけです。 ({{bug(1263630)}})。
 
-<p>Firefox 3 で導入された <a href="/ja/docs/Mozilla/Tech/Toolkit_API/FUEL">FUEL</a> JavaScript ライブラリーを<strong>削除しました</strong>。このライブラリーはアドオンの開発を支援するように設計されましたが、<a href="/ja/docs/Mozilla/Add-ons/SDK">Add-on SDK</a> の導入や <a href="/ja/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> のサポートにより、役に立つものではなくなりました ({{bug(1090880)}})。</p>
+## アドオン開発者と Mozilla 開発者向けの変更点
 
-<h3 id="XUL" name="XUL">XUL</h3>
+### インターフェイス
 
-<p><em>変更なし。</em></p>
+- アドオン向けに、JavaScript で CSS トークナイザーが使用可能になりました ({{bug(1152033)}})。
 
-<h3 id="JavaScript_code_modules" name="JavaScript_code_modules">JavaScript コードモジュール</h3>
+### FUEL
 
-<p><em>変更なし。</em></p>
+Firefox 3 で導入された [FUEL](/ja/docs/Mozilla/Tech/Toolkit_API/FUEL) JavaScript ライブラリーを**削除しました**。このライブラリーはアドオンの開発を支援するように設計されましたが、[Add-on SDK](/ja/docs/Mozilla/Add-ons/SDK) の導入や [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) のサポートにより、役に立つものではなくなりました ({{bug(1090880)}})。
 
-<h3 id="XPCOM" name="XPCOM">XPCOM</h3>
+### XUL
 
-<p><em>変更なし。</em></p>
+_変更なし。_
 
-<h3 id="Other" name="Other">その他</h3>
+### JavaScript コードモジュール
 
-<p><em>変更なし。</em></p>
+_変更なし。_
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+### XPCOM
 
-<ul>
- <li><a href="https://www.mozilla.jp/firefox/47.0/releasenotes/">Firefox 47 リリースノート</a></li>
- <li><a href="https://dev.mozilla.jp/2016/04/firefox-47-addon-compatibility/">Firefox 47 アドオン互換性情報</a></li>
-</ul>
+_変更なし。_
 
-<h2 id="Older_versions" name="Older_versions">過去のバージョン</h2>
+### その他
 
-<p>{{Firefox_for_developers(46)}}</p>
+_変更なし。_
+
+## 関連情報
+
+- [Firefox 47 リリースノート](https://www.mozilla.jp/firefox/47.0/releasenotes/)
+- [Firefox 47 アドオン互換性情報](https://dev.mozilla.jp/2016/04/firefox-47-addon-compatibility/)
+
+## 過去のバージョン
+
+{{Firefox_for_developers(46)}}

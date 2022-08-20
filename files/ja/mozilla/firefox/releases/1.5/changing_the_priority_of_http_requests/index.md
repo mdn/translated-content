@@ -5,62 +5,64 @@ tags:
   - HTTP
 translation_of: Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<h3 id="イントロダクション">イントロダクション</h3>
+### イントロダクション
 
-<p>In <a href="/ja/Firefox_1.5_for_developers" title="en/Firefox_1.5_for_developers">Firefox 1.5</a> (Gecko 1.8), an API was added to support changing the priority of <a href="/ja/HTTP" title="en/HTTP">HTTP</a> requests. Prior to this, there was no way to directly indicate that a request was of a different priority. The API is defined in <a href="/ja/nsISupportsPriority" title="en/nsISupportsPriority">nsISupportsPriority</a>, but is defined in very generic terms so that any object can implement this interface to enable the concept of priority. This article deals specifically with using that interface to change the priority of HTTP requests.</p>
+In [Firefox 1.5](/ja/Firefox_1.5_for_developers "en/Firefox_1.5_for_developers") (Gecko 1.8), an API was added to support changing the priority of [HTTP](/ja/HTTP "en/HTTP") requests. Prior to this, there was no way to directly indicate that a request was of a different priority. The API is defined in [nsISupportsPriority](/ja/nsISupportsPriority "en/nsISupportsPriority"), but is defined in very generic terms so that any object can implement this interface to enable the concept of priority. This article deals specifically with using that interface to change the priority of HTTP requests.
 
-<p>At the time of this writing, changing the priority of an HTTP request only affects the order in which connection attempts are made. This means that the priority only has an effect when there are more connections (to a server) than are allowed.</p>
+At the time of this writing, changing the priority of an HTTP request only affects the order in which connection attempts are made. This means that the priority only has an effect when there are more connections (to a server) than are allowed.
 
-<p>The examples in this document are all written in <a href="/ja/JavaScript" title="en/JavaScript">JavaScript</a> using <a href="/ja/XPCOM" title="en/XPCOM">XPCOM</a>.</p>
+The examples in this document are all written in [JavaScript](/ja/JavaScript "en/JavaScript") using [XPCOM](/ja/XPCOM "en/XPCOM").
 
-<h3 id="APIの使用">APIの使用</h3>
+### API の使用
 
-<p>It should be noted that the value of the <code>priority</code> attribute follows UNIX conventions, with smaller numbers (including negative numbers) having higher priority.</p>
+It should be noted that the value of the `priority` attribute follows UNIX conventions, with smaller numbers (including negative numbers) having higher priority.
 
-<h4 id="Accessing_priority_from_an_nsIChannel">Accessing priority from an nsIChannel</h4>
+#### Accessing priority from an nsIChannel
 
-<p>To change the priority of an HTTP request, you need access to the <a href="/ja/XPCOM_Interface_Reference/nsIChannel" title="en/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a> that the request is being made on. If you do not have an existing channel, then you can create one as follows:</p>
+To change the priority of an HTTP request, you need access to the [nsIChannel](/ja/XPCOM_Interface_Reference/nsIChannel "en/XPCOM_Interface_Reference/nsIChannel") that the request is being made on. If you do not have an existing channel, then you can create one as follows:
 
-<pre class="eval">var ios = Components.classes["@<a class="linkification-ext external" href="http://mozilla.org/network/io-service;1">mozilla.org/network/io-service;1</a>"]
+```
+var ios = Components.classes["@mozilla.org/network/io-service;1"]
                     .getService(Components.interfaces.nsIIOService);
-var ch = ios.newChannel("<a class="linkification-ext external" href="http://www.example.com/">http://www.example.com/</a>", null, null);
-</pre>
+var ch = ios.newChannel("http://www.example.com/", null, null);
+```
 
-<p><br>
- Once you have an <a href="/ja/XPCOM_Interface_Reference/nsIChannel" title="en/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a>, you can access the priority as follows:</p>
+Once you have an [nsIChannel](/ja/XPCOM_Interface_Reference/nsIChannel "en/XPCOM_Interface_Reference/nsIChannel"), you can access the priority as follows:
 
-<pre class="eval">if (ch instanceof Components.interfaces.nsISupportsPriority) {
+```
+if (ch instanceof Components.interfaces.nsISupportsPriority) {
   ch.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
 }
-</pre>
+```
 
-<p>For convenience, the interface defines several standard priority values that you can use, ranging from <code>PRIORITY_HIGHEST</code> to <code>PRIORITY_LOWEST</code>.</p>
+For convenience, the interface defines several standard priority values that you can use, ranging from `PRIORITY_HIGHEST` to `PRIORITY_LOWEST`.
 
-<h4 id="Getting_an_nsIChannel_from_XMLHttpRequest">Getting an nsIChannel from XMLHttpRequest</h4>
+#### Getting an nsIChannel from XMLHttpRequest
 
-<p>If you are programming in <a href="/ja/JavaScript" title="en/JavaScript">JavaScript</a>, you will probably want to use <a href="/ja/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a>, a much higher level abstraction of an HTTP request. You can access the <code>channel</code> member of an <a href="/ja/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a> once you have called the <code>open</code> method on it, as follows:</p>
+If you are programming in [JavaScript](/ja/JavaScript "en/JavaScript"), you will probably want to use [XMLHttpRequest](/ja/XMLHttpRequest "en/XMLHttpRequest"), a much higher level abstraction of an HTTP request. You can access the `channel` member of an [XMLHttpRequest](/ja/XMLHttpRequest "en/XMLHttpRequest") once you have called the `open` method on it, as follows:
 
-<pre class="eval">var req = new XMLHttpRequest();
-req.open("GET", "<a class="linkification-ext external" href="http://www.example.com">http://www.example.com</a>", false);
+```
+var req = new XMLHttpRequest();
+req.open("GET", "http://www.example.com", false);
 if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
   req.channel.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
 }
 req.send(null);
-</pre>
+```
 
-<p><br>
- Note that this example uses a synchronous <a href="/ja/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a>, which you should not use in practice.</p>
+Note that this example uses a synchronous [XMLHttpRequest](/ja/XMLHttpRequest "en/XMLHttpRequest"), which you should not use in practice.
 
-<h4 id="優先順位の調整">優先順位の調整</h4>
+#### 優先順位の調整
 
-<p><a href="/ja/nsISupportsPriority#adjustPriority" title="en/nsISupportsPriority#adjustPriority">nsISupportsPriority</a> includes a convenience method named <code>adjustPriority</code>. You should use this if you want to alter the priority of a request by a certain amount. For example, if you would like to make a request have slightly higher priority than it currently has, you could do the following:</p>
+[nsISupportsPriority](/ja/nsISupportsPriority#adjustPriority "en/nsISupportsPriority#adjustPriority") includes a convenience method named `adjustPriority`. You should use this if you want to alter the priority of a request by a certain amount. For example, if you would like to make a request have slightly higher priority than it currently has, you could do the following:
 
-<pre class="eval">// assuming we already have a nsIChannel from above
+```
+// assuming we already have a nsIChannel from above
 if (ch instanceof Components.interfaces.nsISupportsPriority) {
   ch.adjustPriority(-1);
 }
-</pre>
+```
 
-<p>Remember that lower numbers mean higher priority, so adjusting by a negative number will serve to increase the request's priority.</p>
+Remember that lower numbers mean higher priority, so adjusting by a negative number will serve to increase the request's priority.
