@@ -1,7 +1,6 @@
 ---
 title: submit
 slug: Web/API/HTMLFormElement/submit_event
-translation_of: Web/API/HTMLFormElement/submit_event
 ---
 `submit` 事件會在表單送出時觸發。
 

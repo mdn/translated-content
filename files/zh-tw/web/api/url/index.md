@@ -1,13 +1,6 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - Experimental
-  - NeedsTranslation
-  - TopicStub
-  - URL API
-translation_of: Web/API/URL
 ---
 {{ApiRef("URL API")}} {{SeeCompatTable}}
 

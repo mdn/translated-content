@@ -1,7 +1,6 @@
 ---
 title: 合成效果
 slug: Web/API/Canvas_API/Tutorial/Compositing
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 

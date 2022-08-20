@@ -251,7 +251,7 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État/th>                                 | Commentaires        |
+| Spécification                                                                                                                            | État                                 | Commentaires        |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
 | {{SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale |
 

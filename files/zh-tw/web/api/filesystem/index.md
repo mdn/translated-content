@@ -1,9 +1,6 @@
 ---
 title: FileSystem
 slug: Web/API/FileSystem
-tags:
-  - 檔案系統
-translation_of: Web/API/FileSystem
 ---
 {{APIRef("File System API")}} {{non-standard_header}}
 

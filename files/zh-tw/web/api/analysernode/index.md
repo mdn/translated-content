@@ -1,15 +1,6 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-tags:
-  - API
-  - AnalyserNode
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Audio API
-translation_of: Web/API/AnalyserNode
 ---
 {{APIRef("Web Audio API")}}
 
