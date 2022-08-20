@@ -10,123 +10,74 @@ tags:
   - リファレンス
 translation_of: Web/API/Performance
 ---
-<p>{{APIRef("High Resolution Time")}}</p>
+{{APIRef("High Resolution Time")}}
 
-<p><strong><code>Performance</code></strong> インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これはHigh Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、および Resource Timing API によって拡張されています。</p>
+**`Performance`** インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、および Resource Timing API によって拡張されています。
 
-<p>このタイプのオブジェクトは読み取り専用属性 {{domxref("window.performance")}} を呼び出すことで取得できます。</p>
+このタイプのオブジェクトは読み取り専用属性 {{domxref("window.performance")}} を呼び出すことで取得できます。
 
-<div class="note">
-<p><strong><em>メモ</em>: </strong>このインターフェイスとそのメンバーは、以下に示されている場合を除き、<a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a> で利用可能です。 パフォーマンスマーカーと測定値はコンテキストごとにあることにも注意してください。メインスレッド (または他のワーカー) にマークを作成した場合、それを Worker スレッドには表示できません (その逆も同様)。</p>
-</div>
+> **Note:** このインターフェイスとそのメンバーは、以下に示されている場合を除き、[Web Workers](/ja/docs/Web/API/Web_Workers_API) で利用可能です。 パフォーマンスマーカーと測定値はコンテキストごとにあることにも注意してください。メインスレッド (または他のワーカー) にマークを作成した場合、それを Worker スレッドには表示できません (その逆も同様)。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em><code>Performance</code> インターフェイスはプロパティを継承しません。</em></p>
+_`Performance` インターフェイスはプロパティを継承しません。_
 
-<dl>
- <dt>{{deprecated_inline}} {{domxref("performance.navigation")}} {{readonlyInline}}</dt>
- <dd>ページがロードかリフレッシュか、リダイレクトの発生回数など、<code>timing</code> にリストされている時間に含まれる操作に関する有用なコンテキストを提供するレガシー {{domxref("PerformanceNavigation")}} オブジェクト。Worker では利用できません。</dd>
- <dt>{{deprecated_inline}}  {{domxref("performance.timing")}} {{readonlyInline}}</dt>
- <dd>待ち時間関連のパフォーマンス情報を含むレガシー {{domxref("PerformanceTiming")}} オブジェクト。Worker には利用できません。</dd>
- <dt>{{domxref("performance.memory", "performance.memory")}} {{Non-standard_inline}}</dt>
- <dd>Chrome で追加された<em>非標準の</em>拡張子で、このプロパティは基本的なメモリ使用量情報を持つオブジェクトを提供します。<em>この非標準の API を<strong>使うべきではありません</strong></em>。</dd>
- <dt>{{domxref("performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}</dt>
- <dd>パフォーマンス測定の開始時刻のハイレゾリューションタイムスタンプを返します。</dd>
-</dl>
+- {{deprecated_inline}} {{domxref("performance.navigation")}} {{readonlyInline}}
+  - : ページがロードかリフレッシュか、リダイレクトの発生回数など、`timing` にリストされている時間に含まれる操作に関する有用なコンテキストを提供するレガシー {{domxref("PerformanceNavigation")}} オブジェクト。Worker では利用できません。
+- {{deprecated_inline}} {{domxref("performance.timing")}} {{readonlyInline}}
+  - : 待ち時間関連のパフォーマンス情報を含むレガシー {{domxref("PerformanceTiming")}} オブジェクト。Worker には利用できません。
+- {{domxref("performance.memory", "performance.memory")}} {{Non-standard_inline}}
+  - : Chrome で追加された*非標準の*拡張子で、このプロパティは基本的なメモリ使用量情報を持つオブジェクトを提供します。_この非標準の API を**使うべきではありません**_。
+- {{domxref("performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
+  - : パフォーマンス測定の開始時刻のハイレゾリューションタイムスタンプを返します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em><em><code>Performance</code> インターフェイス</em>はメソッドを継承しません。</em></p>
+\_*`Performance` インターフェイス*はメソッドを継承しません。\_
 
-<dl>
- <dt>{{domxref("performance.clearMarks()")}}</dt>
- <dd>ブラウザのパフォーマンスエントリバッファから指定された<em>マーク</em>を削除します。</dd>
- <dt>{{domxref("performance.clearMeasures()")}}</dt>
- <dd>ブラウザのパフォーマンスエントリバッファから指定された<em>数値</em>を削除します。</dd>
- <dt>{{domxref("performance.clearResourceTimings()")}}</dt>
- <dd>ブラウザのパフォーマンスデータバッファから "<code>resource</code>" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つすべての {{domxref("PerformanceEntry","performance entries")}} を削除します。</dd>
- <dt>{{domxref("performance.getEntries()")}}</dt>
- <dd>与えられた<em>フィルタ</em>に基づく {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。</dd>
- <dt>{{domxref("performance.getEntriesByName()")}}</dt>
- <dd>指定された<em>名前</em>と<em>エントリタイプ</em>に基づいて {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。</dd>
- <dt>{{domxref("performance.getEntriesByType()")}}</dt>
- <dd>与えられた<em>エントリタイプ</em>の {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。</dd>
- <dt>{{domxref("performance.mark()")}}</dt>
- <dd>指定された名前でブラウザの<em>パフォーマンスエントリバッファ</em>に{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を作成します。</dd>
- <dt>{{domxref("performance.measure()")}}</dt>
- <dd>指定された2つのマーク (それぞれ<em>開始マーク</em>と<em>終了マーク</em>と呼ばれる) の間に、ブラウザのパフォーマンスエントリバッファ内に名前付き{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を作成します。</dd>
- <dt>{{domxref("performance.now()")}}</dt>
- <dd>参照時点から経過したミリ秒数を表す {{domxref("DOMHighResTimeStamp")}} を返します。</dd>
- <dt>{{domxref("performance.setResourceTimingBufferSize()")}}</dt>
- <dd>ブラウザのリソースタイミングバッファサイズを、指定された数の "<code>resource</code>" {{domxref("PerformanceEntry.entryType","タイプ")}} {{domxref("PerformanceEntry","パフォーマンスエントリ")}} オブジェクトに設定します。</dd>
- <dt>{{domxref("performance.toJSON()")}}</dt>
- <dd><code>Performance</code> オブジェクトを表す json オブジェクトを返す jsonizer です。</dd>
-</dl>
+- {{domxref("performance.clearMarks()")}}
+  - : ブラウザーのパフォーマンスエントリバッファから指定された*マーク*を削除します。
+- {{domxref("performance.clearMeasures()")}}
+  - : ブラウザーのパフォーマンスエントリバッファから指定された*数値*を削除します。
+- {{domxref("performance.clearResourceTimings()")}}
+  - : ブラウザーのパフォーマンスデータバッファから "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つすべての {{domxref("PerformanceEntry","performance entries")}} を削除します。
+- {{domxref("performance.getEntries()")}}
+  - : 与えられた*フィルタ*に基づく {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
+- {{domxref("performance.getEntriesByName()")}}
+  - : 指定された*名前*と*エントリタイプ*に基づいて {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
+- {{domxref("performance.getEntriesByType()")}}
+  - : 与えられた*エントリタイプ*の {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
+- {{domxref("performance.mark()")}}
+  - : 指定された名前でブラウザーの*パフォーマンスエントリバッファ*に{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を作成します。
+- {{domxref("performance.measure()")}}
+  - : 指定された 2 つのマーク (それぞれ*開始マーク*と*終了マーク*と呼ばれる) の間に、ブラウザーのパフォーマンスエントリバッファ内に名前付き{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を作成します。
+- {{domxref("performance.now()")}}
+  - : 参照時点から経過したミリ秒数を表す {{domxref("DOMHighResTimeStamp")}} を返します。
+- {{domxref("performance.setResourceTimingBufferSize()")}}
+  - : ブラウザーのリソースタイミングバッファサイズを、指定された数の "`resource`" {{domxref("PerformanceEntry.entryType","タイプ")}} {{domxref("PerformanceEntry","パフォーマンスエントリ")}} オブジェクトに設定します。
+- {{domxref("performance.toJSON()")}}
+  - : `Performance` オブジェクトを表す json オブジェクトを返す jsonizer です。
 
-<h2 id="イベント">イベント</h2>
+## イベント
 
-<p><code>addEventListener()</code> を使用するか、このインターフェイスの <code>on<em>eventname</em></code> プロパティにイベントリスナを割り当てることで、イベントを監視します。</p>
+`addEventListener()` を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナを割り当てることで、イベントを監視します。
 
-<dl>
- <dt><code><a href="/ja/docs/Web/API/Performance/resourcetimingbufferfull_event">resourcetimingbufferfull</a></code></dt>
- <dd>ブラウザの<a href="/ja/docs/Web/API/Performance/setResourceTimingBufferSize">リソースタイミングバッファ</a>がいっぱいになったときに発生します。<code><a href="/ja/docs/Web/API/Performance/onresourcetimingbufferfull">onresourcetimingbufferfull</a></code> プロパティからも利用できます。</dd>
-</dl>
+- [`resourcetimingbufferfull`](/ja/docs/Web/API/Performance/resourcetimingbufferfull_event)
+  - : ブラウザーの[リソースタイミングバッファ](/ja/docs/Web/API/Performance/setResourceTimingBufferSize)がいっぱいになったときに発生します。[`onresourcetimingbufferfull`](/ja/docs/Web/API/Performance/onresourcetimingbufferfull) プロパティからも利用できます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON()')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td><code>toJson()</code> メソッドを定義します。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time', '#the-performance-interface', 'Performance')}}</td>
-   <td>{{Spec2('Highres Time')}}</td>
-   <td><code>now()</code> メソッドを定義します。.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td><code>timing</code> と <code>navigation</code> プロパティを定義します。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface', 'Performance extensions')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td><code>getEntries()</code> インターフェイスを変更します。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline', '#sec-window.performance-attribute', 'Performance extensions')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td><code>getEntries()</code>、<code>getEntriesByType()</code> および <code>getEntriesByName()</code> メソッドを定義します。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}</td>
-   <td>{{Spec2('Resource Timing')}}</td>
-   <td><code>clearResourceTimings()</code> と <code>setResourceTimingBufferSize()</code> メソッド、そして <code>onresourcetimingbufferfull</code> プロパティを定義します。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}</td>
-   <td>{{Spec2('User Timing Level 2')}}</td>
-   <td><code>mark()</code>、<code>clearMark()</code>、<code>measure()</code> および <code>clearMeasure()</code> インターフェイスを明確にします。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}</td>
-   <td>{{Spec2('User Timing')}}</td>
-   <td><code>mark()</code>, <code>clearMark()</code>, <code>measure()</code> および <code>clearMeasure()</code> インターフェイスを定義します。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                     | ステータス                                               | コメント                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON()')}}                                                 | {{Spec2('Highres Time Level 2')}}             | `toJson()` メソッドを定義します。                                                                                                  |
+| {{SpecName('Highres Time', '#the-performance-interface', 'Performance')}}                                                         | {{Spec2('Highres Time')}}                         | `now()` メソッドを定義します。.                                                                                                    |
+| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance')}}                                         | {{Spec2('Navigation Timing')}}                 | `timing` と `navigation` プロパティを定義します。                                                                                  |
+| {{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface', 'Performance extensions')}} | {{Spec2('Performance Timeline Level 2')}} | `getEntries()` インターフェイスを変更します。                                                                                      |
+| {{SpecName('Performance Timeline', '#sec-window.performance-attribute', 'Performance extensions')}}                     | {{Spec2('Performance Timeline')}}             | `getEntries()`、`getEntriesByType()` および `getEntriesByName()` メソッドを定義します。                                            |
+| {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                             | {{Spec2('Resource Timing')}}                     | `clearResourceTimings()` と `setResourceTimingBufferSize()` メソッド、そして `onresourcetimingbufferfull` プロパティを定義します。 |
+| {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                     | {{Spec2('User Timing Level 2')}}             | `mark()`、`clearMark()`、`measure()` および `clearMeasure()` インターフェイスを明確にします。                                      |
+| {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing')}}                         | `mark()`, `clearMark()`, `measure()` および `clearMeasure()` インターフェイスを定義します。                                        |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance")}}</p>
-</div>
+{{Compat("api.Performance")}}

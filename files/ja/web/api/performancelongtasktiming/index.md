@@ -9,38 +9,23 @@ tags:
   - Reference
 translation_of: Web/API/PerformanceLongTaskTiming
 ---
-<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
+{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/API/Long_Tasks_API">Long Tasks API</a> の <strong><code>PerformanceLongTaskTiming</code></strong> インターフェイスは、長いタスクのインスタンスを報告します。</span></p>
+[Long Tasks API](/ja/docs/Web/API/Long_Tasks_API) の **`PerformanceLongTaskTiming`** インターフェイスは、長いタスクのインスタンスを報告します。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("PerformanceLongTaskTiming.attribution")}} {{readonlyinline}}</dt>
- <dd>{{domxref('TaskAttributionTiming')}} インスタンスのシーケンスを返します。</dd>
-</dl>
+- {{domxref("PerformanceLongTaskTiming.attribution")}} {{readonlyinline}}
+  - : {{domxref('TaskAttributionTiming')}} インスタンスのシーケンスを返します。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Long Tasks','#sec-PerformanceLongTaskTiming','PerformanceLongTaskTiming')}}</td>
-   <td>{{Spec2('Long Tasks')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                 | 状態                             | コメント |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('Long Tasks','#sec-PerformanceLongTaskTiming','PerformanceLongTaskTiming')}} | {{Spec2('Long Tasks')}} | 初期定義 |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.PerformanceLongTaskTiming")}}</p>
+{{Compat("api.PerformanceLongTaskTiming")}}

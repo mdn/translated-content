@@ -8,107 +8,88 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceResourceTiming
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p><span class="seoSummary"><strong><code>PerformanceResourceTiming</code></strong> インターフェイスは、アプリケーションのリソースのロードに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、たとえば、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG 要素")}}、画像、スクリプトなどの特定のリソースを取得するのにかかる時間を判断できます。</span></p>
+**`PerformanceResourceTiming`** インターフェイスは、アプリケーションのリソースのロードに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、たとえば、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG 要素")}}、画像、スクリプトなどの特定のリソースを取得するのにかかる時間を判断できます。
 
-<p>インターフェイスのプロパティは、リダイレクトの開始時刻と終了時刻、フェッチの開始時刻、DNS ルックアップの開始時刻と終了時刻、レスポンスの開始時刻と終了時刻などのネットワークイベントに対する{{domxref("DOMHighResTimeStamp","ハイレゾリューションタイムスタンプ")}}を含むリソースロードタイムラインを作成します。さらに、このインターフェイスは、取得したリソースのサイズや取得を開始したリソースの種類に関するデータを提供する他のプロパティを使用して {{domxref("PerformanceEntry")}} を拡張します。</p>
+インターフェイスのプロパティは、リダイレクトの開始時刻と終了時刻、フェッチの開始時刻、DNS ルックアップの開始時刻と終了時刻、レスポンスの開始時刻と終了時刻などのネットワークイベントに対する{{domxref("DOMHighResTimeStamp","ハイレゾリューションタイムスタンプ")}}を含むリソースロードタイムラインを作成します。さらに、このインターフェイスは、取得したリソースのサイズや取得を開始したリソースの種類に関するデータを提供する他のプロパティを使用して {{domxref("PerformanceEntry")}} を拡張します。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p>このインターフェイスは、以下のように修飾し制約することによって、リソースパフォーマンスエントリタイプの {{domxref("PerformanceEntry")}} プロパティを拡張します。</p>
+このインターフェイスは、以下のように修飾し制約することによって、リソースパフォーマンスエントリタイプの {{domxref("PerformanceEntry")}} プロパティを拡張します。
 
-<dl>
- <dt>{{domxref("PerformanceEntry.entryType")}}{{readonlyInline}}</dt>
- <dd><code>"resource"</code> を返します。</dd>
- <dt>{{domxref("PerformanceEntry.name")}}{{readonlyInline}}</dt>
- <dd>Returns the resources URL.</dd>
- <dt>{{domxref("PerformanceEntry.startTime")}}{{readonlyInline}}</dt>
- <dd>Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. This value is equivalent to {{domxref("PerformanceEntry.fetchStart")}}.</dd>
- <dt>{{domxref("PerformanceEntry.duration")}}{{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceResourceTiming.responseEnd","responseEnd")}} and the {{domxref("PerformanceEntry.startTime","startTime")}} properties.</dd>
-</dl>
+- {{domxref("PerformanceEntry.entryType")}}{{readonlyInline}}
+  - : `"resource"` を返します。
+- {{domxref("PerformanceEntry.name")}}{{readonlyInline}}
+  - : Returns the resources URL.
+- {{domxref("PerformanceEntry.startTime")}}{{readonlyInline}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. This value is equivalent to {{domxref("PerformanceEntry.fetchStart")}}.
+- {{domxref("PerformanceEntry.duration")}}{{readonlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceResourceTiming.responseEnd","responseEnd")}} and the {{domxref("PerformanceEntry.startTime","startTime")}} properties.
 
-<p>The interface also supports the following properties which are listed in the order in which they are recorded for the fetching of a single resource. An alphabetical listing is shown in the navigation, at left.</p>
+The interface also supports the following properties which are listed in the order in which they are recorded for the fetching of a single resource. An alphabetical listing is shown in the navigation, at left.
 
-<dl>
- <dt>{{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString","string")}} representing the <em>type</em> of resource that initiated the performance entry, as specified in {{domxref('PerformanceResourceTiming.initiatorType')}}.</dd>
- <dt>{{domxref('PerformanceResourceTiming.nextHopProtocol')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString","string")}} representing the <em>network protocol</em> used to fetch the resource, as identified by the <a href="https://tools.ietf.org/html/rfc7301">ALPN Protocol ID (RFC7301)</a>.</dd>
- <dt>{{domxref('PerformanceResourceTiming.workerStart')}}{{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.</dd>
- <dt>{{domxref('PerformanceResourceTiming.redirectStart')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} that represents the start time of the fetch which initiates the redirect.</dd>
- <dt>{{domxref('PerformanceResourceTiming.redirectEnd')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately after receiving the last byte of the response of the last redirect.</dd>
- <dt>{{domxref('PerformanceResourceTiming.fetchStart')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the resource.</dd>
- <dt>{{domxref('PerformanceResourceTiming.domainLookupStart')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain name lookup for the resource.</dd>
- <dt>{{domxref('PerformanceResourceTiming.domainLookupEnd')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the browser finishes the domain name lookup for the resource.</dd>
- <dt>{{domxref('PerformanceResourceTiming.connectStart')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to establish the connection to the server to retrieve the resource.</dd>
- <dt>{{domxref('PerformanceResourceTiming.connectEnd')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.</dd>
- <dt>{{domxref('PerformanceResourceTiming.secureConnectionStart')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the handshake process to secure the current connection.</dd>
- <dt>{{domxref('PerformanceResourceTiming.requestStart')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.</dd>
- <dt>{{domxref('PerformanceResourceTiming.responseStart')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.</dd>
- <dt>{{domxref('PerformanceResourceTiming.responseEnd')}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.</dd>
- <dt>{{domxref('PerformanceResourceTiming.transferSize')}}{{readonlyInline}}</dt>
- <dd>A <code>number</code> representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.</dd>
- <dt>{{domxref('PerformanceResourceTiming.encodedBodySize')}}{{readonlyInline}}</dt>
- <dd>A <code>number</code> representing the size (in octets) received from the fetch (HTTP or cache), of the <em>payload body</em>, before removing any applied content-codings.</dd>
- <dt>{{domxref('PerformanceResourceTiming.decodedBodySize')}}{{readonlyInline}}</dt>
- <dd>A <code>number</code> that is the size (in octets) received from the fetch (HTTP or cache) of the <em>message body</em>, after removing any applied content-codings.</dd>
- <dt>{{domxref('PerformanceResourceTiming.serverTiming')}}{{readonlyInline}}</dt>
- <dd>An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.</dd>
-</dl>
+- {{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}
+  - : A {{domxref("DOMString","string")}} representing the _type_ of resource that initiated the performance entry, as specified in {{domxref('PerformanceResourceTiming.initiatorType')}}.
+- {{domxref('PerformanceResourceTiming.nextHopProtocol')}}{{readonlyInline}}
+  - : A {{domxref("DOMString","string")}} representing the _network protocol_ used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://tools.ietf.org/html/rfc7301).
+- {{domxref('PerformanceResourceTiming.workerStart')}}{{readonlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
+- {{domxref('PerformanceResourceTiming.redirectStart')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} that represents the start time of the fetch which initiates the redirect.
+- {{domxref('PerformanceResourceTiming.redirectEnd')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately after receiving the last byte of the response of the last redirect.
+- {{domxref('PerformanceResourceTiming.fetchStart')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the resource.
+- {{domxref('PerformanceResourceTiming.domainLookupStart')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain name lookup for the resource.
+- {{domxref('PerformanceResourceTiming.domainLookupEnd')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the browser finishes the domain name lookup for the resource.
+- {{domxref('PerformanceResourceTiming.connectStart')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to establish the connection to the server to retrieve the resource.
+- {{domxref('PerformanceResourceTiming.connectEnd')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.
+- {{domxref('PerformanceResourceTiming.secureConnectionStart')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the handshake process to secure the current connection.
+- {{domxref('PerformanceResourceTiming.requestStart')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
+- {{domxref('PerformanceResourceTiming.responseStart')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
+- {{domxref('PerformanceResourceTiming.responseEnd')}}{{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
+- {{domxref('PerformanceResourceTiming.transferSize')}}{{readonlyInline}}
+  - : A `number` representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
+- {{domxref('PerformanceResourceTiming.encodedBodySize')}}{{readonlyInline}}
+  - : A `number` representing the size (in octets) received from the fetch (HTTP or cache), of the _payload body_, before removing any applied content-codings.
+- {{domxref('PerformanceResourceTiming.decodedBodySize')}}{{readonlyInline}}
+  - : A `number` that is the size (in octets) received from the fetch (HTTP or cache) of the _message body_, after removing any applied content-codings.
+- {{domxref('PerformanceResourceTiming.serverTiming')}}{{readonlyInline}}
+  - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("PerformanceResourceTiming.toJSON()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that is the JSON representation of the {{domxref("PerformanceResourceTiming")}} object.</dd>
-</dl>
+- {{domxref("PerformanceResourceTiming.toJSON()")}}
+  - : Returns a {{domxref("DOMString")}} that is the JSON representation of the {{domxref("PerformanceResourceTiming")}} object.
 
-<h2 id="例">例</h2>
+## 例
 
-<p><a href="/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">リソースタイミング API の使用</a>の例を参照してください。</p>
+[リソースタイミング API の使用](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)の例を参照してください。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing', '#performanceresourcetiming', 'PerformanceResourceTiming')}}</td>
-   <td>{{Spec2('Resource Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | ステータス                           | コメント |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Resource Timing', '#performanceresourcetiming', 'PerformanceResourceTiming')}} | {{Spec2('Resource Timing')}} | 初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PerformanceResourceTiming")}}</p>
+{{Compat("api.PerformanceResourceTiming")}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li><a href="/Web/API/Resource_Timing">Resource Timing (Overview)</a></li>
- <li><a href="/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Using the Resource Timing API</a></li>
-</ul>
+- [Resource Timing (Overview)](/Web/API/Resource_Timing)
+- [Using the Resource Timing API](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
