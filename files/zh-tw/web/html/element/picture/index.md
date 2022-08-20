@@ -1,7 +1,6 @@
 ---
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
-translation_of: Web/HTML/Element/picture
 ---
 {{HTMLRef}}
 

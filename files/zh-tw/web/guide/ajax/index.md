@@ -1,7 +1,6 @@
 ---
 title: Ajax
 slug: Web/Guide/AJAX
-translation_of: Web/Guide/AJAX
 ---
 **[入門篇](/zh-TW/docs/Web/Guide/AJAX/Getting_Started)**
 Ajax 簡介。

@@ -1,7 +1,6 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-translation_of: Web/CSS/background-color
 ---
 {{CSSRef}}
 

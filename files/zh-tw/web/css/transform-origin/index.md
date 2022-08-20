@@ -1,9 +1,6 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-tags:
-  - CSS
-translation_of: Web/CSS/transform-origin
 ---
 {{ CSSRef }}
 

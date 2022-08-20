@@ -1,7 +1,6 @@
 ---
 title: 虛擬類別
 slug: Web/CSS/Pseudo-classes
-translation_of: Web/CSS/Pseudo-classes
 ---
 {{ CSSRef() }}
 

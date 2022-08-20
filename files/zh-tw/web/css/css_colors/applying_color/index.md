@@ -1,7 +1,6 @@
 ---
 title: Applying color to HTML elements using CSS
 slug: Web/CSS/CSS_Colors/Applying_color
-translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 {{HTMLRef}}

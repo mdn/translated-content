@@ -1,14 +1,6 @@
 ---
 title: CSS 動畫
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - Advanced
-  - CSS animation
-  - CSS 動畫
-  - Example
-  - Experimental
-  - Guide
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
 {{SeeCompatTable}}{{CSSRef}}
 

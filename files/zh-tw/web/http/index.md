@@ -1,10 +1,6 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - HTTP
-  - NeedsTranslation
-translation_of: Web/HTTP
 ---
 {{HTTPSidebar}}
 
