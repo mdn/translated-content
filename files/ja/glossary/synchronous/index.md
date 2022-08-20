@@ -1,5 +1,5 @@
 ---
-title: Synchronous（同期通信方式）
+title: Synchronous (同期通信方式)
 slug: Glossary/Synchronous
 tags:
   - Glossary
