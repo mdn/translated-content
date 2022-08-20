@@ -33,7 +33,7 @@ translation_of: Web/HTML/Element/frameset
 </frameset>
 ```
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("html.elements.frameset")}}
 

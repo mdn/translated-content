@@ -28,6 +28,6 @@ translation_of: Web/HTML/Global_attributes/autocapitalize
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
 | {{SpecName('HTML WHATWG', "interaction.html#autocapitalization", "autocapitalize")}} | {{Spec2('HTML WHATWG')}} |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("html.global_attributes.autocapitalize")}}

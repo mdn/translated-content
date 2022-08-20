@@ -9,6 +9,7 @@ tags:
   - Ruby
   - Text
   - Web
+browser-compat: html.elements.rt
 translation_of: Web/HTML/Element/rt
 ---
 {{HTMLRef}}
@@ -89,32 +90,15 @@ body {
 
 このブラウザーの出力は次のように見えます。
 
-{{EmbedLiveSample("with-ruby", 600, 60)}}
-
-ルビに対応して*いない*ブラウザーでは、この例は次のように見えます。
-
-```html hidden
-漢 Kan 字 ji
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-{{EmbedLiveSample("without-ruby", 600, 60)}}
+{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-rt-element', '&lt;rt&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.rt")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -9,6 +9,7 @@ tags:
   - Ruby
   - Text
   - Web
+browser-compat: html.elements.rp
 translation_of: Web/HTML/Element/rp
 ---
 {{HTMLRef}}
@@ -74,6 +75,8 @@ translation_of: Web/HTML/Element/rp
 
 ## 例
 
+### ルビの使用
+
 この例はそれぞれの文字に等価な{{interwiki("wikipedia", "ローマ字")}}を表示するためのにルビを使用しています。
 
 ```html
@@ -91,7 +94,11 @@ body {
 
 このブラウザーでは次のように見えます。
 
-{{EmbedLiveSample("with-ruby", 600, 60)}}
+{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
+
+それ以外の例は {{HTMLElement("ruby")}} 要素の記事を参照してください。
+
+### ルビ対応なし
 
 上記の HTML は、ルビの対応が*ない*ブラウザーで表示すると、このように見えるかもしれません。
 
@@ -105,9 +112,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("without-ruby", 600, 60)}}
-
-それ以外の例は、 {{HTMLElement("ruby")}} 要素についての記事を参照してください。
+{{EmbedLiveSample("Without_ruby_support", 600, 60)}}
 
 ## 仕様書
 

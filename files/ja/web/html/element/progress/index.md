@@ -8,6 +8,7 @@ tags:
   - HTML5
   - Reference
   - Web
+browser-compat: html.elements.progress
 translation_of: Web/HTML/Element/progress
 ---
 {{HTMLRef}}
@@ -76,9 +77,9 @@ translation_of: Web/HTML/Element/progress
 - {{ htmlattrdef("value") }}
   - : この属性は、タスクの進捗状況を設定します。値は `0` から `max` までの間、または `max` を省略する場合は `0` から `1` までの間の、有効な浮動小数点数値であることが必要です。`value` 属性がない場合は、プログレスバーは不定、タスクは処理中であるものの完了までが予想できない状態になります。
 
-> **Note:** **注:** {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
+> **Note:** {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
 
-> **Note:** **注:** {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーにマッチします。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}. で value 属性を削除しなければなりません。
+> **Note:** {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーにマッチします。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}. で value 属性を削除しなければなりません。
 
 ## 例
 
@@ -90,20 +91,13 @@ translation_of: Web/HTML/Element/progress
 
 {{ EmbedLiveSample("Examples", 200, 50) }}
 
-Windows 7 では、 progress の表示結果は以下のようになります。
-
-![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
-
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-progress-element', '&lt;progress&gt;')}}     | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-progress-element', '&lt;progress&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## 関連情報
 
@@ -111,7 +105,6 @@ Windows 7 では、 progress の表示結果は以下のようになります。
 - {{ cssxref(":indeterminate") }}
 - {{ cssxref("-moz-orient") }}
 - {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
 - {{ cssxref("::-webkit-progress-inner-element") }}

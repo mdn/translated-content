@@ -98,7 +98,7 @@ translation_of: Web/HTML/Element/datalist
 | {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
 | {{SpecName('HTML5 W3C', 'sec-forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("html.elements.datalist")}}
 

@@ -7,6 +7,7 @@ tags:
   - HTML
   - Reference
   - Web
+browser-compat: html.elements.frame
 translation_of: Web/HTML/Element/frame
 ---
 {{HTMLRef}}{{Deprecated_header}}
@@ -43,7 +44,7 @@ translation_of: Web/HTML/Element/frame
 </frameset>
 ```
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("html.elements.frame")}}
 

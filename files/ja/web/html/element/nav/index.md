@@ -102,7 +102,7 @@ translation_of: Web/HTML/Element/nav
 | {{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}} | {{Spec2('HTML WHATWG')}} | 最新の W3C スナップショットから変更なし |
 | {{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 初回定義                                |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("html.elements.nav")}}
 

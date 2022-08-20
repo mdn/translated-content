@@ -92,7 +92,7 @@ translation_of: Web/HTML/Element/tbody
 
     この属性は非推奨であるため、代わりに CSS の {{cssxref("text-align")}} プロパティを使用してください。
 
-    > **Note:** **注:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#Browser_compatibility) で `<string>` の値を確認してください。
+    > **Note:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#Browser_compatibility) で `<string>` の値を確認してください。
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 

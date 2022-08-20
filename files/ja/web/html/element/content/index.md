@@ -104,7 +104,7 @@ translation_of: Web/HTML/Element/content
 
 この要素は現在、どの仕様書でも定義されていません。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("html.elements.content")}}
 

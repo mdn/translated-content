@@ -44,7 +44,7 @@ translation_of: Web/HTML/Element/label
 
   - : `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能)フォーム関連要素の {{htmlattrxref("id")}}。文書中の `for` 属性の値と合致する `id` を持つ最初の要素がラベル付け可能な要素であれば、このラベル要素の示す*ラベル付きコントロール*となります。[ラベル付け可能要素](https://html.spec.whatwg.org/multipage/forms.html#category-label)でなければ、 `for` 属性は効果がありません。一致する `id` 値を持つ他の要素が文書内のその後にあったとしても、考慮されません。
 
-    > **Note:** **注**: `<label>` 要素は、 `for` 属性が指す要素が包含するコントロール要素である場合、 `for` 属性を持ちつつ、中にコントロール要素を含めることができます。
+    > **Note:** `<label>` 要素は、 `for` 属性が指す要素が包含するコントロール要素である場合、 `for` 属性を持ちつつ、中にコントロール要素を含めることができます。
 
 ## CSS のスタイル付け
 

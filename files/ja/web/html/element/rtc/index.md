@@ -84,19 +84,15 @@ translation_of: Web/HTML/Element/rtc
 }
 ```
 
-{{EmbedLiveSample("Example", 600, 120)}}
+{{EmbedLiveSample("Examples", 600, 120)}}
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                         | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.2')}} |          |
-| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.1')}} |          |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rtc-element', '&lt;rtc&gt;')}} | {{Spec2('HTML5 W3C')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.rtc")}}
+{{Compat}}
 
 ## 関連情報
 

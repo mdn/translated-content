@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/u
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
-`<u>` を使用するのがどのような場合に適切で、どのような場合に適切でないのかについての詳細は、[使用上の注意](#usage_notes)を参照してください。
+`<u>` を使用するのがどのような場合に適切で、どのような場合に適切でないのかについての詳細は、[使用上の注意](#使用上の注意)を参照してください。
 
 <table class="properties">
   <tbody>
@@ -89,9 +89,9 @@ translation_of: Web/HTML/Element/u
 
 > **Note:** (既定で下線が引かれる) ハイパーリンクと誤認されるような方法で、 (これも既定で下線が引かれる) `<u>` 要素を使用することは避けるように注意してください。
 
-### 使用例
+### 用途
 
-`<u>` 要素の有効な使用例としては、綴りエラーの通知、中国語の文字列の{{interwiki("wikipedia", "proper name mark", "固有名詞記号")}}の記述、その他の形の注釈などがあります。
+`<u>` 要素の有効な用途としては、綴りエラーの通知、中国語の文字列の{{interwiki("wikipedia", "proper name mark", "固有名詞記号")}}の記述、その他の形の注釈などがあります。
 
 単に表現の目的で下線を引いたり、本の題名を記述したりするために `<u>` を使用するべきでは*ありません*。
 
@@ -179,11 +179,15 @@ Chicken Noodle Soup With Carrots
 <p>The class read <cite>Moby Dick</cite> in the first term.</p>
 ```
 
-##### 既定のスタイルでの結果
+{{EmbedLiveSample("Using_the_cite_element", 650, 80)}}
 
-{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}
+##### cit 要素のスタイル付け
 
-なお、 `<cite>` 要素の既定のスタイルではテキストを斜体で表示します。ご希望であれば、 CSS を使用して上書きすることができます。
+なお、 `<cite>` 要素の既定のスタイルではテキストを斜体で表示します。 CSS を使用して上書きすることができます。
+
+```html
+<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+```
 
 ```css
 cite {
@@ -192,21 +196,15 @@ cite {
 }
 ```
 
-##### カスタムスタイルでの結果
-
-{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}
+{{EmbedLiveSample("Styling_the_cite_element", 650, 80)}}
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-u-element', '&lt;u&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-u-element', '&lt;u&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}                 | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.u")}}
+{{Compat}}
 
 ## 関連情報
 
