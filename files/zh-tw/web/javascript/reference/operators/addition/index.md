@@ -1,12 +1,6 @@
 ---
 title: 相加運算子 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.addition
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,13 +1,6 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-tags:
-  - Constructor
-  - JavaScript
-  - NeedsTranslation
-  - Object
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 {{JSRef}}
 

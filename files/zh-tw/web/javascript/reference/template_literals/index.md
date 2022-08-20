@@ -1,16 +1,6 @@
 ---
 title: 樣板字面值
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - String
-  - Template Strings
-  - Template literals
-  - Template string
-  - strings
-translation_of: Web/JavaScript/Reference/Template_literals
 ---
 {{JsSidebar("More")}}
 

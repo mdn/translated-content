@@ -1,16 +1,6 @@
 ---
 title: 解構賦值
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuring
-  - Destructuring_assignment
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Operator
-  - 解構
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 {{jsSidebar("Operators")}}
 

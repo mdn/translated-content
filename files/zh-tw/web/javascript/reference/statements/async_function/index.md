@@ -1,13 +1,6 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - JavaScript
-  - 函式
-  - 實驗
-  - 範例
-  - 陳述
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 {{jsSidebar("Statements")}}
 

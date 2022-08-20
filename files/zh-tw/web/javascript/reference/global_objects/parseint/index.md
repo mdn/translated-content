@@ -1,12 +1,6 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - Global method
-  - parseInt
-  - 整數
-  - 進位制
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 {{jsSidebar("Objects")}}
 

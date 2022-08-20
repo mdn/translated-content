@@ -1,7 +1,6 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 {{jsSidebar("Functions")}}
 
