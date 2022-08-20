@@ -8,36 +8,33 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceEntry/toJSON
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p><strong><code>toJSON()</code></strong> メソッドは<em>シリアライザ</em>で、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}オブジェクトの JSON 表現を返します。</p>
+**`toJSON()`** メソッドは*シリアライザ*で、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}オブジェクトの JSON 表現を返します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">json = perfEntry.toJSON();
-</pre>
+```
+json = perfEntry.toJSON();
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>なし</dt>
- <dd> </dd>
-</dl>
+なし
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<dl>
- <dt>json</dt>
- <dd>{{domxref("PerformanceEntry")}} オブジェクトのシリアル化である JSON オブジェクト</dd>
-</dl>
+- json
+  - : {{domxref("PerformanceEntry")}} オブジェクトのシリアル化である JSON オブジェクト
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次の例は、<code>toJSON()</code> メソッドの使用方法を示しています。</p>
+次の例は、`toJSON()` メソッドの使用方法を示しています。
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -52,7 +49,7 @@ translation_of: Web/API/PerformanceEntry/toJSON
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -61,7 +58,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -69,7 +66,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i &lt; methods.length; i++) {
+  for (var i=0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -80,27 +77,14 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson', 'toJSON')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td><code>toJSON()</code> メソッドの初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | ステータス                                               | コメント                      |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ----------------------------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson', 'toJSON')}} | {{Spec2('Performance Timeline Level 2')}} | `toJSON()` メソッドの初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.PerformanceEntry.toJSON")}}</p>
-</div>
+{{Compat("api.PerformanceEntry.toJSON")}}

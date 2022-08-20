@@ -9,64 +9,45 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceMeasure
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><span class="seoSummary"><code><strong>PerformanceMeasure</strong></code> は、"<code>measure</code>" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。このタイプのエントリは、{{domxref("Performance.measure","performance.measure()")}} を呼び出して、ブラウザのパフォーマンスタイムラインの2つのマークの間に<em>名前付き</em> {{domxref("DOMHighResTimeStamp")}} (<em>measure</em>) を追加することによって作成されます。</span></p>
+**`PerformanceMeasure`** は、"`measure`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。このタイプのエントリは、{{domxref("Performance.measure","performance.measure()")}} を呼び出して、ブラウザーのパフォーマンスタイムラインの 2 つのマークの間に*名前付き* {{domxref("DOMHighResTimeStamp")}} (_measure_) を追加することによって作成されます。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p>このインターフェイスはプロパティを持ちませんが、以下のようにプロパティを修飾/制約することで以下の {{domxref("PerformanceEntry")}} プロパティを拡張します。</p>
+このインターフェイスはプロパティを持ちませんが、以下のようにプロパティを修飾/制約することで以下の {{domxref("PerformanceEntry")}} プロパティを拡張します。
 
-<dl>
- <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
- <dd>"<code>measure</code>" を返します。</dd>
- <dt>{{domxref("PerformanceEntry.name")}}</dt>
- <dd>メジャーが{{domxref("Performance.measure()","performance.measure()")}}の呼び出しで作成されたときにメジャーに付けられた名前を返します。</dd>
- <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
- <dd>{{domxref("Performance.measure()","performance.measure()")}} が呼び出されたときにメジャーに与えられた{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。</dd>
- <dt>{{domxref("PerformanceEntry.duration")}}</dt>
- <dd>小節の長さである {{domxref("DOMHighResTimeStamp")}} を返します (通常、小節の終了マークのタイムスタンプから開始マークのタイムスタンプを引いたもの)。</dd>
-</dl>
+- {{domxref("PerformanceEntry.entryType")}}
+  - : "`measure`" を返します。
+- {{domxref("PerformanceEntry.name")}}
+  - : メジャーが{{domxref("Performance.measure()","performance.measure()")}}の呼び出しで作成されたときにメジャーに付けられた名前を返します。
+- {{domxref("PerformanceEntry.startTime")}}
+  - : {{domxref("Performance.measure()","performance.measure()")}} が呼び出されたときにメジャーに与えられた{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+- {{domxref("PerformanceEntry.duration")}}
+  - : 小節の長さである {{domxref("DOMHighResTimeStamp")}} を返します (通常、小節の終了マークのタイムスタンプから開始マークのタイムスタンプを引いたもの)。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p>このインターフェイスにはメソッドがありません。</p>
+このインターフェイスにはメソッドがありません。
 
-<h2 id="例">例</h2>
+## 例
 
-<p><a href="/Web/API/User_Timing_API/Using_the_User_Timing_API">ユーザータイミング API の使用</a>の例を参照してください。</p>
+[ユーザータイミング API の使用](/Web/API/User_Timing_API/Using_the_User_Timing_API)の例を参照してください。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing Level 2', '#dom-performance-measure', 'PerformanceMeasure')}}</td>
-   <td>{{Spec2('User Timing Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing', '#performancemeasure', 'PerformanceMeasure')}}</td>
-   <td>{{Spec2('User Timing')}}</td>
-   <td>基本的な定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | ステータス                                   | コメント     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
+| {{SpecName('User Timing Level 2', '#dom-performance-measure', 'PerformanceMeasure')}} | {{Spec2('User Timing Level 2')}} |              |
+| {{SpecName('User Timing', '#performancemeasure', 'PerformanceMeasure')}}                 | {{Spec2('User Timing')}}             | 基本的な定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PerformanceMeasure")}}</p>
+{{Compat("api.PerformanceMeasure")}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li><a href="/Web/API/User_Timing_API">User Timing (Overview)</a></li>
- <li><a href="/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a></li>
-</ul>
+- [User Timing (Overview)](/Web/API/User_Timing_API)
+- [Using the User Timing API](/Web/API/User_Timing_API/Using_the_User_Timing_API)

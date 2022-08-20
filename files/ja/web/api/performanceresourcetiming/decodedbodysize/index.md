@@ -8,26 +8,28 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p><strong><code>decodedBodySize</code></strong> 読み取り専用プロパティは、適用された content-coding を削除した後、メッセージ本文のフェッチ (HTTP またはキャッシュ) から受信したサイズ (オクテット) を返します。リソースがアプリケーションキャッシュまたはローカルリソースから取得された場合、適用されているコンテンツコーディングを削除した後でペイロードのサイズを返します。</p>
+**`decodedBodySize`** 読み取り専用プロパティは、適用された content-coding を削除した後、メッセージ本文のフェッチ (HTTP またはキャッシュ) から受信したサイズ (オクテット) を返します。リソースがアプリケーションキャッシュまたはローカルリソースから取得された場合、適用されているコンテンツコーディングを削除した後でペイロードのサイズを返します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>resource</em>.decodedBodySize;
-</pre>
+```
+resource.decodedBodySize;
+```
 
-<h3 id="Return_Value" name="Return_Value">戻り値</h3>
+### 返値
 
-<p>適用された content-coding を削除した後に、メッセージ本文のフェッチ (HTTP またはキャッシュ) から受け取ったサイズ (オクテット)。</p>
+適用された content-coding を削除した後に、メッセージ本文のフェッチ (HTTP またはキャッシュ) から受け取ったサイズ (オクテット)。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次の例では、すべての "<code>resource</code>" {{domxref("PerformanceEntry.entryType","type")}} イベントのサイズプロパティの値が記録されます。</p>
+次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントのサイズプロパティの値が記録されます。
 
-<pre class="brush: js">function log_sizes(perfEntry){
+```js
+function log_sizes(perfEntry){
   // Check for support of the *size properties and print their values
   // if supported.
   if ("decodedBodySize" in perfEntry)
@@ -48,31 +50,18 @@ translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 function check_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log_sizes(p[i]);
   }
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-decodedBodySize', 'decodedBodySize')}}</td>
-   <td>{{Spec2('Resource Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                   | ステータス                           | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-decodedBodySize', 'decodedBodySize')}} | {{Spec2('Resource Timing')}} | 初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.PerformanceResourceTiming.decodedBodySize")}}</p>
-</div>
+{{Compat("api.PerformanceResourceTiming.decodedBodySize")}}

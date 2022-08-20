@@ -8,28 +8,30 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceNavigationTiming/loadEventEnd
 ---
-<div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
+{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-<p><strong><code>loadEventEnd</code></strong> 読み取り専用プロパティは、現在のドキュメントのロードイベントが完了した時刻と同じ{{domxref("DOMHighResTimeStamp","timestamp")}} を返します。</p>
+**`loadEventEnd`** 読み取り専用プロパティは、現在のドキュメントのロードイベントが完了した時刻と同じ{{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>perfEntry</em>.loadEventEnd;
-</pre>
+```
+perfEntry.loadEventEnd;
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>現在のドキュメントのロードイベントが完了した時刻を表す {{domxref("DOMHighResTimeStamp","timestamp")}}。</p>
+現在のドキュメントのロードイベントが完了した時刻を表す {{domxref("DOMHighResTimeStamp","timestamp")}}。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次の例は、このプロパティの使用方法を示しています。</p>
+次の例は、このプロパティの使用方法を示しています。
 
-<pre class="brush: js">function print_nav_timing_data() {
+```js
+function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
   var perfEntries = performance.getEntriesByType("navigation");
 
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
     var p = perfEntries[i];
     // dom Properties
@@ -46,27 +48,14 @@ translation_of: Web/API/PerformanceNavigationTiming/loadEventEnd
     console.log("redirectCount = " + p.redirectCount);
   }
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing Level 2', '#widl-PerformanceNavigationTiming-loadEventEnd', 'loadEventEnd')}}</td>
-   <td>{{Spec2('Navigation Timing Level 2')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                           | ステータス                                           | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
+| {{SpecName('Navigation Timing Level 2', '#widl-PerformanceNavigationTiming-loadEventEnd', 'loadEventEnd')}} | {{Spec2('Navigation Timing Level 2')}} | 初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.PerformanceNavigationTiming.loadEventEnd")}}</p>
-</div>
+{{Compat("api.PerformanceNavigationTiming.loadEventEnd")}}

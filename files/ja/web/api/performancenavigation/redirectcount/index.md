@@ -13,41 +13,28 @@ tags:
   - 非推奨
 translation_of: Web/API/PerformanceNavigation/redirectCount
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-<p>このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。</p>
-</div>
+> **Warning:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-<p>従来の <code><strong>PerformanceNavigation</strong></code><strong><code>.redirectCount</code></strong> 読み取り専用プロパティは、ページに到達する前に行われた REDIRECT の数を表す <code>unsigned short</code> を返します。</p>
+従来の **`PerformanceNavigation`\*\***`.redirectCount`\*\* 読み取り専用プロパティは、ページに到達する前に行われた REDIRECT の数を表す `unsigned short` を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>amount</em> = <em>performanceNavigation</em>.redirectCount;</pre>
+```
+amount = performanceNavigation.redirectCount;
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#dom-performancenavigation-redirectcount', 'PerformanceNavigation.redirectCount')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                       | ステータス                               | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
+| {{SpecName('Navigation Timing', '#dom-performancenavigation-redirectcount', 'PerformanceNavigation.redirectCount')}} | {{Spec2('Navigation Timing')}} | 初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PerformanceNavigation.redirectCount")}}</p>
+{{Compat("api.PerformanceNavigation.redirectCount")}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>所属する {{domxref("PerformanceNavigation")}} インターフェイス</li>
-</ul>
+- 所属する {{domxref("PerformanceNavigation")}} インターフェイス
