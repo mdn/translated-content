@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-translation_of: Web/API/HTMLElement/click
 ---
 {{ APIRef("HTML DOM") }}
 

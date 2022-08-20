@@ -1,12 +1,6 @@
 ---
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - 自訂標籤
-translation_of: Web/API/Document/registerElement
 ---
 {{APIRef("DOM")}}{{Deprecated_header}}
 

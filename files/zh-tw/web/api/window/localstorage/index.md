@@ -1,7 +1,6 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-translation_of: Web/API/Window/localStorage
 ---
 {{APIRef("Web Storage API")}}
 

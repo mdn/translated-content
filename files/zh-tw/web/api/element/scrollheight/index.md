@@ -1,10 +1,6 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - Reference
-translation_of: Web/API/Element/scrollHeight
 ---
 {{APIRef("DOM")}}
 

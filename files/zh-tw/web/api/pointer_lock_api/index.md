@@ -1,7 +1,6 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
-translation_of: Web/API/Pointer_Lock_API
 ---
 {{ SeeCompatTable() }}
 

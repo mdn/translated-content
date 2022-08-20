@@ -1,14 +1,6 @@
 ---
 title: document.querySelector
 slug: Web/API/Document/querySelector
-tags:
-  - DOM
-  - Fixit
-  - Gecko DOM Reference
-  - Gecko DOM 參考
-  - Selectors
-  - 選擇器
-translation_of: Web/API/Document/querySelector
 ---
 {{ApiRef()}}
 

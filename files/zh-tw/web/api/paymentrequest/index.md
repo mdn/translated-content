@@ -1,7 +1,6 @@
 ---
 title: PaymentRequest
 slug: Web/API/PaymentRequest
-translation_of: Web/API/PaymentRequest
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
-tags:
-  - API
-  - Event
-translation_of: Web/API/Event/stopImmediatePropagation
 ---
 {{APIRef("DOM")}}
 

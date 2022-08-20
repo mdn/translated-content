@@ -1,16 +1,6 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - API
-  - CSS
-  - CSS Animations
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/AnimationEvent
 ---
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
