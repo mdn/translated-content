@@ -4,117 +4,147 @@ slug: Web/MathML/Element/mtext
 tags:
   - MathML
   - MathML Reference
-  - 'MathML:Element'
-  - 'MathML:Token Elements'
+  - MathML:Element
+  - MathML:Token Elements
 translation_of: Web/MathML/Element/mtext
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">MathML &lt;mtext&gt; 要素は、コメントや注釈などの表記の意味を<em>もたない</em>任意のテキストをレンダリングするために使用されます。<br>
- 表記の意味<em>で</em>テキストを表示するには、{{ MathMLElement("mi") }} や {{ MathMLElement("mo") }} を代わりに使用します。</p>
+MathML \<mtext> 要素は、コメントや注釈などの表記の意味を*もたない*任意のテキストをレンダリングするために使用されます。
+表記の意味*で*テキストを表示するには、{{ MathMLElement("mi") }} や {{ MathMLElement("mo") }} を代わりに使用します。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd><a href="/ja/docs/CSS">スタイルシート</a>と一緒に用いて提供されます。</dd>
- <dt id="attr-dir">dir</dt>
- <dd>数式全体の書字方向。値として <code>ltr</code> （左から右へ）と <code>rtl</code> （右から左へ） が指定可能です。</dd>
- <dt id="attr-href">href</dt>
- <dd>指定された URI へのハイパーリンクの設定に使用されます。</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>背景色。<code>#rgb</code>、<code>#rrggbb</code>および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTML色名</a>を使用できます。</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>文字色。<code>#rgb</code>、<code>#rrggbb</code>および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTML色名</a>を使用できます。</dd>
- <dt id="attr-mathsize">mathsize</dt>
- <dd>Specifies the size of the content. Possible values are:
- <ul>
-  <li><code>small:</code>Font is rendered smaller than the current font size.</li>
-  <li><code>normal:</code>Equivalent to 100% or 1em.</li>
-  <li><code>big:</code>Font is rendered larger than the current font size.</li>
-  <li>a custom <a href="/ja/docs/MathML/Attributes/Values#Lengths">length</a>.</li>
-  <li>or a unitless value which multiplies the default.</li>
- </ul>
- </dd>
- <dt id="attr-mathvariant">mathvariant</dt>
- <dd>This attribute specifies the logical class of the identifier, which varies in typography. That is, although the names suggest the typographic style for the class, semantically, items with the same class are treated "the same" within an expression, which might or might not involve displaying them with the named typography. The following values are allowed:
- <ul>
-  <li><code>normal</code> (Default value) ; <math><mtext mathvariant="normal">Example</mtext></math></li>
-  <li><code>bold</code> ; <math><mtext mathvariant="bold">Example</mtext></math></li>
-  <li><code>italic</code> ; <math><mtext mathvariant="italic">Example</mtext></math></li>
-  <li><code>bold-italic</code> ; <math><mtext mathvariant="bold-italic">Example</mtext></math></li>
- </ul>
+- class, id, style
+  - : [スタイルシート](/ja/docs/CSS)と一緒に用いて提供されます。
+- dir
+  - : 数式全体の書字方向。値として `ltr` （左から右へ）と `rtl` （右から左へ） が指定可能です。
+- href
+  - : 指定された URI へのハイパーリンクの設定に使用されます。
+- mathbackground
+  - : 背景色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
+- mathcolor
+  - : 文字色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
+- mathsize
 
- <ul>
-  <li><code>double-struck</code> ; <math><mtext mathvariant="double-struck">Example</mtext></math></li>
-  <li><code>bold-fraktur</code> ; <math><mtext mathvariant="bold-fraktur">Example</mtext></math></li>
-  <li><code>script</code> ; <math><mtext mathvariant="script">Example</mtext></math></li>
-  <li><code>bold-script</code> ; <math><mtext mathvariant="bold-script">Example</mtext></math></li>
-  <li><code>fraktur</code> ; <math><mtext mathvariant="fraktur">Example</mtext></math></li>
- </ul>
+  - : Specifies the size of the content. Possible values are:
 
- <ul>
-  <li><code>sans-serif</code> ; <math><mtext mathvariant="sans-serif">Example</mtext></math></li>
-  <li><code>bold-sans-serif</code> ; <math><mtext mathvariant="bold-sans-serif">Example</mtext></math></li>
-  <li><code>sans-serif-italic</code> ; <math><mtext mathvariant="sans-serif-italic">Example</mtext></math></li>
-  <li><code>sans-serif-bold-italic</code> ; <math><mtext mathvariant="sans-serif-bold-italic">Example</mtext></math></li>
-  <li><code>monospace</code> ; <math><mtext mathvariant="monospace">Example</mtext></math></li>
- </ul>
+    - `small:`Font is rendered smaller than the current font size.
+    - `normal:`Equivalent to 100% or 1em.
+    - `big:`Font is rendered larger than the current font size.
+    - a custom [length](/ja/docs/MathML/Attributes/Values#Lengths).
+    - or a unitless value which multiplies the default.
 
- <ul>
-  <li><code>normal</code> (Default) ; <math><mtext>مثال</mtext></math></li>
-  <li><code>initial</code> ; <math><mtext mathvariant="initial">مثال</mtext></math></li>
-  <li><code>tailed</code> ; <math><mtext mathvariant="tailed">مثال</mtext></math></li>
-  <li><code>looped</code> ; <math><mtext mathvariant="looped">مثال</mtext></math></li>
-  <li><code>stretched</code> ; <math><mtext mathvariant="stretched">مثال</mtext></math></li>
- </ul>
- </dd>
-</dl>
+- mathvariant
 
-<h2 id="例">例</h2>
+  - : This attribute specifies the logical class of the identifier, which varies in typography. That is, although the names suggest the typographic style for the class, semantically, items with the same class are treated "the same" within an expression, which might or might not involve displaying them with the named typography. The following values are allowed:
 
-<pre class="brush: html">&lt;math&gt;
+    - `normal` (Default value) ;&#x20;
 
-  &lt;mtext&gt; Theorem of Pythagoras &lt;/mtext&gt;
+      <math><mtext mathvariant="normal">Example</mtext></math>
 
-  &lt;mtext&gt; /* comment here */ &lt;/mtext&gt;
+    - `bold` ;&#x20;
 
-&lt;/math&gt;
-</pre>
+      <math><mtext mathvariant="bold">Example</mtext></math>
 
-<h2 id="仕様">仕様</h2>
+    - `italic` ;&#x20;
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('MathML3', 'chapter3.html#presm.mtext', 'mtext') }}</td>
-   <td>{{ Spec2('MathML3') }}</td>
-   <td>現在の仕様</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('MathML2', 'chapter3.html#presm.mtext', 'mtext') }}</td>
-   <td>{{ Spec2('MathML2') }}</td>
-   <td>初期の仕様</td>
-  </tr>
- </tbody>
-</table>
+      <math><mtext mathvariant="italic">Example</mtext></math>
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+    - `bold-italic` ;&#x20;
 
+      <math><mtext mathvariant="bold-italic">Example</mtext></math>
 
+    <!---->
 
-<p>{{Compat("mathml.elements.mtext")}}</p>
+    - `double-struck` ;&#x20;
 
-<h2 id="Gecko_固有の注記">Gecko 固有の注記</h2>
+      <math><mtext mathvariant="double-struck">Example</mtext></math>
 
-<ul>
- <li>Starting with Gecko 20.0 {{geckoRelease("20.0")}} a unitless value for <code>mathsize</code> is allowed.</li>
- <li>Some <code>mathvariant</code> values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate <a href="/ja/docs/Mozilla/MathML_Project/Fonts">math fonts</a>.</li>
-</ul>
+    - `bold-fraktur` ;&#x20;
+
+      <math><mtext mathvariant="bold-fraktur">Example</mtext></math>
+
+    - `script` ;&#x20;
+
+      <math><mtext mathvariant="script">Example</mtext></math>
+
+    - `bold-script` ;&#x20;
+
+      <math><mtext mathvariant="bold-script">Example</mtext></math>
+
+    - `fraktur` ;&#x20;
+
+      <math><mtext mathvariant="fraktur">Example</mtext></math>
+
+    <!---->
+
+    - `sans-serif` ;&#x20;
+
+      <math><mtext mathvariant="sans-serif">Example</mtext></math>
+
+    - `bold-sans-serif` ;&#x20;
+
+      <math><mtext mathvariant="bold-sans-serif">Example</mtext></math>
+
+    - `sans-serif-italic` ;&#x20;
+
+      <math><mtext mathvariant="sans-serif-italic">Example</mtext></math>
+
+    - `sans-serif-bold-italic` ;&#x20;
+
+      <math><mtext mathvariant="sans-serif-bold-italic">Example</mtext></math>
+
+    - `monospace` ;&#x20;
+
+      <math><mtext mathvariant="monospace">Example</mtext></math>
+
+    <!---->
+
+    - `normal` (Default) ;&#x20;
+
+      <math><mtext>مثال</mtext></math>
+
+    - `initial` ;&#x20;
+
+      <math><mtext mathvariant="initial">مثال</mtext></math>
+
+    - `tailed` ;&#x20;
+
+      <math><mtext mathvariant="tailed">مثال</mtext></math>
+
+    - `looped` ;&#x20;
+
+      <math><mtext mathvariant="looped">مثال</mtext></math>
+
+    - `stretched` ;&#x20;
+
+      <math><mtext mathvariant="stretched">مثال</mtext></math>
+
+## 例
+
+```html
+<math>
+
+  <mtext> Theorem of Pythagoras </mtext>
+
+  <mtext> /* comment here */ </mtext>
+
+</math>
+```
+
+## 仕様
+
+| 仕様                                                                                 | 状態                         | コメント   |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
+| {{ SpecName('MathML3', 'chapter3.html#presm.mtext', 'mtext') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
+| {{ SpecName('MathML2', 'chapter3.html#presm.mtext', 'mtext') }} | {{ Spec2('MathML2') }} | 初期の仕様 |
+
+## ブラウザー互換性
+
+{{Compat("mathml.elements.mtext")}}
+
+## Gecko 固有の注記
+
+- Starting with Gecko 20.0 {{geckoRelease("20.0")}} a unitless value for `mathsize` is allowed.
+- Some `mathvariant` values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate [math fonts](/ja/docs/Mozilla/MathML_Project/Fonts).
