@@ -20,17 +20,17 @@ slug: Web/API/Element/classList
 const div = document.createElement('div');
 div.className = 'foo';
 
-// our starting state: <div class="foo"></div>
+// 初始状态：<div class="foo"></div>
 console.log(div.outerHTML);
 
-// use the classList API to remove and add classes
+// 使用 classList API 移除、添加类值
 div.classList.remove("foo");
 div.classList.add("anotherclass");
 
 // <div class="anotherclass"></div>
 console.log(div.outerHTML);
 
-// if visible is set remove it, otherwise add it
+// 如果 visible 类值已存在，则移除它，否则添加它
 div.classList.toggle("visible");
 
 // add/remove visible, depending on test conditional, i less than 10
@@ -38,16 +38,16 @@ div.classList.toggle("visible", i < 10 );
 
 console.log(div.classList.contains("foo"));
 
-// add or remove multiple classes
+// 添加或移除多个类值
 div.classList.add("foo", "bar", "baz");
 div.classList.remove("foo", "bar", "baz");
 
-// add or remove multiple classes using spread syntax
+// 使用展开语法添加或移除多个类值
 const cls = ["foo", "bar"];
 div.classList.add(...cls);
 div.classList.remove(...cls);
 
-// replace class "foo" with class "bar"
+// 将类值 "foo" 替换成 "bar"
 div.classList.replace("foo", "bar");
 ```
 
