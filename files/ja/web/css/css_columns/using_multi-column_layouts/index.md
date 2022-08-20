@@ -9,6 +9,8 @@ tags:
   - Layout
   - Web
 translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
+l10n:
+  sourceCommit: 77abaefce3b90a6439c5bd4a162956e7d0cf8fda
 ---
 {{CSSRef}}
 
@@ -60,9 +62,9 @@ CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレ
 
 ### 結果
 
-コンテンツが（段組み対応のブラウザーを使用していれば）2 段で表示されます。
+内容が（段組み対応のブラウザーを使用していれば）2 段で表示されます。
 
-{{EmbedLiveSample("column_count", "100%")}}
+{{EmbedLiveSample("Example_1", "100%")}}
 
 `column-width` プロパティは最小限ほしい段の幅を設定します。 `column-count` の値が一緒に設定されていない場合は、ブラウザーは有効な幅に収まるできるだけ多くの段を自動的に作成します。
 
@@ -93,9 +95,9 @@ CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレ
 
 ### 結果
 
-{{EmbedLiveSample("column_width", "100%")}}
+{{EmbedLiveSample("Example_2", "100%")}}
 
-より厳密な詳細については、 [CSS3 仕様書](https://www.w3.org/TR/css3-multicol/)で説明されています。
+より厳密な詳細については、 [CSS3 仕様書](https://www.w3.org/TR/css-multicol-1/)で説明されています。
 
 段組みをしたブロックでは、コンテンツは必要に応じてある段から次の段に流れます。 HTML、 CSS、 DOM 機能はすべて段組みでの編集や印刷に対応しています。
 
@@ -130,7 +132,9 @@ CSS 宣言の `column-width: 12em` は `columns: 12em` に置き換えること�
 }
 ```
 
-{{EmbedLiveSample("column_short", "100%")}}
+### 結果
+
+{{EmbedLiveSample("Example_3", "100%")}}
 
 CSS 宣言 の `column-count: 4` は `columns: 4` に置き換えられます。
 
@@ -159,9 +163,9 @@ CSS 宣言 の `column-count: 4` は `columns: 4` に置き換えられます。
 }
 ```
 
-### Result
+### 結果
 
-{{EmbedLiveSample("example_4_columns", "100%")}}
+{{EmbedLiveSample("Example_4", "100%")}}
 
 `column-width: 8em` と `column-count: 12` の 2 つの CSS 宣言は、 `columns: 12 8em` で置き換えることができます。
 
@@ -192,11 +196,11 @@ CSS 宣言 の `column-count: 4` は `columns: 4` に置き換えられます。
 
 ### 結果
 
-{{EmbedLiveSample("example_12_columns", "100%")}}
+{{EmbedLiveSample("Example_5", "100%")}}
 
 ### 高さの均衡
 
-CSS3 の段組みの仕様書では、段の高さが揃っていなければならないと規定されています。つまり、ブラウザーは自動的に段の高さの最大値を設定し、各段のコンテンツの高さはおよそ同じになります。 Firefox はこれを行っています。
+CSS の段組みでは、段の高さが揃っていなければならないとされています。つまり、ブラウザーは自動的に段の高さの最大値を設定し、各段のコンテンツの高さはおよそ同じになります。 Firefox はこれを行っています。
 
 しかし、場合によっては段の高さの最大値を明示的に設定し、コンテンツを最初の段から配置して必要に応じていくつもの段を作成し、右に流れることができるようにすることが有用であることもあります。従って、段組みブロックに CSS の {{cssxref("height")}} または {{cssxref("max-height")}} プロパティを設定することで高さを制限すると、それぞれの段は新しい段を追加する前にその高さまで伸びていきます。このモードはレイアウトではるかに効率的です。
 
@@ -232,7 +236,7 @@ CSS3 の段組みの仕様書では、段の高さが揃っていなければな
 
 ### 結果
 
-{{EmbedLiveSample("col_gap", "100%")}}
+{{EmbedLiveSample("Example_6", "100%")}}
 
 ## グレイスフルデグラデーション
 
@@ -240,4 +244,4 @@ CSS3 の段組みの仕様書では、段の高さが揃っていなければな
 
 ## まとめ
 
-CSS3 の段組みは、ウェブ開発者が画面の資産を最大限に活用できるようにするためのレイアウト方法です。想像的な開発者は、特に自動的に高さを調整する機能を利用して、様々な利用方法を見つけるでしょう。
+CSS の段組みは、ウェブ開発者が画面の資産を最大限に活用できるようにするためのレイアウト方法です。想像的な開発者は、特に自動的に高さを調整する機能を利用して、様々な利用方法を見つけるでしょう。
