@@ -1,7 +1,6 @@
 ---
 title: 屬性的可列舉性及所有權
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
 {{JsSidebar("More")}}
 

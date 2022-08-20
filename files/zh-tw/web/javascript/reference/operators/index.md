@@ -1,11 +1,6 @@
 ---
 title: 運算式與運算子
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - NeedsTranslation
-  - TopicStub
-  - 運算子
-translation_of: Web/JavaScript/Reference/Operators
 ---
 {{jsSidebar("Operators")}}
 

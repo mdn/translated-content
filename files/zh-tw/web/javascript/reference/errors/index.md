@@ -1,7 +1,6 @@
 ---
 title: JavaScript 錯誤參考資料
 slug: Web/JavaScript/Reference/Errors
-translation_of: Web/JavaScript/Reference/Errors
 ---
 {{jsSidebar("Errors")}}
 

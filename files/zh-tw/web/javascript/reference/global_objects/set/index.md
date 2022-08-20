@@ -1,13 +1,6 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-tags:
-  - ECMAScript 2015
-  - Global Objects
-  - JavaScript
-  - Object
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
 {{JSRef}}
 

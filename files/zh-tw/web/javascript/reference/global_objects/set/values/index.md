@@ -1,14 +1,6 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 原型
-  - 方法
-  - 迭代器
-  - 集合
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
 {{JSRef}}
 
