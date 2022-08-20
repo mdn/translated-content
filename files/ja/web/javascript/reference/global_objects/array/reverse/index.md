@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
 {{JSRef}}
 
-**`reverse()`** メソッドは、配列の要素を *[In-place アルゴリズム](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)*で反転させます。最初の要素が最後の要素に、最後の要素が最初の要素になります。
+**`reverse()`** メソッドは、配列の要素を *[In-place アルゴリズム](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)* で反転させます。最初の要素が最後の要素に、最後の要素が最初の要素になります。
 
 {{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
