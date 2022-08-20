@@ -1,13 +1,6 @@
 ---
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
-tags:
-  - API
-  - DOM
-  - 參考
-  - 文本片段
-  - 方法
-translation_of: Web/API/Document/createDocumentFragment
 ---
 {{ApiRef("DOM")}}
 

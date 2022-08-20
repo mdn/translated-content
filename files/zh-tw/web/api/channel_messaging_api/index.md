@@ -1,7 +1,6 @@
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-translation_of: Web/API/Channel_Messaging_API
 ---
 Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳本 (如兩個 IFrame、或主頁面和 IFrame、文件和 {{domxref("SharedWorker")}}、或兩個 worker)，也能夠經由雙向 channel (通道) 兩端的 port (連接阜) 直接傳遞訊息互相溝通。
 

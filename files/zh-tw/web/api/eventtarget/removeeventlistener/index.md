@@ -1,7 +1,6 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-translation_of: Web/API/EventTarget/removeEventListener
 ---
 {{APIRef("DOM Events")}}
 

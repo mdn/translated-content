@@ -1,7 +1,6 @@
 ---
 title: Canvas 教學文件
 slug: Web/API/Canvas_API/Tutorial
-translation_of: Web/API/Canvas_API/Tutorial
 ---
 {{CanvasSidebar}}
 

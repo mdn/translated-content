@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
-translation_of: Web/API/HTMLSelectElement
 ---
 {{APIRef("HTML DOM")}}
 

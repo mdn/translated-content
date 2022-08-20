@@ -1,16 +1,6 @@
 ---
 title: Performance.timing
 slug: Web/API/Performance/timing
-tags:
-  - API
-  - Navigation Timing
-  - Performance
-  - Property
-  - Read-only
-  - 唯讀
-  - 屬性
-  - 效能
-translation_of: Web/API/Performance/timing
 original_slug: Web/API/Performance.timing
 ---
 {{APIRef("Performance")}}
