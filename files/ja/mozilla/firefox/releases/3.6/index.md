@@ -12,239 +12,201 @@ tags:
   - XUL
 translation_of: Mozilla/Firefox/Releases/3.6
 ---
-<p>Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。</p>
+Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。
 
-<div> </div>
+## Web サイトとアプリケーション開発者向け
 
-<h2 id="Web_サイトとアプリケーション開発者向け">Web サイトとアプリケーション開発者向け</h2>
+### CSS
 
-<h3 id="CSS">CSS</h3>
+- [グラデーションの利用](/ja/docs/Using_gradients "Using gradients")
+  - : Firefox 3.6 では [`background`](/ja/docs/Web/CSS/background "CSS の background 一括指定プロパティは、色、画像、原点と寸法、反復方法、その他の機能など、背景に関するすべてのスタイルプロパティを一括で設定します。") において、Mozilla が提案中の [`-moz-linear-gradient`](/ja/docs/Web/CSS/-moz-linear-gradient "この項目についての文書はまだ書かれていません。書いてみませんか？") と [`-moz-radial-gradient`](/ja/docs/Web/CSS/-moz-radial-gradient "この項目についての文書はまだ書かれていません。書いてみませんか？") プロパティのサポートが追加されました。
+- [複数の背景](/ja/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+  - : [`background`](/ja/docs/Web/CSS/background "CSS の background 一括指定プロパティは、色、画像、原点と寸法、反復方法、その他の機能など、背景に関するすべてのスタイルプロパティを一括で設定します。") プロパティ（および [`background-color`](/ja/docs/Web/CSS/background-color "CSS の background-color プロパティは、要素の背景色を設定します。")、[`background-image`](/ja/docs/Web/CSS/background-image "CSS の background-image プロパティは、要素に1つ以上の背景画像を設定します。")、[`background-position`](/ja/docs/Web/CSS/background-position "CSS の background-position プロパティは、それぞれの背景画像の初期位置を設定します。位置は background-origin で設定された位置レイヤーからの相対です。")、[`background-repeat`](/ja/docs/Web/CSS/background-repeat "CSS の background-repeat プロパティは、背景画像をどのように繰り返すかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができます。")、[`background-attachment`](/ja/docs/Web/CSS/background-attachment "CSS の background-attachment プロパティは、背景画像の位置をビューポートの中に固定するか、包含ブロックと一緒にスクロールするかを設定します。")）が複数の背景をサポートしました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。
+- [Mozilla 独自のメディア特性](/ja/docs/CSS/Media_queries#Mozilla-specific_media_features "CSS/Media queries#Mozilla-specific media features")
+  - : Mozilla 独自のシステムメトリックスに複数のメディア特性が追加されました。このメディア特性により、タッチサポートのような機能の有効性の確認を、[media queries](/ja/docs/CSS/Media_queries "CSS/Media queries") を使用してより安全に行えるようになりました。
+- [背景画像のスケーリング](/ja/docs/CSS/Scaling_background_images "CSS/Scaling background images")
+  - : [CSS 3 Backgrounds and Borders 草案](http://dev.w3.org/csswg/css3-background/)の `background-size プロパティが` [`-moz-background-size`](/ja/docs/Web/CSS/-moz-background-size "この項目についての文書はまだ書かれていません。書いてみませんか？") としてサポートされました。
+- [WOFF フォントのサポート](/ja/docs/About_WOFF "About WOFF")
+  - : [`@font-face`](/ja/docs/Web/CSS/@font-face "CSS の @font-face @-規則は、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターのどちらかから読み込むことができます。") が新しい WOFF ウェブフォントファイルフォーマットをサポートしました。
+- [ポインタイベント](/ja/docs/CSS/pointer-events "CSS/pointer-events")
+  - : [`pointer-events`](/ja/docs/Web/CSS/pointer-events "CSS の pointer-events プロパティは、特定のグラフィック要素がマウスイベントの対象になる可能性のある環境 (存在する場合) を設定します。") プロパティにより、要素がマウスポインタのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
 
-<dl>
- <dt><a href="/ja/docs/Using_gradients" title="Using gradients">グラデーションの利用</a></dt>
- <dd>Firefox 3.6 では <a href="/ja/docs/Web/CSS/background" title="CSS の background 一括指定プロパティは、色、画像、原点と寸法、反復方法、その他の機能など、背景に関するすべてのスタイルプロパティを一括で設定します。"><code>background</code></a> において、Mozilla が提案中の <a href="/ja/docs/Web/CSS/-moz-linear-gradient" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-linear-gradient</code></a> と <a href="/ja/docs/Web/CSS/-moz-radial-gradient" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-radial-gradient</code></a> プロパティのサポートが追加されました。</dd>
- <dt><a href="/ja/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">複数の背景</a></dt>
- <dd><a href="/ja/docs/Web/CSS/background" title="CSS の background 一括指定プロパティは、色、画像、原点と寸法、反復方法、その他の機能など、背景に関するすべてのスタイルプロパティを一括で設定します。"><code>background</code></a> プロパティ（および <a href="/ja/docs/Web/CSS/background-color" title="CSS の background-color プロパティは、要素の背景色を設定します。"><code>background-color</code></a>、<a href="/ja/docs/Web/CSS/background-image" title="CSS の background-image プロパティは、要素に1つ以上の背景画像を設定します。"><code>background-image</code></a>、<a href="/ja/docs/Web/CSS/background-position" title="CSS の background-position プロパティは、それぞれの背景画像の初期位置を設定します。位置は background-origin で設定された位置レイヤーからの相対です。"><code>background-position</code></a>、<a href="/ja/docs/Web/CSS/background-repeat" title="CSS の background-repeat プロパティは、背景画像をどのように繰り返すかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができます。"><code>background-repeat</code></a>、<a href="/ja/docs/Web/CSS/background-attachment" title="CSS の background-attachment プロパティは、背景画像の位置をビューポートの中に固定するか、包含ブロックと一緒にスクロールするかを設定します。"><code>background-attachment</code></a>）が複数の背景をサポートしました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。</dd>
- <dt><a href="/ja/docs/CSS/Media_queries#Mozilla-specific_media_features" title="CSS/Media queries#Mozilla-specific media features">Mozilla 独自のメディア特性</a></dt>
- <dd>Mozilla 独自のシステムメトリックスに複数のメディア特性が追加されました。このメディア特性により、タッチサポートのような機能の有効性の確認を、<a href="/ja/docs/CSS/Media_queries" title="CSS/Media queries">media queries</a> を使用してより安全に行えるようになりました。</dd>
- <dt><a href="/ja/docs/CSS/Scaling_background_images" title="CSS/Scaling background images">背景画像のスケーリング</a></dt>
- <dd><a class="external" href="http://dev.w3.org/csswg/css3-background/">CSS 3 Backgrounds and Borders 草案</a>の <code>background-size<span style="font-family: Verdana,Tahoma,sans-serif;"> プロパティが</span></code> <a href="/ja/docs/Web/CSS/-moz-background-size" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-background-size</code></a> としてサポートされました。</dd>
- <dt><a href="/ja/docs/About_WOFF" title="About WOFF">WOFF フォントのサポート</a></dt>
- <dd><a href="/ja/docs/Web/CSS/@font-face" title="CSS の @font-face @-規則は、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターのどちらかから読み込むことができます。"><code>@font-face</code></a> が新しい WOFF ウェブフォントファイルフォーマットをサポートしました。</dd>
- <dt><a href="/ja/docs/CSS/pointer-events" title="CSS/pointer-events">ポインタイベント</a></dt>
- <dd><a href="/ja/docs/Web/CSS/pointer-events" title="CSS の pointer-events プロパティは、特定のグラフィック要素がマウスイベントの対象になる可能性のある環境 (存在する場合) を設定します。"><code>pointer-events</code></a> プロパティにより、要素がマウスポインタのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。</dd>
-</dl>
+#### その他の CSS の変更
 
-<h4 id="その他の_CSS_の変更">その他の CSS の変更</h4>
+- [CSS3 Values and Units](http://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/CSS/Length#Relative_length_units "CSS/length#Relative length units") がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195 "FIXED: support css3 root em ('rem' or 're') units")
+- [`image-rendering`](/ja/docs/Web/CSS/image-rendering "CSS の image-rendering プロパティは、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。") が画像、背景画像、ビデオ、canvas でサポートされました。 [バグ 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756 "FIXED: Request: Switch for authors to turn on/off bilinear filtering when enlarging images")
+- [`text-align`](/ja/docs/Web/CSS/text-align "CSS の text-align プロパティは、インラインまたは表セルボックスの水平方向の配置を設定します。つまり、 vertical-align のように、ただし水平方向に動作します。"):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837 "FIXED: [FIX]add support for text-align: end")
+- table [`display`](/ja/docs/Web/CSS/display "CSS の display プロパティは、要素の表示種別を指定し、これは要素がボックスを生成する方法の二つの基本的な品質から成ります。 — 外部表示種別はボックスがフローレイアウトにどのように加わるのかを定義し、内部表示種別はボックスの子がどのように配置されるのかを定義します。") タイプの要素に対する DOM の変更がより良く動作するようになりました。
+- `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/HTML/Element/Input "HTML/Element/Input") 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate "CSS の :indeterminate 疑似クラス は、中間の状態にあるフォームの要素を表します。") 擬似クラスのサポートが追加されました。
+- [`:-moz-locale-dir(ltr)`](</ja/docs/Web/CSS/:-moz-locale-dir(ltr)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](</ja/docs/Web/CSS/:-moz-locale-dir(rtl)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザインタフェースが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416 "FIXED: Replace chromedir with something more sane")
+- ウィンドウ化されたプラグインは CSS transforms の中では表示されなくなりました。これはコンポジターによって正しく変換されないためです。
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> で定義されている長さの単位 <a href="/ja/docs/CSS/Length#Relative_length_units" title="CSS/length#Relative length units"><code>rem</code></a> がサポートされました。 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195" title="FIXED: support css3 root em ('rem' or 're') units">バグ 472195</a></li>
- <li><a href="/ja/docs/Web/CSS/image-rendering" title="CSS の image-rendering プロパティは、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。"><code>image-rendering</code></a> が画像、背景画像、ビデオ、canvas でサポートされました。 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=423756" title="FIXED: Request: Switch for authors to turn on/off bilinear filtering when enlarging images">バグ 423756</a></li>
- <li><a href="/ja/docs/Web/CSS/text-align" title="CSS の text-align プロパティは、インラインまたは表セルボックスの水平方向の配置を設定します。つまり、 vertical-align のように、ただし水平方向に動作します。"><code>text-align</code></a>:end がサポートされました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=299837" title="FIXED: [FIX]add support for text-align: end">バグ 299837</a></li>
- <li>table <a href="/ja/docs/Web/CSS/display" title="CSS の display プロパティは、要素の表示種別を指定し、これは要素がボックスを生成する方法の二つの基本的な品質から成ります。 — 外部表示種別はボックスがフローレイアウトにどのように加わるのかを定義し、内部表示種別はボックスの子がどのように配置されるのかを定義します。"><code>display</code></a> タイプの要素に対する DOM の変更がより良く動作するようになりました。</li>
- <li><code>indeterminate</code> 属性が <code>true</code> である <code>checkbox</code> <a class="internal" href="/ja/docs/HTML/Element/Input" title="HTML/Element/Input"><code>input</code></a> 要素にマッチする <a href="/ja/docs/Web/CSS/:indeterminate" title="CSS の :indeterminate 疑似クラス は、中間の状態にあるフォームの要素を表します。"><code>:indeterminate</code></a> 擬似クラスのサポートが追加されました。</li>
- <li><a href="/ja/docs/Web/CSS/:-moz-locale-dir(ltr)" title='CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。'><code>:-moz-locale-dir(ltr)</code></a> と <a href="/ja/docs/Web/CSS/:-moz-locale-dir(rtl)" title='CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。'><code>:-moz-locale-dir(rtl)</code></a> が追加され、ユーザインタフェースが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=478416" title="FIXED: Replace chromedir with something more sane">バグ 478416</a></li>
- <li>ウィンドウ化されたプラグインは CSS transforms の中では表示されなくなりました。これはコンポジターによって正しく変換されないためです。</li>
-</ul>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+- [ウェブアプリケーションからファイルを扱う](/ja/docs/Using_files_from_web_applications "Using files from web applications")
+  - : 新しい HTML5 File API のサポートが Gecko に追加され、ウェブアプリケーションがユーザの選択したローカルファイルにアクセス出来るようになりました。これには `input type="file"` HTML 要素において複数のファイルを選択する `multiple` 属性のサポートが含まれます。
 
-<dl>
- <dt><a href="/ja/docs/Using_files_from_web_applications" title="Using files from web applications">ウェブアプリケーションからファイルを扱う</a></dt>
- <dd>新しい HTML5 File API のサポートが Gecko に追加され、ウェブアプリケーションがユーザの選択したローカルファイルにアクセス出来るようになりました。これには <code>input type="file"</code> HTML 要素において複数のファイルを選択する <code>multiple</code> 属性のサポートが含まれます。</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>HTML5 video がポスター・フレームをサポート</dt>
- <dd><a class="internal" href="/ja/docs/HTML/Element/Video" title="HTML/Element/Video"><code>video</code></a> 要素で <code>poster</code> 属性がサポートされ、コンテンツがビデオの再生が開始されるまでに表示されるポスター・フレームを指定できるようになりました。</dd>
- <dt>チェックボックスとラジオボタンが <code>indeterminate</code> 属性をサポート</dt>
- <dd><code>checkbox</code> と <code>radio</code> タイプの HTML <a class="internal" href="/ja/docs/HTML/Element/Input" title="HTML/Element/Input"><code>input</code></a> 要素が indeterminate 属性をサポートし、3番目の "indeterminate" 状態を持てるようになりました。</dd>
- <dt>Canvas 画像のスムージングが制御可能に</dt>
- <dd><a class="internal" href="/ja/docs/HTML/Canvas" title="HTML/canvas"><code>canvas</code></a> 要素のスケーリング時に、新しい <a class="internal" href="/ja/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior" title="Canvas tutorial/Using images#Controlling image scaling behavior"><code>mozImageSmoothingEnabled</code></a> プロパティでスムージングの有無を指定できるようになりました。</dd>
-</dl>
+- HTML5 video がポスター・フレームをサポート
+  - : [`video`](/ja/docs/HTML/Element/Video "HTML/Element/Video") 要素で `poster` 属性がサポートされ、コンテンツがビデオの再生が開始されるまでに表示されるポスター・フレームを指定できるようになりました。
+- チェックボックスとラジオボタンが `indeterminate` 属性をサポート
+  - : `checkbox` と `radio` タイプの HTML [`input`](/ja/docs/HTML/Element/Input "HTML/Element/Input") 要素が indeterminate 属性をサポートし、3 番目の "indeterminate" 状態を持てるようになりました。
+- Canvas 画像のスムージングが制御可能に
+  - : [`canvas`](/ja/docs/HTML/Canvas "HTML/canvas") 要素のスケーリング時に、新しい [`mozImageSmoothingEnabled`](/ja/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior "Canvas tutorial/Using images#Controlling image scaling behavior") プロパティでスムージングの有無を指定できるようになりました。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>Gecko 1.9.2 は JavaScript 1.8.2 を採用し、<a href="/ja/JavaScript/ECMAScript_5_support_in_Mozilla" title="https://developer.mozilla.org/En/JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5 standard</a> から多くの言語機能が追加されました:</p>
+Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/JavaScript/ECMAScript_5_support_in_Mozilla "https://developer.mozilla.org/En/JavaScript/ECMAScript_5_support_in_Mozilla") から多くの言語機能が追加されました:
 
-<ul>
- <li><a href="/ja/docs/JavaScript/Reference/Global_Objects/Date/parse" title="Core JavaScript 1.5 Reference/Global Objects/Date/parse"><code>Date.parse()</code></a> は YYYY-MM-DD のような ISO 8601 dates をデコードできるようになりました。</li>
- <li>function インスタンスの <a href="/ja/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="Core JavaScript 1.5 Reference/Global Objects/Function/prototype"><code>prototype</code></a> プロパティは列挙可能 (enumerable)ではなくなりました。</li>
-</ul>
+- [`Date.parse()`](/ja/docs/JavaScript/Reference/Global_Objects/Date/parse "Core JavaScript 1.5 Reference/Global Objects/Date/parse") は YYYY-MM-DD のような ISO 8601 dates をデコードできるようになりました。
+- function インスタンスの [`prototype`](/ja/docs/JavaScript/Reference/Global_Objects/Function/prototype "Core JavaScript 1.5 Reference/Global Objects/Function/prototype") プロパティは列挙可能 (enumerable)ではなくなりました。
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<dl>
- <dt>Web workers が自己終了可能に</dt>
- <dd>Workers が <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()">nsIWorkerScope.close()</a></code> メソッドをサポートし、自分自身で終了できるようになりました。</dd>
- <dt>ドラッグ＆ドロップがファイルをサポート</dt>
- <dd>ドラッグリスナーで提供される <a href="/ja/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> オブジェクトがドラッグされたファイルを含むようになりました。</dd>
- <dt><a href="/ja/docs/Detecting_device_orientation" title="Detecting device orientation">デバイスの傾きの検出</a></dt>
- <dd>コンテンツはデバイスが加速度センサー（accelerometer）をサポートしていれば <a href="/ja/docs/DOM/MozOrientation" title="DOM/MozOrientation"><code>MozOrientation</code></a> イベントによりその傾きを検出できるようになりました。Firefox 3.6 は Mac のノートブックで加速度センサーをサポートします。</dd>
- <dt><a href="/ja/docs/DOM/Detecting_document_width_and_height_changes" title="DOM/Detecting document width and height changes">document の幅と高さの変化の検出</a></dt>
- <dd>document の <code>scrollWidth</code> または <code>scrollHeight</code> プロパティが変化すると、 <code>MozScrollAreaChanged</code> イベントが発動します。</dd>
-</dl>
+- Web workers が自己終了可能に
+  - : Workers が [`nsIWorkerScope.close()`](</ja/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>) メソッドをサポートし、自分自身で終了できるようになりました。
+- ドラッグ＆ドロップがファイルをサポート
+  - : ドラッグリスナーで提供される [`DataTransfer`](/ja/docs/DragDrop/DataTransfer "DragDrop/DataTransfer") オブジェクトがドラッグされたファイルを含むようになりました。
+- [デバイスの傾きの検出](/ja/docs/Detecting_device_orientation "Detecting device orientation")
+  - : コンテンツはデバイスが加速度センサー（accelerometer）をサポートしていれば [`MozOrientation`](/ja/docs/DOM/MozOrientation "DOM/MozOrientation") イベントによりその傾きを検出できるようになりました。Firefox 3.6 は Mac のノートブックで加速度センサーをサポートします。
+- [document の幅と高さの変化の検出](/ja/docs/DOM/Detecting_document_width_and_height_changes "DOM/Detecting document width and height changes")
+  - : document の `scrollWidth` または `scrollHeight` プロパティが変化すると、 `MozScrollAreaChanged` イベントが発動します。
 
-<h4 id="その他の_DOM_の変更">その他の DOM の変更</h4>
+#### その他の DOM の変更
 
-<ul>
- <li><code>getBoxObjectFor()</code> メソッドが<strong>削除されました</strong>。このメソッドは非標準であり、さらに非標準なものを Web にさらすことになるからです。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571" title="FIXED: getBoxObjectFor leaking-onto-the-Web disaster">バグ 340571</a> を参照してください。これはまた、Gecko の検出にこのメソッドをコールする MooTools にも影響します。これは最新の MooTools で修正されたのでいずれ更新されるでしょう。</li>
- <li>DOM windows に新しい <a class="internal" href="/ja/docs/DOM/window.mozInnerScreenX" title="DOM/window.mozInnerScreenX"><code>mozInnerScreenX</code></a> と <a class="internal" href="/ja/docs/DOM/window.mozInnerScreenY" title="DOM/window.mozInnerScreenY"><code>mozInnerScreenY</code></a> プロパティが追加されました。これらはウィンドウ表示領域の左上コーナーを基準にしたスクリーンの座標を返します。</li>
- <li>chrome に対してのみアクセス可能な新しい <a class="internal" href="/ja/docs/DOM/window.mozScreenPixelsPerCSSPixel" title="DOM/window.mozScreenPixelsPerCSSPixel"><code>mozScreenPixelsPerCSSPixel</code></a> プロパティは CSS ピクセルとスクリーン・ピクセルの変換率を提供します。この値はコンテンツのズームレベルに応じて変化します。</li>
- <li>ページ URI の文書フラグメント識別子（"#" (ハッシュ) 文字の後の部分）が変更になったとき、新たな <code>hashchange</code> イベントがページに送られます。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=385434" title="FIXED: Add support for HTML5 onhashchange (event for named anchor changes)">バグ 385434</a>、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=504837" title="FIXED: hashchange event should not be restricted to firing only when the document's ready state is &quot;complete&quot;">バグ 504837</a>、および <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=504220" title="FIXED: document.body and window should contain onhashchange attribute">バグ 504220</a> を参照してください。</li>
- <li><code>document.readystate で</code> <code>complete </code>属性がサポートされました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=347174" title='FIXED: Implement document.readystate == "complete"'>バグ 347174</a>。</li>
- <li>HTML5 の <code><a class="internal" href="/ja/DOM/element.classList" title="element.classList">element.classList</a></code> がサポートされ、クラス属性の処理が容易になりました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=501257" title="FIXED: Implement HTML 5's HTMLElement.classList property">バグ 501257</a></li>
- <li>HTML 文書の <code>localName</code> と <code>namespaceURI</code> が XHTML 文書と同じように振舞うようになりました。<code>localName</code> は小文字で値を返し、HTML 要素の <code>namespaceURI</code> は <code>"<a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"</code> です。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress" title="">nsIDOMGeoPositionAddress</a></code> インタフェースによりジオロケーションの address がサポートされ、新しいフィールドが <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition" title="">nsIDOMGeoPosition</a></code> に追加されました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=503942" title="FIXED: Implement Geolocation Addresses">バグ 503942</a></li>
- <li><a href="/ja/docs/Web/API/Window/getComputedStyle" title="要素の算出スタイルを返します。算出スタイルは、要素に対して適用される全ての CSS プロパティにおいて最終的に算出された値です。"><code>window.getComputedStyle</code></a> 関数は <code>url()</code> 値の中をクォートして返すようになりました。</li>
-</ul>
+- `getBoxObjectFor()` メソッドが**削除されました**。このメソッドは非標準であり、さらに非標準なものを Web にさらすことになるからです。[バグ 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571 "FIXED: getBoxObjectFor leaking-onto-the-Web disaster") を参照してください。これはまた、Gecko の検出にこのメソッドをコールする MooTools にも影響します。これは最新の MooTools で修正されたのでいずれ更新されるでしょう。
+- DOM windows に新しい [`mozInnerScreenX`](/ja/docs/DOM/window.mozInnerScreenX "DOM/window.mozInnerScreenX") と [`mozInnerScreenY`](/ja/docs/DOM/window.mozInnerScreenY "DOM/window.mozInnerScreenY") プロパティが追加されました。これらはウィンドウ表示領域の左上コーナーを基準にしたスクリーンの座標を返します。
+- chrome に対してのみアクセス可能な新しい [`mozScreenPixelsPerCSSPixel`](/ja/docs/DOM/window.mozScreenPixelsPerCSSPixel "DOM/window.mozScreenPixelsPerCSSPixel") プロパティは CSS ピクセルとスクリーン・ピクセルの変換率を提供します。この値はコンテンツのズームレベルに応じて変化します。
+- ページ URI の文書フラグメント識別子（"#" (ハッシュ) 文字の後の部分）が変更になったとき、新たな `hashchange` イベントがページに送られます。[バグ 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434 "FIXED: Add support for HTML5 onhashchange (event for named anchor changes)")、[バグ 504837](https://bugzilla.mozilla.org/show_bug.cgi?id=504837 (FIXED: hashchange event should not be restricted to firing only when the document's ready state is "complete"))、および [バグ 504220](https://bugzilla.mozilla.org/show_bug.cgi?id=504220 "FIXED: document.body and window should contain onhashchange attribute") を参照してください。
+- `document.readystate で` `complete `属性がサポートされました。[バグ 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')。
+- HTML5 の [`element.classList`](/ja/DOM/element.classList "element.classList") がサポートされ、クラス属性の処理が容易になりました。[バグ 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257 "FIXED: Implement HTML 5's HTMLElement.classList property")
+- HTML 文書の `localName` と `namespaceURI` が XHTML 文書と同じように振舞うようになりました。`localName` は小文字で値を返し、HTML 要素の `namespaceURI` は `"http://www.w3.org/1999/xhtml"` です。
+- [`nsIDOMGeoPositionAddress`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) インタフェースによりジオロケーションの address がサポートされ、新しいフィールドが [`nsIDOMGeoPosition`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition) に追加されました。[バグ 503942](https://bugzilla.mozilla.org/show_bug.cgi?id=503942 "FIXED: Implement Geolocation Addresses")
+- [`window.getComputedStyle`](/ja/docs/Web/API/Window/getComputedStyle "要素の算出スタイルを返します。算出スタイルは、要素に対して適用される全ての CSS プロパティにおいて最終的に算出された値です。") 関数は `url()` 値の中をクォートして返すようになりました。
 
-<h3 id="XPath">XPath</h3>
+### XPath
 
-<dl>
- <dt>choose() XPath メソッドをサポート</dt>
- <dd><a href="/ja/docs/XPath/Functions/choose" title="XPath/Functions/choose"><code>choose()</code></a> メソッドが <a href="/ja/docs/XPath" title="XPath">XPath</a> でサポートされました。</dd>
-</dl>
+- choose() XPath メソッドをサポート
+  - : [`choose()`](/ja/docs/XPath/Functions/choose "XPath/Functions/choose") メソッドが [XPath](/ja/docs/XPath "XPath") でサポートされました。
 
-<h2 id="XUL_とアドオン開発者向け">XUL とアドオン開発者向け</h2>
+## XUL とアドオン開発者向け
 
-<p>あなたが拡張機能の開発者なら、あなたの拡張機能に影響するかもしれない変更点の役に立つ概要を記した <a class="internal" href="/ja/docs/Updating_extensions_for_Firefox_3.6" title="Updating extensions for Firefox 3.6">Updating extensions for Firefox 3.6</a> を読むことから始めてください。プラグインの開発者は <a class="internal" href="/ja/docs/Updating_plug-ins_for_Firefox_3.6" title="Updating plug-ins for Firefox 3.6">Updating plug-ins for Firefox 3.6</a> を読んでください。</p>
+あなたが拡張機能の開発者なら、あなたの拡張機能に影響するかもしれない変更点の役に立つ概要を記した [Updating extensions for Firefox 3.6](/ja/docs/Updating_extensions_for_Firefox_3.6 "Updating extensions for Firefox 3.6") を読むことから始めてください。プラグインの開発者は [Updating plug-ins for Firefox 3.6](/ja/docs/Updating_plug-ins_for_Firefox_3.6 "Updating plug-ins for Firefox 3.6") を読んでください。
 
-<h3 id="新機能">新機能</h3>
+### 新機能
 
-<dl>
- <dt><a href="/ja/docs/Detecting_device_orientation" title="Detecting device orientation">デバイスの傾きの検出</a></dt>
- <dd>コンテンツはデバイスが加速度センサー（accelerometer）をサポートしていれば <a href="/ja/docs/DOM/MozOrientation" title="DOM/MozOrientation"><code>MozOrientation</code></a> イベントによりその傾きを検出できるようになりました。Firefox 3.6 は Mac のノートブックで加速度センサーをサポートします。</dd>
- <dt><a href="/ja/docs/Monitoring_HTTP_activity" title="Monitoring HTTP activity">HTTP アクティビティのモニタリング</a></dt>
- <dd>HTTP トランザクションをモニタし、リアルタイムでリクエストとレスポンスを観察できます。</dd>
- <dt><a href="/ja/docs/Working_with_the_Windows_taskbar" title="Working with the Windows taskbar">Windows のタスクバーとの協調</a></dt>
- <dd>Windows 7 またはそれ以降のタスクバー内で、ウィンドウの設定の変更が可能になりました。<em>Firefox 3.6 ではこの機能はデフォルトで無効になっています。</em></dd>
-</dl>
+- [デバイスの傾きの検出](/ja/docs/Detecting_device_orientation "Detecting device orientation")
+  - : コンテンツはデバイスが加速度センサー（accelerometer）をサポートしていれば [`MozOrientation`](/ja/docs/DOM/MozOrientation "DOM/MozOrientation") イベントによりその傾きを検出できるようになりました。Firefox 3.6 は Mac のノートブックで加速度センサーをサポートします。
+- [HTTP アクティビティのモニタリング](/ja/docs/Monitoring_HTTP_activity "Monitoring HTTP activity")
+  - : HTTP トランザクションをモニタし、リアルタイムでリクエストとレスポンスを観察できます。
+- [Windows のタスクバーとの協調](/ja/docs/Working_with_the_Windows_taskbar "Working with the Windows taskbar")
+  - : Windows 7 またはそれ以降のタスクバー内で、ウィンドウの設定の変更が可能になりました。_Firefox 3.6 ではこの機能はデフォルトで無効になっています。_
 
-<h3 id="Places">Places</h3>
+### Places
 
-<ul>
- <li>Places のクエリーは結果にリダイレクトされたページが含んでいるかどうかを特定できるように <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions" title="">nsINavHistoryQueryOptions</a></code> インタフェースで <code>redirectsMode</code> を利用できるようになりました。</li>
- <li>新しい <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIFaviconService#expireAllFavicons()">nsIFaviconService.expireAllFavicons()</a></code> メソッドが <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFaviconService" title="">nsIFaviconService</a></code> インターフェースに追加されました。</li>
-</ul>
+- Places のクエリーは結果にリダイレクトされたページが含んでいるかどうかを特定できるように [`nsINavHistoryQueryOptions`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) インタフェースで `redirectsMode` を利用できるようになりました。
+- 新しい [`nsIFaviconService.expireAllFavicons()`](</ja/docs/XPCOM_Interface_Reference/nsIFaviconService#expireAllFavicons()>) メソッドが [`nsIFaviconService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFaviconService) インターフェースに追加されました。
 
-<h3 id="Storage">Storage</h3>
+### Storage
 
-<dl>
- <dt><a href="/ja/docs/Storage#Collation_(sorting)" title="Storage#Collation (sorting)">Storage API でデータのロケールを考慮した照合がサポートされました</a></dt>
- <dd>Gecko 1.9.2 にロケールを考慮した技術を用いて最適化された照合を提供する複数の新しい（ソート付き）照合メソッドが追加されました。</dd>
- <dt><a href="/ja/docs/mozIStorageStatementParams#Enumeration_of_properties" title="mozIStorageStatementParams#Enumeration of properties">ステートメントのプロパティが列挙可能になりました</a></dt>
- <dd>ステートメントのすべてのプロパティを列挙する <code><a class="internal" href="/ja/docs/JavaScript/Reference/Statements/for...in" title="Core JavaScript 1.5 Reference/Statements/for...in">for..in</a></code> enumeration が利用できるようになりました。</dd>
- <dt>mozIStorageStatement の getParameterIndex の動作が 3.5 と 3.6 の間で変更された</dt>
- <dd>詳細は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528166" title="mozIStorageStatement getParameterIndex causes NS_ERROR_ILLEGAL_VALUE">バグ 528166</a> を参照してください。</dd>
- <dt>複数のパラメータのセットを非同期バインドしてステートメントを実行</dt>
- <dd>詳細は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490085" title="FIXED: Add ability to bind multiple sets of parameters and execute asynchronously">バグ 490085</a> を参照してください。ドキュメント準備中です。</dd>
-</dl>
+- [Storage API でデータのロケールを考慮した照合がサポートされました](</ja/docs/Storage#Collation_(sorting)> "Storage#Collation (sorting)")
+  - : Gecko 1.9.2 にロケールを考慮した技術を用いて最適化された照合を提供する複数の新しい（ソート付き）照合メソッドが追加されました。
+- [ステートメントのプロパティが列挙可能になりました](/ja/docs/mozIStorageStatementParams#Enumeration_of_properties "mozIStorageStatementParams#Enumeration of properties")
+  - : ステートメントのすべてのプロパティを列挙する [`for..in`](/ja/docs/JavaScript/Reference/Statements/for...in "Core JavaScript 1.5 Reference/Statements/for...in") enumeration が利用できるようになりました。
+- mozIStorageStatement の getParameterIndex の動作が 3.5 と 3.6 の間で変更された
+  - : 詳細は [バグ 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166 "mozIStorageStatement getParameterIndex causes NS_ERROR_ILLEGAL_VALUE") を参照してください。
+- 複数のパラメータのセットを非同期バインドしてステートメントを実行
+  - : 詳細は [バグ 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085 "FIXED: Add ability to bind multiple sets of parameters and execute asynchronously") を参照してください。ドキュメント準備中です。
 
-<h3 id="Preferences">Preferences</h3>
+### Preferences
 
-<ul>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService" title="">nsIContentPrefService</a></code> インタフェースが新しく二つのメソッドを持ちました: <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#getPrefsByName()">nsIContentPrefService.getPrefsByName()</a></code> と <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#removePrefsByName()">nsIContentPrefService.removePrefsByName()</a></code>。</li>
-</ul>
+- [`nsIContentPrefService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService) インタフェースが新しく二つのメソッドを持ちました: [`nsIContentPrefService.getPrefsByName()`](</ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#getPrefsByName()>) と [`nsIContentPrefService.removePrefsByName()`](</ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#removePrefsByName()>)。
 
-<h3 id="テーマ">テーマ</h3>
+### テーマ
 
-<p>テーマに関する変更の詳細は <a class="internal" href="/ja/docs/Updating_themes_for_Firefox_3.6" title="Updating themes for Firefox 3.6">Updating themes for Firefox 3.6</a> を参照してください。</p>
+テーマに関する変更の詳細は [Updating themes for Firefox 3.6](/ja/docs/Updating_themes_for_Firefox_3.6 "Updating themes for Firefox 3.6") を参照してください。
 
-<dl>
- <dt><a href="/ja/docs/Themes/Lightweight_themes" title="Themes/Lightweight themes">軽量テーマ</a></dt>
- <dd>Firefox 3.6 は軽量テーマをサポートします。これは作成するのが簡単なテーマで、ブラウザウィンドウの上部（URL バーとボタンバー）と下部（ステータスバー）に単純に画像を適用します。これは既存の <a class="external" href="http://www.getpersonas.com/">Personas</a> テーマ構造の Firefox への統合です。</dd>
-</dl>
+- [軽量テーマ](/ja/docs/Themes/Lightweight_themes "Themes/Lightweight themes")
+  - : Firefox 3.6 は軽量テーマをサポートします。これは作成するのが簡単なテーマで、ブラウザウィンドウの上部（URL バーとボタンバー）と下部（ステータスバー）に単純に画像を適用します。これは既存の [Personas](http://www.getpersonas.com/) テーマ構造の Firefox への統合です。
 
-<h3 id="その他">その他</h3>
+### その他
 
-<ul>
- <li>Firefox は components ディレクトリ内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように<a href="/ja/docs/Migrating_raw_components_to_add-ons" title="Migrating raw components to add-ons">それらコンポーネントを XPI パッケージとして再パッケージする必要があります</a>。</li>
- <li>拡張において chrome を登録するために用いていた <code>contents.rdf は利用できなくなりました</code>。 <a class="internal" href="/ja/docs/Install_Manifests" title="Install Manifests"><code>chrome.manifest</code></a> ファイルを代わりに利用しなければなりません。 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=492008" title="FIXED: Drop support for contents.rdf chrome registrations">バグ 492008</a> を参照してください。</li>
- <li>メニューバーを自動的に隠すためのサポートが追加されました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=477256" title="FIXED: Implement menubar auto-hiding in toolkit">バグ 477256</a> を参照してください。</li>
- <li>オブジェクトに対して <code>container-live-role</code> 属性を持たせるためのサポートが追加されました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391829" title="FIXED: Add support for container-live-role to object attributes">バグ 391829</a> を参照してください。</li>
- <li><code>tabs-closebutton</code> バインディングが削除されました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=500971" title="FIXED: Remove obsolete tabs-closebutton binding">バグ 500971</a> を参照してください。</li>
- <li>発生したイベントに基づいて音を鳴らすための <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISound" title="">nsISound</a></code> に対するサポートが追加されました。 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=502799" title="FIXED: add new nsISound method for the event sounds">バグ 502799</a> を参照してください。</li>
- <li>Gecko 1.9 での新しいドラッグ＆ドロップ API をサポートするために <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code> のメソッドである <code><a href="/ja/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()">nsITreeView.canDrop()</a></code> および <code><a href="/ja/docs/XPCOM_Interface_Reference/nsITreeView#drop()">nsITreeView.drop()</a></code> の構文が変更になりました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=455590" title="FIXED: Allow new dnd api with tree views">バグ 455590</a> を参照してください。</li>
- <li>Windows のダイアログとウィザードのデフォルトボタンへのマウスカーソルの移動がサポートされました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=76053" title='FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'>バグ 76053</a> を参照してください。これはダイアログとウィザード要素によって自動的に行われます。ただし、XUL アプリケーションが <code>window</code> 要素のウィンドウを生成し、それがデフォルトボタンを持つ場合は、ウィンドウの onload イベントで <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()">nsIDOMChromeWindow.notifyDefaultButtonLoaded()</a></code> をコールする必要があります。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac" title="">nsILocalFileMac</a></code> インタフェースが二つのメソッドを持ちました: <code>setFileTypeAndCreatorFromMIMEType()</code> と <code>setFileTypeAndCreatorFromExtension()</code>。</li>
- <li>新しい <a class="internal" href="/ja/docs/JavaScript_code_modules/NetUtil.jsm" title="JavaScript code modules/NetUtil.jsm"><code>NetUtils.jsm</code></a> コードモジュールは、入力ストリームから出力ストリームに非同期にデータをコピーする簡単に利用できるメソッドを提供します。</li>
- <li>新しい <a class="internal" href="/ja/docs/JavaScript_code_modules/openLocationLastURL.jsm" title="JavaScript code modules/openLocationLastURL.jsm"><code>openLocationLastURL.jsm</code></a> コードモジュールは、プライベートブラウジングモードであるかを正しく判断して、"Open Location" ダイアログボックスの記憶された URL データの読み込みと変更を容易にします。</li>
- <li>Windows では、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen" title="">nsIScreen</a></code> インタフェースは、グラフィックスドライバーが32ビットをサポートしていても、ピクセルごとに 24 ビットカラーをレポートします。これは24ビットは実際に利用されているカラーピクセルの数をより正確に表現するためです。</li>
- <li>Window では <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code> XUL 要素の新しい <code id="a-autohide"><a href="/ja/docs/Mozilla/Tech/XUL/Attribute/autohide">autohide</a></code> アトリビュートを用いてメニューバーを隠すことができます。</li>
- <li><span id="m-loadOneTab"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab">loadOneTab</a></code></span> と <span id="m-addTab"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/addTab">addTab</a></code></span> メソッドは新しい <code>relatedToCurrent</code> パラメータをサポートし、加えて、多くのパラメータが省略可能であるために名前によるパラメータの指定ができます。</li>
- <li>インストール manifests で "hidden" プロパティはサポートされなくなりました。アドオンマネージャウィンドウ上でユーザが見ることのできないアドオンは不可能になりました。</li>
- <li>@mozilla.org/webshell;1 コンポーネントはもう存在しません。代わりに @mozilla.org/docshell;1 を使う必要があります。</li>
- <li>タイマーイベントをスケジュールするために、タイマーがコールするオブジェクトをインスタンシエイトすることなく update-timer カテゴリで登録できるようになりました。代わりに必要になったときにインスタンシエイトされます。詳細は <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()">nsIUpdateTimerManager.registerTimer()</a></code> を参照してください。</li>
- <li>The <a href="/ja/NPN_GetValue" title="en/NPN GetValue"><code>NPN_GetValue()</code></a> 関数はもはや変数値 <code>NPNVserviceManager</code>, <code>NPNVDOMelement</code>, <code>NPNVDOMWindow </code>を経由した XPCOM へのアクセスを提供しません。これは将来のバージョンの Gecko バージョンでプラグインを分離したプロセスで動作させるための作業の一部です。</li>
-</ul>
+- Firefox は components ディレクトリ内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように[それらコンポーネントを XPI パッケージとして再パッケージする必要があります](/ja/docs/Migrating_raw_components_to_add-ons "Migrating raw components to add-ons")。
+- 拡張において chrome を登録するために用いていた `contents.rdf は利用できなくなりました`。 [`chrome.manifest`](/ja/docs/Install_Manifests "Install Manifests") ファイルを代わりに利用しなければなりません。 [バグ 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008 "FIXED: Drop support for contents.rdf chrome registrations") を参照してください。
+- メニューバーを自動的に隠すためのサポートが追加されました。[バグ 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256 "FIXED: Implement menubar auto-hiding in toolkit") を参照してください。
+- オブジェクトに対して `container-live-role` 属性を持たせるためのサポートが追加されました。[バグ 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829 "FIXED: Add support for container-live-role to object attributes") を参照してください。
+- `tabs-closebutton` バインディングが削除されました。[バグ 500971](https://bugzilla.mozilla.org/show_bug.cgi?id=500971 "FIXED: Remove obsolete tabs-closebutton binding") を参照してください。
+- 発生したイベントに基づいて音を鳴らすための [`nsISound`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISound) に対するサポートが追加されました。 [バグ 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799 "FIXED: add new nsISound method for the event sounds") を参照してください。
+- Gecko 1.9 での新しいドラッグ＆ドロップ API をサポートするために [`nsITreeView`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) のメソッドである [`nsITreeView.canDrop()`](</ja/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) および [`nsITreeView.drop()`](</ja/docs/XPCOM_Interface_Reference/nsITreeView#drop()>) の構文が変更になりました。[バグ 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590 "FIXED: Allow new dnd api with tree views") を参照してください。
+- Windows のダイアログとウィザードのデフォルトボタンへのマウスカーソルの移動がサポートされました。[バグ 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"') を参照してください。これはダイアログとウィザード要素によって自動的に行われます。ただし、XUL アプリケーションが `window` 要素のウィンドウを生成し、それがデフォルトボタンを持つ場合は、ウィンドウの onload イベントで [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</ja/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) をコールする必要があります。
+- [`nsILocalFileMac`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac) インタフェースが二つのメソッドを持ちました: `setFileTypeAndCreatorFromMIMEType()` と `setFileTypeAndCreatorFromExtension()`。
+- 新しい [`NetUtils.jsm`](/ja/docs/JavaScript_code_modules/NetUtil.jsm "JavaScript code modules/NetUtil.jsm") コードモジュールは、入力ストリームから出力ストリームに非同期にデータをコピーする簡単に利用できるメソッドを提供します。
+- 新しい [`openLocationLastURL.jsm`](/ja/docs/JavaScript_code_modules/openLocationLastURL.jsm "JavaScript code modules/openLocationLastURL.jsm") コードモジュールは、プライベートブラウジングモードであるかを正しく判断して、"Open Location" ダイアログボックスの記憶された URL データの読み込みと変更を容易にします。
+- Windows では、[`nsIScreen`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen) インタフェースは、グラフィックスドライバーが 32 ビットをサポートしていても、ピクセルごとに 24 ビットカラーをレポートします。これは 24 ビットは実際に利用されているカラーピクセルの数をより正確に表現するためです。
+- Window では [`toolbar`](/ja/docs/Mozilla/Tech/XUL/toolbar "toolbar") XUL 要素の新しい [`autohide`](/ja/docs/Mozilla/Tech/XUL/Attribute/autohide) アトリビュートを用いてメニューバーを隠すことができます。
+- [`loadOneTab`](/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab) と [`addTab`](/ja/docs/Mozilla/Tech/XUL/Method/addTab) メソッドは新しい `relatedToCurrent` パラメータをサポートし、加えて、多くのパラメータが省略可能であるために名前によるパラメータの指定ができます。
+- インストール manifests で "hidden" プロパティはサポートされなくなりました。アドオンマネージャウィンドウ上でユーザが見ることのできないアドオンは不可能になりました。
+- @mozilla.org/webshell;1 コンポーネントはもう存在しません。代わりに @mozilla.org/docshell;1 を使う必要があります。
+- タイマーイベントをスケジュールするために、タイマーがコールするオブジェクトをインスタンシエイトすることなく update-timer カテゴリで登録できるようになりました。代わりに必要になったときにインスタンシエイトされます。詳細は [`nsIUpdateTimerManager.registerTimer()`](</ja/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) を参照してください。
+- The [`NPN_GetValue()`](/ja/NPN_GetValue "en/NPN GetValue") 関数はもはや変数値 `NPNVserviceManager`, `NPNVDOMelement`, `NPNVDOMWindow `を経由した XPCOM へのアクセスを提供しません。これは将来のバージョンの Gecko バージョンでプラグインを分離したプロセスで動作させるための作業の一部です。
 
-<h2 id="FirefoxGecko_開発者向け">Firefox/Gecko 開発者向け</h2>
+## Firefox/Gecko 開発者向け
 
-<p>いくつかの変更はあなたが Firefox そのものの内部で作業している場合にだけ興味を持つことでしょう。</p>
+いくつかの変更はあなたが Firefox そのものの内部で作業している場合にだけ興味を持つことでしょう。
 
-<h3 id="マージされたインタフェース">マージされたインタフェース</h3>
+### マージされたインタフェース
 
-<p>以下のインタフェースは統合されました:</p>
+以下のインタフェースは統合されました:
 
-<ul>
- <li><code>nsIPluginTagInfo2</code> は <code>nsIPluginTagInfo</code> にマージされました。</li>
- <li><code>nsIPluginInstanceInternal</code>, <code>nsIPPluginInstancePeer</code>, <code>nsIPluginInstancePeer1</code>, <code>nsIPluginInstancePeer2</code>, <code>nsIPluginInstancePeer3</code> はすべて <code>nsIPluginInstance</code> にマージされました。</li>
- <li><code>nsIWindowlessPlugInstPeer</code> は <code>nsIPluginInstance</code> にマージされました。</li>
- <li><code>nsIPluginManager</code> と <code>nsIPluginManager2</code> は <code>nsIPluginHost</code> にマージされました。</li>
-</ul>
+- `nsIPluginTagInfo2` は `nsIPluginTagInfo` にマージされました。
+- `nsIPluginInstanceInternal`, `nsIPPluginInstancePeer`, `nsIPluginInstancePeer1`, `nsIPluginInstancePeer2`, `nsIPluginInstancePeer3` はすべて `nsIPluginInstance` にマージされました。
+- `nsIWindowlessPlugInstPeer` は `nsIPluginInstance` にマージされました。
+- `nsIPluginManager` と `nsIPluginManager2` は `nsIPluginHost` にマージされました。
 
-<h3 id="削除されたインタフェース">削除されたインタフェース</h3>
+### 削除されたインタフェース
 
-<p>以下のインタフェースは利用されていない、実装されていないまたは旧式であるためにすべて削除されました:</p>
+以下のインタフェースは利用されていない、実装されていないまたは旧式であるためにすべて削除されました:
 
-<ul>
- <li><code>nsIFullScreen</code></li>
- <li><code>nsIDOMSVGListener</code></li>
- <li><code>nsIDOMSVGZoomListener</code></li>
- <li><code>nsIInternetConfigService</code></li>
- <li><code>nsIDKey</code></li>
- <li><code>nsIEventHandler</code></li>
- <li><code>nsIJRILiveConnectPIPeer</code></li>
- <li><code>nsIJRILiveConnectPlugin</code></li>
- <li><code>nsIScriptablePlugin</code></li>
- <li><code>nsIClassicPluginFactory</code></li>
- <li><code>nsIFileUtilities</code></li>
-</ul>
+- `nsIFullScreen`
+- `nsIDOMSVGListener`
+- `nsIDOMSVGZoomListener`
+- `nsIInternetConfigService`
+- `nsIDKey`
+- `nsIEventHandler`
+- `nsIJRILiveConnectPIPeer`
+- `nsIJRILiveConnectPlugin`
+- `nsIScriptablePlugin`
+- `nsIClassicPluginFactory`
+- `nsIFileUtilities`
 
-<h3 id="移動されたインタフェース">移動されたインタフェース</h3>
+### 移動されたインタフェース
 
-<p>以下のインタフェースは以前の IDL ファイルから新しい場所に移動されました:</p>
+以下のインタフェースは以前の IDL ファイルから新しい場所に移動されました:
 
-<ul>
- <li><code>nsIDOMNSCSS2Properties</code> は専用の IDL ファイル (<code>dom/interfaces/css/nsIDOMCSS2Properties.idl</code>) に移動されました。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUpdateTimerManager" title="">nsIUpdateTimerManager</a></code> はそれ自身の IDL ファイル内に配置されます。</li>
-</ul>
+- `nsIDOMNSCSS2Properties` は専用の IDL ファイル (`dom/interfaces/css/nsIDOMCSS2Properties.idl`) に移動されました。
+- [`nsIUpdateTimerManager`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUpdateTimerManager) はそれ自身の IDL ファイル内に配置されます。
 
-<p>多くのインタフェースが移動されました。完全なリストは <a href="/ja/docs/Interfaces_moved_in_Firefox_3.6" title="Interfaces moved in Firefox 3.6">Interfaces moved in Firefox 3.6</a> を参照してください。</p>
+多くのインタフェースが移動されました。完全なリストは [Interfaces moved in Firefox 3.6](/ja/docs/Interfaces_moved_in_Firefox_3.6 "Interfaces moved in Firefox 3.6") を参照してください。
 
-<h3 id="その他のインタフェースの変更">その他のインタフェースの変更</h3>
+### その他のインタフェースの変更
 
-<p>以下のようなさまざまな変更が行われました:</p>
+以下のようなさまざまな変更が行われました:
 
-<ul>
- <li><code>nsIPlugin</code> インタフェースは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory" title="">nsIFactory</a></code> ではなく <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code> から継承します。</li>
- <li><code>nsIPluginHost</code> インタフェースは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory" title="">nsIFactory</a></code> ではなく <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code> から継承しますす。</li>
- <li><code>nsIFrame</code> インタフェースは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code> ではなく <code>nsQueryFrame</code> から継承します。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceContext" title="">nsIDeviceContext</a></code> メソッド <code>getPaletteInfo()</code> は今まで実装されてことがないので削除されました。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptContext" title="">nsIScriptContext</a></code> メソッド <code>reportPendingException()</code> はもう利用されていないので削除されました。</li>
-</ul>
+- `nsIPlugin` インタフェースは [`nsIFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory) ではなく [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) から継承します。
+- `nsIPluginHost` インタフェースは [`nsIFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory) ではなく [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) から継承しますす。
+- `nsIFrame` インタフェースは [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) ではなく `nsQueryFrame` から継承します。
+- [`nsIDeviceContext`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceContext) メソッド `getPaletteInfo()` は今まで実装されてことがないので削除されました。
+- [`nsIScriptContext`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptContext) メソッド `reportPendingException()` はもう利用されていないので削除されました。
 
-<h3 id="アクセシビリティコードの変更">アクセシビリティコードの変更</h3>
+### アクセシビリティコードの変更
 
-<ul>
- <li>メインドキュメントの子どもが変更された時と同様に、frame と iframe の子どもが変更されたときに <span style="font-family: monospace;">EVENT</span><code>_REORDER</code> <a href="/ja/docs/XPCOM_Interface_Reference/nsIAccessibleEvent" title="XPCOM Interface Reference/nsIAccessibleEvent">アクセシビリティイベント</a> が送信されます。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=420845" title="FIXED: Fire event_reorder on any embedded frames/iframes whos document has just loaded.">バグ 420845</a> を参照してください。</li>
- <li><code><a href="/ja/docs/XPCOM_Interface_Reference/nsIAccessibleTable#selectRow()">nsIAccessibleTable.selectRow()</a></code> は指定された列が選択される前にどんなカレントの選択であっても正しく削除します。</li>
-</ul>
+- メインドキュメントの子どもが変更された時と同様に、frame と iframe の子どもが変更されたときに EVENT`_REORDER` [アクセシビリティイベント](/ja/docs/XPCOM_Interface_Reference/nsIAccessibleEvent "XPCOM Interface Reference/nsIAccessibleEvent") が送信されます。[バグ 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845 "FIXED: Fire event_reorder on any embedded frames/iframes whos document has just loaded.") を参照してください。
+- [`nsIAccessibleTable.selectRow()`](</ja/docs/XPCOM_Interface_Reference/nsIAccessibleTable#selectRow()>) は指定された列が選択される前にどんなカレントの選択であっても正しく削除します。
 
-<h2 id="See_also" name="See_also">参照</h2>
+## 参照
 
-<div><div class="multiColumnList">
-<ul>
-<li><a href="/ja/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/2">Firefox 2 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5 for developers</a></li></ul>
-</div></div>
+- [Firefox 3.5 for developers](/ja/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 for developers](/ja/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 for developers](/ja/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 for developers](/ja/docs/Mozilla/Firefox/Releases/1.5)
