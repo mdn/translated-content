@@ -4979,6 +4979,13 @@
       "it4u"
     ]
   },
+  "Web/CSS/gradient/radial-gradient": {
+    "modified": "2020-11-18T14:43:15.827Z",
+    "contributors": [
+      "chrisdavidmills",
+      "linzging"
+    ]
+  },
   "Web/CSS/grid-row": {
     "modified": "2020-10-15T21:53:10.432Z",
     "contributors": [
@@ -5030,13 +5037,6 @@
     "modified": "2019-03-23T22:27:58.659Z",
     "contributors": [
       "gn00979905"
-    ]
-  },
-  "Web/CSS/radial-gradient": {
-    "modified": "2020-11-18T14:43:15.827Z",
-    "contributors": [
-      "chrisdavidmills",
-      "linzging"
     ]
   },
   "Web/CSS/ruby-position": {
