@@ -5,85 +5,61 @@ tags:
   - MathML
 translation_of: Web/MathML/Element/msubsup
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">MathML <code>&lt;msubsup&gt;</code>要素は、下付き文字と上付き文字の両方を一緒に式に付けるために使用されます。<br>
- 次の構文を使用します: <code>&lt;msubsup&gt; <em>ベース 下付き文字 上付き文字</em> &lt;/msubsup&gt;</code></p>
+MathML `<msubsup>`要素は、下付き文字と上付き文字の両方を一緒に式に付けるために使用されます。
+次の構文を使用します: `<msubsup> ベース 下付き文字 上付き文字 </msubsup>`
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd><a href="/ja/docs/CSS">スタイルシート</a>で使用するために用意されます。</dd>
- <dt id="attr-href">href</dt>
- <dd>指定されたURIへのハイパーリンクを設定するために使用されます。</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>背景色。<code>#rgb</code>、<code>#rrggbb</code>、および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTMLの色名</a>を使用できます。</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>テキスト色。<code>#rgb</code>、<code>#rrggbb</code>、および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTMLの色名</a>を使用できます。</dd>
- <dt id="attr-subscriptshift">subscriptshift</dt>
- <dd><a href="/ja/docs/MathML/Attributes/Values#Lengths">長さの値</a>として、下付き文字を式のベースラインより下にシフトするための最小スペース。</dd>
- <dt id="attr-superscriptshift">superscriptshift</dt>
- <dd><a href="/ja/docs/MathML/Attributes/Values#Lengths">長さの値</a>として、上付き文字を式のベースラインより上にシフトするための最小スペース。</dd>
-</dl>
+- class, id, style
+  - : [スタイルシート](/ja/docs/CSS)で使用するために用意されます。
+- href
+  - : 指定された URI へのハイパーリンクを設定するために使用されます。
+- mathbackground
+  - : 背景色。`#rgb`、`#rrggbb`、および[HTML の色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
+- mathcolor
+  - : テキスト色。`#rgb`、`#rrggbb`、および[HTML の色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
+- subscriptshift
+  - : [長さの値](/ja/docs/MathML/Attributes/Values#Lengths)として、下付き文字を式のベースラインより下にシフトするための最小スペース。
+- superscriptshift
+  - : [長さの値](/ja/docs/MathML/Attributes/Values#Lengths)として、上付き文字を式のベースラインより上にシフトするための最小スペース。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>サンプルレンダリング: <img alt="x1" src="/files/3204/msubsup.png" style="margin-left: 10px; vertical-align: middle;"></p>
+サンプルレンダリング: ![x1](/files/3204/msubsup.png)
 
-<p>ブラウザーでのレンダリング: <math displaystyle="true"> <msubsup> <mo> ∫</mo> <mn> 0 </mn> <mn> 1 </mn> </msubsup> </math></p>
+ブラウザーでのレンダリング: <math displaystyle="true"><msubsup><mo>∫</mo> <mn>0 </mn><mn>1</mn></msubsup></math>
 
-<pre class="brush: html">&lt;math displaystyle="true"&gt;
+```html
+<math displaystyle="true">
 
-  &lt;msubsup&gt;
-    &lt;mo&gt; &amp;#x222B;&lt;!--Integral --&gt; &lt;/mo&gt;
-    &lt;mn&gt; 0 &lt;/mn&gt;
-    &lt;mn&gt; 1 &lt;/mn&gt;
-  &lt;/msubsup&gt;
+  <msubsup>
+    <mo> &#x222B;<!--Integral --> </mo>
+    <mn> 0 </mn>
+    <mn> 1 </mn>
+  </msubsup>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('MathML3', 'chapter3.html#presm.msubsup', 'msubsup') }}</td>
-   <td>{{ Spec2('MathML3') }}</td>
-   <td>現在の仕様</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('MathML2', 'chapter3.html#presm.msubsup', 'msubsup') }}</td>
-   <td>{{ Spec2('MathML2') }}</td>
-   <td>初期の仕様</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                     | 状態                         | コメント   |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{ SpecName('MathML3', 'chapter3.html#presm.msubsup', 'msubsup') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
+| {{ SpecName('MathML2', 'chapter3.html#presm.msubsup', 'msubsup') }} | {{ Spec2('MathML2') }} | 初期の仕様 |
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザー互換性
 
+{{Compat("mathml.elements.msubsup")}}
 
+## Gecko 固有のノート
 
-<p>{{Compat("mathml.elements.msubsup")}}</p>
+- Gecko 26.0 {{geckoRelease("26")}}から、子要素として `<none />` を使用することはできません。 レンダリングは {{MathMLElement("msup")}} と {{MathMLElement("mmultiscripts")}} の同等の構成と一貫して行われ、`subscriptshift`と`superscriptshift`属性の誤った適用によるバグが修正されました（詳細については {{bug("827713")}} を参照）。
 
-<h2 id="Gecko固有のノート">Gecko固有のノート</h2>
+## 関連項目
 
-<ul>
- <li>Gecko 26.0 {{geckoRelease("26")}}から、子要素として <code>&lt;none /&gt;</code> を使用することはできません。 レンダリングは {{MathMLElement("msup")}} と {{MathMLElement("mmultiscripts")}} の同等の構成と一貫して行われ、<code>subscriptshift</code>と<code>superscriptshift</code>属性の誤った適用によるバグが修正されました（詳細については {{bug("827713")}} を参照）。</li>
-</ul>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>{{ MathMLElement("msub") }} (上付き文字)</li>
- <li>{{ MathMLElement("msup") }} (下付き文字)</li>
- <li>{{ MathMLElement("mmultiscripts") }} (プリスケープとテンソルインデックス)</li>
-</ul>
+- {{ MathMLElement("msub") }} (上付き文字)
+- {{ MathMLElement("msup") }} (下付き文字)
+- {{ MathMLElement("mmultiscripts") }} (プリスケープとテンソルインデックス)
