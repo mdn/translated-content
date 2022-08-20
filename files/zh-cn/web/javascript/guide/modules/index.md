@@ -14,17 +14,9 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 好消息是，最新的浏览器开始原生支持模块功能了，这是本文要重点讲述的。这会是一个好事情 —- 浏览器能够最优化加载模块，使它比使用库更有效率：使用库通常需要做额外的客户端处理。
 
-## 浏览器支持
+## 浏览器兼容性
 
-使用 JavaScript 模块依赖于 `import` 和 `export`，浏览器兼容性如下（绿色方框中的数字对应相应平台上支持该功能的发布版本）：
-
-### import
-
-{{Compat("javascript.statements.import")}}
-
-### export
-
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## 介绍一个例子
 

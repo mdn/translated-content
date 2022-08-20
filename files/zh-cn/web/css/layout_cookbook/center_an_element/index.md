@@ -26,15 +26,7 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 ## 浏览器兼容性
 
-各种布局方法具有不同的浏览器支持。有关所使用属性的基本支持的详细信息，请参见下表
-
-#### align-items
-
-{{Compat("css.properties.align-items")}}
-
-#### justify-content
-
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## MDN 上相关的资源
 

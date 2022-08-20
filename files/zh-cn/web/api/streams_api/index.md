@@ -86,21 +86,15 @@ Examples from other developers:
 
 - [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-### ReadableStream
+{{Compat}}
 
-{{Compat("api.ReadableStream")}}
-
-### WritableStream
-
-{{Compat("api.WritableStream")}}
-
-## See also
+## 参见
 
 - [Streams API concepts](/zh-CN/docs/Web/API/Streams_API/Concepts)
 - [Using readable streams](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

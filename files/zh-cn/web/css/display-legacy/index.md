@@ -73,23 +73,9 @@ Not a flex item
 
 ## 浏览器兼容性
 
-### 支持 `inline-block`
+{{Compat}}
 
-{{Compat("css.properties.display.inline-block", 10)}}
-
-### 支持 `inline-table`
-
-{{Compat("css.properties.display.inline-table", 10)}}
-
-### 支持 `inline-flex`
-
-{{Compat("css.properties.display.inline-flex", 10)}}
-
-### 支持 `inline-grid`
-
-{{Compat("css.properties.display.inline-grid", 10)}}
-
-## 相关链接
+## 参见
 
 - {{CSSxRef("display")}}
 
