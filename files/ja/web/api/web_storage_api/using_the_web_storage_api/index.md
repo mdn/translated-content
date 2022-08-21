@@ -10,48 +10,47 @@ tags:
   - sessionStorage
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
-<div>{{DefaultAPISidebar("Web Storage API")}}</div>
+{{DefaultAPISidebar("Web Storage API")}}
 
-<p><span class="seoSummary">Web Storage API は、ブラウザーがキーと値のペアを安全に保存できる仕組みを提供します。</span></p>
+Web Storage API は、ブラウザーがキーと値のペアを安全に保存できる仕組みを提供します。
 
-<p>この記事は、この技術を利用する方法のチュートリアルを提供します。</p>
+この記事は、この技術を利用する方法のチュートリアルを提供します。
 
-<h2 id="Basic_concepts" name="Basic_concepts">基本概念</h2>
+## 基本概念
 
-<p>Storage オブジェクトはシンプルなキーと値の組み合わせを保存しており、オブジェクトに似ていますが、これらは何度ページを読み込んでも存在し続けます。キーは常に文字列です (なお、オブジェクトと同様、整数のキーは自動的に文字列に変換されます)。これらの値にアクセスするにはオブジェクトと同様に、または {{domxref("Storage.getItem()")}} と {{domxref("Storage.setItem()")}} メソッドを使用して行います。以下の 3 行はすべて、(同じ) colorSetting という項目を設定します。</p>
+Storage オブジェクトはシンプルなキーと値の組み合わせを保存しており、オブジェクトに似ていますが、これらは何度ページを読み込んでも存在し続けます。キーは常に文字列です (なお、オブジェクトと同様、整数のキーは自動的に文字列に変換されます)。これらの値にアクセスするにはオブジェクトと同様に、または {{domxref("Storage.getItem()")}} と {{domxref("Storage.setItem()")}} メソッドを使用して行います。以下の 3 行はすべて、(同じ) colorSetting という項目を設定します。
 
-<pre class="brush: js notranslate" style="white-space: pre;">localStorage.colorSetting = '#a4509b';
+```js
+localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');</pre>
+localStorage.setItem('colorSetting', '#a4509b');
+```
 
-<div class="note">
-<p><strong>注</strong>: Web Storage API (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) の使用が推奨されており、これは単純なオブジェクトをキーバリューストアとして使うという<a href="http://www.2ality.com/2012/01/objects-as-maps.html">落とし穴</a>を防ぐためです。</p>
-</div>
+> **Note:** **注**: Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されており、これは単純なオブジェクトをキーバリューストアとして使うという[落とし穴](http://www.2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
 
-<p>Web Storage には、以下の 2 種類の仕組みがあります。</p>
+Web Storage には、以下の 2 種類の仕組みがあります。
 
-<ul>
- <li>セッションストレージ (<strong><code>sessionStorage</code></strong>) は、各オリジン毎に分割された保存領域を管理し、これはページセッションの間 (ブラウザーを開いている間、ページの再読み込みや復元を含む) に使用可能です。</li>
- <li>ローカルストレージ (<strong><code>localStorage</code></strong>) も同様ですが、こちらはブラウザーを閉じたり再び開いたりしても持続します。</li>
-</ul>
+- セッションストレージ (**`sessionStorage`**) は、各オリジン毎に分割された保存領域を管理し、これはページセッションの間 (ブラウザーを開いている間、ページの再読み込みや復元を含む) に使用可能です。
+- ローカルストレージ (**`localStorage`**) も同様ですが、こちらはブラウザーを閉じたり再び開いたりしても持続します。
 
-<p>これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、対応しているブラウザーは <code>Window</code> オブジェクトが <code>WindowLocalStorage</code> および <code>WindowSessionStorage</code> オブジェクトを実装しており、これらに <code>localStorage</code> および <code>sessionStorage</code> プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。同じ生成元に対して <code>sessionStorage</code> と <code>localStorage</code> は、別の Storage オブジェクトを使用します。これらは別々に制御されて機能します。</p>
+これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、対応しているブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。同じ生成元に対して `sessionStorage` と `localStorage` は、別の Storage オブジェクトを使用します。これらは別々に制御されて機能します。
 
-<p>よって例えば、始めに文書上で <code>localStorage</code> を呼び出すと {{domxref("Storage")}} が返ります。その後に文書上で <code>sessionStorage</code> を呼び出すと、別の {{domxref("Storage")}} オブジェクトが返ります。どちらも同じ方法で操作することができますが、操作は個別に行われます。</p>
+よって例えば、始めに文書上で `localStorage` を呼び出すと {{domxref("Storage")}} が返ります。その後に文書上で `sessionStorage` を呼び出すと、別の {{domxref("Storage")}} オブジェクトが返ります。どちらも同じ方法で操作することができますが、操作は個別に行われます。
 
-<h2 id="Feature-detecting_localStorage" name="Feature-detecting_localStorage">localStorage の機能検出</h2>
+## localStorage の機能検出
 
-<p>ローカルストレージを利用できるようにするには、まず対応済みであり、現在のブラウザーセッションで利用可能であるかを確かめるべきです。</p>
+ローカルストレージを利用できるようにするには、まず対応済みであり、現在のブラウザーセッションで利用可能であるかを確かめるべきです。
 
-<h3 id="Testing_for_availability" name="Testing_for_availability">利用可能かどうかのを検証</h3>
+### 利用可能かどうかのを検証
 
-<p>ローカルストレージに対応しているブラウザーは、 window オブジェクトに localStorage という名称のプロパティを持っています。しかしさまざまな理由で、プロパティが存在すると主張するだけで例外が発生する可能性があります。ローカルストレージが存在していたとしても、さまざまなブラウザーがローカルストレージを無効化する設定を設けていますので、ローカルストレージが利用できる保証はありません。よってブラウザーがローカルストレージに<em>対応していても</em>、ページ上のスクリプトでは<em>利用できる状態ではない</em>場合があります。</p>
+ローカルストレージに対応しているブラウザーは、 window オブジェクトに localStorage という名称のプロパティを持っています。しかしさまざまな理由で、プロパティが存在すると主張するだけで例外が発生する可能性があります。ローカルストレージが存在していたとしても、さまざまなブラウザーがローカルストレージを無効化する設定を設けていますので、ローカルストレージが利用できる保証はありません。よってブラウザーがローカルストレージに*対応していても*、ページ上のスクリプトでは*利用できる状態ではない*場合があります。
 
-<p>例えば Safari はプライベートブラウジングモードでは、容量が 0 で空のローカルストレージを提供しますので、事実上使用できません。逆に、正規の QuotaExceededError が発生した場合、これはストレージ領域を使い切ったことを意味しますが、ストレージは実際に<em>利用可能</em>です。機能検出時には、これらのシナリオを考慮に入れるべきです。</p>
+例えば Safari はプライベートブラウジングモードでは、容量が 0 で空のローカルストレージを提供しますので、事実上使用できません。逆に、正規の QuotaExceededError が発生した場合、これはストレージ領域を使い切ったことを意味しますが、ストレージは実際に*利用可能*です。機能検出時には、これらのシナリオを考慮に入れるべきです。
 
-<p>ローカルストレージに対応済みかつ使用可能であるかどうかを検出する関数を、以下に示します。</p>
+ローカルストレージに対応済みかつ使用可能であるかどうかを検出する関数を、以下に示します。
 
-<pre class="brush: js notranslate">function storageAvailable(type) {
+```js
+function storageAvailable(type) {
     var storage;
     try {
         storage = window[type];
@@ -61,7 +60,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
         return true;
     }
     catch(e) {
-        return e instanceof DOMException &amp;&amp; (
+        return e instanceof DOMException && (
             // everything except Firefox
             e.code === 22 ||
             // Firefox
@@ -70,58 +69,62 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
             // everything except Firefox
             e.name === 'QuotaExceededError' ||
             // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &amp;&amp;
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
             // acknowledge QuotaExceededError only if there's something already stored
-            (storage &amp;&amp; storage.length !== 0);
+            (storage && storage.length !== 0);
     }
-}</pre>
+}
+```
 
-<p>また、この関数の使い方は以下のとおりです。</p>
+また、この関数の使い方は以下のとおりです。
 
-<pre class="brush: js notranslate">if (storageAvailable('localStorage')) {
+```js
+if (storageAvailable('localStorage')) {
   // やったあ! ローカルストレージをちゃんと利用できます
 }
 else {
   // 残念、ローカルストレージは利用できません
-}</pre>
+}
+```
 
-<p><code>storageAvailable('sessionStorage')</code> を呼び出すと、代わりにセッションストレージを確認できます。</p>
+`storageAvailable('sessionStorage')` を呼び出すと、代わりにセッションストレージを確認できます。
 
-<p><a href="https://gist.github.com/paulirish/5558557">ローカルストレージの機能を検出する方法の略歴</a>をご覧ください。</p>
+[ローカルストレージの機能を検出する方法の略歴](https://gist.github.com/paulirish/5558557)をご覧ください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>ウェブストレージの典型的な使用法を示すため、想像力豊かに <strong>Web Storage Demo</strong> と名づけたシンプルな例を作成しました。<a href="https://mdn.github.io/dom-examples/web-storage/">ランディングページ</a> には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります:</p>
+ウェブストレージの典型的な使用法を示すため、想像力豊かに **Web Storage Demo** と名づけたシンプルな例を作成しました。[ランディングページ](https://mdn.github.io/dom-examples/web-storage/) には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9685/landing.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;">別の選択肢を選ぶと、即座にページが更新されます。さらに、選択内容を <code>localStorage</code> に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。</p>
+![](https://mdn.mozillademos.org/files/9685/landing.png)別の選択肢を選ぶと、即座にページが更新されます。さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
 
-<p>また、 <a href="https://mdn.github.io/dom-examples/web-storage/event.html">event output ページ</a>も提供します。このページを別のタブで開くと、ランディングページで選択肢を変更したときに {{domxref("StorageEvent")}} が発生するのに応じて、更新されたストレージの情報が出力されるのを確認できます。</p>
+また、 [event output ページ](https://mdn.github.io/dom-examples/web-storage/event.html)も提供します。このページを別のタブで開くと、ランディングページで選択肢を変更したときに {{domxref("StorageEvent")}} が発生するのに応じて、更新されたストレージの情報が出力されるのを確認できます。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9687/event-output.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;"></p>
+![](https://mdn.mozillademos.org/files/9687/event-output.png)
 
-<div class="note">
-<p><strong>メモ</strong>: 上記のリンクから実際のページを参照することができます。また、<a href="https://github.com/mdn/dom-examples/tree/master/web-storage">ソースコードも確認できます</a>。</p>
-</div>
+> **Note:** **メモ**: 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
 
-<h3 id="Testing_whether_your_storage_has_been_populated" name="Testing_whether_your_storage_has_been_populated">ストレージが存在しているかを確認する</h3>
+### ストレージが存在しているかを確認する
 
-<p>始めに <a href="https://github.com/mdn/dom-examples/blob/master/web-storage/main.js">main.js</a> で、ストレージオブジェクトがすでに存在しているか (すなわち、過去にページへアクセスしていたか) を確認します。</p>
+始めに [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js) で、ストレージオブジェクトがすでに存在しているか (すなわち、過去にページへアクセスしていたか) を確認します。
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
-}</pre>
+}
+```
 
-<p>{{domxref("Storage.getItem()")}} メソッドは、ストレージからデータアイテムを取得するために使用します。この例では、 <code>bgcolor</code> アイテムが存在するかを確認しています。アイテムが存在しなければ、既存のカスタマイズ値をストレージへ追加するために <code>populateStorage()</code> を実行します。すでに値が存在する場合は、ページのスタイルを保存済みの値で更新するために <code>setStyles()</code> を実行します。</p>
+{{domxref("Storage.getItem()")}} メソッドは、ストレージからデータアイテムを取得するために使用します。この例では、 `bgcolor` アイテムが存在するかを確認しています。アイテムが存在しなければ、既存のカスタマイズ値をストレージへ追加するために `populateStorage()` を実行します。すでに値が存在する場合は、ページのスタイルを保存済みの値で更新するために `setStyles()` を実行します。
 
-<p><strong>メモ</strong>: {{domxref("Storage.length")}} を使用して、ストレージオブジェクトが空であるかを確認することもできます。</p>
+**メモ**: {{domxref("Storage.length")}} を使用して、ストレージオブジェクトが空であるかを確認することもできます。
 
-<h3 id="Getting_values_from_storage" name="Getting_values_from_storage">ストレージから値を取得する</h3>
+### ストレージから値を取得する
 
-<p>前述のとおり {{domxref("Storage.getItem()")}} を使用して、ストレージから値を取り出すことができます。これはデータアイテムのキーが引数であり、またデータの値を返します。例えば以下のようにします。</p>
+前述のとおり {{domxref("Storage.getItem()")}} を使用して、ストレージから値を取り出すことができます。これはデータアイテムのキーが引数であり、またデータの値を返します。例えば以下のようにします。
 
-<pre class="brush: js notranslate">function setStyles() {
+```js
+function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -133,92 +136,78 @@ else {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<p>この例で、最初の 3 行はローカルストレージから値を取得しています。次に、フォーム要素で表示する値をこれらの値に更新して、ページを再読み込みしたときに同期するようにします。最後に、ページのスタイルや装飾画像を更新して、再読み込み時にカスタマイズ設定を復元します。</p>
+この例で、最初の 3 行はローカルストレージから値を取得しています。次に、フォーム要素で表示する値をこれらの値に更新して、ページを再読み込みしたときに同期するようにします。最後に、ページのスタイルや装飾画像を更新して、再読み込み時にカスタマイズ設定を復元します。
 
-<h3 id="Setting_values_in_storage" name="Setting_values_in_storage">ストレージに値を設定する</h3>
+### ストレージに値を設定する
 
-<p>{{domxref("Storage.setItem()")}} は新たなデータアイテムを作成するため、および (データアイテムがすでに存在していれば) 既存の値を更新するために使用します。これは引数が 2 つあり、ひとつは作成または変更するデータアイテムのキー、もうひとつはデータアイテムに保存する値です。</p>
+{{domxref("Storage.setItem()")}} は新たなデータアイテムを作成するため、および (データアイテムがすでに存在していれば) 既存の値を更新するために使用します。これは引数が 2 つあり、ひとつは作成または変更するデータアイテムのキー、もうひとつはデータアイテムに保存する値です。
 
-<pre class="brush: js notranslate">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
   localStorage.setItem('font', document.getElementById('font').value);
   localStorage.setItem('image', document.getElementById('image').value);
 
   setStyles();
-}</pre>
+}
+```
 
-<p><code>populateStorage()</code> 関数は、背景色、フォント、画像のパスの 3 つのアイテムをローカルストレージに保存します。そして、ページのスタイルなどを更新するために <code>setStyles()</code> 関数を実行します。</p>
+`populateStorage()` 関数は、背景色、フォント、画像のパスの 3 つのアイテムをローカルストレージに保存します。そして、ページのスタイルなどを更新するために `setStyles()` 関数を実行します。
 
-<p>また、それぞれのフォーム要素に <code>onchange</code> ハンドラーを含めておき、フォームの値が変更されるたびにデータやスタイルを更新します。</p>
+また、それぞれのフォーム要素に `onchange` ハンドラーを含めておき、フォームの値が変更されるたびにデータやスタイルを更新します。
 
-<pre class="brush: js notranslate">bgcolorForm.onchange = populateStorage;
+```js
+bgcolorForm.onchange = populateStorage;
 fontForm.onchange = populateStorage;
-imageForm.onchange = populateStorage;</pre>
+imageForm.onchange = populateStorage;
+```
 
-<h3 id="Responding_to_storage_changes_with_the_StorageEvent" name="Responding_to_storage_changes_with_the_StorageEvent">StorageEvent を使用してストレージの変更に反応する</h3>
+### StorageEvent を使用してストレージの変更に反応する
 
-<p>{{domxref("StorageEvent")}} は、{{domxref("Storage")}} オブジェクトが変更されるたびに発生します (sessionStorage の変更では発生しません) 。これは、変更を行ったページ上では効果がないでしょう。実際は、ストレージを使用するドメイン上の別のページで、ストレージの変更に同期するための手段です。別のドメイン上のページは、前述のストレージオブジェクトにアクセスできません。</p>
+{{domxref("StorageEvent")}} は、{{domxref("Storage")}} オブジェクトが変更されるたびに発生します (sessionStorage の変更では発生しません) 。これは、変更を行ったページ上では効果がないでしょう。実際は、ストレージを使用するドメイン上の別のページで、ストレージの変更に同期するための手段です。別のドメイン上のページは、前述のストレージオブジェクトにアクセスできません。
 
-<p>イベントページ (<a href="https://github.com/mdn/dom-examples/blob/master/web-storage/event.js">events.js</a> をご覧ください) には、以下の JavaScript しかありません。</p>
+イベントページ ([events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js) をご覧ください) には、以下の JavaScript しかありません。
 
-<pre class="brush: js notranslate">window.addEventListener('storage', function(e) {
+```js
+window.addEventListener('storage', function(e) {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;
   document.querySelector('.my-url').textContent = e.url;
   document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
-});</pre>
+});
+```
 
-<p>ここでは <code>window</code> オブジェクトに、現在のオリジンに関連付けられた {{domxref("Storage")}} オブジェクトが変更されたときに発生するイベントリスナを追加しています。上記の例でわかるとおり、このイベントに関連付けられたイベントオブジェクトは、変更されたデータのキー、変更前の古い値、変更後の新しい値、ストレージを変更した文書の URL、ストレージオブジェクト自体 (その中身を見えるように文字化しています) といった、役に立つ情報を含んでいるいくつものプロパティを持っています。</p>
+ここでは `window` オブジェクトに、現在のオリジンに関連付けられた {{domxref("Storage")}} オブジェクトが変更されたときに発生するイベントリスナを追加しています。上記の例でわかるとおり、このイベントに関連付けられたイベントオブジェクトは、変更されたデータのキー、変更前の古い値、変更後の新しい値、ストレージを変更した文書の URL、ストレージオブジェクト自体 (その中身を見えるように文字化しています) といった、役に立つ情報を含んでいるいくつものプロパティを持っています。
 
-<h3 id="Deleting_data_records" name="Deleting_data_records">データレコードの削除</h3>
+### データレコードの削除
 
-<p>ウェブストレージには、データを削除するためのシンプルなメソッドが 2 つあります。このデモでは使用していませんが、プロジェクトへとても簡単に追加できます:</p>
+ウェブストレージには、データを削除するためのシンプルなメソッドが 2 つあります。このデモでは使用していませんが、プロジェクトへとても簡単に追加できます:
 
-<ul>
- <li>{{domxref("Storage.removeItem()")}} は引数が 1 つあり、削除したいデータアイテムのキーです。これは、当該ドメインのストレージオブジェクトからデータアイテムを削除します。</li>
- <li>{{domxref("Storage.clear()")}} は引数がなく、当該ドメインのストレージオブジェクト全体を空にします。</li>
-</ul>
+- {{domxref("Storage.removeItem()")}} は引数が 1 つあり、削除したいデータアイテムのキーです。これは、当該ドメインのストレージオブジェクトからデータアイテムを削除します。
+- {{domxref("Storage.clear()")}} は引数がなく、当該ドメインのストレージオブジェクト全体を空にします。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | 状態                             | 備考 |
+| ---------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<h3 id="Window.localStorage" name="Window.localStorage"><code>Window.localStorage</code></h3>
+### `Window.localStorage`
 
-<div>
-<p>{{Compat("api.Window.localStorage")}}</p>
+{{Compat("api.Window.localStorage")}}
 
-<h3 id="Window.sessionStorage" name="Window.sessionStorage"><code>Window.sessionStorage</code></h3>
+### `Window.sessionStorage`
 
-<div>
-<p>{{Compat("api.Window.sessionStorage")}}</p>
-</div>
-</div>
+{{Compat("api.Window.sessionStorage")}}
 
-<p>すべてのブラウザーで、ローカルストレージおよびセッションストレージが受け入れる容量は異なります。<a href="http://dev-test.nemikor.com/web-storage/support-test/">さまざまなブラウザーのストレージ容量を報告しているページ</a>があります。</p>
+すべてのブラウザーで、ローカルストレージおよびセッションストレージが受け入れる容量は異なります。[さまざまなブラウザーのストレージ容量を報告しているページ](http://dev-test.nemikor.com/web-storage/support-test/)があります。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Storage_API">Web Storage API のランディングページ</a></li>
-</ul>
+- [Web Storage API のランディングページ](/ja/docs/Web/API/Web_Storage_API)

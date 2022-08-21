@@ -15,61 +15,53 @@ tags:
 translation_of: Web/API/Media_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
-<div>{{DefaultAPISidebar("Media Capture and Streams")}}</div>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p><strong>Media Capture and Streams</strong> APIは一般的に<em>Media Stream API</em>や<em>Stream API</em>と呼ばれる<a href="/ja/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a>に関連したAPIです。このAPIでは、オーディオやビデオデータのストリーム、これらを操作するためのメソッド、データタイプに関連づけられた制約、データを非同期に利用する際の成功と失敗のコールバック、これらの処理を行なっている最中に発生するイベントなどをサポートします。</p>
+**Media Capture and Streams** API は一般的に*Media Stream API*や*Stream API*と呼ばれる[WebRTC](/ja/docs/WebRTC "/en-US/docs/WebRTC")に関連した API です。この API では、オーディオやビデオデータのストリーム、これらを操作するためのメソッド、データタイプに関連づけられた制約、データを非同期に利用する際の成功と失敗のコールバック、これらの処理を行なっている最中に発生するイベントなどをサポートします。
 
-<h2 id="基本概念">基本概念</h2>
+## 基本概念
 
-<p>このAPIは、オーディオまたはビデオに関連づけられたデータの流れを表現するための{{domxref("MediaStream")}}オブジェクトの操作を基本としています。例として<a href="/ja/docs/WebRTC/taking_webcam_photos#Get_the_video" title="/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video">Get the video</a>(英語)をご覧ください。</p>
+この API は、オーディオまたはビデオに関連づけられたデータの流れを表現するための{{domxref("MediaStream")}}オブジェクトの操作を基本としています。例として[Get the video](/ja/docs/WebRTC/taking_webcam_photos#Get_the_video "/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video")(英語)をご覧ください。
 
-<p><code>MediaStream</code>は0個以上の{{domxref("MediaStreamTrack")}}によって構成されます。<code>MediaStreamTrack</code>は様々なオーディオやビデオの<strong>トラック</strong>を表現します。それぞれの<code>MediaStreamTrack</code>は、1つ以上の<strong>チャンネル</strong>を持ちます。このチャンネルはメディアストリームの最小の単位を表現します。例えば、ステレオのオーディオトラックの<em>left</em>と<em>right</em>のチャンネルのそれぞれのように、与えられたスピーカーに関連づけられたオーディオ信号です。</p>
+`MediaStream`は 0 個以上の{{domxref("MediaStreamTrack")}}によって構成されます。`MediaStreamTrack`は様々なオーディオやビデオの**トラック**を表現します。それぞれの`MediaStreamTrack`は、1 つ以上の**チャンネル**を持ちます。このチャンネルはメディアストリームの最小の単位を表現します。例えば、ステレオのオーディオトラックの*left*と*right*のチャンネルのそれぞれのように、与えられたスピーカーに関連づけられたオーディオ信号です。
 
-<p><code>MediaStream</code>オブジェクトは、1つの<strong>入力</strong>と1つの<strong>出力</strong>を持ちます。<code>MediaStream</code>オブジェクトは、ローカルで呼び出される{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}によって生成され、ユーザーのカメラやマイクの1つを入力ソースとして持ちます。ローカルでない<code>MediaStream</code>は、{{HTMLElement("video")}}や{{HTMLElement("audio")}}などのメディア要素や、WebRTC {{domxref("RTCPeerConnection")}} APIによって取得できるネットワーク越しに生成されたストリーム、<a href="/ja/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioSourceNode")}}によって作成されたストリームとして表現されます。<code>MediaStream</code>オブジェクトの出力は<strong>コンシューマ</strong>(consumer)に接続されます。出力として{{HTMLElement("audio")}}や{{HTMLElement("video")}}などのメディア要素、WebRTC {{domxref("RTCPeerConnection")}} API、<a href="/ja/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioDestinationNode")}}が使用できます。</p>
+`MediaStream`オブジェクトは、1 つの**入力**と 1 つの**出力**を持ちます。`MediaStream`オブジェクトは、ローカルで呼び出される{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}によって生成され、ユーザーのカメラやマイクの 1 つを入力ソースとして持ちます。ローカルでない`MediaStream`は、{{HTMLElement("video")}}や{{HTMLElement("audio")}}などのメディア要素や、WebRTC {{domxref("RTCPeerConnection")}} API によって取得できるネットワーク越しに生成されたストリーム、[Web Audio API](/ja/docs/Web_Audio_API "/en-US/docs/Web_Audio_API") {{domxref("MediaStreamAudioSourceNode")}}によって作成されたストリームとして表現されます。`MediaStream`オブジェクトの出力は**コンシューマ**(consumer)に接続されます。出力として{{HTMLElement("audio")}}や{{HTMLElement("video")}}などのメディア要素、WebRTC {{domxref("RTCPeerConnection")}} API、[Web Audio API](/ja/docs/Web_Audio_API "/en-US/docs/Web_Audio_API") {{domxref("MediaStreamAudioDestinationNode")}}が使用できます。
 
-<p> </p>
+## リファレンス
 
-<h2 id="リファレンス">リファレンス</h2>
+- {{event("addtrack")}} (event)
+- {{domxref("AudioStreamTrack")}}
+- {{domxref("BlobEvent")}}
+- {{event("ended")}} (event)
+- {{domxref("MediaStream")}}
+- {{domxref("MediaStreamConstraints")}}
+- {{domxref("MediaStreamEvent")}}
+- {{domxref("MediaStreamTrack")}}
+- {{domxref("MediaStreamTrackEvent")}}
+- {{domxref("MediaTrackCapabilities")}}
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaTrackSettings")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{event("muted")}} (event)
+- {{domxref("NavigatorUserMedia")}}
+- {{domxref("NavigatorUserMediaError")}}
+- {{event("overconstrained")}} (event)
+- {{event("removetrack")}} (event)
+- {{event("started")}} (event)
+- {{event("unmuted")}} (event)
+- {{domxref("URL")}}
+- {{domxref("VideoStreamTrack")}}
 
-<div class="index">
-<ul>
- <li>{{event("addtrack")}} (event)</li>
- <li>{{domxref("AudioStreamTrack")}}</li>
- <li>{{domxref("BlobEvent")}}</li>
- <li>{{event("ended")}} (event)</li>
- <li>{{domxref("MediaStream")}}</li>
- <li>{{domxref("MediaStreamConstraints")}}</li>
- <li>{{domxref("MediaStreamEvent")}}</li>
- <li>{{domxref("MediaStreamTrack")}}</li>
- <li>{{domxref("MediaStreamTrackEvent")}}</li>
- <li>{{domxref("MediaTrackCapabilities")}}</li>
- <li>{{domxref("MediaTrackConstraints")}}</li>
- <li>{{domxref("MediaTrackSettings")}}</li>
- <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
- <li>{{event("muted")}} (event)</li>
- <li>{{domxref("NavigatorUserMedia")}}</li>
- <li>{{domxref("NavigatorUserMediaError")}}</li>
- <li>{{event("overconstrained")}} (event)</li>
- <li>{{event("removetrack")}} (event)</li>
- <li>{{event("started")}} (event)</li>
- <li>{{event("unmuted")}} (event)</li>
- <li>{{domxref("URL")}}</li>
- <li>{{domxref("VideoStreamTrack")}}</li>
-</ul>
-</div>
+## ガイドとチュートリアル
 
-<h2 id="ガイドとチュートリアル">ガイドとチュートリアル</h2>
+{{LandingPageListSubpages}}
 
-<p>{{LandingPageListSubpages}}</p>
+## ブラウザ互換性
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{Compat("api.MediaStream")}}
 
-<p>{{Compat("api.MediaStream")}}</p>
+## 関連項目
 
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> - APIの入門ページ</li>
- <li>{{domxref("mediaDevices.getUserMedia()")}}</li>
- <li><a href="/ja/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a>: <code>getUserMedia()</code>を用いたデモとチュートリアル</li>
-</ul>
+- [WebRTC](/ja/docs/WebRTC "/en-US/docs/WebRTC") - API の入門ページ
+- {{domxref("mediaDevices.getUserMedia()")}}
+- [Taking webcam photos](/ja/docs/WebRTC/taking_webcam_photos): `getUserMedia()`を用いたデモとチュートリアル
