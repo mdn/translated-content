@@ -13,57 +13,44 @@ tags:
   - stream
 translation_of: Web/API/Blob/stream
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p><span class="seoSummary">{{domxref("Blob")}} インターフェイスの<code><strong>stream()</strong></code> メソッドは、{{domxref("ReadableStream")}} を返します。これは、読み取り時に、<code>Blob</code> に含まれるデータを返します。</span></p>
+{{domxref("Blob")}} インターフェイスの**`stream()`** メソッドは、{{domxref("ReadableStream")}} を返します。これは、読み取り時に、`Blob` に含まれるデータを返します。
 
-<h2 id="シンタックス">シンタックス</h2>
+## シンタックス
 
-<pre class="syntaxbox notranslate">var <em>stream</em> = <em>blob</em>.stream();</pre>
+```
+var stream = blob.stream();
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<p>なし</p>
+なし
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>読み込んだときに、<code>Blob</code> の内容を {{domxref("ReadableStream")}} で返します。</p>
+読み込んだときに、`Blob` の内容を {{domxref("ReadableStream")}} で返します。
 
-<h2 id="使用上のメモ">使用上のメモ</h2>
+## 使用上のメモ
 
-<p><code>stream()</code> と返された {{domxref("ReadableStream")}} を使用すると、いくつかの興味深い機能を得ることができます。</p>
+`stream()` と返された {{domxref("ReadableStream")}} を使用すると、いくつかの興味深い機能を得ることができます。
 
-<ul>
- <li>返されたストリーム上で{{domxref("ReadableStream.getReader", "getReader()")}} を呼び出して、{{domxref("ReadableStreamDefaultReader")}} インターフェイスの{{domxref("ReadableStreamDefaultReader.read", "read()")}} メソッドのようなメソッドを使用して、Blob からデータを読み取るために使用するオブジェクトを取得します</li>
- <li>返されたストリームの {{domxref("ReadableStream.pipeTo", "pipeTo()")}} メソッドを呼び出して、Blob のデータを書き込み可能なストリームにパイプします</li>
- <li>返されたストリームの {{domxref("ReadableStream.tee", "tee()")}} メソッドを呼び出して、可読ストリームを <strong>tee</strong> します。これは、2つの新しい <code>ReadableStream</code> オブジェクトを含む配列を返し、それぞれが <code>Blob</code> の内容を返します</li>
- <li>返されたストリームの {{domxref("ReadableStream.pipeThrough", "pipeThrough()")}} メソッドを呼び出して、ストリームを {{domxref("TransformStream")}} またはその他の可読および書き込み可能なペアにパイプします</li>
-</ul>
+- 返されたストリーム上で{{domxref("ReadableStream.getReader", "getReader()")}} を呼び出して、{{domxref("ReadableStreamDefaultReader")}} インターフェイスの{{domxref("ReadableStreamDefaultReader.read", "read()")}} メソッドのようなメソッドを使用して、Blob からデータを読み取るために使用するオブジェクトを取得します
+- 返されたストリームの {{domxref("ReadableStream.pipeTo", "pipeTo()")}} メソッドを呼び出して、Blob のデータを書き込み可能なストリームにパイプします
+- 返されたストリームの {{domxref("ReadableStream.tee", "tee()")}} メソッドを呼び出して、可読ストリームを **tee** します。これは、2 つの新しい `ReadableStream` オブジェクトを含む配列を返し、それぞれが `Blob` の内容を返します
+- 返されたストリームの {{domxref("ReadableStream.pipeThrough", "pipeThrough()")}} メソッドを呼び出して、ストリームを {{domxref("TransformStream")}} またはその他の可読および書き込み可能なペアにパイプします
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#dom-blob-stream", "Blob.stream()")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           | ステータス                   | コメント |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("File API", "#dom-blob-stream", "Blob.stream()")}} | {{Spec2("File API")}} |          |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.Blob.stream")}}</p>
+{{Compat("api.Blob.stream")}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>{{domxref("Body.body")}}</li>
- <li><a href="/ja/docs/Web/API/Streams_API">Streams API</a></li>
-</ul>
+- {{domxref("Body.body")}}
+- [Streams API](/ja/docs/Web/API/Streams_API)
