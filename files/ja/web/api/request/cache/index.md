@@ -11,52 +11,49 @@ tags:
   - requesut
 translation_of: Web/API/Request/cache
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Request")}} インターフェースの <strong><code>cache</code></strong> 読み取り専用プロパティには、リクエストのキャッシュモードが含まれています。リクエストがブラウザの <a href="/ja/docs/Web/HTTP/Caching">HTTP キャッシュ</a> とどのように相互作用するかを制御します。</p>
+{{domxref("Request")}} インターフェースの **`cache`** 読み取り専用プロパティには、リクエストのキャッシュモードが含まれています。リクエストがブラウザの [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching) とどのように相互作用するかを制御します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js notranslate">var currentCacheMode = request.cache;</pre>
+```js
+var currentCacheMode = request.cache;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p><code>RequestCache</code> 使用可能な値は次のとおりです。</p>
+`RequestCache` 使用可能な値は次のとおりです。
 
-<ul>
- <li><code>default</code> — ブラウザは、HTTP キャッシュで一致するリクエストを探します。
+- `default` — ブラウザは、HTTP キャッシュで一致するリクエストを探します。
 
-  <ul>
-   <li>一致するものが<a href="/ja/docs/Web/HTTP/Caching#Freshness">新しい</a>場合、キャッシュから返されます。</li>
-   <li>一致するものが古い場合、ブラウザはリモートサーバーに<a href="/ja/docs/Web/HTTP/Conditional_requests">条件付きリクエスト</a>を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。</li>
-   <li>一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。</li>
-  </ul>
- </li>
- <li><code>no-store</code> — ブラウザは、最初にキャッシュを調べずにリモートサーバーからリソースをフェッチし、ダウンロードしたリソースでキャッシュを<em>更新しません</em>。</li>
- <li><code>reload</code> — ブラウザは、最初にキャッシュを調べずにリモートサーバーからリソースをフェッチし、ダウンロードしたリソースでキャッシュを<em>更新します</em>。</li>
- <li><code>no-cache</code> — ブラウザは、HTTPキャッシュで一致するリクエストを探します。
-  <ul>
-   <li>一致するものが<em>新しいか古いかを問わず</em>、ブラウザはリモートサーバーに<a href="/ja/docs/Web/HTTP/Conditional_requests">条件付きリクエスト</a>を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。</li>
-   <li>一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。</li>
-  </ul>
- </li>
- <li><code>force-cache</code> — ブラウザは、HTTPキャッシュで一致するリクエストを探します。
-  <ul>
-   <li>一致するものが<em>新しいか古いかを問わず</em>、キャッシュから返されます。</li>
-   <li>一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。</li>
-  </ul>
- </li>
- <li><code>only-if-cached</code> — ブラウザは、HTTPキャッシュで一致するリクエストを探します。
-  <ul>
-   <li>一致するものが<em>新しいか古いかを問わず</em>、キャッシュから返されます。</li>
-   <li>一致するものがない場合、ブラウザは <a href="/ja/docs/Web/HTTP/Status/504">504 ゲートウェイタイムアウト</a>ステータスで応答します。</li>
-  </ul>
-  <code>"only-if-cached"</code> モードは、リクエストの<code><a href="/ja/docs/Web/API/Request/mode">モード</a></code>が <code>"same-origin"</code> の場合にのみ使用できます。リクエストの<code>リダイレクト</code>プロパティが <code>"follow"</code> であり、リダイレクトが <code>"same-origin"</code> モードに違反していない場合、キャッシュされたリダイレクトがフォローされます。</li>
-</ul>
+  - 一致するものが[新しい](/ja/docs/Web/HTTP/Caching#Freshness)場合、キャッシュから返されます。
+  - 一致するものが古い場合、ブラウザはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
+  - 一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。
 
-<h2 id="例">例</h2>
+- `no-store` — ブラウザは、最初にキャッシュを調べずにリモートサーバーからリソースをフェッチし、ダウンロードしたリソースでキャッシュを*更新しません*。
+- `reload` — ブラウザは、最初にキャッシュを調べずにリモートサーバーからリソースをフェッチし、ダウンロードしたリソースでキャッシュを*更新します*。
+- `no-cache` — ブラウザは、HTTP キャッシュで一致するリクエストを探します。
 
-<pre class="brush: js notranslate">// Download a resource with cache busting, to bypass the cache
+  - 一致するものが*新しいか古いかを問わず*、ブラウザはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
+  - 一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。
+
+- `force-cache` — ブラウザは、HTTP キャッシュで一致するリクエストを探します。
+
+  - 一致するものが*新しいか古いかを問わず*、キャッシュから返されます。
+  - 一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。
+
+- `only-if-cached` — ブラウザは、HTTP キャッシュで一致するリクエストを探します。
+
+  - 一致するものが*新しいか古いかを問わず*、キャッシュから返されます。
+  - 一致するものがない場合、ブラウザは [504 ゲートウェイタイムアウト](/ja/docs/Web/HTTP/Status/504)ステータスで応答します。
+
+  `"only-if-cached"` モードは、リクエストの[`モード`](/ja/docs/Web/API/Request/mode)が `"same-origin"` の場合にのみ使用できます。リクエストの`リダイレクト`プロパティが `"follow"` であり、リダイレクトが `"same-origin"` モードに違反していない場合、キャッシュされたリダイレクトがフォローされます。
+
+## 例
+
+```js
+// Download a resource with cache busting, to bypass the cache
 // completely.
 fetch("some.json", {cache: "no-store"})
   .then(function(response) { /* consume the response */ });
@@ -86,17 +83,17 @@ fetch("some.json", {cache: "force-cache"})
 // reference to the controller since it would need to change the value
 let controller = new AbortController();
 fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: controller.signal})
-  .catch(e =&gt; e instanceof TypeError &amp;&amp; e.message === "Failed to fetch" ?
+  .catch(e => e instanceof TypeError && e.message === "Failed to fetch" ?
     ({status: 504}) : // Workaround for chrome; which simply fails with a typeerror
     Promise.reject(e))
-  .then(res =&gt; {
+  .then(res => {
     if (res.status === 504) {
       controller.abort()
       controller = new AbortController();
       return fetch("some.json", {cache: "force-cache", mode: "same-origin", signal: controller.signal})
     }
     const date = res.headers.get("date"), dt = date ? new Date(date).getTime() : 0
-    if (dt &lt; (Date.now() - 86400000)) {
+    if (dt < (Date.now() - 86400000)) {
       // if older than 24 hours
       controller.abort()
       controller = new AbortController();
@@ -104,40 +101,26 @@ fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: contro
     }
 
     // Other possible conditions
-    if (dt &lt; (Date.now() - 300000)) // If it's older than 5 minutes
+    if (dt < (Date.now() - 300000)) // If it's older than 5 minutes
       fetch("some.json", {cache: "no-cache", mode: "same-origin"}) // no cancellation or return value.
     return res
   })
   .then(function(response) { /* consume the (possibly stale) response */ })
-  .catch(error =&gt; { /* Can be an AbortError/DOMError or a TypeError */ });</pre>
+  .catch(error => { /* Can be an AbortError/DOMError or a TypeError */ });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request-cache','cache')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                               | 状態                     | コメント           |
+| -------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#dom-request-cache','cache')}} | {{Spec2('Fetch')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
+{{Compat("api.Request.cache")}}
 
+## 関連情報
 
-<p>{{Compat("api.Request.cache")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

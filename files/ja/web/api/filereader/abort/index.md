@@ -12,46 +12,31 @@ tags:
   - メソッド
 translation_of: Web/API/FileReader/abort
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p><strong><code>abort</code></strong> メソッドは読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が <code>DONE</code> になります。</p>
+**`abort`** メソッドは読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が `DONE` になります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>instanceOfFileReader</var>.abort();</pre>
+```
+instanceOfFileReader.abort();
+```
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt><code>DOM_FILE_ABORT_ERR</code></dt>
- <dd>読み込み操作が実行されていない間に <code>abort</code> が呼び出されたとき (つまり、状態が <code>LOADING</code> でないとき) にスローされます。</dd>
-</dl>
+- `DOM_FILE_ABORT_ERR`
+  - : 読み込み操作が実行されていない間に `abort` が呼び出されたとき (つまり、状態が `LOADING` でないとき) にスローされます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("File API", "#FileReader-interface", "FileReader")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 状態                         | 備考     |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.FileReader.abort")}}</p>
+{{Compat("api.FileReader.abort")}}
 
-<h2 id="See_also" name="See_also">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

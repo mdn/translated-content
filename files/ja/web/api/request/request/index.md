@@ -10,67 +10,54 @@ tags:
   - リファレンス
 translation_of: Web/API/Request/Request
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><code><strong>Request()</strong></code> コンストラクターは、新しい {{domxref("Request")}} オブジェクトを生成します。</p>
+**`Request()`** コンストラクターは、新しい {{domxref("Request")}} オブジェクトを生成します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var myRequest = new Request(input[, init]);</pre>
+```
+var myRequest = new Request(input[, init]);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><em>input</em></dt>
- <dd>取得したいリソースを定義します。次のいずれかの値を取ります。
- <ul>
-  <li>取得したいリソースの直接の URL を含む {{domxref("USVString")}}。</li>
-  <li>効率的にコピーを作成するための {{domxref("Request")}} オブジェクト。なお、コンストラクターが例外をスローする可能性を下げるため、セキュリティーを保持するための以下の動作上の更新に注意してください。
-   <ul>
-    <li>このオブジェクトがコンストラクターの呼び出しとは別のオリジンに存在する場合、 {{domxref("Request.referrer")}} が削除されます。</li>
-    <li>このオブジェクトの {{domxref("Request.mode")}} が <code>navigate</code> である場合、 <code>mode</code> の値が <code>same-origin</code> に変換されます。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>リクエストに適用するカスタム設定を含むオプションオブジェクトです。設定可能なオプションは次の通りです。
- <ul>
-  <li><code>method</code>: リクエストメソッド、 <code>GET</code>, <code>POST</code> など。</li>
-  <li><code>headers</code>: {{domxref("Headers")}} オブジェクトか {{domxref("ByteString")}} を含む、リクエストに追加するヘッダー。</li>
-  <li><code>body</code>: リクエストに追加する本文で、 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, {{domxref("ReadableStream")}} オブジェクトが使用できます。なお、リクエストが <code>GET</code> 又は <code>HEAD</code> メソッドを使用している場合、本文を持てません。</li>
-  <li><code>mode</code>: リクエストで使用するモード。例えば、 <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, <code>navigate</code> です。既定値は <code>cors</code> です。 Chrome では、既定値は 47 以前は <code>no-cors</code> でしたが、 47 から <code>same-origin</code> になりました。</li>
-  <li><code>credentials</code>: リクエストで使用するリクエストの資格情報です。 <code>omit</code>, <code>same-origin</code>, <code>include</code> の何れかです。既定値は <code>omit</code> です。 Chrome では、既定値は 47 以前は <code>same-origin</code> でしたが、 47 から <code>include</code> になりました。</li>
-  <li><code>cache</code>: リクエストで使用する <a href="/ja/docs/Web/API/Request/cache">cache モード</a>です。</li>
-  <li><code>redirect</code>: 使用するリダイレクトモードです。 <code>follow</code>, <code>error</code>, <code>manual</code> の何れかです。 Chrome では、既定値は 47 以前は <code>follow</code> でしたが、 47 から <code>manual</code> になりました。</li>
-  <li><code>referrer</code>: <code>no-referrer</code>, <code>client</code> 又は URL を示す {{domxref("USVString")}} です。既定値は <code>client</code> です。</li>
-  <li><code>integrity</code>: リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">subresource integrity</a> の値です (例えば、 <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>)。</li>
- </ul>
- </dd>
-</dl>
+- _input_
 
-<h2 id="Errors" name="Errors">エラー</h2>
+  - : 取得したいリソースを定義します。次のいずれかの値を取ります。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">型</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td><a href="/ja/docs/Mozilla/Firefox/Releases/43">Firefox 43</a> 以降、http://user:password@example.com のような認証情報を含む URL だった場合、Request() は TypeError をスローします。</td>
-  </tr>
- </tbody>
-</table>
+    - 取得したいリソースの直接の URL を含む {{domxref("USVString")}}。
+    - 効率的にコピーを作成するための {{domxref("Request")}} オブジェクト。なお、コンストラクターが例外をスローする可能性を下げるため、セキュリティーを保持するための以下の動作上の更新に注意してください。
 
-<h2 id="例">例</h2>
+      - このオブジェクトがコンストラクターの呼び出しとは別のオリジンに存在する場合、 {{domxref("Request.referrer")}} が削除されます。
+      - このオブジェクトの {{domxref("Request.mode")}} が `navigate` である場合、 `mode` の値が `same-origin` に変換されます。
 
-<p><a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">Fetch Request example</a> (<a href="http://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live </a>を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("GlobalFetch.fetch")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Body.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。</p>
+- _init_ {{optional_inline}}
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+  - : リクエストに適用するカスタム設定を含むオプションオブジェクトです。設定可能なオプションは次の通りです。
+
+    - `method`: リクエストメソッド、 `GET`, `POST` など。
+    - `headers`: {{domxref("Headers")}} オブジェクトか {{domxref("ByteString")}} を含む、リクエストに追加するヘッダー。
+    - `body`: リクエストに追加する本文で、 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, {{domxref("ReadableStream")}} オブジェクトが使用できます。なお、リクエストが `GET` 又は `HEAD` メソッドを使用している場合、本文を持てません。
+    - `mode`: リクエストで使用するモード。例えば、 `cors`, `no-cors`, `same-origin`, `navigate` です。既定値は `cors` です。 Chrome では、既定値は 47 以前は `no-cors` でしたが、 47 から `same-origin` になりました。
+    - `credentials`: リクエストで使用するリクエストの資格情報です。 `omit`, `same-origin`, `include` の何れかです。既定値は `omit` です。 Chrome では、既定値は 47 以前は `same-origin` でしたが、 47 から `include` になりました。
+    - `cache`: リクエストで使用する [cache モード](/ja/docs/Web/API/Request/cache)です。
+    - `redirect`: 使用するリダイレクトモードです。 `follow`, `error`, `manual` の何れかです。 Chrome では、既定値は 47 以前は `follow` でしたが、 47 から `manual` になりました。
+    - `referrer`: `no-referrer`, `client` 又は URL を示す {{domxref("USVString")}} です。既定値は `client` です。
+    - `integrity`: リクエストの [subresource integrity](/ja/docs/Web/Security/Subresource_Integrity) の値です (例えば、 `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`)。
+
+## エラー
+
+| 型          | 説明                                                                                                                                                                       |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TypeError` | [Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) 以降、http\://user:password\@example.com のような認証情報を含む URL だった場合、Request() は TypeError をスローします。 |
+
+## 例
+
+[Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) ([Fetch Request live ](http://mdn.github.io/fetch-examples/fetch-request/)を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("GlobalFetch.fetch")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Body.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。
+
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -79,11 +66,13 @@ fetch(myRequest).then(function(response) {
 }).then(function(response) {
   var objectURL = URL.createObjectURL(response);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p><a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init">Fetch Request with init example</a> (<a href="http://mdn.github.io/fetch-examples/fetch-request-with-init/">Fetch Request init live </a> を参照) では、 <code>fetch()</code> を呼び出すときに init オブジェクトを渡している以外は同じです。</p>
+[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) ([Fetch Request init live ](http://mdn.github.io/fetch-examples/fetch-request-with-init/)を参照) では、 `fetch()` を呼び出すときに init オブジェクトを渡している以外は同じです。
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
@@ -97,17 +86,21 @@ var myRequest = new Request('flowers.jpg',myInit);
 
 fetch(myRequest).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p>同様の効果を得るために、 <code>fetch</code> 呼び出しに init オブジェクトを渡せることにも注目してください。例えば次の通りです。</p>
+同様の効果を得るために、 `fetch` 呼び出しに init オブジェクトを渡せることにも注目してください。例えば次の通りです。
 
-<pre class="brush: js">fetch(myRequest,myInit).then(function(response) {
+```js
+fetch(myRequest,myInit).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p><code>init</code> の中の <code>headers</code> としてオブジェクトリテラルを使用することもできます。</p>
+`init` の中の `headers` としてオブジェクトリテラルを使用することもできます。
 
-<pre class="brush: js">var myInit = { method: 'GET',
+```js
+var myInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },
@@ -115,46 +108,28 @@ fetch(myRequest).then(function(response) {
                cache: 'default' };
 
 var myRequest = new Request('flowers.jpg', myInit);
-</pre>
+```
 
-<p>リクエストのコピーを作成するために、 <code>Request()</code> コンストラクターに {{domxref("Request")}} オブジェクトを渡すこともできます (これは {{domxref("Request.clone","clone()")}} メソッドを呼び出すのと似ています)。</p>
+リクエストのコピーを作成するために、 `Request()` コンストラクターに {{domxref("Request")}} オブジェクトを渡すこともできます (これは {{domxref("Request.clone","clone()")}} メソッドを呼び出すのと似ています)。
 
-<div class="codehilite" style="background: #f0f3f3;">
-<pre style="line-height: 125%;">var copy = new Request(myRequest);
-</pre>
-</div>
+```
+var copy = new Request(myRequest);
+```
 
-<div class="note">
-<p><strong>メモ</strong>: 最後の使い方は<a href="/ja/docs/Web/API/ServiceWorker_API">サービスワーカー</a>内でのみ使用できます。</p>
-</div>
+> **Note:** **メモ**: 最後の使い方は[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内でのみ使用できます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request','Request()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           | 状態                     | 備考 |
+| ---------------------------------------------------------------- | ------------------------ | ---- |
+| {{SpecName('Fetch','#dom-request','Request()')}} | {{Spec2('Fetch')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Request.Request")}}</p>
+{{Compat("api.Request.Request")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">サービスワーカー API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP アクセス制御 (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [サービスワーカー API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

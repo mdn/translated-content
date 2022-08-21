@@ -12,59 +12,46 @@ tags:
   - replacesClientId
 translation_of: Web/API/FetchEvent/replacesClientId
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("FetchEvent")}} インターフェイスの <strong><code>replacesClientId</code></strong> 読み取り専用プロパティは、ページナビゲーション中に置き換えられる{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。</span></p>
+{{domxref("FetchEvent")}} インターフェイスの **`replacesClientId`** 読み取り専用プロパティは、ページナビゲーション中に置き換えられる{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
 
-<p>例えば、ページ A からページ B に移動する場合、<code>replacesClientId</code> はページ A に関連するクライアントの id です。 <code>about:blank</code> のクライアントは置き換えられるのではなく再利用されるため、<code>about:blank</code> から別のページに移動するときは、空の文字列になることがあります。</p>
+例えば、ページ A からページ B に移動する場合、`replacesClientId` はページ A に関連するクライアントの id です。 `about:blank` のクライアントは置き換えられるのではなく再利用されるため、`about:blank` から別のページに移動するときは、空の文字列になることがあります。
 
-<p>さらに、フェッチがナビゲーションでない場合、<code>replacesClientId</code> は空の文字列になります。 これは、ナビゲーションの直前に間もなく置き換えられるクライアントにアクセス/通信するために使用できます。</p>
+さらに、フェッチがナビゲーションでない場合、`replacesClientId` は空の文字列になります。 これは、ナビゲーションの直前に間もなく置き換えられるクライアントにアクセス/通信するために使用できます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>myReplacedClientId</em> = <em>fetchEvent</em>.replacesClientId;</pre>
+```
+var myReplacedClientId = fetchEvent.replacesClientId;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("DOMString")}}。</p>
+{{domxref("DOMString")}}。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+```js
+self.addEventListener('fetch', function(event) {
   console.log(event.replacesClientId);
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-fetchevent-replacesclientid', 'replacesClientId')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                 | 状態                                 | コメント |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#dom-fetchevent-replacesclientid', 'replacesClientId')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.FetchEvent.replacesClientId")}}
 
+## 関連情報
 
-<p>{{Compat("api.FetchEvent.replacesClientId")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker の使用</a></li>
-</ul>
+- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- {{jsxref("Promise")}}
+- [Web worker の使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

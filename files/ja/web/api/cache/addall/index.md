@@ -9,58 +9,41 @@ tags:
   - サービスワーカー API
 translation_of: Web/API/Cache/addAll
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("Cache")}} インターフェイスの <strong><code>addAll()</code></strong> メソッドは、URL の配列を受け取り、取得して、指定されたキャッシュに結果のレスポンスオブジェクトを追加します。取得の間に作成されたリクエストオブジェクトは、格納されるレスポンス操作のキーになります。</span></p>
+{{domxref("Cache")}} インターフェイスの **`addAll()`** メソッドは、URL の配列を受け取り、取得して、指定されたキャッシュに結果のレスポンスオブジェクトを追加します。取得の間に作成されたリクエストオブジェクトは、格納されるレスポンス操作のキーになります。
 
-<div class="note">
-<p><strong>メモ</strong>: <code>addAll()</code> は、リクエストと一致する、以前にキャッシュに格納されたキーと値のペアをどれでも上書きしますが、（結果としての <code>put()</code> 操作が）同一の <code>addAll()</code> メソッドによって先に格納されたキャッシュエントリーを上書きしようとすると失敗します。</p>
-</div>
+> **Note:** **メモ**: `addAll()` は、リクエストと一致する、以前にキャッシュに格納されたキーと値のペアをどれでも上書きしますが、（結果としての `put()` 操作が）同一の `addAll()` メソッドによって先に格納されたキャッシュエントリーを上書きしようとすると失敗します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>cache</em>.addAll(<em>requests</em>[]).then(function() {
+```
+cache.addAll(requests[]).then(function() {
   // リクエストはすでに cahce に追加されている。
 });
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt>requests</dt>
- <dd>キャッシュにフェッチして追加したい URL の文字列の配列です。 URL の代わりに {{domxref("Request")}} オブジェクトを指定できます。</dd>
-</dl>
+- requests
+  - : キャッシュにフェッチして追加したい URL の文字列の配列です。 URL の代わりに {{domxref("Request")}} オブジェクトを指定できます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>undefined</code> で解決する {{jsxref("Promise")}}。</p>
+`undefined` で解決する {{jsxref("Promise")}}。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>例外</strong></th>
-   <th scope="col"><strong>発生条件</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>
-    <p>URL スキームが <code>http</code> や <code>https</code> ではありません。</p>
+| **例外**    | **発生条件**                                                                                                                                                                                                                                                                                                           |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TypeError` | URL スキームが `http` や `https` ではありません。レスポンスステータスが 200 番台（つまり、成功レスポンス）ではありません。これはリクエストが成功を返さない場合や、リクエストがオリジン間の CORS ではないリクエスト (_cross-origin no-cors_ request) の場合も発生します (この場合、ステータスが常に 0 で報告されます)。 |
 
-    <p>レスポンスステータスが200番台（つまり、成功レスポンス）ではありません。これはリクエストが成功を返さない場合や、リクエストがオリジン間の CORS ではないリクエスト (<em>cross-origin no-cors</em> request) の場合も発生します (この場合、ステータスが常に 0 で報告されます)。</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+このコードブロックは、{{domxref("InstallEvent")}} が発火するのを待ってから、アプリのインストールプロセスを処理するために、{{domxref("ExtendableEvent.waitUntil","waitUntil")}} を実行します。この処理は、新しいキャッシュを作成するための {{domxref("CacheStorage.open")}} の呼び出しと、一連の資産を追加するための `addAll()` の使用で構成されています。
 
-<p>このコードブロックは、{{domxref("InstallEvent")}} が発火するのを待ってから、アプリのインストールプロセスを処理するために、{{domxref("ExtendableEvent.waitUntil","waitUntil")}} を実行します。この処理は、新しいキャッシュを作成するための {{domxref("CacheStorage.open")}} の呼び出しと、一連の資産を追加するための <code>addAll()</code> の使用で構成されています。</p>
-
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -78,37 +61,20 @@ translation_of: Web/API/Cache/addAll
     })
   );
 });
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様策定状況</h2>
+## 仕様策定状況
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cache-addall', 'Cache: addAll')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       | 策定状況                             | コメント |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#dom-cache-addall', 'Cache: addAll')}} | {{Spec2('Service Workers')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>
-<p>{{Compat("api.Cache.addAll")}}</p>
-</div>
+{{Compat("api.Cache.addAll")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">サービスワーカーの使用</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

@@ -12,34 +12,37 @@ translation_of: Web/API/Response/text
 original_slug: Web/API/Body/text
 browser-compat: api.Response.text
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><strong><code>text()</code></strong> は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} ストリームを取得して完全に読み込みます。 {{jsxref("String")}} で解決するプロミスを返します。 レスポンスは<em>常に</em> UTF-8 としてデコードされます。</p>
+**`text()`** は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} ストリームを取得して完全に読み込みます。 {{jsxref("String")}} で解決するプロミスを返します。 レスポンスは*常に* UTF-8 としてデコードされます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><var>response</var>.text().then(function (<var>text</var>) {
+```js
+response.text().then(function (text) {
   // text レスポンスを使用して何か実行する。
-});</pre>
+});
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>{{jsxref("String")}} で解決するプロミスです。</p>
+{{jsxref("String")}} で解決するプロミスです。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p><a href="https://github.com/mdn/fetch-examples/tree/master/fetch-text">fetch text の例</a>（<a href="https://mdn.github.io/fetch-examples/fetch-text/">fetch text をライブで</a>実行）には、{{htmlelement("article")}} 要素と 3 つのリンク（<code>myLinks</code> 配列に格納されています）があります。 最初に、リンクのすべてをループし、それぞれのリンクに、その 1 つをクリックしたとき、 <code>getData()</code> 関数がリンクの <code>data-page</code> 識別子を引数として実行されるように、<code>onclick</code> イベントハンドラーを設定します。</p>
+[fetch text の例](https://github.com/mdn/fetch-examples/tree/master/fetch-text)（[fetch text をライブで](https://mdn.github.io/fetch-examples/fetch-text/)実行）には、{{htmlelement("article")}} 要素と 3 つのリンク（`myLinks` 配列に格納されています）があります。 最初に、リンクのすべてをループし、それぞれのリンクに、その 1 つをクリックしたとき、 `getData()` 関数がリンクの `data-page` 識別子を引数として実行されるように、`onclick` イベントハンドラーを設定します。
 
-<p><code>getData()</code> が実行されると、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して特定の <code>.txt</code> ファイルをフェッチします。 フェッチが成功したら、<code>text()</code> を使用してレスポンスから {{domxref("USVString")}} (テキスト) オブジェクトを読み取り、{{htmlelement("article")}} 要素の {{domxref("Element.innerHTML","innerHTML")}} にテキストオブジェクトの値を設定します。</p>
+`getData()` が実行されると、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して特定の `.txt` ファイルをフェッチします。 フェッチが成功したら、`text()` を使用してレスポンスから {{domxref("USVString")}} (テキスト) オブジェクトを読み取り、{{htmlelement("article")}} 要素の {{domxref("Element.innerHTML","innerHTML")}} にテキストオブジェクトの値を設定します。
 
-<pre class="brush: js">let myArticle = document.querySelector('article');
+```js
+let myArticle = document.querySelector('article');
 let myLinks = document.querySelectorAll('ul a');
 
-for(let i = 0; i &lt;= myLinks.length-1; i++) {
+for(let i = 0; i <= myLinks.length-1; i++) {
   myLinks[i].onclick = function(e) {
     e.preventDefault();
     let linkData = e.target.getAttribute('data-page');
@@ -55,20 +58,19 @@ function getData(pageId) {
       myArticle.innerHTML = text;
     });
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS">HTTP アクセス制御 (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP](/ja/docs/Web/HTTP)

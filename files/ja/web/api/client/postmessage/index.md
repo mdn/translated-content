@@ -12,34 +12,34 @@ tags:
   - postMessage
 translation_of: Web/API/Client/postMessage
 ---
-<p>{{APIRef("Service Worker API")}}</p>
+{{APIRef("Service Worker API")}}
 
-<p><span class="seoSummary"><strong><code>postMessage()</code></strong> は {{domxref("Client")}} インターフェイスのメソッドで、サービスワーカーがクライアント ({{domxref("Window")}}, {{domxref("Worker")}}, {{domxref("SharedWorker")}}) にメッセージを送信することができます。 メッセージは、 {{domxref("ServiceWorkerContainer", "navigator.serviceWorker")}} の "<code>message</code>" イベントで受信されます。</span></p>
+**`postMessage()`** は {{domxref("Client")}} インターフェイスのメソッドで、サービスワーカーがクライアント ({{domxref("Window")}}, {{domxref("Worker")}}, {{domxref("SharedWorker")}}) にメッセージを送信することができます。 メッセージは、 {{domxref("ServiceWorkerContainer", "navigator.serviceWorker")}} の "`message`" イベントで受信されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>client</var>.postMessage(<var>message</var>[, <var>transfer</var>]);
-<var>client</var>.postMessage(<var>message</var>[, { transfer }]);
-</pre>
+```
+client.postMessage(message[, transfer]);
+client.postMessage(message[, { transfer }]);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>message</var></code></dt>
- <dd>クライアントに送信するメッセージです。これは、任意の<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">複製可能な構造化型</a>にすることができます。</dd>
- <dt><code><var>transfer</var></code> {{optional_inline}}</dt>
- <dd>メッセージとともに<a href="/ja/docs/Web/API/Transferable">転送</a>されるオブジェクトのシーケンスです。 これらのオブジェクトの所有権は宛先側に与えられ、送信側では使用できなくなります。</dd>
-</dl>
+- `message`
+  - : クライアントに送信するメッセージです。これは、任意の[複製可能な構造化型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)にすることができます。
+- `transfer` {{optional_inline}}
+  - : メッセージとともに[転送](/ja/docs/Web/API/Transferable)されるオブジェクトのシーケンスです。 これらのオブジェクトの所有権は宛先側に与えられ、送信側では使用できなくなります。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>サービスワーカーからクライアントへのメッセージの送信</p>
+サービスワーカーからクライアントへのメッセージの送信
 
-<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   event.waitUntil(async function() {
     // クライアントにアクセスできない場合は、早期に終了します。
     // 例えば、クロスオリジンの場合。
@@ -58,35 +58,23 @@ translation_of: Web/API/Client/postMessage
     });
 
   }());
-});</pre>
+});
+```
 
-<p>そのメッセージの受け取り</p>
+そのメッセージの受け取り
 
-<pre class="brush: js notranslate">navigator.serviceWorker.addEventListener('message', event =&gt; {
+```js
+navigator.serviceWorker.addEventListener('message', event => {
   console.log(event.data.msg, event.data.url);
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-client-postmessage-message-options', 'postMessage()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                                 | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#dom-client-postmessage-message-options', 'postMessage()')}} | {{Spec2('Service Workers')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Client.postMessage")}}</p>
-</div>
+{{Compat("api.Client.postMessage")}}

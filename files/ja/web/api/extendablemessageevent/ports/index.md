@@ -10,23 +10,26 @@ tags:
   - ports
 translation_of: Web/API/ExtendableMessageEvent/ports
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ExtendableMessageEvent")}} インターフェイスの <strong><code>ports</code></strong> 読み取り専用プロパティは、関連するメッセージチャンネル（メッセージが送信されるチャンネル）のポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。</p>
+{{domxref("ExtendableMessageEvent")}} インターフェイスの **`ports`** 読み取り専用プロパティは、関連するメッセージチャンネル（メッセージが送信されるチャンネル）のポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <em>myPorts</em> = <em>extendableMessageEvent</em>.ports;</pre>
+```
+var myPorts = extendableMessageEvent.ports;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("MessagePort")}} オブジェクトの配列。</p>
+{{domxref("MessagePort")}} オブジェクトの配列。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次のコードをサービスワーカー内で使用して、{{domxref("PushMessageData")}} を介して受信したデータを<a href="/ja/docs/Web/API/Channel_Messaging_API">チャンネルメッセージ</a>を介してメインコンテキストに送信することにより、プッシュメッセージに応答する場合、<code>onmessage</code> のイベントオブジェクトは <code>ExtendableMessageEvent</code> になります。</p>
+次のコードをサービスワーカー内で使用して、{{domxref("PushMessageData")}} を介して受信したデータを[チャンネルメッセージ](/ja/docs/Web/API/Channel_Messaging_API)を介してメインコンテキストに送信することにより、プッシュメッセージに応答する場合、`onmessage` のイベントオブジェクトは `ExtendableMessageEvent` になります。
 
-<pre class="brush: js notranslate">var port;
+```js
+var port;
 
 self.addEventListener('push', function(e) {
   var obj = e.data.json();
@@ -41,38 +44,21 @@ self.addEventListener('push', function(e) {
 self.onmessage = function(e) {
   port = e.ports[0];
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-extendablemessageevent-ports', 'ExtendableMessageEvent.ports')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                 | 状態                                 | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#dom-extendablemessageevent-ports', 'ExtendableMessageEvent.ports')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.ExtendableMessageEvent.ports")}}
 
+## 関連情報
 
-<p>{{Compat("api.ExtendableMessageEvent.ports")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li><a href="/ja/docs/Web/API/Channel_Messaging_API">Channel Messaging</a></li>
-</ul>
+- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- [Channel Messaging](/ja/docs/Web/API/Channel_Messaging_API)
