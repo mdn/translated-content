@@ -11,7 +11,7 @@ translation_of: Web/API/CSSStyleSheet
 
 **`CSSStyleSheet`** インターフェイスは、1 枚の [CSS](/ja/docs/Web/CSS) スタイルシートを表します。これは、その親の {{domxref("StyleSheet")}} からプロパティとメソッドを継承します。
 
-スタイルシートは、_{{domxref("CSSStyleRule", "スタイル規則", "", 1)}}\_\_ _("`h1,h2 { font-size: 16pt }"`)、様々な _@-規則_ (`@import`, `@media`, ...) 等の _{{domxref("CSSRule", "規則", "", 1)}}_ から構成されます。このインターフェイスは、スタイルシート内の規則のリストを調査および変更できます。
+スタイルシートは、_{{domxref("CSSStyleRule", "スタイル規則", "", 1)}}_ _("`h1,h2 { font-size: 16pt }"`)_、様々な _@-規則_ (`@import`, `@media`, ...) 等の _{{domxref("CSSRule", "規則", "", 1)}}_ から構成されます。このインターフェイスは、スタイルシート内の規則のリストを調査および変更できます。
 
 CSSStyleSheet オブジェクトを取得できる様々な方法は、[補記](#notes) セクションを参照してください。
 
