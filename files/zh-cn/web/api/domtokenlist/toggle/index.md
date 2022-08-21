@@ -22,7 +22,7 @@ toggle(token, force);
 
 ### 返回值
 
-一个布尔值，`true` 或者 `false`，表示在调用 toggle 后，标记是否存在与列表中。
+一个布尔值，`true` 或者 `false`，表示在调用 toggle 后，标记是否存在于列表中。
 
 ## 示例
 
