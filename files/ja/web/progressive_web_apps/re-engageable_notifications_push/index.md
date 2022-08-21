@@ -41,7 +41,7 @@ button.addEventListener('click', function(e) {
 
 これは、次のようにオペレーティングシステム独自の通知サービスを使ったポップアップを表示します。
 
-![Notification of js13kPWA.](https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png)
+![Notification of js13kPWA.](js13kpwa-notification.png)
 
 ユーザーが通知を受け取ることを確認すると、アプリはそれらを表示できます。 ユーザー操作の結果は、デフォルト（`default`）、許可（`granted`）、または拒否（`denied`）になります。 ユーザーが後で選択する場合はデフォルトの選択肢が選択され、ユーザーがそれぞれ「はい」または「いいえ」をクリックすると他の 2 つが設定されます。
 

@@ -87,19 +87,19 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 ユーザーがサポートしているモバイルブラウザーで PWA にアクセスすると、アプリを PWA としてインストールすることが可能であることを示す通知 (バナーやダイアログボックスなど) が表示されます。
 
-![js13kPWA のホーム画面に追加のポップアップ。](https://mdn.mozillademos.org/files/15928/js13kpwa-icon.png)
+![js13kPWA のホーム画面に追加のポップアップ。](js13kpwa-icon.png)
 
 ユーザーがインストールを実行する意志を示したら、インストールバナーが表示されます。 そのバナーは、マニフェストファイルからの情報に基づいて、ブラウザーによって自動的に作成されます。例えば、プロンプトにはアプリの名前とアイコンが含まれています。
 
-![js13kPWA のインストールバナー。](https://mdn.mozillademos.org/files/15927/js13kpwa-banner.png)
+![js13kPWA のインストールバナー。](js13kpwa-banner.png)
 
 ユーザーがボタンをクリックすると、アプリがどのように表示されるかを示し、間違いなくアプリを追加するかどうかをユーザーに選択させる最後のステップがあります。
 
-![js13kPWA のホーム画面に追加のポップアップ。](https://mdn.mozillademos.org/files/15926/js13kpwa-add.png)
+![js13kPWA のホーム画面に追加のポップアップ。](js13kpwa-add.png)
 
 確認すると、アプリがホーム画面にインストールされます。
 
-![](https://mdn.mozillademos.org/files/15834/js13kpwa-installed.png)
+![](js13kpwa-installed.png)
 
 これでユーザーは、端末上の他のアプリケーションと同じようにウェブアプリを起動して使用することができるようになりました。端末やオペレーティングシステムによっては、ウェブアプリのアイコンにウェブアプリであることを示す小さなアイコンが付けられている場合があります。例えば、上のスクリーンショットでは、アプリには小さな Firefox のアイコンが付いており、 Firefox ランタイムを使用するウェブアプリであることを示しています。
 
@@ -107,7 +107,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 一部のブラウザーでは、マニフェストの情報からスプラッシュ画面も生成されます。 これは、 PWA が起動され読み込まれている間に表示されます。
 
-![](https://mdn.mozillademos.org/files/15835/js13kpwa-splash.png)
+![](js13kpwa-splash.png)
 
 この画面の作成には、アイコンとテーマカラーと背景色が使用されます。
 
