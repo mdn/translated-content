@@ -27,7 +27,7 @@ delete(key)
 
 ## 示例
 
-### 使用 `delete()` 方法
+### 使用 delete()
 
 ```js
 const myMap = new Map();
