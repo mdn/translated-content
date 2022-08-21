@@ -27,15 +27,9 @@ connection.addEventListener('change', updateConnectionStatus);
 
 ## 浏览器兼容性
 
-### NetworkInformation
+{{Compat}}
 
-{{Compat("api.NetworkInformation")}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
-
-## 相关链接
+## 参见
 
 - [Network Information API Specification](http://w3c.github.io/netinfo/)
 - [Online and offline events](/en-US/docs/Online_and_offline_events)

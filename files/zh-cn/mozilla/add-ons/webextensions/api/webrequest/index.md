@@ -97,19 +97,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("webextensions.api.webRequest")}}
-
-### Edge incompatibilities
-
-Promises are not supported in Edge. Use callbacks instead.
-
-{{Compat("webextensions.api.webRequest")}} {{WebExtExamples("h2")}}
-
-> **备注：** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+{{Compat}}
 
 <div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
