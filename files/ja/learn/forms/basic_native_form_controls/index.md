@@ -58,7 +58,7 @@ original_slug: Learn/Forms/The_native_form_widgets
 
 単一行のテキストフィールドは、ひとつだけ厳密な制約があります。改行を含むテキストを入力した場合、ブラウザーはデータを送信する前に改行を取り除きます。
 
-_下記のスクリーンショットは macOS での Firefox 71 と Safari、および Windows 10 の Chrome 79 と Edge 18 において、テキストフィールドが既定の場合、フォーカスされた場合、、無効にされた場合を示しています。_
+_下記のスクリーンショットは macOS での Firefox 71 と Safari、および Windows 10 の Chrome 79 と Edge 18 において、テキストフィールドが既定の場合、フォーカスされた場合、無効にされた場合を示しています。_
 
 ![Firefox、Safari、Chrome、Edge における、テキスト入力の disabled 属性と既定の :focus スタイルを表示したスクリーンショットです。](disabled.png)
 
@@ -130,7 +130,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 </fieldset>
 ```
 
-下記のスクリーンショットは macOS での Firefox 71 と Safari、および Windows 10 の Chrome 79 と Edge 18 において、チェックボックスが既定の場合、フォーカスされた場合、、無効にされた場合を示しています。
+下記のスクリーンショットは macOS での Firefox 71 と Safari、および Windows 10 の Chrome 79 と Edge 18 において、チェックボックスが既定の場合、フォーカスされた場合、無効にされた場合を示しています。
 
 ![Mac での Firefox 71 および Safari 13 と、 Windows 10 での Chrome 79 および Edge 18 の既定、フォーカス、無効状態のチェックボックス](checkboxes.png)
 
