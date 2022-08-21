@@ -10,7 +10,7 @@ Dans ce chapitre, nous décrirons les expressions et opérateurs en JavaScript, 
 
 Une _expression_ peut être vue comme une unité de code valide qui est résolue en une valeur. Il existe deux types d'expressions, celles qui ont des effets de bord (par exemple l'affectation d'une valeur) et celles qui sont purement évaluées.
 
-L'expression `x = 7` fait partie de la première catégorie. Elle utilise _l'opérateur_ `=` afin d'affecter la valeur setp à la variable `x`. L'expression elle-même est évaluée avec la valeur `7`.
+L'expression `x = 7` fait partie de la première catégorie. Elle utilise _l'opérateur_ `=` afin d'affecter la valeur sept à la variable `x`. L'expression elle-même est évaluée avec la valeur `7`.
 
 L'expression `3 + 4` fait partie de la deuxième catégorie. Elle utilise l'opérateur `+` afin d'ajouter `3` et `4` pour produire une valeur&nbsp;: `7`. Toutefois, si cette valeur n'est pas utilisée au sein d'une structure plus importante (par exemple avec [une déclaration de variable](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations) comme `const z = 3 + 4`), elle sera immédiatement écartée (il s'agit généralement dans ce cas d'une erreur de programmation, car l'évaluation ne produira aucun effet).
 
@@ -55,13 +55,13 @@ opérateur opérande
 opérande opérateur
 ```
 
-`x++` et `++x` sont deux exemples d'expression avec un opérateur unaire. La forme `opérateur opérande` fonctionne pour les opérateurs unaires _postfixes_, tandis que la forme `opérande opérateur` fonctionne pour les opérateurs unaire _préfixes_. `++` et `--` sont les deux seuls opérateurs postfixes de JavaScript. Tous les autres opérateurs unaires, comme `!` ou `typeof`, sont préfixes.
+`x++` et `++x` sont deux exemples d'expression avec un opérateur unaire. La forme `opérateur opérande` fonctionne pour les opérateurs unaires _postfixes_, tandis que la forme `opérande opérateur` fonctionne pour les opérateurs unaires _préfixes_. `++` et `--` sont les deux seuls opérateurs postfixes de JavaScript. Tous les autres opérateurs unaires, comme `!` ou `typeof`, sont préfixes.
 
 ## Opérateurs d'affectation
 
-Un opérateur d'affectation affecte une valeur à son opérande gauche selon la valeur de son opérande droit. L'opérateur d'affectation simple est le signe égal (`=`), qui affecte la valeur de son opérande droit à son opérande gauche. Autrement dit, `x = f()` est une expression d'affecation qui affecte la valeur de `f()` à `x`.
+Un opérateur d'affectation affecte une valeur à son opérande gauche selon la valeur de son opérande droit. L'opérateur d'affectation simple est le signe égal (`=`), qui affecte la valeur de son opérande droit à son opérande gauche. Autrement dit, `x = f()` est une expression d'affectation qui affecte la valeur de `f()` à `x`.
 
-Il existe également des opérateurs d'affectation composites qui sont des raccourcis pour les opérations listées dans le tableau qui suit&nbsp;
+Il existe également des opérateurs d'affectation composites qui sont des raccourcis pour les opérations listées dans le tableau qui suit&nbsp;:
 
 | Nom                                                                                                                          | Opérateur          | Signification      |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
@@ -136,7 +136,7 @@ const [un, deux, trois] = toto;
 En général, les affectations sont utilisées pour une déclaration de variable (c'est-à-dire avec les instructions [`const`][], [`let`][], ou [`var`][]) ou comme instructions indépendantes.
 
 ```js
-// Déclare une variable x et l'initialise avec le résutlat de f().
+// Déclare une variable x et l'initialise avec le résultat de f().
 // Le résultat de l'expression d'affectation "x = f()" est écarté.
 let x = f();
 
@@ -170,28 +170,18 @@ console.log([ 0, x = f(), 0 ]);
 console.log(f(0, x = f(), 0));
 ```
 
-The evaluation result matches the expression to the right of the `=` sign in the
-"Meaning" column of the table above. That means that `x = f()` evaluates into
-whatever `f()`'s result is, `x += f()` evaluates into the resulting sum `x + f()`,
-`x **= f()` evaluates into the resulting power `x ** y`, and so on.
+Le résultat de l'évaluation correspond à l'expression à droite du signe `=` dans la colonne «&nbsp;Signification&nbsp;» du tableau ci-avant. Cela signifie que l'évaluation de `x = f()` aura comme résultat celui de `f()`, que l'évaluation de `x += f()` aura comme résultat la somme `x + f()`, que celle de 
+`x **= f()` aura comme résultat `x ** f()`, etc.
 
-In the case of logical assignments, `x &&= f()`,
-`x ||= f()`, and `x ??= f()`, the return value is that of the
-logical operation without the assignment, so `x && f()`,
-`x || f()`, and `x ?? f()`, respectively.
+Pour les affectations logiques, `x &&= f()`, `x ||= f()`, et `x ??= f()`, la valeur de retour est celle de l'opération logique sans affectation, soit `x && f()`, `x || f()`, et `x ?? f()`, respectivement.
 
-When chaining these expressions without parentheses or other grouping operators
-like array literals, the assignment expressions are **grouped right to left**
-(they are [right-associative][]), but they are **evaluated left to right**.
+Lorsqu'on enchaîne ces expressions sans parenthèses ou opérateur de groupement comme les littéraux de tableau, les expressions d'affectation sont **groupées de droite à gauche** (elles sont [associatives à droite][]), mais sont **évaluées de gauche à droite**.
 
-[right-associative]: https://en.wikipedia.org/wiki/Operator_associativity
+[associatives à droite]: https://en.wikipedia.org/wiki/Operator_associativity
 
-Note that, for all assignment operators other than `=` itself,
-the resulting values are always based on the operands' values _before_
-the operation.
+On notera que pour les opérateurs d'affectation, à l'exception de `=`, les valeurs résultantes sont toujours basées sur les valeurs des opérandes _avant_ l'opération.
 
-For example, assume that the following functions `f` and `g`
-and the variables `x` and `y` have been declared:
+Par exemple, si on a les fonctions `f` et `g` et les variables `x` et `y` comme suit&nbsp;:
 
 ```js
 function f () {
@@ -213,112 +203,70 @@ y = [ f(), x = g() ]
 x[f()] = g()
 ```
 
-#### Evaluation example 1
+#### Exemple d'évaluation n°1
 
-`y = x = f()` is equivalent to `y = (x = f())`,
-because the assignment operator `=` is [right-associative][].
-However, it evaluates from left to right:
+`y = x = f()` est équivalente à `y = (x = f())`, car l'opérateur d'affectation est associatif à droite. Toutefois l'évaluation se fait de gauche à droite&nbsp;:
 
-1. The assignment expression `y = x = f()` starts to evaluate.
-    1. The `y` on this assignment's left-hand side evaluates
-       into a reference to the variable named `y`.
-    2. The assignment expression `x = f()` starts to evaluate.
-        1. The `x` on this assignment's left-hand side evaluates
-           into a reference to the variable named `x`.
-        2. The function call `f()` prints "F!" to the console and
-           then evaluates to the number `2`.
-        3. That `2` result from `f()` is assigned to `x`.
-    3. The assignment expression `x = f()` has now finished evaluating;
-       its result is the new value of `x`, which is `2`.
-    4. That `2` result in turn is also assigned to `y`.
-2. The assignment expression `y = x = f()` has now finished evaluating;
-   its result is the new value of `y` – which happens to be `2`.
-   `x` and `y` are assigned to `2`,
-   and the console has printed "F!".
+1. L'évaluation de l'expression d'affectation `y = x = f()` commence.
+    1. L'opérande `y` à gauche de l'affectation est évalué comme une référence à la variable nommée `y`.
+    2. L'évaluation de l'expression d'affectation `x = f()` commence.
+        1. L'opérande `x` à gauche de l'affectation est évalué comme une référence à la variable nommée `x`.
+        2. L'appel de fonction `f()` affiche "F!" dans la console et renvoie la valeur `2`.
+        3. Ce résultat de `f()`, `2`, est affecté à `x`.
+    3. L'évaluation de l'expression d'affectation `x = f()` est maintenant terminée. Son résultat est la nouvelle valeur de `x`, qui est `2`.
+    4. Ce résultat, `2`, est à son tour affecté à `y`.
+2. L'évaluation de l'expression d'affectation `y = x = f()` est maintenant terminée. Son résultat est la nouvelle valeur de `y`, qui est ici `2`. La valeur `2` a été affectée à `x` et `y`, et la console a affiché "F!".
 
-#### Evaluation example 2
+#### Exemple d'évaluation n°2
 
-`y = [ f(), x = g() ]` also evaluates from left to right:
+`y = [ f(), x = g() ]` est également évaluée de gauche à droite&nbsp;:
 
-1. The assignment expression `y = [ f(), x = g() ]` starts to evaluate.
-    1. The `y` on this assignment's left-hand evaluates
-       into a reference to the variable named `y`.
-    2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
-        1. The function call `f()` prints "F!" to the console and
-           then evaluates to the number `2`.
-        2. The assignment expression `x = g()` starts to evaluate.
-            1. The `x` on this assignment's left-hand side evaluates
-               into a reference to the variable named `x`.
-            2. The function call `g()` prints "G!" to the console and
-               then evaluates to the number `3`.
-            3. That `3` result from `g()` is assigned to `x`.
-        3. The assignment expression `x = g()` has now finished evaluating;
-           its result is the new value of `x`, which is `3`.
-           That `3` result becomes the next element
-           in the inner array literal (after the `2` from the `f()`).
-    3. The inner array literal `[ f(), x = g() ]`
-       has now finished evaluating;
-       its result is an array with two values: `[ 2, 3 ]`.
-    4. That `[ 2, 3 ]` array is now assigned to `y`.
-2. The assignment expression `y = [ f(), x = g() ]` has
-   now finished evaluating;
-   its result is the new value of `y` – which happens to be `[ 2, 3 ]`.
-   `x` is now assigned to `3`,
-   `y` is now assigned to `[ 2, 3 ]`,
-   and the console has printed "F!" then "G!".
+1. L'évaluation de l'expression d'affectation `y = [ f(), x = g() ]` commence.
+    1. L'opérande `y` à gauche de l'affectation est évalué comme une référence à la variable nommée `y`.
+    2. L'évaluation du littéral de tableau `[ f(), x = g() ]` commence.
+        1. L'appel de fonction `f()` affiche "F!" dans la console et renvoie la valeur `2`.
+        2. L'évaluation de l'expression d'affectation `x = g()` commence.
+            1. L'opérande `x` à gauche de l'affectation est évalué comme une référence à la variable nommée `x`.
+            2. L'appel de fonction `g()` affiche "G!" dans la console et renvoie la valeur `3`.
+            3. Ce résultat de `g()`, `3`, est affecté à `x`.
+        3. L'évaluation de l'expression d'affectation `x = g()` est maintenant terminée. Son résultat est la nouvelle valeur de `x`&nbsp; `3`. Ce résultat devient l'élément qui suit dans le littéral de tableau (après le `2` provenant de `f()`).
+    3. L'évaluation du littéral de tableau `[ f(), x = g() ]` est maintenant terminée. Son résultat est un tableau avec deux valeurs&nbsp;: `[ 2, 3 ]`.
+    4. Ce tableau, `[ 2, 3 ]`, est affecté à `y`.
+2. L'évaluation de l'expression d'affectation `y = [ f(), x = g() ]` est maintenant terminée. Son résultat est la nouvelle valeur de `y`, qui est `[ 2, 3 ]`. `3` est affecté à `x`, `[ 2, 3 ]` est affecté à `y` et la console a affiché "F!" puis "G!".
 
-#### Evaluation example 3
+#### Exemple d'évaluation n°3
 
-`x[f()] = g()` also evaluates from left to right.
-(This example assumes that `x` is already assigned to some object.
-For more information about objects, read [Working with Objects](/fr/docs/Web/JavaScript/Guide/Working_with_Objects).)
+`x[f()] = g()` est également évaluée de gauche à droite. Dans cet exemple, on part du principe que la valeur de `x` est déjà un objet (pour plus d'informations sur les objets, voir [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_Objects)).
 
-1. The assignment expression `x[f()] = g()` starts to evaluate.
-    1. The `x[f()]` property access on this assignment's left-hand
-       starts to evaluate.
-        1. The `x` in this property access evaluates
-           into a reference to the variable named `x`.
-        2. Then the function call `f()` prints "F!" to the console and
-           then evaluates to the number `2`.
-    2. The `x[f()]` property access on this assignment
-       has now finished evaluating;
-       its result is a variable property reference: `x[2]`.
-    3. Then the function call `g()` prints "G!" to the console and
-       then evaluates to the number `3`.
-    4. That `3` is now assigned to `x[2]`.
-       (This step will succeed only if `x` is assigned to an [object](/fr/docs/Web/JavaScript/Guide/Working_with_Objects).)
-2. The assignment expression `x[f()] = g()` has now finished evaluating;
-   its result is the new value of `x[2]` – which happens to be `3`.
-   `x[2]` is now assigned to `3`,
-   and the console has printed "F!" then "G!".
+1. L'évaluation de l'expression d'affectation `x[f()] = g()` commence.
+    1. L'évaluation de l'accès à la propriété `x[f()]` situé à gauche de l'opérateur d'affectation commence.
+        1. Le `x` est évalué comme une référence à la variable nommée `x`.
+        2. Ensuite, l'appel `f()` affiche "F!" dans la console et renvoie la valeur `2`.
+    2. L'évaluation de `x[f()]` est maintenant terminée et son résultat est une variable qui référence la propriété `x[2]`.
+    3. Ensuite, l'appel à la fonction `g()` affiche "G!" dans la console et renvoie la valeur `3`.
+    4. Ce résultat, `3`, est affecté à `x[2]` (cette étape réussira uniquement si la valeur de `x` est un [objet](/fr/docs/Web/JavaScript/Guide/Working_with_Objects))?
+2. L'évaluation de l'expression d'affectation `x[f()] = g()` est maintenant terminée. Son résultat est la nouvelle valeur de `x[2]`, qui est `3`. `3` a été affecté à `x[2]` et la console a affiché "F!" puis "G!".
 
-### Avoid assignment chains
+### Éviter les enchaînements d'affectation
 
-Chaining assignments or nesting assignments in other expressions can
-result in surprising behavior. For this reason,
-[chaining assignments in the same statement is discouraged][discourage assign chain]).
+L'enchaînement ou l'imbrication d'affectations dans d'autres expressions peut produire d'étranges résultats et c'est pour cette raison [que les enchaînements et imbrications d'affectation sont déconseillés][discourage assign chain]).
 
-In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does _not_ work. Only the outermost/leftmost variable would get declared; other variables within the assignment chain are _not_ declared by the `const`/`let`/`var` statement.
-For example:
+On évitera en particulier les enchaînements d'affectation dans une instruction [`const`][], [`let`][], ou [`var`][] qui _ne fonctionnent pas_ dans la plupart des cas. Seule la variable la plus à gauche sera alors déclarée et les variables intermédiaires dans la chaîne ne seront _pas_ déclarées par l'instruction `const`/`let`/`var`. Ainsi, si on a&nbsp;:
 
 ```js
 const z = y = x = f();
 ```
 
-This statement seemingly declares the variables `x`, `y`, and `z`.
-However, it only actually declares the variable `z`.
-`y` and `x` are either invalid references to nonexistent variables (in [strict mode](/fr/docs/Web/JavaScript/Reference/Strict_mode)) or, worse, would implicitly create [global variables](/fr/docs/Glossary/Global_variable) for `x` and `y` in [sloppy mode](/fr/docs/Glossary/Sloppy_mode).
+On pourrait penser que cela permet de déclarer les variables `x`, `y`, et `z`. Cependant, seule la variable `z` est déclarée. `y` et `x` sont des références invalides à des variables inexistantes (en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)) ou, pire, créent des [variables globales](/fr/docs/Glossary/Global_variable) pour `x` et `y` en [mode non-strict](/fr/docs/Glossary/Sloppy_mode).
 
-## Comparison operators
+## Opérateurs de comparaison
 
-A comparison operator compares its operands and returns a logical value based on whether the comparison is true.
-The operands can be numerical, string, logical, or [object](/fr/docs/Web/JavaScript/Guide/Working_with_Objects) values.
-Strings are compared based on standard lexicographical ordering, using Unicode values.
-In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison.
-This behavior generally results in comparing the operands numerically.
-The sole exceptions to type conversion within comparisons involve the `===` and `!==` operators, which perform strict equality and inequality comparisons.
-These operators do not attempt to convert the operands to compatible types before checking equality.
-The following table describes the comparison operators in terms of this sample code:
+Un opérateur de comparaison compare ses opérandes et renvoie une valeur logique selon que la comparaison est vraie ou non. Les opérandes peuvent être des nombres, des chaînes de caractères, des booléens ou des [objets](/fr/docs/Web/JavaScript/Guide/Working_with_Objects). Les chaînes de caractères sont comparées selon l'ordre lexicographique standard en utilisant les valeurs Unicode.
+
+Dans la plupart des cas, si les deux opérandes ne sont pas du même type, le moteur JavaScript tentera de les convertir dans un type approprié pour la comparaison. Cela entraîne généralement une comparaison numérique des opérandes.
+
+Les opérateurs `===` et `!==` sont des exceptions à cette règle de conversion&nbsp;: ils réalisent des comparaisons d'égalité et d'inégalité strictes. Ces opérateurs n'effectuent pas de conversion des opérandes avant la vérification de l'égalité.
+Le tableau qui suit décrit les opérateurs de comparaison en utilisant ce fragment de code comme exemple&nbsp;:
 
 ```js
 const var1 = 3;
@@ -327,324 +275,291 @@ const var2 = 4;
 
 <table class="standard-table">
   <caption>
-    Comparison operators
+    Opérateurs de comparaison
   </caption>
   <thead>
     <tr>
-      <th scope="col">Operator</th>
+      <th scope="col">Opérateur</th>
       <th scope="col">Description</th>
-      <th scope="col">Examples returning true</th>
+      <th scope="col">Exemples qui renvoient <code>true</code></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Equality">Equal</a> (<code>==</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Equality">Égalité</a> (<code>==</code>)
       </td>
-      <td>Returns <code>true</code> if the operands are equal.</td>
+      <td>Renvoie <code>true</code> si les opérandes sont égaux (après conversion implicite).</td>
       <td>
-        <code>3 == var1</code>
-        <p><code>"3" == var1</code></p>
+        <code>3 == var1</code><br/>
+        <code>"3" == var1</code><br/>
         <code>3 == '3'</code>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality">Not equal</a> (<code>!=</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality">Inégalité</a> (<code>!=</code>)
       </td>
-      <td>Returns <code>true</code> if the operands are not equal.</td>
+      <td>Renvoie <code>true</code> si les opérandes sont différents (après conversion implicite).</td>
       <td>
-        <code>var1 != 4<br />var2 != "3"</code>
+        <code>var1 != 4</code><br/>
+        <code>var2 != "3"</code>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict equal</a> (<code>===</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality">Égalité stricte</a> (<code>===</code>)
       </td>
       <td>
-        Returns <code>true</code> if the operands are equal and of the same
-        type. See also [`Object.is`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) and
-        <a href="/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness">sameness in JS</a>.
+        Renvoie <code>true</code> si les opérandes sont égaux et du même type. Voir également <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is()</code></a> et <a href="/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness">l'égalité en JavaScript</a>.
       </td>
       <td><code>3 === var1</code></td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict not equal</a> (<code>!==</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Inégalité stricte</a> (<code>!==</code>)
       </td>
       <td>
-        Returns <code>true</code> if the operands are of the same type but not equal, or are of different type.
+        Renvoie <code>true</code> si les opérandes sont du même type et différents ou s'ils ne sont pas du même type.
       </td>
       <td>
-        <code>var1 !== "3"<br />3 !== '3'</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than</a> (<code>></code>)
-      </td>
-      <td>
-        Returns <code>true</code> if the left operand is greater than the right operand.
-      </td>
-      <td>
-        <code>var2 > var1<br />"12" > 2</code>
+        <code>var1 !== "3"</code><br/>
+        <code>3 !== '3'</code>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal</a>
-        (<code>>=</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than">Supériorité stricte</a> (<code>&gt;</code>)
       </td>
       <td>
-        Returns <code>true</code> if the left operand is greater than or equal to the right operand.
+        Renvoie <code>true</code> si l'opérande gauche est strictement supérieur à l'opérande droit.
       </td>
       <td>
-        <code>var2 >= var1<br />var1 >= 3</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than">Less than</a>
-        (<code>&#x3C;</code>)
-      </td>
-      <td>
-        Returns <code>true</code> if the left operand is less than the right operand.
-      </td>
-      <td>
-        <code>var1 &#x3C; var2<br />"2" &#x3C; 12</code>
+        <code>var2 &gt; var1</code><br/>
+        <code>"12" &gt; 2</code>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal</a>
-        (<code>&#x3C;=</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Supériorité</a> (<code>&gt;=</code>)
       </td>
       <td>
-        Returns <code>true</code> if the left operand is less than or equal to the right operand.
+        Renvoie <code>true</code> si l'opérande gauche est supérieur ou égal à l'opérande droit.
       </td>
       <td>
-        <code>var1 &#x3C;= var2<br />var2 &#x3C;= 5</code>
+        <code>var2 &gt;= var1</code><br/>
+        <code>var1 &gt;= 3</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than">Infériorité stricte</a> (<code>&lt;</code>)
+      </td>
+      <td>
+        Renvoie <code>true</code> si l'opérande gauche est strictement inférieur à l'opérande droit.
+      </td>
+      <td>
+        <code>var1 &lt; var2</code><br/>
+        <code>"2" &lt; 12</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Infériorité</a> (<code>&lt;=</code>)
+      </td>
+      <td>
+        Renvoie <code>true</code> si l'opérande gauche est inférieur ou égal à l'opérande droit.
+      </td>
+      <td>
+        <code>var1 &lt;= var2</code><br/>
+        <code>var2 &lt;= 5</code>
       </td>
     </tr>
   </tbody>
 </table>
 
-> **Note:** `=>` is not a comparison operator but rather is the notation
-> for [Arrow functions](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> **Note :** `=>` n'est pas un opérateur de comparaison, il s'agit de la notation pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-## Arithmetic operators
+## Opérateurs arithmétiques
 
-An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value.
-The standard arithmetic operators are addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`).
-These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)). For example:
+Un opérateur arithmétique combine des opérandes numériques et renvoie une valeur numérique. Les opérateurs arithmétiques standard sont l'addition (`+`), la soustraction (`-`), la multiplication (`*`), et la division (`/`). Ces opérateurs fonctionnent comme dans la plupart des langages de programmation qui utilisent les nombres flottants (la division par zéro donne notamment [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)). On pourra par exemple avoir&nbsp;:
 
 ```js
 1 / 2; // 0.5
-1 / 2 === 1.0 / 2.0; // this is true
+1 / 2 === 1.0 / 2.0; // true
 ```
 
-In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScript provides the arithmetic operators listed in the following table:
+En plus des opérations arithmétiques standard (`+`, `-`, `*`, `/`), JavaScript fournit les opérateurs arithmétiques suivants&nbsp;::
 
 <table class="fullwidth-table">
   <caption>
-    Arithmetic operators
+    Opérateurs arithmétiques
   </caption>
   <thead>
     <tr>
-      <th scope="col">Operator</th>
+      <th scope="col">Opérateur</th>
       <th scope="col">Description</th>
-      <th scope="col">Example</th>
+      <th scope="col">Exemple</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder</a> (<code>%</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Remainder">Reste</a> (<code>%</code>)
       </td>
       <td>
-        Binary operator. Returns the integer remainder of dividing the two operands.
+        Un opérateur binaire qui renvoie le reste entier de la division des deux opérandes.
       </td>
-      <td>12 % 5 returns 2.</td>
+      <td>`12 % 5` renvoie `2`.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Increment">Increment</a> (<code>++</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Increment">Incrément</a> (<code>++</code>)
       </td>
       <td>
-        Unary operator. Adds one to its operand. If used as a prefix operator
-        (<code>++x</code>), returns the value of its operand after adding one;
-        if used as a postfix operator (<code>x++</code>), returns the value of
-        its operand before adding one.
+        Un opérateur unaire qui ajoute un à son opérande. S'il est utilisé en opérateur préfixe (<code>++x</code>), il renvoie la valeur de son opérande après y avoir ajouté un. S'il est utilisé en opérateur postfixe (<code>x++</code>), il renvoie la valeur de l'opérande avant l'ajout de un.
       </td>
       <td>
-        If <code>x</code> is 3, then <code>++x</code> sets <code>x</code> to 4
-        and returns 4, whereas <code>x++</code> returns 3 and, only then, sets <code>x</code> to 4.
+        Si <code>x</code> vaut 3, alors <code>++x</code> définit <code>x</code> avec 4 et renvoie 4, tandis que <code>x++</code> renvoie 3 puis, uniquement après, définit <code>x</code> avec 4.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement</a> (<code>--</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Decrement">Décrément</a> (<code>--</code>)
       </td>
       <td>
-        Unary operator. Subtracts one from its operand.
-        The return value is analogous to that for the increment operator.
+        Un opérateur unaire qui soustrait un à son opérande. La valeur de retour est analogue à celle de l'opérateur d'incrément.
       </td>
       <td>
-        If <code>x</code> is 3, then <code>--x</code> sets <code>x</code> to 2
-        and returns 2, whereas <code>x--</code> returns 3 and, only then, sets <code>x</code> to 2.
+        Si <code>x</code> vaut 3, alors <code>--x</code> définit <code>x</code> avec 2 et renvoie 2, tandis que <code>x--</code> renvoie 3 puis, uniquement après, définit <code>x</code> avec 2.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation</a> (<code>-</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation">Négation unaire</a> (<code>-</code>)
       </td>
-      <td>Unary operator. Returns the negation of its operand.</td>
-      <td>If <code>x</code> is 3, then <code>-x</code> returns -3.</td>
+      <td>Un opérateur unaire qui renvoie l'opposé de l'opérande.</td>
+      <td>Si <code>x</code> vaut 3, <code>-x</code> renvoie -3.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus</a> (<code>+</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus">Plus unaire</a> (<code>+</code>)
       </td>
       <td>
-        Unary operator. Attempts to convert the operand to a number, if it is not already.
+        Un opérateur unaire qui tente la conversion de l'opérande en nombre si ce n'est pas déjà une valeur numérique.
       </td>
       <td>
-        <p><code>+"3"</code> returns <code>3</code>.</p>
-        <p><code>+true</code> returns <code>1</code>.</p>
+        <p><code>+"3"</code> renvoie <code>3</code>.</p>
+        <p><code>+true</code> renvoie <code>1</code>.</p>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a> (<code>**</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation">Opérateur d'exponentiation</a> (<code>**</code>)
       </td>
       <td>
-        Calculates the <code>base</code> to the <code>exponent</code> power,
-        that is, <code>base^exponent</code>
+        Élève une base donnée par l'opérande gauche à la puissance donnée par l'opérande droit.
       </td>
       <td>
-        <code>2 ** 3</code> returns <code>8</code>.<br /><code>10 ** -1</code>
-        returns <code>0.1</code>.
+        <code>2 ** 3</code> renvoie <code>8</code>. <code>10 ** -1</code> renvoie <code>0.1</code>.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Bitwise operators
+## Opérateurs binaires
 
-A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather
-than as decimal, hexadecimal, or octal numbers. For example, the decimal number nine has
-a binary representation of 1001. Bitwise operators perform their operations on such
-binary representations, but they return standard JavaScript numerical values.
+Un opérateur binaire traite les opérandes comme des suites de 32 bits (des zéros ou des uns) plutôt que comme des nombres décimaux, hexadécimaux et octaux. Ainsi, le nombre décimal 9 se représente en binaire comme 1001. Les opérateurs binaires effectuent leur opération sur des représentations binaires et renvoient des valeurs numériques.
 
-The following table summarizes JavaScript's bitwise operators.
+Le tableau qui suit détaille les opérateurs binaires JavaScript.
 
-| Operator                                                                                     | Usage     | Description                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Bitwise AND](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)                    | `a & b`   | Returns a one in each bit position for which the corresponding bits of both operands are ones.                                                                          |
-| [Bitwise OR](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)                      | `a \| b`  | Returns a zero in each bit position for which the corresponding bits of both operands are zeros.                                                                        |
-| [Bitwise XOR](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)                    | `a ^ b`   | Returns a zero in each bit position for which the corresponding bits are the same. [Returns a one in each bit position for which the corresponding bits are different.] |
-| [Bitwise NOT](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)                    | `~ a`     | Inverts the bits of its operand.                                                                                                                                        |
-| [Left shift](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)                      | `a << b`  | Shifts `a` in binary representation `b` bits to the left, shifting in zeros from the right.                                                                             |
-| [Sign-propagating right shift](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)   | `a >> b`  | Shifts `a` in binary representation `b` bits to the right, discarding bits shifted off.                                                                                 |
-| [Zero-fill right shift](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | `a >>> b` | Shifts `a` in binary representation `b` bits to the right, discarding bits shifted off, and shifting in zeros from the left.                                            |
+| Opérateur                                                                                                     | Utilisation | Description                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [ET binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)                                         | `a & b`     | Renvoie un à chaque position pour laquelle les bits des deux opérandes valent un.                                                    |
+| [OU binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)                                          | `a \| b`    | Renvoie un zéro à chaque position pour laquelle les bits des deux opérandes valent zéro.                                                |
+| [OU exclusif binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)                                | `a ^ b`     | Renvoie un zéro à chaque position pour laquelle les bits sont les mêmes. [Renvoie un à chaque position où les bits sont différents.] |
+| [NON binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)                                        | `~ a`       | Inverse les bits de l'opérande.                                                                                                         |
+| [Décalage à gauche](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)                                   | `a << b`    | Décale la représentation binaire de `a` de `b` bits vers la gauche, en ajoutant des zéros à droite.                                     |
+| [Décalage à droite avec propagation du signe](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)        | `a >> b`    | Décale la représentation binaire de `a` de `b` bits vers la droite, enlevant les bits en trop.                                          |
+| [Décalage à droite avec remplissage à zéro](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | `a >>> b`   | Décale la représentation binaire de `a` de `b` bits vers la droite, enlevant les bits en trop et en ajoutant des zéros à gauche.        |
 
-### Bitwise logical operators
+### Opérateurs binaires logiques
 
-Conceptually, the bitwise logical operators work as follows:
+Les opérateurs logiques binaires fonctionnent de la façon suivante&nbsp;:
 
-- The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones).
-  Numbers with more than 32 bits get their most significant bits discarded.
-  For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
+- Les opérandes sont convertis en entiers sur 32 bits. Pour les nombres dont la valeur binaire dépasse 32 bits, les bits les plus hauts sont abandonnés. Ainsi, l'entier suivant sur plus de 32 bits sera converti en entier sur 32 bits&nbsp;:
 
   ```
-  Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-  After:                 1010 0000 0000 0000 0110 0000 0000 0001
+  Avant : 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+  Après :                1010 0000 0000 0000 0110 0000 0000 0001
   ```
 
-- Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.
-- The operator is applied to each pair of bits, and the result is constructed bitwise.
+- Chaque bit du premier opérande est associé au bit correspondant du second opérande&nbsp;: le premier bit avec le premier bit, le second avec le second et ainsi de suite.
+- L'opérateur est appliqué sur chaque paire ainsi constituée et le résultat est construit en binaire.
 
-For example, the binary representation of nine is 1001, and the binary representation of fifteen is 1111.
-So, when the bitwise operators are applied to these values, the results are as follows:
+Par exemple, la représentation binaire du nombre décimal `9` est `1001`, et celle du nombre décimal `15` est `1111`. Aussi, quand on utilise les opérateurs binaires sur ces valeurs, on a les résultats suivants&nbsp;:
 
-| Expression | Result | Binary Description                                    |
-| ---------- | ------ | ----------------------------------------------------- |
-| `15 & 9`   | `9`    | `1111 & 1001 = 1001`                                  |
-| `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                                 |
-| `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                                  |
-| `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
-| `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
+| Expression | Résultat | Description binaire                                 |
+| ---------- | -------- | ----------------------------------------------------- |
+| `15 & 9`   | `9`      | `1111 & 1001 = 1001`                                  |
+| `15 \| 9`  | `15`     | `1111 \| 1001 = 1111`                                 |
+| `15 ^ 9`   | `6`      | `1111 ^ 1001 = 0110`                                  |
+| `~15`      | `-16`    | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000`     |
+| `~9`       | `-10`    | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110`     |
 
-Note that all 32 bits are inverted using the Bitwise NOT operator, and that values with
-the most significant (left-most) bit set to 1 represent negative numbers
-(two's-complement representation). `~x` evaluates to the same value that
-`-x - 1` evaluates to.
+On notera que tous les 32 bits sont inversés lors de l'utilisation de l'opérateur NON binaire et que les valeurs avec le bit le plus à gauche à 1 représentent des valeurs négatives (représentation en complément à deux). Aussi, l'évaluation de `~x` fournira la même valeur que `-x - 1`.
 
 ### Opérateurs de décalage binaire
 
-The bitwise shift operators take two operands: the first is a quantity to be shifted, and the second specifies the number of bit positions by which the first operand is to be
-shifted.
-The direction of the shift operation is controlled by the operator used.
+Les opérateurs de décalage binaire utilisent deux opérandes&nbsp;: celui de gauche est la quantité sur laquelle effectuer le décalage et celui de droite indique le nombre de bits à décaler. La direction de l'opération de décalage dépend de l'opérateur utilisé.
 
-Shift operators convert their operands to thirty-two-bit integers and return a result of either type [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) or [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt): specifically, if the type
-of the left operand is [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt), they return [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt);
-otherwise, they return [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).
+Les opérateurs de décalage convertissent leurs opérandes en entiers sur 32 bits et renvoient un résultat de type [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) selon la règle suivante&nbsp;: si l'opérande gauche est de type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt), la valeur de retour sera de type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) et sinon, la valeur de retour sera de type [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).
 
-The shift operators are listed in the following table.
+Les opérateurs de décalage sont listés dans le tableau suivant.
 
 <table class="fullwidth-table">
   <caption>
-    Bitwise shift operators
+    Opérateurs de décalage binaire
   </caption>
   <thead>
     <tr>
-      <th scope="col">Operator</th>
+      <th scope="col">Opérateur</th>
       <th scope="col">Description</th>
-      <th scope="col">Example</th>
+      <th scope="col">Exemple</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Left_shift">Left shift</a><br />(<code>&#x3C;&#x3C;</code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Left_shift">Décalage à gauche</a> (<code>&lt;&lt;</code>)
       </td>
       <td>
-        This operator shifts the first operand the specified number of bits to
-        the left. Excess bits shifted off to the left are discarded. Zero bits
-        are shifted in from the right.
+        Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la gauche. Les bits en trop sont abandonnés et des bits à 0 sont ajoutés sur la droite.
       </td>
       <td>
-        <code>9&#x3C;&#x3C;2</code> yields 36, because 1001 shifted 2 bits to
-        the left becomes 100100, which is 36.
+        <code>9&lt;&lt;2</code> donne `36`, car `1001`, décalé de 2 bits à gauche vaut `100100` en binaire, ce qui correspond à `36` en décimal.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Right_shift">Sign-propagating right shift</a> (<code>>></code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Right_shift">Décalage à droite avec propagation du signe</a> (<code>>></code>)
       </td>
       <td>
-        This operator shifts the first operand the specified number of bits to
-        the right. Excess bits shifted off to the right are discarded. Copies of
-        the leftmost bit are shifted in from the left.
+        Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la droite. Les bits en trop à droite sont abandonnés. Des copies du bit le plus à gauche sont ajoutés sur la gauche.
       </td>
       <td>
-        <code>9>>2</code> yields 2, because 1001 shifted 2 bits to the right
-        becomes 10, which is 2. Likewise, <code>-9>>2</code> yields -3, because the sign is preserved.
+        <code>9>>2</code> donne `2`, car `1001` décalé de 2 bits à droite vaut `10` en binaire, ce qui correspond à `2` en décimal. De même, <code>-9>>2</code> donne `-3`, car le signe est conservé.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Zero-fill right shift</a> (<code>>>></code>)
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Décalage à droite avec remplissage à zéro</a> (<code>>>></code>)
       </td>
       <td>
-        This operator shifts the first operand the specified number of bits to
-        the right. Excess bits shifted off to the right are discarded. Zero bits
-        are shifted in from the left.
+        Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la droite. Les bits en trop à droite sont abandonnés. Des bits à zéro sont ajoutés sur la gauche.
       </td>
       <td>
-        <code>19>>>2</code> yields 4, because 10011 shifted 2 bits to the right
-        becomes 100, which is 4. For non-negative numbers, zero-fill right shift
-        and sign-propagating right shift yield the same result.
+        <code>19>>>2</code> donne `4`, car `10011` décalé de deux bits à droite devient `100` en binaire, ce qui vaut `4` en décimal. Pour les valeurs positives, le décalage à droite avec remplissage à zéro et le décalage à droite avec propagation du signe fourniront le même résultat.
       </td>
     </tr>
   </tbody>
@@ -821,7 +736,7 @@ const statut = age >= 18 ? 'adulte' : 'mineur';
 
 Cette instruction affecte la valeur `"adulte"` à la variable `statut` si `age` est supérieur ou égal à 18. Sinon, c'est la valeur `"mineur"` qui est affectée à `statut`.
 
-## L'opérateur virgule
+## Opérateur virgule
 
 [L'opérateur virgule](/fr/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) évalue les deux opérandes et renvoie la valeur du dernier opérande. Cet opérateur est généralement utilisé dans les boucles `for` afin de mettre à jour plusieurs variables à chaque itération de la boucle. L'utiliser ailleurs est considéré comme une mauvaise pratique et on privilégiera plusieurs instructions séparées.
 
@@ -871,10 +786,10 @@ Comme les tableaux sont également des objets, il est techniquement possible de 
 [L'opérateur `typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) s'utilise de la façon suivante&nbsp;:
 
 ```js
-typeof operand
+typeof operande
 ```
 
-L'opérateur `typeof` renvoie une chaîne de caractères qui indique le type de l'opérande non-évalué. `operand` est une chaîne de caractères, une variable, un mot-clé ou un objet dont on souhaite connaître le type. On peut utiliser des parenthèses autour de l'opérande.
+L'opérateur `typeof` renvoie une chaîne de caractères qui indique le type de l'opérande non-évalué. `operande` est une chaîne de caractères, une variable, un mot-clé ou un objet dont on souhaite connaître le type. On peut utiliser des parenthèses autour de l'opérande.
 
 Prenons la définition des variables suivantes&nbsp;:
 
@@ -971,7 +886,7 @@ const arbres = ['séquoia', 'laurier', 'cèdre', 'chêne', 'érable'];
 0 in arbres;         // renvoie true
 3 in arbres;         // renvoie true
 6 in arbres;         // renvoie false
-'séquoia' in arbres; // renvoie false (il faut indique l'indice, pas la
+'séquoia' in arbres; // renvoie false (il faut indiquer l'indice, pas la
                      // valeur)
 'length' in arbres;  // renvoie true (length est une propriété native)
 
