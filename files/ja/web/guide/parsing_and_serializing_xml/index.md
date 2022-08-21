@@ -19,43 +19,41 @@ tags:
   - XMLHttpRequest
 translation_of: Web/Guide/Parsing_and_serializing_XML
 ---
-<p>場合によっては、{{Glossary("XML")}} のコンテンツを解析して {{Glossary("DOM")}} ツリーに変換する必要があるでしょう。または逆に、既存の DOM ツリーを XML にシリアライズすることもあります。<span class="seoSummary">この記事では、XML のシリアライズと解析の一般的な作業を容易にするため、ウェブプラットフォームで提供されるオブジェクトに注目します。</span></p>
+場合によっては、{{Glossary("XML")}} のコンテンツを解析して {{Glossary("DOM")}} ツリーに変換する必要があるでしょう。または逆に、既存の DOM ツリーを XML にシリアライズすることもあります。この記事では、XML のシリアライズと解析の一般的な作業を容易にするため、ウェブプラットフォームで提供されるオブジェクトに注目します。
 
-<dl>
- <dt>{{domxref("XMLSerializer")}}</dt>
- <dd>DOM ツリーをシリアライズし、XML を含む文字列に変換します。</dd>
- <dt>{{domxref("DOMParser")}}</dt>
- <dd>XML を含む文字列を解析して DOM ツリーを構築し、入力データに基づいて適切な {{domxref("XMLDocument")}} または {{domxref("Document")}} を返します。</dd>
- <dt>{{domxref("XMLHttpRequest")}}</dt>
- <dd>URL からコンテンツを読み込みます。XML コンテンツは、XML 自体から構築された DOM ツリーを持つ XML {{domxref("Document")}} オブジェクトとして返されます。</dd>
- <dt><a href="/ja/docs/XPath">XPath</a></dt>
- <dd>XML 文書の特定の部分のアドレスを含む文字列を作成し、それらのアドレスに基づいて XML ノードを特定する技術。</dd>
-</dl>
+- {{domxref("XMLSerializer")}}
+  - : DOM ツリーをシリアライズし、XML を含む文字列に変換します。
+- {{domxref("DOMParser")}}
+  - : XML を含む文字列を解析して DOM ツリーを構築し、入力データに基づいて適切な {{domxref("XMLDocument")}} または {{domxref("Document")}} を返します。
+- {{domxref("XMLHttpRequest")}}
+  - : URL からコンテンツを読み込みます。XML コンテンツは、XML 自体から構築された DOM ツリーを持つ XML {{domxref("Document")}} オブジェクトとして返されます。
+- [XPath](/ja/docs/XPath)
+  - : XML 文書の特定の部分のアドレスを含む文字列を作成し、それらのアドレスに基づいて XML ノードを特定する技術。
 
-<h2 id="Creating_an_XML_document" name="Creating_an_XML_document">XML 文書を作成する</h2>
+## XML 文書を作成する
 
-<p>次のいずれかの方法で XML 文書を作成します (これは {{domxref("Document")}} のインスタンスです)。</p>
+次のいずれかの方法で XML 文書を作成します (これは {{domxref("Document")}} のインスタンスです)。
 
-<h3 id="Parsing_strings_into_DOM_trees" name="Parsing_strings_into_DOM_trees">文字列を DOM ツリーにパースする</h3>
+### 文字列を DOM ツリーにパースする
 
-<p>この例では、{{domxref("DOMParser")}} を使用して文字列の XML フラグメントを DOM ツリーに変換します:</p>
+この例では、{{domxref("DOMParser")}} を使用して文字列の XML フラグメントを DOM ツリーに変換します:
 
-<div style="overflow: hidden;">
-<pre class="brush: js notranslate">const xmlStr = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
+```js
+const xmlStr = '<a id="a"><b id="b">hey!</b></a>';
 const parser = new DOMParser();
 const dom = parser.parseFromString(xmlStr, "application/xml");
 // print the name of the root element or error message
 console.log(dom.documentElement.nodeName == "parsererror" ? "error while parsing" : dom.documentElement.nodeName);
-</pre>
-</div>
+```
 
-<h3 id="Parsing_URL-addressable_resources_into_DOM_trees" name="Parsing_URL-addressable_resources_into_DOM_trees">URL にできるリソースを DOM ツリーにパースする</h3>
+### URL にできるリソースを DOM ツリーにパースする
 
-<h4 id="Using_XMLHttpRequest" name="Using_XMLHttpRequest">XMLHttpRequest を使用する</h4>
+#### XMLHttpRequest を使用する
 
-<p>URL アドレス指定が可能な XML ファイルを読み込み解析して DOM ツリーにするサンプルコードを次に示します:</p>
+URL アドレス指定が可能な XML ファイルを読み込み解析して DOM ツリーにするサンプルコードを次に示します:
 
-<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
+```js
+const xhr = new XMLHttpRequest();
 
 xhr.onload = function() {
   dump(xhr.responseXML.documentElement.nodeName);
@@ -68,48 +66,49 @@ xhr.onerror = function() {
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";
 xhr.send();
-</pre>
+```
 
-<p><code>xhr</code> オブジェクトの {{domxref("XMLHttpRequest.responseXML", "responseXML")}} フィールドで返される値は XML の解析により構築された {{domxref("Document")}} です。</p>
+`xhr` オブジェクトの {{domxref("XMLHttpRequest.responseXML", "responseXML")}} フィールドで返される値は XML の解析により構築された {{domxref("Document")}} です。
 
-<p>document が {{Glossary("HTML")}} である場合、上記のコードは {{domxref("Document")}} を返します。document が XML である場合、返されるオブジェクトは {{domxref("XMLDocument")}} になります。この 2 種類は基本的に同じですが、その違いは主に歴史的な部分であり、差別化にはいくつかの実用的な利点があります。</p>
+document が {{Glossary("HTML")}} である場合、上記のコードは {{domxref("Document")}} を返します。document が XML である場合、返されるオブジェクトは {{domxref("XMLDocument")}} になります。この 2 種類は基本的に同じですが、その違いは主に歴史的な部分であり、差別化にはいくつかの実用的な利点があります。
 
-<div class="note">
-<p><strong>Note:</strong> There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is simply an alias for the <code>Document</code> interface.</p>
-</div>
+> **Note:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is simply an alias for the `Document` interface.
 
-<h2 id="Serializing_an_XML_document" name="Serializing_an_XML_document">XML 文書のシリアライズ</h2>
+## XML 文書のシリアライズ
 
-<p>Given a {{domxref("Document")}}, you can serialize the document's DOM tree back into XML using the {{domxref("XMLSerializer.serializeToString()")}} method.</p>
+Given a {{domxref("Document")}}, you can serialize the document's DOM tree back into XML using the {{domxref("XMLSerializer.serializeToString()")}} method.
 
-<p>Use the following approaches to serialize the contents of the XML document you created in the previous section.</p>
+Use the following approaches to serialize the contents of the XML document you created in the previous section.
 
-<h3 id="Serializing_DOM_trees_to_strings" name="Serializing_DOM_trees_to_strings">DOM ツリーを文字列にシリアライズ</h3>
+### DOM ツリーを文字列にシリアライズ
 
-<p>First, create a DOM tree as described in <a href="/ja/How_to_create_a_DOM_tree" title="en/How_to_create_a_DOM_tree">How to Create a DOM tree</a>. Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.</p>
+First, create a DOM tree as described in [How to Create a DOM tree](/ja/How_to_create_a_DOM_tree "en/How_to_create_a_DOM_tree"). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
 
-<p>To serialize the DOM tree <code>doc</code> into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:</p>
+To serialize the DOM tree `doc` into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:
 
-<pre class="brush: js notranslate">const serializer = new XMLSerializer();
-const xmlStr = serializer.serializeToString(doc);</pre>
+```js
+const serializer = new XMLSerializer();
+const xmlStr = serializer.serializeToString(doc);
+```
 
-<h3 id="Serializing_HTML_documents" name="Serializing_HTML_documents">HTML 文書のシリアライズ</h3>
+### HTML 文書のシリアライズ
 
-<p>If the DOM you have is an HTML document, you can serialize using <code>serializeToString()</code>, but there is a simpler option: just use the {{domxref("Element.innerHTML")}} property (if you want just the descendants of the specified node) or the {{domxref("Element.outerHTML")}} property if you want the node and all its descendants.</p>
+If the DOM you have is an HTML document, you can serialize using `serializeToString()`, but there is a simpler option: just use the {{domxref("Element.innerHTML")}} property (if you want just the descendants of the specified node) or the {{domxref("Element.outerHTML")}} property if you want the node and all its descendants.
 
-<pre class="brush: js notranslate">const docInnerHtml = document.documentElement.innerHTML;
-</pre>
+```js
+const docInnerHtml = document.documentElement.innerHTML;
+```
 
-<p>As a result, <code>docHTML</code> is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.</p>
+As a result, `docHTML` is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.
 
-<p>You can get HTML corresponding to the <code>&lt;body&gt;</code> <em>and</em> its descendants with this code:</p>
+You can get HTML corresponding to the `<body>` _and_ its descendants with this code:
 
-<pre class="brush: js notranslate">const docOuterHtml = document.documentElement.outerHTML;</pre>
+```js
+const docOuterHtml = document.documentElement.outerHTML;
+```
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a class="internal" href="/ja/XPath">XPath</a></li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{domxref("Document")}}, {{domxref("XMLDocument")}} および {{domxref("HTMLDocument")}}</li>
-</ul>
+- [XPath](/ja/XPath)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("Document")}}, {{domxref("XMLDocument")}} および {{domxref("HTMLDocument")}}

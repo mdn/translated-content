@@ -3,322 +3,296 @@ title: Challenge solutions
 slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
 ---
-<p>このページは、 <a href="/ja/CSS/Getting_Started">CSS Getting Started</a> チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。</p>
-<h2 id="CSS_をなぜ用いるか"><a href="/ja/CSS/Getting_Started/Why_use_CSS" id="Why_use_CSS_Colors" title="MDC">CSS をなぜ用いるか</a></h2>
-<h3 id="Colors">Colors</h3>
-<dl>
- <dt>
-  Challenge</dt>
-</dl>
-<dl>
- <dd>
-  Without looking up a reference, find five more color names that work in your stylesheet.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  CSS supports common color names like <code>orange</code>, <code>yellow</code>, <code>blue</code>, <code>green</code>, or <code>black</code>. It also supports some more exotic color names like <code>chartreuse</code>, <code>fuschia</code>, or <code>burlywood</code>. See <a href="/ja/CSS/color_value">CSS Color value</a> for a complete list as well as other ways of specifying colors.</dd>
-</dl>
-<h2 id="どのように_CSS_は動作するのか"><a href="/ja/CSS/Getting_Started/How_CSS_works" id="How_CSS_works_DOM_inspector" title="MDC">どのように CSS は動作するのか</a></h2>
-<h3 id="DOM_inspector">DOM inspector</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  In DOMi, click on a <small>STRONG</small> node. Use DOMi's right-hand pane to find out where the node's color is set to red, and where its appearance is made bolder than normal text.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  In the menu above the right-hand pane, choose <strong>CSS Rules</strong>.  You see two items listed, one that references an internal resource and one that references your stylesheet file. The internal resource defines the <strong>font-weight</strong> property as <code>bolder</code>; your stylesheet defines the <strong>color</strong> property as <code>red</code>.</dd>
-</dl>
-<h2 id="接続と継承"><a href="/ja/CSS/Getting_Started/Cascading_and_inheritance" id="Cascading_and_inheritance" title="MDC">接続と継承</a></h2>
-<h3 id="Inherited_styles">Inherited styles</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Change your stylesheet so that only the red letters are underlined.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  Move the declaration for underlining from the rule for {{ HTMLElement("p") }} to the one for {{ HTMLElement("strong") }}. The resulting file looks like this:
-  <pre class="brush: css">p {color: blue; }
-strong {color: orange; text-decoration: underline;}
-</pre>
- </dd>
-</dl>
-<p>Later sections of this tutorial describe style rules and declarations in greater detail.</p>
-<h2 id="セレクター"><a href="/ja/CSS/Getting_Started/Selectors" id="Selectors" title="MDC">セレクター</a></h2>
-<h3 id="Second_paragraph_blue">Second paragraph blue</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Without changing your HTML file, add a single rule to your CSS file that keeps all the initial letters the same color as they are now, but makes all the other text in the second paragraph blue.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  Add a rule with an ID selector of <code>#second</code> and a declaration <code>color: blue;</code>, as shown below:
-  <pre class="brush: css">#second { color: blue; }
-</pre>
-  A more specific selector, <code>p#second</code> also works.</dd>
-</dl>
-<h3 id="Both_paragraphs_blue">Both paragraphs blue</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Now change the rule you have just added (without changing anything else), to make the first paragraph blue too.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  Change the selector of the new rule to be a tag selector using <code>p</code>:
-  <pre class="brush: css">p { color: blue; }
-</pre>
- </dd>
-</dl>
-<p>The rules for the other colors all have more specific selectors, so they override the blue of the paragraph.</p>
-<h2 id="読みやすい_CSS"><a href="/" id="Readable_CSS" title="MDC">読みやすい CSS</a></h2>
-<h3 id="Commenting_out_a_rule">Commenting out a rule</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Comment out part of your stylesheet, without changing anything else, to make the very first letter of your document red.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  One way to do this is to put comment delimiters around the rule for <code>.carrot</code>:
-  <pre class="brush: css">/*
-.carrot {
-  color: orange;
-}
-*/
-</pre>
- </dd>
-</dl>
-<h2 id="文章のスタイル"><a href="/" id="Text_styles" title="MDC">文章のスタイル</a></h2>
-<h3 id="Big_initial_letters">Big initial letters</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Without changing anything else, make all six initial letters twice the size in the browser's default serif font.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  Add the following style declaration to the <code>strong</code> rule:
-  <pre class="brush: css">  font: 200% serif;
-</pre>
-  If you use separate declarations for <code>font-size</code> and <code>font-family</code>, then the <code>font-style</code> setting on the first paragraph is <em>not</em> overridden.</dd>
-</dl>
-<h2 id="色"><a href="/" id="Color" title="MDC">色</a></h2>
-<h3 id="Three-digit_color_codes">Three-digit color codes</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  In your CSS file, change all the color names to 3-digit color codes without affecting the result.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  The following values are reasonable approximations of the named colors:
-  <pre class="brush: css">strong {
-  color: #f00; /* red */
-  background-color: #ddf; /* pale blue */
-  font: 200% serif;
-}
+このページは、 [CSS Getting Started](/ja/CSS/Getting_Started) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
 
-.carrot {
-  color: #fa0; /* orange */
-}
+## [CSS をなぜ用いるか](/ja/CSS/Getting_Started/Why_use_CSS "MDC")
 
-.spinach {
-  color: #080; /* dark green */
-}
+### Colors
 
-p {
-  color: #00f; /* blue */
-}
-</pre>
- </dd>
-</dl>
-<h2 id="コンテンツ"><a href="/" id="Content" title="MDC">コンテンツ</a></h2>
-<h3 id="画像の追加">画像の追加</h3>
-<dl>
- <dt>
-  チャレンジ</dt>
- <dd>
-  各行の初めに画像を表示するように、スタイルシートに一つルールを追加してください。</dd>
- <dt>
-  解答</dt>
- <dd>
-  次のルールをスタイルシートに追加します:
-  <pre class="brush: css">p:before{
-  content: url("yellow-pin.png");
-}
-</pre>
- </dd>
-</dl>
-<h2 id="リスト"><a href="/ja/CSS/Getting_Started/Lists" id="Lists" title="MDC">リスト</a></h2>
-<h3 id="小文字のローマ数字">小文字のローマ数字</h3>
-<dl>
- <dt>
-  チャレンジ</dt>
- <dd>
-  スタイルシートに一つルールを追加して、リスト項目に i から v のローマ数字で番号をつけてください。</dd>
- <dt>
-  解答</dt>
- <dd>
-  <code>lower-roman</code> のリストスタイルを使って、リスト項目に一つルールを定義します:
-  <pre class="brush: css">li {
-  list-style: lower-roman;
-}
-</pre>
- </dd>
-</dl>
-<h3 id="大文字">大文字</h3>
-<dl>
- <dt>
-  チャレンジ</dt>
- <dd>
-  見出しを括弧内の大文字のアルファベットで識別するように、スタイルシートを変更してください。</dd>
- <dt>
-  解答</dt>
- <dd>
-  body 要素（見出しの親要素）にはカウンターをリセットするルールを、見出しにはカウンターを表示し増加させるルールを追加します:
-  <pre class="brush: css">/* numbered headings */
-body {counter-reset: headnum;}
-h3:before {
-  content: "(" counter(headnum, upper-latin) ") ";
-  counter-increment: headnum;
-}
+- Challenge
+  - : Without looking up a reference, find five more color names that work in your stylesheet.
+- Solution
+  - : CSS supports common color names like `orange`, `yellow`, `blue`, `green`, or `black`. It also supports some more exotic color names like `chartreuse`, `fuschia`, or `burlywood`. See [CSS Color value](/ja/CSS/color_value) for a complete list as well as other ways of specifying colors.
 
-</pre>
- </dd>
-</dl>
-<h2 id="ボックス"><a href="/ja/CSS/Getting_Started/Boxes" id="Boxes" title="MDC">ボックス</a></h2>
-<h3 id="海の境界線">海の境界線</h3>
-<dl>
- <dt>
-  チャレンジ</dt>
- <dd>
-  スタイルシートに一つルールを追加して、リスト項目全体を囲むような広い枠を作り、海を連想するような色にしてください。</dd>
- <dt>
-  解答</dt>
- <dd>
-  次のルールでこの効果を出せます:
-  <pre class="brush: css">ul {
-  border: 10px solid lightblue;
-}
+## [どのように CSS は動作するのか](/ja/CSS/Getting_Started/How_CSS_works "MDC")
 
-</pre>
- </dd>
-</dl>
-<h2 id="レイアウト"><a href="/ja/CSS/Getting_Started/Layout" id="Layout" title="MDC">レイアウト</a></h2>
-<h3 id="デフォルトの画像位置">デフォルトの画像位置</h3>
-<dl>
- <dt>
-  チャレンジ</dt>
- <dd>
-  サンプル文書 <code>doc2.html</code> を編集し、次のタグを文書の末尾近く、<code>&lt;/BODY&gt;</code> のすぐ前に追加します: <code> &lt;IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin"&gt;</code> 画像がどこに現れるか、推測してみてください。それからブラウザを更新して、正しかったかどうかを確認してください。</dd>
- <dt>
-  解答</dt>
- <dd>
-  画像は2番めのリストの右側に現れます。<br>
-  <img alt="pin_placement.png" class="internal default" src="/@api/deki/files/4718/=pin_placement.png"></dd>
-</dl>
-<h3 id="画像位置の固定化">画像位置の固定化</h3>
-<dl>
- <dt>
-  チャレンジ</dt>
- <dd>
-  スタイルシートにルールを追加して、文書の右上に画像を置くようにしてください。</dd>
- <dt>
-  解答</dt>
- <dd>
-  次のルールでできます:
-  <pre>#fixed-pin  {
-  position:fixed;
-  top: 3px;
-  right: 3px;
-} </pre>
- </dd>
-</dl>
-<h2 id="表"><a href="/ja/CSS/Getting_Started/Tables" id="Tables">表</a></h2>
-<h3 id="Borders_on_data_cells_only">Borders on data cells only</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Change the stylesheet to make the table have a green border around only the data cells.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  The following rule puts borders around only {{ HTMLElement("td") }} elements that are inside the {{ HTMLElement("tbody") }} element of the table with <code>id=demo-table</code>:
-  <pre>#demo-table tbody td {
-  border:1px solid #7a7;
-}
-</pre>
- </dd>
-</dl>
-<h2 id="メディア"><a href="/ja/CSS/Getting_Started/Media" id="Media" title="MDC">メディア</a></h2>
-<h3 id="Separate_print_style_file">Separate print style file</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Move the print-specific style rules to a separate CSS file and import them into your <code>style4.css</code> stylesheet.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  Cut and paste the lines between <code>/* print only */</code> and <code>/* end print only */</code> into a file named <code>style4_print.css</code>. In style4.css, add the following line at the beginning of the file:
-  <pre>@import url("style4_print.css") print;
-</pre>
- </dd>
-</dl>
-<h3 id="Heading_hover_color">Heading hover color</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Make the headings turn blue when the mouse pointer is over them.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  The following rule achieves the desired result:
-  <pre>h1:hover {
-  color: blue;
-}
-</pre>
- </dd>
-</dl>
-<h2 id="JavaScript">JavaScript</h2>
-<h3 id="Move_box_to_the_right">Move box to the right</h3>
-<dl>
- <dt>
-  Challenge</dt>
- <dd>
-  Change the script so that the square jumps to the right by 20 em when its color changes, and jumps back afterwards.</dd>
- <dt>
-  Solution</dt>
- <dd>
-  Add lines to modify the <code>margin-left</code> property. Be sure to specify it as <code>marginLeft</code> in JavaScript. The following script achieves the desired result:
-  <pre class="brush: css">// JavaScript demonstration
-function doDemo (button) {
-  var square = document.getElementById("square");
-  square.style.backgroundColor = "#fa4";
-  square.style.marginLeft = "20em";
-  button.setAttribute("disabled", "true");
-  setTimeout(clearDemo, 2000, button);
-}
+### DOM inspector
 
-function clearDemo (button) {
-  var square = document.getElementById("square");
-  square.style.backgroundColor = "transparent";
-  square.style.marginLeft = "0em";
-  button.removeAttribute("disabled");
-}
+- Challenge
+  - : In DOMi, click on a STRONG node. Use DOMi's right-hand pane to find out where the node's color is set to red, and where its appearance is made bolder than normal text.
+- Solution
+  - : In the menu above the right-hand pane, choose **CSS Rules**. You see two items listed, one that references an internal resource and one that references your stylesheet file. The internal resource defines the **font-weight** property as `bolder`; your stylesheet defines the **color** property as `red`.
 
-</pre>
- </dd>
-</dl>
+## [接続と継承](/ja/CSS/Getting_Started/Cascading_and_inheritance "MDC")
+
+### Inherited styles
+
+- Challenge
+  - : Change your stylesheet so that only the red letters are underlined.
+- Solution
+
+  - : Move the declaration for underlining from the rule for {{ HTMLElement("p") }} to the one for {{ HTMLElement("strong") }}. The resulting file looks like this:
+
+    ```css
+    p {color: blue; }
+    strong {color: orange; text-decoration: underline;}
+    ```
+
+Later sections of this tutorial describe style rules and declarations in greater detail.
+
+## [セレクター](/ja/CSS/Getting_Started/Selectors "MDC")
+
+### Second paragraph blue
+
+- Challenge
+  - : Without changing your HTML file, add a single rule to your CSS file that keeps all the initial letters the same color as they are now, but makes all the other text in the second paragraph blue.
+- Solution
+
+  - : Add a rule with an ID selector of `#second` and a declaration `color: blue;`, as shown below:
+
+    ```css
+    #second { color: blue; }
+    ```
+
+    A more specific selector, `p#second` also works.
+
+### Both paragraphs blue
+
+- Challenge
+  - : Now change the rule you have just added (without changing anything else), to make the first paragraph blue too.
+- Solution
+
+  - : Change the selector of the new rule to be a tag selector using `p`:
+
+    ```css
+    p { color: blue; }
+    ```
+
+The rules for the other colors all have more specific selectors, so they override the blue of the paragraph.
+
+## [読みやすい CSS](/ "MDC")
+
+### Commenting out a rule
+
+- Challenge
+  - : Comment out part of your stylesheet, without changing anything else, to make the very first letter of your document red.
+- Solution
+
+  - : One way to do this is to put comment delimiters around the rule for `.carrot`:
+
+    ```css
+    /*
+    .carrot {
+      color: orange;
+    }
+    */
+    ```
+
+## [文章のスタイル](/ "MDC")
+
+### Big initial letters
+
+- Challenge
+  - : Without changing anything else, make all six initial letters twice the size in the browser's default serif font.
+- Solution
+
+  - : Add the following style declaration to the `strong` rule:
+
+    ```css
+      font: 200% serif;
+    ```
+
+    If you use separate declarations for `font-size` and `font-family`, then the `font-style` setting on the first paragraph is _not_ overridden.
+
+## [色](/ "MDC")
+
+### Three-digit color codes
+
+- Challenge
+  - : In your CSS file, change all the color names to 3-digit color codes without affecting the result.
+- Solution
+
+  - : The following values are reasonable approximations of the named colors:
+
+    ```css
+    strong {
+      color: #f00; /* red */
+      background-color: #ddf; /* pale blue */
+      font: 200% serif;
+    }
+
+    .carrot {
+      color: #fa0; /* orange */
+    }
+
+    .spinach {
+      color: #080; /* dark green */
+    }
+
+    p {
+      color: #00f; /* blue */
+    }
+    ```
+
+## [コンテンツ](/ "MDC")
+
+### 画像の追加
+
+- チャレンジ
+  - : 各行の初めに画像を表示するように、スタイルシートに一つルールを追加してください。
+- 解答
+
+  - : 次のルールをスタイルシートに追加します:
+
+    ```css
+    p:before{
+      content: url("yellow-pin.png");
+    }
+    ```
+
+## [リスト](/ja/CSS/Getting_Started/Lists "MDC")
+
+### 小文字のローマ数字
+
+- チャレンジ
+  - : スタイルシートに一つルールを追加して、リスト項目に i から v のローマ数字で番号をつけてください。
+- 解答
+
+  - : `lower-roman` のリストスタイルを使って、リスト項目に一つルールを定義します:
+
+    ```css
+    li {
+      list-style: lower-roman;
+    }
+    ```
+
+### 大文字
+
+- チャレンジ
+  - : 見出しを括弧内の大文字のアルファベットで識別するように、スタイルシートを変更してください。
+- 解答
+
+  - : body 要素（見出しの親要素）にはカウンターをリセットするルールを、見出しにはカウンターを表示し増加させるルールを追加します:
+
+    ```css
+    /* numbered headings */
+    body {counter-reset: headnum;}
+    h3:before {
+      content: "(" counter(headnum, upper-latin) ") ";
+      counter-increment: headnum;
+    }
+    ```
+
+## [ボックス](/ja/CSS/Getting_Started/Boxes "MDC")
+
+### 海の境界線
+
+- チャレンジ
+  - : スタイルシートに一つルールを追加して、リスト項目全体を囲むような広い枠を作り、海を連想するような色にしてください。
+- 解答
+
+  - : 次のルールでこの効果を出せます:
+
+    ```css
+    ul {
+      border: 10px solid lightblue;
+    }
+    ```
+
+## [レイアウト](/ja/CSS/Getting_Started/Layout "MDC")
+
+### デフォルトの画像位置
+
+- チャレンジ
+  - : サンプル文書 `doc2.html` を編集し、次のタグを文書の末尾近く、`</BODY>` のすぐ前に追加します: `<IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin">` 画像がどこに現れるか、推測してみてください。それからブラウザを更新して、正しかったかどうかを確認してください。
+- 解答
+  - : 画像は 2 番めのリストの右側に現れます。
+    ![pin_placement.png](/@api/deki/files/4718/=pin_placement.png)
+
+### 画像位置の固定化
+
+- チャレンジ
+  - : スタイルシートにルールを追加して、文書の右上に画像を置くようにしてください。
+- 解答
+
+  - : 次のルールでできます:
+
+    ```
+    #fixed-pin  {
+      position:fixed;
+      top: 3px;
+      right: 3px;
+    }
+    ```
+
+## [表](/ja/CSS/Getting_Started/Tables)
+
+### Borders on data cells only
+
+- Challenge
+  - : Change the stylesheet to make the table have a green border around only the data cells.
+- Solution
+
+  - : The following rule puts borders around only {{ HTMLElement("td") }} elements that are inside the {{ HTMLElement("tbody") }} element of the table with `id=demo-table`:
+
+    ```
+    #demo-table tbody td {
+      border:1px solid #7a7;
+    }
+    ```
+
+## [メディア](/ja/CSS/Getting_Started/Media "MDC")
+
+### Separate print style file
+
+- Challenge
+  - : Move the print-specific style rules to a separate CSS file and import them into your `style4.css` stylesheet.
+- Solution
+
+  - : Cut and paste the lines between `/* print only */` and `/* end print only */` into a file named `style4_print.css`. In style4.css, add the following line at the beginning of the file:
+
+    ```
+    @import url("style4_print.css") print;
+    ```
+
+### Heading hover color
+
+- Challenge
+  - : Make the headings turn blue when the mouse pointer is over them.
+- Solution
+
+  - : The following rule achieves the desired result:
+
+    ```
+    h1:hover {
+      color: blue;
+    }
+    ```
+
+## JavaScript
+
+### Move box to the right
+
+- Challenge
+  - : Change the script so that the square jumps to the right by 20 em when its color changes, and jumps back afterwards.
+- Solution
+
+  - : Add lines to modify the `margin-left` property. Be sure to specify it as `marginLeft` in JavaScript. The following script achieves the desired result:
+
+    ```css
+    // JavaScript demonstration
+    function doDemo (button) {
+      var square = document.getElementById("square");
+      square.style.backgroundColor = "#fa4";
+      square.style.marginLeft = "20em";
+      button.setAttribute("disabled", "true");
+      setTimeout(clearDemo, 2000, button);
+    }
+
+    function clearDemo (button) {
+      var square = document.getElementById("square");
+      square.style.backgroundColor = "transparent";
+      square.style.marginLeft = "0em";
+      button.removeAttribute("disabled");
+    }
+    ```
