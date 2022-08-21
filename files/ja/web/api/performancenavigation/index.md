@@ -45,7 +45,7 @@ _`PerformanceNavigation` インターフェイスはプロパティを継承し�
 
 ## メソッド
 
-\_*`Performance` インターフェイス*はメソッドを継承しません。\_
+_`Performance` インターフェイスはメソッドを継承しません。_
 
 - {{deprecated_inline}} {{domxref("PerformanceNavigation.toJSON()")}}
   - : `PerformanceNavigation` オブジェクトを表す json オブジェクトを返す jsonizer です。
