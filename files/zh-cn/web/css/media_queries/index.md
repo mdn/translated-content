@@ -38,7 +38,7 @@ original_slug: Web/CSS/媒体查询
   - : 介绍媒体查询和媒体查询的的语法以及用于构造媒体查询表达式的运算符和媒体功能。
 - [编程方式使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - : 描述如何在 JavaScript 代码中使用媒体查询来确定设备的状态，以及设置在媒体查询结果发生更改时（例如，当用户旋转屏幕或调整浏览器大小时）通知代码的监听器。
-- [使用媒体查询增强网站的可访问性](/zh-CN/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+- [使用媒体查询增强网站的无障碍](/zh-CN/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
   - : 了解媒体查询如何帮助用户更好地了解您的网站。
 
 ## 规范

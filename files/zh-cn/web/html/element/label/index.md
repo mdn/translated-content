@@ -62,7 +62,7 @@ slug: Web/HTML/Element/label
 
 {{EmbedLiveSample('使用_for_属性', '200', '50', '')}}
 
-## 可访问性问题
+## 无障碍问题
 
 ### 交互内容
 

@@ -67,7 +67,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 您还可以找到用于其他语言的 linting 工具，比如[csslint](http://csslint.net/)。
 
-同样值得一看的是 [webhint](https://webhint.io/), 一个可配置的，开放源码的网页链接，展示了最佳实践，包括可访问性，性能，跨浏览器兼容性 [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), 安全，PWAs 测试等等。它可以作为 [Node.js command-line tool](https://webhint.io/docs/user-guide/) 和 [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
+同样值得一看的是 [webhint](https://webhint.io/), 一个可配置的，开放源码的网页链接，展示了最佳实践，包括无障碍，性能，跨浏览器兼容性 [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), 安全，PWAs 测试等等。它可以作为 [Node.js command-line tool](https://webhint.io/docs/user-guide/) 和 [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
 
 #### 源代码控制
 

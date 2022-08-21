@@ -67,7 +67,7 @@ body {
 
 {{EmbedLiveSample("Example")}}
 
-## 可访问性
+## 无障碍
 
 It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
 

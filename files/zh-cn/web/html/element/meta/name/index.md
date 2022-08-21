@@ -78,7 +78,7 @@ CSS 设备适配规范（CSS Device Adaptation specification）定义了以下�
   > - 不同设备和浏览器的默认值可能有不同。
   > - 若想了解 Firefox 移动版对此声明的支持和处理，请参考[这篇文章](/zh-CN/docs/Mobile/Viewport_meta_tag)。
 
-  ##### 关于 viewport 缩放的可访问性考量
+  ##### 关于 viewport 缩放的无障碍考量
 
   将 `user-scalable` 设置为 `no` 会阻止一切意义上的缩放，视力不好的人可能会因此无法阅读和理解页面内容。
 

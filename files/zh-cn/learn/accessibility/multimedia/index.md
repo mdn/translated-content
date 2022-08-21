@@ -1,11 +1,11 @@
 ---
-title: 多媒体的可访问性 (Accessible multimedia)
+title: 多媒体的无障碍 (Accessible multimedia)
 slug: Learn/Accessibility/Multimedia
 original_slug: learn/Accessibility/多媒体
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-可能导致可访问性问题（accessibility problems ）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
+可能导致无障碍问题（accessibility problems ）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -14,23 +14,23 @@ original_slug: learn/Accessibility/多媒体
       <td>
         基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a
           href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
-          >对可访问性</a
+          >对无障碍</a
         >
         的理解。
       </td>
     </tr>
     <tr>
       <th scope="row">目的：</th>
-      <td>了解多媒体背后的可访问性问题，以及如何克服这些问题。</td>
+      <td>了解多媒体背后的无障碍问题，以及如何克服这些问题。</td>
     </tr>
   </tbody>
 </table>
 
-## 多媒体和可访问性
+## 多媒体和无障碍
 
-到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其可访问性，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
+到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
 
-另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的可访问性。图像，视频，[`<canvas>`](/en-US/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
+另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/en-US/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
 
 但不要绝望 - 在这里我们将帮助您浏览可用于使多媒体更容易访问的技术。
 
@@ -340,11 +340,11 @@ This is the second.
 
 然而，其他多媒体不是那么容易使访问。例如，如果您正在处理沉浸式 3D 游戏或虚拟现实应用，那么为此类体验提供文本替代方案确实非常困难，您可能会认为盲人用户实际上并不在此类应用的目标受众范围内。
 
-但是，您可以确保此类应用具有足够的颜色对比度和清晰的显示，以便对视力低下/色盲的人来说可以感知，并且还可以使其键盘可访问。请记住，辅助功能就是尽可能多地做，而不是一直追求 100% 的可访问性，这通常是不可能的。
+但是，您可以确保此类应用具有足够的颜色对比度和清晰的显示，以便对视力低下/色盲的人来说可以感知，并且还可以使其键盘可访问。请记住，辅助功能就是尽可能多地做，而不是一直追求 100% 的无障碍，这通常是不可能的。
 
 ## 总结
 
-本章概述了多媒体内容的可访问性问题，以及一些实用的解决方案。
+本章概述了多媒体内容的无障碍问题，以及一些实用的解决方案。
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 

@@ -11,7 +11,7 @@ slug: Web/HTML/Element/img
 上面的例子展示了 `<img>` 元素的用法：
 
 - `src` 属性是**必须的**，它包含了你想嵌入的图片的文件路径。
-- `alt` 属性包含一条对图像的文本描述，这不是强制性的，但对可访问性而言，它**难以置信地有用**——屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义。如果由于某种原因无法加载图像，普通浏览器也会在页面上显示`alt` 属性中的备用文本：例如，网络错误、内容被屏蔽或链接过期时。
+- `alt` 属性包含一条对图像的文本描述，这不是强制性的，但对无障碍而言，它**难以置信地有用**——屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义。如果由于某种原因无法加载图像，普通浏览器也会在页面上显示`alt` 属性中的备用文本：例如，网络错误、内容被屏蔽或链接过期时。
 
 还有很多其他属性，可以实现各种不同的目的：
 
@@ -154,7 +154,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 ### 备用文字
 
-下面的示例将图像嵌入到页面中，且包含用于改善可访问性的备用文本。
+下面的示例将图像嵌入到页面中，且包含用于改善无障碍的备用文本。
 
 ```html
 <img src="favicon144.png"
@@ -208,7 +208,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 虽然 `<img>` 元素的用途是很单纯（原文：innocent）的，但是它们可对用户安全和隐私造成不良的后果。See [Referer header: privacy and security concerns](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
 
-## 可访问性考量
+## 无障碍考量
 
 ### 使用有实际意义的备用描述
 

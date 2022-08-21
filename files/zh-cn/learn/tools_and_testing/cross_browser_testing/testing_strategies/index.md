@@ -121,7 +121,7 @@ IE8 被列为重要，但它较老且不再更新。Opera Mini 也很重要，�
 
 因此，我们的最终支持图表最终将如下所示：
 
-1. A 级：适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器 (最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本) 在手机平板电脑上。通过常见测试的可访问性。
+1. A 级：适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器 (最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本) 在手机平板电脑上。通过常见测试的无障碍。
 2. B 级：IE 8 和 9 用于 Windows，Opera Mini。
 3. C 级：Opera，其他合适的现代浏览器。
 
