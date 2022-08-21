@@ -16,7 +16,7 @@ translation_of: Web/API/PerformanceNavigation/type
 
 > **Warning:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-従来の **`PerformanceNavigation`\*\***`.type`\*\* 読み取り専用プロパティは、このページへの移動方法を説明する定数を含む `unsigned short` を返します。可能な値は次のとおりです:
+従来の **`PerformanceNavigation.type`** 読み取り専用プロパティは、このページへの移動方法を説明する定数を含む `unsigned short` を返します。可能な値は次のとおりです:
 
 | 値    | 定数名              | 意味                                                                                                                                  |
 | ----- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
