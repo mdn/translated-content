@@ -15,55 +15,40 @@ tags:
   - split
 translation_of: Web/API/Blob/slice
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>{{domxref("Blob")}} インターフェイスの <strong><code>slice()</code></strong> メソッドは、呼び出された blob のサブセットのデータを含む新しい <code>Blob</code> オブジェクトを作成して返します。</p>
+{{domxref("Blob")}} インターフェイスの **`slice()`** メソッドは、呼び出された blob のサブセットのデータを含む新しい `Blob` オブジェクトを作成して返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <em>newBlob</em> = <em>blob</em>.slice(<em>start</em>, <em>end</em>, <em>contentType</em>);</pre>
+```
+var newBlob = blob.slice(start, end, contentType);
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>start</code> {{optional_inline}}</dt>
- <dd>新しい {{domxref("Blob")}} に含める最初のバイトを示す {{domxref("Blob")}} へのインデックス。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、-10 は {{domxref("Blob")}} の最後のバイトから10番目になります。デフォルト値は 0 です。<code>start</code> にもとの {{domxref("Blob")}} のサイズよりも大きい値を指定すると、返される {{domxref("Blob")}} のサイズは 0 で、データは何も含まれません。</dd>
- <dt><code>end</code> {{optional_inline}}</dt>
- <dd>新しい {{domxref("Blob")}} に<strong>含まれない</strong>最初のバイトを示す {{domxref("Blob")}} へのインデックス。(つまり、このインデックスに正確に位置するバイトは含まれません)。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、-10は {{domxref("Blob")}} の最後のバイトから10番目になります。デフォルト値は <code>size</code> です。</dd>
- <dt><code>contentType</code> {{optional_inline}}</dt>
- <dd>新しい {{domxref("Blob")}} に割り当てるコンテンツの型。これはその <code>type</code> プロパティの値になります。デフォルト値は空の文字列です。</dd>
-</dl>
+- `start` {{optional_inline}}
+  - : 新しい {{domxref("Blob")}} に含める最初のバイトを示す {{domxref("Blob")}} へのインデックス。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、-10 は {{domxref("Blob")}} の最後のバイトから 10 番目になります。デフォルト値は 0 です。`start` にもとの {{domxref("Blob")}} のサイズよりも大きい値を指定すると、返される {{domxref("Blob")}} のサイズは 0 で、データは何も含まれません。
+- `end` {{optional_inline}}
+  - : 新しい {{domxref("Blob")}} に**含まれない**最初のバイトを示す {{domxref("Blob")}} へのインデックス。(つまり、このインデックスに正確に位置するバイトは含まれません)。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、-10 は {{domxref("Blob")}} の最後のバイトから 10 番目になります。デフォルト値は `size` です。
+- `contentType` {{optional_inline}}
+  - : 新しい {{domxref("Blob")}} に割り当てるコンテンツの型。これはその `type` プロパティの値になります。デフォルト値は空の文字列です。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>このメソッドが呼び出された Blob 内に含まれるデータの指定されたサブセットを含む新しい {{domxref("Blob")}} オブジェクト。元の Blob は変更されません。</p>
+このメソッドが呼び出された Blob 内に含まれるデータの指定されたサブセットを含む新しい {{domxref("Blob")}} オブジェクト。元の Blob は変更されません。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様</th>
-   <th>ステータス</th>
-   <th>コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#dfn-slice", "Blob.slice()")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                     | ステータス                   | コメント   |
+| ------------------------------------------------------------------------ | ---------------------------- | ---------- |
+| {{SpecName("File API", "#dfn-slice", "Blob.slice()")}} | {{Spec2("File API")}} | 初期定義。 |
 
-<h2 id="ブラウザの実装状況">ブラウザの実装状況</h2>
+## ブラウザの実装状況
 
-<p>{{Compat("api.Blob.slice")}}</p>
+{{Compat("api.Blob.slice")}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>{{domxref("Blob")}}</li>
- <li>
-  <p><a href="/ja/docs/Web/API/File/Using_files_from_web_applications">Web アプリケーションからのファイルの使用</a></p>
- </li>
-</ul>
+- {{domxref("Blob")}}
+- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
