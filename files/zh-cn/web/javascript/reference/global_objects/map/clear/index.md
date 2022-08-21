@@ -21,7 +21,7 @@ clear()
 
 ## 示例
 
-### 调用 `clear()` 方法
+### 使用 clear()
 
 ```js
 const myMap = new Map();
