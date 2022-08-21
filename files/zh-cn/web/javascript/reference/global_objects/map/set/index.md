@@ -28,7 +28,7 @@ set(key, value)
 
 ## 示例
 
-### 使用 `set()` 方法
+### 使用 set()
 
 ```js
 const myMap = new Map();
