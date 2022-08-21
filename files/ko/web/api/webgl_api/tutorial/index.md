@@ -14,7 +14,7 @@ translation_of: Web/API/WebGL_API/Tutorial
 
 ## 시작하기 전에
 
-`<canvas>` 요소를 사용하는 것은 크게 어렵진 않지만, 여러분은 [HTML](/ko/docs/Web/HTML "HTML") 과 [JavaScript](/ko/docs/Web/JavaScript "JavaScript")에 대하여 기본적인 이해가 꼭 필요합니다. `<canvas>` 요소와 WebGL은 일부 오래된 브라우저에서 지원되지 않으나, 최근 버전의 모든 주요 브라우저에서 지원됩니다. 우리는 canvas에 그림을 그리기 위해 그림을 신속하게 생성하는 JavaScript 콘텍스트 객체를 사용합니다.
+`<canvas>` 요소를 사용하는 것은 크게 어렵진 않지만, 여러분은 [HTML](/ko/docs/Web/HTML) 과 [JavaScript](/ko/docs/Web/JavaScript)에 대하여 기본적인 이해가 꼭 필요합니다. `<canvas>` 요소와 WebGL은 일부 오래된 브라우저에서 지원되지 않으나, 최근 버전의 모든 주요 브라우저에서 지원됩니다. 우리는 canvas에 그림을 그리기 위해 그림을 신속하게 생성하는 JavaScript 콘텍스트 객체를 사용합니다.
 
 ## In this tutorial
 
