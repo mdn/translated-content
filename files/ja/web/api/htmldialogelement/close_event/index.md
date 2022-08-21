@@ -14,56 +14,38 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p><code><strong>onclose</strong></code> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、ダイアログ要素に送信された {{event("close")}} イベントを処理するための {{domxref("EventHandler", "イベントハンドラー")}} です。</p>
+**`onclose`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、ダイアログ要素に送信された {{event("close")}} イベントを処理するための {{domxref("EventHandler", "イベントハンドラー")}} です。
 
-<p><code>close</code> イベントは、ユーザーが <code>&lt;dialog&gt;</code> を閉じたときに発生します。</p>
+`close` イベントは、ユーザーが `<dialog>` を閉じたときに発生します。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> ウィンドウのクローズを処理するには、{{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} または {{domxref("WindowEventHandlers.onunload", "onunload")}} を使用します。</p>
-</div>
+> **Note:** **注:** ウィンドウのクローズを処理するには、{{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} または {{domxref("WindowEventHandlers.onunload", "onunload")}} を使用します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>target</em>.onclose = <em>functionRef</em>;
-</pre>
+```
+target.onclose = functionRef;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p><code>functionRef</code> は、関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は、{{domxref("Event")}} オブジェクトを唯一の引数として受け取ります。</p>
+`functionRef` は、関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。この関数は、{{domxref("Event")}} オブジェクトを唯一の引数として受け取ります。
 
-<p>一度に1つのオブジェクトに割り当てることができる <code>onclose</code> ハンドラーは1つだけです。代わりに、より柔軟性のある {{domxref("EventTarget.addEventListener()")}} メソッドを使用することをお勧めします。</p>
+一度に 1 つのオブジェクトに割り当てることができる `onclose` ハンドラーは 1 つだけです。代わりに、より柔軟性のある {{domxref("EventTarget.addEventListener()")}} メソッドを使用することをお勧めします。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onclose','onclose')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                             | 備考 |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onclose','onclose')}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<div>
+{{Compat("api.GlobalEventHandlers.onclose")}}
 
+## 関連情報
 
-<p>{{Compat("api.GlobalEventHandlers.onclose")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{event("close")}} event</li>
- <li>HTML {{HTMLElement("dialog")}} element</li>
- <li>Related event handler: {{domxref("GlobalEventHandlers.oncancel")}}</li>
-</ul>
+- {{event("close")}} event
+- HTML {{HTMLElement("dialog")}} element
+- Related event handler: {{domxref("GlobalEventHandlers.oncancel")}}
