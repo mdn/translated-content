@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
 {{JSRef}}
 
-**`Math.SQRT2`** プロパティは、円周と直径の比率、およそ 3.14159 を表します。
+**`Math.PI`** プロパティは、円周と直径の比率、およそ 3.14159 を表します。
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math>
 
