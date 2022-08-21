@@ -10,6 +10,9 @@ tags:
   - リファレンス
   - minlength
   - textarea
+browser-compat:
+  - html.elements.input.minlength
+  - html.elements.textarea.minlength
 spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-minlength
 translation_of: Web/HTML/Attributes/minlength
 ---
@@ -50,7 +53,7 @@ input:invalid:focus {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## 関連情報
 

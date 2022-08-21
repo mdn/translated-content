@@ -8,10 +8,14 @@ tags:
   - HTML
   - max
   - リファレンス
+browser-compat:
+  - html.elements.input.max
+  - html.elements.meter.max
+  - html.elements.progress.max
 spec-urls:
   - https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
-  - https://html.spec.whatwg.org/multipage/forms.html#the-progress-element
   - https://html.spec.whatwg.org/multipage/forms.html#the-meter-element
+  - https://html.spec.whatwg.org/multipage/forms.html#the-progress-element
 translation_of: Web/HTML/Attributes/max
 ---
 
@@ -134,7 +138,7 @@ translation_of: Web/HTML/Attributes/max
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## 関連情報
 

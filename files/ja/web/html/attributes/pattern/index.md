@@ -7,6 +7,7 @@ tags:
   - Constraint Validation API
   - HTML
   - Reference
+browser-compat: html.elements.input.pattern
 translation_of: Web/HTML/Attributes/pattern
 ---
 {{HTMLSidebar}}
@@ -129,7 +130,7 @@ This renders like so:
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## 関連情報
 

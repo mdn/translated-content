@@ -7,6 +7,14 @@ tags:
   - 制約検証
   - フォーム
   - required
+browser-compat:
+  - html.elements.button.disabled
+  - html.elements.fieldset.disabled
+  - html.elements.input.disabled
+  - html.elements.optgroup.disabled
+  - html.elements.option.disabled
+  - html.elements.select.disabled
+  - html.elements.textarea.disabled
 spec-urls: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
 translation_of: Web/HTML/Attributes/disabled
 ---
@@ -111,7 +119,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.disabled")}}
+{{Compat}}
 
 ## 関連情報
 
