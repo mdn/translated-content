@@ -53,7 +53,7 @@ span.addEventListener('click', () => {
 
 输出如下所示，并且每次点击文本时都会发生变化：
 
-{{ EmbedLiveSample('Toggling_a_class_on_click', '100%', 60) }}
+{{ EmbedLiveSample('在点击后 toggle class', '100%', 60) }}
 
 ### 设置 force 参数
 
