@@ -13,61 +13,50 @@ tags:
   - ワーカーグローバルスコープ
 translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p><code><strong>importScripts()</strong></code> は {{domxref("WorkerGlobalScope")}} インターフェースのメソッドで、1つ以上のスクリプトをワーカーのスコープ内に同期的に読み込みます。</p>
+**`importScripts()`** は {{domxref("WorkerGlobalScope")}} インターフェースのメソッドで、1 つ以上のスクリプトをワーカーのスコープ内に同期的に読み込みます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js notranslate">self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);</pre>
+```js
+self.importScripts('foo.js');
+self.importScripts('foo.js', 'bar.js', ...);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>インポートされるスクリプト表す {{domxref("DOMString")}} オブジェクトのカンマ区切りのリストです。これらは <em>HTML 文書のベース URL</em> からの相対パスです。</p>
+インポートされるスクリプト表す {{domxref("DOMString")}} オブジェクトのカンマ区切りのリストです。これらは _HTML 文書のベース URL_ からの相対パスです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><em>なし。</em></p>
+_なし。_
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt><code>NetworkError</code></dt>
- <dd>インポートされたスクリプトが妥当な JavaScript の MIME 型 (すなわち <code>text/javascript</code>) で提供されていなかった場合。</dd>
-</dl>
+- `NetworkError`
+  - : インポートされたスクリプトが妥当な JavaScript の MIME 型 (すなわち `text/javascript`) で提供されていなかった場合。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p><code>foo.js</code> という別なスクリプトで書かれた機能を worker.js の内部で使用したい場合、以下のような行でインポートして使用することができます。</p>
+`foo.js` という別なスクリプトで書かれた機能を worker.js の内部で使用したい場合、以下のような行でインポートして使用することができます。
 
-<pre class="brush: js notranslate">importScripts('foo.js');</pre>
+```js
+importScripts('foo.js');
+```
 
-<p><code>importScripts()</code> と <code>self.importScripts()</code> は実質的に同じです。 — 両方とも <code>importScripts()</code> をワーカーの内部スコープの中から呼び出すことを表します。</p>
+`importScripts()` と `self.importScripts()` は実質的に同じです。 — 両方とも `importScripts()` をワーカーの内部スコープの中から呼び出すことを表します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-workerglobalscope-importscripts', 'importScripts()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-importscripts', 'importScripts()')}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.WorkerGlobalScope.importScripts")}}</p>
+{{Compat("api.WorkerGlobalScope.importScripts")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("WorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("WorkerGlobalScope")}}

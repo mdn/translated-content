@@ -11,37 +11,34 @@ tags:
   - writer
 translation_of: Web/API/Streams_API/Using_writable_streams
 ---
-<div>{{apiref("Streams")}}</div>
+{{apiref("Streams")}}
 
-<p><span class="seoSummary">JavaScript 開発者として、プログラムでストリームにデータを書き込むことは非常に便利です！ この記事では、<a href="/ja/docs/Web/API/Streams_API">Streams API</a> の書き込み可能なストリームの機能について説明します。</span></p>
+JavaScript 開発者として、プログラムでストリームにデータを書き込むことは非常に便利です！ この記事では、[Streams API](/ja/docs/Web/API/Streams_API) の書き込み可能なストリームの機能について説明します。
 
-<div class="note">
-<p><strong>注</strong>: この記事は、書き込み可能なストリームのユースケースを理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず <a href="/ja/docs/Web/API/Streams_API#Concepts_and_usage">Streams の概念と使用方法の概要</a>と専用の <a href="/ja/docs/Web/API/Streams_API/Concepts">Streams API の概念</a>の記事を読んでから、戻ってくることをお勧めします。</p>
-</div>
+> **Note:** **注**: この記事は、書き込み可能なストリームのユースケースを理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず [Streams の概念と使用方法の概要](/ja/docs/Web/API/Streams_API#Concepts_and_usage)と専用の [Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)の記事を読んでから、戻ってくることをお勧めします。
 
-<div class="note">
-<p><strong>注</strong>: 読み取り可能なストリームに関する情報を探している場合は、代わりに<a href="/ja/docs/Web/API/Streams_API/Using_readable_streams">読み取り可能なストリーム</a>の使用を試してください。</p>
-</div>
+> **Note:** **注**: 読み取り可能なストリームに関する情報を探している場合は、代わりに[読み取り可能なストリーム](/ja/docs/Web/API/Streams_API/Using_readable_streams)の使用を試してください。
 
-<h2 id="Browser_support" name="Browser_support">ブラウザーのサポート</h2>
+## ブラウザーのサポート
 
-<p>Streams API は実験的なものであり、サポートは現在初期段階にあります。 現在、基本的な書き込み可能なストリームが実装されているのは Chrome のみです。</p>
+Streams API は実験的なものであり、サポートは現在初期段階にあります。 現在、基本的な書き込み可能なストリームが実装されているのは Chrome のみです。
 
-<h2 id="Introducing_an_example" name="Introducing_an_example">例の紹介</h2>
+## 例の紹介
 
-<p><a href="https://github.com/mdn/dom-examples/tree/master/streams">dom-examples/streams</a> リポジトリには、単純なライターの例（<a href="https://github.com/mdn/dom-examples/blob/master/streams/simple-writer/index.html">Simple writer example</a>）があります（<a href="https://mdn.github.io/dom-examples/streams/simple-writer/">ライブも参照</a>）。 これは、指定されたメッセージを取得して書き込み可能なストリームに書き込み、ストリームに書き込まれるときに UI に各チャンクを表示し、書き込みが終了すると UI にメッセージ全体を表示します。</p>
+[dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) リポジトリには、単純なライターの例（[Simple writer example](https://github.com/mdn/dom-examples/blob/master/streams/simple-writer/index.html)）があります（[ライブも参照](https://mdn.github.io/dom-examples/streams/simple-writer/)）。 これは、指定されたメッセージを取得して書き込み可能なストリームに書き込み、ストリームに書き込まれるときに UI に各チャンクを表示し、書き込みが終了すると UI にメッセージ全体を表示します。
 
-<h2 id="How_writable_streams_work" name="How_writable_streams_work">書き込み可能なストリームの仕組み</h2>
+## 書き込み可能なストリームの仕組み
 
-<p>書き込み可能なストリーム機能のデモの仕組みを見てみましょう。</p>
+書き込み可能なストリーム機能のデモの仕組みを見てみましょう。
 
-<h3 id="Constructing_a_writable_stream" name="Constructing_a_writable_stream">書き込み可能なストリームの構築</h3>
+### 書き込み可能なストリームの構築
 
-<p>書き込み可能なストリームを作成するには、{{domxref("WritableStream.WritableStream","WritableStream()")}} コンストラクターを使用します。 構文は最初は複雑に見えますが、実際にはそれほど悪くはありません。</p>
+書き込み可能なストリームを作成するには、{{domxref("WritableStream.WritableStream","WritableStream()")}} コンストラクターを使用します。 構文は最初は複雑に見えますが、実際にはそれほど悪くはありません。
 
-<p>構文の骨組みは次のようになります。</p>
+構文の骨組みは次のようになります。
 
-<pre class="brush: js">const stream = new WritableStream({
+```js
+const stream = new WritableStream({
   start(controller) {
 
   },
@@ -57,28 +54,28 @@ translation_of: Web/API/Streams_API/Using_writable_streams
 }, {
   highWaterMark,
   size()
-});</pre>
+});
+```
 
-<p>コンストラクターはパラメーターとして2つのオブジェクトを取ります。 最初のオブジェクトは必須であり、データの書き込み先の基になるシンクのモデルを JavaScript で作成します。 2番目のオブジェクトはオプションであり、{{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスの形式をとる、ストリームに使用する<a href="/ja/docs/Web/API/Streams_API/Concepts#Internal_queues_and_queuing_strategies">カスタムのキューイング戦略</a>を指定できます。</p>
+コンストラクターはパラメーターとして 2 つのオブジェクトを取ります。 最初のオブジェクトは必須であり、データの書き込み先の基になるシンクのモデルを JavaScript で作成します。 2 番目のオブジェクトはオプションであり、{{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスの形式をとる、ストリームに使用する[カスタムのキューイング戦略](/ja/docs/Web/API/Streams_API/Concepts#Internal_queues_and_queuing_strategies)を指定できます。
 
-<p>次のように最初のオブジェクトには最大4つのメンバーを含めることができますが、それらはすべてオプションです。</p>
+次のように最初のオブジェクトには最大 4 つのメンバーを含めることができますが、それらはすべてオプションです。
 
-<ol>
- <li><code>start(controller)</code> — {{domxref("WritableStream")}} が構築された直後に1回だけ呼び出されるメソッド。 このメソッド内には、ストリーム機能を設定するコードを含める必要があります。 例えば、基になるシンクへのアクセスを取得します。</li>
- <li><code>write(chunk,controller)</code> — 新しいチャンク（<code>chunk</code> パラメーターで指定）を基になるシンクに書き込む準備ができるたびに繰り返し呼び出されるメソッド。</li>
- <li><code>close(controller)</code> — ストリームへのチャンクの書き込みが完了したことをアプリが通知した場合に呼び出されるメソッド。 基になるシンクへの書き込みを完了し、アクセスを解放するために必要なことは何でも行う必要があります。</li>
- <li><code>abort(reason)</code> — ストリームを突然閉じてエラー状態にしたいとアプリが通知した場合に呼び出されるメソッド。</li>
-</ol>
+1.  `start(controller)` — {{domxref("WritableStream")}} が構築された直後に 1 回だけ呼び出されるメソッド。 このメソッド内には、ストリーム機能を設定するコードを含める必要があります。 例えば、基になるシンクへのアクセスを取得します。
+2.  `write(chunk,controller)` — 新しいチャンク（`chunk` パラメーターで指定）を基になるシンクに書き込む準備ができるたびに繰り返し呼び出されるメソッド。
+3.  `close(controller)` — ストリームへのチャンクの書き込みが完了したことをアプリが通知した場合に呼び出されるメソッド。 基になるシンクへの書き込みを完了し、アクセスを解放するために必要なことは何でも行う必要があります。
+4.  `abort(reason)` — ストリームを突然閉じてエラー状態にしたいとアプリが通知した場合に呼び出されるメソッド。
 
-<p>この例のコンストラクター呼び出しは次のようになります。</p>
+この例のコンストラクター呼び出しは次のようになります。
 
-<pre class="brush: js">const decoder = new TextDecoder("utf-8");
+```js
+const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
 const writableStream = new WritableStream({
   // シンクの実装
   write(chunk) {
-    return new Promise((resolve, reject) =&gt; {
+    return new Promise((resolve, reject) => {
       var buffer = new ArrayBuffer(2);
       var view = new Uint16Array(buffer);
       view[0] = chunk;
@@ -98,73 +95,76 @@ const writableStream = new WritableStream({
   abort(err) {
     console.log("Sink error:", err);
   }
-}, queuingStrategy);</pre>
+}, queuingStrategy);
+```
 
-<ul>
- <li><code>write()</code> メソッドには、書き込まれた各チャンクを UI に書き込める形式にデコードするコードを含むプロミスが含まれています。 これは、各チャンクが実際に書き込まれるときに呼び出されます（次のセクションを参照）。</li>
- <li><code>close()</code> メソッドは、書き込みが終了すると自動的に呼び出されます — デコードされた結果全体を1つの文字列で UI に出力します。</li>
- <li><code>abort()</code> メソッドは、ストリームが中断された場合にコンソールにエラーを出力するだけです。</li>
-</ul>
+- `write()` メソッドには、書き込まれた各チャンクを UI に書き込める形式にデコードするコードを含むプロミスが含まれています。 これは、各チャンクが実際に書き込まれるときに呼び出されます（次のセクションを参照）。
+- `close()` メソッドは、書き込みが終了すると自動的に呼び出されます — デコードされた結果全体を 1 つの文字列で UI に出力します。
+- `abort()` メソッドは、ストリームが中断された場合にコンソールにエラーを出力するだけです。
 
-<h3 id="Writing" name="Writing">書き込み</h3>
+### 書き込み
 
-<p>実際にストリームにコンテンツを書き込むには、次のように <code>sendMessage()</code> 関数を呼び出して、書き込むメッセージと書き込み先のストリームを渡します。</p>
+実際にストリームにコンテンツを書き込むには、次のように `sendMessage()` 関数を呼び出して、書き込むメッセージと書き込み先のストリームを渡します。
 
-<pre class="brush: js">sendMessage("Hello, world.", writableStream);</pre>
+```js
+sendMessage("Hello, world.", writableStream);
+```
 
-<p><code>sendMessage()</code> の定義は次のようになります。</p>
+`sendMessage()` の定義は次のようになります。
 
-<pre class="brush: js">function sendMessage(message, writableStream) {
+```js
+function sendMessage(message, writableStream) {
   // defaultWriter は WritableStreamDefaultWriter 型です
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
   const encoded = encoder.encode(message, { stream: true });
-  encoded.forEach((chunk) =&gt; {
+  encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() =&gt; {
+      .then(() => {
         return defaultWriter.write(chunk);
       })
-      .then(() =&gt; {
+      .then(() => {
         console.log("Chunk written to sink.");
       })
-      .catch((err) =&gt; {
+      .catch((err) => {
         console.log("Chunk error:", err);
       });
   });
   // ライターを閉じる前にすべてのチャンクが確実に
   // 書き込まれるように、ready を再度呼び出します。
   defaultWriter.ready
-    .then(() =&gt; {
+    .then(() => {
       defaultWriter.close();
     })
-    .then(() =&gt; {
+    .then(() => {
       console.log("All chunks written");
     })
-    .catch((err) =&gt; {
+    .catch((err) => {
       console.log("Stream error:", err);
     });
-}</pre>
+}
+```
 
-<p>したがって、ここでは、{{domxref("WritableStream.getWriter()")}} を使用してストリームにチャンクを書き込むライターを作成します。 これにより、{{domxref("WritableStreamDefaultWriter")}} インスタンスが作成されます。</p>
+したがって、ここでは、{{domxref("WritableStream.getWriter()")}} を使用してストリームにチャンクを書き込むライターを作成します。 これにより、{{domxref("WritableStreamDefaultWriter")}} インスタンスが作成されます。
 
-<p>また、関連するコンストラクターを使用して新しい {{domxref("TextEncoder")}} インスタンスを作成し、メッセージをチャンクにエンコードしてストリームに入れます。</p>
+また、関連するコンストラクターを使用して新しい {{domxref("TextEncoder")}} インスタンスを作成し、メッセージをチャンクにエンコードしてストリームに入れます。
 
-<p>エンコードされたチャンクを使用して、結果の配列で {{jsxref("Array/forEach")}} を呼び出します。 このブロック内で、{{domxref("WritableStreamDefaultWriter.ready")}}  を使用して、ライターに別のチャンクを書き込む準備ができているかどうかを確認します。 <code>ready</code> は、この場合に満たされるプロミスを返します。 その中で、{{domxref("WritableStreamDefaultWriter.write()")}} を呼び出して、実際にストリームにチャンクを書き込みます。 これにより、前述のように、<code>WritableStream()</code> コンストラクター内で指定された <code>write()</code> メソッドもトリガーされます。</p>
+エンコードされたチャンクを使用して、結果の配列で {{jsxref("Array/forEach")}} を呼び出します。 このブロック内で、{{domxref("WritableStreamDefaultWriter.ready")}} を使用して、ライターに別のチャンクを書き込む準備ができているかどうかを確認します。 `ready` は、この場合に満たされるプロミスを返します。 その中で、{{domxref("WritableStreamDefaultWriter.write()")}} を呼び出して、実際にストリームにチャンクを書き込みます。 これにより、前述のように、`WritableStream()` コンストラクター内で指定された `write()` メソッドもトリガーされます。
 
-<p>チャンクがすべて書き込まれた後、最後のチャンクの書き込みが完了し、すべての作業が完了したことを確認するために、もう一度 <code>ready</code> のチェックを実行します。この <code>ready</code> のチェックが完了すると、{{domxref("WritableStreamDefaultWriter.close()")}} を呼び出してストリームを閉じます。 これにより、前述のように、<code>WritableStream()</code> コンストラクター内で指定された <code>close()</code> メソッドもトリガーされます。</p>
+チャンクがすべて書き込まれた後、最後のチャンクの書き込みが完了し、すべての作業が完了したことを確認するために、もう一度 `ready` のチェックを実行します。この `ready` のチェックが完了すると、{{domxref("WritableStreamDefaultWriter.close()")}} を呼び出してストリームを閉じます。 これにより、前述のように、`WritableStream()` コンストラクター内で指定された `close()` メソッドもトリガーされます。
 
-<h3 id="Controllers" name="Controllers">コントローラー</h3>
+### コントローラー
 
-<p><code>WritableStream()</code> 構文の骨組みを学習するときに気付くように、<code>start()</code>、<code>write()</code>、および <code>close()</code> メソッドには、オプションで <code>controller</code> パラメーターを渡すことができます。 これには、{{domxref("WritableStreamDefaultController")}} インターフェイスのインスタンスが含まれます。 これは、開発者が必要に応じてストリームをさらに制御するために使用できます。</p>
+`WritableStream()` 構文の骨組みを学習するときに気付くように、`start()`、`write()`、および `close()` メソッドには、オプションで `controller` パラメーターを渡すことができます。 これには、{{domxref("WritableStreamDefaultController")}} インターフェイスのインスタンスが含まれます。 これは、開発者が必要に応じてストリームをさらに制御するために使用できます。
 
-<p>現在、このインターフェイスで使用できるメソッドは {{domxref("WritableStreamDefaultController.error()")}} のみです。 このメソッドを呼び出すと、ストリームとの今後の相互作用でエラーが発生します。 これは、アプリの別の部分がうまくいかず、がらくたがストリームに静かに書き込まれる (または同様に悪い）危険を冒すのではなく、システム全体がきれいに失敗するようにエラーをストリームに伝播したい場合に便利です。</p>
+現在、このインターフェイスで使用できるメソッドは {{domxref("WritableStreamDefaultController.error()")}} のみです。 このメソッドを呼び出すと、ストリームとの今後の相互作用でエラーが発生します。 これは、アプリの別の部分がうまくいかず、がらくたがストリームに静かに書き込まれる (または同様に悪い）危険を冒すのではなく、システム全体がきれいに失敗するようにエラーをストリームに伝播したい場合に便利です。
 
-<h3 id="Closing_and_aborting" name="Closing_and_aborting">終了および中止</h3>
+### 終了および中止
 
-<p>上記のように、書き込みが終了すると <code>close()</code> メソッドを呼び出し、<code>WritableStream()</code> コンストラクター内で指定された <code>close()</code> メソッドをトリガーします。</p>
+上記のように、書き込みが終了すると `close()` メソッドを呼び出し、`WritableStream()` コンストラクター内で指定された `close()` メソッドをトリガーします。
 
-<p>{{domxref("WritableStreamDefaultWriter.abort()")}} を呼び出してストリームを中止することもできます。</p>
+{{domxref("WritableStreamDefaultWriter.abort()")}} を呼び出してストリームを中止することもできます。
 
-<p>違いは、<code>close()</code> を呼び出すと、ストリームが閉じられる前に、以前にキューに入れられたチャンクが書き込まれ、終了することです。</p>
+違いは、`close()` を呼び出すと、ストリームが閉じられる前に、以前にキューに入れられたチャンクが書き込まれ、終了することです。
 
-<p><code>abort()</code> を呼び出すと、以前にキューに入れられたチャンクはすぐに破棄され、ストリームはエラー状態に移行します。 また、これにより、<code>WritableStream()</code> コンストラクターで指定された <code>abort()</code> メソッドが呼び出されます。</p>
+`abort()` を呼び出すと、以前にキューに入れられたチャンクはすぐに破棄され、ストリームはエラー状態に移行します。 また、これにより、`WritableStream()` コンストラクターで指定された `abort()` メソッドが呼び出されます。

@@ -12,34 +12,33 @@ tags:
   - Service Workers
 translation_of: Web/API/PushMessageData
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p><a href="/ja/docs/Web/API/Push_API">Push API</a> の <code><strong>PushMessageData</strong></code> インターフェースは、さまざまなフォーマットでサーバーから送信されるプッシュテータを取得する方法を提供します。</p>
+[Push API](/ja/docs/Web/API/Push_API) の **`PushMessageData`** インターフェースは、さまざまなフォーマットでサーバーから送信されるプッシュテータを取得する方法を提供します。
 
-<p><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の同様のメソッドが 1 回しか呼び出せないのと異なり、これらは複数回呼び出せます。</p>
+[Fetch API](/ja/docs/Web/API/Fetch_API) の同様のメソッドが 1 回しか呼び出せないのと異なり、これらは複数回呼び出せます。
 
-<p>Push API を通して受け取ったメッセージはプッシュサービスによって暗号化されて送信され、<code>PushMessageData</code> インターフェースのメソッドで利用可能になる前にブラウザーによって自動的に 復号化されます。</p>
+Push API を通して受け取ったメッセージはプッシュサービスによって暗号化されて送信され、`PushMessageData` インターフェースのメソッドで利用可能になる前にブラウザーによって自動的に 復号化されます。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p>なし。</p>
+なし。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("PushMessageData.arrayBuffer()")}}</dt>
- <dd>データを {{domxref("ArrayBuffer")}} オブジェクトとして抜き出します。</dd>
- <dt>{{domxref("PushMessageData.blob()")}}</dt>
- <dd>データを {{domxref("Blob")}} オブジェクトとして抜き出します。</dd>
- <dt>{{domxref("PushMessageData.json()")}}</dt>
- <dd>データを <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> オブジェクトとして抜き出します。</dd>
- <dt>{{domxref("PushMessageData.text()")}}</dt>
- <dd>データをプレーンテキスト文字列として抜き出します。</dd>
-</dl>
+- {{domxref("PushMessageData.arrayBuffer()")}}
+  - : データを {{domxref("ArrayBuffer")}} オブジェクトとして抜き出します。
+- {{domxref("PushMessageData.blob()")}}
+  - : データを {{domxref("Blob")}} オブジェクトとして抜き出します。
+- {{domxref("PushMessageData.json()")}}
+  - : データを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトとして抜き出します。
+- {{domxref("PushMessageData.text()")}}
+  - : データをプレーンテキスト文字列として抜き出します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var obj = event.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
@@ -48,27 +47,15 @@ translation_of: Web/API/PushMessageData
   } else if(obj.action === 'init' || obj.action === 'chatMsg') {
     port.postMessage(obj);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#pushmessagedata-interface', 'PushMessageData')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                             | 状態                         | コメント   |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
+| {{SpecName('Push API', '#pushmessagedata-interface', 'PushMessageData')}} | {{Spec2('Push API')}} | 初期定義。 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
-<p>{{Compat("api.PushMessageData")}}</p>
-</div>
+{{Compat("api.PushMessageData")}}

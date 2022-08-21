@@ -10,27 +10,28 @@ tags:
   - メソッド
 translation_of: Web/API/PushManager/register
 ---
-<div>{{deprecated_header}}{{ ApiRef("Push API")}}</div>
+{{deprecated_header}}{{ ApiRef("Push API")}}
 
-<p><strong><code>register</code></strong> メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。このメソッドは {{domxref("PushManager.subscribe()")}} に置き換えられました。</p>
+**`register`** メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。このメソッドは {{domxref("PushManager.subscribe()")}} に置き換えられました。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var request = navigator.push.register();</pre>
+```
+var request = navigator.push.register();
+```
 
-<h3 id="Return" name="Return">返値</h3>
+### 返値
 
-<p>{{domxref("DOMRequest")}} オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。</p>
+{{domxref("DOMRequest")}} オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
-<p>メソッドの呼び出しに成功したら、リクエストの <code>result</code> が端点の URL を表す文字列になります。</p>
+メソッドの呼び出しに成功したら、リクエストの `result` が端点の URL を表す文字列になります。
 
-<div class="note">
-<p><strong>メモ:</strong> この URL が必要なくなったら、 {{domxref("Pushmanager.unregister()")}} を使用して自分自身を掃除してください。</p>
-</div>
+> **Note:** **メモ:** この URL が必要なくなったら、 {{domxref("Pushmanager.unregister()")}} を使用して自分自身を掃除してください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">var req = navigator.push.register();
+```js
+var req = navigator.push.register();
 
 req.onsuccess = function(e) {
   var endpoint = req.result;
@@ -40,36 +41,19 @@ req.onsuccess = function(e) {
 req.onerror = function(e) {
   debug("Error getting a new endpoint: " + JSON.stringify(e));
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Push API')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td><code>PushManager</code> インターフェイスを定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                           | 状態                         | 備考                                 |
+| -------------------------------- | ---------------------------- | ------------------------------------ |
+| {{SpecName('Push API')}} | {{Spec2('Push API')}} | `PushManager` インターフェイスを定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.PushManager.register")}}</p>
-</div>
+{{Compat("api.PushManager.register")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("PushManager")}}</li>
- <li>{{domxref("DOMRequest")}}</li>
-</ul>
+- {{domxref("PushManager")}}
+- {{domxref("DOMRequest")}}

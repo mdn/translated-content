@@ -11,56 +11,56 @@ tags:
   - Workers
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
-<div>{{DefaultAPISidebar("Web Workers API")}}</div>
+{{DefaultAPISidebar("Web Workers API")}}
 
-<p><span class="seoSummary"></span>Web Worker は、ウェブコンテンツがスクリプトをバックグラウンドのスレッドで実行するためのシンプルな手段です。ワーカースレッドは、ユーザーインターフェイスを妨げることなくタスクを実行できます。加えて、 <code><a class="internal" href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (<code>responseXML</code> 属性や <code>channel</code> 属性は常に null ですが) または <code><a href="/ja/docs/Web/API/Fetch_API">fetch</a></code> (そのような制約なし) を使用して入出力を行うこともできます。生成されたワーカーは、オリジンが指定したイベントンドラーへメッセージを送ることにより、ウィンドウript コードワーカーその逆も可能です)。</span>本記事では、 Web Worker の使い方を詳しく紹介します。</p>
+Web Worker は、ウェブコンテンツがスクリプトをバックグラウンドのスレッドで実行するためのシンプルな手段です。ワーカースレッドは、ユーザーインターフェイスを妨げることなくタスクを実行できます。加えて、 [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) (`responseXML` 属性や `channel` 属性は常に null ですが) または [`fetch`](/ja/docs/Web/API/Fetch_API) (そのような制約なし) を使用して入出力を行うこともできます。生成されたワーカーは、オリジンが指定したイベントンドラーへメッセージを送ることにより、ウィンドウ ript コードワーカーその逆も可能です)。本記事では、 Web Worker の使い方を詳しく紹介します。
 
-<h2 id="Web_Workers_API">Web Worker API</h2>
+## Web Worker API
 
-<p>ワーカーはコンストラクター (例えば {{domxref("Worker.Worker", "Worker()")}}) を使用して生成されるオブジェクトであり、名前付きの JavaScript ファイル (このファイルはワーカースレッドで実行するコードを持ちます) を実行します。またワーカーは、現在の {{domxref("window")}} とは異なるグローバルコンテキストで実行されます。従って、 {{domxref("window")}} を ({{domxref("window.self","self")}} の代わりに) 使用して現在のグローバルスコープを取得しようとすると、 {{domxref("Worker")}} の中ではエラーが返されます。</p>
+ワーカーはコンストラクター (例えば {{domxref("Worker.Worker", "Worker()")}}) を使用して生成されるオブジェクトであり、名前付きの JavaScript ファイル (このファイルはワーカースレッドで実行するコードを持ちます) を実行します。またワーカーは、現在の {{domxref("window")}} とは異なるグローバルコンテキストで実行されます。従って、 {{domxref("window")}} を ({{domxref("window.self","self")}} の代わりに) 使用して現在のグローバルスコープを取得しようとすると、 {{domxref("Worker")}} の中ではエラーが返されます。
 
-<p>ワーカーのコンテキストは、専用ワーカー (単一のスクリプトで利用される標準的なワーカー) の場合は {{domxref("DedicatedWorkerGlobalScope")}} オブジェクトで表されます (共有ワーカーの場合は {{domxref("SharedWorkerGlobalScope")}} です)。専用ワーカーは、最初にワーカーを起動したスクリプトだけがアクセスできます。一方、共有ワーカーは複数のスクリプトからアクセスできます。</p>
+ワーカーのコンテキストは、専用ワーカー (単一のスクリプトで利用される標準的なワーカー) の場合は {{domxref("DedicatedWorkerGlobalScope")}} オブジェクトで表されます (共有ワーカーの場合は {{domxref("SharedWorkerGlobalScope")}} です)。専用ワーカーは、最初にワーカーを起動したスクリプトだけがアクセスできます。一方、共有ワーカーは複数のスクリプトからアクセスできます。
 
-<div class="note">
-<p><strong>メモ</strong>: ワーカーのリファレンスドキュメントや追加のガイドについては <a href="/ja/docs/Web/API/Web_Workers_API">Web Workers API のトップページ</a>をご覧ください。</p>
-</div>
+> **Note:** **メモ**: ワーカーのリファレンスドキュメントや追加のガイドについては [Web Workers API のトップページ](/ja/docs/Web/API/Web_Workers_API)をご覧ください。
 
-<p>ワーカースレッドでは、どのようなコードでも実行できますが、いくつかの制限があります。例えば、ワーカー内から直接 DOM を操作することはできません。また {{domxref("window")}} オブジェクトの既定のメソッドやプロパティで、使用できないものがあります。それでも、<code>window</code> 配下にある多数のアイテム、たとえば <a href="/ja/docs/Web/API/WebSockets_API">WebSocket</a>、 <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> のようなデータストレージ機構などを使用できます。詳しくは<a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">ワーカーで使用できる関数やクラス</a>をご覧ください。</p>
+ワーカースレッドでは、どのようなコードでも実行できますが、いくつかの制限があります。例えば、ワーカー内から直接 DOM を操作することはできません。また {{domxref("window")}} オブジェクトの既定のメソッドやプロパティで、使用できないものがあります。それでも、`window` 配下にある多数のアイテム、たとえば [WebSocket](/ja/docs/Web/API/WebSockets_API)、 [IndexedDB](/ja/docs/Web/API/IndexedDB_API) のようなデータストレージ機構などを使用できます。詳しくは[ワーカーで使用できる関数やクラス](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)をご覧ください。
 
-<p>ワーカーとメインスレッドの間でデータをやり取りするには、メッセージの仕組みが使用されます。どちらも <code>postMessage()</code> メソッドを使用してメッセージを送信し、<code>onmessage</code> イベントハンドラーによってメッセージに応答します (メッセージは {{event("Message")}} イベントの data 属性に収められます)。データは共有されず、コピーされます。</p>
+ワーカーとメインスレッドの間でデータをやり取りするには、メッセージの仕組みが使用されます。どちらも `postMessage()` メソッドを使用してメッセージを送信し、`onmessage` イベントハンドラーによってメッセージに応答します (メッセージは {{event("Message")}} イベントの data 属性に収められます)。データは共有されず、コピーされます。
 
-<p>ワーカーは、親ページと同じオリジン内でホスティングされている場合に限り、さらに新たなワーカーを起動することができます。また、ワーカーは <a class="internal" href="/ja/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> を使用してネットワーク I/O を行うことができますが、例外として <code>XMLHttpRequest</code> の <code>responseXML</code> および <code>channel</code> 属性は常に <code>null</code> を返します。</p>
+ワーカーは、親ページと同じオリジン内でホスティングされている場合に限り、さらに新たなワーカーを起動することができます。また、ワーカーは [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) を使用してネットワーク I/O を行うことができますが、例外として `XMLHttpRequest` の `responseXML` および `channel` 属性は常に `null` を返します。
 
-<h2 id="Dedicated_workers">専用ワーカー (Dedicated worker)</h2>
+## 専用ワーカー (Dedicated worker)
 
-<p>前述のとおり、専用ワーカーには呼び出し元のスクリプトだけがアクセスできます。この節では<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">基本的な専用ワーカーのサンプル</a>にある JavaScript を見ていきます (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">専用ワーカーを実行する</a>)。これは、 2 つの数字を入力して掛け合わせることができるものです。数字は専用のワーカーに送られて掛け合わされ、その結果がページに戻されて表示されます。</p>
+前述のとおり、専用ワーカーには呼び出し元のスクリプトだけがアクセスできます。この節では[基本的な専用ワーカーのサンプル](https://github.com/mdn/simple-web-worker)にある JavaScript を見ていきます ([専用ワーカーを実行する](https://mdn.github.io/simple-web-worker/))。これは、 2 つの数字を入力して掛け合わせることができるものです。数字は専用のワーカーに送られて掛け合わされ、その結果がページに戻されて表示されます。
 
-<p>これはあまり面白みのないサンプルですが、基本的なワーカーの概念を紹介する間はシンプルに保とうと考えています。より高度な詳細情報は、この記事の後半で扱います。</p>
+これはあまり面白みのないサンプルですが、基本的なワーカーの概念を紹介する間はシンプルに保とうと考えています。より高度な詳細情報は、この記事の後半で扱います。
 
-<h3 id="Worker_feature_detection">ワーカー機能の検出</h3>
+### ワーカー機能の検出
 
-<p>エラー制御と後方互換性を向上させるため、ワーカーにアクセスするコードを以下のコードの中に包むといいでしょう (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>)。</p>
+エラー制御と後方互換性を向上させるため、ワーカーにアクセスするコードを以下のコードの中に包むといいでしょう ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js))。
 
-<pre class="brush: js">if (window.Worker) {
+```js
+if (window.Worker) {
 
   ...
 
-}</pre>
+}
+```
 
-<h3 id="Spawning_a_dedicated_worker">専用ワーカーの起動</h3>
+### 専用ワーカーの起動
 
-<p>新しいワーカーは簡単に生成できます。必要なことは、ワーカースレッドで実行するスクリプトの URI を指定した {{domxref("Worker.Worker", "Worker()")}} コンストラクターを呼び出すことだけです (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>)。</p>
+新しいワーカーは簡単に生成できます。必要なことは、ワーカースレッドで実行するスクリプトの URI を指定した {{domxref("Worker.Worker", "Worker()")}} コンストラクターを呼び出すことだけです ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js))。
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var myWorker = new Worker('worker.js');
-</pre>
-</div>
+```js
+var myWorker = new Worker('worker.js');
+```
 
-<h3 id="Sending_messages_to_and_from_a_dedicated_worker">専用ワーカーとメッセージをやりとりする</h3>
+### 専用ワーカーとメッセージをやりとりする
 
-<p>ワーカーのマジックは、{{domxref("Worker.postMessage", "postMessage()")}} メソッドと {{domxref("Worker.onmessage", "onmessage")}} イベントハンドラーによって実現します。ワーカーにメッセージを送りたいときは、以下のようにしてメッセージを投稿します (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>)。</p>
+ワーカーのマジックは、{{domxref("Worker.postMessage", "postMessage()")}} メソッドと {{domxref("Worker.onmessage", "onmessage")}} イベントハンドラーによって実現します。ワーカーにメッセージを送りたいときは、以下のようにしてメッセージを投稿します ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js))。
 
-<pre class="brush: js">first.onchange = function() {
+```js
+first.onchange = function() {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
@@ -68,164 +68,176 @@ translation_of: Web/API/Web_Workers_API/Using_web_workers
 second.onchange = function() {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
-}</pre>
+}
+```
 
-<p>2 つの {{htmlelement("input")}} 要素があり、それぞれ変数 <code>first</code> と <code>second</code> で表されています。どちらかの値が変化すると、 <code>myWorker.postMessage([first.value,second.value])</code> を使用して、双方の値を配列としてワーカーに送信します。メッセージでは、おおむねどのようなものでも送信できます。</p>
+2 つの {{htmlelement("input")}} 要素があり、それぞれ変数 `first` と `second` で表されています。どちらかの値が変化すると、 `myWorker.postMessage([first.value,second.value])` を使用して、双方の値を配列としてワーカーに送信します。メッセージでは、おおむねどのようなものでも送信できます。
 
-<p>ワーカー内では、以下のようにイベントハンドラーのブロックにコードを記述すると、メッセージを受け取ったときに応答できます (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js">worker.js</a>)。</p>
+ワーカー内では、以下のようにイベントハンドラーのブロックにコードを記述すると、メッセージを受け取ったときに応答できます ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js))。
 
-<pre class="brush: js">onmessage = function(e) {
+```js
+onmessage = function(e) {
   console.log('Message received from main script');
   var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
   postMessage(workerResult);
-}</pre>
+}
+```
 
-<p><code>onmessage</code> ハンドラーにより、メッセージを受け取ったときになんらかののコードを実行できます。メッセージ自体は、<code>message</code> イベントの <code>data</code> 属性で手に入ります。ここでは 2 つの数値で乗算を行った後、再び <code>postMessage()</code> を使用して計算結果をメインスレッドに返しています。</p>
+`onmessage` ハンドラーにより、メッセージを受け取ったときになんらかののコードを実行できます。メッセージ自体は、`message` イベントの `data` 属性で手に入ります。ここでは 2 つの数値で乗算を行った後、再び `postMessage()` を使用して計算結果をメインスレッドに返しています。
 
-<p>メインスレッドに戻ると、再び <code>onmessage</code> を使用して、ワーカーから返されたメッセージに応答します。</p>
+メインスレッドに戻ると、再び `onmessage` を使用して、ワーカーから返されたメッセージに応答します。
 
-<pre class="brush: js">myWorker.onmessage = function(e) {
+```js
+myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>ここではメッセージイベントからデータを取り出して、結果の段落の <code>textContent</code> へ格納しています。よって、ユーザーは計算結果を見ることができます。</p>
+ここではメッセージイベントからデータを取り出して、結果の段落の `textContent` へ格納しています。よって、ユーザーは計算結果を見ることができます。
 
-<div class="note"><strong>注</strong>: メインのスクリプトスレッドで <code>onmessage</code> および <code>postMessage()</code> を使用するときは <code>Worker</code> オブジェクトにぶら下げなければなりませんが、ワーカー内ではそのようにする必要はありません。これは、ワーカー内ではそれ自身が実質的にグローバルスコープであるためです。</div>
+> **Note:** **注**: メインのスクリプトスレッドで `onmessage` および `postMessage()` を使用するときは `Worker` オブジェクトにぶら下げなければなりませんが、ワーカー内ではそのようにする必要はありません。これは、ワーカー内ではそれ自身が実質的にグローバルスコープであるためです。
 
-<div class="note"><strong>注</strong>: メッセージをメインスレッドとワーカーの間でやりとりするとき、共有されるのではなく、コピーまたは「転送」 (移動) されます。詳しい解説は、<a href="#transferring_data_to_and_from_workers_further_details">ワーカーとの間のデータ転送の詳細</a>をご覧ください。</div>
+> **Note:** **注**: メッセージをメインスレッドとワーカーの間でやりとりするとき、共有されるのではなく、コピーまたは「転送」 (移動) されます。詳しい解説は、[ワーカーとの間のデータ転送の詳細](#transferring_data_to_and_from_workers_further_details)をご覧ください。
 
-<h3 id="Terminating_a_worker">ワーカーの終了</h3>
+### ワーカーの終了
 
-<p>メインスレッドから実行しているワーカーを直ちに終了させる必要がある場合は、ワーカーの {{domxref("Worker", "terminate")}} メソッドを呼び出してください。</p>
+メインスレッドから実行しているワーカーを直ちに終了させる必要がある場合は、ワーカーの {{domxref("Worker", "terminate")}} メソッドを呼び出してください。
 
-<pre class="brush: js">myWorker.terminate();</pre>
+```js
+myWorker.terminate();
+```
 
-<p>ワーカースレッドは直ちに終了します。</p>
+ワーカースレッドは直ちに終了します。
 
-<h3 id="Handling_errors">エラー処理</h3>
+### エラー処理
 
-<p>ワーカー内で実行時エラーが発生すると、 <code>onerror</code> イベントハンドラーが呼び出されます。これは <code>error</code> という名前のイベントを受け取りますが、これは <code>ErrorEvent</code> インターフェイスを実装しています。</p>
+ワーカー内で実行時エラーが発生すると、 `onerror` イベントハンドラーが呼び出されます。これは `error` という名前のイベントを受け取りますが、これは `ErrorEvent` インターフェイスを実装しています。
 
-<p>イベントはバブリングせず、またキャンセルすることができます。ワーカーはエラーイベントの  <a class="internal" href="/ja/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> メソッドを呼び出すことで、発生元の既定のアクションを抑制することができます。</p>
+イベントはバブリングせず、またキャンセルすることができます。ワーカーはエラーイベントの [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) メソッドを呼び出すことで、発生元の既定のアクションを抑制することができます。
 
-<p>エラーイベントには、以下の重要な 3 つのフィールドがあります。</p>
+エラーイベントには、以下の重要な 3 つのフィールドがあります。
 
-<dl>
- <dt><code>message</code></dt>
- <dd>人間が読み取れるエラーメッセージです。</dd>
- <dt><code>filename</code></dt>
- <dd>エラーが発生したスクリプトのファイル名です。</dd>
- <dt><code>lineno</code></dt>
- <dd>スクリプトファイル内でエラーが発生した場所の行番号です。</dd>
-</dl>
+- `message`
+  - : 人間が読み取れるエラーメッセージです。
+- `filename`
+  - : エラーが発生したスクリプトのファイル名です。
+- `lineno`
+  - : スクリプトファイル内でエラーが発生した場所の行番号です。
 
-<h3 id="Spawning_subworkers">サブワーカーの起動</h3>
+### サブワーカーの起動
 
-<p>ワーカーは、必要に応じてさらに多くのワーカーを生み出すことができます。いわゆるサブワーカーは、親ページと同じオリジン内でホストされていなければなりません。また、サブワーカーの URI は、親ページのものではなく、親ワーカーの位置を基準に解決されます。これにより、ワーカーは自分の依存関係がどこにあるかを簡単に把握することができます。</p>
+ワーカーは、必要に応じてさらに多くのワーカーを生み出すことができます。いわゆるサブワーカーは、親ページと同じオリジン内でホストされていなければなりません。また、サブワーカーの URI は、親ページのものではなく、親ワーカーの位置を基準に解決されます。これにより、ワーカーは自分の依存関係がどこにあるかを簡単に把握することができます。
 
-<h3 id="Importing_scripts_and_libraries">スクリプトやライブラリーのインポート</h3>
+### スクリプトやライブラリーのインポート
 
-<p>Worker スレッドはグローバル関数や、スクリプトをインポートするための <code>importScripts()</code> にアクセスできます。これはインポートするリソースの URI を 0 個以上、引数として受け入れます。以下の例はすべて有効です。</p>
+Worker スレッドはグローバル関数や、スクリプトをインポートするための `importScripts()` にアクセスできます。これはインポートするリソースの URI を 0 個以上、引数として受け入れます。以下の例はすべて有効です。
 
-<pre class="brush: js">importScripts();                         /* 何もインポートしない */
+```js
+importScripts();                         /* 何もインポートしない */
 importScripts('foo.js');                 /* "foo.js" をインポート */
 importScripts('foo.js', 'bar.js');       /* 2 つのスクリプトをインポート */
-importScripts('//example.com/hello.js'); /* 他のオリジンのスクリプトをインポートすることができる */</pre>
+importScripts('//example.com/hello.js'); /* 他のオリジンのスクリプトをインポートすることができる */
+```
 
-<p>ブラウザーはそれぞれのスクリプトを読み込み、実行します。ワーカーは各スクリプトのグローバルオブジェクトを使用できます。スクリプトを読み込むことができない場合は <code>NETWORK_ERROR</code> を発生させて、それ以降のコードを実行しません。それでも、すでに実行されたコード ({{domxref("WindowOrWorkerGlobalScope.setTimeout")}} で繰り延べされているコードを含みます) は動作します。<code>importScripts()</code> メソッドより<strong>後方</strong>にある関数の宣言は、常にコードの残りの部分より先に評価されることから、同様に保持されます。</p>
+ブラウザーはそれぞれのスクリプトを読み込み、実行します。ワーカーは各スクリプトのグローバルオブジェクトを使用できます。スクリプトを読み込むことができない場合は `NETWORK_ERROR` を発生させて、それ以降のコードを実行しません。それでも、すでに実行されたコード ({{domxref("WindowOrWorkerGlobalScope.setTimeout")}} で繰り延べされているコードを含みます) は動作します。`importScripts()` メソッドより**後方**にある関数の宣言は、常にコードの残りの部分より先に評価されることから、同様に保持されます。
 
-<div class="note"><strong>注</strong>: スクリプトは順不同にダウンロードされることがありますが、実行は <code>importScripts()</code> に渡したファイル名の順に行います。これは同期的に行われます。すべてのスクリプトの読み込みと実行が行われるまで <code>importScripts()</code> から戻りません。</div>
+> **Note:** **注**: スクリプトは順不同にダウンロードされることがありますが、実行は `importScripts()` に渡したファイル名の順に行います。これは同期的に行われます。すべてのスクリプトの読み込みと実行が行われるまで `importScripts()` から戻りません。
 
-<h2 id="Shared_workers">共有ワーカー</h2>
+## 共有ワーカー
 
-<p>共有ワーカーは、オリジンが同一であれば (異なるウィンドウ、iframe、ワーカーからであっても) 複数のスクリプトからアクセスできます。本章では<a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">基本的な共有ワーカーの例</a> の JavaScript を見ていきます (<a class="external external-icon" href="https://mdn.github.io/simple-shared-worker/">共有ワーカーを実行する</a>)。こちらは専用ワーカーのサンプルと似ていますが、<em>2 つの数値で乗算を行う</em>スクリプトと<em>数値を 2 乗する</em>スクリプトという、別々のスクリプトファイルが扱う 2 つの関数を使用できる点が異なります。どちらのスクリプトも同じワーカーを使用して、実際に必要な計算を行います。</p>
+共有ワーカーは、オリジンが同一であれば (異なるウィンドウ、iframe、ワーカーからであっても) 複数のスクリプトからアクセスできます。本章では[基本的な共有ワーカーの例](https://github.com/mdn/simple-shared-worker) の JavaScript を見ていきます ([共有ワーカーを実行する](https://mdn.github.io/simple-shared-worker/))。こちらは専用ワーカーのサンプルと似ていますが、*2 つの数値で乗算を行う*スクリプトと*数値を 2 乗する*スクリプトという、別々のスクリプトファイルが扱う 2 つの関数を使用できる点が異なります。どちらのスクリプトも同じワーカーを使用して、実際に必要な計算を行います。
 
-<p>ここでは、 専用ワーカーと共有ワーカーの違いについて注目します。この例では 2 つの HTML ページがあり、それぞれの JavaScript は同じ単一のワーカーファイルを使用するようになっています。</p>
+ここでは、 専用ワーカーと共有ワーカーの違いについて注目します。この例では 2 つの HTML ページがあり、それぞれの JavaScript は同じ単一のワーカーファイルを使用するようになっています。
 
-<div class="note">
-<p><strong>注</strong>: 共有ワーカーが複数の閲覧コンテキストからアクセスできる場合、すべての閲覧コンテキストはまったく同じオリジン (プロトコル、ホスト、ポート番号が同じ) になります。</p>
-</div>
+> **Note:** **注**: 共有ワーカーが複数の閲覧コンテキストからアクセスできる場合、すべての閲覧コンテキストはまったく同じオリジン (プロトコル、ホスト、ポート番号が同じ) になります。
 
-<div class="note">
-<p><strong>メモ</strong>: Firefox では、共有ワーカーはプライベートウィンドウとそれ以外に読み込まれた文書間で共有することができません ({{bug(1177621)}})。</p>
-</div>
+> **Note:** **メモ**: Firefox では、共有ワーカーはプライベートウィンドウとそれ以外に読み込まれた文書間で共有することができません ({{bug(1177621)}})。
 
-<h3 id="Spawning_a_shared_worker">共有ワーカーの生成</h3>
+### 共有ワーカーの生成
 
-<p>新しい共有ワーカーの生成方法は 専用ワーカー の場合とほとんど同じですが、コンストラクター名が異なります (<a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html">index.html</a> および <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index2.html">index2.html</a> をご覧ください)。それぞれのページで、以下のようなコードを使用してワーカーを立ち上げます。</p>
+新しい共有ワーカーの生成方法は 専用ワーカー の場合とほとんど同じですが、コンストラクター名が異なります ([index.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html) および [index2.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index2.html) をご覧ください)。それぞれのページで、以下のようなコードを使用してワーカーを立ち上げます。
 
-<pre class="brush: js">var myWorker = new SharedWorker('worker.js');</pre>
+```js
+var myWorker = new SharedWorker('worker.js');
+```
 
-<p>共有ワーカーの大きな違いのひとつが、 <code>port</code> オブジェクトを通して通信しなければならないことです。スクリプトがワーカーと通信するために使用できる、明示的なポートが開きます (これは、 専用ワーカーでも暗黙的に開いています)。</p>
+共有ワーカーの大きな違いのひとつが、 `port` オブジェクトを通して通信しなければならないことです。スクリプトがワーカーと通信するために使用できる、明示的なポートが開きます (これは、 専用ワーカーでも暗黙的に開いています)。
 
-<p>ポートへの接続は、メッセージを送信する前に <code>onmessage</code> イベントハンドラーを使用して暗黙的に行うか、あるいは <code>start()</code> メソッドを使用して明示的に開始するかしなければなりません。 <code>start()</code> の呼び出しは、<code>addEventListener()</code> メソッドで <code>message</code> イベントを拾い上げる場合にのみ必要です。</p>
+ポートへの接続は、メッセージを送信する前に `onmessage` イベントハンドラーを使用して暗黙的に行うか、あるいは `start()` メソッドを使用して明示的に開始するかしなければなりません。 `start()` の呼び出しは、`addEventListener()` メソッドで `message` イベントを拾い上げる場合にのみ必要です。
 
-<div class="note">
-<p>ポート接続を開始するために <code>start()</code> メソッドを使用するとき、双方向の通信が必要である場合は親スレッドとワーカーの両方で呼び出さなければなりません。</p>
-</div>
+> **Note:** ポート接続を開始するために `start()` メソッドを使用するとき、双方向の通信が必要である場合は親スレッドとワーカーの両方で呼び出さなければなりません。
 
-<h3 id="Sending_messages_to_and_from_a_shared_worker">共有ワーカーとのメッセージのやりとり</h3>
+### 共有ワーカーとのメッセージのやりとり
 
-<p>前述のとおりワーカーにメッセージを送信できるようになりましたが、<code>postMessage()</code> メソッドは port オブジェクトを通して呼び出さなければなりません (繰り返しますが、同様の構造が <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> および <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a> に存在します)。</p>
+前述のとおりワーカーにメッセージを送信できるようになりましたが、`postMessage()` メソッドは port オブジェクトを通して呼び出さなければなりません (繰り返しますが、同様の構造が [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) および [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js) に存在します)。
 
-<pre class="brush: js">squareNumber.onchange = function() {
+```js
+squareNumber.onchange = function() {
   myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
   console.log('Message posted to worker');
-}</pre>
+}
+```
 
-<p>Worker に移ります。こちらは若干複雑さが増しています (<a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js">worker.js</a>):</p>
+Worker に移ります。こちらは若干複雑さが増しています ([worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)):
 
-<pre class="brush: js notranslate">onconnect = function(e) {
+```js
+onconnect = function(e) {
   var port = e.ports[0];
 
   port.onmessage = function(e) {
     var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
     port.postMessage(workerResult);
   }
-}</pre>
+}
+```
 
-<p>始めに、ポートへの接続が発生したとき (すなわち、親スレッドで <code>onmessage</code> イベントをセットアップしたときや親スレッドで <code>start()</code> メソッドを明示的に呼び出したとき) にコードを実行するため <code>onconnect</code> ハンドラーを使用します。</p>
+始めに、ポートへの接続が発生したとき (すなわち、親スレッドで `onmessage` イベントをセットアップしたときや親スレッドで `start()` メソッドを明示的に呼び出したとき) にコードを実行するため `onconnect` ハンドラーを使用します。
 
-<p>イベントオブジェクトの <code>ports</code> 属性を使用してポートを取り出し、変数に格納します。</p>
+イベントオブジェクトの `ports` 属性を使用してポートを取り出し、変数に格納します。
 
-<p>次に、計算を実行して結果をメインスレッドに返すため、ポートの <code>message</code> のハンドラーを使用します。ワーカースレッドで <code>message</code> のハンドラーをセットアップすると、親スレッドに戻すポート接続を暗黙的に開きます。従って、実際は前述のとおり <code>port.start()</code> を呼び出す必要はありません。</p>
+次に、計算を実行して結果をメインスレッドに返すため、ポートの `message` のハンドラーを使用します。ワーカースレッドで `message` のハンドラーをセットアップすると、親スレッドに戻すポート接続を暗黙的に開きます。従って、実際は前述のとおり `port.start()` を呼び出す必要はありません。
 
-<p>最後に、メインスレッドに戻ってメッセージを扱います (繰り返しますが、同様の構造が <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> および <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a> に存在します)。</p>
+最後に、メインスレッドに戻ってメッセージを扱います (繰り返しますが、同様の構造が [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) および [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js) に存在します)。
 
-<pre class="brush: js">myWorker.port.onmessage = function(e) {
+```js
+myWorker.port.onmessage = function(e) {
   result2.textContent = e.data;
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>ポートを通してワーカーからメッセージが戻ったときは、結果のデータ型を確認してから適切な段落に計算結果を挿入します。</p>
+ポートを通してワーカーからメッセージが戻ったときは、結果のデータ型を確認してから適切な段落に計算結果を挿入します。
 
-<h2 id="About_thread_safety">スレッドセーフについて</h2>
+## スレッドセーフについて
 
-<p>{{domxref("Worker")}} インターフェイスでは、OS レベルの実際のスレッドが生成されるため、注意深いプログラマーは、注意しないと同時実行によってコードに「面白い」効果が生じるのではないかと懸念するかもしれません。</p>
+{{domxref("Worker")}} インターフェイスでは、OS レベルの実際のスレッドが生成されるため、注意深いプログラマーは、注意しないと同時実行によってコードに「面白い」効果が生じるのではないかと懸念するかもしれません。
 
-<p>しかし、 Web Worker は他のスレッドとの通信ポイントが慎重に制御されているため、同時実行の問題を引き起こすことは実際には非常に困難です。スレッドセーフでないコンポーネントや DOM にはアクセスできません。また、シリアル化されたオブジェクトを通して特定のデータをスレッドに出し入れしなければなりません。ですから、コードで問題を起こすためには、かなり難しいのです。</p>
+しかし、 Web Worker は他のスレッドとの通信ポイントが慎重に制御されているため、同時実行の問題を引き起こすことは実際には非常に困難です。スレッドセーフでないコンポーネントや DOM にはアクセスできません。また、シリアル化されたオブジェクトを通して特定のデータをスレッドに出し入れしなければなりません。ですから、コードで問題を起こすためには、かなり難しいのです。
 
-<h2 id="Content_security_policy">コンテンツセキュリティポリシー</h2>
+## コンテンツセキュリティポリシー
 
-<p>ワーカーは、自分を生成した文書から区別された独自の実行コンテキストを持っているとみなされます。このため、一般に、自分を生成した文書 (または親ワーカー) の<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">コンテンツセキュリティポリシー</a>では管理されません。そのため例えば、文書が次のヘッダー付きで読み込まれたと仮定します。</p>
+ワーカーは、自分を生成した文書から区別された独自の実行コンテキストを持っているとみなされます。このため、一般に、自分を生成した文書 (または親ワーカー) の[コンテンツセキュリティポリシー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)では管理されません。そのため例えば、文書が次のヘッダー付きで読み込まれたと仮定します。
 
-<pre class="brush: plain">Content-Security-Policy: script-src 'self'</pre>
+```plain
+Content-Security-Policy: script-src 'self'
+```
 
-<p>特に、これは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> を使用したスクリプトを防ぎます。しかし、スクリプトがワーカーを構築した場合、ワーカーのコンテキストで実行中のコードは <code>eval()</code> を使用することができます。</p>
+特に、これは [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) を使用したスクリプトを防ぎます。しかし、スクリプトがワーカーを構築した場合、ワーカーのコンテキストで実行中のコードは `eval()` を使用することができます。
 
-<p>ワーカーのコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が配信されたリクエストの <a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> レスポンスヘッダーで設定してください。</p>
+ワーカーのコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が配信されたリクエストの [Content-Security-Policy](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) レスポンスヘッダーで設定してください。
 
-<p>ワーカースクリプトのオリジンがグローバルに一意な識別子である場合 (例えば、 URL のスキームが data や blob であった場合) は例外です。この場合、ワーカーは文書の CSP またはそれを作成したワーカーを継承します。</p>
+ワーカースクリプトのオリジンがグローバルに一意な識別子である場合 (例えば、 URL のスキームが data や blob であった場合) は例外です。この場合、ワーカーは文書の CSP またはそれを作成したワーカーを継承します。
 
-<h2 id="Transferring_data_to_and_from_workers_further_details">ワーカーとのデータ転送の詳細</h2>
+## ワーカーとのデータ転送の詳細
 
-<p>メインページとワーカーの間で渡されるデータは、共有ではなく<strong>コピー</strong>されます。オブジェクトは、ワーカーに渡されるときにシリアライズされ、その後、反対側でシリアライズが解除されます。ページとワーカーは<strong>同じインスタンスを共有しない</strong>ため、最終的には両側に<strong>複製</strong>が作成されます。ほとんどのブラウザーはこの機能を<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">構造化複製</a>として実装しています。</p>
+メインページとワーカーの間で渡されるデータは、共有ではなく**コピー**されます。オブジェクトは、ワーカーに渡されるときにシリアライズされ、その後、反対側でシリアライズが解除されます。ページとワーカーは**同じインスタンスを共有しない**ため、最終的には両側に**複製**が作成されます。ほとんどのブラウザーはこの機能を[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)として実装しています。
 
-<p>これを説明するため、教育的な用途の関数 <code>emulateMessage()</code> を作成し、 <code>worker</code> からメインページおよびその逆の移動において<em>共有されず複製される</em>値の動作をシミュレーションしてみましょう。</p>
+これを説明するため、教育的な用途の関数 `emulateMessage()` を作成し、 `worker` からメインページおよびその逆の移動において*共有されず複製される*値の動作をシミュレーションしてみましょう。
 
-<pre class="brush: js">function emulateMessage(vVal) {
+```js
+function emulateMessage(vVal) {
     return eval('(' + JSON.stringify(vVal) + ')');
 }
 
@@ -261,39 +273,45 @@ function Animal(sType, nAge) {
 }
 var example5 = new Animal('Cat', 3);
 alert(example5.constructor); // Animal
-alert(emulateMessage(example5).constructor); // Object</pre>
+alert(emulateMessage(example5).constructor); // Object
+```
 
-<p>複製され、共有されない値を<em>メッセージ</em>と呼びます。もうお分かりだと思いますが、<em>メッセージ</em>は <code>postMessage()</code> を使ってメインスレッドとの間で送受信することができ、 <code>message</code> イベントの {{domxref("MessageEvent.data", "data")}} 属性には、ワーカーから返されたデータが含まれています。</p>
+複製され、共有されない値を*メッセージ*と呼びます。もうお分かりだと思いますが、*メッセージ*は `postMessage()` を使ってメインスレッドとの間で送受信することができ、 `message` イベントの {{domxref("MessageEvent.data", "data")}} 属性には、ワーカーから返されたデータが含まれています。
 
-<p><strong>example.html</strong> (メインページ)</p>
+**example.html** (メインページ)
 
-<pre class="brush: js">var myWorker = new Worker('my_task.js');
+```js
+var myWorker = new Worker('my_task.js');
 
 myWorker.onmessage = function(oEvent) {
   console.log('Worker said : ' + oEvent.data);
 };
 
-myWorker.postMessage('ali');</pre>
+myWorker.postMessage('ali');
+```
 
-<p><strong>my_task.js</strong> (ワーカー)</p>
+**my_task.js** (ワーカー)
 
-<pre class="brush: js">postMessage("I\'m working before postMessage(\'ali\').");
+```js
+postMessage("I\'m working before postMessage(\'ali\').");
 
 onmessage = function(oEvent) {
   postMessage('Hi ' + oEvent.data);
-};</pre>
+};
+```
 
-<p><a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">構造化複製</a>アルゴリズムは JSON を受け入れることができ、循環参照など JSON ではできないものもいくつか受け入れることができます。</p>
+[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムは JSON を受け入れることができ、循環参照など JSON ではできないものもいくつか受け入れることができます。
 
-<h3 id="Passing_data_examples">データ引き渡しの例</h3>
+### データ引き渡しの例
 
-<h4 id="Example_1_Advanced_passing_JSON_Data_and_creating_a_switching_system">例 #1: 高度な JSON データ渡しと切り替えシステムの作成</h4>
+#### 例 #1: 高度な JSON データ渡しと切り替えシステムの作成
 
-<p>もしいくつかの複雑なデータを渡さなければならず、メインページとワーカーの両方で多くの異なる関数を呼び出さなければならない場合、すべてをまとめてグループにするシステムを作ることができます。</p>
+もしいくつかの複雑なデータを渡さなければならず、メインページとワーカーの両方で多くの異なる関数を呼び出さなければならない場合、すべてをまとめてグループにするシステムを作ることができます。
 
-<p>はじめに、ワーカーの URL、既定のリスナー、エラーハンドラーを持つ <code>QueryableWorker</code> クラスを作ります。このクラスはリスナーのリストを記録し、ワーカーとのコミュニケーションに役立てます。</p>
+はじめに、ワーカーの URL、既定のリスナー、エラーハンドラーを持つ `QueryableWorker` クラスを作ります。このクラスはリスナーのリストを記録し、ワーカーとのコミュニケーションに役立てます。
 
-<pre class="brush: js">function QueryableWorker(url, defaultListener, onError) {
+```js
+function QueryableWorker(url, defaultListener, onError) {
     var instance = this,
         worker = new Worker(url),
         listeners = {};
@@ -309,26 +327,30 @@ onmessage = function(oEvent) {
     this.terminate = function() {
         worker.terminate();
     }
-}</pre>
+}
+```
 
-<p>そして、リスナーを追加/削除する方法を追加します。</p>
+そして、リスナーを追加/削除する方法を追加します。
 
-<pre class="brush: js">this.addListeners = function(name, listener) {
+```js
+this.addListeners = function(name, listener) {
     listeners[name] = listener;
 }
 
 this.removeListeners = function(name) {
     delete listeners[name];
-}</pre>
+}
+```
 
-<p>ここでは、説明のためにワーカーに 2 つの簡単な操作をさせてみましょう。 2 つの数値の差を取得することと、 3 秒後にアラートを出すことです。これを実現するために、まず最初に <code>sendQuery</code> メソッドを実装します。これは、ワーカーが実際に対応するメソッドを持っているかどうかを問い合わせるものです。</p>
+ここでは、説明のためにワーカーに 2 つの簡単な操作をさせてみましょう。 2 つの数値の差を取得することと、 3 秒後にアラートを出すことです。これを実現するために、まず最初に `sendQuery` メソッドを実装します。これは、ワーカーが実際に対応するメソッドを持っているかどうかを問い合わせるものです。
 
-<pre class="brush: js">/*
+```js
+/*
   This functions takes at least one argument, the method name we want to query.
   Then we can pass in the arguments that the method needs.
  */
 this.sendQuery = function() {
-    if (arguments.length &lt; 1) {
+    if (arguments.length < 1) {
          throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
          return;
     }
@@ -336,24 +358,27 @@ this.sendQuery = function() {
         'queryMethod': arguments[0],
         'queryArguments': Array.prototype.slice.call(arguments, 1)
     });
-}</pre>
+}
+```
 
-<p><code>QueryableWorker</code> を <code>onmessage</code> メソッドで終了させます。問い合わせたメソッドに対応するワーカーがあれば、対応するリスナーの名前と必要な引数を返してくれるはずなので、あとは <code>listeners</code> の中を探すだけです。</p>
+`QueryableWorker` を `onmessage` メソッドで終了させます。問い合わせたメソッドに対応するワーカーがあれば、対応するリスナーの名前と必要な引数を返してくれるはずなので、あとは `listeners` の中を探すだけです。
 
-<pre class="brush: js">worker.onmessage = function(event) {
-    if (event.data instanceof Object &amp;&amp;
-        event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
+```js
+worker.onmessage = function(event) {
+    if (event.data instanceof Object &&
+        event.data.hasOwnProperty('queryMethodListener') &&
         event.data.hasOwnProperty('queryMethodArguments')) {
         listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
     } else {
         this.defaultListener.call(instance, event.data);
     }
 }
-</pre>
+```
 
-<p>次にワーカーです。まず、 2 つの簡単な操作を行うためのメソッドが必要です。</p>
+次にワーカーです。まず、 2 つの簡単な操作を行うためのメソッドが必要です。
 
-<pre class="brush: js">var queryableFunctions = {
+```js
+var queryableFunctions = {
     getDifference: function(a, b) {
         reply('printStuff', a - b);
     },
@@ -365,7 +390,7 @@ this.sendQuery = function() {
 }
 
 function reply() {
-    if (arguments.length &lt; 1) {
+    if (arguments.length < 1) {
         throw new TypeError('reply - takes at least one argument');
         return;
     }
@@ -379,13 +404,14 @@ function reply() {
 function defaultReply(message) {
     // do something
 }
-</pre>
+```
 
-<p>そして、<code>onmessage</code>メソッドは簡単になりました。</p>
+そして、`onmessage`メソッドは簡単になりました。
 
-<pre class="brush: js">onmessage = function(event) {
-    if (event.data instanceof Object &amp;&amp;
-        event.data.hasOwnProperty('queryMethod') &amp;&amp;
+```js
+onmessage = function(event) {
+    if (event.data instanceof Object &&
+        event.data.hasOwnProperty('queryMethod') &&
         event.data.hasOwnProperty('queryMethodArguments')) {
         queryableFunctions[event.data.queryMethod]
             .apply(self, event.data.queryMethodArguments);
@@ -393,18 +419,19 @@ function defaultReply(message) {
         defaultReply(event.data);
     }
 }
-</pre>
+```
 
-<p>ここでは、完全な実装を紹介します。</p>
+ここでは、完全な実装を紹介します。
 
-<p><strong>example.html</strong> (メインページ)</p>
+**example.html** (メインページ)
 
-<pre class="brush: html">&lt;!doctype html&gt;
-  &lt;html&gt;
-    &lt;head&gt;
-      &lt;meta charset="UTF-8"  /&gt;
-      &lt;title&gt;MDN Example - Queryable worker&lt;/title&gt;
-    &lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+  <html>
+    <head>
+      <meta charset="UTF-8"  />
+      <title>MDN Example - Queryable worker</title>
+    <script type="text/javascript">
     /*
       QueryableWorker instances methods:
         * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
@@ -445,7 +472,7 @@ function defaultReply(message) {
         Then we can pass in the arguments that the method needs.
       */
       this.sendQuery = function() {
-        if (arguments.length &lt; 1) {
+        if (arguments.length < 1) {
           throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
           return;
         }
@@ -456,8 +483,8 @@ function defaultReply(message) {
       }
 
       worker.onmessage = function(event) {
-        if (event.data instanceof Object &amp;&amp;
-          event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
+        if (event.data instanceof Object &&
+          event.data.hasOwnProperty('queryMethodListener') &&
           event.data.hasOwnProperty('queryMethodArguments')) {
           listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
         } else {
@@ -477,20 +504,22 @@ function defaultReply(message) {
     myTask.addListener('doAlert', function (time, unit) {
       alert('Worker waited for ' + time + ' ' + unit + ' :-)');
     });
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);"&gt;What is the difference between 5 and 3?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript:myTask.sendQuery('waitSomeTime');"&gt;Wait 3 seconds&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript:myTask.terminate();"&gt;terminate() the Worker&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</head>
+<body>
+  <ul>
+    <li><a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
+    <li><a href="javascript:myTask.sendQuery('waitSomeTime');">Wait 3 seconds</a></li>
+    <li><a href="javascript:myTask.terminate();">terminate() the Worker</a></li>
+  </ul>
+</body>
+</html>
+```
 
-<p><strong>my_task.js</strong> (ワーカー)</p>
+**my_task.js** (ワーカー)
 
-<pre class="brush: js">var queryableFunctions = {
+```js
+var queryableFunctions = {
   // 例 #1: 2 つの値の差を得る
   getDifference: function(nMinuend, nSubtrahend) {
       reply('printStuff', nMinuend - nSubtrahend);
@@ -509,52 +538,53 @@ function defaultReply(message) {
 }
 
 function reply() {
-  if (arguments.length &lt; 1) { throw new TypeError('reply - not enough arguments'); return; }
+  if (arguments.length < 1) { throw new TypeError('reply - not enough arguments'); return; }
   postMessage({ 'queryMethodListener': arguments[0], 'queryMethodArguments': Array.prototype.slice.call(arguments, 1) });
 }
 
 onmessage = function(oEvent) {
-  if (oEvent.data instanceof Object &amp;&amp; oEvent.data.hasOwnProperty('queryMethod') &amp;&amp; oEvent.data.hasOwnProperty('queryMethodArguments')) {
+  if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty('queryMethod') && oEvent.data.hasOwnProperty('queryMethodArguments')) {
     queryableFunctions[oEvent.data.queryMethod].apply(self, oEvent.data.queryMethodArguments);
   } else {
     defaultReply(oEvent.data);
   }
-};</pre>
+};
+```
 
-<p>各メインページ→ワーカー、ワーカー→メインページとメッセージの内容を切り替えることができます。そして、 "queryMethod", "queryMethodListeners", "queryMethodArguments" の各プロパティ名は、 <code>QueryableWorker</code> とワーカーで一致していれば何でも構いません。</p>
+各メインページ → ワーカー、ワーカー → メインページとメッセージの内容を切り替えることができます。そして、 "queryMethod", "queryMethodListeners", "queryMethodArguments" の各プロパティ名は、 `QueryableWorker` とワーカーで一致していれば何でも構いません。
 
-<h3 id="Passing_data_by_transferring_ownership_transferable_objects">所有権の譲渡によるデータの引き渡し (transferable オブジェクト)</h3>
+### 所有権の譲渡によるデータの引き渡し (transferable オブジェクト)
 
-<p>Google Chrome 17 以降および Firefox 18 以降には、特定の種類のオブジェクト (transferable オブジェクト、つまり {{domxref("Transferable")}} インターフェイスを実装したオブジェクト) をワーカーとの間で高いパフォーマンスで受け渡すための別な方法があります。 Transferable オブジェクトは、あるコンテキストから別のコンテキストへコピー操作なしで転送されるため、大規模なデータセットを送信する際のパフォーマンスが大幅に向上します。 C/C++ の世界から来た人は、参照渡しと考えてください。ただし、参照渡しとは異なり、呼び出し元のコンテキストの「バージョン」は転送されると利用できなくなります。その所有権は新しいコンテキストに移されます。例えば、 {{jsxref("ArrayBuffer")}} をメインアプリからワーカースクリプトに転送した場合、元の {{jsxref("ArrayBuffer")}} はクリアされ、使用できなくなります。その内容は (文字通り) ワーカーコンテキストに転送 (transfer) されます。</p>
+Google Chrome 17 以降および Firefox 18 以降には、特定の種類のオブジェクト (transferable オブジェクト、つまり {{domxref("Transferable")}} インターフェイスを実装したオブジェクト) をワーカーとの間で高いパフォーマンスで受け渡すための別な方法があります。 Transferable オブジェクトは、あるコンテキストから別のコンテキストへコピー操作なしで転送されるため、大規模なデータセットを送信する際のパフォーマンスが大幅に向上します。 C/C++ の世界から来た人は、参照渡しと考えてください。ただし、参照渡しとは異なり、呼び出し元のコンテキストの「バージョン」は転送されると利用できなくなります。その所有権は新しいコンテキストに移されます。例えば、 {{jsxref("ArrayBuffer")}} をメインアプリからワーカースクリプトに転送した場合、元の {{jsxref("ArrayBuffer")}} はクリアされ、使用できなくなります。その内容は (文字通り) ワーカーコンテキストに転送 (transfer) されます。
 
-<pre class="brush: js">// 32MB の "file" を作成して埋めます。
+```js
+// 32MB の "file" を作成して埋めます。
 var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
-for (var i = 0; i &lt; uInt8Array.length; ++i) {
+for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
-</pre>
+```
 
-<div class="note">
-<p><strong>注</strong>: Transferable オブジェクト、パフォーマンス、メソッドの機能検出について詳しくは、HTML5 Rocks の <a href="https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> をご覧ください。</p>
-</div>
+> **Note:** **注**: Transferable オブジェクト、パフォーマンス、メソッドの機能検出について詳しくは、HTML5 Rocks の [Transferable Objects: Lightning Fast!](https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) をご覧ください。
 
-<h2 id="Embedded_workers">埋め込みワーカー</h2>
+## 埋め込みワーカー
 
-<p>ワーカーのコードをウェブページに埋め込むための、通常のスクリプトを {{HTMLElement("script")}} 要素で埋め込むような「公式な｝方法はありません。しかし、 {{HTMLElement("script")}} 要素が <code>src</code> 属性を持たず、また <code>type</code> 属性が実行可能な MIME タイプを示していない場合は、 JavaScript が使用できるデータブロック要素であると判断されます。「データブロック」はほとんどのテキストデータを持つことができる、 HTML5 の一般的な機能です。よって、以下の方法でワーカーを埋め込むことができます。</p>
+ワーカーのコードをウェブページに埋め込むための、通常のスクリプトを {{HTMLElement("script")}} 要素で埋め込むような「公式な｝方法はありません。しかし、 {{HTMLElement("script")}} 要素が `src` 属性を持たず、また `type` 属性が実行可能な MIME タイプを示していない場合は、 JavaScript が使用できるデータブロック要素であると判断されます。「データブロック」はほとんどのテキストデータを持つことができる、 HTML5 の一般的な機能です。よって、以下の方法でワーカーを埋め込むことができます。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;MDN Example - Embedded worker&lt;/title&gt;
-&lt;script type="text/js-worker"&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>MDN Example - Embedded worker</title>
+<script type="text/js-worker">
   // MIME タイプが text/js-worker であるため、このスクリプトは JS エンジンに解釈されません。
   var myVar = 'Hello World!';
   // ワーカーの残りのコードをここに置きます。
-&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
+</script>
+<script type="text/javascript">
   // MIME タイプが text/javascript であるため、このスクリプトは JS エンジンに解釈されます。
   function pageLog(sMsg) {
     // ブラウザーがレンダリングや再フローを行うのを 1 回だけにするために fragment を使用します。
@@ -563,15 +593,15 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
     oFragm.appendChild(document.createElement('br'));
     document.querySelector('#logDisplay').appendChild(oFragm);
   }
-&lt;/script&gt;
-&lt;script type="text/js-worker"&gt;
+</script>
+<script type="text/js-worker">
   // MIME タイプが text/js-worker であるため、このスクリプトは JS エンジンに解釈されません。
   onmessage = function(oEvent) {
     postMessage(myVar);
   };
   // ワーカーの残りのコードをここに置きます。
-&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
+</script>
+<script type="text/javascript">
   // MIME タイプが text/javascript であるため、このスクリプトは JS エンジンに解釈されます。
 
   //
@@ -588,33 +618,37 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
   // ワーカーを起動します。
   window.onload = function() { document.worker.postMessage(''); };
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;&lt;div id="logDisplay"&gt;&lt;/div&gt;&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</head>
+<body><div id="logDisplay"></div></body>
+</html>
+```
 
-<p>埋め込みワーカーは、新たな <code>document.worker</code> カスタムプロパティの中に入りました。</p>
+埋め込みワーカーは、新たな `document.worker` カスタムプロパティの中に入りました。
 
-<p>言うまでもなく、次の例のように、関数を Blob に変換して、その blob からオブジェクトの URL を生成することができます。</p>
+言うまでもなく、次の例のように、関数を Blob に変換して、その blob からオブジェクトの URL を生成することができます。
 
-<pre class="brush: js">function fn2workerURL(fn) {
+```js
+function fn2workerURL(fn) {
   var blob = new Blob(['('+fn.toString()+')()'], {type: 'text/javascript'})
   return URL.createObjectURL(blob)
-}</pre>
+}
+```
 
-<h2 id="Further_examples">追加の例</h2>
+## 追加の例
 
-<p>ここでは Web Worker の使用方法について、さらに例を示します。</p>
+ここでは Web Worker の使用方法について、さらに例を示します。
 
-<h3 id="Performing_computations_in_the_background">バックグラウンドで演算を行う</h3>
+### バックグラウンドで演算を行う
 
-<p>ワーカーは主に、ユーザーインターフェイスのスレッドを妨げずに CPU 負荷が大きい演算を実行するために役立ちます。このサンプルでは、ワーカーをフィボナッチ数の計算に使用します。</p>
+ワーカーは主に、ユーザーインターフェイスのスレッドを妨げずに CPU 負荷が大きい演算を実行するために役立ちます。このサンプルでは、ワーカーをフィボナッチ数の計算に使用します。
 
-<h4 id="The_JavaScript_code">JavaScript コード</h4>
+#### JavaScript コード
 
-<p>以下の JavaScript コードをファイル "fibonacci.js" に保存し、次節の HTML から参照します。</p>
+以下の JavaScript コードをファイル "fibonacci.js" に保存し、次節の HTML から参照します。
 
-<pre class="brush: js">var results = [];
+```js
+var results = [];
 
 function resultReceiver(event) {
   results.push(parseInt(event.data));
@@ -635,29 +669,31 @@ onmessage = function(event) {
     return;
   }
 
-  for (var i = 1; i &lt;= 2; i++) {
+  for (var i = 1; i <= 2; i++) {
     var worker = new Worker('fibonacci.js');
     worker.onmessage = resultReceiver;
     worker.onerror = errorReceiver;
     worker.postMessage(n - i);
   }
- };</pre>
+ };
+```
 
-<p>ワーカーは <code>onmessage</code> プロパティを、ワーカーのオブジェクトの <code>postMessage()</code> が呼び出されたときにメッセージを受け取る関数に設定します (これはその名前の<em>変数</em>や<em>関数</em>を定義することとは違いますので注意してください。 <code>var onmessage</code> と <code>function onmessage</code> は、これらの名前のグローバルグローバルプロパティを定義しますが、ワーカーを作成したウェブページから送信されたメッセージを受信するように関数を登録するわけではありません)。これは最適に開始して、それぞれの計算の反復処理を扱うために自分自身のコピーを起動します。</p>
+ワーカーは `onmessage` プロパティを、ワーカーのオブジェクトの `postMessage()` が呼び出されたときにメッセージを受け取る関数に設定します (これはその名前の*変数*や*関数*を定義することとは違いますので注意してください。 `var onmessage` と `function onmessage` は、これらの名前のグローバルグローバルプロパティを定義しますが、ワーカーを作成したウェブページから送信されたメッセージを受信するように関数を登録するわけではありません)。これは最適に開始して、それぞれの計算の反復処理を扱うために自分自身のコピーを起動します。
 
-<h4 id="The_HTML_code">HTML コード</h4>
+#### HTML コード
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"  /&gt;
-    &lt;title&gt;Test threads fibonacci&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"  />
+    <title>Test threads fibonacci</title>
+  </head>
+  <body>
 
-  &lt;div id="result"&gt;&lt;/div&gt;
+  <div id="result"></div>
 
-  &lt;script language="javascript"&gt;
+  <script language="javascript">
 
     var worker = new Worker('fibonacci.js');
 
@@ -673,97 +709,72 @@ onmessage = function(event) {
 
     worker.postMessage('5');
 
-  &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  </body>
+</html>
+```
 
-<p>ウェブページは <code>result</code> という ID を持つ <code>div</code> 要素を作成して、結果を表示するために使用します。そして、ワーカーを起動します。ワーカーを起動した後は、<code>onmessage</code> ハンドラーを <code>div</code> 要素の内容を指定することで結果を表示するように構成し、また <code>onerror</code> ハンドラーはエラーメッセージを<a href="/ja/docs/Debugging_JavaScript#dump()"">ダンプ</a>するように設定します。</p>
+ウェブページは `result` という ID を持つ `div` 要素を作成して、結果を表示するために使用します。そして、ワーカーを起動します。ワーカーを起動した後は、`onmessage` ハンドラーを `div` 要素の内容を指定することで結果を表示するように構成し、また `onerror` ハンドラーはエラーメッセージを[ダンプ](</ja/docs/Debugging_JavaScript#dump()>)するように設定します。
 
-<p>最後に、ワーカーを開始するためにメッセージを送信します。</p>
+最後に、ワーカーを開始するためにメッセージを送信します。
 
-<p><a href="https://mdn.github.io/fibonacci-worker/">この例のデモを試してください</a>。</p>
+[この例のデモを試してください](https://mdn.github.io/fibonacci-worker/)。
 
-<h3 id="Performing_web_IO_in_the_background">バックグラウンドでのウェブ入出力の実行</h3>
+### バックグラウンドでのウェブ入出力の実行
 
-<p>この例は、 <a href="/ja/docs/Using_workers_in_extensions">Using workers in extensions</a> の記事に掲載しています。</p>
+この例は、 [Using workers in extensions](/ja/docs/Using_workers_in_extensions) の記事に掲載しています。
 
-<h3 id="Dividing_tasks_among_multiple_workers">複数のワーカーにタスクを分割する</h3>
+### 複数のワーカーにタスクを分割する
 
-<p>マルチコアのコンピューターが一般的になってきたことで複数のワーカーに複雑な計算処理を分割することが有用になり、それらのタスクを複数の CPU コアで実行することが可能になります。</p>
+マルチコアのコンピューターが一般的になってきたことで複数のワーカーに複雑な計算処理を分割することが有用になり、それらのタスクを複数の CPU コアで実行することが可能になります。
 
-<h2 id="Other_types_of_worker" name="Other_types_of_worker">その他のワーカー</h2>
+## その他のワーカー
 
-<p>専用ワーカーや共有ワーカーに加えて、利用できる他の種類のワーカーがあります。</p>
+専用ワーカーや共有ワーカーに加えて、利用できる他の種類のワーカーがあります。
 
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker</a> は、基本的に、ウェブアプリケーションと、ブラウザーおよびネットワーク (利用可能な場合) との間に位置するプロキシーサーバーとして機能します。これは、効果的なオフライン操作の構築ができるようにすること目的としています。ネットワークリクエストを傍受し、ネットワークが利用可能かどうかや、サーバー上の更新された資産に基づいて、適切なアクションをとります。また、プッシュ通知やバックグラウンド同期の API にもアクセスできるようになります。</li>
- <li>Chrome Worker は Firefox 独自の種類のワーカーであり、アドオンを開発していて、拡張機能でワーカーを使用したい場合、ワーカーから <a href="/ja/js-ctypes">js-ctypes</a> にアクセスしたい場合に使用することができます。詳しくは {{domxref("ChromeWorker")}} をご覧ください。</li>
- <li><a href="/ja/docs/Web/API/Web_Audio_API#audio_processing_in_javascript">Audio Worklet</a> は、ワークレット (ワーカーの軽量版) のコンテキスト内でスクリプトによるオーディオ処理を直接実行する機能を提供します。</li>
-</ul>
+- [ServiceWorker](/ja/docs/Web/API/Service_Worker_API) は、基本的に、ウェブアプリケーションと、ブラウザーおよびネットワーク (利用可能な場合) との間に位置するプロキシーサーバーとして機能します。これは、効果的なオフライン操作の構築ができるようにすること目的としています。ネットワークリクエストを傍受し、ネットワークが利用可能かどうかや、サーバー上の更新された資産に基づいて、適切なアクションをとります。また、プッシュ通知やバックグラウンド同期の API にもアクセスできるようになります。
+- Chrome Worker は Firefox 独自の種類のワーカーであり、アドオンを開発していて、拡張機能でワーカーを使用したい場合、ワーカーから [js-ctypes](/ja/js-ctypes) にアクセスしたい場合に使用することができます。詳しくは {{domxref("ChromeWorker")}} をご覧ください。
+- [Audio Worklet](/ja/docs/Web/API/Web_Audio_API#audio_processing_in_javascript) は、ワークレット (ワーカーの軽量版) のコンテキスト内でスクリプトによるオーディオ処理を直接実行する機能を提供します。
 
-<h2 id="Debugging_worker_threads">ワーカースレッドのデバッグ</h2>
+## ワーカースレッドのデバッグ
 
-<p>ほとんどのブラウザーは、 JavaScript デバッガーでワーカースレッドのデバッグを、メインスレッドのデバッグとまったく同じ方法で対応しています。たとえば、 Firefox と Chrome の両方で、メインスレッドとアクティブなワーカースレッドの両方の JavaScript ソースファイルを一覧表示し、これらのファイルをすべて開いてブレークポイントやログポイントを設定することができます。</p>
+ほとんどのブラウザーは、 JavaScript デバッガーでワーカースレッドのデバッグを、メインスレッドのデバッグとまったく同じ方法で対応しています。たとえば、 Firefox と Chrome の両方で、メインスレッドとアクティブなワーカースレッドの両方の JavaScript ソースファイルを一覧表示し、これらのファイルをすべて開いてブレークポイントやログポイントを設定することができます。
 
-<p>下の画面ショットは、 Firefox での例です。<em>ソースリスト</em>には、別のワーカースレッドで実行されている <code>worker.js</code> が表示されています。このファイルを選択すると、メイン スレッドで実行されているコードと同様に、<a href="/ja/docs/Tools/Debugger/UI_Tour#source_pane">ソースペイン</a>で開かれます。</p>
+下の画面ショットは、 Firefox での例です。*ソースリスト*には、別のワーカースレッドで実行されている `worker.js` が表示されています。このファイルを選択すると、メイン スレッドで実行されているコードと同様に、[ソースペイン](/ja/docs/Tools/Debugger/UI_Tour#source_pane)で開かれます。
 
-<p><img src="worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+![](worker-source.png)
 
-<div class="notecard note">
-<p><strong>注</strong>: ワーカーのスクリプトは必要になったときに読み込まれるため、ページが読み込まれたての時にはソースリストに現れていないかもしれません。</p>
-</div>
+> **Note:** **注**: ワーカーのスクリプトは必要になったときに読み込まれるため、ページが読み込まれたての時にはソースリストに現れていないかもしれません。
 
-<p>ソースパネルの中では通常の方法でワーカースレッドに<a href=" /ja/docs/Tools/Debugger/How_to/Set_a_breakpoint">ブレークポイント</a>または<a href=" /ja/docs/Tools/Debugger/Set_a_logpoint">ログポイント</a>) を設定することができます。実行が一時停止されると、デバッガーのコンテキストが更新され、正しい<a href=" /ja/docs/Tools/Debugger/How_to/Set_a_breakpoint">ブレークポイント</a>、<a href=" /ja/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">インラインの変数のプレビュー</a>、<a href=" /ja/docs/Tools/Debugger/UI_Tour#call_stack">コールスタック</a>などが期待通りに表示されます。</p>
+ソースパネルの中では通常の方法でワーカースレッドに[ブレークポイント](< /ja/docs/Tools/Debugger/How_to/Set_a_breakpoint>)または[ログポイント](< /ja/docs/Tools/Debugger/Set_a_logpoint>)) を設定することができます。実行が一時停止されると、デバッガーのコンテキストが更新され、正しい[ブレークポイント](< /ja/docs/Tools/Debugger/How_to/Set_a_breakpoint>)、[インラインの変数のプレビュー](< /ja/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview>)、[コールスタック](< /ja/docs/Tools/Debugger/UI_Tour#call_stack>)などが期待通りに表示されます。
 
-<p><img src="worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+![](worker-breakpoints-callstack.png)
 
-<div class="notecard note">
-<p><strong>注</strong>: 詳しくは <a href=" /ja/docs/Tools/Debugger">Firefox JavaScript Debugger</a> を参照してください。</p>
-</div>
+> **Note:** **注**: 詳しくは [Firefox JavaScript Debugger](< /ja/docs/Tools/Debugger>) を参照してください。
 
-<h2 id="Functions_and_interfaces_available_in_workers">ワーカーで使用できる関数とインターフェイス</h2>
+## ワーカーで使用できる関数とインターフェイス
 
-<p>標準的な JavaScript 機能のほとんどが Web Worker 内で使用できます。以下のものを含みます。</p>
+標準的な JavaScript 機能のほとんどが Web Worker 内で使用できます。以下のものを含みます。
 
-<ul>
- <li>{{domxref("Navigator")}}</li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}}、{{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}} および {{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
-</ul>
+- {{domxref("Navigator")}}
+- {{domxref("XMLHttpRequest")}}
+- {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}}、{{jsxref("Global_Objects/String", "String")}}
+- {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} および {{domxref("WindowOrWorkerGlobalScope.setInterval")}}
 
-<p>ワーカーで<em>実行できない</em>ことは主に、親ページに直接影響を与えるものです。これは、 DOM の操作やページのオブジェクトを使用することを含みます。{{domxref("DedicatedWorkerGlobalScope.postMessage")}} を使用してメインスクリプトにメッセージを戻してから変更操作を行う形で、間接的に実行しなければなりません。</p>
+ワーカーで*実行できない*ことは主に、親ページに直接影響を与えるものです。これは、 DOM の操作やページのオブジェクトを使用することを含みます。{{domxref("DedicatedWorkerGlobalScope.postMessage")}} を使用してメインスクリプトにメッセージを戻してから変更操作を行う形で、間接的に実行しなければなりません。
 
-<div class="notecard note">
-<p>あるメソッドがワーカーで利用できるかどうかは、サイト <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> を使ってテストできます。例えば、Firefox 84 でサイトに <a href="/ja/docs/Web/API/EventSource">EventSource</a> と入力すると、サービスワーカーではサポートされていないが、専用ワーカーや共有ワーカーではサポートされていることがわかります。</p>
-</div>
+> **Note:** あるメソッドがワーカーで利用できるかどうかは、サイト <https://worker-playground.glitch.me/> を使ってテストできます。例えば、Firefox 84 でサイトに [EventSource](/ja/docs/Web/API/EventSource) と入力すると、サービスワーカーではサポートされていないが、専用ワーカーや共有ワーカーではサポートされていることがわかります。
 
-<div class="note">
-<p><strong>メモ</strong>: ワーカーで使用できる関数の完全なリストは、<a href=" /ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">ワーカーで使用できる関数とインターフェイス</a>でご覧ください。</p>
-</div>
+> **Note:** **メモ**: ワーカーで使用できる関数の完全なリストは、[ワーカーで使用できる関数とインターフェイス](< /ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers>)でご覧ください。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#workers', 'Web workers')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   | 状態                             | 備考 |
+| ------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', '#workers', 'Web workers')}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><code><a class="internal" href="/ja/docs/Web/API/Worker">Worker</a></code> インターフェイス</li>
- <li><code><a class="internal" href="/ja/docs/Web/API/SharedWorker">SharedWorker</a></code> インターフェイス</li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">ワーカーで使用できる関数</a></li>
-</ul>
+- [`Worker`](/ja/docs/Web/API/Worker) インターフェイス
+- [`SharedWorker`](/ja/docs/Web/API/SharedWorker) インターフェイス
+- [ワーカーで使用できる関数](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

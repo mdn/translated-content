@@ -10,53 +10,38 @@ tags:
   - Reference
 translation_of: Web/API/Permissions
 ---
-<p>{{APIRef("Permissions API")}}{{SeeCompatTable}}</p>
+{{APIRef("Permissions API")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> の <code>Permissions</code> インターフェイスは、パーミッションの照会および取り消しのためのメソッドなど、コアとなる Permission API 機能を提供します。</span></p>
+[Permissions API](/ja/docs/Web/API/Permissions_API) の `Permissions` インターフェイスは、パーミッションの照会および取り消しのためのメソッドなど、コアとなる Permission API 機能を提供します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("Permissions.query()")}}</dt>
- <dd>特定の API のパーミッションの状態を返します。</dd>
- <dt>{{domxref("Permissions.request()")}}</dt>
- <dd>特定の API を使用するパーミッションを要求します。 これは現在どのブラウザーもサポートしていません。</dd>
- <dt>{{domxref("Permissions.revoke()")}}</dt>
- <dd>特定の API に現在設定されているパーミッションを取り消します。</dd>
-</dl>
+- {{domxref("Permissions.query()")}}
+  - : 特定の API のパーミッションの状態を返します。
+- {{domxref("Permissions.request()")}}
+  - : 特定の API を使用するパーミッションを要求します。 これは現在どのブラウザーもサポートしていません。
+- {{domxref("Permissions.revoke()")}}
+  - : 特定の API に現在設定されているパーミッションを取り消します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">navigator.permissions.query({name:'geolocation'}).then(function(result) {
+```js
+navigator.permissions.query({name:'geolocation'}).then(function(result) {
   if (result.state == 'granted') {
     showLocalNewsWithGeolocation();
   } else if (result.state == 'prompt') {
     showButtonToEnableLocalNews();
   }
   // パーミッションが拒否された場合は何もしないでください。
-});</pre>
+});
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Permissions API', '#permissions-interface', 'Permissions')}}</td>
-   <td>{{Spec2('Permissions API')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                             | 状態                                 | コメント |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Permissions API', '#permissions-interface', 'Permissions')}} | {{Spec2('Permissions API')}} | 初期定義 |
 
-<h2 id="Browser_Support" name="Browser_Support">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.Permissions")}}</p>
-</div>
+{{Compat("api.Permissions")}}
