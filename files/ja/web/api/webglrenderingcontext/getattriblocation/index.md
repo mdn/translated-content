@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/getAttribLocation
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.getAttribLocation()`**メソッドは指定された{{domxref("WebGLProgram")}}内の属性の場所を返します。
+[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.getAttribLocation()`** メソッドは指定された{{domxref("WebGLProgram")}}内の属性の場所を返します。
 
 ## 構文
 
