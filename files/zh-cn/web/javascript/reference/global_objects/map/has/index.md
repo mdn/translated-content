@@ -25,7 +25,7 @@ has(key)
 
 ## 案例
 
-### 使用 `has()` 方法
+### 使用 has()
 
 ```js
 const myMap = new Map();
