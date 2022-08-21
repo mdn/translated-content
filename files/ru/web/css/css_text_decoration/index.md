@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
 spec-urls: https://drafts.csswg.org/css-text-decor/
+translation_of: Web/CSS/CSS_Text_Decoration
 ---
 {{CSSRef}}
 
