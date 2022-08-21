@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 
 ## 语法
 
-```plain
+```js
 entries()
 ```
 
