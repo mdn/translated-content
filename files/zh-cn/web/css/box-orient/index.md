@@ -78,7 +78,7 @@ div.example {
 
 #### 结果
 
-{{ EmbedLiveSample('Examples', 600, 50, '', 'Web/CSS/box-orient') }}
+{{ EmbedLiveSample('设置盒子水平布局', 600, 50) }}
 
 ## 规范
 

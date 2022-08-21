@@ -13,7 +13,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3
 
 如果这个三级菜单有部分区域重叠，管理层叠顺序就会成为一个问题。
 
-{{ EmbedLiveSample('Example_source_code', '320', '330', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3') }}
+{{ EmbedLiveSample('示例源码', '320', '330') }}
 
 一级菜单仅仅是相对定位，所以没有创建层叠上下文。
 

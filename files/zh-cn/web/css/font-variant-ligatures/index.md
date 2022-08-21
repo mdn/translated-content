@@ -73,7 +73,7 @@ font-variant-ligatures: unset;
 
 {{csssyntax}}
 
-## Examples
+## 示例
 
 ### Setting font ligatures and contextual forms
 
@@ -178,9 +178,9 @@ p {
 }
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700', '', 'Web/CSS/font-variant-ligatures') }}
+{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700') }}
 
 ## Specifications
 

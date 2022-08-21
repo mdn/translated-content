@@ -63,7 +63,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
-{{ EmbedLiveSample('Testing_value_of_array_elements', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('測試陣列元素的數值') }}
 
 ### 使用箭頭函式測試
 
@@ -74,7 +74,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(x => x > 10); // true
 ```
 
-{{ EmbedLiveSample('Testing_array_elements_using_arrow_functions', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('使用箭頭函式測試') }}
 
 ### 測試陣列元素的數值是否存在
 
@@ -93,7 +93,7 @@ checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true
 ```
 
-{{ EmbedLiveSample('Checking_whether_a_value_exists_in_an_array', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('測試陣列元素的數值是否存在') }}
 
 ### Checking whether a value exists using an arrow function
 
@@ -108,7 +108,7 @@ checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true
 ```
 
-{{ EmbedLiveSample('Checking_whether_a_value_exists_using_an_arrow_function', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}
+{{ EmbedLiveSample('Checking_whether_a_value_exists_using_an_arrow_function') }}
 
 ### Converting any value to Boolean
 
@@ -133,7 +133,7 @@ getBoolean(1);       // true
 getBoolean('true');  // true
 ```
 
-{{ EmbedLiveSample('Converting_any_value_to_Boolean', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Converting_any_value_to_Boolean') }}
 
 ## Polyfill
 
@@ -168,7 +168,7 @@ if (!Array.prototype.some) {
 }
 ```
 
-{{ EmbedLiveSample('Polyfill', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Polyfill') }}
 
 ## 規範
 

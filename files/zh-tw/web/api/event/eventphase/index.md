@@ -128,7 +128,7 @@ function Clear() {
 }
 ```
 
-{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}
+{{ EmbedLiveSample('範例', '', '700') }}
 
 ## 規範
 

@@ -23,7 +23,7 @@ pad: 3 "0";
 
 {{csssyntax}}
 
-## 样例
+## 示例
 
 ### HTML
 
@@ -53,7 +53,7 @@ pad: 3 "0";
 
 ### 结果
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/pad') }}
+{{ EmbedLiveSample('示例') }}
 
 ## Specifications
 

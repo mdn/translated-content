@@ -9,7 +9,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2
 
 这是一个非常简单的例子，但它是理解层叠上下文这个概念的关键。还是和之前的例子中一样的四个 DIV，不过现在 z-index 属性被分配在两个水平的层次结构中。
 
-{{ EmbedLiveSample('Example_source_code', '352', '270', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2') }}
+{{ EmbedLiveSample('示例源码', '352', '270') }}
 
 可以看到现在 DIV #2 (z-index: 2) 在 DIV #3 (z-index: 1) 的上面，因为他们都属于同一个层叠上下文（根元素创建的层叠上下文），所以 z-index 的值决定了元素如何叠放。
 
