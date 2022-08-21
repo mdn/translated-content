@@ -3,70 +3,56 @@ title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 translation_of: Web/API/AudioBufferSourceNode/start
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>インターフェースの<code>start()</code>メソッドは、オーディオバッファの再生をスケジュールするために使われます。</p>
-</div>
+インターフェースの`start()`メソッドは、オーディオバッファの再生をスケジュールするために使われます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js;highlight[2]">var source = audioCtx.createBufferSource();
+```js
+var source = audioCtx.createBufferSource();
 source.start(when, offset, duration);
-</pre>
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<p>最も単純なオーディオバッファの再生方法—この場合は何もパラメータを指定する必要はありません。</p>
+最も単純なオーディオバッファの再生方法—この場合は何もパラメータを指定する必要はありません。
 
-<pre class="brush: js">source.start();</pre>
+```js
+source.start();
+```
 
-<p>次はそれよりも複雑な再生方法です。1秒待った後、オーディオバッファの3秒経過した位置から、10秒間再生します。</p>
+次はそれよりも複雑な再生方法です。1 秒待った後、オーディオバッファの 3 秒経過した位置から、10 秒間再生します。
 
-<pre class="brush: js">source.start(audioCtx.currentTime + 1,3,10);</pre>
+```js
+source.start(audioCtx.currentTime + 1,3,10);
+```
 
-<div class="note">
-<p><strong>注: </strong>start()の使い方の完全な例は{{domxref("AudioContext.decodeAudioData")}}を参照してください。<a class="external-icon external" href="http://mdn.github.io/decode-audio-data/">コードをすぐに実行する</a>ことや、<a class="external-icon external" href="https://github.com/mdn/decode-audio-data">ソースコードを閲覧する</a>こともできます。</p>
-</div>
+> **Note:** **注:** start()の使い方の完全な例は{{domxref("AudioContext.decodeAudioData")}}を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>なし</p>
+なし
 
-<h2 id="引数">引数</h2>
+## 引数
 
-<dl>
- <dt>when</dt>
- <dd><code>whenパラメータ</code>は、再生が<em>いつ</em>始まるかを決定します。<code>when</code>の時刻を過ぎると、再生が始まります。このメソッドが2回以上、または<code>AudioBufferSourceNode.stop()</code>の後に呼ばれると、例外が発生します</dd>
- <dt>offset</dt>
- <dd><code>offset</code>パラメータは、再生が<em>どこから</em>始まるかを決定します</dd>
- <dt>duration</dt>
- <dd><code>duration</code>パラメータは、デフォルトは音声の長さから<code>offset</code>の値を引いた値で、再生時間を決定します</dd>
-</dl>
+- when
+  - : `whenパラメータ`は、再生が*いつ*始まるかを決定します。`when`の時刻を過ぎると、再生が始まります。このメソッドが 2 回以上、または`AudioBufferSourceNode.stop()`の後に呼ばれると、例外が発生します
+- offset
+  - : `offset`パラメータは、再生が*どこから*始まるかを決定します
+- duration
+  - : `duration`パラメータは、デフォルトは音声の長さから`offset`の値を引いた値で、再生時間を決定します
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                        | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("api.AudioBufferSourceNode.start")}}</p>
+{{Compat("api.AudioBufferSourceNode.start")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

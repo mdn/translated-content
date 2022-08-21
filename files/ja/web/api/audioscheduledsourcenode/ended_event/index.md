@@ -5,54 +5,42 @@ translation_of: Web/API/AudioScheduledSourceNode/onended
 translation_of_original: Web/API/AudioBufferSourceNode/onended
 original_slug: Web/API/AudioScheduledSourceNode/onended
 ---
-<p>{{ APIRef("AudioBufferSourceNode") }}</p>
+{{ APIRef("AudioBufferSourceNode") }}
 
-<div><code style="font-style: normal;">AudioBufferSourceNodeの</code><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">onended</code><span style="line-height: 1.5;"> イベントハンドラーは</span><span style="line-height: 1.5;">{{event("ended_(Web_Audio)", "ended")}} イベントに関するコ−ルバック関数を格納します。これによりオーディオトラックの再生終了時に実行するコードを設定することができます。</span></div>
+`AudioBufferSourceNodeの` `onended` イベントハンドラーは{{event("ended_(Web_Audio)", "ended")}} イベントに関するコ − ルバック関数を格納します。これによりオーディオトラックの再生終了時に実行するコードを設定することができます。
 
-<div class="note">
-<p><strong>注</strong>: <code>onended</code> ハンドラーは loop プロパティーがtrueに設定されている場合はオーディオが再生終了することが無いので効果がありません。このような場合にこの機能を有効にするには {{ domxref("AudioBufferSourceNode.stop()") }}　を使用してください。</p>
-</div>
+> **Note:** **注**: `onended` ハンドラーは loop プロパティーが true に設定されている場合はオーディオが再生終了することが無いので効果がありません。このような場合にこの機能を有効にするには {{ domxref("AudioBufferSourceNode.stop()") }}　を使用してください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js;highlight[20]">var source = audioCtx.createBufferSource();
+```js
+var source = audioCtx.createBufferSource();
 source.onended = function() { ... };
-</pre>
+```
 
-<h2 id="用例">用例</h2>
+## 用例
 
-<pre class="brush: js">source.start();
+```js
+source.start();
 source.onended = function() {
   console.log('Your audio has finished playing');
-}</pre>
+}
+```
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p>有りません。</p>
+有りません。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-onended', 'onended')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-onended', 'onended')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザー互換性
 
-<p>{{Compat("api.AudioScheduledSourceNode.onended")}}</p>
+{{Compat("api.AudioScheduledSourceNode.onended")}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API</a>を使う</li>
-</ul>
+- [Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)を使う
