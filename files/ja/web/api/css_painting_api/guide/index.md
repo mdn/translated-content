@@ -20,7 +20,7 @@ CSS スタイルシートで使用される画像をプログラムで作成す�
 
 これらの手順を詳しく説明するために、このヘッダーのようなハーフハイライトの背景を作成することから始めます:
 
-![Text reading 'My Cool Header' with a solid yellow background image block on the bottom left two thirds of the header](https://mdn.mozillademos.org/files/16774/mycoolheader.png)
+![Text reading 'My Cool Header' with a solid yellow background image block on the bottom left two thirds of the header](mycoolheader.png)
 
 ## CSS paint worklet
 
@@ -109,7 +109,7 @@ CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intr
 
 上の例では、20×200 の単位のボックスを作成し、要素の上端から 15 単位を塗りつぶしました。これは要素の大きさに関係なく同じです。テキストが小さい場合、黄色のボックスは巨大なアンダーラインのように見えます。文字が大きい場合は、最初の 3 文字の上にバーがあるように見えるかもしれません。 背景画像が要素のサイズと相対的なものであればより良いでしょう — 要素の `paintSize` プロパティを使用して、背景画像が要素のボックスモデルのサイズに比例するようにすることができます。
 
-![The background is 50% of the height and 60% of the width of the element](https://mdn.mozillademos.org/files/16783/mycoolheadersized.png)
+![The background is 50% of the height and 60% of the width of the element](mycoolheadersized.png)
 
 上の画像では、背景は要素の大きさに比例しています。3 番目の例では、ブロックレベルの要素に `width: 50%`; を設定しているため、要素が狭くなり、その結果、背景画像が狭くなります。
 
@@ -190,7 +190,7 @@ registerPaint('cssPaintFunctionName', class {
 
 3 種類の色と 3 種類の幅の間で周回する背景画像を使って、項目一覧を作成してみましょう。
 
-![The width and color of the background image changes based on the custom properties](https://mdn.mozillademos.org/files/16784/boxbg.png)
+![The width and color of the background image changes based on the custom properties](boxbg.png)
 
 この CSS では、`--boxColor` と `--widthSubtractor` のカスタム プロパティを使用して、作成した背景ボックスの色と幅の減算器を指定しています。
 
@@ -442,7 +442,7 @@ paint(ctx, size, props, args) {
 
 例えば `paint()` 関数内で色を設定するために `--mainColor` を用意するのは便利ですが、これは CSS の他の場所で色を設定するのにも使えます。これを paint のためだけに特別に変更したい場合は、かなり難しいかもしれません。そこで便利なのがカスタム引数です。もう一つの考え方としては、引数は実際に描画するものを制御するために設定され、プロパティはスタイルを制御するために設定されるということです。
 
-![The list items have a background image that is either pink, purple or green, with different stroke widths, and the green one being filled.](https://mdn.mozillademos.org/files/16786/hollowfilled.png)
+![The list items have a background image that is either pink, purple or green, with different stroke widths, and the green one being filled.](hollowfilled.png)
 
 これでこの API の本当のメリットが見えてきました。カスタムプロパティと `paint()` 関数の引数の両方を使って CSS から無数の描画パラメータを制御できるようになれば、再利用可能で制御性の高いスタイリング関数を作り始めることができます。
 
