@@ -2,81 +2,78 @@
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
 tags:
-- API
-- CSSOM
-- Method
-- Reference
-browser-compat: api.CSSStyleDeclaration.setProperty
+  - API
+  - CSSOM
+  - Method
+  - Reference
 translation_of: Web/API/CSSStyleDeclaration/setProperty
+browser-compat: api.CSSStyleDeclaration.setProperty
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><span class="seoSummary"><strong><code>CSSStyleDeclaration.setProperty()</code></strong> メソッドインターフェイスは、 CSS スタイル宣言オブジェクトのプロパティに新しい値を設定します。</span></p>
+**`CSSStyleDeclaration.setProperty()`** メソッドインターフェイスは、 CSS スタイル宣言オブジェクトのプロパティに新しい値を設定します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js"><em>style</em>.setProperty(<em>propertyName</em>, <em>value, priority</em>);</pre>
+```js
+style.setProperty(propertyName, value, priority);
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<ul>
-  <li><em><code>propertyName</code></em> は {{domxref('DOMString')}} で、変更する CSS プロパティ名 (ハイフン区切り) です。</li>
-  <li><em><code>value</code></em> {{optional_inline}} は
-    {{domxref('DOMString')}} で、新しいプロパティ値が入ります。指定されなかった場合は、空文字列として扱われます。
-    <ul>
-      <li>注: <em><code>value</code></em> は <code>"!important"</code> を含んではいけません。 --
-        これは <em><code>priority</code></em> 引数を使用して設定してください。</li>
-    </ul>
-  </li>
-  <li><em><code>priority</code></em> {{optional_inline}} は
-    {{domxref('DOMString')}} で、 CSS の優先度 "important" を設定することができます。指定されなかった場合は、空文字列として扱われます。以下の値を受け付けます。
-    <ul>
-      <li>文字列値 <code>"important"</code></li>
-      <li>キーワード <code>undefined</code></li>
-      <li>空文字列値 <code>""</code></li>
-    </ul>
-  </li>
-</ul>
+- _`propertyName`_ は {{domxref('DOMString')}} で、変更する CSS プロパティ名 (ハイフン区切り) です。
+- _`value`_ {{optional_inline}} は
+  {{domxref('DOMString')}} で、新しいプロパティ値が入ります。指定されなかった場合は、空文字列として扱われます。
 
-<h3 id="Return_value">返値</h3>
+  - 注: _`value`_ は `"!important"` を含んではいけません。 --
+    これは _`priority`_ 引数を使用して設定してください。
 
-<ul>
-  <li>{{jsxref('undefined')}}</li>
-</ul>
+- _`priority`_ {{optional_inline}} は
+  {{domxref('DOMString')}} で、 CSS の優先度 "important" を設定することができます。指定されなかった場合は、空文字列として扱われます。以下の値を受け付けます。
 
-<h3 id="Exceptions">例外</h3>
+  - 文字列値 `"important"`
+  - キーワード `undefined`
+  - 空文字列値 `""`
 
-<ul>
-  <li>{{domxref('DOMException')}} (NoModificationAllowedError): このプロパティまたは宣言ブロックが読み取り専用であった場合。</li>
-</ul>
+### 返値
 
-<p><em><code>priority</code></em> が省略できる場合、 JavaScript にはスタイル宣言オブジェクトの CSS プロパティの設定に特別な簡単な構文があります。</p>
+- {{jsxref('undefined')}}
 
-<pre class="brush: js"><em>style</em>.cssPropertyName = 'value';</pre>
+### 例外
 
-<h2 id="Examples">例</h2>
+- {{domxref('DOMException')}} (NoModificationAllowedError): このプロパティまたは宣言ブロックが読み取り専用であった場合。
 
-<p>この例では、 3 つのボタンが用意されており、これらのボタンを押すことで、ボックス段落の境界、背景色、テキスト色をランダムな値に動的に変更することができます (この節の最後にあるライブサンプルを参照)。</p>
+_`priority`_ が省略できる場合、 JavaScript にはスタイル宣言オブジェクトの CSS プロパティの設定に特別な簡単な構文があります。
 
-<p>変更したい規則は、このページに適用されている 2 つ目のスタイルシートに含まれていることが分かっているので、 <code><a href="/ja/docs/Web/API/Document/styleSheetSets">document.styleSheets[1]</a></code> を使ってその参照を取得します。次に、 <code><a href="/ja/docs/Web/API/CSSStyleSheet/cssRules">stylesheet.cssRules</a></code> の配列に含まれている、スタイルシート内のさまざまな規則を反復処理します。それぞれの規則について、 <code><a href="/ja/docs/Web/API/CSSStyleRule/selectorText">CSSStyleRule.selectorText</a></code> プロパティがセレクター <code>.box p</code> と等しいかどうかを確認します。</p>
+```js
+style.cssPropertyName = 'value';
+```
 
-<p>等しい場合、この <code>CSSStyleRule</code> オブジェクトへの参照を変数に格納します。次に、 3 つの関数を使って問題のプロパティにランダムな値を生成し、これらの値で規則を更新します。それぞれの場合において、これは <code>setProperty()</code> メソッドで行います (<code>boxParaRule.style.setProperty('border', newBorder);</code> のように)。</p>
+## 例
 
-<h3 id="HTML">HTML</h3>
+この例では、 3 つのボタンが用意されており、これらのボタンを押すことで、ボックス段落の境界、背景色、テキスト色をランダムな値に動的に変更することができます (この節の最後にあるライブサンプルを参照)。
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button class="border"&gt;Border&lt;/button&gt;
-  &lt;button class="bgcolor"&gt;Background&lt;/button&gt;
-  &lt;button class="color"&gt;Text&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="box"&gt;
-  &lt;p&gt;Box&lt;/p&gt;
-&lt;/div&gt;</pre>
+変更したい規則は、このページに適用されている 2 つ目のスタイルシートに含まれていることが分かっているので、 [`document.styleSheets[1]`](/ja/docs/Web/API/Document/styleSheetSets) を使ってその参照を取得します。次に、 [`stylesheet.cssRules`](/ja/docs/Web/API/CSSStyleSheet/cssRules) の配列に含まれている、スタイルシート内のさまざまな規則を反復処理します。それぞれの規則について、 [`CSSStyleRule.selectorText`](/ja/docs/Web/API/CSSStyleRule/selectorText) プロパティがセレクター `.box p` と等しいかどうかを確認します。
 
-<h3 id="CSS">CSS</h3>
+等しい場合、この `CSSStyleRule` オブジェクトへの参照を変数に格納します。次に、 3 つの関数を使って問題のプロパティにランダムな値を生成し、これらの値で規則を更新します。それぞれの場合において、これは `setProperty()` メソッドで行います (`boxParaRule.style.setProperty('border', newBorder);` のように)。
 
-<pre class="brush: css">html {
+### HTML
+
+```html
+<div class="controls">
+  <button class="border">Border</button>
+  <button class="bgcolor">Background</button>
+  <button class="color">Text</button>
+</div>
+<div class="box">
+  <p>Box</p>
+</div>
+```
+
+### CSS
+
+```css
+html {
   background: orange;
   font-family: sans-serif;
   height: 100%;
@@ -121,11 +118,13 @@ div button {
   border: 5px solid purple;
   color: white;
   transition: all 1s;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const borderBtn = document.querySelector('.border');
+```js
+const borderBtn = document.querySelector('.border');
 const bgColorBtn = document.querySelector('.bgcolor');
 const colorBtn = document.querySelector('.color');
 const box = document.querySelector('.box');
@@ -142,7 +141,7 @@ function randomColor() {
 const stylesheet = document.styleSheets[1];
 let boxParaRule;
 
-for(let i = 0; i &lt; stylesheet.cssRules.length; i++) {
+for(let i = 0; i < stylesheet.cssRules.length; i++) {
   if(stylesheet.cssRules[i].selectorText === '.box p') {
     boxParaRule = stylesheet.cssRules[i];
   }
@@ -165,16 +164,17 @@ function setRandomColor() {
 
 borderBtn.addEventListener('click', setRandomBorder);
 bgColorBtn.addEventListener('click', setRandomBgColor);
-colorBtn.addEventListener('click', setRandomColor);</pre>
+colorBtn.addEventListener('click', setRandomColor);
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Examples', '100%', 400)}}</p>
+{{EmbedLiveSample('Examples', '100%', 400)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}

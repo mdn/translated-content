@@ -12,49 +12,32 @@ tags:
   - TopicStub
 translation_of: Web/API/CSSVariableReferenceValue
 ---
-<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p class="summary"><strong><code>CSSVariableReferenceValue</code></strong> は {{domxref('CSS Typed Object Model API','','',' ')}} のインターフェイスで、組み込み CSS 値のカスタム名を作成することができます。このオブジェクトは機能的に「CSS 変数」と呼ばれることがあり、 {{cssxref('var()')}} 関数と同じ用途を提供します。カスタム名は2本のダッシュで始める必要があります。</p>
+**`CSSVariableReferenceValue`** は {{domxref('CSS Typed Object Model API','','',' ')}} のインターフェイスで、組み込み CSS 値のカスタム名を作成することができます。このオブジェクトは機能的に「CSS 変数」と呼ばれることがあり、 {{cssxref('var()')}} 関数と同じ用途を提供します。カスタム名は 2 本のダッシュで始める必要があります。
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}</dt>
- <dd>新しい <code>CSSVariableReferenceValue</code> オブジェクトを生成します。</dd>
-</dl>
+- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}
+  - : 新しい `CSSVariableReferenceValue` オブジェクトを生成します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref('CSSVariableReferenceValue.variable')}}</dt>
- <dd>コンストラクターに渡されたカスタム名を返します。</dd>
- <dt>{{domxref('CSSVariableReferenceValue.fallback')}} {{readonlyinline}}</dt>
- <dd>カスタム名の組み込み CSS 値を返します。</dd>
-</dl>
+- {{domxref('CSSVariableReferenceValue.variable')}}
+  - : コンストラクターに渡されたカスタム名を返します。
+- {{domxref('CSSVariableReferenceValue.fallback')}} {{readonlyinline}}
+  - : カスタム名の組み込み CSS 値を返します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p>なし。</p>
+なし。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM','#cssvariablereferencevalue','CSSVariableReferenceValue')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                     | 備考     |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('CSSOM','#cssvariablereferencevalue','CSSVariableReferenceValue')}} | {{Spec2('CSSOM')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.CSSVariableReferenceValue")}}</p>
+{{Compat("api.CSSVariableReferenceValue")}}
