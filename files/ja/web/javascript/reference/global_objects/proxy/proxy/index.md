@@ -40,7 +40,7 @@ handler を空にすると、ほとんどすべての点でターゲットとま
 この節では、定義することができるすべてのハンドラー関数を列挙します。ハンドラー関数は、対象オブジェクトの呼び出しをトラップするので、*トラップ*と呼ばれることがあります。
 
 - {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
-  - : 関数呼び出しのトラップです。。
+  - : 関数呼び出しのトラップです。
 - {{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}
   - : {{JSxRef("Operators/new", "new")}} 演算子のトラップです。
 - {{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}

@@ -44,7 +44,7 @@ new Date(dateString)
 
 `parse()` メソッドは、日時の文字列 (例えば "`2011-10-10T14:48:00`") を取り、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からのミリ秒単位の経過時間を表す数値を返します。
 
-この関数は、例えば {{jsxref("Date.prototype.setTime()", "setTime()")}} メソッドと {{jsxref("Global_Objects/Date", "Date")}} オブジェクトを組み合わせて使う場合など、文字列値を基にして日時の値を設定するときに有用です。。
+この関数は、例えば {{jsxref("Date.prototype.setTime()", "setTime()")}} メソッドと {{jsxref("Global_Objects/Date", "Date")}} オブジェクトを組み合わせて使う場合など、文字列値を基にして日時の値を設定するときに有用です。
 
 ### 日付と時刻の文字列書式
 

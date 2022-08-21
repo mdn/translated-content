@@ -185,7 +185,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 また、ボタンそのものを示す {{htmlelement("button")}} 要素もあります。これは `type` 属性に `submit`, `reset`, `button` の値を取り、上記の 3 つの `<input>` 型を模倣できます。この 2 つの主な違いは、実際の `<button>` 要素の方がはるかにスタイル付けしやすいことです。
 
-> **Note:** `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。。
+> **Note:** `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。
 
 > **Note:** この節の例は [button-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html) として GitHub にあります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html))。
 

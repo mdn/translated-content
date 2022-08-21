@@ -37,5 +37,5 @@ Mozilla で動作する JavaScript シェルには、以下のようなものが
 - [JavaScript Shell (ウェブページ)](http://www.squarefree.com/shell/) - [Extension Developer's Extension](https://addons.mozilla.org/en-US/firefox/addon/7434) の一部としても利用可能です。
 - [Jash: JavaScript Shell](http://billyreisinger.com/jash/) - DHTML ベースのシェルで、ウェブページがコマンドラインにアクセスできるようにします。
 - [MozRepl](http://hyperstruct.net/projects/mozrepl) - Firefox と他の Mozilla アプリを接続し、それらが実行されている間、内部からそれらを調査及び変更ができます。
-- [Execute JS](https://addons.mozilla.org/en-US/firefox/addon/execute-js/) - (メンテナンス終了) - 任意の JavaScript コードを快適に入力・実行したり、関数を変更したりすることができる拡張 JavaScript コンソールを提供する Firefox 拡張機能です。。
+- [Execute JS](https://addons.mozilla.org/en-US/firefox/addon/execute-js/) - (メンテナンス終了) - 任意の JavaScript コードを快適に入力・実行したり、関数を変更したりすることができる拡張 JavaScript コンソールを提供する Firefox 拡張機能です。
 - [xqjs](https://addons.mozilla.org/addon/159546) - Firefox 向けのシンプルなコンソールです。
