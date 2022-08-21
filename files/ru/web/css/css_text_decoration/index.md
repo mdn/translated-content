@@ -65,17 +65,16 @@ translation_of: Web/CSS/CSS_Text_Decoration
 ```
 
 ```html
-<p class="under">This text has a line underneath it.</p>
-<p class="over">This text has a line over it.</p>
-<p class="line">This text has a line going through it.</p>
-<p>This <a class="plain" href="#">link will not be underlined</a>,
-    as links generally are by default. Be careful when removing
-    the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.</p>
-<p class="underover">This text has lines above <em>and</em> below it.</p>
-<p class="thick">This text has a really thick purple underline in supporting browsers.</p>
-<p class="blink">This text might blink for you,
-    depending on the browser you use.</p>
+<p class="under">Этот текст подчёркнут.</p>
+<p class="over">Этот текст имеет линию сверху.</p>
+<p class="line">Этот текст перечёркнут.</p>
+<p>Эта <a class="plain" href="#">ссылка не будет подчёркнута</a>,
+    как все ссылки по умолчанию. Будьте осторожны, когда удаляете
+    подчёркивание у ссылок, т.к. для пользователей нижнее подчеркивание
+    часто обозначает гиперссылку.</p>
+<p class="underover">В этом примере линии находятся над <em>и</em> под текстом.</p>
+<p class="thick">Этот текст подчёркнут жирной линией.</p>
+<p class="blink">Этот текст может моргать, в зависимости от вашего браузера.</p>
 ```
 
 {{EmbedLiveSample('Examples','auto','320')}}
