@@ -26,7 +26,7 @@ translation_of: Learn/JavaScript/Objects/Object_building_practice
 
 この記事では伝統的な「弾むボール」のデモを作ってみて、JavaScript でどれほどオブジェクトが役に立つかお見せしましょう。小さなボールは画面じゅうを跳ねまわり、それぞれがぶつかると色が変わります。完成したものはこんな風に見えることでしょう:
 
-![](https://mdn.mozillademos.org/files/13865/bouncing-balls.png)
+![](bouncing-balls.png)
 
 この例では画面にボールを描くのに [Canvas API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) を使い、画面をアニメーションさせるのに [requestAnimationFrame](/ja/docs/Web/API/window/requestAnimationFrame) を使います — これらの API について事前の知識は不要です。この記事を読み終わる頃にはこれら API についてもっと知りたくなっているだろうと期待してますが。道中では、イカしたオブジェクトを活用して、ボールを壁で弾ませる、それぞれがぶつかった事を判定する(**衝突判定**という呼び名で知られています)といった上手いテクニックをいくつかお見せしていきます。
 
@@ -273,7 +273,7 @@ Ball.prototype.update = function() {
 
 4.  保存とデモのリフレッシュをして、ボールがぶつかった時に色が変わるのを見てください!
 
-> **Note:** **注記**: この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください([ライブ実行版](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます)。
+> **Note:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください([ライブ実行版](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます)。
 
 ## まとめ
 

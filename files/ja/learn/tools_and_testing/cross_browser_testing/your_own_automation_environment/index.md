@@ -24,11 +24,11 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
 
 ## Selenium
 
-[Selenium](http://www.seleniumhq.org/) は最も人気のあるブラウザ自動化ツールです。他の方法もありますが、Selenium を使用する最良の方法は WebDriver を使用することで、強力な API で Selenium 上に構築し、ブラウザを呼び出して自動化し、「この Web ページを開く」、「この要素をページ上に移動する」、「このリンクをクリックする」、「リンクがこの URL を開くかどうかを確認する」などといったアクションを実行します。これは、自動テストを実行するのに最適です。
+[Selenium](http://www.seleniumhq.org/) は最も人気のあるブラウザー自動化ツールです。他の方法もありますが、Selenium を使用する最良の方法は WebDriver を使用することで、強力な API で Selenium 上に構築し、ブラウザーを呼び出して自動化し、「この Web ページを開く」、「この要素をページ上に移動する」、「このリンクをクリックする」、「リンクがこの URL を開くかどうかを確認する」などといったアクションを実行します。これは、自動テストを実行するのに最適です。
 
 WebDriver のインストール方法と使用方法は、テストの作成と実行に使用するプログラミング環境によって異なります。最も一般的な環境では、WebDriver とその言語、例えば Java、C＃、Ruby、Python、JavaScript（Node）などを使用して WebDriver と通信するのに必要なバインディングをインストールするパッケージまたはフレームワークが利用可能です。異なる言語の Selenium のセットアップの詳細については、 [Setting Up a Selenium-WebDriver Project](http://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project) を参照してください。
 
-異なるブラウザでは、WebDriver と通信して制御するために異なるドライバが必要です。ブラウザのドライバの入手先などについては、 [Platforms Supported by Selenium](http://www.seleniumhq.org/about/platforms.jsp) を参照してください。
+異なるブラウザーでは、WebDriver と通信して制御するために異なるドライバが必要です。ブラウザーのドライバの入手先などについては、 [Platforms Supported by Selenium](http://www.seleniumhq.org/about/platforms.jsp) を参照してください。
 
 Node.js を使用した Selenium テストの作成と実行については、始める前にすばやく簡単に行うことができ、フロントエンド開発者にはもっと使い慣れた環境を提供する予定です。
 
@@ -42,7 +42,7 @@ Node.js を使用した Selenium テストの作成と実行については、�
     npm install selenium-webdriver
     ```
 
-> **Note:** 以前に selenium-webdriver をインストールしてブラウザドライバをダウンロードした場合でも、これらの手順を実行することをお勧めします。すべてが最新であることを確認する必要があります。
+> **Note:** 以前に selenium-webdriver をインストールしてブラウザードライバをダウンロードした場合でも、これらの手順を実行することをお勧めします。すべてが最新であることを確認する必要があります。
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
@@ -119,7 +119,7 @@ OK, let's try a quick test to make sure everything is working.
 
 You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 2 seconds; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed. WebDriver will then close down the Firefox instance and stop.
 
-## 一度に複数ブラウザでテストする
+## 一度に複数ブラウザーでテストする
 
 There is also nothing to stop you running the test on multiple browsers simulataneously. Let's try this!
 
@@ -471,7 +471,7 @@ Let's write an example:
     The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
 5.  Now if you go back to the [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you'll see your test listed:
-    ![](https://mdn.mozillademos.org/files/15383/bstack_automated_results.png)
+    ![](bstack_automated_results.png)
 
 If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
 
@@ -527,7 +527,7 @@ These are fairly intuitive — once the test completes, we send an API call to B
 
 If you now go back to your [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you should see your test session available, as before, but with the updated data attached to it:
 
-![](https://mdn.mozillademos.org/files/15385/bstack_custom_results.png)
+![](bstack_custom_results.png)
 
 ### Sauce Labs
 
@@ -590,7 +590,7 @@ Let's write an example:
     The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
 5.  Now if you go to your [Sauce Labs Automated Test dashboard](https://saucelabs.com/beta/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
-    ![](https://mdn.mozillademos.org/files/14235/sauce_labs_automated_test.png)
+    ![](sauce_labs_automated_test.png)
 
 > **Note:** Sauce Labs' [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
@@ -658,7 +658,7 @@ Here we've set a `testPassed` variable to `true` or `false` depending on whether
 
 If you now go back to your [Sauce Labs Automated Test dashboard](https://saucelabs.com/beta/dashboard/tests) page, you should see your new job now has the updated data attached to it:
 
-![](https://mdn.mozillademos.org/files/14239/sauce_labs_updated_job_info.png)
+![](sauce_labs_updated_job_info.png)
 
 ### 自身のリモートサーバ
 

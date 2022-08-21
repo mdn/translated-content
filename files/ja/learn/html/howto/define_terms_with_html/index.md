@@ -41,7 +41,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 しかし、私たちは常に次のように非公式にキーワードを定義しています。
 
-> **_Firefox_** は、Mozilla Foundation によって作成されたウェブブラウザです。
+> **_Firefox_** は、Mozilla Foundation によって作成されたウェブブラウザーです。
 
 これらのユースケースに対処するために、{{Glossary("HTML")}} には説明と説明された単語をマークするための{{Glossary("tag","タグ")}}が用意されているので、読者に意味が適切に伝わるようになります。
 
@@ -52,7 +52,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 私たちは HTML でもそうしていますが、HTML は視覚的なメディアではないので太字を使いません。 {{htmlelement("dfn")}} は、初めて出現するキーワードをマークするための特別な要素です。 `<dfn>` タグは、定義ではなく定義される単語の周りにあり、定義は段落全体で構成されています。
 
 ```html
-<p><dfn>Firefox</dfn> は、Mozilla Foundation によって作成されたウェブブラウザです。</p>
+<p><dfn>Firefox</dfn> は、Mozilla Foundation によって作成されたウェブブラウザーです。</p>
 ```
 
 > **Note:** 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)があります。
@@ -78,7 +78,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 <p>
   <span id="ff">
     <dfn aria-describedby="ff">Firefox</dfn>
-    は、Mozilla Foundation によって作成されたウェブブラウザです。
+    は、Mozilla Foundation によって作成されたウェブブラウザーです。
   </span>
   <a href="http://www.mozilla.org">mozilla.org</a> からダウンロードできます。
 </p>
@@ -123,7 +123,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 ### 視覚的な出力を改善する
 
-グラフィカルブラウザに前述のリストが表示される方法は次のとおりです。
+グラフィカルブラウザーに前述のリストが表示される方法は次のとおりです。
 
 {{EmbedLiveSample("A_simple_example", 600, 180)}}
 

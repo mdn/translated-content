@@ -23,7 +23,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 ## HTML とは？
 
-{{glossary("HTML")}} (ハイパーテキスト・マークアップ・ランゲージ／Hypertext Markup Language) はプログラミング言語ではありません。HTML 言語は、訪れたウェブサイトの構成をブラウザに対して伝えるために使うマークアップ言語です。HTML 言語はウェブ開発者が望むこと次第で、複雑なものにも簡単なものにもなります。HTML は{{glossary("Element", "要素")}}の集まりからなり、コンテンツの一部を要素で囲む（*マークアップ*する）ことで、特定の見せ方・動かし方に変えられます。囲むための{{glossary("Tag", "タグ")}}は、コンテンツの一部をハイパーリンク (ウェブ上の別ページへリンクすること) にしたり、単語を斜体にしたりすることができます。たとえば、次の一行を見てください：
+{{glossary("HTML")}} (ハイパーテキスト・マークアップ・ランゲージ／Hypertext Markup Language) はプログラミング言語ではありません。HTML 言語は、訪れたウェブサイトの構成をブラウザーに対して伝えるために使うマークアップ言語です。HTML 言語はウェブ開発者が望むこと次第で、複雑なものにも簡単なものにもなります。HTML は{{glossary("Element", "要素")}}の集まりからなり、コンテンツの一部を要素で囲む（*マークアップ*する）ことで、特定の見せ方・動かし方に変えられます。囲むための{{glossary("Tag", "タグ")}}は、コンテンツの一部をハイパーリンク (ウェブ上の別ページへリンクすること) にしたり、単語を斜体にしたりすることができます。たとえば、次の一行を見てください：
 
 ```
 My cat is very grumpy
@@ -35,13 +35,13 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **Note:** **注**:HTML の要素は大文字小文字を区別しません。つまり大文字でも小文字でも書くことができます。例えば {{htmlelement("title")}} 要素は `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` などと書くことができて、どれも正しく動作します。最も良いのは、一貫性や信頼性、その他の理由のためにすべての要素を小文字で書くことです。
+> **Note:** HTML の要素は大文字小文字を区別しません。つまり大文字でも小文字でも書くことができます。例えば {{htmlelement("title")}} 要素は `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` などと書くことができて、どれも正しく動作します。最も良いのは、一貫性や信頼性、その他の理由のためにすべての要素を小文字で書くことです。
 
 ## HTML 要素の分解
 
 先ほどの段落タグの要素についてもう少し詳しく見ていきましょう:
 
-![](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
+![](grumpy-cat-small.png)
 
 この要素の主要な部分は次のとおりです:
 
@@ -213,11 +213,11 @@ HTML の要素には 2 つの重要なカテゴリーがあり、それは知っ
 
 {{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
 
-> **Note:** **注意**: HTML5 においては要素カテゴリが再定義されています: [要素のコンテンツ・カテゴリー](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)を見てください。これらの定義は従来のものに比べてより正確で、なおかつ曖昧さが少ないものとなっていますが、一方では、それらは “ブロックレベル要素” と “インライン要素” の対比よりも遥かに理解することが難しくなっています。このため、私たちはここのトピックを通じて従来の分類を堅持するつもりです。
+> **Note:** HTML5 においては要素カテゴリが再定義されています: [要素のコンテンツ・カテゴリー](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)を見てください。これらの定義は従来のものに比べてより正確で、なおかつ曖昧さが少ないものとなっていますが、一方では、それらは “ブロックレベル要素” と “インライン要素” の対比よりも遥かに理解することが難しくなっています。このため、私たちはここのトピックを通じて従来の分類を堅持するつもりです。
 
-> **Note:** **注意**: このトピックで使っている “ブロック” と “インライン” の用語は [CSS ボックスのタイプ](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)と同じ名前で混同するでしょう。既定ではこれらは関係ありますが、CSS の表示タイプの変更は要素のカテゴリーを変更しませんし、どの要素が入っているべきでどの要素に入れられるべきかにも影響しません。HTML5 でこの用語が落とされた理由は、このとてもよくある混同を防ぐためです。
+> **Note:** このトピックで使っている “ブロック” と “インライン” の用語は [CSS ボックスのタイプ](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)と同じ名前で混同するでしょう。既定ではこれらは関係ありますが、CSS の表示タイプの変更は要素のカテゴリーを変更しませんし、どの要素が入っているべきでどの要素に入れられるべきかにも影響しません。HTML5 でこの用語が落とされた理由は、このとてもよくある混同を防ぐためです。
 
-> **Note:** **注意**: ブロックレベル要素とインライン要素のリストを含む有用なリファレンスページがあります — [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)と[インライン要素](/ja/docs/Web/HTML/Inline_elements)をご覧ください。
+> **Note:** ブロックレベル要素とインライン要素のリストを含む有用なリファレンスページがあります — [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)と[インライン要素](/ja/docs/Web/HTML/Inline_elements)をご覧ください。
 
 ### 空要素
 
@@ -231,13 +231,13 @@ HTML の要素には 2 つの重要なカテゴリーがあり、それは知っ
 
 {{ EmbedLiveSample('Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** **注意**: 空要素 (Empty elements) は Void 要素 (Void elements) と呼ばれていることがあります。
+> **Note:** 空要素 (Empty elements) は Void 要素 (Void elements) と呼ばれていることがあります。
 
 ## 属性
 
 要素は次のように属性(Attribute)を持つこともできます:
 
-![&amp;lt;p class="editor-note">My cat is very grumpy&amp;lt;/p>](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
+![&amp;lt;p class="editor-note">My cat is very grumpy&amp;lt;/p>](grumpy-cat-attribute-small.png)
 
 属性は実際のコンテンツの中で表示させたくない「要素に関する追加情報」を保有します。上のケースでは `class` 属性は、その要素に後でスタイル情報などが適用される対象であることを示すものとして使用できるような、固有の名前を持つことを許容します。
 
@@ -511,7 +511,7 @@ textarea.onkeyup = function(){
 
 ウェブブラウザーでこのファイルを開くとレンダリングされた HTML 文書が表示されます。コードを編集した場合は、ブラウザー上でページの更新 (または、再読み込み) を行うと編集結果が反映されます。最初はこんな表示です。
 
-![A simple HTML page that says This is my page](https://mdn.mozillademos.org/files/12279/template-screenshot.png)この実習では、 上に示したようにあなたのコンピューター内部でコード編集してもいいですが、この節の下の方に編集できるフォーム (Input, Output と付されているものです) を使うこともできます。スマートフォンなどで学習する際はこのフォームが役に立つと思います。この節のフォームの Input の部分は、 {{htmlelement("body")}} 要素の中身を表しています。以下の手順を踏んで、ページをカスタマイズしてみましょう。
+![A simple HTML page that says This is my page](template-screenshot.png)この実習では、 上に示したようにあなたのコンピューター内部でコード編集してもいいですが、この節の下の方に編集できるフォーム (Input, Output と付されているものです) を使うこともできます。スマートフォンなどで学習する際はこのフォームが役に立つと思います。この節のフォームの Input の部分は、 {{htmlelement("body")}} 要素の中身を表しています。以下の手順を踏んで、ページをカスタマイズしてみましょう。
 
 > **Note:** 訳者注: 下記の演習項目は後で詳しく学習できますので、できなくても構いません。
 

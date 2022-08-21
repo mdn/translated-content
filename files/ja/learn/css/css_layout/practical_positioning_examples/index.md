@@ -26,13 +26,13 @@ translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 最初の例は、古典的なタブ付きの情報ボックスです — これは、たくさんの情報を小さな領域にまとめたいときによく使われる機能です。 これには、戦略/戦争ゲームのような情報量の多いアプリ、画面が狭くスペースが限られているモバイル版のウェブサイト、および UI 全体を埋め尽くさずに多くの情報を利用できるようにしたいコンパクトな情報ボックスが含まれます。 これらを単純化した例は、完成すると次のようになります。
 
-![](https://mdn.mozillademos.org/files/13368/tabbed-info-box.png)
+![](tabbed-info-box.png)
 
-> **Note:** **注**: 完成した例は、[info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> **Note:** 完成した例は、[info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 「別々のタブを別々のウェブページとして作成し、タブをクリックして別々のページに移動させて同様の効果を生み出すだけでよいのではないでしょうか？」と考えるかもしれません。 このコードならもっと簡単なものになりますが、実際には個々の「ページ」ビューは実際には新しくロードされたウェブページになるため、ビュー間で情報を保存し、この機能をより大きな UI デザインに統合するのは難しくなります。 さらに、いわゆる「シングルページアプリ」は、特にモバイルウェブ UI の場合、非常に人気が高まっています。 なぜなら、すべてのコンテンツを表示するために必要な HTTP リクエストの数が減り、パフォーマンスが向上するからです。
 
-> **Note:** **注**: ウェブ開発者の中には、一度に 1 ページの情報だけをロードし、[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) などの JavaScript 機能を使用して表示される情報を動的に変更することで、さらに問題を解決するものもあります。 しかし、学習の現時点では、物事をできるだけシンプルに保ちたいと思います。 後で JavaScript がいくつかありますが、ほんの少しだけです。
+> **Note:** ウェブ開発者の中には、一度に 1 ページの情報だけをロードし、[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) などの JavaScript 機能を使用して表示される情報を動的に変更することで、さらに問題を解決するものもあります。 しかし、学習の現時点では、物事をできるだけシンプルに保ちたいと思います。 後で JavaScript がいくつかありますが、ほんの少しだけです。
 
 まず始めに、出発点の HTML ファイル [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html) のローカルコピーを作成してください。 これをローカルコンピュータの適当な場所に保存して、テキストエディタで開きます。 `body` に含まれる HTML を見てみましょう。
 
@@ -116,7 +116,7 @@ body {
 }
 ```
 
-> **Note:** **注**: この例では、チェーンの先頭に `.info-box` を持つ子孫セレクタを使用しています。 これは、他のコンテンツがすでに含まれているページに、ページの他の部分に適用されているスタイルを妨げることなく、この機能を挿入できるようにするためです。
+> **Note:** この例では、チェーンの先頭に `.info-box` を持つ子孫セレクタを使用しています。 これは、他のコンテンツがすでに含まれているページに、ページの他の部分に適用されているスタイルを妨げることなく、この機能を挿入できるようにするためです。
 
 次に、水平方向のタブのスタイルを設定します。 リスト項目は、一列に並ぶようにすべて左にフロートさせ、行頭記号（bullet）を取り除くために {{cssxref("list-style-type")}} を `none` に設定し、{{cssxref("width")}} を `150px` に設定しているので、それらは情報ボックス全体にうまく収まります。 {{htmlelement("a")}} 要素は {{cssxref("display")}}`: inline-block` に設定されているので、一列に並んでいてもスタイル可能で、他のさまざまなプロパティを使用して、タブボタンに適したスタイルになっています。
 
@@ -235,9 +235,9 @@ function setTabHandler(tab, tabPos) {
 
 2 番目の例では、最初の例（情報ボックス）を取り上げて、それをフルウェブページのコンテキストに追加します。 それだけではありません — ブラウザーウィンドウ内で同じ位置に留まるように固定位置を指定します。 メインコンテンツがスクロールしても、情報ボックスは画面上の同じ位置に留まります。 完成した例は次のようになります。
 
-![](https://mdn.mozillademos.org/files/13364/fixed-info-box.png)
+![](fixed-info-box.png)
 
-> **Note:** **注**: 完成した例は、[fixed-info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> **Note:** 完成した例は、[fixed-info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 出発点として、記事の最初のセクションで完成させた例を使用するか、Github リポジトリから [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) のローカルコピーを作成することができます。
 
@@ -259,7 +259,7 @@ function setTabHandler(tab, tabPos) {
 </section>
 ```
 
-> **Note:** **注**: お好みにより、本物のコンテンツで偽のコンテンツを自由に変更してもかまいません。
+> **Note:** お好みにより、本物のコンテンツで偽のコンテンツを自由に変更してもかまいません。
 
 ### 既存の CSS への変更
 
@@ -300,9 +300,9 @@ function setTabHandler(tab, tabPos) {
 
 完成した例は次のようになります。
 
-![](https://mdn.mozillademos.org/files/13366/hidden-sliding-panel.png)
+![](hidden-sliding-panel.png)
 
-> **Note:** **注**: 完成した例は、[hidden-info-panel.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> **Note:** 完成した例は、[hidden-info-panel.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 まず始めに、Github リポジトリから [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) のローカルコピーを作成します。 これは前の例から続いていないので、新鮮な出発点ファイルが必要です。 ファイル内の HTML を見てみましょう。
 
@@ -318,7 +318,7 @@ function setTabHandler(tab, tabPos) {
 
 {{htmlelement("label")}} 要素と {{htmlelement("input")}} 要素から始めましょう — `<label>` 要素は通常、アクセシビリティの目的でテキストラベルをフォーム要素に関連付けるために使用します（スクリーンリーダーのユーザーが、どの説明がどのフォーム要素に対応しているかを確認できるようにします）。 ここでは、`for` 属性と `id` 属性を使用して `<input>` チェックボックスに関連付けられています。
 
-> **Note:** **注**: 情報アイコンとして機能するために、HTML に特別な疑問符文字を入れました。 これは、パネルを表示/非表示にするために押されるボタンを表します。
+> **Note:** 情報アイコンとして機能するために、HTML に特別な疑問符文字を入れました。 これは、パネルを表示/非表示にするために押されるボタンを表します。
 
 ここでは、これらの要素を少し異なる目的で使用します — `<label>` 要素のもう 1 つの便利な副作用は、チェックボックス自体だけでなく、チェックボックスのラベルをクリックしてチェックボックスをチェックできることです。 これはよく知られた[チェックボックスハック](https://css-tricks.com/the-checkbox-hack/)（英語）をもたらしました。 それはボタンを切り替えることによって要素を制御する JavaScript フリーの方法を提供します。 制御する要素は、他の 2 つに続く {{htmlelement("aside")}} 要素です（簡潔にするために、上記のコードリストからそのコンテンツを省略しました）。
 

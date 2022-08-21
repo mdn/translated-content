@@ -27,7 +27,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 [Simple Mapquest API の例](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/)を参考に、サードパーティ API とブラウザー API の違いを説明します。
 
-> **Note:** **注意**: 一度に[すべてのコード例を取得](/ja/docs/Learn#Getting_our_code_examples)したい場合があります。その場合は、各セクションで必要なサンプルファイルをレポジトリーで検索するだけで済みます。
+> **Note:** 一度に[すべてのコード例を取得](/ja/docs/Learn#Getting_our_code_examples)したい場合があります。その場合は、各セクションで必要なサンプルファイルをレポジトリーで検索するだけで済みます。
 
 ### それらはサードパーティのサーバーにあります
 
@@ -63,7 +63,7 @@ let map = L.mapquest.map('map', {
 
 これが、Mapquest API が単純な地図を描くために必要なすべての情報です。接続しているサーバーは、表示されている地域の正しい地図タイルを表示するなど、複雑なものをすべて処理します。
 
-> **Note:** **メモ**: API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_—_NYTimes)。
+> **Note:** API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_—_NYTimes)。
 
 ### 通常は API キーが必要です
 
@@ -79,7 +79,7 @@ L.mapquest.key = 'YOUR-API-KEY-HERE';
 
 この行では、アプリケーションで使用する API キーまたは開発者キーを指定します。アプリケーションの開発者は、キーを取得して API の機能へのアクセス許可を得るためにコードに含める必要があります。この例では、プレースホルダーを用意しました。
 
-> **Note:** **メモ**: 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
+> **Note:** 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
 
 他の API では、少し異なる方法でキーを含める必要があるかもしれませんが、ほとんどのパターンは比較的似ています。
 
@@ -174,11 +174,11 @@ Google Maps は間違いなく最も人気のある地図 API です。使用方
 
 1.  記事検索 API のキーを要求してみよう — 新規アプリを作成し、これを利用したい API として選択します (名前と説明を記入し、「記事検索 API 」の下のスイッチをオンに切り替えて「作成」をクリックします)。
 2.  結果のページから API キーを取得します。
-3.  さて、例題を始めるために、[nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) と [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) のコピーをコンピュータ上の新しいディレクトリに作成してください。すでに [examples リポジトリをクローン](/ja/docs/Learn#Getting_our_code_examples)している場合は、_javascript/apis/third-party-apis/nytimes_ ディレクトリにあるこれらのファイルのコピーをすでに持っているでしょう。最初に `<script>` 要素には、例のセットアップに必要な変数がいくつか含まれています。
+3.  さて、例題を始めるために、[nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) と [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) のコピーをコンピュータ上の新しいディレクトリーに作成してください。すでに [examples リポジトリをクローン](/ja/docs/Learn#Getting_our_code_examples)している場合は、_javascript/apis/third-party-apis/nytimes_ ディレクトリーにあるこれらのファイルのコピーをすでに持っているでしょう。最初に `<script>` 要素には、例のセットアップに必要な変数がいくつか含まれています。
 
 このアプリは、検索用語とオプションの開始日と終了日を入力することを可能にし、Article Search API をクエリして検索結果を表示するために使用します。
 
-![](https://mdn.mozillademos.org/files/14821/nytimes-search.png)
+![](nytimes-search.png)
 
 ### API をアプリに接続する
 
@@ -384,7 +384,7 @@ function displayResults(json) {
 
 この例は、2 つの関連するサードパーティ API を一緒に使用してアプリを構築していることを示しているので興味深いです。1 つ目は RESTful API で、2 つ目は Mapquest のように動作します (API 固有のメソッドなどがあります)。ただし、どちらの API もページに適用するために JavaScript ライブラリを必要とする点は注目に値します。RESTful API には、HTTP リクエストを行い、結果を返すための関数が用意されています。
 
-![](https://mdn.mozillademos.org/files/14823/youtube-example.png)
+![](youtube-example.png)
 
 この例については、記事の中ではあまり多くを語るつもりはありません。[ソースコード](https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube)には、それがどのように動作するかを説明するために、その中に詳細なコメントが挿入されています。
 

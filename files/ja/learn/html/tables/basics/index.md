@@ -30,13 +30,13 @@ translation_of: Learn/HTML/Tables/Basics
 
 テーブルとは、行と列からなる構造化されたデータの集合 (**表形式データ**) です。テーブルを使用すると、さまざまな種類のデータ間のある種の関連性、たとえば人と年齢、1 日または 1 週間、地元のプールの予定時刻などを示す値をすばやく簡単に検索できます。
 
-![A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47.](https://mdn.mozillademos.org/files/14583/numbers-table.png)
+![A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
-![A swimming timetable showing a sample data table](https://mdn.mozillademos.org/files/14587/swimming-timetable.png)
+![A swimming timetable showing a sample data table](swimming-timetable.png)
 
 1800 年以降のこの米国国勢調査文書で証明されているように、テーブルは人間社会で非常に一般的に使用されており、長い間使用されてきました。
 
-![A very old parchment document; the data is not easily readable, but it clearly shows a data table being used.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
+![A very old parchment document; the data is not easily readable, but it clearly shows a data table being used.](1800-census.jpg)
 
 したがって、HTML の作成者が Web 上で表形式データを構造化して表示するための手段を提供したことは不思議ではありません。
 
@@ -207,7 +207,7 @@ GitHub の[ライブサンプルもご覧ください](https://mdn.github.io/lea
 
 ### HTML の表を使用するべきではない場面
 
-HTML テーブルは表形式のデータに使用する必要があります - これがそれらが設計されているものです。残念ながら、HTML テーブルを使用して Web ページをレイアウトする人が多くいました。ヘッダーを含む 1 行、コンテンツ列を含む 1 行、フッターを含む 1 行などです。[アクセシビリティ学習モジュール](/ja/docs/Learn/Accessibility)の[ページレイアウト](/ja/docs/Learn/Accessibility/HTML#Page_layouts)でより多くの詳細と例を見つけることができます。これは一般的に使用されていました。ブラウザ間での CSS サポートがひどいものだったからです。テーブルレイアウトは、現在ではあまり一般的ではありませんが、Web の一部の場所ではまだ見られることがあります。
+HTML テーブルは表形式のデータに使用する必要があります - これがそれらが設計されているものです。残念ながら、HTML テーブルを使用して Web ページをレイアウトする人が多くいました。ヘッダーを含む 1 行、コンテンツ列を含む 1 行、フッターを含む 1 行などです。[アクセシビリティ学習モジュール](/ja/docs/Learn/Accessibility)の[ページレイアウト](/ja/docs/Learn/Accessibility/HTML#Page_layouts)でより多くの詳細と例を見つけることができます。これは一般的に使用されていました。ブラウザー間での CSS サポートがひどいものだったからです。テーブルレイアウトは、現在ではあまり一般的ではありませんが、Web の一部の場所ではまだ見られることがあります。
 
 つまり、[CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)手法ではなく、テーブルをレイアウトに使用するのは得策ではありません。主な理由は次のとおりです。
 
@@ -219,7 +219,7 @@ HTML テーブルは表形式のデータに使用する必要があります - 
 
 テーブル理論については十分に説明したので、実用的な例に飛び込み、簡単なテーブルを作成しましょう。
 
-1.  まず最初に、ローカルマシンの新しいディレクトリに、[blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) のローカルコピーを作成します。
+1.  まず最初に、ローカルマシンの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) のローカルコピーを作成します。
 2.  すべてのテーブルの内容は、**[`<table></table>`](/ja/docs/Web/HTML/Element/table)** という 2 つのタグで囲まれています。HTML のボディの中にこれらを追加してください。
 3.  テーブル内の最小のコンテナは、**[`<td>`](/ja/docs/Web/HTML/Element/td)** 要素によって作成されるテーブルセルです ('td' は 'table data' を表します)。テーブルタグ内に次のコードを追加します。
 
@@ -259,7 +259,7 @@ HTML テーブルは表形式のデータに使用する必要があります - 
 | ------------------------ | --------------------- | -------------------- | --------------------- |
 | Second row, first cell.  | Cell 2.               | Cell 3.              | Cell 4.               |
 
-> **Note:** **メモ**: GitHub では [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) としても見つけることができます ([こちらも参照してください](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html))。
+> **Note:** GitHub では [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) としても見つけることができます ([こちらも参照してください](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html))。
 
 ## \<th> 要素による見出しの追加
 
@@ -320,17 +320,17 @@ HTML テーブルは表形式のデータに使用する必要があります - 
 
 このテーブルを改良してみましょう。
 
-1.  まず、あなたのローカルマシンの新しいディレクトリに [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) ファイルのローカルコピーを作ります。HTML には、上で見たのと同じ Dogs の例が含まれています。
+1.  まず、あなたのローカルマシンの新しいディレクトリーに [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) ファイルのローカルコピーを作ります。HTML には、上で見たのと同じ Dogs の例が含まれています。
 2.  テーブルのヘッダを視覚的にも意味的にもヘッダとして認識させるには、**[`<th>`](/ja/docs/Web/HTML/Element/th)** 要素を使用します ('th' は 'table header' を表します)。これは `<td>` とまったく同じように機能しますが、通常のセルではなくヘッダーを表す点が異なります。HTML を開き、テーブルのヘッダを囲む全ての `<td>` 要素を `<th>` 要素に変更してください。
-3.  HTML を保存してブラウザにロードすると、ヘッダーがヘッダーらしく見えます。
+3.  HTML を保存してブラウザーにロードすると、ヘッダーがヘッダーらしく見えます。
 
-> **Note:** **メモ**: 完成した例は GitHub の [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
+> **Note:** 完成した例は GitHub の [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
 
 ### なぜ見出しは便利なのか
 
 私たちはすでにこの質問に部分的に答えました — ヘッダーがはっきり目立つときには探しているデータを見つけやすく、デザインは一般的に見栄えがよくなります。
 
-> **Note:** **メモ**: テーブルの見出しにはデフォルトのスタイルがいくつかあります。テーブルに独自のスタイルを追加しなくても、目立つように太字で中央に配置されています。
+> **Note:** テーブルの見出しにはデフォルトのスタイルがいくつかあります。テーブルに独自のスタイルを追加しなくても、目立つように太字で中央に配置されています。
 
 テーブルヘッダには、`scope` 属性 (次の記事で学ぶことになります) とともに、追加の利点もあります。それらを使用すると、各ヘッダーを同じ行または列のすべてのデータに関連付けることで、テーブルをよりアクセスしやすくすることができます。これにより、スクリーンリーダーはデータの行全体または列全体を一度に読み取ることができます。これは非常に便利です。
 
@@ -383,12 +383,12 @@ HTML テーブルは表形式のデータに使用する必要があります - 
 
 このテーブルを改善するために `colspan` と `rowspan` を使用しましょう。
 
-1.  まず、ご使用のローカルマシンの新しいディレクトリに、[animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) ファイルと [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) ファイルのローカルコピーを作成します。HTML には、上記と同じ動物の例が含まれています。
+1.  まず、ご使用のローカルマシンの新しいディレクトリーに、[animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) ファイルと [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) ファイルのローカルコピーを作成します。HTML には、上記と同じ動物の例が含まれています。
 2.  次に、`colspan` を使用して "Animals"、"Hippopotamus"、および "Crocodile" を 2 列にまたがって作成します。
 3.  最後に、`rowspan` を使用して "Horse" と "Chicken" を 2 行にまたがるようにします。
-4.  改善を確認するには、ブラウザでコードを保存して開きます。
+4.  改善を確認するには、ブラウザーでコードを保存して開きます。
 
-> **Note:** **メモ**: 完成した例は GitHub の [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html))。
+> **Note:** 完成した例は GitHub の [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html))。
 
 ## 列への共通のスタイル付け
 
@@ -466,7 +466,7 @@ HTML では、データの列全体のスタイル情報を 1 か所にまとめ
 
 以下の手順に従ってテーブルを再作成してください。
 
-1.  まず、[timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) ファイルのローカルコピーをあなたのローカルマシンの新しいディレクトリに作成してください。HTML には、上で見たのと同じ表から、列のスタイル情報を除いたものが含まれています。
+1.  まず、[timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) ファイルのローカルコピーをあなたのローカルマシンの新しいディレクトリーに作成してください。HTML には、上で見たのと同じ表から、列のスタイル情報を除いたものが含まれています。
 2.  `<col>` 要素を追加することができる `<table>` タグのすぐ下のテーブルの上部に `<colgroup>` 要素を追加します (以下の残りの手順を参照)。
 3.  最初の 2 つの列はスタイルなしのままにする必要があります。
 4.  3 列目に背景色を追加します。`style` 属性の値は`background-color:#97DB9A;` です。

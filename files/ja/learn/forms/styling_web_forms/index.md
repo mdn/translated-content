@@ -70,7 +70,7 @@ CSS が HTML のスタイル設定できるようになってからも、ユー�
 
 これらのウィジェットを完全にカスタマイズしたい場合は、HTML, CSS, JavaScript を使って独自のものを作成する必要があります。それはこのコアフォームの記事の範囲を超えますが、高度な記事の[カスタムウィジェットの作成方法](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets "HTML/Forms/How_to_build_custom_form_widgets")の記事で説明します。
 
-> **Note:** **注**: フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 疑似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
+> **Note:** フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 疑似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
 
 ## 良好
 
@@ -95,7 +95,7 @@ button, input, select, textarea {
 
 以下のスクリーンショットで違いを示します。左側は Mac OS X の Chrome における`<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, `<button>` 要素の既定のレンダリングで、プラットフォームのデフォルトフォントスタイルを使用しています。右側は同じ要素ですが、フォントを調和させるスタイルルールを適用したものです。
 
-![Form controls with default and inherited font families. 既定では, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph.](https://mdn.mozillademos.org/files/16903/forms_fontfamily.png)
+![Form controls with default and inherited font families. 既定では, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph.](forms_fontfamily.png)
 
 既定はいろいろと変わります。継承により、フォントは親のフォントファミリーに変更されます — ここでは親コンテナのデフォルトの serif フォントです。ほぼすべてそうですが、例外として Chrome では`<input type="submit">` は親段落を継承しません。むしろ、{{cssxref('font-family#Values', 'font-family: system-ui')}}を使います。これは同等な入力タイプの中で `<button>` 要素を使う理由です!
 
@@ -118,7 +118,7 @@ input, textarea, select, button {
 
 下のスクリーンショットで、左の列は\<input type="radio">, \<input type="checkbox">, \<input type="range">, \<input type="text">, \<input type="date"> input, {{htmlelement('select')}}, {{htmlelement('textarea')}},\<input type="submit">, {{htmlelement('button')}} の既定の描画、右の列は同じ要素に上のルールを使用して作成したものです。各種のウィジェットのプラットフォームのデフォルトルールと比較して、すべての要素が同じ領域を占めるようにすることが可能な点に注目してください。
 
-![box model properties effect most input types.](https://mdn.mozillademos.org/files/16904/boxmodel_formcontrols1.png)
+![box model properties effect most input types.](boxmodel_formcontrols1.png)
 
 スクリーンショットで明白でないことはラジオボタンとチェックボックスコントロールが同じであるが、水平位置が {{cssxref('width')}} プロパティで与えられる 150px の中心にあることです。他のブラウザーではウィジェットを中心揃えにしませんが、割り当てられたスペースに付着させます。
 
@@ -148,7 +148,7 @@ legend {
 
 {{HTMLElement("legend")}} 要素はアクセシビリティのためとても重要です — これはアシスト技術により fieldset 内の各フォーム要素のラベルとして話されます — が、上のようなテクニックの使用は良いです。legend コンテンツは同じ方法で話されます; 単に見た目の位置が変更されます。
 
-> **Note:** **注**: `<legend>`の位置決めに役立つ{{cssxref("transform")}}プロパティも使用できますが、例えば a `transform: translateY();`を使って配置するとき、移動はするものの `<fieldset>` の枠に劣悪なギャップができて、除去が困難です。
+> **Note:** `<legend>`の位置決めに役立つ{{cssxref("transform")}}プロパティも使用できますが、例えば a `transform: translateY();`を使って配置するとき、移動はするものの `<fieldset>` の枠に劣悪なギャップができて、除去が困難です。
 
 ## 特定のスタイル設定の例
 
@@ -353,9 +353,9 @@ button:focus {
 
 これでよし! フォームは次のようになるでしょう:
 
-![](https://mdn.mozillademos.org/files/17063/updated-form-screenshot.jpg)
+![](updated-form-screenshot.jpg)
 
-> **Note:** **注**: 例が期待どおり動かず、われわれのバージョンを確認したい場合、GitHub にあります — [ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください ([ソースコード](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)も見てください)。
+> **Note:** 例が期待どおり動かず、われわれのバージョンを確認したい場合、GitHub にあります — [ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください ([ソースコード](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)も見てください)。
 
 ## スキルを試しましょう！​
 

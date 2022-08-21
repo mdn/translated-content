@@ -16,22 +16,22 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-ここでは、HTML と CSS のコードで発生する可能性のある一般的なクロスブラウザの問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザの開発者ツールの使用、ブラウザにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
+ここでは、HTML と CSS のコードで発生する可能性のある一般的なクロスブラウザーの問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
 
-| 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
+| 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザーテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | 一般的な HTML と CSS のクロスブラウザの問題を診断し、それらを修正するための適切なツールとテクニックを使うことができるようにする。                                                                                                                           |
+| 目標:     | 一般的な HTML と CSS のクロスブラウザーの問題を診断し、それらを修正するための適切なツールとテクニックを使うことができるようにする。                                                                                                                           |
 
 ## HTML と CSS の問題
 
-一部の HTML と CSS の問題は、両方の言語がかなり単純で、コードがうまく作成され、効率的であり、ページ上に「機能の目的」を意味的に記述していることを確認するという意味で開発者がそれらについて真剣に考えていないという事実にあります。最悪の場合、JavaScript を使用して Web ページのコンテンツとスタイル全体を生成するため、ページにアクセスできなくなり、パフォーマンスが低下します (DOM 要素の生成にはコストがかかります)。他のケースでは、初期の機能がブラウザ間で一貫してサポートされていないため、一部の機能やスタイルが一部のユーザには機能しないことがあります。
-レスポンシブデザインの問題も一般的です。デスクトップブラウザで見栄えの良いサイトはモバイル端末だとひどい経験を提供するかもしれません、内容が読むには小さすぎるか、高精細なアニメーションのせいで遅いでしょう。
+一部の HTML と CSS の問題は、両方の言語がかなり単純で、コードがうまく作成され、効率的であり、ページ上に「機能の目的」を意味的に記述していることを確認するという意味で開発者がそれらについて真剣に考えていないという事実にあります。最悪の場合、JavaScript を使用して Web ページのコンテンツとスタイル全体を生成するため、ページにアクセスできなくなり、パフォーマンスが低下します (DOM 要素の生成にはコストがかかります)。他のケースでは、初期の機能がブラウザー間で一貫してサポートされていないため、一部の機能やスタイルが一部のユーザには機能しないことがあります。
+レスポンシブデザインの問題も一般的です。デスクトップブラウザーで見栄えの良いサイトはモバイル端末だとひどい経験を提供するかもしれません、内容が読むには小さすぎるか、高精細なアニメーションのせいで遅いでしょう。
 
-HTML/CSS に起因するクロスブラウザエラーを減らす方法を見てみましょう。
+HTML/CSS に起因するクロスブラウザーエラーを減らす方法を見てみましょう。
 
 ## まず最初に：一般的な問題を解決する
 
-[このシリーズの最初の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery)では、まずクロスブラウザの問題に集中する前に、デスクトップ/モバイルの最新ブラウザでいくつかテストしてコードが正常に機能するか確認することをお勧めします。
+[このシリーズの最初の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery)では、まずクロスブラウザーの問題に集中する前に、デスクトップ/モバイルの最新ブラウザーでいくつかテストしてコードが正常に機能するか確認することをお勧めします。
 
 [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)および [CSS のデバッグ](/ja/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)の記事では、HTML/CSS のデバッグに関する基本的なガイダンスをいくつか提供しました。基本に慣れていない場合は、先に進む前に必ずこれらの記事をよく読んでください。
 
@@ -77,7 +77,7 @@ Other popular editors have similar linting packages available. For example, see:
 
 The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.
 
-> **Note:** ブラウザが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の [Validation](#validation) を見てください。
+> **Note:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の [Validation](#validation) を見てください。
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 

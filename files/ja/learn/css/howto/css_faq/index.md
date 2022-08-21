@@ -65,7 +65,7 @@ HTML の要素は、 `id` 属性と `class` 属性の片方または両方を持
 - class を使用すると、複数の要素のスタイルを設定できるため、id セレクタを使用する複数のルールで同じスタイル設定情報を書き出す必要がなくなり、より短いスタイルシートを作成できます。より短いスタイルシートはより高性能です
 - class セレクタは id セレクタよりも特異性が低いため、必要に応じてオーバーライドする方が簡単です
 
-> **Note:** **注**: 詳しくは [Selectors](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors) もご覧ください。
+> **Note:** 詳しくは [Selectors](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors) もご覧ください。
 
 ## プロパティの既定値に戻すにはどうすればよいのか?
 
@@ -205,9 +205,9 @@ div { color: black; }
 
 これらのプロパティは*接頭辞付きプロパティ*と呼ばれ、CSS 標準を拡張したものです。これらは正規の名前空間を乱すことなく実験的で非標準の機能を使用するために用いられ、標準仕様が拡張したときに機能の不整合が発生することを防ぎます。
 
-本番 Web サイトでこのようなプロパティを使用することはお勧めできません。これらのプロパティは既に Web との互換性に大きな問題を引き起こしています。たとえば、接頭辞のないバージョンがすべてのブラウザでサポートされている場合に、接頭辞のないバージョンがプロパティの `-webkit-` 接頭辞バージョンのみを使用するということは、Webkit ベースでないブラウザではそのプロパティに依存する機能が完全に不要になるということです。この問題はひどく悪くなったため、Compatibility Living Standard で指定されているように、Web の互換性を向上させるために他のブラウザが `-webkit-` プレフィックスエイリアスを実装し始めました。
+本番 Web サイトでこのようなプロパティを使用することはお勧めできません。これらのプロパティは既に Web との互換性に大きな問題を引き起こしています。たとえば、接頭辞のないバージョンがすべてのブラウザーでサポートされている場合に、接頭辞のないバージョンがプロパティの `-webkit-` 接頭辞バージョンのみを使用するということは、Webkit ベースでないブラウザーではそのプロパティに依存する機能が完全に不要になるということです。この問題はひどく悪くなったため、Compatibility Living Standard で指定されているように、Web の互換性を向上させるために他のブラウザーが `-webkit-` プレフィックスエイリアスを実装し始めました。
 
-実際のところ、ほとんどのブラウザは実験的機能を実装するときに CSS プレフィックスを使用せず、代わりに Nightly ブラウザバージョンなどでのみそれらの機能を実装しています。
+実際のところ、ほとんどのブラウザーは実験的機能を実装するときに CSS プレフィックスを使用せず、代わりに Nightly ブラウザーバージョンなどでのみそれらの機能を実装しています。
 
 作業でプレフィックスを使用する必要がある場合は、最初にプレフィックス付きのバージョンを使用するようにコードを書くことをお勧めします。ただし、サポートされている場合はプレフィックス付きのバージョンを自動的に上書きできます。 例えば：
 
@@ -217,9 +217,9 @@ div { color: black; }
 transform: rotate(90deg);
 ```
 
-> **Note:** **メモ**: 接頭辞付きプロパティの処理の詳細については、[クロスブラウザテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS プレフィックスの処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes)を参照してください。
+> **Note:** 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS プレフィックスの処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes)を参照してください。
 
-> **Note:** **メモ**: Mozilla をプレフィックスとする CSS プロパティの詳細については、[CSS の Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)ページを参照してください。
+> **Note:** Mozilla をプレフィックスとする CSS プロパティの詳細については、[CSS の Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)ページを参照してください。
 
 ## z-index は位置指定へどのように関係するのか?
 
@@ -227,4 +227,4 @@ z-index プロパティは、要素を積み重ねる順序を指定します。
 
 z-index/stack の順序が高い要素は、常に z-index/stack の順序が低い要素の前に表示されます。z-index は指定された位置 (`position:absolute`、`position:relative`、または `position:fixed`) を持つ要素に対してのみ機能します。
 
-> **Note:** **メモ**: 詳細については、[ポジショニング](/ja/docs/Learn/CSS/CSS_layout/Positioning)学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index)セクションを参照してください。
+> **Note:** 詳細については、[ポジショニング](/ja/docs/Learn/CSS/CSS_layout/Positioning)学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index)セクションを参照してください。

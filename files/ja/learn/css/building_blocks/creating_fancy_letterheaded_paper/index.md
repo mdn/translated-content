@@ -29,10 +29,10 @@ original_slug: Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper
 
 この評価を開始するには、次のことが必要です。
 
-- [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリに保存します。
-- 上部（[top](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png)）、下部（[bottom](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png)）、ロゴ（[logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png)）の画像のローカルコピーを、コードファイルと同じディレクトリに保存します。
+- [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリーに保存します。
+- 上部（[top](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png)）、下部（[bottom](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png)）、ロゴ（[logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png)）の画像のローカルコピーを、コードファイルと同じディレクトリーに保存します。
 
-> **Note:** **注**: あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+> **Note:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
 ## プロジェクトの概要
 
@@ -66,7 +66,7 @@ original_slug: Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper
 
 次のスクリーンショットは、完成したデザインがどのように見えるかの例を示しています。
 
-![](https://mdn.mozillademos.org/files/13144/letterhead.png)
+![](letterhead.png)
 
 ## 評価
 

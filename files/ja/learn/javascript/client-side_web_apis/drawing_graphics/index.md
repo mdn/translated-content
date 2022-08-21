@@ -40,7 +40,7 @@ Around 2006–2007, Mozilla started work on an experimental 3D canvas implementa
 
 This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use a WebGL library to create a 3D scene more easily, and you can find a tutorial covering raw WebGL elsewhere — see [Getting started with WebGL](/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
 
-> **Note:** **注**: Basic canvas functionality is supported well across browsers, with the exception of IE 8 and below for 2D canvas, and IE 11 and below for WebGL.
+> **Note:** Basic canvas functionality is supported well across browsers, with the exception of IE 8 and below for 2D canvas, and IE 11 and below for WebGL.
 
 ## アクティブラーニング: \<canvas>を始めよう
 
@@ -102,7 +102,7 @@ Let's start by creating our own canvas that we draw future experiments on to.
 
     The scrollbars should now be gone.
 
-> **Note:** **注**: You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixellated/distorted.
+> **Note:** You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixellated/distorted.
 
 ### canvas コンテキストと最終セットアップを取得する
 
@@ -114,7 +114,7 @@ In this case we want a 2d canvas, so add the following JavaScript line below the
 const ctx = canvas.getContext('2d');
 ```
 
-> **Note:** **注**: other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
+> **Note:** other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
 
 So that's it — our canvas is now primed and ready for drawing on! The `ctx` variable now contains a {{domxref("CanvasRenderingContext2D")}} object, and all drawing operations on the canvas will involve manipulating this object.
 
@@ -133,7 +133,7 @@ OK, our template is done and it's time to move on.
 
 As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, `ctx`). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.
 
-![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)
+![](Canvas_default_grid.png)
 
 Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.
 
@@ -190,7 +190,7 @@ Now you should see that your white outline has become much thicker! That's it fo
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html", '100%', 250)}}
 
-> **Note:** **注**: The finished code is available on GitHub as [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html).
+> **Note:** The finished code is available on GitHub as [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html).
 
 ### パスの描画
 
@@ -256,7 +256,7 @@ Let's draw an equilateral triangle on the canvas.
     - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
     - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
 
-    ![](https://mdn.mozillademos.org/files/14829/trigonometry.png)
+    ![](trigonometry.png)
 
     One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with `50 * Math.tan(degToRad(60))`. We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.
 
@@ -279,7 +279,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 
     `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
 
-    > **Note:** **注**: 0 degrees is horizontally to the right.
+    > **Note:** 0 degrees is horizontally to the right.
 
 2.  Let's try adding another arc:
 
@@ -300,9 +300,9 @@ That's it for now; your final example should look like this:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html", '100%', 200)}}
 
-> **Note:** **注**: The finished code is available on GitHub as [3_canvas_paths.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html).
+> **Note:** The finished code is available on GitHub as [3_canvas_paths.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html).
 
-> **Note:** **注**: To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
+> **Note:** To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
 
 ### テキスト
 
@@ -334,7 +334,7 @@ Here we draw two lines of text, one outline and the other stroke. The final exam
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html", '100%', 180)}}
 
-> **Note:** **注**: The finished code is available on GitHub as [4_canvas_text.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
+> **Note:** The finished code is available on GitHub as [4_canvas_text.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
 
 Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -381,7 +381,7 @@ The final example should look like so:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html", '100%', 260)}}
 
-> **Note:** **注**: The finished code is available on GitHub as [5_canvas_images.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
+> **Note:** The finished code is available on GitHub as [5_canvas_images.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
 
 ## ループとアニメーション
 
@@ -461,7 +461,7 @@ At this point, we'd like to encourage you to play with the example and make it y
 - Play with the `length` and `moveOffset` values.
 - Introduce some random numbers using that `rand()` function we included above but didn't use.
 
-> **Note:** **注**: The finished code is available on GitHub as [6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
+> **Note:** The finished code is available on GitHub as [6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
 
 ### アニメーション
 
@@ -469,7 +469,7 @@ The loop example we built above was fun, but really you need a constant loop tha
 
 There are a few JavaScript functions that will allow you to run functions repeatedly, several times a second, the best one for our purposes here being {{domxref("window.requestAnimationFrame()")}}. It takes one parameter — the name of the function you want to run for each frame. The next time the browser is ready to update the screen, your function will get called. If that function draws the new update to your animation, then calls `requestAnimationFrame()` again just before the end of the function, the animation loop will continue to run. The loop ends when you stop calling `requestAnimationFrame()` or if you call {{domxref("window.cancelAnimationFrame()")}} after calling `requestAnimationFrame()` but before the frame is called.
 
-> **Note:** **注:** It's good practice to call `cancelAnimationFrame()` from your main code when you're done using the animation, to ensure that no updates are still waiting to be run.
+> **Note:** It's good practice to call `cancelAnimationFrame()` from your main code when you're done using the animation, to ensure that no updates are still waiting to be run.
 
 The browser works out complex details such as making the animation run at a consistent speed, and not wasting resources animating things that can't be seen.
 
@@ -506,7 +506,7 @@ In general, the process of doing a canvas animation involves the following steps
 4.  Restore the settings you saved in step 2, using {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
 5.  Call `requestAnimationFrame()` to schedule drawing of the next frame of the animation.
 
-> **Note:** **注**: We won't cover `save()` and `restore()` here, but they are explained nicely in our [Transformations](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations) tutorial (and the ones that follow it).
+> **Note:** We won't cover `save()` and `restore()` here, but they are explained nicely in our [Transformations](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations) tutorial (and the ones that follow it).
 
 ### 簡単なキャラクターのアニメーション
 
@@ -536,7 +536,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 
     Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Create a sprite sheet walk cycle using using CSS animation](http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/ "Permanent Link to Create a sprite sheet walk cycle using using CSS animation")). The image looks like this:
 
-    ![](https://mdn.mozillademos.org/files/14847/walk-right.png)
+    ![](walk-right.png)
 
     It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
 
@@ -610,7 +610,7 @@ That's it! The final example should look like so:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}
 
-> **Note:** **注**: The finished code is available on GitHub as [7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
+> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
 
 ### 簡単なドローアプリ
 
@@ -667,7 +667,7 @@ function draw() {
 draw();
 ```
 
-> **Note:** **注**: The {{htmlelement("input")}} `range` and `color` types are supported fairly well across browsers, with the exception of Internet Explorer versions less than 10; also Safari doesn't yet support `color`. If your browser doesn't support these inputs, they will fall back to simple text fields and you'll just have to enter valid color/number values yourself.
+> **Note:** The {{htmlelement("input")}} `range` and `color` types are supported fairly well across browsers, with the exception of Internet Explorer versions less than 10; also Safari doesn't yet support `color`. If your browser doesn't support these inputs, they will fall back to simple text fields and you'll just have to enter valid color/number values yourself.
 
 ## WebGL
 
@@ -784,7 +784,7 @@ Let's have another quick look at what the finished product should look like:
 
 You can [find the finished code on GitHub](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-cube).
 
-> **Note:** **注**: In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
+> **Note:** In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
 
 ## まとめ
 

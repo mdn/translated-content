@@ -101,7 +101,7 @@ Almost everything in this template has been demonstrated in previous sections.
 
 Run the application and open your browser to <http://localhost:3000/>. Select the _All books_ link, then select one of the books. If everything is set up correctly, your page should look something like the following screenshot.
 
-![Book Detail Page - Express Local Library site](https://mdn.mozillademos.org/files/14470/LocalLibary_Express_Book_Detail.png)
+![Book Detail Page - Express Local Library site](LocalLibary_Express_Book_Detail.png)
 
 ## Next steps
 

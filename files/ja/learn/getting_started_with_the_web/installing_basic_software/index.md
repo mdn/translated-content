@@ -7,7 +7,7 @@ tags:
   - セットアップ
   - ツール
   - テキストエディタ
-  - ブラウザ
+  - ブラウザー
   - 初心者
   - 学習
 translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
@@ -48,7 +48,7 @@ translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 
 次に進む前に、テストに使えるように最低でも 2 つのブラウザーをインストールするようにしてください。
 
-> **Note:** **メモ**: Internet Explorer は最新の Web 機能と互換性がなく、プロジェクトを実行できない場合があります。現在は Internet Explorer を使用している人はほとんどいないので、通常はあなたの Web プロジェクトとそれの互換性について心配する必要はありません — 間違いなく学習中はあまり心配する必要はありません。
+> **Note:** Internet Explorer は最新の Web 機能と互換性がなく、プロジェクトを実行できない場合があります。現在は Internet Explorer を使用している人はほとんどいないので、通常はあなたの Web プロジェクトとそれの互換性について心配する必要はありません — 間違いなく学習中はあまり心配する必要はありません。
 
 ### ローカルの Web サーバーのインストール
 

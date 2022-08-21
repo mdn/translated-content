@@ -71,9 +71,9 @@ HTML5 の video と audio インスタンスは、ビルトインのコントロ
 
 control 属性は、あなたがメディアプレイヤーに対して期待する再生/一時停止ボタンやシークバーといった基本的なコントロールを提供します。Firefox と Chrome では次のように表示されます。
 
-![Screenshot of Video Controls in Firefox](https://mdn.mozillademos.org/files/14440/native-controls-firefox.png)
+![Screenshot of Video Controls in Firefox](native-controls-firefox.png)
 
-![Screenshot of Video Controls in Chrome](https://mdn.mozillademos.org/files/14438/native-controls-chrome.png)
+![Screenshot of Video Controls in Chrome](native-controls-chrome.png)
 
 しかし、これらのコントロールには問題があります:
 
@@ -259,21 +259,21 @@ player.ontimeupdate = function() {
 
 しかし、いくつかのエッジケースもあります。例えば、スプレッドシートやグラフの資料を使用したミーティングの録音オーディオがあるかもしれません。その場合、それらの資料がオーディオとトランスクリプトとともに提供されていることを確認するべきであり、特にトランスクリプトの中でそれらの資料に言及されている箇所をリンクとすることが大事です。これは聴覚障害の方だけでなく、すべてのユーザーの助けになります。
 
-> **Note:** **注**: オーディオトランスクリプトは、一般的に様々なユーザーグループを助けます。聴覚障害の人へオーディオに含まれたコンテンツにアクセスを提供するように、オーディオをダウンロードすることが困難な狭い帯域のユーザーのことを考えて見ましょう。パブやバーのような騒音の多い環境で、雑音のためにオーディオを聞くことが難しいユーザーのことも考えて見ましょう。
+> **Note:** オーディオトランスクリプトは、一般的に様々なユーザーグループを助けます。聴覚障害の人へオーディオに含まれたコンテンツにアクセスを提供するように、オーディオをダウンロードすることが困難な狭い帯域のユーザーのことを考えて見ましょう。パブやバーのような騒音の多い環境で、雑音のためにオーディオを聞くことが難しいユーザーのことも考えて見ましょう。
 
 ## ビデオテキストトラック
 
 聴覚障害者、視覚障害者、そして他のユーザー (狭い帯域のユーザーや、ビデオで使用される言語を話さないユーザー) にとってビデオをアクセシブルにするために、ビデオコンテンツにテキストトラックを含める必要があります。
 
-> **Note:** **注**: テキストトラックは障害者だけでなく他のユーザーにとっても便利になる可能性があります。例えば、うるさい環境 (スポーツ中継を流している混雑したバーなど) にいるためにオーディオが聞こえないユーザーや、他の人を邪魔したくない静かな場所 (図書館など) にいるユーザーなどです。
+> **Note:** テキストトラックは障害者だけでなく他のユーザーにとっても便利になる可能性があります。例えば、うるさい環境 (スポーツ中継を流している混雑したバーなど) にいるためにオーディオが聞こえないユーザーや、他の人を邪魔したくない静かな場所 (図書館など) にいるユーザーなどです。
 
 これは新しいコンセプトではありません — テレビ放送では、かなり長い間クローズドキャプションを提供しています:
 
-![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](https://mdn.mozillademos.org/files/14436/closed-captions.png)
+![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
 一方で、多くの国では英語の映画を自国の母語の字幕とともに提供していて、DVD では他の言語の字幕も利用可能となっています。
 
-![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](https://mdn.mozillademos.org/files/14442/Subtitles_German.jpg)
+![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](Subtitles_German.jpg)
 
 テキストトラックには、目的に応じた様々な種類のものがあります。あなたが接する主な種類は、次のものです:
 
@@ -319,11 +319,11 @@ HTML のメディア再生と共に表示させるためには、次のことを
 
 これは、字幕が表示されたビデオとなり、次のようになります:
 
-![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 詳細は [Adding captions and subtitles to HTML5 video](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を読んでください。あなたは、GitHub で GIan Devlin によって作られた[例](http://iandevlin.github.io/mdn/video-player-with-captions/)をこの記事と併せて見ることができます。([source ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) も見てください) この例では JavaScript を使用して、ユーザーが異なる言語の字幕を選択できるようになっています。字幕を表示するためには、"CC" ボタンをクリックして英語、ドイツ語、スペイン後のオプションを選択する必要があります。
 
-> **Note:** **注**: テキストトラックは {{glossary("SEO")}} でも役に立ちます。検索エンジンはテキストによって更新されるためです。検索エンジンは、テキストトラックによってビデオの途中に直接リンクすることさえできます。
+> **Note:** テキストトラックは {{glossary("SEO")}} でも役に立ちます。検索エンジンはテキストによって更新されるためです。検索エンジンは、テキストトラックによってビデオの途中に直接リンクすることさえできます。
 
 ## その他のマルチメディアコンテンツ
 

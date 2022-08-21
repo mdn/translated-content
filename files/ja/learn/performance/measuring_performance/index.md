@@ -21,7 +21,7 @@ translation_of: Learn/Performance/Measuring_performance
 
 クライアントサイドのウェブパフォーマンスを測定するために [Navigation Timing API](/ja/docs/Web/API/Navigation_timing_API) を利用できます。前のページをアンロードするために必要な時間、ドメインのルックアップにかかる時間、ウィンドウのロードハンドラー実行にかかる時間の合計などが含まれます。この API は、下図に示すナビゲーションイベント全てに関する指標として利用できます。
 
-![The various handlers that the navigation tiiming API can handle including Navigation timing API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnettionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](https://mdn.mozillademos.org/files/17062/navigationtimingapi.jpg)
+![The various handlers that the navigation tiiming API can handle including Navigation timing API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnettionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
 現在のページのパフォーマンスに関連する情報へのアクセスを提供する [Performance API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[Performance Timeline API](/ja/docs/Web/API/Performance_Timeline)、[Navigation Timing API](/ja/docs/Web/API/Navigation_timing_API)、[User Timing API](/ja/docs/Web/API/User_Timing_API)、そして [Resource Timing API ](/ja/docs/Web/API/Resource_Timing_API)を含みます。これらのインターフェースにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
 
@@ -46,7 +46,7 @@ translation_of: Learn/Performance/Measuring_performance
 
 本記事の執筆時点で、MDN のパフォーマンスレポートのサマリーは以下のようになっています。
 
-![A screenshot of PageSpeed Insights report for the Mozilla homepage.](https://mdn.mozillademos.org/files/16963/pagespeed-insight-mozilla-homepage.png)
+![A screenshot of PageSpeed Insights report for the Mozilla homepage.](pagespeed-insight-mozilla-homepage.png)
 
 パフォーマンスレポートは、ページに何かが表示されまでにユーザーがどのくらい待たなければならないか、ページを表示するまでに何バイトのデータがダウンロードされる必要があるかなどの情報を含みます。さらに測定された値が良好と考えられるか、あるいは不良であるかも示します。
 
@@ -56,11 +56,11 @@ translation_of: Learn/Performance/Measuring_performance
 
 多くのブラウザーが、読み込み対象のページに対してそれらがどのように動作しているか確認するために使えるツールを用意しています。たとえば、FIrefox の [Network Monitor](/ja/docs/Tools/Network_Monitor) はネットワークからダウンロードされるすべてのアセットの詳細な情報を、それぞれダウンロードのどのくらいの時間がかかるかを示すグラフと合わせて表示します。
 
-![](https://mdn.mozillademos.org/files/17030/network-monitor.png)
+![](network-monitor.png)
 
 異なるアクションを実行したときのウェブアプリケーションやサイトのユーザーインターフェースのパフォーマンスを測定するために [Performance Monitor](/ja/docs/Tools/Performance) を利用できます。これは ウェブアプリケーションやサイトを遅くしているかもしれない要素を指し示します。
 
-![](https://mdn.mozillademos.org/files/17031/perf-monitor.png)
+![](perf-monitor.png)
 
 ## 結論
 

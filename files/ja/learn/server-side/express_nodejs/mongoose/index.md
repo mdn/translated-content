@@ -80,17 +80,17 @@ Web サイト自体に選択肢をハードコーディングするのではな�
 
 この図には、モデル間の関係 (それらの多重度も含む) も示されています。多重度は、関係内に存在する可能性がある各モデルの番号 (最大および最小) を示す図上の番号です。たとえば、ボックス間の接続線は、`Book` と `Genre` が関連していることを示しています。`Book` モデルに近い数字は、ジャンルに 0 個以上の Book がある必要があることを示しており、線のもう一方の端にある`Genre` の隣の数字は、本に 0 個以上の関連する`Genre`があることを示しています。
 
-> **Note:** **メモ**: 下記の Mongoose 入門書で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
+> **Note:** 下記の Mongoose 入門書で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
 
-![Mongoose Library Model  with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model  with correct cardinality](Library%20Website%20-%20Mongoose_Express.png)
 
-> **Note:** **メモ**: 次のセクションでは、モデルの定義方法と使用方法を説明する基本的な入門書を提供します。お読みになったところで、上の図の各モデルをどのように構築するかを検討してください。
+> **Note:** 次のセクションでは、モデルの定義方法と使用方法を説明する基本的な入門書を提供します。お読みになったところで、上の図の各モデルをどのように構築するかを検討してください。
 
 ## Mongoose 入門書
 
 このセクションでは、Mongoose を MongoDB データベースに接続する方法、スキーマとモデルを定義する方法、そして基本的なクエリを作成する方法の概要を説明します。
 
-> **Note:** **メモ:** この入門書は、npm の [Mongoose クイックスタート](https://www.npmjs.com/package/mongoose)と[公式ドキュメント](http://mongoosejs.com/docs/guide.html)に "大きく影響を受けています"。
+> **Note:** この入門書は、npm の [Mongoose クイックスタート](https://www.npmjs.com/package/mongoose)と[公式ドキュメント](http://mongoosejs.com/docs/guide.html)に "大きく影響を受けています"。
 
 ### Mongoose と MongoDB のインストール
 
@@ -102,7 +102,7 @@ npm install mongoose
 
 Mongoose をインストールすると、MongoDB データベースドライバを含むすべての依存関係が追加されますが、MongoDB 自体はインストールされません。 MongoDB サーバをインストールする場合は、さまざまな OS 用の[インストーラをここからダウンロード](https://www.mongodb.com/download-center)してローカルにインストールできます。クラウドベースの MongoDB インスタンスを使用することもできます。
 
-> **Note:** **メモ:** このチュートリアルでは、mLab クラウドベースの Database as a Service [サンドボックス層](https://mlab.com/plans/pricing/)として使用してデータベースを提供します。これは開発に適しており、オペレーティングシステムの "インストール" に依存しないため (database-as-a-service も本番データベースに使用することができる 1 つのアプローチです)、チュートリアルに適しています。
+> **Note:** このチュートリアルでは、mLab クラウドベースの Database as a Service [サンドボックス層](https://mlab.com/plans/pricing/)として使用してデータベースを提供します。これは開発に適しており、オペレーティングシステムの "インストール" に依存しないため (database-as-a-service も本番データベースに使用することができる 1 つのアプローチです)、チュートリアルに適しています。
 
 ### MongoDB への接続
 
@@ -134,7 +134,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 その後、スキーマは `mongoose.model()` メソッドを使用してモデルに "コンパイル" されます。モデルを作成したら、それを使用して特定のタイプのオブジェクトを検索、作成、更新、および削除できます。
 
-> **Note:** **メモ:** 各モデルは MongoDB データベース内のドキュメントのコレクションにマップされます。ドキュメントはモデル `Schema` で定義されたフィールド/スキーマタイプを含みます。
+> **Note:** 各モデルは MongoDB データベース内のドキュメントのコレクションにマップされます。ドキュメントはモデル `Schema` で定義されたフィールド/スキーマタイプを含みます。
 
 #### スキーマの定義
 
@@ -174,7 +174,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );
 
 最初の引数はあなたのモデル用に作成されるコレクションの単数形の名前です (Mongoose は上記の SomeModel モデル用のデータベースコレクションを作成します)、そして 2 番目の引数はモデルの作成に使用したいスキーマです。
 
-> **Note:** **メモ:** モデルクラスを定義したら、それらを使用してレコードを作成、更新、または削除し、クエリを実行してすべてのレコードまたは特定のレコードのサブセットを取得できます。これを行う方法をモデルの使用セクションで、そしてビューを作成するときに示します。
+> **Note:** モデルクラスを定義したら、それらを使用してレコードを作成、更新、または削除し、クエリを実行してすべてのレコードまたは特定のレコードのサブセットを取得できます。これを行う方法をモデルの使用セクションで、そしてビューを作成するときに示します。
 
 #### スキーマ型 (フィールド)
 
@@ -487,9 +487,9 @@ You will first need to [create an account](https://mlab.com/signup/) with mLab (
 
 After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 
-1.  Click **Create New** in the _MongoDB Deployments_ section.![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1.  Click **Create New** in the _MongoDB Deployments_ section.![](mLabCreateNewDeployment.png)
 2.  This will open the _Cloud Provider Selection_ screen.
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mLab_new_deployment_form_v2.png)
 
     - Select the SANDBOX (Free) plan from the Plan Type section.
     - Select any provider from the _Cloud Provider_ section. Different providers offer different regions (displayed below the selected plan type).
@@ -497,28 +497,28 @@ After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 
 3.  This will open the _Select Region_ screen.
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mLab_new_deployment_select_region_v2.png)
 
     - Select the region closest to you and then **Continue**.
 
 4.  This will open the _Final Details_ screen.
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mLab_new_deployment_final_details.png)
 
     - Enter the name for the new database as `local_library` and then select **Continue**.
 
 5.  This will open the _Order Confirmation_ screen.
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mLab_new_deployment_order_confirmation.png)
 
     - Click **Submit Order** to create the database.
 
 6.  You will be returned to the home screen. Click on the new database you just created to open its details screen. As you can see the database has no collections (data).
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mLab_new_deployment_database_details.png)
 
     The URL that you need to use to access your database is displayed on the form above (shown for this database circled above). In order to use this you need to create a database user that you can specify in the URL.
 
 7.  Click the **Users** tab and select the **Add database user** button.
 8.  Enter a username and password (twice), and then press **Create**. Do not select _Make read only_.
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mLab_database_users.png)
 
 You have now created the database, and have an URL (with username and password) that can be used to access it. This will look something like: `mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
 

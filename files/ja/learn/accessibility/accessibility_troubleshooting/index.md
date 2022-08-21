@@ -29,11 +29,11 @@ translation_of: Learn/Accessibility/Accessibility_troubleshooting
 
 解凍が完了した評価サイトは次のように見えるはずです:
 
-![](https://mdn.mozillademos.org/files/14555/assessment-site-finished.png)
+![](assessment-site-finished.png)
 
 この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、CSS が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！
 
-> **Note:** **注**: もし行き詰まって助けを求める場合 — ページ最下部の [Assessment or further help](#assessment_or_further_help) セクションを見てください。
+> **Note:** もし行き詰まって助けを求める場合 — ページ最下部の [Assessment or further help](#assessment_or_further_help) セクションを見てください。
 
 ## プロジェクトの概要
 
@@ -49,7 +49,7 @@ translation_of: Learn/Accessibility/Accessibility_troubleshooting
 2.  スクリーンリーダーのユーザーがナビゲートしやすいように、記事のテキストを変更できますか？
 3.  サイトのナビゲーションメニュー ( `<div class="nav"></div>` で囲まれた部分) は正しい HTML5 セマンティック要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。
 
-> **Note:** **注**: タグをスタイル付けする CSS ルールセレクターは、セマンティック見出しのために適切に変更する必要があります。パラグラフ要素を加えると、スタイルもより良く見えることに気がつくでしょう。
+> **Note:** タグをスタイル付けする CSS ルールセレクターは、セマンティック見出しのために適切に変更する必要があります。パラグラフ要素を加えると、スタイルもより良く見えることに気がつくでしょう。
 
 ### 画像
 

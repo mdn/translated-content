@@ -30,7 +30,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 JavaScript では、条件文を使ってそのような決定を下すことが可能です。条件文は、選ばなければならない選択肢 (例えば「クッキーを 1 つまたは 2 つ食べる」) からそれを選んだ場合の結果を導き出します (おそらく「1 つクッキーを食べる」を選んだら、「まだちょっとお腹が空いている」という結果となるでしょうし、「2 つクッキーを食べる」を選んだら「お腹いっぱい。だけどクッキーを全部食べてママに怒られる」という結果となってしまうでしょう。)
 
-![](https://mdn.mozillademos.org/files/13703/cookie-choice-small.png)
+![](cookie-choice-small.png)
 
 ## if ... else ステートメント
 
@@ -95,7 +95,7 @@ if (shoppingDone === true) {
 
 このコードは常に `shoppingDone` 変数が `false` なので、かわいそうな子供は追加のお小遣いを受け取れません。両親が子供がお使いを完了した場合に `shoppingDone` 変数を `true` にセットしてあげるかどうかはプログラム次第です (つまり私たち次第です。)
 
-> **Note:** **注**: [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。)
+> **Note:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。)
 
 ### else if
 
@@ -146,7 +146,7 @@ function setWeather() {
 3.  この関数が実行されると、まずは `choice` という変数に、`<select>` 要素の現在選択されている値を入れます。そして、条件文を使い、`choice` の値に応じた文字列が段落に設定されます。最初の `if() {...}` のブロックを除いて、どのように `else if() {...}` のブロックで判定しているか注目してください。
 4.  一番下の `else {...}` 選択肢は、「最後の手段」となるオプションで、この中のコードは、どの条件にも一致しなかった場合 (`true` とならなかった場合) に実行されます。今回の場合選択されていない場合に、段落を空にしています。何も選択されていない場合というのは、ユーザーが再度最初に表示されていた「--選択してください--」というオプションを選んだ場合です。
 
-> **Note:** **注**: [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。)
+> **Note:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。)
 
 ### 比較演算子に関するメモ
 
@@ -156,7 +156,7 @@ function setWeather() {
 - `<` と `>` は、ある値がもう一方の値より大きいか、より小さいかを判定します。
 - `<=` と `>=` は、ある値がもう一方の値以上か、以下かを判定します。
 
-> **Note:** **注**: もし記憶があいまいならば、上記のリンク先を見て復習しましょう。
+> **Note:** もし記憶があいまいならば、上記のリンク先を見て復習しましょう。
 
 真偽 (`true`/`false`) の値を判定する場合には少しの配慮が必要であることを付け加えさせてください。おそらく何度か躓くであろう、よくあるパターンです。`false`、`undefined`、`null`、`0`、`NaN`、空文字列 (`''`) 以外の値は条件文で使った場合に `true` となります。ですから、その値が `true` であるか判定したい場合や、その値が存在するか (例えば、`undefined` ではないこと) 判定したい場合は単に変数名を使用するだけです。
 
@@ -296,7 +296,7 @@ switch ( 式 ) {
 6.  `case` 節 (上記 3. から 5. ) は好きなだけ書くことができます。
 7.  上記 3. から 5.の `case` 節と全く同じコードパターンで書かれている `default` キーワードがあります。違いは `default` の後ろに選択肢が書かれていないことです。また、後ろに続くコードがないので、ここには `break` ステートメントが必要ありません。もし、選択肢のどれにもマッチするものがない場合に既定のオプションとして実行されます。
 
-> **Note:** **注**: 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
+> **Note:** 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
 
 ### switch を使用する例
 
@@ -346,7 +346,7 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** **注**: [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html)ことができます。([実行可能なデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。)
+> **Note:** [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html)ことができます。([実行可能なデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。)
 
 ## 三項演算子
 
@@ -399,7 +399,7 @@ select.onchange = function() {
 
 さらに、三項演算子を含む [onchange](/ja/docs/Web/API/GlobalEventHandlers/onchange) イベントリスナーがあります。`select.value === 'black'` という条件式で始まっています。この式が `true` であるならば、`update()` 関数を引数に `'black'`、`'white'` を指定して実行します (つまり、背景色を黒、文字色を白に設定します)。この式が `false` であるならば、`update()` 関数を引数に `'white'`、`'black'` を指定して実行します (つまり、背景色を逆にします)。
 
-> **Note:** **注**: この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (または、[動くデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)もあります。)
+> **Note:** この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (または、[動くデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)もあります。)
 
 ## アクティブ学習: 単純なカレンダー
 

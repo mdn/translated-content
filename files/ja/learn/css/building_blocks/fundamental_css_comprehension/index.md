@@ -27,10 +27,10 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 
 この評価を開始するには、次のことが必要です。
 
-- [練習用の HTML ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html)とそれに[関連付けられた画像ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg)を探して、ローカルコンピュータの新しいディレクトリに保存します。自身の画像ファイルを使い、自身の名前を記入したいのなら、それも大歓迎です — ちょうど画像が正方形であることを確認してください。
+- [練習用の HTML ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html)とそれに[関連付けられた画像ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg)を探して、ローカルコンピュータの新しいディレクトリーに保存します。自身の画像ファイルを使い、自身の名前を記入したいのなら、それも大歓迎です — ちょうど画像が正方形であることを確認してください。
 - [CSS リソースのテキストファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt)を入手してください。これには、評価の一部に答えるために検討して組み合わせる必要がある一連の未加工のセレクタとルールセットが含まれています。
 
-> **Note:** **メモ**: 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、この URL を使用して `<img>` 要素を画像ファイルに向けることができます。使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+> **Note:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、この URL を使用して `<img>` 要素を画像ファイルに向けることができます。使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
 ## プロジェクト概要
 
@@ -38,7 +38,7 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 
 基本設定:
 
-- まず最初に、HTML と画像ファイルと同じディレクトリに新しいファイルを作成してください。それを `style.css` のような本当に想像力豊かなものと呼びます。
+- まず最初に、HTML と画像ファイルと同じディレクトリーに新しいファイルを作成してください。それを `style.css` のような本当に想像力豊かなものと呼びます。
 - `<link>` 要素を介して CSS を HTML ファイルにリンクします。
 - CSS リソースファイルの最初の 2 つのルールセットは無料です。幸運を祈って楽しんだら、コピーして新しい CSS ファイルの先頭に貼り付けます。これらをテストとして使用して、CSS が HTML に正しく適用されていることを確認してください。
 - 2 つの規則の上に、CSS コメントをその中にテキストを追加して、これがページ全体の一般的なスタイルのセットであることを示します。「一般的なページスタイル」でも構いません。また、CSS ファイルの下部にさらに 3 つのコメントを追加して、カードコンテナの設定に固有のスタイル、ヘッダーとフッターに固有のスタイル、およびメインの名刺の内容に固有のスタイルを示します。 今後、スタイルシートに追加された後続のスタイルは適切な場所に編成される必要があります。
@@ -58,13 +58,13 @@ CSS リソースファイルで提供されているセレクタとルールセ�
 書く必要がある新しいルールセット：
 
 - カードヘッダーとカードフッターの両方を対象としたルールセットを作成し、計算された合計の高さは 50 ピクセル (コンテンツの高さ 30 ピクセル、パディングは全側面で 10 ピクセル) を両方に指定します。
-- ブラウザが `<h2>` 要素と `<p>` 要素に適用するデフォルトのマージンは、私たちのデザインを妨げるので、これらすべての要素をターゲットにしてそれらのマージンを 0 に設定するルールを書きましょう。
+- ブラウザーが `<h2>` 要素と `<p>` 要素に適用するデフォルトのマージンは、私たちのデザインを妨げるので、これらすべての要素をターゲットにしてそれらのマージンを 0 に設定するルールを書きましょう。
 - 画像がメインの名刺の内容 (`<article>` 要素) からはみ出ないようにするには、特定の高さを指定する必要があります。`<article>` の高さを 120 px に設定します。ただし、`em`s で表します。また、背景色を半透明の黒にすると、やや濃い色になり、背景の赤い色も少し明るくなります。
 - `<h2>` に 20 px の有効フォントサイズ (ただし `em`s で表示) とそれをヘッダーのコンテンツボックスの中央に配置するための適切な行の高さを指定するルールセットを作成します。やる前にコンテンツボックスの高さは 30 px でなければならないことを思い出してください — これで行の高さを計算するのに必要なすべての数が揃います。
 - フッターの内側の `<p>` を 15 px の有効フォントサイズ (ただし `em`s で表示) とフッターのコンテンツボックスの中央に配置するための適切な行の高さを指定するルールセットを作成します。やる前にコンテンツボックスの高さは 30 px でなければならないことを思い出してください — これで行の高さを計算するのに必要なすべての数が揃います。
 - 最後のちょっとしたタッチとして、`<article>` の内側の段落に適切なパディング値を指定して、その左端が `<h2>` とフッターの段落に揃うようにし、読みやすくなるように色をかなり明るい色に設定します。
 
-> **Note:** **メモ**: 2 番目のルールセットは `<html>` 要素に `font-size: 10px;` を設定することに注意してください。これは `<html>` のすべての子孫について、em はデフォルトの 16 px ではなく 10 px になることを意味します (これはもちろん、階層内で問題の子孫と `<html>` の間に別の `font-size` が設定されている先祖がいない場合に限ります。これは必要な値に影響を与える可能性がありますが、この単純な例では問題にはなりません)。
+> **Note:** 2 番目のルールセットは `<html>` 要素に `font-size: 10px;` を設定することに注意してください。これは `<html>` のすべての子孫について、em はデフォルトの 16 px ではなく 10 px になることを意味します (これはもちろん、階層内で問題の子孫と `<html>` の間に別の `font-size` が設定されている先祖がいない場合に限ります。これは必要な値に影響を与える可能性がありますが、この単純な例では問題にはなりません)。
 
 その他の考慮事項
 
@@ -80,7 +80,7 @@ CSS リソースファイルで提供されているセレクタとルールセ�
 
 次のスクリーンショットは、完成したデザインの外観の例を示しています。
 
-![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](https://mdn.mozillademos.org/files/12616/business-card.png)
+![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
 
 ## 評価
 

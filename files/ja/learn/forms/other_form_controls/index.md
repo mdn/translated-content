@@ -42,9 +42,9 @@ translation_of: Learn/Forms/Other_form_controls
 
 下記のスクリーンショットは macOS での Firefox 71 と Safari 13 、Windows10 での Edge 18, Yandex 14, Firefox 71, Chrome 79 における既定の、フォーカスされた、無効な`<textarea>` 要素を表示しています。
 
-![The default, focused, and disabled <textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](https://mdn.mozillademos.org/files/17029/textarea_basic.png)
+![The default, focused, and disabled <textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
-> **Note:** **注**: 多少は面白いテキストエリアの使用例は、このシリーズの最初の記事の[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) が見つかります ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html))。
+> **Note:** 多少は面白いテキストエリアの使用例は、このシリーズの最初の記事の[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) が見つかります ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html))。
 
 ### 複数行レンダリングの制御
 
@@ -73,7 +73,7 @@ translation_of: Learn/Forms/Other_form_controls
 
 ドロップダウン コントロールは、ユーザー インターフェイスのスペースをあまり取らずに、ユーザーがさまざまなオプションから選択できるようにするためのシンプルな方法です。HTML には、**選択ボックス**と**オートコンプリート ボックス**という 2 つの形式のドロップダウン コンテンツがあります。どちらの場合も相互作用は同じです。コントロールを有効にすると、ブラウザーにはユーザーが選択できる値のリストが表示されます。
 
-> **Note:** **注**: すべてのドロップダウンボックスの例は、GitHub の [drop-down-content.html ](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/drop-down-content.html)にあります ([ライブでもご覧ください](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html))。
+> **Note:** すべてのドロップダウンボックスの例は、GitHub の [drop-down-content.html ](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/drop-down-content.html)にあります ([ライブでもご覧ください](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html))。
 
 ### 選択ボックス
 
@@ -148,9 +148,9 @@ translation_of: Learn/Forms/Other_form_controls
 
 {{EmbedLiveSample("Multiple_choice_select_box", 120, 120)}}
 
-> **Note:** **注**: 複数選択可能なセレクトボックスの場合、セレクトボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう - 代わりに、すべての値がリストに一度に表示され、オプションの [`size`](/ja/docs/Web/HTML/Attributes/size)属性はウィジェットの高さを決定します。
+> **Note:** 複数選択可能なセレクトボックスの場合、セレクトボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう - 代わりに、すべての値がリストに一度に表示され、オプションの [`size`](/ja/docs/Web/HTML/Attributes/size)属性はウィジェットの高さを決定します。
 
-> **Note:** **注:** {{HTMLElement("select")}}要素をサポートするすべてのブラウザーは、{{htmlattrxref("multiple", "select")}}属性もサポートしています。
+> **Note:** {{HTMLElement("select")}}要素をサポートするすべてのブラウザーは、{{htmlattrxref("multiple", "select")}}属性もサポートしています。
 
 ### オートコンプリートのボックス
 
@@ -226,7 +226,7 @@ In this case, different browsers behave differently from case to case, so consid
 
 There are a few other form features that are not as obvious as the ones we have already mentioned, but still useful in some situations, so we thought it would be worth giving them a brief mention.
 
-> **Note:** **注**: You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> **Note:** You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
 
 ### メーターとプログレスバー
 

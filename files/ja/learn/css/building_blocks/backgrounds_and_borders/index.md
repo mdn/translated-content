@@ -75,9 +75,9 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 また、次のキーワードを使うこともできます：
 
-- `cover` —ブラウザは、アスペクト比を維持したままボックスの領域を完全に覆うように画像の大きさを調整します。
+- `cover` —ブラウザーは、アスペクト比を維持したままボックスの領域を完全に覆うように画像の大きさを調整します。
   この場合、画像の一部が箱の外に出る可能性があります。
-- `contain` —ブラウザは、画像がボックス内にちょうど収まるように画像の大きさを調整します。
+- `contain` —ブラウザーは、画像がボックス内にちょうど収まるように画像の大きさを調整します。
   この場合、画像とボックスのアスペクト比が異なる場合、画像の左右または上下に隙間ができる可能性があります。
 
 次の例では、**\<length>**値を使用して先ほどの大きな画像がボックス内におさまる大きさに変更しました。結果として、画像が歪んでいることがわかります。
@@ -94,7 +94,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 {{cssxref("background-position")}} プロパティを適用すると、そのボックス上で背景画像を表示する位置を選択できます。このプロパティでは、ボックスの左上隅を`(0, 0)`として、水平方向の座標軸(**horisontal axis**)を`x`軸(**`x` axis**, 複数形は axes）、垂直方向の座標軸(**vertical axis**)を`y`軸(**`y` axis**)とする座標系にそって画像を配置します。
 
-> **Note:** **注**: デフォルトの`background-position`の値は`(0, 0)`です。
+> **Note:** デフォルトの`background-position`の値は`(0, 0)`です。
 
 最も一般的な`background-position`の値は、2 個の値をとります—水平方向、垂直方向の順で値を指定します。
 
@@ -142,7 +142,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
 
-> **Note:** **注**: `background-position` は {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の一括指定プロパティで、それぞれの座標軸の方向の位置を個別に設定できます。
+> **Note:** `background-position` は {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の一括指定プロパティで、それぞれの座標軸の方向の位置を個別に設定できます。
 
 ### グラデーション背景
 
@@ -160,7 +160,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 これを行うと、背景画像が互いに重なり合う可能性があります。背景は、最後に指定したものが一番下に置かれ、先のものが順に上に重ねられます。
 
-> **Note:** **注**: グラデーションを通常の背景画像と同じように重ね合わせることができます。
+> **Note:** グラデーションを通常の背景画像と同じように重ね合わせることができます。
 
 他の`background-*`プロパティも、`background-image`と同じ方法でコンマ区切りの値を持つことができます:
 
@@ -251,7 +251,7 @@ background-position: 10px 20px,  top right;
 }
 ```
 
-> **Note:** **注**: top, right, bottom, left の各方向の枠線を指定するプロパティには、HTML 文書の書字モード（writing mode）と結びついた*論理*プロパティ（_logical_ property）が割り当てられています（書字モードは、左から右、右から左、上から下といったテキストの方向を制御するものです）。次のレッスンでは、さまざまなテキストの方向の処理について説明します。
+> **Note:** top, right, bottom, left の各方向の枠線を指定するプロパティには、HTML 文書の書字モード（writing mode）と結びついた*論理*プロパティ（_logical_ property）が割り当てられています（書字モードは、左から右、右から左、上から下といったテキストの方向を制御するものです）。次のレッスンでは、さまざまなテキストの方向の処理について説明します。
 
 枠線にはさまざまなスタイルを指定できます。以下の例では、ボックスの 4 辺にそれぞれ異なる枠線スタイルを使用しています。枠線の色、幅、スタイルを試して、枠線の動作を確認しましょう。
 
@@ -291,7 +291,7 @@ background-position: 10px 20px,  top right;
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%',650)}}
 
-> **Note:** **注**: [ここで正解を確認できます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分の力で解答してみてください！
+> **Note:** [ここで正解を確認できます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分の力で解答してみてください！
 
 ## まとめ
 

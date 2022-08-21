@@ -1,5 +1,5 @@
 ---
-title: クロスブラウザテスト
+title: クロスブラウザーテスト
 slug: Learn/Tools_and_testing/Cross_browser_testing
 tags:
   - Accessibility

@@ -7,11 +7,11 @@ translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 このスキルテストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の理解度をテストすることです。
 
-> **Note:** **注意**: 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
+> **Note:** 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
 >
 > 行き詰まった場合は、助けを求めてください — このページの下部にある評価またはさらなる支援セクションを参照してください。
 
-> **Note:** **注意**: 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
+> **Note:** 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
 
 ## オブジェクトの基本 1
 
@@ -54,7 +54,7 @@ translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 ## オブジェクトの基本 3
 
-最後に、「オブジェクトの基本」のまとめとして、タスク＃1 の`cat`オブジェクトリテラルに戻りましょう。 「`Hello, said Bertie the Cymric.`」と記録されるように、`greeting（）`メソッドを書き直してください。 ブラウザの DevTools のコンソールにアクセスしますが、名前や品種に関係なく、同じ構造のすべての`cat`オブジェクトで機能します。
+最後に、「オブジェクトの基本」のまとめとして、タスク＃1 の`cat`オブジェクトリテラルに戻りましょう。 「`Hello, said Bertie the Cymric.`」と記録されるように、`greeting（）`メソッドを書き直してください。 ブラウザーの DevTools のコンソールにアクセスしますが、名前や品種に関係なく、同じ構造のすべての`cat`オブジェクトで機能します。
 
 完了したら、`cat2`という独自のオブジェクトを作成します。このオブジェクトは、同じ構造、まったく同じ`greeting（）`メソッドを持ちますが、名前、品種、色が異なります。
 

@@ -20,9 +20,9 @@ translation_of: Learn/HTML/Tables/Structuring_planet_data
 
 ## はじめに
 
-この評価を開始するには、ローカルコンピュータの新しいディレクトリに、[blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html)、[minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css)、および [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) のローカルコピーを作成します。
+この評価を開始するには、ローカルコンピュータの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html)、[minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css)、および [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) のローカルコピーを作成します。
 
-> **Note:** **メモ**: 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML、CSS、および JavaScript をこれらのオンラインエディタのいずれかに貼り付けることができます。使用しているオンラインエディタに個別の JavaScript/CSS パネルがない場合は、それらを HTML ページ内に `<script>`/`<style>` 要素をインラインで配置してください。
+> **Note:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML、CSS、および JavaScript をこれらのオンラインエディタのいずれかに貼り付けることができます。使用しているオンラインエディタに個別の JavaScript/CSS パネルがない場合は、それらを HTML ページ内に `<script>`/`<style>` 要素をインラインで配置してください。
 
 ## やることの概要
 
@@ -30,7 +30,7 @@ translation_of: Learn/HTML/Tables/Structuring_planet_data
 
 完成した表は次のような外観を備えているはずです:
 
-![](https://mdn.mozillademos.org/files/14609/assessment-table.png)
+![](assessment-table.png)
 
 また、[ここに掲載されている例を見る](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html)こともできます (ソースコードを見ないでください — チートしないでください)。
 

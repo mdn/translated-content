@@ -31,7 +31,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 もともと Web のページ読み込みは単純でした — Web サイトのデータをサーバにリクエストすると、何も問題がなければ、ページを構成するいろいろなものがダウンロードされてあなたのコンピュータに表示されていました。
 
-![A basic representation of a web site architecture](https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png)
+![A basic representation of a web site architecture](web-site-architechture@2x.png)
 
 このモデルの問題は、どこかページの一部を書き換えたい場合、例えば新しい商品の一群を表示したり新しいページを読み込ませたりをする毎に、ページ全体を読み直さなければならない事です。これはとても無駄が多くてユーザ体験が悪化します、とりわけページが大きくて複雑になってくるにつれて。
 
@@ -41,11 +41,11 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 これは {{domxref("XMLHttpRequest")}} や、最近では [Fetch API](/ja/docs/Web/API/Fetch_API) の利用によって実現されます。これらの技術は、Web ページがサーバにある特定のリソースを直接 [HTTP](/ja/docs/Web/HTTP) リクエストし、必要があれば結果のデータを表示する前に整形する事を可能にしました。
 
-> **Note:** **注記**: これらのテクニック一般はかつて Ajax (Asynchronous JavaScript and XML)と呼ばれていましたが、これは {{domxref("XMLHttpRequest")}} を使って XML データを要求するものが多かったためです。今日ではそういうものばかりではありませんが (`XMLHttpRequest` や Fetch を使って JSON を要求する場合の方が多いでしょう)、結果としては同じであり、"Ajax" という用語はしばしば今でもこのテクニックを説明するのに使われます。
+> **Note:** これらのテクニック一般はかつて Ajax (Asynchronous JavaScript and XML)と呼ばれていましたが、これは {{domxref("XMLHttpRequest")}} を使って XML データを要求するものが多かったためです。今日ではそういうものばかりではありませんが (`XMLHttpRequest` や Fetch を使って JSON を要求する場合の方が多いでしょう)、結果としては同じであり、"Ajax" という用語はしばしば今でもこのテクニックを説明するのに使われます。
 
-![A simple modern architecture for web sites](https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png)
+![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
-Ajax モデルには、ブラウザにページ全体をリロードされるのではなく、もっと賢くデータをリクエストするために Web API をプロキシとして使うという事も含まれます。これの重要性を考えてみて下さい:
+Ajax モデルには、ブラウザーにページ全体をリロードされるのではなく、もっと賢くデータをリクエストするために Web API をプロキシとして使うという事も含まれます。これの重要性を考えてみて下さい:
 
 1.  お気に入りの情報に富んだサイト、アマゾンとか YouTube とか CNN とかに行って読み込みます。
 2.  さて新しい商品だか何だかを検索します。メインのコンテンツは変わるでしょうが、周りに表示されている情報、ヘッダーやフッター、ナビゲーションメニューなど、大半はそのままでしょう。
@@ -57,7 +57,7 @@ Ajax モデルには、ブラウザにページ全体をリロードされるの
 
 さらなる高速化のために、サイトの中には必要なものやデータを最初にリクエストされた時にユーザのコンピュータに保存してしまい、以降の訪問では保存ずみのものを、サーバから最新版のダウンロードさせる事なく使用するものもあります。コンテンツはそれが更新された時だけサーバから再読み込みされます。
 
-![A basic web app data flow architecture](https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png)
+![A basic web app data flow architecture](web-app-architecture@2x.png)
 
 ## 基本的な Ajax リクエスト
 
@@ -67,9 +67,9 @@ Ajax モデルには、ブラウザにページ全体をリロードされるの
 
 ### XMLHttpRequest
 
-`XMLHttpRequest` (よく XHR と略記されます) は今となってはかなり古い技術です — Microsoft によって 1990 年代に発明され、非常に長い間ブラウザを超えて標準化されてきました。
+`XMLHttpRequest` (よく XHR と略記されます) は今となってはかなり古い技術です — Microsoft によって 1990 年代に発明され、非常に長い間ブラウザーを超えて標準化されてきました。
 
-1.  この例題を始めるにあたり、[ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) と 4 つのテキストファイル — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt)、[verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt)、[verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) と [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — のローカルコピーを、あなたのコンピュータの新しいディレクトリに作って下さい。この例題では、ドロップダウンメニューから選択されたら、詩 (ご存知の詩かも) のこれら異なる節を XHR を使って読み込みます。
+1.  この例題を始めるにあたり、[ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) と 4 つのテキストファイル — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt)、[verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt)、[verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) と [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — のローカルコピーを、あなたのコンピュータの新しいディレクトリーに作って下さい。この例題では、ドロップダウンメニューから選択されたら、詩 (ご存知の詩かも) のこれら異なる節を XHR を使って読み込みます。
 2.  {{htmlelement("script")}} 要素のすぐ内側に、下のコードを書き足して下さい。これは {{htmlelement("select")}} と {{htmlelement("pre")}} 要素への参照を定数に保存し、{{domxref("GlobalEventHandlers.onchange","onchange")}} イベントハンドラ関数を定義していて、これは select の値が変わったら、その値が呼び出される関数 `updateDisplay()` の引数となるようにします。
 
     ```js
@@ -90,7 +90,7 @@ Ajax モデルには、ブラウザにページ全体をリロードされるの
     }
     ```
 
-4.  関数を、後から必要になる読み込みたいテキストファイルを指す相対 URL を作るところからはじめます。{{htmlelement("select")}} 要素の値は常に、選択されている {{htmlelement("option")}} の内側テキスト、例えば"Verse 1"とか、に一致します (value 属性で異なる値を設定していなければ)。これに相当するテキストファイルは "verse1.txt" で HTML と同じディレクトリにあるので、ファイル名だけで十分です。
+4.  関数を、後から必要になる読み込みたいテキストファイルを指す相対 URL を作るところからはじめます。{{htmlelement("select")}} 要素の値は常に、選択されている {{htmlelement("option")}} の内側テキスト、例えば"Verse 1"とか、に一致します (value 属性で異なる値を設定していなければ)。これに相当するテキストファイルは "verse1.txt" で HTML と同じディレクトリーにあるので、ファイル名だけで十分です。
 
     ただ、Web サーバはたいてい大文字小文字を区別しますし、今回のファイル名にスペースは含まれていません。"Verse 1" を "verse1.txt" に変換するためには、V を小文字にして、スペースを取り除き、.txt を末尾に追加しなければなりません。これは{{jsxref("String.replace", "replace()")}} に {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる [文字列の結合](/ja/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings) で実現できます。以下のコードをあなたの `updateDisplay()` 関数の内側に追加して下さい:
 
@@ -143,17 +143,17 @@ Ajax モデルには、ブラウザにページ全体をリロードされるの
 
 ### サーバからあなたの例題を送らせる
 
-今時のブラウザ (Chrome も含まれます) は、ローカルファイルとして例題を実行しても XHR リクエストを行ないません。これはセキュリティの制限によるものです (Web のセキュリティにより詳しくは [Web サイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を読んで下さい)。
+今時のブラウザー (Chrome も含まれます) は、ローカルファイルとして例題を実行しても XHR リクエストを行ないません。これはセキュリティの制限によるものです (Web のセキュリティにより詳しくは [Web サイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を読んで下さい)。
 
 これをどうにかするため、例題をローカルの Web サーバを使って実行しなければなりません。どうやるのかは、 [テスト用のローカルサーバを設定するにはどうすればいい?](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server) を読んで下さい。
 
 ### Fetch
 
-Fetch API は、基本的には XHR の今風の代替品です — 最近になってブラウザに組込まれたもので、非同期 HTTP リクエストを JavaScript で、開発者や他の Fetch の上に組まれた API から簡単に行なえるようにするためのものです。
+Fetch API は、基本的には XHR の今風の代替品です — 最近になってブラウザーに組込まれたもので、非同期 HTTP リクエストを JavaScript で、開発者や他の Fetch の上に組まれた API から簡単に行なえるようにするためのものです。
 
 先の例を Fetch を使うように書き換えてみましょう!
 
-1.  さっき完成させた例題のディレクトリのコピーを作ります(前の例題を完成させていないなら、新しいディレクトリを作成して、そこに [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) と 4 つのテキストファイル — ([verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt)、[verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt)、[verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) と [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt)) のコピーを作って下さい。
+1.  さっき完成させた例題のディレクトリーのコピーを作ります(前の例題を完成させていないなら、新しいディレクトリーを作成して、そこに [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) と 4 つのテキストファイル — ([verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt)、[verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt)、[verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) と [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt)) のコピーを作って下さい。
 2.  `updateDisplay()` 関数の中から、XHR のコードを探し出します:
 
     ```js
@@ -178,7 +178,7 @@ Fetch API は、基本的には XHR の今風の代替品です — 最近にな
     });
     ```
 
-4.  例題をブラウザに読み込むと(Web サーバから読んで下さい)、XHR 版と同様に動作するするはずです。今時のブラウザを使っていれば。
+4.  例題をブラウザーに読み込むと(Web サーバから読んで下さい)、XHR 版と同様に動作するするはずです。今時のブラウザーを使っていれば。
 
 #### Fetch のコードでは何が起きている?
 
@@ -260,17 +260,17 @@ fetch(url).then(function(response) {
 
 ### どっちの機構を使うべき?
 
-これは本当に、あなたがどんなプロジェクトを進めているかによります。XHR は長いこと存在しているので、様々なブラウザで非常によくサポートされています。一方 Fetch とプロミスは Web プラットフォームに最近追加されたものなので、ブラウザ界では結構サポートされているんですが、IE はサポートしていません。
+これは本当に、あなたがどんなプロジェクトを進めているかによります。XHR は長いこと存在しているので、様々なブラウザーで非常によくサポートされています。一方 Fetch とプロミスは Web プラットフォームに最近追加されたものなので、ブラウザー界では結構サポートされているんですが、IE はサポートしていません。
 
-古いブラウザをサポートする必要があるのならば、XHR の方が良いでしょう。ですがあなたがもっと先進的なプロジェクトで働いて、古いブラウザの事でさして悩まないなら、Fetch が良い選択になるでしょう。
+古いブラウザーをサポートする必要があるのならば、XHR の方が良いでしょう。ですがあなたがもっと先進的なプロジェクトで働いて、古いブラウザーの事でさして悩まないなら、Fetch が良い選択になるでしょう。
 
-本当はどっちも学ぶべきです — Fetch は IE が消えていくにつれ(IE は、Microsoft の新しい Edge ブラウザのおかげで開発が終了しています)どんどん一般的になっていくでしょうが、もうしばらくは XHR が必要でしょう。
+本当はどっちも学ぶべきです — Fetch は IE が消えていくにつれ(IE は、Microsoft の新しい Edge ブラウザーのおかげで開発が終了しています)どんどん一般的になっていくでしょうが、もうしばらくは XHR が必要でしょう。
 
 ## もっとややこしい例題
 
 この記事のまとめとして、Fetch のより興味深い使い方を示す、ちょっとばかり難しい例題を見ていきましょう。例題用に缶詰屋というサイトを作成しました — これは缶詰だけを売る仮想のお店です。これの [GitHub でのライブ実行](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/) と [ソースコード](https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store) が見られます。
 
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](https://mdn.mozillademos.org/files/14779/can-store.png)
+![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](can-store.png)
 
 デフォルトではサイトには全ての商品が表示されますが、左側のカラムにあるフォームコントロールからカテゴリから、検索語から、あるいはその両方によってフィルタリングをかけられます。
 
@@ -306,7 +306,7 @@ fetch('products.json').then(function(response) {
 1.  例題のファイルのローカルコピーを作成して下さい([缶詰屋の ZIP ファイル](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true)をダウンロードして展開して下さい)。
 2.  コードを Web サーバから読んで走らせるようにします(方法は前に [Serving your example from a server](#serving_your_example_from_a_server)で解説しました)。
 3.  fetch するファイルのパスを、'produc.json' のようなものに変更します(誤ったファイル名にして下さい)。
-4.  ここでインデックスファイルをブラウザに読み込んで( `localhost:8000` から)、あなたのブラウザの開発者コンソールを見ます。次の行のようなメッセージが表示されるはずです「Network request for produc.json failed with response 404: File not found」。
+4.  ここでインデックスファイルをブラウザーに読み込んで( `localhost:8000` から)、あなたのブラウザーの開発者コンソールを見ます。次の行のようなメッセージが表示されるはずです「Network request for produc.json failed with response 404: File not found」。
 
 二つ目の Fetch ブロックは `fetchBlob()` 関数の中にあります:
 
@@ -324,7 +324,7 @@ fetch(url).then(function(response) {
 
 これも前のとおおよそ同じように動作しますが、{{domxref("Body.json","json()")}} ではなくて {{domxref("Body.blob","blob()")}} を使っているところが違います — 今回の場合は画像ファイルを返したいので、これ用に使うデータ形式は [Blob](/ja/docs/Web/API/Blob) — これは "**B**inary **L**arge **Ob**ject" の略で、たいていは巨大なファイルのようなオブジェクト、画像や動画のようなものを示すのに使われます。
 
-blob を成功裏に受信したら、{{domxref("URL.createObjectURL()", "createObjectURL()")}}を使ってそこからオブジェクト URL を取り出します。これはそのブラウザの中でのみ有効なオブジェクトを示す一時的な URL を返します。あまり読み易いものではありませんが、缶詰屋アプリを開いて画像を Ctrl クリックもしくは右クリックして、メニューから「画像を表示」を選択する(これはあなたが使っているブラウザによって異なる場合があります)と見ることができます。オブジェクト URL はブラウザのアドレスバーに表示され、こんな感じになるでしょう:
+blob を成功裏に受信したら、{{domxref("URL.createObjectURL()", "createObjectURL()")}}を使ってそこからオブジェクト URL を取り出します。これはそのブラウザーの中でのみ有効なオブジェクトを示す一時的な URL を返します。あまり読み易いものではありませんが、缶詰屋アプリを開いて画像を Ctrl クリックもしくは右クリックして、メニューから「画像を表示」を選択する(これはあなたが使っているブラウザーによって異なる場合があります)と見ることができます。オブジェクト URL はブラウザーのアドレスバーに表示され、こんな感じになるでしょう:
 
 ```
 blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
@@ -344,7 +344,7 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
   - XHR において、Fetch の `response.ok` に相当する一番良いやり方は、{{domxref("XMLHttpRequest.status","request.status")}} が 200 であるか、{{domxref("XMLHttpRequest.readyState","request.readyState")}} が 4 である事をチェックする事です。
   - ステータスとステータスメッセージを取得するためのプロパティは一緒ですが、これは `response` オブジェクトの中ではなく `request`(XHR)オブジェクトの中にあります。
 
-> **Note:** **注記**: 上手くいかないときは、我々の GitHub にある完成版のコード ([ソースコードはこちらから](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js)、[ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)もどうぞ) と比べてみて下さい。
+> **Note:** 上手くいかないときは、我々の GitHub にある完成版のコード ([ソースコードはこちらから](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js)、[ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)もどうぞ) と比べてみて下さい。
 
 ## まとめ
 

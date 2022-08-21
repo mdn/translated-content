@@ -32,15 +32,15 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 単に画像を Web ページに配置するには、{{htmlelement("img")}} 要素を使用します。これは有用であるために少なくとも 1 つの属性 — `src` (フルタイトルやソースと呼ばれることもあります) を必要とする {{glossary("empty element","空要素")}} (テキストコンテンツまたは終了タグがないことを意味する) です。`src` 属性には、{{htmlelement("a")}} 要素の `href` 属性値と同じように、ページに埋め込む画像を指すパスが含まれ、相対 URL または絶対 URL にすることができます。
 
-> **Note:** **メモ**: 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)を読んで、相対 URL と絶対 URL のメモリを更新してください。
+> **Note:** 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)を読んで、相対 URL と絶対 URL のメモリを更新してください。
 
-例えば、画像が `dinosaur.jpg` というファイル名で、HTML ページと同じディレクトリにある場合、画像を次のように埋め込むことができます。
+例えば、画像が `dinosaur.jpg` というファイル名で、HTML ページと同じディレクトリーにある場合、画像を次のように埋め込むことができます。
 
 ```html
 <img src="dinosaur.jpg">
 ```
 
-画像が HTML ページ (Google が {{glossary("SEO")}}/索引付けの目的で推奨するディレクトリ) 内の `images` サブディレクトリにあった場合は、次のように埋め込みます。
+画像が HTML ページ (Google が {{glossary("SEO")}}/索引付けの目的で推奨するディレクトリー) 内の `images` サブディレクトリーにあった場合は、次のように埋め込みます。
 
 ```html
 <img src="images/dinosaur.jpg">
@@ -48,7 +48,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 等々。
 
-> **Note:** **メモ**: 検索エンジンは画像ファイル名も読み込み、SEO に向けて数えます。したがって、画像にわかりやすいファイル名を付けてください。`dinosaur.jpg` は `img835.png` よりも優れています。
+> **Note:** 検索エンジンは画像ファイル名も読み込み、SEO に向けて数えます。したがって、画像にわかりやすいファイル名を付けてください。`dinosaur.jpg` は `img835.png` よりも優れています。
 
 たとえば、絶対 URL を使用して画像を埋め込むことができます。
 
@@ -56,7 +56,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <img src="https://www.example.com/images/dinosaur.jpg">
 ```
 
-しかし、これは無意味だけでなく、ブラウザが DNS サーバから IP アドレスを再度検索するなどより多くの作業をすることになります。ほとんどの場合、Web サイトの画像を HTML と同じサーバに保存します。
+しかし、これは無意味だけでなく、ブラウザーが DNS サーバから IP アドレスを再度検索するなどより多くの作業をすることになります。ほとんどの場合、Web サイトの画像を HTML と同じサーバに保存します。
 
 > **Warning:** **警告**: ほとんどの画像は著作権で保護されています。次の場合を除き、Web ページに画像を表示**しない**でください。
 >
@@ -68,11 +68,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 上のコードでは、次の結果が得られます。
 
-![恐竜の基本的な画像が、ブラウザに埋め込まれ、その上に "Images in HTML" が書かれています](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/basic-image.png)
+![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" が書かれています](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/basic-image.png)
 
-> **Note:** **メモ**: {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置き換えられた要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース(画像ファイルや動画ファイルなど)によって定義されているためです。
+> **Note:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置き換えられた要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース(画像ファイルや動画ファイルなど)によって定義されているためです。
 
-> **Note:** **メモ**: 完成したサンプルは、このセクションの [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)から見つけることができます ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)も参照してください)。
+> **Note:** 完成したサンプルは、このセクションの [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)から見つけることができます ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)も参照してください)。
 
 ### 代替テキスト
 
@@ -84,7 +84,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
           それは長い鋭い歯を持つ大きな頭を持っています">
 ```
 
-`alt` テキストをテストする最も簡単な方法は、意図的にファイル名のスペルミスをすることです。たとえば、画像名のスペルが `dinosooooor.jpg` の場合、ブラウザは画像を表示せず、代わりに代替テキストを表示します。
+`alt` テキストをテストする最も簡単な方法は、意図的にファイル名のスペルミスをすることです。たとえば、画像名のスペルが `dinosooooor.jpg` の場合、ブラウザーは画像を表示せず、代わりに代替テキストを表示します。
 
 ![Images in HTMLというタイトルですが、今回は恐竜の画像が表示されず、代替テキストが代わりに表示されます。](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/alt-text.png)
 
@@ -92,7 +92,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 - ユーザは視覚障害があり、[スクリーンリーダー](https://ja.wikipedia.org/wiki/スクリーンリーダー)を使用して Web を読むことができます。実際、画像を記述するための代替テキストを用意することは、ほとんどのユーザにとって有益です。
 - 上記のように、ファイル名またはパス名のスペルが間違っている可能性があります。
-- ブラウザは画像タイプをサポートしていません。[Lynx](<https://ja.wikipedia.org/wiki/Lynx_(%E3%82%A6%E3%82%A7%E3%83%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6)>) などのテキストのみのブラウザを使用している人もいますが、代わりに画像の代替テキストを表示します。
+- ブラウザーは画像タイプをサポートしていません。[Lynx](<https://ja.wikipedia.org/wiki/Lynx_(%E3%82%A6%E3%82%A7%E3%83%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6)>) などのテキストのみのブラウザーを使用している人もいますが、代わりに画像の代替テキストを表示します。
 - 検索エンジンにテキストを提供して活用することができます。たとえば、検索エンジンは代替テキストと検索照会を一致させることができます。
 - ユーザは画像をオフにして、データ転送量や目移りを減らしました。これは特に、携帯電話や帯域幅が限られて高価な国では一般的です。
 
@@ -103,9 +103,9 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 - **リンク**。{{htmlelement("a")}} タグ内に画像を置くと、画像をリンクに変えるためには、依然として[アクセス可能なリンクテキスト](/ja/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Use_clear_link_wording)を提供する必要があります。そのような場合は、同じ `<a>` 要素内に、または画像の `alt` 属性内に書き込むことができます。
 - **テキスト**。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、[CSS を使用](/ja/docs/Web/CSS/text-shadow)します。しかし、これが避けられない場合は、`alt` 属性にテキストを与える必要があります。
 
-基本的には、画像が見えないときでも、実用的な体験を提供することが鍵です。これにより、すべてのユーザにコンテンツが欠落していないことが保証されます。ブラウザの画像をオフにして、どのように見えるかを確認してください。画像が見えない場合に、すぐに役立つ代替テキストがどれほどあるかをすぐに理解できます。
+基本的には、画像が見えないときでも、実用的な体験を提供することが鍵です。これにより、すべてのユーザにコンテンツが欠落していないことが保証されます。ブラウザーの画像をオフにして、どのように見えるかを確認してください。画像が見えない場合に、すぐに役立つ代替テキストがどれほどあるかをすぐに理解できます。
 
-> **Note:** **メモ**: 詳細については、[代替テキストのガイド](/ja/docs/Learn/Accessibility/HTML#Text_alternatives)を参照してください。
+> **Note:** 詳細については、[代替テキストのガイド](/ja/docs/Learn/Accessibility/HTML#Text_alternatives)を参照してください。
 
 ### 幅と高さ
 
@@ -119,7 +119,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
      height="341">
 ```
 
-これは、通常の状況下では表示が大きく異なるものではありません。しかし、画像が表示されていない場合、たとえば、ユーザがページに移動して画像がまだ読み込まれていない場合、ブラウザには画像が表示されるスペースが残ります。
+これは、通常の状況下では表示が大きく異なるものではありません。しかし、画像が表示されていない場合、たとえば、ユーザがページに移動して画像がまだ読み込まれていない場合、ブラウザーには画像が表示されるスペースが残ります。
 
 ![恐竜の代替テキストを含む Images in HTML タイトルは、幅と高さの設定の結果として大きなボックスの内側に表示されます](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/alt-text-with-width-height.png)
 
@@ -127,7 +127,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ただし、HTML 属性を使用して画像のサイズを変更しないでください。画像のサイズを大きくしすぎると、ざらついて、ぼやけた画像になり、小さくしすぎると、帯域幅を無駄にしてユーザのニーズに合わない画像をダウンロードすることになります。正しい[アスペクト比](https://ja.wikipedia.org/wiki/アスペクト比)を維持しないと、画像が歪んで見えることもあります。画像エディタを使用して画像を正しいサイズにしてから、Web ページに配置する必要があります。
 
-> **Note:** **メモ**: 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn/CSS) を使用する必要があります。
+> **Note:** 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn/CSS) を使用する必要があります。
 
 ### 画像のタイトル
 
@@ -321,9 +321,9 @@ textarea.onkeyup = function(){
 </figure>
 ```
 
-{{htmlelement("figcaption")}} 要素は、キャプションが {{htmlelement("figure")}} 要素の他のコンテンツを説明していることをブラウザと支援技術に伝えます。
+{{htmlelement("figcaption")}} 要素は、キャプションが {{htmlelement("figure")}} 要素の他のコンテンツを説明していることをブラウザーと支援技術に伝えます。
 
-> **Note:** **メモ**: アクセシビリティの観点から、キャプションと {{htmlattrxref('alt','img')}} テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、代替テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと代替テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザで画像をオフにして見た目を確認してみてください。
+> **Note:** アクセシビリティの観点から、キャプションと {{htmlattrxref('alt','img')}} テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、代替テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと代替テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
 
 図表は画像である必要はありません。それは次のようにコンテンツの独立した単位です。
 
@@ -478,7 +478,7 @@ p {
 
 **要約**: 画像に意味がある場合は、コンテンツに関して、HTML 画像を使用する必要があります。画像が純粋に装飾である場合は、CSS 背景画像を使用する必要があります。
 
-> **Note:** **メモ**: [CSS 背景画像](/ja/docs/Learn/CSS/Styling_boxes/Backgrounds)については、[CSS](/ja/docs/Learn/CSS) のトピックで詳しく説明します。
+> **Note:** [CSS 背景画像](/ja/docs/Learn/CSS/Styling_boxes/Backgrounds)については、[CSS](/ja/docs/Learn/CSS) のトピックで詳しく説明します。
 
 それは今のところすべてです。画像とキャプションを詳細にカバーしています。次の記事では、HTML を使用して Web ページに動画と音声を埋め込む方法を見ていきます。
 

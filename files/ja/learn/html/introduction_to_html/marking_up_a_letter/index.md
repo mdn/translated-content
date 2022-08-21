@@ -60,7 +60,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 次のスクリーンショットは、マークアップ後の文字の表示例を示しています。
 
-![Example](https://mdn.mozillademos.org/files/15811/Letter%20screengrab%202.png)
+![Example](Letter%20screengrab%202.png)
 
 ## 評価
 

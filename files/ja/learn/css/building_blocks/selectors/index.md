@@ -24,7 +24,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 
 実はもうこれまでにセレクターを見たことがあるはずです。CSS セレクターは、CSS のもっとも基本的なルールとなるものです。要素やその他を選択して CSS プロパティ値を適用する HTML 要素をブラウザーに伝えるものです。セレクターによって選択される要素は、選択対象 _(subject of the selector_) と呼ばれます。
 
-![Some code with the h1 highlighted.](https://mdn.mozillademos.org/files/16550/selector.png)
+![Some code with the h1 highlighted.](selector.png)
 
 これまでの記事で `h1` 要素や `.special` クラスなどのいくつかのセレクターを見てきました。それらはドキュメント内の対象をさまざまな方法で指定できるということも学びました。
 

@@ -38,7 +38,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 「典型的なウェブサイト」は下記のようなレイアウトになります:
 
-![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](https://mdn.mozillademos.org/files/12417/sample-website.png)
+![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
 ## コンテンツを構造化する HTML
 
@@ -46,7 +46,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 なぜならビジュアルがすべてを伝えるわけではないからです。私たちはナビゲーションメニューや関連リンクなど、コンテンツの最も有用な部分に目の見えるユーザーの注意を引くために、色とフォントサイズを使用します。しかし、例えば「ピンク」や「大きいフォント」のような概念があまり有用ではないと思われる視覚障害者についてはどうでしょうか。
 
-> **Note:** **注**: 色覚障害者は[世界の人口の約 4 ％](http://www.color-blindness.com/2006/04/28/colorblind-population/)を占めています。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人が色覚異常です。視覚障害のある人々は世界の人口の約 4〜5 ％を占めています (2012 年には[全世界で 2 億 8,500 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 70 億人](https://en.wikipedia.org/wiki/World_population#/media/File:World_population_history.svg)でした)。
+> **Note:** 色覚障害者は[世界の人口の約 4 ％](http://www.color-blindness.com/2006/04/28/colorblind-population/)を占めています。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人が色覚異常です。視覚障害のある人々は世界の人口の約 4〜5 ％を占めています (2012 年には[全世界で 2 億 8,500 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 70 億人](https://en.wikipedia.org/wiki/World_population#/media/File:World_population_history.svg)でした)。
 
 HTML コードでは、それらの*機能*に基づいてコンテンツのセクションをマークアップすることができます — スクリーンリーダーのような支援技術はそれらの要素を認識し、「メインナビゲーションを見つける」や「メインコンテンツを見つける」といった作業を手助けすることができます。
 コースの前半で述べたように、[適切な役割に適切な要素構造とセマンティクスを使用しないことによる影響](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure)は多くあります。
@@ -239,18 +239,18 @@ and his markup didn't read very well.
 
 簡単なウェブページのコンテンツの構造を計画したら、次の論理的なステップは、ウェブサイト全体に掲載したいコンテンツ、必要なページ、および可能な限り最高のユーザーエクスペリエンスを実現するために、それらをどのように配置して互いにリンクさせるかを解決することです。これは {{glossary("Information architecture")}} と呼ばれます。大規模で複雑なウェブサイトでは、このプロセスに多くの計画を立てることがありますが、数ページの単純なウェブサイトでは、かなり単純で楽しいものになります。
 
-1.  ナビゲーションメニューやフッターコンテンツなど、(全部ではないにしても) ほとんどのページに共通の要素がいくつかあることに注意してください。たとえば、サイトがビジネスのためのものである場合、連絡先情報を各ページのフッターで利用可能にすることは良い考えです。すべてのページに共通にしたいものを書き留めます。![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](https://mdn.mozillademos.org/files/12423/common-features.png)
-2.  次に、各ページの構造をどのようにしたらよいかを大まかにスケッチします (上の単純なウェブサイトのようになります)。各ブロックがどうなるかに注意してください。![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](https://mdn.mozillademos.org/files/12429/site-structure.png)
-3.  さて、自身のウェブサイトに載せたい他のすべての (全ページに共通ではない) コンテンツをブレインストーミングしましょう — 大きなリストに書き留めます。![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](https://mdn.mozillademos.org/files/12425/feature-list.png)
-4.  次に、これらすべてのコンテンツ項目をグループに分類して、どの部分が異なるページに共存しているかを把握します。これは {{glossary("Card sorting")}} と呼ばれるテクニックと非常によく似ています。![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](https://mdn.mozillademos.org/files/12421/card-sorting.png)
+1.  ナビゲーションメニューやフッターコンテンツなど、(全部ではないにしても) ほとんどのページに共通の要素がいくつかあることに注意してください。たとえば、サイトがビジネスのためのものである場合、連絡先情報を各ページのフッターで利用可能にすることは良い考えです。すべてのページに共通にしたいものを書き留めます。![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+2.  次に、各ページの構造をどのようにしたらよいかを大まかにスケッチします (上の単純なウェブサイトのようになります)。各ブロックがどうなるかに注意してください。![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+3.  さて、自身のウェブサイトに載せたい他のすべての (全ページに共通ではない) コンテンツをブレインストーミングしましょう — 大きなリストに書き留めます。![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
+4.  次に、これらすべてのコンテンツ項目をグループに分類して、どの部分が異なるページに共存しているかを把握します。これは {{glossary("Card sorting")}} と呼ばれるテクニックと非常によく似ています。![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
 5.  それでは、大まかなサイトマップをスケッチしてみましょう。サイト上の各ページにバブルを付け、ページ間の典型的なワークフローを示すために線を引きます。
-    ホームページはおそらく中心にあり、すべてではないにしてもほとんどのページにリンクするでしょう。例外はありますが、小規模サイトのほとんどのページはメインナビゲーションから利用できるはずです。物事がどのように提示されるかもしれないかについてのメモも含めることをお勧めします。![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](https://mdn.mozillademos.org/files/12427/site-map.png)
+    ホームページはおそらく中心にあり、すべてではないにしてもほとんどのページにリンクするでしょう。例外はありますが、小規模サイトのほとんどのページはメインナビゲーションから利用できるはずです。物事がどのように提示されるかもしれないかについてのメモも含めることをお勧めします。![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
 
 ### アクティブラーニング: 自身のサイトマップを作成する
 
 自身が作成したウェブサイトのために上記の演習を実行してみてください。何についてサイトを作りたいですか？
 
-> **Note:** **注**: 作業をどこかに保存してください。後で必要になるかもしれません。
+> **Note:** 作業をどこかに保存してください。後で必要になるかもしれません。
 
 ## まとめ
 

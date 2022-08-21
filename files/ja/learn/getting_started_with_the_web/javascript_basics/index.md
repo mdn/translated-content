@@ -55,7 +55,7 @@ JavaScript は、最も人気のある現代のウェブ技術のひとつです
 
 5.  最後に、 HTML と JavaScript を書いたファイルを保存したことを確認し、ブラウザーで `index.html` を読み込んでください。![](hello-world.png)
 
-> **Note:** **注**: 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
+> **Note:** 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
 >
 > JavaScript が先に読み込まれ、まだ読み込まれていない HTML に影響を与えることになると、問題が生じる可能性があります。 JavaScript を HTML ページの下部に配置することは、この依存関係に対応する一つの方法です。その他の方法については、[スクリプトの読み込み戦略](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies)をご覧ください。
 
@@ -65,7 +65,7 @@ JavaScript を使用して、見出しの文字列が _Hello world!_ に変更�
 
 その後、`myHeading` 変数の `{{domxref("Node.textContent", "textContent")}}` プロパティ (見出しの内容を表す) の値を _Hello world!_ に設定します。
 
-> **Note:** **注** : 上の例で使用した機能はどちらも[ドキュメントオブジェクトモデル (DOM) API](/ja/docs/Web/API/Document_Object_Model) の一部であり、これを使って文書を操作することができます。
+> **Note:** 上の例で使用した機能はどちらも[ドキュメントオブジェクトモデル (DOM) API](/ja/docs/Web/API/Document_Object_Model) の一部であり、これを使って文書を操作することができます。
 
 ## 言語の短期集中コース
 
@@ -81,13 +81,13 @@ JavaScript を使用して、見出しの文字列が _Hello world!_ に変更�
 let myVariable;
 ```
 
-> **Note:** **注**: 行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) を参照してください。
+> **Note:** 行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) を参照してください。
 
-> **Note:** **注** : 変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variables)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
+> **Note:** 変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variables)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
 
-> **Note:** **注**: JavaScript は大文字と小文字を区別します。`myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
+> **Note:** JavaScript は大文字と小文字を区別します。`myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
 
-> **Note:** **注**: `var` と `let` のより詳しい違いは、[var と let の違い](/ja/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)を見てください。
+> **Note:** `var` と `let` のより詳しい違いは、[var と let の違い](/ja/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)を見てください。
 
 変数を宣言したら、以下のように値を割り当てることができます。
 
@@ -156,7 +156,7 @@ myVariable = 'Steve';
 
 他にも演算子はもっとたくさんありますが、今のところはこれで十分です。全体の一覧については、[式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)を参照してください。
 
-> **Note:** **注**: データ型を混在させると、計算を実行するときに奇妙な結果になる可能性があるため、変数を正しく参照し、期待通りの結果を得るように注意してください。例えばコンソールに `'35' + '25'` と入力してみてください。期待通りの結果にならないのはなぜでしょうか。引用符は数字を文字列に変換するので、数字を加算するのではなく、文字列を連結する結果になったのです。 `35 + 25` を入力すれば、正しい結果が得られます。
+> **Note:** データ型を混在させると、計算を実行するときに奇妙な結果になる可能性があるため、変数を正しく参照し、期待通りの結果を得るように注意してください。例えばコンソールに `'35' + '25'` と入力してみてください。期待通りの結果にならないのはなぜでしょうか。引用符は数字を文字列に変換するので、数字を加算するのではなく、文字列を連結する結果になったのです。 `35 + 25` を入力すれば、正しい結果が得られます。
 
 ### 条件文
 
@@ -207,7 +207,7 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **Note:** **注** : [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)をお読みください)。
+> **Note:** [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)をお読みください)。
 
 ### イベント
 

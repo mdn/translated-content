@@ -175,7 +175,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            WebKit ブラウザは (主に Mac OSX や iOS
+            WebKit ブラウザーは (主に Mac OSX や iOS
             で)、検索フィールドでネイティブのルックアンドフィールを使用します。従って、検索フィールドにこのプロパティを適用できるようにするために、<code
               >-webkit-appearance:none</code
             >
@@ -237,7 +237,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            WebKit ブラウザは (主に Mac OSX や iOS
+            WebKit ブラウザーは (主に Mac OSX や iOS
             で)、検索フィールドでネイティブのルックアンドフィールを使用します。従って、検索フィールドにこのプロパティを適用できるようにするために、<code
               >-webkit-appearance:none</code
             >
@@ -281,7 +281,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             {{cssxref("border-color")}}
-            プロパティが設定されていない場合、一部の WebKit ベースブラウザは
+            プロパティが設定されていない場合、一部の WebKit ベースブラウザーは
             <code>{{htmlelement("textarea")}}</code>
             において、フォントだけでなく境界にも {{cssxref("color")}}
             プロパティを適用します。
@@ -519,7 +519,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            WebKit ブラウザは (主に Mac OSX や iOS
+            WebKit ブラウザーは (主に Mac OSX や iOS
             で)、検索フィールドでネイティブのルックアンドフィールを使用します。従って、検索フィールドにこのプロパティを適用できるようにするために、<code
               >-webkit-appearance:none</code
             >
@@ -556,7 +556,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            WebKit ブラウザは (主に Mac OSX や iOS
+            WebKit ブラウザーは (主に Mac OSX や iOS
             で)、検索フィールドでネイティブのルックアンドフィールを使用します。従って、検索フィールドにこのプロパティを適用できるようにするために、<code
               >-webkit-appearance:none</code
             >
@@ -670,7 +670,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             Mac OSX や iOS では、WebKit
-            ベースブラウザでこのプロパティが適用されません。
+            ベースブラウザーでこのプロパティが適用されません。
           </li>
         </ol>
       </td>
@@ -749,7 +749,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             Mac OSX や iOS では、WebKit
-            ベースブラウザでこのプロパティが適用されません。
+            ベースブラウザーでこのプロパティが適用されません。
           </li>
         </ol>
       </td>
@@ -1451,7 +1451,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       </td>
       <td colspan="1" rowspan="3">
         <p>
-          対応していますが、ブラウザ間で頼りにできるほどの一貫性はありません。
+          対応していますが、ブラウザー間で頼りにできるほどの一貫性はありません。
         </p>
       </td>
     </tr>
@@ -1546,7 +1546,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            一部のブラウザでは、マージンを追加したりウィジェットを引き伸ばしたりします。
+            一部のブラウザーでは、マージンを追加したりウィジェットを引き伸ばしたりします。
           </li>
         </ol>
       </td>
@@ -1576,7 +1576,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            一部のブラウザでは、マージンを追加したりウィジェットを引き伸ばしたりします。
+            一部のブラウザーでは、マージンを追加したりウィジェットを引き伸ばしたりします。
           </li>
         </ol>
       </td>
@@ -1960,7 +1960,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             プロパティは適用されますが、Mac OSX
-            ではブラウザ間の一貫性がありません。
+            ではブラウザー間の一貫性がありません。
           </li>
           <li>
             このプロパティは
@@ -2004,7 +2004,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             Mac OSX では、WebKit
-            ベースのブラウザがネイティブウィジェットでこのプロパティに対応せず、また
+            ベースのブラウザーがネイティブウィジェットでこのプロパティに対応せず、また
             <code>{{htmlelement("option")}}</code> 要素や
             <code>{{htmlelement("optgroup")}}</code> 要素では Opera
             を含めてまったく対応していません。
@@ -2038,7 +2038,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             Mac OSX では、WebKit
-            ベースのブラウザがネイティブウィジェットでこのプロパティに対応せず、また
+            ベースのブラウザーがネイティブウィジェットでこのプロパティに対応せず、また
             <code>{{htmlelement("option")}}</code> 要素や
             <code>{{htmlelement("optgroup")}}</code> 要素では Opera
             を含めてまったく対応していません。
@@ -2075,7 +2075,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
             <code>{{htmlelement("option")}}</code> および
             <code>{{htmlelement("optgroup")}}</code>
             要素でこのプロパティに対応していません。Mac OSX で WebKit
-            ベースのブラウザは、
+            ベースのブラウザーは、
             <code>{{htmlelement("option")}}</code> 要素や
             <code>{{htmlelement("optgroup")}}</code>
             要素でこのプロパティに対応していません。
@@ -2109,7 +2109,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             Windows 7 で IE9 および Mac OSX で WebKit
-            ベースのブラウザは、このウィジェットで本プロパティに対応していません。
+            ベースのブラウザーは、このウィジェットで本プロパティに対応していません。
           </li>
         </ol>
       </td>
@@ -2140,7 +2140,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             Firefox のみがこのプロパティを完全対応しています。 Opera
-            はこのプロパティに全く対応しておらず、また他のブラウザは
+            はこのプロパティに全く対応しておらず、また他のブラウザーは
             <code>{{htmlelement("select")}}</code>
             要素のみに対応しています。
           </li>
@@ -2172,7 +2172,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            ほとんどのブラウザは、<code>{{htmlelement("select")}}</code>
+            ほとんどのブラウザーは、<code>{{htmlelement("select")}}</code>
             要素のみでこのプロパティに対応しています。
           </li>
           <li>IE9 はこのプロパティに対応していません。</li>
@@ -2228,7 +2228,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            ほとんどのブラウザは、<code>{{htmlelement("select")}}</code>
+            ほとんどのブラウザーは、<code>{{htmlelement("select")}}</code>
             要素のみでこのプロパティに対応しています。
           </li>
           <li>IE9 はこのプロパティに対応していません。</li>
@@ -2260,7 +2260,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            ほとんどのブラウザは、<code>{{htmlelement("select")}}</code>要素のみでこのプロパティに対応しています。
+            ほとんどのブラウザーは、<code>{{htmlelement("select")}}</code>要素のみでこのプロパティに対応しています。
           </li>
         </ol>
       </td>
@@ -2295,7 +2295,7 @@ translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
       <td colspan="1" rowspan="3">
         <ol>
           <li>
-            ほとんどのブラウザは、<code>{{htmlelement("select")}}</code>要素のみでこのプロパティに対応しています。
+            ほとんどのブラウザーは、<code>{{htmlelement("select")}}</code>要素のみでこのプロパティに対応しています。
           </li>
         </ol>
       </td>
@@ -2577,7 +2577,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
             <code>{{htmlelement("option")}}</code> および
             <code>{{htmlelement("optgroup")}}</code>
             要素でこのプロパティに対応していません。Mac OSX で WebKit
-            ベースのブラウザは、
+            ベースのブラウザーは、
             <code>{{htmlelement("option")}}</code> 要素や
             <code>{{htmlelement("optgroup")}}</code>
             要素でこのプロパティに対応していません。
@@ -2611,7 +2611,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
         <ol>
           <li>
             Windows 7 で IE9 および Mac OSX で WebKit
-            ベースのブラウザは、このウィジェットで本プロパティに対応していません。
+            ベースのブラウザーは、このウィジェットで本プロパティに対応していません。
           </li>
         </ol>
       </td>
@@ -2741,7 +2741,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <td>
         <ol>
           <li>
-            ほとんどのブラウザは、
+            ほとんどのブラウザーは、
             <code>{{htmlelement("select")}}</code>
             要素のみでこのプロパティに対応します。
           </li>
@@ -3468,7 +3468,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <td>
         <ol>
           <li>
-            対応されていますが、ブラウザ間で頼りにできるほどの一貫性はありません。
+            対応されていますが、ブラウザー間で頼りにできるほどの一貫性はありません。
           </li>
         </ol>
       </td>
@@ -3498,7 +3498,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <td>
         <ol>
           <li>
-            ほとんどのブラウザは、このプロパティを選択ボタンにも適用します。
+            ほとんどのブラウザーは、このプロパティを選択ボタンにも適用します。
           </li>
         </ol>
       </td>
@@ -3681,7 +3681,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <td>
         <ol>
           <li>
-            対応されていますが、ブラウザ間で頼りにできるほどの一貫性はありません。
+            対応されていますが、ブラウザー間で頼りにできるほどの一貫性はありません。
           </li>
         </ol>
       </td>
@@ -4437,7 +4437,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <td colspan="1" rowspan="3">
         <ol>
           <li>
-            対応されていますが、ブラウザ間で頼りにできるほどの一貫性はありません。
+            対応されていますが、ブラウザー間で頼りにできるほどの一貫性はありません。
           </li>
         </ol>
       </td>
@@ -4744,7 +4744,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <td colspan="1" rowspan="3">
         <ol>
           <li>
-            対応されていますが、ブラウザ間で頼りにできるほどの一貫性はありません。
+            対応されていますが、ブラウザー間で頼りにできるほどの一貫性はありません。
           </li>
         </ol>
       </td>
@@ -5056,7 +5056,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
       <td colspan="1" rowspan="3">
         <ol>
           <li>
-            対応されていますが、ブラウザ間で頼りにできるほどの一貫性はありません。
+            対応されていますが、ブラウザー間で頼りにできるほどの一貫性はありません。
           </li>
         </ol>
       </td>
@@ -5425,7 +5425,7 @@ Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方�
 - [フォームデータの検証](/ja/docs/Learn/HTML/Forms/Data_form_validation)
 - [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
 - [JavaScript によるフォームの送信](/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [古いブラウザでの HTML フォーム](/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
+- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
 - [HTML フォームへのスタイル設定](/ja/docs/Learn/HTML/Forms/Styling_HTML_forms)
 - [HTML フォームへの高度なスタイル設定](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
 - [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Property_compatibility_table_for_form_widgets)

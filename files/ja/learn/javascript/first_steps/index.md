@@ -33,7 +33,7 @@ translation_of: Learn/JavaScript/First_steps
 - [HTML 概論](/ja/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)
 
-> **Note:** **注記** : もしあなたが作業しているコンピューター・タブレットやその他のデバイスで自分でファイルを作れない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったようなオンラインコーディングプログラムで (ほとんどの場合) 試すことができます。
+> **Note:** もしあなたが作業しているコンピューター・タブレットやその他のデバイスで自分でファイルを作れない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったようなオンラインコーディングプログラムで (ほとんどの場合) 試すことができます。
 
 ## ガイド
 

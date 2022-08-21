@@ -20,7 +20,7 @@ translation_of: Learn/Forms/HTML5_input_types
 | --------- | ------------------------------------------------------------------------------------------- |
 | 目的:     | ネイティブフォームコントロールで利用できる新しい入力タイプの理解と、HTML を用いた実装方法。 |
 
-> **Note:** **注**: この記事のたいていの機能はブラウザーを超えて広くサポートされています。例外は注記しておきます。ブラウザーサポートについての詳細は、[HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#Forms)、特に [\<input> タイプ](/ja/docs/Web/HTML/Element/input)リファレンスを見てください。
+> **Note:** この記事のたいていの機能はブラウザーを超えて広くサポートされています。例外は注記しておきます。ブラウザーサポートについての詳細は、[HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#Forms)、特に [\<input> タイプ](/ja/docs/Web/HTML/Element/input)リファレンスを見てください。
 
 HTML フォームコントロールの見た目はデザイナーの仕様により全く異なるため、ウェブ開発者はときどき独自のフォームコントロールを作成します。これは上級のチュートリアル — [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_widgets) — で扱います。
 
@@ -34,7 +34,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 この {{htmlattrxref("type","input")}} が使われたとき、ユーザーは有効なメールアドレスをフィールドに入力することが必須です。その他のコンテンツでは、ブラウザーによってフォーム送信時にエラーが表示されます。この動作は下記のスクリーンショットで見ることができます。
 
-![﻿An invalid email input showing the message "Please enter an email address."](https://mdn.mozillademos.org/files/17027/email_address_invalid.png)
+![﻿An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
 `email` 入力タイプと [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性を組み合わせて、複数のメールアドレスが同じ入力に (カンマ区切りで)入力させることもできます:
 
@@ -44,9 +44,9 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 いくつかの端末 — 特にスマートフォンのような動的キーボードつきのタッチデバイス — では、`@` キーを含むメールアドレス入力に適した別の仮想キーパッドが現れることもあります。Android 版 Firefox のキーボードの例として下記のスクリーンショットを見てください:
 
-![firefox for android email keyboard, with ampersand displayed 既定では.](https://mdn.mozillademos.org/files/17054/fx-android-email-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed 既定では.](fx-android-email-type-keyboard.jpg)
 
-> **Note:** **注**: 基本的なテキスト入力タイプの例は [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) にあります([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html) も見てください)。
+> **Note:** 基本的なテキスト入力タイプの例は [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) にあります([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html) も見てください)。
 
 これは新しい入力タイプを使う良い理由であり、こうした端末のユーザーのユーザー体験を向上させます。
 
@@ -58,7 +58,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 既定の制約では `a@b` は有効なメールアドレスです。これは既定では `email` 入力タイプはイントラネットのメールアドレスを許可しているためです。異なる検証動作を実装するには、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を用いたり、エラーメッセージをカスタムできます。この機能の使い方は後の [クライアント側検証](/ja/docs/Learn/Forms/Form_validation)の記事で話します。
 
-> **Note:** **注**: 入力データがメールアドレスでない場合、{{cssxref(':invalid')}} 疑似クラスがマッチして、{{domxref('validityState.typeMismatch')}} プロパティは `true` を返します。
+> **Note:** 入力データがメールアドレスでない場合、{{cssxref(':invalid')}} 疑似クラスがマッチして、{{domxref('validityState.typeMismatch')}} プロパティは `true` を返します。
 
 ## 検索フィールド
 
@@ -72,7 +72,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 下記のスクリーンショットでは macOS での Firefox 71, Safari 13, Chrome 79 と Windoes10 での Edge 18 と Chrome 79 での文字が入った検索フィールドを表示しています。注意として、クリアのアイコンはフィールドに値が入った場合のみ表示され、Safari を除いてフィールドにフォーカスが当たった場合のみ表示されます。
 
-![Screenshots of search fields on several platforms.](https://mdn.mozillademos.org/files/17028/search_focus.png)
+![Screenshots of search fields on several platforms.](search_focus.png)
 
 もう 1 つの注目すべき機能として、`search` フィールドの値は同一サイトの複数ページにまたがって、自動保存してオートコンプリートすることができます。これはたいていのモダンブラウザーでは自動的に起こる傾向があります
 
@@ -88,7 +88,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 下記は Android 用 Firefox キーボードの例です:
 
-![firefox for android email keyboard, with ampersand displayed 既定では.](https://mdn.mozillademos.org/files/17056/fx-android-tel-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed 既定では.](fx-android-tel-type-keyboard.jpg)
 
 世界中にはいろいろな電話番号のフォーマットがあるため、このフィールドはユーザーが入力した値に制約を一切つけません (つまり、文字が入っていることなどがありえます)。
 
@@ -106,9 +106,9 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 例は下記のものを見てください (Android 用 Firefox の例):
 
-![firefox for android email keyboard, with ampersand displayed 既定では.](https://mdn.mozillademos.org/files/17057/fx-android-url-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed 既定では.](fx-android-url-type-keyboard.jpg)
 
-> **Note:** **注:** URL が正しい形式であっても、それが必ずしも実際存在する場所を参照しているとは限りません!
+> **Note:** URL が正しい形式であっても、それが必ずしも実際存在する場所を参照しているとは限りません!
 
 ## 数値フィールド
 
@@ -116,7 +116,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 下記のスクリーンショット (Android 用 Firefox より) に例があります:
 
-![firefox for android email keyboard, with ampersand displayed 既定では.](https://mdn.mozillademos.org/files/17055/fx-android-number-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed 既定では.](fx-android-number-type-keyboard.jpg)
 
 `number` の入力タイプでは、{{htmlattrxref("min","input")}} と {{htmlattrxref("max","input")}} 属性をセットすることで最小値と最大値の制約をつけることができます。
 
@@ -136,7 +136,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 `number` 入力タイプは有効な値の範囲に制限されているときに意味を持ちます。例えば、ある人の年齢や身長です。範囲が大きすぎて増分が意味をなさない場合 (例えば USA の郵便番号は、`00001` から `99999` の範囲です)、`tel` タイプがより良い選択となることもあります。これは数値のスピナー UI 機能に対して、数値キーパッドを提供します。
 
-> **Note:** **注**: `number` 入力は Internet Explorer の 10 より前のバージョンではサポートされません。
+> **Note:** `number` 入力は Internet Explorer の 10 より前のバージョンではサポートされません。
 
 ## スライダーコントロール
 
@@ -177,7 +177,7 @@ price.addEventListener('input', function() {
 
 ここでは `range` 入力と `output` を 2 つの変数に保存しています。次に `output` の [`textContent`](/ja/docs/Web/API/Node/textContent) を入力の `value` ですぐにセットします。最後に、イベントリスナーをセットして、range スライダーが移動するといつも、`output` の `textContent` を新しい値に更新します。
 
-> **Note:** **注**: `range` 入力は Internet Explorer 10 以前のバージョンではサポートされません。
+> **Note:** `range` 入力は Internet Explorer 10 以前のバージョンではサポートされません。
 
 ## 日付と時刻ピッカー
 
@@ -252,7 +252,7 @@ HTML 日付コントロールは、カレンダーウィジェットを提供し
 
 サポートされている場合、色コントロールは OS のデフォルトの色選択機能を呼び出して選択できるようにする傾向があります。下記のスクリーンショットは macOS の Firefox の例です:
 
-![firefox for android email keyboard, with ampersand displayed 既定では.](https://mdn.mozillademos.org/files/17058/fx-macos-color.jpg)
+![firefox for android email keyboard, with ampersand displayed 既定では.](fx-macos-color.jpg)
 
 次のライブサンプルも試してみてください:
 
@@ -260,7 +260,7 @@ HTML 日付コントロールは、カレンダーウィジェットを提供し
 
 戻り値は常に小文字で 6 桁の 16 進数の色です。
 
-> **Note:** **注**: `color` 入力は Internet Explorer ではサポートされていません。
+> **Note:** `color` 入力は Internet Explorer ではサポートされていません。
 
 ## スキルをテストしましょう!
 

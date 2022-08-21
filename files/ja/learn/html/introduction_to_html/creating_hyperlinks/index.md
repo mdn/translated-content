@@ -27,11 +27,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ハイパーリンクは Web が提供する最も刺激的なイノベーションです。Web の始まりから機能していましたが、Web を Web たるものにするものです — 文書から別の文書 (やリソース) へとリンクできたり、文書の特定の部分にリンクできたり、簡単な Web アドレスからアプリを利用できるようになります (ネイティブアプリと比較して、そちらはインストールが必要なだけです)。あらゆる Web コンテンツはリンクに変換できて、クリック (またはその他の有効化) した時に Web ブラウザーは別の Web アドレス ({{glossary("URL")}}) に移動します。
 
-> **Note:** **メモ**: URL は HTML ファイルや、テキストファイル、画像、テキスト文書、動画やオーディオファイルや、その他 Web に載せられるものを指すことができます。Web ブラウザーにそのファイルの扱い方・表示法がわからない場合、それを本当に開きたいのか聞く (この場合ファイルを開いたり扱ったりする義務は適切な端末上のネイティブアプリに渡されます) か、ファイルをダウンロードします (この場合あとで処理することができます)。
+> **Note:** URL は HTML ファイルや、テキストファイル、画像、テキスト文書、動画やオーディオファイルや、その他 Web に載せられるものを指すことができます。Web ブラウザーにそのファイルの扱い方・表示法がわからない場合、それを本当に開きたいのか聞く (この場合ファイルを開いたり扱ったりする義務は適切な端末上のネイティブアプリに渡されます) か、ファイルをダウンロードします (この場合あとで処理することができます)。
 
 例えば、BBC のホームページでは、複数のニュース記事だけでなく、色々なサイトのエリアを指すリンク (ナビゲーション機能) や、ログイン/登録ページ (ユーザーツール) その他多数のリンクがあります。
 
-![bbc.co.uk のフロントページで、たくさんのニュース項目と、ナビゲーションメニューの機能を表示しています](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![bbc.co.uk のフロントページで、たくさんのニュース項目と、ナビゲーションメニューの機能を表示しています](bbc-homepage.png)
 
 ## リンクの解剖
 
@@ -63,7 +63,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/ja/).
 
 I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/ja/ "The best place to find more information about Mozilla's mission and how to contribute").
 
-> **Note:** **メモ**: リンクのタイトルはマウスのホバーでのみ表示されます。つまり、Web ページをナビゲートするためにキーボードコントロールに頼る人々はタイトル情報にアクセスするのが困難になります。タイトルの情報がページの使いやすさにとって本当に重要な場合は、通常のテキストに入れるなどして、すべてのユーザーがアクセスできる方法で表示する必要があります。
+> **Note:** リンクのタイトルはマウスのホバーでのみ表示されます。つまり、Web ページをナビゲートするためにキーボードコントロールに頼る人々はタイトル情報にアクセスするのが困難になります。タイトルの情報がページの使いやすさにとって本当に重要な場合は、通常のテキストに入れるなどして、すべてのユーザーがアクセスできる方法で表示する必要があります。
 
 ### アクティブラーニング: 独自のサンプルリンクを作成する
 
@@ -83,7 +83,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/ja/ "The b
 </a>
 ```
 
-> **Note:** **メモ**: 今後の記事では Web 上での画像の使用についてさらに多くのことがわかります。
+> **Note:** 今後の記事では Web 上での画像の使用についてさらに多くのことがわかります。
 
 ## URL とパスに関する簡単な入門
 
@@ -93,7 +93,7 @@ URL (Uniform Resource Locator) は、Web 上のどこにあるのかを定義す
 
 URL はファイルを見つけるためにパスを使います。パスはファイルシステム内の目的のファイルが存在する場所を指定します。ディレクトリー構造の簡単な例を見てみましょう ([creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks) ディレクトリーを参照してください)。
 
-![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
 このディレクトリー構造の **root** は `creating-hyperlinks` と呼ばれます。Web サイトを使用してローカルで作業する場合は、サイト全体が入る 1 つのディレクトリーがあります。ルート内には、`index.html` ファイルと `contacts.html` があります。実際の Web サイトでは、`index.html` が私たちのホームページまたはランディングページ (Web サイトまたは Web サイトの特定のセクションのエントリポイントとして機能する Web ページ) になります。
 
@@ -118,7 +118,7 @@ URL はファイルを見つけるためにパスを使います。パスはフ�
   <p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
   ```
 
-> **Note:** **メモ**: 例えば `../../../complex/path/to/my/file.html` のように、必要に応じて、これらの機能の複数のインスタンスを複雑な URL に組み合わせることができます。
+> **Note:** 例えば `../../../complex/path/to/my/file.html` のように、必要に応じて、これらの機能の複数のインスタンスを複雑な URL に組み合わせることができます。
 
 ### ドキュメントフラグメント
 
@@ -254,9 +254,9 @@ to download Firefox</p>
 
 完成した例では、次のようになります。
 
-![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
-> **Note:** **メモ**: 動けなくなったり、正しいかどうかわからない場合は、[ナビゲーションメニューのマークアップ](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up)ディレクトリーをチェックして正しい答えを確認できます。
+> **Note:** 動けなくなったり、正しいかどうかわからない場合は、[ナビゲーションメニューのマークアップ](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up)ディレクトリーをチェックして正しい答えを確認できます。
 
 ## メールのリンク
 
@@ -284,7 +284,7 @@ to download Firefox</p>
 </a>
 ```
 
-> **Note:** **メモ:** 各フィールドの値は URL エンコードされている必要があります。つまり、非印刷文字 (タブ、キャリッジリターン、改ページなどの不可視文字) とスペースの[パーセントエスケープ](http://en.wikipedia.org/wiki/Percent-encoding)が含まれています。また、疑問符 (`?`) を使用してメイン URL とフィールド値を区別し、アンパサンド (＆) を使用して `mailto:` URL 内の各フィールドを区別します。これは標準の URL クエリ表記です。[GET メソッド](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)を読んで、どの URL クエリ表記がより一般的に使用されているかを理解してください。
+> **Note:** 各フィールドの値は URL エンコードされている必要があります。つまり、非印刷文字 (タブ、キャリッジリターン、改ページなどの不可視文字) とスペースの[パーセントエスケープ](http://en.wikipedia.org/wiki/Percent-encoding)が含まれています。また、疑問符 (`?`) を使用してメイン URL とフィールド値を区別し、アンパサンド (＆) を使用して `mailto:` URL 内の各フィールドを区別します。これは標準の URL クエリ表記です。[GET メソッド](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)を読んで、どの URL クエリ表記がより一般的に使用されているかを理解してください。
 
 以下は `mailto` の他の URL の例です。
 

@@ -28,15 +28,15 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 2.  **テーマについてどんなことを書きますか？** タイトルと少しの文章、それからページに表示させたい画像を考えます。
 3.  **Web サイトをどんな見た目にしますか？** シンプルで高いレベルから考えます。背景の色は何色にする？サイトにピッタリのフォントの種類はどんなもの？フォーマルなフォント？漫画みたいなフォント？くっきりとした太字？それとも、繊細な細字のフォントでしょうか？
 
-> **Note:** **注記**: 複雑なプロジェクトでは、カラー、フォント、ページのアイテム間のスペース、適切な文章のスタイルなど、詳細なガイドラインが必要です。これは、デザインガイドやデザインシステムやブランドブックと呼ばれます。一例として、 [Firefox Photon Design System](https://design.firefox.com/photon/)があります。
+> **Note:** 複雑なプロジェクトでは、カラー、フォント、ページのアイテム間のスペース、適切な文章のスタイルなど、詳細なガイドラインが必要です。これは、デザインガイドやデザインシステムやブランドブックと呼ばれます。一例として、 [Firefox Photon Design System](https://design.firefox.com/photon/)があります。
 
 ## デザインを大まかに描き出す
 
 次に、ペンと紙を取って、あなたのサイトの見た目をどういう風にしたいのか、大まかに描き出します。はじめてのシンプルな Web ページでは、描き出すものもあまりないですが、Web サイトを作るうえでの習慣として身につけるべきです。ヴァン・ゴッホのようになる必要はありませんので！
 
-![](https://mdn.mozillademos.org/files/9239/website-drawing-scan.png)
+![](website-drawing-scan.png)
 
-> **Note:** **注記**: 現実の複雑な Web サイトの場合でも、デザインチームは普通、ラフスケッチを描くことから始めます。その後、グラフィックエディタや Web の技術を使って、デジタルのモックアップを作るのです。
+> **Note:** 現実の複雑な Web サイトの場合でも、デザインチームは普通、ラフスケッチを描くことから始めます。その後、グラフィックエディタや Web の技術を使って、デジタルのモックアップを作るのです。
 >
 > 多くの場合、Web の開発チームには、グラフィックデザイナーと{{Glossary("UX", "ユーザーエクスペリエンス")}} (UX) デザイナーがいます。グラフィックデザイナーは、名前の通り Web サイト上の目に見えるイメージなどを作り上げます。 UX デザイナーは、もう少し抽象的な役割を持っていて、サイトを訪れるユーザーが Web サイトでどういう経験をし、どのようにインタラクションするかということを考えます。
 
@@ -52,7 +52,7 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 色を選ぶときは、[色選択ツール](/ja/docs/Web/CSS/CSS_Colors/Color_picker_tool) (カラーピッカー: Firefox のアドオンやアプリもあります) のサイトへ行き、自分の好みの色を見つけましょう。色をクリックすると、 `#660066` のような 6 文字の奇妙なコードが出てきます。これは*ヘキサコード* (16 進法コード) と呼ばれ、あなたの選んだ色を表しています。今はどこか安全なところにコピーしておきましょう。
 
-![](https://mdn.mozillademos.org/files/8975/Screenshot%20from%202014-11-03%2017:40:49.png)
+![](Screenshot%20from%202014-11-03%2017:40:49.png)
 
 ### 画像・イメージ
 
@@ -61,11 +61,11 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 1.  欲しい画像が見つかったら、クリックして拡大表示にします。
 2.  画像を右クリック (Mac では Ctrl +クリック) し、\[名前を付けて画像を保存...] を選択して、画像を安全に保存する場所を選択します。または、後で使用するためにブラウザーのアドレスバーから画像の Web アドレスをコピーします。
 
-![](https://mdn.mozillademos.org/files/16599/updated-google-images.png)
+![](updated-google-images.png)
 
 なお、Web 上のほとんどの画像には、 Google 画像検索にあるものも含め、著作権があります。あなたが著作権を侵害してしまう可能性を減らすために、 Google のライセンスフィルターを使うと良いでしょう。 *ツール*ボタンをクリックすると、*ライセンス*オプションが下に表示されます。*再使用が許可された画像*などの選択肢を選択してください。
 
-![](https://mdn.mozillademos.org/files/16598/updated-google-images-licensing.png)
+![](updated-google-images-licensing.png)
 
 ### フォント
 
@@ -76,9 +76,9 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 3.  ページ下部のパネルにある "\* Family Selected"\_ \_と書かれたボタンをクリックします ("\*" は選択したフォントの数によって変わります)。
 4.  ポップアップボックスに、Google が用意してくれた数行のコードが表示されるので、あとでテキストエディタに入力する時のためにコピーしておきます。
 
-![](https://mdn.mozillademos.org/files/13871/font1.png)
+![](font1.png)
 
-![](https://mdn.mozillademos.org/files/13873/font2.png)
+![](font2.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

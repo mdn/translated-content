@@ -46,7 +46,7 @@ translation_of: Learn/Accessibility/What_is_accessibility
 
 障碍のある人は障碍のない人と同じくらい多様であり、よってその障碍も同じくらい多様です。ここでの重要な教訓は、あなたがコンピューターの向こうでウェブをどのように使うかを考え、他の人がどのように使っているかを学習し始めることです — あなたはユーザーとは違います。考慮すべき障碍の主な種類を、ウェブコンテンツにアクセスするために使う特別なツール（**支援技術**、**assistive technology** や **AT** として知られるもの）とともに以下に説明します。
 
-> **Note:** **注**: 世界保健機構(WHO)の[障碍と健康](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)（英語）の報告によると、「10 億人以上の人(世界人口の約 15%)が何らかの障碍を持っています」し、「1 億～ 1 億 9000 万人の大人に目立った機能障碍があります」
+> **Note:** 世界保健機構(WHO)の[障碍と健康](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)（英語）の報告によると、「10 億人以上の人(世界人口の約 15%)が何らかの障碍を持っています」し、「1 億～ 1 億 9000 万人の大人に目立った機能障碍があります」
 
 ### 視覚障碍者
 
@@ -133,7 +133,7 @@ translation_of: Learn/Accessibility/What_is_accessibility
 
 あなたがアクセシビリティに関心があり、考えていることを示すために、あなたのサイトに、アクセシビリティに向けた方針と、サイトをアクセス可能にするためにどのようなステップを踏んだかを詳しく記載した、アクセシビリティに関する声明を発表してください。あなたのサイトにアクセシビリティの問題があると誰かが文句を言ってきたら、彼らと対話を始め、共感し、そして問題を解決するために合理的なステップを踏みます。
 
-> **Note:** **注**: [よくあるアクセシビリティの問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)の記事では、より詳細にテストするべきであるアクセシビリティの詳細について説明しています。
+> **Note:** [よくあるアクセシビリティの問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)の記事では、より詳細にテストするべきであるアクセシビリティの詳細について説明しています。
 
 要約すると、
 

@@ -33,7 +33,7 @@ translation_of: Learn/CSS/CSS_layout
 2.  [CSS 入門](/ja/docs/Learn/CSS/First_steps)で説明したように、CSS の基本を容易にこなせること。
 3.  [ボックスの装飾](/ja/docs/Learn/CSS/Building_blocks)の方法を理解していること。
 
-> **Note:** **注:** 使用しているコンピューター/タブレット/その他のデバイスで自分のファイルを作成できない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラムで (ほとんどの) コードサンプルを試すことができます。
+> **Note:** 使用しているコンピューター/タブレット/その他のデバイスで自分のファイルを作成できない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラムで (ほとんどの) コードサンプルを試すことができます。
 
 ## ガイド
 

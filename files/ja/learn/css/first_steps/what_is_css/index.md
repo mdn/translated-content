@@ -21,7 +21,7 @@ translation_of: Learn/CSS/First_steps/What_is_CSS
 
 [HTML 概論](/ja/docs/Learn/HTML/Introduction_to_HTML) では HTML について触れ、文書をどのようにマークアップするかを学びました。この文書はウェブブラウザーで読むことができます。見出しは普通のテキストより大きく見え、段落はあたらしい行に分けられ、それらの間には空白が入ります。リンクはほかのテキストと区別するために色付きで下線が引かれています。これらはブラウザーによるデフォルトのスタイリングです。ページの作者がスタイリングしていなくても読みやすくなるようにブラウザーが HTML に適用するとても基本的なスタイルです。
 
-![The default styles used by a browser](https://mdn.mozillademos.org/files/16493/html-example.png)
+![The default styles used by a browser](html-example.png)
 
 しかし、ウェブサイトみんながこのような見た目では退屈でしょう。CSS をつかうとブラウザー内で HTML 要素をどう見せるかはっきりと制御できるようになり、マークアップを好きなように表現できます。
 
@@ -33,7 +33,7 @@ translation_of: Learn/CSS/First_steps/What_is_CSS
 
 文書を **表現する** とは、それを使いやすいフォームに変換することを意味します。{{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, あるいは {{Glossary("Microsoft Edge","Edge")}} といった{{Glossary("ブラウザー","ブラウザー")}} はコンピューター画面やプロジェクター、あるいはプリンタで印刷される文書が視覚的に表現されるよう設計されています。
 
-> **Note:** **注**: ブラウザーは時に{{Glossary("User agent","user agent ユーザーエージェント")}} と呼ばれますが、基本的に人に似せたコンピュータープログラムを意味します。CSS について語る時、ブラウザーは代表的なユーザーエージェントですが、それだけではありません。HTML と CSS 文書を印刷できる PDF に変換するようなユーザーエージェントもあります。
+> **Note:** ブラウザーは時に{{Glossary("User agent","user agent ユーザーエージェント")}} と呼ばれますが、基本的に人に似せたコンピュータープログラムを意味します。CSS について語る時、ブラウザーは代表的なユーザーエージェントですが、それだけではありません。HTML と CSS 文書を印刷できる PDF に変換するようなユーザーエージェントもあります。
 
 CSS は、例えば見出しやリンクの [色](/ja/docs/Web/CSS/color_value) や [フォントサイズ](/ja/docs/Web/CSS/font-size)の変更といったごく基本的なテキストのスタイリングでもつかえます。例えば、[一列のテキストをレイアウトして](/ja/docs/Web/CSS/Layout_cookbook/Column_layouts)メインコンテンツ領域と関連情報のためのサイドバーに分けるといった、レイアウト作成に使うこともできます。[アニメーション](/ja/docs/Web/CSS/CSS_Animations)のような効果も使えます。それぞれの例はこの段落のリンクをご覧ください。
 
@@ -71,7 +71,7 @@ p {
 
 ほかにどんな値があるか調べる必要があることに気づくでしょう。 MDN のプロパティのページをつかえば、忘れた時やほかにどんな値が使えるか知りたいときにすばやく調べられます。
 
-> **Note:** **注**: [CSS リファレンス](/ja/docs/Web/CSS/Reference)にすべての CSS プロパティのリストがあります。CSS の機能についてもっとたくさんの情報を見つける必要があるときには、検索エンジンで "mdn _css-feature-name_" と調べることに慣れても良いでしょう。 例えば、"mdn color" や "mdn font-size" を試してみてください!
+> **Note:** [CSS リファレンス](/ja/docs/Web/CSS/Reference)にすべての CSS プロパティのリストがあります。CSS の機能についてもっとたくさんの情報を見つける必要があるときには、検索エンジンで "mdn _css-feature-name_" と調べることに慣れても良いでしょう。 例えば、"mdn color" や "mdn font-size" を試してみてください!
 
 ## CSS モジュール
 

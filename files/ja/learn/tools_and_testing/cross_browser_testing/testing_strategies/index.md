@@ -39,7 +39,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 下記のセクションを通じて、このフォーマットでサポート図を作ります。
 
-> **Note:** **注**: Yahoo は最初にこの手法を、[Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) アプローチとして広めました。
+> **Note:** Yahoo は最初にこの手法を、[Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) アプローチとして広めました。
 
 ### 経験則
 
@@ -47,7 +47,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 例えば、西ヨーロッパや北アメリカに住んでいる場合、多くが Windows と Mac のデスクトップ/ノート PC を使っていて、主なブラウザーは Chrome, Firefox, Safari, IE, Edge です。このブラウザーは定期的な更新があるため、おそらく最初の 3 つの最新版だけをテストしたいでしょう。Edge と IE では、いくつかの最新バージョンをテストしたくなるでしょう; これらはすべて A グレード区分にすべきでしょう.
 
-> **Note:** **注**: You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
+> **Note:** You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
 
 多くの人が iOS と Android を使っているので、iOS Safari の最新版、古い Android 内蔵ブラウザーの最新版いくつか、iOS と Android 用の Chrome と Firefox もテストしたくなるでしょう。これらをスマフォとタブレットの両方でテストし、レスポンシブデザインの動作が問題ないのを確認するのが理想でしょう。
 
@@ -61,7 +61,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 どこか別の場所に住んでいる場合や、どこか別の場所向けの (例 ある国やロケール)サイトを制作している場合、テストする主なブラウザーはたぶん別のものでしょう。
 
-> **Note:** **注**: "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
+> **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
 
 ### ブラウザーサポートステータス
 
@@ -101,13 +101,13 @@ Now you should be able to go back to the [Analytics Web](https://analytics.googl
 
 既定では, you should see the reporting tab, like so:
 
-![](https://mdn.mozillademos.org/files/14081/analytics-reporting.png)
+![](analytics-reporting.png)
 
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all. [Getting started with Analytics](https://support.google.com/analytics/answer/1008015) provides some useful guidance on reporting (and more) for beginners.
 
 You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. 例えば、you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left hand menu.
 
-> **Note:** **注**: When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
+> **Note:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### その他の考慮
 
@@ -129,7 +129,7 @@ When you've got a new addition to your codebase that needs testing, before you s
 
 Consider the following example (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), and also the [example running live](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
 
-![](https://mdn.mozillademos.org/files/14083/sliding-box-demo.png)
+![](sliding-box-demo.png)
 
 Test criteria for this feature could written like so:
 
@@ -179,9 +179,9 @@ Some larger companies have device labs that stock a very large selection of diff
 
 We will cover each of the other options below.
 
-> **Note:** **注**: Some efforts have been made to create publically accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
+> **Note:** Some efforts have been made to create publically accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
 
-> **Note:** **注**: We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
+> **Note:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
 
 ### エミュレーター
 
@@ -200,19 +200,19 @@ You can often find simulators for other mobile device environments too, 例え�
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
 - There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
-> **Note:** **注**: Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
+> **Note:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
 
 ### 仮想マシン
 
 Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as [Parallels](www.parallels.com/), [VMWare](http://www.vmware.com/), and [Virtual Box](https://www.virtualbox.org/wiki/Downloads); we personally like the latter, because it is free.
 
-> **Note:** **注**: You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
+> **Note:** You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
 
 To use a Virtual Box, you need to:
 
 1.  Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
 2.  [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
-3.  Open the app; you'll be presented with a view like the following: ![](https://mdn.mozillademos.org/files/14089/virtualbox.png)
+3.  Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
 4.  To create a new virtual machine, press the _New_ button in the top left hand corner.
 5.  Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
 
@@ -224,13 +224,13 @@ To use a Virtual Box, you need to:
 
 Now the new virtual box should appear in the left hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
 
-![](https://mdn.mozillademos.org/files/14085/virtualbox-installer.png)
+![](virtualbox-installer.png)
 
 > **Warning:** **Important**: You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
 
 After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
-![](https://mdn.mozillademos.org/files/14087/virtualbox-running.png)
+![](virtualbox-running.png)
 
 You need to treat this virtual operating system installation just like you would any real installation — 例えば、as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.
 
@@ -245,7 +245,7 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 - Windows XP with IE7
 - Windows XP with IE6
 
-> **Note:** **注**: Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running, if it is a licensed product.
+> **Note:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running, if it is a licensed product.
 
 ### 自動化と商用アプリ
 
@@ -275,9 +275,9 @@ When running tests, it can also be a good idea to:
 
 These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
 
-> **Note:** **注**: Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
+> **Note:** Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
 
-> **Note:** **注**: Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jsocol/django-waffle).
+> **Note:** Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jsocol/django-waffle).
 
 ## まとめ
 
