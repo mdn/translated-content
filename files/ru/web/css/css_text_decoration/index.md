@@ -13,9 +13,9 @@ spec-urls: https://drafts.csswg.org/css-text-decor/
 
 **CSS Text Decoration** – модуль CSS, который определяет возможности, относящиеся к оформлению текста, такие как подчёркивание, тень текста и метки выделения.
 
-## Reference
+## Справка
 
-### Properties
+### Свойства
 
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-decoration-color")}}
@@ -31,7 +31,7 @@ spec-urls: https://drafts.csswg.org/css-text-decor/
 - {{cssxref("text-underline-offset")}}
 - {{cssxref("text-underline-position")}}
 
-## Examples
+## Примеры
 
 ```css
 .under {
@@ -79,6 +79,6 @@ spec-urls: https://drafts.csswg.org/css-text-decor/
 
 {{EmbedLiveSample('Examples','auto','320')}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
