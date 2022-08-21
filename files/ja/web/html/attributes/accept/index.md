@@ -8,6 +8,7 @@ tags:
   - HTML
   - Input
   - Reference
+browser-compat: html.elements.input.accept
 translation_of: Web/HTML/Attributes/accept
 ---
 {{HTMLSidebar}}
@@ -149,7 +150,7 @@ div {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## 関連情報
 

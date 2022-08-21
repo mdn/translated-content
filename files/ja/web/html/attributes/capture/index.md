@@ -8,6 +8,7 @@ tags:
   - Capture
   - 制約検証
   - HTML
+browser-compat: html.elements.input.capture
 spec-urls: https://w3c.github.io/html-media-capture/#the-capture-attribute
 translation_of: Web/HTML/Attributes/capture
 ---
@@ -56,7 +57,7 @@ translation_of: Web/HTML/Attributes/capture
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -7,6 +7,9 @@ tags:
   - 制約検証
   - フォーム
   - required
+browser-compat:
+  - html.elements.input.readonly
+  - html.elements.textarea.readonly
 spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-readonly
 translation_of: Web/HTML/Attributes/readonly
 ---
@@ -80,7 +83,7 @@ readonly が付いた値を動的に変更できる唯一の方法は、スク�
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.readonly")}}
+{{Compat}}
 
 ## 関連情報
 
