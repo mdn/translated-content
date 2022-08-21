@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBufferSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
-**`AudioBufferSourceNode`**は{{domxref("AudioScheduledSourceNode")}}を継承するインタフェースで、{{domxref("AudioBuffer")}}に保存されたインメモリ音声データからなるオーディオソースを表します。`AudioBufferSourceNode`は、再生するタイミングに高い正確性が求められる音声を繰り返し再生する場合特に有益です。例えば、特定のリズムに合わせて、ディスクやネットワークからではなくメモリから読みだした音声を再生するといった場合です。正確なタイミングで音声を再生したいものの、音声データがディスクやネットワークから読み込まれる必要がある場合は{{domxref("AudioWorkletNode")}}を使用してください。
+**`AudioBufferSourceNode`** は{{domxref("AudioScheduledSourceNode")}}を継承するインタフェースで、{{domxref("AudioBuffer")}}に保存されたインメモリ音声データからなるオーディオソースを表します。`AudioBufferSourceNode`は、再生するタイミングに高い正確性が求められる音声を繰り返し再生する場合特に有益です。例えば、特定のリズムに合わせて、ディスクやネットワークからではなくメモリから読みだした音声を再生するといった場合です。正確なタイミングで音声を再生したいものの、音声データがディスクやネットワークから読み込まれる必要がある場合は{{domxref("AudioWorkletNode")}}を使用してください。
 
 {{InheritanceDiagram(600, 140)}}
 
