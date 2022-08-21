@@ -14,22 +14,24 @@ browser-compat: javascript.builtins.TypedArray
 
 ## 구문
 
-    new TypedArray(length);
-    new TypedArray(typedArray);
-    new TypedArray(object);
-    new TypedArray(buffer [, byteOffset [, length]]);
+```JS
+new TypedArray(length);
+new TypedArray(typedArray);
+new TypedArray(object);
+new TypedArray(buffer [, byteOffset [, length]]);
 
-    TypedArray()는 다음 중 하나입니다:
+TypedArray()는 다음 중 하나입니다:
 
-    Int8Array();
-    Uint8Array();
-    Uint8ClampedArray();
-    Int16Array();
-    Uint16Array();
-    Int32Array();
-    Uint32Array();
-    Float32Array();
-    Float64Array();
+Int8Array();
+Uint8Array();
+Uint8ClampedArray();
+Int16Array();
+Uint16Array();
+Int32Array();
+Uint32Array();
+Float32Array();
+Float64Array();
+```
 
 ### 매개변수
 
