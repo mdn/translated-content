@@ -15,13 +15,6 @@ toggle(token, force);
 
 ### 参数
 
-- token
-  - : 标记列表中你想探查并切换的 {{domxref("DOMString")}}。
-- force {{optional_inline}}
-  - : 一个 {{domxref("Boolean")}} 值，设置后会将方法变成单向操作。如设置为 `false`，则会删除标记列表中匹配的给定标记，且不会再度添加。如设置为 `true`，则将在标记列表中添加给定标记，且不会再度删除。
-
-### 参数
-
 - `token`
   - : 一个字符串，表示你想要 toggle 的标记。
 - `force` {{optional_inline}}
