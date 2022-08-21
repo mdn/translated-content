@@ -43,6 +43,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 span.addEventListener('click', () => {
   const result = classes.toggle("c");
+
   if (result) {
     span.textContent = `'c' added; classList is now "${classes}".`;
   } else {
