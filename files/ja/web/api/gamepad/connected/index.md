@@ -12,46 +12,39 @@ tags:
   - Référence(2)
 translation_of: Web/API/Gamepad/connected
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>{{domxref("Gamepad") }} インターフェースの <code><strong>Gamepad.connected</strong></code> プロパティはゲームパッドがシステムに接続しているかどうかを示す真偽値を返します。</p>
+{{domxref("Gamepad") }} インターフェースの **`Gamepad.connected`** プロパティはゲームパッドがシステムに接続しているかどうかを示す真偽値を返します。
 
-<p>ゲームパッドが接続している場合の値は <code>true</code> 、繋がっていない場合は <code>false</code>となります。</p>
+ゲームパッドが接続している場合の値は `true` 、繋がっていない場合は `false`となります。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute"> readonly    attribute <span class="idlAttrType">boolean</span>             <span class="idlAttrName">connected</span>;</span></span></pre>
+```
+ readonly    attribute boolean             connected;
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js notranslate">var gp = navigator.getGamepads()[0];
-console.log(gp.connected);</pre>
+```js
+var gp = navigator.getGamepads()[0];
+console.log(gp.connected);
+```
 
-<h2 id="値">値</h2>
+## 値
 
-<p>{{domxref("boolean")}} 。</p>
+{{domxref("boolean")}} 。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#widl-Gamepad-connected", "Gamepad.connected")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                             | ステータス                   | 備考     |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("Gamepad", "#widl-Gamepad-connected", "Gamepad.connected")}} | {{Spec2("Gamepad")}} | 初回定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.Gamepad.connected")}}</p>
+{{Compat("api.Gamepad.connected")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<p><a href="/ja/docs/Web/Guide/API/Gamepad">Gamepad API を利用する</a></p>
+[Gamepad API を利用する](/ja/docs/Web/Guide/API/Gamepad)

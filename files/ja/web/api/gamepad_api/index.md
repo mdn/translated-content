@@ -9,93 +9,59 @@ tags:
   - Overview
 translation_of: Web/API/Gamepad_API
 ---
-<div>{{DefaultAPISidebar("Gamepad API")}}</div>
+{{DefaultAPISidebar("Gamepad API")}}
 
-<p><br>
- <strong>Gamepad API</strong> は開発者に様々な種類のゲームパッドや単純で一貫した異なるゲームのコントローラーと接続する方法を提供しています。<span id="result_box" lang="ja"><span>これには、ゲームパッドの接続や切断、ゲームパッドに関するその他の情報へのアクセス、現在押されているボタンやその他のコントロールなど、3つのインターフェース、2つのイベントと1つの特別な機能が含まれています。</span></span></p>
+**Gamepad API** は開発者に様々な種類のゲームパッドや単純で一貫した異なるゲームのコントローラーと接続する方法を提供しています。これには、ゲームパッドの接続や切断、ゲームパッドに関するその他の情報へのアクセス、現在押されているボタンやその他のコントロールなど、3 つのインターフェース、2 つのイベントと 1 つの特別な機能が含まれています。
 
-<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
+## インターフェイス
 
-<dl>
- <dt><a href="/ja/docs/Web/API/Gamepad" title="The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id."><code>Gamepad</code></a></dt>
- <dd>コンピュータに接続しているゲームパッド・コントローラーを表します。</dd>
- <dt><a href="/ja/docs/Web/API/GamepadButton" title="The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device."><code>GamepadButton</code></a></dt>
- <dd><span class="tlid-translation translation"><span title="">接続されているコントローラーのいずれかのボタンを表します。</span></span></dd>
- <dt><a href="/ja/docs/Web/API/GamepadEvent" title="The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to."><code>GamepadEvent</code></a></dt>
- <dd><span class="tlid-translation translation"><span title="">ゲームパッドに関連するイベントを表すイベントオブジェクトです。</span></span></dd>
-</dl>
+- [`Gamepad`](/ja/docs/Web/API/Gamepad "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.")
+  - : コンピュータに接続しているゲームパッド・コントローラーを表します。
+- [`GamepadButton`](/ja/docs/Web/API/GamepadButton "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.")
+  - : 接続されているコントローラーのいずれかのボタンを表します。
+- [`GamepadEvent`](/ja/docs/Web/API/GamepadEvent "The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.")
+  - : ゲームパッドに関連するイベントを表すイベントオブジェクトです。
 
-<h3 id="Gamepad_の実験的な拡張機能">Gamepad の実験的な拡張機能</h3>
+### Gamepad の実験的な拡張機能
 
-<dl>
- <dt><a href="/ja/docs/Web/API/GamepadHapticActuator" title="The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware."><code>GamepadHapticActuator</code></a></dt>
- <dd><span class="tlid-translation translation"><span title="">ユーザに触覚フィードバックを提供するように設計されたコントローラー内のハードウェア (使用可能な場合)、最も一般的には振動ハードウェアを表します。</span></span></dd>
- <dt><a href="/ja/docs/Web/API/GamepadPose" title="The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>GamepadPose</code></a></dt>
- <dd>
- <div class="text-wrap tlid-copy-target">
- <div class="result-shield-container tlid-copy-target"><a href="/ja/docs/Web/API/WebVR_API">WebVR </a><span class="tlid-translation translation"><span title="">コントローラーの場合のコントローラーの姿勢 (3D 空間内の位置と向きなど) を表します。これはより新しい <a href="/ja/docs/Web/API/WebXR_Device_API">WebXR</a> 標準では使用<em>されません。</em></span></span></div>
- </div>
- </dd>
-</dl>
+- [`GamepadHapticActuator`](/ja/docs/Web/API/GamepadHapticActuator "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.")
+  - : ユーザに触覚フィードバックを提供するように設計されたコントローラー内のハードウェア (使用可能な場合)、最も一般的には振動ハードウェアを表します。
+- [`GamepadPose`](/ja/docs/Web/API/GamepadPose "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)")
+  - : [WebVR ](/ja/docs/Web/API/WebVR_API)コントローラーの場合のコントローラーの姿勢 (3D 空間内の位置と向きなど) を表します。これはより新しい [WebXR](/ja/docs/Web/API/WebXR_Device_API) 標準では使用*されません。*
 
-<p><span class="tlid-translation translation"><span title="">上記の情報にアクセスできる機能については、</span></span><a href="/ja/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad">Gamepad インターフェースの拡張機能</a>を参照してください。</p>
+上記の情報にアクセスできる機能については、[Gamepad インターフェースの拡張機能](/ja/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad)を参照してください。
 
-<h3 id="他のインターフェースの拡張">他のインターフェースの拡張</h3>
+### 他のインターフェースの拡張
 
-<h4 id="ナビゲータ">ナビゲータ</h4>
+#### ナビゲータ
 
-<dl>
- <dt>{{domxref("Navigator.getGamepads()")}}</dt>
- <dd>接続されたゲームパッドごとに一つの {{domxref("Gamepad")}} オブジェクトの配列を返す {{domxref("Navigator")}} オブジェクトの拡張です。</dd>
-</dl>
+- {{domxref("Navigator.getGamepads()")}}
+  - : 接続されたゲームパッドごとに一つの {{domxref("Gamepad")}} オブジェクトの配列を返す {{domxref("Navigator")}} オブジェクトの拡張です。
 
-<h4 id="Window_イベント">Window イベント</h4>
+#### Window イベント
 
-<dl>
- <dt>{{domxref("Window.ongamepadconnected")}}</dt>
- <dd><span class="tlid-translation translation"><span title="">ゲームパッドが接続したとき (</span></span>{{event('gamepadconnected')}}<span class="tlid-translation translation"><span title="">イベントが発生したとき) に実行されるイベントハンドラを表します</span></span>。</dd>
- <dt>{{domxref("Window.ongamepaddisconnected")}}</dt>
- <dd><span class="tlid-translation translation"><span title="">ゲームパッドが切断したとき (</span></span>{{event('gamepaddisconnected')}}<span class="tlid-translation translation"><span title="">イベントが発生したとき) に実行されるイベントハンドラを表します</span></span>。</dd>
-</dl>
+- {{domxref("Window.ongamepadconnected")}}
+  - : ゲームパッドが接続したとき ({{event('gamepadconnected')}}イベントが発生したとき) に実行されるイベントハンドラを表します。
+- {{domxref("Window.ongamepaddisconnected")}}
+  - : ゲームパッドが切断したとき ({{event('gamepaddisconnected')}}イベントが発生したとき) に実行されるイベントハンドラを表します。
 
-<h2 id="Tutorials_and_guides" name="Tutorials_and_guides">チュートリアルとガイド</h2>
+## チュートリアルとガイド
 
-<ul>
- <li><a href="/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Gamepad API の利用</a></li>
- <li><a href="/ja/docs/Games/Techniques/Controls_Gamepad_API">Gamepad API を利用したコントロールの実装</a></li>
-</ul>
+- [Gamepad API の利用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [Gamepad API を利用したコントロールの実装](/ja/docs/Games/Techniques/Controls_Gamepad_API)
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("GamepadExtensions")}}</td>
-   <td>{{Spec2("GamepadExtensions")}}</td>
-   <td><a href="#実験的な_gamepad_拡張">実験的な Gamepad 拡張</a> の定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "", "The Gamepad API specification")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                                     | コメント                                               |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------ |
+| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | [実験的な Gamepad 拡張](#実験的な_gamepad_拡張) の定義 |
+| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | 初期定義                                               |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
+{{Compat("api.Gamepad")}}
 
+## 参照
 
-<p>{{Compat("api.Gamepad")}}</p>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li>Ted Mielczarek と Robert Nyman による <a class="external text" href="https://hacks.mozilla.org/2013/12/the-gamepad-api/" rel="nofollow">The Gamepad API</a> の紹介</li>
- <li><a href="http://luser.github.io/gamepadtest/">Simple API demo page</a> (<a href="https://github.com/luser/gamepadtest">ソース</a>)</li>
-</ul>
+- Ted Mielczarek と Robert Nyman による [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) の紹介
+- [Simple API demo page](http://luser.github.io/gamepadtest/) ([ソース](https://github.com/luser/gamepadtest))
