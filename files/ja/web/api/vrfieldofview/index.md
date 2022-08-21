@@ -3,51 +3,38 @@ title: VRFieldOfView
 slug: Web/API/VRFieldOfView
 translation_of: Web/API/VRFieldOfView
 ---
-<p>{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRFieldOfView</code></strong> インターフェイスは，中心点からの視野を示す4つの角度で定義される視界を表現します．</p>
+[WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRFieldOfView`** インターフェイスは，中心点からの視野を示す 4 つの角度で定義される視界を表現します．
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("VRFieldOfView.upDegrees")}} {{readonlyInline}}</dt>
- <dd>視界の上方向への拡張量を示す角度．</dd>
- <dt>{{domxref("VRFieldOfView.rightDegrees")}} {{readonlyInline}}</dt>
- <dd>視界の右方向への拡張量を示す角度．</dd>
- <dt>{{domxref("VRFieldOfView.downDegrees")}} {{readonlyInline}}</dt>
- <dd>視界の下方向への拡張量を示す角度．</dd>
- <dt>{{domxref("VRFieldOfView.leftDegrees")}} {{readonlyInline}}</dt>
- <dd>視界の左方向への拡張量を示す角度．</dd>
-</dl>
+- {{domxref("VRFieldOfView.upDegrees")}} {{readonlyInline}}
+  - : 視界の上方向への拡張量を示す角度．
+- {{domxref("VRFieldOfView.rightDegrees")}} {{readonlyInline}}
+  - : 視界の右方向への拡張量を示す角度．
+- {{domxref("VRFieldOfView.downDegrees")}} {{readonlyInline}}
+  - : 視界の下方向への拡張量を示す角度．
+- {{domxref("VRFieldOfView.leftDegrees")}} {{readonlyInline}}
+  - : 視界の左方向への拡張量を示す角度．
 
-<h2 id="例">例</h2>
+## 例
 
-<pre>TBD.</pre>
+```
+TBD.
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#interface-interface-vrfieldofview', 'VRFieldOfView')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                   | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('WebVR', '#interface-interface-vrfieldofview', 'VRFieldOfView')}} | {{Spec2('WebVR')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.VRFieldOfView")}}</p>
+{{Compat("api.VRFieldOfView")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．

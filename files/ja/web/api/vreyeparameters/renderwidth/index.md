@@ -3,46 +3,37 @@ title: VREyeParameters.renderWidth
 slug: Web/API/VREyeParameters/renderWidth
 translation_of: Web/API/VREyeParameters/renderWidth
 ---
-<p>{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>{{domxref("VREyeParameters")}} インターフェイスの <strong><code>renderWidth</code></strong> 読取専用プロパティは，各眼のビューポートの推奨レンダーターゲット幅をピクセル値で表します．</p>
+{{domxref("VREyeParameters")}} インターフェイスの **`renderWidth`** 読取専用プロパティは，各眼のビューポートの推奨レンダーターゲット幅をピクセル値で表します．
 
-<h2 id="シンタックス">シンタックス</h2>
+## シンタックス
 
-<pre class="brush: js">var curRenderWidth = myVRDisplay.getEyeParameters('left').renderWidth;</pre>
+```js
+var curRenderWidth = myVRDisplay.getEyeParameters('left').renderWidth;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>幅を表す数値．ピクセル単位．</p>
+幅を表す数値．ピクセル単位．
 
-<h2 id="例">例</h2>
+## 例
 
-<pre>TBD.</pre>
+```
+TBD.
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vreyeparameters-renderwidth', 'renderWidth')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                   | Comment            |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('WebVR', '#dom-vreyeparameters-renderwidth', 'renderWidth')}} | {{Spec2('WebVR')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.VREyeParameters.renderWidth")}}</p>
+{{Compat("api.VREyeParameters.renderWidth")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
