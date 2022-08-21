@@ -4,7 +4,7 @@
 
 同样地，如果你对本文的指南有任何改进的建议，请提出问题（issue）或发起 PR。我们对此表示欢迎。下面进入简体中文翻译指南的正文部分。
 
-> 若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Markdown_in_MDN)。
+> 若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)。
 
 ## 元数据
 
