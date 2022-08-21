@@ -12,32 +12,36 @@ translation_of: Web/API/Response/bodyUsed
 original_slug: Web/API/Body/bodyUsed
 browser-compat: api.Response.bodyUsed
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><strong><code>bodyUsed</code></strong> は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文が読取済みであるかどうかを示す論理値です。</p>
+**`bodyUsed`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文が読取済みであるかどうかを示す論理値です。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">response.bodyUsed;</pre>
+```js
+response.bodyUsed;
+```
 
-<h3 id="Value">値</h3>
+### 値
 
-<p>論理値。</p>
+論理値。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p><a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">Fetch リクエストの例</a>（<a href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch リクエストをライブで</a>実行）では、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して JPG を読み取ります。読み取りが成功したら、<code>blob()</code> を使用してレスポンスから {{domxref("Blob")}} を読み取り、{{domxref("URL.createObjectURL")}} を使用してオブジェクト URL に格納し、その URL を {{htmlelement("img")}} 要素のソースとして設定して画像を表示します。</p>
+[Fetch リクエストの例](https://github.com/mdn/fetch-examples/tree/master/fetch-request)（[Fetch リクエストをライブで](https://mdn.github.io/fetch-examples/fetch-request/)実行）では、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して JPG を読み取ります。読み取りが成功したら、`blob()` を使用してレスポンスから {{domxref("Blob")}} を読み取り、{{domxref("URL.createObjectURL")}} を使用してオブジェクト URL に格納し、その URL を {{htmlelement("img")}} 要素のソースとして設定して画像を表示します。
 
-<p><code>response.bodyUsed</code> を <code>response.blob()</code> の呼び出し前後にコンソールに記録していることに注目してください。 その時点で本文が読み取られたかによるため、これは呼び出し前では <code>false</code> を返し、その後では <code>true</code> を返します。</p>
+`response.bodyUsed` を `response.blob()` の呼び出し前後にコンソールに記録していることに注目してください。 その時点で本文が読み取られたかによるため、これは呼び出し前では `false` を返し、その後では `true` を返します。
 
-<h3 id="HTML_Content">HTML コンテンツ</h3>
+### HTML コンテンツ
 
-<pre class="brush: html">&lt;img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png"&gt;
-</pre>
+```html
+<img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png">
+```
 
-<h3 id="JS_Content">JS コンテンツ</h3>
+### JS コンテンツ
 
-<pre class="brush: js">var myImage = document.querySelector('.my-image');
+```js
+var myImage = document.querySelector('.my-image');
 fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').then(function(response) {
     console.log(response.bodyUsed);
     var res = response.blob();
@@ -46,22 +50,21 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
 }).then(function(response) {
     var objectURL = URL.createObjectURL(response);
     myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', '250px') }}</p>
+{{ EmbedLiveSample('Example', '100%', '250px') }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/CORS">HTTP アクセス制御 (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP](/ja/docs/Web/HTTP)

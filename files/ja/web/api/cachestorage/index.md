@@ -11,59 +11,55 @@ tags:
   - ServiceWorker
 translation_of: Web/API/CacheStorage
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p><strong><code>CacheStorage</code></strong> インターフェイスは、{{domxref("Cache")}} オブジェクトのストレージを表します。</p>
+**`CacheStorage`** インターフェイスは、{{domxref("Cache")}} オブジェクトのストレージを表します。
 
-<p>このインターフェイスは、</p>
+このインターフェイスは、
 
-<ul>
- <li>{{domxref("ServiceWorker")}} や他のタイプのワーカーまたは {{domxref("window")}} のスコープからアクセスできるすべての名前付きキャッシュのマスターディレクトリを提供します（{{SpecName('Service Workers')}} の仕様で定義されていても、サービスワーカーでのみの使用に限定されません）。
-  <div class="note"><strong>注</strong>: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome と Safari は、HTTPS を介したウィンドウコンテキストにのみ `CacheStorage` を公開します</a>（英語）。 SSL 証明書が設定されていない限り、{{domxref("window.caches")}} は <code>undefined</code> になります。</div>
- </li>
- <li>対応する {{domxref("Cache")}} オブジェクトへの文字列名のマッピングを維持します。</li>
-</ul>
+- {{domxref("ServiceWorker")}} や他のタイプのワーカーまたは {{domxref("window")}} のスコープからアクセスできるすべての名前付きキャッシュのマスターディレクトリを提供します（{{SpecName('Service Workers')}} の仕様で定義されていても、サービスワーカーでのみの使用に限定されません）。
 
-<p>{{domxref("CacheStorage.open()")}} を使用して、{{domxref("Cache")}} インスタンスを取得します。</p>
+  > **Note:** **注**: [Chrome と Safari は、HTTPS を介したウィンドウコンテキストにのみ \`CacheStorage\` を公開します](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063)（英語）。 SSL 証明書が設定されていない限り、{{domxref("window.caches")}} は `undefined` になります。
 
-<p>{{domxref("CacheStorage.match()")}} を使用して、所与の {{domxref("Request")}} が <code>CacheStorage</code> オブジェクトが追跡する {{domxref("Cache")}} オブジェクトのキーであるかどうかを確認します。</p>
+- 対応する {{domxref("Cache")}} オブジェクトへの文字列名のマッピングを維持します。
 
-<p>グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して <code>CacheStorage</code> にアクセスできます。</p>
+{{domxref("CacheStorage.open()")}} を使用して、{{domxref("Cache")}} インスタンスを取得します。
 
-<div class="note"><strong>注</strong>: CacheStorage は、信頼されていないオリジン（つまり、この定義は将来より複雑になる可能性がありますが、HTTPS を使用しないオリジン）で <code>SecurityError</code> で常に拒否します。 テストするときは、 Firefox 開発ツールの設定/歯車印メニューの「HTTP による Service Worker を有効化（ツールボックスを開いた時）」オプションをチェックすることで、この問題を回避できます。</div>
+{{domxref("CacheStorage.match()")}} を使用して、所与の {{domxref("Request")}} が `CacheStorage` オブジェクトが追跡する {{domxref("Cache")}} オブジェクトのキーであるかどうかを確認します。
 
-<div class="note"><strong>注</strong>: {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。</div>
+グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して `CacheStorage` にアクセスできます。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+> **Note:** **注**: CacheStorage は、信頼されていないオリジン（つまり、この定義は将来より複雑になる可能性がありますが、HTTPS を使用しないオリジン）で `SecurityError` で常に拒否します。 テストするときは、 Firefox 開発ツールの設定/歯車印メニューの「HTTP による Service Worker を有効化（ツールボックスを開いた時）」オプションをチェックすることで、この問題を回避できます。
 
-<dl>
- <dt>{{domxref("CacheStorage.match()")}}</dt>
- <dd>所与の {{domxref("Request")}} が、{{domxref("CacheStorage")}} オブジェクトが追跡する {{domxref("Cache")}} オブジェクトのキーであるかどうかを確認し、その一致で解決する {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("CacheStorage.has()")}}</dt>
- <dd><code>cacheName</code> に一致する {{domxref("Cache")}} オブジェクトが存在する場合、<code>true</code> に解決される {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("CacheStorage.open()")}}</dt>
- <dd><code>cacheName</code> に一致する {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します（まだ存在しない場合は新しいキャッシュが作成されます）。</dd>
- <dt>{{domxref("CacheStorage.delete()")}}</dt>
- <dd><code>cacheName</code> に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、<code>true</code> に解決される {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} オブジェクトが見つからない場合、<code>false</code> に解決されます。</dd>
- <dt>{{domxref("CacheStorage.keys()")}}</dt>
- <dd>{{domxref("CacheStorage")}} によって追跡されるすべての名前付き {{domxref("Cache")}} オブジェクトに対応する文字列を含む配列で解決される {{jsxref("Promise")}} を返します。 このメソッドを使用して、すべての {{domxref("Cache")}} オブジェクトのリストを反復処理します。</dd>
-</dl>
+> **Note:** **注**: {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## メソッド
 
-<p>このコードスニペットは、MDN の <a href="https://github.com/mdn/sw-test/">sw-test の例</a>からのものです（<a href="https://mdn.github.io/sw-test/">sw-test をライブで</a>見る）。 このサービスワーカーのスクリプトは、{{domxref("InstallEvent")}} が発生するのを待ち、{{domxref("ExtendableEvent.waitUntil","waitUntil")}} を実行してアプリのインストールプロセスを処理します。 これは、{{domxref("CacheStorage.open")}} を呼び出して新しいキャッシュを作成し、{{domxref("Cache.addAll")}} を使用して一連のアセットを追加することで構成されます。</p>
+- {{domxref("CacheStorage.match()")}}
+  - : 所与の {{domxref("Request")}} が、{{domxref("CacheStorage")}} オブジェクトが追跡する {{domxref("Cache")}} オブジェクトのキーであるかどうかを確認し、その一致で解決する {{jsxref("Promise")}} を返します。
+- {{domxref("CacheStorage.has()")}}
+  - : `cacheName` に一致する {{domxref("Cache")}} オブジェクトが存在する場合、`true` に解決される {{jsxref("Promise")}} を返します。
+- {{domxref("CacheStorage.open()")}}
+  - : `cacheName` に一致する {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します（まだ存在しない場合は新しいキャッシュが作成されます）。
+- {{domxref("CacheStorage.delete()")}}
+  - : `cacheName` に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、`true` に解決される {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} オブジェクトが見つからない場合、`false` に解決されます。
+- {{domxref("CacheStorage.keys()")}}
+  - : {{domxref("CacheStorage")}} によって追跡されるすべての名前付き {{domxref("Cache")}} オブジェクトに対応する文字列を含む配列で解決される {{jsxref("Promise")}} を返します。 このメソッドを使用して、すべての {{domxref("Cache")}} オブジェクトのリストを反復処理します。
 
-<p>2番目のコードブロックでは、{{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。</p>
+## 例
 
-<ol>
- <li><code>CacheStorage</code> でリクエストに一致するものが見つかったかどうかを確認します。 もしそうなら、それを提供します。</li>
- <li>そうでない場合は、ネットワークからリクエストを取得し、最初のブロックで作成されたキャッシュも開き、{{domxref("Cache.put")}}（<code>cache.put(event.request, response.clone())</code>）を使用してリクエストのクローンを追加します。</li>
- <li>これが失敗した場合（例えば、ネットワークがダウンしているため）、フォールバックレスポンスを返します。</li>
-</ol>
+このコードスニペットは、MDN の [sw-test の例](https://github.com/mdn/sw-test/)からのものです（[sw-test をライブで](https://mdn.github.io/sw-test/)見る）。 このサービスワーカーのスクリプトは、{{domxref("InstallEvent")}} が発生するのを待ち、{{domxref("ExtendableEvent.waitUntil","waitUntil")}} を実行してアプリのインストールプロセスを処理します。 これは、{{domxref("CacheStorage.open")}} を呼び出して新しいキャッシュを作成し、{{domxref("Cache.addAll")}} を使用して一連のアセットを追加することで構成されます。
 
-<p>最後に、{{domxref("FetchEvent.respondWith")}} を使用して、カスタムレスポンスが等しくなったものをすべて返します。</p>
+2 番目のコードブロックでは、{{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
 
-<pre class="brush: js">self.addEventListener('install', function(event) {
+1.  `CacheStorage` でリクエストに一致するものが見つかったかどうかを確認します。 もしそうなら、それを提供します。
+2.  そうでない場合は、ネットワークからリクエストを取得し、最初のブロックで作成されたキャッシュも開き、{{domxref("Cache.put")}}（`cache.put(event.request, response.clone())`）を使用してリクエストのクローンを追加します。
+3.  これが失敗した場合（例えば、ネットワークがダウンしているため）、フォールバックレスポンスを返します。
+
+最後に、{{domxref("FetchEvent.respondWith")}} を使用して、カスタムレスポンスが等しくなったものをすべて返します。
+
+```js
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -104,11 +100,12 @@ self.addEventListener('fetch', function(event) {
     }
   }));
 });
-</pre>
+```
 
-<p>このスニペットは、サービスワーカーのコンテキストの外部で API を使用する方法を示しており、`await` 演算子を使用してより読みやすいコードにしています。</p>
+このスニペットは、サービスワーカーのコンテキストの外部で API を使用する方法を示しており、\`await\` 演算子を使用してより読みやすいコードにしています。
 
-<pre class="brush: js">// キャッシュからデータを取得しようとしますが、フォールバックしてライブで取得します。
+```js
+// キャッシュからデータを取得しようとしますが、フォールバックしてライブで取得します。
 async function getData() {
    const cacheVersion = 1;
    const cacheName    = `myapp-${ cacheVersion }`;
@@ -162,35 +159,21 @@ try {
    console.log( { data } );
 } catch ( error ) {
    console.error( { error } );
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                 | 状態                                 | コメント |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.CacheStorage")}}
 
+## 関連情報
 
-<p>{{Compat("api.CacheStorage")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
-</ul>
+- [Service worker の使用](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

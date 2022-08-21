@@ -9,31 +9,28 @@ tags:
   - Reference
 translation_of: Web/API/FileReader/readAsBinaryString
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<div class="hidden">
-<p>{{event("loadend")}}は英語版では {{domxref("XMLHttpRequest/loadend_event", "loadend")}} にリダイレクトされますが、日本語版ではリダイレクト元ページが存在しない（作成も不可）ため、日本語版ではリダイレクト先を直接記述しています。</p>
-</div>
+`readAsBinaryString` メソッドは、 指定された {{domxref("Blob")}} ないし {{domxref("File")}} オブジェクトを読み込むために使用します。 読込処理が終了すると {{domxref("FileReader.readyState","readyState")}} は `DONE` に変わり、{{domxref("XMLHttpRequest/loadend_event", "loadend")}} イベントが生じます。それと同時に {{domxref("FileReader.result","result")}} プロパティには生のバイナリデータを文字列で解釈したものが格納されます。
 
-<p><code>readAsBinaryString</code> メソッドは、 指定された {{domxref("Blob")}} ないし {{domxref("File")}} オブジェクトを読み込むために使用します。 読込処理が終了すると {{domxref("FileReader.readyState","readyState")}} は <code>DONE</code> に変わり、{{domxref("XMLHttpRequest/loadend_event", "loadend")}} イベントが生じます。それと同時に {{domxref("FileReader.result","result")}} プロパティには生のバイナリデータを文字列で解釈したものが格納されます。</p>
+このメソッドは、File API の仕様から一度削除されましたが、後方互換のために再導入されました。
+{{domxref("FileReader.readAsArrayBuffer()")}} の使用が推奨されています。
 
-<p>このメソッドは、File API の仕様から一度削除されましたが、後方互換のために再導入されました。<br>
- {{domxref("FileReader.readAsArrayBuffer()")}} の使用が推奨されています。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+instanceOfFileReader.readAsBinaryString(blob);
+```
 
-<pre class="syntaxbox notranslate"><em>instanceOfFileReader</em>.readAsBinaryString(blob);</pre>
+### パラメータ
 
-<h3 id="Parameters" name="Parameters">パラメータ</h3>
+- `blob`
+  - : メソッドで読み込む {{domxref("Blob")}} または {{domxref("File")}} オブジェクトです。
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>メソッドで読み込む {{domxref("Blob")}} または {{domxref("File")}} オブジェクトです。</dd>
-</dl>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js notranslate">var canvas = document.createElement('canvas');
+```js
+var canvas = document.createElement('canvas');
 var height = 200;
 var width  = 200;
 
@@ -55,33 +52,19 @@ canvas.toBlob(function (blob) {
   }
 
   reader.readAsBinaryString(blob);
-});</pre>
+});
+```
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">仕様</h2>
+## 仕様
 
-<table class="spectable standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API','#readAsBinaryString','readAsBinaryString')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                     | ステータス                   | コメント |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('File API','#readAsBinaryString','readAsBinaryString')}} | {{Spec2('File API')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.FileReader.readAsBinaryString")}}</p>
+{{Compat("api.FileReader.readAsBinaryString")}}
 
-<h2 id="See_also" name="See also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

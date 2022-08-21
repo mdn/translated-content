@@ -12,59 +12,59 @@ tags:
   - イベント
 translation_of: Web/API/FileReader/progress_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>progress</code> イベントは、 <code>FileReader</code> がデータを読むときに定期的に発生します。</p>
+`progress` イベントは、 `FileReader` がデータを読むときに定期的に発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("FileReader.onprogress")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル可能</th>
+      <td>いいえ</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>{{domxref("FileReader.onprogress")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Live_example" name="Live_example">ライブデモ</h3>
+### ライブデモ
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;div class="file-select"&gt;
-        &lt;label for="avatar"&gt;Choose a profile picture:&lt;/label&gt;
-        &lt;input type="file"
+    <div class="file-select">
+        <label for="avatar">Choose a profile picture:</label>
+        <input type="file"
                id="avatar" name="avatar"
-               accept="image/png, image/jpeg"&gt;
-    &lt;/div&gt;
+               accept="image/png, image/jpeg">
+    </div>
 
-    &lt;img src="" class="preview" height="200" alt="Image preview..."&gt;
+    <img src="" class="preview" height="200" alt="Image preview...">
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;Event log:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-  &lt;/div&gt;</pre>
+  </div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">img.preview {
+```css hidden
+img.preview {
   margin: 1rem 0;
 }
 
@@ -95,18 +95,19 @@ translation_of: Web/API/FileReader/progress_event
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
 
 .event-log-contents {
   resize: none;
-}</pre>
-</div>
+}
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const fileInput = document.querySelector('input[type="file"]');
+```js
+const fileInput = document.querySelector('input[type="file"]');
 const preview = document.querySelector('img.preview');
 const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
@@ -138,35 +139,22 @@ function handleSelected(e) {
 }
 
 fileInput.addEventListener('change', handleSelected);
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '300px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '300px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API', '#dfn-progress-event')}}</td>
-   <td>{{Spec2('File API')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           | 状態                         |
+| ---------------------------------------------------------------- | ---------------------------- |
+| {{SpecName('File API', '#dfn-progress-event')}} | {{Spec2('File API')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.FileReader.progress_event")}}</p>
+{{Compat("api.FileReader.progress_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>Related events: {{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.loadend_event", "loadend")}}, {{domxref("FileReader.load_event", "load")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.abort_event", "abort")}}</li>
-</ul>
+- Related events: {{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.loadend_event", "loadend")}}, {{domxref("FileReader.load_event", "load")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.abort_event", "abort")}}

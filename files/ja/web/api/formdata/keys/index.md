@@ -10,25 +10,26 @@ tags:
   - XMLHttpRequest API
 translation_of: Web/API/FormData/keys
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><code><strong>FormData.keys()</strong></code> メソッドは、 {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全てのキーを通過できるようにします。キーは {{domxref("USVString")}} オブジェクトです。</p>
+**`FormData.keys()`** メソッドは、 {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全てのキーを通過できるようにします。キーは {{domxref("USVString")}} オブジェクトです。
 
-<div class="note">
-<p><strong>Note</strong>: このメソッドは <a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a> で使用できます。</p>
-</div>
+> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">formData.keys();</pre>
+```
+formData.keys();
+```
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>{{jsxref("Iteration_protocols","iterator")}} を返します。</p>
+{{jsxref("Iteration_protocols","iterator")}} を返します。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js;highlight:[7] notranslate">// テストの FormData オブジェクトを作成
+```js
+// テストの FormData オブジェクトを作成
 var formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
@@ -37,41 +38,28 @@ formData.append('key2', 'value2');
 for (var key of formData.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>結果は次のとおりです:</p>
+結果は次のとおりです:
 
-<pre class="notranslate">key1
-key2</pre>
+```
+key1
+key2
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata','keys() (as iterator&lt;&gt;)')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                     | ステータス                           | 備考     |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata','keys() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | 初回定義 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("api.FormData.keys")}}
 
+## 関連項目
 
-<p>{{Compat("api.FormData.keys")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

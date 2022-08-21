@@ -3,97 +3,83 @@ title: FormData.append()
 slug: Web/API/FormData/append
 translation_of: Web/API/FormData/append
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>インターフェイスの<code><strong>append()</strong></code>メソッドは、FormDataオブジェクト内の既存のキーに新しい値を追加するか、キーがまだ存在しない場合は追加します。</p>
+インターフェイスの**`append()`**メソッドは、FormData オブジェクト内の既存のキーに新しい値を追加するか、キーがまだ存在しない場合は追加します。
 
-<p>{{domxref("FormData.set")}}との違いは、指定されたキーが既に存在する場合、{{domxref("FormData.set")}}はすべての既存の値を新しい値で上書きすることです。 一方、<code>append()</code>は、既存の値のセットの最後に新しい値を追加します。</p>
+{{domxref("FormData.set")}}との違いは、指定されたキーが既に存在する場合、{{domxref("FormData.set")}}はすべての既存の値を新しい値で上書きすることです。 一方、`append()`は、既存の値のセットの最後に新しい値を追加します。
 
-<div class="note">
-<p><strong>注：このメソッドはWeb Workersで使用できます。</strong></p>
-</div>
+> **Note:** **注：このメソッドは Web Workers で使用できます。**
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>There are two versions of this method: a two and a three parameter version:</p>
+There are two versions of this method: a two and a three parameter version:
 
-<pre class="brush: js">formData.append(name, value);
-formData.append(name, value, filename);</pre>
+```js
+formData.append(name, value);
+formData.append(name, value, filename);
+```
 
-<h3 id="append_Parameters" name="append()_Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code></dt>
- <dd>The name of the field whose data is contained in <code>value</code>.</dd>
- <dt><code>value</code></dt>
- <dd>The field's value. This can be a {{domxref("USVString")}} or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.</dd>
- <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.</dd>
-</dl>
+- `name`
+  - : The name of the field whose data is contained in `value`.
+- `value`
+  - : The field's value. This can be a {{domxref("USVString")}} or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.
+- `filename `{{optional_inline}}
+  - : The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
 
-<div class="note">
-<p><strong>Note:</strong> If you specify a {{domxref("Blob")}} as the data to append to the <code>FormData</code> object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.</p>
-</div>
+> **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following line creates an empty <code>FormData</code> object:</p>
+The following line creates an empty `FormData` object:
 
-<pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
+```js
+var formData = new FormData(); // Currently empty
+```
 
-<p>You can add key/value pairs to this using {{domxref("FormData.append")}}:</p>
+You can add key/value pairs to this using {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+```
 
-<p>As with regular form data, you can append multiple values with the same name. For example (and being compatible with PHP's naming conventions by adding [] to the name):</p>
+As with regular form data, you can append multiple values with the same name. For example (and being compatible with PHP's naming conventions by adding \[] to the name):
 
-<pre class="brush: js">formData.append('userpic[]', myFileInput.files[0], 'chris1.jpg');
-formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');</pre>
+```js
+formData.append('userpic[]', myFileInput.files[0], 'chris1.jpg');
+formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');
+```
 
-<p>This technique makes it simpler to process multi-file uploads because the resultant data structure is more conducive to looping.</p>
+This technique makes it simpler to process multi-file uploads because the resultant data structure is more conducive to looping.
 
-<p>If the sent value is different than String or Blob it will be automatically converted to String:</p>
+If the sent value is different than String or Blob it will be automatically converted to String:
 
-<pre class="brush: js">formData.append('name', true);
+```js
+formData.append('name', true);
 formData.append('name', 74);
 formData.append('name', 'John');
 
 formData.getAll('name'); // ["true", "74", "John"]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment            |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<div class="hidden"></div>
+## See also
 
-<div class="hidden"></div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}
