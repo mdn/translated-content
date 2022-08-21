@@ -5,21 +5,36 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
 {{JSRef}}
 
-**`forEach()`** 方法按照插入顺序依次对 `Map` 中每个键/值对执行一次给定的函数
+**`forEach()`** 方法按照插入顺序依次对 `Map` 中每个键/值对执行一次给定的函数。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
 
 ## 语法
 
-```plain
-myMap.forEach(callback([value][,key][,map])[, thisArg])
+```js
+// 箭头函数
+forEach(() => { /* … */ } )
+forEach((value) => { /* … */ } )
+forEach((value, key) => { /* … */ } )
+forEach((value, key, map) => { /* … */ } )
+
+// 回调函数
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// 内联回调函数
+forEach(function() { /* … */ })
+forEach(function(value) { /* … */ })
+forEach(function(value, key) { /* … */ })
+forEach(function(value, key, map) { /* … */ })
+forEach(function(value, key, map) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callback`
 
-  - : `myMap` 中每个元素所要执行的函数。它具有如下的参数
+  - : `myMap` 中每个元素所要执行的函数。它具有如下的参数：
 
     - `value` {{Optional_Inline}}
       - : 每个迭代的值。
@@ -55,7 +70,7 @@ myMap.forEach(callback([value][,key][,map])[, thisArg])
 
 ### 输出一个 `Map` 对象中的内容
 
-以下的代码在每行中打印一个 `Map` 对象中的元素
+以下的代码在每行中打印一个 `Map` 对象中的元素：
 
 ```js
 function logMapElements(value, key, map) {
