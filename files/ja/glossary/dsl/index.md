@@ -5,7 +5,7 @@ tags:
   - Disambiguation
   - Glossary
 ---
-**DSL**という用語は、文脈によって意味が異なることがあります。以下の可能性があります。
+**DSL** という用語は、文脈によって意味が異なることがあります。以下の可能性があります。
 {{GlossaryDisambiguation}}
 
 ## 関連情報
