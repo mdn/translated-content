@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - shift
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: 預設參數( Default parameters )
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 {{jsSidebar("Functions")}}
 

@@ -1,7 +1,6 @@
 ---
 title: 預先取回連結 (Prefetch) 問答集
 slug: Web/HTTP/Link_prefetching_FAQ
-translation_of: Web/HTTP/Link_prefetching_FAQ
 ---
 ### 何謂預先取回連結 ?
 

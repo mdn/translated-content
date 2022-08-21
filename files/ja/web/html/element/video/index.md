@@ -409,7 +409,7 @@ AddType video/webm .webm
 
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
 
-動画には、実際にコンテンツを説明する字幕と<ruby>文字化情報<rp> (</rp><rt>transcript</rt><rp>) </rp></ruby>を提供するべきです (実装方法について詳しくは [HTML5 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください) 。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
+動画には、実際にコンテンツを説明する字幕と文字化情報 (transcript) を提供するべきです (実装方法について詳しくは [HTML5 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください) 。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
 
 注目すべき点は、音声のみのメディアにキャプションを付けることはできますが、キャプションを表示するために要素の video 領域が使用されるため、 {{HTMLElement("video")}} 要素で音声を再生しないとキャプションを付けることができないということです。これは、 video 要素で音声を再生するのに便利な特別なシナリオの 1 つです。
 

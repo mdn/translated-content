@@ -1,13 +1,6 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-tags:
-  - Date
-  - JavaScript
-  - 參考
-  - 方法
-  - 方法補完
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
 {{JSRef}}
 

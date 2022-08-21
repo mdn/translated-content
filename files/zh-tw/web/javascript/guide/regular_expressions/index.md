@@ -1,12 +1,6 @@
 ---
 title: 正規表達式
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Guide
-  - JavaScript
-  - RegExp
-  - 正規表達式
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 

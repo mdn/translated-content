@@ -1,13 +1,6 @@
 ---
 title: 後裔選擇器
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - CSS參考
-  - Selectors
-  - 初學者
-  - 選擇器
-translation_of: Web/CSS/Descendant_combinator
 ---
 {{CSSRef("Selectors")}}
 

@@ -1,7 +1,6 @@
 ---
 title: <q>
 slug: Web/HTML/Element/q
-translation_of: Web/HTML/Element/q
 ---
 {{HTMLRef}}
 

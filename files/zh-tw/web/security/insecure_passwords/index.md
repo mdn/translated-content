@@ -1,12 +1,6 @@
 ---
 title: 不安全的密碼
 slug: Web/Security/Insecure_passwords
-tags:
-  - 安全性
-  - 密碼
-  - 網頁
-  - 風險
-translation_of: Web/Security/Insecure_passwords
 ---
 提供 HTTP 的登入表單非常危險，因為目前有很多已知的用戶密碼擷取手法。竊聽者可以透過側錄該網路或修改傳輸頁面進行大量的惡意攻擊，並直接竊取用戶憑證或密碼。本頁將詳細說明 Firefox 用以警示用戶與開發者有關不安全的密碼及密碼竊取風險的安全機制。
 

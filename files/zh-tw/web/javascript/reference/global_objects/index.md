@@ -1,12 +1,6 @@
 ---
 title: 標準內建物件
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
 {{jsSidebar("Objects")}}
 

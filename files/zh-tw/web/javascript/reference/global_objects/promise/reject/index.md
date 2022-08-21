@@ -1,7 +1,6 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
 {{JSRef}}
 

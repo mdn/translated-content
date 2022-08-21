@@ -1,7 +1,6 @@
 ---
 title: HTTP authentication
 slug: Web/HTTP/Authentication
-translation_of: Web/HTTP/Authentication
 ---
 {{HTTPSidebar}}
 
