@@ -49,7 +49,7 @@ translation_of: Web/CSS/CSS_Selectors
 ## 결합자
 
 - [자손 결합자](/ko/docs/Web/CSS/Descendant_combinator)
-  - : ``(공백) 결합자는 첫 번째 요소의 자손인 노드를 선택합니다. **구문:** `A B`**예제:**`div span`은 {{HTMLElement("div")}} 요소 안에 위치하는 모든 {{HTMLElement("span")}} 요소와 일치합니다.
+  - : ""(공백) 결합자는 첫 번째 요소의 자손인 노드를 선택합니다. **구문:** `A B`**예제:**`div span`은 {{HTMLElement("div")}} 요소 안에 위치하는 모든 {{HTMLElement("span")}} 요소와 일치합니다.
 - [자식 결합자](/ko/docs/Web/CSS/Child_combinator)
   - : `>` 결합자는 첫 번째 요소의 바로 아래 자식인 노드를 선택합니다.
     **구문:** `A > B`
