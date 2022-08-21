@@ -25,7 +25,7 @@ stylesheet.insertRule(rule[, index])
 
   - : 挿入される規則が入った {{domxref("DOMString")}} です。どのような規則を挿入するかは、種類に依存します。
 
-    - **[規則セット](/ja/docs/Web/CSS/Syntax#CSS_statements)**の場合、[セレクター](/ja/docs/Web/Guide/CSS/Getting_Started/Selectors)とスタイル定義です。
+    - **[規則セット](/ja/docs/Web/CSS/Syntax#CSS_statements)** の場合、[セレクター](/ja/docs/Web/Guide/CSS/Getting_Started/Selectors)とスタイル定義です。
     - **[@-規則](/ja/docs/Web/CSS/At-rule)**の場合、 @-識別子と規則の内容です。
 
 - index {{optional_inline}}
