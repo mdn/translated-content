@@ -16,7 +16,7 @@ HTTP 缓存存储与请求关联的响应，并将存储的响应复用于后续
 
 ## 不同种类的缓存
 
-在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中, 有两种不同类型的缓存：**私有缓存**和**共享缓存**.
+在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中, 有两种不同类型的缓存：**私有缓存**和**共享缓存**。
 
 ### 私有缓存
 
@@ -50,7 +50,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能传输响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。
 
-另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA (certificate authority)")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于 [证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency) 在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
+另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
 
 #### 托管缓存
 
@@ -95,7 +95,7 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 ## 基于 age 的缓存策略
 
-存储的 HTTP 响应有两种状态：**fresh** 和 **stale**。 _fresh_ 状态通常表示响应仍然有效，可以重复使用，而 _stale_ 状态表示缓存的响应已经过期。
+存储的 HTTP 响应有两种状态：**fresh** 和 **stale**。_fresh_ 状态通常表示响应仍然有效，可以重复使用，而 _stale_ 状态表示缓存的响应已经过期。
 
 确定响应何时是 fresh 的和何时是 stale 的标准是 **age** 。在 HTTP 中，age 是自响应生成以来经过的时间。这类似于其他缓存机制中的 {{Glossary("TTL")}}。
 
@@ -115,8 +115,8 @@ Cache-Control: max-age=604800
 
 对于示例响应，`max-age` 的含义如下：
 
-- 如果响应的 age _小于_ 一周，则响应为 _fresh_。
-- 如果响应的 age _超过_ 一周，则响应为 _stale_。
+- 如果响应的 age *小于*一周，则响应为 _fresh_。
+- 如果响应的 age *超过*一周，则响应为 _stale_。
 
 只要存储的响应保持新鲜（fresh），它将用于兑现客户端请求。
 
@@ -323,7 +323,7 @@ Cache-Control: no-cache
 
 ### 兼容过时的实现
 
-作为忽略`no-store`的过时实现的解决方法，你可能会看到使用了诸如以下内容的 kitchen-sink 标头：
+作为忽略 `no-store` 的过时实现的解决方法，你可能会看到使用了诸如以下内容的 kitchen-sink 标头：
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
@@ -349,7 +349,7 @@ Cache-Control: no-cache, private
 
 可以对请求和响应执行验证。
 
-**重新加载** 和 **强制重新加载** 操作是从浏览器端执行验证的常见示例。
+**重新加载**和**强制重新加载**操作是从浏览器端执行验证的常见示例。
 
 ### 重新加载
 
@@ -374,13 +374,13 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 该行为也在 [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) 标准中定义，并且可以通过将缓存模式设置为 `no-cache`（注意 `reload` 不是这种情况下的正确模式）：
 
 ```js
-// 注意：“reload” 不是正常重新加载的正确模式； “no-cache” 才是
+// 注意：“reload”不是正常重新加载的正确模式；“no-cache”才是
 fetch("/", { cache: "no-cache" });
 ```
 
 ### 强制重新加载
 
-出于向后兼容的原因，浏览器在重新加载期间使用 `max-age=0` —— 因为在 HTTP/1.1 之前的许多过时的实现中不理解 `no-cache`。但是在这个用例中，`no-cache` 已被支持，并且**强制重新加载**是绕过缓存响应的另一种方法。
+出于向后兼容的原因，浏览器在重新加载期间使用 `max-age=0`——因为在 HTTP/1.1 之前的许多过时的实现中不理解 `no-cache`。但是在这个用例中，`no-cache` 已被支持，并且**强制重新加载**是绕过缓存响应的另一种方法。
 
 浏览器**强制重新加载**期间的 HTTP 请求如下所示：
 
@@ -416,7 +416,7 @@ Cache-Control: max-age=31536000, immutable
 
 这可以防止在重新加载期间进行不必要的重新验证。
 
-请注意，[Chrome 已更改其实施](https://blog.chromium.org/2017/01/reload-reloaded-faster-and-leaner-page_26.html) 而不是实施该指令，因此重新验证不是在重新加载子资源期间执行。
+请注意，[Chrome 已更改其实现](https://blog.chromium.org/2017/01/reload-reloaded-faster-and-leaner-page_26.html)而不是实现该指令，因此重新验证不是在重新加载子资源期间执行。
 
 ## 删除存储的响应
 
@@ -436,9 +436,9 @@ Cache-Control: max-age=31536000
 
 一旦响应在服务器上过期，您可能希望覆盖该响应，但是一旦存储响应，服务器就无法执行任何操作——因为由于缓存，不再有请求到达服务器。
 
-规范中提到的方法之一是使用不安全的方法（例如 POST ）发送对同一 URL 的请求，但对于许多客户端而言，通常很难故意这样做。
+规范中提到的方法之一是使用不安全的方法（例如 POST）发送对同一 URL 的请求，但对于许多客户端而言，通常很难故意这样做。
 
-还有一个 `Clear-Site-Data: cache` 标头和值的规范，但 [并非所有浏览器都支持它](https://groups.google.com/a/mozilla.org/g/dev-platform /c/I939w1yrTp4) — 即使使用它，它也只会影响浏览器缓存，而不会影响中间缓存。
+还有一个 `Clear-Site-Data: cache` 标头和值的规范，但[并非所有浏览器都支持它](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4)——即使使用它，它也只会影响浏览器缓存，而不会影响中间缓存。
 
 因此，除非用户手动执行重新加载、强制重新加载或清除历史操作，否则应该假设任何存储的响应都将保留其 `max-age` 期间。
 
@@ -588,7 +588,7 @@ Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```
 
-**缓存破坏** 是一种通过在内容更改时更改 URL 来使响应在很长一段时间内可缓存的技术。该技术可以应用于所有子资源，例如图像。
+**缓存破坏**是一种通过在内容更改时更改 URL 来使响应在很长一段时间内可缓存的技术。该技术可以应用于所有子资源，例如图像。
 
 > **备注：** 在评估 `immutable` 和 QPACK 的使用时：如果你担心 `immutable` 会更改 QPACK 提供的预定义值，请考虑在这种情况下，`immutable` 部分可以通过将 `Cache-Control` 值分成两行来单独编码——尽管这取决于特定 QPACK 实现使用的编码算法。
 
