@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
 spec-urls: https://drafts.csswg.org/css-transforms/
+translation_of: Web/CSS/CSS_Transforms
 ---
 {{CSSRef}}
 
