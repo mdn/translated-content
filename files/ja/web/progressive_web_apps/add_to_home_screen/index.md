@@ -30,23 +30,23 @@ A2HS を説明するために最小構成のサンプルページを作成しま
 
 もし Android 版 Firefox を使用可能であれば、それを使用して `https://mdn.github.io/pwa-examples/a2hs/` にあるデモに移動してみてください。キツネの写真を見ることができますが、もっと重要なのは、その中にプラス (+) アイコンを持つ "ホーム " のアイコンが表示されることです。 — これは、必要な機能が所定の場所にある任意のサイトのために表示される "ホーム画面に追加 "アイコンです。
 
-![](https://mdn.mozillademos.org/files/15762/add-to-home-screen-icon.png)
+![](add-to-home-screen-icon.png)
 
 このボタンをタップすると、このページをホーム画面に追加するかどうかの確認バナーが表示されます。ここで大きな + _ADD TO HOME SCREEN_ を選択するとウェブアプリがホーム画面に追加されます。
 
-![](https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png)
+![](fx-a2hs-banner.png)
 
 もし Chrome をお使いの場合は操作方法がやや異なります。 Chrome では、ページを読み込むと自動的にホーム画面に追加するかどうかのポップアップが現れます。
 
-![](https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png)
+![](chrome-a2hs-banner.png)
 
-> **Note:** **注**: Chrome でもバナーを表示したい場合は [Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/) の記事が役立ちます。
+> **Note:** Chrome でもバナーを表示したい場合は [Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/) の記事が役立ちます。
 
 このポップアップで「追加しない」を選んでしまったけれど、やっぱりインストールを行ないたい場合は Chrome のメニューを開いて「ホーム画面に追加」を押せば追加することができます。
 
 ホーム画面に追加したウェブアプリは、どのブラウザーをお使いの場合でもフルネームではなく短縮名のほうで表示されます。これはほかのネイティブアプリの挙動と同じです。
 
-![](https://mdn.mozillademos.org/files/15770/a2hs-on-home-screen.png)
+![](a2hs-on-home-screen.png)
 
 このアイコンをタップすると開きますが、全画面アプリとして開き、その周囲のブラウザー UI は表示されません。
 
@@ -63,7 +63,7 @@ A2HS を説明するために最小構成のサンプルページを作成しま
 
 マニフェストファイルは JSON 形式で書かれ、ウェブアプリ内のどこかに設置される必要があります (置き場所はルートディレクトリにするのがよいです)。またファイルの拡張子は `.webmanifest` にします。ここでは `manifest.webmanifest` といファイル名にしました。このファイルにはウェブアプリについての情報やどのような挙動をするのかについての設定が記されています。
 
-> **Note:** **注**: 拡張子`.webmanifest` は W3C の[WebAppManifest についてのドキュメント](/ja/docs/)の中の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節の中で定義されています。ただ、多くの場合ブラウザーは拡張子 `.json` マニフェストファイルをサポートしています。
+> **Note:** 拡張子`.webmanifest` は W3C の[WebAppManifest についてのドキュメント](/ja/docs/)の中の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節の中で定義されています。ただ、多くの場合ブラウザーは拡張子 `.json` マニフェストファイルをサポートしています。
 
 A2HS に必要なフィールドは次の通りです。
 
@@ -196,11 +196,11 @@ The click handler contains the following steps:
 
 So when the button is clicked, the install prompt appears.
 
-![](https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png)
+![](chrome-desktop-a2hs-banner.png)
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 
-![](https://mdn.mozillademos.org/files/16280/a2hs-installed-desktop.png)
+![](a2hs-installed-desktop.png)
 
 If the user selects _Cancel_, the state of the app goes back to how it was before the button was clicked.
 

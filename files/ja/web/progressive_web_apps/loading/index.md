@@ -88,7 +88,7 @@ imagesToLoad.forEach((img) => {
 
 プロセス全体を視覚的により魅力的にするために、プレースホルダーは CSS で、ぼかしています。
 
-![js13kPWA アプリのプレースホルダー画像のスクリーンショット](https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png)
+![js13kPWA アプリのプレースホルダー画像のスクリーンショット](js13kpwa-placeholders.png)
 
 最初にぼかしを付けて画像をレンダリングするので、シャープな画像に遷移することができます。
 

@@ -65,7 +65,7 @@ Streams API を使用すると、開発者はサーバーからのデータス�
 
 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) ウェブサイトの構造は非常に単純です。単一の HTML ファイル ([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) と基本的な CSS のスタイル付け ([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css))、いくつかの画像、スクリプト、およびフォントで構成されています。 フォルダー構造は次のようになります。
 
-![js13kPWA のフォルダー構成](https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png)
+![js13kPWA のフォルダー構成](js13kpwa-directory.png)
 
 ### HTML
 
