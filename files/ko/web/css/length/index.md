@@ -12,7 +12,7 @@ translation_of: Web/CSS/length
 ---
 {{CSSRef}}
 
-[CSS ](/ko/docs/Web/CSS)**`<length>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
 
 > **참고:** {{cssxref("&lt;percentage&gt;")}} 값을 일부 속성의 `<length>` 값으로 사용할 수는 있지만 `<percentage>`와 `<length>` 는 다릅니다. {{cssxref("&lt;length-percentage&gt;")}}를 참고하세요.
 
@@ -34,12 +34,10 @@ translation_of: Web/CSS/length
 
 > **참고:** 아래 단위들, 특히 `em`과 `rem`은 사용자가 글꼴 크기를 늘려도 [페이지의 수직 흐름을 유지](https://24ways.org/2006/compose-to-a-vertical-rhythm)하는, 확대 가능한 레이아웃을 만들기 위해 많이 쓰입니다.
 
-
 - `cap` {{experimental_inline}}
   - : 요소 {{cssxref("font")}}의 "cap height"(영문 대문자의 평균 높이 값)를 나타냅니다.
 - `ch`
   - : 요소 {{cssxref("font")}}의 문자 "0"(영, 유니코드 U+0030)의 너비를 나타냅니다.
-  
     문자 "0"의 너비를 측정하는 것이 불가능하거나 실용적이지 않은 경우 너비 0.5em에 높이 1em이라고 가정해야 합니다.
 - `em`
   - : 요소 {{cssxref("font-size")}}의 계산값. 요소의 {{cssxref("font-size")}} 속성에 사용한다면 상속받는 `font-size` 값을 나타냅니다.
@@ -58,17 +56,17 @@ translation_of: Web/CSS/length
 
 뷰포트 백분율 길이는 `<length>` 값을 {{glossary("viewport", "뷰포트")}}, 즉 문서에서 볼 수 있는 부분의 크기를 기준으로 설정합니다. 뷰포트 길이는 {{cssxref("@page")}} 선언 블록에서는 유효하지 않습니다.
 
-- [`vh`]()
+- `vh`
   - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이 1%와 같습니다.
-- [`vw`]()
+- `vw`
   - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비 1%와 같습니다.
-- [`vi`]() {{experimental_inline}}
+- `vi` {{experimental_inline}}
   - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_Logical_Properties#인라인_치수) 크기 1%와 같습니다.
-- [`vb`]() {{experimental_inline}}
+- `vb` {{experimental_inline}}
   - : 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_Logical_Properties#블록_치수) 크기 1%와 같습니다.
-- [`vmin`]()
+- `vmin`
   - : `vw`와 `vh` 중 작은 것과 같습니다.
-- [`vmax`]()
+- `vmax`
   - : `vw`와 `vh` 중 큰 것과 같습니다.
 
 #### 절대길이 단위
@@ -81,19 +79,19 @@ translation_of: Web/CSS/length
 
 > **참고:** 많은 사용자가 {{glossary("user agent", "사용자 에이전트")}}의 기본 글꼴 크기를 늘려 읽기 쉽도록 설정합니다. 절대길이는 사용자 설정을 따르지 않기 때문에 접근성 문제를 유발할 수 있습니다. 따라서 `font-size`를 설정할 땐 `em`, `rem` 등 상대길이를 선택하세요.
 
-- [`px`]()
+- `px`
   - : 1 픽셀. 화면에서는 전통적으로 하나의 장치 픽셀(점)을 의미했지만, 프린터나 고해상도 화면에서는 1/96 `in`을 맞출 수 있도록 여러 개의 장치 픽셀을 의미합니다.
-- [`cm`]()
+- `cm`
   - : 1 센티미터, `1cm` = `96px/2.54`.
-- [`mm`]()
+- `mm`
   - : 1 밀리미터, `1mm` = 1/10 `cm`.
-- [`Q`]() {{experimental_inline}}
+- `Q` {{experimental_inline}}
   - : 1/4 밀리미터, `1Q` = 1/40 `cm`.
-- [`in`]()
+- `in`
   - : 1 인치, `1in` = `2.54cm` = `96px`.
-- [`pc`]()
+- `pc`
   - : 1 피카, `1pc` = `12pt` = 1/6`1in`.
-- [`pt`]()
+- `pt`
   - : One point. `1pt` = 1/72nd of `1in`.
 
 ## 보간
