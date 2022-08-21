@@ -16,7 +16,7 @@ HTTP 缓存存储与请求关联的响应，并将存储的响应复用于后续
 
 ## 不同种类的缓存
 
-在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中, 有两种不同类型的缓存: **私有缓存** 和 **共享缓存**.
+在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中, 有两种不同类型的缓存：**私有缓存**和**共享缓存**.
 
 ### 私有缓存
 
@@ -42,19 +42,19 @@ Cache-Control: private
 
 除了访问控制的功能外，一些代理还实现了缓存以减少网络流量。这通常不由服务开发人员管理，因此必须由恰当的 HTTP 标头等控制。然而，在过去，过时的代理缓存实现——例如没有正确理解 HTTP 缓存标准的实现——经常给开发人员带来问题。
 
-**Kitchen-sink 标头** 如下所示，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的“旧且未更新的代理缓存”的实现。
+**Kitchen-sink 标头**如下所示，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的“旧且未更新的代理缓存”的实现。
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能连接响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。
+然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能传输响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。
 
-另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA (certificate authority)")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于 [CT (certificate transparency)](/zh-CN/docs/Web/Security/Certificate_Transparency) 在最近几年变得很普遍，并且一些浏览器只允许使用 SCT（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
+另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA (certificate authority)")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于 [证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency) 在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
 
 #### 托管缓存
 
-托管缓存由服务开发人员明确部署，以卸载源服务器并有效地交付内容。示例包括反向代理、CDN 和服务工作者与缓存 API 的组合。
+托管缓存由服务开发人员明确部署，以降低源服务器负载并有效地交付内容。示例包括反向代理、CDN 和 service worker 与缓存 API 的组合。
 
 托管缓存的特性因部署的产品而异。在大多数情况下，你可以通过 `Cache-Control` 标头和你自己的配置文件或仪表板来控制缓存的行为。
 
@@ -65,7 +65,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```http
 Cache-Control: no-store
 ```
-例如，Varnish Cache 使用 VCL（Varnish Configuration Language，一种 {{Glossary("DSL/Domain_specific_language", "DSL")}}）逻辑来处理缓存存储，而服务工作者结合缓存 API 允许你在 JavaScript 中创建该逻辑。
+例如，Varnish Cache 使用 VCL（Varnish Configuration Language，一种 {{Glossary("DSL/Domain_specific_language", "DSL")}}）逻辑来处理缓存存储，而 service worker 结合缓存 API 允许你在 JavaScript 中创建该逻辑。
 
 这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为“不符合”标准。你应该做的是，避免使用 kitchen-sink 标头，但仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
 
@@ -93,7 +93,7 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 启发式缓存是在 `Cache-Control` 被广泛采用之前出现的一种解决方法，基本上所有响应都应明确指定 `Cache-Control` 标头。
 
-## Fresh and stale based on age
+## 基于 age 的缓存策略
 
 存储的 HTTP 响应有两种状态：**fresh** 和 **stale**。 _fresh_ 状态通常表示响应仍然有效，可以重复使用，而 _stale_ 状态表示缓存的响应已经过期。
 
@@ -118,7 +118,7 @@ Cache-Control: max-age=604800
 - 如果响应的 age _小于_ 一周，则响应为 _fresh_。
 - 如果响应的 age _超过_ 一周，则响应为 _stale_。
 
-只要存储的响应保持新鲜（fresh），它将用于满足客户端请求。
+只要存储的响应保持新鲜（fresh），它将用于兑现客户端请求。
 
 当响应存储在共享缓存中时，有必要通知客户端响应的 age。继续看示例，如果共享缓存将响应存储了一天，则共享缓存将向后续客户端请求发送以下响应。
 
@@ -136,7 +136,7 @@ Age: 86400
 收到该响应的客户端会发现它在剩余的 518400 秒内是新鲜（fresh）的，这是响应的 `max-age` 和 `Age` 之间的差异。
 
 
-## Expires or max-age
+## Expires 或 max-age
 
 在 HTTP/1.0 中，新鲜度过去由 `Expires` 标头指定。
 
@@ -146,9 +146,9 @@ Age: 86400
 Expires: Tue, 28 Feb 2022 22:22:22 GMT
 ```
 
-但是时间格式难以解析，发现很多 bug，有可能通过故意偏移系统时钟来诱发问题；因此，在 HTTP/1.1 中，`Cache-Control` 采用了 `max-age` - 用于指定经过的时间。
+但是时间格式难以解析，也发现了很多实现的错误，有可能通过故意偏移系统时钟来诱发问题；因此，在 HTTP/1.1 中，`Cache-Control` 采用了 `max-age`——用于指定经过的时间。
 
-如果 `Expires` 和 `Cache-Control: max-age` 都可用，则将 `max-age` 定义为首选。因此，现在 HTTP/1.1 已被广泛使用，因此无需提供 `Expires`。
+如果 `Expires` 和 `Cache-Control: max-age` 都可用，则将 `max-age` 定义为首选。因此，由于 HTTP/1.1 已被广泛使用，无需特地提供 `Expires`。
 
 ## Vary 响应
 
@@ -242,11 +242,7 @@ If-None-Match: "deadbeef"
 
 但是，如果服务器确定请求的资源现在应该具有不同的 `ETag` 值，则服务器将其改为 `200 OK` 和资源的最新版本进行响应。
 
-> **注意：** 在评估如何使用 `ETag` 和 `Last-Modified` 时，请考虑以下几点：
-> 在缓存重新验证期间，如果 `ETag` 和 `Last-Modified` 都存在，则 `ETag` 优先。
-> 因此，如果你只考虑缓存，你可能会认为 `Last-Modified` 是不必要的。
-> 然而，`Last-Modified` 不仅仅对缓存有用；相反，它是一个标准的 HTTP 标头，内容管理 (CMS) 系统也使用它来显示上次修改时间，由爬虫调整爬取频率，以及用于其他各种目的。
-> 所以考虑到整个 HTTP 生态系统，最好同时提供 `ETag` 和 `Last-Modified`。
+> **备注：** 在评估如何使用 `ETag` 和 `Last-Modified` 时，请考虑以下几点：在缓存重新验证期间，如果 `ETag` 和 `Last-Modified` 都存在，则 `ETag` 优先。因此，如果你只考虑缓存，你可能会认为 `Last-Modified` 是不必要的。然而，`Last-Modified` 不仅仅对缓存有用；相反，它是一个标准的 HTTP 标头，内容管理 (CMS) 系统也使用它来显示上次修改时间，由爬虫调整爬取频率，以及用于其他各种目的。所以考虑到整个 HTTP 生态系统，最好同时提供 `ETag` 和 `Last-Modified`。
 
 ### 强制重新验证
 
@@ -333,7 +329,7 @@ Cache-Control: no-cache
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-[推荐](https://docs.microsoft.com/en-us/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) 使用 `no-cache` 作为处理这种过时的实现的替代方案，如果从一开始就设置 `no-cache` 就没问题，因为服务器总是会收到请求。
+[推荐](https://docs.microsoft.com/en-us/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching)使用 `no-cache` 作为处理这种过时的实现的替代方案，如果从一开始就设置 `no-cache` 就没问题，因为服务器总是会收到请求。
 
 如果你关心的是共享缓存，你可以通过添加 `private` 来防止意外缓存：
 
@@ -452,7 +448,7 @@ Cache-Control: max-age=31536000
 
 共享缓存主要位于源服务器之前，旨在减少到源服务器的流量。
 
-因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为_**请求折叠**_。
+因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为***请求折叠***。
 
 当请求同时到达时会发生请求折叠，因此即使响应中给出了 `max-age=0` 或 `no-cache`，它也会被重用。
 
@@ -552,8 +548,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 `public` 值具有使响应可存储的效果，即使存在 `Authorization` 标头。
 
-> **注意：** 只有在设置了 `Authorization` 标头时需要存储响应时才应使用 `public` 指令。
-> 否则不需要，因为只要给出了 `max-age`，响应就会存储在共享缓存中。
+> **备注：** 只有在设置了 `Authorization` 标头时需要存储响应时才应使用 `public` 指令。否则不需要，因为只要给出了 `max-age`，响应就会存储在共享缓存中。
 
 因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果您对此感到担忧，您可以选择第二长的值 “37”（1 个月）。
 
@@ -595,9 +590,7 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 **缓存破坏** 是一种通过在内容更改时更改 URL 来使响应在很长一段时间内可缓存的技术。该技术可以应用于所有子资源，例如图像。
 
-> **注意：** 在评估 `immutable` 和 QPACK 的使用时：
-> 如果你担心 `immutable` 会更改 QPACK 提供的预定义值，请考虑
-> 在这种情况下，`immutable` 部分可以通过将 `Cache-Control` 值分成两行来单独编码——尽管这取决于特定 QPACK 实现使用的编码算法。
+> **备注：** 在评估 `immutable` 和 QPACK 的使用时：如果你担心 `immutable` 会更改 QPACK 提供的预定义值，请考虑在这种情况下，`immutable` 部分可以通过将 `Cache-Control` 值分成两行来单独编码——尽管这取决于特定 QPACK 实现使用的编码算法。
 
 ```http
 Cache-Control: public, max-age=31536000
@@ -653,15 +646,15 @@ Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 
 缓存主要资源很困难，因为仅使用 HTTP 缓存规范中的标准指令，在服务器上更新内容时无法主动删除缓存内容。
 
-但是，可以通过部署托管缓存（例如 CDN 或服务工作者）来实现。
+但是，可以通过部署托管缓存（例如 CDN 或 service worker）来实现。
 
 例如，允许通过 API 或仪表板操作清除缓存的 CDN 将通过存储主要资源并仅在服务器上发生更新时显式清除相关缓存来实现更积极的缓存策略。
 
-如果服务工作者可以在服务器上发生更新时删除缓存 API 中的内容，它也可以这样做。
+如果 service worker 可以在服务器上发生更新时删除缓存 API 中的内容，它也可以这样做。
 
 有关更多信息，请参阅 CDN 文档，并查阅 [service worker 文档](/zh-CN/docs/Web/API/Service_Worker_API)。
 
-## 参考
+## 参见
 
 - [RFC 9111: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/RFC9111)
 - [Caching Tutorial - Mark Nottingham](https://www.mnot.net/cache_docs/)
