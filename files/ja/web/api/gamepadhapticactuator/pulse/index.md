@@ -12,58 +12,43 @@ tags:
   - pulse
 translation_of: Web/API/GamepadHapticActuator/pulse
 ---
-<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
+{{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-<p>{{domxref("GamepadHapticActuator")}} インターフェイスの <strong><code>pulse()</code></strong> メソッドは、指定された期間、特定の強度でハードウェアパルスを作成します。</p>
+{{domxref("GamepadHapticActuator")}} インターフェイスの **`pulse()`** メソッドは、指定された期間、特定の強度でハードウェアパルスを作成します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js notranslate">gamepadHapticActuatorInstance.pulse(<em>value</em>, <em>duration</em>).then(function(result) { ... });</pre>
+```js
+gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><em>value</em></dt>
- <dd>パルスの強度を表す double 。これはハードウェアの型によって異なりますが、通常は 0.0 (強度なし) から 1.0 (完全な強度) の値を取ります。</dd>
- <dt><em>duration</em></dt>
- <dd>パルスの持続時間をミリ秒で表す double 。</dd>
-</dl>
+- _value_
+  - : パルスの強度を表す double 。これはハードウェアの型によって異なりますが、通常は 0.0 (強度なし) から 1.0 (完全な強度) の値を取ります。
+- _duration_
+  - : パルスの持続時間をミリ秒で表す double 。
 
-<div class="note">
-<p><strong>Note</strong>: <code>pulse()</code> への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。</p>
-</div>
+> **Note:** `pulse()` への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>パルスが正常に完了したときに <code>true</code> の値で解決される promise 。</p>
+パルスが正常に完了したときに `true` の値で解決される promise 。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>TBC</p>
+TBC
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('GamepadExtensions', '#dom-gamepadhapticactuator-pulse', 'pulse()')}}</td>
-   <td>{{Spec2('GamepadExtensions')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                         | ステータス                               | 備考     |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
+| {{SpecName('GamepadExtensions', '#dom-gamepadhapticactuator-pulse', 'pulse()')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.GamepadHapticActuator.pulse")}}</p>
+{{Compat("api.GamepadHapticActuator.pulse")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Gamepad API](/ja/docs/Web/API/Gamepad_API)

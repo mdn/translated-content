@@ -10,43 +10,45 @@ tags:
 translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 original_slug: Web/Guide/API/Gamepad
 ---
-<p>{{DefaultAPISidebar("Gamepad API")}}</p>
+{{DefaultAPISidebar("Gamepad API")}}
 
-<p><span class="seoSummary">HTML5 はリッチでインタラクティブなゲームを開発するために必要なコンポーネントを多く搭載しています。 <code>&lt;canvas&gt;</code> や WebGL、 <code>&lt;audio&gt;</code> に <code>&lt;video&gt;</code> などの技術は、今までネイティブコードを書く必要のあった機能をサポートできるほどに成長しました。ゲームパッド API は開発者とデザイナーにゲームパッドやコントローラーへのアクセスを提供するものです。</span></p>
+HTML5 はリッチでインタラクティブなゲームを開発するために必要なコンポーネントを多く搭載しています。 `<canvas>` や WebGL、 `<audio>` に `<video>` などの技術は、今までネイティブコードを書く必要のあった機能をサポートできるほどに成長しました。ゲームパッド API は開発者とデザイナーにゲームパッドやコントローラーへのアクセスを提供するものです。
 
-<p><a href="/ja/docs/Web/API/Gamepad_API">ゲームパッドAPI</a> は {{ domxref("Window") }} オブジェクトにゲームパッドとコントローラー (以下、ゲームパッド) の状態を読み取る新しいイベントをいくつか追加します。さらに、 {{ domxref("Gamepad") }} というゲームパッドの接続状態が得られるオブジェクトと {{ domxref("navigator.getGamepads") }} というゲームパッドの一覧を取得できるメソッドが追加されます。</p>
+[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) は {{ domxref("Window") }} オブジェクトにゲームパッドとコントローラー (以下、ゲームパッド) の状態を読み取る新しいイベントをいくつか追加します。さらに、 {{ domxref("Gamepad") }} というゲームパッドの接続状態が得られるオブジェクトと {{ domxref("navigator.getGamepads") }} というゲームパッドの一覧を取得できるメソッドが追加されます。
 
-<h2 id="conntecting" name="conntecting">ゲームパッドの接続</h2>
+## ゲームパッドの接続
 
-<p>新しいゲームパッドが接続された時、アクティブなページは {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを受け取ります。ページ読み込み時にゲームパッドがすでに接続されている場合、ゲームパッドのボタンを押すなどの操作をした時に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントがアクティブなページに対して発生します。</p>
+新しいゲームパッドが接続された時、アクティブなページは {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを受け取ります。ページ読み込み時にゲームパッドがすでに接続されている場合、ゲームパッドのボタンを押すなどの操作をした時に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントがアクティブなページに対して発生します。
 
-<div class="blockIndicator geckoVersionNote">
-<p>Firefox では、ページが見える状態でかつユーザーによるゲームパッドの操作を受け付けたときにのみ、ゲームパッドが利用可能になります。これによって、ユーザーを特定する Fingerprinting に利用されることを防止しています。一度一つのコントローラーが操作されれば、他のコントローラーも自動で接続され利用可能になります。</p>
-</div>
+Firefox では、ページが見える状態でかつユーザーによるゲームパッドの操作を受け付けたときにのみ、ゲームパッドが利用可能になります。これによって、ユーザーを特定する Fingerprinting に利用されることを防止しています。一度一つのコントローラーが操作されれば、他のコントローラーも自動で接続され利用可能になります。
 
-<p>以下のようにして {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} を使用します:</p>
+以下のようにして {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} を使用します:
 
-<pre class="brush: js; notranslate">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
     e.gamepad.index, e.gamepad.id,
     e.gamepad.buttons.length, e.gamepad.axes.length);
 });
-</pre>
+```
 
-<p>ゲームパッドはそれぞれ固有の ID を <code>gamepad</code> プロパティの中に持っています。</p>
+ゲームパッドはそれぞれ固有の ID を `gamepad` プロパティの中に持っています。
 
-<h2 id="disconnecting" name="disconnecting">ゲームパッドの切断</h2>
+## ゲームパッドの切断
 
-<p>ゲームパッドが切断されると、ゲームパッドが以前に受信したデータ(例: {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} )があると、2番目のイベント(例: {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} )がフォーカスされたウィンドウにディスパッチします:</p>
+ゲームパッドが切断されると、ゲームパッドが以前に受信したデータ(例: {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} )があると、2 番目のイベント(例: {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} )がフォーカスされたウィンドウにディスパッチします:
 
-<pre class="brush: js notranslate">window.addEventListener("gamepaddisconnected", function(e) {
+```js
+window.addEventListener("gamepaddisconnected", function(e) {
   console.log("Gamepad disconnected from index %d: %s",
     e.gamepad.index, e.gamepad.id);
-});</pre>
+});
+```
 
-<p>ゲームパッドの {{domxref("Gamepad.index", "index")}} というプロパティは同じタイプの複数のコントローラーが使用されている場合であっても、システムに接続されたデバイスごとにユニークになります。 <code>Index</code> プロパティもまた {{ domxref("Navigator.getGamepads()") }} として戻される {{jsxref("Array")}} の index として機能します。</p>
+ゲームパッドの {{domxref("Gamepad.index", "index")}} というプロパティは同じタイプの複数のコントローラーが使用されている場合であっても、システムに接続されたデバイスごとにユニークになります。 `Index` プロパティもまた {{ domxref("Navigator.getGamepads()") }} として戻される {{jsxref("Array")}} の index として機能します。
 
-<pre class="brush: js notranslate">var gamepads = {};
+```js
+var gamepads = {};
 
 function gamepadHandler(event, connecting) {
   var gamepad = event.gamepad;
@@ -62,79 +64,82 @@ function gamepadHandler(event, connecting) {
 
 window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
 window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
-</pre>
+```
 
-<p>この前の例ではイベントが完了した後に <code>gamepad</code> プロパティがどのように保持できるかを示しています - 後でデバイスの状態照会のために使用する技術となります。</p>
+この前の例ではイベントが完了した後に `gamepad` プロパティがどのように保持できるかを示しています - 後でデバイスの状態照会のために使用する技術となります。
 
-<h2 id="querying" name="querying">Gamepad オブジェクトの問い合わせ</h2>
+## Gamepad オブジェクトの問い合わせ
 
-<p>ご覧のように、上述の <strong>gamepad</strong> イベントは {{ domxref("Gamepad") }} オブジェクトを返すイベントオブジェクト、上の <code>gamepad</code> のプロパティが含まれています。複数のゲームパッド(すなわち、そのID ) を一度に接続される可能性があるため、イベントを発生させたのはどのゲームパッドを決定するためにこれらを使用することができます。それへの参照を保持し、それがボタンや軸のいずれかの時点で押されているかを知るために照会するなど、{{ domxref("Gamepad") }} オブジェクトから様々なことを行うことができます。そうすることで、多くの場合、今回と次回のイベント発生とゲームパッドの状態を知っておく必要があり、ゲームやその他のインタラクティブな Web ページであることが望ましいです。</p>
+ご覧のように、上述の **gamepad** イベントは {{ domxref("Gamepad") }} オブジェクトを返すイベントオブジェクト、上の `gamepad` のプロパティが含まれています。複数のゲームパッド(すなわち、その ID ) を一度に接続される可能性があるため、イベントを発生させたのはどのゲームパッドを決定するためにこれらを使用することができます。それへの参照を保持し、それがボタンや軸のいずれかの時点で押されているかを知るために照会するなど、{{ domxref("Gamepad") }} オブジェクトから様々なことを行うことができます。そうすることで、多くの場合、今回と次回のイベント発生とゲームパッドの状態を知っておく必要があり、ゲームやその他のインタラクティブな Web ページであることが望ましいです。
 
-<p>このようなチェックを実行すると、開発者はゲームパッドやゲームパッドの状態に基づいて、現在のフレームのための意思決定を行うために必要なアニメーションループ (例 : {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}) と一緒に {{ domxref("Gamepad") }} オブジェクトを使用して関与する傾向があります。</p>
+このようなチェックを実行すると、開発者はゲームパッドやゲームパッドの状態に基づいて、現在のフレームのための意思決定を行うために必要なアニメーションループ (例 : {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}) と一緒に {{ domxref("Gamepad") }} オブジェクトを使用して関与する傾向があります。
 
-<p>{{ domxref("Navigator.getGamepads()") }} メソッドは現在 Web ページから見える {{ domxref("Gamepad") }} オブジェクト (ゲームパッドが繋がっていない時は毎回 null が返される ) のような、すべてのデバイスを配列として戻します。これは、同じ情報を得るために使用することができます。例えば、 以下に示すように上記の最初のコード例を書き換えます。</p>
+{{ domxref("Navigator.getGamepads()") }} メソッドは現在 Web ページから見える {{ domxref("Gamepad") }} オブジェクト (ゲームパッドが繋がっていない時は毎回 null が返される ) のような、すべてのデバイスを配列として戻します。これは、同じ情報を得るために使用することができます。例えば、 以下に示すように上記の最初のコード例を書き換えます。
 
-<pre class="brush: js notranslate">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
     gp.index, gp.id,
     gp.buttons.length, gp.axes.length);
-});</pre>
+});
+```
 
-<p>{{ domxref("Gamepad") }} オブジェクトの機能は以下の通りです。</p>
+{{ domxref("Gamepad") }} オブジェクトの機能は以下の通りです。
 
-<ul>
- <li><code>id</code>: コントローラーに関する情報を含んだ文字列です。これは厳密には指定されていなく、Firefox では、コントローラーのUSBベンダと製品IDを含んでいる2つの4桁16進数字列、およびドライバーから提供されるようなコントローラーの名前といった3つの情報が、ダッシュ (<code>-</code>) により分離され含まれています。この情報はユーザーへの有益なフィードバックを表示するとともに、デバイスのコントロールのマッピングを見つけることができるようにします。</li>
- <li><code>index</code>: 現在システムに接続されているゲームパッドごとに固有の整数。この値は複数のコントローラーを区別するために使用できます。デバイスを切断してから新しいデバイスを接続すると、以前のインデックスが再利用されることに注意してください。</li>
- <li><code>mapping</code>: ブラウザがデバイス上のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列。現在、サポートされている既知のレイアウト - <a href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping">標準のゲームパッド</a>は1つしかありません。ブラウザがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 <code>mapping</code> プロパティは文字列 <code>standard</code> に設定されます。</li>
- <li><code>connected</code>:ゲームパッドがシステムに接続されているかどうかを示すブール値。もし接続されている場合は <code>True</code>。接続されていない場合は <code>False</code> が設定されます。</li>
- <li><code>buttons</code>: デバイス上に存在するボタンを表す {{ domxref("GamepadButton") }} オブジェクトの配列。各 {{ domxref("GamepadButton") }} には、<code>pressed</code> プロパティと <code>value</code> のプロパティがあります。
-  <ul>
-   <li><code>pressed</code> プロパティは、ボタンが現在押されている (<code>true</code>) か押されていない (<code>false</code>) かを示すブール値です。&gt;</li>
-   <li><code>value</code> プロパティは、現代の多くのゲームパッドのトリガなど、アナログボタンの表示を有効にするために使用される浮動小数点値です。値は 0.0..1.0 の範囲に正規化され、 0.0 は押されていないボタンを表し、 1.0 は完全に押されたボタンを表します。</li>
-  </ul>
- </li>
- <li><code>axes</code>: デバイス上に軸があるコントロールを表す配列 (例：アナログサムスティック)。 配列の各エントリは-1.0〜1.0の範囲の浮動小数点値で、最小値 (-1.0) から最大値 (1.0) までの軸の位置を表します。</li>
- <li><code>timestamp</code>: このゲームパッドのデータが最後に更新された時刻を表す {{ domxref("DOMHighResTimeStamp") }} を返します。この値により、開発者は <code>axes</code> と <code>button</code> のデータがハードウェアから更新されたかどうかを判断できます。 値は、 {{ domxref("PerformanceTiming") }} インターフェースの <code>navigationStart</code> 属性との相対値でなければなりません。 値は単調に増加します。つまり、更新の順序を決定するために比較することができます。新しい値は常に古い値よりも大きいか等しいためです。このプロパティは現在 Firefox ではサポートされていません。</li>
-</ul>
+- `id`: コントローラーに関する情報を含んだ文字列です。これは厳密には指定されていなく、Firefox では、コントローラーの USB ベンダと製品 ID を含んでいる 2 つの 4 桁 16 進数字列、およびドライバーから提供されるようなコントローラーの名前といった 3 つの情報が、ダッシュ (`-`) により分離され含まれています。この情報はユーザーへの有益なフィードバックを表示するとともに、デバイスのコントロールのマッピングを見つけることができるようにします。
+- `index`: 現在システムに接続されているゲームパッドごとに固有の整数。この値は複数のコントローラーを区別するために使用できます。デバイスを切断してから新しいデバイスを接続すると、以前のインデックスが再利用されることに注意してください。
+- `mapping`: ブラウザがデバイス上のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列。現在、サポートされている既知のレイアウト - [標準のゲームパッド](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping)は 1 つしかありません。ブラウザがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 `mapping` プロパティは文字列 `standard` に設定されます。
+- `connected`:ゲームパッドがシステムに接続されているかどうかを示すブール値。もし接続されている場合は `True`。接続されていない場合は `False` が設定されます。
+- `buttons`: デバイス上に存在するボタンを表す {{ domxref("GamepadButton") }} オブジェクトの配列。各 {{ domxref("GamepadButton") }} には、`pressed` プロパティと `value` のプロパティがあります。
 
-<div class="note">
-<p><strong>注</strong>: Gamepadオブジェクトは、セキュリティ上の理由から {{ domxref("Window") }} オブジェクトではなく {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントで使用できます。一度リファレンスを取得すると、そのプロパティでゲームパッドの現在の状態に関する情報を照会できます。 このオブジェクトは、ゲームパッドの状態が変わるたびに更新されます。</p>
-</div>
+  - `pressed` プロパティは、ボタンが現在押されている (`true`) か押されていない (`false`) かを示すブール値です。>
+  - `value` プロパティは、現代の多くのゲームパッドのトリガなど、アナログボタンの表示を有効にするために使用される浮動小数点値です。値は 0.0..1.0 の範囲に正規化され、 0.0 は押されていないボタンを表し、 1.0 は完全に押されたボタンを表します。
 
-<h3 id="Using_button_information" name="Using_button_information">ボタン情報の使用</h3>
+- `axes`: デバイス上に軸があるコントロールを表す配列 (例：アナログサムスティック)。 配列の各エントリは-1.0〜1.0 の範囲の浮動小数点値で、最小値 (-1.0) から最大値 (1.0) までの軸の位置を表します。
+- `timestamp`: このゲームパッドのデータが最後に更新された時刻を表す {{ domxref("DOMHighResTimeStamp") }} を返します。この値により、開発者は `axes` と `button` のデータがハードウェアから更新されたかどうかを判断できます。 値は、 {{ domxref("PerformanceTiming") }} インターフェースの `navigationStart` 属性との相対値でなければなりません。 値は単調に増加します。つまり、更新の順序を決定するために比較することができます。新しい値は常に古い値よりも大きいか等しいためです。このプロパティは現在 Firefox ではサポートされていません。
 
-<p>1つのゲームパッドの接続情報を表示する簡単な例を見てみましょう (後続のゲームパッド接続を無視します)。ゲームパッドの右側にある4つのゲームパッドボタンを使用してボールを画面の周りに移動できます。<a href="http://chrisdavidmills.github.io/gamepad-buttons/">デモをライブで見ることができ</a>ことができ、Githubで<a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">ソースコードを見つけることができます</a>。</p>
+> **Note:** **注**: Gamepad オブジェクトは、セキュリティ上の理由から {{ domxref("Window") }} オブジェクトではなく {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントで使用できます。一度リファレンスを取得すると、そのプロパティでゲームパッドの現在の状態に関する情報を照会できます。 このオブジェクトは、ゲームパッドの状態が変わるたびに更新されます。
 
-<p>まず、いくつかの変数を宣言します: 接続情報が書き込まれる <code>gamepadInfo</code> のパラグラフ、移動する <code>ball</code>、<code>requestAnimation Frame</code> の ID として機能する <code>start</code> 変数、ボールを移動するための位置変更子として機能する a および b 変数、および短縮形変数 これは、　{{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} および {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} クロスブラウザフォークで使用されます。</p>
+### ボタン情報の使用
 
-<pre class="brush: js notranslate">var gamepadInfo = document.getElementById("gamepad-info");
+1 つのゲームパッドの接続情報を表示する簡単な例を見てみましょう (後続のゲームパッド接続を無視します)。ゲームパッドの右側にある 4 つのゲームパッドボタンを使用してボールを画面の周りに移動できます。[デモをライブで見ることができ](http://chrisdavidmills.github.io/gamepad-buttons/)ことができ、Github で[ソースコードを見つけることができます](https://github.com/chrisdavidmills/gamepad-buttons/tree/master)。
+
+まず、いくつかの変数を宣言します: 接続情報が書き込まれる `gamepadInfo` のパラグラフ、移動する `ball`、`requestAnimation Frame` の ID として機能する `start` 変数、ボールを移動するための位置変更子として機能する a および b 変数、および短縮形変数 これは、　{{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} および {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} クロスブラウザフォークで使用されます。
+
+```js
+var gamepadInfo = document.getElementById("gamepad-info");
 var ball = document.getElementById("ball");
 var start;
 var a = 0;
 var b = 0;
-</pre>
+```
 
-<p>次に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを使用して、接続されているゲームパッドを確認します。接続されると {{ domxref("Navigator.getGamepads()") }}<code>[0]</code> を使用してゲームパッドを取得し、ゲームパッドに関する情報をゲームパッドの情報 <code>div</code> に出力し、全体のボールの動きが始まる <code>gameLoop()</code> 関数が呼び出されます。</p>
+次に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを使用して、接続されているゲームパッドを確認します。接続されると {{ domxref("Navigator.getGamepads()") }}`[0]` を使用してゲームパッドを取得し、ゲームパッドに関する情報をゲームパッドの情報 `div` に出力し、全体のボールの動きが始まる `gameLoop()` 関数が呼び出されます。
 
-<pre class="brush: js notranslate">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
 
   gameLoop();
-});</pre>
+});
+```
 
-<p>これで {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用して、ゲームパッドが再び切断されたかどうかを確認します。 もしそうならば、 {{DOMxRef("Window.requestAnimationFrame", "requestAnimationFrame()")}} ループ (下記参照) を停止し、ゲームパッドの情報を元の状態に戻します。</p>
+これで {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用して、ゲームパッドが再び切断されたかどうかを確認します。 もしそうならば、 {{DOMxRef("Window.requestAnimationFrame", "requestAnimationFrame()")}} ループ (下記参照) を停止し、ゲームパッドの情報を元の状態に戻します。
 
-<pre class="brush: js notranslate">window.addEventListener("gamepaddisconnected", function(e) {
+```js
+window.addEventListener("gamepaddisconnected", function(e) {
   gamepadInfo.innerHTML = "Waiting for gamepad.";
 
   cancelRequestAnimationFrame(start);
-});</pre>
+});
+```
 
-<p>Chrome では異なる挙動になります。変数にゲームパッドの最新の状態を常に保存するのではなく、スナップショットを保存するだけなので、 Chrome で同じことを行うにはポーリングしてから {{ domxref("Gamepad") }} オブジェクトをコードで使用する必要があり、それは利用可能です。私たちはこれを {{ domxref("Window.setInterval()") }} オブジェクトが利用可能になると、ゲームパッド情報が出力され、ゲームループが開始され、 {{ domxref("Window.clearInterval()") }} を使用して間隔がクリアされます。 Chrome {{ domxref("Navigator.getGamepads()") }} の古いバージョンでは、 Webkit 接頭辞を使用して実装されています。下位互換性のために、接頭辞付きのバージョンと関数の標準バージョンの両方を検出して処理しようとします。</p>
+Chrome では異なる挙動になります。変数にゲームパッドの最新の状態を常に保存するのではなく、スナップショットを保存するだけなので、 Chrome で同じことを行うにはポーリングしてから {{ domxref("Gamepad") }} オブジェクトをコードで使用する必要があり、それは利用可能です。私たちはこれを {{ domxref("Window.setInterval()") }} オブジェクトが利用可能になると、ゲームパッド情報が出力され、ゲームループが開始され、 {{ domxref("Window.clearInterval()") }} を使用して間隔がクリアされます。 Chrome {{ domxref("Navigator.getGamepads()") }} の古いバージョンでは、 Webkit 接頭辞を使用して実装されています。下位互換性のために、接頭辞付きのバージョンと関数の標準バージョンの両方を検出して処理しようとします。
 
-<pre class="brush: js notranslate">var interval;
+```js
+var interval;
 
 if (!('ongamepadconnected' in window)) {
   // No gamepad events available, poll instead.
@@ -143,7 +148,7 @@ if (!('ongamepadconnected' in window)) {
 
 function pollGamepads() {
   var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
-  for (var i = 0; i &lt; gamepads.length; i++) {
+  for (var i = 0; i < gamepads.length; i++) {
     var gp = gamepads[i];
     if (gp) {
       gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id +
@@ -152,13 +157,15 @@ function pollGamepads() {
       clearInterval(interval);
     }
   }
-}</pre>
+}
+```
 
-<p>今度はメインのゲームループです。ループが実行されるたびに、4つのボタンの1つが押されているかどうかがチェックされます。そうすると、<code>a</code> と <code>b</code> の移動変数の値を適切に更新し、 {{ cssxref("left") }} と {{ cssxref("top") }} のプロパティを更新し、その値を <code>a</code> および <code>b</code> とする。これはボールを画面の周りに動かす効果があります。 現在のバージョンの Chrome (この記事の執筆時点ではバージョン34) では、ボタンの値は {{ domxref("GamepadButton") }} オブジェクトではなく、 double 値の配列として保存されます。</p>
+今度はメインのゲームループです。ループが実行されるたびに、4 つのボタンの 1 つが押されているかどうかがチェックされます。そうすると、`a` と `b` の移動変数の値を適切に更新し、 {{ cssxref("left") }} と {{ cssxref("top") }} のプロパティを更新し、その値を `a` および `b` とする。これはボールを画面の周りに動かす効果があります。 現在のバージョンの Chrome (この記事の執筆時点ではバージョン 34) では、ボタンの値は {{ domxref("GamepadButton") }} オブジェクトではなく、 double 値の配列として保存されます。
 
-<p>この作業がすべて完了したら、 <code>requestAnimationFrame()</code> を使用して <code>gameLoop()</code> を再び実行して次のアニメーションフレームを要求します。</p>
+この作業がすべて完了したら、 `requestAnimationFrame()` を使用して `gameLoop()` を再び実行して次のアニメーションフレームを要求します。
 
-<pre class="brush: js notranslate">function buttonPressed(b) {
+```js
+function buttonPressed(b) {
   if (typeof(b) == "object") {
     return b.pressed;
   }
@@ -187,13 +194,15 @@ function gameLoop() {
   ball.style.top = b * 2 + "px";
 
   start = requestAnimationFrame(gameLoop);
-}</pre>
+}
+```
 
-<h2 id="Complete_example_Displaying_gamepad_state" name="Complete_example_Displaying_gamepad_state">完全な例: ゲームパッドの状態を表示する</h2>
+## 完全な例: ゲームパッドの状態を表示する
 
-<p>この例では、 {{ domxref("Gamepad") }} オブジェクト、 {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベント、 {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用してシステムに接続されているすべてのゲームパッドの状態を表示します。<a href="https://luser.github.io/gamepadtest/">デモを見て</a>、Githubの<a href="https://github.com/luser/gamepadtest">完全なソースコード</a>を見ることができます。</p>
+この例では、 {{ domxref("Gamepad") }} オブジェクト、 {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベント、 {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用してシステムに接続されているすべてのゲームパッドの状態を表示します。[デモを見て](https://luser.github.io/gamepadtest/)、Github の[完全なソースコード](https://github.com/luser/gamepadtest)を見ることができます。
 
-<pre class="brush: js notranslate">var haveEvents = 'ongamepadconnected' in window;
+```js
+var haveEvents = 'ongamepadconnected' in window;
 var controllers = {};
 
 function connecthandler(e) {
@@ -212,7 +221,7 @@ function addgamepad(gamepad) {
 
   var b = document.createElement("div");
   b.className = "buttons";
-  for (var i = 0; i &lt; gamepad.buttons.length; i++) {
+  for (var i = 0; i < gamepad.buttons.length; i++) {
     var e = document.createElement("span");
     e.className = "button";
     //e.id = "b" + i;
@@ -225,7 +234,7 @@ function addgamepad(gamepad) {
   var a = document.createElement("div");
   a.className = "axes";
 
-  for (var i = 0; i &lt; gamepad.axes.length; i++) {
+  for (var i = 0; i < gamepad.axes.length; i++) {
     var p = document.createElement("progress");
     p.className = "axis";
     //p.id = "a" + i;
@@ -270,7 +279,7 @@ function updateStatus() {
     var d = document.getElementById("controller" + j);
     var buttons = d.getElementsByClassName("button");
 
-    for (i = 0; i &lt; controller.buttons.length; i++) {
+    for (i = 0; i < controller.buttons.length; i++) {
       var b = buttons[i];
       var val = controller.buttons[i];
       var pressed = val == 1.0;
@@ -290,7 +299,7 @@ function updateStatus() {
     }
 
     var axes = d.getElementsByClassName("axis");
-    for (i = 0; i &lt; controller.axes.length; i++) {
+    for (i = 0; i < controller.axes.length; i++) {
       var a = axes[i];
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
       a.setAttribute("value", controller.axes[i] + 1);
@@ -302,7 +311,7 @@ function updateStatus() {
 
 function scangamepads() {
   var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
-  for (var i = 0; i &lt; gamepads.length; i++) {
+  for (var i = 0; i < gamepads.length; i++) {
     if (gamepads[i]) {
       if (gamepads[i].index in controllers) {
         controllers[gamepads[i].index] = gamepads[i];
@@ -318,27 +327,15 @@ window.addEventListener("gamepaddisconnected", disconnecthandler);
 
 if (!haveEvents) {
  setInterval(scangamepads, 500);
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | 状態                         | 備考     |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}} | {{Spec2("Gamepad")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Gamepad")}}</p>
+{{Compat("api.Gamepad")}}

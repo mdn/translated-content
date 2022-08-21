@@ -9,94 +9,65 @@ tags:
   - Reference
 translation_of: Web/API/Gamepad
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a> の <strong><code>Gamepad</code></strong> インターフェースはそれぞれのゲームパッドやその他のコントローラーを定義し、ボタンのプッシュや軸位置やIDといった情報にアクセスできるようにします。</p>
+[Gamepad API](/ja/docs/Web/API/Gamepad_API) の **`Gamepad`** インターフェースはそれぞれのゲームパッドやその他のコントローラーを定義し、ボタンのプッシュや軸位置や ID といった情報にアクセスできるようにします。
 
-<p>Gamepad オブジェクトは２つのうちのどちらかの方法で取得できます : <span class="tlid-translation translation"><span title="">Gamepadオブジェクトは、</span></span>{{event("gamepadconnected")}} <span class="tlid-translation translation"><span title="">イベントと </span></span>{{event("gamepaddisconnected")}} <span class="tlid-translation translation"><span title="">イベントの </span></span><code>gamepad</code><span class="tlid-translation translation"><span title=""> プロパティを使用する方法、</span></span>{{domxref("Navigator.getGamepads()")}} <span class="tlid-translation translation"><span title="">メソッドが返した配列内の任意の位置を取得する方法のいずれかで返すことができます。</span></span></p>
+Gamepad オブジェクトは２つのうちのどちらかの方法で取得できます : Gamepad オブジェクトは、{{event("gamepadconnected")}} イベントと {{event("gamepaddisconnected")}} イベントの `gamepad` プロパティを使用する方法、{{domxref("Navigator.getGamepads()")}} メソッドが返した配列内の任意の位置を取得する方法のいずれかで返すことができます。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("Gamepad.axes")}} {{readonlyInline}}</dt>
- <dd><span class="tlid-translation translation"><span title="">デバイス上に軸があるコントロールを表す配列です (例 : アナログスティック)。</span></span></dd>
- <dt>{{domxref("Gamepad.buttons")}} {{readonlyInline}}</dt>
- <dd>デバイス上のボタンを表す {{domxref("gamepadButton")}} のオブジェクトの配列。</dd>
- <dt>{{domxref("Gamepad.connected")}} {{readonlyInline}}</dt>
- <dd>ゲームパッドがシステムに繋がっているかを表す真偽値。</dd>
- <dt>{{domxref("Gamepad.displayId")}} {{readonlyInline}}</dt>
- <dd><span class="tlid-translation translation"><span title="">関連する </span></span><dfn>{{domxref("VRDisplay")}}</dfn><span class="tlid-translation translation"><span title=""> の </span></span><dfn>{{domxref("VRDisplay.displayId")}}</dfn><span class="tlid-translation translation"><span title=""> を返します (該当する場合)</span></span><dfn>— </dfn><span class="tlid-translation translation"><span title="">ゲームパッドが表示されているシーンを制御している </span></span><dfn><code>VRDisplay</code></dfn><span class="tlid-translation translation"><span title=""> を返します。</span></span></dd>
- <dt>{{domxref("Gamepad.id")}} {{readonlyInline}}</dt>
- <dd>コントローラーに関する識別情報を含む {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("Gamepad.index")}} {{readonlyInline}}</dt>
- <dd>システムに現在接続しているそれぞれのデバイスを表すユニークな整数値。</dd>
- <dt>{{domxref("Gamepad.mapping")}} {{readonlyInline}}</dt>
- <dd><span class="tlid-translation translation"><span title="">ブラウザがデバイス上のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列。</span></span></dd>
- <dt>{{domxref("Gamepad.timestamp")}} {{readonlyInline}}</dt>
- <dd><span class="tlid-translation translation"><span title="">このゲームパッドのデータが最後に更新された時刻を表す</span></span> {{domxref("DOMHighResTimeStamp")}}。</dd>
-</dl>
+- {{domxref("Gamepad.axes")}} {{readonlyInline}}
+  - : デバイス上に軸があるコントロールを表す配列です (例 : アナログスティック)。
+- {{domxref("Gamepad.buttons")}} {{readonlyInline}}
+  - : デバイス上のボタンを表す {{domxref("gamepadButton")}} のオブジェクトの配列。
+- {{domxref("Gamepad.connected")}} {{readonlyInline}}
+  - : ゲームパッドがシステムに繋がっているかを表す真偽値。
+- {{domxref("Gamepad.displayId")}} {{readonlyInline}}
+  - : 関連する _{{domxref("VRDisplay")}}_ の _{{domxref("VRDisplay.displayId")}}_ を返します (該当する場合)*— *ゲームパッドが表示されているシーンを制御している _`VRDisplay`_ を返します。
+- {{domxref("Gamepad.id")}} {{readonlyInline}}
+  - : コントローラーに関する識別情報を含む {{domxref("DOMString")}}。
+- {{domxref("Gamepad.index")}} {{readonlyInline}}
+  - : システムに現在接続しているそれぞれのデバイスを表すユニークな整数値。
+- {{domxref("Gamepad.mapping")}} {{readonlyInline}}
+  - : ブラウザがデバイス上のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列。
+- {{domxref("Gamepad.timestamp")}} {{readonlyInline}}
+  - : このゲームパッドのデータが最後に更新された時刻を表す {{domxref("DOMHighResTimeStamp")}}。
 
-<h3 id="Gamepad_の実験的な拡張機能"><span class="tlid-translation translation"><span title="">Gamepad の実験的な拡張機能</span></span></h3>
+### Gamepad の実験的な拡張機能
 
-<p><span class="tlid-translation translation"><span title="">以下のインターフェイスは、</span></span>{{SpecName("GamepadExtensions")}} <span class="tlid-translation translation"><span title="">の仕様で定義されており、触覚フィードバックや WebVR コントローラーのポーズ情報などの実験的機能へのアクセスを提供します。</span></span></p>
+以下のインターフェイスは、{{SpecName("GamepadExtensions")}} の仕様で定義されており、触覚フィードバックや WebVR コントローラーのポーズ情報などの実験的機能へのアクセスを提供します。
 
-<dl>
- <dt>{{domxref("Gamepad.hand")}} {{readonlyInline}}</dt>
- <dd><span class="tlid-translation translation"><span title="">コントローラーがどの手で持っているか、または持っている可能性が最も高いかを定義する列挙型。</span></span></dd>
- <dt>{{domxref("Gamepad.hapticActuators")}} {{readonlyInline}}</dt>
- <dd>{{domxref("GamepadHapticActuator")}} <span class="tlid-translation translation"><span title="">オブジェクトを含む配列。各オブジェクトはコントローラーで使用できる触覚フィードバックハードウェアを表します。</span></span></dd>
- <dt>{{domxref("Gamepad.pose")}} {{readonlyInline}}</dt>
- <dd>
- <div class="text-wrap tlid-copy-target">
- <div class="result-shield-container tlid-copy-target"><span class="tlid-translation translation"><span title="">WebVR コントローラーに関連付けられたポーズ情報 (例えば 3D 空間における位置と向き) を表す </span></span>{{domxref("GamepadPose")}}<span class="tlid-translation translation"><span title=""> オブジェクト。</span></span></div>
- </div>
- </dd>
-</dl>
+- {{domxref("Gamepad.hand")}} {{readonlyInline}}
+  - : コントローラーがどの手で持っているか、または持っている可能性が最も高いかを定義する列挙型。
+- {{domxref("Gamepad.hapticActuators")}} {{readonlyInline}}
+  - : {{domxref("GamepadHapticActuator")}} オブジェクトを含む配列。各オブジェクトはコントローラーで使用できる触覚フィードバックハードウェアを表します。
+- {{domxref("Gamepad.pose")}} {{readonlyInline}}
+  - : WebVR コントローラーに関連付けられたポーズ情報 (例えば 3D 空間における位置と向き) を表す {{domxref("GamepadPose")}} オブジェクト。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
-});</pre>
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>初期定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}}</td>
-   <td>{{Spec2("WebVR 1.1")}}</td>
-   <td>{{domxref("Gamepad.displayId")}} プロパティの定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("GamepadExtensions", "#partial-gamepad-interface", "Gamepad extensions")}}</td>
-   <td>{{Spec2("GamepadExtensions")}}</td>
-   <td><a href="#experimental_extensions_to_gamepad">Experimental extensions to Gamepad</a> の定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                                     | コメント                                                                         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}}                                     | {{Spec2("Gamepad")}}             | 初期定義                                                                         |
+| {{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}}             | {{Spec2("WebVR 1.1")}}             | {{domxref("Gamepad.displayId")}} プロパティの定義。                  |
+| {{SpecName("GamepadExtensions", "#partial-gamepad-interface", "Gamepad extensions")}} | {{Spec2("GamepadExtensions")}} | [Experimental extensions to Gamepad](#experimental_extensions_to_gamepad) の定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
+{{Compat("api.Gamepad")}}
 
+## 参照
 
-<p>{{Compat("api.Gamepad")}}</p>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/Guide/API/Gamepad">Gamepad API の利用</a></li>
- <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)
+- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
