@@ -12,7 +12,7 @@ tags:
   - 入力要素
   - 入力型
   - リファレンス
-browser-compat: html.elements.input.input-date
+browser-compat: html.elements.input.type_date
 translation_of: Web/HTML/Element/input/date
 ---
 

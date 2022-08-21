@@ -10,6 +10,7 @@ tags:
   - フォーム
   - 入力型
   - 要素
+browser-compat: html.elements.input.type_checkbox
 translation_of: Web/HTML/Element/input/checkbox
 ---
 {{HTMLRef}}
@@ -311,7 +312,7 @@ otherCheckbox.addEventListener('change', () => {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-checkbox")}}
+{{Compat}}
 
 ## 関連情報
 

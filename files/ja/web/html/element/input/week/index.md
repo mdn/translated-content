@@ -14,7 +14,7 @@ tags:
   - リファレンス
   - Week
   - 週
-browser-compat: html.elements.input.input-week
+browser-compat: html.elements.input.type_week
 translation_of: Web/HTML/Element/input/week
 ---
 

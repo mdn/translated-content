@@ -13,6 +13,7 @@ tags:
   - Reference
   - Reset Button
   - reset
+browser-compat: html.elements.input.type_reset
 translation_of: Web/HTML/Element/input/reset
 ---
 {{HTMLRef("Input_types")}}
@@ -149,7 +150,7 @@ translation_of: Web/HTML/Element/input/reset
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-reset")}}
+{{Compat}}
 
 ## 関連情報
 
