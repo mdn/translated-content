@@ -14,79 +14,52 @@ tags:
   - removeSourceBuffer
 translation_of: Web/API/MediaSource/removeSourceBuffer
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>{{domxref("MediaSource")}} インターフェイスの <strong><code>removeSourceBuffer()</code></strong> メソッドは、この <code>MediaSource</code> オブジェクトに関連付けられた {{domxref("SourceBuffers")}} リストから指定された {{domxref("SourceBuffer")}} を削除します。</p>
+{{domxref("MediaSource")}} インターフェイスの **`removeSourceBuffer()`** メソッドは、この `MediaSource` オブジェクトに関連付けられた {{domxref("SourceBuffers")}} リストから指定された {{domxref("SourceBuffer")}} を削除します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>mediaSource</em>.removeSourceBuffer(<em>sourceBuffer</em>);</pre>
+```
+mediaSource.removeSourceBuffer(sourceBuffer);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>sourceBuffer</dt>
- <dd>削除する {{domxref("SourceBuffer")}} オブジェクト。</dd>
-</dl>
+- sourceBuffer
+  - : 削除する {{domxref("SourceBuffer")}} オブジェクト。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NotFoundError</code></td>
-   <td>指定された sourceBuffer は {{domxref("MediaSource.sourceBuffers")}} に存在しません。</td>
-  </tr>
- </tbody>
-</table>
+| 例外            | 説明                                                                                             |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| `NotFoundError` | 指定された sourceBuffer は {{domxref("MediaSource.sourceBuffers")}} に存在しません。 |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">for (i = 0; i &lt; 10; i++) {
-  var</span> sourceBuffer <span class="operator token">=</span> mediaSource<span class="punctuation token">.</span><span class="function token">addSourceBuffer<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
+```js
+for (i = 0; i < 10; i++) {
+  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
-</code>mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
-</pre>
+mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#idl-def-mediasource-removesourcebuffer(sourcebuffer)', 'removeSourceBuffer()')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                             | 状態                                             | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
+| {{SpecName('Media Source Extensions', '#idl-def-mediasource-removesourcebuffer(sourcebuffer)', 'removeSourceBuffer()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.MediaSource.removeSourceBuffer")}}
 
+## 関連情報
 
-<p>{{Compat("api.MediaSource.removeSourceBuffer")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

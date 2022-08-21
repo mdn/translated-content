@@ -13,59 +13,62 @@ tags:
   - Video
 translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ---
-<div>{{DefaultAPISidebar("MediaStream Recording")}}</div>
+{{DefaultAPISidebar("MediaStream Recording")}}
 
-<p>MediaStream Recording API の使用の記事では、 {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} から返されるように、{{domxref("MediaRecorder")}} インターフェイスを使用してハードウェアデバイスによって生成された {{domxref("MediaStream")}} をキャプチャする方法について説明しましたが、記録する <code>MediaStream</code> のソースとして HTML メディア要素（{{HTMLElement("audio")}} または {{HTMLElement("video")}}）も使用できます。 この記事では、それを実現する例を見ていきます。</p>
+MediaStream Recording API の使用の記事では、 {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} から返されるように、{{domxref("MediaRecorder")}} インターフェイスを使用してハードウェアデバイスによって生成された {{domxref("MediaStream")}} をキャプチャする方法について説明しましたが、記録する `MediaStream` のソースとして HTML メディア要素（{{HTMLElement("audio")}} または {{HTMLElement("video")}}）も使用できます。 この記事では、それを実現する例を見ていきます。
 
-<div id="Example">
-<h2 id="HTML_content" name="HTML_content">HTML の内容</h2>
+## HTML の内容
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;p&gt;Click the "Start" button to begin video recording for a few seconds. You can stop
+```html hidden
+<p>Click the "Start" button to begin video recording for a few seconds. You can stop
    the video by clicking the creatively-named "Stop" button. The "Download"
    button will download the received data (although it's in a raw, unwrapped form
    that isn't very useful).
-&lt;/p&gt;
-&lt;br&gt;
-</pre>
-</div>
+</p>
+<br>
+```
 
-<p>まずは HTML の要点を見てみましょう。 これ以上のものはありませんが、アプリのコア操作の一部ではなく、単なる情報提供です。</p>
+まずは HTML の要点を見てみましょう。 これ以上のものはありませんが、アプリのコア操作の一部ではなく、単なる情報提供です。
 
-<pre class="brush: html notranslate">&lt;div class="left"&gt;
-  &lt;div id="startButton" class="button"&gt;
+```html
+<div class="left">
+  <div id="startButton" class="button">
     Start
-  &lt;/div&gt;
-  &lt;h2&gt;Preview&lt;/h2&gt;
-  &lt;video id="preview" width="160" height="120" autoplay muted&gt;&lt;/video&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+  <h2>Preview</h2>
+  <video id="preview" width="160" height="120" autoplay muted></video>
+</div>
+```
 
-<p>2つの欄で主要なインターフェースを提示します。 左欄には、Start（開始）ボタンと動画プレビューを表示する {{HTMLElement("video")}} 要素があります。 これは、ユーザーのカメラが見ている動画です。 {{htmlattrxref("autoplay", "video")}} 属性は、カメラからストリームが到着したらすぐに表示するために使用し、{{htmlattrxref("muted", "video")}} 属性は、ユーザーのマイクからの音声をスピーカーに出力しないように使用していることに注意してください。 出力すると醜いフィードバックループ（ハウリング）を引き起こします。</p>
+2 つの欄で主要なインターフェースを提示します。 左欄には、Start（開始）ボタンと動画プレビューを表示する {{HTMLElement("video")}} 要素があります。 これは、ユーザーのカメラが見ている動画です。 {{htmlattrxref("autoplay", "video")}} 属性は、カメラからストリームが到着したらすぐに表示するために使用し、{{htmlattrxref("muted", "video")}} 属性は、ユーザーのマイクからの音声をスピーカーに出力しないように使用していることに注意してください。 出力すると醜いフィードバックループ（ハウリング）を引き起こします。
 
-<pre class="brush: html notranslate">&lt;div class="right"&gt;
-  &lt;div id="stopButton" class="button"&gt;
+```html
+<div class="right">
+  <div id="stopButton" class="button">
     Stop
-  &lt;/div&gt;
-  &lt;h2&gt;Recording&lt;/h2&gt;
-  &lt;video id="recording" width="160" height="120" controls&gt;&lt;/video&gt;
-  &lt;a id="downloadButton" class="button"&gt;
+  </div>
+  <h2>Recording</h2>
+  <video id="recording" width="160" height="120" controls></video>
+  <a id="downloadButton" class="button">
     Download
-  &lt;/a&gt;
-&lt;/div&gt;
-</pre>
+  </a>
+</div>
+```
 
-<p>右欄には、Stop（停止）ボタンと録画された動画の再生に使用する <code>&lt;video&gt;</code> 要素があります。 再生パネルには <code>autoplay</code> を設定せずに（メディアが到着しても再生が開始されない）、{{htmlattrxref("controls", "video")}} を設定して、再生や一時停止などのユーザーコントロールを表示するように指示しています。</p>
+右欄には、Stop（停止）ボタンと録画された動画の再生に使用する `<video>` 要素があります。 再生パネルには `autoplay` を設定せずに（メディアが到着しても再生が開始されない）、{{htmlattrxref("controls", "video")}} を設定して、再生や一時停止などのユーザーコントロールを表示するように指示しています。
 
-<p>再生要素の下には、録画した動画をダウンロードするためのボタンがあります。</p>
+再生要素の下には、録画した動画をダウンロードするためのボタンがあります。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="bottom"&gt;
-  &lt;pre id="log"&gt;&lt;/pre&gt;
-&lt;/div&gt;</pre>
-<strong>CSS content</strong>
+```html hidden
+<div class="bottom">
+  <pre id="log"></pre>
+</div>
+```
 
-<pre class="brush: css notranslate">body {
+**CSS content**
+
+```css hidden
+body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -109,18 +112,19 @@ h2 {
 .bottom {
   clear: both;
   padding-top: 10px;
-}</pre>
-</div>
+}
+```
 
-<h2 id="JavaScript_content" name="JavaScript_content">JavaScript の内容</h2>
+## JavaScript の内容
 
-<p>それでは、JavaScript コードを見てみましょう。 結局のところ、これがアクションの大部分が起こるところです！</p>
+それでは、JavaScript コードを見てみましょう。 結局のところ、これがアクションの大部分が起こるところです！
 
-<h3 id="Setting_up_global_variables" name="Setting_up_global_variables">グローバル変数の設定</h3>
+### グローバル変数の設定
 
-<p>必要なグローバル変数をいくつか設定することから始めます。</p>
+必要なグローバル変数をいくつか設定することから始めます。
 
-<pre class="brush: js notranslate">let preview = document.getElementById("preview");
+```js
+let preview = document.getElementById("preview");
 let recording = document.getElementById("recording");
 let startButton = document.getElementById("startButton");
 let stopButton = document.getElementById("stopButton");
@@ -128,102 +132,105 @@ let downloadButton = document.getElementById("downloadButton");
 let logElement = document.getElementById("log");
 
 let recordingTimeMS = 5000;
-</pre>
+```
 
-<p>これらのほとんどは、私たちが取り組む必要がある要素への参照です。 最後の <code>recordingTimeMS</code> は 5000 ミリ秒（5秒）に設定されています。 これは、録画する動画の長さを指定します。</p>
+これらのほとんどは、私たちが取り組む必要がある要素への参照です。 最後の `recordingTimeMS` は 5000 ミリ秒（5 秒）に設定されています。 これは、録画する動画の長さを指定します。
 
-<h3 id="Utility_functions" name="Utility_functions">ユーティリティ関数</h3>
+### ユーティリティ関数
 
-<p>次に、後で使用するユーティリティ関数をいくつか作成します。</p>
+次に、後で使用するユーティリティ関数をいくつか作成します。
 
-<pre class="brush: js notranslate">function log(msg) {
+```js
+function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
-</pre>
+```
 
-<p><code>log()</code> 関数は、ユーザーと情報を共有できるように、テキスト文字列を {{HTMLElement("div")}} に出力するために使用します。 それほどきれいではありませんが、この仕事は私たちの目的のために行われます。</p>
+`log()` 関数は、ユーザーと情報を共有できるように、テキスト文字列を {{HTMLElement("div")}} に出力するために使用します。 それほどきれいではありませんが、この仕事は私たちの目的のために行われます。
 
-<pre class="brush: js notranslate">function wait(delayInMS) {
-  return new Promise(resolve =&gt; setTimeout(resolve, delayInMS));
+```js
+function wait(delayInMS) {
+  return new Promise(resolve => setTimeout(resolve, delayInMS));
 }
-</pre>
+```
 
-<p><code>wait()</code> 関数は、指定したミリ秒数が経過すると解決する新しい {{jsxref("Promise")}} を返します。 タイムアウトハンドラ関数として promise の解決ハンドラを指定して、{{domxref("window.setTimeout()")}} を呼び出す<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>を使用して動作します。 これにより、タイムアウトを使用するときに promise 構文を使用できます。 これは、後で説明するように、promise を連鎖させるときに非常に便利です。</p>
+`wait()` 関数は、指定したミリ秒数が経過すると解決する新しい {{jsxref("Promise")}} を返します。 タイムアウトハンドラ関数として promise の解決ハンドラを指定して、{{domxref("window.setTimeout()")}} を呼び出す[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して動作します。 これにより、タイムアウトを使用するときに promise 構文を使用できます。 これは、後で説明するように、promise を連鎖させるときに非常に便利です。
 
-<h3 id="Starting_media_recording" name="Starting_media_recording">メディア録画の開始</h3>
+### メディア録画の開始
 
-<p><code>startRecording()</code> 関数は録画プロセスの開始を処理します。</p>
+`startRecording()` 関数は録画プロセスの開始を処理します。
 
-<pre class="brush: js notranslate">function startRecording(stream, lengthInMS) {
+```js
+function startRecording(stream, lengthInMS) {
   let recorder = new MediaRecorder(stream);
   let data = [];
 
-  recorder.ondataavailable = event =&gt; data.push(event.data);
+  recorder.ondataavailable = event => data.push(event.data);
   recorder.start();
   log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
 
-  let stopped = new Promise((resolve, reject) =&gt; {
+  let stopped = new Promise((resolve, reject) => {
     recorder.onstop = resolve;
-    recorder.onerror = event =&gt; reject(event.name);
+    recorder.onerror = event => reject(event.name);
   });
 
   let recorded = wait(lengthInMS).then(
-    () =&gt; recorder.state == "recording" &amp;&amp; recorder.stop()
+    () => recorder.state == "recording" && recorder.stop()
   );
 
   return Promise.all([
     stopped,
     recorded
   ])
-  .then(() =&gt; data);
+  .then(() => data);
 }
-</pre>
+```
 
-<p><code>startRecording()</code> は2つの入力パラメータを取ります。 録画元の {{domxref("MediaStream")}} と記録するミリ秒単位の長さです。 指定されたミリ秒数以下のメディアを常に録画しますが、その時間に達する前にメディアが停止すると、{{domxref("MediaRecorder")}} も自動的に録画を停止します。</p>
+`startRecording()` は 2 つの入力パラメータを取ります。 録画元の {{domxref("MediaStream")}} と記録するミリ秒単位の長さです。 指定されたミリ秒数以下のメディアを常に録画しますが、その時間に達する前にメディアが停止すると、{{domxref("MediaRecorder")}} も自動的に録画を停止します。
 
-<dl>
- <dt>2行目</dt>
- <dd>入力ストリーム（<code>stream</code>）の録画を処理する <code>MediaRecorder</code> を作成します。</dd>
- <dt>3行目</dt>
- <dd>空の配列 <code>data</code> を作成します。 これは、{{domxref("MediaRecorder.ondataavailable", "ondataavailable")}} イベントハンドラに提供されたメディアデータの {{domxref("Blob")}} を保持するために使用します。</dd>
- <dt>5行目</dt>
- <dd>{{event("dataavailable")}} イベントのハンドラを設定します。 受信したイベントの <code>data</code> プロパティはメディアデータを含む {{domxref("Blob")}} です。 イベントハンドラは単純に <code>Blob</code> を <code>data</code> 配列にプッシュ（末尾に追加）します。</dd>
- <dt>6〜7行目</dt>
- <dd>{{domxref("MediaRecorder.start", "recorder.start()")}} を呼び出して録画処理を開始し、<code>recorder</code> の更新された状態と録画される秒数とともにメッセージをログに出力します。</dd>
- <dt>9〜12行目</dt>
- <dd><code>stopped</code> という名前の新しい {{jsxref("Promise")}} を作成します。 これは、<code>MediaRecorder</code> の {{domxref("MediaRecorder.onstop", "onstop")}} イベントハンドラが呼び出されると解決し、<code>MediaRecorder</code> の {{domxref("MediaRecorder.onerror", "onerror")}} イベントハンドラが呼び出されると拒否します。 拒否ハンドラは、発生したエラーの名前を入力として受け取ります。</dd>
- <dt>14〜16行目</dt>
- <dd><code>recorded</code> という名前の新しい <code>Promise</code> を作成します。 これは、指定されたミリ秒数が経過すると解決します。 解決すると、<code>MediaRecorder</code> が録画中の場合は停止します。</dd>
- <dt>18〜22行目</dt>
- <dd>これらの行は、2つの <code>Promise</code>（<code>stopped</code> と <code>recorded</code>）の両方が解決したときに満たされる新しい <code>Promise</code> を作成します。 それが解決すると、配列データは <code>startRecording(</code>) によってその呼び出し元に返されます。</dd>
-</dl>
+- 2 行目
+  - : 入力ストリーム（`stream`）の録画を処理する `MediaRecorder` を作成します。
+- 3 行目
+  - : 空の配列 `data` を作成します。 これは、{{domxref("MediaRecorder.ondataavailable", "ondataavailable")}} イベントハンドラに提供されたメディアデータの {{domxref("Blob")}} を保持するために使用します。
+- 5 行目
+  - : {{event("dataavailable")}} イベントのハンドラを設定します。 受信したイベントの `data` プロパティはメディアデータを含む {{domxref("Blob")}} です。 イベントハンドラは単純に `Blob` を `data` 配列にプッシュ（末尾に追加）します。
+- 6〜7 行目
+  - : {{domxref("MediaRecorder.start", "recorder.start()")}} を呼び出して録画処理を開始し、`recorder` の更新された状態と録画される秒数とともにメッセージをログに出力します。
+- 9〜12 行目
+  - : `stopped` という名前の新しい {{jsxref("Promise")}} を作成します。 これは、`MediaRecorder` の {{domxref("MediaRecorder.onstop", "onstop")}} イベントハンドラが呼び出されると解決し、`MediaRecorder` の {{domxref("MediaRecorder.onerror", "onerror")}} イベントハンドラが呼び出されると拒否します。 拒否ハンドラは、発生したエラーの名前を入力として受け取ります。
+- 14〜16 行目
+  - : `recorded` という名前の新しい `Promise` を作成します。 これは、指定されたミリ秒数が経過すると解決します。 解決すると、`MediaRecorder` が録画中の場合は停止します。
+- 18〜22 行目
+  - : これらの行は、2 つの `Promise`（`stopped` と `recorded`）の両方が解決したときに満たされる新しい `Promise` を作成します。 それが解決すると、配列データは `startRecording(`) によってその呼び出し元に返されます。
 
-<h3 id="Stopping_the_input_stream" name="Stopping_the_input_stream">入力ストリームの停止</h3>
+### 入力ストリームの停止
 
-<p><code>stop()</code> 関数は単に入力メディアを停止します。</p>
+`stop()` 関数は単に入力メディアを停止します。
 
-<pre class="brush: js notranslate">function stop(stream) {
-  stream.getTracks().forEach(track =&gt; track.stop());
+```js
+function stop(stream) {
+  stream.getTracks().forEach(track => track.stop());
 }
-</pre>
+```
 
-<p>これは {{domxref("MediaStream.getTracks()")}} を呼び出し、{{jsxref("Array.forEach", "forEach()")}} を使用してストリーム内の各トラックの {{domxref("MediaStreamTrack.stop()")}} を呼び出すことによって機能します。</p>
+これは {{domxref("MediaStream.getTracks()")}} を呼び出し、{{jsxref("Array.forEach", "forEach()")}} を使用してストリーム内の各トラックの {{domxref("MediaStreamTrack.stop()")}} を呼び出すことによって機能します。
 
-<h3 id="Getting_an_input_stream_and_setting_up_the_recorder" name="Getting_an_input_stream_and_setting_up_the_recorder">入力ストリームを取得してレコーダーを設定</h3>
+### 入力ストリームを取得してレコーダーを設定
 
-<p>それでは、この例で最も複雑なコードを見てみましょう。 開始ボタンをクリックしたときのイベントハンドラです。</p>
+それでは、この例で最も複雑なコードを見てみましょう。 開始ボタンをクリックしたときのイベントハンドラです。
 
-<pre class="brush: js notranslate">startButton.addEventListener("click", function() {
+```js
+startButton.addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true
-  }).then(stream =&gt; {
+  }).then(stream => {
     preview.srcObject = stream;
     downloadButton.href = stream;
     preview.captureStream = preview.captureStream || preview.mozCaptureStream;
-    return new Promise(resolve =&gt; preview.onplaying = resolve);
-  }).then(() =&gt; startRecording(preview.captureStream(), recordingTimeMS))
-  .then (recordedChunks =&gt; {
+    return new Promise(resolve => preview.onplaying = resolve);
+  }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
+  .then (recordedChunks => {
     let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
@@ -233,50 +240,50 @@ let recordingTimeMS = 5000;
         recordedBlob.type + " media.");
   })
   .catch(log);
-}, false);</pre>
+}, false);
+```
 
-<p>{{event("click")}} イベントが発生すると、次のようになります。</p>
+{{event("click")}} イベントが発生すると、次のようになります。
 
-<dl>
- <dt>2〜4行目</dt>
- <dd>{{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} は、動画トラックと音声トラックの両方を持つ新しい {{domxref("MediaStream")}} を要求するために呼び出します。 これが録画するストリームです。</dd>
- <dt>5〜9行目</dt>
- <dd><code>getUserMedia()</code> から返された Promise が解決すると、プレビューの {{HTMLElement("video")}} 要素の {{domxref("HTMLMediaElement.srcObject","srcObject")}} プロパティを入力ストリームに設定し、ユーザーのカメラでキャプチャしている動画をプレビューボックスに表示します。 <code>&lt;video&gt;</code> 要素はミュートしているので、音声は再生しません。 Download（ダウンロード）ボタンのリンクも、ストリームを参照するように設定します。 次に、8行目で、{{domxref("MediaRecorder.captureStream()")}} メソッドがなければ接頭辞が付いた <code>preview.mozCaptureStream()</code> を呼び出すように <code>preview.captureStream()</code> を設定して、コードが Firefox で機能するようにします。 その後、プレビュー動画の再生開始時に解決する新しい {{jsxref("Promise")}} を作成して返します。</dd>
- <dt>10行目</dt>
- <dd>プレビュー動画の再生が開始されると、録画するメディアがあることがわかります。 したがって、先ほど作成した <code><a href="#starting_media_recording">startRecording()</a></code> 関数を呼び出し、プレビュー動画ストリーム（録画するソースメディアとして）と、<code>recordingTimeMS</code>（録画するメディアのミリ秒数として）を渡します。 前述のように、<code>startRecording()</code> は、録画が完了すると、解決ハンドラが呼び出される {{jsxref("Promise")}}（録画されたメディアデータのチャンクを含む {{domxref("Blob")}} オブジェクトの配列を入力として受け取る）を返します。</dd>
- <dt>11〜15行目</dt>
- <dd>録画プロセスの解決ハンドラは、ローカルに <code>recordedChunks</code> として知られるメディアデータの <code>Blob</code> の配列を入力として受け取ります。 最初にすることは、{{domxref("Blob.Blob", "Blob()")}} コンストラクターがオブジェクトの配列を1つのオブジェクトに連結するという事実を利用して、チャンクを MIME タイプが <code>"video/webm"</code> の単一の {{domxref("Blob")}} にマージすることです。 次に、{{domxref("URL.createObjectURL()")}} を使用して <code>Blob</code> を参照する URL を作成します。 これは、ダウンロードされた動画再生要素の {{htmlattrxref("src", "video")}} 属性の値（<code>Blob</code> から動画を再生できるようにする）とダウンロードボタンのリンクのターゲットになります。
- <p>その後、ダウンロードボタンの <code>download</code> 属性が設定されます。 {{htmlattrxref("download", "a")}} 属性は <code>Boolean</code> にすることができますが、ダウンロードするファイルの名前として使用する文字列に設定することもできます。 そのため、ダウンロードリンクの <code>download</code> 属性を <code>"RecordedVideo.webm"</code> に設定することで、ボタンをクリックすると内容が録画された動画である <code>"RecordedVideo.webm"</code> という名前のファイルをダウンロードするようにブラウザーに指示します。</p>
- </dd>
- <dt>17〜18行目</dt>
- <dd>記録されたメディアのサイズと種類は、2つの動画とダウンロードボタンの下のログ領域に出力されます。</dd>
- <dt>20行目</dt>
- <dd>すべての <code>Promise</code> の <code>catch()</code> は、<code>log()</code> 関数を呼び出すことによってエラーをロギング領域に出力します。</dd>
-</dl>
+- 2〜4 行目
+  - : {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} は、動画トラックと音声トラックの両方を持つ新しい {{domxref("MediaStream")}} を要求するために呼び出します。 これが録画するストリームです。
+- 5〜9 行目
+  - : `getUserMedia()` から返された Promise が解決すると、プレビューの {{HTMLElement("video")}} 要素の {{domxref("HTMLMediaElement.srcObject","srcObject")}} プロパティを入力ストリームに設定し、ユーザーのカメラでキャプチャしている動画をプレビューボックスに表示します。 `<video>` 要素はミュートしているので、音声は再生しません。 Download（ダウンロード）ボタンのリンクも、ストリームを参照するように設定します。 次に、8 行目で、{{domxref("MediaRecorder.captureStream()")}} メソッドがなければ接頭辞が付いた `preview.mozCaptureStream()` を呼び出すように `preview.captureStream()` を設定して、コードが Firefox で機能するようにします。 その後、プレビュー動画の再生開始時に解決する新しい {{jsxref("Promise")}} を作成して返します。
+- 10 行目
+  - : プレビュー動画の再生が開始されると、録画するメディアがあることがわかります。 したがって、先ほど作成した [`startRecording()`](#starting_media_recording) 関数を呼び出し、プレビュー動画ストリーム（録画するソースメディアとして）と、`recordingTimeMS`（録画するメディアのミリ秒数として）を渡します。 前述のように、`startRecording()` は、録画が完了すると、解決ハンドラが呼び出される {{jsxref("Promise")}}（録画されたメディアデータのチャンクを含む {{domxref("Blob")}} オブジェクトの配列を入力として受け取る）を返します。
+- 11〜15 行目
 
-<h3 id="Handling_the_stop_button" name="Handling_the_stop_button">停止ボタンの取り扱い</h3>
+  - : 録画プロセスの解決ハンドラは、ローカルに `recordedChunks` として知られるメディアデータの `Blob` の配列を入力として受け取ります。 最初にすることは、{{domxref("Blob.Blob", "Blob()")}} コンストラクターがオブジェクトの配列を 1 つのオブジェクトに連結するという事実を利用して、チャンクを MIME タイプが `"video/webm"` の単一の {{domxref("Blob")}} にマージすることです。 次に、{{domxref("URL.createObjectURL()")}} を使用して `Blob` を参照する URL を作成します。 これは、ダウンロードされた動画再生要素の {{htmlattrxref("src", "video")}} 属性の値（`Blob` から動画を再生できるようにする）とダウンロードボタンのリンクのターゲットになります。
 
-<p>最後のコードでは、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して停止ボタンの {{event("click")}} イベントのハンドラを追加します。</p>
+    その後、ダウンロードボタンの `download` 属性が設定されます。 {{htmlattrxref("download", "a")}} 属性は `Boolean` にすることができますが、ダウンロードするファイルの名前として使用する文字列に設定することもできます。 そのため、ダウンロードリンクの `download` 属性を `"RecordedVideo.webm"` に設定することで、ボタンをクリックすると内容が録画された動画である `"RecordedVideo.webm"` という名前のファイルをダウンロードするようにブラウザーに指示します。
 
-<pre class="brush: js notranslate">stopButton.addEventListener("click", function() {
+- 17〜18 行目
+  - : 記録されたメディアのサイズと種類は、2 つの動画とダウンロードボタンの下のログ領域に出力されます。
+- 20 行目
+  - : すべての `Promise` の `catch()` は、`log()` 関数を呼び出すことによってエラーをロギング領域に出力します。
+
+### 停止ボタンの取り扱い
+
+最後のコードでは、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して停止ボタンの {{event("click")}} イベントのハンドラを追加します。
+
+```js
+stopButton.addEventListener("click", function() {
   stop(preview.srcObject);
-}, false);</pre>
+}, false);
+```
 
-<p>これは先ほど説明した <code><a href="#stopping_the_input_stream">stop()</a></code> 関数を呼び出すだけです。</p>
-</div>
+これは先ほど説明した [`stop()`](#stopping_the_input_stream) 関数を呼び出すだけです。
 
-<h2 id="Result" name="Result">結果</h2>
+## 結果
 
-<p>残りの HTML と上に示されていない CSS をすべてまとめると、次のようになり、動作します。</p>
+残りの HTML と上に示されていない CSS をすべてまとめると、次のようになり、動作します。
 
-<p>{{ EmbedLiveSample('Example', 600, 440, "", "", "", "camera;microphone") }}</p>
+{{ EmbedLiveSample('Example', 600, 440, "", "", "", "camera;microphone") }}
 
-<p>API がどのように使用されているかの説明には重要ではないため上で隠されている部分も含めて、{{LiveSampleLink("Example", "すべてのコードを見る")}}ことができます。</p>
+API がどのように使用されているかの説明には重要ではないため上で隠されている部分も含めて、{{LiveSampleLink("Example", "すべてのコードを見る")}}ことができます。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a></li>
- <li><a href="/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Media​Stream Recording API の使用</a></li>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
-</ul>
+- [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API)
+- [Media​Stream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API)
