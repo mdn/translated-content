@@ -1,7 +1,6 @@
 ---
 title: Qu'est-ce que sont les outils de développement ?
 slug: Learn/Common_questions/What_are_browser_developer_tools
-translation_of: Learn/Common_questions/What_are_browser_developer_tools
 l10n:
   sourceCommit: 8c6aa8bde7beff52a5cb3351b764be0a49218ed1
 ---
