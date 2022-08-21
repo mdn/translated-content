@@ -24,7 +24,7 @@ var p = new Proxy(target, {
 
 ### 인자
 
-apply 메소드에는 다음과 같은 인자가 들어온다.. `this는 `handler를 가리킨다.
+apply 메소드에는 다음과 같은 인자가 들어온다.. `this`는 `handler` 를 가리킨다.
 
 - `target`
   - : 대상이 되는 객체(함수)
