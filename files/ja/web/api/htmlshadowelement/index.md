@@ -9,51 +9,32 @@ tags:
   - Web Components
 translation_of: Web/API/HTMLShadowElement
 ---
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p><code><strong>HTMLShadowElement</strong></code> インターフェースは、<a href="/ja/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> で使用される {{HTMLElement("shadow")}} HTML 要素を表します。</p>
+**`HTMLShadowElement`** インターフェースは、[Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) で使用される {{HTMLElement("shadow")}} HTML 要素を表します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>このインターフェースは、{{domxref("HTMLElement")}} のプロパティを継承しています。</em></p>
+_このインターフェースは、{{domxref("HTMLElement")}} のプロパティを継承しています。_
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>このインターフェースは、{{domxref("HTMLElement")}} のメソッドを継承しています。</em></p>
+_このインターフェースは、{{domxref("HTMLElement")}} のメソッドを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLShadowElement.getDistributedNodes()")}}</dt>
- <dd><code>&lt;shadow&gt;</code> 要素に関連した {{glossary("distributed nodes")}} の静的な {{domxref("NodeList")}} を返す。</dd>
-</dl>
+- {{domxref("HTMLShadowElement.getDistributedNodes()")}}
+  - : `<shadow>` 要素に関連した {{glossary("distributed nodes")}} の静的な {{domxref("NodeList")}} を返す。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="spec-table standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                             | コメント |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} |          |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.HTMLShadowElement")}}</p>
+{{Compat("api.HTMLShadowElement")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>このインターフェースを実装している {{HTMLElement("shadow")}} 要素。</li>
- <li><a href="/ja/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a></li>
-</ul>
-
-<dl>
- <dt> </dt>
-</dl>
+- このインターフェースを実装している {{HTMLElement("shadow")}} 要素。
+- [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM)

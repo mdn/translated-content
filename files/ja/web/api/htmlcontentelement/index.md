@@ -9,47 +9,35 @@ tags:
   - リファレンス
 translation_of: Web/API/HTMLContentElement
 ---
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p>{{Deprecated_header}}</p>
+{{Deprecated_header}}
 
-<p><code><strong>HTMLContentElement</strong></code> インターフェースは {{HTMLElement("content")}} HTML要素を表しており、<a href="/ja/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> で使用されています。</p>
+**`HTMLContentElement`** インターフェースは {{HTMLElement("content")}} HTML 要素を表しており、[Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) で使用されています。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>このインターフェースは {{domxref("HTMLElement")}} のプロパティを継承してます。</em></p>
+_このインターフェースは {{domxref("HTMLElement")}} のプロパティを継承してます。_
 
-<dl>
- <dt>{{domxref("HTMLContentElement.select")}}</dt>
- <dd>{{ htmlattrxref("select", "content") }} というHTMLの属性を反映している {{domxref("DOMString")}} です。その値は、<code>&lt;content&gt;</code> 要素 の代わりに挿入するコンテンツを選択する、カンマで区切られたCSSセレクタのリストです。</dd>
-</dl>
+- {{domxref("HTMLContentElement.select")}}
+  - : {{ htmlattrxref("select", "content") }} という HTML の属性を反映している {{domxref("DOMString")}} です。その値は、`<content>` 要素 の代わりに挿入するコンテンツを選択する、カンマで区切られた CSS セレクタのリストです。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>このインターフェースは {{domxref("HTMLElement")}} のメソッドを継承しています。</em></p>
+_このインターフェースは {{domxref("HTMLElement")}} のメソッドを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLContentElement.getDistributedNodes()")}}</dt>
- <dd>この <code>&lt;content&gt;</code> 要素を {{glossary("distributed nodes")}} と関連づける静的な  {{domxref("NodeList")}} を返します。</dd>
-</dl>
+- {{domxref("HTMLContentElement.getDistributedNodes()")}}
+  - : この `<content>` 要素を {{glossary("distributed nodes")}} と関連づける静的な {{domxref("NodeList")}} を返します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<p>この機能はどの標準企画によっても定義されていません。</p>
+この機能はどの標準企画によっても定義されていません。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("api.HTMLContentElement")}}
 
+## 参照
 
-<p>{{Compat("api.HTMLContentElement")}}</p>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li>このインターフェースを実装している {{HTMLElement("content")}} HTML 要素</li>
- <li><a href="/ja/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a></li>
-</ul>
-
-<dl>
- <dt> </dt>
-</dl>
+- このインターフェースを実装している {{HTMLElement("content")}} HTML 要素
+- [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM)

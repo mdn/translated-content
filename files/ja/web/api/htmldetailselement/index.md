@@ -3,46 +3,34 @@ title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
 translation_of: Web/API/HTMLDetailsElement
 ---
-<div class="blockIndicator note">
-<p>translation in progress</p>
-</div>
+> **Note:** translation in progress
 
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLDetailsElement</code></strong> interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("details")}} elements.</p>
+The **`HTMLDetailsElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("details")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLDetailsElement.open")}}</dt>
- <dd>Is a {{domxref("boolean")}} reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element’s contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.</dd>
-</dl>
+- {{domxref("HTMLDetailsElement.open")}}
+  - : Is a {{domxref("boolean")}} reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element’s contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement">HTML Living Standard</a></li>
- <li><a href="https://www.w3.org/TR/html52/interactive-elements.html#htmldetailselement">HTML 5.2 (W3C Proposed Recommendation)</a></li>
-</ul>
+- [HTML Living Standard](https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement)
+- [HTML 5.2 (W3C Proposed Recommendation)](https://www.w3.org/TR/html52/interactive-elements.html#htmldetailselement)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.HTMLDetailsElement")}}
 
+## See also
 
-<p>{{Compat("api.HTMLDetailsElement")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("details")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("details")}}
