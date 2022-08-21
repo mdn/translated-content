@@ -11,39 +11,37 @@ tags:
   - subscribe
 translation_of: Web/API/PushManager/subscribe
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>{{domxref("PushManager")}} インターフェースの <strong><code>subscribe()</code></strong> メソッドは、プッシュサービスを提供します。</p>
+{{domxref("PushManager")}} インターフェースの **`subscribe()`** メソッドは、プッシュサービスを提供します。
 
-<p>これは、プッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。現在の service worker に既存のサブスクリプションがない場合、新しいプッシュサブスクリプションが生成されます。</p>
+これは、プッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。現在の service worker に既存のサブスクリプションがない場合、新しいプッシュサブスクリプションが生成されます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">​PushManager.subscribe(<em>options</em>).then(function(<em>pushSubscription</em>) { ... } );</pre>
+```
+​PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+```
 
-<h3 id="パラメーター">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>オプションの設定パラメータを含むオブジェクト。次のプロパティを設定できる：
- <ul>
-  <li><code>userVisibleOnly</code>: 返されたプッシュサブスクリプションの効果がユーザーに表示するメッセージにだけ使われるかを示す boolean 値。</li>
-  <li><code>applicationServerKey</code>: プッシュサーバーがアプリケーションサーバーを認証するために使用する <a href="https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA">楕円曲線 DSA</a> P-256 公開鍵を含む、Base64 でエンコードされた {{domxref("DOMString")}} または {{domxref("ArrayBuffer")}}。指定した場合は、アプリケーションサーバーから発するすべてのメッセージで <a href="https://tools.ietf.org/html/rfc8292">VAPID</a> 認証スキームを使用しなければならず、また対応する秘密鍵で署名した JWT を含めなければなりません。この鍵は、データを暗号化するために使用する ECDH 鍵と<em><strong>同じではありません</strong></em>。詳しくは "<a href="https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/">Using VAPID with WebPush</a>" をご覧ください。</li>
- </ul>
+- `options` {{optional_inline}}
 
- <div class="note">
- <p><em><strong>注記:</strong> この引数は Chrome など、一部のブラウザーで必須です。</em></p>
- </div>
- </dd>
-</dl>
+  - : オプションの設定パラメータを含むオブジェクト。次のプロパティを設定できる：
 
-<h3 id="戻り値">戻り値</h3>
+    - `userVisibleOnly`: 返されたプッシュサブスクリプションの効果がユーザーに表示するメッセージにだけ使われるかを示す boolean 値。
+    - `applicationServerKey`: プッシュサーバーがアプリケーションサーバーを認証するために使用する [楕円曲線 DSA](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA) P-256 公開鍵を含む、Base64 でエンコードされた {{domxref("DOMString")}} または {{domxref("ArrayBuffer")}}。指定した場合は、アプリケーションサーバーから発するすべてのメッセージで [VAPID](https://tools.ietf.org/html/rfc8292) 認証スキームを使用しなければならず、また対応する秘密鍵で署名した JWT を含めなければなりません。この鍵は、データを暗号化するために使用する ECDH 鍵と***同じではありません***。詳しくは "[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)" をご覧ください。
 
-<p>{{domxref("PushSubscription")}} オブジェクトを解決する {{jsxref("Promise")}} 。</p>
+    > **Note:** この引数は Chrome など、一部のブラウザーで必須です。
 
-<h2 id="例">例</h2>
+### 戻り値
 
-<pre class="brush: js">this.onpush = function(event) {
+{{domxref("PushSubscription")}} オブジェクトを解決する {{jsxref("Promise")}} 。
+
+## 例
+
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // ここから、IndexedDB にデータを書き込んだり、いずれかのウィンドウに
   // それを送信したり、通知を表示したりできます。
@@ -71,35 +69,19 @@ navigator.serviceWorker.ready.then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#widl-PushManager-subscribe-Promise-PushSubscription--PushSubscriptionOptions-options', 'subscribe()')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                                         | 状態                         | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('Push API', '#widl-PushManager-subscribe-Promise-PushSubscription--PushSubscriptionOptions-options', 'subscribe()')}} | {{Spec2('Push API')}} | 初期定義 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<div>
+{{Compat("api.PushManager.subscribe")}}
 
+## 関連項目
 
-<p>{{Compat("api.PushManager.subscribe")}}</p>
-</div>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
-</ul>
+- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)

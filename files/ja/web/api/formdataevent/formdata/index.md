@@ -2,37 +2,39 @@
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
 tags:
-- API
-- Experimental
-- FormDataEvent
-- Forms
-- Property
-- Reference
-browser-compat: api.FormDataEvent.formData
+  - API
+  - Experimental
+  - FormDataEvent
+  - Forms
+  - Property
+  - Reference
 translation_of: Web/API/FormDataEvent/formData
+browser-compat: api.FormDataEvent.formData
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code>formData</code> は {{domxref("FormDataEvent")}} インターフェイスの読み取り専用プロパティで、このイベントが発行された時点のフォームに含まれていたデータを表す {{domxref("FormData")}} オブジェクトが入っています。</p>
+`formData` は {{domxref("FormDataEvent")}} インターフェイスの読み取り専用プロパティで、このイベントが発行された時点のフォームに含まれていたデータを表す {{domxref("FormData")}} オブジェクトが入っています。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js"><em>formData</em> = formDataEvent.formData</pre>
+```js
+formData = formDataEvent.formData
+```
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>{{domxref("FormData")}} オブジェクト</p>
+{{domxref("FormData")}} オブジェクト
 
-<h2 id="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// フォームの参照を取得
+```js
+// フォームの参照を取得
 
 const formElem = document.querySelector('form');
 
 // submit ハンドラー
 
-formElem.addEventListener('submit', (e) =&gt; {
+formElem.addEventListener('submit', (e) => {
   // フォームの送信時、既定の動作を抑止
   e.preventDefault();
 
@@ -42,7 +44,7 @@ formElem.addEventListener('submit', (e) =&gt; {
 
 // データを取得するための formdata ハンドラー
 
-formElem.addEventListener('formdata', (e) =&gt; {
+formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // イベントオブジェクトからのフォームデータの取得
@@ -55,21 +57,20 @@ formElem.addEventListener('formdata', (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-});</pre>
+});
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("XMLHTTPRequest")}}</li>
-  <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest の使用</a></li>
-  <li><a href="/ja/docs/Web/API/FormData/Using_FormData_Objects">FormData オブジェクトの使用</a></li>
-  <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

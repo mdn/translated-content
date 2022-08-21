@@ -14,38 +14,36 @@ tags:
   - getKey
 translation_of: Web/API/PushSubscription/getKey
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>{{domxref("PushSubscription")}} インターフェースの <code>getKey()</code> メソッドは、サーバに送信されてプッシュメッセージデータを暗号化するために使用される、クライアントパブリックキーを表す {{domxref("ArrayBuffer")}} を返します。</p>
+{{domxref("PushSubscription")}} インターフェースの `getKey()` メソッドは、サーバに送信されてプッシュメッセージデータを暗号化するために使用される、クライアントパブリックキーを表す {{domxref("ArrayBuffer")}} を返します。
 
-<div class="note">
-<p><strong>ノート</strong>： 現在、Firefox のみの実装であり、まだ　Push API 仕様には含まれていません。</p>
-</div>
+> **Note:** **ノート**： 現在、Firefox のみの実装であり、まだ　 Push API 仕様には含まれていません。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">​<span class="pl-k">var</span> key <span class="pl-k">=</span> subscription.getKey(<span class="pl-s"><span class="pl-pds">method</span></span>);</pre>
+```
+​var key = subscription.getKey(method);
+```
 
-<h3 id="パラメーター">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>method</dt>
- <dd>クライアントパブリックキーの生成に使用される暗号化メソッドです。現在、<code>p256dh</code>のみがオプションです。メソッドには次の値がが選べます：
- <ul>
-  <li><code>p256dh</code>： P-256 曲線の <a href="https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E9%8D%B5%E5%85%B1%E6%9C%89">楕円曲線ディフィー・ヘルマン鍵共有</a>（つまり、NIST secp256r1 楕円曲線）。結果としてられるキーは、ANSI X9.62 フォーマットで非圧縮ポイントとなります。</li>
- </ul>
- </dd>
-</dl>
+- method
 
-<h3 id="戻り値">戻り値</h3>
+  - : クライアントパブリックキーの生成に使用される暗号化メソッドです。現在、`p256dh`のみがオプションです。メソッドには次の値がが選べます：
 
-<p>{{domxref("ArrayBuffer")}}。</p>
+    - `p256dh`： P-256 曲線の [楕円曲線ディフィー・ヘルマン鍵共有](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E9%8D%B5%E5%85%B1%E6%9C%89)（つまり、NIST secp256r1 楕円曲線）。結果としてられるキーは、ANSI X9.62 フォーマットで非圧縮ポイントとなります。
 
-<h2 id="例">例</h2>
+### 戻り値
 
-<p><a href="https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/main.js#L51-L116">Push API デモ</a>では、プッシュメッセージデータの暗号化と<a href="https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/server.js">サーバ</a>から特定のサブスクライバにプッシュメッセージを送信するために必要な認証を得るために、getKey('p256dh') と {{domxref("PushSubscription.endpoint")}} を呼び出しています。</p>
+{{domxref("ArrayBuffer")}}。
 
-<pre>reg.pushManager.getSubscription()
+## 例
+
+[Push API デモ](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/main.js#L51-L116)では、プッシュメッセージデータの暗号化と[サーバ](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/server.js)から特定のサブスクライバにプッシュメッセージを送信するために必要な認証を得るために、getKey('p256dh') と {{domxref("PushSubscription.endpoint")}} を呼び出しています。
+
+```
+reg.pushManager.getSubscription()
   .then(function(subscription) {
   // プッシュメッセージからサブスクライブ ／ アンサブスクライブ
   // する任意の UI を有効にする
@@ -69,31 +67,19 @@ translation_of: Web/API/PushSubscription/getKey
   var endpoint = subscription.endpoint;
   var key = subscription.getKey('p256dh');
 
-    ...</pre>
+    ...
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>これは Push API 仕様ですが、<code>getKey()</code> はここに含まれていないことに注意してください。現在は、Firefox だけの実験実装です。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                             | 状態                         | コメント                                                                                                                  |
+| -------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Push API')}} | {{Spec2('Push API')}} | これは Push API 仕様ですが、`getKey()` はここに含まれていないことに注意してください。現在は、Firefox だけの実験実装です。 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.PushSubscription.getKey")}}</p>
+{{Compat("api.PushSubscription.getKey")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
-</ul>
+- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
