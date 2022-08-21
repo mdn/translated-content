@@ -41,7 +41,7 @@ myMap.set(1, 'foobar');
 myMap.set('bar', 'baz');
 ```
 
-### 链式使用 `set()` 方法
+### 链式使用 set()
 
 因为 `set()` 方法返回 `Map` 对象本身，所以你可以像下面这样链式调用它：
 
