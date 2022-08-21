@@ -17,7 +17,7 @@ values()
 
 一个新的 {{jsxref("Map")}} 可迭代对象。
 
-### 使用 `values()`
+### 使用 values()
 
 ```js
 const myMap = new Map();
