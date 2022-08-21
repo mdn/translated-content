@@ -59,17 +59,13 @@ Because of these issues, these properties and methods have been removed.
 
 The `setOrientation()` and `setPosition()` methods have been replaced by setting their property value equivilents. For example `setPosition(x, y, z)` can be achieved by setting `positionX.value`, `positionY.value`, and `positionZ.value` respectively.
 
-## Example
-
-{{page("/en-US/docs/Web/API/AudioContext.createPanner","Example")}}
-
 ## Specifications
 
 {{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.AudioListener")}}
+{{Compat}}
 
 ## See also
 
