@@ -3,52 +3,50 @@ title: SharedWorker
 slug: Web/API/SharedWorker
 translation_of: Web/API/SharedWorker
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p><code><strong>SharedWorker</strong></code> インターフェースは複数のブラウザコンテキストからアクセス可能な Worker を提供します。複数のブラウザコンテキストとは、複数のウィンドウや iframe、Worker などを指します。Dedicated Worker とは異なるインタフェースと、異なるグローバルスコープを持ちます。スコープに関しては {{domxref("SharedWorkerGlobalScope")}} を参照してください。</p>
+**`SharedWorker`** インターフェースは複数のブラウザコンテキストからアクセス可能な Worker を提供します。複数のブラウザコンテキストとは、複数のウィンドウや iframe、Worker などを指します。Dedicated Worker とは異なるインタフェースと、異なるグローバルスコープを持ちます。スコープに関しては {{domxref("SharedWorkerGlobalScope")}} を参照してください。
 
-<div class="note">
-<p><strong>付記：</strong>同じオリジン、つまりプロトコル、ホスト名、ポートが全て同じ場合にのみ、SharedWorker は異なるブラウザコンテキスト間で共有されます。</p>
-</div>
+> **Note:** **付記：**同じオリジン、つまりプロトコル、ホスト名、ポートが全て同じ場合にのみ、SharedWorker は異なるブラウザコンテキスト間で共有されます。
 
-<h2 id="コンストラクタ">コンストラクタ</h2>
+## コンストラクタ
 
-<dl>
- <dt>{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}</dt>
- <dd>指定された URL のスクリプトを実行する SharedWorker を作成します。</dd>
-</dl>
+- {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
+  - : 指定された URL のスクリプトを実行する SharedWorker を作成します。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>{{domxref("EventTarget")}} のプロパティを継承し、 {{domxref("AbstractWorker")}} で定義されるプロパティを実装しています。</em></p>
+_{{domxref("EventTarget")}} のプロパティを継承し、 {{domxref("AbstractWorker")}} で定義されるプロパティを実装しています。_
 
-<dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>type <code>error</code> である {{domxref("ErrorEvent")}} がバブリングした時に呼ばれる {{domxref("EventListener")}}</dd>
- <dt>{{domxref("SharedWorker.port")}} {{readonlyInline}}</dt>
- <dd>通信とコントロールに利用される {{domxref("MessagePort")}} オブジェクトを返します。</dd>
-</dl>
+- {{domxref("AbstractWorker.onerror")}}
+  - : type `error` である {{domxref("ErrorEvent")}} がバブリングした時に呼ばれる {{domxref("EventListener")}}
+- {{domxref("SharedWorker.port")}} {{readonlyInline}}
+  - : 通信とコントロールに利用される {{domxref("MessagePort")}} オブジェクトを返します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>{{domxref("EventTarget")}} のメソッドを継承し、 {{domxref("AbstractWorker")}} に定義されるメソッドを実装します。</em></p>
+_{{domxref("EventTarget")}} のメソッドを継承し、 {{domxref("AbstractWorker")}} に定義されるメソッドを実装します。_
 
-<h2 id="例">例</h2>
+## 例
 
-<p><a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">SharedWorker の基本利用例</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">ライブデモ</a>) には 2 つの HTML ページがあり、それぞれでは JavaScript で単純な計算を行っています。それぞれのスクリプトは計算を行うために同じ JS ファイルを Worker に実行させています。2 つのページが別のウインドウで動作していたとしても、同じ Worker にアクセスできています。</p>
+[SharedWorker の基本利用例](https://github.com/mdn/simple-shared-worker) ([ライブデモ](http://mdn.github.io/simple-shared-worker/)) には 2 つの HTML ページがあり、それぞれでは JavaScript で単純な計算を行っています。それぞれのスクリプトは計算を行うために同じ JS ファイルを Worker に実行させています。2 つのページが別のウインドウで動作していたとしても、同じ Worker にアクセスできています。
 
-<p><code>SharedWorker</code> オブジェクトは {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクタを利用して、次のように作成します：</p>
+`SharedWorker` オブジェクトは {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクタを利用して、次のように作成します：
 
-<pre class="brush: js">var myWorker = new SharedWorker("worker.js");
-</pre>
+```js
+var myWorker = new SharedWorker("worker.js");
+```
 
-<p>それぞれのスクリプトは {{domxref("MessagePort")}} オブジェクトを通じて Worker にアクセスします。このオブジェクトは {{domxref("SharedWorker.port")}} プロパティから取得できます。addEventListener を読んで onmessage イベントのハンドラを登録したら、<code>start()</code> メソッドを呼んでポートを手動で開始できます：</p>
+それぞれのスクリプトは {{domxref("MessagePort")}} オブジェクトを通じて Worker にアクセスします。このオブジェクトは {{domxref("SharedWorker.port")}} プロパティから取得できます。addEventListener を読んで onmessage イベントのハンドラを登録したら、`start()` メソッドを呼んでポートを手動で開始できます：
 
-<pre class="brush: js">myWorker.port.start();</pre>
+```js
+myWorker.port.start();
+```
 
-<p>ポートが開始されたら、Worker に向けてメッセージを送ったり、送られたメッセージを受け取ったりできます。これらには <code>port.postMessage()</code> と <code>port.onmessage</code> を利用します:</p>
+ポートが開始されたら、Worker に向けてメッセージを送ったり、送られたメッセージを受け取ったりできます。これらには `port.postMessage()` と `port.onmessage` を利用します:
 
-<pre class="brush: js">first.onchange = function() {
+```js
+first.onchange = function() {
     myWorker.port.postMessage([first.value,second.value]);
     console.log('Message posted to worker');
   }
@@ -61,11 +59,13 @@ translation_of: Web/API/SharedWorker
   myWorker.port.onmessage = function(e) {
     result1.textContent = e.data;
     console.log('Message received from worker');
-  }</pre>
+  }
+```
 
-<p>Worker の内部では {{domxref("SharedWorkerGlobalScope.onconnect")}} に対してハンドラを設定することで、上述したポートへの接続を処理できます。Worker に関連付けられたポートは  {{event("connect")}} イベントの <code>ports</code> 属性で参照できます。{{domxref("MessagePort")}} <code>の start()</code> メソッドによるポート開始後は、<code>onmessage</code> ハンドラでメインスレッドからのメッセージを処理します。</p>
+Worker の内部では {{domxref("SharedWorkerGlobalScope.onconnect")}} に対してハンドラを設定することで、上述したポートへの接続を処理できます。Worker に関連付けられたポートは {{event("connect")}} イベントの `ports` 属性で参照できます。{{domxref("MessagePort")}} `の start()` メソッドによるポート開始後は、`onmessage` ハンドラでメインスレッドからのメッセージを処理します。
 
-<pre class="brush: js">onconnect = function(e) {
+```js
+onconnect = function(e) {
     var port = e.ports[0];
 
     port.addEventListener('message', function(e) {
@@ -74,34 +74,20 @@ translation_of: Web/API/SharedWorker
     });
 
     port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}</pre>
+}
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName("Web Workers")}} との差分なし</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状況                             | コメント                                          |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("Web Workers")}} との差分なし |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("api.SharedWorker")}}
 
+## 関連情報
 
-<p>{{Compat("api.SharedWorker")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{domxref("Worker")}}</li>
- <li><a class="internal" href="/ja/docs/Web/Guide/Performance/Using_web_workers">Web workers の利用</a></li>
-</ul>
+- {{domxref("Worker")}}
+- [Web workers の利用](/ja/docs/Web/Guide/Performance/Using_web_workers)

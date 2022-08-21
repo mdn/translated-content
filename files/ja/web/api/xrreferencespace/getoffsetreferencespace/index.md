@@ -23,68 +23,72 @@ tags:
   - movement
 translation_of: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 ---
-<p>{{APIRef("WebXR Device API")}}{{secureContext_header}}</p>
+{{APIRef("WebXR Device API")}}{{secureContext_header}}
 
-<p><span class="seoSummary">{{domxref("XRReferenceSpace")}} インターフェイスの <strong><code>getOffsetReferenceSpace()</code></strong> メソッドは、メソッドが呼び出されたオブジェクトと 3D 空間内の特定の点との間の位置の相対的な違いを表す新しい参照空間オブジェクトを返します。</span> <code>getOffsetReferenceSpace()</code> によって返されるオブジェクトは、{{domxref("XRReferenceSpace")}} で呼び出された場合は <code>XRReferenceSpace</code> であり、{{domxref("XRBoundedReferenceSpace")}} で呼び出された場合は <code>XRBoundedReferenceSpace</code> です。</p>
+{{domxref("XRReferenceSpace")}} インターフェイスの **`getOffsetReferenceSpace()`** メソッドは、メソッドが呼び出されたオブジェクトと 3D 空間内の特定の点との間の位置の相対的な違いを表す新しい参照空間オブジェクトを返します。 `getOffsetReferenceSpace()` によって返されるオブジェクトは、{{domxref("XRReferenceSpace")}} で呼び出された場合は `XRReferenceSpace` であり、{{domxref("XRBoundedReferenceSpace")}} で呼び出された場合は `XRBoundedReferenceSpace` です。
 
-<p>つまり、3D 空間にオブジェクトがあり、それに対して別のオブジェクトを相対的に配置する必要がある場合は、<code>getOffsetReferenceSpace()</code> を呼び出して、<em><code>getOffsetReferenceSpace()</code> を呼び出すオブジェクトの位置と向きを基準</em>にして、2番目のオブジェクトに持たせる位置と向きを渡します。</p>
+つまり、3D 空間にオブジェクトがあり、それに対して別のオブジェクトを相対的に配置する必要がある場合は、`getOffsetReferenceSpace()` を呼び出して、*`getOffsetReferenceSpace()` を呼び出すオブジェクトの位置と向きを基準*にして、2 番目のオブジェクトに持たせる位置と向きを渡します。
 
-<p>次に、シーンを描画するときに、オフセット参照空間を使用して、オブジェクトを相互に相対的に配置するだけでなく、必要な変換を適用して、ビューアーの位置に基づいてオブジェクトを適切にレンダリングできます。 これは、<a href="#implementing_rotation_based_on_non-xr_inputs">非 XR 入力に基づく回転の実装</a>の例で示されています。 この例では、この方法を使用して、ユーザーがマウスを使用して視野角をピッチおよびヨーできるようにする方法を示しています。</p>
+次に、シーンを描画するときに、オフセット参照空間を使用して、オブジェクトを相互に相対的に配置するだけでなく、必要な変換を適用して、ビューアーの位置に基づいてオブジェクトを適切にレンダリングできます。 これは、[非 XR 入力に基づく回転の実装](#implementing_rotation_based_on_non-xr_inputs)の例で示されています。 この例では、この方法を使用して、ユーザーがマウスを使用して視野角をピッチおよびヨーできるようにする方法を示しています。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>offsetReferenceSpace</em> = <em>xrReferenceSpace</em>.getOffsetReferenceSpace(<em>originOffset</em>);</pre>
+```
+offsetReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(originOffset);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>originOffset</code></dt>
- <dd>新しい参照空間の原点へのオフセットを指定する {{domxref("XRRigidTransform")}}。 これらの値は、現在の参照空間の位置と向きに追加され、その結果は、新しく作成された {{domxref("XRReferenceSpace")}} の位置と向きとして使用されます。</dd>
-</dl>
+- `originOffset`
+  - : 新しい参照空間の原点へのオフセットを指定する {{domxref("XRRigidTransform")}}。 これらの値は、現在の参照空間の位置と向きに追加され、その結果は、新しく作成された {{domxref("XRReferenceSpace")}} の位置と向きとして使用されます。
 
-<h3 id="Return_value" name="Return_value">返り値</h3>
+### 返り値
 
-<p>メソッドが呼び出された参照空間と同じネイティブの原点を持つが、オブジェクトから <code>originOffset</code> で指定された点までの隔たりを示す原点オフセットを持つ参照空間を記述する新しい {{domxref("XRReferenceSpace")}} オブジェクト。</p>
+メソッドが呼び出された参照空間と同じネイティブの原点を持つが、オブジェクトから `originOffset` で指定された点までの隔たりを示す原点オフセットを持つ参照空間を記述する新しい {{domxref("XRReferenceSpace")}} オブジェクト。
 
-<p>このメソッドを呼び出すオブジェクトが {{domxref("XRBoundedReferenceSpace")}} の場合、返されるオブジェクトも <code>XRBoundedReferenceSpace</code> です。 新しい参照空間の {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} には、元のオブジェクトの <code>boundsGeometry</code> が設定され、それぞれの点に <code>originOffset</code> の逆行列（inverse）が乗算されます。</p>
+このメソッドを呼び出すオブジェクトが {{domxref("XRBoundedReferenceSpace")}} の場合、返されるオブジェクトも `XRBoundedReferenceSpace` です。 新しい参照空間の {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} には、元のオブジェクトの `boundsGeometry` が設定され、それぞれの点に `originOffset` の逆行列（inverse）が乗算されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>以下は、<code>getOffsetReferenceSpace()</code> の使用方法を示すいくつかの例です。</p>
+以下は、`getOffsetReferenceSpace()` の使用方法を示すいくつかの例です。
 
-<h3 id="Teleporting_or_setting_the_position_of_the_viewer" name="Teleporting_or_setting_the_position_of_the_viewer">ビューアーのテレポートまたは位置の設定</h3>
+### ビューアーのテレポートまたは位置の設定
 
-<p>シーンを最初に作成するときに、3D 世界内でのユーザーの位置を設定する必要がある場合があります。 <code>getOffsetReferenceSpace()</code> を使用してこれを行うことができます。</p>
+シーンを最初に作成するときに、3D 世界内でのユーザーの位置を設定する必要がある場合があります。 `getOffsetReferenceSpace()` を使用してこれを行うことができます。
 
-<pre class="brush: js notranslate">xrSession.requestReferenceSpace("local")
-.then((refSpace) =&gt; {
+```js
+xrSession.requestReferenceSpace("local")
+.then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
         new XRRigidTransform(startPosition, {x:0, y:0, z:1.0, w: 1.0}));
   xrSession.requestAnimationFrame(drawFrame);
-});</pre>
+});
+```
 
-<p>このコードでは、ローカル参照空間を取得し、<code>getOffsetReferenceSpace()</code> を使用して、原点を <code>startPosition</code> で指定された位置に調整し、向きが Z 軸に直に沿った新しい空間を作成します。 次に、{{domxref("XRSession")}} の {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} を使用して最初のアニメーションフレームを要求します。</p>
+このコードでは、ローカル参照空間を取得し、`getOffsetReferenceSpace()` を使用して、原点を `startPosition` で指定された位置に調整し、向きが Z 軸に直に沿った新しい空間を作成します。 次に、{{domxref("XRSession")}} の {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} を使用して最初のアニメーションフレームを要求します。
 
-<h3 id="Implementing_rotation_based_on_non-XR_inputs" name="Implementing_rotation_based_on_non-XR_inputs">非 XR 入力に基づく回転の実装</h3>
+### 非 XR 入力に基づく回転の実装
 
-<p>WebXR が直接サポートしている入力コントロールは、すべて専用の VR または AR の入力デバイスです。 マウス、キーボード、またはその他の入力デバイスを使用して 3D 空間内のオブジェクトを移動または変換したり、ユーザーが空間内を移動できるようにするには、入力を読み取って移動するためのコードを記述する必要があります。</p>
+WebXR が直接サポートしている入力コントロールは、すべて専用の VR または AR の入力デバイスです。 マウス、キーボード、またはその他の入力デバイスを使用して 3D 空間内のオブジェクトを移動または変換したり、ユーザーが空間内を移動できるようにするには、入力を読み取って移動するためのコードを記述する必要があります。
 
-<p>これは、<code>getOffsetReferenceSpace()</code> のもう1つの良いユースケースです。 この例では、ユーザーがマウスを右クリックしながら動かすことで、視野角の変更により周囲を見回せるコードを示します。</p>
+これは、`getOffsetReferenceSpace()` のもう 1 つの良いユースケースです。 この例では、ユーザーがマウスを右クリックしながら動かすことで、視野角の変更により周囲を見回せるコードを示します。
 
-<p>まず、{{domxref("Element.mousemove_event", "mousemove")}} イベントのイベントハンドラーを追加します。 これは、マウスの右ボタンが押されている場合に回転を実行するコードを呼び出します。 {{domxref("Element.oncontextmenu", "oncontextmenu")}} イベントで {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出すことにより、このイベントが無視されるように設定していることにも注意してください。 これにより、右クリックによってコンテキストメニューがブラウザーに表示されなくなります。</p>
+まず、{{domxref("Element.mousemove_event", "mousemove")}} イベントのイベントハンドラーを追加します。 これは、マウスの右ボタンが押されている場合に回転を実行するコードを呼び出します。 {{domxref("Element.oncontextmenu", "oncontextmenu")}} イベントで {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出すことにより、このイベントが無視されるように設定していることにも注意してください。 これにより、右クリックによってコンテキストメニューがブラウザーに表示されなくなります。
 
-<pre class="brush: js notranslate">canvas.oncontextmenu = (event) =&gt; { event.preventDefault(); };
-canvas.addEventListener("mousemove", (event) =&gt; {
-  if (event.buttons &amp; 2) {
+```js
+canvas.oncontextmenu = (event) => { event.preventDefault(); };
+canvas.addEventListener("mousemove", (event) => {
+  if (event.buttons & 2) {
     rotateViewBy(event.movementX, event.movementY);
   }
 });
-</pre>
+```
 
-<p>次に、<code>rotateViewBy()</code> 関数は、<code>mousemove</code> イベントからのマウスデルタ値に基づいて、マウスルック（mouse look）方向のヨーとピッチを更新します。 ピッチを制限しているため、真上と真下を超えて見ることはできません。 これが呼び出されるたびに、新しいオフセットを使用して、<code>mousePitch</code> と <code>mouseYaw</code> の現在の値が更新されます。</p>
+次に、`rotateViewBy()` 関数は、`mousemove` イベントからのマウスデルタ値に基づいて、マウスルック（mouse look）方向のヨーとピッチを更新します。 ピッチを制限しているため、真上と真下を超えて見ることはできません。 これが呼び出されるたびに、新しいオフセットを使用して、`mousePitch` と `mouseYaw` の現在の値が更新されます。
 
-<pre class="brush: js notranslate">let mouseYaw = 0.0;
+```js
+let mouseYaw = 0.0;
 let mousePitch = 0.0;
 const inverseOrientation = quat.create();
 const MOUSE_SPEED = 0.003;
@@ -93,17 +97,19 @@ function rotateViewBy(dx, dy) {
   mouseYaw += dx * MOUSE_SPEED;
   mousePitch += dy * MOUSE_SPEED;
 
-  if (mousePitch &lt; -Math.PI * 0.5) {
+  if (mousePitch < -Math.PI * 0.5) {
     mousePitch = -Math.PI * 0.5;
-  } else if (mousePitch &gt; Math.PI * 0.5) {
+  } else if (mousePitch > Math.PI * 0.5) {
     mousePitch = Math.PI * 0.5;
   }
-}</pre>
+}
+```
 
-<p>最後に、計算したヨーとピッチをビューアーの向きに実際に適用するコードが必要です。 この関数 <code>applyMouseMovement()</code> は、次のことを処理します。</p>
+最後に、計算したヨーとピッチをビューアーの向きに実際に適用するコードが必要です。 この関数 `applyMouseMovement()` は、次のことを処理します。
 
-<pre class="brush: js notranslate">function applyMouseMovement(refSpace) {
-  if (!mouseYaw &amp;&amp; !mousePitch) {
+```js
+function applyMouseMovement(refSpace) {
+  if (!mouseYaw && !mousePitch) {
     return refSpace;
   }
 
@@ -116,31 +122,21 @@ function rotateViewBy(dx, dy) {
                           z: inverseOrientation[2], w: inverseOrientation[3]});
 
   return refSpace.getOffsetReferenceSpace(newTransform);
-}</pre>
+}
+```
 
-<p>この関数は、現在のピッチ値とヨー値からビューアーの向きを決めるために使用する逆向き行列を作成し、{{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}} を呼び出すときにその行列を向きのソースとして使用します。 次に、新しい {{domxref("XRRigidTransform")}} の参照空間がフェッチされ、呼び出し元に返されます。</p>
+この関数は、現在のピッチ値とヨー値からビューアーの向きを決めるために使用する逆向き行列を作成し、{{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}} を呼び出すときにその行列を向きのソースとして使用します。 次に、新しい {{domxref("XRRigidTransform")}} の参照空間がフェッチされ、呼び出し元に返されます。
 
-<p>この新しい参照空間は、ビューアーの位置は変更しませんが、蓄積されたマウス入力から生成されたピッチとヨーの値に基づいて向きを変更します。 <code>applyMouseMovement()</code> は、フレームを描画するときに、{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} を使用してビューアーのポーズをフェッチする直前に呼び出す必要があり、レンダリングはこの参照空間で実行する必要があります。</p>
+この新しい参照空間は、ビューアーの位置は変更しませんが、蓄積されたマウス入力から生成されたピッチとヨーの値に基づいて向きを変更します。 `applyMouseMovement()` は、フレームを描画するときに、{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} を使用してビューアーのポーズをフェッチする直前に呼び出す必要があり、レンダリングはこの参照空間で実行する必要があります。
 
-<p>これに似たコードが、<a href="/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion">移動、向き、モーション</a>という WebXR チュートリアルの幅広い記事で使用されているのを見ることができます。 特に、<a href="/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion#Starting_up_the_WebXR_session">WebXR セッションの開始</a>というセクションを確認してください。</p>
+これに似たコードが、[移動、向き、モーション](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)という WebXR チュートリアルの幅広い記事で使用されているのを見ることができます。 特に、[WebXR セッションの開始](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion#Starting_up_the_WebXR_session)というセクションを確認してください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebXR','#dom-xrreferencespace-getoffsetreferencespace','getOffsetReferenceSpace()')}}</td>
-   <td>{{Spec2('WebXR')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                             | 状態                     | コメント |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('WebXR','#dom-xrreferencespace-getoffsetreferencespace','getOffsetReferenceSpace()')}} | {{Spec2('WebXR')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.XRReferenceSpace.getOffsetReferenceSpace")}}</p>
+{{Compat("api.XRReferenceSpace.getOffsetReferenceSpace")}}

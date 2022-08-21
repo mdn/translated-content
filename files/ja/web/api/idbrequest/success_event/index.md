@@ -3,42 +3,47 @@ title: 'IDBRequest: success event'
 slug: Web/API/IDBRequest/success_event
 translation_of: Web/API/IDBRequest/success_event
 ---
-<div>{{ APIRef("IndexedDB") }}</div>
+{{ APIRef("IndexedDB") }}
 
-<p><code>success</code>イベントは<code>IDBRequest</code>が成功すると着火します。</p>
+`success`イベントは`IDBRequest`が成功すると着火します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/ja/docs/Web/API/IDBRequest/onsuccess">onsuccess</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/API/IDBRequest/onsuccess">onsuccess</a></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、データベースをオープンします。その<code>success</code>イベントを<code>addEventListener()</code>でリスンします。</p>
+この例では、データベースをオープンします。その`success`イベントを`addEventListener()`でリスンします。
 
-<pre class="brush: js">// データベースをオープンする
+```js
+// データベースをオープンする
 const openRequest = window.indexedDB.open('toDoList', 4);
 
-openRequest.onupgradeneeded = (event) =&gt; {
+openRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -53,21 +58,21 @@ openRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-openRequest.addEventListener('success', (event) =&gt; {
+openRequest.addEventListener('success', (event) => {
   console.log('Database opened successfully!');
 });
+```
 
-</pre>
+下記は同じことを`onsuccess`イベントハンドラープロパティを使用した例です。
 
-<p>下記は同じことを<code>onsuccess</code>イベントハンドラープロパティを使用した例です。</p>
-
-<pre class="brush: js">// データベースをオープンする
+```js
+// データベースをオープンする
 const openRequest = window.indexedDB.open('toDoList', 4);
 
-openRequest.onupgradeneeded = (event) =&gt; {
+openRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -82,20 +87,16 @@ openRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-openRequest.onsuccess = (event) =&gt; {
+openRequest.onsuccess = (event) => {
   console.log('Database opened successfully!');
 };
-</pre>
+```
 
-<h2 id="ブラウザの対応">ブラウザの対応</h2>
+## ブラウザの対応
 
+{{Compat("api.IDBRequest.success_event")}}
 
+## 関連情報
 
-<p>{{Compat("api.IDBRequest.success_event")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/IndexedDB/Using_IndexedDB">Using IndexedDB</a></li>
- <li><code><a href="/ja/docs/Web/API/IDBRequest/onsuccess">onsuccess</a></code> event handler property</li>
-</ul>
+- [Using IndexedDB](/ja/docs/IndexedDB/Using_IndexedDB)
+- [`onsuccess`](/ja/docs/Web/API/IDBRequest/onsuccess) event handler property

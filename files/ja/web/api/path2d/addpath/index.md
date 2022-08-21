@@ -3,31 +3,31 @@ title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
 translation_of: Web/API/Path2D/addPath
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>Canvas 2D APIの<code><strong>Path2D</strong></code><strong><code>.addPath()</code></strong>メソッドは、パスに対して引数でパスを追加します。</p>
+Canvas 2D API の**`Path2D`\*\***`.addPath()`\*\*メソッドは、パスに対して引数でパスを追加します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var><em>path</em>.addPath(path [, transform]);</var>
-</pre>
+```
+void path.addPath(path [, transform]);
+```
 
-<h3 id="パラメーター">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>path</code></dt>
- <dd>追加する{{domxref("Path2D")}}パス</dd>
- <dt><code>transform</code> {{optional_inline}}</dt>
- <dd>パスに追加する変換マトリックスとして使われる{{domxref("SVGMatrix")}}.</dd>
-</dl>
+- `path`
+  - : 追加する{{domxref("Path2D")}}パス
+- `transform` {{optional_inline}}
+  - : パスに追加する変換マトリックスとして使われる{{domxref("SVGMatrix")}}.
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="addPathメソッドを使用する"><code>addPathメソッドを使用する</code></h3>
+### `addPathメソッドを使用する`
 
-<p>これは<code>addPathメソッドを使用する簡単なコードスニペットです。</code></p>
+これは`addPathメソッドを使用する簡単なコードスニペットです。`
 
-<pre class="brush: js; highlight:[19]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // rectで新しいパスを作成する
@@ -49,35 +49,22 @@ p1.addPath(p2, m);
 
 // 最後に、1番目のパスをキャンバスに描画する
 ctx.fill(p1);
-</pre>
+```
 
-<p>以下のコードを編集して、その変更が canvas に反映されることを確かめてください(現在のブラウザーが実際にこのメソッドをサポートしているか、以下のブラウザー互換テーブルをチェックしてください)</p>
+以下のコードを編集して、その変更が canvas に反映されることを確かめてください(現在のブラウザーが実際にこのメソッドをサポートしているか、以下のブラウザー互換テーブルをチェックしてください)
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 500) }}
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-path2d-addpath", "Path2D.addPath()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment  |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-path2d-addpath", "Path2D.addPath()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザー互換性
 
-<p>{{Compat("api.Path2D.addPath")}}</p>
+{{Compat("api.Path2D.addPath")}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>このインターフェイスは{{domxref("Path2D")}}に定義されています。</li>
-</ul>
+- このインターフェイスは{{domxref("Path2D")}}に定義されています。
