@@ -14,39 +14,30 @@ tags:
   - values()
 translation_of: Web/API/CSSUnparsedValue/values
 ---
-<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p class="summary"><strong><code>CSSUnparsedValue.values()</code></strong> メソッドは、 CSSUnparsedValue オブジェクト内のそれぞれの添字の値を持つ新しい <strong><code>Array Iterator</code></strong> オブジェクトを返します。</p>
+**`CSSUnparsedValue.values()`** メソッドは、 CSSUnparsedValue オブジェクト内のそれぞれの添字の値を持つ新しい **`Array Iterator`** オブジェクトを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>CSSUnparsedValue</var>.values()</pre>
+```
+CSSUnparsedValue.values()
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>新しい {{jsxref("Array")}}。</p>
+新しい {{jsxref("Array")}}。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM','#cssunparsedvalue','values()')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                               | 状態                     | 備考     |
+| -------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('CSSOM','#cssunparsedvalue','values()')}} | {{Spec2('CSSOM')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.CSSUnparsedValue.values")}}</p>
+{{Compat("api.CSSUnparsedValue.values")}}

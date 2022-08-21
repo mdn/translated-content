@@ -9,53 +9,38 @@ tags:
   - cssText
 translation_of: Web/API/CSSValue/cssText
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("CSSValue")}} インターフェイスの <code><strong>cssText</strong></code> プロパティは、現在計算されている CSS プロパティ値を表します。</p>
+{{domxref("CSSValue")}} インターフェイスの **`cssText`** プロパティは、現在計算されている CSS プロパティ値を表します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>cssText</var> = <var>cssValue</var>.cssText;
-</pre>
+```
+cssText = cssValue.cssText;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>現在の CSS プロパティ値を表す {{domxref("DOMString")}} 。</p>
+現在の CSS プロパティ値を表す {{domxref("DOMString")}} 。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js; highlight[3] notranslate">var styleDeclaration = document.styleSheets[0].cssRules[0].style;
+```js
+var styleDeclaration = document.styleSheets[0].cssRules[0].style;
 var cssValue = styleDeclaration.getPropertyCSSValue("color");
 console.log(cssValue.cssText);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSValue-cssText', 'CSSValue.cssText')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                     | ステータス                       | 備考     |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('DOM2 Style', 'css.html#CSS-CSSValue-cssText', 'CSSValue.cssText')}} | {{Spec2('DOM2 Style')}} | 初回定義 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
+{{Compat("api.CSSValue.cssText")}}
 
+## 関連項目
 
-<p>{{Compat("api.CSSValue.cssText")}}</p>
-</div>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}</li>
-</ul>
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}

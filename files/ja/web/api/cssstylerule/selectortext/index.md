@@ -8,47 +8,35 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleRule/selectorText
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p><code><strong>CSSRule.selectorText</strong></code>プロパティは、この規則集合のセレクターのテキスト表現を取得します。これは、一部のブラウザーで読み取り専用で実装されています。スタイルシート規則をクロスブラウザーで動的に設定するには、 <a href="/ja/docs/DOM/Using_dynamic_styling_information">動的なスタイル情報の利用</a> を参照してください。</p>
+**`CSSRule.selectorText`**プロパティは、この規則集合のセレクターのテキスト表現を取得します。これは、一部のブラウザーで読み取り専用で実装されています。スタイルシート規則をクロスブラウザーで動的に設定するには、 [動的なスタイル情報の利用](/ja/docs/DOM/Using_dynamic_styling_information) を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>string</em> = cssRule.selectorText</pre>
+```
+string = cssRule.selectorText
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">// for cssrule: body { background-color: darkblue; }
+```js
+// for cssrule: body { background-color: darkblue; }
 var stylesheet = document.styleSheets[0];
 
 alert(stylesheet.cssRules[0].selectorText); // body
-</pre>
+```
 
-<h2 class="Notes" id="補記">補記</h2>
+## 補記
 
-<p>実装は、セレクターの解析中に無意味な空白を取り除くことがあります。解析できないセレクター文字列を設定すると、SyntaxError が発生します。</p>
+実装は、セレクターの解析中に無意味な空白を取り除くことがあります。解析できないセレクター文字列を設定すると、SyntaxError が発生します。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#dom-cssstylerule-selectortext', 'CSSStyleRule.selectorText')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 策定状況                 | コメント |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('CSSOM', '#dom-cssstylerule-selectortext', 'CSSStyleRule.selectorText')}} | {{Spec2('CSSOM')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-
-
-<p>{{Compat("api.CSSStyleRule.selectorText")}}</p>
+{{Compat("api.CSSStyleRule.selectorText")}}
