@@ -32,7 +32,7 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 
 クライアント側において、HTML フォームはサーバーへデータを送信する HTTP リクエストを組み立てるのための、便利でユーザーに使いやすい手段でしかありません。フォームによって、ユーザーが HTTP リクエストで渡す情報を提供することができるようになります。
 
-> **Note:** **メモ**: どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、[サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn/Server-side/First_steps)モジュールをお読みください。
+> **Note:** どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、[サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn/Server-side/First_steps)モジュールをお読みください。
 
 ## クライアント側: データ送信方法の定義
 
@@ -60,7 +60,7 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 <form>
 ```
 
-> **Note:** **メモ:** HTTPS (secure HTTP) プロトコルを使用して URL を指定することができます。このようにすると、フォーム自体が HTTP でアクセスされる安全ではないページで提供される場合でも、データはリクエストの残りの部分とともに暗号化されます。一方、フォームが安全なページ提供されていても、{{htmlattrxref("action","form")}} 属性で安全ではない HTTP の URL を指定すると、どのブラウザーでもデータを送信する際にユーザーに対してセキュリティの警告を表示します。これは、データが暗号化されないためです。
+> **Note:** HTTPS (secure HTTP) プロトコルを使用して URL を指定することができます。このようにすると、フォーム自体が HTTP でアクセスされる安全ではないページで提供される場合でも、データはリクエストの残りの部分とともに暗号化されます。一方、フォームが安全なページ提供されていても、{{htmlattrxref("action","form")}} 属性で安全ではない HTTP の URL を指定すると、どのブラウザーでもデータを送信する際にユーザーに対してセキュリティの警告を表示します。これは、データが暗号化されないためです。
 
 非ファイル型のフォームコントロールの名前/値は&記号で結合された `name=value` ペアでサーバーに送られます。`action` の値は、サーバー側の検証を含め入力データを扱うサーバーのファイルです。サーバーは応答して、一般的にはデータを処理して `action` 属性で定義された URL を読み込み、新しいページの読み込み (または `action` が同じページを指している場合は既存ページのリフレッシュ)を引き起こします。
 
@@ -108,7 +108,7 @@ GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
 
-> **Note:** **メモ**: この例は GitHub にあります。— [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) を参照してください ([ライブはこちら](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> **Note:** この例は GitHub にあります。— [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) を参照してください ([ライブはこちら](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 #### POST メソッド
 
@@ -145,7 +145,7 @@ say=Hi&to=Mom
 
 `Content-Length` ヘッダーは本文の長さを、また `Content-Type` ヘッダーはサーバーに送信するリソースの種類を表します。これらのヘッダーについて少し説明しましょう。
 
-> **Note:** **メモ**: この例は GitHub で見つけることができます。— [post-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html) を参照してください ([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html))。
+> **Note:** この例は GitHub で見つけることができます。— [post-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html) を参照してください ([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html))。
 
 ### HTTP リクエストの表示
 
@@ -189,7 +189,7 @@ say=Hi&to=Mom
 
 ![](php-result.png)
 
-> **Note:** **メモ**: この例はブラウザーにローカルに読み込んだ時には動作しません。— ブラウザーは PHP コードを解釈できないので、フォームがブラウザーに送信されると、PHP ファイルをダウンロードしようとするでしょう。動作させるためには、この例を何らかの PHP サーバー経由で実行する必要があります。ローカルの PHP のテストには、[MAMP](https://www.mamp.info/en/downloads/) (Mac および Windows) や [AMPPS](https://ampps.com/download) (Mac, Windows, Linux) がいいでしょう。
+> **Note:** この例はブラウザーにローカルに読み込んだ時には動作しません。— ブラウザーは PHP コードを解釈できないので、フォームがブラウザーに送信されると、PHP ファイルをダウンロードしようとするでしょう。動作させるためには、この例を何らかの PHP サーバー経由で実行する必要があります。ローカルの PHP のテストには、[MAMP](https://www.mamp.info/en/downloads/) (Mac および Windows) や [AMPPS](https://ampps.com/download) (Mac, Windows, Linux) がいいでしょう。
 >
 > なお、MAMP を使って MAMP Pro がない (または MAMP Pro デモトライアルの有効期限が切れた) 場合、動作させるのにトラブルが起こるかもしれません。再び動作させるには MAMP アプリを閉じて、_MAMP_ > _Preferences_ > *PHP*メニューから "Standard Version:" を "7.2.x" (x はあなたがどのバージョンをインストールしたかによります)にするといいことがわかっています。
 
@@ -214,12 +214,12 @@ if __name__ == "__main__":
     app.run()
 ```
 
-次のように、上記のコードでは 2 つのテンプレートが参照されます。(自分の環境で実行する場合、これらは `templates` というサブディレクトリにあり、`python-example.py`ファイルと同じディレクトリにある必要があります)。
+次のように、上記のコードでは 2 つのテンプレートが参照されます。(自分の環境で実行する場合、これらは `templates` というサブディレクトリーにあり、`python-example.py`ファイルと同じディレクトリーにある必要があります)。
 
 - [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): 以前に [POST メソッド](#the_post_method)の節で見たフォームと同じですが、`action` が `\{{ url_for('hello') }}` に設定されています (これは [Jinja2](http://jinja.pocoo.org/docs/2.9/) テンプレートで、基本的に HTML ですが、波括弧の中にウェブサーバーで実行されている Python のコードの呼び出しを含めることができます。`url_for('hello')` は基本的に、「フォームが送信されたら `/hello` にリダイレクトしてください」と言っています。)
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html): このテンプレートは、表示時に渡された 2 つの小さいデータを表示する行だけを含みます。`/hello` の URL が呼び出されるときに実行される、前述の `hello()` 関数によって行われます。
 
-> **Note:** **メモ**: 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn/Server-side/Django/development_environment#installing_python_3)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5000` に移動することで実行することができるでしょう。
+> **Note:** 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn/Server-side/Django/development_environment#installing_python_3)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5000` に移動することで実行することができるでしょう。
 
 ### その他の言語やフレームワーク
 
@@ -233,7 +233,7 @@ if __name__ == "__main__":
 
 言うまでもなく、これらのフレームワークを使用したとしても、フォームでの作業が必ずしも*簡単に*なるとは限りません。しかし、すべての機能を自分で 1 から書こうとするよりずっと簡単で、また多くの時間を節約できるでしょう。
 
-> **Note:** **メモ**: サーバー側言語やフレームワークまで説明することはこの記事の範囲を超えます。上記のリンクが参考になりますので、学習してみてください。
+> **Note:** サーバー側言語やフレームワークまで説明することはこの記事の範囲を超えます。上記のリンクが参考になりますので、学習してみてください。
 
 ## 特別な場合: ファイル送信
 

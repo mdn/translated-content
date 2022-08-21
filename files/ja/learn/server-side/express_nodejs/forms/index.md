@@ -25,7 +25,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 最初に[HTML フォーム](/ja/docs/Web/Guide/HTML/Forms)の簡単な概要を説明します。ある「チーム」の名前とそれに関連するラベルを入力するための単一のテキストフィールドを持つシンプルな HTML フォームを考えてみましょう。
 
-![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
+![Simple name field example in HTML form](form_example_name_field.png)
 
 フォームは HTML で `<form>...</form>` タグ内の要素の集合として定義され、`type="submit" `の`input`要素を少なくとも 1 つ含みます。
 
@@ -51,7 +51,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 フォームの処理はモデルに関する情報を表示するために学んだのと同じテクニックをすべて使います: ルートはリクエストをコントローラ関数に送り、モデルからのデータの読み込みを含む必要なデータベースアクションを実行し、HTML ページを生成して返します。さらに複雑なのは、サーバーがユーザーによって提供されたデータを処理し、何か問題があればエラー情報とともにフォームを再表示する必要があるということです。
 
-フォームを含むページのリクエスト（緑色で示されている）から始まる、フォームリクエストを処理するためのプロセスフローチャートを以下に示す。![](https://mdn.mozillademos.org/files/14478/Web%20server%20form%20handling.png)
+フォームを含むページのリクエスト（緑色で示されている）から始まる、フォームリクエストを処理するためのプロセスフローチャートを以下に示す。![](Web%20server%20form%20handling.png)
 
 上の図のように、フォーム処理のコードが必要とする主なものは以下の通りです。
 

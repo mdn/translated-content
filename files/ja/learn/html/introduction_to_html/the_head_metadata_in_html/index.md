@@ -65,13 +65,13 @@ HTML の head は {{htmlelement("head")}} 要素のコンテンツです — {{h
 
 2.  ファイルをブラウザーで開きます。このようなものが見えるでしょう:
 
-    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)\<h1> コンテンツが出ている場所と、`<title>` コンテンツが出ている場所がひと目で分かります!
+    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](title-example.png)\<h1> コンテンツが出ている場所と、`<title>` コンテンツが出ている場所がひと目で分かります!
 
 3.  自分のコードエディターで開いて、この要素を編集して、ブラウザーで再読み込みしてもよいです。楽しんでみてください。
 
 `<title>` 要素はいろいろな方法で使われます。例えば、ページのブックマーク (_ブックマーク > このページをブックマーク または Firefox の URL バーのスターアイコンにて_) してみると、提案されたブックマーク名として `<title>` コンテンツが記入されています。
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](bookmark-example.png)
 
 `<title>` の内容は後述するように、コンテンツは検索結果にも使われます。
 
@@ -89,11 +89,11 @@ HTML の head は {{htmlelement("head")}} 要素のコンテンツです — {{h
 
 この要素は単に文書のキャラクターエンコーディングを指定しています — それは文書が使うことが許されるキャラクターセットです。`utf-8` はあらゆる言語からとてもたくさんの文字を含む汎用的なキャラクターセットです。つまりウェブページがあらゆる言語の表示を取り扱えるのです; このため、作成するすべてのウェブページにこれをセットするのが良いです！例えば、ページで英語と日本語を正しく扱うことができます:
 
-![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](https://mdn.mozillademos.org/files/12343/correct-encoding.png)文字エンコーディングを、例えば `ISO-8859-1` (ラテン文字のアルファベットの文字セット) に指定すると、ページの表示はメチャクチャな見た目になります。
+![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](correct-encoding.png)文字エンコーディングを、例えば `ISO-8859-1` (ラテン文字のアルファベットの文字セット) に指定すると、ページの表示はメチャクチャな見た目になります。
 
-![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](https://mdn.mozillademos.org/files/12341/bad-encoding.png)
+![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
-> **Note:** **メモ**: ブラウザーによっては (例 Chrome) 自動的に正しくないエンコーディングを修正しますので、お使いのブラウザーによっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに `utf-8` エンコーディングを設定すべきです。
+> **Note:** ブラウザーによっては (例 Chrome) 自動的に正しくないエンコーディングを修正しますので、お使いのブラウザーによっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに `utf-8` エンコーディングを設定すべきです。
 
 ### アクティブラーニング: 文字エンコーディングで実験する
 
@@ -145,11 +145,11 @@ description は検索エンジンの結果ページにも使われます。練�
 
 4.  ここでお好きな検索エンジンで "MDN Web Docs" を検索します (ここでは Google を使っています) 。 description の `<meta>` と `<title>` 要素のコンテンツが検索結果で使われています — 確かに値打ちがあります。
 
-    ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/16074/mdn-search-result.png)
+    ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
-> **Note:** **メモ**: Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう— これはサイトリンクと呼ばれ、[Google's webmaster tools](http://www.google.com/webmasters/tools/) で設定されます — これは Google 検索エンジンでサイトの検索結果を良くする方法です。
+> **Note:** Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう— これはサイトリンクと呼ばれ、[Google's webmaster tools](http://www.google.com/webmasters/tools/) で設定されます — これは Google 検索エンジンでサイトの検索結果を良くする方法です。
 
-> **Note:** **注**: 多くの `<meta>` 機能はもう使われていません。例えば、 keyword の `<meta>` 要素 (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
+> **Note:** 多くの `<meta>` 機能はもう使われていません。例えば、 keyword の `<meta>` 要素 (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
 
 ### メタデータの他の種類
 
@@ -167,7 +167,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 この効果として、 facebook で MDN Web Docs にリンクしたとき、リンクに画像と説明が表示されます。ユーザーにとってより便利になります。
 
-![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](https://mdn.mozillademos.org/files/12349/facebook-output.png)Twitter も同様のプロプラエタリなメタデータを持ちます。 URL が twitter.com で表示される時に同様な効果となります。例えば。
+![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)Twitter も同様のプロプラエタリなメタデータを持ちます。 URL が twitter.com で表示される時に同様な効果となります。例えば。
 
 ```html
 <meta name="twitter:title" content="Mozilla Developer Network">
@@ -181,7 +181,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 ページにファビコンを追加するには:
 
-1.  サイトの index ページと同じディレクトリに、 `.ico` 形式で保存します (大半のブラウザーは `.gif` や `.png` のような、より一般的な形式のファビコンにも対応していますが、 ICO 形式を使えば Internet Explorer 6 以降の古いブラウザでも動作することが保証されます)。
+1.  サイトの index ページと同じディレクトリーに、 `.ico` 形式で保存します (大半のブラウザーは `.gif` や `.png` のような、より一般的な形式のファビコンにも対応していますが、 ICO 形式を使えば Internet Explorer 6 以降の古いブラウザーでも動作することが保証されます)。
 2.  HTML の {{HTMLElement("head")}} ブロックに下記の行を入れて参照します。
 
     ```html
@@ -190,7 +190,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 ブックマークパネルでファビコンが表示される例です。
 
-![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](https://mdn.mozillademos.org/files/12351/bookmark-favicon.png)
+![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
 最近では考慮するべきアイコンの種類がほかにもたくさんあります。例えば、 MDN Web Docs ホームページのソースコードには以下の行があります。
 
@@ -211,7 +211,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 こうした種類のアイコンをいますぐすべて実装することに心配しすぎないでください — これはかなり高度な機能で、このコースが進んでも分からないはずです。ここでの主な目的は、他のウェブサイトのソースコードを見た時に出くわした場合にこれらが何か知ることです。
 
-> **Note:** **メモ:** もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
+> **Note:** もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
 
 ## HTML に CSS と JavaScript を追加する
 
@@ -223,7 +223,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
   <link rel="stylesheet" href="my-css-file.css">
   ```
 
-- {{htmlelement("script")}} 要素は head におく必要はありません。実際、文書の最後の body の後 (`</body>` タグを閉じる前) に置かれることが多いです。これはブラウザーは全ての HTML の内容をすべて読み込んだ後 JavaScript を適用しようとすることをはっきりさせるためです (もし、 JavaScript がまだ存在しない要素にアクセスしようとしたらブラウザはエラーを返します。)。
+- {{htmlelement("script")}} 要素は head におく必要はありません。実際、文書の最後の body の後 (`</body>` タグを閉じる前) に置かれることが多いです。これはブラウザーは全ての HTML の内容をすべて読み込んだ後 JavaScript を適用しようとすることをはっきりさせるためです (もし、 JavaScript がまだ存在しない要素にアクセスしようとしたらブラウザーはエラーを返します。)。
 
   ```html
   <script src="my-js-file.js"></script>
@@ -234,17 +234,17 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 
 1.  アクティブラーニングを始めるにあたって、私たちの [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) ,[style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) をコピーしてローカルの同じフォルダに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
-2.  HTML ファイルをブラウザとテキストエディタで開いてください。
+2.  HTML ファイルをブラウザーとテキストエディタで開いてください。
 3.  先に述べた情報に従って、 {{htmlelement("link")}} 要素と {{htmlelement("script")}} 要素を HTML に書き加えてください。すると CSS と JavaScript が HTML に適用されます。
 
-以上を正しく行い、 HTML を保存してブラウザを更新したら、変化がみられるでしょう。
+以上を正しく行い、 HTML を保存してブラウザーを更新したら、変化がみられるでしょう。
 
-![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](https://mdn.mozillademos.org/files/12359/js-and-css.png)
+![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
 
 - JavaScript が空のリストをページに追加しました。リスト内のどこかをクリックすると、ダイアログボックスが現れてリストの新しい要素となるテキストを入力するように求められます。 OK ボタンを押すと。リストに新しい要素が加わります。リストに既にある要素をクリックすると、ダイアログボックスが現れ要素の名前を変えることができます。
 - CSS によって背景は緑になり文字が大きくなっています。 JavaScript によってページに加えられたいくつかのコンテンツもスタイルが適用されます (黒い境界線の付いた赤いバーは、 JS が生成したリストに CSS が追加したスタイルです)。
 
-> **Note:** **メモ**: この演習で行きづまって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
+> **Note:** この演習で行きづまって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
 
 ## 文書の主要な言語の設定
 

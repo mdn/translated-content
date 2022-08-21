@@ -30,7 +30,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 目的:     | SVG (ベクター) 画像をウェブページに埋め込む方法を学びます。                                                                                                                      |
 
-> **Note:** **メモ**: この記事は SVG を教えるためのものではありません。 SVG が何であるかと、ウェブページに追加する方法について説明します。
+> **Note:** この記事は SVG を教えるためのものではありません。 SVG が何であるかと、ウェブページに追加する方法について説明します。
 
 ## ベクターグラフィックとは何か？
 
@@ -43,11 +43,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 
 この違いは、ページをズームインすると明らかになります。 PNG 画像には、各ピクセルの位置（と色）に関する情報が含まれているため、ズームインするとピクセル化されます。 ズームインすると、各ピクセルのサイズが単純に拡大され、画面上の複数のピクセルが塗りつぶされるので、画像がギザギサに見えるようになります。 しかし、ベクター画像は大きさにかかわらず、アルゴリズムが画像内のシェイプを処理するために使用され、値が大きくなるにつれて単純に縮尺が変更されるため、きれいにくっきりと見えます。
 
-![2つの星の画像](https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png)
+![2つの星の画像](raster-vector-default-size.png)
 
-![2つの星の画像が拡大表示され、1つがくっきりになり、他の画像がギザギサになる](https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png)
+![2つの星の画像が拡大表示され、1つがくっきりになり、他の画像がギザギサになる](raster-vector-zoomed.png)
 
-> **Note:** **メモ**: 上の画像は実際には全て PNG です — いずれの場合も、左の星はラスター画像を表し、右の星はベクター画像を表します。 実際の例については、[vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) デモを参照してください！
+> **Note:** 上の画像は実際には全て PNG です — いずれの場合も、左の星はラスター画像を表し、右の星はベクター画像を表します。 実際の例については、[vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) デモを参照してください！
 
 さらに、ベクター画像ファイルは、画像内のすべてのピクセルの情報ではなく、一握りのアルゴリズムを保持するだけで済むので、ラスター同等物よりもはるかに軽くなります。
 

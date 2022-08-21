@@ -76,8 +76,8 @@ HTML の表を装飾することは、世界で最も魅力的な仕事ではあ
 
 表の例を一緒にスタイリングしてみましょう。
 
-1.  まず始めに、[サンプルマークアップ](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html)のローカルコピーを作成し、[noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) と [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg) の両方の画像をダウンロードして、3 つのファイルをローカルコンピュータのどこかの作業ディレクトリに配置します。
-2.  次に、`style.css` という名前の新しいファイルを作成し、他のファイルと同じディレクトリに保存します。
+1.  まず始めに、[サンプルマークアップ](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html)のローカルコピーを作成し、[noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) と [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg) の両方の画像をダウンロードして、3 つのファイルをローカルコンピュータのどこかの作業ディレクトリーに配置します。
+2.  次に、`style.css` という名前の新しいファイルを作成し、他のファイルと同じディレクトリーに保存します。
 3.  {{htmlelement("head")}} の内側に次の HTML 行を配置して、CSS を HTML にリンクします。
 
     ```html
@@ -286,7 +286,7 @@ caption {
 
 ## まとめ
 
-表のスタイリングも終わりに近づいてきたので、他にも何か時間を割くものが必要になってきました。次の記事では、CSS をデバッグする方法を探ります。レイアウトが思うように見えない、プロパティが適用されないなどの問題を解決する方法です。これには、ブラウザの DevTools を使用して問題を解決する方法についての情報も含まれています。
+表のスタイリングも終わりに近づいてきたので、他にも何か時間を割くものが必要になってきました。次の記事では、CSS をデバッグする方法を探ります。レイアウトが思うように見えない、プロパティが適用されないなどの問題を解決する方法です。これには、ブラウザーの DevTools を使用して問題を解決する方法についての情報も含まれています。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 

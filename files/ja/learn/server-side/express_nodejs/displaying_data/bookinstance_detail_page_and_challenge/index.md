@@ -68,7 +68,7 @@ Everything in this template has been demonstrated in previous sections.
 
 Run the application and open your browser to <http://localhost:3000/>. Select the _All book-instances_ link, then select one of the items. If everything is set up correctly, your site should look something like the following screenshot.
 
-![BookInstance Detail Page - Express Local Library site](https://mdn.mozillademos.org/files/14472/LocalLibary_Express_BookInstance_Detail.png)
+![BookInstance Detail Page - Express Local Library site](LocalLibary_Express_BookInstance_Detail.png)
 
 ## Challenge
 

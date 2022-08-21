@@ -28,7 +28,7 @@ translation_of: Learn/Server-side/Django/skeleton_website
 1.  `django-admin` ツールを使ってプロジェクトフォルダ、基本的なテンプレートファイル、プロジェクト管理スクリプト(**manage.py**)を作ります .
 2.  **manage.py** は１つ以上のアプリケーションを作ります。
 
-    > **Note:** **メモ**: ウェブサイトは 1 つ以上のセクションから成ります。例えば、メインサイト、ブログ、ウィキ、ダウンロードエリアなど。Django は、これらのコンポーネントを別々のアプリケーションとして作成することを助けてくれます。それらは、必要なら異なるプロジェクトで再利用できます。
+    > **Note:** ウェブサイトは 1 つ以上のセクションから成ります。例えば、メインサイト、ブログ、ウィキ、ダウンロードエリアなど。Django は、これらのコンポーネントを別々のアプリケーションとして作成することを助けてくれます。それらは、必要なら異なるプロジェクトで再利用できます。
 
 3.  プロジェクトにアプリケーションを含めるために登録します。
 4.  url/path マッパーはそれらのアプリケーションを結びつけます。
@@ -71,7 +71,7 @@ locallibrary/
         wsgi.py
 ```
 
-我々の現在の作業ディレクトリはこのようなものになっているでしょう。
+我々の現在の作業ディレクトリーはこのようなものになっているでしょう。
 
 ```
 ../django_projects/locallibrary/
@@ -79,7 +79,7 @@ locallibrary/
 
 *locallibrary*プロジェクトのサブフォルダはこのウェブサイトに入口点となります:
 
-- **\_\_init\_\_.py** は空ファイルであり、このディレクトリを Python パッケージとして扱うように指示します。
+- **\_\_init\_\_.py** は空ファイルであり、このディレクトリーを Python パッケージとして扱うように指示します。
 - **settings.py** はすべてのウェブサイトの設定を含んでいます。ここに、我々が作成した全てのアプリケーション、スタティックファイルの場所やデータベースの詳細設定などを登録します。
 - **urls.py** はサイトの url と view のマッピングを定義します。これは、すべての url マッピングコードを含むことができる一方で、いくつかのマッピングは特定のアプリケーションへ委任するのがより一般的です。 また後で分かるでしょう。
 - **wsgi.py** はあなたの Django アプリケーションが web サーバと通信するのを助けてくれます。あなたはこれを定型として使うことができます。
@@ -94,7 +94,7 @@ locallibrary/
 python3 manage.py startapp catalog
 ```
 
-> **Note:** **メモ**: 上記コマンドは Linux や macOS X 用です。Windows のコマンドは: `py -3 manage.py startapp catalog`
+> **Note:** 上記コマンドは Linux や macOS X 用です。Windows のコマンドは: `py -3 manage.py startapp catalog`
 >
 > もし Windows を使っているなら、このモジュール（manage.py）を使う際は`python3` を `py -3` に変更して下さい。
 >
@@ -102,7 +102,7 @@ python3 manage.py startapp catalog
 
 このツールは新しいフォルダを作成し、アプリケーションの様々なパーツとなるファイルをそのフォルダに追加します（以下の太字で表示）。 ほとんどのファイルは目的に応じて便利な名前が付けられており(例えば ビューは**views.py**に、モジュールは **models.py**に、テストは**tests.py**に、管理サイトの設定は **admin.py**に、アプリケーションの登録は**apps.py**に保存する必要がある)、 さらに、関連するオブジェクトを操作するための最低限の定型的なコードを用意している。
 
-アップデートされた後のプロジェクトディレクトリはこのようになる:
+アップデートされた後のプロジェクトディレクトリーはこのようになる:
 
 ```bash
 locallibrary/
@@ -123,7 +123,7 @@ locallibrary/
 - "マイグレーション"を格納するためのマイグレーションフォルダーモデルを変更した場合に自動的にデータベースの変更をするためのファイル
 - **\_\_init\_\_.py** — Django/Python がこのフォルダを [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) であると認識するためにここに作られた空のファイル。そうすることで、このオブジェクトは他のプロジェクトでも使用できる。
 
-> **Note:** **メモ**: 上記ファイルリストに何か欠けているものがあることに気づきましたか？ ビューやモデルがある一方で、URL マッピング、テンプレート、静的ファイルの配置場所はありません。それらの作り方も以後説明します。(それらは全てのサイトで必須ではないですが、この例では必要になります。).
+> **Note:** 上記ファイルリストに何か欠けているものがあることに気づきましたか？ ビューやモデルがある一方で、URL マッピング、テンプレート、静的ファイルの配置場所はありません。それらの作り方も以後説明します。(それらは全てのサイトで必須ではないですが、この例では必要になります。).
 
 ## catalog アプリケーションの登録
 
@@ -145,7 +145,7 @@ INSTALLED_APPS = [
 
 追加した新しい行はアプリケーションの構成オブジェクト(`CatalogConfig`) を指定しており、それはアプリケーション作成時に**/locallibrary/catalog/apps.py** によって生成されています。
 
-> **Note:** **メモ**: すでにたくさんの他の`INSTALLED_APPS` (`MIDDLEWARE`も同様。設定ファイルのさらに下の方にあります)が存在していることに気づいたでしょう。これらは、[Django administration site](/ja/docs/Learn/Server-side/Django/Admin_site) をサポートすること可能にし、その結果、Django が使用するたくさんの機能(セッション、認証など)をサポートします。
+> **Note:** すでにたくさんの他の`INSTALLED_APPS` (`MIDDLEWARE`も同様。設定ファイルのさらに下の方にあります)が存在していることに気づいたでしょう。これらは、[Django administration site](/ja/docs/Learn/Server-side/Django/Admin_site) をサポートすること可能にし、その結果、Django が使用するたくさんの機能(セッション、認証など)をサポートします。
 
 ## データベースの指定
 
@@ -330,7 +330,7 @@ python3 manage.py runserver
 
 Once the server is running you can view the site by navigating to `http://127.0.0.1:8000/` in your local web browser. You should see a site error page that looks like this:
 
-![Django Debug page for Django 2.0](https://mdn.mozillademos.org/files/15729/django_404_debug_page.png)
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
 Don't worry! This error page is expected because we don't have any pages/urls defined in the `catalogs.urls` module (which we're redirected to when we get an URL to the root of the site).
 

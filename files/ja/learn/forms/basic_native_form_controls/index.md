@@ -27,13 +27,13 @@ original_slug: Learn/Forms/The_native_form_widgets
 - よく使われる入力型である {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, {{HTMLelement('input/text', 'text')}}
 - すべてのフォームコントロールに共通する属性のいくつか
 
-> **Note:** **注**: この記事で取り上げている機能は、すべてのブラウザーが対応していますが、すべてのフォームコントロールに当てはまるわけではありません。次の 2 回分の記事で、 HTML5 で追加された新しいフォームコントロールを取り上げます。より高度なリファレンスを読みたい方は、 [HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#forms)、全般的には [\<input> 型](/ja/docs/Web/HTML/Element/input) のリファレンスを参照してください。
+> **Note:** この記事で取り上げている機能は、すべてのブラウザーが対応していますが、すべてのフォームコントロールに当てはまるわけではありません。次の 2 回分の記事で、 HTML5 で追加された新しいフォームコントロールを取り上げます。より高度なリファレンスを読みたい方は、 [HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#forms)、全般的には [\<input> 型](/ja/docs/Web/HTML/Element/input) のリファレンスを参照してください。
 
 ## テキスト入力フィールド
 
 テキスト入力 ({{htmlelement("input")}}) フィールドは、最も基本的なフォームウィジェットです。これらはユーザーがあらゆる種類のデータを入力できるとても便利な方法です。
 
-> **Note:** **注**: HTML フォームのテキストフィールドは単純なプレーンテキストの入力コントロールです。つまり、これらを使って[リッチエディット](/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla) (太字、斜体など) を実現することはできません。見かけるリッチテキストエディターは、すべて HTML、CSS、JavaScript で作成されたカスタムウィジェットです。
+> **Note:** HTML フォームのテキストフィールドは単純なプレーンテキストの入力コントロールです。つまり、これらを使って[リッチエディット](/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla) (太字、斜体など) を実現することはできません。見かけるリッチテキストエディターは、すべて HTML、CSS、JavaScript で作成されたカスタムウィジェットです。
 
 すべてのテキストフィールドに共通する動作があります。
 
@@ -42,13 +42,13 @@ original_slug: Learn/Forms/The_native_form_widgets
 - [`size`](/ja/docs/Web/HTML/Attributes/size) (ボックスの物理的な大きさ) や [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) (ボックスに入力できる最大文字数) による制限が可能です。
 - ブラウザーが対応していれば、[スペルチェック](/ja/docs/Web/HTML/Element/input#attr-spellcheck)の便宜を図ることができます ([`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck)属性を用いて)。
 
-> **Note:** **注**: {{htmlelement("input")}} 要素は [`type`](/ja/docs/Web/HTML/Attributes/type) 属性によってさまざまな形になるため、 HTML 要素の中でも独特です。単一行のテキストフィールド、時間と日付のコントロール、チェックボックス、ラジオボタン、カラーピッカー、ボタンのようなテキスト入力のないコントロールなど、ほとんどの種類のフォームウィジェットの作成に使用されます。
+> **Note:** {{htmlelement("input")}} 要素は [`type`](/ja/docs/Web/HTML/Attributes/type) 属性によってさまざまな形になるため、 HTML 要素の中でも独特です。単一行のテキストフィールド、時間と日付のコントロール、チェックボックス、ラジオボタン、カラーピッカー、ボタンのようなテキスト入力のないコントロールなど、ほとんどの種類のフォームウィジェットの作成に使用されます。
 
 ### 単一行のテキストフィールド
 
 単一行のテキストフィールドを生成するには、 {{HTMLElement("input")}} 要素で {{htmlattrxref("type","input")}} 属性値を `text` に設定するか、 {{htmlattrxref("type","input")}} 属性を省略するかします (`text` が既定値です)。この属性の `text` の値は、 {{htmlattrxref("type","input")}} 属性に指定した値をブラウザーに認識できない場合 (たとえば `type="color"` を指定した場合で、ブラウザーがネイティブの色ピッカーに対応していない場合) の代替値になります。
 
-> **Note:** **注**: GitHub の [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) に、すべての単一行テキストフィールド型の例があります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html))。
+> **Note:** GitHub の [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) に、すべての単一行テキストフィールド型の例があります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html))。
 
 基本的な単一行のテキストフィールドの例を示します。
 
@@ -96,7 +96,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 これらのウィジェットは、他のフォームウィジェットと同じようには動作しない点が特徴です。ほとんどのフォームウィジェットでは、フォームを送信すると [`name`](/ja/docs/Web/HTML/Attributes/name) 属性を持つすべてのウィジェットが、値が入力されていなくても送信されます。チェック可能項目では、チェックされている場合にのみ値が送信されます。チェックされていない場合は、 name も含めて何も送信されません。チェックされているが値がない場合、 name が _on_ という値で送信されます。
 
-> **Note:** **注**: この節の例は、[checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) として GitHub にあります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html))。
+> **Note:** この節の例は、[checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) として GitHub にあります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html))。
 
 最大限のユーザービリティ/アクセシビリティを実現するために、関連項目の各リストを {{htmlelement("fieldset")}} で囲み、リストの全体的な説明を示す {{htmlelement("legend")}} で囲むことをお勧めします。 {{htmlelement("label")}}/{{htmlelement("input")}} 要素の個々のペアは、それぞれ独自のリスト項目 (または同様のもの) に含める必要があります。関連した {{htmlelement('label')}} はラジオボタンやチェックボックスの直後に、 {{htmlelement("legend")}} の中身にラジオボタンやチェックボックスのグループの説明が置かれます。これは上の例に示されています。
 
@@ -134,7 +134,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 ![Mac での Firefox 71 および Safari 13 と、 Windows 10 での Chrome 79 および Edge 18 の既定、フォーカス、無効状態のチェックボックス](checkboxes.png)
 
-> **Note:** **注**: チェックボックスやラジオボタンで読み込み時に [`checked`](/ja/docs/Web/HTML/Attributes/checked) 属性が付いていれば、チェック状態が解除されても {{cssxref(':default')}} 擬似クラスに一致します。現在チェックされているものは `{{cssxref(':checked')}}` 擬似クラスに一致します。
+> **Note:** チェックボックスやラジオボタンで読み込み時に [`checked`](/ja/docs/Web/HTML/Attributes/checked) 属性が付いていれば、チェック状態が解除されても {{cssxref(':default')}} 擬似クラスに一致します。現在チェックされているものは `{{cssxref(':checked')}}` 擬似クラスに一致します。
 
 チェックボックスにはオンとオフになるという性質があるため、チェックボックスはトグルボタンと考えられており、多くの開発者やデザイナーが既定のチェックボックスのスタイルを拡張して、トグルスイッチのように見えるボタンを作成しています。[ここで動作する例を](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)見ることができます　([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html)も見られます)。
 
@@ -185,9 +185,9 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 また、ボタンそのものを示す {{htmlelement("button")}} 要素もあります。これは `type` 属性に `submit`, `reset`, `button` の値を取り、上記の 3 つの `<input>` 型を模倣できます。この 2 つの主な違いは、実際の `<button>` 要素の方がはるかにスタイル付けしやすいことです。
 
-> **Note:** **注**: `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。。
+> **Note:** `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。。
 
-> **Note:** **注**: この節の例は [button-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html) として GitHub にあります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html))。
+> **Note:** この節の例は [button-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html) として GitHub にあります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html))。
 
 以下に、それぞれのボタンの `<input>` 型と、同等の `<button>` 型の例を示します。
 

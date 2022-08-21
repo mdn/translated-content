@@ -125,7 +125,7 @@ Under the _Dynamic content_ heading we check whether the error variable passed i
 
 At this point we should have created everything needed to display the index page. Run the application and open your browser to <http://localhost:3000/>. If everything is set up correctly, your site should look something like the following screenshot.
 
-![Home page - Express Local Library site](https://mdn.mozillademos.org/files/14458/LocalLibary_Express_Home.png)
+![Home page - Express Local Library site](LocalLibary_Express_Home.png)
 
 > **Note:** You won't be able to use the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
 

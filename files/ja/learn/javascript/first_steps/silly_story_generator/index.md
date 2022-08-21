@@ -28,9 +28,9 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 評価試験を開始するには...
 
 - GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピュータの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
-- [この生テキストを含むページ](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt)に移動してどこか別のブラウザタブで開いたままにしておきます。後で必要となります。
+- [この生テキストを含むページ](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt)に移動してどこか別のブラウザータブで開いたままにしておきます。後で必要となります。
 
-> **Note:** **注**: 上記の手順に代わって、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価試験を実施できます。HTML、CSS、JavaScript をオンラインエディターにペーストできます。使っているオンラインエディターが独立した JavaScript パネルを持たない場合、HTML ページ内の `<script>` 要素内に書いても問題ありません。
+> **Note:** 上記の手順に代わって、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価試験を実施できます。HTML、CSS、JavaScript をオンラインエディターにペーストできます。使っているオンラインエディターが独立した JavaScript パネルを持たない場合、HTML ページ内の `<script>` 要素内に書いても問題ありません。
 
 ## プロジェクトの要点
 
@@ -43,7 +43,7 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
 
 下記のスクリーンショットは完成したプログラムが出力する例を表しています:
 
-![](https://mdn.mozillademos.org/files/13667/assessment-1.png)
+![](assessment-1.png)
 
 これ以上のアイデアを与えるには[完成プログラムの例を見てください](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (ソースコードは覗かないで！)
 
@@ -92,7 +92,7 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
 ## ヒントと tips
 
 - JavaScript を HTML に適用する以外に、HTML を変更する必要は全くありません。
-- もし、JavaScript が HTML に適切に適用されているかどうかを知りたければ、JavaScript ファイルから一時的に全てのコードを削除して、確実に何かが起きるようなコードを追加して、JavaScript ファイルを保存して HTML ファイルを更新してみましょう。次の例は {{htmlelement("html")}} 要素の背景色を赤くするコードです。JavaScript が適切に HTML に適用されていれば、ブラウザのウィンドウが真っ赤になることでしょう。
+- もし、JavaScript が HTML に適切に適用されているかどうかを知りたければ、JavaScript ファイルから一時的に全てのコードを削除して、確実に何かが起きるようなコードを追加して、JavaScript ファイルを保存して HTML ファイルを更新してみましょう。次の例は {{htmlelement("html")}} 要素の背景色を赤くするコードです。JavaScript が適切に HTML に適用されていれば、ブラウザーのウィンドウが真っ赤になることでしょう。
 
   ```js
   document.querySelector('html').style.backgroundColor = 'red';

@@ -65,13 +65,13 @@ p {
 {{htmlelement("link")}} 要素の `href` 属性は、ファイルシステム上のファイルを参照する必要があります。上の例では、 CSS ファイルは HTML 文書と同じフォルダーにありますが、どこか別の場所に配置してパスを調整することもできます。以下に 3 つの例を示します。
 
 ```html
-<!-- 現在のディレクトリの中の styles というサブディレクトリの中 -->
+<!-- 現在のディレクトリーの中の styles というサブディレクトリーの中 -->
 <link rel="stylesheet" href="styles/style.css">
 
-<!-- カレントディレクトリの中にある styles というサブディレクトリの中にある、 general というサブディレクトリの中 -->
+<!-- カレントディレクトリーの中にある styles というサブディレクトリーの中にある、 general というサブディレクトリーの中 -->
 <link rel="stylesheet" href="styles/general/style.css">
 
-<!-- ひとつ上のレベルのディレクトリに行き、その下にある styles というサブディレクトリの中 -->
+<!-- ひとつ上のレベルのディレクトリーに行き、その下にある styles というサブディレクトリーの中 -->
 <link rel="stylesheet" href="../styles/style.css">
 ```
 
@@ -176,7 +176,7 @@ p {
 
 セレクターは CSS に欠かせない構成要素です。[CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)のチュートリアルでは、すでにさまざまな種類のセレクターを見てきました。セレクターは、 HTML 文書のなかでスタイルを適用する対象を指定するものです。もし CSS が期待通りにコンテンツに適用されなかったら、セレクターが一致すると思っていた方法で一致していないのかもしれません。
 
-それぞれの CSS 規則の先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザにどの要素に CSS 規則を適用するかを指示します。次のコード例は、いずれも有効なセレクター、またはセレクターのリストです。
+それぞれの CSS 規則の先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザーにどの要素に CSS 規則を適用するかを指示します。次のコード例は、いずれも有効なセレクター、またはセレクターのリストです。
 
 ```css
 h1
@@ -191,7 +191,7 @@ h1, h2, .intro
 
 上記のセレクターを使った CSS 規則を作ってみてください。セレクターによってスタイル付けされる HTML を追加します。上記の構文に馴染みのないものがあれば、 MDN を検索してみてください。
 
-> **Note:** **注**: 次のモジュールの記事 [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors) で、セレクターについてより詳しく学ぶことができます。
+> **Note:** 次のモジュールの記事 [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors) で、セレクターについてより詳しく学ぶことができます。
 
 ### 詳細度
 
@@ -242,15 +242,15 @@ p {
 
 次の例では、一組のプロパティと値を強調表示しています。プロパティ名は `color` で、値は `blue` です。
 
-![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![A declaration highlighted in the CSS](declaration.png)
 
 プロパティが値と組み合わせられているとき、この組み合わせを _CSS 宣言_ (CSS declaration) と呼びます。 CSS 宣言は _CSS 宣言ブロック_ (CSS Declaration Blocks) の中に入っています。次のコード例では CSS の宣言ブロックを強調しています。
 
-![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+![A highlighted declaration block](declaration-block.png)
 
 そして、 CSS 宣言ブロックは*セレクター*と組になって _CSS 規則セット_ (または _CSS 規則_) になります。1 つは `h1` セレクター用、もう 1 つは `p` セレクター用です。色付きのハイライトは `h1` 規則を識別します。
 
-![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
+![The rule for h1 highlighted](rules.png)
 
 CSS プロパティを特定の値に設定することが、文書のレイアウトとスタイルを定義する主な方法です。 CSS エンジンは、どの宣言がページの各要素に適用されるかを計算します。
 
@@ -522,7 +522,7 @@ margin: 0auto;
 padding- left: 10px;
 ```
 
-**`0auto` という書き方をブラウザは正しい値と解釈してくれません。なぜなら、`margin` プロパティの値 `0`、および `auto` はふたつの別々の値だからです。`padding-`もまた、ブラウザが認識できる正しいプロパティ名ではありません。**
+**`0auto` という書き方をブラウザーは正しい値と解釈してくれません。なぜなら、`margin` プロパティの値 `0`、および `auto` はふたつの別々の値だからです。`padding-`もまた、ブラウザーが認識できる正しいプロパティ名ではありません。**
 
 **CSS のプロパティに対する複数の値どうしを区別するためには、最低でも 1 個以上の空白をあいだにおく必要があります。また、プロパティの名称や値のひとつひとつは、その一部分だけを切り離したりせず続けて書かなければなりません。**
 
@@ -530,7 +530,7 @@ padding- left: 10px;
 
 ## 次のステップ
 
-**ブラウザが HTML や CSS を解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「[CSS はどう働くか？」 ](/ja/docs/Learn/CSS/First_steps/How_CSS_works)では、ブラウザが Web ページを生成する過程についてみていきましょう。**
+**ブラウザーが HTML や CSS を解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「[CSS はどう働くか？」 ](/ja/docs/Learn/CSS/First_steps/How_CSS_works)では、ブラウザーが Web ページを生成する過程についてみていきましょう。**
 
 **{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}**
 

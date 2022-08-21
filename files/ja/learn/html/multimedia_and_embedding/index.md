@@ -38,7 +38,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding
 
 このモジュールを開始する前に、[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で述べられてきた、HTML の基本についてのある程度の知識が求められます。 このモジュール (や似たようなもの) を一通り終えていない場合、まずそちらを一通り終えてから戻ってきてください！
 
-> **Note:** **メモ**: 自分自身のファイルを作れないコンピューター/タブレット/その他デバイスで作業している場合、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなオンラインコーティングプログラムにてコードの実例 (の大半) を試すことができます。
+> **Note:** 自分自身のファイルを作れないコンピューター/タブレット/その他デバイスで作業している場合、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなオンラインコーティングプログラムにてコードの実例 (の大半) を試すことができます。
 
 ## ガイド
 

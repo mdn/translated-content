@@ -79,7 +79,7 @@ Everything in this template has been demonstrated in previous sections.
 
 Run the application and open your browser to <http://localhost:3000/>. Select the _All Authors_ link, then select one of the authors. If everything is set up correctly, your site should look something like the following screenshot.
 
-![Author Detail Page - Express Local Library site](https://mdn.mozillademos.org/files/14466/LocalLibary_Express_Author_Detail.png)
+![Author Detail Page - Express Local Library site](LocalLibary_Express_Author_Detail.png)
 
 > **Note:** The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
 

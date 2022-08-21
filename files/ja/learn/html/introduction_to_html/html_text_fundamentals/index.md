@@ -26,7 +26,7 @@ HTML の役割の 1 つはテキストに構造と意味 ({{glossary("semantics"
 
 たいていの構造化されたテキストは見出しとパラグラフで構成されていて、それは物語でも、新聞でも、大学の教科書でも、雑誌などでも、何を読んでいるのかにかかわらずそうです。
 
-![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg "An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.")
+![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg "An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.")
 
 構造化されたコンテンツは読み手にとって読みやすく楽しい体験になります。
 
@@ -78,7 +78,7 @@ HTML では、各パラグラフは {{htmlelement("p")}} 要素で囲む必要�
 
 しかし、この文書をブラウザーで開くと、テキストが 1 つの大きな塊に見えるでしょう!
 
-![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](https://mdn.mozillademos.org/files/14827/Screen%20Shot%202017-03-29%20at%2009.20.35.png "A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.")
+![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](Screen%20Shot%202017-03-29%20at%2009.20.35.png "A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.")
 
 これはコンテンツの構造を与える要素がないためですので、ブラウザーはどれが見出しでどれが本文かがわかりません。さらには:
 
@@ -567,7 +567,7 @@ I am _glad_ you weren't _late._
 
 最初の文は、その人が遅刻していないことを本当に安心しているように思われます。対照的に、2 番目のものは皮肉的または受動的 - 攻撃的に聞こえ、その人が少し遅れて到着したという不快感を表しています。
 
-HTML では、このようなインスタンスをマークアップするために {{htmlelement("em")}} (強調) 要素を使用します。文書を読みやすくするだけでなく、これらはスクリーンリーダーによって認識され、異なるトーンの音声で話されます。ブラウザではデフォルトでイタリック体になっていますが、純粋にイタリック体にするだけの場合にはこのタグを使用しないでください。そのためには、{{htmlelement("span")}} 要素と CSS、あるいは {{htmlelement("i")}} 要素 (下記参照) を使用します。
+HTML では、このようなインスタンスをマークアップするために {{htmlelement("em")}} (強調) 要素を使用します。文書を読みやすくするだけでなく、これらはスクリーンリーダーによって認識され、異なるトーンの音声で話されます。ブラウザーではデフォルトでイタリック体になっていますが、純粋にイタリック体にするだけの場合にはこのタグを使用しないでください。そのためには、{{htmlelement("span")}} 要素と CSS、あるいは {{htmlelement("i")}} 要素 (下記参照) を使用します。
 
 ```html
 <p>I am <em>glad</em> you weren't <em>late</em>.</p>
@@ -581,7 +581,7 @@ This liquid is **highly toxic**.
 
 I am counting on you. **Do not** be late!
 
-HTML では、このようなインスタンスをマークアップするために {{htmlelement("strong")}} (強い重要性) 要素を使用します。 この文書をより便利にするだけでなく、これらもスクリーンリーダーによって認識され、異なるトーンの音声で話されています。ブラウザではデフォルトで太字のテキストとしてスタイル設定されていますが、太字のスタイルにするだけの場合にはこのタグを使用しないでください。そのためには、{{htmlelement("span")}} 要素といくつかの CSS、あるいは {{htmlelement("b")}} 要素 (下記参照) を使用します。
+HTML では、このようなインスタンスをマークアップするために {{htmlelement("strong")}} (強い重要性) 要素を使用します。 この文書をより便利にするだけでなく、これらもスクリーンリーダーによって認識され、異なるトーンの音声で話されています。ブラウザーではデフォルトで太字のテキストとしてスタイル設定されていますが、太字のスタイルにするだけの場合にはこのタグを使用しないでください。そのためには、{{htmlelement("span")}} 要素といくつかの CSS、あるいは {{htmlelement("b")}} 要素 (下記参照) を使用します。
 
 ```html
 <p>This liquid is <strong>highly toxic</strong>.</p>

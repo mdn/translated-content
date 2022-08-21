@@ -36,7 +36,7 @@ PWA や SPA やフレームワークベースのアプリが現れたことで�
 
 {{domxref("XMLHttpRequest")}} (XHR) DOM オブジェクトで HTTP リクエストを作成して送信し、結果を取得することができます。歴史的には、{{domxref("XMLHttpRequest")}} は交換フォーマットとして [XML](/ja/docs/XML_Introduction) を取得して送信するように設計されていました。しかし、[JSON](/ja/docs/Glossary/JSON) は XML に取って代わっています。しかし、XML も JSON もフォームデータリクエストのエンコーディングには適合しません。フォームデータ (`application/x-www-form-urlencoded`) は、キーと値のペアの URL エンコードされたリストで構成されています。バイナリーデータを送信するために、HTTP リクエストは `multipart/form-data` に再形成されます**。**
 
-> **Note:** **注記**: [Fetch API](/ja/docs/Web/API/Fetch_API) は最近 XHR の代わりによく使われます — これは XHR のモダンで更新されたバージョンであり、同様に動作しますが利点もあります。この記事で見る大半の XHR コードは Fetch で置き換えられます。
+> **Note:** [Fetch API](/ja/docs/Web/API/Fetch_API) は最近 XHR の代わりによく使われます — これは XHR のモダンで更新されたバージョンであり、同様に動作しますが利点もあります。この記事で見る大半の XHR コードは Fetch で置き換えられます。
 
 フロントエンド (ブラウザーで実行されるコード) とバックエンド (サーバーで実行されるコード) を制御すれば、JSON/XML を送信して必要に応じて処理することができます。
 
@@ -110,7 +110,7 @@ btn.addEventListener( 'click', function() {
 
 {{EmbedLiveSample("Building_an_XMLHttpRequest_manually", "100%", 50)}}
 
-> **Note:** **注記:** この {{domxref("XMLHttpRequest")}} の使用は、第三者の Web サイトにデータを送信したい場合にも、同一生成元ポリシーの対象となります。クロスオリジンリクエストの場合は、[CORS と HTTP のアクセス制御](/ja/docs/Web/HTTP/CORS)が必要です。
+> **Note:** この {{domxref("XMLHttpRequest")}} の使用は、第三者の Web サイトにデータを送信したい場合にも、同一生成元ポリシーの対象となります。クロスオリジンリクエストの場合は、[CORS と HTTP のアクセス制御](/ja/docs/Web/HTTP/CORS)が必要です。
 
 ### XMLHttpRequest と FormData オブジェクトの使用
 

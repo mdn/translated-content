@@ -441,7 +441,7 @@ if (ua.includes('Firefox')) {
 
 The idea was fairly good — detect what browser is viewing the site, and run code as appropriate to make sure the browser will be able to use your site OK.
 
-> **Note:** **注**: Try opening up your JavaScript console now and running navigator.userAgent, to see what you get returned.
+> **Note:** Try opening up your JavaScript console now and running navigator.userAgent, to see what you get returned.
 
 However, as time went on, developers started to see major problems with this approach. For a start, the code was error prone. What if you knew a feature didn't work in say, Firefox 10 and below, and implemented code to detect this, and then Firefox 11 came out — which did support that feature? Firefox 11 probably wouldn't be supported because it's not Firefox 10. You'd have to change all your sniffing code regularly.
 

@@ -31,7 +31,7 @@ Once we've decided on our models and field, we need to think about the relations
 
 With that in mind, the UML association diagram below shows the models we'll define in this case (as boxes).
 
-![LocalLibrary Model UML](https://mdn.mozillademos.org/files/16479/local_library_model_uml.png)
+![LocalLibrary Model UML](local_library_model_uml.png)
 
 We've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created/selected through the admin interface. We've decided not to have a model for the `BookInstance:status` — we've hardcoded the values (`LOAN_STATUS`) because we don't expect these to change. Within each of the boxes, you can see the model name, the field names, and types, and also the methods and their return types.
 

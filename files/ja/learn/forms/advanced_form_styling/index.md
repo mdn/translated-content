@@ -82,7 +82,7 @@ input {
 }
 ```
 
-> **Note:** **注**: プレフィックスつきのプロパティを使っているときでも、両方の定義を常に入れておくのが良いです — プレフィックス付きとなしと。プレフィックスつきのものは通常は"作業中"を意味するため、将来のブラウザーベンダーはプレフィックスを落とすよう合意することもあるでしょう。上記のコードではそのような結末となった将来でも耐用できます。
+> **Note:** プレフィックスつきのプロパティを使っているときでも、両方の定義を常に入れておくのが良いです — プレフィックス付きとなしと。プレフィックスつきのものは通常は"作業中"を意味するため、将来のブラウザーベンダーはプレフィックスを落とすよう合意することもあるでしょう。上記のコードではそのような結末となった将来でも耐用できます。
 
 下記の例ではあなたのシステムでどのように見えるかを示します — デフォルトでは左で、上記の CSS が適用されると右です (その他のシステムでテストしたい場合は[ここも探してください](https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html))。
 
@@ -111,7 +111,7 @@ input[type="search"] {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-> **Note:** **注**: 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
+> **Note:** 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
 
 ### チェックボックスとラジオボタン
 
@@ -139,12 +139,12 @@ input[type=checkbox] {
 
 | ブラウザー                          | 描画結果                                                                   |
 | ----------------------------------- | -------------------------------------------------------------------------- |
-| Firefox 71 (macOS)                  | ![](https://mdn.mozillademos.org/files/15671/firefox-mac-checkbox.png)     |
-| Firefox 57 (Windows 10)             | ![](https://mdn.mozillademos.org/files/15691/firefox-windows-checkbox.png) |
-| Chrome 77 (macOS), Safari 13, Opera | ![](https://mdn.mozillademos.org/files/15676/chrome-mac-checkbox.png)      |
-| Chrome 63 (Windows 10)              | ![](https://mdn.mozillademos.org/files/15681/chrome-windows-checkbox.png)  |
-| Internet Explorer 11 (Windows 10)   | ![](https://mdn.mozillademos.org/files/15696/ie11-checkbox.png)            |
-| Edge 16 (Windows 10)                | ![](https://mdn.mozillademos.org/files/15686/edge-checkbox.png)            |
+| Firefox 71 (macOS)                  | ![](firefox-mac-checkbox.png)     |
+| Firefox 57 (Windows 10)             | ![](firefox-windows-checkbox.png) |
+| Chrome 77 (macOS), Safari 13, Opera | ![](chrome-mac-checkbox.png)      |
+| Chrome 63 (Windows 10)              | ![](chrome-windows-checkbox.png)  |
+| Internet Explorer 11 (Windows 10)   | ![](ie11-checkbox.png)            |
+| Edge 16 (Windows 10)                | ![](edge-checkbox.png)            |
 
 #### ラジオボタン/チェックボックスで appearance: none を使う
 
@@ -237,7 +237,7 @@ input[type=checkbox]:disabled {
 
 {{cssxref("appearance")}} や をサポートしていないブラウザーでこれらのチェックボックスを表示できます。カスタムデザインは失われますが、チェックボックスのままに見えて使用できます。
 
-> **Note:** **注記**: Internet Explorer はどのバージョンの `appearance` もサポートしませんが、`input[type=checkbox]::-ms-check` にて IE のみチェックボックスをターゲットにできます。この手法は、`-ms-check` という名前にもかかわらず、ラジオボタンでも機能します。
+> **Note:** Internet Explorer はどのバージョンの `appearance` もサポートしませんが、`input[type=checkbox]::-ms-check` にて IE のみチェックボックスをターゲットにできます。この手法は、`-ms-check` という名前にもかかわらず、ラジオボタンでも機能します。
 
 ## "劣悪な"要素に何ができるか?
 
@@ -308,7 +308,7 @@ button {
 }
 ```
 
-> **Note:** **注記**: 多数のブラウザーで同時にこの例をテストしたい場合、[live 版をここで見つけてください](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html))。
+> **Note:** 多数のブラウザーで同時にこの例をテストしたい場合、[live 版をここで見つけてください](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html))。
 >
 > また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file#Examples) リファレンスページの例を簡単にしたバージョンです。
 
@@ -402,7 +402,7 @@ select {
 
 しかし、コントロールの内部パーツ (例 日付をピックアップするのに使うポップアップカレンダー、値を増減するスピナー) はまったくスタイル設定できず、`appearance: none;`を使ってスタイルを除去できません。スタイル設定に完全なコントロールが必要な場合、カスタムコントロールを生成するライブラリを使うか、自分で作らねばなりません。
 
-> **Note:** **注**: ここでも[`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) は触れる価値があります — これにも値を増減するスピナーがあるので、同じ問題に悩まさされます。しかし、`number` タイプを使った場合にデータは簡単に集められて、単に `text` 入力を (あるいはモバイルブラウザーで数字キーパッドを表示するのに `tel` を) 代わりに使うのも簡単です
+> **Note:** ここでも[`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) は触れる価値があります — これにも値を増減するスピナーがあるので、同じ問題に悩まさされます。しかし、`number` タイプを使った場合にデータは簡単に集められて、単に `text` 入力を (あるいはモバイルブラウザーで数字キーパッドを表示するのに `tel` を) 代わりに使うのも簡単です
 
 ### Range 入力タイプ
 

@@ -68,7 +68,7 @@ let myNumber = Math.random();
 
 ...関数を使っていたのです!
 
-> **Note:** **メモ**: これらの機能に慣れるために、必要なときにはこういった行をあなたのブラウザーの JavaScript コンソールにいつでも入力してみてください。
+> **Note:** これらの機能に慣れるために、必要なときにはこういった行をあなたのブラウザーの JavaScript コンソールにいつでも入力してみてください。
 
 JavaScript 言語にはたくさんの組込み関数があるので、いろいろあるあなたのやりたい事を、全部をあなた自身で書かなくてもすみます。実は、あなたが呼び出して起動(走らせたり実行する事の別の言い方)するコードのいくつかは、JavaScript では書けない、ブラウザー組込み関数です — こういった関数の多くは背後のブラウザーのコードを呼び出していて、これらは JavaScript のようなウェブ言語ではなく、大半が C++のような低レベルのシステム言語で書かれています。
 
@@ -202,7 +202,7 @@ myButton.onclick = function() {
 
 関数には実行する時に**引数**が必要なものがあります — 関数のカッコとカッコの間に書かなければならない値で、関数が正しい仕事をするのに必要とされます。
 
-> **Note:** **メモ**: 引数は、パラメーター、プロパティ、アトリビュート（属性）などと呼ばれる場合もあります。
+> **Note:** 引数は、パラメーター、プロパティ、アトリビュート（属性）などと呼ばれる場合もあります。
 
 例えばブラウザー組込み関数 [Math.random()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/random) は引数を必要としません。呼ばれるといつも 0 から 1 までの乱数を返します:
 
@@ -217,7 +217,7 @@ let myText = 'I am a string';
 let newString = myText.replace('string', 'sausage');
 ```
 
-> **Note:** **メモ**: 複数の引数を指定するときは、カンマで区切って書きます
+> **Note:** 複数の引数を指定するときは、カンマで区切って書きます
 
 引数には省略可能 — 書かなくても良い — なものもある事に触れておくべきでしょう。省略された場合、関数はだいたいデフォルトに規定された動作を行ないます。例えば、配列の [join()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 関数のパラメータは省略可能です:
 
@@ -268,13 +268,13 @@ function greeting() {
 
 あなたが呼び出したいのはどっちも `greeting()`関数ですが、あなたには `first.js` ファイルの `greeting()` 関数しかアクセスできません(2 つ目は無視されます)。加えて、`second.js` ファイルで `let` キーワードで `name` 変数に 2 度目の定義をしようとするとエラーになります。
 
-> **Note:** **注**: この例を [GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) できます([ソースコード](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)はこちら).
+> **Note:** この例を [GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) できます([ソースコード](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)はこちら).
 
 あなたのコードの部品を関数の中に隔離するとこのような問題を避けられるので、これが一番良いやりかたと考えられています。
 
 これは動物園みたいなものです。ライオン、シマウマ、トラ、ペンギンはそれぞれの檻の中にいて、それぞれの檻の中のものにしか触れられません — 関数のスコープと同じ事です。もし彼等が他の檻の中に侵入できたら問題が起きることでしょう。良くて、知らない住人に囲まれて気まずい思いをする — 寒くて水だらけのペンギンの檻に入ったライオンやトラは酷い気分になるでしょう。最悪の場合、ライオンやトラはペンギンを食べてみようとするかも!
 
-![](https://mdn.mozillademos.org/files/14079/MDN-mozilla-zoo.png)
+![](MDN-mozilla-zoo.png)
 
 動物園の管理人はグローバルスコープみたいなものです — 管理人はすべての檻の鍵を持っていて、エサを補充し、動物にうんざりし、などなど。
 
@@ -370,9 +370,9 @@ function greeting() {
 
     今度は `a()` と `b()` の両方の呼び出しで、迷惑な "[ReferenceError: _variable name_ is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined)" エラーが返されます — これは `output()` 呼び出しと、出力しようとしている変数が同じ関数のスコープにない、つまりこれらの関数呼び出しからは変数が参照できない状態だからです。
 
-> **Note:** **注**: 同じスコープルールはループ (`for() { ... }` など) と条件ブロック (`if() { ... }`など) には適用されません。それらは非常によく似ていますが、同じものではありません。混乱しないように注意してください。
+> **Note:** 同じスコープルールはループ (`for() { ... }` など) と条件ブロック (`if() { ... }`など) には適用されません。それらは非常によく似ていますが、同じものではありません。混乱しないように注意してください。
 
-> **Note:** **注**: [ReferenceError: "x" is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined) というエラーは、あなたが遭遇する最も一般的なエラーの 1 つです。このエラーが発生し、問題の変数が定義されていると確信できる場合は、変数のスコープを確認してください。
+> **Note:** [ReferenceError: "x" is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined) というエラーは、あなたが遭遇する最も一般的なエラーの 1 つです。このエラーが発生し、問題の変数が定義されていると確信できる場合は、変数のスコープを確認してください。
 
 ### 関数の中の関数
 

@@ -32,11 +32,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 ## 出発点
 
-この評価試験を開始するには、github の [mdn-splash-page-start](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/) ディレクトリにある HTML とすべての画像を取得する必要があります。 [index.html](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/index.html) の内容をローカルドライブの新しいディレクトリの `index.html` というファイルに保存します。 それから、[pattern.png](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/pattern.png) を同じディレクトリに保存します（画像を右クリックして保存するオプションを選びます）。
+この評価試験を開始するには、github の [mdn-splash-page-start](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/) ディレクトリーにある HTML とすべての画像を取得する必要があります。 [index.html](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/index.html) の内容をローカルドライブの新しいディレクトリーの `index.html` というファイルに保存します。 それから、[pattern.png](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/pattern.png) を同じディレクトリーに保存します（画像を右クリックして保存するオプションを選びます）。
 
-[originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) ディレクトリの別の画像にアクセスし、同じ方法で保存します。 あなたはそれらを使用する準備が整う前に、グラフィックスエディタを使って（それらのいくつかを）操作する必要があるので、今は別のディレクトリに保存する必要があります。
+[originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) ディレクトリーの別の画像にアクセスし、同じ方法で保存します。 あなたはそれらを使用する準備が整う前に、グラフィックスエディタを使って（それらのいくつかを）操作する必要があるので、今は別のディレクトリーに保存する必要があります。
 
-> **Note:** **メモ**: 例の HTML ファイルには、ページのスタイルを設定するための CSS がかなり多く含まれています。 {{htmlelement("body")}} 要素内の HTML だけで、CSS に触れる必要はありません — 正しいマークアップを挿入する限り、スタイリングは正しく表示されます。
+> **Note:** 例の HTML ファイルには、ページのスタイルを設定するための CSS がかなり多く含まれています。 {{htmlelement("body")}} 要素内の HTML だけで、CSS に触れる必要はありません — 正しいマークアップを挿入する限り、スタイリングは正しく表示されます。
 
 ## プロジェクトの概要
 
@@ -52,11 +52,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 たとえば、`firefoxlogo400.png` と `firefoxlogo120.png` のように、それらを判りやすい名前にしてください。
 
-`mdn.svg` に加えて、これらの画像は、`further-info` 領域内のさらなるリソースにリンクするアイコンになります。 また、サイトヘッダーの firefox ロゴにもリンクします。 これらすべてのコピーを `index.html` と同じディレクトリに保存します。
+`mdn.svg` に加えて、これらの画像は、`further-info` 領域内のさらなるリソースにリンクするアイコンになります。 また、サイトヘッダーの firefox ロゴにもリンクします。 これらすべてのコピーを `index.html` と同じディレクトリーに保存します。
 
-次に、`red-panda.jpg` の 1200 ピクセル幅のランドスケープバージョンと、パンダをより近くに見せてくれる 600 ピクセル幅のポートレートバージョンを作成します。 繰り返しますが、それらを簡単に識別できるように、判りやすい名前にしてください。 これらの両方のコピーを `index.html` と同じディレクトリに保存します。
+次に、`red-panda.jpg` の 1200 ピクセル幅のランドスケープバージョンと、パンダをより近くに見せてくれる 600 ピクセル幅のポートレートバージョンを作成します。 繰り返しますが、それらを簡単に識別できるように、判りやすい名前にしてください。 これらの両方のコピーを `index.html` と同じディレクトリーに保存します。
 
-> **Note:** **メモ**: JPG 画像と PNG 画像を最適化して、できるだけ小さくして、それでも見栄えを良くしてください。 [tinypng.com](https://tinypng.com/) は簡単にこれを行うための素晴らしいサービスです。
+> **Note:** JPG 画像と PNG 画像を最適化して、できるだけ小さくして、それでも見栄えを良くしてください。 [tinypng.com](https://tinypng.com/) は簡単にこれを行うための素晴らしいサービスです。
 
 ### ヘッダーにロゴを追加する
 
@@ -74,7 +74,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 正しい画像と正しいリンクが一致していることを確認してください！
 
-> **Note:** **メモ**: `srcset` と `sizes` の例を適切にテストするには、サイトをサーバーにアップロードする必要があります ([Github ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)を使用するのが簡単で無料の解決策です)。 そして、そこから Firefox の [Network Monitor](/ja/docs/Tools/Network_Monitor) などのツールを使用して正しく動作しているかどうかをテストできます。
+> **Note:** `srcset` と `sizes` の例を適切にテストするには、サイトをサーバーにアップロードする必要があります ([Github ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)を使用するのが簡単で無料の解決策です)。 そして、そこから Firefox の [Network Monitor](/ja/docs/Tools/Network_Monitor) などのツールを使用して正しく動作しているかどうかをテストできます。
 
 ### アートディレクションされたレッサーパンダ
 
@@ -84,15 +84,15 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 以下のスクリーンショットは、広い画面と狭い画面で、スプラッシュページが正しくマークアップされた後にどのように見えるかを示しています。
 
-![サンプルのスプラッシュページの広い画面のショット](https://mdn.mozillademos.org/files/12946/wide-shot.png)
+![サンプルのスプラッシュページの広い画面のショット](wide-shot.png)
 
-![サンプルのスプラッシュページの狭い画面のショット](https://mdn.mozillademos.org/files/12944/narrow-shot.png)
+![サンプルのスプラッシュページの狭い画面のショット](narrow-shot.png)
 
 ## 評価
 
 組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
 
-> **Note:** **メモ**: 評価試験を Chrome ブラウザーのデベロッパーツールで行った場合、「レスポンシブビュー」でどんなに幅を狭く設定しても正しい画像が読み込めないことがあります。これは Chrome の特性のようです。 Firefox ブラウザーは (HTML が正しければ) 正しい画像を読み込みます。
+> **Note:** 評価試験を Chrome ブラウザーのデベロッパーツールで行った場合、「レスポンシブビュー」でどんなに幅を狭く設定しても正しい画像が読み込めないことがあります。これは Chrome の特性のようです。 Firefox ブラウザーは (HTML が正しければ) 正しい画像を読み込みます。
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

@@ -1,5 +1,5 @@
 ---
-title: はじめてのクロスブラウザテスト
+title: はじめてのクロスブラウザーテスト
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 tags:
   - Article
@@ -13,47 +13,47 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-この記事では (クロス) ブラウザテストのトピックの概要を説明し、「クロスブラウザテストとは何ですか？」、「発生する最も一般的な問題の種類は何ですか？」、「問題のテスト、特定、および修正のための主なアプローチは？」などの質問に答えながらモジュールを始めます。
+この記事では (クロス) ブラウザーテストのトピックの概要を説明し、「クロスブラウザーテストとは何ですか？」、「発生する最も一般的な問題の種類は何ですか？」、「問題のテスト、特定、および修正のための主なアプローチは？」などの質問に答えながらモジュールを始めます。
 
 | 前提知識: | [HTML](/ja/docs/Learn/HTML), [CSS](/ja/docs/Learn/CSS), [JavaScript](/ja/docs/Learn/JavaScript) 言語の基礎に精通していること。 |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 目的:     | クロスブラウザテストに関する高レベルのコンセプトを理解する。                                                                   |
+| 目的:     | クロスブラウザーテストに関する高レベルのコンセプトを理解する。                                                                   |
 
-## クロスブラウザテストとは？
+## クロスブラウザーテストとは？
 
-クロスブラウザテストは、作成した Web サイトと Web アプリケーションが許容できる数の Web ブラウザにわたって動作することを確認することです。Web 開発者として、自分のプロジェクトが機能するだけでなく、使用しているブラウザ、デバイス、その他の補助ツールに関係なく、すべてのユーザに対して機能することを確認するのはあなたの責任です。あなたは考える必要があります：
+クロスブラウザーテストは、作成した Web サイトと Web アプリケーションが許容できる数の Web ブラウザーにわたって動作することを確認することです。Web 開発者として、自分のプロジェクトが機能するだけでなく、使用しているブラウザー、デバイス、その他の補助ツールに関係なく、すべてのユーザに対して機能することを確認するのはあなたの責任です。あなたは考える必要があります：
 
-- 普段自分が使っているブラウザ以外にも、数多くのブラウザが存在します。また、人によっては少し古いバージョンを使用していて、最新の CSS や JavaScript 機能をサポートしていない場合もあります。
-- ウェブにアクセスするデバイスは様々で、最新の高性能タブレットやスマートフォンから、スマート TV からのアクセス、廉価なタブレットや、少し古いフィーチャーフォンに搭載されている機能が限定されたブラウザなどもあります。
+- 普段自分が使っているブラウザー以外にも、数多くのブラウザーが存在します。また、人によっては少し古いバージョンを使用していて、最新の CSS や JavaScript 機能をサポートしていない場合もあります。
+- ウェブにアクセスするデバイスは様々で、最新の高性能タブレットやスマートフォンから、スマート TV からのアクセス、廉価なタブレットや、少し古いフィーチャーフォンに搭載されている機能が限定されたブラウザーなどもあります。
 - 障がいを持った人で、スクリーンリーダーのような補助技術を使ってウェブを使用していたり、マウスを使わずにキーボードだけでブラウズしたりする人もいます。
 
 ユーザーの状況は一人ひとり異なってきます — 自分の Macbook Pro やハイエンドな Galaxy Nexus で動いても、すべてのユーザーにとって動作するとは限りません 。それを確認するには膨大な数のテストが必要になってきます。
 
-> **Note:** **注**: [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) では、人々が使っているさまざまなブラウザの種類やそれぞれのマーケットシェア、それに伴うクロスブラウザの懸念点などが説明されています。
+> **Note:** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) では、人々が使っているさまざまなブラウザーの種類やそれぞれのマーケットシェア、それに伴うクロスブラウザーの懸念点などが説明されています。
 
-ここでいくつかの用語を説明します。最初に、「クロスブラウザでの動作」と言う時、様々なブラウザ間で受け入れられるユーザー体験が提供されることを言います。サイトがすべてのブラウザでまったく同一の体験が提供していなくても、コア機能がいくつかの方法で受け入れられる限りは、潜在的に OK です。モダンブラウザではアニメーションや 3D や目立つものがあり、いっぽう古いブラウザでは平坦なグラフィックで同じ情報を表すだけのこともあるでしょう。サイト所有者が満足している限り、あなたの仕事は完了です。
+ここでいくつかの用語を説明します。最初に、「クロスブラウザーでの動作」と言う時、様々なブラウザー間で受け入れられるユーザー体験が提供されることを言います。サイトがすべてのブラウザーでまったく同一の体験が提供していなくても、コア機能がいくつかの方法で受け入れられる限りは、潜在的に OK です。モダンブラウザーではアニメーションや 3D や目立つものがあり、いっぽう古いブラウザーでは平坦なグラフィックで同じ情報を表すだけのこともあるでしょう。サイト所有者が満足している限り、あなたの仕事は完了です。
 
 その一方で、サイトが視力のあるユーザーにとって動作していても、視覚障がいのあるユーザーにとって、スクリーンリーダーアプリケーションがそこにある情報を読み取れないため完全にアクセスできない場合は、OK ではありません。
 
-2 つ目に、「受け入れられる数のウェブブラウザ間で」と言った時、世界中のブラウザの 100% の意味ではありません — これは不可能です。ユーザーが使うブラウザや端末の情報を呼び出すことができます (このシリーズの 2 つ目の記事で見ていきましょう — [Gotta test 'em all?](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)を見てください)が、すべてを保証することはできません。ウェブ開発者としては、ある範囲のブラウザと端末にてコードが完全に動作することをサイトオーナーと同意しておく必要があります。しかしそれを超えて、その他のブラウザでコンテンツを使う機会をできるだけ与えられるよう防衛的なコードを書いておく必要があります。
+2 つ目に、「受け入れられる数のウェブブラウザー間で」と言った時、世界中のブラウザーの 100% の意味ではありません — これは不可能です。ユーザーが使うブラウザーや端末の情報を呼び出すことができます (このシリーズの 2 つ目の記事で見ていきましょう — [Gotta test 'em all?](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)を見てください)が、すべてを保証することはできません。ウェブ開発者としては、ある範囲のブラウザーと端末にてコードが完全に動作することをサイトオーナーと同意しておく必要があります。しかしそれを超えて、その他のブラウザーでコンテンツを使う機会をできるだけ与えられるよう防衛的なコードを書いておく必要があります。
 
-> **Note:** **注**: このモジュールの後の方でも、防衛的なコードをカバーします。
+> **Note:** このモジュールの後の方でも、防衛的なコードをカバーします。
 
-## なぜクロスブラウザ問題が起きるのか？
+## なぜクロスブラウザー問題が起きるのか？
 
-クロスブラウザ問題が生じる原因はたくさんあります。そして、本記事ではブラウザ・端末・ブラウザの設定によって生じる問題について述べます。クロスブラウザの問題に取り組む前に、ソース中のバグを解決するべきです（必要に応じて前述の[Debugging HTML](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/ja/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)の記事を見て記憶を呼び覚ましてください）。
+クロスブラウザー問題が生じる原因はたくさんあります。そして、本記事ではブラウザー・端末・ブラウザーの設定によって生じる問題について述べます。クロスブラウザーの問題に取り組む前に、ソース中のバグを解決するべきです（必要に応じて前述の[Debugging HTML](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/ja/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)の記事を見て記憶を呼び覚ましてください）。
 
-クロスブラウザ問題が発生する原因は主に以下になります。
+クロスブラウザー問題が発生する原因は主に以下になります。
 
-- 時々ブラウザにはバグがあったり、異なる仕様で機能が実装されています。この状況はかつてよりはましになっています。1990 年代に IE4 と Netscape4 がブラウザの支配権を争っっていたとき、ブラウザ会社は意図的に競争優位性を得るために互いに異なる実装をしていました。これは開発者にとってはたまったもんじゃありませんでした。今日ではそのときに比べてはブラウザを取り巻く環境は遥かにましになっています。しかし、それでもブラウザ間での違いやバグは時々あります。
-- ブラウザ間で機能についてのサポートのレベルが異なる場合があります。これは実装されたばかりの最先端の機能を使おうとした場合や新しい機能が開発されるよりずっと前に開発終了になったものすごく古いブラウザをサポートする場合には避けることはできません。たとえば、自分のサイトで JavaScript 最新の機能を使いたい場合、これらの機能は古いブラウザでは動作しないかもしれません。もし古いブラウザをサポートする必要があるならそれらの機能を使わないかクロスコンパイラを使って古い書き方に変換する必要があります。
+- 時々ブラウザーにはバグがあったり、異なる仕様で機能が実装されています。この状況はかつてよりはましになっています。1990 年代に IE4 と Netscape4 がブラウザーの支配権を争っっていたとき、ブラウザー会社は意図的に競争優位性を得るために互いに異なる実装をしていました。これは開発者にとってはたまったもんじゃありませんでした。今日ではそのときに比べてはブラウザーを取り巻く環境は遥かにましになっています。しかし、それでもブラウザー間での違いやバグは時々あります。
+- ブラウザー間で機能についてのサポートのレベルが異なる場合があります。これは実装されたばかりの最先端の機能を使おうとした場合や新しい機能が開発されるよりずっと前に開発終了になったものすごく古いブラウザーをサポートする場合には避けることはできません。たとえば、自分のサイトで JavaScript 最新の機能を使いたい場合、これらの機能は古いブラウザーでは動作しないかもしれません。もし古いブラウザーをサポートする必要があるならそれらの機能を使わないかクロスコンパイラを使って古い書き方に変換する必要があります。
 - 端末によっては制約があり、それによってウェブサイトの表示が遅くなったり表示がおかしくなったりします。たとえば、デスクトップ PC でよく見えるように意図されたサイトは、携帯端末ではひょっとすると小さく読むのが難しかったりするかもしれません。また大量のアニメーションを読み込むサイトは、ハイスペックのタブレットでは大丈夫かもしれませんが、低スペックの端末ではカクつくかもしれません。
 
 上記の他にも理由はあります。
 
-後述の記事では、クロスブラウザ問題についてよくある問題について掘り下げ、解決策を提示します。
+後述の記事では、クロスブラウザー問題についてよくある問題について掘り下げ、解決策を提示します。
 
-## クロスブラウザテストの作業手順
+## クロスブラウザーテストの作業手順
 
 All of this cross browser testing business may sound time consuming and scary, but it needn't be — you just need to plan carefully for it, and make sure you do enough testing in the right places to make sure you don't run into unexpected problems. If you are working on a large project, you should be testing it regularly, to make sure that new features work for your target audience, and that new additions to the code don't break old features that were previously working.
 
@@ -77,7 +77,7 @@ Now you know your target testing platforms, you should go back and review the re
 
 You should compile a list of the potential problem areas.
 
-> **Note:** **注**: You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
+> **Note:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 
@@ -148,7 +148,7 @@ Once a fix has been made, you'll want to repeat your testing process to make sur
 
 ## バグを報告する
 
-ブラウザでバグを発見した場合は、上記で述べたことを繰り返しますが、それらを報告する必要があります。
+ブラウザーでバグを発見した場合は、上記で述べたことを繰り返しますが、それらを報告する必要があります。
 
 - [Firefox Bugzilla](https://bugzilla.mozilla.org/)
 - [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
@@ -158,7 +158,7 @@ Once a fix has been made, you'll want to repeat your testing process to make sur
 
 ## 要約
 
-この記事では、クロスブラウザテストに関して知っておくべき最も大事な概念について、高位の理解を与えてきました。この知識を備えたことで、クロスブラウザテストの戦略について学び始める準備ができています。
+この記事では、クロスブラウザーテストに関して知っておくべき最も大事な概念について、高位の理解を与えてきました。この知識を備えたことで、クロスブラウザーテストの戦略について学び始める準備ができています。
 
 {{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 

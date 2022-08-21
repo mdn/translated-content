@@ -21,17 +21,17 @@ translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 
 生の HTML、基本的な CSS、そして画像が提供されています — これで、次の画像にそっくりなデザインのレイアウトを作成する必要があります。
 
-![](https://mdn.mozillademos.org/files/16076/layout-task-complete.png)
+![](layout-task-complete.png)
 
 ### 基本設定
 
 HTML、CSS、および 6 枚の画像を[ここからダウンロード](https://github.com/mdn/learning-area/tree/master/css/css-layout/fundamental-layout-comprehension)できます。
 
-HTML ドキュメントとスタイルシートをコンピュータ上のディレクトリに保存し、画像を `images` という名前のフォルダに追加します。 ブラウザーで `index.html` ファイルを開くと、次の画像のような基本的なスタイルは設定されているがレイアウトが設定されていないページが表示されます。
+HTML ドキュメントとスタイルシートをコンピュータ上のディレクトリーに保存し、画像を `images` という名前のフォルダに追加します。 ブラウザーで `index.html` ファイルを開くと、次の画像のような基本的なスタイルは設定されているがレイアウトが設定されていないページが表示されます。
 
 この出発点には、通常フローでブラウザーに表示されるレイアウトのすべての内容が含まれています。
 
-![](https://mdn.mozillademos.org/files/16075/layout-task-start.png)
+![](layout-task-start.png)
 
 ### あなたのタスク
 

@@ -42,7 +42,7 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
 クライアント側での保存とサーバ側での保存は、しばしば共に使われます。たとえば、複数の音楽ファイル (おそらくウェブゲームまたは音楽プレーヤー・アプリに使われる) をダウンロードし、それらの音楽ファイルをクライアント側のデータベース内に保存し、必要に応じて再生する、といったことが可能でしょう。ユーザーは、それらの音楽ファイルをただ一度ダウンロードするだけで済むでしょう。その後の訪問では、音楽ファイルは、ダウンロードされる代わりにデータベースから取得されるでしょう。
 
-> **Note:** **注**: クライアント側のストレージ API を使って保存できるデータの量には、上限があります (もしかすると、個別の API ごとの上限と、累積的な上限の双方があるかもしれません)。正確な上限は、ブラウザーごとに異なりますし、もしかすると、ユーザーの設定によることもあるかもしれません。より詳しくは、[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) を参照。
+> **Note:** クライアント側のストレージ API を使って保存できるデータの量には、上限があります (もしかすると、個別の API ごとの上限と、累積的な上限の双方があるかもしれません)。正確な上限は、ブラウザーごとに異なりますし、もしかすると、ユーザーの設定によることもあるかもしれません。より詳しくは、[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) を参照。
 
 ### 旧式な方法: クッキー
 
@@ -139,12 +139,12 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
 この例の HTML を [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) で入手できます。これは、ヘッダーとコンテンツとフッターを備えた簡素なウェブサイトと、名前を入力するためのフォームとを含みます。
 
-![](https://mdn.mozillademos.org/files/15735/web-storage-demo.png)
+![](web-storage-demo.png)
 
 この例を組み上げましょう。すると、これがどのように機能するのか理解できるでしょう。
 
-1.  まず、御自分のコンピュータ上の新規ディレクトリに、[personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) というファイルのローカルコピーを作ってください。
-2.  次に、`index.js` と呼ばれる JavaScript ファイルを、HTML がどのように参照しているのかに注意してください (40 行目を参照)。これ (`index.js`) を作成して、そこに JavaScript コードを書き込む必要があります。HTML ファイルと同じディレクトリに `index.js` というファイルを作成してください。
+1.  まず、御自分のコンピュータ上の新規ディレクトリーに、[personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) というファイルのローカルコピーを作ってください。
+2.  次に、`index.js` と呼ばれる JavaScript ファイルを、HTML がどのように参照しているのかに注意してください (40 行目を参照)。これ (`index.js`) を作成して、そこに JavaScript コードを書き込む必要があります。HTML ファイルと同じディレクトリーに `index.js` というファイルを作成してください。
 3.  この例で操作する必要のある HTML 項目 (features) のすべてに対する参照を作るところから取り掛かりましょう。それらの参照のすべてを定数として作ります。なぜなら、これらの参照は、アプリのライフサイクル内で変化する必要がないからです。以下の行を JavaScript ファイルに追加してください。
 
     ```js
@@ -228,9 +228,9 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
 例が完成しました。よくできましたね! 現時点で残っているのは、コードを保存して HTML ページをブラウザーでテストすることだけです。[ライブ実行される完成版をここで](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 見られます。
 
-> **Note:** **注**: [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
+> **Note:** [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
 
-> **Note:** **注**: 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページをロードし終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
+> **Note:** 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページをロードし終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
 
 ## 複雑なデータを保存する—— IndexedDB
 
@@ -244,13 +244,13 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
 当該アプリは、以下のような見かけをしています。
 
-![](https://mdn.mozillademos.org/files/15744/idb-demo.png)
+![](idb-demo.png)
 
 メモ書きの各々には題名と何らかの本文があり、題名と本文のそれぞれは別々に編集できます。以下で見てゆく JavaScript コードには、何が起きているのかを理解する手助けとなる詳しいコメントがあります。
 
 ### 始めますよ
 
-1.  まず、[`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html) と [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css) と [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) というファイルのローカルコピーを、ローカルマシンの新規ディレクトリ内に作成してください。
+1.  まず、[`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html) と [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css) と [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) というファイルのローカルコピーを、ローカルマシンの新規ディレクトリー内に作成してください。
 2.  ファイルを見てください。HTML がかなり簡潔なのがお分かりでしょう。これは、ヘッダーとフッターのあるウェブサイトです。また、メモ書きを表示する場所と、データベースに新たなメモ書きを入力するためのフォームとを含む、本文コンテンツ領域もあります。 CSS は、何が起きているのかをより明瞭にするための、ある種の簡素なスタイルづけを提供しています。JavaScript ファイルは、宣言された五つの定数を含んでいます。つまり、 内部にメモ書きを表示することになる {{htmlelement("ul")}} 要素への参照と、題名および本文の {{htmlelement("input")}} 要素への参照と、{{htmlelement("form")}} 自体への参照と、{{htmlelement("button")}} への参照とを含んでいます。
 3.  JavaScript ファイルの名前を `index.js` に変更してください。コードをそこに追加し始める準備がこれで整いました。
 
@@ -289,7 +289,7 @@ MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Serv
 
     こういったことを IndexedDB で扱うために、要求オブジェクト (何とでも好きなように呼んで構いませんが、何を目的としたものなのかが明白になるので、`request` (要求) と呼んでおきました) を作成します。それから、要求が完了する、失敗する、などの際にコードを実行するために、いくつかのイベント・ハンドラーを使います。この点については、使用されているところを後で見ることになります。
 
-    > **Note:** **注**: バージョン番号は重要です。(たとえばテーブル構造を変更することによって) データベースをアップグレードしたい場合には、上げたバージョン番号や、`onupgradeneeded` ハンドラー (下記参照) の内部で指定される別のスキーマなどを使って、コードを再度実行せねばなりません。この簡単なチュートリアルでは、データベースのアップグレードは扱いません。
+    > **Note:** バージョン番号は重要です。(たとえばテーブル構造を変更することによって) データベースをアップグレードしたい場合には、上げたバージョン番号や、`onupgradeneeded` ハンドラー (下記参照) の内部で指定される別のスキーマなどを使って、コードを再度実行せねばなりません。この簡単なチュートリアルでは、データベースのアップグレードは扱いません。
 
 4.  さて今度は、前に追加した分のすぐ下に、以下のイベント・ハンドラーを追加してください。今度もまた、`window.onload` ハンドラーの中への追加です。
 
@@ -645,17 +645,17 @@ function deleteItem(e) {
 
 上記の例は、IndexedDB データベース内に大規模な資産を保存するアプリの作り方を既に示しており、こうすることで、それらの大規模な資産を二度以上ダウンロードする必要性をなくしています。これは既にユーザー体験にとっての多大なる進歩ではありますが、まだ一つ欠けていることがあります。すなわち、依然として、主たる HTML と CSS と JavaScript のファイルを、サイトにアクセスするたびにダウンロードせねばならないのです。これが意味することは、ネットワーク接続がない場合にはサイトが動作しないということです。
 
-![](https://mdn.mozillademos.org/files/15759/ff-offline.png)
+![](ff-offline.png)
 
 ここは、 [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) およびそれと緊密に関連した [キャッシュ API](/ja/docs/Web/API/Cache) の出番です。
 
-サービスワーカーとは、ただ単に置いてあって、特定のオリジン (ウェブサイト、または、あるドメインにあるウェブサイトの一部) に対して、そこにブラウザでアクセスした際に登録される、JavaScript ファイルのことです。登録されれば、サービスワーカーは、当該オリジンで利用可能なページを制御できます。サービスワーカーは、ロードされたページとネットワークとの間に位置して、当該オリジン宛のネットワーク要求を横取りすることにより、こうした制御を行います。
+サービスワーカーとは、ただ単に置いてあって、特定のオリジン (ウェブサイト、または、あるドメインにあるウェブサイトの一部) に対して、そこにブラウザーでアクセスした際に登録される、JavaScript ファイルのことです。登録されれば、サービスワーカーは、当該オリジンで利用可能なページを制御できます。サービスワーカーは、ロードされたページとネットワークとの間に位置して、当該オリジン宛のネットワーク要求を横取りすることにより、こうした制御を行います。
 
 サービスワーカーが要求を横取りすると、その要求に対して望むことは何でも行えますが ([使用例の案](/ja/docs/Web/API/Service_Worker_API#Other_use_case_ideas) を参照)、典型例では、ネットワーク応答をオフラインに保存しており、その後、要求に応じて、ネットワークからの応答の代わりに、保存してあるそれらの応答を提供しています。これによって事実上、ウェブサイトを完全にオフラインで機能させることが可能になります。
 
 キャッシュ API は、クライアント側での保存のもう一つの仕組みですが、これにはちょっとした相違点があります。キャッシュ API は HTTP 応答を保存するように設計されているのです。そのため、サービスワーカーと一緒に使うと、とてもうまく機能します。
 
-> **Note:** **注**: サービスワーカーとキャッシュは、現在、ほとんどのモダン・ブラウザーでサポートされています。執筆時点では、Safari はまだ実装するのに忙しかったのですが、もうすぐサポートされるはずです。
+> **Note:** サービスワーカーとキャッシュは、現在、ほとんどのモダン・ブラウザーでサポートされています。執筆時点では、Safari はまだ実装するのに忙しかったのですが、もうすぐサポートされるはずです。
 
 ### サービスワーカーの例
 
@@ -665,7 +665,7 @@ function deleteItem(e) {
 
 #### サービスワーカーを登録します
 
-注意すべき第一の点は、主たる JavaScript ファイル中に追加のコードが少々ある点です ([index.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js) を参照)。まず、{{domxref("Navigator")}} オブジェクトにおいて `serviceWorker` メンバーが利用可能かどうかを調べる機能検出検査を行います。もしこれが true を返したら、サービスワーカーの少なくとも基本部分がサポートされていることが分かります。ここの内部では、{{domxref("ServiceWorkerContainer.register()")}} メソッドを用いて、`sw.js` ファイルに含まれるサービスワーカーを、このファイルのあるオリジンに対して登録します。すると、同一ディレクトリまたは下位ディレクトリにあるページを制御できるようになります。このメソッドのプロミスが成立すると、サービスワーカーは登録されたものと見なされます。
+注意すべき第一の点は、主たる JavaScript ファイル中に追加のコードが少々ある点です ([index.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js) を参照)。まず、{{domxref("Navigator")}} オブジェクトにおいて `serviceWorker` メンバーが利用可能かどうかを調べる機能検出検査を行います。もしこれが true を返したら、サービスワーカーの少なくとも基本部分がサポートされていることが分かります。ここの内部では、{{domxref("ServiceWorkerContainer.register()")}} メソッドを用いて、`sw.js` ファイルに含まれるサービスワーカーを、このファイルのあるオリジンに対して登録します。すると、同一ディレクトリーまたは下位ディレクトリーにあるページを制御できるようになります。このメソッドのプロミスが成立すると、サービスワーカーは登録されたものと見なされます。
 
 ```js
   // サイトがオフラインで動くようにする処理を制御するために、サービスワーカーを登録します。
@@ -677,7 +677,7 @@ function deleteItem(e) {
   }
 ```
 
-> **Note:** **注**: `sw.js` ファイルに至るまでの、与えられたパスは、サイト・オリジンに対して相対的なのであり、上記コードを含む JavaScript ファイルに対して相対的なのではありません。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` です。よって、与えられるパスは、`/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` でなくてはなりません。もしこの例を御自分のサーバーにホストしたいとお思いでしたら、それに合わせて、ここを変更せねばなりません。これはやや混乱を招くところですが、セキュリティ上の理由から、この方法で動作する必要があるのです。
+> **Note:** `sw.js` ファイルに至るまでの、与えられたパスは、サイト・オリジンに対して相対的なのであり、上記コードを含む JavaScript ファイルに対して相対的なのではありません。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` です。よって、与えられるパスは、`/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` でなくてはなりません。もしこの例を御自分のサーバーにホストしたいとお思いでしたら、それに合わせて、ここを変更せねばなりません。これはやや混乱を招くところですが、セキュリティ上の理由から、この方法で動作する必要があるのです。
 
 #### サービスワーカーをインストールします
 
@@ -710,7 +710,7 @@ self.addEventListener('install', function(e) {
 
 HTML ページに対してサービスワーカーが登録されてインストールされ、関連する資産がすべてキャッシュに追加されれば、ほぼ開始準備が整っています。すべきことは、あと一つだけです。つまり、さらなるネットワーク要求に応答するための何らかのコードを書くことです。
 
-`sw.js` における第二のちょっとしたコードがしていることは、こうです。すなわち、サービスワーカーのグローバル・スコープにもう一つのリスナーを追加し、これにより、`fetch` イベントが生じたときにハンドラー関数を実行します。このイベントは、サービスワーカーの登録先のディレクトリ内の資産に対してブラウザーが要求を出す際には、いつでも生じます。
+`sw.js` における第二のちょっとしたコードがしていることは、こうです。すなわち、サービスワーカーのグローバル・スコープにもう一つのリスナーを追加し、これにより、`fetch` イベントが生じたときにハンドラー関数を実行します。このイベントは、サービスワーカーの登録先のディレクトリー内の資産に対してブラウザーが要求を出す際には、いつでも生じます。
 
 ハンドラーの内部では、要求された資産の URL をまず記録します。それから、{{domxref("FetchEvent.respondWith()")}} メソッドを使って、その要求に対するカスタム応答を提供します。
 

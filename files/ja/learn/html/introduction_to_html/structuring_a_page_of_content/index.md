@@ -63,7 +63,7 @@ CSS を使用してレイアウトできるようにコンテンツのページ�
 
 次のスクリーンショットは、マークアップされた後のホームページの外観の例を示しています。
 
-![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](https://mdn.mozillademos.org/files/12449/example-page.png)
+![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](example-page.png)
 
 ## 評価
 

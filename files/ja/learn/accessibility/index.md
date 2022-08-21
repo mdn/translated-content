@@ -26,7 +26,7 @@ translation_of: Learn/Accessibility
 
 このモジュールの大半の理解には、少なくとも [HTML](/ja/docs/Learn/HTML), [CSS](/ja/docs/Learn/CSS), [JavaScript](/ja/docs/Learn/JavaScript) の最初の 2 モジュールを通して読むのが良いでしょうし、 たぶんもっと良いのは、関連するテクノロジートピックを進めるにつれて、関連するアクセシビリティの部分を進めるのが良いでしょう。
 
-> **Note:** **メモ**: 自分のファイルを作れない コンピューター/タブレット/その他の端末で作業する場合、コードの実例の大半を [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラム内で試すことができます。
+> **Note:** 自分のファイルを作れない コンピューター/タブレット/その他の端末で作業する場合、コードの実例の大半を [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラム内で試すことができます。
 
 ## ガイド
 

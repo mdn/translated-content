@@ -30,17 +30,17 @@ Web デザインの初期には、特定の画面サイズを対象とするペ�
 
 これらの 2 つのアプローチは、サイトを設計する人の画面上では最も見栄えの良い Web サイトをもたらす傾向がありました！ リキッドのサイトは、小さな画面では押しつぶされたデザインになり（下図参照）、大きな画面では読みにくいほど長い行長になります。
 
-![モバイルサイズのビューポートに押しつぶされた2列のレイアウト。](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![モバイルサイズのビューポートに押しつぶされた2列のレイアウト。](mdn-rwd-liquid.png)
 
-> **Note:** **注**: このシンプルなリキッドレイアウトを見てください: [例](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html)。 例を表示しているときに、ブラウザーのウィンドウを内側または外側にドラッグして、さまざまなサイズでどのように見えるかを確認します。
+> **Note:** このシンプルなリキッドレイアウトを見てください: [例](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html)。 例を表示しているときに、ブラウザーのウィンドウを内側または外側にドラッグして、さまざまなサイズでどのように見えるかを確認します。
 
 固定幅のサイトでは、画面の幅がサイトの幅よりも小さいと水平スクロールバーが発生するリスクがあり（下図参照）、大きな画面ではデザインの端に多くの空白ができます。
 
-![モバイルのビューポートに水平スクロールバーを備えたレイアウト。](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![モバイルのビューポートに水平スクロールバーを備えたレイアウト。](mdn-rwd-fixed.png)
 
-> **Note:** **注**: この単純な固定幅レイアウトを見てください: [例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)。 繰り返しますが、ブラウザーのウィンドウのサイズを変更したときの結果を確認してください。
+> **Note:** この単純な固定幅レイアウトを見てください: [例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)。 繰り返しますが、ブラウザーのウィンドウのサイズを変更したときの結果を確認してください。
 
-> **Note:** **注**: 上記のスクリーンショットは、Firefox 開発ツールの[レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode)を使用して撮影したものです。
+> **Note:** 上記のスクリーンショットは、Firefox 開発ツールの[レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode)を使用して撮影したものです。
 
 モバイル Web が最初の多機能携帯電話で現実のものになり始めたため、モバイルを採用したい企業は通常、異なる URL（多くの場合 `m.example.com` や `example.mobi` など）を使用して、サイトの特別なモバイルバージョンを作成しました。 これは、サイトの 2 つの異なるバージョンを開発し、最新の状態に保つ必要があることを意味しました。
 
@@ -108,13 +108,13 @@ Zoe Mickley Gillenwater は、フレキシブル（柔軟な）サイトを作�
 
 次の例は、メディアクエリーと柔軟なグリッドを使用した簡単なレスポンシブデザインを示しています。 狭い画面では、レイアウトは次のように上下に積み重ねられたボックスを表示します。
 
-![ボックスが上下に積み上げられたレイアウトのモバイルビュー。](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![ボックスが上下に積み上げられたレイアウトのモバイルビュー。](mdn-rwd-mobile.png)
 
 より広い画面では、次のように 2 つの列に移動します。
 
-![2列のレイアウトのデスクトップビュー。](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![2列のレイアウトのデスクトップビュー。](mdn-rwd-desktop.png)
 
-> **Note:** **注**: この例の[ライブ例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)と[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)は GitHub にあります。
+> **Note:** この例の[ライブ例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)と[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)は GitHub にあります。
 
 ## 最新のレイアウト技術
 
@@ -154,7 +154,7 @@ Zoe Mickley Gillenwater は、フレキシブル（柔軟な）サイトを作�
 }
 ```
 
-> **Note:** **注**: 例として、今度はフレックスボックスを使用して、上記のシンプルなレスポンシブレイアウトを再構築しました。 列のサイズを計算するために奇妙なパーセント値を使用する必要がなくなったことがわかります: [例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html)。
+> **Note:** 例として、今度はフレックスボックスを使用して、上記のシンプルなレスポンシブレイアウトを再構築しました。 列のサイズを計算するために奇妙なパーセント値を使用する必要がなくなったことがわかります: [例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html)。
 
 ### CSS グリッド
 
@@ -167,7 +167,7 @@ CSS グリッドレイアウトでは、`fr` 単位を使用して、グリッ�
 }
 ```
 
-> **Note:** **注**: `.wrapper` に列を定義できるため、グリッドレイアウトのバージョンはさらに単純です: [例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html)。
+> **Note:** `.wrapper` に列を定義できるため、グリッドレイアウトのバージョンはさらに単純です: [例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html)。
 
 ## レスポンシブ画像
 
@@ -213,13 +213,13 @@ h1 {
 
 モバイルでは、次のように見出しが小さくなります。
 
-![見出しサイズが小さいスタックレイアウト。](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![見出しサイズが小さいスタックレイアウト。](mdn-rwd-font-mobile.png)
 
 ただし、デスクトップでは、次のようにより大きな見出しサイズで表示されます。
 
-![見出しが大きい2列レイアウト。](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![見出しが大きい2列レイアウト。](mdn-rwd-font-desktop.png)
 
-> **Note:** **注**: この例を実際に見てください: [例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html)。
+> **Note:** この例を実際に見てください: [例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html)。
 
 このタイポグラフィへのアプローチが示すように、メディアクエリーをページのレイアウトの変更のみに制限する必要はありません。 これらを使用して任意の要素を微調整し、代わりとなる画面サイズでより使いやすく魅力的にすることができます。
 
@@ -275,7 +275,7 @@ h1 {
 
 `minimum-scale`、`maximum-scale`、特に `user-scalable` を `no` に設定することは避けてください。 ユーザーには必要なだけズームを許可する必要があります。 これを禁止すると、アクセシビリティの問題が発生します。
 
-> **Note:** **注**: [`@viewport`](/ja/docs/Web/CSS/@viewport) というビューポートメタタグを置き換えるように設計された CSS の @ 規則がありますが、ブラウザーのサポートが不十分です。 両方が使用されたときは、メタタグが @viewport を上書きします。
+> **Note:** [`@viewport`](/ja/docs/Web/CSS/@viewport) というビューポートメタタグを置き換えるように設計された CSS の @ 規則がありますが、ブラウザーのサポートが不十分です。 両方が使用されたときは、メタタグが @viewport を上書きします。
 
 ## まとめ
 

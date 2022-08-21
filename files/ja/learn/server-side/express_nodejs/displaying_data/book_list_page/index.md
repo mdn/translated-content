@@ -60,7 +60,7 @@ Of interest here is that each book is defined as two lines, using the pipe for t
 
 Run the application (see [Testing the routes](/ja/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) for the relevant commands) and open your browser to <http://localhost:3000/>. Then select the _All books_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
-![Book List Page - Express Local Library site](https://mdn.mozillademos.org/files/14464/LocalLibary_Express_Book_List.png)
+![Book List Page - Express Local Library site](LocalLibary_Express_Book_List.png)
 
 ## Next steps
 

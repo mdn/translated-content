@@ -42,7 +42,7 @@ JavaScript では、あるオブジェクトのインスタンスとそのプロ
 
 ## プロトタイプオブジェクトの理解
 
-ここでは、Person() コンストラクタを書き終えた例に戻ります - ブラウザで例を読み込んでください。前回の記事で紹介した [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) の例を使うことができます ([ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)も参照してください)。
+ここでは、Person() コンストラクタを書き終えた例に戻ります - ブラウザーで例を読み込んでください。前回の記事で紹介した [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) の例を使うことができます ([ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)も参照してください)。
 
 この例では、次のようにコンストラクタ関数を定義しています。
 
@@ -66,13 +66,13 @@ function Person(first, last, age, gender, interests) {
 let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 ```
 
-JavaScript コンソールに "`person1.`" と入力すると、ブラウザがこのオブジェクトで利用可能なメンバ名でこれを自動補完しようとするはずです：
+JavaScript コンソールに "`person1.`" と入力すると、ブラウザーがこのオブジェクトで利用可能なメンバ名でこれを自動補完しようとするはずです：
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 このリストでは、`person1` のコンストラクタである `Person()` で定義されているメンバ - `name`、`age`、`gender`、`interests`、`bio`、`greeting` - が表示されています。しかし、他にも `toString` や `valueOf` などのメンバがあり、これらのメンバは `person1` の prototype オブジェクトの prototype オブジェクト (`Object.prototype`) で定義されています。
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](MDN-Graphics-person-person-object-2.png)
 
 実際に `Object.prototype` で定義されている `person1` のメソッドを呼び出すとどうなりますか？例えば
 
@@ -82,8 +82,8 @@ person1.valueOf()
 
 `valueOf()` は、呼び出されたオブジェクトの値を返します。この場合、何が起こるかというと
 
-- ブラウザは最初に、`person1` オブジェクトのコンストラクタ `Person()` で定義されている `valueOf()` メソッドが利用可能かどうかをチェックしますが、利用できません
-- そこで、ブラウザは `person1` のプロトタイプオブジェクトに `valueOf()` メソッドが利用可能かどうかをチェックします。メソッドがない場合、ブラウザは `person1` のプロトタイプオブジェクトのプロトタイプオブジェクトをチェックします。メソッドが呼び出されて、すべてがうまくいきました
+- ブラウザーは最初に、`person1` オブジェクトのコンストラクタ `Person()` で定義されている `valueOf()` メソッドが利用可能かどうかをチェックしますが、利用できません
+- そこで、ブラウザーは `person1` のプロトタイプオブジェクトに `valueOf()` メソッドが利用可能かどうかをチェックします。メソッドがない場合、ブラウザーは `person1` のプロトタイプオブジェクトのプロトタイプオブジェクトをチェックします。メソッドが呼び出されて、すべてがうまくいきました
 
 > **Note:** プロトタイプチェーンの中では、メソッドやプロパティはあるオブジェクトから別のオブジェクトにコピー**されない**ことを再確認しておきましょう。これらのメソッドやプロパティは、上で説明したように*チェーンを上っていく*ことで*アクセス*されます。
 
@@ -91,7 +91,7 @@ person1.valueOf()
 
 > **Note:** ECMAScript 2015 以前は、オブジェクトの `prototype` に直接アクセスする方法は公式にはありませんでした - チェーン内のアイテム間の「リンク」は、JavaScript 言語の仕様で `[[prototype]]` と呼ばれる内部プロパティで定義されています ({{glossary("ECMAScript")}}}を参照してください)。
 >
-> しかし、ほとんどの最新のブラウザでは、オブジェクトのコンストラクタのプロトタイプオブジェクトを含む [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (アンダースコア 2 個分) というプロパティを提供しています。例えば、`person1.__proto__` と `person1.__proto__.__proto__` を試してみてください。
+> しかし、ほとんどの最新のブラウザーでは、オブジェクトのコンストラクタのプロトタイプオブジェクトを含む [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (アンダースコア 2 個分) というプロパティを提供しています。例えば、`person1.__proto__` と `person1.__proto__.__proto__` を試してみてください。
 >
 > ECMAScript 2015 からは、`Object.getPrototypeOf(obj)` を介して間接的にオブジェクトのプロトタイプオブジェクトにアクセスすることができます。
 
@@ -212,7 +212,7 @@ person1.constructor.name
     };
     ```
 
-2.  コードを保存してブラウザでページを読み込み、テキスト入力に以下のように入力してみてください
+2.  コードを保存してブラウザーでページを読み込み、テキスト入力に以下のように入力してみてください
 
     ```js
     person1.farewell();

@@ -58,7 +58,7 @@ const header = (
 );
 ```
 
-> **Note:** **注**: このスニペットの括弧は JSX に固有のものではなく、あなたのアプリケーションに影響を与えません。それらは、あなた (またあなたのコンピューター) にとって、内部の複数行のコードが同じ式の一部であるという意味です。次のように header を定義することもできます。
+> **Note:** このスニペットの括弧は JSX に固有のものではなく、あなたのアプリケーションに影響を与えません。それらは、あなた (またあなたのコンピューター) にとって、内部の複数行のコードが同じ式の一部であるという意味です。次のように header を定義することもできます。
 >
 > ```
 > const header = <header>
@@ -119,7 +119,7 @@ npx create-react-app moz-todo-react
 - 基本的なアプリアーキテクチャを定義するファイルとディレクトリーの構造を作成します。
 - コンピュータに git がインストールされている場合、ディレクトリーを git リポジトリーとして初期化します。
 
-> **Note:** **注**: Yarn パッケージマネージャーがインストールされている場合、create-react-app はデフォルトで npm の代わりにそれを使用します。両方のパッケージマネージャーがインストールされていて、明示的に NPM を使用したい場合、create-react-app を実行するときに `--use-npm` フラグを追加できます。
+> **Note:** Yarn パッケージマネージャーがインストールされている場合、create-react-app はデフォルトで npm の代わりにそれを使用します。両方のパッケージマネージャーがインストールされていて、明示的に NPM を使用したい場合、create-react-app を実行するときに `--use-npm` フラグを追加できます。
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -129,7 +129,7 @@ create-react-app が機能している間、端末にいくつかのメッセー
 
 プロセスが完了したら、`moz-todo-react`ディレクトリーへ `cd` して、コマンド `npm start` を実行します。create-react-app によってインストールされたスクリプトは、localhost:3000 のローカルサーバーで提供され始め、新しいブラウザータブでアプリを開きます。ブラウザーには次のように表示されます。
 
-![デフォルトのcreate-react-app アプリケーションを示す、Firefox MacOS のスクリーンショット、localhost:3000を開く](https://mdn.mozillademos.org/files/17203/default-create-react-app.png)
+![デフォルトのcreate-react-app アプリケーションを示す、Firefox MacOS のスクリーンショット、localhost:3000を開く](default-create-react-app.png)
 
 ### アプリケーションの構造
 
@@ -302,7 +302,7 @@ serviceWorker.unregister();
 
 これらはすべて、`App` コンポーネントを最初のコンポーネントとして React アプリケーションをレンダリングすることを React に伝えます。
 
-> **Note:** **注**: JSX では、React コンポーネントと HTML 要素には閉じスラッシュが必要です。そのまま `<App>` または `<img>` と書くとエラーが発生します。
+> **Note:** JSX では、React コンポーネントと HTML 要素には閉じスラッシュが必要です。そのまま `<App>` または `<img>` と書くとエラーが発生します。
 
 [Service Worker](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers) は、アプリケーションのパフォーマンスを向上させ、ウェブアプリケーションの機能をオフラインで動作させることができる興味深いコードですが、この記事の対象ではありません。5 行目と 9 〜 12 行目を削除します。
 

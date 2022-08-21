@@ -31,7 +31,7 @@ MDN 初心者向け JavaScript コースへようこそ！ この最初の記事
 
 JavaScript はウェブページにて複雑な機能をできるようにするプログラミング言語です —ウェブページが読み込まれるたびに、単にあなたが見ている静的な情報を表示する以上のことをしています— 更新されたコンテンツの定期表示や、インタラクティブな地図や、2D/3D グラフィックのアニメーションや、ビデオジュークボックスのスクロールなど — たぶん JavaScript が組み込まれています。ウェブ技術をケーキだとするとこれは 3 つ目の層で、他の 2 つ ([HTML](/ja/docs/Learn/HTML) と [CSS](/ja/docs/Learn/CSS)) は学習エリアの他の部分でもっと詳しく扱ってきました。
 
-![](https://mdn.mozillademos.org/files/13502/cake.png)
+![](cake.png)
 
 - {{glossary("HTML")}} はマークアップ言語で、これを使ってウェブコンテンツに構造と意味を与えます。例えば段落や見出しや表を定義したり、ページに画像や動画を入れたりします。
 - {{glossary("CSS")}} は HTML コンテンツに適用するスタイリング規則の言語です。例えば背景とフォントの色を設定したり、複数カラムにコンテンツをレイアウトしたりします。
@@ -43,7 +43,7 @@ JavaScript はウェブページにて複雑な機能をできるようにする
 <p>Player 1: Chris</p>
 ```
 
-![](https://mdn.mozillademos.org/files/13422/just-html.png)
+![](just-html.png)
 
 次に、CSS を加えて、見栄えをよくします:
 
@@ -64,7 +64,7 @@ p {
 }
 ```
 
-![](https://mdn.mozillademos.org/files/13424/html-and-css.png)
+![](html-and-css.png)
 
 最後に、JavaScript を加えて動的なふるまいを実装します:
 
@@ -100,7 +100,7 @@ API がなければ難しかったり、不可能であるようなコードを�
 
 API は大まかに 2 種類に分けられます。
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 **ブラウザー API** はウェブブラウザーに組み込まれていて、コンピューターを取り巻く環境からデータを取り出したり、複雑で便利なことをしてくれたりします。例えば、
 
@@ -109,14 +109,14 @@ API は大まかに 2 種類に分けられます。
 - {{domxref("Canvas_API","Canvas")}} と {{domxref("WebGL_API","WebGL")}} の API は 2D や 3D グラフィックでのアニメーションを可能とします。このウェブ技術を使用してすごいことをやってのける人たちがいます。[Chrome Experiments](https://www.chromeexperiments.com/webgl) や [webglsamples](http://webglsamples.org/) などのページを見てください。
 - [音声と動画の API](/ja/Apps/Fundamentals/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や {{domxref("WebRTC API", "WebRTC")}} などは適切な音声・動画をウェブページで再生することや、ウェブカメラの動画を撮って他の人のコンピューターで流すといった、マルチメディアの可能性を示してくれます (我々が作った[ Snapshot demo](http://chrisdavidmills.github.io/snapshot/) を見てみてください)。
 
-> **Note:** **注**: 上記の多くは古いブラウザーでは動作しません。試すには Firefox、Chrome、Edge、Opera といったモダンなブラウザーを使うのがよいでしょう。プロダクションコードを提供する (顧客に実際のコードを納品する) 段になったら、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を読んでみるとよいでしょう。
+> **Note:** 上記の多くは古いブラウザーでは動作しません。試すには Firefox、Chrome、Edge、Opera といったモダンなブラウザーを使うのがよいでしょう。プロダクションコードを提供する (顧客に実際のコードを納品する) 段になったら、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を読んでみるとよいでしょう。
 
 **サードパーティ API** はブラウザーには組み込まれておらず、さらに普通はウェブ上のどこかからそのコードと情報を探さなければなりません。例えば、
 
 - [Twitter API](https://dev.twitter.com/overview/documentation) を使用して、ウェブサイトに最新のツイートを表示させることができます。
 - [Google マップ API](https://developers.google.com/maps/) と [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) を使用して、ウェブサイトに専用の地図を埋め込み、付加機能を付けることもできます。
 
-> **Note:** **注**: このような API は先進的ですが、このモジュールでは扱いません。詳しく知りたければ [Client-side web APIs module](/ja/docs/Learn/JavaScript/Client-side_web_APIs) で扱っています。
+> **Note:** このような API は先進的ですが、このモジュールでは扱いません。詳しく知りたければ [Client-side web APIs module](/ja/docs/Learn/JavaScript/Client-side_web_APIs) で扱っています。
 
 ワクワクすることはもっとたくさんあります！ ですが、まだ興奮しすぎないでください。24 時間程度の勉強だけでは、Facebook や Google マップや Instagram は作れません。まずはやらなければならない基本がたくさんあるのです。さあ、先に進みましょう！
 
@@ -126,7 +126,7 @@ API は大まかに 2 種類に分けられます。
 
 ブラウザーをウェブページに読み込んだときの話を簡単に説明します ([How CSS works](/ja/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work) の記事で最初に出てきました)。ウェブページをブラウザーで見たとき、実行環境 (ブラウザーのタブ) の中で、コード (HTML、CSS そして JavaScript) が実行されます。これは素材 (コード) を加工して製品 (ウェブページ) を出力する工場のようなものです。
 
-![](https://mdn.mozillademos.org/files/13504/execution.png)
+![](execution.png)
 
 JavaScript のごく一般的な用途は、(先ほど例示した) Document Object Model API を介して動的に HTML と CSS を変更し、ユーザーインターフェイスを更新することです。なお、ウェブドキュメント上のコードは通常、ページ上に現れる順序で読み込まれて実行されます。もし JavaScript がロードされ、影響を受ける HTML および CSS がロードされる前に実行しようとすると、エラーが発生する可能性があります。この回避策については、記事の後半の「[スクリプトの読み込み方針](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies)」セクションで学習します。
 
@@ -134,7 +134,7 @@ JavaScript のごく一般的な用途は、(先ほど例示した) Document Obj
 
 ブラウザーのそれぞれのタブは、コードを実行するための入れ物を個別に持ちます (この入れ物を技術的用語では「実行環境」と呼びます)。つまり、それぞれのタブ内でコードは完全に分かれて実行されており、あるタブで動いているコードは他のタブや他のウェブサイトのコードに、直接的には干渉できません。これは良いセキュリティ対策です。互いに干渉することが出来てしまえば、ウェブの悪党たちは、他のタブで開いているウェブサイトから情報を盗み出したり、もっとひどいことをするためにコードを書き始めることでしょう。
 
-> **Note:** **注**: 他のウェブサイトや、タブに安全にデータや実行可能なコードを送る方法はあります。けれども、このコースでは扱わない高度な技術です。
+> **Note:** 他のウェブサイトや、タブに安全にデータや実行可能なコードを送る方法はあります。けれども、このコースでは扱わない高度な技術です。
 
 ### JavaScript の実行順序
 
@@ -155,7 +155,7 @@ function updateName() {
 
 もし、最初の 2 行を入れ替えた場合、動かなくなってしまいます。代わりに[ブラウザーの開発者コンソール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)に `TypeError: para is undefined` というエラーが出るでしょう。この意味は `para` オブジェクトがまだ存在しないため、イベントリスナーを設定できないということを表しています。
 
-> **Note:** **注**: これはとてもよくあるエラーです。オブジェクトに対して何かをする前にはそのオブジェクトへの参照が存在していることに気を配らなければなりません。
+> **Note:** これはとてもよくあるエラーです。オブジェクトに対して何かをする前にはそのオブジェクトへの参照が存在していることに気を配らなければなりません。
 
 ### インタープリターとコンパイルコード
 
@@ -217,9 +217,9 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
 
 5.  ファイルを保存してブラウザーを更新してください。ボタンを押す度に新しい段落が作られて、下に表示されるようになりましたね。
 
-> **Note:** **注**: もし上記の例が上手く動いていないとしたら、もう一度最初から手順を確認してください。コピーしてコードを書いたファイルは `.html` というファイル名ですか？ {{htmlelement("script")}} 要素を `</head>` タグの直前に追加しましたか？ JavaScript を上の例の通りに書きましたか？ **JavaScript は大文字小文字を区別しますので、見えている通りに書かなければなりません。正しく書いていなければ、動いてくれません。**文字化けしているなら、テキストエディターの文字エンコーディングの設定が UTF-8 になっていることを確認してください。
+> **Note:** もし上記の例が上手く動いていないとしたら、もう一度最初から手順を確認してください。コピーしてコードを書いたファイルは `.html` というファイル名ですか？ {{htmlelement("script")}} 要素を `</head>` タグの直前に追加しましたか？ JavaScript を上の例の通りに書きましたか？ **JavaScript は大文字小文字を区別しますので、見えている通りに書かなければなりません。正しく書いていなければ、動いてくれません。**文字化けしているなら、テキストエディターの文字エンコーディングの設定が UTF-8 になっていることを確認してください。
 
-> **Note:** **注**: GitHub にあるこちらのバージョン、[apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([動くバージョンもあります](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)) を見ることもできます。
+> **Note:** GitHub にあるこちらのバージョン、[apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([動くバージョンもあります](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)) を見ることもできます。
 
 ### 外部の JavaScript
 
@@ -250,7 +250,7 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
 
 4.  HTML ファイルを保存して、ブラウザーを更新してください。同じページが見えますね！ 同じように動いていますが、今回は外部の JavaScript ファイルです。コードを整理して、複数の HTML ファイルから再利用できるようにするには、このようにするのが良いでしょう。大きなスクリプトの塊がないほうが、HTML も読みやすくなります。
 
-> **Note:** **注**: GitHub でこちらのバージョンも見られます。[apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) と [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) です ([動いているバージョンもあります](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))。
+> **Note:** GitHub でこちらのバージョンも見られます。[apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) と [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) です ([動いているバージョンもあります](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))。
 
 ### インラインの JavaScript ハンドラー
 
@@ -288,7 +288,7 @@ for(let i = 0; i < buttons.length ; i++) {
 
 これは `onclick` 属性を用いて書くより少し長いように見えますが、どれだけそのページにボタンを追加し、削除し、いくつあろうとも期待通りに動くでしょう。コードを変更することなく。
 
-> **Note:** **注**: 自分の `apply-javascript.html` ファイルを編集して、いくつかボタンを追加してみて下さい。再度読み込むとどのボタンを押しても段落が作られるのがわかるでしょう。素敵でしょ！
+> **Note:** 自分の `apply-javascript.html` ファイルを編集して、いくつかボタンを追加してみて下さい。再度読み込むとどのボタンを押しても段落が作られるのがわかるでしょう。素敵でしょ！
 
 ### スクリプトの読み込み方針
 
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 この場合、スクリプトと HTML の両方が同時に読み込まれ、コードが機能します。
 
-> **Note:** **注**: 外部のケースでは、`defer` 属性が問題を解決したため、`DOMContentLoaded` イベントを使用する必要はありませんでした。`defer` は外部スクリプトに対してのみ機能するため、内部の例では `defer` による解決策を使用しませんでした。
+> **Note:** 外部のケースでは、`defer` 属性が問題を解決したため、`DOMContentLoaded` イベントを使用する必要はありませんでした。`defer` は外部スクリプトに対してのみ機能するため、内部の例では `defer` による解決策を使用しませんでした。
 
 この問題に対する昔ながらの解決策は、すべての HTML が解析された後に読み込まれるように、body の下部に（たとえば `</body>` タグの直前に）script 要素を置くことでした。この解決策（および上記の `DOMContentLoaded` による解決策）の問題点は、HTML DOM が読み込まれるまでスクリプトの読み込みと解析が完全にブロックされることです。JavaScript がたくさんある大規模なサイトでは、これは大きなパフォーマンス上の問題を引き起こす可能性があり、サイトを遅くします。
 
@@ -400,7 +400,7 @@ for (let i = 0; i < buttons.length ; i++) {
 }
 ```
 
-> **Note:** **メモ**: 一般的にコメントは多いほうが少ないよりも優れていますが、変数が何であるかを説明する (変数名はおそらくもっと直感的にするべきです) ため、または非常に単純な操作を説明する (コードが複雑すぎるかもしれません) ために、多くのコメントを追加する場合は注意が必要です。
+> **Note:** 一般的にコメントは多いほうが少ないよりも優れていますが、変数が何であるかを説明する (変数名はおそらくもっと直感的にするべきです) ため、または非常に単純な操作を説明する (コードが複雑すぎるかもしれません) ために、多くのコメントを追加する場合は注意が必要です。
 
 ## まとめ
 

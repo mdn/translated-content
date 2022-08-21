@@ -5,9 +5,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-1 日に数回、複数のブラウザやデバイスで手動でテストを実行すると、面倒で時間がかかる場合があります。これを効率的に処理するには、自動化ツールに慣れておく必要があります。この記事では、利用可能なもの、タスクランナーの使い方、そして Sauce Labs や Browser Stack などの市販のブラウザテスト自動化アプリケーションの基本的な使い方を見ていきます。
+1 日に数回、複数のブラウザーやデバイスで手動でテストを実行すると、面倒で時間がかかる場合があります。これを効率的に処理するには、自動化ツールに慣れておく必要があります。この記事では、利用可能なもの、タスクランナーの使い方、そして Sauce Labs や Browser Stack などの市販のブラウザーテスト自動化アプリケーションの基本的な使い方を見ていきます。
 
-| 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
+| 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザーテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 目標:     | 自動テストにはどのようなものが含まれているのか、それがどのようにあなたの生活を楽にすることができるのか、そして物事を楽にするいくつかの商用製品をどのように利用するかの理解を提供する。                                                                      |
 
@@ -251,7 +251,7 @@ Here we grab our `main.js` file, run `jshint` on it and output the results to th
 
 Once all this is all set up, you can run the `gulp` command inside your project directory, and you should get an output like this:
 
-![](https://mdn.mozillademos.org/files/14227/gulp-output.png)
+![](gulp-output.png)
 
 You can then try out the files output by your automated tasks by looking at them inside the `build` directory, and loading `build/index.html` in your web browser.
 
@@ -306,9 +306,9 @@ Let's get started with a Sauce Labs Trial.
 The [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
 
 1.  Click _Start a new manual session_.
-2.  In the next screen, type in the URL of a page you want to test (use <http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see! ![](https://mdn.mozillademos.org/files/14229/sauce-manual-session.png)
+2.  In the next screen, type in the URL of a page you want to test (use <http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see! ![](sauce-manual-session.png)
 3.  When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4.  When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](https://mdn.mozillademos.org/files/14231/sauce-test-running.png)
+4.  When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](sauce-test-running.png)
 5.  From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
 
     - Stop the session
@@ -395,11 +395,11 @@ Let's get started with a BrowserStack Trial.
 
 The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — Platforms in the left column, devices on the right. When you mouse over or click on each device, you get a choice of browsers available on that device.
 
-![](https://mdn.mozillademos.org/files/15377/browserstack-test-choices-sized.png)
+![](browserstack-test-choices-sized.png)
 
 Clicking on one of those browser icons will load up your choice of platform/device/browser — choose one now, and give it a try.
 
-![](https://mdn.mozillademos.org/files/15379/browserstack-test-device-sized.png)
+![](browserstack-test-device-sized.png)
 
 > **Note:** The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
 
@@ -407,7 +407,7 @@ You'll find that you can enter URLs into the address bar, and use the other cont
 
 You'll also see a menu that allows you to control the session.
 
-![](https://mdn.mozillademos.org/files/15381/browserstack-test-menu-sized.png)
+![](browserstack-test-menu-sized.png)
 
 The features here are as follows:
 

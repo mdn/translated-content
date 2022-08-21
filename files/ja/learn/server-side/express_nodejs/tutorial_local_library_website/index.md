@@ -58,7 +58,7 @@ _LocalLibrary_ は、この一連のチュートリアルの過程で作成お�
 
 あなたが立ち往生したならば、[Github のここ](https://github.com/mdn/express-locallibrary-tutorial)で ウェブサイトの完全に開発されたバージョンを見つけることができます。
 
-> **Note:** **メモ:** この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) にリストされています。
+> **Note:** この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) にリストされています。
 
 ## まとめ
 

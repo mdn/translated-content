@@ -26,7 +26,7 @@ CSS 言語の基本を習得したら、次に取り組むべき CSS のトピ�
 
 このモジュールを始める前に、[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)のモジュールで説明したようにすでに HTML についての基本的な知識があり、[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)で説明したように CSS の基本に慣れている必要があります。
 
-> **Note:** **メモ**: 自分のファイルを作成できないコンピューター/タブレット/その他の端末で作業している場合、[JSBin](https://jsbin.com/)、[CodePen](https://codepen.io/)、[Thimble](https://thimble.mozilla.org/) のようなオンラインコーディングプログラムで (ほとんどの) サンプルコードを試せます。
+> **Note:** 自分のファイルを作成できないコンピューター/タブレット/その他の端末で作業している場合、[JSBin](https://jsbin.com/)、[CodePen](https://codepen.io/)、[Thimble](https://thimble.mozilla.org/) のようなオンラインコーディングプログラムで (ほとんどの) サンプルコードを試せます。
 
 ## ガイド
 

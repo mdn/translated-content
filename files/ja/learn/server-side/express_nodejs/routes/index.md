@@ -23,7 +23,7 @@ As we've already created the models, the main things we'll need to create are:
 - Controller functions to get the requested data from the models, create an HTML page displaying the data, and return it to the user to view in the browser.
 - Views (templates) used by the controllers to render the data.
 
-![](https://mdn.mozillademos.org/files/14456/MVC%20Express.png)
+![](MVC%20Express.png)
 
 Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.
 

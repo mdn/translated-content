@@ -46,7 +46,7 @@ These basic pseudo-classes should be familiar to you now. More recently, the [CS
 
 There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or simply not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
 
-> **Note:** **注**: A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/ja/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple with regards to form validation, so it doesn't confuse things.
+> **Note:** A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/ja/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple with regards to form validation, so it doesn't confuse things.
 
 ## 入力が必須か否かでスタイル設定する
 
@@ -99,9 +99,9 @@ The above form isn't bad, but it isn't great either. For a start, we are signall
 
 In the next section, we'll look at a better example of indicating required fields using `:required`, which also digs into using generated content.
 
-> **Note:** **注**: You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional 既定では, so you could just do your optional styling 既定では, and add styles on top for required controls.
+> **Note:** You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional 既定では, so you could just do your optional styling 既定では, and add styles on top for required controls.
 
-> **Note:** **注**: If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}**.**
+> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}**.**
 
 ## 疑似クラスでコンテンツを生成する
 
@@ -133,7 +133,7 @@ input[type="radio"]:checked::before {
 
 This is really useful — screenreaders already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
 
-> **Note:** **注**: This also shows how you can combine a pseudo-class and pseudo-element if required.
+> **Note:** This also shows how you can combine a pseudo-class and pseudo-element if required.
 
 Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/required-optional-generated.html)).
 
@@ -248,7 +248,7 @@ input:valid + span::before {
 
 As before, we set the `<span>`s to `position: relative` so that we can position the generated content relative to them. We then absolutely position different generated content depending on whether the form's data is valid or invalid — a green check or a red cross, respectively. To add a bit of extra urgency to the invalid data, we've also given the inputs a thick red border when invalid.
 
-> **Note:** **注**: We've used `::before` to add these labels, as we were already using `::after` for the "required" labels.
+> **Note:** We've used `::before` to add these labels, as we were already using `::after` for the "required" labels.
 
 You can try it below:
 
@@ -260,7 +260,7 @@ Notice how the required text inputs are invalid when empty, but valid when they 
 
 As we hinted at above, there are two other related pseudo-classes to consider — {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}. These match numeric inputs where range limits are specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}}, when their data is inside or outside the specified range, respectvely.
 
-> **Note:** **注**: Numeric input types are `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`.
+> **Note:** Numeric input types are `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`.
 
 It is worth noting that inputs whose data is in-range will also be matched by the `:valid` pseudo-class and inputs whose data is out-of-range will also be matched by the `:invalid` pseudo-class. So why have both? The issue is really one of semantics — out-of-range is a more specific type of invalid communication, so you might want to provide a different message for out-of-range inputs, which will be more helpful to users than just saying "invalid". You might even want to provide both.
 
@@ -314,7 +314,7 @@ It is possible for the number input to be both required and out-of-range at the 
 
 This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e. in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".
 
-> **Note:** **注**: To enter an invalid/out-of-range value, you'll have to actually focus the form and type it in using the keyboard. The spinner buttons won't let you increment/decrement the value outside the allowable range.
+> **Note:** To enter an invalid/out-of-range value, you'll have to actually focus the form and type it in using the keyboard. The spinner buttons won't let you increment/decrement the value outside the allowable range.
 
 ## 有効/無効や読み取り専用/読み書き可能の入力をスタイル設定する
 
@@ -454,7 +454,7 @@ Firefox only supported these pseudo-classes with a prefix up to version 78; at w
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **Note:** **注**: `:enabled` and `:read-write` are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.
+> **Note:** `:enabled` and `:read-write` are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.
 
 ## ラジオとチェックボックスの状態 — チェック済み、既定、中間
 
@@ -544,7 +544,7 @@ See the live result below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **Note:** **注**: You can also find the example live on GitHub at [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-default.html).)
+> **Note:** You can also find the example live on GitHub at [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-default.html).)
 
 For the `:indeterminate` example, we've got no default selected radio button — this is important — if there was, then there would be no indeterminate state to style. We style the indeterminate radio buttons with the following CSS:
 
@@ -571,9 +571,9 @@ See the live result below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **Note:** **注**: You can also find the example live on GitHub at [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-indeterminate.html).)
+> **Note:** You can also find the example live on GitHub at [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-indeterminate.html).)
 
-> **Note:** **注**: You can find an [interesting example involving `indeterminate` states](/ja/docs/Web/HTML/Element/Input/checkbox#Indeterminate_state_checkboxes) on the [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) reference page.
+> **Note:** You can find an [interesting example involving `indeterminate` states](/ja/docs/Web/HTML/Element/Input/checkbox#Indeterminate_state_checkboxes) on the [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) reference page.
 
 ## その他の疑似クラス
 

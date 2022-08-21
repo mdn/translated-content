@@ -23,7 +23,7 @@ translation_of: Learn/HTML/Introduction_to_HTML
 
 このモジュールを始めるにあたり、 HTML の知識は一切必要ありません。しかし、最低でもコンピューターを利用したり、ウェブを受動的に利用する (つまり、ただ見てコンテンツを消費する) ための基本的な知識を持っている必要があります。[基本的なソフトウェアをインストールする](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)に挙がっている基本的な作業環境を整えておき、[ファイルを扱う](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)にあるような、ファイルを作成して管理する方法についても理解するべきです。これらの記事は両方共に、完全な初心者用のモジュール「[Web 入門](/ja/docs/Learn/Getting_started_with_the_web)」の一部です。
 
-> **Note:** **注**：自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) のようなオンラインコーディングプログラムで試すことが可能です。
+> **Note:** 自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) のようなオンラインコーディングプログラムで試すことが可能です。
 
 ## ガイド
 
