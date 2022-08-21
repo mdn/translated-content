@@ -10,78 +10,66 @@ tags:
   - delete
 translation_of: Web/API/Headers/delete
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Headers")}} インターフェイスの <strong><code>delete()</code></strong> メソッドは、現在の <code>Headers</code> オブジェクトからヘッダーを削除します。</p>
+{{domxref("Headers")}} インターフェイスの **`delete()`** メソッドは、現在の `Headers` オブジェクトからヘッダーを削除します。
 
-<p>このメソッドは、次の理由で {{jsxref("TypeError")}} をスローします。</p>
+このメソッドは、次の理由で {{jsxref("TypeError")}} をスローします。
 
-<ul>
- <li>name パラメーターの値は、HTTP ヘッダーの名前ではありません。</li>
- <li>{{Glossary("Guard")}} の値は <code>immutable</code> です。</li>
-</ul>
+- name パラメーターの値は、HTTP ヘッダーの名前ではありません。
+- {{Glossary("Guard")}} の値は `immutable` です。
 
-<p>セキュリティ上の理由から、一部のヘッダーはユーザーエージェントのみがコントローラーにすることができます。 これらのヘッダーには {{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}} および {{Glossary("Forbidden_response_header_name", "禁止レスンポンスヘッダー名", 1)}} が含まれます。</p>
+セキュリティ上の理由から、一部のヘッダーはユーザーエージェントのみがコントローラーにすることができます。 これらのヘッダーには {{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}} および {{Glossary("Forbidden_response_header_name", "禁止レスンポンスヘッダー名", 1)}} が含まれます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>myHeaders</em>.delete(<em>name</em>);</pre>
+```
+myHeaders.delete(name);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>Headers</code> オブジェクトから削除する HTTP ヘッダーの名前。</dd>
-</dl>
+- `name`
+  - : `Headers` オブジェクトから削除する HTTP ヘッダーの名前。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>空の <code>Headers</code> オブジェクトの作成は簡単です。</p>
+空の `Headers` オブジェクトの作成は簡単です。
 
-<pre class="brush: js notranslate">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>{{domxref("Headers.append")}} を使用して、これにヘッダーを追加できます。</p>
+{{domxref("Headers.append")}} を使用して、これにヘッダーを追加できます。
 
-<pre class="brush: js notranslate">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
-</pre>
+```
 
-<p>その後、再度削除できます。</p>
+その後、再度削除できます。
 
-<pre class="brush: js notranslate">myHeaders.delete('Content-Type');
-myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
+```js
+myHeaders.delete('Content-Type');
+myHeaders.get('Content-Type'); // Returns null, as it has been deleted
+```
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-headers-delete','delete()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   | Status                   | Comment |
+| ------------------------------------------------------------------------ | ------------------------ | ------- |
+| {{SpecName('Fetch','#dom-headers-delete','delete()')}} | {{Spec2('Fetch')}} |         |
 
-<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.Headers.delete")}}
 
+## 関連情報
 
-<p>{{Compat("api.Headers.delete")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

@@ -11,10 +11,8 @@ tags:
   - mozResponseArrayBufer
 translation_of: Web/API/XMLHttpRequest/mozResponseArrayBuffer
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<div class="warning">
-<p>Gecko 6 で廃止</p>
-</div>
+> **Warning:** Gecko 6 で廃止
 
-<p><span class="seoSummary">リクエストに対する <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a> 応答であり、 JavaScript タイプの配列として記述されます。</span> リクエストが成功しなかった場合、またはリクエストがまだ送信されてない場合、これは <code>NULL</code> です。</p>
+リクエストに対する [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 応答であり、 JavaScript タイプの配列として記述されます。 リクエストが成功しなかった場合、またはリクエストがまだ送信されてない場合、これは `NULL` です。

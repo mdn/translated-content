@@ -9,28 +9,30 @@ tags:
   - リファレンス
 translation_of: Web/API/EventSource/EventSource
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p><code><strong>EventSource</strong></code><strong><code>()</code></strong> コンストラクタは、リモートリソースを表す新しく作成された {{domxref("EventSource")}} を返します。</p>
+**`EventSource`\*\***`()`\*\* コンストラクタは、リモートリソースを表す新しく作成された {{domxref("EventSource")}} を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">eventSource = new EventSource(<em>url</em>, <em>configuration</em>);</pre>
+```
+eventSource = new EventSource(url, configuration);
+```
 
-<h3 class="syntaxbox" id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>url</code></dt>
- <dd>イベント/メッセージを処理するリモートリソースの場所を表す{{domxref("USVString")}}。</dd>
- <dt><code>configuration</code> {{optional_inline}}</dt>
- <dd>新しい接続を構成するオプションを提供します。可能なエントリは次のとおりです:
- <p><code>withCredentials</code> 、デフォルトは <code>false</code> で、CORS に証明書を<code>含める</code>かどうかを指定します。</p>
- </dd>
-</dl>
+- `url`
+  - : イベント/メッセージを処理するリモートリソースの場所を表す{{domxref("USVString")}}。
+- `configuration` {{optional_inline}}
 
-<h2 id="例">例</h2>
+  - : 新しい接続を構成するオプションを提供します。可能なエントリは次のとおりです:
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+    `withCredentials` 、デフォルトは `false` で、CORS に証明書を`含める`かどうかを指定します。
+
+## 例
+
+```js
+var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
@@ -38,40 +40,21 @@ evtSource.onmessage = function(e) {
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>メモ</strong>: 完全な例を GitHub から見つけることができます — <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">PHP を用いた簡単な SSE のデモ</a> を参照。</p>
-</div>
+> **Note:** **メモ**: 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#dom-eventsource", "EventSource()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                 | ステータス                       | Comment  |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', "comms.html#dom-eventsource", "EventSource()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
 
-<ul>
-</ul>
+## ブラウザ互換性
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{Compat("api.EventSource.EventSource")}}
 
+## 関連情報
 
-
-<p>{{Compat("api.EventSource.EventSource")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

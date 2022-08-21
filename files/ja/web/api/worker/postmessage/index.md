@@ -9,41 +9,42 @@ tags:
   - Web Workers
   - Worker
   - postMessage
-browser-compat: api.Worker.postMessage
 translation_of: Web/API/Worker/postMessage
+browser-compat: api.Worker.postMessage
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p><code><strong>postMessage()</strong></code> は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または循環参照を含む場合は<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">構造化クローン</a>アルゴリズムで扱う JavaScript オブジェクトが許可されます。</p>
+**`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または循環参照を含む場合は[構造化クローン](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。
 
-<p>{{domxref("Worker")}} の <code>postMessage()</code> メソッドは {{domxref("MessagePort")}} の {{domxref("MessagePort.postMessage", "postMessage()")}} メソッドに委任して、受信する {{domxref("MessagePort")}} に対応するイベントループのタスクを追加します。</p>
+{{domxref("Worker")}} の `postMessage()` メソッドは {{domxref("MessagePort")}} の {{domxref("MessagePort.postMessage", "postMessage()")}} メソッドに委任して、受信する {{domxref("MessagePort")}} に対応するイベントループのタスクを追加します。
 
-<p><code>Worker</code> は {{domxref("DedicatedWorkerGlobalScope.postMessage")}} メソッド使用して自分を起動したスレッドに情報を送り返すことができます。</p>
+`Worker` は {{domxref("DedicatedWorkerGlobalScope.postMessage")}} メソッド使用して自分を起動したスレッドに情報を送り返すことができます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">worker.postMessage(message, [transfer]);</pre>
+```js
+worker.postMessage(message, [transfer]);
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><em>message</em></dt>
- <dd>ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.onmessage")}} ハンドラーに配信されるイベントの <code>data</code> フィールドに入ります。このデータは任意の値、または循環参照を含む場合は<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">構造化クローン</a>アルゴリズムで扱う JavaScript オブジェクトが許可されます。</dd>
- <dd><code>message</code> 引数が提供されて<em>いない</em>場合は、 <code>TypeError</code> が発生します。ワーカーに渡すデータが重要でない場合は、 <code>null</code> または <code>undefined</code> を明示的に渡すことができます。</dd>
- <dt><em>transfer</em> {{optional_inline}}</dt>
- <dd>オプションで、所有権を移転する {{domxref("Transferable")}} オブジェクトの<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array">配列</a>です。オブジェクトの所有権が移転されると、そのオブジェクトは送信元のコンテキストでは使用できなくなり、送信先のワーカーのみが使用できるようになります。</dd>
- <dd>Transferable オブジェクトは {{jsxref("ArrayBuffer")}}、{{domxref("MessagePort")}}、{{domxref("ImageBitmap")}} のような移転可能なクラスのインスタンスです。 <code>null</code> を <code>transfer</code> の値として受け付けることはできません。</dd>
-</dl>
+- _message_
+  - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.onmessage")}} ハンドラーに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または循環参照を含む場合は[構造化クローン](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。
+    `message` 引数が提供されて*いない*場合は、 `TypeError` が発生します。ワーカーに渡すデータが重要でない場合は、 `null` または `undefined` を明示的に渡すことができます。
+- _transfer_ {{optional_inline}}
+  - : オプションで、所有権を移転する {{domxref("Transferable")}} オブジェクトの[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)です。オブジェクトの所有権が移転されると、そのオブジェクトは送信元のコンテキストでは使用できなくなり、送信先のワーカーのみが使用できるようになります。
+    Transferable オブジェクトは {{jsxref("ArrayBuffer")}}、{{domxref("MessagePort")}}、{{domxref("ImageBitmap")}} のような移転可能なクラスのインスタンスです。 `null` を `transfer` の値として受け付けることはできません。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>なし。</p>
+なし。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p>次のコードスニペットは、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して {{domxref("Worker")}} オブジェクトを作成しています。2 つのフォーム入力要素 (<code>first</code> と <code>second</code>) のどちらかの値が変更されると、変更イベントによって <code>postMessage()</code> が呼び出され、両方の入力要素の値が現在のワーカーに送信されます。
+次のコードスニペットは、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して {{domxref("Worker")}} オブジェクトを作成しています。2 つのフォーム入力要素 (`first` と `second`) のどちらかの値が変更されると、変更イベントによって `postMessage()` が呼び出され、両方の入力要素の値が現在のワーカーに送信されます。
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+```js
+var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -54,21 +55,19 @@ second.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
-</pre>
+```
 
-<p>完全な例は、<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">簡単なワーカーの例</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">実行例</a>) を参照してください。</p>
+完全な例は、[簡単なワーカーの例](https://github.com/mdn/simple-web-worker) ([実行例](https://mdn.github.io/simple-web-worker/)) を参照してください。
 
-<div class="note">
-<p><strong>メモ:</strong> <code>postMessage()</code> は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。</p>
-</div>
+> **Note:** **メモ:** `postMessage()` は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。
 
-<h3 id="Transfer_Example">移転を伴う例</h3>
+### 移転を伴う例
 
-<p>この最小限の例では、 <code>main</code> が <code>ArrayBuffer</code> を作成して <code>myWorker</code> に移転し、次に <code>myWorker</code> がそれを <code>main</code> に再移転して、それぞれの段階で大きさを記録します。</p>
+この最小限の例では、 `main` が `ArrayBuffer` を作成して `myWorker` に移転し、次に `myWorker` がそれを `main` に再移転して、それぞれの段階で大きさを記録します。
 
-<h4 id="main.js_code">main.js のコード:</h4>
+#### main.js のコード:
 
-<pre class="brush: js">
+```js
 // ワーカーの生成
 var myWorker = new Worker("myWorker.js");
 
@@ -99,11 +98,11 @@ console.log(
   "buf.byteLength in main AFTER transfer to worker:",
   myBuf.byteLength
 );
-</pre>
+```
 
-<h4 id="myWorker.js_code">myWorker.js のコード</h4>
+#### myWorker.js のコード
 
-<pre class="brush: js">
+```js
 // main を待ち受けしてバッファーを myWorker に移転する
 self.onmessage = function handleMessageFromMain(msg) {
   console.log("message from main received in worker:", msg);
@@ -123,11 +122,11 @@ self.onmessage = function handleMessageFromMain(msg) {
     bufTransferredFromMain.byteLength
   );
 };
-</pre>
+```
 
-<h4 id="Output_logged">ログ出力</h4>
+#### ログ出力
 
-<pre class="brush: bash">
+```bash
 buf.byteLength in main BEFORE transfer to worker:        8                     main.js:19
 buf.byteLength in main AFTER transfer to worker:         0                     main.js:27
 
@@ -137,20 +136,18 @@ buf.byteLength in worker AFTER transfer back to main:    0                     m
 
 message from worker received in main:                    MessageEvent { ... }  main.js:6
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
-</pre>
+```
 
-<p><code>byteLength</code> は <code>ArrayBuffer</code> が移転されると 0 になります。 <code>ArrayBuffer</code> の移転のより洗練された完全な動作例については、 <a href="https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b">GitHub :: ChromeWorker - demo-transfer-arraybuffer</a> の Firefox デモアドオンを参照してください。</p>
+`byteLength` は `ArrayBuffer` が移転されると 0 になります。 `ArrayBuffer` の移転のより洗練された完全な動作例については、 [GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b) の Firefox デモアドオンを参照してください。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>所属先の {{domxref("Worker")}} インターフェイス</li>
-</ul>
+- 所属先の {{domxref("Worker")}} インターフェイス

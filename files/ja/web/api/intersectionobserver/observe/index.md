@@ -11,59 +11,41 @@ tags:
   - observe
 translation_of: Web/API/IntersectionObserver/observe
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">{{domxref("IntersectionObserver")}} の <code><strong>observe()</strong></code> メソッドは、要素を <code>IntersectionObserver</code> によって監視される対象要素に追加します。各オブザーバーはそれぞれ個別の閾値とルートを持っていますが、複数の対象要素について可視部分の変化を監視できます。</span>要素の監視を停止するには、{{domxref("IntersectionObserver.unobserve()")}} を呼び出します。</p>
+{{domxref("IntersectionObserver")}} の **`observe()`** メソッドは、要素を `IntersectionObserver` によって監視される対象要素に追加します。各オブザーバーはそれぞれ個別の閾値とルートを持っていますが、複数の対象要素について可視部分の変化を監視できます。要素の監視を停止するには、{{domxref("IntersectionObserver.unobserve()")}} を呼び出します。
 
-<p>指定された要素の可視部分がオブザーバーの可視量の閾値を通過したとき ({{domxref("IntersectionObserver.thresholds")}} を参照)、オブザーバーのコールバックが実行されます。このコールバックは、発生した交差の変化を表す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を受け取ります。この構成によって、１回のコールバック呼び出しにつき複数の要素の交差状態の変化を処理することができます。</p>
+指定された要素の可視部分がオブザーバーの可視量の閾値を通過したとき ({{domxref("IntersectionObserver.thresholds")}} を参照)、オブザーバーのコールバックが実行されます。このコールバックは、発生した交差の変化を表す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を受け取ります。この構成によって、１回のコールバック呼び出しにつき複数の要素の交差状態の変化を処理することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>IntersectionObserver</em>.observe(<em>targetElement</em>);</pre>
+```
+IntersectionObserver.observe(targetElement);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>targetElement</code></dt>
- <dd>可視部分がルート内に収まっているかどうかが監視される{{domxref("element", "要素")}}。この要素はルート要素の子要素でなければなりません (ルートが文書のビューポートである場合、要素が現在の文書内に含まれている必要があります)。</dd>
-</dl>
+- `targetElement`
+  - : 可視部分がルート内に収まっているかどうかが監視される{{domxref("element", "要素")}}。この要素はルート要素の子要素でなければなりません (ルートが文書のビューポートである場合、要素が現在の文書内に含まれている必要があります)。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<dl>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+<<<...>>>
 
-<p>&lt;&lt;&lt;...&gt;&gt;&gt;</p>
+## 仕様
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+| 仕様書                                                                                                                                       | 策定状況                                     | コメント |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
+| {{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}} | {{Spec2('IntersectionObserver')}} | 初期定義 |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザー実装状況
 
-<div>
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+{{Compat("api.IntersectionObserver.observe")}}
 
-<p>{{Compat("api.IntersectionObserver.observe")}}</p>
-</div>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("IntersectionObserver.unobserve()")}}</li>
-</ul>
+- {{domxref("IntersectionObserver.unobserve()")}}

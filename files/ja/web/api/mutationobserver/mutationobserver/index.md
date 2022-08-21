@@ -8,33 +8,34 @@ tags:
   - MutationObserver
 translation_of: Web/API/MutationObserver/MutationObserver
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><strong>MutationObserver()</strong></span></font> コンストラクタ ({{domxref("MutationObserver")}} インターフェースの一部) は、指定されたコールバックをDOMイベントが発生したときに実行するオブザーバを作成して返します。DOMの監視はすぐに開始されるわけではありません。最初に {{domxref("MutationObserver.observe", "observe()")}} メソッドを呼び出し、DOMのどの部分を監視し、どのような変更を監視するかを決めなければなりません。</p>
+**MutationObserver()** コンストラクタ ({{domxref("MutationObserver")}} インターフェースの一部) は、指定されたコールバックを DOM イベントが発生したときに実行するオブザーバを作成して返します。DOM の監視はすぐに開始されるわけではありません。最初に {{domxref("MutationObserver.observe", "observe()")}} メソッドを呼び出し、DOM のどの部分を監視し、どのような変更を監視するかを決めなければなりません。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>observer</em> = new MutationObserver(<em>callback</em>);</pre>
+```
+var observer = new MutationObserver(callback);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>対象となるノードやサブツリー、および指定されたオプションの条件を満たすDOMの変更が起きるたびに呼び出される関数。このコールバック関数は、２つの引数を受け取ります。発生したそれぞれの変更を記述した {{domxref("MutationRecord")}} オブジェクトの配列、そしてコールバックを実行した {{domxref("MutationObserver")}} です。詳細については、以下の<a href="#例">例</a>を参照してください。</dd>
-</dl>
+- `callback`
+  - : 対象となるノードやサブツリー、および指定されたオプションの条件を満たす DOM の変更が起きるたびに呼び出される関数。このコールバック関数は、２つの引数を受け取ります。発生したそれぞれの変更を記述した {{domxref("MutationRecord")}} オブジェクトの配列、そしてコールバックを実行した {{domxref("MutationObserver")}} です。詳細については、以下の[例](#例)を参照してください。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>指定されたコールバックをDOMの変更が発生したときに呼び出すように設定された {{domxref("MutationObserver")}} オブジェクト。</p>
+指定されたコールバックを DOM の変更が発生したときに呼び出すように設定された {{domxref("MutationObserver")}} オブジェクト。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、ノードとそのすべての子において、ツリーへの要素の追加と削除、およびツリー内の要素の属性の変更を監視するように設定された <span style="background-color: rgba(220, 220, 220, 0.5);">MutationObserver</span> を作成します。</p>
+この例では、ノードとそのすべての子において、ツリーへの要素の追加と削除、およびツリー内の要素の属性の変更を監視するように設定された MutationObserver を作成します。
 
-<h3 id="コールバック関数">コールバック関数</h3>
+### コールバック関数
 
-<pre class="brush: js">function callback(mutationList, observer) {
-  mutationList.forEach((mutation) =&gt; {
+```js
+function callback(mutationList, observer) {
+  mutationList.forEach((mutation) => {
     switch(mutation.type) {
       case 'childList':
         /* ツリーに１つ以上の子が追加されたか、ツリーから削除された。
@@ -48,17 +49,18 @@ translation_of: Web/API/MutationObserver/MutationObserver
     }
   });
 }
-</pre>
+```
 
-<p><span style="background-color: rgba(220, 220, 220, 0.5);">callback()</span> 関数は、{{domxref("MutationObserver.observe", "observe()")}} を呼び出してDOMの監視を開始するときに指定された監視リクエストの設定と一致する変更をオブザーバが確認したときに実行されます。</p>
+callback() 関数は、{{domxref("MutationObserver.observe", "observe()")}} を呼び出して DOM の監視を開始するときに指定された監視リクエストの設定と一致する変更をオブザーバが確認したときに実行されます。
 
-<p>発生した変更の種類 (子のリストの変更または属性の変更のいずれか) は、{{domxref("MutationRecord.type", "mutation.type")}} プロパティを調べることによって判明します。</p>
+発生した変更の種類 (子のリストの変更または属性の変更のいずれか) は、{{domxref("MutationRecord.type", "mutation.type")}} プロパティを調べることによって判明します。
 
-<h3 id="オブザーバの作成と開始">オブザーバの作成と開始</h3>
+### オブザーバの作成と開始
 
-<p>このコードでは、実際に監視プロセスを設定します。</p>
+このコードでは、実際に監視プロセスを設定します。
 
-<pre class="brush: js">var targetNode = document.querySelector("#someElement");
+```js
+var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
   attributes: true,
@@ -66,35 +68,21 @@ var observerOptions = {
 }
 
 var observer = new MutationObserver(callback);
-observer.observe(targetNode, observerOptions);</pre>
+observer.observe(targetNode, observerOptions);
+```
 
-<p>目的のサブツリーは、IDが "someElement" の要素を検索することで見つかります。オブザーバのオプションのセットは、<span style="background-color: rgba(220, 220, 220, 0.5);">observerOptions</span> のレコードで設定します。この中で、<span style="background-color: rgba(220, 220, 220, 0.5);">childList</span> と <span style="background-color: rgba(220, 220, 220, 0.5);">attributes</span> の両方に <span style="background-color: rgba(220, 220, 220, 0.5);">true</span> の値を指定することで、目的の情報を得ることができます。</p>
+目的のサブツリーは、ID が "someElement" の要素を検索することで見つかります。オブザーバのオプションのセットは、observerOptions のレコードで設定します。この中で、childList と attributes の両方に true の値を指定することで、目的の情報を得ることができます。
 
-<p>そして、<span style="background-color: rgba(220, 220, 220, 0.5);">callback()</span> 関数を指定して observer をインスタンス化し、対象のノードとオプションのレコードを指定して <span style="background-color: rgba(220, 220, 220, 0.5);">observe()</span> を呼び出すことで、対象のDOMノードの監視を開始します。</p>
+そして、callback() 関数を指定して observer をインスタンス化し、対象のノードとオプションのレコードを指定して observe() を呼び出すことで、対象の DOM ノードの監視を開始します。
 
-<p>この時点から {{domxref("MutationObserver.disconnect", "disconnect()")}} が呼び出されるまで、<span style="background-color: rgba(220, 220, 220, 0.5);">targetNode</span> をルートとするDOMツリーに要素が追加されたり削除されたり、あるいは要素の属性が変更されるたびに <code>callback()</code> が呼び出されます。</p>
+この時点から {{domxref("MutationObserver.disconnect", "disconnect()")}} が呼び出されるまで、targetNode をルートとする DOM ツリーに要素が追加されたり削除されたり、あるいは要素の属性が変更されるたびに `callback()` が呼び出されます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}} | {{ Spec2('DOM WHATWG') }} |         |
 
-<h2 id="各ブラウザの対応状況">各ブラウザの対応状況</h2>
+## 各ブラウザの対応状況
 
-
-
-<p>{{Compat("api.MutationObserver.MutationObserver")}}</p>
+{{Compat("api.MutationObserver.MutationObserver")}}

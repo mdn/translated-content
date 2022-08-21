@@ -3,32 +3,32 @@ title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 translation_of: Web/API/MutationObserver/takeRecords
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p><span class="seoSummary">{{domxref("MutationObserver")}} の <code><strong>takeRecords()</strong></code> メソッドは、検出されたがオブザーバのコールバック関数で処理されていない DOM の変更に一致するすべてのリストを返し、変更キューは空のままにします。</span> 最も一般的な使用例は、オブザーバを切断する直前に保留中の変更記録をすべて取得し、オブザーバを停止する際に保留中の変更を処理できるようにすることです。</p>
+{{domxref("MutationObserver")}} の **`takeRecords()`** メソッドは、検出されたがオブザーバのコールバック関数で処理されていない DOM の変更に一致するすべてのリストを返し、変更キューは空のままにします。 最も一般的な使用例は、オブザーバを切断する直前に保留中の変更記録をすべて取得し、オブザーバを停止する際に保留中の変更を処理できるようにすることです。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">const <var>mutationRecords</var> = <var>mutationObserver</var>.takeRecords()
-</pre>
+```
+const mutationRecords = mutationObserver.takeRecords()
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<p>なし</p>
+なし
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("MutationRecord")}} オブジェクトの配列で、そのそれぞれがドキュメントの DOM ツリーの監視された部分に適用された変更を記述します。</p>
+{{domxref("MutationRecord")}} オブジェクトの配列で、そのそれぞれがドキュメントの DOM ツリーの監視された部分に適用された変更を記述します。
 
-<div class="note">
-<p><strong>注:</strong> 発生したものの、オブザーバーのコールバックに伝えられなかった変更キューは、 <code>takeRecords()</code>をコールした後は空のままになります。</p>
-</div>
+> **Note:** **注:** 発生したものの、オブザーバーのコールバックに伝えられなかった変更キューは、 `takeRecords()`をコールした後は空のままになります。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、オブザーバを切断する直前に <code>takeRecords()</code>を呼び出して、未伝達の{{domxref("MutationRecord")}}を処理する方法を示します。</p>
+この例では、オブザーバを切断する直前に `takeRecords()`を呼び出して、未伝達の{{domxref("MutationRecord")}}を処理する方法を示します。
 
-<pre class="brush: js; highlight:[12-18] notranslate">const targetNode = document.querySelector("#someElement");
+```js
+const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true
@@ -48,31 +48,16 @@ observer.disconnect();
 if (mutations) {
   callback(mutations);
 }
-</pre>
+```
 
-<p>12-17 行目のコードは、処理されていない変更の記録を取得し、その記録を処理できるようにコールバックを呼び出します。これは、{{domxref("MutationObserver.disconnect", "disconnect()")}} を呼び出してDOMの観測を停止する直前に行われます。</p>
+12-17 行目のコードは、処理されていない変更の記録を取得し、その記録を処理できるようにコールバックを呼び出します。これは、{{domxref("MutationObserver.disconnect", "disconnect()")}} を呼び出して DOM の観測を停止する直前に行われます。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-takerecords', 'MutationObserver.takeRecords()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('DOM WHATWG', '#dom-mutationobserver-takerecords', 'MutationObserver.takeRecords()')}} | {{ Spec2('DOM WHATWG') }} |         |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-
-
-<p>{{Compat("api.MutationObserver.takeRecords")}}</p>
+{{Compat("api.MutationObserver.takeRecords")}}

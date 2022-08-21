@@ -16,43 +16,28 @@ tags:
   - track
 translation_of: Web/API/VideoTrack/id
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>id</code></strong> プロパティは、<strong>{{domxref("VideoTrack")}}</strong> によって表されるトラックを一意に識別する文字列を含みます。</span> この ID を {{domxref("VideoTrackList.getTrackById()")}} メソッドと共に使用して、メディア要素に関連付けられたメディア内の特定のトラックを見つけることができます。</p>
+**`id`** プロパティは、**{{domxref("VideoTrack")}}** によって表されるトラックを一意に識別する文字列を含みます。 この ID を {{domxref("VideoTrackList.getTrackById()")}} メソッドと共に使用して、メディア要素に関連付けられたメディア内の特定のトラックを見つけることができます。
 
-<p>トラック ID は、特定のトラックをロードする URL のフラグメントとしても使用できます（メディアがメディアフラグメントをサポートしている場合）。</p>
+トラック ID は、特定のトラックをロードする URL のフラグメントとしても使用できます（メディアがメディアフラグメントをサポートしている場合）。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>trackID</em> = <em>VideoTrack</em>.id;</pre>
+```
+var trackID = VideoTrack.id;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>トラックを識別する {{domxref("DOMString")}}。メディア要素の {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} プロパティで指定されたものなどの {{domxref("VideoTrackList")}} で {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} を呼び出すときに使用するのに適しています。</p>
+トラックを識別する {{domxref("DOMString")}}。メディア要素の {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} プロパティで指定されたものなどの {{domxref("VideoTrackList")}} で {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} を呼び出すときに使用するのに適しています。
 
-<p> </p>
+## 仕様
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+| 仕様                                                                                     | 状態                             | コメント |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}} | {{Spec2('HTML WHATWG')}} |          |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-
-
-<p>{{Compat("api.VideoTrack.id")}}</p>
+{{Compat("api.VideoTrack.id")}}
