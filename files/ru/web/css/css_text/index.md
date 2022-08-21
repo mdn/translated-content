@@ -16,7 +16,7 @@ spec-urls:
 
 ## Reference
 
-### Properties
+### Свойства
 
 - {{cssxref("hanging-punctuation")}}
 - {{cssxref("hyphens")}}
@@ -34,6 +34,6 @@ spec-urls:
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
