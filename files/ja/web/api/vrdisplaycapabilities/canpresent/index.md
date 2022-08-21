@@ -3,48 +3,39 @@ title: VRDisplayCapabilities.canPresent
 slug: Web/API/VRDisplayCapabilities/canPresent
 translation_of: Web/API/VRDisplayCapabilities/canPresent
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>{{domxref("VRDisplayCapabilities")}} インターフェイスの <strong><code>canPresent</code></strong> 読取専用プロパティは，VRディスプレイが（HMDを通じて）コンテンツを表示(present)可能かどうかの状態を <a href="/ja/docs/Web/API/Boolean" title="The documentation about this has not yet been written; please consider contributing!"><code>Boolean</code></a> で返します． </p>
+{{domxref("VRDisplayCapabilities")}} インターフェイスの **`canPresent`** 読取専用プロパティは，VR ディスプレイが（HMD を通じて）コンテンツを表示(present)可能かどうかの状態を [`Boolean`](/ja/docs/Web/API/Boolean "The documentation about this has not yet been written; please consider contributing!") で返します．
 
-<p>これは，6自由度追跡が可能だけれど {{domxref("VRDisplay.requestPresent()")}} は意味を成さない"マジックウィンドウ(magic window)"デバイスを識別するのに利用できます．<code>canPresent</code> が <code>false の場合</code>,  {{domxref("VRDisplay.requestPresent()")}} の呼出しは失敗し， {{domxref("VRDisplay.getEyeParameters()")}} は <code>null を返すでしょう．</code></p>
+これは，6 自由度追跡が可能だけれど {{domxref("VRDisplay.requestPresent()")}} は意味を成さない"マジックウィンドウ(magic window)"デバイスを識別するのに利用できます．`canPresent` が `false の場合`, {{domxref("VRDisplay.requestPresent()")}} の呼出しは失敗し， {{domxref("VRDisplay.getEyeParameters()")}} は `null を返すでしょう．`
 
-<h2 id="シンタックス">シンタックス</h2>
+## シンタックス
 
-<pre class="brush: js">var canIPresent = vrDisplayCapabilitiesInstance.<code>canPresent</code>;</pre>
+```js
+var canIPresent = vrDisplayCapabilitiesInstance.canPresent;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>{{domxref("Boolean")}} の値．</p>
+{{domxref("Boolean")}} の値．
 
-<h2 id="例">例</h2>
+## 例
 
-<pre>TBD.</pre>
+```
+TBD.
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplaycapabilities-canpresent', 'canPresent')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                   | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('WebVR', '#dom-vrdisplaycapabilities-canpresent', 'canPresent')}} | {{Spec2('WebVR')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.VRDisplayCapabilities.canPresent")}}</p>
+{{Compat("api.VRDisplayCapabilities.canPresent")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．

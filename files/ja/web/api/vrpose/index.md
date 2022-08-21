@@ -3,59 +3,46 @@ title: VRPose
 slug: Web/API/VRPose
 translation_of: Web/API/VRPose
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRPose</code></strong> インターフェイスは，特定のタイムスタンプにおけるVRセンサーの状態（向き，位置，速度，加速度の情報を含みます）を示します．</p>
+[WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRPose`** インターフェイスは，特定のタイムスタンプにおける VR センサーの状態（向き，位置，速度，加速度の情報を含みます）を示します．
 
-<p>このインターフェイスには，{{domxref("VRDisplay.getPose()")}} と {{domxref("VRDisplay.getImmediatePose()")}} メソッドを通じてアクセスします．</p>
+このインターフェイスには，{{domxref("VRDisplay.getPose()")}} と {{domxref("VRDisplay.getImmediatePose()")}} メソッドを通じてアクセスします．
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}}</dt>
- <dd>システムの現在のタイムスタンプを返します — これは単調増加する値で，位置データが更新されたか，どんな順番で更新が発生しているかを決めるのに使えます．</dd>
- <dt>{{domxref("VRPose.position")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の位置を3Dベクトルとして返します．</dd>
- <dt>{{domxref("VRPose.linearVelocity")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）速度を返します．単位はメートル/秒です．</dd>
- <dt>{{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）加速度を返します．単位はメートル/秒/秒です．</dd>
- <dt>{{domxref("VRPose.orientation")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} におけるセンサーの向きをクォータニオンとして返します．</dd>
- <dt>{{domxref("VRPose.angularVelocity")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角速度を返します．単位はラジアン/秒です．</dd>
- <dt>{{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角加速度を返します．単位はラジアン/秒/秒です．</dd>
-</dl>
+- {{domxref("VRPose.timeStamp")}} {{readonlyInline}}
+  - : システムの現在のタイムスタンプを返します — これは単調増加する値で，位置データが更新されたか，どんな順番で更新が発生しているかを決めるのに使えます．
+- {{domxref("VRPose.position")}} {{readonlyInline}}
+  - : 現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の位置を 3D ベクトルとして返します．
+- {{domxref("VRPose.linearVelocity")}} {{readonlyInline}}
+  - : 現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）速度を返します．単位はメートル/秒です．
+- {{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}
+  - : 現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）加速度を返します．単位はメートル/秒/秒です．
+- {{domxref("VRPose.orientation")}} {{readonlyInline}}
+  - : 現在の {{domxref("VRPose.timestamp")}} におけるセンサーの向きをクォータニオンとして返します．
+- {{domxref("VRPose.angularVelocity")}} {{readonlyInline}}
+  - : 現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角速度を返します．単位はラジアン/秒です．
+- {{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}
+  - : 現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角加速度を返します．単位はラジアン/秒/秒です．
 
-<h2 id="例">例</h2>
+## 例
 
-<pre>TBD.</pre>
+```
+TBD.
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#interface-vrpose', 'VRPose')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                   | Comment            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('WebVR', '#interface-vrpose', 'VRPose')}} | {{Spec2('WebVR')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.VRPose")}}</p>
+{{Compat("api.VRPose")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
