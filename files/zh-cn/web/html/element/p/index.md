@@ -29,7 +29,7 @@ slug: Web/HTML/Element/p
 
 输出如下：
 
-{{ EmbedLiveSample('示例', '', '', '', 'Web/HTML/Element/p') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 注意
 

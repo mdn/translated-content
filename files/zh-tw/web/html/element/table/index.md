@@ -110,7 +110,7 @@ slug: Web/HTML/Element/table
 </table>
 ```
 
-{{EmbedLiveSample('簡單的表格', '100%', '100', '', 'Web/HTML/Element/table')}}
+{{EmbedLiveSample('簡單的表格', '100%', '100')}}
 
 ### 更多範例
 
@@ -216,7 +216,7 @@ border: 1px solid black;
 }
 ```
 
-{{EmbedLiveSample('更多範例', '100%', '700', '', 'Web/HTML/Element/table')}}
+{{EmbedLiveSample('更多範例', '100%', '700')}}
 
 ## 無障礙議題
 

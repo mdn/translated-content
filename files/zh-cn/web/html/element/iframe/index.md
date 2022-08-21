@@ -138,7 +138,7 @@ slug: Web/HTML/Element/iframe
 
 #### Result
 
-{{ EmbedLiveSample('Example1', '', '', '', 'Web/HTML/Element/iframe') }}
+{{ EmbedLiveSample('一个简单的 iframe') }}
 
 ### 在新标签页中打开 `<iframe>` 里面的链接
 
@@ -167,7 +167,7 @@ slug: Web/HTML/Element/iframe
 
 #### Result
 
-{{ EmbedLiveSample('Example2', '', '', '', 'Web/HTML/Element/iframe') }}
+{{ EmbedLiveSample('在新标签页中打开 iframe 里面的链接') }}
 
 ## 无障碍环境
 

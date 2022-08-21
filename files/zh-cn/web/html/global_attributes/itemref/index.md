@@ -80,7 +80,7 @@ slug: Web/HTML/Global_attributes/itemref
 
 ### 结果
 
-{{EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

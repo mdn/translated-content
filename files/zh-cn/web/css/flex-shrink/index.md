@@ -74,7 +74,7 @@ flex-shrink: unset
 
 ### 结果
 
-{{EmbedLiveSample('示例', '500px', '300px', '', 'Web/CSS/flex-shrink')}}
+{{EmbedLiveSample('示例', '500px', '300px')}}
 
 ## 规范
 

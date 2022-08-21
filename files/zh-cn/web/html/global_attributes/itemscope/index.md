@@ -115,7 +115,7 @@ Directions: <br>
 
 下面例子是上述例子的补充：
 
-{{EmbedLiveSample('示例', '500', '550', '', 'Web/HTML/Global_attributes/itemscope')}}
+{{EmbedLiveSample('示例', '500', '550')}}
 
 #### 结构化数据
 

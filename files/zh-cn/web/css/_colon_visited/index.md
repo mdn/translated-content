@@ -57,7 +57,7 @@ a:visited {
 
 ### 结果
 
-{{ EmbedLiveSample('示例', '', '', '', 'Web/CSS/:visited') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
