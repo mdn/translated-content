@@ -5,66 +5,52 @@ translation_of: Web/API/AudioScheduledSourceNode/stop
 translation_of_original: Web/API/AudioBufferSourceNode/stop
 original_slug: Web/API/AudioBufferSourceNode/stop
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>インターフェースの<code>stop()</code>メソッドは、オーディオバッファの再生を停止させるために使われます。</p>
-</div>
+インターフェースの`stop()`メソッドは、オーディオバッファの再生を停止させるために使われます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js;highlight[20]">var source = audioCtx.createBufferSource();
+```js
+var source = audioCtx.createBufferSource();
 source.stop(when);
-</pre>
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<p>最も単純なオーディオバッファ再生の停止方法—この場合は何もパラメータを指定する必要はありません。</p>
+最も単純なオーディオバッファ再生の停止方法—この場合は何もパラメータを指定する必要はありません。
 
-<pre class="brush: js">source.stop();</pre>
+```js
+source.stop();
+```
 
-<p>しばらく後に停止させたい場合は、引数として秒数を指定します。</p>
+しばらく後に停止させたい場合は、引数として秒数を指定します。
 
-<pre class="brush: js">source.stop(3);</pre>
+```js
+source.stop(3);
+```
 
-<div class="note">
-<p><strong>注: </strong>stop()の使い方の完全な例は<a href="/ja/docs/Web/API/AudioContext/decodeAudioData" title="これはオーディオトラックからWeb Audio APIで音源を生成するよい方法です。"><code>AudioContext.decodeAudioData</code></a>を参照してください。<a class="external-icon external" href="http://mdn.github.io/decode-audio-data/">コードをすぐに実行する</a>ことや、<a class="external-icon external" href="https://github.com/mdn/decode-audio-data">ソースコードを閲覧する</a>こともできます。</p>
-</div>
+> **Note:** **注:** stop()の使い方の完全な例は[`AudioContext.decodeAudioData`](/ja/docs/Web/API/AudioContext/decodeAudioData "これはオーディオトラックからWeb Audio APIで音源を生成するよい方法です。")を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
 
-<h2 id="引数">引数</h2>
+## 引数
 
-<dl>
- <dt>when</dt>
- <dd><code>when</code>パラメータは、再生を<em>いつ</em>停止するかを決定します。指定の時間を経過すると、再生はすぐに停止します。このメソッドが2回以上呼ばれると、例外が発生します</dd>
-</dl>
+- when
+  - : `when`パラメータは、再生を*いつ*停止するかを決定します。指定の時間を経過すると、再生はすぐに停止します。このメソッドが 2 回以上呼ばれると、例外が発生します
 
-<h2 id="戻り値">戻り値</h2>
+## 戻り値
 
-<p>なし</p>
+なし
 
-<h2 id="使用">使用</h2>
+## 使用
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-stop-void-double-when', 'stop()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                               | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-stop-void-double-when', 'stop()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("api.AudioScheduledSourceNode.stop")}}</p>
+{{Compat("api.AudioScheduledSourceNode.stop")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

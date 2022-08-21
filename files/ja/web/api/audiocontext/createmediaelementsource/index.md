@@ -3,39 +3,36 @@ title: AudioContext.createMediaElementSource()
 slug: Web/API/AudioContext/createMediaElementSource
 translation_of: Web/API/AudioContext/createMediaElementSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースのcreateMediaElementSource()メソッドは、新しく{{ domxref("MediaElementAudioSourceNode") }} オブジェクトを作成するために使用されます。HTML内に存在する{{htmlelement("audio")}} または {{htmlelement("video")}} を指定すると、そのオーディオを再生し、操作することができます。</p>
+{{ domxref("AudioContext") }}インターフェースの createMediaElementSource()メソッドは、新しく{{ domxref("MediaElementAudioSourceNode") }} オブジェクトを作成するために使用されます。HTML 内に存在する{{htmlelement("audio")}} または {{htmlelement("video")}} を指定すると、そのオーディオを再生し、操作することができます。
 
-<p>media element audio source nodesについての詳細は、 {{ domxref("MediaElementAudioSourceNode") }} を参照して下さい。</p>
-</div>
+media element audio source nodes についての詳細は、 {{ domxref("MediaElementAudioSourceNode") }} を参照して下さい。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
+```js
+var audioCtx = new AudioContext();
+var source = audioCtx.createMediaElementSource(myMediaElement);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>myMediaElement</code></dt>
- <dd>プロセッシング・グラフで操作するための {{ domxref("HTMLMediaElement") }} オブジェクトです。</dd>
-</dl>
+- `myMediaElement`
+  - : プロセッシング・グラフで操作するための {{ domxref("HTMLMediaElement") }} オブジェクトです。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("MediaElementAudioSourceNode")}}</p>
+{{domxref("MediaElementAudioSourceNode")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>以下の例では、createMediaElementSource()を使用して {{ htmlelement("audio") }} から音源を作成します。 再生される音源は {{ domxref("GainNode") }} を介し {{ domxref("AudioDestinationNode") }} に渡されます。マウスポインタが動くとupdatePage()関数が呼ばれ、マウスポインタのY座標の値をウィンドウの高さで割った比率を元に現在のゲインを計算します。また、マウスポインタを上下に動かすことで、再生している音楽の音量を上げ下げできます。</p>
+以下の例では、createMediaElementSource()を使用して {{ htmlelement("audio") }} から音源を作成します。 再生される音源は {{ domxref("GainNode") }} を介し {{ domxref("AudioDestinationNode") }} に渡されます。マウスポインタが動くと updatePage()関数が呼ばれ、マウスポインタの Y 座標の値をウィンドウの高さで割った比率を元に現在のゲインを計算します。また、マウスポインタを上下に動かすことで、再生している音楽の音量を上げ下げできます。
 
-<div class="note">
-<p><strong>注記</strong>:  <a href="http://mdn.github.io/media-source-buffer/">この例のデモ</a>と、<a href="https://github.com/mdn/media-source-buffer">ソース</a>を見ることができます。</p>
-</div>
+> **Note:** **注記**: [この例のデモ](http://mdn.github.io/media-source-buffer/)と、[ソース](https://github.com/mdn/media-source-buffer)を見ることができます。
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var myAudio = document.querySelector('audio');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -69,35 +66,21 @@ function updatePage(e) {
 // gainNodeをdestinationへ接続
 // これで音楽の再生と、マウスカーソルで音量を調節できるようになる
 source.connect(gainNode);
-gainNode.connect(audioCtx.destination);</pre>
+gainNode.connect(audioCtx.destination);
+```
 
-<div class="note">
-<p><strong>注記</strong>: createMediaElementSource()を呼んだ結果として {{ domxref("HTMLMediaElement") }} から再生される音声はAudioContextのプロセッシング・グラフへ再度ルーティングされます。従って、<em>createMediaElementSource()を呼んだ後も</em>音声の再生/一時停止はmedia element API及びプレーヤーの再生/一時停止ボタンから操作できます。</p>
-</div>
+> **Note:** **注記**: createMediaElementSource()を呼んだ結果として {{ domxref("HTMLMediaElement") }} から再生される音声は AudioContext のプロセッシング・グラフへ再度ルーティングされます。従って、*createMediaElementSource()を呼んだ後も*音声の再生/一時停止は media element API 及びプレーヤーの再生/一時停止ボタンから操作できます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                                                                                         | 状態                                 | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}} | {{Spec2('Web Audio API')}} |          |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.AudioContext.createMediaElementSource")}}</p>
+{{Compat("api.AudioContext.createMediaElementSource")}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Web Audio APIの利用</a></li>
-</ul>
+- [Web Audio API の利用](/ja/docs/Web_Audio_API/Using_Web_Audio_API)

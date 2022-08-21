@@ -3,41 +3,38 @@ title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 translation_of: Web/API/AudioContext/createMediaStreamSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>インターフェースの<code>createMediaStreamSource()</code>メソッドは、指定のメディアストリームから(言い換えると{{ domxref("navigator.getUserMedia") }}インスタンスから){{ domxref("MediaStreamAudioSourceNode") }}オブジェクトを生成します。ここからの音声は再生や編集ができます。</p>
-</div>
+インターフェースの`createMediaStreamSource()`メソッドは、指定のメディアストリームから(言い換えると{{ domxref("navigator.getUserMedia") }}インスタンスから){{ domxref("MediaStreamAudioSourceNode") }}オブジェクトを生成します。ここからの音声は再生や編集ができます。
 
-<p>メディアストリームオーディオソースノードの詳細は{{ domxref("MediaStreamAudioSourceNode") }}のページを参照してください。</p>
+メディアストリームオーディオソースノードの詳細は{{ domxref("MediaStreamAudioSourceNode") }}のページを参照してください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var source = audioCtx.createMediaStreamSource(stream);</pre>
+```js
+var audioCtx = new AudioContext();
+var source = audioCtx.createMediaStreamSource(stream);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>stream</dt>
- <dd>操作のためにオーディオグラフに加えたい{{domxref("MediaStream")}}オブジェクト。</dd>
-</dl>
+- stream
+  - : 操作のためにオーディオグラフに加えたい{{domxref("MediaStream")}}オブジェクト。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("MediaStreamAudioSourceNode")}}</p>
+{{domxref("MediaStreamAudioSourceNode")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、メディア(音声+映像)ストリームを{{ domxref("navigator.getUserMedia") }}から獲得し、それを{{ htmlelement("video") }}要素に渡し、映像は再生しますが音声は再生しないようにします。音声は{{ domxref("MediaStreamAudioSourceNode") }}に渡します。次に、音声をローパスフィルタ{{ domxref("BiquadFilterNode") }}(低音を強めるように働きます)に渡し、そして{{domxref("AudioDestinationNode") }}に渡します。</p>
+この例では、メディア(音声+映像)ストリームを{{ domxref("navigator.getUserMedia") }}から獲得し、それを{{ htmlelement("video") }}要素に渡し、映像は再生しますが音声は再生しないようにします。音声は{{ domxref("MediaStreamAudioSourceNode") }}に渡します。次に、音声をローパスフィルタ{{ domxref("BiquadFilterNode") }}(低音を強めるように働きます)に渡し、そして{{domxref("AudioDestinationNode") }}に渡します。
 
-<p>{{ htmlelement("video") }}要素の下のスライダーはローパスフィルタの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります!</p>
+{{ htmlelement("video") }}要素の下のスライダーはローパスフィルタの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります!
 
-<div class="note">
-<p><strong>注:</strong> <a href="http://mdn.github.io/stream-source-buffer/">この例の実行</a>と<a href="https://github.com/mdn/stream-source-buffer">ソースの閲覧</a>もできます。</p>
-</div>
+> **Note:** **注:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
 
-<pre class="brush: js;highlight[46]">// プレフィックスが必要な場合を考慮して、getUserMediaはブラウザのバージョンごとに分ける
+```js
+// プレフィックスが必要な場合を考慮して、getUserMediaはブラウザのバージョンごとに分ける
 
 navigator.getUserMedia = (navigator.getUserMedia ||
                           navigator.webkitGetUserMedia ||
@@ -72,7 +69,7 @@ if (navigator.getUserMedia) {
 
       // 成功時のコールバック
       function(stream) {
-         video.src = (window.URL &amp;&amp; window.URL.createObjectURL(stream)) || stream;
+         video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
          video.onloadedmetadata = function(e) {
             video.play();
             video.muted = 'true';
@@ -112,35 +109,21 @@ if (navigator.getUserMedia) {
 
 // pre要素にスクリプトを書き出す
 
-pre.innerHTML = myScript.innerHTML;</pre>
+pre.innerHTML = myScript.innerHTML;
+```
 
-<div class="note">
-<p><strong>注:</strong> <code>createMediaStreamSource()</code>の呼び出しによるメディアストリームの音声は、再び<code>AudioContext</code>の処理グラフに再び入ります。よって、ストリームの再生/停止は、まだメディアAPIとプレイヤーの操作で行えます。</p>
-</div>
+> **Note:** **注:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに再び入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createMediaStreamSource-MediaStreamAudioSourceNode-MediaStream-mediaStream', 'createMediaStreamSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                                                                    | Status                               | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaStreamSource-MediaStreamAudioSourceNode-MediaStream-mediaStream', 'createMediaStreamSource()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("api.AudioContext.createMediaStreamSource")}}</p>
+{{Compat("api.AudioContext.createMediaStreamSource")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)

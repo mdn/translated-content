@@ -17,35 +17,33 @@ tags:
   - 音声
 translation_of: Web/API/AudioBufferSourceNode/loop
 ---
-<div>{{ APIRef("Web Audio API") }}</div>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioBufferSourceNode") }} の <code>loop</code> プロパティは、 {{domxref("AudioBuffer")}} の末端に達した時に、音声を繰り返し再生するべきかを示す論理値です。</p>
-</div>
+{{ domxref("AudioBufferSourceNode") }} の `loop` プロパティは、 {{domxref("AudioBuffer")}} の末端に達した時に、音声を繰り返し再生するべきかを示す論理値です。
 
-<p><code>loop</code> プロパティの既定値は <code>false</code>です。</p>
+`loop` プロパティの既定値は `false`です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>loopingEnabled</var> = <var>AudioBufferSourceNode</var>.loop;
-<var>AudioBufferSourceNode</var>.loop = true | false;
-</pre>
+```
+var loopingEnabled = AudioBufferSourceNode.loop;
+AudioBufferSourceNode.loop = true | false;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>繰り返しが有効な場合はブール値 <code>true</code> 、それ以外は <code>false</code>です。</p>
+繰り返しが有効な場合はブール値 `true` 、それ以外は `false`です。
 
-<p>ループが有効である場合、 {{domxref("AudioBufferSourceNode.start", "start()")}} が呼ばれると音声は開始点として指定された場所から再生されます。 {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} で指定された場所に達すると、音声は {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} で指定された地点に戻って再生され続けます。</p>
+ループが有効である場合、 {{domxref("AudioBufferSourceNode.start", "start()")}} が呼ばれると音声は開始点として指定された場所から再生されます。 {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} で指定された場所に達すると、音声は {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} で指定された地点に戻って再生され続けます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例では、 {{domxref("AudioContext.decodeAudioData")}} 関数は音声トラックをデコードし {{domxref("AudioBufferSourceNode")}} に追加するために使用されています。再生・停止のためにボタンが配置され、スライダーが <code>playbackRate</code> プロパティを逐次変更するために使用されています。音声はループして再生されます。</p>
+この例では、 {{domxref("AudioContext.decodeAudioData")}} 関数は音声トラックをデコードし {{domxref("AudioBufferSourceNode")}} に追加するために使用されています。再生・停止のためにボタンが配置され、スライダーが `playbackRate` プロパティを逐次変更するために使用されています。音声はループして再生されます。
 
-<div class="note">
-<p><a class="external external-icon" href="https://mdn.github.io/webaudio-examples/decode-audio-data/">実際に動作する例を見る</a> (<a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html">または、ソースコードを見る</a>)ことができます。</p>
-</div>
+> **Note:** [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/decode-audio-data/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html))ことができます。
 
-<pre class="brush: js;highlight[17]">function getData() {
+```js
+function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
@@ -78,37 +76,21 @@ play.onclick = function() {
   source.start(0);
   play.setAttribute('disabled', 'disabled');
   playbackControl.removeAttribute('disabled');
-}</pre>
+}
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loop', 'loop')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                                 | 備考 |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loop', 'loop')}} | {{Spec2('Web Audio API')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>
-<p>{{Compat("api.AudioBufferSourceNode.loop")}}</p>
-</div>
+{{Compat("api.AudioBufferSourceNode.loop")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API の使用</a></li>
- <li>{{domxref("AudioBufferSourceNode")}}</li>
-</ul>
+- [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
+- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioBufferSourceNode")}}

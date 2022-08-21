@@ -11,45 +11,46 @@ tags:
   - createMediaStreamDestination
 translation_of: Web/API/AudioContext/createMediaStreamDestination
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }} インターフェイスの <code>createMediaStreamDestination()</code> メソッドは、<a href="/ja/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} オブジェクトを生成します。このMediaStreamはローカルファイルに格納されたり他のコンピュータに送信されたりする音声ストリームを表します。</p>
-</div>
+{{ domxref("AudioContext") }} インターフェイスの `createMediaStreamDestination()` メソッドは、[WebRTC](/ja/docs/WebRTC) {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} オブジェクトを生成します。この MediaStream はローカルファイルに格納されたり他のコンピュータに送信されたりする音声ストリームを表します。
 
-<p>{{domxref("MediaStream")}} はノードが生成されたときに作成され、{{domxref("MediaStreamAudioDestinationNode")}}の <code>stream</code> プロパティを通じてアクセスすることができます。このストリームは {{domxref("navigator.getUserMedia") }} で得られた <code>MediaStream</code> と同じような使い方ができます。例えば、<code>RTCPeerConnection</code> インターフェイスの <code>addStream()</code> メソッドでリモートの端末に送ることができます。</p>
+{{domxref("MediaStream")}} はノードが生成されたときに作成され、{{domxref("MediaStreamAudioDestinationNode")}}の `stream` プロパティを通じてアクセスすることができます。このストリームは {{domxref("navigator.getUserMedia") }} で得られた `MediaStream` と同じような使い方ができます。例えば、`RTCPeerConnection` インターフェイスの `addStream()` メソッドでリモートの端末に送ることができます。
 
-<p>詳細は {{domxref("MediaStreamAudioDestinationNode")}} のページを参照してください。</p>
+詳細は {{domxref("MediaStreamAudioDestinationNode")}} のページを参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var destination = audioCtx.createMediaStreamDestination();</pre>
+```js
+var audioCtx = new AudioContext();
+var destination = audioCtx.createMediaStreamDestination();
+```
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("MediaStreamAudioDestinationNode")}}</p>
+{{domxref("MediaStreamAudioDestinationNode")}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次の簡単な例では、{{domxref("MediaStreamAudioDestinationNode")}}と{{ domxref("OscillatorNode") }}と{{ domxref("MediaRecorder") }} (そのため現時点では、このサンプルは Firefox と Chrome でしか動作しません) を作成します。<code>MediaRecorder</code> は <code>MediaStreamDestinationNode</code> からの情報を記録するように設定されています。</p>
+次の簡単な例では、{{domxref("MediaStreamAudioDestinationNode")}}と{{ domxref("OscillatorNode") }}と{{ domxref("MediaRecorder") }} (そのため現時点では、このサンプルは Firefox と Chrome でしか動作しません) を作成します。`MediaRecorder` は `MediaStreamDestinationNode` からの情報を記録するように設定されています。
 
-<p>ボタンをクリックするとオシレーター(振動子)が開始し、<code>MediaRecorder</code> も開始します。再びボタンを押して止めると、オシレーターと <code>MediaRecorder</code> の両方が停止します。<code>MediaRecorder</code> が停止すると <code>dataavailable</code> イベントが発火され、イベントデータが <code>chunks</code>配列にプッシュされます。その後、<code>stop</code> イベントが発火すると、新しい <code>blob</code> が opus タイプで作られます—そこには <code>chunks</code>配列のデータが書き込まれていて、その blob の URL を指す新しいウィンドウ(タブ)が開きます。</p>
+ボタンをクリックするとオシレーター(振動子)が開始し、`MediaRecorder` も開始します。再びボタンを押して止めると、オシレーターと `MediaRecorder` の両方が停止します。`MediaRecorder` が停止すると `dataavailable` イベントが発火され、イベントデータが `chunks`配列にプッシュされます。その後、`stop` イベントが発火すると、新しい `blob` が opus タイプで作られます—そこには `chunks`配列のデータが書き込まれていて、その blob の URL を指す新しいウィンドウ(タブ)が開きます。
 
-<p>そこで opus ファイルの再生と保存ができます。</p>
+そこで opus ファイルの再生と保存ができます。
 
-<pre class="brush: html;highlight[17]">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;createMediaStreamDestination() demo&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;createMediaStreamDestination() demo&lt;/h1&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>createMediaStreamDestination() demo</title>
+  </head>
+  <body>
+    <h1>createMediaStreamDestination() demo</h1>
 
-    &lt;p&gt;Encoding a pure sine wave to an Opus file &lt;/p&gt;
-    &lt;button&gt;Make sine wave&lt;/button&gt;
-    &lt;audio controls&gt;&lt;/audio&gt;
-    &lt;script&gt;
+    <p>Encoding a pure sine wave to an Opus file </p>
+    <button>Make sine wave</button>
+    <audio controls></audio>
+    <script>
      var b = document.querySelector("button");
      var clicked = false;
      var chunks = [];
@@ -82,41 +83,23 @@ var destination = audioCtx.createMediaStreamDestination();</pre>
        var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
        document.querySelector("audio").src = URL.createObjectURL(blob);
      };
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </body>
+</html>
+```
 
-<div class="note">
-<p><strong>注:</strong> Github で<a href="https://mdn.github.io/webaudio-examples/create-media-stream-destination/index.html">実際に動作する例を閲覧</a>したり、<a href="https://github.com/mdn/webaudio-examples/blob/master/create-media-stream-destination/index.html">ソースコードを読む</a>ことができます。</p>
-</div>
+> **Note:** **注:** Github で[実際に動作する例を閲覧](https://mdn.github.io/webaudio-examples/create-media-stream-destination/index.html)したり、[ソースコードを読む](https://github.com/mdn/webaudio-examples/blob/master/create-media-stream-destination/index.html)ことができます。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audiocontext-createmediastreamdestination', 'createMediaStreamDestination()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                                   | 策定状況                             | コメント |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Web Audio API', '#dom-audiocontext-createmediastreamdestination', 'createMediaStreamDestination()')}} | {{Spec2('Web Audio API')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー互換性</h2>
+## ブラウザー互換性
 
-<div>
+{{Compat("api.AudioContext.createMediaStreamDestination")}}
 
+## 参考
 
-<p>{{Compat("api.AudioContext.createMediaStreamDestination")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">参考</h2>
-
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
