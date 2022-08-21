@@ -9,6 +9,7 @@ tags:
 spec-urls:
   - https://drafts.csswg.org/css-logical/
   - https://drafts.csswg.org/css-text/
+translation_of: Web/CSS/CSS_Text
 ---
 {{CSSRef}}
 
