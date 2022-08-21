@@ -38,7 +38,7 @@ _此接口也继承自 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口
 - {{DOMxRef("Document.contentType")}} {{ReadOnlyInline}}
   - : 根据当前文档的 MIME 标头，返回它的 Content-Type。
 - {{DOMxRef("Document.currentScript")}} {{ReadOnlyInline}}
-  - : 返回目前正在处理且[不是 JavaScript 模块](https://github.com/whatwg/html/issues/997) 的 {{HTMLElement("script")}} 元素。
+  - : 返回目前正在处理且[不是 JavaScript 模块](https://github.com/whatwg/html/issues/997)的 {{HTMLElement("script")}} 元素。
 - {{DOMxRef("Document.doctype")}} {{ReadOnlyInline}}
   - : 返回当前文档的文档类型定义（Document Type Definition，DTD）。
 - {{DOMxRef("Document.documentElement")}} {{ReadOnlyInline}}
@@ -100,9 +100,9 @@ _HTML 文件的 `Document` 接口继承自 {{DOMxRef("HTMLDocument")}} 接口，
   - : 返回一个对 `window` 对象的引用。
 - {{DOMxRef("Document.designMode")}}
   - : 获取或设置编辑整个文档的能力。
-- {{DOMxRef("Document.dir")}} {{ReadOnlyInline}}
+- {{DOMxRef("Document.dir")}}
   - : 获取或设置文档的文字方向（rtl 或 ltr）。
-- {{DOMxRef("Document.domain")}}
+- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
   - : 获取或设置当前文档的域。
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
   - : 返回文档最后修改的时间。
@@ -137,7 +137,7 @@ _HTML 文件的 `Document` 接口继承自 {{DOMxRef("HTMLDocument")}} 接口，
   - : 获取或设置当前文档的高度。
 - {{DOMxRef("Document.inputEncoding")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : {{DOMxRef("Document.characterSet")}} 的别名，请使用原始属性替换。
-- {{DOMxRef("Document.lastStyleSheetSet")}} {{ReadOnlyInline}}
+- {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : 返回最后启用的样式表的名字。在设置 {{DOMxRef("document.selectedStyleSheetSet","selectedStyleSheetSet")}} 前，其值都为 `null`。
 - {{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}
   - : 获取或设置文档中超链接的颜色。
@@ -145,9 +145,9 @@ _HTML 文件的 `Document` 接口继承自 {{DOMxRef("HTMLDocument")}} 接口，
   - : 返回文档作者首选的样式表。
 - {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
   - : 类似于 {{DOMxRef("Document.documentElement")}}，但其仅用于 {{SVGElement("svg")}} 根元素。请使用后者代替。
-- {{DOMxRef("Document.selectedStyleSheetSet")}}
+- {{DOMxRef("Document.selectedStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回当前正使用的样式表的集合。
-- {{DOMxRef("Document.styleSheetSets")}} {{ReadOnlyInline}}
+- {{DOMxRef("Document.styleSheetSets")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : 返回文档上可用样式表的集合。
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : 获取或设置被访问的超链接的颜色。
@@ -299,7 +299,7 @@ HTML 文档的 `Document` 接口继承自 {{DOMxRef("HTMLDocument")}} 接口，�
 
 - {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
   - : 在静态的 {{HTMLElement("script")}} 元素执行完其中的脚本时触发。
-- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}}
   - : 在静态的 {{HTMLElement("script")}} 开始执行脚本时触发。
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : 在滚动文档视图或元素时触发。
