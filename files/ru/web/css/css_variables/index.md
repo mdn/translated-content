@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
 spec-urls: https://drafts.csswg.org/css-variables/
+translation_of: Web/CSS/CSS_Variables
 ---
 {{CSSRef}}
 
