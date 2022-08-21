@@ -12,18 +12,20 @@ tags:
 translation_of: Web/API/NetworkInformation/onchange
 original_slug: Web/API/NetworkInformation/onchange
 ---
-<p>{{apiref("Network Information API")}}{{SeeCompatTable}}</p>
+{{apiref("Network Information API")}}{{SeeCompatTable}}
 
-<p><strong><code>NetworkInformation.onchange</code></strong> イベントハンドラは、接続情報が変化したときに発火し、{{domxref("NetworkInformation")}} オブジェクトが {{event("change")}} を受け取るコードを含みます。</p>
+**`NetworkInformation.onchange`** イベントハンドラは、接続情報が変化したときに発火し、{{domxref("NetworkInformation")}} オブジェクトが {{event("change")}} を受け取るコードを含みます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>netInfo</em>.onchange = function() { ... }
-</pre>
+```
+netInfo.onchange = function() { ... }
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">// 接続型の取得
+```js
+// 接続型の取得
 var type = navigator.connection.type;
 
 function changeHandler(e) {
@@ -33,27 +35,15 @@ function changeHandler(e) {
 // change イベントの登録:
 navigator.connection.onchange = changeHandler;
 
-// Another way: navigator.connection.addEventListener('change', changeHandler);</pre>
+// Another way: navigator.connection.addEventListener('change', changeHandler);
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Network Information')}}</td>
-   <td>{{Spec2('Network Information')}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                             | ステータス                                   | コメント   |
+| ------------------------------------------------ | -------------------------------------------- | ---------- |
+| {{SpecName('Network Information')}} | {{Spec2('Network Information')}} | 最初の定義 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.NetworkInformation.onchange")}}</p>
+{{Compat("api.NetworkInformation.onchange")}}

@@ -3,25 +3,26 @@ title: Headers.entries()
 slug: Web/API/Headers/entries
 translation_of: Web/API/Headers/entries
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>Headers.entries()</strong></code> メソッドは {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれるすべてのキーと値のペアを通過できるようにします。各ペアのキーと値は両方とも {{domxref("ByteString")}} オブジェクトです。</p>
+**`Headers.entries()`** メソッドは {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれるすべてのキーと値のペアを通過できるようにします。各ペアのキーと値は両方とも {{domxref("ByteString")}} オブジェクトです。
 
-<div class="注">
-<p><strong>Note</strong>: このメソッドは <a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a> で使用できます。</p>
-</div>
+> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">headers.entries();</pre>
+```
+headers.entries();
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref("Iteration_protocols","iterator")}} を返します。</p>
+{{jsxref("Iteration_protocols","iterator")}} を返します。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js;highlight:[7] notranslate">// Headers テストオブジェクトを作成
+```js
+// Headers テストオブジェクトを作成
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
@@ -30,25 +31,21 @@ myHeaders.append('Vary', 'Accept-Language');
 for (var pair of myHeaders.entries()) {
    console.log(pair[0]+ ': '+ pair[1]);
 }
-</pre>
+```
 
-<p>結果</p>
+結果
 
-<pre class="notranslate">content-type: text/xml
-vary: Accept-Language</pre>
+```
+content-type: text/xml
+vary: Accept-Language
+```
 
-<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.Headers.entries")}}
 
+## 関連情報
 
-<p>{{Compat("api.Headers.entries")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)
