@@ -41,6 +41,7 @@ toggle(token, force);
 ```js
 const span = document.querySelector("span");
 const classes = span.classList;
+
 span.addEventListener('click', () => {
   const result = classes.toggle("c");
 
