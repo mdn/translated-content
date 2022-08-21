@@ -11,7 +11,7 @@ tags:
   - 入力型
   - Number
   - リファレンス
-browser-compat: html.elements.input.input-number
+browser-compat: html.elements.input.type_number
 translation_of: Web/HTML/Element/input/number
 ---
 

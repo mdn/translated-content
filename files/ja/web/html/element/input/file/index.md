@@ -12,6 +12,7 @@ tags:
   - Input Type
   - Reference
   - Type
+browser-compat: html.elements.input.type_file
 translation_of: Web/HTML/Element/input/file
 ---
 {{HTMLRef("Input_types")}}
@@ -459,7 +460,7 @@ function returnFileSize(number) {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-file")}}
+{{Compat}}
 
 ## 関連情報
 

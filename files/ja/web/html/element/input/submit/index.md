@@ -15,6 +15,7 @@ tags:
   - form
   - submit
   - submit button
+browser-compat: html.elements.input.type_submit
 translation_of: Web/HTML/Element/input/submit
 ---
 {{HTMLRef("Input_types")}}
@@ -224,7 +225,7 @@ We've included simple examples above. There isn't really anything more to say ab
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-submit")}}
+{{Compat}}
 
 ## 関連情報
 

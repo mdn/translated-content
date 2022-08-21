@@ -15,7 +15,7 @@ tags:
   - Text
   - URL
   - control
-browser-compat: html.elements.input.input-url
+browser-compat: html.elements.input.type_url
 translation_of: Web/HTML/Element/input/url
 ---
 
