@@ -26,7 +26,7 @@ myMap.get(key);
 
 ## 示例
 
-### 使用 `get()` 方法
+### 使用 get()
 
 ```js
 const myMap = new Map();
