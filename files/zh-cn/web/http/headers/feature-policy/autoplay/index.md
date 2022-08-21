@@ -17,6 +17,10 @@ Feature-Policy: autoplay <allowlist>;
 - \<allowlist>
   - : 允许使用此特性的来源（origin）列表。参见 [`Feature-Policy`](/zh-CN/docs/Web/HTTP/Headers/Feature-Policy#语法)。
 
+## 默认策略
+
+[Google Chrome](https://chromestatus.com/feature/5100524789563392) 的默认值是 `'self'`。
+
 ## 规范
 
 {{Specifications}}
