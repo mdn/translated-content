@@ -13,7 +13,7 @@ spec-urls: https://drafts.csswg.org/css-variables/
 
 **CSS Custom Properties for Cascading Variables** – CSS модуль, который позволяет создавать переиспользуемые переменные (кастомные свойства).
 
-## Reference
+## Справка
 
 ### Свойства
 
