@@ -11,7 +11,7 @@ tags:
 
 このページでは、開発者に影響する Firefox 88 の変更点をまとめています。Firefox 88 は、米国時間 2021 年 4 月 19 日にリリースされました。
 
-> **Note:** #### 注記 Mozilla Hacks の [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) もご覧ください。
+> **Note:** Mozilla Hacks の [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 

@@ -9,7 +9,7 @@ translation_of: Mozilla/Firefox/Releases/10
 ---
 Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。
 
-> **Note:** **重要:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on ](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/)をご覧ください。
+> **Note:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on ](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/)をご覧ください。
 
 ## Web 開発者向けの変更点一覧
 
@@ -115,7 +115,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 アドオンを Firefox 10 へ対応させる際に発生すると思われる問題の概要に関しては、[Updating add-ons for Firefox 10](/ja/docs/Firefox/Updating_add-ons_for_Firefox_10 "Firefox/Updating_add-ons_for_Firefox_10") をご覧ください。
 
-> **Note:** **注意:** 古い [`PRBool`](/ja/docs/PRBool "PRBool") データ形式は退役されました。これを参照する文書では、どこでも代わりに標準 C++ `bool` 形式を使用します。現時点では文書が更新されていませんが、将来更新されますので留意してください。
+> **Note:** 古い [`PRBool`](/ja/docs/PRBool "PRBool") データ形式は退役されました。これを参照する文書では、どこでも代わりに標準 C++ `bool` 形式を使用します。現時点では文書が更新されていませんが、将来更新されますので留意してください。
 
 ### Manifests
 

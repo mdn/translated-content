@@ -89,7 +89,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 アドオンを Firefox 8 互換にする際に必要となりそうな変更点は [Updating add-ons for Firefox 8](/ja/docs/Firefox/Updating_add-ons_for_Firefox_8 "Firefox/Updating_add-ons_for_Firefox_8") にまとめられています。
 
-> **Note:** **注:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces "Developer_Guide/Interface_Compatibility#Binary_Interfaces") をご覧ください。
+> **Note:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces "Developer_Guide/Interface_Compatibility#Binary_Interfaces") をご覧ください。
 
 ### XPCOM
 

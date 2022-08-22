@@ -81,7 +81,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 すでに開発済みのアドオンを Firefox 5 向けにアップデートを行う方法については [Firefox 5 へのアドオンのアップデート方法](/ja/docs/Firefox/Updating_add-ons_for_Firefox_5)をご覧ください。
 
-> **Note:** 注意：Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
+> **Note:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
 
 ### JavaScript コードモジュールに対する変更点
 

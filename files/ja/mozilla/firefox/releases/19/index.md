@@ -43,7 +43,7 @@ Firefox 19 で、[XForms](/ja/docs/XForms) のサポートを[**削除しまし�
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
-> **Note:** **注意:** Firefox 19 での重要な変更点は、[`nsresult`](/ja/docs/XPCOM_API_Reference/nsresult "nsresult") が強い型付けになったことです。これは戻り値の処理ミスによって発生するバグの発見を容易にしますが、この点を誤って仮定している場合に既存のコードで不具合が発生する可能性があります。
+> **Note:** Firefox 19 での重要な変更点は、[`nsresult`](/ja/docs/XPCOM_API_Reference/nsresult "nsresult") が強い型付けになったことです。これは戻り値の処理ミスによって発生するバグの発見を容易にしますが、この点を誤って仮定している場合に既存のコードで不具合が発生する可能性があります。
 
 - `getBrowserSelection()` が、テキスト入力フィールドで選択されているテキストを返すようになりました。このため、ユーザがパスワードフィールドではないテキスト入力フィールドでテキストを選択したときに、`gContextMenu.isTextSelected` が `true` になります ({{bug("565717")}})。
 - [Dict.jsm](/ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) が JSON 文字列を受け入れるようになりました。[`Dict.toJSON()`](</ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) メソッドが追加され、これは JSON 文字列を返します ({{bug("727967")}})。

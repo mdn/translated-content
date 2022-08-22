@@ -17,7 +17,7 @@ Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日に
 
 Firefox 57 は、Firefox を徹底的に再構築してパフォーマンス、安定性、外見を大きく向上させることを目指す [Firefox Quantum](https://wiki.mozilla.org/Quantum) エンジニアリングプロジェクトにちなんで **Quantum** というリリース名を与えられました。Firefox 57 はこれらの改善点の一部をリリースする最初のバージョンであり、祝福を求めていました。
 
-> **Note:** **注記**: このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
+> **Note:** このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)、別名 **Quantum CSS** または **Stylo** はデスクトップ版の Firefox 57 でデフォルトで有効であり、モバイル版の Firefox は追って有効化します。多くのパフォーマンス向上は別として、開発者が何らかの大きな違いに気づくことがあってはいけません。Stylo には多くの小規模な機能差がありますが、Gecko で取り除くべき非標準の動作を修正するために実装したものです。このような差異は、適宜リファレンスのページやリリースノートに掲載します ([Quantum CSS に関する補足](#quantum_css_notes) を参照)。
 

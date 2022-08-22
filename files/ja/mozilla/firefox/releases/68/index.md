@@ -149,7 +149,7 @@ _変更なし。_
 - ストリームの "最初の音声トラック" の ID が辞書順で最初に来るトラックであると定義する現行の仕様書に準拠するよう、{{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} コンストラクターを更新しました ({{bug(1324548)}})。
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} は安全でないコンテキストから使用できなくなりました。使用を試みると `NotAllowedError` 例外が発生します。安全なコンテキストは HTTPS を使用して読み込むもの、`file:///` スキームを使用して示すもの、`localhost` から読み込むものです。今のところ、必要であれば設定項目 `media.getusermedia.insecure.enabled` を `true` に設定すると、`getUserMedia()` を安全でないコンテキストから呼び出すことを再有効化できます ({{bug(1335740)}})。
 
-  > **Note:** **注記:** 将来、Firefox は {{domxref("navigator.mediaDevices")}} プロパティも安全でないコンテキストで廃止して、{{domxref("MediaDevices")}} API へのアクセスを完全に遮断する予定です。**これは Nightly ビルドですでに実施しています。**
+  > **Note:** 将来、Firefox は {{domxref("navigator.mediaDevices")}} プロパティも安全でないコンテキストで廃止して、{{domxref("MediaDevices")}} API へのアクセスを完全に遮断する予定です。**これは Nightly ビルドですでに実施しています。**
 
 #### 廃止
 
