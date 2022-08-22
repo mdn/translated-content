@@ -7,58 +7,39 @@ tags:
   - WebVTT
 translation_of: Web/API/TextTrackCue
 ---
-<p>{{APIRef("WebVTT")}}</p>
+{{APIRef("WebVTT")}}
 
-<p><span class="seoSummary"><strong><code>TextTrackCues</code></strong> は、{{domxref("TextTrack")}} に一定期間表示されるテキストの文字列を表します。 これには、キューが表示される開始時間と終了時間が含まれます。 <strong><code>TextTrackCue</code></strong> を直接使用することはできません。 その代わりに、派生型の1つ（例えば {{domxref("VTTCue")}}）を使用する必要があります。</span></p>
+**`TextTrackCues`** は、{{domxref("TextTrack")}} に一定期間表示されるテキストの文字列を表します。 これには、キューが表示される開始時間と終了時間が含まれます。 **`TextTrackCue`** を直接使用することはできません。 その代わりに、派生型の 1 つ（例えば {{domxref("VTTCue")}}）を使用する必要があります。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p class="properties also_inherits"><em>このインターフェイスは {{domxref("EventTarget")}} からもプロパティを継承しています。</em></p>
+_このインターフェイスは {{domxref("EventTarget")}} からもプロパティを継承しています。_
 
-<dl id="property_definitions">
- <dt>{{domxref("TextTrackCue.track")}} {{readOnlyInline}}</dt>
- <dd>このキューが属する {{domxref("TextTrack")}}。 いずれにも属さない場合は <code>null</code>。</dd>
- <dt>{{domxref("TextTrackCue.id")}}</dt>
- <dd>キューを識別する {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("TextTrackCue.startTime")}}</dt>
- <dd>キューが表示され始める動画時間を表す <code>double</code> 型。</dd>
- <dt>{{domxref("TextTrackCue.endTime")}}</dt>
- <dd>キューが表示されなくなるまでの動画時間を表す <code>double</code> 型。</dd>
- <dt>{{domxref("TextTrackCue.pauseOnExit")}}</dt>
- <dd>このキューが表示されなくなったときに動画を一時停止するかどうか <code>boolean</code> 型。</dd>
-</dl>
+- {{domxref("TextTrackCue.track")}} {{readOnlyInline}}
+  - : このキューが属する {{domxref("TextTrack")}}。 いずれにも属さない場合は `null`。
+- {{domxref("TextTrackCue.id")}}
+  - : キューを識別する {{domxref("DOMString")}}。
+- {{domxref("TextTrackCue.startTime")}}
+  - : キューが表示され始める動画時間を表す `double` 型。
+- {{domxref("TextTrackCue.endTime")}}
+  - : キューが表示されなくなるまでの動画時間を表す `double` 型。
+- {{domxref("TextTrackCue.pauseOnExit")}}
+  - : このキューが表示されなくなったときに動画を一時停止するかどうか `boolean` 型。
 
-<h3 id="Event_handlers" name="Event_handlers">イベントハンドラ</h3>
+### イベントハンドラ
 
-<dl>
- <dt>{{domxref("TextTrackCue.onenter")}}</dt>
- <dd>{{event("enter")}} イベントのイベントハンドラ。</dd>
- <dt>{{domxref("TextTrackCue.onexit")}}</dt>
- <dd>{{event("exit")}} イベントのイベントハンドラ。</dd>
-</dl>
+- {{domxref("TextTrackCue.onenter")}}
+  - : {{event("enter")}} イベントのイベントハンドラ。
+- {{domxref("TextTrackCue.onexit")}}
+  - : {{event("exit")}} イベントのイベントハンドラ。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#texttrackcue','TextTrackCue')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','#texttrackcue','TextTrackCue')}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                             | コメント |
+| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG','#texttrackcue','TextTrackCue')}} | {{Spec2("HTML WHATWG")}} |          |
+| {{SpecName('HTML5 W3C','#texttrackcue','TextTrackCue')}} | {{Spec2("HTML5 W3C")}}     | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>未定</p>
+未定

@@ -3,74 +3,53 @@ title: WorkerLocation
 slug: Web/API/WorkerLocation
 translation_of: Web/API/WorkerLocation
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <strong><code>WorkerLocation</code></strong> インタフェースは、{{domxref("Worker")}} で実行されているスクリプトの絶対的な場所を表します。それぞれの Worker はこのインタフェースを持つオブジェクトを持っており、{{domxref("WorkerGlobalScope.location")}} 属性からアクセスできます。なおこの属性は、<code>self.location</code> で参照できます。</p>
+The **`WorkerLocation`** インタフェースは、{{domxref("Worker")}} で実行されているスクリプトの絶対的な場所を表します。それぞれの Worker はこのインタフェースを持つオブジェクトを持っており、{{domxref("WorkerGlobalScope.location")}} 属性からアクセスできます。なおこの属性は、`self.location` で参照できます。
 
-<p>このインタフェースは、ワーカーコンテキストでのみ利用できます。</p>
+このインタフェースは、ワーカーコンテキストでのみ利用できます。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em><code>WorkerLocation</code> インタフェースには、{{domxref("URLUtilsReadOnly")}} インタフェースで定義されたもの以外に、継承した属性はありません。</em></p>
+_`WorkerLocation` インタフェースには、{{domxref("URLUtilsReadOnly")}} インタフェースで定義されたもの以外に、継承した属性はありません。_
 
-<dl>
- <dt>{{domxref("URLUtilsReadOnly.href")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL を表す {{domxref("DOMString")}} です。</dd>
- <dt>{{domxref("URLUtilsReadOnly.protocol")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のスキーマ部分を表す {{domxref("DOMString")}} です。なお末尾に <code>':'</code>を含みます。</dd>
- <dt>{{domxref("URLUtilsReadOnly.host")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、ホスト部分を表す {{domxref("DOMString")}} です。 <code>':'</code>とポート番号を含みます。</dd>
- <dt>{{domxref("URLUtilsReadOnly.hostname")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、ホスト名を表す {{domxref("DOMString")}} です。</dd>
- <dt>{{domxref("URLUtilsReadOnly.origin")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトのオリジンをカノニカル形式で表した　{{domxref("DOMString")}} です。</dd>
- <dt>{{domxref("URLUtilsReadOnly.port")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、ポート番号部分を表す {{domxref("DOMString")}} です。</dd>
- <dt>{{domxref("URLUtilsReadOnly.pathname")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、パス部分を表す {{domxref("DOMString")}} です。<code>'/'</code> で始まります。</dd>
- <dt>{{domxref("URLUtilsReadOnly.search")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、パラメーター部分を表す {{domxref("DOMString")}} です。 <code>'?'</code> で始まります。</dd>
- <dt>{{domxref("URLUtilsReadOnly.hash")}} {{readOnlyInline}}</dt>
- <dd>その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、フラグメントIDを表す {{domxref("DOMString")}} です。 <code>'#'</code> で始まります。</dd>
-</dl>
+- {{domxref("URLUtilsReadOnly.href")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL を表す {{domxref("DOMString")}} です。
+- {{domxref("URLUtilsReadOnly.protocol")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のスキーマ部分を表す {{domxref("DOMString")}} です。なお末尾に `':'`を含みます。
+- {{domxref("URLUtilsReadOnly.host")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、ホスト部分を表す {{domxref("DOMString")}} です。 `':'`とポート番号を含みます。
+- {{domxref("URLUtilsReadOnly.hostname")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、ホスト名を表す {{domxref("DOMString")}} です。
+- {{domxref("URLUtilsReadOnly.origin")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトのオリジンをカノニカル形式で表した　{{domxref("DOMString")}} です。
+- {{domxref("URLUtilsReadOnly.port")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、ポート番号部分を表す {{domxref("DOMString")}} です。
+- {{domxref("URLUtilsReadOnly.pathname")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、パス部分を表す {{domxref("DOMString")}} です。`'/'` で始まります。
+- {{domxref("URLUtilsReadOnly.search")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、パラメーター部分を表す {{domxref("DOMString")}} です。 `'?'` で始まります。
+- {{domxref("URLUtilsReadOnly.hash")}} {{readOnlyInline}}
+  - : その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL のうち、フラグメント ID を表す {{domxref("DOMString")}} です。 `'#'` で始まります。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em><code>WorkerLocation</code> インタフェースには、{{domxref("URLUtilsReadOnly")}} インタフェースで定義されたもの以外に、継承したメソッドはありません。</em></p>
+_`WorkerLocation` インタフェースには、{{domxref("URLUtilsReadOnly")}} インタフェースで定義されたもの以外に、継承したメソッドはありません。_
 
-<dl>
- <dt>{{domxref("URLUtilsReadOnly.toString()")}}</dt>
- <dd>{{domxref("URLUtilsReadOnly.href")}} と同じく、その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL を {{domxref("DOMString")}} として返します。</dd>
-</dl>
+- {{domxref("URLUtilsReadOnly.toString()")}}
+  - : {{domxref("URLUtilsReadOnly.href")}} と同じく、その {{domxref("Worker")}} で実行中のスクリプトの絶対 URL を {{domxref("DOMString")}} として返します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#workerlocation', 'WorkerLocation')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                 | 状態                             | コメント |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#workerlocation', 'WorkerLocation')}} | {{Spec2('HTML WHATWG')}} |          |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("api.WorkerLocation")}}
 
+## 関連情報
 
-<p>{{Compat("api.WorkerLocation")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}}, and {{domxref("WorkerGlobalScope")}}.</li>
- <li><a href="/ja/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}}, and {{domxref("WorkerGlobalScope")}}.
+- [Using web workers](/ja/docs/Web/Guide/Performance/Using_web_workers)

@@ -14,52 +14,45 @@ tags:
   - Web Performance
 translation_of: Web/API/Long_Tasks_API
 ---
-<p>{{DefaultAPISidebar("Long Tasks")}}</p>
+{{DefaultAPISidebar("Long Tasks")}}
 
-<h2 id="Motivation" name="Motivation">動機</h2>
+## 動機
 
-<p><span class="seoSummary">実験的な Long Tasks API（長いタスク API）により、50ミリ秒以上かかるタスクを可視化できます。</span> 50ミリ秒のしきい値は、<a href="https://developers.google.com/web/fundamentals/performance/rail">RAIL モデル</a>、特に「<a href="https://developers.google.com/web/fundamentals/performance/rail#response">Response: process events in under 50ms</a>（応答: 50ミリ秒未満でイベントを処理、英語版を参照のこと）」のセクションから来ています。</p>
+実験的な Long Tasks API（長いタスク API）により、50 ミリ秒以上かかるタスクを可視化できます。 50 ミリ秒のしきい値は、[RAIL モデル](https://developers.google.com/web/fundamentals/performance/rail)、特に「[Response: process events in under 50ms](https://developers.google.com/web/fundamentals/performance/rail#response)（応答: 50 ミリ秒未満でイベントを処理、英語版を参照のこと）」のセクションから来ています。
 
-<p>50ミリ秒以上メインスレッドをブロックするタスクは、次のような問題があります。</p>
+50 ミリ秒以上メインスレッドをブロックするタスクは、次のような問題があります。
 
-<ul>
- <li>「{{glossary("Time to interactive","対話までの時間")}}」の遅延</li>
- <li>高/可変入力待ち時間</li>
- <li>高/可変イベント処理待ち時間</li>
- <li>ぎくしゃくしたアニメーションとスクロール</li>
-</ul>
+- 「{{glossary("Time to interactive","対話までの時間")}}」の遅延
+- 高/可変入力待ち時間
+- 高/可変イベント処理待ち時間
+- ぎくしゃくしたアニメーションとスクロール
 
-<h2 id="Concepts" name="Concepts">概念</h2>
+## 概念
 
-<p>Long Tasks API によって使用されるいくつかの重要な用語またはアイデア。</p>
+Long Tasks API によって使用されるいくつかの重要な用語またはアイデア。
 
-<dl>
- <dt>
- <h3 id="Long_task" name="Long_task">長いタスク</h3>
- </dt>
-</dl>
+### 長いタスク
 
-<p>メイン UI スレッドが50ミリ秒以上ビジーである継続期間。 一般的な例は次のとおりです。</p>
+メイン UI スレッドが 50 ミリ秒以上ビジーである継続期間。 一般的な例は次のとおりです。
 
-<ul>
- <li>長期実行イベントハンドラ</li>
- <li>高価なリフローやその他の再レンダリング</li>
- <li>50ミリ秒を超えるイベントループの異なるターンの間にブラウザーが実行する作業</li>
-</ul>
+- 長期実行イベントハンドラ
+- 高価なリフローやその他の再レンダリング
+- 50 ミリ秒を超えるイベントループの異なるターンの間にブラウザーが実行する作業
 
-<h3 id="Culprit_browsing_context_container" name="Culprit_browsing_context_container">犯人の閲覧コンテキストコンテナ</h3>
+### 犯人の閲覧コンテキストコンテナ
 
-<p>「犯人の閲覧コンテキストコンテナ（Culprit browsing context container）」、または略して「コンテナ」は、タスクが発生した最上位ページ、iframe、embed、object です。</p>
+「犯人の閲覧コンテキストコンテナ（Culprit browsing context container）」、または略して「コンテナ」は、タスクが発生した最上位ページ、iframe、embed、object です。
 
-<h3 id="Attributions" name="Attributions">帰属（Attributions）</h3>
+### 帰属（Attributions）
 
-<p>タスクが発生したコンテナのリスト。 トップレベルページ内で発生しないタスクの場合、<code>containerId</code>、<code>containerName</code>、<code>containerSrc</code> の各フィールドは、タスクのソースに関する情報を提供することがあります。</p>
+タスクが発生したコンテナのリスト。 トップレベルページ内で発生しないタスクの場合、`containerId`、`containerName`、`containerSrc` の各フィールドは、タスクのソースに関する情報を提供することがあります。
 
-<h2 id="Usage" name="Usage">使用法</h2>
+## 使用法
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list) {
+```js
+var observer = new PerformanceObserver(function(list) {
     var perfEntries = list.getEntries();
-    for (var i = 0; i &lt; perfEntries.length; i++) {
+    for (var i = 0; i < perfEntries.length; i++) {
         // 長いタスク通知を処理します
         // 分析とモニタリングについて報告する
         // ...
@@ -69,51 +62,32 @@ translation_of: Web/API/Long_Tasks_API
 observer.observe({entryTypes: ["longtask"]});
 // この後スクリプトを長時間実行すると、オブザーバー内で
 // "longtask" エントリがキューに入れられ、受信されます。
-</pre>
+```
 
-<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
+## インターフェイス
 
-<dl>
- <dt>{{domxref('PerformanceLongTaskTiming')}}</dt>
- <dd>長いタスクのインスタンスを報告します。</dd>
- <dt>{{domxref("TaskAttributionTiming")}}</dt>
- <dd> 長いタスクに関連する作業とそれに関連するフレームコンテキストに関する情報を返します。</dd>
-</dl>
+- {{domxref('PerformanceLongTaskTiming')}}
+  - : 長いタスクのインスタンスを報告します。
+- {{domxref("TaskAttributionTiming")}}
+  - : 長いタスクに関連する作業とそれに関連するフレームコンテキストに関する情報を返します。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Long Tasks')}}</td>
-   <td>{{Spec2('Long Tasks')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                 | 状態                             | コメント |
+| ------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('Long Tasks')}} | {{Spec2('Long Tasks')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<h3 id="PerformanceLongTaskTiming" name="PerformanceLongTaskTiming"><code>PerformanceLongTaskTiming</code></h3>
+### `PerformanceLongTaskTiming`
 
-<div>
-<p>{{Compat("api.PerformanceLongTaskTiming")}}</p>
-</div>
+{{Compat("api.PerformanceLongTaskTiming")}}
 
-<h3 id="TaskAttributionTiming" name="TaskAttributionTiming"><code>TaskAttributionTiming</code></h3>
+### `TaskAttributionTiming`
 
-<div>
-<p>{{Compat("api.TaskAttributionTiming")}}</p>
-</div>
+{{Compat("api.TaskAttributionTiming")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="https://github.com/w3c/longtasks">GitHub リポジトリ</a>にはドキュメントといくつかのコードサンプルが含まれています。</li>
- <li>2017年12月20日の Long Tasks API に関する <a href="https://calendar.perfplanet.com/2017/tracking-cpu-with-long-tasks-api/">PerfPlanet の記事</a>。</li>
-</ul>
+- [GitHub リポジトリ](https://github.com/w3c/longtasks)にはドキュメントといくつかのコードサンプルが含まれています。
+- 2017 年 12 月 20 日の Long Tasks API に関する [PerfPlanet の記事](https://calendar.perfplanet.com/2017/tracking-cpu-with-long-tasks-api/)。

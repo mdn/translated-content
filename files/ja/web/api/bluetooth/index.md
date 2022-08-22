@@ -10,50 +10,37 @@ tags:
   - Web Buletooth API
 translation_of: Web/API/Bluetooth
 ---
-<p>{{ apiref("W3C Bluetooth API") }} {{Non-standard_header()}}</p>
+{{ apiref("W3C Bluetooth API") }} {{Non-standard_header()}}
 
-<p><a href="/ja/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> の <strong><code>Bluetooth</code></strong> インターフェースは、オプション指定した {{domxref("BluetoothDevice")}} の {{jsxref("Promise")}} を返します。</p>
+[Web Bluetooth API](/ja/Web/API/Web_Bluetooth_API) の **`Bluetooth`** インターフェースは、オプション指定した {{domxref("BluetoothDevice")}} の {{jsxref("Promise")}} を返します。
 
-<h2 id="インターフェース">インターフェース</h2>
+## インターフェース
 
-<pre class="syntaxbox">interface <dfn>Bluetooth</dfn> {
-  Promise&lt;BluetoothDevice&gt; requestDevice(RequestDeviceOptions <dfn>options</dfn>);
+```
+interface Bluetooth {
+  Promise<BluetoothDevice> requestDevice(RequestDeviceOptions options);
 };
 Bluetooth implements EventTarget;
 Bluetooth implements BluetoothDeviceEventHandlers;
 Bluetooth implements CharacteristicEventHandlers;
-Bluetooth implements ServiceEventHandlers;</pre>
+Bluetooth implements ServiceEventHandlers;
+```
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>なし</dt>
-</dl>
+なし
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("Bluetooth.requestDevice()")}}</dt>
- <dd>オプション指定した {{domxref("BluetoothDevice")}} の {{jsxref("Promise")}} を返す。</dd>
-</dl>
+- {{domxref("Bluetooth.requestDevice()")}}
+  - : オプション指定した {{domxref("BluetoothDevice")}} の {{jsxref("Promise")}} を返す。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Bluetooth', '#bluetooth', 'Bluetooth')}}</td>
-   <td>{{Spec2('Web Bluetooth')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | ステータス                           | コメント   |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('Web Bluetooth', '#bluetooth', 'Bluetooth')}} | {{Spec2('Web Bluetooth')}} | 初期定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.Bluetooth")}}</p>
+{{Compat("api.Bluetooth")}}

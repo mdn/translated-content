@@ -14,44 +14,30 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 ---
-<p>{{APIRef()}}{{SeeCompatTable}}</p>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用 <code><strong>isSecureContext</strong></code> プロパティは、現在のコンテキストが安全（<code>true</code>）かそうではない（<code>false</code>）を示すブール値を返します。</p>
+{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用 **`isSecureContext`** プロパティは、現在のコンテキストが安全（`true`）かそうではない（`false`）を示すブール値を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>isItSecure</em> = self.isSecureContext; // or just isSecureContext
-</pre>
+```
+var isItSecure = self.isSecureContext; // or just isSecureContext
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>{{domxref("Boolean")}}.</p>
+{{domxref("Boolean")}}.
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Secure Contexts', '#dom-windoworworkerglobalscope-issecurecontext', 'WindowOrWorkerGlobalScope.isSecureContext')}}</td>
-   <td>{{Spec2('Secure Contexts')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                                     | ステータス                           | コメント   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
+| {{SpecName('Secure Contexts', '#dom-windoworworkerglobalscope-issecurecontext', 'WindowOrWorkerGlobalScope.isSecureContext')}} | {{Spec2('Secure Contexts')}} | 初期定義。 |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("api.WindowOrWorkerGlobalScope.isSecureContext")}}
 
+## 参照
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.isSecureContext")}}</p>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/Security/Secure_Contexts">Secure contexts</a></li>
-</ul>
+- [Secure contexts](/ja/docs/Web/Security/Secure_Contexts)

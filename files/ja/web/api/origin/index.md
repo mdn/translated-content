@@ -12,48 +12,38 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/origin
 original_slug: Web/API/WindowOrWorkerGlobalScope/origin
 ---
-<p>{{APIRef()}}{{SeeCompatTable}}</p>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティ <code><strong>origin</strong></code> は、グローバルスコープの文字列としてシリアライズされた origin を返します。</p>
+{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティ **`origin`** は、グローバルスコープの文字列としてシリアライズされた origin を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>myOrigin</em> = self.origin; // or just origin
-</pre>
+```
+var myOrigin = self.origin; // or just origin
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>{{domxref("USVString")}}.</p>
+{{domxref("USVString")}}.
 
-<h2 id="例">例</h2>
+## 例
 
-<p>worker script 内から実行される以下のスニペットは、メッセージを受け取る度にワーカーのグローバルスコープの origin をコンソールに記録します。</p>
+worker script 内から実行される以下のスニペットは、メッセージを受け取る度にワーカーのグローバルスコープの origin をコンソールに記録します。
 
-<pre class="brush: js">onmessage = function() {
+```js
+onmessage = function() {
   console.log(self.origin);
-};</pre>
+};
+```
 
-<p>もし origin が scheme/host/port tuple出ない場合 (あなたがローカルで実行しようとしている、言い換えると <code>file://</code> というURLの場合)、 <code>origin</code> は <code>"null"</code> という文字列を返すでしょう。</p>
+もし origin が scheme/host/port tuple 出ない場合 (あなたがローカルで実行しようとしている、言い換えると `file://` という URL の場合)、 `origin` は `"null"` という文字列を返すでしょう。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-origin', 'WindowOrWorkerGlobalScope.origin')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                         | ステータス                       | コメント   |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-origin', 'WindowOrWorkerGlobalScope.origin')}} | {{Spec2('HTML WHATWG')}} | 初期定義。 |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-
-
-<p>{{Compat("api.WindowOrWorkerGlobalScope.origin")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope.origin")}}
