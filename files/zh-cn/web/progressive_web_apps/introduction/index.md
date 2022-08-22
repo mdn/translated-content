@@ -28,20 +28,20 @@ PWA 赋予了我们创建同时拥有以上两种优势的应用的能力。
 
 辨别一个 Web 应用是否是 PWA 有一些关键原则。一个 PWA 应该具有以下特点：
 
-- [可发现（Discoverable）](/en-US/Apps/Progressive/Advantages#Discoverable), 可以通过搜索引擎发现。
-- [可安装（Installable）](/en-US/Apps/Progressive/Advantages#Installable), 可以出现在设备的主屏幕。
-- [可链接（Linkable）](/en-US/Apps/Progressive/Advantages#Linkable), 可以简单地通过 URL 分享。
-- [独立于网络（Network independent）](/en-US/Apps/Progressive/Advantages#Network_independent), 可以在离线状态或者是在网速很差的情况下运行。
-- [渐进式（Progressive）](/en-US/Apps/Progressive/Advantages#Progressive), 在老版本的浏览器仍旧可以使用，在新版本的浏览器上可以使用全部功能。
-- [可重入（Re-engageable）](/en-US/Apps/Progressive/Advantages#Re-engageable), 无论何时有新的内容，都可以发送通知。
-- [响应式（Responsive）](/en-US/Apps/Progressive/Advantages#Responsive), 在任何具有屏幕和浏览器的设备上可以正常使用——包括手机、平板电脑、笔记本、电视、冰箱等。
-- [安全（Safe）](/en-US/Apps/Progressive/Advantages#Safe), 在用户、应用和服务器之间的连接是安全的，第三方无法访问你的敏感数据。
+- [可发现（Discoverable）](/zh-CN/Apps/Progressive/Advantages#Discoverable), 可以通过搜索引擎发现。
+- [可安装（Installable）](/zh-CN/Apps/Progressive/Advantages#Installable), 可以出现在设备的主屏幕。
+- [可链接（Linkable）](/zh-CN/Apps/Progressive/Advantages#Linkable), 可以简单地通过 URL 分享。
+- [独立于网络（Network independent）](/zh-CN/Apps/Progressive/Advantages#Network_independent), 可以在离线状态或者是在网速很差的情况下运行。
+- [渐进式（Progressive）](/zh-CN/Apps/Progressive/Advantages#Progressive), 在老版本的浏览器仍旧可以使用，在新版本的浏览器上可以使用全部功能。
+- [可重入（Re-engageable）](/zh-CN/Apps/Progressive/Advantages#Re-engageable), 无论何时有新的内容，都可以发送通知。
+- [响应式（Responsive）](/zh-CN/Apps/Progressive/Advantages#Responsive), 在任何具有屏幕和浏览器的设备上可以正常使用——包括手机、平板电脑、笔记本、电视、冰箱等。
+- [安全（Safe）](/zh-CN/Apps/Progressive/Advantages#Safe), 在用户、应用和服务器之间的连接是安全的，第三方无法访问你的敏感数据。
 
 ### 这么做值得吗？
 
 当然值得！只需要相对较小的代价就可以实现 PWA 的核心特性，而优势却是巨大的。例如：
 
-- 减少应用安装后的加载时间，通过 [Service Workers](/en-US/docs/Web/API/Service_Worker_API) 来进行缓存，以此来节省带宽和时间。
+- 减少应用安装后的加载时间，通过 [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 来进行缓存，以此来节省带宽和时间。
 - 当应用有可用的更新时，可以只更新发生改变的那部分内容。相比之下，对于一个原生应用而言，即便是最微小的改动也需要强制用户去再次下载整个应用。
 - 外观和使用感受与原生平台更加融为一体——应用图标被放置在主屏幕上，应用可以全屏运行等。
 - 凭借系统通知和推送消息与用户保持连接，对用户产生更多的吸引力，并且提高转换效率。
@@ -64,7 +64,7 @@ PWA 非常值得一试，您可以自己查看它是否适用于您的应用程�
 
 如前所述，PWA 不依赖于单个 API，而是使用多种技术来实现提供最佳 Web 体验的目标。
 
-PWA 所需的关键要素是 [Service Worker](/en-US/docs/Web/API/Service_Worker_API) 支持。 值得庆幸的是，桌面和移动设备上的[所有主流浏览器都支持](https://jakearchibald.github.io/isserviceworkerready/) Service Worker。
+PWA 所需的关键要素是 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 支持。 值得庆幸的是，桌面和移动设备上的[所有主流浏览器都支持](https://jakearchibald.github.io/isserviceworkerready/) Service Worker。
 
 至于其他功能，像是[推送通知](/zh-CN/docs/Web/API/Push_API)、[通知功能](/zh-CN/docs/Web/API/Notifications_API)和[添加至主屏](/zh-CN/docs/Web/AppsProgressive_web_apps/Progressive/Add_to_home_screen)功能也得到了广泛的支持。 目前，Safari 对 [Web App Manifest](/zh-CN/docs/Web/Manifest) 和添加至主屏的支持有限，并且不支持 Web 推送通知。 但是，其他主流浏览器都支持这里的所有功能。
 
@@ -82,4 +82,4 @@ PWA 所需的关键要素是 [Service Worker](/en-US/docs/Web/API/Service_Worker
 
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Progressive/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Apps/Progressive/")}}

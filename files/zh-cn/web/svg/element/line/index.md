@@ -26,10 +26,10 @@ slug: Web/SVG/Element/line
 
 ### 全局属性
 
-- [条件处理属性](/en-US/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en-US/docs/Web/SVG/Attribute#Core) »
-- [图形事件属性](/en-US/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en-US/docs/Web/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

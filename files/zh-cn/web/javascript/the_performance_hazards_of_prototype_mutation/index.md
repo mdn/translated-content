@@ -5,7 +5,7 @@ original_slug: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation
 ---
 {{jsSidebar("Advanced")}}
 
-每个 JavaScript 对象都拥有一个`[[Prototype]]`对象。 获取一个对象的属性时首先会搜索其自身，然后就是它的 `[[Prototype]]`对象，之后再搜索此`[[Prototype]]`对象的 `[[Prototype]]`对象，直到找到这个属性或者搜索链条达到终点。这个类似链条的查找过程被称为原型链。 原型链在[对象继承](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中非常重要。
+每个 JavaScript 对象都拥有一个`[[Prototype]]`对象。 获取一个对象的属性时首先会搜索其自身，然后就是它的 `[[Prototype]]`对象，之后再搜索此`[[Prototype]]`对象的 `[[Prototype]]`对象，直到找到这个属性或者搜索链条达到终点。这个类似链条的查找过程被称为原型链。 原型链在[对象继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中非常重要。
 
 ECMAScript 6 引入了一种方式来修改 `[[Prototype]]`对象。 提升了灵活性的代价是降低了性能。 **修改`[[Prototype]]` 对象会损害降低所有现代 JavaScrip 引擎的性能**。这篇文章解释了修改 `[[Prototype]]` 对象在*所有*浏览器中都很慢的原因并给出了替代方案。
 
@@ -71,7 +71,7 @@ Engines take this quick-and-dirty approach in many cases. But in especially perf
 
 ## Intelligently optimizing inherited properties
 
-Predictable property accesses _usually_ find the property a constant number of hops along the `[[Prototype]]` chain; intervening objects _usually_ don't acquire new properties; the ultimate object _usually_ won't have any properties [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete). Finally: **`[[Prototype]]` mutation is rare**. All these common assumptions are necessary to avoid slow prototype-hopping. Different engines choose different approaches to intelligently optimize inherited properties.
+Predictable property accesses _usually_ find the property a constant number of hops along the `[[Prototype]]` chain; intervening objects _usually_ don't acquire new properties; the ultimate object _usually_ won't have any properties [deleted](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete). Finally: **`[[Prototype]]` mutation is rare**. All these common assumptions are necessary to avoid slow prototype-hopping. Different engines choose different approaches to intelligently optimize inherited properties.
 
 - The shape of the _ultimate_ object containing the inherited can be checked.
 

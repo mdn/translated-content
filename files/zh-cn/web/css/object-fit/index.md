@@ -38,20 +38,20 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="fill narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill narrow" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: contain</h2>
-  <img class="contain" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="contain narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain narrow" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: cover</h2>
-  <img class="cover" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="cover narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover narrow" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: none</h2>
-  <img class="none" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="none narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none narrow" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="scale-down narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down narrow" src="/zh-CN/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
 </section>
 ```
 

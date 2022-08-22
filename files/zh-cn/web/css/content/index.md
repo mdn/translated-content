@@ -68,7 +68,7 @@ content: inherit
 
 <h1>6</h1>
 <p> Here we shall quote the Mozilla Manifesto,
-    <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    <q cite="http://www.mozilla.org/zh-CN/about/manifesto/">
         Individuals must have the ability to shape the Internet and their own experiences on the Internet.</q> And so, we can infer that contributing to the open web, can protect our own individual experiences on it.
 </p>
 ```
@@ -96,7 +96,7 @@ h1::before  { content: "Chapter "; }
 #### HTML
 
 ```html
-<a href="http://www.mozilla.org/en-US/">Home Page</a>
+<a href="http://www.mozilla.org/zh-CN/">Home Page</a>
 ```
 
 #### CSS

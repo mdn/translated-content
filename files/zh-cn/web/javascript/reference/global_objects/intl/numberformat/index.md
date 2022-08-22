@@ -91,13 +91,13 @@ Intl.NumberFormat.call(this[, locales[, options]])
 
 `NumberFormat` 实例继承一下原型的属性：
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Properties')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Properties')}}
 
 ### 方法
 
 `NumberFormat` 实例继承一下原型的方法：
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Methods')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Methods')}}
 
 ## 例子
 
@@ -195,4 +195,4 @@ console.log(new Intl.NumberFormat('en-GB', { notation: "compact" , compactDispla
 
 ## 参见
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}

@@ -31,13 +31,13 @@ slug: Web/CSS/display
     {{page("/zh-CN/docs/Web/CSS/display-listitem", "Syntax")}}
 - {{CSSxRef("&lt;display-internal&gt;")}}
   - : 有些布局模型（如 `table` 和 `ruby`）有着复杂的内部结构，因此它们的子元素可能扮演着不同的角色。这一类关键字就是用来定义这些“内部”显示类型，并且只有在这些特定的布局模型中才有意义。
-    {{page("/en-US/docs/Web/CSS/display-internal", "Syntax")}}
+    {{page("/zh-CN/docs/Web/CSS/display-internal", "Syntax")}}
 - {{CSSxRef("&lt;display-box&gt;")}}
   - : 这些值决定元素是否使用盒模型。
-    {{page("/en-US/docs/Web/CSS/display-box", "Syntax")}}
+    {{page("/zh-CN/docs/Web/CSS/display-box", "Syntax")}}
 - {{CSSxRef("&lt;display-legacy&gt;")}}
   - : CSS 2 对于 **`display`** 属性使用单关键字语法，对于相同布局模式的 block 级和 inline 级变体需要使用单独的关键字。
-    {{page("/en-US /docs/Web/CSS/display-legacy", "Syntax")}}
+    {{page("/zh-CN /docs/Web/CSS/display-legacy", "Syntax")}}
 
 ### 是否该继续使用 Legacy 取值？
 

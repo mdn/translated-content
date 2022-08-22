@@ -12,10 +12,10 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
     <tr>
       <th scope="row">准备：</th>
       <td>
-        熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练掌握 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的核心概念</a
         >。
       </td>
@@ -189,7 +189,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。
 
-仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。 Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
+仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。 Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
 
 不过，您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：
 
@@ -272,8 +272,8 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 运行测试时，最好还是：
 
-- 尽可能设置单独的浏览器配置文件，禁用浏览器扩展和其他此类操作，并在该配置文件中运行测试（例如，请参阅[Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles)和[Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824)）
-- 在可用的情况下运行测试时使用浏览器的私有模式功能（例如，Firefox 中的[Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history)，Chrome 中的[Incognito Mode](https://support.google.com/chrome/answer/95464)），因此不会保存 cookie 和临时文件等内容。
+- 尽可能设置单独的浏览器配置文件，禁用浏览器扩展和其他此类操作，并在该配置文件中运行测试（例如，请参阅[Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/zh-CN/kb/profile-manager-create-and-remove-firefox-profiles)和[Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824)）
+- 在可用的情况下运行测试时使用浏览器的私有模式功能（例如，Firefox 中的[Private Browsing](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，Chrome 中的[Incognito Mode](https://support.google.com/chrome/answer/95464)），因此不会保存 cookie 和临时文件等内容。
 
 这些步骤旨在确保您正在测试的浏览器尽可能“纯粹（pure）”，即没有安装任何可能影响测试结果的内容。
 

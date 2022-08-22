@@ -26,7 +26,7 @@ slug: learn/Server-side/First_steps/Client-Server_overview
 
 ## 网络服务器和 HTTP（入门）
 
-网络浏览器通过超文本标记语言传输协议（[HTTP](/en-US/docs/Web/HTTP)）与网络服务器（[web servers](/en-US/docs/Learn/Common_questions/What_is_a_web_server)）。 当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
+网络浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与网络服务器（[web servers](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)）。 当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
 
 这个请求包含：
 
@@ -46,7 +46,7 @@ slug: learn/Server-side/First_steps/Client-Server_overview
   - POST 数据：POST 请求会增加新的资源，这些数据将会在请求体中编码。
   - 客户端 cookie：cookies 包含与客户相关的会话数据，服务器可以用这些数据来判断用户的登录状态以及用户是否有访问资源的权限。
 
-网络服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 HTTP 响应状态码（[HTTP Response status code](/en-US/docs/Web/HTTP/Status)）来暗示请求是否成功 (比如 "`200 OK`" 连接成功， "`404 Not Found`" 资源没有找到，"`403 Forbidden`" 用户没有被授权查看资源，等等). 一个成功的响应主体，会包含 GET 请求所请求的资源。
+网络服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 HTTP 响应状态码（[HTTP Response status code](/zh-CN/docs/Web/HTTP/Status)）来暗示请求是否成功 (比如 "`200 OK`" 连接成功， "`404 Not Found`" 资源没有找到，"`403 Forbidden`" 用户没有被授权查看资源，等等). 一个成功的响应主体，会包含 GET 请求所请求的资源。
 
 当一个 HTML 页面被返时，页面会被网络浏览器呈现出来。作为处理工作的一部分，浏览器会发现指向其他资源的链接（比如，一个 HTML 页面通常会参考 Javascript 和 CSS 页面），并且会发送独立的 HTTP 请求来下载这些文件。
 
@@ -60,7 +60,7 @@ slug: learn/Server-side/First_steps/Client-Server_overview
 
 #### 请求
 
-每一行请求都包含着相关信息。第一部分被称为**header**，并且包含着关于这个请求的有用信息，同样地一个[HTML head](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
+每一行请求都包含着相关信息。第一部分被称为**header**，并且包含着关于这个请求的有用信息，同样地一个[HTML head](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
 
 ```plain
 GET https://developer.mozilla.org/en-
@@ -72,7 +72,7 @@ Cache-Control: no-cache
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Referer: https://developer.mozilla.org/en-US/
+Referer: https://developer.mozilla.org/zh-CN/
 Accept-Encoding: gzip, deflate, sdch, br
 Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
 Accept-Language: en-US,en;q=0.8,es;q=0.6
@@ -82,7 +82,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 第一行和第二行包含了我们在上面讨论过的大部分信息
 
 - 请求类型（GET）。
-- 目标资源的 URL（`/en-US/search`）。
+- 目标资源的 URL（`/zh-CN/search`）。
 - URL 参数（`q=client%2Bserver%2Boverview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev）。`
 - 目标网站（developer.mozilla.org）。
 - 第一行的末尾也包含了一个简短的包含了标识协议版本的字符串（`HTTP/1.1`）。
@@ -94,7 +94,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 - 我的浏览器上 (`User-Agent`) 是火狐 (`Mozilla/5.0`).
 - 它可以接收 gzip 压缩信息 (`Accept-Encoding: gzip`).
 - 它可以接收的具体编码类型 (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) 和语言 (`Accept-Language: de,en;q=0.7,en-us;q=0.3`).
-- The `Referer` line 提示包含资源链接的网络地址 (或者说请求的来源是 `https://developer.mozilla.org/en-US/`).
+- The `Referer` line 提示包含资源链接的网络地址 (或者说请求的来源是 `https://developer.mozilla.org/zh-CN/`).
 
 请求也可以有一个请求体，不过在这个例子中请求的请求体是空的。
 
@@ -145,7 +145,7 @@ header 的剩余部分还包括一些回应的其他信息（比如回应在什�
 下面的文本展示了当用户在网站上提交新的文件的时候，生成的一个 HTTP 请求的格式和之前展示的 GET 请求是非常相似的，只是第一行标识这个请求为 POST。
 
 ```html
-POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
+POST https://developer.mozilla.org/zh-CN/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Content-Length: 432
@@ -156,7 +156,7 @@ Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Referer: https://developer.mozilla.org/en-US/profiles/hamishwillee/edit
+Referer: https://developer.mozilla.org/zh-CN/profiles/hamishwillee/edit
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.8,es;q=0.6
 Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; _gat=1; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _ga=GA1.2.1688886003.1471911953; ffo=true
@@ -178,7 +178,7 @@ Vary: Cookie
 Vary: Accept-Encoding
 Content-Type: text/html; charset=utf-8
 Date: Wed, 07 Sep 2016 00:38:13 GMT
-Location: https://developer.mozilla.org/en-US/profiles/hamishwillee
+Location: https://developer.mozilla.org/zh-CN/profiles/hamishwillee
 Keep-Alive: timeout=5, max=1000
 Connection: Keep-Alive
 X-Frame-Options: DENY
@@ -186,7 +186,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **备注：** 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](/en-US/docs/Tools/Network_Monitor) 工具)。
+> **备注：** 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/zh-CN/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](/zh-CN/docs/Tools/Network_Monitor) 工具)。
 
 ## 静态网站
 

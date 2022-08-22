@@ -25,7 +25,7 @@ anchorElt.referrer = refStr;
 var elt = document.createElement("a");
 var linkText = document.createTextNode("My link");
 elt.appendChild(linkText);
-elt.href = "https://developer.mozilla.org/en-US/";
+elt.href = "https://developer.mozilla.org/zh-CN/";
 elt.referrer = "no-referrer";
 
 var div = document.getElementById("divAround");

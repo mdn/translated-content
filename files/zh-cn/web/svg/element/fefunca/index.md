@@ -14,8 +14,8 @@ slug: Web/SVG/Element/feFuncA
 
 ### 全局属性
 
-- [核心属性](/en-US/docs/Web/SVG/Attribute#Core_attributes)
-- [Transfer function attributes](/en-US/docs/Web/SVG/Attribute#Transfer_function_attributes)
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core_attributes)
+- [Transfer function attributes](/zh-CN/docs/Web/SVG/Attribute#Transfer_function_attributes)
 
 ### 专有属性
 

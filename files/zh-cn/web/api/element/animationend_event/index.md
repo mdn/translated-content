@@ -20,7 +20,7 @@ target.onanimationend = 事件处理函数
 
 ## 例子
 
-{{Page("/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}
+{{Page("/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}
 
 ## 规范
 

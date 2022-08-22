@@ -16,7 +16,7 @@ slug: Web/SVG/Attribute/accent-height
 | Animatable         | No                                                                                                |
 | Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/fonts.html#FontFaceElementAccentHeightAttribute) |
 
-{{ page("/en-US/docs/SVG/Content_type","Number") }}
+{{ page("/zh-CN/docs/SVG/Content_type","Number") }}
 
 ## Elements
 

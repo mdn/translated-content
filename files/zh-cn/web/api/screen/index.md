@@ -51,7 +51,7 @@ slug: Web/API/Screen
 
 方法继承于 {{domxref("EventTarget")}}
 
-{{page("/en-US/docs/Web/API/EventTarget","Methods")}}
+{{page("/zh-CN/docs/Web/API/EventTarget","Methods")}}
 
 ## 示例
 

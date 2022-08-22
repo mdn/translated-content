@@ -16,7 +16,7 @@ var direction = RTCRtpTransceiver.direction
 
 ### Value
 
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the `RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's preferred direction. {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection", "Values")}}
+A {{domxref("DOMString")}} whose value is one of the strings which are a member of the `RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's preferred direction. {{page("/zh-CN/docs/Web/API/RTCRtpTransceiverDirection", "Values")}}
 
 ### Exceptions
 

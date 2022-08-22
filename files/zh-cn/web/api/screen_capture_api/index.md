@@ -79,7 +79,7 @@ The following dictionaries are defined by the Screen Capture API.
 
 The default allow list is `self`, which lets the any content within the document use Screen Capture.
 
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for a more in-depth explanation of how Feature Policy is used.
+See [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for a more in-depth explanation of how Feature Policy is used.
 
 ## 规范
 
@@ -91,5 +91,5 @@ See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Pol
 
 ## 参见
 
-- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaDevices.getDisplayMedia()")}}

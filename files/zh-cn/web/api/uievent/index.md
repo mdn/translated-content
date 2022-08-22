@@ -57,5 +57,5 @@ _也继承了父代 {{domxref("Event")}} 的一些方法。_
 
 ## 相关链接
 
-- [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
 - {{domxref("Event")}}

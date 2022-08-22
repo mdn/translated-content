@@ -3,7 +3,7 @@ title: 网络视频编解码器指南
 slug: Web/Media/Formats/Video_codecs
 original_slug: Web/Media/Formats/视频编解码器
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 未经压缩的视频的数据量太大了，我们有必要进行很多压缩处理来存储视频，就更不用说通过网络传输视频的时候了。想象一下我们需要多少数据来存储未经压缩的视频：
 
@@ -395,14 +395,14 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
       <td>
         ISOBMFF<sup><a href="#av1-foot-1">[1]</a></sup
         >, MPEG-TS,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>Yes</td>
     </tr>
@@ -572,15 +572,15 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>Yes</td>
     </tr>
@@ -701,9 +701,9 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime"
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#QuickTime"
           >QuickTime</a
         >
       </td>
@@ -711,7 +711,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>No</td>
     </tr>
@@ -882,12 +882,12 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
     </tr>
     <tr>
       <th scope="row">Container support</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a></td>
+      <td><a href="/zh-CN/docs/Web/Media/Formats/Containers#MP4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>No</td>
     </tr>
@@ -1004,14 +1004,14 @@ You almost certainly don't want to use this format, since it isn't supported in 
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#MP4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>No</td>
     </tr>
@@ -1124,7 +1124,7 @@ Because any MPEG-2 decoder can also play MPEG-1 video, it's compatible with a wi
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>No</td>
     </tr>
@@ -1290,10 +1290,10 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MPEGMPEG-2">MPEG</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#MPEGMPEG-2">MPEG</a>,
         MPEG-TS (MPEG Transport Stream),
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime"
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#QuickTime"
           >QuickTime</a
         >
       </td>
@@ -1301,7 +1301,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>No</td>
     </tr>
@@ -1421,12 +1421,12 @@ The [Theora Cookbook](http://en.flossmanuals.net/ogg-theora/) offers additional 
     </tr>
     <tr>
       <th scope="row">Container support</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a></td>
+      <td><a href="/zh-CN/docs/Web/Media/Formats/Containers#Ogg">Ogg</a></td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>No</td>
     </tr>
@@ -1539,15 +1539,15 @@ There is good browser support for VP8 in HTML content, especially within [WebM](
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>Yes; VP8 is one of the spec-required codecs for WebRTC</td>
     </tr>
@@ -1703,15 +1703,15 @@ Aside from the lack of Safari support, VP9 is a good choice if you are able to u
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>Yes</td>
     </tr>

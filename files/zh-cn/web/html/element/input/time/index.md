@@ -81,7 +81,7 @@ timeControl.value = '15:30';
 
 ### Time value format
 
-The `value` of the `time` input is always in 24-hour format: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Time strings")}}.
+The `value` of the `time` input is always in 24-hour format: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in {{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "Time strings")}}.
 
 在此示例中，您可以通过输入时间并查看之后如何更改来查看时间输入的值。
 
@@ -134,11 +134,11 @@ A string indicating the latest time to accept, specified in the same [time value
 
 A string specifying the earliest time to accept, given in the [time value format](#time_value_format) described previously. If the value specified isn't a valid time string, no minimum value is set.
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
 ### step
 
-{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/number", "step-include")}}
 
 For `time` inputs, the value of `step` is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of `step` is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).
 
@@ -479,4 +479,4 @@ function populateMinutes() {
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/zh-CN/docs/Web/HTML/Date_and_time_formats)
 - [Date and Time picker tutorial](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
-- [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date), [`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)

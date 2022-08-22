@@ -33,7 +33,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
             <strong>备注：</strong
             ><code>^</code> 出现在集合或范围开头时的含义与此不同（参见
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
+              href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
               >group</a
             >）。
           </p>

@@ -126,7 +126,7 @@ While somewhat awkward compared to using an actual headset, this makes it possib
 Download the WebXR API Emulator for your supported browser below:
 
 - [Google Chrome](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje)
-- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/)
+- [Mozilla Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/webxr-api-emulator/)
 
 The [source code for the extension](https://github.com/MozillaReality/WebXR-emulator-extension) is also available on GitHub.
 

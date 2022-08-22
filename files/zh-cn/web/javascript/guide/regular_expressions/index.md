@@ -238,7 +238,7 @@ var re = new RegExp("ab+c");
           的最后一个字符 'o'。如果使用非捕获括号，则
           <code>{1,2}</code> 会应用于整个 'foo' 单词。更多信息，可以参阅下文的
           <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses"
+            href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses"
             >Using parentheses</a
           >
           条目。

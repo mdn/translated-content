@@ -16,7 +16,7 @@ MDN 的内容是免费的，并在开源协议下提供。
 
 你复用的内容是在与内容相同的许可协议（CC-BY-SA v2.5 及以上的版本）下发布的。在复用 MDN Web 文档的内容时，你需要确保对属于“Mozilla 贡献者”的内容进行署名。包括源文档的超链接（在线内容）或 URL（印刷内容）。以*本*文为例，你可以这样署名：
 
-> 归属于 [Mozilla 贡献者](/en-US/docs/MDN/About/contributors.txt)的[署名和版权许可协议](MDN/Writing_guidelines/Attrib_copyright_license)在[知识共享 署名-相同方式共享许可 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 下提供。
+> 归属于 [Mozilla 贡献者](/zh-CN/docs/MDN/About/contributors.txt)的[署名和版权许可协议](MDN/Writing_guidelines/Attrib_copyright_license)在[知识共享 署名-相同方式共享许可 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 下提供。
 
 注意在示例当中，“Mozilla 贡献者”链接了被引用页面的历史记录。参见[署名的最佳实践](https://wiki.creativecommons.org/wiki/Marking/Users)以获取更为详细的信息。
 

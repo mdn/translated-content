@@ -32,10 +32,10 @@ slug: Web/MathML
 
 - [W3C Validator](http://validator.w3.org)
 - [Mathzilla Firefox 拓展收藏集](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) - 基于 Javascript 的 LaTeX to MathML 转换器（[在线 demo](https://fred-wang.github.io/TeXZilla/)，[Firefox OS webapp](http://r-gaia-cs.github.io/TeXZilla-webapp/)，[Firefox 拓展](https://addons.mozilla.org/en-US/firefox/addon/texzilla/)，[在网页、JS 程序中使用，等等](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla)）
+- [TeXZilla](https://github.com/fred-wang/TeXZilla) - 基于 Javascript 的 LaTeX to MathML 转换器（[在线 demo](https://fred-wang.github.io/TeXZilla/)，[Firefox OS webapp](http://r-gaia-cs.github.io/TeXZilla-webapp/)，[Firefox 拓展](https://addons.mozilla.org/zh-CN/firefox/addon/texzilla/)，[在网页、JS 程序中使用，等等](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla)）
 - [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - 将 LaTeX 文档转换为 HTML+MathML 网页
 - [Web Equation](http://webdemo.visionobjects.com/home.html#equation) - 将手写的公式转换为 MathML 或 LaTeX
-- [MathJax](https://www.mathjax.org/) - 跨浏览器的 JavaScript 数学渲染引擎。若要强制 MathJax 使用原生 MathML，可以试试[这个 Mozilla 拓展](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/)、这个 [Safari 拓展](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz)，或是这个 [UserScript 脚本](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/)。
+- [MathJax](https://www.mathjax.org/) - 跨浏览器的 JavaScript 数学渲染引擎。若要强制 MathJax 使用原生 MathML，可以试试[这个 Mozilla 拓展](https://addons.mozilla.org/zh-CN/firefox/addon/mathjax-native-mathml/)、这个 [Safari 拓展](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz)，或是这个 [UserScript 脚本](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/)。
 
 ## 相关主题
 

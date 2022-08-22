@@ -45,7 +45,7 @@ Edge 的`week`控制更加精细，使用滚动的滚轮打开周和年的选择
 
 ## 值
 
-一个 {{domxref("DOMString")}} 代表输入到输入中的星期/年的值。{{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}} 中描述了此输入类型使用的日期和时间值的格式。
+一个 {{domxref("DOMString")}} 代表输入到输入中的星期/年的值。{{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}} 中描述了此输入类型使用的日期和时间值的格式。
 
 您可以通过在 {{htmlattrxref("value", "input")}} 属性中包含一个值来为输入设置默认值，如下所示：
 
@@ -88,11 +88,11 @@ weekControl.value = '2017-W45';
 
 该值必须小于或等于 `max` 属性的值。
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
 ### step
 
-{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/number", "step-include")}}
 
 对于`week` 输入， `step` 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。 `step`的默认值为 1，表示 1 周。 默认的步进基数是-259,200,000，这是 1970 年第一周的开始 (`"1970-W01"`).
 
@@ -346,4 +346,4 @@ function populateWeeks() {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), 和 [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date), [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time), 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)

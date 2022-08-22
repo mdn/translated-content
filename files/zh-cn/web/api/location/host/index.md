@@ -18,14 +18,14 @@ object.host = string;
 ```js
 var anchor = document.createElement("a");
 
-anchor.href = "https://developer.mozilla.org/en-US/Location.host"
+anchor.href = "https://developer.mozilla.org/zh-CN/Location.host"
 anchor.host == "developer.mozilla.org"
 
-anchor.href = "https://developer.mozilla.org:443/en-US/Location.host"
+anchor.href = "https://developer.mozilla.org:443/zh-CN/Location.host"
 anchor.host == "developer.mozilla.org"
 // 这里 host 中没有包含端口号，因为 443 是 https 协议的默认端口号
 
-anchor.href = "https://developer.mozilla.org:4097/en-US/Location.host"
+anchor.href = "https://developer.mozilla.org:4097/zh-CN/Location.host"
 anchor.host == "developer.mozilla.org:4097"
 ```
 

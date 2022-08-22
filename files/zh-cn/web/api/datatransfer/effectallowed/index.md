@@ -110,4 +110,4 @@ function dragover_handler(ev) {
 
 ## 参考链接
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+{{page("/zh-CN/docs/Web/API/DataTransfer", "See also")}}

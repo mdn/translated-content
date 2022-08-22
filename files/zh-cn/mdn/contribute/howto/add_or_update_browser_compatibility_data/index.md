@@ -19,4 +19,4 @@ original_slug: MDN/Contribute/Howto/如何添加或更新浏览器兼容性数�
     - 提交 pull requests 到 [BCD issues filed on Github](https://github.com/mdn/browser-compat-data/issues).
 
 - 做这个任务需要哪些步骤？
-  - : 欲了解如何更新在 GitHub 上的组成 BCD 仓库的 [JSON](/en-US/docs/Glossary/JSON) 文件的详细信息，请参见[兼容性表格](/en-US/docs/MDN/Contribute/Structures/Compatibility_tables)页面。如要了解我们特别寻求帮助的问题列表，请到 [Github issues with the "Help Wanted" tag](https://github.com/mdn/browser-compat-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).
+  - : 欲了解如何更新在 GitHub 上的组成 BCD 仓库的 [JSON](/zh-CN/docs/Glossary/JSON) 文件的详细信息，请参见[兼容性表格](/zh-CN/docs/MDN/Contribute/Structures/Compatibility_tables)页面。如要了解我们特别寻求帮助的问题列表，请到 [Github issues with the "Help Wanted" tag](https://github.com/mdn/browser-compat-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).

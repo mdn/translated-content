@@ -88,11 +88,11 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 参阅
 
-- [MDN canvas portal](/en-US/docs/Web/API/Canvas_API)
-- [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
+- [MDN canvas portal](/zh-CN/docs/Web/API/Canvas_API)
+- [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas-related demos](/zh-CN/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVi
 
 deo/Conceptual/HTML-canvas-

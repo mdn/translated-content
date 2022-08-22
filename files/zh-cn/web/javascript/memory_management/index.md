@@ -175,4 +175,4 @@ window.onload = function(){
 
 - [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
 - [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
-- [Performance](https://developer.mozilla.org/en-US/docs/Mozilla/Performance)
+- [Performance](https://developer.mozilla.org/zh-CN/docs/Mozilla/Performance)

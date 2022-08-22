@@ -231,7 +231,7 @@ prompt(window,
 ## 另请参阅
 
 - {{domxref("NavigatorGeolocation.geolocation","navigator.geolocation")}}
-- [在地图上标记自己](/en-US/Apps/Build/gather_and_modify_data/Plotting_yourself_on_the_map)
+- [在地图上标记自己](/zh-CN/Apps/Build/gather_and_modify_data/Plotting_yourself_on_the_map)
 - [w3.org 上的地理位置 API](http://www.w3.org/TR/geolocation-API/)
-- [地理位置 API 的示例](/en-US/demos/tag/tech:geolocation)
+- [地理位置 API 的示例](/zh-CN/demos/tag/tech:geolocation)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

@@ -19,7 +19,7 @@ _No change._
 
 ### JavaScript
 
-- 实现了 ES6 中的 [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.fround()` 方法 ({{bug("900125")}}).
+- 实现了 ES6 中的 [`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.fround()` 方法 ({{bug("900125")}}).
 
 ### Interfaces/APIs/DOM
 
@@ -41,7 +41,7 @@ _No change._
 
 ## 相关链接
 
-- [Firefox 26 网站兼容性](/en-US/docs/Mozilla/Firefox/Releases/26/Site_Compatibility)
+- [Firefox 26 网站兼容性](/zh-CN/docs/Mozilla/Firefox/Releases/26/Site_Compatibility)
 
 ### 更早版本
 

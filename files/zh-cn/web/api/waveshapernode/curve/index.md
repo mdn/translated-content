@@ -26,7 +26,7 @@ distortion.curve = myCurveDataArray; // myCurveDataArray is a Float32Array
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}
+{{page("/zh-CN/docs/Web/API/AudioContext.createWaveShaper","Example")}}
 
 ## 规范
 

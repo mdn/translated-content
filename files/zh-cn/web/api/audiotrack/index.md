@@ -54,7 +54,7 @@ tracks.forEach(function(track){
 
 ## 例
 
-{{page("/en-US/docs/Web/API/AudioTrack/label", "Example")}}
+{{page("/zh-CN/docs/Web/API/AudioTrack/label", "Example")}}
 
 ## 产品规格
 

@@ -149,4 +149,4 @@ slug: Web/HTML/Microdata
 
 - [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/HTML")}}

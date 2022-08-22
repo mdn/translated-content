@@ -53,7 +53,7 @@ _没有特有的方法; 从父类_ _{{domxref("AudioNode")}}继承了方法_。
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}
+{{page("/zh-CN/docs/Web/API/AudioContext.createWaveShaper","Example")}}
 
 ## 规范
 

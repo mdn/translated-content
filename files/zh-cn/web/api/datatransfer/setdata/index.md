@@ -110,4 +110,4 @@ void dataTransfer.setData(format, data);
 
 ## 也可以看看
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+{{page("/zh-CN/docs/Web/API/DataTransfer", "See also")}}

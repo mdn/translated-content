@@ -16,9 +16,9 @@ object.href = string;
 ## Examples
 
 ```js
-// Lets imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href"> element is in the document
+// Lets imagine an <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLHyperlinkElementUtils/href"> element is in the document
 var anchor = document.getElementById("myAnchor");
-var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href'
+var result = anchor.href; // Returns: 'https://developer.mozilla.org/zh-CN/HTMLHyperlinkElementUtils/href'
 ```
 
 ## Specifications

@@ -22,7 +22,7 @@ function setBusyCursor(enable) {
 
 鼠标样式不会自动重置，需要主动设置回 `auto` 属性。
 
-这个函数方法是 [ChromeWindow interface](/en-US/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow) 的一部分。这个方法在某些网页上不能用，可以使用 CSS {{cssxref("cursor")}} 代替。
+这个函数方法是 [ChromeWindow interface](/zh-CN/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow) 的一部分。这个方法在某些网页上不能用，可以使用 CSS {{cssxref("cursor")}} 代替。
 
 ## 规范
 

@@ -30,5 +30,5 @@ Feature-Policy: camera <allowlist>;
 ## See also
 
 - {{HTTPHeader("Feature-Policy")}} header
-- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

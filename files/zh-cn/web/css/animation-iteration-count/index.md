@@ -43,7 +43,7 @@ animation-iteration-count: 2, 0, infinite;
 
 ## 示例
 
-去看 [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples. 点击链接去看栗（例）子
+去看 [CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples. 点击链接去看栗（例）子
 
 ## 规范
 
@@ -55,5 +55,5 @@ animation-iteration-count: 2, 0, infinite;
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

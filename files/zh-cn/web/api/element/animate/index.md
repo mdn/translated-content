@@ -25,7 +25,7 @@ var animation = element.animate(keyframes, options);
     - `id {{optional_inline}}`
       - : 在 `animate()` 里可作为唯一标识的属性：一个用来引用动画的字符串（ [`DOMString`](/zh-CN/docs/Web/API/DOMString) ）
 
-    {{Page("/en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
+    {{Page("/zh-CN/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
 
 #### 未来的可选项
 

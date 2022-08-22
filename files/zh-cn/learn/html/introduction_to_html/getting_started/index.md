@@ -192,15 +192,15 @@ My cat is very grumpy
 <p>第四</p><p>第五</p><p>第六</p>
 ```
 
-{{htmlelement("em")}} 是一个内联元素，所以就像你在下方可以看到的，第一行代码中的三个元素都没有间隙的展示在了同一行。而{{htmlelement("p")}}是一个块级元素，所以第二行代码中的每个元素分别都另起了新的一行展现，并且每个段落间都有一些间隔（这是因为默认的浏览器有着默认的展示{{htmlelement("p")}}元素的[CSS styling](/en-US/docs/Learn/CSS/Introduction_to_CSS)）。
+{{htmlelement("em")}} 是一个内联元素，所以就像你在下方可以看到的，第一行代码中的三个元素都没有间隙的展示在了同一行。而{{htmlelement("p")}}是一个块级元素，所以第二行代码中的每个元素分别都另起了新的一行展现，并且每个段落间都有一些间隔（这是因为默认的浏览器有着默认的展示{{htmlelement("p")}}元素的[CSS styling](/zh-CN/docs/Learn/CSS/Introduction_to_CSS)）。
 
 {{ EmbedLiveSample('块级元素和内联元素', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
 > **备注：** HTML5 重新定义了元素的类别：见 [元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)([译文](/zh-CN/docs/Web/Guide/HTML/Content_categories))。尽管这些新的定义更精确，但却比上述的“块级元素”和“内联元素”更难理解，因此在之后的讨论中仍使用旧的定义。
 
-> **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [the types of CSS boxes](/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) 中的同名术语相混淆。尽管他们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
+> **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [the types of CSS boxes](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) 中的同名术语相混淆。尽管他们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
-> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面—see [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements) and [Inline elements](/en-US/docs/Web/HTML/Inline_elements).
+> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面—see [Block-level elements](/zh-CN/docs/Web/HTML/Block-level_elements) and [Inline elements](/zh-CN/docs/Web/HTML/Inline_elements).
 
 ### 空元素
 

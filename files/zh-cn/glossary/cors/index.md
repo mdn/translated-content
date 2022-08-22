@@ -38,4 +38,4 @@ slug: Glossary/CORS
 
 - [Fetch 规范](https://fetch.spec.whatwg.org)
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Glossary")}}

@@ -20,7 +20,7 @@ slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 
 ## 内容有多大？
 
-如果你想要知道内容区域的实际大小，而不局限于可见区域的话，你会使用 [`scrollWidth`](/en/DOM/element.scrollWidth)和[scrollHeight](/en-US/docs/Web/API/Element.scrollHeight)属性。即使使用了滚动条仅有部分内容可见，这两个属性仍会返回元素的完整内容宽高
+如果你想要知道内容区域的实际大小，而不局限于可见区域的话，你会使用 [`scrollWidth`](/en/DOM/element.scrollWidth)和[scrollHeight](/zh-CN/docs/Web/API/Element.scrollHeight)属性。即使使用了滚动条仅有部分内容可见，这两个属性仍会返回元素的完整内容宽高
 
 例如，一个 300x300 像素 的滚动盒子里放置了一个 600x400 像素的元素，scrollWidth 将会返回 600，scrooHeight 返回 400.
 

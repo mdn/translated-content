@@ -22,7 +22,7 @@ An {{domxref("AudioParam")}}.
 
 ## Example
 
-{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}
+{{page("/zh-CN/docs/Web/API/AudioContext.createGain","Example")}}
 
 ## Specifications
 

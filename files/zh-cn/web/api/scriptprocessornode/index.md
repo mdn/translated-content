@@ -57,7 +57,7 @@ _No specific methods; inherits methods from its parent,_ _{{domxref("AudioNode")
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createScriptProcessor","Example")}}
+{{page("/zh-CN/docs/Web/API/AudioContext.createScriptProcessor","Example")}}
 
 ## 规范
 

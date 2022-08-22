@@ -27,7 +27,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-You can write this code either using an asynchronous function and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.
+You can write this code either using an asynchronous function and the [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.
 
 开始屏幕捕获：使用 `Promise` 风格
 
@@ -96,7 +96,7 @@ While display capture is in effect, the machine which is sharing screen contents
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).
 
-Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compaibility with have support for audio in captured screen streams.
+Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/zh-CN/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compaibility with have support for audio in captured screen streams.
 
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 
@@ -229,7 +229,7 @@ The stream is connected to the {{HTMLElement("video")}} element by storing the r
 
 The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
 
-If any of that fails, the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
+If any of that fails, the [`catch()`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
 
 ##### Stopping display capture
 

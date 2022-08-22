@@ -40,7 +40,7 @@ slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 
 ### RTSP
 
-> **备注：** 实时流协议 (RTSP) 控制媒体在两端传输的会话，且同时使用实时传输协议 (RTP) 和实时控制协议 (RTCP) 来传输媒体流。将 RTP 与 RTCP 结合使用可以实现自适应流。目前大部分浏览器还无法原生支持，但请留意 [Firefox OS 1.3 支持 RTSP](https://www.mozilla.org/en-US/firefox/os/notes/1.3/)。
+> **备注：** 实时流协议 (RTSP) 控制媒体在两端传输的会话，且同时使用实时传输协议 (RTP) 和实时控制协议 (RTCP) 来传输媒体流。将 RTP 与 RTCP 结合使用可以实现自适应流。目前大部分浏览器还无法原生支持，但请留意 [Firefox OS 1.3 支持 RTSP](https://www.mozilla.org/zh-CN/firefox/os/notes/1.3/)。
 >
 > 某些厂商实现了专有的传输协议，类似 RealNetworks 以及他们的真实数据传输 (RDT)。
 
@@ -168,7 +168,7 @@ GStreamer 的插件如 [souphttpclientsink](https://gstreamer.freedesktop.org/da
 - [HLS 浏览器支持](https://www.jwplayer.com/html5/hls/)
 - [基于 HTTP Live Streaming 的 JavaScript 播放器](https://github.com/RReverser/mpegts)
 - [HTTP Live Streaming 的基础知识](https://larryjordan.com/articles/basics-of-http-live-streaming/)
-- [用于 HTML 5 视频的 DASH 自适应流](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [用于 HTML 5 视频的 DASH 自适应流](/zh-CN/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [HTTP 上的动态自适应流式传输 (MPEG-DASH)](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH 媒体源演示](https://dash-mse-test.appspot.com/media.html)
 - [DASH 参考客户端](https://dashif.org/reference/players/javascript/1.0.0/index.html)

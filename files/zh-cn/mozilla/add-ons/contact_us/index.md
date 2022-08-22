@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/Contact_us
 
 #### 安全漏洞
 
-如果你发现了一个附加组件的安全漏洞，即使该附加组件未托管在 Mozilla 站点上，也请通知我们。我们将与开发人员一起解决此问题。请向 [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) 提交或向 <amo-admins@mozilla.com> 发送邮件以[秘密地](https://www.mozilla.org/en-US/about/governance/policies/security-group/bugs/)报告安全漏洞。
+如果你发现了一个附加组件的安全漏洞，即使该附加组件未托管在 Mozilla 站点上，也请通知我们。我们将与开发人员一起解决此问题。请向 [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) 提交或向 <amo-admins@mozilla.com> 发送邮件以[秘密地](https://www.mozilla.org/zh-CN/about/governance/policies/security-group/bugs/)报告安全漏洞。
 
 #### addons.mozilla.org (AMO) 的问题
 

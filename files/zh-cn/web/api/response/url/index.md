@@ -28,7 +28,7 @@ var myImage = document.querySelector('img');
 var myRequest = new Request('flowers.jpg');
 
 fetch(myRequest).then(function(response) {
-  console.log(response.url); // returns https://developer.mozilla.org/en-US/docs/Web/API/Response/flowers.jpg
+  console.log(response.url); // returns https://developer.mozilla.org/zh-CN/docs/Web/API/Response/flowers.jpg
   response.blob().then(function(myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
@@ -46,6 +46,6 @@ fetch(myRequest).then(function(response) {
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

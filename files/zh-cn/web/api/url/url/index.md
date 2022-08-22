@@ -36,16 +36,16 @@ let m = 'https://developer.mozilla.org';
 let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
 let b = new URL(m);                                     // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/zh-CN/docs'
+let d = new URL('/zh-CN/docs', b);                     // => 'https://developer.mozilla.org/zh-CN/docs'
+        new URL('/zh-CN/docs', d);                     // => 'https://developer.mozilla.org/zh-CN/docs'
+        new URL('/zh-CN/docs', a);                     // => 'https://developer.mozilla.org/zh-CN/docs'
 
-        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/zh-CN/docs', "https://developer.mozilla.org/fr-FR/toto");
+                                                       // => 'https://developer.mozilla.org/zh-CN/docs'
 
-        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
-        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
+        new URL('/zh-CN/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
+        new URL('/zh-CN/docs');                        // Raises a TypeError exception as '/zh-CN/docs' is not a valid URL
         new URL('http://www.example.com', );           // => 'http://www.example.com/'
         new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 

@@ -50,7 +50,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 你可能要添加到你的链接的另一个属性是 `title`（标题）；这旨在包含关于链接的补充信息，例如页面包含什么样的信息或需要注意的事情。
 
 ```html
-<p>我创建了一个指向<a href="https://www.mozilla.org/en-US/"
+<p>我创建了一个指向<a href="https://www.mozilla.org/zh-CN/"
    title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">Mozilla 主页</a
    >的超链接。
 </p>

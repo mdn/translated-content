@@ -81,7 +81,7 @@ A very fast and widely useable way to solve the unicode problem is by encoding J
 |*|
 |*|  Base64 / binary data / UTF-8 strings utilities (#1)
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
+|*|  https://developer.mozilla.org/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
 |*|
 |*|  Author: madmurphy
 |*|
@@ -223,7 +223,7 @@ This solution consists in converting a JavaScript's native UTF-16 string into a 
 |*|
 |*|  Base64 / binary data / UTF-8 strings utilities (#2)
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
+|*|  https://developer.mozilla.org/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
 |*|
 |*|  Author: madmurphy
 |*|
@@ -429,7 +429,7 @@ The following is the fastest and most compact possible approach. The output is e
 |*|
 |*|  Base64 / binary data / UTF-8 strings utilities (#3)
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
+|*|  https://developer.mozilla.org/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
 |*|
 |*|  Author: madmurphy
 |*|

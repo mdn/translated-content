@@ -39,4 +39,4 @@ for (let count = 0; count < timeRangesObject.length; count ++) {
 ## See also
 
 - The interface defining it, {{domxref("HTMLMediaElement")}}.
-- [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- [Media Source Extensions API](/zh-CN/docs/Web/API/Media_Source_Extensions_API)

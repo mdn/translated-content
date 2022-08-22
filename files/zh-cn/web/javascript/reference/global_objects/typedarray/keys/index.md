@@ -52,10 +52,10 @@ console.log(eArr.next().value); // 4
 
 ## 另见
 
-- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
 - {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

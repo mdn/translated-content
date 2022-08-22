@@ -90,13 +90,13 @@ Intl.DateTimeFormat.call(this[, locales[, options]])
 
 `DateTimeFormat 实例集成以下原型的属性`:
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Properties')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Properties')}}
 
 ### 方法
 
 `DateTimeFormat 实例集成以下原型的方法`:
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Methods')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Methods')}}
 
 ## 实例
 
@@ -195,4 +195,4 @@ console.log(date.toLocaleString('en-US', options));
 
 ## 相关链接
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}

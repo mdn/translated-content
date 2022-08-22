@@ -4,7 +4,7 @@ slug: Web/CSS/@media/width
 ---
 {{cssref}}
 
-`可以使用width` [CSS](/en-US/docs/CSS) {{cssxref("@media")}} 基于{{glossary("viewport")}}宽度 (或页面框，用于[paged media](/en-US/docs/Web/CSS/Paged_media)) 应用样式。
+`可以使用width` [CSS](/zh-CN/docs/CSS) {{cssxref("@media")}} 基于{{glossary("viewport")}}宽度 (或页面框，用于[paged media](/zh-CN/docs/Web/CSS/Paged_media)) 应用样式。
 
 ## 语法
 

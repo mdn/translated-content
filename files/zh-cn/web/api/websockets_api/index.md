@@ -8,11 +8,11 @@ slug: Web/API/WebSockets_API
 
 ## 接口
 
-- [`WebSocket`](/en-US/docs/Web/API/WebSocket)
+- [`WebSocket`](/zh-CN/docs/Web/API/WebSocket)
   - : 用于连接 WebSocket 服务器的主要接口，之后可以在这个连接上发送 和接受数据。
-- [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
+- [`CloseEvent`](/zh-CN/docs/Web/API/CloseEvent)
   - : 连接关闭时 WebSocket 对象发送的事件。
-- [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
+- [`MessageEvent`](/zh-CN/docs/Web/API/MessageEvent)
   - : 当从服务器获取到消息的时候 WebSocket 对象触发的事件。
 
 ## 工具
@@ -24,7 +24,7 @@ slug: Web/API/WebSockets_API
 - [SocketCluster](http://socketcluster.io/): 一个用于[Node.js](http://nodejs.org)的 pub/sub 专注于可伸缩 WebSocket 框架。
 - [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): 一个用 [Node.js](http://nodejs.org/)实现 WebSocket 服务器 API。
 - [Total.js](http://www.totaljs.com/):一个用[Node.js](http://www.nodejs.org/) 实现的的 Web 应用程序框架（例如:WebSocket 聊天）。
-- [Faye](https://www.npmjs.com/package/faye-websocket): 一个 [Node.js](http://nodejs.org/)的[WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (双向连接) 和 [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource/) (单向连接) 的服务器和客户端。
+- [Faye](https://www.npmjs.com/package/faye-websocket): 一个 [Node.js](http://nodejs.org/)的[WebSocket](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSockets_API) (双向连接) 和 [EventSource](https://developer.mozilla.org/zh-CN/docs/Web/API/EventSource/) (单向连接) 的服务器和客户端。
 - [SignalR](http://signalr.net/): SignalR 在可用时将隐藏使用 WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。
 - [Caddy](https://caddyserver.com/docs/websocket): 能够将任意命令 (stdin/stdout) 代理为 websocket 的 web 服务器。
 - [ws](https://github.com/websockets/ws): 一个流行的 WebSocket 客户端和服务器 [Node.js](http://nodejs.org/)库。
@@ -33,14 +33,14 @@ slug: Web/API/WebSockets_API
 
 ## 相关话题
 
-- [AJAX](/en-US/docs/AJAX)
-- [JavaScript](/en-US/docs/JavaScript)
+- [AJAX](/zh-CN/docs/AJAX)
+- [JavaScript](/zh-CN/docs/JavaScript)
 
 ## 参见
 
 - [RFC 6455 — The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
 - [WebSocket API Specification](http://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/en-US/docs/Server-sent_events)
+- [Server-Sent Events](/zh-CN/docs/Server-sent_events)
 
 ## 浏览器兼容性
 

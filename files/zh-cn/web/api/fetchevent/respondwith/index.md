@@ -67,9 +67,9 @@ self.addEventListener('fetch', function(event) {
 
 ## 请参见
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

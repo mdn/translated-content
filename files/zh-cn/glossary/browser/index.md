@@ -14,7 +14,7 @@ original_slug: Glossary/浏览器
 
 ### 下载一个浏览器
 
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/features/)
+- [Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/features/)
 - [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/browser-ie)
+- [Microsoft Internet Explorer](https://windows.microsoft.com/zh-CN/internet-explorer/browser-ie)
 - [Opera Browser](https://www.opera.com/)

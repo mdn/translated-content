@@ -47,13 +47,13 @@ new Intl.PluralRules([locales[, options]]) Intl.PluralRules.call(this[, locales[
 
 `PluralRules` 实例从其原型继承了以下属性：
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules/prototype', 'Properties')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/PluralRules/prototype', 'Properties')}}
 
 ### 方法>
 
 `PluralRules` 实例从它们的原型继承了以下方法：
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules/prototype', 'Methods')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/PluralRules/prototype', 'Methods')}}
 
 ## 例子
 
@@ -124,4 +124,4 @@ pr.select(42);
 
 ## 也可以看看
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}

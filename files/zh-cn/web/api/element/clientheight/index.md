@@ -38,4 +38,4 @@ clientHeight 是在 IE 浏览器对象模型中引入的属性。
 
 - {{domxref("HTMLElement.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/en-US/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/zh-CN/docs/Determining_the_dimensions_of_elements)

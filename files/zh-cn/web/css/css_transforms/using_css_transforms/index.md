@@ -57,11 +57,11 @@ CSS transforms 通过一系列 CSS 属性实现，通过使用这些属性，可
 
 首先需要设置的属性是透视值（{{cssxref("perspective")}}）。透视正是三维空间的立体感的源泉。元素与观察者之间的距离越远，他们就越小。
 
-{{page("/en-US/docs/Web/CSS/perspective", "Setting perspective", 0, 0, 3)}}
+{{page("/zh-CN/docs/Web/CSS/perspective", "Setting perspective", 0, 0, 3)}}
 
 第二个需要设置的是观察者的位置，可通过 {{cssxref("perspective-origin")}} 属性来设置。默认透视值中，为观察者被置于中心，但是这并不总是适当的。
 
-{{page("/en-US/docs/Web/CSS/perspective-origin", "Changing the perspective origin", 0, 0, 3)}}
+{{page("/zh-CN/docs/Web/CSS/perspective-origin", "Changing the perspective origin", 0, 0, 3)}}
 
 完成这些之后，你就可以折腾被置于三维空间之中的元素了。
 

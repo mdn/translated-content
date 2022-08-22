@@ -18,7 +18,7 @@ trackEvent = new RTCTrackEvent(eventInfo);
 
 - `eventInfo`
   - : An object based on the {{domxref("RTCTrackEventInit")}} dictionary, providing information about the track which has been added to the {{domxref("RTCPeerConnection")}}. This object has the following properties:
-    {{page("/en-US/docs/Web/API/RTCTrackEventInit", "property-list")}}
+    {{page("/zh-CN/docs/Web/API/RTCTrackEventInit", "property-list")}}
 
 ### Return value
 

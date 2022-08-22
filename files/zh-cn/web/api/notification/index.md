@@ -81,7 +81,7 @@ let notification = new Notification(title, options)
 
 `Notification` 对象继承自 {{domxref("EventTarget")}} 接口。
 
-{{page("/en-US/docs/Web/API/EventTarget","Methods")}}
+{{page("/zh-CN/docs/Web/API/EventTarget","Methods")}}
 
 ## Example
 

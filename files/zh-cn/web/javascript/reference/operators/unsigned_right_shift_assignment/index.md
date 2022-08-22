@@ -37,5 +37,5 @@ b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
 
 ## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Unsigned right shift operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

@@ -22,7 +22,7 @@ JavaScript 类型化数组是一种类似数组的对象，并提供了一种用
 
 类型化数组视图具有自描述性的名字和所有常用的数值类型像`Int8`，`Uint32`，`Float64` 等等。有一种特殊类型的数组`Uint8ClampedArray`。它仅操作 0 到 255 之间的数值。例如，这对于[Canvas 数据处理](/zh-CN/docs/Web/API/ImageData)非常有用。
 
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+{{page("/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
 
 ### 数据视图
 
@@ -30,11 +30,11 @@ JavaScript 类型化数组是一种类似数组的对象，并提供了一种用
 
 ## 使用类型数组的 Web API
 
-- [`FileReader.prototype.readAsArrayBuffer()`](<https://developer.mozilla.org/en-US/docs/Web/API/FileReader#readAsArrayBuffer()>)
-  - : `FileReader.prototype.readAsArrayBuffer()` 读取对应的[`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob) 或 [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File)的内容
-- [`XMLHttpRequest.prototype.send()`](<https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#send()>)
+- [`FileReader.prototype.readAsArrayBuffer()`](<https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader#readAsArrayBuffer()>)
+  - : `FileReader.prototype.readAsArrayBuffer()` 读取对应的[`Blob`](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob) 或 [`File`](https://developer.mozilla.org/zh-CN/docs/Web/API/File)的内容
+- [`XMLHttpRequest.prototype.send()`](<https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest#send()>)
   - : `XMLHttpRequest` 实例的 `send()` 方法现在使用支持类型化数组和 {{jsxref("ArrayBuffer")}} 对象作为参数。
-- [`ImageData.data`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData)
+- [`ImageData.data`](https://developer.mozilla.org/zh-CN/docs/Web/API/ImageData)
   - : 是一个 {{jsxref("Uint8ClampedArray")}} 对象，用来描述包含按照 RGBA 序列的颜色数据的一维数组，其值的范围在`0`到`255`（包含 255）之间。
 
 ## 示例
@@ -94,11 +94,11 @@ int16View[0] = 32;
 console.log("Entry 0 in the 32-bit array is now " + int32View[0]);
 ```
 
-这次的输出是"Entry 0 in the 32-bit array is now 32"。也就是，这 2 个数组都是同一数据的以不同格式展示出来的视图。你可以使用任何一种 [view types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 中的定义的视图。
+这次的输出是"Entry 0 in the 32-bit array is now 32"。也就是，这 2 个数组都是同一数据的以不同格式展示出来的视图。你可以使用任何一种 [view types](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 中的定义的视图。
 
 ### 使用复杂的数据结构
 
-通过将缓冲与不同类型视图组合，以及修改内存访问的偏移位置，你可以操作包含更多更复杂数据结构的数据。你可以使用[js-ctypes](https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes)操作诸如[WebGL](https://developer.mozilla.org/en-US/docs/Web/WebGL)，数据文件或 C 语言结构体这些复杂的数据结构。
+通过将缓冲与不同类型视图组合，以及修改内存访问的偏移位置，你可以操作包含更多更复杂数据结构的数据。你可以使用[js-ctypes](https://developer.mozilla.org/zh-CN/docs/Mozilla/js-ctypes)操作诸如[WebGL](https://developer.mozilla.org/zh-CN/docs/Web/WebGL)，数据文件或 C 语言结构体这些复杂的数据结构。
 
 请看如下的 C 语言结构：
 
@@ -139,8 +139,8 @@ normalArray.constructor === Array;
 
 ## 了解更多
 
-- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
-- [`StringView` – a C-like representation of strings based on typed arrays](https://developer.mozilla.org/en-US/docs/Code_snippets/StringView)
+- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [`StringView` – a C-like representation of strings based on typed arrays](https://developer.mozilla.org/zh-CN/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
 - [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

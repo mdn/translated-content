@@ -44,6 +44,6 @@ add_header 'Access-Control-Allow-Origin' 'origin-list'
 
 ## See also
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
+- [CORS introduction](/zh-CN/docs/Web/HTTP/CORS)

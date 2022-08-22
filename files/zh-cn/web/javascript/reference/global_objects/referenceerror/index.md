@@ -40,11 +40,11 @@ new ReferenceError([message[, fileName[, lineNumber]]])
 
 ### 属性
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
 
 ### 方法
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
 
 ## 例子
 

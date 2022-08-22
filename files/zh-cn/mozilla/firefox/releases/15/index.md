@@ -45,7 +45,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 ### JavaScript
 
 - Support for the [`DataView`](/zh-CN/JavaScript_typed_arrays/DataView) interface from the Typed Arrays specification has been added. This provides low-level access to the data contained in an [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer).
-- Support for new ECMAScript 2015 built-ins: [`Number.isNaN()`](/en-US/docs/JavaScript/Reference/Global_Objects/Number/isNaN), [`Number.toInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger), [`Number.isInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger), [`Number.isFinite()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) has been added. ([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=749818)).
+- Support for new ECMAScript 2015 built-ins: [`Number.isNaN()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Number/isNaN), [`Number.toInteger()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger), [`Number.isInteger()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger), [`Number.isFinite()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) has been added. ([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=749818)).
 - 添加了对`ES6中的默认参数`的支持。([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
 - 添加了对`ES6中的剩余参数`的支持.([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
 
@@ -55,7 +55,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 ### MathML
 
-- Mathematical operators can now use downloadable fonts specified with {{ cssxref("@font-face") }}. This makes the [MathML-fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) work with stretchy operators too.
+- Mathematical operators can now use downloadable fonts specified with {{ cssxref("@font-face") }}. This makes the [MathML-fonts add-on](https://addons.mozilla.org/zh-CN/firefox/addon/mathml-fonts/) work with stretchy operators too.
 - The `selection` attribute of the {{ MathMLElement("maction") }} is now only taken into account with the `toggle` actiontype.
 - [Deprecated namedspace binding](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) has been removed ({{ bug("673759") }}).
 - Supported syntax for [Length](/zh-CN/MathML/Attributes/Values) and {{ MathMLElement("mpadded") }} values have been made closer to the one specified in MathML3 spec.

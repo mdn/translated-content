@@ -134,4 +134,4 @@ console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'))
 
 ## 参见
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}

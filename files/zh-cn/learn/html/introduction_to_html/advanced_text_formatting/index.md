@@ -210,7 +210,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 要把这些转换为块引用，我们要这样做：
 
 ```html
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
@@ -225,7 +225,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 行内元素用同样的方式工作，除了使用{{htmlelement("q")}}元素。例如，下面的标记包含了从 MDN`<q>`页面的引用：
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">intended
 for short quotations that don't require paragraph breaks.</q></p>
 ```
 
@@ -238,17 +238,17 @@ for short quotations that don't require paragraph breaks.</q></p>
 {{htmlattrxref("cite","blockquote")}}属性内容不会被浏览器显示、屏幕阅读器阅读，需使用 JavaScript 或 CSS，浏览器才会显示`cite`的内容。如果你想要确保引用的来源在页面上是可显示的，更好的方法是为{{htmlelement("cite")}}元素附上链接：
 
 ```html
-<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<p>According to the <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
 <cite>MDN blockquote page</cite></a>:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">
 <cite>MDN q page</cite></a>.</p>
 ```
 

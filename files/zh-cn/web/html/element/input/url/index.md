@@ -59,7 +59,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 | [`size`](#size)               | A number indicating how many characters wide the input field should be                                                              |
 | [`spellcheck`](#spellcheck)   | Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used |
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
 ### maxlength
 
@@ -75,17 +75,17 @@ The input will fail [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Con
 
 ### pattern
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "pattern-include")}}
 
 See the section [Pattern validation](#pattern_validation) for details and an example.
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}
 
 ## Non-standard attributes
 
@@ -96,9 +96,9 @@ The following non-standard attributes are also available on some browsers. As a 
 | [`autocorrect`](#autocorrect)     | A string indicating whether or not autocorrect is `on` or `off`. **Safari only.**                                                                                                                                                                                       |
 | [`mozactionhint`](#mozactionhint) | A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. **Firefox for Android only.** |
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "autocorrect", 0, 1, 2)}}
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "mozactionhint", 0, 1, 2)}}
 
 ## Using URL inputs
 
@@ -330,6 +330,6 @@ You can also find our [pattern validation example on GitHub](https://github.com/
 
 - [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
 - [Compatibility of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

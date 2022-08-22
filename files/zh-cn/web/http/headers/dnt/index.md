@@ -51,5 +51,5 @@ navigator.doNotTrack; // "0" or "1"
 - [donottrack.us](http://donottrack.us/)
 - DNT 浏览器设置帮助：
 
-  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
+  - [Firefox](https://www.mozilla.org/zh-CN/firefox/dnt/)
   - [Chrome](https://support.google.com/chrome/answer/2790761)

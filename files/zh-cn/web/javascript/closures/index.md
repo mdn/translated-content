@@ -208,7 +208,7 @@ console.log(Counter2.value()); /* logs 0 */
 
 ## 在循环中创建闭包：一个常见错误
 
-在 ECMAScript 2015 引入 [`let` 关键字](/en-US/docs/JavaScript/Reference/Statements/let) 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：
+在 ECMAScript 2015 引入 [`let` 关键字](/zh-CN/docs/JavaScript/Reference/Statements/let) 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：
 
 ```html
 <p id="help">Helpful notes will appear here</p>

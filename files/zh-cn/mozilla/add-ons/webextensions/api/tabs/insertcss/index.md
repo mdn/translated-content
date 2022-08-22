@@ -6,13 +6,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 向一个页面注入 CSS
 
-使用该 API 前你必须拥有目标页面的权限，可以是 [主机权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), 或者使用 [activeTab 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+使用该 API 前你必须拥有目标页面的权限，可以是 [主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), 或者使用 [activeTab 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
 
-你只能向符合 [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 的网页注入 CSS: 其形式必定是 "http", "https", "file", "ftp" 之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging, about:addons, 或者你打开的一个新的空白页。
+你只能向符合 [match pattern](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 的网页注入 CSS: 其形式必定是 "http", "https", "file", "ftp" 之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging, about:addons, 或者你打开的一个新的空白页。
 
 当再次调用{{WebExtAPIRef("tabs.removeCSS()")}} 时，已经注入的 CSS 可能会被清除。
 
-这是一个返回[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## Syntax
 
@@ -46,7 +46,7 @@ var inserting = browser.tabs.insertCSS(
 
 ### Return value
 
-[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 将会在 CSS 成功注入时 被填充，如果有任何错误发生，promise 将会被注入一个错误消息。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 将会在 CSS 成功注入时 被填充，如果有任何错误发生，promise 将会被注入一个错误消息。
 
 ## Browser compatibility
 

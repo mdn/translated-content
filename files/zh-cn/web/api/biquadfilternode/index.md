@@ -67,7 +67,7 @@ _继承方法自父级的 {{domxref("AudioNode")}}_.
 
 ## 例子
 
-{{page("/en-US/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
+{{page("/zh-CN/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
 
 ## 规范
 

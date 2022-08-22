@@ -10,7 +10,7 @@ slug: Web/HTML/Element/ul
  <tbody>
   <tr>
    <td><a href="/en/HTML/Content_categories">内容</a>分类</td>
-   <td><a href="/en/HTML/Content_categories#flow_content">流式内容</a>，如果 <code>&lt;ul&gt;</code> 包含至少一个 <code>&lt;li&gt;</code> 元素，那么它就是显性内容 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">Palpable content</a>。</td>
+   <td><a href="/en/HTML/Content_categories#flow_content">流式内容</a>，如果 <code>&lt;ul&gt;</code> 包含至少一个 <code>&lt;li&gt;</code> 元素，那么它就是显性内容 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Palpable_content">Palpable content</a>。</td>
   </tr>
   <tr>
    <td>允许的内容</td>

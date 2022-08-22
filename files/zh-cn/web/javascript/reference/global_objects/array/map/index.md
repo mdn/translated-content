@@ -44,7 +44,7 @@ var new_array = arr.map(function callback(currentValue[, index[, array]]) {
 
 `callback` 函数会被自动传入三个参数：数组元素，元素索引，原数组本身。
 
-如果 `thisArg` 参数提供给`map`，则会被用作回调函数的`this`值。否则 {{jsxref("undefined")}} 会被用作回调函数的`this`值。`this`的值最终相对于`callback`函数的可观察性是依据[the usual rules for determining the this seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this)决定的
+如果 `thisArg` 参数提供给`map`，则会被用作回调函数的`this`值。否则 {{jsxref("undefined")}} 会被用作回调函数的`this`值。`this`的值最终相对于`callback`函数的可观察性是依据[the usual rules for determining the this seen by a function](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)决定的
 
 `map` 不修改调用它的原数组本身（当然可以在 `callback` 执行时改变原数组）
 

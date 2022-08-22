@@ -8,7 +8,7 @@ MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它�
 
 > **警告：** _数据的生成方式已经发生了变更_。过去，我们的表格直接嵌入在页面中，而且数据是手动填写的。这样效率很低，难以维护，而且使得数据不够灵活，不便更新。所以我们正在把我们的兼容性表格迁移到一个数据 repo 中（<https://github.com/mdn/browser-compat-data>）并且改为使用程序化的方式生成它。
 >
-> 本指南中，我们撰写了关于如何向 MDN 添加新的兼容性数据的文档，但是我们仍然保留了旧的方法来保证旧文档的兼容性表格可用：正如你所见，手动输入的表格依然存在于 MDN 上。如果你有必要使用旧方法的话，可以参考这篇文章：[Old compatibility tables](/en-US/docs/MDN/Contribute/Structures/Old_compatibility_tables)。
+> 本指南中，我们撰写了关于如何向 MDN 添加新的兼容性数据的文档，但是我们仍然保留了旧的方法来保证旧文档的兼容性表格可用：正如你所见，手动输入的表格依然存在于 MDN 上。如果你有必要使用旧方法的话，可以参考这篇文章：[Old compatibility tables](/zh-CN/docs/MDN/Contribute/Structures/Old_compatibility_tables)。
 
 > **备注：** 如果您需要本指南任何步骤的帮助，欢迎您在[MDN 论坛](https://discourse.mozilla-community.org/c/mdn)上与我们联系。
 
@@ -112,7 +112,7 @@ git checkout -b name-of-branch
 - [JS](/zh-CN/docs/JavaScript)：被包含在 [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins) 中，每个 JavaScript 对象对应一个文件。文件要以 JavaScript 对象的准确名称命名，保留其大小写，如 `Date.json` 或 `InternalError.json`。
 - [API](/zh-CN/docs/Web/API)：API 中的每个接口对应一个文件。它们在 [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/master/api) 中。每个文件要以接口的准确名称命名，保留其大小写，例如 WebVR API 的文件为`VRDisplay.json`，`VRDisplayCapabilities.json`，等等。
 
-> **备注：** 您会留意到，该仓库还包含了[浏览器拓展](/en-US/Add-ons/WebExtensions)和[HTTP](/en-US/docs/Web/HTTP)**的数据。**These data sets are basically finished as they stand, but more features may need to be added in the future.
+> **备注：** 您会留意到，该仓库还包含了[浏览器拓展](/zh-CN/Add-ons/WebExtensions)和[HTTP](/zh-CN/docs/Web/HTTP)**的数据。**These data sets are basically finished as they stand, but more features may need to be added in the future.
 
 你创建的每个文件都需要跟随定义在我们 repo 的 schema 中的这些模板的规定。你可以参考[详细的模板描述](https://github.com/mdn/browser-compat-data/blob/master/compat-data-schema.md)。
 
@@ -150,7 +150,7 @@ git checkout -b name-of-branch
 
 在一个特性的`__compat`成员中，您需要包含以下成员：
 
-- `mdn_url`: MDN 上这个特性的页面的 URL。注意，这个 URL 不可以带上本地化文件夹名称，例如：是 `/docs/...` 而不是 `/docs/en-US/...` （或者其他）。本地化文件夹名称会在页面加载时被添加。
+- `mdn_url`: MDN 上这个特性的页面的 URL。注意，这个 URL 不可以带上本地化文件夹名称，例如：是 `/docs/...` 而不是 `/docs/zh-CN/...` （或者其他）。本地化文件夹名称会在页面加载时被添加。
 - `support`: 所有不同浏览器对这个特性的浏览器支持的信息。
 - `status`: Contains members reporting the standards track status of this feature.
 
@@ -165,11 +165,11 @@ git checkout -b name-of-branch
 
 在 `status` 成员中，包含三个子成员：
 
-- `"experimental"`: 如果这个特性是[试验性](/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental)的，取值为 `true` ，否则为 `false` 。
+- `"experimental"`: 如果这个特性是[试验性](/zh-CN/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental)的，取值为 `true` ，否则为 `false` 。
 - `"standard_track"`: 如果这个特性是个在某些规范里的标准的属性（最常见的是 W3C/WHATWG，但有其他规范如 Khronos 或 TC39 等），取值为`true` ，否则为 `false` 。
-- `"deprecated"`: 如果这个特性已经[过时](/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete)，取值为`true` ，否则为 `false` 。
+- `"deprecated"`: 如果这个特性已经[过时](/zh-CN/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete)，取值为`true` ，否则为 `false` 。
 
-作为例子，以下是 [border-width](/en-US/docs/Web/CSS/border-width#Browser_compatibility) 特性的数据 (参见 [border-width.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json)) ：
+作为例子，以下是 [border-width](/zh-CN/docs/Web/CSS/border-width#Browser_compatibility) 特性的数据 (参见 [border-width.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json)) ：
 
 ```json
 "__compat": {
@@ -251,7 +251,7 @@ There is a fourth, optional, member that can go inside the \_\_compat member —
 
 In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was addded much later in the specification's life and is only supported in a couple of browsers.
 
-As an example, see the [compat data](https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json) and [corresponding MDN page](/en-US/docs/Web/CSS/background-color) for the `background-color` property. The basic support exists inside the `__compat` object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own `__compat` object.
+As an example, see the [compat data](https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json) and [corresponding MDN page](/zh-CN/docs/Web/CSS/background-color) for the `background-color` property. The basic support exists inside the `__compat` object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own `__compat` object.
 
 ```json
 {

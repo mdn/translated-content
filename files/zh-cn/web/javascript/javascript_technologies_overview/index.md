@@ -30,7 +30,7 @@ JavaScript 的核心语言是 [ECMAScript](/zh-CN/docs/JavaScript/Language_Resou
 
 ### 浏览器支持
 
-As of October 2016, the current versions of the major Web browsers implement [ECMAScript 5.1](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) and [ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), but older versions (still in use) implement ECMAScript 5 only.
+As of October 2016, the current versions of the major Web browsers implement [ECMAScript 5.1](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) and [ECMAScript 2015](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), but older versions (still in use) implement ECMAScript 5 only.
 
 截止 2014 年 8 月份，主流浏览器的最新版本都已经支持 ECMAScript 5.1，但是旧版本的浏览器大多仅支持 ECMAScript 3 和 ECMAScript 5 的部分标准。[这里](http://kangax.github.com/es5-compat-table/)是一些关于 ECMAScript 5 的浏览器支持情况的资料。如今，主流浏览器的最新版本已经支持 ECMAScript 6 的大部分标准。
 

@@ -91,4 +91,4 @@ function dragover_handler(ev) {
 
 ## 另见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+{{page("/zh-CN/docs/Web/API/DataTransfer", "See also")}}

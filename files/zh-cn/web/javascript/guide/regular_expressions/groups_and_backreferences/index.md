@@ -71,7 +71,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           <p>
             <strong>备注：</strong> ^ 字符也可以表示
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
+              href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
               >输入的起始</a
             >
           </p>
@@ -97,14 +97,14 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
         <p>
           <code
             ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
+              href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match"
               >String.match()</a
             ></code
           >
           不会返回组，如果设置了 <code>/.../g</code> 标志。但是，您仍然可以使用
           <code
             ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
+              href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
               >String.matchAll()</a
             ></code
           >

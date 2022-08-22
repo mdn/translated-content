@@ -61,7 +61,7 @@ The `setOrientation()` and `setPosition()` methods have been replaced by setting
 
 ## Example
 
-{{page("/en-US/docs/Web/API/AudioContext.createPanner","Example")}}
+{{page("/zh-CN/docs/Web/API/AudioContext.createPanner","Example")}}
 
 ## Specifications
 

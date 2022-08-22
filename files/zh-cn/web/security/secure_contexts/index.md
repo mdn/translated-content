@@ -18,7 +18,7 @@ A context is considered secure when it meets certain minimum standards of authen
 
 For example, even for a document delivered over TLS within an {{HTMLElement("iframe")}}, its context is **not** considered secure if it has an ancestor that was not also delivered over TLS.
 
-However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open#noopener)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
+However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/zh-CN/docs/Web/API/Window/open#noopener)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
 
 Locally-delivered resources such as those with _http\://127.0.0.1_ URLs, _http\://localhost_ URLs (under certain conditions), and _file://_ URLs are also considered to have been delivered securely.
 
@@ -46,9 +46,9 @@ if (window.isSecureContext) {
 
 ## See also
 
-- [Platform features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — a list of the features available only in secure contexts
+- [Platform features restricted to secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — a list of the features available only in secure contexts
 - {{domxref("Window.isSecureContext")}}
 - <https://permission.site> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS
-- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
+- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}

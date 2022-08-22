@@ -4,7 +4,7 @@ slug: Web/SVG/Element/circle
 ---
 {{SVGRef}}
 
-**`<circle>`** [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。
+**`<circle>`** [SVG](https://developer.mozilla.org/zh-CN/docs/Web/SVG) 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。
 
 ## 用法
 

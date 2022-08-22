@@ -267,7 +267,7 @@ img.intLink { border: 0; }
 - [mozilla.org's rich-text editing Specification](http://mozilla.org/editor/midas-spec.html)
 - [mozilla.org's rich-text editing Demo](http://mozilla.org/editor/midasdemo/)
 - [Converting an app using document.designMode from IE to Mozilla at mozilla.org](http://www.mozilla.org/editor/ie2midas.html)
-- [`designMode`](/en-US/docs/Web/API/Document/designMode)
+- [`designMode`](/zh-CN/docs/Web/API/Document/designMode)
 - [MSDN: How to Create an HTML Editor Application](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537834(v=vs.85)>)
 - [A closed source, cross-browser rich-text editing demo](http://www.kevinroth.com/rte/demo.htm)
 - [xbDesignMode; a JavaScript helper class for easier cross-browser development using designMode.](https://developer.mozilla.org/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode)

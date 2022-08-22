@@ -118,7 +118,7 @@ if (!Object.keys) {
 
 ## 相关链接
 
-- [Enumerability and ownership of properties](https://developer.mozilla.org/en-US/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](https://developer.mozilla.org/zh-CN/docs/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

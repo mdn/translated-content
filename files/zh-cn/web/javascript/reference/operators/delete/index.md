@@ -34,7 +34,7 @@ delete object['property']
 
 ### 异常
 
-在[严格模式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)下，如果是属性是一个自己不可配置的属性，会抛出{{jsxref("TypeError")}}。
+在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)下，如果是属性是一个自己不可配置的属性，会抛出{{jsxref("TypeError")}}。
 
 ## 描述
 

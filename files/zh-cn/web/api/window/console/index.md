@@ -28,7 +28,7 @@ console.log("An error occurred while loading the content");
 console.dir(someObject);
 ```
 
-更多示例参考 {{SectionOnPage("/en-US/docs/Web/API/Console", "Usage")}}。
+更多示例参考 {{SectionOnPage("/zh-CN/docs/Web/API/Console", "Usage")}}。
 
 ## 规范
 

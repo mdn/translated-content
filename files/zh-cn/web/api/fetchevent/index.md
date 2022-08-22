@@ -83,4 +83,4 @@ self.addEventListener('fetch', function(event) {
 ## 请参见
 
 - {{jsxref("Promise")}}
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

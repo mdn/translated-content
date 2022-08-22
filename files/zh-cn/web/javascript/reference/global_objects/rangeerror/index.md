@@ -38,11 +38,11 @@ new RangeError([message[, fileName[, lineNumber]]])
 
 ### 属性
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}
 
 ### 方法
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}
 
 ## 例子
 

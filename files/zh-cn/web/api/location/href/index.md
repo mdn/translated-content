@@ -16,9 +16,9 @@ object.href = string;
 ## 范例
 
 ```js
-// 假设文档中包含标签： <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location/href">
+// 假设文档中包含标签： <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/Location/href">
 var anchor = document.getElementById("myAnchor");
-var result = anchor.href; // 返回: 'https://developer.mozilla.org/en-US/Location/href'
+var result = anchor.href; // 返回: 'https://developer.mozilla.org/zh-CN/Location/href'
 ```
 
 ## Specifications

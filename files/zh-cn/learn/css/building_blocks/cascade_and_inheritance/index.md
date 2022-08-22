@@ -14,15 +14,15 @@ slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
       <th scope="row">预备知识：</th>
       <td>
         基本的计算机知识，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装基本的软件</a
         >，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >文件处理</a
         >基本知识，HTML 基础知识 (如果不了解 HTML，请移步
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a
         >)，以及 CSS 如何工作的基本常识 (如果不了解 CSS，请移步
-        <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)
+        <a href="/zh-CN/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)
       </td>
     </tr>
     <tr>
@@ -73,7 +73,7 @@ Stylesheets **cascade（样式表层叠）** — 简单的说，css 规则的顺
 
 一些属性是不能继承的 — 举个例子如果你在一个元素上设置 {{cssxref("width")}} 50% ，所有的后代不会是父元素的宽度的 50% 。如果这个也可以继承的话，CSS 就会很难使用了！
 
-> **备注：** 在 MDN CSS 属性引用页面你会发现一个技术信息框，通常在规范区域的底部，列举了属性的很多数据信息，包括能否被继承。参见 [color property Specifications section](/en-US/docs/Web/CSS/color#Specifications), 例子。
+> **备注：** 在 MDN CSS 属性引用页面你会发现一个技术信息框，通常在规范区域的底部，列举了属性的很多数据信息，包括能否被继承。参见 [color property Specifications section](/zh-CN/docs/Web/CSS/color#Specifications), 例子。
 
 ## 理解这些概念是如何协同工作的
 
@@ -169,7 +169,7 @@ CSS 的 shorthand 属性 `all` 可以用于同时将这些继承值中的一个�
 
 > **警告：** 在进行计算时不允许进行进位，例如，20 个类选择器仅仅意味着 20 个十位，而不能视为 两个百位，也就是说，无论多少个类选择器的权重叠加，都不会超过一个 ID 选择器。
 
-下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 上面找到每个选择器的详细信息 [selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
+下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 上面找到每个选择器的详细信息 [selectors reference](/zh-CN/docs/Web/CSS/CSS_Selectors).
 
 | 选择器                                    | 千位 | 百位 | 十位 | 个位 | 优先级 |
 | ----------------------------------------- | ---- | ---- | ---- | ---- | ------ |

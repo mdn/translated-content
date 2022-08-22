@@ -17,7 +17,7 @@ slug: Web/SVG/Attribute/stdDeviation
 | 值     | [\<number-optional-number>](/zh-CN/docs/SVG/Content_type#Number-optional-number) |
 | 可变性 | Yes                                                                             |
 
-{{ page("/en-US/docs/SVG/Content_type","Number-optional-number") }}
+{{ page("/zh-CN/docs/SVG/Content_type","Number-optional-number") }}
 
 ## 示例
 

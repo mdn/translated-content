@@ -61,7 +61,7 @@ var request = window.indexedDB.open("MyTestDatabase");
 
 看到了吗？ 打开数据库就像任何其他操作一样 — 你必须进行 "request"。
 
-open 请求不会立即打开数据库或者开始一个事务。 对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase) 对象的实例。
+open 请求不会立即打开数据库或者开始一个事务。 对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/zh-CN/docs/IndexedDB/IDBDatabase) 对象的实例。
 
 该 open 方法接受第二个参数，就是数据库的版本号。数据库的版本决定了数据库架构，即数据库的对象仓库（object store）和他的结构。如果数据库不存在，`open` 操作会创建该数据库，然后 `onupgradeneeded` 事件被触发，你需要在该事件的处理函数中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理函数中更新数据库模式。我们在后面的[更新数据库的版本号](#Updating_the_version_of_the_database)和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。
 
@@ -575,7 +575,7 @@ function useDatabase(db) {
 
 IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建它的站点的源（典型情况下，就是站点的域或是子域），所以它不能被任何其他源访问。
 
-第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成[从不接受第三方 cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)（参见 {{bug("1147821")}}）。
+第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成[从不接受第三方 cookies](https://support.mozilla.org/zh-CN/kb/disable-third-party-cookies)（参见 {{bug("1147821")}}）。
 
 ## 浏览器关闭警告
 

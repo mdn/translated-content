@@ -8,7 +8,7 @@ slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 
 ## 两个 API，一个目标
 
-[推送 API](/en-US/docs/Web/API/Push_API)和[通知 API](/en-US/docs/Web/API/Notifications_API)是两个相互独立的 API，但在提高用户参与度这件事上，它们可以配合得很好。推送 API 可以用来从服务端推送新的内容而无需客户端介入，它是由应用的 Service Worker 来实现的；通知功能则可以通过 Service Worker 来向用户展示一些新信息，或者至少提醒用户应用已经更新了某些功能。
+[推送 API](/zh-CN/docs/Web/API/Push_API)和[通知 API](/zh-CN/docs/Web/API/Notifications_API)是两个相互独立的 API，但在提高用户参与度这件事上，它们可以配合得很好。推送 API 可以用来从服务端推送新的内容而无需客户端介入，它是由应用的 Service Worker 来实现的；通知功能则可以通过 Service Worker 来向用户展示一些新信息，或者至少提醒用户应用已经更新了某些功能。
 
 跟 Service Worker 一样，这些工作是在浏览器外部实现的，所以即使应用被隐藏到后台甚至被关闭了，我们仍然能够推送更新或者通知给用户。
 
@@ -261,4 +261,4 @@ self.addEventListener('push', function(event) {
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}

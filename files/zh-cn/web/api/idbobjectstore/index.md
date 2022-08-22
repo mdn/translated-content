@@ -76,7 +76,7 @@ IDBRequest add (in any value, in optional any key) raises (DOMException);
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>
@@ -204,7 +204,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 | Exception           | Description                                                                                                                                                                          |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `InvalidStateError` | The IDBObjectStore has been deleted or removed or the method was not called from a [`versionchange`](/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
+| `InvalidStateError` | The IDBObjectStore has been deleted or removed or the method was not called from a [`versionchange`](/zh-CN/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
 | `ConstraintError`   | An index with the same name (case-sensitive) already exists in the database.                                                                                                         |
 
 ### delete()
@@ -264,7 +264,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 | Exception           | Description                                                                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError` | The method was not called from a [`versionchange`](/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
+| `InvalidStateError` | The method was not called from a [`versionchange`](/zh-CN/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
 | `NotFoundError`     | There is no index with the given name (case-sensitive) in the database.                                                            |
 
 ### get()
@@ -357,7 +357,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 ### put()
 
-Returns an [IDBRequest](/en/IndexedDB/IDBRequest) object, and, in a separate thread, creates a [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the [`result`](/en-US/docs/IndexedDB/IDBRequest) set to the key for the stored record, and [`transaction`](/en-US/docs/IndexedDB/IDBRequest) set to the transaction in which this object store is opened.
+Returns an [IDBRequest](/en/IndexedDB/IDBRequest) object, and, in a separate thread, creates a [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the [`result`](/zh-CN/docs/IndexedDB/IDBRequest) set to the key for the stored record, and [`transaction`](/zh-CN/docs/IndexedDB/IDBRequest) set to the transaction in which this object store is opened.
 
 The put method is an _update or insert_ method. See also the [add()](#add) method.
 
@@ -393,7 +393,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>

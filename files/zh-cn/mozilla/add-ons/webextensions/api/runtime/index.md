@@ -45,9 +45,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : 打开你的扩展的 [选项页面](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)。
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : 获得完整的 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 声明文件的序列化对象。
+  - : 获得完整的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 声明文件的序列化对象。
 - {{WebExtAPIRef("runtime.getURL()")}}
-  - : 给定某个打包在扩展中的资源的基于 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 相对路径，返回一个完整有效的 URL。
+  - : 给定某个打包在扩展中的资源的基于 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 相对路径，返回一个完整有效的 URL。
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
   - : 指定一个此扩展被卸载后打开的 URL。
 - {{WebExtAPIRef("runtime.reload()")}}

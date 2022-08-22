@@ -14,7 +14,7 @@ slug: Web/API/RTCPeerConnection/remoteDescription
  var sessionDescription = peerConnection.remoteDescription;
 ```
 
-从更基础的层面上看，如果该属性不为`null`，则返回值为{{domxref("RTCPeerConnection.pendingRemoteDescription")}}的值，否则，返回{{domxref("RTCPeerConnection.currentRemoteDescription")}}的值。有关此算法的详细信息及其使用原因，请参阅{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}。
+从更基础的层面上看，如果该属性不为`null`，则返回值为{{domxref("RTCPeerConnection.pendingRemoteDescription")}}的值，否则，返回{{domxref("RTCPeerConnection.currentRemoteDescription")}}的值。有关此算法的详细信息及其使用原因，请参阅{{SectionOnPage("/zh-CN/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}。
 
 ## 示例
 
@@ -46,4 +46,4 @@ else {
 
 - {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
 - {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.currentLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

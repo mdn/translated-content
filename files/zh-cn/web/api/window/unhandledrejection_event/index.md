@@ -88,6 +88,6 @@ window.addEventListener('unhandledrejection', function (event) {
 
 ## 参见
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- {{SectionOnPage("/zh-CN/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} 事件
 - {{domxref("Promise")}}

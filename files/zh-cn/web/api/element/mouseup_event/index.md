@@ -31,7 +31,7 @@ slug: Web/API/Element/mouseup_event
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/Element/mousemove_event", "Examples")}}
+{{page("/zh-CN/docs/Web/API/Element/mousemove_event", "Examples")}}
 
 ## 规范
 

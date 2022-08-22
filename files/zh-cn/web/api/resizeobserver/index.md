@@ -56,4 +56,4 @@ resizeObserver.observe(document.querySelector('.box:nth-child(2)'));
 - [The box model](https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('MutationObserver')}}
-- {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))
+- {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API))

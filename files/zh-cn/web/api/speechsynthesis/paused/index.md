@@ -38,4 +38,4 @@ var amIPaused = synth.paused; // 将返回 true
 
 ## 请参阅
 
-- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)

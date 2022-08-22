@@ -13,13 +13,13 @@ slug: Web/HTML/Element/table
     <tr>
       <th scope="row">
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories"
+          href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content"
+          href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Flow_content"
           >流动内容</a
         >
       </td>
@@ -52,7 +52,7 @@ slug: Web/HTML/Element/table
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何支持<a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        任何支持<a href="/zh-CN/docs/HTML/Content_categories#Flow_content"
           >流内容</a
         >的元素
       </td>

@@ -110,7 +110,7 @@ Note that most input types don't have intrinsic constraints, as some are simply 
       <td>text, search, url, tel, email, password</td>
       <td>
         A
-        <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+        <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions"
           >JavaScript regular expression</a
         >
         (compiled with the
@@ -215,8 +215,8 @@ Note that most input types don't have intrinsic constraints, as some are simply 
 
 Constraint validation is done through the Constraint Validation API either on a single form element or at the form level, on the {{ HTMLElement("form") }} element itself. The constraint validation is done in the following ways:
 
-- By a call to the checkValidity() method of a form-related [DOM](/zh-CN/docs/DOM) interface ([`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement) or [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. (This is typically done by the user-agent when determining which of the [CSS](/zh-CN/docs/Web/CSS) pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.)
-- By a call to the checkValidity() function on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface, which is called _statically validating the constraints_.
+- By a call to the checkValidity() method of a form-related [DOM](/zh-CN/docs/DOM) interface ([`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/zh-CN/docs/Web/API/HTMLButtonElement) or [`HTMLTextAreaElement`](/zh-CN/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. (This is typically done by the user-agent when determining which of the [CSS](/zh-CN/docs/Web/CSS) pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.)
+- By a call to the checkValidity() function on the [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) interface, which is called _statically validating the constraints_.
 - By submitting the form itself, which is called _interactively validating the constraints_.
 
 > **备注：**

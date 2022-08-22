@@ -45,11 +45,11 @@ new InternalError([message[, fileName[, lineNumber]]])
 
 ### 属性
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', '属性')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', '属性')}}
 
 ### 方法
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', '方法')}}
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', '方法')}}
 
 ## 规范
 

@@ -59,7 +59,7 @@ _没有自定义的方法，继承父类_ _{{domxref("AudioNode")}} 中的方法
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createDynamicsCompressor","Example")}}
+{{page("/zh-CN/docs/Web/API/AudioContext.createDynamicsCompressor","Example")}}
 
 ## Specifications
 

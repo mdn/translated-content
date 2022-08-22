@@ -74,7 +74,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 椭圆
 
-[Ellipse](/en-US/Web/SVG/Element/ellipse) 是`circle`元素更通用的形式，你可以分别缩放圆的 x 半径和 y 半径（通常数学家称之为长轴半径和短轴半径）。
+[Ellipse](/zh-CN/Web/SVG/Element/ellipse) 是`circle`元素更通用的形式，你可以分别缩放圆的 x 半径和 y 半径（通常数学家称之为长轴半径和短轴半径）。
 
 ```plain
 <ellipse cx="75" cy="75" rx="20" ry="5"/>
@@ -91,7 +91,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 线条
 
-[Line](/en-US/Web/SVG/Element/line) 绘制直线。它取两个点的位置作为属性，指定这条线的起点和终点位置。
+[Line](/zh-CN/Web/SVG/Element/line) 绘制直线。它取两个点的位置作为属性，指定这条线的起点和终点位置。
 
 ```plain
 <line x1="10" x2="50" y1="110" y2="150"/>
@@ -108,7 +108,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 折线
 
-[Polyline](/en-US/Web/SVG/Element/polyline)是一组连接在一起的直线。因为它可以有很多的点，折线的的所有点位置都放在一个 points 属性中：
+[Polyline](/zh-CN/Web/SVG/Element/polyline)是一组连接在一起的直线。因为它可以有很多的点，折线的的所有点位置都放在一个 points 属性中：
 
 ```plain
 <polyline points="60 110, 65 120, 70 115, 75 130, 80 125, 85 140, 90 135, 95 150, 100 145"/>
@@ -137,6 +137,6 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 ```
 
 - d
-  - : 一个点集数列以及其它关于如何绘制路径的信息。请阅读[Paths](https://developer.mozilla.org/en-US/Web/SVG/Tutorial/Paths) 章节以了解更多信息。
+  - : 一个点集数列以及其它关于如何绘制路径的信息。请阅读[Paths](https://developer.mozilla.org/zh-CN/Web/SVG/Tutorial/Paths) 章节以了解更多信息。
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

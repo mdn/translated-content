@@ -45,7 +45,7 @@ const args = [...arguments];
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 > ```
 
-如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
+如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
 
 ### 对参数使用 `typeof`
 
@@ -88,10 +88,10 @@ var args = [...arguments];
   - : 指向参数所属的当前执行的函数。
 - [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 传递给函数的参数数量。
-- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : 返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。
 
-> **备注：** 在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
+> **备注：** 在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
 
 ## 例子
 

@@ -61,4 +61,4 @@ function drop_handler(ev) {
 
 ## 参见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+{{page("/zh-CN/docs/Web/API/DataTransfer", "See also")}}

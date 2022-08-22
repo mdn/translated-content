@@ -10,7 +10,7 @@ slug: Learn/Common_questions/What_is_a_web_server
       <th scope="row">前提：</th>
       <td>
         您应该已经知道
-        <a href="/en-US/docs/learn/How_the_Internet_works">互联网是怎么工作的</a
+        <a href="/zh-CN/docs/learn/How_the_Internet_works">互联网是怎么工作的</a
         >，并且<a
           href="/zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？"
           >了解网页，网站，网络服务器和搜索引擎的区别是什么</a
@@ -45,7 +45,7 @@ slug: Learn/Common_questions/What_is_a_web_server
 
 ## 自主学习
 
-_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/en-US/docs/MDN/Getting_started)]。_
+_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)]。_
 
 ## 深入探索
 
@@ -62,9 +62,9 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 - 会一直拥有一样的 IP 地址（不是所有的 {{Glossary("ISP", "ISPs")}} 都会为家庭线提供一个固定的 IP 地址）
 - 由一个第三方提供者维护
 
-因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在这篇文章（[article](/en-US/Learn/How_much_does_it_cost#Hosting)）中找到更多的细节。
+因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在这篇文章（[article](/zh-CN/Learn/How_much_does_it_cost#Hosting)）中找到更多的细节。
 
-一旦你设置好一个网络托管解决方案，你只需要去上传你的文件到你的网络服务器 \[[upload your files to your web server](/en-US/docs/Learn/Upload_files_to_a_web_server)]。
+一旦你设置好一个网络托管解决方案，你只需要去上传你的文件到你的网络服务器 \[[upload your files to your web server](/zh-CN/docs/Learn/Upload_files_to_a_web_server)]。
 
 ### 通过 HTTP 交流
 
@@ -77,13 +77,13 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 - 无状态
   - : 无论是服务器还是客户都不会记住之前的交流。举个例子，仅依靠 HTTP，一个服务器不能记住你输入的密码或者你正处于业务中的哪一步。你需要一个应用服务器来进行这样的工作。（我们会在日后的文章中涵盖这类的技术。）
 
-HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在日后的一篇[技术文章](/en-US/docs/Web/HTTP)中覆盖 HTTP 本身。就目前而言，只需要知道这几点：
+HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在日后的一篇[技术文章](/zh-CN/docs/Web/HTTP)中覆盖 HTTP 本身。就目前而言，只需要知道这几点：
 
 - 只有*用户*可以制定 HTTP 请求，然后只会发送到*服务器*。服务器只能响应客户端的 HTTP 请求。
 - 当通过 HTTP 请求一个文件时，客户必须提供这个文件的{{Glossary("URL")}}。
 - 网络服务器*必须应答*每一个 HTTP 请求，至少也要回复一个错误信息。
 
-[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/404)在一个网络服务器上，HTTP 服务器负责处理和应答传入的请求。
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/zh-CN/404)在一个网络服务器上，HTTP 服务器负责处理和应答传入的请求。
 
 1. 当收到一个请求时，HTTP 服务器首先要检查所请求的 URL 是否与一个存在的文件相匹配。
 2. 如果是，网络服务器会传送文件内容回到浏览器。如果不是，一个应用服务器会建立必要的文件。
@@ -95,7 +95,7 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 
 “动态”意味着服务器会处理内容甚至实时地从一个数据库中产生它。这个解决方案提供了更多的灵活性，但是技术堆栈变得更难去处理，让建立网站更惊人地复杂。
 
-以你正在阅读的页面为例子。在正在托管它的网络服务器里，有一个应用服务器会从数据库提取文章内容，安排它的布局，把它放置在一些 HTML 模板中，然后为你传输结果。在这里，这个应用服务器叫做 [Kuma](/en-US/docs/MDN/Kuma) 并且是由 [Python](https://www.python.org/) （使用 [Django](https://www.djangoproject.com/) 构架) 构建的。Mozilla 团队为了 MDN 的特殊要求开发 Kuma，但是这里有很多相似的建立在很多其他技术之上的应用。
+以你正在阅读的页面为例子。在正在托管它的网络服务器里，有一个应用服务器会从数据库提取文章内容，安排它的布局，把它放置在一些 HTML 模板中，然后为你传输结果。在这里，这个应用服务器叫做 [Kuma](/zh-CN/docs/MDN/Kuma) 并且是由 [Python](https://www.python.org/) （使用 [Django](https://www.djangoproject.com/) 构架) 构建的。Mozilla 团队为了 MDN 的特殊要求开发 Kuma，但是这里有很多相似的建立在很多其他技术之上的应用。
 
 这里有太多的应用服务器，所以提供一个具体的服务器是挺难的。有些应用服务器迎合具体的网站类别，像是博客，百科或者电子商店；其他的应用服务器，叫做 {{Glossary("CMS", "CMSs")}}（内容管理系统 \[content management systems]），则更加通用。如果你正在开发一个动态网站，请花一些时间去选择适合你需求的工具。除非你想要学习一些网络服务器编程 \[web server programming]（而这本身就是一个令人兴奋的领域！），否则你不需要去创建你自己的应用服务器。这只是在重新创造轮子（[reinventing the wheel](https://zh.wikipedia.org/wiki/reinventing_the_wheel)）。
 
@@ -103,6 +103,6 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 
 现在您已熟悉了网络服务器，您可以
 
-- 钻研在网络上做某些事情要花费多少 \[[how much it costs to do something on the web](/en-US/docs/Learn/How_much_does_it_cost)]
-- 学习关于创建一个网页所需要的各种软件 \[[various software you need to create a website](/en-US/docs/Learn/What_software_do_I_need)]
-- 移步到某些实用的东西，像是如何上传文件到一个网页服务器 \[[how to upload files on a web server](/en-US/docs/Learn/Upload_files_to_a_web_server)]。
+- 钻研在网络上做某些事情要花费多少 \[[how much it costs to do something on the web](/zh-CN/docs/Learn/How_much_does_it_cost)]
+- 学习关于创建一个网页所需要的各种软件 \[[various software you need to create a website](/zh-CN/docs/Learn/What_software_do_I_need)]
+- 移步到某些实用的东西，像是如何上传文件到一个网页服务器 \[[how to upload files on a web server](/zh-CN/docs/Learn/Upload_files_to_a_web_server)]。

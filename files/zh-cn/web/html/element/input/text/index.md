@@ -83,9 +83,9 @@ let theText = myTextInput.value;
 
 `placeholder` 属性是一个字符串，可向用户提供有关该字段中需要什么样的信息的简短提示。 它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。 文本中不得包含回车符或换行符。
 
-如果控件的内容具有一个方向性的 ({{Glossary("LTR")}} 或 {{Glossary("RTL")}}) ，但需要以相反的方向性来显示占位符则可以使用 Unicode 双向算法格式化字符来 在占位符中覆盖方向性；请参见 {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}。
+如果控件的内容具有一个方向性的 ({{Glossary("LTR")}} 或 {{Glossary("RTL")}}) ，但需要以相反的方向性来显示占位符则可以使用 Unicode 双向算法格式化字符来 在占位符中覆盖方向性；请参见 {{SectionOnPage("/zh-CN/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}。
 
-> **备注：** 如果可以，请避免使用占位符属性。 它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。 请参见 {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}}。
+> **备注：** 如果可以，请避免使用占位符属性。 它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。 请参见 {{SectionOnPage("/zh-CN/docs/Web/HTML/Element/input", "Labels and placeholders")}}。
 
 ### readonly
 
@@ -370,5 +370,5 @@ input:valid+span:after {
 
 - [HTML Forms](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Multi-line text inputmaxlength

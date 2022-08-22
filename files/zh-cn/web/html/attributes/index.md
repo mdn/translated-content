@@ -492,18 +492,18 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       </td>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"
+          href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"
           ><code>&#x3C;input></code></a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"
+          href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button"
           ><code>&#x3C;button></code></a
         >
       </td>
       <td>
         Indicates the action of the element, overriding the action defined in
         the
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"
           ><code>&#x3C;form></code></a
         >.
       </td>

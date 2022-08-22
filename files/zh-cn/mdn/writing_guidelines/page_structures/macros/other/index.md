@@ -36,5 +36,5 @@ original_slug: MDN/Structures/Macros/Other
 
 ### 链接
 
-- [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) 宏创建一个链接到一个部分的名称和包含该部分的文章的短语。例如，`\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}` 输出以下内容：_{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}_。
+- [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) 宏创建一个链接到一个部分的名称和包含该部分的文章的短语。例如，`\{{SectionOnPage("/zh-CN/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}` 输出以下内容：_{{SectionOnPage("/zh-CN/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}_。
 - [`Link`](https://github.com/mdn/yari/blob/main/kumascript/macros/Link.ejs) 宏在 MDN 上插入到指定页面的链接，使用页面标题作为要单击的可见字符串，并从页面的 SEO 摘要中提取工具提示。

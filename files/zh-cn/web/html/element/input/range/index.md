@@ -67,13 +67,13 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 | [`min`](#min)   | 最小允许值                                    |
 | [`step`](#step) | 步进间隔，用于用户界面和验证目的              |
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
 有关在支持的浏览器中如何表示范围中的选项的示例，请参见下面的[带散列的标记范围控制](#A_range_control_with_hash_marks)
 
 ### max
 
-允许值范围内的最大值。 如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。 如果 [`max`](/en-US/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。 如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。 如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 min 属性的值。 请参见 [HTML `max`](/zh-CN/docs/Web/HTML/Attributes/max)`属性。`
 
@@ -85,7 +85,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### step
 
-{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}
+{{page("/zh-CN/docs/Web/HTML/Element/input/number", "step-include")}}
 
 `range` 输入的默认步进值为 1，除非步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。 例如，如果将 `min` 设置为-10 并将 `value` 设置为 1.5，则 1 的 `step` 将只允许正方向上的值为 1.5、2.5、3.5，...，以及-0.5，-1.5，-2.5 等。 ..朝负面方向发展。 请参阅[HTML `step` 属性](/zh-CN/docs/Web/HTML/Attributes/step)。
 
@@ -479,7 +479,7 @@ input[type="range"] {
 
 - [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [使用 ConstantSourceNode 控制多个参数](/zh-CN/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [设置范围元素的样式](https://css-tricks.com/sliding-nightmare-understanding-range-input)

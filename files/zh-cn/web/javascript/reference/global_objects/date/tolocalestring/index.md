@@ -64,7 +64,7 @@ function toLocaleStringSupportsLocales() {
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 //假定本地时区是 America/Los_Angeles(美国时区)
-//en-US(美利坚英语) 使用 month-day-year 的顺序展示年月日
+//zh-CN(美利坚英语) 使用 month-day-year 的顺序展示年月日
 alert(date.toLocaleString("en-US"));
 // → "12/19/2012, 7:00:00 PM"
 
@@ -116,7 +116,7 @@ alert(date.toLocaleString("en-US", {hour12: false}));
 
 ## 性能
 
-当格式化大量日期时，最好创建一个 [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) 对象，然后使用该对象 [`format`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format) 属性提供的方法。
+当格式化大量日期时，最好创建一个 [`Intl.DateTimeFormat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) 对象，然后使用该对象 [`format`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format) 属性提供的方法。
 
 ## 规范
 

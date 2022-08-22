@@ -89,7 +89,7 @@ CSS 中表格相关的系列属性可能是非常有用的向下支持技术，�
 
 ## 特性枚举与弹性盒子
 
-你可以使用特性枚举（[feature queries](/en-US/docs/Web/CSS/%40supports)）来检查弹性盒子的支持情况：
+你可以使用特性枚举（[feature queries](/zh-CN/docs/Web/CSS/%40supports)）来检查弹性盒子的支持情况：
 
 ```css
 @supports (display: flex) {
