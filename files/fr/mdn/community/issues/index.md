@@ -3,7 +3,7 @@ title: Bonnes pratiques GitHub pour MDN
 slug: MDN/Community/Issues
 original_slug: MDN/Contribute/GitHub_best_practices
 l10n:
-  sourceCommit: 067040a6acbeee78e7ba07b6ea7bc4195d554f7b
+  sourceCommit: ca4de15aa8391a1e3fed7c651d5ee941051cb3fe
 ---
 {{MDNSidebar}}
 
@@ -11,16 +11,16 @@ l10n:
 
 > **Note :** Si un ticket a l'étiquette `triage`, cela signifie qu'elle n'a pas encore été revue et qu'il n'est pas nécessaire de travailler dessus.
 
-Si le ticket que vous renseignez ne décrit pas un problème, assurez vous qu'il contient une liste de tâches claires et réalisable ou un objectif concret. Par exemple&nbsp;:
+Si le ticket que vous renseignez ne décrit pas un problème, assurez-vous qu'il contient une liste de tâches claires et réalisable ou un objectif concret. Par exemple&nbsp;:
 
 ```markdown
-## Remove {{ warning }} macro from documents
+## Remove `\{{ warning }}` macro from documents
 
-We should no longer be using the `{{ warning }}` macro in our documentation.
+We should no longer be using the `\{{ warning }}` macro in our documentation.
 
 ### Task description
 
-We should therefore replace all instances of the `{{ warning }}` macro with the following:
+We should therefore replace all instances of the `\{{ warning }}` macro with the following:
 
 > **Warning:** Main subject line
 >
@@ -29,8 +29,8 @@ We should therefore replace all instances of the `{{ warning }}` macro with the 
 
 ### Actionable outcome
 
-- [ ] There are no more instances of the ``{{ warning }}` macro in the `mdn/content` repository.
-- [ ] Deprecate `{{ warning }}` macro
+- [ ] There are no more instances of the `\{{ warning }}` macro in the `mdn/content` repository.
+- [ ] Deprecate `\{{ warning }}` macro
 - [ ] Notify localization team leads of the change.
 ```
 
@@ -55,7 +55,7 @@ L'ensemble des dépôts possèdent un registre de tickets où vous pouvez des t�
 
 La plupart des dépôts utilisent une étiquette `help-wanted` ou `good-first-issue`. Ce n'est pas une condition nécessaire pour sélectionner une tâche, vous pouvez en choisir une qui correspond à votre domaine de compétences.
 
-Une fois que vous avez identifié un ticket sur lequel vous aimeriez contribuer, assurez vous que personne n'est déjà affecté à cette tâche, puis commentez en indiquant que vous vous portez volontaire pour aider.
+Une fois que vous avez identifié un ticket sur lequel vous aimeriez contribuer, assurez-vous que personne n'est déjà affecté à cette tâche, puis commentez en indiquant que vous vous portez volontaire pour aider.
 
 Pour certains tickets, une analyse est nécessaire avant de pouvoir commencer&nbsp;: si vous avez des questions, vous pouvez les poser sur les canaux Matrix&nbsp;: [#mdn (en anglais)](https://chat.mozilla.org/#/room/#mdn:mozilla.org) et [#l10n-fr (en français)](https://matrix.to/#/#l10n-fr:mozilla.org).
 
@@ -67,7 +67,7 @@ Le processus habituel est le suivant&nbsp;:
 2. Sur ce <i lang="en">fork</i> personnel, créez une nouvelle branche et effectuez-y votre contribution
 3. Ouvrez une [<i lang="en">pull request</i>](/fr/docs/MDN/Community/Pull_requests) entre cette branche et le dépôt principal.
 
-De temps à autre, vous pouvez rencontrer certains problèmes en utilisant MDN. Qu'il s'agisse d'un problème de contenu ou d'infrastructure, vous pouvez essayer de le réparer vous-même ou simplement rapporter le problème. Si la première approche est à privilégiez, la seconde reste néanmoins une contribution importante.
+De temps à autre, vous pouvez rencontrer certains problèmes en utilisant MDN. Qu'il s'agisse d'un problème de contenu ou d'infrastructure, vous pouvez essayer de le réparer vous-même ou simplement rapporter le problème. Si la première approche est à privilégier, la seconde reste néanmoins une contribution importante.
 
 La meilleure approche consiste à essayer de corriger les problèmes que vous détecter. Pour cela, vous pouvez contribuer à ces différents dépôts&nbsp;:
 
@@ -98,10 +98,10 @@ Il se peut que vous n'ayez pas la solution au problème rapporté ou que vous n'
 
 1. Déterminez précisément ce qu'il reste à faire.
 
-   - Si le ticket est plutôt bien décrit et rédigé, que le travail à accomplir est explicite, allez-y&nbsp;!.
+   - Si le ticket est plutôt bien décrit et rédigé, que le travail à accomplir est explicite, allez-y&nbsp;!
    - Si le ticket est flou ou ambigu et que vous avez un doute sur ce qu'il faut faire, n'hésitez pas à mentionner la rapporteuse ou le rapporteur pour demander plus de précisions.
    - Si vous avez un doute sur la personne à solliciter, demandez de l'aide sur [le canal Matrix #mdn (en anglais)](https://chat.mozilla.org/#/room/#mdn:mozilla.org) ou [#l10n-fr (en français)](https://matrix.to/#/#l10n-fr:mozilla.org).
 
 2. Une fois que vous pensez avoir corrigé le problème, demandez une revue en commentaire.
 3. Dès qu'un ticket a été revu et que les remarques ont été adressées, vous pouvez le marquer comme clôturé.
-4. Si vous n'avez plus le temps de travailler sur un ticket, faites nous le savoir dans un commentaire afin que nous puissions y affecter quelqu'un d'autre.
+4. Si vous n'avez plus le temps de travailler sur un ticket, faites-nous le savoir dans un commentaire afin que nous puissions y affecter quelqu'un d'autre.

@@ -30,7 +30,7 @@ Les technologies web documentées sur MDN doivent être spécifiées de façon o
 
 Si vous souhaitez suggérer un nouveau contenu pour MDN, veuillez lire cette page avant votre soumission afin de vérifier qu'elle est pertinente.
 
-Pour les nouvelles pages de référence ou les nouveaux guides, veuillez ouvrir une discussion [sur le dépôt `community`](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) et décrire le contenu suggéré et les raisons de cette suggestion (avec le plus de détails possible).
+Pour les nouvelles pages de référence ou les nouveaux guides, veuillez ouvrir une discussion [sur le dépôt `mdn-community`](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) et décrire le contenu suggéré et les raisons de cette suggestion (avec le plus de détails possible).
 
 Pour suggérer des projets plus vastes, comme l'écriture de nouvelles sections, veuillez vous référer aux [critères d'inclusion](/fr/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion). Cette page décrit comment faire dans ce cas.
 
@@ -52,7 +52,7 @@ Les sujets sur lesquels nous nous concentrons avant tout sont les technologies w
 - [HTML](/fr/docs/Web/HTML)
 - [CSS](/fr/docs/Web/CSS)
 - [JavaScript](/fr/docs/Web/JavaScript)
-- [Les API Web](/fr/docs/Web/API)
+- [Les API web](/fr/docs/Web/API)
 - [HTTP](/fr/docs/Web/HTTP)
 
 Nous documentons également d'autres sujets comme [SVG](/fr/docs/Web/SVG), [XML](/fr/docs/Web/XML), [WebAssembly](/fr/docs/WebAssembly), [l'accessibilité](/fr/docs/Learn/Accessibility). De plus, nous écrivons [des guides d'apprentissage](/fr/docs/Learn) pour ces technologies et disposons également [d'un glossaire](/fr/docs/Glossary).
