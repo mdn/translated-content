@@ -53,7 +53,7 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', '250px') }}
+{{ EmbedLiveSample('例', '100%', '250px') }}
 
 ## 仕様書
 
