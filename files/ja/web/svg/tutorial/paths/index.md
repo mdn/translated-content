@@ -37,7 +37,7 @@ m dx dy
 
 以下の例では点 (`10`,`10`) だけがある状態になります。ただし、パスだけを描画してもこれらの点が表示されないことに注意してください。
 
-![](/@api/deki/files/45/=Blank_Path_Area.png)
+![](Blank_Path_Area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,7 @@ m dx dy
 
 始めやすいところは実際に図形を描いてみることです。手始めに長方形 ({{SVGElement("rect")}} 要素を使うとより簡単に描けるものと同じです) を描いてみましょう。これは水平線と垂直線だけで構成されています。
 
-![](/@api/deki/files/292/=Path_Line_Commands.png)
+![](path_line_commands.png)
 
 ```xml
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +128,7 @@ m dx dy
 
 ここで最後にある座標 (`x`,`y`) は、線の終点にしたい場所です。他の 2 組は制御点です。 (`x1`,`y1`) は曲線の始点向けの制御点、 (`x2`,`y2`) は曲線の終点向けの制御点です。制御点は各々の点から始まる線の傾斜を本質的に説明するものです。このときベジェ関数は、線の始めで確立した傾斜からもう一方の側の傾斜へ至るなめらかな曲線を作成します。
 
-![Cubic Bézier Curves with grid](https://mdn.mozillademos.org/files/10401/Cubic_Bézier_Curves_with_grid.png)
+![Cubic Bézier Curves with grid](Cubic_Bézier_Curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +160,7 @@ m dx dy
 
 この構文の例を以下に示しますが、左の図では、指定された制御点が赤、推定された制御点が青で示されています。
 
-![ShortCut_Cubic_Bézier_with_grid.png](https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bézier_with_grid.png)
+![ShortCut_Cubic_Bézier_with_grid.png](ShortCut_Cubic_Bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -170,7 +170,7 @@ m dx dy
 
 もう一つの種類のベジェ曲線は二次ベジェ曲線 `Q` であり、こちらは三次ベジェ曲線よりシンプルな曲線です。基本的に制御点を 1 つだけ必要とし、それは始点側と終点側両方の曲線の傾斜を定義します。このコマンドは制御点と曲線の終点を示す 2 つの引数を持ちます。
 
-> **Note:** **注:** `q` コマンドにおける座標の差分は、どちらも前回の点からの相対座標です (すなわち `dx` と `dy` は `dx1` と `dy1` に対する相対座標ではありません)。
+> **Note:** `q` コマンドにおける座標の差分は、どちらも前回の点からの相対座標です (すなわち `dx` と `dy` は `dx1` と `dy1` に対する相対座標ではありません)。
 
 ```
  Q x1 y1, x y
@@ -178,7 +178,7 @@ m dx dy
  q dx1 dy1, dx dy
 ```
 
-![Quadratic Bézier with grid](https://mdn.mozillademos.org/files/10403/Quadratic_Bézier_with_grid.png)
+![Quadratic Bézier with grid](Quadratic_Bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +198,7 @@ m dx dy
 
 このコマンドは前のコマンドが `Q` または `T` コマンドである場合のみ動作します。そうではない場合、制御点は前の点と同じであるとみなして直線が描画されるだけになります。
 
-![Shortcut_Quadratic_Bézier_with_grid.png](https://mdn.mozillademos.org/files/10407/Shortcut_Quadratic_Bézier_with_grid.png)
+![Shortcut_Quadratic_Bézier_with_grid.png](Shortcut_Quadratic_Bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -225,7 +225,7 @@ SVG を用いて作成できる別のタイプの曲線が円弧 `A` コマン�
 
 3 番目の引数は、円弧の回転度を示します。これは次の説明が最適です。
 
-![SVGArcs_XAxisRotation_with_grid](https://mdn.mozillademos.org/files/10409/SVGArcs_XAxisRotation_with_grid.png)
+![SVGArcs_XAxisRotation_with_grid](SVGArcs_XAxisRotation_with_grid.png)
 
 ```xml
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +242,7 @@ SVG を用いて作成できる別のタイプの曲線が円弧 `A` コマン�
 
 上の画像の回転していない楕円については、円弧の始点と終点から引かれた線が楕円の中心を通るので、 2 つの異なる円弧があるだけで、 4 つの円弧から選択できるわけではありません。少し修正した例では、 4 つの異なる円弧を形成する 2 つの楕円を見ることができます。
 
-![Show the 4 arcs on the Ellipse example](https://mdn.mozillademos.org/files/15822/SVGArcs_XAxisRotation_with_grid_ellipses.png)
+![Show the 4 arcs on the Ellipse example](SVGArcs_XAxisRotation_with_grid_ellipses.png)
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">

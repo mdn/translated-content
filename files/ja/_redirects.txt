@@ -2907,8 +2907,6 @@
 /ja/docs/SVG_In_HTML_Introduction	/ja/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ja/docs/SVG_Namespace_Tips_(external)	/ja/docs/Web/SVG/Namespaces_Crash_Course
 /ja/docs/SVG_improvements_in_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/SVG_improvements
-/ja/docs/SVG_in_Firefox	/ja/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/ja/docs/SVG_in_Firefox_1.5	/ja/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /ja/docs/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
 /ja/docs/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Security/CSP	/ja/docs/Web/HTTP/CSP

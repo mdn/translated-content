@@ -46,23 +46,23 @@ translation_of: Web/SVG/Tutorial/Gradients
 </svg>
 ```
 
-{{ EmbedLiveSample('SVGLinearGradient','120','240','/files/722/SVG_Linear_Gradient_Example.png') }}
+{{ EmbedLiveSample('Linear_Gradient','120','280') }}
 
 上記の例では、 `<rect>` 要素に線形グラデーションを適用します。線形グラデーションの内部には複数の {{SVGElement('stop')}} ノードがあります。これらのノードは、グラデーションのある位置における色を、位置については `offset` 属性、色については `stop-color` 属性で指定します。この属性は、直接指定することも、 CSS で指定することもできます。この例では、二つの方法を混在させています。具体的には、グラデーションに対して赤色から開始し、中間で透明な黒に変化し、そして青色で終了するよう指示しています。必要に応じて美しくも醜くもある混色を作ることができますが、オフセットは常に 0% (または % 記号を削除したい場合は 0) から 100% (または 1) まで増加させる必要があります。重複した値は、 XML ツリーの一番下に割り当てられている経由点を使用します。また、 fill や stroke と同様に、 `stop-opacity` 属性を指定することで、その位置での不透明度を設定することができます (FF3 では、 rgba 値を使って行うこともできます)。
 
 ```
- <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
+<stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
 ```
 
 グラデーションを使用するには、オブジェクトの `fill` または `stroke` 属性から参照する必要があります。これは、 CSS で要素を参照するのと同様に、 `url` を使って行います。今回の場合は、 url はグラデーションへの参照であり、クリエイティブ ID として "Gradient" を与えました。これをアタッチするには、 `fill` を `url(#Gradient)` に設定してください。これでオブジェクトが多色になりました。 `stroke` でも同じことができます。
 
 `<linearGradient>` 要素は、他にもいくつかの属性を持ち、グラデーションの大きさや外観を指定します。グラデーションの方向は、 `x1`, `x2`, `y1`, `y2` という属性で指定された 2 つの点によって制御されます。これらの属性は、グラデーションが移動する線を定義します。グラデーションのデフォルトは水平方向ですが、これらを変更することで回転させることができます。上の例の Gradient2 は、垂直方向のグラデーションを作成するように設計されています。
 
-```
- <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+```html
+<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
 ```
 
-> **Note:** **注:** グラデーションに `xlink:href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。```
+> **Note:** グラデーションに `xlink:href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。```
 > <linearGradient id="Gradient1">
 > <stop id="stop1" offset="0%"/>
 > <stop id="stop2" offset="50%"/>
@@ -101,7 +101,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 </svg>
 ```
 
-{{ EmbedLiveSample('Basic_example_2','120','240','/files/726/SVG_Radial_Gradient_Example.png') }}
+{{ EmbedLiveSample('Basic_example_2','120','280') }}
 
 ここで使われている経由点は先ほどと同じですが、今度はオブジェクトの中央が赤になり、すべての方向の端が青になるように徐々に変化します。線形グラデーションと同様に、 `<radialGradient>` ノードは、その位置と方向を表すいくつかの属性を取ることができます。しかし、線形グラデーションとは異なり、もう少し複雑です。放射状グラデーションも 2 つの点によって定義され、その端がどこにあるかを決定します。 1 つ目の点は、グラデーションが終わる円を定義します。この円には、 `cx` および `cy` 属性で指定される中心点と、半径 `r` が必要です。これら 3 つの属性を設定することで、上の 2 つ目の `rect` に示すように、グラデーションを移動したり、大きさを変更したりすることができます。
 
@@ -134,7 +134,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 </svg>
 ```
 
-{{ EmbedLiveSample('Center_and_focal_point','120','120','/files/727/SVG_Radial_Grandient_Focus_Example.png') }}
+{{ EmbedLiveSample('Center_and_focal_point','120','160') }}
 
 焦点が先ほどの円の外側に移動してしまうと、グラデーションが正しく描画されないため、スポットは円の縁の中にあるとみなされます。焦点がまったく与えられていない場合は、中心点と同じ場所にあると仮定されます。
 
@@ -178,12 +178,12 @@ translation_of: Web/SVG/Tutorial/Gradients
 </svg>
 ```
 
-{{ EmbedLiveSample('spreadMethod','220','220','/files/728/SVG_SpreadMethod_Example.png') }}
+{{ EmbedLiveSample('spreadMethod','220','260') }}
 
 余談ですがどちらのグラデーションも、グラデーションのサイズや方向を示すときに用いる単位系を定義する `gradientUnits` 属性を持ちます。この属性は `userSpaceOnUse` または `objectBoundingBox` という値を用いることができます。`objectBoundingBox` は既定値であり、これまで見てきたものです。この値はグラデーションをオブジェクトのサイズに調整するものであるため座標を 0 から 1 の間の値で指定する必要があり、その値は自動的に対象のオブジェクトの大きさに合わせて調整されます。`userSpaceOnUse` は絶対的な単位をとります。従ってオブジェクトがどこにあるかを知る必要があり、またグラデーションを同じ場所に置かなければなりません。前出の radialGradient は以下のように書き換えることができます:
 
-```
- <radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
+```html
+<radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
 ```
 
 `gradientTransform` 属性を用いてグラデーションを変換させることもできますが、まだ[変換の紹介](/ja/docs/Web/SVG/Tutorial/Basic_Transformations)を行っていないため、後で説明します。
