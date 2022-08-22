@@ -86,7 +86,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 これらの変更は、アドオン開発者と、Mozilla 本体のコードに関わっている開発者の双方に影響するものです。アドオン開発者は [アドオンの Firefox 7 対応](/ja/docs/Firefox/Updating_extensions_for_Firefox_7 "Firefox/Updating_extensions_for_Firefox_7") に書かれている追加情報も参照してください。
 
-> **Note:** **注:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces "Developer_Guide/Interface_Compatibility#Binary_Interfaces") をご覧ください。
+> **Note:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces "Developer_Guide/Interface_Compatibility#Binary_Interfaces") をご覧ください。
 
 ### JavaScript コードモジュール
 

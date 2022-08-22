@@ -115,7 +115,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日に�
 
 Firefox 6 へアドオンを対応させるために必要な作業の概要は [アドオンの Firefox 6 対応](/ja/docs/Firefox/Updating_add-ons_for_Firefox_6) をご覧ください。
 
-> **Note:** **注:** Firefox 6 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **Note:** Firefox 6 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### JavaScript コードモジュール
 

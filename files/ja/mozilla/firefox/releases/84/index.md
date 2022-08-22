@@ -12,7 +12,7 @@ translation_of: Mozilla/Firefox/Releases/84
 
 このページでは、開発者に影響する Firefox 84 の変更点をまとめています。Firefox 84 は、2020 年 12 月 15 日にリリースされました。
 
-> **Note:** **注記**: Mozilla Hacks の [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) もご覧ください。
+> **Note:** Mozilla Hacks の [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 

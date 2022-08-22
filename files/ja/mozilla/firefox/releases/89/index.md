@@ -11,7 +11,7 @@ tags:
 
 このページでは、開発者に影響する Firefox 89 の変更点をまとめています。Firefox 89 は、米国時間 2021 年 6 月 1 日にリリースされました。
 
-> **Note:** #### 注記 Mozilla Hacks の [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) もご覧ください。
+> **Note:** Mozilla Hacks の [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
