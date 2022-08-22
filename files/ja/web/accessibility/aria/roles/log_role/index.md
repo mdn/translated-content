@@ -8,84 +8,73 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
 ---
-<h3 id="Description" name="Description">説明</h3>
+### 説明
 
-<p class="p1">このテクニックは、<code><a href="http://www.w3.org/TR/wai-aria/#log">log</a></code> ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。</p>
+このテクニックは、[`log`](http://www.w3.org/TR/wai-aria/#log) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
 
-<p class="p1"><code>log</code> ロールは、新しい情報が意味のある順序で追加され、古い情報が消える<a href="http://www.w3.org/WAI/PF/aria/terms#def_liveregion">ライブリージョン</a>を作成する要素を識別するために使用されます。 たとえば、チャットログ、メッセージ履歴、エラーログなどです。 他のタイプのライブリージョンとは対照的に、このロールは順番に並べられ、新しい情報はログの末尾にのみ追加されます。 このロールが要素に追加されると、ブラウザーは支援技術製品にアクセス可能なログイベントを送信し、ユーザーにそれを通知することができます。</p>
+`log` ロールは、新しい情報が意味のある順序で追加され、古い情報が消える[ライブリージョン](http://www.w3.org/WAI/PF/aria/terms#def_liveregion)を作成する要素を識別するために使用されます。 たとえば、チャットログ、メッセージ履歴、エラーログなどです。 他のタイプのライブリージョンとは対照的に、このロールは順番に並べられ、新しい情報はログの末尾にのみ追加されます。 このロールが要素に追加されると、ブラウザーは支援技術製品にアクセス可能なログイベントを送信し、ユーザーにそれを通知することができます。
 
-<p class="p1">デフォルトでは、更新にはライブリージョンの変更のみが含まれ、ユーザーがアイドル状態のときにアナウンスされます。 変更の際にライブリージョン全体を聞く必要がある場合、 <code>aria-atomic="true"</code> を設定するべきです。 できるだけ早くアナウンスし、ユーザーが中断する可能性がある場合は、より積極的な更新のために <code>aria-live="assertive"</code> を設定することができます。</p>
+デフォルトでは、更新にはライブリージョンの変更のみが含まれ、ユーザーがアイドル状態のときにアナウンスされます。 変更の際にライブリージョン全体を聞く必要がある場合、 `aria-atomic="true"` を設定するべきです。 できるだけ早くアナウンスし、ユーザーが中断する可能性がある場合は、より積極的な更新のために `aria-live="assertive"` を設定することができます。
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
+### ユーザーエージェントと支援技術への影響
 
-<p class="p1">要素に <code>log</code> ロールが追加されたとき、またはそのような要素が可視になるとき、ユーザーエージェントは以下を行うべきです。</p>
+要素に `log` ロールが追加されたとき、またはそのような要素が可視になるとき、ユーザーエージェントは以下を行うべきです。
 
-<ul class="ul1">
- <li class="li2">オペレーティングシステムのアクセシビリティ API で <code>log</code> ロールを持つ要素を公開します。</li>
- <li class="li2">オペレーティングシステムのアクセシビリティ API がサポートされている場合は、アクセシビリティ API を使用してアクセス可能なログイベントを発生させます。</li>
-</ul>
+- オペレーティングシステムのアクセシビリティ API で `log` ロールを持つ要素を公開します。
+- オペレーティングシステムのアクセシビリティ API がサポートされている場合は、アクセシビリティ API を使用してアクセス可能なログイベントを発生させます。
 
-<p class="p1">支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。</p>
+支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。
 
-<ul class="ul1">
- <li class="li2"><code>aria-live="assertive"</code> が設定されておらず、ユーザーが中断されている場合を除き、スクリーンリーダーは、ユーザーがアイドル状態のときにログ内の変更をアナウンスするべきです。</li>
- <li class="li2">スクリーン拡大鏡は、ログ更新が発生したことを視覚的に示すことができます。</li>
-</ul>
+- `aria-live="assertive"` が設定されておらず、ユーザーが中断されている場合を除き、スクリーンリーダーは、ユーザーがアイドル状態のときにログ内の変更をアナウンスするべきです。
+- スクリーン拡大鏡は、ログ更新が発生したことを視覚的に示すことができます。
 
-<div class="note"><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
+> **Note:** **注**: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
-<h3 id="Examples" name="Examples">例</h3>
+### 例
 
-<h4 id="Example_1_Adding_the_role_in_the_HTML_code" name="Example_1_Adding_the_role_in_the_HTML_code">例 1: HTML コードにロールを追加する</h4>
+#### 例 1: HTML コードにロールを追加する
 
-<p class="p2">以下のスニペットは、<code>log</code> ロールを HTML ソースコードに直接追加する方法を示しています。</p>
+以下のスニペットは、`log` ロールを HTML ソースコードに直接追加する方法を示しています。
 
-<pre class="brush: html">&lt;div id="liveregion" class="region" role="log"&gt;&lt;/div&gt;</pre>
+```html
+<div id="liveregion" class="region" role="log"></div>
+```
 
-<h4 class="p1" id="Example_2_Snippet_from_an_example_application" name="Example_2_Snippet_from_an_example_application">例 2: サンプルアプリケーションからのスニペット</h4>
+#### 例 2: サンプルアプリケーションからのスニペット
 
-<p class="p2">このスニペットは AJAX チャットアプリケーションにおいてチャットログを作成します。</p>
+このスニペットは AJAX チャットアプリケーションにおいてチャットログを作成します。
 
-<pre class="brush: html">&lt;div id="chatArea" role="log"&gt;
-  &lt;ul id="chatRegion" aria-live="polite" aria-atomic="false"&gt;
-    &lt;li&gt;AJAX チャットの使用を開始するには、ユーザー名を選択してください。&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul id="userListRegion" aria-live="off" aria-relevant="additions removals text"&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="chatArea" role="log">
+  <ul id="chatRegion" aria-live="polite" aria-atomic="false">
+    <li>AJAX チャットの使用を開始するには、ユーザー名を選択してください。</li>
+  </ul>
+  <ul id="userListRegion" aria-live="off" aria-relevant="additions removals text">
+  </ul>
+</div>
+```
 
-<h4 id="Working_Examples" name="Working_Examples">動作する例</h4>
+#### 動作する例
 
-<ul>
- <li class="li1"><a class="external" href="http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/">http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/</a></li>
-</ul>
+- <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/>
 
-<h3 id="Notes" name="Notes">注</h3>
+### 注
 
-<ul class="ul1">
- <li class="li1">要素に <code>log</code> ロールを使用すると、その要素には <code>aria-live="polite"</code> が暗黙で含まれます。</li>
- <li class="li1">株式相場表示機のようにスクロールするテキストがある領域では、<code>marquee</code> ロールを代わりに使用するべきです。</li>
-</ul>
+- 要素に `log` ロールを使用すると、その要素には `aria-live="polite"` が暗黙で含まれます。
+- 株式相場表示機のようにスクロールするテキストがある領域では、`marquee` ロールを代わりに使用するべきです。
 
-<h3 id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h3>
+### 使用された ARIA 属性
 
-<ul>
- <li class="p1"><a class="external" href="http://www.w3.org/TR/wai-aria/#log">log</a></li>
-</ul>
+- [log](http://www.w3.org/TR/wai-aria/#log)
 
-<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h3>
+### 関連する ARIA 技術
 
-<ul>
- <li class="p1"><a class="external" href="http://www.w3.org/TR/wai-aria/#marquee">marquee</a> ロール</li>
-</ul>
+- [marquee](http://www.w3.org/TR/wai-aria/#marquee) ロール
 
-<h3 id="Compatibility" name="Compatibility">互換性</h3>
+### 互換性
 
-<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
 
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+### その他のリソース
 
-<ul>
- <li class="p1">ARIA のベストプラクティス - ライブリージョンの実装: <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#LiveRegions">http://www.w3.org/TR/wai-aria-practices/#LiveRegions</a></li>
-</ul>
+- ARIA のベストプラクティス - ライブリージョンの実装: <http://www.w3.org/TR/wai-aria-practices/#LiveRegions>

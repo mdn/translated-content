@@ -9,39 +9,36 @@ translation_of: >-
 original_slug: >-
   Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
 ---
-<p>この記事では、<code><a href="https://www.w3.org/TR/wai-aria/#aria-activedescendant">aria-activedescendant</a></code> プロパティについて説明します。</p>
+この記事では、[`aria-activedescendant`](https://www.w3.org/TR/wai-aria/#aria-activedescendant) プロパティについて説明します。
 
-<h3 id="Description" name="Description">説明</h3>
+### 説明
 
-<p><code>aria-activedescendant</code> 属性には、ドキュメントオブジェクトモデル内の複合ウィジェットの一部である、現在アクティブな子オブジェクトの ID が含まれます。 これは、1つ以上の子にフォーカスを持たせるというオーバーヘッドを伴います。 名前が指定するように、複合ウィジェットの現在アクティブな子を管理するのに役立ちます。</p>
+`aria-activedescendant` 属性には、ドキュメントオブジェクトモデル内の複合ウィジェットの一部である、現在アクティブな子オブジェクトの ID が含まれます。 これは、1 つ以上の子にフォーカスを持たせるというオーバーヘッドを伴います。 名前が指定するように、複合ウィジェットの現在アクティブな子を管理するのに役立ちます。
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
+### ユーザーエージェントと支援技術への影響
 
-<p>ユーザーエージェントは、検索、レンダリング、およびエンドユーザーとウェブコンテンツとのやりとりを容易にするソフトウェアで、<code>aria-activedescendant</code> プロパティを使用して、フォーカスを持っているアクティブな子について支援技術に通知します。 <code>aria-activedescendant</code> プロパティを使用するこのアクティブな子は、常に画面上に表示され、ドキュメントオブジェクトモデルのコンテナの子孫でなければなりません。</p>
+ユーザーエージェントは、検索、レンダリング、およびエンドユーザーとウェブコンテンツとのやりとりを容易にするソフトウェアで、`aria-activedescendant` プロパティを使用して、フォーカスを持っているアクティブな子について支援技術に通知します。 `aria-activedescendant` プロパティを使用するこのアクティブな子は、常に画面上に表示され、ドキュメントオブジェクトモデルのコンテナの子孫でなければなりません。
 
-<div class="note"><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 以下に示す情報は、これらの意見の1つで、したがって規範的ではありません。</div>
+> **Note:** **注**: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 以下に示す情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
-<h3 id="Examples" name="Examples">例</h3>
+### 例
 
-<h4 id="Example_1" name="Example_1">Example 1: </h4>
+#### Example 1:
 
-<p> </p>
+```html
+Code
+```
 
-<pre class="brush: html">Code </pre>
+#### 動作する例
 
-<h4 id="Working_Examples" name="Working_Examples">動作する例</h4>
+### 注
 
-<ul>
-</ul>
+### 使用された ARIA 属性
 
-<h3 id="Notes" name="Notes">注 </h3>
+### 関連する ARIA 技術
 
-<h3 id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h3>
+### 互換性
 
-<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術 </h3>
+TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
 
-<h3 id="Compatibility" name="Compatibility">互換性</h3>
-
-<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
-
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+### その他のリソース

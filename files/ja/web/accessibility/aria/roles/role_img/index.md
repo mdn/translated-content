@@ -7,116 +7,106 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/Role_Img
 ---
-<p>ARIA の画像 (<code>img</code>) ロールは、単一の画像とみなすべきページコンテンツ内の複数の要素を識別するために使用できます。 これらの要素は、組み合わせることで視覚的な方法で情報を伝達できる、画像、コードスニペット、テキスト、絵文字、またはその他のコンテンツである可能性があります。</p>
+ARIA の画像 (`img`) ロールは、単一の画像とみなすべきページコンテンツ内の複数の要素を識別するために使用できます。 これらの要素は、組み合わせることで視覚的な方法で情報を伝達できる、画像、コードスニペット、テキスト、絵文字、またはその他のコンテンツである可能性があります。
 
-<pre class="brush: html">&lt;div role="img" aria-label="全体的な画像の説明"&gt;
-  &lt;img src="graphic1.png" alt=""&gt;
-  &lt;img src="graphic2.png"&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div role="img" aria-label="全体的な画像の説明">
+  <img src="graphic1.png" alt="">
+  <img src="graphic2.png">
+</div>
+```
 
-<h2 id="Description" name="Description">説明</h2>
+## 説明
 
-<p>単一の画像として消費されるべきコンテンツの集合 (画像、動画、音声、コードスニペット、絵文字、その他のコンテンツを含む) は、画像ロール (<code>role="img"</code>) を使用して識別できます。</p>
+単一の画像として消費されるべきコンテンツの集合 (画像、動画、音声、コードスニペット、絵文字、その他のコンテンツを含む) は、画像ロール (`role="img"`) を使用して識別できます。
 
-<p>支援技術にコンテキストを伝えるために、個々の画像要素の代替テキストを当てにするべきではありません。 ほとんどのスクリーンリーダーは、画像ロール (<code>role="img"</code>) を持つ要素をブラックボックスのように見なし、内部の個々の要素にはアクセスしません。 したがって、周囲のテキストの中か、<code>aria-label</code> 属性を使用して、画像の包括的で全体的な説明の代替テキストを提供します。 また、画像が失敗した場合に、検索エンジンまたはサイトユーザーがページに書き込めるように、任意で <code>alt</code> 属性を提供します。</p>
+支援技術にコンテキストを伝えるために、個々の画像要素の代替テキストを当てにするべきではありません。 ほとんどのスクリーンリーダーは、画像ロール (`role="img"`) を持つ要素をブラックボックスのように見なし、内部の個々の要素にはアクセスしません。 したがって、周囲のテキストの中か、`aria-label` 属性を使用して、画像の包括的で全体的な説明の代替テキストを提供します。 また、画像が失敗した場合に、検索エンジンまたはサイトユーザーがページに書き込めるように、任意で `alt` 属性を提供します。
 
-<pre class="brush: html">&lt;div role="img" aria-label="全体的な画像の説明"&gt;
-  &lt;img src="graphic1.png" alt=""&gt;
-  &lt;img src="graphic2.png"&gt;
-&lt;/div&gt;</pre>
+```html
+<div role="img" aria-label="全体的な画像の説明">
+  <img src="graphic1.png" alt="">
+  <img src="graphic2.png">
+</div>
+```
 
-<p>画像にページに表示されるキャプションやラベルを追加したい場合は、次の方法を使用できます。</p>
+画像にページに表示されるキャプションやラベルを追加したい場合は、次の方法を使用できます。
 
-<ul>
- <li>テキストが簡潔なラベルの場合は、<code>aria-labelledby</code>。</li>
- <li>テキストがより長い説明である場合は、<code>aria-describedby</code>。</li>
-</ul>
+- テキストが簡潔なラベルの場合は、`aria-labelledby`。
+- テキストがより長い説明である場合は、`aria-describedby`。
 
-<p>例えば、</p>
+例えば、
 
-<pre class="brush: html">&lt;div role="img" aria-labelledby="image-1"&gt;
+```html
+<div role="img" aria-labelledby="image-1">
   ...
-  &lt;p id="image-1"&gt;画像のグループを説明するテキスト。&lt;/p&gt;
-&lt;/div<strong>&gt;</strong></pre>
+  <p id="image-1">画像のグループを説明するテキスト。</p>
+</div>
+```
 
-<h3 id="SVG_and_roleimg" name="SVG_and_roleimg">SVG と role="img"</h3>
+### SVG と role="img"
 
-<p>ページ内で埋め込み SVG 画像を使用している場合は、外側の <code>&lt;svg&gt;</code> 要素に画像ロール (<code>role="img"</code>) を設定し、ラベルを付けることをお勧めします。 これにより、スクリーンリーダーは、この要素を単一の実体とみなし、全ての子ノードを読み上げようとするのではなく、ラベルを使用して説明するようになります。</p>
+ページ内で埋め込み SVG 画像を使用している場合は、外側の `<svg>` 要素に画像ロール (`role="img"`) を設定し、ラベルを付けることをお勧めします。 これにより、スクリーンリーダーは、この要素を単一の実体とみなし、全ての子ノードを読み上げようとするのではなく、ラベルを使用して説明するようになります。
 
-<pre class="brush: html">&lt;svg role="img" aria-label="SVG 画像の説明"&gt;
-  &lt;!-- SVG 画像の内容 --&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg role="img" aria-label="SVG 画像の説明">
+  <!-- SVG 画像の内容 -->
+</svg>
+```
 
-<h3 id="Using_roleimg_to_confer_meaning_that_is_obscured_or_implied" name="Using_roleimg_to_confer_meaning_that_is_obscured_or_implied">role="img" を使用して、不明瞭や暗黙なものに意味を付与する</h3>
+### role="img" を使用して、不明瞭や暗黙なものに意味を付与する
 
-<p>場合によっては、支援技術のユーザーは、特定の方法で表現されたり、特定の媒体を通したり、特定の方法で暗示されたコンテンツの意味を理解することができません。 これは画像の場合は明らかに直せますが (<code>alt</code> 属性を使うことができます) 、混在したコンテンツや他の特定の種類のコンテンツの場合はそれほど明白ではないので、画像ロール (<code>role="img"</code>) が有用になります。</p>
+場合によっては、支援技術のユーザーは、特定の方法で表現されたり、特定の媒体を通したり、特定の方法で暗示されたコンテンツの意味を理解することができません。 これは画像の場合は明らかに直せますが (`alt` 属性を使うことができます) 、混在したコンテンツや他の特定の種類のコンテンツの場合はそれほど明白ではないので、画像ロール (`role="img"`) が有用になります。
 
-<p>例えば、テキストに絵文字を使用した場合、その意味は目の見えるユーザーにとっては明白かもしれませんが、スクリーンリーダーを使用している人は、絵文字にはテキスト表現が全くないか、代替テキストが紛らわしく、それが使用されているコンテキストと一致しないために混乱する可能性があります。 例えば、次のコードです。</p>
+例えば、テキストに絵文字を使用した場合、その意味は目の見えるユーザーにとっては明白かもしれませんが、スクリーンリーダーを使用している人は、絵文字にはテキスト表現が全くないか、代替テキストが紛らわしく、それが使用されているコンテキストと一致しないために混乱する可能性があります。 例えば、次のコードです。
 
-<pre class="brush: html">&lt;div role="img" aria-label="その猫はとても面白い"&gt;
-  &lt;p&gt;
-    &amp;#x1F408; &amp;#x1F602;
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div role="img" aria-label="その猫はとても面白い">
+  <p>
+    &#x1F408; &#x1F602;
+  </p>
+</div>
+```
 
-<p>&amp;#x1F408; &amp;#x1F602; の絵文字の実体参照は「猫」と「涙が出るほど嬉しい顔」で読み上げられますが、これは必ずしも意味をなしません — 暗黙の意味はおそらく「その猫はとても面白い」で、それを <code>aria-label</code> で画像ロール (<code>role="img"</code>) と一緒に指定します。</p>
+\&#x1F408; \&#x1F602; の絵文字の実体参照は「猫」と「涙が出るほど嬉しい顔」で読み上げられますが、これは必ずしも意味をなしません — 暗黙の意味はおそらく「その猫はとても面白い」で、それを `aria-label` で画像ロール (`role="img"`) と一緒に指定します。
 
-<p>これは、いくつかのブラウザーとスクリーンリーダーの組み合わせでは問題なく動作するようですが、中にはラベルを2回読み上げてしまうものもあります。 注意して使用し、徹底的にテストしてください。</p>
+これは、いくつかのブラウザーとスクリーンリーダーの組み合わせでは問題なく動作するようですが、中にはラベルを 2 回読み上げてしまうものもあります。 注意して使用し、徹底的にテストしてください。
 
-<p>これが適している別の例は、伝説的な「ちゃぶ台返し」のような ASCII 絵文字の組み合わせを使用する場合です。</p>
+これが適している別の例は、伝説的な「ちゃぶ台返し」のような ASCII 絵文字の組み合わせを使用する場合です。
 
-<pre class="brush: html">&lt;div role="img" aria-label="ちゃぶ台返し"&gt;
-  &lt;p&gt;
+```html
+<div role="img" aria-label="ちゃぶ台返し">
+  <p>
     (╯°□°）╯︵ ┻━┻
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+  </p>
+</div>
+```
 
-<h3 id="Associated_WAI-ARIA_Roles_States_and_Properties" name="Associated_WAI-ARIA_Roles_States_and_Properties">関連する WAI-ARIA のロール、ステート、プロパティ</h3>
+### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-<dl>
- <dt>aria-label</dt>
- <dd>アクセス可能な名前が必要です。 aria-label 属性</dd>
-</dl>
+- aria-label
+  - : アクセス可能な名前が必要です。 aria-label 属性
 
-<h3 id="Keyboard_Interactions" name="Keyboard_Interactions">キーボードインタラクション</h3>
+### キーボードインタラクション
 
-<h3 id="Required_JavaScript_features" name="Required_JavaScript_features">必要な JavaScript 機能</h3>
+### 必要な JavaScript 機能
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<ul>
- <li><a href="https://codepen.io/svinkle/pen/oYjoNE">星評価 role="img"の例</a></li>
-</ul>
+- [星評価 role="img"の例](https://codepen.io/svinkle/pen/oYjoNE)
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA","#img","img")}}</td>
-   <td>{{Spec2('ARIA')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                         | 状態                     |
+| -------------------------------------------- | ------------------------ |
+| {{SpecName("ARIA","#img","img")}} | {{Spec2('ARIA')}} |
 
-<h2 id="Screen_reader_support" name="Screen_reader_support">スクリーンリーダーのサポート</h2>
+## スクリーンリーダーのサポート
 
-<p>TBD</p>
+TBD
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="https://wicg.github.io/aom/spec/">Accessibility Object Model</a></li>
- <li><a href="https://w3c.github.io/html-aria/">ARIA in HTML</a></li>
-</ul>
+- [Accessibility Object Model](https://wicg.github.io/aom/spec/)
+- [ARIA in HTML](https://w3c.github.io/html-aria/)
 
-<section id="Quick_links">
-    <ol>
-        <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}</li>
-    </ol>
-</section>
+1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

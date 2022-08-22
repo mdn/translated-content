@@ -8,47 +8,44 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 ---
-<h3 id="Description" name="Description">説明</h3>
+### 説明
 
-<p class="p1">このテクニックは、<code><a href="https://www.w3.org/WAI/PF/aria-1.1/roles#link">link</a></code> ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。</p>
+このテクニックは、[`link`](https://www.w3.org/WAI/PF/aria-1.1/roles#link) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
 
-<p class="p1"><code>link</code> ロールは、アプリケーションまたは外部にあるリソースへのハイパーリンクを作成する要素を識別するために使用されます。 このロールが要素に追加されると、タブを使用してリンクへのフォーカスを変更したり、リンクの実行にスペースやエンターを使用することができます。</p>
+`link` ロールは、アプリケーションまたは外部にあるリソースへのハイパーリンクを作成する要素を識別するために使用されます。 このロールが要素に追加されると、タブを使用してリンクへのフォーカスを変更したり、リンクの実行にスペースやエンターを使用することができます。
 
-<div class="note"><strong>注</strong>: 可能であれば、ネイティブ要素は古いユーザーエージェントや支援技術によって広くサポートされているため、<code>link</code> ロールではなくネイティブの {{HTMLElement("a")}} 要素を使用することをお勧めします。 ネイティブ {{HTMLElement("a")}} 要素は、追加のカスタマイズを必要とせずに、デフォルトでキーボードとフォーカスの要件もサポートしています。</div>
+> **Note:** **注**: 可能であれば、ネイティブ要素は古いユーザーエージェントや支援技術によって広くサポートされているため、`link` ロールではなくネイティブの {{HTMLElement("a")}} 要素を使用することをお勧めします。 ネイティブ {{HTMLElement("a")}} 要素は、追加のカスタマイズを必要とせずに、デフォルトでキーボードとフォーカスの要件もサポートしています。
 
-<p class="p1"><code><a class="external" href="https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex">tabindex</a></code> 属性は、タブの順序で要素の位置を直接指定するために、このロールで任意に使用できます。</p>
+[`tabindex`](https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex) 属性は、タブの順序で要素の位置を直接指定するために、このロールで任意に使用できます。
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
+### ユーザーエージェントと支援技術への影響
 
-<p class="p1">要素に <code>link</code> ロールが追加された場合、またはそのような要素が可視になる場合、ユーザーエージェントは以下を行うべきです。</p>
+要素に `link` ロールが追加された場合、またはそのような要素が可視になる場合、ユーザーエージェントは以下を行うべきです。
 
-<ul class="ul1">
- <li class="li2">オペレーティングシステムのアクセシビリティ API で <code>link</code> ロールを持つ要素を公開します。</li>
- <li class="li2">オペレーティングシステムのアクセシビリティ API がサポートされている場合は、アクセシビリティ API を使用してアクセス可能なリンクイベントを発生させます。</li>
-</ul>
+- オペレーティングシステムのアクセシビリティ API で `link` ロールを持つ要素を公開します。
+- オペレーティングシステムのアクセシビリティ API がサポートされている場合は、アクセシビリティ API を使用してアクセス可能なリンクイベントを発生させます。
 
-<p class="p1">支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。</p>
+支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。
 
-<ul class="ul1">
- <li class="li2">スクリーンリーダーは、リンクがフォーカスされているときに、リンクであるという事実とともに、リンクまたはそのラベルのテキストをアナウンスするべきです。 ARIA リンクは通常のリンクと同様にスクリーンリーダーの「リンクのリスト」機能に含まれているべきで、「リンクのアクティブ化」や「リンクへの移動」など、このダイアログのリストに対するアクションは通常のリンクと同じように行われるべきです。</li>
- <li class="li2">スクリーン拡大鏡はリンクを拡大することがあります。</li>
-</ul>
+- スクリーンリーダーは、リンクがフォーカスされているときに、リンクであるという事実とともに、リンクまたはそのラベルのテキストをアナウンスするべきです。 ARIA リンクは通常のリンクと同様にスクリーンリーダーの「リンクのリスト」機能に含まれているべきで、「リンクのアクティブ化」や「リンクへの移動」など、このダイアログのリストに対するアクションは通常のリンクと同じように行われるべきです。
+- スクリーン拡大鏡はリンクを拡大することがあります。
 
-<p> </p>
+**注**: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
-<p><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</p>
+### 例
 
-<h3 id="Examples" name="Examples">例</h3>
+#### 例 1: HTML コードにロールを追加する
 
-<h4 id="Example_1_Adding_the_role_in_the_HTML_code" name="Example_1_Adding_the_role_in_the_HTML_code">例 1: HTML コードにロールを追加する</h4>
+以下のスニペットは、`link` ロールが html ソースコードに直接どのように追加されるかを示しています。
 
-<p class="p2">以下のスニペットは、<code>link</code> ロールが html ソースコードに直接どのように追加されるかを示しています。</p>
+```html
+<div role="link">リンク</div>
+```
 
-<pre class="brush: html">&lt;div role="link"&gt;リンク&lt;/div&gt;</pre>
+#### 例 2: span を使用したアプリケーションからのアクセス可能なリンクの構築
 
-<h4 class="p1" id="Example_2_Accessible_link_build_from_an_application_using_span" name="Example_2_Accessible_link_build_from_an_application_using_span">例 2: span を使用したアプリケーションからのアクセス可能なリンクの構築</h4>
-
-<pre class="brush: html">&lt;script type="text/javascript"&gt;
+```html
+<script type="text/javascript">
 sap = {ui:{keycodes:{SPACE:32, ENTER:13 }}};
 //リンク上のクリックとキーダウンを処理する
 function navigateLink(evt) {
@@ -58,41 +55,33 @@ function navigateLink(evt) {
         if (ref) window.open(ref.getAttribute("href"),"_blank");
     }
 }
-&lt;/script&gt;
+</script>
 
-&lt;body role="application"&gt;
+<body role="application">
 
-    &lt;h3&gt;span を使った単純なリンクの構築&lt;/h3&gt;
-    &lt;span href="http://www.w3c.org" onkeydown="navigateLink(event)" onclick="navigateLink(event)" tabindex="0" id="link1" role="link" class="link"&gt;
+    <h3>span を使った単純なリンクの構築</h3>
+    <span href="http://www.w3c.org" onkeydown="navigateLink(event)" onclick="navigateLink(event)" tabindex="0" id="link1" role="link" class="link">
       スペースバーまたはエンターキーを使用してこのリンクをアクティブ化します。
-    &lt;/span&gt;
-&lt;/body&gt;
-</pre>
+    </span>
+</body>
+```
 
-<h3 id="Notes" name="Notes">注</h3>
+### 注
 
-<p class="p1">リンクを押すとアクションがトリガーされますが、ブラウザーのフォーカスは変更されず、新しいページに移動することもありません。 <code>link</code> ロールの代わりに <code><a href="http://www.w3.org/TR/wai-aria/#button">button</a></code> ロールを使用することを検討してください。</p>
+リンクを押すとアクションがトリガーされますが、ブラウザーのフォーカスは変更されず、新しいページに移動することもありません。 `link` ロールの代わりに [`button`](http://www.w3.org/TR/wai-aria/#button) ロールを使用することを検討してください。
 
-<h3 class="p1" id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h3>
+### 使用された ARIA 属性
 
-<ul class="ul1">
- <li class="li2"><a class="external" href="http://www.w3.org/TR/wai-aria/#link">link</a></li>
-</ul>
+- [link](http://www.w3.org/TR/wai-aria/#link)
 
-<h3 class="p1" id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h3>
+### 関連する ARIA 技術
 
-<ul class="ul1">
- <li class="li2"><a class="external" href="https://www.w3.org/TR/wai-aria/#button">button</a> ロール</li>
-</ul>
+- [button](https://www.w3.org/TR/wai-aria/#button) ロール
 
-<h3 id="Compatibility" name="Compatibility">互換性</h3>
+### 互換性
 
-<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
 
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+### その他のリソース
 
-<ul>
- <li>
-  <p class="p1">ARIA のベストプラクティス - link ロール: <a class="external" href="https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex">https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex</a></p>
- </li>
-</ul>
+- ARIA のベストプラクティス - link ロール: <https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex>
