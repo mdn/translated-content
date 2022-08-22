@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web
   - copy
+browser-compat: api.Element.copy_event
 translation_of: Web/API/Document/copy_event
 ---
 {{APIRef}}
@@ -54,7 +55,7 @@ document.addEventListener('copy', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.copy_event")}}
+{{Compat}}
 
 ## 関連情報
 

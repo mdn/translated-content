@@ -12,6 +12,7 @@ tags:
   - elementsFromPoint()
   - shadow dom
   - メソッド
+browser-compat: api.Document.elementsFromPoint
 translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
@@ -80,7 +81,7 @@ if (document.elementsFromPoint) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}
+{{Compat}}
 
 ## 関連情報
 

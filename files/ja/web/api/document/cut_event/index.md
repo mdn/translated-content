@@ -9,6 +9,7 @@ tags:
   - Event
   - Reference
   - Web
+browser-compat: api.Element.cut_event
 translation_of: Web/API/Document/cut_event
 ---
 {{APIRef}}
@@ -54,7 +55,7 @@ document.addEventListener('cut', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.cut_event")}}
+{{Compat}}
 
 ## 関連情報
 

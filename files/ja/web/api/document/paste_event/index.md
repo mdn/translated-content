@@ -9,6 +9,7 @@ tags:
   - Web
   - paste
   - イベント
+browser-compat: api.Element.paste_event
 translation_of: Web/API/Document/paste_event
 ---
 {{APIRef}}
@@ -54,7 +55,7 @@ document.addEventListener('paste', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.paste_event")}}
+{{Compat}}
 
 ## 関連情報
 

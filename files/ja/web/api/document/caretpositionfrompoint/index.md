@@ -9,6 +9,7 @@ tags:
   - Reference
   - ShadowRoot
   - caretPositionFromPoint()
+browser-compat: api.Document.caretPositionFromPoint
 translation_of: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 ---
@@ -92,4 +93,4 @@ window.onload = function (){
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.caretPositionFromPoint")}}
+{{Compat}}
