@@ -80,7 +80,7 @@ MDN 上的很多工作围绕于文档及示例代码的编写，不过，通过�
 
 ## 阅读手册
 
-好的开源项目总会让贡献者文档随时可供查阅。对于 GitHub 项目，内容往往存在于仓库的 CONTRIBUTING.md 文件中，或者项目的 README.md 文件中。作为文档类项目，MDN content 有一个 [README](https://github.com/mdn/content/blob/main/README.md) 文件和一整套对于网站本身的贡献者文档（请参阅[为 MDN 做贡献](/zh-CN/docs/MDN/Community)）。
+好的开源项目总会让贡献者文档随时可供查阅。对于 GitHub 项目，内容往往存在于仓库的 CONTRIBUTING.md 文件中，或者项目的 README.md 文件中。作为文档类项目，MDN content 有一个 [README](https://github.com/mdn/content/blob/main/README.md) 文件和一整套对于网站本身的贡献者文档（请参阅[为 MDN Web 文档做贡献](/zh-CN/docs/MDN/Community/Contributing)）。
 
 不要害怕寻求帮助，但总是尝试在提问之前，先自己寻找答案。这样可以让自己独立积累对项目的知识，而且不会给其他贡献者带来不必要的负担。
 
