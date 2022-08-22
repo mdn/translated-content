@@ -26,7 +26,7 @@ original_slug: MDN/Contribute/Localize
 ### 法语（fr）
 
 - 讨论组：[Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- 目前的志愿者：[cw118](https://github.com/cw118)、[Jb Audras](https://github.com/audrasjb)、[SphinxKnight](https://github.com/SphinxKnight)、[tristantheb](https://github.com/tristantheb)
+- 目前的志愿者：[cw118](https://github.com/cw118)、[SphinxKnight](https://github.com/SphinxKnight)、[tristantheb](https://github.com/tristantheb)
 
 ### 日语（ja）
 

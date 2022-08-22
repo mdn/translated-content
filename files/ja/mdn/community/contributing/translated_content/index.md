@@ -34,7 +34,7 @@ l10n:
 ### フランス語 (fr)
 
 - Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- 現在の貢献者: [cw118](https://github.com/cw118), [Jb Audras](https://github.com/audrasjb), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- 現在の貢献者: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### 日本語 (ja)
 
