@@ -8,78 +8,58 @@ tags:
   - SVG Container
 translation_of: Web/SVG/Element/g
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>&lt;g&gt;</code></strong> <a href="/ja/docs/Web/SVG">SVG</a> 要素は、他のSVG要素をグループ化するために用いられるコンテナです。</p>
+**`<g>`** [SVG](/ja/docs/Web/SVG) 要素は、他の SVG 要素をグループ化するために用いられるコンテナです。
 
-<p><code>&lt;g&gt;</code> 要素に適用された変形はその全ての子要素に対して実行されます。適用された属性は子要素に継承されます。加えて、多数のオブジェクトを グループかしておくと後に {{SVGElement("use")}} 要素で参照することができます。</p>
+`<g>` 要素に適用された変形はその全ての子要素に対して実行されます。適用された属性は子要素に継承されます。加えて、多数のオブジェクトを グループかしておくと後に {{SVGElement("use")}} 要素で参照することができます。
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Using g to inherit presentation attributes --&gt;
-  &lt;g fill="white" stroke="green" stroke-width="5"&gt;
-    &lt;circle cx="40" cy="40" r="25" /&gt;
-    &lt;circle cx="60" cy="60" r="25" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Using g to inherit presentation attributes -->
+  <g fill="white" stroke="green" stroke-width="5">
+    <circle cx="40" cy="40" r="25" />
+    <circle cx="60" cy="60" r="25" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Exemple', 100, '100%')}}</p>
-</div>
+{{EmbedLiveSample('Exemple', 100, '100%')}}
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素はグローバル属性のみを含みます。</p>
+この要素はグローバル属性のみを含みます。
 
-<h3 id="Global_attributes" name="Global_attributes">グローバル属性</h3>
+### グローバル属性
 
-<dl>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Core">コア属性</a></dt>
- <dd><small>特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Styling">スタイリング属性</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Conditional_Processing">条件処理属性</a></dt>
- <dd><small>特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>イベント属性</dt>
- <dd><small><a href="/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">グローバルイベント属性</a>, <a href="/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">グラフィカルイベント属性</a></small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Presentation">プレゼンテーション属性</a></dt>
- <dd><small>特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Aria属性</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+  - : 特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [スタイリング属性](/ja/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- イベント属性
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+  - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- Aria 属性
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Usage_notes" name="Usage_notes">利用ノート</h2>
+## 利用ノート
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
+## 仕様
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+| 仕様                                                                         | 状態                     | コメント   |
+| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName("SVG2", "struct.html#GElement", "&lt;g&gt;")}} | {{Spec2("SVG2")}} |            |
+| {{SpecName("SVG1.1", "struct.html#Groups", "&lt;g&gt;")}} | {{Spec2("SVG1.1")}} | 最初の定義 |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#GElement", "&lt;g&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#Groups", "&lt;g&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザ実装状況
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
-
-<p>{{Compat("svg.elements.g")}}</p>
+{{Compat("svg.elements.g")}}

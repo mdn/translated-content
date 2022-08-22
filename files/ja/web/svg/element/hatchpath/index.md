@@ -9,62 +9,58 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/hatchpath
 ---
-<div>{{SVGRef}}{{SeeCompatTable}}</div>
+{{SVGRef}}{{SeeCompatTable}}
 
-<p><strong><code>&lt;hatchpath&gt;</code></strong> は <a href="/ja/docs/Web/SVG">SVG</a> の要素で、 {{SVGElement("hatch")}} 要素で使用されるハッチパスを定義します。</p>
+**`<hatchpath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGElement("hatch")}} 要素で使用されるハッチパスを定義します。
 
-<h2 id="Usage_context" name="Usage_context">使用場所</h2>
+## 使用場所
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<h3 id="Global_attributes" name="Global_attributes">グローバル属性</h3>
+### グローバル属性
 
-<ul>
- <li><a href="/ja/docs/Web/SVG/Attribute#Core_attributes">コア属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Global_event_attributes">グローバルイベント属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Presentation_attributes">プレゼンテーション属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Style_attributes">スタイル属性</a></li>
-</ul>
+- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
+- [グローバルイベント属性](/ja/docs/Web/SVG/Attribute#Global_event_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
+- [スタイル属性](/ja/docs/Web/SVG/Attribute#Style_attributes)
 
-<h3 id="Specific_attributes" name="Specific_attributes">固有の属性</h3>
+### 固有の属性
 
-<ul>
- <li>{{SVGAttr("d")}}</li>
- <li>{{SVGAttr("offset")}}</li>
-</ul>
+- {{SVGAttr("d")}}
+- {{SVGAttr("offset")}}
 
-<h2 id="DOM_Interface" name="DOM_Interface">DOM インターフェイス</h2>
+## DOM インターフェイス
 
-<p>この要素は {{domxref("SVGHatchpathElement")}} インターフェイスを実装しています。</p>
+この要素は {{domxref("SVGHatchpathElement")}} インターフェイスを実装しています。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[5] notranslate">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;hatch id="hatch" hatchUnits="userSpaceOnUse" pitch="5"
-        rotate="135"&gt;
-      &lt;hatchpath stroke="#a080ff" stroke-width="2"/&gt;
-    &lt;/hatch&gt;
-  &lt;/defs&gt;
+```html
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <hatch id="hatch" hatchUnits="userSpaceOnUse" pitch="5"
+        rotate="135">
+      <hatchpath stroke="#a080ff" stroke-width="2"/>
+    </hatch>
+  </defs>
 
-  &lt;rect fill="url(#hatch)" stroke="black" stroke-width="2"
-     x="10%" y="10%" width="80%" height="80%" /&gt;
-&lt;/svg&gt;</pre>
+  <rect fill="url(#hatch)" stroke="black" stroke-width="2"
+     x="10%" y="10%" width="80%" height="80%" />
+</svg>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 200, 200)}}</p>
+{{EmbedLiveSample("Example", 200, 200)}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("svg.elements.hatchpath")}}</p>
+{{Compat("svg.elements.hatchpath")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{SVGElement("hatch")}}</li>
-</ul>
+- {{SVGElement("hatch")}}

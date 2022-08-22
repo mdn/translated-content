@@ -3,400 +3,359 @@ title: class
 slug: Web/SVG/Attribute/href
 translation_of: Web/SVG/Attribute/href
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>href</code></strong> attribute defines a link to a resource as a reference <a href="/ja/docs/Web/SVG/Content_type#URL">URL</a>. The exact meaning of that link depends on the context of each element using it.</p>
+The **`href`** attribute defines a link to a resource as a reference [URL](/ja/docs/Web/SVG/Content_type#URL). The exact meaning of that link depends on the context of each element using it.
 
-<div class="note">
-<p><strong>Note:</strong> Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the <code>href</code> attribute.</p>
-</div>
+> **Note:** Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the `href` attribute.
 
-<p>Fifteen elements are using this attribute: {{SVGElement("a")}}, {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("feImage")}}, {{SVGElement("image")}}, {{SVGElement("linearGradient")}}, {{SVGElement("mpath")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("set")}}, {{SVGElement("textPath")}}, and {{SVGElement("use")}}</p>
+Fifteen elements are using this attribute: {{SVGElement("a")}}, {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("feImage")}}, {{SVGElement("image")}}, {{SVGElement("linearGradient")}}, {{SVGElement("mpath")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("set")}}, {{SVGElement("textPath")}}, and {{SVGElement("use")}}
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: html; hightlight[2]">&lt;svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;a href="https://developer.mozilla.org/"&gt;&lt;text x="10" y="25"&gt;MDN Web Docs&lt;/text&gt;&lt;/a&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+  <a href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
+</svg>
+```
 
-<p>{{EmbedLiveSample("topExample", "320", "100")}}</p>
-</div>
+{{EmbedLiveSample("topExample", "320", "100")}}
 
-<h2 id="In_SVG">In SVG</h2>
+## In SVG
 
-<h3 id="a">a</h3>
+### a
 
-<p>For {{SVGElement("a")}}, <code>href</code> defines the location of the referenced object, expressed as a URL reference.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="animate_animateMotion_animateTransform_set">animate, animateMotion, animateTransform, set</h3>
-
-<p>For the {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, <code>href</code> defines a URL referring to the element which is the target of this animation element and which therefore will be modified over time.</p>
-
-<p>The URL must point to exactly one target element which is capable of being the target of the given animation element. If the URL points to multiple target elements, if the given target element is not capable of being a target of the given animation element, or if the given target element is not part of the current document, then the animation element will not affect any target element. However, the animation element will still operate normally with regard to its timing properties. Specifically, TimeEvents are dispatched and the animation element can be used as syncbase in an identical fashion to when the URL refers to a valid target element.</p>
-
-<p>If the <code>href</code> attribute or the deprecated {{SVGAttr("xlink:href")}} attribute is not provided, then the target element will be the immediate parent element of the current animation element. If both <code>xlink:href</code> and <code>href</code> are specified, the value of the latter attribute is used.</p>
-
-<p>Refer to the descriptions of the individual animation elements for any restrictions on what types of elements can be targets of particular types of animations.</p>
-
-<p>Except for any SVG-specific rules explicitly mentioned in this specification, the normative definition for this attribute is the {{Glossary("SMIL")}} Animation specification. In particular, see <a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/#SpecifyingAnimationTarget">SMIL Animation: Specifying the animation target</a>.</p>
+For {{SVGElement("a")}}, `href` defines the location of the referenced object, expressed as a URL reference.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="discard">discard</h3>
+### animate, animateMotion, animateTransform, set
 
-<p>For {{SVGElement("discard")}}, <code>href</code> defines a URL referring the target element to discard. See the <a href="#href_on_animation_elements">definition of <code>href</code> on animation elements</a> for details on identifying a target element.</p>
+For the {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `href` defines a URL referring to the element which is the target of this animation element and which therefore will be modified over time.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Unlike other animation elements, the <code>&lt;discard&gt;</code> element does not support the deprecated {{SVGAttr("xlink:href")}} attribute.</p>
-</div>
+The URL must point to exactly one target element which is capable of being the target of the given animation element. If the URL points to multiple target elements, if the given target element is not capable of being a target of the given animation element, or if the given target element is not part of the current document, then the animation element will not affect any target element. However, the animation element will still operate normally with regard to its timing properties. Specifically, TimeEvents are dispatched and the animation element can be used as syncbase in an identical fashion to when the URL refers to a valid target element.
 
-<p>Note that if the target element is not part of the current SVG document fragment, then whether the target element will be removed or not is defined by the host language.</p>
+If the `href` attribute or the deprecated {{SVGAttr("xlink:href")}} attribute is not provided, then the target element will be the immediate parent element of the current animation element. If both `xlink:href` and `href` are specified, the value of the latter attribute is used.
 
-<p>If the <code>href</code> attribute is not provided, then the target element will be the immediate parent element of the <code>&lt;discard&gt;</code> element.</p>
+Refer to the descriptions of the individual animation elements for any restrictions on what types of elements can be targets of particular types of animations.
+
+Except for any SVG-specific rules explicitly mentioned in this specification, the normative definition for this attribute is the {{Glossary("SMIL")}} Animation specification. In particular, see [SMIL Animation: Specifying the animation target](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#SpecifyingAnimationTarget).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="feImage">feImage</h3>
+### discard
 
-<p>For {{SVGElement("feImage")}}, <code>href</code> defines a URL referring to an image resource or to an element. If both, the {{SVGAttr("xlink:href")}} and the <code>href</code> attribute are specified, the latter overrides the former.</p>
+For {{SVGElement("discard")}}, `href` defines a URL referring the target element to discard. See the [definition of `href` on animation elements](#href_on_animation_elements) for details on identifying a target element.
+
+> **Note:** Unlike other animation elements, the `<discard>` element does not support the deprecated {{SVGAttr("xlink:href")}} attribute.
+
+Note that if the target element is not part of the current SVG document fragment, then whether the target element will be removed or not is defined by the host language.
+
+If the `href` attribute is not provided, then the target element will be the immediate parent element of the `<discard>` element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="image">image</h3>
+### feImage
 
-<p>For {{SVGElement("image")}}, <code>href</code> defines a URL referring to the image to render.</p>
+For {{SVGElement("feImage")}}, `href` defines a URL referring to an image resource or to an element. If both, the {{SVGAttr("xlink:href")}} and the `href` attribute are specified, the latter overrides the former.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h4 id="Example">Example</h4>
+### image
 
-<div id="imageExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+For {{SVGElement("image")}}, `href` defines a URL referring to the image to render.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Example
+
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;image href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <image href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("imageExample", 200, 250)}}</p>
-</div>
+{{EmbedLiveSample("imageExample", 200, 250)}}
 
-<h3 id="linearGradient">linearGradient</h3>
+### linearGradient
 
-<p>For {{SVGElement("linearGradient")}}, <code>href</code> defines URL referring to a template gradient element; to be valid, the reference must be to a different <code>&lt;linearGradient&gt;</code> or {{SVGElement("radialGradient")}} element.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="mpath">mpath</h3>
-
-<p>For {{SVGElement("mpath")}}, <code>href</code> defines a URL referring to the {{SVGElement("path")}} element or <a href="/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes">basic shape</a> which defines the motion path.</p>
+For {{SVGElement("linearGradient")}}, `href` defines URL referring to a template gradient element; to be valid, the reference must be to a different `<linearGradient>` or {{SVGElement("radialGradient")}} element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="pattern">pattern</h3>
+### mpath
 
-<p>For {{SVGElement("pattern")}}, <code>href</code> defines a URL referring to a different <code>&lt;pattern&gt;</code> element within the current SVG document. Any attributes which are defined on the referenced element which are not defined on this element are inherited by this element. If this element has no children, and the referenced element does (possibly due to its own <code>href</code> attribute), then this element inherits the children from the referenced element. Inheritance can be indirect to an arbitrary level; thus, if the referenced element inherits attributes or children due to its own <code>href</code> attribute, then the current element can inherit those attributes or children. On the {{SVGElement("pattern")}} element, the <code>href</code> attribute is animatable.</p>
+For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes) which defines the motion path.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="radialGradient">radialGradient</h3>
+### pattern
 
-<p>For {{SVGElement("radialGradient")}}, <code>href</code> defines URL referring to a template gradient element; to be valid, the reference must be to a different {{SVGElement("linearGradient")}} or <code>&lt;radialGradient&gt;</code> element.</p>
+For {{SVGElement("pattern")}}, `href` defines a URL referring to a different `<pattern>` element within the current SVG document. Any attributes which are defined on the referenced element which are not defined on this element are inherited by this element. If this element has no children, and the referenced element does (possibly due to its own `href` attribute), then this element inherits the children from the referenced element. Inheritance can be indirect to an arbitrary level; thus, if the referenced element inherits attributes or children due to its own `href` attribute, then the current element can inherit those attributes or children. On the {{SVGElement("pattern")}} element, the `href` attribute is animatable.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="script">script</h3>
+### radialGradient
 
-<p>For {{SVGElement("script")}}, <code>href</code> defines a URL referring to an external resource containing the script code.</p>
+For {{SVGElement("radialGradient")}}, `href` defines URL referring to a template gradient element; to be valid, the reference must be to a different {{SVGElement("linearGradient")}} or `<radialGradient>` element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="textPath">textPath</h3>
+### script
 
-<p>For {{SVGElement("textPath")}}, <code>href</code> defines a URL referring to the {{SVGElement("path")}} element or <a href="/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes">basic shape</a> onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the <code>href</code> attribute is animatable.</p>
+For {{SVGElement("script")}}, `href` defines a URL referring to an external resource containing the script code.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="use">use</h3>
+### textPath
 
-<p>For {{SVGElement("use")}}, <code>href</code> defines a URL referring to an element or fragment within an SVG document to be cloned.</p>
-
-<p>The <code>&lt;use&gt;</code> element can reference an entire SVG document by specifying an <code>href</code> value without a fragment. Such references are taken to be referring to the root element of the referenced document.</p>
+For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes) onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the `href` attribute is animatable.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/ja/docs/Web/SVG/Content_type#URL">&lt;url&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+### use
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "linking.html#AElementHrefAttribute", "href for &lt;a&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("a")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#HrefAttribute", "href for &lt;animate&gt;, &lt;animateMotion&gt;, &lt;animateTransform&gt;, and &lt;set&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Defines <code>href</code> for animation elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#DiscardElementHrefAttribute", "href for &lt;discard&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("discard")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feimage-href", "href for &lt;feImage&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("feImage")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "embedded.html#ImageElementHrefAttribute", "href for &lt;image&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("image")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#LinearGradientElementHrefAttribute", "href for &lt;linearGradient&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("linearGradient")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#MPathElementHrefAttribute", "href for &lt;mpath&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("mpath")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#PatternElementHrefAttribute", "href for &lt;pattern&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("pattern")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#RadialGradientElementHrefAttribute", "href for &lt;radialGradient&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("radialGradient")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "interact.html#ScriptElementHrefAttribute", "href for &lt;script&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("script")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextPathElementHrefAttribute", "href for &lt;textPath&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("textPath")}} element.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#UseElementHrefAttribute", "href for &lt;use&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("use")}} element.</td>
-  </tr>
- </tbody>
+For {{SVGElement("use")}}, `href` defines a URL referring to an element or fragment within an SVG document to be cloned.
+
+The `<use>` element can reference an entire SVG document by specifying an `href` value without a fragment. Such references are taken to be referring to the root element of the referenced document.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/ja/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Specifications
 
+| Specification                                                                                                                                                                                    | Status                                   | Comment                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------- |
+| {{SpecName("SVG2", "linking.html#AElementHrefAttribute", "href for &lt;a&gt;")}}                                                                                     | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("a")}} element.                     |
+| {{SpecName("SVG Animations 2", "#HrefAttribute", "href for &lt;animate&gt;, &lt;animateMotion&gt;, &lt;animateTransform&gt;, and &lt;set&gt;")}} | {{Spec2("SVG Animations 2")}} | Defines `href` for animation elements.                                       |
+| {{SpecName("SVG Animations 2", "#DiscardElementHrefAttribute", "href for &lt;discard&gt;")}}                                                                     | {{Spec2("SVG Animations 2")}} | Defines `href` for the {{SVGElement("discard")}} element.             |
+| {{SpecName("Filters 1.0", "#element-attrdef-feimage-href", "href for &lt;feImage&gt;")}}                                                                             | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("feImage")}} element.             |
+| {{SpecName("SVG2", "embedded.html#ImageElementHrefAttribute", "href for &lt;image&gt;")}}                                                                         | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("image")}} element.             |
+| {{SpecName("SVG2", "pservers.html#LinearGradientElementHrefAttribute", "href for &lt;linearGradient&gt;")}}                                                 | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("linearGradient")}} element. |
+| {{SpecName("SVG Animations 2", "#MPathElementHrefAttribute", "href for &lt;mpath&gt;")}}                                                                             | {{Spec2("SVG Animations 2")}} | Defines `href` for the {{SVGElement("mpath")}} element.             |
+| {{SpecName("SVG2", "pservers.html#PatternElementHrefAttribute", "href for &lt;pattern&gt;")}}                                                                     | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("pattern")}} element.             |
+| {{SpecName("SVG2", "pservers.html#RadialGradientElementHrefAttribute", "href for &lt;radialGradient&gt;")}}                                                 | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("radialGradient")}} element. |
+| {{SpecName("SVG2", "interact.html#ScriptElementHrefAttribute", "href for &lt;script&gt;")}}                                                                         | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("script")}} element.             |
+| {{SpecName("SVG2", "text.html#TextPathElementHrefAttribute", "href for &lt;textPath&gt;")}}                                                                         | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("textPath")}} element.         |
+| {{SpecName("SVG2", "struct.html#UseElementHrefAttribute", "href for &lt;use&gt;")}}                                                                                 | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("use")}} element.                 |
 
+## Browser compatibility
 
-<p>{{Compat("svg.attributes.href")}}</p>
+{{Compat("svg.attributes.href")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("xlink:href")}}

@@ -3,112 +3,80 @@ title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>stroke-dashoffset</code></strong>属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。</p>
+**`stroke-dashoffset`**属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。
 
-<p class="note"><strong>Note:</strong> プレゼンテーション属性として、<strong><code>stroke-dashoffset</code></strong>はCSSプロパティとして使用することができます。</p>
+> **Note:** プレゼンテーション属性として、**`stroke-dashoffset`**は CSS プロパティとして使用することができます。
 
-<p>プレゼンテーション属性として、それは、いくつかの要素に適用させることができますが、次の12個の要素にのみ効果があります。</p>
+プレゼンテーション属性として、それは、いくつかの要素に適用させることができますが、次の 12 個の要素にのみ効果があります。
 
-<p> {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('line')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
+{{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('line')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html notranslate">&lt;svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- No dash array --&gt;
-  &lt;line x1="0" y1="1" x2="30" y2="1" stroke="black" /&gt;
+```html
+<svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- No dash array -->
+  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
-  &lt;!-- No dash offset --&gt;
-  &lt;line x1="0" y1="3" x2="30" y2="3" stroke="black"
-        stroke-dasharray="3 1" /&gt;
+  <!-- No dash offset -->
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
+        stroke-dasharray="3 1" />
 
-  &lt;!--
+  <!--
   The start of the dash array computation
   is pulled by 3 user units
-  --&gt;
-  &lt;line x1="0" y1="5" x2="30" y2="5" stroke="black"
+  -->
+  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
         stroke-dasharray="3 1"
-        stroke-dashoffset="3" /&gt;
+        stroke-dashoffset="3" />
 
-  &lt;!--
+  <!--
   The start of the dash array computation
   is pushed by 3 user units
-  --&gt;
-  &lt;line x1="0" y1="7" x2="30" y2="7" stroke="black"
+  -->
+  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
         stroke-dasharray="3 1"
-        stroke-dashoffset="-3" /&gt;
+        stroke-dashoffset="-3" />
 
-  &lt;!--
+  <!--
   The start of the dash array computation
   is pulled by 1 user units which ends up
   in the same rendering as the previous example
-  --&gt;
-  &lt;line x1="0" y1="9" x2="30" y2="9" stroke="black"
+  -->
+  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
         stroke-dasharray="3 1"
-        stroke-dashoffset="1" /&gt;
+        stroke-dashoffset="1" />
 
-  &lt;!--
+  <!--
   the following red lines highlight the
   offset of the dash array for each line
-  --&gt;
-  &lt;path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/ja/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong> | <strong><a href="/ja/SVG/Content_type#Length" title="en/SVG/Content_type#Length"><span>&lt;length&gt;</span></a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **[\<percentage>](/ja/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage")** \| **[\<length>](/ja/SVG/Content_type#Length "en/SVG/Content_type#Length")** |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Default value | `0`                                                                                                                                                                |
+| Animatable    | Yes                                                                                                                                                                |
 
-<p>The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a <a href="/ja/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> is used, the value is resolved as a percentage of the current viewport.</p>
+The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/ja/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") is used, the value is resolved as a percentage of the current viewport.
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("svg.attributes.presentation.stroke-dashoffset")}}
 
+## Specification
 
-<p>{{Compat("svg.attributes.presentation.stroke-dashoffset")}}</p>
-
-<h2 id="Specification">Specification</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for shapes and texts</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for shapes and texts</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                   | Comment                                 |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------- |
+| {{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG2")}} | Definition for shapes and texts         |
+| {{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG1.1")}} | Initial definition for shapes and texts |
