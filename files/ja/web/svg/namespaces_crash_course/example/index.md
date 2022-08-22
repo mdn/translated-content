@@ -6,16 +6,20 @@ tags:
   - XML
 translation_of: Web/SVG/Namespaces_Crash_Course/Example
 ---
-<p>この例で、私達は <a href="/ja/docs/XHTML">XHTML</a> 、 <a href="/ja/docs/Web/SVG">SVG</a> 、 <a href="/ja/docs/Web/JavaScript">JavaScript</a> と <a href="/ja/docs/DOM">DOM</a> 2 を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。</p>
-<p>これは完全に Flash やその他のベンダ特有の拡張を用いずに、 W3C 標準- XHTML と SVG と JavaScript で実現されています。これは Firefox 1.5 以上で動作します。</p>
-<p><a class="internal button liveSample" href="http://developer.mozilla.org/samples/svg/swarm-of-motes.xhtml">実行例を表示</a></p>
-<pre class="brush:xml">&lt;?xml version='1.0'?&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:svg="http://www.w3.org/2000/svg"&gt;
-	&lt;head&gt;
-	&lt;title&gt;ほこりの群&lt;/title&gt;
-	&lt;style type='text/css'&gt;
-	&lt;![CDATA[
+この例で、私達は [XHTML](/ja/docs/XHTML) 、 [SVG](/ja/docs/Web/SVG) 、 [JavaScript](/ja/docs/Web/JavaScript) と [DOM](/ja/docs/DOM) 2 を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。
+
+これは完全に Flash やその他のベンダ特有の拡張を用いずに、 W3C 標準- XHTML と SVG と JavaScript で実現されています。これは Firefox 1.5 以上で動作します。
+
+[実行例を表示](http://developer.mozilla.org/samples/svg/swarm-of-motes.xhtml)
+
+```xml
+<?xml version='1.0'?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:svg="http://www.w3.org/2000/svg">
+	<head>
+	<title>ほこりの群</title>
+	<style type='text/css'>
+	<![CDATA[
 		label, input
 		{
 			width: 150px;
@@ -33,56 +37,56 @@ translation_of: Web/SVG/Namespaces_Crash_Course/Example
 		{
 			clear: left;
 		}
-	]]&gt;
-	&lt;/style&gt;
-	&lt;/head&gt;
-	&lt;body onload='update()'&gt;
-		&lt;svg:svg id='display' width='400' height='300'&gt;
-			&lt;svg:circle id='cursor' cx='200'
-cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
-		&lt;/svg:svg&gt;
+	]]>
+	</style>
+	</head>
+	<body onload='update()'>
+		<svg:svg id='display' width='400' height='300'>
+			<svg:circle id='cursor' cx='200'
+cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
+		</svg:svg>
 
-		&lt;p&gt;ほこりの群れは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組みあわせることで、このとても自然に見える動きができます。&lt;/p&gt;
+		<p>ほこりの群れは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組みあわせることで、このとても自然に見える動きができます。</p>
 
-		&lt;p&gt;
-		これは完全に Flash やその他のベンダ特有の拡張を用いずに、 W3C 標準 – XHTML / SVG / JavaScript - によって実現されています。現在のところ、これは Mozilla Firefox 1.5 以上で動作するでしょう。&lt;/p&gt;
+		<p>
+		これは完全に Flash やその他のベンダ特有の拡張を用いずに、 W3C 標準 – XHTML / SVG / JavaScript - によって実現されています。現在のところ、これは Mozilla Firefox 1.5 以上で動作するでしょう。</p>
 
-		&lt;div&gt;
-		(C) 2006 &lt;a id='emailme' href='#'&gt;Nick Johnson&lt;/a&gt;
+		<div>
+		(C) 2006 <a id='emailme' href='#'>Nick Johnson</a>
 
-		&lt;script type='text/javascript'&gt;
-		&lt;![CDATA[
+		<script type='text/javascript'>
+		<![CDATA[
 			// spam ボット撃退
 			var email = '@riovia.net';
 			email ='nick' + email;
 			document.getElementById('emailme').href = 'mailto:'+email;
-		]]&gt;
-		&lt;/script&gt;
+		]]>
+		</script>
 		This software is free for you to use in any way whatsoever,
-		and comes with no warranty at all.&lt;/div&gt;
+		and comes with no warranty at all.</div>
 
-		&lt;form action="" onsubmit="return false;"&gt;
-			&lt;p&gt;
-			&lt;label&gt;ほこりの数:&lt;/label&gt;
-				&lt;input id='num_motes' value='5'/&gt;
-				&lt;br/&gt;
+		<form action="" onsubmit="return false;">
+			<p>
+			<label>ほこりの数:</label>
+				<input id='num_motes' value='5'/>
+				<br/>
 
-			&lt;label&gt;最大速度:&lt;/label&gt;
-				&lt;input id='max_velocity' value='15'/&gt;
-				&lt;br/&gt;
+			<label>最大速度:</label>
+				<input id='max_velocity' value='15'/>
+				<br/>
 
-			&lt;label&gt;カーソルへの引力:&lt;/label&gt;
-				&lt;input id='attract_cursor' value='6'/&gt;
-				&lt;br/&gt;
+			<label>カーソルへの引力:</label>
+				<input id='attract_cursor' value='6'/>
+				<br/>
 
-			&lt;label&gt;仲間との反発力:&lt;/label&gt;
-				&lt;input id='repel_peer' value='5'/&gt;
-				&lt;br/&gt;
-			&lt;/p&gt;
-		&lt;/form&gt;
+			<label>仲間との反発力:</label>
+				<input id='repel_peer' value='5'/>
+				<br/>
+			</p>
+		</form>
 
-	&lt;script type='text/javascript'&gt;
-	&lt;![CDATA[
+	<script type='text/javascript'>
+	<![CDATA[
 
 		// ほこりの配列
 		var motes;
@@ -135,7 +139,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 
 			var i;
 			var sum_x=0, sum_y=0;
-			for(i=0; i&lt;motes.length; i++)
+			for(i=0; i<motes.length; i++)
 			{
 				sum_x += motes[i].x;
 				sum_y += motes[i].y;
@@ -177,14 +181,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 		// 制御されているわけでありません
 		Mote.prototype.applyForce = function(pos, mag)
 		{
-			if( pos[0] &gt; this.x )
+			if( pos[0] > this.x )
 				this.vx += mag;
-			else if( pos[0] &lt; this.x )
+			else if( pos[0] < this.x )
 				this.vx -= mag;
 
-			if( pos[1] &gt; this.y )
+			if( pos[1] > this.y )
 				this.vy += mag;
-			else if( pos[1] &lt; this.y )
+			else if( pos[1] < this.y )
 				this.vy -= mag;
 		}
 
@@ -194,14 +198,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 		{
 			var max = parseInt( document.getElementById('max_velocity').value );
 
-			if( max &lt; this.vx )
+			if( max < this.vx )
 				this.vx = max;
-			else if( -max &gt; this.vx )
+			else if( -max > this.vx )
 				this.vx = -max;
 
-			if( max &lt; this.vy )
+			if( max < this.vy )
 				this.vy = max;
-			else if( -max &gt; this.vy )
+			else if( -max > this.vy )
 				this.vy = -max;
 		}
 
@@ -210,14 +214,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 		Mote.prototype.capPosition = function()
 		{
 			var dims = Dimensions();
-			if( this.x &lt; 0 )
+			if( this.x < 0 )
 				this.x = 0;
-			else if( this.x &gt;= dims[0] )
+			else if( this.x >= dims[0] )
 				this.x = dims[0]-1;
 
-			if( this.y &lt; 0 )
+			if( this.y < 0 )
 				this.y = 0;
-			else if( this.y &gt;= dims[1] )
+			else if( this.y >= dims[1] )
 				this.y = dims[1]-1;
 		}
 
@@ -275,28 +279,28 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 
 			// 幾つのほこりがあるべき ?
 			var num = parseInt( document.getElementById('num_motes').value );
-			if( num &lt; 0 )
+			if( num < 0 )
 				num = 0;
 
 			// 量を厳密に確認。
 			// 少なすぎ ?
-			while( motes.length &lt; num )
+			while( motes.length < num )
 				motes.push( new Mote() );
 			// あるいは多すぎ ?
 			if( num == 0 )
 				motes = [];
-			else if( motes.length &gt; num )
+			else if( motes.length > num )
 				motes = motes.slice(0,num-1);
 
 			// ほこりをランダムに移動
-			if( motes.length &gt; 0 )
+			if( motes.length > 0 )
 				motes[ Rand( motes.length ) ].move();
 
 			// これを 100 分の 1 秒ごとに再実行。
 			setTimeout('update()', 10);
 		}
-	]]&gt;
-	&lt;/script&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+	]]>
+	</script>
+	</body>
+</html>
+```

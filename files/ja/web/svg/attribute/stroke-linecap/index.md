@@ -7,67 +7,52 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-linecap
 ---
-<p>« <a href="/ja/docs/Web/SVG/Attribute">SVG 属性リファレンスホーム</a></p>
+« [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
 
-<p><code>stroke-linecap</code> 要素は線を引いた時の開いている部分パスの終端の形状を指定します。</p>
+`stroke-linecap` 要素は線を引いた時の開いている部分パスの終端の形状を指定します。
 
-<p>プレゼンテーション属性であるため、直接 CSS スタイルシートの中で定義したプロパティとして使うこともできます。</p>
+プレゼンテーション属性であるため、直接 CSS スタイルシートの中で定義したプロパティとして使うこともできます。
 
-<h2 id="使用可能な場所">使用可能な場所</h2>
+## 使用可能な場所
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">カテゴリ</th>
-   <td>プレゼンテーション属性</td>
-  </tr>
-  <tr>
-   <th scope="row">値</th>
-   <td>butt | round | square | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">標準文書</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/painting.html#StrokeLinecapProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| カテゴリ       | プレゼンテーション属性                                                                |
+| -------------- | ------------------------------------------------------------------------------------- |
+| 値             | butt \| round \| square \| inherit                                                    |
+| アニメーション | Yes                                                                                   |
+| 標準文書       | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeLinecapProperty) |
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120"
      viewBox="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-    &lt;line stroke-linecap="butt"
+    <line stroke-linecap="butt"
           x1="30" y1="30" x2="30" y2="90"
-          stroke="black" stroke-width="20"/&gt;
+          stroke="black" stroke-width="20"/>
 
-    &lt;line stroke-linecap="round"
+    <line stroke-linecap="round"
           x1="60" y1="30" x2="60" y2="90"
-          stroke="black" stroke-width="20"/&gt;
+          stroke="black" stroke-width="20"/>
 
-    &lt;line stroke-linecap="square"
+    <line stroke-linecap="square"
           x1="90" y1="30" x2="90" y2="90"
-          stroke="black" stroke-width="20"/&gt;
+          stroke="black" stroke-width="20"/>
 
-    &lt;path d="M30,30 L30,90 M60,30 L60,90 M90,30 L90,90"
-          stroke="white" /&gt;
-&lt;/svg&gt;</pre>
+    <path d="M30,30 L30,90 M60,30 L60,90 M90,30 L90,90"
+          stroke="white" />
+</svg>
+```
 
-<p><strong>Live sample</strong></p>
+**Live sample**
 
-<p>{{ EmbedLiveSample('Example','120','120') }}</p>
+{{ EmbedLiveSample('Example','120','120') }}
 
-<h2 id="要素">要素</h2>
+## 要素
 
-<p>以下の要素で <code>stroke-linecap</code> を使うことができます</p>
+以下の要素で `stroke-linecap` を使うことができます
 
-<ul>
- <li><a href="/ja/docs/Web/SVG/Element#Shape">Shape 要素</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Element#TextContent">Text content 要素</a> »</li>
-</ul>
+- [Shape 要素](/ja/docs/Web/SVG/Element#Shape) »
+- [Text content 要素](/ja/docs/Web/SVG/Element#TextContent) »

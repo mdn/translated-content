@@ -7,80 +7,61 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-linejoin
 ---
-<p>« <a href="/ja/docs/Web/SVG/Attribute">SVG 属性リファレンスホーム</a></p>
+« [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
 
-<p><code>stroke-linejoin</code> 属性は線を引いた時のパスの曲がりまたは基本的な輪郭の形状を指定します。</p>
+`stroke-linejoin` 属性は線を引いた時のパスの曲がりまたは基本的な輪郭の形状を指定します。
 
-<p>プレゼンテーション属性のため、直接 CSS スタイルシートの中で定義したプロパティとして使うこともできます。</p>
+プレゼンテーション属性のため、直接 CSS スタイルシートの中で定義したプロパティとして使うこともできます。
 
-<p><strong>注意:</strong> <code>miter</code> オプションの最終的な見た目は <code><a href="/ja/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></code> 属性の値の影響を受けます。</p>
+**注意:** `miter` オプションの最終的な見た目は [`stroke-miterlimit`](/ja/docs/Web/SVG/Attribute/stroke-miterlimit) 属性の値の影響を受けます。
 
-<h2 id="Usage_context" name="Usage_context">使用可能な場所</h2>
+## 使用可能な場所
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">カテゴリ</th>
-   <td>プレゼンテーション属性</td>
-  </tr>
-  <tr>
-   <th scope="row">値</th>
-   <td><strong title="this is the default value">miter</strong> | round | bevel | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">標準文書</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/painting.html#StrokeLinejoinProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| カテゴリ       | プレゼンテーション属性                                                                 |
+| -------------- | -------------------------------------------------------------------------------------- |
+| 値             | **miter** \| round \| bevel \| inherit                                                 |
+| アニメーション | Yes                                                                                    |
+| 標準文書       | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeLinejoinProperty) |
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="300"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="300"
      viewBox="0 0 120 300" version="1.1"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-    &lt;polyline stroke-linejoin="miter"
+    <polyline stroke-linejoin="miter"
               points="-20,115 60,40 140,115"
               stroke="black" stroke-width="40"
-              fill="none" /&gt;
+              fill="none" />
 
-    &lt;polyline stroke-linejoin="round"
+    <polyline stroke-linejoin="round"
               points="-20,200 60,125 140,200"
               stroke="black" stroke-width="40"
-              fill="none" /&gt;
+              fill="none" />
 
-    &lt;polyline stroke-linejoin="bevel"
+    <polyline stroke-linejoin="bevel"
               points="-20,285 60,210 140,285"
               stroke="black" stroke-width="40"
-              fill="none" /&gt;
+              fill="none" />
 
-    &lt;path d="M-20,115 L60,40 L140,115 M-20,200 L60,125 L140,200 M-20,285 L60,210 L140,285"
-          stroke="white" fill="none" /&gt;
-&lt;/svg&gt;</pre>
+    <path d="M-20,115 L60,40 L140,115 M-20,200 L60,125 L140,200 M-20,285 L60,210 L140,285"
+          stroke="white" fill="none" />
+</svg>
+```
 
-<p><strong>Live sample</strong></p>
+**Live sample**
 
-<p>{{ EmbedLiveSample('Example','120','300') }}</p>
+{{ EmbedLiveSample('Example','120','300') }}
 
-<h2 id="要素">要素</h2>
+## 要素
 
-<p>以下の要素で <code>stroke-linejoin</code> 属性を使うことができます</p>
+以下の要素で `stroke-linejoin` 属性を使うことができます
 
-<ul>
- <li><a href="/ja/SVG/Element#Shape">Shape 要素</a> »</li>
- <li><a href="/ja/SVG/Element#TextContent">Text content 要素</a> »</li>
-</ul>
+- [Shape 要素](/ja/SVG/Element#Shape) »
+- [Text content 要素](/ja/SVG/Element#TextContent) »
 
-<p> </p>
+## 関連
 
-<h2 id="関連">関連</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></li>
-</ul>
+- [stroke-miterlimit](/ja/docs/Web/SVG/Attribute/stroke-miterlimit)

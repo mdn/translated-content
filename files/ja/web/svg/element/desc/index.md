@@ -7,66 +7,43 @@ tags:
   - SVG Descriptive
 translation_of: Web/SVG/Element/desc
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG描画における各コンテナ要素またはグラフィック要素は、説明がテキストのみの <strong><code>&lt;desc&gt;</code></strong> 要素を用いる説明を供給することができます。</p>
+SVG 描画における各コンテナ要素またはグラフィック要素は、説明がテキストのみの **`<desc>`** 要素を用いる説明を供給することができます。
 
-<p>現在の SVG ドキュメントが視覚メディア上で SVG としてレンダリングされるとき、<code>&lt;desc&gt;</code> 要素はグラフィックとしてレンダリングされません。 代替プレゼンテーションは、<code>&lt;desc&gt;</code> 要素を表示するが {{SVGElement("path")}} 要素または他のグラフィックス要素を表示しない、視覚と聴覚の両方が可能です。<code>&lt;desc&gt;</code> 要素は一般に SVG ドキュメントのアクセシビリティを向上させます。</p>
+現在の SVG ドキュメントが視覚メディア上で SVG としてレンダリングされるとき、`<desc>` 要素はグラフィックとしてレンダリングされません。 代替プレゼンテーションは、`<desc>` 要素を表示するが {{SVGElement("path")}} 要素または他のグラフィックス要素を表示しない、視覚と聴覚の両方が可能です。`<desc>` 要素は一般に SVG ドキュメントのアクセシビリティを向上させます。
 
-<h2 id="使用可能な場所">使用可能な場所</h2>
+## 使用可能な場所
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="グローバル属性">グローバル属性</h3>
+### グローバル属性
 
-<ul>
- <li><a href="/ja/docs/Web/SVG/Attribute#Core_attributes">コア属性</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="専用属性">専用属性</h3>
+### 専用属性
 
-<p><em>なし</em></p>
+_なし_
 
-<h2 id="DOM_インターフェイス">DOM インターフェイス</h2>
+## DOM インターフェイス
 
-<p>この要素は {{domxref("SVGDescElement")}} インターフェイスを実装します。</p>
+この要素は {{domxref("SVGDescElement")}} インターフェイスを実装します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'struct.html#DescriptionAndTitleElements', '&lt;desc&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;desc&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>初期の定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                         | 状態                     | コメント   |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------- |
+| {{SpecName('SVG2', 'struct.html#DescriptionAndTitleElements', '&lt;desc&gt;')}}     | {{Spec2('SVG2')}} |            |
+| {{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;desc&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザー互換性
 
+{{Compat("svg.elements.desc")}}
 
+## 関連情報
 
-<p>{{Compat("svg.elements.desc")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{SVGElement("title")}}</li>
-</ul>
+- {{SVGElement("title")}}
