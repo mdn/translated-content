@@ -27,7 +27,7 @@ MathML の `<mroot>` 要素は根指数の付いた累乗根を表示するの�
 
 ## 例
 
-レンダリングのサンプル(画像): ![x](/files/3200/mroot.png)
+レンダリングのサンプル(画像): ![x](mroot.png)
 
 ブラウザのレンダリング結果: <math><mroot><mi>x</mi> <mn>3</mn></mroot></math>
 

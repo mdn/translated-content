@@ -38,7 +38,7 @@ MathML は、基部（base expression）に対する後付け（postscripts）�
 
 ### `<mprescripts/> の使い方`
 
-Sample rendering: ![](/files/3223/mmultiscripts_prescripts.png)
+Sample rendering: ![](mmultiscripts_prescripts.png)
 
 Rendering in your browser: <math><mmultiscripts><mi>X</mi> <mi>d</mi> <mi>c</mi> <mprescripts></mprescripts><mi>b</mi> <mi>a</mi></mmultiscripts></math>
 
@@ -63,7 +63,7 @@ Rendering in your browser: <math><mmultiscripts><mi>X</mi> <mi>d</mi> <mi>c</mi>
 
 ### `<none/> の使い方`
 
-Sample rendering: ![](/files/3222/mmultiscripts_none.png)
+Sample rendering: ![](mmultiscripts_none.png)
 
 Rendering in your browser: <math><mmultiscripts><mi>X</mi> <none></none><mi>c</mi> <mprescripts></mprescripts><mi>b</mi><none></none></mmultiscripts></math>
 

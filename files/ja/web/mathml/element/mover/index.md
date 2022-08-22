@@ -28,7 +28,7 @@ overscript には定着した訳語がないようです。superscript（上付�
 
 ## 例
 
-Sample rendering: ![x+y+z](/files/3196/mover.png)
+Sample rendering: ![x+y+z](mover.png)
 
 Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏞</mo></mover></math>
 

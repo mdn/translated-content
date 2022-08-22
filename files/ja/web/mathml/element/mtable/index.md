@@ -73,7 +73,7 @@ MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtabl
 
 #### Example 1: 揃える位置を行番号で指定する
 
-Rendering: ![](/files/3295/mtable-1.png)
+Rendering: ![](mtable-1.png)
 
 ```html
 <math>
@@ -107,7 +107,7 @@ Rendering: ![](/files/3295/mtable-1.png)
 | {{ SpecName('MathML3', 'chapter3.html#presm.mtable', 'mtable') }} | {{ Spec2('MathML3') }} | Current specification |
 | {{ SpecName('MathML2', 'chapter3.html#presm.mtable', 'mtable') }} | {{ Spec2('MathML2') }} | Initial specification |
 
-## ブラウザ毎の互換性
+## ブラウザーの互換性
 
 {{Compat("mathml.elements.mtable")}}
 

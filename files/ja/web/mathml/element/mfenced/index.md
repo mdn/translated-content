@@ -30,7 +30,7 @@ MathML `<mfenced>` 要素は、独自の括弧類 (角括弧など) や区切り
 
 ### 最後の区切り記号（`,`）は繰り返される
 
-サンプルレンダリング: ![{a;b;c,d,e}](/files/3193/mfenced01.png)
+サンプルレンダリング: ![{a;b;c,d,e}](mfenced01.png)
 
 ブラウザーでのレンダリング: <math><mfenced close="}" open separators=";;,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
 
@@ -48,7 +48,7 @@ MathML `<mfenced>` 要素は、独自の括弧類 (角括弧など) や区切り
 
 ### 余分な区切り記号（`,`）は無視される
 
-サンプルレンダリング: ![[a|b|c|d|e]](/files/3195/mfenced02.png)
+サンプルレンダリング: ![[a|b|c|d|e]](mfenced02.png)
 
 ブラウザーでのレンダリング: <math><mfenced close="]" open separators="||||,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
 

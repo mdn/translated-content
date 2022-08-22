@@ -5,7 +5,7 @@ translation_of: Web/MathML/Element/msup
 ---
 {{MathMLRef()}}
 
-MathML `の <msup>` 要素は，式に上付きを付けるために用います。
+MathML の `<msup>` 要素は，式に上付きを付けるために用います。
 構文は `<msup> base superscript </msup>` となります。
 
 ## 属性
@@ -23,7 +23,7 @@ MathML `の <msup>` 要素は，式に上付きを付けるために用います
 
 ## 例
 
-Sample rendering: ![x1](/files/3203/msup.png)
+Sample rendering: ![x1](msup.png)
 
 Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
 
@@ -38,7 +38,7 @@ Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
 </math>
 ```
 
-## ブラウザ毎の互換性
+## ブラウザーの互換性
 
 {{Compat("mathml.elements.msup")}}
 

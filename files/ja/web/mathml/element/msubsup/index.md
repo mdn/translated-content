@@ -27,7 +27,7 @@ MathML `<msubsup>`要素は、下付き文字と上付き文字の両方を一�
 
 ## 例
 
-サンプルレンダリング: ![x1](/files/3204/msubsup.png)
+サンプルレンダリング: ![x1](msubsup.png)
 
 ブラウザーでのレンダリング: <math displaystyle="true"><msubsup><mo>∫</mo> <mn>0 </mn><mn>1</mn></msubsup></math>
 
