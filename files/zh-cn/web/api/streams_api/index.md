@@ -14,7 +14,7 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 
 但曾经这些对于 JavaScript 是不可用的。以前，如果我们想要处理某种资源（如视频、文本文件等），我们必须下载完整的文件，等待它反序列化成适当的格式，然后在完整地接收到所有的内容后再进行处理。
 
-随着流在 JavaScript 中的使用，一切发生了改变 —— 只要原始数据在客户端可用，你就可以使用 JavaScript 按位处理它，而不再需要缓冲区、字符串或 blob。
+随着流在 JavaScript 中的使用，一切发生了改变——只要原始数据在客户端可用，你就可以使用 JavaScript 按位处理它，而不再需要缓冲区、字符串或 blob。
 
 ![](concept.png)
 
@@ -26,7 +26,7 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 
 你也可以使用 {{domxref("WritableStream")}} 将数据写入流。
 
-> **备注：** 你可以在这些文章中找到关于流理论的更多细节和实践 —— [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)、[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)、[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)，以及[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams).
+> **备注：** 你可以在这些文章中找到关于流理论的更多细节和实践——[流 API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)、[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)、[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)，以及[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams).
 
 ## Stream 接口
 
@@ -80,7 +80,7 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 
 ## 示例
 
-我们创建流一个示例目录，以配合 Streams API 文档 —— 参见 [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams)。示例如下：
+我们创建流一个示例目录，以配合 Streams API 文档——参见 [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams)。示例如下：
 
 - [简单的流 pump](https://mdn.github.io/dom-examples/streams/simple-pump/)：此示例展示了如何消费流并且传递它的数据进入另一个。
 - [转换一个 PNG 到灰度](https://mdn.github.io/dom-examples/streams/grayscale-png/)：这个示例展示了如何使用可读流将 PNG 转换到灰度。
