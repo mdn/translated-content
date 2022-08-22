@@ -72,15 +72,15 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 ### 字节流相关的接口
 
 - {{domxref("ReadableStreamBYOBReader")}}
-  - : 表示一个 BYOB（“带你自己的缓冲区”）reader，它可以用于读取由开发人员提供的流数据（例如一个自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} ）。
+  - : 表示一个 BYOB（“带你自己的缓冲区”）reader，它可以用于读取由开发人员提供的流数据（例如一个自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}）。
 - {{domxref("ReadableByteStreamController")}}
-  - : 表示一个 controller，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。字节流 controller 用于字节流。
+  - : 表示一个 controller，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。字节流 controller 用于处理字节流。
 - {{domxref("ReadableStreamBYOBRequest")}}
-  - : 表示 {{domxref("ReadableByteStreamController")}} 中的拉取请求。
+  - : 表示 {{domxref("ReadableByteStreamController")}} 中的 BYOB pull request。
 
 ## 示例
 
-我们创建流一个示例目录，以配合 Streams API 文档——参见 [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams)。示例如下：
+我们创建了流的示例目录，以配合 Streams API 文档——参见 [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams)。示例如下：
 
 - [简单的流 pump](https://mdn.github.io/dom-examples/streams/simple-pump/)：此示例展示了如何消费流并且传递它的数据进入另一个。
 - [转换一个 PNG 到灰度](https://mdn.github.io/dom-examples/streams/grayscale-png/)：这个示例展示了如何使用可读流将 PNG 转换到灰度。
@@ -91,7 +91,7 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 
 来自其它开发人员的示例：
 
-- [Streams、Service Workers、Fetch 进度指标](https://fetch-progress.anthum.com/).
+- [Streams、Service Workers 以及 Fetch 进度指标](https://fetch-progress.anthum.com/).
 
 ## 规范
 
