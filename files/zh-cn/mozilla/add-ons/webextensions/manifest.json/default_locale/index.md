@@ -1,9 +1,6 @@
 ---
 title: default_locale
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
-tags:
-  - default_locale
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 ---
 {{AddonSidebar}}
 

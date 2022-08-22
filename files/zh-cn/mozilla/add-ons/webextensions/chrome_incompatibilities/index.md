@@ -1,9 +1,6 @@
 ---
 title: Chrome 不兼容情况
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 {{AddonSidebar}}
 
@@ -93,7 +90,7 @@ setCookie.then(logCookie, logError);
   /path/to/script.js
   ```
 
-- 在 Firefox 中，用 `tabs.query() `根据 URL 查询标签页需要有`"tabs"` 权限。在 Chrome 中，没有`"tabs"`权限也可以，但结果将限制在 URL 匹配主机权限的标签页。
+- 在 Firefox 中，用 `tabs.query()` 根据 URL 查询标签页需要有`"tabs"` 权限。在 Chrome 中，没有`"tabs"`权限也可以，但结果将限制在 URL 匹配主机权限的标签页。
 
 #### [webRequest](/en-US/Add-ons/WebExtensions/API/webRequest)
 
@@ -113,7 +110,7 @@ Firefox 解析 CSS 中嵌入的 URL 时，若 URL 时相对地址，将是相对
 
 #### 更多不兼容情况
 
-Firefox 不支持从后台标签页使用 `alert()、confirm()` 或[` prompt()`](/en-US/docs/Web/API/Window/prompt)。
+Firefox 不支持从后台标签页使用 `alert()、confirm()` 或 [`prompt()`](/en-US/docs/Web/API/Window/prompt)。
 
 #### web_accessible_resources
 

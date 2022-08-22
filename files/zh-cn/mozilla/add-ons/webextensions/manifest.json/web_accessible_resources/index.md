@@ -1,9 +1,6 @@
 ---
 title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
-tags:
-  - 扩展应用
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 ---
 {{AddonSidebar}}
 

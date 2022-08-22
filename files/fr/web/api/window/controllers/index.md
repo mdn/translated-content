@@ -22,7 +22,7 @@ Retourne les contrôleurs XUL de la fenêtre chrome.
 controleurs = window.controllers
 ```
 
-- `controleurs` est un objet de type [`XULControllers`](/en-US/docs/XULControllers) ([`nsIControllers`](/en-US/docs/XPCOM_Interface_Reference/nsIControllers)).
+- `controleurs` est un objet de type [`XULControllers`](/fr/docs/XULControllers) ([`nsIControllers`](/fr/docs/XPCOM_Interface_Reference/nsIControllers)).
 
 ## Spécification
 

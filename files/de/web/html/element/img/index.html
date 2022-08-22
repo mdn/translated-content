@@ -42,10 +42,7 @@ translation_of: Web/HTML/Element/img
  <dd>Ausrichtung der Grafik im Verhältnis zu ihrer Umgebung.<br>
  Benutzen Sie stattdessen die CSS-Eigenschaft {{cssxref('vertical-align')}}.</dd>
  <dt>{{htmlattrdef("alt")}}</dt>
- <dd>Text, der vom Browser alternativ statt der Grafik angezeigt werden kann, zum Beispiel falls sie noch nicht heruntergeladen wurde, bei Übertragungsfehlern oder falls sie in keinem <a href="#Supported_image_formats" title="HTML/Element/Img#Supported image formats">unterstützten Format</a> vorliegt. Der Benutzer kann die Grafikdarstellung auch abgeschaltet haben oder einen Browser benutzen, der keine Grafik darstellen kann.</dd>
- <dd>Der Text sollte das von der Grafik Dargestellte kurz und sinnvoll wiedergeben, so dass der Inhalt, den sie transportieren, ersichtlich wird. Ist dies nicht möglich, sollte das Attribut weggelassen werden.</dd>
- <dd>Reine Dekorationselemente sollten hingegen mit einem leeren Attribut (<code>alt=""</code>) eingefügt werden; Alternativtexte wie "Roter Punkt" sind unbedingt zu vermeiden!</dd>
- <dd>
+ <dd>Text, der vom Browser alternativ statt der Grafik angezeigt werden kann, zum Beispiel falls sie noch nicht heruntergeladen wurde, bei Übertragungsfehlern oder falls sie in keinem <a href="#Supported_image_formats" title="HTML/Element/Img#Supported image formats">unterstützten Format</a> vorliegt. Der Benutzer kann die Grafikdarstellung auch abgeschaltet haben oder einen Browser benutzen, der keine Grafik darstellen kann.<br /><br />Der Text sollte das von der Grafik Dargestellte kurz und sinnvoll wiedergeben, so dass der Inhalt, den sie transportieren, ersichtlich wird. Ist dies nicht möglich, sollte das Attribut weggelassen werden.<br /><br />Reine Dekorationselemente sollten hingegen mit einem leeren Attribut (<code>alt=""</code>) eingefügt werden; Alternativtexte wie "Roter Punkt" sind unbedingt zu vermeiden!<br /><br />
  <div class="note">
  <p><strong>Hinweis:</strong> Eine aussagekräftige Beschreibung des Bildes ist vor allem für die Barrierefreiheit von elementarer Bedeutung!<br>
   Dies gilt auch für das leere Attribut <code>alt=""</code>. Browser können die (Ersatz-) Darstellung des img-Elements in diesem Fall ganz überspringen, was merklich der Übersichtlichkeit dient – niemand möchte einen Text vorgelesen bekommen, ständig von nutzlosen Hinweisen wie "Roter Punkt" unterbrochen.</p>
@@ -62,9 +59,7 @@ translation_of: Web/HTML/Element/img
   <dd>Es wird eine CORS-basierte Anfrage durchgeführt, gegebenenfalls mit Benutzerauthentifizierung (Cookies, X.509-Zertifikat, HTTP-Authentifizierung).</dd>
  </dl>
  Hat das Attribut einen ungültigen Wert, wird stattdessen die Einstellung <strong>anonymous</strong> angenommen.<br>
- Fehlt das crossorigin-Attribut, wird die Grafik ohne CORS heruntergeladen (d.h. ohne die HTTP-Kopfzeile {{HTTPHeader('Origin')}}).</dd>
- <dd>Damit das Dokument uneingeschränkt auf die Grafik zugreifen kann (zum Beispiel im {{HTMLElement("canvas")}}-Element), muss der Server zusätzlich mit einer {{HTTPHeader('Access-Control-Allow-Credentials')}}-Angabe antworten, die den Ursprung des Dokuments einschließt.</dd>
- <dd>Weitere Informationen sind im Artikel über <a href="/en-US/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS-Attribute</a> nachzulesen.</dd>
+ Fehlt das crossorigin-Attribut, wird die Grafik ohne CORS heruntergeladen (d.h. ohne die HTTP-Kopfzeile {{HTTPHeader('Origin')}}).<br /><br />Damit das Dokument uneingeschränkt auf die Grafik zugreifen kann (zum Beispiel im {{HTMLElement("canvas")}}-Element), muss der Server zusätzlich mit einer {{HTTPHeader('Access-Control-Allow-Credentials')}}-Angabe antworten, die den Ursprung des Dokuments einschließt.<br /><br />Weitere Informationen sind im Artikel über <a href="/en-US/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS-Attribute</a> nachzulesen.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>Tatsächliche Höhe der Grafik in {{HTMLVersionInline(5)}} CSS-Pixeln, in {{HTMLVersionInline(4)}} Bildschirmpixeln oder als prozentualer Wert.</dd>
  <dt>{{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
@@ -92,7 +87,7 @@ translation_of: Web/HTML/Element/img
  </ul>
 
  <div class="note">
- <p><strong>Hinweis:  </strong>In älteren Versionen hieß dieses Attribut <code>referrer</code>.</p>
+ <p><strong>Hinweis:  </strong>In älteren Versionen hieß dieses Attribut <code>referrer</code>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("sizes")}}{{HTMLVersionInline(5)}}</dt>
@@ -109,8 +104,7 @@ translation_of: Web/HTML/Element/img
  <dd>URL der Grafik. Dieses Attribut ist zwingend erforderlich.<br>
  Browser, die <code>srcset</code> unterstützen, behandeln <code>src</code> als Grafik mit einer Pixeldichte von <code>1x</code>, sofern keine andere Grafik mit dieser Dichte in <code>srcset</code> aufgeführt ist oder falls <code>srcset</code> '<code>w</code>'-Bezeichner enthält.</dd>
  <dt>{{htmlattrdef("srcset")}}{{HTMLVersionInline(5)}}</dt>
- <dd><code>srcset</code> erlaubt das Bereitsstellen derselben Grafik in verschiedenen Versionen für niedrig- und hochauflösende Anzeigegeräte. Letztere profitieren von der höheren Bildqualität -bei größerer Datenmenge-, erstere von der geringeren Datenmenge.</dd>
- <dd><code>srcset</code> enthält mehrere – durch Kommata getrennte – Einträge, jeweils bestehend aus:
+ <dd><code>srcset</code> erlaubt das Bereitsstellen derselben Grafik in verschiedenen Versionen für niedrig- und hochauflösende Anzeigegeräte. Letztere profitieren von der höheren Bildqualität -bei größerer Datenmenge-, erstere von der geringeren Datenmenge.<br /><br /><code>srcset</code> enthält mehrere – durch Kommata getrennte – Einträge, jeweils bestehend aus:
  <ol>
   <li>einer URL,</li>
   <li>optional, Leerzeichen gefolgt von einem Kennwert:
@@ -123,7 +117,7 @@ translation_of: Web/HTML/Element/img
 
  <p>Ist kein Kennwert gegeben, wird für die jeweilige Quelle <code>1x</code> angenommen.</p>
 
- <p>Breitenangaben und Pixeldichten dürfen nicht gleichzeitig verwendet werden.  Doppelte Kennwerte (zum Beispiel zwei Quellen desselben <code>srcset</code>-Attributs mit dem Kennwert '<code style="font-style: normal;">4x</code>') sind ebenfalls nicht erlaubt.</p>
+ <p>Breitenangaben und Pixeldichten dürfen nicht gleichzeitig verwendet werden.  Doppelte Kennwerte (zum Beispiel zwei Quellen desselben <code>srcset</code>-Attributs mit dem Kennwert '<code style="font-style: normal;">4x</code>') sind ebenfalls nicht erlaubt.</p>
 
  <p>Die Entscheidung, welche Quelle genutzt wird, obliegt alleine dem Browser. Neben den Eigenschaften der Anzeige können so auch Benutzereinstellungen oder die Internetverbindung berücksichtigt werden.</p>
  </dd>
@@ -132,7 +126,7 @@ translation_of: Web/HTML/Element/img
  <dt>{{htmlattrdef("usemap")}}</dt>
  <dd>Verweissensitive Grafik; das usemap-Attribut enthält das URL-Fragment (beginnend mit '#') der zugehörigen <a href="/en-US/docs/HTML/Element/map" title="HTML/Element/Map">Karte</a>.
  <div class="note">
- <p><strong>Hinweis: </strong><code>usemap</code> kann nicht benutzt werden, falls sich das <code>&lt;img&gt;</code>-Element in einem {{htmlelement("a")}}- oder  {{HTMLElement("button")}}-Element befindet. Die Verwendung würde mit <code>ismap</code> kollidieren.</p>
+ <p><strong>Hinweis: </strong><code>usemap</code> kann nicht benutzt werden, falls sich das <code>&lt;img&gt;</code>-Element in einem {{htmlelement("a")}}- oder  {{HTMLElement("button")}}-Element befindet. Die Verwendung würde mit <code>ismap</code> kollidieren.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
@@ -207,7 +201,7 @@ translation_of: Web/HTML/Element/img
 <pre class="brush: html" style="font-size: 14px;"> &lt;img src="clock-demo-thumb-200.png"
       alt="Clock"
       srcset="clock-demo-thumb-200.png 200w, clock-demo-thumb-400.png 400w"
-      sizes="(min-width: 600px) 200px, 50vw"&gt;</pre>
+      sizes="(min-width: 600px) 200px, 50vw"&gt;</pre>
 
 <h2 id="Specifications" name="Specifications">Spezifikationen</h2>
 
@@ -228,116 +222,24 @@ translation_of: Web/HTML/Element/img
   <tr>
    <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Eigenschaft</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>&lt;img&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>srcset</code> </td>
-   <td>{{CompatChrome(34.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("32.0")}} (behind a pref)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(21)}}</td>
-   <td>{{CompatSafari(7.1)}}</td>
-  </tr>
-  <tr>
-   <td><code>referrer</code> </td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("42.0")}} (behind a pref)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Eigenschaft</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>srcset</code> </td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(34.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>21</td>
-   <td>iOS 8</td>
-   <td>{{CompatChrome(34.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>referrer</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatGeckoMobile("42.0")}} (behind a pref)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] Zuschaltbar als <code>referrerpolicy</code> implementiert.</p>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 
@@ -345,4 +247,4 @@ translation_of: Web/HTML/Element/img
  <li>HTML-Elemente {{HTMLElement("picture")}}, {{HTMLElement("object")}} und {{HTMLElement("embed")}}.</li>
 </ul>
 
-<div> </div>
+<div> </div>

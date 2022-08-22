@@ -1,7 +1,6 @@
 ---
 title: Forms
 slug: Web/Accessibility/ARIA/forms
-translation_of: Web/Accessibility/ARIA/forms
 ---
 The following pages provide various techniques for improving the accessibility of web forms:
 

@@ -23,9 +23,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <p><code>undefined</code> ist eine Eigenschaft des <em>globalen Objektes</em>, was bedeutet, dass es eine Variable im globalen Gültigkeitsbereich ist. Der initiale Wert von <code>undefined</code> ist der primitive Wert <code>{{Glossary("Undefined", "undefined")}}</code>.</p>
 
-<p>In modernen Browsern (JavaScript 1.8.5 / Firefox 4+) ist <code>undefined</code>  eine nicht konfigurierbare und nicht beschreibbare Eigenschaft. Dieses ist in der ECMAScript 5 Spezifikation definiert. Immer wenn das nicht der Fall ist, sollte das Überschreiben von <code>undefined</code>  unterlassen werden.</p>
+<p>In modernen Browsern (JavaScript 1.8.5 / Firefox 4+) ist <code>undefined</code>  eine nicht konfigurierbare und nicht beschreibbare Eigenschaft. Dieses ist in der ECMAScript 5 Spezifikation definiert. Immer wenn das nicht der Fall ist, sollte das Überschreiben von <code>undefined</code>  unterlassen werden.</p>
 
-<p>Eine Variable, die nicht mit einem Wert beschrieben wurde, ist vom Typ <code>undefined</code>. Methoden oder Anweisungen geben ebenfalls <code>undefined</code> zurück, wenn eine Variable, die ausgewertet wird, mit keinem Wert beschrieben ist. Eine Funktion hat <code>undefined</code> als Rückgabewert, wenn kein Wert {{jsxref("Statements/return", "zurückgegeben")}} wird.</p>
+<p>Eine Variable, die nicht mit einem Wert beschrieben wurde, ist vom Typ <code>undefined</code>. Methoden oder Anweisungen geben ebenfalls <code>undefined</code> zurück, wenn eine Variable, die ausgewertet wird, mit keinem Wert beschrieben ist. Eine Funktion hat <code>undefined</code> als Rückgabewert, wenn kein Wert {{jsxref("Statements/return", "zurückgegeben")}} wird.</p>
 
 <div class="warning">
 <p>Weil es möglich ist {{Glossary("Identifier", "Bezeichner")}} (Variablennamen) in jedem anderen Scope anders zu definieren, ist es auch möglich <code>undefined</code> neu zu defnieren (weil <code>undefined</code> kein {{jsxref("Reserved_Words", "reserviertes Schlüsselwort")}}) ist). Dieses einzusetzen ist jedoch keine gute Idee, weil der Quelltext dadurch schwer zu verstehen ist.</p>
@@ -79,7 +79,7 @@ if(x === undefined){ // erzeugt einen ReferenceError
 }
 </pre>
 
-<p>Diese Technik sollte so oft es geht vermieden werden. JavaScript ist eine Sprache mit statischen Gültigkeitsbereichen, was bedeutet, dass eine Variable immer in seinem geschlossenen Kontext gelesen werden kann, egal ob sie <span class="dpf_sent" id="dpfsent_1">existiert </span> oder nicht. Die einzige Ausnahme ist der globale Gültigkeitsbereich, jedoch ist dieser an das <em>globale Objekt</em> gebunden, weshalb die Existenz einer Variablen auf dem <em>globalen Objekt</em> geprüft werden kann. Dafür kann der {{jsxref("Operators/in", "in")}}-Operator genutzt werden.</p>
+<p>Diese Technik sollte so oft es geht vermieden werden. JavaScript ist eine Sprache mit statischen Gültigkeitsbereichen, was bedeutet, dass eine Variable immer in seinem geschlossenen Kontext gelesen werden kann, egal ob sie <span>existiert </span> oder nicht. Die einzige Ausnahme ist der globale Gültigkeitsbereich, jedoch ist dieser an das <em>globale Objekt</em> gebunden, weshalb die Existenz einer Variablen auf dem <em>globalen Objekt</em> geprüft werden kann. Dafür kann der {{jsxref("Operators/in", "in")}}-Operator genutzt werden.</p>
 
 <h3 id="Void_Operator_und_undefined"><code>Void</code> Operator und <code>undefined</code></h3>
 
@@ -113,17 +113,17 @@ if (y === void 0) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-undefined', 'undefined')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-undefined', 'undefined')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

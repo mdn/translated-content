@@ -13,7 +13,7 @@ translation_of: Web/API/ProcessingInstruction
 ---
 {{APIRef("DOM")}}
 
-Une **instruction de traitement** intègre des instructions spécifiques à une application en [XML](/en-US/docs/Glossary/XML) qui peuvent être ignorées par d'autres applications (ne les reconnaissant pas). Même si un processeur XML ignore les instructions de traitement, il leur donnera une place dans le DOM.
+Une **instruction de traitement** intègre des instructions spécifiques à une application en [XML](/fr/docs/Glossary/XML) qui peuvent être ignorées par d'autres applications (ne les reconnaissant pas). Même si un processeur XML ignore les instructions de traitement, il leur donnera une place dans le DOM.
 
 Une instruction de traitement est différente de la [déclaration XML](/en/XML/XML_Declaration), qui fournit des informations sur le document telles que le codage des caractères et ne peut apparaître que comme le premier élément d'un document.
 

@@ -1,7 +1,6 @@
 ---
 title: 主頁
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
 我們創建的第一個頁面，是網站的主頁面，可以從網站的根目錄 (`'/'`) ，或者 catalog 的根目錄 (`catalog/`) 訪問。這將呈現一些網站的靜態文字描述，以及動態計算數據庫中不同記錄類型的“計數”。
 

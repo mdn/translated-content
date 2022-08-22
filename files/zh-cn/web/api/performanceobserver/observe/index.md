@@ -1,11 +1,6 @@
 ---
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
-tags:
-  - 性能
-  - 性能监测对象
-  - 接口
-translation_of: Web/API/PerformanceObserver/observe
 ---
 {{APIRef("Performance Timeline API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
-translation_of: Web/API/CustomEvent/CustomEvent
 ---
 {{APIRef("DOM")}}
 
@@ -16,7 +15,7 @@ new CustomEvent(type, options)
 
 ### 參數
 
-- `type` 
+- `type`
   - : 一個 {{domxref("DOMString")}} 用來表示事件名稱。
 - `options`{{optional_inline}}
   - : 一個<i>繼承自{{domxref("Event/Event", "Event()")}}</i>的參數，其類型為 object。它有以下參數

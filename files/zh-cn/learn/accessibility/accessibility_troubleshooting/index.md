@@ -1,7 +1,6 @@
 ---
 title: 'Assessment: Accessibility troubleshooting'
 slug: learn/Accessibility/Accessibility_troubleshooting
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
@@ -20,7 +19,7 @@ In the assessment for this module, we present to you a simple site with a number
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>理解可访问性的基础知识。</td>
+      <td>理解无障碍的基础知识。</td>
     </tr>
   </tbody>
 </table>

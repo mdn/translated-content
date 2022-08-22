@@ -5,7 +5,7 @@ translation_of: Web/API/SpeechRecognition
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-**`SpeechRecognition`** est l'interface contrôleur du service de reconnaissance de la [Web Speech API](/en-US/docs/Web/API/Web_Speech_API); elle gère également les {{domxref("SpeechRecognitionEvent")}} envoyés par le service de reconnaissance.
+**`SpeechRecognition`** est l'interface contrôleur du service de reconnaissance de la [Web Speech API](/fr/docs/Web/API/Web_Speech_API); elle gère également les {{domxref("SpeechRecognitionEvent")}} envoyés par le service de reconnaissance.
 
 ## Constructeur
 

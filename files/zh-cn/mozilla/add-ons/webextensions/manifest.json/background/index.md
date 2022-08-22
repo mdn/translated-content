@@ -1,10 +1,6 @@
 ---
 title: 后台 - background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - 后台
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
 {{AddonSidebar}}
 

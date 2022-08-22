@@ -76,6 +76,6 @@ function notifyMe() {
 ## Voir également
 
 - [API de notifications](/docs/Web/API/Notifications_API)
-- [Utilisation de l'API Notifications](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [Permissions d'API](/en-US/docs/Web/API/Permissions_API)
-- [Utilisation des permissions d'API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Permissions d'API](/fr/docs/Web/API/Permissions_API)
+- [Utilisation des permissions d'API](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API)

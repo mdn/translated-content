@@ -1,18 +1,6 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Method
-  - remove
-  - 书签
-  - 参考文档
-  - 扩展
-  - 方法
-  - 移除
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 {{AddonSidebar()}}
 

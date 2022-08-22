@@ -1,9 +1,6 @@
 ---
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 ---
 {{AddonSidebar}}
 

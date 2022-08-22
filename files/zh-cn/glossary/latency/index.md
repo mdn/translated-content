@@ -1,10 +1,6 @@
 ---
 title: Latency
 slug: Glossary/Latency
-tags:
-  - 网络性能
-  - 词汇
-translation_of: Glossary/Latency
 ---
 **延迟**是请求的资源到达其目的地所花费的网络时间。低延迟是好的，这意味着几乎没有延迟。高延迟是不好的，这意味着所请求的资源要花很长时间才能到达目的地。
 

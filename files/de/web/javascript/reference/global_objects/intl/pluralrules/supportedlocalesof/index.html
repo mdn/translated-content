@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/support
 
 <h3 id="Einsatz_von_supportedLocalesOf">Einsatz von <code>supportedLocalesOf</code></h3>
 
-<p>Angenommen wird, dass indonesische und deutsche Pluralformatierung unterstützt wird, aber balinesisch nicht. <code>supportedLocalesOf</code> gibt das indonesische und deutsche Sprachtag unverändert zurück, obwohl Pinyin nicht mit Indonesisch verwendet wird und Fachdeutsch wahrscheinlich nicht für Indonesisch verfügbar ist. Zu bemerken ist, dass der <code>"lookup"</code> Algorithmus verwendet wird — der<code>"best-fit"</code> Algorithmus könnte entscheiden, dass Indonesisch eine angemessene Ergänzung für Balinesen ist, da die meisten Balinesen Indonesisch verstehen und daher auch das balinesische Sprachtag zurückgeben.</p>
+<p>Angenommen wird, dass indonesische und deutsche Pluralformatierung unterstützt wird, aber balinesisch nicht. <code>supportedLocalesOf</code> gibt das indonesische und deutsche Sprachtag unverändert zurück, obwohl Pinyin nicht mit Indonesisch verwendet wird und Fachdeutsch wahrscheinlich nicht für Indonesisch verfügbar ist. Zu bemerken ist, dass der <code>"lookup"</code> Algorithmus verwendet wird — der<code>"best-fit"</code> Algorithmus könnte entscheiden, dass Indonesisch eine angemessene Ergänzung für Balinesen ist, da die meisten Balinesen Indonesisch verstehen und daher auch das balinesische Sprachtag zurückgeben.</p>
 
 <pre class="brush: js">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 var options = { localeMatcher: 'lookup' };

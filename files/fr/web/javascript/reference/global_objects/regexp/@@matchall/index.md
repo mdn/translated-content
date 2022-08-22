@@ -60,7 +60,7 @@ console.log(Array.from(resultat, x => x[0]));
 
 ### Utiliser `@@matchAll` dans une sous-classe
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)).
+Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators)).
 
 ```js
 class MaRegExp extends RegExp {

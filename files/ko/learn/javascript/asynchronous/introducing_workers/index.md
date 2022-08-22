@@ -224,7 +224,7 @@ function generatePrimes(quota) {
 `generatePrimes()` 함수는 동기 버전과 비슷하지만, 값을 반환하는 대신 작업이 끝나면 메인 스크립트로 메시지를 보냅니다. 이를 위해 {{domxref("DedicatedWorkerGlobalScope/postMessage", "postMessage()")}} 함수를 사용합니다. 이는 `addEventListener()`와 같이 워커의 전역 함수입니다. 이미 살펴본 바와 같이, 메인 스크립트는 이 메시지를 수신하고 있으며 메시지가 수신되면 DOM을 업데이트합니다.
 
 > **참고:** 이 사이트를 실행하려면 로컬 웹 서버를 실행해야 합니다. file:// URL로는 워커를 로드할 수 없기 때문입니다. [테스트 로컬 서버 설정](/ko/docs/Learn/Common_questions/set_up_a_local_testing_server) 가이드를 참조하시기 바랍니다. 이렇게 하면 "Generate primes"를 눌러 기본 페이지를 응답할 수 있는 상태로 유지할 수 있습니다.
-> 
+>
 > 예제를 만들거나 실행하는 데 문제가 있는 경우 https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished에서 완성된 버전을 확인하고 https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished에서 라이브로 사용해 볼 수 있습니다.
 
 ## 다른 종류의 워커

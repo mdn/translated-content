@@ -91,7 +91,7 @@ Avec cette méthode, le contenu indicatif est disponible à tout moment (même l
 
 ### Mode « contraste élevé » de Windows
 
-Lorsque le [mode de contraste élevé de Windows](/en-US/docs/Web/CSS/@media/-ms-high-contrast) est actif, les textes de substitution apparaîtront avec la même mise en forme que les textes saisis par l'utilisateur. Il est alors impossible de distinguer un texte saisi d'un texte indicatif.
+Lorsque le [mode de contraste élevé de Windows](/fr/docs/Web/CSS/@media/-ms-high-contrast) est actif, les textes de substitution apparaîtront avec la même mise en forme que les textes saisis par l'utilisateur. Il est alors impossible de distinguer un texte saisi d'un texte indicatif.
 
 - [Greg Whitworth — Comment utiliser `-ms-high-contrast` (en anglais)](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
 - {{cssxref("@media/-ms-high-contrast")}}

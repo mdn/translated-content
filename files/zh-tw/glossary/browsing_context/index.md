@@ -1,10 +1,6 @@
 ---
 title: 瀏覽上下文
 slug: Glossary/Browsing_context
-tags:
-  - 瀏覽上下文
-  - 術語表
-translation_of: Glossary/Browsing_context
 ---
 **瀏覽上下文**是一個瀏覽器({{glossary("browser")}})展示文檔({{domxref("Document")}})的環境（正常來説是一個現在的標簽，但也有可能是一個窗體或是一個框架裏面的頁面）。
 

@@ -1,14 +1,6 @@
 ---
 title: Express/Node introduction
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Express
-  - Node
-  - nodejs
-  - 伺服器端
-  - 初學者
-  - 學習
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
 {{LearnSidebar}}
 
@@ -276,7 +268,7 @@ var wiki = require('./wiki.js');
 app.use('/wiki', wiki);
 ```
 
-We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section[ Routes and controllers .](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes).
 
 ### Using middleware
 

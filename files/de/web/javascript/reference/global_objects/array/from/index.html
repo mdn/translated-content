@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 <p>Die <code>length</code> Eigenschaft der <code>from()</code> Methode ist 1.</p>
 
-<p>In ES2015 erlaubt die class Syntax, Subklassen für eingebaute und benutzerdefinierte Klassen. Klassenseitige statische Methoden wie <code>Array.from()</code><strong> </strong>sind von der Subklasse <code>Array</code> vererbt und erzeugen eine neue Instanz der Subklasse und nicht von <code>Array</code>.</p>
+<p>In ES2015 erlaubt die class Syntax, Subklassen für eingebaute und benutzerdefinierte Klassen. Klassenseitige statische Methoden wie <code>Array.from()</code> sind von der Subklasse <code>Array</code> vererbt und erzeugen eine neue Instanz der Subklasse und nicht von <code>Array</code>.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -106,7 +106,7 @@ Array.from({length: 5}, (v, i) =&gt; i);
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>Array.from()</code> wurde zum ECMA-262 Standard in der 6ten Version hinzugefügt. Es kann sein, dass diese in anderen Implementationen des Standards nicht verfügbar ist. Man kann das mit folgendem Code am Anfang eines Skriptes umgehen. Das Skript erlaubt das Benutzen von <code>Array.from()</code><strong> </strong>in Implementationen, welche Array.from() nicht nativ unterstützen. Dieser Algorithmus ist genau derselbe, welcher in EMCA-262, 6te Version implementiert ist, angenommen Object und TypeError haben ihre originalen Werte und <code>callback.call</code> evaluiert den Original Wert von {{jsxref("Function.prototype.call")}}. Außerdem können echte iterierbare Elemente nicht mit einem Polyfill implementiert werden. Diese Implementation unterstützt keine generischen iterierbaren Elemente so wie sie definiert sind in der 6ten Version von ECMA-262.</p>
+<p><code>Array.from()</code> wurde zum ECMA-262 Standard in der 6ten Version hinzugefügt. Es kann sein, dass diese in anderen Implementationen des Standards nicht verfügbar ist. Man kann das mit folgendem Code am Anfang eines Skriptes umgehen. Das Skript erlaubt das Benutzen von <code>Array.from()</code> in Implementationen, welche Array.from() nicht nativ unterstützen. Dieser Algorithmus ist genau derselbe, welcher in EMCA-262, 6te Version implementiert ist, angenommen Object und TypeError haben ihre originalen Werte und <code>callback.call</code> evaluiert den Original Wert von {{jsxref("Function.prototype.call")}}. Außerdem können echte iterierbare Elemente nicht mit einem Polyfill implementiert werden. Diese Implementation unterstützt keine generischen iterierbaren Elemente so wie sie definiert sind in der 6ten Version von ECMA-262.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 6, 22.1.2.1
 if (!Array.from) {
@@ -205,7 +205,7 @@ if (!Array.from) {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.from', 'Array.from')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -1,11 +1,6 @@
 ---
 title: manifest_version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
-tags:
-  - WebExtensions
-  - 拓展
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 ---
 {{AddonSidebar}}
 

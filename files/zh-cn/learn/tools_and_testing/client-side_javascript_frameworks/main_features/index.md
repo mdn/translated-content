@@ -1,7 +1,6 @@
 ---
 title: 框架的主要特性
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -75,6 +74,7 @@ var header = React.createElement("header", null,
 下面是一个简单的 Handlebars 示例：
 
 定义以下 Handlebars 模板：
+
 ```html
 <header>
   <h1>Hello, \{{subject}}!</h1>

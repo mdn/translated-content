@@ -1,7 +1,6 @@
 ---
 title: 理解 JavaScript 前端框架
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 {{LearnSidebar}}
 

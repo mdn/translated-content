@@ -1,10 +1,6 @@
 ---
 title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
-tags:
-  - Firefox
-  - Firefox 41
-translation_of: Mozilla/Firefox/Releases/41
 ---
 {{FirefoxSidebar}}[To test the latest developer features of Firefox, install Firefox Developer Edition](https://nightly.mozilla.org/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 

@@ -1,12 +1,6 @@
 ---
 title: 遞減運算子 (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Decrement
-  - JavaScript
-  - Language feature
-  - Operator
-browser-compat: javascript.operators.decrement
 ---
 {{jsSidebar("Operators")}}
 

@@ -4,7 +4,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 original_slug: Web/API/Worker/Functions_and_classes_available_to_workers
 ---
-En plus de l'ensemble des fonctions standard [JavaScript](/en-US/docs/Web/JavaScript) (telles que {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/JSON", "JSON")}} etc), des fonctions du DOM restent disponibles pour les workers. Cet article en fournit la liste.
+En plus de l'ensemble des fonctions standard [JavaScript](/fr/docs/Web/JavaScript) (telles que {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/JSON", "JSON")}} etc), des fonctions du DOM restent disponibles pour les workers. Cet article en fournit la liste.
 
 **Les workers s'exécutent dans un contexte global, {{domxref("DedicatedWorkerGlobalScope")}} différent du contexte de la fenêtre courante**. Par défaut les méthodes et propriétés de {{domxref("Window")}} ne leur sont pas disponibles, mais {{domxref("DedicatedWorkerGlobalScope")}}, comme `Window`, implémente {{domxref("WindowTimers")}} et {{domxref("WindowBase64")}}.
 

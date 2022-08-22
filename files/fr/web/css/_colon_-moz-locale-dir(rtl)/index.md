@@ -45,4 +45,4 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 ## Voir aussi
 
 - {{cssxref(":-moz-locale-dir(ltr)")}}
-- [Garantir le fonctionnement de votre thème avec les locales RTL](/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)
+- [Garantir le fonctionnement de votre thème avec les locales RTL](/fr/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)

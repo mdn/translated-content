@@ -14,7 +14,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 ---
 {{APIRef("Service Workers API")}}
 
-The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
+The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/fr/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
 
 Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.
 
@@ -123,7 +123,7 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

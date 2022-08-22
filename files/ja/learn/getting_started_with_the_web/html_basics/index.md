@@ -211,7 +211,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
     <a href="">Mozilla Manifesto</a>
     ```
 
- <li>このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
+    このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
 
     ```html
     <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>

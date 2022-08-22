@@ -22,15 +22,21 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ```html
 <noscript>
-  <!-- Un lien vers un site externe -->
-  <a href="http://www.mozilla.com/">Un autre site</a>
+  <!-- élément d'ancre qui mène à un fichier externe  -->
+  <a href="https://www.mozilla.org/">Lien externe</a>
 </noscript>
-<p>Elle est où la poulette ?</p>
+<p>Elle est où, la poulette ?</p>
 ```
 
-### Résultat
+### Résultat avec JavaScript activé
 
-{{EmbedLiveSample("Exemples","300","200")}}
+Elle est où, la poulette&nbsp;?
+
+### Résultat avec JavaScript désactivé
+
+[Lien externe](https://www.mozilla.org/)
+
+Elle est où, la poulette&nbsp;?
 
 ## Résumé technique
 

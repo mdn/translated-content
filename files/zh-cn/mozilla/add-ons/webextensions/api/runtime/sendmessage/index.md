@@ -1,7 +1,6 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 {{AddonSidebar()}}向你的扩展或其他扩展发送单条消息。如果想发给你自己的扩展，则省略 `extensionId` 参数。扩展中所有页面的{{WebExtAPIRef('runtime.onMessage')}}将会被触发，除了调用`runtime.sendMessage的页面。`
 
@@ -41,9 +40,9 @@ var sending = browser.runtime.sendMessage(
 
   - 若第二个参数符合下面的规则，将会被当做 `(message, options)`，将消息发送给自己的扩展：
 
-    1.  一个合法的配置对象（也就是说这个对象只包含 options 参数支持的属性）
-    2.  null
-    3.  undefined
+    1. 一个合法的配置对象（也就是说这个对象只包含 options 参数支持的属性）
+    2. null
+    3. undefined
 
   - 否则，将会被当做 `(extensionId, message)。`消息将会给发送给 `extensionId` 指定 ID 的扩展
 

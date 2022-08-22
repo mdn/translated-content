@@ -27,7 +27,7 @@ self.clients.get(id).then(function(client) {
 
 ### Valeur de retour
 
-Une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résoud avec un objet {{domxref("Client")}}.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résoud avec un objet {{domxref("Client")}}.
 
 ## Exemples
 

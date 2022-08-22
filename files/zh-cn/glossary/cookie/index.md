@@ -1,7 +1,6 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-translation_of: Glossary/Cookie
 ---
 Cookie 就是访问者在访问网站后留下的一个信息片段。
 

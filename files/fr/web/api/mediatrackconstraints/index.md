@@ -40,8 +40,8 @@ Les valeurs `min` et/ou `max` spécifiées sont obligatoires. Si aucune correspo
 
 ## Voir aussi
 
-- [API de capture multimédia et de flux](/en-US/docs/Web/API/Media_Streams_API)
-- [Capacités, contraintes et paramètres](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [API de capture multimédia et de flux](/fr/docs/Web/API/Media_Streams_API)
+- [Capacités, contraintes et paramètres](/fr/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("ConstrainDoubleRange")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackCapabilities")}}

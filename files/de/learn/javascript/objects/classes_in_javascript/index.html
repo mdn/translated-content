@@ -63,7 +63,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 <h3 id="Spezialisierte_Klassen">Spezialisierte Klassen</h3>
 
-<p>In diesem Fall wollen wir keine allgemeinen Leute - wir wollen Lehrer und Schüler, die beide spezifischere Typen von Menschen sind. In OOP können wir neue Klassen erstellen, die auf anderen Klassen basieren - diese neuen Unterklassen können die Daten- und Funktionalitäten ihrer Elternklasse erben, so dass Sie die Funktionalitäten, die allen Objekttypen gemeinsam ist, wiederverwenden können, anstatt sie duplizieren zu müssen.  Da wo sich Funktionalitäten zwischen den Klassen unterscheiden soll, können bei Bedarf spezialisierte Features direkt in den betroffenen Klassen entsprechend definieren.</p>
+<p>In diesem Fall wollen wir keine allgemeinen Leute - wir wollen Lehrer und Schüler, die beide spezifischere Typen von Menschen sind. In OOP können wir neue Klassen erstellen, die auf anderen Klassen basieren - diese neuen Unterklassen können die Daten- und Funktionalitäten ihrer Elternklasse erben, so dass Sie die Funktionalitäten, die allen Objekttypen gemeinsam ist, wiederverwenden können, anstatt sie duplizieren zu müssen.  Da wo sich Funktionalitäten zwischen den Klassen unterscheiden soll, können bei Bedarf spezialisierte Features direkt in den betroffenen Klassen entsprechend definieren.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
 
@@ -176,9 +176,9 @@ var person2 = new Person('Sarah');</pre>
  <li>Entfernen Sie den bisher eingefügten Code und fügen Sie nachfolgenden Konstruktor als Ersatz hinzu - dies ist im Prinzip genau dasselbe, wie das einfache Beispiel, nur etwas komplexer:
   <pre class="brush: js">function Person(first, last, age, gender, interests) {
   this.name = {
-     first : first,
-     last : last
-  };
+     first : first,
+     last : last
+  };
   this.age = age;
   this.gender = gender;
   this.interests = interests;

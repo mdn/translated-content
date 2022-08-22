@@ -1,7 +1,6 @@
 ---
 title: API
 slug: Glossary/API
-translation_of: Glossary/API
 ---
 一个 API（Application Programming Interface，应用编程接口）是软件（应用）中的一系列特性和规则，这些特性和规则允许其他软件与之交互（与用户界面相对）。API 可被视为提供它的应用与其他软硬件之间的一个简单的合约（接口）。
 

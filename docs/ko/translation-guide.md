@@ -216,6 +216,21 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
   - 예: 정수 값, 소수 값, 반환 값, 기본 값
   - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
+
+- callout  
+
+```html
+<div class="callout">
+  <h4 id="looking_to_become_a_front-end_web_developer">프론트엔드 웹 개발자가 되고자 하시나요?</h4>
+
+  <p>목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.</p>
+
+  <p>
+    <a href="/ko/docs/Learn/Front-end_web_developer"><strong>시작하기</strong></a>
+  </p>
+</div>
+```
+
 ### 용어 지침 `참고 링크` 우선 순위
 
 - 1. 해당 단어에 대한 의견을 나눈 PR 링크
@@ -244,7 +259,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 | Examples | 예제들 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/loop#examples) |
 | Guides | 가이드 | |
-| In this module | | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
+| In this module | 이번 과정에서는 | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
 | Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |
 | Next steps | 다음 단계 | [링크](https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_breakout_game_Phaser#%EB%8B%A4%EC%9D%8C_%EB%8B%A8%EA%B3%84) |
 | Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |

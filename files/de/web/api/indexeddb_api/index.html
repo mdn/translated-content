@@ -33,7 +33,7 @@ translation_of: Web/API/IndexedDB_API
 
 <ul>
  <li>Lies mehr über die <a href="/de/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Konzepte hinter IndexedDB</a>.</li>
- <li>Nutze IndexedDB asynchron, indem du die Grundlagen mit unserer <a href="/de/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDB Anleitung</a> erlernst.</li>
+ <li>Nutze IndexedDB asynchron, indem du die Grundlagen mit unserer <a href="/de/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDB Anleitung</a> erlernst.</li>
  <li>Finde Entwickler Empfehlungen, um Web Apps offline arbeiten zu lassen auf unserer <a href="/en-US/Apps/Build/Offline">Offline Apps</a> Seite</li>
 </ul>
 
@@ -43,7 +43,7 @@ translation_of: Web/API/IndexedDB_API
 
 <h3 id="Synchron_und_asynchron">Synchron und asynchron</h3>
 
-<p>Operationen unter Verwendung von IndexedDB werden asynchron durchgeführt, um Anwendungen nicht zu blockieren. IndexedDB beinhaltete ursprünglich eine asynchrone und eine synchrone API; die synchrone API war nur für den Gebrauch von <a href="/de/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a> gedacht. Die synchrone Version wurde aus der Spezifikation entfernt, weil ihre Notwendigkeit fraglich war, aber sie kann in Zukunft wieder eingeführt werden, wenn es genug Nachfrage von Web Entwicklern gibt.</p>
+<p>Operationen unter Verwendung von IndexedDB werden asynchron durchgeführt, um Anwendungen nicht zu blockieren. IndexedDB beinhaltete ursprünglich eine asynchrone und eine synchrone API; die synchrone API war nur für den Gebrauch von <a href="/de/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a> gedacht. Die synchrone Version wurde aus der Spezifikation entfernt, weil ihre Notwendigkeit fraglich war, aber sie kann in Zukunft wieder eingeführt werden, wenn es genug Nachfrage von Web Entwicklern gibt.</p>
 
 <h3 id="Speichergrenzen_und_Löschkriterien">Speichergrenzen und Löschkriterien</h3>
 
@@ -79,7 +79,7 @@ translation_of: Web/API/IndexedDB_API
  <dt>{{domxref("IDBObjectStore")}}</dt>
  <dd>Steht für einen Objektspeicher, der Zugriff auf einen Datensatz in einer IndexedDB Datenbank erlaubt via Primärschlüsselsuche.</dd>
  <dt>{{domxref("IDBIndex")}}</dt>
- <dd>Gestattet ebenfalls Zugriff auf eine Teilmenge von Daten in einer IndexedDB Datenbank. Nutzt allerdings einen Index anstelle eines Primärschlüssels um an Einträge zu gelangen. Dies kann schneller sein als die Verwendung von {{domxref("IDBObjectStore")}}.</dd>
+ <dd>Gestattet ebenfalls Zugriff auf eine Teilmenge von Daten in einer IndexedDB Datenbank. Nutzt allerdings einen Index anstelle eines Primärschlüssels um an Einträge zu gelangen. Dies kann schneller sein als die Verwendung von {{domxref("IDBObjectStore")}}.</dd>
  <dt>{{domxref("IDBCursor")}}</dt>
  <dd>Iterates over object stores and indexes.</dd>
  <dt>{{domxref("IDBCursorWithValue")}}</dt>
@@ -151,93 +151,7 @@ translation_of: Web/API/IndexedDB_API
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>23.0 {{property_prefix("webkit")}}<br>
-     24</p>
-   </td>
-   <td>{{CompatGeckoDesktop("10.0")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16.0")}}</td>
-   <td>10, partial</td>
-   <td>15</td>
-   <td>7.1</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>IDBLocaleAwareKeyRange</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("43.0")}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>{{CompatGeckoMobile("22.0")}}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>22</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("37.0")}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>IDBLocaleAwareKeyRange</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("43.0")}}<sup>[2]</sup></td>
-   <td>2.5<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <ul>
  <li>[1] {{domxref("IDBCursorWithValue")}} is not available in workers until Gecko 42.0 {{geckoRelease("42.0")}}.</li>

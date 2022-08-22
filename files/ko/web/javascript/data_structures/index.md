@@ -122,7 +122,7 @@ C 언어와 같은 일부 프로그래밍 언어와 달리 JavaScript 문자열�
 
 - 연결 연산자를 통해 복잡한 문자열을 쉽게 만들 수 있습니다.
 - 문자열은 디버깅이 쉽습니다. (출력 내용이 항상 문자열의 값과 동일)
-- 문자열은 많은 API([입력 칸](/ko/docs/Web/API/HTMLInputElement), [로컬 스토리지](/ko/docs/Web/API/Web_Storage_AP) 값, `responseText`와 함께 사용하는 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) 등등)의 공통 분모입니다.
+- 문자열은 많은 API([입력 칸](/ko/docs/Web/API/HTMLInputElement), [로컬 스토리지](/ko/docs/Web/API/Web_Storage_AP) 값, `responseText`와 함께 사용하는 [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest) 등등)의 공통 분모입니다.
 
 규칙만 잘 정한다면 어떤 자료구조라도 문자열로 표현할 수 있습니다. 그러나 그게 좋은 방법이 되는 것은 아닙니다. 예컨대, 구분자를 사용하면 (물론 JavaScript 배열이 더 적합하겠지만) 문자열로 리스트를 흉내낼 수도 있을 것입니다. 그러나 구분자를 리스트의 요소로 사용하는 순간 리스트가 망가지고 맙니다. 이제 구분자를 구분하기 위해 이스케이프 문자를 선택하고, 등등... 이 모든 것이 각자의 규칙을 필요로 하고 불필요한 유지보수 부담을 낳습니다.
 

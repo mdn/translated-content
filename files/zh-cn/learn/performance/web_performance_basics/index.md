@@ -1,7 +1,6 @@
 ---
 title: Web performance basics
 slug: learn/Performance/Web_Performance_Basics
-translation_of: Learn/Performance/Web_Performance_Basics
 ---
 有很多的[理由](https://developers.google.com/web/fundamentals/performance/why-performance-matters/)告诉你为什么你的网站需要尽可能好的性能。下面是关于最佳实践，工具，API 以及链接的简明介绍，它为每个主题提供了更多的信息。意识到对用户来说什么是真正重要的也至关重要，他可能不是绝对意义上的时间而是[用户感知的时间](/en-US/docs/Learn/Performance/perceived_performance)。
 
@@ -21,9 +20,9 @@ translation_of: Learn/Performance/Web_Performance_Basics
 
 - 学习使用[Firefox Dev Tools](/en-US/docs/Tools/Performance)来分析您的网站。
 - [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 可以分析您的页面并且给出一些通用的建议来提升网站性能。
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 可以给您一份有关您网站的包括性能，SEO 和可访问性等多个方面的详细分类。
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 可以给您一份有关您网站的包括性能，SEO 和无障碍等多个方面的详细分类。
 - 使用 [Webpagetest.org](http://webpagetest.org/)检测页面在不同真实设备类型和地点时候的速度。trics.
-- 定义一个绩效预算[ ](/en-US/docs/Web/Performance/Performance_budget)（[performance budget](/en-US/docs/Web/Performance/Performance_budget)）。
+- 定义一个绩效预算（[performance budget](/en-US/docs/Web/Performance/Performance_budget)）。
 
 #### APIs
 

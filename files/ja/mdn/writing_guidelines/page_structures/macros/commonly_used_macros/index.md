@@ -1,20 +1,21 @@
 ---
 title: よく使われるマクロ
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
+page-type: mdn-writing-guide
 tags:
-  - CSS
-  - マクロ
-  - リファレンス
-  - 構造
-translation_of: MDN/Structures/Macros/Commonly-used_macros
+  - meta
+  - writing-guide
+translation_of: MDN/Writing_guidelines/Page_structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
+l10n:
+  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
 {{MDNSidebar}}
 
 このページには MDN で使うために作られた汎用のマクロの大部分が掲載されています。
-これらのマクロの使い方については、[マクロの使い方](/ja/docs/MDN/Structures/Macros)を参照してください。
+これらのマクロの使い方については、[マクロの使い方](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)を参照してください。
 
-[その他のマクロ](/ja/docs/MDN/Structures/Macros/Other)には、めったに使われないマクロ、特殊な文脈でのみ使われるマクロ、使用が推奨されないマクロについての情報が書かれています。
+[その他のマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)には、めったに使われないマクロ、特殊な文脈でのみ使われるマクロ、使用が推奨されないマクロについての情報が書かれています。
 
 ## リンク
 
@@ -88,7 +89,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
           >HTMLAttrxRef</a>
       </td>
       <td>
-        属性名のみを指定した場合は <a href="/ja/docs/Web/HTML/Global_attributes">HTML のグローバル属性の説明。</a>
+        属性名のみを指定した場合は <a href="/ja/docs/Web/HTML/Global_attributes">HTML のグローバル属性の説明</a>。
         <br />属性名と要素名を指定した場合は、特定の HTML 要素に関連付けられた属性。
       </td>
       <td>
@@ -101,7 +102,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference">JavaScript リファレンス</a> (/Web/JavaScript/Reference).
+        <a href="/ja/docs/Web/JavaScript/Reference">JavaScript リファレンス</a> (/Web/JavaScript/Reference)
       </td>
       <td>
         <code>\{{JSxRef("Promise")}}</code> は {{JSxRef("Promise")}} になります。
@@ -135,7 +136,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
         <code><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a> (/Web/HTTP/Headers).
+        <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a> (/Web/HTTP/Headers)
       </td>
       <td>
         <code>\{{HTTPHeader("ACCEPT")}}</code> は {{HTTPHeader("ACCEPT")}} になります。
@@ -146,7 +147,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTTP/Methods">HTTP リクエストメソッド</a> (/Web/HTTP/Methods).
+        <a href="/ja/docs/Web/HTTP/Methods">HTTP リクエストメソッド</a> (/Web/HTTP/Methods)
       </td>
       <td>
         <code>\{{HTTPMethod("HEAD")}}</code> は {{HTTPMethod("HEAD")}} になります。
@@ -163,23 +164,6 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
         <code>\{{HTTPStatus("404")}}</code> は {{HTTPStatus("404")}} になります。
       </td>
     </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.
-      </td>
-      <td>
-        <a href="/ja/docs/Web/Events">イベントリファレンス</a> (/Web/Events)
-      </td>
-      <td>
-        <div class="note">
-          <p>
-            <strong>Note:</strong> このマクロは、イベントが関連する DOM 要素の下に移動したため、特に有用ではありません。
-            wheel イベントにリンクするには、 <code>\{{DOMxRef("Document.wheel_event")}}</code> を使用すれば
-            {{DOMxRef("Document.wheel_event")}} となります。
-          </p>
-        </div>
-      </td>
-    </tr>
   </tbody>
 </table>
 
@@ -192,16 +176,16 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 
 ### 複数のページからなるガイドのためのナビゲーション補助
 
-[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs)、[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) は、一連の記事の中でのナビゲーションコントロールを提供します。一方向用のテンプレートでは、 前の または 次の 記事の Wiki 位置を指す 1 つの引数が必要です。[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) については、前の記事、次の記事を指す 2 つの引数を取ります。最初の引数が前の記事を指し、2 番めの引数が次の記事を指します。
+[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs)、[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) は、一連の記事の中でのナビゲーションコントロールを提供します。一方向用のテンプレートでは、 前の または 次の 記事の Wiki 位置を指す 1 つの引数が必要です。 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) については、前の記事、次の記事を指す 2 つの引数を取ります。最初の引数が前の記事を指し、2 番めの引数が次の記事を指します。
 
 ## コードのサンプル
 
 ### ライブサンプル
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) はコードサンプルの出力をページに埋め込むのに使います。解説は[ライブサンプル](/ja/docs/MDN/Structures/Live_samples)のページにあります。
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) はコードサンプルの出力を含むページへのリンクを作成します。解説は[ライブサンプル](/ja/docs/MDN/Structures/Live_samples)のページにあります。
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) はコードサンプルの出力をページに埋め込むのに使います。解説は[ライブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples)のページにあります。
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) はコードサンプルの出力を含むページへのリンクを作成します。解説は[ライブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples)のページにあります。
 - [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) は GitHub ページからライブサンプルを埋め込むことができます。
-  詳しい情報は [GitHub ライブサンプル](/ja/docs/MDN/Structures/Code_examples#github_live_samples)にあります。
+  詳しい情報は [GitHub ライブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples)にあります。
 
 ## サイドバーの生成
 
@@ -273,7 +257,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 これらのテンプレートが示すのは、上記の対応するインラインマークと同じものです。テンプレートはリファレンスページのメインページタイトルの (または、パンくずリストがあるならばその) 直下に置きます。ページ内のセクションをマークアップすることもできます。
 
 - [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) は[実験的な機能](/ja/docs/MDN/Guidelines/Conventions_definitions#experimental)のドキュメントのページに使用してください。
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) は[実験的な機能](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)のドキュメントのページに使用してください。
   例: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).

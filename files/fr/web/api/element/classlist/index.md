@@ -22,7 +22,7 @@ L'utilisation de `classList` est une alternative à la propriété {{domxref("el
 const elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ est une [DOMTokenList](/en-US/docs/DOM/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
+_elementClasses_ est une [DOMTokenList](/fr/docs/DOM/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
 
 ## Méthodes
 

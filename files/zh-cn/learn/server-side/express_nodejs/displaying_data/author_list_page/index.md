@@ -1,7 +1,6 @@
 ---
 title: 作者清单面页、分类清单页面、与自我挑战
 slug: learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。
 
@@ -64,7 +63,7 @@ block content
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-## 种类列表页面—自我挑战！[Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
+## 种类列表页面—自我挑战！
 
 在这个部分，你应该实作你自己的种类列表页面。该页面应显示数据库中所有种类的列表，每个种类都链接到其关联的详细信息页面。预期结果的屏幕截图如下所示。
 
@@ -72,14 +71,14 @@ block content
 
 种类列表控制器功能，需要获取所有种类实例的列表，然后将这些实例传递给模板进行渲染。
 
-1.  您需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
-2.  实现方式几乎与`author_list()`控制器完全相同。
+1. 您需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
+2. 实现方式几乎与`author_list()`控制器完全相同。
 
     - 按名称以上升顺序，对结果进行排序。
 
-3.  要呈现的模板，应命名为 **genre_list.pug**。
-4.  要呈现的模板应该传递变量`title`（'Genre List'）和种类列表`genre_list`（从`Genre.find()`回调返回）。
-5.  该视图应与上面的屏幕截图/要求相匹配（这应该与作者列表视图具有非常相似的结构/格式，除了种类没有日期）。
+3. 要呈现的模板，应命名为 **genre_list.pug**。
+4. 要呈现的模板应该传递变量`title`（'Genre List'）和种类列表`genre_list`（从`Genre.find()`回调返回）。
+5. 该视图应与上面的屏幕截图/要求相匹配（这应该与作者列表视图具有非常相似的结构/格式，除了种类没有日期）。
 
 ## 下一步
 

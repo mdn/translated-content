@@ -1,11 +1,6 @@
 ---
 title: 什么是超链接？
 slug: Learn/Common_questions/What_are_hyperlinks
-tags:
-  - 初学者
-  - 基础
-  - 导航
-translation_of: Learn/Common_questions/What_are_hyperlinks
 ---
 通过这篇文章，我们将了解什么是超链接以及超链接的重要性。
 
@@ -38,9 +33,9 @@ translation_of: Learn/Common_questions/What_are_hyperlinks
 
 早在 1989 年，网络发明人蒂姆·伯纳斯 - 李（Tim Berners-Lee）就提出了网站的三大支柱：
 
-1.  {{Glossary("URL")}}, 跟踪 Web 文档的地址系统
-2.  {{Glossary("HTTP")}}, 一个传输协议，以便在给定 URL 时查找文档
-3.  {{Glossary("HTML")}}, 允许嵌入超链接的文档格式
+1. {{Glossary("URL")}}, 跟踪 Web 文档的地址系统
+2. {{Glossary("HTTP")}}, 一个传输协议，以便在给定 URL 时查找文档
+3. {{Glossary("HTML")}}, 允许嵌入超链接的文档格式
 
 正如您在三大支柱中所看到的，网络上的一切都围绕着文档以及如何访问它们。Web 的最初目的是提供一种简单的方式来访问，阅读和浏览文本文档。从那时起，网络已经发展到提供图像，视频和二进制数据的访问，但是这些改进几乎没有改变三大支柱。
 

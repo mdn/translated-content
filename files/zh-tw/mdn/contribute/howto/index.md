@@ -1,13 +1,6 @@
 ---
 title: How-to guides
 slug: MDN/Contribute/Howto
-tags:
-  - Documentation
-  - Landing
-  - MDN
-  - NeedsTranslation
-  - TopicStub
-translation_of: MDN/Contribute/Howto
 ---
 {{MDNSidebar}}
 

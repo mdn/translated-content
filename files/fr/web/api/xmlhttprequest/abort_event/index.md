@@ -44,4 +44,4 @@ L'événement **abort** est déclenché lorsque la progression a été interompu
 
 ## Voir aussi
 
-- [Surveillance de la progression](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Surveillance de la progression](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
