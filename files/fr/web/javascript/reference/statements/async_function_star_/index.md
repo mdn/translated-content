@@ -15,13 +15,13 @@ Il est aussi possible de définir des fonctions génératrices asynchrones à l'
 ## Syntaxe
 
 ```js
-async function* name(param0) {
+async function* nom(param0) {
   instructions
 }
-async function* name(param0, param1) {
+async function* nom(param0, param1) {
   instructions
 }
-async function* name(param0, param1, /* … ,*/ paramN) {
+async function* nom(param0, param1, /* … ,*/ paramN) {
   instructions
 }
 ```
@@ -30,7 +30,7 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 
 ### Paramètres
 
-- `name`
+- `nom`
   - : Le nom de la fonction.
 - `param` {{optional_inline}}
   - : Le nom d'un paramètre formel pour la fonction.
