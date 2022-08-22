@@ -15,7 +15,7 @@ translation_of: Web/API/Blob/stream
 ---
 {{APIRef("File API")}}
 
-{{domxref("Blob")}} インターフェイスの**`stream()`** メソッドは、{{domxref("ReadableStream")}} を返します。これは、読み取り時に、`Blob` に含まれるデータを返します。
+{{domxref("Blob")}} インターフェイスの **`stream()`** メソッドは、{{domxref("ReadableStream")}} を返します。これは、読み取り時に、`Blob` に含まれるデータを返します。
 
 ## シンタックス
 
