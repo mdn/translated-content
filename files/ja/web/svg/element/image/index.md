@@ -16,7 +16,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 
 `<image>` で表示される SVG ファイルは[画像として扱われます](/ja/docs/Web/SVG/SVG_as_an_Image)。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは[適用されず](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。
 
-> **Note:** **注:** HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/SVG_In_HTML_Introduction) 内のみのものです。
+> **Note:** HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/SVG_In_HTML_Introduction) 内のみのものです。
 
 ## 使用場所
 
@@ -58,7 +58,7 @@ SVG 内における PNG 画像の基本的な描画:
 ```html
 <svg width="200" height="200"
   xmlns="http://www.w3.org/2000/svg">
-  <image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/>
+  <image href="mdn_logo_only_color.png" height="200" width="200"/>
 </svg>
 ```
 

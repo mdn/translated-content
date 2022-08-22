@@ -14,7 +14,7 @@ SVG の内部の基礎を説明しましたので、ここでは SVG ファイ�
 
 ### ブラウザーの対応
 
-Internet Explorer 9 により、 IE 　 9、Mozilla Firefox、Safari、Google Chrome、 Opera といったすべての主要なブラウザーが SVG に対応しています。 WebKit ベースのブラウザーをもつモバイル端末も SVG に対応しています。 古い端末やより小さな端末では、SVG Tiny に対応しているかもしれません。
+Internet Explorer 9 により、 IE 9、Mozilla Firefox、Safari、Google Chrome、 Opera といったすべての主要なブラウザーが SVG に対応しています。 WebKit ベースのブラウザーをもつモバイル端末も SVG に対応しています。 古い端末やより小さな端末では、SVG Tiny に対応しているかもしれません。
 
 ## Inkscape
 

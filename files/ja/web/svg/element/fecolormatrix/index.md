@@ -160,7 +160,7 @@ A' | 0 0 0 1 0 |
 
 ### 結果
 
-{{EmbedLiveSample("Example", "100%", 700, "/files/4371/test.png")}}
+{{EmbedLiveSample("Example", "100%", 700, "test.png")}}
 
 ## 仕様書
 

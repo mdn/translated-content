@@ -18,11 +18,11 @@ translation_of: Web/SVG/Element/rect
 
 ### シンプルな `rect 要素の使い方`
 
-» [rect-1.svg](/files/3247/rect-1.svg "https://developer.mozilla.org/files/3247/rect-1.svg")
+» [rect-1.svg](rect-1.svg "https://developer.mozilla.orgrect-1.svg")
 
 ### `角の丸い rect` 要素
 
-» [rect-2.svg](/files/3248/rect-2.svg "https://developer.mozilla.org/files/3248/rect-2.svg")
+» [rect-2.svg](rect-2.svg "https://developer.mozilla.orgrect-2.svg")
 
 ## 属性
 

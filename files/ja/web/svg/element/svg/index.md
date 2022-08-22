@@ -13,7 +13,7 @@ translation_of: Web/SVG/Element/svg
 
 `svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Attribute/viewBox)を定義するコンテナです。これは SVG ドキュメントの最も外側の要素として使用されますが、SVG または HTML ドキュメントの中に SVG フラグメントを埋め込むためにも使用できます。
 
-> **Note:** **注意:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
+> **Note:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
 
 ```css hidden
 html,body,svg { height:100% }
@@ -65,7 +65,7 @@ html,body,svg { height:100% }
   - : SVG コンテナが表示される y 座標。最も外側の`SVG`要素では効果ありません。
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _初期値_: `0`; _Animatable_: **yes**
 
-> **Note:** **注意:** SVG2 で開始する場合には、`x`, `y`, `width`, `height` は、*ジオメトリプロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
+> **Note:** SVG2 で開始する場合には、`x`, `y`, `width`, `height` は、*ジオメトリプロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
 
 ### グローバル属性
 

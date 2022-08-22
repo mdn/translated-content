@@ -30,9 +30,9 @@ translation_of: Web/SVG/Tutorial/Getting_Started
 </svg>
 ```
 
-コードをコピーして、ファイル demo1.svg に貼り付けましょう。そして、ファイルを Firefox で開いてください。これは、下のスクリーンショットを表示するようレンダリングします。(Firefox のユーザは [こちら](/@api/deki/files/4571/=svgdemo1.xml "https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml") をクリックしてください)
+コードをコピーして、ファイル demo1.svg に貼り付けましょう。そして、ファイルを Firefox で開いてください。これは、下のスクリーンショットを表示するようレンダリングします。(Firefox のユーザは [こちら](svgdemo1.xml) をクリックしてください)
 
-![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
+![svgdemo1.png](svgdemo1.png)
 
 レンダリングプロセスは以下のように関わります:
 

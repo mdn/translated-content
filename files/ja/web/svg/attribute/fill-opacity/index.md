@@ -10,7 +10,7 @@ translation_of: Web/SVG/Attribute/fill-opacity
 
 **`fill-opacity`**属性は、図形に適用されるペイントサーバー(_色_, _勾配_, _パターン_, 等)の不透明度を定義するプレゼンテーション属性です。
 
-> **Note:** **注:**プレゼンテーション属性としての`fill-opacity`CSS プロパティに適用できます。
+> **Note:** プレゼンテーション属性としての`fill-opacity`CSS プロパティに適用できます。
 
 プレゼンテーション属性として、任意の要素に適用可能ですが、次の 11 個の要素のみで効果があります: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
@@ -46,7 +46,7 @@ html,body,svg { height:100% }
 | 規定値             | `1`                                                                 |
 | アニメーション可否 | はい                                                                |
 
-> **Note:** **注:** SVG2 では、`fill-opacity`への割合値を導入していますが、状況としてはこれはまだ広く対応されているわけではありません(_以下の[ブラウザ実装状況](#Browser_Compatibility)を参照_)。最良の実装としては、不透明度を`[0-1]`の範囲の値として指定することです。
+> **Note:** SVG2 では、`fill-opacity`への割合値を導入していますが、状況としてはこれはまだ広く対応されているわけではありません(_以下の[ブラウザ実装状況](#Browser_Compatibility)を参照_)。最良の実装としては、不透明度を`[0-1]`の範囲の値として指定することです。
 
 ## ブラウザー実装状況
 

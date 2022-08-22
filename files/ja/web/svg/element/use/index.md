@@ -63,9 +63,9 @@ That's why the circles have different x positions, but the same stroke value.
   - : The height of the use element.
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length) ; _既定値_: `0`; _Animatable_: **yes**
 
-> **Note:** **注:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewbox](/ja/docs/Web/SVG/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
+> **Note:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewbox](/ja/docs/Web/SVG/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
 
-> **Note:** **注:** SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
+> **Note:** SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
 
 ### グローバル属性
 

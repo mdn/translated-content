@@ -12,7 +12,7 @@ translation_of: Web/SVG/Element/polyline
 
 ## 概要
 
-`polyline`要素は SVG の基本図形であり、いくつかの座標で繋がった一連の直線を生成します。一般的に`polyline要素は開いた図形を生成する際に使用します。`
+`polyline`要素は SVG の基本図形であり、いくつかの座標で繋がった一連の直線を生成します。一般的に`polyline` 要素は開いた図形を生成する際に使用します。
 
 ## 使用可能な場所
 
@@ -20,7 +20,7 @@ translation_of: Web/SVG/Element/polyline
 
 ## 例
 
-» [polyline.svg](/files/3260/polyline.svg "https://developer.mozilla.org/files/3260/polyline.svg")
+» [polyline.svg](polyline.svg "https://developer.mozilla.orgpolyline.svg")
 
 ## 属性
 

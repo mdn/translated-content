@@ -18,19 +18,23 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 `circle` 要素をもとにして、先に述べた半円を作成しましょう:
 
-```xml
-<clipPath id="cut-off-bottom">
-  <rect x="0" y="0" width="200" height="100" />
-</clipPath>
+```html
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="cut-off-bottom">
+      <rect x="0" y="0" width="200" height="100" />
+    </clipPath>
+  </defs>
 
-<circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" />
+  <circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" />
+</svg>
 ```
 
 (100,100) を中心にした半径 100 の円を描画します。`clip-path` 属性は、`rect` 要素を 1 つ含む `{{SVGElement("clipPath")}}` 要素を参照しています。この長方形は、キャンバスの上半分に黒色で描画されるものです。なお補足として、`clipPath` 要素はたいてい `defs` セクションに置かれます。
 
 ところが、`rect` 要素は描画されません。描画されない代わりにそのピクセルデータは、円の中で最終的にレンダリングするピクセルを決定することに用いられます。長方形は円の上半分だけを覆っているため、円の下半分は消滅します。
 
-![clipdemo.png](/@api/deki/files/4933/=clipdemo.png)
+{{ EmbedLiveSample('Creating_clips','240','240') }}
 
 これで、path 要素の円弧を扱う必要なしに半円を作りました。クリッピング用に `clipPath` の内部にあるすべてのパスが、そのストロークやトランスフォームと併せて調査および評価されます。そして適用先のオブジェクトのうち、`clipPath` の内容物で決められた透過領域にかかる部分は描画されません。色や不透明度などは、図形の一部を完全に消滅させない限り効果がありません。
 
@@ -38,12 +42,12 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 マスキングの効果は、グラデーションと共に適用するともっとも印象的です。要素をフェードアウトしたい場合は、マスクを用いることですぐにその効果を得ることができます。
 
-```xml
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+```html
+<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="Gradient">
-      <stop offset="0" stop-color="white" stop-opacity="0" />
-      <stop offset="1" stop-color="white" stop-opacity="1" />
+      <stop offset="0" stop-color="black" />
+      <stop offset="1" stop-color="white" />
     </linearGradient>
     <mask id="Mask">
       <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)"  />
@@ -57,24 +61,26 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 下層のレイヤーに緑色で塗りつぶした `rect` 、上層に赤色で塗りつぶした `rect` があります。また後者には、`mask` 要素を指し示す `mask` 属性があります。mask 要素の内容物は `rect` 要素が 1 つあり、これは透明から白色へのグラデーションで塗りつぶしています。この結果、赤色の長方形のピクセルは mask の内容物のアルファ値 (透明度) を継承して、最終的に緑色から赤色へのグラデーションができます:
 
-![maskdemo.png](/@api/deki/files/4945/=maskdemo.png)
+{{ EmbedLiveSample('Masking','240','240') }}
 
 ## `opacity` による透明度
 
 要素全体の透明度を設定することができます。それには `opacity` 属性を用います:
 
-```
+```xml
 <rect x="0" y="0" width="100" height="100" opacity=".5" />
 ```
 
 上記の長方形は、半透明で描画します。fill および stroke について分けられた 2 つの属性 `fill-opacity` と `stroke-opacity` があり、それぞれのプロパティの不透明度を分けて制御します。なお、ストロークは塗りつぶしの上層に描画することに注意してください。このために塗りつぶしもある要素でストロークの不透明度を設定した場合は、ストロークの半分で塗りつぶしが透けて見え、また同時に残り半分で背景が透けて見えます:
 
-```xml
-<rect x="0" y="0" width="200" height="200" fill="blue" />
-<circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+```html
+<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="0" y="0" width="200" height="200" fill="blue" />
+  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+</svg>
 ```
 
-![opacitydemo.png](/@api/deki/files/4942/=opacitydemo.png)
+{{ EmbedLiveSample('Transparency_with_opacity','240','240') }}
 
 この例では、青い背景の上に赤い円があります。黄色のストロークに 50% の不透明度を設定しており、事実上 2 色のストロークになります。
 
@@ -82,4 +88,4 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 Web 開発者が持つツールの中でもっとも強力なもののひとつが、`display: none` です。それゆえ、CSS2 で定義された `visibility` や `clip` と併せて、この CSS プロパティも SVG に取り込むことが決定した点に若干の驚きがあります。過去に設定した `display: none` を元に戻すためには、すべての SVG 要素の初期値が `inline` であると知っておくことが重要です。
 
-{{PreviousNext("SVG/Tutorial/Basic_Transformations", "SVG/Tutorial/Other_content_in_SVG")}}
+{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}

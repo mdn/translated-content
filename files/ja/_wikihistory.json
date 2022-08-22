@@ -44668,13 +44668,6 @@
       "Shimono"
     ]
   },
-  "Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-23T23:49:46.760Z",
-    "contributors": [
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "Web/SVG/SVG_animation_with_SMIL": {
     "modified": "2019-03-24T00:12:22.914Z",
     "contributors": [

@@ -52,7 +52,7 @@ html,body,svg { height:100% }
 | デフォルト値         | `0`                                                                                                                    |
 | アニメーション可能か | Yes                                                                                                                    |
 
-> **Note:** **注:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
+> **Note:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
 
 ## radialGradient
 

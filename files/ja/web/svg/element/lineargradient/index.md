@@ -11,7 +11,7 @@ translation_of: Web/SVG/Element/linearGradient
 
 ## 概要
 
-`linearGradient`要素はグラフィック要素の塗りまたは線への線形グラデーションを定義します。
+`linearGradient` 要素はグラフィック要素の塗りまたは線への線形グラデーションを定義します。
 
 ## 使用可能な場所
 
@@ -19,7 +19,7 @@ translation_of: Web/SVG/Element/linearGradient
 
 ## 例
 
-» [linearGradient.svg](/files/3265/linearGradient.svg "https://developer.mozilla.org/files/3265/linearGradient.svg")
+» [linearGradient.svg](linearGradient.svg "https://developer.mozilla.orglinearGradient.svg")
 
 ## 属性
 
