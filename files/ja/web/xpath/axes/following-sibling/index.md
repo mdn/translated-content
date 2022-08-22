@@ -6,4 +6,4 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/following-sibling
 ---
-<p><code>following-sibling</code>軸は、コンテキストノードと同じ親を持ち、ソースドキュメント内のコンテキストノードの後に現れるすべてのノードを示します。</p>
+`following-sibling`軸は、コンテキストノードと同じ親を持ち、ソースドキュメント内のコンテキストノードの後に現れるすべてのノードを示します。

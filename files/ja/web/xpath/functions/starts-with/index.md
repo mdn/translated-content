@@ -6,32 +6,31 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/starts-with
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>starts-with</code> 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、true または false を返します。</p>
+`starts-with` 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、true または false を返します。
 
-<h3 id="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">starts-with(<em>haystack</em>, <em>needle</em>)
-</pre>
+```
+starts-with(haystack, needle)
+```
 
-<h3 id="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><em><code>haystack</code></em></dt>
- <dd>検索される文字列。</dd>
- <dt><em><code>needle</code></em></dt>
- <dd>検索する文字列。</dd>
-</dl>
+- _`haystack`_
+  - : 検索される文字列。
+- _`needle`_
+  - : 検索する文字列。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p><em><code>haystack</code></em>が<em><code>needle</code></em> で始まれば <code>true</code>。 そうでなければ <code>false</code>。</p>
+*`haystack`* が *`needle`* で始まれば `true`。 そうでなければ `false`。
 
-<h3 id="Defined">定義</h3>
+### 定義
 
-<p><a href="https://www.w3.org/TR/xpath#function-starts-with">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-starts-with)
 
-<h3 id="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み。</p>
+対応済み。

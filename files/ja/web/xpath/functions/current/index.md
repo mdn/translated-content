@@ -6,60 +6,68 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/current
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>current</code>関数を使用して、XSLT命令でコンテキストノードを取得できます。</p>
+`current`関数を使用して、XSLT 命令でコンテキストノードを取得できます。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">current()
-</pre>
+```
+current()
+```
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+### 返値
 
-<p>現在のノードのみを含むノード集合。</p>
+現在のノードのみを含むノード集合。
 
-<h3 id="Notes" name="Notes">注記</h3>
+### 注記
 
-<p>この関数はXSLT固有のXPathへの追加です。コアXPath関数ライブラリの一部ではありません。</p>
+この関数は XSLT 固有の XPath への追加です。コア XPath 関数ライブラリの一部ではありません。
 
-<p>一番外側の式（別の式内に現れない式）の場合、現在のノードは常にコンテキストノード（<code>.</code>または<code>self</code>構文によって返されます）と同じです。次の2つは意味的に同等です。</p>
+一番外側の式（別の式内に現れない式）の場合、現在のノードは常にコンテキストノード（`.`または`self`構文によって返されます）と同じです。次の 2 つは意味的に同等です。
 
-<pre class="eval">&lt;xsl:value-of select="current()"/&gt;
-</pre>
+```
+<xsl:value-of select="current()"/>
+```
 
-<pre class="eval">&lt;xsl:value-of select="."/&gt;
-</pre>
+```
+<xsl:value-of select="."/>
+```
 
-<p>内側の式（角括弧など）では、現在のノードは一番外側の式の場合と同じです。したがって、次の3つの式のすべてにおいて<code>current</code>関数（式全体ではない）が同じノードを返します。さらに、後者の2つは意味的に同等です。</p>
+内側の式（角括弧など）では、現在のノードは一番外側の式の場合と同じです。したがって、次の 3 つの式のすべてにおいて`current`関数（式全体ではない）が同じノードを返します。さらに、後者の 2 つは意味的に同等です。
 
-<pre class="eval">&lt;xsl:value-of select="current()"/&gt;
-</pre>
+```
+<xsl:value-of select="current()"/>
+```
 
-<pre class="eval">&lt;xsl:value-of select="foo/bar[current() = X]"/&gt;
-</pre>
+```
+<xsl:value-of select="foo/bar[current() = X]"/>
+```
 
-<pre class="eval">&lt;xsl:variable name="current" select="current()"/&gt;
-&lt;xsl:value-of select="foo/bar[$current = X]"/&gt;
-</pre>
+```
+<xsl:variable name="current" select="current()"/>
+<xsl:value-of select="foo/bar[$current = X]"/>
+```
 
-<p>そして、次のコードは最も外側の式に<code>.</code>があるので、後者のコードと意味的に同じです。</p>
+そして、次のコードは最も外側の式に`.`があるので、後者のコードと意味的に同じです。
 
-<pre class="eval">&lt;xsl:variable name="current" select="."/&gt;
-&lt;xsl:value-of select="foo/bar[$current = X]"/&gt;
-</pre>
+```
+<xsl:variable name="current" select="."/>
+<xsl:value-of select="foo/bar[$current = X]"/>
+```
 
-<p>しかし、<code>.</code>は常に最も狭い文脈に関係しています。したがって、</p>
+しかし、`.`は常に最も狭い文脈に関係しています。したがって、
 
-<pre class="eval">&lt;xsl:value-of select="foo/bar[. = X]"/&gt;
-</pre>
+```
+<xsl:value-of select="foo/bar[. = X]"/>
+```
 
-<p><code>.</code>は<code>bar</code>ノードを返します。これは現在のノードとは異なる場合があります。</p>
+`.`は`bar`ノードを返します。これは現在のノードとは異なる場合があります。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p><a class="external" href="http://www.w3.org/TR/xslt#function-current">XSLT 1.0 12.4</a></p>
+[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-current)
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート状況</h3>
+### Gecko のサポート状況
 
-<p>サポート済み</p>
+サポート済み

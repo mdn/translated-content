@@ -6,10 +6,4 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/ancestor-or-self
 ---
-<p><code>ancestor-or-self</code>の軸は、コンテキストノードおよびルートノードを含むそのすべての祖先を示します。</p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
+`ancestor-or-self`の軸は、コンテキストノードおよびルートノードを含むそのすべての祖先を示します。

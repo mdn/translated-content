@@ -7,38 +7,37 @@ tags:
   - XSLT
 translation_of: Web/XPath/Functions/choose
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>choose</code> 関数は正負値に基づいて、指定されたオブジェクトのうち1つを返します。</p>
+`choose` 関数は正負値に基づいて、指定されたオブジェクトのうち 1 つを返します。
 
-<div class="note"><strong>注意:</strong> このメソッドは廃止予定である <code>if()</code> の代わりに使われるべきです。</div>
+> **Note:** **注意:** このメソッドは廃止予定である `if()` の代わりに使われるべきです。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">choose( boolean , object1, object2 )
-</pre>
+```
+choose( boolean , object1, object2 )
+```
 
-<h3 id="Arguments" name="Arguments">値</h3>
+### 値
 
-<dl>
- <dt><code><em>boolean</em></code></dt>
- <dd>どのオブジェクトを返すかを決定するのに使われる正負オペレーション。</dd>
- <dt><code><em>object1</em></code></dt>
- <dd>戻されるか検討される1つめのオブジェクト。</dd>
- <dt><code><em>object2</em></code></dt>
- <dd>戻されるか検討される2つめのオブジェクト。</dd>
-</dl>
+- `boolean`
+  - : どのオブジェクトを返すかを決定するのに使われる正負オペレーション。
+- `object1`
+  - : 戻されるか検討される 1 つめのオブジェクト。
+- `object2`
+  - : 戻されるか検討される 2 つめのオブジェクト。
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+### 返値
 
-<p>もし与えられた正負値が正であれば、1つめのオブジェクトが戻される。そうでなければ2つめのオブジェクトが戻される。</p>
+もし与えられた正負値が正であれば、1 つめのオブジェクトが戻される。そうでなければ 2 つめのオブジェクトが戻される。
 
-<div class="note"><strong>注意:</strong> 値が戻らないものまで含めて、全てのパラメータが評価される。</div>
+> **Note:** **注意:** 値が戻らないものまで含めて、全てのパラメータが評価される。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p><a class="external" href="http://www.w3.org/TR/xforms11/#fn-choose">XForms 1.1</a></p>
+[XForms 1.1](http://www.w3.org/TR/xforms11/#fn-choose)
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート状況</h3>
+### Gecko のサポート状況
 
-<p>サポート済み.</p>
+サポート済み.

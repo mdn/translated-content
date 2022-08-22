@@ -8,62 +8,43 @@ tags:
   - substring-before
 translation_of: Web/XPath/Functions/substring-before
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>substring-before</code> 関数は、与えられた文字列内で、与えられた部分文字列よりも前にある部分の文字列を返します。</p>
+`substring-before` 関数は、与えられた文字列内で、与えられた部分文字列よりも前にある部分の文字列を返します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">substring-before(<em>haystack</em> ,<em>needle</em> )
-</pre>
+```
+substring-before(haystack ,needle )
+```
 
-<h3 id="Arguments" name="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><em><code>haystack</code></em></dt>
- <dd>評価される文字列。この文字列の一部が返される。</dd>
-</dl>
+- _`haystack`_
+  - : 評価される文字列。この文字列の一部が返される。
 
-<dl>
- <dt><em><code>needle</code></em></dt>
- <dd>検索する文字列。<em><code>haystack</code></em> 内で最初に見つかった<em><code>needle</code></em> よりも前にあるすべての文字が返される。</dd>
-</dl>
+<!---->
 
-<h3 id="Returns" name="Returns">返値</h3>
+- _`needle`_
+  - : 検索する文字列。_`haystack`_ 内で最初に見つかった *`needle`* よりも前にあるすべての文字が返される。
 
-<p>文字列。</p>
+### 返値
 
-<h3 id="Examples" name="Examples">例</h3>
+文字列。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>XPath の例</th>
-   <th>出力</th>
-  </tr>
-  <tr>
-   <td><code>substring-before('aa-bb','-')</code></td>
-   <td><code>aa</code></td>
-  </tr>
-  <tr>
-   <td><code>substring-before('aa-bb','a')</code></td>
-   <td><code>(空文字列)</code></td>
-  </tr>
-  <tr>
-   <td><code>substring-before('aa-bb','b')</code></td>
-   <td><code>aa-</code></td>
-  </tr>
-  <tr>
-   <td><code>substring-before('aa-bb','q')</code></td>
-   <td>(空文字列)</td>
-  </tr>
- </tbody>
-</table>
+### 例
 
-<h3 id="Defined" name="Defined">定義元</h3>
+| XPath の例                      | 出力         |
+| ------------------------------- | ------------ |
+| `substring-before('aa-bb','-')` | `aa`         |
+| `substring-before('aa-bb','a')` | `(空文字列)` |
+| `substring-before('aa-bb','b')` | `aa-`        |
+| `substring-before('aa-bb','q')` | (空文字列)   |
 
-<p><a class="external" href="http://www.w3.org/TR/xpath#function-substring-before">XPath 1.0 4.2</a></p>
+### 定義元
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko の対応</h3>
+[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-substring-before)
 
-<p>対応済み。</p>
+### Gecko の対応
+
+対応済み。

@@ -6,44 +6,19 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/self
 ---
-<p><code>self</code> 軸はコンテキストノード自体を表します。単一のピリオド (<code>.</code>) に省略することができます。</p>
+`self` 軸はコンテキストノード自体を表します。単一のピリオド (`.`) に省略することができます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("XPath3.1","#axes","self")}}</td>
-   <td>{{Spec2("XPath3.1")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("XPath3","#axes","self")}}</td>
-   <td>{{Spec2("XPath3")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("XPath2","#axes","self")}}</td>
-   <td>{{Spec2("XPath2")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("XPath1","#axes","self")}}</td>
-   <td>{{Spec2("XPath1")}}</td>
-   <td>初期の定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                 | ステータス                   | コメント   |
+| ---------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName("XPath3.1","#axes","self")}} | {{Spec2("XPath3.1")}} |            |
+| {{SpecName("XPath3","#axes","self")}}     | {{Spec2("XPath3")}}     |            |
+| {{SpecName("XPath2","#axes","self")}}     | {{Spec2("XPath2")}}     |            |
+| {{SpecName("XPath1","#axes","self")}}     | {{Spec2("XPath1")}}     | 初期の定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("xpath.axes.self")}}</p>
+{{Compat("xpath.axes.self")}}
 
-<p>{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}</p>
+{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}
