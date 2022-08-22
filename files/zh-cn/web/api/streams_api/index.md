@@ -22,11 +22,11 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 
 流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 [fetch request](/zh-CN/docs/Web/API/fetch) 返回的响应体可以暴露为 {{domxref("ReadableStream")}}，之后你可以使用 {{domxref("ReadableStream.getReader()")}} 创建一个 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。
 
-更复杂的使用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数创建你自己的流，例如进入 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 去处理流。
+更复杂的应用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数创建你自己的流，例如进入 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 去处理流。
 
 你也可以使用 {{domxref("WritableStream")}} 将数据写入流。
 
-> **备注：** 你可以在这些文章中找到关于流理论的更多细节和实践——[流 API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)、[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)、[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)，以及[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams).
+> **备注：** 你可以在这些文章中找到关于流理论的更多细节和实践——[流 API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)、[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)、[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)，以及[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
 ## Stream 接口
 
