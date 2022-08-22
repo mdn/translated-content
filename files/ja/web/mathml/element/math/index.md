@@ -44,8 +44,6 @@ MathML における最上位の要素は `<math>` です。有効な MathML の�
 
 ## 例
 
-![Theorem of Pythagoras](/files/3157/math.jpg)
-
 ### HTML5 表記
 
 ```html

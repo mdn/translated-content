@@ -47,6 +47,6 @@ translation_of: Web/MathML
 - [HTML](/ja/docs/Web/HTML)
 - [SVG](/ja/docs/Web/SVG)
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("mathml.elements.math", 0)}}

@@ -23,7 +23,7 @@ MathML の `<msub>` 要素は式に下付きを付けるために用います。
 
 ## 例
 
-Sample rendering: ![x1](/files/3202/msub.png)
+Sample rendering: ![x1](msub.png)
 
 Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
@@ -38,7 +38,7 @@ Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 </math>
 ```
 
-## ブラウザ毎の互換性
+## ブラウザーの互換性
 
 {{Compat("mathml.elements.msub")}}
 

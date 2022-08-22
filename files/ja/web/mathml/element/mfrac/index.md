@@ -42,7 +42,7 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 
 ## 例
 
-レンダリングのサンプル (画像): ![(a/b)/(c/d)](/files/3194/mfrac.png)
+レンダリングのサンプル (画像): ![(a/b)/(c/d)](mfrac.png)
 
 ブラウザーのレンダリング結果: <math><mfrac bevelled="true"><mfrac><mi>a </mi><mi>b </mi></mfrac><mfrac><mi>c </mi><mi>d</mi></mfrac></mfrac></math>
 
@@ -68,6 +68,6 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 | {{ SpecName('MathML3', 'chapter3.html#presm.mfrac', 'mfrac') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
 | {{ SpecName('MathML2', 'chapter3.html#presm.mfrac', 'mfrac') }} | {{ Spec2('MathML2') }} | 初回の仕様 |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("mathml.elements.mfrac")}}
