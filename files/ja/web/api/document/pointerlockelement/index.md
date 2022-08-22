@@ -11,6 +11,7 @@ tags:
   - mouse lock
   - プロパティ
   - マウスロック
+browser-compat: api.Document.pointerLockElement
 translation_of: Web/API/DocumentOrShadowRoot/pointerLockElement
 original_slug: Web/API/DocumentOrShadowRoot/pointerLockElement
 ---
@@ -36,7 +37,7 @@ var element = document.pointerLockElement;
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.pointerLockElement")}}
+{{Compat}}
 
 ## 関連情報
 

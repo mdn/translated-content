@@ -9,6 +9,7 @@ tags:
   - Visibility
   - Web
   - visibilitychange
+browser-compat: api.Document.visibilitychange_event
 translation_of: Web/API/Document/visibilitychange_event
 ---
 {{APIRef}}
@@ -64,7 +65,7 @@ document.addEventListener("visibilitychange", function() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.visibilitychange")}}
+{{Compat}}
 
 ## 関連情報
 

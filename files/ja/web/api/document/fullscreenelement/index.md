@@ -17,6 +17,7 @@ tags:
   - グラフィック
   - 全画面
   - 読み取り専用
+browser-compat: api.Document.fullscreenElement
 translation_of: Web/API/DocumentOrShadowRoot/fullscreenElement
 original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 ---
@@ -57,7 +58,7 @@ function isVideoInFullscreen() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.fullscreenElement")}}
+{{Compat}}
 
 ## 関連情報
 

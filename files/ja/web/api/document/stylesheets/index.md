@@ -10,6 +10,7 @@ tags:
   - ShadowRoot
   - Stylesheets
   - shadow dom
+browser-compat: api.Document.styleSheets
 translation_of: Web/API/DocumentOrShadowRoot/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
@@ -45,4 +46,4 @@ function getStyleSheet(unique_title) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.styleSheets")}}
+{{Compat}}
