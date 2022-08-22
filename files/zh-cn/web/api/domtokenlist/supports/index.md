@@ -4,7 +4,7 @@ slug: Web/API/DOMTokenList/supports
 ---
 {{APIRef("DOM")}}
 
-如果给定的 `token` 位于关联属性支持的 token 列表中，则 {{domxref("DOMTokenList")}} 接口的 **`supports()`** 方法返回 `true`。这个方法旨在支持特征检查。
+如果给定的 `token` 位于关联属性支持的 token 列表中，则 {{domxref("DOMTokenList")}} 接口的 **`supports()`** 方法返回 `true`。这个方法旨在支持特性检查。
 
 ## 语法
 
@@ -15,7 +15,7 @@ supports(token);
 ### 参数
 
 - `token`
-  - : 一个包含要查询 token 的字符串。
+  - : 一个字符串，包含了用于查询的 token。
 
 ### 返回值
 
