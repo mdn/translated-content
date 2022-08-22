@@ -2,13 +2,13 @@
 title: Streams API 概念
 slug: Web/API/Streams_API/Concepts
 ---
-
 {{apiref("Streams")}}
+
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 为 Web 平台提供了一组十分有用的工具，提供了一系列对象以允许 JavaScript 访问来自网络的数据流，并根据开发人员的需要对其进行处理。与流相关的一些概念和术语可能会令你感到陌生——本文将解释你需要了解的所有内容。
 
 ## 可读流
 
-一个可读流是一个数据源，在 JavaScript 中用一个 {{domxref("ReadableStream")}} 对象表示，数据从它的 **underlying source (底层源)**流出——底层源表示一个你希望从中获取数据的，来自网络或其他域的某种资源。
+一个可读流是一个数据源，在 JavaScript 中用一个 {{domxref("ReadableStream")}} 对象表示，数据从它的 **underlying source**（底层源）流出——底层源表示一个你希望从中获取数据，且来自网络或其他域的某种资源。
 
 有两种类型的 underlying source：
 
@@ -25,7 +25,7 @@ slug: Web/API/Streams_API/Concepts
 
 另一个你将用到的对象叫做 **controller**——每个 reader 都有一个关联的 controller，用来控制流（例如，可以将流关闭）。
 
-一个流一次只能被一个 reader 读；当一个 reader 被创建并开始读一个流（**active reader**，译者注：该流已经处于活动状态）时，我们说，它被 **locked（锁定）** 在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作。（你也可以 **tee**，译者注：拷贝 流，参阅下面的 Teeing 部分）
+一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（**active reader**，译者注：该流已经处于活动状态）时，我们说，它被 **locked（锁定）** 在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作（你也可以 **tee**，译者注：拷贝流，参阅下面的 Teeing 部分）。
 
 注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流——这是传统流的扩展版本，用于读取底层字节源。相比于传统的可读流，字节流被允许通过 BYOB reader 读取（BYOB，“带上你自己的缓冲区”）。这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。你的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅 {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。
 
@@ -43,11 +43,11 @@ slug: Web/API/Streams_API/Concepts
 
 ## 可写流
 
-一个 **Writable stream（可写流）** 是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink（底层接收器）** 的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
+一个 **Writable stream**（可写流）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink（底层接收器）** 的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
 
 数据由一个 **writer** 写入流中，每次只写入一个分块。分块和可读流的 reader 一样可以有多种类型。你可以用任何方式生成要被写入的块；writer 加上相关的代码称为 **producer**。
 
-当 writer 被创建并开始写入一个流（**active writer**，译者注：该 writer 已处于活动状态）时，我们说，它被 **locked（锁定）** 在该流上。同一时刻，一个 writer 只能写入一个可写流。如果你想要其他 writer 开始写入你的流，在你将 writer 附着到该流之前，你必须先中止上一个 writer。
+当 writer 被创建并开始写入一个流（**active writer**，译者注：该 writer 已处于活动状态）时，我们说，它被 **locked**（锁定）在该流上。同一时刻，一个 writer 只能写入一个可写流。如果你想要其他 writer 开始写入你的流，在你将 writer 附着到该流之前，你必须先中止上一个 writer。
 
 一个 **internal queue** 跟踪已经被写入流的分块但是仍然没有被底层 sink 处理的分块。
 
@@ -59,9 +59,9 @@ slug: Web/API/Streams_API/Concepts
 
 ## 链式管道传输（Pipe chain）
 
-Streams API 使用 **链式管道（pipe chain）**的结构将流传输到另一个流已经成为可能。有两种方法可以作用于它：
+Streams API 使用**链式管道**（pipe chain）的结构将流传输到另一个流已经成为可能。有两种方法可以作用于它：
 
-- {{domxref("ReadableStream.pipeThrough()")}}——通过**转换流（transform stream）**传输流，可能在传输过程中转换流。例如，他可以用于将编码或解码视频帧、压缩或解压缩数据或以其他的方式从一种数据转换成另一种数据。一个转换流由一对流组成：一个读取数据的可读流和一个写入数据的可写流，它们以适当的机制确保新数据一旦写入后即可读取。{{domxref("TransformStream")}} 是转换流的具体实现，但任意具有相同可读流和可写流属性的对象都可以传递给 `pipeThrough()`。
+- {{domxref("ReadableStream.pipeThrough()")}}——通过**转换流**（transform stream）传输流，可能在传输过程中转换流。例如，他可以用于将编码或解码视频帧、压缩或解压缩数据或以其他的方式从一种数据转换成另一种数据。一个转换流由一对流组成：一个读取数据的可读流和一个写入数据的可写流，它们以适当的机制确保新数据一旦写入后即可读取。{{domxref("TransformStream")}} 是转换流的具体实现，但任意具有相同可读流和可写流属性的对象都可以传递给 `pipeThrough()`。
 - {{domxref("ReadableStream.pipeTo()")}}——传输到可写流，并且作为 pipe chain 的终点。
 
 pipe chain 的起点称为 **original source**，终点称为 **ultimate sink**。
@@ -70,7 +70,7 @@ pipe chain 的起点称为 **original source**，终点称为 **ultimate sink**�
 
 ## 背压（backpressure）
 
-流的一个重要概念是 **backpressure（背压）**——这是单个流或一个 pipe chain 调节读/写速度的过程。当链中后面的一个流仍然忙碌，尚未准备好接受更多的分块时，它会通过链向上游的流发送一个信号，告诉上游的转换流（或原始源）适当地减慢传输速度，这样你就不会在任何地方遇到瓶颈。
+流的一个重要概念是 **backpressure**（背压）——这是单个流或一个 pipe chain 调节读/写速度的过程。当链中后面的一个流仍然忙碌，尚未准备好接受更多的分块时，它会通过链向上游的流发送一个信号，告诉上游的转换流（或原始源）适当地减慢传输速度，这样你就不会在任何地方遇到瓶颈。
 
 要在可读流中使用 backpressure 技术，我们可以通过查询 controller 的 {{domxref("ReadableStreamDefaultController.desiredSize")}} 属性。如果该值太低或为负数，我们的 ReadableStream 可以告诉它的底层源停止往流中装载数据，然后我们沿着 stream chain 进行背压。
 
@@ -91,6 +91,6 @@ pipe chain 的起点称为 **original source**，终点称为 **ultimate sink**�
 
 `high water mark - total size of chunks in queue = desired size`
 
-**所需大小（desired size）**是流中仍然可以接收的分块数量，以保持流运行，但是要小于 high water mark 的大小。当所需的大小大于0时，分块的生成将适当的减慢或者加速，以保持流尽可能快的运行。如果值降到0（或者小于 0），这意味着分块的产生快于流的处理，这可能产生问题。
+**所需大小**（desired size）是流中仍然可以接收的分块数量，以保持流运行，但是要小于 high water mark 的大小。当所需的大小大于0时，分块的生成将适当的减慢或者加速，以保持流尽可能快的运行。如果值降到0（或者小于 0），这意味着分块的产生快于流的处理，这可能产生问题。
 
 举一个例子，让我们以分块的大小为 1 和为 3 的 high water mark 为例：这意味着在达到 high water mark 和运用背压之前，最多可以入队 3 个分块。
