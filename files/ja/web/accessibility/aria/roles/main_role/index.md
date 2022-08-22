@@ -7,129 +7,111 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/Main_role
 ---
-<p>メイン (<code>main</code>) <a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">ランドマークロール</a>は、文書の主要なコンテンツを示すために使用します。 メインコンテンツ領域は、文書の中心的な話題やアプリケーションの中心的な機能と直接関連したり、それらを拡張するコンテンツで構成されます。</p>
+メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書の主要なコンテンツを示すために使用します。 メインコンテンツ領域は、文書の中心的な話題やアプリケーションの中心的な機能と直接関連したり、それらを拡張するコンテンツで構成されます。
 
-<pre class="brush: html">&lt;div id="main" role="main"&gt;
-  &lt;h1&gt;アボカド&lt;/h1&gt;
-  &lt;!-- メインセクションのコンテンツ --&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="main" role="main">
+  <h1>アボカド</h1>
+  <!-- メインセクションのコンテンツ -->
+</div>
+```
 
-<p>これは、アボカドについて説明する文書のメインセクションです。 この文書のサブセクションでは、その歴史、さまざまな品種、栽培地域などについて説明します。</p>
+これは、アボカドについて説明する文書のメインセクションです。 この文書のサブセクションでは、その歴史、さまざまな品種、栽培地域などについて説明します。
 
-<h2 id="Description" name="Description">説明</h2>
+## 説明
 
-<p>メイン (<code>main</code>) ロールは、文書のメインコンテンツを識別する、ナビゲーションに関する<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">ランドマークロール</a>です。 ランドマークは、支援技術によって、文書の大きなセクションをすばやく識別してナビゲートするために使用できます。 ページのセクションを分類およびラベル付けすることにより、レイアウトを通じて視覚的に伝えられる構造情報をプログラムで表現することができます。 スクリーンリーダーは、ランドマークロールを使用して、ページの重要なセクションへのキーボードナビゲーションを提供します。 ランドマークロールを介してナビゲートする場合、メインロールは「メインコンテンツへスキップする (Skip to main content) 」リンクの代わりになります。 メイン (<code>main</code>) ランドマークロールは、文書ごとに1つだけあるべきです。</p>
+メイン (`main`) ロールは、文書のメインコンテンツを識別する、ナビゲーションに関する[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)です。 ランドマークは、支援技術によって、文書の大きなセクションをすばやく識別してナビゲートするために使用できます。 ページのセクションを分類およびラベル付けすることにより、レイアウトを通じて視覚的に伝えられる構造情報をプログラムで表現することができます。 スクリーンリーダーは、ランドマークロールを使用して、ページの重要なセクションへのキーボードナビゲーションを提供します。 ランドマークロールを介してナビゲートする場合、メインロールは「メインコンテンツへスキップする (Skip to main content) 」リンクの代わりになります。 メイン (`main`) ランドマークロールは、文書ごとに 1 つだけあるべきです。
 
-<p><a href="/ja/docs/Web/HTML/Element/main"><code>&lt;main&gt;</code> 要素</a>は、メイン (<code>main</code>) ロールを持ちます。 開発者は、ARIA を使用するよりも、正しい意味論の HTML 要素を使用することを常に好むべきです。</p>
+[`<main>` 要素](/ja/docs/Web/HTML/Element/main)は、メイン (`main`) ロールを持ちます。 開発者は、ARIA を使用するよりも、正しい意味論の HTML 要素を使用することを常に好むべきです。
 
-<p>文書 (<code>document</code>) とアプリケーション (<code>application</code>) は DOM 内でネストすることができます。 これにより、DOM の子孫として複数のメイン要素を持つことになる可能性があります。 このような場合には、メインとその祖先である文書やアプリケーションとの関係を識別するために <code>aria-owns</code> を含めます (訳注: aria-owns は、DOM 階層で親子関係に無い要素において、親に指定することで子でない要素を子として組み込むためのものであり、文書やアプリケーションとメインが DOM 階層で親子関係にあれば必要ありません) 。</p>
+文書 (`document`) とアプリケーション (`application`) は DOM 内でネストすることができます。 これにより、DOM の子孫として複数のメイン要素を持つことになる可能性があります。 このような場合には、メインとその祖先である文書やアプリケーションとの関係を識別するために `aria-owns` を含めます (訳注: aria-owns は、DOM 階層で親子関係に無い要素において、親に指定することで子でない要素を子として組み込むためのものであり、文書やアプリケーションとメインが DOM 階層で親子関係にあれば必要ありません) 。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;!-- 主要なナビゲーション --&gt;
+```html
+<body>
+  <!-- 主要なナビゲーション -->
 
-  &lt;div role="main"&gt;
-    &lt;h1&gt;第一次インドシナ戦争&lt;/h1&gt;
-    &lt;!-- 記事のコンテンツ --&gt;
-  &lt;/div&gt;
+  <div role="main">
+    <h1>第一次インドシナ戦争</h1>
+    <!-- 記事のコンテンツ -->
+  </div>
 
- &lt;!-- サイドバーとフッター --&gt;
-&lt;/body&gt;
-</pre>
+ <!-- サイドバーとフッター -->
+</body>
+```
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティに関する懸念</h2>
+## アクセシビリティに関する懸念
 
-<h3 id="Use_only_one_main_role_per_document" name="Use_only_one_main_role_per_document">文書ごとに <code>main</code> ロールを1つのみ使用する</h3>
+### 文書ごとに `main` ロールを 1 つのみ使用する
 
-<p>メイン (<code>main</code>) <a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">ランドマークロール</a>は、文書ごとに1回のみ使用するべきです。</p>
+メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書ごとに 1 回のみ使用するべきです。
 
-<p>JavaScript によってトリガーされたときにページコンテンツを更新するなどで、文書に2つのメイン (<code>main</code>) ロールが含まれている場合、<a href="/ja/docs/Web/HTML/Global_attributes/hidden"><code>hidden</code> 属性</a>をトグルするなどの手法によって、アクティブでないメイン (<code>main</code>) ロールの存在を支援技術から取り除くべきです。</p>
+JavaScript によってトリガーされたときにページコンテンツを更新するなどで、文書に 2 つのメイン (`main`) ロールが含まれている場合、[`hidden` 属性](/ja/docs/Web/HTML/Global_attributes/hidden)をトグルするなどの手法によって、アクティブでないメイン (`main`) ロールの存在を支援技術から取り除くべきです。
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;h1&gt;アクティブな &lt;code&gt;main&lt;/code&gt; 要素&lt;/h1&gt;
-  &lt;!-- コンテンツ --&gt;
-&lt;/main&gt;
+```html
+<main>
+  <h1>アクティブな <code>main</code> 要素</h1>
+  <!-- コンテンツ -->
+</main>
 
-&lt;main hidden&gt;
-  &lt;h1&gt;隠された &lt;code&gt;main&lt;/code&gt; 要素&lt;/h1&gt;
-  &lt;!-- コンテンツ --&gt;
-&lt;/main&gt;
-</pre>
+<main hidden>
+  <h1>隠された <code>main</code> 要素</h1>
+  <!-- コンテンツ -->
+</main>
+```
 
-<h2 id="Best_practices" name="Best_practices">ベストプラクティス</h2>
+## ベストプラクティス
 
-<h3 id="Prefer_HTML" name="Prefer_HTML">好ましい HTML</h3>
+### 好ましい HTML
 
-<p><a href="/ja/docs/Web/HTML/Element/main"><code>&lt;main&gt;</code> 要素</a>を使用すると自動的にセクションがメイン (<code>main</code>) ロールを持つことを伝えます。 可能な限り、<code>&lt;main&gt;</code> 要素を代わりに使用することをお勧めします。</p>
+[`<main>` 要素](/ja/docs/Web/HTML/Element/main)を使用すると自動的にセクションがメイン (`main`) ロールを持つことを伝えます。 可能な限り、`<main>` 要素を代わりに使用することをお勧めします。
 
-<h3 id="Skip_navigation" name="Skip_navigation">スキップナビゲーション</h3>
+### スキップナビゲーション
 
-<p>スキップナビゲーション (スキップナビ (skipnav) とも呼ばれる) は、支援技術のユーザーが繰り返されるコンテンツの大きなセクション (メインナビゲーション、情報バナーなど) をすばやくバイパスできるようにする手法です。 これにより、ユーザーはページのメインコンテンツにすばやくアクセスできます。 (訳注: このページでも、ページが表示されたらすぐ Tab キーを押すことで、ページ上部にリンクが表示されるようになっています。)</p>
+スキップナビゲーション (スキップナビ (skipnav) とも呼ばれる) は、支援技術のユーザーが繰り返されるコンテンツの大きなセクション (メインナビゲーション、情報バナーなど) をすばやくバイパスできるようにする手法です。 これにより、ユーザーはページのメインコンテンツにすばやくアクセスできます。 (訳注: このページでも、ページが表示されたらすぐ Tab キーを押すことで、ページ上部にリンクが表示されるようになっています。)
 
-<p><code>role="main"</code> という宣言を持つ要素に <a href="/ja/docs/Web/HTML/Global_attributes/id"><code>id</code> 属性</a>を追加すると、それをスキップナビゲーションリンクのターゲットにすることができます。</p>
+`role="main"` という宣言を持つ要素に [`id` 属性](/ja/docs/Web/HTML/Global_attributes/id)を追加すると、それをスキップナビゲーションリンクのターゲットにすることができます。
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;a href="#main-content"&gt;メインコンテンツへスキップする&lt;/a&gt;
+```html
+<body>
+  <a href="#main-content">メインコンテンツへスキップする</a>
 
-  &lt;!-- ナビゲーションとヘッダーのコンテンツ --&gt;
+  <!-- ナビゲーションとヘッダーのコンテンツ -->
 
-  &lt;div id="main-content" role="main"&gt;
-    &lt;!-- メインページのコンテンツ --&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-</pre>
+  <div id="main-content" role="main">
+    <!-- メインページのコンテンツ -->
+  </div>
+</body>
+```
 
-<ul>
- <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a> (<a href="https://raw.githubusercontent.com/Wind1808/Translated-into-Japanese/main/WebAIM/skipnav.txt">日本語対訳</a>)</li>
-</ul>
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/) ([日本語対訳](https://raw.githubusercontent.com/Wind1808/Translated-into-Japanese/main/WebAIM/skipnav.txt))
 
-<h3 id="Added_benefits" name="Added_benefits">追加された利点</h3>
+### 追加された利点
 
-<p>ブラウザー拡張などの特定の技術は、ページ上に存在する全てのランドマークロールのリストを生成することができ、スクリーンリーダーを使用していないユーザーでも文書の大きなセクションを素早く識別してナビゲートできます。</p>
+ブラウザー拡張などの特定の技術は、ページ上に存在する全てのランドマークロールのリストを生成することができ、スクリーンリーダーを使用していないユーザーでも文書の大きなセクションを素早く識別してナビゲートできます。
 
-<ul>
- <li><a href="https://matatk.agrip.org.uk/landmarks/">ランドマークブラウザー拡張</a> (英語)</li>
-</ul>
+- [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/) (英語)
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA","#main","ARIA Main Role")}}</td>
-   <td>{{Spec2('ARIA')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA Authoring Practices","#aria_lh_main","Main Landmark Role")}}</td>
-   <td>{{Spec2('ARIA Authoring Practices')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                     | 状態                                             |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| {{SpecName("ARIA","#main","ARIA Main Role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA Authoring Practices","#aria_lh_main","Main Landmark Role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
-<h2 id="Screen_reader_support" name="Screen_reader_support">スクリーンリーダーのサポート</h2>
+## スクリーンリーダーのサポート
 
-<p>TBD</p>
+TBD
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Element/main">&lt;main&gt;: メイン要素</a></li>
- <li><a href="https://www.w3.org/TR/wai-aria/#main">main (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">HTML のセクションとアウトラインの使用</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ</a></li>
- <li><a href="https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">Using WAI-ARIA Landmarks – 2013 | The Paciello Group</a></li>
- <li><a href="https://www.scottohara.me/blog/2018/03/03/landmarks.html">Accessible Landmarks | scottohara.me</a></li>
- <li><a href="https://html5doctor.com/the-main-element/">The main element | HTML5 Doctor</a></li>
-</ul>
+- [\<main>: メイン要素](/ja/docs/Web/HTML/Element/main)
+- [main (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#main)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
+- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
+- [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
 
-<section id="Quick_links">
-    <ol>
-        <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}</li>
-    </ol>
-</section>
+1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

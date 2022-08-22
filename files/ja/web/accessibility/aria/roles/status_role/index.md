@@ -8,76 +8,59 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 ---
-<h3 id="Description" name="Description">説明</h3>
+### 説明
 
-<p class="p1">このテクニックは、<code><a href="https://www.w3.org/TR/wai-aria/#status">status</a></code> ロールを使用する方法を示し、ブラウザーと支援技術に及ぼす影響について説明します。</p>
+このテクニックは、[`status`](https://www.w3.org/TR/wai-aria/#status) ロールを使用する方法を示し、ブラウザーと支援技術に及ぼす影響について説明します。
 
-<p class="p1"><code>status</code> ロールは、<a href="http://www.w3.org/WAI/PF/aria/terms#def_liveregion">ライブリージョン</a>の一種であり、内容は <code><a href="https://www.w3.org/TR/wai-aria-practices/#alert">alert</a></code> を正当化するほど重要ではないユーザーのためのアドバイザリ情報であり、多くの場合ステータスバーとして表示されます。 ロールが要素に追加されると、ブラウザーは、支援技術製品にアクセス可能なステータスイベントを送信し、ユーザーに通知することができます。</p>
+`status` ロールは、[ライブリージョン](http://www.w3.org/WAI/PF/aria/terms#def_liveregion)の一種であり、内容は [`alert`](https://www.w3.org/TR/wai-aria-practices/#alert) を正当化するほど重要ではないユーザーのためのアドバイザリ情報であり、多くの場合ステータスバーとして表示されます。 ロールが要素に追加されると、ブラウザーは、支援技術製品にアクセス可能なステータスイベントを送信し、ユーザーに通知することができます。
 
-<p class="p1">ステータス情報のコンテンツは、ステータスオブジェクト内に提供されなければならず、このオブジェクトがフォーカスを受け取らないようにするべきです。 ページの別の部分がステータスに表示されるものを制御する場合、関係は <code><a href="http://www.w3.org/TR/wai-aria/#aria-controls">aria-controls</a></code> 属性を介して明示的に指定するべきです。</p>
+ステータス情報のコンテンツは、ステータスオブジェクト内に提供されなければならず、このオブジェクトがフォーカスを受け取らないようにするべきです。 ページの別の部分がステータスに表示されるものを制御する場合、関係は [`aria-controls`](http://www.w3.org/TR/wai-aria/#aria-controls) 属性を介して明示的に指定するべきです。
 
-<p class="p1">支援技術は、ステータスをレンダリングするために点字ディスプレイのいくつかのセルを予約することができます。</p>
+支援技術は、ステータスをレンダリングするために点字ディスプレイのいくつかのセルを予約することができます。
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
+### ユーザーエージェントと支援技術への影響
 
-<p class="p1"><code>status</code> ロールが要素に追加されるか、またはそのような要素が可視になると、ユーザーエージェントは以下を行うべきです。</p>
+`status` ロールが要素に追加されるか、またはそのような要素が可視になると、ユーザーエージェントは以下を行うべきです。
 
-<ul class="ul1">
- <li class="li2">オペレーティングシステムのアクセシビリティ API で <code>status</code> ロールを持つものとして要素を公開します。</li>
- <li class="li2">オペレーティングシステムのアクセシビリティ API がサポートされている場合は、アクセシビリティ API を使用してアクセス可能なステータスイベントを発生させます。</li>
-</ul>
+- オペレーティングシステムのアクセシビリティ API で `status` ロールを持つものとして要素を公開します。
+- オペレーティングシステムのアクセシビリティ API がサポートされている場合は、アクセシビリティ API を使用してアクセス可能なステータスイベントを発生させます。
 
-<p class="p1">支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。</p>
+支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。
 
-<ul class="ul1">
- <li class="li2">スクリーンリーダーは、現在のステータスをアナウンスするための特別なキーを提供することがあり、これはステータスのライブリージョンの内容を提示するべきです。 <code>aria-live="assertive"</code> が設定されている場合を除いて、ユーザーがアイドル状態になったときにアナウンスするべきです。</li>
- <li class="li2"> スクリーン拡大鏡でステータスが拡大されることがあります。</li>
-</ul>
+- スクリーンリーダーは、現在のステータスをアナウンスするための特別なキーを提供することがあり、これはステータスのライブリージョンの内容を提示するべきです。 `aria-live="assertive"` が設定されている場合を除いて、ユーザーがアイドル状態になったときにアナウンスするべきです。
+- スクリーン拡大鏡でステータスが拡大されることがあります。
 
-<div class="note"><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
+> **Note:** **注**: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
-<h3 id="Examples" name="Examples">例</h3>
+### 例
 
-<h4 id="Example_1_Adding_the_status_role_in_HTML" name="Example_1_Adding_the_status_role_in_HTML">例 1: HTMLで status ロールを追加する</h4>
+#### 例 1: HTML で status ロールを追加する
 
-<p class="p1">以下のスニペットは、<code>status</code> ロールが html ソースコードに直接追加される仕組みを示しています。</p>
+以下のスニペットは、`status` ロールが html ソースコードに直接追加される仕組みを示しています。
 
-<pre class="brush: html">&lt;p role="status"&gt;変更は自動的に保存されました。&lt;/p&gt; </pre>
+```html
+<p role="status">変更は自動的に保存されました。</p>
+```
 
-<h4 id="Working_Examples" name="Working_Examples">動作する例</h4>
+#### 動作する例
 
-<ul>
-</ul>
+### 注
 
-<h3 id="Notes" name="Notes">注</h3>
+### 使用された ARIA 属性
 
-<h3 id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h3>
+- [status](https://www.w3.org/TR/wai-aria/#status)
 
-<ul>
- <li class="p1"><a class="external" href="https://www.w3.org/TR/wai-aria/#status">status</a></li>
-</ul>
+### 関連する ARIA 技術
 
-<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h3>
+- [alert](https://www.w3.org/TR/wai-aria-practices/#alert) ロール
+- [ライブリージョンのロール](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles)
+- [ライブリージョンの属性](https://www.w3.org/TR/wai-aria-1.1/#attrs_liveregions)
 
-<ul>
- <li class="p1"><a class="external" href="https://www.w3.org/TR/wai-aria-practices/#alert">alert</a> ロール</li>
- <li class="p1"><a href="https://www.w3.org/TR/wai-aria-1.1/#live_region_roles">ライブリージョンのロール</a></li>
- <li class="p1"><a href="https://www.w3.org/TR/wai-aria-1.1/#attrs_liveregions">ライブリージョンの属性</a></li>
-</ul>
+### 互換性
 
-<h3 id="Compatibility" name="Compatibility">互換性</h3>
+- Paciello Group は、2014 年のブログ記事を通じて互換性に関するいくつかのデータを発表しました。 [ARIA ライブリージョンのスクリーンリーダーのサポート](https://developer.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)
+- TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
 
-<ul>
- <li class="comment">
-  <p>Paciello Group は、2014年のブログ記事を通じて互換性に関するいくつかのデータを発表しました。 <a href="https://developer.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">ARIA ライブリージョンのスクリーンリーダーのサポート</a></p>
- </li>
- <li class="comment">
-  <p>TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
- </li>
-</ul>
+### その他のリソース
 
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
-
-<ul>
- <li class="p1">status ロールの <a href="https://www.w3.org/TR/wai-aria-1.1/#status">WAI-ARIA 1.0（2014年）</a>よりの以前の勧告</li>
-</ul>
+- status ロールの [WAI-ARIA 1.0（2014 年）](https://www.w3.org/TR/wai-aria-1.1/#status)よりの以前の勧告
