@@ -3,63 +3,47 @@ title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
 translation_of: Web/API/RTCPeerConnectionIceEvent
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p><strong><code>RTCPeerConnectionIceEvent</code></strong> インタフェースは、通常 {{domxref("RTCPeerConnection")}}のICE候補に関連して発生するイベントを表現します。イベントのタイプは{{event("icecandidate")}}です。</p>
+**`RTCPeerConnectionIceEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}}の ICE 候補に関連して発生するイベントを表現します。イベントのタイプは{{event("icecandidate")}}です。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} であり, {{domxref("Event")}}のプロパティも実装されています。</em></p>
+_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} であり, {{domxref("Event")}}のプロパティも実装されています。_
 
-<dl>
- <dt>{{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}</dt>
- <dd>このイベントに関連した候補を含む{{domxref("RTCIceCandidate")}}です。</dd>
-</dl>
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
+  - : このイベントに関連した候補を含む{{domxref("RTCIceCandidate")}}です。
 
-<h2 id="コンストラクタ">コンストラクタ</h2>
+## コンストラクタ
 
-<dl>
- <dt>{{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}</dt>
- <dd>新しいRTCPeerConnectionIceEventを返します。このコンストラクタは2つの引数を持ち、最初の引数はイベントのタイプを表す{{domxref("DOMString")}}であり、二つ目の引数は、{{domxref("RTCIceCandidate")}}を含むディクショナリです。</dd>
-</dl>
+- {{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}
+  - : 新しい RTCPeerConnectionIceEvent を返します。このコンストラクタは 2 つの引数を持ち、最初の引数はイベントのタイプを表す{{domxref("DOMString")}}であり、二つ目の引数は、{{domxref("RTCIceCandidate")}}を含むディクショナリです。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}}であり、このイベントは{{domxref("Event")}}のプロパティも実装します。具体的な <em>{{domxref("</em>RTCPeerConnectionIceEvent<em>")}}</em> メソッドはありません。</em></p>
+_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}}であり、このイベントは{{domxref("Event")}}のプロパティも実装します。具体的な _{{domxref("</em>RTCPeerConnectionIceEvent<em>")}}_ メソッドはありません。_
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">pc.onicecandidate = function( ev ) {
+```js
+pc.onicecandidate = function( ev ) {
                       alert("The ICE candidate (transport address: '" +
                             ev.candidate.candidate +
                             "') has been added to this connection.");
                    }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#idl-def-RTCPeerConnectionIceEvent', 'RTCPeerConnectionIceEvent') }}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                           | Comment             |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{ SpecName('WebRTC 1.0', '#idl-def-RTCPeerConnectionIceEvent', 'RTCPeerConnectionIceEvent') }} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("api.RTCPeerConnectionIceEvent")}}</p>
+{{Compat("api.RTCPeerConnectionIceEvent")}}
 
-<h2 id="その他の記事">その他の記事</h2>
+## その他の記事
 
-<ul>
- <li><a href="/ja/docs/Web/Guide/API/WebRTC" title="/en-US/docs/CSS/Using_CSS_animations">WebRTC</a></li>
- <li>このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.</li>
-</ul>
+- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.

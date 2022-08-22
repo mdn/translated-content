@@ -14,24 +14,26 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
-<div>{{APIRef()}}{{SeeCompatTable}}</div>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの <code><strong>caches</strong></code> 読み取り専用プロパティは、現在のワーカーコンテキストに関連する {{domxref("CacheStorage")}} オブジェクトを返します。このオブジェクトにより、オフライン利用のために資産 (assets、アセット) を保存したり、リクエストに対するカスタムレスポンスを生成したりするなどの機能を使用できます。</p>
+{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの **`caches`** 読み取り専用プロパティは、現在のワーカーコンテキストに関連する {{domxref("CacheStorage")}} オブジェクトを返します。このオブジェクトにより、オフライン利用のために資産 (assets、アセット) を保存したり、リクエストに対するカスタムレスポンスを生成したりするなどの機能を使用できます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches; // または単に caches
-</pre>
+```
+var myCacheStorage = self.caches; // または単に caches
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("CacheStorage")}}。</p>
+{{domxref("CacheStorage")}}。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次の例では、アセットをオフラインで利用できるようにするために、<a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker</a> コンテキストでキャッシュを使う方法を示しています。</p>
+次の例では、アセットをオフラインで利用できるようにするために、[ServiceWorker](/ja/docs/Web/API/Service_Worker_API) コンテキストでキャッシュを使う方法を示しています。
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll(
@@ -48,36 +50,22 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
       );
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                     | ステータス                           | コメント   |
+| ---------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('Service Workers')}} | {{Spec2('Service Workers')}} | 初期定義。 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("api.WindowOrWorkerGlobalScope.caches")}}
 
+## 関連項目
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.caches")}}</p>
-
-<h2 id="See_also" name="See_also">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li>{{domxref("CacheStorage")}}</li>
- <li>{{domxref("Cache")}}</li>
-</ul>
+- [Service Workers](/ja/docs/Web/API/ServiceWorker_API)
+- [Web Workers](/ja/docs/Web/API/Web_Workers_API)
+- {{domxref("CacheStorage")}}
+- {{domxref("Cache")}}

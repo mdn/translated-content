@@ -8,67 +8,49 @@ tags:
   - IndexedDB
 translation_of: Web/API/IDBEnvironment
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<div class="warning">
-<p><strong>Important</strong>: As of Firefox 52, the property defined in this mixin has been moved to the {{domxref("WindowOrWorkerGlobalScope")}} mixin, and other browsers will follow suit. Look to that page for up-to-date details.</p>
-</div>
+> **Warning:** **Important**: As of Firefox 52, the property defined in this mixin has been moved to the {{domxref("WindowOrWorkerGlobalScope")}} mixin, and other browsers will follow suit. Look to that page for up-to-date details.
 
-<p><a href="/ja/docs/IndexedDB">IndexedDB API</a> の <strong><code>IDBEnvironment</code></strong> インタフェースには、IndexedDB の機能へアクセスするための <code>indexedDB</code> プロパティがあります。これは、{{domxref("window")}} と {{domxref("Worker")}}オブジェクトによって実装された、最上位の IndexedDB インタフェースです。</p>
+[IndexedDB API](/ja/docs/IndexedDB) の **`IDBEnvironment`** インタフェースには、IndexedDB の機能へアクセスするための `indexedDB` プロパティがあります。これは、{{domxref("window")}} と {{domxref("Worker")}}オブジェクトによって実装された、最上位の IndexedDB インタフェースです。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("IDBEnvironment.indexedDB")}} {{readonlyInline}}</dt>
- <dd>インデックス化されたデータベースへ非同期的にアクセスするための機構を、アプリケーションへ提供する、 {{domxref("IDBFactory")}} オブジェクトです。</dd>
-</dl>
+- {{domxref("IDBEnvironment.indexedDB")}} {{readonlyInline}}
+  - : インデックス化されたデータベースへ非同期的にアクセスするための機構を、アプリケーションへ提供する、 {{domxref("IDBFactory")}} オブジェクトです。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次のコードはデータベースを非同期に開くリクエストを生成しています。データベースが開かれた後、リクエストの onsuccess ハンドラーが呼ばれます。:</p>
+次のコードはデータベースを非同期に開くリクエストを生成しています。データベースが開かれた後、リクエストの onsuccess ハンドラーが呼ばれます。:
 
-<pre class="brush: js;highlight:[3]">var db;
+```js
+var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open("toDoList");
  DBOpenRequest.onsuccess = function(e) {
    db = DBOpenRequest.result;
  };
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBEnvironment', 'IDBEnvironment')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBEnvironment', 'IDBEnvironment')}} | {{Spec2('IndexedDB')}} |         |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<div>
-<p>{{Compat("api.IDBEnvironment")}}</p>
-</div>
+{{Compat("api.IDBEnvironment")}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDBの使用</a></li>
- <li>トランザクションの開始: {{domxref("IDBDatabase")}}</li>
- <li>トランザクションの使用: {{domxref("IDBTransaction")}}</li>
- <li>キーの範囲の設定: {{domxref("IDBKeyRange")}}</li>
- <li>データの取り出しと変更: {{domxref("IDBObjectStore")}}</li>
- <li>カーソルの使用: {{domxref("IDBCursor")}}</li>
- <li>参考例: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始: {{domxref("IDBDatabase")}}
+- トランザクションの使用: {{domxref("IDBTransaction")}}
+- キーの範囲の設定: {{domxref("IDBKeyRange")}}
+- データの取り出しと変更: {{domxref("IDBObjectStore")}}
+- カーソルの使用: {{domxref("IDBCursor")}}
+- 参考例: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

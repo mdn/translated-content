@@ -11,153 +11,110 @@ tags:
   - Storage
 translation_of: Web/API/IDBTransaction
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p><strong><code>IDBTransaction</code></strong> は <a href="/ja/docs/IndexedDB">IndexedDB API</a> のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。 {{domxref("IDBDatabase")}} を使用してトランザクションを開始し、 {{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 <code>readonly</code> または <code>readwrite</code>)、 {{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。 <code>IDBTransaction</code> オブジェクトを使用してトランザクションを中止することもできます。</p>
+**`IDBTransaction`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。 {{domxref("IDBDatabase")}} を使用してトランザクションを開始し、 {{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 `readonly` または `readwrite`)、 {{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。 `IDBTransaction` オブジェクトを使用してトランザクションを中止することもできます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>トランザクションは、最初のリクエストが発行された時ではなく、トランザクションが生成されたときに開始します。例えば、次のものを考えてください。</p>
+トランザクションは、最初のリクエストが発行された時ではなく、トランザクションが生成されたときに開始します。例えば、次のものを考えてください。
 
-<pre class="brush: js" id="comment_text_0">var trans1 = db.transaction("foo", "readwrite");
+```js
+var trans1 = db.transaction("foo", "readwrite");
 var trans2 = db.transaction("foo", "readwrite");
 var objectStore2 = trans2.objectStore("foo")
 var objectStore1 = trans1.objectStore("foo")
 objectStore2.put("2", "key");
 objectStore1.put("1", "key");
-</pre>
+```
 
-<p>このコードが実行された後で、オブジェクトストアには "2" が含まれているはずであり、これは <code>trans2</code> が <code>trans1</code> の後に実行されるからです。</p>
+このコードが実行された後で、オブジェクトストアには "2" が含まれているはずであり、これは `trans2` が `trans1` の後に実行されるからです。
 
-<h2 id="Transaction_failures" name="Transaction_failures">トランザクションの失敗</h2>
+## トランザクションの失敗
 
-<p>トランザクションは一定数の理由で失敗することがあり、 (ユーザーエージェントのクラッシュを除いて) すべての場合に abort コールバックを起動します。</p>
+トランザクションは一定数の理由で失敗することがあり、 (ユーザーエージェントのクラッシュを除いて) すべての場合に abort コールバックを起動します。
 
-<ul>
- <li>Abort due to bad requests, e.g. trying to <code>add()</code> the same key twice, or <code>put()</code> with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. This can be prevented by using <code>preventDefault()</code> on the error event on the request.</li>
- <li>An explicit <code>abort()</code> call from script.</li>
- <li>An uncaught exception in the request's <code>success</code>/<code>error</code> handler.</li>
- <li>An I/O error (e.g. an actual failure to write to disk, or other OS/hardware failure).</li>
- <li>Quota exceeded.</li>
- <li>A user agent crash.</li>
-</ul>
+- Abort due to bad requests, e.g. trying to `add()` the same key twice, or `put()` with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. This can be prevented by using `preventDefault()` on the error event on the request.
+- An explicit `abort()` call from script.
+- An uncaught exception in the request's `success`/`error` handler.
+- An I/O error (e.g. an actual failure to write to disk, or other OS/hardware failure).
+- Quota exceeded.
+- A user agent crash.
 
-<h2 id="Firefox_durability_guarantees" name="Firefox_durability_guarantees">Firefox durability guarantees</h2>
+## Firefox durability guarantees
 
-<p>Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a <code>readwrite</code> transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.</p>
+Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
 
-<p>If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
+If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("IDBTransaction.db")}} {{readonlyInline}}</dt>
- <dd>The database connection with which this transaction is associated.</dd>
- <dt>{{domxref("IDBTransaction.error")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is <code>null</code> if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.</dd>
- <dt>{{domxref("IDBTransaction.mode")}} {{readonlyInline}}</dt>
- <dd>The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is <code><a href="#const_read_only">readonly</a></code>.</dd>
- <dt>{{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.</dd>
-</dl>
+- {{domxref("IDBTransaction.db")}} {{readonlyInline}}
+  - : The database connection with which this transaction is associated.
+- {{domxref("IDBTransaction.error")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.
+- {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
+  - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
+- {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p>Inherits from: {{domxref("EventTarget")}}</p>
+Inherits from: {{domxref("EventTarget")}}
 
-<dl>
- <dt>{{domxref("IDBTransaction.abort()")}}</dt>
- <dd>Rolls back all the changes to objects in the database associated with this transaction. If this transaction has been aborted or completed, this method fires an error event.</dd>
- <dt>{{domxref("IDBTransaction.objectStore()")}}</dt>
- <dd>Returns an {{domxref("IDBObjectStore")}} object representing an <span class="internalDFN">object store</span> that is part of the <span class="internalDFN">scope</span> of this <span class="internalDFN">transaction</span>.</dd>
- <dt>{{domxref("IDBTransaction.commit()")}}</dt>
- <dd>For an active transaction, commits the transaction. Note that this doesn't normally <em>have</em> to be called — a transaction will automatically commit when all outstanding requests have been satisfied and no new requests have been made. <code>commit()</code> can be used to start the commit process without waiting for events from outstanding requests to be dispatched.</dd>
-</dl>
+- {{domxref("IDBTransaction.abort()")}}
+  - : Rolls back all the changes to objects in the database associated with this transaction. If this transaction has been aborted or completed, this method fires an error event.
+- {{domxref("IDBTransaction.objectStore()")}}
+  - : Returns an {{domxref("IDBObjectStore")}} object representing an object store that is part of the scope of this transaction.
+- {{domxref("IDBTransaction.commit()")}}
+  - : For an active transaction, commits the transaction. Note that this doesn't normally _have_ to be called — a transaction will automatically commit when all outstanding requests have been satisfied and no new requests have been made. `commit()` can be used to start the commit process without waiting for events from outstanding requests to be dispatched.
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<p>Listen to these events using <code>addEventListener()</code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-<dl>
- <dt><a href="/ja/docs/Web/API/IDBTransaction/abort_event"><code>abort</code></a></dt>
- <dd>Fired when an <code>IndexedDB</code> transaction is aborted.<br>
- Also available via the <code><a href="/ja/docs/Web/API/IDBTransaction/onabort">onabort</a></code> property.</dd>
- <dt><a href="/ja/docs/Web/API/IDBTransaction/complete_event"><code>complete</code></a></dt>
- <dd>Fired when a transaction successfully completes.<br>
- Also available via the <code><a href="/ja/docs/Web/API/IDBTransaction/oncomplete">oncomplete</a></code> property.</dd>
- <dt><a href="/ja/docs/Web/API/IDBTransaction/error_event"><code>error</code></a></dt>
- <dd>Fired when a request returns an error and the event bubbles up to the transaction object.<br>
- Also available via the <code><a href="/ja/docs/Web/API/IDBTransaction/onerror">onerror</a></code> property.</dd>
-</dl>
+- [`abort`](/ja/docs/Web/API/IDBTransaction/abort_event)
+  - : Fired when an `IndexedDB` transaction is aborted.
+    Also available via the [`onabort`](/ja/docs/Web/API/IDBTransaction/onabort) property.
+- [`complete`](/ja/docs/Web/API/IDBTransaction/complete_event)
+  - : Fired when a transaction successfully completes.
+    Also available via the [`oncomplete`](/ja/docs/Web/API/IDBTransaction/oncomplete) property.
+- [`error`](/ja/docs/Web/API/IDBTransaction/error_event)
+  - : Fired when a request returns an error and the event bubbles up to the transaction object.
+    Also available via the [`onerror`](/ja/docs/Web/API/IDBTransaction/onerror) property.
 
-<h2 id="Mode_constants" name="Mode_constants">Mode constants</h2>
+## Mode constants
 
-<div>
-<div>{{ deprecated_header(13) }}</div>
+{{ deprecated_header(13) }}
 
-<div class="warning">
-<p>These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})</p>
-</div>
-</div>
+> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})
 
-<p>Transactions can have one of three modes:</p>
+Transactions can have one of three modes:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">定数</th>
-   <th scope="col">値</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a>READ_ONLY</a></code></td>
-   <td>
-    <p>"readonly"</p>
+| 定数                 | 値                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`READ_ONLY`]()      | "readonly"(0 in Chrome)      | Allows data to be read but not changed.                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [`READ_WRITE`]()     | "readwrite"(1 in Chrome)     | Allows reading and writing of data in existing data stores to be changed.                                                                                                                                                                                                                                                                                                                                                                                              |
+| [`VERSION_CHANGE`]() | "versionchange"(2 in Chrome) | Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the [`setVersion()`](/ja/docs/IndexedDB/IDBDatabase#setVersion) method of [IDBDatabase](/ja/docs/IndexedDB/IDBDatabase) objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions." |
 
-    <p>(0 in Chrome)</p>
-   </td>
-   <td>
-    <p>Allows data to be read but not changed.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code><a>READ_WRITE</a></code></td>
-   <td>
-    <p>"readwrite"</p>
+Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
 
-    <p>(1 in Chrome)</p>
-   </td>
-   <td>Allows reading and writing of data in existing data stores to be changed.</td>
-  </tr>
-  <tr>
-   <td><code><a>VERSION_CHANGE</a></code></td>
-   <td>
-    <p>"versionchange"</p>
+```js
+var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+```
 
-    <p>(2 in Chrome)</p>
-   </td>
-   <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="/ja/docs/IndexedDB/IDBDatabase#setVersion"><code>setVersion()</code></a> method of <a href="/ja/docs/IndexedDB/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions."</td>
-  </tr>
- </tbody>
-</table>
+## 例
 
-<p>Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome <a href="http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/">the change was made in version 21</a>). You should code defensively in case the object is not available anymore:</p>
+In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush:js;">var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };</pre>
-
-<h2 id="Examples" name="Examples">例</h2>
-
-<p>In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
-
-<pre class="brush: js">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db
   // variable. This is used a lot below
@@ -176,12 +133,12 @@ function addData() {
 
   // report on the success of opening the transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
 
   transaction.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
+  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // create an object store on the transaction
@@ -193,48 +150,28 @@ function addData() {
   objectStoreRequest.onsuccess = function(event) {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.oncomplete)
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+    note.innerHTML += '<li>Request successful.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>初回定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#transaction", "IDBTransaction")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           | 状態                             | 備考     |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}}     | 初回定義 |
+| {{SpecName("IndexedDB 2", "#transaction", "IDBTransaction")}} | {{Spec2("IndexedDB 2")}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<div>{{Compat("api.IDBTransaction")}}</div>
-</div>
+{{Compat("api.IDBTransaction")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDB の使用</a></li>
- <li>トランザクションの開始: {{domxref("IDBDatabase")}}</li>
- <li>トランザクションの仕様: {{domxref("IDBTransaction")}}</li>
- <li>キーの範囲の設定: {{domxref("IDBKeyRange")}}</li>
- <li>データの受け取りや変更: {{domxref("IDBObjectStore")}}</li>
- <li>カーソルの使用: {{domxref("IDBCursor")}}</li>
- <li>リファレンスの例: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始: {{domxref("IDBDatabase")}}
+- トランザクションの仕様: {{domxref("IDBTransaction")}}
+- キーの範囲の設定: {{domxref("IDBKeyRange")}}
+- データの受け取りや変更: {{domxref("IDBObjectStore")}}
+- カーソルの使用: {{domxref("IDBCursor")}}
+- リファレンスの例: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

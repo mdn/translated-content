@@ -11,32 +11,27 @@ tags:
   - WritableStreamDefaultController
 translation_of: Web/API/WritableStreamDefaultController
 ---
-<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/API/Streams_API">Streams API</a> の <strong><code>WritableStreamDefaultController</code></strong> インターフェイスは、{{domxref("WritableStream")}} の状態を制御できるコントローラーを表します。 <code>WritableStream</code> を構築する場合、基になるシンクには、対応する <code>WritableStreamDefaultController</code> インスタンスが与えられて操作します。</span></p>
+[Streams API](/ja/docs/Web/API/Streams_API) の **`WritableStreamDefaultController`** インターフェイスは、{{domxref("WritableStream")}} の状態を制御できるコントローラーを表します。 `WritableStream` を構築する場合、基になるシンクには、対応する `WritableStreamDefaultController` インスタンスが与えられて操作します。
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dd>なし。 <code>WritableStreamDefaultController</code> インスタンスは、<code>WritableStream</code> の構築中に自動的に作成されます。</dd>
-</dl>
+なし。 `WritableStreamDefaultController` インスタンスは、`WritableStream` の構築中に自動的に作成されます。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dd>なし。</dd>
-</dl>
+なし。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("WritableStreamDefaultController.error()")}}</dt>
- <dd>関連するストリームとの今後のやり取りでエラーが発生します。</dd>
-</dl>
+- {{domxref("WritableStreamDefaultController.error()")}}
+  - : 関連するストリームとの今後のやり取りでエラーが発生します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   start(controller) {
     // コントローラーで何かをする
 
@@ -52,29 +47,15 @@ translation_of: Web/API/WritableStreamDefaultController
   abort(err) {
     ...
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Streams','#ws-default-controller-class','WritableStreamDefaultController')}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                 | 状態                         | コメント |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('Streams','#ws-default-controller-class','WritableStreamDefaultController')}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.WritableStreamDefaultController")}}</p>
-</div>
+{{Compat("api.WritableStreamDefaultController")}}

@@ -9,54 +9,35 @@ tags:
   - Reference
 translation_of: Web/API/CaretPosition
 ---
-<p>{{SeeCompatTable}} {{ APIRef("CSSOM") }}</p>
+{{SeeCompatTable}} {{ APIRef("CSSOM") }}
 
-<p><code>CaretPosition</code> インターフェイスは、テキスト挿入ポイントのインジケーターであるキャレット位置を表します。 {{domxref("document.caretPositionFromPoint")}} メソッドを使用して <code>CaretPosition</code> を取得できます。</p>
+`CaretPosition` インターフェイスは、テキスト挿入ポイントのインジケーターであるキャレット位置を表します。 {{domxref("document.caretPositionFromPoint")}} メソッドを使用して `CaretPosition` を取得できます。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>このインターフェイスはプロパティを継承しません。</em></p>
+_このインターフェイスはプロパティを継承しません。_
 
-<dl>
- <dt>{{domxref("CaretPosition.offsetNode")}} {{readonlyInline}}</dt>
- <dd>キャレットの位置で見つかったノードを含む {{domxref("Node")}} を返します。</dd>
- <dt>{{domxref("CaretPosition.offset")}} {{readonlyInline}}</dt>
- <dd>キャレット位置ノードの文字オフセットを表す <code>long</code> を返します。</dd>
-</dl>
+- {{domxref("CaretPosition.offsetNode")}} {{readonlyInline}}
+  - : キャレットの位置で見つかったノードを含む {{domxref("Node")}} を返します。
+- {{domxref("CaretPosition.offset")}} {{readonlyInline}}
+  - : キャレット位置ノードの文字オフセットを表す `long` を返します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("CaretPosition.getClientRect")}}</dt>
-</dl>
+{{domxref("CaretPosition.getClientRect")}}
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#caret-position', 'CaretPosition') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                 | ステータス                       | 備考 |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
+| {{ SpecName('CSSOM View', '#caret-position', 'CaretPosition') }} | {{ Spec2('CSSOM View') }} |      |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.CaretPosition")}}</p>
+{{Compat("api.CaretPosition")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>{{domxref("Document.caretPositionFromPoint()")}}</li>
- <li>{{domxref("Range")}}</li>
- <li>{{domxref("Node")}}</li>
-</ul>
+- {{domxref("Document.caretPositionFromPoint()")}}
+- {{domxref("Range")}}
+- {{domxref("Node")}}

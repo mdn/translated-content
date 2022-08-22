@@ -11,62 +11,49 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>{{domxref("WindowOrWorkerGlobalScope")}} ミックスインの <strong><code>indexedDB</code></strong> 読み取り専用プロパティは、アプリケーションが indexed データベースのキャパビリティに非同期でアクセスするための機構を提供します。</p>
+{{domxref("WindowOrWorkerGlobalScope")}} ミックスインの **`indexedDB`** 読み取り専用プロパティは、アプリケーションが indexed データベースのキャパビリティに非同期でアクセスするための機構を提供します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var IDBFactory = self.indexedDB;</pre>
+```
+var IDBFactory = self.indexedDB;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("IDBFactory")}} オブジェクト。</p>
+{{domxref("IDBFactory")}} オブジェクト。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js;highlight:[3]">var db;
+```js
+var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open('toDoList');
  DBOpenRequest.onsuccess = function(e) {
    db = DBOpenRequest.result;
  }
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB 2')}}</td>
-   <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 策定状況                         | 備考                                                                 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Defined in a `WindowOrWorkerGlobalScope` partial in the newest spec. |
+| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | 初期定義。                                                           |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>トランザクションの開始: {{domxref("IDBDatabase")}}</li>
- <li>トランザクションの使用: {{domxref("IDBTransaction")}}</li>
- <li>キーの範囲設定: {{domxref("IDBKeyRange")}}</li>
- <li>データの取得と変更: {{domxref("IDBObjectStore")}}</li>
- <li>カーソルの使用: {{domxref("IDBCursor")}}</li>
- <li>参照例: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始: {{domxref("IDBDatabase")}}
+- トランザクションの使用: {{domxref("IDBTransaction")}}
+- キーの範囲設定: {{domxref("IDBKeyRange")}}
+- データの取得と変更: {{domxref("IDBObjectStore")}}
+- カーソルの使用: {{domxref("IDBCursor")}}
+- 参照例: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

@@ -11,28 +11,27 @@ tags:
   - Service Workers
 translation_of: Web/API/NavigationPreloadManager
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p><a href="/ja/docs/Web/API/Service_Worker_API">Service Worker API</a> の <strong><code>NavigationPreloadManager</code></strong> インターフェイスは、サービスワーカーによるリソースのプリロード（事前読み込み）を管理するためのメソッドを提供します。</p>
+[Service Worker API](/ja/docs/Web/API/Service_Worker_API) の **`NavigationPreloadManager`** インターフェイスは、サービスワーカーによるリソースのプリロード（事前読み込み）を管理するためのメソッドを提供します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("NavigationPreloadManager.enable()")}}</dt>
- <dd>ナビゲーションのプリロードを有効にし、解決する {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("NavigationPreloadManager.disable()")}}</dt>
- <dd>ナビゲーションのプリロードを無効にし、解決する {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("NavigationPreloadManager.setHeaderValue()")}}</dt>
- <dd><code>Service-Worker-Navigation-Preload</code> ヘッダーの値を設定し、空の {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("NavigationPreloadManager.getState()")}}</dt>
- <dd>プリロードが有効かどうかと、<code>Service-Worker-Navigation-Preload</code> の内容を示すプロパティを持つオブジェクトに解決する {{jsxref("Promise")}} を返します。</dd>
-</dl>
+- {{domxref("NavigationPreloadManager.enable()")}}
+  - : ナビゲーションのプリロードを有効にし、解決する {{jsxref("Promise")}} を返します。
+- {{domxref("NavigationPreloadManager.disable()")}}
+  - : ナビゲーションのプリロードを無効にし、解決する {{jsxref("Promise")}} を返します。
+- {{domxref("NavigationPreloadManager.setHeaderValue()")}}
+  - : `Service-Worker-Navigation-Preload` ヘッダーの値を設定し、空の {{jsxref("Promise")}} を返します。
+- {{domxref("NavigationPreloadManager.getState()")}}
+  - : プリロードが有効かどうかと、`Service-Worker-Navigation-Preload` の内容を示すプロパティを持つオブジェクトに解決する {{jsxref("Promise")}} を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h4 id="Feature_Detecting_and_Enabling_Navigation_Preloading" name="Feature_Detecting_and_Enabling_Navigation_Preloading">ナビゲーションのプリロードの機能を検出して有効化</h4>
+#### ナビゲーションのプリロードの機能を検出して有効化
 
-<pre class="brush: js notranslate">addEventListener('activate', event =&gt; {
+```js
+addEventListener('activate', event => {
   event.waitUntil(async function() {
     if (self.registration.navigationPreload) {
       // ナビゲーションのプリロードを有効にします！
@@ -40,13 +39,14 @@ translation_of: Web/API/NavigationPreloadManager
     }
   }());
 });
-</pre>
+```
 
-<h4 id="Using_a_Preloaded_Response" name="Using_a_Preloaded_Response">プリロードされたレスポンスの使用</h4>
+#### プリロードされたレスポンスの使用
 
-<p>次の例は、プリロードされたレスポンスを使用する fetch イベントの実装を示しています。</p>
+次の例は、プリロードされたレスポンスを使用する fetch イベントの実装を示しています。
 
-<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   event.respondWith(async function() {
     // 可能なら、キャッシュから応答します
     const cachedResponse = await caches.match(event.request);
@@ -59,27 +59,15 @@ translation_of: Web/API/NavigationPreloadManager
     // それもなければ、ネットワークを試します。
     return fetch(event.request);
   }());
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers','#navigation-preload-manager','NavigationPreloadManager')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                 | 状態                                 | コメント |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers','#navigation-preload-manager','NavigationPreloadManager')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.NavigationPreloadManager")}}</p>
+{{Compat("api.NavigationPreloadManager")}}
