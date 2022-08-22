@@ -6,36 +6,33 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/name
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>name</code> 関数は、与えられたノード集合内の最初のノードの QName を表す文字列を返します。</p>
+`name` 関数は、与えられたノード集合内の最初のノードの QName を表す文字列を返します。
 
-<h3 id="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">name( [<em>node-set</em>] )
-</pre>
+```
+name( [node-set] )
+```
 
-<h3 id="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><code><em>node-set</em></code> (省略可)</dt>
- <dd>このノード集合内の最初のノードの QName が返されます。引数を省略すると、現在のコンテキストノードが使用されます。</dd>
-</dl>
+- `node-set` (省略可)
+  - : このノード集合内の最初のノードの QName が返されます。引数を省略すると、現在のコンテキストノードが使用されます。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>ノードの QName を表す文字列。</p>
+ノードの QName を表す文字列。
 
-<h3 id="Notes">注</h3>
+### 注
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/REC-xml-names/#NT-QName">QName</a> はノードの修飾名であり、名前空間接頭辞とローカル名が含まれます。</li>
-</ul>
+- [QName](http://www.w3.org/TR/REC-xml-names/#NT-QName) はノードの修飾名であり、名前空間接頭辞とローカル名が含まれます。
 
-<h3 id="Defined">定義</h3>
+### 定義
 
-<p><a href="https://www.w3.org/TR/xpath#function-local-name">XPath 1.0 4.1</a></p>
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
 
-<h3 id="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み。</p>
+対応済み。

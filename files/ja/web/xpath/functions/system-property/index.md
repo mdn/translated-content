@@ -6,38 +6,35 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/system-property
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>system-property</code>関数は、指定されたシステムプロパティを表すオブジェクトを返します。</p>
+`system-property`関数は、指定されたシステムプロパティを表すオブジェクトを返します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre class="eval notranslate">system-property(<var>name</var>)
-</pre>
+```
+system-property(name)
+```
 
-<h3 id="Arguments" name="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>name</var></code> (任意)</dt>
- <dd>システムプロパティの名前。引数は QName である文字列に評価される必要があります。 QName は、式のスコープ内の名前空間宣言を使用して名前に展開されます。 system-property 関数は、名前によって識別されるシステムプロパティの値を表すオブジェクトを戻します。そのようなシステムプロパティがない場合は、空の文字列を返す必要があります。</dd>
-</dl>
+- `name` (任意)
+  - : システムプロパティの名前。引数は QName である文字列に評価される必要があります。 QName は、式のスコープ内の名前空間宣言を使用して名前に展開されます。 system-property 関数は、名前によって識別されるシステムプロパティの値を表すオブジェクトを戻します。そのようなシステムプロパティがない場合は、空の文字列を返す必要があります。
 
-<h3 id="Returns" name="Returns">返値</h3>
+### 返値
 
-<p>指定されたシステムプロパティを表すオブジェクト。</p>
+指定されたシステムプロパティを表すオブジェクト。
 
-<h3 id="Notes" name="Notes">注</h3>
+### 注
 
-<ul>
- <li>xsl:version: プロセッサーによって実装された XSLT のバージョンを示す数字。このドキュメントで指定されているバージョンの XSLT を実装している XSLT プロセッサの場合、これは 1.0 です</li>
- <li>xsl:vendor: XSLT プロセッサーのベンダーを識別する文字列</li>
- <li>xsl:vendor-url: XSLT プロセッサーのベンダーを識別する URL を含む文字列。通常これはベンダーのウェブサイトのホストページ (ホームページ) です</li>
-</ul>
+- xsl:version: プロセッサーによって実装された XSLT のバージョンを示す数字。このドキュメントで指定されているバージョンの XSLT を実装している XSLT プロセッサの場合、これは 1.0 です
+- xsl:vendor: XSLT プロセッサーのベンダーを識別する文字列
+- xsl:vendor-url: XSLT プロセッサーのベンダーを識別する URL を含む文字列。通常これはベンダーのウェブサイトのホストページ (ホームページ) です
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p><a class="external" href="http://www.w3.org/TR/xslt#function-system-property">XSLT 1.0 12.4</a></p>
+[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-system-property)
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み</p>
+対応済み

@@ -6,30 +6,29 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/function-available
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>function-available</code>関数は、指定された関数が使用可能かどうかを判断し、真偽値 true または false を返します。</p>
+`function-available`関数は、指定された関数が使用可能かどうかを判断し、論理値 true または false を返します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">function-available(<em>name</em> )
-</pre>
+```
+function-available(name )
+```
 
-<h3 id="Arguments" name="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><code><em>name</em></code></dt>
- <dd>テストする関数の名前</dd>
-</dl>
+- `name`
+  - : テストする関数の名前
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+### 返値
 
-<p>真偽値の <code>true</code> もしくは <code>false</code></p>
+論理値の `true` もしくは `false`
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p><a class="external" href="http://www.w3.org/TR/xslt#function-function-available">XPath 1.0 15</a></p>
+[XPath 1.0 15](http://www.w3.org/TR/xslt#function-function-available)
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み
