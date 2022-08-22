@@ -1,5 +1,5 @@
 ---
-title: Streams API
+title: Stream API
 slug: Web/API/Streams_API
 ---
 {{DefaultAPISidebar("Streams")}}
