@@ -8,9 +8,9 @@ slug: Web/HTTP/Overview
 
 ![A Web document is the composition of different resources](fetching_a_page.png)
 
-客户端和服务端通过交换各自的消息（与数据流正好相反）进行交互。由像浏览器这样的客户端发出的消息叫做 _requests_，被服务端响应的消息叫做 _responses。_
+客户端和服务端通过交换各自的消息（与数据流正好相反）进行交互。由像浏览器这样的客户端发出的消息叫做 _request_，被服务端响应的消息叫做 _response_。
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://mdn.mozillademos.org/files/13673/HTTP%20&%20layers.png)HTTP 被设计于 20 世纪 90 年代初期，是一种可扩展的协议。它是应用层的协议，通过{{glossary("TCP")}}，或者是{{glossary("TLS")}}－加密的 TCP 连接来发送，理论上任何可靠的传输协议都可以使用。因为其良好的扩展性，时至今日，它不仅被用来传输超文本文档，还用来传输图片、视频或者向服务器发送如 HTML 表单这样的信息。HTTP 还可以根据网页需求，仅获取部分 Web 文档内容更新网页。
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)HTTP 被设计于 20 世纪 90 年代初期，是一种可扩展的协议。它是应用层的协议，通过{{glossary("TCP")}}，或者是{{glossary("TLS")}}－加密的 TCP 连接来发送，理论上任何可靠的传输协议都可以使用。因为其良好的扩展性，时至今日，它不仅被用来传输超文本文档，还用来传输图片、视频或者向服务器发送如 HTML 表单这样的信息。HTTP 还可以根据网页需求，仅获取部分 Web 文档内容更新网页。
 
 ## 基于 HTTP 的组件系统
 

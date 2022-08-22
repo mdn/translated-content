@@ -10,7 +10,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。最常用的 HTTP 
 
 {{RFC("7235")}} 定义了一个 HTTP 身份验证框架，服务器可以用来针对客户端的请求发送 {{glossary("challenge")}}（质询信息），客户端则可以用来提供身份验证凭证。质询与应答的工作流程如下：服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的）状态码，并在 {{HTTPHeader("WWW-Authenticate")}} 首部提供如何进行验证的信息，其中至少包含有一种质询方式。之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 首部字段进行验证，字段值为身份验证凭证信息。通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 `Authorization` 首部的请求。
 
-![](https://mdn.mozillademos.org/files/14689/HTTPAuth.png)
+![](http-auth-sequence-diagram.png)
 
 在上图所示的基本身份验证过程中，信息交换须通过 HTTPS(TLS) 连接来保证安全。
 
