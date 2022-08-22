@@ -55,7 +55,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 - _Request headers_，例如 {{HTTPHeader("User-Agent")}}，{{HTTPHeader("Accept-Type")}}，通过进一步的定义 (例如 {{HTTPHeader("Accept-Language")}})，或者给定上下文 (例如 {{HTTPHeader("Referer")}})，或者进行有条件的限制 (例如 {{HTTPHeader("If-None")}}) 来修改请求。
 - _Entity headers_，例如 {{HTTPHeader("Content-Length")}}，适用于请求的 body。显然，如果请求中没有任何 body，则不会发送这样的头文件。
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers3.png)
 
 ### Body
 
@@ -84,11 +84,11 @@ HTTP 响应的起始行被称作 _状态行_ _(status line)_，包含以下信�
 
 有许多响应头可用，这些响应头可以分为几组：
 
-- *General headers，*例如 {{HTTPHeader("Via")}}，适用于整个报文。
-- *Response headers，*例如 {{HTTPHeader("Vary")}} 和 {{HTTPHeader("Accept-Ranges")}}，提供其它不符合状态行的关于服务器的信息。
+- _General headers_，例如 {{HTTPHeader("Via")}}，适用于整个报文。
+- _Response headers_，例如 {{HTTPHeader("Vary")}} 和 {{HTTPHeader("Accept-Ranges")}}，提供其它不符合状态行的关于服务器的信息。
 - _Entity headers_，例如 {{HTTPHeader("Content-Length")}}，适用于请求的 body。显然，如果请求中没有任何 body，则不会发送这样的头文件。
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers3.png)
 
 ### Body
 

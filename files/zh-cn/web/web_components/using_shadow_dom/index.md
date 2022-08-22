@@ -34,7 +34,7 @@ Web components 的一个重要属性是封装——可以将标记结构、样�
 
 _Shadow_ DOM 允许将隐藏的 DOM 树附加到常规的 DOM 树中——它以 shadow root 节点为起始根节点，在这个根节点的下方，可以是任意元素，和普通的 DOM 元素一样。
 
-![](https://mdn.mozillademos.org/files/15788/shadow-dom.png)
+![](shadowdom.svg)
 
 这里，有一些 Shadow DOM 特有的术语需要我们了解：
 

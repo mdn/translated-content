@@ -12,15 +12,17 @@ slug: Web/SVG/Element/circle
 
 ## 示例
 
-```xml
-<?xml version="1.0"?>
-<svg viewBox="0 0 120 120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="50"/>
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="50"/>
 </svg>
 ```
 
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+{{EmbedLiveSample('示例', 100, 100)}}
 
 ## 属性
 
