@@ -32,19 +32,13 @@ Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳�
 - Github 上有 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/))，一個簡單示範主頁和 {{htmlelement("iframe")}} 間的訊息溝通。
 - 還有 [multimessaging demo](https://github.com/mdn/channel-messaging-multimessage) ([run this live](http://mdn.github.io/channel-messaging-multimessage/))，較為複雜的例子。
 
-## 標準規範
+## 規範
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## 瀏覽器相容性
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## 延伸閱讀
 

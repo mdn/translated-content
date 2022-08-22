@@ -70,7 +70,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '600', '150', '', 'Web/HTML/Element/dfn') }}
+{{ EmbedLiveSample('示例', '600', '150') }}
 
 ## 规范
 

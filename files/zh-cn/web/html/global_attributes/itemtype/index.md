@@ -96,9 +96,7 @@ Google 和其它主流搜索引擎支持 [schema.org](http://schema.org/) 结构
 
 ### 结果
 
-#### HTML
-
-{{EmbedLiveSample('HTML_2', '300', '400', '', 'Web/HTML/Global_attributes/itemtype')}}
+{{EmbedLiveSample('示例', '300', '400')}}
 
 #### 结构化数据
 

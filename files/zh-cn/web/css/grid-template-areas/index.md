@@ -36,7 +36,7 @@ grid-template-areas: unset; /* 未设置 */
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -86,7 +86,7 @@ grid-template-areas: unset; /* 未设置 */
 
 ### 结果
 
-{{ EmbedLiveSample('例子', '100%', '250px', '', 'Web/CSS/grid-template-areas') }}
+{{ EmbedLiveSample('示例', '100%', '250px') }}
 
 ## 规范
 

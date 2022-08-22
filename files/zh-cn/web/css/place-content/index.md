@@ -194,25 +194,17 @@ direction.addEventListener("change", function (evt) {
 
 {{EmbedLiveSample("Example", "370", "300")}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
 {{CSSInfo}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("css.properties.place-content")}}
+{{Compat}}
 
-### Support in Flex layout
-
-{{Compat("css.properties.place-content.flex_context")}}
-
-### Support in Grid layout
-
-{{Compat("css.properties.place-content.grid_context")}}
-
-## See also
+## 参见
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_

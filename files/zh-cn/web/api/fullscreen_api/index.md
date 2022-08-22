@@ -136,13 +136,9 @@ function toggleFullScreen() {
 
 ## 浏览器兼容性
 
-所有的浏览器都实现了这个 API。然而一些带有前缀的实现在拼写上略微有些差别；例如，不同于 `requestFullscreen()`，存在一个 `MozRequestFullScreen()`。
+{{Compat}}
 
-{{Compat("api.Document.fullscreen")}}
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-## 另见
+## 参见
 
 - [Using fullscreen mode](/zh-CN/docs/Web/API/Fullscreen_API)
 - {{ domxref("Element.requestFullscreen()") }}

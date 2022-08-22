@@ -41,18 +41,8 @@ original_slug: Web/HTML/CORS_settings_attributes
 
 ## 浏览器兼容性
 
-### script crossorigin
+{{Compat}}
 
-{{Compat("html.elements.script.crossorigin")}}
-
-### video crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
-
-## 另请参阅
+## 参见
 
 - [HTTP access control](/zh-CN/docs/Web/HTTP/Access_control_CORS)（HTTP 访问控制）

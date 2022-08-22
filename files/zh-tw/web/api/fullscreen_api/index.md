@@ -131,31 +131,13 @@ This starts by looking at the value of the `fullscreenElement` attribute on the 
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{ domxref("document.mozCancelFullScreen()") }}, `msExitFullscreen` or `webkitExitFullscreen()`, again depending on which browser is in use.
 
-## 瀏覽器兼容性
-
-### Document.fullscreen
-
-{{Compat("api.Document.fullscreen")}}
-
-### Document.fullscreenElement
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### Document.fullscreenEnabled
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### Document.exitFullscreen
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### Element.requestFullscreen
-
-{{Compat("api.Element.requestFullscreen")}}
-
 ## 規範
 
-[Fullscreen API](http://fullscreen.spec.whatwg.org/)
+{{Specifications}}
+
+## 瀏覽器兼容性
+
+{{Compat}}
 
 ## 非標準方法
 

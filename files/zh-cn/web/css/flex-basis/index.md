@@ -54,7 +54,7 @@ flex-basis: unset;
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -157,7 +157,7 @@ flex-basis: unset;
 
 ### 结果
 
-{{EmbedLiveSample('例子', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{EmbedLiveSample('示例', '860', '360')}}
 
 ## 规范
 

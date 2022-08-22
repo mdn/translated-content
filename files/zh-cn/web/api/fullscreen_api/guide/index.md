@@ -132,13 +132,7 @@ function toggleFullScreen() {
 
 ## 浏览器兼容性
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
+{{Compat}}
 
 ## 扩展链接
 

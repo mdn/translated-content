@@ -237,15 +237,9 @@ display.addEventListener('change', function (evt) {
 
 ## 浏览器兼容性
 
-### 在弹性盒子布局中的兼容性
+{{Compat}}
 
-{{Compat("css.properties.align-content.flex_context")}}
-
-### 在网格布局中的兼容性
-
-{{Compat("css.properties.align-content.grid_context")}}
-
-## 相关链接
+## 参见
 
 - 弹性盒子布局的基本概念：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - 对齐弹性容器中的弹性项目：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
