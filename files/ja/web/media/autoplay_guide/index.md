@@ -20,265 +20,257 @@ tags:
   - play
 translation_of: Web/Media/Autoplay_guide
 ---
-ページが読み込まれるとすぐに音声（または音声トラックを含む動画）の再生を自動的に開始することは、ユーザーにとって歓迎されない驚きです。 メディアの自動再生は便利な目的に役立ちますが、注意して必要なときにだけ使用してください。 ユーザーがこれを制御できるようにするために、ブラウザーは多くの場合、さまざまな形式の自動再生のブロック（autoplay blocking）を提供します。 このガイドでは、さまざまなメディアおよびウェブオーディオ API（Web Audio API）の自動再生機能について説明します — 自動再生の使用方法と自動再生のブロックを適切に処理するためのブラウザーの操作方法の簡単な概要を含みます。
+<p>ページが読み込まれるとすぐに音声（または音声トラックを含む動画）の再生を自動的に開始することは、ユーザーにとって歓迎されない驚きです。 メディアの自動再生は便利な目的に役立ちますが、注意して必要なときにだけ使用してください。 ユーザーがこれを制御できるようにするために、ブラウザーは多くの場合、さまざまな形式の自動再生のブロック（autoplay blocking）を提供します。 <span class="seoSummary">このガイドでは、さまざまなメディアおよびウェブオーディオ API（Web Audio API）の自動再生機能について説明します — 自動再生の使用方法と自動再生のブロックを適切に処理するためのブラウザーの操作方法の簡単な概要を含みます。</span></p>
 
-ソースメディアに音声トラックがない場合、または音声トラックがミュートされている場合、自動再生のブロックは {{HTMLElement("video")}} 要素には適用*されません*。 アクティブな音声トラックを持つメディアは**可聴である**と見なされ、自動再生のブロックがそれらに適用されます。 **可聴でない**メディアは自動再生のブロックの影響を受けません。
+<p>ソースメディアに音声トラックがない場合、または音声トラックがミュートされている場合、自動再生のブロックは {{HTMLElement("video")}} 要素には適用<em>されません</em>。 アクティブな音声トラックを持つメディアは<strong>可聴である</strong>と見なされ、自動再生のブロックがそれらに適用されます。 <strong>可聴でない</strong>メディアは自動再生のブロックの影響を受けません。</p>
 
-## 自動再生と自動再生のブロック
+<h2 id="Autoplay_and_autoplay_blocking" name="Autoplay_and_autoplay_blocking">自動再生と自動再生のブロック</h2>
 
-用語「**自動再生**（**autoplay**）」は、ユーザーが再生の開始を明確に要求しなくても音声の再生を開始させる機能を意味します。 これには、メディアの自動再生のための HTML 属性の使用と、ユーザー入力を処理するコンテキストの外で再生を開始するための JavaScript コードのユーザーの両方が含まれます。
+<p>用語「<strong>自動再生</strong>（<strong>autoplay</strong>）」は、ユーザーが再生の開始を明確に要求しなくても音声の再生を開始させる機能を意味します。 これには、メディアの自動再生のための HTML 属性の使用と、ユーザー入力を処理するコンテキストの外で再生を開始するための JavaScript コードのユーザーの両方が含まれます。</p>
 
-つまり、次の両方が自動再生のふるまいと見なされるため、ブラウザーの自動再生のブロックのポリシーに従います。
+<p>つまり、次の両方が自動再生のふるまいと見なされるため、ブラウザーの自動再生のブロックのポリシーに従います。</p>
 
-```html
-<audio src="/music.mp4" autoplay>
-```
+<pre class="brush: html">&lt;audio src="/music.mp4" autoplay&gt;</pre>
 
-と
+<p>と</p>
 
-```js
-audioElement.play();
-```
+<pre class="brush: js">audioElement.play();</pre>
 
-次のウェブ機能および API は自動再生のブロックの影響を受ける可能性があります。
+<p>次のウェブ機能および API は自動再生のブロックの影響を受ける可能性があります。</p>
 
-- {{Glossary("HTML")}} の {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)（Web Audio API）
+<ul>
+ <li>{{Glossary("HTML")}} の {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素</li>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API">ウェブオーディオ API</a>（Web Audio API）</li>
+</ul>
 
-ユーザーの観点からは、警告なしに自発的にノイズを発し始めるウェブページまたはアプリは、耳障り、不便、または気まずいものになる可能性があります。 そのため、ブラウザーでは通常、特定の状況下でのみ自動再生が正常に行われるようにすることしかできません。
+<p>ユーザーの観点からは、警告なしに自発的にノイズを発し始めるウェブページまたはアプリは、耳障り、不便、または気まずいものになる可能性があります。 そのため、ブラウザーでは通常、特定の状況下でのみ自動再生が正常に行われるようにすることしかできません。</p>
 
-### 自動再生の可用性
+<h3 id="Autoplay_availability" name="Autoplay_availability">自動再生の可用性</h3>
 
-一般的な規則として、次の条件の*少なくとも 1 つ*が当てはまる場合にのみ、メディアの自動再生が許可されると想定できます。
+<p>一般的な規則として、次の条件の<em>少なくとも1つ</em>が当てはまる場合にのみ、メディアの自動再生が許可されると想定できます。</p>
 
-- 音声がミュートになっているか、音量が 0 に設定されている。
-- ユーザーがサイトを操作した（クリック、タップ、キーを押すなど）。
-- サイトがホワイトリストに登録されている場合。 これは、ユーザーがメディアと頻繁に関わっているとブラウザーが判断した場合は自動的に、または設定や他のユーザーインターフェイス機能を使用して手動で行われる場合があります。
-- 自動再生機能ポリシーを使用して {{HTMLElement("iframe")}} とそのドキュメントに自動再生のサポートを付与する場合。
+<ul>
+ <li>音声がミュートになっているか、音量が 0 に設定されている。</li>
+ <li>ユーザーがサイトを操作した（クリック、タップ、キーを押すなど）。</li>
+ <li>サイトがホワイトリストに登録されている場合。 これは、ユーザーがメディアと頻繁に関わっているとブラウザーが判断した場合は自動的に、または設定や他のユーザーインターフェイス機能を使用して手動で行われる場合があります。</li>
+ <li>自動再生機能ポリシーを使用して {{HTMLElement("iframe")}} とそのドキュメントに自動再生のサポートを付与する場合。</li>
+</ul>
 
-そうでないと、再生がブロックされる可能性があります。 ブロックされる正確な状況、およびサイトがホワイトリストに登録される方法の詳細はブラウザーによって異なりますが、上記のガイドラインを参考にしてください。
+<p>そうでないと、再生がブロックされる可能性があります。 ブロックされる正確な状況、およびサイトがホワイトリストに登録される方法の詳細はブラウザーによって異なりますが、上記のガイドラインを参考にしてください。</p>
 
-> **Note:** **注**: 別の言い方をすれば、音声が含まれているメディアの再生は、ユーザー操作がまだ行われていないタブでプログラム的に再生が開始されると、通常はブロックされます。 ブラウザーはさらに他の状況下でブロックすることを選択するかもしれません。
+<div class="blockIndicator note">
+<p><strong>注</strong>: 別の言い方をすれば、音声が含まれているメディアの再生は、ユーザー操作がまだ行われていないタブでプログラム的に再生が開始されると、通常はブロックされます。 ブラウザーはさらに他の状況下でブロックすることを選択するかもしれません。</p>
+</div>
 
-## メディア要素の自動再生
+<h2 id="Autoplay_of_media_elements" name="Autoplay_of_media_elements">メディア要素の自動再生</h2>
 
-自動再生とは何か、自動再生が許可されないようにすることができるかについて説明したので、次に、ウェブサイトまたはアプリがページの読み込み時に自動的にメディアを再生する方法、自動再生の失敗の検出方法、および自動再生がブラウザーによって拒否されたときの対処方法について説明します。
+<p>自動再生とは何か、自動再生が許可されないようにすることができるかについて説明したので、次に、ウェブサイトまたはアプリがページの読み込み時に自動的にメディアを再生する方法、自動再生の失敗の検出方法、および自動再生がブラウザーによって拒否されたときの対処方法について説明します。</p>
 
-### autoplay 属性
+<h3 id="The_autoplay_attribute" name="The_autoplay_attribute">autoplay 属性</h3>
 
-コンテンツを自動的に再生する最も簡単な方法は、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素に {{htmlattrxref("autoplay", "audio")}} 属性を追加することです。 これにより、要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティが `true` に設定され、`autoplay` が `true` の場合、次のことが発生した後、メディアはできるだけ早く自動的に再生を開始します。
+<p>コンテンツを自動的に再生する最も簡単な方法は、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素に {{htmlattrxref("autoplay", "audio")}} 属性を追加することです。 これにより、要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティが <code>true</code> に設定され、<code>autoplay</code> が <code>true</code> の場合、次のことが発生した後、メディアはできるだけ早く自動的に再生を開始します。</p>
 
-- ページは自動再生機能を使用することを許可されている。
-- 要素はページの読み込み中に作成された。
-- ネットワークのパフォーマンスや帯域幅に劇的な変化がないと仮定して、再生を開始し、中断することなくメディアの最後まで再生を続けるのに十分なメディアが受信されている。
+<ul>
+ <li>ページは自動再生機能を使用することを許可されている。</li>
+ <li>要素はページの読み込み中に作成された。</li>
+ <li>ネットワークのパフォーマンスや帯域幅に劇的な変化がないと仮定して、再生を開始し、中断することなくメディアの最後まで再生を続けるのに十分なメディアが受信されている。</li>
+</ul>
 
-#### 例: autoplay 属性
+<h4 id="Example_The_autoplay_attribute" name="Example_The_autoplay_attribute">例: autoplay 属性</h4>
 
-`autoplay` 属性を使用する {{HTMLElement("audio")}} 要素は、次のようになります。
+<p><code>autoplay</code> 属性を使用する {{HTMLElement("audio")}} 要素は、次のようになります。</p>
 
-```html
-<audio id="musicplayer" autoplay>
-  <source src="/music/chapter1.mp4">
-</audio>
-```
+<pre class="brush: html">&lt;audio id="musicplayer" autoplay&gt;
+  &lt;source src="/music/chapter1.mp4"&gt;
+&lt;/audio&gt;
+</pre>
 
-#### 例 2: 自動再生の失敗を検出する
+<h4 id="Example_2_Detecting_autoplay_failure" name="Example_2_Detecting_autoplay_failure">例2: 自動再生の失敗を検出する</h4>
 
-重要なことを自動再生に頼っている場合、または自動再生の失敗が何らかの形でアプリに影響を与える場合は、自動再生が開始されなかったことを知りたいと思うでしょう。 残念ながら、{{htmlattrxref("autoplay", "audio")}} 属性の場合、自動再生が正常に開始されたかどうかを認識するのは難しいです。 自動再生が失敗したときにトリガーされるイベントはありません。 また、設定可能な例外やコールバック、あるいは自動再生が機能したかどうかを示すフラグもメディア要素にありません。 本当にできることは、いくつかの値を調べて、自動再生が機能したかどうかについて山を張ることだけです。
+<p>重要なことを自動再生に頼っている場合、または自動再生の失敗が何らかの形でアプリに影響を与える場合は、自動再生が開始されなかったことを知りたいと思うでしょう。 残念ながら、{{htmlattrxref("autoplay", "audio")}} 属性の場合、自動再生が正常に開始されたかどうかを認識するのは難しいです。 自動再生が失敗したときにトリガーされるイベントはありません。 また、設定可能な例外やコールバック、あるいは自動再生が機能したかどうかを示すフラグもメディア要素にありません。 本当にできることは、いくつかの値を調べて、自動再生が機能したかどうかについて山を張ることだけです。</p>
 
-見方を変えることができるのであれば、メディアの再生がうまくいかなかったときではなく、メディアの再生がうまくいったことを知ることに頼ることをお勧めします。 メディア要素で {{event("play")}} イベントが発生するのをリスンすることで、これを簡単に行うことができます。
+<p>見方を変えることができるのであれば、メディアの再生がうまくいかなかったときではなく、メディアの再生がうまくいったことを知ることに頼ることをお勧めします。 メディア要素で {{event("play")}} イベントが発生するのをリスンすることで、これを簡単に行うことができます。</p>
 
-`play` イベントは、メディアが一時停止後に再開されたとき*と*自動再生が発生したときの両方に送信されます。 つまり、初めて `play` イベントが発生したときは、ページが開かれた後に初めてメディアの再生が開始されたことがわかります。
+<p><code>play</code> イベントは、メディアが一時停止後に再開されたとき<em>と</em>自動再生が発生したときの両方に送信されます。 つまり、初めて <code>play</code> イベントが発生したときは、ページが開かれた後に初めてメディアの再生が開始されたことがわかります。</p>
 
-次の HTML をメディア要素として考えます。
+<p>次の HTML をメディア要素として考えます。</p>
 
-```html
-<video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)">
-```
+<pre class="brush: html">&lt;video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)"&gt;</pre>
 
-ここでは、{{domxref("HTMLMediaElement.onplay", "onplay")}} イベントハンドラが設定された、{{htmlattrxref("autoplay", "video")}} 属性が設定されている {{HTMLElement("video")}} 要素があります。 イベントは `handleFirstPlay()` と呼ばれる関数によって処理され、この関数は入力として `play` イベントを受け取ります。
+<p>ここでは、{{domxref("HTMLMediaElement.onplay", "onplay")}} イベントハンドラが設定された、{{htmlattrxref("autoplay", "video")}} 属性が設定されている {{HTMLElement("video")}} 要素があります。 イベントは <code>handleFirstPlay()</code> と呼ばれる関数によって処理され、この関数は入力として <code>play</code> イベントを受け取ります。</p>
 
-`handleFirstPlay()` は次のようになります。
+<p><code>handleFirstPlay()</code> は次のようになります。</p>
 
-```js
-function handleFirstPlay(event) {
+<pre class="brush: js">function handleFirstPlay(event) {
   let vid = event.target;
 
   vid.onplay = null;
 
   // 再生が開始された後に行う必要があるものをすべて開始する。
-}
-```
+}</pre>
 
-{{domxref("Event")}} オブジェクトの {{domxref("Event.target", "target")}} から動画要素への参照を取得した後、その要素の `onplay` ハンドラは `null` に設定されます。 これにより、今後の `play` イベントがハンドラに配信されなくなります。 これは、ドキュメントがバックグラウンドタブにあるときに、動画がユーザーによって一時停止および再開された場合、またはブラウザーによって自動的に行われる場合に発生する可能性があります。
+<p>{{domxref("Event")}} オブジェクトの {{domxref("Event.target", "target")}} から動画要素への参照を取得した後、その要素の <code>onplay</code> ハンドラは <code>null</code> に設定されます。 これにより、今後の <code>play</code> イベントがハンドラに配信されなくなります。 これは、ドキュメントがバックグラウンドタブにあるときに、動画がユーザーによって一時停止および再開された場合、またはブラウザーによって自動的に行われる場合に発生する可能性があります。</p>
 
-この時点で、あなたのサイトやアプリはそれがする必要があるものは何でも始めることができます。
+<p>この時点で、あなたのサイトやアプリはそれがする必要があるものは何でも始めることができます。</p>
 
-> **Note:** **注**: この方法では、自動再生とユーザーによる手動再生開始は区別されません。
+<div class="blockIndicator note">
+<p><strong>注</strong>: この方法では、自動再生とユーザーによる手動再生開始は区別されません。</p>
+</div>
 
-### play() メソッド
+<h3 id="The_play()_method" name="The_play()_method">play() メソッド</h3>
 
-用語「自動再生」はまた、スクリプトが、ユーザ入力イベント処理のコンテキストの外側で、音声を含んだメディアの再生を開始しようと試みるシナリオを指します。 これは、メディア要素の {{domxref("HTMLMediaElement.play", "play()")}} メソッドを呼び出すことによって行われます。
+<p>用語「自動再生」はまた、スクリプトが、ユーザ入力イベント処理のコンテキストの外側で、音声を含んだメディアの再生を開始しようと試みるシナリオを指します。 これは、メディア要素の {{domxref("HTMLMediaElement.play", "play()")}} メソッドを呼び出すことによって行われます。</p>
 
-> **Note:** **注**: 自動再生設定のサポートは、自動再生の他の手段よりも `autoplay` 属性の方が広く普及しているため、できるだけ `autoplay` 属性を使用することを強くお勧めします。 また、ブラウザーが再生開始の責任を負うようにして、再生のタイミングを最適化します。
+<div class="blockIndicator note">
+<p><strong>注</strong>: 自動再生設定のサポートは、自動再生の他の手段よりも <code>autoplay</code> 属性の方が広く普及しているため、できるだけ <code>autoplay</code> 属性を使用することを強くお勧めします。 また、ブラウザーが再生開始の責任を負うようにして、再生のタイミングを最適化します。</p>
+</div>
 
-#### 例: 動画の再生
+<h4 id="Example_Playing_video" name="Example_Playing_video">例: 動画の再生</h4>
 
-この簡単な例では、ドキュメント内の最初の {{HTMLElement("video")}} 要素を再生します。 ドキュメントに自動的にメディアを再生するパーミッションがない限り、`play()` は再生を開始させません。
+<p>この簡単な例では、ドキュメント内の最初の {{HTMLElement("video")}} 要素を再生します。 ドキュメントに自動的にメディアを再生するパーミッションがない限り、<code>play()</code> は再生を開始させません。</p>
 
-```js
-document.querySelector("video").play();
-```
+<pre class="brush: js">document.querySelector("video").play();</pre>
 
-#### 例: play() のエラー処理
+<h4 id="Example_Handling_play()_failures" name="Example_Handling_play()_failures">例: play() のエラー処理</h4>
 
-{{domxref("HTMLMediaElement.play", "play()")}} メソッドを使用して開始すると、メディアの自動再生の失敗を検出するのがはるかに簡単になります。 `play()` は、メディアが正常に再生を開始すると解決され、自動再生が拒否された場合など、再生が開始しないと却下される {{jsxref("Promise")}} を返します。 自動再生が失敗した場合は、あなたはおそらくメディアを再生するためのパーミッションをユーザーが与えるようにブラウザーに手動で指示する方法をユーザーに提供したいと思うでしょう。
+<p>{{domxref("HTMLMediaElement.play", "play()")}} メソッドを使用して開始すると、メディアの自動再生の失敗を検出するのがはるかに簡単になります。 <code>play()</code> は、メディアが正常に再生を開始すると解決され、自動再生が拒否された場合など、再生が開始しないと却下される {{jsxref("Promise")}} を返します。 自動再生が失敗した場合は、あなたはおそらくメディアを再生するためのパーミッションをユーザーが与えるようにブラウザーに手動で指示する方法をユーザーに提供したいと思うでしょう。</p>
 
-あなたは仕事を達成するために、このようなコードを使うかもしれません。
+<p>あなたは仕事を達成するために、このようなコードを使うかもしれません。</p>
 
-```js
-let startPlayPromise = videoElem.play();
+<pre class="brush: js">let startPlayPromise = videoElem.play();
 
 if (startPlayPromise !== undefined) {
-  startPlayPromise.catch(error => {
+  startPlayPromise.catch(error =&gt; {
     if (error.name === "NotAllowedError") {
       showPlayButton(videoElem);
     } else {
       // 読み込みエラーまたは再生エラーを処理する。
     }
-  }).then(() => {
+  }).then(() =&gt; {
     // 再生が開始された後にのみ行う必要があるものを開始する。
   });
 }
-```
+</pre>
 
-`play()` の結果に対して最初に行うことは、それが未定義（`undefined`）ではないことを確認することです。 これは、以前のバージョンの HTML 仕様では、`play()` が値を返さなかったためです。 操作の成功または失敗を判断できるようにという promise を返すことが最近追加されました。 未定義をチェックすることで、このコードが古いバージョンのウェブブラウザーでエラーにより失敗することを防ぎます。
+<p><code>play()</code> の結果に対して最初に行うことは、それが未定義（<code>undefined</code>）ではないことを確認することです。 これは、以前のバージョンの HTML 仕様では、<code>play()</code> が値を返さなかったためです。 操作の成功または失敗を判断できるようにという promise を返すことが最近追加されました。 未定義をチェックすることで、このコードが古いバージョンのウェブブラウザーでエラーにより失敗することを防ぎます。</p>
 
-次に promise に {{jsxref("Promise.catch", "catch()")}} ハンドラを追加します。 これは、エラーの名前（{{domxref("DOMException.name", "name")}}）を調べて、`NotAllowedError` かどうかを確認します。 これは、自動再生が拒否されたなど、パーミッションの問題が原因で再生が失敗したことを示します。 その場合は、ユーザーが手動で再生を開始できるようにするためのユーザーインターフェイスを表示する必要があります。 これはここでは関数 `showPlayButton()` によって処理されます。
+<p>次に promise に {{jsxref("Promise.catch", "catch()")}} ハンドラを追加します。 これは、エラーの名前（{{domxref("DOMException.name", "name")}}）を調べて、<code>NotAllowedError</code> かどうかを確認します。 これは、自動再生が拒否されたなど、パーミッションの問題が原因で再生が失敗したことを示します。 その場合は、ユーザーが手動で再生を開始できるようにするためのユーザーインターフェイスを表示する必要があります。 これはここでは関数 <code>showPlayButton()</code> によって処理されます。</p>
 
-その他のエラーは適切に処理されます。
+<p>その他のエラーは適切に処理されます。</p>
 
-`play()` によって返された promise がエラーなしで解決された場合、`then()` 句が実行され、自動再生が開始されたときに必要なことは何でも開始できます。
+<p><code>play()</code> によって返された promise がエラーなしで解決された場合、<code>then()</code> 句が実行され、自動再生が開始されたときに必要なことは何でも開始できます。</p>
 
-## ウェブオーディオ API を使用した自動再生
+<h2 id="Autoplay_using_the_Web_Audio_API" name="Autoplay_using_the_Web_Audio_API">ウェブオーディオ APIを使用した自動再生</h2>
 
-[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) では、ウェブサイトまたはアプリは、{{domxref("AudioContext")}} にリンクされているソースノードで `start()` メソッドを使用して音声の再生を開始できます。 ユーザ入力イベント処理のコンテキストの外側でそうすることは、自動再生規則の影響を受けます。
+<p><a href="/ja/docs/Web/API/Web_Audio_API">ウェブオーディオ API</a> では、ウェブサイトまたはアプリは、{{domxref("AudioContext")}} にリンクされているソースノードで <code>start()</code> メソッドを使用して音声の再生を開始できます。 ユーザ入力イベント処理のコンテキストの外側でそうすることは、自動再生規則の影響を受けます。</p>
 
-_より多くのコンテンツがすぐに来るでしょう。 自動再生のブロックは、Mozilla でもまだ開発中です。 他の人がすでにそれを持っているならば、彼らがこのセクションに参加することを歓迎します..._
+<p><em>より多くのコンテンツがすぐに来るでしょう。 自動再生のブロックは、Mozilla でもまだ開発中です。 他の人がすでにそれを持っているならば、彼らがこのセクションに参加することを歓迎します...</em></p>
 
-## autoplay 機能ポリシー
+<h2 id="The_autoplay_feature_policy" name="The_autoplay_feature_policy">autoplay 機能ポリシー</h2>
 
-上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Feature-Policy")}} ヘッダーの [`autoplay`](/ja/docs/Web/HTTP/Headers/Feature-Policy/autoplay) ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 デフォルトでは、`autoplay` 機能ポリシー（feature policy）は `'self'`（_一重引用符を含む_）に設定されています。 これは、ドキュメントと同じドメインでホストされているときに自動再生が許可されることを示します。
+<p>上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Feature-Policy")}} ヘッダーの <code><a href="/ja/docs/Web/HTTP/Headers/Feature-Policy/autoplay">autoplay</a></code> ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 デフォルトでは、<code>autoplay</code> 機能ポリシー（feature policy）は <code>'self'</code>（<em>一重引用符を含む</em>）に設定されています。 これは、ドキュメントと同じドメインでホストされているときに自動再生が許可されることを示します。</p>
 
-また、`'none'` を指定して自動再生を完全に無効にしたり、`'*'` を指定してすべてのドメインからの自動再生を許可したり、メディアを自動的に再生できる 1 つ以上の特定のオリジンを指定できます。 これらのオリジンはスペース文字で区切ります。
+<p>また、<code>'none'</code> を指定して自動再生を完全に無効にしたり、<code>'*'</code> を指定してすべてのドメインからの自動再生を許可したり、メディアを自動的に再生できる1つ以上の特定のオリジンを指定できます。 これらのオリジンはスペース文字で区切ります。</p>
 
-> **Note:** **注**: 指定された機能ポリシーは、そのフレームとその中にネストされているすべてのフレームに新しい機能ポリシーを設定する {{htmlattrxref("allow", "iframe")}} が含まれていない限り、ドキュメントとその中にネストされているすべての {{HTMLElement("iframe")}} に適用されます。
+<div class="blockIndicator note">
+<p><strong>注</strong>: 指定された機能ポリシーは、そのフレームとその中にネストされているすべてのフレームに新しい機能ポリシーを設定する {{htmlattrxref("allow", "iframe")}} が含まれていない限り、ドキュメントとその中にネストされているすべての {{HTMLElement("iframe")}} に適用されます。</p>
+</div>
 
-`<iframe>` の {{htmlattrxref("allow", "iframe")}} 属性を使用してそのフレームとそのネストされたフレームの機能ポリシーを指定するときは、値 `'src'` を指定して、フレームの {{htmlattrxref("src", "iframe")}} 属性で指定されたものと同じドメインからのメディアの自動再生のみを許可できます。
+<p><code>&lt;iframe&gt;</code> の {{htmlattrxref("allow", "iframe")}} 属性を使用してそのフレームとそのネストされたフレームの機能ポリシーを指定するときは、値 <code>'src'</code> を指定して、フレームの {{htmlattrxref("src", "iframe")}} 属性で指定されたものと同じドメインからのメディアの自動再生のみを許可できます。</p>
 
-### 例: ドキュメントのドメインからの自動再生のみを許可する
+<h3 id="Example_Allowing_autoplay_only_from_the_document's_domain" name="Example_Allowing_autoplay_only_from_the_document's_domain">例: ドキュメントのドメインからの自動再生のみを許可する</h3>
 
-{{HTTPHeader("Feature-Policy")}} ヘッダーを使用して、ドキュメントの{{Glossary("origin","オリジン")}}からのメディアの自動再生のみを許可するには次のようにします。
+<p>{{HTTPHeader("Feature-Policy")}} ヘッダーを使用して、ドキュメントの{{Glossary("origin","オリジン")}}からのメディアの自動再生のみを許可するには次のようにします。</p>
 
-```
-Feature-Policy: autoplay 'self'
-```
+<pre>Feature-Policy: autoplay 'self'</pre>
 
-{{HTMLElement("iframe")}} に対して同じことを行うには次のようにします。
+<p>{{HTMLElement("iframe")}} に対して同じことを行うには次のようにします。</p>
 
-```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'">
-</iframe>
-```
+<pre class="brush: html">&lt;iframe src="mediaplayer.html"
+        allow="autoplay 'src'"&gt;
+&lt;/iframe&gt;
+</pre>
 
-### 例: 自動再生と全画面モードの許可
+<h3 id="Example_Allowing_autoplay_and_fullscreen_mode" name="Example_Allowing_autoplay_and_fullscreen_mode">例: 自動再生と全画面モードの許可</h3>
 
-前の例に[全画面 API](/ja/docs/Web/API/Fullscreen_API)（Fullscreen API）のパーミッションを追加すると、ドメインに関係なく全画面のアクセスが許可されている場合、次のような `Feature-Policy` ヘッダーになります。 必要に応じてドメイン制限を追加できます。
+<p>前の例に<a href="/ja/docs/Web/API/Fullscreen_API">全画面 API</a>（Fullscreen API）のパーミッションを追加すると、ドメインに関係なく全画面のアクセスが許可されている場合、次のような <code>Feature-Policy</code> ヘッダーになります。 必要に応じてドメイン制限を追加できます。</p>
 
-```
-Feature-Policy: autoplay 'self'; fullscreen
-```
+<pre>Feature-Policy: autoplay 'self'; fullscreen</pre>
 
-`<iframe>` 要素の `allow` プロパティを使って同じパーミッションを設定すると、次のようになります。
+<p><code>&lt;iframe&gt;</code> 要素の <code>allow</code> プロパティを使って同じパーミッションを設定すると、次のようになります。</p>
 
-```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'; fullscreen">
-</iframe>
-```
+<pre class="brush: html">&lt;iframe src="mediaplayer.html"
+        allow="autoplay 'src'; fullscreen"&gt;
+&lt;/iframe&gt;
+</pre>
 
-### 例: 特定のソースからの自動再生を許可する
+<h3 id="Example_Allowing_autoplay_from_specific_sources" name="Example_Allowing_autoplay_from_specific_sources">例: 特定のソースからの自動再生を許可する</h3>
 
-ドキュメント（または `<iframe>`）の独自ドメインと `https://example.media` の両方からメディアを再生できるようにする `Feature-Policy` ヘッダーは、次のようになります。
+<p>ドキュメント（または <code>&lt;iframe&gt;</code>）の独自ドメインと <code>https://example.media</code> の両方からメディアを再生できるようにする <code>Feature-Policy</code> ヘッダーは、次のようになります。</p>
 
-```
-Feature-Policy: autoplay 'self' https://example.media
-```
+<pre>Feature-Policy: autoplay 'self' https://example.media</pre>
 
-次のように {{HTMLElement("iframe")}} を記述して、この自動再生ポリシーをそれ自体に適用する必要があり、すべての子フレームをこのように記述することを指定することができます。
+<p>次のように {{HTMLElement("iframe")}} を記述して、この自動再生ポリシーをそれ自体に適用する必要があり、すべての子フレームをこのように記述することを指定することができます。</p>
 
-```html
-<iframe width="300" height="200"
+<pre class="brush: html">&lt;iframe width="300" height="200"
         src="mediaplayer.html"
-        allow="autoplay 'src' https://example.media">
-</iframe>
-```
+        allow="autoplay 'src' https://example.media"&gt;
+&lt;/iframe&gt;
+</pre>
 
-### 例: 自動再生を無効にする
+<h3 id="Example_Disabling_autoplay" name="Example_Disabling_autoplay">例: 自動再生を無効にする</h3>
 
-`autoplay` 機能ポリシーを `'none'` に設定すると、ドキュメントまたは `<iframe>` とすべてのネストされたフレームに対して自動再生が完全に無効になります。 HTTP ヘッダーは次のとおりです。
+<p><code>autoplay</code> 機能ポリシーを <code>'none'</code> に設定すると、ドキュメントまたは <code>&lt;iframe&gt;</code> とすべてのネストされたフレームに対して自動再生が完全に無効になります。 HTTP ヘッダーは次のとおりです。</p>
 
-```
-Feature-Policy: autoplay 'none'
-```
+<pre>Feature-Policy: autoplay 'none'</pre>
 
-`<iframe>` の `allow` 属性を使う場合は、次のようになります。
+<p><code>&lt;iframe&gt;</code> の <code>allow</code> 属性を使う場合は、次のようになります。</p>
 
-```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'none'">
-</iframe>
-```
+<pre class="brush: html">&lt;iframe src="mediaplayer.html"
+        allow="autoplay 'none'"&gt;
+&lt;/iframe&gt;
+</pre>
 
-## ベストプラクティス
+<h2 id="Best_practices" name="Best_practices">ベストプラクティス</h2>
 
-ここでは、自動再生を最大限に活用するためのヒントと推奨されるベストプラクティスを紹介します。
+<p>ここでは、自動再生を最大限に活用するためのヒントと推奨されるベストプラクティスを紹介します。</p>
 
-### メディアコントロールを使用した自動再生失敗の処理
+<h3 id="Handling_autoplay_failure_with_media_controls" name="Handling_autoplay_failure_with_media_controls">メディアコントロールを使用した自動再生失敗の処理</h3>
 
-自動再生の一般的な使用例は、記事、広告、またはページの主な機能のプレビューに合わせてビデオクリップの再生を自動的に開始することです。 このような動画を自動再生するには、2 つの選択肢があります。 音声トラックを使用しない、または音声トラックを使用しますが、デフォルトで音声をミュートするように {{HTMLElement("video")}} 要素を次のように設定する方法です。
+<p>自動再生の一般的な使用例は、記事、広告、またはページの主な機能のプレビューに合わせてビデオクリップの再生を自動的に開始することです。 このような動画を自動再生するには、2つの選択肢があります。 音声トラックを使用しない、または音声トラックを使用しますが、デフォルトで音声をミュートするように {{HTMLElement("video")}} 要素を次のように設定する方法です。</p>
 
-```html
-<video src="/videos/awesomevid.webm" controls autoplay muted>
-```
+<pre class="brush: html">&lt;video src="/videos/awesomevid.webm" controls autoplay muted&gt;</pre>
 
-この動画要素は、ユーザーコントロール（通常は再生/一時停止、動画のタイムラインのスクラブ、音量調整、およびミュート）を含むように構成されています。 また、{{htmlattrxref("muted", "video")}} 属性が含まれているため、動画は自動再生されますが、音声はミュートされています。 ただし、ユーザーはコントロールのミュート解除ボタンをクリックして音声を再度有効にすることができます。
+<p>この動画要素は、ユーザーコントロール（通常は再生/一時停止、動画のタイムラインのスクラブ、音量調整、およびミュート）を含むように構成されています。 また、{{htmlattrxref("muted", "video")}} 属性が含まれているため、動画は自動再生されますが、音声はミュートされています。 ただし、ユーザーはコントロールのミュート解除ボタンをクリックして音声を再度有効にすることができます。</p>
 
-## ブラウザー設定オプション
+<h2 id="Browser_configuration_options" name="Browser_configuration_options">ブラウザー設定オプション</h2>
 
-ブラウザーには、自動再生が機能する方法や自動再生のブロックの処理方法を制御する設定があります。 ここでは、ウェブ開発者として特別な意味または重要性があるかもしれないそのような設定がリストされています。 これらには、テストやデバッグに役立つ可能性のあるものや、あなたが処理する準備を整える必要がある方法で設定できるものが含まれます。
+<p>ブラウザーには、自動再生が機能する方法や自動再生のブロックの処理方法を制御する設定があります。 ここでは、ウェブ開発者として特別な意味または重要性があるかもしれないそのような設定がリストされています。 これらには、テストやデバッグに役立つ可能性のあるものや、あなたが処理する準備を整える必要がある方法で設定できるものが含まれます。</p>
 
-### Firefox
+<h3 id="Firefox" name="Firefox">Firefox</h3>
 
-- `media.allowed-to-play.enabled`
-  - : {{domxref("HTMLMediaElement.allowedToPlay")}} プロパティをウェブに公開するかどうかを指定するブール設定。 これは現在デフォルトでは `false` です（デフォルトで `true` になっているナイトリービルドを除く）。 これが `false` の場合、`allowedToPlay` プロパティは `HTMLMediaElement` インターフェイスにないため、{{HTMLElement("audio")}} 要素にも {{HTMLElement("video")}} 要素にも存在しません。
-- `media.autoplay.allow-extension-background-pages`
-  - : このブール値設定が `true` の場合、ブラウザー拡張機能のバックグラウンドスクリプトは音声メディアを自動再生できます。 この値を `false` に設定すると、この機能は無効になります。 デフォルト値は `true` です。
-- `media.autoplay.allow-muted`
-  - : `true`（デフォルト）の場合、現在ミュートされている音声メディアを自動的に再生することを許可するブール設定。 これが `false` に変更された場合、音声トラックのあるメディアはミュートされていても再生が許可されません。
-- `media.autoplay.block-webaudio`
-  - : [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) に自動再生のブロックを適用するかどうかを示すブール設定。 デフォルトは `true` です。
-- `media.autoplay.default`
-  - : デフォルトで自動再生サポートのドメインごとの設定を許可する（`0`）、ブロックする（`1`）、使用時のプロンプト（`2`）のどちらにするかを指定する整数設定。 デフォルト値は `0` です。
-- `media.autoplay.enabled.user-gestures-needed`（ナイトリービルドのみ）
-  - : ユーザーのジェスチャーの検出によって `media.autoplay.default` の設定をオーバーライドできるかどうかを制御するブール設定。 `media.autoplay.default` が `0`（デフォルトで自動再生が許可）に設定されて*いない*場合、この設定が `true` の場合、ページがユーザーのジェスチャーによってアクティブにされ、可聴でないメディアはまったく制限されていない場合に、音声トラック付きのメディアを自動再生できます。
-- `media.block-autoplay-until-in-foreground`
-  - : バックグラウンドタブで開始したときにメディアの再生がブロックされるかどうかを示すブール設定。 デフォルト値の `true` は、他の方法で利用できる場合でも、タブが前面に表示されるまで自動再生は実行されないことを意味します。 これは、タブが音を出し始めて、ユーザーがすべてのタブやウィンドウの中からそのタブを見つけることができないという煩わしい状況を防ぎます。
+<dl>
+ <dt><code>media.allowed-to-play.enabled</code></dt>
+ <dd>{{domxref("HTMLMediaElement.allowedToPlay")}} プロパティをウェブに公開するかどうかを指定するブール設定。 これは現在デフォルトでは <code>false</code> です（デフォルトで <code>true</code> になっているナイトリービルドを除く）。 これが <code>false</code> の場合、<code>allowedToPlay</code> プロパティは <code>HTMLMediaElement</code> インターフェイスにないため、{{HTMLElement("audio")}} 要素にも {{HTMLElement("video")}} 要素にも存在しません。</dd>
+ <dt><code>media.autoplay.allow-extension-background-pages</code></dt>
+ <dd>このブール値設定が <code>true</code> の場合、ブラウザー拡張機能のバックグラウンドスクリプトは音声メディアを自動再生できます。 この値を <code>false</code> に設定すると、この機能は無効になります。 デフォルト値は <code>true</code> です。</dd>
+ <dt><code>media.autoplay.allow-muted</code></dt>
+ <dd><code>true</code>（デフォルト）の場合、現在ミュートされている音声メディアを自動的に再生することを許可するブール設定。 これが <code>false</code> に変更された場合、音声トラックのあるメディアはミュートされていても再生が許可されません。</dd>
+ <dt><code>media.autoplay.block-webaudio</code></dt>
+ <dd><a href="/ja/docs/Web/API/Web_Audio_API">ウェブオーディオ API</a> に自動再生のブロックを適用するかどうかを示すブール設定。 デフォルトは <code>true</code> です。</dd>
+ <dt><code>media.autoplay.default</code></dt>
+ <dd>デフォルトで自動再生サポートのドメインごとの設定を許可する（<code>0</code>）、ブロックする（<code>1</code>）、使用時のプロンプト（<code>2</code>）のどちらにするかを指定する整数設定。 デフォルト値は <code>0</code> です。</dd>
+ <dt><code>media.autoplay.enabled.user-gestures-needed</code>（ナイトリービルドのみ）</dt>
+ <dd>ユーザーのジェスチャーの検出によって <code>media.autoplay.default</code> の設定をオーバーライドできるかどうかを制御するブール設定。  <code>media.autoplay.default</code> が <code>0</code>（デフォルトで自動再生が許可）に設定されて<em>いない</em>場合、この設定が <code>true</code> の場合、ページがユーザーのジェスチャーによってアクティブにされ、可聴でないメディアはまったく制限されていない場合に、音声トラック付きのメディアを自動再生できます。</dd>
+ <dt><code>media.block-autoplay-until-in-foreground</code></dt>
+ <dd>バックグラウンドタブで開始したときにメディアの再生がブロックされるかどうかを示すブール設定。 デフォルト値の <code>true</code> は、他の方法で利用できる場合でも、タブが前面に表示されるまで自動再生は実行されないことを意味します。 これは、タブが音を出し始めて、ユーザーがすべてのタブやウィンドウの中からそのタブを見つけることができないという煩わしい状況を防ぎます。</dd>
+</dl>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [ウェブメディア技術](/ja/docs/Web/Media)
-- [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)（学習ガイド）
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [クロスブラウザーオーディオの基本](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics)
+<ul>
+ <li><a href="/ja/docs/Web/Media">ウェブメディア技術</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">動画と音声のコンテンツ</a>（学習ガイド）</li>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API の使用</a></li>
+ <li><a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics">クロスブラウザーオーディオの基本</a></li>
+</ul>
