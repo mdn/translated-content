@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
-translation_of: Web/API/XMLHttpRequest/status
 ---
 {{APIRef('XMLHttpRequest')}}
 

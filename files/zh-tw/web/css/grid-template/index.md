@@ -1,7 +1,6 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
-translation_of: Web/CSS/grid-template
 ---
 的**`grid-template`**CSS 屬性是一個[速記屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。
 

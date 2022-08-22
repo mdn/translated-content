@@ -1,15 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - 原型
-  - 参考
-  - 方法
-  - 生成器
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
 {{JSRef}}
 

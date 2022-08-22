@@ -1,12 +1,6 @@
 ---
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-tags:
-  - JavaScript
-  - URI
-  - 统一资源标识符
-  - 解码
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
 {{jsSidebar("Objects")}}
 

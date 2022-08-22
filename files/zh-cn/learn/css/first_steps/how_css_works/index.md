@@ -1,13 +1,6 @@
 ---
 title: CSS 如何运行
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - CSS
-  - DOM
-  - 入门
-  - 无效的 CSS 代码
-  - 解析
-translation_of: Learn/CSS/First_steps/How_CSS_works
 original_slug: Learn/CSS/First_steps/CSS如何运行
 ---
 {{LearnSidebar}}

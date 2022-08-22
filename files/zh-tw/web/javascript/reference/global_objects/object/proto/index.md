@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 > **警告：** 基於現代 Javascript 引擎最佳化物件屬性存取的方法，改變一個物件的 `[[Prototype]]` 在任何瀏覽器或是 Javascript 引擎都是非常慢的操作?。改變繼承屬性對效能的影響微妙且深遠，不僅僅只是影響執行 `obj.__proto__ = ...` 的時間，而是會影響到所有有存取到被改變 `[[Prototype]]` 的物件的程式碼的執行時間。如果你在乎效能的話就應該避免改變一個物件的 `[[Prototype]]` 。反之，請用 {{jsxref("Object.create()")}} 來產生一個擁有 `[[Prototype]]` 的物件。
 

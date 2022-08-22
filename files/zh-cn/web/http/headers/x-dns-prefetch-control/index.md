@@ -1,12 +1,6 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
-tags:
-  - DNS
-  - DNS prefetch
-  - HTTP
-  - 预解析
-translation_of: Web/HTTP/Headers/X-DNS-Prefetch-Control
 original_slug: Controlling_DNS_prefetching
 ---
 {{HTTPSidebar}}

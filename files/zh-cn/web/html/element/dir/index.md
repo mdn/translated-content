@@ -1,12 +1,6 @@
 ---
 title: <dir>：目录元素
 slug: Web/HTML/Element/dir
-tags:
-  - HTML
-  - 列表
-  - 已废弃
-  - 目录
-translation_of: Web/HTML/Element/dir
 ---
 {{deprecated_header}}
 

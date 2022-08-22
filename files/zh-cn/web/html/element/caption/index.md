@@ -1,7 +1,6 @@
 ---
 title: <caption>
 slug: Web/HTML/Element/caption
-translation_of: Web/HTML/Element/caption
 ---
 ## 简介
 

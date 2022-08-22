@@ -1,13 +1,6 @@
 ---
 title: Lazy loading
 slug: Web/Performance/Lazy_loading
-tags:
-  - Lazy-loading
-  - Web Performance
-  - 延迟加载
-  - 性能优化
-  - 懒加载
-translation_of: Web/Performance/Lazy_loading
 ---
 **延迟加载 (懒加载)** 是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。 这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
 
@@ -34,11 +27,11 @@ translation_of: Web/Performance/Lazy_loading
 ### JavaScript
 
 脚本类型模块
-任何类型为 `type="module"` 的脚本标签都被视为一个 [JavaScript 模块](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
+任何类型为 `type="module"` 的脚本标签都被视为一个 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
 
 ### CSS
 
-默认情况下，CSS 被视为[渲染阻塞](https://developer.mozilla.org/zh-CN/docs/Web/Performance/Critical_rendering_path)资源，因此，在 [CSSOM](https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Object_Model) 被构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须很薄，才能尽快交付，建议使用媒体类型和查询实现非阻塞渲染。
+默认情况下，CSS 被视为[渲染阻塞](/zh-CN/docs/Web/Performance/Critical_rendering_path)资源，因此，在 [CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model) 被构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须很薄，才能尽快交付，建议使用媒体类型和查询实现非阻塞渲染。
 
 ```plain
 <link href="style.css"    rel="stylesheet" media="all">

@@ -2,15 +2,6 @@
 title: React 入门
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-tags:
-  - JavaScript
-  - React
-  - 初学者
-  - 学习
-  - 客户端
-  - 框架
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

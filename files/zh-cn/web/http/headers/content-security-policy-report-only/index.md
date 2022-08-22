@@ -1,7 +1,6 @@
 ---
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
-translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
 {{HTTPSidebar}}
 

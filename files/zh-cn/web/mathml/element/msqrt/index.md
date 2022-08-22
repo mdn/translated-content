@@ -1,7 +1,6 @@
 ---
 title: <msqrt>
 slug: Web/MathML/Element/msqrt
-translation_of: Web/MathML/Element/msqrt
 ---
 {{MathMLRef}}
 

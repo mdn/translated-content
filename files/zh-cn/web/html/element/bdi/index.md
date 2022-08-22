@@ -1,14 +1,6 @@
 ---
 title: <bdi>
 slug: Web/HTML/Element/bdi
-tags:
-  - BiDi
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/bdi
 ---
 ## Summary
 

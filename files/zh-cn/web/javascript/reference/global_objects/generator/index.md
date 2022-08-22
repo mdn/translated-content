@@ -1,15 +1,6 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Legacy Generator
-  - Legacy Iterator
-  - 参考
-  - 生成器
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: CSS 屬性參考
 slug: Web/CSS/CSS_Properties_Reference
-translation_of: Web/CSS/CSS_Properties_Reference
 ---
 ## 常見 CSS 屬性參考
 

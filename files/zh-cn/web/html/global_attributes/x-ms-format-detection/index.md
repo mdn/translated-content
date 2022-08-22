@@ -1,12 +1,6 @@
 ---
 title: x-ms-格式 - 检测
 slug: Web/HTML/Global_attributes/x-ms-format-detection
-tags:
-  - HTML
-  - x-ms-format-detection
-  - 参考
-  - 属性
-translation_of: Web/HTML/Global_attributes/x-ms-format-detection
 original_slug: Web/HTML/Global_attributes/x-ms-格式 - 检测
 ---
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}

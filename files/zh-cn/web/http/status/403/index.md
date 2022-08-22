@@ -1,12 +1,6 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-tags:
-  - 客户端错误
-  - 身份验证
-  - 首部
-  - 验证失败
-translation_of: Web/HTTP/Status/403
 ---
 {{HTTPSidebar}}
 

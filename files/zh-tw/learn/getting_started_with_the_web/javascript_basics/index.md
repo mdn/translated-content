@@ -1,14 +1,6 @@
 ---
 title: JavaScript 基礎
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - JavaScript
-  - 初學
-  - 學習
-  - 寫程式
-  - 新手
-  - 網頁
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 

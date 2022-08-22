@@ -1,7 +1,6 @@
 ---
 title: outline-width
 slug: Web/CSS/outline-width
-translation_of: Web/CSS/outline-width
 ---
 {{CSSRef}}
 

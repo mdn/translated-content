@@ -1,14 +1,6 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Save-Data
-  - header
-translation_of: Web/HTTP/Headers/Save-Data
 ---
 {{HTTPSidebar}}
 

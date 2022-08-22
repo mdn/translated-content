@@ -1,7 +1,6 @@
 ---
 title: 多列布局
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
-translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 

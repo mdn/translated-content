@@ -1,16 +1,6 @@
 ---
 title: JavaScript — 動態的客戶端指令
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Landing
-  - NeedsTranslation
-  - Topic
-  - TopicStub
-  - 初學者
-translation_of: Learn/JavaScript
 ---
 {{LearnSidebar}}
 

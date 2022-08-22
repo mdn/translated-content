@@ -1,9 +1,6 @@
 ---
 title: 基本表單應用
 slug: conflicting/Web/Accessibility/ARIA
-tags:
-  - 待翻譯
-translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
 ## 表單的 label

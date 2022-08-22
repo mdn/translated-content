@@ -1,7 +1,6 @@
 ---
 title: 'Express 教學 7: 佈署到生產環境'
 slug: Learn/Server-side/Express_Nodejs/deployment
-translation_of: Learn/Server-side/Express_Nodejs/deployment
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

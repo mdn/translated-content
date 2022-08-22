@@ -1,9 +1,6 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-tags:
-  - header http 参考 host
-translation_of: Web/HTTP/Headers/Host
 ---
 {{HTTPSidebar}}
 

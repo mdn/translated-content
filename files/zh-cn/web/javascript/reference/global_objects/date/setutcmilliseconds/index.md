@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 ---
 {{JSRef}}
 

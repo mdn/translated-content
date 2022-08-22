@@ -1,7 +1,6 @@
 ---
 title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
 ---
 {{jsSidebar("Operators")}}
 

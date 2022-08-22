@@ -1,11 +1,6 @@
 ---
 title: <aside>
 slug: Web/HTML/Element/aside
-tags:
-  - HTML
-  - HTML5
-  - 元素
-translation_of: Web/HTML/Element/aside
 ---
 **HTML `<aside>` 元素**表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。
 

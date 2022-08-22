@@ -1,7 +1,6 @@
 ---
 title: 'Django Tutorial Part 5: Creating our home page'
 slug: Learn/Server-side/Django/Home_page
-translation_of: Learn/Server-side/Django/Home_page
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 

@@ -1,7 +1,6 @@
 ---
 title: 模板入門
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
 模板是一個文字檔，定義了一個輸出檔的*結構*或者排版，使用定位符號表示，當模板被繪製時，資料將插入到何處（在*Express*，模板被稱為*視圖*）。
 

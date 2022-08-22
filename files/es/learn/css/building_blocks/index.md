@@ -20,7 +20,7 @@ Antes de comenzar este módulo deberías poseer:
 
 1.  Un entendimiento básico de la utilización de una computadora y de la
     navegación web a nivel de usuario.
-2.  Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+2.  Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
 3.  Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 4.  Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/Learn/CSS/First_steps).
 
@@ -33,16 +33,20 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
 - [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia)
   - : El objetivo de ésta lección es desarrollar tu entendimiento sobre algunos de los conceptos fundamentales de CSS - cascada, especificidad y herencia - los cuales controlan como CSS es aplicado a HTML y como sus conflitos son resueltos.
 - [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
-  - : Hay una gran variedad de selectores disponibles en CSS, permitiendo una fina precision para seleccionar elementos de estilo. En este artículo y sub-artículos, repasaremos los diferentes tipos en detalle y veremos como funcionan. Los sub-artículos son los que siguinetes :\* [Selectores de tipo, clase e ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+
+  - : Hay una gran variedad de selectores disponibles en CSS, permitiendo una fina precision para seleccionar elementos de estilo. En este artículo y sub-artículos, repasaremos los diferentes tipos en detalle y veremos como funcionan. Los sub-artículos son los que siguinetes :
+
+    - [Selectores de tipo, clase e ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Selectores de Atributos](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-clases y pseudo-elementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinadores](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
 - [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Todo en CSS tiene una caja a su alrededor, y comprender estas cajas es clave para poder crear diseños con CSS, o para alinear elementos con otros elementos. En esta lección, analizaremos adecuadamente el modelo CSS Box, para que pueda pasar a tareas de diseño más complejas con una comprensión de cómo funciona y la terminología que se relaciona con él.
 - [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
   - : En esta lección, veremos algunas de las cosas creativas que puede hacer con fondos y bordes CSS. Al agregar degradados, imágenes de fondo y esquinas redondeadas, los fondos y los bordes son la respuesta a muchas preguntas de estilo en CSS.
 - [Manejo de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-  - : En los últimos años, CSS ha evolucionado para admitir mejor la diferente direccionalidad del contenido, incluyendo Right-to-left (Derecha a Izquierda) pero también de Top-to-bottom (Arriba a abajo ,como el japonés); estas diferentes direccionalidades se llaman **modos de escritura**. A medida que avance en su estudio y comience a trabajar con el diseño, comprenderá los modos de escritura será muy útil para usted, por lo tanto, los presentaremos en este artículo.
+  - : A medida que avance en su estudio y comience a trabajar con el diseño, comprenderá los modos de escritura será muy útil para usted, por lo tanto, los presentaremos en este artículo.
 - [Contenido desbordante](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
   - : En esta lección veremos otro concepto importante en CSS: desbordamiento. El Overflow (o desbordamiento) es lo que sucede cuando hay demasiado contenido para contenerlo cómodamente dentro de una caja. En esta guía aprenderá qué es y cómo administrarlo.
 - [Valores y unidades de CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units)

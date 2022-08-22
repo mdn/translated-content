@@ -1,7 +1,6 @@
 ---
 title: Firefox 61 技術變動摘要
 slug: Mozilla/Firefox/Releases/61
-translation_of: Mozilla/Firefox/Releases/61
 ---
 {{FirefoxSidebar}}
 

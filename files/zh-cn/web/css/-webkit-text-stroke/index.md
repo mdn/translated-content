@@ -1,11 +1,6 @@
 ---
 title: '-webkit-text-stroke'
 slug: Web/CSS/-webkit-text-stroke
-tags:
-  - CSS
-  - CSS Property
-  - CSS3
-translation_of: Web/CSS/-webkit-text-stroke
 ---
 ## 摘要
 

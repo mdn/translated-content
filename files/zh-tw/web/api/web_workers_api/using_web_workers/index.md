@@ -1,7 +1,6 @@
 ---
 title: 使用 Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
 Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 [XMLHttpRequest](/en/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
 
@@ -74,7 +73,7 @@ onmessage = function(e) {
 
 `onmessage` 事件物件的 data 屬性存有傳送過來的訊息資料，也就是 input 值；worker 收到後將傳過來的兩個值相乘，再 postMessage 傳回去。
 
-回到主執行，同樣透過` onmessage` 事件，收到 worker 回傳還來的計算值 :
+回到主執行，同樣透過 `onmessage` 事件，收到 worker 回傳還來的計算值 :
 
 ```js
 myWorker.onmessage = function(e) {
@@ -83,9 +82,9 @@ myWorker.onmessage = function(e) {
 }
 ```
 
-拿到存在事件 data 中的計算值後，我們接著將值以` textContent` 顯示出來。
+拿到存在事件 data 中的計算值後，我們接著將值以 `textContent` 顯示出來。
 
-> **備註：** `建構 Worker` 的 URI 必須遵從[ same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 {{geckoRelease("10.0")}} 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
+> **備註：** `建構 Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 {{geckoRelease("10.0")}} 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
 
 > **備註：** 在主執行緒中存取 `onmessage` `與 postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
 
@@ -158,7 +157,7 @@ var myWorker = new SharedWorker("worker.js");
 
 相當不 一樣的是和 shared worker 溝通必須要透過 port 物件，其實 dedicated worker 也是如此，只不過一切是在背景後自動完成。
 
-開啟 port 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 start() 好開始傳送訊息。範例[ multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 以及 [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js) 因為註冊了 onmessage 事件，所以其實可以省略呼叫 start()，然而若是 message 事件是經由 `addEventListener()註冊，那麼便需要呼叫 start() 了。`
+開啟 port 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 start() 好開始傳送訊息。範例 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 以及 [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js) 因為註冊了 onmessage 事件，所以其實可以省略呼叫 start()，然而若是 message 事件是經由 `addEventListener()註冊，那麼便需要呼叫 start() 了。`
 
 當使用 start() 開啟 port 連線，那麼雙向溝通便需要主執行緒和 worker 兩端都呼叫 start()。
 

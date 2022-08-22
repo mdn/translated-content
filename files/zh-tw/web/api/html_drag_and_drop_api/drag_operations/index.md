@@ -1,7 +1,6 @@
 ---
 title: 拖曳操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 

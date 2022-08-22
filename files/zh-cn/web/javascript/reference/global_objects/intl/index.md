@@ -1,10 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - JavaScript
-  - 国际化
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 {{JSRef}}
 

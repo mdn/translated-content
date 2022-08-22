@@ -1,7 +1,6 @@
 ---
 title: <meter>
 slug: Web/HTML/Element/meter
-translation_of: Web/HTML/Element/meter
 ---
 ## 摘要
 

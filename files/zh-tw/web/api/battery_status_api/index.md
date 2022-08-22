@@ -1,7 +1,6 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-translation_of: Web/API/Battery_Status_API
 ---
 **Battery Status API** 也就是所謂的 **Battery API**，將提供系統電池充電容量的資訊，並在電池容量變化時送出事件，以通知使用者。此 API 可調整 Apps 的資源耗用量，在電力偏低時縮減耗電量；或可在電力耗盡之前儲存檔案，避免資料遺失。
 

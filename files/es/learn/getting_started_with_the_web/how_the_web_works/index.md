@@ -45,6 +45,7 @@ Además del cliente y el servidor, también tenemos que saludar a:
 - **TCP/IP**: **Protocolo de Control de Transmisión** y **Protocolo de Internet**, son los protocolos de comunicación que definen cómo deben viajar los datos a través de la web. Esto es, los medios de transporte que te permiten hacer un pedido, ir a la tienda y comprar los productos. En nuestro ejemplo, podría ser un coche, una bicicleta o tus propios pies.
 - **DNS:** los servidores del **Sistema de Nombres de Dominio** (DNS, por sus siglas en inglés), son como una libreta de direcciones de sitios web. Cuando escribes una dirección web en el navegador, el navegador busca los DNS antes de recuperar el sitio web. El navegador necesita averiguar en qué servidor vive el sitio web y así enviar los mensajes HTTP al lugar correcto (ver más abajo). Esto es como buscar la dirección de la tienda para que puedas llegar a ella.
 - **HTTP:** el **Protocolo de Transferencia de Hipertexto** es un protocolo de aplicación que define un idioma para que los clientes y servidores se puedan comunicar. Esto es como el idioma que utilizas para ordenar tus compras.
+
 - **Archivos componentes**: un sitio web se compone de muchos archivos diferentes, que son como las diferentes partes de los productos que comprarás en la tienda. Estos archivos se dividen en dos tipos principales:
 
   - **Archivos de código**: los sitios web se construyen principalmente con HTML, CSS y JavaScript, aunque te encontrarás con otras tecnologías más adelante.

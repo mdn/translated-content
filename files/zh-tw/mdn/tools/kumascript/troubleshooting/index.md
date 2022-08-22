@@ -1,7 +1,6 @@
 ---
 title: 修復 KumaScript 錯誤
 slug: MDN/Tools/KumaScript/Troubleshooting
-translation_of: MDN/Tools/KumaScript/Troubleshooting
 ---
 {{MDNSidebar}}
 

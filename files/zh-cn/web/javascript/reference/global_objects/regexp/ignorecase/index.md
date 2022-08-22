@@ -1,12 +1,6 @@
 ---
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
 {{JSRef("Global_Objects", "RegExp")}}
 

@@ -28,4 +28,6 @@ Actualmente se encuentra en desarrollo [XHTML 2](http://www.w3.org/TR/xhtml2/), 
 
 Categorías
 
-Interwiki enlaces a otros idiomas 
+Interwiki enlaces a otros idiomas
+
+{{ languages( { "en": "en/XHTML", "fr": "fr/XHTML", "it": "it/XHTML", "ja": "ja/XHTML", "pl": "pl/XHTML", "pt": "pt/XHTML" } ) }}

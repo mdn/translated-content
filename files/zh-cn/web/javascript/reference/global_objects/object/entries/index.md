@@ -1,12 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 {{JSRef}}
 

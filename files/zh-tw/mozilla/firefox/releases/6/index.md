@@ -1,7 +1,6 @@
 ---
 title: Firefox 6 技術文件
 slug: Mozilla/Firefox/Releases/6
-translation_of: Mozilla/Firefox/Releases/6
 ---
 {{FirefoxSidebar}}
 

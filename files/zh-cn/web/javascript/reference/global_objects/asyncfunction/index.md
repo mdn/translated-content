@@ -1,12 +1,6 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - JavaScript
-  - Reference
-  - 实验性内容
-  - 构造函数
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 {{JSRef}}
 

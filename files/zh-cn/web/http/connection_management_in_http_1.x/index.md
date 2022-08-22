@@ -1,9 +1,6 @@
 ---
 title: HTTP/1.x 的连接管理
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-tags:
-  - TCP
-translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
 {{HTTPSidebar}}
 

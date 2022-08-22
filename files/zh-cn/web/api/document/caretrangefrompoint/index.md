@@ -73,7 +73,7 @@ for (i=0 ; i < paragraphs.length; i++) {
 }
 ```
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 浏览器兼容性
 

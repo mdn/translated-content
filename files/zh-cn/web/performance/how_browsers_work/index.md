@@ -1,19 +1,6 @@
 ---
 title: 渲染页面：浏览器的工作原理
 slug: Web/Performance/How_browsers_work
-tags:
-  - Browsers
-  - Compositing
-  - Critical rendering path
-  - DNS Lookup
-  - Navigation
-  - Page load
-  - Painting
-  - SSL/TLS Handshake
-  - TCP handshake
-  - Web Performance
-  - render
-translation_of: Web/Performance/How_browsers_work
 original_slug: Web/Performance/浏览器渲染页面的工作原理
 ---
 页面内容快速加载和流畅的交互是用户希望得到的 Web 体验，因此，开发者应力争实现这两个目标。
@@ -159,7 +146,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 #### 构建辅助功能树
 
-浏览器还构建辅助设备用于分析和解释内容的辅助功能（[accessibility](/zh-CN/docs/Learn/Accessibility)）树。可访问性对象模型（AOM）类似于 DOM 的语义版本。当 DOM 更新时，浏览器会更新辅助功能树。辅助技术本身无法修改可访问性树。
+浏览器还构建辅助设备用于分析和解释内容的辅助功能（[accessibility](/zh-CN/docs/Learn/Accessibility)）树。无障碍对象模型（AOM）类似于 DOM 的语义版本。当 DOM 更新时，浏览器会更新辅助功能树。辅助技术本身无法修改无障碍树。
 
 在构建 AOM 之前，屏幕阅读器（[screen readers](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)）无法访问内容。
 

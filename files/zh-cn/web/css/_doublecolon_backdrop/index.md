@@ -1,12 +1,6 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
-tags:
-  - API
-  - CSS
-  - 伪元素
-  - 参考
-translation_of: Web/CSS/::backdrop
 ---
 {{CSSRef}} {{SeeCompatTable}}
 

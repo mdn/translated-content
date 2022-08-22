@@ -1,7 +1,6 @@
 ---
 title: '-moz-outline-radius-bottomright'
 slug: Web/CSS/-moz-outline-radius-bottomright
-translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
 {{Non-standard_header}}{{CSSRef}}
 
@@ -34,4 +33,4 @@ p {
 
 ## 参见
 
-- 更多信息参见 [`-moz-outline-radius`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/-moz-outline-radius) 属性。
+- 更多信息参见 [`-moz-outline-radius`](/zh-CN/docs/Web/CSS/-moz-outline-radius) 属性。

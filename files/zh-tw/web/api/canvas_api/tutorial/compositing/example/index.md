@@ -1,13 +1,6 @@
 ---
 title: Compositing example
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-tags:
-  - Canvas
-  - Example
-  - Graphics
-  - HTML
-  - HTML5
-  - Tutorial
 ---
 {{CanvasSidebar}}
 

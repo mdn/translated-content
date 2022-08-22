@@ -1,10 +1,6 @@
 ---
 title: 介绍
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - JavaScript
-  - 指南
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 {{jsSidebar("JavaScript 指南")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
@@ -119,9 +115,9 @@ Web 控制台的单行模式非常适合用来测试单个的 JavaScript 表达�
 
 在接下来的章节里，我们将向你介绍 JavaScript 的语法以及语言特性，届时你将可以使用它编写更加复杂的程序。
 
-但是现在请记住，始终将`(function(){"use strict"; `添加到你的代码之前，始终将`})();`添加到你的代码之后。[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和[IIFE](/zh-CN/docs/Glossary/IIFE)这两篇文章详细解释了它们的作用。现在关于它们的作用你只要知道以下两点：
+但是现在请记住，始终将 `(function(){"use strict";` 添加到你的代码之前，始终将`})();`添加到你的代码之后。[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和[IIFE](/zh-CN/docs/Glossary/IIFE)这两篇文章详细解释了它们的作用。现在关于它们的作用你只要知道以下两点：
 
-1.  防止 JavaScript 的语义影响初学者
-2.  防止控制台中的代码片段之间发生意料之外的交互
+1. 防止 JavaScript 的语义影响初学者
+2. 防止控制台中的代码片段之间发生意料之外的交互
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

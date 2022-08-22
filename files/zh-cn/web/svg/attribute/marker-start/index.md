@@ -1,7 +1,6 @@
 ---
 title: marker-start
 slug: Web/SVG/Attribute/marker-start
-translation_of: Web/SVG/Attribute/marker-start
 ---
 {{SVGRef}}
 

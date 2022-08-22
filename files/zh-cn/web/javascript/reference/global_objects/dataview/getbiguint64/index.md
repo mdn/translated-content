@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 ---
 {{JSRef}}
 

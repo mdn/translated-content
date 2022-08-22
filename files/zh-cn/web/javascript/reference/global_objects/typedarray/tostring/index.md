@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
-translation_of: Web/SVG/Attribute/letter-spacing
 ---
 {{SVGRef}}
 

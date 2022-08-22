@@ -1,11 +1,6 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-tags:
-  - CSS Grid
-  - Layout
-  - Repeat
-translation_of: Web/CSS/repeat()
 original_slug: Web/CSS/repeat()
 ---
 {{cssref}}

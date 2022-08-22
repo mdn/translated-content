@@ -1,13 +1,6 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsBrowserCompatibility
-  - Property
-translation_of: Web/API/Document/designMode
 ---
 {{ ApiRef() }}
 

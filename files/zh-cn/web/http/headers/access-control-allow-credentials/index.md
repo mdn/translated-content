@@ -1,13 +1,6 @@
 ---
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
-tags:
-  - CORS
-  - Reference
-  - header
-  - 响应头
-  - 跨域
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
 {{HTTPSidebar}}
 

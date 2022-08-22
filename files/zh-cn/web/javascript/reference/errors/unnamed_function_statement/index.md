@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: function statement requires a name'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - JavaScript
-  - 语法错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 {{jsSidebar("Errors")}}
 

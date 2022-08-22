@@ -1,12 +1,6 @@
 ---
 title: delete 操作符
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-  - delete
-translation_of: Web/JavaScript/Reference/Operators/delete
 ---
 {{jsSidebar("Operators")}}
 

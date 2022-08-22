@@ -1,18 +1,6 @@
 ---
 title: 理解 WebAssembly 文本格式
 slug: WebAssembly/Understanding_the_text_format
-tags:
-  - JavaScript
-  - S-表达式
-  - WebAssembly
-  - wasm
-  - 共享地址
-  - 内存
-  - 函数
-  - 文本格式
-  - 表格
-  - 调用
-translation_of: WebAssembly/Understanding_the_text_format
 ---
 {{WebAssemblySidebar}}
 

@@ -1,9 +1,6 @@
 ---
 title: 缓存区
 slug: Glossary/buffer
-tags:
-  - 缓冲区
-translation_of: Glossary/buffer
 ---
 缓冲区是一块物理内存中的存储区，当数据进行转移时用来临时存放数据。
 

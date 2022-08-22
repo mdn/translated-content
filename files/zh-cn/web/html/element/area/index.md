@@ -1,13 +1,6 @@
 ---
 title: <area>
 slug: Web/HTML/Element/area
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-  - 多媒体
-translation_of: Web/HTML/Element/area
 ---
 ## 简要
 

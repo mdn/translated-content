@@ -1,16 +1,6 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Experimental
-  - Reference
-  - border-box
-  - box model
-  - content-box
-translation_of: Web/CSS/box-sizing
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

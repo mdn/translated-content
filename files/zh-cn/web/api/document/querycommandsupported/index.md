@@ -34,10 +34,6 @@ if(flg) {
 }
 ```
 
-## 浏览器兼容性
-
-{{Compat("api.Document.queryCommandSupported")}}
-
 ## 规范
 
 此特性不属于任何规范，也不再有望被标准化。

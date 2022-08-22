@@ -1,20 +1,6 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
-tags:
-  - CSS
-  - CSS 颜色
-  - CSS 属性
-  - HTML 样式
-  - HTML 颜色
-  - 布局
-  - 参考
-  - 样式化 HTML
-  - 样式化 text
-  - Web
-  - color-adjust
-  - recipe:css-property
-browser-compat: css.properties.color-scheme
 ---
 
 {{CSSRef}}

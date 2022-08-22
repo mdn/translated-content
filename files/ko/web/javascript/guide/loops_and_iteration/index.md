@@ -324,7 +324,7 @@ car.model = Mustang
     }
 ```
 
-다음 예는 for...of 루프와 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in "en-US/docs/JavaScript/Reference/Statements/for...in") 루프의 차이를 보여줍니다. 속성 이름을 통해 for...in이 반복하는 동안, for...of은 속성 값을 통해 반복합니다:
+다음 예는 for...of 루프와 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 루프의 차이를 보여줍니다. 속성 이름을 통해 for...in이 반복하는 동안, for...of은 속성 값을 통해 반복합니다:
 
 ```js
 let arr = [3, 5, 7];

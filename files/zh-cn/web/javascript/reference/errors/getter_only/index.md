@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
-tags:
-  - JavaScript
-  - 严格模式
-  - 类型错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Getter_only
 ---
 {{jsSidebar("Errors")}}
 

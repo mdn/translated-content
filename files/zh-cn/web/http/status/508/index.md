@@ -1,12 +1,6 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
-tags:
-  - '508'
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/508
 ---
 {{HTTPSidebar}}
 

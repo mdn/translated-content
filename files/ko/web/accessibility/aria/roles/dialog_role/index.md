@@ -137,7 +137,7 @@ To support browsers or AT products that do not support ARIA mark up, it's also p
 
 ### 관련된 ARIA 기술
 
-- [Using the alertdialog role](/en/ARIA/ARIA_Techniques/Using_the_alertdialog_role "Using the alertdialog role")
+- [Using the alertdialog role](/en/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
 
 ### Compatibility
 

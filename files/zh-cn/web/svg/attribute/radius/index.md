@@ -1,13 +1,6 @@
 ---
 title: radius
 slug: Web/SVG/Attribute/radius
-tags:
-  - SVG
-  - SVG 属性
-  - 滤镜
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Attribute/radius
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

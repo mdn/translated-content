@@ -1,7 +1,6 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
-translation_of: Web/API/CSSStyleSheet/insertRule
 ---
 {{APIRef("CSSOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Native
 slug: Glossary/Native
-translation_of: Glossary/Native
 ---
 一个*原生*的应用程序在被编译后，可以在由指定结构组成的硬件/软件环境中运行
 

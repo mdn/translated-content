@@ -1,7 +1,6 @@
 ---
 title: 密码套件
 slug: Glossary/Cipher_suite
-translation_of: Glossary/Cipher_suite
 ---
 密码套件是密钥交换算法、认证算法、大容量数据加密{{Glossary("cipher","加密算法")}}和消息认证码算法的组合。
 

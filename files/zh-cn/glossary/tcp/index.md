@@ -1,14 +1,6 @@
 ---
 title: TCP
 slug: Glossary/TCP
-tags:
-  - TCP
-  - 传输控制协议
-  - 基础设施
-  - 数据
-  - 网络
-  - 词汇表
-translation_of: Glossary/TCP
 ---
 ### **摘要**
 

@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
 {{JSRef}}
 

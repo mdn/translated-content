@@ -1,11 +1,6 @@
 ---
 title: 如何创建及编辑页面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - 指南
-  - 新手
-  - 简介
-translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 {{MDNSidebar}}

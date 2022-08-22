@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers
 slug: Web/API/GlobalEventHandlers
-translation_of: Web/API/GlobalEventHandlers
 ---
 {{ApiRef("HTML DOM")}}
 

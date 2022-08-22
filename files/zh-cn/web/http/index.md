@@ -1,14 +1,6 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - HTTP
-  - TCP/IP
-  - Web
-  - Web 开发
-  - l10n:priority
-  - 参考
-translation_of: Web/HTTP
 ---
 {{HTTPSidebar}}
 

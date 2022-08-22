@@ -37,7 +37,7 @@ La sección de arriba suena realmente emocionante, y debería serlo. JavaScript 
 
 Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentirse cómodo con HTML y CSS. Deberás comenzar poco a poco y continuar trabajando en pasos pequeños y consistentes. Para comenzar, mostraremos cómo añadir JavaScript básico a tu página, creando un «_¡Hola Mundo!_» de ejemplo ([el estándar en los ejemplos básicos de programación](https://es.wikipedia.org/wiki/Hola_mundo)).
 
-> **Advertencia:** **Importante**: si no has venido siguiendo el resto de nuestro curso, [descarga este código de ejemplo](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) y úsalo como punto de partida.
+> **Advertencia:** si no has venido siguiendo el resto de nuestro curso, [descarga este código de ejemplo](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) y úsalo como punto de partida.
 
 1.  Primero, ve a tu sitio de pruebas y crea una carpeta llamada `scripts`. Luego, dentro de la nueva carpeta de scripts, crea un nuevo archivo llamado `main.js` y guárdalo.
 2.  A continuación, abre tu archivo `index.html` e introduce el siguiente código en una nueva línea, justo antes de la etiqueta de cierre `</body>`:
@@ -56,7 +56,9 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
 
 5.  Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](https://mdn.mozillademos.org/files/9543/hello-world.png)
 
-> **Nota:** **Nota**: la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
+> **Nota:** la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
+> 
+> Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
 
 ### ¿Qué ha ocurrido?
 
@@ -70,7 +72,7 @@ Después de eso, estableciste el valor de la propiedad {{domxref("Node.textConte
 
 Ahora se explicarán algunas de las funciones básicas del lenguaje JavaScript para que puedas comprender mejor cómo funciona todo. Mejor aún, estas características son comunes para todos los lenguajes de programación. Si puedes entender esos fundamentos, deberías ser capaz de comenzar a programar en casi cualquier cosa.
 
-> **Advertencia:** **Importante**: en este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> **Advertencia:** en este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -115,13 +117,64 @@ nombreDeLaVariable = 'Steve';
 
 Advierte que las variables tienen distintos [tipos de datos](/es/docs/Web/JavaScript/Data_structures):
 
-| Variable                                 | Explicación                                                                                                                                 | Ejemplo                                                                                                             |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("String","String")}} | Esto es una secuencia de texto conocida como cadena. Para indicar que la variable es una cadena, debes escribirlo entre comillas.           | `let miVariable = 'Bob';`                                                                                           |
-| {{Glossary("Number")}}             | Esto es un número. Los números no tienen comillas.                                                                                          | `let miVariable = 10;`                                                                                              |
-| {{Glossary("Boolean")}}         | Tienen valor verdadero/falso. `true`/`false` son palabras especiales en JS, y no necesitan comillas.                                        | `let miVariable = true;`                                                                                            |
-| {{Glossary("Array")}}             | Una estructura que te permite almacenar varios valores en una sola referencia.                                                              | `let miVariable = [1,'Bob','Steve',10];` Llama a cada miembro del array así: `miVariable[0]`, `miVariable[1]`, etc. |
-| {{Glossary("Object")}}             | Básicamente cualquier cosa. Todo en JavaScript es un objeto y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes. | `let miVariable = document.querySelector('h1');` Todos los ejemplos anteriores también.                             |
+<table>
+  <thead>
+    <tr>
+      <th scope="row">Variable</th>
+      <th scope="col">Explicación</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{Glossary("String","String")}}</th>
+      <td>
+        Esto es una secuencia de texto conocida como cadena. Para indicar que la
+        variable es una cadena, debes escribirlo entre comillas.
+      </td>
+      <td><code>let miVariable = 'Bob';</code></td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Number")}}</th>
+      <td><p>Esto es un número. Los números no tienen comillas.</p></td>
+      <td><code>let miVariable = 10;</code></td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Boolean")}}</th>
+      <td>
+        Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son
+        palabras especiales en JS, y no necesitan comillas.
+      </td>
+      <td><code>let miVariable = true;</code></td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Array")}}</th>
+      <td>
+        Una estructura que te permite almacenar varios valores en una sola
+        referencia.
+      </td>
+      <td>
+        <code>let miVariable = [1,'Bob','Steve',10];</code><br />Llama a cada
+        miembro del array así: <code>miVariable[0]</code>,
+        <code>miVariable[1]</code>, etc.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Object")}}</th>
+      <td>
+        <p>
+          Básicamente cualquier cosa. Todo en JavaScript es un objeto y puede
+          ser almacenado en una variable. Mantén esto en mente mientras
+          aprendes.
+        </p>
+      </td>
+      <td>
+        <code>let miVariable = document.querySelector('h1');</code><br />Todos
+        los ejemplos anteriores también.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 Entonces, ¿para qué necesitamos las variables? Las variables son necesarias para hacer cualquier cosa interesante en programación. Si los valores no pudieran cambiar, entonces no podrías hacer nada dinámico, como personalizar un mensaje de bienvenida de un usuario que visita tu página, cambiar la imagen que se muestra en una galería de imágenes, etc.
 
@@ -146,13 +199,82 @@ de varias líneas.
 
 Un {{Glossary("operator", "operador")}} es básicamente un símbolo matemático que puede actuar sobre dos valores (o variables) y producir un resultado. En la tabla de abajo aparecen los operadores más simples, con algunos ejemplos para probarlos en la consola del navegador.
 
-| Operador                        | Explicación                                                                                                                                              | Símbolo(s)    | Ejemplo                                                                                                                                                                                                                                                                                     |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Suma/concatena                  | Se usa para sumar dos números, o juntar dos cadenas en una.                                                                                              | `+`           | `6 + 9; "Hola " + "mundo!";`                                                                                                                                                                                                                                                                |
-| Resta, multiplicación, división | Estos hacen lo que esperarías que hicieran en las matemáticas básicas.                                                                                   | `-`, `*`, `/` | `9 - 3; 8 * 2; // La multiplicación en JS es un asterisco 9 / 3;`                                                                                                                                                                                                                           |
-| Operador de asignación          | Los has visto anteriormente: asigna un valor a una variable.                                                                                             | `=`           | `let miVariable = 'Bob';`                                                                                                                                                                                                                                                                   |
-| identidad/igualdad              | Comprueba si dos valores son iguales entre sí, y devuelve un valor de `true`/`false` (booleano).                                                         | `===`         | `let miVariable = 3; miVariable === 4;`                                                                                                                                                                                                                                                     |
-| Negación, distinto (no igual)   | En ocasiones utilizado con el operador de identidad, la negación es en JS el equivalente al operador lógico NOT — cambia `true` por `false` y viceversa. | `!`, `!==`    | La expresión básica es `true`, pero la comparación devuelve `false` porque lo hemos negado:`let miVariable = 3; !miVariable === 3;`Aquí estamos comprobando "`miVariable` NO es igual a 3". Esto devuelve `false`, porque `miVariable` ES igual a 3.`let miVariable = 3; miVariable !== 3;` |
+<table>
+  <thead>
+    <tr>
+      <th scope="row">Operador</th>
+      <th scope="col">Explicación</th>
+      <th scope="col">Símbolo(s)</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Suma/concatena</th>
+      <td>Se usa para sumar dos números, o juntar dos cadenas en una.</td>
+      <td><code>+</code></td>
+      <td>
+        <code>6 + 9;<br />"Hola " + "mundo!";</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Resta, multiplicación, división</th>
+      <td>
+        Estos hacen lo que esperarías que hicieran en las matemáticas básicas.
+      </td>
+      <td><code>-</code>, <code>*</code>, <code>/</code></td>
+      <td>
+        <code
+          >9 - 3;<br />8 * 2; // La multiplicación en JS es un asterisco<br />9
+          / 3;</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Operador de asignación</th>
+      <td>Los has visto anteriormente: asigna un valor a una variable.</td>
+      <td><code>=</code></td>
+      <td><code>let miVariable = 'Bob';</code></td>
+    </tr>
+    <tr>
+      <th scope="row">identidad/igualdad</th>
+      <td>
+        Comprueba si dos valores son iguales entre sí, y devuelve un valor de
+        <code>true</code>/<code>false</code> (booleano).
+      </td>
+      <td><code>===</code></td>
+      <td>
+        <code>let miVariable = 3;<br />miVariable === 4;</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Negación, distinto (no igual)</th>
+      <td>
+        <br />En ocasiones utilizado con el operador de identidad, la negación
+        es en JS el equivalente al operador lógico NOT — cambia
+        <code>true</code> por <code>false</code> y viceversa.
+      </td>
+      <td><code>!</code>, <code>!==</code></td>
+      <td>
+        <p>
+          La expresión básica es <code>true</code>, pero la comparación devuelve
+          <code>false</code> porque lo hemos negado:
+        </p>
+        <p>
+          <code>let miVariable = 3;<br />!miVariable === 3;</code>
+        </p>
+        <p>
+          Aquí estamos comprobando "<code>miVariable</code> NO es igual a 3".
+          Esto devuelve <code>false</code>, porque <code>miVariable</code> ES
+          igual a 3.
+        </p>
+        <p>
+          <code><code>let miVariable = 3;</code><br />miVariable !== 3;</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 Hay muchos operadores por explorar, pero con esto será suficiente por ahora. Mira [Expresiones y operadores](/es/docs/Web/JavaScript/Reference/Operators) para ver la lista completa.
 
@@ -177,10 +299,11 @@ La expresión dentro de `if (... )` es el criterio — este usa al operador de i
 
 Las {{Glossary("Function", "funciones")}} son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices. Ya has visto algunas funciones más arriba, por ejemplo:
 
-1.  ```js
+1. ```js
     let nombreDeLaVariable = document.querySelector('h1');
     ```
-2.  ```js
+
+2. ```js
     alert('¡Hola!');
     ```
 

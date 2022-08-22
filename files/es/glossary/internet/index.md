@@ -9,4 +9,4 @@ La Internet es una red mundial de redes que utiliza el conjunto de protocolos de
 
 ### Aprender al respecto
 
--       Cómo funciona Internet (introducción para principiantes)
+- Cómo funciona Internet (introducción para principiantes)

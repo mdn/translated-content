@@ -1,12 +1,6 @@
 ---
 title: Product Advisory Board Members
 slug: MDN/MDN_Product_Advisory_Board/Members
-tags:
-  - MDN
-  - PAB
-  - 产品顾问委员会
-  - 会员
-translation_of: MDN/MDN_Product_Advisory_Board/Members
 ---
 {{MDNSidebar}}
 

@@ -91,7 +91,7 @@ It is not possible to know reflectively whether a particular object is an iterat
 
 객체는 값이 {{jsxref("Statements/for...of", "for..of")}} 구조 내에서 반복되는 것 같은 그 반복 동작을 정의하는 경우 반복이 가능(**iterable**)합니다. {{jsxref("Array")}} 또는 {{jsxref("Map")}}과 같은 일부 내장 형은 기본 반복 동작이 있지만 다른 형(가령 {{jsxref("Object")}})은 없습니다.
 
-**반복가능**하기 위해서, 객체는 **@@iterator** 메서드를 구현해야 합니다. 즉, 객체( 혹은 그 [프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain "prototype chain")에 등장하는 객체 중 하나)가 {{jsxref("Symbol.iterator")}} 키를 갖는 속성이 있어야 함을 뜻합니다.
+**반복가능**하기 위해서, 객체는 **@@iterator** 메서드를 구현해야 합니다. 즉, 객체( 혹은 그 [프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)에 등장하는 객체 중 하나)가 {{jsxref("Symbol.iterator")}} 키를 갖는 속성이 있어야 함을 뜻합니다.
 
 하나의 iterable은 단 한 번, 혹은 여러번 반복가능합니다. 어떤 순간에 어떻게 사용할 지는 프로그래머에게 달려있습니다. 단 한 번 반복가능한 iterable(e.g. Generator)은 관습적으로 자신의 **@@iterator** 메소드로부터 **this**를 반환합니다. 반면, 여러 번 반복 가능한 iterables은 **@@iterator** 메소드가 호출되는 매 회 새로운 iterator를 반드시 반환해야합니다.
 

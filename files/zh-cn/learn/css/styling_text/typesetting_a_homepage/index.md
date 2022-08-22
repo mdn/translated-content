@@ -1,14 +1,6 @@
 ---
 title: 作业：排版社区大学首页
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - CSS
-  - 初学者
-  - 字体
-  - 样式化文本
-  - 网络字体
-  - 链接
-translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

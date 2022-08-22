@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 ---
 {{JSRef}}
 

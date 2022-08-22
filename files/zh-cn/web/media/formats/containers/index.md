@@ -1,7 +1,6 @@
 ---
 title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
-translation_of: Web/Media/Formats/Containers
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 

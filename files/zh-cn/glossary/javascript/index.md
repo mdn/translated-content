@@ -1,10 +1,6 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-tags:
-  - JavaScript
-  - 术语
-translation_of: Glossary/JavaScript
 ---
 JavaScript (JS) 是一种编程语言，为通常用于客户端（client-side）的网页动态脚本，不过，也常通过像[Node.js](https://nodejs.org/)这样的包，用于服务器端（{{Glossary("Server","server")}}-side）。
 

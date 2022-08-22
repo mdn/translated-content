@@ -1,12 +1,6 @@
 ---
 title: Web 遊戲開發介紹
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Games
-  - Guide
-  - Mobile
-translation_of: Games/Introduction
 ---
 {{GamesSidebar}}現有 Web 環境已成為多元的平台，不只可建構令人驚艷的高品質遊戲，也是發佈這些遊戲的重要媒介。可供撰寫的遊種類......
 

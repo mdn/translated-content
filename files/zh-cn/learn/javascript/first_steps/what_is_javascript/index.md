@@ -1,13 +1,6 @@
 ---
 title: 什么是 JavaScript？
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - API
-  - JavaScript
-  - 初学者
-  - 核心
-  - 浏览器
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 

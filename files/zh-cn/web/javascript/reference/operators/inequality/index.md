@@ -1,12 +1,6 @@
 ---
 title: 不等于 (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - 参考
-  - 语言特征
-  - 运算符
-translation_of: Web/JavaScript/Reference/Operators/Inequality
 ---
 {{jsSidebar("Operators")}}
 

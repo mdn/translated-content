@@ -1,7 +1,6 @@
 ---
 title: Groups and ranges
 slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
 {{jsSidebar("JavaScript Guide")}}

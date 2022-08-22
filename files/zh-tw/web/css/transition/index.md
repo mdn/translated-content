@@ -1,12 +1,6 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - CSS Property
-  - CSS轉場
-  - Reference
-translation_of: Web/CSS/transition
 ---
 {{CSSRef}}
 

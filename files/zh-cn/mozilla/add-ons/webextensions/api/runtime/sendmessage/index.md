@@ -1,7 +1,6 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 {{AddonSidebar()}}向你的扩展或其他扩展发送单条消息。如果想发给你自己的扩展，则省略 `extensionId` 参数。扩展中所有页面的{{WebExtAPIRef('runtime.onMessage')}}将会被触发，除了调用`runtime.sendMessage的页面。`
 

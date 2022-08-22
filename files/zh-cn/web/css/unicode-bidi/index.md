@@ -1,10 +1,6 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
-tags:
-  - BiDi
-  - CSS
-translation_of: Web/CSS/unicode-bidi
 ---
 {{CSSRef}}
 

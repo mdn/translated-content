@@ -1,7 +1,6 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
-translation_of: Web/HTTP/Headers/DPR
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 

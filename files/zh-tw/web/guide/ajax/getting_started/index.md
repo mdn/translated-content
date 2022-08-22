@@ -1,14 +1,6 @@
 ---
 title: 入門篇
 slug: Web/Guide/AJAX/Getting_Started
-tags:
-  - AJAX
-  - API
-  - Advanced
-  - JavaScript
-  - WebMechanics
-  - XMLHttpRequest
-translation_of: Web/Guide/AJAX/Getting_Started
 ---
 這篇文章說明 AJAX 相關技術的基礎，並提供兩個簡單的實際操作範例供您入門。
 
@@ -179,7 +171,7 @@ if (httpRequest.status === 200) {
 
 > **備註：** 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number (詳見[bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
 
-> **備註：** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest `variable local to a [closure](/en/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
+> **備註：** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/en/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
 
 In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
 

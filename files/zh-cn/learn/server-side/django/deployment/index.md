@@ -1,7 +1,6 @@
 ---
 title: 'Django 教程 11: 部署 Django 到生产环境'
 slug: Learn/Server-side/Django/Deployment
-translation_of: Learn/Server-side/Django/Deployment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 

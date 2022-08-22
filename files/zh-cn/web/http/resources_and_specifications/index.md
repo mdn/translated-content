@@ -1,7 +1,6 @@
 ---
 title: HTTP 资源与规范
 slug: Web/HTTP/Resources_and_specifications
-translation_of: Web/HTTP/Resources_and_specifications
 ---
 {{HTTPSidebar}}
 

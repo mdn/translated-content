@@ -15,7 +15,7 @@ node = document.adoptNode(externalNode);
 ```
 
 - `node`
-  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-cn/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态.
+  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-CN/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态.
 - `externalNode`
   - : 将要从外部文档导入的节点。
 

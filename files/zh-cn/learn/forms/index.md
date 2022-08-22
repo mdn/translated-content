@@ -1,16 +1,6 @@
 ---
 title: HTML 表单指南
 slug: Learn/Forms
-tags:
-  - Beginner
-  - Featured
-  - Forms
-  - Guide
-  - HTML
-  - Landing
-  - Learn
-  - Web
-translation_of: Learn/Forms
 ---
 {{LearnSidebar}}
 

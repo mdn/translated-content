@@ -64,7 +64,7 @@ var color2 = "coral";
 
 ### 제거되었거나 정의되지 않은 속성에 대하여 `in` 연산자 사용하기
 
-`in` 연산자는 [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete") 연산자로 제거된 속성에 대하여 `false`를 반환합니다.
+`in` 연산자는 [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 연산자로 제거된 속성에 대하여 `false`를 반환합니다.
 
 ```js
 var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
@@ -108,7 +108,7 @@ trees[3] = undefined;
 
 ## 관련 문서
 
-- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete")
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [속성의, 소유와 셀 수 있는 성질](/en-US/docs/Enumerability_and_ownership_of_properties "/en-US/docs/Enumerability_and_ownership_of_properties")
+- [속성의, 소유와 셀 수 있는 성질](/en-US/docs/Enumerability_and_ownership_of_properties)

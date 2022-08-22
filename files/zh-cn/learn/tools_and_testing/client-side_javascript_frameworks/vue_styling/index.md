@@ -1,7 +1,6 @@
 ---
 title: Styling Vue components with CSS
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -507,7 +506,7 @@ Our work is done on the styling of our sample app. In the next article we'll ret
   - [启动我们的 Svelte Todo 列表应用](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
   - [Svelte 中的动态行为：使用变量和道具](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
   - [组成我们的 Svelte 应用程序](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [先进的 Svelte：反应性，生命周期，可访问性](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [先进的 Svelte：反应性，生命周期，无障碍](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
   - [与 Svelte 商店合作](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
   - [Svelte 中的 TypeScript 支持](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
   - [部署和后续步骤](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

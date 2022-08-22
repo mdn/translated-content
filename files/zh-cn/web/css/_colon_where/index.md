@@ -1,13 +1,6 @@
 ---
 title: ':where()'
 slug: Web/CSS/:where
-tags:
-  - CSS
-  - Web
-  - 伪类
-  - 参考
-  - 选择器
-translation_of: Web/CSS/:where
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

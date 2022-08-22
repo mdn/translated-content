@@ -1,12 +1,6 @@
 ---
 title: <nav>
 slug: Web/HTML/Element/nav
-tags:
-  - HTML
-  - 元素
-  - 导航
-  - 链接
-translation_of: Web/HTML/Element/nav
 ---
 {{HTMLRef}}
 

@@ -7,8 +7,6 @@ tags:
   - HTML5
 original_slug: HTML/HTML5/Forms_in_HTML5
 ---
-{{ gecko_minversion_header("2") }}
-
 Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
 
 Este documento describe los elementos nuevos o que han cambiado que están disponibles en Gecko/Firefox.
@@ -17,10 +15,10 @@ Este documento describe los elementos nuevos o que han cambiado que están dispo
 
 El elemento `{{ HTMLElement("input") }}` tiene nuevos valores para el atributo {{ htmlattrxref("type", "input") }}.
 
-- search: El elemento representa una caja de búsqueda. Los saltos de línea son quitados del valor ingresado pero no se modifica ninguna otra sintaxis.
-- tel: El elemento representa un control para editar un número de teléfono, porque los números teléfonicos varían ampliamente en el mundo. Puedes usar atributos como {{ htmlattrxref("pattern", "input") }} y {{ htmlattrxref("maxlength", "input") }} para restringir los valores ingresados en la caja.
-- url: El elemento representa un control para editar una [URL](http://es.wikipedia.org/URL). Se quitan los saltos de línea y espacios en blanco antes y después del valor ingresados.
-- email: El elemento representa una dirección de correo electrónico. Los saltos de línea se quitan automáticamente del valor ingresado. Puede ingresarse una direccón de correo no válida, pero el campo de ingreso sólo funcionará si la dirección ingresada satisface la producción ABNF `1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )` donde `atext` está definida en RFC 5322, sección 3.2.3 y `ldh-str` está definida en RFC 1034, sección 3.5.
+- `search`: El elemento representa una caja de búsqueda. Los saltos de línea son quitados del valor ingresado pero no se modifica ninguna otra sintaxis.
+- `tel`: El elemento representa un control para editar un número de teléfono, porque los números teléfonicos varían ampliamente en el mundo. Puedes usar atributos como {{ htmlattrxref("pattern", "input") }} y {{ htmlattrxref("maxlength", "input") }} para restringir los valores ingresados en la caja.
+- `url`: El elemento representa un control para editar una [URL](http://es.wikipedia.org/URL). Se quitan los saltos de línea y espacios en blanco antes y después del valor ingresados.
+- `email`: El elemento representa una dirección de correo electrónico. Los saltos de línea se quitan automáticamente del valor ingresado. Puede ingresarse una direccón de correo no válida, pero el campo de ingreso sólo funcionará si la dirección ingresada satisface la producción ABNF `1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )` donde `atext` está definida en RFC 5322, sección 3.2.3 y `ldh-str` está definida en RFC 1034, sección 3.5.
 
   > **Nota:** si el atributo {{ htmlattrxref("multiple", "input") }} está agregado, pueden ingresarse muchas direcciones de correo electrónico en ese campo {{ HTMLElement("input") }}, como una lista separada por espacios, pero no está implementado actualmente en Firefox.
 
@@ -42,12 +40,14 @@ El elemento {{ HTMLElement("datalist") }} representa la lista de elementos {{ HT
 
 Puedes usar el atributo {{ htmlattrxref("list", "input") }} en un elemento {{ HTMLElement("input") }} para enlazar a un campo de ingreso específico con un elemento {{ HTMLElement("datalist") }} determinado.
 
-    <label>Superhéroe favorito</label>
-    <input list="superheroes" name="list" />
-    <datalist id="superheroes">
-        <option label="Iron Man" value="Iron Man">
-        <option label="The Hulk" value="The Hulk">
-    </datalist>
+```html
+<label>Superhéroe favorito</label>
+<input list="superheroes" name="list" />
+<datalist id="superheroes">
+    <option label="Iron Man" value="Iron Man">
+    <option label="The Hulk" value="The Hulk">
+</datalist>
+```
 
 ### El elemento `<output>`
 
@@ -59,13 +59,17 @@ Puedes usar el atributo {{ htmlattrxref("for", "output") }} para especificar una
 
 El atributo {{ htmlattrxref("placeholder", "input") }} en elementos `{{ HTMLElement("input") }}` y `{{ HTMLElement("textarea") }}` provee una ayuda a los usuarios acerca de qué debe ser ingresado en el campo. El texto introducido en el placeholder no debe contener «enters» o saltos de línea.
 
-    <input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
+```html
+<input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
+```
 
 ### El atributo autofocus
 
 El atributo **autofocus** te permite especificar que una parte del formulario debe tener foco para ingresar información cuando se carga la página, a menos que el usuario lo cambie, por ejemplo al escribir en otro lugar. Sólo un elemento del formulario en un documento puede tener el atributo **autofocus**, que es de tipo boolean. Este atributo puede ser aplicado a los elementos `{{ HTMLElement("input") }}`, `{{ HTMLElement("button") }}`, `{{ HTMLElement("select") }}` y `{{ HTMLElement("textarea") }}`. La excepción es que **autofocus** no puede ser aplicado a un elemento `<input>` si el atributo {{ htmlattrxref("type", "input") }} `hidden` está seleccionado (esto quiere decir, no se puede enfocar automáticamente un elemento escondido).
 
-    <input type="text" id="user" autofocus />
+```html
+<input type="text" id="user" autofocus />
+```
 
 ### La propiedad label.control del DOM
 

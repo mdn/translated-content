@@ -1,7 +1,6 @@
 ---
 title: <a>
 slug: Web/HTML/Element/a
-translation_of: Web/HTML/Element/a
 ---
 **HTML `<a>` 元素**（意為 Anchor）建立了通往其他頁面、檔案、Email 地址、或其他 URL 的超連結。
 

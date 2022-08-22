@@ -1,7 +1,6 @@
 ---
 title: Using FormData Objects
 slug: Web/API/FormData/Using_FormData_Objects
-translation_of: Web/API/FormData/Using_FormData_Objects
 ---
 The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest). It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to `multipart/form-data`.
 

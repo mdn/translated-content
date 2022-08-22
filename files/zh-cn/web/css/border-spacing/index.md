@@ -1,7 +1,6 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-translation_of: Web/CSS/border-spacing
 ---
 {{ CSSRef("CSS Tables") }}
 

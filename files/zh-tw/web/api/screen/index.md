@@ -1,7 +1,6 @@
 ---
 title: Screen
 slug: Web/API/Screen
-translation_of: Web/API/Screen
 ---
 {{APIRef("CSSOM View")}}
 

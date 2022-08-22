@@ -1,7 +1,6 @@
 ---
 title: HTML 中的图片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 

@@ -1,12 +1,6 @@
 ---
 title: 初始值
 slug: Web/CSS/@property/initial-value
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

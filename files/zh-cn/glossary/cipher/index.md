@@ -1,7 +1,6 @@
 ---
 title: 密码
 slug: Glossary/Cipher
-translation_of: Glossary/Cipher
 ---
 在密码学（{{glossary("cryptography")}}）领域，**密码**是将{{glossary("Plaintext","明文")}}{{glossary("encryption", "编码")}}为不可读，且能够{{glossary("decryption", "解码")}}回原来的明文的算法。
 

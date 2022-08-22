@@ -1,10 +1,6 @@
 ---
 title: DOM 中的空白字元
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - DOM
-  - 所有類別
-translation_of: Web/API/Document_Object_Model/Whitespace
 ---
 #### 問題說明
 

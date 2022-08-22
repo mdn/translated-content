@@ -1,7 +1,6 @@
 ---
 title: Logical AND assignment (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
-translation_of: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ---
 {{jsSidebar("Operators")}}
 

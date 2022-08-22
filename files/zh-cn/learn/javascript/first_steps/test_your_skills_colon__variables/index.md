@@ -1,13 +1,6 @@
 ---
 title: '技能测试：变量'
 slug: 'Learn/JavaScript/First_steps/Test_your_skills:_variables'
-translation_of: 'Learn/JavaScript/First_steps/Test_your_skills:_variables'
-tags:
-  - 初学者
-  - JavaScript
-  - 学习
-  - 技能测试
-  - 变量
 ---
 {{learnsidebar}}
 

@@ -1,10 +1,6 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-tags:
-  - 浮點數
-  - 隨機
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 {{JSRef}}
 

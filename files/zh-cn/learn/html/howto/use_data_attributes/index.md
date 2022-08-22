@@ -1,10 +1,6 @@
 ---
 title: 使用数据属性
 slug: Learn/HTML/Howto/Use_data_attributes
-tags:
-  - Custom Data Attributes
-  - HTML5
-translation_of: Learn/HTML/Howto/Use_data_attributes
 original_slug: Web/Guide/HTML/Using_data_attributes
 ---
 {{LearnSidebar}}

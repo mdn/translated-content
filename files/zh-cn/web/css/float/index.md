@@ -1,13 +1,6 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS 定位
-  - CSS 属性
-  - 参考
-  - recipe:css-property
-translation_of: Web/CSS/float
 original_slug: CSS/float
 ---
 {{CSSRef}}

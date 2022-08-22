@@ -1,7 +1,6 @@
 ---
 title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
 {{JSRef("Global_Objects", "Symbol")}}
 

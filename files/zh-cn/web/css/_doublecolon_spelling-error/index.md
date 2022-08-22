@@ -1,7 +1,6 @@
 ---
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
-translation_of: Web/CSS/::spelling-error
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

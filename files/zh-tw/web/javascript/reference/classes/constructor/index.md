@@ -1,7 +1,6 @@
 ---
 title: 建構子
 slug: Web/JavaScript/Reference/Classes/constructor
-translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
 {{jsSidebar("Classes")}}
 

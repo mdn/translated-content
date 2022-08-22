@@ -1,7 +1,6 @@
 ---
 title: <mark>
 slug: Web/HTML/Element/mark
-translation_of: Web/HTML/Element/mark
 ---
 ## 概要
 

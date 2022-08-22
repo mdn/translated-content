@@ -1,7 +1,6 @@
 ---
 title: 箭頭函式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 {{jsSidebar("Functions")}}
 

@@ -1,11 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - HTTP
-  - 请求头
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
 {{HTTPSidebar}}
 

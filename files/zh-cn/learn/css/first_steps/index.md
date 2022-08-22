@@ -1,12 +1,6 @@
 ---
 title: 学习 CSS 第一步
 slug: Learn/CSS/First_steps
-tags:
-  - 初学者
-  - 学习
-  - 模型
-  - 第一步
-translation_of: Learn/CSS/First_steps
 ---
 {{LearnSidebar}}
 

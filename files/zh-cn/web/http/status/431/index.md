@@ -1,12 +1,6 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - 响应状态码
-  - 响应码
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/431
 ---
 {{HTTPSidebar}}
 

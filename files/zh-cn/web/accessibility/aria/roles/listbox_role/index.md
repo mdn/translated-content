@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: listbox role'
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 ---
 `listbox` 角色用于列表，用户可以从中选择一个或多个静态选项，并且与 HTML {{HTMLElement("select")}} 元素不同，它可能包含图像。
 

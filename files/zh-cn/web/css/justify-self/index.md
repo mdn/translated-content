@@ -1,11 +1,6 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 盒对齐
-translation_of: Web/CSS/justify-self
 ---
 {{CSSRef}}
 

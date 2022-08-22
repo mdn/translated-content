@@ -2,8 +2,6 @@
 title: 书本实例细节页面、与自我挑战
 slug: >-
   Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
-translation_of: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 ## 书本实例细节页面
 

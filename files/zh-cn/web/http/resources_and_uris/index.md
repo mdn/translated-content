@@ -1,11 +1,6 @@
 ---
 title: Resources and URIs
 slug: Web/HTTP/Resources_and_URIs
-tags:
-  - HTTP
-  - MIME
-  - URI
-translation_of: Web/HTTP/Resources_and_URIs
 ---
 {{HTTPSidebar}}
 

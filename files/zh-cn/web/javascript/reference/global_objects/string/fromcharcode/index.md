@@ -1,10 +1,6 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-tags:
-  - ASCII 码变成字符串
-  - fromCharCode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
 {{JSRef}}
 

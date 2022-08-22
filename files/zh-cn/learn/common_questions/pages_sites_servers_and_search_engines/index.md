@@ -1,9 +1,6 @@
 ---
 title: 网页，网站，网络服务器和搜索引擎的区别是什么？
 slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
-tags:
-  - 初学者
-translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 在本文中我们描述了各种与网络相关的概念：网页，网站，网络服务器，以及搜索引擎。这些概念常被网络新手混淆，或被误用。让我们看看它们到底代指的是什么吧！
 

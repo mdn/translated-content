@@ -1,7 +1,6 @@
 ---
 title: 何謂附加元件？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
 {{AddonSidebar}}
 

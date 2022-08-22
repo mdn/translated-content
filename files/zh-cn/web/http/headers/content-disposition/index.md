@@ -1,12 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - 上传
-  - 文件下载
-  - 表单
-  - 首部
-translation_of: Web/HTTP/Headers/Content-Disposition
 ---
 {{HTTPSidebar}}在常规的 HTTP 应答中，**`Content-Disposition`** 响应头指示回复的内容该以何种形式展示，是以**内联**的形式（即网页或者页面的一部分），还是以**附件**的形式下载并保存到本地。
 

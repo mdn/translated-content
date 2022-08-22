@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 ---
 {{JSRef}}
 

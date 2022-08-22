@@ -1,7 +1,6 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-translation_of: Web/HTTP/Headers/Expect
 ---
 {{HTTPSidebar}}
 
@@ -59,5 +58,5 @@ Expect: 100-continue
 
 ## 参见
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417")}} `Expectation Failed`
+- {{HTTPStatus("100")}} `Continue`

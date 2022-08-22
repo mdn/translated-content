@@ -1,14 +1,6 @@
 ---
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
-tags:
-  - Audio
-  - HTML5
-  - Media
-  - NeedsTranslation
-  - TopicStub
-  - Video
-translation_of: Web/Guide/Audio_and_video_delivery
 ---
 我们可以通过多种方式在网络上交付音频和视频，从“静态”媒体文件到自适应实时流。 本文旨在作为探讨基于 Web 的媒体的各种传递机制以及与流行浏览器的兼容性的起点。
 
@@ -21,10 +13,10 @@ Whether we are dealing with pre-recorded audio files or live streams, the mechan
 
 To deliver video and audio, the general workflow is usually something like this:
 
-1.  Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
-2.  If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
-3.  Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
-4.  Deliver the media file to the player.
+1. Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
+2. If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
+3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+4. Deliver the media file to the player.
 
 ### HTML 音频
 

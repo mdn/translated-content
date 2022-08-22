@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.setInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
 ---
 {{JSRef}}
 

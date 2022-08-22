@@ -1,9 +1,6 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - 缓存，头部，HTTP，响应，response
-translation_of: Web/HTTP/Headers/Expires
 ---
 {{HTTPSidebar}}**`Expires`** 响应头包含日期/时间， 即在此时候之后，响应过期。
 

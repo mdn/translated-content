@@ -1,11 +1,6 @@
 ---
 title: 内存管理
 slug: Web/JavaScript/Memory_Management
-tags:
-  - JavaScript
-  - 内存
-  - 性能
-translation_of: Web/JavaScript/Memory_Management
 ---
 {{JsSidebar("Advanced")}}
 

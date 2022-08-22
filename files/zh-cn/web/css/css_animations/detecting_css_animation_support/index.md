@@ -1,7 +1,6 @@
 ---
 title: 检测 CSS 动画的支持性
 slug: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
-translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
 {{CSSRef}}
 
