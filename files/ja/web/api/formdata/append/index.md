@@ -5,7 +5,7 @@ translation_of: Web/API/FormData/append
 ---
 {{APIRef("XMLHttpRequest")}}
 
-インターフェイスの**`append()`**メソッドは、FormData オブジェクト内の既存のキーに新しい値を追加するか、キーがまだ存在しない場合は追加します。
+インターフェイスの **`append()`** メソッドは、FormData オブジェクト内の既存のキーに新しい値を追加するか、キーがまだ存在しない場合は追加します。
 
 {{domxref("FormData.set")}}との違いは、指定されたキーが既に存在する場合、{{domxref("FormData.set")}}はすべての既存の値を新しい値で上書きすることです。 一方、`append()`は、既存の値のセットの最後に新しい値を追加します。
 
