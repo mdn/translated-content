@@ -89,7 +89,7 @@ updateButton.addEventListener('click', () => {
 selectEl.addEventListener('change', (e) => {
   confirmBtn.value = selectEl.value;
 });
-// Le btouton "Confirmer" du formulaire déclenche la fermeture de la boîte avec [method="dialog"]
+// Le bouton "Confirmer" du formulaire déclenche la fermeture de la boîte avec [method="dialog"]
 favDialog.addEventListener('close', () => {
   outputBox.value = `Bouton ${favDialog.returnValue} cliqué - ${(new Date()).toString()}`;
 });
