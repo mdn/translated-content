@@ -392,7 +392,7 @@ When trying to decide upon a base color, you may find that browser extensions th
 
 #### 填满调色板
 
-Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See [Color and accessibility](#颜色与可访问性) for a brief explanation of why this matters.
+Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See [Color and accessibility](#颜色与无障碍) for a brief explanation of why this matters.
 
 A few examples (all free to use as of the time this list was last revised):
 
@@ -413,7 +413,7 @@ A full review of color theory is beyond the scope of this article, but there are
 - [Color theory](https://zh.wikipedia.org/wiki/Color_theory) on Wikipedia
   - : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color sleection process, but is still full of useful information.
 
-### 颜色与可访问性
+### 颜色与无障碍
 
 There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.
 

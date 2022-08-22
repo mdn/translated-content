@@ -1,11 +1,11 @@
 ---
-title: 'HTML: 为可访问性提供一个良好的基础'
+title: 'HTML: 为无障碍提供一个良好的基础'
 slug: Learn/Accessibility/HTML
-original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基础
+original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
-在网页开发的过程中，用正确的 HTML 标签来表达正确的意图，可以提升网页的可访问性。这篇文章将会详细介绍如何最大化地提升网页的可访问性。
+在网页开发的过程中，用正确的 HTML 标签来表达正确的意图，可以提升网页的无障碍。这篇文章将会详细介绍如何最大化地提升网页的无障碍。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -15,18 +15,18 @@ original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基�
         有一定的 HTML 基础 (可参阅
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
         >)，理解<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
-          >什么是可访问性</a
+          >什么是无障碍</a
         >。
       </td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>了解可访问性为网页带来的好处和如何在网页中进行实现。</td>
+      <td>了解无障碍为网页带来的好处和如何在网页中进行实现。</td>
     </tr>
   </tbody>
 </table>
 
-## HTML 和可访问性
+## HTML 和无障碍
 
 在学习 HTML 的过程当中，经常可以看到这样一个主题：HTML 语义化的重要性。意思是指我们应尽可能地用正确的 HTML 标签来表达正确的意图。
 
@@ -42,9 +42,9 @@ original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基�
 <button>Play video</button>
 ```
 
-`<button>`标签不仅提供了按钮的样式（虽然有时会重新编写样式），还提供了键盘的可访问性，如：使用 tab 键更换按钮，使用回车键点击按钮。
+`<button>`标签不仅提供了按钮的样式（虽然有时会重新编写样式），还提供了键盘的无障碍，如：使用 tab 键更换按钮，使用回车键点击按钮。
 
-如果你在项目的一开始就使用 HTML 语义化，不仅不会花更多的时间，而且又有以下的可访问性优点：
+如果你在项目的一开始就使用 HTML 语义化，不仅不会花更多的时间，而且又有以下的无障碍优点：
 
 1. **更便于开发** — 如上所述，你可以使 HTML 更易于理解，并且可以毫不费力的获得一些功能。
 2. **更适配移动端** — 语义化的 HTML 文件比非语义化的 HTML 文件更加轻便，并且更易于响应式开发。
@@ -56,13 +56,13 @@ original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基�
 
 ## 良好的语义
 
-上面我们讨论了语义化的重要性以及为什么我们要使用正确的 HTML 标签来表达正确的意图。语义化是我们不可忽视的一部分，因为它往往决定了网页的可访问性。
+上面我们讨论了语义化的重要性以及为什么我们要使用正确的 HTML 标签来表达正确的意图。语义化是我们不可忽视的一部分，因为它往往决定了网页的无障碍。
 
 在网络上，事实上人们用 HTML 标签做一些非常奇怪的事情。人们滥用一些即将废弃或已经废弃的标签。不管在什么情况下，我们都应该将这些错误的代码改正过来。
 
 话虽如此，但是有些情况我们往往不能摆脱错误的标签，例如一个网页是从服务端的框架生成的，或者网页上存在第三方的内容（如广告），这些都是我们所不能控制的。
 
-我们的目标并不是“全有或全无”，实际上，你所做的每一个改进都可以提升网页的可访问性。
+我们的目标并不是“全有或全无”，实际上，你所做的每一个改进都可以提升网页的无障碍。
 
 ### 文本内容
 
@@ -123,11 +123,11 @@ This is the second subsection of my content. I think is more interesting than th
 
 如果你使用屏幕阅读器试用更长内容的版本（请查阅 [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)），你不会有一个很好的经验 — 屏幕阅读器没有任何东西可以用作路标，所以你无法检索有用的目录，整个页面被看作一个巨大的块，所以它只是一次读出所有的内容。
 
-除了可访问性之外，还有其他一些问题 - 使用 CSS 设计内容的风格更难，或者使用 JavaScript 来操作它比较困难，因为没有可用作选择器的元素。
+除了无障碍之外，还有其他一些问题 - 使用 CSS 设计内容的风格更难，或者使用 JavaScript 来操作它比较困难，因为没有可用作选择器的元素。
 
 #### 使用通俗易懂的语言
 
-你使用的语言也会影响可访问性。一般来说，你应该使用不太复杂的清晰语言，不要使用不必要的行话或俚语。这不仅有利于有认知或其他残疾的人；它有利于那些没有用母语写作的读者，年轻人...事实上是每个人！除此之外，你应该尽量避免使用没有被屏幕阅读器清楚读出的语言和字符。例如：
+你使用的语言也会影响无障碍。一般来说，你应该使用不太复杂的清晰语言，不要使用不必要的行话或俚语。这不仅有利于有认知或其他残疾的人；它有利于那些没有用母语写作的读者，年轻人...事实上是每个人！除此之外，你应该尽量避免使用没有被屏幕阅读器清楚读出的语言和字符。例如：
 
 - 如果可以避免的话，不要用破折号。写 5 到 7，来替代 5-7。
 - 展开缩写 — 写 January，来替代 Jan 。
@@ -254,9 +254,9 @@ This is the second subsection of my content. I think is more interesting than th
 
 ### UI 控制
 
-通过 UI 控件，我们指的是与用户交互的 Web 文档的主要部分 - 通常是按钮，链接和表单控件。在本节中，我们将介绍创建此类控件时要注意的基本可访问性问题。稍后关于 WAI-ARIA 和多媒体的文章将着眼于 UI 可访问性的其他方面。
+通过 UI 控件，我们指的是与用户交互的 Web 文档的主要部分 - 通常是按钮，链接和表单控件。在本节中，我们将介绍创建此类控件时要注意的基本无障碍问题。稍后关于 WAI-ARIA 和多媒体的文章将着眼于 UI 无障碍的其他方面。
 
-UI 控件可访问性的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
+UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
 
 ![](button-focused-unfocused.png)
 
@@ -314,9 +314,9 @@ UI 控件可访问性的一个关键方面是，默认情况下，浏览器允�
 <div data-message="This is from the third button">And me!</div>
 ```
 
-但是不建议使用这样的代码 - 你会立即失去本机键盘的可访问性。但如果你使用了`{{htmlelement("button")}}` 元素，你将可以通过键盘控制。 此外你也将不会获得任何的按钮默认拥有的 CSS 样式。
+但是不建议使用这样的代码 - 你会立即失去本机键盘的无障碍。但如果你使用了`{{htmlelement("button")}}` 元素，你将可以通过键盘控制。 此外你也将不会获得任何的按钮默认拥有的 CSS 样式。
 
-#### 重新建立键盘的可访问性
+#### 重新建立键盘的无障碍
 
 重新添加这些优点需要一些工作（您可以在我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例中使用示例代码 - 另请参阅 [源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) ）。在这里，我们通过赋予每个 `<div>` 按钮属性`tabindex =“0”` 来使它能够被聚焦（包括通过选项卡）：
 
@@ -432,11 +432,11 @@ Fill in your name: <input type="text" id="name" name="name">
 - 表头使用 `{{htmlelement("th")}}` 元素定义 - 您还可以使用 `scope` 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。
 - `{{htmlelement("caption")}}` 元素和 `<table>` `summary` 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 `<caption>` 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。
 
-> **备注：** 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和可访问性](/en-US/docs/Learn/HTML/Tables/Advanced) 文章。
+> **备注：** 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/en-US/docs/Learn/HTML/Tables/Advanced) 文章。
 
 ## 文本替代品
 
-尽管文本内容本身是可访问的，但对于多媒体内容而言也不一定是这样 - 图像/视频内容不能被视觉障碍人士看到，并且听觉障碍人士不能听到音频内容。稍后我们将在可访问多媒体文章中详细介绍视频和音频内容，但对于本文，我们将探讨低微（humble）的 `{{htmlelement("img")}}` 元素的可访问性。
+尽管文本内容本身是可访问的，但对于多媒体内容而言也不一定是这样 - 图像/视频内容不能被视觉障碍人士看到，并且听觉障碍人士不能听到音频内容。稍后我们将在可访问多媒体文章中详细介绍视频和音频内容，但对于本文，我们将探讨低微（humble）的 `{{htmlelement("img")}}` 元素的无障碍。
 
 我们编写了一个简单的例子， [accessible-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html) ，它具有相同图像的四个副本：
 
@@ -482,7 +482,7 @@ Fill in your name: <input type="text" id="name" name="name">
 
 在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
 
-> **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的可访问性。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
+> **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
 
 ### 其他文字替代机制
 
@@ -522,16 +522,16 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 
 ## 总结
 
-您现在应该精通编写大多数场合可访问的 HTML。我们的 WAI-ARIA 基础知识文章也将填补这些知识中的一些空白，但本文已经关注了此基础知识。接下来，我们将探索 CSS 和 JavaScript，以及可访问性如何受其好坏影响。
+您现在应该精通编写大多数场合可访问的 HTML。我们的 WAI-ARIA 基础知识文章也将填补这些知识中的一些空白，但本文已经关注了此基础知识。接下来，我们将探索 CSS 和 JavaScript，以及无障碍如何受其好坏影响。
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 ## 在此模块
 
-- [什么是可访问性 (What is accessibility?)](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [可访问性的良好的基础 (HTML: A good basis for accessibility)](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 可访问性的最好练习 (CSS and JavaScript accessibility best practices)](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [什么是无障碍 (What is accessibility?)](/en-US/docs/Learn/Accessibility/What_is_accessibility)
+- [无障碍的良好的基础 (HTML: A good basis for accessibility)](/en-US/docs/Learn/Accessibility/HTML)
+- [CSS 和 JavaScript 无障碍的最好练习 (CSS and JavaScript accessibility best practices)](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
 - [WAI_ARIA 基础 (WAI-ARIA basics)](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体的可访问性 (Accessible multimedia)](/en-US/docs/Learn/Accessibility/Multimedia)
-- [移动端的可访问性 (Mobile accessibility)](/en-US/docs/Learn/Accessibility/Mobile)
-- [可访问性问题的解决处理 (Accessibility troubleshooting)](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [多媒体的无障碍 (Accessible multimedia)](/en-US/docs/Learn/Accessibility/Multimedia)
+- [移动端的无障碍 (Mobile accessibility)](/en-US/docs/Learn/Accessibility/Mobile)
+- [无障碍问题的解决处理 (Accessibility troubleshooting)](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

@@ -148,7 +148,7 @@ slug: Learn/Front-end_web_developer
 #### 核心模块
 
 - [跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30 小时阅读/练习)
-- [可访问性（辅助功能）](/zh-CN/docs/learn/Accessibility) (20–25 小时阅读/练习)
+- [无障碍（辅助功能）](/zh-CN/docs/learn/Accessibility) (20–25 小时阅读/练习)
 
 ### 现代工具
 

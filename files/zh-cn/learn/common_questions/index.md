@@ -46,7 +46,7 @@ slug: Learn/Common_questions
 - [有哪些工具可用于调试和提高网站性能？](/zh-CN/docs/Tools/Performance)
   - : 这组文章向您展示了如何使用 Firefox 中的开发工具来调试和提高网站性能，使用工具检查内存使用情况，JavaScript 调用树，渲染的 DOM 节点数量等。
 
-## 设计和可访问性
+## 设计和无障碍
 
 本节列出了与美学，页面结构，辅助功能等相关的问题。
 
@@ -54,8 +54,8 @@ slug: Learn/Common_questions
   - : 本文涵盖了每个项目的所有重要的第一步：定义你想要完成的任务。
 - [一般的网页布局是怎样的？](/zh-CN/docs/Learn/Common_questions/Common_web_layouts)
   - : 在为您的网站设计网页时，最好了解最常见的布局。这篇文章运行一些典型的网页布局，看看组成每一个的部分。
-- [何为可访问性？](/zh-CN/docs/learn/Common_questions/What_is_accessibility)
-  - : 这篇文章介绍了可访问性背后的一些基本概念
+- [何为无障碍？](/zh-CN/docs/learn/Common_questions/What_is_accessibility)
+  - : 这篇文章介绍了无障碍背后的一些基本概念
 - [怎么设计才能适用于所有用户？](/zh-CN/docs/Learn/Common_questions/Design_for_all_types_of_users)
   - : 本文提供了基本的技术，以帮助您为任何类型的用户设计网站 - 快速无障碍获胜和其他这样的事情。
 - [残疾人的特殊关怀？](/zh-CN/docs/Learn/Common_questions/HTML_features_for_accessibility)

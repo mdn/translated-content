@@ -11,7 +11,7 @@ slug: Web/HTML/Global_attributes
 除了基本的 HTML 全局属性之外，还存在以下全局属性：
 
 - {{htmlattrdef("xml:lang")}} 和 {{htmlattrdef("xml:base")}} ——两者都是从 XHTML 规范继承，但为了兼容性而被保留的。
-- 多重[`aria-*`](/zh-CN/docs/Web/Accessibility/ARIA) 属性，用于改善可访问性。
+- 多重[`aria-*`](/zh-CN/docs/Web/Accessibility/ARIA) 属性，用于改善无障碍。
 - [事件处理程序](/zh-CN/docs/Web/Guide/Events/Event_handlers) 属性：**`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
 
 ## 全局属性列表

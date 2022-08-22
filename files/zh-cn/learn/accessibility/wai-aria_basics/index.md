@@ -58,7 +58,7 @@ slug: learn/Accessibility/WAI-ARIA_basics
 
 ### 进入 WAI-ARIA
 
-[WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 是 W3C 编写的规范，定义了一组可用于其他元素的 HTML 特性，用于提供额外的语义化以及改善缺乏的可访问性。以下是规范中三个主要的特性：
+[WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 是 W3C 编写的规范，定义了一组可用于其他元素的 HTML 特性，用于提供额外的语义化以及改善缺乏的无障碍。以下是规范中三个主要的特性：
 
 - **角色** — 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
 - **属性** — 我们能通过定义一些属性给元素，让他们具备更多的语义。例如： `aria-required="true"` 意味着元素在表单上是必填的。然而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于[`labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)引用作为屏幕阅读器指定的 label 内容 ，多个也可以。当然，下面这个代码是不行的： `<label for="input">` 。举个例子：你可以用 `aria-labelledby` 指定包含在 a 标签中的 key 描述{{htmlelement("div")}} 是多个 table 表格的 label，或者将它指定为 img 标签的 alt 内容 — 而无需重复在每一个 img 里头定义。如果迷糊了，你可以在这里看到例子： [Text alternatives](/en-US/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives).
@@ -86,7 +86,7 @@ slug: learn/Accessibility/WAI-ARIA_basics
 
 我们目的不是详细介绍所有的 WAI-ARIA 特性，以及它大部分支持的细节。相反，介绍最主要的 WAI-ARIA 功能。我们没有提到的任何支持细节，您可以假定该特性得到了良好的支持。我们将清楚地介绍例外情况。
 
-> **备注：** 一些 JavaScript 库支持 WAI-ARIA，意味着生成 UI 界面时，例如复杂的表单控件，他们会添加 ARIA 属性来优化它的无障碍特性。如果你再找一些第三方 JavaScript 解决方案来进行快速的 UI 开发，当你做选择的时候，必须重视 UI 小部件的可访问性。一个良好的例子就是 jQuery UI (请看 [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/) 还有 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)。
+> **备注：** 一些 JavaScript 库支持 WAI-ARIA，意味着生成 UI 界面时，例如复杂的表单控件，他们会添加 ARIA 属性来优化它的无障碍特性。如果你再找一些第三方 JavaScript 解决方案来进行快速的 UI 开发，当你做选择的时候，必须重视 UI 小部件的无障碍。一个良好的例子就是 jQuery UI (请看 [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/) 还有 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)。
 
 ### 何时你应使用 WAI-ARIA?
 
@@ -95,7 +95,7 @@ slug: learn/Accessibility/WAI-ARIA_basics
 1. **路标/地标**（**Signposts/Landmarks**）**：** ARIA 的 `角色` 属性值可以作为地标来复制 HTML5 元素的语义化（例如 nav tag）。或者超越 HTML5 的语义，给不同的功能块提供「路标」，例如 `search`, `tabgroup`, `tab`, `listbox` 等等 。
 2. **动态的内容更新：** 屏幕阅读器往往难以报告一直变化的内容，用无障碍特性我们能使用 `aria-live` 来通知屏幕阅读器某一部分的内容更新了。例如[XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) 或者 [DOM APIs](/en-US/docs/Web/API/Document_Object_Model)。
 3. **优化键盘的无障碍操作**: 默认的 HTML 元素是具有自带的键盘辅助功能的。当其他元素与 JavaScript 一起进行交互时，键盘的辅助功能和屏幕阅读器的报告会因此收到影响（例如你将会难以用 tab 到达理想的位置）。这是无法避免的，WAI-ARIA 提供了提供了一种允许其他元素获得焦点的方法（使用 `tabindex`）。
-4. **非语义控件的可访问性**：当一系列嵌套的 `<div>` 与 CSS / JavaScript 一起用于创建复杂的 UI 功能，或者通过 JavaScript 大大地增强或者更改原生的控件，可访问性将会变得极其困难——屏幕阅读器将会难以找到语义内容线索。在这种情况下，AIRA 可以帮助提供缺少了的功能，例如 `button`, `listbox`，或者 `tabgroup`，另外和 aria-required 或 aria-posinset 这样的属性可以提供有关功能的更多线索。
+4. **非语义控件的无障碍**：当一系列嵌套的 `<div>` 与 CSS / JavaScript 一起用于创建复杂的 UI 功能，或者通过 JavaScript 大大地增强或者更改原生的控件，无障碍将会变得极其困难——屏幕阅读器将会难以找到语义内容线索。在这种情况下，AIRA 可以帮助提供缺少了的功能，例如 `button`, `listbox`，或者 `tabgroup`，另外和 aria-required 或 aria-posinset 这样的属性可以提供有关功能的更多线索。
 
 注意：**你只在需要的情况下使用无障碍特性！**理想的情况下，你只要用原生的 HTML 来实现屏幕阅读器所需的语义化内容即可。有些时候这是不可能的，一来是你对于代码的整体的控制是有限的，另一方面是总会有复杂到原生 HTML 无法支持的功能需要你实现。在这个场景下，WAI-ARIA 将会变成有价值的可访问优化功能。
 
@@ -181,7 +181,7 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 
 除此之外，为了让 IE8 等旧版浏览器的用户更容易访问该网站，ARIA 角色的使用就很值得了。如果由于某种原因，你的网站仅使用\<div> 构建，那么你肯定很需要用 ARIA 角色以提供所需的语义！
 
-搜索表单的改进语义表明当超出 HTML5 中可用的语义时 ARIA 可以实现的功能。你接下来可以看到这些语义和 ARIA 属性的强大功能，尤其是 [非语义控件的可访问性](#非语义控件的可访问性)那一段。接下来我们将明白 ARIA 如何在进行动态内容更新时给我们帮助。
+搜索表单的改进语义表明当超出 HTML5 中可用的语义时 ARIA 可以实现的功能。你接下来可以看到这些语义和 ARIA 属性的强大功能，尤其是 [非语义控件的无障碍](#非语义控件的无障碍)那一段。接下来我们将明白 ARIA 如何在进行动态内容更新时给我们帮助。
 
 ### 动态内容更新
 
@@ -241,7 +241,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 ### **优化键盘的无障碍操作**
 
-正如上下文中其他几处讨论的，HTML 在可访问性方面的关键优势之一是按钮，表单控件和链接等功能的内置键盘可访问性。平时你可以使用 Tab 键在控件之间移动，使用 Enter / Return 键选择或激活控件，偶尔也可以根据需要使用其他控件（例如上下光标在`<select>` 框中的选项之间移动）。
+正如上下文中其他几处讨论的，HTML 在无障碍方面的关键优势之一是按钮，表单控件和链接等功能的内置键盘无障碍。平时你可以使用 Tab 键在控件之间移动，使用 Enter / Return 键选择或激活控件，偶尔也可以根据需要使用其他控件（例如上下光标在`<select>` 框中的选项之间移动）。
 
 但是在一些时候，你最终还是得编写代码去使用非语义元素作为按钮（或其他类型的控件），或者使用可聚焦控件来达到错误的目的。您可能正在尝试修复一些您之前的错误代码，或者您可能正在构建某种需要它的复杂小部件。
 
@@ -253,9 +253,9 @@ var intervalID = window.setInterval(showQuote, 10000);
 我们更详细地讨论了这一点，并在 HTML 辅助功能文章中显示了一个典型的实现
 ——请看 [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in).
 
-### 非语义控件的可访问性
+### 非语义控件的无障碍
 
-当一系列嵌套的 `<div>`s 与 CSS / JavaScript 一起用于创建复杂的 UI 功能，或者通过 JavaScript 大大地增强或者更改原生的控件，不仅键盘可访问性受损。而且如果没有语义或其他线索，屏幕阅读器用户会发现很难弄清楚该功能的作用。在这种情况下，ARIA 可以帮助提供那些缺失的语义。
+当一系列嵌套的 `<div>`s 与 CSS / JavaScript 一起用于创建复杂的 UI 功能，或者通过 JavaScript 大大地增强或者更改原生的控件，不仅键盘无障碍受损。而且如果没有语义或其他线索，屏幕阅读器用户会发现很难弄清楚该功能的作用。在这种情况下，ARIA 可以帮助提供那些缺失的语义。
 
 #### 表单验证和错误显示
 
@@ -268,7 +268,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 </div>
 ```
 
-- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自动将其转变为实时区域，所以它一变化就会念出来。也语义化地说明了这是一个 alert 信息（重要的 时间/上下文 敏感信息），而且展现了一种更好，更加易于读取的警告用户的方式（模态警告例如 [`alert()`](/en-US/docs/Web/API/Window/alert) 的调用会导致一系列的可访问性问题，详情请看[Popup Windows](http://webaim.org/techniques/javascript/other#popups) ）。
+- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自动将其转变为实时区域，所以它一变化就会念出来。也语义化地说明了这是一个 alert 信息（重要的 时间/上下文 敏感信息），而且展现了一种更好，更加易于读取的警告用户的方式（模态警告例如 [`alert()`](/en-US/docs/Web/API/Window/alert) 的调用会导致一系列的无障碍问题，详情请看[Popup Windows](http://webaim.org/techniques/javascript/other#popups) ）。
 - 一个 [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 的值为 `all` 会指示屏幕阅读器在对其进行任何更改时读出错误列表的内容 — 即为错误的增加或者消失。这是很有用的，因为用户需要知道具体哪个错误的出现或者消失，不仅仅是表单错误列表出现了增加或者删除。
 
 我们可以在 ARIA 的应用上更进一步，并提供更多验证上的帮助。例如支出某个字段是否必填，或者是要填的年龄的区间该是多少？
@@ -350,7 +350,7 @@ function toggleMusician(bool) {
 
 让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的 [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) 段落），你可以在 [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。
 
-这个例子在键盘可访问性方面运行良好 —— 你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的 —— 你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显 —— 屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
+这个例子在键盘无障碍方面运行良好 —— 你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的 —— 你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显 —— 屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
 
 为了优化它，我们创建了一个新的例子，名为： [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html) ([看在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). 我们更新了选项卡式界面的结构，如下所示：
 
