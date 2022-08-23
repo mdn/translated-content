@@ -47,4 +47,4 @@ for (const child of firstTier) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.documentElement")}}
+{{Compat}}

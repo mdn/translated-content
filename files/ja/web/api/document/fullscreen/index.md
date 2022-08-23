@@ -56,7 +56,7 @@ function isDocumentInFullScreenMode() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.fullscreen")}}
+{{Compat}}
 
 ## 関連情報
 

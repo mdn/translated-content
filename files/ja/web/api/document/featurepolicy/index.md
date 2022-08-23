@@ -32,4 +32,4 @@ var policy = iframeElement.featurePolicy
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.featurePolicy")}}
+{{Compat}}

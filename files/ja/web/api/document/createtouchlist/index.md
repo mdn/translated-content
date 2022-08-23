@@ -67,7 +67,7 @@ var list2 = document.createTouchList(touch1, touch2);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createTouchList")}}
+{{Compat}}
 
 ## 関連情報
 

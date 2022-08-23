@@ -61,4 +61,4 @@ console.log(new XMLSerializer().serializeToString(doc));
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createProcessingInstruction")}}
+{{Compat}}

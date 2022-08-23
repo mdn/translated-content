@@ -64,7 +64,7 @@ document.onpointerlockchange = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointerlockchange_event")}}
+{{Compat}}
 
 ## 関連情報
 

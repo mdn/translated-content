@@ -89,7 +89,7 @@ document.open(type, replace)
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.open")}}
+{{Compat}}
 
 ## See also
 

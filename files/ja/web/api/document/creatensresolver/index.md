@@ -43,7 +43,7 @@ nsResolver = document.createNSResolver(node);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createNSResolver")}}
+{{Compat}}
 
 ## 関連情報
 

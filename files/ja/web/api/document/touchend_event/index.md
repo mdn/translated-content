@@ -49,7 +49,7 @@ translation_of: Web/API/Document/touchend_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.touchend_event")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -54,7 +54,7 @@ var objRef = document.head;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.head")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -44,7 +44,7 @@ document.fonts.ready.then(function() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.fonts")}}
+{{Compat}}
 
 ## 関連情報
 

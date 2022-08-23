@@ -33,4 +33,4 @@ nodeList = document.embeds
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.embeds")}}
+{{Compat}}

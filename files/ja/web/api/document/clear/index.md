@@ -27,4 +27,4 @@ document.clear();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.clear")}}
+{{Compat}}

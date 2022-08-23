@@ -65,7 +65,7 @@ document.onpointerenter = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointerenter_event")}}
+{{Compat}}
 
 ## 関連情報
 

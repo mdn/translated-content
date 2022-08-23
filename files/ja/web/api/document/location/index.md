@@ -46,7 +46,7 @@ console.log(document.location);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.location")}}
+{{Compat}}
 
 ## 関連情報
 

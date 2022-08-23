@@ -35,4 +35,4 @@ var referrer = document.referrer;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.referrer")}}
+{{Compat}}

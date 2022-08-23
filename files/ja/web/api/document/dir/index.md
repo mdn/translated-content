@@ -28,7 +28,7 @@ document.dir = dirStr
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.dir")}}
+{{Compat}}
 
 ## 関連情報
 

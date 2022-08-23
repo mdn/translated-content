@@ -86,4 +86,4 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.lastModified")}}
+{{Compat}}

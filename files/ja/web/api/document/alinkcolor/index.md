@@ -36,4 +36,4 @@ Mozilla Firefox では、このプロパティの既定値は赤 (16 進で `#ee
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.alinkColor")}}
+{{Compat}}

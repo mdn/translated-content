@@ -44,7 +44,7 @@ if (document.currentScript.async) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.currentScript")}}
+{{Compat}}
 
 ## 関連情報
 
