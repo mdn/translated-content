@@ -8,7 +8,7 @@ translation_of: Web/API/MediaDeviceInfo
 ---
 {{APIRef("WebRTC")}}
 
-**`MediaDevicesInfo`**インタフェースは 1 つメディアが入力か出力のデバイスであるかを示す情報を含みます。{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}の呼び出しによって取得できるデバイスの一覧は、`MediaDeviceInfo`オブジェクトの配列であり、1 つの要素が 1 つのメディアデバイスになります。
+**`MediaDevicesInfo`** インタフェースは 1 つメディアが入力か出力のデバイスであるかを示す情報を含みます。{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}の呼び出しによって取得できるデバイスの一覧は、`MediaDeviceInfo`オブジェクトの配列であり、1 つの要素が 1 つのメディアデバイスになります。
 
 ## プロパティ
 
@@ -73,7 +73,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
 | {{SpecName('Media Capture', '#idl-def-MediaDeviceInfo', 'MediaDevicesInfo')}} | {{Spec2('Media Capture')}} | 初版     |
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("api.MediaDeviceInfo")}}
 
