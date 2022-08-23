@@ -56,10 +56,10 @@ USA
 
 The HTML above outputs:
 
-Mozilla Foundation
-1981 Landings Drive
-Building K
-Mountain View, CA 94043-0801
+Mozilla Foundation  
+1981 Landings Drive  
+Building K  
+Mountain View, CA 94043-0801  
 USA
 
 ## 规范
