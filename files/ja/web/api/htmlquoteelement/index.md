@@ -34,10 +34,10 @@ _固有のメソッドなし。親である{{domxref("HTMLElement")}}からメ�
 | {{SpecName('DOM2 HTML', 'html.html#ID-70319763', 'HTMLQuoteElement')}}                                 | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}}より変更なし。     |
 | {{SpecName('DOM1', 'level-one-html.html#ID-70319763', 'HTMLQuoteElement')}}                         | {{Spec2('DOM1')}}         | 初回定義。                                     |
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("api.HTMLQuoteElement")}}
 
-## 関連項目
+## 関連情報
 
 - 本インターフェースを実装する HTML 要素: {{HTMLElement("blockquote")}}及び{{HTMLElement("q")}}，然し{{HTMLElement("cite")}}ではない。

@@ -22,15 +22,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-## Specifications
+## 仕様書
 
 - [HTML Living Standard](https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement)
 - [HTML 5.2 (W3C Proposed Recommendation)](https://www.w3.org/TR/html52/interactive-elements.html#htmldetailselement)
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat("api.HTMLDetailsElement")}}
 
-## See also
+## 関連情報
 
 - The HTML element implementing this interface: {{HTMLElement("details")}}

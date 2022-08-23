@@ -26,6 +26,6 @@ var myform = document.forms["myform"];
 myform.method = "post";
 ```
 
-## 仕様
+## 仕様書
 
 - [DOM Level 2 HTML: method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-82545539)

@@ -30,7 +30,7 @@ This interface doesn't allow to manipulate the CSS it contains (in most case). T
 
 固有のメソッドは持ちません。
 
-## 仕様
+## 仕様書
 
 | 仕様書                                                                                                                   | 策定状況                         | コメント                                                        |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------- |
@@ -39,7 +39,7 @@ This interface doesn't allow to manipulate the CSS it contains (in most case). T
 | {{SpecName('DOM2 HTML', 'html.html#ID-16428977', 'HTMLStyleElement')}}                             | {{Spec2('DOM2 HTML')}}     | {{domxref("LinkStyle")}} インタフェースからの継承の追加 |
 | {{SpecName('DOM1', 'level-one-html.html#ID-16428977', 'HTMLStyleElement')}}                     | {{Spec2('DOM1')}}         | 最初期の定義                                                    |
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.HTMLStyleElement")}}
 

@@ -26,16 +26,16 @@ var nodeList = object.getDistributedNodes()
 var nodes = myShadowObject.getDistributedNodes();
 ```
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                             | 状態                             | コメント |
 | -------------------------------------------------------------------------------- | -------------------------------- | -------- |
 | {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} | 初期定義 |
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.HTMLShadowElement.getDistributedNodes")}}
 
-## 関連項目
+## 関連情報
 
 - [HTMLShadowElement](/ja/docs/Web/API/HTMLShadowElement)

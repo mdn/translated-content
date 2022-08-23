@@ -58,6 +58,6 @@ alert('InlineStyle: ' + document.getElementById('InlineStyle').media); // 'scree
 | {{SpecName('DOM2 HTML', 'html.html#ID-16428977', 'HTMLStyleElement')}}                 | {{Spec2('DOM2 HTML')}}     |          |
 | {{SpecName('DOM1', 'level-one-html.html#ID-16428977', 'HTMLStyleElement')}}         | {{Spec2('DOM1')}}         | 初回定義 |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.HTMLStyleElement.media")}}

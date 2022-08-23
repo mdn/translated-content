@@ -18,7 +18,7 @@ translation_of: Web/API/HTMLTitleElement
 
 固有のメソッドはありません。{{domxref("HTMLElement")}} からの継承メソッドを持ちます。
 
-## 仕様
+## 仕様書
 
 | 仕様書                                                                                                                   | 策定状況                         | コメント                                      |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
@@ -27,7 +27,7 @@ translation_of: Web/API/HTMLTitleElement
 | {{SpecName('DOM2 HTML', 'html.html#ID-79243169', 'HTMLTitleElement')}}                             | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} より変更無し     |
 | {{SpecName('DOM1', 'level-one-html.html#ID-79243169', 'HTMLTitleElement')}}                     | {{Spec2('DOM1')}}         | 最初期の定義                                  |
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.HTMLTitleElement")}}
 

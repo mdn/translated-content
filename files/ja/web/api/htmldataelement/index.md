@@ -31,10 +31,10 @@ _固有のメソッドなし。親である{{domxref("HTMLElement")}}からメ�
 | {{SpecName('HTML WHATWG', "#htmldataelement", "HTMLDataElement")}}                                 | {{Spec2('HTML WHATWG')}} |      |
 | {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', 'HTMLDataElement')}} | {{Spec2('HTML5 W3C')}}     |      |
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("api.HTMLDataElement")}}
 
-## 関連項目
+## 関連情報
 
 - 本インターフェースを実装する HTML 要素: {{HTMLElement("data")}}.
