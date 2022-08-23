@@ -43,7 +43,7 @@ slug: Web/API/Streams_API/Concepts
 
 ## 可写流
 
-一个 **可写流**（Writable stream）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink**（底层接收器）的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
+一个**可写流**（Writable stream）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink**（底层接收器）的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
 
 数据由一个 **writer** 写入流中，每次只写入一个分块。分块和可读流的 reader 一样可以有多种类型。你可以用任何方式生成要被写入的块；writer 加上相关的代码称为 **producer**。
 
