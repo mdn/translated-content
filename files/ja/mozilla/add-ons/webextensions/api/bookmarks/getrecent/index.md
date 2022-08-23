@@ -13,60 +13,53 @@ tags:
   - getRecent
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.getRecent()</code></strong> は、最近に追加されたブックマークを指定した最大個数まで取得し、{{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} オブジェクトの配列としてコールバック関数に渡します。</p>
+**`bookmarks.getRecent()`** は、最近に追加されたブックマークを指定した最大個数まで取得し、{{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} オブジェクトの配列としてコールバック関数に渡します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">browser.bookmarks.getRecent(
+```js
+browser.bookmarks.getRecent(
   numberOfItems, // 整数
   callback       // 関数
 )
-</pre>
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>numberOfItems</code></dt>
- <dd>取得する要素の最大個数を指定する整数です。最近追加された要素のうち、ここで指定した個数までが戻り値のリストに含まれます。</dd>
- <dt><code>callback</code></dt>
- <dd>リストが取得された際に実行される関数です。この関数には以下の引数が渡ります。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>results</code></dt>
-  <dd>各要素が 1 つのブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの {{jsxref("array")}}</dd>
- </dl>
- </dd>
-</dl>
+- `numberOfItems`
+  - : 取得する要素の最大個数を指定する整数です。最近追加された要素のうち、ここで指定した個数までが戻り値のリストに含まれます。
+- `callback`
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+  - : リストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
 
-<p>{{Compat("webextensions.api.bookmarks.getRecent")}}</p>
+    - `results`
+      - : 各要素が 1 つのブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの {{jsxref("array")}}
 
-<h2 id="使用例">使用例</h2>
+## ブラウザ実装状況
 
-<p id="Find_the_most_recently_added_bookmark">以下の例は、直近に追加されたブックマークの URL を出力するものです。</p>
+{{Compat("webextensions.api.bookmarks.getRecent")}}
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">gotMostRecent</span><span class="punctuation token">(</span>bookmarkItems<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>bookmarkItems<span class="punctuation token">.</span>length<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>bookmarkItems<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+## 使用例
 
-chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">getRecent</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">,</span> gotMostRecent<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+以下の例は、直近に追加されたブックマークの URL を出力するものです。
 
-<p>{{WebExtExamples}}</p>
+```js
+function gotMostRecent(bookmarkItems) {
+  if (bookmarkItems.length) {
+    console.log(bookmarkItems[0].url);
+  }
+}
 
-<div class="note"><strong>謝辞</strong>
+chrome.bookmarks.getRecent(1, gotMostRecent);
+```
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/bookmarks#method-getRecent"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードに基づいて作成されています。</p>
+{{WebExtExamples}}
 
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getRecent) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +87,3 @@ chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation 
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

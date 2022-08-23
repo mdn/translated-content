@@ -11,45 +11,33 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p>このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。このAPI は <a class="external external-icon" href="https://developer.chrome.com/extensions/devtools" rel="noopener">Chrome devtools APIs</a> に基づいていますが、Firefoxでは実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 <a href="/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs">Limitations of the devtools APIs</a> を見てください。</p>
-</div>
+> **Note:** このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。
 
-<p><code>devtools.inspectedWindow</code> API によって開発ツール拡張機能では開発ツールが割当てられたウィンドウと相互作用できます。</p>
+`devtools.inspectedWindow` API によって開発ツール拡張機能では開発ツールが割当てられたウィンドウと相互作用できます。
 
-<p>すべての <code>devtools</code> API と同様に、この API はmanifest.json <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えば拡張機能が作ったパネル自身のドキュメント)の中だけでコードを利用できます。詳細は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">developer tools の拡張</a> を見てください。</p>
+すべての `devtools` API と同様に、この API は manifest.json [devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えば拡張機能が作ったパネル自身のドキュメント)の中だけでコードを利用できます。詳細は [developer tools の拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) を見てください。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId">devtools.inspectedWindow.tabId</a></code></dt>
- <dd>開発ツールが付属しているウィンドウの ID</dd>
-</dl>
+- [`devtools.inspectedWindow.tabId`](/ja/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId)
+  - : 開発ツールが付属しているウィンドウの ID
 
-<h2 id="Functions" name="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval">devtools.inspectedWindow.eval()</a></code></dt>
- <dd>ターゲットウィンドウ内の  JavaScript を評価する</dd>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload">devtools.inspectedWindow.reload()</a></code></dt>
- <dd>ターゲットウィンドウのドキュメントを再読み込みする</dd>
-</dl>
+- [`devtools.inspectedWindow.eval()`](/ja/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval)
+  - : ターゲットウィンドウ内の JavaScript を評価する
+- [`devtools.inspectedWindow.reload()`](/ja/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload)
+  - : ターゲットウィンドウのドキュメントを再読み込みする
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.devtools.inspectedWindow")}}{{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.devtools.inspectedWindow")}}{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/devtools_inspectedWindow"><code>chrome.devtools.inspectedWindow</code></a> API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,4 +65,3 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

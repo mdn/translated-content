@@ -12,41 +12,41 @@ tags:
   - removeCache
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>ブラウザのキャッシュを消去します。</p>
+ブラウザのキャッシュを消去します。
 
-<p>この関数は{{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクトを引数に取りますが無視されます。そのためこの関数を使うとすべてのキャッシュが消去されるため注意してください。</p>
+この関数は{{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクトを引数に取りますが無視されます。そのためこの関数を使うとすべてのキャッシュが消去されるため注意してください。
 
-<p>この関数は <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var removing = browser.browsingData.removeCache(
+```js
+var removing = browser.browsingData.removeCache(
   removalOptions            // RemovalOptions オブジェクト
 )
-</pre>
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>removalOptions </code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメータは無視されます。</dd>
-</dl>
+- `removalOptions `{{optional_inline}}
+  - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメータは無視されます。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>消去が完了した後に実行される <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> が返されます。この Promise は引数を持ちません。エラーが発生した場合はエラーメッセージを引数にしてrejectを呼び出します。</p>
+消去が完了した後に実行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) が返されます。この Promise は引数を持ちません。エラーが発生した場合はエラーメッセージを引数にして reject を呼び出します。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.browsingData.removeCache")}}</p>
+{{Compat("webextensions.api.browsingData.removeCache")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>ブラウザキャッシュを消去します。</p>
+ブラウザキャッシュを消去します。
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -55,19 +55,14 @@ function onError(error) {
 }
 
 browser.browsingData.removeCache({}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API に基づいています。</p>
-
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは  Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +90,3 @@ then(onRemoved, onError);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

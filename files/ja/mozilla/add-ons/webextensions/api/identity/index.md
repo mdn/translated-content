@@ -10,72 +10,60 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>identity API を使って <a href="https://oauth.net/2/">OAuth2</a> の認証コードやアクセストークンを取得し、拡張機能が OAuth2 での認証 (Google や Facebook アカウントなど) をサポートするサービスからユーザーデータを取得できるようにします。</p>
+identity API を使って [OAuth2](https://oauth.net/2/) の認証コードやアクセストークンを取得し、拡張機能が OAuth2 での認証 (Google や Facebook アカウントなど) をサポートするサービスからユーザーデータを取得できるようにします。
 
-<p>OAuth2 フローがどのように機能するかの詳細は、サービスプロバイダーごとに異なるため、特定のサービスプロバイダーにおいてこの API を使用するには、各サービスごとのドキュメントを参照する必要があります。例:</p>
+OAuth2 フローがどのように機能するかの詳細は、サービスプロバイダーごとに異なるため、特定のサービスプロバイダーにおいてこの API を使用するには、各サービスごとのドキュメントを参照する必要があります。例:
 
-<ul>
- <li><a href="https://developers.google.com/identity/protocols/OAuth2UserAgent">https://developers.google.com/identity/protocols/OAuth2UserAgent</a></li>
- <li><a href="https://developer.github.com/v3/oauth/">https://developer.github.com/v3/oauth/</a></li>
-</ul>
+- <https://developers.google.com/identity/protocols/OAuth2UserAgent>
+- <https://developer.github.com/v3/oauth/>
 
-<p>identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提供します。この関数は、必要に応じて、サービスのユーザー認証を行い、また、拡張機能にデータへのアクセスを認可するかどうかをユーザーに確認します。処理が完了すると、プロバイダーによって、アクセストークンか認可コードのどちらかが取得されます。</p>
+identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提供します。この関数は、必要に応じて、サービスのユーザー認証を行い、また、拡張機能にデータへのアクセスを認可するかどうかをユーザーに確認します。処理が完了すると、プロバイダーによって、アクセストークンか認可コードのどちらかが取得されます。
 
-<p>そして、OAuth2 フローを実施して取得した検証済みアクセストークンを、HTTP リクエスト内で使用することで、拡張機能はユーザーから認可された範囲でデータにアクセスできるようになります。</p>
+そして、OAuth2 フローを実施して取得した検証済みアクセストークンを、HTTP リクエスト内で使用することで、拡張機能はユーザーから認可された範囲でデータにアクセスできるようになります。
 
-<p>この API を利用するためには、"identity" <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API のパーミッション</a>が必要です。</p>
+この API を利用するためには、"identity" [API のパーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
 
-<h2 id="Setup" name="Setup">セットアップ</h2>
+## セットアップ
 
-<p>拡張機能を公開する前に、いくつかの設定が必要です。</p>
+拡張機能を公開する前に、いくつかの設定が必要です。
 
-<h3 id="Getting_the_redirect_URL" name="Getting_the_redirect_URL">リダイレクトURL を取得する</h3>
+### リダイレクト URL を取得する
 
-<p><a href="https://www.oauth.com/oauth2-servers/redirect-uris/">リダイレクト URL </a>は、アクセストークンまたは認可コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。</p>
+[リダイレクト URL ](https://www.oauth.com/oauth2-servers/redirect-uris/)は、アクセストークンまたは認可コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。
 
-<p>{{WebExtAPIRef("identity.getRedirectURL()")}}を呼び出すことでリダイレクトURL を取得できます。この関数は、アドオン ID からリダイレクト URL を生成するため、使用したい場合、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを<a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">一時的にインストール</a>するたびに、異なるリダイレクト URL を取得することになります)。</p>
+{{WebExtAPIRef("identity.getRedirectURL()")}}を呼び出すことでリダイレクト URL を取得できます。この関数は、アドオン ID からリダイレクト URL を生成するため、使用したい場合、[`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを[一時的にインストール](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)するたびに、異なるリダイレクト URL を取得することになります)。
 
-<p><code>identity.getRedirectURL()</code> によって返されるリダイレクト URL の利用が必須というわけではありません。独自の URL を指定することもできます。サービスがリダイレクトするものであれば何でもかまいません。ただし、ドメインは自分で管理しているものでなければいけません。</p>
+`identity.getRedirectURL()` によって返されるリダイレクト URL の利用が必須というわけではありません。独自の URL を指定することもできます。サービスがリダイレクトするものであれば何でもかまいません。ただし、ドメインは自分で管理しているものでなければいけません。
 
-<p>リダイレクト URL は 2 つの場面で利用されます:</p>
+リダイレクト URL は 2 つの場面で利用されます:
 
-<ul>
- <li>拡張機能を OAuth2 クライアントとして登録するとき</li>
- <li><code>identity.launchWebAuthFlow()</code> の <code>url</code> 引数に URL パラメーターとして渡すとき</li>
-</ul>
+- 拡張機能を OAuth2 クライアントとして登録するとき
+- `identity.launchWebAuthFlow()` の `url` 引数に URL パラメーターとして渡すとき
 
-<h3 id="Registering_your_extension" name="Registering_your_extension">拡張機能を登録する</h3>
+### 拡張機能を登録する
 
-<p>サービスプロバイダー経由で OAuth2 を使用する前に、プロバイダーに対して、拡張機能を OAuth2 クライアントとして登録する必要があります。</p>
+サービスプロバイダー経由で OAuth2 を使用する前に、プロバイダーに対して、拡張機能を OAuth2 クライアントとして登録する必要があります。
 
-<p>サービスプロバイダーごとにやり方が異なることがありますが、一般的には、プロバイダーの ウェブサイトにおいて、拡張機能を登録することを意味します。この登録手順の中で、自身のリダイレクトURLを登録し、プロバイダーからクライアント ID (場合によっては、シークレットも) を受け取ります。そして、この両方を {{WebExtAPIRef("identity.launchWebAuthFlow()")}} に渡す必要があります。</p>
+サービスプロバイダーごとにやり方が異なることがありますが、一般的には、プロバイダーの ウェブサイトにおいて、拡張機能を登録することを意味します。この登録手順の中で、自身のリダイレクト URL を登録し、プロバイダーからクライアント ID (場合によっては、シークレットも) を受け取ります。そして、この両方を {{WebExtAPIRef("identity.launchWebAuthFlow()")}} に渡す必要があります。
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("identity.getRedirectURL()")}}</dt>
- <dd>リダイレクト URL を取得します。</dd>
- <dt>{{WebExtAPIRef("identity.launchWebAuthFlow()")}}</dt>
- <dd>ウェブ認証フローを開始します。</dd>
-</dl>
+- {{WebExtAPIRef("identity.getRedirectURL()")}}
+  - : リダイレクト URL を取得します。
+- {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
+  - : ウェブ認証フローを開始します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.identity")}}</p>
+{{Compat("webextensions.api.identity")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/identity"><code>chrome.identity</code></a> API に基づいています。</p>
-
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,4 +91,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

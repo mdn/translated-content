@@ -12,38 +12,28 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>イベントをディスパッチする API から使われる共通の型です。</p>
+イベントをディスパッチする API から使われる共通の型です。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("events.Rule")}}</dt>
- <dd>イベント処理用の宣言的ルールを記述します。</dd>
- <dt>{{WebExtAPIRef("events.Event")}}</dt>
- <dd>Chrome イベントにリスナーを追加、削除できるオブジェクト。</dd>
- <dt>{{WebExtAPIRef("events.UrlFilter")}}</dt>
- <dd>いろいろな条件で URL をフィルターする。所与の条件のいずれかがマッチした場合、フィルター全体がマッチする。</dd>
-</dl>
+- {{WebExtAPIRef("events.Rule")}}
+  - : イベント処理用の宣言的ルールを記述します。
+- {{WebExtAPIRef("events.Event")}}
+  - : Chrome イベントにリスナーを追加、削除できるオブジェクト。
+- {{WebExtAPIRef("events.UrlFilter")}}
+  - : いろいろな条件で URL をフィルターする。所与の条件のいずれかがマッチした場合、フィルター全体がマッチする。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.events")}}</p>
+{{Compat("webextensions.api.events")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.events`](https://developer.chrome.com/extensions/events) API に基づいています。また、このドキュメントは [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/events"><code>chrome.events</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-
-<p> </p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,4 +61,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

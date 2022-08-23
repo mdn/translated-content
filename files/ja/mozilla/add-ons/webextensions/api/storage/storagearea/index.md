@@ -3,44 +3,36 @@ title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>StorageArea はストレージ領域を表すオブジェクトです。</p>
+StorageArea はストレージ領域を表すオブジェクトです。
 
-<h2 id="型">型</h2>
+## 型
 
-<p>StorageAreaはオブジェクト型です。</p>
+StorageArea はオブジェクト型です。
 
-<h2 id="関数">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()")}}</dt>
- <dd>ストレージ領域から1つ以上のアイテムを取得します。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}</dt>
- <dd>ストレージ領域に格納されている1つ以上のアイテムで使用されているストレージサイズ(バイト単位)を取得します。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()")}}</dt>
- <dd>1つ以上のアイテムをストレージ領域に保存します。既にアイテムが存在する場合は値が上書きされます。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()")}}</dt>
- <dd>1つ以上のアイテムをストレージ領域から削除します。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()")}}</dt>
- <dd>全てのアイテムをストレージ領域から削除します。</dd>
-</dl>
+- {{WebExtAPIRef("storage.StorageArea.get()")}}
+  - : ストレージ領域から 1 つ以上のアイテムを取得します。
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
+  - : ストレージ領域に格納されている 1 つ以上のアイテムで使用されているストレージサイズ(バイト単位)を取得します。
+- {{WebExtAPIRef("storage.StorageArea.set()")}}
+  - : 1 つ以上のアイテムをストレージ領域に保存します。既にアイテムが存在する場合は値が上書きされます。
+- {{WebExtAPIRef("storage.StorageArea.remove()")}}
+  - : 1 つ以上のアイテムをストレージ領域から削除します。
+- {{WebExtAPIRef("storage.StorageArea.clear()")}}
+  - : 全てのアイテムをストレージ領域から削除します。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.storage.StorageArea")}}</p>
+{{Compat("webextensions.api.storage.StorageArea")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage#type-StorageArea) API に模度づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>このAPIはChromium <a href="https://developer.chrome.com/extensions/storage#type-StorageArea"><code>chrome.storage</code></a> APIに模度づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> におけるChromiumのコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況はMicrosoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States Licenseに従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -68,4 +60,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

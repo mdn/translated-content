@@ -3,46 +3,36 @@ title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>ブラウザウィンドウの状態。</p>
+ブラウザウィンドウの状態。
 
-<h2 id="型">型</h2>
+## 型
 
-<p>値の方は<code>strings</code>です。可能な値は以下:</p>
+値の方は`strings`です。可能な値は以下:
 
-<dl>
- <dt><code>"normal"</code></dt>
- <dd>ウィンドウはデフォルトかユーザ指定のサイズ。</dd>
- <dt><code>"minimized"</code></dt>
- <dd>ウィンドウはアイコンとしてタスクバーの中に表示(最小化)。</dd>
- <dt><code>"maximized"</code></dt>
- <dd>ウィンドウはシステムエリアやOSによる予約なしに画面を満たしている(最大化)。</dd>
- <dt><code>"fullscreen"</code></dt>
- <dd>ウィンドウはフルスクリーンアプリケーションとして稼働しているか、タブの内容が<a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a>を利用している(全画面)。</dd>
- <dt><code>"docked"</code></dt>
- <dd>A docked window occupies a fixed position relative to other windows owned by the same application.</dd>
-</dl>
+- `"normal"`
+  - : ウィンドウはデフォルトかユーザ指定のサイズ。
+- `"minimized"`
+  - : ウィンドウはアイコンとしてタスクバーの中に表示(最小化)。
+- `"maximized"`
+  - : ウィンドウはシステムエリアや OS による予約なしに画面を満たしている(最大化)。
+- `"fullscreen"`
+  - : ウィンドウはフルスクリーンアプリケーションとして稼働しているか、タブの内容が[Fullscreen API](/ja/docs/Web/API/Fullscreen_API)を利用している(全画面)。
+- `"docked"`
+  - : A docked window occupies a fixed position relative to other windows owned by the same application.
 
-<p>macOS compatibility: Beginning in macOS 10.10, the default maximizing behavior for windows changed to run applications as full screen applications instead of "zoomed" windows. <code>fullscreen</code> refers to both the browser running as a full screen application and when content in a tab uses the Fullscreen API.</p>
+macOS compatibility: Beginning in macOS 10.10, the default maximizing behavior for windows changed to run applications as full screen applications instead of "zoomed" windows. `fullscreen` refers to both the browser running as a full screen application and when content in a tab uses the Fullscreen API.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("webextensions.api.windows.WindowState")}}
 
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.windows.WindowState")}}</p>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#type-WindowState"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,4 +60,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

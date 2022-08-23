@@ -13,166 +13,145 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。例えば、次のような場面で使います。
 
-<div>このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。例えば、次のような場面で使います。</div>
+- [コンテンツスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)の中で、 [バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)からのメッセージを受け取る。
+- バックグラウントスクリプトの中で、コンテンツスクリプトからのメッセージを受け取る。
+- [オプションページ](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)や[ポップアップ](/ja/Add-ons/WebExtensions/User_interface_components#Popups)のスクリプトの中で、バックグラウンドスクリプトからのメッセージを受け取る。
+- バックグラウンドスクリプトの中で、オプションページやポップアップのスクリプトからのメッセージを受け取る。
 
+`onMessage` リスナーに受信させるメッセージを送るには、{{WebExtAPIRef("runtime.sendMessage()")}}、または (コンテンツスクリプトにメッセージを送るときは) {{WebExtAPIRef("tabs.sendMessage()")}} を使います。
 
+> **Note:** 同じ種類のメッセージに対する `onMessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。特定のリスナーへのメッセージ伝送を保証したいときは、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging) を使ってください。
 
-<ul>
- <li><a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">コンテンツスクリプト</a>の中で、 <a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">バックグラウンドスクリプト</a>からのメッセージを受け取る。</li>
- <li>バックグラウントスクリプトの中で、コンテンツスクリプトからのメッセージを受け取る。</li>
- <li><a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">オプションページ</a>や<a href="/ja/Add-ons/WebExtensions/User_interface_components#Popups">ポップアップ</a>のスクリプトの中で、バックグラウンドスクリプトからのメッセージを受け取る。</li>
- <li>バックグラウンドスクリプトの中で、オプションページやポップアップのスクリプトからのメッセージを受け取る。</li>
-</ul>
+メッセージ本体の他に、リスナーは次のものを受け取ります。
 
-<p><code>onMessage</code> リスナーに受信させるメッセージを送るには、{{WebExtAPIRef("runtime.sendMessage()")}}、または (コンテンツスクリプトにメッセージを送るときは) {{WebExtAPIRef("tabs.sendMessage()")}} を使います。</p>
+- `sender` オブジェクト。メッセージ送信側の詳細情報です。
+- `sendResponse` 関数。送信側への返信を送るために使います。
 
-<div class="blockIndicator note">
-<p>同じ種類のメッセージに対する <code>onMessage</code> リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。特定のリスナーへのメッセージ伝送を保証したいときは、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">コネクションベースのメッセージ</a> を使ってください。</p>
-</div>
+メッセージに対して同期的に返信するには、`sendResponse` 関数をリスナーの中で実行します。[例を参照してください](/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response)。
 
-<p>メッセージ本体の他に、リスナーは次のものを受け取ります。</p>
+非同期的に返信するには、二つの方法があります。
 
-<ul>
- <li><code>sender</code> オブジェクト。メッセージ送信側の詳細情報です。</li>
- <li><code>sendResponse</code> 関数。送信側への返信を送るために使います。</li>
-</ul>
+- イベントリスナーから `true` を返す。こうすることで、リスナーから復帰した後でも `sendResponse` 関数が有効なままになるため、後で実行することができます。[例を参照してください](/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse)。
+- イベントリスナーから `Promise` を返して、返信が準備できた後にそれを解決する (またはエラーの場合は拒否する)。[例を参照してください](/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise)。
 
-<p>メッセージに対して同期的に返信するには、<code>sendResponse</code> 関数をリスナーの中で実行します。<a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">例を参照してください</a>。</p>
+> **Warning:** `Promise` を返すほうがより望ましい方法です。`sendResponse` は [W3C 仕様から削除される予定です](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219)。 人気のある [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) ライブラリーは、すでに `sendResponse` 関数を実装から削除しました。
 
-<p>非同期的に返信するには、二つの方法があります。</p>
+> **Note:** また、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)を使うこともできます。
 
-<ul>
- <li>イベントリスナーから <code>true</code> を返す。こうすることで、リスナーから復帰した後でも <code>sendResponse</code> 関数が有効なままになるため、後で実行することができます。<a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse">例を参照してください</a>。</li>
- <li>イベントリスナーから <code>Promise</code> を返して、返信が準備できた後にそれを解決する (またはエラーの場合は拒否する)。<a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise">例を参照してください</a>。</li>
-</ul>
+## 構文
 
-<div class="warning">
-<p><code>Promise</code> を返すほうがより望ましい方法です。<code>sendResponse</code> は <a href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">W3C 仕様から削除される予定です</a>。 人気のある <a href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> ライブラリーは、すでに <code>sendResponse</code> 関数を実装から削除しました。</p>
-</div>
-
-<div class="blockIndicator note">
-<p>また、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">コネクションベースのメッセージ</a>を使うこともできます。</p>
-</div>
-
-<h2 id="構文">構文</h2>
-
-<pre class="syntaxbox brush:js">browser.runtime.onMessage.addListener(listener)
+```js
+browser.runtime.onMessage.addListener(listener)
 browser.runtime.onMessage.removeListener(listener)
 browser.runtime.onMessage.hasListener(listener)
-</pre>
+```
 
-<p>イベントには 3 つの関数があります。</p>
+イベントには 3 つの関数があります。
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>リスナーをこのイベントに追加する。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>このイベントの受け取りを中止する。<code>listener</code> 引数は削除するリスナーです。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd><code>listener</code> がこのイベントに登録されているかどうかを確認する。登録されている場合は <code>true</code> を、そうでない場合は <code>false</code> を返す。</dd>
-</dl>
+- `addListener(callback)`
+  - : リスナーをこのイベントに追加する。
+- `removeListener(listener)`
+  - : このイベントの受け取りを中止する。`listener` 引数は削除するリスナーです。
+- `hasListener(listener)`
+  - : `listener` がこのイベントに登録されているかどうかを確認する。登録されている場合は `true` を、そうでない場合は `false` を返す。
 
-<h2 id="addListener_の構文">addListener の構文</h2>
+## addListener の構文
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>このイベントが発生したときに実行されるリスナー関数。関数には次の引数が渡される。</p>
+- `function`
 
- <dl class="reference-values">
-  <dt><code>message</code></dt>
-  <dd><code>object</code> 型。メッセージ本体。これは JSON 化できるオブジェクトです。</dd>
- </dl>
+  - : このイベントが発生したときに実行されるリスナー関数。関数には次の引数が渡される。
 
- <dl class="reference-values">
-  <dt><code>sender</code></dt>
-  <dd>{{WebExtAPIRef('runtime.MessageSender')}} オブジェクト。メッセージの送信側を表します。</dd>
- </dl>
+    - `message`
+      - : `object` 型。メッセージ本体。これは JSON 化できるオブジェクトです。
 
- <dl class="reference-values">
-  <dt><code>sendResponse</code></dt>
-  <dd>
-  <p>メッセージに対する返信を送るために、最大で一回実行できる関数。この関数は引数を一つ受け取り、それは JSON 化できるオブジェクトのはずです。その引数はメッセージ送信側に返送されます。</p>
+    <!---->
 
-  <p>同じドキュメント中に <code>onMessage</code> リスナーが一つ以上ある場合、返信を返すことができるのは一つだけです。</p>
+    - `sender`
+      - : {{WebExtAPIRef('runtime.MessageSender')}} オブジェクト。メッセージの送信側を表します。
 
-  <p>同期的に返信するには、リスナー関数が復帰する前に <code>sendResponse</code> を実行します。非同期的に返信するには、次のどちらかを実行します。</p>
+    <!---->
 
-  <ul>
-   <li><code>sendResponse</code> に対する参照を保持したままリスナー関数から <code>true</code> を返す。そうすると、リスナー関数から復帰した後でも <code>sendResponse</code> を実行できます。</li>
-   <li>リスナー関数から <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返して、返信の準備ができたときにその Promise を解決する。こちらがより好ましい方法です。</li>
-  </ul>
-  </dd>
- </dl>
+    - `sendResponse`
 
- <p>リスナー関数は、Boolean か <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> のいずれかを返します。</p>
+      - : メッセージに対する返信を送るために、最大で一回実行できる関数。この関数は引数を一つ受け取り、それは JSON 化できるオブジェクトのはずです。その引数はメッセージ送信側に返送されます。
 
- <div class="blockIndicator warning">
- <p><code>addListener</code> を次のような <code>async</code> 関数を使って実行しないでください。</p>
+        同じドキュメント中に `onMessage` リスナーが一つ以上ある場合、返信を返すことができるのは一つだけです。
 
- <pre><code>browser.runtime.onMessage.addListener(async (data, sender) =&gt; {
-  if (data.type === 'handle_me') return 'done';
-});
-</code></pre>
+        同期的に返信するには、リスナー関数が復帰する前に `sendResponse` を実行します。非同期的に返信するには、次のどちらかを実行します。
 
- <p>このようなリスナーは全ての受け取ったメッセージを消費するため、実際には他のリスナーがメッセージを受信したり処理することを妨げてしまいます。</p>
+        - `sendResponse` に対する参照を保持したままリスナー関数から `true` を返す。そうすると、リスナー関数から復帰した後でも `sendResponse` を実行できます。
+        - リスナー関数から [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返して、返信の準備ができたときにその Promise を解決する。こちらがより好ましい方法です。
 
- <p>非同期的な実装を使いたい場合は、次のように Promise を使ってください。</p>
+    リスナー関数は、Boolean か [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) のいずれかを返します。
 
- <pre><code>browser.runtime.onMessage.addListener((data, sender) =&gt; {
-  if (data.type === 'handle_me') return Promise.resolve('done');
-});
-</code></pre>
- </div>
- </dd>
-</dl>
+    > **Warning:** `addListener` を次のような `async` 関数を使って実行しないでください。
+    >
+    > ```
+    > browser.runtime.onMessage.addListener(async (data, sender) => {
+    >   if (data.type === 'handle_me') return 'done';
+    > });
+    > ```
+    >
+    > このようなリスナーは全ての受け取ったメッセージを消費するため、実際には他のリスナーがメッセージを受信したり処理することを妨げてしまいます。
+    >
+    > 非同期的な実装を使いたい場合は、次のように Promise を使ってください。
+    >
+    > ```
+    > browser.runtime.onMessage.addListener((data, sender) => {
+    >   if (data.type === 'handle_me') return Promise.resolve('done');
+    > });
+    > ```
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.runtime.onMessage")}}</p>
+{{Compat("webextensions.api.runtime.onMessage")}}
 
-<h2 id="使用例">使用例</h2>
+## 使用例
 
-<h3 id="単純な使用例">単純な使用例</h3>
+### 単純な使用例
 
-<p>次のコンテンツスクリプトは、ウェブページ上のクリックイベントを待ち受けます。リンクがクリックされた場合、対象の URL をバックグラウンドページにメッセージ送信します。</p>
+次のコンテンツスクリプトは、ウェブページ上のクリックイベントを待ち受けます。リンクがクリックされた場合、対象の URL をバックグラウンドページにメッセージ送信します。
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// content-script.js</span>
+```js
+// content-script.js
 
-window<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> notifyExtension<span class="punctuation token">)</span><span class="punctuation token">;</span>
+window.addEventListener("click", notifyExtension);
 
-<span class="keyword token">function</span> <span class="function token">notifyExtension</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>target<span class="punctuation token">.</span>tagName <span class="operator token">!=</span> <span class="string token">"A"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span><span class="function token">sendMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="string token">"url"</span><span class="punctuation token">:</span> e<span class="punctuation token">.</span>target<span class="punctuation token">.</span>href<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;
-}</span></code>
-</pre>
+function notifyExtension(e) {
+  if (e.target.tagName != "A") {
+    return;
+  }
+  browser.runtime.sendMessage({"url": e.target.href});
+}
+```
 
-<p>バックグラウンドスクリプトはこのメッセージが送信されるまで待ち、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API を使って通知を表示します。</p>
+バックグラウンドスクリプトはこのメッセージが送信されるまで待ち、[`notifications`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API を使って通知を表示します。
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// background-script.js</span>
+```js
+// background-script.js
 
-browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span>onMessage<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>notify<span class="punctuation token">)</span><span class="punctuation token">;</span>
+browser.runtime.onMessage.addListener(notify);
 
-<span class="keyword token">function</span> <span class="function token">notify</span><span class="punctuation token">(</span>message<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  browser<span class="punctuation token">.</span>notifications<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-    <span class="string token">"type"</span><span class="punctuation token">:</span> <span class="string token">"basic"</span><span class="punctuation token">,</span>
-    <span class="string token">"iconUrl"</span><span class="punctuation token">:</span> browser<span class="punctuation token">.</span>extension<span class="punctuation token">.</span><span class="function token">getURL</span><span class="punctuation token">(</span><span class="string token">"link.png"</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    <span class="string token">"title"</span><span class="punctuation token">:</span> <span class="string token">"リンクをクリックしました!"</span><span class="punctuation token">,</span>
-    <span class="string token">"message"</span><span class="punctuation token">:</span> message<span class="punctuation token">.</span>url
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+function notify(message) {
+  browser.notifications.create({
+    "type": "basic",
+    "iconUrl": browser.extension.getURL("link.png"),
+    "title": "リンクをクリックしました!",
+    "message": message.url
+  });
+}
+```
 
-<h3 id="同期的に返信する">同期的に返信する</h3>
+### 同期的に返信する
 
-<p>次のコンテンツスクリプトは、ユーザーがページ上をクリックしたとき、バックグラウンドスクリプトにメッセージを送信します。また、バックグラウンドスクリプトから送信された応答があればログ出力します。</p>
+次のコンテンツスクリプトは、ユーザーがページ上をクリックしたとき、バックグラウンドスクリプトにメッセージを送信します。また、バックグラウンドスクリプトから送信された応答があればログ出力します。
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 function handleResponse(message) {
   console.log(`バックグラウンドスクリプトが応答しました: ${message.response}`);
@@ -187,52 +166,59 @@ function sendMessage(e) {
   sending.then(handleResponse, handleError);
 }
 
-window.addEventListener("click", sendMessage);</pre>
+window.addEventListener("click", sendMessage);
+```
 
-<p>これが対応するバックグラウンドスクリプトで、リスナー内部から同期的に応答を返します。</p>
+これが対応するバックグラウンドスクリプトで、リスナー内部から同期的に応答を返します。
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`コンテンツスクリプトがメッセージを送信しました: ${request.content}`);
   sendResponse({response: "バックグラウンドスクリプトからの応答です"});
 }
 
-browser.runtime.onMessage.addListener(handleMessage);</pre>
+browser.runtime.onMessage.addListener(handleMessage);
+```
 
-<p>これは同期的に応答を返す別の方法で、Promise.resolve() を使うものです。</p>
+これは同期的に応答を返す別の方法で、Promise.resolve() を使うものです。
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`コンテンツスクリプトがメッセージを送信しました: ${request.content}`);
   return Promise.resolve({response: "バックグラウンドスクリプトからの応答です"});
 }
 
-browser.runtime.onMessage.addListener(handleMessage);</pre>
+browser.runtime.onMessage.addListener(handleMessage);
+```
 
-<h3 id="非同期的な返信を_sendResponse_により行う">非同期的な返信を sendResponse により行う</h3>
+### 非同期的な返信を sendResponse により行う
 
-<p>次は直前の例のバックグラウンドスクリプトの別バージョンです。これは、リスナーが復帰した後、非同期的に返信を送ります。リスナーの中の <code>return true;</code> に注目してください。このようにすることで、リスナーが復帰した後に <code>sendResponse</code> 引数を使う意図があることをブラウザーに伝えています。</p>
+次は直前の例のバックグラウンドスクリプトの別バージョンです。これは、リスナーが復帰した後、非同期的に返信を送ります。リスナーの中の `return true;` に注目してください。このようにすることで、リスナーが復帰した後に `sendResponse` 引数を使う意図があることをブラウザーに伝えています。
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`コンテンツスクリプトがメッセージを送信しました: ${request.content}`);
-  setTimeout(() =&gt; {
+  setTimeout(() => {
     sendResponse({response: "非同期的なバックグラウンドスクリプトからの応答です"});
   }, 1000);
   return true;
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
-</pre>
+```
 
-<h3 id="非同期的な返信を_Promise_により行う">非同期的な返信を Promise により行う</h3>
+### 非同期的な返信を Promise により行う
 
-<p>次のコンテンツスクリプトは、まずページ上の &lt;a&gt; リンクを取得し、そしてそのリンクの場所がブックマークされているかどうかを尋ねるメッセージを送信します。このスクリプトは、その場所がブックマークされている場合は <code>true</code> を、そうでない場合は <code>false</code> というような、Boolean 型の応答が返ってくることを想定しています。</p>
+次のコンテンツスクリプトは、まずページ上の \<a> リンクを取得し、そしてそのリンクの場所がブックマークされているかどうかを尋ねるメッセージを送信します。このスクリプトは、その場所がブックマークされている場合は `true` を、そうでない場合は `false` というような、Boolean 型の応答が返ってくることを想定しています。
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 const firstLink = document.querySelector("a");
 
@@ -244,47 +230,46 @@ function handleResponse(isBookmarked) {
 
 browser.runtime.sendMessage({
   url: firstLink.href
-}).then(handleResponse);</pre>
+}).then(handleResponse);
+```
 
-<p>これが対応するバックグラウンドスクリプトです。<code>{{WebExtAPIRef("bookmarks.search()")}}</code> を使うことで、リンクがブックマークされているかを確認する <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
+これが対応するバックグラウンドスクリプトです。`{{WebExtAPIRef("bookmarks.search()")}}` を使うことで、リンクがブックマークされているかを確認する [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function isBookmarked(message, sender, response) {
   return browser.bookmarks.search({
     url: message.url
   }).then(function(results) {
-    return results.length &gt; 0;
+    return results.length > 0;
   });
 }
 
-browser.runtime.onMessage.addListener(isBookmarked);</pre>
+browser.runtime.onMessage.addListener(isBookmarked);
+```
 
-<p>非同期的なハンドラーが Promise を返さない場合、明示的に Promise を作ることができます。これは少し不自然な例ですが、<code><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">Window.setTimeout()</a></code> を使って 1 秒の遅延を発生させた後に応答を返します。</p>
+非同期的なハンドラーが Promise を返さない場合、明示的に Promise を作ることができます。これは少し不自然な例ですが、[`Window.setTimeout()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve({response: "非同期的なバックグラウンドスクリプトからの応答です"});
     }, 1000);
   });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);</pre>
+browser.runtime.onMessage.addListener(handleMessage);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onMessage) API. このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/runtime#event-onMessage"><code>chrome.runtime</code></a> API. このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -312,4 +297,3 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

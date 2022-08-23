@@ -13,50 +13,49 @@ tags:
   - cookie
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>{{WebExtAPIRef("cookies")}} API の <code>Cookie</code> 型はHTTP cookie の情報を持ちます。</p>
+{{WebExtAPIRef("cookies")}} API の `Cookie` 型は HTTP cookie の情報を持ちます。
 
-<h2 id="型">型</h2>
+## 型
 
-<p>以下のプロパティを含むオブジェクトです。</p>
+以下のプロパティを含むオブジェクトです。
 
-<dl class="reference-values">
- <dt><code>domain</code></dt>
- <dd>cookie の所属するドメイン (例えば "www.google.com" や "example.com") を示す文字列を持つ <code>string</code> 型です。</dd>
- <dt><code>expirationDate</code>{{optional_inline}}</dt>
- <dd>cookie の有効期限をUNIX時刻からの秒数で持つ <code>number</code> 型です。セッション cookie はこのプロパティを持っていません。</dd>
- <dt><code>firstPartyDomain</code></dt>
- <dd>cookie に関連付けられたファーストパーティドメインを表す文字列を格納している <code>string</code> 型です。 cookie のFirst-party isolationが無効の間は空文字列になります。詳細は <a href="/ja/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a> をご覧ください。</dd>
- <dt><code>hostOnly</code></dt>
- <dd><code>boolean</code> 型です。cookie がホストオンリークッキー (リクエストのホストが cookie の指定ドメインと完全一致している場合のみ送信) である場合に <code>true</code> 、でなければ <code>false</code> になります。</dd>
- <dt><code>httpOnly</code></dt>
- <dd><code>boolean</code> 型です。 cookieに HttpOnly 属性 ( cookie をクライアント側スクリプトから参照できなくする属性) が付与されている場合に <code>true</code> 、でなければ <code>false</code> が格納されます。</dd>
- <dt><code>name</code></dt>
- <dd>cookie の名前が格納される <code>string</code> 型です。</dd>
- <dt><code>path</code></dt>
- <dd>cookie のパスが格納される <code>string</code> 型です。</dd>
- <dt><code>secure</code></dt>
- <dd><code>boolean</code> 型です。 cookie に secure 属性(暗号化通信でのみ cookie を送信する属性)が付与されている場合に <code>true</code> 、でなければ <code>false</code> になります。</dd>
- <dt><code>session</code></dt>
- <dd><code>boolean</code> 型です。 cookie がセッション cookie ( セッション限りで破棄される cookie )である場合に <code>true</code> 、でなければ <code>false</code> が付与されます。</dd>
- <dt><code>storeId</code></dt>
- <dd>この cookie が格納されている cookie ストアのIDを格納する <code>string</code> 型です。{{WebExtAPIRef("cookies.getAllCookieStores()")}}によって提供されます。</dd>
- <dt><code>value</code></dt>
- <dd> cookie の値を格納する <code>string</code> 型です。</dd>
-</dl>
+- `domain`
+  - : cookie の所属するドメイン (例えば "www\.google.com" や "example.com") を示す文字列を持つ `string` 型です。
+- `expirationDate`{{optional_inline}}
+  - : cookie の有効期限を UNIX 時刻からの秒数で持つ `number` 型です。セッション cookie はこのプロパティを持っていません。
+- `firstPartyDomain`
+  - : cookie に関連付けられたファーストパーティドメインを表す文字列を格納している `string` 型です。 cookie の First-party isolation が無効の間は空文字列になります。詳細は [First-party isolation](/ja/Add-ons/WebExtensions/API/cookies#First-party_isolation) をご覧ください。
+- `hostOnly`
+  - : `boolean` 型です。cookie がホストオンリークッキー (リクエストのホストが cookie の指定ドメインと完全一致している場合のみ送信) である場合に `true` 、でなければ `false` になります。
+- `httpOnly`
+  - : `boolean` 型です。 cookie に HttpOnly 属性 ( cookie をクライアント側スクリプトから参照できなくする属性) が付与されている場合に `true` 、でなければ `false` が格納されます。
+- `name`
+  - : cookie の名前が格納される `string` 型です。
+- `path`
+  - : cookie のパスが格納される `string` 型です。
+- `secure`
+  - : `boolean` 型です。 cookie に secure 属性(暗号化通信でのみ cookie を送信する属性)が付与されている場合に `true` 、でなければ `false` になります。
+- `session`
+  - : `boolean` 型です。 cookie がセッション cookie ( セッション限りで破棄される cookie )である場合に `true` 、でなければ `false` が付与されます。
+- `storeId`
+  - : この cookie が格納されている cookie ストアの ID を格納する `string` 型です。{{WebExtAPIRef("cookies.getAllCookieStores()")}}によって提供されます。
+- `value`
+  - : cookie の値を格納する `string` 型です。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.cookies.Cookie")}}</p>
+{{Compat("webextensions.api.cookies.Cookie")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>cookies API のほとんどは入力パラメータまたは戻り値の一部として使用される <code>Cookie</code> オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は <code>Cookie</code> オブジェクトの配列を返します。</p>
+cookies API のほとんどは入力パラメータまたは戻り値の一部として使用される `Cookie` オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は `Cookie` オブジェクトの配列を返します。
 
-<p>以下の例ではすべての cookie を取得し、コンソールログに  <code>Cookie</code> オブジェクト中のいくつかのプロパティを出力します。</p>
+以下の例ではすべての cookie を取得し、コンソールログに `Cookie` オブジェクト中のいくつかのプロパティを出力します。
 
-<pre class="brush: js">function logCookies(cookies) {
+```js
+function logCookies(cookies) {
   for (cookie of cookies) {
     console.log(`Domain: ${cookie.domain}`);
     console.log(`Name: ${cookie.name}`);
@@ -66,19 +65,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 }
 
 var gettingAll = browser.cookies.getAll({});
-gettingAll.then(logCookies);</pre>
+gettingAll.then(logCookies);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/cookies#type-Cookie"><code>chrome.cookies</code></a> API に基づいています。 また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +100,3 @@ gettingAll.then(logCookies);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

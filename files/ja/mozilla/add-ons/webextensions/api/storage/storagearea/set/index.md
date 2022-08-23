@@ -14,51 +14,46 @@ tags:
   - set
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>1つ以上のアイテムをストレージ領域に保存または上書きします。</p>
+1 つ以上のアイテムをストレージ領域に保存または上書きします。
 
-<p>この API を使用して保存や上書きをする場合、{{WebExtAPIRef("storage.onChanged")}} イベントが発火します。</p>
+この API を使用して保存や上書きをする場合、{{WebExtAPIRef("storage.onChanged")}} イベントが発火します。
 
-<p>この関数は <code style="font-size: 16px !important; line-height: 24px !important;"><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="font-size: 16px !important; line-height: 24px !important;">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">let settingItem = browser.storage.&lt;storageType&gt;.set(
+```js
+let settingItem = browser.storage.<storageType>.set(
   keys             // オブジェクト
 )
-</pre>
+```
 
-<p><code style="font-size: 16px !important; line-height: 24px !important;">&lt;storageType&gt;</code> は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync" style="font-size: 16px !important; line-height: 24px !important;" title="sync ストレージ領域を指します。 sync ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。"><code style="font-size: 16px !important; line-height: 24px !important;">storage.sync</code></a> または <a class="new" href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local" rel="nofollow" style="font-size: 16px !important; line-height: 24px !important;" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code style="font-size: 16px !important; line-height: 24px !important;">storage.local</code></a> の書き込み可能なストレージタイプです。</p>
+`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync "sync ストレージ領域を指します。 sync ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。") または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local "この項目についての文書はまだ書かれていません。書いてみませんか？") の書き込み可能なストレージタイプです。
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>
- <p>保存したい1つ以上のキー/値ペアを持つオブジェクトを指定します。アイテムが既に存在する場合、値は上書きされます。</p>
+- `keys`
 
- <p>値は <a href="/ja/docs/Glossary/Primitive">primitive 型</a> (整数型・ブール型・文字列) または<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array">配列</a></code> を指定でできます。</p>
+  - : 保存したい 1 つ以上のキー/値ペアを持つオブジェクトを指定します。アイテムが既に存在する場合、値は上書きされます。
 
- <p>通常は他の型 (<code>Function</code>, <code>Date</code>, <code>RegExp</code>, <code>Set</code>, <code>Map</code>, <code>ArrayBuffer</code>  など)は格納できません。これらのサポートされていない型の中には空のオブジェクトとして復元されたり、 <code>set()</code> がエラーをスローする場合があります。この場合の挙動はブラウザに依存します。</p>
- </dd>
-</dl>
+    値は [primitive 型](/ja/docs/Glossary/Primitive) (整数型・ブール型・文字列) または[`配列`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) を指定でできます。
 
-<h3 id="返り値">返り値</h3>
+    通常は他の型 (`Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` など)は格納できません。これらのサポートされていない型の中には空のオブジェクトとして復元されたり、 `set()` がエラーをスローする場合があります。この場合の挙動はブラウザに依存します。
 
-<p>成功時は引数の無い <code style="font-size: 16px !important; line-height: 24px !important;"><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="font-size: 16px !important; line-height: 24px !important;">Promise</a></code> を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。</p>
+### 返り値
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
 
-<p> </p>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.storage.StorageArea.set")}}</p>
+{{Compat("webextensions.api.storage.StorageArea.set")}}
 
-<p> </p>
+## 例
 
-<h2 id="例">例</h2>
-
-<pre class="brush: js">function setItem() {
+```js
+function setItem() {
   console.log("OK");
 }
 
@@ -95,11 +90,8 @@ browser.storage.local.get("kitten")
   .then(gotKitten, onError);
 browser.storage.local.get("monster")
   .then(gotMonster, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a class="external external-icon" href="https://developer.chrome.com/extensions/storage" rel="noopener" style="font-size: 18px !important; line-height: 27px !important;"><code style="font-size: 16px !important; line-height: 24px !important;">chrome.storage</code></a> APIに基づいています。また、このドキュメントは <a class="external external-icon" href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json" rel="noopener" style="font-size: 18px !important; line-height: 27px !important;"><code style="font-size: 16px !important; line-height: 24px !important;">storage.json</code></a> における Chromium のコードに基づいています。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。

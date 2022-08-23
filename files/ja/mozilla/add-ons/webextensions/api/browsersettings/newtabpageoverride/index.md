@@ -3,23 +3,24 @@ title: browserSettings.newTabPageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>{{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} オブジェクトを使用すると「新規タブ」ページ、つまりユーザーが新しい空のタブを開いたときのページを表すURLを取得することができます。</p>
+{{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} オブジェクトを使用すると「新規タブ」ページ、つまりユーザーが新しい空のタブを開いたときのページを表す URL を取得することができます。
 
-<p>なお、これは読み取り専用の設定です。</p>
+なお、これは読み取り専用の設定です。
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.browserSettings.newTabPageOverride", 10)}}</p>
+{{Compat("webextensions.api.browserSettings.newTabPageOverride", 10)}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>現在の新規タブURLを取得する：</p>
+現在の新規タブ URL を取得する：
 
-<pre class="brush: js">browser.browserSettings.newTabPageOverride.get({}).then(result =&gt; {
+```js
+browser.browserSettings.newTabPageOverride.get({}).then(result => {
   console.log(result.value);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

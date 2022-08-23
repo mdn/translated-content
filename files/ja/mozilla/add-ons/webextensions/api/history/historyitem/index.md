@@ -13,44 +13,36 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p><code>HistoryItem</code> オブジェクトはブラウザー履歴でのページ情報を提供します。</p>
+`HistoryItem` オブジェクトはブラウザー履歴でのページ情報を提供します。
 
-<h2 id="Type" name="Type">型</h2>
+## 型
 
-<p>これは下記のプロパティを持つオブジェクトです:</p>
+これは下記のプロパティを持つオブジェクトです:
 
-<dl class="reference-values">
- <dt><code>id</code></dt>
- <dd><code>string</code>。アイテムに固有のID。</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>。ページのURL。</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>。ページのタイトル。</dd>
- <dt><code>lastVisitTime</code> {{optional_inline}}</dt>
- <dd><code>number</code>。ページが最後に読み込まれた日付と時間で、epochからのミリ秒で表現される。</dd>
- <dt><code>visitCount</code> {{optional_inline}}</dt>
- <dd><code>number</code>。ユーザーがページを訪問した回数。</dd>
- <dt><code>typedCount</code> {{optional_inline}}</dt>
- <dd><code>number</code>。ユーザーがアドレスをタイプしてページに移動したきた回数。</dd>
-</dl>
+- `id`
+  - : `string`。アイテムに固有の ID。
+- `url` {{optional_inline}}
+  - : `string`。ページの URL。
+- `title` {{optional_inline}}
+  - : `string`。ページのタイトル。
+- `lastVisitTime` {{optional_inline}}
+  - : `number`。ページが最後に読み込まれた日付と時間で、epoch からのミリ秒で表現される。
+- `visitCount` {{optional_inline}}
+  - : `number`。ユーザーがページを訪問した回数。
+- `typedCount` {{optional_inline}}
+  - : `number`。ユーザーがアドレスをタイプしてページに移動したきた回数。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.history.HistoryItem")}}</p>
+{{Compat("webextensions.api.history.HistoryItem")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝</strong><strong>辞</strong>
+> **Note:** **謝\*\***辞\*\*この API は Chromium の [`chrome.history`](https://developer.chrome.com/extensions/history#type-HistoryItem) API に基づいています。また、このドキュメントは [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/history#type-HistoryItem"><code>chrome.history</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -78,4 +70,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

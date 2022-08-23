@@ -3,35 +3,35 @@ title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>タブのIDを指定し、{{WebExtAPIRef("tabs.Tab")}}オブジェクトとしてタブの詳細を取得します。</p>
+タブの ID を指定し、{{WebExtAPIRef("tabs.Tab")}}オブジェクトとしてタブの詳細を取得します。
 
-<p>これは<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>を返す非同期関数です。</p>
+これは[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返す非同期関数です。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox brush:js">var getting = browser.tabs.get(
+```js
+var getting = browser.tabs.get(
   tabId              // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. 取得するタブのID。</dd>
-</dl>
+- `tabId`
+  - : `integer`. 取得するタブの ID。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>タブがアクティブなとき、情報を取得します:</p>
+タブがアクティブなとき、情報を取得します:
 
-<pre class="brush: js">async function logListener(info) {
+```js
+async function logListener(info) {
   try {
     let tabInfo = await browser.tabs.get(info.tabId);
     console.log(tabInfo);
@@ -40,23 +40,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
   }
 }
 
-browser.tabs.onActivated.addListener(logListener);</pre>
+browser.tabs.onActivated.addListener(logListener);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("webextensions.api.tabs.get")}}
 
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-get) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<p>{{Compat("webextensions.api.tabs.get")}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-get"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,4 +79,3 @@ browser.tabs.onActivated.addListener(logListener);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

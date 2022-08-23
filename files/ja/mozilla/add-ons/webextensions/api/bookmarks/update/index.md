@@ -13,80 +13,72 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.update()</code></strong> は、ブックマークの URL やタイトル、またはフォルダの名前を更新するメソッドです。</p>
+**`bookmarks.update()`** は、ブックマークの URL やタイトル、またはフォルダの名前を更新するメソッドです。
 
-<p>ブックマーク要素が見つからなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされるので、エラーの有無をコールバックで確認できます。</p>
+ブックマーク要素が見つからなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされるので、エラーの有無をコールバックで確認できます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">browser.bookmarks.update(
+```js
+browser.bookmarks.update(
   id,      // 文字列
   changes, // オブジェクト
   callback // 関数（省略可）
 )
-</pre>
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>id</code></dt>
- <dd>更新したいブックマーク / フォルダの ID を表す {{jsxref("string")}} です。</dd>
- <dt><code>changes</code></dt>
- <dd>適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダが変更されることはありません。<br>
+- `id`
+  - : 更新したいブックマーク / フォルダの ID を表す {{jsxref("string")}} です。
+- `changes`
 
- <dl class="reference-values">
-  <dt><code>title</code>{{optional_inline}}</dt>
-  <dd><code>id</code> がフォルダを表す場合、ブックマークの新しいタイトル / フォルダの新しい名前を指定する {{jsxref("string")}} です。</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd>ブックマークの新しい URL を指定する {{jsxref("string")}} です。</dd>
- </dl>
- </dd>
- <dt><code>callback</code>{{optional_inline}}</dt>
- <dd>変更が適用された際に実行される関数です。この関数には次の引数が 1 つ渡ります。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>result</code></dt>
-  <dd>更新されたブックマークを表す{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトです。</dd>
- </dl>
- </dd>
-</dl>
+  - : 適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダが変更されることはありません。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+    - `title`{{optional_inline}}
+      - : `id` がフォルダを表す場合、ブックマークの新しいタイトル / フォルダの新しい名前を指定する {{jsxref("string")}} です。
+    - `url`{{optional_inline}}
+      - : ブックマークの新しい URL を指定する {{jsxref("string")}} です。
 
-<p>{{Compat("webextensions.api.bookmarks.update")}}</p>
+- `callback`{{optional_inline}}
 
-<h2 id="使用例">使用例</h2>
+  - : 変更が適用された際に実行される関数です。この関数には次の引数が 1 つ渡ります。
 
-<h3 id="フォルダのリネーム">フォルダのリネーム</h3>
+    - `result`
+      - : 更新されたブックマークを表す{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトです。
 
-<p>以下の例は、"MDN" という名前のフォルダすべてを "MDN" to "Mozilla Developer Network (MDN)" にリネームするものです。</p>
+## ブラウザ実装状況
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">updateFolders</span><span class="punctuation token">(</span>items<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">for</span> <span class="punctuation token">(</span>item <span class="keyword token">of</span> items<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// only folders, so skip items with a `url`</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>item<span class="punctuation token">.</span>url<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">update</span><span class="punctuation token">(</span>item<span class="punctuation token">.</span>id<span class="punctuation token">,</span> <span class="punctuation token">{</span>
-        title<span class="punctuation token">:</span> <span class="string token">"Mozilla Developer Network (MDN)"</span>
-      <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+{{Compat("webextensions.api.bookmarks.update")}}
 
-chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">search</span><span class="punctuation token">(</span><span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">"MDN"</span> <span class="punctuation token">}</span><span class="punctuation token">,</span> updateFolders<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+## 使用例
 
-<p>{{WebExtExamples}}</p>
+### フォルダのリネーム
 
-<div class="note"><strong>Acknowledgements</strong>
+以下の例は、"MDN" という名前のフォルダすべてを "MDN" to "Mozilla Developer Network (MDN)" にリネームするものです。
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-update"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
+```js
+function updateFolders(items) {
+  for (item of items) {
+    // only folders, so skip items with a `url`
+    if (!item.url) {
+      chrome.bookmarks.update(item.id, {
+        title: "Mozilla Developer Network (MDN)"
+      });
+    }
+  }
+}
 
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
+chrome.bookmarks.search({ title: "MDN" }, updateFolders);
+```
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{WebExtExamples}}
+
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +106,3 @@ chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation 
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

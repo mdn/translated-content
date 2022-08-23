@@ -13,78 +13,80 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>JavaScript のコードをページに挿入します。</p>
+JavaScript のコードをページに挿入します。
 
-<p>コードを挿入できるページの URL は、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a> により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a>、または <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab パーミッション</a>が必要です。</p>
+コードを挿入できるページの URL は、[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)、または [activeTab パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)が必要です。
 
-<p>また、自らの拡張機能パッケージに含まれるページに対してであれば、次の方法でコードを挿入することも可能です。</p>
+また、自らの拡張機能パッケージに含まれるページに対してであれば、次の方法でコードを挿入することも可能です。
 
-<pre class="brush: js">browser.tabs.create({url: "/my-page.html"}).then(() =&gt; {
+```js
+browser.tabs.create({url: "/my-page.html"}).then(() => {
   browser.tabs.executeScript({
     code: `console.log('location:', window.location.href);`
   });
-});</pre>
+});
+```
 
-<p>この場合、特別なパーミッションは必要ありません。</p>
+この場合、特別なパーミッションは必要ありません。
 
-<p>ブラウザーの組込ページ、例えば about:debugging、about:addons、新規タブを開いた時のページなどには、コードを挿入することは<em>できません</em>。</p>
+ブラウザーの組込ページ、例えば about:debugging、about:addons、新規タブを開いた時のページなどには、コードを挿入することは*できません*。
 
-<p>挿入するスクリプトのことを、コンテンツスクリプトと呼びます。詳細は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a> で学んでください。</p>
+挿入するスクリプトのことを、コンテンツスクリプトと呼びます。詳細は [コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) で学んでください。
 
-<p>これは、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var executing = browser.tabs.executeScript(
+```js
+var executing = browser.tabs.executeScript(
   tabId,                 // optional integer
   details                // object
 )
-</pre>
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>tabId</code> {{optional_inline}}</dt>
- <dd><code>integer</code> 型。 スクリプトを実行するタブの ID。省略時のデフォルトは、現在のウィンドウでアクティブなタブ。</dd>
- <dt><code>details</code></dt>
- <dd>実行するスクリプトに関するオブジェクト。次のプロパティを持ちます。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>allFrames</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code> 型。<code>true</code> である場合は、現在のページが持つ全てのフレームにコードが挿入されます。<code>true</code> であり、かつ <code>frameId</code> が設定されている場合はエラーが発生するため、frameId と allFrames は互いに排他的です。<code>false</code> である場合は、最上位のフレームにのみコードが挿入されます。デフォルトは <code>false</code> です。</dd>
-  <dt><code>code</code> {{optional_inline}}</dt>
-  <dd><code>string</code> 型。挿入されるコードを文字列として表現したもの。<strong>注意:</strong> このプロパティを使って信頼できないデータを JavaScript に挿入しないでください。セキュリティの問題につながります。</dd>
-  <dt><code>file</code> {{optional_inline}}</dt>
-  <dd><code>string</code> 型。挿入されるコードを持つファイルへのパス。Firefox では、拡張機能のルートから始まらない相対 URL は、現在のページの URL からの相対位置として解決されます。Chrome では、そのような URL は拡張機能のベース URL からの相対位置として解決されます。複数のブラウザーで動作させるには、拡張機能のルートから始まる相対 URL として指定します。例えば、<code>"/path/to/script.js"</code> のようにします。</dd>
-  <dt><code>frameId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code> 型。コードが挿入されるフレーム。デフォルトは <code>0</code> (最上位のフレーム) です。</dd>
-  <dt><code>matchAboutBlank</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code> 型。<code>true</code> である場合、コードはその親ドキュメントへのアクセスをもつときに、組込の "about:blank" や "about:srcdoc" フレームにも挿入されます。コードをトップレベルの about: フレームに挿入することはできません。デフォルトは <code>false</code> です。</dd>
-  <dt><code>runAt</code> {{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('extensionTypes.RunAt')}} 型。コードがどの時点でタブに挿入されるかを指定します。デフォルトは "document_idle" です。</dd>
- </dl>
- </dd>
-</dl>
+- `tabId` {{optional_inline}}
+  - : `integer` 型。 スクリプトを実行するタブの ID。省略時のデフォルトは、現在のウィンドウでアクティブなタブ。
+- `details`
 
-<h3 id="戻り値">戻り値</h3>
+  - : 実行するスクリプトに関するオブジェクト。次のプロパティを持ちます。
 
-<p>オブジェクト配列を使って fulfilled 状態にされる <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> です。それぞれのオブジェクトは、フレームに挿入されたスクリプトの結果を表します。</p>
+    - `allFrames` {{optional_inline}}
+      - : `boolean` 型。`true` である場合は、現在のページが持つ全てのフレームにコードが挿入されます。`true` であり、かつ `frameId` が設定されている場合はエラーが発生するため、frameId と allFrames は互いに排他的です。`false` である場合は、最上位のフレームにのみコードが挿入されます。デフォルトは `false` です。
+    - `code` {{optional_inline}}
+      - : `string` 型。挿入されるコードを文字列として表現したもの。**注意:** このプロパティを使って信頼できないデータを JavaScript に挿入しないでください。セキュリティの問題につながります。
+    - `file` {{optional_inline}}
+      - : `string` 型。挿入されるコードを持つファイルへのパス。Firefox では、拡張機能のルートから始まらない相対 URL は、現在のページの URL からの相対位置として解決されます。Chrome では、そのような URL は拡張機能のベース URL からの相対位置として解決されます。複数のブラウザーで動作させるには、拡張機能のルートから始まる相対 URL として指定します。例えば、`"/path/to/script.js"` のようにします。
+    - `frameId` {{optional_inline}}
+      - : `integer` 型。コードが挿入されるフレーム。デフォルトは `0` (最上位のフレーム) です。
+    - `matchAboutBlank` {{optional_inline}}
+      - : `boolean` 型。`true` である場合、コードはその親ドキュメントへのアクセスをもつときに、組込の "about:blank" や "about:srcdoc" フレームにも挿入されます。コードをトップレベルの about: フレームに挿入することはできません。デフォルトは `false` です。
+    - `runAt` {{optional_inline}}
+      - : {{WebExtAPIRef('extensionTypes.RunAt')}} 型。コードがどの時点でタブに挿入されるかを指定します。デフォルトは "document_idle" です。
 
-<p>スクリプトの結果とは最後に評価された文のことです。これは、<a href="/ja/docs/Tools/Web_Console">Webコンソール</a>で実行されたスクリプトの出力 (結果であって、<code>console.log()</code> の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。</p>
+### 戻り値
 
-<pre class="brush: js">var foo='my result';foo;</pre>
+オブジェクト配列を使って fulfilled 状態にされる [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。それぞれのオブジェクトは、フレームに挿入されたスクリプトの結果を表します。
 
-<p>この場合、結果配列には、文字列 "<code>my result</code>" が含まれます。結果は、<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> が可能でなければなりません。最後の文を <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> にすることもできますが、<a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a> ライブラリではサポートされていません。</p>
+スクリプトの結果とは最後に評価された文のことです。これは、[Web コンソール](/ja/docs/Tools/Web_Console)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
 
-<p>エラーが発生した場合、Promise はエラーメッセージを使って rejected 状態にされます。</p>
+```js
+var foo='my result';foo;
+```
 
-<h2 id="使用例">使用例</h2>
+この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[structured clone](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリではサポートされていません。
 
-<p>次の例は、現在アクティブなタブで 1 行のコードスニペットを実行します。</p>
+エラーが発生した場合、Promise はエラーメッセージを使って rejected 状態にされます。
 
-<pre class="brush: js">function onExecuted(result) {
+## 使用例
+
+次の例は、現在アクティブなタブで 1 行のコードスニペットを実行します。
+
+```js
+function onExecuted(result) {
   console.log(`グリーンにしました`);
 }
 
@@ -97,11 +99,13 @@ var makeItGreen = 'document.body.style.border = "5px solid green"';
 var executing = browser.tabs.executeScript({
   code: makeItGreen
 });
-executing.then(onExecuted, onError);</pre>
+executing.then(onExecuted, onError);
+```
 
-<p>次の例は、ファイルからスクリプトを実行します。このファイルは拡張機能のパッケージに含まれており、"content-script.js" という名前です。そのスクリプトは、現在アクティブなタブで実行されますが、メインのドキュメントだけでなく、全てのサブフレームでも実行されます。</p>
+次の例は、ファイルからスクリプトを実行します。このファイルは拡張機能のパッケージに含まれており、"content-script.js" という名前です。そのスクリプトは、現在アクティブなタブで実行されますが、メインのドキュメントだけでなく、全てのサブフレームでも実行されます。
 
-<pre class="brush: js">function onExecuted(result) {
+```js
+function onExecuted(result) {
   console.log(`全てのサブフレームで実行しました`);
 }
 
@@ -113,11 +117,13 @@ var executing = browser.tabs.executeScript({
   file: "/content-script.js",
   allFrames: true
 });
-executing.then(onExecuted, onError);</pre>
+executing.then(onExecuted, onError);
+```
 
-<p>次の例は、ファイルからスクリプトを実行します。このファイルは拡張機能のパッケージに含まれており、"content-script.js" という名前です。そのスクリプトは、ID が 2 であるタブで実行されます。</p>
+次の例は、ファイルからスクリプトを実行します。このファイルは拡張機能のパッケージに含まれており、"content-script.js" という名前です。そのスクリプトは、ID が 2 であるタブで実行されます。
 
-<pre class="brush: js">function onExecuted(result) {
+```js
+function onExecuted(result) {
   console.log(`タブ 2 で実行しました`);
 }
 
@@ -129,23 +135,18 @@ var executing = browser.tabs.executeScript(
   2, {
     file: "/content-script.js"
 });
-executing.then(onExecuted, onError);</pre>
+executing.then(onExecuted, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("webextensions.api.tabs.executeScript")}}
 
+> **Note:** **謝辞**この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
 
-<p>{{Compat("webextensions.api.tabs.executeScript")}}</p>
-
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> API に基づいています。このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> における Chromium のコードに基づいています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -173,4 +174,3 @@ executing.then(onExecuted, onError);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

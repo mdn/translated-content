@@ -13,36 +13,28 @@ tags:
   - extensionTypes
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>画像のフォーマットと品質に関する詳細。</p>
+画像のフォーマットと品質に関する詳細。
 
-<h2 id="Type" name="Type">型</h2>
+## 型
 
-<p>この型はオブジェクトです。以下のプロパティを持ちます。</p>
+この型はオブジェクトです。以下のプロパティを持ちます。
 
-<dl class="reference-values">
- <dt><code>format</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('extensionTypes.ImageFormat')}} 型。出力される画像のフォーマット。デフォルトは <code>"png"</code>。</dd>
- <dt><code>quality</code>{{optional_inline}}</dt>
- <dd><code>integer</code> 型。フォーマットが <code>"jpeg"</code> の場合、出力される画像の品質はこの値により変化する。0 から 100 の間の数値であり、0 から 1 の間の数値に変換されて <code><a href="/ja/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL()</a></code> の引数 <code>encoderOptions</code> として使われる。省略された場合は、92 が使われる。品質を下げると、出力される画像の視覚的な変化が大きくなり、画像の格納に必要なバイト数も小さくなる。PNG 画像の場合、この値は無視される。</dd>
-</dl>
+- `format`{{optional_inline}}
+  - : {{WebExtAPIRef('extensionTypes.ImageFormat')}} 型。出力される画像のフォーマット。デフォルトは `"png"`。
+- `quality`{{optional_inline}}
+  - : `integer` 型。フォーマットが `"jpeg"` の場合、出力される画像の品質はこの値により変化する。0 から 100 の間の数値であり、0 から 1 の間の数値に変換されて [`HTMLCanvasElement.toDataURL()`](/ja/docs/Web/API/HTMLCanvasElement/toDataURL) の引数 `encoderOptions` として使われる。省略された場合は、92 が使われる。品質を下げると、出力される画像の視覚的な変化が大きくなり、画像の格納に必要なバイト数も小さくなる。PNG 画像の場合、この値は無視される。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.extensionTypes.ImageDetails")}}</p>
+{{Compat("webextensions.api.extensionTypes.ImageDetails")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails) API に基づいています。このドキュメントは [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails"><code>chrome.extensionTypes</code></a> API に基づいています。このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,4 +62,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

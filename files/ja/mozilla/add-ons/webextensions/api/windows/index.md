@@ -12,81 +12,63 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>ブラウザーウィンドウと相互作用します。この API を使って開いているウィンドウの情報を取得したり、ウィンドウを開き、修正し、閉じることができます。ウィンドウのオープン、クローズ、アクティベートのイベントをリッスンすることもできます。</p>
+ブラウザーウィンドウと相互作用します。この API を使って開いているウィンドウの情報を取得したり、ウィンドウを開き、修正し、閉じることができます。ウィンドウのオープン、クローズ、アクティベートのイベントをリッスンすることもできます。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WindowType")}}</dt>
- <dd>ブラウザーウィンドウの this の型。</dd>
- <dt>{{WebExtAPIRef("windows.WindowState")}}</dt>
- <dd>ブラウザーウィンドウの状態。</dd>
- <dt>{{WebExtAPIRef("windows.Window")}}</dt>
- <dd>ブラウザーウィンドウについての情報を含む。</dd>
- <dt>{{WebExtAPIRef("windows.CreateType")}}</dt>
- <dd>作成するブラウザーウィンドウの型を指定する。</dd>
-</dl>
+- {{WebExtAPIRef("windows.WindowType")}}
+  - : ブラウザーウィンドウの this の型。
+- {{WebExtAPIRef("windows.WindowState")}}
+  - : ブラウザーウィンドウの状態。
+- {{WebExtAPIRef("windows.Window")}}
+  - : ブラウザーウィンドウについての情報を含む。
+- {{WebExtAPIRef("windows.CreateType")}}
+  - : 作成するブラウザーウィンドウの型を指定する。
 
-<h2 id="Constants" name="Constants">定数</h2>
+## 定数
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_NONE")}}</dt>
- <dd>ブラウザーウィンドウがないことを表す <code>windowId</code> の値。</dd>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}</dt>
- <dd>現在のウィンドウを表す <code>windowId</code> の値。</dd>
-</dl>
+- {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
+  - : ブラウザーウィンドウがないことを表す `windowId` の値。
+- {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
+  - : 現在のウィンドウを表す `windowId` の値。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{WebExtAPIRef("windows.get()")}}</dt>
- <dd>与えられた ID のウィンドウの詳細を取得します。</dd>
- <dt>{{WebExtAPIRef("windows.getCurrent()")}}</dt>
- <dd>現在のウィンドウを取得します。</dd>
- <dt>{{WebExtAPIRef("windows.getLastFocused()")}}</dt>
- <dd>最も最近フォーカスされたウィンドウを取得します — 典型的には「最上位」のウィンドウです。</dd>
- <dt>{{WebExtAPIRef("windows.getAll()")}}</dt>
- <dd>すべてのウィンドウを取得します。</dd>
- <dt>{{WebExtAPIRef("windows.create()")}}</dt>
- <dd>
- <p>新しいウィンドウを作成します。</p>
- </dd>
- <dt>{{WebExtAPIRef("windows.update()")}}</dt>
- <dd>ウィンドウのプロパティを更新します。これを使ってウィンドウの移動、リサイズ、フォーカス(外し)などを行います。</dd>
- <dt>{{WebExtAPIRef("windows.remove()")}}</dt>
- <dd>ウィンドウと、そのタブのすべてを閉じます。</dd>
-</dl>
+- {{WebExtAPIRef("windows.get()")}}
+  - : 与えられた ID のウィンドウの詳細を取得します。
+- {{WebExtAPIRef("windows.getCurrent()")}}
+  - : 現在のウィンドウを取得します。
+- {{WebExtAPIRef("windows.getLastFocused()")}}
+  - : 最も最近フォーカスされたウィンドウを取得します — 典型的には「最上位」のウィンドウです。
+- {{WebExtAPIRef("windows.getAll()")}}
+  - : すべてのウィンドウを取得します。
+- {{WebExtAPIRef("windows.create()")}}
+  - : 新しいウィンドウを作成します。
+- {{WebExtAPIRef("windows.update()")}}
+  - : ウィンドウのプロパティを更新します。これを使ってウィンドウの移動、リサイズ、フォーカス(外し)などを行います。
+- {{WebExtAPIRef("windows.remove()")}}
+  - : ウィンドウと、そのタブのすべてを閉じます。
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("windows.onCreated")}}</dt>
- <dd>ウィンドウが作成された時に発火します。</dd>
- <dt>{{WebExtAPIRef("windows.onRemoved")}}</dt>
- <dd>ウィンドウが閉じられた時に発火します。</dd>
- <dt>{{WebExtAPIRef("windows.onFocusChanged")}}</dt>
- <dd>現在フォーカスされているウィンドウが変わった時に発火します。</dd>
-</dl>
+- {{WebExtAPIRef("windows.onCreated")}}
+  - : ウィンドウが作成された時に発火します。
+- {{WebExtAPIRef("windows.onRemoved")}}
+  - : ウィンドウが閉じられた時に発火します。
+- {{WebExtAPIRef("windows.onFocusChanged")}}
+  - : 現在フォーカスされているウィンドウが変わった時に発火します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("webextensions.api.windows")}}
 
+{{WebExtExamples("h2")}}
 
-<p>{{Compat("webextensions.api.windows")}}</p>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +96,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -3,79 +3,71 @@ title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>メニューアイテムがクリックされたときに発火します。</p>
+メニューアイテムがクリックされたときに発火します。
 
-<p>他のブラウザとの互換性のためにFirefoxはこのイベントを名前空間<code>contextMenus</code>と<code>menu</code>を経由して利用可能にしています。</p>
+他のブラウザとの互換性のために Firefox はこのイベントを名前空間`contextMenus`と`menu`を経由して利用可能にしています。
 
-<h2 id="書式">書式</h2>
+## 書式
 
-<pre class="syntaxbox brush:js">browser.menus.onClicked.addListener(listener)
+```js
+browser.menus.onClicked.addListener(listener)
 browser.menus.onClicked.removeListener(listener)
 browser.menus.onClicked.hasListener(listener)
-</pre>
+```
 
-<p>イベントは3つの関数を持ちます:</p>
+イベントは 3 つの関数を持ちます:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>このイベントのリスナーを追加します。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>リスニングを停止します。引数<code>listener</code>は削除するリスナーです。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd><code>listener</code>が登録されているかどうかを調べます。<code>true</code>が返ればリスニング中、そうでなければ<code>false</code>が返ります。</dd>
-</dl>
+- `addListener(callback)`
+  - : このイベントのリスナーを追加します。
+- `removeListener(listener)`
+  - : リスニングを停止します。引数`listener`は削除するリスナーです。
+- `hasListener(listener)`
+  - : `listener`が登録されているかどうかを調べます。`true`が返ればリスニング中、そうでなければ`false`が返ります。
 
-<h2 id="addListenerの書式">addListenerの書式</h2>
+## addListener の書式
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>イベントが起こったときに呼ばれる関数です。以下の引数を渡されます:</p>
+- `callback`
 
- <dl class="reference-values">
-  <dt><code>info</code></dt>
-  <dd>{{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.</dd>
- </dl>
+  - : イベントが起こったときに呼ばれる関数です。以下の引数を渡されます:
 
- <dl class="reference-values">
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.</dd>
- </dl>
- </dd>
-</dl>
+    - `info`
+      - : {{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+    <!---->
 
-<p>{{Compat("webextensions.api.menus.onClicked", 10)}}</p>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
-<h2 id="例">例</h2>
+## ブラウザ互換性
 
-<p>この例はメニューアイテムのクリックをリッスンし、アイテムのIDとタブのIDをログします:</p>
+{{Compat("webextensions.api.menus.onClicked", 10)}}
 
-<pre class="brush: js">browser.menus.create({
+## 例
+
+この例はメニューアイテムのクリックをリッスンし、アイテムの ID とタブの ID をログします:
+
+```js
+browser.menus.create({
   id: "click-me",
   title: "Click me!",
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener((info, tab) =&gt; {
+browser.menus.onClicked.addListener((info, tab) => {
   console.log("Item " + info.menuItemId + " clicked " +
               "in tab " + tab.id);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#event-onClicked) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#event-onClicked"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,4 +95,3 @@ browser.menus.onClicked.addListener((info, tab) =&gt; {
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

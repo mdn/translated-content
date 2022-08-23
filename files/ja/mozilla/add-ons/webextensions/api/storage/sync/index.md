@@ -13,48 +13,40 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><code>sync</code> ストレージ領域を指します。 <code>sync</code> ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。</p>
+`sync` ストレージ領域を指します。 `sync` ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。
 
-<p>Firefox の場合、ユーザーは <code>"about:preferences"</code> の "Sync 設定" オプションの下にある "アドオン" ボックスにチェックを入れる必要があります。</p>
+Firefox の場合、ユーザーは `"about:preferences"` の "Sync 設定" オプションの下にある "アドオン" ボックスにチェックを入れる必要があります。
 
-<p><code>storage.sync</code> の実装はアドオン ID に依存していることに注意してください。もし <code>storage.sync</code> を使うのであれば、 <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> manifest.json キーを使用して拡張機能に ID を設定する必要があります。</p>
+`storage.sync` の実装はアドオン ID に依存していることに注意してください。もし `storage.sync` を使うのであれば、 [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json キーを使用して拡張機能に ID を設定する必要があります。
 
-<p>この API の主な利用例は拡張機能の設定を格納し、異なるプロファイル間で同期させることです。この API は最大100 KB までデータを格納できます。それ以上格納しようとするとエラーメッセージを返して失敗します。 この API は稼働時間やパフォーマンスを保証しません。</p>
+この API の主な利用例は拡張機能の設定を格納し、異なるプロファイル間で同期させることです。この API は最大 100 KB までデータを格納できます。それ以上格納しようとするとエラーメッセージを返して失敗します。 この API は稼働時間やパフォーマンスを保証しません。
 
-<h2 id="関数">関数</h2>
+## 関数
 
-<p><code>sync</code> オブジェクトは {{WebExtAPIRef("storage.StorageArea")}} 型で定義された関数を実装しています。</p>
+`sync` オブジェクトは {{WebExtAPIRef("storage.StorageArea")}} 型で定義された関数を実装しています。
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()", "storage.<var>StorageArea</var>.get()")}}</dt>
- <dd>ストレージ領域から1つ以上のアイテムを取得します。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.<var>StorageArea</var>.getBytesInUse()")}}</dt>
- <dd>1つ以上のストレージ領域内に格納されたアイテムが占めるストレージ空間をバイト単位で取得します。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()", "storage.<var>StorageArea</var>.set()")}}</dt>
- <dd>1つ以上のアイテムをストレージ領域に格納します。既にアイテムが存在していれば値は上書きされます。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()", "storage.<var>StorageArea</var>.remove()")}}</dt>
- <dd>ストレージ領域内の1つ以上のアイテムを削除します。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()", "storage.<var>StorageArea</var>.clear()")}}</dt>
- <dd>ストレージ領域内の全てのアイテムを削除します。</dd>
-</dl>
+- {{WebExtAPIRef("storage.StorageArea.get()", "storage.<var>StorageArea</var>.get()")}}
+  - : ストレージ領域から 1 つ以上のアイテムを取得します。
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.<var>StorageArea</var>.getBytesInUse()")}}
+  - : 1 つ以上のストレージ領域内に格納されたアイテムが占めるストレージ空間をバイト単位で取得します。
+- {{WebExtAPIRef("storage.StorageArea.set()", "storage.<var>StorageArea</var>.set()")}}
+  - : 1 つ以上のアイテムをストレージ領域に格納します。既にアイテムが存在していれば値は上書きされます。
+- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.<var>StorageArea</var>.remove()")}}
+  - : ストレージ領域内の 1 つ以上のアイテムを削除します。
+- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.<var>StorageArea</var>.clear()")}}
+  - : ストレージ領域内の全てのアイテムを削除します。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.storage.sync")}}</p>
+{{Compat("webextensions.api.storage.sync")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>このAPIはChromiumの <a href="https://developer.chrome.com/extensions/storage#property-sync"><code>chrome.storage</code></a> APIに基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,4 +74,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

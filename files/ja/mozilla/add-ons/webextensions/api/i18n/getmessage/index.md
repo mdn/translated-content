@@ -13,53 +13,53 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>指定したメッセージのローカライズされた文字列を取得します。</p>
+指定したメッセージのローカライズされた文字列を取得します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">browser.i18n.getMessage(
+```js
+browser.i18n.getMessage(
   messageName,  // 文字列
   substitutions // 任意
 )
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code>messageName</code></dt>
- <dd><code>文字列</code>。messages.json で指定されたメッセージ名です。messages.json 内にメッセージを見つけられない場合は:</dd>
- <dd>
- <ul>
-  <li>Firefox は "" を返し、エラーログを出力します。</li>
-  <li>Chrome は "" を返し、エラーログを出力しません。</li>
- </ul>
- </dd>
- <dt><code>substitutions</code>{{optional_inline}}</dt>
- <dd><code>文字列</code> または <code>文字列</code> の <code>配列</code>。単一の置換文字列、または置換文字列の配列です。</dd>
- <dd>Chrome では、9 個より多くの置換文字列を与えると、<code>getMessage()</code> は <code>undefined</code> を返します。</dd>
-</dl>
+- `messageName`
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+  - : `文字列`。messages.json で指定されたメッセージ名です。messages.json 内にメッセージを見つけられない場合は:
 
-<p><code>文字列</code>。現在のロケール向けにローカライズされたメッセージ。</p>
+    - Firefox は "" を返し、エラーログを出力します。
+    - Chrome は "" を返し、エラーログを出力しません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+- `substitutions`{{optional_inline}}
+  - : `文字列` または `文字列` の `配列`。単一の置換文字列、または置換文字列の配列です。
+    Chrome では、9 個より多くの置換文字列を与えると、`getMessage()` は `undefined` を返します。
 
-<p>{{Compat("webextensions.api.i18n.getMessage")}}</p>
+### 戻り値
 
-<h2 id="Examples" name="Examples">例</h2>
+`文字列`。現在のロケール向けにローカライズされたメッセージ。
 
-<p><code>target.url</code> を置換文字列として渡し、<code>"messageContent"</code> のローカライズされた文字列を取得します:</p>
+## ブラウザーの実装状況
 
-<pre class="brush: js">var message = browser.i18n.getMessage("messageContent", target.url);
+{{Compat("webextensions.api.i18n.getMessage")}}
+
+## 例
+
+`target.url` を置換文字列として渡し、`"messageContent"` のローカライズされた文字列を取得します:
+
+```js
+var message = browser.i18n.getMessage("messageContent", target.url);
 console.log(message);
-</pre>
+```
 
-<p>これは、_locales/en/messages.json ファイルに含まれた次の内容で動作します:</p>
+これは、\_locales/en/messages.json ファイルに含まれた次の内容で動作します:
 
-<pre class="brush: json">{
+```json
+{
   "messageContent": {
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
@@ -70,23 +70,20 @@ console.log(message);
       }
     }
   }
-}</pre>
+}
+```
 
-<p><code>target.url</code> が "https://developer.mozilla.org" である場合、"en" ロケールでのメッセージの値は次のようになります:</p>
+`target.url` が "https\://developer.mozilla.org" である場合、"en" ロケールでのメッセージの値は次のようになります:
 
-<pre>"You clicked https://developer.mozilla.org."</pre>
+```
+"You clicked https://developer.mozilla.org."
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getMessage) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
-<p>この API は、Chromium の <a href="https://developer.chrome.com/extensions/i18n#method-getMessage"><code>chrome.i18n</code></a> API を基にしています。このドキュメンテーションは、Chromium コード内の <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> に由来しています。</p>
-
-<p>Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +111,3 @@ console.log(message);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

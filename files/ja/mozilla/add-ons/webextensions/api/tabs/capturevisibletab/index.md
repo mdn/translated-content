@@ -13,38 +13,38 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>指定ウィンドウの選択タブの表示領域の画像をエンコードしたデータ URI を作成します。このメソッドを使うには <code>&lt;all_urls&gt;</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a> が必要です (Chrome の場合、<code>activeTab</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a> があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。</p>
+指定ウィンドウの選択タブの表示領域の画像をエンコードしたデータ URI を作成します。このメソッドを使うには `<all_urls>` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) が必要です (Chrome の場合、`activeTab` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。
 
-<p>これは、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var capturing = browser.tabs.captureVisibleTab(
+```js
+var capturing = browser.tabs.captureVisibleTab(
   windowId,               // optional integer
   options                 // optional extensionTypes.ImageDetails
 )
-</pre>
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code>windowId</code>{{optional_inline}}</dt>
- <dd><code>integer</code> 型。対象となるウィンドウ。デフォルトは現在のウィンドウ。</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('extensionTypes.ImageDetails')}} 型。</dd>
-</dl>
+- `windowId`{{optional_inline}}
+  - : `integer` 型。対象となるウィンドウ。デフォルトは現在のウィンドウ。
+- `options`{{optional_inline}}
+  - : {{WebExtAPIRef('extensionTypes.ImageDetails')}} 型。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> であり、キャプチャーされたタブの表示領域の画像をエンコードしたデータ URL で fulfilled 状態にされる。このデータ URL は、HTML イメージ要素の 'src' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、Promise はエラーメッセージによって rejected 状態にされる。</p>
+[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) であり、キャプチャーされたタブの表示領域の画像をエンコードしたデータ URL で fulfilled 状態にされる。このデータ URL は、HTML イメージ要素の 'src' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、Promise はエラーメッセージによって rejected 状態にされる。
 
-<h2 id="Examples" name="Examples">使用例</h2>
+## 使用例
 
-<p>現在のウィンドウの選択されたタブの画像を、デフォルト設定でキャプチャーする。</p>
+現在のウィンドウの選択されたタブの画像を、デフォルト設定でキャプチャーする。
 
-<pre class="brush: js">function onCaptured(imageUri) {
+```js
+function onCaptured(imageUri) {
   console.log(imageUri);
 }
 
@@ -56,25 +56,17 @@ browser.browserAction.onClicked.addListener(function() {
   var capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("webextensions.api.tabs.captureVisibleTab")}}
 
+> **Note:** **謝辞**この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-captureVisibleTab) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>{{Compat("webextensions.api.tabs.captureVisibleTab")}}</p>
-
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/tabs#method-captureVisibleTab"><code>chrome.tabs</code></a> API に基づいています。このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +94,3 @@ browser.browserAction.onClicked.addListener(function() {
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

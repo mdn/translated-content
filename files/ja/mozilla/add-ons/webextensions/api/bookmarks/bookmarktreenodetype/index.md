@@ -12,26 +12,20 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.BookmarkTreeNodeType</code></strong> 型は、ブックマークツリーのノードがブックマーク、フォルダーまたはセパレーターであるかどうかを示すために使用されます。</p>
+**`bookmarks.BookmarkTreeNodeType`** 型は、ブックマークツリーのノードがブックマーク、フォルダーまたはセパレーターであるかどうかを示すために使用されます。
 
-<h2 id="Type" name="Type">型</h2>
+## 型
 
-<p><code>bookmarks.BookmarkTreeNodeType</code> は以下の 3 つのうちいずれかの値を取りうる {{jsxref("string")}} です。</p>
+`bookmarks.BookmarkTreeNodeType` は以下の 3 つのうちいずれかの値を取りうる {{jsxref("string")}} です。
 
-<ul>
- <li><code>"bookmark"</code>: ノードがブックマークであることを示します。</li>
- <li><code>"folder"</code>: ノードがフォルダーであることを示します。</li>
- <li><code>"separator"</code>: ノードがセパレータであることを示します。</li>
-</ul>
+- `"bookmark"`: ノードがブックマークであることを示します。
+- `"folder"`: ノードがフォルダーであることを示します。
+- `"separator"`: ノードがセパレータであることを示します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}</p>
+{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}
 
-<div class="hidden">
-<p>NEEDFIX: "WebExtExamples" マクロでエラーがでているため確認と修正が必要</p>
-</div>
-
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

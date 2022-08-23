@@ -12,98 +12,84 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>拡張機能にブラウザーのダウンロードマネージャーとのやりとりを可能にします。このAPI モジュールを、ファイルマネージャーでのファイルのダウンロード、キャンセル、停止、ダウンロードの再開、ダウンロード済みのファイルの表示に使用できます。</p>
+拡張機能にブラウザーのダウンロードマネージャーとのやりとりを可能にします。この API モジュールを、ファイルマネージャーでのファイルのダウンロード、キャンセル、停止、ダウンロードの再開、ダウンロード済みのファイルの表示に使用できます。
 
-<p>このAPIを使うには <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> ファイルで指定する "downloads" <a href="/JA/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API パーミッション</a>が必要です。</p>
+この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定する "downloads" [API パーミッション](/JA/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.FilenameConflictAction")}}</dt>
- <dd>ダウンロードされたファイル名が既存ファイルと衝突する場合の動作オプション定義</dd>
- <dt>{{WebExtAPIRef("downloads.InterruptReason")}}</dt>
- <dd>ダウンロードが中断された理由の集合を定義</dd>
- <dt>{{WebExtAPIRef("downloads.DangerType")}}</dt>
- <dd>ダウンロード可能なファイルに関連した想定される危険性への警告の集合を定義</dd>
- <dt>{{WebExtAPIRef("downloads.State")}}</dt>
- <dd>現在のダウンロードが取りうるさまざまな状態を定義</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadItem")}}</dt>
- <dd>ダウンロード済みのファイルを表現する</dd>
- <dt>{{WebExtAPIRef("downloads.StringDelta")}}</dt>
- <dd>2つの文字列の差異を表現する</dd>
- <dt>{{WebExtAPIRef("downloads.DoubleDelta")}}</dt>
- <dd>2つの倍精度実数の差異を表現する</dd>
- <dt>{{WebExtAPIRef("downloads.BooleanDelta")}}</dt>
- <dd>2つの真偽値の差異を表現する</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadTime")}}</dt>
- <dd>ダウンロード完了にかかった時間を表現する</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadQuery")}}</dt>
- <dd>ダウンロードマネージャーで特定のダウンロードを検索するのに使われるパラメーターを定義</dd>
-</dl>
+- {{WebExtAPIRef("downloads.FilenameConflictAction")}}
+  - : ダウンロードされたファイル名が既存ファイルと衝突する場合の動作オプション定義
+- {{WebExtAPIRef("downloads.InterruptReason")}}
+  - : ダウンロードが中断された理由の集合を定義
+- {{WebExtAPIRef("downloads.DangerType")}}
+  - : ダウンロード可能なファイルに関連した想定される危険性への警告の集合を定義
+- {{WebExtAPIRef("downloads.State")}}
+  - : 現在のダウンロードが取りうるさまざまな状態を定義
+- {{WebExtAPIRef("downloads.DownloadItem")}}
+  - : ダウンロード済みのファイルを表現する
+- {{WebExtAPIRef("downloads.StringDelta")}}
+  - : 2 つの文字列の差異を表現する
+- {{WebExtAPIRef("downloads.DoubleDelta")}}
+  - : 2 つの倍精度実数の差異を表現する
+- {{WebExtAPIRef("downloads.BooleanDelta")}}
+  - : 2 つの真偽値の差異を表現する
+- {{WebExtAPIRef("downloads.DownloadTime")}}
+  - : ダウンロード完了にかかった時間を表現する
+- {{WebExtAPIRef("downloads.DownloadQuery")}}
+  - : ダウンロードマネージャーで特定のダウンロードを検索するのに使われるパラメーターを定義
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.download()")}}</dt>
- <dd>URL とオプション設定を与えて、ファイルをダウンロードします</dd>
- <dt>{{WebExtAPIRef("downloads.search()")}}</dt>
- <dd>ブラウザーのダウンロードマネージャーで使える {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} に問い合わせて、指定した検索条件にマッチするものを返します</dd>
- <dt>{{WebExtAPIRef("downloads.pause()")}}</dt>
- <dd>ダウンロードを停止します</dd>
- <dt>{{WebExtAPIRef("downloads.resume()")}}</dt>
- <dd>停止したダウンロードを再開します</dd>
- <dt>{{WebExtAPIRef("downloads.cancel()")}}</dt>
- <dd>ダウンロードをキャンセルします</dd>
- <dt>{{WebExtAPIRef("downloads.getFileIcon()")}}</dt>
- <dd>指定したダウンロードのアイコンを取得します</dd>
- <dt>{{WebExtAPIRef("downloads.open()")}}</dt>
- <dd>関連付けられたアプリケーションでダウンロード済みのファイルを開きます</dd>
- <dt>{{WebExtAPIRef("downloads.show()")}}</dt>
- <dd>プラットフォームのファイルマネージャーアプリケーションを開いて、ダウンロードフォルダー内のファイルを表示します</dd>
- <dt>{{WebExtAPIRef("downloads.showDefaultFolder()")}}</dt>
- <dd>プラットフォームのファイルマネージャーアプリケーションを開いて、デフォルトのダウンロードフォルダーを表示します</dd>
- <dt>{{WebExtAPIRef("downloads.erase()")}}</dt>
- <dd>ダウンロード済みのファイルをディスクから消去することなく、ブラウザーのダウンロード履歴からマッチした {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} を消去します</dd>
- <dt>{{WebExtAPIRef("downloads.removeFile()")}}</dt>
- <dd>ブラウザーのダウンロード履歴ではなく、ダウンロード済みのファイルをディスクから消去します</dd>
- <dt>{{WebExtAPIRef("downloads.acceptDanger()")}}</dt>
- <dd>危険なダウンロードを受け入れるかキャンセルするかを、ユーザーに確認します</dd>
- <dt>{{WebExtAPIRef("downloads.drag()")}}</dt>
- <dd>ダウンロード済みのファイルを他のアプリケーションにドラッグし始めます</dd>
- <dt>{{WebExtAPIRef("downloads.setShelfEnabled()")}}</dt>
- <dd>現在のブラウザープロファイルに関連するすぺてのウィンドウの下のグレーの棚を有効化/無効化します。この棚は少なくとも1つの拡張機能が無効化すると無効になります。</dd>
-</dl>
+- {{WebExtAPIRef("downloads.download()")}}
+  - : URL とオプション設定を与えて、ファイルをダウンロードします
+- {{WebExtAPIRef("downloads.search()")}}
+  - : ブラウザーのダウンロードマネージャーで使える {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} に問い合わせて、指定した検索条件にマッチするものを返します
+- {{WebExtAPIRef("downloads.pause()")}}
+  - : ダウンロードを停止します
+- {{WebExtAPIRef("downloads.resume()")}}
+  - : 停止したダウンロードを再開します
+- {{WebExtAPIRef("downloads.cancel()")}}
+  - : ダウンロードをキャンセルします
+- {{WebExtAPIRef("downloads.getFileIcon()")}}
+  - : 指定したダウンロードのアイコンを取得します
+- {{WebExtAPIRef("downloads.open()")}}
+  - : 関連付けられたアプリケーションでダウンロード済みのファイルを開きます
+- {{WebExtAPIRef("downloads.show()")}}
+  - : プラットフォームのファイルマネージャーアプリケーションを開いて、ダウンロードフォルダー内のファイルを表示します
+- {{WebExtAPIRef("downloads.showDefaultFolder()")}}
+  - : プラットフォームのファイルマネージャーアプリケーションを開いて、デフォルトのダウンロードフォルダーを表示します
+- {{WebExtAPIRef("downloads.erase()")}}
+  - : ダウンロード済みのファイルをディスクから消去することなく、ブラウザーのダウンロード履歴からマッチした {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} を消去します
+- {{WebExtAPIRef("downloads.removeFile()")}}
+  - : ブラウザーのダウンロード履歴ではなく、ダウンロード済みのファイルをディスクから消去します
+- {{WebExtAPIRef("downloads.acceptDanger()")}}
+  - : 危険なダウンロードを受け入れるかキャンセルするかを、ユーザーに確認します
+- {{WebExtAPIRef("downloads.drag()")}}
+  - : ダウンロード済みのファイルを他のアプリケーションにドラッグし始めます
+- {{WebExtAPIRef("downloads.setShelfEnabled()")}}
+  - : 現在のブラウザープロファイルに関連するすぺてのウィンドウの下のグレーの棚を有効化/無効化します。この棚は少なくとも 1 つの拡張機能が無効化すると無効になります。
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.onCreated")}}</dt>
- <dd>ダウンロード開始時に {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} オブジェクトと共に発火します</dd>
- <dt>{{WebExtAPIRef("downloads.onErased")}}</dt>
- <dd>ダウンロードが履歴から消去された時に <code>downloadId</code> と共に発火します</dd>
- <dt>{{WebExtAPIRef("downloads.onChanged")}}</dt>
- <dd><code>bytesReceived</code> を除くいかなる {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} のプロパティが変わった時、このイベントは <code>downloadId</code> や変更したプロパティを含むオブジェクトと共に発火します</dd>
-</dl>
+- {{WebExtAPIRef("downloads.onCreated")}}
+  - : ダウンロード開始時に {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} オブジェクトと共に発火します
+- {{WebExtAPIRef("downloads.onErased")}}
+  - : ダウンロードが履歴から消去された時に `downloadId` と共に発火します
+- {{WebExtAPIRef("downloads.onChanged")}}
+  - : `bytesReceived` を除くいかなる {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} のプロパティが変わった時、このイベントは `downloadId` や変更したプロパティを含むオブジェクトと共に発火します
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.downloads")}}</p>
+{{Compat("webextensions.api.downloads")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a> API に基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-
-<p> </p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -131,4 +117,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

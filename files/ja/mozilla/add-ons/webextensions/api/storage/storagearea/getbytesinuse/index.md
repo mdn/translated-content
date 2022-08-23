@@ -13,41 +13,35 @@ tags:
   - getBytesInUse
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>1つ以上のストレージ領域内に格納されたアイテムが占めるストレージ空間をバイト単位で取得します。</p>
+1 つ以上のストレージ領域内に格納されたアイテムが占めるストレージ空間をバイト単位で取得します。
 
-<p>この関数は <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var gettingSpace = browser.storage.&lt;storageType&gt;.getBytesInUse(
+```js
+var gettingSpace = browser.storage.<storageType>.getBytesInUse(
   keys                      // null, string, or array of strings
 )
-</pre>
+```
 
-<p><code>&lt;storageType&gt;</code> は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。</p>
+`<storageType>` は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>ストレージ空間を取得したいアイテムのキー(文字列または文字列の配列)を指定します。 空の文字列か配列を渡すと 0 が返ります。 <code>null</code> を指定すると、ストレージ領域全体の使用中ストレージ空間を返します。</dd>
-</dl>
+- `keys`
+  - : ストレージ空間を取得したいアイテムのキー(文字列または文字列の配列)を指定します。 空の文字列か配列を渡すと 0 が返ります。 `null` を指定すると、ストレージ領域全体の使用中ストレージ空間を返します。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>成功時は <code>keys</code> で指定されたオブジェクトが占めるストレージ空間を持つ整数 <code>bytesUsed</code> を引数に持つ <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。失敗した場合 Promise はエラーメッセージと共にリジェクトされます。</p>
+成功時は `keys` で指定されたオブジェクトが占めるストレージ空間を持つ整数 `bytesUsed` を引数に持つ [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。失敗した場合 Promise はエラーメッセージと共にリジェクトされます。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.storage.StorageArea.getBytesInUse")}}</p>
+{{Compat("webextensions.api.storage.StorageArea.getBytesInUse")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> APIに基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。

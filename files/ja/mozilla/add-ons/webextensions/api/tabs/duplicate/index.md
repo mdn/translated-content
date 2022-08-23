@@ -3,39 +3,39 @@ title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>ID で指定されたタブを複製します。</p>
+ID で指定されたタブを複製します。
 
-<p>この関数は <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var duplicating = browser.tabs.duplicate(
+```js
+var duplicating = browser.tabs.duplicate(
   tabId              // integer
 )
-</pre>
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. 複製するタブのIDを指定します。</dd>
-</dl>
+- `tabId`
+  - : `integer`. 複製するタブの ID を指定します。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>A <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The <code>Tab</code> object only contains <code>url</code>, <code>title</code> and <code>favIconUrl</code> if the extension has the <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions"><code>"tabs"</code> permission</a>. If any error occurs the promise will be rejected with an error message.</p>
+A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/ja/Add-ons/WebExtensions/manifest.json/permissions). If any error occurs the promise will be rejected with an error message.
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.tabs.duplicate")}}</p>
+{{Compat("webextensions.api.tabs.duplicate")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>１つ目のタブを複製し、新しく作られたタブのIDをログに残す例：</p>
+１つ目のタブを複製し、新しく作られたタブの ID をログに残す例：
 
-<pre class="brush: js">function onDuplicated(tabInfo) {
+```js
+function onDuplicated(tabInfo) {
   console.log(tabInfo.id);
 }
 
@@ -45,7 +45,7 @@ function onError(error) {
 
 // Duplicate the first tab in the array
 function duplicateFirstTab(tabs) {console.log(tabs);
-  if (tabs.length &gt; 0) {
+  if (tabs.length > 0) {
     var duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
   }
@@ -53,19 +53,14 @@ function duplicateFirstTab(tabs) {console.log(tabs);
 
 // Query for all open tabs
 var querying = browser.tabs.query({});
-querying.then(duplicateFirstTab, onError);</pre>
+querying.then(duplicateFirstTab, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromiums の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromiums の <a href="https://developer.chrome.com/extensions/tabs#method-duplicate"><code>chrome.tabs</code></a> APIに基づいています。 This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,4 +88,3 @@ querying.then(duplicateFirstTab, onError);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

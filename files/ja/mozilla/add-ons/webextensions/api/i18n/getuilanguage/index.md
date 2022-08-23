@@ -13,45 +13,42 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>ブラウザーの UI 言語を取得します。これは、優先されるユーザー言語を返す {{WebExtAPIRef('i18n.getAcceptLanguages')}} とは異なります。</p>
+ブラウザーの UI 言語を取得します。これは、優先されるユーザー言語を返す {{WebExtAPIRef('i18n.getAcceptLanguages')}} とは異なります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">browser.i18n.getUILanguage()
-</pre>
+```js
+browser.i18n.getUILanguage()
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>文字列</code>。{{WebExtAPIRef("i18n.LanguageCode")}} によるブラウザーの UI 言語コード。</p>
+`文字列`。{{WebExtAPIRef("i18n.LanguageCode")}} によるブラウザーの UI 言語コード。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
-<p>{{Compat("webextensions.api.i18n.getUILanguage")}}</p>
+{{Compat("webextensions.api.i18n.getUILanguage")}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">var uiLanguage = browser.i18n.getUILanguage();
+```js
+var uiLanguage = browser.i18n.getUILanguage();
 console.log(uiLanguage);
 
-//e.g. "ja"</pre>
+//e.g. "ja"
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getUILanguage) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
-<p>この API は、Chromium の <a href="https://developer.chrome.com/extensions/i18n#method-getUILanguage"><code>chrome.i18n</code></a> API を基にしています。このドキュメンテーションは、Chromium コード内の <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> に由来しています。</p>
-
-<p>Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -79,4 +76,3 @@ console.log(uiLanguage);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

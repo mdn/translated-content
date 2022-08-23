@@ -13,73 +13,64 @@ tags:
   - onImportEnded
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>ブックマークのインポートが終了した際に発火します。</p>
+ブックマークのインポートが終了した際に発火します。
 
-<p>{{WebExtAPIRef("bookmarks.onImportBegan")}} も参照してください。</p>
+{{WebExtAPIRef("bookmarks.onImportBegan")}} も参照してください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">browser.bookmarks.onImportEnded.addListener(function() {...})
+```js
+browser.bookmarks.onImportEnded.addListener(function() {...})
 browser.bookmarks.onImportEnded.removeListener(listener)
 browser.bookmarks.onImportEnded.hasListener(listener)
-</pre>
+```
 
-<p>このイベントには 3 つのメソッドが用意されています。</p>
+このイベントには 3 つのメソッドが用意されています。
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>イベントリスナを追加します。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>イベントリスナを削除します。引数 <code>listener</code> には削除したいリスナを指定します。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd><code>listener</code> がイベントリスナとして登録されているか確認します。登録されていれば <code>true</code> を、それ以外の場合は <code>false</code> を返します。</dd>
-</dl>
+- `addListener(callback)`
+  - : イベントリスナを追加します。
+- `removeListener(listener)`
+  - : イベントリスナを削除します。引数 `listener` には削除したいリスナを指定します。
+- `hasListener(listener)`
+  - : `listener` がイベントリスナとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
 
-<h2 id="addListener_の構文">addListener の構文</h2>
+## addListener の構文
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>イベントが発火した際に呼び出される関数を指定します。この関数に渡される引数はありません。</p>
- </dd>
-</dl>
+- `callback`
+  - : イベントが発火した際に呼び出される関数を指定します。この関数に渡される引数はありません。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.bookmarks.onImportEnded")}}</p>
+{{Compat("webextensions.api.bookmarks.onImportEnded")}}
 
-<h2 id="使用例">使用例</h2>
+## 使用例
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">handleImportBegan</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Importing..."</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```js
+function handleImportBegan() {
+  console.log("Importing...");
+}
 
-<span class="keyword token">function</span> <span class="function token">handleImportEnded</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"...finished."</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function handleImportEnded() {
+  console.log("...finished.");
+}
 
-<span class="keyword token">function</span> <span class="function token">handleClick</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span>onImportBegan<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleImportBegan<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span>onImportEnded<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleImportEnded<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function handleClick() {
+  chrome.bookmarks.onImportBegan.addListener(handleImportBegan);
+  chrome.bookmarks.onImportEnded.addListener(handleImportEnded);
+}
 
-chrome<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+chrome.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/bookmarks#method-update"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードから作成されています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +98,3 @@ chrome<span class="punctuation token">.</span>browserAction<span class="punctuat
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -10,36 +10,30 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>さまざまなプライバシー関連のブラウザー設定にアクセスや変更を行います。</p>
+さまざまなプライバシー関連のブラウザー設定にアクセスや変更を行います。
 
-<p>privacy API を使うには、"privacy" <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API パーミッション</a>が必要です。</p>
+privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{WebExtAPIRef("privacy.network")}}</dt>
- <dd>ネットワーク関連のプライバシー設定にアクセス、編集します。</dd>
- <dt>{{WebExtAPIRef("privacy.services")}}</dt>
- <dd>ブラウザーやサードパーティのプライバシー設定にアクセス、編集します。</dd>
- <dt>{{WebExtAPIRef("privacy.websites")}}</dt>
- <dd>ウェブサイトのふるまいに関連したプライバシー設定にアクセス、編集します。</dd>
-</dl>
+- {{WebExtAPIRef("privacy.network")}}
+  - : ネットワーク関連のプライバシー設定にアクセス、編集します。
+- {{WebExtAPIRef("privacy.services")}}
+  - : ブラウザーやサードパーティのプライバシー設定にアクセス、編集します。
+- {{WebExtAPIRef("privacy.websites")}}
+  - : ウェブサイトのふるまいに関連したプライバシー設定にアクセス、編集します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.privacy", 10, 1)}}</p>
+{{Compat("webextensions.api.privacy", 10, 1)}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -67,4 +61,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

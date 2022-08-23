@@ -13,89 +13,84 @@ tags:
   - getChildren
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.getChildren()</code></strong> は、ブックマークフォルダの ID を {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、その直下にあたる子要素をすべて取得します。</p>
+**`bookmarks.getChildren()`** は、ブックマークフォルダの ID を {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、その直下にあたる子要素をすべて取得します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">browser.bookmarks.getChildren(
+```js
+browser.bookmarks.getChildren(
   id,      // 文字列
   callback // 関数
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>id</code></dt>
- <dd>取得したい子要素を持つフォルダ ID を指定する {{jsxref("string")}} です。</dd>
- <dt><code>callback</code></dt>
- <dd>子ノードのリストが取得された際に実行される関数です。この関数には以下の引数が渡ります。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>results</code></dt>
-  <dd>各要素が 1 つの子ノードを表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。要素の順序は、UI に表示されているのと同じ順番です。現在、セパレータの有無は結果に含まれません。指定したノードに子要素が含まれていなかった場合、<code>results</code> は空配列となります。</dd>
- </dl>
- </dd>
-</dl>
+- `id`
+  - : 取得したい子要素を持つフォルダ ID を指定する {{jsxref("string")}} です。
+- `callback`
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+  - : 子ノードのリストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
 
-<p>{{Compat("webextensions.api.bookmarks.getChildren")}}</p>
+    - `results`
+      - : 各要素が 1 つの子ノードを表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。要素の順序は、UI に表示されているのと同じ順番です。現在、セパレータの有無は結果に含まれません。指定したノードに子要素が含まれていなかった場合、`results` は空配列となります。
 
-<h2 id="使用例">使用例</h2>
+## ブラウザ実装状況
 
-<h3 id="基本的な使い方">基本的な使い方</h3>
+{{Compat("webextensions.api.bookmarks.getChildren")}}
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">gotChildren</span><span class="punctuation token">(</span>children<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>children<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+## 使用例
 
-chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">getChildren</span><span class="punctuation token">(</span>bookmarkItemId<span class="punctuation token">,</span> gotChildren<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+### 基本的な使い方
 
-<h3 id="指定したフォルダでブックマークを切替">指定したフォルダでブックマークを切替</h3>
+```js
+function gotChildren(children) {
+  console.log(children);
+}
 
-<p>以下の例は、フォルダを {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、そのフォルダに新しいブックマークを作成するものです。ただし、既に同じ名前のブックマークがあった場合は、逆に既存のブックマークを削除することとします。このとき新しいブックマークは作成されません。</p>
+chrome.bookmarks.getChildren(bookmarkItemId, gotChildren);
+```
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">toggleBookmark</span><span class="punctuation token">(</span>folderNode<span class="punctuation token">,</span> title<span class="punctuation token">,</span> url<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">getChildren</span><span class="punctuation token">(</span>folderNode<span class="punctuation token">.</span>id<span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">let</span> node <span class="operator token">=</span> results<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>el<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">return</span> el<span class="punctuation token">.</span>title <span class="operator token">===</span> title<span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+### 指定したフォルダでブックマークを切替
 
-    <span class="comment token">// ブックマークが存在する場合は削除する</span>
-    <span class="comment token">// そうでなければ新しく作成する</span>
+以下の例は、フォルダを {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、そのフォルダに新しいブックマークを作成するものです。ただし、既に同じ名前のブックマークがあった場合は、逆に既存のブックマークを削除することとします。このとき新しいブックマークは作成されません。
 
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>node <span class="operator token">!==</span> undefined<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">remove</span><span class="punctuation token">(</span>node<span class="punctuation token">.</span>id<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-      chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-        parentId<span class="punctuation token">:</span> folderNode<span class="punctuation token">.</span>id<span class="punctuation token">,</span>
-        title<span class="punctuation token">:</span> title<span class="punctuation token">,</span>
-        url<span class="punctuation token">:</span> url
-      <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+```js
+function toggleBookmark(folderNode, title, url) {
+  chrome.bookmarks.getChildren(folderNode.id, function(results) {
+    let node = results.find(function(el) {
+      return el.title === title;
+    });
 
-<p>先の <code>toggleBookmark()</code> 関数は、<code>folderNode</code> で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の中に既に存在しているすべてのブックマークのリストを取得するため、最初に <code>bookmarks.getChildren()</code> を呼び出しています。</p>
+    // ブックマークが存在する場合は削除する
+    // そうでなければ新しく作成する
 
-<p>コールバックに指定された匿名関数には <code>results</code> という引数が 1 つ渡されます。この引数は、フォルダの直下にある子要素をすべて含んだ配列です。まず初めに、与えられたタイトルを持つノードがフォルダに存在するかどうかを調べます。ここでは {{jsxref("Array.find()")}} メソッドを使い、タイトルが等しいかどうかをコールバック内で判定しています。</p>
+    if (node !== undefined) {
+      chrome.bookmarks.remove(node.id);
+    } else {
+      chrome.bookmarks.create({
+        parentId: folderNode.id,
+        title: title,
+        url: url
+      });
+    }
+  });
+}
+```
 
-<p>マッチするノードがあった場合（すなわち、<code>node</code> が <code>undefined</code> ではない場合）、指定した <code>title</code> を持つブックマークが既に存在していたことが分かったので、既存のブックマークを削除するために {{WebExtAPIRef("bookmarks.remove()")}} を呼び出します。</p>
+先の `toggleBookmark()` 関数は、`folderNode` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の中に既に存在しているすべてのブックマークのリストを取得するため、最初に `bookmarks.getChildren()` を呼び出しています。
 
-<p>そうではなかった場合、新しいブックマークを作成するために {{WebExtAPIRef("bookmarks.create()")}} が呼び出します。この際、引数 <code>folderNode</code> で与えられていたフォルダ ID を新しい親フォルダの ID に指定し、合わせて <code>title</code> と <code>url</code> も指定します。</p>
+コールバックに指定された匿名関数には `results` という引数が 1 つ渡されます。この引数は、フォルダの直下にある子要素をすべて含んだ配列です。まず初めに、与えられたタイトルを持つノードがフォルダに存在するかどうかを調べます。ここでは {{jsxref("Array.find()")}} メソッドを使い、タイトルが等しいかどうかをコールバック内で判定しています。
 
-<div class="note"><strong>謝辞</strong>
+マッチするノードがあった場合（すなわち、`node` が `undefined` ではない場合）、指定した `title` を持つブックマークが既に存在していたことが分かったので、既存のブックマークを削除するために {{WebExtAPIRef("bookmarks.remove()")}} を呼び出します。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/bookmarks#method-getChildren"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードから作成されています。</p>
+そうではなかった場合、新しいブックマークを作成するために {{WebExtAPIRef("bookmarks.create()")}} が呼び出します。この際、引数 `folderNode` で与えられていたフォルダ ID を新しい親フォルダの ID に指定し、合わせて `title` と `url` も指定します。
 
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getChildren) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,4 +118,3 @@ chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation 
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

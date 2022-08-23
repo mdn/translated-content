@@ -13,40 +13,26 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}`StorageChange` はストレージ領域の変更を表すオブジェクトです。
 
-<div><code>StorageChange</code> はストレージ領域の変更を表すオブジェクトです。</div>
+## 型
 
-<div> </div>
+`StorageChange` オブジェクトは以下のプロパティを持ちます。
 
-<h2 id="型">型</h2>
+- `oldValue`{{optional_inline}}
+  - : アイテムの変更前の値が存在すれば、この中に入ります。データ型は特定されておらず、何らかのデータ型が入ります。
+- `newValue`{{optional_inline}}
+  - : アイテムの変更後の値があれば、この中に入ります。データ型は特定されておらず、何らかのデータ型が入ります。
 
-<p><code>StorageChange</code> オブジェクトは以下のプロパティを持ちます。</p>
+## ブラウザ実装状況
 
-<dl class="reference-values">
- <dt><code>oldValue</code>{{optional_inline}}</dt>
- <dd>アイテムの変更前の値が存在すれば、この中に入ります。データ型は特定されておらず、何らかのデータ型が入ります。</dd>
- <dt><code>newValue</code>{{optional_inline}}</dt>
- <dd>アイテムの変更後の値があれば、この中に入ります。データ型は特定されておらず、何らかのデータ型が入ります。</dd>
-</dl>
+{{Compat("webextensions.api.storage.StorageChange")}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.storage.StorageChange")}}</p>
+> **Note:** **謝辞**この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>謝辞</strong>
-
-<p> </p>
-
-<p style="font-size: 18px !important; line-height: 27px !important;">この API は Chromium の <a class="external external-icon" href="https://developer.chrome.com/extensions/storage" rel="noopener" style="font-size: 18px !important; line-height: 27px !important;"><code style="font-size: 16px !important; line-height: 24px !important;">chrome.storage</code></a> APIに基づいています。また、このドキュメントは <a class="external external-icon" href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json" rel="noopener" style="font-size: 18px !important; line-height: 27px !important;"><code style="font-size: 16px !important; line-height: 24px !important;">storage.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p style="font-size: 18px !important; line-height: 27px !important;">Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,4 +60,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

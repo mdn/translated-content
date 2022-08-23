@@ -11,40 +11,28 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p>このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。このAPI は <a class="external external-icon" href="https://developer.chrome.com/extensions/devtools" rel="noopener">Chrome devtools APIs</a> に基づいていますが、Firefoxでは実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 <a href="/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs">Limitations of the devtools APIs</a> を見てください。</p>
-</div>
+> **Note:** このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。
 
-<p><code>devtools.network</code> API によって開発ツール拡張機能では開発ツールが付属しているウィンドウ(インスペクト対象ウィンドウ)に関連するネットワークリクエストの情報を取得できます。</p>
+`devtools.network` API によって開発ツール拡張機能では開発ツールが付属しているウィンドウ(インスペクト対象ウィンドウ)に関連するネットワークリクエストの情報を取得できます。
 
-<p>すべての <code>devtools</code> API と同様に、この API はmanifest.json <a class="new" href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page" rel="nofollow">devtools_page</a> キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えば拡張機能が作ったパネル自身のドキュメント)の中だけでコードを利用できます。これ以上は <a class="new" href="/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools" rel="nofollow">開発ツールを拡張する</a>を見てください。</p>
+すべての `devtools` API と同様に、この API は manifest.json [devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えば拡張機能が作ったパネル自身のドキュメント)の中だけでコードを利用できます。これ以上は [開発ツールを拡張する](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)を見てください。
 
-<h2 id="Events" name="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.network/onNavigated">devtools.network.onNavigated</a></code></dt>
- <dd>ユーザーが新規ページのインスペクト対象ウィンドウに移動した時に発火します</dd>
-</dl>
+- [`devtools.network.onNavigated`](/ja/Add-ons/WebExtensions/API/devtools.network/onNavigated)
+  - : ユーザーが新規ページのインスペクト対象ウィンドウに移動した時に発火します
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.devtools.network")}}</p>
+{{Compat("webextensions.api.devtools.network")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/devtools_network"><code>chrome.devtools.network</code></a> API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-
-<p> </p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,4 +60,3 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -12,52 +12,38 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>ユーザーのシステムがアイドル状態、ロックされた状態、アクティブな状態であるのを発見します。</p>
+ユーザーのシステムがアイドル状態、ロックされた状態、アクティブな状態であるのを発見します。
 
-<p>この API を使うには "idle" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
+この API を使うには "idle" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("idle.IdleState")}}</dt>
- <dd>
- <p>端末のアイドル状態を記す文字列</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("idle.IdleState")}}
+  - : 端末のアイドル状態を記す文字列
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("idle.queryState()")}}</dt>
- <dd>システムがロックされたら <code>"locked"</code> を、ユーザーが指定した時間の間に何も入力しない場合は <code>"idle"</code> を、その他では <code>"active"</code> を返す。</dd>
- <dt>{{WebExtAPIRef("idle.setDetectionInterval()")}}</dt>
- <dd>{{WebExtAPIRef("idle.onStateChanged")}} イベントでシステムがアイドル状態であると決定する間隔をセットします。</dd>
-</dl>
+- {{WebExtAPIRef("idle.queryState()")}}
+  - : システムがロックされたら `"locked"` を、ユーザーが指定した時間の間に何も入力しない場合は `"idle"` を、その他では `"active"` を返す。
+- {{WebExtAPIRef("idle.setDetectionInterval()")}}
+  - : {{WebExtAPIRef("idle.onStateChanged")}} イベントでシステムがアイドル状態であると決定する間隔をセットします。
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("idle.onStateChanged")}}</dt>
- <dd>システム状態が変化したら発火します。</dd>
-</dl>
+- {{WebExtAPIRef("idle.onStateChanged")}}
+  - : システム状態が変化したら発火します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.idle")}}</p>
+{{Compat("webextensions.api.idle")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/extensions/idle) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/idle"><code>chrome.idle</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,4 +71,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

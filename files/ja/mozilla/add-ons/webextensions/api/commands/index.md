@@ -10,50 +10,32 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><a href="/ja/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json キー</a>を使って、登録したコマンドをユーザーが実行するのをリッスンします。</p>
+[`commands` manifest.json キー](/ja/Add-ons/WebExtensions/manifest.json/commands)を使って、登録したコマンドをユーザーが実行するのをリッスンします。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("commands.Command")}}</dt>
- <dd>コマンドを表す型。これは <a href="/ja/Add-ons/WebExtensions/manifest.json/commands">manifest.json の <code>commands</code> キー</a>のコマンドで指定された情報が入っています。</dd>
-</dl>
+- {{WebExtAPIRef("commands.Command")}}
+  - : コマンドを表す型。これは [manifest.json の `commands` キー](/ja/Add-ons/WebExtensions/manifest.json/commands)のコマンドで指定された情報が入っています。
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("commands.getAll")}}</dt>
- <dd>
- <p>拡張機能用のすべての登録済みコマンドを取得します。</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("commands.getAll")}}
+  - : 拡張機能用のすべての登録済みコマンドを取得します。
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("commands.onCommand")}}</dt>
- <dd>
- <div>関連付けされたキーボードショートカットを使ってコマンドが実行された時に発火します。</div>
- </dd>
-</dl>
+- {{WebExtAPIRef("commands.onCommand")}}
+  - : 関連付けされたキーボードショートカットを使ってコマンドが実行された時に発火します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.commands`](https://developer.chrome.com/extensions/commands) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a> API に基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-
-<p> </p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -81,4 +63,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

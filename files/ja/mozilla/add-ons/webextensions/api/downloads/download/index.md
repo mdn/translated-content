@@ -3,72 +3,64 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>{{WebExtAPIRef("downloads")}} API の <strong><code>download()</code></strong> 関数ではURLとそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。</p>
+{{WebExtAPIRef("downloads")}} API の **`download()`** 関数では URL とそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。
 
-<ul>
- <li>HTTPもしくはHTTPSのプロトコルを使用したURLを指定した場合、対象のホスト名に対応する全てのcookieを含んだリクエストが送られます。</li>
- <li><code>filename</code> と <code>saveAs</code> が指定されている場合、指定された<code>filename</code>が設定された[名前をつけて保存]のダイアログが開きます。</li>
-</ul>
+- HTTP もしくは HTTPS のプロトコルを使用した URL を指定した場合、対象のホスト名に対応する全ての cookie を含んだリクエストが送られます。
+- `filename` と `saveAs` が指定されている場合、指定された`filename`が設定された\[名前をつけて保存]のダイアログが開きます。
 
-<p>この関数は非同期に実行され、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>を返します。</p>
+この関数は非同期に実行され、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var downloading = browser.downloads.download(
+```js
+var downloading = browser.downloads.download(
   options                   // object
 )
-</pre>
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>options</code></dt>
- <dd>この<code>object</code>ではダウンロードしたいファイルやその他のダウンロードに関する設定を指定します。指定できるプロパティは以下です。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>body</code>{{optional_inline}}</dt>
-  <dd>リクエストのbodyを<code>string</code>で指定します。</dd>
-  <dt><code>conflictAction</code>{{optional_inline}}</dt>
-  <dd>A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).</dd>
-  <dt><code>filename</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, and paths containing back-references (<code>../</code>) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.</dd>
-  <dt><code>headers</code>{{optional_inline}}</dt>
-  <dd>An <code>array</code> of <code>objects</code> representing extra HTTP headers to send with the request if the URL uses the HTTP[s] protocol. Each header is represented as a dictionary object containing the keys <code>name</code> and either <code>value</code> or <code>binaryValue</code>, restricted to those allowed by <code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>.</dd>
-  <dt><code>incognito</code>{{optional_inline}}</dt>
-  <dd>A <code>boolean</code>: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.</dd>
-  <dt><code>method</code>{{optional_inline}}</dt>
-  <dd>HTTP[S]を使用したURLを指定した際、HTTPメソッドを<code>string</code>で指定します。GETもしくはPOSTを設定できます。</dd>
-  <dt><code>saveAs</code>{{optional_inline}}</dt>
-  <dd>
-  <p>A <code>boolean</code> that specifies whether to provide a file chooser dialog to allow the user to select a filename (<code>true</code>), or not (<code>false</code>).</p>
+- `options`
 
-  <p>If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or <code>browser.download.useDownloadDir</code> in about:config).</p>
-  </dd>
-  <dt><code>url</code></dt>
-  <dd>ダウンロードするURLを<code>string</code>で指定します。</dd>
- </dl>
- </dd>
-</dl>
+  - : この`object`ではダウンロードしたいファイルやその他のダウンロードに関する設定を指定します。指定できるプロパティは以下です。
 
-<h3 id="戻り値">戻り値</h3>
+    - `body`{{optional_inline}}
+      - : リクエストの body を`string`で指定します。
+    - `conflictAction`{{optional_inline}}
+      - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
+    - `filename`{{optional_inline}}
+      - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
+    - `headers`{{optional_inline}}
+      - : An `array` of `objects` representing extra HTTP headers to send with the request if the URL uses the HTTP\[s] protocol. Each header is represented as a dictionary object containing the keys `name` and either `value` or `binaryValue`, restricted to those allowed by [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest).
+    - `incognito`{{optional_inline}}
+      - : A `boolean`: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.
+    - `method`{{optional_inline}}
+      - : HTTP\[S]を使用した URL を指定した際、HTTP メソッドを`string`で指定します。GET もしくは POST を設定できます。
+    - `saveAs`{{optional_inline}}
 
-<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>が返却されます。ダウンロードが成功した場合、new {{WebExtAPIRef("downloads.DownloadItem")}}のidが格納されたpromiseを受け取ります。対して、promiseがrejectされた場合は、エラーメッセージを受け取ります。</p>
+      - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+        If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).
 
-<p> </p>
+    - `url`
+      - : ダウンロードする URL を`string`で指定します。
 
-<p>{{Compat("webextensions.api.downloads.download")}}</p>
+### 戻り値
 
-<p> </p>
+[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)が返却されます。ダウンロードが成功した場合、new {{WebExtAPIRef("downloads.DownloadItem")}}の id が格納された promise を受け取ります。対して、promise が reject された場合は、エラーメッセージを受け取ります。
 
-<h2 id="例">例</h2>
+## ブラウザ実装状況
 
-<p>以下のダウンロードの例ではファイル名と保存場所を指定し、<code>conflictAction</code>に<code>uniquify</code>を指定しています。</p>
+{{Compat("webextensions.api.downloads.download")}}
 
-<pre class="brush: js">function onStartedDownload(id) {
+## 例
+
+以下のダウンロードの例ではファイル名と保存場所を指定し、`conflictAction`に`uniquify`を指定しています。
+
+```js
+function onStartedDownload(id) {
   console.log(`Started downloading: ${id}`);
 }
 
@@ -84,17 +76,14 @@ var downloading = browser.downloads.download({
   conflictAction : 'uniquify'
 });
 
-downloading.then(onStartedDownload, onFailed);</pre>
+downloading.then(onStartedDownload, onFailed);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API を元にしています。
 
-<p>このAPIはChromiumの <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> APIを元にしています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +111,3 @@ downloading.then(onStartedDownload, onFailed);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

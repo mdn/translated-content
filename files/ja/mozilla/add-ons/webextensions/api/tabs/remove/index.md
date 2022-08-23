@@ -3,39 +3,39 @@ title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>１つ以上のタブを閉じます。</p>
+１つ以上のタブを閉じます。
 
-<p>この関数は <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var removing = browser.tabs.remove(
+```js
+var removing = browser.tabs.remove(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> または <code><code>array</code> of <code><code>integer</code></code></code>. 閉じるタブのIDを指定します。</dd>
-</dl>
+- `tabIds`
+  - : `integer` または `array of integer`. 閉じるタブの ID を指定します。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>A <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the specified tabs have been removed or their <code>beforeunload</code> prompts have been handled. If any error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.tabs.remove")}}</p>
+{{Compat("webextensions.api.tabs.remove")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>タブを１つだけ閉じる場合：</p>
+タブを１つだけ閉じる場合：
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -44,11 +44,13 @@ function onError(error) {
 }
 
 var removing = browser.tabs.remove(2);
-removing.then(onRemoved, onError);</pre>
+removing.then(onRemoved, onError);
+```
 
-<p>複数のタブを閉じる場合：</p>
+複数のタブを閉じる場合：
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -57,19 +59,14 @@ function onError(error) {
 }
 
 var removing = browser.tabs.remove([15, 14, 1]);
-removing.then(onRemoved, onError);</pre>
+removing.then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-remove) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/tabs#method-remove"><code>chrome.tabs</code></a> APIに基づいています。 This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +94,3 @@ removing.then(onRemoved, onError);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>
