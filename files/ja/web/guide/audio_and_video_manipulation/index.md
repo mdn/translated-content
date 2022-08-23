@@ -107,7 +107,7 @@ processor.doLoad()
 
 これは、キャンバスを使用して動画フレームを加工する方法を示すとてもシンプルな例です。効率をよくするために、対応しているブラウザーで実行する場合は {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を `setTimeout()` の代わりに使用することを検討したほうがいいでしょう。
 
-> **Note:** **注**: 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Access_control_CORS) を有効にする必要があります。
+> **Note:** 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Access_control_CORS) を有効にする必要があります。
 
 ### 動画と WebGL
 
@@ -115,7 +115,7 @@ processor.doLoad()
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** **注**: [このデモのソースコードは GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/webgl-examples/tutorial/sample8/)も)。
+> **Note:** [このデモのソースコードは GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/webgl-examples/tutorial/sample8/)も)。
 
 ### 再生速度
 
@@ -177,7 +177,7 @@ window.addEventListener('load', setPlaybackRate);
 
 {{ EmbedLiveSample('Playable_code', 700, 425) }}
 
-> **Note:** **注**: [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
+> **Note:** [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
 
 ## 音声の加工
 
@@ -267,7 +267,7 @@ window.addEventListener('load', setFilter);
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **Note:** **注**: [CORS](/ja/docs/Web/HTTP/Access_control_CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
+> **Note:** [CORS](/ja/docs/Web/HTTP/Access_control_CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
 
 #### よく使われる音声フィルター
 
@@ -282,7 +282,7 @@ window.addEventListener('load', setFilter);
 - ノッチ: 指定された周波数帯を除き、全ての音を通過させます
 - オールパス: 周波数に関わらず全ての音を通過させますが、幾つかの周波数間の相関係を変更します
 
-> **Note:** **注**: 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
+> **Note:** 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
 
 ### たたみ込みとインパルス
 
@@ -320,7 +320,7 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note:** **注**: [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
+> **Note:** [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
 
 ## JavaScript によるコーデック
 
@@ -335,7 +335,7 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **Note:** **注**: AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
+> **Note:** AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
 
 ## 例
 

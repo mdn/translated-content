@@ -37,7 +37,7 @@ translation_of: Web/Guide/Mobile/A_hybrid_approach
 
 ## 例
 
-![webowonder_mobile_and_desktop-300x225.jpg](/@api/deki/files/5895/=webowonder_mobile_and_desktop-300x225.jpg)Mozilla の Web O Wonder デモサイトでは、ハイブリッドアプローチの基本バージョンを試してみましたが、良い結果が得られました。 レスポンシブウェブデザインのいくつかの要素を使用して、サイトにモバイルレイアウトを設定したり、ユーザーエージェント検出を使用してモバイル向けの動画を提供したり、ユーザーが携帯電話の場合はデモを並べ替えたりします。 [github](https://github.com/mozilla/webowonder/ "Mozilla's Web O' Wonder Source Code") でソースコードをチェックしてください。
+![webowonder_mobile_and_desktop-300x225.jpg](webowonder_mobile_and_desktop-300x225.jpg)Mozilla の Web O Wonder デモサイトでは、ハイブリッドアプローチの基本バージョンを試してみましたが、良い結果が得られました。 レスポンシブウェブデザインのいくつかの要素を使用して、サイトにモバイルレイアウトを設定したり、ユーザーエージェント検出を使用してモバイル向けの動画を提供したり、ユーザーが携帯電話の場合はデモを並べ替えたりします。 [github](https://github.com/mozilla/webowonder/ "Mozilla's Web O' Wonder Source Code") でソースコードをチェックしてください。
 
 私達はまたこのアプローチを含むもっと多くの開発をすぐにやることができます！ 実際、次のようなメインの Mozilla サイトへの 1 つの可能性のある道筋は、上の「長所」セクションに概説されています。
 

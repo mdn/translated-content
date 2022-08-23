@@ -18,7 +18,7 @@ translation_of: Web/Guide/HTML/Editable_content
 
 HTML では、すべての要素を編集可能状態 (editable) にすることができます。 JavaScript のいくつかのイベントハンドラーと併用することで、ウェブページを多機能でかつ高速に動作するリッチテキストエディターにしてしまうことも可能です。本記事では、この機能に関する情報を提供します。
 
-> **Note:** **注**: Firefox 63 Beta/Dev Edition では、ブラウザー間の互換性を高めるために、一部のリッチテキスト編集機能を既定で無効にしています。具体的には、 {{htmlelement("img")}}, {{htmlelement("table")}} および絶対位置指定要素のオブジェクトのサイズ変更、インラインテーブルを編集して行や列の追加や削除すること、および絶対位置指定要素の移動を可能にするグラバーです。詳しくは {{bug("1449564")}} を参照してください。
+> **Note:** Firefox 63 Beta/Dev Edition では、ブラウザー間の互換性を高めるために、一部のリッチテキスト編集機能を既定で無効にしています。具体的には、 {{htmlelement("img")}}, {{htmlelement("table")}} および絶対位置指定要素のオブジェクトのサイズ変更、インラインテーブルを編集して行や列の追加や削除すること、および絶対位置指定要素の移動を可能にするグラバーです。詳しくは {{bug("1449564")}} を参照してください。
 
 ## どのような挙動を示すか
 
@@ -48,7 +48,7 @@ HTML 要素の `contenteditable` 属性を `true` に設定すると、{{domxref
 
 前出の例で試してみてください。
 
-> **Note:** **注記**: Internet Explorer はもはや開発されておらず、`<div>` ではなく {{htmlelement("p")}} 要素を使用します。
+> **Note:** Internet Explorer はもはや開発されておらず、`<div>` ではなく {{htmlelement("p")}} 要素を使用します。
 
 別の方法で段落を分割したい場合は、前出のブラウザーはすべて {{domxref("document.execCommand")}} をサポートしていますので、`defaultParagraphSeparator` コマンドで分割方法を変更できます。例えば、{{htmlelement("p")}} 要素を使用するには以下のようにします:
 

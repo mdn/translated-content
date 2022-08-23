@@ -10,7 +10,7 @@ translation_of: Web/Guide
 **これらの記事は、特定の技術や API を利用するための how-to 情報を提供します。**
 
 - [HTML 学習エリア](/ja/docs/Learn/HTML)
-  - : **[HTML](/ja/docs/Glossary/HTML "HTML: HTML (HyperText Markup Language) は、ウェブページ構造を指定する記述言語です。") **(ハイパーテキスト・マークアップ・ランゲージ／**Hypertext Markup Language**) はほぼすべてのウェブコンテンツの中心となる言語です。ブラウザー画面上で目にする大半は、基本的に HTML を用いて記述されています。
+  - : **[HTML](/ja/docs/Glossary/HTML)** (ハイパーテキスト・マークアップ・ランゲージ／Hypertext Markup Language) はほぼすべてのウェブコンテンツの中心となる言語です。ブラウザー画面上で目にする大半は、基本的に HTML を用いて記述されています。
 - [CSS 学習エリア](/ja/docs/Learn/CSS)
   - : CSS (Cascading Style Sheets) とは HTML 内に書かれた文書の見た目を記述するスタイルシート言語です。
 - [音声と動画の配信](/ja/docs/Web/Guide/Audio_and_video_delivery)

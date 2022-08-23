@@ -47,7 +47,7 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 `handleKeyDown` と `handleKeyUp` は、`keydown` と `keyup` イベントについての制御を実装する関数です。
 
-> **Note:** **注**: キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Reference/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
+> **Note:** キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Reference/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
 
 #### マウス
 
@@ -70,13 +70,13 @@ element.addEventListener("touchmove", handleMove, false);
 
 ここでの `element` は、あなたがタッチイベントを登録したい DOM 要素です。
 
-> **Note:** **注**: タッチイベントでできることについての更なる情報は、[タッチイベントガイド](/ja/docs/Web/API/Touch_events)を読んでください。
+> **Note:** タッチイベントでできることについての更なる情報は、[タッチイベントガイド](/ja/docs/Web/API/Touch_events)を読んでください。
 
 #### ポインターイベント
 
 マウス、指でのタッチ、ペン入力など複数の入力形式が内蔵されているデバイスを扱う時、これら全ての異なる制御の仕組みを機能させるソリューションを開発することは難しいかもしれません。[Pointer Events](http://www.w3.org/TR/pointerevents/) は、デバイス毎の扱いを標準化することにより、開発者がデバイスを横断してイベントを管理することをより簡単にするのに役立ちます。マウスカーソル、ペン、タッチ（マルチタッチを含む）、またはその他のポインティング入力デバイスによって、ポインターはスクリーン上のあらゆる接点となることができます。汎用的なポインター入力を扱うためのイベントは、`pointerdown`、`pointermove`、`pointerup`、`pointerover`、`pointerout` などのマウス用のイベントとよく似ています。
 
-> **Note:** **注**: Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
+> **Note:** Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
 
 ### コントロールの実装
 
@@ -90,7 +90,7 @@ element.addEventListener("touchmove", handleMove, false);
 element.requestPointerLock();
 ```
 
-> **Note:** **注**: 全てのチュートリアルとリファレンスは、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) のページを読んでください。
+> **Note:** 全てのチュートリアルとリファレンスは、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) のページを読んでください。
 
 #### 画面の向き
 
@@ -98,7 +98,7 @@ element.requestPointerLock();
 
 画面の向きのデータは {{domxref("screen.orientation")}} 属性、または [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を通して取得することができます。`screen.orientation` が変化した時、{{domxref("screen.orientationchange")}} イベントがスクリーンオブジェクトで発火されます。{{domxref("screen.lockOrientation")}} メソッドを呼ぶことで画面の向きを固定することができます。また、{{domxref("screen.unlockOrientation")}} メソッドはそれまで設定されていた画面のロックを全て解除します。
 
-> **Note:** **注**: Screen Orientation API についてのより多くの情報は[画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
+> **Note:** Screen Orientation API についてのより多くの情報は[画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
 
 #### 全画面
 
@@ -117,7 +117,7 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** **注**: 全画面の機能性をあなたのアプリケーションに追加することについてもっと知るには、私たちの[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
+> **Note:** 全画面の機能性をあなたのアプリケーションに追加することについてもっと知るには、私たちの[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
 
 #### ドラッグ＆ドロップ
 
@@ -136,7 +136,7 @@ if (elem.requestFullscreen) {
 - ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#attr-draggable) 属性を true にセットします。
 - [`dragstart`](/ja/docs/Web/API/Document/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
-> **Note:** **注**: [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
+> **Note:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
 
 #### コンテンツを編集可能にする
 
@@ -148,7 +148,7 @@ if (elem.requestFullscreen) {
 </div>
 ```
 
-> **Note:** **注**: 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。
+> **Note:** 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。
 
 ## 例
 

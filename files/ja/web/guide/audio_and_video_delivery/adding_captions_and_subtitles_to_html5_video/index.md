@@ -16,7 +16,7 @@ translation_of: >-
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
 
-> **Note:** **メモ**: ソースコードは [Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) にあります。また実際の[動画](http://iandevlin.github.io/mdn/video-player-with-captions/)も見ることもできます。
+> **Note:** ソースコードは [Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) にあります。また実際の[動画](http://iandevlin.github.io/mdn/video-player-with-captions/)も見ることもできます。
 
 ## HTML5 と動画のキャプション
 
