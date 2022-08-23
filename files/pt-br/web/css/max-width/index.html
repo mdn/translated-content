@@ -21,13 +21,11 @@ translation_of: Web/CSS/max-width
 
 <div>{{EmbedInteractiveExample("pages/css/max-width.html")}}</div>
 
-<p class="hidden">O código dos exemplos interativos está armazenado em um repositório GitHub. Se você gostaria de contribuir com o projeto exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um pull request.</p>
-
 <p><code>max-width</code> substitui {{cssxref("width")}}, mas {{cssxref("min-width")}} substitui <code>max-width</code>.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; valor */
+<pre class="brush:css">/* &lt;length&gt; valor */
 max-width: 3.5em;
 
 /* &lt;porcentagem&gt; valor */
@@ -90,14 +88,14 @@ max-width: unset;
 <p>Neste exemplo, o "filho" terá 150 pixels de largura ou a largura do "pai", o que for menor:</p>
 
 <div id="basic-max-width-demo">
-<pre class="brush: html notranslate">&lt;div id="pai"&gt;
+<pre class="brush: html">&lt;div id="pai"&gt;
   &lt;div id="filho"&gt;
     Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">#pai {
+<pre class="brush: css">#pai {
   background: lightblue;
   width: 300px;
 }
@@ -123,14 +121,14 @@ max-width: unset;
 <p>O valor de <code>fit-content</code> pode ser usado para atribuir o comprimento de um elemento no tamanho intrínseco necessário pelo seu conteúdo:</p>
 
 <div id="fit-content-demo">
-<pre class="brush: html notranslate" style="display: none;">&lt;div id="parent"&gt;
+<pre class="brush: html" style="display: none;">&lt;div id="parent"&gt;
     &lt;div id="child"&gt;
         Child Text
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">#parent {
+<pre class="brush: css">#parent {
   background: lightblue;
   width: 300px;
 }

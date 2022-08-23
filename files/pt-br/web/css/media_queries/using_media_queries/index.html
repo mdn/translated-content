@@ -8,7 +8,7 @@ tags:
 translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/CSS_Media_queries
 ---
-<p>Uma <strong>media query</strong> consiste de um <em>media type </em>e pelo menos uma expressão que limita o escopo das folhas de estilo usando <em>media features</em>, tal como largura, altura e cor. <em>Media queries</em>, adicionadas no<span class="seoSummary"> <a href="/en-US/docs/CSS/CSS3" title="/en-US/docs/CSS/CSS3">CSS3</a>, </span>deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.</p>
+<p>Uma <strong>media query</strong> consiste de um <em>media type </em>e pelo menos uma expressão que limita o escopo das folhas de estilo usando <em>media features</em>, tal como largura, altura e cor. <em>Media queries</em>, adicionadas no <a href="/en-US/docs/CSS/CSS3" title="/en-US/docs/CSS/CSS3">CSS3</a>, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -92,7 +92,7 @@ original_slug: Web/Guide/CSS/CSS_Media_queries
 
 <h4 id="only">only</h4>
 
-<p><span style="line-height: 21px;">A palavra chave </span><em><code style="font-size: 14px;">only</code></em><span style="line-height: 21px;"> previne que navegadores antigos que não suportam media queries com media features de aplicar os estilos dados:</span></p>
+<p>A palavra chave <em><code style="font-size: 14px;">only</code></em> previne que navegadores antigos que não suportam media queries com media features de aplicar os estilos dados:</p>
 
 <pre class="brush: html">&lt;link rel="stylesheet" media="only screen and (color)" href="example.css" /&gt;
 </pre>
@@ -396,7 +396,6 @@ media_feature: width | min-width | max-width
 
 <p>Dar o número de pixels do dispositivo por pixels do CSS.</p>
 
-<div class="geckoVersionNote">
 <p><strong>Não use este recurso. </strong></p>
 
 <p>Em vez disso, use o recurso <em><code>resolution</code></em> com a unidade <code>dppx</code>.<br>
@@ -411,9 +410,8 @@ media_feature: width | min-width | max-width
        (min-resolution: 192dpi)             /* dppx fallback */ </pre>
 
 <p>Veja este artigo <a href="http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/">CSSWG</a> para ccompatibilidade de boas práticas em relação a <em><code>resolution</code></em> e <em><code>dppx</code></em>.</p>
-</div>
 
-<div class="note"><strong>Nota</strong>: Esta <em>media feature</em> é também implementada pelo Webkit e pelo <a href="https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx">IE 11 para Windows Phone 8.1</a>como <span style="font-family: courier new;">-webkit-device-pixel-ratio</span>. Os prefixos min e max implementados pelo Gecko são nomeados <span style="font-family: courier new;">min--moz-device-pixel-ratio</span> e <span style="font-family: courier new;">max--moz-device-pixel-ratio</span>; mas os mesmos prefixos implementados pelo Webkit são chamados <span style="font-family: courier new;">-webkit-min-device-pixel-ratio</span> e <span style="font-family: courier new;">-webkit-max-device-pixel-ratio</span>.</div>
+<div class="note"><strong>Nota</strong>: Esta <em>media feature</em> é também implementada pelo Webkit e pelo <a href="https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx">IE 11 para Windows Phone 8.1</a>como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.</div>
 
 <h3>-moz-os-version</h3>
 
