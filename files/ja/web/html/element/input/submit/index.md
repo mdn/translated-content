@@ -15,7 +15,6 @@ tags:
   - form
   - submit
   - submit button
-browser-compat: html.elements.input.type_submit
 translation_of: Web/HTML/Element/input/submit
 ---
 {{HTMLRef("Input_types")}}

@@ -9,7 +9,6 @@ tags:
   - 入力型
   - リファレンス
   - Search
-browser-compat: html.elements.input.type_search
 translation_of: Web/HTML/Element/input/search
 ---
 

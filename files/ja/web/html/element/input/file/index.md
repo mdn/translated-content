@@ -12,7 +12,6 @@ tags:
   - Input Type
   - Reference
   - Type
-browser-compat: html.elements.input.type_file
 translation_of: Web/HTML/Element/input/file
 ---
 {{HTMLRef("Input_types")}}

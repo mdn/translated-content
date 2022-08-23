@@ -15,7 +15,6 @@ tags:
   - Number
   - リファレンス
   - month
-browser-compat: html.elements.input.type_month
 translation_of: Web/HTML/Element/input/month
 ---
 

@@ -10,7 +10,6 @@ tags:
   - Input Types
   - Reference
   - hidden
-browser-compat: html.elements.input.type_hidden
 translation_of: Web/HTML/Element/input/hidden
 ---
 {{HTMLRef}}

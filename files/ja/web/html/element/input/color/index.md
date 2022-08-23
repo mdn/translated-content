@@ -9,7 +9,6 @@ tags:
   - HTML フォーム
   - Reference
   - color
-browser-compat: html.elements.input.type_color
 translation_of: Web/HTML/Element/input/color
 ---
 {{HTMLRef}}

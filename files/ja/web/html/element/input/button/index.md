@@ -11,7 +11,6 @@ tags:
   - Input Type
   - Reference
   - button
-browser-compat: html.elements.input.type_button
 translation_of: Web/HTML/Element/input/button
 ---
 {{HTMLRef("Input_types")}}
