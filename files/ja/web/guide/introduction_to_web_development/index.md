@@ -15,7 +15,7 @@ translation_of: Web/Guide/Introduction_to_Web_development
 
 学習リソースへの別の (重複する) リンクセットについては、[MDN の学習ページ](/ja/docs/Learn)を参照してください。
 
-> **Note:** **メモ:** このページの推奨リソースは変更されることがあります。
+> **Note:** このページの推奨リソースは変更されることがあります。
 
 ## ドキュメントのトピック
 

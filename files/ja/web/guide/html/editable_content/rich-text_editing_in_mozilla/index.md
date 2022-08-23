@@ -6,7 +6,7 @@ tags:
   - ガイド
 translation_of: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 ---
-> **Note:** **メモ**: この文書は古くなっています。[コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)にある最新のドキュメントを参照することをお勧めします。
+> **Note:** この文書は古くなっています。[コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)にある最新のドキュメントを参照することをお勧めします。
 
 Mozilla 1.3 は、Microsoft® Internet Explorer の designMode 機能の実装を導入しました。 Mozilla 1.3 のリッチテキスト編集機能は、HTML 文書をリッチテキスト編集環境へと変える designMode 属性をサポートします。更に、Firefox 3 以降、Mozilla は、あらゆる要素を編集可能にしたり編集不能にしたりする (後者は、編集可能な環境に含まれる固定したい要素の編集をできなくするのに使います) Internet Explorer の contentEditable 属性をサポートするようになりました。
 
@@ -267,7 +267,7 @@ img.intLink { border: 0; }
 </html>
 ```
 
-> **Note:** if you want to see how to standardize the creation and the insertion of your editor in your page, please see our [more complete rich-text editor example](/@api/deki/files/6243/=rich-text-editor.zip "rich-text-editor.zip").
+> **Note:** if you want to see how to standardize the creation and the insertion of your editor in your page, please see our [more complete rich-text editor example](rich-text-editor.zip "rich-text-editor.zip").
 
 ### リソース
 

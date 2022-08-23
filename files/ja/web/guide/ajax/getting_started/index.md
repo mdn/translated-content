@@ -34,7 +34,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 }
 ```
 
-> **Note:** **メモ:** 説明のために、このコードは実際に XMLHttp インスタンスを作成するのに使用するコードよりも多少簡単にしています。より実際に近いサンプルは、この記事の step 3 を見てください。
+> **Note:** 説明のために、このコードは実際に XMLHttp インスタンスを作成するのに使用するコードよりも多少簡単にしています。より実際に近いサンプルは、この記事の step 3 を見てください。
 
 リクエストを送ったら、応答を受け取った後に何をするかを決めなければなりません。この段階で行う必要があるのは、どの JavaScript 関数に応答を処理させるかを XMLHttp リクエストオブジェクトに教えることだけです。これは、オブジェクトの `onreadystatechange` プロパティに、使おうとしている JavaScript 関数の名前をこのように設定することで行えます。
 
@@ -164,11 +164,11 @@ if (httpRequest.status === 200) {
 - 要求が作成され、(`onreadystatechange`) により `alertContents()` への処理引継ぎが設定される。
 - `alertContents()` では、応答が返ってきていて問題無いかを確認した後、`test.html` ファイルの中身を `alert()` で表示する。
 
-> **Note:** **メモ**: 要求を送信する先が静的な HTML ファイルではなく、 XML を返すコードである場合、 Internet Explorer に応答ヘッダーを設定しなければなりません。`Content-Type: application/xml` というヘッダーを設定しなければ、XML 要素にアクセスしようとしている行で IE が "Object Expected" という Javascript エラーを投げるでしょう。
+> **Note:** 要求を送信する先が静的な HTML ファイルではなく、 XML を返すコードである場合、 Internet Explorer に応答ヘッダーを設定しなければなりません。`Content-Type: application/xml` というヘッダーを設定しなければ、XML 要素にアクセスしようとしている行で IE が "Object Expected" という Javascript エラーを投げるでしょう。
 
-> **Note:** **メモ 2**: `Cache-Control: no-cache` というヘッダーを設定しなければ、ブラウザーが応答をキャッシュして要求を再送信しなくなるため、デバッグが難しくなるでしょう。 GET 引数に、タイムスタンプやランダムな数字のような、常に異なるものを追加する方法もあります ([キャッシュをバイパスする](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)をご覧ください)
+> **Note:** `Cache-Control: no-cache` というヘッダーを設定しなければ、ブラウザーが応答をキャッシュして要求を再送信しなくなるため、デバッグが難しくなるでしょう。 GET 引数に、タイムスタンプやランダムな数字のような、常に異なるものを追加する方法もあります ([キャッシュをバイパスする](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)をご覧ください)
 
-> **Note:** **メモ 3**: `httpRequest` 変数をグローバルに使用すると、関数の呼び出しが競合して `makeRequest()` が互いに上書きし合うため、競合状態が発生します。 `httpRequest` 変数を、 AJAX 関数を含んでいる[クロージャ](/ja/docs/Web/JavaScript/Closures)のローカルで宣言することでこれを防ぐことができます。
+> **Note:** `httpRequest` 変数をグローバルに使用すると、関数の呼び出しが競合して `makeRequest()` が互いに上書きし合うため、競合状態が発生します。 `httpRequest` 変数を、 AJAX 関数を含んでいる[クロージャ](/ja/docs/Web/JavaScript/Closures)のローカルで宣言することでこれを防ぐことができます。
 
 通信エラーのイベント (サーバーがダウンしたなど) では、応答状態にアクセスする時に `onreadystatechange` メソッドの中で例外が発生します。この問題を防ぐため、 `if...then` 文は必ず `try...catch` で囲むようにしてください。
 

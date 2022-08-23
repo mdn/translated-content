@@ -207,7 +207,7 @@ The rules for the other colors all have more specific selectors, so they overrid
   - : サンプル文書 `doc2.html` を編集し、次のタグを文書の末尾近く、`</BODY>` のすぐ前に追加します: `<IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin">` 画像がどこに現れるか、推測してみてください。それからブラウザを更新して、正しかったかどうかを確認してください。
 - 解答
   - : 画像は 2 番めのリストの右側に現れます。
-    ![pin_placement.png](/@api/deki/files/4718/=pin_placement.png)
+    ![pin_placement.png](pin_placement.png)
 
 ### 画像位置の固定化
 

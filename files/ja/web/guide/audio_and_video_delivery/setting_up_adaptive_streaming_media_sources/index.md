@@ -188,7 +188,7 @@ main segment folder ->      /segments/main/
 
 MPD ファイルは、さまざまなメディアが配置されている場所をブラウザに伝え、 mimeType やコーデックなどのメタデータも含み、そこにはバイト範囲などの詳細も含まれています。一般的にこれらのファイルは自動的に生成されます。
 
-> **Note:** **メモ**: 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
+> **Note:** 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
 
 MPD ファイルを生成すれば、 {{ htmlelement("video") }} 要素で参照することができます。
 
@@ -207,7 +207,7 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 </video>
 ```
 
-> **Note:** **メモ**: MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザ対応に依存します。最新の [dash.js リファレンスプレイヤー](http://dashif.org/reference/players/javascript/index.html) を参照してください。
+> **Note:** MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザ対応に依存します。最新の [dash.js リファレンスプレイヤー](http://dashif.org/reference/players/javascript/index.html) を参照してください。
 
 ## HLS エンコーディング
 
@@ -223,7 +223,7 @@ HLS エンコードのための役立つツールがいくつかあります。
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 
-> **Note:** **メモ**: これらのツールについて詳しくは [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html) を読んでください。
+> **Note:** これらのツールについて詳しくは [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html) を読んでください。
 
 ### インデックスファイル (プレイリスト)
 

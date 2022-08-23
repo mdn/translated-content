@@ -22,7 +22,7 @@ translation_of: Web/Guide/Mobile/Separate_sites
 
 ## この選択肢を選ぶのが正しいとき
 
-![sumo_screenshot.png](/@api/deki/files/5893/=sumo_screenshot.png)まず、対象視聴者に古いかローエンドの[フィーチャーフォン](http://www.cnet.com/8301-17918_1-10461614-85.html)（英語）のユーザーが含まれている場合は、この戦略を[ある程度](http://www.passani.it/gap/#adaptation)（英語）採用する必要があるかもしれません。これは、一部のフィーチャーフォンのデフォルトブラウザーは、デスクトップを対象としたウェブサイトと同じマークアップをサポートしておらず、代わりに [XHTML-MP](http://ja.wikipedia.org/wiki/XHTML_Mobile_Profile) や古い [WML](http://ja.wikipedia.org/wiki/Wireless_Markup_Language) などの形式を理解するためです。
+![sumo_screenshot.png](sumo_screenshot.png)まず、対象視聴者に古いかローエンドの[フィーチャーフォン](http://www.cnet.com/8301-17918_1-10461614-85.html)（英語）のユーザーが含まれている場合は、この戦略を[ある程度](http://www.passani.it/gap/#adaptation)（英語）採用する必要があるかもしれません。これは、一部のフィーチャーフォンのデフォルトブラウザーは、デスクトップを対象としたウェブサイトと同じマークアップをサポートしておらず、代わりに [XHTML-MP](http://ja.wikipedia.org/wiki/XHTML_Mobile_Profile) や古い [WML](http://ja.wikipedia.org/wiki/Wireless_Markup_Language) などの形式を理解するためです。
 
 この要因はさておき、この戦略が他の方法よりも本当に優れているケースが 1 つあります。モバイルデバイスでユーザーに提供したい機能がデスクトップのそれとは極端に異なる場合は、別々のサイトを使用するのが[最も実用的な選択](http://tripleodeon.com/2010/10/not-a-mobile-web-merely-a-320px-wide-one)（英語）になる可能性があります。これは、完全に完全に別々の HTML、JavaScript、CSS を携帯電話と PC に送信するという選択肢があるからです。
 
