@@ -69,16 +69,16 @@ Par défaut, l'éditeur CSS affiche les règles CSS qui s'appliquent à l'élém
 
 ![Un fragment du panneau CSS avec le panneau relatif à la mise en page qui peut être vu à côté de l'éditeur HTML dans les outils de développement. Par défaut, l'éditeur CSS affiche les règles CSS appliquée à l'élément en cours de sélection. Le panneau sur la disposition affiche les propriétés du modèle de boîte pour cet élément.](css_inspector.png)
 
-Ces fonctionnalités sont plutôt pratiques :
+Ces fonctionnalités sont plutôt pratiques&nbsp;:
 
 - Les règles qui s'appliquent à l'élément courant sont affichées en commençant avec les règles les plus spécifiques et en terminant avec les règles les moins spécifiques.
 - Il est possible de cocher les boîtes à côté de chaque déclaration pour voir l'effet qui serait obtenu si la déclaration était supprimée.
 - Vous pouvez cliquer sur la petite flèche à côté de chaque propriété en notation résumée pour voir les équivalents en notation détaillée.
 - Vous pouvez cliquer sur le nom d'une propriété ou d'une valeur pour éditer une valeur en live et immédiatement voir le changement.
-- À côté de chaque règle, si celle-ci est « dépliée », vous pouvez voir le nom du fichier et la ligne sur laquelle la règle est définie. En cliquant sur le lien, vous arriverez directement sur le fichier CSS que vous pourrez éditer et sauvegarder.
+- À côté de chaque règle, si celle-ci est «&nbsp;dépliée&nbsp;», vous pouvez voir le nom du fichier et la ligne sur laquelle la règle est définie. En cliquant sur le lien, vous arriverez directement sur le fichier CSS que vous pourrez éditer et sauvegarder.
 - Vous pouvez également cliquer sur l'accolade fermant d'une règle donnée pour afficher une nouvelle zone de texte dans laquelle vous pourrez écrire une toute nouvelle déclaration.
 
-Vous aurez remarqué plusieurs onglets en haut du panneau pour le CSS :
+Vous aurez remarqué plusieurs onglets en haut du panneau pour le CSS&nbsp;:
 
 - Calculé
   - : Cet onglet affiche les styles calculés pour l'élément sélectionné (les valeurs finales, normalisées, appliquées par le navigateur).
@@ -139,7 +139,7 @@ Le panneau le plus à droite contient une liste des expressions espionnes et des
 
 Dans l'image, la première section, **expressions espionnes**, indique que la variable `cb` a été ajoutée. Vous pouvez développer la liste afin de voir les valeurs du tableau.
 
-La section qui suit, **points d'arrêt**, liste les points d'arrêt placés sur la page. Dans le fichier `copybutton.js`, on voit un point d'arrêt placé sur l'instruction `if (document.readyState != 'loading)`
+La section qui suit, **points d'arrêt**, liste les points d'arrêt placés sur la page. Dans le fichier `copybutton.js`, on voit un point d'arrêt placé sur l'instruction `if (document.readyState != 'loading')`.
 
 Les deux dernières sections apparaissent uniquement lorsque le code s'exécute.
 
@@ -206,7 +206,7 @@ Vous pourrez voir les erreurs que renvoie le navigateur. Il arrive que ces erreu
 
 ### En savoir plus
 
-Pour en apprendre plus sur la console JavaScript présente dans les différents navigateurs, les ressources listées ici devraient vous être utiles :
+Pour en apprendre plus sur la console JavaScript présente dans les différents navigateurs, les ressources listées ici devraient vous être utiles&nbsp;:
 
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
 - [Chrome](https://developer.chrome.com/docs/devtools/console/) (la console pour Opera fonctionnera de la même façon)
