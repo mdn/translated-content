@@ -29,8 +29,8 @@ if (frameEl)
 
 ### 相关链接
 
-- [`window.frames`](/zh-cn/DOM/window.frames) 返回一个类数组对象，返回当前窗口的所有子框架元素。
-- [`window.parent`](/zh-cn/DOM/window.parent) 返回当前窗口的父窗口，也就是说，包含当前窗口所在的`frameElement`元素的窗口。
+- [`window.frames`](/zh-CN/DOM/window.frames) 返回一个类数组对象，返回当前窗口的所有子框架元素。
+- [`window.parent`](/zh-CN/DOM/window.parent) 返回当前窗口的父窗口，也就是说，包含当前窗口所在的`frameElement`元素的窗口。
 
 ### 规范
 

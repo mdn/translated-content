@@ -1,7 +1,6 @@
 ---
 title: JavaScript shells
 slug: Web/JavaScript/Shells
-translation_of: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 

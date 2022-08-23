@@ -1,15 +1,6 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-tags:
-  - API
-  - HTML-DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Performance
-translation_of: Web/API/Navigator
 ---
 {{ APIRef("DOM4") }}
 

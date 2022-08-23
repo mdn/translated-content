@@ -1,13 +1,6 @@
 ---
 title: CSS
 slug: Glossary/CSS
-tags:
-  - CSS
-  - CodingScripting
-  - Web
-  - l10n:priority
-  - 階層式樣式表
-translation_of: Glossary/CSS
 ---
 **階層式樣式表**，或稱**層疊樣式表**（Cascading Style Sheets，**CSS**）是控制網頁的外觀，要在{{glossary("瀏覽器")}}裡面如何表現的陳述式語言。瀏覽器會套用 CSS 樣式宣告、以期被選中的元素能正確顯示之。樣式宣告包含了屬性（Property）與屬性值（Value）。它們會判斷網頁如何顯示。
 

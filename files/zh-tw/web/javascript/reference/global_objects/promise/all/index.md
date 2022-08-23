@@ -1,7 +1,6 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
 {{JSRef}}
 

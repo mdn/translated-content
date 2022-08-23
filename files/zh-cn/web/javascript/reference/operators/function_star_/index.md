@@ -1,14 +1,6 @@
 ---
 title: function* 表达式
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Operator
-  - Primary Expression
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
 {{jsSidebar("Operators")}}
 

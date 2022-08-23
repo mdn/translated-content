@@ -1,11 +1,6 @@
 ---
 title: 选择器列表
 slug: Web/CSS/Selector_list
-tags:
-  - CSS
-  - 层叠样式表
-  - 选择器
-translation_of: Web/CSS/Selector_list
 ---
 {{CSSRef}}
 

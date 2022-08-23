@@ -1,17 +1,6 @@
 ---
 title: JavaScript 初体验
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - JavaScript
-  - 事件
-  - 函数
-  - 初学者
-  - 变量
-  - 学习
-  - 操作符
-  - 教程
-  - 添加
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 

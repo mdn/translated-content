@@ -1,7 +1,6 @@
 ---
 title: margin-block-start
 slug: Web/CSS/margin-block-start
-translation_of: Web/CSS/margin-block-start
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

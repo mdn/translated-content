@@ -1,9 +1,6 @@
 ---
 title: 其他宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
-tags:
-  - Macros
-  - Reference
 original_slug: MDN/Structures/Macros/Other
 ---
 {{MDNSidebar}}

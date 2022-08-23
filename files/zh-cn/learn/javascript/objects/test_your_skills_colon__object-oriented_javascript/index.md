@@ -1,14 +1,6 @@
 ---
 title: 测试你的技能：面向对象的 Javascript
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
-tags:
-  - JavaScript
-  - OOJS
-  - 初学者
-  - 学习
-  - 对象
-  - 测试你的技能
-translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 original_slug: Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript
 ---
 {{learnsidebar}}这个测试的目的是为了评估你是否已经理解了我们的[适合初学者的 JavaScript 面向对象](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)，[对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)，和 [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)文章。

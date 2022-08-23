@@ -1,14 +1,6 @@
 ---
 title: altGlyphDef
 slug: Web/SVG/Element/altGlyphDef
-tags:
-  - SVG
-  - SVG 文本内容
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/altGlyphDef
 ---
 {{SVGRef}}
 

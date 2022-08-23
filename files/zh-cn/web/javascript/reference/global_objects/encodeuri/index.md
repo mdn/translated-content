@@ -1,13 +1,6 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - JavaScript
-  - URI
-  - decodeURI
-  - encodeURI
-  - 统一资源定位符
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
 {{jsSidebar("Objects")}}
 

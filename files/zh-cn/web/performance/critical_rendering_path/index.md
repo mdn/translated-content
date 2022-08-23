@@ -1,13 +1,6 @@
 ---
 title: 关键渲染路径
 slug: Web/Performance/Critical_rendering_path
-tags:
-  - CRP
-  - 关键渲染路径
-  - 参考
-  - 性能
-  - 术语
-translation_of: Web/Performance/Critical_rendering_path
 ---
 **关键渲染路径**是浏览器将 HTML，CSS 和 JavaScript 转换为屏幕上的像素所经历的步骤序列。优化关键渲染路径可提高渲染性能。关键渲染路径包含了 [文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)(DOM)，[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model) (CSSOM)，渲染树和布局。
 

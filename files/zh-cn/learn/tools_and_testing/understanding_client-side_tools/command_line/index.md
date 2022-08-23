@@ -1,16 +1,6 @@
 ---
 title: Command line crash course
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-tags:
-  - CLI
-  - npm
-  - 命令行
-  - 学习
-  - 客户端
-  - 工具
-  - 开发者
-  - 终端
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 

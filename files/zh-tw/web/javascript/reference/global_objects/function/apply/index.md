@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 {{JSRef}}
 

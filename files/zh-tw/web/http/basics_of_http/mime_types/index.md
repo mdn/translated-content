@@ -1,11 +1,6 @@
 ---
 title: MIME 類別 (IANA 媒體類別)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - HTTP
-  - MIME類別
-  - 內容類別
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 {{HTTPSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: 字符类
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - 指南
-  - JavaScript
-  - 参考
-  - RegExp
-  - 正则表达式
-  - 字符类
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
 {{JSSidebar("JavaScript Guide")}}
 

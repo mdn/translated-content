@@ -97,7 +97,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") est utilisé, alors la valeur est résolue en pourcentage du viewport.
+Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/SVG/Content_type#Percentage) est utilisé, alors la valeur est résolue en pourcentage du viewport.
 
 ## Compatibilité des navigateurs
 

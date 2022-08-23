@@ -2,15 +2,6 @@
 title: 測試你的技能：多媒體和嵌入
 slug: >-
   Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
-tags:
-  - HTML
-  - 初學者
-  - 多媒體
-  - 學習
-  - 嵌入
-  - 測驗
-translation_of: >-
-  Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 ---
 {{learnsidebar}}這項技能測試的目的是評估您是否了解我們的[視訊和音訊內容](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)以及[從物件到 iframe 的其他嵌入技術](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)文章。
 

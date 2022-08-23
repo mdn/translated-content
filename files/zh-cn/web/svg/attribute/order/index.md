@@ -1,7 +1,6 @@
 ---
 title: order
 slug: Web/SVG/Attribute/order
-translation_of: Web/SVG/Attribute/order
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

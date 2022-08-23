@@ -1,11 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - Whoops!
-  - 参考
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
 {{JSRef}}
 

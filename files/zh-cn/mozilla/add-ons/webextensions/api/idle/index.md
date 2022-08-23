@@ -1,13 +1,6 @@
 ---
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
-tags:
-  - API
-  - Idle
-  - WebExtensions
-  - requestIdleCallback
-  - 性能优化
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
 {{AddonSidebar}}
 
@@ -73,4 +66,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 
 ### 了解更多：
 
-[https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback](/zh-CN/docs/Web/API/Window/requestIdleCallback)...
+[requestIdleCallback](/zh-CN/docs/Web/API/Window/requestIdleCallback)...

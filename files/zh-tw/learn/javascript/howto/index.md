@@ -1,7 +1,6 @@
 ---
 title: JavaScript 解決常見的問題
 slug: Learn/JavaScript/Howto
-translation_of: Learn/JavaScript/Howto
 ---
 {{LearnSidebar}}
 以下鏈接針對您需要修復的常見問題的解決方案，以便讓您的 JavaScript 語法正確執行。

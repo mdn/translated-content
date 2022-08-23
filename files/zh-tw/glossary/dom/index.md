@@ -1,11 +1,6 @@
 ---
 title: DOM
 slug: Glossary/DOM
-tags:
-  - DOM
-  - 文件物件模組
-  - 術語表
-translation_of: Glossary/DOM
 ---
 DOM(Document Object Model, DOM) 是用來表示和與任何{{glossary("HTML")}} 或 {{glossary("XML")}} 文件互動的 {{glossary("API")}}。DOM 是一個載入於{{glossary("browser")}}中的文件模組，它的表示方式像樹的節點一樣, 每個節點代表著文件的一部分(如：{{Glossary("element")}}、 文字或留言)。
 

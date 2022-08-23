@@ -1,7 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
 {{jsSidebar("Statements")}}
 

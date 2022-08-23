@@ -1,7 +1,6 @@
 ---
 title: Coordinates.heading
 slug: Web/API/GeolocationCoordinates/heading
-translation_of: Web/API/GeolocationCoordinates/heading
 ---
 {{APIRef("Geolocation API")}}
 

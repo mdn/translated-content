@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 ---
 {{JSRef}}
 

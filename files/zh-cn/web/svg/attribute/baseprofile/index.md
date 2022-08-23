@@ -1,7 +1,6 @@
 ---
 title: baseProfile
 slug: Web/SVG/Attribute/baseProfile
-translation_of: Web/SVG/Attribute/baseProfile
 ---
 « 返回 SVG 特性参考
 

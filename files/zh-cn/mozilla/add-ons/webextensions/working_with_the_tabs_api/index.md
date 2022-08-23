@@ -1,10 +1,6 @@
 ---
 title: Working with the Tabs API
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-tags:
-  - 选项卡
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
 {{AddonSidebar}}
 

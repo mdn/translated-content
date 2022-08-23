@@ -1,10 +1,6 @@
 ---
 title: JavaScript 參考文件
 slug: Web/JavaScript/Reference
-tags:
-  - JavaScript
-  - NeedsTranslation
-translation_of: Web/JavaScript/Reference
 ---
 {{JsSidebar}}
 

@@ -1,12 +1,6 @@
 ---
 title: 編輯以及新增頁面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - MDN
-  - 初學者
-  - 新頁面
-  - 編輯
-translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 {{MDNSidebar}}

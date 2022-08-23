@@ -1,7 +1,6 @@
 ---
 title: 逻辑与 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-translation_of: Web/JavaScript/Reference/Operators/Logical_AND
 original_slug: Web/JavaScript/Reference/Operators/逻辑和
 ---
 {{jsSidebar("Operators")}}

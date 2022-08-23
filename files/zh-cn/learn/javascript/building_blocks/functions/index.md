@@ -1,18 +1,6 @@
 ---
 title: 函数 - 可复用代码块
 slug: Learn/JavaScript/Building_blocks/Functions
-tags:
-  - API
-  - JavaScript
-  - 函数
-  - 初学者
-  - 匿名
-  - 参数
-  - 学习
-  - 方法
-  - 浏览器
-  - 自定义
-translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 

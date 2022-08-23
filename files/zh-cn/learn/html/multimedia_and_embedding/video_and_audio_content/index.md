@@ -1,15 +1,6 @@
 ---
 title: 视频和音频内容
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-tags:
-  - 多媒体
-  - 字幕
-  - 指南
-  - 文章
-  - 新手
-  - 视频
-  - 音频
-translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 

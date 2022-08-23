@@ -1,7 +1,6 @@
 ---
 title: part
 slug: Web/HTML/Global_attributes/part
-translation_of: Web/HTML/Global_attributes/part
 ---
 {{HTMLSidebar("Global_attributes")}}
 

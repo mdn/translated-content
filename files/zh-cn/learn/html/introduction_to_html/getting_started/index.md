@@ -1,12 +1,6 @@
 ---
 title: 开始学习 HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - HTML
-  - 元素
-  - 属性
-  - 指南
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

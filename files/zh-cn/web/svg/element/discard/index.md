@@ -1,13 +1,6 @@
 ---
 title: <discard>
 slug: Web/SVG/Element/discard
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/discard
 ---
 {{SVGRef}}
 

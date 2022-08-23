@@ -1,12 +1,6 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - 图像
-  - 图像大小
-  - 图像缩放
-translation_of: Web/CSS/object-fit
 ---
 {{CSSRef}}
 
@@ -42,33 +36,23 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 ### HTML
 
 ```html
-<div>
+<section>
   <h2>object-fit: fill</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
-
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
-
+  <img class="fill" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: contain</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
-
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
-
+  <img class="contain" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: cover</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
-
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
-
+  <img class="cover" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: none</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
-
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
-
+  <img class="none" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: scale-down</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
-
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
-
-</div>
+  <img class="scale-down" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+</section>
 ```
 
 ### CSS

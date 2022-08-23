@@ -1,12 +1,6 @@
 ---
 title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
-tags:
-  - sendNativeMessage
-  - 扩展
-  - 附加组件
-  - 非标准
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 {{AddonSidebar()}}
 

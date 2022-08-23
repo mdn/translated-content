@@ -1,7 +1,6 @@
 ---
 title: 使用動態樣式資訊
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
-translation_of: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
 The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the _DOM Level 2 Style_ recommendation, these interfaces forms now a specification, _CSS Object Model (CSSOM)_ which aims at superseding it.
 

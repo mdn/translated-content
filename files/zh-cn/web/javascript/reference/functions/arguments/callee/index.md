@@ -1,15 +1,6 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-tags:
-  - Deprecated
-  - JavaScript
-  - arguments
-  - arguments.callee
-  - 函数
-  - 属性
-  - 已弃用
-translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 ---
 {{jsSidebar("Functions")}}
 

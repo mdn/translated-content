@@ -1,11 +1,6 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - JavaScript
-  - Symbol
-  - 属性
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: Multiplication assignment (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
-translation_of: Web/JavaScript/Reference/Operators/Multiplication_assignment
 ---
 {{jsSidebar("Operators")}}
 

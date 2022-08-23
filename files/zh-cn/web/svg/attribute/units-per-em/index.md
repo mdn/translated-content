@@ -1,7 +1,6 @@
 ---
 title: units-per-em
 slug: Web/SVG/Attribute/units-per-em
-translation_of: Web/SVG/Attribute/units-per-em
 ---
 {{SVGRef}}{{deprecated_header("SVG 2")}}
 

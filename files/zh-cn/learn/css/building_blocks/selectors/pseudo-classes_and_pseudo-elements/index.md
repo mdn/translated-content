@@ -1,7 +1,6 @@
 ---
 title: 伪类和伪元素
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
@@ -213,4 +212,4 @@ article p:first-child::first-line {
 9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)[](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

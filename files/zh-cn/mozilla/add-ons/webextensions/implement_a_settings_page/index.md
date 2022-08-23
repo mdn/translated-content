@@ -1,7 +1,6 @@
 ---
 title: 实现一个设置页面
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 ---
 {{AddonSidebar}}

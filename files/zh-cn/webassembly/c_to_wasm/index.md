@@ -1,14 +1,6 @@
 ---
 title: 编译 C/C++ 为 WebAssembly
 slug: WebAssembly/C_to_wasm
-tags:
-  - C
-  - C++
-  - Emscripten
-  - WebAssembly
-  - wasm
-  - 编译
-translation_of: WebAssembly/C_to_wasm
 ---
 {{WebAssemblySidebar}}
 

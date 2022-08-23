@@ -1,14 +1,6 @@
 ---
 title: AnimationEvent.initAnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
-tags:
-  - API
-  - AnimationEvent
-  - CSSOM
-  - Method
-  - Obsolete
-  - Web Animations
-translation_of: Web/API/AnimationEvent/initAnimationEvent
 original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
 {{ apiref("Web Animations API") }}

@@ -1,10 +1,6 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-tags:
-  - Global attributes
-  - HTML
-translation_of: Web/HTML/Global_attributes/class
 ---
 {{HTMLSidebar("Global_attributes")}}
 

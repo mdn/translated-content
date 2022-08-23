@@ -1,7 +1,6 @@
 ---
 title: 如何将文件上传到网络服务器
 slug: Learn/Common_questions/Upload_files_to_a_web_server
-translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 ---
 这篇文章将会告诉你如何利用 {{Glossary("FTP")}} 工具来发布你的网站。
 

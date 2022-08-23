@@ -1,11 +1,6 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - JavaScript
-  - eval
-  - 参考
-translation_of: Web/JavaScript/Reference/Global_Objects/eval
 ---
 {{jsSidebar("Objects")}}
 

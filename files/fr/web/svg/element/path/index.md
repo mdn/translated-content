@@ -31,10 +31,10 @@ L'élément `path` est l'élément générique pour définir une forme. Toutes l
 
 ### Attributs Globaux
 
-- [Attributs conditionnels](/fr/SVG/Attribute#ConditionalProccessing "fr/SVG/Attribute#ConditionalProccessing") »
-- [Attributs centraux](/fr/SVG/Attribute#Core "fr/SVG/Attribute#Core") »
-- [Attributs d'événements graphiques](/fr/SVG/Attribute#GraphicalEvent "fr/SVG/Attribute#GraphicalEvent") »
-- [Attributs de présentation](/fr/SVG/Attribute#Presentation "fr/SVG/Attribute#Presentation") »
+- [Attributs conditionnels](/fr/SVG/Attribute#ConditionalProccessing) »
+- [Attributs centraux](/fr/SVG/Attribute#Core) »
+- [Attributs d'événements graphiques](/fr/SVG/Attribute#GraphicalEvent) »
+- [Attributs de présentation](/fr/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -47,7 +47,7 @@ L'élément `path` est l'élément générique pour définir une forme. Toutes l
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGPathElement`](/fr/DOM/SVGPathElement "en/DOM/SVGPathElement").
+Cet élément implémente l'interface [`SVGPathElement`](/fr/DOM/SVGPathElement).
 
 ## Compatibilité des navigateurs
 
@@ -61,4 +61,4 @@ Cet élément implémente l'interface [`SVGPathElement`](/fr/DOM/SVGPathElement 
 - {{ SVGElement("polygon") }}
 - {{ SVGElement("polyline") }}
 - {{ SVGElement("rect") }}
-- [The MDN SVG "Getting Started" tutorial : Path](/fr/SVG/Tutorial/Paths "en/SVG/Tutorial/Paths")
+- [The MDN SVG "Getting Started" tutorial : Path](/fr/SVG/Tutorial/Paths)

@@ -1,7 +1,6 @@
 ---
 title: 使用全螢幕模式
 slug: Web/API/Fullscreen_API
-translation_of: Web/API/Fullscreen_API
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
@@ -128,35 +127,17 @@ function toggleFullScreen() {
 }
 ```
 
-This starts by looking at the value of the `fullscreenElement` attribute on the {{ domxref("document") }} (checking it prefixed with both `moz`,` ms`,` `and `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling either {{ domxref("element.mozRequestFullScreen()") }} `msRequestFullscreen()`or `webkitRequestFullscreen()`, depending on which is available.
+This starts by looking at the value of the `fullscreenElement` attribute on the {{ domxref("document") }} (checking it prefixed with both `moz`, `ms`, and `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling either {{ domxref("element.mozRequestFullScreen()") }} `msRequestFullscreen()`or `webkitRequestFullscreen()`, depending on which is available.
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{ domxref("document.mozCancelFullScreen()") }}, `msExitFullscreen` or `webkitExitFullscreen()`, again depending on which browser is in use.
 
-## 瀏覽器兼容性
-
-### Document.fullscreen
-
-{{Compat("api.Document.fullscreen")}}
-
-### Document.fullscreenElement
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### Document.fullscreenEnabled
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### Document.exitFullscreen
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### Element.requestFullscreen
-
-{{Compat("api.Element.requestFullscreen")}}
-
 ## 規範
 
-[Fullscreen API](http://fullscreen.spec.whatwg.org/)
+{{Specifications}}
+
+## 瀏覽器兼容性
+
+{{Compat}}
 
 ## 非標準方法
 

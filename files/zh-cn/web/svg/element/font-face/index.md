@@ -1,9 +1,6 @@
 ---
 title: font-face
 slug: Web/SVG/Element/font-face
-tags:
-  - SVG 字体
-translation_of: Web/SVG/Element/font-face
 ---
 {{SVGRef}}
 

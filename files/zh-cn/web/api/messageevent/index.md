@@ -45,7 +45,7 @@ _继承其父类 {{domxref("Event")}} 的属性。_
 _继承父类 {{domxref("Event")}} 的方法。_
 
 - {{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}
-  - : … **不要再使用**: 使用 {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}。
+  - : **不要再使用**: 使用 {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}。
 
 ## 示例
 

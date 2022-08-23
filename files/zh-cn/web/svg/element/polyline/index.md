@@ -1,12 +1,6 @@
 ---
 title: polyline
 slug: Web/SVG/Element/polyline
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/polyline
 ---
 {{SVGRef}}
 

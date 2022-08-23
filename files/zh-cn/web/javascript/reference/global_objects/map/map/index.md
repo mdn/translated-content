@@ -1,15 +1,7 @@
 ---
 title: Map() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-browser-compat: javascript.builtins.Map.Map
 ---
 {{JSRef}}
 
@@ -29,11 +21,11 @@ new Map([iterable])
 ## 示例
 
 ```js
-let myMap = new Map([
+const myMap = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-])
+]);
 ```
 
 ## Specifications

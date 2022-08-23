@@ -1,9 +1,6 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
-tags:
-  - 待翻譯
-translation_of: Web/API/CustomEvent
 ---
 {{APIRef("DOM")}}
 

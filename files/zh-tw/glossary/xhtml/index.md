@@ -1,7 +1,6 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-translation_of: Glossary/XHTML
 original_slug: XHTML
 ---
 **XHTML** 對 [XML](/zh_tw/XML) 而言是什麼，就如同 [HTML](/zh_tw/HTML) 對 [SGML](/zh_tw/SGML) 而言是什麼。也就是說，XHTML 是一種類似於 HTML 的標記語言，但是有更嚴格的語法。[W3C](http://www.w3.org/) 已完成兩種 XHTML 版本︰

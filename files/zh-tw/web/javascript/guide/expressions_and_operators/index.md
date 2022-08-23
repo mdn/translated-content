@@ -1,7 +1,6 @@
 ---
 title: 運算式與運算子
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
@@ -163,8 +162,8 @@ var var2 = 4;
 | `15 & 9`  | `9`   | `1111 & 1001 = 1001`                                              |
 | `15 \| 9` | `15`  | `1111 \| 1001 = 1111`                                             |
 | `15 ^ 9`  | `6`   | `1111 ^ 1001 = 0110`                                              |
-| `~15`     | `-16` | ` ~``00000000...`` 00001111 = ``1111``1111``...``11110000 `       |
-| `~9`      | `-10` | ` ~``00000000``...``0000`` 1001 = ``1111``1111``...``1111``0110 ` |
+| `~15`     | `-16` | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`      | `-10` | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 注意，在使用 位元 NOT 運算子時， 所有的 32 個 bit 都被進行 NOT 了，包含最左邊用來描述正負數的位元(two's-complement representation)。
 

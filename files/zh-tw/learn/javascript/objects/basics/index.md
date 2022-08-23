@@ -1,7 +1,6 @@
 ---
 title: JavaScript 物件基礎概念
 slug: Learn/JavaScript/Objects/Basics
-translation_of: Learn/JavaScript/Objects/Basics
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
 

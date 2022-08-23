@@ -1,7 +1,6 @@
 ---
 title: 明文
 slug: Glossary/Plaintext
-translation_of: Glossary/Plaintext
 ---
 明文指的是作为{{Glossary("encryption", "加密")}}{{Glossary("algorithm","算法")}}输入的信息，或者是解密后的{{Glossary("ciphertext", "密文")}}。
 

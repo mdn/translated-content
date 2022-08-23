@@ -1,11 +1,6 @@
 ---
 title: Web 开发技术
 slug: Web
-tags:
-  - Web
-  - Web 开发
-  - 指南
-translation_of: Web
 ---
 开放的 Web 为开发者提供了巨大的机遇，为了充分利用这些技术，你需要知道如何使用它们。在下方你可以找到相关 Web 技术的文档链接。
 

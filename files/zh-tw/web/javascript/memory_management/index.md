@@ -1,11 +1,6 @@
 ---
 title: 記憶體管理
 slug: Web/JavaScript/Memory_Management
-tags:
-  - Garbage collection
-  - JavaScript
-  - 記憶體
-translation_of: Web/JavaScript/Memory_Management
 ---
 {{JsSidebar("Advanced")}}
 

@@ -1,7 +1,6 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
 {{JSRef}}
 

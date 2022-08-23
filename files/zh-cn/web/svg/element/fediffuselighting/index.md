@@ -1,12 +1,6 @@
 ---
 title: feDiffuseLighting
 slug: Web/SVG/Element/feDiffuseLighting
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/feDiffuseLighting
 ---
 {{SVGRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
 {{jsSidebar("Statements")}}
 

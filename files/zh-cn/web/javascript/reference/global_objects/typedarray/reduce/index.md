@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 ---
 {{JSRef}}
 

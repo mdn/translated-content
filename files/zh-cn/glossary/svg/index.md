@@ -1,12 +1,6 @@
 ---
 title: SVG
 slug: Glossary/SVG
-tags:
-  - SVG
-  - 初学者
-  - 图像
-  - 术语
-translation_of: Glossary/SVG
 ---
 可缩放矢量图形 (**SVG**) 是一个基于 {{Glossary("XML")}} 语法的 2D 矢量图形格式。
 

@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - Fixit
-  - HTTP
-  - MakeBrowserAgnostic
-  - NeedsCleanup
-  - NeedsMobileBrowserCompatibility
-  - NeedsTranslation
-  - TopicStub
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 {{DefaultAPISidebar("XMLHttpRequest")}}
 

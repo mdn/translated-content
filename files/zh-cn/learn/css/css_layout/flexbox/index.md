@@ -1,17 +1,6 @@
 ---
 title: 弹性盒子
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - CSS
-  - CSS 布局
-  - Layouts
-  - Learn
-  - flexbox
-  - 初学者
-  - 弹性框
-  - 教程
-  - 文章
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 

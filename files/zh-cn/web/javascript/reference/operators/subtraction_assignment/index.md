@@ -1,7 +1,6 @@
 ---
 title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
-translation_of: Web/JavaScript/Reference/Operators/Subtraction_assignment
 ---
 {{jsSidebar("Operators")}}
 

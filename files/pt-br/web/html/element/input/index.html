@@ -304,40 +304,7 @@ e.value = "foo";
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{Compat}}</p>
-
-
-<p>[1]: <a href="http://blog.uploadcare.com/post/97884147203/you-cannot-upload-files-to-a-server-using-mobile-safari">Envio de arquivos não funcionava</a> no Safari Mobile para iOS 8.0 e 8.0.1. O bug foi corrigido no iOs 8.0.2.</p>
-
-<p>Safari Mobile para iOS aplica um estilo padrão de <code>{{cssxref("opacity")}}: 0.4</code> para elementos textuais desabilitados. Outros navegadores principais não usam esse estilo padrão específico atualmente.</p>
-
-<p>No Safari Mobile para iOS, definir <code>{{cssxref("display")}}: block</code> num {{HTMLElement("input")}} com <code>type="date"</code>, <code>type="time"</code>, <code>type="datetime-local"</code> ou <code>type="month"</code> faz com que o texto dentro do {{HTMLElement("input")}} fique verticalmente desalinhado.</p>
-
-<p>A partir do Chrome v39, um <code>&lt;input type="date"&gt;</code> estilizado com <code>{{cssxref("display")}}: table-cell; {{cssxref("width")}}: 100%;</code> terá um {{cssxref("min-width")}} imposto pelo Chrome e não poderá ficar mais estreito do que essa largura mínima. <a href="https://code.google.com/p/chromium/issues/detail?id=346051">Veja o bug do Chromium #346051.</a></p>
-
-<h3 id="Notas_do_Gecko">Notas do Gecko</h3>
-
-<p>O Firefox vai, por padrão, ao contrário de outros navegadores, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persistir o estado dinâmico de desabilitado e (se aplicável) checado</a> de um {{HTMLElement("input")}} entre carregamentos de página. Definir o valor do atributo {{htmlattrxref("autocomplete","input")}} como <code>off</code> desabilita essa funcionalidade; isso funciona mesmo quando o atributo {{htmlattrxref("autocomplete","input")}} não seria aplicado normalmente ao {{HTMLElement("input")}} por causa de seu {{htmlattrxref("type","input")}}. Veja {{bug(654072)}}.</p>
-
-<p>A partir do Gecko 9.0 {{geckoRelease("9.0")}}, o Firefox para Android permite aos usuários capturar imagens usando suas câmeras e enviá-las, sem a necessidade de sair do navegador. Desenvolvedores web podem implementar essa funcionalidade simplesmente especificando o valor do atributo <code>accept</code> para "image/*" nos seus campos <code>file</code> desta forma:</p>
-
-<p><code>&lt;input type="file" accept="image/*"&gt;</code></p>
-
-<p>Firefox para Android define uma {{ cssxref("background-image") }} padrão gradiente em todos os campos com <code>type="text"</code>, <code>type="file"</code>, <code>type="button"</code> e <code>type="submit"</code>. Isso pode ser desabilitado usando <code>background-image: none</code>.</p>
-
-<p>Firefox para Android também define uma {{ cssxref("border") }} padrão em todos os elementos <code>&lt;input type="file"&gt;</code>.</p>
-
-<h4 id="Localização">Localização</h4>
-
-<p>Os valores permitidos para certos tipos de <code>&lt;input&gt;</code> dependem do locale. Em alguns locales, 1,000.00 é um número válido, enquanto que em outros a maneira correta de inserir este número é 1.000,00.</p>
-
-<p>Firefox usa as seguintes heurísticas para determinar o locale para validar a entrada do usuário (pelo menos para type="number"):</p>
-
-<ul>
- <li>Tentar a língua especificada por um atributo 'lang'/'xml:lang' no elemento ou qualquer um de seus ancestrais;</li>
- <li>Tentar a língua especificada por qualquer cabeçalho HTTP Content-Language ou</li>
- <li>Se nenhum for especificado, usar o locale do navegador.</li>
-</ul>
+{{Compat("html.elements.input")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

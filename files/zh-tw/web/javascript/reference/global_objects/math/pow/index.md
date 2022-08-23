@@ -1,9 +1,6 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-tags:
-  - 次方
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
 {{JSRef}}
 

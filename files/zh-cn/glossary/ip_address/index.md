@@ -1,11 +1,6 @@
 ---
 title: IP 地址
 slug: Glossary/IP_Address
-tags:
-  - IP 地址
-  - 初学者
-  - 术语表
-translation_of: Glossary/IP_Address
 original_slug: Glossary/IP地址
 ---
 IP 地址是分配给连接到使用 Internet 协议的网络的每个设备的一串数字。

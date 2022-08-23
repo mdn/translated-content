@@ -1,12 +1,6 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-tags:
-  - CSS
-  - CSS Text
-  - CSS 属性
-  - Reference
-translation_of: Web/CSS/line-break
 ---
 {{CSSRef}}
 

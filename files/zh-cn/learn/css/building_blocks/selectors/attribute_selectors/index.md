@@ -1,7 +1,6 @@
 ---
 title: 属性选择器
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 

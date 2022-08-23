@@ -1,7 +1,6 @@
 ---
 title: 加密
 slug: Glossary/Encryption
-translation_of: Glossary/Encryption
 ---
 在密码学（{{glossary("cryptography")}}）领域，**加密**是指把明文（{{glossary("plaintext")}}）转换成密文（{{glossary("ciphertext")}}）的过程。密文应该对非授权用户不可读。
 

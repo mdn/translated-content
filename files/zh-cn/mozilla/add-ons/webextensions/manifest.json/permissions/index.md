@@ -1,10 +1,6 @@
 ---
 title: 权限 - permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-tags:
-  - 权限
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 ---
 {{AddonSidebar}}
 
