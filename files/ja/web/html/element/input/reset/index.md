@@ -13,7 +13,6 @@ tags:
   - Reference
   - Reset Button
   - reset
-browser-compat: html.elements.input.type_reset
 translation_of: Web/HTML/Element/input/reset
 ---
 {{HTMLRef("Input_types")}}

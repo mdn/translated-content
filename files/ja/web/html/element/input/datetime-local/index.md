@@ -14,7 +14,6 @@ tags:
   - リファレンス
   - 時刻
   - datetime-local
-browser-compat: html.elements.input.type_datetime-local
 translation_of: Web/HTML/Element/input/datetime-local
 ---
 {{HTMLRef("Input_types")}}

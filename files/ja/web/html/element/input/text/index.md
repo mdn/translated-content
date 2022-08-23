@@ -12,7 +12,6 @@ tags:
   - Text
   - テキスト入力
   - text input
-browser-compat: html.elements.input.type_text
 translation_of: Web/HTML/Element/input/text
 ---
 

@@ -10,7 +10,6 @@ tags:
   - フォーム
   - 入力型
   - 要素
-browser-compat: html.elements.input.type_checkbox
 translation_of: Web/HTML/Element/input/checkbox
 ---
 {{HTMLRef}}

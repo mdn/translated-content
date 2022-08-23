@@ -13,7 +13,6 @@ tags:
   - 入力型
   - リファレンス
   - Time
-browser-compat: html.elements.input.type_time
 translation_of: Web/HTML/Element/input/time
 ---
 
