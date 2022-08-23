@@ -15,7 +15,7 @@ slug: Web/API/Streams_API/Concepts
 - **Push sources** 会在你访问了它们之后，不断地主动推送数据。你可以自行开始（start）、暂停（pause）或取消（cancel）对流的访问。例如视频流和 TCP/[Web sockets](/zh-CN/docs/Web/API/WebSockets_API) 。
 - **Pull sources** 需要在你连接到它们后，显式地请求数据。例如通过 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 或 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest/XMLHttpRequest) 请求访问一个文件。
 
-数据被按序读入到许多分块，这些分块被称作 **chunk**。**chunk** 可以是单个字节，也可以是某种更大的数据类型，例如特定大小的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)。单个一个流的 **chunk** 可以有不同的大小和类型。
+数据被按序读入到许多分块，这些分块被称作 **chunk**。**chunk** 可以是单个字节，也可以是某种更大的数据类型，例如特定大小的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)。单个流的 **chunk** 可以有不同的大小和类型。
 
 ![](readable_streams.png)
 
@@ -25,7 +25,7 @@ slug: Web/API/Streams_API/Concepts
 
 另一个你将用到的对象叫做 **controller**——每个 reader 都有一个关联的 controller，用来控制流（例如，可以将流关闭）。
 
-一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（**active reader**，译者注：该流已经处于活动状态）时，我们说，它被 **locked（锁定）** 在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作（你也可以 **tee**，译者注：拷贝流，参阅下面的 Teeing 部分）。
+一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（**active reader**，译者注：该流已经处于活动状态）时，我们说，它被 **locked**（锁定）在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作（你也可以 **tee**，译者注：拷贝流，参阅下面的 Teeing 部分）。
 
 注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流——这是传统流的扩展版本，用于读取底层字节源。相比于传统的可读流，字节流被允许通过 BYOB reader 读取（BYOB，“带上你自己的缓冲区”）。这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。你的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅 {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。
 
@@ -43,7 +43,7 @@ slug: Web/API/Streams_API/Concepts
 
 ## 可写流
 
-一个 **Writable stream**（可写流）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink（底层接收器）** 的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
+一个 **Writable stream**（可写流）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink**（底层接收器）的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
 
 数据由一个 **writer** 写入流中，每次只写入一个分块。分块和可读流的 reader 一样可以有多种类型。你可以用任何方式生成要被写入的块；writer 加上相关的代码称为 **producer**。
 
@@ -55,7 +55,7 @@ slug: Web/API/Streams_API/Concepts
 
 ![Writable streams data flow](writable_streams.png)
 
-你可以使用 {{domxref("WritableStream.WritableStream","WritableStream()")}} 构造函数使用可写流。这些目前在浏览器中使用非常有限。
+你可以使用 {{domxref("WritableStream.WritableStream","WritableStream()")}} 构造函数使用可写流。这些目前在浏览器中的应用非常有限。
 
 ## 链式管道传输（Pipe chain）
 
@@ -85,12 +85,12 @@ pipe chain 的起点称为 **original source**，终点称为 **ultimate sink**�
 
 内置的队列采用一个**排队策略**，该策略规定如何基于**内置队列的状态**发出背压信号。
 
-一般来说，该策略会将队列中的分块大小称作 **high water mark** 的值进行比较，**high water mark** 是队列期望管理的最大分块的总和。
+一般来说，该策略会将队列中的分块大小与称作 **high water mark** 的值进行比较，**high water mark** 是队列期望管理的最大分块的总和。
 
 执行的计算是：
 
 `high water mark - total size of chunks in queue = desired size`
 
-**所需大小**（desired size）是流中仍然可以接收的分块数量，以保持流运行，但是要小于 high water mark 的大小。当所需的大小大于0时，分块的生成将适当的减慢或者加速，以保持流尽可能快的运行。如果值降到0（或者小于 0），这意味着分块的产生快于流的处理，这可能产生问题。
+**所需大小**（desired size）是流中仍然可以接收的分块数量，以保持流运行，但是小于 high water mark 的大小。当所需的大小大于0时，分块的生成将适当的减慢或者加速，以保持流尽可能快的运行。如果值降到0（或者小于 0），这意味着分块的产生快于流的处理，这可能产生问题。
 
-举一个例子，让我们以分块的大小为 1 和为 3 的 high water mark 为例：这意味着在达到 high water mark 和运用背压之前，最多可以入队 3 个分块。
+举一个例子，让我们为 1 的分块大小 和为 3 的 high water mark 为例：这意味着在达到 high water mark 和运用背压之前，最多可以入队 3 个分块。
