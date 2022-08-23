@@ -26,8 +26,8 @@ match(request, options);
 ### Параметры
 
 - `request`
-  - : The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.
+  - : {{domxref("Request")}} для которого вы пытаетесь найти записи.
+    Может быть объектом {{domxref("Request")}} или URL.
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation. The available
