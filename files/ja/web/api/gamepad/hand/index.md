@@ -33,16 +33,16 @@ var myHand = gamepadInstance.hand;
 
 TBC
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                 | ステータス                               | 備考     |
 | ------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
 | {{SpecName('GamepadExtensions', '#dom-gamepad-hand', 'hand')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad.hand")}}
 
-## 関連項目
+## 関連情報
 
 - [Gamepad API](/ja/docs/Web/API/Gamepad_API)

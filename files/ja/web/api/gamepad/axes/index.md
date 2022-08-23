@@ -14,7 +14,7 @@ translation_of: Web/API/Gamepad/axes
 ---
 {{APIRef("Gamepad API")}}
 
-{{domxref("Gamepad") }} インターフェースの **`Gamepad.axes`** プロパティはデバイス上に存在する軸を持つコントロールを表す配列を返します。 (例 : アナログスティック)。
+{{domxref("Gamepad") }} インターフェイスの **`Gamepad.axes`** プロパティはデバイス上に存在する軸を持つコントロールを表す配列を返します。 (例 : アナログスティック)。
 
 配列の各エントリは -1.0 〜 1.0 の範囲の浮動小数点値で、最小値 (-1.0) から最大値 (1.0) までの軸の位置を表します。
 
@@ -55,16 +55,16 @@ function gameLoop() {
 
 {{domxref("double") }} の値の配列。
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                             | 状態                         | コメント |
 | -------------------------------------------------------------------------------- | ---------------------------- | -------- |
 | {{SpecName("Gamepad", "#widl-Gamepad-axes", "Gamepad.axes")}} | {{Spec2("Gamepad")}} | 初版     |
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad.axes")}}
 
-## 参照
+## 関連情報
 
 [Gamepad API を利用する](/ja/docs/Web/Guide/API/Gamepad)

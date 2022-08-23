@@ -64,16 +64,16 @@ function gameLoop() {
 };
 ```
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                         | 状態                         | コメント |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
 | {{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}} | {{Spec2("Gamepad")}} | 初版     |
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("api.GamepadButton")}}
 
-## 関連項目
+## 関連情報
 
 [Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)

@@ -11,7 +11,7 @@ translation_of: Web/API/Gamepad
 ---
 {{APIRef("Gamepad API")}}
 
-[Gamepad API](/ja/docs/Web/API/Gamepad_API) の **`Gamepad`** インターフェースはそれぞれのゲームパッドやその他のコントローラーを定義し、ボタンのプッシュや軸位置や ID といった情報にアクセスできるようにします。
+[Gamepad API](/ja/docs/Web/API/Gamepad_API) の **`Gamepad`** インターフェイスはそれぞれのゲームパッドやその他のコントローラーを定義し、ボタンのプッシュや軸位置や ID といった情報にアクセスできるようにします。
 
 Gamepad オブジェクトは２つのうちのどちらかの方法で取得できます : Gamepad オブジェクトは、{{event("gamepadconnected")}} イベントと {{event("gamepaddisconnected")}} イベントの `gamepad` プロパティを使用する方法、{{domxref("Navigator.getGamepads()")}} メソッドが返した配列内の任意の位置を取得する方法のいずれかで返すことができます。
 
@@ -55,7 +55,7 @@ window.addEventListener("gamepadconnected", function(e) {
 });
 ```
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                                             | 状態                                     | コメント                                                                         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
@@ -63,11 +63,11 @@ window.addEventListener("gamepadconnected", function(e) {
 | {{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}}             | {{Spec2("WebVR 1.1")}}             | {{domxref("Gamepad.displayId")}} プロパティの定義。                  |
 | {{SpecName("GamepadExtensions", "#partial-gamepad-interface", "Gamepad extensions")}} | {{Spec2("GamepadExtensions")}} | [Experimental extensions to Gamepad](#experimental_extensions_to_gamepad) の定義 |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad")}}
 
-## 参照
+## 関連情報
 
 - [Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)
 - [Gamepad API](/ja/docs/Web/API/Gamepad_API)

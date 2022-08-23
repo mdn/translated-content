@@ -14,7 +14,7 @@ translation_of: Web/API/Gamepad/buttons
 ---
 {{APIRef("Gamepad API")}}
 
-{{domxref("Gamepad") }} インターフェースの **`Gamepad.buttons`** プロパティはデバイス上に存在するボタンを表すオブジェクトの配列を返します。
+{{domxref("Gamepad") }} インターフェイスの **`Gamepad.buttons`** プロパティはデバイス上に存在するボタンを表すオブジェクトの配列を返します。
 
 配列内の各エントリは、ボタンが押されていない場合は 0、ボタンが押されている場合は 0 以外の値 (通常は 1.0) です。各 {{domxref("gamepadButton")}} オブジェクトには、`pressed` と `value` という 2 つのプロパティがあります :
 
@@ -70,16 +70,16 @@ function gameLoop() {
 
 {{domxref("gamepadButton")}} オブジェクトの配列。
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                     | 状態                         | コメント |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
 | {{SpecName("Gamepad", "#widl-Gamepad-buttons", "Gamepad.buttons")}} | {{Spec2("Gamepad")}} | 初版     |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad.buttons")}}
 
-## 参照
+## 関連情報
 
 [Gamepad API を利用する](/ja/docs/Web/Guide/API/Gamepad)
