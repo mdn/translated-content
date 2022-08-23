@@ -37,11 +37,11 @@ alert(paragraphs[0].nodeName);</pre>
 <p>DOM спроектирован таким образом, чтобы быть независимым от любого конкретного языка программирования, обеспечивая структурное представление документа согласно единому и последовательному API. Хотя мы всецело сфокусированы на JavaScript в этой справочной документации, реализация DOM может быть построена для любого языка, как в следующем примере на Python:</p>
 </div>
 
-<pre class="brush: python  language-html"><code class="language-html"># Пример DOM на языке Python
+<pre class="brush: python"># Пример DOM на языке Python
 import xml.dom.minidom as m
 doc = m.parse("C:\\Projects\\Py\\chap1.xml");
 doc.nodeName # Свойство объекта документа DOM;
-p_list = doc.getElementsByTagName("para");</code></pre>
+p_list = doc.getElementsByTagName("para");</pre>
 
 <p>Для подробной информации о том, какие технологии участвуют в написании JavaScript для веб, смотрите обзорную статью <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview" style="line-height: 1.5;">JavaScript technologies overview.</a></p>
 
@@ -51,7 +51,7 @@ p_list = doc.getElementsByTagName("para");</code></pre>
 
 <p>При создании сценария с использованием элемента &lt;script&gt;, либо включая в веб страницу инструкцию для загрузки скрипта, вы можете немедленно приступить к использованию программного интерфейса (API), используя элементы <code><a href="https://developer.mozilla.org/en-US/docs/DOM/document">document</a> </code>или <code><a href="https://developer.mozilla.org/en-US/docs/DOM/window">window</a></code> для взаимодействия с самим документом, либо для получения потомков этого документа, т.е. различных элементов на странице. Ваше программирование DOM может быть чем-то простым, например, вывод сообщения с использованием функции <code><a href="https://developer.mozilla.org/en-US/docs/DOM/window.alert">alert()</a></code> объекта <code><a href="https://developer.mozilla.org/en-US/docs/DOM/window">window</a></code>, или использовать более сложные методы DOM, которые создают новое содержимое, как показано в следующем примере:</p>
 
-<pre class="language-html">&lt;body onload="window.alert('добро пожаловать на мою домашнюю страницу!');"&gt;
+<pre class="brush:html">&lt;body onload="window.alert('добро пожаловать на мою домашнюю страницу!');"&gt;
 </pre>
 
 <p>В следующем примере внутри элемента <code>&lt;script&gt;</code> определён код JavaScript, данный код устанавливает функцию при загрузке документа (когда весь DOM доступен для использования). Эта функция создаёт новый элемент H1, добавляет текст в данный элемент, а затем добавляет H1 в дерево документа:</p>

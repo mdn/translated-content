@@ -32,7 +32,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>Здесь показано, как функционирует сохранение в стек состояния отрисовки на примере последовательной отрисовки набора прямоугольников.</p>
 
-<pre class="brush: js; highlight:[5,10,15,18]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // рисуем прямоугольник с настройками по умолчанию
@@ -84,7 +84,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>Внутри функции <code>draw()</code> мы вызываем <code>fillRect()</code> девять раз, используя два цикла <code>for</code>. Каждый раз мы сохраняем состояние холста, смещаем его, рисуем прямоугольник, а затем восстанавливаем исходное состояние. Заметьте, что <code>fillRect()</code> всегда использует одни и те же параметры, а изменение позиции фигуры осуществляется с помощью <code>translate()</code>.</p>
 
-<pre class="brush: js; highlight:[7]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 3; i++) {
     for (var j = 0; j &lt; 3; j++) {
@@ -125,7 +125,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 <p><strong>Памятка</strong>: Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: <code>radians = (Math.PI/180)*degrees</code>.</p>
 </div>
 
-<pre class="brush: js; highlight:[9, 23]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
@@ -183,7 +183,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>В этом примере мы нарисуем прямоугольники, используя разные масштабные коэффициенты.</p>
 
-<pre class="brush: js; highlight:[6,11]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // рисуем масштабированный прямоугольник.
@@ -244,7 +244,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <h3 id="Пример_использования_transform_и_setTransform">Пример использования <code>transform</code> и <code>setTransform</code></h3>
 
-<pre class="brush: js; highlight:[12,15]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   var sin = Math.sin(Math.PI / 6);

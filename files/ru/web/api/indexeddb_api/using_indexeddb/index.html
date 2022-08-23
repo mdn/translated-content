@@ -74,7 +74,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 <div class="warning">
 <p>Версия базы данных имеет внутреннее представление <code>unsigned long long</code> number (длинное длинное целое без знака), то есть может принимать очень большие целые значения. Имейте в виду также, что нет смысла использовать в качестве версии базы данных значение с плавающей точкой (float), потому что оно будет сконвертировано в ближайшее меньшее целое. В результате неожиданно может не запуститься транзакция или сработать триггер события <code>upgradeneeded</code>. Например, не используйте значение  2.4 как версию базы данных:</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var request = indexedDB.open("MyTestDatabase", 2.4); // <code class="language-js">не делайте так, потому что версия будет округлена до 2</code></code></pre>
+<pre class="brush: js">var request = indexedDB.open("MyTestDatabase", 2.4); // не делайте так, потому что версия будет округлена до 2</pre>
 </div>
 
 <h4 id="Установка_обработчиков">Установка обработчиков</h4>
@@ -96,14 +96,14 @@ request.onsuccess = function(event) {
 
 <p>А теперь предположим, что пользователь разрешил вашему запросу создать базу данных и состоялось событие успеха, запустившее обработчик события успеха. Что дальше? Так как ваш запрос был сгенерирован с вызовом метода <code>indexedDB.open(), то </code><code>request.result</code>   является экземпляром объекта <code>IDBDatabase</code> и вы определённо захотите сохранить его для будущего использования. Ваш код может выглядеть примерно так:</p>
 
-<pre class="brush: js"><code class="language-js">var db;
+<pre class="brush: js">var db;
 var request = indexedDB.open("MyTestDatabase");
 request.onerror = function(event) {
   alert("Почему вы не позволяете моему веб-приложению использовать IndexedDB?!");
 };
 request.onsuccess = function(event) {
   db = event.target.result;
-};</code>
+};
 </pre>
 
 <h4 id="Обработка_ошибок">Обработка ошибок</h4>

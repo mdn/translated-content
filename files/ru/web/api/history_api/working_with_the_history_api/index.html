@@ -28,7 +28,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>Если пользователь ещё раз нажимает кнопку <strong>"Назад"</strong>, URL изменится на <code>http://mozilla.org/foo.html</code>, а в документе снова произойдёт событие <code>popstate</code>, на этот раз с объектом состояния, имеющим значение <code>null</code>. В этом случае возврат назад также не меняет содержимое документа, как и на предыдущем шаге, хотя документ может сам обновить своё содержимое после получения события <code>popstate</code>.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание:</strong> Вызов <code>history.back()</code> обычно ведёт себя так же, как нажатие на кнопку <strong>"Назад"</strong>. Но есть одно важное исключение:</p>
 
 <p><em>После использования</em> <code>history.pushState()</code>, вызов <code>history.back()</code> <em>не вызывает событие</em> <code>popstate</code>. Нажатие в браузере на кнопку "Назад" (всё ещё) делает это.</p>

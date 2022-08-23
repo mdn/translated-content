@@ -38,7 +38,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 
 <p>Третья область (содержащая записываемые образцы, которые можно воспроизвести) должна занимать оставшуюся от первых двух область, независимо от высоты устройства пользователя. Задача может быть решена, установкой высоты третьей области равной 100% родительской высоты, минус высоты и отступы первых двух.</p>
 
-<pre class="brush: css;highlight[4]">.sound-clips {
+<pre class="brush: css;">.sound-clips {
   box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
   background-color: rgba(0,0,0,0.1);
   height: calc(100% - 240px - 0.7rem);
@@ -162,7 +162,7 @@ mediaRecorder.ondataavailable = function(e) {
   chunks.push(e.data);
 }</pre>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание </strong>: Браузер будет запускать события <code>dataavailable</code> по необходимости (когда внутренний буфер объекта будет переполняться), но если разработчику нужно вмешаться, в вызов метода <code>start()</code> можно включить параметр<code> timeslice</code> , определяющий диапазон захвата в миллисекундах — к примеру, <code>start(10000)</code> ,  или вызывать функцию запроса данных  {{domxref("MediaRecorder.requestData()")}} , запуская событие по необходимости.</p>
 </div>
 

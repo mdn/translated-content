@@ -158,7 +158,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Соединение с портом должно быть осуществлено либо неявно, используя обработчик событие <code>onmessage</code>, либо явно, вызвав метод <strong>start()</strong> перед тем, как отправлять любые сообщения. Вызов метода start() необходим только тогда, когда подписка на событие реализована через метод <code>addEventListener()</code>.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание: </strong>Когда используется метод <code>start()</code> чтобы открыть соединение с портом, его необходимо вызывать и в родительском потоке и в потоке worker-а, если необходима двухсторонняя коммуникация.</p>
 </div>
 
@@ -535,7 +535,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>Не существует утверждённого способа встроить код worker-а в рамках веб-страницы, как элемент {{HTMLElement("script")}} делает для обычных скриптов. Но элемент {{HTMLElement("script")}}, который не имеет атрибута <code>src</code> и атрибута  <code>type</code>, которому не назначен выполняемый MIME type, можно считать блоком данных для использования JavaScript. Блок данных "Data blocks" — это более общее свойство HTML5, может содержать любые текстовые данные. Так, worker может быть встроен следующим образом:</p>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8" /&gt;
@@ -543,7 +543,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 &lt;script type="text/js-worker"&gt;
   // Этот script НЕ БУДЕТ анализироваться JS движками, потому что  его MIME-тип text/js-worker.
   var myVar = 'Hello World!';
-  // </code>Остальная часть кода вашего воркера идёт сюда.<code class="language-html">
+  // Остальная часть кода вашего воркера идёт сюда.
 &lt;/script&gt;
 &lt;script type="text/javascript"&gt;
   // Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.
@@ -560,7 +560,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
   onmessage = function(oEvent) {
     postMessage(myVar);
   };
-  // </code>Остальная часть кода вашего воркера идёт сюда.<code class="language-html">
+  // Остальная часть кода вашего воркера идёт сюда.
 &lt;/script&gt;
 &lt;script type="text/javascript"&gt;
   // Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.
@@ -582,7 +582,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;&lt;div id="logDisplay"&gt;&lt;/div&gt;&lt;/body&gt;
-&lt;/html&gt;</code>
+&lt;/html&gt;
 </pre>
 
 <div id="logDisplay">Встраиваемый worker теперь внесён в новое custom свойство <code>document.worker</code></div>
@@ -642,7 +642,7 @@ onmessage = function(event) {
 
 <h4 id="HTML_код">HTML код</h4>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"  /&gt;
@@ -670,7 +670,7 @@ onmessage = function(event) {
 
   &lt;/script&gt;
   &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <p>Веб-страница создаёт элемент <code>div</code> с ID <code>result</code> , который используется для отображения результата, а затем порождает worker. После порождения worker-а, обработчик <code>onmessage</code> настроен для отображения результатов путём установки содержимого элемента <code>div</code>, и обработчик <code>onerror</code> настроен на <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">выброс</a> сообщения об ошибке.</p>
 

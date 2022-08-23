@@ -43,7 +43,7 @@ ball.draw();</pre>
 
 <p>Теперь, когда у нас есть шар, мы готовы добавить базовую анимацию, как мы узнали из последней <a href="/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations">главы</a> этого урока. Опять же, {{domxref("window.requestAnimationFrame()")}} помогает нам контролировать анимацию. Мяч перемещается, добавляя вектор скорости в положение. Для каждого кадра мы также {{domxref("CanvasRenderingContext2D.clearRect", "очищаем", "", 1)}}  холст, чтобы удалить старые круги из предыдущих кадров.</p>
 
-<pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 

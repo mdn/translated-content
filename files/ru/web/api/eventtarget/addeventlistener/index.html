@@ -68,13 +68,13 @@ target</em>.addEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</
 
 <p>Например, колбэк обработчика событий, который может использоваться для обработки {{event("fullscreenchange")}} и {{event("fullscreenerror")}} может выглядеть так:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">function eventHandler(event) {
+<pre class="brush: js">function eventHandler(event) {
   if (event.type == 'fullscreenchange') {
     /* Переключатель полноэкранного режима */
   } else /* fullscreenerror */ {
     /* Ошибка переключателя полноэкранного режима */
   }
-}</code></pre>
+}</pre>
 
 <h3 id="Безопасная_проверка_поддержки_option">Безопасная проверка поддержки <code>option</code></h3>
 
