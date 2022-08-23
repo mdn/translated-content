@@ -31,7 +31,7 @@ browser-compat: javascript.operators.conditional
 - `condition`
   - : 조건문으로 사용되는 표현식
 - `exprIfTrue`
-  - : `condition`이 {{Glossary("Truthy")}}한 값으로 평가될 경우 실행되는 표현식 (`true`와 같거나, `true`로 치환될 수 있는 값)
+  - : `condition`이 {{Glossary("truthy")}}한 값으로 평가될 경우 실행되는 표현식 (`true`와 같거나, `true`로 치환될 수 있는 값)
 - `exprIfFalse`
   - : `condition`이 {{Glossary("falsy")}}한 값으로 평가될 경우 실행되는 표현식 (`false`와 같거나, `false`로 치환될 수 있는 값)
 
