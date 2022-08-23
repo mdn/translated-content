@@ -11,7 +11,6 @@ tags:
   - リファレンス
   - innerHTML
   - プロパティ
-browser-compat: api.Element.innerHTML
 translation_of: Web/API/Element/innerHTML
 ---
 {{APIRef("DOM")}}

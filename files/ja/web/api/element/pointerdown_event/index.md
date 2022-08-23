@@ -13,7 +13,6 @@ tags:
   - Property
   - Reference
   - Window
-browser-compat: api.Element.pointerdown_event
 translation_of: Web/API/GlobalEventHandlers/onpointerdown
 original_slug: Web/API/GlobalEventHandlers/onpointerdown
 ---

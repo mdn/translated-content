@@ -7,7 +7,6 @@ tags:
   - Gecko
   - プロパティ
   - リファレンス
-browser-compat: api.Element.className
 translation_of: Web/API/Element/className
 ---
 {{APIRef("DOM")}}

@@ -9,7 +9,6 @@ tags:
   - PointerEvent
   - Property
   - Reference
-browser-compat: api.Element.pointerup_event
 translation_of: Web/API/GlobalEventHandlers/onpointerup
 original_slug: Web/API/GlobalEventHandlers/onpointerup
 ---

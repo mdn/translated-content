@@ -6,7 +6,6 @@ tags:
   - DOM
   - Element
   - プロパティ
-browser-compat: api.Element.nextElementSibling
 translation_of: Web/API/Element/nextElementSibling
 ---
 {{APIRef("DOM")}}

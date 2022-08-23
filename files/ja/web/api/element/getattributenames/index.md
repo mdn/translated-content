@@ -8,7 +8,6 @@ tags:
   - Element
   - メソッド
   - getAttributeNames
-browser-compat: api.Element.getAttributeNames
 translation_of: Web/API/Element/getAttributeNames
 ---
 {{APIRef("DOM")}}

@@ -11,7 +11,6 @@ tags:
   - animationstart
   - イベント
   - ウェブ
-browser-compat: api.Element.animationstart_event
 translation_of: Web/API/Document/animationstart_event
 original_slug: Web/API/Document/animationstart_event
 ---

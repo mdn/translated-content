@@ -11,7 +11,6 @@ tags:
   - イベント
   - ウェブ
   - トランジション
-browser-compat: api.Element.transitioncancel_event
 translation_of: Web/API/Document/transitioncancel_event
 original_slug: Web/API/Document/transitioncancel_event
 ---

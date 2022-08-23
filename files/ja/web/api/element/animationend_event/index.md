@@ -10,7 +10,6 @@ tags:
   - Web
   - animationend
   - イベント
-browser-compat: api.Element.animationend_event
 translation_of: Web/API/Document/animationend_event
 original_slug: Web/API/Document/animationend_event
 ---

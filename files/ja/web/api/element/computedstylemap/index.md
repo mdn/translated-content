@@ -11,7 +11,6 @@ tags:
   - リファレンス
   - StylePropertyMapReadOnly
   - computedStyleMap()
-browser-compat: api.Element.computedStyleMap
 translation_of: Web/API/Element/computedStyleMap
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}

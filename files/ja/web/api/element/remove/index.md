@@ -7,7 +7,6 @@ tags:
   - DOM
   - Method
 translation_of: Web/API/Element/remove
-browser-compat: api.Element.remove
 ---
 {{APIRef("DOM")}}
 
