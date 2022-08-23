@@ -530,7 +530,7 @@ window.addEventListener('load', updateCode);
 
 ## 主动学习：更多颜色选择！
 
-在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个 switch 语句，这将允许我们对简单的网站应用更多的选择。看看 `<select>` ——这次你会看到它不是两个主题选项，而是五个。您需要在`// ADD SWITCH STATEMENT`注释下面添加一个 switch 语句：
+在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个 switch 语句，这将允许我们对简单的网站应用更多的选择。看看 {{htmlelement("select")}}——这次你会看到它不是两个主题选项，而是五个。你需要在 `// ADD SWITCH STATEMENT` 注释下面添加一个 switch 语句：
 
 - 它应该接受`choice`变量作为其输入表达式。
 - 对于每种情况，选择应该等于可以选择的可能值之一，即白色，黑色，紫色，黄色或迷幻色。
@@ -605,7 +605,7 @@ window.addEventListener('load', updateCode);
 
 ## 测试你的技能！
 
-你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，保留住了这些知识，请参阅[测试你的技能：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
+你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[测试你的技能：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
 
 ## 结论
 
@@ -620,12 +620,12 @@ window.addEventListener('load', updateCode);
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
-## 在本单元中
+## 本章目录
 
-- **Making decisions in your code — conditionals**
-- [Looping code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- **在代码中做决定——条件语句**
+- [代码循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [函数——可复用代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
+- [创建你自己的函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [函数返回值](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)
