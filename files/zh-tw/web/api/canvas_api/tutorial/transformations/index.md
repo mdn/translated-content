@@ -70,7 +70,7 @@ draw();
 
 第五步：再畫一個矩形 我們再取出更早之前儲存的黑色(第一狀態)
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
 
 ## 移動畫布
 
@@ -319,6 +319,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform_.2F_setTransform_examples", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}
+{{EmbedLiveSample("transform_.2F_setTransform_examples", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors", "Web/Guide/HTML/Canvas_tutorial/Compositing")}}
