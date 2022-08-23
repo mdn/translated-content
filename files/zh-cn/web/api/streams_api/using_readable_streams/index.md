@@ -6,7 +6,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据时非常实用的！但是你如何使用  Streams API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
-> **备注：** 本文要求您已了解流文件相关知识，如果还不了解，建议您先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#concepts_and_usage)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
+> **备注：** 本文要求你已了解流文件相关知识，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#concepts_and_usage)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
 
 > **备注：** 如果你正在查询关于可写流的信息，你可以尝试[使用可写文件流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
@@ -22,9 +22,9 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 允许你跨网络获取资源，它提供了现代化的 API 去替代 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest)。它有一系列的优点，真正好的是，浏览器最近增加了将 fetch 响应作为可读流的消费功能。
 
-{{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器（译者注：[ReadableStream.getReader()](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader)）。
+{{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器。
 
-正如我们的[简单随机流 pump](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump) 示例展示（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
+正如我们的[简单随机流 pump](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump)  示例展示（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
 
 ```js
 // Fetch the original image
@@ -112,7 +112,7 @@ reader.read().then(({ done, value }) => { /* … */ });
 
 - 如果有分块可用，则 promise 将使用 `{ value: theChunk, done: false }` 形式的对象来兑现。
 - 如果流已经关闭，则 promise 将使用 `{ value: undefined, done: true }` 形式的对象来兑现。
-- 如果流发生错误，promise 将因相关错误被拒绝。
+- 如果流发生错误，则 promise 将因相关错误被拒绝。
 
 其次，我们检查 `done` 是否为 `true`。如果是，则没有更多的分块要读取（value 的值是 `undefined`），所以我们退出这个函数并且使用 {{domxref("ReadableStreamDefaultController.close()")}} 关闭自定义的流：
 
@@ -233,7 +233,7 @@ readableStream
 
 > **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 编码。
 
-自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，我们也要关闭流。
+自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
 
 ```js
 const stream = new ReadableStream({
