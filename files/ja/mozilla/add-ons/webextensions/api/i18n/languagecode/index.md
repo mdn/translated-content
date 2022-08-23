@@ -13,29 +13,23 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><code>"en-US"</code> や "<code>fr</code>" などの <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10">言語タグ</a>。</p>
+`"en-US"` や "`fr`" などの [言語タグ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10)。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<p>この型の値は文字列です。</p>
+この型の値は文字列です。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
-<p>{{Compat("webextensions.api.i18n.LanguageCode")}}</p>
+{{Compat("webextensions.api.i18n.LanguageCode")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#type-LanguageCode) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
-<p>この API は、Chromium の <a href="https://developer.chrome.com/extensions/i18n#type-LanguageCode"><code>chrome.i18n</code></a> API を基にしています。このドキュメンテーションは、Chromium コード内の <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> に由来しています。</p>
-
-<p>Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -63,4 +57,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

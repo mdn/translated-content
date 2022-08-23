@@ -4,96 +4,87 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>devtools が接続されているウィンドウで JavaScript を実行します。</p>
+devtools が接続されているウィンドウで JavaScript を実行します。
 
-<p>これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを添付することに似ていますが、主に2つの違いがあります。</p>
+これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを添付することに似ていますが、主に 2 つの違いがあります。
 
-<p>第1に、JavaScript は<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval#ヘルパー" id="Helper">ブラウザが通常 devtools コンソール実装で提供する特別なコマンド</a>のセットを使用できます。たとえば、"$0" を使用してインスペクタで現在選択されている要素を参照します。</p>
+第 1 に、JavaScript は[ブラウザが通常 devtools コンソール実装で提供する特別なコマンド](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval#ヘルパー)のセットを使用できます。たとえば、"$0" を使用してインスペクタで現在選択されている要素を参照します。
 
-<p>次に、実行する JavaScript はページが読み込んだスクリプトによってページに加えられた変更を確認できます。これは、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access">ページスクリプトが読み込まれなかった場合に存在するページを表示する</a>コンテンツスクリプトとは対照的です。ただし、コンテンツスクリプトによって提供される分離は意図的なセキュリティ機能であり、DOM 関数とプロパティを再定義することにより、悪意のあるまたは単に非協力的な Web ページがWebExtensions API を混乱または破壊することを困難にすることを目的としています。つまり <code>eval()</code> を使用してこの保護を放棄する場合は非常に注意する必要があり、<code>eval()</code> を使用する必要がない限りコンテンツスクリプトを使用する必要があります。</p>
+次に、実行する JavaScript はページが読み込んだスクリプトによってページに加えられた変更を確認できます。これは、[ページスクリプトが読み込まれなかった場合に存在するページを表示する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access)コンテンツスクリプトとは対照的です。ただし、コンテンツスクリプトによって提供される分離は意図的なセキュリティ機能であり、DOM 関数とプロパティを再定義することにより、悪意のあるまたは単に非協力的な Web ページが WebExtensions API を混乱または破壊することを困難にすることを目的としています。つまり `eval()` を使用してこの保護を放棄する場合は非常に注意する必要があり、`eval()` を使用する必要がない限りコンテンツスクリプトを使用する必要があります。
 
-<p>スクリプトは、ページのメインフレームでデフォルトで評価されます。スクリプトは、JSON として表現できる値に評価する必要があります (たとえば、関数または関数を含むオブジェクトには評価されない可能性があることを意味します)。デフォルトでは、スクリプトはページに添付されたコンテンツスクリプトを表示しません。</p>
+スクリプトは、ページのメインフレームでデフォルトで評価されます。スクリプトは、JSON として表現できる値に評価する必要があります (たとえば、関数または関数を含むオブジェクトには評価されない可能性があることを意味します)。デフォルトでは、スクリプトはページに添付されたコンテンツスクリプトを表示しません。
 
-<p>"about:addons" などの特権ブラウザウィンドウで <code>eval()</code> を呼び出すことはできません。</p>
+"about:addons" などの特権ブラウザウィンドウで `eval()` を呼び出すことはできません。
 
-<p>オプションで <code>options</code> パラメータを指定できます。<code>options</code> パラメータには、異なるフレームまたは添付コンテンツスクリプトのコンテキストでスクリプトを評価するオプションが含まれます。Firefox はまだ <code>options</code> パラメータをサポートしていないことに注意してください。</p>
+オプションで `options` パラメータを指定できます。`options` パラメータには、異なるフレームまたは添付コンテンツスクリプトのコンテキストでスクリプトを評価するオプションが含まれます。Firefox はまだ `options` パラメータをサポートしていないことに注意してください。
 
-<p><code>eval()</code> 関数は、スクリプトの評価結果またはエラーを解決する <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
+`eval()` 関数は、スクリプトの評価結果またはエラーを解決する [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
 
-<h2 id="ヘルパー">ヘルパー</h2>
+## ヘルパー
 
-<p>The script gets access to a number of objects that help the injected script interact with the developer tools. The following helpers are currently supported:</p>
+The script gets access to a number of objects that help the injected script interact with the developer tools. The following helpers are currently supported:
 
-<dl>
- <dt><code>$0</code></dt>
- <dd>Contains a reference to the element that's currently selected in the devtools Inspector.</dd>
- <dt><code>inspect()</code></dt>
- <dd>Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the webconsole.</dd>
-</dl>
+- `$0`
+  - : Contains a reference to the element that's currently selected in the devtools Inspector.
+- `inspect()`
+  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the webconsole.
 
-<p><a href="#Examples">See some examples.</a></p>
+[See some examples.](#Examples)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox brush:js">var evaluating = browser.devtools.inspectedWindow.eval(
+```js
+var evaluating = browser.devtools.inspectedWindow.eval(
   expression,       // string
   options           // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>expression</code></dt>
- <dd><code>string</code>. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, <code>expression</code> must not evaluate to a function.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Options for the function (Note that Firefox does not yet support this options), as follows:</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>frameURL</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.</dd>
-  <dt><code>useContentScriptContext</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.</dd>
-  <dt><code>contextSecurityOrigin</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides <code>useContentScriptContext</code>.</dd>
- </dl>
- </dd>
-</dl>
+- `expression`
+  - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
+- `options`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
 
-<p>A <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code>array</code> containing two elements.</p>
+    - `frameURL`{{optional_inline}}
+      - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
+    - `useContentScriptContext`{{optional_inline}}
+      - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.
+    - `contextSecurityOrigin` {{optional_inline}}
+      - : `string`. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides `useContentScriptContext`.
 
-<p>If no error occurred, element 0 will contain the result of evaluating the expression, and element 1 will be <code>undefined</code>.</p>
+### Return value
 
-<p>If an error occurred, element 0 will be <code>undefined</code>, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:</p>
+A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` containing two elements.
 
-<ul>
- <li>errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
-  <ul>
-   <li>a boolean property <code>isException</code>, set to <code>true</code></li>
-   <li>a string property <code>value</code>, giving more details.</li>
-  </ul>
- </li>
- <li>other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
-  <ul>
-   <li>a boolean property <code>isError</code>, set to <code>true</code></li>
-   <li>a string property <code>code</code> containing an error code.</li>
-  </ul>
- </li>
-</ul>
+If no error occurred, element 0 will contain the result of evaluating the expression, and element 1 will be `undefined`.
 
-<h2 id="ブラウザの対応状況">ブラウザの対応状況</h2>
+If an error occurred, element 0 will be `undefined`, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:
 
-<p>{{Compat("webextensions.api.devtools.inspectedWindow.eval")}}</p>
+- errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
 
-<h2 id="例">例</h2>
+  - a boolean property `isException`, set to `true`
+  - a string property `value`, giving more details.
 
-<p>This tests whether jQuery is defined in the inspected window, and logs the result. Note that this wouldn't work in a content script, because even if jQuery were defined, the content script would not see it.</p>
+- other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
 
-<pre class="brush: js">function handleError(error) {
+  - a boolean property `isError`, set to `true`
+  - a string property `code` containing an error code.
+
+## ブラウザの対応状況
+
+{{Compat("webextensions.api.devtools.inspectedWindow.eval")}}
+
+## 例
+
+This tests whether jQuery is defined in the inspected window, and logs the result. Note that this wouldn't work in a content script, because even if jQuery were defined, the content script would not see it.
+
+```js
+function handleError(error) {
   if (error.isError) {
     console.log(`Devtools error: ${error.code}`);
   } else {
@@ -112,16 +103,18 @@ function handleResult(result) {
 
 const checkjQuery = "typeof jQuery != 'undefined'";
 
-evalButton.addEventListener("click", () =&gt; {
+evalButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.eval(checkjQuery)
     .then(handleResult);
-});</pre>
+});
+```
 
-<h3 id="Helper_examples">Helper examples</h3>
+### Helper examples
 
-<p>This uses the <code>$0</code> helper to set the background color of the element that's currently selected in the Inspector:</p>
+This uses the `$0` helper to set the background color of the element that's currently selected in the Inspector:
 
-<pre class="brush: js">const evalButton = document.querySelector("#reddinate");
+```js
+const evalButton = document.querySelector("#reddinate");
 const evalString = "$0.style.backgroundColor = 'red'";
 
 function handleError(error) {
@@ -138,15 +131,16 @@ function handleResult(result) {
   }
 }
 
-evalButton.addEventListener("click", () =&gt; {
+evalButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.eval(evalString)
     .then(handleResult);
 });
-</pre>
+```
 
-<p>This uses the <code>inspect()</code> helper to select the first &lt;h1&gt; element in the page:</p>
+This uses the `inspect()` helper to select the first \<h1> element in the page:
 
-<pre class="brush: js">const inspectButton = document.querySelector("#inspect");
+```js
+const inspectButton = document.querySelector("#inspect");
 const inspectString = "inspect(document.querySelector('h1'))";
 
 function handleError(error) {
@@ -163,23 +157,17 @@ function handleResult(result) {
   }
 }
 
-inspectButton.addEventListener("click", () =&gt; {
+inspectButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.eval(inspectString)
     .then(handleResult);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -207,4 +195,3 @@ inspectButton.addEventListener("click", () =&gt; {
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

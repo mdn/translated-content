@@ -3,73 +3,61 @@ title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>タブが生成されたときに発火します。</p>
+タブが生成されたときに発火します。
 
-<p>イベントが発火したとき、タブはURLを渡されていないかもしれないことに注意してください。特に、Firefoxは新しいページを読み込み前に新しいタブを"about:blank"で開きます。URLがセットされたときを通知されるために{{WebExtAPIRef("tabs.onUpdated")}}イベントをリッスンすることができます。</p>
+イベントが発火したとき、タブは URL を渡されていないかもしれないことに注意してください。特に、Firefox は新しいページを読み込み前に新しいタブを"about:blank"で開きます。URL がセットされたときを通知されるために{{WebExtAPIRef("tabs.onUpdated")}}イベントをリッスンすることができます。
 
-<h2 id="書式">書式</h2>
+## 書式
 
-<pre class="syntaxbox brush:js">browser.tabs.onCreated.addListener(callback)
+```js
+browser.tabs.onCreated.addListener(callback)
 browser.tabs.onCreated.removeListener(listener)
 browser.tabs.onCreated.hasListener(listener)
-</pre>
+```
 
-<p>イベントは３つの関数を持ちます:</p>
+イベントは３つの関数を持ちます:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>このイベントにリスナーを追加します。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>このイベントのリスニングを停止します。引数<code>listener</code>は削除するリスナーです。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd><code>listener</code>がこのイベントに登録されているかを調べます。リスニング中であれば<code>true</code>を返し、そうでなければ<code>false</code>を返します</dd>
-</dl>
+- `addListener(callback)`
+  - : このイベントにリスナーを追加します。
+- `removeListener(listener)`
+  - : このイベントのリスニングを停止します。引数`listener`は削除するリスナーです。
+- `hasListener(listener)`
+  - : `listener`がこのイベントに登録されているかを調べます。リスニング中であれば`true`を返し、そうでなければ`false`を返します
 
-<h2 id="addListenerの書式">addListenerの書式</h2>
+## addListener の書式
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>このイベントが発生したときに呼び出される関数です。関数は次の引数を渡されます:</p>
+- `callback`
 
- <dl class="reference-values">
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}。生成されたタブの詳細です。</dd>
- </dl>
- </dd>
-</dl>
+  - : このイベントが発生したときに呼び出される関数です。関数は次の引数を渡されます:
 
-<h2 id="例">例</h2>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}。生成されたタブの詳細です。
 
-<p>新しく作られたタブのログを生成します:</p>
+## 例
 
-<pre class="brush: js">function handleCreated(tab) {
+新しく作られたタブのログを生成します:
+
+```js
+function handleCreated(tab) {
   console.log(tab.id);
 }
 
-browser.tabs.onCreated.addListener(handleCreated);</pre>
+browser.tabs.onCreated.addListener(handleCreated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("webextensions.api.tabs.onCreated")}}
 
+> **Note:** **謝辞**この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onCreated) API に基づいています。このドキュメンテーションは Chromium code の中の[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)からの派生です。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、ここに the Creative Commons Attribution 3.0 United States License のもとで含まれています。
 
-<p>{{Compat("webextensions.api.tabs.onCreated")}}</p>
-
-<div class="note"><strong>謝辞</strong>
-
-<p>このAPIはChromiumの<a href="https://developer.chrome.com/extensions/tabs#event-onCreated"><code>chrome.tabs</code></a> APIに基づいています。このドキュメンテーションはChromium codeの中の<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a>からの派生です。</p>
-
-<p>Microsoft Edgeの互換性データはMicrosoft Corporationから提供されており、ここにthe Creative Commons Attribution 3.0 United States Licenseのもとで含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +85,3 @@ browser.tabs.onCreated.addListener(handleCreated);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -12,40 +12,30 @@ tags:
   - extensionTypes
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>その他の WebExtension API で使われる共通な型</p>
+その他の WebExtension API で使われる共通な型
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("extensionTypes.ImageFormat")}}</dt>
- <dd>画像フォーマット</dd>
- <dt>{{WebExtAPIRef("extensionTypes.ImageDetails")}}</dt>
- <dd>画像のフォーマットと画質の詳細</dd>
- <dt>{{WebExtAPIRef("extensionTypes.RunAt")}}</dt>
- <dd>タブに JavaScript か CSS が挿入されてほんのすぐ</dd>
- <dt><code>extensionTypes.CSSOrigin</code></dt>
- <dd><code><a href="/ja/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS</a></code> で挿入された CSS スタイルシートが "author" か "user" のスタイルシートのどちらであるかを示す</dd>
-</dl>
+- {{WebExtAPIRef("extensionTypes.ImageFormat")}}
+  - : 画像フォーマット
+- {{WebExtAPIRef("extensionTypes.ImageDetails")}}
+  - : 画像のフォーマットと画質の詳細
+- {{WebExtAPIRef("extensionTypes.RunAt")}}
+  - : タブに JavaScript か CSS が挿入されてほんのすぐ
+- `extensionTypes.CSSOrigin`
+  - : [`tabs.insertCSS`](/ja/Add-ons/WebExtensions/API/tabs/insertCSS) で挿入された CSS スタイルシートが "author" か "user" のスタイルシートのどちらであるかを示す
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.extensionTypes")}}</p>
+{{Compat("webextensions.api.extensionTypes")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes) API に基づいています。また、このドキュメントは [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/extensionTypes"><code>chrome.extensionTypes</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a>における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-
-<p> </p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,4 +63,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -5,155 +5,154 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>拡張機能は複数のファイルで構成されており、それらのファイルが配布・インストール用にパッケージ化されたものです。この記事では、拡張機能に含まれるファイルについて簡単に説明します。</p>
+拡張機能は複数のファイルで構成されており、それらのファイルが配布・インストール用にパッケージ化されたものです。この記事では、拡張機能に含まれるファイルについて簡単に説明します。
 
-<h2 id="manifest.json">manifest.json</h2>
+## manifest.json
 
-<p>どの拡張機能においても不可欠な唯一のファイルです。このファイルには名前やバージョン、必要とするパーミッションなど、拡張機能に関する基本的なメタデータが含まれます。加えて、アドオンに含まれている他のファイルへの参照も含んでいます。</p>
+どの拡張機能においても不可欠な唯一のファイルです。このファイルには名前やバージョン、必要とするパーミッションなど、拡張機能に関する基本的なメタデータが含まれます。加えて、アドオンに含まれている他のファイルへの参照も含んでいます。
 
-<p>このマニフェストには、下記のファイルに対する参照を含めることができます。</p>
+このマニフェストには、下記のファイルに対する参照を含めることができます。
 
-<dl>
- <dt><a href="#background_scripts">バックグラウンドスクリプト</a></dt>
- <dd>長時間動作するロジックを実装します。</dd>
- <dt>アイコン</dt>
- <dd>拡張機能とそれが定義するボタンのアイコン。</dd>
- <dt><a href="#sidebars_popups_and_options_pages">サイドバー、ポップアップ、オプションページ</a></dt>
- <dd>色々な UI コンポーネントを提供する HTML 文書です。</dd>
- <dt><a href="#content_scripts">コンテンツスクリプト</a></dt>
- <dd>拡張機能に含まれる JavaScript で、ウェブページに挿入するもの</dd>
- <dt><a href="#web_accessible_resources">ウェブでアクセス可能なリソース</a></dt>
- <dd>まとめられたコンテンツをウェブページやコンテンツスクリプトにアクセス可能とする。</dd>
-</dl>
+- [バックグラウンドスクリプト](#background_scripts)
+  - : 長時間動作するロジックを実装します。
+- アイコン
+  - : 拡張機能とそれが定義するボタンのアイコン。
+- [サイドバー、ポップアップ、オプションページ](#sidebars_popups_and_options_pages)
+  - : 色々な UI コンポーネントを提供する HTML 文書です。
+- [コンテンツスクリプト](#content_scripts)
+  - : 拡張機能に含まれる JavaScript で、ウェブページに挿入するもの
+- [ウェブでアクセス可能なリソース](#web_accessible_resources)
+  - : まとめられたコンテンツをウェブページやコンテンツスクリプトにアクセス可能とする。
 
-<p><img alt="" src="webextension-anatomy.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+![](webextension-anatomy.png)
 
-<p>詳細は <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> のリファレンスを参照してください。</p>
+詳細は [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) のリファレンスを参照してください。
 
-<p>マニフェストに載っているものの他に、拡張機能はサポートするファイルの<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">拡張機能ページ</a>を持つことができます。</p>
+マニフェストに載っているものの他に、拡張機能はサポートするファイルの[拡張機能ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)を持つことができます。
 
-<h2 id="Background_scripts">バックグラウンドスクリプト</h2>
+## バックグラウンドスクリプト
 
-<p>拡張機能には、特定のウェブページやブラウザーウィンドウの寿命とは無関係に、長期的な状態を維持したり、長期的な処理を実行したりする必要があることがよくあります。そのためのものがバックグラウンドスクリプトです。</p>
+拡張機能には、特定のウェブページやブラウザーウィンドウの寿命とは無関係に、長期的な状態を維持したり、長期的な処理を実行したりする必要があることがよくあります。そのためのものがバックグラウンドスクリプトです。
 
-<p>バックグラウンドスクリプトは拡張機能が読み込まれると同時にロードされ、拡張機能が無効にされるかアンインストールされるまでロードされた状態を維持します。あらかじめ要求された必要な<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>の限りにおいて、スクリプト中で <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API">WebExtention API</a> を使うことができます。</p>
+バックグラウンドスクリプトは拡張機能が読み込まれると同時にロードされ、拡張機能が無効にされるかアンインストールされるまでロードされた状態を維持します。あらかじめ要求された必要な[パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)の限りにおいて、スクリプト中で [WebExtention API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) を使うことができます。
 
-<h3 id="Specifying_background_scripts">バックグラウンドスクリプトを定義する</h3>
+### バックグラウンドスクリプトを定義する
 
-<p><code>manifest.json</code> の中に <code>"background"</code> キーを用いることでバックグラウンドスクリプトをインクルードできます。</p>
+`manifest.json` の中に `"background"` キーを用いることでバックグラウンドスクリプトをインクルードできます。
 
-<pre class="brush: json">// manifest.json
+```json
+// manifest.json
 
 "background": {
   "scripts": ["background-script.js"]
-}</pre>
+}
+```
 
-<p>複数のバックグラウンドスクリプトを指定することもできます。その場合は、 1 つのウェブページに複数のスクリプトが読み込まれた場合と同じように、同じコンテキストで実行されます。</p>
+複数のバックグラウンドスクリプトを指定することもできます。その場合は、 1 つのウェブページに複数のスクリプトが読み込まれた場合と同じように、同じコンテキストで実行されます。
 
-<p>バックグラウンドスクリプトを指定する代わりに、ES6 モジュールをサポートするバックグラウンドページを指定することもできます。</p>
+バックグラウンドスクリプトを指定する代わりに、ES6 モジュールをサポートするバックグラウンドページを指定することもできます。
 
-<dl>
- <dt><strong>manifest.json</strong></dt>
- <dd>
- <pre class="brush: json">// manifest.json
+- **manifest.json**
 
-"background": {
-  "page": "background-page.html"
-}</pre>
- </dd>
- <dt><strong>background-page.html</strong></dt>
- <dd>
- <pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-&lt;/html&gt;</pre>
- </dd>
-</dl>
+  - :&#x20;
 
-<h3 id="Background_script_environment">バックグラウンドスクリプトの実行環境</h3>
+    ```json
+    // manifest.json
 
-<h4 id="DOM_APIs">DOM API</h4>
+    "background": {
+      "page": "background-page.html"
+    }
+    ```
 
-<p>バックグラウンドスクリプトは、バックグラウンドページと呼ばれる特殊なページのコンテキストで実行されます。ここでは <code><a href="/ja/docs/Web/API/Window">window</a></code> というグローバルオブジェクトが利用でき、そのオブジェクトによってすべての DOM API 標準が利用できます。</p>
+- **background-page.html**
 
-<div class="notecard warning">
-<p>Firefoxでは、バックグラウンドページでは<code><a href="/ja/docs/Web/API/Window/alert">alert()</a></code>、<code><a href="/ja/docs/Web/API/Window/confirm">confirm()</a></code>、<code><a href="/ja/docs/Web/API/Window/prompt">prompt()</a></code>の使用はサポートされません。</p>
-</div>
+  - :&#x20;
 
-<h4 id="WebExtension_APIs">WebExtension API</h4>
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <script type="module" src="background-script.js"></script>
+      </head>
+    </html>
+    ```
 
-<p>バックグラウンドスクリプトは、その拡張機能が持つ<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>の範囲で <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a> にアクセスできます。</p>
+### バックグラウンドスクリプトの実行環境
 
-<h4 id="Cross-origin_access">オリジン間アクセス</h4>
+#### DOM API
 
-<p>バックグラウンドスクリプトは、拡張機能が持つ <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host パーミッション</a>に一致するホストに XHR リクエストを送信することができます。</p>
+バックグラウンドスクリプトは、バックグラウンドページと呼ばれる特殊なページのコンテキストで実行されます。ここでは [`window`](/ja/docs/Web/API/Window) というグローバルオブジェクトが利用でき、そのオブジェクトによってすべての DOM API 標準が利用できます。
 
-<h4 id="Web_content">ウェブコンテンツ</h4>
+> **Warning:** Firefox では、バックグラウンドページでは[`alert()`](/ja/docs/Web/API/Window/alert)、[`confirm()`](/ja/docs/Web/API/Window/confirm)、[`prompt()`](/ja/docs/Web/API/Window/prompt)の使用はサポートされません。
 
-<p>バックグラウンドスクリプトからウェブページに直接アクセスすることができません。しかし、ウェブページに<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a>を読み込ませれば、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">メッセージを渡す API を使ってコンテンツスクリプトと通信</a>をすることができます。</p>
+#### WebExtension API
 
-<h4 id="Content_security_policy">コンテンツセキュリティポリシー</h4>
+バックグラウンドスクリプトは、その拡張機能が持つ[パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)の範囲で [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) にアクセスできます。
 
-<p>バックグラウンドスクリプトは Content Security Policy による制約を受けており、 <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> のように危険な処理は実行できません。</p>
+#### オリジン間アクセス
 
-<p>詳細は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> を参照してください。</p>
+バックグラウンドスクリプトは、拡張機能が持つ [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)に一致するホストに XHR リクエストを送信することができます。
 
-<h2 id="Sidebars_popups_options_pages">サイドバー、ポップアップ、オプションページ</h2>
+#### ウェブコンテンツ
 
-<p>拡張機能には HTML 文書で中身を決めたいろいろなユーザーインターフェイスコンポーネントを入れる事ができます。</p>
+バックグラウンドスクリプトからウェブページに直接アクセスすることができません。しかし、ウェブページに[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)を読み込ませれば、[メッセージを渡す API を使ってコンテンツスクリプトと通信](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts)をすることができます。
 
-<dl>
- <dt><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">サイドバー</a></dt>
- <dd>ブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。</dd>
- <dt><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">ポップアップ</a></dt>
- <dd>ユーザーが<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">ツールバーボタン</a>や<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">アドレスバーボタン</a>をクリックした時に表示されるダイアログです。</dd>
- <dt><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">オプションページ</a></dt>
- <dd>ユーザーがブラウザーネイティブのアドオンマネージャー内でアドオン設定にアクセスする時に表示するページです。</dd>
-</ul>
+#### コンテンツセキュリティポリシー
 
-<p>各コンポーネント用に、HTML ファイルと、それを指定する <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> の特定プロパティを作成します。HTML ファイルには、通常のウェブページと同様に、CSS と JavaScript ファイルを入れる事ができます。</p>
+バックグラウンドスクリプトは Content Security Policy による制約を受けており、 [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のように危険な処理は実行できません。
 
-<p>これらのすべては<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">拡張機能ページ</a>の一種で、通常のウェブページと異なり、JavaScript はバックグラウンドスクリプトと同じ権限で WebExtension API を使用できます。</p>
+詳細は [Content Security Policy](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) を参照してください。
 
-<h2 id="Extension_pages">拡張機能ページ</h2>
+## サイドバー、ポップアップ、オプションページ
 
-<p>拡張機能に事前定義された UI コンポーネントに属さない HTML 文書を入れることもできます。サイドバー、ポップアップ、オプションページに提供されるドキュメントと違って、これは <code>manifest.json</code> 内にエントリーがないです。しかし、バックグラウンドスクリプトと同様に権限のある WebExtension API のすべてにアクセスできます。</p>
+拡張機能には HTML 文書で中身を決めたいろいろなユーザーインターフェイスコンポーネントを入れる事ができます。
 
-<p>典型的には {{WebExtAPIRef("windows.create()")}} か {{WebExtAPIRef("tabs.create()")}} を使ってページを読み込みます。</p>
+- [サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
+  - : ブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。
+- [ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+  - : ユーザーが[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)や[アドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)をクリックした時に表示されるダイアログです。
+- [オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+  - : ユーザーがブラウザーネイティブのアドオンマネージャー内でアドオン設定にアクセスする時に表示するページです。
 
-<p>詳しくは<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">拡張機能ページ</a>を見てください。</p>
+各コンポーネント用に、HTML ファイルと、それを指定する [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) の特定プロパティを作成します。HTML ファイルには、通常のウェブページと同様に、CSS と JavaScript ファイルを入れる事ができます。
 
-<h2 id="Content_scripts">コンテンツスクリプト</h2>
+これらのすべては[拡張機能ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)の一種で、通常のウェブページと異なり、JavaScript はバックグラウンドスクリプトと同じ権限で WebExtension API を使用できます。
 
-<p>ウェブページにアクセスして操作するにはコンテンツスクリプトが用いられます。コンテンツスクリプトは ウェブページに読み込まれて実行されます。</p>
+## 拡張機能ページ
 
-<p>コンテンツスクリプトはアドオンが提供するスクリプトであり、ウェブページのコンテキスト内で動作します。このため、{{HTMLElement("script")}} 要素で取得されたものなど、そのページ自身が読み込んだスクリプトとは異なります。</p>
+拡張機能に事前定義された UI コンポーネントに属さない HTML 文書を入れることもできます。サイドバー、ポップアップ、オプションページに提供されるドキュメントと違って、これは `manifest.json` 内にエントリーがないです。しかし、バックグラウンドスクリプトと同様に権限のある WebExtension API のすべてにアクセスできます。
 
-<p>ウェブページに読み込まれた通常のスクリプトと同様に、コンテンツスクリプトも ウェブページの DOM へアクセスできます。</p>
+典型的には {{WebExtAPIRef("windows.create()")}} か {{WebExtAPIRef("tabs.create()")}} を使ってページを読み込みます。
 
-<p>通常のスクリプトと異なるのは、コンテンツスクリプトで以下のことが可能な点です。</p>
+詳しくは[拡張機能ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)を見てください。
 
-<ul>
- <li>クロスドメインの XHR リクエストを作成できる</li>
- <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a> の小さなサブセットを利用できる</li>
- <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">バックグラウンドスクリプトとメッセージの交換ができ</a>、この方法ですべての WebExtension API に間接的にアクセスできる</li>
-</ul>
+## コンテンツスクリプト
 
-<p>コンテンツスクリプトから通常のスクリプトに直接アクセスすることはできませんが、標準化されている <code><a href="/ja/docs/Web/API/Window/postMessage">window.postMessage()</a></code> API を用いれば、スクリプト間でメッセージを交換することが可能です。</p>
+ウェブページにアクセスして操作するにはコンテンツスクリプトが用いられます。コンテンツスクリプトは ウェブページに読み込まれて実行されます。
 
-<p>ここでの議論対象であるコンテンツスクリプトとは基本的に JavaScript のことを指していますが、先ほどと同じ方法で ウェブページに CSS を差し込むこともできます。</p>
+コンテンツスクリプトはアドオンが提供するスクリプトであり、ウェブページのコンテキスト内で動作します。このため、{{HTMLElement("script")}} 要素で取得されたものなど、そのページ自身が読み込んだスクリプトとは異なります。
 
-<p>詳しくは <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a>の記事を参照してください。</p>
+ウェブページに読み込まれた通常のスクリプトと同様に、コンテンツスクリプトも ウェブページの DOM へアクセスできます。
 
-<h2 id="Web_accessible_resources">Web accessible resources</h2>
+通常のスクリプトと異なるのは、コンテンツスクリプトで以下のことが可能な点です。
 
-<p>Web accessible resources とは、拡張機能にインクルードしてコンテンツスクリプトや ウェブページのスクリプトからアクセスできるリソースのことであり、代表的なものは画像や HTML / CSS / JavaScript です。web-accessible なリソースは、特殊な URI スキームを介して ウェブページのスクリプトやコンテンツスクリプトから参照できます。</p>
+- クロスドメインの XHR リクエストを作成できる
+- [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) の小さなサブセットを利用できる
+- [バックグラウンドスクリプトとメッセージの交換ができ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts)、この方法ですべての WebExtension API に間接的にアクセスできる
 
-<p>例えばコンテンツスクリプトから ウェブページ内に画像を挿入したい場合、拡張機能に画像をインクルードして web-accessible とし、画像を <code>src</code> 属性で参照する <code><a href="/ja/docs/Web/HTML/Element/img">img</a></code> タグをコンテンツスクリプトが作成して ウェブページに追加する、といったシナリオが考えられます。</p>
+コンテンツスクリプトから通常のスクリプトに直接アクセスすることはできませんが、標準化されている [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) API を用いれば、スクリプト間でメッセージを交換することが可能です。
 
-<p>詳細は、 <code>manifest.json</code> のキーである <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> のドキュメントを見てください。</p>
+ここでの議論対象であるコンテンツスクリプトとは基本的に JavaScript のことを指していますが、先ほどと同じ方法で ウェブページに CSS を差し込むこともできます。
+
+詳しくは [コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)の記事を参照してください。
+
+## Web accessible resources
+
+Web accessible resources とは、拡張機能にインクルードしてコンテンツスクリプトや ウェブページのスクリプトからアクセスできるリソースのことであり、代表的なものは画像や HTML / CSS / JavaScript です。web-accessible なリソースは、特殊な URI スキームを介して ウェブページのスクリプトやコンテンツスクリプトから参照できます。
+
+例えばコンテンツスクリプトから ウェブページ内に画像を挿入したい場合、拡張機能に画像をインクルードして web-accessible とし、画像を `src` 属性で参照する [`img`](/ja/docs/Web/HTML/Element/img) タグをコンテンツスクリプトが作成して ウェブページに追加する、といったシナリオが考えられます。
+
+詳細は、 `manifest.json` のキーである [web_accessible_resources](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) のドキュメントを見てください。

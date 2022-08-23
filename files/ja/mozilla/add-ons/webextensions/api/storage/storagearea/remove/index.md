@@ -14,41 +14,41 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>1つ以上のアイテムをストレージ領域から削除します。</p>
+1 つ以上のアイテムをストレージ領域から削除します。
 
-<p>この関数は <code style="font-size: 16px !important; line-height: 24px !important;"><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="font-size: 16px !important; line-height: 24px !important;">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox brush:js">let removingItem = browser.storage.&lt;storageType&gt;.remove(
+```js
+let removingItem = browser.storage.<storageType>.remove(
   keys             // string, or array of strings
 )
-</pre>
+```
 
-<p><code>&lt;storageType&gt;</code> は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。</p>
+`<storageType>` は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>削除したいアイテムのキー(文字列または文字列の配列)を指定します。</dd>
-</dl>
+- `keys`
+  - : 削除したいアイテムのキー(文字列または文字列の配列)を指定します。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>成功時は引数の無い <code style="font-size: 16px !important; line-height: 24px !important;"><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="font-size: 16px !important; line-height: 24px !important;">Promise</a></code> を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。</p>
+成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.storage.StorageArea.remove")}}</p>
+{{Compat("webextensions.api.storage.StorageArea.remove")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>1つのアイテムを削除する例です。</p>
+1 つのアイテムを削除する例です。
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("OK");
 }
 
@@ -58,13 +58,8 @@ function onError(e) {
 
 let removeKitten = browser.storage.remove("kitten");
 removeKitten.then(onRemoved, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> APIに基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。

@@ -13,61 +13,54 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.create()</code></strong> は、<code>parentId</code> で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダを作成するメソッドです。フォルダを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} の引数を省略するか空にします。</p>
+**`bookmarks.create()`** は、`parentId` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダを作成するメソッドです。フォルダを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} の引数を省略するか空にします。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">browser.bookmarks.create(
+```js
+browser.bookmarks.create(
   bookmark, // CreateDetails
   callback  // 関数（省略可）
 )
-</pre>
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>bookmark</code></dt>
- <dd>{{WebExtAPIRef('bookmarks.CreateDetails')}}</dd>
- <dt><code>callback</code>{{optional_inline}}</dt>
- <dd>ブックマークが新しく作成された際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>result</code></dt>
-  <dd>新しく作成されたブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}</dd>
- </dl>
- </dd>
-</dl>
+- `bookmark`
+  - : {{WebExtAPIRef('bookmarks.CreateDetails')}}
+- `callback`{{optional_inline}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+  - : ブックマークが新しく作成された際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。
 
-<p>{{Compat("webextensions.api.bookmarks.create")}}</p>
+    - `result`
+      - : 新しく作成されたブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}
 
-<h2 id="使用例">使用例</h2>
+## ブラウザ実装状況
 
-<p>以下の例は、このページのブックマークをデフォルトのフォルダ（Firefox は「未分類のブックマーク」、Chrome は「その他のブックマーク」）に作成するものです。</p>
+{{Compat("webextensions.api.bookmarks.create")}}
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onBookmarkAdded</span><span class="punctuation token">(</span>bookmarkItem<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Bookmark added with ID: "</span> <span class="operator token">+</span> bookmarkItem<span class="punctuation token">.</span>id<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+## 使用例
 
-chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  title<span class="punctuation token">:</span> <span class="string token">"bookmarks.create() on MDN"</span><span class="punctuation token">,</span>
-  url<span class="punctuation token">:</span> <span class="string token">"https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> onBookmarkAdded<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+以下の例は、このページのブックマークをデフォルトのフォルダ（Firefox は「未分類のブックマーク」、Chrome は「その他のブックマーク」）に作成するものです。
 
-<p>{{WebExtExamples}}</p>
+```js
+function onBookmarkAdded(bookmarkItem) {
+  console.log("Bookmark added with ID: " + bookmarkItem.id);
+}
 
-<div class="note"><strong>謝辞</strong>
+chrome.bookmarks.create({
+  title: "bookmarks.create() on MDN",
+  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
+}, onBookmarkAdded);
+```
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/bookmarks#method-create"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードに基づいています。</p>
+{{WebExtExamples}}
 
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-create) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +88,3 @@ chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation 
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

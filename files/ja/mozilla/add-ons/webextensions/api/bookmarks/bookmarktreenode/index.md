@@ -13,54 +13,44 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><code>bookmarks.BookmarkTreeNode</code> 型のオブジェクトは、ブックマークツリー上のノード（ブックマーク / フォルダ）を表現するものです。子ノードは親フォルダの中で <code>index</code> に従って順序付けされます。</p>
+`bookmarks.BookmarkTreeNode` 型のオブジェクトは、ブックマークツリー上のノード（ブックマーク / フォルダ）を表現するものです。子ノードは親フォルダの中で `index` に従って順序付けされます。
 
-<h2 id="値の型">値の型</h2>
+## 値の型
 
-<p>以下のプロパティを含む {{jsxref("object")}} です。</p>
+以下のプロパティを含む {{jsxref("object")}} です。
 
-<dl class="reference-values">
- <dt><code>id</code></dt>
- <dd>そのノードを一意に識別する {{jsxref("string")}} です。この ID はユーザのプロファイル内で固有であり、ブラウザを再起動した後も有効です。</dd>
- <dt><code>parentId </code>{{optional_inline}}</dt>
- <dd>親フォルダの ID を表す {{jsxref("string")}} です。ルートノードの場合は省略されます。</dd>
- <dt><code>index </code>{{optional_inline}}</dt>
- <dd>親フォルダの中におけるノードの位置を表す 0 以上の {{jsxref("number")}} です。0 は先頭の要素を意味します。</dd>
- <dt><code>url </code>{{optional_inline}}</dt>
- <dd>ブックマークの URL を表す {{jsxref("string")}} です。フォルダの場合は省略されます。</dd>
- <dt><code>title</code></dt>
- <dd>ブックマークリストやメニューにノードが表示される際のテキストを表す {{jsxref("string")}} です。</dd>
- <dt><code>dateAdded</code> {{optional_inline}}</dt>
- <dd>このノードが生成された時刻を <a href="https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93">1970 年 1 月 1 日からの経過ミリ秒</a> で表す {{jsxref("number")}} です。</dd>
- <dt><code>dateGroupModified</code> {{optional_inline}}</dt>
- <dd>その内容の最終変更時刻を <a href="https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93">1970 年 1 月 1 日からの経過ミリ秒</a> で表す {{jsxref("number")}} です。</dd>
- <dt><code>unmodifiable</code> {{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}} 型で表現される {{jsxref("string")}} です。このノードが変更不可である理由を表します。変更可能な場合には省略されます。</dd>
- <dt><code>children</code> {{optional_inline}}</dt>
- <dd>各要素がノードの子要素を表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。リストの要素は UI に表示されているのと同じ順序で並びます。フォルダ以外の場合は省略されます。</dd>
-</dl>
+- `id`
+  - : そのノードを一意に識別する {{jsxref("string")}} です。この ID はユーザのプロファイル内で固有であり、ブラウザを再起動した後も有効です。
+- `parentId `{{optional_inline}}
+  - : 親フォルダの ID を表す {{jsxref("string")}} です。ルートノードの場合は省略されます。
+- `index `{{optional_inline}}
+  - : 親フォルダの中におけるノードの位置を表す 0 以上の {{jsxref("number")}} です。0 は先頭の要素を意味します。
+- `url `{{optional_inline}}
+  - : ブックマークの URL を表す {{jsxref("string")}} です。フォルダの場合は省略されます。
+- `title`
+  - : ブックマークリストやメニューにノードが表示される際のテキストを表す {{jsxref("string")}} です。
+- `dateAdded` {{optional_inline}}
+  - : このノードが生成された時刻を [1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93) で表す {{jsxref("number")}} です。
+- `dateGroupModified` {{optional_inline}}
+  - : その内容の最終変更時刻を [1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93) で表す {{jsxref("number")}} です。
+- `unmodifiable` {{optional_inline}}
+  - : {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}} 型で表現される {{jsxref("string")}} です。このノードが変更不可である理由を表します。変更可能な場合には省略されます。
+- `children` {{optional_inline}}
+  - : 各要素がノードの子要素を表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。リストの要素は UI に表示されているのと同じ順序で並びます。フォルダ以外の場合は省略されます。
 
-<div class="note">
-<p>現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。</p>
-</div>
+> **Note:** 現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.bookmarks.BookmarkTreeNode", 10)}}</p>
+{{Compat("webextensions.api.bookmarks.BookmarkTreeNode", 10)}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/bookmarks#method-update"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードから作成されています。</p>
-
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,4 +78,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

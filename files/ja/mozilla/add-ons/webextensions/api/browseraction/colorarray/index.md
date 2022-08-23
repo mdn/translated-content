@@ -3,38 +3,28 @@ title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<h2 id="型">型</h2>
+## 型
 
-<p>RGBA色を定義する、4つの0から255の整数の<code>配列</code>です。4つの値は以下のチャネルを指定します:</p>
+RGBA 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 つの値は以下のチャネルを指定します:
 
-<ol>
- <li>赤(Red)</li>
- <li>緑(Green)</li>
- <li>青(Blue)</li>
- <li>アルファ(Alpha) (不透明度)</li>
-</ol>
+1.  赤(Red)
+2.  緑(Green)
+3.  青(Blue)
+4.  アルファ(Alpha) (不透明度)
 
-<p>たとえば、不透明な赤は<code>[255, 0, 0, 255]</code>です。</p>
+たとえば、不透明な赤は`[255, 0, 0, 255]`です。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("webextensions.api.browserAction.ColorArray")}}</p>
+{{Compat("webextensions.api.browserAction.ColorArray")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#type-ColorArray) API に基づいています。このドキュメントは Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
-<p>このAPIはChromiumの<a href="https://developer.chrome.com/extensions/browserAction#type-ColorArray"><code>chrome.browserAction</code></a> APIに基づいています。このドキュメントはChromiumコードの <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a>から派生したものです。</p>
-
-<p> </p>
-
-<p>Microsoft Edgeの互換性データはMicrosoft Corporationから提供されており、Creative Commons Attribution 3.0 United States Licenseのもとにここに含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -62,4 +52,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

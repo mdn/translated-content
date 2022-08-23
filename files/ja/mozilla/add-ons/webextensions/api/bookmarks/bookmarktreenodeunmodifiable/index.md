@@ -13,35 +13,23 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.BookmarkTreeNodeUnmodifiable</code></strong> 型は、ブックマークツリー上のノード（ブックマーク / フォルダー）が変更不可な理由を表すものです。この型は、ブックマークノードの {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} プロパティで使用されます。</p>
+**`bookmarks.BookmarkTreeNodeUnmodifiable`** 型は、ブックマークツリー上のノード（ブックマーク / フォルダー）が変更不可な理由を表すものです。この型は、ブックマークノードの {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} プロパティで使用されます。
 
-<h2 id="Type" name="Type">値の型</h2>
+## 値の型
 
-<p>この値は {{jsxref("string")}} 型であり、現在取りうる値は <code>"managed"</code> のみです。すなわち、システム管理者（ペアレンタルコントロールが有効な場合は保護者）がこのブックマークノードを設定したことを意味します。</p>
+この値は {{jsxref("string")}} 型であり、現在取りうる値は `"managed"` のみです。すなわち、システム管理者（ペアレンタルコントロールが有効な場合は保護者）がこのブックマークノードを設定したことを意味します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div class="hidden">
-<p>NEEDFIX: "WebExtBrowserCompat" マクロでエラーがでているため確認と修正が必要</p>
+{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeUnmodifiable")}}
 
-<p>NEEDFIX: "WebExtExamples" マクロでエラーがでているため確認と修正が必要</p>
-</div>
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeUnmodifiable")}}</p>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a class="external external-icon" href="https://developer.chrome.com/extensions/bookmarks#method-update" rel="noopener"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a class="external external-icon" href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json" rel="noopener"><code>bookmarks.json</code></a> における Chromium のコードから作成されています。</p>
-
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,4 +57,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmo
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

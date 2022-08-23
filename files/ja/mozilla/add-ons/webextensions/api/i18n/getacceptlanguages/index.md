@@ -13,53 +13,47 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>ブラウザーの <a href="/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header">accept-languages</a> を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。</p>
+ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
 
-<p>これは、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
-</pre>
+```js
+var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>{{WebExtAPIRef('i18n.LanguageCode')}}</code> オブジェクトの <code>配列</code> で処理が完了した <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>。</p>
+`{{WebExtAPIRef('i18n.LanguageCode')}}` オブジェクトの `配列` で処理が完了した [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
-<p>{{Compat("webextensions.api.i18n.getAcceptLanguages")}}</p>
+{{Compat("webextensions.api.i18n.getAcceptLanguages")}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">function onGot(languages) {
+```js
+function onGot(languages) {
   console.log(languages);
   //e.g. Array [ "en-US", "en" ]
 }
 
 var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 gettingAcceptLanguages.then(onGot);
-</pre>
+```
 
-<p> </p>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note:** **謝辞**この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getAcceptLanguages) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は、Chromium の <a href="https://developer.chrome.com/extensions/i18n#method-getAcceptLanguages"><code>chrome.i18n</code></a> API を基にしています。このドキュメンテーションは、Chromium コード内の <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> に由来しています。</p>
-
-<p>Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,4 +81,3 @@ gettingAcceptLanguages.then(onGot);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

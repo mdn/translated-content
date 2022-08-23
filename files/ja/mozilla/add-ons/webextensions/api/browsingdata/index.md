@@ -11,91 +11,69 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。
 
-<div>拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。</div>
+`browsingData` API では、閲覧データは下記の型に分けられます。
 
-<p><code>browsingData</code> API では、閲覧データは下記の型に分けられます。</p>
+- browser cache (ブラウザーキャッシュ)
+- cookies
+- downloads (ダウンロードデータ)
+- history (履歴)
+- local storage (ローカルストレージ)
+- plugin data (プラグインのデータ)
+- saved form data (保存したフォームデータ)
+- saved passwords (保存したパスワード)
 
-<ul>
-	<li>browser cache (ブラウザーキャッシュ)</li>
-	<li>cookies</li>
-	<li>downloads (ダウンロードデータ)</li>
-	<li>history (履歴)</li>
-	<li>local storage (ローカルストレージ)</li>
-	<li>plugin data (プラグインのデータ)</li>
-	<li>saved form data (保存したフォームデータ)</li>
-	<li>saved passwords (保存したパスワード)</li>
-</ul>
+これらの型の組み合わせを削除するのに {{WebExtAPIRef("browsingData.remove()")}} 関数を使用できます。それぞれのデータ型を削除する専用関数もあり、例えば {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} などです。
 
-<p>これらの型の組み合わせを削除するのに {{WebExtAPIRef("browsingData.remove()")}} 関数を使用できます。それぞれのデータ型を削除する専用関数もあり、例えば {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} などです。</p>
+すべての `browsingData.remove[X]()` 関数は {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクトを取って、これをデータ削除のその他 2 つの側面を管理するのに使うことができます:
 
-<p>すべての <code>browsingData.remove[X]()</code> 関数は {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクトを取って、これをデータ削除のその他2つの側面を管理するのに使うことができます:</p>
+- データ削除を過去どれだけ遡れるのか
+- 通常のウェブページか、ホストされたウェブアプリも含めてデータ削除するのかのいずれか。このオプションは Firefox ではまだサポートされていないことに注意してください。
 
-<ul>
-	<li>データ削除を過去どれだけ遡れるのか</li>
-	<li>通常のウェブページか、ホストされたウェブアプリも含めてデータ削除するのかのいずれか。このオプションは Firefox ではまだサポートされていないことに注意してください。</li>
-</ul>
+最後に、この API の {{WebExtAPIRef("browsingData.settings()")}} 関数で、ブラウザー組み込みの「履歴消去」機能の現在の設定値を取得できます。
 
-<p>最後に、この API の {{WebExtAPIRef("browsingData.settings()")}} 関数で、ブラウザー組み込みの「履歴消去」機能の現在の設定値を取得できます。</p>
+この API を使うには、"browsingData" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
-<p>この API を使うには、"browsingData" の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API パーミッション</a>が必要です。</p>
+## 型
 
-<h2 id="Types">型</h2>
+- {{WebExtAPIRef("browsingData.DataTypeSet")}}
+  - : 削除データの型を指定するオブジェクト。例えば、history, downloads, passwords, など
+- {{WebExtAPIRef("browsingData.RemovalOptions")}}
+  - : データ削除するのにどれくらい以前に遡るのか、通常のウェブ閲覧/ホスト型アプリ/アドオンのどのデータを削除するのかを指定するオブジェクト。
 
-<dl>
-	<dt>{{WebExtAPIRef("browsingData.DataTypeSet")}}</dt>
-	<dd>削除データの型を指定するオブジェクト。例えば、history, downloads, passwords, など</dd>
-	<dt>{{WebExtAPIRef("browsingData.RemovalOptions")}}</dt>
-	<dd>データ削除するのにどれくらい以前に遡るのか、通常のウェブ閲覧/ホスト型アプリ/アドオンのどのデータを削除するのかを指定するオブジェクト。</dd>
-</dl>
+## メソッド
 
-<h2 id="Methods">メソッド</h2>
+- {{WebExtAPIRef("browsingData.remove()")}}
+  - : 指定された型の閲覧データを削除する
+- {{WebExtAPIRef("browsingData.removeCache()")}}
+  - : ブラウザーキャッシュを消去する
+- {{WebExtAPIRef("browsingData.removeCookies()")}}
+  - : cookies を削除する
+- {{WebExtAPIRef("browsingData.removeDownloads()")}}
+  - : ダウンロード済みのファイルを削除する
+- {{WebExtAPIRef("browsingData.removeFormData()")}}
+  - : 保存されたフォームデータを消去する
+- {{WebExtAPIRef("browsingData.removeHistory()")}}
+  - : ブラウザー履歴を消去する
+- {{WebExtAPIRef("browsingData.removeLocalStorage()")}}
+  - : ウェブサイトが作成した [local storage](/ja/docs/Web/API/Window/localStorage) を消去する
+- {{WebExtAPIRef("browsingData.removePasswords()")}}
+  - : パスワードを消去する
+- {{WebExtAPIRef("browsingData.removePluginData()")}}
+  - : プラグインに関連するデータを消去する
+- {{WebExtAPIRef("browsingData.settings()")}}
+  - : ブラウザーの「履歴消去」機能の現在の設定値を得る
 
-<dl>
-	<dt>{{WebExtAPIRef("browsingData.remove()")}}</dt>
-	<dd>指定された型の閲覧データを削除する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeCache()")}}</dt>
-	<dd>ブラウザーキャッシュを消去する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeCookies()")}}</dt>
-	<dd>cookies を削除する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeDownloads()")}}</dt>
-	<dd>ダウンロード済みのファイルを削除する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeFormData()")}}</dt>
-	<dd>保存されたフォームデータを消去する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeHistory()")}}</dt>
-	<dd>ブラウザー履歴を消去する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeLocalStorage()")}}</dt>
-	<dd>ウェブサイトが作成した <a href="/ja/docs/Web/API/Window/localStorage">local storage</a> を消去する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removePasswords()")}}</dt>
-	<dd>パスワードを消去する</dd>
-	<dt>{{WebExtAPIRef("browsingData.removePluginData()")}}</dt>
-	<dd>プラグインに関連するデータを消去する</dd>
-	<dt>{{WebExtAPIRef("browsingData.settings()")}}</dt>
-	<dd>ブラウザーの「履歴消去」機能の現在の設定値を得る</dd>
-</dl>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat("webextensions.api.browsingData", 2)}}
 
-<p>{{Compat("webextensions.api.browsingData", 2)}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="hidden note">
-<p>"Chrome の非互換性" 部分は <a href="/ja/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> マクロを使って <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/ja/Add-ons/WebExtensions/Chrome_incompatibilities</a> からインクルードされています。</p>
+> **Note:** **謝辞**この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>このコンテンツを更新するには、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/ja/Add-ons/WebExtensions/Chrome_incompatibilities</a> を編集して、ページを shift+再読みして変更を確認します。</p>
-</div>
-
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API に基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,4 +101,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

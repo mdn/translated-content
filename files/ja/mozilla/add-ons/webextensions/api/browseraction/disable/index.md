@@ -3,58 +3,54 @@ title: browserAction.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>タブに対してブラウザアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。</p>
+タブに対してブラウザアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。
 
-<h2 id="書式">書式</h2>
+## 書式
 
-<pre class="syntaxbox brush:js">browser.browserAction.disable(
+```js
+browser.browserAction.disable(
   tabId // optional integer
 )
-</pre>
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. ブラウザアクションを無効にしたいタブのIDです。</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. ブラウザアクションを無効にしたいタブの ID です。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("webextensions.api.browserAction.disable")}}</p>
+{{Compat("webextensions.api.browserAction.disable")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>クリックされたときブラウザアクションを無効にし、新しいタブが開かれる毎回再度有効にします:</p>
+クリックされたときブラウザアクションを無効にし、新しいタブが開かれる毎回再度有効にします:
 
-<pre class="brush: js">browser.tabs.onCreated.addListener(() =&gt; {
+```js
+browser.tabs.onCreated.addListener(() => {
   browser.browserAction.enable();
 });
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.browserAction.disable();
 });
-</pre>
+```
 
-<p>アクティブなタブにだけブラウザアクションを無効にします:</p>
+アクティブなタブにだけブラウザアクションを無効にします:
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+```js
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.disable(tab.id);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-disable) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-disable"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,4 +78,3 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

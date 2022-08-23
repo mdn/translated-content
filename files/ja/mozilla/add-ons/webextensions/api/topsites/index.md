@@ -12,43 +12,33 @@ tags:
   - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>topSites API を使うと、ユーザーがよく訪れるページをを含む配列を取得できます。</p>
+topSites API を使うと、ユーザーがよく訪れるページをを含む配列を取得できます。
 
-<p>ブラウザーはユーザーがこれらの場所に簡単に戻れるようにこれを維持します。Firefoxでは既定で「新しいタブ」ページには最もよく訪れるページのリストが提供されます。</p>
+ブラウザーはユーザーがこれらの場所に簡単に戻れるようにこれを維持します。Firefox では既定で「新しいタブ」ページには最もよく訪れるページのリストが提供されます。
 
-<p>topSites API を使うには "topSites" の <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API パーミッション</a>必要です。</p>
+topSites API を使うには "topSites" の [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)必要です。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("topSites.MostVisitedURL")}}</dt>
- <dd>ウェブサイトのタイトルと URLを含むオブジェクト。</dd>
-</dl>
+- {{WebExtAPIRef("topSites.MostVisitedURL")}}
+  - : ウェブサイトのタイトルと URL を含むオブジェクト。
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("topSites.get()")}}</dt>
- <dd>ブラウザーの「新しいタブ」ページに載っているすべてのサイトの配列を取得します。ここで返されるサイトの数はブラウザー固有であり、返されるサイトは、ブラウザー履歴に基づいてユーザー固有であることに注意してください。</dd>
-</dl>
+- {{WebExtAPIRef("topSites.get()")}}
+  - : ブラウザーの「新しいタブ」ページに載っているすべてのサイトの配列を取得します。ここで返されるサイトの数はブラウザー固有であり、返されるサイトは、ブラウザー履歴に基づいてユーザー固有であることに注意してください。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.topSites")}}</p>
+{{Compat("webextensions.api.topSites")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/extensions/topSites) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,4 +66,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

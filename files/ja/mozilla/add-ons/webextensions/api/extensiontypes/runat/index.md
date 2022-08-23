@@ -13,37 +13,29 @@ tags:
   - extensionTypes
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>JavaScript や CSS がどの時点でタブに挿入されるか。</p>
+JavaScript や CSS がどの時点でタブに挿入されるか。
 
-<h2 id="型">型</h2>
+## 型
 
-<p>この型の値は文字列です。とりうる値は、<code>"document_start"</code>, <code>"document_end"</code>, <code>"document_idle"</code> です。</p>
+この型の値は文字列です。とりうる値は、`"document_start"`, `"document_end"`, `"document_idle"` です。
 
-<ul>
- <li><code>"document_start"</code>: <code>loading</code> に対応します。DOM はまだ読み込み中の状態です。</li>
- <li><code>"document_end"</code>: <code>interactive</code> に対応します。DOM の読み込みは終わりましたが、スクリプトや画像といったリソースはまだ読み込み中です。</li>
- <li><code>"document_idle"</code>: <code>complete</code> に対応します。ドキュメントとその全てのリソースの読み込みが完了しました。</li>
-</ul>
+- `"document_start"`: `loading` に対応します。DOM はまだ読み込み中の状態です。
+- `"document_end"`: `interactive` に対応します。DOM の読み込みは終わりましたが、スクリプトや画像といったリソースはまだ読み込み中です。
+- `"document_idle"`: `complete` に対応します。ドキュメントとその全てのリソースの読み込みが完了しました。
 
-<p>デフォルトの値は <code>"document_idle"</code> です。</p>
+デフォルトの値は `"document_idle"` です。
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.extensionTypes.RunAt")}}</p>
+{{Compat("webextensions.api.extensionTypes.RunAt")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes#type-RunAt) API に基づいています。また、このドキュメントは [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/extensionTypes#type-RunAt"><code>chrome.extensionTypes</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,4 +63,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

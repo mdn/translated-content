@@ -5,105 +5,103 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="summary">
-<p>WebExtension APIs で開発される拡張機能には、既定で適用される CSP(Content Security Policy の略) があります。これは<strong><a href="/ja/docs/Web/HTML/Element/script"> </a></strong><a href="/ja/docs/Web/HTML/Element/script">&lt;script&gt;</a> と <a href="/ja/docs/Web/HTML/Element/object">&lt;object&gt;</a> リソースから読み込まれるソースを制限し、危険な行動、例えば <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> の使用を非許可にします。</p>
+WebExtension APIs で開発される拡張機能には、既定で適用される CSP(Content Security Policy の略) があります。これは**[ ](/ja/docs/Web/HTML/Element/script)**[\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースから読み込まれるソースを制限し、危険な行動、例えば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の使用を非許可にします。
 
-<p>この記事では CSP とは何かと、デフォルトポリシーとは何で拡張機能にはどんな意味があるのかと、拡張機能が既定の CSP を変更する方法を簡単に説明します。</p>
-</div>
+この記事では CSP とは何かと、デフォルトポリシーとは何で拡張機能にはどんな意味があるのかと、拡張機能が既定の CSP を変更する方法を簡単に説明します。
 
-<p><a href="/ja/docs/Web/HTTP/CSP">Content Security Policy</a> (CSP) はウェブサイトが悪意のあるコンテンツを実行するのを防ぐのに役立つメカニズムです。ウェブサイトは サーバーから送られてくる HTTP ヘッダーを使って CSP を指定します。CSP は主に、スクリプトや組み込みプラグインといったさまざまな種類のコンテンツの合法なソースを特定することに関心を持っています。例えば、ウェブサイトは、ウェブサイト自身からの JavaScript だけを実行し、他のソースは受け付けないように指定できます。CSP はブラウザーに <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>のような、潜在的に危険な行動を禁止するよう指示することもできます。</p>
+[Content Security Policy](/ja/docs/Web/HTTP/CSP) (CSP) はウェブサイトが悪意のあるコンテンツを実行するのを防ぐのに役立つメカニズムです。ウェブサイトは サーバーから送られてくる HTTP ヘッダーを使って CSP を指定します。CSP は主に、スクリプトや組み込みプラグインといったさまざまな種類のコンテンツの合法なソースを特定することに関心を持っています。例えば、ウェブサイトは、ウェブサイト自身からの JavaScript だけを実行し、他のソースは受け付けないように指定できます。CSP はブラウザーに [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)のような、潜在的に危険な行動を禁止するよう指示することもできます。
 
-<p>ウェブサイトと同様に、拡張機能はさまざまなソースからコンテンツを読み込めます。例えば、ブラウザーアクションのポップアップは HTML 文書として指定できて、通常のウェブページのようにさまざまなソースからの JavaScript と CSS を入れることができます:</p>
+ウェブサイトと同様に、拡張機能はさまざまなソースからコンテンツを読み込めます。例えば、ブラウザーアクションのポップアップは HTML 文書として指定できて、通常のウェブページのようにさまざまなソースからの JavaScript と CSS を入れることができます:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
 
-  &lt;body&gt;
+  <body>
 
-    &lt;!--Some HTML content here--&gt;
+    <!--Some HTML content here-->
 
-    &lt;!--
+    <!--
       Include a third-party script.
       See also https://developer.mozilla.org/ja/docs/Web/Security/Subresource_Integrity.
-    --&gt;
-    &lt;script
+    -->
+    <script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous"&gt;
-    &lt;/script&gt;
+      crossorigin="anonymous">
+    </script>
 
-    &lt;!-- Include my popup's own script--&gt;
-    &lt;script src="popup.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
+    <!-- Include my popup's own script-->
+    <script src="popup.js"></script>
+  </body>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<p>ウェブサイトと比較して、拡張機能は追加の特権付き API にアクセスできるので、悪意のあるコードに感染した場合、リスクは大きくなります。このため:</p>
+ウェブサイトと比較して、拡張機能は追加の特権付き API にアクセスできるので、悪意のあるコードに感染した場合、リスクは大きくなります。このため:
 
-<ul>
- <li>かなり厳密な CSP がデフォルトで適用されます。<a href="/ja/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy">既定の content security policy</a> を見てください</li>
- <li>拡張機能のオーナーは <code>content_security_policy</code> manifest.json キーを使ってデフォルトのポリシーを変更できますが、許可できるポリシーには制限があります。<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> を見てください。</li>
-</ul>
+- かなり厳密な CSP がデフォルトで適用されます。[既定の content security policy](/ja/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy) を見てください
+- 拡張機能のオーナーは `content_security_policy` manifest.json キーを使ってデフォルトのポリシーを変更できますが、許可できるポリシーには制限があります。[`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) を見てください。
 
-<h2 id="Default_content_security_policy" name="Default_content_security_policy">既定の content security policy</h2>
+## 既定の content security policy
 
-<p>拡張機能の既定の CSP は次のものです:</p>
+拡張機能の既定の CSP は次のものです:
 
-<pre>"script-src 'self'; object-src 'self';"</pre>
+```
+"script-src 'self'; object-src 'self';"
+```
 
-<p>これは、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> の manifest.json key を使って明示的に CSP をセットしないあらゆる拡張機能にあてはまります。下記の結論になります:</p>
+これは、[`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) の manifest.json key を使って明示的に CSP をセットしないあらゆる拡張機能にあてはまります。下記の結論になります:
 
-<ul>
- <li>
-  <p><a href="/ja/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources">&lt;script&gt; と &lt;object&gt; リソースは拡張機能のローカルからのみ読み込みできる</a></p>
- </li>
- <li>
-  <p><a href="/ja/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends">拡張機能は JavaScript で文字列を評価 (eval) できない</a></p>
- </li>
- <li>
-  <p><a href="/ja/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript">インライン JavaScript は実行されない</a></p>
- </li>
-</ul>
+- [\<script> と \<object> リソースは拡張機能のローカルからのみ読み込みできる](/ja/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources)
+- [拡張機能は JavaScript で文字列を評価 (eval) できない](</ja/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends>)
+- [インライン JavaScript は実行されない](/ja/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript)
 
-<h3 id="Location_of_script_and_object_resources" name="Location_of_script_and_object_resources">スクリプトとオブジェクトリソースの場所</h3>
+### スクリプトとオブジェクトリソースの場所
 
-<p>既定の CSP の下では、拡張機能のローカルにある <a href="/ja/docs/Web/HTML/Element/script">&lt;script&gt;</a> と <a href="/ja/docs/Web/HTML/Element/object">&lt;object&gt;</a> リソースだけを読み込みできます。例えば、拡張機能の文書内にこんな行があるとします:</p>
+既定の CSP の下では、拡張機能のローカルにある [\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースだけを読み込みできます。例えば、拡張機能の文書内にこんな行があるとします:
 
-<pre class="brush: html"> &lt;script src="https://code.jquery.com/jquery-2.2.4.js"&gt;&lt;/script&gt;</pre>
+```html
+ <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+```
 
-<p>これは要求したリソースを読み込みません: 静かに失敗し、このリソースから取ってきたはずのいかなるオブジェクトも見つかりません。この解決方法が 2 つあります:</p>
+これは要求したリソースを読み込みません: 静かに失敗し、このリソースから取ってきたはずのいかなるオブジェクトも見つかりません。この解決方法が 2 つあります:
 
-<ul>
- <li>
-  <p>リソースをダウンロードして、拡張機能にパッケージして、このリソース版を参照する</p>
- </li>
- <li>
-  <p>必要なリモートオリジンを許可するために <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> を使う</p>
- </li>
-</ul>
+- リソースをダウンロードして、拡張機能にパッケージして、このリソース版を参照する
+- 必要なリモートオリジンを許可するために [`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) を使う
 
-<h3 id="eval_and_friends" name="eval()_and_friends">eval() とその仲間</h3>
+### eval() とその仲間
 
-<p>既定の CSP の下で、拡張機能は JavaScript 内の文字列の評価を許可しません。つまり次のことは許可されません:</p>
+既定の CSP の下で、拡張機能は JavaScript 内の文字列の評価を許可しません。つまり次のことは許可されません:
 
-<pre class="brush: js">eval("console.log('some output');");</pre>
+```js
+eval("console.log('some output');");
+```
 
-<pre class="brush: js">window.setTimeout("alert('Hello World!');", 500);</pre>
+```js
+window.setTimeout("alert('Hello World!');", 500);
+```
 
-<pre class="brush: js">var f = new Function("console.log('foo');");</pre>
+```js
+var f = new Function("console.log('foo');");
+```
 
-<h3 id="Inline_JavaScript" name="Inline_JavaScript">インライン JavaScript</h3>
+### インライン JavaScript
 
-<p>既定の CSP ではインライン JavaScript は実行されません。これは <code>&lt;script&gt;</code> タグで直接置かれた JavaScript と、インラインイベントハンドラーの両方とも許可されず、つまり次のことは許可されません:</p>
+既定の CSP ではインライン JavaScript は実行されません。これは `<script>` タグで直接置かれた JavaScript と、インラインイベントハンドラーの両方とも許可されず、つまり次のことは許可されません:
 
-<pre class="brush: html">&lt;script&gt;console.log("foo");&lt;/script&gt;</pre>
+```html
+<script>console.log("foo");</script>
+```
 
-<pre class="brush: html">&lt;div onclick="console.log('click')"&gt;Click me!&lt;/div&gt;</pre>
+```html
+<div onclick="console.log('click')">Click me!</div>
+```
 
-<p>ページが読み込まれた時にスクリプトを実行するのに <code>&lt;body onload="main()"&gt;</code> のようなコードを使っている場合、代わりに <a href="/ja/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> か <a href="/ja/docs/Web/Events/load">load</a> をリッスンします。</p>
+ページが読み込まれた時にスクリプトを実行するのに `<body onload="main()">` のようなコードを使っている場合、代わりに [DOMContentLoaded](/ja/docs/Web/Events/DOMContentLoaded) か [load](/ja/docs/Web/Events/load) をリッスンします。

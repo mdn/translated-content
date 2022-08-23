@@ -3,164 +3,150 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>テキストによるタブ内の検索をします。</p>
+テキストによるタブ内の検索をします。
 
-<p>次のことができます。</p>
+次のことができます。
 
-<ul>
- <li>標準の HTTP(S)ページ、特権ページ(about:debuggingなど)の検索</li>
- <li>tab idを使って 特定の 1タブのみ指定。</li>
- <li>ページ内の全frame</li>
- <li>大文字・小文字の区別検索、単語単位検索のみ（訳注：正規表現はなし)</li>
-</ul>
+- 標準の HTTP(S)ページ、特権ページ(about:debugging など)の検索
+- tab id を使って 特定の 1 タブのみ指定。
+- ページ内の全 frame
+- 大文字・小文字の区別検索、単語単位検索のみ（訳注：正規表現はなし)
 
-<p>デフォルトではマッチ件数ぐらいしか返ってきませんが、タブ内でのより多くの情報を得るため、次のオプションを指定することができます。</p>
+デフォルトではマッチ件数ぐらいしか返ってきませんが、タブ内でのより多くの情報を得るため、次のオプションを指定することができます。
 
-<ul>
- <li><code>includeRangeData</code></li>
- <li><code>includeRectData</code></li>
-</ul>
+- `includeRangeData`
+- `includeRectData`
 
-<p>結果を内部的に保持しているため、ハイライト機能は次に上書き<code>(find()</code>)されるまで次の関数で起動できます。</p>
+結果を内部的に保持しているため、ハイライト機能は次に上書き`(find()`)されるまで次の関数で起動できます。
 
-<ul>
- <li>{{WebExtAPIRef("find.highlightResults()")}},</li>
-</ul>
+- {{WebExtAPIRef("find.highlightResults()")}},
 
-<p>この関数は asynchronous/ 非同期 関数で <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
+この関数は asynchronous/ 非同期 関数で [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox brush:js">browser.find.find(
+```js
+browser.find.find(
   queryphrase,       // string
   options            // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl class="reference-values">
- <dt><code>queryphrase</code></dt>
- <dd><code>string</code>. 検索語。</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. An object specifying additional options. It may take any of the following properties, all optional:</p>
+- `queryphrase`
+  - : `string`. 検索語。
+- `options`{{optional_inline}}
 
- <dl class="reference-values">
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID of the tab to search. Defaults to the active tab.</dd>
-  <dt><code>caseSensitive</code></dt>
-  <dd><code>boolean</code>. If true, the search is case-sensitive. Defaults to <code>false</code>.</dd>
-  <dt><code>entireWord</code></dt>
-  <dd><code>boolean</code>. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to <code>false</code>.</dd>
-  <dt><code>includeRangeData</code></dt>
-  <dd><code>boolean</code>. Include range data in the response, which describe where in the page DOM the match was found. Defaults to <code>false</code>.</dd>
-  <dt><code>includeRectData</code></dt>
-  <dd><code>boolean</code>. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to <code>false</code>.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 
-<h3 id="Return_value">Return value</h3>
+    - `tabId`
+      - : `integer`. ID of the tab to search. Defaults to the active tab.
+    - `caseSensitive`
+      - : `boolean`. If true, the search is case-sensitive. Defaults to `false`.
+    - `entireWord`
+      - : `boolean`. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to `false`.
+    - `includeRangeData`
+      - : `boolean`. Include range data in the response, which describe where in the page DOM the match was found. Defaults to `false`.
+    - `includeRectData`
+      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
 
-<p>A <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object containing up to three properties:</p>
+### Return value
 
-<dl class="reference-values">
- <dt><code>count</code></dt>
- <dd><code>integer</code>. The number of results found.</dd>
- <dt><code>rangeData</code>{{optional_inline}}</dt>
- <dd>
- <p><code>array</code>. If <code>includeRangeData</code> was given in the <code>options</code> parameter, then this property will be included. It is provided as an array of <code>RangeData</code> objects, one for each match. <code>それぞれのRangeData</code> はDOM ツリー構造をしています。検索語の周りを表示することなどにも使えます。</p>
+A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing up to three properties:
 
- <p>次の <code>rectData</code>, も同様に配列で <code>rangeData[i]</code> と <code>rectData[i]</code>は1対1で対応します。.</p>
+- `count`
+  - : `integer`. The number of results found.
+- `rangeData`{{optional_inline}}
 
- <p>Each <code>RangeData</code> contains the following properties:</p>
+  - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. `それぞれのRangeData` は DOM ツリー構造をしています。検索語の周りを表示することなどにも使えます。
 
- <dl class="reference-values">
-  <dt><code>framePos</code></dt>
-  <dd>マッチしたframe番号(訳注： iframeごとで変わる番号). 0 は通常のページ部分で親です。 Note that the order of objects in the <code>rangeData</code> array will sequentially line up with the order of frame indexes: for example, <code>framePos</code> for the first sequence of <code>rangeData</code> objects will be 0, <code>framePos</code> for the next sequence will be 1, and so on.</dd>
-  <dt><code>startTextNodePos</code></dt>
-  <dd>テキスト Nodeの 開始側Index（訳注：直接この値をAPI一本で活用できないため、下記のサンプルを参照）</dd>
-  <dt><code>endTextNodePos</code></dt>
-  <dd>テキスト Nodeの 終端側Index.</dd>
-  <dt><code>startOffset</code></dt>
-  <dd>開始Node内の 初めの文字列の位置.</dd>
-  <dt><code>endOffset</code></dt>
-  <dd>終端Node内の 終わりの文字列の位置</dd>
- </dl>
- </dd>
- <dt><code>rectData</code>{{optional_inline}}</dt>
- <dd>
- <p><code>array</code>. 呼び出し時に<code>optionsで</code> <code>includeRectData</code> 引数を与えると結果を返します。 <code>RectData</code> objectsの配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。.</p>
+    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。.
 
- <p>Each <code>RectData</code> object はそれぞれ 1つのマッチに対して2つのプロパティを持ちます。</p>
+    Each `RangeData` contains the following properties:
 
- <dl class="reference-values">
-  <dt><code>rectsAndTexts</code></dt>
-  <dd>1対1の関係となる２つの配列を持ちます:
-  <ul>
-   <li><code>rectList</code>: ４つの integer をもつ配列: <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. その位置情報はviewportにおける左上からの位置です。</li>
-   <li><code>textList</code>: 上記<code>rectList[i]</code>に含まれた <code>textList[i]</code> (string)を持つ配列です。</li>
-  </ul>
+    - `framePos`
+      - : マッチした frame 番号(訳注： iframe ごとで変わる番号). 0 は通常のページ部分で親です。 Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
+    - `startTextNodePos`
+      - : テキスト Node の 開始側 Index（訳注：直接この値を API 一本で活用できないため、下記のサンプルを参照）
+    - `endTextNodePos`
+      - : テキスト Node の 終端側 Index.
+    - `startOffset`
+      - : 開始 Node 内の 初めの文字列の位置.
+    - `endOffset`
+      - : 終端 Node 内の 終わりの文字列の位置
 
-  <p>例えば Webページ上で:</p>
+- `rectData`{{optional_inline}}
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15582/rects-1.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;"> "You may"を探すと2つの矩形エリアで表現されます。:</p>
+  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。.
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15583/rects-2.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;"> <code>RectData</code> はこのようにマッチし、 <code>rectsAndTexts.rectList</code> と <code>rectsAndTexts.textList</code>は次のようになります。</p>
+    Each `RectData` object はそれぞれ 1 つのマッチに対して 2 つのプロパティを持ちます。
 
-  <ul>
-   <li><code>textList[0]</code> = "You ",  <code>rectList[0]</code> はHTML上の境界を表す矩形エリアを含みます。</li>
-   <li><code>textList[1]</code> = "may",  <code>rectList[1]</code>も"may"について同様です。</li>
-  </ul>
-  </dd>
-  <dt><code>text</code></dt>
-  <dd>マッチしたテキスト全体、上の例では"You may"が丸ごと入ります。</dd>
- </dl>
- </dd>
-</dl>
+    - `rectsAndTexts`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : 1 対 1 の関係となる２つの配列を持ちます:
 
-<p>{{Compat("webextensions.api.find.find", 10)}}</p>
+        - `rectList`: ４つの integer をもつ配列: `top`, `left`, `bottom`, `right`. その位置情報は viewport における左上からの位置です。
+        - `textList`: 上記`rectList[i]`に含まれた `textList[i]` (string)を持つ配列です。
 
-<h2 id="Examples">Examples</h2>
+        例えば Web ページ上で:
 
-<h3 id="Basic_examples">Basic examples</h3>
+        ![](https://mdn.mozillademos.org/files/15582/rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
 
-<p>Search the active tab for "banana", log the number of matches, and highlight them:</p>
+        ![](https://mdn.mozillademos.org/files/15583/rects-2.png) `RectData` はこのようにマッチし、 `rectsAndTexts.rectList` と `rectsAndTexts.textList`は次のようになります。
 
-<pre class="brush: js">function found(results) {
+        - `textList[0]` = "You ", `rectList[0]` は HTML 上の境界を表す矩形エリアを含みます。
+        - `textList[1]` = "may", `rectList[1]`も"may"について同様です。
+
+    - `text`
+      - : マッチしたテキスト全体、上の例では"You may"が丸ごと入ります。
+
+## Browser compatibility
+
+{{Compat("webextensions.api.find.find", 10)}}
+
+## Examples
+
+### Basic examples
+
+Search the active tab for "banana", log the number of matches, and highlight them:
+
+```js
+function found(results) {
   console.log(`There were: ${results.count} matches.`);
-  if (results.count &gt; 0) {
+  if (results.count > 0) {
     browser.find.highlightResults();
   }
 }
 
-browser.find.find("banana").then(found);</pre>
+browser.find.find("banana").then(found);
+```
 
-<p>Search for "banana" across all tabs (note that this requires the "tabs" <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">permission</a>, because it accesses <code>tab.url</code>):</p>
+Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
 
-<pre class="brush: js">async function findInAllTabs(allTabs) {
+```js
+async function findInAllTabs(allTabs) {
   for (let tab of allTabs) {
     let results = await browser.find.find("banana", {tabId: tab.id});
     console.log(`In page "${tab.url}": ${results.count} matches.`)
   }
 }
 
-browser.tabs.query({}).then(findInAllTabs);</pre>
+browser.tabs.query({}).then(findInAllTabs);
+```
 
-<h3 id="Using_rangeData">Using rangeData</h3>
+### Using rangeData
 
-<p>In this example the extension uses <code>rangeData</code> to get the context in which the match was found. The context is the complete <code>textContent</code> of the node in which the match was found. If the match spanned nodes, the context is the concatenation of the <code>textContent</code> of all spanned nodes.</p>
+In this example the extension uses `rangeData` to get the context in which the match was found. The context is the complete `textContent` of the node in which the match was found. If the match spanned nodes, the context is the concatenation of the `textContent` of all spanned nodes.
 
-<p>Note that for simplicity, this example doesn't handle pages that contain frames. To support this you'd need to split <code>rangeData</code> into groups, one per frame, and execute the script in each frame.</p>
+Note that for simplicity, this example doesn't handle pages that contain frames. To support this you'd need to split `rangeData` into groups, one per frame, and execute the script in each frame.
 
-<p>The background script:</p>
+The background script:
 
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 async function getContexts(matches) {
 
@@ -182,14 +168,15 @@ async function getContexts(matches) {
 
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.find.find("example", {includeRangeData: true}).then(getContexts);
 });
-</pre>
+```
 
-<p>The content script:</p>
+The content script:
 
-<pre class="brush: js">/**
+```js
+/**
  * Get all the text nodes into a single array
  */
 function getNodes() {
@@ -216,7 +203,7 @@ function getContexts(ranges) {
   for (let range of ranges) {
     let context = nodes[range.startTextNodePos].textContent;
     let pos = range.startTextNodePos;
-    while (pos &lt; range.endTextNodePos) {
+    while (pos < range.endTextNodePos) {
       pos++;
       context += nodes[pos].textContent;
     }
@@ -225,20 +212,21 @@ function getContexts(ranges) {
   return contexts;
 }
 
-browser.runtime.onMessage.addListener((message, sender, sendResponse) =&gt; {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   sendResponse(getContexts(message.ranges));
 });
-</pre>
+```
 
-<h3 id="Using_rectData">Using rectData</h3>
+### Using rectData
 
-<p>In this example the extension uses <code>rectData</code> to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:</p>
+In this example the extension uses `rectData` to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15584/redacted.png" style="display: block; height: 416px; margin-left: auto; margin-right: auto; width: 625px;">Note that in many ways this is a poor way to redact pages.</p>
+![](https://mdn.mozillademos.org/files/15584/redacted.png)Note that in many ways this is a poor way to redact pages.
 
-<p>The background script:</p>
+The background script:
 
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 async function redact(matches) {
 
@@ -254,14 +242,15 @@ async function redact(matches) {
   await browser.tabs.sendMessage(tabId, {rects: matches.rectData});
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.find.find("banana", {includeRectData: true}).then(redact);
 });
-</pre>
+```
 
-<p>The content script:</p>
+The content script:
 
-<pre class="brush: js">// redact.js
+```js
+// redact.js
 
 /**
  * Add a black DIV where the rect is.
@@ -288,9 +277,9 @@ function redactAll(rectData) {
   }
 }
 
-browser.runtime.onMessage.addListener((message) =&gt; {
+browser.runtime.onMessage.addListener((message) => {
   redactAll(message.rects);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

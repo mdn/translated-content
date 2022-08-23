@@ -3,40 +3,30 @@ title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>タブがミュート・アンミュートになった理由を指定します。</p>
+タブがミュート・アンミュートになった理由を指定します。
 
-<h2 id="型">型</h2>
+## 型
 
-<p>値のタイプは文字列型です。可能な値:</p>
+値のタイプは文字列型です。可能な値:
 
-<dl>
- <dt>"capture"</dt>
- <dd>タブのキャプチャが開始され、ミュート状態に強いられました。</dd>
- <dt>"extension"</dt>
- <dd>拡張機能がミュート状態に設定しました。もしこれが理由なら、{{WebExtAPIRef("tabs.mutedInfo")}}の<code>extensionId</code>が責任のある拡張機能のIDを含んでいます。</dd>
- <dt>"user"</dt>
- <dd>ユーザがミュート状態に設定しました。</dd>
-</dl>
+- "capture"
+  - : タブのキャプチャが開始され、ミュート状態に強いられました。
+- "extension"
+  - : 拡張機能がミュート状態に設定しました。もしこれが理由なら、{{WebExtAPIRef("tabs.mutedInfo")}}の`extensionId`が責任のある拡張機能の ID を含んでいます。
+- "user"
+  - : ユーザがミュート状態に設定しました。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("webextensions.api.tabs.MutedInfoReason")}}
 
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.tabs.MutedInfoReason")}}</p>
+> **Note:** **謝辞**この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfoReason) API に基づいています。このドキュメントは Chromium コードの[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>謝辞</strong>
-
-<p>このAPIはChromiumの<a href="https://developer.chrome.com/extensions/tabs#type-MutedInfoReason"><code>chrome.tabs</code></a> APIに基づいています。このドキュメントはChromiumコードの<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a>から派生したものです。</p>
-
-<p>Microsoft Edgeの互換性データはMicrosoft Corporationから提供されており、Creative Commons Attribution 3.0 United States Licenseのもとにここに含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -64,4 +54,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

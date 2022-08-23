@@ -7,95 +7,59 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">型</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">必須</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">例</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">型</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">必須</th>
+      <td>いいえ</td>
+    </tr>
+    <tr>
+      <th scope="row">例</th>
+      <td>
+        <pre class="brush: json no-line-numbers">
 "options_ui": {
   "page": "options/options.html"
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><code>options_ui</code> キーは、拡張機能の<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">オプションページ</a>を定義するために使用します。</p>
+`options_ui` キーは、拡張機能の[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)を定義するために使用します。
 
-<p>オプションページは、拡張機能の設定を含みます。オプションページはブラウザーのアドオンマネージャー、または拡張機能内で {{WebExtAPIRef("runtime.openOptionsPage()")}} を使用することでアクセスできます。</p>
+オプションページは、拡張機能の設定を含みます。オプションページはブラウザーのアドオンマネージャー、または拡張機能内で {{WebExtAPIRef("runtime.openOptionsPage()")}} を使用することでアクセスできます。
 
-<p><code>options_ui</code> を拡張機能にパッケージされた HTML ファイルへのパスとして指定します。通常のウェブページのように、HTML、CSS、JavaScript ファイルを含めることができます。しかし、通常のページと異なり、拡張機能が<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">権限</a>を持つすべての <a href="/ja/Add-ons/WebExtensions/API">WebExtension API</a> を使用できます。しかし、バックグラウンドスクリプトとは異なるスコープで実行されます。</p>
+`options_ui` を拡張機能にパッケージされた HTML ファイルへのパスとして指定します。通常のウェブページのように、HTML、CSS、JavaScript ファイルを含めることができます。しかし、通常のページと異なり、拡張機能が[権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持つすべての [WebExtension API](/ja/Add-ons/WebExtensions/API) を使用できます。しかし、バックグラウンドスクリプトとは異なるスコープで実行されます。
 
-<p><strong>オプションページ</strong>と<strong>バックグラウンドスクリプト</strong>の JavaScript 上で、データや関数を<strong>共有したい</strong>場合、{{WebExtAPIRef("extension.getBackgroundPage()")}} を使用してバックグラウンドスクリプトの <a href="/ja/docs/Web/API/Window">Window</a> への参照を直接取得するか、{{WebExtAPIRef("extension.getViews()")}} で拡張機能内で実行されているいずれかのページの {{domxref("Window")}} を取得します。あるいは、JavaScript で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> や <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> を使用することで、オプションページとバックグラウンドスクリプト間で相互にコミュニケーションできます。後者の方法 (や同等の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> ) でも <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">バックグラウンドスクリプト</a>と<strong><a href="/ja/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a></strong>とでオプションを共有できます。</p>
+**オプションページ**と**バックグラウンドスクリプト**の JavaScript 上で、データや関数を**共有したい**場合、{{WebExtAPIRef("extension.getBackgroundPage()")}} を使用してバックグラウンドスクリプトの [Window](/ja/docs/Web/API/Window) への参照を直接取得するか、{{WebExtAPIRef("extension.getViews()")}} で拡張機能内で実行されているいずれかのページの {{domxref("Window")}} を取得します。あるいは、JavaScript で [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) や [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)、[`runtime.connect()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) を使用することで、オプションページとバックグラウンドスクリプト間で相互にコミュニケーションできます。後者の方法 (や同等の [`runtime.Port`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) ) でも [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)と**[コンテンツスクリプト](/ja/Add-ons/WebExtensions/Content_scripts)**とでオプションを共有できます。
 
-<p>一般的に、オプションページで変更されたオプションは、<a href="/ja/Add-ons/WebExtensions/API/storage">storage API</a> を使用して、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync">storage.sync</a> (ユーザーがログインしているすべてのブラウザーインスタンス間で設定を同期する場合) か <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a> (現在のマシン / プロファイルのローカル設定にする場合) のいずれかに保存します。バックグラウンドスクリプトに変更を通知する必要がある場合、バックグラウンドスクリプトで <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/onChanged">storage.onChanged</a> にリスナーを追加します。</p>
+一般的に、オプションページで変更されたオプションは、[storage API](/ja/Add-ons/WebExtensions/API/storage) を使用して、[storage.sync](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) (ユーザーがログインしているすべてのブラウザーインスタンス間で設定を同期する場合) か [storage.local](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) (現在のマシン / プロファイルのローカル設定にする場合) のいずれかに保存します。バックグラウンドスクリプトに変更を通知する必要がある場合、バックグラウンドスクリプトで [storage.onChanged](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/onChanged) にリスナーを追加します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>options_ui</code> キーは次のコンテンツを持つオブジェクトです:</p>
+`options_ui` キーは次のコンテンツを持つオブジェクトです:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">名前</th>
-   <th scope="col">型</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>browser_style</code></td>
-   <td><code>Boolean</code></td>
-   <td>
-    <p>省略可能。既定では <code>true</code>。</p>
+| 名前            | 型        | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `browser_style` | `Boolean` | 省略可能。既定では `true`。これを使ってページにブラウザーの UI と `browser_style` プロパティを使う他の拡張機能とで一貫した見た目とするようなスタイルシートを入れることができる。既定では `true` だが、このプロパティを入れるのは推奨される。Firefox では、chrome://browser/content/extension.css か、OS X では chrome://browser/content/extension-mac.css でスタイルシートを見ることができる。[Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/controls) はポップアップ内の要素が特定のスタイルを取るために適用させるクラスを説明している。 |
+| `open_in_tab`   | `Boolean` | 省略可能。既定値は `false`。`true` の場合、オプションページはブラウザーのアドオンマネージャーに統合されたものではなく、通常のブラウザータブで開かれる。                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `page`          | `String`  | 必須。オプションページの仕様を含む HTML ファイルへのパス。パスは manifest.json 自体への相対パス。                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-    <p>これを使ってページにブラウザーの UI と <code>browser_style</code> プロパティを使う他の拡張機能とで一貫した見た目とするようなスタイルシートを入れることができる。既定では <code>true</code> だが、このプロパティを入れるのは推奨される。</p>
+## 例
 
-    <p>Firefox では、chrome://browser/content/extension.css か、OS X では chrome://browser/content/extension-mac.css でスタイルシートを見ることができる。</p>
-
-    <p><a class="external external-icon" href="https://firefoxux.github.io/StyleGuide/#/controls">Firefox Style Guide</a> はポップアップ内の要素が特定のスタイルを取るために適用させるクラスを説明している。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>open_in_tab</code></td>
-   <td><code>Boolean</code></td>
-   <td>
-    <p>省略可能。既定値は <code>false</code>。</p>
-
-    <p><code>true</code> の場合、オプションページはブラウザーのアドオンマネージャーに統合されたものではなく、通常のブラウザータブで開かれる。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>page</code></td>
-   <td><code>String</code></td>
-   <td>
-    <p>必須。</p>
-
-    <p>オプションページの仕様を含む HTML ファイルへのパス。</p>
-
-    <p>パスは manifest.json 自体への相対パス。</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: json">  "options_ui": {
+```json
+  "options_ui": {
     "page": "options/options.html"
-  }</pre>
+  }
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.manifest.options_ui")}}</p>
+{{Compat("webextensions.manifest.options_ui")}}

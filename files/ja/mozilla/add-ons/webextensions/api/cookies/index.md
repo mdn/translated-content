@@ -11,108 +11,83 @@ tags:
   - dard
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>拡張機能に cookie の取得と設定と、変更された時の通知を可能にします。</p>
+拡張機能に cookie の取得と設定と、変更された時の通知を可能にします。
 
-<p>この API を使用するには、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> ファイルで "cookies" の <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API パーミッション</a> があることと、同様にアクセスする cookie を持つ <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a> も必要になります。<a href="/ja/Add-ons/WebExtensions/API/cookies#Permissions">cookie パーミッション</a>を見てください。</p>
+この API を使用するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "cookies" の [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) があることと、同様にアクセスする cookie を持つ [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) も必要になります。[cookie パーミッション](/ja/Add-ons/WebExtensions/API/cookies#Permissions)を見てください。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.Cookie")}}</dt>
- <dd>HTTP cookieの情報を表す。</dd>
- <dt>{{WebExtAPIRef("cookies.CookieStore")}}</dt>
- <dd>ブラウザーの cookie store を表す。</dd>
- <dt>{{WebExtAPIRef("cookies.OnChangedCause")}}</dt>
- <dd>cookie の変更理由を表す。</dd>
-</dl>
+- {{WebExtAPIRef("cookies.Cookie")}}
+  - : HTTP cookie の情報を表す。
+- {{WebExtAPIRef("cookies.CookieStore")}}
+  - : ブラウザーの cookie store を表す。
+- {{WebExtAPIRef("cookies.OnChangedCause")}}
+  - : cookie の変更理由を表す。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.get()")}}</dt>
- <dd>1つの cookie の情報を取得する。</dd>
- <dt>{{WebExtAPIRef("cookies.getAll()")}}</dt>
- <dd>与えられたフィルターにマッチするすべての cookies を取得する。</dd>
- <dt>{{WebExtAPIRef("cookies.set()")}}</dt>
- <dd>与えられた cookie データ を cookie に設定する; おなじ cookies が存在すれば上書きする。</dd>
- <dt>{{WebExtAPIRef("cookies.remove()")}}</dt>
- <dd>指定した名前の cookie を削除する。</dd>
- <dt>{{WebExtAPIRef("cookies.getAllCookieStores()")}}</dt>
- <dd>すべての cookie stores を一覧する。</dd>
-</dl>
+- {{WebExtAPIRef("cookies.get()")}}
+  - : 1 つの cookie の情報を取得する。
+- {{WebExtAPIRef("cookies.getAll()")}}
+  - : 与えられたフィルターにマッチするすべての cookies を取得する。
+- {{WebExtAPIRef("cookies.set()")}}
+  - : 与えられた cookie データ を cookie に設定する; おなじ cookies が存在すれば上書きする。
+- {{WebExtAPIRef("cookies.remove()")}}
+  - : 指定した名前の cookie を削除する。
+- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
+  - : すべての cookie stores を一覧する。
 
-<h2 id="Event_handlers" name="Event_handlers">イベントハンドラー</h2>
+## イベントハンドラー
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.onChanged")}}</dt>
- <dd>cookie が設定、削除された時に発火する。</dd>
-</dl>
+- {{WebExtAPIRef("cookies.onChanged")}}
+  - : cookie が設定、削除された時に発火する。
 
-<h2 id="Permissions" name="Permissions">パーミッション</h2>
+## パーミッション
 
-<p>この API を使うには、アドオンは manifest で "cookies" の <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API パーミッション</a> を指定せねばならず、同様に cookie がアクセスするあらゆるサイトの <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a>も要ります。アドオンは host パーミッションにマッチするURLから読み書きされる cookie を読み書きできます。例えば:</p>
+この API を使うには、アドオンは manifest で "cookies" の [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) を指定せねばならず、同様に cookie がアクセスするあらゆるサイトの [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)も要ります。アドオンは host パーミッションにマッチする URL から読み書きされる cookie を読み書きできます。例えば:
 
-<dl>
- <dt><code>http://*.example.com/</code></dt>
- <dd>
- <p>この host パーミッションを持つアドオンは下記ができます:</p>
+- `http://*.example.com/`
 
- <ul>
-  <li><code>www.example.com</code> のあらゆるパスの、非セキュア型 cookie を読む</li>
-  <li>セキュア/非セキュア問わず、<code>www.example.com</code> のあらゆるパスの cookie に書き込む</li>
- </ul>
+  - : この host パーミッションを持つアドオンは下記ができます:
 
- <p><em>下記はできません</em>:</p>
+    - `www.example.com` のあらゆるパスの、非セキュア型 cookie を読む
+    - セキュア/非セキュア問わず、`www.example.com` のあらゆるパスの cookie に書き込む
 
- <ul>
-  <li><code>www.example.com</code> のセキュア型cookie を読む</li>
- </ul>
- </dd>
- <dt><code>http://www.example.com/</code></dt>
- <dd>
- <p>この host パーミッションを持つアドオンは下記ができます:</p>
+    _下記はできません_:
 
- <ul>
-  <li><code>www.example.com</code> のあらゆるパスの、非セキュア型cookie を読む</li>
-  <li><code>.example.com</code>のあらゆるパスの、非セキュア型cookie を読む</li>
-  <li>セキュア/非セキュア問わず、<code>www.example.com</code>のあらゆるパスの cookie に書き込む</li>
-  <li>セキュア/非セキュア問わず、<code>.example.com</code>のあらゆるパスの cookie に書き込む</li>
- </ul>
+    - `www.example.com` のセキュア型 cookie を読む
 
- <p><em>下記はできません</em>:</p>
+- `http://www.example.com/`
 
- <ul>
-  <li><code>foo.example.com</code> の cookie の読み書き</li>
-  <li><code>foo.www.example.com</code> の cookie の読み書き</li>
- </ul>
- </dd>
- <dt><code>*://*.example.com/</code></dt>
- <dd>
- <p>この host パーミッションを持つアドオンは下記ができます:</p>
+  - : この host パーミッションを持つアドオンは下記ができます:
 
- <ul>
-  <li>セキュア/非セキュア問わず、<code>www.example.com</code> のあらゆるパスの cookie の読み書き</li>
- </ul>
- </dd>
-</dl>
+    - `www.example.com` のあらゆるパスの、非セキュア型 cookie を読む
+    - `.example.com`のあらゆるパスの、非セキュア型 cookie を読む
+    - セキュア/非セキュア問わず、`www.example.com`のあらゆるパスの cookie に書き込む
+    - セキュア/非セキュア問わず、`.example.com`のあらゆるパスの cookie に書き込む
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+    _下記はできません_:
 
-<p>{{Compat("webextensions.api.cookies")}}</p>
+    - `foo.example.com` の cookie の読み書き
+    - `foo.www.example.com` の cookie の読み書き
 
-<p>{{WebExtExamples("h2")}}</p>
+- `*://*.example.com/`
 
-<div class="note"><strong>謝辞</strong>
+  - : この host パーミッションを持つアドオンは下記ができます:
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> における Chromium のコードに基づいています。</p>
+    - セキュア/非セキュア問わず、`www.example.com` のあらゆるパスの cookie の読み書き
 
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
+## ブラウザ実装状況
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{Compat("webextensions.api.cookies")}}
+
+{{WebExtExamples("h2")}}
+
+> **Note:** **謝辞**この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API に基づいています。また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -140,4 +115,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

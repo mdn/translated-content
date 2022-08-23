@@ -3,38 +3,28 @@ title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>これはブラウザウィンドウの種類です。</p>
+これはブラウザウィンドウの種類です。
 
-<h2 id="型">型</h2>
+## 型
 
-<p>値の型は<code>strings</code>です。可能な値は以下:</p>
+値の型は`strings`です。可能な値は以下:
 
-<ul>
- <li><code>"normal"</code></li>
- <li><code>"popup"</code></li>
- <li><code>"panel"</code></li>
- <li><code>"devtools"</code></li>
-</ul>
+- `"normal"`
+- `"popup"`
+- `"panel"`
+- `"devtools"`
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("webextensions.api.windows.WindowType")}}
 
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.windows.WindowType")}}</p>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#type-WindowType"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -62,4 +52,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

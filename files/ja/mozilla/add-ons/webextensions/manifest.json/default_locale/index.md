@@ -7,36 +7,38 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">型</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">必須</th>
-   <td>条件次第: _locales サブディレクトリがある場合は必要で、そうでない場合は不要。</td>
-  </tr>
-  <tr>
-   <th scope="row">例</th>
-   <td>
-    <pre class="brush: json">
-"default_locale": "en"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">型</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">必須</th>
+      <td>
+        条件次第: _locales
+        サブディレクトリがある場合は必要で、そうでない場合は不要。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">例</th>
+      <td><pre class="brush: json">"default_locale": "en"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>このキーは拡張機能が _locales ディレクトリを含んでいる場合は必要で、そうでない場合は不要です。これは _locales のサブディレクトリを識別し、このサブディレクトリは拡張機能の既定の文字列を探すために使用されます。</p>
+このキーは拡張機能が \_locales ディレクトリを含んでいる場合は必要で、そうでない場合は不要です。これは \_locales のサブディレクトリを識別し、このサブディレクトリは拡張機能の既定の文字列を探すために使用されます。
 
-<p><a href="/ja/Add-ons/WebExtensions/Internationalization">国際化</a>を見てください。</p>
+[国際化](/ja/Add-ons/WebExtensions/Internationalization)を見てください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"default_locale":</span> <span class="string token">"en"</span></code></pre>
+```json
+"default_locale": "en"
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.manifest.default_locale")}}</p>
+{{Compat("webextensions.manifest.default_locale")}}

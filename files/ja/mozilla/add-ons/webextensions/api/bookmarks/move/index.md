@@ -3,80 +3,72 @@ title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.move()</code></strong> は、指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} をブックマークツリー内の所望の位置に移すメソッドです。このメソッドにより、ブックマークを新しいフォルダの中や、同じフォルダ内の別の場所に移動させることができます。</p>
+**`bookmarks.move()`** は、指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} をブックマークツリー内の所望の位置に移すメソッドです。このメソッドにより、ブックマークを新しいフォルダの中や、同じフォルダ内の別の場所に移動させることができます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">browser.bookmarks.move(
+```js
+browser.bookmarks.move(
   id,          // 文字列
   destination, // オブジェクト
   callback     // 関数（省略可）
 )
-</pre>
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>id</code></dt>
- <dd>移動させるブックマーク / フォルダの ID を表す {{jsxref("string")}} です。</dd>
- <dt><code>destination</code></dt>
- <dd>ブックマークの移動先を表す {{jsxref("object")}} です。このオブジェクトには以下のプロパティが必ず 1 つ以上含まれます。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>parentId </code>{{optional_inline}}</dt>
-  <dd>移動先フォルダの ID を指定する {{jsxref("string")}} です。この値が省略された場合、現在と同じフォルダ内の新しい場所へ移動されます。</dd>
-  <dt><code>index </code>{{optional_inline}}</dt>
-  <dd>移動先フォルダ内における位置を指定する 0 起点のインデックスです。値が 0 の場合、そのフォルダの先頭に移動されます。値が省略された場合、新しい親フォルダ内の最後に移動されます。</dd>
- </dl>
- </dd>
- <dt><code>callback </code>{{optional_inline}}</dt>
- <dd>移動が終了した際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>result</code></dt>
-  <dd>移動された新しいノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}</dd>
- </dl>
+- `id`
+  - : 移動させるブックマーク / フォルダの ID を表す {{jsxref("string")}} です。
+- `destination`
 
- <p> </p>
- </dd>
-</dl>
+  - : ブックマークの移動先を表す {{jsxref("object")}} です。このオブジェクトには以下のプロパティが必ず 1 つ以上含まれます。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+    - `parentId `{{optional_inline}}
+      - : 移動先フォルダの ID を指定する {{jsxref("string")}} です。この値が省略された場合、現在と同じフォルダ内の新しい場所へ移動されます。
+    - `index `{{optional_inline}}
+      - : 移動先フォルダ内における位置を指定する 0 起点のインデックスです。値が 0 の場合、そのフォルダの先頭に移動されます。値が省略された場合、新しい親フォルダ内の最後に移動されます。
 
-<p>{{Compat("webextensions.api.bookmarks.move")}}</p>
+- `callback `{{optional_inline}}
 
-<h2 id="使用例">使用例</h2>
+  - : 移動が終了した際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。
 
-<h3 id="ブックマークを現在のフォルダの先頭へ移動">ブックマークを現在のフォルダの先頭へ移動</h3>
+    - `result`
+      - : 移動された新しいノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}
 
-<p>次の例は、既存のブックマークを現在のフォルダの先頭へ移動させるものです。移動後に必要な処理は特にないため、ここではコールバック無しで呼び出しています。</p>
+## ブラウザ実装状況
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">move</span><span class="punctuation token">(</span>bookmarkID<span class="punctuation token">,</span> <span class="punctuation token">{</span> index<span class="punctuation token">:</span> <span class="number token">0</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+{{Compat("webextensions.api.bookmarks.move")}}
 
-<h3 id="ブックマークを異なるフォルダへ移動">ブックマークを異なるフォルダへ移動</h3>
+## 使用例
 
-<p>以下の例は、ID で指定したブックマークを、別の ID で指定したフォルダへ移動させる関数です。今回は、移動後に実行されるコールバック関数も指定しています。</p>
+### ブックマークを現在のフォルダの先頭へ移動
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">moveToFolder</span><span class="punctuation token">(</span>bookmarkId<span class="punctuation token">,</span> destinationId<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  browser<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span><span class="function token">move</span><span class="punctuation token">(</span>bookmarkId<span class="punctuation token">,</span> <span class="punctuation token">{</span> parentId<span class="punctuation token">:</span> destinationId <span class="punctuation token">}</span><span class="punctuation token">,</span>
-                         <span class="keyword token">function</span><span class="punctuation token">(</span>updatedNode<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* ブックマークの移動後に行う処理 */</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+次の例は、既存のブックマークを現在のフォルダの先頭へ移動させるものです。移動後に必要な処理は特にないため、ここではコールバック無しで呼び出しています。
 
-<p>{{WebExtExamples}}</p>
+```js
+browser.bookmarks.move(bookmarkID, { index: 0 });
+```
 
-<div class="note"><strong>謝辞</strong>
+### ブックマークを異なるフォルダへ移動
 
-<p>この API は Chromium <code>の </code><a href="https://developer.chrome.com/extensions/bookmarks#method-move"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメント<code>は </code><a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードから作成されています。</p>
+以下の例は、ID で指定したブックマークを、別の ID で指定したフォルダへ移動させる関数です。今回は、移動後に実行されるコールバック関数も指定しています。
 
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
+```js
+function moveToFolder(bookmarkId, destinationId) {
+  browser.bookmarks.move(bookmarkId, { parentId: destinationId },
+                         function(updatedNode) {
+    /* ブックマークの移動後に行う処理 */
+  });
+}
+```
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{WebExtExamples}}
+
+> **Note:** **謝辞**この API は Chromium `の `[`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API に基づいています。また、このドキュメント`は `[`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,4 +96,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

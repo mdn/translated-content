@@ -13,178 +13,158 @@ tags:
   - タブ
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>ブラウザーのタブシステムとやりとりします。</p>
+ブラウザーのタブシステムとやりとりします。
 
-<p>この API を使って開いているタブの一覧を取得したり、いろいろな条件でフィルターしたり、タブを開き、更新し、移動し、再読み込みし、削除できます。この API ではタブのコンテンツに直接アクセスできませんが、JavaScript と CSS をタブに挿入することは、{{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} API を使ってできます。</p>
+この API を使って開いているタブの一覧を取得したり、いろいろな条件でフィルターしたり、タブを開き、更新し、移動し、再読み込みし、削除できます。この API ではタブのコンテンツに直接アクセスできませんが、JavaScript と CSS をタブに挿入することは、{{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} API を使ってできます。
 
-<p>この API の大半の使用に特別なパーミッションは要りませんが:</p>
+この API の大半の使用に特別なパーミッションは要りませんが:
 
-<ul>
- <li><code>Tab.url</code> <code>Tab.title</code> <code>Tab.favIconUrl</code>, のアクセスには "tabs" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。また Firefox では URL による{{WebExtAPIRef("tabs.query", "問い合わせ")}}をするのにも "tabs" が必要です。</li>
- <li>{{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} を使うには、そのタブの <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a>が必要です。</li>
-</ul>
+- `Tab.url` `Tab.title` `Tab.favIconUrl`, のアクセスには "tabs" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。また Firefox では URL による{{WebExtAPIRef("tabs.query", "問い合わせ")}}をするのにも "tabs" が必要です。
+- {{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} を使うには、そのタブの [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)が必要です。
 
-<p>あるいは、これらのパーミッションを一時的に取得することもできますが、それは現在アクティブなタブで明示的なユーザーアクションへの応答する場合のみで、<a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">"activeTab" パーミッション</a>を要求することで可能です。</p>
+あるいは、これらのパーミッションを一時的に取得することもできますが、それは現在アクティブなタブで明示的なユーザーアクションへの応答する場合のみで、["activeTab" パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)を要求することで可能です。
 
-<p>タブ操作の多くはタブ ID を使います。タブ ID はブラウザーセッションの単一のタブごとにユニークである保証がされています。ブラウザーが再起動したら、タブ ID を再利用できて、実際そうします。ブラウザーの再起動をまたいでタブ情報を関連づけるには {{WebExtAPIRef("sessions.setTabValue()")}} を使います。</p>
+タブ操作の多くはタブ ID を使います。タブ ID はブラウザーセッションの単一のタブごとにユニークである保証がされています。ブラウザーが再起動したら、タブ ID を再利用できて、実際そうします。ブラウザーの再起動をまたいでタブ情報を関連づけるには {{WebExtAPIRef("sessions.setTabValue()")}} を使います。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.MutedInfoReason")}}</dt>
- <dd>タブがミュートされている、またはミュートが解除されている理由を示す。</dd>
- <dt>{{WebExtAPIRef("tabs.MutedInfo")}}</dt>
- <dd>タブがミュートされているかを示す真理値と、最後の変更の理由からなるオブジェクト。</dd>
- <dt>{{WebExtAPIRef("tabs.PageSettings")}}</dt>
- <dd>
- <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF" title="Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF."><code>tabs.saveAsPDF()</code></a>メソッドにおいて、どのように PDF を描画するかを制御する。</p>
- </dd>
- <dt>{{WebExtAPIRef("tabs.Tab")}}</dt>
- <dd>タブについての情報を含む。</dd>
- <dt>{{WebExtAPIRef("tabs.TabStatus")}}</dt>
- <dd>タブの読み込み状況を示す。</dd>
- <dt>{{WebExtAPIRef("tabs.WindowType")}}</dt>
- <dd>タブを所有しているウィンドウのタイプを示す。</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettingsMode")}}</dt>
- <dd>ズームがブラウザーによるものか、拡張機能によるものか、またはズームが許可されていないのかを示す。</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettingsScope")}}</dt>
- <dd>あるページのズームが、同一生成元の別ページにも適用されるか、タブ内でのみかを示す。</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettings")}}</dt>
- <dd>ズーム設定{{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}とデフォルトのズーム要因を示す。</dd>
-</dl>
+- {{WebExtAPIRef("tabs.MutedInfoReason")}}
+  - : タブがミュートされている、またはミュートが解除されている理由を示す。
+- {{WebExtAPIRef("tabs.MutedInfo")}}
+  - : タブがミュートされているかを示す真理値と、最後の変更の理由からなるオブジェクト。
+- {{WebExtAPIRef("tabs.PageSettings")}}
+  - : [`tabs.saveAsPDF()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF "Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF.")メソッドにおいて、どのように PDF を描画するかを制御する。
+- {{WebExtAPIRef("tabs.Tab")}}
+  - : タブについての情報を含む。
+- {{WebExtAPIRef("tabs.TabStatus")}}
+  - : タブの読み込み状況を示す。
+- {{WebExtAPIRef("tabs.WindowType")}}
+  - : タブを所有しているウィンドウのタイプを示す。
+- {{WebExtAPIRef("tabs.ZoomSettingsMode")}}
+  - : ズームがブラウザーによるものか、拡張機能によるものか、またはズームが許可されていないのかを示す。
+- {{WebExtAPIRef("tabs.ZoomSettingsScope")}}
+  - : あるページのズームが、同一生成元の別ページにも適用されるか、タブ内でのみかを示す。
+- {{WebExtAPIRef("tabs.ZoomSettings")}}
+  - : ズーム設定{{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}とデフォルトのズーム要因を示す。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.TAB_ID_NONE")}}</dt>
- <dd>ブラウザーのタブでないタブに対する特殊な ID（Windows の開発ツールなど）。</dd>
-</dl>
+- {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
+  - : ブラウザーのタブでないタブに対する特殊な ID（Windows の開発ツールなど）。
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.captureTab()")}}</dt>
- <dd>あるタブの可視エリアの画像をエンコードしたデータURIを作成します。</dd>
- <dt>{{WebExtAPIRef("tabs.captureVisibleTab()")}}</dt>
- <dd>特定のウィンドウのアクティブなタブの可視エリアの画像をエンコードしたデータURI を作成します。</dd>
- <dt>{{WebExtAPIRef("tabs.connect()")}}</dt>
- <dd>あるタブにおいて、バックグラウンドスクリプト（またはその他ポップアップやオプションページのスクリプトなど特権スクリプト）と <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> 間でのメッセージのやり取り用の経路を確保します。</dd>
- <dt>{{WebExtAPIRef("tabs.create()")}}</dt>
- <dd>新しいタブを作る。</dd>
- <dt>{{WebExtAPIRef("tabs.detectLanguage()")}}</dt>
- <dd>タブのコンテンツの言語を検出する</dd>
- <dt>{{WebExtAPIRef("tabs.discard()")}}</dt>
- <dd>1つ以上のタブを破棄する。</dd>
- <dt>{{WebExtAPIRef("tabs.duplicate()")}}</dt>
- <dd>タブを複製する。</dd>
- <dt>{{WebExtAPIRef("tabs.executeScript()")}}</dt>
- <dd>ページに JavaScript コードを挿入する。</dd>
- <dt>{{WebExtAPIRef("tabs.get()")}}</dt>
- <dd>特定のタブについて情報を取り出す。</dd>
- <dt>{{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}</dt>
- <dd>特定のウィンドウ内のすべてのタブについての情報を取り出す。</dd>
- <dt>{{WebExtAPIRef("tabs.getCurrent()")}}</dt>
- <dd>スクリプトが実行されているタブについての情報を <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab" title="This type contains information about a tab."><code>tabs.Tab</code></a> オブジェクトとして取り出す。</dd>
- <dt>{{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}</dt>
- <dd>あるウィンドウにおいてタブが選択されているかを得る。</dd>
- <dt>{{WebExtAPIRef("tabs.getZoom()")}}</dt>
- <dd>あるタブについてズーム要因を得る。</dd>
- <dt>{{WebExtAPIRef("tabs.getZoomSettings()")}}</dt>
- <dd>あるタブについてズーム設定を得る。</dd>
- <dt>{{WebExtAPIRef("tabs.goForward()")}}</dt>
- <dd>可能な場合、次のページへ進む。</dd>
- <dt>{{WebExtAPIRef("tabs.goBack()")}}</dt>
- <dd>可能な場合、前のページへ戻る。</dd>
- <dt>{{WebExtAPIRef("tabs.hide()")}} {{experimental_inline}}</dt>
- <dd>1つ以上のタブを隠す。</dd>
- <dt>{{WebExtAPIRef("tabs.highlight()")}}</dt>
- <dd>1 つ以上のタブをハイライトする。</dd>
- <dt>{{WebExtAPIRef("tabs.insertCSS()")}}</dt>
- <dd>CSS をページに挿入する。</dd>
- <dt>{{WebExtAPIRef("tabs.move()")}}</dt>
- <dd>2 つ以上のタブを同じ、あるいは異なるウィンドウの任意のポジションへ移動させる。</dd>
- <dt>{{WebExtApiRef("tabs.moveInSuccession()")}}</dt>
- <dd>タブグループの継承関係を編集する。</dd>
- <dt>{{WebExtAPIRef("tabs.print()")}}</dt>
- <dd>開いているタブのコンテンツを印刷する。</dd>
- <dt>{{WebExtAPIRef("tabs.printPreview()")}}</dt>
- <dd>
- <div>開いているタブの印刷プレビューを開く。</div>
- </dd>
- <dt>{{WebExtAPIRef("tabs.query()")}}</dt>
- <dd>特定のプロパティを持つすべてのタブ、またはプロパティが指定されなければすべてのタブを取得します。</dd>
- <dt>{{WebExtAPIRef("tabs.reload()")}}</dt>
- <dd>タブをリロードする。キャッシュを回避することもできる。</dd>
- <dt>{{WebExtAPIRef("tabs.remove()")}}</dt>
- <dd>１つ以上のタブを閉じる。</dd>
- <dt>{{WebExtAPIRef("tabs.removeCSS()")}}</dt>
- <dd>以前に{{WebExtAPIRef("tabs.insertCSS()")}}を呼び出して挿入されているCSSを削除する。</dd>
- <dt>{{WebExtAPIRef("tabs.saveAsPDF()")}}</dt>
- <dd>現在のページを PDF として保存する。</dd>
- <dt>{{WebExtAPIRef("tabs.sendMessage()")}}</dt>
- <dd>あるタブのコンテンツスクリプトへ、１つのメッセージを送信する。</dd>
- <dt>{{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}</dt>
- <dd>あるタブのコンテンツスクリプトへ、単一のリクエストを送信する。<strong>非推奨</strong>: 代わりに {{WebExtAPIRef("tabs.sendMessage()")}} を使用してください。</dd>
- <dt>{{WebExtAPIRef("tabs.setZoom()")}}</dt>
- <dd>あるタブをズームする。</dd>
- <dt>{{WebExtAPIRef("tabs.setZoomSettings()")}}</dt>
- <dd>あるタブについてズーム設定をする。</dd>
- <dt>{{WebExtAPIRef("tabs.show()")}} {{experimental_inline}}</dt>
- <dd>{{WebExtAPIRef("tabs.hide()", "hidden")}}で隠されたタブを表示する。</dd>
- <dt>{{WebExtAPIRef("tabs.toggleReaderMode()")}}</dt>
- <dd>あるタブについてのリーダーモードへのトグル。</dd>
- <dt>{{WebExtAPIRef("tabs.update()")}}</dt>
- <dd>新しい URL に案内、もしくはタブの他のプロパティを修正する。</dd>
-</dl>
+- {{WebExtAPIRef("tabs.captureTab()")}}
+  - : あるタブの可視エリアの画像をエンコードしたデータ URI を作成します。
+- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
+  - : 特定のウィンドウのアクティブなタブの可視エリアの画像をエンコードしたデータ URI を作成します。
+- {{WebExtAPIRef("tabs.connect()")}}
+  - : あるタブにおいて、バックグラウンドスクリプト（またはその他ポップアップやオプションページのスクリプトなど特権スクリプト）と [content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 間でのメッセージのやり取り用の経路を確保します。
+- {{WebExtAPIRef("tabs.create()")}}
+  - : 新しいタブを作る。
+- {{WebExtAPIRef("tabs.detectLanguage()")}}
+  - : タブのコンテンツの言語を検出する
+- {{WebExtAPIRef("tabs.discard()")}}
+  - : 1 つ以上のタブを破棄する。
+- {{WebExtAPIRef("tabs.duplicate()")}}
+  - : タブを複製する。
+- {{WebExtAPIRef("tabs.executeScript()")}}
+  - : ページに JavaScript コードを挿入する。
+- {{WebExtAPIRef("tabs.get()")}}
+  - : 特定のタブについて情報を取り出す。
+- {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
+  - : 特定のウィンドウ内のすべてのタブについての情報を取り出す。
+- {{WebExtAPIRef("tabs.getCurrent()")}}
+  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab "This type contains information about a tab.") オブジェクトとして取り出す。
+- {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
+  - : あるウィンドウにおいてタブが選択されているかを得る。
+- {{WebExtAPIRef("tabs.getZoom()")}}
+  - : あるタブについてズーム要因を得る。
+- {{WebExtAPIRef("tabs.getZoomSettings()")}}
+  - : あるタブについてズーム設定を得る。
+- {{WebExtAPIRef("tabs.goForward()")}}
+  - : 可能な場合、次のページへ進む。
+- {{WebExtAPIRef("tabs.goBack()")}}
+  - : 可能な場合、前のページへ戻る。
+- {{WebExtAPIRef("tabs.hide()")}} {{experimental_inline}}
+  - : 1 つ以上のタブを隠す。
+- {{WebExtAPIRef("tabs.highlight()")}}
+  - : 1 つ以上のタブをハイライトする。
+- {{WebExtAPIRef("tabs.insertCSS()")}}
+  - : CSS をページに挿入する。
+- {{WebExtAPIRef("tabs.move()")}}
+  - : 2 つ以上のタブを同じ、あるいは異なるウィンドウの任意のポジションへ移動させる。
+- {{WebExtApiRef("tabs.moveInSuccession()")}}
+  - : タブグループの継承関係を編集する。
+- {{WebExtAPIRef("tabs.print()")}}
+  - : 開いているタブのコンテンツを印刷する。
+- {{WebExtAPIRef("tabs.printPreview()")}}
+  - : 開いているタブの印刷プレビューを開く。
+- {{WebExtAPIRef("tabs.query()")}}
+  - : 特定のプロパティを持つすべてのタブ、またはプロパティが指定されなければすべてのタブを取得します。
+- {{WebExtAPIRef("tabs.reload()")}}
+  - : タブをリロードする。キャッシュを回避することもできる。
+- {{WebExtAPIRef("tabs.remove()")}}
+  - : １つ以上のタブを閉じる。
+- {{WebExtAPIRef("tabs.removeCSS()")}}
+  - : 以前に{{WebExtAPIRef("tabs.insertCSS()")}}を呼び出して挿入されている CSS を削除する。
+- {{WebExtAPIRef("tabs.saveAsPDF()")}}
+  - : 現在のページを PDF として保存する。
+- {{WebExtAPIRef("tabs.sendMessage()")}}
+  - : あるタブのコンテンツスクリプトへ、１つのメッセージを送信する。
+- {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
+  - : あるタブのコンテンツスクリプトへ、単一のリクエストを送信する。**非推奨**: 代わりに {{WebExtAPIRef("tabs.sendMessage()")}} を使用してください。
+- {{WebExtAPIRef("tabs.setZoom()")}}
+  - : あるタブをズームする。
+- {{WebExtAPIRef("tabs.setZoomSettings()")}}
+  - : あるタブについてズーム設定をする。
+- {{WebExtAPIRef("tabs.show()")}} {{experimental_inline}}
+  - : {{WebExtAPIRef("tabs.hide()", "hidden")}}で隠されたタブを表示する。
+- {{WebExtAPIRef("tabs.toggleReaderMode()")}}
+  - : あるタブについてのリーダーモードへのトグル。
+- {{WebExtAPIRef("tabs.update()")}}
+  - : 新しい URL に案内、もしくはタブの他のプロパティを修正する。
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.onActivated")}}</dt>
- <dd>ウィンドウ内でアクティブなタブが変わったときに発火。このイベントが発火した段階ではまだタブの URL はセットされているとは限らない。</dd>
- <dt>{{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}</dt>
- <dd>ウィンドウの中の選択されたタブが変更されたときに発火。<strong>非推奨:</strong> 代わりに{{WebExtAPIRef("tabs.onActivated")}}を利用してください。</dd>
- <dt>{{WebExtAPIRef("tabs.onAttached")}}</dt>
- <dd>タブがウィンドウに引っ付けられたとき、例えばウィンドウ間で移動されたときに発火。</dd>
- <dt>{{WebExtAPIRef("tabs.onCreated")}}</dt>
- <dd>タブが作られたときに発火。このイベントが発火した段階ではまだタブの URL はセットされているとは限らない。</dd>
- <dt>{{WebExtAPIRef("tabs.onDetached")}}</dt>
- <dd>タブがウィンドウから切り離されたときに発火。例えば、ウィンドウのない場所へタブを移動させたときなど。</dd>
- <dt>{{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}</dt>
- <dd>ウィンドウ内でハイライトまたは選択されたタブが変更したときに発火。<strong>非推奨:</strong> 代わりに{{WebExtAPIRef("tabs.onHighlighted")}}を使用してください。</dd>
- <dt>{{WebExtAPIRef("tabs.onHighlighted")}}</dt>
- <dd>ウィンドウ内でハイライトまたは選択されたタブが変更したときに発火。</dd>
- <dt>{{WebExtAPIRef("tabs.onMoved")}}</dt>
- <dd>ウィンドウ内にタブが移動したときに発火する。</dd>
- <dt>{{WebExtAPIRef("tabs.onRemoved")}}</dt>
- <dd>タブが閉じられたときに発火する。</dd>
- <dt>{{WebExtAPIRef("tabs.onReplaced")}}</dt>
- <dd>プリレンダリングによってタブが他のタブに置き換えられたときに発火。</dd>
- <dt>{{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}</dt>
- <dd>ウィンドウ内で選択されているタブが変わったときに発火。<strong>非推奨:</strong> 代わりに{{WebExtAPIRef("tabs.onActivated")}}を使用してください。</dd>
- <dt>{{WebExtAPIRef("tabs.onUpdated")}}</dt>
- <dd>タブが更新されたときに発火する。</dd>
- <dt>{{WebExtAPIRef("tabs.onZoomChange")}}</dt>
- <dd>タブがズームされたときに発火する。</dd>
-</dl>
+- {{WebExtAPIRef("tabs.onActivated")}}
+  - : ウィンドウ内でアクティブなタブが変わったときに発火。このイベントが発火した段階ではまだタブの URL はセットされているとは限らない。
+- {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
+  - : ウィンドウの中の選択されたタブが変更されたときに発火。**非推奨:** 代わりに{{WebExtAPIRef("tabs.onActivated")}}を利用してください。
+- {{WebExtAPIRef("tabs.onAttached")}}
+  - : タブがウィンドウに引っ付けられたとき、例えばウィンドウ間で移動されたときに発火。
+- {{WebExtAPIRef("tabs.onCreated")}}
+  - : タブが作られたときに発火。このイベントが発火した段階ではまだタブの URL はセットされているとは限らない。
+- {{WebExtAPIRef("tabs.onDetached")}}
+  - : タブがウィンドウから切り離されたときに発火。例えば、ウィンドウのない場所へタブを移動させたときなど。
+- {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
+  - : ウィンドウ内でハイライトまたは選択されたタブが変更したときに発火。**非推奨:** 代わりに{{WebExtAPIRef("tabs.onHighlighted")}}を使用してください。
+- {{WebExtAPIRef("tabs.onHighlighted")}}
+  - : ウィンドウ内でハイライトまたは選択されたタブが変更したときに発火。
+- {{WebExtAPIRef("tabs.onMoved")}}
+  - : ウィンドウ内にタブが移動したときに発火する。
+- {{WebExtAPIRef("tabs.onRemoved")}}
+  - : タブが閉じられたときに発火する。
+- {{WebExtAPIRef("tabs.onReplaced")}}
+  - : プリレンダリングによってタブが他のタブに置き換えられたときに発火。
+- {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
+  - : ウィンドウ内で選択されているタブが変わったときに発火。**非推奨:** 代わりに{{WebExtAPIRef("tabs.onActivated")}}を使用してください。
+- {{WebExtAPIRef("tabs.onUpdated")}}
+  - : タブが更新されたときに発火する。
+- {{WebExtAPIRef("tabs.onZoomChange")}}
+  - : タブがズームされたときに発火する。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("webextensions.api.tabs")}}</p>
+{{Compat("webextensions.api.tabs")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -212,4 +192,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -3,79 +3,77 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。</p>
+指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。
 
-<p>この関数は <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js notranslate">var querying = browser.tabs.query(
+```js
+var querying = browser.tabs.query(
   queryInfo             // object
 )
-</pre>
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>queryInfo</code></dt>
- <dd><code>object</code>. <code>query()</code> 関数はここで指定されたプロパティにマッチするタブだけを取得します。 このプロパティについての詳細は {{WebExtAPIRef("tabs.Tab")}} を参照してください。</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>active</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. 各ウインドウの中でアクティブかどうか。</dd>
-  <dt><code>audible</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. 音が鳴っているか。</dd>
-  <dt><code>autoDiscardable</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. リソースが少なくなったときにブラウザーによって自動的にdiscardできるか。</dd>
-  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. CookieストアのIDが <code>cookieStoreId</code> なタブのみを返すために使います。このオプションは <code>"cookies"</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>を持つ拡張でのみ使用できます。</dd>
-  <dt><code>currentWindow</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. カレントウインドウの中のタブか。</dd>
-  <dt><code>discarded</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. タブがdiscardされているか。 discardされたタブはコンテンツがメモリからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。</dd>
-  <dt><code>highlighted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. ハイライトされているか。</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. ウィンドウの中での位置。</dd>
-  <dt><code>muted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. ミュートされているか。</dd>
-  <dt><code>lastFocusedWindow</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. 最後にフォーカスされたウインドウのタブか。</dd>
-  <dt><code>openerTabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. そのタブを開いたタブのID。</dd>
-  <dt><code>pinned</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. ピン留めされているか。</dd>
-  <dt><code>status</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('tabs.TabStatus')}}. ロードが完了しているか。</dd>
-  <dt><code>title</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. ページのタイトル。</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code><code>string</code></code> もしくは <code><code>array</code> of <code><code>string</code></code></code>. 1つ以上の<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>にマッチするタブか。フラグメント識別子にはマッチしません。</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. そのウインドウのID。カレントウインドウの場合は、 {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} 。</dd>
-  <dt><code>windowType</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('tabs.WindowType')}}. そのタブの属するウインドウの種類。</dd>
- </dl>
- </dd>
-</dl>
+- `queryInfo`
 
-<h3 id="戻り値">戻り値</h3>
+  - : `object`. `query()` 関数はここで指定されたプロパティにマッチするタブだけを取得します。 このプロパティについての詳細は {{WebExtAPIRef("tabs.Tab")}} を参照してください。
 
-<p>マッチしたタブの情報を持つ <code>{{WebExtAPIRef('tabs.Tab')}}</code> オブジェクトの <code>array</code> に解決される <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>。</p>
+    - `active`{{optional_inline}}
+      - : `boolean`. 各ウインドウの中でアクティブかどうか。
+    - `audible`{{optional_inline}}
+      - : `boolean`. 音が鳴っているか。
+    - `autoDiscardable`{{optional_inline}}
+      - : `boolean`. リソースが少なくなったときにブラウザーによって自動的に discard できるか。
+    - `cookieStoreId` {{optional_inline}}
+      - : `string`. Cookie ストアの ID が `cookieStoreId` なタブのみを返すために使います。このオプションは `"cookies"` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持つ拡張でのみ使用できます。
+    - `currentWindow`{{optional_inline}}
+      - : `boolean`. カレントウインドウの中のタブか。
+    - `discarded`{{optional_inline}}
+      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
+    - `highlighted`{{optional_inline}}
+      - : `boolean`. ハイライトされているか。
+    - `index`{{optional_inline}}
+      - : `integer`. ウィンドウの中での位置。
+    - `muted`{{optional_inline}}
+      - : `boolean`. ミュートされているか。
+    - `lastFocusedWindow`{{optional_inline}}
+      - : `boolean`. 最後にフォーカスされたウインドウのタブか。
+    - `openerTabId`{{optional_inline}}
+      - : `integer`. そのタブを開いたタブの ID。
+    - `pinned`{{optional_inline}}
+      - : `boolean`. ピン留めされているか。
+    - `status`{{optional_inline}}
+      - : {{WebExtAPIRef('tabs.TabStatus')}}. ロードが完了しているか。
+    - `title`{{optional_inline}}
+      - : `string`. ページのタイトル。
+    - `url`{{optional_inline}}
+      - : `string` もしくは `array of string`. 1 つ以上の[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)にマッチするタブか。フラグメント識別子にはマッチしません。
+    - `windowId`{{optional_inline}}
+      - : `integer`. そのウインドウの ID。カレントウインドウの場合は、 {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} 。
+    - `windowType`{{optional_inline}}
+      - : {{WebExtAPIRef('tabs.WindowType')}}. そのタブの属するウインドウの種類。
 
-<p>エラーが発生した場合、その Promise はエラーメッセージとともに却下されます。</p>
+### 戻り値
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+マッチしたタブの情報を持つ `{{WebExtAPIRef('tabs.Tab')}}` オブジェクトの `array` に解決される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-<p>{{Compat("webextensions.api.tabs.query", 10)}}</p>
+エラーが発生した場合、その Promise はエラーメッセージとともに却下されます。
 
-<h2 id="例">例</h2>
+## ブラウザ実装状況
 
-<p>全てのタブを取得する例：</p>
+{{Compat("webextensions.api.tabs.query", 10)}}
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+## 例
+
+全てのタブを取得する例：
+
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -87,11 +85,13 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>カレントウインドウの全てのタブを取得する例：</p>
+カレントウインドウの全てのタブを取得する例：
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -103,11 +103,13 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({currentWindow: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>カレントウインドウのアクティブなタブを取得する例：</p>
+カレントウインドウのアクティブなタブを取得する例：
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -119,11 +121,13 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({currentWindow: true, active: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>"mozilla.org" またはそのサブドメイン下のHTTP/HTTPS URLを開いている全てのタブを取得する例：</p>
+"mozilla.org" またはそのサブドメイン下の HTTP/HTTPS URL を開いている全てのタブを取得する例：
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -135,11 +139,13 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>moz-extension:// URLを開いている全てのタブを取得する例：</p>
+moz-extension:// URL を開いている全てのタブを取得する例：
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   console.log(tabs);
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
@@ -153,11 +159,12 @@ function onError(error) {
 
 var querying = browser.tabs.query({url: "moz-extension://*/*"});
 querying.then(logTabs, onError);
-</pre>
+```
 
-<p>この拡張機能のURLを開いている全てのタブを取得する例：</p>
+この拡張機能の URL を開いている全てのタブを取得する例：
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   console.log(tabs);
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
@@ -171,19 +178,13 @@ function onError(error) {
 
 var querying = browser.tabs.query({url: browser.extension.getURL("*")});
 querying.then(logTabs, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a class="external external-icon" href="https://developer.chrome.com/extensions/tabs#method-duplicate"><code>chrome.tabs</code></a> APIに基づいています。 This documentation is derived from <a class="external external-icon" href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
-
-<div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -211,4 +212,3 @@ querying.then(logTabs, onError);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

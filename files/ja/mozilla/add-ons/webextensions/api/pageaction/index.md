@@ -12,70 +12,58 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions">ページアクション</a> は、ブラウザーのアドレスバーの中のクリックできるアイコンです。</p>
+[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions) は、ブラウザーのアドレスバーの中のクリックできるアイコンです。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12960/page-action.png" style="display: block; height: 262px; margin-left: auto; margin-right: auto; width: 850px;"></p>
+![](https://mdn.mozillademos.org/files/12960/page-action.png)
 
-<p>You can listen for clicks on the icon, or specify a <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Popups">popup</a> that will open when the icon is clicked.</p>
+You can listen for clicks on the icon, or specify a [popup](/ja/docs/Mozilla/Add-ons/WebExtensions/Popups) that will open when the icon is clicked.
 
-<p>If you specify a popup, you can define its contents and behavior using HTML, CSS, and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.</p>
+If you specify a popup, you can define its contents and behavior using HTML, CSS, and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.
 
-<p>You can define most of a page action's properties declaratively using the <a href="/ja/Add-ons/WebExtensions/manifest.json/page_action">page_action key</a> in your <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>, but can also redefine them programmatically using this API.</p>
+You can define most of a page action's properties declaratively using the [page_action key](/ja/Add-ons/WebExtensions/manifest.json/page_action) in your [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json), but can also redefine them programmatically using this API.
 
-<p>Page actions are for actions that are only relevant to particular pages. If your icon should always be available, use a <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a> instead.</p>
+Page actions are for actions that are only relevant to particular pages. If your icon should always be available, use a [browser action](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action) instead.
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.ImageDataType")}}</dt>
- <dd>Pixel data for an image.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.ImageDataType")}}
+  - : Pixel data for an image.
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.show()")}}</dt>
- <dd>Shows the page action for a given tab.</dd>
- <dt>{{WebExtAPIRef("pageAction.hide()")}}</dt>
- <dd>Hides the page action for a given tab.</dd>
- <dt>{{WebExtAPIRef("pageAction.setTitle()")}}</dt>
- <dd>Sets the page action's title. This is displayed in a tooltip over the page action.</dd>
- <dt>{{WebExtAPIRef("pageAction.getTitle()")}}</dt>
- <dd>Gets the page action's title.</dd>
- <dt>{{WebExtAPIRef("pageAction.setIcon()")}}</dt>
- <dd>Sets the page action's icon.</dd>
- <dt>{{WebExtAPIRef("pageAction.setPopup()")}}</dt>
- <dd>Sets the URL for the page action's popup.</dd>
- <dt>{{WebExtAPIRef("pageAction.getPopup()")}}</dt>
- <dd>Gets the URL for the page action's popup.</dd>
- <dt>{{WebExtAPIRef("pageAction.openPopup()")}}</dt>
- <dd>Opens the page action's popup.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.show()")}}
+  - : Shows the page action for a given tab.
+- {{WebExtAPIRef("pageAction.hide()")}}
+  - : Hides the page action for a given tab.
+- {{WebExtAPIRef("pageAction.setTitle()")}}
+  - : Sets the page action's title. This is displayed in a tooltip over the page action.
+- {{WebExtAPIRef("pageAction.getTitle()")}}
+  - : Gets the page action's title.
+- {{WebExtAPIRef("pageAction.setIcon()")}}
+  - : Sets the page action's icon.
+- {{WebExtAPIRef("pageAction.setPopup()")}}
+  - : Sets the URL for the page action's popup.
+- {{WebExtAPIRef("pageAction.getPopup()")}}
+  - : Gets the URL for the page action's popup.
+- {{WebExtAPIRef("pageAction.openPopup()")}}
+  - : Opens the page action's popup.
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.onClicked")}}</dt>
- <dd>Fired when a page action icon is clicked. This event will not fire if the page action has a popup.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.onClicked")}}
+  - : Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.pageAction")}}</p>
+{{Compat("webextensions.api.pageAction")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,4 +91,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

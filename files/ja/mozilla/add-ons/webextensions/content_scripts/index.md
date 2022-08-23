@@ -5,108 +5,89 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>コンテンツスクリプトは、特定のウェブページのコンテキストで実行される拡張機能の一部です（拡張機能の一部であるバックグラウンドスクリプトや、ウェブサイト自体の一部であるスクリプト、例えば {{HTMLElement("script")}} 要素みたいなものと対をなすような)。</p>
+コンテンツスクリプトは、特定のウェブページのコンテキストで実行される拡張機能の一部です（拡張機能の一部であるバックグラウンドスクリプトや、ウェブサイト自体の一部であるスクリプト、例えば {{HTMLElement("script")}} 要素みたいなものと対をなすような)。
 
-<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">バックグラウンドスクリプト</a>はすべての <a href="/ja/Add-ons/WebExtensions/API">WebExtension JavaScript API</a> にアクセスできますが、ウェブページのコンテンツに直接アクセスすることはできません。だからあなたの拡張機能がそれを行う必要がある場合は、コンテンツスクリプトが必要です。</p>
+[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)はすべての [WebExtension JavaScript API](/ja/Add-ons/WebExtensions/API) にアクセスできますが、ウェブページのコンテンツに直接アクセスすることはできません。だからあなたの拡張機能がそれを行う必要がある場合は、コンテンツスクリプトが必要です。
 
-<p>通常のウェブページで読み込まれたスクリプトと同様に、コンテンツスクリプトは、標準の DOM API を使用してページのコンテンツを読み取り、変更することができます。</p>
+通常のウェブページで読み込まれたスクリプトと同様に、コンテンツスクリプトは、標準の DOM API を使用してページのコンテンツを読み取り、変更することができます。
 
-<p>コンテンツスクリプトは、<a href="/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">WebExtension API</a> の小さなサブセット にしかアクセスできませんが、メッセージングシステムを使用して <a href="/ja/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">バックグラウンドスクリプトと通信</a>し、WebExtension API に間接的にアクセスすることができます。</p>
+コンテンツスクリプトは、[WebExtension API](/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs) の小さなサブセット にしかアクセスできませんが、メッセージングシステムを使用して [バックグラウンドスクリプトと通信](/ja/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts)し、WebExtension API に間接的にアクセスすることができます。
 
-<div class="note">
-<p>コンテンツスクリプトは次のドメインでブロックされるのに注意してください:</p>
+> **Note:** コンテンツスクリプトは次のドメインでブロックされるのに注意してください:
+>
+> - accounts-static.cdn.mozilla.net
+> - accounts.firefox.com
+> - addons.cdn.mozilla.net
+> - addons.mozilla.org
+> - api.accounts.firefox.com
+> - content.cdn.mozilla.net
+> - content.cdn.mozilla.net
+> - discovery.addons.mozilla.org
+> - input.mozilla.org
+> - install.mozilla.org
+> - oauth.accounts.firefox.com
+> - profile.accounts.firefox.com
+> - support.mozilla.org
+> - sync.services.mozilla.com
+> - testpilot.firefox.com
+>
+> このドメインのページにコンテンツスクリプトを挿入しようとすると、そのスクリプトは失敗し、ページは [CSP](/ja/docs/Web/Security/CSP) エラーをログに記録します。
+>
+> addons.mozilla.org を含む制限のために、ユーザーはインストール後すぐに拡張機能を試して、動かないのに気付くだけでしょう! 適切な警告を追加するか、`addons.mozilla.org` から動かす [onboarding page](/ja/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) を追加したくなるでしょう。
 
-<ul style="display: grid;">
- <li>accounts-static.cdn.mozilla.net</li>
- <li>accounts.firefox.com</li>
- <li>addons.cdn.mozilla.net</li>
- <li>addons.mozilla.org</li>
- <li>api.accounts.firefox.com</li>
- <li>content.cdn.mozilla.net</li>
- <li>content.cdn.mozilla.net</li>
- <li>discovery.addons.mozilla.org</li>
- <li>input.mozilla.org</li>
- <li>install.mozilla.org</li>
- <li>oauth.accounts.firefox.com</li>
- <li>profile.accounts.firefox.com</li>
- <li>support.mozilla.org</li>
- <li>sync.services.mozilla.com</li>
- <li>testpilot.firefox.com</li>
-</ul>
+> **Note:** `letfoo` や `window.foo = "bar"` にて、コンテンツスクリプトのグローバルスコープで追加された値は、[1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996) のバグによって消えることがあります。
 
-<p>このドメインのページにコンテンツスクリプトを挿入しようとすると、そのスクリプトは失敗し、ページは <a href="/ja/docs/Web/Security/CSP">CSP</a> エラーをログに記録します。</p>
+## コンテンツスクリプトの読み込み
 
-<p>addons.mozilla.org を含む制限のために、ユーザーはインストール後すぐに拡張機能を試して、動かないのに気付くだけでしょう! 適切な警告を追加するか、<code>addons.mozilla.org</code> から動かす <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">onboarding page</a> を追加したくなるでしょう。</p>
-</div>
+次の 3 つの方法のいずれかを使用して、ウェブページにコンテンツスクリプトを読み込むことができます。
 
-<div class="note">
-<p><code>letfoo</code> や <code>window.foo = "bar"</code> にて、コンテンツスクリプトのグローバルスコープで追加された値は、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a> のバグによって消えることがあります。</p>
-</div>
+1.  - **インストール時に、URL パターンにマッチするページ内へ**
+      - : `manifest.json` の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーを使用して、URL が[指定されたパターンにマッチする](/ja/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。
+2.  - **実行時に、URL パターンにマッチするページ内へ**
+      - : {{WebExtAPIRef("contentScripts")}} API を使って、URL が[指定されたパターンにマッチする](/ja/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは method (1) のようなもので、違いは実行時にコンテンツスクリプトを追加/削除できることです。
+3.  - **実行時に、特定のタブへ**
+      - : [`tabs.executeScript()`](/ja/Add-ons/WebExtensions/API/Tabs/executeScript) API を使用すると、ユーザーが[ブラウザーアクション](/ja/Add-ons/WebExtensions/user_interface/Browser_action)をクリックした場合など、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。
 
-<h2 id="Loading_content_scripts" name="Loading_content_scripts">コンテンツスクリプトの読み込み</h2>
+*フレームごと、拡張機能ごとの*グローバルスコープしかありません。これは 1 つのコンテンツスクリプトの変数は、読み込み方にかかわらず、他のコンテンツスクリプトからアクセスできることになります。
 
-<p>次の 3 つの方法のいずれかを使用して、ウェブページにコンテンツスクリプトを読み込むことができます。</p>
+方法 (1) と (2) では[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)を使って表現された URL のスクリプトだけを読み込みできます。
 
-<ol>
- <li>
-  <dl>
-   <dt><strong>インストール時に、URL パターンにマッチするページ内へ</strong></dt>
-   <dd><code>manifest.json</code> の <code style="font-style: normal;"><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーを使用して、URL が<a href="/ja/Add-ons/WebExtensions/Match_patterns">指定されたパターンにマッチする</a>ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。</dd>
-  </dl>
- </li>
- <li>
-  <dl>
-   <dt><strong>実行時に、URL パターンにマッチするページ内へ</strong></dt>
-   <dd>{{WebExtAPIRef("contentScripts")}} API を使って、URL が<a href="/ja/Add-ons/WebExtensions/Match_patterns">指定されたパターンにマッチする</a>ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは method (1) のようなもので、違いは実行時にコンテンツスクリプトを追加/削除できることです。</dd>
-  </dl>
- </li>
- <li>
-  <dl>
-   <dt><strong>実行時に、特定のタブへ</strong></dt>
-   <dd><code><a href="/ja/Add-ons/WebExtensions/API/Tabs/executeScript">tabs.executeScript()</a></code> API を使用すると、ユーザーが<a href="/ja/Add-ons/WebExtensions/user_interface/Browser_action">ブラウザーアクション</a>をクリックした場合など、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。</dd>
-  </dl>
- </li>
-</ol>
+方法 (3) では、拡張機能と一緒にパッケージされたページのスクリプトも読み込みできますが、"about:debugging" や "about:addons"のような権限つきページにはスクリプトを読み込めません。
 
-<p><em>フレームごと、拡張機能ごとの</em>グローバルスコープしかありません。これは 1 つのコンテンツスクリプトの変数は、読み込み方にかかわらず、他のコンテンツスクリプトからアクセスできることになります。</p>
+## コンテンツスクリプト環境
 
-<p>方法 (1) と (2) では<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>を使って表現された URL のスクリプトだけを読み込みできます。</p>
+### DOM アクセス
 
-<p>方法 (3) では、拡張機能と一緒にパッケージされたページのスクリプトも読み込みできますが、"about:debugging" や "about:addons"のような権限つきページにはスクリプトを読み込めません。</p>
+コンテンツスクリプトは、普通のページスクリプトと同様に、ページの DOM にアクセスして修正できます。ページスクリプトにてなされた DOM の変更を見ることもできます。
 
-<h2 id="Content_script_environment" name="Content_script_environment">コンテンツスクリプト環境</h2>
+しかし、コンテンツスクリプトは "DOM のきれいな見た目" を取得します。これはつまり:
 
-<h3 id="DOM_access" name="DOM_access">DOM アクセス</h3>
+- コンテンツスクリプトはページスクリプトにて定義された JavaScript 変数を見ることができない
+- ページスクリプトが組み込み DOM プロパティを再定義した場合、コンテンツスクリプトはそのプロパティの(再定義後でなく)オリジナル値を見ている
 
-<p>コンテンツスクリプトは、普通のページスクリプトと同様に、ページの DOM にアクセスして修正できます。ページスクリプトにてなされた DOM の変更を見ることもできます。</p>
+Firefox では、この挙動は [Xray vision](/ja/docs/Xray_vision) と呼ばれます。
 
-<p>しかし、コンテンツスクリプトは "DOM のきれいな見た目" を取得します。これはつまり:</p>
+例えば、次のウェブページを考えます:
 
-<ul>
- <li>コンテンツスクリプトはページスクリプトにて定義された  JavaScript 変数を見ることができない</li>
- <li>ページスクリプトが組み込み DOM プロパティを再定義した場合、コンテンツスクリプトはそのプロパティの(再定義後でなく)オリジナル値を見ている</li>
-</ul>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  </head>
 
-<p>Firefox では、この挙動は <a href="/ja/docs/Xray_vision">Xray vision</a> と呼ばれます。</p>
+  <body>
+    <script src="page-scripts/page-script.js"></script>
+  </body>
+</html>
+```
 
-<p>例えば、次のウェブページを考えます:</p>
+"page-script.js" スクリプトは次を実行します:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-    &lt;script src="page-scripts/page-script.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<p>"page-script.js" スクリプトは次を実行します:</p>
-
-<pre class="brush: js">// page-script.js
+```js
+// page-script.js
 
 // add a new element to the DOM
 let p = document.createElement("p");
@@ -120,11 +101,13 @@ window.foo = "This global variable was added by a page script";
 // redefine the built-in window.confirm() function
 window.confirm = function() {
   alert("The page script has also redefined 'confirm'");
-}</pre>
+}
+```
 
-<p>今度は拡張機能がページにコンテンツスクリプトを挿入します:</p>
+今度は拡張機能がページにコンテンツスクリプトを挿入します:
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 // can access and modify the DOM
 let pageScriptPara = document.getElementById("page-script-para");
@@ -134,121 +117,94 @@ pageScriptPara.style.backgroundColor = "blue";
 console.log(window.foo);  // undefined
 
 // sees the original form of redefined properties
-window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
+window.confirm("Are you sure?"); // calls the original window.confirm()
+```
 
-<p>その反対もまた真です; ページスクリプトはコンテンツスクリプトが追加した JavaScript プロパティを見られません。</p>
+その反対もまた真です; ページスクリプトはコンテンツスクリプトが追加した JavaScript プロパティを見られません。
 
-<p>このことからすると、コンテンツスクリプトは予言できる振る舞いをする DOM プロパティに依存していて、ページスクリプトにて定義された変数とコンテンツスクリプトで定義する変数の衝突は心配しなくていいです。</p>
+このことからすると、コンテンツスクリプトは予言できる振る舞いをする DOM プロパティに依存していて、ページスクリプトにて定義された変数とコンテンツスクリプトで定義する変数の衝突は心配しなくていいです。
 
-<p>この振る舞いの実用的な結論として、コンテンツスクリプトはページに読み込まれたいかなる JavaScript ライブラリーにもアクセスしません。なので例えば、ページに jQuery が含まれても、コンテンツスクリプトは見ることができません。</p>
+この振る舞いの実用的な結論として、コンテンツスクリプトはページに読み込まれたいかなる JavaScript ライブラリーにもアクセスしません。なので例えば、ページに jQuery が含まれても、コンテンツスクリプトは見ることができません。
 
-<p>コンテンツスクリプトから JavaScript ライブラリを使いたい場合、ライブラリ自身を、使う方のコンテンツスクリプトと<em>並べて</em>挿入するべきです:</p>
+コンテンツスクリプトから JavaScript ライブラリを使いたい場合、ライブラリ自身を、使う方のコンテンツスクリプトと*並べて*挿入するべきです:
 
-<pre class="brush: json">"content_scripts": [
+```json
+"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["jquery.js", "content-script.js"]
   }
-]</pre>
+]
+```
 
-<div class="blockIndicator note">
-<p><strong>記:</strong> Firefox ではコンテンツスクリプトからページスクリプトによって生成された JavaScript オブジェクトにアクセスしたり、ページスクリプトにコンテンツスクリプトの JavaScript オブジェクトを公開できるようにする API が提供されます。</p>
+> **Note:** **記:** Firefox ではコンテンツスクリプトからページスクリプトによって生成された JavaScript オブジェクトにアクセスしたり、ページスクリプトにコンテンツスクリプトの JavaScript オブジェクトを公開できるようにする API が提供されます。
+>
+> 詳しくは[ページスクリプトとオブジェクトを共有する](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)のページを見てください。
 
-<p>詳しくは<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">ページスクリプトとオブジェクトを共有する</a>のページを見てください。</p>
-</div>
+### WebExtension API
 
-<h3 id="WebExtension_APIs" name="WebExtension_APIs">WebExtension API</h3>
+標準 DOM API に加え、コンテンツスクリプトは次の WebExtension API を使用できます:
 
-<p>標準 DOM API に加え、コンテンツスクリプトは次の WebExtension API を使用できます:</p>
+[`extension`](/ja/Add-ons/WebExtensions/API/extension) から:
 
-<p><code><a href="/ja/Add-ons/WebExtensions/API/extension">extension</a></code> から:</p>
+- [`getURL()`](</ja/Add-ons/WebExtensions/API/extension#getURL()>)
+- [`inIncognitoContext`](/ja/Add-ons/WebExtensions/API/extension#inIncognitoContext)
 
-<ul>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/extension#getURL()">getURL()</a></code></li>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/extension#inIncognitoContext">inIncognitoContext</a></code></li>
-</ul>
+[`runtime`](/ja/Add-ons/WebExtensions/API/runtime) から:
 
-<p><code><a href="/ja/Add-ons/WebExtensions/API/runtime">runtime</a></code> から:</p>
+- [`connect()`](</ja/Add-ons/WebExtensions/API/runtime#connect()>)
+- [`getManifest()`](</ja/Add-ons/WebExtensions/API/runtime#getManifest()>)
+- [`getURL()`](</ja/Add-ons/WebExtensions/API/runtime#getURL()>)
+- [`onConnect`](/ja/Add-ons/WebExtensions/API/runtime#onConnect)
+- [`onMessage`](/ja/Add-ons/WebExtensions/API/runtime#onMessage)
+- [`sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>)
 
-<ul>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/runtime#connect()">connect()</a></code></li>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/runtime#getManifest()">getManifest()</a></code></li>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/runtime#getURL()">getURL()</a></code></li>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/runtime#onConnect">onConnect</a></code></li>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/runtime#onMessage">onMessage</a></code></li>
- <li><code><a href="/ja/Add-ons/WebExtensions/API/runtime#sendMessage()">sendMessage()</a></code></li>
-</ul>
+[`i18n`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n) から:
 
-<p><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code> から:</p>
+- [`getMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage)
+- [`getAcceptLanguages()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages)
+- [`getUILanguage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage)
+- [`detectLanguage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage)
 
-<ul>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage">getMessage()</a></code></li>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages">getAcceptLanguages()</a></code></li>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage">getUILanguage()</a></code></li>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage">detectLanguage()</a></code></li>
-</ul>
+すべてから:
 
-<p>すべてから:</p>
+- [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage)
 
-<ul>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></li>
-</ul>
+### XHR と Fetch
 
-<h3 id="XHR_and_Fetch" name="XHR_and_Fetch">XHR と Fetch</h3>
+コンテンツスクリプトは通常の [`window.XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) と [`window.fetch()`](/ja/docs/Web/API/Fetch_API) API を使ってリクエストを作成できます。
 
-<p>コンテンツスクリプトは通常の <code><a href="/ja/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> と <code><a href="/ja/docs/Web/API/Fetch_API">window.fetch()</a></code> API を使ってリクエストを作成できます。</p>
+> **Note:** Firefox では、コンテンツスクリプトの (例えば、[`fetch()`](/ja/docs/Web/API/Fetch_API/Using_Fetch) を使った) リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対 URL で提供せねばなりません。
+>
+> Chrome では、リクエストはページのコンテキストで起こるので、相対 URL で行われます。例えば、`/api` は `https://[現在のページの URL]/api` に送られます。
 
-<div class="blockIndicator note">
-<p>Firefox では、コンテンツスクリプトの (例えば、<code><a href="/ja/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code> を使った) リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対URL で提供せねばなりません。</p>
+コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します: よって拡張機能が `manifest.json` の [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions) キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。
 
-<p>Chrome では、リクエストはページのコンテ<span class="hidden"> </span>キストで起こるので、相対 URL で行われます。例えば、<code>/api</code> は <code>https://[現在のペー<span class="hidden"> </span>ジの URL]/api</code> に送られます。</p>
-</div>
+これはより多く権限付けられた XHR に晒して、コンテンツスクリプトでインスタンスを取得することで達成し、その副作用としてページ自体からのリクエストがそうであるように [`Origin`](/ja/docs/Web/HTTP/Headers/Origin) と [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) ヘッダーがセットされず、リクエストからクロスオリジンな性質を隠すことが好ましいことがよくあります。
 
-<p>コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します: よって拡張機能が <code>manifest.json</code> の <code><a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。</p>
+> **Note:** バージョン 58 以降、コンテンツ自体から送られたかのようなリクエストを必要とする拡張機能は `content.XMLHttpRequest` と `content.fetch()` を代わりに使うことができます。
+>
+> クロスブラウザー拡張機能にとってこれらの存在は機能検出となります。
 
-<p>これはより多く権限付けられた XHR に晒して、コンテンツスクリプトでインスタンスを取得することで達成し、その副作用としてページ自体からのリクエストがそうであるように <code><a href="/ja/docs/Web/HTTP/Headers/Origin">Origin</a></code> と <code><a href="/ja/docs/Web/HTTP/Headers/Referer">Referer</a></code> ヘッダーがセットされず、リクエストからクロスオリジンな性質を隠すことが好ましいことがよくあります。</p>
+## バックグラウンドスクリプトとの通信
 
-<div class="blockIndicator note">
-<p>バージョン 58 以降、コンテンツ自体から送られたかのようなリクエストを必要とする拡張機能は  <code>content.XMLHttpRequest</code> と <code>content.fetch()</code> を代わりに使うことができます。</p>
+コンテンツスクリプトは WebExtension API の大半を直接には使用できませんが、メッセージ API を用いて拡張機能のバックグラウンドスクリプトと通信できて、それゆえにバックグラウンドスクリプトがアクセスできるすべての API に間接的にアクセスできます。
 
-<p>クロスブラウザー拡張機能にとってこれらの存在は機能検出となります。</p>
-</div>
+バックグラウンドスクリプトとコンテンツスクリプトが通信する 2 つのパターンがあります: (オプションなレスポンスつきの)**ワンオフメッセージ**を送るのと、**お互いに息の長いコネクションを確立して**、そこでメッセージを交換するのとです。
 
-<h2 id="Communicating_with_background_scripts" name="Communicating_with_background_scripts">バックグラウンドスクリプトとの通信</h2>
+### ワンオフメッセージ
 
-<p>コンテンツスクリプトは WebExtension API の大半を直接には使用できませんが、メッセージ API を用いて拡張機能のバックグラウンドスクリプトと通信できて、それゆえにバックグラウンドスクリプトがアクセスできるすべての API に間接的にアクセスできます。</p>
+レスポンスが必須でないワンオフメッセージを送るには、次の API を使います:
 
-<p>バックグラウンドスクリプトとコンテンツスクリプトが通信する 2 つのパターンがあります: (オプションなレスポンスつきの)<strong>ワンオフメッセージ</strong>を送るのと、<strong>お互いに息の長いコネクションを確立して</strong>、そこでメッセージを交換するのとです。</p>
+|                | コンテンツスクリプト内                                                               | バックグラウンドスクリプト内                                                   |
+| -------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| 送信メッセージ | [`browser.runtime.sendMessage()`](/ja/Add-ons/WebExtensions/API/runtime/sendMessage) | [`browser.tabs.sendMessage()`](/ja/Add-ons/WebExtensions/API/Tabs/sendMessage) |
+| 受信メッセージ | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime/onMessage)       | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime/onMessage) |
 
-<h3 id="One-off_messages" name="One-off_messages">ワンオフメッセージ</h3>
+例えば、ウェブページでのクリックイベントをリッスンするコンテンツスクリプトがここにあります。クリックがリンク上である場合、ターゲット URL をバックグラウンドページにメッセージします。
 
-<p>レスポンスが必須でないワンオフメッセージを送るには、次の API を使います:</p>
-
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="row"></th>
-   <th scope="col">コンテンツスクリプト内</th>
-   <th scope="col">バックグラウンドスクリプト内</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">送信メッセージ</th>
-   <td><code><a href="/ja/Add-ons/WebExtensions/API/runtime/sendMessage">browser.runtime.sendMessage()</a></code></td>
-   <td><code><a href="/ja/Add-ons/WebExtensions/API/Tabs/sendMessage">browser.tabs.sendMessage()</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">受信メッセージ</th>
-   <td><code><a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code></td>
-   <td><code><a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code></td>
-  </tr>
- </tbody>
-</table>
-
-<p>例えば、ウェブページでのクリックイベントをリッスンするコンテンツスクリプトがここにあります。クリックがリンク上である場合、ターゲット URL をバックグラウンドページにメッセージします。</p>
-
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.addEventListener("click", notifyExtension);
 
@@ -257,11 +213,13 @@ function notifyExtension(e) {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
-}</pre>
+}
+```
 
-<p>バックグラウンドスクリプトはこのメッセージをリッスンして、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API を使って通知を表示します:</p>
+バックグラウンドスクリプトはこのメッセージをリッスンして、[`notifications`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API を使って通知を表示します:
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 browser.runtime.onMessage.addListener(notify);
 
@@ -273,51 +231,42 @@ function notify(message) {
     "message": message.url
   });
 }
-</pre>
+```
 
-<p>この例のコードは Github の <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> のサンプルから簡単に適用できます。</p>
+この例のコードは Github の [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) のサンプルから簡単に適用できます。
 
-<h3 id="Connection-based_messaging" name="Connection-based_messaging">コネクションベースのメッセージ</h3>
+### コネクションベースのメッセージ
 
-<p>ワンオフメッセージの送信は、バックグラウンドスクリプトとコンテンツスクリプトとで多くのメッセージを交換する場合はめんどくさいです。なので代替パターンは、この 2 つのコンテキスト間で寿命の長いコネクションを確立して、メッセージ交換にこのコネクションを使うことです。</p>
+ワンオフメッセージの送信は、バックグラウンドスクリプトとコンテンツスクリプトとで多くのメッセージを交換する場合はめんどくさいです。なので代替パターンは、この 2 つのコンテキスト間で寿命の長いコネクションを確立して、メッセージ交換にこのコネクションを使うことです。
 
-<p>いずれの側にも <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> オブジェクトがあり、メッセージ交換に使えます。</p>
+いずれの側にも [`runtime.Port`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) オブジェクトがあり、メッセージ交換に使えます。
 
-<p>コネクションを作成するには:</p>
+コネクションを作成するには:
 
-<ul>
- <li>片方で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> にてコネクションをリッスンする。</li>
- <li>もう片方で次を呼び出す:
-  <ul>
-   <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> (コンテンツスクリプトに接続する場合)</li>
-   <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> (バックグラウンドスクリプトに接続する場合)</li>
-  </ul>
- </li>
-</ul>
+- 片方で [`runtime.onConnect`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) にてコネクションをリッスンする。
+- もう片方で次を呼び出す:
 
-<p>これは <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> オブジェクトを返します。</p>
+  - [`tabs.connect()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (コンテンツスクリプトに接続する場合)
+  - [`runtime.connect()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (バックグラウンドスクリプトに接続する場合)
 
-<ul>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> リスナーには自身の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> オブジェクトが渡される。</li>
-</ul>
+これは [`runtime.Port`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) オブジェクトを返します。
 
-<p>それぞれがポートを持ったら、両方が:</p>
+- [`runtime.onConnect`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) リスナーには自身の [`runtime.Port`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) オブジェクトが渡される。
 
-<ul>
- <li><code>runtime.Port.postMessage()</code> でメッセージを送って</li>
- <li><code>runtime.Port.onMessage</code> でメッセージを受信できるようになる。</li>
-</ul>
+それぞれがポートを持ったら、両方が:
 
-<p>例えば、ロードしたらすぐに、このコンテンツスクリプトは:</p>
+- `runtime.Port.postMessage()` でメッセージを送って
+- `runtime.Port.onMessage` でメッセージを受信できるようになる。
 
-<ul>
- <li>バックグラウンドに接続し</li>
- <li><code>myPort</code> 変数に <code>Port</code> を格納する</li>
- <li><code>myPort</code> のメッセージをリッスンする(ログに出す)</li>
- <li>ユーザーがドキュメントをクリックしたとき、バックグラウンドスクリプトに <code>myPort</code> を使ってメッセージを送る</li>
-</ul>
+例えば、ロードしたらすぐに、このコンテンツスクリプトは:
 
-<pre class="brush: js">// content-script.js
+- バックグラウンドに接続し
+- `myPort` 変数に `Port` を格納する
+- `myPort` のメッセージをリッスンする(ログに出す)
+- ユーザーがドキュメントをクリックしたとき、バックグラウンドスクリプトに `myPort` を使ってメッセージを送る
+
+```js
+// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -329,23 +278,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>対応するバックグラウンドスクリプトは:</p>
+対応するバックグラウンドスクリプトは:
 
-<ul>
- <li>コンテンツスクリプトからの通信試行をリッスンする</li>
- <li>通信試行を受け取ったとき:
-  <ul>
-   <li><code>portFromCS</code> という名前の変数にポートを格納する</li>
-   <li>そのポートを使ってコンテンツスクリプトにメッセージを送る</li>
-   <li>ポートに届いたメッセージをリッスンしてログに出す</li>
-  </ul>
- </li>
- <li>ユーザーが拡張機能のブラウザーアクションをクリックしたとき、<code>portFromCS</code> を使ってコンテンツスクリプトにメッセージを送る</li>
-</ul>
+- コンテンツスクリプトからの通信試行をリッスンする
+- 通信試行を受け取ったとき:
 
-<pre class="brush: js">// background-script.js
+  - `portFromCS` という名前の変数にポートを格納する
+  - そのポートを使ってコンテンツスクリプトにメッセージを送る
+  - ポートに届いたメッセージをリッスンしてログに出す
+
+- ユーザーが拡張機能のブラウザーアクションをクリックしたとき、`portFromCS` を使ってコンテンツスクリプトにメッセージを送る
+
+```js
+// background-script.js
 
 var portFromCS;
 
@@ -363,16 +311,14 @@ browser.runtime.onConnect.addListener(connected);
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
-</pre>
+```
 
-<h4 id="Multiple_content_scripts" name="Multiple_content_scripts">複数のコンテンツスクリプト</h4>
+#### 複数のコンテンツスクリプト
 
-<p>同時に複数のコンテンツスクリプトが通信する場合、各接続を配列に格納するのが良いかもしれません。</p>
+同時に複数のコンテンツスクリプトが通信する場合、各接続を配列に格納するのが良いかもしれません。
 
-<ul>
-</ul>
-
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 var ports = []
 
@@ -384,41 +330,36 @@ function connected(p) {
 browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p =&gt; {
+  ports.forEach(p => {
         p.postMessage({greeting: "they clicked the button!"})
     })
-});</pre>
+});
+```
 
-<ul>
-</ul>
+### ワンオフメッセージとコネクションベースのメッセージとの選択
 
-<h3 id="Choosing_between_one-off_messages_and_connection-based_messaging" name="Choosing_between_one-off_messages_and_connection-based_messaging">ワンオフメッセージとコネクションベースのメッセージとの選択</h3>
+ワンオフとコネクションベースのメッセージの選択は、拡張機能がどうメッセージを利用すると期待されるかに依存します。
 
-<p>ワンオフとコネクションベースのメッセージの選択は、拡張機能がどうメッセージを利用すると期待されるかに依存します。</p>
+推奨のベストプラクティスは次の通りです:
 
-<p>推奨のベストプラクティスは次の通りです:</p>
+**次のときにワンオフメッセージを使用…**
 
-<p><strong>次のときにワンオフメッセージを使用… </strong></p>
+- メッセージに 1 つだけの応答がある場合
+- メッセージの受信を少しのスクリプトがリッスンする場合({{WebExtAPIRef("runtime.onMessage")}} 呼び出し)
 
-<ul>
- <li>メッセージに 1 つだけの応答がある場合</li>
- <li>メッセージの受信を少しのスクリプトがリッスンする場合({{WebExtAPIRef("runtime.onMessage")}} 呼び出し)</li>
-</ul>
+**次のときにコネクションベースメッセージを使用…**
 
-<p><strong>次のときにコネクションベースメッセージを使用…</strong></p>
+- スクリプトが、複数のメッセージを交換するセッションに関わる場合
+- 拡張機能がタスクの進捗や、タスクが中断されたのを知る必要がある場合、または初期化されたタスクをメッセージング経由で中断したい場合
 
-<ul>
- <li>スクリプトが、複数のメッセージを交換するセッションに関わる場合</li>
- <li>拡張機能がタスクの進捗や、タスクが中断されたのを知る必要がある場合、または初期化されたタスクをメッセージング経由で中断したい場合</li>
-</ul>
+## ウェブページとの通信
 
-<h2 id="Communicating_with_the_web_page" name="Communicating_with_the_web_page">ウェブページとの通信</h2>
+既定では、コンテンツスクリプトはページスクリプトが作成したオブジェクトにアクセスできませんが、DOM [`window.postMessage`](/ja/docs/Web/API/Window/postMessage) と [`window.addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) API を使ってページスクリプトと通信できます。
 
-<p>既定では、コンテンツスクリプトはページスクリプトが作成したオブジェクトにアクセスできませんが、DOM <code><a href="/ja/docs/Web/API/Window/postMessage">window.postMessage</a></code> と <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code> API を使ってページスクリプトと通信できます。</p>
+例えば:
 
-<p>例えば:</p>
-
-<pre class="brush: js">// page-script.js
+```js
+// page-script.js
 
 var messenger = document.getElementById("from-page-script");
 
@@ -428,53 +369,53 @@ function messageContentScript() {
   window.postMessage({
     direction: "from-page-script",
     message: "Message from the page"
-  }, "*");</pre>
+  }, "*");
+```
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.addEventListener("message", function(event) {
-  if (event.source == window &amp;&amp;
-      event.data &amp;&amp;
+  if (event.source == window &&
+      event.data &&
       event.data.direction == "from-page-script") {
     alert("Content script received message: \"" + event.data.message + "\"");
   }
-});</pre>
+});
+```
 
-<p>これの完全な動作サンプルは、<a href="https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html">GitHub のデモページを訪れて</a>指示に従ってください。</p>
+これの完全な動作サンプルは、[GitHub のデモページを訪れて](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html)指示に従ってください。
 
-<div class="warning">
-<p><strong>この方法で信頼できないウェブコンテンツと相互作用するには細心の注意が必要です</strong>！<br>
- 拡張機能は強力な力を持つコードの権限があり、敵意のあるウェブページは簡単にこの力にアクセスします。</p>
+> **Warning:** **この方法で信頼できないウェブコンテンツと相互作用するには細心の注意が必要です**！
+> 拡張機能は強力な力を持つコードの権限があり、敵意のあるウェブページは簡単にこの力にアクセスします。
+>
+> 細かい例を作るには、メッセージを受け取ったコンテンツスクリプトがこのようなことを行うと仮定してください:
+>
+> ```js
+> // content-script.js
+>
+> window.addEventListener("message", function(event) {
+>   if (event.source == window &&
+>       event.data.direction &&
+>       event.data.direction == "from-page-script") {
+>     eval(event.data.message);
+>   }
+> });
+> ```
+>
+> 今やページスクリプトはコンテンツスクリプトのすべての権限でコードを実行できます。
 
-<p>細かい例を作るには、メッセージを受け取ったコンテンツスクリプトがこのようなことを行うと仮定してください:</p>
+## コンテンツスクリプト内で eval() を使う
 
-<pre class="brush: js">// content-script.js
+- Chrome では
+  - : {{jsxref("eval")}} は常にページコンテキストではなくてコンテンツスクリプトのコンテキストで動作します。
+- Firefox では
+  - : `eval()` を呼ぶ場合、**コンテンツスクリプト**のコンテキストで動作します。 `window.eval()` を呼ぶ場合、**ページ**のコンテキストで動作します。, it runs code in the context of the **content script**.
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &amp;&amp;
-      event.data.direction &amp;&amp;
-      event.data.direction == "from-page-script") {
-    eval(event.data.message);
-  }
-});</pre>
+例えば、こんなコンテンツスクリプトを考えてみます:
 
-<p>今やページスクリプトはコンテンツスクリプトのすべての権限でコードを実行できます。</p>
-</div>
-
-<h2 id="Using_eval_in_content_scripts" name="Using_eval()_in_content_scripts">コンテンツスクリプト内で eval() を使う</h2>
-
-<dl>
- <dt>Chrome では</dt>
- <dd>{{jsxref("eval")}} は常にページコンテキストではなくてコンテンツスクリプトのコンテキストで動作します。</dd>
- <dt>Firefox では</dt>
- <dd>
- <p><code>eval()</code> を呼ぶ場合、<strong>コンテンツスクリプト</strong>のコンテキストで動作します。 <code>window.eval()</code> を呼ぶ場合、<strong>ページ</strong>のコンテキストで動作します。, it runs code in the context of the <strong>content script</strong>.</p>
- </dd>
-</dl>
-
-<p>例えば、こんなコンテンツスクリプトを考えてみます:</p>
-
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.eval('window.x = 1;');
 eval('window.y = 2');
@@ -484,51 +425,58 @@ console.log(`In content script, window.y: ${window.y}`);
 
 window.postMessage({
   message: "check"
-}, "*");</pre>
+}, "*");
+```
 
-<p>このコードは単に変数 x と y を、<code>window.eval()</code> と <code>eval()</code> を用いて作成し、値をログに出し、ページにメッセージします。</p>
+このコードは単に変数 x と y を、`window.eval()` と `eval()` を用いて作成し、値をログに出し、ページにメッセージします。
 
-<p>メッセージの受信に際し、ページスクリプトは同じ変数をログに出します:</p>
+メッセージの受信に際し、ページスクリプトは同じ変数をログに出します:
 
-<pre class="brush: js">window.addEventListener("message", function(event) {
-  if (event.source === window &amp;&amp; event.data &amp;&amp; event.data.message === "check") {
+```js
+window.addEventListener("message", function(event) {
+  if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
   }
-});</pre>
+});
+```
 
-<p><strong>Chrome では、こんな出力が生成されます:</strong></p>
+**Chrome では、こんな出力が生成されます:**
 
-<pre>In content script, window.x: 1
+```
+In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
-In page script, window.y: undefined</pre>
+In page script, window.y: undefined
+```
 
-<p><strong>Firefox では、こんな出力が生成されます:</strong></p>
+**Firefox では、こんな出力が生成されます:**
 
-<pre>In content script, window.x: undefined
+```
+In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1
-In page script, window.y: undefined</pre>
+In page script, window.y: undefined
+```
 
-<p>同じことは <code><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>、<code><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> にも言えます。</p>
+同じことは [`setTimeout()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)、[`setInterval()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)、[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) にも言えます。
 
-<div class="blockIndicator warning">
-<p><strong>ページのコンテキストでコードを実行するときは特に注意してください！</strong></p>
-
-<p>ページの環境が悪意をはらんだウェブページにコントロールされ、期待しない方法であなたが操作するオブジェクトを再定義するかもしれません。</p>
-
-<pre class="brush: js">// page.js redefines console.log
-
-var original = console.log;
-
-console.log = function() {
-  original(true);
-}
-</pre>
-
-<pre class="brush: js">// content-script.js calls the redefined version
-
-window.eval('console.log(false)');
-</pre>
-</div>
+> **Warning:** **ページのコンテキストでコードを実行するときは特に注意してください！**
+>
+> ページの環境が悪意をはらんだウェブページにコントロールされ、期待しない方法であなたが操作するオブジェクトを再定義するかもしれません。
+>
+> ```js
+> // page.js redefines console.log
+>
+> var original = console.log;
+>
+> console.log = function() {
+>   original(true);
+> }
+> ```
+>
+> ```js
+> // content-script.js calls the redefined version
+>
+> window.eval('console.log(false)');
+> ```

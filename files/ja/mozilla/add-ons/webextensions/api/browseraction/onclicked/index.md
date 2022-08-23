@@ -3,73 +3,62 @@ title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>ブラウザアクションアイコンがクリックされたときに発火します。このイベントはブラウザアクションがポップアップを持っているときは発火しません。</p>
+ブラウザアクションアイコンがクリックされたときに発火します。このイベントはブラウザアクションがポップアップを持っているときは発火しません。
 
-<p>右クリックを定義するには、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus" title="Add items to the browser's context menu, to be displayed in the contexts you specify. For example, you can show the item only when the user clicks on an image, or on an editable element, or when part of a page is selected."><code>contextMenus</code></a> API の"browser_action" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType" title="The different contexts a menu can appear in.">context type</a>を利用してください。</p>
+右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus "Add items to the browser's context menu, to be displayed in the contexts you specify. For example, you can show the item only when the user clicks on an image, or on an editable element, or when part of a page is selected.") API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType "The different contexts a menu can appear in.")を利用してください。
 
-<h2 id="書式">書式</h2>
+## 書式
 
-<pre class="syntaxbox brush:js">browser.browserAction.onClicked.addListener(<code>listener</code>)
+```js
+browser.browserAction.onClicked.addListener(listener)
 browser.browserAction.onClicked.removeListener(listener)
 browser.browserAction.onClicked.hasListener(listener)
-</pre>
+```
 
-<p>イベントは３つの関数を持っています:</p>
+イベントは３つの関数を持っています:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>このイベントのリスナーを追加します。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>このイベントのリスニングを停止します。引数<code>listener</code>は削除するリスナーです。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd><code>listener</code>がこのイベントに登録されているかどうかを調べます。<code>true</code>が返ればリスニング中です。<code>false</code>が返ればそうれはありません。</dd>
-</dl>
+- `addListener(listener)`
+  - : このイベントのリスナーを追加します。
+- `removeListener(listener)`
+  - : このイベントのリスニングを停止します。引数`listener`は削除するリスナーです。
+- `hasListener(listener)`
+  - : `listener`がこのイベントに登録されているかどうかを調べます。`true`が返ればリスニング中です。`false`が返ればそうれはありません。
 
-<h2 id="addListenerの書式">addListenerの書式</h2>
+## addListener の書式
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>イベントが発生したときに呼び出される関数です。関数は以下の引数を渡されます:</p>
+- `callback`
 
- <dl class="reference-values">
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. アイコンがクリックされたときにアクティブなタブです。</dd>
- </dl>
- </dd>
-</dl>
+  - : イベントが発生したときに呼び出される関数です。関数は以下の引数を渡されます:
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. アイコンがクリックされたときにアクティブなタブです。
 
-<p>{{Compat("webextensions.api.browserAction.onClicked")}}</p>
+## ブラウザ互換性
 
-<h2 id="例">例</h2>
+{{Compat("webextensions.api.browserAction.onClicked")}}
 
-<p>ユーザがアイコンをクリックすると、アクティブなタブではアイコンを無効にし、タブのURLをログします:</p>
+## 例
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+ユーザがアイコンをクリックすると、アクティブなタブではアイコンを無効にし、タブの URL をログします:
+
+```js
+browser.browserAction.onClicked.addListener((tab) => {
   // disable the active tab
   browser.browserAction.disable(tab.id);
   // requires the "tabs" or "activeTab" permission
   console.log(tab.url);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#event-onClicked) API に基づいています。このドキュメントは Chromium コードの[`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
-<p>このAPIはChromiumの<a href="https://developer.chrome.com/extensions/browserAction#event-onClicked"><code>chrome.browserAction</code></a> APIに基づいています。このドキュメントはChromiumコードの<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a>から派生したものです。</p>
-
-<p>Microsoft Edgeの互換性データはMicrosoft Corporationから提供されており、Creative Commons Attribution 3.0 United States Licenseのもとにここに含まれています。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +86,3 @@ browser.browserAction.onClicked.hasListener(listener)
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

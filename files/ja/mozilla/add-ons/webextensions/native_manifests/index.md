@@ -6,310 +6,181 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>ネイティブマニフェストは特別な形式の JSON ファイルで、拡張機能のインストールプロセスの範囲外の方法でユーザーのコンピューターに配布されます。例えば、ネイティブマニフェストは端末の管理者やネイティブアプリケーションのインストーラーによって配布されます。</p>
+ネイティブマニフェストは特別な形式の JSON ファイルで、拡張機能のインストールプロセスの範囲外の方法でユーザーのコンピューターに配布されます。例えば、ネイティブマニフェストは端末の管理者やネイティブアプリケーションのインストーラーによって配布されます。
 
-<p>3つの異なる種類のネイティブマニフェストがあります:</p>
+3 つの異なる種類のネイティブマニフェストがあります:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 40%;"><a href="#Native_messaging_manifests">Native messaging マニフェスト</a></td>
-   <td><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a> と呼ぶ機能を可能にします、ここでは拡張機能は端末にインストールされたネイティブアプリとやりとりできます。</td>
-  </tr>
-  <tr>
-   <td><a href="#Managed_storage_manifests">Managed storage マニフェスト</a></td>
-   <td>
-    <p>{{WebExtAPIRef("storage.managed")}} API  使って拡張機能がアクセスする読み込み専用データを定義します。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="#PKCS_11_manifests">PKCS #11 マニフェスト</a></td>
-   <td>
-    <p>拡張機能が {{WebExtAPIRef("pkcs11")}} API を使って PKCS #11 セキュリティモジュールを列挙して、Firefox にインストールできるようにします。</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| [Native messaging マニフェスト](#Native_messaging_manifests) | [native messaging](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) と呼ぶ機能を可能にします、ここでは拡張機能は端末にインストールされたネイティブアプリとやりとりできます。 |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Managed storage マニフェスト](#Managed_storage_manifests)   | {{WebExtAPIRef("storage.managed")}} API 使って拡張機能がアクセスする読み込み専用データを定義します。                                                                    |
+| [PKCS #11 マニフェスト](#PKCS_11_manifests)                  | 拡張機能が {{WebExtAPIRef("pkcs11")}} API を使って PKCS #11 セキュリティモジュールを列挙して、Firefox にインストールできるようにします。                                   |
 
-<p>すべてのネイティブマニフェスト用に、ブラウザーがマニフェストを見つけられるように調整する必要があります。 <a href="#Manifest_location">マニフェストの場所</a> のセクションでこのルールを述べています。</p>
+すべてのネイティブマニフェスト用に、ブラウザーがマニフェストを見つけられるように調整する必要があります。 [マニフェストの場所](#Manifest_location) のセクションでこのルールを述べています。
 
-<h2 id="Native_messaging_manifests" name="Native_messaging_manifests">Native messaging マニフェスト</h2>
+## Native messaging マニフェスト
 
-<p>native messaging マニフェストは以下のプロパティを含む単一の JSON オブジェクトです:</p>
+native messaging マニフェストは以下のプロパティを含む単一の JSON オブジェクトです:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">名前</th>
-   <th scope="col">種類</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>name</code></td>
-   <td>String</td>
-   <td>
-    <p>ネイティブアプリケーションの名前です。</p>
+| 名前                 | 種類            | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`               | String          | ネイティブアプリケーションの名前です。この名前は拡張機能の {{WebExtAPIRef("runtime.connectNative()")}} か {{WebExtAPIRef("runtime.sendNativeMessage()")}} に渡される名前と一致している必要があります。OS X と Linux では、native messaging マニフェストの（.json 拡張子を除いた）ファイル名とも一致していなければなりません。Windows では、native messaging マニフェストの場所を記した作成済みレジストリキーの名前と一致している必要があります。次の正規表現にマッチする必要があります: "^\w+(\\.\w+)\*$" つまり、名前には(大文字か小文字の)英数字とアンダースコア、ドットのみ含めることができます。最初または最後の文字にドットを使用することはできず、ドットを 2 つ以上連続させることもできません。 |
+| `description`        | String          | ネイティブアプリケーションの説明です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `path`               | String          | ネイティブアプリケーションのパスです。Windows では、マニフェスト自身からの相対パスを指定することもできます。OS X や Linux では絶対パスでなければなりません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `type`               | String          | 拡張機能にアプリケーションが接続するために使用する方法を記述します。現在のところ、"stdio" のみが指定可能です。これはアプリケーションが標準入力 (stdin) を介してメッセージを受信し、標準出力 (stdout) を使用してメッセージを送信することを示します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `allowed_extensions` | Array of String | [Add-on ID](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) の配列です。配列中のそれぞれの値はこのネイティブアプリケーションとの通信が許可されている拡張機能を表します。つまり、作成する拡張機能の manifest.json ファイルに [applications](/ja/Add-ons/WebExtensions/manifest.json/applications) キーを含めたくなるものと思われるため、開発中に明示的な ID を設定しておくと良いでしょう。                                                                                                                                                                                                                                                                                                                   |
 
-    <p>この名前は拡張機能の {{WebExtAPIRef("runtime.connectNative()")}} か {{WebExtAPIRef("runtime.sendNativeMessage()")}} に渡される名前と一致している必要があります。</p>
+例として、"ping_pong" ネイティブアプリケーションのマニフェストを以下に示します:
 
-    <p>OS X と Linux では、native messaging マニフェストの（.json 拡張子を除いた）ファイル名とも一致していなければなりません。</p>
-
-    <p>Windows では、native messaging マニフェストの場所を記した作成済みレジストリキーの名前と一致している必要があります。</p>
-
-    <p>次の正規表現にマッチする必要があります: "^\w+(\.\w+)*$" つまり、名前には(大文字か小文字の)英数字とアンダースコア、ドットのみ含めることができます。最初または最後の文字にドットを使用することはできず、ドットを2つ以上連続させることもできません。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>description</code></td>
-   <td>String</td>
-   <td>
-    <p>ネイティブアプリケーションの説明です。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>path</code></td>
-   <td>String</td>
-   <td>
-    <p>ネイティブアプリケーションのパスです。</p>
-
-    <p>Windows では、マニフェスト自身からの相対パスを指定することもできます。OS X や Linux では絶対パスでなければなりません。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>String</td>
-   <td>
-    <p>拡張機能にアプリケーションが接続するために使用する方法を記述します。</p>
-
-    <p>現在のところ、"stdio" のみが指定可能です。これはアプリケーションが標準入力 (stdin) を介してメッセージを受信し、標準出力 (stdout) を使用してメッセージを送信することを示します。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>allowed_extensions</code></td>
-   <td>Array of String</td>
-   <td>
-    <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> の配列です。配列中のそれぞれの値はこのネイティブアプリケーションとの通信が許可されている拡張機能を表します。</p>
-
-    <p>つまり、作成する拡張機能の manifest.json ファイルに <a href="/ja/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーを含めたくなるものと思われるため、開発中に明示的なIDを設定しておくと良いでしょう。</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<p>例として、"ping_pong" ネイティブアプリケーションのマニフェストを以下に示します:</p>
-
-<pre class="brush: json">{
+```json
+{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
   "allowed_extensions": [ "ping_pong@example.org" ]
-}</pre>
+}
+```
 
-<p>この設定では、"ping_pong@example.org" という ID の拡張機能が "ping_pong" という名前を適切な {{WebExtAPIRef("runtime")}} API 関数に渡すことで接続を許可されます。 アプリケーション自体は "/path/to/native-messaging/app/ping_pong.py" にあります。</p>
+この設定では、"ping_pong\@example.org" という ID の拡張機能が "ping_pong" という名前を適切な {{WebExtAPIRef("runtime")}} API 関数に渡すことで接続を許可されます。 アプリケーション自体は "/path/to/native-messaging/app/ping_pong.py" にあります。
 
-<h2 id="Managed_storage_manifests" name="Managed_storage_manifests">Managed storage マニフェスト</h2>
+## Managed storage マニフェスト
 
-<p>managed storage マニフェストには次のプロパティを含む単一の JSON オブジェクトです:</p>
+managed storage マニフェストには次のプロパティを含む単一の JSON オブジェクトです:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">名前</th>
-   <th scope="col">種類</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>name</code></td>
-   <td>String</td>
-   <td>
-    <p>ストレージにアクセスできる拡張機能の ID で、拡張機能の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーで指定したのと同じものです。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>description</code></td>
-   <td>String</td>
-   <td>人間が読める説明で、Firefox には無視されます。</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>String</td>
-   <td>
-    <p>"storage" でなければなりません。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>data</code></td>
-   <td>Object</td>
-   <td>
-    <p>JSON オブジェクトで、その中にあらゆる有効な JSON 値(文字列、数値、真偽値、配列、オブジェクトを含む)が入ります。これは <code>browser.storage.managed</code> ストレージ領域内のデータになります。</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| 名前          | 種類   | 説明                                                                                                                                                                                 |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`        | String | ストレージにアクセスできる拡張機能の ID で、拡張機能の [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーで指定したのと同じものです。            |
+| `description` | String | 人間が読める説明で、Firefox には無視されます。                                                                                                                                       |
+| `type`        | String | "storage" でなければなりません。                                                                                                                                                     |
+| `data`        | Object | JSON オブジェクトで、その中にあらゆる有効な JSON 値(文字列、数値、真偽値、配列、オブジェクトを含む)が入ります。これは `browser.storage.managed` ストレージ領域内のデータになります。 |
 
-<p>例えば:</p>
+例えば:
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">"name":</span> <span class="string token">"favourite-colour-examples@mozilla.org"</span><span class="punctuation token">,</span>
-  <span class="key token">"description":</span> <span class="string token">"ignored"</span><span class="punctuation token">,</span>
-  <span class="key token">"type":</span> <span class="string token">"storage"</span><span class="punctuation token">,</span>
-  <span class="key token">"data":</span>
-  <span class="punctuation token">{</span>
-    <span class="key token">"colour":</span> <span class="string token">"management thinks it should be blue!"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+```json
+{
+  "name": "favourite-colour-examples@mozilla.org",
+  "description": "ignored",
+  "type": "storage",
+  "data":
+  {
+    "colour": "management thinks it should be blue!"
+  }
+}
+```
 
-<p>この JSON マニフェストでは、"favourite-colour-examples@mozilla.org" 拡張機能は次のようなコードを使ってデータにアクセスできます:</p>
+この JSON マニフェストでは、"favourite-colour-examples\@mozilla.org" 拡張機能は次のようなコードを使ってデータにアクセスできます:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> storageItem <span class="operator token">=</span> browser<span class="punctuation token">.</span>storage<span class="punctuation token">.</span>managed<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'colour'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-storageItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span>res<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Managed colour is: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>res<span class="punctuation token">.</span>colour<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+```js
+var storageItem = browser.storage.managed.get('colour');
+storageItem.then((res) => {
+  console.log(`Managed colour is: ${res.colour}`);
+});
+```
 
-<h2 id="PKCS_11_manifests" name="PKCS_11_manifests">PKCS #11 マニフェスト</h2>
+## PKCS #11 マニフェスト
 
-<p>PKCS #11 マニフェストは以下のプロパティを持った JSON オブジェクトを含むファイルです:</p>
+PKCS #11 マニフェストは以下のプロパティを持った JSON オブジェクトを含むファイルです:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">名前</th>
-   <th scope="col">種類</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>name</code></td>
-   <td>String</td>
-   <td>
-    <p>PKCS #11 モジュールの名前です。</p>
+| 名前                 | 種類            | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`               | String          | PKCS #11 モジュールの名前です。`pkcs11` API で使われている名前と一致している必要があります。OS X と Linux では、マニフェストの (拡張子を除いた) ファイル名とも一致していなければなりません。Windows では、マニフェストの場所を記した作成済みレジストリキーの名前と一致している必要があります。次の正規表現にマッチする必要があります: "^\w+(\\.\w+)\*$" つまり、名前には(大文字か小文字の)英数字とアンダースコア、ドットのみ含めることができます。最初または最後の文字にドットを使用することはできず、ドットを 2 つ以上連続させることもできません。 |
+| `description`        | String          | モジュールの説明です。ブラウザー UI (例えば、Firefox の "Security Devices" ダイアログ) で表示される、読みやすい名前を付けるのに使われます。                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `path`               | String          | モジュールのパスです。Windows では、マニフェスト自身からの相対パスを指定することもできます。OS X や Linux では絶対パスでなければなりません。                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `type`               | String          | "pkcs11" でなければなりません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `allowed_extensions` | Array of String | [Add-on ID](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) の配列です。配列中のそれぞれの値はモジュールとの通信が許可されている拡張機能を表します。つまり、作成する拡張機能の manifest.json ファイルに [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーを含めたくなるものと思われるため、開発中に明示的な ID を設定しておくと良いでしょう。                                                                                                                                          |
 
-    <p><code>pkcs11</code> API で使われている名前と一致している必要があります。</p>
+例えば:
 
-    <p>OS X と Linux では、マニフェストの (拡張子を除いた) ファイル名とも一致していなければなりません。</p>
-
-    <p>Windows では、マニフェストの場所を記した作成済みレジストリキーの名前と一致している必要があります。</p>
-
-    <p>次の正規表現にマッチする必要があります: "^\w+(\.\w+)*$" つまり、名前には(大文字か小文字の)英数字とアンダースコア、ドットのみ含めることができます。最初または最後の文字にドットを使用することはできず、ドットを2つ以上連続させることもできません。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>description</code></td>
-   <td>String</td>
-   <td>
-    <p>モジュールの説明です。</p>
-
-    <p>ブラウザー UI (例えば、Firefox の "Security Devices" ダイアログ) で表示される、読みやすい名前を付けるのに使われます。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>path</code></td>
-   <td>String</td>
-   <td>
-    <p>モジュールのパスです。</p>
-
-    <p>Windows では、マニフェスト自身からの相対パスを指定することもできます。OS X や Linux では絶対パスでなければなりません。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>String</td>
-   <td>"pkcs11" でなければなりません。</td>
-  </tr>
-  <tr>
-   <td><code>allowed_extensions</code></td>
-   <td>Array of String</td>
-   <td>
-    <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> の配列です。配列中のそれぞれの値はモジュールとの通信が許可されている拡張機能を表します。</p>
-
-    <p>つまり、作成する拡張機能の manifest.json ファイルに <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーを含めたくなるものと思われるため、開発中に明示的な ID を設定しておくと良いでしょう。</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<p>例えば:</p>
-
-<pre class="brush: json line-numbers  language-json">{
+```json
+{
   "name": "my_module",
   "description": "My test module",
   "type": "pkcs11",
   "path": "/path/to/libpkcs11testmodule.dylib",
   "allowed_extensions": ["my-extension@mozilla.org"]
-}</pre>
+}
+```
 
-<p>この JSON マニフェストでは、"my_module.json" として保存すれば、"my-extension@mozilla.org" 拡張機能はこのようなコードから "/path/to/libpkcs11testmodule.dylib" のセキュリティーモジュールをインストールすることもできます:</p>
+この JSON マニフェストでは、"my_module.json" として保存すれば、"my-extension\@mozilla.org" 拡張機能はこのようなコードから "/path/to/libpkcs11testmodule.dylib" のセキュリティーモジュールをインストールすることもできます:
 
-<pre class="brush: js line-numbers  language-js">browser.pkcs11.installModule("my_module");</pre>
+```js
+browser.pkcs11.installModule("my_module");
+```
 
-<h2 id="Manifest_location" name="Manifest_location">マニフェストの場所</h2>
+## マニフェストの場所
 
-<p>Linux と Mac OS X では、マニフェストを特定の場所に保管する必要があります。Windows では、マニフェストの場所を指定するレジストリキーを作成する必要があります。</p>
+Linux と Mac OS X では、マニフェストを特定の場所に保管する必要があります。Windows では、マニフェストの場所を指定するレジストリキーを作成する必要があります。
 
-<p>詳しいルールはどのマニフェストの種類でも同じですが、例外として最後から2番目のパスのコンポーネントはマニフェストの種類を特定します。下記の例では、3種類のそれぞれの形を示しています。すべての例において、<em>&lt;name&gt;</em> はマニフェスト内の <code>name</code> プロパティの値です。</p>
+詳しいルールはどのマニフェストの種類でも同じですが、例外として最後から 2 番目のパスのコンポーネントはマニフェストの種類を特定します。下記の例では、3 種類のそれぞれの形を示しています。すべての例において、_\<name>_ はマニフェスト内の `name` プロパティの値です。
 
-<h3 id="Windows" name="Windows">Windows</h3>
+### Windows
 
-<p>グローバルな設定としては、以下の名前のレジストリキーを作成します:</p>
+グローバルな設定としては、以下の名前のレジストリキーを作成します:
 
-<pre>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
-HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\&lt;name&gt;
-HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<name>
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
+```
 
-<p>このキーにマニフェストへのパスを示す単一の既定の値を設定します。</p>
+このキーにマニフェストへのパスを示す単一の既定の値を設定します。
 
-<p>Firefox バージョン 64 以降では、32ビットレジストリ view (<a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node) </a>がこれらのキーの中でまずチェックされ、"native" レジストリ view が続いてチェックされます。いずれの view にしてもアプリケーションにふさわしいレジストリを使用してください。</p>
+Firefox バージョン 64 以降では、32 ビットレジストリ view ([Wow6432Node) ](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system)がこれらのキーの中でまずチェックされ、"native" レジストリ view が続いてチェックされます。いずれの view にしてもアプリケーションにふさわしいレジストリを使用してください。
 
-<p><em>Firefox バージョン 63　以前では、もし32ビットのアプリケーションであっても、このキーは <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a> 下に作成しないで下さい。以前のバージョンのブラウザは常に32-bit エミュレーションではなくレジストリの "native" view 下のキーを探します。確実に "native" view にキーを作成するために、KEY_WOW64_64KEY または KEY_WOW64_32KEY フラグを RegCreateKeyEx に渡すことができます。<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a> を参照して下さい。</em></p>
+_Firefox バージョン 63 　以前では、もし 32 ビットのアプリケーションであっても、このキーは [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下に作成しないで下さい。以前のバージョンのブラウザは常に 32-bit エミュレーションではなくレジストリの "native" view 下のキーを探します。確実に "native" view にキーを作成するために、KEY_WOW64_64KEY または KEY_WOW64_32KEY フラグを RegCreateKeyEx に渡すことができます。[Accessing an Alternate Registry View](<https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx>) を参照して下さい。_
 
-<p>ユーザごとの設定としては、以下の名前のレジストリキーを作成します:</p>
+ユーザごとの設定としては、以下の名前のレジストリキーを作成します:
 
-<pre>HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
-HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\&lt;name&gt;
-HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
+```
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<name>
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
+```
 
-<p>このキーにマニフェストへのパスを示す単一の既定の値を設定します。</p>
+このキーにマニフェストへのパスを示す単一の既定の値を設定します。
 
-<h3 id="Mac_OS_X" name="Mac_OS_X">Mac OS X</h3>
+### Mac OS X
 
-<p>グローバルな設定としては、マニフェストを以下に配置します:</p>
+グローバルな設定としては、マニフェストを以下に配置します:
 
-<pre>/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
-/Library/Application Support/Mozilla/ManagedStorage/&lt;name&gt;.json
-/Library/Application Support/Mozilla/PKCS11Modules/&lt;name&gt;.json</pre>
+```
+/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+/Library/Application Support/Mozilla/ManagedStorage/<name>.json
+/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
+```
 
-<p>個人ごとの設定としては、マニフェストを以下に配置します:</p>
+個人ごとの設定としては、マニフェストを以下に配置します:
 
-<pre>~/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
-~/Library/Application Support/Mozilla/ManagedStorage/&lt;name&gt;.json
-~/Library/Application Support/Mozilla/PKCS11Modules/&lt;name&gt;.json
-</pre>
+```
+~/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+~/Library/Application Support/Mozilla/ManagedStorage/<name>.json
+~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
+```
 
-<h3 id="Linux" name="Linux">Linux</h3>
+### Linux
 
-<p>グローバルな設定としては、マニフェストを以下のいずれかに配置します:</p>
+グローバルな設定としては、マニフェストを以下のいずれかに配置します:
 
-<pre>/usr/lib/mozilla/native-messaging-hosts/&lt;name&gt;.json
-/usr/lib/mozilla/managed-storage/&lt;name&gt;.json
-/usr/lib/mozilla/pkcs11-modules/&lt;name&gt;.json
-</pre>
+```
+/usr/lib/mozilla/native-messaging-hosts/<name>.json
+/usr/lib/mozilla/managed-storage/<name>.json
+/usr/lib/mozilla/pkcs11-modules/<name>.json
+```
 
-<p>あるいは:</p>
+あるいは:
 
-<pre>/usr/lib64/mozilla/native-messaging-hosts/&lt;name&gt;.json
-/usr/lib64/mozilla/managed-storage/&lt;name&gt;.json
-/usr/lib64/mozilla/pkcs11-modules/&lt;name&gt;.json</pre>
+```
+/usr/lib64/mozilla/native-messaging-hosts/<name>.json
+/usr/lib64/mozilla/managed-storage/<name>.json
+/usr/lib64/mozilla/pkcs11-modules/<name>.json
+```
 
-<p>個人ごとの設定としては、マニフェストを以下に配置します:</p>
+個人ごとの設定としては、マニフェストを以下に配置します:
 
-<pre>~/.mozilla/native-messaging-hosts/&lt;name&gt;.json
-~/.mozilla/managed-storage/&lt;name&gt;.json
-~/.mozilla/pkcs11-modules/&lt;name&gt;.json</pre>
+```
+~/.mozilla/native-messaging-hosts/<name>.json
+~/.mozilla/managed-storage/<name>.json
+~/.mozilla/pkcs11-modules/<name>.json
+```

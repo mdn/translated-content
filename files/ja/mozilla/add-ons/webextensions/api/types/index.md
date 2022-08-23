@@ -10,30 +10,22 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/types
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>ブラウザー設定を表すのに使われる <code>BrowserSetting</code> 型を定義します。</p>
+ブラウザー設定を表すのに使われる `BrowserSetting` 型を定義します。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("types.BrowserSetting")}}</dt>
- <dd>ブラウザー設定を表現します。</dd>
-</dl>
+- {{WebExtAPIRef("types.BrowserSetting")}}
+  - : ブラウザー設定を表現します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -61,4 +53,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

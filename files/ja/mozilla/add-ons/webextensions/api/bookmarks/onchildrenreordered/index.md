@@ -13,93 +13,77 @@ tags:
   - onChildrenReordered
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>UI で表示されている順序に伴って子フォルダの順序も変更された際に発火します。{{WebExtAPIRef("bookmarks.move()")}} の実行後や、UI におけるドラッグの際には発火しません。</p>
+UI で表示されている順序に伴って子フォルダの順序も変更された際に発火します。{{WebExtAPIRef("bookmarks.move()")}} の実行後や、UI におけるドラッグの際には発火しません。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">browser.bookmarks.onChildrenReordered.addListener(function(
+```js
+browser.bookmarks.onChildrenReordered.addListener(function(
   id,         // 文字列
   reorderInfo // オブジェクト
 ) {...})
 browser.bookmarks.onChildrenReordered.removeListener(listener)
 browser.bookmarks.onChildrenReordered.hasListener(listener)
-</pre>
+```
 
-<p>このイベントには 3 つのメソッドが用意されています。</p>
+このイベントには 3 つのメソッドが用意されています。
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>イベントリスナを追加します。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>イベントリスナを削除します。引数 <code>listener</code> には削除したいリスナを指定します。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd><code>listener</code> がイベントリスナとして登録されているか確認します。登録されていれば <code>true</code> を、それ以外の場合は <code>false</code> を返します。</dd>
-</dl>
+- `addListener(callback)`
+  - : イベントリスナを追加します。
+- `removeListener(listener)`
+  - : イベントリスナを削除します。引数 `listener` には削除したいリスナを指定します。
+- `hasListener(listener)`
+  - : `listener` がイベントリスナとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
 
-<h2 id="addListener_の構文">addListener の構文</h2>
+## addListener の構文
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。</p>
- </dd>
-</dl>
+- `callback`
 
-<dl>
- <dd>
- <dl class="reference-values">
-  <dt><code>id</code></dt>
-  <dd>子要素の順序が変更されたフォルダの ID を表す {{jsxref("string")}} です。</dd>
- </dl>
+  - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
 
- <dl class="reference-values">
-  <dt><code>reorderInfo</code></dt>
-  <dd>詳細情報を含んだ {{jsxref("object")}} です。</dd>
- </dl>
- </dd>
-</dl>
+    - `id`
+      - : 子要素の順序が変更されたフォルダの ID を表す {{jsxref("string")}} です。
 
-<h2 id="付随するオブジェクト">付随するオブジェクト</h2>
+    <!---->
 
-<h3 id="reorderInfo">reorderInfo</h3>
+    - `reorderInfo`
+      - : 詳細情報を含んだ {{jsxref("object")}} です。
 
-<dl class="reference-values">
- <dt><code>childIds</code></dt>
- <dd>{{jsxref("string")}} の {{jsxref("array")}} です。このフォルダに含まれるブックマーク要素すべての ID が含まれており、UI に表示されているのと同じ順番に並んでいます。</dd>
-</dl>
+## 付随するオブジェクト
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+### reorderInfo
 
-<p>{{Compat("webextensions.api.bookmarks.onChildrenReordered")}}</p>
+- `childIds`
+  - : {{jsxref("string")}} の {{jsxref("array")}} です。このフォルダに含まれるブックマーク要素すべての ID が含まれており、UI に表示されているのと同じ順番に並んでいます。
 
-<h2 id="使用例">使用例</h2>
+## ブラウザ実装状況
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">handleChildrenReordered</span><span class="punctuation token">(</span>id<span class="punctuation token">,</span> reorderInfo<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Item: "</span> <span class="operator token">+</span> id <span class="operator token">+</span> <span class="string token">" children reordered"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Children: "</span> <span class="operator token">+</span> reorderInfo<span class="punctuation token">.</span>childIds<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+{{Compat("webextensions.api.bookmarks.onChildrenReordered")}}
 
-<span class="keyword token">function</span> <span class="function token">handleClick</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  chrome<span class="punctuation token">.</span>bookmarks<span class="punctuation token">.</span>onChildrenReordered<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleChildrenReordered<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+## 使用例
 
-chrome<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+```js
+function handleChildrenReordered(id, reorderInfo) {
+  console.log("Item: " + id + " children reordered");
+  console.log("Children: " + reorderInfo.childIds);
+}
 
-<p>{{WebExtExamples}}</p>
+function handleClick() {
+  chrome.bookmarks.onChildrenReordered.addListener(handleChildrenReordered);
+}
 
-<div class="note"><strong>謝辞</strong>
+chrome.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/bookmarks#method-update"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードから作成されています。</p>
+{{WebExtExamples}}
 
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License. に従います。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License. に従います。
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -127,4 +111,3 @@ chrome<span class="punctuation token">.</span>browserAction<span class="punctuat
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

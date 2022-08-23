@@ -12,42 +12,40 @@ tags:
   - getRedirectURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>リダイレクト URL として利用可能な URL を生成します。</p>
+リダイレクト URL として利用可能な URL を生成します。
 
-<p>この URL は、アドオン ID から生成されるため、使用したい場合、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを<a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">一時的にインストール</a>するたびに、異なるリダイレクト URL を取得することになります)。</p>
+この URL は、アドオン ID から生成されるため、使用したい場合、[`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを[一時的にインストール](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)するたびに、異なるリダイレクト URL を取得することになります)。
 
-<p>リダイレクトURL については、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL">リダイレクトURL を取得する</a>を参照してください。</p>
+リダイレクト URL については、[リダイレクト URL を取得する](/ja/docs/Mozilla/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL)を参照してください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox brush:js">var redirectURL = browser.identity.getRedirectURL()
-</pre>
+```js
+var redirectURL = browser.identity.getRedirectURL()
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<p>なし</p>
+なし
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>リダイレクト URL を含む文字列</p>
+リダイレクト URL を含む文字列
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("webextensions.api.identity.getRedirectURL")}}</p>
+{{Compat("webextensions.api.identity.getRedirectURL")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>リダイレクト URL を取得する:</p>
+リダイレクト URL を取得する:
 
-<pre class="brush: js">var redirectURL = browser.identity.getRedirectURL();</pre>
+```js
+var redirectURL = browser.identity.getRedirectURL();
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/identity"><code>chrome.identity</code></a> API に基づいています。</p>
-
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います</p>
-</div>
+> **Note:** **Acknowledgements**この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います

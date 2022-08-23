@@ -8,24 +8,25 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>拡張された <a href="/ja/Add-ons/WebExtensions/API/proxy#PAC_file_specification">Proxy Auto-Configuration (PAC) file</a> (これはウェブのリクエストをプロキシ化するポリシーを実装します) を実装するのにプロキシ API を使います。この実装は標準の PAC 設計といくつかそれていて、なぜなら PAC ファイルのデファクト仕様は 1995年頃の初期実装から変えられてないためです。仕様を維持している標準化団体はありません。</p>
+拡張された [Proxy Auto-Configuration (PAC) file](/ja/Add-ons/WebExtensions/API/proxy#PAC_file_specification) (これはウェブのリクエストをプロキシ化するポリシーを実装します) を実装するのにプロキシ API を使います。この実装は標準の PAC 設計といくつかそれていて、なぜなら PAC ファイルのデファクト仕様は 1995 年頃の初期実装から変えられてないためです。仕様を維持している標準化団体はありません。
 
-<p>Google Chrome では<a href="https://developer.chrome.com/extensions/proxy"> 同じく"proxy"という拡張機能API</a> が提供されていて、その機能はこの API と似ていて、拡張機能はプロキシポリシーを使うことができます。しかし、Chrome API の設計はこの API とまったく違います。Chrome の API では拡張機能は PAC ファイルを定義できて、明示的なプロキシルールも定義できます。このため拡張機能 PAC ファイルも使用できて、この API は PAC ファイルアプローチのみをサポートします。この API は Chrome <code>proxy</code> API と互換性がないため、この API は <code>browser</code> 名前空間のみで利用できます。</p>
+Google Chrome では[ 同じく"proxy"という拡張機能 API](https://developer.chrome.com/extensions/proxy) が提供されていて、その機能はこの API と似ていて、拡張機能はプロキシポリシーを使うことができます。しかし、Chrome API の設計はこの API とまったく違います。Chrome の API では拡張機能は PAC ファイルを定義できて、明示的なプロキシルールも定義できます。このため拡張機能 PAC ファイルも使用できて、この API は PAC ファイルアプローチのみをサポートします。この API は Chrome `proxy` API と互換性がないため、この API は `browser` 名前空間のみで利用できます。
 
-<p>この API を使うには、"proxy" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
+この API を使うには、"proxy" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
 
-<h2 id="Communicating_with_PAC_files" name="Communicating_with_PAC_files">PAC ファイルと通信する</h2>
+## PAC ファイルと通信する
 
-<p>PAC ファイルと拡張機能のバックグラウンドページ(やその他の権限つきページ、ポップアップページのようなもの)とでメッセージを交換できて、その手段は <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> と <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>。</p>
+PAC ファイルと拡張機能のバックグラウンドページ(やその他の権限つきページ、ポップアップページのようなもの)とでメッセージを交換できて、その手段は [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) と [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)。
 
-<p>PAC ファイルにメッセージを送るには、<code>toProxyScript</code> オプションをセットしなければなりません:</p>
+PAC ファイルにメッセージを送るには、`toProxyScript` オプションをセットしなければなりません:
 
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 // Log any messages from the proxy.
-browser.runtime.onMessage.addListener((message, sender) =&gt; {
+browser.runtime.onMessage.addListener((message, sender) => {
   if (sender.url === browser.extension.getURL(proxyScriptURL)) {
     console.log(message);
   }
@@ -37,46 +38,48 @@ let messageToProxy = {
   bar: 1234
 };
 
-browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});</pre>
+browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});
+```
 
-<pre class="brush: js">// pac.js
+```js
+// pac.js
 
-browser.runtime.onMessage.addListener((message) =&gt; {
+browser.runtime.onMessage.addListener((message) => {
   if (message.enabled) {
     browser.runtime.sendMessage("I'm enabled!");
   }
-});</pre>
+});
+```
 
-<h2 id="PAC_file_specification" name="PAC_file_specification">PAC ファイル仕様</h2>
+## PAC ファイル仕様
 
-<p>The basic PAC file syntax is described in the <a href="/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">PAC documentation</a>, but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.</p>
+The basic PAC file syntax is described in the [PAC documentation](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>), but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.
 
-<h3 id="FindProxyForURL()_return_value" name="FindProxyForURL()_return_value">FindProxyForURL() return value</h3>
+### FindProxyForURL() return value
 
-<p>The standard <code>FindProxyForURL()</code> <a href="/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
+The standard `FindProxyForURL()` [returns a string](/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format). In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 _only_, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.
 
-<p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of objects. Each object has the following properties:</p>
+From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of objects. Each object has the following properties:
 
-<dl>
- <dt><code>type</code></dt>
- <dd>String. This must be one of: "http"|"https|"socks4"|"socks"|"direct". "socks" refers to the SOCKS5 protocol.</dd>
- <dt><code>host</code></dt>
- <dd>String. Hostname for the proxy to use.</dd>
- <dt><code>port</code></dt>
- <dd>String. Port for the proxy.</dd>
- <dt><code>username</code> {{optional_inline}}</dt>
- <dd>String. Username for the proxy. This is usable with "socks". For HTTP proxy authorizations, use {{WebExtAPIRef("webRequest.onAuthRequired")}}.</dd>
- <dt><code>password</code> {{optional_inline}}</dt>
- <dd>String. Password for the proxy. This is usable with "socks". For HTTP proxy authorizations, use {{WebExtAPIRef("webRequest.onAuthRequired")}}.</dd>
- <dt><code>proxyDNS</code> {{optional_inline}}</dt>
- <dd>Boolean. If true, the proxy server is used to resolve certain DNS queries (only usable with "socks4" and "socks"). Defaults to <code>false</code>.</dd>
- <dt><code>failoverTimeout</code> {{optional_inline}}</dt>
- <dd>Integer. Number of seconds before timing out and trying the next proxy in the array. Defaults to 1.</dd>
-</dl>
+- `type`
+  - : String. This must be one of: "http"|"https|"socks4"|"socks"|"direct". "socks" refers to the SOCKS5 protocol.
+- `host`
+  - : String. Hostname for the proxy to use.
+- `port`
+  - : String. Port for the proxy.
+- `username` {{optional_inline}}
+  - : String. Username for the proxy. This is usable with "socks". For HTTP proxy authorizations, use {{WebExtAPIRef("webRequest.onAuthRequired")}}.
+- `password` {{optional_inline}}
+  - : String. Password for the proxy. This is usable with "socks". For HTTP proxy authorizations, use {{WebExtAPIRef("webRequest.onAuthRequired")}}.
+- `proxyDNS` {{optional_inline}}
+  - : Boolean. If true, the proxy server is used to resolve certain DNS queries (only usable with "socks4" and "socks"). Defaults to `false`.
+- `failoverTimeout` {{optional_inline}}
+  - : Integer. Number of seconds before timing out and trying the next proxy in the array. Defaults to 1.
 
-<p>例えば、:</p>
+例えば、:
 
-<pre class="brush: js" id="ct-0">const proxySpecification = [
+```js
+const proxySpecification = [
   {
     type: "socks",
     host: "foo.com",
@@ -89,28 +92,30 @@ browser.runtime.onMessage.addListener((message) =&gt; {
     host: "bar.com",
     port: 1060,
   }
-];</pre>
+];
+```
 
-<p>The first proxy in the array will be tried first. If it does not respond in <code>failoverTimeout</code> seconds, the next will be tried, until the end of the array is reached.</p>
+The first proxy in the array will be tried first. If it does not respond in `failoverTimeout` seconds, the next will be tried, until the end of the array is reached.
 
-<h3 id="PAC_file_environment" name="PAC_file_environment">PAC ファイル環境</h3>
+### PAC ファイル環境
 
-<p>The global helper functions usually available for PAC files (<code><a href="/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#isPlainHostName()_2">isPlainHostName()</a></code>, <code><a href="/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#dnsDomainIs()">dnsDomainIs()</a></code>, and so on) are not available.</p>
+The global helper functions usually available for PAC files ([`isPlainHostName()`](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#isPlainHostName()_2>), [`dnsDomainIs()`](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#dnsDomainIs()>), and so on) are not available.
 
-<p>Code running in the PAC file does not get access to:</p>
+Code running in the PAC file does not get access to:
 
-<ul>
- <li>any DOM functions (例えば、 <a href="/ja/docs/Web/API/Window">window</a> or any of its properties)</li>
- <li>any WebExtension APIs except <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> and <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code></li>
- <li>the <a href="/ja/docs/Web/API/Console">console API</a> - to log messages from a PAC, send a message to the background script:</li>
-</ul>
+- any DOM functions (例えば、 [window](/ja/docs/Web/API/Window) or any of its properties)
+- any WebExtension APIs except [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) and [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
+- the [console API](/ja/docs/Web/API/Console) - to log messages from a PAC, send a message to the background script:
 
-<pre class="brush: js">//  pac.js
+```js
+//  pac.js
 
 // send the log message to the background script
-browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);</pre>
+browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);
+```
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(message, sender) {
   // only handle messages from the proxy script
@@ -120,31 +125,25 @@ function handleMessage(message, sender) {
   console.log(message);
 }
 
-browser.runtime.onMessage.addListener(handleMessage);</pre>
+browser.runtime.onMessage.addListener(handleMessage);
+```
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.register()")}}</dt>
- <dd>所与のプロキシスクリプトを登録する</dd>
- <dt>{{WebExtAPIRef("proxy.unregister()")}}</dt>
- <dd>プロキシスクリプトの登録を取り消す。</dd>
-</dl>
+- {{WebExtAPIRef("proxy.register()")}}
+  - : 所与のプロキシスクリプトを登録する
+- {{WebExtAPIRef("proxy.unregister()")}}
+  - : プロキシスクリプトの登録を取り消す。
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.onProxyError")}}</dt>
- <dd>プロキシスクリプト実行している際にシステムがエラーに遭遇した時に発火します。</dd>
-</dl>
+- {{WebExtAPIRef("proxy.onProxyError")}}
+  - : プロキシスクリプト実行している際にシステムがエラーに遭遇した時に発火します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.proxy")}}</p>
+{{Compat("webextensions.api.proxy")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** **Acknowledgements**Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

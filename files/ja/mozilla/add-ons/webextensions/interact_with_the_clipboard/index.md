@@ -5,41 +5,43 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><code><a href="/ja/docs/Web/API/Document/execCommand">document.execCommand()</a></code>を使用することで、WebExtension API で構築されたブラウザー拡張がシステムのクリップボードと連携できるようになります:</p>
+[`document.execCommand()`](/ja/docs/Web/API/Document/execCommand)を使用することで、WebExtension API で構築されたブラウザー拡張がシステムのクリップボードと連携できるようになります:
 
-<ul>
- <li><code>document.execCommand("copy")</code></li>
- <li><code>document.execCommand("cut")</code></li>
- <li><code>document.execCommand("paste")</code></li>
-</ul>
+- `document.execCommand("copy")`
+- `document.execCommand("cut")`
+- `document.execCommand("paste")`
 
-<h2 id="Writing_to_the_clipboard" name="Writing_to_the_clipboard">クリップボードへの書き込み</h2>
+## クリップボードへの書き込み
 
-<p>document.execCommand をユーザー操作に対する短命なイベントハンドラー(例えば click ハンドラー)のなかで実行することで、特別な許可なしに"切り取り"や"コピー"などのクリップボード操作が可能になります。</p>
+document.execCommand をユーザー操作に対する短命なイベントハンドラー(例えば click ハンドラー)のなかで実行することで、特別な許可なしに"切り取り"や"コピー"などのクリップボード操作が可能になります。
 
-<p>例えば、次のような HTML を含むポップアップを見たとします:</p>
+例えば、次のような HTML を含むポップアップを見たとします:
 
-<pre class="brush: html">&lt;input id="input" type="text"/&gt;
-&lt;button id="copy"&gt;Copy&lt;/button&gt;
-</pre>
+```html
+<input id="input" type="text"/>
+<button id="copy">Copy</button>
+```
 
-<p>"copy"ボタンで"input"要素の内容をコピーするためには、次のようなコードを使用します。:</p>
+"copy"ボタンで"input"要素の内容をコピーするためには、次のようなコードを使用します。:
 
-<pre class="brush: js">function copy() {
+```js
+function copy() {
   var copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
 }
 
-document.querySelector("#copy").addEventListener("click", copy);</pre>
+document.querySelector("#copy").addEventListener("click", copy);
+```
 
-<p><code>execCommand()</code> が click イベントハンドラーの中で呼ばれているので、特別な許可はここでは不要です。</p>
+`execCommand()` が click イベントハンドラーの中で呼ばれているので、特別な許可はここでは不要です。
 
-<p>しかし、たとえば alarm の中からコピーを実行するとどうなるでしょうか。:</p>
+しかし、たとえば alarm の中からコピーを実行するとどうなるでしょうか。:
 
-<pre class="brush: js">function copy() {
+```js
+function copy() {
   var copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
@@ -49,58 +51,54 @@ browser.alarms.create({
   delayInMinutes: 0.1
 });
 
-browser.alarms.onAlarm.addListener(copy);</pre>
+browser.alarms.onAlarm.addListener(copy);
+```
 
-<p>ブラウザーにもよりますが、おそらくコピーはうまくいかないでしょう。Firefox ではうまくいきません。そして、ブラウザーコンソールに以下のようなメッセージが出力されているのが確認できると思います。:</p>
+ブラウザーにもよりますが、おそらくコピーはうまくいかないでしょう。Firefox ではうまくいきません。そして、ブラウザーコンソールに以下のようなメッセージが出力されているのが確認できると思います。:
 
-<pre>"document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."</pre>
+```
+"document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."
+```
 
-<p>上記のようなケースでもコピーを可能にするには、"clipboardWrite" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> の要求が必要です。"clipboardWrite"はユーザー操作に対する短命なイベントハンドラー以外の箇所でもクリップボードに対する書き込みを可能にします。</p>
+上記のようなケースでもコピーを可能にするには、"clipboardWrite" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) の要求が必要です。"clipboardWrite"はユーザー操作に対する短命なイベントハンドラー以外の箇所でもクリップボードに対する書き込みを可能にします。
 
-<h3 id="Browser-specific_considerations" name="Browser-specific_considerations">特定のブラウザーにおける留意事項</h3>
+### 特定のブラウザーにおける留意事項
 
-<p>Chrome の場合:</p>
+Chrome の場合:
 
-<ul>
- <li>バックグラウンドページ、コンテンツスクリプト、オプションページ、ポップアップなどすべての実行コンテキストでクリップボードへの書き込みが可能です。</li>
- <li>ユーザー操作が起点のイベントハンドラーの外でクリップボードに書き込む場合でも、実際には"clipboardWrite"は不要です。</li>
-</ul>
+- バックグラウンドページ、コンテンツスクリプト、オプションページ、ポップアップなどすべての実行コンテキストでクリップボードへの書き込みが可能です。
+- ユーザー操作が起点のイベントハンドラーの外でクリップボードに書き込む場合でも、実際には"clipboardWrite"は不要です。
 
-<p>Firefox の場合:</p>
+Firefox の場合:
 
-<ul>
- <li>バックグラウンドページを除くすべての実行コンテキストでクリップボードへの書き込みが可能です。Firefox ではテキストを選択したり、入力フィールドにフォーカスすることがバックグラウンドページではできません。そのため、バックグラウンドページからはクリップボードへの書き込みができません。</li>
- <li>"clipboardWrite" パーミッションはバージョン 51以降でのみサポートされます。</li>
- <li>バージョン 57以降では、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData">clipboard.setImageData()</a></code> API を使用することでクリップボードへの画像のコピーが可能です。</li>
-</ul>
+- バックグラウンドページを除くすべての実行コンテキストでクリップボードへの書き込みが可能です。Firefox ではテキストを選択したり、入力フィールドにフォーカスすることがバックグラウンドページではできません。そのため、バックグラウンドページからはクリップボードへの書き込みができません。
+- "clipboardWrite" パーミッションはバージョン 51 以降でのみサポートされます。
+- バージョン 57 以降では、[`clipboard.setImageData()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData) API を使用することでクリップボードへの画像のコピーが可能です。
 
-<h2 id="Reading_from_the_clipboard" name="Reading_from_the_clipboard">クリップボードからの読み込み</h2>
+## クリップボードからの読み込み
 
-<p>"貼り付け"を使用するには"clipboardRead" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">permission</a> が必要です。例えば、HTML に次のような内容を含めると思います:</p>
+"貼り付け"を使用するには"clipboardRead" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions) が必要です。例えば、HTML に次のような内容を含めると思います:
 
-<pre class="brush: html">&lt;textarea id="output"&gt;&lt;/textarea&gt;
-&lt;button id="paste"&gt;Paste&lt;/button&gt;
-</pre>
+```html
+<textarea id="output"></textarea>
+<button id="paste">Paste</button>
+```
 
-<p>ユーザーが"paste"をクリックした際に"output"要素にクリップボードの内容を設定する場合、次のようなコードを使用します:</p>
+ユーザーが"paste"をクリックした際に"output"要素にクリップボードの内容を設定する場合、次のようなコードを使用します:
 
-<pre class="brush: js">function paste() {
+```js
+function paste() {
   var pasteText = document.querySelector("#output");
   pasteText.focus();
   document.execCommand("paste");
   console.log(pasteText.textContent);
 }
 
-document.querySelector("#paste").addEventListener("click", paste);</pre>
+document.querySelector("#paste").addEventListener("click", paste);
+```
 
-<p>このコードには、ユーザー操作が起点のイベントハンドラーの場合でも"clipboardRead"のパーミッションが必要です。</p>
+このコードには、ユーザー操作が起点のイベントハンドラーの場合でも"clipboardRead"のパーミッションが必要です。
 
-<h3 id="Browser-specific_considerations_2" name="Browser-specific_considerations_2">特定のブラウザーにおける留意事項</h3>
+### 特定のブラウザーにおける留意事項
 
-<p>Firefox は"clipboardRead" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> をバージョン 54 からサポートしています。しかし、クリップボードからの読み込みにはパーミッションの他に、貼り付け先の要素が <a href="/ja/docs/Web/Guide/HTML/Editable_content">content editable mode</a> である必要があります。さらに、コンテンツスクリプトの場合は&lt;textarea&gt;要素のみ動作します。バックグラウンドスクリプトでは、どの要素でも content editable mode に設定できます。</p>
-
-<div id="simple-translate-button" class="hidden"> </div>
-
-<div id="simple-translate-panel" class="hidden">
-<p>...</p>
-</div>
+Firefox は"clipboardRead" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) をバージョン 54 からサポートしています。しかし、クリップボードからの読み込みにはパーミッションの他に、貼り付け先の要素が [content editable mode](/ja/docs/Web/Guide/HTML/Editable_content) である必要があります。さらに、コンテンツスクリプトの場合は\<textarea>要素のみ動作します。バックグラウンドスクリプトでは、どの要素でも content editable mode に設定できます。

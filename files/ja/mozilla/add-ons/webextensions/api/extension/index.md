@@ -12,69 +12,53 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>拡張機能に関連するユーティリティ。拡張機能のリソースパッケージのURLを取得したり、拡張機能のページの <code><a href="/ja/docs/Web/API/Window">Window</a></code> オブジェクトを取得したり、いろいろな設定の値を取得したりします。注意として、このモジュールのメッセージ APIs は非推奨で、 <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code> モジュールの同様な API が好まれます。</p>
+拡張機能に関連するユーティリティ。拡張機能のリソースパッケージの URL を取得したり、拡張機能のページの [`Window`](/ja/docs/Web/API/Window) オブジェクトを取得したり、いろいろな設定の値を取得したりします。注意として、このモジュールのメッセージ APIs は非推奨で、 [`runtime`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime) モジュールの同様な API が好まれます。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt>{{WebExtAPIRef("extension.ViewType")}}</dt>
- <dd>拡張機能ビューの型</dd>
-</dl>
+- {{WebExtAPIRef("extension.ViewType")}}
+  - : 拡張機能ビューの型
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{WebExtAPIRef("extension.lastError")}}</dt>
- <dd>同期型の拡張機能APIがエラーに終わった場合のコールバックの寿命をセットします。エラーが起きなかったら lastError は <var>undefined</var>.になります。</dd>
- <dt>{{WebExtAPIRef("extension.inIncognitoContext")}}</dt>
- <dd>incognito タブ内でコンテンツスクリプトが実行されたり、 incognito プロセス内で拡張機能ページが実行されたら true になります。後者は 'split' incognito_behavior の場合だけです。</dd>
-</dl>
+- {{WebExtAPIRef("extension.lastError")}}
+  - : 同期型の拡張機能 API がエラーに終わった場合のコールバックの寿命をセットします。エラーが起きなかったら lastError は _undefined_.になります。
+- {{WebExtAPIRef("extension.inIncognitoContext")}}
+  - : incognito タブ内でコンテンツスクリプトが実行されたり、 incognito プロセス内で拡張機能ページが実行されたら true になります。後者は 'split' incognito_behavior の場合だけです。
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt>{{WebExtAPIRef("extension.getURL()")}}</dt>
- <dd>拡張機能がインストールされたディレクトリーの相対パスを完全修飾 URL に変換する</dd>
- <dt>{{WebExtAPIRef("extension.getViews()")}}</dt>
- <dd>今の拡張機能内で実行されているページの <code><a href="/ja/docs/Web/API/Window">Window</a></code> オブジェクトを返す</dd>
- <dt>{{WebExtAPIRef("extension.getBackgroundPage()")}}</dt>
- <dd>今の拡張機能内で実行されているバックグラウンドページの <code><a href="/ja/docs/Web/API/Window">Window</a></code> オブジェクトを返す。拡張機能がバックグラウンドページを持たない場合は null を返す</dd>
- <dt>{{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}</dt>
- <dd>拡張機能が Incognito-モード (ユーザーが制御する 'Incognito を許可' のチェックボックスで定義される) にアクセスする状態を取得する</dd>
- <dt>{{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}</dt>
- <dd>拡張機能が 'file://' スキーム(ユーザーが制御する 'File URLs のアクセスを許可' のチェックボックスで定義される) にアクセスする状態を取得する</dd>
- <dt>{{WebExtAPIRef("extension.setUpdateUrlData()")}}</dt>
- <dd>拡張機能の更新URL内で使われる ap CGI パラメーターをセットする。この値はブラウザーのベンダーストアでホストされる拡張機能では無視される</dd>
-</dl>
+- {{WebExtAPIRef("extension.getURL()")}}
+  - : 拡張機能がインストールされたディレクトリーの相対パスを完全修飾 URL に変換する
+- {{WebExtAPIRef("extension.getViews()")}}
+  - : 今の拡張機能内で実行されているページの [`Window`](/ja/docs/Web/API/Window) オブジェクトを返す
+- {{WebExtAPIRef("extension.getBackgroundPage()")}}
+  - : 今の拡張機能内で実行されているバックグラウンドページの [`Window`](/ja/docs/Web/API/Window) オブジェクトを返す。拡張機能がバックグラウンドページを持たない場合は null を返す
+- {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
+  - : 拡張機能が Incognito-モード (ユーザーが制御する 'Incognito を許可' のチェックボックスで定義される) にアクセスする状態を取得する
+- {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
+  - : 拡張機能が 'file://' スキーム(ユーザーが制御する 'File URLs のアクセスを許可' のチェックボックスで定義される) にアクセスする状態を取得する
+- {{WebExtAPIRef("extension.setUpdateUrlData()")}}
+  - : 拡張機能の更新 URL 内で使われる ap CGI パラメーターをセットする。この値はブラウザーのベンダーストアでホストされる拡張機能では無視される
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{WebExtAPIRef("extension.onRequest")}}</dt>
- <dd>拡張機能のプロセスかコンテンツスクリプトのいずれかからリクエストが送られた時に発火します</dd>
- <dt>{{WebExtAPIRef("extension.onRequestExternal")}}</dt>
- <dd>その他の拡張機能からリクエストが送られた時に発火します</dd>
-</dl>
+- {{WebExtAPIRef("extension.onRequest")}}
+  - : 拡張機能のプロセスかコンテンツスクリプトのいずれかからリクエストが送られた時に発火します
+- {{WebExtAPIRef("extension.onRequestExternal")}}
+  - : その他の拡張機能からリクエストが送られた時に発火します
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.extension")}}</p>
+{{Compat("webextensions.api.extension")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.extension`](https://developer.chrome.com/extensions/extension) API に基づいています。また、このドキュメントは [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a>における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-
-<p> </p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +86,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

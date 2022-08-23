@@ -3,40 +3,30 @@ title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.</p>
+This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
 
-<h2 id="型">型</h2>
+## 型
 
-<p>値の型はオブジェクトです。次のプロパティを含みます:</p>
+値の型はオブジェクトです。次のプロパティを含みます:
 
-<dl class="reference-values">
- <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. ミュートの状態を最後に変更した拡張機能のIDです。もし拡張機能がミュートの状態の最後の変更の理由でないなら設定されません。</dd>
- <dt><code>muted</code></dt>
- <dd><code>boolean</code>. タブが現在ミュートかどうか。Equivalent to whether the muted audio indicator is showing.</dd>
- <dt><code>reason</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.MutedInfoReason')}}. ミュートもしくはアンピューとに設定された理由。Not set if the tab's muted state has never been changed.</dd>
-</dl>
+- `extensionId`{{optional_inline}}
+  - : `string`. ミュートの状態を最後に変更した拡張機能の ID です。もし拡張機能がミュートの状態の最後の変更の理由でないなら設定されません。
+- `muted`
+  - : `boolean`. タブが現在ミュートかどうか。Equivalent to whether the muted audio indicator is showing.
+- `reason`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. ミュートもしくはアンピューとに設定された理由。Not set if the tab's muted state has never been changed.
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
+{{Compat("webextensions.api.tabs.MutedInfo")}}
 
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.tabs.MutedInfo")}}</p>
+> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#type-MutedInfo"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -64,4 +54,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -11,71 +11,53 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p>このAPI は <a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a> に基づいていますが、Firefoxでは実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 <a href="/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs">Limitations of the devtools APIs</a> を見てください。</p>
-</div>
+> **Note:** この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。
 
-<p><code>devtools.panels</code> API によって開発ツール拡張機能では開発ツールウィンドウ内のユーザーインターフェイスの定義ができます。</p>
+`devtools.panels` API によって開発ツール拡張機能では開発ツールウィンドウ内のユーザーインターフェイスの定義ができます。
 
-<p>開発ツールウィンドウにはいくつもの個別のツールがあります - JavaScript デバッガー、ネットワークモニター、などが。最上位のタブの行でユーザーは色々なツールを切り替えられます。ツールのUIをホストするこのウィンドウは「パネル」と呼ばれます。</p>
+開発ツールウィンドウにはいくつもの個別のツールがあります - JavaScript デバッガー、ネットワークモニター、などが。最上位のタブの行でユーザーは色々なツールを切り替えられます。ツールの UI をホストするこのウィンドウは「パネル」と呼ばれます。
 
-<p><code>devtools.panels</code> API にて開発ツールウィンドウ内の新規パネルを作成できます。</p>
+`devtools.panels` API にて開発ツールウィンドウ内の新規パネルを作成できます。
 
-<p>すべての <code>devtools</code> API と同様に、この API はmanifest.json <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えばパネル自身のドキュメント)の中だけでコードを利用できます。これ以上は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">開発ツールを拡張する</a>を見てください。</p>
+すべての `devtools` API と同様に、この API は manifest.json [devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えばパネル自身のドキュメント)の中だけでコードを利用できます。これ以上は [開発ツールを拡張する](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)を見てください。
 
-<h2 id="Types" name="Types">型</h2>
+## 型
 
-<dl>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel">devtools.panels.ElementsPanel</a></code></dt>
- <dd>ブラウザーの開発ツールの HTML/CSS インスペクターを表す</dd>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel">devtools.panels.ExtensionPanel</a></code></dt>
- <dd>拡張機能によって作られた開発ツールパネルを表す</dd>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">devtools.panels.ExtensionSidebarPane</a></code></dt>
- <dd>ブラウザーの開発ツールの HTML/CSS インスペクターに、拡張機能が追加したペインを表す</dd>
-</dl>
+- [`devtools.panels.ElementsPanel`](/ja/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel)
+  - : ブラウザーの開発ツールの HTML/CSS インスペクターを表す
+- [`devtools.panels.ExtensionPanel`](/ja/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel)
+  - : 拡張機能によって作られた開発ツールパネルを表す
+- [`devtools.panels.ExtensionSidebarPane`](/ja/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane)
+  - : ブラウザーの開発ツールの HTML/CSS インスペクターに、拡張機能が追加したペインを表す
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/elements">devtools.panels.elements</a></code></dt>
- <dd><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel">ElementsPanel</a></code> オブジェクトの参照</dd>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/themeName">devtools.panels.themeName</a></code></dt>
- <dd>現在の開発ツールテーマの名前</dd>
-</dl>
+- [`devtools.panels.elements`](/ja/Add-ons/WebExtensions/API/devtools.panels/elements)
+  - : [`ElementsPanel`](/ja/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel) オブジェクトの参照
+- [`devtools.panels.themeName`](/ja/Add-ons/WebExtensions/API/devtools.panels/themeName)
+  - : 現在の開発ツールテーマの名前
 
-<h2 id="Functions" name="Functions">関数</h2>
+## 関数
 
-<dl>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/create">devtools.panels.create()</a></code></dt>
- <dd>開発ツールを作成する</dd>
-</dl>
+- [`devtools.panels.create()`](/ja/Add-ons/WebExtensions/API/devtools.panels/create)
+  - : 開発ツールを作成する
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt><code><a href="/ja/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged">devtools.panels.onThemeChanged</a></code></dt>
- <dd>開発ツールテーマが変更された時に発火する</dd>
-</dl>
+- [`devtools.panels.onThemeChanged`](/ja/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged)
+  - : 開発ツールテーマが変更された時に発火する
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.devtools.panels", 2)}}</p>
+{{Compat("webextensions.api.devtools.panels", 2)}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API に基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-
-<p> </p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,4 +85,3 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

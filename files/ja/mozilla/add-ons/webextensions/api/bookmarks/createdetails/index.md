@@ -13,44 +13,34 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p><code>CreateDetails</code> 型は、新しいブックマークやフォルダのプロパティを表すためのオブジェクト型です。{{WebExtAPIRef("bookmarks.create()")}} メソッドの呼び出し時に渡します。</p>
+`CreateDetails` 型は、新しいブックマークやフォルダのプロパティを表すためのオブジェクト型です。{{WebExtAPIRef("bookmarks.create()")}} メソッドの呼び出し時に渡します。
 
-<div class="note">
-<p>現在、ブックマークリストのセパレータをこのオブジェクト型で表すことはできません。</p>
-</div>
+> **Note:** 現在、ブックマークリストのセパレータをこのオブジェクト型で表すことはできません。
 
-<h2 id="値の型">値の型</h2>
+## 値の型
 
-<p>以下のプロパティを含む {{jsxref("object")}} です。</p>
+以下のプロパティを含む {{jsxref("object")}} です。
 
-<dl class="reference-values">
- <dt><code>parentId</code>{{optional_inline}}</dt>
- <dd>新しいブックマーク / フォルダの親フォルダを指定する {{jsxref("string")}} です。デフォルト値はブラウザによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。</dd>
- <dt><code>index</code>{{optional_inline}}</dt>
- <dd>親要素の配下における、新しいブックマーク / フォルダの位置を指定する {{jsxref("number")}} です。値が 0 の場合、リストの先頭に置かれます。</dd>
- <dt><code>title</code>{{optional_inline}}</dt>
- <dd><code>作成する</code>ブックマークのタイトルやフォルダの名前を指定する {{jsxref("string")}} です。値を省略した場合、タイトルは <code>""</code> になります。</dd>
- <dt><code>url</code>{{optional_inline}}</dt>
- <dd>ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか <code>null</code> を指定した場合、ブックマークではなくフォルダが作成されます。</dd>
-</dl>
+- `parentId`{{optional_inline}}
+  - : 新しいブックマーク / フォルダの親フォルダを指定する {{jsxref("string")}} です。デフォルト値はブラウザによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
+- `index`{{optional_inline}}
+  - : 親要素の配下における、新しいブックマーク / フォルダの位置を指定する {{jsxref("number")}} です。値が 0 の場合、リストの先頭に置かれます。
+- `title`{{optional_inline}}
+  - : `作成する`ブックマークのタイトルやフォルダの名前を指定する {{jsxref("string")}} です。値を省略した場合、タイトルは `""` になります。
+- `url`{{optional_inline}}
+  - : ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダが作成されます。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}</p>
+{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/bookmarks#method-update"><code>chrome.bookmarks</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> における Chromium のコードから作成されています。</p>
-
-<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -78,4 +68,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

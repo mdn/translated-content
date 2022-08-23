@@ -5,29 +5,26 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>ツールバーボタンは拡張機能で利用できる主な UI コンポーネントです。ツールバーボタンはブラウザーツールバーに存在してアイコンを含んでいます。ユーザーがアイコンをクリックした時、下記の 2 つのいずれかが起こります:</p>
+ツールバーボタンは拡張機能で利用できる主な UI コンポーネントです。ツールバーボタンはブラウザーツールバーに存在してアイコンを含んでいます。ユーザーがアイコンをクリックした時、下記の 2 つのいずれかが起こります:
 
-<ul>
- <li>アイコンのポップアップを指定した場合、ポップアップが表示されます。ポップアップは HTML, CSS, JavaScript を使った一時的なダイアログです。</li>
- <li>ポップアップを指定していない場合、クリックイベントが生成され、コード内でそれをリッスンして、応答すべき他のアクションを実行できます。</li>
-</ul>
+- アイコンのポップアップを指定した場合、ポップアップが表示されます。ポップアップは HTML, CSS, JavaScript を使った一時的なダイアログです。
+- ポップアップを指定していない場合、クリックイベントが生成され、コード内でそれをリッスンして、応答すべき他のアクションを実行できます。
 
-<p>WebExtension API では、こうしたボタンの種類は "ブラウザーアクション" と呼ばれ、次のようにセットアップされます:</p>
+WebExtension API では、こうしたボタンの種類は "ブラウザーアクション" と呼ばれ、次のようにセットアップされます:
 
-<ul>
- <li>ボタンを定義するために使われる manifest.json の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> キー</li>
- <li>JavaScript API <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> はコードに応じてクリックとボタンの変更をリッスンしたりアクションを実行します。</li>
-</ul>
+- ボタンを定義するために使われる manifest.json の [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) キー
+- JavaScript API [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) はコードに応じてクリックとボタンの変更をリッスンしたりアクションを実行します。
 
-<h2 id="A_simple_button" name="A_simple_button">シンプルなボタン</h2>
+## シンプルなボタン
 
-<p>このセクションでは、ツールバーにボタンを追加する拡張機能を作ります。ユーザーがボタンをクリックしたときに <a href="https://developer.mozilla.org">https://developer.mozilla.org</a> を新しいタブで開きます。</p>
+このセクションでは、ツールバーにボタンを追加する拡張機能を作ります。ユーザーがボタンをクリックしたときに <https://developer.mozilla.org> を新しいタブで開きます。
 
-<p>まず、新しいディレクトリー"button"を作り、そして"manifest.json"と呼ばれる、以下の内容のファイルを作ります:</p>
+まず、新しいディレクトリー"button"を作り、そして"manifest.json"と呼ばれる、以下の内容のファイルを作ります:
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -45,55 +42,55 @@ translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
     }
   }
 
-}</pre>
+}
+```
 
-<p>これは "background.js"という名前の<a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">バックグラウンドスクリプト</a>と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。</p>
+これは "background.js"という名前の[バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。
 
-<div class="pull-aside">
-<div class="moreinfo">These icons are from the <a href="https://www.iconfinder.com/iconsets/bitsies">bitsies!</a> iconset created by Recep Kütük.</div>
-</div>
+These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
-<p>次に、"buttons"ディレクトリー内に "icons" ディレクトリーを作成し、下記に表示されている 2 つのアイコンを保存します:</p>
+次に、"buttons"ディレクトリー内に "icons" ディレクトリーを作成し、下記に表示されている 2 つのアイコンを保存します:
 
-<ul>
- <li>"page-16.png" (<img alt="" src="https://mdn.mozillademos.org/files/13476/page-16.png" style="height: 16px; width: 16px;">)</li>
- <li>"page-32.png" (<img alt="" src="https://mdn.mozillademos.org/files/13478/page-32.png" style="height: 32px; width: 32px;">).</li>
-</ul>
+- "page-16.png" (![](https://mdn.mozillademos.org/files/13476/page-16.png))
+- "page-32.png" (![](https://mdn.mozillademos.org/files/13478/page-32.png)).
 
+高解像度ディスプレイで大きいのを使うように 2 つのアイコンがあります。ブラウザーは現在のディスプレイに最適なアイコンを選ぶよう配慮します。
 
+次に、拡張機能のルートディレクトリー内の "background.js" を作り、次の中身を入れます:
 
-<p>高解像度ディスプレイで大きいのを使うように 2 つのアイコンがあります。ブラウザーは現在のディスプレイに最適なアイコンを選ぶよう配慮します。</p>
-
-<p>次に、拡張機能のルートディレクトリー内の "background.js" を作り、次の中身を入れます:</p>
-
-<pre class="brush: js">function openPage() {
+```js
+function openPage() {
   browser.tabs.create({
     url: "https://developer.mozilla.org"
   });
 }
 
-browser.browserAction.onClicked.addListener(openPage);</pre>
+browser.browserAction.onClicked.addListener(openPage);
+```
 
-<p>これはブラウザーアクションのクリックイベントをリッスンして、イベントが発火したとき、<code>openPage()</code> 関数が実行されて、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code> API を使って特定のページを開きます。</p>
+これはブラウザーアクションのクリックイベントをリッスンして、イベントが発火したとき、`openPage()` 関数が実行されて、[`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs) API を使って特定のページを開きます。
 
-<p>ここで完全な拡張機能は次のようです:</p>
+ここで完全な拡張機能は次のようです:
 
-<pre class="line-numbers  language-html"><code class="language-html">button/
+```html
+button/
     icons/
         page-16.png
         page-32.png
     background.js
-    manifest.json</code></pre>
+    manifest.json
+```
 
-<p>ここで<a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">拡張機能をインストールして</a>ボタンをクリックします:</p>
+ここで[拡張機能をインストールして](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)ボタンをクリックします:
 
-<p>{{EmbedYouTube("kwwTowgT-Ys")}}</p>
+{{EmbedYouTube("kwwTowgT-Ys")}}
 
-<h2 id="Adding_a_popup" name="Adding_a_popup">ポップアップを追加する</h2>
+## ポップアップを追加する
 
-<p>ボタンにポップアップを追加してみましょう。manifest.json を次のように置き換えます:</p>
+ボタンにポップアップを追加してみましょう。manifest.json を次のように置き換えます:
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -109,40 +106,42 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     }
   }
 
-}</pre>
+}
+```
 
-<p>オリジナルから 3 つの変更点があります:</p>
+オリジナルから 3 つの変更点があります:
 
-<ul>
- <li>もう "background.js"は参照しません、なぜならポップアップスクリプト内で拡張機能のロジックを扱うためです (ポップアップと同様に background.js が許可されますが、この場合は不要です)。</li>
- <li><code>"browser_style": true</code> を追加しており、これはポップアップがブラウザーの一部であるようなスタイリングに役立ちます。</li>
- <li>最後に <code>"default_popup": "popup/choose_page.html"</code> を追加します。これはブラウザーアクションがクリック時にポップアップを表示し、"popup/choose_page.html" に document があることをブラウザーに伝えます。</li>
-</ul>
+- もう "background.js"は参照しません、なぜならポップアップスクリプト内で拡張機能のロジックを扱うためです (ポップアップと同様に background.js が許可されますが、この場合は不要です)。
+- `"browser_style": true` を追加しており、これはポップアップがブラウザーの一部であるようなスタイリングに役立ちます。
+- 最後に `"default_popup": "popup/choose_page.html"` を追加します。これはブラウザーアクションがクリック時にポップアップを表示し、"popup/choose_page.html" に document があることをブラウザーに伝えます。
 
-<p>さてポップアップを作らねばなりません。"popup" というディレクトリーを作成してその中に "choose_page.html" というファイルを作ります。中身は次の通り:</p>
+さてポップアップを作らねばなりません。"popup" というディレクトリーを作成してその中に "choose_page.html" というファイルを作ります。中身は次の通り:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;link rel="stylesheet" href="choose_page.css"/&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_page.css"/>
+  </head>
 
-&lt;body&gt;
-  &lt;div class="page-choice"&gt;developer.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;support.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;addons.mozilla.org&lt;/div&gt;
-  &lt;script src="choose_page.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
+<body>
+  <div class="page-choice">developer.mozilla.org</div>
+  <div class="page-choice">support.mozilla.org</div>
+  <div class="page-choice">addons.mozilla.org</div>
+  <script src="choose_page.js"></script>
+</body>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<p>これはふつうの HTML ページに 3 つの{{htmlelement("div")}} 要素があり、その中に Mozilla サイトがあるのが分かるでしょう。また次で追加する CSS ファイルと JavaScript ファイルも入っています。</p>
+これはふつうの HTML ページに 3 つの{{htmlelement("div")}} 要素があり、その中に Mozilla サイトがあるのが分かるでしょう。また次で追加する CSS ファイルと JavaScript ファイルも入っています。
 
-<p>"popup" ディレクトリーに"choose_page.css" というファイルを作って、次の中身を入れます:</p>
+"popup" ディレクトリーに"choose_page.css" というファイルを作って、次の中身を入れます:
 
-<pre class="brush: css">html, body {
+```css
+html, body {
   width: 300px;
 }
 
@@ -156,13 +155,15 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 .page-choice:hover {
   background-color: #CFF2F2;
-}</pre>
+}
+```
 
-<p>これは単にポップアップのスタイリングです。</p>
+これは単にポップアップのスタイリングです。
 
-<p>次に、"popup" ディレクトリーに"choose_page.js" ファイルを作成し、次の中身を入れます:</p>
+次に、"popup" ディレクトリーに"choose_page.js" ファイルを作成し、次の中身を入れます:
 
-<pre class="brush: js">document.addEventListener("click", function(e) {
+```js
+document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
@@ -172,13 +173,15 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     url: chosenPage
   });
 
-});</pre>
+});
+```
 
-<p>この JavaScript で、ポップアップ選択のクリックをリッスンします。まずは page-choices にクリックがあったかをチェックし、そうでない場合は何もしません。クリックが page-choice にあった場合は、それから URL を作成し、対応するページを含む新規タブを開きます。注意として、バックグラウンドスクリプト内と同じように、ポップアップスクリプトでも WebExtension APIs を使用できます。</p>
+この JavaScript で、ポップアップ選択のクリックをリッスンします。まずは page-choices にクリックがあったかをチェックし、そうでない場合は何もしません。クリックが page-choice にあった場合は、それから URL を作成し、対応するページを含む新規タブを開きます。注意として、バックグラウンドスクリプト内と同じように、ポップアップスクリプトでも WebExtension APIs を使用できます。
 
-<p>拡張機能の最終構造は次の通りです:</p>
+拡張機能の最終構造は次の通りです:
 
-<pre>button/
+```
+button/
     icons/
         page-16.png
         page-32.png
@@ -186,36 +189,32 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
         choose_page.css
         choose_page.html
         choose_page.js
-    manifest.json</pre>
+    manifest.json
+```
 
-<p>拡張機能を再読み込みし、もう一度ボタンをクリックし、ポップアップの選択をクリックしてみてください:</p>
+拡張機能を再読み込みし、もう一度ボタンをクリックし、ポップアップの選択をクリックしてみてください:
 
-<p>{{EmbedYouTube("QPEh1L1xq0Y")}}</p>
+{{EmbedYouTube("QPEh1L1xq0Y")}}
 
-<h2 id="Page_actions" name="Page_actions">ページアクション</h2>
+## ページアクション
 
-<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions">ページアクション</a> はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。</p>
+[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions) はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。
 
-<p>ブラウザーアクションはいつも見えていて、ページアクションは関連するタブだけに見えています。ページアクションボタンはブラウザーツールバーでなく、URL バーに表示されます。</p>
+ブラウザーアクションはいつも見えていて、ページアクションは関連するタブだけに見えています。ページアクションボタンはブラウザーツールバーでなく、URL バーに表示されます。
 
-<h2 id="Learn_more" name="Learn_more">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> マニフェストキー</li>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API</li>
- <li>ブラウザーアクションの例:
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it">Bookmark it!</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite-colour</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button">open-my-page-button</a></li>
-  </ul>
- </li>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> マニフェストキー</li>
- <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code> API</li>
- <li>ページアクションの例:
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a></li>
-  </ul>
- </li>
-</ul>
+- [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキー
+- [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
+- ブラウザーアクションの例:
+
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
+  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+
+- [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) マニフェストキー
+- [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
+- ページアクションの例:
+
+  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
