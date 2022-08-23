@@ -12,7 +12,6 @@ tags:
   - Web
   - drag and drop
   - dragleave
-browser-compat: api.Document.dragleave_event
 translation_of: Web/API/Document/dragleave_event
 ---
 {{APIRef}}

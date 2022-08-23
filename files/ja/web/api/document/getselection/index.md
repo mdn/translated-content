@@ -9,7 +9,6 @@ tags:
   - getSelection
 translation_of: Web/API/Document/getSelection
 original_slug: Web/API/DocumentOrShadowRoot/getSelection
-browser-compat: api.Document.getSelection
 ---
 {{APIRef("DOM")}}
 

@@ -8,7 +8,6 @@ tags:
   - Reference
   - プロパティ
   - 標準外
-browser-compat: api.Document.afterscriptexecute_event
 translation_of: Web/API/Document/onafterscriptexecute
 original_slug: Web/API/Document/onafterscriptexecute
 ---

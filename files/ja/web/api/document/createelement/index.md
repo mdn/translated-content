@@ -8,7 +8,6 @@ tags:
   - メソッド
   - リファレンス
   - createElement
-browser-compat: api.Document.createElement
 translation_of: Web/API/Document/createElement
 ---
 {{APIRef("DOM")}}

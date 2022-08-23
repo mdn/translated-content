@@ -9,7 +9,6 @@ tags:
   - Read-only
   - Reference
 translation_of: Web/API/Document/characterSet
-browser-compat: api.Document.characterSet
 ---
 {{ ApiRef("DOM") }}
 
