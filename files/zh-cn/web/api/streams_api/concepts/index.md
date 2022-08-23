@@ -12,10 +12,10 @@ slug: Web/API/Streams_API/Concepts
 
 有两种类型的 underlying source：
 
-- **Push sources** 会在你访问了它们之后，不断地主动推送数据。你可以自行开始（start）、暂停（pause）或取消（cancel）对流的访问。例如视频流和 TCP/[Web sockets](/zh-CN/docs/Web/API/WebSockets_API) 。
+- **Push sources** 会在你访问了它们之后，不断地主动推送数据。你可以自行开始（start）、暂停（pause）或取消（cancel）对流的访问。例如视频流和 TCP/[Web socket](/zh-CN/docs/Web/API/WebSockets_API)。
 - **Pull sources** 需要在你连接到它们后，显式地请求数据。例如通过 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 或 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest/XMLHttpRequest) 请求访问一个文件。
 
-数据被按序读入到许多分块，这些分块被称作 **chunk**。**chunk** 可以是单个字节，也可以是某种更大的数据类型，例如特定大小的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)。单个流的 **chunk** 可以有不同的大小和类型。
+数据被按序读入到许多小的片段，这些片段被称作**分块**（chunk）。**chunk** 可以是单个字节，也可以是某种更大的数据类型，例如特定大小的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)。单个流的 **chunk** 可以有不同的大小和类型。
 
 ![](readable_streams.png)
 
@@ -25,7 +25,7 @@ slug: Web/API/Streams_API/Concepts
 
 另一个你将用到的对象叫做 **controller**——每个 reader 都有一个关联的 controller，用来控制流（例如，可以将流关闭）。
 
-一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（**active reader**，译者注：该流已经处于活动状态）时，我们说，它被 **locked**（锁定）在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作（你也可以 **tee**，译者注：拷贝流，参阅下面的 Teeing 部分）。
+一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（**active reader**）时，我们说，它被 **locked**（锁定）在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作（你也可以 **tee**，请参阅下面的 Teeing 部分）。
 
 注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流——这是传统流的扩展版本，用于读取底层字节源。相比于传统的可读流，字节流被允许通过 BYOB reader 读取（BYOB，“带上你自己的缓冲区”）。这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。你的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅 {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。
 
@@ -43,7 +43,7 @@ slug: Web/API/Streams_API/Concepts
 
 ## 可写流
 
-一个 **Writable stream**（可写流）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink**（底层接收器）的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
+一个 **可写流**（Writable stream）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 **underlying sink**（底层接收器）的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
 
 数据由一个 **writer** 写入流中，每次只写入一个分块。分块和可读流的 reader 一样可以有多种类型。你可以用任何方式生成要被写入的块；writer 加上相关的代码称为 **producer**。
 
@@ -57,7 +57,7 @@ slug: Web/API/Streams_API/Concepts
 
 你可以使用 {{domxref("WritableStream.WritableStream","WritableStream()")}} 构造函数使用可写流。这些目前在浏览器中的应用非常有限。
 
-## 链式管道传输（Pipe chain）
+## 链式管道传输
 
 Streams API 使用**链式管道**（pipe chain）的结构将流传输到另一个流已经成为可能。有两种方法可以作用于它：
 
@@ -72,7 +72,7 @@ pipe chain 的起点称为 **original source**，终点称为 **ultimate sink**�
 
 流的一个重要概念是**背压**——这是单个流或一个链式管道调节读/写速度的过程。当链中后面的一个流仍然忙碌，尚未准备好接受更多的分块时，它会通过链向上游的流发送一个信号，告诉上游的转换流（或原始源）适当地减慢传输速度，这样你就不会在任何地方遇到瓶颈。
 
-要在可读流中使用 backpressure 技术，我们可以通过查询 controller 的 {{domxref("ReadableStreamDefaultController.desiredSize")}} 属性。如果该值太低或为负数，我们的 ReadableStream 可以告诉它的底层源停止往流中装载数据，然后我们沿着 stream chain 进行背压。
+要在可读流中使用背压技术，我们可以通过查询 controller 的 {{domxref("ReadableStreamDefaultController.desiredSize")}} 属性。如果该值太低或为负数，我们的 ReadableStream 可以告诉它的底层源停止往流中装载数据，然后我们沿着 stream chain 进行背压。
 
 可读流在经历背压后，如果 consumer 再次想要接收数据，我们可以在构造可读流时提供 pull 方法来告诉底层源恢复往流中装载数据。
 
