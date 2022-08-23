@@ -9,7 +9,6 @@ tags:
   - メソッド
   - リファレンス
   - insertAdjacentElement
-browser-compat: api.Element.insertAdjacentElement
 ---
 {{APIRef("DOM")}}
 

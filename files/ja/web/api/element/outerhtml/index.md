@@ -13,7 +13,6 @@ tags:
   - シリアライズ
   - Serializing
   - outerHTML
-browser-compat: api.Element.outerHTML
 translation_of: Web/API/Element/outerHTML
 ---
 {{APIRef("DOM")}}

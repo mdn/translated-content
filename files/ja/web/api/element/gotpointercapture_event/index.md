@@ -10,7 +10,6 @@ tags:
   - gotpointercapture
   - イベント
   - ウェブ
-browser-compat: api.Element.gotpointercapture_event
 translation_of: Web/API/Document/gotpointercapture_event
 original_slug: Web/API/Document/gotpointercapture_event
 ---

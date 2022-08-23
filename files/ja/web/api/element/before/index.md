@@ -7,7 +7,6 @@ tags:
   - メソッド
   - Node
   - リファレンス
-browser-compat: api.Element.before
 translation_of: Web/API/Element/before
 original_slug: Web/API/ChildNode/before
 ---

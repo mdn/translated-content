@@ -9,7 +9,6 @@ tags:
   - PointerEvent
   - Property
   - Reference
-browser-compat: api.Element.pointerenter_event
 translation_of: Web/API/GlobalEventHandlers/onpointerenter
 original_slug: Web/API/GlobalEventHandlers/onpointerenter
 ---

@@ -10,7 +10,6 @@ tags:
   - Reference
   - animationiteration
   - イベント
-browser-compat: api.Element.animationiteration_event
 translation_of: Web/API/Document/animationiteration_event
 original_slug: Web/API/Document/animationiteration_event
 ---

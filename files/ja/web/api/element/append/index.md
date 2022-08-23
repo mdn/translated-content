@@ -8,7 +8,6 @@ tags:
   - Node
   - Element
   - リファレンス
-browser-compat: api.Element.append
 translation_of: Web/API/Element/append
 original_slug: Web/API/ParentNode/append
 ---

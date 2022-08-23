@@ -9,7 +9,6 @@ tags:
   - PointerEvent
   - Property
   - Reference
-browser-compat: api.Element.pointercancel_event
 translation_of: Web/API/GlobalEventHandlers/onpointercancel
 original_slug: Web/API/GlobalEventHandlers/onpointercancel
 ---

@@ -9,7 +9,6 @@ tags:
   - Element
   - リファレンス
   - replaceChildren
-browser-compat: api.Element.replaceChildren
 translation_of: Web/API/Element/replaceChildren
 ---
 {{APIRef("DOM")}}

@@ -11,7 +11,6 @@ tags:
   - イベント
   - ウェブ
   - トランジション
-browser-compat: api.Element.transitionrun_event
 translation_of: Web/API/Document/transitionrun_event
 original_slug: Web/API/Document/transitionrun_event
 ---

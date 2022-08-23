@@ -12,7 +12,6 @@ tags:
   - 読み取り専用
   - リファレンス
   - tagName
-browser-compat: api.Element.tagName
 translation_of: Web/API/Element/tagName
 ---
 {{ApiRef("DOM")}}

@@ -9,7 +9,6 @@ tags:
   - PointerEvent
   - Property
   - Reference
-browser-compat: api.Element.pointermove_event
 translation_of: Web/API/GlobalEventHandlers/onpointermove
 original_slug: Web/API/GlobalEventHandlers/onpointermove
 ---

@@ -8,7 +8,6 @@ tags:
   - NeedsMarkupWork
   - プロパティ
   - リファレンス
-browser-compat: api.Element.scrollTop
 translation_of: Web/API/Element/scrollTop
 ---
 {{APIRef("DOM")}}

@@ -7,7 +7,6 @@ tags:
   - Event
   - NeedsUpdate
   - Reference
-browser-compat: api.Element.paste_event
 translation_of: Web/API/Element/paste_event
 ---
 {{APIRef}}

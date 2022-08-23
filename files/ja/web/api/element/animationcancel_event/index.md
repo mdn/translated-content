@@ -11,7 +11,6 @@ tags:
   - animationcancel
   - イベント
   - ウェブ
-browser-compat: api.Element.animationcancel_event
 translation_of: Web/API/Document/animationcancel_event
 original_slug: Web/API/Document/animationcancel_event
 ---

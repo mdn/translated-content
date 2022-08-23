@@ -9,7 +9,6 @@ tags:
   - メソッド
   - リファレンス
   - セレクター
-browser-compat: api.Element.closest
 translation_of: Web/API/Element/closest
 ---
 {{APIRef('DOM')}}
