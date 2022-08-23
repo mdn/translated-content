@@ -17,11 +17,13 @@ translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 
 MediaStream Recording API の使用の記事では、 {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} から返されるように、{{domxref("MediaRecorder")}} インターフェイスを使用してハードウェアデバイスによって生成された {{domxref("MediaStream")}} をキャプチャする方法について説明しましたが、記録する `MediaStream` のソースとして HTML メディア要素（{{HTMLElement("audio")}} または {{HTMLElement("video")}}）も使用できます。 この記事では、それを実現する例を見ていきます。
 
-## HTML の内容
+## メディア要素の録画の例
+
+### HTML
 
 ```html hidden
-<p>Click the "Start" button to begin video recording for a few seconds. You can stop
-   the video by clicking the creatively-named "Stop" button. The "Download"
+<p>Click the "Start Recording" button to begin video recording for a few seconds. You can stop
+   recording by clicking the "Stop Recording" button. The "Download"
    button will download the received data (although it's in a raw, unwrapped form
    that isn't very useful).
 </p>
@@ -33,7 +35,7 @@ MediaStream Recording API の使用の記事では、 {{domxref("MediaDevices.ge
 ```html
 <div class="left">
   <div id="startButton" class="button">
-    Start
+    Start Recording
   </div>
   <h2>Preview</h2>
   <video id="preview" width="160" height="120" autoplay muted></video>
@@ -45,7 +47,7 @@ MediaStream Recording API の使用の記事では、 {{domxref("MediaDevices.ge
 ```html
 <div class="right">
   <div id="stopButton" class="button">
-    Stop
+    Stop Recording
   </div>
   <h2>Recording</h2>
   <video id="recording" width="160" height="120" controls></video>
@@ -64,8 +66,6 @@ MediaStream Recording API の使用の記事では、 {{domxref("MediaDevices.ge
   <pre id="log"></pre>
 </div>
 ```
-
-**CSS content**
 
 ```css hidden
 body {
@@ -115,8 +115,6 @@ h2 {
 }
 ```
 
-## JavaScript の内容
-
 それでは、JavaScript コードを見てみましょう。 結局のところ、これがアクションの大部分が起こるところです！
 
 ### グローバル変数の設定
@@ -142,7 +140,7 @@ let recordingTimeMS = 5000;
 
 ```js
 function log(msg) {
-  logElement.innerHTML += msg + "\n";
+  logElement.innerHTML += `${msg}\n`;
 }
 ```
 
@@ -150,7 +148,7 @@ function log(msg) {
 
 ```js
 function wait(delayInMS) {
-  return new Promise(resolve => setTimeout(resolve, delayInMS));
+  return new Promise((resolve) => setTimeout(resolve, delayInMS));
 }
 ```
 
@@ -165,17 +163,21 @@ function startRecording(stream, lengthInMS) {
   let recorder = new MediaRecorder(stream);
   let data = [];
 
-  recorder.ondataavailable = event => data.push(event.data);
+  recorder.ondataavailable = (event) => data.push(event.data);
   recorder.start();
-  log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+  log(`${recorder.state} for ${lengthInMS / 1000} seconds…`);
 
   let stopped = new Promise((resolve, reject) => {
     recorder.onstop = resolve;
-    recorder.onerror = event => reject(event.name);
+    recorder.onerror = (event) => reject(event.name);
   });
 
   let recorded = wait(lengthInMS).then(
-    () => recorder.state == "recording" && recorder.stop()
+    () => {
+      if (recorder.state === "recording") {
+        recorder.stop();
+      }
+    },
   );
 
   return Promise.all([
@@ -209,7 +211,7 @@ function startRecording(stream, lengthInMS) {
 
 ```js
 function stop(stream) {
-  stream.getTracks().forEach(track => track.stop());
+  stream.getTracks().forEach((track) => track.stop());
 }
 ```
 
@@ -220,26 +222,31 @@ function stop(stream) {
 それでは、この例で最も複雑なコードを見てみましょう。 開始ボタンをクリックしたときのイベントハンドラです。
 
 ```js
-startButton.addEventListener("click", function() {
+startButton.addEventListener("click", () => {
   navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true
-  }).then(stream => {
+  }).then((stream) => {
     preview.srcObject = stream;
     downloadButton.href = stream;
     preview.captureStream = preview.captureStream || preview.mozCaptureStream;
-    return new Promise(resolve => preview.onplaying = resolve);
+    return new Promise((resolve) => preview.onplaying = resolve);
   }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
-  .then (recordedChunks => {
+  .then ((recordedChunks) => {
     let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
     downloadButton.download = "RecordedVideo.webm";
 
-    log("Successfully recorded " + recordedBlob.size + " bytes of " +
-        recordedBlob.type + " media.");
+    log(`Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`);
   })
-  .catch(log);
+  .catch((error) => {
+    if (error.name === "NotFoundError") {
+      log("Camera or microphone not found. Can't record.");
+    } else {
+      log(error);
+    }
+  });
 }, false);
 ```
 
@@ -267,18 +274,18 @@ startButton.addEventListener("click", function() {
 最後のコードでは、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して停止ボタンの {{event("click")}} イベントのハンドラを追加します。
 
 ```js
-stopButton.addEventListener("click", function() {
+stopButton.addEventListener("click", () => {
   stop(preview.srcObject);
 }, false);
 ```
 
 これは先ほど説明した [`stop()`](#stopping_the_input_stream) 関数を呼び出すだけです。
 
-## 結果
+### 結果
 
 残りの HTML と上に示されていない CSS をすべてまとめると、次のようになり、動作します。
 
-{{ EmbedLiveSample('Example', 600, 440, "", "", "", "camera;microphone") }}
+{{ EmbedLiveSample('Example_of_recording_a_media_element', 600, 440, "", "", "", "camera;microphone") }}
 
 API がどのように使用されているかの説明には重要ではないため上で隠されている部分も含めて、{{LiveSampleLink("Example", "すべてのコードを見る")}}ことができます。
 

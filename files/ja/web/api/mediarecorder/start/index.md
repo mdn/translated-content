@@ -24,7 +24,7 @@ MediaStream Recording API の一部である {{domxref("MediaRecorder")}} のメ
 
 ソースストリームが終了すると、`state` は `"inactive"` に設定され、データ収集は停止します。 最後の {{event("dataavailable")}} イベントが `MediaRecorder` に送られ、その後に {{event("stop")}} イベントが続きます。
 
-> **Note:** **注**: ブラウザーが記録を開始または記録を続行できない場合は、{{domxref("DOMError")}} イベントを発生*させよう*とし、続いて収集した Blob を含む {{domxref("MediaRecorder.dataavailable")}} イベントと {{domxref("MediaRecorder.stop")}} イベントを発生*させよう*とします。
+> **Note:** ブラウザーが記録を開始または記録を続行できない場合は、{{domxref("DOMError")}} イベントを発生*させよう*とし、続いて収集した Blob を含む {{domxref("MediaRecorder.dataavailable")}} イベントと {{domxref("MediaRecorder.stop")}} イベントを発生*させよう*とします。
 
 ## 構文
 

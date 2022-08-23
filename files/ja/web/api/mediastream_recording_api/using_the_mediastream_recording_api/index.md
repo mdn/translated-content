@@ -54,7 +54,7 @@ header {
 }
 ```
 
-> **Note:** **注**: `calc()` は、最近のブラウザーでも、Internet Explorer 9 に戻っても十分にサポートされています。
+> **Note:** `calc()` は、最近のブラウザーでも、Internet Explorer 9 に戻っても十分にサポートされています。
 
 ### 表示/非表示のチェックボックスのハック
 
@@ -151,7 +151,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 - **Success callback**: このコードは、`getUserMedia` の呼び出しが正常に完了した後に実行されます。
 - **Error callback**: 何らかの理由で `getUserMedia` の呼び出しが失敗した場合、このコードが実行されます。
 
-> **Note:** **注**: 以下のコードはすべて `getUserMedia` の Success callback 内にあります。
+> **Note:** 以下のコードはすべて `getUserMedia` の Success callback 内にあります。
 
 ## メディアストリームのキャプチャ
 
@@ -185,7 +185,7 @@ mediaRecorder.ondataavailable = function(e) {
 }
 ```
 
-> **Note:** **注**: ブラウザーは必要に応じて `dataavailable` イベントを発生させますが、この間隔を制御するために `start()` メソッドを呼び出すときにタイムスライス（例えば `start(10000)` ）を含めることも、必要なときに {{domxref("MediaRecorder.requestData()")}} を呼び出してイベントを発生させることもできます。
+> **Note:** ブラウザーは必要に応じて `dataavailable` イベントを発生させますが、この間隔を制御するために `start()` メソッドを呼び出すときにタイムスライス（例えば `start(10000)` ）を含めることも、必要なときに {{domxref("MediaRecorder.requestData()")}} を呼び出してイベントを発生させることもできます。
 
 最後に、停止ボタンが押されたときに {{domxref("MediaRecorder.stop()")}} メソッドを使用して録音を停止し、アプリの他の場所で使用できるように {{domxref("Blob")}} を完成させます。
 

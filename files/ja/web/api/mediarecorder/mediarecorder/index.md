@@ -27,7 +27,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
 - **`stream`**
   - : 記録される {{domxref("MediaStream")}}。 このソースメディアは、{{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} を使用して作成したストリーム、または {{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("canvas")}} 要素から取得できます。
-- **`options` **{{optional_inline}}
+- **`options`** {{optional_inline}}
 
   - : 以下のプロパティを含むことができる辞書オブジェクト。
 
