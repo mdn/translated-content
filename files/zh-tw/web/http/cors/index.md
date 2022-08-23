@@ -99,7 +99,7 @@ function callOtherDomain() {
 
 這將會在客戶端與伺服器端之間發起一個簡單的資料交換，並使用 CORS 相關標頭來處理權限：
 
-![](https://mdn.mozillademos.org/files/14293/simple_req.png)
+![](simple-req.png)
 
 我們來看看這個例子中瀏覽器將會送出什麼到伺服器，而伺服器又會如何回應：
 
@@ -336,7 +336,7 @@ function callOtherDomain(){
 
 第 7 行秀出了一個於 {{domxref("XMLHttpRequest")}} 中為了要搭配 Cookies 進行呼叫而必須設置的布林值旗標——`withCredentials`。在預設情況下，請求呼叫是不會有 Cookies 的。由於這是一個簡單 `GET` 請求，並不會進行預檢，但瀏覽器將會**拒絕**任何沒有 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 標頭值的回應，並且**不讓**呼叫的網站內容存取該回應。
 
-![](https://mdn.mozillademos.org/files/14291/cred-req.png)
+![](cred-req-updated.png)
 
 下面是一個簡單的客戶端與伺服器端之間的交換資訊：
 
