@@ -66,7 +66,7 @@ slug: MDN/Community/Learn_forum
 1. 大致通读一遍页面的结构。
 2. 特别是查看一下现有的评估类型：
 
-   - 众多“测试你的技能”文章中（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!)）
+   - 众多“测试你的技能”文章中（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！)）
    - 在一些模块结束时更深入的评估部分（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery#评估或进一步帮助](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery#评估或进一步帮助))
 
 3. 看一眼与学习区相关的 GitHub 仓库（大部分文件都在 <https://github.com/mdn/learning-area/> 中，还有一些文件在 <https://github.com/mdn/css-examples/tree/master/learn> 中）。初学者需要帮助的大部分例子都包含在这里。
