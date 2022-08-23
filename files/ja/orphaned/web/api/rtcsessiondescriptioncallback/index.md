@@ -4,13 +4,14 @@ slug: orphaned/Web/API/RTCSessionDescriptionCallback
 translation_of: Web/API/RTCSessionDescriptionCallback
 original_slug: Web/API/RTCSessionDescriptionCallback
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}RTCSessionDescriptionCallbackはオファーまたはアンサーの作成が要求された時に <a href="/en-US/docs/">RTCPeerConnection</a> オブジェクトによって実行されます。 </p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}RTCSessionDescriptionCallback はオファーまたはアンサーの作成が要求された時に [RTCPeerConnection](/ja/docs/) オブジェクトによって実行されます。
 
-<h3 id="例">例</h3>
+### 例
 
-<pre>var pc = new RTCPeerConnection();
+```
+var pc = new RTCPeerConnection();
 var descriptionCallback = function(offer) {
   pc.setLocalDescription(offer);
 }
 pc.createOffer(descriptionCallback);
-</pre>
+```

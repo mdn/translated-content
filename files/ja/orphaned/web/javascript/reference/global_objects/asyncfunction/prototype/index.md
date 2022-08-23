@@ -10,101 +10,80 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype
 original_slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>AsyncFunction.prototype</strong></code> プロパティは、{{jsxref("AsyncFunction")}} プロトタイプオブジェクトを表します。</p>
+**`AsyncFunction.prototype`** プロパティは、{{jsxref("AsyncFunction")}} プロトタイプオブジェクトを表します。
 
-<h2 id="説明">説明</h2>
+## 説明
 
-<p>{{jsxref("AsyncFunction")}} オブジェクトは、<code>AsyncFunction.prototype</code> を継承します。<code>AsyncFunction.prototype</code> は修正できません。</p>
+{{jsxref("AsyncFunction")}} オブジェクトは、`AsyncFunction.prototype` を継承します。`AsyncFunction.prototype` は修正できません。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt><code><strong>AsyncFunction.constructor</strong></code></dt>
- <dd>初期値は {{jsxref("AsyncFunction")}}。</dd>
- <dt><code><strong>AsyncFunction.prototype[@@toStringTag]</strong></code></dt>
- <dd>"AsyncFunction" を返す。</dd>
-</dl>
+- **`AsyncFunction.constructor`**
+  - : 初期値は {{jsxref("AsyncFunction")}}。
+- **`AsyncFunction.prototype[@@toStringTag]`**
+  - : "AsyncFunction" を返す。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Async Function', '#async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('Async Function')}}</td>
-   <td>提案</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                     | ステータス                           | コメント |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Async Function', '#async-function-definitions', 'async function')}} | {{Spec2('Async Function')}} | 提案     |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>{{CompatibilityTable}}</div>
+{{CompatibilityTable}}
 
-<div id="compat-desktop">
 <table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th> Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>機能</th>
+      <th>Chrome</th>
+      <th>Firefox (Gecko)</th>
+      <th>Internet Explorer</th>
+      <th>Edge</th>
+      <th>Opera</th>
+      <th>Safari (WebKit)</th>
+    </tr>
+    <tr>
+      <td>基本サポート</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatGeckoDesktop("52.0")}}</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatUnknown}}</td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
-<div id="compat-mobile">
 <table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>機能</th>
+      <th>Android</th>
+      <th>Android Webview</th>
+      <th>Firefox Mobile (Gecko)</th>
+      <th>IE Mobile</th>
+      <th>Opera Mobile</th>
+      <th>Safari Mobile</th>
+      <th>Chrome for Android</th>
+    </tr>
+    <tr>
+      <td>基本サポート</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatGeckoMobile("52.0")}}</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatUnknown}}</td>
+      <td>{{CompatUnknown}}</td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>{{jsxref("AsyncFunction")}}</li>
- <li>{{jsxref("Function")}}</li>
-</ul>
+- {{jsxref("AsyncFunction")}}
+- {{jsxref("Function")}}

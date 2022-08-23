@@ -3,45 +3,53 @@ title: continue 文
 slug: orphaned/Web/JavaScript/Guide/Loop_Statements/continue_Statement
 original_slug: Web/JavaScript/Guide/Loop_Statements/continue_Statement
 ---
-<h3 id="continue_.E6.96.87" name="continue_.E6.96.87">continue 文</h3>
-<p><code>continue</code> 文は <code>while</code> 文、<code>do-while</code> 文、<code>for</code> 文、<code>label</code> 文をリスタートさせるために用います。</p>
-<ul>
-  <li>ラベルを用いずに <code>continue</code> を使用した場合、現在繰り返している最も内側にある <code>while</code> 文 <code>do-while</code> 文、<code>for</code> 文を終了し、次の反復の実行に移ります。<code>break</code> 文とは異なり、<code>continue</code> はループ全体の実行を終了しません。<code>while</code> ループでは条件比較部分に戻ります。<code>for</code> ループではインクリメントの式に移ります。</li>
-  <li>ラベルを用いて <code>continue</code> を使用した場合、<code>label</code> で指定されたループ文に移ります。</li>
-</ul>
-<p><code>continue</code> 文は次のように使用します。</p>
-<ol>
-  <li><code>continue</code></li>
-  <li><code>continue label</code></li>
-</ol>
-<p><strong>例 1</strong><br>
-  次の例では、<code>i</code> の値が 3 のときに実行される <code>continue</code> 文を用いた <code>while</code> ループを示します。こうすることで <code>n</code> は順に 1、3、7、12 という値をとります。</p>
-<pre class="eval">i = 0;
+### continue 文
+
+`continue` 文は `while` 文、`do-while` 文、`for` 文、`label` 文をリスタートさせるために用います。
+
+- ラベルを用いずに `continue` を使用した場合、現在繰り返している最も内側にある `while` 文 `do-while` 文、`for` 文を終了し、次の反復の実行に移ります。`break` 文とは異なり、`continue` はループ全体の実行を終了しません。`while` ループでは条件比較部分に戻ります。`for` ループではインクリメントの式に移ります。
+- ラベルを用いて `continue` を使用した場合、`label` で指定されたループ文に移ります。
+
+`continue` 文は次のように使用します。
+
+1.  `continue`
+2.  `continue label`
+
+**例 1**
+次の例では、`i` の値が 3 のときに実行される `continue` 文を用いた `while` ループを示します。こうすることで `n` は順に 1、3、7、12 という値をとります。
+
+```
+i = 0;
 n = 0;
-while (i &lt; 5) {
+while (i < 5) {
    i++;
    if (i == 3)
       continue;
    n += i;
 }
-</pre>
-<p><strong>例 2</strong><br>
-  <code>checkiandj</code> というラベルの付いた文の中に <code>checkj</code> というラベルの付いた文があります。<code>continue</code> に出くわすと、プログラムは <code>checkj</code> の現在の反復を終了し、次の反復を始めます。<code>continue</code> に出くわすたびに、条件が false になるまで <code>checkj</code> を繰り返します。false が返されると <code>checkiandj</code> 文の残りを完了し、条件が false を返すまで <code>checkiandj</code> を繰り返します。false が返されると <code>checkiandj</code> に続く文が実行されます。</p>
-<p><code>continue</code> が <code>checkiandj</code> というラベルを持っているとプログラムは <code>checkiandj</code> 文の最初から続けます。</p>
-<pre>checkiandj :
-   while (i &lt; 4) {
-      document.write(i + "&lt;br/&gt;");
+```
+
+**例 2**
+`checkiandj` というラベルの付いた文の中に `checkj` というラベルの付いた文があります。`continue` に出くわすと、プログラムは `checkj` の現在の反復を終了し、次の反復を始めます。`continue` に出くわすたびに、条件が false になるまで `checkj` を繰り返します。false が返されると `checkiandj` 文の残りを完了し、条件が false を返すまで `checkiandj` を繰り返します。false が返されると `checkiandj` に続く文が実行されます。
+
+`continue` が `checkiandj` というラベルを持っているとプログラムは `checkiandj` 文の最初から続けます。
+
+```
+checkiandj :
+   while (i < 4) {
+      document.write(i + "<br/>");
       i += 1;
       checkj :
-         while (j &gt; 4) {
-            document.write(j + "&lt;br/&gt;");
+         while (j > 4) {
+            document.write(j + "<br/>");
             j -= 1;
             if ((j % 2) == 0)
                continue checkj;
-            document.write(j + " is odd.&lt;br/&gt;");
+            document.write(j + " is odd.<br/>");
          }
-      document.write("i = " + i + "&lt;br/&gt;");
-      document.write("j = " + j + "&lt;br/&gt;");
+      document.write("i = " + i + "<br/>");
+      document.write("j = " + j + "<br/>");
    }
-</pre>
-<p>{{ PreviousNext("JavaScript/Guide/Loop_Statements/break_Statement", "JavaScript/Guide/Object_Manipulation_Statements") }}</p>
+```
+
+{{ PreviousNext("JavaScript/Guide/Loop_Statements/break_Statement", "JavaScript/Guide/Object_Manipulation_Statements") }}
