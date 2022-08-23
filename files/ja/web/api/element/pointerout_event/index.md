@@ -9,6 +9,7 @@ tags:
   - PointerEvent
   - Property
   - Reference
+browser-compat: api.Element.pointerout_event
 translation_of: Web/API/GlobalEventHandlers/onpointerout
 original_slug: Web/API/GlobalEventHandlers/onpointerout
 ---
@@ -61,7 +62,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerout")}}
+{{Compat}}
 
 ## 関連情報
 

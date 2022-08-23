@@ -10,6 +10,7 @@ tags:
   - transitionend
   - イベント
   - ウェブ
+browser-compat: api.Element.transitionend_event
 translation_of: Web/API/Document/transitionend_event
 original_slug: Web/API/Document/transitionend_event
 ---
@@ -72,7 +73,7 @@ document.ontransitionend = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.transitionend_event")}}
+{{Compat}}
 
 ## 関連情報
 

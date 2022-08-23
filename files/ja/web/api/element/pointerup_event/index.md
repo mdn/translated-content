@@ -9,6 +9,7 @@ tags:
   - PointerEvent
   - Property
   - Reference
+browser-compat: api.Element.pointerup_event
 translation_of: Web/API/GlobalEventHandlers/onpointerup
 original_slug: Web/API/GlobalEventHandlers/onpointerup
 ---
@@ -61,7 +62,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerup")}}
+{{Compat}}
 
 ## 関連情報
 

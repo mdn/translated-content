@@ -10,6 +10,7 @@ tags:
   - Reference
   - events
   - onlostpointercapture
+browser-compat: api.Element.lostpointercapture_event
 translation_of: Web/API/GlobalEventHandlers/onlostpointercapture
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
@@ -49,7 +50,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
+{{Compat}}
 
 ## 関連情報
 
