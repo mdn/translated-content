@@ -10,9 +10,6 @@ tags:
   - リファレンス
   - maxlength
   - textarea
-browser-compat:
-  - html.elements.input.maxlength
-  - html.elements.textarea.maxlength
 spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-maxlength
 translation_of: Web/HTML/Attributes/maxlength
 ---

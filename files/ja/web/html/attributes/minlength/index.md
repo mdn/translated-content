@@ -10,9 +10,6 @@ tags:
   - リファレンス
   - minlength
   - textarea
-browser-compat:
-  - html.elements.input.minlength
-  - html.elements.textarea.minlength
 spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-minlength
 translation_of: Web/HTML/Attributes/minlength
 ---
