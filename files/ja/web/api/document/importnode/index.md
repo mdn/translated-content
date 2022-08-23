@@ -10,7 +10,6 @@ tags:
   - リファレンス
   - コピー
   - importNode
-browser-compat: api.Document.importNode
 translation_of: Web/API/Document/importNode
 ---
 {{APIRef("DOM")}}

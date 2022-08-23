@@ -8,7 +8,6 @@ tags:
   - Property
   - Reference
 translation_of: Web/API/Document/defaultView
-browser-compat: api.Document.defaultView
 ---
 {{ApiRef}}
 

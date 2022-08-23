@@ -7,7 +7,6 @@ tags:
   - Property
   - Reference
 translation_of: Web/API/Document/childElementCount
-browser-compat: api.Document.childElementCount
 ---
 {{ APIRef("DOM") }}
 

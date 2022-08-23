@@ -9,7 +9,6 @@ tags:
   - Reference
   - Storage Access API
   - requestStorageAccess
-browser-compat: api.Document.requestStorageAccess
 translation_of: Web/API/Document/requestStorageAccess
 ---
 {{APIRef}}

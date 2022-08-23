@@ -12,7 +12,6 @@ tags:
   - elementsFromPoint()
   - shadow dom
   - メソッド
-browser-compat: api.Document.elementsFromPoint
 translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---

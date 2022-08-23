@@ -7,7 +7,6 @@ tags:
   - DOM
   - Method
   - Reference
-browser-compat: api.Document.releaseCapture
 translation_of: Web/API/Document/releaseCapture
 ---
 {{ApiRef("DOM")}}

@@ -9,7 +9,6 @@ tags:
   - Reference
   - Web
   - copy
-browser-compat: api.Element.copy_event
 translation_of: Web/API/Document/copy_event
 ---
 {{APIRef}}

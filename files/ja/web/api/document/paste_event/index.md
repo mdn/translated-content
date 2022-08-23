@@ -9,7 +9,6 @@ tags:
   - Web
   - paste
   - イベント
-browser-compat: api.Element.paste_event
 translation_of: Web/API/Document/paste_event
 ---
 {{APIRef}}
