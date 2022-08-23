@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 - `typedCount` {{optional_inline}}
   - : `number`。ユーザーがアドレスをタイプしてページに移動したきた回数。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.history.HistoryItem")}}
 

@@ -36,6 +36,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 "manifest_version": 2
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.manifest_version")}}

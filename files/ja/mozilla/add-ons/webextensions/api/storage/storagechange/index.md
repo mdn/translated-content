@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 - `newValue`{{optional_inline}}
   - : アイテムの変更後の値があれば、この中に入ります。データ型は特定されておらず、何らかのデータ型が入ります。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage.StorageChange")}}
 

@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 - `periodInMinutes`{{optional_inline}}
   - : `double`. この値が `null` ではない場合、アラームが発火する周期を分単位で表します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms.Alarm")}}
 

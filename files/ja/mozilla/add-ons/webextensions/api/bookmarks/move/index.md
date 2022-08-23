@@ -37,7 +37,7 @@ browser.bookmarks.move(
     - `result`
       - : 移動された新しいノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.move")}}
 

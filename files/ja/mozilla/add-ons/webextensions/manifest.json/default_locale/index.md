@@ -39,6 +39,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 "default_locale": "en"
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.default_locale")}}

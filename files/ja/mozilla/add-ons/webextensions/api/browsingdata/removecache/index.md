@@ -37,7 +37,7 @@ var removing = browser.browsingData.removeCache(
 
 消去が完了した後に実行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) が返されます。この Promise は引数を持ちません。エラーが発生した場合はエラーメッセージを引数にして reject を呼び出します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.browsingData.removeCache")}}
 

@@ -176,6 +176,6 @@ sidebar_action キーによりサイドバーの既定のプロパティを定�
 
 For a simple example of an extension that uses a sidebar, see [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.sidebar_action")}}

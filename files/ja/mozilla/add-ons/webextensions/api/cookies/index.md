@@ -79,7 +79,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 
     - セキュア/非セキュア問わず、`www.example.com` のあらゆるパスの cookie の読み書き
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.cookies")}}
 

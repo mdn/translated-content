@@ -24,7 +24,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 - [`devtools.network.onNavigated`](/ja/Add-ons/WebExtensions/API/devtools.network/onNavigated)
   - : ユーザーが新規ページのインスペクト対象ウィンドウに移動した時に発火します
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.devtools.network")}}
 

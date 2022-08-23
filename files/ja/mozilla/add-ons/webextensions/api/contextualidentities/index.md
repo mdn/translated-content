@@ -53,7 +53,7 @@ Contextual identities は現在その他のブラウザーではサポートさ�
 - {{WebExtAPIRef("contextualIdentities.onUpdated")}}
   - : 1 つ以上の contextual identity のプロパティが更新された時に発火します
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.contextualIdentities")}}
 

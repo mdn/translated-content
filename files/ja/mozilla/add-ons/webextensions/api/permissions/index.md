@@ -50,7 +50,7 @@ To use the permissions API, decide which permissions your extension can request 
 - {{WebExtAPIRef("permissions.onRemoved")}}
   - : Fired when a permission is removed.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.permissions")}}
 

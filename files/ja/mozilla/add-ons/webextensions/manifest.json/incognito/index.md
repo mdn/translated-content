@@ -62,6 +62,6 @@ This is a string which may take any of the following values:
 "incognito": "not_allowed"
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.incognito")}}

@@ -44,7 +44,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 - `value`
   - : cookie の値を格納する `string` 型です。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.cookies.Cookie")}}
 

@@ -30,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings
 - {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
   - : ウェブサイトが [`Notification`](/ja/docs/Web/API/notification) Web API を使って通知を表示するのを妨げる
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.browserSettings")}}
 

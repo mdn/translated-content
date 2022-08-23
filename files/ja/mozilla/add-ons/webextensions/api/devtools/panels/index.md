@@ -49,7 +49,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 - [`devtools.panels.onThemeChanged`](/ja/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged)
   - : 開発ツールテーマが変更された時に発火する
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.devtools.panels", 2)}}
 

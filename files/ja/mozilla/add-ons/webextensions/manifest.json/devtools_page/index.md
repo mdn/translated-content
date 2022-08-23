@@ -38,6 +38,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 "devtools_page": "devtools/my-page.html"
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.devtools_page")}}

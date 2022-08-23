@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 
 これは[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返す非同期関数です。
 
-## Syntax
+## 構文
 
 ```js
 var getting = browser.tabs.get(

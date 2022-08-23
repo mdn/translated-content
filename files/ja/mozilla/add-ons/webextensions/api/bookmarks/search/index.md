@@ -56,7 +56,7 @@ browser.bookmarks.search(
     - `results`
       - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの配列であり、各要素はマッチしたブックマークをそれぞれ表しています。何も見つからなかった場合は空の配列となります。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.search")}}
 

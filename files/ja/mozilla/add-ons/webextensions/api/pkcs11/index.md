@@ -31,6 +31,6 @@ For details about the manifest file's contents and location, see [Native manifes
 - {{WebExtAPIRef("pkcs11.uninstallModule()")}}
   - : Uninstalls the named PKCS #11 module.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}

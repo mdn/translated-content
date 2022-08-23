@@ -37,7 +37,7 @@ browser.bookmarks.get(
     - `results`
       - : 各要素が {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} である、マッチしたノードの {{jsxref("array")}} です。セパレータは結果の戻り値に含まれません。ノードが見つからなかった場合の `results` は `undefined` となり、{{WebExtAPIRef("runtime.lastError")}} がセットされます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.get")}}
 

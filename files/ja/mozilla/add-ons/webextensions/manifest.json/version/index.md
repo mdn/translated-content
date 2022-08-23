@@ -41,6 +41,6 @@ AMO キュー内でバージョンを "beta" にマークする特別ルール�
 "version": "0.1"
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.version")}}

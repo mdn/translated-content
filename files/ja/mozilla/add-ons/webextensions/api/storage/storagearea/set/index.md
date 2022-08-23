@@ -46,7 +46,7 @@ let settingItem = browser.storage.<storageType>.set(
 
 成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage.StorageArea.set")}}
 

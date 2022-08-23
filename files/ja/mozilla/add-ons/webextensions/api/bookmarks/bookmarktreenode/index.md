@@ -42,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 > **Note:** 現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.BookmarkTreeNode", 10)}}
 

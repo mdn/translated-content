@@ -32,7 +32,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 - `url`{{optional_inline}}
   - : ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダが作成されます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}
 

@@ -38,7 +38,7 @@ var gettingSpace = browser.storage.<storageType>.getBytesInUse(
 
 成功時は `keys` で指定されたオブジェクトが占めるストレージ空間を持つ整数 `bytesUsed` を引数に持つ [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。失敗した場合 Promise はエラーメッセージと共にリジェクトされます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage.StorageArea.getBytesInUse")}}
 

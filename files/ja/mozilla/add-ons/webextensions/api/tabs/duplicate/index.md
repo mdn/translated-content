@@ -26,7 +26,7 @@ var duplicating = browser.tabs.duplicate(
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/ja/Add-ons/WebExtensions/manifest.json/permissions). If any error occurs the promise will be rejected with an error message.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.tabs.duplicate")}}
 

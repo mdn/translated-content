@@ -65,7 +65,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 - {{WebExtAPIRef("history.onVisitRemoved")}}
   - : ある URL がブラウザー履歴から完全に削除された時に発火します
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.history")}}
 

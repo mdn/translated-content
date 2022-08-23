@@ -46,6 +46,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
 }
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.omnibox")}}

@@ -32,7 +32,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 - {{WebExtAPIRef("alarms.onAlarm")}}
   - : アラームが動作した際に発火します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms")}} {{WebExtExamples("h2")}}
 

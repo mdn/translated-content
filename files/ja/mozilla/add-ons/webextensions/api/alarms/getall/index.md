@@ -34,7 +34,7 @@ browser.alarms.getAll(
     - `alarms`
       - : 予約されたアラームすべてを含む `{{WebExtAPIRef('alarms.Alarm')}}` の配列です。予約されたアラームがない場合は空の配列となります。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms.getAll")}}
 

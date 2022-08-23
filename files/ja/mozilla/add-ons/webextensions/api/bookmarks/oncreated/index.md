@@ -53,7 +53,7 @@ browser.bookmarks.onCreated.hasListener(listener)
     - `bookmark`
       - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.onCreated")}}
 

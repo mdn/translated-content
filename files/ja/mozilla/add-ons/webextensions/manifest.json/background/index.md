@@ -159,6 +159,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 カスタムのバックグラウンドページを読み込みます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.background", 10)}}

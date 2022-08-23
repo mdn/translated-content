@@ -146,7 +146,7 @@ browser.menus.create({
 - {{WebExtAPIRef("menus.onShown")}}
   - : ブラウザがメニューを見せたときに発火。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{ Compat("webextensions.api.menus", 1, "true") }}
 

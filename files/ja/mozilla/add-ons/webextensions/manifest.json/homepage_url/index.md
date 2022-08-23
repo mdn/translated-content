@@ -42,6 +42,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.homepage_url")}}

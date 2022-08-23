@@ -55,7 +55,7 @@ Page actions are for actions that are only relevant to particular pages. If your
 - {{WebExtAPIRef("pageAction.onClicked")}}
   - : Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.pageAction")}}
 

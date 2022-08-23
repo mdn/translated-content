@@ -102,6 +102,6 @@ browser.runtime.getURL("images/my-image.png");
 
 "images/my-image.png" のファイルをウェブアクセス可能にしています。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.web_accessible_resources")}}

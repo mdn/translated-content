@@ -35,7 +35,7 @@ browser.bookmarks.removeTree(
 - `callback`{{optional_inline}}
   - : ノードが削除された際に実行される関数です。この関数に渡される引数はありません。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.removeTree")}}
 

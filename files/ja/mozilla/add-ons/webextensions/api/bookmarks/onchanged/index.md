@@ -65,7 +65,7 @@ browser.bookmarks.onChanged.hasListener(listener)
 - `url`{{optional_inline}}
   - : 変更された要素の URL を表す {{jsxref("string")}}。要素がフォルダだった場合に値は入りません。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.onChanged")}}
 

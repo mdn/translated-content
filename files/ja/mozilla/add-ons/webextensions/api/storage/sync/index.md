@@ -38,7 +38,7 @@ Firefox の場合、ユーザーは `"about:preferences"` の "Sync 設定" オ�
 - {{WebExtAPIRef("storage.StorageArea.clear()", "storage.<var>StorageArea</var>.clear()")}}
   - : ストレージ領域内の全てのアイテムを削除します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage.sync")}}
 

@@ -50,7 +50,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 - {{WebExtAPIRef("extension.onRequestExternal")}}
   - : その他の拡張機能からリクエストが送られた時に発火します
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.extension")}}
 

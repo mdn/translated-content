@@ -25,7 +25,7 @@ privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/
 - {{WebExtAPIRef("privacy.websites")}}
   - : ウェブサイトのふるまいに関連したプライバシー設定にアクセス、編集します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.privacy", 10, 1)}}
 
