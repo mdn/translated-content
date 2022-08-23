@@ -70,7 +70,7 @@ pipe chain 的起点称为 **original source**，终点称为 **ultimate sink**�
 
 ## 背压（backpressure）
 
-流的一个重要概念是 **backpressure**（背压）——这是单个流或一个 pipe chain 调节读/写速度的过程。当链中后面的一个流仍然忙碌，尚未准备好接受更多的分块时，它会通过链向上游的流发送一个信号，告诉上游的转换流（或原始源）适当地减慢传输速度，这样你就不会在任何地方遇到瓶颈。
+流的一个重要概念是**背压**——这是单个流或一个链式管道调节读/写速度的过程。当链中后面的一个流仍然忙碌，尚未准备好接受更多的分块时，它会通过链向上游的流发送一个信号，告诉上游的转换流（或原始源）适当地减慢传输速度，这样你就不会在任何地方遇到瓶颈。
 
 要在可读流中使用 backpressure 技术，我们可以通过查询 controller 的 {{domxref("ReadableStreamDefaultController.desiredSize")}} 属性。如果该值太低或为负数，我们的 ReadableStream 可以告诉它的底层源停止往流中装载数据，然后我们沿着 stream chain 进行背压。
 
