@@ -48,7 +48,7 @@ _固有メソッドはありません。 {{domxref("HTMLElement")}} インター
 | {{SpecName('HTML WHATWG', "the-video-element.html#the-source-element", "HTMLSourceElement")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} より変更なし。 |
 | {{SpecName('HTML5 W3C', "embedded-content-0.html#the-source-element", "HTMLSourceElement")}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                        |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.HTMLSourceElement")}}
 

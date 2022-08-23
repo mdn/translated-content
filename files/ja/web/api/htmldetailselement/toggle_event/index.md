@@ -115,6 +115,6 @@ chapters.forEach((chapter) => {
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
 | {{SpecName('HTML WHATWG', 'indices.html#event-toggle', 'toggle event')}} | {{Spec2("HTML WHATWG")}} |      |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.HTMLDetailsElement.toggle_event")}}

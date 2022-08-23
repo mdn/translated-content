@@ -20,7 +20,7 @@ translation_of: Web/API/HTMLCanvasElement/toBlob
 void canvas.toBlob(callback, mimeType, qualityArgument);
 ```
 
-### パラメーター
+### 引数
 
 - callback
   - : 引数として {{domxref("Blob")}} オブジェクトを受け取るコールバック関数。
@@ -29,7 +29,7 @@ void canvas.toBlob(callback, mimeType, qualityArgument);
 - `qualityArgument` {{optional_inline}}
   - : 要求した type が `image/jpeg `か `image/webp` だった場合、画像の品質を示す `0` から `1` の {{jsxref("Number")}}。type 引数がそのほかの値だった場合、既定の値が画質に使用される。ほかの引数は無視される。
 
-### 戻り値
+### 返値
 
 なし。
 
@@ -56,7 +56,7 @@ canvas.toBlob(function(blob) {
 });
 ```
 
-ここでは、PNG 画像を生成していることに注意してください；`toBlob()` の呼び出しに 2 つ目のパラメーターを追加した場合、画像の種類を指定できます。たとえば、 JPEG フォーマットの画像を取得できます：
+ここでは、PNG 画像を生成していることに注意してください；`toBlob()` の呼び出しに 2 つ目の引数を追加した場合、画像の種類を指定できます。たとえば、 JPEG フォーマットの画像を取得できます：
 
 ```js
  canvas.toBlob(function(blob){...}, "image/jpeg", 0.95); // JPEG at 95% quality
@@ -135,7 +135,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
               '-moz-parse-options:format=bmp;bpp=32');
 ```
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                                                     | 状態                             | コメント                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
@@ -143,7 +143,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 | {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML5.1')}}     | 変更なし。                                                               |
 | {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML5 W3C')}}     | 初期定義を含む {{SpecName('HTML WHATWG')}} のスナップショット。 |
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.HTMLCanvasElement.toBlob")}}
 
@@ -170,7 +170,7 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 }
 ```
 
-## 関連項目
+## 関連情報
 
 - これが定義されているインターフェース： {{domxref("HTMLCanvasElement")}}
 - {{domxref("Blob")}}

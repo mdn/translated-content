@@ -24,17 +24,17 @@ _このインターフェースは、{{domxref("HTMLElement")}} のメソッド�
 - {{domxref("HTMLShadowElement.getDistributedNodes()")}}
   - : `<shadow>` 要素に関連した {{glossary("distributed nodes")}} の静的な {{domxref("NodeList")}} を返す。
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                             | 状態                             | コメント |
 | -------------------------------------------------------------------------------- | -------------------------------- | -------- |
 | {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} |          |
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.HTMLShadowElement")}}
 
-## 関連項目
+## 関連情報
 
 - このインターフェースを実装している {{HTMLElement("shadow")}} 要素。
 - [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM)

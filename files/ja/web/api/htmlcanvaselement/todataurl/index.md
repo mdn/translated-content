@@ -17,7 +17,7 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 canvas.toDataURL(type, encoderOptions);
 ```
 
-### パラメーター
+### 引数
 
 - `type` {{optional_inline}}
   - : 画像フォーマットを示す {{domxref("DOMString")}} 。 指定しなかった場合、デフォルトのフォーマット形式は `image/png` です。
@@ -25,7 +25,7 @@ canvas.toDataURL(type, encoderOptions);
   - : `0` から `1` の間の {{jsxref("Number")}} で示す、 `image/jpeg` や `image/webp` のような非可逆圧縮を使う画像フォーマットの画質です。
     この引数がその他の値だった場合、デフォルトの画質が使われます。デフォルト値は `0.92` です。その他の引数は無視されます。
 
-### 戻り値
+### 返値
 
 要求された[data URI](/ja/docs/Web/HTTP/data_URIs)を含む {{domxref("DOMString")}} 。
 
@@ -116,7 +116,7 @@ function removeColors() {
 }
 ```
 
-## Specifications
+## 仕様書
 
 | Specification                                                                                                                    | Status                           | Comment                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
@@ -124,11 +124,11 @@ function removeColors() {
 | {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5.1')}}     |                                                                                         |
 | {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5 W3C')}}     | Snapshot of the {{SpecName('HTML WHATWG')}} containing the initial definition. |
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat("api.HTMLCanvasElement.toDataURL")}}
 
-## See also
+## 関連情報
 
 - The interface defining it, {{domxref("HTMLCanvasElement")}}.
 - [Data URIs](/ja/docs/Web/HTTP/data_URIs) in the [HTTP](/ja/docs/Web/HTTP) reference.

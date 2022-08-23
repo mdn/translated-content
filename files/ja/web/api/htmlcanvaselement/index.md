@@ -46,7 +46,7 @@ _{{domxref("HTMLElement")}}から継承するメソッドの他に以下のメ�
 - {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns a {{domxref("File")}} object representing the image contained in the canvas; this file is a memory-based file, with the specified `name`. If `type` is not specified, the image type is `image/png`.
 
-## Specifications
+## 仕様書
 
 | Specification                                                                                                                                        | Status                                               | Comment                                                                                                                                                                                                                 |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,10 +55,10 @@ _{{domxref("HTMLElement")}}から継承するメソッドの他に以下のメ�
 | {{SpecName('HTML5.1', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5.1')}}                         |                                                                                                                                                                                                                         |
 | {{SpecName('HTML5 W3C', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5 W3C')}}                         | Initial definition.                                                                                                                                                                                                     |
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat("api.HTMLCanvasElement")}}
 
-## See also
+## 関連情報
 
 - HTML element implementing this interface: {{HTMLElement("canvas")}}.

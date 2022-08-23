@@ -29,11 +29,11 @@ _このインターフェースは {{domxref("HTMLElement")}} のメソッドを
 - {{domxref("HTMLContentElement.getDistributedNodes()")}}
   - : この `<content>` 要素を {{glossary("distributed nodes")}} と関連づける静的な {{domxref("NodeList")}} を返します。
 
-## 仕様
+## 仕様書
 
 この機能はどの標準企画によっても定義されていません。
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("api.HTMLContentElement")}}
 

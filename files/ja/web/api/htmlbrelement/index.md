@@ -25,17 +25,17 @@ _親である{{domxref("HTMLElement")}}より属性を継承しています。_
 
 _固有のメソッドなし。親である\_\_{{domxref("HTMLElement")}}よりメソッドを継承しています。_
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                                             | 状態                             | 備考                                           |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
 | {{SpecName('HTML WHATWG', "#htmlbrelement", "HTMLBRElement")}}                             | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}}より変更なし。 |
 | {{SpecName('HTML5 W3C', "textlevel-semantics.html#the-br-element", "HTMLBRElement")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}}より変更なし。 |
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("api.HTMLBRElement")}}
 
-## 関連項目
+## 関連情報
 
 - 本インターフェースを実装している HTML 要素: {{HTMLElement("br")}}
