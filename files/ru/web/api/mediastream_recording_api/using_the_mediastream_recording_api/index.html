@@ -6,7 +6,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 <p>{{DefaultAPISidebar("MediaStream Recording")}}</p>
 
 <div class="summary">
-<p><span class="seoSummary">Интерфейс <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording</a>  позволяет записывать аудио и видео потоки. При использовании с методом {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, предлагает простой способ записи данных с устройств пользователя, и немедленное их использование в веб приложениях.И аудио и видео могут быть записаны вместе или по отдельности.Цель данной статьи - предоставить базовое руководство о том как использовать объект</span><code> MediaRecorder</code>, реализующий такой программный интерфейс.</p>
+<p>Интерфейс <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording</a>  позволяет записывать аудио и видео потоки. При использовании с методом {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, предлагает простой способ записи данных с устройств пользователя, и немедленное их использование в веб приложениях.И аудио и видео могут быть записаны вместе или по отдельности.Цель данной статьи - предоставить базовое руководство о том как использовать объект<code> MediaRecorder</code>, реализующий такой программный интерфейс.</p>
 </div>
 
 <h2 id="Пример_приложения_Веб_диктофон">Пример приложения: Веб диктофон</h2>
@@ -159,7 +159,7 @@ const soundClips = document.querySelector('.sound-clips');</pre>
 <pre class="brush: js">let chunks = [];
 
 mediaRecorder.ondataavailable = function(e) {
-  <span class="pl-smi">chunks</span>.<span class="pl-c1">push</span>(<span class="pl-smi">e</span>.<span class="pl-c1">data</span>);
+  chunks.push(e.data);
 }</pre>
 
 <div class="blockIndicator note">
