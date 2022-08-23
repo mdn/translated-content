@@ -19,61 +19,43 @@ tags:
 translation_of: Web/API/AudioTrackList/onremovetrack
 original_slug: Web/API/AudioTrackList/onremovetrack
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong>{{domxref("AudioTrackList")}}</strong> の <strong><code>onremovetrack</code></strong> イベントハンドラは、{{event("removetrack")}} イベントが発生したときに呼び出され、音声トラックがメディア要素から、したがって <code>AudioTrackList</code> からも取り除かれたことを示します。</span></p>
+**{{domxref("AudioTrackList")}}** の **`onremovetrack`** イベントハンドラは、{{event("removetrack")}} イベントが発生したときに呼び出され、音声トラックがメディア要素から、したがって `AudioTrackList` からも取り除かれたことを示します。
 
-<p>イベントは {{domxref("TrackEvent")}} オブジェクトの形式でイベントハンドラに渡されます。 その {{domxref("TrackEvent.track", "track")}} プロパティは、メディア要素の <code>AudioTrackList</code> から取り除かれたトラックを識別します。</p>
+イベントは {{domxref("TrackEvent")}} オブジェクトの形式でイベントハンドラに渡されます。 その {{domxref("TrackEvent.track", "track")}} プロパティは、メディア要素の `AudioTrackList` から取り除かれたトラックを識別します。
 
-<div class="note">
-<p><strong>注</strong>: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、<code>removetrack</code> イベント用のハンドラを追加することもできます。</p>
-</div>
+> **Note:** **注**: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、`removetrack` イベント用のハンドラを追加することもできます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>AudioTrackList</em>.onremovetrack = <em>eventHandler</em>;</pre>
+```
+AudioTrackList.onremovetrack = eventHandler;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p><code>onremovetrack</code> は、{{domxref("TrackEvent.track", "track")}} プロパティでどの音声トラックがメディア要素から取り除かれたかを示す {{domxref("TrackEvent")}} オブジェクトを入力として受け取る関数を設定します。</p>
+`onremovetrack` は、{{domxref("TrackEvent.track", "track")}} プロパティでどの音声トラックがメディア要素から取り除かれたかを示す {{domxref("TrackEvent")}} オブジェクトを入力として受け取る関数を設定します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この単純な例は、トラックがメディア要素から取り除かれるたびに、メディア要素内の現在の音声トラック数を取得するだけです。</p>
+この単純な例は、トラックがメディア要素から取り除かれるたびに、メディア要素内の現在の音声トラック数を取得するだけです。
 
-<pre class="brush: js">document.querySelector("my-video").audioTracks.onremovetrack = function(event) {
+```js
+document.querySelector("my-video").audioTracks.onremovetrack = function(event) {
   myTrackCount = document.querySelector("my-video").audioTracks.length;
 };
-</pre>
+```
 
-<p>メディア要素に残っている現在の音声トラック数は、<code>AudioTrackList</code> の {{domxref("AudioTrackList.length", "length")}} プロパティから取得します。</p>
+メディア要素に残っている現在の音声トラック数は、`AudioTrackList` の {{domxref("AudioTrackList.length", "length")}} プロパティから取得します。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onremovetrack', 'AudioTrackList.onremovetrack')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-onremovetrack', 'AudioTrackList.onremovetrack')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                         | 状態                             | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#handler-tracklist-onremovetrack', 'AudioTrackList.onremovetrack')}}                             | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-onremovetrack', 'AudioTrackList.onremovetrack')}} | {{Spec2('HTML5 W3C')}}     |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.AudioTrackList.onremovetrack")}}</p>
+{{Compat("api.AudioTrackList.onremovetrack")}}

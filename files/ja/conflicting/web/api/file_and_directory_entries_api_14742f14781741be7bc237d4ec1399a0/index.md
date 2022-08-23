@@ -17,373 +17,298 @@ tags:
 translation_of: Web/API/FileSystemEntrySync
 original_slug: Web/API/FileSystemEntrySync
 ---
-<div>{{APIRef("File System API")}}{{Non-standard_header()}}</div>
+{{APIRef("File System API")}}{{Non-standard_header()}}
 
-<p><span class="seoSummary">File and Directory Entries API の<code>FileSystemEntrySync</code> インターフェイスは、ファイルシステム内のエントリを表します。 {{domxref("FileEntrySync")}} か {{domxref("DirectoryEntry")}} のいずれかになります。</span> ファイルのコピー、移動、削除、および読み込みを含むファイルの操作方法や、ファイル名やルートからエントリまでのパスなど、それが指すファイルに関する情報が含まれています。</p>
+File and Directory Entries API の`FileSystemEntrySync` インターフェイスは、ファイルシステム内のエントリを表します。 {{domxref("FileEntrySync")}} か {{domxref("DirectoryEntry")}} のいずれかになります。 ファイルのコピー、移動、削除、および読み込みを含むファイルの操作方法や、ファイル名やルートからエントリまでのパスなど、それが指すファイルに関する情報が含まれています。
 
-<div class="warning">
-<p><strong>警告:</strong> この API は決して受け入れられず、標準化もされませんでした。さまざまなブラウザが <a href="/ja/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> (ファイルシステム API とも呼ばれます) を実装していますが、使用を避けるようにしてください。</p>
-</div>
+> **Warning:** **警告:** この API は決して受け入れられず、標準化もされませんでした。さまざまなブラウザが [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) (ファイルシステム API とも呼ばれます) を実装していますが、使用を避けるようにしてください。
 
-<h2 id="basic" name="basic">基本のコンセプト</h2>
+## 基本のコンセプト
 
-<p><code>FileSystemEntrySync</code> インターフェイスには、ファイルやディレクトリの操作に必要なメソッドが含まれていますが、<code><a href="/ja/docs/Web/API/FileSystemEntrySync$translate?tolocale=ja#toURL">toURL()</a></code>というエントリの URL を取得するための便利なメソッドもあります。 また新しい URL スキーム <code>filesystem:</code> を紹介します。</p>
+`FileSystemEntrySync` インターフェイスには、ファイルやディレクトリの操作に必要なメソッドが含まれていますが、[`toURL()`](/ja/docs/Web/API/FileSystemEntrySync$translate?tolocale=ja#toURL)というエントリの URL を取得するための便利なメソッドもあります。 また新しい URL スキーム `filesystem:` を紹介します。
 
-<p>Google Chromeで <code>filesystem:</code> スキームを使用すると、アプリのルートに保存されているすべてのファイルとフォルダを表示できます。 アプリの起源のルートディレクトリに <code>filesystem:</code> スキームを使用するだけです。たとえば、アプリが <code><a class="external external-icon" href="http://ww.html5rocks.com" rel="freelink">http://ww.html5rocks.com</a></code> にある場合は、 <code>filesystem:<a class="external external-icon" href="http://www.html5rocks.com/temporary/" rel="freelink">http://www.html5rocks.com/temporary/</a></code> をタブで開きます。Chrome は、アプリのオリジンに保存されているすべてのファイルとフォルダの読み取り専用リストを表示します。</p>
+Google Chrome で `filesystem:` スキームを使用すると、アプリのルートに保存されているすべてのファイルとフォルダを表示できます。 アプリの起源のルートディレクトリに `filesystem:` スキームを使用するだけです。たとえば、アプリが [`http://ww.html5rocks.com`](http://ww.html5rocks.com) にある場合は、 `filesystem:http://www.html5rocks.com/temporary/` をタブで開きます。Chrome は、アプリのオリジンに保存されているすべてのファイルとフォルダの読み取り専用リストを表示します。
 
-<h2 id="メソッド概要">メソッド概要</h2>
+## メソッド概要
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>Metadata <a href="#getMetada" title="#getMetada">getMetadata</a> () raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>FileSystemEntrySync <a href="#moveTo" title="#moveTo">moveTo</a> (in <a href="/ja/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>FileSystemEntrySync <a href="#copyTo" title="#copyTo">copyTo</a>(in <a href="/ja/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>DOMString <a href="#toURL" title="#toURL">toURL</a>();</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#remove" title="#remove">remove</a>() raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>DirectoryEntrySync <a href="#getParent" title="#getParent">getParent</a>();</code></td>
-  </tr>
- </tbody>
-</table>
+| `Metadata getMetadata () raises (FileException);`                                                               |
+| --------------------------------------------------------------------------------------------------------------- |
+| `FileSystemEntrySync moveTo (in DirectoryEntrySync parent, optional DOMString newName) raises (FileException);` |
+| `FileSystemEntrySync copyTo(in DirectoryEntrySync parent, optional DOMString newName) raises (FileException);`  |
+| `DOMString toURL();`                                                                                            |
+| `void remove() raises (FileException);`                                                                         |
+| `DirectoryEntrySync getParent();`                                                                               |
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">タイプ</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a name="attr_filesystem"><code>filesystem</code></a></td>
-   <td><code>readonly FileSystemSync</code></td>
-   <td>エントリが存在するファイルシステム。</td>
-  </tr>
-  <tr>
-   <td><a id="attr_fullpath" name="fullpath"><code>fullpath</code></a></td>
-   <td><code>readonly DOMString</code></td>
-   <td>
-    <p>ルートからエントリまでの完全な絶対パス。</p>
+| 属性          | タイプ                    | 説明                                                                                                            |
+| ------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `filesystem`  | `readonly FileSystemSync` | エントリが存在するファイルシステム。                                                                            |
+| `fullpath`    | `readonly DOMString`      | ルートからエントリまでの完全な絶対パス。絶対パスはルートディレクトリからの相対パスで、先頭に '`/`' が付きます。 |
+| `isDirectory` | `readonly boolean`        | FileSystemEntrySync がディレクトリの場合は True です。                                                          |
+| `isFile`      | `readonly boolean`        | FileSystemEntrySync がファイルの場合は True です。                                                              |
+| `name`        | `readonly DOMString`      | エントリに至るパスを除いたエントリの名前。                                                                      |
 
-    <p>絶対パスはルートディレクトリからの相対パスで、先頭に '<code>/</code>' が付きます。</p>
-    </td>
-  </tr>
-  <tr>
-   <td><a id="attr_root" name="attr_isDirectory"><code>isDirectory</code></a></td>
-   <td><code>readonly boolean</code></td>
-   <td>FileSystemEntrySync がディレクトリの場合は True です。</td>
-  </tr>
-  <tr>
-   <td><a id="attr_isfile" name="attr_isfile"><code>isFile</code></a></td>
-   <td><code>readonly boolean</code></td>
-   <td>FileSystemEntrySync がファイルの場合は True です。</td>
-  </tr>
-  <tr>
-   <td><a id="attr_name" name="attr_name"><code>name</code></a></td>
-   <td><code>readonly DOMString</code></td>
-   <td>エントリに至るパスを除いたエントリの名前。</td>
-  </tr>
- </tbody>
-</table>
+## メソッド
 
-<h2 id="メソッド">メソッド</h2>
+### getMetadata()
 
-<h3 id="getMetadata" name="getMetadata">getMetadata()</h3>
+このエントリに関するメタデータを検索します。 \[ todo: どのような種類のメタデータを指定するか]
 
-<p>このエントリに関するメタデータを検索します。 [ todo: どのような種類のメタデータを指定するか]</p>
+```
+Metadata getMetada ()
+  raises (FileException);
+```
 
-<pre>Metadata getMetada ()
-  raises <code>(<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>)</code>;</pre>
+##### 引数
 
-<h5 id="引数">引数</h5>
+<dl><dt>なし</dt></dl>
 
-<dl>
- <dt>なし</dt>
-</dl>
+##### 戻り値
 
-<h5 id="戻り値">戻り値</h5>
+<dl><dt><code>Metadata</code></dt></dl>
 
-<dl>
- <dt><code>Metadata</code></dt>
-</dl>
+##### 例外
 
-<h5 id="例外">例外</h5>
+このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException "en/DOM/File_API/File_System_API/FileException") が発生する可能性があります。
 
-<p>このメソッドは、次のコードで <a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> が発生する可能性があります。</p>
+| 例外                | 説明                                                                        |
+| ------------------- | --------------------------------------------------------------------------- |
+| `NOT_FOUND_ERR`     | エントリが存在しません。                                                    |
+| `INVALID_STATE_ERR` | FileSystemSync は、削除される以外の何らかの理由でもはや有効ではありません。 |
+
+### moveTo()
+
+エントリをファイルシステム上の別の場所に移動します。 既存のファイルにファイルを移動すると、その既存のファイルが置き換えられます。既存の空のディレクトリにディレクトリを移動すると、そのディレクトリが置き換えられます。\[todo: ディレクトリが空でない場合はどうなりますか？]
+
+\[todo: Verify ] これはファイルの名前を変更するのと同じ方法です。 同じ場所に保持してから、`newName` パラメータを定義することができます。
+
+次の操作はできません。
+
+- ディレクトリ自体を移動するか、任意の深さの任意の子に移動する
+- 現在のエントリと異なる名前が与えられていない場合は、エントリをその親に移動する
+- ファイルをディレクトリが占有しているパスに移動する、またはディレクトリをファイルが占有するパスに移動する
+- 空でないディレクトリが占めるパスに要素を移動します。
+
+```
+FileSystemEntrySync moveTo (
+  in DirectoryEntrySync parent, optional DOMString newName
+) raises (FileException);
+```
+
+##### 引数
+
+- parent
+  - : エントリを移動するディレクトリ。
+- newName
+  - : エントリの新しい名前。名前を指定しない場合、ブラウザはエントリの現在の名前を保持します。
+
+##### 戻り値
+
+- `FileSystemEntrySync`
+  - : ファイルシステム内のエントリを表すオブジェクト。
+
+##### 例外
+
+このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException "en/DOM/File_API/File_System_API/FileException") が発生する可能性があります。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>エントリが存在しません。</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>INVALID_STATE_ERR</code></td>
-   <td>FileSystemSync は、削除される以外の何らかの理由でもはや有効ではありません。</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">例外</th>
+      <th scope="col">説明</th>
+    </tr>
+    <tr>
+      <td><code>ENCODING_ERR</code></td>
+      <td>
+        少なくとも1つの文字が予約されているかイレギュラーなので、指定された名前は無効です。
+        例には、バックスラッシュ (\)、ドット (.)、および2つのドット (..)
+        が含まれます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>NOT_FOUND_ERR</code></td>
+      <td>ターゲットディレクトリが存在しません。</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>INVALID_MODIFICATION_ERR</code></td>
+      <td>
+        <p>次のいずれかの操作を試行しました：</p>
+        <ul>
+          <li>名前を変更せずにエントリを親に移動する</li>
+          <li>
+            親ディレクトリをその子ディレクトリの1つに移動する。[todo: verify]
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>NO_MODIFICATION_ALLOWED_ERR</code></td>
+      <td>
+        ソースエントリ、その親ディレクトリ、およびターゲットディレクトリのうち、いずれかが書き込み可能ではありません。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="moveTo" name="moveTo">moveTo()</h3>
+### copyTo()
 
-<p>エントリをファイルシステム上の別の場所に移動します。 既存のファイルにファイルを移動すると、その既存のファイルが置き換えられます。既存の空のディレクトリにディレクトリを移動すると、そのディレクトリが置き換えられます。[todo: ディレクトリが空でない場合はどうなりますか？]</p>
+エントリをファイルシステム上の別の場所にコピーします。エントリがディレクトリの場合は、そのエントリをコピーすることはできません。また、新しい名前を指定せずに親にコピーすることもできません。ディレクトリコピーは常に再帰的です。つまり、ディレクトリのすべての内容がコピーされます。この動作を変更することはできません。ファイルは単純に複製されます。
 
-<p>[todo: Verify ] これはファイルの名前を変更するのと同じ方法です。 同じ場所に保持してから、<code>newName</code> パラメータを定義することができます。</p>
+```
+void copyTo (
+  in DirectoryEntrySync parent, optional DOMString newName
+) raises (FileException);
+```
 
-<p>次の操作はできません。</p>
+##### 引数
 
-<ul>
- <li>ディレクトリ自体を移動するか、任意の深さの任意の子に移動する</li>
- <li>現在のエントリと異なる名前が与えられていない場合は、エントリをその親に移動する</li>
- <li>ファイルをディレクトリが占有しているパスに移動する、またはディレクトリをファイルが占有するパスに移動する</li>
- <li>空でないディレクトリが占めるパスに要素を移動します。</li>
-</ul>
+- parent
+  - : エントリを移動するディレクトリ。
+- newName
+  - : エントリの新しい名前。名前を指定しない場合、ブラウザは FileSystemEntrySync の現在の名前を保持します。
 
-<pre>FileSystemEntrySync moveTo (
-  in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
-) raises (<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+##### 戻り値
 
-<h5 id="引数_2">引数</h5>
+- `FileSystemEntrySync`
+  - : ファイルシステム内のエントリを表すオブジェクト。
 
-<dl>
- <dt>parent</dt>
- <dd>エントリを移動するディレクトリ。</dd>
- <dt>newName</dt>
- <dd>エントリの新しい名前。名前を指定しない場合、ブラウザはエントリの現在の名前を保持します。</dd>
-</dl>
+##### 例外
 
-<h5 id="戻り値_2">戻り値</h5>
-
-<dl>
- <dt><code>FileSystemEntrySync</code></dt>
- <dd>ファイルシステム内のエントリを表すオブジェクト。</dd>
-</dl>
-
-<h5 id="例外_2">例外</h5>
-
-<p>このメソッドは、次のコードで <a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> が発生する可能性があります。</p>
+このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException "en/DOM/File_API/File_System_API/FileException") が発生する可能性があります。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
-  <tr>
-   <td><code>ENCODING_ERR</code></td>
-   <td>少なくとも1つの文字が予約されているかイレギュラーなので、指定された名前は無効です。 例には、バックスラッシュ (\)、ドット (.)、および2つのドット (..) が含まれます。</td>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>ターゲットディレクトリが存在しません。</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>INVALID_MODIFICATION_ERR</code></td>
-   <td>
-    <p>次のいずれかの操作を試行しました：</p>
-
-    <ul>
-     <li>名前を変更せずにエントリを親に移動する</li>
-     <li>親ディレクトリをその子ディレクトリの1つに移動する。[todo: verify]</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code>NO_MODIFICATION_ALLOWED_ERR</code></td>
-   <td>ソースエントリ、その親ディレクトリ、およびターゲットディレクトリのうち、いずれかが書き込み可能ではありません。</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">例外</th>
+      <th scope="col">説明</th>
+    </tr>
+    <tr>
+      <td><code>ENCODING_ERR</code></td>
+      <td>
+        少なくとも1つの文字が予約されているかイレギュラーなので、指定された名前は無効です。
+        例には、バックスラッシュ (\)、ドット (.)、および2つのドット (..)
+        が含まれます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>NOT_FOUND_ERR</code></td>
+      <td>ターゲットディレクトリが存在しません。</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>INVALID_MODIFICATION_ERR</code></td>
+      <td>
+        <p>次のいずれかの操作を試行しました：</p>
+        <ul>
+          <li>名前を変更せずにエントリを親に移動する</li>
+          <li>親ディレクトリをその子ディレクトリの1つに移動する</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>NO_MODIFICATION_ALLOWED_ERR</code></td>
+      <td>
+        ソースエントリ、その親ディレクトリ、およびターゲットディレクトリのうち、いずれかが書き込み可能ではありません。
+      </td>
+    </tr>
+    <tr>
+      <td><code>QUOTA_EXCEEDED_ERR</code></td>
+      <td>
+        この操作により、アプリケーションはストレージクォータを超過します。
+        ユーザーが明示的に付与する必要があるより大きな永続ストレージを要求する可能性があります。詳細については、<a
+          href="/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction"
+          >基本概念</a
+        >の記事を参照してください。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="copyTo" name="copyTo">copyTo()</h3>
+### toURL()
 
-<p>エントリをファイルシステム上の別の場所にコピーします。エントリがディレクトリの場合は、そのエントリをコピーすることはできません。また、新しい名前を指定せずに親にコピーすることもできません。ディレクトリコピーは常に再帰的です。つまり、ディレクトリのすべての内容がコピーされます。この動作を変更することはできません。ファイルは単純に複製されます。</p>
+このエントリを識別するために使用できる URL を返します。これは `src` や `href` 属性を埋めるために使用できる新しい URL スキーム、 `filesystem:`を公開しています。たとえば、イメージを表示しその [fileEntry](/ja/DOM/File_API/File_System_API/FileEntry "en/DOM/File_API/File_System_API/FileEntry") を持つ場合、 `toURL()` を呼び出すと、イメージファイルのファイルシステム URL が得られます。
+あなたは `filesystem:http://example.com/temporary/lolcat.png` のようなものを手に入れます。
 
-<pre>void copyTo (
-  in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
-) raises (<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+ファイルシステムの URL の有効期限はありません。このメソッドはディスク上の場所を記述しているため、URL はその場所が存在する限り有効です。あなたはファイルを削除して再作成することができます。
 
-<h5 id="引数_3">引数</h5>
+`mimeType` を指定すると、HTTP ダウンロードに関連付けられているオプションの MIME タイプヘッダーをシミュレートできます。
 
-<dl>
- <dt>parent</dt>
- <dd>エントリを移動するディレクトリ。</dd>
- <dt>newName</dt>
- <dd>エントリの新しい名前。名前を指定しない場合、ブラウザは FileSystemEntrySync の現在の名前を保持します。</dd>
-</dl>
+```
+DOMString toURL ();
+```
 
-<h5 id="戻り値_3">戻り値</h5>
+##### 引数
 
-<dl>
- <dt><code>FileSystemEntrySync</code></dt>
- <dd>ファイルシステム内のエントリを表すオブジェクト。</dd>
-</dl>
+<dl><dt>なし</dt></dl>
 
-<h5 id="例外_3">例外</h5>
+##### 戻り値
 
-<p>このメソッドは、次のコードで <a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> が発生する可能性があります。</p>
+<dl><dt><code>DOMString</code></dt></dl>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
-  <tr>
-   <td><code>ENCODING_ERR</code></td>
-   <td>少なくとも1つの文字が予約されているかイレギュラーなので、指定された名前は無効です。 例には、バックスラッシュ (\)、ドット (.)、および2つのドット (..) が含まれます。</td>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>ターゲットディレクトリが存在しません。</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>INVALID_MODIFICATION_ERR</code></td>
-   <td>
-    <p>次のいずれかの操作を試行しました：</p>
+##### 例外
 
-    <ul>
-     <li>名前を変更せずにエントリを親に移動する</li>
-     <li>親ディレクトリをその子ディレクトリの1つに移動する</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code>NO_MODIFICATION_ALLOWED_ERR</code></td>
-   <td>ソースエントリ、その親ディレクトリ、およびターゲットディレクトリのうち、いずれかが書き込み可能ではありません。</td>
-  </tr>
-  <tr>
-   <td><code>QUOTA_EXCEEDED_ERR</code></td>
-   <td>この操作により、アプリケーションはストレージクォータを超過します。 ユーザーが明示的に付与する必要があるより大きな永続ストレージを要求する可能性があります。詳細については、<a href="/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction">基本概念</a>の記事を参照してください。</td>
-  </tr>
- </tbody>
-</table>
+なし
 
-<h3 id="toURL" name="toURL">toURL()</h3>
+### remove()
 
-<p>このエントリを識別するために使用できるURLを返します。これは  <code>src</code> や <code>href</code> 属性を埋めるために使用できる新しい URL スキーム、 <code>filesystem:</code>を公開しています。たとえば、イメージを表示しその <a class="external external-icon" href="/ja/DOM/File_API/File_System_API/FileEntry" title="en/DOM/File_API/File_System_API/FileEntry">fileEntry</a> を持つ場合、 <code>toURL()</code> を呼び出すと、イメージファイルのファイルシステムURLが得られます。<br>
- あなたは <code>filesystem:<a class="external external-icon" href="http://example.com/temporary/lolcat.png" rel="freelink">http://example.com/temporary/lolcat.png</a></code> のようなものを手に入れます。</p>
+ファイルまたはディレクトリを削除します。 空のディレクトリやファイルシステムのルートディレクトリは削除できません。 空のディレクトリを削除する場合は、代わりに [`removeRecursively()`](</ja/docs/Web/API/DirectoryEntrySync#removeRecursively()> "https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()") を使用してください。
 
-<p>ファイルシステムの URL の有効期限はありません。このメソッドはディスク上の場所を記述しているため、URL はその場所が存在する限り有効です。あなたはファイルを削除して再作成することができます。</p>
+```
+void remove (
+) raises (FileException);
+```
 
-<p><code>mimeType</code> を指定すると、HTTP ダウンロードに関連付けられているオプションの MIME タイプヘッダーをシミュレートできます。</p>
+##### 引数
 
-<pre>DOMString toURL ();</pre>
+なし
 
-<h5 id="引数_4">引数</h5>
+##### 戻り値
 
-<dl>
- <dt>なし</dt>
-</dl>
+<dl><dt><code>void</code></dt></dl>
 
-<h5 id="戻り値_4">戻り値</h5>
+##### 例外
 
-<dl>
- <dt><code>DOMString</code></dt>
-</dl>
+このメソッドは、次のコードと [FileException](/ja/docs/Web/API/FileException "en/DOM/File_API/File_System_API/FileException") を発生させることができます。
 
-<h5 id="例外_4">例外</h5>
+| 例外                          | 説明                                                                                                                                                                                                                                                                                                  |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NOT_FOUND_ERR`               | ターゲットディレクトリが存在しません。                                                                                                                                                                                                                                                                |
+| `INVALID_MODIFICATION_ERR`    | 空でないディレクトリを削除しようとしました。 空のディレクトリを削除する場合は、代わりに[`removeRecursively()`](</ja/docs/Web/API/DirectoryEntrySync#removeRecursively()> "https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()") を使用してください。 |
+| `NO_MODIFICATION_ALLOWED_ERR` | ソースエントリ、その親ディレクトリ、およびターゲットディレクトリのうち、いずれかが書き込み可能ではありません。                                                                                                                                                                                        |
 
-<p>なし</p>
+### getParent()
 
-<h3 id="remove" name="remove">remove()</h3>
+エントリを含む親 [`DirectoryEntrySync`](/ja/docs/Web/API/DirectoryEntrySync "https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync") を調べます。このエントリがファイルシステムのルートである場合、親はそれ自身です。
 
-<p>ファイルまたはディレクトリを削除します。 空のディレクトリやファイルシステムのルートディレクトリは削除できません。 空のディレクトリを削除する場合は、代わりに <a href="/ja/docs/Web/API/DirectoryEntrySync#removeRecursively()" rel="internal" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> を使用してください。</p>
+```
+void getParent ();
+```
 
-<pre>void remove (
-) raises (<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+##### 引数
 
-<h5 id="引数_5">引数</h5>
+なし
 
-<p>なし</p>
+##### 戻り値
 
-<h5 id="戻り値_5">戻り値</h5>
+- [`DirectoryEntrySync`](/ja/DOM/File_API/File_System_API/DirectoryEntrySync "en/DOM/File_API/File_System_API/DirectoryEntrySync")
+  - : ファイルシステム内のディレクトリを表すオブジェクト。
 
-<dl>
- <dt><code>void</code></dt>
-</dl>
+##### 例外
 
-<h5 id="例外_5">例外</h5>
+なし
 
-<p>このメソッドは、次のコードと <a href="/ja/docs/Web/API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> を発生させることができます。</p>
+## ブラウザの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>ターゲットディレクトリが存在しません。</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>INVALID_MODIFICATION_ERR</code></td>
-   <td>
-    <p>空でないディレクトリを削除しようとしました。 空のディレクトリを削除する場合は、代わりに<a href="/ja/docs/Web/API/DirectoryEntrySync#removeRecursively()" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> を使用してください。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>NO_MODIFICATION_ALLOWED_ERR</code></td>
-   <td>ソースエントリ、その親ディレクトリ、およびターゲットディレクトリのうち、いずれかが書き込み可能ではありません。</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("api.FileSystemEntrySync")}}
 
-<h3 id="getParent" name="getParent">getParent()</h3>
+## あわせて参照
 
-<p>エントリを含む親 <a href="/ja/docs/Web/API/DirectoryEntrySync" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> を調べます。このエントリがファイルシステムのルートである場合、親はそれ自身です。</p>
+仕様:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
-<pre>void getParent ();</pre>
+リファレンス: [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_API")
 
-<h5 id="引数_6">引数</h5>
-
-<p>なし</p>
-
-<h5 id="戻り値_6">戻り値</h5>
-
-<dl>
- <dt><code><a href="/ja/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
- <dd>ファイルシステム内のディレクトリを表すオブジェクト。</dd>
-</dl>
-
-<h5 id="例外_6">例外</h5>
-
-<p>なし</p>
-
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
-
-<p>{{Compat("api.FileSystemEntrySync")}}</p>
-
-<h2 id="あわせて参照">あわせて参照</h2>
-
-<p>仕様:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
-
-<p>リファレンス: <a href="/ja/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
-
-<p>イントロダクション: <a href="/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")

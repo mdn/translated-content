@@ -13,25 +13,25 @@ tags:
 translation_of: Web/API/IDBRequest/onsuccess
 original_slug: Web/API/IDBRequest/onsuccess
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-<p>{{domxref("IDBRequest")}} インターフェースの<strong><code>onsuccess</code></strong>イベントハンドラはリクエストの結果が正常に帰ってきた時に着火される<code><a href="/ja/docs/Web/API/IDBRequest/success_event">success</a></code>イベントをハンドリングします。</p>
+{{domxref("IDBRequest")}} インターフェースの**`onsuccess`**イベントハンドラはリクエストの結果が正常に帰ってきた時に着火される[`success`](/ja/docs/Web/API/IDBRequest/success_event)イベントをハンドリングします。
 
-<p>イベントハンドラは、type="success"の成功<a dir="ltr" href="/ja/docs/Web/Events/success">イベント</a>をパラメータとして受け取ります。</p>
+イベントハンドラは、type="success"の成功[イベント](/ja/docs/Web/Events/success)をパラメータとして受け取ります。
 
-<p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox" style="font-size: 14px;">request.onsuccess = function(event) { ... };</pre>
+```
+request.onsuccess = function(event) { ... };
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<p>下記の例は、指定されたレコードタイトルをリクエストします。リクエストの<code>onsuccess</code>イベントハンドラは{{domxref("IDBObjectStore")}} (<code>objectStoreTitleRequest.result</code>として利用可能)からレコードを取得し、そのプロパティを更新してオブジェクトストアに書き戻します。</p>
+下記の例は、指定されたレコードタイトルをリクエストします。リクエストの`onsuccess`イベントハンドラは{{domxref("IDBObjectStore")}} (`objectStoreTitleRequest.result`として利用可能)からレコードを取得し、そのプロパティを更新してオブジェクトストアに書き戻します。
 
-<p>完全な例は<span style="line-height: 1.5;"> </span><a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">example live</a>)を参照してください。</p>
+完全な例は [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([example live](http://mdn.github.io/to-do-notifications/))を参照してください。
 
 <pre class="brush: js;highlight:[11]" style="font-size: 14px;">var title = "Walk dog";
 
@@ -58,46 +58,25 @@ objectStoreTitleRequest.onsuccess = function() {
   };
 };</pre>
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBRequest-onsuccess', 'onsuccess')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbrequest-onsuccess", "onsuccess")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-onsuccess', 'onsuccess')}} | {{Spec2('IndexedDB')}}     |      |
+| {{SpecName("IndexedDB 2", "#dom-idbrequest-onsuccess", "onsuccess")}} | {{Spec2("IndexedDB 2")}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>
+{{Compat("api.IDBRequest.onsuccess")}}
 
+## 関連情報
 
-<p>{{Compat("api.IDBRequest.onsuccess")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li><a href="/ja/docs/Web/Events/success">Success Event</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
- <li><code><a href="/ja/docs/Web/API/IDBRequest/success_event">success</a></code> event</li>
-</ul>
+- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Success Event](/ja/docs/Web/Events/success)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [`success`](/ja/docs/Web/API/IDBRequest/success_event) event

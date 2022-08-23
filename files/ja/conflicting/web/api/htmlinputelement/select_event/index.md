@@ -8,75 +8,73 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onselect
 original_slug: Web/API/GlobalEventHandlers/onselect
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>{{domxref("window")}} の <code>select</code> イベントに対応するイベントハンドラです。</p>
+{{domxref("window")}} の `select` イベントに対応するイベントハンドラです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">window.onselect = <em>funcRef</em>;
-</pre>
+```
+window.onselect = funcRef;
+```
 
-<ul>
- <li><code>funcRef</code> : 関数への参照、または関数式</li>
-</ul>
+- `funcRef` : 関数への参照、または関数式
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;onselect のテスト&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>onselect のテスト</title>
 
-&lt;style&gt;
+<style>
 .text1 { border: 2px solid red; }
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
 window.onselect = selectText;
 
 function selectText() {
   alert("select イベントが発生しました。");
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;textarea class="text1" cols="30" rows="3"&gt;
+<body>
+<textarea class="text1" cols="30" rows="3">
 マウスでこのテキストを選択状態にすると
 onselect イベントが発生し、
 アラートを表示する関数が実行されます。
-&lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</textarea>
+</body>
+</html>
+```
 
-<h2 id="Notes" name="Notes">注記</h2>
+## 注記
 
-<p><code>select</code> イベントは、テキストインプット (<code>&lt;input type="text"&gt;</code>) もしくは {{htmlelement("textarea")}} 要素のテキストが<em>選択された直後に</em> 発生します。</p>
+`select` イベントは、テキストインプット (`<input type="text">`) もしくは {{htmlelement("textarea")}} 要素のテキストが*選択された直後に* 発生します。
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
 <table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">策定状況</th>
+      <th scope="col">コメント</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
-
-
-<p>{{Compat("api.GlobalEventHandlers.onselect")}}</p>
-</div>
+{{Compat("api.GlobalEventHandlers.onselect")}}

@@ -12,56 +12,53 @@ tags:
 translation_of: Web/API/Navigator/Online_and_offline_events
 original_slug: Web/API/Navigator/Online_and_offline_events
 ---
-<p>一部のブラウザーは、 <a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline イベント</a>を <a href="https://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 仕様書</a>に従って実装しています。</p>
+一部のブラウザーは、 [Online/Offline イベント](https://www.whatwg.org/specs/web-apps/current-work/#offline)を [WHATWG Web Applications 1.0 仕様書](https://www.whatwg.org/specs/web-apps/current-work/)に従って実装しています。
 
-<h3 id="Overview">概要</h3>
+### 概要
 
-<p>オフラインに対応した良いウェブアプリケーションを構築するためには、アプリケーションが実際にオフラインになったタイミングを知る必要があります。また、アプリケーションが「オンライン」の状態に復帰したタイミングも知る必要があります。要件を分解すると次のようになります。</p>
+オフラインに対応した良いウェブアプリケーションを構築するためには、アプリケーションが実際にオフラインになったタイミングを知る必要があります。また、アプリケーションが「オンライン」の状態に復帰したタイミングも知る必要があります。要件を分解すると次のようになります。
 
-<ol>
-  <li>サーバーとの再同期ができるように、ユーザーがオンラインに戻ったタイミングを知る必要があります。</li>
-  <li>サーバーへのリクエストを後回しにすることができるように、ユーザーがオフラインなったタイミングを知る必要があります。</li>
-</ol>
+1.  サーバーとの再同期ができるように、ユーザーがオンラインに戻ったタイミングを知る必要があります。
+2.  サーバーへのリクエストを後回しにすることができるように、ユーザーがオフラインなったタイミングを知る必要があります。
 
-<p>オンライン／オフラインイベントがこのプロセスを一般化するのに役立ちます。</p>
+オンライン／オフラインイベントがこのプロセスを一般化するのに役立ちます。
 
-<p>残念ながら、これらのイベントは完全には信頼できません。より高い信頼性が必要な場合や、 API がブラウザーに実装されていない場合は、サービスワーカーを使用したり <a href="https://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">XMLHttpRequest からのレスポンス</a>を使用するなど、他の兆候を利用してオフラインであるかどうかを検出することができます。</p>
+残念ながら、これらのイベントは完全には信頼できません。より高い信頼性が必要な場合や、 API がブラウザーに実装されていない場合は、サービスワーカーを使用したり [XMLHttpRequest からのレスポンス](https://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request)を使用するなど、他の兆候を利用してオフラインであるかどうかを検出することができます。
 
-<h2 id="API">API</h2>
+## API
 
-<h3 id="navigator.onLine"><code>navigator.onLine</code></h3>
+### `navigator.onLine`
 
-<p><code><a href="/ja/docs/Web/API/Navigator/onLine">navigator.onLine</a></code> は、 <code>true</code>/<code>false</code> の値を保持しているプロパティです (オンラインの場合は <code>true</code>、オフラインの場合は <code>false</code>)。</p>
+[`navigator.onLine`](/ja/docs/Web/API/Navigator/onLine) は、 `true`/`false` の値を保持しているプロパティです (オンラインの場合は `true`、オフラインの場合は `false`)。
 
-<p>このプロパティは、ユーザーが「オフラインモード」に切り替えたとき (Firefox の場合は、ファイル→オフライン作業) に更新されます。さらに、このプロパティは、ブラウザーがネットワークに接続できなくなったときに更新されます。仕様書によれば、次のようになっています。</p>
+このプロパティは、ユーザーが「オフラインモード」に切り替えたとき (Firefox の場合は、ファイル → オフライン作業) に更新されます。さらに、このプロパティは、ブラウザーがネットワークに接続できなくなったときに更新されます。仕様書によれば、次のようになっています。
 
-<blockquote cite="https://www.whatwg.org/specs/web-apps/current-work/#offline">
-  <code>navigator.onLine</code> 属性はユーザーがリンクを辿ったり、スクリプトが外部のページをリクエストしたりしたときにユーザーエージェントがネットワークで通信できない場合 (またはそのような試みが失敗した場合) は、必ず false を返す必要があります。</blockquote>
+> `navigator.onLine` 属性はユーザーがリンクを辿ったり、スクリプトが外部のページをリクエストしたりしたときにユーザーエージェントがネットワークで通信できない場合 (またはそのような試みが失敗した場合) は、必ず false を返す必要があります。
 
-<p>Firefox 2 はこのプロパティをブラウザーのオフラインモードが切り替わる度に更新します。 <a href="/ja/docs/Mozilla/Firefox/Releases/41#miscellaneous">Firefox 41</a> は、 Windows、 Linux、 OS X においてネットワークの接続状態が変化したときにも更新します。</p>
+Firefox 2 はこのプロパティをブラウザーのオフラインモードが切り替わる度に更新します。 [Firefox 41](/ja/docs/Mozilla/Firefox/Releases/41#miscellaneous) は、 Windows、 Linux、 OS X においてネットワークの接続状態が変化したときにも更新します。
 
-<p>このプロパティは Firefox と Internet Explorer の古いバージョンにも存在しました。 (この仕様はこれらの先行的な実装に基づいています)。従って、今すぐこのプロパティを使い始めることができます。ネットワーク状態の自動判断は Firefox 2 にて実装されました。</p>
+このプロパティは Firefox と Internet Explorer の古いバージョンにも存在しました。 (この仕様はこれらの先行的な実装に基づいています)。従って、今すぐこのプロパティを使い始めることができます。ネットワーク状態の自動判断は Firefox 2 にて実装されました。
 
-<h3 id=".22online.22_and_.22offline.22_events">"<code>online</code>" および "<code>offline</code>" イベント</h3>
+### "`online`" および "`offline`" イベント
 
-<p><a href="/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3</a> は 2 つの新しいイベントを導入しました。"<a href="/ja/docs/Web/API/document.ononline"><code>online</code></a>" and "<a href="/ja/docs/Web/API/document.onoffline"><code>offline</code></a>" です。これらの 2 つのイベントは、ブラウザーのオンラインおよびオフラインモードが切り替わるたびに、各ページの <code>&lt;body&gt;</code> に発行されます。加えて、このイベントは <code>document.body</code> から <code>document</code> へとバブリングし、 <code>window</code> までたどり着きます。これらのイベントはキャンセルできません (ユーザーのオンラインモードやオフラインモードへの移行を防ぐことはできません)。</p>
+[Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3) は 2 つの新しいイベントを導入しました。"[`online`](/ja/docs/Web/API/document.ononline)" and "[`offline`](/ja/docs/Web/API/document.onoffline)" です。これらの 2 つのイベントは、ブラウザーのオンラインおよびオフラインモードが切り替わるたびに、各ページの `<body>` に発行されます。加えて、このイベントは `document.body` から `document` へとバブリングし、 `window` までたどり着きます。これらのイベントはキャンセルできません (ユーザーのオンラインモードやオフラインモードへの移行を防ぐことはできません)。
 
-<p><a href="/ja/docs/Mozilla/Firefox/Releases/41#miscellaneous">Firefox 41</a> では、 Windows, Linux, OS X においてネットワークの接続状態が変化したことを OS が通知したときに、これらのイベントが発行されます。</p>
+[Firefox 41](/ja/docs/Mozilla/Firefox/Releases/41#miscellaneous) では、 Windows, Linux, OS X においてネットワークの接続状態が変化したことを OS が通知したときに、これらのイベントが発行されます。
 
-<p>これらのイベントに対するリスナーは、いくつかのお馴染みの方法で登録することができます。</p>
-<ul>
- <li><code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> を、 <code>window</code>, <code>document</code>, <code>document.body</code> に対して使用します。</li>
-  <li><code>document</code> または <code>document.body</code> の <code>.ononline</code> または <code>.onoffline</code> プロパティを JavaScript の <code>Function</code> オブジェクトに設定します。(<strong>注意:</strong> <code>window.ononline</code> または <code>window.onoffline</code> は互換性の理由で動作しません)</li>
-  <li>HTML マークアップで <code>&lt;body&gt;</code> タグの <code>ononline="..."</code> または <code>onoffline="..."</code> 属性を指定します。</li>
-</ul>
+これらのイベントに対するリスナーは、いくつかのお馴染みの方法で登録することができます。
 
-<h2 id="Example">例</h2>
+- [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) を、 `window`, `document`, `document.body` に対して使用します。
+- `document` または `document.body` の `.ononline` または `.onoffline` プロパティを JavaScript の `Function` オブジェクトに設定します。(**注意:** `window.ononline` または `window.onoffline` は互換性の理由で動作しません)
+- HTML マークアップで `<body>` タグの `ononline="..."` または `onoffline="..."` 属性を指定します。
 
-<p>イベントが機能しているかどうかを確認するために、<a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">簡単なテストケース</a>を用意しました (イベントリスナーを document.body に代入しているため、 Chrome では動作しません)。</p>
+## 例
 
-<p>こちらが JavaScript 部分です。</p>
+イベントが機能しているかどうかを確認するために、[簡単なテストケース](https://bugzilla.mozilla.org/attachment.cgi?id=220609)を用意しました (イベントリスナーを document.body に代入しているため、 Chrome では動作しません)。
 
-<pre class="brush: js">window.addEventListener('load', function() {
+こちらが JavaScript 部分です。
+
+```js
+window.addEventListener('load', function() {
   var status = document.getElementById("status");
   var log = document.getElementById("log");
 
@@ -76,11 +73,13 @@ original_slug: Web/API/Navigator/Online_and_offline_events
 
   window.addEventListener('online',  updateOnlineStatus);
   window.addEventListener('offline', updateOnlineStatus);
-});</pre>
+});
+```
 
-<p>CSS 部分です。</p>
+CSS 部分です。
 
-<pre class="brush: css">#status {
+```css
+#status {
   position: fixed;
   width: 100%;
   font: bold 1em sans-serif;
@@ -100,28 +99,27 @@ original_slug: Web/API/Navigator/Online_and_offline_events
 .offline {
   background: red;
 }
-</pre>
+```
 
-<p>対応する HTML です。 <span class="comment">XXX When mochitests for this are created, point to those instead and update this example -nickolay</span></p>
+対応する HTML です。 XXX When mochitests for this are created, point to those instead and update this example -nickolay
 
-<pre class="brush: html">&lt;div id="status"&gt;&lt;/div&gt;
-&lt;div id="log"&gt;&lt;/div&gt;
-&lt;p&gt;This is a test&lt;/p&gt;
-</pre>
+```html
+<div id="status"></div>
+<div id="log"></div>
+<p>This is a test</p>
+```
 
-<p>実行例はこちらです。</p>
+実行例はこちらです。
 
-<p>{{ EmbedLiveSample('Example', '100%', '150') }}</p>
+{{ EmbedLiveSample('Example', '100%', '150') }}
 
-<h2 id="Notes">注</h2>
+## 注
 
-<p>この API がブラウザに実装されていない場合は、サービスワーカーや  <a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">XMLHttpRequest からのレスポンス</a>を使用するなど、他の兆候を使用してオフラインであるかどうかを検出することができます。</p>
+この API がブラウザに実装されていない場合は、サービスワーカーや [XMLHttpRequest からのレスポンス](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request)を使用するなど、他の兆候を使用してオフラインであるかどうかを検出することができます。
 
-<h2 id="References">参考文献</h2>
+## 参考文献
 
-<ul>
-  <li><a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">WHATWG Web Applications 1.0 仕様の「Online/Offline イベント」の節</a></li>
-  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">Firefox に実装された online/offline イベントのバグ追跡</a>および<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">関連バグ</a></li>
-  <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">簡単なテストケース</a></li>
-  <li><a href="http://ejohn.org/blog/offline-events/">Online/Offline イベントの解説</a></li>
-</ul>
+- [WHATWG Web Applications 1.0 仕様の「Online/Offline イベント」の節](https://www.whatwg.org/specs/web-apps/current-work/#offline)
+- [Firefox に実装された online/offline イベントのバグ追跡](https://bugzilla.mozilla.org/show_bug.cgi?id=336359)および[関連バグ](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
+- [簡単なテストケース](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
+- [Online/Offline イベントの解説](http://ejohn.org/blog/offline-events/)

@@ -12,28 +12,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onformdata
 original_slug: Web/API/GlobalEventHandlers/onformdata
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code><strong>onformdata</strong></code> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、フォームのデータを表す項目リストが構築された後に発行される {{event("formdata")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。これはフォームが送信されたときに発生しますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターを呼び出しても発行することができます。 <code>onformdata</code> は {{domxref("HTMLFormElement")}} で利用できます。</p>
+**`onformdata`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、フォームのデータを表す項目リストが構築された後に発行される {{event("formdata")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。これはフォームが送信されたときに発生しますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターを呼び出しても発行することができます。 `onformdata` は {{domxref("HTMLFormElement")}} で利用できます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>target</var>.onclick = <var>functionRef</var>;
-</pre>
+```
+target.onclick = functionRef;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p><code><var>functionRef</var></code> は関数名または <a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は唯一の引数として {{domxref("FormDataEvent")}} オブジェクトを受け取ります。</p>
+`functionRef` は関数名または [関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。この関数は唯一の引数として {{domxref("FormDataEvent")}} オブジェクトを受け取ります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js notranslate">// grab reference to form
+```js
+// grab reference to form
 
 const formElem = document.querySelector('form');
 
 // submit handler
 
-formElem.addEventListener('submit', (e) =&gt; {
+formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -43,7 +45,7 @@ formElem.addEventListener('submit', (e) =&gt; {
 
 // formdata handler to retrieve data
 
-formElem.onformdata = (e) =&gt; {
+formElem.onformdata = (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
@@ -56,35 +58,36 @@ formElem.onformdata = (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="spectable standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onformdata','onformdata')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">状態</th>
+      <th scope="col">備考</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG','webappapis.html#handler-onformdata','onformdata')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.GlobalEventHandlers.onformdata")}}</p>
+{{Compat("api.GlobalEventHandlers.onformdata")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLFormElement/formdata_event", "formdata")}} イベント</li>
- <li>{{domxref("FormDataEvent")}}</li>
- <li><a href="/ja/docs/Web/API/FormData/Using_FormData_Objects">FormData オブジェクトの使用</a></li>
-</ul>
+- {{domxref("HTMLFormElement/formdata_event", "formdata")}} イベント
+- {{domxref("FormDataEvent")}}
+- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)

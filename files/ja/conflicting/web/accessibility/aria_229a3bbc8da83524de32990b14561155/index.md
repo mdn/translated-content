@@ -9,65 +9,49 @@ tags:
 translation_of: Web/Accessibility/ARIA/widgets
 original_slug: Web/Accessibility/ARIA/widgets
 ---
-<div class="warning">警告: 更新が必要</div>
+> **Warning:** 警告: 更新が必要
 
-<h2 id="Introduction">入門</h2>
+## 入門
 
-<p>ここでは、アクセシブルな JavaScript ウィジェットを作るための実装例とベストプラクティスを見ていきます。</p>
+ここでは、アクセシブルな JavaScript ウィジェットを作るための実装例とベストプラクティスを見ていきます。
 
-<h2 id="General_Resources">一般リソース</h2>
+## 一般リソース
 
-<ul>
- <li><a class="external text" href="https://dev.aol.com/dhtml_style_guide" rel="nofollow">DHTML Style Guide</a> にはキーボードインタラクションのお勧めがあります。</li>
- <li><a class="external text" href="https://www.w3.org/wai/pf/aria-practices" rel="nofollow">WAI-ARIA Authoring Practices Guide</a></li>
-</ul>
+- [DHTML Style Guide](https://dev.aol.com/dhtml_style_guide) にはキーボードインタラクションのお勧めがあります。
+- [WAI-ARIA Authoring Practices Guide](https://www.w3.org/wai/pf/aria-practices)
 
-<h2 id="Checkbox">チェックボックス</h2>
+## チェックボックス
 
-<ul>
- <li><a class="external text" href="https://www.paciellogroup.com/blog/?p=53" rel="nofollow">ARIA Toggle Button and Tri-state Checkbox examples</a> (from "The Paciello Group Blog")</li>
- <li><a class="external text" href="http://test.cita.uiuc.edu/aria/checkbox" rel="nofollow">ARIA Example Checkbox Widgets from the University of Illinois</a></li>
-</ul>
+- [ARIA Toggle Button and Tri-state Checkbox examples](https://www.paciellogroup.com/blog/?p=53) (from "The Paciello Group Blog")
+- [ARIA Example Checkbox Widgets from the University of Illinois](http://test.cita.uiuc.edu/aria/checkbox)
 
-<h2 id="Menu">メニュー</h2>
+## メニュー
 
-<ul>
- <li><a class="external text" href="http://yuiblog.com/blog/2007/12/21/menu-waiaria/" rel="nofollow">Using WAI-ARIA Roles and States with the YUI Menu Control</a></li>
-</ul>
+- [Using WAI-ARIA Roles and States with the YUI Menu Control](http://yuiblog.com/blog/2007/12/21/menu-waiaria/)
 
-<h2 id="Slider">スライダー</h2>
+## スライダー
 
-<ul>
- <li>From the Paciello Group Blog: ARIA Slider, <a class="external text" href="https://www.paciellogroup.com/blog/?p=68" rel="nofollow">part one</a>, <a class="external text" href="https://www.paciellogroup.com/blog/?p=69" rel="nofollow">part two</a>, <a class="external text" href="https://www.paciellogroup.com/blog/?p=76" rel="nofollow">part three</a> (<a class="external text" href="https://www.paciellogroup.com/blog/misc/ARIA/slider/" rel="nofollow">example</a>)</li>
- <li><a class="external text" href="https://mindtrove.info/articles/creating-an-accessible-internationalized-dojo-rating-widget/" rel="nofollow">Creating an Accessible, Internationalized Dojo Rating Widget</a></li>
-</ul>
+- From the Paciello Group Blog: ARIA Slider, [part one](https://www.paciellogroup.com/blog/?p=68), [part two](https://www.paciellogroup.com/blog/?p=69), [part three](https://www.paciellogroup.com/blog/?p=76) ([example](https://www.paciellogroup.com/blog/misc/ARIA/slider/))
+- [Creating an Accessible, Internationalized Dojo Rating Widget](https://mindtrove.info/articles/creating-an-accessible-internationalized-dojo-rating-widget/)
 
-<h2 id="Tabs">タブ</h2>
+## タブ
 
-<ul>
- <li><a class="external text" href="http://yuiblog.com/blog/2008/07/30/tabview-aria/" rel="nofollow">Enhancing TabView Accessibility with WAI-ARIA Roles and States</a>, from the YUI blog</li>
- <li><a class="external text" href="https://wiki.github.com/fnagel/jQuery-Accessible-RIA/tabs" rel="nofollow">Enhancing the jQuery UI Tabs accordingly to WCAG 2.0 and ARIA</a></li>
- <li><a class="external text" href="https://codetalks.org/source/widgets/tabpanel/tabpanel1.html" rel="nofollow">Tab panel example here on CodeTalks</a></li>
-</ul>
+- [Enhancing TabView Accessibility with WAI-ARIA Roles and States](http://yuiblog.com/blog/2008/07/30/tabview-aria/), from the YUI blog
+- [Enhancing the jQuery UI Tabs accordingly to WCAG 2.0 and ARIA](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/tabs)
+- [Tab panel example here on CodeTalks](https://codetalks.org/source/widgets/tabpanel/tabpanel1.html)
 
-<h2 id="Lightbox">ライトボックス</h2>
+## ライトボックス
 
-<ul>
- <li><a class="external text" href="https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox" rel="nofollow">WCAG 2.0 and ARIA-</a><a class="external text" href="https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table" rel="nofollow">conformant</a><a class="external text" href="https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox" rel="nofollow"> lightbox application</a></li>
- <li><a class="external free" href="http://majx-js.digissime.net/js/popin/" rel="nofollow">http://majx-js.digissime.net/js/popin/</a></li>
-</ul>
+- [WCAG 2.0 and ARIA-](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)[conformant](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table)[ lightbox application](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)
+- <a class="external free" href="http://majx-js.digissime.net/js/popin/" rel="nofollow">http://majx-js.digissime.net/js/popin/</a>
 
-<h2 id="Form_Validation">フォーム検証</h2>
+## フォーム検証
 
-<ul>
- <li><a class="external text" href="https://wiki.github.com/fnagel/jQuery-Accessible-RIA/formular" rel="nofollow">WCAG 2.0 and ARIA-conformant live form validation</a></li>
-</ul>
+- [WCAG 2.0 and ARIA-conformant live form validation](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/formular)
 
-<h2 id="Tables">表</h2>
+## 表
 
-<ul>
- <li><a class="external text" href="https://www.einfach-fuer-alle.de/artikel/barrierefreie-formulare-mit-html-css-und-javascript/" rel="nofollow">German tutorial on creating an accessible form</a></li>
- <li><a class="external text" href="https://codetalks.org/source/widgets/grid/grid.sample.html" rel="nofollow">Simple grid example at CodeTalks</a></li>
- <li><a class="external text" href="https://codetalks.org/source/widgets/datepicker/datepicker.sample.html" rel="nofollow">Date picker grid at CodeTalks</a></li>
- <li><a class="external text" href="https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table" rel="nofollow">WCAG 2.0 and ARIA-conformant sortable tables</a></li>
-</ul>
+- [German tutorial on creating an accessible form](https://www.einfach-fuer-alle.de/artikel/barrierefreie-formulare-mit-html-css-und-javascript/)
+- [Simple grid example at CodeTalks](https://codetalks.org/source/widgets/grid/grid.sample.html)
+- [Date picker grid at CodeTalks](https://codetalks.org/source/widgets/datepicker/datepicker.sample.html)
+- [WCAG 2.0 and ARIA-conformant sortable tables](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table)
