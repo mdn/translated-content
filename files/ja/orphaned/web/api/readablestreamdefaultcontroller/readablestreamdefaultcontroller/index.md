@@ -11,53 +11,50 @@ tags:
 translation_of: Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 original_slug: Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary"><strong><code>ReadableStreamDefaultController()</code></strong> コンストラクターは、<code>ReadableStreamDefaultController</code> オブジェクトのインスタンスを作成して返します。</span></p>
+**`ReadableStreamDefaultController()`** コンストラクターは、`ReadableStreamDefaultController` オブジェクトのインスタンスを作成して返します。
 
-<div class="note">
-<p><strong>注</strong>: このコンストラクターを手動で使用することはありません — これは、{{domxref("ReadableStream")}} オブジェクトの構築中に使用されます。</p>
-</div>
+> **Note:** **注**: このコンストラクターを手動で使用することはありません — これは、{{domxref("ReadableStream")}} オブジェクトの構築中に使用されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>readableStreamDefaultController</em> = new ReadableStreamDefaultController(<em>stream</em>, <em>underlyingSource</em>, <em>size</em>, <em>highWaterMark</em>);</pre>
+```
+var readableStreamDefaultController = new ReadableStreamDefaultController(stream, underlyingSource, size, highWaterMark);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>stream</dt>
- <dd>制御される {{domxref("ReadableStream")}}。</dd>
- <dt>underlyingSource</dt>
- <dd>構築されたストリームインスタンスの動作を定義するメソッドとプロパティを含むオブジェクト。 詳細については、<a href="/ja/docs/Web/API/ReadableStream/ReadableStream#Parameters"><code>ReadableStream()</code> コンストラクターのパラメーター定義</a>を参照してください。</dd>
- <dt>size</dt>
- <dd> パラメーター <code>chunk</code> を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。</dd>
- <dt>highWaterMark</dt>
- <dd>負でない整数 — これは、バックプレッシャーが適用される前に内部キューに含めることができるチャンクの総数を定義します。</dd>
-</dl>
+- stream
+  - : 制御される {{domxref("ReadableStream")}}。
+- underlyingSource
+  - : 構築されたストリームインスタンスの動作を定義するメソッドとプロパティを含むオブジェクト。 詳細については、[`ReadableStream()` コンストラクターのパラメーター定義](/ja/docs/Web/API/ReadableStream/ReadableStream#Parameters)を参照してください。
+- size
+  - : パラメーター `chunk` を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。
+- highWaterMark
+  - : 負でない整数 — これは、バックプレッシャーが適用される前に内部キューに含めることができるチャンクの総数を定義します。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("ReadableStreamDefaultController")}} オブジェクトのインスタンス。</p>
+{{domxref("ReadableStreamDefaultController")}} オブジェクトのインスタンス。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>指定された <code>stream</code> パラメーターは {{domxref("ReadableStream")}} ではないか、既にコントローラーが関連付けられています。</dd>
-</dl>
+- TypeError
+  - : 指定された `stream` パラメーターは {{domxref("ReadableStream")}} ではないか、既にコントローラーが関連付けられています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次の単純な例では、コンストラクターを使用してカスタムの <code>ReadableStream</code> を作成します（完全なコードについては、<a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">単純なランダムストリームの例</a>を参照）。 <code>start()</code> 関数は、1秒ごとにテキストのランダムな文字列を生成し、それをストリームのキューに入れます。 {{domxref("ReadableStream.cancel()")}} が何らかの理由で呼び出された場合、生成を停止するための <code>cancel()</code> 関数も提供します。</p>
+次の単純な例では、コンストラクターを使用してカスタムの `ReadableStream` を作成します（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 `start()` 関数は、1 秒ごとにテキストのランダムな文字列を生成し、それをストリームのキューに入れます。 {{domxref("ReadableStream.cancel()")}} が何らかの理由で呼び出された場合、生成を停止するための `cancel()` 関数も提供します。
 
-<p>{{domxref("ReadableStreamDefaultController")}} オブジェクトは、<code>start()</code> 関数および <code>pull()</code> 関数のパラメーターとして提供されることに注意してください。</p>
+{{domxref("ReadableStreamDefaultController")}} オブジェクトは、`start()` 関数および `pull()` 関数のパラメーターとして提供されることに注意してください。
 
-<p>ボタンが押されると、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。</p>
+ボタンが押されると、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。
 
-<pre class="brush: js">const stream = new ReadableStream({
+```js
+const stream = new ReadableStream({
   start(controller) {
-    interval = setInterval(() =&gt; {
+    interval = setInterval(() => {
       let string = randomChars();
 
       // ストリームに文字列を追加
@@ -83,27 +80,15 @@ original_slug: Web/API/ReadableStreamDefaultController/ReadableStreamDefaultCont
     // 文字列の生成を停止する必要があります
     clearInterval(interval);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-default-controller-constructor","ReadableStreamDefaultController()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                             | 状態                         | コメント |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rs-default-controller-constructor","ReadableStreamDefaultController()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.ReadableStreamDefaultController.ReadableStreamDefaultController")}}</p>
+{{Compat("api.ReadableStreamDefaultController.ReadableStreamDefaultController")}}

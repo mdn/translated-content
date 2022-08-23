@@ -6,62 +6,43 @@ tags:
   - Extensions
 original_slug: Feed_content_access_API
 ---
-<p><a href="ja/Firefox_2">Firefox 2</a> と Thunderbird 2 は拡張製作者に RSS と Atom フィードへのアクセスを簡単にする一連のインターフェースを導入します。</p>
-<h2 id=".E3.83.95.E3.82.A3.E3.83.BC.E3.83.89.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E3.83.95.E3.82.A3.E3.83.BC.E3.83.89.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">フィードインタフェース</h2>
-<dl>
- <dt>
-  <code><a href="ja/NsIFeed">nsIFeed</a></code></dt>
- <dd>
-  RSS あるいは Atom フィードを表します。</dd>
- <dt>
-  <code><a href="ja/NsIFeedContainer">nsIFeedContainer</a></code></dt>
- <dd>
-  サブクラスされたフィード関連の様々なインタフェースのベースクラス。</dd>
- <dt>
-  <code><a href="ja/NsIFeedElementBase">nsIFeedElementBase</a></code></dt>
- <dd>
-  サブクラスされたフィード関連の他の様々なインタフェースのベースクラス。</dd>
- <dt>
-  <code><a href="ja/NsIFeedEntry">nsIFeedEntry</a></code></dt>
- <dd>
-  RSS あるいは Atom フィードの単一のエントリを表します。</dd>
- <dt>
-  <code><a href="ja/NsIFeedGenerator">nsIFeedGenerator</a></code></dt>
- <dd>
-  RSS あるいは Atom フィードを生成したソフトウェアを記述します。</dd>
- <dt>
-  <code><a href="ja/NsIFeedPerson">nsIFeedPerson</a></code></dt>
- <dd>
-  人を表します。人の名前とメールアドレス及びホームページアドレスを含んでいます。</dd>
- <dt>
-  <code><a href="ja/NsIFeedProcessor">nsIFeedProcessor</a></code></dt>
- <dd>
-  RSS と Atom フィードをパースします。</dd>
- <dt>
-  <code><a href="ja/NsIFeedProgressListener">nsIFeedProgressListener</a></code></dt>
- <dd>
-  パース処理中にメッセージを受け取るために RSS あるいは Atom フィードをパースしたいプログラムによって実装されます。</dd>
- <dt>
-  <code><a href="ja/NsIFeedResult">nsIFeedResult</a></code></dt>
- <dd>
-  フィードのパースの結果を表現します。</dd>
- <dt>
-  <code><a href="ja/NsIFeedResultListener">nsIFeedResultListener</a></code></dt>
- <dd>
-  パースが完了したときに通知を受け取るために RSS あるいは Atom フィードをパースしたいプログラムによって実装されます。</dd>
- <dt>
-  <code><a href="ja/NsIFeedTextConstruct">nsIFeedTextConstruct</a></code></dt>
- <dd>
-  フィードのテキストを表します: テキストをプレーンテキストあるいは HTML でフェッチするための関数を含んでいます。</dd>
- <dt>
-  <code><a href="ja/NsIScriptableUnescapeHTML">nsIScriptableUnescapeHTML</a></code></dt>
- <dd>
-  HTML 文字列をアンエスケープするためのユーティリティクラス。</dd>
-</dl>
-<h2 id=".E4.BE.8B:_Web_.E3.81.8B.E3.82.89.E3.83.95.E3.82.A3.E3.83.BC.E3.83.89.E3.82.92.E8.AA.AD.E3.82.80" name=".E4.BE.8B:_Web_.E3.81.8B.E3.82.89.E3.83.95.E3.82.A3.E3.83.BC.E3.83.89.E3.82.92.E8.AA.AD.E3.82.80">例: Web からフィードを読む</h2>
-<p>フィードを読み込みパースすることは本当に簡単です。 フィードを読み込むために <code><a href="ja/XMLHttpRequest">XMLHttpRequest</a></code> を使い、次にフィードをパースするためにその文字列を <code><a href="ja/NsIFeedProcessor">nsIFeedProcessor</a></code> に渡します。</p>
-<p>フィードを読み込み、パーサにそれを渡すことはこのようなコードを使って行うことができます:</p>
-<pre>  fetch: function(feedUrl)
+[Firefox 2](ja/Firefox_2) と Thunderbird 2 は拡張製作者に RSS と Atom フィードへのアクセスを簡単にする一連のインターフェースを導入します。
+
+## フィードインタフェース
+
+- [`nsIFeed`](ja/NsIFeed)
+  - : RSS あるいは Atom フィードを表します。
+- [`nsIFeedContainer`](ja/NsIFeedContainer)
+  - : サブクラスされたフィード関連の様々なインタフェースのベースクラス。
+- [`nsIFeedElementBase`](ja/NsIFeedElementBase)
+  - : サブクラスされたフィード関連の他の様々なインタフェースのベースクラス。
+- [`nsIFeedEntry`](ja/NsIFeedEntry)
+  - : RSS あるいは Atom フィードの単一のエントリを表します。
+- [`nsIFeedGenerator`](ja/NsIFeedGenerator)
+  - : RSS あるいは Atom フィードを生成したソフトウェアを記述します。
+- [`nsIFeedPerson`](ja/NsIFeedPerson)
+  - : 人を表します。人の名前とメールアドレス及びホームページアドレスを含んでいます。
+- [`nsIFeedProcessor`](ja/NsIFeedProcessor)
+  - : RSS と Atom フィードをパースします。
+- [`nsIFeedProgressListener`](ja/NsIFeedProgressListener)
+  - : パース処理中にメッセージを受け取るために RSS あるいは Atom フィードをパースしたいプログラムによって実装されます。
+- [`nsIFeedResult`](ja/NsIFeedResult)
+  - : フィードのパースの結果を表現します。
+- [`nsIFeedResultListener`](ja/NsIFeedResultListener)
+  - : パースが完了したときに通知を受け取るために RSS あるいは Atom フィードをパースしたいプログラムによって実装されます。
+- [`nsIFeedTextConstruct`](ja/NsIFeedTextConstruct)
+  - : フィードのテキストを表します: テキストをプレーンテキストあるいは HTML でフェッチするための関数を含んでいます。
+- [`nsIScriptableUnescapeHTML`](ja/NsIScriptableUnescapeHTML)
+  - : HTML 文字列をアンエスケープするためのユーティリティクラス。
+
+## 例: Web からフィードを読む
+
+フィードを読み込みパースすることは本当に簡単です。 フィードを読み込むために [`XMLHttpRequest`](ja/XMLHttpRequest) を使い、次にフィードをパースするためにその文字列を [`nsIFeedProcessor`](ja/NsIFeedProcessor) に渡します。
+
+フィードを読み込み、パーサにそれを渡すことはこのようなコードを使って行うことができます:
+
+```
+  fetch: function(feedUrl)
   {
     var httpRequest = null;
 
@@ -97,10 +78,14 @@ original_slug: Feed_content_access_API
       alert(e);
     }
   }
-</pre>
-<p><code><a href="ja/NsIFeedProcessor">nsIFeedProcessor</a></code> インタフェースであなたはいくつかの可能なソースからフィードデータをパースできます; この場合、ドキュメントを文字列に読み込み、次に <code>parseFromString()</code> メソッドを使ってパースしています。しかし <code>parseFromStream()</code> を使ってファイルから、<code>parseAsync()</code> を使って直接 URL からパースすることもできます。</p>
-<p>パースされたフィードの実際の処理は <code>FeedTestResultListener</code> オブジェクトの <code>handleResult()</code> を使って行われます。そのコードはこのようになります:</p>
-<pre>    FeedTestResultListener.prototype = {
+```
+
+[`nsIFeedProcessor`](ja/NsIFeedProcessor) インタフェースであなたはいくつかの可能なソースからフィードデータをパースできます; この場合、ドキュメントを文字列に読み込み、次に `parseFromString()` メソッドを使ってパースしています。しかし `parseFromStream()` を使ってファイルから、`parseAsync()` を使って直接 URL からパースすることもできます。
+
+パースされたフィードの実際の処理は `FeedTestResultListener` オブジェクトの `handleResult()` を使って行われます。そのコードはこのようになります:
+
+```
+    FeedTestResultListener.prototype = {
       handleResult: function(result) {
         var feed = result.doc;
 
@@ -115,8 +100,8 @@ original_slug: Feed_content_access_API
 
         // HTML ヘッダとページタイトルを書き込む
 
-        doc.write("&lt;html&gt;&lt;head&gt;&lt;title&gt;Feed: " + feed.title.text + "&lt;/title&gt;&lt;/head&gt;&lt;body&gt;");
-        doc.write("&lt;h1&gt;" + feed.title.text + "&lt;/h1&gt;&lt;p&gt;");
+        doc.write("<html><head><title>Feed: " + feed.title.text + "</title></head><body>");
+        doc.write("<h1>" + feed.title.text + "</h1><p>");
 
         var itemArray = feed.items;
         var numItems = itemArray.length;
@@ -124,7 +109,7 @@ original_slug: Feed_content_access_API
         // 記事の情報を書き込む
 
         if (!numItems) {
-          doc.write("&lt;i&gt;便りのないのは良い便り!&lt;/i&gt;");
+          doc.write("<i>便りのないのは良い便り!</i>");
         }
         else {
           var i;
@@ -132,37 +117,40 @@ original_slug: Feed_content_access_API
           var theUrl;
           var info;
 
-          for (i=0; i&lt;numItems; i++) {
+          for (i=0; i<numItems; i++) {
             theEntry = itemArray.queryElementAt(i, Components.interfaces.nsIFeedEntry);
 
             if (theEntry) {
               theUrl =
-              doc.write('&lt;b&gt;&lt;a href="' + theEntry.link.resolve("") + '"&gt;' + theEntry.title.text + '&lt;/a&gt;&lt;/b&gt;&lt;br&gt;');
+              doc.write('<b><a href="' + theEntry.link.resolve("") + '">' + theEntry.title.text + '</a></b><br>');
               if (theEntry.summary) {
-                info = theEntry.summary.text + "&lt;/p&gt;&lt;hr&gt;&lt;p&gt;";
+                info = theEntry.summary.text + "</p><hr><p>";
               }
               else {
-                info = theEntry.content.text + "&lt;/p&gt;&lt;hr&gt;&lt;p&gt;";
+                info = theEntry.content.text + "</p><hr><p>";
               }
-              doc.write("&lt;blockquote&gt;" + info);
-              doc.write("&lt;/blockquote&gt;&lt;p&gt;");
+              doc.write("<blockquote>" + info);
+              doc.write("</blockquote><p>");
             }
           }
         }
 
         // ドキュメントを閉じる; 完了!
 
-        doc.write("&lt;/body&gt;&lt;/html&gt;");
+        doc.write("</body></html>");
         doc.close();
       }
     }
-</pre>
-<p><code>handleResult()</code> 関数はフィードを表現している <code><a href="ja/NsIFeedResult">nsIFeedResult</a></code> を引数として受け取ります。<code>doc</code> プロパティは全てのフィードデータを含んだ <code><a href="ja/NsIFeed">nsIFeed</a></code> です。</p>
-<p>フィードのタイトルを得るためには、<code>feed.title</code> プロパティを見てください。タイトルは様々なフォーマットのテキストを表す <code><a href="ja/NsIFeedTextConstruct">nsIFeedTextConstruct</a></code> です。HTML エンコードされたテキストとしてフィードのタイトルを得るために、その <code>text</code> プロパティを取得します。代りに <code>plainText()</code> メソッドを使うことで、プレーンテキストに変換されたタイトルのコピーを得ることができます。</p>
-<p>次に、<code>feed.items</code> <code><a href="ja/NsIArray">nsIArray</a></code> を見ることでフィードのアイテムの配列をスキャンしています。この配列はそれぞれのフィードアイテムを表す <code><a href="ja/NsIFeedEntry">nsIFeedEntry</a></code> オブジェクトを含んでいます。</p>
-<p>それぞれのアイテムの title と link、summary そして content プロパティをみることでドキュメントのコンテンツを作り上げています。 link の完全なURL は link の <code>resolve()</code> メソッドを使うことで得ることができます。</p>
-<p>フィードのフェッチを初期化するには、単に <code>fetch(
- <i>
-  url</i>
- )</code> と呼びます。これはフィードコンテンツを含む新しいウィンドウを開ききます。それはそれぞれのアイテムのタイトル(記事自体へのクリック可能なリンクを持っています)を持っています。</p>
-<p>フィードアクセスインタフェースそれぞれの詳細は、個別のリファレンスページを見てください。</p>
+```
+
+`handleResult()` 関数はフィードを表現している [`nsIFeedResult`](ja/NsIFeedResult) を引数として受け取ります。`doc` プロパティは全てのフィードデータを含んだ [`nsIFeed`](ja/NsIFeed) です。
+
+フィードのタイトルを得るためには、`feed.title` プロパティを見てください。タイトルは様々なフォーマットのテキストを表す [`nsIFeedTextConstruct`](ja/NsIFeedTextConstruct) です。HTML エンコードされたテキストとしてフィードのタイトルを得るために、その `text` プロパティを取得します。代りに `plainText()` メソッドを使うことで、プレーンテキストに変換されたタイトルのコピーを得ることができます。
+
+次に、`feed.items` [`nsIArray`](ja/NsIArray) を見ることでフィードのアイテムの配列をスキャンしています。この配列はそれぞれのフィードアイテムを表す [`nsIFeedEntry`](ja/NsIFeedEntry) オブジェクトを含んでいます。
+
+それぞれのアイテムの title と link、summary そして content プロパティをみることでドキュメントのコンテンツを作り上げています。 link の完全な URL は link の `resolve()` メソッドを使うことで得ることができます。
+
+フィードのフェッチを初期化するには、単に `fetch(url)` と呼びます。これはフィードコンテンツを含む新しいウィンドウを開ききます。それはそれぞれのアイテムのタイトル(記事自体へのクリック可能なリンクを持っています)を持っています。
+
+フィードアクセスインタフェースそれぞれの詳細は、個別のリファレンスページを見てください。

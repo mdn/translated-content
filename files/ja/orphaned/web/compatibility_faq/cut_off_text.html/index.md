@@ -6,56 +6,48 @@ tags:
   - Layout
 original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 ---
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>　検索等のテキストボックス内のプレースホルダーが見切れています。<br>
- 　プレースホルダーの文字列が全て表示できず、途中で見切れている場合があります。</p>
+検索等のテキストボックス内のプレースホルダーが見切れています。
+　プレースホルダーの文字列が全て表示できず、途中で見切れている場合があります。
 
-<p>　　　表示画面</p>
+表示画面
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9967/0108.png" style="width: 289px; height: 120px; margin-right: 50px; margin-left: 50px;"></p>
+![](https://mdn.mozillademos.org/files/9967/0108.png)
 
-<h2 id="要因">要因</h2>
+## 要因
 
-<p>　要因の代表例として以下があります。</p>
+要因の代表例として以下があります。
 
-<ol>
- <li>
-  <p><strong>表示領域が足りていない </strong><br>
-   表示領域の<a href="https://developer.mozilla.org/ja/docs/Web/CSS/width">width</a>プロパティの値が表示させるテキストの文字数分のpx数より小さいことで見切れています。<br>
-   テキストを全て表示させるには、テキストよりも大きな<a href="https://developer.mozilla.org/ja/docs/Web/CSS/width">width</a>プロパティの値を設定する必要があります。</p>
+1.  **表示領域が足りていない**
+    表示領域の[width](/ja/docs/Web/CSS/width)プロパティの値が表示させるテキストの文字数分の px 数より小さいことで見切れています。
+    テキストを全て表示させるには、テキストよりも大きな[width](/ja/docs/Web/CSS/width)プロパティの値を設定する必要があります。
 
-  <pre><code><font size="3">　　input[type=text] {
-	margin:0 6px;
-	<font>width</font>:165px;
-　　}				</font></code></pre>
+    ```
+    　　input[type=text] {
+    	margin:0 6px;
+    	width:165px;
+    　　}
+    ```
 
-  <p> </p>
- </li>
-</ol>
+## 解決策
 
-<h2 id="解決策">解決策</h2>
+各要因の解決策の代表例として以下があります。
 
-<p>　各要因の解決策の代表例として以下があります。</p>
+1.  **表示領域が足りていない**
+    表示領域の[width](/ja/docs/Web/CSS/width)プロパティを要素のテキストに合わせて、再設定することで正しく表示されます。
+    表示するテキストが長すぎてテキストボックスを超えてしまう場合は、テキストボックスの横幅の調整も必要となります。
 
-<ol>
- <li>
-  <p><strong>表示領域が足りていない</strong><br>
-   表示領域の<a href="https://developer.mozilla.org/ja/docs/Web/CSS/width">width</a>プロパティを要素のテキストに合わせて、再設定することで正しく表示されます。<br>
-   表示するテキストが長すぎてテキストボックスを超えてしまう場合は、テキストボックスの横幅の調整も必要となります。</p>
+    ```
+    　　input[type=text] {
+    	margin:0 6px;
+    	width: 200px;
+    　　}
+    ```
 
-  <pre><code><font size="3">　　input[type=text] {
-	margin:0 6px;
-	<font>width</font>: <strong>200px;</strong>
-　　}				</font></code></pre>
+## メリット
 
-  <p> </p>
- </li>
-</ol>
+・少ない調整で正しく表示を行えるようになります。
+　・要素内の px 指定の変更のみなので、他ブラウザへの影響がありません。
 
-<h2 id="メリット">メリット</h2>
-
-<p>　・少ない調整で正しく表示を行えるようになります。<br>
- 　・要素内のpx指定の変更のみなので、他ブラウザへの影響がありません。</p>
-
-<p><a href="https://developer.mozilla.org/ja/docs/Web/Compatibility_FAQ">戻る</a></p>
+[戻る](/ja/docs/Web/Compatibility_FAQ)

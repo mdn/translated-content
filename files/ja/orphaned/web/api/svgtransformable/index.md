@@ -11,64 +11,59 @@ tags:
 translation_of: Web/API/SVGTransformable
 original_slug: Web/API/SVGTransformable
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<h2 id="SVG_transformable_interface">SVG transformable interface</h2>
+## SVG transformable interface
 
-<p>インターフェイス <code>SVGTransformable</code> には、属性 {{ SVGAttr("transform") }}. を持つ全ての要素に適用されるプロパティとメソッドが含まれています。</p>
+インターフェイス `SVGTransformable` には、属性 {{ SVGAttr("transform") }}. を持つ全ての要素に適用されるプロパティとメソッドが含まれています。
 
-<h3 id="インターフェイスの概要">インターフェイスの概要</h3>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Also implement</th>
-   <td><em>無し</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Methods</th>
-   <td><em>無し</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Properties</th>
-   <td>
-    <ul>
-     <li>読み取り専用 {{ domxref("SVGAnimatedTransformList") }} <code>transform</code></li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/types.html#InterfaceSVGTransformable">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="プロパティ">プロパティ</h2>
+### インターフェイスの概要
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th>名前</th>
-   <th>型</th>
-   <th>説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>transform</code></td>
-   <td>{{ domxref("SVGAnimatedTransformList") }}</td>
-   <td>指定された要素の属性 {{ SVGAttr("transform") }} に対応します。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Also implement</th>
+      <td><em>無し</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Methods</th>
+      <td><em>無し</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Properties</th>
+      <td>
+        <ul>
+          <li>
+            読み取り専用
+            {{ domxref("SVGAnimatedTransformList") }}
+            <code>transform</code>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Normative document</th>
+      <td>
+        <a
+          class="external"
+          href="http://www.w3.org/TR/SVG11/types.html#InterfaceSVGTransformable"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="メソッド">メソッド</h2>
+## プロパティ
 
-<p><code>SVGTransformable</code> インターフェイスは、特定のメソッドを提供しません。</p>
+| 名前        | 型                                                       | 説明                                                                     |
+| ----------- | -------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `transform` | {{ domxref("SVGAnimatedTransformList") }} | 指定された要素の属性 {{ SVGAttr("transform") }} に対応します。 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## メソッド
 
+`SVGTransformable` インターフェイスは、特定のメソッドを提供しません。
 
+## ブラウザー実装状況
 
-<p>{{Compat("api.SVGTransformable")}}</p>
+{{Compat("api.SVGTransformable")}}

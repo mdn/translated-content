@@ -6,26 +6,31 @@ tags:
   - Extensions
 original_slug: Code_snippets/Toolbar
 ---
-<h3 id="Adding_a_toolbar_button">ツールバーボタンを追加する</h3>
-<p>二つのチュートリアルが参照可能です。</p>
-<ul>
- <li>初心者向けの詳細な説明のある順を追ったチュートリアル : <a href="ja/Custom_Toolbar_Button">Custom Toolbar Button</a></li>
- <li>すでに拡張を作成しており開発の基本は知っている人向けの、ツールバーボタン追加に必要な手順を述べたチュートリアル : <a href="ja/Creating_toolbar_buttons">Creating toolbar buttons</a></li>
-</ul>
-<h3 id="Adding_button_by_default">Adding button by default</h3>
-<p>スタマイズされたツールバーパレット用のツールバーボタンを入れて、あなたの拡張を開発・配布したとしても、デフォルトではボタンは有効になりません。ユーザはボタンをツールバーへドラッグする必要があります。下のコードを利用することで、あなたのボタンが最初のインストールおよび XPI の再起動後にデフォルトで表示されるようにできます。</p>
-<div class="note">
- <p>ボタンをデフォルトで追加するのは、正しく行うのが非常に難しいという点で、ほぼ間違いなく悪習慣です。ユーザはあなたがボタンを追加したツールバーを非表示にしているかもしれませんし、追加したコードが正常に動作しないようにツールバーをカスタマイズしているかもしれません。</p>
- <p>Firefox がこの目的に API を提供することに対しては、バグが立てられています。<span class="comment">need the bug #</span></p>
-</div>
-<h4 id="Notes">メモ</h4>
-<ol>
- <li>このサンプルは、Firefox 独自のものですが、Thunderbird でも正しいノードをターゲットに変更することで動作します。</li>
- <li>デフォルトでボタンを追加するのは、正しい値とともに追加可能で、あなたの拡張のよく利用される機能に対してである場合だけにしてください。ユーザに限られた UI スペースしかないかもしれないことを考慮し、本当に必要かどうか検討してください。</li>
- <li>このコードは browser.xul のオーバーレイに含められる必要があります。</li>
-</ol>
-<h4 id="Example">サンプル</h4>
-<pre class="eval"> try {
+### ツールバーボタンを追加する
+
+二つのチュートリアルが参照可能です。
+
+- 初心者向けの詳細な説明のある順を追ったチュートリアル : [Custom Toolbar Button](ja/Custom_Toolbar_Button)
+- すでに拡張を作成しており開発の基本は知っている人向けの、ツールバーボタン追加に必要な手順を述べたチュートリアル : [Creating toolbar buttons](ja/Creating_toolbar_buttons)
+
+### Adding button by default
+
+スタマイズされたツールバーパレット用のツールバーボタンを入れて、あなたの拡張を開発・配布したとしても、デフォルトではボタンは有効になりません。ユーザはボタンをツールバーへドラッグする必要があります。下のコードを利用することで、あなたのボタンが最初のインストールおよび XPI の再起動後にデフォルトで表示されるようにできます。
+
+> **Note:** ボタンをデフォルトで追加するのは、正しく行うのが非常に難しいという点で、ほぼ間違いなく悪習慣です。ユーザはあなたがボタンを追加したツールバーを非表示にしているかもしれませんし、追加したコードが正常に動作しないようにツールバーをカスタマイズしているかもしれません。
+>
+> Firefox がこの目的に API を提供することに対しては、バグが立てられています。need the bug #
+
+#### メモ
+
+1.  このサンプルは、Firefox 独自のものですが、Thunderbird でも正しいノードをターゲットに変更することで動作します。
+2.  デフォルトでボタンを追加するのは、正しい値とともに追加可能で、あなたの拡張のよく利用される機能に対してである場合だけにしてください。ユーザに限られた UI スペースしかないかもしれないことを考慮し、本当に必要かどうか検討してください。
+3.  このコードは browser.xul のオーバーレイに含められる必要があります。
+
+#### サンプル
+
+```
+ try {
    var firefoxnav = document.getElementById("nav-bar");
    var curSet = firefoxnav.currentSet;
    if (curSet.indexOf("my-extension-button") == -1)
@@ -47,4 +52,4 @@ original_slug: Code_snippets/Toolbar
    }
  }
  catch(e) { }
-</pre>
+```
