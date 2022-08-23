@@ -34,6 +34,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
 
 **version_name** が存在しない場合、**version** 項目が同様な表示目的で使われます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.version_name")}}

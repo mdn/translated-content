@@ -29,7 +29,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 - {{WebExtAPIRef("commands.onCommand")}}
   - : 関連付けされたキーボードショートカットを使ってコマンドが実行された時に発火します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}
 

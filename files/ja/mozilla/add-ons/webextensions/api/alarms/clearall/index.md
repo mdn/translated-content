@@ -34,7 +34,7 @@ browser.alarms.clearAll(
     - `wasCleared`
       - : `boolean`. アラームが解除された場合は `true` が、それ以外の場合は `false` が入ります。Chrome の場合は常に `true` が入ることに注意してください。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms.clearAll")}}
 

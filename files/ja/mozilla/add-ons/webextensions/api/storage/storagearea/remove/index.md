@@ -20,7 +20,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
 
 この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-## Syntax
+## 構文
 
 ```js
 let removingItem = browser.storage.<storageType>.remove(
@@ -39,7 +39,7 @@ let removingItem = browser.storage.<storageType>.remove(
 
 成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage.StorageArea.remove")}}
 

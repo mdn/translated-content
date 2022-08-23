@@ -51,7 +51,7 @@ var downloading = browser.downloads.download(
 
 [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)が返却されます。ダウンロードが成功した場合、new {{WebExtAPIRef("downloads.DownloadItem")}}の id が格納された promise を受け取ります。対して、promise が reject された場合は、エラーメッセージを受け取ります。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.downloads.download")}}
 

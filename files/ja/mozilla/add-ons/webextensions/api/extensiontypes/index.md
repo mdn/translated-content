@@ -27,7 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 - `extensionTypes.CSSOrigin`
   - : [`tabs.insertCSS`](/ja/Add-ons/WebExtensions/API/tabs/insertCSS) で挿入された CSS スタイルシートが "author" か "user" のスタイルシートのどちらであるかを示す
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.extensionTypes")}}
 

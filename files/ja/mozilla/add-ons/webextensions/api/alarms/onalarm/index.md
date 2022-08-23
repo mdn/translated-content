@@ -47,7 +47,7 @@ browser.alarms.onAlarm.hasListener(listener)
     - `alarm`
       - : 発火するアラーム {{WebExtAPIRef('alarms.Alarm')}} が入ります。発火したアラームを判別するには `Alarm.name` が利用できます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms.onAlarm")}}
 

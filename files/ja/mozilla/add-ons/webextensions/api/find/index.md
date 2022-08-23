@@ -25,6 +25,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find
 - {{WebExtAPIRef("find.removeHighlighting()")}}
   - : あらゆるハイライトを削除する
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}

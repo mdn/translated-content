@@ -33,7 +33,7 @@ The script gets access to a number of objects that help the injected script inte
 
 [See some examples.](#Examples)
 
-## Syntax
+## 構文
 
 ```js
 var evaluating = browser.devtools.inspectedWindow.eval(

@@ -140,7 +140,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 - {{WebExtAPIRef("proxy.onProxyError")}}
   - : プロキシスクリプト実行している際にシステムがエラーに遭遇した時に発火します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.proxy")}}
 

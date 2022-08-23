@@ -66,7 +66,7 @@ browser.bookmarks.onMoved.hasListener(listener)
 - `oldIndex`
   - : `移動前において、`この要素が親から見て何番目にあったかを表す整数
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.onMoved")}}
 

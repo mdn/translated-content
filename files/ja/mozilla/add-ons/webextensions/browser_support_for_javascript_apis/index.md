@@ -1,5 +1,5 @@
 ---
-title: JavaScript API 群のブラウザ実装状況
+title: JavaScript API 群のブラウザーの互換性
 slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 tags:
   - Reference

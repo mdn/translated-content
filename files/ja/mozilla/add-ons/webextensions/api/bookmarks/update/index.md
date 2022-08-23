@@ -49,7 +49,7 @@ browser.bookmarks.update(
     - `result`
       - : 更新されたブックマークを表す{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトです。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.update")}}
 

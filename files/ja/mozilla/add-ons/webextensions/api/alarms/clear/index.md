@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clear
 
 与えた名前に対応するアラームを解除します。
 
-## Syntax
+## 構文
 
 ```js
 browser.alarms.clear(
@@ -37,7 +37,7 @@ browser.alarms.clear(
     - `wasCleared`
       - : `boolean`. アラームが解除された場合は `true` が、それ以外の場合は `false` が入ります。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms.clear")}}
 

@@ -60,6 +60,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
   }
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.options_ui")}}

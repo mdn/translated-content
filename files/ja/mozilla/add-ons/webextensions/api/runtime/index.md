@@ -104,7 +104,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Fired when the device needs to be restarted.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.runtime")}}
 

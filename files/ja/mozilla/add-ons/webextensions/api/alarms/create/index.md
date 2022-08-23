@@ -47,7 +47,7 @@ browser.alarms.create(
     - `periodInMinutes`{{optional_inline}}
       - : `double`. この値が指定された場合、アラームは最初の発火時刻から `periodInMinutes` の周期で繰り返し発火します。この値を指定したうえで`when` と `delayInMinutes` の両方を省略した場合、最初にアラームが発火するのは `periodInMinutes` の時間が経過した後になります。`periodInMinutes` が指定されなければ、アラームは一度だけ発火します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms.create")}}
 

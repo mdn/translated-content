@@ -48,7 +48,7 @@ omnibox API は、ユーザーが拡張機能で定義されたキーワード�
 - {{WebExtAPIRef("omnibox.onInputCancelled")}}
   - : Fired when the user dismisses the address bar drop-down, after they have focused the address bar and typed your extension's omnibox keyword.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.omnibox")}}
 

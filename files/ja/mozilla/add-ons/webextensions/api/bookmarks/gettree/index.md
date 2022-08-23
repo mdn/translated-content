@@ -34,7 +34,7 @@ browser.bookmarks.getTree(
     - `results`
       - : ルートノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトが 1 つ含まれた配列
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.getTree")}}
 

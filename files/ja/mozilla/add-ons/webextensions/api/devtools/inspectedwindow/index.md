@@ -31,7 +31,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 - [`devtools.inspectedWindow.reload()`](/ja/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload)
   - : ターゲットウィンドウのドキュメントを再読み込みする
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.devtools.inspectedWindow")}}{{WebExtExamples("h2")}}
 

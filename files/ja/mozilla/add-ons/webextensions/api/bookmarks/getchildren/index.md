@@ -37,7 +37,7 @@ browser.bookmarks.getChildren(
     - `results`
       - : 各要素が 1 つの子ノードを表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。要素の順序は、UI に表示されているのと同じ順番です。現在、セパレータの有無は結果に含まれません。指定したノードに子要素が含まれていなかった場合、`results` は空配列となります。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.getChildren")}}
 

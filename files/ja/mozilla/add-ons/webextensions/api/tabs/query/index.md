@@ -64,7 +64,7 @@ var querying = browser.tabs.query(
 
 エラーが発生した場合、その Promise はエラーメッセージとともに却下されます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.tabs.query", 10)}}
 

@@ -64,7 +64,7 @@ browser.bookmarks.onRemoved.hasListener(listener)
 - `node`
   - : 削除された要素に関する詳細を含む {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.onRemoved")}}
 

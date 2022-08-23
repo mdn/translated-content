@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events
 - {{WebExtAPIRef("events.UrlFilter")}}
   - : いろいろな条件で URL をフィルターする。所与の条件のいずれかがマッチした場合、フィルター全体がマッチする。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.events")}}
 

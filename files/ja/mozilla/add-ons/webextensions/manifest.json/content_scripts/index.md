@@ -367,6 +367,6 @@ glob は単にワイルドカードを含むことのある文字列です。ワ
 
 コンテンツスクリプトは同じ DOM を見て、配列の順番どおりに挿入されます。よって "borderify.js" からは "jquery.js" によって追加されたグローバル変数が見えます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.content_scripts")}}

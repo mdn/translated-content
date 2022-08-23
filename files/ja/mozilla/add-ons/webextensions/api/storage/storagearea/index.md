@@ -24,7 +24,7 @@ StorageArea はオブジェクト型です。
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : 全てのアイテムをストレージ領域から削除します。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage.StorageArea")}}
 

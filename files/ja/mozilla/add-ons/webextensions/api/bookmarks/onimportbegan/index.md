@@ -43,7 +43,7 @@ browser.bookmarks.onImportBegan.hasListener(listener)
 - `callback`
   - : イベントが発火した際に呼び出される関数を指定します。この関数に渡される引数はありません。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.onImportBegan")}}
 

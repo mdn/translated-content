@@ -38,6 +38,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/name
 "name": "My Extension"
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.name")}}

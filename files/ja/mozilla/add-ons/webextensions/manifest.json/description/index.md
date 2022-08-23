@@ -40,6 +40,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 "description": "Replaces pictures with pictures of cats."
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.description")}}

@@ -35,7 +35,7 @@ browser.bookmarks.remove(
 - `callback`{{optional_inline}}
   - : ブックマークやフォルダが削除された際に実行される関数です。この関数に渡される引数はありません。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.remove")}}
 

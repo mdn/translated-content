@@ -180,6 +180,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_over
   </tbody>
 </table>
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.chrome_settings_overrides", 10)}}

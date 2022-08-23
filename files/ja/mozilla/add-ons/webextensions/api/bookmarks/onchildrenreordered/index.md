@@ -60,7 +60,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 - `childIds`
   - : {{jsxref("string")}} の {{jsxref("array")}} です。このフォルダに含まれるブックマーク要素すべての ID が含まれており、UI に表示されているのと同じ順番に並んでいます。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.onChildrenReordered")}}
 

@@ -41,7 +41,7 @@ let gettingItem = browser.storage.<storageType>.get(
 
 > **Warning:** 52 より前の Firefox バージョンのコンテンツスクリプトで使用する場合、 `browser.storage.local.get()` で返される Promise は 1 つのオブジェクトを持つ配列を引数に持ちます。配列内のオブジェクトは上記に記述したようにストレージ領域内の `keys` を持っています。 The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage.StorageArea.get")}}
 

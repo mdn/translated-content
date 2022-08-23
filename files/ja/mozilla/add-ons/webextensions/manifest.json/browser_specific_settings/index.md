@@ -91,6 +91,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 }
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.browser_specific_settings")}}

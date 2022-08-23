@@ -81,7 +81,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 - {{WebExtAPIRef("downloads.onChanged")}}
   - : `bytesReceived` を除くいかなる {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} のプロパティが変わった時、このイベントは `downloadId` や変更したプロパティを含むオブジェクトと共に発火します
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.downloads")}}
 

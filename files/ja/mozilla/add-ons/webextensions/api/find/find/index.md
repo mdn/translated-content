@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
 この関数は asynchronous/ 非同期 関数で [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
 
-## Syntax
+## 構文
 
 ```js
 browser.find.find(

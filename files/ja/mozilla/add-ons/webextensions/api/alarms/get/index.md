@@ -37,7 +37,7 @@ browser.alarms.get(
     - `alarm`
       - : `{{WebExtAPIRef('alarms.Alarm')}}`. 名前が `name` にマッチするアラームが入ります。マッチするアラームがなかった場合、`undefined` が入ります。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.alarms.get")}}
 

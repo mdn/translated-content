@@ -70,7 +70,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 - {{WebExtAPIRef("browserAction.onClicked")}}
   - : ブラウザーアクションがクリックされた時に発火します。このイベントはブラウザーアクションがポップアップ付きでない場合は発火しません。
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.browserAction")}}
 

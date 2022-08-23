@@ -54,6 +54,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
 }
 ```
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.chrome_url_overrides")}}
