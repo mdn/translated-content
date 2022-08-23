@@ -51,7 +51,7 @@ translation_of: Web/API/Element/touchmove_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.touchmove_event")}}
+{{Compat}}
 
 ## 関連情報
 

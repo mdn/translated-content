@@ -54,7 +54,7 @@ element.scrollTo({
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.scrollTo")}}
+{{Compat}}
 
 ## 関連情報
 

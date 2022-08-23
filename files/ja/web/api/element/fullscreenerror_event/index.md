@@ -62,7 +62,7 @@ requestor.requestFullscreen();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.fullscreenerror_event")}}
+{{Compat}}
 
 ## 関連情報
 

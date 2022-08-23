@@ -54,7 +54,7 @@ if (foo.hasAttributes()) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.hasAttributes")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -93,7 +93,7 @@ document.getElementById('toggle-fullscreen').addEventListener('click', (event) =
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.fullscreenchange_event")}}
+{{Compat}}
 
 ## 関連情報
 

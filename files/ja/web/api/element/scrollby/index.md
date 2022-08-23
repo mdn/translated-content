@@ -56,4 +56,4 @@ element.scrollBy({
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.scrollBy")}}
+{{Compat}}

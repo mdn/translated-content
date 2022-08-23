@@ -68,7 +68,7 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 ## ブラウザ実装状況
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## 関連情報
 

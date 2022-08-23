@@ -105,7 +105,7 @@ el.addEventListener('wheel', zoom);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.wheel_event")}}
+{{Compat}}
 
 ## 関連情報
 

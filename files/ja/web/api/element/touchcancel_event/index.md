@@ -50,7 +50,7 @@ translation_of: Web/API/Element/touchcancel_event
 
 ## ブラウザ互換性
 
-{{Compat("api.Element.touchcancel_event")}}
+{{Compat}}
 
 ## 参照
 

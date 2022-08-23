@@ -94,7 +94,7 @@ if (!Element.prototype.matches) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.removeAttribute")}}
+{{Compat}}
 
 ## 関連情報
 

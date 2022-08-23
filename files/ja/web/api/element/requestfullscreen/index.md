@@ -63,7 +63,7 @@ tbd
 
 ## ブラウザーの対応
 
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## 関連情報
 

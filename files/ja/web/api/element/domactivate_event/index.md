@@ -80,7 +80,7 @@ translation_of: Web/API/Element/DOMActivate_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.DOMActivate_event")}}
+{{Compat}}
 
 ## 関連情報
 
