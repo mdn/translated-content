@@ -16,6 +16,8 @@ slug: Web/HTTP/Headers/Access-Control-Expose-Headers
 - {{HTTPHeader("Last-Modified")}}
 - {{HTTPHeader("Pragma")}}
 
+> **Note:** {{HTTPHeader("Content-Length")}} 最初并不是简单响应首部之一。 \[[ref](https://github.com/whatwg/fetch/pull/626)]
+
 如果想要让客户端可以访问到其他的首部信息，可以将它们在 `Access-Control-Expose-Headers` 里面列出来。
 
 | Header type                                      | {{Glossary("Response header")}} |
