@@ -12,46 +12,47 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onplaying
 original_slug: Web/API/GlobalEventHandlers/onplaying
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><strong><code>onplaying</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("Event_handlers", "event handler")}} のうち {{event("playing")}} イベントを処理するためのものです。</p>
+**`onplaying`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("Event_handlers", "event handler")}} のうち {{event("playing")}} イベントを処理するためのものです。
 
-<p><code>playing</code> イベントは、メディアデータが不足して一時停止または遅延した後、再生が開始できる状態になったときに発生します。</p>
+`playing` イベントは、メディアデータが不足して一時停止または遅延した後、再生が開始できる状態になったときに発生します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>element</var>.onplaying = <var>handlerFunction</var>;
-var <var>handlerFunction</var> = <var>element</var>.onplaying;
-</pre>
+```
+element.onplaying = handlerFunction;
+var handlerFunction = element.onplaying;
+```
 
-<p><code>handlerFunction</code> は <code>null</code> またはイベントのハンドラーを指定する <a href="/ja/docs/Web/JavaScript/Reference/Functions">JavaScript 関数</a>です。</p>
+`handlerFunction` は `null` またはイベントのハンドラーを指定する [JavaScript 関数](/ja/docs/Web/JavaScript/Reference/Functions)です。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
 <table class="spectable standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#handler-onplaying','onplaying')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">状態</th>
+      <th scope="col">備考</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG','#handler-onplaying','onplaying')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.GlobalEventHandlers.onplaying")}}</p>
+{{Compat("api.GlobalEventHandlers.onplaying")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLMediaElement/playing_event", "playing")}}</li>
- <li><a href="/ja/docs/Web/Guide/Events/Event_handlers">DOM イベントハンドラー</a></li>
-</ul>
+- {{domxref("HTMLMediaElement/playing_event", "playing")}}
+- [DOM イベントハンドラー](/ja/docs/Web/Guide/Events/Event_handlers)

@@ -11,39 +11,28 @@ tags:
 translation_of: Web/API/WebSocket/onmessage
 original_slug: Web/API/WebSocket/onmessage
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p><strong><code>WebSocket.onmessage</code></strong> プロパティは、サーバーからメッセージが届いたときに呼び出されるイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。これは {{domxref("MessageEvent")}} で呼び出されます。</p>
+**`WebSocket.onmessage`** プロパティは、サーバーからメッセージが届いたときに呼び出されるイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。これは {{domxref("MessageEvent")}} で呼び出されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>aWebSocket</em>.onmessage = function(event) {
+```
+aWebSocket.onmessage = function(event) {
   console.debug("WebSocket message received:", event);
-};</pre>
+};
+```
 
-<h2 id="Value" name="Value">値</h2>
+## 値
 
-<p>{{domxref("EventListener")}} です。</p>
+{{domxref("EventListener")}} です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-websocket-onmessage', 'WebSocket: onmessage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#handler-websocket-onmessage', 'WebSocket: onmessage')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.WebSocket.onmessage")}}</p>
+{{Compat("api.WebSocket.onmessage")}}

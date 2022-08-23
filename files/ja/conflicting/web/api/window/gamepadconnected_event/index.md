@@ -13,54 +13,36 @@ tags:
 translation_of: Web/API/Window/ongamepadconnected
 original_slug: Web/API/Window/ongamepadconnected
 ---
-<div>
-<div>{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}</div>
-</div>
+{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}{{domxref("Window")}} インターフェイスの **`ongamepadconnected`** プロパティは、ゲームパッドが接続されたとき ({{event('gamepadconnected')}}イベントが発生したとき) に実行されるイベントハンドラを表します。
 
-<div>{{domxref("Window")}}  <span class="tlid-translation translation"><span title="">インターフェイスの </span></span><strong><code>ongamepadconnected</code></strong><span class="tlid-translation translation"><span title=""> プロパティは、ゲームパッドが接続されたとき (</span></span>{{event('gamepadconnected')}}<span class="tlid-translation translation"><span title="">イベントが発生したとき) に実行されるイベントハンドラを表します。</span></span></div>
+イベントのオブジェクトの型は {{domxref("GamepadEvent")}} です。
 
-<div> </div>
+## 構文
 
-<p>イベントのオブジェクトの型は {{domxref("GamepadEvent")}} です。</p>
+```
+window.ongamepadconnected = function() { ... };
+```
 
-<h2 id="構文">構文</h2>
+## 例
 
-<pre class="syntaxbox">window.ongamepadconnected = function() { ... };
-</pre>
+```js
+window.ongamepadconnected = function(event) {
+  // All buttons and axes values can be accessed through
+  event.gamepad;
+};
+```
 
-<h2 id="例">例</h2>
+## 仕様
 
-<pre class="brush:js; line-numbers  language-js"><code class="language-js">window<span class="punctuation token">.</span><span class="punctuation token">on</span><span class="string token">gamepadconnected =</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// All buttons and axes values can be accessed through</span>
-  event<span class="punctuation token">.</span>gamepad<span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+| 仕様                                                                                                     | 状態                         | コメント |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('Gamepad ', '#event-gamepadconnected', 'gamepadconnected event')}} | {{Spec2('Gamepad')}} | 初版     |
 
-<h2 id="仕様">仕様</h2>
+## ブラウザの互換性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Gamepad ', '#event-gamepadconnected', 'gamepadconnected event')}}</td>
-   <td>{{Spec2('Gamepad')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("api.Window.ongamepadconnected")}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## 参照
 
-
-
-<p>{{Compat("api.Window.ongamepadconnected")}}</p>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li>Ted Mielczarek と Robert Nyman による <a class="external text" href="https://hacks.mozilla.org/2013/12/the-gamepad-api/" rel="nofollow">The Gamepad API</a></li>
- <li><a href="http://luser.github.io/gamepadtest/">Simple API demo page</a> (<a href="https://github.com/luser/gamepadtest">ソース</a>)</li>
-</ul>
+- Ted Mielczarek と Robert Nyman による [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/)
+- [Simple API demo page](http://luser.github.io/gamepadtest/) ([ソース](https://github.com/luser/gamepadtest))

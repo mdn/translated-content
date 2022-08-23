@@ -13,53 +13,38 @@ tags:
 translation_of: Web/API/BroadcastChannel/onmessage
 original_slug: Web/API/BroadcastChannel/onmessage
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p><span class="seoSummary"><strong><code>BroadcastChannel.onmessage</code></strong> イベントハンドラは、{{domxref("MessageEvent")}} 型の {{event("message")}} イベントがこの {{domxref("BroadcastChannel")}} によって受信されたときに実行する関数を指定するプロパティです。</span> このようなイベントは、チャネルに放送されるメッセージとともにブラウザーによって送信されます。</p>
+**`BroadcastChannel.onmessage`** イベントハンドラは、{{domxref("MessageEvent")}} 型の {{event("message")}} イベントがこの {{domxref("BroadcastChannel")}} によって受信されたときに実行する関数を指定するプロパティです。 このようなイベントは、チャネルに放送されるメッセージとともにブラウザーによって送信されます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>channel</em>.onmessage = <em>function</em>;
-</pre>
+```
+channel.onmessage = function;
+```
 
-<h3 id="Values" name="Values">Values</h3>
+### Values
 
-<ul>
- <li><code>function</code> は、接尾辞 <code>()</code> もパラメーターも含まないユーザー定義関数の名前や、 <code>function(event) {...}</code> などの無名関数宣言です。 イベントハンドラには、イベントを含む単一のパラメータが常に1つあります。 ここでは {{domxref("MessageEvent")}} 型です。</li>
-</ul>
+- `function` は、接尾辞 `()` もパラメーターも含まないユーザー定義関数の名前や、 `function(event) {...}` などの無名関数宣言です。 イベントハンドラには、イベントを含む単一のパラメータが常に 1 つあります。 ここでは {{domxref("MessageEvent")}} 型です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">bc.onmessage = function(ev) { console.log('message event received!'); };
-</pre>
+```js
+bc.onmessage = function(ev) { console.log('message event received!'); };
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#handler-broadcastchannel-onmessage", "BroadcastChannel.onmessage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                         | 状態                             | コメント            |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', "comms.html#handler-broadcastchannel-onmessage", "BroadcastChannel.onmessage")}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.BroadcastChannel.onmessage")}}
 
+## 関連情報
 
-<p>{{Compat("api.BroadcastChannel.onmessage")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>ブラウザコンテキスト間でやり取りするもう1つの、よりヘビー級の方法: {{domxref("ServiceWorker")}}</li>
-</ul>
+- ブラウザコンテキスト間でやり取りするもう 1 つの、よりヘビー級の方法: {{domxref("ServiceWorker")}}

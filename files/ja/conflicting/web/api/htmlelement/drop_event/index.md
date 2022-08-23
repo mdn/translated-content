@@ -9,31 +9,31 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ondrop
 original_slug: Web/API/GlobalEventHandlers/ondrop
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>{{event("drop")}} イベント用の {{domxref("GlobalEventHandlers", "グローバルイベントハンドラ")}}。</p>
+{{event("drop")}} イベント用の {{domxref("GlobalEventHandlers", "グローバルイベントハンドラ")}}。
 
-<h2 id="シンタックス">シンタックス</h2>
+## シンタックス
 
-<pre class="syntaxbox notranslate">var <var>dropHandler</var> = <var>targetElement</var>.ondrop;
-</pre>
+```
+var dropHandler = targetElement.ondrop;
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<dl>
- <dt><code>dropHandler</code></dt>
- <dd><code>targetElement</code> 要素の <em>drop</em> イベントハンドラ。</dd>
-</dl>
+- `dropHandler`
+  - : `targetElement` 要素の _drop_ イベントハンドラ。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、{{domxref("GlobalEventHandlers.ondrop", "ondrop")}} 属性を使用して、要素の {{event("drop")}} イベント・ハンドラを定義することを示しています。</p>
+この例では、{{domxref("GlobalEventHandlers.ondrop", "ondrop")}} 属性を使用して、要素の {{event("drop")}} イベント・ハンドラを定義することを示しています。
 
-<pre class="brush: js notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang=ja&gt;
-&lt;title&gt;ondrag グローバルイベント属性の使用例&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=ja>
+<title>ondrag グローバルイベント属性の使用例</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -45,9 +45,9 @@ original_slug: Web/API/GlobalEventHandlers/ondrop
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;script&gt;
+</style>
+</head>
+<script>
 function drag_handler(ev) {
  console.log("Drag");
 }
@@ -70,46 +70,29 @@ function dragover_handler(ev) {
  console.log("dragOver");
  ev.preventDefault();
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;&lt;code&gt;ondrag&lt;/code&gt;, &lt;code&gt;ondrop&lt;/code&gt;, &lt;code&gt;ondragstart&lt;/code&gt;, &lt;code&gt;ondragover&lt;/code&gt; の例&lt;/h1&gt;
- &lt;div class="source"&gt;
-   &lt;p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     この要素を選択し、ドロップゾーンにドラッグしてから選択を解除して要素を移動します。&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;ドロップゾーン&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1><code>ondrag</code>, <code>ondrop</code>, <code>ondragstart</code>, <code>ondragover</code> の例</h1>
+ <div class="source">
+   <p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true">
+     この要素を選択し、ドロップゾーンにドラッグしてから選択を解除して要素を移動します。</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">ドロップゾーン</div>
+</body>
+</html>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondrop", "ondrop")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondrop", "ondrop")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | ステータス                       | コメント |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName("HTML WHATWG", "indices.html#ix-handler-ondrop", "ondrop")}} | {{Spec2("HTML WHATWG")}} |          |
+| {{SpecName("HTML5.1", "index.html#ix-handler-ondrop", "ondrop")}}         | {{Spec2("HTML5.1")}}     | 初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.GlobalEventHandlers.ondrop")}}</p>
+{{Compat("api.GlobalEventHandlers.ondrop")}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>{{event("drop")}}</li>
-</ul>
+- {{event("drop")}}

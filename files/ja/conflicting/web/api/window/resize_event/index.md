@@ -9,40 +9,41 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onresize
 original_slug: Web/API/GlobalEventHandlers/onresize
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p><code><strong>GlobalEventHandlers.onresize</strong></code> プロパティは、{{event("resize")}} イベントを受信するとトリガーされる {{event("Event_handlers", "event handler")}} を含みます。</p>
+**`GlobalEventHandlers.onresize`** プロパティは、{{event("resize")}} イベントを受信するとトリガーされる {{event("Event_handlers", "event handler")}} を含みます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="eval">window.onresize = <em>funcRef</em>;
-</pre>
+```
+window.onresize = funcRef;
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>funcRef</code>: 関数への参照</li>
-</ul>
+- `funcRef`: 関数への参照
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre>window.onresize = doFunc;
-</pre>
+```
+window.onresize = doFunc;
+```
 
-<pre>&lt;html&gt;
-&lt;head&gt;
+```
+<html>
+<head>
 
-&lt;title&gt;onresize test&lt;/title&gt;
+<title>onresize test</title>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
-&lt;p&gt;Resize the browser window to fire the resize event.&lt;/p&gt;
+<body>
+<p>Resize the browser window to fire the resize event.</p>
 
-&lt;p&gt;Window height: &lt;span id="height"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Window width: &lt;span id="width"&gt;&lt;/span&gt;&lt;/p&gt;
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var heightOutput = document.querySelector('#height');
   var widthOutput = document.querySelector('#width');
 
@@ -52,28 +53,30 @@ original_slug: Web/API/GlobalEventHandlers/onresize
   }
 
   window.onresize = resize;
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</body>
+</html>
+```
 
-<h2 id="Notes" name="Notes">注記</h2>
+## 注記
 
-<p>ブラウザウィンドウのサイズが変更された後に <code>resize</code> イベントが発生します。</p>
+ブラウザウィンドウのサイズが変更された後に `resize` イベントが発生します。
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
 <table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">使用</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onresize','onresize')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">使用</th>
+      <th scope="col">ステータス</th>
+      <th scope="col">コメント</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG','webappapis.html#handler-onresize','onresize')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>

@@ -8,149 +8,83 @@ tags:
 translation_of: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 original_slug: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 ---
-<h2 id="What_is_ARIA">ARIA とは何か</h2>
+## ARIA とは何か
 
-<p>WAI-ARIA は、
-<a href="https://www.w3.org/">W3C</a> の <a href="https://www.w3.org/WAI/"">Web Accessibility Initiative</a> による、<a href="https://www.w3.org/WAI/intro/aria.php">Accessible Rich Internet Applications</a> の仕様です。 ARIA はウェブアプリケーションやウィジェットを、画面リーダーや拡大鏡などの支援技術を使用するユーザーを含む幅広いユーザーに対して、よりアクセス可能にする手段を提供します。</p>
+WAI-ARIA は、
+[W3C](https://www.w3.org/) の <a href="https://www.w3.org/WAI/" &#x22;="">Web Accessibility Initiative</a> による、[Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria.php) の仕様です。 ARIA はウェブアプリケーションやウィジェットを、画面リーダーや拡大鏡などの支援技術を使用するユーザーを含む幅広いユーザーに対して、よりアクセス可能にする手段を提供します。
 
-<p>ARIA はメニュー、スライダー、ツリー、ダイアログといった多くの一般的なユーザーインターフェイスの役割、状態、機能性を示す付加的な意味を与えます。また作者がページ上の目印、部分、グリッドを設定することを支援する、付加的な構造情報も与えます。ARIA は動的で JavaScript 駆動のアプリケーションやウィジェットを、さまざまなデスクトップベースの支援技術と対話可能にします。</p>
+ARIA はメニュー、スライダー、ツリー、ダイアログといった多くの一般的なユーザーインターフェイスの役割、状態、機能性を示す付加的な意味を与えます。また作者がページ上の目印、部分、グリッドを設定することを支援する、付加的な構造情報も与えます。ARIA は動的で JavaScript 駆動のアプリケーションやウィジェットを、さまざまなデスクトップベースの支援技術と対話可能にします。
 
-<p>ARIA でアクセス可能なウィジェットを作成する方法について詳しくは、<a href="/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">アクセス可能なウェブアプリケーションやウィジェットの概要</a>をご覧ください。</p>
+ARIA でアクセス可能なウィジェットを作成する方法について詳しくは、[アクセス可能なウェブアプリケーションやウィジェットの概要](/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)をご覧ください。
 
-<h2 id="Where_is_ARIA_Supported">ARIA はどこで対応されているのか</h2>
+## ARIA はどこで対応されているのか
 
-<p>ARIA は比較的新しい仕様ですが、対応は進みつつあります。多種多様なよく使用されるブラウザー、支援技術、JavaScript ツールキットやアプリケーションが ARIA に対応しています。しかし、多くのユーザーがこれらの技術の古いバージョンを使用している可能性があります。古いブラウーザーや支援技術を良好にサポートするためには、先進的な拡張方法 (例えばマークアップに直接ではなく JavaScript を使用して ARIA を追加する) を使用して ARIA を実装したいと考えるでしょう。</p>
+ARIA は比較的新しい仕様ですが、対応は進みつつあります。多種多様なよく使用されるブラウザー、支援技術、JavaScript ツールキットやアプリケーションが ARIA に対応しています。しかし、多くのユーザーがこれらの技術の古いバージョンを使用している可能性があります。古いブラウーザーや支援技術を良好にサポートするためには、先進的な拡張方法 (例えばマークアップに直接ではなく JavaScript を使用して ARIA を追加する) を使用して ARIA を実装したいと考えるでしょう。
 
-<h3 id="Browsers">ブラウザー</h3>
+### ブラウザー
 
-<p>ARIA は以下のブラウザーが対応しています。</p>
+ARIA は以下のブラウザーが対応しています。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>ブラウザー</th>
-   <th>最低バージョン</th>
-   <th>備考</th>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>3.0 以降</td>
-   <td>NVDA、JAWS 10 以降、Orca で動作</td>
-  </tr>
-  <tr>
-   <td><a href="https://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support">Chrome</a></td>
-   <td>最新</td>
-   <td>Chrome 15 時点では、画面リーダーは実験的な対応</td>
-  </tr>
-  <tr>
-   <td>Safari</td>
-   <td>4 以降</td>
-   <td>Safari 5 での対応はとても改善されています。<br>
-    Live region の対応は、iOS5 または OS X Lion の VoiceOver と Safari 5 が必要です。</td>
-  </tr>
-  <tr>
-   <td><a href="https://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/">Opera</a></td>
-   <td>9.5 以降</td>
-   <td>OS X では VoiceOver が必要です。 TBD: 現在の状況はどうでしょうか?</td>
-  </tr>
-  <tr>
-   <td><a href="https://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx">Internet Explorer</a></td>
-   <td>8 以降</td>
-   <td>JAWS 10 以降や NVDA で動作します。NVDA では live region をサポートしません。<br>
-    IE9 での対応はとても改善されています。</td>
-  </tr>
- </tbody>
-</table>
+| ブラウザー                                                                                        | 最低バージョン | 備考                                                                                                                          |
+| ------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Firefox                                                                                           | 3.0 以降       | NVDA、JAWS 10 以降、Orca で動作                                                                                               |
+| [Chrome](https://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support) | 最新           | Chrome 15 時点では、画面リーダーは実験的な対応                                                                                |
+| Safari                                                                                            | 4 以降         | Safari 5 での対応はとても改善されています。 Live region の対応は、iOS5 または OS X Lion の VoiceOver と Safari 5 が必要です。 |
+| [Opera](https://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/)                       | 9.5 以降       | OS X では VoiceOver が必要です。 TBD: 現在の状況はどうでしょうか?                                                             |
+| [Internet Explorer](https://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx)          | 8 以降         | JAWS 10 以降や NVDA で動作します。NVDA では live region をサポートしません。 IE9 での対応はとても改善されています。           |
 
-<p>以前のバージョンでは ARIA の一部の機能しか対応していない場合があります。より詳しいブラウザーの互換性の表は、複数の情報源から得ることができます。</p>
+以前のバージョンでは ARIA の一部の機能しか対応していない場合があります。より詳しいブラウザーの互換性の表は、複数の情報源から得ることができます。
 
-<ul>
- <li><a href="https://caniuse.com/wai-aria">caniuse.com</a></li>
- <li><a href="https://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">The Paciello Group</a></li>
-</ul>
+- [caniuse.com](https://caniuse.com/wai-aria)
+- [The Paciello Group](https://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/)
 
-<h3 id="Assistive_Technologies">支援技術</h3>
+### 支援技術
 
-<p>支援技術は ARIA を順次採用してきています。その中の一部を紹介します。</p>
+支援技術は ARIA を順次採用してきています。その中の一部を紹介します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>支援技術</th>
-   <th>基本的な ARIA の最低バージョン</th>
-   <th>live region および alert の対応の最低バージョン</th>
-  </tr>
-  <tr>
-   <td>NVDA</td>
-   <td>2010.2<br>
-    (NVDA のアップグレードは常に無償です)</td>
-   <td>Firefox 向けは 2011.1 で対応しました。2011.2 の時点で IE の live region の対応はありません。</td>
-  </tr>
-  <tr>
-   <td>Orca</td>
-   <td>? (TBD)</td>
-   <td>? (TBD)</td>
-  </tr>
-  <tr>
-   <td>VoiceOver</td>
-   <td>OSX 10.5,<br>
-    iOS 4</td>
-   <td>OS X 10.7<br>
-    iOS 5</td>
-  </tr>
-  <tr>
-   <td>JAWS</td>
-   <td>8</td>
-   <td>10</td>
-  </tr>
-  <tr>
-   <td>Window-Eyes</td>
-   <td>7</td>
-   <td>現在 live region には対応していません。</td>
-  </tr>
-  <tr>
-   <td>ZoomText</td>
-   <td>?</td>
-   <td>現在 live region には対応していません。</td>
-  </tr>
- </tbody>
-</table>
+| 支援技術    | 基本的な ARIA の最低バージョン               | live region および alert の対応の最低バージョン                                              |
+| ----------- | -------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| NVDA        | 2010.2 (NVDA のアップグレードは常に無償です) | Firefox 向けは 2011.1 で対応しました。2011.2 の時点で IE の live region の対応はありません。 |
+| Orca        | ? (TBD)                                      | ? (TBD)                                                                                      |
+| VoiceOver   | OSX 10.5, iOS 4                              | OS X 10.7 iOS 5                                                                              |
+| JAWS        | 8                                            | 10                                                                                           |
+| Window-Eyes | 7                                            | 現在 live region には対応していません。                                                      |
+| ZoomText    | ?                                            | 現在 live region には対応していません。                                                      |
 
-<p>注: これらツールの過去のバージョンは、ARIA の実装が部分的あるいはバグがある場合があります。</p>
+注: これらツールの過去のバージョンは、ARIA の実装が部分的あるいはバグがある場合があります。
 
-<p>JAWS 10 時点の、JAWS の ARIA 対応に関する注については、Paciello Group による記事、 <a href="https://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/">JAWS Support for ARIA</a> をご覧ください。</p>
+JAWS 10 時点の、JAWS の ARIA 対応に関する注については、Paciello Group による記事、 [JAWS Support for ARIA](https://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/) をご覧ください。
 
-<h3 id="JavaScript_Toolkits">JavaScript ツールキット</h3>
+### JavaScript ツールキット
 
-<p>ARIA のロール、ステート、プロパティは、以下のような多くのポピュラーな JavaScript ユーザーインターフェイスツールキットに追加されています:</p>
+ARIA のロール、ステート、プロパティは、以下のような多くのポピュラーな JavaScript ユーザーインターフェイスツールキットに追加されています:
 
-<ul>
- <li>Dojo/Dijit</li>
- <li>jQuery UI</li>
- <li>Fluid Infusion</li>
- <li>Google Closure</li>
- <li>Google Web Toolkit</li>
- <li>BBC Glow</li>
- <li>Yahoo! User Interface Library (YUI)</li>
-</ul>
+- Dojo/Dijit
+- jQuery UI
+- Fluid Infusion
+- Google Closure
+- Google Web Toolkit
+- BBC Glow
+- Yahoo! User Interface Library (YUI)
 
-<p>JavaScript ツールキットのアクセシビリティに関する詳細情報:</p>
+JavaScript ツールキットのアクセシビリティに関する詳細情報:
 
-<ul>
- <li>Steve Faulkner 氏による <a href="https://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/">WAI-ARIA Implementation in JavaScript UI Libraries</a></li>
-</ul>
+- Steve Faulkner 氏による [WAI-ARIA Implementation in JavaScript UI Libraries](https://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
 
-<h2 id="Can_you_show_me_an_example_of_ARIA_in_action">ARIA の実例を見せていただけますか</h2>
+## ARIA の実例を見せていただけますか
 
-<p id="aria-in-action">はい。こちらがプログレスバーのウィジェットのマークアップです。</p>
+はい。こちらがプログレスバーのウィジェットのマークアップです。
 
-<pre class="brush:html;">&lt;div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" /&gt;</pre>
+```html
+<div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" />
+```
 
-<p>このプログレスバーは <code>&lt;div&gt;</code> を使用して作られており、あまり説明的ではありません。残念ながら HTML 4 では開発者が使用できる、より意味がある要素はありませんので、ARIA のロールやプロパティを含めることが必要です。これらは、要素に属性を追加することによって指定します。この例では <code>role="progressbar"</code> 属性で、要素が実際は JavaScript で動作するプログレスバーウィジェットであることをブラウザーに伝えます。<strong>aria-valuemin</strong> 属性や <strong>aria-valuemax</strong> 属性はプログレスバーの最小値と最大値を、 <strong>aria-valuenow</strong> 属性は現在の状態を示します。</p>
+このプログレスバーは `<div>` を使用して作られており、あまり説明的ではありません。残念ながら HTML 4 では開発者が使用できる、より意味がある要素はありませんので、ARIA のロールやプロパティを含めることが必要です。これらは、要素に属性を追加することによって指定します。この例では `role="progressbar"` 属性で、要素が実際は JavaScript で動作するプログレスバーウィジェットであることをブラウザーに伝えます。**aria-valuemin** 属性や **aria-valuemax** 属性はプログレスバーの最小値と最大値を、 **aria-valuenow** 属性は現在の状態を示します。
 
-<p>ARIA の属性はマークアップ内に直接置くほかに、以下のような JavaScript コードを使用して要素へ追加および動的な更新を行うこともできます。</p>
+ARIA の属性はマークアップ内に直接置くほかに、以下のような JavaScript コードを使用して要素へ追加および動的な更新を行うこともできます。
 
-<pre class="brush: js">// DOM でプログレスバーである &lt;div&gt; を探します。
+```js
+// DOM でプログレスバーである <div> を探します。
 var progressBar = document.getElementById("percent-loaded");
 
 // どのようなウィジェットであるかを支援技術がわかるように、ARIA のロールやステートを設定します。
@@ -161,59 +95,63 @@ progressBar.setAttribute("aria-valuemax", 100);
 // プログレスバーの値を更新するたびに呼び出すことが可能な関数を作成します。
 function updateProgress(percentComplete) {
   progressBar.setAttribute("aria-valuenow", percentComplete);
-}</pre>
+}
+```
 
-<h2 id="Will_adding_ARIA_change_my_page_styles_or_behavior">ARIA を追加するとページのスタイルや動作が変わりますか</h2>
+## ARIA を追加するとページのスタイルや動作が変わりますか
 
-<p>いいえ。ARIA は支援技術の API を使用可能にするだけであり、DOM やスタイルに関するブラウザーのネイティブ機能には影響を与えません。ブラウザーから見ると、ネイティブな HTML は要素のセマンティックな意味や動作を定義するものであり、ARIA の属性は AT API のサポートを支援するレイヤーとして機能します。ARIA の属性は他の HTML 属性と同様にスタイルを変更しませんが、CSS は要素のセレクタとして ARIA の属性を活用できます。これは、ARIA が有効なウィジェットにスタイルを設定するうえで便利な仕組みです。</p>
+いいえ。ARIA は支援技術の API を使用可能にするだけであり、DOM やスタイルに関するブラウザーのネイティブ機能には影響を与えません。ブラウザーから見ると、ネイティブな HTML は要素のセマンティックな意味や動作を定義するものであり、ARIA の属性は AT API のサポートを支援するレイヤーとして機能します。ARIA の属性は他の HTML 属性と同様にスタイルを変更しませんが、CSS は要素のセレクタとして ARIA の属性を活用できます。これは、ARIA が有効なウィジェットにスタイルを設定するうえで便利な仕組みです。
 
-<pre class="brush: css">.tab-panel[aria-hidden="true"] {
+```css
+.tab-panel[aria-hidden="true"] {
   display: none;
   }
 
 .tab-panel[aria-hidden="false"] {
   display: block;
   }
-</pre>
+```
 
-<h2 id="What_about_validation">検証はどうなりますか</h2>
+## 検証はどうなりますか
 
-<p><strong>role</strong> 属性や <strong>aria-</strong> 接頭辞がついた属性のような、ARIA で導入された新たな属性は、 HTML 4 や XHTML 4 の正式な一部分ではありません。その結果、ARIA を含むページは <a href="https://validator.w3.org/">W3C の Markup Validator</a> のようなツールで検証してはいけません。</p>
+**role** 属性や **aria-** 接頭辞がついた属性のような、ARIA で導入された新たな属性は、 HTML 4 や XHTML 4 の正式な一部分ではありません。その結果、ARIA を含むページは [W3C の Markup Validator](https://validator.w3.org/) のようなツールで検証してはいけません。
 
-<p>第一にこの問題の解決策になり得ることは、ARIA のロールやステートをマークアップ内に直接置くのを避けることです。代わりに、前出の <a href="#aria-in-action">ARIA の実例を見せていただけますか?</a> への回答で示したように、JavaScript を使用してページへ動的に ARIA を追加してください。それでも理論上、ページは妥当ではありませんが、すべての静的な検証は正しく合格するでしょう。</p>
+第一にこの問題の解決策になり得ることは、ARIA のロールやステートをマークアップ内に直接置くのを避けることです。代わりに、前出の [ARIA の実例を見せていただけますか?](#aria-in-action) への回答で示したように、JavaScript を使用してページへ動的に ARIA を追加してください。それでも理論上、ページは妥当ではありませんが、すべての静的な検証は正しく合格するでしょう。
 
-<p>別の代案は HTML5 の doctype を使用することで、これは ARIA のサポートが組み込まれています。W3C の HTML5 validator は、あなたの HTML5 ページにおける ARIA の誤った使い方も発見するでしょう。</p>
+別の代案は HTML5 の doctype を使用することで、これは ARIA のサポートが組み込まれています。W3C の HTML5 validator は、あなたの HTML5 ページにおける ARIA の誤った使い方も発見するでしょう。
 
-<h2 id="How_does_HTML5_relate_to_ARIA">HTML5 と ARIA との関係は?</h2>
+## HTML5 と ARIA との関係は?
 
-<p>HTML5 では、役に立つ多くのセマンティックな要素を HTML に導入しました。これの要素のうちの一部は、新たな <code>&lt;progress&gt;</code> 要素のように、 ARIA で使用可能なロールに直接対応します。ブラウザーが ARIA にも存在する HTML5 要素に対応している場合は、通常その要素に ARIA のロールやステートも追加する必要はありません。ARIA には HTML5 で使用できない多くのロール、ステート、プロパティが含まれており、それらは HTML5 を使用する開発者にとって引き続き有用でしょう。詳細情報として、Steve Faulkner 氏が <a href="https://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/">HTML5 と ARIA の関係について良い概説</a>を記述しました。</p>
+HTML5 では、役に立つ多くのセマンティックな要素を HTML に導入しました。これの要素のうちの一部は、新たな `<progress>` 要素のように、 ARIA で使用可能なロールに直接対応します。ブラウザーが ARIA にも存在する HTML5 要素に対応している場合は、通常その要素に ARIA のロールやステートも追加する必要はありません。ARIA には HTML5 で使用できない多くのロール、ステート、プロパティが含まれており、それらは HTML5 を使用する開発者にとって引き続き有用でしょう。詳細情報として、Steve Faulkner 氏が [HTML5 と ARIA の関係について良い概説](https://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/)を記述しました。
 
-<h4 id="Degrading_Gracefully_from_HTML5_to_ARIA">HTML5 から ARIA へのグレイスフルデグラデーション</h4>
+#### HTML5 から ARIA へのグレイスフルデグラデーション
 
-<p>HTML5 が利用できないブラウザーにコンテンツを提供するときに、必要なところで ARIA の使用へグレイスフルデグラデーションを行いたいと考えるでしょう。プログレスバーの例で言うと、 <code>&lt;progressbar&gt;</code> 要素に対応していない場合は <code>role="progressbar"</code> へグレイスフルデグラデーションできます。</p>
+HTML5 が利用できないブラウザーにコンテンツを提供するときに、必要なところで ARIA の使用へグレイスフルデグラデーションを行いたいと考えるでしょう。プログレスバーの例で言うと、 `<progressbar>` 要素に対応していない場合は `role="progressbar"` へグレイスフルデグラデーションできます。
 
-<p>こちらが、HTML5 のプログレスバーを使用するマークアップの例です。</p>
+こちらが、HTML5 のプログレスバーを使用するマークアップの例です。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;&lt;title&gt;Gracefully degrading progress bar&lt;/title&gt;&lt;/head&gt;
-  &lt;body&gt;
-    &lt;progress id="progress-bar" value="0" max="100"&gt;0% complete&lt;/progress&gt;
-    &lt;button id="update-button"&gt;Update&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head><title>Gracefully degrading progress bar</title></head>
+  <body>
+    <progress id="progress-bar" value="0" max="100">0% complete</progress>
+    <button id="update-button">Update</button>
+ </body>
+</html>
+```
 
-<p>そして、こちらが古いブラウザーでもプログレスバーが動作するようにする JavaScript コードです。</p>
+そして、こちらが古いブラウザーでもプログレスバーが動作するようにする JavaScript コードです。
 
-<pre class="brush: js">var progressBar = document.getElementById("progress-bar");
+```js
+var progressBar = document.getElementById("progress-bar");
 
-// ブラウザーが HTML5 の &lt;progress&gt; 要素に対応しているかを確認します。
+// ブラウザーが HTML5 の <progress> 要素に対応しているかを確認します。
 var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
 
 function setupProgress() {
   if (!supportsHTML5Progress) {
-    // HTML5 の &lt;progress&gt; にブラウザーが対応していないので、
+    // HTML5 の <progress> にブラウザーが対応していないので、
     // ARIA のロールやステートを要素に追加します。
     progressBar.setAttribute("role", "progressbar");
     progressBar.setAttribute("aria-valuemin", 0);
@@ -223,11 +161,11 @@ function setupProgress() {
 
 function updateProgress(percentComplete) {
   if (!supportsHTML5Progress) {
-    // HTML5 の &lt;progress&gt; にブラウザーが対応していないので、
+    // HTML5 の <progress> にブラウザーが対応していないので、
     // aria-valuenow 属性の更新が必要です。
     progressBar.setAttribute("aria-valuenow", percentComplete);
   } else {
-    // HTML5 の &lt;progress&gt; に対応しているので、代わりに value 属性を更新します。
+    // HTML5 の <progress> に対応しているので、代わりに value 属性を更新します。
     progressBar.setAttribute("value", percentComplete);
   }
 
@@ -244,61 +182,49 @@ function initDemo() {
   }, false);
 }
 initDemo();
-</pre>
+```
 
-<h2 id="How_do_assistive_technologies_work">支援技術はどのように動作しますか?</h2>
+## 支援技術はどのように動作しますか?
 
-<p>支援技術は、アプリケーションのユーザーインターフェイスのロール、ステート、構造を表すよう特に設計された、各オペレーティングシステムに組み込まれた API を使用します。例えば、画面リーダーはテキスト読み上げエンジンでユーザーインターフェイスを読むために、拡大鏡はスクリーンで重要またはアクティブな領域を強調するために、オンスクリーンキーボードはそのときの状況や UI コントロールに対してもっとも効率的なキーボードレイアウトを提供するために、この API を使用します。さらに支援技術はたいてい、ページのセマンティクスや属性を理解するために、この API を通してページの DOM にアクセスします。</p>
+支援技術は、アプリケーションのユーザーインターフェイスのロール、ステート、構造を表すよう特に設計された、各オペレーティングシステムに組み込まれた API を使用します。例えば、画面リーダーはテキスト読み上げエンジンでユーザーインターフェイスを読むために、拡大鏡はスクリーンで重要またはアクティブな領域を強調するために、オンスクリーンキーボードはそのときの状況や UI コントロールに対してもっとも効率的なキーボードレイアウトを提供するために、この API を使用します。さらに支援技術はたいてい、ページのセマンティクスや属性を理解するために、この API を通してページの DOM にアクセスします。
 
-<p>ARIA は DOM の世界とデスクトップの世界との間を橋渡しします。ブラウザーは ARIA が有効な要素を、ネイティブなウィジェットであるかのように支援技術の API に公開します。その結果ユーザーは潜在的により一貫したユーザー体験を得て、そこではウェブの動的な JavaScript で動作するウィジェットが、デスクトップで同等のウィジェットに匹敵します。</p>
+ARIA は DOM の世界とデスクトップの世界との間を橋渡しします。ブラウザーは ARIA が有効な要素を、ネイティブなウィジェットであるかのように支援技術の API に公開します。その結果ユーザーは潜在的により一貫したユーザー体験を得て、そこではウェブの動的な JavaScript で動作するウィジェットが、デスクトップで同等のウィジェットに匹敵します。
 
-<h2 id="How_do_I_test_my_use_of_ARIA_Are_there_any_tools_available_for_free">私の ARIA の使い方の確認方法は? 自由に使用できるツールはありますか?</h2>
+## 私の ARIA の使い方の確認方法は? 自由に使用できるツールはありますか?
 
-<p>動作中の ARIA のテストを支援する、調査ツールやデバッグツールがいくつかあります。</p>
+動作中の ARIA のテストを支援する、調査ツールやデバッグツールがいくつかあります。
 
-<ul>
- <li>Windows で Object Inspector</li>
- <li>OS X で Accessibility Inspector</li>
- <li>Linux で AccProbe</li>
- <li>Firebug の DOM Inspector</li>
- <li><a href="https://code.google.com/p/ainspector/">Accessibility Inspector for Firebug</a></li>
- <li>The Audits tab in Chrome DevTools</li>
-</ul>
+- Windows で Object Inspector
+- OS X で Accessibility Inspector
+- Linux で AccProbe
+- Firebug の DOM Inspector
+- [Accessibility Inspector for Firebug](https://code.google.com/p/ainspector/)
+- The Audits tab in Chrome DevTools
 
-<p>ARIA の実践的なテストに使用できる、フリーまたはオープンソースの画面リーダーもいくつかあります。以下のようなものです:</p>
+ARIA の実践的なテストに使用できる、フリーまたはオープンソースの画面リーダーもいくつかあります。以下のようなものです:
 
-<ul>
- <li>Linux 向けの <a href="https://live.gnome.org/Orca">Orca</a></li>
- <li>Windows 向けの <a href="https://www.nvda-project.org/">NVDA</a></li>
- <li>OS X 内蔵の <a href="https://www.apple.com/accessibility/voiceover/">VoiceOver</a></li>
-</ul>
+- Linux 向けの [Orca](https://live.gnome.org/Orca)
+- Windows 向けの [NVDA](https://www.nvda-project.org/)
+- OS X 内蔵の [VoiceOver](https://www.apple.com/accessibility/voiceover/)
 
-<p>画面リーダーでテストを行うときは、2 つのポイントを覚えておいてください。</p>
+画面リーダーでテストを行うときは、2 つのポイントを覚えておいてください。
 
-<ol>
- <li>画面リーダーのユーザーと気軽にテストしても、実際のユーザーからのフィードバックやテスト、ヘルプにはかないません。</li>
- <li>画面リーダーのサポートだけがアクセシビリティではありません。様々なユーザビリティとアクセシビリティの手法でテストしてみてください。</li>
-</ol>
+1.  画面リーダーのユーザーと気軽にテストしても、実際のユーザーからのフィードバックやテスト、ヘルプにはかないません。
+2.  画面リーダーのサポートだけがアクセシビリティではありません。様々なユーザビリティとアクセシビリティの手法でテストしてみてください。
 
-<p>ARIA が有効なアプリケーションやウィジェット向けの、その他の有用なテストツールや手法です。</p>
+ARIA が有効なアプリケーションやウィジェット向けの、その他の有用なテストツールや手法です。
 
-<ul>
- <li><a href="https://yaccessibilityblog.com/library/test-aria-focus-bookmarklets.html">Yahoo!'s ARIA bookmarklets</a></li>
- <li>Fluid Project の <a href="https://wiki.fluidproject.org/display/fluid/Simple+Accessibility+Review+Protocol">simple accessibility evaluation techniques</a></li>
-</ul>
+- [Yahoo!'s ARIA bookmarklets](https://yaccessibilityblog.com/library/test-aria-focus-bookmarklets.html)
+- Fluid Project の [simple accessibility evaluation techniques](https://wiki.fluidproject.org/display/fluid/Simple+Accessibility+Review+Protocol)
 
-<h2 id="Where_do_ARIA_discussions_happen">ARIA の議論はどこで行われていますか?</h2>
+## ARIA の議論はどこで行われていますか?
 
-<ul>
- <li><a href="https://lists.w3.org/Archives/Public/wai-xtech/">Wai-xtech mailing list</a> -- ARIA 仕様で議論されてきたことを保持しています。</li>
- <li><a href="https://groups.google.com/group/free-aria">Free-ARIA google group</a> -- 無料のツールやリソースの開発者およびユーザー向けです。</li>
-</ul>
+- [Wai-xtech mailing list](https://lists.w3.org/Archives/Public/wai-xtech/) -- ARIA 仕様で議論されてきたことを保持しています。
+- [Free-ARIA google group](https://groups.google.com/group/free-aria) -- 無料のツールやリソースの開発者およびユーザー向けです。
 
-<h2 id="Where_can_I_learn_more_about_ARIA">ARIA についてより詳しく学ぶには</h2>
+## ARIA についてより詳しく学ぶには
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">アクセス可能なウェブアプリケーションやウィジェットの概要</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/forms">Accessible forms</a></li>
- <li>W3C の <a href="https://www.w3.org/WAI/aria/faq">WAI-ARIA Frequently Asked Questions</a></li>
- <li>WebAIM の <a href="https://webaim.org/techniques/aria/">Accessibility of Rich Internet Applications</a></li>
-</ul>
+- [アクセス可能なウェブアプリケーションやウィジェットの概要](/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
+- [Accessible forms](/ja/docs/Web/Accessibility/ARIA/forms)
+- W3C の [WAI-ARIA Frequently Asked Questions](https://www.w3.org/WAI/aria/faq)
+- WebAIM の [Accessibility of Rich Internet Applications](https://webaim.org/techniques/aria/)

@@ -18,60 +18,44 @@ tags:
 translation_of: Web/API/VideoTrackList/onaddtrack
 original_slug: Web/API/VideoTrackList/onaddtrack
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong>{{domxref("VideoTrackList")}}</strong> の <strong><code>onaddtrack</code></strong> プロパティは、{{event("addtrack")}} イベントが発生したときに呼び出されるイベントハンドラで、<code>VideoTrackList</code> が表す動画トラックを持つメディア要素に新しい動画トラックが追加されたことを示します。</span></p>
+**{{domxref("VideoTrackList")}}** の **`onaddtrack`** プロパティは、{{event("addtrack")}} イベントが発生したときに呼び出されるイベントハンドラで、`VideoTrackList` が表す動画トラックを持つメディア要素に新しい動画トラックが追加されたことを示します。
 
-<p>イベントは {{domxref("TrackEvent")}} オブジェクトの形式でイベントハンドラに渡され、その {{domxref("TrackEvent.track", "track")}} プロパティは新しく追加されたトラックを識別します。</p>
+イベントは {{domxref("TrackEvent")}} オブジェクトの形式でイベントハンドラに渡され、その {{domxref("TrackEvent.track", "track")}} プロパティは新しく追加されたトラックを識別します。
 
-<div class="note">
-<p><strong>注</strong>: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、<code>addtrack</code> イベント用のハンドラを追加することもできます。</p>
-</div>
+> **Note:** **注**: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、`addtrack` イベント用のハンドラを追加することもできます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>VideoTrackList</em>.onaddtrack = <em>eventHandler</em>;</pre>
+```
+VideoTrackList.onaddtrack = eventHandler;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p><code>onaddtrack</code> は、 {{domxref("TrackEvent.track", "track")}} プロパティでどの動画トラックがメディアに追加されたかを示す {{domxref("TrackEvent")}} オブジェクトを入力として受け取る関数を設定します。</p>
+`onaddtrack` は、 {{domxref("TrackEvent.track", "track")}} プロパティでどの動画トラックがメディアに追加されたかを示す {{domxref("TrackEvent")}} オブジェクトを入力として受け取る関数を設定します。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p>{{event("addtrack")}} イベントは、動画トラックを <code>VideoTrackList</code> オブジェクトで表すメディア要素に新しいトラックが追加されるたびに呼び出されます。 これは、メディアが最初に要素に添付されたときにトラックが要素に追加されたときに発生します。 メディアリソース内の動画トラックごとに1つの <code>addtrack</code> イベントが発生します。</p>
+{{event("addtrack")}} イベントは、動画トラックを `VideoTrackList` オブジェクトで表すメディア要素に新しいトラックが追加されるたびに呼び出されます。 これは、メディアが最初に要素に添付されたときにトラックが要素に追加されたときに発生します。 メディアリソース内の動画トラックごとに 1 つの `addtrack` イベントが発生します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>このスニペットは、新しく追加されたトラックを表す {{domxref("VideoTrack")}} オブジェクトを渡して、<code>addToTrackList()</code> 関数を呼び出す {{event("addtrack")}} イベントのハンドラを確立します。 このシナリオでは、その関数の役割は、選択可能な動画トラックのリストに新しいトラックを追加することです。</p>
+このスニペットは、新しく追加されたトラックを表す {{domxref("VideoTrack")}} オブジェクトを渡して、`addToTrackList()` 関数を呼び出す {{event("addtrack")}} イベントのハンドラを確立します。 このシナリオでは、その関数の役割は、選択可能な動画トラックのリストに新しいトラックを追加することです。
 
-<pre class="brush: js">document.querySelector("video").videoTracks.onaddtrack = function(event) {
+```js
+document.querySelector("video").videoTracks.onaddtrack = function(event) {
   addToTrackList(event.track);
 };
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onaddtrack', 'VideoTrackList: onaddtrack')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                     | 状態                             | コメント |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#handler-tracklist-onaddtrack', 'VideoTrackList: onaddtrack')}} | {{Spec2('HTML WHATWG')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.VideoTrackList.onaddtrack")}}</p>
-
-<p> </p>
+{{Compat("api.VideoTrackList.onaddtrack")}}

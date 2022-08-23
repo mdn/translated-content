@@ -10,41 +10,45 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/oninvalid
 original_slug: Web/API/GlobalEventHandlers/oninvalid
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p><strong><code>oninvalid</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("invalid")}} イベントを処理する{{domxref("EventHandler", "イベントハンドラー")}}です。</p>
+**`oninvalid`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("invalid")}} イベントを処理する{{domxref("EventHandler", "イベントハンドラー")}}です。
 
-<p><code>invalid</code> イベントは、送信可能な要素が検証され、条件を満たしていない場合に発生します。送信可能な要素の有効性は、フォームを送信する前、またはフォームの <code><a href="/ja/docs/Learn/HTML/Forms/Form_validation">checkValidity()</a></code> メソッドが呼び出された後に検証されます。</p>
+`invalid` イベントは、送信可能な要素が検証され、条件を満たしていない場合に発生します。送信可能な要素の有効性は、フォームを送信する前、またはフォームの [`checkValidity()`](/ja/docs/Learn/HTML/Forms/Form_validation) メソッドが呼び出された後に検証されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>target</em>.oninvalid = <em>functionRef</em>;
-var <em>functionRef</em> = <em>target</em>.oninvalid;
-</pre>
+```
+target.oninvalid = functionRef;
+var functionRef = target.oninvalid;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p><code>functionRef</code> は、関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は、{{domxref("Event")}} オブジェクトを唯一の引数として受け取ります。</p>
+`functionRef` は、関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。この関数は、{{domxref("Event")}} オブジェクトを唯一の引数として受け取ります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は、フォーム上の <code>oninvalid</code> と {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} イベントハンドラーを示しています。</p>
+この例は、フォーム上の `oninvalid` と {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} イベントハンドラーを示しています。
 
-<h3 id="HTML" name="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;form id="form"&gt;
-  &lt;p id="error" hidden&gt;Please fill out all fields.&lt;/p&gt;
+```html
+<form id="form">
+  <p id="error" hidden>Please fill out all fields.</p>
 
-  &lt;label for="city"&gt;City&lt;/label&gt;
-  &lt;input type="text" id="city" required&gt;
+  <label for="city">City</label>
+  <input type="text" id="city" required>
 
-  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-&lt;p id="thanks" hidden&gt;Your data has been received. Thanks!&lt;/p&gt;</pre>
+  <button type="submit">Submit</button>
+</form>
+<p id="thanks" hidden>Your data has been received. Thanks!</p>
+```
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">const form = document.getElementById('form');
+```js
+const form = document.getElementById('form');
 const error = document.getElementById('error');
 const city = document.getElementById('city');
 const thanks = document.getElementById('thanks');
@@ -62,38 +66,37 @@ function submit(event) {
 
   // For this example, don't actually submit the form
   event.preventDefault();
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
 <table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#handler-oninvalid','oninvalid')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">策定状況</th>
+      <th scope="col">コメント</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG','#handler-oninvalid','oninvalid')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("api.GlobalEventHandlers.oninvalid")}}
 
+## 関連情報
 
-<p>{{Compat("api.GlobalEventHandlers.oninvalid")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{event("invalid")}} event</li>
- <li><a href="/ja/docs/Web/Guide/Events/Event_handlers" title="/ja/docs/Web/Guide/DOM/Events/Event_handlers">DOM onevent ハンドラー</a></li>
-</ul>
+- {{event("invalid")}} event
+- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers "/ja/docs/Web/Guide/DOM/Events/Event_handlers")

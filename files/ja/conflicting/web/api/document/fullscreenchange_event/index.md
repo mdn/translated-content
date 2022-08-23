@@ -14,62 +14,49 @@ tags:
 translation_of: Web/API/Document/onfullscreenchange
 original_slug: Web/API/Document/onfullscreenchange
 ---
-<div>{{APIRef("Fullscreen API")}}</div>
+{{APIRef("Fullscreen API")}}
 
-<p><span class="seoSummary">{{domxref("Document")}} インターフェイスの <code><strong>onfullscreenchange</strong></code> プロパティは、文書が全画面モードに移行したり復帰したりする直前に発生する {{event("fullscreenchange")}} イベントのイベントハンドラーです。</span></p>
+{{domxref("Document")}} インターフェイスの **`onfullscreenchange`** プロパティは、文書が全画面モードに移行したり復帰したりする直前に発生する {{event("fullscreenchange")}} イベントのイベントハンドラーです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>targetDocument</var>.onfullscreenchange = <var>fullscreenChangeHandler</var>;
-</pre>
+```
+targetDocument.onfullscreenchange = fullscreenChangeHandler;
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>文書が全画面モードへの移行および復帰を示す {{event("fullscreenchange")}} イベントを受け取るたびに呼び出されるイベントハンドラーです。</p>
+文書が全画面モードへの移行および復帰を示す {{event("fullscreenchange")}} イベントを受け取るたびに呼び出されるイベントハンドラーです。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+## 使用上のメモ
 
-<p><code>fullscreenchange</code> イベントは全画面モードへの移行か復帰かを直接特定する方法がないので、イベントハンドラーでは {{domxref("Document.fullscreenElement")}} の値を見てください。 <code>null</code> であれば、イベントは全画面モードからの<em>復帰</em>を示します。それ以外であれば、指定された要素が画面全体に表示されるところです。</p>
+`fullscreenchange` イベントは全画面モードへの移行か復帰かを直接特定する方法がないので、イベントハンドラーでは {{domxref("Document.fullscreenElement")}} の値を見てください。 `null` であれば、イベントは全画面モードからの*復帰*を示します。それ以外であれば、指定された要素が画面全体に表示されるところです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">document.onfullscreenchange = function ( event ) {
+```js
+document.onfullscreenchange = function ( event ) {
   console.log("FULL SCREEN CHANGE")
 };
 document.documentElement.onclick = function () {
   // requestFullscreen() はイベントハンドラー内で使用しなければなりません。そうしなければ失敗します。
   document.documentElement.requestFullscreen();
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#handler-document-onfullscreenchange", "onfullscreenchange")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName("Fullscreen", "#handler-document-onfullscreenchange", "onfullscreenchange")}} | {{Spec2("HTML WHATWG")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.onfullscreenchange")}}</p>
+{{Compat("api.Document.onfullscreenchange")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/ja/docs/Web/API/Fullscreen_API/Guide">Fullscreen API ガイド</a></li>
- <li>{{event("fullscreenchange")}}</li>
- <li>{{domxref("Document.onfullscreenerror")}}</li>
-</ul>
+- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
+- [Fullscreen API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+- {{event("fullscreenchange")}}
+- {{domxref("Document.onfullscreenerror")}}
