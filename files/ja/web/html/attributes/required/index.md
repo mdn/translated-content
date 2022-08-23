@@ -73,7 +73,7 @@ translation_of: Web/HTML/Attributes/required
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.required")}}
+{{Compat}}
 
 ## 関連情報
 
