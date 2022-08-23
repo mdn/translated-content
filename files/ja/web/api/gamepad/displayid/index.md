@@ -17,7 +17,7 @@ translation_of: Web/API/Gamepad/displayId
 
 {{domxref("Gamepad")}} インターフェイスの **`displayId`** 読取専用プロパティは _{{domxref("VRDisplay")}}_ に関連付けられた* {{domxref("VRDisplay.displayId")}} を返します — `VRDisplay` は表示されるシーンをそのゲームパッドで操作します．*
 
-## シンタックス
+## 構文
 
 ```js
 var myDisplayId = gamepadInstance.displayId;
@@ -39,17 +39,17 @@ window.addEventListener("gamepadconnected", function(e) {
 });
 ```
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                         | ステータス               | 備考     |
 | -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
 | {{SpecName('WebVR', '#gamepad-getvrdisplays-attribute', 'displayId')}} | {{Spec2('WebVR')}} | 初回翻訳 |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad.displayId")}}
 
-## 参照
+## 関連情報
 
 - [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
 - [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．

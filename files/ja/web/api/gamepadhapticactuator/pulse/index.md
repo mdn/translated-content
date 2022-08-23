@@ -22,7 +22,7 @@ translation_of: Web/API/GamepadHapticActuator/pulse
 gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });
 ```
 
-### パラメータ
+### 引数
 
 - _value_
   - : パルスの強度を表す double 。これはハードウェアの型によって異なりますが、通常は 0.0 (強度なし) から 1.0 (完全な強度) の値を取ります。
@@ -39,16 +39,16 @@ gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ...
 
 TBC
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                                         | ステータス                               | 備考     |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
 | {{SpecName('GamepadExtensions', '#dom-gamepadhapticactuator-pulse', 'pulse()')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.GamepadHapticActuator.pulse")}}
 
-## 関連項目
+## 関連情報
 
 - [Gamepad API](/ja/docs/Web/API/Gamepad_API)

@@ -14,7 +14,7 @@ translation_of: Web/API/Gamepad/id
 ---
 {{APIRef("Gamepad API")}}
 
-{{domxref("Gamepad") }} インターフェースの **`Gamepad.id`** プロパティはコントローラーに関するいくつかの情報を含む文字列を返します。
+{{domxref("Gamepad") }} インターフェイスの **`Gamepad.id`** プロパティはコントローラーに関するいくつかの情報を含む文字列を返します。
 
 正確な構文は厳密には指定されていませんが、Firefox では 3 つの情報がダッシュ (`-`) で区切られています :
 
@@ -44,16 +44,16 @@ window.addEventListener("gamepadconnected", function() {
 
 {{domxref("string")}}.
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                         | 状態                         | コメント |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------- |
 | {{SpecName("Gamepad", "#widl-Gamepad-id", "Gamepad.id")}} | {{Spec2("Gamepad")}} | 初版     |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad.id")}}
 
-## 参照
+## 関連情報
 
 [Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)

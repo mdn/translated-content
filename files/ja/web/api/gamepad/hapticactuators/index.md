@@ -29,16 +29,16 @@ var myHapticActuators = gamepadInstance.hapticActuators;
 
 TBC
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                                         | ステータス                               | 備考     |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
 | {{SpecName('GamepadExtensions', '#partial-gamepad-interface', 'hapticActuators')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad.hapticActuators")}}
 
-## 関連項目
+## 関連情報
 
 - [Gamepad API](/ja/docs/Web/API/Gamepad_API)

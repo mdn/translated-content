@@ -11,7 +11,7 @@ translation_of: Web/API/GamepadEvent
 ---
 {{APIRef("Gamepad API")}}
 
-Gamepad API の GamepadEvent インターフェースは、システムに接続されているゲームパッドへの参照が含まれています。これは、ゲームパッドイベント {{domxref("Window.gamepadconnected")}} と {{domxref("Window.gamepaddisconnected")}} が応答して発生するものです。
+Gamepad API の GamepadEvent インターフェイスは、システムに接続されているゲームパッドへの参照が含まれています。これは、ゲームパッドイベント {{domxref("Window.gamepadconnected")}} と {{domxref("Window.gamepaddisconnected")}} が応答して発生するものです。
 
 ## コンストラクタ
 
@@ -44,16 +44,16 @@ window.addEventListener("gamepaddisconnected", function(e) {
 });
 ```
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                     | 状態                         | コメント |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
 | {{SpecName("Gamepad", "#gamepadevent-interface", "GamepadEvent")}} | {{Spec2("Gamepad")}} | 初版     |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("api.GamepadEvent")}}
 
-## 参照
+## 関連情報
 
 [Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)

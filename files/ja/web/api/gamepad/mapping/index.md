@@ -35,16 +35,16 @@ console.log(gp.mapping);
 
 {{domxref("string")}} 。
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                     | ステータス                   | 備考               |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
 | {{SpecName("Gamepad", "#dom-gamepad-mapping", "Gamepad.mapping")}} | {{Spec2("Gamepad")}} | Initial definition |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad.mapping")}}
 
-## 関連項目
+## 関連情報
 
 [Using the Gamepad API](/ja/docs/Web/Guide/API/Gamepad)

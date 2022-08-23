@@ -11,7 +11,7 @@ translation_of: Web/API/Gamepad_API
 ---
 {{DefaultAPISidebar("Gamepad API")}}
 
-**Gamepad API** は開発者に様々な種類のゲームパッドや単純で一貫した異なるゲームのコントローラーと接続する方法を提供しています。これには、ゲームパッドの接続や切断、ゲームパッドに関するその他の情報へのアクセス、現在押されているボタンやその他のコントロールなど、3 つのインターフェース、2 つのイベントと 1 つの特別な機能が含まれています。
+**Gamepad API** は開発者に様々な種類のゲームパッドや単純で一貫した異なるゲームのコントローラーと接続する方法を提供しています。これには、ゲームパッドの接続や切断、ゲームパッドに関するその他の情報へのアクセス、現在押されているボタンやその他のコントロールなど、3 つのインターフェイス、2 つのイベントと 1 つの特別な機能が含まれています。
 
 ## インターフェイス
 
@@ -29,9 +29,9 @@ translation_of: Web/API/Gamepad_API
 - [`GamepadPose`](/ja/docs/Web/API/GamepadPose "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)")
   - : [WebVR ](/ja/docs/Web/API/WebVR_API)コントローラーの場合のコントローラーの姿勢 (3D 空間内の位置と向きなど) を表します。これはより新しい [WebXR](/ja/docs/Web/API/WebXR_Device_API) 標準では使用*されません。*
 
-上記の情報にアクセスできる機能については、[Gamepad インターフェースの拡張機能](/ja/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad)を参照してください。
+上記の情報にアクセスできる機能については、[Gamepad インターフェイスの拡張機能](/ja/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad)を参照してください。
 
-### 他のインターフェースの拡張
+### 他のインターフェイスの拡張
 
 #### ナビゲータ
 
@@ -50,18 +50,18 @@ translation_of: Web/API/Gamepad_API
 - [Gamepad API の利用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Gamepad API を利用したコントロールの実装](/ja/docs/Games/Techniques/Controls_Gamepad_API)
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                             | 状態                                     | コメント                                               |
 | -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------ |
 | {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | [実験的な Gamepad 拡張](#実験的な_gamepad_拡張) の定義 |
 | {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | 初期定義                                               |
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("api.Gamepad")}}
 
-## 参照
+## 関連情報
 
 - Ted Mielczarek と Robert Nyman による [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) の紹介
 - [Simple API demo page](http://luser.github.io/gamepadtest/) ([ソース](https://github.com/luser/gamepadtest))
