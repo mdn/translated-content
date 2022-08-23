@@ -61,7 +61,7 @@ translation_of: Web/API/Element/show_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.show_event")}}
+{{Compat}}
 
 ## 関連情報
 

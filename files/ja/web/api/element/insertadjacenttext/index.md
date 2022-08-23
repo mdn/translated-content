@@ -71,7 +71,7 @@ afterBtn.addEventListener('click', function() {
 
 ## ブラウザー間の互換性
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
 ## 関連項目
 

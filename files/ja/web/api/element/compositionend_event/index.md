@@ -126,7 +126,7 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.compositionend_event")}}
+{{Compat}}
 
 ## 関連情報
 

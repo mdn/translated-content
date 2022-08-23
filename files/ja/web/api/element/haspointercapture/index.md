@@ -70,7 +70,7 @@ targetElement.hasPointerCapture(pointerId);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.hasPointerCapture")}}
+{{Compat}}
 
 ## 関連情報
 

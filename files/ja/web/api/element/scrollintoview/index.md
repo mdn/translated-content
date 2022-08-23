@@ -71,7 +71,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.scrollIntoView")}}
+{{Compat}}
 
 ## 関連情報
 
