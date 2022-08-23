@@ -44,15 +44,15 @@ slug: Web/API/ChannelMergerNode
 
 ## 属性
 
-_没有具体属性；从其父级继承属性，_ _{{domxref("AudioNode")}}。_
+_没有具体属性；从其父级继承属性，{{domxref("AudioNode")}}。_
 
 ## 方法
 
-_没具体方法; 从其父级继承方法,_ _{{domxref("AudioNode")}}。_
+_没有具体方法；从其父级继承方法，{{domxref("AudioNode")}}。_
 
 ## 例子
 
-{{page("/zh-CN/docs/Web/API/AudioContext/createChannelMerger","（举个）栗（例）子")}}
+参见 [`BaseAudioContext.createChannelMerger()`](/zh-CN/docs/Web/API/BaseAudioContext/createChannelMerger#示例) 以获取示例代码。
 
 ## 规格
 
