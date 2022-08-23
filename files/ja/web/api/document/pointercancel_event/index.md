@@ -73,7 +73,7 @@ document.onpointercancel = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointercancel_event")}}
+{{Compat}}
 
 ## 関連情報
 

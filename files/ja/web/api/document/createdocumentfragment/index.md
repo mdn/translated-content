@@ -76,7 +76,7 @@ element.appendChild(fragment);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Compat}}
 
 ## 関連情報
 

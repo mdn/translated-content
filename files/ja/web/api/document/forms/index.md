@@ -100,7 +100,7 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.forms")}}
+{{Compat}}
 
 ## 関連情報
 

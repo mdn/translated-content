@@ -136,4 +136,4 @@ document.getElementById("resultArea").value = result;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Compat}}

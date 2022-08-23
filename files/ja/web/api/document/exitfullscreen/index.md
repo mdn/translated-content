@@ -61,7 +61,7 @@ document.onclick = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.exitFullscreen")}}
+{{Compat}}
 
 ## 関連情報
 

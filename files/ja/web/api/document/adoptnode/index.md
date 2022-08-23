@@ -66,7 +66,7 @@ iframeImages.forEach(function(imgEl) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.adoptNode")}}
+{{Compat}}
 
 ## 関連情報
 

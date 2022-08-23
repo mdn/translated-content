@@ -44,7 +44,7 @@ iframeNode.contentDocument.designMode = "on";
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.designMode")}}
+{{Compat}}
 
 ## 関連情報
 

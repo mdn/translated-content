@@ -49,7 +49,7 @@ document.getElementById("url").textContent = document.documentURI;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.documentURI")}}
+{{Compat}}
 
 ## 関連情報
 

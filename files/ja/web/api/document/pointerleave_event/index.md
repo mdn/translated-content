@@ -65,7 +65,7 @@ document.onpointerleave = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointerleave_event")}}
+{{Compat}}
 
 ## 関連情報
 

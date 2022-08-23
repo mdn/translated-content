@@ -52,7 +52,7 @@ document.hasStorageAccess().then(hasAccess => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.hasStorageAccess")}}
+{{Compat}}
 
 ## 関連情報
 

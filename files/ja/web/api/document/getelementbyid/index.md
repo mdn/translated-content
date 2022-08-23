@@ -119,7 +119,7 @@ var el = document.getElementById('testqq'); // el は null になります
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementById")}}
+{{Compat}}
 
 ## 関連情報
 

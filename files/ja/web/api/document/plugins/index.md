@@ -35,7 +35,7 @@ embedArrayObj = document.plugins
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.plugins")}}
+{{Compat}}
 
 ## 関連情報
 

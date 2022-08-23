@@ -68,7 +68,7 @@ document.onpointerover = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointerover_event")}}
+{{Compat}}
 
 ## 関連情報
 

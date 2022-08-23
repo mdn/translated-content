@@ -102,7 +102,7 @@ HTML 文書上で呼び出された場合、 `getElementsByTagName()` は処理�
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementsByTagName")}}
+{{Compat}}
 
 ## 関連情報
 

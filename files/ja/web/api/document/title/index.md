@@ -65,4 +65,4 @@ XUL では、文書の読み込みが完了する前に `document.title` にア�
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.title")}}
+{{Compat}}

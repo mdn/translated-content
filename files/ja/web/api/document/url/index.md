@@ -50,7 +50,7 @@ document.getElementById("url").textContent = document.URL;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.URL")}}
+{{Compat}}
 
 ## 関連情報
 

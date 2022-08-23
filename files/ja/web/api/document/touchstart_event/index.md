@@ -45,7 +45,7 @@ translation_of: Web/API/Document/touchstart_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.touchstart_event")}}
+{{Compat}}
 
 ## 関連情報
 

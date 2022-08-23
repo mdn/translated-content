@@ -44,4 +44,4 @@ document.writeln("<p>パスワードを入力してください:</p>");
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.writeln")}}
+{{Compat}}

@@ -44,4 +44,4 @@ range.setEnd(endNode, endOffset);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createRange")}}
+{{Compat}}

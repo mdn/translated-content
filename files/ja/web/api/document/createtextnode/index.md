@@ -62,4 +62,4 @@ function addTextNode(text) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createTextNode")}}
+{{Compat}}

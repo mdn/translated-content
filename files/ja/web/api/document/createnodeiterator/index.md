@@ -75,4 +75,4 @@ while (currentNode = nodeIterator.nextNode()) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createNodeIterator")}}
+{{Compat}}

@@ -75,7 +75,7 @@ setInterval(checkPageFocus, 300);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.hasFocus")}}
+{{Compat}}
 
 ## 関連情報
 

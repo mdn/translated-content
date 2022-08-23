@@ -44,4 +44,4 @@ my_java_app = document.applets[1];
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.applets")}}
+{{Compat}}

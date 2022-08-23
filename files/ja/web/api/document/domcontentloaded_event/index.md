@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## 関連情報
 

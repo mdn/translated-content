@@ -37,4 +37,4 @@ contentType = document.contentType;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.contentType")}}
+{{Compat}}

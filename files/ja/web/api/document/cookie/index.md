@@ -228,7 +228,7 @@ Accept: */*
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.cookie")}}
+{{Compat}}
 
 ## 関連情報
 

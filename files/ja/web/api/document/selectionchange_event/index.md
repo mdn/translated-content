@@ -58,7 +58,7 @@ document.onselectionchange = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.selectionchange_event")}}
+{{Compat}}
 
 ## 関連情報
 

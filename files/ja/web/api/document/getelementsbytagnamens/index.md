@@ -141,7 +141,7 @@ function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementsByTagNameNS")}}
+{{Compat}}
 
 ## 関連情報
 
