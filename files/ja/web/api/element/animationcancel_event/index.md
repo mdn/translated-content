@@ -11,6 +11,7 @@ tags:
   - animationcancel
   - イベント
   - ウェブ
+browser-compat: api.Element.animationcancel_event
 translation_of: Web/API/Document/animationcancel_event
 original_slug: Web/API/Document/animationcancel_event
 ---
@@ -71,7 +72,7 @@ document.onanimationcancel = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.animationcancel_event")}}
+{{Compat}}
 
 ## 関連情報
 

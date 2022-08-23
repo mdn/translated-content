@@ -11,6 +11,7 @@ tags:
   - animationstart
   - イベント
   - ウェブ
+browser-compat: api.Element.animationstart_event
 translation_of: Web/API/Document/animationstart_event
 original_slug: Web/API/Document/animationstart_event
 ---
@@ -71,7 +72,7 @@ document.onanimationstart = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.animationstart_event")}}
+{{Compat}}
 
 ## 関連情報
 

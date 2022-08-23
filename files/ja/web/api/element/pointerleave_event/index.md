@@ -10,6 +10,7 @@ tags:
   - Property
   - Reference
   - onpointerleave
+browser-compat: api.Element.pointerleave_event
 translation_of: Web/API/GlobalEventHandlers/onpointerleave
 original_slug: Web/API/GlobalEventHandlers/onpointerleave
 ---
@@ -63,7 +64,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerleave")}}
+{{Compat}}
 
 ## 関連情報
 

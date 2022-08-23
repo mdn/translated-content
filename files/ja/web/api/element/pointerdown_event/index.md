@@ -13,6 +13,7 @@ tags:
   - Property
   - Reference
   - Window
+browser-compat: api.Element.pointerdown_event
 translation_of: Web/API/GlobalEventHandlers/onpointerdown
 original_slug: Web/API/GlobalEventHandlers/onpointerdown
 ---
@@ -139,7 +140,7 @@ CSS は単にターゲットの外観を設定するだけで、その機能に�
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerdown")}}
+{{Compat}}
 
 ## 関連情報
 
