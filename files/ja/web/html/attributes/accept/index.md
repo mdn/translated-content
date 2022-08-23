@@ -8,7 +8,6 @@ tags:
   - HTML
   - Input
   - Reference
-browser-compat: html.elements.input.accept
 translation_of: Web/HTML/Attributes/accept
 ---
 {{HTMLSidebar}}

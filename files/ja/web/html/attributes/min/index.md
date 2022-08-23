@@ -8,9 +8,6 @@ tags:
   - HTML
   - min
   - Reference
-browser-compat:
-  - html.elements.input.min
-  - html.elements.meter.min
 spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
 translation_of: Web/HTML/Attributes/min
 ---

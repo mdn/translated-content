@@ -7,7 +7,6 @@ tags:
   - Constraint Validation API
   - HTML
   - Reference
-browser-compat: html.elements.input.pattern
 translation_of: Web/HTML/Attributes/pattern
 ---
 {{HTMLSidebar}}

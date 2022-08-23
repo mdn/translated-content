@@ -8,7 +8,6 @@ tags:
   - HTML
   - リファレンス
   - step
-browser-compat: html.elements.input.step
 spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-step-attribute
 translation_of: Web/HTML/Attributes/step
 ---
