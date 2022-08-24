@@ -24,7 +24,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 {{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器（getReader）。
 
-正如我们的[简单随机流 pump](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump)  示例展示（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
+正如我们的[简单随机流 pump](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump)  示例展示（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
 
 ```js
 // Fetch the original image
@@ -229,7 +229,7 @@ readableStream
   .catch((err) => console.error(err));
 ```
 
-但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下*停止字符串生成*的按钮后，再次从流中读取数据。
+但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下*停止字符串生成*的按钮后，再次从流中读取数据。
 
 > **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 编码。
 
@@ -310,7 +310,7 @@ function readStream() {
 
 举例而言，你在 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) 中可能会用到该方法，当你从服务器 fetch 资源，得到一个响应的可读流，你可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于 response 的 body 无法被消费两次，以及可读流无法被两个 reader 同时读取，你会需要两个可读流副本来实现需求。
 
-我们提供了一个示例，在我们的[简单 tee 示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html)（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-tee-example/)）。这个示例与我们的简单随机流示例的工作方式大致相同，只是当按钮按下停止生产随机字符串时，将采取自定义流并拷贝流，并且读取这两个生成的流：
+我们提供了一个示例，在我们的[简单 tee 示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-tee-example/)）。这个示例与我们的简单随机流示例的工作方式大致相同，只是当按钮按下停止生产随机字符串时，将采取自定义流并拷贝流，并且读取这两个生成的流：
 
 ```js
 function teeStream() {
@@ -324,7 +324,7 @@ function teeStream() {
 
 流的另一特征是通过管道的方式从一个流输出到另一个（称为 [pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#pipe_chains)）。这会调用两个方法——{{domxref("ReadableStream.pipeThrough()")}}，它将可读流管道输出至拥有一对 writable/readable 的流中，并将一种数据转换成另一种；{{domxref("ReadableStream.pipeTo()")}} 将可读流管道传输至作为 pipe chain 的终点的 writer。
 
-我们有一个简单的示例，叫做[解压 PNG 分块](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream)（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/png-transform-stream/)）。此示例将图像作为流来获取，然后将它传输到自定义的 PNG 转换流，该流将从二进制数据流中检索 PNG 分块。
+我们有一个简单的示例，叫做[解压 PNG 分块](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/png-transform-stream/)）。此示例将图像作为流来获取，然后将它传输到自定义的 PNG 转换流，该流将从二进制数据流中检索 PNG 分块。
 
 ```js
 // Fetch the original image
