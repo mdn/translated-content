@@ -80,7 +80,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 <p>Предполагается, что среда выполнения осталась нетронутой, все имена и свойства ссылаются на свои изначальные значения. Оригинальный метод <code>Object.defineProperties</code> почти полностью эквивалентен (смотрите комментарий в функции <code>isCallable</code>) следующей реализации на JavaScript:</p>
 
-<pre class="brush: js; highlight: [8];">function defineProperties(obj, properties) {
+<pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
