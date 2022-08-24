@@ -88,15 +88,13 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-closepath", "CanvasRenderingContext2D.closePath")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.closePath")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - The interface defining it, {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.beginPath()")}}
