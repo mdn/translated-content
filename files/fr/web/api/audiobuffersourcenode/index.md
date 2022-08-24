@@ -123,13 +123,11 @@ bouton.onclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioBufferSourceNode-section', 'AudioBufferSourceNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode")}}
+{{Compat}}
 
 ## Voir aussi
 
