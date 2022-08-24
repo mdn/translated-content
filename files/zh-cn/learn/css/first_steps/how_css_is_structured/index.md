@@ -520,7 +520,7 @@ padding- left: 10px;
 
 ## 接下来是什么？
 
-了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章 — [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works) — 我们将看看这个过程。
+了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章——[CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)——我们将看看这个过程。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/开始", "Learn/CSS/First_steps/CSS 如何运行", "Learn/CSS/First_steps")}}
 
