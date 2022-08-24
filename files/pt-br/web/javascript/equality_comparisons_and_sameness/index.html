@@ -380,9 +380,6 @@ function attemptMutation(v)
 
 <dl>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">- (negação unário)</a></code></dt>
-</dl>
-
-<dl>
  <dd>
  <p>É óbvio que negando 0 produz -0. Mas a abstração de uma expressão pode causar -0 a fluência em quanto você não percebe isso. Por exemplo, considere:</p>
 
@@ -390,33 +387,18 @@ function attemptMutation(v)
 
  <p>If obj.velocity is 0 (ou calcula para 0), um -0 é introduzido naquele lugar e propaga-se em stoppingForce.</p>
  </dd>
-</dl>
-
-<dl>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2">Math.atan2</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">Math.pow</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round</a></code></dt>
-</dl>
-
-<dl>
  <dd>É possível que um -0 para ser introduzido em uma expressão como um valor de retorno desses métodos, em alguns casos, mesmo quando nenhum -0 exista como um dos parâmetros. Por exemplo, usando <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">Math.pow</a> para levantar -<a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a> a potência de qualquer número, expoente ímpar negativo avaliada como -0. Consulte a documentação para os métodos individuais.</dd>
-</dl>
-
-<dl>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max">Math.max</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin">Math.sin</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan">Math.tan</a></code></dt>
-</dl>
-
-<dl>
  <dd>É possível obter um -0 valor de retorno para fora destes métodos em alguns casos em que um -0 existe como um dos parâmetros. Por exemplo, <code>Math.min(-0, +0)</code> resulte em -0. Consulte a documentação para os métodos individuais.</dd>
-</dl>
-
-<dl>
  <dt><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></dt>
  <dt><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></dt>
  <dt><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></dt>

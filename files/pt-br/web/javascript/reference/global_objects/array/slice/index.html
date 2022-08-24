@@ -21,15 +21,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <dl>
  <dt><code>início</code> {{optional_inline}}</dt>
- <dd>Índice baseado em zero no qual se inicia a extração.</dd>
- <dd>Como um índice negativo, <code>início</code> indica um deslocamento em relação ao fim da sequência. <code>slice(-2)</code> extrai os dois últimos elementos do array.</dd>
- <dd>Se <font face="consolas, Liberation Mono, courier, monospace">início</font> for omitido, <code>slice</code> inicia a partir do índice <font face="Consolas, Liberation Mono, Courier, monospace">0</font>.</dd>
- <dd>Se <font face="consolas, Liberation Mono, courier, monospace">início</font> for maior que o comprimento do array, é retornado um array vazio.</dd>
+ <dd><p>Índice baseado em zero no qual se inicia a extração.</p>
+ <p>Como um índice negativo, <code>início</code> indica um deslocamento em relação ao fim da sequência. <code>slice(-2)</code> extrai os dois últimos elementos do array.</p>
+ <p>Se <code>início</code> for omitido, <code>slice</code> inicia a partir do índice <code>0</code>.</p>
+ <p>Se <code>início</code> for maior que o comprimento do array, é retornado um array vazio.</p></dd>
  <dt><code>fim</code> {{optional_inline}}</dt>
- <dd>Índice baseado em zero o qual é o final da extração. <code>slice</code> extrai até, não incluindo, <code>fim</code>.</dd>
- <dd><code>slice(1,4)</code> extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).</dd>
- <dd>Como índice negativo, <code>fim</code> indica um deslocamento em relação ao fim do array. <code>slice(2,-1)</code> extrai o terceiro elemento através do segundo-para-o-último elemento no array.</dd>
- <dd>Se <code>fim</code> for omitido ou for maior que o tamanho do array, <code>slice</code> considerará o último elemento do array como sendo o <code>fim </code>(<code>arr.length</code>)<code>.</code></dd>
+ <dd><p>Índice baseado em zero o qual é o final da extração. <code>slice</code> extrai até, não incluindo, <code>fim</code>.</p>
+ <p><code>slice(1,4)</code> extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).</p>
+ <p>Como índice negativo, <code>fim</code> indica um deslocamento em relação ao fim do array. <code>slice(2,-1)</code> extrai o terceiro elemento através do segundo-para-o-último elemento no array.</p>
+ <p>Se <code>fim</code> for omitido ou for maior que o tamanho do array, <code>slice</code> considerará o último elemento do array como sendo o <code>fim </code>(<code>arr.length</code>)<code>.</code></p></dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
