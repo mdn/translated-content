@@ -23,7 +23,7 @@ localeCompare(compareString, locales, options)
 `locales` 和 `options` 參數可以調整函數的回傳結果，並且能指定要依照哪種語言來進行比較。
 
 在實現 [`Intl.Collator` API](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)的環境中，這些參數與 [`Intl.Collator()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) 的參數互相對應；
-若環境沒有實現 `Intl.Collator` ，則這兩個參數就會被忽略，其回傳結果完全看該環境是如何實現此方法的。唯一能確定回傳結果的情況是比較的結果相等時。
+若環境沒有實現 `Intl.Collator` ，則這兩個參數就會被忽略，其回傳結果完全看該環境如何實作，唯一的要求是（對於同樣的字串）比較結果必須始終一致。
 
 
 - `compareString`
