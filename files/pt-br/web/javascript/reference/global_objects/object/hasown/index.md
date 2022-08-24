@@ -40,7 +40,7 @@ hasOwn(instance, prop);
 
 O método **`Object.hasOwn()`** retorna `true` se a propriedade especificada é uma propriedade direta do objeto - mesmo se o valor da propriedade é `null` ou `undefined`.
 
-O método retorna `false` se a propriedade é herdada, ou não foi declarada. Diferente do operador {{jsxref("Operators/in", "in")}}, este metodo não verifica pela propriedade específica na cadeia do objeto.
+O método retorna `false` se a propriedade é herdada, ou não foi declarada. Diferente do operador {{jsxref("Operators/in", "in")}}, este método não verifica pela propriedade específica na cadeia do objeto.
 
 Ele é mais recomendado do que {{jsxref("Object.hasOwnProperty()")}} porque ele funciona para objetos criados utilizando `Object.create(null)` e com objetos que sobescreveram o método herdado `hasOwnProperty()`. É possível contornar esse problema chamando o `Object.prototype.hasOwnProperty()` em um objeto externo,`Object.hasOwn()` é mais intuítivo.
 
