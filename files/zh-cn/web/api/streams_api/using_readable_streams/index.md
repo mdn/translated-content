@@ -6,7 +6,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Streams API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
-> **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#concepts_and_usage)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
+> **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
 
 > **备注：** 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
@@ -343,4 +343,4 @@ fetch('png-logo.png')
 
 这解释了“默认”可读流的知识。
 
-关于如何使用可读_字节_流的信息，参见[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)：具有底层字节源的流，可以向消费者执行高效的零复制传输，绕过流的内部队列。
+关于如何使用可读*字节*流的信息，参见[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)：具有底层字节源的流，可以向消费者执行高效的零复制传输，绕过流的内部队列。
