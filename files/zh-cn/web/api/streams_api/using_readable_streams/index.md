@@ -4,25 +4,25 @@ slug: Web/API/Streams_API/Using_readable_streams
 ---
 {{apiref("Streams")}}
 
-作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据时非常实用的！但是你如何使用  Streams API 的可读流功能呢？可以在这篇文章看到基本介绍。
+作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Streams API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
-> **备注：** 本文要求你已了解流文件相关知识，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#concepts_and_usage)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
+> **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#concepts_and_usage)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
 
-> **备注：** 如果你正在查询关于可写流的信息，你可以尝试[使用可写文件流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
+> **备注：** 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
 ## 浏览器支持
 
-你可以将 Fetch body 对象作为流来使用，并在当前的大多数浏览器中你可以创建自定义的可读流。[Pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#pipe_chains) 的支持仍然不是很普遍，但是值得检查兼容性表（{{domxref("ReadableStream.pipeThrough()")}}）。
+你可以将 Fetch body 对象作为流来使用，并在当前的大多数浏览器中你可以创建自定义的可读流。[Pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#pipe_chains) 的支持仍然不是很普遍，但是你可以检查浏览器兼容性表（例如，{{domxref("ReadableStream.pipeThrough()")}}）。
 
 ## 寻找一些示例
 
-我们将在这篇文章中看到各种示例，取自我们的 [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) 仓库。你可以在那里发现各种源代码，以及联系的示例。
+我们将在这篇文章中看到各种示例，它们取自我们的 [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) 仓库。你可以在那里发现各种源代码，以及关联的示例。
 
 ## 使用流的方式消费 Fetch
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 允许你跨网络获取资源，它提供了现代化的 API 去替代 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest)。它有一系列的优点，真正好的是，浏览器最近增加了将 fetch 响应作为可读流的消费功能。
 
-{{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器。
+{{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器（getReader）。
 
 正如我们的[简单随机流 pump](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump)  示例展示（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
 
@@ -229,7 +229,7 @@ readableStream
   .catch((err) => console.error(err));
 ```
 
-但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下_停止字符串生成_的按钮后，再次从流中读取数据。
+但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见现场演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下*停止字符串生成*的按钮后，再次从流中读取数据。
 
 > **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 编码。
 
