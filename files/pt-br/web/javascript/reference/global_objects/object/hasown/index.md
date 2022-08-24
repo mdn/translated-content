@@ -28,7 +28,7 @@ hasOwn(instance, prop);
 ### Parâmetros
 
 - `instance`
-  - : A instancia do objeto javascript para o teste.
+  - : A instância do objeto javascript para o teste.
 - `prop`
   - : O nome {{jsxref("String")}} ou {{Glossary("Symbol")}} da propriedade para teste.
 
