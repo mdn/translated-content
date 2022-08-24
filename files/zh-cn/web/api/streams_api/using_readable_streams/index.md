@@ -12,7 +12,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 ## 浏览器支持
 
-你可以将 Fetch body 对象作为流来使用，并在当前的大多数浏览器中你可以创建自定义的可读流。[Pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#pipe_chains) 的支持仍然不是很普遍，但是你可以检查浏览器兼容性表（例如，{{domxref("ReadableStream.pipeThrough()")}}）。
+你可以将 Fetch body 对象作为流来使用，并在当前的大多数浏览器中你可以创建自定义的可读流。[Pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输) 的支持仍然不是很普遍，但是你可以检查浏览器兼容性表（例如，{{domxref("ReadableStream.pipeThrough()")}}）。
 
 ## 寻找一些示例
 
@@ -171,7 +171,7 @@ const stream = new ReadableStream({
 });
 ```
 
-构造函数需要两个对象作为参数。第一个对象时必需的，并在 JavaScript 中创建一个正在读取数据的底层源模型。第二个对象是可选的，并且允许你去指定一个[自定义的队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies)用于自己的流。你将很少这么做，所以我们现在只要专注于第一个。
+构造函数需要两个对象作为参数。第一个对象时必需的，并在 JavaScript 中创建一个正在读取数据的底层源模型。第二个对象是可选的，并且允许你去指定一个[自定义的队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#内置队列和队列策略)用于自己的流。你将很少这么做，所以我们现在只要专注于第一个。
 
 第一个对象包含着五个成员，仅有第一个是必要的：
 
@@ -322,7 +322,7 @@ function teeStream() {
 
 ## 链式管道传输
 
-流的另一特征是通过管道的方式从一个流输出到另一个（称为 [pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#pipe_chains)）。这会调用两个方法——{{domxref("ReadableStream.pipeThrough()")}}，它将可读流管道输出至拥有一对 writable/readable 的流中，并将一种数据转换成另一种；{{domxref("ReadableStream.pipeTo()")}} 将可读流管道传输至作为 pipe chain 的终点的 writer。
+流的另一特征是通过管道的方式从一个流输出到另一个（称为 [pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)）。这会调用两个方法——{{domxref("ReadableStream.pipeThrough()")}}，它将可读流管道输出至拥有一对 writable/readable 的流中，并将一种数据转换成另一种；{{domxref("ReadableStream.pipeTo()")}} 将可读流管道传输至作为 pipe chain 的终点的 writer。
 
 我们有一个简单的示例，叫做[解压 PNG 分块](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/png-transform-stream/)）。此示例将图像作为流来获取，然后将它传输到自定义的 PNG 转换流，该流将从二进制数据流中检索 PNG 分块。
 
