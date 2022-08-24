@@ -48,7 +48,7 @@ if('serviceWorker' in navigator) {
 
 #### 安装
 
-Serviice Workers API 允许我们为我们感兴趣的关键事件添加事件监听器 - 第一个是 `install` 事件：
+Service Workers API 允许我们为我们感兴趣的关键事件添加事件监听器 - 第一个是 `install` 事件：
 
 ```js
 self.addEventListener('install', function(e) {

@@ -113,7 +113,7 @@ C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
 
 The last set of coordinates here (x,y) are where you want the line to end. The other two are control points. (x1,y1) is the control point for the start of your curve, and (x2,y2) is the control point for the end. The control points essentially describe the slope of your line starting at each point. The Bezier function then creates a smooth curve that transfers you from the slope you established at the beginning of your line, to the slope at the other end.
 
-![Cubic Bézier Curves with grid](https://mdn.mozillademos.org/files/10401/Cubic_Bezier_Curves_with_grid.png)
+![Cubic Bézier Curves with grid](cubic_b%C3%A9zier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -141,7 +141,7 @@ S x2 y2, x y (or s dx2 dy2, dx dy)
 
 `S` produces the same type of curve as earlier, but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the `Q` command would have produced with the same parameters. An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
 
-![ShortCut_Cubic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png)
+![ShortCut_Cubic_Bezier_with_grid.png](shortcut_cubic_b%C3%A9zier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@ The other type of Bezier curve, the quadratic curve called with Q, is actually a
 Q x1 y1, x y (or q dx1 dy1, dx dy)
 ```
 
-![Quadratic Bézier with grid](https://mdn.mozillademos.org/files/10403/Quadratic_Bezier_with_grid.png)
+![Quadratic Bézier with grid](quadratic_b%C3%A9zier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +173,7 @@ This shortcut looks at the previous control point you used and infers a new one 
 
 > **備註：** This only works if the previous command was a Q or a T command. If it is not, then the control point is assumed to be the same as the previous point, and you'll only draw lines.
 
-![Shortcut_Quadratic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10407/Shortcut_Quadratic_Bezier_with_grid.png)
+![Shortcut_Quadratic_Bezier_with_grid.png](shortcut_quadratic_b%C3%A9zier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">

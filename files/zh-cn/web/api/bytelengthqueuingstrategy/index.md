@@ -4,7 +4,7 @@ slug: Web/API/ByteLengthQueuingStrategy
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 的接口 **`ByteLengthQueuingStrategy`** 提供了一个排队策略，该排队策略提供了内置的字节长度并且可以在构造流的时候使用。
+[Streams API](/zh-CN/docs/Web/API/Streams_API) 的接口 **`ByteLengthQueuingStrategy`** 提供了一个队列策略，该队列策略提供了内置的字节长度并且可以在构造流的时候使用。
 
 ## 构造函数
 

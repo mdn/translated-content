@@ -10,25 +10,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 ## 语法
 
-```plain
-mySet.add(value);
+```js
+add(value)
 ```
 
 ### 参数
 
-- value
+- `value`
   - : 必需。需要添加到 `Set` 对象的元素的值。
 
 ### 返回值
 
-`Set` 对象本身
-
-注意：不能添加重复的值
+`Set` 对象本身。
 
 ## 示例
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add("some text"); // 可以链式调用
