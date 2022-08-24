@@ -85,7 +85,7 @@ Object.hasOwn(example, "hasOwnProperty"); // returns false
 
 ### Iterando sobre as propriedades de um objeto
 
-Para itererar sobre inumeras propriedades de um objeto, você deve usar:
+Para itererar sobre inúmeras propriedades de um objeto, você deve usar:
 
 ```js
 const example = { foo: true, bar: true };
