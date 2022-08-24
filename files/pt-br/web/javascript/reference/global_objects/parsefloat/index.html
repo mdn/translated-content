@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <p><code>parseFloat</code> é uma função top-level e não está associada a nenhum objeto.</p>
 
-<p><code>parseFloat</code> analisa um argumento string, e retorna um numero de ponto flutuante. Se ele encontrar <span id="result_box" lang="pt"><span>um carácter diferente de</span> <span>um sinal</span> <span>(</span><span>+</span> <span>ou -)</span></span>, numeral (0-9), um ponto decimal, ou um expoente, e<span id="result_box" lang="pt"><span>le retorna</span> <span>o valor</span> <span>até esse ponto</span> <span>e ignora</span> <span>esse caractere e</span> <span>todos os caracteres</span> <span>seguintes. Espaços a direita e a esquerda s</span></span>ão permitidos.</p>
+<p><code>parseFloat</code> analisa um argumento string, e retorna um numero de ponto flutuante. Se ele encontrar um carácter diferente de um sinal (+ ou -), numeral (0-9), um ponto decimal, ou um expoente, ele retorna o valor até esse ponto e ignora esse caractere e todos os caracteres seguintes. Espaços a direita e a esquerda são permitidos.</p>
 
 <p>Se o primeiro carácter não puder ser convertido para um número, <code>parseFloat</code> retorna <code>NaN</code>.</p>
 
@@ -55,7 +55,7 @@ parseFloat("3.14more non-digit characters");
 
 <h3 id="A_função_stricter_parse">A função stricter parse</h3>
 
-<p><span id="result_box" lang="pt"><span>As vezes é útil</span> <span>ter uma maneira</span> <span>mais rigorosa</span> <span>para analisar</span> <span>valores float</span><span>,</span> <span>expressões regulares podem</span> <span>ajudar:</span></span></p>
+<p>As vezes é útil ter uma maneira mais rigorosa para analisar valores float, expressões regulares podem ajudar:</p>
 
 <pre class="brush: js">var filterFloat = function (value) {
     if(/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/
@@ -75,7 +75,7 @@ console.log(filterFloat('hop1.61803398875'));  // NaN
 
 </pre>
 
-<p>Observe que este código é somente um exemplo; ele<span id="result_box" lang="pt"> <span>não aceita</span> <span>números válidos</span><span>, tais como</span> <span>1.</span> <span>ou</span> <span>0,5</span><span>.</span></span></p>
+<p>Observe que este código é somente um exemplo; ele não aceita números válidos, tais como 1. ou 0,5.</p>
 
 <h2 id="Especificações">Especificações</h2>
 

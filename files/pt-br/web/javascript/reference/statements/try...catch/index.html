@@ -151,25 +151,25 @@ finally {
 
 <p>Primeiro vamos ver o que acontece com isso:</p>
 
-<pre><code><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">"oops"</span><span class="brush: js">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-  </span><span class="kwd">finally</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"finally"</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span><span class="pln">
-</span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  console</span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"outer"</span><span class="pun">,</span><span class="pln"> ex</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">}</span></code>
+<pre><code>try {
+  try {
+    throw new Error("oops");
+  }
+  finally {
+    console.log("finally");
+  }
+}
+catch (ex) {
+  console.error("outer", ex.message);
+}</code>
 
 // Resultado
-<code><span class="str">// "finally"<span class="pln">
-</span>// "outer"</span><span class="pln"> </span><span class="str">"oops"</span></code></pre>
+<code>// "finally"
+// "outer" "oops"</code></pre>
 
 <p>Agora, caso nós já capturamos a exceção no bloco <code>try</code> interno adicionando um bloco <code>catch</code></p>
 
-<pre><code><span class="kwd"><code><span class="kwd">try {
+<pre><code><code>try {
   try {
     throw new Error("oops");
   }
@@ -182,34 +182,34 @@ finally {
 }
 catch (ex) {
   console.error("outer", ex.message);
-}</span></code></span></code>
+}</code></code>
 
 // Resultado:
-<code><span class="str">// "inner"<span class="pln"> </span>"oops"</span><span class="pln">
-</span><span class="str">// "finally"</span></code></pre>
+<code>// "inner" "oops"
+// "finally"</code></pre>
 
 <p>E agora, vamos relançar o erro.</p>
 
-<pre><code><span class="kwd"><code><span class="kwd"><code><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">"oops"</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-  </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"inner"</span><span class="pun">,</span><span class="pln"> ex</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln">
-    </span><span class="kwd">throw</span><span class="pln"> ex</span><span class="pun">;</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-  </span><span class="kwd">finally</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"finally"</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span><span class="pln">
-</span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  console</span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"outer"</span><span class="pun">,</span><span class="pln"> ex</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">}</span></code></span></code></span>
+<pre><code><code><code>try {
+  try {
+    throw new Error("oops");
+  }
+  catch (ex) {
+    console.error("inner", ex.message);
+    throw ex;
+  }
+  finally {
+    console.log("finally");
+  }
+}
+catch (ex) {
+  console.error("outer", ex.message);
+}</code></code>
 
 // Resultado:</code>
-<code><span class="str">// "inner"</span><span class="pln"> </span><span class="str">"oops"</span></code>
-<code><span class="str">// "finally"</span></code>
-<code><span class="str">// "outer"</span><span class="pln"> </span><span class="str">"oops"</span></code>
+<code>// "inner" "oops"</code>
+<code>// "finally"</code>
+<code>// "outer" "oops"</code>
 </pre>
 
 <p>Qualquer exceção lançada será capturada apenas uma vez pelo bloco <code>catch</code> envolvente mais próximo, a não ser que seja relançada. Obviamente qualquer nova exceção elevada no bloco "interno" (pois código em um bloco <code>catch</code> pode fazer algo que lance), será capturado pelo bloco "externo".</p>
