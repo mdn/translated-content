@@ -18,11 +18,15 @@ El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para es
 
 HTML no es un lenguaje de programación; es un _lenguaje de marcado_ que define la estructura de tu contenido. HTML consiste en una serie de elementos que usarás para encerrar diferentes partes del contenido para que se vean o comporten de una determinada manera. Las etiquetas de encierre pueden hacer de una palabra o una imagen un hipervínculo a otro sitio, se pueden cambiar palabras a cursiva, agrandar o achicar la letra, etc. Por ejemplo, toma la siguiente línea de contenido:
 
-    Mi gato es muy gruñon
+```html
+Mi gato es muy gruñon
+```
 
 Si quieres especificar que se trata de un párrafo, podrías encerrar el texto con la etiqueta de párrafo ({{htmlelement("p")}}):
 
-    <p>Mi gato es muy gruñon</p>
+```html
+<p>Mi gato es muy gruñon</p>
+```
 
 ### Anatomía de un elemento HTML
 
@@ -57,11 +61,15 @@ Los atributos siempre se incluyen en la etiqueta de apertura de un elemento, nun
 
 Puedes también colocar elementos dentro de otros elementos —esto se llama **anidamiento**—. Si, por ejemplo, quieres resaltar una palabra del texto (en el ejemplo la palabra «muy»), podemos encerrarla en un elemento {{htmlelement("strong")}}, que significa que dicha palabra se debe enfatizar:
 
-    <p>Mi gato es <strong>muy</strong> gruñon.</p>
+```html
+<p>Mi gato es <strong>muy</strong> gruñon.</p>
+```
 
 Debes asegurarte que los elementos estén correctamente anidados: en el ejemplo de abajo, creaste la etiqueta de apertura del elemento {{htmlelement("p")}} primero, luego la del elemento {{htmlelement("strong")}}, por lo tanto, debes cerrar esta etiqueta primero, y luego la de \<p>. Esto es incorrecto:
 
-    <p>Mi gato es <strong>muy gruñon.</p></strong>
+```html
+<p>Mi gato es <strong>muy gruñon.</p></strong>
+```
 
 Los elementos deben abrirse y cerrarse ordenadamente, de forma tal que se encuentren claramente dentro o fuera el uno del otro. Si estos se encuentran solapados, el navegador web tratará de adivinar lo que intentas decirle, pero puede que obtengas resultados inesperados. Así que, ¡no lo hagas!
 
@@ -69,7 +77,9 @@ Los elementos deben abrirse y cerrarse ordenadamente, de forma tal que se encuen
 
 Algunos elementos no poseen contenido, y son llamados **elementos vacíos**. Toma, por ejemplo, el elemento {{htmlelement("img")}} de nuestro HTML:
 
-    <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+```html
+<img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+```
 
 Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerrado. Esto es porque un elemento de imagen no encierra contenido al cual afectar. Su propósito es desplegar una imagen en la página HTML, en el lugar en que aparece.
 
@@ -77,16 +87,18 @@ Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerr
 
 Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos)):
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Mi pagina de prueba</title>
-      </head>
-      <body>
-        <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
-      </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi pagina de prueba</title>
+  </head>
+  <body>
+    <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+  </body>
+</html>
+```
 
 Tienes:
 
@@ -101,7 +113,9 @@ Tienes:
 
 Presta atención nuevamente al elemento _imagen_ {{htmlelement("img")}}:
 
-    <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+```html
+<img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+```
 
 Como ya se dijo antes, incrusta una imagen en la página, en la posición en que aparece. Lo logra a través del atributo `src` (source), el cual contiene el _path (ruta o ubicación)_ de tu archivo de imagen.
 
@@ -126,10 +140,12 @@ Esta sección cubrirá algunos de los elementos HTML básicos que usarás para e
 
 Los elementos de encabezado permiten especificar que ciertas partes del contenido son encabezados, o subencabezados del contenido. De la misma forma que un libro tiene un título principal, y que a su vez puede tener títulos por cada capítulo individual, y subtítulos dentro de ellos, un documento HTML puede tenerlos también. HTML posee seis niveles de encabezados, {{htmlelement("h1")}}–{{htmlelement("h6")}}, aunque probablemente solo llegues a usar 3-4 como mucho:
 
-    <h1>Mi título principal</h1>
-    <h2>Mi título de nivel superior</h2>
-    <h3>Mi subtítulo</h3>
-    <h4>Mi sub-subtítulo</h4>
+```html
+<h1>Mi título principal</h1>
+<h2>Mi título de nivel superior</h2>
+<h3>Mi subtítulo</h3>
+<h4>Mi sub-subtítulo</h4>
+```
 
 Intenta ahora añadir un título apropiado para tu página HTML, antes de tu elemento {{htmlelement("img")}}.
 
@@ -139,7 +155,9 @@ Intenta ahora añadir un título apropiado para tu página HTML, antes de tu ele
 
 Como se explicó más arriba, los elementos {{htmlelement("p")}} se utilizan para encerrar párrafos de texto; los usarás frecuentemente para el marcado de contenido de texto regular:
 
-    <p>Este es un simple parrafo</p>
+```html
+<p>Este es un simple parrafo</p>
+```
 
 Agrega uno o algunos párrafos a tu texto de ejemplo (deberías tenerlo de cuando estudiaste [_¿Cuál será la apariencia de tu sitio web?_](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)), colocados directamente debajo del elemento \<img>.
 
@@ -154,21 +172,25 @@ Cada elemento de la lista se coloca dentro de un elemento {{htmlelement("li")}} 
 
 Por ejemplo, si quieres transformar parte del siguiente párrafo en una lista:
 
-    <p>En Mozilla, somos una comunidad de tecnólogos, pensadores, y constructores que trabajan juntos... </p>
+```html
+<p>En Mozilla, somos una comunidad de tecnólogos, pensadores, y constructores que trabajan juntos... </p>
+```
 
 Podrías hacer lo siguiente:
 
-    <p>En Mozilla, somos una comunidad de</p>
+```html
+<p>En Mozilla, somos una comunidad de</p>
 
-    <ul>
-      <li>tecnólogos</li>
-      <li>pensadores</li>
-      <li>constructores</li>
-    </ul>
+<ul>
+  <li>tecnólogos</li>
+  <li>pensadores</li>
+  <li>constructores</li>
+</ul>
 
-    <p>trabajando juntos... </p>
+<p>trabajando juntos... </p>
+```
 
-Intenta agregar una lista ordenada o desordenada en tu página de ejemplo**.**
+Intenta agregar una lista ordenada o desordenada en tu página de ejemplo.
 
 ## Vínculos
 
@@ -177,15 +199,21 @@ Los vínculos o enlaces son muy importantes —son los que hacen de la web, la w
 1.  Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
 2.  Encierra el texto en un elemento \<a>, así:
 
-        <a>Manifesto Mozilla</a>
+    ```html
+    <a>Manifesto Mozilla</a>
+    ```
 
 3.  Proporciónale al elemento \<a> un atributo href, así:
 
-        <a href="">Manifesto Mozilla</a>
+    ```html
+    <a href="">Manifesto Mozilla</a>
+    ```
 
 4.  Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
 
-        <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
+    ```html
+    <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
+    ```
 
 Podrías obtener resultados inesperados si al comienzo de la dirección web omites la parte `https://` o `http://` llamada _protocolo_. Así que luego del marcado del vínculo, haz clic en él para asegurarte que te dirige a la dirección deseada.
 

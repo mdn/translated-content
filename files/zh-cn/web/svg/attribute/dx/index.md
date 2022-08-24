@@ -1,10 +1,6 @@
 ---
 title: dx
 slug: Web/SVG/Attribute/dx
-tags:
-  - SVG
-  - SVG 标签
-translation_of: Web/SVG/Attribute/dx
 ---
 « [SVG 属性参考汇总](/en/SVG/Attribute)
 

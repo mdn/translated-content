@@ -1,7 +1,6 @@
 ---
 title: 视口概念
 slug: Web/CSS/Viewport_concepts
-translation_of: Web/CSS/Viewport_concepts
 ---
 {{CSSRef}}
 

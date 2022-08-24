@@ -1,23 +1,6 @@
 ---
 title: 'Media type and format guide: image, audio, and video content'
 slug: Web/Media/Formats
-tags:
-  - API
-  - Audio
-  - Codecs
-  - Containers
-  - File Types
-  - Files
-  - Filetypes
-  - Landing
-  - Media
-  - NeedsTranslation
-  - TopicStub
-  - Types
-  - Video
-  - Web
-  - formats
-translation_of: Web/Media/Formats
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 

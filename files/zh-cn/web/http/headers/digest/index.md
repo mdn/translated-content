@@ -1,10 +1,6 @@
 ---
 title: Digest
 slug: Web/HTTP/Headers/Digest
-tags:
-  - HTTP
-  - HTTP Header
-translation_of: Web/HTTP/Headers/Digest
 ---
 {{HTTPSidebar}}
 

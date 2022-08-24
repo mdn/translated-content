@@ -26,35 +26,35 @@ Es mucho trabajo crear un sitio web profesional, así que si eres nuevo en el de
 
 Al trabajar en orden a través de los artículos que se enumeran a continuación, pasarás de la nada a tener tu primera página web en línea. ¡Comencemos nuestro viaje!
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software","Instalación de software básico")}}
+### Instalación de software básico
 
 Cuando se trata de herramientas para crear un sitio web, hay mucho para elegir. Si recién estás comenzando, es posible que te sientas confundido por la variedad de editores de código, marcos de desarrollo y herramientas de prueba que existen. En {{web.link("/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software", "Instalación de software básico")}}, te mostramos paso a paso cómo instalar solo el software que necesitas para comenzar un desarrollo web básico.
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like","¿Cuál será la apariencia de tu sitio web?")}}
+### ¿Cuál será la apariencia de tu sitio web?
 
 Antes de comenzar a escribir el código para tu sitio web, primero lo debes planificar. ¿Qué información estás mostrando?, ¿qué fuentes y colores estás usando?, en {{web.link("/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like", "¿cuál será la apariencia de tu sitio web?")}}, describimos un método simple que puedes seguir para planificar el contenido y modelado de tu sitio.
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files","Manejo de archivos")}}
+### Manejo de archivos
 
 Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensata y asegurarte de que se puedan comunicar entre sí. {{web.link("/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files", "Manejo de archivos")}} explica cómo configurar una estructura de archivos sensible para tu sitio web y qué problemas debes tener en cuenta.
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/HTML_basics","Conceptos básicos de HTML")}}
+### Conceptos básicos de HTML
 
 El lenguaje de marcado de hipertexto (HTML) es el código que utilizas para estructurar tu contenido web y darle significado y propósito. Por ejemplo, ¿mi contenido es un conjunto de párrafos o una lista de viñetas?, ¿tengo imágenes insertadas en mi página?, ¿tengo una tabla de datos?; Sin abrumarte, {{web.link("/es/docs/Learn/Getting_started_with_the_web/HTML_basics", "conceptos básicos de HTML")}} proporciona suficiente información para familiarizarte con HTML.
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/CSS_basics","Conceptos básicos de CSS")}}
+### Conceptos básicos de CSS
 
 Hojas de estilo en cascada (CSS) es el código que utilizas para aplicar estilo a tu sitio web. Por ejemplo, ¿desea que el texto sea negro o rojo?, ¿dónde se debe dibujar el contenido en la pantalla?, ¿qué imágenes de fondo y colores se deben utilizar para decorar tu sitio web?, {{web.link("/es/docs/Learn/Getting_started_with_the_web/CSS_basics", "Conceptos básicos de CSS")}} te indica lo que necesitas para empezar.
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics","Conceptos básicos de JavaScript")}}
+### Conceptos básicos de JavaScript
 
 JavaScript es el lenguaje de programación que utilizas para agregar funciones interactivas a tu sitio web. Algunos ejemplos podrían ser juegos, cosas que suceden cuando se presionan botones o se ingresan datos en formularios, efectos de estilo dinámico, animación y mucho más. {{web.link("/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics", "Conceptos básicos de JavaScript")}} te da una idea de lo que es posible con este interesante lenguaje y cómo empezar.
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website","Publicar tu sitio web")}}
+### Publicar tu sitio web
 
 Una vez que hayas terminado de escribir el código y organizado los archivos que componen tu sitio web, lo debes poner todo en línea para que la gente lo pueda encontrar. {{web.link("/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website", "Publica tu código de ejemplo")}} describe cómo publicar tu código de ejemplo en línea con el mínimo esfuerzo.
 
-### {{web.link("/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works","Cómo funciona la web")}}
+### Cómo funciona la web
 
 Cuando accedes a tu sitio web favorito, suceden muchas cosas complicadas en segundo plano que quizás no conozcas. {{web.link("/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works", "Cómo funciona la web")}} describe lo que sucede cuando ves una página web en tu dispositivo favorito.
 

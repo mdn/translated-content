@@ -1,7 +1,6 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-translation_of: Glossary/IIFE
 ---
 **IIFE** (Immediately Invoked Function Expression) 是一個定義完馬上就執行的 {{glossary("JavaScript")}} {{glossary("function")}}。
 

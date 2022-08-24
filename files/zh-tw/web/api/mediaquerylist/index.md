@@ -1,7 +1,6 @@
 ---
 title: MediaQueryList
 slug: Web/API/MediaQueryList
-translation_of: Web/API/MediaQueryList
 ---
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
@@ -57,8 +56,6 @@ void removeListener(
 ## 瀏覽器相容性
 
 {{Compat("api.MediaQueryList")}}
-
-##
 
 ## 規範標準
 

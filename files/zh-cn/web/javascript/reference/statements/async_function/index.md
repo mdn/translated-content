@@ -1,13 +1,6 @@
 ---
 title: async 函数
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - JavaScript
-  - 函数
-  - 声明
-  - 异步函数
-  - 语言特性
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 {{jsSidebar("Statements")}}
 

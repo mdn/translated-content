@@ -1,7 +1,6 @@
 ---
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
-translation_of: Web/HTML/Element/picture
 ---
 {{HTMLRef}}
 
@@ -15,8 +14,8 @@ translation_of: Web/HTML/Element/picture
 
 `<img>` 有兩個作用：
 
-1.  它描述了該圖片的尺寸等屬性以及呈現（presentation）。
-2.  在所有列出的 `<source>` 都不能提供可用圖片的情況下的 fallback。
+1. 它描述了該圖片的尺寸等屬性以及呈現（presentation）。
+2. 在所有列出的 `<source>` 都不能提供可用圖片的情況下的 fallback。
 
 `<picture>` 的常見使用案例：
 

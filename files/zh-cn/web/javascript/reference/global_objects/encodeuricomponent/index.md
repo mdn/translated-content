@@ -1,11 +1,6 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-tags:
-  - JavaScript
-  - URI
-  - 统一资源标识符
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
 {{jsSidebar("Objects")}}
 

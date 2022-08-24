@@ -1,16 +1,6 @@
 ---
 title: 迭代器和生成器
 slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Generator
-  - Guide
-  - Intermediate
-  - Iterator
-  - JavaScript
-  - 中级
-  - 生成器
-  - 迭代器
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 

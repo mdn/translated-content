@@ -1,7 +1,6 @@
 ---
 title: 手机网页开发
 slug: Web/Guide/Mobile
-translation_of: Web/Guide/Mobile
 ---
 本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找 Mozilla 火狐系统相关的项目，请参考[Firefox OS](/en/Mozilla/Firefox_OS) 。或者你可能会对[Firefox for Android](/en/Mozilla/Firefox_for_Android)感兴趣。
 

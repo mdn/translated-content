@@ -1,12 +1,6 @@
 ---
 title: 链接类型
 slug: Web/HTML/Link_types
-tags:
-  - HTML
-  - Link
-  - Link types
-  - Reference
-translation_of: Web/HTML/Link_types
 ---
 {{HTMLSidebar}}
 

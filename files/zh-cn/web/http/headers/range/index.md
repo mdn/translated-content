@@ -1,12 +1,6 @@
 ---
 title: Range
 slug: Web/HTTP/Headers/Range
-tags:
-  - HTTP
-  - HTTP 首部
-  - 范围请求
-  - 请求首部
-translation_of: Web/HTTP/Headers/Range
 ---
 {{HTTPSidebar}}
 

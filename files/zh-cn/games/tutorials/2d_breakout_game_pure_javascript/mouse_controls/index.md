@@ -1,15 +1,6 @@
 ---
 title: 鼠标控制
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-tags:
-  - Canvas
-  - JavaScript
-  - 入门
-  - 操作控制
-  - 教程
-  - 游戏
-  - 鼠标
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/鼠标控制
 ---
 {{GamesSidebar}}

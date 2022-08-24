@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 ---
 {{JSRef}}
 

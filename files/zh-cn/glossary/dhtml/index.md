@@ -1,7 +1,6 @@
 ---
 title: DHTML
 slug: Glossary/DHTML
-translation_of: Glossary/DHTML
 original_slug: DHTML
 ---
 1、DHTML 对象 !DOCTYPE 指定了 HTML 文档遵循的文档类型定义 (DTD)。

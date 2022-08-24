@@ -1,14 +1,6 @@
 ---
 title: 無障礙網頁
 slug: Web/Accessibility
-tags:
-  - Accessibility
-  - Advanced
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web Development
-translation_of: Web/Accessibility
 ---
 網路開發中的無障礙網頁，意味著盡可能令所有人都能使用網站，就算是在某些感官方面受限的人也不例外。本頁面會提供一些關於無障礙網頁的資訊。
 

@@ -1,9 +1,6 @@
 ---
 title: MDN 的 Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-tags:
-  - MDN
-translation_of: MDN/Contribute/Markdown_in_MDN
 original_slug: MDN/Contribute/Markdown_in_MDN
 ---
 {{MDNSidebar}}

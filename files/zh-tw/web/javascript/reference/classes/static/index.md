@@ -1,7 +1,6 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
 {{jsSidebar("Classes")}}使用關鍵字 **static** 來定義一個靜態的方法（method）給類別（class），靜態方法在由類別所建立的物件實體（instance）上不能被呼叫，取而代之的是，靜態方法只能由類別本身呼叫。他們通常作為工具函式（utility functions）使用。像是建立物件或複製物件的函式。
 

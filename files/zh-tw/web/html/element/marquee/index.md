@@ -1,7 +1,6 @@
 ---
 title: <marquee>：捲動元素（已過時）
 slug: Web/HTML/Element/marquee
-translation_of: Web/HTML/Element/marquee
 ---
 HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過屬性，控制文字在到達邊緣後的應對動作。
 

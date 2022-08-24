@@ -1,14 +1,6 @@
 ---
 title: 只使用 JavaScript 的 2D 打磚塊遊戲
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 {{GamesSidebar}}
 

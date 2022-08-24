@@ -1,15 +1,6 @@
 ---
 title: 傻故事產生器
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - JavaScript
-  - 初學者
-  - 字串
-  - 測試
-  - 變數
-  - 運算子
-  - 陣列
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 

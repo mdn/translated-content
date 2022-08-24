@@ -1,9 +1,6 @@
 ---
 title: <noscript>
 slug: Web/HTML/Element/noscript
-tags:
-  - <noscript>
-translation_of: Web/HTML/Element/noscript
 ---
 {{HTMLRef}}
 

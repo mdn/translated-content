@@ -1,10 +1,6 @@
 ---
 title: 设置 Django 开发环境
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/development_environment
 original_slug: Learn/Server-side/Django/开发环境
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}

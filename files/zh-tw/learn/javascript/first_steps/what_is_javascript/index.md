@@ -1,16 +1,6 @@
 ---
 title: JavaScript 是什麼?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - API
-  - JavaScript
-  - 學習
-  - 撰寫程式
-  - 新手
-  - 核心觀念
-  - 瀏覽器
-  - 註解
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 

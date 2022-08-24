@@ -1,11 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - 缓存
-  - 通用首部
-  - 首部
-translation_of: Web/HTTP/Headers/Pragma
 ---
 {{HTTPSidebar}}
 

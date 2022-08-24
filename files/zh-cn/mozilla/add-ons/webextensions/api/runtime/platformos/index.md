@@ -1,10 +1,6 @@
 ---
 title: 获取当前操作系统 - runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
-tags:
-  - 获取当前操作系统
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
 {{AddonSidebar()}}
 

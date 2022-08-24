@@ -468,7 +468,7 @@ origin は、リクエストを開始したサーバーを示す URL です。�
 Access-Control-Request-Method: <method>
 ```
 
-使用例は[前述のとおりです。](#preflighted_requests)。
+使用例は[前述のとおりです](#preflighted_requests)。
 
 <h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
 
@@ -478,7 +478,7 @@ Access-Control-Request-Method: <method>
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-使用例は[前述のとおりです。](#preflighted_requests)。
+使用例は[前述のとおりです](#preflighted_requests)。
 
 ## 仕様書
 
@@ -492,10 +492,10 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 関連情報
 
-- [CORS のエラー](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
 - [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/ja/docs/Web/API/Fetch_API)
 - [Will it CORS?](https://httptoolkit.tech/will-it-cors) - 対話型の CORS の説明および生成
 - [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)

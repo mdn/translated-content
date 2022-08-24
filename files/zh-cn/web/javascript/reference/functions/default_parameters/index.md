@@ -1,11 +1,6 @@
 ---
 title: 默认参数值
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 {{jsSidebar("Functions")}}
 

@@ -9,4 +9,4 @@ Por ejemplo, puedes agregar el atributo `role="alert"` a un {{HTMLElement("p")}}
 
 ## Saber más
 
-- [ARIA](/es/docs/Web/Accessibility/ARIA)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)

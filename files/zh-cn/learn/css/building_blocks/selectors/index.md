@@ -1,12 +1,6 @@
 ---
 title: CSS 选择器
 slug: Learn/CSS/Building_blocks/Selectors
-tags:
-  - CSS
-  - CSS 选择器
-  - 初学者
-  - 类
-translation_of: Learn/CSS/Building_blocks/Selectors
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 

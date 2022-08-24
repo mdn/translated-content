@@ -1,7 +1,6 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-translation_of: Web/HTML/Global_attributes/itemscope
 ---
 {{HTMLSidebar("Global_attributes")}}
 
@@ -27,8 +26,6 @@ translation_of: Web/HTML/Global_attributes/itemscope
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
 ```
-
-####
 
 #### 结构化数据
 
@@ -118,7 +115,7 @@ Directions: <br>
 
 下面例子是上述例子的补充：
 
-{{EmbedLiveSample('示例', '500', '550', '', 'Web/HTML/Global_attributes/itemscope')}}
+{{EmbedLiveSample('示例', '500', '550')}}
 
 #### 结构化数据
 
@@ -237,7 +234,7 @@ Directions: <br>
   </tbody>
 </table>
 
-> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[ Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
+> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
 
 ## 规范
 

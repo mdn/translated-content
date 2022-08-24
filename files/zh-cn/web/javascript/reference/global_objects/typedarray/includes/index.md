@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 ---
 {{JSRef}}
 

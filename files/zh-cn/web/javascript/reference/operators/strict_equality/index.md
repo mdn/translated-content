@@ -1,7 +1,6 @@
 ---
 title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,14 +1,6 @@
 ---
 title: 通訊埠
 slug: Glossary/Port
-tags:
-  - Glossary
-  - Intro
-  - Security
-  - computer network
-  - l10n:priority
-  - port
-translation_of: Glossary/Port
 ---
 對使用 {{Glossary("IP address")}} 連線到網路的電腦來說，**通訊埠**是傳輸時的端點。我們可用不同的數字（通訊埠號）來分辨不同的通訊埠，而小於 1024 號的每個埠通常都有自己預設使用的 {{Glossary("protocol")}}。
 

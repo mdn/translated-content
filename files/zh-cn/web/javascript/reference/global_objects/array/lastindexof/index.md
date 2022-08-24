@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 {{JSRef("Global_Objects", "Array")}}
 
@@ -30,7 +29,7 @@ arr.lastIndexOf(searchElement[, fromIndex])
 
 ## 描述
 
-`lastIndexOf` 使用[严格相等](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)（strict equality，即 ===）比较 `searchElement` 和数组中的元素。
+`lastIndexOf` 使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)（strict equality，即 ===）比较 `searchElement` 和数组中的元素。
 
 ## 示例
 

@@ -6,7 +6,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 
 ## 结构化克隆所不能做到的
 
-- [`Error`](/cn/JavaScript/Reference/Global_Objects/Error) 以及 [`Function`](/cn/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
+- [`Error`](/zh-CN/JavaScript/Reference/Global_Objects/Error) 以及 [`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
 - 企图去克隆 DOM 节点同样会抛出 `DATA_CLONE_ERR` 异常。
 - 对象的某些特定参数也不会被保留
 

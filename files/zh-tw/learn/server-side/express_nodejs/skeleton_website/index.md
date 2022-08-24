@@ -1,7 +1,6 @@
 ---
 title: 'Express 教學 2: 創建一個骨架網站'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 {{LearnSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: 在 HTML 内容中应用 SVG 效果
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-tags:
-  - CSS
-  - HTML
-  - SVG
-  - XHTML
-  - 指南
-  - 需要示例
-translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 现代浏览器支持在 [CSS](/zh-CN/docs/Web/CSS) 样式中使用 [SVG](/zh-CN/docs/SVG) 来对 HTML 内容应用图像效果。
 

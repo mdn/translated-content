@@ -1,18 +1,6 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
 {{AddonSidebar}}启用与浏览器的下载管理器交互的扩展。你可以使用这个 API 模块来下载文件、取消、暂停、恢复下载和在文件管理器中显示下载的文件。
 

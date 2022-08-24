@@ -1,13 +1,6 @@
 ---
 title: width
 slug: Web/CSS/@media/width
-tags:
-  - '@media'
-  - CSS
-  - NeedsBrowserCompatibility
-  - Reference
-  - media feature
-translation_of: Web/CSS/@media/width
 ---
 {{cssref}}
 

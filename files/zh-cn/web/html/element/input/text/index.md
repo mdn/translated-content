@@ -1,14 +1,6 @@
 ---
 title: <input type="text">
 slug: Web/HTML/Element/Input/text
-tags:
-  - HTML
-  - HTML 表单
-  - Text
-  - 文本输入
-  - 表单
-  - 输入表单
-translation_of: Web/HTML/Element/input/text
 ---
 {{HTMLRef}}
 

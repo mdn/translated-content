@@ -1,7 +1,6 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-translation_of: Web/HTTP/Status/201
 ---
 HTTP **`201 Created`** 成功狀態碼表示請求成功且有一個新的資源已經依據需要而被建立。實際上，在此回應傳送前，新資源就已被建立，且其內容在訊息的主體中傳回，其位置為請求的 URL 或是 {{HTTPHeader("Location")}} 標頭的內容。
 

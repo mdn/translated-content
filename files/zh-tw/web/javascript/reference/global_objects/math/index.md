@@ -1,13 +1,6 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
 {{JSRef}}
 

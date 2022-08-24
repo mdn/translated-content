@@ -1,7 +1,6 @@
 ---
 title: 'Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’'
 slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
-translation_of: Web/HTTP/CORS/Errors/CORSMethodNotFound
 ---
 {{HTTPSidebar}}
 

@@ -22,7 +22,7 @@ IDL は **_Interface Definition Language_** の略で、 API を記述するた�
 
 WebIDL は複数の場所で見つけることができます。
 
--それぞれの仕様書には、本文の中に WebIDL が含まれています：これは、正確な定義を伝えるのにとても便利な方法です。これらは、API の構文を記述しています。正規のリファレンスではありますが、実際の実装とは異なる可能性があることを念頭に置いておく必要があります。 MDN では、実用的でありたいと考えており、ウェブプラットフォームが実際にどうであるか、理想的にどうあるべきかを文書化するものではありません。ですから、そこにあるものを実装でダブルチェックしてください（そして、矛盾を発見したら遠慮なくバグを報告してください）。
+- それぞれの仕様書には、本文の中に WebIDL が含まれています：これは、正確な定義を伝えるのにとても便利な方法です。これらは、API の構文を記述しています。正規のリファレンスではありますが、実際の実装とは異なる可能性があることを念頭に置いておく必要があります。 MDN では、実用的でありたいと考えており、ウェブプラットフォームが実際にどうであるか、理想的にどうあるべきかを文書化するものではありません。ですから、そこにあるものを実装でダブルチェックしてください（そして、矛盾を発見したら遠慮なくバグを報告してください）。
 
 - 3 つのブラウザーエンジンが、ツールチェーンの一部として（修正された） WebIDL を使用しています。 Gecko、Chromium/Blink、そして WebCore/WebKit です。 Chromium 以前の Edge では内部的に WebIDL を使用していましたが、残念ながらこれらは公開されていません。
 
@@ -470,7 +470,7 @@ iterable<keyType, valueType>
 
 > **Note:** 繰り返す値の組は、 webidl ファイルではなく、それに付随する散文で定義されます。そのような散文は仕様書にあり、通常、次のように始まります。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)..."_ で始まります。
 >
-> 例えば、{{domxref('FormData')}}の場合、仕様書の中に次のように書かれています。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry "concept-FormData-entry") with the key is the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name "concept-FormData-entry-name") and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value "concept-FormData-entry-value"). "_
+> 例えば、{{domxref('FormData')}}の場合、仕様書の中に次のように書かれています。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key is the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
 
 ### 集合風メソッド
 

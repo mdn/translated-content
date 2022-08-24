@@ -1,14 +1,6 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - HTTP
-  - 响应
-  - 请求头
-  - 请求首部
-  - 隐私
-  - 首部
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 **`Referrer-Policy`** 首部用来监管哪些访问来源信息——会在 {{HTTPHeader("Referer")}} 中发送——应该被包含在生成的请求当中。
 

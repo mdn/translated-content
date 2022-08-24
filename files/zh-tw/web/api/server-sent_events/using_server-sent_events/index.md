@@ -1,16 +1,6 @@
 ---
 title: 使用 server-sent 事件
 slug: Web/API/Server-sent_events/Using_server-sent_events
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - EventSource
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-Sent-Event
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 

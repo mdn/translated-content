@@ -7,28 +7,31 @@ El contexto actual de ejecución. El contexto en el que los valores y las expres
 
 Una función sirve como un cierre en JavaScript y, por lo tanto, crea un ámbito, de modo que (por ejemplo) no se puede acceder a una variable definida exclusivamente dentro de la función desde fuera de la función o dentro de otras funciones. Por ejemplo, lo siguiente no es válido:
 
-    function exampleFunction() {
-        var x = "declarada dentro de la función"; // x solo se puede utilizar en exampleFunction
-        console.log("funcion interna");
-        console.log(x);
-    }
+```js
+function exampleFunction() {
+    var x = "declarada dentro de la función"; // x solo se puede utilizar en exampleFunction
+    console.log("funcion interna");
+    console.log(x);
+}
 
-    console.log(x);  // error
+console.log(x);  // error
+```
 
 Sin embargo, el siguiente código es válido debido a que la variable se declara fuera de la función, lo que la hace global:
 
-    var x = "función externa declarada";
+```js
+var x = "función externa declarada";
 
+exampleFunction();
 
-    exampleFunction();
-
-    function exampleFunction() {
-        console.log("funcion interna");
-        console.log(x);
-    }
-
-    console.log("funcion externa");
+function exampleFunction() {
+    console.log("funcion interna");
     console.log(x);
+}
+
+console.log("funcion externa");
+console.log(x);
+```
 
 ## Aprende mas
 

@@ -1,10 +1,6 @@
 ---
 title: 'Yari: MDN''s rendering platform'
 slug: MDN/Yari
-tags:
-  - Yari
-  - Landing
-  - MDN Meta
 ---
 {{MDNSidebar}}
 

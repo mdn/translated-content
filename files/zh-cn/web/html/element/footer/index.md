@@ -1,11 +1,6 @@
 ---
 title: <footer>
 slug: Web/HTML/Element/footer
-tags:
-  - Element
-  - HTML
-  - HTML sections
-translation_of: Web/HTML/Element/footer
 ---
 {{HTMLRef}}
 

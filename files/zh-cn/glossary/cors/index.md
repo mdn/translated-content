@@ -1,10 +1,6 @@
 ---
 title: CORS
 slug: Glossary/CORS
-tags:
-  - CORS
-  - Security
-translation_of: Glossary/CORS
 ---
 **CORS** （Cross-Origin Resource Sharing，跨域资源共享）是一个系统，它由一系列传输的{{Glossary("Header", "HTTP 头")}}组成，这些 HTTP 头决定浏览器是否阻止前端 JavaScript 代码获取跨域请求的响应。
 

@@ -1,10 +1,6 @@
 ---
 title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-tags:
-  - JavaScript
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 {{jsSidebar("Errors")}}
 

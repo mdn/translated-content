@@ -1,7 +1,6 @@
 ---
 title: 样式化表格
 slug: Learn/CSS/Building_blocks/Styling_tables
-translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes")}}
 

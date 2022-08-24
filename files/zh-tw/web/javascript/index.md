@@ -1,12 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - 入口
-  - 學習
-  - 所有類別
-translation_of: Web/JavaScript
 ---
 {{JsSidebar}}
 

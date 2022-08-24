@@ -1,14 +1,6 @@
 ---
 title: translate
 slug: Web/CSS/translate
-tags:
-  - CSS
-  - CSS 属性
-  - Transforms
-  - 参考
-  - 实验性
-  - 平移
-translation_of: Web/CSS/translate
 ---
 {{CSSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: 并发模型与事件循环
 slug: Web/JavaScript/EventLoop
-tags:
-  - JavaScript
-  - 事件
-  - 事件处理
-  - 事件循环
-  - 事件管理
-  - 事件队列
-  - 进阶
-translation_of: Web/JavaScript/EventLoop
 ---
 {{JsSidebar("Advanced")}}
 

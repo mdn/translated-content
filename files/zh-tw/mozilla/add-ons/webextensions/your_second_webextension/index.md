@@ -1,7 +1,6 @@
 ---
 title: 你的第二個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 {{AddonSidebar}}
 

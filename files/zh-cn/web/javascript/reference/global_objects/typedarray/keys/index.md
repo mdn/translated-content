@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
 {{JSRef}}
 

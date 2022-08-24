@@ -1,16 +1,7 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-browser-compat: javascript.builtins.Map.keys
 ---
 {{JSRef}}
 
@@ -20,8 +11,8 @@ browser-compat: javascript.builtins.Map.keys
 
 ## 语法
 
-```plain
-myMap.keys()
+```js
+keys()
 ```
 
 ### 返回值
@@ -33,12 +24,12 @@ myMap.keys()
 ### 使用 `keys()`
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set("0", "foo");
 myMap.set(1, "bar");
 myMap.set({}, "baz");
 
-var mapIter = myMap.keys();
+const mapIter = myMap.keys();
 
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1

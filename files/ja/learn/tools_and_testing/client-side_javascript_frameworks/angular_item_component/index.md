@@ -239,7 +239,7 @@ export class ItemComponent {
 
 ユーザーがテキストを入力して save をクリックすると、 `saveItem()` は `editable` を false に設定します。これにより、テンプレートの `*ngIf` が編集機能を削除し、再び **Edit** と **Delete** ボタンをレンダリングします。
 
-この時点でアプリケーションをコンパイルする必要がありますが、ブラウザで新機能を確認できるように、 `AppComponent` で `ItemComponent` を使用する必要があります。
+この時点でアプリケーションをコンパイルする必要がありますが、ブラウザーで新機能を確認できるように、 `AppComponent` で `ItemComponent` を使用する必要があります。
 
 ## AppComponent で ItemComponent を使用
 

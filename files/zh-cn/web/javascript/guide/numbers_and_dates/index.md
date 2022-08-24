@@ -1,10 +1,6 @@
 ---
 title: 数字和日期
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - JavaScript
-  - 指南
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}本章节介绍了在 JavaScript 中使用数字和日期来处理和执行计算的概念，对象和函数。
 

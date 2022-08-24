@@ -1,18 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - Interface
-  - Reference
-  - Web
-  - 介面
-  - 參考
-  - 檔案 API
-  - 檔案API
-  - 網路
-translation_of: Web/API/File
 ---
 {{APIRef}}
 

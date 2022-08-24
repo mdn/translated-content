@@ -1,15 +1,6 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/Input/number
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Number
-  - 参考
-translation_of: Web/HTML/Element/input/number
 ---
 {{HTMLRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-translation_of: Web/API/ValidityState
 ---
 {{APIRef("HTML DOM")}}
 

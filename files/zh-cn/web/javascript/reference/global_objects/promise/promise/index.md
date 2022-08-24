@@ -1,7 +1,6 @@
 ---
 title: Promise() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
 {{JSRef}}
 

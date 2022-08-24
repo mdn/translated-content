@@ -1,7 +1,6 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
-translation_of: Web/CSS/border-bottom-color
 ---
 {{CSSRef}}
 

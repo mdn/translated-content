@@ -1,16 +1,6 @@
 ---
 title: Initialize the framework
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-tags:
-  - Canvas
-  - HTML
-  - JavaScript
-  - Phaser
-  - 二维
-  - 入门
-  - 教程
-  - 游戏
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
 {{GamesSidebar}}
 

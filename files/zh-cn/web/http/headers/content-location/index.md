@@ -1,11 +1,6 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-tags:
-  - 内容协商
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/Content-Location
 ---
 {{HTTPSidebar}}
 

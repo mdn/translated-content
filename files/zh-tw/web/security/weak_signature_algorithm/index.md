@@ -1,7 +1,6 @@
 ---
 title: 弱簽章演算法
 slug: Web/Security/Weak_Signature_Algorithm
-translation_of: Web/Security/Weak_Signature_Algorithm
 ---
 ### 簽章演算法的重要性
 

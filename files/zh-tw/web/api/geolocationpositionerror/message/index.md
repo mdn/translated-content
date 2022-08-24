@@ -1,7 +1,6 @@
 ---
 title: PositionError.message
 slug: Web/API/GeolocationPositionError/message
-translation_of: Web/API/GeolocationPositionError/message
 ---
 {{APIRef("Geolocation API")}}
 

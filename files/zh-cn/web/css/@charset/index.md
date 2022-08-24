@@ -1,13 +1,6 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@charset
 ---
 {{ CSSRef }}
 
@@ -21,7 +14,7 @@ translation_of: Web/CSS/@charset
 
 1. 文件的开头的 [Unicode byte-order](https://zh.wikipedia.org/wiki/字节顺序标记) 字符值。
 2. 由 Content-Type：HTTP header 中的 charset 属性给出的值或用于提供样式表的协议中的等效值。
-3. `CSS` [@规则](https://developer.mozilla.org/zh-CN/docs/CSS/At-rule) `@charset`。
+3. `CSS` [@规则](/zh-CN/docs/CSS/At-rule) `@charset`。
 4. 使用参考文档定义的字符编码：{{ HTMLElement("link") }} 元素的 charset 属性。该方法在 HTML5 标准中已废除，无法使用。
 5. 假设文档是 UTF-8。
 

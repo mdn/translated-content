@@ -1,7 +1,6 @@
 ---
 title: RegExp.leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 ---
 {{JSRef}} {{non-standard_header}}
 

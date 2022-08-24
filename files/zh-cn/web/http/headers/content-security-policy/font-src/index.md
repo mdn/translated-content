@@ -1,13 +1,6 @@
 ---
 title: 'CSP: font-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
-tags:
-  - CSP
-  - HTTP
-  - 内容安全策略
-  - 参考
-  - 安全
-translation_of: Web/HTTP/Headers/Content-Security-Policy/font-src
 ---
 {{HTTPSidebar}}
 

@@ -1,12 +1,6 @@
 ---
 title: RegExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-tags:
-  - JavaScript
-  - Property
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 {{JSRef("Global_Objects", "RegExp")}}
 

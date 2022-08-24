@@ -1,7 +1,6 @@
 ---
 title: touchcancel
 slug: Web/API/Element/touchcancel_event
-translation_of: Web/API/Element/touchcancel_event
 ---
 {{APIRef}}
 

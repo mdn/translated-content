@@ -1,7 +1,6 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
 {{JSRef}}
 

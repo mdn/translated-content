@@ -1,10 +1,6 @@
 ---
 title: API
 slug: Glossary/API
-tags:
-  - API
-  - 術語表
-translation_of: Glossary/API
 ---
 一個 API (Application Programming Interface)是指存在于軟體程式中為軟體與其他項目，如其他軟體或硬體，實現互動的一系列功能和規則。
 

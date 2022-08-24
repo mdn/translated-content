@@ -1,7 +1,6 @@
 ---
 title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 ---
 {{JSRef}}
 

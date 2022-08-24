@@ -1,17 +1,6 @@
 ---
 title: search
 slug: Mozilla/Add-ons/WebExtensions/API/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - Reference
-  - Search
-  - Search Engines
-  - TopicStub
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/search
 ---
 {{AddonSidebar}}
 

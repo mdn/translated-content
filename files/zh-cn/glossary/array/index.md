@@ -1,11 +1,6 @@
 ---
 title: Array
 slug: Glossary/array
-tags:
-  - JavaScript
-  - programming
-  - 数组
-translation_of: Glossary/array
 ---
 数组对象是一个有序的数据（数据可以是 {{Glossary("primitive","原始类型")}} 或 {{Glossary("object","对象类型")}}）集合。相对于变量，数组可用于在一个变量中存储多个变量值。
 

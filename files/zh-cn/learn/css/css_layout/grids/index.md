@@ -1,20 +1,6 @@
 ---
 title: 网格
 slug: Learn/CSS/CSS_layout/Grids
-tags:
-  - CSS
-  - CSS 网格
-  - 初学者
-  - 学习
-  - 布局
-  - 引导
-  - 教程
-  - 文章
-  - 编码脚本
-  - 网格
-  - 网格框架
-  - 网格设计
-translation_of: Learn/CSS/CSS_layout/Grids
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 

@@ -1,11 +1,6 @@
 ---
 title: <output>
 slug: Web/HTML/Element/output
-tags:
-  - Element
-  - HTML5
-  - Web
-translation_of: Web/HTML/Element/output
 ---
 **HTML `<output>` 标签**表示计算或用户操作的结果。
 

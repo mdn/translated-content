@@ -1,10 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-tags:
-  - SharedArrayBuffer
-  - slice
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 ---
 {{JSRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - ECMAScript6
-  - JavaScript
-  - polyfill
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: <i>
 slug: Web/HTML/Element/i
-translation_of: Web/HTML/Element/i
 ---
 ## 概述
 

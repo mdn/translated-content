@@ -1,13 +1,6 @@
 ---
 title: 约束验证
 slug: Web/Guide/HTML/Constraint_validation
-tags:
-  - CSS
-  - Guide
-  - HTML5
-  - NeedsContent
-  - Selectors
-translation_of: Web/Guide/HTML/Constraint_validation
 ---
 创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而向用户指明错误可能会令人头痛。[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5) 引入了表单相关的一些新的机制：为{{ HTMLElement("input") }}元素和强制校验增加了一些新的语义类型，使得在客户端检查表单内容的工作变得容易。基本上，在填写字段时，通常这些约束都会被检查，而不需要额外的 JavaScript 代码进行校验； 对于更复杂的约束条件的校验可以尝试使用 HTML5 [Constraint Validation API](/zh-CN/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation_API).
 
@@ -239,7 +232,7 @@ Basically, the idea is to trigger JavaScript on some form field event (like **on
 
 ### Constraint combining several fields: Postal code validation
 
-The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F- `in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
+The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
 
 > **备注：**This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
 

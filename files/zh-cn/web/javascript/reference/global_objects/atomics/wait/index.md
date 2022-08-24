@@ -1,12 +1,6 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ---
 {{JSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - JavaScript
-  - 實驗中
-  - 方法
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
 {{JSRef}} {{SeeCompatTable}}
 

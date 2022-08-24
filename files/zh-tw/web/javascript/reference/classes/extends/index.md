@@ -1,7 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 {{jsSidebar("Classes")}}
 

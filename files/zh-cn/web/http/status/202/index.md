@@ -1,10 +1,6 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Status/202
-tags:
-  - 响应成功
-  - 状态码
-translation_of: Web/HTTP/Status/202
 ---
 {{HTTPSidebar}}
 

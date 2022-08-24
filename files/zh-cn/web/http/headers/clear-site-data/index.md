@@ -1,11 +1,6 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
-tags:
-  - HTTP
-  - http 头
-  - 头
-translation_of: Web/HTTP/Headers/Clear-Site-Data
 ---
 {{HTTPSidebar}}
 

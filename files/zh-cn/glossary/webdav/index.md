@@ -1,10 +1,6 @@
 ---
 title: WebDAV
 slug: Glossary/WebDAV
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/WebDAV
 ---
 **WebDAV** (_Web Distributed Authoring and Versioning_) 是一种允许 web 开发者使用客户端远程更新内容的 {{Glossary("HTTP")}} 扩展。
 

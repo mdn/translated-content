@@ -1,15 +1,6 @@
 ---
 title: 查找并解决 JavaScript 代码的错误
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - JavaScript
-  - 初学者
-  - 开发者工具
-  - 指导教程
-  - 文章
-  - 调试
-  - 错误
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 

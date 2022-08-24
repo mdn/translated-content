@@ -1,11 +1,6 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-tags:
-  - 响应
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/409
 ---
 {{HTTPSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
 {{JSRef}}
 

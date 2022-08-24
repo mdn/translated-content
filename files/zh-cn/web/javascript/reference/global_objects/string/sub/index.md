@@ -1,10 +1,6 @@
 ---
 title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
-tags:
-  - String.sub()
-  - 已废弃
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 {{JSRef}} {{deprecated_header}}
 

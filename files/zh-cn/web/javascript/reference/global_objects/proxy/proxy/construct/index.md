@@ -1,7 +1,6 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct
 ---
 {{JSRef}}

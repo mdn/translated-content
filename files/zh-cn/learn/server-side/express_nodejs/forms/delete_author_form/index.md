@@ -1,7 +1,6 @@
 ---
 title: 删除作者表单
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
 此子文档显示，如何定义页面以删除`Author`对象。
 

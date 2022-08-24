@@ -1,7 +1,6 @@
 ---
 title: 图案
 slug: Web/SVG/Tutorial/Patterns
-translation_of: Web/SVG/Tutorial/Patterns
 ---
 {{ PreviousNext("SVG/Tutorial/Gradients", "SVG/Tutorial/Texts") }}
 

@@ -50,10 +50,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 {{EmbedLiveSample("Example", "100%", 30)}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}

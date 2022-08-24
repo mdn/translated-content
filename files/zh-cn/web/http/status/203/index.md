@@ -1,12 +1,6 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
-tags:
-  - 代理服务器
-  - 响应状态码
-  - 警告码
-  - 转换
-translation_of: Web/HTTP/Status/203
 ---
 {{HTTPSidebar}}
 

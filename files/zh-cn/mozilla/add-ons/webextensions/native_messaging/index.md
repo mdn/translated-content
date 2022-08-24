@@ -1,7 +1,6 @@
 ---
 title: 与本地应用通信
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
 {{AddonSidebar}}
 
@@ -308,4 +307,4 @@ while True:
 
 ## 与 Chrome 的兼容问题
 
-{{Page("Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities", "Native_messaging")}}
+浏览器之间存在许多影响 Web 扩展与本地应用通信的差异，包括到本地应用的参数传递、清单文件的位置，等等。这些差异在 [Chrome 不兼容情况 > Native messaging](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging) 进行了讨论。

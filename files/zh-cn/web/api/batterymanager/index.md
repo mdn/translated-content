@@ -32,9 +32,7 @@ BatteryManager 接口提供方法获取系统电量。
 
 ## 方法
 
-继承自{{domxref("EventTarget")}}:
-
-{{page("/zh-CN/docs/Web/API/EventTarget","Methods")}}
+_方法继承自其父接口_：{{domxref("EventTarget")}}。
 
 ## 规范
 
@@ -44,7 +42,7 @@ BatteryManager 接口提供方法获取系统电量。
 
 {{Compat("api.BatteryManager")}}
 
-## 其他
+## 参见
 
-- The [电池状态 API](/zh-CN/docs/Web/API/Battery_Status_API)
+- [电池状态 API](/zh-CN/docs/Web/API/Battery_Status_API)
 - {{domxref("navigator.getBattery")}}

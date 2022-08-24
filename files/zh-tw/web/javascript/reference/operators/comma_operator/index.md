@@ -1,7 +1,6 @@
 ---
 title: 逗號運算子
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
 {{jsSidebar("Operators")}}
 

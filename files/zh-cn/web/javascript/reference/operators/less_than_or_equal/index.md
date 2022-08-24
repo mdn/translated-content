@@ -1,7 +1,6 @@
 ---
 title: 小于或等于
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
-translation_of: Web/JavaScript/Reference/Operators/Less_than_or_equal
 ---
 {{jsSidebar("Operators")}}
 

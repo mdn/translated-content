@@ -1,14 +1,6 @@
 ---
 title: 闭包
 slug: Web/JavaScript/Closures
-tags:
-  - ES5
-  - JavaScript
-  - 中级的
-  - 手册
-  - 指南
-  - 闭包
-translation_of: Web/JavaScript/Closures
 ---
 {{jsSidebar("Intermediate")}}
 

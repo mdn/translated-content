@@ -1,7 +1,6 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/Input/color
-translation_of: Web/HTML/Element/input/color
 ---
 **`<input type="color">`元素**是{{HTMLElement("input")}}元素中的一个特定种类，用来创建一个允许用户使用颜色选择器，或输入兼容 CSS 语法的颜色代码的区域。（不支持 Alpha 通道）
 
@@ -11,7 +10,7 @@ translation_of: Web/HTML/Element/input/color
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流动区域</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_listed">列表</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_submittable">可提交</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_resettable">可重置</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form-associated_content">表单相关元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>, 可标记元素，可触摸元素。</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流动区域</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_listed">列表</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_submittable">可提交</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_resettable">可重置</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form-associated_content">表单相关元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>, 可标记元素，可触摸元素。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>

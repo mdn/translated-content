@@ -1,15 +1,6 @@
 ---
 title: Window.sidebar
 slug: Web/API/Window/sidebar
-tags:
-  - DOM
-  - NeedsTranslation
-  - Non-standard
-  - Property
-  - Reference
-  - TopicStub
-  - Window
-translation_of: Web/API/Window/sidebar
 ---
 {{APIRef}} {{Non-standard_header}}
 

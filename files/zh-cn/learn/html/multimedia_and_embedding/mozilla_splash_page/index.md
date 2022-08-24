@@ -1,15 +1,6 @@
 ---
 title: Mozilla 醒目页面
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - 初学者
-  - 响应式
-  - 图像
-  - 多媒体
-  - 嵌入
-  - 视频
-  - 评估
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

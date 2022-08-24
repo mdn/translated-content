@@ -1,11 +1,6 @@
 ---
 title: HTTP 条件请求
 slug: Web/HTTP/Conditional_requests
-tags:
-  - HTTP 协议
-  - 指南
-  - 条件式请求
-translation_of: Web/HTTP/Conditional_requests
 ---
 {{HTTPSidebar}}
 

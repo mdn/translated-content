@@ -1,7 +1,6 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
-translation_of: Web/CSS/scroll-snap-destination
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

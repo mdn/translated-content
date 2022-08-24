@@ -1,10 +1,6 @@
 ---
 title: 相邻兄弟选择器
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - Selectors
-translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
 {{CSSRef("Selectors")}}
 

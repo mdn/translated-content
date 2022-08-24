@@ -1,11 +1,6 @@
 ---
 title: ':nth-child'
 slug: Web/CSS/:nth-child
-tags:
-  - ':nth-child'
-  - CSS
-  - CSS 伪类
-translation_of: Web/CSS/:nth-child
 ---
 {{CSSRef}}
 

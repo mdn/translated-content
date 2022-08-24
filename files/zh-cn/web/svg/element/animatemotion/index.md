@@ -1,11 +1,6 @@
 ---
 title: animateMotion
 slug: Web/SVG/Element/animateMotion
-tags:
-  - SVG
-  - SVG 动画
-  - 元素
-translation_of: Web/SVG/Element/animateMotion
 ---
 {{SVGRef}}
 

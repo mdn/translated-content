@@ -1,10 +1,6 @@
 ---
 title: ':nth-last-of-type'
 slug: Web/CSS/:nth-last-of-type
-tags:
-  - CSS
-  - CSS 伪类
-translation_of: Web/CSS/:nth-last-of-type
 ---
 {{CSSRef}}
 

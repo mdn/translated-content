@@ -1,7 +1,6 @@
 ---
 title: ':last-of-type'
 slug: Web/CSS/:last-of-type
-translation_of: Web/CSS/:last-of-type
 ---
 {{ CSSRef() }}
 

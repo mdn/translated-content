@@ -1,7 +1,6 @@
 ---
 title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
 {{AddonSidebar()}}
 
