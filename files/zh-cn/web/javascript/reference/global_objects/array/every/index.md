@@ -22,7 +22,7 @@ every((element, index, array) => { /* … */ } )
 every(callbackFn)
 every(callbackFn, thisArg)
 
-// 内联函数
+// 内联回调函数
 every(function(element) { /* … */ })
 every(function(element, index) { /* … */ })
 every(function(element, index, array){ /* … */ })
