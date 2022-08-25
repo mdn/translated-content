@@ -384,7 +384,7 @@ if(test.type === 'text') {
 }
 
 function populateDays(month) {
-  // delete the current set of &lt;option&gt; elements out of the
+  // delete the current set of <option> elements out of the
   // day <select>, ready for the next set to be injected
   while(daySelect.firstChild){
     daySelect.removeChild(daySelect.firstChild);
@@ -405,8 +405,8 @@ function populateDays(month) {
   isLeap ? dayNum = 29 : dayNum = 28;
   }
 
-  // <select> に正しい数の新しい &lt;option&gt; 要素を挿入
-  for(i = 1; i &lt;= dayNum; i++) {
+  // <select> に正しい数の新しい <option> 要素を挿入
+  for(i = 1; i <= dayNum; i++) {
     var option = document.createElement('option');
     option.textContent = i;
     daySelect.appendChild(option);
@@ -442,7 +442,7 @@ function populateYears() {
   var year = date.getFullYear();
 
   // 今年から 100 年前までの年が <select> で選択できるようにする
-  for(var i = 0; i &lt;= 100; i++) {
+  for(var i = 0; i <= 100; i++) {
     var option = document.createElement('option');
     option.textContent = year-i;
     yearSelect.appendChild(option);
