@@ -35,11 +35,11 @@ _从它的父元素 {{domxref("ExtendableEvent")}} 继承方法_。
 - {{domxref("FetchEvent.respondWith()")}}
   - : 阻止浏览器的默认 fetch 操作，并且由你自己提供一个响应（可以是一个 promise）。
 - {{domxref("ExtendableEvent.waitUntil()")}}
-  - : 延长事件的生命周期。用于通知浏览器任务超出响应回复时间，仍然在解决，例如流和缓存。
+  - : 延长事件的生命周期。用于通知浏览器延长超出响应回复时间的任务，例如流和缓存。
 
 ## 示例
 
-fetch 事件对非 GET 请求使用浏览器默认值。对于 GET 请求它试图在缓存中匹配，然后发送到网络。如果在缓存中匹配成功，它将异步更新缓存，以供下次使用。
+fetch 事件对非 GET 请求使用浏览器默认值。对于 GET 请求它试图在缓存中匹配，如果缓存中没有匹配，则使用网络中的。如果在缓存中匹配成功，它将异步更新缓存，以供下次使用。
 
 ```js
 self.addEventListener("fetch", (event) => {
