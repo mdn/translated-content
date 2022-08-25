@@ -36,7 +36,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
       </td>
       <td>
         <p>
-          Une description textuelle peut fonctionner, on peut aussi écrire un tableau de données accessible (voir <a href="/fr/docs/Learn/HTML/Tables/Advanced">Fonctionnalités avancées des tableaux HTML et accessibilité</a>). Voir <a href="/fr/docs/Learn/Accessibility/HTML#autres_mécanismes_alternatifs_de_texte">la section sur les autres mécanismes alternatifs au texte</a> pour un argument contre l'utilisation de `longdesc`.
+          Une description textuelle peut fonctionner, on peut aussi écrire un tableau de données accessible (voir <a href="/fr/docs/Learn/HTML/Tables/Advanced">Fonctionnalités avancées des tableaux HTML et accessibilité</a>). Voir <a href="/fr/docs/Learn/Accessibility/HTML#autres_mécanismes_alternatifs_de_texte">la section sur les autres mécanismes alternatifs au texte</a> pour un argument contre l'utilisation de <code>longdesc</code>.
         </p>
       </td>
     </tr>
@@ -64,7 +64,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
       </td>
       <td>
         <p>
-          Les images décoratives devraient être implémentées à l'aide des images d'arrière-plan CSS (voir <a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Arrières-plans en CSS</a>). Si vous devez inclure une image décorative avec <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>, fournissez un texte alternatif explicitement vide avec l'attribut <code>alt</code> (`alt=""`). Sinon, les lecteurs d'écran pourraient vocaliser le chemin du fichier, etc.
+          Les images décoratives devraient être implémentées à l'aide des images d'arrière-plan CSS (voir <a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Arrières-plans en CSS</a>). Si vous devez inclure une image décorative avec <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>, fournissez un texte alternatif explicitement vide avec l'attribut <code>alt</code> (<code>alt=""</code>). Sinon, les lecteurs d'écran pourraient vocaliser le chemin du fichier, etc.
         </p>
         <p>
           Si vous incluez des vidéos ou des sons en arrière-plan avec une lecture automatique, assurez-vous qu'ils soient aussi discrets que possible et qu'ils ne puissent pas être confondus avec le contenu essentiel de la page. Un contrôle pour les suspendre doit être disponible. Idéalement, on évitera simplement d'inclure ce type de contenu.
@@ -74,7 +74,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
   </tbody>
 </table>
 
-> **Note :** Voir ausi [la description du WCAG pour la règle 1.1 sur les alternatives textuelles](https://www.w3.org/Translations/WCAG21-fr/#text-alternatives).
+> **Note :** Voir aussi [la description du WCAG pour la règle 1.1 sur les alternatives textuelles](https://www.w3.org/Translations/WCAG21-fr/#text-alternatives).
 
 ## Règle 1.2 — Fournir des alternatives textuelles aux médias temporels
 
@@ -161,7 +161,7 @@ Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusie
             Les libellés textuels et les éléments de formulaire auxquels ils correspondent. Cette association est construite de façon non-ambigüe avec l'élément <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a>, qui pourra être utilisé par les lecteurs d'écran.
           </li>
           <li>
-            Inclure des textes alternatifs pour les images. Le contenu sous forme d'image devrait avoir un texte disponible qui décrit de façon claire le contenu de l'image et ce texte doit pouvoir être associé à l'image par un programme informatique (par exemple avec le texte porté par l'attribut `alt`), ou pouvoir facilement y être associé (la description est par exemple à côté de l'image). De cette façon, on peut connaître l'intégralité du contenu, même sans pouvoir voir l'image.
+            Inclure des textes alternatifs pour les images. Le contenu sous forme d'image devrait avoir un texte disponible qui décrit de façon claire le contenu de l'image et ce texte doit pouvoir être associé à l'image par un programme informatique (par exemple avec le texte porté par l'attribut <code>alt</code>), ou pouvoir facilement y être associé (la description est par exemple à côté de l'image). De cette façon, on peut connaître l'intégralité du contenu, même sans pouvoir voir l'image.
           </li>
           <li>
             Pour les listes, si l'ordre des éléments est important, on utilisera une liste ordonnée (<a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a>).
@@ -245,7 +245,7 @@ Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusie
   </tbody>
 </table>
 
-> **Note:** Voir aussi [la description du WCAG pour la règle 1.3 sur le contenu adaptable, qui peut être présenté de différentes façons sans perte d'information ou de structure](https://www.w3.org/Translations/WCAG21-fr/#adaptable).
+> **Note :** Voir aussi [la description du WCAG pour la règle 1.3 sur le contenu adaptable, qui peut être présenté de différentes façons sans perte d'information ou de structure](https://www.w3.org/Translations/WCAG21-fr/#adaptable).
 
 ## Règle 1.4 — Faciliter la perception visuelle et auditive du contenu, notamment en séparant le premier plan de l'arrière-plan
 
@@ -436,7 +436,7 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
             il peut être survolé (le contenu supplémentaire ne disparaît pas lorsque le pointeur est au-dessus de celui-ci)
           </li>
           <li>
-            il est persistent (le contenu supplémentaire ne disparaît pas sans action de l'utilisatrice ou de l'utilisateur)
+            il est persistant (le contenu supplémentaire ne disparaît pas sans action de l'utilisatrice ou de l'utilisateur)
           </li>
         </ul>
       </td>
