@@ -8,9 +8,9 @@ slug: Web/API/FetchEvent/respondWith
 
 在大多数情况下，你可以提供接收方理解的任何形式的响应。例如，如果是由 {{HTMLElement('img')}} 初始化的请求，起响应主体必须是图像数据。出于安全考虑，这里有一些全局的规则：
 
-- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`no-cors`”，你才能返回 {{domxref("Response.type", "type")}} 为“`opaque`” 的 {{domxref("Response")}} 对象。
-- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`manual`”，你才能返回 {{domxref("Response.type","type")}} 为“`opaqueredirect`” 的 {{domxref("Response")}} 对象。
-- 如果 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`same-origin`”，你无法返回 {{domxref("Response.type","type")}} 为“`cors`” 的 {{domxref("Response")}} 对象。
+- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`no-cors`”，你才能返回 {{domxref("Response.type", "type")}} 为“`opaque`”的 {{domxref("Response")}} 对象。
+- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`manual`”，你才能返回 {{domxref("Response.type","type")}} 为“`opaqueredirect`”的 {{domxref("Response")}} 对象。
+- 如果 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`same-origin`”，你无法返回 {{domxref("Response.type","type")}} 为“`cors`”的 {{domxref("Response")}} 对象。
 
 ### 指定资源的最终 URL
 
@@ -52,7 +52,7 @@ respondWith(response)
 
 ## 示例
 
-这个 fetch 事件尝试从 cache API 返回一个响应，否则回落至网络。
+这个 fetch 事件尝试从 cache API 返回一个响应，否则回落至网络请求。
 
 ```js
 addEventListener('fetch', (event) => {
