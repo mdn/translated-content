@@ -58,7 +58,7 @@ self.addEventListener("fetch", (event) => {
 
 ## 参见
 
-- [使用 Service Workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker 基础代码示例](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
