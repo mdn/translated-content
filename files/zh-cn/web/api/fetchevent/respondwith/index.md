@@ -80,7 +80,7 @@ addEventListener('fetch', (event) => {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
