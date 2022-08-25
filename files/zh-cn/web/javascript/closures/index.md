@@ -208,7 +208,7 @@ console.log(Counter2.value()); /* logs 0 */
 
 ## 在循环中创建闭包：一个常见错误
 
-在 ECMAScript 2015 引入 [`let` 关键字](/en-US/docs/JavaScript/Reference/Statements/let) 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：
+在 ECMAScript 2015 引入 [`let` 关键字](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：
 
 ```html
 <p id="help">Helpful notes will appear here</p>
@@ -242,11 +242,11 @@ setupHelp();
 
 {{JSFiddleEmbed("https://jsfiddle.net/51brm6ps/", "", 200)}}
 
-数组 `helpText` 中定义了三个有用的提示信息，每一个都关联于对应的文档中的`input` 的 ID。通过循环这三项定义，依次为相应`input`添加了一个 `onfocus` 事件处理函数，以便显示帮助信息。
+数组 `helpText` 中定义了三个有用的提示信息，每一个都关联于对应的文档中的 `input` 的 ID。通过循环这三项定义，依次为相应 `input` 添加了一个 `onfocus` 事件处理函数，以便显示帮助信息。
 
-运行这段代码后，您会发现它没有达到想要的效果。无论焦点在哪个`input`上，显示的都是关于年龄的信息。
+运行这段代码后，您会发现它没有达到想要的效果。无论焦点在哪个 `input` 上，显示的都是关于年龄的信息。
 
-原因是赋值给 `onfocus` 的是闭包。这些闭包是由他们的函数定义和在 `setupHelp` 作用域中捕获的环境所组成的。这三个闭包在循环中被创建，但他们共享了同一个词法作用域，在这个作用域中存在一个变量 item。这是因为变量`item`使用 var 进行声明，由于变量提升，所以具有函数作用域。当`onfocus`的回调执行时，`item.help`的值被决定。由于循环在事件触发之前早已执行完毕，变量对象`item`（被三个闭包所共享）已经指向了`helpText`的最后一项。
+原因是赋值给 `onfocus` 的是闭包。这些闭包是由他们的函数定义和在 `setupHelp` 作用域中捕获的环境所组成的。这三个闭包在循环中被创建，但他们共享了同一个词法作用域，在这个作用域中存在一个变量 item。这是因为变量 `item` 使用 `var` 进行声明，由于变量提升，所以具有函数作用域。当 `onfocus` 的回调执行时，`item.help` 的值被决定。由于循环在事件触发之前早已执行完毕，变量对象 `item`（被三个闭包所共享）已经指向了 `helpText` 的最后一项。
 
 解决这个问题的一种方案是使用更多的闭包：特别是使用前面所述的函数工厂：
 
@@ -308,51 +308,51 @@ function setupHelp() {
 setupHelp();
 ```
 
-如果不想使用过多的闭包，你可以用 ES2015 引入的 let 关键词：
+如果不想使用过多的闭包，你可以用 ES2015 引入的 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键词：
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById('help').textContent = help;
 }
 
 function setupHelp() {
-  var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+  const helpText = [
+    { id: 'email', help: 'Your e-mail address' },
+    { id: 'name', help: 'Your full name' },
+    { id: 'age', help: 'Your age (you must be over 16)' },
+  ];
 
-  for (var i = 0; i < helpText.length; i++) {
-    let item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+  for (let i = 0; i < helpText.length; i++) {
+    const item = helpText[i];
+    document.getElementById(item.id).onfocus = () => {
       showHelp(item.help);
-    }
+    };
   }
 }
 
 setupHelp();
 ```
 
-这个例子使用`let`而不是`var`，因此每个闭包都绑定了块作用域的变量，这意味着不再需要额外的闭包。
+这个例子使用 `const` 而不是 `var`，因此每个闭包都绑定了块作用域的变量，这意味着不再需要额外的闭包。
 
-另一个可选方案是使用 `forEach()`来遍历`helpText`数组并给每一个[`<p>`](/zh-CN/docs/Web/HTML/Element/p)添加一个监听器，如下所示：
+另一个可选方案是使用 `forEach()` 来遍历 `helpText` 数组并给每一个 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 添加一个监听器，如下所示：
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById('help').textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: 'email', help: 'Your e-mail address' },
+    { id: 'name', help: 'Your full name' },
+    { id: 'age', help: 'Your age (you must be over 16)' },
+  ];
 
-  helpText.forEach(function(text) {
-    document.getElementById(text.id).onfocus = function() {
+  helpText.forEach(function (text) {
+    document.getElementById(text.id).onfocus = function () {
       showHelp(text.help);
-    }
+    };
   });
 }
 
@@ -389,10 +389,10 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 MyObject.prototype = {
-  getName: function() {
+  getName() {
     return this.name;
   },
-  getMessage: function() {
+  getMessage() {
     return this.message;
   }
 };
