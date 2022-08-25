@@ -20,7 +20,7 @@ _从它的祖先 {{domxref("Event")}} 继承熟悉_。
 - {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : 发起 fetch 的同源{{domxref("Client", "客户端")}}的 {{domxref("Client.id", "id")}}。
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
-  - : 一个 {{jsxref("Promise")}}，可能兑现为 {{domxref("Response")}} 或 `undefined`，如果该 fetch 没有导航或者 [navigation preload](/zh-CN/docs/Web/API/NavigationPreloadManager) 没有触发，则是 undefined。
+  - : 一个兑现为 {{domxref("Response")}} 的 {{jsxref("Promise")}}，如果该 fetch 没有导航或者 [navigation preload](/zh-CN/docs/Web/API/NavigationPreloadManager) 未启用，则是 `undefined`。
 - {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
   - : 页面导航期间正被替换的{{domxref("Client", "客户端")}}的 {{domxref("Client.id", "id")}}。
 - {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
@@ -35,7 +35,7 @@ _从它的父元素 {{domxref("ExtendableEvent")}} 继承方法_。
 - {{domxref("FetchEvent.respondWith()")}}
   - : 阻止浏览器的默认 fetch 操作，并且由你自己提供一个响应（可以是一个 promise）。
 - {{domxref("ExtendableEvent.waitUntil()")}}
-  - : 延长事件的生命周期。用于通知浏览器超出响应返回范围的任务，例如流和缓存。
+  - : 延长事件的生命周期。用于通知浏览器任务超出响应回复时间，仍然在解决，例如流和缓存。
 
 ## 示例
 
