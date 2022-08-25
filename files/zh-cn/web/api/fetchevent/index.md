@@ -33,7 +33,7 @@ _从它的祖先 {{domxref("Event")}} 继承熟悉_。
 _从它的父元素 {{domxref("ExtendableEvent")}} 继承方法_。
 
 - {{domxref("FetchEvent.respondWith()")}}
-  - : 阻止浏览器的默认 fetch 操作，并且由你自己提供一个响应（可以由 promise 包裹）。
+  - : 阻止浏览器的默认 fetch 操作，并且由你自己提供一个响应（可以是一个 promise）。
 - {{domxref("ExtendableEvent.waitUntil()")}}
   - : 延长事件的生命周期。用于通知浏览器超出响应返回范围的任务，例如流和缓存。
 
