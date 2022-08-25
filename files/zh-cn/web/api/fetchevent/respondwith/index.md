@@ -37,7 +37,7 @@ respondWith(response)
 ### 参数
 
 - `response`
-  - : 一个 {{domxref("Response")}} 或者 {{jsxref("Promise")}} 兑现后是一个 `Response`。否则，Fetch 返回一个网络错误。
+  - : 一个 {{domxref("Response")}} 或者 {{jsxref("Promise")}}（兑现为一个 `Response`）。否则，Fetch 返回一个网络错误。
 
 ### 返回值
 
