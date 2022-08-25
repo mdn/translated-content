@@ -22,7 +22,7 @@ _从它的祖先 {{domxref("Event")}} 继承熟悉_。
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : 一个 {{jsxref("Promise")}}，可能兑现为 {{domxref("Response")}} 或 `undefined`，如果该 fetch 没有导航或者 [navigation preload](/zh-CN/docs/Web/API/NavigationPreloadManager) 没有触发，则是 undefined。
 - {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
-  - : 页面导航期间正在替换的 {{domxref("Client", "客户端")}} 的 {{domxref("Client.id", "id")}}。
+  - : 页面导航期间正被替换的{{domxref("Client", "客户端")}}的 {{domxref("Client.id", "id")}}。
 - {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
   - : 页面导航期间，替换上一个 {{domxref("Client", "客户端")}} 的 {{domxref("Client.id", "id")}}。
 - {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
