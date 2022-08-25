@@ -15,7 +15,7 @@ slug: Web/API/FetchEvent
 
 ## 属性
 
-_从它的祖先 {{domxref("Event")}} 继承熟悉_。
+_从它的祖先 {{domxref("Event")}} 继承属性_。
 
 - {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : 发起 fetch 的同源{{domxref("Client", "客户端")}}的 {{domxref("Client.id", "id")}}。
@@ -39,7 +39,7 @@ _从它的父元素 {{domxref("ExtendableEvent")}} 继承方法_。
 
 ## 示例
 
-fetch 事件对非 GET 请求使用浏览器默认值。对于 GET 请求它试图在缓存中匹配，如果缓存中没有匹配，则使用网络中的。如果在缓存中匹配成功，它将异步更新缓存，以供下次使用。
+fetch 事件对非 GET 请求使用浏览器默认值。对于 GET 请求它试图在缓存中匹配，如果缓存中没有匹配，则回落到网络请求。如果在缓存中匹配成功，它将异步更新缓存，以供下次使用。
 
 ```js
 self.addEventListener("fetch", (event) => {
