@@ -12,7 +12,7 @@ translation_of: Web/API/CanvasPattern/setTransform
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-**`CanvasPattern`\*\***`.setTransform()`\*\* メソッドは、パターンの変換マトリックスとして {{domxref("SVGMatrix")}} オブジェクトを使用し、パターンにこれを実行します。
+**`CanvasPattern.setTransform()`** メソッドは、パターンの変換マトリックスとして {{domxref("SVGMatrix")}} オブジェクトを使用し、パターンにこれを実行します。
 
 ## 構文
 

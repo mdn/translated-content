@@ -8,7 +8,7 @@ translation_of: Web/API/Performance_Timeline/Using_Performance_Timeline
 ---
 {{DefaultAPISidebar("Performance Timeline API")}}
 
-**[パフォーマンスタイムライン](https://w3c.github.io/performance-timeline/)**標準は、アプリケーション内でクライアント側の待ち時間の測定をサポートするための {{domxref("Performance")}} インターフェイスへの拡張を定義します。この規格には、特定のパフォーマンスイベントが発生したときにアプリケーションに通知することを可能にするインターフェイスも含まれています。同時に、これらのインターフェイスを使用してアプリケーションのパフォーマンスボトルネックを特定することができます。
+**[パフォーマンスタイムライン](https://w3c.github.io/performance-timeline/)** 標準は、アプリケーション内でクライアント側の待ち時間の測定をサポートするための {{domxref("Performance")}} インターフェイスへの拡張を定義します。この規格には、特定のパフォーマンスイベントが発生したときにアプリケーションに通知することを可能にするインターフェイスも含まれています。同時に、これらのインターフェイスを使用してアプリケーションのパフォーマンスボトルネックを特定することができます。
 
 ## Performance 拡張
 

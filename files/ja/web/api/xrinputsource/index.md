@@ -51,7 +51,7 @@ _`XRInputSource` インターフェイスはメソッドを定義しません。
 デバイスがそれが向けられている方向を示す場合、これは**ターゲット光線**（target ray）を使用して行われます。 これは、デバイスの位置から、デバイスが向けられている方向に外側に伸びる光線です。
 
 **ハンドコントローラから放出されるターゲット光線。**
-![ハンドコントローラーから放出されるターゲット光線を示すスクリーンショット](https://mdn.mozillademos.org/files/17089/example-target-ray.gif)
+![ハンドコントローラーから放出されるターゲット光線を示すスクリーンショット](example-target-ray.gif)
 
 デバイスにトリガーまたは他のスクイーズ可能な入力（ユーザーが拳を握ったことを認識するハンドジェスチャーデバイスなど）が含まれている場合、そのアクションは**プライマリースクイーズアクション**（primary squeeze action）と呼ばれます。 プライマリースクイーズアクションは、オブジェクトをつかんだり、ツールや武器のトリガーを押したりするなど、実際のグリップアクションに対応している必要があります。 ユーザーがトリガーを押したりグリップを締め付けたりするなどしてスクイーズアクションが開始されると、{{domxref("XRSession.squeezestart_event", "squeezestart")}} イベントが `XRSession` に送信されます。 アクションが完了し、ユーザーがトリガーまたはグリップを放すと、{{domxref("XRSession.squeeze_event", "squeeze")}} イベントが送信されます。 この後に {{domxref("XRSession.squeezeend_event", "squeezeend")}} が続き、アクションが完了ではなく中止された場合にも送信されます。
 
@@ -63,7 +63,7 @@ _`XRInputSource` インターフェイスはメソッドを定義しません。
 
 各入力ソースには独自のローカル座標系があります。 これは、入力の座標系を世界座標系にマッピングするために使用する {{domxref("XRSpace")}} である {{domxref("XRInputSource.gripSpace", "gripSpace")}} プロパティによって記述されます。 次に、グリップ空間の座標系を使用してオブジェクトをレンダリングし、ユーザーの手に持っているように見せることができます。
 
-![GripSpace プロパティで定義された座標系を示す図](https://mdn.mozillademos.org/files/17215/xr-hand-axes.svg)
+![GripSpace プロパティで定義された座標系を示す図](xr-hand-axes.svg)
 
 入力ソースの座標系の詳細については、{{domxref("XRInputSource.gripSpace", "gripSpace")}} プロパティについて詳しく説明している記事を参照してください。
 
