@@ -389,7 +389,7 @@ Un opérateur arithmétique combine des opérandes numériques et renvoie une va
 1 / 2 === 1.0 / 2.0; // true
 ```
 
-En plus des opérations arithmétiques standard (`+`, `-`, `*`, `/`), JavaScript fournit les opérateurs arithmétiques suivants&nbsp;::
+En plus des opérations arithmétiques standard (`+`, `-`, `*`, `/`), JavaScript fournit les opérateurs arithmétiques suivants&nbsp;:
 
 <table class="fullwidth-table">
   <caption>
@@ -537,7 +537,7 @@ Les opérateurs de décalage sont listés dans le tableau suivant.
         Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la gauche. Les bits en trop sont abandonnés et des bits à 0 sont ajoutés sur la droite.
       </td>
       <td>
-        <code>9&lt;&lt;2</code> donne `36`, car `1001`, décalé de 2 bits à gauche vaut `100100` en binaire, ce qui correspond à `36` en décimal.
+        <code>9&lt;&lt;2</code> donne <code>36</code>, car <code>1001</code>, décalé de 2 bits à gauche vaut <code>100100</code> en binaire, ce qui correspond à <code>36</code> en décimal.
       </td>
     </tr>
     <tr>
@@ -548,7 +548,7 @@ Les opérateurs de décalage sont listés dans le tableau suivant.
         Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la droite. Les bits en trop à droite sont abandonnés. Des copies du bit le plus à gauche sont ajoutés sur la gauche.
       </td>
       <td>
-        <code>9>>2</code> donne `2`, car `1001` décalé de 2 bits à droite vaut `10` en binaire, ce qui correspond à `2` en décimal. De même, <code>-9>>2</code> donne `-3`, car le signe est conservé.
+        <code>9>>2</code> donne <code>2</code>, car <code>1001</code> décalé de 2 bits à droite vaut <code>10</code> en binaire, ce qui correspond à <code>2</code> en décimal. De même, <code>-9>>2</code> donne <code>-3</code>, car le signe est conservé.
       </td>
     </tr>
     <tr>
@@ -559,7 +559,7 @@ Les opérateurs de décalage sont listés dans le tableau suivant.
         Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la droite. Les bits en trop à droite sont abandonnés. Des bits à zéro sont ajoutés sur la gauche.
       </td>
       <td>
-        <code>19>>>2</code> donne `4`, car `10011` décalé de deux bits à droite devient `100` en binaire, ce qui vaut `4` en décimal. Pour les valeurs positives, le décalage à droite avec remplissage à zéro et le décalage à droite avec propagation du signe fourniront le même résultat.
+        <code>19>>>2</code> donne <code>4</code>, car <code>10011</code> décalé de deux bits à droite devient <code>100</code> en binaire, ce qui vaut <code>4</code> en décimal. Pour les valeurs positives, le décalage à droite avec remplissage à zéro et le décalage à droite avec propagation du signe fourniront le même résultat.
       </td>
     </tr>
   </tbody>
@@ -948,7 +948,7 @@ function valider(obj, min, max) {
 On peut appeler `valider()` pour un élément de formulaire sur le gestionnaire d'évènement `onChange` en utilisant `this` afin de passer le contrôle du formulaire&nbsp;:
 
 ```html
-<p>Enter a number between 18 and 99:</p>
+<p>Saisissez un nombre entre 18 et 99 :</p>
 <input type="text" name="age" size=3 onChange="valider(this, 18, 99);">
 ```
 
