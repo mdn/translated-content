@@ -31,7 +31,7 @@ _Also inherits properties from: {{DOMxRef("Element")}}, {{DOMxRef("HTMLOrForeign
 
 ## メソッド
 
-*`SVGElement` *インタフェースは、追加のメソッドを何も提供しませんが、親から、すなわち _{{domxref("Element")}},_ _{{DOMxRef("HTMLOrForeignElement")}}_ *から、*メソッドを継承しています。
+_`SVGElement` インタフェースは、追加のメソッドを何も提供しませんが、親から、すなわち {{domxref("Element")}}, {{DOMxRef("HTMLOrForeignElement")}} から、メソッドを継承しています。_
 
 ## イベント
 

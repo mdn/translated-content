@@ -19,7 +19,7 @@ translation_of: Web/API/TextDecoder
 
 ### 型付き配列でのテキスト表現
 
-この例では、中国語/日本語の文字 ![](https://mdn.mozillademos.org/files/16663/2019-05-21_191907.png) を、異なる 5 種類の型付き配列、 {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Int32Array")}} で表します。
+この例では、中国語/日本語の文字 ![](2019-05-21_191907.png) を、異なる 5 種類の型付き配列、 {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Int32Array")}} で表します。
 
 ```js
 let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'

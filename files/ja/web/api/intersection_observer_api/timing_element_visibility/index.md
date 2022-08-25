@@ -20,7 +20,9 @@ translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 
 始めましょう！
 
-## サイト構造：HTML
+## サイトの構築
+
+### サイト構造：HTML
 
 The site's structure is not too complicated. We'll be using [CSS Grid](/ja/docs/Web/CSS/CSS_Grid_Layout) to style and lay out the site, so we can be pretty straightforward here:
 
@@ -50,11 +52,11 @@ This is the framework for the entire site. At the top is the site's header regio
 
 Finally comes the main body. We start with an empty {{HTMLElement("main")}} element here. This box will be populated using script later.
 
-## CSS によるサイトのスタイル設定
+### CSS によるサイトのスタイル設定
 
 With the structure of the site defined, we turn to the styling for the site. Let's look at the style for each component of the page individually.
 
-### 基礎
+#### 基礎
 
 We provide styles for the {{HTMLElement("body")}} and {{HTMLElement("main")}} elements to define the site's background as well as the grid the various parts of the site will be placed in.
 
@@ -78,11 +80,11 @@ The site's {{HTMLElement("body")}} is configured here to use one of a number of 
 
 The wrapper establishes a CSS grid with two columns and two rows. The first column (sized automatically based on its content) is used for the sidebar and the second column (which will be used for body content) is sized to be at least the width of the contents of the column and at most all remaining available space.
 
-The first row will be used specially for the site header. The rows are sized the same way as the columns: the first one is automatically sized and the one uses the remaining space, but at least enough space to provide room for all elements within it.
+The first row will be used specially for the site header. The rows are sized the same way as the columns: the first one is automatically sized and the second one uses the remaining space, but at least enough space to provide room for all elements within it.
 
 The wrapper's width is fixed at 700px so that it will fit in the available space when presented inline on MDN below.
 
-### ヘッダー
+#### ヘッダー
 
 The header is fairly simple, since for this example all it contains is some text. Its style looks like this:
 
@@ -96,7 +98,7 @@ header {
 
 {{cssxref("grid-row")}} is set to 1, since we want the header to be placed in the top row of the site's grid. More interesting is our use of {{cssxref("grid-column")}} here; here we specify that we want the column to start in the first column and ends in the first column past the last grid line—in other words, the header spans across all of the columns within the grid. Perfect for our needs.
 
-### サイドバー
+#### サイドバー
 
 Our sidebar is used to present links to other pages on the site. None of them work in our example here, but they exist to help with the presentation of a blog-like experience. The sidebar is represented using an {{HTMLElement("aside")}} element, and is styled as follows:
 
@@ -123,7 +125,7 @@ aside ul li a {
 
 The most important thing to note here is that the {{cssxref("grid-column")}} is set to 1, to place the sidebar on the left-hand side of the screen. If you change this to -1, it will appear on the right (although some other elements will need some adjustments made to their margins to get the spacing just right). The {{cssxref("grid-row")}} is set to 2, to place it alongside the site body.
 
-### コンテンツ本体
+#### コンテンツ本体
 
 Speaking of the site's body: the main content of the site is kept in a {{HTMLElement("main")}} element. The following style is applied to that:
 
@@ -139,7 +141,7 @@ main {
 
 The primary feature here is that the grid position is set to place the body content in column 2, row 2.
 
-### 記事
+#### 記事
 
 Each article is contained in an {{HTMLElement("article")}} element, styled like this:
 
@@ -160,7 +162,7 @@ article h2 {
 
 This creates article boxes with a white background which float atop the blue background, with a small margin around the article. Every article which isn't the last item in the container has an 8px bottom margin to space things apart.
 
-### 広告
+#### 広告
 
 Finally, the ads have the following initial styling. Individual ads may customize the style somewhat, as we'll see later.
 
@@ -196,7 +198,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
 
 There's nothing magic in here. It's fairly basic CSS.
 
-## JavaScript と連携させる
+### JavaScript と連携させる
 
 That brings us to the JavaScript code which makes everything work. Let's start with the global variables:
 
@@ -204,7 +206,7 @@ That brings us to the JavaScript code which makes everything work. Let's start w
 let contentBox;
 
 let nextArticleID = 1;
-let visibleAds = new Set();
+const visibleAds = new Set();
 let previouslyVisibleAds = null;
 
 let adObserver;
@@ -224,7 +226,7 @@ These are used as follows:
 - `adObserver`
   - : Will hold our {{domxref("IntersectionObserver")}} used to track the intersection between the ads and the `<main>` element's bounds.
 - `refreshIntervalID`
-  - : Used to store the interval ID returned by {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
+  - : Used to store the interval ID returned by {{domxref("setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
 
 ### セットアップ
 
@@ -238,7 +240,7 @@ function startup() {
 
   document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
-  let observerOptions = {
+  const observerOptions = {
     root: null,
     rootMargin: "0px",
     threshold: [0.0, 0.75]
@@ -248,11 +250,11 @@ function startup() {
                     observerOptions);
 
   buildContents();
-  refreshIntervalID = window.setInterval(handleRefreshInterval, 1000);
+  refreshIntervalID = setInterval(handleRefreshInterval, 1000);
 }
 ```
 
-First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the {{event("visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
+First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
 
 Next we set up the options for the {{domxref("IntersectionObserver")}} which will monitor target elements (ads, in our case) for intersection changes relative to the document. The options are configured to watch for intersections with the document's viewport (by setting `root` to `null`). We have no margins to extend or contract the intersection root's rectangle; we want to match the boundaries of the document's viewport exactly for intersection purposes. And the `threshold` is set to an array containing the values 0.0 and 0.75; this will cause our callback to execute whenever a targeted element becomes completely obscured or first starts to become unobscured (intersection ratio 0.0) or passes through 75% visible in either direction (intersection ratio 0.75).
 
@@ -264,7 +266,7 @@ Finally, we set up an interval which triggers once a second to handle any necess
 
 ### ドキュメントの可視性の変更の処理
 
-Let's take a look at the handler for the {{event("visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/ja/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
+Let's take a look at the handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
 
 ```js
 function handleVisibilityChange() {
@@ -272,13 +274,13 @@ function handleVisibilityChange() {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
       visibleAds = [];
-      previouslyVisibleAds.forEach(function(adBox) {
+      previouslyVisibleAds.forEach((adBox) => {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;
       });
     }
   } else {
-    previouslyVisibleAds.forEach(function(adBox) {
+    previouslyVisibleAds.forEach((adBox) => {
       adBox.dataset.lastViewStarted = performance.now();
     });
     visibleAds = previouslyVisibleAds;
@@ -299,8 +301,8 @@ Once per pass through the browser's event loop, each {{domxref("IntersectionObse
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
-    let adBox = entry.target;
+  entries.forEach((entry) => {
+    const adBox = entry.target;
 
     if (entry.isIntersecting) {
       if (entry.intersectionRatio >= 0.75) {
@@ -323,24 +325,24 @@ If the ad has transitioned to the not-intersecting state, we remove the ad from 
 
 ### 定期的なアクションの処理
 
-Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
+Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
 
 ```js
 function handleRefreshInterval() {
-  let redrawList = [];
+  const redrawList = [];
 
-  visibleAds.forEach(function(adBox) {
-    let previousTime = adBox.dataset.totalViewTime;
+  visibleAds.forEach((adBox) => {
+    const previousTime = adBox.dataset.totalViewTime;
     updateAdTimer(adBox);
 
-    if (previousTime != adBox.dataset.totalViewTime) {
+    if (previousTime !== adBox.dataset.totalViewTime) {
       redrawList.push(adBox);
     }
   });
 
   if (redrawList.length) {
-    window.requestAnimationFrame(function(time) {
-      redrawList.forEach(function(adBox) {
+    window.requestAnimationFrame((time) => {
+      redrawList.forEach((adBox) => {
         drawAdTimer(adBox);
       });
     });
@@ -360,11 +362,11 @@ Previously (see [Handling document visibility changes](#handling_document_visibi
 
 ```js
 function updateAdTimer(adBox) {
-  let lastStarted = adBox.dataset.lastViewStarted;
-  let currentTime = performance.now();
+  const lastStarted = adBox.dataset.lastViewStarted;
+  const currentTime = performance.now();
 
   if (lastStarted) {
-    let diff = currentTime - lastStarted;
+    const diff = currentTime - lastStarted;
 
     adBox.dataset.totalViewTime = parseFloat(adBox.dataset.totalViewTime) + diff;
   }
@@ -384,7 +386,7 @@ These are accessed through each ad's {{domxref("HTMLElement.dataset")}} attribut
 
 We start by fetching the time at which the ad's previous visibility status check time (`adBox.dataset.lastViewStarted`) into a local variable named `lastStarted`. We also get the current time-since-creation value using {{domxref("Performance.now", "performance.now()")}} into `currentTime`.
 
-If `lastStarted` is non-zero—meaning the timer is currently running, we compute the difference between the current time and the start time to determine the number of milliseconds the timer has been visible since the last time it became visible. This is added to the current value of the ad's `totalViewTime` to bring the total up to date. Note the use of {{jsxref("parseFloat()")}} here; because these values are strings, JavaScript tries to do a string concatenation instead of addition without it.
+If `lastStarted` is non-zero—meaning the timer is currently running, we compute the difference between the current time and the start time to determine the number of milliseconds the timer has been visible since the last time it became visible. This is added to the current value of the ad's `totalViewTime` to bring the total up to date. Note the use of {{jsxref("parseFloat", "parseFloat()")}} here; because these values are strings, JavaScript tries to do a string concatenation instead of addition without it.
 
 Finally, the last-viewed time for the ad is updated to the current time. This is done whether the ad was running when this function was called or not; this causes the ad's timer to always be running when this function returns. This makes sense because this function is only called if the ad is visible, even if it's just now become visible.
 
@@ -394,23 +396,23 @@ Inside each ad, for demonstration purposes, we draw the current value of its `to
 
 ```js
 function drawAdTimer(adBox) {
-  let timerBox = adBox.querySelector(".timer");
-  let totalSeconds = adBox.dataset.totalViewTime / 1000;
-  let sec = Math.floor(totalSeconds % 60);
-  let min = Math.floor(totalSeconds / 60);
+  const timerBox = adBox.querySelector(".timer");
+  const totalSeconds = adBox.dataset.totalViewTime / 1000;
+  const sec = Math.floor(totalSeconds % 60);
+  const min = Math.floor(totalSeconds / 60);
 
-  timerBox.innerText = min + ":" + sec.toString().padStart(2, "0");
+  timerBox.innerText = `${min}:${sec.toString().padStart(2, "0")}`;
 }
 ```
 
-This code finds the ad's timer using its ID, `"timer"`, and computes the number of seconds elapsed by dividing the ad's `totalViewTime` by 1000. Then it calculates the number of minutes and seconds elapsed before setting the timer's {{domxref("Node.innerText", "innerText")}} to a string representing that time in the form m:ss. The {{jsxref("String.padStart()")}} method is used to ensure that the number of seconds is padded out to two digits if it's less than 10.
+This code finds the ad's timer using its ID, `"timer"`, and computes the number of seconds elapsed by dividing the ad's `totalViewTime` by 1000. Then it calculates the number of minutes and seconds elapsed before setting the timer's {{domxref("HTMLElement/innerText", "innerText")}} to a string representing that time in the form m:ss. The {{jsxref("String.padStart()")}} method is used to ensure that the number of seconds is padded out to two digits if it's less than 10.
 
 ### ページコンテンツの構築
 
 The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
 ```js
-let loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+const loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
   " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
   " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
@@ -433,7 +435,7 @@ The variable `loremIpsum` contains the text we'll use for the body of all of our
 
 `buildContents()` creates a page with five articles. Following every odd-numbered article, an ad is "loaded" and inserted into the page. Articles are inserted into the content box (that is, the {{HTMLElement("main")}} element that contains all the site content) after being created using a method called `createArticle()`, which we'll look at next.
 
-The ads are created using a function called `loadRandomAd()`, which both creates the ad and inserts it into the page. We'll see later that this same function can also replace an existing ad, but for now, we're simply appending ads to the existing content.
+The ads are created using a function called `loadRandomAd()`, which both creates the ad and inserts it into the page. We'll see later that this same function can also replace an existing ad, but for now, we're appending ads to the existing content.
 
 ### 記事を作成する
 
@@ -441,12 +443,12 @@ To create the {{HTMLElement("article")}} element for an article (as well as all 
 
 ```js
 function createArticle(contents) {
-  let articleElem = document.createElement("article");
+  const articleElem = document.createElement("article");
   articleElem.id = nextArticleID;
 
-  let titleElem = document.createElement("h2");
+  const titleElem = document.createElement("h2");
   titleElem.id = nextArticleID;
-  titleElem.innerText = "Article " + nextArticleID + " title";
+  titleElem.innerText = `Article ${nextArticleID} title`;
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
@@ -464,7 +466,7 @@ The `loadRandomAd()` function simulates loading an ad and adding it to the page.
 
 ```js
 function loadRandomAd(replaceBox) {
-  let ads = [
+  const ads = [
     {
       bgcolor: "#cec",
       title: "Eat Green Beans",
@@ -478,7 +480,7 @@ function loadRandomAd(replaceBox) {
     {
       bgcolor: "lightgrey",
       title: "3.14 Shades of Gray: A novel",
-      body: "Love really does make the world go round..."
+      body: "Love really does make the world go round…"
     },
     {
       bgcolor: "#fee",
@@ -488,7 +490,7 @@ function loadRandomAd(replaceBox) {
   ];
   let adBox, title, body, timerElem;
 
-  let ad = ads[Math.floor(Math.random()*ads.length)];
+  const ad = ads[Math.floor(Math.random() * ads.length)];
 
   if (replaceBox) {
     adObserver.unobserve(replaceBox);
@@ -561,12 +563,10 @@ Our [observer's callback](#handling_intersection_changes) keeps an eye out for a
 
 ```js
 function replaceAd(adBox) {
-  let visibleTime;
-
   updateAdTimer(adBox);
 
-  visibleTime = adBox.dataset.totalViewTime
-  console.log("  Replacing ad: " + adBox.querySelector("h2").innerText + " - visible for " + visibleTime)
+  const visibleTime = adBox.dataset.totalViewTime;
+  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`);
 
   loadRandomAd(adBox);
 }
@@ -578,13 +578,13 @@ Then we load a new ad by calling [`loadRandomAd()`](#creating_an_ad), specifying
 
 The new ad's element object is returned to the caller in case it's needed.
 
-## 結果
+### 結果
 
 結果のページは次のようになります。スクロールして試してみて、視認性の変化が各広告のタイマーに与える影響を見てみましょう。 また、1 分の視認性と、ドキュメントがバックグラウンドでタブ表示されている間にタイマーが一時停止すると、各広告が置き換えられます。
 
-{{EmbedLiveSample("fullpage_example", 750, 800)}}
+{{EmbedLiveSample("Building_the_site", 750, 800)}}
 
 ## あわせて参照
 
-- [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API)
-- [Page Visibility API](/ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

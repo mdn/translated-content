@@ -21,7 +21,7 @@ _{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、この�
 
 ## メソッド
 
-_{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。_ 具体的な\_ \_{{domxref("RTCDataChannelEvent")}} メソッドはありません。\_\_
+_{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。具体的な {{domxref("RTCDataChannelEvent")}} メソッドはありません。_
 
 ## 例
 

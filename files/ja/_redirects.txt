@@ -3312,7 +3312,7 @@
 /ja/docs/Web/API/GlobalEventHandlers/ontransitioncancel	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/GlobalEventHandlers/ontransitionend	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/GlobalEventHandlers/onwheel	/ja/docs/Web/API/Element/wheel_event
-/ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope
+/ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/HTMLElement/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/Web/API/Element/animationend_event
@@ -3624,7 +3624,7 @@
 /ja/docs/Web/API/Window/transitionstart_event	/ja/docs/Web/API/Element/transitionstart_event
 /ja/docs/Web/API/Window/unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/Window/vrdisplaydisconnected_event	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
-/ja/docs/Web/API/WindowBase64	/ja/docs/Web/API/WindowOrWorkerGlobalScope
+/ja/docs/Web/API/WindowBase64	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/btoa
@@ -3652,7 +3652,7 @@
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/origin
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ja/docs/Web/API/setTimeout
-/ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/WindowOrWorkerGlobalScope
+/ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/WindowTimers/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowTimers/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/setInterval
@@ -4894,8 +4894,6 @@
 /ja/docs/XMLHttpRequest/timeout	/ja/docs/Web/API/XMLHttpRequest/timeout
 /ja/docs/XMLSerializer	/ja/docs/Web/API/XMLSerializer
 /ja/docs/XML_Introduction	/ja/docs/Web/XML/XML_Introduction
-/ja/docs/XPInstall_API_Reference/InstallTrigger_Object	/ja/docs/Web/API/InstallTrigger
-/ja/docs/XPInstall_API_Reference:InstallTrigger_Object	/ja/docs/Web/API/InstallTrigger
 /ja/docs/XPath	/ja/docs/Web/XPath
 /ja/docs/XPath/Axes	/ja/docs/Web/XPath/Axes
 /ja/docs/XPath/Axes/ancestor	/ja/docs/Web/XPath/Axes/ancestor
