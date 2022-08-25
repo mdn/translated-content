@@ -6,7 +6,7 @@ slug: Web/API/FetchEvent/respondWith
 
 {{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法阻止浏览器默认的 fetch 操作，并且允许为你自己的 {{domxref("Response")}} 提供一个 promise。
 
-在大多数情况下，你可以提供接收方理解的任何形式的响应。例如，如果 {{HTMLElement('img')}} 开始请求，响应主体必须是一个图像数据。出于安全考虑，这里有一些全局的规则：
+在大多数情况下，你可以提供接收方理解的任何形式的响应。例如，如果是由 {{HTMLElement('img')}} 初始化的请求，起响应主体必须是图像数据。出于安全考虑，这里有一些全局的规则：
 
 - 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是 “`no-cors`”，你才能返回 {{domxref("Response.type", "type")}} 为“`opaque`” 的 {{domxref("Response")}} 对象。
 - 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是 “`manual`”，你才能返回 {{domxref("Response.type","type")}} 为 “`opaqueredirect`” 的 {{domxref("Response")}} 对象。
