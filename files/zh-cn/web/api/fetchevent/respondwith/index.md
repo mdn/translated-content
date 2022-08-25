@@ -20,7 +20,7 @@ slug: Web/API/FetchEvent/respondWith
 
 例如，这意味着，如果 service worker 拦截了一个样式表或者 worker 脚本，那么提供的 {{domxref("Response.url")}} 将会用于解决任何与 {{cssxref("@import")}} 或 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} 相关的子资源加载（{{bug(1222008)}}）。
 
-对于大多数网络请求的类型，此更改是没有影响的，因为你不能察觉到最终的 URL。然而，在一些方面确实很重要：
+对于大多数网络请求的类型，此变更是没有影响的，因为你不能察觉到最终的 URL。然而，在一些方面确实很重要：
 
 - 如果 {{domxref("fetch()")}} 被拦截，那么你可以在结果的 {{domxref("Response.url")}} 观察最终的结果。
 - 如果 [worker](/zh-CN/docs/Web/API/Web_Workers_API) script 被拦截，那么最终的 URL 将用于设置 [`self.location`](/zh-CN/docs/Web/API/WorkerGlobalScope/location) 并用作 worker script 相对 URL 的基本 URL。
