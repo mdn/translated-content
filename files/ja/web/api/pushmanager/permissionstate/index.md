@@ -13,9 +13,9 @@ translation_of: Web/API/PushManager/permissionState
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-{{domxref("PushManager")}} インターフェースの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt' か` ` 'denied'、``'granted' です。 `
+{{domxref("PushManager")}} インターフェースの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か ` 'denied'`、`'granted'` です。
 
-> **Note:** **ノート**： Firefox 44 では、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) の許可は統合されています。notifications が許可された場合、 push も使用できます。
+> **Note:** Firefox 44 では、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) の許可は統合されています。notifications が許可された場合、 push も使用できます。
 
 ## 構文
 
@@ -25,7 +25,7 @@ PushManager.permissionState(options).then(function(PushMessagingState) { ... });
 
 ### パラメーター
 
-- `options {{optional_inline}}`
+- `options` {{optional_inline}}
 
   - : オプションの設定パラメーターを含むオブジェクト。次のプロパティが設定可能：
 
@@ -33,7 +33,7 @@ PushManager.permissionState(options).then(function(PushMessagingState) { ... });
 
 ### 戻り値
 
-` 'prompt' か ``'denied'、'granted' を持つ  `{{domxref("DOMString")}} で解決される {{jsxref("Promise")}} 。
+`'prompt'` か `'denied'`、`'granted'` を持つ {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} 。
 
 ## 仕様
 

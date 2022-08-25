@@ -31,7 +31,7 @@ Web Audio API は音声操作を**オーディオコンテキスト**内の操�
 4.  最終的な音声の到達先を選ぶ(例えばスピーカー)
 5.  音源をエフェクトに繋げ、エフェクトを到達先(destination)に繋げる
 
-![オーディオコンテキストと書かれた外側のボックスと、音源、エフェクト、デスティネーションと書かれた3つのボックスからなるシンプルなボックスダイアグラムです。3つのボックスの間には矢印があり、オーディオ情報の流れを示しています。](https://mdn.mozillademos.org/files/16043/audio-context_.png)
+![オーディオコンテキストと書かれた外側のボックスと、音源、エフェクト、デスティネーションと書かれた3つのボックスからなるシンプルなボックスダイアグラムです。3つのボックスの間には矢印があり、オーディオ情報の流れを示しています。](audio-context_.png)
 
 タイミングは高精度で低遅延に制御されます。正確にイベントに反応したり特定の音声サンプルにアクセスしたりすることができます。ドラムマシンやシーケンサーのようなアプリケーションを作ることができます。
 
@@ -93,9 +93,9 @@ Web Audio API 内で利用できる音源は以下の通りです。
 - {{domxref("AudioBufferSourceNode")}}
   - : **`AudioBufferSourceNode`** は {{domxref("AudioNode")}} の一種で、メモリー上の音声データを利用した音源です。音声データ自身は {{domxref("AudioBuffer")}} として保存されています。
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : **`MediaElementAudio`\*\***`SourceNode`\*\* は {{domxref("AudioNode")}} の一種で、{{ htmlelement("audio") }} 要素や {{ htmlelement("video") }} 要素を利用する音源です。
+  - : **`MediaElementAudioSourceNode`** は {{domxref("AudioNode")}} の一種で、{{ htmlelement("audio") }} 要素や {{ htmlelement("video") }} 要素を利用する音源です。
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : **`MediaStreamAudio`\*\***`SourceNode`\*\* は {{domxref("AudioNode")}} の一種で、マイクや Web カメラといった [WebRTC](/ja/docs/WebRTC) {{domxref("MediaStream")}} からの入力を扱える音源です。複数の音声トラックがストリーム上にある場合、{{domxref("MediaStreamTrack.id", "id")}} は辞書順(アルファベット順)です。
+  - : **`MediaStreamAudioSourceNode`** は {{domxref("AudioNode")}} の一種で、マイクや Web カメラといった [WebRTC](/ja/docs/WebRTC) {{domxref("MediaStream")}} からの入力を扱える音源です。複数の音声トラックがストリーム上にある場合、{{domxref("MediaStreamTrack.id", "id")}} は辞書順(アルファベット順)です。
 - {{domxref("MediaStreamTrackAudioSourceNode")}}
   - : `MediaStreamTrackAudioSourceNode` は{{domxref("AudioNode")}} の一種で、{{domxref("MediaStreamTrack")}} からの入力を扱える音源です。{{domxref("AudioContext.createMediaStreamTrackSource", "createMediaStreamTrackSource()")}} メソッドによって作られたノードの場合、使用するトラックを指定してください。`MediaStreamAudioSourceNode` 以上の制御を提供します。
 
@@ -106,7 +106,7 @@ Web Audio API 内で利用できる音源は以下の通りです。
 - {{domxref("BiquadFilterNode")}}
   - : **`BiquadFilterNode`** は {{domxref("AudioNode")}} の一種で、単純な低次フィルターです。フィルターやトーンコントロール、グラフィックイコライザで利用されます。`BiquadFilterNode` の入力と出力はともに 1 つです。
 - {{domxref("ConvolverNode")}}
-  - : **`Convolver`\*\***`Node`\*\* は{{domxref("AudioNode")}} の一種で、Audiobuffer に対して線形畳み込みを行います。リバーブの実現に利用されます。
+  - : **`ConvolverNode`** は{{domxref("AudioNode")}} の一種で、Audiobuffer に対して線形畳み込みを行います。リバーブの実現に利用されます。
 - {{domxref("DelayNode")}}
   - : **`DelayNode`** は {{domxref("AudioNode")}} の一種で、[delay-line](http://en.wikipedia.org/wiki/Digital_delay_line) を表します。入力された音声を、遅らせて出力します。
 - {{domxref("DynamicsCompressorNode")}}
@@ -127,7 +127,7 @@ Web Audio API 内で利用できる音源は以下の通りです。
 - {{domxref("AudioDestinationNode")}}
   - : **`AudioDestinationNode`** はコンテキスト内での出力先を表します。通常はスピーカとなっています。
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : **`MediaElementAudio`\*\***`SourceNode`\*\* は音声の出力先となる {{domxref("AudioNode")}} の一種で、[WebRTC](/ja/docs/WebRTC) {{domxref("MediaStream")}} と 1 つの `AudioMediaStreamTrack` から構成されます。{{ domxref("Navigator.getUserMedia") }} で取得された MediaStream と同様に扱えます。
+  - : **`MediaElementAudioSourceNode`** は音声の出力先となる {{domxref("AudioNode")}} の一種で、[WebRTC](/ja/docs/WebRTC) {{domxref("MediaStream")}} と 1 つの `AudioMediaStreamTrack` から構成されます。{{ domxref("Navigator.getUserMedia") }} で取得された MediaStream と同様に扱えます。
 
 ### 分析と可視化
 
