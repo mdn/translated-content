@@ -29,7 +29,7 @@ Web Audio API の強力な要素の一つは、厳格な「音声の呼び出し
 
 boombox の外見は次の通りです。
 
-![boombox の外見で、再生、パン、音量コントロールがあります](https://mdn.mozillademos.org/files/16197/boombox.png)
+![boombox の外見で、再生、パン、音量コントロールがあります](boombox.png)
 
 これは古いカセットデッキで、再生ボタンがあり、音量とステレオ位置を変更することができる音量とパンのスライダーがあります。なお、もっと複雑にすることもできますが、この段階で簡単に学ぶには理想的なものです。
 
@@ -60,7 +60,7 @@ const audioContext = new AudioContext();
 
 これを実行するとどうなるのでしょうか。 {{domxref("BaseAudioContext")}} が自動的に生成され、オンライン音声コンテキストに拡張されます。これを行うのは、ライブサウンドを再生しようとしているからです。
 
-> **Note:** **メモ**: 音声データを処理したいだけ、例えば、バッファリングとストリーミングのみを行い再生するのでなければ、 {{domxref("OfflineAudioContext")}} を作成するようにしたほうが良いかもしれません。
+> **Note:** 音声データを処理したいだけ、例えば、バッファリングとストリーミングのみを行い再生するのでなければ、 {{domxref("OfflineAudioContext")}} を作成するようにしたほうが良いかもしれません。
 
 ## 音声の読み込み
 
@@ -70,7 +70,7 @@ const audioContext = new AudioContext();
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
 ```
 
-> **Note:** **メモ**: 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を参照してください。
+> **Note:** 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を参照してください。
 
 Web Audio API を使用してできるすばらしいことをすべて利用するためには、この要素で入力元をつかみ、作成したコンテキストに*送り込む*ことが必要です。幸いにもちょうどこれを行うメソッド — {{domxref("AudioContext.createMediaElementSource")}} が存在します。
 
@@ -82,7 +82,7 @@ const audioElement = document.querySelector('audio');
 const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-> **Note:** **メモ**: 上記の `<audio>` 要素は DOM 内では {{domxref("HTMLMediaElement")}} 型のオブジェクトで表され、これは独自の機能のセットを持っています。これらはすべてそのままです。 Web Audio API で音声を利用できるようにするだけです。
+> **Note:** 上記の `<audio>` 要素は DOM 内では {{domxref("HTMLMediaElement")}} 型のオブジェクトで表され、これは独自の機能のセットを持っています。これらはすべてそのままです。 Web Audio API で音声を利用できるようにするだけです。
 
 ## 音声の制御
 
@@ -110,7 +110,7 @@ track.connect(audioContext.destination);
 
 これらのノードを図示するのによい方法は、音声グラフを描画することです。これは現在の音声グラフの見え方を表します。
 
-![an audio graph with an audio element source connected to the default destination](https://mdn.mozillademos.org/files/16195/graph1.jpg)
+![an audio graph with an audio element source connected to the default destination](graph1.jpg)
 
 これで再生と一時停止機能を追加できるようになりました。
 
@@ -163,7 +163,7 @@ track.connect(gainNode).connect(audioContext.destination);
 
 これで音声グラフはこのようになります。
 
-![an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination](https://mdn.mozillademos.org/files/16196/graph2.jpg)
+![an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination](graph2.jpg)
 
 gain の既定値は 1 です。これは現在の音量を同じに維持します。 gain は最小値がおよそ-3.4 で最大値はおよそ 3.4 です。ここで boombox は gain を最大 2 (元の音量の倍)、最小 0 (結果的に音声をミュートします) の範囲で動かせるようにします。
 
@@ -173,7 +173,7 @@ gain の既定値は 1 です。これは現在の音量を同じに維持しま
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01">
 ```
 
-> **Note:** **メモ**: range 入力は、音声ノードの値を更新するのに実に手軽な入力型です。 range の値を音声ノードの引数に直接設定したり、使用したりすることができます。
+> **Note:** range 入力は、音声ノードの値を更新するのに実に手軽な入力型です。 range の値を音声ノードの引数に直接設定したり、使用したりすることができます。
 
 それでは、ユーザーが値を変更したときに入力された値を取得して gain の値を更新するようにしましょう。
 
@@ -185,7 +185,7 @@ volumeControl.addEventListener('input', function() {
 }, false);
 ```
 
-> **Note:** **メモ**: ノードオブジェクトの値 (例えば `GainNode.gain`) は単純な値ではなく、実際には {{domxref("AudioParam")}} 型のオブジェクト — これが引数と呼ばれています。なぜかといえば、 `GainNode.gain` の `value` プロパティを設定しなければならず、 `gain` を直接設定するだけではないからです。これによってはるかに柔軟になり、例えば特定の値のセットを引数で渡して、一定の期間にわたって変化させたりすることができます。
+> **Note:** ノードオブジェクトの値 (例えば `GainNode.gain`) は単純な値ではなく、実際には {{domxref("AudioParam")}} 型のオブジェクト — これが引数と呼ばれています。なぜかといえば、 `GainNode.gain` の `value` プロパティを設定しなければならず、 `gain` を直接設定するだけではないからです。これによってはるかに柔軟になり、例えば特定の値のセットを引数で渡して、一定の期間にわたって変化させたりすることができます。
 
 素晴らしい、ユーザーがトラックの音量を追更新できるようになりました。ミュート機能を追加したい場合も gain ノードは完全なノードです。
 
@@ -195,11 +195,11 @@ volumeControl.addEventListener('input', function() {
 
 ユーザーがステレオ機能を持っている場合、左右のスピーカーの間で音のバランスを変更する {{domxref("StereoPannerNode")}} ノードがあります。
 
-**メモ**: `StereoPannerNode` は、左右間のステレオパンを行う単純な用途のためのものです。 {{domxref("PannerNode")}} というものもあり、こちらはもっと複雑な効果を生成するための、 3D 空間や音声の*空間化*などを大幅に制御することができます。これはゲームや 3D アプリなどで使用され、例えば頭上を飛ぶ鳥や、ユーザーの背後から聞こえる音などを生成します。
+`StereoPannerNode` は、左右間のステレオパンを行う単純な用途のためのものです。 {{domxref("PannerNode")}} というものもあり、こちらはもっと複雑な効果を生成するための、 3D 空間や音声の*空間化*などを大幅に制御することができます。これはゲームや 3D アプリなどで使用され、例えば頭上を飛ぶ鳥や、ユーザーの背後から聞こえる音などを生成します。
 
 図示すると、音声グラフは次のようになります。
 
-![入力ノード、2つの加工ノード (gain ノードと stereo panner ノード)、出力ノードを示した音声グラフを表す図です。](https://mdn.mozillademos.org/files/16229/graphPan.jpg)
+![入力ノード、2つの加工ノード (gain ノードと stereo panner ノード)、出力ノードを示した音声グラフを表す図です。](graphPan.jpg)
 
 今回はノードを作成するコンストラクターメソッドを使用しましょう。この方法では、コンテキストとその特定のノードが取るオプションを渡す必要があります。
 
@@ -208,7 +208,7 @@ const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 ```
 
-> **Note:** **メモ**: ノードを作成するコンストラクターメソッドは、いまのところすべてのブラウザーで対応されている訳ではありません。古いファクトリメソッドの方がより広く対応されています。
+> **Note:** ノードを作成するコンストラクターメソッドは、いまのところすべてのブラウザーで対応されている訳ではありません。古いファクトリメソッドの方がより広く対応されています。
 
 個々の値の範囲は -1 (はるか左) と 1 (はるか右) の間です。今回も range 型の入力でこの引数を変更できるようにしましょう。
 
@@ -246,10 +246,10 @@ Web Audio API についてもっと学ぶことができる他の例がありま
 
 [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) は、楽しい音声加工および音の視覚化を行うウェブアプリで、様々な効果や視覚化を選択することができます。このアプリケーションはかなり初歩的ですが、 Web Audio API の複数の機能を同時に使用する例を示しています。 ([Voice-change-O-matic をライブで実行](https://mdn.github.io/voice-change-o-matic/))
 
-![音の波が表示され、音声効果や視覚化を選択することができるユーザーインターフェイス。](https://mdn.mozillademos.org/files/7921/voice-change-o-matic.png)
+![音の波が表示され、音声効果や視覚化を選択することができるユーザーインターフェイス。](voice-change-o-matic.png)
 
 他にも特に Web Audio API を紹介するために開発されたアプリケーションとして [Violent Theremin](http://mdn.github.io/violent-theremin/) があり、これはマウスポインターを動かすことで音高や音量を変更することができるシンプルなウェブアプリケーションです。これはサイケデリックなライトショーも提供します。 ([Violent Theremin のソースコードを見る](https://github.com/mdn/violent-theremin))
 
-![虹色に埋め尽くされたページで、 Clear screen と mute と書かれた2つのボタンがあります。](https://mdn.mozillademos.org/files/7919/violent-theremin.png)
+![虹色に埋め尽くされたページで、 Clear screen と mute と書かれた2つのボタンがあります。](violent-theremin.png)
 
 他にも例としては [webaudio-examples リポジトリ](https://github.com/mdn/webaudio-examples)を参照してください。

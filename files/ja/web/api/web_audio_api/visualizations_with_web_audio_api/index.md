@@ -12,7 +12,7 @@ translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
 Web Audio API の最も興味深い機能の 1 つは、オーディオソースから周波数、波形、その他のデータを抽出し、それを使用してビジュアライゼーションを作成する機能です。この記事では、方法について説明し、いくつかの基本的な使用例を示します。
 
-> **Note:** **付記**: すべてのコードスニペットの実際の例は、[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) のデモでご覧いただけます。
+> **Note:** すべてのコードスニペットの実際の例は、[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) のデモでご覧いただけます。
 
 ## 基本的な概念
 
@@ -32,11 +32,11 @@ analyser.connect(distortion);
 distortion.connect(audioCtx.destination);
 ```
 
-> **Note:** **付記**: 入力がソースに対し、直接または別のノードを介して接続されているかぎり、アナライザの出力を別のノードに接続する必要はありません。
+> **Note:** 入力がソースに対し、直接または別のノードを介して接続されているかぎり、アナライザの出力を別のノードに接続する必要はありません。
 
 アナライザノードは、{{domxref("AnalyserNode.fftSize")}}プロパティ値（指定されていない場合は、デフォルトは 2048 です）として指定する内容に応じて、特定の周波数ドメインで高速フーリエ変換（fft）を使用してオーディオデータをキャプチャします。
 
-> **Note:** **付記**: {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。
+> **Note:** {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。
 
 データを取得するには、周波数データを取得するために{{domxref("AnalyserNode.getFloatFrequencyData()")}}および{{domxref("AnalyserNode.getByteFrequencyData()")}}メソッドを使用する必要があります。{{domxref("AnalyserNode.getByteTimeDomainData()")}}と{{domxref(" AnalyserNode.getFloatTimeDomainData()")}}を使用して波形データを取得します。
 
@@ -215,4 +215,4 @@ draw();
 
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/bar-graph.png)
 
-> **Note:** **付記**: この記事に記載されている例では、{{domxref("AnalyserNode.getByteFrequencyData()")}}と{{domxref("AnalyserNode.getByteTimeDomainData()")}}で使用法が示されています。実際の例は{{domxref("AnalyserNode.getFloatFrequencyData()")}}と{{domxref("AnalyserNode.getFloatTimeDomainData()")}}にあるので、私たちの [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) デモを参照してください（[ソースコード](https://github.com/mdn/voice-change-o-matic-float-data)も参照してください）— これは、元の [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) とまったく同じですが、符号なしバイトデータではなく、Float データを使用しています。
+> **Note:** この記事に記載されている例では、{{domxref("AnalyserNode.getByteFrequencyData()")}}と{{domxref("AnalyserNode.getByteTimeDomainData()")}}で使用法が示されています。実際の例は{{domxref("AnalyserNode.getFloatFrequencyData()")}}と{{domxref("AnalyserNode.getFloatTimeDomainData()")}}にあるので、私たちの [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) デモを参照してください（[ソースコード](https://github.com/mdn/voice-change-o-matic-float-data)も参照してください）— これは、元の [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) とまったく同じですが、符号なしバイトデータではなく、Float データを使用しています。

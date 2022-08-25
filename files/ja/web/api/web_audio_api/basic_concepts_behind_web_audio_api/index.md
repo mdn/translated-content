@@ -32,11 +32,11 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 信号上で利用できるオーディオチャンネルの数字は、2.0 や 5.1 のように、しばしば、数値の形式で表現されます。これは{{interwiki("wikipedia", "Surround_sound#Channel_notation", "channel notation")}}と呼ばれます。最初の数値は、該当の信号が含んでいるオーディオチャンネルの数です。ピリオドの後にある数値は、低音増強用出力として確保されているチャンネルの数を示しています。それらはしばしば**サブウーファー**とも称されます。
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12237/webaudioAPI_en.svg)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](webaudioAPI_en.svg)
 
 各入出力は、互いに特定のオーディオレイアウトを代表する、一つ以上のオーディオ**チャンネル**により構成されます。個別のチャンネル構造それぞれは、モノラル、ステレオ、クアッド、5.1 等を含んでサポートされています。
 
-![Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs.](https://mdn.mozillademos.org/files/14179/mdn.png)
+![Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs.](mdn.png)
 
 音声源はいくつかの方法で取得できます:
 
@@ -64,11 +64,11 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 - モノラルバッファーは 44100 サンプル、44100 フレームで構成され、length プロパティは 44100 となる。
 - ステレオバッファーは 88200 サンプル、44100 フレームで構成され、length プロパティは、そのフレーム数に等しいため 44100 のままである。
 
-![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](https://mdn.mozillademos.org/files/14801/sampleframe-english.png)
+![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](sampleframe-english.png)
 
 バッファが再生されると、最も左のサンプルフレームが聞こえ、次にそのサンプルフレームのすぐ隣のサンプルフレームが続いてゆきます。ステレオの場合、両方のチャンネルから同時に聴こえます。サンプルフレームは、チャンネルの数とは独立しているため非常に便利であり、正確に音声を取り扱う有効な手段として、時間を表現してくれます。
 
-> **Note:** **注:** フレーム数から秒数を得るためには、フレーム数をサンプルレートで単に除算するだけです。サンプル数からフレーム数を得るためには、チャンネル数で単に除算するだけです。
+> **Note:** フレーム数から秒数を得るためには、フレーム数をサンプルレートで単に除算するだけです。サンプル数からフレーム数を得るためには、チャンネル数で単に除算するだけです。
 
 以下はいくつかの単純なサンプルです:
 
@@ -77,7 +77,7 @@ var context = new AudioContext();
 var buffer = context.createBuffer(2, 22050, 44100);
 ```
 
-> **Note:** **注:** [デジタルオーディオに](https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA)おいて、**44100**[Hz](https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84)(**44.1kHz** とも表記される)は一般的な[サンプリング周波数](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96)です。なぜ 44.1kHz なのでしょう？
+> **Note:** [デジタルオーディオに](https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA)おいて、**44100**[Hz](https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84)(**44.1kHz** とも表記される)は一般的な[サンプリング周波数](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96)です。なぜ 44.1kHz なのでしょう？
 >
 > 第一に、人間の耳の[可聴範囲](https://en.wikipedia.org/wiki/Hearing_range)は、大雑把に 20 から 20000Hz の範囲です。[Nyquist-Shannon のサンプリング定理](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96%E5%AE%9A%E7%90%86)により、サンプリング周波数は再現したい最大周波数の 2 倍以上でなくてはなりません。したがって、サンプリングレートは 40kHz 以上でなくてはなりません。
 >
@@ -92,7 +92,7 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 この呼び出しをする場合、モノラルバッファーをチャンネル数 1 で取得し、AudioContext 上で 44100Hz にて再生される際に自動で 44100Hz へ*再サンプリングされ*(したがって 44100 フレームとなり)、1 秒間続きます: 44100 フレーム/44100Hz = 1 秒。
 
-> **Note:** **注**: オーディオの再サンプリングは、画像のサイズ変更と非常に似たものです。例えば 16x16 の画像があり、32x32 のスペースを満たしたいとします。サイズ変更(あるいは再サンプリング)を行い、結果として(サイズ変更アルゴリズムの違いに依存して、ぼやけたりエッジができたりと)画質の低下を伴いますが、スペースを減らすサイズ変更済み画像が作れます。再サンプリングされたオーディオもまったく同じです。スペースを保てるものの、実際には高音域のコンテンツや高音を適切に再現することはできません。
+> **Note:** オーディオの再サンプリングは、画像のサイズ変更と非常に似たものです。例えば 16x16 の画像があり、32x32 のスペースを満たしたいとします。サイズ変更(あるいは再サンプリング)を行い、結果として(サイズ変更アルゴリズムの違いに依存して、ぼやけたりエッジができたりと)画質の低下を伴いますが、スペースを減らすサイズ変更済み画像が作れます。再サンプリングされたオーディオもまったく同じです。スペースを保てるものの、実際には高音域のコンテンツや高音を適切に再現することはできません。
 
 ### バッファーセクションの平面性対交差性
 
@@ -355,7 +355,7 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 
 原則、オーディオ視覚化は出力オーディオデータ(基本的にはゲインまたは周波数データ)に時間毎にアクセスすることで行われ、更にグラフなどの視覚化出力へ渡すためのグラフィカル技術が用いられます。Web Audio API は {{domxref("AnalyserNode")}} で、経由して渡されたオーディオ信号を変換せず利用することができます。ただしその出力は、{{htmlelement("canvas")}} などのような視覚化技術へ受け渡せるオーディオデータです。
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/12521/fttaudiodata_en.svg)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
 
 以下のメソッドを利用して、データの取得が可能です。
 
@@ -374,7 +374,7 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : 現在の波形データまたはタイムドメインデータを渡された{{domxref("Uint8Array")}}型配列(符号なしバイト配列)にコピーします。
 
-> **Note:** **注**: より詳しい情報は、Web Audio API 記事中の [Visualizations with Web Audio API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) を参照してください。
+> **Note:** より詳しい情報は、Web Audio API 記事中の [Visualizations with Web Audio API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) を参照してください。
 
 ## 立体化
 
@@ -382,20 +382,20 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 
 パンナーの位置は、直行座標の右側に描かれています。ドップラー効果を作るに必要な、速度ベクトルを用いた移動、そして方向コーンを用いた方向性があります。このコーンは、例えば無指向性音源などのため、とても大きくなり得ます。
 
-![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](https://mdn.mozillademos.org/files/12511/pannernode_en.svg)
+![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](pannernode_en.svg)
 
 リスナーの位置は、直行座標の右側に描かれています。度ベクトルを用いた移動と、リスナーの頭がポイントされている(頭部側と顔面側の)二方向ベクターを用いた方向性があります。これらはそれぞれリスナーの頭部の頂点からの方向と、リスナーの鼻にポイントされている方向とを定義しており、これらは直角となっています。
 
-![We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](https://mdn.mozillademos.org/files/14311/WebAudioListenerReduced.png)
+![We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](WebAudioListenerReduced.png)
 
-> **Note:** **注**: より詳しい情報は、[Web audio spatialization basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) を参照してください。
+> **Note:** より詳しい情報は、[Web audio spatialization basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) を参照してください。
 
 ## ファンインとファンアウト
 
 オーディオ用語では、**fan-in** は{{domxref("ChannelMergerNode")}} が一連の単一入力ソースを受け、単一マルチチャンネル信号を出力するプロセスを意味します。
 
-![](https://mdn.mozillademos.org/files/12517/fanin.svg)
+![](fanin.svg)
 
 **Fan-out** はその対となるプロセスを意味します。{{domxref("ChannelSplitterNode")}} が一つのマルチチャンネル入力源を受け、複数のモノラル出力信号を出力します。
 
-![](https://mdn.mozillademos.org/files/12515/fanout.svg)
+![](fanout.svg)
