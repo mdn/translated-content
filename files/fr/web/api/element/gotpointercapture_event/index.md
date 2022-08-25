@@ -32,13 +32,11 @@ function init() {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Status                                   | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-| {{SpecName('Pointer Events 2', '#the-gotpointercapture-event', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.ongotpointercapture")}}
+{{Compat}}
 
 ## Voir aussi
 

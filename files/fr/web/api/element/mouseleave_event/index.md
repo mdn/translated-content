@@ -116,14 +116,11 @@ function addListItem(text) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseleave_event")}}
+{{Compat}}
 
 ## Voir aussi
 

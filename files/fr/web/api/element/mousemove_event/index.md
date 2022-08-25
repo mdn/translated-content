@@ -127,14 +127,11 @@ function drawLine(context, x1, y1, x2, y2) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mousemove', 'mousemove')}}     | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mousemove', 'mousemove')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mousemove_event")}}
+{{Compat}}
 
 ## Voir aussi
 
