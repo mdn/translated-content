@@ -15,7 +15,7 @@ slug: Web/API/FetchEvent/request
 
 ## 示例
 
-来自 [service worker fetch 示例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js)的代码片段（[fetch 示例的在线演示](https://googlechrome.github.io/samples/service-worker/prefetch/)）。{{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} 事件处理程序监听 `fetch` 事件。当被触发时，将返回受控页面的 promise，并将它传递给 {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}。该 promise 会用 {{domxref("Cache")}} 中第一个匹配的 URL 请求进行解析。如果没有匹配，代码将从网络获取一个响应。
+来自 [service worker fetch 示例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js)的代码片段（[fetch 示例的在线演示](https://googlechrome.github.io/samples/service-worker/prefetch/)）。{{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} 事件处理程序监听 `fetch` 事件。当被触发时，将返回受控页面的 promise，并将它传递给 {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}。该 promise 会用 {{domxref("Cache")}} 中第一个匹配的 URL 请求来敲定。如果没有匹配，代码将从网络获取一个响应。
 
 该代码还会处理 {{domxref("fetch()")}} 操作抛出的异常。注意，HTTP 错误响应（例如 404）不会抛出异常。它将返回一个拥有适当错误代码集的正常的响应对象。
 
