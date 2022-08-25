@@ -5,11 +5,11 @@ translation_of: Web/API/AnalyserNode
 ---
 {{APIRef("Web Audio API")}}
 
-**`AnalyserNode`**インタフェースはリアルタイム時間領域/周波数領域分析情報を表現します。{{domxref("AudioNode")}}は、入力から出力の流れにおいて audio stream そのものは変えず、データ加工や音声の可視化をすることができます。
+**`AnalyserNode`** インタフェースはリアルタイム時間領域/周波数領域分析情報を表現します。{{domxref("AudioNode")}}は、入力から出力の流れにおいて audio stream そのものは変えず、データ加工や音声の可視化をすることができます。
 
 １つの`AnalyzerNode`は必ず１つの入力と出力を持ちます。出力先がなくても AnalyzerNode は問題ありません。
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/9707/WebAudioFFT.png)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
 
 <table class="properties">
   <tbody>
