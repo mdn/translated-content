@@ -12,7 +12,7 @@ translation_of: Web/API/CompositionEvent/initCompositionEvent
 ---
 {{deprecated_header}}{{APIRef("DOM Events")}}
 
-{{domxref("CompositionEvent")}} インターフェイスの **`initCompositionEvent`\*\***`()`\*\*メソッドは、`CompositionEvent` オブジェクトインスタンスの属性を初期化します。
+{{domxref("CompositionEvent")}} インターフェイスの **`initCompositionEvent()`** メソッドは、`CompositionEvent` オブジェクトインスタンスの属性を初期化します。
 
 ## 構文
 

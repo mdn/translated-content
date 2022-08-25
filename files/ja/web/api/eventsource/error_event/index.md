@@ -1,19 +1,11 @@
 ---
-title: EventSource.onerror
+title: 'EventSource: error イベント'
 slug: Web/API/EventSource/error_event
-tags:
-  - API
-  - EventSource
-  - Server-sent events
-  - イベントハンドラ
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/EventSource/onerror
 original_slug: Web/API/EventSource/onerror
 ---
-{{APIRef('WebSockets API')}}
+{{APIRef}}
 
-{{domxref("EventSource")}} インターフェースの**`onerror`** プロパティは、エラーが発生し、`EventSource` オブジェクトに対して {{event("error")}} が送出されたときに呼び出される {{event("Event_handlers", "event handler")}} です。
+{{domxref("EventSource")}} インターフェースの **`onerror`** プロパティは、エラーが発生し、`EventSource` オブジェクトに対して {{event("error")}} が送出されたときに呼び出される {{event("Event_handlers", "event handler")}} です。
 
 ## 構文
 
@@ -43,4 +35,10 @@ evtSource.onerror = function() {
 
 ## 関連情報
 
-- {{domxref("EventSource")}}
+{{Compat}}
+
+## See also
+
+- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/en-US/docs/Web/API/EventSource/open_event)
+- [`message`](/en-US/docs/Web/API/EventSource/message_event)

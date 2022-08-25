@@ -5,7 +5,7 @@ translation_of: Web/API/Headers/Headers
 ---
 {{APIRef("Fetch")}}
 
-**`Headers()`\*\*** \*\*コンストラクターは新しい {{domxref("Headers")}} オブジェクトを生成します。
+**`Headers()`** コンストラクターは新しい {{domxref("Headers")}} オブジェクトを生成します。
 
 ## 文法
 

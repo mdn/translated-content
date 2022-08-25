@@ -5,7 +5,7 @@ translation_of: Web/API/Worker/terminate
 ---
 {{APIRef("Web Workers API")}}
 
-{{domxref("Worker")}}インターフェイスの**`terminate()`**メソッドは{{domxref("Worker")}}を即座に停止します。これは worker に対してその動作を終了する機会を提供するものではありません。単純に即時停止をします。
+{{domxref("Worker")}}インターフェイスの **`terminate()`** メソッドは {{domxref("Worker")}} を即座に停止します。これは worker に対してその動作を終了する機会を提供するものではありません。単純に即時停止をします。
 
 ## 構文
 
