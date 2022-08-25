@@ -28,9 +28,9 @@ interface CSSPageRule : CSSRule {
 {{domxref("CSSRule")}} として、`CSSPageRule` は、このインターフェイスのプロパティも実装します。これは、次の固有のプロパティを持ちます:
 
 - {{domxref("CSSPageRule.selectorText")}}
-  - : @-規則に関連付けられたページセレクターのテキストを表す。
+  - : アット規則に関連付けられたページセレクターのテキストを表す。
 - {{domxref("CSSPageRule.style")}} {{readonlyinline}}
-  - : @-規則に関連付けられた宣言ブロックを返す。
+  - : アット規則に関連付けられた宣言ブロックを返す。
 
 ## メソッド
 

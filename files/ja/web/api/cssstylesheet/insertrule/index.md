@@ -26,7 +26,7 @@ stylesheet.insertRule(rule[, index])
   - : 挿入される規則が入った {{domxref("DOMString")}} です。どのような規則を挿入するかは、種類に依存します。
 
     - **[規則セット](/ja/docs/Web/CSS/Syntax#CSS_statements)** の場合、[セレクター](/ja/docs/Web/Guide/CSS/Getting_Started/Selectors)とスタイル定義です。
-    - **[@-規則](/ja/docs/Web/CSS/At-rule)** の場合、 @-識別子と規則の内容です。
+    - **[アット規則](/ja/docs/Web/CSS/At-rule)** の場合、 @-識別子と規則の内容です。
 
 - index {{optional_inline}}
   - : `stylesheet.cssRules.length` 以下の正の数で、 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` の中で新しく挿入される規則の位置を示します。既定値は `0` です。 (古い実装では、これは必須でした。詳しくは[ブラウザーの対応](#Browser_compatibility)を参照してください。)
@@ -42,8 +42,8 @@ CSS スタイルシート規則のリストには、規則がどのようにど�
 - _index_ 値が `{{domxref("CSSRuleList", "", "", "1")}}.length` を超える場合、 `IndexSizeError` で処理を中止します。
 - CSS の制約により _rule_ が _index_ `0` に挿入できない場合、 `HierarchyRequestError` で処理を中止します。
 - _rule_ 引数に 2 個以上の規則を与えた場合、 `SyntaxError` で処理を中止します。
-- {{domxref("@import")}} @-規則をスタイル規則の後に挿入しようとした場合、 `HierarchyRequestError` で処理を中止します。
-- _rule_ が {{domxref("@namespace")}} @-規則であり、リストに `@import` @-規則や `@namespace` @-規則が含まれている場合、 `InvalidStateError` で処理を中止します。
+- {{domxref("@import")}} アット規則をスタイル規則の後に挿入しようとした場合、 `HierarchyRequestError` で処理を中止します。
+- _rule_ が {{domxref("@namespace")}} アット規則であり、リストに `@import` アット規則や `@namespace` アット規則が含まれている場合、 `InvalidStateError` で処理を中止します。
 
 ## 例
 

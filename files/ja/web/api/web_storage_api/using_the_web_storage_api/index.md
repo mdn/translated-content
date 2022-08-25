@@ -95,11 +95,11 @@ else {
 
 ウェブストレージの典型的な使用法を示すため、想像力豊かに **Web Storage Demo** と名づけたシンプルな例を作成しました。[ランディングページ](https://mdn.github.io/dom-examples/web-storage/) には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります:
 
-![](https://mdn.mozillademos.org/files/9685/landing.png)別の選択肢を選ぶと、即座にページが更新されます。さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
+![](landing.png)別の選択肢を選ぶと、即座にページが更新されます。さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
 
 また、 [event output ページ](https://mdn.github.io/dom-examples/web-storage/event.html)も提供します。このページを別のタブで開くと、ランディングページで選択肢を変更したときに {{domxref("StorageEvent")}} が発生するのに応じて、更新されたストレージの情報が出力されるのを確認できます。
 
-![](https://mdn.mozillademos.org/files/9687/event-output.png)
+![](event-output.png)
 
 > **Note:** **メモ**: 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
 
