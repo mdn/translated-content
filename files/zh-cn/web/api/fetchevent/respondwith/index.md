@@ -4,13 +4,13 @@ slug: Web/API/FetchEvent/respondWith
 ---
 {{APIRef("Service Workers API")}}
 
-{{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法阻止浏览器默认的 fetch 操作，并且允许为你自己的 {{domxref("Response")}} 提供一个 promise。
+{{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法阻止浏览器默认的 fetch 操作，并且允许由你自己为 {{domxref("Response")}} 提供一个 promise。
 
 在大多数情况下，你可以提供接收方理解的任何形式的响应。例如，如果是由 {{HTMLElement('img')}} 初始化的请求，起响应主体必须是图像数据。出于安全考虑，这里有一些全局的规则：
 
-- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是 “`no-cors`”，你才能返回 {{domxref("Response.type", "type")}} 为“`opaque`” 的 {{domxref("Response")}} 对象。
-- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是 “`manual`”，你才能返回 {{domxref("Response.type","type")}} 为 “`opaqueredirect`” 的 {{domxref("Response")}} 对象。
-- 如果 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是 “`same-origin`”，你无法返回 {{domxref("Response.type","type")}} 为 “`cors`” 的 {{domxref("Response")}} 对象。
+- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`no-cors`”，你才能返回 {{domxref("Response.type", "type")}} 为“`opaque`” 的 {{domxref("Response")}} 对象。
+- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`manual`”，你才能返回 {{domxref("Response.type","type")}} 为“`opaqueredirect`” 的 {{domxref("Response")}} 对象。
+- 如果 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`same-origin`”，你无法返回 {{domxref("Response.type","type")}} 为“`cors`” 的 {{domxref("Response")}} 对象。
 
 ### 指定资源的最终 URL
 
@@ -23,10 +23,10 @@ slug: Web/API/FetchEvent/respondWith
 对于大多数网络请求的类型，此变更是没有影响的，因为你不能察觉到最终的 URL。然而，在一些方面确实很重要：
 
 - 如果 {{domxref("fetch()")}} 被拦截，那么你可以在结果的 {{domxref("Response.url")}} 观察最终的结果。
-- 如果 [worker](/zh-CN/docs/Web/API/Web_Workers_API) script 被拦截，那么最终的 URL 将用于设置 [`self.location`](/zh-CN/docs/Web/API/WorkerGlobalScope/location) 并用作 worker script 相对 URL 的基本 URL。
-- 如果 stylesheet 被拦截，那么最终 URL 被用作解决相对 {{cssxref("@import")}} 加载的基本 URL。
+- 如果 [worker](/zh-CN/docs/Web/API/Web_Workers_API) 脚本被拦截，那么最终的 URL 将用于设置 [`self.location`](/zh-CN/docs/Web/API/WorkerGlobalScope/location) 并用作 worker 脚本相对 URL 的基本 URL。
+- 如果样式表被拦截，那么最终 URL 被用作解决相对 {{cssxref("@import")}} 加载的基本 URL。
 
-请注意 {{domxref("Window","Windows")}} 和 {{domxref("HTMLIFrameElement","iframes")}} 的导航请求不使用最终的 URL。HTML 规范处理导航重定向的方式是使用最终生成的 {{domxref("Window.location")}} 的 request URL。这意味着网站在离线时仍然可以提供一个“备用”的网页视图，而无需更改为用户可见的 URL。
+请注意 {{domxref("Window","Windows")}} 和 {{domxref("HTMLIFrameElement","iframes")}} 的导航请求不使用最终的 URL。HTML 规范处理导航重定向的方式是最终使用 {{domxref("Window.location")}} 生成的请求 URL。这意味着网站在离线时仍然可以提供一个“备用”的网页视图，而无需更改用户可见的 URL。
 
 ## 语法
 
@@ -52,7 +52,7 @@ respondWith(response)
 
 ## 示例
 
-这个 fetch 事件尝试从 cache API 返回一个响应，否则从网络返回。
+这个 fetch 事件尝试从 cache API 返回一个响应，否则回落至网络。
 
 ```js
 addEventListener('fetch', (event) => {
