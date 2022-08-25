@@ -11,7 +11,7 @@ translation_of: Web/API/EventSource/EventSource
 ---
 {{APIRef('WebSockets API')}}
 
-**`EventSource`\*\***`()`\*\* コンストラクタは、リモートリソースを表す新しく作成された {{domxref("EventSource")}} を返します。
+**`EventSource()`** コンストラクタは、リモートリソースを表す新しく作成された {{domxref("EventSource")}} を返します。
 
 ## 構文
 
@@ -43,7 +43,7 @@ evtSource.onmessage = function(e) {
 }
 ```
 
-> **Note:** **メモ**: 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
+> **Note:** 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
 
 ## 仕様
 

@@ -23608,22 +23608,10 @@
       "eltociear"
     ]
   },
-  "Web/API/XMLHttpRequest/mozResponseArrayBuffer": {
-    "modified": "2020-08-13T07:52:47.114Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
   "Web/API/XMLHttpRequest/mozSystem": {
     "modified": "2020-08-13T05:54:59.899Z",
     "contributors": [
       "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequest/multipart": {
-    "modified": "2020-09-26T13:01:31.170Z",
-    "contributors": [
-      "silverskyvicto"
     ]
   },
   "Web/API/XMLHttpRequest/open": {
