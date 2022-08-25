@@ -2,72 +2,68 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 ---
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+{{APIRef("Service Workers API")}}
 
-使用`ServiceWorker`技术时，页面的提取动作会在 ServiceWorker 作用域 (`ServiceWorkerGlobalScope`) 中触发 fetch 事件。
+这是会在 {{domxref("ServiceWorkerGlobalScope", "service worker 全局作用域", "", 1)}}中触发 `fetch` 事件的事件类型。它包含关于 fetch 的信息，包括 request 和接收方如何处理响应。它提供 {{domxref("FetchEvent.respondWith", "event.respondWith()")}} 方法，允许我们为此 fetch 提供一个响应。
 
-使用 {{domxref("ServiceWorkerGlobalScope.onfetch")}}或 addEventListener 监听。
-该事件回调会注入`FetchEvent`参数。它携带了有关请求和结果响应的信息以及方法{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} ,允许我们向受控页面提供任意响应。
+{{InheritanceDiagram}}
 
 ## 构造函数
 
-- {{domxref("FetchEvent.FetchEvent()")}}
-  - : Creates a new `FetchEvent` object.
+- {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
+  - : 创建一个新的 `FetchEvent` 对象。这个构造函数不是很常用。浏览器自己会创建这些对象，并为它们提供 `fetch` 事件的回调。
 
 ## 属性
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_从它的祖先 {{domxref("Event")}} 继承属性_。
 
-- {{domxref("FetchEvent.isReload")}} {{readonlyInline}}
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the event was dispatched with the user's intention for the page to reload, and `false` otherwise. Typically, pressing the refresh button in a browser is a reload, while clicking a link and pressing the back button is not.
-- {{domxref("FetchEvent.request")}} {{readonlyInline}}
-  - : Returns the {{domxref("Request")}} that triggered the event handler.
-- {{domxref("FetchEvent.clientId")}} {{readonlyInline}}
-  - : Returns the id of the client that the current service worker is controlling.
-
-### Deprecated properties
-
-- {{domxref("FetchEvent.client")}} {{readonlyInline}}
-  - : Returns the {{domxref("Client")}} that the current service worker is controlling.
+- {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
+  - : 发起 fetch 的同源{{domxref("Client", "客户端")}}的 {{domxref("Client.id", "id")}}。
+- {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
+  - : 一个兑现为 {{domxref("Response")}} 的 {{jsxref("Promise")}}，如果该 fetch 没有导航或者 [navigation preload](/zh-CN/docs/Web/API/NavigationPreloadManager) 未启用，则是 `undefined`。
+- {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
+  - : 页面导航期间正被替换的{{domxref("Client", "客户端")}}的 {{domxref("Client.id", "id")}}。
+- {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
+  - : 页面导航期间用于替换的{{domxref("Client", "客户端")}}的 {{domxref("Client.id", "id")}}。
+- {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
+  - : 浏览器想要发送的 {{domxref("Request")}}。
 
 ## 方法
 
-_Inherits methods from its parent,_ _{{domxref("ExtendableEvent")}}_.
+_从它的父元素 {{domxref("ExtendableEvent")}} 继承方法_。
 
 - {{domxref("FetchEvent.respondWith()")}}
-  - : Resolves by returning a {{domxref("Response")}} or a [network error](http://fetch.spec.whatwg.org/#concept-network-error) to [`Fetch`](http://fetch.spec.whatwg.org/#concept-fetch).
-- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Extends the lifetime of the event. It is intended to be called in the {{event("install")}} {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the {{event("active")}} {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
+  - : 阻止浏览器的默认 fetch 操作，并且由你自己提供一个响应（可以是一个 promise）。
+- {{domxref("ExtendableEvent.waitUntil()")}}
+  - : 延长事件的生命周期。用于通知浏览器延长超出响应回复时间的任务，例如流和缓存。
 
 ## 示例
 
-This code snippet is from the [service worker fetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([run the fetch sample live](https://googlechrome.github.io/samples/service-worker/prefetch/)). In an earlier part of the code, an {{domxref("InstallEvent")}} controls caching of a number of resources. The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler then listens for the {{event("fetch")}} event. When fired, {{domxref("FetchEvent.respondWith()")}} returns a promise back to the controlled page. This promise resolves to the first matching URL request in the {{domxref("Cache")}} object. If no match is found (i.e. that resource wasn't cached in the install phase), the code fetches a response from the network.
-
-The code also handles exceptions thrown from the {{domxref("ServiceWorkerGlobalScope.fetch()")}} operation. Note that a HTTP error response (e.g., 404) doesn't trigger an exception. It returns a normal response object that has the appropriate error code set.
+fetch 事件对非 GET 请求使用浏览器默认值。对于 GET 请求它试图在缓存中匹配，如果缓存中没有匹配，则回落到网络请求。如果在缓存中匹配成功，它将异步更新缓存，以供下次使用。
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", (event) => {
+  // Let the browser do its default thing
+  // for non-GET requests.
+  if (event.request.method !== "GET") return;
 
+  // Prevent the default, and handle the request ourselves.
   event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        console.log('Found response in cache:', response);
+    (async () => {
+      // Try to get the response from a cache.
+      const cache = await caches.open("dynamic-v1");
+      const cachedResponse = await cache.match(event.request);
 
-        return response;
+      if (cachedResponse) {
+        // If we found a match in the cache, return it, but also
+        // update the entry in the cache in the background.
+        event.waitUntil(cache.add(event.request));
+        return cachedResponse;
       }
-      console.log('No response found in cache. About to fetch from network...');
 
-      return fetch(event.request).then(function(response) {
-        console.log('Response from network is:', response);
-
-        return response;
-      }).catch(function(error) {
-        console.error('Fetching failed:', error);
-
-        throw error;
-      });
-    })
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })()
   );
 });
 ```
@@ -78,9 +74,9 @@ self.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.FetchEvent")}}
+{{Compat}}
 
-## 请参见
+## 参见
 
 - {{jsxref("Promise")}}
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
