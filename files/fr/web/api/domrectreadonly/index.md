@@ -49,13 +49,11 @@ L'interface **`DOMRectReadOnly`** spécifie les propriétés standard utilisées
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMRect', 'DOMRectReadOnly')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly")}}
+{{Compat}}
 
 ## Voir aussi
 

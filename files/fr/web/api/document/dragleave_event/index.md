@@ -130,14 +130,11 @@ L'événement **dragleave** est déclenché lorsqu'un élément glissé ou une s
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragleave")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "editing.html#dndevents", "dragleave")}}         | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.dragleave_event")}}
+{{Compat}}
 
 ## Voir aussi
 
