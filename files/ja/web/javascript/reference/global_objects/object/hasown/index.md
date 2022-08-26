@@ -1,97 +1,82 @@
 ---
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - hasOwn
-  - Polyfill
-browser-compat: javascript.builtins.Object.hasOwn
+l10n:
+  sourceCommit: ae586f9996f622b40379283f727febe94258b8c0
 ---
 {{JSRef}}
 
-The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
-If the property is inherited, or does not exist, the method returns `false`.
+**`Object.hasOwn()`** 静的メソッドは、指定されたオブジェクトが、指定されたプロパティを自身のプロパティとして持っている場合に `true` を返します。そのプロパティが継承されている場合、または存在しない場合、このメソッドは `false` を返します。
 
-> **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.
+> **Note:** `Object.hasOwn()` 静的メソッドは {{jsxref("Object.hasOwnProperty()")}} インスタンスメソッドに代わるものとして意図されています。
 
 {{EmbedInteractiveExample("pages/js/object-hasown.html")}}
 
-## Syntax
+## 構文
 
 ```js
 hasOwn(instance, prop)
 ```
 
-### Parameters
+### 引数
 
 - `instance`
-  - : The JavaScript object instance to test.
+  - : テストする JavaScript オブジェクトのインスタンス。
 - `prop`
-  - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.
+  - : テストするプロパティの名前の {{jsxref("String")}} または [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)  。
 
-### Return value
+### 返値
 
-`true` if the specified object has directly defined the specified property.
-Otherwise `false`
+指定されたオブジェクトが指定されたプロパティを直接定義している場合、`true` を返します。それ以外の場合は `false` を返します。
 
-## Description
+## 解説
 
-The **`Object.hasOwn()`** method returns `true` if the specified property is a
-direct property of the object — even if the property value is `null` or `undefined`.
-The method returns `false` if the property is inherited, or has not been declared at all.
-Unlike the {{jsxref("Operators/in", "in")}} operator, this
-method does not check for the specified property in the object's prototype chain.
+**`Object.hasOwn()`** メソッドは、指定されたプロパティがオブジェクトの直接のプロパティである場合、そのプロパティ値が `null` または `undefined` であっても、`true` を返します。プロパティが継承されているか、またはまったく宣言されていない場合、このメソッドは `false` を返します。{{jsxref("Operators/in", "in")}} 演算子とは異なり、このメソッドは、オブジェクトのプロトタイプチェーンで指定されたプロパティをチェックしません。
 
-It is recommended over {{jsxref("Object.hasOwnProperty()")}} because
-it works for objects created using `Object.create(null)` and with objects that
-have overridden the inherited `hasOwnProperty()` method. While it is possible to
-workaround these problems by calling `Object.prototype.hasOwnProperty()` on an
-external object, `Object.hasOwn()` is more intuitive.
+{{jsxref("Object.hasOwnProperty()")}} よりも推奨される理由は、`Object.create(null)` を使って作成したオブジェクトや、継承した `hasOwnProperty()` メソッドをオーバーライドしたオブジェクトに対して動作することです。これらの問題は、外部オブジェクトの `Object.prototype.hasOwnProperty()` を呼び出すことで回避できますが、`Object.hasOwn()` の方がより直感的に理解しやすいでしょう。
 
-## Examples
+## 例
 
-### Using hasOwn to test for a property's existence
+### hasOwn を使ってプロパティの存在を調べる
 
-The following code shows how to determine whether the `example` object contains a property named `prop`.
+次のコードは、`example` オブジェクトに `prop` という名前のプロパティが含まれているかどうかを判断する方法を示しています。
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
+Object.hasOwn(example, 'prop');   // false - 'prop' は定義されていない
 
 example.prop = 'exists';
-Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
+Object.hasOwn(example, 'prop');   // true - 'prop' は定義されている
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of null
+Object.hasOwn(example, 'prop');   // true - null として定義されている
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
+Object.hasOwn(example, 'prop');   // true - undefined として定義されている
 ```
 
-### Direct vs. inherited properties
+### 直接のプロパティと継承されたプロパティ
 
-The following example differentiates between direct properties and properties inherited through the prototype chain:
+以下の例では、直接のプロパティとプロトタイプチェーンを通じて継承されたプロパティを区別します。
 
 ```js
 const example = {};
 example.prop = 'exists';
 
-// `hasOwn` will only return true for direct properties:
+// `hasOwn` は直接のプロパティの場合のみ true を返す
 Object.hasOwn(example, 'prop');             // returns true
 Object.hasOwn(example, 'toString');         // returns false
 Object.hasOwn(example, 'hasOwnProperty');   // returns false
 
-// The `in` operator will return true for direct or inherited properties:
+// `in` 演算子は直接または継承されたプロパティの場合に true を返す
 'prop' in example;                          // returns true
 'toString' in example;                      // returns true
 'hasOwnProperty' in example;                // returns true
 ```
 
-### Iterating over the properties of an object
+### オブジェクトのプロパティの反復処理
 
-To iterate over the enumerable properties of an object, you _should_ use:
+オブジェクトの列挙可能なプロパティを反復処理するには、以下のようにします。
 
 ```js
 const example = { foo: true, bar: true };
@@ -100,7 +85,7 @@ for (const name of Object.keys(example)) {
 }
 ```
 
-But if you need to use `for...in`, you can use `Object.hasOwn()` to skip the inherited properties:
+もし `for...in` を使う必要がある場合には、`Object.hasOwn()` を使うことで継承されたプロパティをスキップすることができます。
 
 ```js
 const example = { foo: true, bar: true };
@@ -111,10 +96,9 @@ for (const name in example) {
 }
 ```
 
-### Checking if an Array index exists
+### 配列のインデックスが存在するかどうかを調べる
 
-The elements of an {{jsxref("Array")}} are defined as direct properties, so
-you can use `hasOwn()` method to check whether a particular index exists:
+{{jsxref("Array")}} の要素は直接のプロパティとして定義されているので、`hasOwn()` メソッドで特定のインデックスが存在するかどうかを調べることができます。
 
 ```js
 const fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
@@ -122,11 +106,9 @@ Object.hasOwn(fruits, 3);   // true ('Orange')
 Object.hasOwn(fruits, 4);   // false - not defined
 ```
 
-### Problematic cases for hasOwnProperty
+### hasOwnProperty の問題となるケース
 
-This section demonstrate that `hasOwn()` is immune to the problems that affect
-`hasOwnProperty`. Firstly, it can be used with objects that have reimplemented
-`hasOwnProperty()`:
+このセクションでは、`hasOwn()` が `hasOwnProperty` に影響する問題から免れることを示します。まず、`hasOwnProperty()` が再実装されたオブジェクトで使用することができます。
 
 ```js
 const foo = {
@@ -137,36 +119,34 @@ const foo = {
 };
 
 if (Object.hasOwn(foo, 'bar')) {
-  console.log(foo.bar); //true - reimplementation of hasOwnProperty() does not affect Object
+  console.log(foo.bar); //true - hasOwnProperty() が再実装されていても結果に影響しない
 }
 ```
 
-It can also be used to test objects created using
-{{jsxref("Object.create()","Object.create(null)")}}. These do
-not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
+また、{{jsxref("Object.create()","Object.create(null)")}} を使って作成されたオブジェクトのテストにも使用することができます。これらは `Object.prototype` を継承していないため、`hasOwnProperty()` はアクセスできません。
 
 ```js
 const foo = Object.create(null);
 foo.prop = 'exists';
 if (Object.hasOwn(foo, 'prop')) {
-  console.log(foo.prop); //true - works irrespective of how the object is created.
+  console.log(foo.prop); //true - オブジェクトの作成方法に関係なく動作する
 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- {{jsxref("Operators/in", "in")}} 演算子
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
