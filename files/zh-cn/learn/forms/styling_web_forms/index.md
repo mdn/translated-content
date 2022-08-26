@@ -3,7 +3,7 @@ title: 样式化 HTML 表单
 slug: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
 
