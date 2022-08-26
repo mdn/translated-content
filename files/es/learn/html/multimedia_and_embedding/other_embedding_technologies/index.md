@@ -207,17 +207,17 @@ Hay algunos serios [Security concerns](#security_concerns) a considerar con `<if
 Este ejemplo incluye los elementos básicos necesarios para usar un `<iframe>`:
 
 - {{htmlattrxref('allowfullscreen','iframe')}}
-  - (El uso del API está fuera del alcance de este artículo.)
+  - : Si está configurado, el `<iframe>` se puede colocar en modo pantalla completa usando el [Full Screen API](/es/docs/Web/API/Fullscreen_API) (El uso del API está fuera del alcance de este artículo.)
 - {{htmlattrxref('frameborder','iframe')}}
-  - en tu {{Glossary('CSS')}}.
+  - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/border)`: none;` en tu {{Glossary('CSS')}}.
 - {{htmlattrxref('src','iframe')}}
   - : Este atributo, como con {{htmlelement("video")}}/{{htmlelement("img")}},contiene una ruta que apunta a la URL del documento que se va a incrustar.
 - {{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}
   - : Estos atributos especifican el ancho y la altura (width y height) que quieres que tenga el iframe.
 - **Contenido de reserva**
-  - s en estos días.
+  - : De la misma manera que otros elementos similares [`<video>`](/es/docs/Web/HTML/Element/video), puedes incluir contenido alternativo entre las etiquetas de apertura y cierre `<iframe></iframe>` que aparecerán si el navegador no admite el `<iframe>`. En este caso hemos incluido un enlace a la página. Es poco probable que encuentres algún navegador que no admita `<iframe>`s en estos días.
 - {{htmlattrxref('sandbox','iframe')}}
-  - (por ejemplo IE 10 y superior) solicita una mayor configuración de seguridad; bueno, hablaremos más sobre esto en la siguiente sección.
+  - : Este atributo, que funciona en navegadores un poco más modernos que el resto de la funciones de `<iframe>` (por ejemplo IE 10 y superior) solicita una mayor configuración de seguridad; bueno, hablaremos más sobre esto en la siguiente sección.
 
 > **Nota:** Para mejorar la velocidad, es una buena idea establecer el atributo `src` de iframes con JavaScript después de que se cargue el contenido principal. Esto hace que tu página pueda utilizarse antes y disminuye el tiempo de carga de tu página principal (an important {{Glossary("SEO")}}.)
 

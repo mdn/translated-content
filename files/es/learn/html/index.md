@@ -15,11 +15,11 @@ translation_of: Learn/HTML
 
 Para crear sitios web, debes conocer el {{Glossary('HTML')}} — la tecnología fundamental que se utiliza para definir la estructura de una página web. HTML se utiliza para especificar si tu contenido web se debe reconocer como un párrafo, lista, encabezado, enlace, imagen, reproductor multimedia, formulario o uno de los muchos otros elementos disponibles o incluso un nuevo elemento que tú definas.
 
-### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
-
-Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
-
-[Empieza aquí](/es/docs/Learn/Front-end_web_developer)
+> #### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
+>
+> Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
+>
+> [Empieza aquí](/es/docs/Learn/Front-end_web_developer)
 
 ## Prerrequisitos
 

@@ -72,6 +72,8 @@ Los estilos predeterminados del navegador mostrarán listas de descripciones con
 
 {{ EmbedLiveSample('listas-de-descripciones-ejemplo-activo-1', '100%', '285px', '', '', 'hide-codepen-jsfiddle') }}
 
+#
+
 Ten en cuenta que un solo término puede tener múltiples descripciones, por ejemplo:
 
 ```html
@@ -230,6 +232,8 @@ Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párr
 <p>El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o <em>elemento HTML de cita
 en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada.</p>
 ```
+
+##
 
 Para convertir esto en una cita en bloque independiente, simplemente harías lo siguiente:
 
@@ -621,7 +625,7 @@ La salida de este código se ve así:
 Hay una serie de elementos disponibles para marcar código informático usando HTML:
 
 - {{HTMLElement("code")}}: Para marcar fragmentos genéricos de código informático.
-- {{HTMLElement("pre")}}: Para respetar los espacios en blanco (en general, en los bloques de código) — si utilizas la sangría o diversos espacios en blanco consecutivos dentro de un texto, los navegadores los ignorarán y no se mostrarán en la página. Sin embargo, si delimitas el texto con las etiquetas `<pre>````, los espacios en blanco se representarán de forma idéntica a como se ven en tu editor de texto.
+- {{HTMLElement("pre")}}: Para respetar los espacios en blanco (en general, en los bloques de código) — si utilizas la sangría o diversos espacios en blanco consecutivos dentro de un texto, los navegadores los ignorarán y no se mostrarán en la página. Sin embargo, si delimitas el texto con las etiquetas `<pre></pre>`, los espacios en blanco se representarán de forma idéntica a como se ven en tu editor de texto.
 - {{HTMLElement("var")}}: Para marcar específicamente nombres de variables.
 - {{HTMLElement("kbd")}}: Para marcar entradas de teclado (y de otro tipo) en el ordenador.
 - {{HTMLElement("samp")}}: Para marcar la salida de un programa de ordenador.
@@ -633,7 +637,7 @@ Veamos algunos ejemplos. Deberías intentar jugar con estos (intenta obtener una
 
 para.onclick = function() {
   alert('¡Guau!, ¡deja de apretar!');
-}</code>```
+}</code></pre>
 
 <p>No debes utilizar elementos de presentación como <code>&lt;font&gt;</code> y <code>&lt;center&gt;</code>.</p>
 
@@ -644,7 +648,7 @@ para.onclick = function() {
 
 <pre>$ <kbd>ping mozilla.org</kbd>
 <samp>PING mozilla.org (63.245.215.20): 56 bytes de datos
-64 bytes de 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp>```
+64 bytes de 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
 ```
 
 El código anterior se verá así:

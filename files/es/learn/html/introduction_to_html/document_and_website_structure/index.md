@@ -52,9 +52,9 @@ Además de definir partes individuales de tu página (como un párrafo o una ima
 Las páginas web pueden y se deben diferenciar las unas de las otras, pero todas tienden a contener elementos comunes parecidos, a menos que estén destinadas a mostrar un vídeo o un juego a pantalla completa, o que formen parte de un proyecto artístico concreto o, simplemente, que estén mal estructuradas; estos elementos comunes son:
 
 - encabezado:
-  - , un logotipo y quizás un lema. Esta parte suele permanecer invariable mientras navegas entre las páginas de un mismo sitio web.
+  - : Normalmente formado por una gran franja que cruza la parte superior de la página con un **gran título**, un logotipo y quizás un lema. Esta parte suele permanecer invariable mientras navegas entre las páginas de un mismo sitio web.
 - barra de navegación:
-  - , este contenido suele permanecer invariable en las diferentes páginas del sitio; tener un menú inconsistente en tu página web conducirá a los usuarios a la confusión y frustración. Muchos diseñadores web consideran que el menú de navegación forma parte del encabezado y que no posee un componente individual, aunque no es necesario que sea así; de hecho, algunos argumentan que tener ambos componentes por separado es mejor por motivos de {{web.link("/es/docs/Learn/Accessibility", "accesibilidad")}} porque los lectores de pantalla pueden leer mejor ambos elementos si están separados.
+  - : Son los enlaces a las secciones principales del sitio web. Normalmente está formada por un menú con botones, enlaces o pestañas. Al igual que el _encabezado_, este contenido suele permanecer invariable en las diferentes páginas del sitio; tener un menú inconsistente en tu página web conducirá a los usuarios a la confusión y frustración. Muchos diseñadores web consideran que el menú de navegación forma parte del encabezado y que no posee un componente individual, aunque no es necesario que sea así; de hecho, algunos argumentan que tener ambos componentes por separado es mejor por motivos de [accesibilidad](/es/docs/Learn/Accessibility) porque los lectores de pantalla pueden leer mejor ambos elementos si están separados.
 - contenido principal:
   - : Es la gran parte central de la página y contiene la mayor parte del contenido particular de una página web concreta; por ejemplo, el video que quieres ver, la narración que quieres leer, el mapa que quieres consultar, los titulares de las noticias, etc. ¡Esta es la parte que definitivamente debe variar mucho de una página a otra de tu sitio web!
 - barra lateral:
@@ -240,6 +240,8 @@ y su marcado no se interpretó muy bien.</p>
 Sin el elemento {{HTMLElement("br")}}, todo el párrafo se habría presentado como una sola línea larga (como ya hemos dicho con anterioridad en este curso, {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Los_espacios_en_blanco_en_HTML", "HTML ignora la mayoría del espacio en blanco")}}); con estos elementos {{HTMLElement("br")}} en el código, las líneas quedan:
 
 {{EmbedLiveSample('line-break-live-sample', '100%', '125px', '', '', 'hide-codepen-jsfiddle')}}
+
+##
 
 Los elementos {{HTMLElement("hr")}} generan una regla horizontal en el documento que denota un cambio en la temática del texto (como un cambio de tema o de escena). Visualmente tiene el aspecto de una línea horizontal. Por ejemplo:
 

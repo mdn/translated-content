@@ -464,8 +464,7 @@ Tomemos el ejemplo sencillo siguiente:
 ```html
 <table>
   <tr>
-
-<th>Dato 1</th>
+    <th>Dato 1</th>
     <th style="background-color: yellow">Dato 2</th>
   </tr>
   <tr>
@@ -481,10 +480,20 @@ Tomemos el ejemplo sencillo siguiente:
 
 Esto nos da el resultado siguiente:
 
-| Dato 1  | Dato 2  |
-| ------- | ------- |
-| Calcuta | Naranja |
-| Robots  | Jazz    |
+<table>
+  <tr>
+    <th>Dato 1</th>
+    <th style="background-color: yellow">Dato 2</th>
+  </tr>
+  <tr>
+    <td>Calcuta</td>
+    <td style="background-color: yellow">Pizza</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td style="background-color: yellow">Jazz</td>
+  </tr>
+</table>
 
 Esto no es ideal, porque hay que repetir la información de estilo en las tres celdas de la columna (en un proyecto real probablemente habría definida una clase `class` en las tres celdas y el estilo se especificaría en una hoja de estilo por separado). En vez de hacer esto, podemos especificar la información una sola vez, con un elemento `<col>`. Los elementos `<col>` se especifican dentro de un contenedor `<colgroup>` justo debajo de la etiqueta de apertura `<table>`. Podríamos crear el mismo efecto que vemos arriba especificando nuestra tabla de la manera siguiente:
 

@@ -62,11 +62,11 @@ El elemento {{htmlelement("video")}} nos permite incrustar video fácilmente. Un
 Las características a notar son:
 
 - {{htmlattrxref("src","video")}}
-  - (source) contiene una ruta al video que deseas incrustar. Funciona de la misma manera.
+  - : De la misma manera que para el elemento [`<img>`](/es/docs/Web/HTML/Element/img), el atributo `src` (source) contiene una ruta al video que deseas incrustar. Funciona de la misma manera.
 - {{htmlattrxref("controls","video")}}
-  - apropiada. Como mínimo la interfaz debe incluir una manera de empezar y terminar la reproducción, y ajustar el volumen.
+  - : Los usuarios deben ser capaces de controlar la reproducción de video y audio (esto es especialmente crítico en personas que padecen [epilepsia](https://en.wikipedia.org/wiki/Epilepsy#Epidemiology)). Se debe utilizar el atributo `controls` para incluir la interfaz de control del browser, o construir la nuestra utilizando la [JavaScript API](/es/docs/Web/API/HTMLMediaElement) apropiada. Como mínimo la interfaz debe incluir una manera de empezar y terminar la reproducción, y ajustar el volumen.
 - El párrafo dentro de la etiqueta `<video>`
-  - , permitiéndonos proveer un fallback para browsers más antiguos. Puede ser de la manera que se quiera; en este caso proporcionamos un link directo al archivo de video, por lo que el usuario puede al menos acceder de alguna manera, independientemente del browser que esté usando.
+  - : Se lo llama **fallback content** (contenido de reserva) — y será mostrado si el browser desde el que se está accediendo a la página no soporta el elemento `<video>`, permitiéndonos proveer un fallback para browsers más antiguos. Puede ser de la manera que se quiera; en este caso proporcionamos un link directo al archivo de video, por lo que el usuario puede al menos acceder de alguna manera, independientemente del browser que esté usando.
 
 El video incrustado se verá así:
 
@@ -137,7 +137,7 @@ Esto nos dará un resultado que se parece a esto:
 ![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)Las nuevas características son:
 
 - {{htmlattrxref("width","video")}} y {{htmlattrxref("height","video")}}
-  - . Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
+  - : Puede controlar el tamanño con estos atributos o con [CSS](https://developer.mozilla.org/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
 - {{htmlattrxref("autoplay","video")}}
   - : Hace que el audio o el vídeo empiece a reproducirse de inmediato, mientras se carga el resto de la página. Le aconsejamos que no utilice vídeo (o audio) de reproducción automática en sus sitios, ya que los usuarios pueden encontralo molesto.
 - {{htmlattrxref("loop","video")}}
